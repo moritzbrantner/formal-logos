@@ -69,7 +69,7 @@ rejects the shared options it does not take with `Args::simple` or
 first (`bind-check`, `next`, the ID lists, …) calls `cli::validate_first`
 before its own work: it runs the full `check` validation and, on a broken
 corpus, fails as Python does, with the first `corpus error: …` and exit
-code 2. The commands ported so far do not call it.
+code 2. `bind-check` calls it.
 
 Parity tests live in `scripts/truth_parity/`, one module per command, with
 shared fixtures and the `ParityCase` base class in `common.py`; a new
@@ -131,6 +131,41 @@ deliberately broken variants, one per rule (56 for the passage manifest
 schema), each of which must give the same `corpus error:` line. On the real
 corpus (2026-11-07, 3731 statements) the release binary took 0.9–2.6 s and
 Python 6.3–16.5 s on the same loaded machine (best of three: 0.9 s vs 6.3 s).
+
+## `bind-check`
+
+`truth bind-check [--json] [--result ID]... [--affected --base REV [--head REV]]
+[--lean-json FILE] [--print-lean-input]` ports `python3 scripts/corpus.py
+bind-check` (#162): after validating the corpus it binds every argument record
+(premises, conclusion, commitments, theory-bundle conjuncts, declared senses)
+to its result theorem's Lean type, and binds both sides of each schema
+registration. Lean stays the verifier: Rust writes the input of
+`scripts/BindTypes.lean` byte for byte as Python's `json.dump` does
+(`--print-lean-input` prints it), runs `lake env lean --run` on it (or reads a
+saved output with `--lean-json`) and applies Python's binding rules to the
+description, including the pinned undeclared bindings, the exact-expression
+contracts of `scripts/contracts/` and the sense and sense-alias checks. The
+full run also reports stale pins and, when Lean runs, compiles the registered
+finite-model certificates and requires each to be zero-axiom
+(`finite_models.verify_models`). `--result` (repeatable; a uuid, legacy id or
+label) and `--affected` (results `scripts/affected_results.py` selects for the
+diff from `--base`, which stays Python) scope the run and skip the stale-pin
+and model checks. Stdout is Python's byte for byte, the sorted indented
+`--json` report as well as the humanized text, with exit 1 on a mismatch,
+stale pin or sense alias; corpus errors exit 2 as `corpus error: …` (a JSON
+error object under `--json`).
+
+CI's corpus job and the worker contract run it; `corpus.py bind-check` stays
+until its retirement. `scripts/truth_parity/bind_check.py` compares both from
+one recorded exporter output on the `check` fixture (scoped success, stale
+pins, unbound and missing hypotheses, theory bundles, consistency
+commitments, pinned-type failures, schema registrations, sense problems and
+aliases, expression contracts, scope and validate-first errors) and checks the
+real corpus's exporter input byte for byte; with `TRUTH_BIND_LEAN_JSON` set to
+a recorded exporter output it also compares the real-corpus reports. On the
+real corpus (2026-11-15, 2151 results, 111 models) the full run with Lean took
+17.9 s in Rust and 28.1 s in Python, and from a saved exporter output 3.9 s
+against 14.9 s, on the same loaded machine; the outputs were identical.
 
 ## `thickness`
 
