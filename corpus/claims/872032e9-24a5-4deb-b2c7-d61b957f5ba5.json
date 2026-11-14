@@ -1,0 +1,14 @@
+{
+  "id": "872032e9-24a5-4deb-b2c7-d61b957f5ba5",
+  "label": "Aquinas, De ente Cap.3: a thing is multiplied only by added difference, matter, or reception",
+  "statement_id": "2495a71d-81b6-47b7-8394-b37d3308fcda",
+  "source_id": "004fd39d-a45d-5624-b927-053cb0fd0fc9",
+  "locator": "cap.3 [69874]: impossibile est, ut fiat plurificatio alicuius nisi per additionem alicuius differentiae, sicut multiplicatur natura generis in species, vel per hoc quod forma recipitur in diversis materiis, sicut multiplicatur natura speciei in diversis individuis, vel per hoc quod unum est absolutum et aliud in aliquo receptum",
+  "interpretation": "Baur/Koch c.3 (Leonine c.4). It is impossible for anything to be multiplied except by the addition of some difference (as a generic nature into species), or by a form's being received in different matters (as a specific nature into individuals), or by one being absolute and another received in something (as separate heat would differ from non-separate heat by its separation). Read only at the instance the passage goes on to apply it to: two beings in act, each of whose represented esse equals its essence ('aliqua res, quae sit esse tantum'), that share a nature are the same unless a difference is added in one, or one has the nature received in matter, or one has its esse received in some principle. For such candidates the nature in question is esse, so 'one absolute and another received in something' is the reception of esse. 'Multiplication of something' is read as two candidates of one shared nature (SharesNature, primitive). The restrictions to these candidates and to beings in act make the reading weaker than the sentence. That two things each of which is its own esse share one nature is not stated here and is a separate open premise.",
+  "attribution": "The passage states that nothing is multiplied except by an added difference, by reception of a form in different matters, or by one instance being absolute and another received, which is the premise (restricted to two actual beings whose esse is their essence, for which the received instance is received esse).",
+  "status": "formalized",
+  "definition_ids": [
+    "2a19c5e4-6c0b-4733-a3dd-e207899b8547",
+    "4433942e-aaf6-55a9-b777-66e55638103d"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "e6337182-1349-447b-aaf7-9154cebe5a1c",
+  "label": "Actual CONCRETE_6 root determinations are pure, from De ente's other cause",
+  "argument_id": "3ce6c1a4-aa1f-4d33-8b3b-c41e4483788b",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.EsseSource.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.EsseSource.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.EsseSource.rootPurityFromDeEnte",
+  "comparator_config": "results/e6337182-1349-447b-aaf7-9154cebe5a1c/comparator.json",
+  "status": "solution-present",
+  "description": "Sibling of ROOT-PURITY-FROM-NO-LIMITATION (dcea77db) in which the #1629 step 457698e4 (another actual cause of being, mode unspecified) replaces the q.3 a.4 causal dichotomy be639b3f and the no-efficient-self-cause premise 61bd42e5, whose prose reads the cause as efficient. Every other input is unchanged. The step is used only to give each actual root esse equal to essence; no efficient cause is used or concluded."
+}

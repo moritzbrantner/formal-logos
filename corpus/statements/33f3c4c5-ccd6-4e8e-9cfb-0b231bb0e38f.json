@@ -1,0 +1,9 @@
+{
+  "id": "33f3c4c5-ccd6-4e8e-9cfb-0b231bb0e38f",
+  "label": "At least two different beings are in act as to being",
+  "paraphrase": "OPEN ordinary existence premise, attribution deferred: there are x and y with x different from y, both in act as to being (InAct x esse, InAct y esse) in the shared q.3 a.4 profile. Nothing about their essence or esse is assumed.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.TwoActualBeings",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "807f008d-749d-4b77-874b-7806430ca4ee",
+  "label": "Aquinas, De ente Cap.3: a thing that is its own esse can only be one",
+  "statement_id": "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+  "source_id": "004fd39d-a45d-5624-b927-053cb0fd0fc9",
+  "locator": "cap.3 [69874]: Unde relinquitur quod talis res, quae sit suum esse, non potest esse nisi una",
+  "interpretation": "Baur/Koch c.3 (Leonine c.4). It remains that such a thing, which is its own esse, cannot be but one. Read as 'at most one': any two beings in act whose represented esse equals their essence are the same. The sentence does not assert that such a thing exists (the passage introduces it with 'nisi forte sit aliqua res'); the restriction to beings in act weakens it. The passage's reason is the multiplication inventory and the exclusion of difference and matter; the premise that two such things would share one nature is the analyst's.",
+  "attribution": "The passage states that a thing which is its own esse cannot be but one, which is the premise (read as at most one, among beings in act).",
+  "status": "formalized",
+  "definition_ids": [
+    "183b48d2-1753-583d-aef9-4199cff86231"
+  ]
+}

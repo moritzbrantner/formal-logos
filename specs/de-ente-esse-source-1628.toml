@@ -1,0 +1,171 @@
+# #1628: De ente c.3 [69874] (Baur/Koch; Leonine c.4), reconstructed as one
+# connected argument on the shared q.3 a.4 profile: (b) at most one being is
+# its own esse, from the multiplication inventory and an OPEN shared-nature
+# premise; (a) real distinction for every other being, derived from (b);
+# (c) from the #1629 step (another actual cause of being, mode unspecified)
+# and an OPEN no-infinite-regress premise, every distinct esse goes back to a
+# being whose esse is its essence; (d) siblings of the root-uniqueness and
+# root-purity routes consuming the #1629 step in place of the q.3 a.4
+# efficient-read pair. No efficiency (#1633), conservation (#1616), necessity
+# or God identification is supplied.
+
+[batch]
+vocab = "TruthCore.Latin.Aquinas.DeEnte"
+results = "TruthCore.Results.Aquinas.DeEnte.EsseSource"
+
+[[statement]]
+id = "2495a71d-81b6-47b7-8394-b37d3308fcda"
+label = "Two own-esse actual beings of one nature are one unless difference, matter or reception multiply"
+lean = "PlurificationOnlyByThreeModesReading"
+paraphrase = "For any two beings x and y in act as to being, each of whose represented esse equals its represented essence, that share a nature (SharesNature x y, so that their being two would be a multiplication of that nature): if no difference is added to the nature in either, neither has it received in matter, and neither has its esse received in some principle, then x and y are the same. Reading of De ente c.3 [69874] (Baur/Koch numbering; Leonine c.4), 'impossibile est, ut fiat plurificatio alicuius nisi per additionem alicuius differentiae ... vel per hoc quod forma recipitur in diversis materiis ... vel per hoc quod unum est absolutum et aliud in aliquo receptum', read only at the instance the passage applies it to: candidates whose nature is their esse, for which 'one absolute and another received in something' is the reception of esse. The general inventory over every nature is not encoded. The exhaustiveness of the three modes is the passage's assertion, not derived."
+definitions = ["2a19c5e4-6c0b-4733-a3dd-e207899b8547", "DEF-ESSE-RECEIVED-IN", "DEF-ESSE"]
+
+[[statement]]
+id = "Any two actual beings whose esse is their essence share one nature"
+lean = "EsseIsEssenceBeingsShareNature"
+paraphrase = "OPEN analyst premise, attribution deferred: any two beings in act as to being, each of whose represented esse equals its represented essence, share one nature (SharesNature), so that their being two would be a multiplication of that nature. De ente c.3 [69874] treats 'a thing that is esse tantum' as one nature without arguing it. This is the #697 individuation gap (UNRECEIVED-ESSE-INDIVIDUATION-BRIDGE). Rival: two such beings differ as wholes, by primitive individuation or by two different whole essences each identical with its own esse, without being a multiplication of a common nature; TwoSourcesControl satisfies every other input of the at-most-one argument without this premise."
+definitions = ["2a19c5e4-6c0b-4733-a3dd-e207899b8547", "183b48d2-1753-583d-aef9-4199cff86231", "DEF-ESSE"]
+
+[[statement]]
+id = "No difference is added to the nature of a being whose esse is its essence"
+lean = "EsseTantumReceivesNoDifferenceReading"
+paraphrase = "For every x whose represented esse equals its represented essence, no difference is added to x's nature (not AddsDifference x). Reading of De ente c.3 [69874] (Baur/Koch; Leonine c.4): 'si autem ponatur aliqua res, quae sit esse tantum, ita ut ipsum esse sit subsistens, hoc esse non recipiet additionem differentiae, quia iam non esset esse tantum, sed esse et praeter hoc forma aliqua'."
+definitions = ["2a19c5e4-6c0b-4733-a3dd-e207899b8547", "183b48d2-1753-583d-aef9-4199cff86231", "DEF-ESSE"]
+
+[[statement]]
+id = "The nature of a being whose esse is its essence is not received in matter"
+lean = "EsseTantumNotInMatterReading"
+paraphrase = "For every x whose represented esse equals its represented essence, x's nature is not received in matter (not InMatter x). Reading of De ente c.3 [69874] (Baur/Koch; Leonine c.4): 'et multo minus reciperet additionem materiae, quia iam esset esse non subsistens sed materiale'."
+definitions = ["2a19c5e4-6c0b-4733-a3dd-e207899b8547", "183b48d2-1753-583d-aef9-4199cff86231", "DEF-ESSE"]
+
+[[statement]]
+id = "At most one actual being has its esse identical with its essence"
+lean = "AtMostOneEsseIsEssence"
+paraphrase = "Any two beings in act as to being whose represented esse equals their represented essence are the same being. Only 'at most one': that some such being exists is not asserted. De ente c.3 [69874] (Baur/Koch; Leonine c.4): 'talis res, quae sit suum esse, non potest esse nisi una'; the passage's claim is not restricted to beings in act, so this restricted version is weaker than the passage. No modal necessity, simplicity, concreteness or God identification is part of it."
+definitions = ["183b48d2-1753-583d-aef9-4199cff86231", "DEF-ESSE"]
+
+[[statement]]
+id = "There is no infinite descending chain of actual causes of being"
+lean = "NoInfiniteActualEsseCauseRegress"
+paraphrase = "OPEN analyst premise, attribution deferred: the relation 'c, in act as to being and other than x, is a cause of the esse of x, which is in act' (ActualEsseCause, CausesIn at esse, mode of causing unspecified, tenseless) is well-founded, so no infinite descending chain of actual causes of being exists. De ente c.3 [69874] presupposes a no-regress principle for some order of causes of esse in 'alias iretur in infinitum in causis', without arguing it or saying which order; this unrestricted version is the analyst's. It covers every cause of being, not only essentially ordered or simultaneous causes (Aquinas himself admits an infinite accidentally ordered series of causes, ST I q.46 a.2 ad 7, so the restriction matters), and says nothing about causes of coming to be. Rival: an infinite (or global/structural) order of derivative causes of being (#311/#750); InfiniteRegressControl satisfies the other-cause step with no source."
+definitions = ["8163859b-95b3-4dd2-8a69-541bd332f32f", "DEF-CAUSE-OF-PERFECTION", "DEF-ESSE"]
+
+[[statement]]
+id = "Every actual distinct esse descends via actual causes of being from one whose esse is its essence"
+lean = "EveryDistinctEsseHasEsseIsEssenceSource"
+paraphrase = "For every x in act whose represented esse differs from its essence (DistinctEsseAt), there is some n in act as to being, whose represented esse equals its essence, from which x's esse descends through a finite chain of actual causes of being (Relation.TransGen of ActualEsseCause; mode of causing unspecified, tenseless). n heads that chain; it is not said to be uncaused. It is De ente c.3 [69874]'s reduction of what has esse from another to what does not, restricted to esse and read with 'what does not have esse from another' as a being whose esse is its essence. Not asserted: that n is uncaused, causes x's esse directly, conserves it now, is the only such n, exists necessarily, is concrete at a world, or is God."
+definitions = ["8163859b-95b3-4dd2-8a69-541bd332f32f", "DEF-Q3A4-ACTUAL-DISTINCT-ESSE", "183b48d2-1753-583d-aef9-4199cff86231", "DEF-ESSE"]
+
+[[statement]]
+id = "At least two different beings are in act as to being"
+lean = "TwoActualBeings"
+paraphrase = "OPEN ordinary existence premise, attribution deferred: there are x and y with x different from y, both in act as to being (InAct x esse, InAct y esse) in the shared q.3 a.4 profile. Nothing about their essence or esse is assumed."
+definitions = ["DEF-ESSE"]
+
+[[statement]]
+id = "One being whose esse is its essence is a first cause of being of every other actual being"
+lean = "CommonEsseIsEssenceSource"
+paraphrase = "Some n in act as to being, whose represented esse equals its essence, has no actual cause of its esse (no c with ActualEsseCause c n), and every other being x in act as to being descends from n through a finite chain of actual causes of being (Relation.TransGen of ActualEsseCause; mode of causing unspecified, tenseless). 'First cause' means exactly this: uncaused in that order and at the head of a chain to each other actual being. It is De ente c.3 [69874]'s 'aliqua res, quae sit causa essendi omnibus rebus, eo quod ipsa est esse tantum', read as first cause in the chain rather than direct cause. Not asserted: direct causation of every esse, present conservation, efficient causation, necessary existence, concreteness at a world, uniqueness among necessary beings, or God identification."
+definitions = ["8163859b-95b3-4dd2-8a69-541bd332f32f", "183b48d2-1753-583d-aef9-4199cff86231", "DEF-ESSE"]
+
+[[statement]]
+id = "Any two actual CONCRETE_6 roots of the selected grounding relation at w are the same"
+lean = "AtMostOneActualRootAt"
+paraphrase = "For any x and y: if each is an actual concrete root of the selected grounding relation at w (concrete, existing at w, with no actual concrete ground at w; NecessaryRootFork.ActualRoot), then x and y are the same. Only 'at most one': no root is said to exist, and nothing is said about necessity, uniqueness among necessary beings or God identification."
+definitions = ["c57e2682-08e6-527e-950f-0fa0a7ff11ef", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+
+[[statement]]
+id = "De ente esse-source controls: regress, uncaused, two-source and nonvacuity interpretations"
+lean = "EsseSourceControls"
+paraphrase = "Closed finite controls on interpretations of the shared vocabulary. (1) Infinite regress, on Nat: n+1 causes the esse of n, all in act, none has esse equal to essence; the #1629 other-cause step holds and 0 has distinct esse, while well-foundedness and the regress conclusion fail. (2) Uncaused distinct esse, on Bool: nothing causes anything; well-foundedness holds, the other-cause step and the regress conclusion fail. (3) Two sources, on four beings: a and b have esse equal to essence, a causes the esse of c and b that of d; every input of the at-most-one argument except the shared-nature premise holds, every input of the regress and common-source arguments except at-most-one holds, and at-most-one and the common source fail. (4) Nonvacuity: a has esse equal to essence and causes the esse of b, c, d, whose esse is received in their essence; every input of the three arguments holds and so do their conclusions. Statements about these interpretations only, not evidence that infinite regress, brute esse or two first beings is possible or plausible."
+definitions = ["2a19c5e4-6c0b-4733-a3dd-e207899b8547", "8163859b-95b3-4dd2-8a69-541bd332f32f", "DEF-Q3A4-ACTUAL-DISTINCT-ESSE", "DEF-ESSE-RECEIVED-IN", "DEF-RECEPTIVE-POTENCY", "DEF-ESSE"]
+
+[[argument]]
+id = "At most one actual being is its own esse, from De ente's multiplication inventory"
+theorem = "atMostOneEsseIsEssenceFromPlurification"
+premises = [
+  "2495a71d-81b6-47b7-8394-b37d3308fcda",
+  "Any two actual beings whose esse is their essence share one nature",
+  "No difference is added to the nature of a being whose esse is its essence",
+  "The nature of a being whose esse is its essence is not received in matter",
+  "STMT-ESSE-RECEIVED-IN-OWN-ESSENCE",
+  "STMT-RECEIVER-IN-POTENCY-TO-RECEIVED-ESSE",
+  "STMT-NOTHING-IN-RECEPTIVE-POTENCY-TO-ITSELF",
+]
+conclusion = "At most one actual being has its esse identical with its essence"
+axioms = []
+strong_version_needed = { "6dfe01ab-e3f2-5a4c-b102-701c161f2cf7" = "Only its instances at beings whose esse equals their essence are used; the weak version b9316115 (IdentityScopedOwnEssence) is stated on the separate EsseReceptionDefinitionFork Frame, not on the q.3 a.4 profile with EsseReceivedIn used here, so the strong version is taken on this profile." }
+rule = "Two actual beings whose esse is their essence share a nature; neither has an added difference or matter; neither has received esse, since a received esse would be received in its essence, which is its esse, in receptive potency to itself; the inventory then makes them one"
+meaning = "Stage (b) of De ente c.3 [69874] (Baur/Koch; Leonine c.4), non-transcription conditional derivation on the q.3 a.4 profile: at most one being in act has its represented esse equal to its essence. The source supplies the multiplication inventory and the exclusion of an added difference and of matter; the third mode (one absolute, another received) is excluded through three existing open reception premises; the indispensable analyst premise is that two such beings would share one nature (the #697 individuation gap), which TwoSourcesControl omits. Only 'at most one' follows: no such being is said to exist."
+
+[[argument]]
+id = "Every distinct esse descends from one whose esse is its essence, from no regress"
+theorem = "distinctEsseHasEsseIsEssenceSource"
+premises = [
+  "Every actual distinct esse is caused by another being in act, mode of causing unspecified",
+  "There is no infinite descending chain of actual causes of being",
+  "STMT-EXCLUDED-MIDDLE",
+]
+conclusion = "Every actual distinct esse descends via actual causes of being from one whose esse is its essence"
+axioms = []
+rule = "Well-founded induction on actual causes of being: a distinct esse has another actual cause; if that cause's esse is its essence it is the source, otherwise apply the induction hypothesis to it and extend the chain"
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b", "57f80020-fa6f-5b69-be58-b4cf95b7226f"]
+meaning = "Stage (c) of De ente c.3 [69874] (Baur/Koch; Leonine c.4), non-transcription conditional derivation: the passage's reduction of what has esse from another to what does not (read as: to a being whose esse is its essence) is derived, not assumed, from the #1629 step 457698e4 (every actual distinct esse has another actual cause of being, mode unspecified) and the OPEN well-foundedness of actual causes of being ('alias iretur in infinitum in causis'), with excluded middle for the identity case split. InfiniteRegressControl and UncausedDistinctEsseControl show that each of the two substantive inputs is needed. The cause is not said to be efficient, present or direct; the source is not said to be unique, necessary, concrete or God."
+
+[[argument]]
+id = "One being whose esse is its essence is first cause of all others, from De ente"
+theorem = "commonEsseIsEssenceSource"
+premises = [
+  "Every actual distinct esse descends via actual causes of being from one whose esse is its essence",
+  "At most one actual being has its esse identical with its essence",
+  "At least two different beings are in act as to being",
+  "There is no infinite descending chain of actual causes of being",
+  "STMT-EXCLUDED-MIDDLE",
+]
+conclusion = "One being whose esse is its essence is a first cause of being of every other actual being"
+axioms = []
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b", "57f80020-fa6f-5b69-be58-b4cf95b7226f"]
+rule = "Of two actual beings at most one has esse equal to essence, so one has distinct esse and a source n; every other actual being has distinct esse by at-most-one, so it has a source, which at-most-one identifies with n; an actual cause of n would close a cycle through n, which well-foundedness excludes"
+meaning = "Composition of De ente c.3 [69874]'s three stages on one profile and one witness: at most one actual being is its own esse (b); hence every actual being other than it has represented esse unequal to its represented essence (a real distinction only if equality of represented principles is read as real identity; derived from b as in the passage's order, not from the intellectus-essentiae argument); every distinct esse goes back to a being whose esse is its essence (c); so one and the same such n heads a finite chain of actual causes of being to every other actual being, and, by no infinite regress, has no actual cause of its own esse. TwoSourcesControl shows at-most-one is needed. Mode of causing unspecified; no direct causation of every esse, conservation, efficiency, necessity, concreteness at a world or God identification follows."
+
+[[argument]]
+id = "At most one actual CONCRETE_6 root, from De ente's other cause and one own esse"
+theorem = "atMostOneActualRootFromDeEnte"
+premises = [
+  "STMT-EXCLUDED-MIDDLE",
+  "0436de86-6579-53f2-9ff5-2111ba44ebae",
+  "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+  "Every actual distinct esse is caused by another being in act, mode of causing unspecified",
+  "At most one actual being has its esse identical with its essence",
+]
+conclusion = "Any two actual CONCRETE_6 roots of the selected grounding relation at w are the same"
+axioms = []
+rule = "Every actual root has esse equal to essence, since a distinct esse would have another actual cause of being, which the esse-cause bridge makes an actual concrete ground; at most one actual being has esse equal to essence, so any two actual roots are the same"
+meaning = "The uniqueness half of ACTUAL-ROOT-UNIQUENESS (0edb19eb), with its genus principle at being and fixed-esse grades replaced by De ente's stages: the #1629 step 457698e4 (another actual cause of being, mode unspecified; with existing-in-act 0436de86 and the mode-unspecified esse-cause bridge cb1cdea9 it gives every actual concrete root esse equal to essence) and at most one actual being whose esse is its essence. No root is said to exist; necessity and God identification do not follow; no efficient cause is used or concluded. Composing it with root existence into 7ab0ddcb is blocked by the legacy sense-index debt of 5c898d24 and 7ab0ddcb (both carry INTRINSIC_PRODUCTIVE_CONTRIBUTION_VERSUS_SOURCE_BACKED_1 and _2; their arguments are allowlisted, a new one is not)."
+
+[[argument]]
+id = "Actual CONCRETE_6 root determinations are pure, from De ente's other cause"
+theorem = "rootPurityFromDeEnte"
+premises = [
+  "STMT-EXCLUDED-MIDDLE",
+  "0436de86-6579-53f2-9ff5-2111ba44ebae",
+  "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+  "Every actual distinct esse is caused by another being in act, mode of causing unspecified",
+  "86efed1a-f353-5b5d-9431-df7fc643ace1",
+  "363a528c-a22c-5a46-b1ef-64e39f8dba45",
+  "b35ce743-6870-5884-926f-60744d1a318b",
+  "c78c77da-91b0-5928-bd5f-ba670a6f3660",
+]
+conclusion = "3b39e0ba-eb4a-5708-90d0-c2706094d43c"
+axioms = []
+rule = "For an actual root: esse equals essence from the other-cause step and the esse-cause bridge; it is first among the simply prior; so it is not composite, has no distinct esse and nothing distinct is prior to it, and the open bridge gives pure determinations"
+meaning = "Sibling of ROOT-PURITY-FROM-NO-LIMITATION (dcea77db) in which the #1629 step 457698e4 (another actual cause of being, mode unspecified) replaces the q.3 a.4 causal dichotomy be639b3f and the no-efficient-self-cause premise 61bd42e5, whose prose reads the cause as efficient. Every other input is unchanged. The step is used only to give each actual root esse equal to essence; no efficient cause is used or concluded."
+
+[[argument]]
+id = "De ente esse-source controls"
+theorem = "esseSourceControls"
+premises = []
+conclusion = "De ente esse-source controls: regress, uncaused, two-source and nonvacuity interpretations"
+axioms = []
+rule = "Explicit finite and infinite interpretations with case analysis and accessibility proofs"
+meaning = "Closed controls for the De ente esse-source route: the regress premise (infinite regress on Nat), the #1629 other-cause step (uncaused distinct esse), the shared-nature premise and at-most-one (two sources), and one interpretation satisfying every input and conclusion. They witness logical underdetermination under the encoded predicates only."

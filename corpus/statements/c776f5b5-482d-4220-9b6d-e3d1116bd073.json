@@ -1,0 +1,14 @@
+{
+  "id": "c776f5b5-482d-4220-9b6d-e3d1116bd073",
+  "label": "De ente esse-source controls: regress, uncaused, two-source and nonvacuity interpretations",
+  "paraphrase": "Closed finite controls on interpretations of the shared vocabulary. (1) Infinite regress, on Nat: n+1 causes the esse of n, all in act, none has esse equal to essence; the #1629 other-cause step holds and 0 has distinct esse, while well-foundedness and the regress conclusion fail. (2) Uncaused distinct esse, on Bool: nothing causes anything; well-foundedness holds, the other-cause step and the regress conclusion fail. (3) Two sources, on four beings: a and b have esse equal to essence, a causes the esse of c and b that of d; every input of the at-most-one argument except the shared-nature premise holds, every input of the regress and common-source arguments except at-most-one holds, and at-most-one and the common source fail. (4) Nonvacuity: a has esse equal to essence and causes the esse of b, c, d, whose esse is received in their essence; every input of the three arguments holds and so do their conclusions. Statements about these interpretations only, not evidence that infinite regress, brute esse or two first beings is possible or plausible.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.EsseSourceControls",
+  "definition_ids": [
+    "2a19c5e4-6c0b-4733-a3dd-e207899b8547",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "0ea9feb8-1f92-5b11-aa74-2f2e567c6106",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "a67e6214-624d-54d1-81ff-442c09c5ea9d",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

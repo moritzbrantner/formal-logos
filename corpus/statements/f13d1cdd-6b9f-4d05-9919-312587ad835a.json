@@ -1,0 +1,11 @@
+{
+  "id": "f13d1cdd-6b9f-4d05-9919-312587ad835a",
+  "label": "No difference is added to the nature of a being whose esse is its essence",
+  "paraphrase": "For every x whose represented esse equals its represented essence, no difference is added to x's nature (not AddsDifference x). Reading of De ente c.3 [69874] (Baur/Koch; Leonine c.4): 'si autem ponatur aliqua res, quae sit esse tantum, ita ut ipsum esse sit subsistens, hoc esse non recipiet additionem differentiae, quia iam non esset esse tantum, sed esse et praeter hoc forma aliqua'.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.EsseTantumReceivesNoDifferenceReading",
+  "definition_ids": [
+    "2a19c5e4-6c0b-4733-a3dd-e207899b8547",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

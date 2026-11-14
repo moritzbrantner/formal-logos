@@ -1,0 +1,8 @@
+{
+  "id": "8163859b-95b3-4dd2-8a69-541bd332f32f",
+  "label": "Actual cause of being: c, in act and other than x, causes the esse of the actual x",
+  "term": "actual cause of being (ActualEsseCause)",
+  "definition": "ActualEsseCause p c x: c is other than x, c and x are both in act as to being (InAct at esse), and c causes x's esse (CausesIn c x esse, DEF-CAUSE-OF-PERFECTION) in the shared q.3 a.4 profile. The mode of causing (efficient, formal, exemplar or other) is not fixed, and the relation is tenseless: it is not a present sustaining or simultaneous cause, and not a cause of coming to be. Chains of it (Relation.TransGen) are finite chains of such causes; n being first in a chain to x does not mean n directly causes x's esse.",
+  "basis": "stipulative",
+  "note": "Stipulated for the De ente regress step (#1628) to make the regress relation explicit; it restricts the existing CausesIn at esse to distinct actual relata. It would be sourced by a passage stating the order of causes of being with these relata; De ente c.3 [69874] speaks only of 'causae' of esse."
+}

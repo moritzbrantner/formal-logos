@@ -1,0 +1,11 @@
+{
+  "id": "04212a3f-ba3c-4102-978f-c551b5ad8600",
+  "label": "De ente esse-source controls",
+  "argument_id": "65cc52b5-c2d6-4874-a11b-f244cbcbab64",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.EsseSource.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.EsseSource.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.EsseSource.esseSourceControls",
+  "comparator_config": "results/04212a3f-ba3c-4102-978f-c551b5ad8600/comparator.json",
+  "status": "solution-present",
+  "description": "Closed controls for the De ente esse-source route: the regress premise (infinite regress on Nat), the #1629 other-cause step (uncaused distinct esse), the shared-nature premise and at-most-one (two sources), and one interpretation satisfying every input and conclusion. They witness logical underdetermination under the encoded predicates only."
+}

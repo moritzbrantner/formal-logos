@@ -1,0 +1,13 @@
+{
+  "id": "8bca93ec-e990-43f7-bfc7-2a915a68125a",
+  "label": "Aquinas, De ente Cap.3: subsistent esse receives no added difference",
+  "statement_id": "f13d1cdd-6b9f-4d05-9919-312587ad835a",
+  "source_id": "004fd39d-a45d-5624-b927-053cb0fd0fc9",
+  "locator": "cap.3 [69874]: Si autem ponatur aliqua res, quae sit esse tantum, ita ut ipsum esse sit subsistens, hoc esse non recipiet additionem differentiae, quia iam non esset esse tantum, sed esse et praeter hoc forma aliqua",
+  "interpretation": "Baur/Koch c.3 (Leonine c.4). If there is a thing that is esse alone, so that esse itself subsists, this esse will not receive the addition of a difference, since then it would not be esse alone but esse and some form besides. 'A thing that is esse alone' is read, as in the passage's own surrounding wording ('res cuius quiditas sit ipsum suum esse', 'talis res, quae sit suum esse'), as a being whose represented esse equals its represented essence; 'receives the addition of a difference' as AddsDifference. Two reading choices: 'esse tantum' (nothing but esse) is taken as exactly the identity of represented esse and essence, and the clause 'ita ut ipsum esse sit subsistens' as a consequence of that identity, not as a further condition.",
+  "attribution": "The passage states that a thing which is esse alone does not receive the addition of a difference, which is the premise (for beings whose represented esse equals their essence).",
+  "status": "formalized",
+  "definition_ids": [
+    "2a19c5e4-6c0b-4733-a3dd-e207899b8547"
+  ]
+}

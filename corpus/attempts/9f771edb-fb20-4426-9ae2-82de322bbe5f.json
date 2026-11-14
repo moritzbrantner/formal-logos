@@ -1,0 +1,27 @@
+{
+  "id": "9f771edb-fb20-4426-9ae2-82de322bbe5f",
+  "label": "De ente c.3 three stages composed: one first being whose esse is its essence; purity route connected",
+  "statement_ids": [
+    "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+    "75b5b027-21f1-400a-8b21-775bb6d47983",
+    "fd12ad3d-6729-4fa0-bb87-0121260df684",
+    "3d01134d-0b03-4469-a81a-a18d6e179fa0",
+    "c35b1a5c-6405-449b-993b-8196b2457e08",
+    "457698e4-eb21-4561-ab32-eccbfb0a992e",
+    "3b39e0ba-eb4a-5708-90d0-c2706094d43c",
+    "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1"
+  ],
+  "date": "2026-11-14",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Issue #1628. Materialized and read AQUINAS-DE-ENTE-C3-4 (Baur/Koch c.3 [69874] = Leonine c.4, English §§77–81). Reuse: #1629 step 457698e4 (mode-unspecified other actual cause), q.3 a.4 profile, existing reception premises 6dfe01ab/7fcfcee8/14325c83, root-purity route dcea77db and root-uniqueness route 0edb19eb. Results (zero-axiom): (b) at most one actual being whose esse is its essence (860eae63) from the sourced multiplication inventory (encoded only at pairs of beings whose esse is their essence), no-difference and no-matter readings, the reception premises (third mode) and the OPEN shared-nature premise 75b5b027 (#697 individuation gap); (c) every actual distinct esse descends through finite chains of actual causes of being from a being whose esse is its essence (0807e653), the reduction principle derived from 457698e4 and the OPEN well-foundedness premise fd12ad3d with excluded middle; (a)+(b)+(c) one such being has no actual cause of its esse and heads a chain of actual causes of being to every other actual being (5c904cf6, also using fd12ad3d), with unequal represented esse and essence for every other being derived from at-most-one in the passage's order, not from the intellectus-essentiae argument; (d) root-purity sibling e6337182 with 457698e4 in place of the q.3 a.4 pair, which makes the #1629 chain reach the root (frontier-diff 477 -> 480 open, 469 -> 473 support alternatives); at-most-one actual root c056ad5c. Controls 04212a3f: infinite regress, uncaused distinct esse, two sources (shared-nature premise omitted), nonvacuity. Rejected approaches: concluding 7ab0ddcb directly (type-checks, but the new argument fails the sense check because 5c898d24 and 7ab0ddcb carry INTRINSIC_PRODUCTIVE_CONTRIBUTION_VERSUS_SOURCE_BACKED_1/_2, legacy-allowlisted only); deriving the third-mode exclusion through the weak identity-scoped b9316115 (different Frame vocabulary, so 6dfe01ab is used with strong_version_needed); assuming the reduction principle as a premise (would be a transcription). Wippel's conceptual-to-real worry recorded as a targeted challenge and avoided by drawing the real distinction from stage (b). Provisional judgment in docs/notes/de-ente-esse-source-1628.md: valid with causal coverage of distinct esse, no infinite regress of actual causes of being and the shared-nature premise; strongest rival to existence is the global/infinite derivative order (price: account for the obtaining of the whole order's esse or accept it as brute), to uniqueness the two-sources account (price: a non-additive distinguisher of pure esses). No premise established; no efficiency, conservation, necessity or God identification.",
+  "evidence": [
+    "860eae63-c005-4efd-bdfd-69e3a061406a",
+    "0807e653-f60b-42b3-bd74-0a427516e53b",
+    "5c904cf6-6d05-40bd-abaa-1a386c3ca6eb",
+    "e6337182-1349-447b-aaf7-9154cebe5a1c",
+    "c056ad5c-458c-4cc3-8d80-3e24b5e705b6",
+    "04212a3f-ba3c-4102-978f-c551b5ad8600"
+  ],
+  "blocker": "Open interfaces: (1) composing at-most-one actual root with root existence into 7ab0ddcb needs the sense links of 5c898d24 and 7ab0ddcb fixed (#1233); (2) the first source n is in the causes-of-being order, not yet an ActualRoot: needs InAct-to-concrete-existence (converse of 0436de86) and no actual concrete ground of n (converse of cb1cdea9 plus 'a being whose esse is its essence has no other cause of its esse'); (3) with (2), c71c068c would give necessity at accessible worlds; (4) efficiency waits on #1633. Open premises: d1f3ffcc (and 600f91cb for its De ente decomposition), fd12ad3d, 75b5b027, 33f3c4c5."
+}
