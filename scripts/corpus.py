@@ -278,7 +278,7 @@ DISAGREEMENT_NONE = "none recorded"
 # (`criterion_reasons`), and a newly recorded rival that the disagreement
 # record omits still reopens the marking.
 OWNER_APPROVAL_FIELDS = {"decision", "date"}
-OWNER_APPROVAL_URL_RE = re.compile(r"^https://github\.com/moritzbrantner/truth-core/issues/\d+#issuecomment-\d+$")
+OWNER_APPROVAL_URL_RE = re.compile(r"^https://github\.com/moritzbrantner/(?:truth-core|formal-logos)/issues/\d+#issuecomment-\d+$")
 OWNER_APPROVAL_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 

@@ -1323,9 +1323,10 @@ fn validate_owner_approval(where_: &str, marking: &Obj) -> Res<()> {
         ));
     };
     let url = |text: &str| {
-        let Some(rest) =
-            dollar(text).strip_prefix("https://github.com/moritzbrantner/truth-core/issues/")
-        else {
+        let text = dollar(text);
+        let Some(rest) = ["truth-core", "formal-logos"].iter().find_map(|repo| {
+            text.strip_prefix(&format!("https://github.com/moritzbrantner/{repo}/issues/"))
+        }) else {
             return false;
         };
         let Some((issue, comment)) = rest.split_once("#issuecomment-") else {
@@ -1582,13 +1583,15 @@ fn validate_settlement_actions(statement: &Obj) -> Res<()> {
                     .into(),
             );
         }
+        let decision = py_str(Some(
+            action
+                .get("decision")
+                .unwrap_or(&Value::String(String::new())),
+        ));
         if string(action, "status") == Some("approved")
-            && !py_str(Some(
-                action
-                    .get("decision")
-                    .unwrap_or(&Value::String(String::new())),
-            ))
-            .starts_with("https://github.com/moritzbrantner/truth-core/")
+            && !["truth-core", "formal-logos"].iter().any(|repo| {
+                decision.starts_with(&format!("https://github.com/moritzbrantner/{repo}/"))
+            })
         {
             return Err("approved settlement action needs a repository owner decision URL".into());
         }

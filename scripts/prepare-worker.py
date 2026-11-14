@@ -36,8 +36,8 @@ def worker_clone(path):
     if Path(top).resolve() != root:
         raise ValueError("--clone must name the repository root")
     remote = run(root, "git", "remote", "get-url", "origin", capture=True).strip()
-    if not re.fullmatch(r"(?:https://github\.com/|git@github\.com:)moritzbrantner/truth-core(?:\.git)?", remote):
-        raise ValueError("expected the truth-core origin; local shared-cache clones must set their upstream origin first")
+    if not re.fullmatch(r"(?:https://github\.com/|git@github\.com:)moritzbrantner/(?:truth-core|formal-logos)(?:\.git)?", remote):
+        raise ValueError("expected the formal-logos (formerly truth-core) origin; local shared-cache clones must set their upstream origin first")
     for required in ("lean-toolchain", "lake-manifest.json", "bun.lock", "scripts/bootstrap-verifier.sh"):
         if not (root / required).is_file():
             raise ValueError(f"missing repository input: {required}")

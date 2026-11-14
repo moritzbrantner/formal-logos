@@ -17,7 +17,7 @@ export default async function AttemptPage({ params }: { params: Promise<{ attemp
   const corpus = getCorpus();
   const evidenceHref = (id: string) => {
     if (/^PR-[1-9][0-9]*$/.test(id)) {
-      return `https://github.com/moritzbrantner/truth-core/pull/${id.slice(3)}`;
+      return `https://github.com/moritzbrantner/formal-logos/pull/${id.slice(3)}`;
     }
     const ref = recordRef(corpus, id);
     if (ref?.kind === "argument") {
