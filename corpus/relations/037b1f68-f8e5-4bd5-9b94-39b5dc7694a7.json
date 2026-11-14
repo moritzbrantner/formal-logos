@@ -1,0 +1,10 @@
+{
+  "id": "037b1f68-f8e5-4bd5-9b94-39b5dc7694a7",
+  "label": "ST I q.3 a.4's conclusion supports its efficient reading",
+  "subject_kind": "claim",
+  "subject_id": "d5239ffd-5312-5ca8-853a-e48cda408487",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "1ff08418-e7a8-473f-9348-f2fe83b4d00e",
+  "note": "Partial support. The claimed sentence, 'oportet ergo quod illud cuius esse est aliud ab essentia sua, habeat esse causatum ab alio', states another cause of esse and does not name its mode. The efficient reading rests on the context of the same proof: the example of an exterior cause is fire causing heat in water, and the next sentence denies the conclusion of God 'quia Deum dicimus esse primam causam efficientem', which bites only if the excluded cause of God's esse would be prior in the efficient order. That the cause is efficient therefore stays unattributed; it is carried by the OPEN bridge."
+}

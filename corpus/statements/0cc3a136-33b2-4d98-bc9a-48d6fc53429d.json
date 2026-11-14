@@ -1,0 +1,11 @@
+{
+  "id": "0cc3a136-33b2-4d98-bc9a-48d6fc53429d",
+  "label": "Whatever causes the esse of a thing other than itself is an efficient cause of that esse",
+  "paraphrase": "OPEN analyst premise, attribution deferred, the unrestricted version of the esse-cause efficiency bridge: for every y and x with y distinct from x, if y causes x's esse (CausesIn y x esse, mode unspecified) then y is an efficient cause of x's esse (EfficientlyCausesEsse y x). Unlike the restricted bridge it covers causes that are not in act and effects whose esse is their essence. It is the esse instance, read tenselessly, of the agent-or-identical principle (whatever accounts for another's actuality does so as an agent); the existing STMT-PERFECTION-CAUSING-IN-ANOTHER-IS-EFFICIENT (e0088de9) states the same for every respect with the secunda via's here-and-now efficient causing (DEF-EFFICIENT-CAUSING), a different relation, so it is not identified with this one. Rejected by any account on which a form, an exemplar, an end or a structure distinct from x causes x's esse without acting.",
+  "lean_declaration": "TruthCore.Causality.EsseCauseEfficiency.CausingAnothersEsseIsEfficient",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "8934912c-7997-4af7-9520-ec94ff221043",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

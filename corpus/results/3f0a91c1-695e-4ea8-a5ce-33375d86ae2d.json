@@ -1,0 +1,11 @@
+{
+  "id": "3f0a91c1-695e-4ea8-a5ce-33375d86ae2d",
+  "label": "The restricted esse-cause efficiency bridge, from the unrestricted one",
+  "argument_id": "49514d62-8f5f-4bfe-b6ce-71cfb37ca2e6",
+  "challenge_module": "TruthCore.Results.Causality.EsseCauseEfficiency.Challenge",
+  "solution_module": "TruthCore.Results.Causality.EsseCauseEfficiency.Solution",
+  "theorem": "TruthCore.Results.Causality.EsseCauseEfficiency.distinctActualEsseCauseEfficientFromUnrestricted",
+  "comparator_config": "results/3f0a91c1-695e-4ea8-a5ce-33375d86ae2d/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order (backing result): the unrestricted efficiency premise (every cause of another's esse is efficient) entails the restricted bridge (every actual cause, other than x, of an actual distinct esse is efficient). The converse fails (RestrictedBridgeOnlyControl). The routes use the restricted, weaker bridge."
+}

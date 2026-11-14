@@ -1,0 +1,13 @@
+{
+  "id": "58e6ec63-7302-4f17-b832-acb572880a65",
+  "label": "Every actual cause of an actual distinct esse, other than the thing, is an efficient cause of it",
+  "paraphrase": "OPEN analyst bridge, attribution deferred: for every x that actually exists with esse distinct from its essence (DistinctEsseAt), every y other than x that is in act as to being and causes x's esse (CausesIn y x esse, mode unspecified, DEF-CAUSE-OF-PERFECTION) is an efficient cause of x's esse (EfficientlyCausesEsse y x, CAUSING_AN_EFFECT_6's efficiency conjunct). It is the passage from a mode-unspecified to an efficient cause of being, restricted to actual causes of actual distinct esse. It fails if an actual being other than x can account for x's esse as a formal or constitutive principle, an exemplar, an end, or a structure, without being an agent: NonEfficientCauseControl satisfies the De ente and q.3 a.4 mode-unspecified conclusions and falsifies it. Neither the De ente nor the q.3 a.4 text states it: De ente rejects only efficient causation of esse by the thing's own quiddity ('dico sicut a causa efficiente'), and q.3 a.4's conclusion does not name the mode.",
+  "lean_declaration": "TruthCore.Causality.EsseCauseEfficiency.DistinctActualEsseCauseIsEfficient",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "8934912c-7997-4af7-9520-ec94ff221043",
+    "d8963cdd-0283-4b03-b006-6fb946a8c9e4",
+    "0ea9feb8-1f92-5b11-aa74-2f2e567c6106",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

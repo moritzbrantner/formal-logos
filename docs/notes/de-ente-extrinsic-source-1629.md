@@ -54,7 +54,9 @@ Codex review (#1631) rightly objected that this certified efficiency by
 definition. That bridge and argument were withdrawn: nothing here supplies
 efficiency, and the vocabulary has no efficiency predicate on arbitrary causes of being with
 which an OPEN generic-to-efficient bridge could be stated so that it could
-fail.
+fail. (Resolved in #1633: `33ad148b`'s prose is now mode-unspecified like its
+type, and the efficient reading is typed behind an OPEN bridge; see
+[esse-cause-efficiency-1633.md](esse-cause-efficiency-1633.md).)
 
 ## The gap: "not self-produced" is not "produced by another"
 

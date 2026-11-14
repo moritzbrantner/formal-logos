@@ -1,0 +1,26 @@
+{
+  "id": "5e6464c6-1f8a-4683-9c04-6c8908c5446d",
+  "label": "Efficiency of esse-causes: q.3 a.4 claim-vs-type gap closed, efficiency typed behind an open bridge",
+  "statement_ids": [
+    "33ad148b-ceab-5856-a4f8-c999a1dba644",
+    "1ff08418-e7a8-473f-9348-f2fe83b4d00e",
+    "58e6ec63-7302-4f17-b832-acb572880a65",
+    "0cc3a136-33b2-4d98-bc9a-48d6fc53429d",
+    "457698e4-eb21-4561-ab32-eccbfb0a992e",
+    "be639b3f-a4b7-5ec0-a9be-accfd8d42598",
+    "7561e216-900f-53f1-9e22-d74427758cd6",
+    "e0088de9-28eb-533c-a1e7-662f780cc0e2"
+  ],
+  "date": "2026-11-14",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Issue #1633. Materialized and read AQUINAS-ST-I-Q3-A4: the conclusion 'habeat esse causatum ab alio' and the dichotomy 'causatum ab aliquo exteriori' do not name the mode of causing; the fire example and 'quia Deum dicimus esse primam causam efficientem' suggest an agent. Type inspection: 33ad148b, 4876dc46's conclusion 7561e216 and 2b25a78c on route 3b0f4fa5 are all over the mode-unspecified CausesIn, and no consumer needs efficiency. Repair: prose of 33ad148b, be639b3f's exterior horn, 7561e216, DEF-EXTERNAL-CAUSE-OF-ESSE, DEF-Q3A4-EXTERNAL-ESSE-CAUSE-MODEL, claims d5239ffd/7b708e93 (attribution recorded), meanings of af503cd7/4876dc46/d3c6a6f7, Lean doc comments of HasExternalEsseCause and ParticipatedHasExternalEsseCause, and 457698e4 now say mode unspecified. Efficiency typed: EfficiencyProfile adds the tenseless primitive EfficientlyCausesEsse (definition 8934912c, deliberately not the secunda via's here-and-now EfficientlyCausesIn); HasExternalEfficientEsseCause is CAUSING_AN_EFFECT_6 (definition d8963cdd). Results: 95b40fad (457698e4 + OPEN bridge 58e6ec63 -> 1ff08418), 10c1d8d1 (be639b3f + 61bd42e5 + bridge -> 1ff08418, composing the existing transcription theorem), a2d5d89d (1ff08418 strengthens 33ad148b), 3f0a91c1 (0cc3a136 strengthens 58e6ec63), controls 23792412. Non-efficient control: every mode-unspecified input and conclusion of both source routes holds, both bridges and 1ff08418 fail. Existing premises excluding it: none on the route; e0088de9 would only with an unstated tense bridge, since its EfficientlyCausesIn is here-and-now. Rejected: reusing DEF-EFFICIENT-CAUSING (imports present causing, #1616); rebinding 33ad148b (frozen consumers); the existential bridge (makes the derivations transcriptions). Strongest rival to the bridge: a non-agent principle of esse, either a constituent form counted as a being (the typed bridge's c != x is broader than q.3 a.4's 'exteriori') or a non-agent exterior exemplar; price: show how a non-agent accounts for x's being actual rather than specifying it. Note docs/notes/esse-cause-efficiency-1633.md.",
+  "evidence": [
+    "95b40fad-6966-40aa-a66a-72164a101764",
+    "10c1d8d1-a767-44f5-a03c-4ff7f7f2a4e8",
+    "a2d5d89d-e3d6-4799-a486-43e9ccf29b3a",
+    "3f0a91c1-695e-4ea8-a5ce-33375d86ae2d",
+    "23792412-934c-4ea1-a3a8-e9f5d37a94b0"
+  ],
+  "blocker": "The bridge 58e6ec63 and its unrestricted version 0cc3a136 are OPEN. Next tests: restrict the bridge to non-constituent causes (needs a constituency relation on the profile); derive it from a specify-versus-actualize principle; state the tense bridge from the secunda via's here-and-now EfficientlyCausesIn to EfficientlyCausesEsse so that 1ff08418 can feed the order of efficient causes, the only place where efficiency of esse-causes is load-bearing."
+}

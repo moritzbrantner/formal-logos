@@ -1,0 +1,14 @@
+{
+  "id": "27de54de-40b6-424b-90a7-0658f1f523c2",
+  "label": "Efficient cause of distinct esse, from the q.3 a.4 dichotomy and the bridge (inference)",
+  "input_statement_ids": [
+    "be639b3f-a4b7-5ec0-a9be-accfd8d42598",
+    "61bd42e5-69fe-53ef-9972-c9f28b2b6d14",
+    "58e6ec63-7302-4f17-b832-acb572880a65"
+  ],
+  "output_statement_id": "1ff08418-e7a8-473f-9348-f2fe83b4d00e",
+  "rule": "Apply the q.3 a.4 transcription distinctEsseExternalFromExhaustion to obtain another actual cause, mode unspecified; the bridge makes it efficient",
+  "meaning": "Conditional derivation of the efficient reading of ST I q.3 a.4's first proof: the source-attributed dichotomy (essential principles alone suffice, or another actual being causes the esse, mode unspecified) and the no-essential-self-sufficiency premise give another actual cause of every actual distinct esse (the existing transcription), and the OPEN efficiency bridge makes it efficient. It composes the existing theorem rather than restating it. The efficiency of the external cause comes only from the bridge: in NonEfficientCauseControl both q.3 a.4 premises hold and the conclusion fails.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

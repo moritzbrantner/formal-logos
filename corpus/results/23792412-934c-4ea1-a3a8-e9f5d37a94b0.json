@@ -1,0 +1,11 @@
+{
+  "id": "23792412-934c-4ea1-a3a8-e9f5d37a94b0",
+  "label": "Esse-cause efficiency controls",
+  "argument_id": "5730e870-3a54-40d7-aca2-7913b2b5ed8b",
+  "challenge_module": "TruthCore.Results.Causality.EsseCauseEfficiency.Challenge",
+  "solution_module": "TruthCore.Results.Causality.EsseCauseEfficiency.Solution",
+  "theorem": "TruthCore.Results.Causality.EsseCauseEfficiency.esseCauseEfficiencyControls",
+  "comparator_config": "results/23792412-934c-4ea1-a3a8-e9f5d37a94b0/comparator.json",
+  "status": "solution-present",
+  "description": "Closed controls for the esse-cause efficiency bridge: one interpretation in which every mode-unspecified input and conclusion of the De ente and q.3 a.4 routes holds and the efficient conclusion and both bridges fail (the bridge is needed, and the efficient reading strictly strengthens 33ad148b), one in which the restricted bridge holds and the unrestricted one fails (that strength order is strict), and one in which everything holds. These witness logical independence under the encoded predicates only; they are not evidence that a non-efficient cause of esse is possible or plausible."
+}

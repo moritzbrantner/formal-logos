@@ -1,0 +1,13 @@
+{
+  "id": "0ae3e454-9998-473c-b3f8-702badd956c1",
+  "label": "Efficient cause of distinct esse, from De ente's other actual cause and the bridge (inference)",
+  "input_statement_ids": [
+    "457698e4-eb21-4561-ab32-eccbfb0a992e",
+    "58e6ec63-7302-4f17-b832-acb572880a65"
+  ],
+  "output_statement_id": "1ff08418-e7a8-473f-9348-f2fe83b4d00e",
+  "rule": "For an arbitrary actual distinct-esse x take its other actual cause c from the De ente step; the bridge makes c an efficient cause of x's esse",
+  "meaning": "Conditional derivation, same witness and same q.3 a.4 profile extended by the efficiency primitive: the De ente c.3 step (another being in act causes every actual distinct esse, mode unspecified) and the OPEN efficiency bridge give an external efficient cause of every actual distinct esse. The bridge is the only extra premise and is needed: in NonEfficientCauseControl the De ente step holds and the conclusion fails. Not a transcription: the bridge's consequent is the efficiency of one given cause, not the conclusion. No conservation, present sustaining, uniqueness or God identification follows.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

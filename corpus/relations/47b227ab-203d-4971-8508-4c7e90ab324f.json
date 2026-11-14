@@ -1,0 +1,12 @@
+{
+  "id": "47b227ab-203d-4971-8508-4c7e90ab324f",
+  "label": "The unrestricted esse-cause efficiency premise strengthens the restricted bridge",
+  "subject_kind": "statement",
+  "subject_id": "0cc3a136-33b2-4d98-bc9a-48d6fc53429d",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "58e6ec63-7302-4f17-b832-acb572880a65",
+  "verification_result_id": "3f0a91c1-695e-4ea8-a5ce-33375d86ae2d",
+  "strictness_result_id": "23792412-934c-4ea1-a3a8-e9f5d37a94b0",
+  "note": "Same profile; the restricted bridge covers only actual causes of actual distinct esse. RestrictedBridgeOnlyControl satisfies the restricted bridge and falsifies the unrestricted one."
+}

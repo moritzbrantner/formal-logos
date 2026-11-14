@@ -1,0 +1,9 @@
+{
+  "id": "d8963cdd-0283-4b03-b006-6fb946a8c9e4",
+  "label": "External efficient cause of esse (typed): HasExternalEfficientEsseCause q x",
+  "term": "external efficient cause of esse, efficiency typed (CAUSING_AN_EFFECT_6)",
+  "definition": "`HasExternalEfficientEsseCause q x`: some y other than x is in act as to being, causes x's esse (`CausesIn y x esse`, DEF-CAUSE-OF-PERFECTION) and is an efficient cause of x's esse (`EfficientlyCausesEsse y x`, the tenseless primitive defined in 8934912c). It is the q.3 a.4 `HasExternalEsseCause` (CAUSING_AN_EFFECT_2, mode of causing not fixed by its type) with the efficiency conjunct added, so it entails that sense by projection and not conversely. 'Other than x' is numerical distinctness only, as in q.3 a.4, not non-constituency.",
+  "basis": "stipulative",
+  "note": "Stipulated for #1633 as the efficiency-typed sibling of DEF-EXTERNAL-CAUSE-OF-ESSE and DEF-Q3A4-EXTERNAL-ESSE-CAUSE-MODEL, whose shared Lean declaration does not carry efficiency. The ST I q.3 a.4 conclusion 'habeat esse causatum ab alio' does not name the mode; its efficient reading is supported by the context ('quia Deum dicimus esse primam causam efficientem'; 'calor in aqua causatur ab igne') but not stated, so this definition is not sourced. Note docs/notes/esse-cause-efficiency-1633.md.",
+  "lean_declaration": "TruthCore.Causality.EsseCauseEfficiency.HasExternalEfficientEsseCause"
+}

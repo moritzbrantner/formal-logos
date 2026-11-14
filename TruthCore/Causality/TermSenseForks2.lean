@@ -230,7 +230,7 @@ def ParticipatedHasDistinctEsse {Being Principle Respect : Type}
   ∀ x, F.Participated x → PrimaPars.Question3.Article4.DistinctEsseAt F.profile x
 
 /-- BECOMING-BEING-CAUSE_2: whatever has being by participation has an actually
-existing external efficient cause of its esse. -/
+existing external cause of its esse (mode of causing not fixed, #1633). -/
 def ParticipatedHasExternalEsseCause {Being Principle Respect : Type}
     (F : BecomingBeingFrame Being Principle Respect) : Prop :=
   ∀ x, F.Participated x → PrimaPars.Question3.Article4.HasExternalEsseCause F.profile x
