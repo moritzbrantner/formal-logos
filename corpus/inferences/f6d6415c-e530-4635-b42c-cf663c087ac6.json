@@ -1,0 +1,16 @@
+{
+  "id": "f6d6415c-e530-4635-b42c-cf663c087ac6",
+  "label": "No component is first, from prior efficient esse-causes and first-being act priority (inference)",
+  "input_statement_ids": [
+    "86f10ec3-3068-5066-8ba1-3c85baeb1a22",
+    "61ad11f3-476f-411d-9720-d9f05cbc22fc",
+    "c6d6379b-6a9b-55b5-a701-3df289dfcca4",
+    "811c2e98-bd52-440b-8379-dd7534fc9c4d",
+    "b0cd6015-8af8-4832-b125-cc4fe7863255"
+  ],
+  "output_statement_id": "09c6d5f0-d412-5038-85f9-75fffb935727",
+  "rule": "Composition of the existing noComponentFirstOfWeak with the cause relation instantiated as the efficient cause of esse",
+  "meaning": "Sibling of 358d8c6e (act priority only at a first being) in which the participated component's other cause is an efficient cause of its esse and the priority premise is the OPEN priority of tenseless efficient causes of esse, in place of e078f07b read over the mode-unspecified CausesIn. Every other input is unchanged. The efficiency that 358d8c6e and e7b4c683 assume in a reading step is here a premise that can fail (NonEfficientParticipationControl), and the step from the secunda via's here-and-now priority to tenseless priority is an explicit OPEN tense bridge rather than a reuse of e078f07b (TenseGapControl). No sibling of e7b4c683 is registered: its inputs a4d3261a and 86f10ec3 use two POTENCY senses without a bridge (legacy allowlist), and a new argument may not inherit that. No premise is discharged.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

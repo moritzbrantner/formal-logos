@@ -1,0 +1,19 @@
+{
+  "id": "90e120ab-54f5-4dbd-b39e-b36bbbfdaf1b",
+  "label": "Efficient causes of esse are prior, from the secunda via priority and the tense bridge",
+  "premise_statement_ids": [
+    "e078f07b-a4b8-595e-a3ee-02dd83474450",
+    "19882fa9-b47c-4245-865d-993a6d669f61"
+  ],
+  "conclusion_statement_id": "b0cd6015-8af8-4832-b125-cc4fe7863255",
+  "inference_ids": [
+    "e0b0e0f3-fa2d-46f3-b70f-17d263bed428"
+  ],
+  "meaning": "Conditional derivation of the tenseless priority premise: the secunda via's 'an efficient cause is prior to what it causes' (e078f07b), with its cause relation the here-and-now efficient causing of DEF-EFFICIENT-CAUSING, and the OPEN tense bridge (every efficient cause of a thing's esse causes it here and now at esse) give the priority of tenseless efficient causes of esse. The tense bridge is needed: in TenseGapControl the secunda via priority holds and the conclusion fails. Not a transcription: the bridge's consequent is a here-and-now causing, not the priority.",
+  "definition_ids": [
+    "8934912c-7997-4af7-9520-ec94ff221043",
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"
+  ]
+}

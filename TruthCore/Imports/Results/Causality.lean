@@ -124,6 +124,7 @@ public import TruthCore.Results.Causality.DivineVeracity1410.Solution
 public import TruthCore.Results.Causality.DivineVeracityContent1410.Solution
 public import TruthCore.Results.Causality.DurationMeasureCandidates.Solution
 public import TruthCore.Results.Causality.EsseCauseEfficiency.Solution
+public import TruthCore.Results.Causality.EsseCauseEfficiencyPriority.Solution
 public import TruthCore.Results.Causality.EsseCausePriority.Solution
 public import TruthCore.Results.Causality.EsseReceptionDefinitions.Controls.Solution
 public import TruthCore.Results.Causality.EsseReceptionDefinitions.Counteraccount.Solution

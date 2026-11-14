@@ -1,0 +1,11 @@
+{
+  "id": "a2ae4358-867b-4b20-929a-e9a1f7f86a40",
+  "label": "Participated beings have an efficient esse-cause, from the efficient q.3 a.4 reading",
+  "argument_id": "2a7f63b0-e861-4e93-8f8d-abcf82bbbb3e",
+  "challenge_module": "TruthCore.Results.Causality.EsseCauseEfficiencyPriority.Challenge",
+  "solution_module": "TruthCore.Results.Causality.EsseCauseEfficiencyPriority.Solution",
+  "theorem": "TruthCore.Results.Causality.EsseCauseEfficiencyPriority.participatedEfficientCauseFromQ3A4",
+  "comparator_config": "results/a2ae4358-867b-4b20-929a-e9a1f7f86a40/comparator.json",
+  "status": "solution-present",
+  "description": "Efficient sibling of 4876dc46 and d3c6a6f7: whatever has being by participation actually exists with distinct esse (OPEN bridge cbb068e8), every actual distinct esse has an external efficient cause (1ff08418, itself resting on the OPEN efficiency bridge 58e6ec63), so whatever has being by participation has an efficient cause of its esse other than itself. Efficiency comes only from 1ff08418: in NonEfficientParticipationControl the mode-unspecified premises 33ad148b and 2b25a78c hold and the conclusion fails."
+}

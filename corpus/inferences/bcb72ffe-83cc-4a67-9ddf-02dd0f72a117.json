@@ -1,0 +1,13 @@
+{
+  "id": "bcb72ffe-83cc-4a67-9ddf-02dd0f72a117",
+  "label": "Participated beings have an efficient esse-cause, from the efficient q.3 a.4 reading (inference)",
+  "input_statement_ids": [
+    "cbb068e8-337d-5772-a3f9-10df457ba9fe",
+    "1ff08418-e7a8-473f-9348-f2fe83b4d00e"
+  ],
+  "output_statement_id": "811c2e98-bd52-440b-8379-dd7534fc9c4d",
+  "rule": "Universal instantiation, modus ponens and conjunction elimination",
+  "meaning": "Efficient sibling of 4876dc46 and d3c6a6f7: whatever has being by participation actually exists with distinct esse (OPEN bridge cbb068e8), every actual distinct esse has an external efficient cause (1ff08418, itself resting on the OPEN efficiency bridge 58e6ec63), so whatever has being by participation has an efficient cause of its esse other than itself. Efficiency comes only from 1ff08418: in NonEfficientParticipationControl the mode-unspecified premises 33ad148b and 2b25a78c hold and the conclusion fails.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

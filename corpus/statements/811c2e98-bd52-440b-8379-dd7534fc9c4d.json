@@ -1,0 +1,11 @@
+{
+  "id": "811c2e98-bd52-440b-8379-dd7534fc9c4d",
+  "label": "Whatever has being by participation has an efficient cause of its esse other than itself",
+  "paraphrase": "Analyst formulation, attribution deferred: for every x that has its being by participation, some c other than x (numerical distinctness only) is an efficient cause of x's esse (EfficientlyCausesEsse c x, the tenseless agent-cause primitive of the q.3 a.4 efficiency profile). The efficient sibling of STMT-PARTICIPATED-HAS-OTHER-CAUSE (2b25a78c), whose cause of being has no fixed mode; neither entails the other by definition, since an efficient cause of esse is not defined to stand in CausesIn. It does not say that c is in act, that c is the only cause, or anything about present sustaining or time.",
+  "lean_declaration": "TruthCore.Causality.EsseCauseEfficiencyPriority.ParticipatedHasOtherEfficientEsseCause",
+  "definition_ids": [
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "8934912c-7997-4af7-9520-ec94ff221043",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}
