@@ -383,10 +383,6 @@
         "7af298fb-a2c4-4239-919b-7685f2e1f67a",
         "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
       ],
-      "NECESSITY_OF_ONE_INDIVIDUAL_VERSUS_NECESSARY": [
-        "43d88672-a700-41d6-b11a-931bf8f468ae",
-        "aa98bacb-a677-44db-846c-b1c6572a2519"
-      ],
       "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT": [
         "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
         "9232f675-db0a-474c-9f00-d8e5aba69ef7"
@@ -794,12 +790,6 @@
         "2f006e0f-df60-4f24-948f-6a613df0a449",
         "881f0d2a-a460-4082-8a61-8fda18bf0115",
         "ad7297f8-2182-4d86-bfd4-11eb4714c914"
-      ]
-    },
-    "edd8651b-dc0c-5327-a72a-8611748b918e": {
-      "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT": [
-        "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
-        "9232f675-db0a-474c-9f00-d8e5aba69ef7"
       ]
     },
     "f2ed853b-53cc-593a-b0cb-7b0c67209290": {
@@ -2465,20 +2455,12 @@
       ]
     },
     "e47d6abd-a3ca-5426-be1f-646929504b1a": {
-      "COMPLETE_EXISTENCE_PRODUCTION_VERSUS_EXISTENTIAL_GROUNDING": [
-        "72999c5d-5dcb-4941-b82a-bc4f592dfc2f",
-        "c3f612b4-59f3-4ba6-b669-d349fda71669"
-      ],
       "NECESSARY": [
         "7af298fb-a2c4-4239-919b-7685f2e1f67a",
         "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
       ]
     },
     "abe97ecb-c6cd-55b2-91f4-a52354c1e881": {
-      "COMPLETE_EXISTENCE_PRODUCTION_VERSUS_EXISTENTIAL_GROUNDING": [
-        "72999c5d-5dcb-4941-b82a-bc4f592dfc2f",
-        "c3f612b4-59f3-4ba6-b669-d349fda71669"
-      ],
       "NECESSARY": [
         "7af298fb-a2c4-4239-919b-7685f2e1f67a",
         "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
@@ -2834,21 +2816,9 @@
       ]
     },
     "c719249b-c898-54de-a24c-471eeac07e71": {
-      "INTRINSIC_PRODUCTIVE_CONTRIBUTION_VERSUS_SOURCE_BACKED": [
-        "449eb783-1b3c-4f82-b11f-1c8114a005b9",
-        "cbbac0e8-36c9-41a2-8367-e94080d28d68"
-      ],
       "MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST": [
         "9bea9a43-3a87-4d62-86de-e5873aea62f8",
         "a833bcdb-8e99-4079-8cb6-fc1295eb690f"
-      ],
-      "NECESSARY": [
-        "7af298fb-a2c4-4239-919b-7685f2e1f67a",
-        "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
-      ],
-      "NONNECESSARY_VERSUS_CONTINGENT_ROOT": [
-        "9f9108e2-3cc3-45dd-be1d-d8fdaaced708",
-        "cf6a8bb9-2a70-4e90-86bd-06f69106da2f"
       ],
       "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT": [
         "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
@@ -5982,21 +5952,9 @@
       ]
     },
     "d028e5af-888e-530d-b4a4-485d714b8941": {
-      "INTRINSIC_PRODUCTIVE_CONTRIBUTION_VERSUS_SOURCE_BACKED": [
-        "449eb783-1b3c-4f82-b11f-1c8114a005b9",
-        "cbbac0e8-36c9-41a2-8367-e94080d28d68"
-      ],
       "NECESSARY": [
         "7af298fb-a2c4-4239-919b-7685f2e1f67a",
         "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
-      ],
-      "NECESSITY_OF_ONE_INDIVIDUAL_VERSUS_NECESSARY": [
-        "43d88672-a700-41d6-b11a-931bf8f468ae",
-        "aa98bacb-a677-44db-846c-b1c6572a2519"
-      ],
-      "NONNECESSARY_VERSUS_CONTINGENT_ROOT": [
-        "9f9108e2-3cc3-45dd-be1d-d8fdaaced708",
-        "cf6a8bb9-2a70-4e90-86bd-06f69106da2f"
       ],
       "POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED": [
         "5252f7f4-95a7-42f3-a420-23770702a0f4",
@@ -6008,21 +5966,9 @@
       ]
     },
     "d577e576-dd66-57e7-915c-6edafb9ff515": {
-      "INTRINSIC_PRODUCTIVE_CONTRIBUTION_VERSUS_SOURCE_BACKED": [
-        "449eb783-1b3c-4f82-b11f-1c8114a005b9",
-        "cbbac0e8-36c9-41a2-8367-e94080d28d68"
-      ],
       "NECESSARY": [
         "7af298fb-a2c4-4239-919b-7685f2e1f67a",
         "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
-      ],
-      "NECESSITY_OF_ONE_INDIVIDUAL_VERSUS_NECESSARY": [
-        "43d88672-a700-41d6-b11a-931bf8f468ae",
-        "aa98bacb-a677-44db-846c-b1c6572a2519"
-      ],
-      "NONNECESSARY_VERSUS_CONTINGENT_ROOT": [
-        "9f9108e2-3cc3-45dd-be1d-d8fdaaced708",
-        "cf6a8bb9-2a70-4e90-86bd-06f69106da2f"
       ],
       "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT": [
         "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
@@ -6030,21 +5976,9 @@
       ]
     },
     "43663853-6174-56b3-a39b-d851b8a69f3a": {
-      "INTRINSIC_PRODUCTIVE_CONTRIBUTION_VERSUS_SOURCE_BACKED": [
-        "449eb783-1b3c-4f82-b11f-1c8114a005b9",
-        "cbbac0e8-36c9-41a2-8367-e94080d28d68"
-      ],
       "NECESSARY": [
         "7af298fb-a2c4-4239-919b-7685f2e1f67a",
         "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
-      ],
-      "NECESSITY_OF_ONE_INDIVIDUAL_VERSUS_NECESSARY": [
-        "43d88672-a700-41d6-b11a-931bf8f468ae",
-        "aa98bacb-a677-44db-846c-b1c6572a2519"
-      ],
-      "NONNECESSARY_VERSUS_CONTINGENT_ROOT": [
-        "9f9108e2-3cc3-45dd-be1d-d8fdaaced708",
-        "cf6a8bb9-2a70-4e90-86bd-06f69106da2f"
       ],
       "POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED": [
         "5252f7f4-95a7-42f3-a420-23770702a0f4",
@@ -8271,17 +8205,9 @@
         "4f63bd47-86a8-4076-ab17-208c0022aa18",
         "815a5a9b-f3c4-4853-8318-194f046cdf04"
       ],
-      "INTRINSIC_PRODUCTIVE_CONTRIBUTION_VERSUS_SOURCE_BACKED": [
-        "449eb783-1b3c-4f82-b11f-1c8114a005b9",
-        "cbbac0e8-36c9-41a2-8367-e94080d28d68"
-      ],
       "NECESSARY": [
         "7af298fb-a2c4-4239-919b-7685f2e1f67a",
         "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
-      ],
-      "NONNECESSARY_VERSUS_CONTINGENT_ROOT": [
-        "9f9108e2-3cc3-45dd-be1d-d8fdaaced708",
-        "cf6a8bb9-2a70-4e90-86bd-06f69106da2f"
       ],
       "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT": [
         "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
@@ -8293,21 +8219,9 @@
         "4f63bd47-86a8-4076-ab17-208c0022aa18",
         "815a5a9b-f3c4-4853-8318-194f046cdf04"
       ],
-      "INTRINSIC_PRODUCTIVE_CONTRIBUTION_VERSUS_SOURCE_BACKED": [
-        "449eb783-1b3c-4f82-b11f-1c8114a005b9",
-        "cbbac0e8-36c9-41a2-8367-e94080d28d68"
-      ],
       "NECESSARY": [
         "7af298fb-a2c4-4239-919b-7685f2e1f67a",
         "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
-      ],
-      "NECESSITY_OF_ONE_INDIVIDUAL_VERSUS_NECESSARY": [
-        "43d88672-a700-41d6-b11a-931bf8f468ae",
-        "aa98bacb-a677-44db-846c-b1c6572a2519"
-      ],
-      "NONNECESSARY_VERSUS_CONTINGENT_ROOT": [
-        "9f9108e2-3cc3-45dd-be1d-d8fdaaced708",
-        "cf6a8bb9-2a70-4e90-86bd-06f69106da2f"
       ],
       "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT": [
         "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
@@ -8337,21 +8251,9 @@
         "4f63bd47-86a8-4076-ab17-208c0022aa18",
         "815a5a9b-f3c4-4853-8318-194f046cdf04"
       ],
-      "INTRINSIC_PRODUCTIVE_CONTRIBUTION_VERSUS_SOURCE_BACKED": [
-        "449eb783-1b3c-4f82-b11f-1c8114a005b9",
-        "cbbac0e8-36c9-41a2-8367-e94080d28d68"
-      ],
       "NECESSARY": [
         "7af298fb-a2c4-4239-919b-7685f2e1f67a",
         "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
-      ],
-      "NECESSITY_OF_ONE_INDIVIDUAL_VERSUS_NECESSARY": [
-        "43d88672-a700-41d6-b11a-931bf8f468ae",
-        "aa98bacb-a677-44db-846c-b1c6572a2519"
-      ],
-      "NONNECESSARY_VERSUS_CONTINGENT_ROOT": [
-        "9f9108e2-3cc3-45dd-be1d-d8fdaaced708",
-        "cf6a8bb9-2a70-4e90-86bd-06f69106da2f"
       ],
       "POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED": [
         "5252f7f4-95a7-42f3-a420-23770702a0f4",
@@ -8390,21 +8292,9 @@
         "4f63bd47-86a8-4076-ab17-208c0022aa18",
         "815a5a9b-f3c4-4853-8318-194f046cdf04"
       ],
-      "INTRINSIC_PRODUCTIVE_CONTRIBUTION_VERSUS_SOURCE_BACKED": [
-        "449eb783-1b3c-4f82-b11f-1c8114a005b9",
-        "cbbac0e8-36c9-41a2-8367-e94080d28d68"
-      ],
       "NECESSARY": [
         "7af298fb-a2c4-4239-919b-7685f2e1f67a",
         "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
-      ],
-      "NECESSITY_OF_ONE_INDIVIDUAL_VERSUS_NECESSARY": [
-        "43d88672-a700-41d6-b11a-931bf8f468ae",
-        "aa98bacb-a677-44db-846c-b1c6572a2519"
-      ],
-      "NONNECESSARY_VERSUS_CONTINGENT_ROOT": [
-        "9f9108e2-3cc3-45dd-be1d-d8fdaaced708",
-        "cf6a8bb9-2a70-4e90-86bd-06f69106da2f"
       ],
       "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT": [
         "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
@@ -8416,21 +8306,9 @@
         "4f63bd47-86a8-4076-ab17-208c0022aa18",
         "815a5a9b-f3c4-4853-8318-194f046cdf04"
       ],
-      "INTRINSIC_PRODUCTIVE_CONTRIBUTION_VERSUS_SOURCE_BACKED": [
-        "449eb783-1b3c-4f82-b11f-1c8114a005b9",
-        "cbbac0e8-36c9-41a2-8367-e94080d28d68"
-      ],
       "NECESSARY": [
         "7af298fb-a2c4-4239-919b-7685f2e1f67a",
         "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
-      ],
-      "NECESSITY_OF_ONE_INDIVIDUAL_VERSUS_NECESSARY": [
-        "43d88672-a700-41d6-b11a-931bf8f468ae",
-        "aa98bacb-a677-44db-846c-b1c6572a2519"
-      ],
-      "NONNECESSARY_VERSUS_CONTINGENT_ROOT": [
-        "9f9108e2-3cc3-45dd-be1d-d8fdaaced708",
-        "cf6a8bb9-2a70-4e90-86bd-06f69106da2f"
       ],
       "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT": [
         "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
@@ -8458,21 +8336,9 @@
         "4f63bd47-86a8-4076-ab17-208c0022aa18",
         "815a5a9b-f3c4-4853-8318-194f046cdf04"
       ],
-      "INTRINSIC_PRODUCTIVE_CONTRIBUTION_VERSUS_SOURCE_BACKED": [
-        "449eb783-1b3c-4f82-b11f-1c8114a005b9",
-        "cbbac0e8-36c9-41a2-8367-e94080d28d68"
-      ],
       "NECESSARY": [
         "7af298fb-a2c4-4239-919b-7685f2e1f67a",
         "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
-      ],
-      "NECESSITY_OF_ONE_INDIVIDUAL_VERSUS_NECESSARY": [
-        "43d88672-a700-41d6-b11a-931bf8f468ae",
-        "aa98bacb-a677-44db-846c-b1c6572a2519"
-      ],
-      "NONNECESSARY_VERSUS_CONTINGENT_ROOT": [
-        "9f9108e2-3cc3-45dd-be1d-d8fdaaced708",
-        "cf6a8bb9-2a70-4e90-86bd-06f69106da2f"
       ],
       "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT": [
         "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
@@ -8580,10 +8446,6 @@
         "7af298fb-a2c4-4239-919b-7685f2e1f67a",
         "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
       ],
-      "NECESSITY_OF_ONE_INDIVIDUAL_VERSUS_NECESSARY": [
-        "43d88672-a700-41d6-b11a-931bf8f468ae",
-        "aa98bacb-a677-44db-846c-b1c6572a2519"
-      ],
       "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT": [
         "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
         "9232f675-db0a-474c-9f00-d8e5aba69ef7"
@@ -8594,21 +8456,9 @@
         "4f63bd47-86a8-4076-ab17-208c0022aa18",
         "815a5a9b-f3c4-4853-8318-194f046cdf04"
       ],
-      "INTRINSIC_PRODUCTIVE_CONTRIBUTION_VERSUS_SOURCE_BACKED": [
-        "449eb783-1b3c-4f82-b11f-1c8114a005b9",
-        "cbbac0e8-36c9-41a2-8367-e94080d28d68"
-      ],
       "NECESSARY": [
         "7af298fb-a2c4-4239-919b-7685f2e1f67a",
         "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
-      ],
-      "NECESSITY_OF_ONE_INDIVIDUAL_VERSUS_NECESSARY": [
-        "43d88672-a700-41d6-b11a-931bf8f468ae",
-        "aa98bacb-a677-44db-846c-b1c6572a2519"
-      ],
-      "NONNECESSARY_VERSUS_CONTINGENT_ROOT": [
-        "9f9108e2-3cc3-45dd-be1d-d8fdaaced708",
-        "cf6a8bb9-2a70-4e90-86bd-06f69106da2f"
       ],
       "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT": [
         "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
@@ -9177,21 +9027,9 @@
       ]
     },
     "0c9c65ad-41dc-54d4-b3a5-1c360795cc18": {
-      "INTRINSIC_PRODUCTIVE_CONTRIBUTION_VERSUS_SOURCE_BACKED": [
-        "449eb783-1b3c-4f82-b11f-1c8114a005b9",
-        "cbbac0e8-36c9-41a2-8367-e94080d28d68"
-      ],
       "NECESSARY": [
         "7af298fb-a2c4-4239-919b-7685f2e1f67a",
         "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
-      ],
-      "NECESSITY_OF_ONE_INDIVIDUAL_VERSUS_NECESSARY": [
-        "43d88672-a700-41d6-b11a-931bf8f468ae",
-        "aa98bacb-a677-44db-846c-b1c6572a2519"
-      ],
-      "NONNECESSARY_VERSUS_CONTINGENT_ROOT": [
-        "9f9108e2-3cc3-45dd-be1d-d8fdaaced708",
-        "cf6a8bb9-2a70-4e90-86bd-06f69106da2f"
       ],
       "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT": [
         "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
@@ -9989,10 +9827,6 @@
       ]
     },
     "3fdc8ab7-03eb-5ff3-8045-890f0316b907": {
-      "INTRINSIC_PRODUCTIVE_CONTRIBUTION_VERSUS_SOURCE_BACKED": [
-        "449eb783-1b3c-4f82-b11f-1c8114a005b9",
-        "cbbac0e8-36c9-41a2-8367-e94080d28d68"
-      ],
       "MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST": [
         "9bea9a43-3a87-4d62-86de-e5873aea62f8",
         "a833bcdb-8e99-4079-8cb6-fc1295eb690f"
@@ -10005,7 +9839,6 @@
       ],
       "NECESSITY_OF_ONE_INDIVIDUAL_VERSUS_NECESSARY": [
         "2bbc3efc-46cc-4215-b1fa-f98077e2b38c",
-        "43d88672-a700-41d6-b11a-931bf8f468ae",
         "aa98bacb-a677-44db-846c-b1c6572a2519"
       ],
       "NONNECESSARY_VERSUS_CONTINGENT_ROOT": [
@@ -10040,25 +9873,9 @@
       ]
     },
     "dbf76ba6-3336-5c45-89f1-545cbf707436": {
-      "INTRINSIC_PRODUCTIVE_CONTRIBUTION_VERSUS_SOURCE_BACKED": [
-        "449eb783-1b3c-4f82-b11f-1c8114a005b9",
-        "cbbac0e8-36c9-41a2-8367-e94080d28d68"
-      ],
       "MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST": [
         "9bea9a43-3a87-4d62-86de-e5873aea62f8",
         "a833bcdb-8e99-4079-8cb6-fc1295eb690f"
-      ],
-      "NECESSARY": [
-        "7af298fb-a2c4-4239-919b-7685f2e1f67a",
-        "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
-      ],
-      "NONNECESSARY_VERSUS_CONTINGENT_ROOT": [
-        "9f9108e2-3cc3-45dd-be1d-d8fdaaced708",
-        "cf6a8bb9-2a70-4e90-86bd-06f69106da2f"
-      ],
-      "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT": [
-        "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
-        "9232f675-db0a-474c-9f00-d8e5aba69ef7"
       ]
     },
     "2247dfc4-7353-522f-b63a-eaf016b978b9": {

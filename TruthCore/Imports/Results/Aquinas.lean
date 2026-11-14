@@ -3,6 +3,7 @@ module
 
 public import TruthCore.Results.Aquinas.DeEnte.EsseSource.Solution
 public import TruthCore.Results.Aquinas.DeEnte.ExtrinsicSource.Solution
+public import TruthCore.Results.Aquinas.DeEnte.RootInterface.Solution
 public import TruthCore.Results.Aquinas.InMetaphysicam.PrimumMovensPureAct.Solution
 public import TruthCore.Results.Aquinas.SummaContraGentiles.Chapter22Conjunction.Solution
 public import TruthCore.Results.Aquinas.SummaContraGentiles.Chapter22SecondCase.Solution

@@ -1,0 +1,11 @@
+{
+  "id": "3e7d77b1-8577-474a-b64c-d6ec1807796f",
+  "label": "No infinite PER_SE_5 regress of actual causes of being, from no infinite regress",
+  "argument_id": "80f81d44-77b8-4ecb-bbdb-6c65f3a24241",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.RootInterface.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.RootInterface.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.RootInterface.perSeRegressOfUnrestricted",
+  "comparator_config": "results/3e7d77b1-8577-474a-b64c-d6ec1807796f/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order (not a route step): the unrestricted regress premise fd12ad3d (well-foundedness of every actual cause of being) implies its per se version for every per se link, since per se actual causes of being are actual causes of being. Strictness: PerAccidensRegressControl satisfies the per se version while fd12ad3d fails; that witness uses an empty per se link, so how much weaker the per se version is depends on the intended meaning of the primitive AsCaused."
+}

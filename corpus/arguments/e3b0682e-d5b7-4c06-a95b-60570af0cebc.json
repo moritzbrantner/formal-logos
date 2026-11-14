@@ -1,0 +1,17 @@
+{
+  "id": "e3b0682e-d5b7-4c06-a95b-60570af0cebc",
+  "label": "De ente root-interface controls",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "0b847841-e76e-4f62-a4a9-e752284709b5",
+  "inference_ids": [
+    "e981ea9a-493e-401a-b073-32c1956798a5"
+  ],
+  "meaning": "Closed controls for the #1635 root interface and per se regress: the per se bridge (per accidens regress), the ground bridge (non-causal ground), the concreteness bridge (absent source), no self-causation (self-ground), and one interpretation satisfying every input and conclusion. They witness logical underdetermination under the encoded predicates only.",
+  "definition_ids": [
+    "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "9969dfc2-1f2e-50be-b5e6-1f9cd402c7a6"
+  ]
+}

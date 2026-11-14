@@ -1,0 +1,9 @@
+{
+  "id": "a8172538-204c-45f5-9ee0-9e9d7b437660",
+  "label": "Borrowing trap: no intrinsic member; every admitted supplier of a member keeps a contributor inside",
+  "term": "borrowing trap (Trap)",
+  "definition": "Trap h intrinsic D, for a group container h (admitted supplier records, each with an effect and a contributor set), an intrinsic predicate and a set D of nodes: no member of D is intrinsic, and every admitted supplier record whose effect lies in D has some contributor in D. The contributor required to lie in D may differ from record to record, and a common source outside D does not remove the trap. The intrinsic predicate is a parameter: which nodes count as intrinsic is fixed by each use, not by this definition.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.DerivativeJointPower.Trap",
+  "note": "Extracted for #1635 from the joint-supply definition c9d479bb (DEF-DERIVATIVE-JOINT-SUPPLY), which states the same Trap clause among the Supply, LocalPower, Escape and PoweredGroups clauses, so that a statement using only Trap can link its definition without linking INTRINSIC_1 (intrinsic as underived contribution). WholeRosterNotTrapped (5c898d24) instantiates the intrinsic parameter with graph sourcehood (INTRINSIC_2, f825624c). Not a sense of any disambiguation."
+}

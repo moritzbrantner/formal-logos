@@ -1,0 +1,11 @@
+{
+  "id": "a20cb04c-56db-4ae9-bf5a-3645730f141f",
+  "label": "No infinite regress of actual causes of being, from the PER_SE_5 regress and bridge",
+  "argument_id": "828d7a59-7cc7-462b-99d7-209ee74a090f",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.RootInterface.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.RootInterface.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.RootInterface.unrestrictedRegressFromPerSe",
+  "comparator_config": "results/a20cb04c-56db-4ae9-bf5a-3645730f141f/comparator.json",
+  "status": "solution-present",
+  "description": "Non-transcription conditional derivation of the #1628 regress premise fd12ad3d from the weaker per se regress (an analyst analogue, for causes of esse of unspecified mode, of the per se regress that ST I q.46 a.2 ad 7 declares impossible for efficient causes) and the OPEN per se bridge: a caused actual cause of being causes being as caused, never per accidens. No matching restriction of the #1629 other-cause step is needed: the step and every argument consuming fd12ad3d stay as they are, and the restriction is carried by the bridge. PerAccidensRegressControl shows that the per se regress alone does not give fd12ad3d: an infinite per accidens chain of causes of being satisfies it and the other-cause step. The burden moves from the regress premise to the claim that no cause of esse is accidentally ordered; the cause is not said to be efficient, present or sustaining."
+}

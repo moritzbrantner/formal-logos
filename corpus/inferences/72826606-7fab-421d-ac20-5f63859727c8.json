@@ -1,0 +1,13 @@
+{
+  "id": "72826606-7fab-421d-ac20-5f63859727c8",
+  "label": "Unique actual CONCRETE_6 root, from the De ente source as root and at most one root (inference)",
+  "input_statement_ids": [
+    "ce7edf53-afbb-4bca-84d6-b0e36b861148",
+    "49fdec01-cb92-48cf-90c5-9de7761121f2"
+  ],
+  "output_statement_id": "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1",
+  "rule": "The first source is an actual root; at most one actual root identifies every actual root with it",
+  "meaning": "A second De ente route into the root-uniqueness interface 7ab0ddcb, which does not use population 56f68b40 or whole-roster nontrapping 5c898d24: root existence comes from the De ente first source as an actual root (interface 2), and uniqueness from De ente's at most one actual root 49fdec01. The composition only pairs an existential with a uniqueness clause; its weight is in the two premises. No modal necessity, efficiency or God identification is used or concluded.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
