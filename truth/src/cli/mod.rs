@@ -22,10 +22,14 @@ mod context;
 mod dossier;
 mod frontier;
 mod frontier_diff;
+mod ids;
 mod inspect;
+mod next;
+mod next_steps;
 mod orphans;
 mod related;
 mod research;
+mod sort_lists;
 mod status;
 mod thickness;
 
@@ -43,6 +47,11 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] related STATEMENT [--limit N]
        truth [--root PATH] [--json] dossier (STATEMENT | --all) [--frontier-json FILE] [--limit N]
        truth [--root PATH] [--json] context TARGET [--frontier-json FILE] [--limit N] [--related N]
+       truth [--root PATH] [--json] next
+       truth [--root PATH] [--json] next-steps [--frontier-root STATEMENT]
+       truth [--root PATH] [--json] arguments
+       truth [--root PATH] [--json] results
+       truth [--root PATH] [--json] sort-lists
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
@@ -77,6 +86,11 @@ pub const COMMANDS: &[Command] = &[
     related::COMMAND,
     dossier::COMMAND,
     context::COMMAND,
+    next::COMMAND,
+    next_steps::COMMAND,
+    ids::ARGUMENTS,
+    ids::RESULTS,
+    sort_lists::COMMAND,
 ];
 
 /// Parses `args` and runs the command it names.
@@ -121,6 +135,10 @@ pub fn main(args: &[OsString]) -> ExitCode {
         Err((code, error)) => {
             if machine {
                 eprintln!("{}", json!({"schema_version":1,"error":error}));
+            } else if error["stdout"] == true {
+                // A Python report that prints its outcome to stdout and
+                // exits nonzero (`next` without candidates).
+                println!("{}", error["message"].as_str().unwrap_or_default());
             } else if error["code"] == "corpus_error" {
                 eprintln!(
                     "corpus error: {}",
@@ -244,9 +262,8 @@ pub fn load(args: &Args) -> Result<(Corpus, Aliases, String), Failure> {
 /// `thickness`, `frontier` and `dossier --all` call `validate()` first; a
 /// Rust port of such a command that must keep that behaviour calls this
 /// before [`load`]. Warnings are not printed (Python prints them only for
-/// `check`). The commands ported so far perform only the structural load and
-/// do not call it.
-#[allow(dead_code)]
+/// `check`). `next`, `next-steps`, `arguments` and `results` call it; the
+/// earlier ports perform only the structural load.
 pub fn validate_first(root: &Path) -> Result<truth::check::Outcome, Failure> {
     truth::check::check(root)
         .map_err(|message| (2, json!({"code": "corpus_error", "message": message})))

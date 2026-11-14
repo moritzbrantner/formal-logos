@@ -87,7 +87,8 @@ python3 scripts/corpus.py check
 lake exe cache get   # prebuilt Mathlib, once per Mathlib/toolchain bump
 lake build
 python3 scripts/corpus.py status
-python3 scripts/corpus.py next
+cargo build --locked --release -p truth   # the Rust corpus CLI, truth/README.md
+target/release/truth next
 python3 scripts/corpus.py frontier --reaching-root
 ```
 
