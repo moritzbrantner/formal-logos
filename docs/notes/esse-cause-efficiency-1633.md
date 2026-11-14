@@ -295,11 +295,19 @@ every cause of being as efficient.
 | `6f9e94c6` `noComponentFirstEfficientOfWeak` | `86f10ec3`, `61ad11f3`, `c6d6379b`, `811c2e98`, `e078f07b` → `09c6d5f0`: sibling of `358d8c6e`, composing `noComponentFirstOfWeak` with the cause relation `EfficientlyCausesEsseIn q` (`r = esse ∧ EfficientlyCausesEsse c x`) |
 | `b7e3cc74` `efficientPriorityControls` | two finite interpretations |
 
-`e078f07b` is reused unchanged: its statement ("an efficient cause is prior
-(by nature, not in time) to what it causes") fixes no tense and links only
-DEF-SIMPLE-PRIORITY, so instantiating it with the tenseless efficient
-relation at esse is an instance of what it says, which the `CausesIn`
-instantiation was not. No sibling of `e7b4c683` is registered: its inputs
+`e078f07b` is reused unchanged. Its paraphrase ("an efficient cause is prior
+(by nature, not in time) to what it causes") and its Lean type fix no tense,
+and it links only DEF-SIMPLE-PRIORITY, so on its face the efficient
+instantiation is an instance of what it says, which the `CausesIn`
+instantiation was not. **Scope gap, not settled here:** the evidence for
+`e078f07b` is read for the secunda via's here-and-now relation. Its claim
+`3ed048c0` grounds priority of nature in per se causes that "act together",
+and its derivation `8c629064` rests on `c0d99549` ("it would not be if c were
+not"). `EfficientlyCausesEsse` also admits merely originating agents. So the
+sibling assumes that efficient-cause priority holds for a tenseless agent
+cause of esse. If every agent cause of esse is also a conserving cause (q.104
+a.1, not re-read here), the two readings coincide on this relation; that is
+the tense bridge of next test 4, not something this slice proves. No sibling of `e7b4c683` is registered: its inputs
 `a4d3261a` and `86f10ec3` use two senses of POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED
 without a bridge (legacy allowlist), and a new argument may not inherit that.
 
@@ -308,8 +316,11 @@ without a bridge (legacy allowlist), and a new argument may not inherit that.
 non-overlap and efficient priority at the efficient relation all hold, while
 priority over `CausesIn`, `1ff08418` and `811c2e98` fail and a component is
 first. So the sibling's participation premise is not supplied by the
-mode-unspecified route, and the existing reading step (priority over every
-cause of being) asks more than `e078f07b` says. *Nonvacuity*: every input of
+mode-unspecified route, and priority over every cause of being (the existing
+reading step) is not implied by priority over the efficient relation. In the
+witness the efficient relation is empty, so its priority holds trivially;
+whether `e078f07b`'s content is the efficient instance is the interpretive
+question above, which no model settles. *Nonvacuity*: every input of
 the sibling routes and the conclusion hold, with a component. The witnesses
 are labels for unconstrained primitives.
 
@@ -326,3 +337,12 @@ discharge.
 
 **Remaining.** `e7b4c683`'s reading step stays untyped (sense debt above).
 Items 2–4 of the next tests are unchanged.
+
+**Semantic challenge (this slice).** An independent reviewer found no P1.
+Accepted and repaired: the scope gap in reusing `e078f07b` for the tenseless
+relation (now stated above, in the argument meaning and in the attempt); the
+overstatement of what the non-efficient control shows; one disambiguation
+sentence narrowed to the existing route. Recorded, not repaired here: the
+label of `c6d6379b` says POTENCY_1 while it links the POTENCY_2 definition
+`3ea2762f` (pre-existing). Checked and declined: the reported missing link
+to definition `8934912c` on `c95fa45c` (it is present).
