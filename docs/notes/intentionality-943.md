@@ -191,3 +191,118 @@ The next discriminating research step is whether a specific naturalistic
 consumer-function account can determine the relevant human content without
 presupposing intentional ends, rather than demanding an unrestricted defense
 of every primitive or repeating the existing q.75 omission models.
+
+## Multiple functions and stable factual guidance (2026-11-14)
+
+Research baseline: `561ba7d5c774d15036128928b7293b0ab9ee137a`. This continuation
+develops the previously proposed function/content connection. It adds an analyst
+construction and a provisional assessment, not a new registered theorem, source
+claim or established premise. The existing consumer configuration
+`4187ac3c-16f7-546c-b855-ddc819ff8b2c` remains unchanged.
+
+### What the present interface determines
+
+`ConsumerContent` says that each target token's **supplied** truth condition
+matches the success condition of **some** selected response/end pair. Keeping
+the entire consumer structure fixed can therefore leave several matches.
+For one token, Boolean responses, ends and situations, assign
+`SelectedFor e b g := b = g` and `SuccessCondition b g w := w = b`.
+Content true exactly at `true` matches the `true/true` pair; content true
+exactly at `false` matches the `false/false` pair. This assignment exposes the
+existential interface's underdetermination. It is not an evolutionary history,
+a real physical duplicate, or evidence that every teleosemantic theory fails.
+
+The positive proposal to investigate is **guidance across changing goals**.
+Papineau, *Teleosemantics* (2016), pp.103–104, distinguishes a belief's role
+in guiding action across current motivations from a further confidence benefit;
+pp.105–108 appeal to specific functions and cognitive architecture. The
+[author PDF](https://www.davidpapineau.co.uk/uploads/1/8/5/5/18551740/how_biology_shapes_philosophy_new_foundations_for_..._----__5_teleosemantics_.pdf)
+was consulted again. His confidence example is explicitly hypothetical.
+The construction below is ours, not his formalization or empirical finding.
+
+### A positive two-task construction
+
+Fix two locations and exactly one water location `w : Bool`. A token value
+`r : Bool` enters an action controller. The task is either approach water or
+avoid water; both actions are available. Let:
+
+```text
+action(r, approach) = r         success(a, approach, w) = (a = w)
+action(r, avoid)    = not r     success(a, avoid, w)    = (a != w)
+reassurance(r, p)   = (r = p)
+```
+
+Here `p` is the token value currently providing reassurance. Water location,
+action destination and the two task outcomes are specified before assigning
+semantic content. Reassurance does not change water, controller wiring or task
+success. The four rows are:
+
+| Token r | Water w | Approach succeeds | Avoid succeeds | Candidate factual match |
+| --- | --- | --- | --- | --- |
+| false | false | yes | yes | yes |
+| false | true | no | no | no |
+| true | false | no | no | no |
+| true | true | yes | yes | yes |
+
+Thus the same condition `r = w` enables proper guidance for opposite tasks.
+Changing `p` reverses reassurance while leaving every entry above fixed.
+The candidate content is therefore stable under this payoff reversal. This
+supplies a concrete answer to how one physical register can have a factual
+guidance role and a separate beneficial role without their standards coinciding.
+The selected task semantics and wiring are substantive assumptions; this is
+neither a demonstration of their evolutionary acquisition nor evidence that a
+person consciously understands the represented condition.
+
+The eight token/world/reassurance-preference assignments were enumerated with
+Python on 2026-11-14. Both task-success conditions agreed with `r = w` in every
+case, and toggling `p` reversed reassurance without changing them. This checks
+the displayed finite construction only; it is not a Lean certificate.
+
+The functional distinction has an explanatory basis: the register coordinates
+different actions with the same environmental circumstance, whereas the
+reassurance path rewards a register state without tracking that circumstance.
+A selection-history account must additionally show why the former coordinated
+effects, rather than an analyst's preferred interpretation, explain the
+maintenance of the architecture. An organizational account may instead appeal
+to its present contribution to maintaining the bearer. These are different
+accounts and can disagree; organizational closure is not the etiological
+`SelectedFor` relation by another name.
+
+### Reuse, limitation and a discriminating extension
+
+The exact available mathematical tool is
+`Results.Logic.CorrectionCriterion.characterization` (result
+`0590fe21-edb9-5915-9837-62560c8f40e2`). For fixed `r,p`, take states to be
+water locations, the supplied correctness condition to be `w = r`, and data
+to be either the task-success pair or the reassurance bit. The first data
+distinguish the two correctness classes; reassurance alone is constant across
+them. The existing theorem characterizes exact classification by invariance
+on equal-data fibers. It supplies no warrant for the chosen norm and does not
+identify contents merely because their truth conditions agree. This application
+is explained here; no new corpus result or Lean certification is claimed.
+
+A meaningful next test adds situations that the chosen tasks treat alike but
+a proposed finer content distinguishes—for example, two liquids with identical
+effects under these tasks but different chemistry. If the full supplied
+consumer/history evidence still does not distinguish them, that evidence cannot
+select the finer truth condition by exact classification. Additional consumer
+tasks, producer history or perceptual organization could supply the distinction.
+This is a specific evidence/scope question, not a general objection from the
+conceivability of semantic indeterminacy.
+
+**Provisional assessment.** The construction supports functional separation of
+factual correctness from incidental benefit within the stated domain, and gives
+the naturalistic competitor a substantive positive mechanism. The old
+existential interface alone does not select that mechanism or its semantic
+authority. A broader naturalization would gain support from a non-semantic
+account of the relevant architecture/history and successful treatment of the
+finer-content test; it would weaken if selecting the guidance role already
+required the intended content assignment.
+
+**Connection.** This supplies candidate content conditions for the basing
+investigation in [epistemic-underminer-boundaries](epistemic-underminer-boundaries.md)
+and compares competing function accounts with
+[goodness-form-end-definitions](goodness-form-end-definitions.md). It does not
+by itself supply eligible uptake, preference-independent epistemic force,
+categorical moral authority, incorporeality or an ultimate personal source.
+Those are named downstream questions, not new graph edges.

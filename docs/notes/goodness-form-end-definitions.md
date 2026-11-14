@@ -498,10 +498,12 @@ The provisional judgment is positive but scoped. Present organization can
 provide substantive, intervention-sensitive grounds for some biological
 good-for judgments. In the tested mechanism, native capacity preserves a
 robustness profile that compensation alone does not preserve, so its evaluation
-is more than a report of current survival. The biological reports support
-the practical distinction between restoring maintenance, restoring competence
-and regulating expression. They do not establish the complete `DueFor`
-interpretation or the general goodness thesis.
+is more than a report of current survival. The biological reports distinguish
+nutritional support and restoration of measured photosynthetic competence,
+and show reduced photosynthetic output with preserved measured PSII efficiency
+under specified conditions. They do not by themselves establish reversible
+downregulation of the whole capacity, the complete `DueFor` interpretation or
+the general goodness thesis.
 
 The live blocker is independent warrant for the reference class, environmental
 challenge set and bearer. The next test should compare, within one specified

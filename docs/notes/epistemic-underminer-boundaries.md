@@ -52,7 +52,9 @@ suspension without active universal doubt for case 16.
 
 Research continuation, 2026-11-14, against main
 `561ba7d5c774d15036128928b7293b0ab9ee137a`. This is an analyst argument and a
-proposed application criterion, awaiting independent semantic challenge. It
+proposed application criterion, independently challenged in the combined
+five-connection review recorded in the
+[current handoff](transcendental-foundation-routes.md#common-ground-connection-and-current-handoff-2026-11-14). It
 introduces no corpus definition, registered theorem or source claim. The question
 is what makes a particular belief formed **because of the content of its
 premises**, rather than merely accompany relevant evidence. The scope is ordinary
