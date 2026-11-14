@@ -1,0 +1,146 @@
+# #1633: efficiency of causes of esse. The q.3 a.4 conclusion
+# STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE (33ad148b) binds to a type with a
+# mode-unspecified cause (HasExternalEsseCause over CausesIn); "efficient" was
+# prose only. Its prose is now mode-unspecified, and the efficient reading is
+# a separate statement typed with the primitive EfficientlyCausesEsse
+# (EfficiencyProfile), reached from De ente (457698e4) and from q.3 a.4 only
+# through an OPEN bridge, with a strength order to 33ad148b.
+# Conservation (#1604/#1616), c0d99549 (#1626) and the secunda via's
+# here-and-now EfficientlyCausesIn (DEF-EFFICIENT-CAUSING) are not used.
+
+[batch]
+vocab = "TruthCore.Causality.EsseCauseEfficiency"
+results = "TruthCore.Results.Causality.EsseCauseEfficiency"
+
+[[statement]]
+id = "Every actual distinct esse is efficiently caused (CAUSING_AN_EFFECT_6) by another being in act"
+lean = "DistinctEsseRequiresExternalEfficientCause"
+paraphrase = "Analyst formulation of the efficient reading of ST I q.3 a.4 co., first proof ('habeat esse causatum ab alio'), attribution deferred: for every x that actually exists with esse distinct from its essence (DistinctEsseAt), some y other than x (numerical distinctness only) is in act as to being, causes x's esse (CausesIn y x esse) and is an efficient cause of x's esse (EfficientlyCausesEsse y x, the tenseless agent-cause primitive, CAUSING_AN_EFFECT_6). The passage's conclusion does not name the mode of causing; the efficient reading is suggested by its context (the fire-heating-water example and 'quia Deum dicimus esse primam causam efficientem') and is not stated. It strengthens STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE (the same conclusion with the mode unspecified). Tenseless: no present sustaining, conservation, world-indexed existence, uniqueness or God identification is asserted."
+definitions = ["d8963cdd-0283-4b03-b006-6fb946a8c9e4", "8934912c-7997-4af7-9520-ec94ff221043", "DEF-Q3A4-ACTUAL-DISTINCT-ESSE", "DEF-ESSE"]
+
+[[statement]]
+id = "Every actual cause of an actual distinct esse, other than the thing, is an efficient cause of it"
+lean = "DistinctActualEsseCauseIsEfficient"
+paraphrase = "OPEN analyst bridge, attribution deferred: for every x that actually exists with esse distinct from its essence (DistinctEsseAt), every y other than x that is in act as to being and causes x's esse (CausesIn y x esse, mode unspecified, DEF-CAUSE-OF-PERFECTION) is an efficient cause of x's esse (EfficientlyCausesEsse y x, CAUSING_AN_EFFECT_6's efficiency conjunct). It is the passage from a mode-unspecified to an efficient cause of being, restricted to actual causes of actual distinct esse. It fails if an actual being other than x can account for x's esse as a formal or constitutive principle, an exemplar, an end, or a structure, without being an agent: NonEfficientCauseControl satisfies the De ente and q.3 a.4 mode-unspecified conclusions and falsifies it. Neither the De ente nor the q.3 a.4 text states it: De ente rejects only efficient causation of esse by the thing's own quiddity ('dico sicut a causa efficiente'), and q.3 a.4's conclusion does not name the mode."
+definitions = ["DEF-CAUSE-OF-PERFECTION", "8934912c-7997-4af7-9520-ec94ff221043", "d8963cdd-0283-4b03-b006-6fb946a8c9e4", "DEF-Q3A4-ACTUAL-DISTINCT-ESSE", "DEF-ESSE"]
+
+[[statement]]
+id = "Whatever causes the esse of a thing other than itself is an efficient cause of that esse"
+lean = "CausingAnothersEsseIsEfficient"
+paraphrase = "OPEN analyst premise, attribution deferred, the unrestricted version of the esse-cause efficiency bridge: for every y and x with y distinct from x, if y causes x's esse (CausesIn y x esse, mode unspecified) then y is an efficient cause of x's esse (EfficientlyCausesEsse y x). Unlike the restricted bridge it covers causes that are not in act and effects whose esse is their essence. It is the esse instance, read tenselessly, of the agent-or-identical principle (whatever accounts for another's actuality does so as an agent); the existing STMT-PERFECTION-CAUSING-IN-ANOTHER-IS-EFFICIENT (e0088de9) states the same for every respect with the secunda via's here-and-now efficient causing (DEF-EFFICIENT-CAUSING), a different relation, so it is not identified with this one. Rejected by any account on which a form, an exemplar, an end or a structure distinct from x causes x's esse without acting."
+definitions = ["DEF-CAUSE-OF-PERFECTION", "8934912c-7997-4af7-9520-ec94ff221043", "DEF-ESSE"]
+
+[[statement]]
+id = "Esse-cause efficiency controls: non-efficient cause, restricted bridge, nonvacuity"
+lean = "EsseCauseEfficiencyControls"
+paraphrase = "Closed finite controls: there are interpretations over Bool (two beings, two principles, one respect), each with false an actual being whose esse is distinct from its essence, such that (1) the q.3 a.4 dichotomy and no-essential-self-sufficiency, no self-causation, the actuality of causes of being, the mode-unspecified q.3 a.4 conclusion (STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE) and the De ente conclusion (457698e4) all hold, while the restricted and unrestricted efficiency bridges and the efficient conclusion fail; (2) the restricted bridge holds and the unrestricted one fails; (3) every input of both efficient-cause derivations, both bridges and the efficient conclusion hold. Only these conjuncts are certified. The witnesses built in the proof (not part of the type) are: in (1), true, in act, causes false's esse and nothing is an efficient cause of anything; in (2), true efficiently causes false's esse and false causes true's esse non-efficiently; in (3), true efficiently causes false's esse. 'Non-efficient' is a label: EfficientlyCausesEsse is an unconstrained primitive, so (1) shows that the efficient conclusion does not follow from the mode-unspecified ones without a bridge, not that a non-efficient cause of esse is possible. (1) does not interpret the De ente nature-source vocabulary."
+definitions = ["d8963cdd-0283-4b03-b006-6fb946a8c9e4", "8934912c-7997-4af7-9520-ec94ff221043", "DEF-Q3A4-ACTUAL-DISTINCT-ESSE", "DEF-CAUSE-OF-PERFECTION", "DEF-ESSE"]
+
+[[argument]]
+id = "Efficient cause of distinct esse, from De ente's other actual cause and the bridge"
+theorem = "externalEfficientEsseCauseFromDeEnte"
+premises = [
+  "457698e4-eb21-4561-ab32-eccbfb0a992e",
+  "Every actual cause of an actual distinct esse, other than the thing, is an efficient cause of it",
+]
+conclusion = "Every actual distinct esse is efficiently caused (CAUSING_AN_EFFECT_6) by another being in act"
+axioms = []
+sense_bridges = [
+  { term = "CAUSING_AN_EFFECT", from = "CAUSING_AN_EFFECT_3", to = "CAUSING_AN_EFFECT_6", statement_id = "Every actual cause of an actual distinct esse, other than the thing, is an efficient cause of it" },
+]
+rule = "For an arbitrary actual distinct-esse x take its other actual cause c from the De ente step; the bridge makes c an efficient cause of x's esse"
+meaning = "Conditional derivation, same witness and same q.3 a.4 profile extended by the efficiency primitive: the De ente c.3 step (another being in act causes every actual distinct esse, mode unspecified) and the OPEN efficiency bridge give an external efficient cause of every actual distinct esse. The bridge is the only extra premise and is needed: in NonEfficientCauseControl the De ente step holds and the conclusion fails. Not a transcription: the bridge's consequent is the efficiency of one given cause, not the conclusion. No conservation, present sustaining, uniqueness or God identification follows."
+
+[[argument]]
+id = "Efficient cause of distinct esse, from the q.3 a.4 dichotomy and the bridge"
+theorem = "externalEfficientEsseCauseFromQ3A4"
+premises = [
+  "be639b3f-a4b7-5ec0-a9be-accfd8d42598",
+  "61bd42e5-69fe-53ef-9972-c9f28b2b6d14",
+  "Every actual cause of an actual distinct esse, other than the thing, is an efficient cause of it",
+]
+conclusion = "Every actual distinct esse is efficiently caused (CAUSING_AN_EFFECT_6) by another being in act"
+axioms = []
+sense_bridges = [
+  { term = "CAUSING_AN_EFFECT", from = "CAUSING_AN_EFFECT_3", to = "CAUSING_AN_EFFECT_6", statement_id = "Every actual cause of an actual distinct esse, other than the thing, is an efficient cause of it" },
+  { term = "CAUSE_OF_ESSE_VERSUS_SUFFICIENT_REASON", from = "CAUSE_OF_ESSE_VERSUS_SUFFICIENT_REASON_1", to = "CAUSE_OF_ESSE_VERSUS_SUFFICIENT_REASON_2", statement_id = "be639b3f-a4b7-5ec0-a9be-accfd8d42598" },
+]
+rule = "Apply the q.3 a.4 transcription distinctEsseExternalFromExhaustion to obtain another actual cause, mode unspecified; the bridge makes it efficient"
+meaning = "Conditional derivation of the efficient reading of ST I q.3 a.4's first proof: the source-attributed dichotomy (essential principles alone suffice, or another actual being causes the esse, mode unspecified) and the no-essential-self-sufficiency premise give another actual cause of every actual distinct esse (the existing transcription), and the OPEN efficiency bridge makes it efficient. It composes the existing theorem rather than restating it. The efficiency of the external cause comes only from the bridge: in NonEfficientCauseControl both q.3 a.4 premises hold and the conclusion fails. The dichotomy be639b3f is listed as the CAUSE_OF_ESSE_VERSUS_SUFFICIENT_REASON sense bridge only because it pairs the two forks (essential efficient sufficiency, sense 1; another actual cause, sense 2) in one disjunction; the argument does not pass from sense 1 to sense 2 but eliminates sense 1 by 61bd42e5. The existing transcription af503cd7 carries the same pairing on the legacy sense allowlist."
+
+[[argument]]
+id = "Distinct esse has an external cause, from its external efficient cause"
+theorem = "externalCauseFromExternalEfficientCause"
+premises = ["Every actual distinct esse is efficiently caused (CAUSING_AN_EFFECT_6) by another being in act"]
+conclusion = "STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE"
+axioms = []
+weakening = true
+sense_bridges = [
+  { term = "CAUSING_AN_EFFECT", from = "CAUSING_AN_EFFECT_6", to = "CAUSING_AN_EFFECT_2", statement_id = "STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE", role = "conclusion" },
+]
+rule = "Drop the efficiency conjunct"
+meaning = "Strength order (backing result): the efficient reading of the q.3 a.4 conclusion entails its mode-unspecified reading, STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE, by dropping the conjunct that the cause is efficient. The converse fails (NonEfficientCauseControl). This argument passes from CAUSING_AN_EFFECT_6 to CAUSING_AN_EFFECT_2 and declares its conclusion as that bridge. It adds no support to STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE beyond what the De ente step 457698e4 already gives: the two are the same proposition on the same profile (otherActualCauseIffExternalCause), so a route into it through the efficient reading only adds the efficiency bridge, which this step discards."
+
+[[argument]]
+id = "The restricted esse-cause efficiency bridge, from the unrestricted one"
+theorem = "distinctActualEsseCauseEfficientFromUnrestricted"
+premises = ["Whatever causes the esse of a thing other than itself is an efficient cause of that esse"]
+conclusion = "Every actual cause of an actual distinct esse, other than the thing, is an efficient cause of it"
+axioms = []
+weakening = true
+sense_bridges = [
+  { term = "CAUSING_AN_EFFECT", from = "CAUSING_AN_EFFECT_3", to = "CAUSING_AN_EFFECT_6", statement_id = "Every actual cause of an actual distinct esse, other than the thing, is an efficient cause of it", role = "conclusion" },
+]
+rule = "Instantiate the unrestricted bridge at an actual cause of an actual distinct esse"
+meaning = "Strength order (backing result): the unrestricted efficiency premise (every cause of another's esse is efficient) entails the restricted bridge (every actual cause, other than x, of an actual distinct esse is efficient). The converse fails (RestrictedBridgeOnlyControl). The routes use the restricted, weaker bridge."
+
+[[argument]]
+id = "Esse-cause efficiency controls"
+theorem = "esseCauseEfficiencyControls"
+premises = []
+conclusion = "Esse-cause efficiency controls: non-efficient cause, restricted bridge, nonvacuity"
+axioms = []
+sense_mixing_control = true
+comparator_theorems = ["otherActualCauseIffExternalCause"]
+rule = "Explicit finite interpretations on Bool with case analysis"
+meaning = "Closed controls for the esse-cause efficiency bridge: one interpretation in which every mode-unspecified input and conclusion of the De ente and q.3 a.4 routes holds and the efficient conclusion and both bridges fail (the bridge is needed, and the efficient reading strictly strengthens 33ad148b), one in which the restricted bridge holds and the unrestricted one fails (that strength order is strict), and one in which everything holds. These witness logical independence under the encoded predicates only; they are not evidence that a non-efficient cause of esse is possible or plausible."
+
+[[relation]]
+id = "The efficient q.3 a.4 reading strengthens the mode-unspecified one"
+subject_kind = "statement"
+subject_id = "Every actual distinct esse is efficiently caused (CAUSING_AN_EFFECT_6) by another being in act"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE"
+verification_result_id = "Distinct esse has an external cause, from its external efficient cause"
+strictness_result_id = "Esse-cause efficiency controls"
+note = "Same q.3 a.4 profile and witness; the strong version adds that the external cause of esse is an efficient cause of it (EfficientlyCausesEsse). NonEfficientCauseControl satisfies the weak version and falsifies the strong one."
+
+[[relation]]
+id = "The unrestricted esse-cause efficiency premise strengthens the restricted bridge"
+subject_kind = "statement"
+subject_id = "Whatever causes the esse of a thing other than itself is an efficient cause of that esse"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Every actual cause of an actual distinct esse, other than the thing, is an efficient cause of it"
+verification_result_id = "The restricted esse-cause efficiency bridge, from the unrestricted one"
+strictness_result_id = "Esse-cause efficiency controls"
+note = "Same profile; the restricted bridge covers only actual causes of actual distinct esse. RestrictedBridgeOnlyControl satisfies the restricted bridge and falsifies the unrestricted one."
+
+[[relation]]
+id = "ST I q.3 a.4's conclusion supports its efficient reading"
+subject_kind = "claim"
+subject_id = "d5239ffd-5312-5ca8-853a-e48cda408487"
+predicate = "supports"
+object_kind = "statement"
+object_id = "Every actual distinct esse is efficiently caused (CAUSING_AN_EFFECT_6) by another being in act"
+note = "Partial support. The claimed sentence, 'oportet ergo quod illud cuius esse est aliud ab essentia sua, habeat esse causatum ab alio', states another cause of esse and does not name its mode. The efficient reading rests on the context of the same proof: the example of an exterior cause is fire causing heat in water, and the next sentence denies the conclusion of God 'quia Deum dicimus esse primam causam efficientem', which on the analyst's reading bites only if the excluded cause of God's esse would be prior in the efficient order (an interpretation of the inference, not a sentence of the text). That the cause is efficient therefore stays unattributed; it is carried by the OPEN bridge."
+
+[[relation]]
+id = "De ente's other actual cause is logically equivalent to the mode-unspecified q.3 a.4 conclusion"
+subject_kind = "statement"
+subject_id = "457698e4-eb21-4561-ab32-eccbfb0a992e"
+predicate = "logically_equivalent_to"
+object_kind = "statement"
+object_id = "STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE"
+note = "Same proposition on the same q.3 a.4 profile: both unfold to 'every actual distinct-esse x has some y other than x, in act as to being, that causes x's esse'. Verified as otherActualCauseIffExternalCause (Iff.rfl), a Comparator-checked theorem of the esse-cause efficiency controls result. No argument is registered in either direction, since each would be an identity transcription; the statements stay distinct records because their sources differ (De ente c.3, ST I q.3 a.4)."

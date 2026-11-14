@@ -130,7 +130,7 @@ disambiguations = ["DISAMB-THOMISTIC-ESSE-PARTICIPATION"]
 [[statement]]
 id = "STMT-PARTICIPATED-HAS-EXTERNAL-ESSE-CAUSE"
 lean = "ParticipatedHasExternalEsseCause"
-paraphrase = "BECOMING-BEING-CAUSE_2 (attribution deferred): whatever has being by participation has another, actually existing being that efficiently causes its esse (the q.3 a.4 external cause of esse)."
+paraphrase = "BECOMING-BEING-CAUSE_2 (attribution deferred): whatever has being by participation has another, actually existing being that causes its esse (the q.3 a.4 external cause of esse, CausesIn at esse). The mode of causing is not fixed by the type (#1633). Downstream, the no-component-first-being arguments e7b4c683 and 358d8c6e apply 'an efficient cause is prior to what it causes' (e078f07b) to the same mode-unspecified CausesIn; that reading step, not this statement, is where efficiency of the cause is assumed."
 definitions = ["DEF-EXTERNAL-CAUSE-OF-ESSE", "DEF-PARTICIPATED-ESSE"]
 disambiguations = ["DISAMB-BECOMING-BEING-CAUSE"]
 
@@ -213,7 +213,7 @@ theorem = "participatedExternalEsseCause"
 premises = ["STMT-PARTICIPATED-HAS-DISTINCT-ESSE", "STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE"]
 conclusion = "STMT-PARTICIPATED-HAS-EXTERNAL-ESSE-CAUSE"
 rule = "Universal instantiation and modus ponens"
-meaning = "Per-sense argument, BECOMING-BEING-CAUSE_2 (external cause of esse): participated beings have esse distinct from essence (open bridge), and by the ST I q.3 a.4 reading such esse has an actually existing external efficient cause."
+meaning = "Per-sense argument, BECOMING-BEING-CAUSE_2 (external cause of esse): participated beings have esse distinct from essence (open bridge), and by the ST I q.3 a.4 reading such esse has an actually existing external cause (mode unspecified, #1633)."
 
 [[argument]]
 id = "PARTICIPATED-HAS-OTHER-CAUSE-BECOMING-BEING-CAUSE-2"
@@ -221,7 +221,7 @@ theorem = "participatedHasOtherCauseFromExternal"
 premises = ["STMT-PARTICIPATED-HAS-EXTERNAL-ESSE-CAUSE"]
 conclusion = "STMT-PARTICIPATED-HAS-OTHER-CAUSE"
 rule = "Existential elimination and conjunction elimination"
-meaning = "Explicit sense bridge BECOMING-BEING-CAUSE_2 → BECOMING-BEING-CAUSE_3 (strength order): an actually existing external efficient cause of a thing's esse is another being that causes its being (CausesIn c x esse), so the participated has another cause of its being, the root-path statement. With PARTICIPATED-EXTERNAL-ESSE-CAUSE-BECOMING-BEING-CAUSE-2 it gives a route to STMT-PARTICIPATED-HAS-OTHER-CAUSE through sense 2. Sense 1 (cause of becoming) gives no such route: the controls model it with no cause of being."
+meaning = "Explicit sense bridge BECOMING-BEING-CAUSE_2 → BECOMING-BEING-CAUSE_3 (strength order): an actually existing external cause of a thing's esse (mode unspecified, #1633) is another being that causes its being (CausesIn c x esse), so the participated has another cause of its being, the root-path statement. With PARTICIPATED-EXTERNAL-ESSE-CAUSE-BECOMING-BEING-CAUSE-2 it gives a route to STMT-PARTICIPATED-HAS-OTHER-CAUSE through sense 2. Sense 1 (cause of becoming) gives no such route: the controls model it with no cause of being."
 
 [[argument]]
 id = "MOVES-AS-INCLUSIVE-ACT-FROM-FORMAL"

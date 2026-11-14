@@ -1,0 +1,10 @@
+{
+  "id": "1c2c102d-12e1-454f-8136-fc5fd9a221e7",
+  "label": "Esse-cause efficiency controls (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "06f2f6b9-d66c-4545-8d80-89bf047e0600",
+  "rule": "Explicit finite interpretations on Bool with case analysis",
+  "meaning": "Closed controls for the esse-cause efficiency bridge: one interpretation in which every mode-unspecified input and conclusion of the De ente and q.3 a.4 routes holds and the efficient conclusion and both bridges fail (the bridge is needed, and the efficient reading strictly strengthens 33ad148b), one in which the restricted bridge holds and the unrestricted one fails (that strength order is strict), and one in which everything holds. These witness logical independence under the encoded predicates only; they are not evidence that a non-efficient cause of esse is possible or plausible.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

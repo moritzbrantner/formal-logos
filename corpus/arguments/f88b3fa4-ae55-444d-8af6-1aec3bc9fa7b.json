@@ -1,0 +1,44 @@
+{
+  "id": "f88b3fa4-ae55-444d-8af6-1aec3bc9fa7b",
+  "label": "Efficient cause of distinct esse, from the q.3 a.4 dichotomy and the bridge",
+  "premise_statement_ids": [
+    "be639b3f-a4b7-5ec0-a9be-accfd8d42598",
+    "61bd42e5-69fe-53ef-9972-c9f28b2b6d14",
+    "58e6ec63-7302-4f17-b832-acb572880a65"
+  ],
+  "conclusion_statement_id": "1ff08418-e7a8-473f-9348-f2fe83b4d00e",
+  "inference_ids": [
+    "27de54de-40b6-424b-90a7-0658f1f523c2"
+  ],
+  "meaning": "Conditional derivation of the efficient reading of ST I q.3 a.4's first proof: the source-attributed dichotomy (essential principles alone suffice, or another actual being causes the esse, mode unspecified) and the no-essential-self-sufficiency premise give another actual cause of every actual distinct esse (the existing transcription), and the OPEN efficiency bridge makes it efficient. It composes the existing theorem rather than restating it. The efficiency of the external cause comes only from the bridge: in NonEfficientCauseControl both q.3 a.4 premises hold and the conclusion fails. The dichotomy be639b3f is listed as the CAUSE_OF_ESSE_VERSUS_SUFFICIENT_REASON sense bridge only because it pairs the two forks (essential efficient sufficiency, sense 1; another actual cause, sense 2) in one disjunction; the argument does not pass from sense 1 to sense 2 but eliminates sense 1 by 61bd42e5. The existing transcription af503cd7 carries the same pairing on the legacy sense allowlist.",
+  "definition_ids": [
+    "8934912c-7997-4af7-9520-ec94ff221043",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "0ea9feb8-1f92-5b11-aa74-2f2e567c6106",
+    "56c9a230-137d-5207-9262-27196af6e713",
+    "e232f6c0-f1f9-5c99-9e26-946a8abe4f2e",
+    "d8963cdd-0283-4b03-b006-6fb946a8c9e4"
+  ],
+  "disambiguation_ids": [
+    "3b0d67c5-59e4-5556-a728-26bd567f0fb1",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "86d198f5-e724-558a-8fce-b0a1e3592e08",
+    "c3c01e92-520e-5358-a58f-0cc7e9c9e6fa"
+  ],
+  "sense_bridges": [
+    {
+      "term": "CAUSING_AN_EFFECT",
+      "from": "39f64183-5038-4348-ad9f-5b64674f65f8",
+      "to": "73bfec95-06b5-47ec-ae2a-24a15c3fc7a3",
+      "statement_id": "58e6ec63-7302-4f17-b832-acb572880a65"
+    },
+    {
+      "term": "CAUSE_OF_ESSE_VERSUS_SUFFICIENT_REASON",
+      "from": "4f63bd47-86a8-4076-ab17-208c0022aa18",
+      "to": "815a5a9b-f3c4-4853-8318-194f046cdf04",
+      "statement_id": "be639b3f-a4b7-5ec0-a9be-accfd8d42598"
+    }
+  ]
+}

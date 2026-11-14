@@ -1,0 +1,12 @@
+{
+  "id": "ba5abe6e-a936-4cb1-92cc-4345cdb7b5c8",
+  "label": "Distinct esse has an external cause, from its external efficient cause (inference)",
+  "input_statement_ids": [
+    "1ff08418-e7a8-473f-9348-f2fe83b4d00e"
+  ],
+  "output_statement_id": "33ad148b-ceab-5856-a4f8-c999a1dba644",
+  "rule": "Drop the efficiency conjunct",
+  "meaning": "Strength order (backing result): the efficient reading of the q.3 a.4 conclusion entails its mode-unspecified reading, STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE, by dropping the conjunct that the cause is efficient. The converse fails (NonEfficientCauseControl). This argument passes from CAUSING_AN_EFFECT_6 to CAUSING_AN_EFFECT_2 and declares its conclusion as that bridge. It adds no support to STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE beyond what the De ente step 457698e4 already gives: the two are the same proposition on the same profile (otherActualCauseIffExternalCause), so a route into it through the efficient reading only adds the efficiency bridge, which this step discards.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

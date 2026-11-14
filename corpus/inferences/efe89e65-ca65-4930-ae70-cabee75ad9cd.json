@@ -1,0 +1,12 @@
+{
+  "id": "efe89e65-ca65-4930-ae70-cabee75ad9cd",
+  "label": "The restricted esse-cause efficiency bridge, from the unrestricted one (inference)",
+  "input_statement_ids": [
+    "0cc3a136-33b2-4d98-bc9a-48d6fc53429d"
+  ],
+  "output_statement_id": "58e6ec63-7302-4f17-b832-acb572880a65",
+  "rule": "Instantiate the unrestricted bridge at an actual cause of an actual distinct esse",
+  "meaning": "Strength order (backing result): the unrestricted efficiency premise (every cause of another's esse is efficient) entails the restricted bridge (every actual cause, other than x, of an actual distinct esse is efficient). The converse fails (RestrictedBridgeOnlyControl). The routes use the restricted, weaker bridge.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

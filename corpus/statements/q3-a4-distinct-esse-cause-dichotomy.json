@@ -2,7 +2,7 @@
   "id": "be639b3f-a4b7-5ec0-a9be-accfd8d42598",
   "label": "Aquinas' first proof in ST I q.3 a.4 considers an actually existing thing with esse distinct from…",
   "legacy_id": "STMT-Q3A4-DISTINCT-ESSE-CAUSE-DICHOTOMY",
-  "paraphrase": "Aquinas' first proof in ST I q.3 a.4 considers an actually existing thing with esse distinct from essence and requires either that the essential principles alone sufficiently efficiently cause its esse or that an actually existing, numerically different agent efficiently cause that esse. Whether this causal dichotomy exhausts noncausal or brute theories is an open premise question.",
+  "paraphrase": "Aquinas' first proof in ST I q.3 a.4 considers an actually existing thing with esse distinct from essence and requires either that the essential principles alone sufficiently efficiently cause its esse or that an actually existing, numerically different being cause that esse (CausesIn at esse). The first horn is efficient by the stipulated meaning of its primitive; the second horn's mode of causing is not fixed by the Lean type, so this premise does not say that the exterior cause is an agent (#1633; the efficient reading of the conclusion needs the separate OPEN efficiency bridge). Whether this causal dichotomy exhausts noncausal or brute theories is an open premise question.",
   "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.DistinctEsseCauseDichotomyReading",
   "definition_ids": [
     "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",

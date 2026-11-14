@@ -12,10 +12,12 @@ definitions asserts the premises as true or gives a metaphysical argument
 for their exhaustiveness.
 
 The `InAct` / `CausesIn` fields retain the shared Aquinas vocabulary for
-actual being and an efficient cause in the `esse` respect. Unlike the
-analytic `supportsEsse` relation in `PowerExistenceBoundary`, the external
-cause here is explicitly interpreted as an efficient cause of being, not
-ordinary production or a merely sufficient noncausal reason.
+actual being and a cause in the `esse` respect. Unlike the analytic
+`supportsEsse` relation in `PowerExistenceBoundary`, the external cause here
+is a cause of being, not ordinary production or a merely sufficient
+noncausal reason. `CausesIn` does not fix the mode of causing, so these
+types do not say that the external cause is efficient; the efficient reading
+is typed separately in `TruthCore.Causality.EsseCauseEfficiency` (#1633).
 -/
 
 @[expose] public section
@@ -39,9 +41,11 @@ represented `Principle` identity relation. No modality is built in. -/
 def DistinctEsseAt (p : Profile B P R) (x : B) : Prop :=
   p.InAct x p.esse ∧ p.esseOf x ≠ p.essenceOf x
 
-/-- Another actually existing bearer directly efficiently causes x's esse.
-This is a *selected interpretation* of "causatum ab alio", not the claim
-that every external explanation must be efficient causation. -/
+/-- Another actually existing bearer causes x's esse (`CausesIn`, mode of
+causing not fixed). This is a *selected interpretation* of "causatum ab
+alio", not the claim that every external explanation is causation of being;
+its efficient reading is `EsseCauseEfficiency.HasExternalEfficientEsseCause`
+(#1633). -/
 def HasExternalEsseCause (p : Profile B P R) (x : B) : Prop :=
   ∃ y, y ≠ x ∧ p.InAct y p.esse ∧ p.CausesIn y x p.esse
 
@@ -67,7 +71,7 @@ necessity or divine simplicity conclusion is part of this reading. -/
 def DistinctEsseRequiresExternalCauseReading (p : Profile B P R) : Prop :=
   ∀ x, DistinctEsseAt p x → HasExternalEsseCause p x
 
-/-- All recorded efficient causes of esse actually exist, as do their
+/-- All recorded causes of esse actually exist, as do their
 effects. This is a coherence condition for the finite semantic controls,
 not a new source premise. -/
 def Coherent (p : Profile B P R) : Prop :=
@@ -80,7 +84,7 @@ no-self-cause principle but not causal exhaustiveness;
 (2) an existent whose essential principles alone suffice to cause its esse,
 with no external agent,
 satisfying the disjunction but not the exclusion;
-(3) a separate existing efficient cause of the subject's distinct esse,
+(3) a separate existing cause of the subject's distinct esse,
 satisfying both premises and their conclusion.
 
 These are consistent typed interpretations, **not** demonstrations that

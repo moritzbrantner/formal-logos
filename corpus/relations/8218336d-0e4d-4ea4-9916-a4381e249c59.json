@@ -1,0 +1,12 @@
+{
+  "id": "8218336d-0e4d-4ea4-9916-a4381e249c59",
+  "label": "The efficient q.3 a.4 reading strengthens the mode-unspecified one",
+  "subject_kind": "statement",
+  "subject_id": "1ff08418-e7a8-473f-9348-f2fe83b4d00e",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "33ad148b-ceab-5856-a4f8-c999a1dba644",
+  "verification_result_id": "a2d5d89d-e3d6-4799-a486-43e9ccf29b3a",
+  "strictness_result_id": "23792412-934c-4ea1-a3a8-e9f5d37a94b0",
+  "note": "Same q.3 a.4 profile and witness; the strong version adds that the external cause of esse is an efficient cause of it (EfficientlyCausesEsse). NonEfficientCauseControl satisfies the weak version and falsifies the strong one."
+}

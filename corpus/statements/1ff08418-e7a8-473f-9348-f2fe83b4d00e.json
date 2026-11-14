@@ -1,0 +1,12 @@
+{
+  "id": "1ff08418-e7a8-473f-9348-f2fe83b4d00e",
+  "label": "Every actual distinct esse is efficiently caused (CAUSING_AN_EFFECT_6) by another being in act",
+  "paraphrase": "Analyst formulation of the efficient reading of ST I q.3 a.4 co., first proof ('habeat esse causatum ab alio'), attribution deferred: for every x that actually exists with esse distinct from its essence (DistinctEsseAt), some y other than x (numerical distinctness only) is in act as to being, causes x's esse (CausesIn y x esse) and is an efficient cause of x's esse (EfficientlyCausesEsse y x, the tenseless agent-cause primitive, CAUSING_AN_EFFECT_6). The passage's conclusion does not name the mode of causing; the efficient reading is suggested by its context (the fire-heating-water example and 'quia Deum dicimus esse primam causam efficientem') and is not stated. It strengthens STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE (the same conclusion with the mode unspecified). Tenseless: no present sustaining, conservation, world-indexed existence, uniqueness or God identification is asserted.",
+  "lean_declaration": "TruthCore.Causality.EsseCauseEfficiency.DistinctEsseRequiresExternalEfficientCause",
+  "definition_ids": [
+    "d8963cdd-0283-4b03-b006-6fb946a8c9e4",
+    "8934912c-7997-4af7-9520-ec94ff221043",
+    "0ea9feb8-1f92-5b11-aa74-2f2e567c6106",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

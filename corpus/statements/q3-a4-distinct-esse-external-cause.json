@@ -2,7 +2,7 @@
   "id": "33ad148b-ceab-5856-a4f8-c999a1dba644",
   "label": "In Aquinas' ST I q.3 a.4 first proof, each actually existing thing whose esse differs from its…",
   "legacy_id": "STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE",
-  "paraphrase": "In Aquinas' ST I q.3 a.4 first proof, each actually existing thing whose esse differs from its essence has its esse efficiently caused by another actually existing and numerically different being. This is conditional on the two separately stated causal premises, not an independent proof of them, and does not assert that necessary existence excludes every explanation.",
+  "paraphrase": "In Aquinas' ST I q.3 a.4 first proof, each actually existing thing whose esse differs from its essence has its esse caused by another actually existing and numerically different being (CausesIn at esse, CAUSING_AN_EFFECT_2). The mode of causing is not fixed: the Lean type does not say that the cause is efficient, and neither does the conclusion it reads, 'habeat esse causatum ab alio'. The efficient reading is the separate statement 'Every actual distinct esse is efficiently caused (CAUSING_AN_EFFECT_6) by another being in act', which strengthens this one (#1633). This is conditional on the two separately stated causal premises, not an independent proof of them, and does not assert that necessary existence excludes every explanation.",
   "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.DistinctEsseRequiresExternalCauseReading",
   "definition_ids": [
     "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
