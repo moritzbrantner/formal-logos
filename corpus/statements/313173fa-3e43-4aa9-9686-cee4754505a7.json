@@ -1,0 +1,16 @@
+{
+  "id": "313173fa-3e43-4aa9-9686-cee4754505a7",
+  "label": "Efficient-priority controls: non-efficient participation, nonvacuity, tense gap",
+  "paraphrase": "Closed finite controls: there are interpretations over Bool such that (1) participated beings have distinct esse, the mode-unspecified q.3 a.4 conclusion STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE and the mode-unspecified participation premise STMT-PARTICIPATED-HAS-OTHER-CAUSE hold, the component-kinds premise, both act-priority premises (simple and at a first being) and non-overlap hold, and efficient causes of esse are prior, while priority read over the mode-unspecified CausesIn fails, the efficient q.3 a.4 reading and the efficient participation premise fail, and some component is a first being; (2) some component exists, every input of the efficient sibling route holds, the secunda via priority holds for a here-and-now relation together with the tense bridge, and no component is a first being; (3) the secunda via priority holds for a here-and-now relation while the tense bridge and the priority of efficient causes of esse fail. Only these conjuncts are certified. The witnesses built in the proof (not part of the type) are: in (1), false a participated component of true whose esse true causes non-efficiently, nothing prior to anything; in (2), the same with true an efficient (and here-and-now) cause of false's esse and prior to it; in (3), true an efficient cause of false's esse, nothing causing here and now, nothing prior. 'Non-efficient' and 'here and now' are labels for unconstrained primitives: (1) shows that the efficient participation premise is not supplied by the mode-unspecified route and that priority over CausesIn is not implied by priority of efficient causes of esse; (3) shows that the tense bridge is needed to obtain that priority from the secunda via statement.",
+  "lean_declaration": "TruthCore.Causality.EsseCauseEfficiencyPriority.EfficientPriorityControls",
+  "definition_ids": [
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "8934912c-7997-4af7-9520-ec94ff221043",
+    "d8963cdd-0283-4b03-b006-6fb946a8c9e4",
+    "0ea9feb8-1f92-5b11-aa74-2f2e567c6106",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

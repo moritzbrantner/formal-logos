@@ -2,9 +2,9 @@
   "id": "71cb276f-2bbe-4006-984a-b9aa4bd4ce97",
   "label": "Efficient-priority controls (inference)",
   "input_statement_ids": [],
-  "output_statement_id": "d5df2709-6b93-4b35-9afe-90d673f68af6",
+  "output_statement_id": "313173fa-3e43-4aa9-9686-cee4754505a7",
   "rule": "Explicit finite interpretations on Bool",
-  "meaning": "Closed controls for the efficient sibling routes to 09c6d5f0: one interpretation in which every mode-unspecified input of the existing routes and efficient-cause priority over the efficient relation hold, while priority over CausesIn, the efficient q.3 a.4 reading and the efficient participation premise fail and a component is first; one in which every input of the sibling routes and the conclusion hold. Logical independence under the encoded predicates only.",
+  "meaning": "Closed controls for the efficient sibling route to 09c6d5f0: one interpretation in which every mode-unspecified input of the existing routes and the priority of efficient causes of esse hold, while priority over CausesIn, the efficient q.3 a.4 reading and the efficient participation premise fail and a component is first; one in which every input of the sibling route, the secunda via priority, the tense bridge and the conclusion hold; and one in which the secunda via priority holds while the tense bridge and tenseless priority fail. Logical independence under the encoded predicates only.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

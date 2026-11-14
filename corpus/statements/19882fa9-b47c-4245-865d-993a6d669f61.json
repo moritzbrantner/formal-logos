@@ -1,0 +1,11 @@
+{
+  "id": "19882fa9-b47c-4245-865d-993a6d669f61",
+  "label": "Every efficient cause of a thing's esse causes it here and now",
+  "paraphrase": "OPEN analyst tense bridge, attribution deferred: for all c and x, if c is an efficient cause of x's esse (EfficientlyCausesEsse, tenseless), then c is, here and now, an efficient cause of x at the esse respect in the secunda via's sense (EfficientlyCausesIn, DEF-EFFICIENT-CAUSING). It says that every agent cause of esse is a present, conserving cause; a merely originating agent of esse falsifies it (TenseGapControl). It bears on the conservation question of #1604/#1616 and is not derived here.",
+  "lean_declaration": "TruthCore.Causality.EsseCauseEfficiencyPriority.EfficientEsseCauseActsHereAndNow",
+  "definition_ids": [
+    "8934912c-7997-4af7-9520-ec94ff221043",
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

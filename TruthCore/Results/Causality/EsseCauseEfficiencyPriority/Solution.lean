@@ -42,20 +42,31 @@ theorem participatedEfficientCauseFromQ3A4 (q : EfficiencyProfile B P R)
   exact ⟨c, hne, hEff⟩
 
 /-- Sibling of `noComponentFirstOfWeak` (act priority only at a first being),
-with the efficient participation premise and efficient-cause priority applied
-to the efficient relation only. -/
-theorem noComponentFirstEfficientOfWeak (q : EfficiencyProfile B P R)
+with the efficient participation premise and the priority of (tenseless)
+efficient causes of esse. -/
+theorem noComponentFirstEfficientEsseOfWeak (q : EfficiencyProfile B P R)
     (ComponentOf PriorSimply : B → B → Prop)
     (InAct InPotency : B → R → Prop) (Participated : B → Prop)
     (hKinds : ComponentIsPotentialOrParticipated ComponentOf InPotency Participated)
     (hWeak : FirstBeingActPriority InAct InPotency PriorSimply)
     (hNotBoth : NotActAndPotencyInSameRespectReading InAct InPotency)
     (hParticipated : ParticipatedHasOtherEfficientEsseCause q Participated)
-    (hEfficient : EfficientCauseIsPriorToEffectReading (EfficientlyCausesEsseIn q) PriorSimply) :
+    (hPrior : EfficientEsseCauseIsPrior q PriorSimply) :
     NoComponentIsFirstBeingReading ComponentOf PriorSimply :=
   TruthCore.Results.Causality.ActPriorityAtFirst.noComponentFirstOfWeak ComponentOf PriorSimply
     InAct InPotency Participated (EfficientlyCausesEsseIn q) q.esse hKinds hWeak hNotBoth
-    (fun x hx => let ⟨c, hne, hEff⟩ := hParticipated x hx; ⟨c, hne, rfl, hEff⟩) hEfficient
+    (fun x hx => let ⟨c, hne, hEff⟩ := hParticipated x hx; ⟨c, hne, rfl, hEff⟩)
+    (fun c x _ h => hPrior c x h.2)
+
+/-- The secunda via priority of here-and-now efficient causes, with the tense
+bridge (every efficient cause of esse causes it here and now), gives the
+priority of tenseless efficient causes of esse. -/
+theorem efficientEsseCausePriorityFromHereAndNow (q : EfficiencyProfile B P R)
+    (EfficientlyCausesIn : B → B → R → Prop) (PriorSimply : B → B → Prop)
+    (hSecunda : EfficientCauseIsPriorToEffectReading EfficientlyCausesIn PriorSimply)
+    (hTense : EfficientEsseCauseActsHereAndNow q EfficientlyCausesIn) :
+    EfficientEsseCauseIsPrior q PriorSimply :=
+  fun c x h => hSecunda c x q.esse (hTense c x h)
 
 /-- In the control profiles only `false` has distinct esse. -/
 private theorem onlyFalseDistinct (q : EfficiencyProfile Bool Bool Unit)
@@ -68,9 +79,9 @@ private theorem onlyFalseDistinct (q : EfficiencyProfile Bool Bool Unit)
     have h : q.esseOf true = q.essenceOf true := by rw [hEssence, hEsse]; rfl
     exact absurd h hx.2
 
-/-- The two finite interpretations. Explicit proof terms. -/
+/-- The three finite interpretations. Explicit proof terms. -/
 theorem efficientPriorityControls : EfficientPriorityControls := by
-  refine ⟨?nonEfficient, ?nonvacuity⟩
+  refine ⟨?nonEfficient, ?nonvacuity, ?tenseGap⟩
   · let q : EfficiencyProfile Bool Bool Unit := {
       InAct := fun _ _ => True
       CausesIn := fun c x _ => c = true ∧ x = false
@@ -97,7 +108,7 @@ theorem efficientPriorityControls : EfficientPriorityControls := by
       (fun _ _ h => h.elim),
       (fun _ _ _ h => h.elim),
       (fun _ _ h => h.1.elim),
-      (fun _ _ _ h => h.2.elim),
+      (fun _ _ h => h.elim),
       (fun h => h true false () ⟨rfl, rfl⟩),
       (fun h => let ⟨_, _, _, _, hE⟩ := h false hd; hE),
       (fun h => let ⟨_, _, hE⟩ := h false rfl; hE),
@@ -120,8 +131,8 @@ theorem efficientPriorityControls : EfficientPriorityControls := by
       exact ⟨true, hTF, True.intro, ⟨rfl, rfl⟩, ⟨rfl, rfl⟩⟩
     exact ⟨q, fun _ _ => False, fun x => x = false,
       fun p x => p = false ∧ x = true, fun y x => y = true ∧ x = false,
-      fun _ _ => False, fun _ _ => False,
-      ⟨false, true, rfl, rfl⟩,
+      fun _ _ => False, fun _ _ => False, fun c x _ => c = true ∧ x = false,
+      ⟨false, true, rfl, rfl⟩, (fun _ _ _ h => h), (fun _ _ h => h),
       (fun x hx => by subst hx; exact hd),
       hEffExt,
       (fun x hx => ⟨true, fun h => hTF (h.trans hx), rfl, hx⟩),
@@ -129,7 +140,19 @@ theorem efficientPriorityControls : EfficientPriorityControls := by
       (fun _ _ h => h.elim),
       (fun _ _ _ h => h.elim),
       (fun _ _ h => h.1.elim),
-      (fun _ _ _ h => h.2),
+      (fun _ _ h => h),
       (fun _ _ hc hFirst => hTF ((hFirst true ⟨rfl, hc.1⟩).trans hc.1))⟩
+  · let q : EfficiencyProfile Bool Bool Unit := {
+      InAct := fun _ _ => True
+      CausesIn := fun c x _ => c = true ∧ x = false
+      essenceOf := fun _ => false
+      esseOf := Bool.not
+      essentialPrinciplesAloneSufficeForEsse := fun _ => False
+      esse := ()
+      EfficientlyCausesEsse := fun c x => c = true ∧ x = false }
+    exact ⟨q, fun _ _ _ => False, fun _ _ => False,
+      (fun _ _ _ h => h.elim),
+      (fun h => h true false ⟨rfl, rfl⟩),
+      (fun h => h true false ⟨rfl, rfl⟩)⟩
 
 end TruthCore.Results.Causality.EsseCauseEfficiencyPriority

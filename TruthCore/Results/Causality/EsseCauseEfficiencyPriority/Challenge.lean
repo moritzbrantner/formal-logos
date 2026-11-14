@@ -34,20 +34,30 @@ theorem participatedEfficientCauseFromQ3A4 (q : EfficiencyProfile B P R)
   sorry
 
 /-- Sibling of `noComponentFirstOfWeak` (act priority only at a first being),
-with the efficient participation premise and efficient-cause priority applied
-to the efficient relation only. -/
-theorem noComponentFirstEfficientOfWeak (q : EfficiencyProfile B P R)
+with the efficient participation premise and the priority of (tenseless)
+efficient causes of esse. -/
+theorem noComponentFirstEfficientEsseOfWeak (q : EfficiencyProfile B P R)
     (ComponentOf PriorSimply : B → B → Prop)
     (InAct InPotency : B → R → Prop) (Participated : B → Prop)
     (hKinds : ComponentIsPotentialOrParticipated ComponentOf InPotency Participated)
     (hWeak : FirstBeingActPriority InAct InPotency PriorSimply)
     (hNotBoth : NotActAndPotencyInSameRespectReading InAct InPotency)
     (hParticipated : ParticipatedHasOtherEfficientEsseCause q Participated)
-    (hEfficient : EfficientCauseIsPriorToEffectReading (EfficientlyCausesEsseIn q) PriorSimply) :
+    (hPrior : EfficientEsseCauseIsPrior q PriorSimply) :
     NoComponentIsFirstBeingReading ComponentOf PriorSimply := by
   sorry
 
-/-- The two finite interpretations. Explicit proof terms. -/
+/-- The secunda via priority of here-and-now efficient causes, with the tense
+bridge (every efficient cause of esse causes it here and now), gives the
+priority of tenseless efficient causes of esse. -/
+theorem efficientEsseCausePriorityFromHereAndNow (q : EfficiencyProfile B P R)
+    (EfficientlyCausesIn : B → B → R → Prop) (PriorSimply : B → B → Prop)
+    (hSecunda : EfficientCauseIsPriorToEffectReading EfficientlyCausesIn PriorSimply)
+    (hTense : EfficientEsseCauseActsHereAndNow q EfficientlyCausesIn) :
+    EfficientEsseCauseIsPrior q PriorSimply := by
+  sorry
+
+/-- The three finite interpretations. Explicit proof terms. -/
 theorem efficientPriorityControls : EfficientPriorityControls := by
   sorry
 

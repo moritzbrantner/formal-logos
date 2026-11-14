@@ -291,58 +291,70 @@ every cause of being as efficient.
 | Record | Content |
 |---|---|
 | `811c2e98` `ParticipatedHasOtherEfficientEsseCause` | whatever has being by participation has an efficient cause of its esse other than itself (`∃ c, c ≠ x ∧ EfficientlyCausesEsse c x`) |
-| `a2ae4358` `participatedEfficientCauseFromQ3A4` | `cbb068e8` (participated beings have distinct esse) + `1ff08418` (efficient q.3 a.4 reading) → `811c2e98`; `strong_version_needed` records why `33ad148b` does not suffice |
-| `6f9e94c6` `noComponentFirstEfficientOfWeak` | `86f10ec3`, `61ad11f3`, `c6d6379b`, `811c2e98`, `e078f07b` → `09c6d5f0`: sibling of `358d8c6e`, composing `noComponentFirstOfWeak` with the cause relation `EfficientlyCausesEsseIn q` (`r = esse ∧ EfficientlyCausesEsse c x`) |
-| `b7e3cc74` `efficientPriorityControls` | two finite interpretations |
+| `b0cd6015` `EfficientEsseCauseIsPrior` | OPEN: an efficient cause of a thing's esse (tenseless) is simply prior to it |
+| `19882fa9` `EfficientEsseCauseActsHereAndNow` | OPEN tense bridge: every efficient cause of a thing's esse is, here and now, an efficient cause of it at esse (secunda via sense, DEF-EFFICIENT-CAUSING) |
+| `a2ae4358` `participatedEfficientCauseFromQ3A4` | `cbb068e8` + `1ff08418` → `811c2e98`; `strong_version_needed` records why `33ad148b` does not suffice |
+| `5769b268` `noComponentFirstEfficientEsseOfWeak` | `86f10ec3`, `61ad11f3`, `c6d6379b`, `811c2e98`, `b0cd6015` → `09c6d5f0`: sibling of `358d8c6e`, composing `noComponentFirstOfWeak` with the cause relation `EfficientlyCausesEsseIn q` (`r = esse ∧ EfficientlyCausesEsse c x`) |
+| `2b0c43c0` `efficientEsseCausePriorityFromHereAndNow` | `e078f07b` (at the here-and-now relation) + `19882fa9` → `b0cd6015` |
+| `b7e3cc74` `efficientPriorityControls` | three finite interpretations |
 
-`e078f07b` is reused unchanged. Its paraphrase ("an efficient cause is prior
-(by nature, not in time) to what it causes") and its Lean type fix no tense,
-and it links only DEF-SIMPLE-PRIORITY, so on its face the efficient
-instantiation is an instance of what it says, which the `CausesIn`
-instantiation was not. **Scope gap, not settled here:** the evidence for
-`e078f07b` is read for the secunda via's here-and-now relation. Its claim
-`3ed048c0` grounds priority of nature in per se causes that "act together",
-and its derivation `8c629064` rests on `c0d99549` ("it would not be if c were
-not"). `EfficientlyCausesEsse` also admits merely originating agents. So the
-sibling assumes that efficient-cause priority holds for a tenseless agent
-cause of esse. If every agent cause of esse is also a conserving cause (q.104
-a.1, not re-read here), the two readings coincide on this relation; that is
-the tense bridge of next test 4, not something this slice proves. No sibling of `e7b4c683` is registered: its inputs
-`a4d3261a` and `86f10ec3` use two senses of POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED
-without a bridge (legacy allowlist), and a new argument may not inherit that.
+**Why a separate priority premise (Codex review on #1640).** The first draft
+bound the sibling's priority hypothesis to `e078f07b` itself, instantiated
+with the tenseless efficient relation. But `e078f07b`'s evidence is read for
+the secunda via's here-and-now relation: its claim `3ed048c0` grounds
+priority of nature in per se causes that "act together", and its derivation
+`8c629064` rests on `c0d99549` ("it would not be if c were not"), while
+`EfficientlyCausesEsse` also admits merely originating agents. Binding the
+tenseless instance to `e078f07b` would let the graph supply it from the
+secunda via support without the tense step. So the tenseless priority is its
+own OPEN premise `b0cd6015`, and its derivation from `e078f07b` goes through
+the explicit OPEN tense bridge `19882fa9` (every agent cause of esse is a
+present, conserving cause; #1604/#1616 territory). `e078f07b` is now used
+only at a here-and-now relation, as its evidence reads it.
 
-**Controls.** *Non-efficient participation*: participated distinct esse,
-`33ad148b`, `2b25a78c`, the component kinds, both act-priority premises,
-non-overlap and efficient priority at the efficient relation all hold, while
-priority over `CausesIn`, `1ff08418` and `811c2e98` fail and a component is
-first. So the sibling's participation premise is not supplied by the
-mode-unspecified route, and priority over every cause of being (the existing
-reading step) is not implied by priority over the efficient relation. In the
-witness the efficient relation is empty, so its priority holds trivially;
-whether `e078f07b`'s content is the efficient instance is the interpretive
-question above, which no model settles. *Nonvacuity*: every input of
-the sibling routes and the conclusion hold, with a component. The witnesses
-are labels for unconstrained primitives.
+No sibling of `e7b4c683` is registered: its inputs `a4d3261a` and `86f10ec3`
+use two senses of POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED without a bridge
+(legacy allowlist), and a new argument may not inherit that.
 
-**Effect.** The efficiency the route assumed in a reading step is now a
-typed premise chain: `09c6d5f0` ← `811c2e98` ← `1ff08418` ← `58e6ec63`
-(OPEN bridge) ← `0cc3a136` (bare) or the De ente / q.3 a.4 inputs.
-Computed `truth frontier-diff --base origin/main`: open premises reaching
-the root 489 → 489 (bare 348, supported 90, stated 51, unchanged); verified
-support alternatives 486 → 488 (`811c2e98` from `1ff08418` + `cbb068e8`;
-`09c6d5f0` from the efficient sibling); no bare premise added. The existing
-arguments are unchanged; the efficient route is an additional support option
-for `09c6d5f0` whose efficiency rests visibly on the OPEN bridge, not a
-discharge.
+**Controls (existence claims; witnesses are labels for unconstrained
+primitives).**
 
-**Remaining.** `e7b4c683`'s reading step stays untyped (sense debt above).
-Items 2–4 of the next tests are unchanged.
+- *Non-efficient participation*: participated distinct esse, `33ad148b`,
+  `2b25a78c`, the component kinds, both act-priority premises, non-overlap
+  and `b0cd6015` hold, while priority over `CausesIn`, `1ff08418` and
+  `811c2e98` fail and a component is first. So the efficient participation
+  premise is not supplied by the mode-unspecified route, and priority over
+  every cause of being is not implied by the priority of efficient causes of
+  esse. (In the witness the efficient relation is empty, so `b0cd6015` holds
+  trivially.)
+- *Nonvacuity*: a component exists, every input of the sibling route, the
+  secunda via priority at a here-and-now relation and the tense bridge hold,
+  and so does the conclusion.
+- *Tense gap*: the secunda via priority holds at a here-and-now relation while
+  the tense bridge and `b0cd6015` fail. So `b0cd6015` does not follow from
+  `e078f07b` without the bridge.
+
+**Effect (computed `truth frontier-diff --base origin/main`).** Open premises
+reaching the root 489 → 490 (bare 348 → 349); verified support alternatives
+486 → 489 (`09c6d5f0` from the efficient sibling; `811c2e98` from `1ff08418`
++ `cbb068e8`; `b0cd6015` from `e078f07b` + `19882fa9`); bare premise added:
+the tense bridge `19882fa9`. The efficiency the route assumed in a reading
+step is now a typed premise chain: `09c6d5f0` ← `811c2e98` ← `1ff08418` ←
+`58e6ec63` (OPEN) ← `0cc3a136` (bare), and ← `b0cd6015` (OPEN, supported
+through `19882fa9`). The existing arguments are unchanged; this is an
+additional support option, not a discharge.
+
+**Remaining.** `e7b4c683`'s reading step stays untyped (sense debt). The
+tense bridge is open; a merely originating agent of esse falsifies it, so
+its warrant is the conservation question. Items 2–4 of the next tests are
+otherwise unchanged.
 
 **Semantic challenge (this slice).** An independent reviewer found no P1.
 Accepted and repaired: the scope gap in reusing `e078f07b` for the tenseless
-relation (now stated above, in the argument meaning and in the attempt); the
-overstatement of what the non-efficient control shows; one disambiguation
-sentence narrowed to the existing route. Recorded, not repaired here: the
-label of `c6d6379b` says POTENCY_1 while it links the POTENCY_2 definition
-`3ea2762f` (pre-existing). Checked and declined: the reported missing link
-to definition `8934912c` on `c95fa45c` (it is present).
+relation (then stated in prose; after the Codex review, separated into
+`b0cd6015` and `19882fa9`); the overstatement of what the non-efficient
+control shows; one disambiguation sentence narrowed to the existing route.
+Recorded, not repaired here: the label of `c6d6379b` says POTENCY_1 while it
+links the POTENCY_2 definition `3ea2762f` (pre-existing). Checked and
+declined: a reported missing link to definition `8934912c` on the sibling
+argument (it is present).

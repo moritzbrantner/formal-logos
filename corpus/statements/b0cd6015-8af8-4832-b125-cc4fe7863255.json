@@ -1,0 +1,11 @@
+{
+  "id": "b0cd6015-8af8-4832-b125-cc4fe7863255",
+  "label": "An efficient cause of a thing's esse is SIMPLY_PRIOR_1 to that thing",
+  "paraphrase": "OPEN analyst premise, attribution deferred: for all c and x, if c is an efficient cause of x's esse (EfficientlyCausesEsse, tenseless: originating or sustaining), then c is simply prior to x (PriorSimply, DEF-SIMPLE-PRIORITY). It is the tenseless counterpart of STMT-EFFICIENT-CAUSE-IS-PRIOR-TO-EFFECT (e078f07b), not that statement: e078f07b's claim and derivation concern the secunda via's here-and-now efficient causes, whose per se causes act together. A merely originating agent of x's esse that no longer acts is covered here and not there; whether such an agent is simply prior to x is part of what this premise asserts.",
+  "lean_declaration": "TruthCore.Causality.EsseCauseEfficiencyPriority.EfficientEsseCauseIsPrior",
+  "definition_ids": [
+    "8934912c-7997-4af7-9520-ec94ff221043",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}
