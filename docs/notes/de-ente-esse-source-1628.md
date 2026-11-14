@@ -257,8 +257,8 @@ signature, `Groups`, `Graph`, CONCRETE_6 and the source-backed application
 with the graph `Source` predicate, the application that defines that sense);
 `7ab0ddcb` keeps its own definition, `ActualRoot` and the Ontic signature.
 The generic `Supply` definition `c9d479bb` (INTRINSIC_1, intrinsic *not*
-graph sourcehood) is dropped from `5c898d24`; it is also the only record that
-defines `Trap` itself, a P2 link gap. The two GOD_4 grades-at-being routes
+graph sourcehood) is dropped from `5c898d24`; its `Trap` clause is now its own
+definition `a8172538` (Codex review), linked instead. The two GOD_4 grades-at-being routes
 (`fc46b7f9`, `3367bf93`) lose their bookkeeping bridges citing `5c898d24`;
 91 argument allowlist entries that no longer fail are removed (30 of them were
 already removable on main). The two legacy MAXIMAL senses stay listed although
@@ -425,7 +425,7 @@ not the classical God.
 cause-of-esse reading, which also requires reconciling `8163859b` ("not a
 cause of coming to be") with the "covers originating causes" reading; relate
 PER_SE_5 to PER_SE_1 and `AsCaused` to the secunda via's `CausesAsCaused` once
-#1633 supplies efficiency; add a definition record for `Trap` (#216); finish
+#1633 supplies efficiency; finish
 #1524 for the remaining arguments that carry over-broad definition links.
 
 ### Semantic challenge (#1635)
@@ -449,4 +449,4 @@ chain" and "so provisionally plausible" were reworded; the module doc no
 longer reads the controls as possibilities. The reviewer found the Lean
 proofs, the controls, the strength order, the sense-link trimming
 (INTRINSIC_2 only for `5c898d24`) and the removal of the bookkeeping bridges
-correct. Not changed: `Trap` still lacks a definition record (P2, #216).
+correct. Codex review (P2) asked for a definition of `Trap` after `c9d479bb` was dropped: added as `a8172538`.
