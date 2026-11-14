@@ -260,9 +260,10 @@ The generic `Supply` definition `c9d479bb` (INTRINSIC_1, intrinsic *not*
 graph sourcehood) is dropped from `5c898d24`; it is also the only record that
 defines `Trap` itself, a P2 link gap. The two GOD_4 grades-at-being routes
 (`fc46b7f9`, `3367bf93`) lose their bookkeeping bridges citing `5c898d24`;
-93 allowlist entries that no longer fail are removed (32 of them were already
-removable on main; the allowlist only
-shrank; `sense_index.py ratchet` passes).
+91 argument allowlist entries that no longer fail are removed (30 of them were
+already removable on main). The two legacy MAXIMAL senses stay listed although
+`sense_index.py ratchet` calls them removable: the full bind-check uses them to
+excuse a known IsMaximumIn/IsMaximalIn alias. The allowlist only shrank.
 
 ### Results
 
