@@ -2085,12 +2085,12 @@
       "path": "corpus/disambiguations/per-se.json",
       "status": "inspected",
       "classification": "reused_unchanged_audit",
-      "finding": "Reuse unchanged prior audit disposition: Existing resolution retained: Three different uses share the words 'per se': a per se ordered series (prima via, `MovesAsMoved`), being necessary per se (tertia via, `IsNecessaryPerSe`: no cause of necessity from elsewhere), and being self-evident (per se notum; in this corpus the `self_evident` marking). Each is its own predicate or record field and no inference moves between them: the convergence result TERTIA-VIA-NECESSARY-PER-SE-IS-MAXIME-ENS uses only `IsNecessaryPerSe`, and the self-evidence of STMT-EXCLUDED-MIDDLE rests on Aristotle's elenctic defence, not on per se ordering. The natural-law per-se-nota reading is Aquinas’s predicate-in-the-subject account of self-evidence. A claim proposing this account is not already a corpus self_evident marking. Follow-up review (term sense forks, batch 3): appended why the term is not forked (homonyms with different Lean types or no Lean declaration); the resolution's sense separation is unchanged.",
+      "finding": "Reuse unchanged prior audit disposition: Existing resolution retained: Three different uses share the words 'per se': a per se ordered series (prima via, `MovesAsMoved`), being necessary per se (tertia via, `IsNecessaryPerSe`: no cause of necessity from elsewhere), and being self-evident (per se notum; in this corpus the `self_evident` marking). Each is its own predicate or record field and no inference moves between them: the convergence result TERTIA-VIA-NECESSARY-PER-SE-IS-MAXIME-ENS uses only `IsNecessaryPerSe`, and the self-evidence of STMT-EXCLUDED-MIDDLE rests on Aristotle's elenctic defence, not on per se ordering. The natural-law per-se-nota reading is Aquinas’s predicate-in-the-subject account of self-evidence. A claim proposing this account is not already a corpus self_evident marking. Follow-up review (term sense forks, batch 3): appended why the term is not forked (homonyms with different Lean types or no Lean declaration); the resolution's sense separation is unchanged. 2026-11-14 review (#1635): appended sense PER_SE_5 (DEF 4bca086d, PerSeActualEsseCause, a per se link among causes of esse of unspecified mode) with its own Lean declaration; PER_SE_1-4, their declarations and the audited results are unchanged, and no audited step uses the new sense.",
       "before": {
         "sha256": "2a688fb68fe917ecd122430ab25ef91041ae7cf28878b9bfc9d08f08e3b9b115",
         "lean_declaration": null
       },
-      "reviewed_sha256": "44c863b7647348a41783cece0572f763439f82ffe701b7b38f0f40e14ad50ef6"
+      "reviewed_sha256": "93bd28212ecfa36e3b3dbfdb633cd965c54779c2c4374bf41bf99a35f8248e8f"
     },
     {
       "kind": "disambiguations",

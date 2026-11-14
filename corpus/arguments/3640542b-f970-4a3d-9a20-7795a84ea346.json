@@ -1,0 +1,59 @@
+{
+  "id": "3640542b-f970-4a3d-9a20-7795a84ea346",
+  "label": "Unique actual CONCRETE_6 root, from root existence and De ente's at-most-one root",
+  "premise_statement_ids": [
+    "56f68b40-9737-59a0-8cac-5610980a1547",
+    "5c898d24-d1f7-5087-b09e-3287a723e787",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "0436de86-6579-53f2-9ff5-2111ba44ebae",
+    "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+    "457698e4-eb21-4561-ab32-eccbfb0a992e",
+    "a576300f-4b01-45ae-902c-cfe3d0fbf2de"
+  ],
+  "conclusion_statement_id": "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1",
+  "inference_ids": [
+    "dc65b6c1-8fac-4143-85d0-edde454d0a7d"
+  ],
+  "meaning": "Interface 1 of #1635: the uniqueness half of the root-uniqueness interface 7ab0ddcb is supplied by De ente (the #1629 other-cause step 457698e4, existing-in-act 0436de86, the mode-unspecified esse-cause bridge cb1cdea9 and at most one actual being whose esse is its essence, through the #1628 theorem atMostOneActualRootFromDeEnte) in place of the genus principle and grades of ACTUAL-ROOT-UNIQUENESS (0edb19eb); existence comes from the same population and whole-roster inputs. No modal necessity, efficiency or God identification is used or concluded.",
+  "definition_ids": [
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "f825624c-78af-5df8-ba76-c9ef691eb9af",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "9969dfc2-1f2e-50be-b5e6-1f9cd402c7a6",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "fc6f0e12-470f-5717-8c5b-ece7a450fe59",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "0ea9feb8-1f92-5b11-aa74-2f2e567c6106",
+    "1dff2d68-1348-5e7e-8ee7-248af63c8c53",
+    "9aa95dab-4e15-56e4-b9cf-8ad8aef87540",
+    "c2c8b139-fb8a-5ce2-8add-ec55a60d8b0b",
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
+    "4b02d34a-9226-5009-9ac2-3b52f4222b21",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "9403807f-f7d4-5ce8-a8ba-ca53ed932959",
+    "42948082-5c8f-5dfb-b762-5feb8e6a6fb4",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "79644a0a-db5b-5497-bb47-9f96d14cdae7",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "b9adce48-6b86-5f58-b2ea-b25f51c70cbd",
+    "1795a62e-f78b-5f5b-94e7-9e7490824811",
+    "002f42cb-3015-5644-80b3-d408538394e6",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "34ddfede-ff4d-59ad-9882-4bcb490df9bb",
+    "92df85d7-aae7-57ac-b84e-3780ade842f1",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ]
+}

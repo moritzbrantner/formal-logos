@@ -1,0 +1,13 @@
+{
+  "id": "2f700031-dafa-4f02-a2b5-90bb98bbf46f",
+  "label": "No infinite regress of actual causes of being, from the PER_SE_5 regress and bridge (inference)",
+  "input_statement_ids": [
+    "ea251340-c89e-4535-a00f-6323cd8403a5",
+    "e74de400-fa5c-4bfa-b233-d6ec6add2975"
+  ],
+  "output_statement_id": "fd12ad3d-6729-4fa0-bb87-0121260df684",
+  "rule": "Per se well-founded induction: an actual cause c of x that itself has an actual cause causes x per se by the bridge, so the induction hypothesis makes c accessible; an actual cause with no actual cause is accessible outright",
+  "meaning": "Non-transcription conditional derivation of the #1628 regress premise fd12ad3d from the weaker per se regress (an analyst analogue, for causes of esse of unspecified mode, of the per se regress that ST I q.46 a.2 ad 7 declares impossible for efficient causes) and the OPEN per se bridge: a caused actual cause of being causes being as caused, never per accidens. No matching restriction of the #1629 other-cause step is needed: the step and every argument consuming fd12ad3d stay as they are, and the restriction is carried by the bridge. PerAccidensRegressControl shows that the per se regress alone does not give fd12ad3d: an infinite per accidens chain of causes of being satisfies it and the other-cause step. The burden moves from the regress premise to the claim that no cause of esse is accidentally ordered; the cause is not said to be efficient, present or sustaining.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

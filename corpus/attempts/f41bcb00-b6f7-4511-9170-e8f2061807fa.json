@@ -1,0 +1,28 @@
+{
+  "id": "f41bcb00-b6f7-4511-9170-e8f2061807fa",
+  "label": "De ente first source joined to the root interface; regress premise split into per se part and bridge",
+  "statement_ids": [
+    "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1",
+    "5c898d24-d1f7-5087-b09e-3287a723e787",
+    "c35b1a5c-6405-449b-993b-8196b2457e08",
+    "ce7edf53-afbb-4bca-84d6-b0e36b861148",
+    "ad2b3ffc-09d4-47c0-974e-95f8eef13fc9",
+    "17350d52-b320-4c45-bde9-40a911e6f19c",
+    "fd12ad3d-6729-4fa0-bb87-0121260df684",
+    "ea251340-c89e-4535-a00f-6323cd8403a5",
+    "e74de400-fa5c-4bfa-b233-d6ec6add2975"
+  ],
+  "date": "2026-11-14",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Issue #1635. (1) Sense links: 5c898d24 and 7ab0ddcb linked definitions whose constants their Lean types do not contain, so every argument using them mixed senses of NECESSARY, NONNECESSARY, WELL_FOUNDEDNESS and INTRINSIC; their definition_ids were trimmed to the constants of their types (5c898d24 keeps INTRINSIC_2, the source-backed application, since its type instantiates Trap's intrinsic parameter with graph Source; the generic Supply definition c9d479bb, INTRINSIC_1, is dropped, leaving Trap without a linked definition, a P2 gap). The GOD_4 grades-at-being routes fc46b7f9 and 3367bf93 lost their bookkeeping bridges; 93 allowlist entries that no longer fail were removed. (2) Interface 1: uniqueActualRootFromDeEnte (ef632140) registers root existence plus De ente's at-most-one root into 7ab0ddcb. (3) Interface 2: deEnteFirstSourceIsActualRoot (ca5403a6) makes the first source c35b1a5c an actual root at w (ce7edf53) from two OPEN bridges restricted to beings whose esse is their essence (ad2b3ffc concreteness and existence at w; 17350d52 an actual concrete ground causes its esse), existing-in-act 0436de86 and no self-causation b62a64ab; the issue's extra premise 'a being whose esse is its essence has no other cause' is not needed, since the first source is already uncaused. uniqueActualRootFromDeEnteSource (6e89d528) gives 7ab0ddcb with 49fdec01, without population or whole-roster nontrapping. (4) Interface 3 reached through the existing argument 70adaf7c (7ab0ddcb + c71c068c + excluded middle -> 91b085c4), so the #1628 stack reaches the root (frontier-diff 480 -> 489 open, 473 -> 482 support alternatives). (5) Regress scope: per ST I q.46 a.2 ad 7 (passage a34be6a3, read), the per se regress ea251340 (weaker; fd12ad3d strengthens it, relation ed411e36, strictness by PerAccidensRegressControl) and the per se bridge e74de400 (a caused actual cause of being causes being as caused) give fd12ad3d by per se induction (a20cb04c); no restriction of 457698e4 is needed. Controls 96c022f9: per accidens regress, non-causal ground, absent source, self-ground, nonvacuity. Rejected: a per se-restricted #1629 step (stronger than 457698e4 and unnecessary); reusing the secunda via's CausesAsCaused (efficient sense, #1633). Provisional judgment in docs/notes/de-ente-esse-source-1628.md: valid with the new bridges; strongest rival is per accidens causes of esse, whose price is a cause of esse (not of coming to be) whose being caused is accidental to its causing. No premise established; no efficiency, conservation or God identification.",
+  "evidence": [
+    "ef632140-f6e2-4bb7-89ec-7ed20afe48f3",
+    "ca5403a6-89d9-4c27-9840-0874cd70d776",
+    "6e89d528-e1aa-4b8c-b0ae-8128c98ed5dc",
+    "3e7d77b1-8577-474a-b64c-d6ec1807796f",
+    "a20cb04c-56db-4ae9-bf5a-3645730f141f",
+    "96c022f9-f64a-4035-9715-8ffab62a3ac9"
+  ],
+  "blocker": "Open: e74de400 (no cause of esse is accidentally ordered) needs an encoded cause-of-esse reading (causing that depends on the cause's own being while it causes; ST I q.104 a.1, not pinned) to be derived; ea251340, ad2b3ffc, 17350d52 open; efficiency waits on #1633; remaining over-broad definition links in #1524."
+}

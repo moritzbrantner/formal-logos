@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.RootInterface.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.RootInterface.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Aquinas.DeEnte.RootInterface.uniqueActualRootFromDeEnteSource"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

@@ -1,0 +1,13 @@
+{
+  "id": "0b847841-e76e-4f62-a4a9-e752284709b5",
+  "label": "De ente root-interface controls: per accidens, non-causal ground, absent, self-ground, nonvacuity",
+  "paraphrase": "Closed controls on interpretations of the shared vocabulary. (1) Per accidens regress, on Nat: n+1 causes the esse of n, all in act with distinct esse, and no link is per se; the #1629 other-cause step and the per se regress hold, while the per se bridge, the unrestricted regress premise and the regress conclusion fail. (2) Non-causal ground, on Bool at one world: true (esse equal to essence) causes the esse of false, and false grounds true without causing its esse; the first source, existing-in-act, the concreteness bridge and no self-causation hold, while the ground bridge and 'the first source is an actual root' fail. (3) Absent source: as (2) with no grounding and true absent from the world; the concreteness bridge and the conclusion fail, every other input holds. (4) Self-ground: true grounds itself and causes its own esse; no self-causation and the conclusion fail, every other input holds. (5) Nonvacuity: true causes the esse of false and grounds it, both exist and are concrete, and the link is per se; every input of the root-interface and per se arguments holds and so do their conclusions, including at most one root and the unique actual root. Statements about these interpretations only, not evidence that a per accidens series of causes of being, a non-causal ground of a first source or an absent first source is possible or plausible.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.RootInterfaceControls",
+  "definition_ids": [
+    "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "9969dfc2-1f2e-50be-b5e6-1f9cd402c7a6",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

@@ -1,0 +1,139 @@
+# #1635: connect the De ente first source of esse (#1628) to the root
+# interface, and restrict its no-regress premise to per se causes of being.
+# (1) Root existence and De ente's at-most-one root give root uniqueness
+# 7ab0ddcb. (2) With two OPEN bridges between the q.3 a.4 order of causes of
+# being and the world-relative grounding order, the first source is itself an
+# actual root at w; with at most one root this gives 7ab0ddcb without
+# whole-roster nontrapping. (3) The unrestricted regress premise fd12ad3d is
+# derived from its per se version (after ST I q.46 a.2 ad 7) and an OPEN per se
+# bridge, and implies the per se version. No efficiency (#1633), conservation
+# (#1616), necessity or God identification is supplied.
+
+[batch]
+vocab = "TruthCore.Latin.Aquinas.DeEnte"
+results = "TruthCore.Results.Aquinas.DeEnte.RootInterface"
+
+[[statement]]
+id = "A being in act whose esse is its essence is CONCRETE_6 and exists at w"
+lean = "ActualEsseIsEssenceIsActualConcreteAt"
+paraphrase = "OPEN analyst bridge, attribution deferred: every being x in act as to being (InAct x esse of the shared q.3 a.4 profile) whose represented esse equals its essence is concrete and exists at the selected world w of the grounding profile (ActualConcrete m w x). It is the converse of the existing-in-act contract 0436de86, restricted to beings whose esse is their essence; the unrestricted converse (every being in act is concrete and exists at w) is stronger and is not stated. The q.3 a.4 profile is world-free, so this reads its actuality at w for such beings; since InAct does not depend on the world, accepting the bridge at every world rather than only at the selected w would make such a being exist at every world, a modal reading not asserted here. On the CONCRETE_6 reading of concreteness (having esse in re, InAct x esse) the concreteness half is close to definitional; the main content is existence at w. AbsentSourceControl satisfies every other input of the first-source-to-root argument without it."
+definitions = ["c57e2682-08e6-527e-950f-0fa0a7ff11ef", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "008cb21a-256c-5a90-822c-acd4591d699a", "183b48d2-1753-583d-aef9-4199cff86231", "DEF-ESSE"]
+disambiguations = ["623ddbf6-9683-5361-bae4-e348a00ec680"]
+
+[[statement]]
+id = "An actual CONCRETE_6 ground of a being whose esse is its essence is a CAUSE_2 of its esse"
+lean = "GroundOfEsseIsEssenceBeingCausesItsEsse"
+paraphrase = "OPEN analyst bridge, attribution deferred: if y is an actual concrete ground at w of x (y concrete, existing at w and grounding x at w under the selected relation), and x is in act as to being with its represented esse equal to its essence, then y causes the esse of x (CausesIn y x esse, CAUSE_2, mode unspecified, tenseless). It is the converse of the esse-cause bridge cb1cdea9, restricted to targets whose esse is their essence; the unrestricted converse (every actual concrete ground causes its target's esse) is stronger and is not stated. No substantive objection is identified; NonCausalGroundControl shows only that the encoded predicates do not force it, satisfying every other input of the first-source-to-root argument without it."
+definitions = ["9969dfc2-1f2e-50be-b5e6-1f9cd402c7a6", "211a6432-8b8f-53ed-85e3-75173bb15b24", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "008cb21a-256c-5a90-822c-acd4591d699a", "183b48d2-1753-583d-aef9-4199cff86231", "DEF-ESSE"]
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b", "623ddbf6-9683-5361-bae4-e348a00ec680"]
+
+[[statement]]
+id = "The De ente first source of esse is an actual CONCRETE_6 root of the selected grounding at w"
+lean = "DeEnteFirstSourceIsActualRootAt"
+paraphrase = "Some n is an actual concrete root of the selected grounding relation at w (NecessaryRootFork.ActualRoot: concrete, existing at w, with no actual concrete ground at w), is in act as to being, has its represented esse equal to its essence, has no actual cause of its esse, and heads a finite chain of actual causes of being (Relation.TransGen of ActualEsseCause; mode of causing unspecified, tenseless) to every other being in act. That is, the De ente first source (c35b1a5c) is an actual root at w. Not asserted: that it is the only actual root, exists necessarily, is an efficient cause, conserves anything, or is God."
+definitions = ["c57e2682-08e6-527e-950f-0fa0a7ff11ef", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "8163859b-95b3-4dd2-8a69-541bd332f32f", "183b48d2-1753-583d-aef9-4199cff86231", "DEF-ESSE"]
+
+[[statement]]
+id = "There is no infinite descending chain of PER_SE_5 actual causes of being"
+lean = "NoInfinitePerSeActualEsseCauseRegress"
+paraphrase = "OPEN analyst premise, attribution deferred: the relation 'c is an actual cause of the esse of x (ActualEsseCause, mode unspecified, tenseless) and causes it per se, as caused (the primitive per se link AsCaused)' is well-founded, for the supplied per se link. It is an analyst analogue, for causes of esse of unspecified mode, of the per se regress that ST I q.46 a.2 ad 7 declares impossible for efficient causes ('in causis efficientibus impossibile est procedere in infinitum per se'), while that passage allows an infinite per accidens series; ad 7 is not attributed this statement. It is weaker than the unrestricted regress premise fd12ad3d, which implies it for every per se link (strength order); PerAccidensRegressControl satisfies it while fd12ad3d fails. Its content depends on the intended meaning of the primitive AsCaused: with AsCaused everywhere true it coincides with fd12ad3d, and with AsCaused everywhere false it is trivial."
+definitions = ["4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740", "8163859b-95b3-4dd2-8a69-541bd332f32f", "211a6432-8b8f-53ed-85e3-75173bb15b24", "DEF-ESSE"]
+disambiguations = ["002f42cb-3015-5644-80b3-d408538394e6", "00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
+
+[[statement]]
+id = "An actual cause of being that itself has an actual cause causes being PER_SE_5, as caused"
+lean = "CausedEsseCauseCausesAsCaused"
+paraphrase = "OPEN analyst bridge, attribution deferred: for every actual cause c of the esse of x (ActualEsseCause, mode unspecified, tenseless), if c itself has an actual cause of its esse, then c causes the esse of x per se, as caused (AsCaused c x): among actual causes of being, a caused cause's being caused is never accidental to its causing being. It denies, for causes of esse, the per accidens order that ST I q.46 a.2 ad 7 allows for generators ('generat enim inquantum homo, et non inquantum est filius alterius hominis'); ad 7 does not state this bridge. Its warrant would come from reading a cause of esse as one on whose own continued being its causing depends (the cause-of-esse versus cause-of-becoming distinction), which the tenseless ActualEsseCause does not encode. PerAccidensRegressControl satisfies the per se regress and the other-cause step without it."
+definitions = ["4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740", "8163859b-95b3-4dd2-8a69-541bd332f32f", "211a6432-8b8f-53ed-85e3-75173bb15b24", "DEF-ESSE"]
+disambiguations = ["002f42cb-3015-5644-80b3-d408538394e6", "00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
+
+[[statement]]
+id = "De ente root-interface controls: per accidens, non-causal ground, absent, self-ground, nonvacuity"
+lean = "RootInterfaceControls"
+paraphrase = "Closed controls on interpretations of the shared vocabulary. (1) Per accidens regress, on Nat: n+1 causes the esse of n, all in act with distinct esse, and no link is per se; the #1629 other-cause step and the per se regress hold, while the per se bridge, the unrestricted regress premise and the regress conclusion fail. (2) Non-causal ground, on Bool at one world: true (esse equal to essence) causes the esse of false, and false grounds true without causing its esse; the first source, existing-in-act, the concreteness bridge and no self-causation hold, while the ground bridge and 'the first source is an actual root' fail. (3) Absent source: as (2) with no grounding and true absent from the world; the concreteness bridge and the conclusion fail, every other input holds. (4) Self-ground: true grounds itself and causes its own esse; no self-causation and the conclusion fail, every other input holds. (5) Nonvacuity: true causes the esse of false and grounds it, both exist and are concrete, and the link is per se; every input of the root-interface and per se arguments holds and so do their conclusions, including at most one root and the unique actual root. Statements about these interpretations only, not evidence that a per accidens series of causes of being, a non-causal ground of a first source or an absent first source is possible or plausible."
+definitions = ["4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740", "8163859b-95b3-4dd2-8a69-541bd332f32f", "c57e2682-08e6-527e-950f-0fa0a7ff11ef", "9969dfc2-1f2e-50be-b5e6-1f9cd402c7a6", "DEF-ESSE"]
+
+[[argument]]
+id = "Unique actual CONCRETE_6 root, from root existence and De ente's at-most-one root"
+theorem = "uniqueActualRootFromDeEnte"
+premises = [
+  "56f68b40-9737-59a0-8cac-5610980a1547",
+  "5c898d24-d1f7-5087-b09e-3287a723e787",
+  "STMT-EXCLUDED-MIDDLE",
+  "0436de86-6579-53f2-9ff5-2111ba44ebae",
+  "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+  "Every actual distinct esse is caused by another being in act, mode of causing unspecified",
+  "At most one actual being has its esse identical with its essence",
+]
+conclusion = "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1"
+axioms = []
+rule = "WholeRosterFoundation.actualRootExists gives an actual root n from population, whole-roster nontrapping and excluded middle; atMostOneActualRootFromDeEnte identifies every actual root with n"
+meaning = "Interface 1 of #1635: the uniqueness half of the root-uniqueness interface 7ab0ddcb is supplied by De ente (the #1629 other-cause step 457698e4, existing-in-act 0436de86, the mode-unspecified esse-cause bridge cb1cdea9 and at most one actual being whose esse is its essence, through the #1628 theorem atMostOneActualRootFromDeEnte) in place of the genus principle and grades of ACTUAL-ROOT-UNIQUENESS (0edb19eb); existence comes from the same population and whole-roster inputs. No modal necessity, efficiency or God identification is used or concluded."
+
+[[argument]]
+id = "The De ente first source is an actual CONCRETE_6 root at w, from two converse bridges"
+theorem = "deEnteFirstSourceIsActualRoot"
+premises = [
+  "One being whose esse is its essence is a first cause of being of every other actual being",
+  "0436de86-6579-53f2-9ff5-2111ba44ebae",
+  "A being in act whose esse is its essence is CONCRETE_6 and exists at w",
+  "An actual CONCRETE_6 ground of a being whose esse is its essence is a CAUSE_2 of its esse",
+  "STMT-NOTHING-CAUSES-ITS-OWN-BEING",
+]
+conclusion = "The De ente first source of esse is an actual CONCRETE_6 root of the selected grounding at w"
+axioms = []
+rule = "The first source n is concrete and exists at w by the concreteness bridge; an actual concrete ground y of n causes n's esse by the ground bridge, is in act by existing-in-act and differs from n by no self-causation, so it would be an actual cause of n's esse, which n has none of"
+meaning = "Interface 2 of #1635, non-transcription conditional derivation: the De ente first source c35b1a5c (no actual cause of its esse, heading a chain of actual causes of being to every other being in act) is an actual concrete root of the selected grounding relation at w. The two OPEN bridges carry the passage between the world-free q.3 a.4 order of causes of being and the world-relative grounding order, each restricted to beings whose esse is their essence: such a being in act is concrete and exists at w, and an actual concrete ground of it causes its esse. Existing-in-act 0436de86 makes the ground in act, and no self-causation b62a64ab excludes a self-ground. NonCausalGroundControl, AbsentSourceControl and SelfGroundControl show that the ground bridge, the concreteness bridge and no self-causation are each needed. Given the source's uncausedness, existing-in-act and no self-causation, the ground bridge at the source is equivalent to the source having no actual concrete ground at w, so that bridge carries most of the weight of the rootness clause. The cause is not said to be efficient; necessity, uniqueness and God identification do not follow from this step."
+
+[[argument]]
+id = "Unique actual CONCRETE_6 root, from the De ente source as root and at most one root"
+theorem = "uniqueActualRootFromDeEnteSource"
+premises = [
+  "The De ente first source of esse is an actual CONCRETE_6 root of the selected grounding at w",
+  "Any two actual CONCRETE_6 roots of the selected grounding relation at w are the same",
+]
+conclusion = "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1"
+axioms = []
+rule = "The first source is an actual root; at most one actual root identifies every actual root with it"
+meaning = "A second De ente route into the root-uniqueness interface 7ab0ddcb, which does not use population 56f68b40 or whole-roster nontrapping 5c898d24: root existence comes from the De ente first source as an actual root (interface 2), and uniqueness from De ente's at most one actual root 49fdec01. The composition only pairs an existential with a uniqueness clause; its weight is in the two premises. No modal necessity, efficiency or God identification is used or concluded."
+
+[[argument]]
+id = "No infinite PER_SE_5 regress of actual causes of being, from no infinite regress"
+theorem = "perSeRegressOfUnrestricted"
+premises = ["There is no infinite descending chain of actual causes of being"]
+conclusion = "There is no infinite descending chain of PER_SE_5 actual causes of being"
+axioms = []
+rule = "A subrelation of a well-founded relation is well-founded"
+meaning = "Strength order (not a route step): the unrestricted regress premise fd12ad3d (well-foundedness of every actual cause of being) implies its per se version for every per se link, since per se actual causes of being are actual causes of being. Strictness: PerAccidensRegressControl satisfies the per se version while fd12ad3d fails; that witness uses an empty per se link, so how much weaker the per se version is depends on the intended meaning of the primitive AsCaused."
+
+[[argument]]
+id = "No infinite regress of actual causes of being, from the PER_SE_5 regress and bridge"
+theorem = "unrestrictedRegressFromPerSe"
+premises = [
+  "There is no infinite descending chain of PER_SE_5 actual causes of being",
+  "An actual cause of being that itself has an actual cause causes being PER_SE_5, as caused",
+]
+conclusion = "There is no infinite descending chain of actual causes of being"
+axioms = []
+rule = "Per se well-founded induction: an actual cause c of x that itself has an actual cause causes x per se by the bridge, so the induction hypothesis makes c accessible; an actual cause with no actual cause is accessible outright"
+meaning = "Non-transcription conditional derivation of the #1628 regress premise fd12ad3d from the weaker per se regress (an analyst analogue, for causes of esse of unspecified mode, of the per se regress that ST I q.46 a.2 ad 7 declares impossible for efficient causes) and the OPEN per se bridge: a caused actual cause of being causes being as caused, never per accidens. No matching restriction of the #1629 other-cause step is needed: the step and every argument consuming fd12ad3d stay as they are, and the restriction is carried by the bridge. PerAccidensRegressControl shows that the per se regress alone does not give fd12ad3d: an infinite per accidens chain of causes of being satisfies it and the other-cause step. The burden moves from the regress premise to the claim that no cause of esse is accidentally ordered; the cause is not said to be efficient, present or sustaining."
+
+[[argument]]
+id = "De ente root-interface controls"
+theorem = "rootInterfaceControls"
+premises = []
+conclusion = "De ente root-interface controls: per accidens, non-causal ground, absent, self-ground, nonvacuity"
+axioms = []
+rule = "Explicit finite and infinite interpretations, checked by case analysis and accessibility proofs"
+meaning = "Closed controls for the #1635 root interface and per se regress: the per se bridge (per accidens regress), the ground bridge (non-causal ground), the concreteness bridge (absent source), no self-causation (self-ground), and one interpretation satisfying every input and conclusion. They witness logical underdetermination under the encoded predicates only."
+
+[[relation]]
+id = "No infinite regress of actual causes of being strengthens its PER_SE_5 version"
+subject_kind = "statement"
+subject_id = "There is no infinite descending chain of actual causes of being"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "There is no infinite descending chain of PER_SE_5 actual causes of being"
+verification_result_id = "No infinite PER_SE_5 regress of actual causes of being, from no infinite regress"
+strictness_result_id = "De ente root-interface controls"
+note = "Same profile and the same supplied per se link; the per se version restricts well-foundedness to per se links. PerAccidensRegressControl witnesses that the converse fails."

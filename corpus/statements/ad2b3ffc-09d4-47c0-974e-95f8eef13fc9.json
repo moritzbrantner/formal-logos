@@ -1,0 +1,16 @@
+{
+  "id": "ad2b3ffc-09d4-47c0-974e-95f8eef13fc9",
+  "label": "A being in act whose esse is its essence is CONCRETE_6 and exists at w",
+  "paraphrase": "OPEN analyst bridge, attribution deferred: every being x in act as to being (InAct x esse of the shared q.3 a.4 profile) whose represented esse equals its essence is concrete and exists at the selected world w of the grounding profile (ActualConcrete m w x). It is the converse of the existing-in-act contract 0436de86, restricted to beings whose esse is their essence; the unrestricted converse (every being in act is concrete and exists at w) is stronger and is not stated. The q.3 a.4 profile is world-free, so this reads its actuality at w for such beings; since InAct does not depend on the world, accepting the bridge at every world rather than only at the selected w would make such a being exist at every world, a modal reading not asserted here. On the CONCRETE_6 reading of concreteness (having esse in re, InAct x esse) the concreteness half is close to definitional; the main content is existence at w. AbsentSourceControl satisfies every other input of the first-source-to-root argument without it.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.ActualEsseIsEssenceIsActualConcreteAt",
+  "definition_ids": [
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

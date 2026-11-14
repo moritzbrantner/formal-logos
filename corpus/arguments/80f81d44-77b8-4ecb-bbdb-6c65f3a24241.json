@@ -1,0 +1,22 @@
+{
+  "id": "80f81d44-77b8-4ecb-bbdb-6c65f3a24241",
+  "label": "No infinite PER_SE_5 regress of actual causes of being, from no infinite regress",
+  "premise_statement_ids": [
+    "fd12ad3d-6729-4fa0-bb87-0121260df684"
+  ],
+  "conclusion_statement_id": "ea251340-c89e-4535-a00f-6323cd8403a5",
+  "inference_ids": [
+    "f1dfc53b-0122-4e02-b4db-6473d0ab528b"
+  ],
+  "meaning": "Strength order (not a route step): the unrestricted regress premise fd12ad3d (well-foundedness of every actual cause of being) implies its per se version for every per se link, since per se actual causes of being are actual causes of being. Strictness: PerAccidensRegressControl satisfies the per se version while fd12ad3d fails; that witness uses an empty per se link, so how much weaker the per se version is depends on the intended meaning of the primitive AsCaused.",
+  "definition_ids": [
+    "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "002f42cb-3015-5644-80b3-d408538394e6"
+  ]
+}

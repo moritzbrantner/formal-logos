@@ -1,0 +1,11 @@
+{
+  "id": "ef632140-f6e2-4bb7-89ec-7ed20afe48f3",
+  "label": "Unique actual CONCRETE_6 root, from root existence and De ente's at-most-one root",
+  "argument_id": "3640542b-f970-4a3d-9a20-7795a84ea346",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.RootInterface.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.RootInterface.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.RootInterface.uniqueActualRootFromDeEnte",
+  "comparator_config": "results/ef632140-f6e2-4bb7-89ec-7ed20afe48f3/comparator.json",
+  "status": "solution-present",
+  "description": "Interface 1 of #1635: the uniqueness half of the root-uniqueness interface 7ab0ddcb is supplied by De ente (the #1629 other-cause step 457698e4, existing-in-act 0436de86, the mode-unspecified esse-cause bridge cb1cdea9 and at most one actual being whose esse is its essence, through the #1628 theorem atMostOneActualRootFromDeEnte) in place of the genus principle and grades of ACTUAL-ROOT-UNIQUENESS (0edb19eb); existence comes from the same population and whole-roster inputs. No modal necessity, efficiency or God identification is used or concluded."
+}

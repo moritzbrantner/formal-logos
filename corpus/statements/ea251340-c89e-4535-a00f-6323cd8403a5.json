@@ -1,0 +1,16 @@
+{
+  "id": "ea251340-c89e-4535-a00f-6323cd8403a5",
+  "label": "There is no infinite descending chain of PER_SE_5 actual causes of being",
+  "paraphrase": "OPEN analyst premise, attribution deferred: the relation 'c is an actual cause of the esse of x (ActualEsseCause, mode unspecified, tenseless) and causes it per se, as caused (the primitive per se link AsCaused)' is well-founded, for the supplied per se link. It is an analyst analogue, for causes of esse of unspecified mode, of the per se regress that ST I q.46 a.2 ad 7 declares impossible for efficient causes ('in causis efficientibus impossibile est procedere in infinitum per se'), while that passage allows an infinite per accidens series; ad 7 is not attributed this statement. It is weaker than the unrestricted regress premise fd12ad3d, which implies it for every per se link (strength order); PerAccidensRegressControl satisfies it while fd12ad3d fails. Its content depends on the intended meaning of the primitive AsCaused: with AsCaused everywhere true it coincides with fd12ad3d, and with AsCaused everywhere false it is trivial.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.NoInfinitePerSeActualEsseCauseRegress",
+  "definition_ids": [
+    "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "002f42cb-3015-5644-80b3-d408538394e6",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}
