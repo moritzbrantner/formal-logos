@@ -225,7 +225,7 @@ export type BuildInfo = {
   repositoryUrl: string;
 };
 
-const REPOSITORY_URL = "https://github.com/moritzbrantner/truth-core";
+const REPOSITORY_URL = "https://github.com/moritzbrantner/formal-logos";
 let cachedBuild: BuildInfo | null = null;
 
 function git(...args: string[]) {

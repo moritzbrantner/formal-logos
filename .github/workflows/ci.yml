@@ -235,7 +235,7 @@ jobs:
       - uses: ./.github/actions/explorer-browser
         with:
           github-pages: "true"
-          test-base-path: /truth-core
+          test-base-path: /formal-logos
 
   # One exact-head plan owns all heavyweight decisions. Main formal/corpus changes and
   # nightly/manual runs retain exhaustive verification. Unknown inputs/base run everything.

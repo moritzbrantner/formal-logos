@@ -5,7 +5,7 @@ inputs:
     description: '"true" builds under the GitHub Pages base path.'
     required: true
   test-base-path:
-    description: Base path the browser tests serve the export under ("" or /truth-core).
+    description: Base path the browser tests serve the export under ("" or /formal-logos).
     required: true
 runs:
   using: composite

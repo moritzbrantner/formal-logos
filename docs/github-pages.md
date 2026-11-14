@@ -19,7 +19,7 @@ The state, statement and result pages take every status from `truth frontier --j
 
 ## Setup
 
-The Pages build sets `GITHUB_PAGES=true`, which configures the app's `basePath` as `/truth-core` for the project-site URL. The root Turborepo build declares this variable as a hashed task input, so normal and Pages builds cannot restore each other's output. Local and ordinary CI builds keep the root base path.
+The Pages build sets `GITHUB_PAGES=true`, which configures the app's `basePath` as `/formal-logos` for the project-site URL. The root Turborepo build declares this variable as a hashed task input, so normal and Pages builds cannot restore each other's output. Local and ordinary CI builds keep the root base path.
 
 GitHub requires the repository's Pages publishing source to be set to **GitHub Actions** once in **Settings → Pages**. The normal `GITHUB_TOKEN` cannot enable Pages for a repository that has never had Pages enabled.
 
@@ -117,7 +117,7 @@ cycles, shared dependencies and transcription closure.
 
 ## Per-proposition research progress
 
-`/progress` (or `/truth-core/progress/` on Pages) searches proposition text,
+`/progress` (or `/formal-logos/progress/` on Pages) searches proposition text,
 argument labels/IDs and linked sense definitions. Its closure filter uses the
 canonical dossier establishment flag. Each match opens
 `/dossiers/<statement-uuid>#research-comparison`, also linked from statement pages.
@@ -139,7 +139,7 @@ Affected checks: `bun run --cwd apps/corpus-explorer typecheck`,
 `bun run --cwd apps/corpus-explorer build`, run
 `bun --cwd apps/corpus-explorer test tests/progress.browser.test.ts`.
 Repeat the build with `GITHUB_PAGES=true` and the browser check with
-`TEST_BASE_PATH=/truth-core` to exercise Pages links.
+`TEST_BASE_PATH=/formal-logos` to exercise Pages links.
 
 ### Recording a checked sense/rival comparison
 

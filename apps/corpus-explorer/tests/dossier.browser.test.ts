@@ -53,7 +53,7 @@ test("premise dossier: statement navigation, durable attempt evidence and route 
   await page.waitForURL((url) => url.pathname.endsWith(`/attempts/${attempt}/`));
   expect(await page.getByRole("region", { name: "Findings and limits", exact: true }).innerText()).toContain("Finite omission models");
   const evidence = page.getByRole("region", { name: "Evidence", exact: true });
-  expect(await evidence.getByRole("link", { name: "PR-374", exact: true }).getAttribute("href")).toBe("https://github.com/moritzbrantner/truth-core/pull/374");
+  expect(await evidence.getByRole("link", { name: "PR-374", exact: true }).getAttribute("href")).toBe("https://github.com/moritzbrantner/formal-logos/pull/374");
   expect(await evidence.getByRole("link", { name: label("result", "ACT-POTENCY-PREMISES-INDEPENDENT"), exact: true }).getAttribute("href")).toBe(`${basePath}/results/${uid("result", "ACT-POTENCY-PREMISES-INDEPENDENT")}/`);
   await page.getByRole("region", { name: "Related propositions", exact: true }).getByRole("link", { name: `${label("statement", "STMT-ACT-SIMPLY-PRIOR-TO-POTENCY")} · Dossier →`, exact: true }).click();
   await page.waitForURL((url) => url.pathname.endsWith(`/dossiers/${premise}/`) && url.hash === `#${attempt}`);

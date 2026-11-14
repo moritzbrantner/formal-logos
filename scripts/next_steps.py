@@ -241,7 +241,7 @@ def validate_settlement_actions(statement: dict) -> None:
             raise ValueError("settlement action must have kind floor or definition")
         if action.get("status") not in {"needs-owner-decision", "approved"} or not isinstance(action.get("description"), str) or not action["description"]:
             raise ValueError("settlement action needs a description and status needs-owner-decision or approved")
-        if action.get("status") == "approved" and not str(action.get("decision", "")).startswith("https://github.com/moritzbrantner/truth-core/"):
+        if action.get("status") == "approved" and not str(action.get("decision", "")).startswith(("https://github.com/moritzbrantner/truth-core/", "https://github.com/moritzbrantner/formal-logos/")):
             raise ValueError("approved settlement action needs a repository owner decision URL")
 
 

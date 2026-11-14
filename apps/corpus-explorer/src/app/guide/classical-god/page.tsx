@@ -127,7 +127,7 @@ export default function ClassicalGodGuide() {
       </dl>
       <p className={styles.countNote}>
         The {finalStep.premises.length} names include an upstream result, not {finalStep.premises.length} independently justified primitives.
-        The integration in <a href="https://github.com/moritzbrantner/truth-core/pull/917" target="_blank" rel="noreferrer">PR #917</a> discharged no philosophical premise.
+        The integration in <a href="https://github.com/moritzbrantner/formal-logos/pull/917" target="_blank" rel="noreferrer">PR #917</a> discharged no philosophical premise.
       </p>
     </header>
 
