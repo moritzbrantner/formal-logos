@@ -203,3 +203,321 @@ option and open coverage remain. The existing arbitrary coextension bridge
 still requires `AllActualitiesDue`; no generic is/ought result is repeated and
 no practical-authority bridge is supplied. Real warrant for due standards and
 for the idealization/correctness bridges remains the investigation's blocker.
+
+## Organism organization as a candidate due standard (2026-11-14)
+
+The proposed connection is stronger than assigning a primitive
+`SelfMaintaining` flag: a differentiated organization can supply a causal reason
+why a capacity is appropriate for this bearer, even when compensation masks its
+loss. This is a candidate interpretation of some biological `DueFor` judgments.
+It does not define the independent `GoodIn` relation or establish
+`DueActualityThesis`.
+
+### Reused work and the question left open
+
+The five seed dossiers were inspected at baseline `561ba7d5`. The existing
+`Vitalism.SoulUnityIndependence` result varies substantial unity and soul-as-form
+independently of a thin life/continuity signature. It therefore does not test
+whether a richer organization supplies evidence for unity, function or a due
+standard. `ArrangementDynamics` already supplies ordered intervention histories
+and the precise condition for a coarse description to preserve dynamics.
+`ProcessTurnover` permits changing material constituents with one assigned
+carrier, conditional on the explicit continuity requirement. Neither identifies
+which real object is the organism.
+
+The H6 investigation offers a positive hylomorphic account of nonheap unity;
+its recorded reading of *Metaphysics* VIII.6 does not identify every coordinated
+arrangement with a substance. See [the existing H6 note](aristotelian-unity-h6.md).
+The present question is narrower: can specifying how one bearer renews its
+different parts warrant a biological performance standard that survives actual
+failure and compensation? No existing result settles that question, and no
+duplicate independence theorem is introduced.
+
+### Source consultations and their limits
+
+These are consulted primary texts, not newly materialized corpus claims. The
+analyst mechanism below is distinct from the authors' proposals.
+
+| Source and inspected locator | Contribution used here |
+| --- | --- |
+| Mossio, Saborido and Moreno, [*An Organizational Account of Biological Functions*](https://www.ias-research.net/wp-content/uploads/2019/02/Mossio_25592036.pdf), 2009, §§4.1–6.3, pp. 822–834; §6.4, pp. 834–835 | Differentiated structures contribute to, and are produced or maintained by, the organization. Function, dysfunction and usefulness are distinguished relative to a regime and organizational class. Organizational and selected-effect accounts need not be equivalent. Individual maintenance alone leaves reproductive functions unresolved. |
+| Cummins, [*Functional Analysis*](https://home.csulb.edu/~cwallis/382/readings/690/Cummins/cummins.functional.analysis.pdf), 1975, §I, pp. 743–745, and §III, pp. 757–765 | Organized component capacities explain a system capacity. Redundancy and artificial support undermine identification of each functional bearer with an indispensable condition of actual survival. |
+| Neander, [*Functional analysis and the species design*](https://d-nb.info/1130785459/34), 2017, §§1–3 and §§5–7, especially pp. 1157–1163 | Proper functions can organize explanations of present mechanisms and defective variants. Historical selection need not be a currently operating cause to contribute to scientific explanation. This is a positive reply to the claim that selected effects explain only origin. |
+| Bird, [*Fundamental Powers, Evolved Powers, and Mental Powers*](https://kclpure.kcl.ac.uk/ws/files/95701041/Fundamental_Powers_Evolved_Powers_BIRD_Accepted8February2018_GREEN_AAM.pdf), 2018, accepted manuscript §3 and §4 through §4.1, pp. 7–12 | Selection for a role, together with its realization in different structures, can support treating an evolved capacity as explanatorily unified. Multiple realization alone is insufficient. The consultation did not cover the rest of §4. |
+| Barandiaran, [*Organizational Accounts of Malfunction: The Dual-Order Approach and the Normative Field Alternative*](https://publications.barandiaran.net/html/2026-organizational-accounts-of-malfunction-the-dual.html), online 2025, journal 2026, §§2–4.2 | Loss of viable performance can occur within a regime and before death. Requiring a failed regulatory transition misses some defects. This motivates distinguishing reserve, partial performance and controller delay below. |
+
+### Why the organization could matter to due status
+
+The explanatory proposal has three steps. First, identify a continuing bearer
+and the differentiated processes by which it renews its own constraints: a
+boundary preserves usable resources, catalytic structures replenish them, and
+those resources finance replacement of boundary and catalysts. A functional
+description then explains their reciprocal dependence instead of merely
+attaching an evaluator's favored label to an observed output.
+
+Second, use interventions and environmental challenges to distinguish the
+capacity of a part from its present output and from the survival of the whole.
+A failed part can coexist with a surviving bearer if another pathway takes
+over. Conversely, a capable part can be inactive because its output is not
+currently needed. A standard that calls both cases healthy merely because the
+bearer survives loses an explanatory distinction about its future responses.
+
+Third, the candidate normative step is that a capacity sustaining this
+bearer's characteristic, differentiated activity is an appropriate perfection
+of it, within the stated developmental and environmental scope. The mechanism
+gives that step a reason: losing the capacity removes a demonstrable way the
+bearer maintains itself across relevant conditions. It does not make the step
+true by definition. Which activities belong to the appropriate reference class,
+and why their support is a good for this bearer, still require defense. The
+next example makes the causal part inspectable and exposes that remaining
+choice.
+
+### Minimal mechanism: one bearer, renewal, reserve and compensation
+
+Fix one modeled bearer `o` throughout each history, without fission, fusion or
+a switch from an individual to its population. Track
+
+```
+state = (reserve, barrier, native_site, backup_site, recruited)
+reserve ∈ {0,1,2,3,4}; the other entries ∈ {0,1}
+```
+
+The environment supplies substrate and replacement material throughout. A
+separate input `help ∈ {0,1,2}` supplies usable support from outside this bearer;
+the bearer does not produce or maintain its source. Native capacity
+`cap ∈ {0,1,2}` and recruitment availability `regulator ∈ {0,1}` are fixed within
+a history. `drive ∈ {0,1}` distinguishes exercise from possession of native
+capacity. An intervention can remove `loss ∈ {0,2}` units of reserve. An emitted
+signal has no causal return path within this environmental scope.
+
+One step is:
+
+```
+inflow = cap * drive * native_site + 2 * recruited * backup_site + help
+drain = 2 + 2 * (1 - barrier)
+reserve' = min(4, max(0, reserve - loss + inflow - drain))
+rebuilt = 1 if reserve' > 0 else 0
+barrier' = native_site' = backup_site' = rebuilt
+recruited' = regulator * rebuilt * (1 if reserve' <= 2 else 0)
+```
+
+This is an analyst's finite structural surrogate, not a fitted biochemical
+model. Drain includes the stipulated cost of operation and renewal. Replacement
+requires positive remaining reserve; recruitment responds with a one-step
+delay. A defective native site can be rebuilt with the same deficient capacity,
+as the capacity parameter is held fixed. The state records role occupancy,
+while replacement tokens can carry distinct time indices. Thus the example
+does not preserve a timeless constituent set. Its assigned bearer identity is
+an input, not a conclusion about substantial unity; after collapse, tracking
+the record does not assert that a living organism remains.
+
+The roles differ within the equations: the barrier prevents
+leakage, the native and backup sites replenish reserve, and recruitment changes
+which pathway operates. Reserve in turn supports their renewal. This is the
+minimal causal content missing from a bare `SelfMaintaining` predicate. It is
+still a coarse description: applying `ArrangementDynamics` to a biological
+realization would require evidence that omitted microstates preserve these
+transitions.
+
+Starting at `(4,1,1,1,0)`, with no reserve loss, gives:
+
+| Case | Inputs differing from `cap=2, drive=1, regulator=1, help=0` | Reserve at times 0 through 5 | What the comparison discriminates |
+| --- | --- | --- | --- |
+| Normal native role | None | `4,4,4,4,4,4` | Native inflow meets maintenance demand. |
+| Uncompensated failure | `cap=0, regulator=0` | `4,2,0,0,0,0` | The loss has a causal consequence under a stated regime. |
+| Partial performance | `cap=1, regulator=0` | `4,3,2,1,0,0` | Deficit begins before collapse; binary survival misses its onset. |
+| Compensated failure | `cap=0` | `4,2,2,2,2,2` | Recruitment preserves this bearer despite lost native competence. |
+| External help | `cap=0, help=2` | `4,4,4,4,4,4` | Support restores reserve without restoring native competence. |
+| Healthy inactivity | `drive=0, help=2` | `4,4,4,4,4,4` | Zero native output does not entail lost native competence. |
+
+The last case and `cap=0, drive=0, help=2` have identical state traces. A native
+demand probe, setting `drive=1, help=0, regulator=0`, separates them. The relevant
+capacity is therefore a response disposition of the specified mechanism, not
+its currently observed output. No invisible normative variable is doing this
+work.
+
+Compensation also has limits that the equations expose. Starting with reserve
+2 and an unrecruited backup, `cap=0` collapses before recruitment can help.
+Starting with reserve 4, the compensated trace survives indefinitely without
+losses, but a loss of 2 at the third step gives `4,2,2,0,0,0`. The same shock
+with normal capacity gives `4,4,4,2,4,4`. More strongly, with normal capacity
+the set
+
+```
+{ (4,1,1,1,0), (2,1,1,1,1) }
+```
+
+is closed under either permitted loss at every step. Its four transition cases
+support an induction over arbitrary finite shock histories in this toy model.
+Native competence thus contributes to a specified robustness capacity even
+when it is unnecessary for undisturbed persistence. This supplies a positive
+reason for retaining its performance standard after compensation.
+
+Changing the incidental signal leaves every transition unchanged. Its current
+emission therefore supplies no maintenance role in this scope. If an observer
+uses it to adjust external support, the enlarged system has a new return path;
+the earlier conclusion does not survive that scope change automatically.
+Similarly, external help is useful to `o`, but its source is not one of `o`'s
+renewed structures. A broader organism–device or ecological system would be a
+different bearer and requires a new argument.
+
+### A biological discriminator already available
+
+The distinction between preserved growth, native competence and regulated
+inactivity is empirically tractable. Wakao et al., [*Discovery of
+photosynthesis genes through whole-genome sequencing of acetate-requiring
+mutants of Chlamydomonas reinhardtii*](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1009725),
+2021, the results for LPA3/PSBP4, Fig. 5 and the accompanying methods,
+report acetate-requiring `lpa3` mutants with reduced photosystem-II efficiency.
+Complementation restores the relevant growth/efficiency phenotype. Nutritional
+support and restoration of photosynthetic competence are therefore
+distinguishable outcomes. The reported growth comparison explicitly changes
+acetate and illumination conditions; it is not evidence that environment is
+irrelevant.
+
+The contrasting control is Heifetz et al., [*Effects of Acetate on Facultative
+Autotrophy in Chlamydomonas reinhardtii Assessed by Photosynthetic Measurements
+and Stable Isotope Analyses*](https://pmc.ncbi.nlm.nih.gov/articles/PMC58978/),
+2000, abstract and methods describing growth conditions. Under
+their specified acetate, light and carbon-dioxide conditions, the authors report
+reduced photosynthetic carbon fixation and oxygen evolution without reduced
+growth or photosystem-II efficiency. This supports a live alternative to
+“lower current output means damaged capacity.” Only the abstract and methods
+were consulted for this paper; no independent reanalysis of its measurements
+is claimed.
+
+These reports distinguish strain-level capacities and environmental responses;
+they do not follow one identical cell through all interventions or establish
+metaphysical persistence. Nor does acetate literally instantiate the toy's
+already usable reserve input: its use involves endogenous metabolism. The
+comparison tests the distinction, not the numerical recurrence. A relevant
+next experiment would retain a defined cell class and developmental stage,
+track the same bearer where practicable, and measure both challenged capacity
+and continued maintenance under support and its withdrawal.
+
+### Candidate interpretation of `DueFor`
+
+Fix the toy reference class `K`: mature, nonreproducing bearers with the three
+renewable sites, reserve bound, costs and renewal law above. Members can differ
+in native capacity and recruitment availability while retaining that
+architecture. Material and substrate supply are fixed. The environmental
+challenge family removes either 0 or 2 reserve units per step; supplied support
+is specified separately. No developmental transition is modeled.
+
+The native reference regime has `drive=1, help=0, regulator=0, loss=0`, with
+barrier and both sites present. Its broader regulation regime permits
+recruitment and the stated reserve challenges. These are two regimes of the
+same stipulated class; compensation is not permission to change the bearer or
+redefine its class after observing failure. A biological application needs its
+own independently characterized class and stage.
+
+Interpret the biological part of `form` as that class and its organization;
+interpret the relevant `endOf` as continued differentiated maintenance of this
+bearer across the stated challenges. Consider the perfection `native_capacity`
+whose possession means capacity 2. In the reference regime, inflow 2 exactly
+meets drain 2; capacity 1 or 0 depletes any positive reserve. In the regulation
+regime, capacity 2 also sustains the explicit shock invariant. The candidate
+`DueFor` judgment is that native competence belongs to the appropriate capacity
+standard for this organization in that scope. The threshold is calculated
+from the mechanism once the class and scope are fixed.
+
+For this candidate perfection, `Has` concerns actual possession of a capacity.
+It does not require present exercise. A separate perfection concerning current
+performance would need its own conditions; otherwise healthy inactivity would
+be mislabeled a defect. An aided defective bearer can accordingly lack this
+due capacity while possessing other due capacities and continuing to exist.
+No aggregate verdict that the bearer is wholly bad follows.
+
+This is a substantive proposal for interpreting a restricted part of an
+existing frame. It has not been installed as a Lean definition or attributed
+to an author. If `GoodIn` independently tracks the appropriate biological
+standard, `DueActualityThesis` identifies the corresponding due, possessed
+capacities as aspect goods. The mechanism does not independently prove that
+biconditional, settle property identity or show that every actuality is due.
+The existing `AllActualitiesDue` bridge to unrestricted actuality remains
+additional. The [natural-goodness/function-and-authority
+investigation](natural-goodness-function-and-authority.md) retains the separate
+work on human goods, rational regulation and categorical practical authority.
+
+### Strongest rivals and the consequence of this comparison
+
+| Account | Positive explanation it can give | Remaining discriminator |
+| --- | --- | --- |
+| Organizational | Reciprocal production and differentiated contribution explain why the capacity serves this continuing bearer. Regime-relative attribution retains a failed role through compensation; the shock test identifies a contribution beyond bare survival. | The organizational class must be warranted independently of whichever traits one already calls normal. A permanently reorganized, equally robust bearer raises the question whether the old native standard still applies. |
+| Evolutionary selected effect | Neander's reply lets proper function stabilize descriptions of coadapted systems and defective variants while contributing to explanations of present operation. The failed native capacity can retain a standard because of its selection history, including when external aid removes its present necessity. | A newly organized but never-selected capacity and a historically selected capacity now dispensable in every relevant regime can separate historical and present organizational criteria. Their real histories and current causal roles must be investigated; the toy stipulates neither history. |
+| Causal role | Cummins-style analysis can explain the entire reserve, renewal and compensation mechanism by organized subcapacities relative to the capacity under analysis. It need not identify function with an indispensable part or ignore counterfactual interventions. | That explanatory success does not alone establish that the selected system capacity is an appropriate good for this bearer. A causal-role account can leave that further evaluative question to another account without failing at its own task. |
+| Hylomorphic | The H6 proposal can treat differentiated activities as operations of one actual whole, with organization realizing its form and characteristic capacities. Turnover is compatible with that account rather than an objection to it. | The identity and intrinsic unity of the bearer, and the appropriateness of the end, need argument beyond the recurrence. A finite maintenance model establishes neither an irreducible soul nor its absence. |
+
+The positive organizational case improves on pure actual-success criteria:
+it explains why compensation does not erase every loss and why inactivity need
+not be dysfunction. The selected-effect reply survives and can complement it
+by stabilizing the reference class. Neither current organization nor historical
+selection wins merely because the other requires an applicability premise.
+Their potential disagreement is precise: whether due role persists when
+historical lineage and present organizational contribution come apart.
+
+In particular, the `SelectedFor` relation in the existing Papineau consumer
+formalization concerns etiological selection for a response. It is not supplied
+by a current replenishment loop. Bird's argument suggests a further connection
+to powers and laws in #743: selection can help explain why a capacity realized
+in different ways forms a scientifically useful unity. The toy recurrence
+alone establishes neither that historical premise nor the essential identity
+of a power. This connection is retained as an explanatory question, not a new
+bridge theorem.
+
+### Checkable slice, provisional judgment and next test
+
+The finite calculation was checked with Python, not certified by Lean. The
+check covered the six displayed trajectories; delayed compensation from reserve
+2; equal aided traces separated by the native demand probe; all four normal
+invariant transitions; the two shock trajectories; the reserve bound and
+signal-independence for all 5,760 encoded state/input pairs; and all twelve
+positive-reserve/native-capacity cases for the reference threshold. The core
+step is reproduced here so the calculations can be repeated without a new
+implementation dependency:
+
+```python
+def step(s, cap=2, drive=1, regulator=1, help_rate=0, loss=0, emission=0):
+    reserve, barrier, native, backup, recruited = s
+    inflow = cap * drive * native + 2 * recruited * backup + help_rate
+    drain = 2 + 2 * (1 - barrier)
+    r = min(4, max(0, reserve - loss + inflow - drain))
+    rebuilt = int(r > 0)
+    return r, rebuilt, rebuilt, rebuilt, regulator * rebuilt * int(r <= 2)
+```
+
+The useful formalizable slice would instantiate these finite states and inputs,
+reuse `ArrangementDynamics.run` for histories, and prove the invariant and the
+explicit failure/compensation traces. A faithful implementation would retain
+capacity, exercise, environmental support and bearer identity separately. It
+would not replace the causal equations with an opaque `Organized` assumption
+and then assume that organization entails the desired good. No such result is
+registered here; the existing toolchain was not ready for fresh certification.
+
+The provisional judgment is positive but scoped. Present organization can
+provide substantive, intervention-sensitive grounds for some biological
+good-for judgments. In the tested mechanism, native capacity preserves a
+robustness profile that compensation alone does not preserve, so its evaluation
+is more than a report of current survival. The biological reports support
+the practical distinction between restoring maintenance, restoring competence
+and regulating expression. They do not establish the complete `DueFor`
+interpretation or the general goodness thesis.
+
+The live blocker is independent warrant for the reference class, environmental
+challenge set and bearer. The next test should compare, within one specified
+class and stage, a supported defect, a reversible downregulation and a stable
+endogenous reorganization that performs equally well under the same challenges.
+If the reorganization retains the historical native role but removes every
+maintenance disadvantage of losing it, organization and selected effect may
+give different verdicts; if the relevant disadvantage remains, the organizational
+case gains empirical support. Capacity probes and causal interventions can
+resolve that issue without treating current output as the standard.
+
+This individual-maintenance scope also does not determine reproductive,
+lifespan or interpersonal goods. Expanding it requires an explicit end and
+bearer argument; a shift to lineage maintenance must not silently replace
+`o` by its descendants. Nothing in this investigation closes a root premise,
+establishes categorical authority, or chooses between physical realization and
+an irreducible substantial principle. Attempt
+`499b26da-d46b-48ac-826e-347eab2568cf` records the source consultation,
+discriminating mechanism, bounded checks and remaining test.
