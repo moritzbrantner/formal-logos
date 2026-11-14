@@ -1,0 +1,61 @@
+# #1633, remaining item 1: the no-component-first-being arguments e7b4c683 and
+# 358d8c6e apply "an efficient cause is prior to what it causes" (e078f07b)
+# with the mode-unspecified CausesIn as its cause relation. These siblings
+# carry the efficiency in a type: the participated component has an efficient
+# cause of its esse other than itself (fed by the efficient q.3 a.4 reading
+# 1ff08418), and e078f07b is instantiated with that efficient relation at the
+# esse respect. Existing routes are unchanged.
+
+[batch]
+vocab = "TruthCore.Causality.EsseCauseEfficiencyPriority"
+results = "TruthCore.Results.Causality.EsseCauseEfficiencyPriority"
+
+[[statement]]
+id = "Whatever has being by participation has an efficient cause of its esse other than itself"
+lean = "ParticipatedHasOtherEfficientEsseCause"
+paraphrase = "Analyst formulation, attribution deferred: for every x that has its being by participation, some c other than x (numerical distinctness only) is an efficient cause of x's esse (EfficientlyCausesEsse c x, the tenseless agent-cause primitive of the q.3 a.4 efficiency profile). The efficient sibling of STMT-PARTICIPATED-HAS-OTHER-CAUSE (2b25a78c), whose cause of being has no fixed mode; neither entails the other by definition, since an efficient cause of esse is not defined to stand in CausesIn. It does not say that c is in act, that c is the only cause, or anything about present sustaining or time."
+definitions = ["14d30c53-51c2-502d-b009-247dac0421e0", "8934912c-7997-4af7-9520-ec94ff221043", "DEF-ESSE"]
+
+[[statement]]
+id = "Efficient-priority controls: non-efficient participation and nonvacuity"
+lean = "EfficientPriorityControls"
+paraphrase = "Closed finite controls: there are interpretations over Bool such that (1) participated beings have distinct esse, the mode-unspecified q.3 a.4 conclusion STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE and the mode-unspecified participation premise STMT-PARTICIPATED-HAS-OTHER-CAUSE hold, the component-kinds premise, both act-priority premises (simple and at a first being) and non-overlap hold, and efficient-cause priority holds for the efficient relation at esse, while efficient-cause priority read over the mode-unspecified CausesIn fails, the efficient q.3 a.4 reading and the efficient participation premise fail, and some component is a first being; (2) some component exists, every input of the efficient sibling routes holds and no component is a first being. Only these conjuncts are certified; the witnesses built in the proof (not part of the type) are, in (1), false a participated component of true whose esse true causes non-efficiently, with nothing prior to anything, and in (2), the same with true an efficient cause of false's esse and prior to it. 'Non-efficient' is a label for an unconstrained primitive: (1) shows that the efficient sibling's participation premise is not supplied by the mode-unspecified route and that the existing reading step (priority over CausesIn) asks more than efficient-cause priority does, not that non-efficient causes of esse exist."
+definitions = ["14d30c53-51c2-502d-b009-247dac0421e0", "8934912c-7997-4af7-9520-ec94ff221043", "d8963cdd-0283-4b03-b006-6fb946a8c9e4", "DEF-Q3A4-ACTUAL-DISTINCT-ESSE", "DEF-CAUSE-OF-PERFECTION", "DEF-ESSE"]
+
+[[argument]]
+id = "Participated beings have an efficient esse-cause, from the efficient q.3 a.4 reading"
+theorem = "participatedEfficientCauseFromQ3A4"
+premises = [
+  "cbb068e8-337d-5772-a3f9-10df457ba9fe",
+  "1ff08418-e7a8-473f-9348-f2fe83b4d00e",
+]
+conclusion = "Whatever has being by participation has an efficient cause of its esse other than itself"
+axioms = []
+strong_version_needed = { "1ff08418-e7a8-473f-9348-f2fe83b4d00e" = "The conclusion is the efficiency of the participated being's cause; the weak version 33ad148b leaves the mode unspecified, and NonEfficientParticipationControl satisfies it while the conclusion fails." }
+rule = "Universal instantiation, modus ponens and conjunction elimination"
+meaning = "Efficient sibling of 4876dc46 and d3c6a6f7: whatever has being by participation actually exists with distinct esse (OPEN bridge cbb068e8), every actual distinct esse has an external efficient cause (1ff08418, itself resting on the OPEN efficiency bridge 58e6ec63), so whatever has being by participation has an efficient cause of its esse other than itself. Efficiency comes only from 1ff08418: in NonEfficientParticipationControl the mode-unspecified premises 33ad148b and 2b25a78c hold and the conclusion fails."
+
+[[argument]]
+id = "No component is the first being, from efficient esse-causes and first-being act priority"
+theorem = "noComponentFirstEfficientOfWeak"
+premises = [
+  "86f10ec3-3068-5066-8ba1-3c85baeb1a22",
+  "61ad11f3-476f-411d-9720-d9f05cbc22fc",
+  "c6d6379b-6a9b-55b5-a701-3df289dfcca4",
+  "Whatever has being by participation has an efficient cause of its esse other than itself",
+  "e078f07b-a4b8-595e-a3ee-02dd83474450",
+]
+conclusion = "09c6d5f0-d412-5038-85f9-75fffb935727"
+axioms = []
+rule = "Composition of the existing noComponentFirstOfWeak with the cause relation instantiated as the efficient cause of esse"
+meaning = "Sibling of 358d8c6e (act priority only at a first being) in which the participated component's other cause is an efficient cause of its esse and e078f07b is applied to that efficient relation at the esse respect only, rather than to the mode-unspecified CausesIn. Every other input is unchanged. The efficiency that 358d8c6e and e7b4c683 assume in a reading step is here a premise that can fail (NonEfficientParticipationControl). No sibling of e7b4c683 is registered: its inputs a4d3261a and 86f10ec3 use two POTENCY senses without a bridge (legacy allowlist), and a new argument may not inherit that. No premise is discharged."
+
+[[argument]]
+id = "Efficient-priority controls"
+theorem = "efficientPriorityControls"
+premises = []
+conclusion = "Efficient-priority controls: non-efficient participation and nonvacuity"
+axioms = []
+sense_mixing_control = true
+rule = "Explicit finite interpretations on Bool"
+meaning = "Closed controls for the efficient sibling routes to 09c6d5f0: one interpretation in which every mode-unspecified input of the existing routes and efficient-cause priority over the efficient relation hold, while priority over CausesIn, the efficient q.3 a.4 reading and the efficient participation premise fail and a component is first; one in which every input of the sibling routes and the conclusion hold. Logical independence under the encoded predicates only."

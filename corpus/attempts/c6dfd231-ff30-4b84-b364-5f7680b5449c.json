@@ -1,0 +1,22 @@
+{
+  "id": "c6dfd231-ff30-4b84-b364-5f7680b5449c",
+  "label": "Efficient priority at no-component-first-being: typed sibling of 358d8c6e",
+  "statement_ids": [
+    "09c6d5f0-d412-5038-85f9-75fffb935727",
+    "811c2e98-bd52-440b-8379-dd7534fc9c4d",
+    "2b25a78c-abad-50d9-abb9-31a753409192",
+    "e078f07b-a4b8-595e-a3ee-02dd83474450",
+    "1ff08418-e7a8-473f-9348-f2fe83b4d00e",
+    "cbb068e8-337d-5772-a3f9-10df457ba9fe"
+  ],
+  "date": "2026-11-14",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Issue #1633 remaining item 1. e7b4c683 and 358d8c6e instantiate e078f07b (EfficientCauseIsPriorToEffectReading, parametric in the cause relation) with the mode-unspecified CausesIn. Added the efficient participation premise 811c2e98 (ParticipatedHasOtherEfficientEsseCause), derived from cbb068e8 + 1ff08418 (result a2ae4358), and the sibling of 358d8c6e (result 6f9e94c6, noComponentFirstEfficientOfWeak) composing noComponentFirstOfWeak with the cause relation EfficientlyCausesEsseIn q (r = esse and EfficientlyCausesEsse). e078f07b is reused unchanged: its statement fixes no tense and states efficient-cause priority, which the efficient instantiation instantiates faithfully. Controls b7e3cc74: a non-efficient participation interpretation satisfies every mode-unspecified input and efficient priority while CausesIn priority, 1ff08418 and 811c2e98 fail and a component is first; nonvacuity. Rejected: a sibling of e7b4c683, whose inputs a4d3261a and 86f10ec3 mix two POTENCY senses without a bridge (legacy allowlist; a new argument would fail truth check). Frontier: support alternatives 486 -> 488, no bare premise added, open-premise counts unchanged. Note docs/notes/esse-cause-efficiency-1633.md (follow-up section).",
+  "evidence": [
+    "a2ae4358-867b-4b20-929a-e9a1f7f86a40",
+    "6f9e94c6-c486-4615-bf1c-859b49617183",
+    "b7e3cc74-1009-4157-8246-61cabb77bc9a"
+  ],
+  "blocker": "e7b4c683 keeps its untyped reading step (sense debt in its inputs). The efficiency of the sibling rests on the OPEN bridge 58e6ec63 / bare 0cc3a136; next tests are the non-constituent restriction, a specify-versus-actualize derivation and the tense bridge to the secunda via."
+}

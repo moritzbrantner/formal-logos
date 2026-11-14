@@ -231,15 +231,8 @@ a type.
 
 ## Next tests
 
-1. **Efficient priority at `09c6d5f0`.** The no-component-first-being
-   arguments `e7b4c683` and `358d8c6e` apply "an efficient cause is prior"
-   (`e078f07b`) to the mode-unspecified `CausesIn`. Build sibling arguments
-   that apply `e078f07b` to `EfficientlyCausesEsse` instead, fed by an
-   efficient sibling of `7561e216`/`2b25a78c` from `1ff08418`; then the
-   efficiency the route assumes is typed and rests visibly on the bridge.
-   Blocker: `e078f07b`'s declaration takes a respect-indexed relation, so
-   the efficient sibling needs `fun y x _ => EfficientlyCausesEsse y x` at
-   the esse respect, and the priority relation must be the same one.
+1. **Efficient priority at `09c6d5f0`.** Done in the follow-up slice below
+   for `358d8c6e`; `e7b4c683` keeps no sibling.
 2. **Non-constituent bridge.** Add a constituency relation to the profile
    (reuse `ComponentOf` vocabulary if its meaning matches), restrict
    `58e6ec63` to causes that are not constituents of x, and test whether the
@@ -278,3 +271,58 @@ structural rival is recorded as an unsupported suggestion. Not done: a
 certified-difference `strength_comparison` for the two registrations
 (optional; no non-degenerate delta was found for the efficient pair, since
 the restricted bridge is not equivalent to the difference).
+
+## Follow-up: efficient priority at `09c6d5f0`
+
+Formal home: `TruthCore/Causality/EsseCauseEfficiencyPriority.lean`, results
+in `TruthCore/Results/Causality/EsseCauseEfficiencyPriority/`, spec
+`specs/esse-cause-efficiency-priority-1633.toml`, attempt `c6dfd231`.
+
+**The gap.** `e7b4c683` and `358d8c6e` conclude `09c6d5f0` (no component is
+the first being) from, among others, `2b25a78c` (a participated being has a
+cause of its being other than itself, `CausesIn`, mode unspecified) and
+`e078f07b` ("an efficient cause is prior to what it causes"), whose Lean
+declaration `EfficientCauseIsPriorToEffectReading` takes the cause relation
+as a parameter; both arguments instantiate it with `CausesIn`. So they read
+every cause of being as efficient.
+
+**The sibling.**
+
+| Record | Content |
+|---|---|
+| `811c2e98` `ParticipatedHasOtherEfficientEsseCause` | whatever has being by participation has an efficient cause of its esse other than itself (`∃ c, c ≠ x ∧ EfficientlyCausesEsse c x`) |
+| `a2ae4358` `participatedEfficientCauseFromQ3A4` | `cbb068e8` (participated beings have distinct esse) + `1ff08418` (efficient q.3 a.4 reading) → `811c2e98`; `strong_version_needed` records why `33ad148b` does not suffice |
+| `6f9e94c6` `noComponentFirstEfficientOfWeak` | `86f10ec3`, `61ad11f3`, `c6d6379b`, `811c2e98`, `e078f07b` → `09c6d5f0`: sibling of `358d8c6e`, composing `noComponentFirstOfWeak` with the cause relation `EfficientlyCausesEsseIn q` (`r = esse ∧ EfficientlyCausesEsse c x`) |
+| `b7e3cc74` `efficientPriorityControls` | two finite interpretations |
+
+`e078f07b` is reused unchanged: its statement ("an efficient cause is prior
+(by nature, not in time) to what it causes") fixes no tense and links only
+DEF-SIMPLE-PRIORITY, so instantiating it with the tenseless efficient
+relation at esse is an instance of what it says, which the `CausesIn`
+instantiation was not. No sibling of `e7b4c683` is registered: its inputs
+`a4d3261a` and `86f10ec3` use two senses of POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED
+without a bridge (legacy allowlist), and a new argument may not inherit that.
+
+**Controls.** *Non-efficient participation*: participated distinct esse,
+`33ad148b`, `2b25a78c`, the component kinds, both act-priority premises,
+non-overlap and efficient priority at the efficient relation all hold, while
+priority over `CausesIn`, `1ff08418` and `811c2e98` fail and a component is
+first. So the sibling's participation premise is not supplied by the
+mode-unspecified route, and the existing reading step (priority over every
+cause of being) asks more than `e078f07b` says. *Nonvacuity*: every input of
+the sibling routes and the conclusion hold, with a component. The witnesses
+are labels for unconstrained primitives.
+
+**Effect.** The efficiency the route assumed in a reading step is now a
+typed premise chain: `09c6d5f0` ← `811c2e98` ← `1ff08418` ← `58e6ec63`
+(OPEN bridge) ← `0cc3a136` (bare) or the De ente / q.3 a.4 inputs.
+Computed `truth frontier-diff --base origin/main`: open premises reaching
+the root 489 → 489 (bare 348, supported 90, stated 51, unchanged); verified
+support alternatives 486 → 488 (`811c2e98` from `1ff08418` + `cbb068e8`;
+`09c6d5f0` from the efficient sibling); no bare premise added. The existing
+arguments are unchanged; the efficient route is an additional support option
+for `09c6d5f0` whose efficiency rests visibly on the OPEN bridge, not a
+discharge.
+
+**Remaining.** `e7b4c683`'s reading step stays untyped (sense debt above).
+Items 2–4 of the next tests are unchanged.
