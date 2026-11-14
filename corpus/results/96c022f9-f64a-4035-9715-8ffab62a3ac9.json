@@ -1,0 +1,11 @@
+{
+  "id": "96c022f9-f64a-4035-9715-8ffab62a3ac9",
+  "label": "De ente root-interface controls",
+  "argument_id": "e3b0682e-d5b7-4c06-a95b-60570af0cebc",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.RootInterface.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.RootInterface.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.RootInterface.rootInterfaceControls",
+  "comparator_config": "results/96c022f9-f64a-4035-9715-8ffab62a3ac9/comparator.json",
+  "status": "solution-present",
+  "description": "Closed controls for the #1635 root interface and per se regress: the per se bridge (per accidens regress), the ground bridge (non-causal ground), the concreteness bridge (absent source), no self-causation (self-ground), and one interpretation satisfying every input and conclusion. They witness logical underdetermination under the encoded predicates only."
+}

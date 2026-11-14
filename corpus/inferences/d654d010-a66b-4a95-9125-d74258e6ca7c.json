@@ -1,0 +1,16 @@
+{
+  "id": "d654d010-a66b-4a95-9125-d74258e6ca7c",
+  "label": "The De ente first source is an actual CONCRETE_6 root at w, from two converse bridges (inference)",
+  "input_statement_ids": [
+    "c35b1a5c-6405-449b-993b-8196b2457e08",
+    "0436de86-6579-53f2-9ff5-2111ba44ebae",
+    "ad2b3ffc-09d4-47c0-974e-95f8eef13fc9",
+    "17350d52-b320-4c45-bde9-40a911e6f19c",
+    "b62a64ab-ac11-569a-b8e8-de51a74b058f"
+  ],
+  "output_statement_id": "ce7edf53-afbb-4bca-84d6-b0e36b861148",
+  "rule": "The first source n is concrete and exists at w by the concreteness bridge; an actual concrete ground y of n causes n's esse by the ground bridge, is in act by existing-in-act and differs from n by no self-causation, so it would be an actual cause of n's esse, which n has none of",
+  "meaning": "Interface 2 of #1635, non-transcription conditional derivation: the De ente first source c35b1a5c (no actual cause of its esse, heading a chain of actual causes of being to every other being in act) is an actual concrete root of the selected grounding relation at w. The two OPEN bridges carry the passage between the world-free q.3 a.4 order of causes of being and the world-relative grounding order, each restricted to beings whose esse is their essence: such a being in act is concrete and exists at w, and an actual concrete ground of it causes its esse. Existing-in-act 0436de86 makes the ground in act, and no self-causation b62a64ab excludes a self-ground. NonCausalGroundControl, AbsentSourceControl and SelfGroundControl show that the ground bridge, the concreteness bridge and no self-causation are each needed. Given the source's uncausedness, existing-in-act and no self-causation, the ground bridge at the source is equivalent to the source having no actual concrete ground at w, so that bridge carries most of the weight of the rootness clause. The cause is not said to be efficient; necessity, uniqueness and God identification do not follow from this step.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

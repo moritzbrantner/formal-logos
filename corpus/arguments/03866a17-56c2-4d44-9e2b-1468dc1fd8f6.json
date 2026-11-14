@@ -1,0 +1,35 @@
+{
+  "id": "03866a17-56c2-4d44-9e2b-1468dc1fd8f6",
+  "label": "The De ente first source is an actual CONCRETE_6 root at w, from two converse bridges",
+  "premise_statement_ids": [
+    "c35b1a5c-6405-449b-993b-8196b2457e08",
+    "0436de86-6579-53f2-9ff5-2111ba44ebae",
+    "ad2b3ffc-09d4-47c0-974e-95f8eef13fc9",
+    "17350d52-b320-4c45-bde9-40a911e6f19c",
+    "b62a64ab-ac11-569a-b8e8-de51a74b058f"
+  ],
+  "conclusion_statement_id": "ce7edf53-afbb-4bca-84d6-b0e36b861148",
+  "inference_ids": [
+    "d654d010-a66b-4a95-9125-d74258e6ca7c"
+  ],
+  "meaning": "Interface 2 of #1635, non-transcription conditional derivation: the De ente first source c35b1a5c (no actual cause of its esse, heading a chain of actual causes of being to every other being in act) is an actual concrete root of the selected grounding relation at w. The two OPEN bridges carry the passage between the world-free q.3 a.4 order of causes of being and the world-relative grounding order, each restricted to beings whose esse is their essence: such a being in act is concrete and exists at w, and an actual concrete ground of it causes its esse. Existing-in-act 0436de86 makes the ground in act, and no self-causation b62a64ab excludes a self-ground. NonCausalGroundControl, AbsentSourceControl and SelfGroundControl show that the ground bridge, the concreteness bridge and no self-causation are each needed. Given the source's uncausedness, existing-in-act and no self-causation, the ground bridge at the source is equivalent to the source having no actual concrete ground at w, so that bridge carries most of the weight of the rootness clause. The cause is not said to be efficient; necessity, uniqueness and God identification do not follow from this step.",
+  "definition_ids": [
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "9969dfc2-1f2e-50be-b5e6-1f9cd402c7a6",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "fc6f0e12-470f-5717-8c5b-ece7a450fe59",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "57f80020-fa6f-5b69-be58-b4cf95b7226f"
+  ]
+}

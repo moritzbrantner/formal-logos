@@ -1,0 +1,12 @@
+{
+  "id": "ed411e36-a6fd-443b-8e50-83306954384f",
+  "label": "No infinite regress of actual causes of being strengthens its PER_SE_5 version",
+  "subject_kind": "statement",
+  "subject_id": "fd12ad3d-6729-4fa0-bb87-0121260df684",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "ea251340-c89e-4535-a00f-6323cd8403a5",
+  "verification_result_id": "3e7d77b1-8577-474a-b64c-d6ec1807796f",
+  "strictness_result_id": "96c022f9-f64a-4035-9715-8ffab62a3ac9",
+  "note": "Same profile and the same supplied per se link; the per se version restricts well-foundedness to per se links. PerAccidensRegressControl witnesses that the converse fails."
+}

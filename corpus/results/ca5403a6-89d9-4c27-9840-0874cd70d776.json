@@ -1,0 +1,11 @@
+{
+  "id": "ca5403a6-89d9-4c27-9840-0874cd70d776",
+  "label": "The De ente first source is an actual CONCRETE_6 root at w, from two converse bridges",
+  "argument_id": "03866a17-56c2-4d44-9e2b-1468dc1fd8f6",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.RootInterface.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.RootInterface.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.RootInterface.deEnteFirstSourceIsActualRoot",
+  "comparator_config": "results/ca5403a6-89d9-4c27-9840-0874cd70d776/comparator.json",
+  "status": "solution-present",
+  "description": "Interface 2 of #1635, non-transcription conditional derivation: the De ente first source c35b1a5c (no actual cause of its esse, heading a chain of actual causes of being to every other being in act) is an actual concrete root of the selected grounding relation at w. The two OPEN bridges carry the passage between the world-free q.3 a.4 order of causes of being and the world-relative grounding order, each restricted to beings whose esse is their essence: such a being in act is concrete and exists at w, and an actual concrete ground of it causes its esse. Existing-in-act 0436de86 makes the ground in act, and no self-causation b62a64ab excludes a self-ground. NonCausalGroundControl, AbsentSourceControl and SelfGroundControl show that the ground bridge, the concreteness bridge and no self-causation are each needed. Given the source's uncausedness, existing-in-act and no self-causation, the ground bridge at the source is equivalent to the source having no actual concrete ground at w, so that bridge carries most of the weight of the rootness clause. The cause is not said to be efficient; necessity, uniqueness and God identification do not follow from this step."
+}

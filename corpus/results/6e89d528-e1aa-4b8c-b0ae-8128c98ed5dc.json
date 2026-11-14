@@ -1,0 +1,11 @@
+{
+  "id": "6e89d528-e1aa-4b8c-b0ae-8128c98ed5dc",
+  "label": "Unique actual CONCRETE_6 root, from the De ente source as root and at most one root",
+  "argument_id": "05541bd2-67a8-4a33-bb4a-3ff1e639be43",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.RootInterface.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.RootInterface.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.RootInterface.uniqueActualRootFromDeEnteSource",
+  "comparator_config": "results/6e89d528-e1aa-4b8c-b0ae-8128c98ed5dc/comparator.json",
+  "status": "solution-present",
+  "description": "A second De ente route into the root-uniqueness interface 7ab0ddcb, which does not use population 56f68b40 or whole-roster nontrapping 5c898d24: root existence comes from the De ente first source as an actual root (interface 2), and uniqueness from De ente's at most one actual root 49fdec01. The composition only pairs an existential with a uniqueness clause; its weight is in the two premises. No modal necessity, efficiency or God identification is used or concluded."
+}

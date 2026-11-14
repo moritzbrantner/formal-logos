@@ -1,0 +1,16 @@
+{
+  "id": "e74de400-fa5c-4bfa-b233-d6ec6add2975",
+  "label": "An actual cause of being that itself has an actual cause causes being PER_SE_5, as caused",
+  "paraphrase": "OPEN analyst bridge, attribution deferred: for every actual cause c of the esse of x (ActualEsseCause, mode unspecified, tenseless), if c itself has an actual cause of its esse, then c causes the esse of x per se, as caused (AsCaused c x): among actual causes of being, a caused cause's being caused is never accidental to its causing being. It denies, for causes of esse, the per accidens order that ST I q.46 a.2 ad 7 allows for generators ('generat enim inquantum homo, et non inquantum est filius alterius hominis'); ad 7 does not state this bridge. Its warrant would come from reading a cause of esse as one on whose own continued being its causing depends (the cause-of-esse versus cause-of-becoming distinction), which the tenseless ActualEsseCause does not encode. PerAccidensRegressControl satisfies the per se regress and the other-cause step without it.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.CausedEsseCauseCausesAsCaused",
+  "definition_ids": [
+    "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "002f42cb-3015-5644-80b3-d408538394e6",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}
