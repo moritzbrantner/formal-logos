@@ -1,0 +1,18 @@
+{
+  "id": "65cc52b5-c2d6-4874-a11b-f244cbcbab64",
+  "label": "De ente esse-source controls",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "c776f5b5-482d-4220-9b6d-e3d1116bd073",
+  "inference_ids": [
+    "c8f41fb1-7505-4e5f-b1db-3f8fcbb06b44"
+  ],
+  "meaning": "Closed controls for the De ente esse-source route: the regress premise (infinite regress on Nat), the #1629 other-cause step (uncaused distinct esse), the shared-nature premise and at-most-one (two sources), and one interpretation satisfying every input and conclusion. They witness logical underdetermination under the encoded predicates only.",
+  "definition_ids": [
+    "2a19c5e4-6c0b-4733-a3dd-e207899b8547",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "0ea9feb8-1f92-5b11-aa74-2f2e567c6106",
+    "a67e6214-624d-54d1-81ff-442c09c5ea9d"
+  ]
+}

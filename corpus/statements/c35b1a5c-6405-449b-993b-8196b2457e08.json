@@ -1,0 +1,11 @@
+{
+  "id": "c35b1a5c-6405-449b-993b-8196b2457e08",
+  "label": "One being whose esse is its essence is a first cause of being of every other actual being",
+  "paraphrase": "Some n in act as to being, whose represented esse equals its essence, has no actual cause of its esse (no c with ActualEsseCause c n), and every other being x in act as to being descends from n through a finite chain of actual causes of being (Relation.TransGen of ActualEsseCause; mode of causing unspecified, tenseless). 'First cause' means exactly this: uncaused in that order and at the head of a chain to each other actual being. It is De ente c.3 [69874]'s 'aliqua res, quae sit causa essendi omnibus rebus, eo quod ipsa est esse tantum', read as first cause in the chain rather than direct cause. Not asserted: direct causation of every esse, present conservation, efficient causation, necessary existence, concreteness at a world, uniqueness among necessary beings, or God identification.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.CommonEsseIsEssenceSource",
+  "definition_ids": [
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

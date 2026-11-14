@@ -1,0 +1,11 @@
+{
+  "id": "2a19c5e4-6c0b-4733-a3dd-e207899b8547",
+  "label": "Multiplication of a nature: shared nature, added difference, reception in matter",
+  "term": "multiplication of a nature (Plurification: SharesNature, AddsDifference, InMatter)",
+  "definition": "Plurification gives three primitive predicates for the multiplication inventory of De ente c.3 [69874] (Baur/Koch numbering; Leonine c.4). SharesNature x y: x and y are candidates of one shared nature, so that their being two would be a multiplication (plurificatio) of it. AddsDifference x: some difference is added to x's nature, as a genus is multiplied into species by differentiae. InMatter x: x's nature (form) is received in matter, as a species is multiplied into individuals by different matters. The third mode, one instance absolute and another received, is expressed with the existing EsseReceivedIn (DEF-ESSE-RECEIVED-IN) applied to esse. The three predicates are constrained only by the readings that use them; no theory of genus, species, matter or individuation is built in, and SharesNature is not defined from essence equality.",
+  "basis": "sourced",
+  "claim_ids": [
+    "872032e9-24a5-4deb-b2c7-d61b957f5ba5"
+  ],
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.Plurification"
+}

@@ -232,3 +232,11 @@ into `33ad148b` were withdrawn; the frontier diff is now "no change". The
 existing q.3 a.4 route binds `33ad148b` to the same mode-unspecified Lean type;
 its efficiency also rests on interpretation, not on a type condition. That is
 recorded here as an existing gap, not repaired in this PR.
+
+## Follow-up (#1628)
+
+The step concluded here is consumed by the three-stage reconstruction in
+[de-ente-esse-source-1628.md](de-ente-esse-source-1628.md): at most one being
+whose esse is its essence, every distinct esse descending from one, and a
+root-purity sibling that makes `457698e4` reach the root without any
+efficiency claim.

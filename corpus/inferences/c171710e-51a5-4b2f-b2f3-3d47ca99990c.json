@@ -1,0 +1,18 @@
+{
+  "id": "c171710e-51a5-4b2f-b2f3-3d47ca99990c",
+  "label": "At most one actual being is its own esse, from De ente's multiplication inventory (inference)",
+  "input_statement_ids": [
+    "2495a71d-81b6-47b7-8394-b37d3308fcda",
+    "75b5b027-21f1-400a-8b21-775bb6d47983",
+    "f13d1cdd-6b9f-4d05-9919-312587ad835a",
+    "38ed105c-6103-4969-8246-a6a071cdbb18",
+    "6dfe01ab-e3f2-5a4c-b102-701c161f2cf7",
+    "7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2",
+    "14325c83-1c3f-5afb-b63f-52b0c2b2a326"
+  ],
+  "output_statement_id": "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+  "rule": "Two actual beings whose esse is their essence share a nature; neither has an added difference or matter; neither has received esse, since a received esse would be received in its essence, which is its esse, in receptive potency to itself; the inventory then makes them one",
+  "meaning": "Stage (b) of De ente c.3 [69874] (Baur/Koch; Leonine c.4), non-transcription conditional derivation on the q.3 a.4 profile: at most one being in act has its represented esse equal to its essence. The source supplies the multiplication inventory and the exclusion of an added difference and of matter; the third mode (one absolute, another received) is excluded through three existing open reception premises; the indispensable analyst premise is that two such beings would share one nature (the #697 individuation gap), which TwoSourcesControl omits. Only 'at most one' follows: no such being is said to exist.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

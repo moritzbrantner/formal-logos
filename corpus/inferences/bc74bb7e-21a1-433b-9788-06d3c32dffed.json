@@ -1,0 +1,14 @@
+{
+  "id": "bc74bb7e-21a1-433b-9788-06d3c32dffed",
+  "label": "Every distinct esse descends from one whose esse is its essence, from no regress (inference)",
+  "input_statement_ids": [
+    "457698e4-eb21-4561-ab32-eccbfb0a992e",
+    "fd12ad3d-6729-4fa0-bb87-0121260df684",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "3d01134d-0b03-4469-a81a-a18d6e179fa0",
+  "rule": "Well-founded induction on actual causes of being: a distinct esse has another actual cause; if that cause's esse is its essence it is the source, otherwise apply the induction hypothesis to it and extend the chain",
+  "meaning": "Stage (c) of De ente c.3 [69874] (Baur/Koch; Leonine c.4), non-transcription conditional derivation: the passage's reduction of what has esse from another to what does not (read as: to a being whose esse is its essence) is derived, not assumed, from the #1629 step 457698e4 (every actual distinct esse has another actual cause of being, mode unspecified) and the OPEN well-foundedness of actual causes of being ('alias iretur in infinitum in causis'), with excluded middle for the identity case split. InfiniteRegressControl and UncausedDistinctEsseControl show that each of the two substantive inputs is needed. The cause is not said to be efficient, present or direct; the source is not said to be unique, necessary, concrete or God.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

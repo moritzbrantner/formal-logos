@@ -1,0 +1,11 @@
+{
+  "id": "860eae63-c005-4efd-bdfd-69e3a061406a",
+  "label": "At most one actual being is its own esse, from De ente's multiplication inventory",
+  "argument_id": "07b1fac4-4769-4377-9d07-91ca8e0e2424",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.EsseSource.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.EsseSource.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.EsseSource.atMostOneEsseIsEssenceFromPlurification",
+  "comparator_config": "results/860eae63-c005-4efd-bdfd-69e3a061406a/comparator.json",
+  "status": "solution-present",
+  "description": "Stage (b) of De ente c.3 [69874] (Baur/Koch; Leonine c.4), non-transcription conditional derivation on the q.3 a.4 profile: at most one being in act has its represented esse equal to its essence. The source supplies the multiplication inventory and the exclusion of an added difference and of matter; the third mode (one absolute, another received) is excluded through three existing open reception premises; the indispensable analyst premise is that two such beings would share one nature (the #697 individuation gap), which TwoSourcesControl omits. Only 'at most one' follows: no such being is said to exist."
+}

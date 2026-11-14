@@ -1,0 +1,11 @@
+{
+  "id": "2495a71d-81b6-47b7-8394-b37d3308fcda",
+  "label": "Two actual beings sharing a nature are one unless a difference, matter or reception multiplies it",
+  "paraphrase": "For any two beings x and y in act as to being, each of whose represented esse equals its represented essence, that share a nature (SharesNature x y, so that their being two would be a multiplication of that nature): if no difference is added to the nature in either, neither has it received in matter, and neither has its esse received in some principle, then x and y are the same. Reading of De ente c.3 [69874] (Baur/Koch numbering; Leonine c.4), 'impossibile est, ut fiat plurificatio alicuius nisi per additionem alicuius differentiae ... vel per hoc quod forma recipitur in diversis materiis ... vel per hoc quod unum est absolutum et aliud in aliquo receptum', read only at the instance the passage applies it to: candidates whose nature is their esse, for which 'one absolute and another received in something' is the reception of esse. The general inventory over every nature is not encoded. The exhaustiveness of the three modes is the passage's assertion, not derived.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.PlurificationOnlyByThreeModesReading",
+  "definition_ids": [
+    "2a19c5e4-6c0b-4733-a3dd-e207899b8547",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

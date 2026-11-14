@@ -1,0 +1,11 @@
+{
+  "id": "5c904cf6-6d05-40bd-abaa-1a386c3ca6eb",
+  "label": "One being whose esse is its essence is first cause of all others, from De ente",
+  "argument_id": "5ab6cc2b-3997-4206-ab77-3b70e90f7867",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.EsseSource.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.EsseSource.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.EsseSource.commonEsseIsEssenceSource",
+  "comparator_config": "results/5c904cf6-6d05-40bd-abaa-1a386c3ca6eb/comparator.json",
+  "status": "solution-present",
+  "description": "Composition of De ente c.3 [69874]'s three stages on one profile and one witness: at most one actual being is its own esse (b); hence every actual being other than it has represented esse unequal to its represented essence (a real distinction only if equality of represented principles is read as real identity; derived from b as in the passage's order, not from the intellectus-essentiae argument); every distinct esse goes back to a being whose esse is its essence (c); so one and the same such n heads a finite chain of actual causes of being to every other actual being, and, by no infinite regress, has no actual cause of its own esse. TwoSourcesControl shows at-most-one is needed. Mode of causing unspecified; no direct causation of every esse, conservation, efficiency, necessity, concreteness at a world or God identification follows."
+}

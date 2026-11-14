@@ -1,0 +1,16 @@
+{
+  "id": "9183f6a3-97dc-4494-a0c8-604b68744352",
+  "label": "One being whose esse is its essence is first cause of all others, from De ente (inference)",
+  "input_statement_ids": [
+    "3d01134d-0b03-4469-a81a-a18d6e179fa0",
+    "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+    "33f3c4c5-ccd6-4e8e-9cfb-0b231bb0e38f",
+    "fd12ad3d-6729-4fa0-bb87-0121260df684",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "c35b1a5c-6405-449b-993b-8196b2457e08",
+  "rule": "Of two actual beings at most one has esse equal to essence, so one has distinct esse and a source n; every other actual being has distinct esse by at-most-one, so it has a source, which at-most-one identifies with n; an actual cause of n would close a cycle through n, which well-foundedness excludes",
+  "meaning": "Composition of De ente c.3 [69874]'s three stages on one profile and one witness: at most one actual being is its own esse (b); hence every actual being other than it has represented esse unequal to its represented essence (a real distinction only if equality of represented principles is read as real identity; derived from b as in the passage's order, not from the intellectus-essentiae argument); every distinct esse goes back to a being whose esse is its essence (c); so one and the same such n heads a finite chain of actual causes of being to every other actual being, and, by no infinite regress, has no actual cause of its own esse. TwoSourcesControl shows at-most-one is needed. Mode of causing unspecified; no direct causation of every esse, conservation, efficiency, necessity, concreteness at a world or God identification follows.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

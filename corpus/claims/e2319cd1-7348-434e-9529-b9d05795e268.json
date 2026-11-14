@@ -1,0 +1,13 @@
+{
+  "id": "e2319cd1-7348-434e-9529-b9d05795e268",
+  "label": "Aquinas, De ente Cap.3: subsistent esse is not received in matter",
+  "statement_id": "38ed105c-6103-4969-8246-a6a071cdbb18",
+  "source_id": "004fd39d-a45d-5624-b927-053cb0fd0fc9",
+  "locator": "cap.3 [69874]: et multo minus reciperet additionem materiae, quia iam esset esse non subsistens sed materiale",
+  "interpretation": "Baur/Koch c.3 (Leonine c.4). Much less would a thing that is esse alone receive the addition of matter, since then it would be not subsistent but material esse. Read as: the nature of a being whose represented esse equals its essence is not received in matter (not InMatter). As for the preceding sentence, 'esse tantum' is taken as exactly the identity of represented esse and essence, and its subsistence as a consequence of that identity, not a further condition.",
+  "attribution": "The passage states that a thing which is esse alone would much less receive the addition of matter, which is the premise (for beings whose represented esse equals their essence).",
+  "status": "formalized",
+  "definition_ids": [
+    "2a19c5e4-6c0b-4733-a3dd-e207899b8547"
+  ]
+}

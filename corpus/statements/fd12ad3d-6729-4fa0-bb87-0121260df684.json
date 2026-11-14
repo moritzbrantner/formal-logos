@@ -1,0 +1,11 @@
+{
+  "id": "fd12ad3d-6729-4fa0-bb87-0121260df684",
+  "label": "There is no infinite descending chain of actual causes of being",
+  "paraphrase": "OPEN analyst premise, attribution deferred: the relation 'c, in act as to being and other than x, is a cause of the esse of x, which is in act' (ActualEsseCause, CausesIn at esse, mode of causing unspecified, tenseless) is well-founded, so no infinite descending chain of actual causes of being exists. De ente c.3 [69874] presupposes a no-regress principle for some order of causes of esse in 'alias iretur in infinitum in causis', without arguing it or saying which order; this unrestricted version is the analyst's. It covers every cause of being, not only essentially ordered or simultaneous causes (Aquinas himself admits an infinite accidentally ordered series of causes, ST I q.46 a.2 ad 7, so the restriction matters), and says nothing about causes of coming to be. Rival: an infinite (or global/structural) order of derivative causes of being (#311/#750); InfiniteRegressControl satisfies the other-cause step with no source.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.NoInfiniteActualEsseCauseRegress",
+  "definition_ids": [
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

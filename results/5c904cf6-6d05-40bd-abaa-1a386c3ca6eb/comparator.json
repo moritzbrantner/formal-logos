@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.EsseSource.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.EsseSource.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Aquinas.DeEnte.EsseSource.commonEsseIsEssenceSource"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

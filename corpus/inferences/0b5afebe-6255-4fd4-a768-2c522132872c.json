@@ -1,0 +1,19 @@
+{
+  "id": "0b5afebe-6255-4fd4-a768-2c522132872c",
+  "label": "Actual CONCRETE_6 root determinations are pure, from De ente's other cause (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "0436de86-6579-53f2-9ff5-2111ba44ebae",
+    "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+    "457698e4-eb21-4561-ab32-eccbfb0a992e",
+    "86efed1a-f353-5b5d-9431-df7fc643ace1",
+    "363a528c-a22c-5a46-b1ef-64e39f8dba45",
+    "b35ce743-6870-5884-926f-60744d1a318b",
+    "c78c77da-91b0-5928-bd5f-ba670a6f3660"
+  ],
+  "output_statement_id": "3b39e0ba-eb4a-5708-90d0-c2706094d43c",
+  "rule": "For an actual root: esse equals essence from the other-cause step and the esse-cause bridge; it is first among the simply prior; so it is not composite, has no distinct esse and nothing distinct is prior to it, and the open bridge gives pure determinations",
+  "meaning": "Sibling of ROOT-PURITY-FROM-NO-LIMITATION (dcea77db) in which the #1629 step 457698e4 (another actual cause of being, mode unspecified) replaces the q.3 a.4 causal dichotomy be639b3f and the no-efficient-self-cause premise 61bd42e5, whose prose reads the cause as efficient. Every other input is unchanged. The step is used only to give each actual root esse equal to essence; no efficient cause is used or concluded.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

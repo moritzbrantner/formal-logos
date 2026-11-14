@@ -1,0 +1,33 @@
+{
+  "id": "07b1fac4-4769-4377-9d07-91ca8e0e2424",
+  "label": "At most one actual being is its own esse, from De ente's multiplication inventory",
+  "premise_statement_ids": [
+    "2495a71d-81b6-47b7-8394-b37d3308fcda",
+    "75b5b027-21f1-400a-8b21-775bb6d47983",
+    "f13d1cdd-6b9f-4d05-9919-312587ad835a",
+    "38ed105c-6103-4969-8246-a6a071cdbb18",
+    "6dfe01ab-e3f2-5a4c-b102-701c161f2cf7",
+    "7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2",
+    "14325c83-1c3f-5afb-b63f-52b0c2b2a326"
+  ],
+  "conclusion_statement_id": "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+  "inference_ids": [
+    "c171710e-51a5-4b2f-b2f3-3d47ca99990c"
+  ],
+  "meaning": "Stage (b) of De ente c.3 [69874] (Baur/Koch; Leonine c.4), non-transcription conditional derivation on the q.3 a.4 profile: at most one being in act has its represented esse equal to its essence. The source supplies the multiplication inventory and the exclusion of an added difference and of matter; the third mode (one absolute, another received) is excluded through three existing open reception premises; the indispensable analyst premise is that two such beings would share one nature (the #697 individuation gap), which TwoSourcesControl omits. Only 'at most one' follows: no such being is said to exist.",
+  "definition_ids": [
+    "2a19c5e4-6c0b-4733-a3dd-e207899b8547",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "a67e6214-624d-54d1-81ff-442c09c5ea9d"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "8bb31748-e20f-5266-ac39-c442faab6622"
+  ],
+  "strong_version_needed": {
+    "6dfe01ab-e3f2-5a4c-b102-701c161f2cf7": "Only its instances at beings whose esse equals their essence are used; the weak version b9316115 (IdentityScopedOwnEssence) is stated on the separate EsseReceptionDefinitionFork Frame, not on the q.3 a.4 profile with EsseReceivedIn used here, so the strong version is taken on this profile."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "71cd9b9f-4303-41e7-b83c-82a84a62f55a",
+  "label": "At most one actual CONCRETE_6 root, from De ente's other cause and one own esse (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "0436de86-6579-53f2-9ff5-2111ba44ebae",
+    "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+    "457698e4-eb21-4561-ab32-eccbfb0a992e",
+    "a576300f-4b01-45ae-902c-cfe3d0fbf2de"
+  ],
+  "output_statement_id": "49fdec01-cb92-48cf-90c5-9de7761121f2",
+  "rule": "Every actual root has esse equal to essence, since a distinct esse would have another actual cause of being, which the esse-cause bridge makes an actual concrete ground; at most one actual being has esse equal to essence, so any two actual roots are the same",
+  "meaning": "The uniqueness half of ACTUAL-ROOT-UNIQUENESS (0edb19eb), with its genus principle at being and fixed-esse grades replaced by De ente's stages: the #1629 step 457698e4 (another actual cause of being, mode unspecified; with existing-in-act 0436de86 and the mode-unspecified esse-cause bridge cb1cdea9 it gives every actual concrete root esse equal to essence) and at most one actual being whose esse is its essence. No root is said to exist; necessity and God identification do not follow; no efficient cause is used or concluded. Composing it with root existence into 7ab0ddcb is blocked by the legacy sense-index debt of 5c898d24 and 7ab0ddcb (both carry INTRINSIC_PRODUCTIVE_CONTRIBUTION_VERSUS_SOURCE_BACKED_1 and _2; their arguments are allowlisted, a new one is not).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

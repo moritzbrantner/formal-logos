@@ -1,0 +1,11 @@
+{
+  "id": "0807e653-f60b-42b3-bd74-0a427516e53b",
+  "label": "Every distinct esse descends from one whose esse is its essence, from no regress",
+  "argument_id": "6503fc58-1be8-4596-9ccc-98e22a513e88",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.EsseSource.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.EsseSource.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.EsseSource.distinctEsseHasEsseIsEssenceSource",
+  "comparator_config": "results/0807e653-f60b-42b3-bd74-0a427516e53b/comparator.json",
+  "status": "solution-present",
+  "description": "Stage (c) of De ente c.3 [69874] (Baur/Koch; Leonine c.4), non-transcription conditional derivation: the passage's reduction of what has esse from another to what does not (read as: to a being whose esse is its essence) is derived, not assumed, from the #1629 step 457698e4 (every actual distinct esse has another actual cause of being, mode unspecified) and the OPEN well-foundedness of actual causes of being ('alias iretur in infinitum in causis'), with excluded middle for the identity case split. InfiniteRegressControl and UncausedDistinctEsseControl show that each of the two substantive inputs is needed. The cause is not said to be efficient, present or direct; the source is not said to be unique, necessary, concrete or God."
+}
