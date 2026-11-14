@@ -54,6 +54,28 @@ service and Explorer consumers. Lean and the existing
 verifier retain proof authority. Neither Rust command writes a database or
 cache.
 
+## Adding a command
+
+Each subcommand is one module under `truth/src/cli/` (`status.rs`,
+`check.rs`, `frontier_diff.rs`, …) exporting a `COMMAND` (its name and `run`
+function); `truth/src/cli/mod.rs` lists them in `COMMANDS`, so a new command
+is one new file plus one registry line and a `HELP` line. The computation
+belongs in a library module under `truth/src/`; the CLI module only checks
+its options, loads the corpus (`cli::load`) and returns the JSON value and
+text that `cli::main` prints. `cli/args.rs` parses every option in one pass,
+in token order, so existing option errors keep their precedence; a command
+rejects the shared options it does not take with `Args::simple` or
+`Args::check_options`. A port of a Python command that runs `validate()`
+first (`bind-check`, `next`, the ID lists, …) calls `cli::validate_first`
+before its own work: it runs the full `check` validation and, on a broken
+corpus, fails as Python does, with the first `corpus error: …` and exit
+code 2. The commands ported so far do not call it.
+
+Parity tests live in `scripts/truth_parity/`, one module per command, with
+shared fixtures and the `ParityCase` base class in `common.py`; a new
+command adds its module there and imports its test classes in
+`scripts/verify_truth_cli.py`, the entry point CI runs.
+
 ## `check`
 
 `truth check [--json]` ports `python3 scripts/corpus.py check`: `validate()`

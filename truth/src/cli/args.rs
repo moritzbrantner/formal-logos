@@ -1,0 +1,278 @@
+//! The shared option parser and the option checks commands share.
+
+use super::{Failure, HELP, usage};
+use serde_json::json;
+use std::{ffi::OsString, path::PathBuf};
+use truth::{bridges, orphans, thickness};
+
+#[derive(Default)]
+pub struct BridgeArgs {
+    pub constants: Option<String>,
+    pub queue: Option<String>,
+    pub targets: Vec<String>,
+    pub limit: Option<usize>,
+    pub options: bridges::Options,
+}
+
+#[derive(Default)]
+pub struct FrontierArgs {
+    pub reaching_root: bool,
+    pub routes: bool,
+    pub base: Option<String>,
+    pub head: Option<String>,
+}
+
+#[derive(Default)]
+pub struct ResearchArgs {
+    pub flags: bool,
+    pub all: bool,
+    pub limit: Option<i64>,
+    pub related: Option<i64>,
+    pub frontier: Option<String>,
+}
+
+/// Every option of every command, parsed in one pass in token order.
+pub struct Args {
+    pub machine: bool,
+    pub root: PathBuf,
+    pub positional: Vec<String>,
+    pub bridge: BridgeArgs,
+    pub bridge_flags: bool,
+    pub queue: bool,
+    pub senses: bool,
+    pub group_by: Option<orphans::GroupBy>,
+    pub frontier_root: String,
+    pub frontier: FrontierArgs,
+    pub research: ResearchArgs,
+}
+
+/// The shared options a command accepts besides `--root` and `--json`;
+/// [`Args::check_options`] rejects the others, in the original order.
+#[derive(Clone, Copy, Default)]
+pub struct Accepts {
+    /// `--queue`
+    pub queue: bool,
+    /// `--frontier-root`
+    pub frontier_root: bool,
+    /// `--by` and `--senses`
+    pub orphans: bool,
+    /// `--reaching-root` and `--routes`
+    pub frontier: bool,
+    /// `--base` and `--head`
+    pub revisions: bool,
+}
+
+fn number(value: Option<&str>, flag: &str) -> Result<usize, Failure> {
+    value
+        .and_then(|value| value.parse().ok())
+        .filter(|&value: &usize| value > 0)
+        .ok_or_else(|| usage(format!("{flag} requires a positive integer")))
+}
+
+fn integer(value: Option<&str>, flag: &str) -> Result<i64, Failure> {
+    value
+        .and_then(|value| value.parse().ok())
+        .ok_or_else(|| usage(format!("{flag} requires an integer")))
+}
+
+/// Arguments stay OS-native so a non-UTF-8 `--root` path works; every other
+/// argument must be UTF-8 text and is otherwise a usage error.
+pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
+    let mut parsed = Args {
+        machine: args.iter().any(|arg| arg == "--json"),
+        root: PathBuf::from("."),
+        positional: Vec::new(),
+        bridge: BridgeArgs::default(),
+        bridge_flags: false,
+        queue: false,
+        senses: false,
+        group_by: None,
+        frontier_root: thickness::DEFAULT_ROOT.to_owned(),
+        frontier: FrontierArgs::default(),
+        research: ResearchArgs::default(),
+    };
+    let mut args = args.iter();
+    while let Some(arg) = args.next() {
+        let arg = arg.to_str().ok_or_else(|| {
+            (
+                2,
+                json!({"code":"usage", "message": "arguments other than the --root path must be UTF-8"}),
+            )
+        })?;
+        match arg {
+            "--json" => {}
+            "--queue" => parsed.queue = true,
+            "--senses" => parsed.senses = true,
+            "--by" => {
+                parsed.group_by = Some(
+                    args.next()
+                        .and_then(|value| value.to_str())
+                        .and_then(orphans::GroupBy::parse)
+                        .ok_or_else(|| usage("--by requires module or family"))?,
+                );
+            }
+            "--reaching-root" => parsed.frontier.reaching_root = true,
+            "--routes" => parsed.frontier.routes = true,
+            "--base" | "--head" => {
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .filter(|value| !value.is_empty())
+                    .ok_or_else(|| usage(format!("{arg} requires a revision")))?
+                    .to_owned();
+                if arg == "--base" {
+                    parsed.frontier.base = Some(value);
+                } else {
+                    parsed.frontier.head = Some(value);
+                }
+            }
+            "--frontier-root" => {
+                parsed.frontier_root = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .filter(|value| !value.is_empty())
+                    .ok_or_else(|| {
+                        (
+                            2,
+                            json!({"code":"usage", "message": "--frontier-root requires a statement ID"}),
+                        )
+                    })?
+                    .to_owned();
+            }
+            "--root" => {
+                parsed.root = args.next().map(PathBuf::from).ok_or_else(|| {
+                    (
+                        2,
+                        json!({"code":"usage", "message": "--root requires a path"}),
+                    )
+                })?;
+            }
+            "--all" => {
+                parsed.research.flags = true;
+                parsed.research.all = true;
+            }
+            "--limit" | "--related" | "--frontier-json" => {
+                parsed.research.flags = true;
+                let value = args.next().and_then(|value| value.to_str());
+                match arg {
+                    "--limit" => parsed.research.limit = Some(integer(value, arg)?),
+                    "--related" => parsed.research.related = Some(integer(value, arg)?),
+                    _ => {
+                        parsed.research.frontier = Some(
+                            value
+                                .ok_or_else(|| usage(format!("{arg} requires a UTF-8 path")))?
+                                .to_owned(),
+                        )
+                    }
+                }
+            }
+            "--constants" | "--queue-file" | "--target" | "--targets" | "--top" | "--pool" => {
+                parsed.bridge_flags = true;
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .map(str::to_owned);
+                let text = value
+                    .clone()
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?;
+                let bridge = &mut parsed.bridge;
+                match arg {
+                    "--constants" => bridge.constants = Some(text),
+                    "--queue-file" => bridge.queue = Some(text),
+                    "--target" => bridge.targets.push(text),
+                    "--targets" => bridge.limit = Some(number(value.as_deref(), arg)?),
+                    "--top" => bridge.options.top = number(value.as_deref(), arg)?,
+                    _ => bridge.options.pool = number(value.as_deref(), arg)?,
+                }
+            }
+            value if value.starts_with('-') => {
+                return Err((
+                    2,
+                    json!({"code":"usage", "message":format!("unknown option {value}")}),
+                ));
+            }
+            value => parsed.positional.push(value.to_owned()),
+        }
+    }
+    Ok(parsed)
+}
+
+impl Args {
+    /// Whether `--frontier-root` names a statement other than the default.
+    pub fn frontier_root_set(&self) -> bool {
+        self.frontier_root != thickness::DEFAULT_ROOT
+    }
+
+    /// Whether `--reaching-root`, `--routes`, `--base` or `--head` was given.
+    pub fn frontier_flags(&self) -> bool {
+        self.frontier.reaching_root
+            || self.frontier.routes
+            || self.frontier.base.is_some()
+            || self.frontier.head.is_some()
+    }
+
+    /// The `--all`, `--limit`, `--related` and `--frontier-json` error, raised
+    /// by every command except `related`, `dossier` and `context`.
+    pub fn reject_research(&self) -> Result<(), Failure> {
+        if self.research.flags {
+            return Err(usage(
+                "--all, --limit, --related and --frontier-json apply only to related, dossier and context",
+            ));
+        }
+        Ok(())
+    }
+
+    /// The error for a malformed command line (no command, an unknown
+    /// command, wrong operands or bridge options outside `bridges`): the
+    /// research-option error when one was given, otherwise the usage text.
+    pub fn shape_error(&self) -> Failure {
+        match self.reject_research() {
+            Err(failure) => failure,
+            Ok(()) => usage(HELP),
+        }
+    }
+
+    /// Rejects the shared options `accepts` leaves out, in the order and
+    /// with the messages the CLI has always used.
+    pub fn check_options(&self, accepts: Accepts) -> Result<(), Failure> {
+        if !accepts.queue && self.queue {
+            return Err(usage("--queue applies only to thickness"));
+        }
+        if !accepts.frontier_root && self.frontier_root_set() {
+            return Err(usage(
+                "--frontier-root applies only to thickness, frontier, frontier-diff, orphans, dossier and context",
+            ));
+        }
+        if !accepts.orphans && (self.senses || self.group_by.is_some()) {
+            return Err(usage("--by and --senses apply only to orphans"));
+        }
+        if self.senses && self.group_by.is_some() {
+            return Err(usage("--senses and --by are alternatives"));
+        }
+        if !accepts.frontier && (self.frontier.reaching_root || self.frontier.routes) {
+            return Err(usage("--reaching-root and --routes apply only to frontier"));
+        }
+        if !accepts.revisions && (self.frontier.base.is_some() || self.frontier.head.is_some()) {
+            return Err(usage("--base and --head apply only to frontier-diff"));
+        }
+        Ok(())
+    }
+
+    /// The common prologue of a command without research options: rejects
+    /// research options, then any operand count other than `operands` or a
+    /// bridge option (unless `bridge_options`), then the shared options
+    /// outside `accepts`.
+    pub fn simple(
+        &self,
+        operands: &[&str],
+        expected: usize,
+        bridge_options: bool,
+        accepts: Accepts,
+    ) -> Result<(), Failure> {
+        self.reject_research()?;
+        if operands.len() != expected || (self.bridge_flags && !bridge_options) {
+            return Err(usage(HELP));
+        }
+        self.check_options(accepts)
+    }
+}
