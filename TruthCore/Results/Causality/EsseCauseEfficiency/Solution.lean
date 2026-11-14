@@ -66,6 +66,13 @@ theorem distinctActualEsseCauseEfficientFromUnrestricted (q : EfficiencyProfile 
     DistinctActualEsseCauseIsEfficient q :=
   fun x _ y hne _ hCause => hAll y x hne hCause
 
+/-- The De ente step and the mode-unspecified q.3 a.4 conclusion are the same
+proposition on the same profile: each unfolds to "every actual distinct-esse
+x has some y other than x, in act as to being, that causes x's esse". -/
+theorem otherActualCauseIffExternalCause (p : Profile B P R) :
+    DistinctEsseHasOtherActualCause p ↔ DistinctEsseRequiresExternalCauseReading p :=
+  Iff.rfl
+
 /-- In the three control profiles, `true`'s esse is its essence, so only
 `false` is an actual distinct-esse being. -/
 private theorem onlyFalseDistinct (q : EfficiencyProfile Bool Bool Unit)

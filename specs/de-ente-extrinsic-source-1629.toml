@@ -47,7 +47,7 @@ disambiguations = ["87ac7ae0-4235-4d08-bdf6-bc367251c6bd"]
 [[statement]]
 id = "Every actual distinct esse is caused by another being in act, mode of causing unspecified"
 lean = "DistinctEsseHasOtherActualCause"
-paraphrase = "For every x that actually exists with esse distinct from its essence (DistinctEsseAt), some c other than x (c distinct from x only, not non-constituency) is in act as to being and causes x's esse (CausesIn c x esse, DEF-CAUSE-OF-PERFECTION, the tenseless cause of being). The mode of causing is not specified: this is not the claim that the cause is efficient, and it is kept apart from the efficiency-typed reading of STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE (#1633), which needs a further OPEN bridge. No conservation, present sustaining, world-indexed existence, concreteness or uniqueness is asserted."
+paraphrase = "For every x that actually exists with esse distinct from its essence (DistinctEsseAt), some c other than x (c distinct from x only, not non-constituency) is in act as to being and causes x's esse (CausesIn c x esse, DEF-CAUSE-OF-PERFECTION, the tenseless cause of being). The mode of causing is not specified: this is not the claim that the cause is efficient. It is the same proposition, on the same profile, as STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE, whose prose is mode-unspecified since #1633 (logically_equivalent_to); the efficient reading is a separate statement that needs a further OPEN bridge. No conservation, present sustaining, world-indexed existence, concreteness or uniqueness is asserted."
 definitions = ["DEF-Q3A4-ACTUAL-DISTINCT-ESSE", "DEF-CAUSE-OF-PERFECTION", "DEF-ESSE"]
 
 [[statement]]

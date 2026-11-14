@@ -2,7 +2,8 @@
   "challenge_module": "TruthCore.Results.Causality.EsseCauseEfficiency.Challenge",
   "solution_module": "TruthCore.Results.Causality.EsseCauseEfficiency.Solution",
   "theorem_names": [
-    "TruthCore.Results.Causality.EsseCauseEfficiency.esseCauseEfficiencyControls"
+    "TruthCore.Results.Causality.EsseCauseEfficiency.esseCauseEfficiencyControls",
+    "TruthCore.Results.Causality.EsseCauseEfficiency.otherActualCauseIffExternalCause"
   ],
   "permitted_axioms": [],
   "enable_nanoda": true

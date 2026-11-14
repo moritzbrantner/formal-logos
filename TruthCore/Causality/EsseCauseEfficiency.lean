@@ -88,15 +88,18 @@ def CausingAnothersEsseIsEfficient (q : EfficiencyProfile B P R) : Prop :=
 
 /-! ## Finite controls
 
-Interpretations on `Bool` (two beings, two principles, one respect). In each,
-`false` actually exists with esse distinct from its essence and `true` does
-not. They are statements about these interpretations only. -/
+Existence claims about interpretations on `Bool` (two beings, two principles,
+one respect) in which `false` actually exists with esse distinct from its
+essence. Each type certifies only the listed conjuncts; the descriptions of
+the particular witnesses below are of the interpretations built in the proofs,
+not part of the types. -/
 
-/-- Non-efficient cause: `true`, in act, causes `false`'s esse, but nothing is
-an efficient cause of anything. The q.3 a.4 dichotomy, no essential
-self-sufficiency, no self-causation, the actuality of causes of being, the
-q.3 a.4 mode-unspecified conclusion and the De ente conclusion all hold; both
-bridges and the efficient conclusion fail. -/
+/-- Non-efficient cause: some interpretation satisfies the q.3 a.4 dichotomy,
+no essential self-sufficiency, no self-causation, the actuality of causes of
+being, the q.3 a.4 mode-unspecified conclusion and the De ente conclusion,
+while both bridges and the efficient conclusion fail. (Witness in the proof:
+`true`, in act, causes `false`'s esse, and nothing is an efficient cause of
+anything.) -/
 def NonEfficientCauseControl : Prop :=
   ∃ q : EfficiencyProfile Bool Bool Unit,
     DistinctEsseAt q.toProfile false ∧
@@ -110,18 +113,20 @@ def NonEfficientCauseControl : Prop :=
     ¬ CausingAnothersEsseIsEfficient q ∧
     ¬ DistinctEsseRequiresExternalEfficientCause q
 
-/-- Restricted bridge without the unrestricted one: `true` efficiently causes
-`false`'s esse, and `false` causes `true`'s esse without being an efficient
-cause of it. `true`'s esse is its essence, so the restricted bridge does not
-apply to it. -/
+/-- Restricted bridge without the unrestricted one: some interpretation with an
+actual distinct-esse being satisfies the restricted bridge and falsifies the
+unrestricted one. (Witness in the proof: `true` efficiently causes `false`'s
+esse; `false` causes `true`'s esse without being an efficient cause of it;
+`true`'s esse is its essence, so the restricted bridge does not apply to it.) -/
 def RestrictedBridgeOnlyControl : Prop :=
   ∃ q : EfficiencyProfile Bool Bool Unit,
     DistinctEsseAt q.toProfile false ∧
     DistinctActualEsseCauseIsEfficient q ∧
     ¬ CausingAnothersEsseIsEfficient q
 
-/-- Nonvacuity: every input of the two efficient-cause derivations and both
-bridges hold, with an actual distinct-esse being and an efficient cause of it. -/
+/-- Nonvacuity: some interpretation with an actual distinct-esse being satisfies
+every input of the two efficient-cause derivations, both bridges and the
+efficient conclusion. -/
 def EfficientCauseNonvacuity : Prop :=
   ∃ q : EfficiencyProfile Bool Bool Unit,
     DistinctEsseAt q.toProfile false ∧

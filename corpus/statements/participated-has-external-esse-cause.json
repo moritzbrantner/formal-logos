@@ -2,7 +2,7 @@
   "id": "7561e216-900f-53f1-9e22-d74427758cd6",
   "label": "Becoming being-CAUSE_2: whatever has being by participation has another, actually existing being…",
   "legacy_id": "STMT-PARTICIPATED-HAS-EXTERNAL-ESSE-CAUSE",
-  "paraphrase": "BECOMING-BEING-CAUSE_2 (attribution deferred): whatever has being by participation has another, actually existing being that causes its esse (the q.3 a.4 external cause of esse, CausesIn at esse). The mode of causing is not fixed by the type; nothing downstream on this route needs it to be efficient (#1633).",
+  "paraphrase": "BECOMING-BEING-CAUSE_2 (attribution deferred): whatever has being by participation has another, actually existing being that causes its esse (the q.3 a.4 external cause of esse, CausesIn at esse). The mode of causing is not fixed by the type (#1633). Downstream, the no-component-first-being arguments e7b4c683 and 358d8c6e apply 'an efficient cause is prior to what it causes' (e078f07b) to the same mode-unspecified CausesIn; that reading step, not this statement, is where efficiency of the cause is assumed.",
   "lean_declaration": "TruthCore.Causality.TermSenseForks.ParticipatedHasExternalEsseCause",
   "definition_ids": [
     "196be87e-b944-5924-b791-87406fbe48f6",

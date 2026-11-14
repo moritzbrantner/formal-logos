@@ -53,6 +53,13 @@ theorem distinctActualEsseCauseEfficientFromUnrestricted (q : EfficiencyProfile 
     DistinctActualEsseCauseIsEfficient q := by
   sorry
 
+/-- The De ente step and the mode-unspecified q.3 a.4 conclusion are the same
+proposition on the same profile: each unfolds to "every actual distinct-esse
+x has some y other than x, in act as to being, that causes x's esse". -/
+theorem otherActualCauseIffExternalCause (p : Profile B P R) :
+    DistinctEsseHasOtherActualCause p ↔ DistinctEsseRequiresExternalCauseReading p := by
+  sorry
+
 /-- The three finite interpretations. Explicit proof terms. -/
 theorem esseCauseEfficiencyControls : EsseCauseEfficiencyControls := by
   sorry
