@@ -243,7 +243,9 @@ projection without rerunning proofs, with Python's equality (key order free,
 and the other Python inputs, as Python's does, until R3 retires them.
 `--recorded-exporters DIR` replays recorded `BindTypes.json`,
 `CheckStrength.json` and `PropositionStructure.json` without Lake or
-Comparator, for the parity harness only; it is never a verification.
+Comparator, for the parity harness only; it is never a verification, so it
+needs `TRUTH_PARITY_REPLAY=1` and refuses to write a bundle named
+`strength-comparisons.json`, the only path the explorer reads.
 
 CI, Pages, the explorer's `strength-inputs` script and its `--check-input`
 call run it; `corpus.py strength-comparisons` and `strength-report` stay until

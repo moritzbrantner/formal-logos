@@ -217,7 +217,8 @@ class TruthStrengthParity(ParityCase):
                                 capture_output=True, text=True, check=False)
         rust = subprocess.run([self.binary, "--root", str(root), *(["--json"] if machine else []), *args,
                                "--recorded-exporters", str(recorded)],
-                              capture_output=True, text=True, check=False)
+                              capture_output=True, text=True, check=False,
+                              env={**os.environ, "TRUTH_PARITY_REPLAY": "1"})
         return python, rust
 
     def assert_same(self, args, code=0, machine=False, **where):
@@ -393,6 +394,16 @@ class TruthStrengthParity(ParityCase):
         }.items():
             with self.subTest(name):
                 check(bundle, 2, mutate)
+        # Replay is gated and never writes the trusted presentation path.
+        for env, args in (({}, ["strength-comparisons"]),
+                          ({"TRUTH_PARITY_REPLAY": "1"}, ["strength-report"]),
+                          ({"TRUTH_PARITY_REPLAY": "1"}, ["strength-report", "--output",
+                                                          ".cache/sub/strength-comparisons.json"])):
+            replay = subprocess.run([self.binary, "--root", str(self.root), *args, "--recorded-exporters",
+                                     str(self.recorded)], capture_output=True, text=True, check=False,
+                                    env={**{k: v for k, v in os.environ.items() if k != "TRUTH_PARITY_REPLAY"}, **env})
+            self.assertEqual(replay.returncode, 2, replay.stderr)
+            self.assertFalse((self.root / ".cache" / "strength-comparisons.json").exists())
         python, rust = self.run_both(["strength-report", "--check-input", "--output", ".cache/absent.json"])
         self.assertEqual((python.returncode, rust.returncode, rust.stderr), (2, 2, python.stderr))
         link = self.root / ".cache" / "link.json"

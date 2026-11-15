@@ -77,11 +77,30 @@ fn context(
     Ok((root, corpus, aliases, data))
 }
 
-fn exporters(args: &Args) -> Exporters<'_> {
-    match &args.recorded_exporters {
-        Some(directory) => Exporters::Recorded(Path::new(directory)),
-        None => Exporters::Lean,
+/// The environment variable that must be `1` for `--recorded-exporters`.
+const REPLAY_GATE: &str = "TRUTH_PARITY_REPLAY";
+
+/// Lean, or the recorded exporter outputs of `--recorded-exporters`, which
+/// the parity harness alone may use: it needs `TRUTH_PARITY_REPLAY=1`, and a
+/// replayed bundle is never written to the trusted presentation path the
+/// explorer reads ([`strength::DEFAULT_OUTPUT`]), because replay runs
+/// neither Lake nor Comparator.
+fn exporters<'a>(args: &'a Args, output: Option<&Path>) -> Result<Exporters<'a>, Failure> {
+    let Some(directory) = &args.recorded_exporters else {
+        return Ok(Exporters::Lean);
+    };
+    if std::env::var(REPLAY_GATE).as_deref() != Ok("1") {
+        return Err(usage(format!(
+            "--recorded-exporters is a parity-test replay without Lean or Comparator; it needs {REPLAY_GATE}=1"
+        )));
     }
+    if output.and_then(Path::file_name) == Path::new(strength::DEFAULT_OUTPUT).file_name() {
+        return Err(usage(format!(
+            "a replayed bundle is not live-verified and may not be written as {}",
+            strength::DEFAULT_OUTPUT
+        )));
+    }
+    Ok(Exporters::Recorded(Path::new(directory)))
 }
 
 fn run_comparisons(args: &Args, operands: &[&str]) -> Output {
@@ -108,7 +127,7 @@ fn run_comparisons(args: &Args, operands: &[&str]) -> Output {
             .map(|relation| strength::projection(relation, &data, None, false))
             .collect::<Result<Vec<_>, _>>()
     } else {
-        strength::verify(&root, &corpus, &data, &selected, &exporters(args))
+        strength::verify(&root, &corpus, &data, &selected, &exporters(args, None)?)
     }
     .map_err(corpus_error)?;
     if args.machine {
@@ -147,7 +166,13 @@ fn run_report(args: &Args, operands: &[&str]) -> Output {
     let bundle = if check {
         strength::read_bundle(&root, &output, &data)
     } else {
-        strength::write_bundle(&root, &output, &corpus, &data, &exporters(args))
+        strength::write_bundle(
+            &root,
+            &output,
+            &corpus,
+            &data,
+            &exporters(args, Some(&output))?,
+        )
     }
     .map_err(corpus_error)?;
     if args.machine {
