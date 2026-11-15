@@ -219,8 +219,9 @@ skill `.agents/skills/proposition-reuse/SKILL.md` supplies the same entry point;
 it changes no global skill or agent configuration. No Git hook or proof gate is
 installed. Discovery is not run on every commit or every diagnostic request.
 
-For a more selective **cross-argument** investigation, `corpus.py
-bridge-experiments <RESULT-ID> --profile-module <LEAN-MODULE>` reads existing
+For a more selective **cross-argument** investigation, `target/release/truth
+bridge-experiments <RESULT-ID> --profile-module <LEAN-MODULE>` (or the Python
+`corpus.py bridge-experiments`) reads existing
 attempt blockers and exact direct Solution imports, preserving complete
 argument premise bundles in `--json`. It requires both result conclusions to
 be an explicit focus of the same attempt, excluding broad survey citations

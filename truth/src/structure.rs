@@ -118,7 +118,7 @@ impl Records {
         Ok(Records(kinds))
     }
 
-    fn of(&self, kind: &str) -> impl Iterator<Item = &Ordered> {
+    pub fn of(&self, kind: &str) -> impl Iterator<Item = &Ordered> {
         self.0
             .get(kind)
             .into_iter()
@@ -240,7 +240,7 @@ pub fn os_error(error: &std::io::Error, path: &Path) -> String {
 
 /// The entries directly in `directory` whose name ends with `suffix`
 /// (pathlib `glob("*<suffix>")`), sorted as Python sorts paths.
-fn glob(directory: &Path, suffix: &str) -> Vec<PathBuf> {
+pub(crate) fn glob(directory: &Path, suffix: &str) -> Vec<PathBuf> {
     let mut found: Vec<PathBuf> = fs::read_dir(directory)
         .into_iter()
         .flatten()
@@ -259,7 +259,7 @@ fn glob(directory: &Path, suffix: &str) -> Vec<PathBuf> {
 
 /// pathlib `rglob("*<suffix>")` (without following directory symlinks),
 /// sorted as Python sorts paths (component-wise).
-fn rglob(directory: &Path, suffix: &str) -> Vec<PathBuf> {
+pub(crate) fn rglob(directory: &Path, suffix: &str) -> Vec<PathBuf> {
     fn walk(directory: &Path, suffix: &str, found: &mut Vec<PathBuf>) {
         for entry in fs::read_dir(directory).into_iter().flatten().flatten() {
             let path = entry.path();
@@ -281,14 +281,14 @@ fn rglob(directory: &Path, suffix: &str) -> Vec<PathBuf> {
     found
 }
 
-fn relative(root: &Path, path: &Path) -> String {
+pub(crate) fn relative(root: &Path, path: &Path) -> String {
     path.strip_prefix(root)
         .unwrap_or(path)
         .display()
         .to_string()
 }
 
-fn digest(path: &Path) -> Result<String, String> {
+pub(crate) fn digest(path: &Path) -> Result<String, String> {
     fs::read(path)
         .map(|bytes| sha256_hex(&bytes))
         .map_err(|error| os_error(&error, path))
@@ -511,7 +511,7 @@ fn input_digest(request: &Ordered, inputs: &Ordered) -> String {
 }
 
 /// Python `repr()` of a JSON-loaded value, for a message.
-fn repr(value: &Ordered) -> String {
+pub(crate) fn repr(value: &Ordered) -> String {
     match value {
         Ordered::Null => "None".into(),
         Ordered::Bool(true) => "True".into(),
@@ -539,7 +539,7 @@ fn repr(value: &Ordered) -> String {
 
 /// Runs `program args` in `root`, killing its process tree after `timeout`
 /// (`subprocess.run(..., timeout=...)`); `Ok(None)` on a timeout.
-fn run_bounded(
+pub(crate) fn run_bounded(
     root: &Path,
     program: &str,
     args: &[String],
@@ -564,7 +564,7 @@ fn detail(finished: &Finished) -> &str {
 
 /// Python `run_extractor`, with `Ok(None)` for a timeout: Lake builds the
 /// modules (it owns freshness), then the exporter describes the request.
-fn run_extractor(
+pub(crate) fn run_extractor(
     root: &Path,
     request: &Ordered,
     extractor: &Extractor,

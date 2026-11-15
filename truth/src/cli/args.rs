@@ -200,9 +200,14 @@ pub struct Args {
     pub bind: BindArgs,
     pub structure: StructureArgs,
     pub proof: ProofArgs,
+    /// `--recorded-exporters DIR`: recorded Lean exporter outputs that
+    /// `strength-comparisons` and `strength-report` replay (parity only).
+    pub recorded_exporters: Option<String>,
     pub attribution: AttributionArgs,
     pub index: IndexArgs,
     pub brief: BriefArgs,
+    /// `--profile-module MODULE` (`bridge-experiments`)
+    pub profile_module: Option<String>,
 }
 
 /// The shared options a command accepts besides `--root` and `--json`;
@@ -261,9 +266,11 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         bind: BindArgs::default(),
         structure: StructureArgs::default(),
         proof: ProofArgs::default(),
+        recorded_exporters: None,
         attribution: AttributionArgs::default(),
         index: IndexArgs::default(),
         brief: BriefArgs::default(),
+        profile_module: None,
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -330,6 +337,14 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                     _ => structure.extractor_json = Some(value),
                 }
             }
+            "--recorded-exporters" => {
+                parsed.recorded_exporters = Some(
+                    args.next()
+                        .and_then(|value| value.to_str())
+                        .ok_or_else(|| usage(format!("{arg} requires a UTF-8 path")))?
+                        .to_owned(),
+                );
+            }
             "--routes" => parsed.frontier.routes = true,
             "--materialize" => {
                 parsed.attribution.flags = true;
@@ -366,6 +381,14 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                 } else {
                     parsed.brief.statement = Some(value);
                 }
+            }
+            "--profile-module" => {
+                parsed.profile_module = Some(
+                    args.next()
+                        .and_then(|value| value.to_str())
+                        .ok_or_else(|| usage("--profile-module requires a Lean module"))?
+                        .to_owned(),
+                );
             }
             "--strict" => parsed.proof.strict = true,
             "--review" => parsed.proof.review = true,
