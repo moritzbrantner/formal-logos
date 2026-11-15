@@ -18,6 +18,7 @@ use truth::{
 mod args;
 mod attribution_check;
 mod bind_check;
+mod bridge_experiments;
 mod bridges;
 mod check;
 mod configurations;
@@ -36,6 +37,7 @@ mod next_steps;
 mod orphans;
 mod related;
 mod research;
+mod senses;
 mod sort_lists;
 mod status;
 mod structure;
@@ -78,6 +80,9 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
              [--bind-json FILE] [--usage-json FILE]
        truth [--root PATH] [--json] lean-reuse --review [--usage-json FILE]
        truth [--root PATH] [--json] attribution-check --base REV [--materialize] [--max-chars N]
+       truth [--root PATH] [--json] senses (report [--write] | allowlist [--write] | ratchet --base REV)
+       truth [--root PATH] [--json] bridge-experiments RESULT --profile-module MODULE [--limit N]
+             [--frontier-root STATEMENT]
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
@@ -130,6 +135,8 @@ pub const COMMANDS: &[Command] = &[
     unused_premises::COMMAND,
     lean_reuse::COMMAND,
     attribution_check::COMMAND,
+    senses::COMMAND,
+    bridge_experiments::COMMAND,
 ];
 
 /// Parses `args` and runs the command it names.
@@ -158,6 +165,11 @@ pub fn run(args: &[OsString]) -> Output {
             Some(command) if args.attribution.flags && command.name != "attribution-check" => Err(
                 usage("--materialize and --max-chars apply only to attribution-check"),
             ),
+            Some(command)
+                if args.profile_module.is_some() && command.name != "bridge-experiments" =>
+            {
+                Err(usage("--profile-module applies only to bridge-experiments"))
+            }
             Some(command) => (command.run)(&args, operands),
             None => Err(args.shape_error()),
         },

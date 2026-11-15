@@ -9,6 +9,10 @@
 
 mod manifest;
 
+use crate::senses::{
+    SenseIndex, argument_term_senses, bridged, mixing_in, sense_index,
+    senses_without_distinct_declaration,
+};
 use crate::{Record, identity, thickness};
 use fancy_regex::Regex;
 use serde_json::{Map, Value};
@@ -3885,141 +3889,14 @@ fn validate_disambiguation_senses(path: &str, fields: &Obj, lean: &LeanText) -> 
     Ok(())
 }
 
-#[derive(Clone, PartialEq)]
-struct Sense {
-    id: String,
-    label: String,
-    definition_id: String,
-    term: String,
-}
-
-#[derive(Default)]
-struct SenseIndex {
-    by_id: HashMap<String, Sense>,
-    by_definition: HashMap<String, Vec<String>>,
-}
-
-fn sense_index(disambiguations: &[Record]) -> Res<SenseIndex> {
-    let mut index = SenseIndex::default();
-    let mut order: Vec<String> = Vec::new();
-    let mut term_definition: HashMap<(String, String), String> = HashMap::new();
-    for disambiguation in disambiguations {
-        let fields = &disambiguation.fields;
-        let senses = fields.get("senses").and_then(Value::as_array);
-        for sense in senses.into_iter().flatten() {
-            let field = |key| sense.get(key).and_then(Value::as_str).unwrap_or_default();
-            let entry = Sense {
-                id: field("id").to_owned(),
-                label: field("label").to_owned(),
-                definition_id: field("definition_id").to_owned(),
-                term: text(fields, "term_label").to_owned(),
-            };
-            let known = index.by_id.get(&entry.id);
-            if let Some(known) = known
-                && *known != entry
-            {
-                return Err(format!(
-                    "{}: sense {} is already {} ({}) of {}",
-                    disambiguation.path, entry.id, known.label, known.definition_id, known.term
-                ));
-            }
-            let key = (entry.term.clone(), entry.definition_id.clone());
-            let first = term_definition
-                .entry(key)
-                .or_insert_with(|| entry.id.clone());
-            if *first != entry.id {
-                return Err(format!(
-                    "{}: {} already has sense {first} under {}",
-                    disambiguation.path, entry.definition_id, entry.term
-                ));
-            }
-            if known.is_none() {
-                index
-                    .by_definition
-                    .entry(entry.definition_id.clone())
-                    .or_default()
-                    .push(entry.id.clone());
-                order.push(entry.id.clone());
-                index.by_id.insert(entry.id.clone(), entry);
-            }
-        }
-    }
-    let mut labels: HashMap<(&str, &str), &str> = HashMap::new();
-    for id in &order {
-        let entry = &index.by_id[id];
-        let first = labels
-            .entry((entry.term.as_str(), entry.label.as_str()))
-            .or_insert(entry.id.as_str());
-        if *first != entry.id {
-            return Err(format!(
-                "corpus/disambiguations: sense label {} names two senses",
-                entry.label
-            ));
-        }
-    }
-    Ok(index)
-}
-
-/// Python `argument_term_senses`: term label -> sense ids used.
-fn argument_term_senses(
-    argument: &Obj,
-    statements: &HashMap<&str, &Obj>,
-    index: &SenseIndex,
-) -> BTreeMap<String, BTreeSet<String>> {
-    let mut definitions: Vec<&str> = strings(argument, "definition_ids");
-    let ids = std::iter::once(text(argument, "conclusion_statement_id"))
-        .chain(strings(argument, "premise_statement_ids"))
-        .chain(strings(argument, "commitment_statement_ids"));
-    for sid in ids {
-        if let Some(statement) = statements.get(sid) {
-            definitions.extend(strings(statement, "definition_ids"));
-        }
-    }
-    let mut used: BTreeMap<String, BTreeSet<String>> = BTreeMap::new();
-    for definition in definitions {
-        for id in index.by_definition.get(definition).into_iter().flatten() {
-            let sense = &index.by_id[id];
-            used.entry(sense.term.clone())
-                .or_default()
-                .insert(sense.id.clone());
-        }
-    }
-    used
-}
-
-/// Python `bridged`: the bridges for `term` connect every sense it uses.
-fn bridged(term: &str, used: &BTreeSet<String>, bridges: &[Value]) -> bool {
-    let mut edges: HashMap<&str, Vec<&str>> = HashMap::new();
-    for bridge in bridges {
-        let end = |key| bridge.get(key).and_then(Value::as_str).unwrap_or_default();
-        if end("term") == term {
-            edges.entry(end("from")).or_default().push(end("to"));
-            edges.entry(end("to")).or_default().push(end("from"));
-        }
-    }
-    let Some(start) = used.iter().next() else {
-        return true;
-    };
-    let mut seen: HashSet<&str> = HashSet::from([start.as_str()]);
-    let mut frontier = vec![start.as_str()];
-    while let Some(node) = frontier.pop() {
-        for next in edges.get(node).into_iter().flatten() {
-            if seen.insert(next) {
-                frontier.push(next);
-            }
-        }
-    }
-    used.iter().all(|sense| seen.contains(sense.as_str()))
-}
-
 /// Python `load_sense_allowlist`: the legacy allowlists (#1233).
 #[derive(Default)]
-struct Allowlist {
+pub(crate) struct Allowlist {
     arguments: HashMap<String, HashMap<String, HashSet<String>>>,
     senses: HashSet<String>,
 }
 
-fn load_sense_allowlist(root: &Path) -> Res<Allowlist> {
+pub(crate) fn load_sense_allowlist(root: &Path) -> Res<Allowlist> {
     let path = root.join(SENSE_ALLOWLIST);
     if !path.exists() {
         return Ok(Allowlist::default());
@@ -4191,35 +4068,6 @@ fn validate_argument_sense_fields(
     Ok(())
 }
 
-/// Python `senses_without_distinct_declaration`: (path, sense) for every
-/// sense without a `lean_declaration` or sharing one within its record.
-fn senses_without_distinct_declaration(disambiguations: &[Record]) -> Vec<(&str, &Obj)> {
-    let mut missing = Vec::new();
-    for disambiguation in disambiguations {
-        let senses: Vec<&Obj> = disambiguation
-            .fields
-            .get("senses")
-            .and_then(Value::as_array)
-            .into_iter()
-            .flatten()
-            .filter_map(Value::as_object)
-            .collect();
-        let mut declared: HashMap<Option<&str>, usize> = HashMap::new();
-        for sense in &senses {
-            *declared
-                .entry(string(sense, "lean_declaration"))
-                .or_default() += 1;
-        }
-        for sense in senses {
-            let declaration = string(sense, "lean_declaration");
-            if declaration.is_none() || declared[&declaration] > 1 {
-                missing.push((disambiguation.path.as_str(), sense));
-            }
-        }
-    }
-    missing
-}
-
 /// Python `validate_sense_declarations`.
 fn validate_sense_declarations(disambiguations: &[Record], allowlist: &Allowlist) -> Res<()> {
     for (path, sense) in senses_without_distinct_declaration(disambiguations) {
@@ -4244,24 +4092,9 @@ fn sense_mixing_warnings(loaded: &Loaded) -> Vec<String> {
         return Vec::new();
     };
     let statements = ids_of(&loaded.statements);
-    let empty = Vec::new();
-    let (mut arguments, mut uses) = (HashSet::new(), 0);
-    for argument in &loaded.arguments {
-        let fields = &argument.fields;
-        if fields.get("sense_mixing_control") == Some(&Value::Bool(true)) {
-            continue;
-        }
-        let bridges = fields
-            .get("sense_bridges")
-            .and_then(Value::as_array)
-            .unwrap_or(&empty);
-        for (term, senses) in argument_term_senses(fields, &statements, &index) {
-            if senses.len() > 1 && !bridged(&term, &senses, bridges) {
-                arguments.insert(text(fields, "id"));
-                uses += 1;
-            }
-        }
-    }
+    let mixing = mixing_in(&loaded.arguments, &statements, &index);
+    let uses = mixing.len();
+    let arguments: HashSet<&str> = mixing.iter().map(|e| e.argument_id.as_str()).collect();
     let mut warnings = Vec::new();
     if !arguments.is_empty() {
         warnings.push(format!(

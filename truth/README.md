@@ -560,6 +560,39 @@ export (`--constants`) and either `--target ID` or a
 default 10). It is a search heuristic, not a proof or equivalence judgment;
 see `docs/bridge-candidates.md` for the pipeline and the optional Lean trial.
 
+## `bridge-experiments`
+
+`truth bridge-experiments RESULT --profile-module MODULE [--limit N]
+[--frontier-root STATEMENT]` ports `corpus.py bridge-experiments` (#953;
+`truth::bridge_experiments`, the port of `scripts/bridge_experiments.py`): the
+read-only discovery of recorded cross-argument joins where one result's
+Solution directly imports another's, both under the one named Lean profile
+module and both conclusions in the explicit focus of an attempt with an open
+blocker. Lean imports and import closures are the `context` pack's; the
+frontier is computed in-process. Python's `--root STATEMENT` is
+`--frontier-root`. Text is byte-identical, errors are Python's `corpus error:
+…` with exit code 2, and `--json` is Python's report plus `input_identity`;
+`scripts/truth_parity/bridge_experiments.py` compares both on the cases of
+`test_bridge_experiments.py` and on results the real corpus's attempts cite.
+It ranks what to read first; it proves, refutes and closes nothing.
+
+## `senses`
+
+`truth senses (report [--write] | allowlist [--write] | ratchet --base REV)`
+ports `scripts/sense_index.py report|allowlist|ratchet` (#1233): the arguments
+that use several senses of one disambiguated term without a connecting sense
+bridge, and the senses without a distinct Lean declaration (`truth::senses`,
+the same sense index `truth check` validates with). `report` prints (or
+writes) `docs/notes/sense-index-migration.md`; `--json` gives the mixing
+entries and undeclared senses. `allowlist` regenerates
+`corpus/sense-index-allowlist.json` with `--write` and otherwise fails when it
+is stale. `ratchet --base REV` lists the entries that are no longer needed and
+fails (exit 1) when the allowlist gained an entry since REV, arguments compared
+by the uuid their key resolves to; CI's sense-index step runs it. Text,
+stderr and exit codes are Python's byte for byte
+(`scripts/truth_parity/senses.py`, fixtures and the real corpus against
+several bases); `sense_index.py migrate` stays Python.
+
 ## `configurations`, `models`, `territory`
 
 These port the Lean-free parts of `corpus.py configurations`, `models` and
