@@ -833,17 +833,16 @@ pub fn scan(corpus: &Corpus, senses: &Senses, lexicon: &Lexicon) -> Vec<FieldSca
 // ---------------------------------------------------------------------------
 // The shrink-only allowlist.
 
-/// One allowlisted legacy prose field: its text hash and the untraced words
-/// and unlinked multi-sense lemmas it may keep while unchanged.
-#[derive(Clone, Debug, Default, PartialEq, Eq)]
-pub struct Allowed {
-    pub hash: String,
-    pub untraced: BTreeSet<String>,
-    pub unlinked: BTreeSet<String>,
-}
+/// The allowlist grandfathers whole fields (#1652 L1b): legacy prose field
+/// key (`kind/id/field`) -> the `fnv1a64` hash of its text when it was
+/// allowlisted. While the text is unchanged, every current finding in it
+/// (untraced words, unlinked senses, whatever the current lexicon makes of
+/// them) is legacy backlog; a new or changed field must be fully traced.
+pub type Allowlist = BTreeMap<String, String>;
 
-pub type Allowlist = BTreeMap<String, Allowed>;
-
+/// Reads the allowlist. Schema 2 maps a key to its hash; schema 1 (with
+/// per-field word lists) is read for its hashes, so the ratchet can compare
+/// against a base that still has it.
 pub fn parse_allowlist(source: &str) -> Result<Allowlist, String> {
     let value: Value = serde_json::from_str(source)
         .map_err(|error| format!("{ALLOWLIST}: invalid JSON: {error}"))?;
@@ -853,20 +852,14 @@ pub fn parse_allowlist(source: &str) -> Result<Allowlist, String> {
         .ok_or_else(|| format!("{ALLOWLIST}: must be an object with a fields object"))?;
     let mut allowlist = Allowlist::new();
     for (key, entry) in fields {
-        let entry = entry
-            .as_object()
-            .ok_or_else(|| format!("{ALLOWLIST}: {key} must be an object"))?;
-        let words = |field: &str| -> Result<BTreeSet<String>, String> {
-            Ok(string_list(entry, field, ALLOWLIST)?.into_iter().collect())
-        };
-        allowlist.insert(
-            key.clone(),
-            Allowed {
-                hash: text(entry, "hash").to_owned(),
-                untraced: words("untraced")?,
-                unlinked: words("unlinked")?,
-            },
-        );
+        let hash = match entry {
+            Value::String(hash) => Some(hash.as_str()),
+            Value::Object(entry) => entry.get("hash").and_then(Value::as_str),
+            _ => None,
+        }
+        .filter(|hash| hash.starts_with("fnv1a64:"))
+        .ok_or_else(|| format!("{ALLOWLIST}: {key} must map to an fnv1a64 hash"))?;
+        allowlist.insert(key.clone(), hash.to_owned());
     }
     Ok(allowlist)
 }
@@ -881,78 +874,51 @@ pub fn read_allowlist(root: &Path) -> Result<Option<Allowlist>, String> {
 
 /// The allowlist file: one field per line, sorted, so diffs show removals.
 pub fn render_allowlist(allowlist: &Allowlist) -> String {
-    let mut out = String::from("{\n  \"schema_version\": 1,\n  \"fields\": {");
+    let mut out = String::from("{\n  \"schema_version\": 2,\n  \"fields\": {");
     let mut first = true;
-    for (key, allowed) in allowlist {
+    for (key, hash) in allowlist {
         out.push_str(if first { "\n    " } else { ",\n    " });
         first = false;
-        out.push_str(&format!(
-            "{}: {{\"hash\": {}, \"untraced\": {}, \"unlinked\": {}}}",
-            json!(key),
-            json!(allowed.hash),
-            json!(allowed.untraced),
-            json!(allowed.unlinked)
-        ));
+        out.push_str(&format!("{}: {}", json!(key), json!(hash)));
     }
     out.push_str(if first { "}\n}\n" } else { "\n  }\n}\n" });
     out
 }
 
-/// The allowlist the current scan needs: every field with a violation. With
-/// `existing`, only what it already grants (same hash, intersected words):
-/// regeneration only shrinks.
-pub fn needed_allowlist(scans: &[FieldScan], existing: Option<&Allowlist>) -> Allowlist {
-    let mut out = Allowlist::new();
-    for scan in scans {
-        if scan.untraced.is_empty() && scan.unlinked.is_empty() {
-            continue;
-        }
-        let mut allowed = Allowed {
-            hash: scan.hash.clone(),
-            untraced: scan.untraced.clone(),
-            unlinked: scan.unlinked.clone(),
-        };
-        if let Some(existing) = existing {
-            let Some(granted) = existing.get(&scan.key()).filter(|g| g.hash == scan.hash) else {
-                continue;
-            };
-            allowed.untraced = &allowed.untraced & &granted.untraced;
-            allowed.unlinked = &allowed.unlinked & &granted.unlinked;
-            if allowed.untraced.is_empty() && allowed.unlinked.is_empty() {
-                continue;
-            }
-        }
-        out.insert(scan.key(), allowed);
-    }
-    out
+fn has_findings(scan: &FieldScan) -> bool {
+    !scan.untraced.is_empty() || !scan.unlinked.is_empty()
 }
 
-/// Entries of `head` that `base` does not grant: a new key, a changed hash or
-/// an added word. The allowlist may only shrink.
+/// Whether `allowlist` grandfathers this field: its key is listed with the
+/// field's current hash.
+pub fn grandfathered(allowlist: &Allowlist, scan: &FieldScan) -> bool {
+    allowlist.get(&scan.key()) == Some(&scan.hash)
+}
+
+/// The allowlist the current scan needs: every field with a finding. With
+/// `existing`, only its grandfathered fields that still have one:
+/// regeneration only shrinks.
+pub fn needed_allowlist(scans: &[FieldScan], existing: Option<&Allowlist>) -> Allowlist {
+    scans
+        .iter()
+        .filter(|scan| has_findings(scan))
+        .filter(|scan| existing.is_none_or(|existing| grandfathered(existing, scan)))
+        .map(|scan| (scan.key(), scan.hash.clone()))
+        .collect()
+}
+
+/// Entries of `head` that `base` does not grant: a new key or a changed
+/// hash. The allowlist may only shrink, field by field.
 pub fn ratchet(base: &Allowlist, head: &Allowlist) -> Vec<String> {
-    let mut grown = Vec::new();
-    for (key, allowed) in head {
-        let Some(before) = base.get(key) else {
-            grown.push(format!("{key}: new allowlist entry"));
-            continue;
-        };
-        if before.hash != allowed.hash {
-            grown.push(format!("{key}: allowlisted again after its prose changed"));
-            continue;
-        }
-        let words: Vec<&String> = allowed
-            .untraced
-            .difference(&before.untraced)
-            .chain(allowed.unlinked.difference(&before.unlinked))
-            .collect();
-        if !words.is_empty() {
-            grown.push(format!(
-                "{key}: words added: {}",
-                words.into_iter().cloned().collect::<Vec<_>>().join(", ")
-            ));
-        }
-    }
-    grown
+    head.iter()
+        .filter_map(|(key, hash)| match base.get(key) {
+            None => Some(format!("{key}: new allowlist entry")),
+            Some(before) if before != hash => {
+                Some(format!("{key}: allowlisted again after its prose changed"))
+            }
+            Some(_) => None,
+        })
+        .collect()
 }
 
 // ---------------------------------------------------------------------------
@@ -1048,20 +1014,16 @@ pub fn load(root: &Path) -> Result<Option<Loaded>, String> {
     }))
 }
 
-/// The new violations of `scans` that `allowlist` does not grant.
+/// The findings of new or changed fields (not grandfathered by
+/// `allowlist`), one line per field and rule.
 pub fn violations(scans: &[FieldScan], allowlist: &Allowlist) -> Vec<String> {
     let mut errors = Vec::new();
     for scan in scans {
-        if scan.untraced.is_empty() && scan.unlinked.is_empty() {
+        if !has_findings(scan) || grandfathered(allowlist, scan) {
             continue;
         }
-        let granted = allowlist.get(&scan.key()).filter(|g| g.hash == scan.hash);
-        let empty = BTreeSet::new();
-        let (untraced, unlinked) = granted
-            .map(|g| (&g.untraced, &g.unlinked))
-            .unwrap_or((&empty, &empty));
-        let words: Vec<&String> = scan.untraced.difference(untraced).collect();
-        let lemmas: Vec<&String> = scan.unlinked.difference(unlinked).collect();
+        let words: Vec<&String> = scan.untraced.iter().collect();
+        let lemmas: Vec<&String> = scan.unlinked.iter().collect();
         if !words.is_empty() {
             errors.push(format!(
                 "{}: {}: {} untraced word{}: {} (add lexicon entries or forms; docs/lexicon.md)",
@@ -1120,10 +1082,7 @@ pub fn check(root: &Path) -> Result<Option<Report>, String> {
         return Err(message);
     }
     let needed = needed_allowlist(&loaded.scans, Some(&allowlist));
-    let removable = allowlist
-        .iter()
-        .filter(|(key, allowed)| needed.get(*key) != Some(allowed))
-        .count();
+    let removable = allowlist.len() - needed.len();
     let mut report = Report {
         entries: loaded.lexicon.entries.len(),
         fields: loaded.scans.len(),
@@ -1135,10 +1094,14 @@ pub fn check(root: &Path) -> Result<Option<Report>, String> {
         ..Report::default()
     };
     (report.tokens_traced, report.tokens) = token_counts(&loaded.scans);
-    for allowed in needed.values() {
+    for scan in loaded
+        .scans
+        .iter()
+        .filter(|scan| needed.contains_key(&scan.key()))
+    {
         report.backlog_fields += 1;
-        report.backlog_untraced += allowed.untraced.len();
-        report.backlog_unlinked += allowed.unlinked.len();
+        report.backlog_untraced += scan.untraced.len();
+        report.backlog_unlinked += scan.unlinked.len();
     }
     Ok(Some(report))
 }

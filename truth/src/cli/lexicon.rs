@@ -159,7 +159,9 @@ fn run(args: &Args, operands: &[&str]) -> Output {
             let existing = lexicon::read_allowlist(&args.root).map_err(error)?;
             let needed = lexicon::needed_allowlist(&loaded.scans, existing.as_ref());
             let rendered = lexicon::render_allowlist(&needed);
-            let changed = existing.as_ref() != Some(&needed);
+            // Compare the bytes, so a schema-1 file is rewritten as schema 2.
+            let changed = fs::read_to_string(args.root.join(lexicon::ALLOWLIST)).ok()
+                != Some(rendered.clone());
             if args.write && changed {
                 fs::write(args.root.join(lexicon::ALLOWLIST), &rendered)
                     .map_err(|e| error(e.to_string()))?;
