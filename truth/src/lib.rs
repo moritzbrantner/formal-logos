@@ -9,6 +9,7 @@ pub mod dossier;
 pub mod finite_models;
 pub mod frontier;
 pub mod identity;
+pub mod inversion;
 pub mod issues;
 mod kernels;
 pub mod lean_reuse;

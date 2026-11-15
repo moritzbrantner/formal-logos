@@ -117,13 +117,15 @@ pub struct AttributionArgs {
     pub max_chars: Option<i64>,
 }
 
-/// The `tree` options: `--down N`, `--up N` (0 allowed) and `--budget N`.
+/// The `tree` options: `--down N`, `--up N` (0 allowed), `--budget N` and
+/// `--materialize-edge KEY`.
 #[derive(Default)]
 pub struct TreeArgs {
     pub flags: bool,
     pub down: Option<usize>,
     pub up: Option<usize>,
     pub budget: Option<usize>,
+    pub materialize_edge: Option<String>,
 }
 
 #[derive(Default)]
@@ -326,6 +328,15 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                 parsed.attribution.flags = true;
                 parsed.attribution.max_chars =
                     Some(integer(args.next().and_then(|value| value.to_str()), arg)?);
+            }
+            "--materialize-edge" => {
+                parsed.tree.flags = true;
+                parsed.tree.materialize_edge = Some(
+                    args.next()
+                        .and_then(|value| value.to_str())
+                        .ok_or_else(|| usage("--materialize-edge requires an edge key"))?
+                        .to_owned(),
+                );
             }
             "--down" | "--up" | "--budget" => {
                 parsed.tree.flags = true;
