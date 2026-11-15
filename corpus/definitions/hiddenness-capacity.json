@@ -14,7 +14,7 @@
       "An adult of ordinary cognitive development, at a time when that development is present."
     ],
     "exclusions": [
-      "Holding the belief or being in the relationship (Believes, Available).",
+      "Holding the belief (Believes) or having immediate access to the relationship just by trying (Available); access is itself not being in the relationship, since access can hold while Accepts fails.",
       "Having the concept of a personal God (HasConcept), a separate predicate.",
       "An infant, or a person at a time when the capacity is absent: not all humans at all times are assumed capable."
     ],

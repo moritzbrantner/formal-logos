@@ -10,7 +10,7 @@
   "formal_gap": {
     "kind": "primitive",
     "meaning": "Sig.GoodReason w p t says that, at world w, there is a genuinely sufficient reason, compatible with perfect love, for delaying p's immediate conscious access at time t. It is a field of the hiddenness signature (TruthCore.Hiddenness.Vocabulary.Sig, #252), indexed by world, person and time and supplied by each interpretation; worlds carry no modal accessibility laws.",
-    "examples_unavailable": "Whether such a reason exists for any actual case is exactly what the reply's open premise ReasonForEachGap asserts; no example is established.",
+    "examples_unavailable": "No case is established in which such a reason exists. ReasonForEachGap is only a guarded coverage premise: at every world where God exists, any capable, nonresistant person who lacks access at a time has a GoodReason then. It asserts neither an actual gap nor an actual reason, and it holds vacuously at worlds without God.",
     "exclusions": [
       "A suggested benefit, an unknown reason or a conceivable excuse: none establishes the predicate.",
       "A definition of love: the predicate is used by the normative reading QualifiedOpen, not part of PerfectLove (DISAMB-HIDDENNESS-LOVE-ACCESS)."
