@@ -4,12 +4,15 @@ pub mod bind_check;
 pub mod bridge_experiments;
 pub mod bridges;
 pub mod check;
+pub mod configuration_explorer;
+pub mod configuration_live;
 pub mod configurations;
 pub mod context;
 pub mod dossier;
 pub mod finite_models;
 pub mod frontier;
 pub mod identity;
+pub mod index;
 pub mod issues;
 mod kernels;
 pub mod lean_reuse;
@@ -20,7 +23,7 @@ pub mod pyfmt;
 pub mod pyjson;
 pub mod related;
 pub mod senses;
-mod sha256;
+pub(crate) mod sha256;
 pub mod strength;
 pub mod structure;
 pub mod subprocess;
@@ -70,7 +73,7 @@ impl Corpus {
     pub fn load(root: &Path) -> Result<Self, CorpusError> {
         let mut corpus = Self {
             records: BTreeMap::new(),
-            fingerprint: 0xcbf29ce484222325,
+            fingerprint: FNV1A64_OFFSET,
         };
         if fs::symlink_metadata(root.join("corpus"))
             .is_ok_and(|metadata| metadata.file_type().is_symlink())
@@ -168,14 +171,7 @@ impl Corpus {
     }
 
     fn hash(&mut self, bytes: &[u8]) {
-        for byte in (bytes.len() as u64)
-            .to_le_bytes()
-            .into_iter()
-            .chain(bytes.iter().copied())
-        {
-            self.fingerprint ^= u64::from(byte);
-            self.fingerprint = self.fingerprint.wrapping_mul(0x100000001b3);
-        }
+        fnv1a64_update(&mut self.fingerprint, bytes);
     }
 
     /// Non-cryptographic identity of the paths and bytes consumed by this loader.
@@ -240,6 +236,22 @@ impl Corpus {
         self.records
             .iter()
             .filter_map(move |(&kind, records)| records.get(id).map(|record| (kind, record)))
+    }
+}
+
+/// The FNV-1a 64-bit offset basis that starts an input identity.
+pub const FNV1A64_OFFSET: u64 = 0xcbf29ce484222325;
+
+/// Adds one length-prefixed byte string to an FNV-1a 64-bit input identity
+/// (the hash behind [`Corpus::input_identity`] and the `truth index` digest).
+pub fn fnv1a64_update(state: &mut u64, bytes: &[u8]) {
+    for byte in (bytes.len() as u64)
+        .to_le_bytes()
+        .into_iter()
+        .chain(bytes.iter().copied())
+    {
+        *state ^= u64::from(byte);
+        *state = state.wrapping_mul(0x100000001b3);
     }
 }
 

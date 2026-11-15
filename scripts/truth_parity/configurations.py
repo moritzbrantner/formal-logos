@@ -142,18 +142,14 @@ class TruthConfigurationParity(ParityCase):
             with self.subTest(error=form):
                 self.assert_same(python_cli("configurations", "--registered", *form),
                                  "configurations", "--registered", *form)
-        # Live verification runs Lean: Rust refuses and names the Python command.
-        refused = self.truth("configurations", code=2)
-        self.assertIn("python3 scripts/corpus.py configurations", refused.stderr)
+        # Live verification runs Lean: see truth_parity.configuration_report.
 
     def test_real_corpus_models(self):
         self.assert_same(python_cli("models"), "models")
         self.assert_same(python_cli("models", "--json"), "models", "--json")
         statement = U("statement", "STMT-CATHOLICISM-TRUE")
         self.assert_same(python_cli("models", "--premise", statement), "models", "--premise", statement)
-        for flags in (["--verify"], ["--check", statement], ["--argument", "ARG"]):
-            refused = self.truth("models", *flags, code=2)
-            self.assertIn("python3 scripts/corpus.py models", refused.stderr)
+        # --check, --argument and --verify run Lean: see truth_parity.configuration_report.
 
     def test_real_corpus_territory(self):
         root = corpus.DEFAULT_FRONTIER_ROOT

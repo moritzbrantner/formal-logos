@@ -21,12 +21,14 @@ mod bind_check;
 mod bridge_experiments;
 mod bridges;
 mod check;
+mod configuration_report;
 mod configurations;
 mod context;
 mod dossier;
 mod frontier;
 mod frontier_diff;
 mod ids;
+mod index;
 mod inspect;
 mod issues;
 mod lean_reuse;
@@ -69,8 +71,9 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] results
        truth [--root PATH] [--json] sort-lists
        truth [--root PATH] [--json] lexicon (show WORD | untraced | coverage | check | bootstrap | allowlist | ratchet --base REV) [--limit N] [--write]
-       truth [--root PATH] [--json] configurations --registered [--case ID] [--seed STATEMENT] [--premise STATEMENT]...
-       truth [--root PATH] [--json] models
+       truth [--root PATH] [--json] configurations [--registered] [--case ID] [--seed STATEMENT] [--premise STATEMENT]...
+       truth [--root PATH] [--json] configuration-report (--output PATH | --check PATH | --build-input)
+       truth [--root PATH] [--json] models [--check STATEMENT | --argument ARGUMENT] [--premise STATEMENT]... [--verify]
        truth [--root PATH] [--json] territory [--frontier-root STATEMENT] [--max-atoms N]
        truth [--root PATH] [--json] bind-check [--result RESULT]... [--affected --base REV [--head REV]]
              [--lean-json FILE] [--print-lean-input]
@@ -83,6 +86,9 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
              [--bind-json FILE] [--usage-json FILE]
        truth [--root PATH] [--json] lean-reuse --review [--usage-json FILE]
        truth [--root PATH] [--json] attribution-check --base REV [--materialize] [--max-chars N]
+       truth [--root PATH] [--json] index (build | search WORDS [--limit N] | show ID | duplicates | summary
+             | parity | export PATH | bundle --case ID [--premise STATEMENT]...
+             | compare --case ID [--left STATEMENT]... [--right STATEMENT]...)
        truth [--root PATH] [--json] senses (report [--write] | allowlist [--write] | ratchet --base REV)
        truth [--root PATH] [--json] bridge-experiments RESULT --profile-module MODULE [--limit N]
              [--frontier-root STATEMENT]
@@ -130,6 +136,7 @@ pub const COMMANDS: &[Command] = &[
     sort_lists::COMMAND,
     lexicon::COMMAND,
     configurations::COMMAND,
+    configuration_report::COMMAND,
     models::COMMAND,
     territory::COMMAND,
     bind_check::COMMAND,
@@ -140,6 +147,7 @@ pub const COMMANDS: &[Command] = &[
     unused_premises::COMMAND,
     lean_reuse::COMMAND,
     attribution_check::COMMAND,
+    index::COMMAND,
     senses::COMMAND,
     bridge_experiments::COMMAND,
 ];
@@ -156,10 +164,11 @@ pub fn run(args: &[OsString]) -> Output {
             Some(command)
                 if args.structure.flags
                     && !command.name.starts_with("structure")
-                    && command.name != "strength-report" =>
+                    && command.name != "strength-report"
+                    && command.name != "configuration-report" =>
             {
                 Err(usage(
-                    "--unfold, --output, --build-input, --check-input and --extractor-json apply only to structure and structure-report",
+                    "--unfold, --output, --build-input, --check-input and --extractor-json apply only to structure, structure-report, strength-report and configuration-report",
                 ))
             }
             Some(command)
@@ -181,6 +190,9 @@ pub fn run(args: &[OsString]) -> Output {
             Some(command) if args.attribution.flags && command.name != "attribution-check" => Err(
                 usage("--materialize and --max-chars apply only to attribution-check"),
             ),
+            Some(command) if args.index.flags && command.name != "index" => {
+                Err(usage("--left and --right apply only to index compare"))
+            }
             Some(command)
                 if args.profile_module.is_some() && command.name != "bridge-experiments" =>
             {

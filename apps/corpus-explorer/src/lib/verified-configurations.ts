@@ -1,7 +1,7 @@
-import { execFileSync } from "node:child_process";
 import path from "node:path";
 
 import type { RegisteredConfigurationCase } from "./configuration-cases";
+import { truthText } from "./truth-cli";
 
 const MAX_ASSUMPTION_DIMENSIONS = 11;
 
@@ -110,7 +110,7 @@ function verifiedCase(value: unknown): value is VerifiedConfigurationCase {
     && typeof entry.result_id === "string" && typeof entry.theorem === "string" && strings(entry.premise_statement_ids) && typeof entry.conclusion_statement_id === "string");
 }
 
-/** Python validates current-input provenance and canonical trees; this validates transport shape. */
+/** `truth configuration-report --check` validates current-input provenance and canonical trees; this validates transport shape. */
 export function parseVerifiedConfigurations(value: unknown): VerifiedConfigurationBundle {
   if (!record(value) || value.schema_version !== 1 || !record(value.producer) || value.producer.mode !== "live-verified"
     || typeof value.producer.source_head !== "string" || typeof value.producer.input_digest !== "string" || typeof value.producer.trust !== "string"
@@ -137,9 +137,7 @@ export function getVerifiedConfigurations(): VerifiedConfigurationBundle | null 
       if (path.resolve(root, artifact) !== path.join(root, ".cache/configuration-explorer.json")) {
         throw new Error("Certified transport must use .cache/configuration-explorer.json for cache invalidation");
       }
-      const output: unknown = JSON.parse(execFileSync("python3", ["scripts/corpus.py", "configuration-report", "--check", path.resolve(root, artifact), "--json"], {
-        cwd: root, encoding: "utf8", timeout: 60000, maxBuffer: 32 * 1024 * 1024,
-      }));
+      const output: unknown = JSON.parse(truthText(["--json", "configuration-report", "--check", path.resolve(root, artifact)], 60000));
       cached = parseVerifiedConfigurations(output);
     }
   }

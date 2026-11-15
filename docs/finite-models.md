@@ -12,8 +12,8 @@ attempt records do not participate in frontier closure.
 
 ```bash
 target/release/truth models   # the registrations; Rust port of `corpus.py models`
-flock /tmp/moenarch/truth-core-heavy.lock python3 scripts/corpus.py models \
-  --check STMT-ACT-SIMPLY-PRIOR-TO-POTENCY \
+flock /tmp/moenarch/truth-core-heavy.lock python3 scripts/worker_env.py -- \
+  target/release/truth models --check STMT-ACT-SIMPLY-PRIOR-TO-POTENCY \
   --premise STMT-NOTHING-IN-ACT-AND-POTENCY-IN-SAME-RESPECT
 ```
 
