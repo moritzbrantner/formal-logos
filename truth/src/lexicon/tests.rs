@@ -150,10 +150,7 @@ fn untraced_word_and_unlinked_sense_fail() {
     statement(&fx.0, "s1", "The cause is mysterious.", &[]);
     let error = super::check(&fx.0).unwrap_err();
     assert!(error.contains("untraced word: 'mysterious'"), "{error}");
-    assert!(
-        error.contains("senses linked: 'cause'"),
-        "{error}"
-    );
+    assert!(error.contains("senses linked: 'cause'"), "{error}");
 }
 
 #[test]
@@ -331,10 +328,7 @@ fn compound_parts_are_checked_separately() {
     // `by` is a function word; it must not exempt the technical `cause`.
     statement(&fx.0, "s1", "The by-cause is prior.", &[]);
     let error = super::check(&fx.0).unwrap_err();
-    assert!(
-        error.contains("senses linked: 'cause'"),
-        "{error}"
-    );
+    assert!(error.contains("senses linked: 'cause'"), "{error}");
 }
 
 #[test]
