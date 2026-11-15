@@ -82,7 +82,8 @@ There is intentionally no RDF, graph database, embedding index, identity resolve
 Requires Lean via `elan`/`lake`.
 
 ```bash
-python3 scripts/corpus.py check   # or target/release/truth check, which includes source_evidence.py check
+python3 scripts/source_evidence.py check
+python3 scripts/corpus.py check
 lake exe cache get   # prebuilt Mathlib, once per Mathlib/toolchain bump
 lake build
 python3 scripts/corpus.py status
