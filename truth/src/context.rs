@@ -221,7 +221,7 @@ impl<'a> Lean<'a> {
             .flatten()
     }
 
-    fn imports(&self, module: &str) -> Vec<String> {
+    pub(crate) fn imports(&self, module: &str) -> Vec<String> {
         if let Some(found) = self.imports.borrow().get(module) {
             return found.clone();
         }
@@ -1915,7 +1915,7 @@ pub fn format_context(pack: &ContextPack, limit: i64) -> String {
             u.unchecked_companion_theorems.join(", ")
         ));
     }
-    lines.push("\nTerms linked by the argument (IDs; read with research_index.py show):".into());
+    lines.push("\nTerms linked by the argument (IDs; read with truth index show):".into());
     let terms: Vec<String> = pack
         .definitions
         .iter()

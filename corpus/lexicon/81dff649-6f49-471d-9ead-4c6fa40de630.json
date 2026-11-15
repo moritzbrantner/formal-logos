@@ -1,0 +1,10 @@
+{
+  "id": "81dff649-6f49-471d-9ead-4c6fa40de630",
+  "label": "gate (ordinary)",
+  "lemma": "gate",
+  "class": "ordinary",
+  "forms": [
+    "gates"
+  ],
+  "gloss": "A required check that must pass before merging."
+}
