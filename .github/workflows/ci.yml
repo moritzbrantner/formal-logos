@@ -134,9 +134,10 @@ jobs:
       # edit to a generated record is carried into its spec, not left to drift.
       - name: Check that batch specs regenerate their records unchanged
         run: python3 scripts/argument_batch.py records --check specs/*.toml
+      # The release CLI built above orchestrates scripts/BindTypes.lean (#954 A1).
       - name: Bind argument records to result theorem types
         if: needs.comparator-plan.outputs.lean == 'true'
-        run: python3 scripts/corpus.py bind-check
+        run: target/release/truth bind-check
       # Exemptions (intended full-theory bundles, each with a reason) live in
       # scripts/unused-premise-exemptions.json (owner decision on #571).
       - name: Check that result proofs use every listed premise

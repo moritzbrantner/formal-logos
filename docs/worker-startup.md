@@ -40,11 +40,11 @@ LEAN_NUM_THREADS=2 lake build
 cargo build --locked --release -p truth
 target/release/truth check
 python3 scripts/bundle_audit.py
-python3 scripts/corpus.py bind-check
+target/release/truth bind-check
 scripts/verify-result.sh <RESULT-ID>
 ```
 
-Choose affected checks as the worker contract and CI require. Source and attribution gates run offline; materialize individual passages only when doing selected source research. `scripts/affected_results.py select --base <BASE> --head <HEAD>` selects affected results; `python3 scripts/corpus.py bind-check --affected --base <BASE>` binds just those (against the working tree unless `--head` is given), and `bind-check --result <ID>` (repeatable) binds named results. Both need only the selected Solution modules built; the stale-pin and registered-model checks run only in the full `bind-check`, which CI runs. Keep required NanoDa and Comparator gates; startup cache state never substitutes for them. Merge fresh `origin/main` immediately before pushing, regenerate the shared imports/docs and rerun applicable checks.
+Choose affected checks as the worker contract and CI require. Source and attribution gates run offline; materialize individual passages only when doing selected source research. `scripts/affected_results.py select --base <BASE> --head <HEAD>` selects affected results; `target/release/truth bind-check --affected --base <BASE>` binds just those (against the working tree unless `--head` is given), and `bind-check --result <ID>` (repeatable) binds named results. Both need only the selected Solution modules built; the stale-pin and registered-model checks run only in the full `bind-check`, which CI runs. Keep required NanoDa and Comparator gates; startup cache state never substitutes for them. Merge fresh `origin/main` immediately before pushing, regenerate the shared imports/docs and rerun applicable checks.
 
 Give a fresh proposition worker the [research brief](../AGENTS.md#worker-brief-and-handoff)
 and [scoped execution context](systematic-corpus-loop.md#worker-ownership-and-integration),
