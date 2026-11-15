@@ -1,14 +1,18 @@
 # Argument context packs
 
 ```bash
-python3 scripts/corpus.py context AQUINAS-ST-I-Q11-A3-GOD-ONE-FROM-NATURE
-python3 scripts/corpus.py context <RESULT-ID> --json      # every entry, untruncated
-python3 scripts/corpus.py context <STMT-ID>               # only if exactly one argument concludes it
+target/release/truth context AQUINAS-ST-I-Q11-A3-GOD-ONE-FROM-NATURE
+target/release/truth context <RESULT-ID> --json      # every entry, untruncated
+target/release/truth context <STMT-ID>               # only if exactly one argument concludes it
 # Optional, after lake build; reads cached .olean files without another build:
-python3 scripts/corpus.py context <RESULT-ID> --json --proof-use
-python3 scripts/corpus.py lean-reuse --review                  # review missing graph links
-python3 scripts/corpus.py lean-reuse --review --json           # every reuse/import classification
+target/release/truth context <RESULT-ID> --json --proof-use
+target/release/truth lean-reuse --review             # review missing graph links
+target/release/truth lean-reuse --review --json      # every reuse/import classification
 ```
+
+These are the Rust ports of `python3 scripts/corpus.py context` and
+`corpus.py lean-reuse`, which stay until their retirement (#954); the Python
+`--root STATEMENT` is `--frontier-root` in Rust.
 
 One call returns a bounded, derived view of one existing argument. It is the
 first step when a brief names an existing argument or result as its target or

@@ -73,8 +73,8 @@ rejects the shared options it does not take with `Args::simple` or
 first (`bind-check`, `next`, the ID lists, …) calls `cli::validate_first`
 before its own work: it runs the full `check` validation and, on a broken
 corpus, fails as Python does, with the first `corpus error: …` and exit
-code 2. `next`, `next-steps`, `arguments`, `results` and `bind-check` call
-it; the earlier ports perform only the structural load.
+code 2. `next`, `next-steps`, `arguments`, `results`, `bind-check` and
+`unused-premises` call it; the earlier ports perform only the structural load.
 
 Parity tests live in `scripts/truth_parity/`, one module per command, with
 shared fixtures and the `ParityCase` base class in `common.py`; a new
@@ -171,6 +171,55 @@ a recorded exporter output it also compares the real-corpus reports. On the
 real corpus (2026-11-15, 2151 results, 111 models) the full run with Lean took
 17.9 s in Rust and 28.1 s in Python, and from a saved exporter output 3.9 s
 against 14.9 s, on the same loaded machine; the outputs were identical.
+
+## `unused-premises`, `lean-reuse`, `context --proof-use`
+
+These port the proof-term exporter commands of `scripts/corpus.py` (#954
+A2). Lean stays the verifier: Rust writes each exporter's input byte for
+byte as Python's `json.dump` does, runs it with `lake env lean --run` through
+the code `bind-check` uses (`bind_check::run_exporter`), or reads a saved
+output, and applies Python's joins and classifications to what Lean printed.
+
+- `truth unused-premises [--strict] [--exemptions FILE] [--frontier-root
+  STATEMENT] [--bind-json FILE] [--usage-json FILE]` (#571) validates first,
+  binds every result with `scripts/BindTypes.lean` (Python's input without
+  sense constants, and bindings without sense problems, as Python's command
+  does) or reads a saved `bind-check --json` report, runs
+  `scripts/UnusedPremises.lean` on the same input or reads its saved output,
+  and reports each bound premise or theory-bundle conjunct the proof term
+  never uses, flagged when it is open on a path to the frontier root.
+  Exemptions come from `scripts/unused-premise-exemptions.json` (or
+  `--exemptions FILE`); `--strict` exits 1 on an unexempted finding or a
+  stale exemption. Python's `--root STATEMENT` is `--frontier-root` here.
+  Stdout is Python's byte for byte, text and the sorted `--json` report; CI's
+  corpus job runs `truth unused-premises --strict`.
+- `truth lean-reuse --review [--usage-json FILE]` (#959) runs
+  `scripts/LeanReuse.lean` on every result theorem (or reads its saved
+  output) and classifies each result reached through a Solution's import
+  closure or its proof term as theorem-used and graph-linked, theorem-used
+  but not in the argument graph, or import only. Text is Python's byte for
+  byte; `--json` is Python's report plus `input_identity`. Advisory only.
+- `truth context TARGET --proof-use` (or `--proof-use-json FILE`) runs the
+  same exporter on the target argument's result theorems and replaces each
+  result's import reuse by that classification, as Python's flag does.
+
+Exporter failures, a missing `lake`, a theorem the exporter did not inspect
+and malformed saved output are `corpus error: …` with exit code 2, as in
+Python; Rust reports serde's message for an unreadable saved file where
+Python raised a traceback or printed its own JSON parser's message.
+`scripts/truth_parity/proof_use.py` compares every command with Python on
+the `check` fixture under a stand-in `lake` that records the exporter input
+and prints a recorded output, so both the inputs (byte for byte) and the
+reports are compared, including findings, bundle conjuncts, the root-path
+flag, exemptions and their errors, skipped results, validate-first,
+classifications and usage-map errors; on the real corpus it compares the
+exporter inputs and, given `TRUTH_UNUSED_BIND_JSON`, `TRUTH_UNUSED_USAGE_JSON`
+and `TRUTH_LEAN_REUSE_JSON` (recorded outputs for the checkout), the
+reports. On the real corpus (2026-11-15, 2151 results, same loaded machine)
+`unused-premises` with Lean took 21.5–24.7 s in Rust and 26.9–44.8 s in
+Python, and from saved outputs 4.1 s against 11.8 s; `lean-reuse --review`
+from a saved output took 0.75 s against 2.6 s (with Lean, both are dominated
+by the exporter's ~30 s); the outputs were identical.
 
 ## `thickness`
 
@@ -289,8 +338,8 @@ target or an ambiguous `context` target exits 2;
 an unreadable or non-frontier report or an unknown frontier root exits 1.
 Python prints the same messages with exit code 2.
 
-Not ported (use Python): `context --proof-use`/`--proof-use-json` (Lean
-proof-term inspection), the full `validate()` that `dossier --all` runs first, `research_index.py`'s other
+Not ported (use Python): the
+full `validate()` that `dossier --all` runs first, `research_index.py`'s other
 subcommands (`build`, `search`, `show`, `duplicates`, `summary`, `parity`,
 `export`, `bundle`, `compare`) and the Explorer's `dossier --all` consumer.
 `scripts/verify_truth_cli.py` checks parity on a sample of 30+ statements
