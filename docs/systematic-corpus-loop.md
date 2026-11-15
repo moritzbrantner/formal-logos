@@ -219,6 +219,16 @@ requires the non-transcription `proved` closure, and `sourced` requires an
 attributed source claim with a locator. Configuration and attempt IDs require
 records to exist; a failed attempt is **not** evidence of derivability.
 
+The commands below are **Python-only issue-reconciliation tooling**, not
+the primary corpus CLI. Use Rust `truth check`, `truth frontier`,
+`truth frontier-diff`, `truth related`, `truth dossier`, `truth context`
+and `truth orphans` for their migrated functions. Issue acceptance
+(`corpus.py issues`) and issue-linked dossiers (`dossier --issues-from`)
+are not yet in Rust; [#954](https://github.com/moritzbrantner/truth-core/issues/954)
+tracks the remaining migration. Rust `frontier-diff`, `thickness --base` and
+`orphans --base` may still use Python for an older base revision with
+different frontier rules. Do not create a second
+issue-status implementation.
 Issue reconciliation runs in the Rust CLI: `truth issues` and the
 issue-linked `truth dossier --issues-from` read one offline issue snapshot and
 never call GitHub; take the snapshot with `gh issue list` first. The Python

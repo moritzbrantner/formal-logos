@@ -112,6 +112,8 @@ pub struct Accepts {
     pub frontier: bool,
     /// `--base` and `--head`
     pub revisions: bool,
+    /// `--base` alone (`thickness`, `orphans`)
+    pub base: bool,
     /// `--from` and `--for`
     pub issues: bool,
     /// The [`ConfigurationArgs`] (each command checks which of them apply)
@@ -370,8 +372,14 @@ impl Args {
         if !accepts.frontier && (self.frontier.reaching_root || self.frontier.routes) {
             return Err(usage("--reaching-root and --routes apply only to frontier"));
         }
-        if !accepts.revisions && (self.frontier.base.is_some() || self.frontier.head.is_some()) {
-            return Err(usage("--base and --head apply only to frontier-diff"));
+        if !accepts.revisions && self.frontier.head.is_some()
+            || !(accepts.revisions || accepts.base) && self.frontier.base.is_some()
+        {
+            return Err(usage(if accepts.base {
+                "--head applies only to frontier-diff"
+            } else {
+                "--base applies only to frontier-diff, thickness and orphans; --head only to frontier-diff"
+            }));
         }
         if !accepts.issues && self.issues.own() {
             return Err(usage("--from and --for apply only to issues"));

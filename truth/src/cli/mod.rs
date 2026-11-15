@@ -43,10 +43,10 @@ pub use args::{Accepts, Args};
 pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] check
        truth [--root PATH] [--json] inspect ID
-       truth [--root PATH] [--json] thickness [--queue] [--frontier-root STATEMENT]
+       truth [--root PATH] [--json] thickness [--queue | --base REV] [--frontier-root STATEMENT]
        truth [--root PATH] [--json] frontier [--reaching-root] [--routes] [--frontier-root STATEMENT]
        truth [--root PATH] [--json] frontier-diff --base REV [--head REV] [--frontier-root STATEMENT]
-       truth [--root PATH] [--json] orphans [--frontier-root STATEMENT] [--by module|family] [--senses]
+       truth [--root PATH] [--json] orphans [--frontier-root STATEMENT] [--by module|family | --senses | --base REV]
        truth [--root PATH] [--json] bridges --constants FILE (--queue-file FILE | --target ID)...
              [--targets N] [--top K] [--pool M]
        truth [--root PATH] [--json] related STATEMENT [--limit N]

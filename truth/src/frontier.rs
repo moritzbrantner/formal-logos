@@ -3178,10 +3178,9 @@ fn git(checkout: &Path, args: &[&str]) -> Result<Vec<u8>, String> {
     }
 }
 
-/// A `git archive` extract of one revision, removed on drop.
 /// Python `uses_uuid_identity`: whether the corpus at `tree` has uuid ids
 /// (judged by its first statement record).
-fn uses_uuid_identity(tree: &Path) -> bool {
+pub fn uses_uuid_identity(tree: &Path) -> bool {
     let directory = tree.join("corpus").join("statements");
     let mut paths: Vec<PathBuf> = std::fs::read_dir(&directory)
         .into_iter()
@@ -3204,7 +3203,7 @@ fn uses_uuid_identity(tree: &Path) -> bool {
 /// that is a legacy id of the tree's records becomes that record's uuid.
 /// Only arguments and results share legacy ids; a key naming results picks
 /// the result, any other key the argument.
-fn legacy_report_to_uuid(report: Value, tree: &Path) -> Value {
+pub fn legacy_report_to_uuid(report: Value, tree: &Path) -> Value {
     // legacy id -> [(kind, uuid)] in first-insertion order (`Migration.load`).
     let mut table: HashMap<String, Vec<(&'static str, String)>> = HashMap::new();
     for &(directory, kind) in crate::identity::KIND_DIRS {
@@ -3305,7 +3304,15 @@ fn legacy_report_to_uuid(report: Value, tree: &Path) -> Value {
     walk(&table, report, "")
 }
 
-struct Extract(PathBuf);
+/// A `git archive` extract of one revision, removed on drop.
+pub struct Extract(PathBuf);
+
+impl Extract {
+    /// The extracted tree.
+    pub fn path(&self) -> &Path {
+        &self.0
+    }
+}
 
 impl Drop for Extract {
     fn drop(&mut self) {
@@ -3313,7 +3320,9 @@ impl Drop for Extract {
     }
 }
 
-fn extract(checkout: &Path, revision: &str) -> Result<Extract, String> {
+/// Extracts `revision` of the Git checkout with `git archive` (Python
+/// `revision_frontier`, `revision_thickness`, `orphan_summary.base_count`).
+pub fn extract(checkout: &Path, revision: &str) -> Result<Extract, String> {
     let archive = git(checkout, &["archive", "--format=tar", revision])
         .map_err(|error| format!("cannot archive revision {revision}: {error}"))?;
     let nanos = SystemTime::now()
@@ -3344,6 +3353,66 @@ fn extract(checkout: &Path, revision: &str) -> Result<Extract, String> {
     Ok(extract)
 }
 
+/// Whether `revision`'s `scripts/corpus.py` is byte-identical to the
+/// checkout's: then the Rust engine computes that revision's rules (the
+/// rules this port matches); otherwise its own Python must run.
+pub fn same_rules(checkout: &Path, revision: &str) -> bool {
+    let script = format!("{revision}:scripts/corpus.py");
+    match (
+        git(checkout, &["rev-parse", &script]),
+        git(checkout, &["hash-object", "scripts/corpus.py"]),
+    ) {
+        (Ok(at_revision), Ok(current)) => at_revision == current,
+        _ => false,
+    }
+}
+
+/// Python `revision_frontier_json`: the full frontier report of an
+/// extracted `revision` (see [`revision_frontier`] for the engine), with
+/// legacy ids mapped to uuids. Returns the report and the engine used.
+pub fn revision_report(
+    checkout: &Path,
+    tree: &Path,
+    revision: &str,
+    root: &str,
+    legacy_root: &str,
+) -> Result<(Value, &'static str), String> {
+    // A revision from before the uuid migration knows only legacy ids: it is
+    // asked for the root's legacy id and its report is mapped to uuids
+    // (Python `revision_frontier_json`).
+    let legacy = !uses_uuid_identity(tree);
+    let root = if legacy { legacy_root } else { root };
+    let (mut report, engine) = if same_rules(checkout, revision) {
+        let corpus = crate::Corpus::load(tree).map_err(|error| {
+            format!(
+                "frontier at {revision} failed: {}: {}",
+                error.path, error.message
+            )
+        })?;
+        (current_frontier(tree, &corpus, root, false, false), "rust")
+    } else {
+        let output = Command::new("python3")
+            .arg(tree.join("scripts").join("corpus.py"))
+            .args(["frontier", "--json", "--root", root])
+            .current_dir(tree)
+            .output()
+            .map_err(|error| format!("cannot run python3: {error}"))?;
+        if !output.status.success() {
+            return Err(format!(
+                "frontier at {revision} failed: {}",
+                String::from_utf8_lossy(&output.stderr).trim()
+            ));
+        }
+        let report = serde_json::from_slice(&output.stdout)
+            .map_err(|error| format!("frontier at {revision}: invalid JSON: {error}"))?;
+        (report, "python")
+    };
+    if legacy {
+        report = legacy_report_to_uuid(report, tree);
+    }
+    Ok((report, engine))
+}
+
 /// Python `revision_frontier`: the reaching-root frontier at a Git revision,
 /// on a `git archive` extract, with `all_item_depths` of the full report.
 ///
@@ -3360,50 +3429,7 @@ pub fn revision_frontier(
     legacy_root: &str,
 ) -> Result<(Value, &'static str), String> {
     let tree = extract(checkout, revision)?;
-    // A revision from before the uuid migration knows only legacy ids: it is
-    // asked for the root's legacy id and its report is mapped to uuids
-    // (Python `revision_frontier_json`).
-    let legacy = !uses_uuid_identity(&tree.0);
-    let root = if legacy { legacy_root } else { root };
-    let script = format!("{revision}:scripts/corpus.py");
-    let same_rules = match (
-        git(checkout, &["rev-parse", &script]),
-        git(checkout, &["hash-object", "scripts/corpus.py"]),
-    ) {
-        (Ok(at_revision), Ok(current)) => at_revision == current,
-        _ => false,
-    };
-    let (mut report, engine) = if same_rules {
-        let corpus = crate::Corpus::load(&tree.0).map_err(|error| {
-            format!(
-                "frontier at {revision} failed: {}: {}",
-                error.path, error.message
-            )
-        })?;
-        (
-            current_frontier(&tree.0, &corpus, root, false, false),
-            "rust",
-        )
-    } else {
-        let output = Command::new("python3")
-            .arg(tree.0.join("scripts").join("corpus.py"))
-            .args(["frontier", "--json", "--root", root])
-            .current_dir(&tree.0)
-            .output()
-            .map_err(|error| format!("cannot run python3: {error}"))?;
-        if !output.status.success() {
-            return Err(format!(
-                "frontier at {revision} failed: {}",
-                String::from_utf8_lossy(&output.stderr).trim()
-            ));
-        }
-        let report = serde_json::from_slice(&output.stdout)
-            .map_err(|error| format!("frontier at {revision}: invalid JSON: {error}"))?;
-        (report, "python")
-    };
-    if legacy {
-        report = legacy_report_to_uuid(report, &tree.0);
-    }
+    let (mut report, engine) = revision_report(checkout, tree.path(), revision, root, legacy_root)?;
     let all_item_depths: Map<String, Value> = report["items"]
         .as_array()
         .into_iter()
