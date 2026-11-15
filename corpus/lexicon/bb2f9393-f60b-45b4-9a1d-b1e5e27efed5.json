@@ -1,0 +1,7 @@
+{
+  "id": "bb2f9393-f60b-45b4-9a1d-b1e5e27efed5",
+  "label": "build (ordinary)",
+  "lemma": "build",
+  "class": "ordinary",
+  "gloss": "To compile the Lean library (lake build); also to construct."
+}

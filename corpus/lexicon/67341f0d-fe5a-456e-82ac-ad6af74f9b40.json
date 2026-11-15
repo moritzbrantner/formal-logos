@@ -1,0 +1,7 @@
+{
+  "id": "67341f0d-fe5a-456e-82ac-ad6af74f9b40",
+  "label": "frontier (ordinary)",
+  "lemma": "frontier",
+  "class": "ordinary",
+  "gloss": "The set of open premises reachable from a root, computed by truth frontier (docs/corpus-model.md, \"Premise program and frontier\")."
+}

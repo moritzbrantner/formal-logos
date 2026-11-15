@@ -1,0 +1,10 @@
+{
+  "id": "befe2c71-d147-446d-93e9-8c902f7fd6a9",
+  "label": "deny (ordinary)",
+  "lemma": "deny",
+  "class": "ordinary",
+  "forms": [
+    "denies"
+  ],
+  "gloss": "To assert to be false."
+}
