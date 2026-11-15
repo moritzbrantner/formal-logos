@@ -61,9 +61,10 @@ pub struct Note {
 }
 
 impl Note {
-    /// `path#anchor`, or the bare path for the preamble.
+    /// `path#anchor`, or the bare path for the preamble (a heading whose
+    /// anchor is empty keeps its `#`, so it never collides with it).
     pub fn key(&self, section: &Section) -> String {
-        if section.anchor.is_empty() {
+        if section.level == 0 {
             self.path.clone()
         } else {
             format!("{}#{}", self.path, section.anchor)
@@ -129,10 +130,15 @@ pub struct Lookup {
 }
 
 impl Lookup {
-    /// Adds one record of `kind` read from `path`.
+    /// Adds one record of `kind` read from `path`. An index passage
+    /// projection keeps its legacy id and label under `passage`.
     pub fn add(&mut self, kind: &str, path: &str, record: &Map<String, Value>) {
         let Some(id) = record.get("id").and_then(Value::as_str) else {
             return;
+        };
+        let record = match record.get("passage") {
+            Some(Value::Object(passage)) if kind == "passages" => passage,
+            _ => record,
         };
         let pair = (kind.to_owned(), id.to_owned());
         self.ids
@@ -623,6 +629,9 @@ mod tests {
         let note = parse("docs/notes/d.md", "# R\n## R\n## R-1\n## R\n");
         let anchors: Vec<_> = note.sections.iter().map(|s| s.anchor.as_str()).collect();
         assert_eq!(anchors, ["r", "r-1", "r-1-1", "r-2"]);
+        let note = parse("docs/notes/p.md", "Intro\n# ???\nBody\n");
+        let keys: Vec<_> = note.sections.iter().map(|s| note.key(s)).collect();
+        assert_eq!(keys, ["docs/notes/p.md", "docs/notes/p.md#"]);
     }
 
     #[test]

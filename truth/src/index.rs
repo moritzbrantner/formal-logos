@@ -496,7 +496,16 @@ fn aliases(db: &Connection) -> Result<Aliases> {
     while let Some(row) = found.next().map_err(sql)? {
         let kind: String = row.get(0).map_err(sql)?;
         let text: String = row.get(1).map_err(sql)?;
-        aliases.add(&kind, &body(&text)?);
+        let record = body(&text)?;
+        // A passage projection keeps its legacy id and label under `passage`.
+        match record.get("passage") {
+            Some(Value::Object(passage)) if kind == "passages" => {
+                let mut flat = passage.clone();
+                flat.insert("id".into(), record["id"].clone());
+                aliases.add(&kind, &flat);
+            }
+            _ => aliases.add(&kind, &record),
+        }
     }
     Ok(aliases)
 }
@@ -1356,7 +1365,15 @@ mod tests {
         .unwrap();
         fs::write(
             notes.join("other.md"),
-            "No headings; a statement paraphrase S.\n",
+            "No headings; a statement paraphrase S.\n\n## Passage reference\n\nPASSAGE-ALIAS.\n",
+        )
+        .unwrap();
+        fs::create_dir_all(fixture.0.join("corpus/passages")).unwrap();
+        fs::write(
+            fixture.0.join("corpus/passages/c.json"),
+            json!({"snapshot": {}, "passages": [{"id": "P1", "legacy_id": "PASSAGE-ALIAS",
+                                                "locator": "1"}]})
+            .to_string(),
         )
         .unwrap();
         fs::write(fixture.0.join("docs/notes/data.json"), "{}").unwrap();
@@ -1442,6 +1459,10 @@ mod tests {
                 .contains("unknown note")
         );
 
+        // A nested passage resolves by its legacy id, in show and in notes.
+        assert_eq!(show(&db, "PASSAGE-ALIAS").unwrap()["record"]["id"], "P1");
+        let found = search(&db, "passage reference", 5).unwrap();
+        assert_eq!(found[0]["links"], json!(["passages:P1"]));
         // Reverse links: only the explicitly named records.
         let mentioned = show(&db, "JOINT-CERT").unwrap()["mentioned_by_notes"].clone();
         assert_eq!(mentioned[0]["section"], "docs/notes/pilot.md#pilot");
