@@ -1731,12 +1731,15 @@ fn validate_premise_program_relation(path: &str, relation: &Obj) -> Res<()> {
     Ok(())
 }
 
-fn validate_strength_comparison(
+/// Python `strength_comparisons.validate_registration`; without `configs`
+/// (the producer's first pass) result theorems are not matched against
+/// their Comparator obligations.
+pub fn validate_strength_comparison(
     relation: &Obj,
     statements: &HashMap<&str, &Obj>,
     results: &HashMap<&str, &Obj>,
     arguments: &HashMap<&str, &Obj>,
-    configs: &HashMap<String, Obj>,
+    configs: Option<&HashMap<String, Obj>>,
 ) -> Res<()> {
     let label = match relation.get("id") {
         None => "strength comparison".to_owned(),
@@ -1894,8 +1897,10 @@ fn validate_strength_comparison(
         if !arguments.contains_key(text(result, "argument_id")) {
             return Err(format!("{label}: result {rid} has no canonical argument"));
         }
-        if !configs.get(rid).is_some_and(|config| {
-            strings(config, "theorem_names").contains(&text(result, "theorem"))
+        if configs.is_some_and(|configs| {
+            !configs.get(rid).is_some_and(|config| {
+                strings(config, "theorem_names").contains(&text(result, "theorem"))
+            })
         }) {
             return Err(format!(
                 "{label}: result theorem is not a Comparator obligation: {rid}"
@@ -1903,6 +1908,22 @@ fn validate_strength_comparison(
         }
     }
     Ok(())
+}
+
+/// Python `validate_result_config` for the result `result` labelled `path`
+/// (relative to `root`): the executable-gate contract, returning its
+/// Comparator configuration.
+pub fn result_config(
+    root: &Path,
+    path: &str,
+    result: &Obj,
+    argument_ids: &HashMap<String, usize>,
+) -> Res<Obj> {
+    Checker {
+        root,
+        imports: Default::default(),
+    }
+    .result_config(path, result, argument_ids)
 }
 
 // ---------------------------------------------------------------------------
@@ -2998,7 +3019,7 @@ fn validate(
                 &statement_by_id,
                 &result_by_id,
                 &argument_by_id,
-                &configs,
+                Some(&configs),
             )
             .map_err(|error| format!("{path}: {error}"))?;
         }

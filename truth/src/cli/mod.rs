@@ -37,6 +37,7 @@ mod related;
 mod research;
 mod sort_lists;
 mod status;
+mod strength;
 mod structure;
 mod territory;
 mod thickness;
@@ -73,6 +74,8 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] structure STATEMENT [--unfold DECLARATION]... [--extractor-json FILE]
        truth [--root PATH] [--json] structure-report [--output FILE] [--build-input | --check-input]
              [--extractor-json FILE]
+       truth [--root PATH] [--json] strength-comparisons [COMPARISON] [--registered]
+       truth [--root PATH] [--json] strength-report [--output FILE] [--build-input | --check-input]
        truth [--root PATH] [--json] unused-premises [--strict] [--exemptions FILE] [--frontier-root STATEMENT]
              [--bind-json FILE] [--usage-json FILE]
        truth [--root PATH] [--json] lean-reuse --review [--usage-json FILE]
@@ -125,6 +128,8 @@ pub const COMMANDS: &[Command] = &[
     bind_check::COMMAND,
     structure::STRUCTURE,
     structure::REPORT,
+    strength::COMPARISONS,
+    strength::REPORT,
     unused_premises::COMMAND,
     lean_reuse::COMMAND,
 ];
@@ -138,9 +143,20 @@ pub fn run(args: &[OsString]) -> Output {
             Some(command) if args.bind.flags && command.name != "bind-check" => Err(usage(
                 "--result, --affected, --lean-json and --print-lean-input apply only to bind-check",
             )),
-            Some(command) if args.structure.flags && !command.name.starts_with("structure") => {
+            Some(command)
+                if args.structure.flags
+                    && !command.name.starts_with("structure")
+                    && command.name != "strength-report" =>
+            {
                 Err(usage(
                     "--unfold, --output, --build-input, --check-input and --extractor-json apply only to structure and structure-report",
+                ))
+            }
+            Some(command)
+                if args.recorded_exporters.is_some() && !command.name.starts_with("strength-") =>
+            {
+                Err(usage(
+                    "--recorded-exporters applies only to strength-comparisons and strength-report",
                 ))
             }
             Some(command)

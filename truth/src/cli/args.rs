@@ -168,6 +168,9 @@ pub struct Args {
     pub bind: BindArgs,
     pub structure: StructureArgs,
     pub proof: ProofArgs,
+    /// `--recorded-exporters DIR`: recorded Lean exporter outputs that
+    /// `strength-comparisons` and `strength-report` replay (parity only).
+    pub recorded_exporters: Option<String>,
 }
 
 /// The shared options a command accepts besides `--root` and `--json`;
@@ -226,6 +229,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         bind: BindArgs::default(),
         structure: StructureArgs::default(),
         proof: ProofArgs::default(),
+        recorded_exporters: None,
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -291,6 +295,14 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                     "--output" => structure.output = Some(value),
                     _ => structure.extractor_json = Some(value),
                 }
+            }
+            "--recorded-exporters" => {
+                parsed.recorded_exporters = Some(
+                    args.next()
+                        .and_then(|value| value.to_str())
+                        .ok_or_else(|| usage(format!("{arg} requires a UTF-8 path")))?
+                        .to_owned(),
+                );
             }
             "--routes" => parsed.frontier.routes = true,
             "--strict" => parsed.proof.strict = true,

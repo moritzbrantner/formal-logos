@@ -57,7 +57,7 @@ jobs:
       - name: Derive proposition structure from Lean
         run: target/release/truth structure-report --output .cache/proposition-structure.json
       - name: Certify registered proposition strength comparisons
-        run: python3 scripts/corpus.py strength-report --output .cache/strength-comparisons.json
+        run: target/release/truth strength-report --output .cache/strength-comparisons.json
       - name: Build static corpus explorer
         env:
           GITHUB_PAGES: "true"

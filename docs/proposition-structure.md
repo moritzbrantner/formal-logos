@@ -103,7 +103,8 @@ existing statement, inference, argument, result and relation records; there is
 no all-pairs search and no solver service.
 
 `scripts/strength_comparisons.py` is the single semantic owner of the narrow
-comparison registration carried by relations. A registered Lean specification
+comparison registration carried by relations (`truth strength-comparisons` and
+`strength-report` port it byte for byte; see `truth/README.md`). A registered Lean specification
 fixes shared vocabulary/typeclass parameters, an ordered explicit background,
 stronger and weaker formulas, a named proposed delta, and an allowed-case
 remainder. `scripts/CheckStrength.lean` checks complete certificate types against
@@ -185,17 +186,16 @@ certificates. The existing verifier gates remain required for delivered CI.
 To verify a requested registration, or produce the registered explorer slice:
 
 ```bash
-python3 scripts/worker_env.py -- python3 scripts/corpus.py strength-comparisons \
-  REL-STRENGTH-CAUSE --json
-python3 scripts/worker_env.py -- python3 scripts/corpus.py strength-report --build-input
-python3 scripts/corpus.py strength-report --check-input --json
+target/release/truth strength-comparisons <COMPARISON-UUID> --json
+target/release/truth strength-report --build-input
+target/release/truth strength-report --check-input --json
 ```
 
 The first two commands run the existing result gates. The last only validates
 the trusted producer output against current inputs; it does not execute proofs
 again. `strength-comparisons --registered --json` is a provenance-only view and
-reports no proof verdicts. The current exact-delta label conservatively requires
-the three directions and a result for the displayed biconditional. Named
+reports no proof verdicts. The exact-delta label requires a result for the
+displayed biconditional, or results for all three directions (#1598). Named
 allowed-case exactness requires both its identity and decomposition results.
 Inherited model/typeclass law structures remain named library boundaries; the
 inspector does not claim an exhaustive recursive inventory of Mathlib laws.
