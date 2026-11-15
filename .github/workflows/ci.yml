@@ -140,10 +140,12 @@ jobs:
         if: needs.comparator-plan.outputs.lean == 'true'
         run: target/release/truth bind-check
       # Exemptions (intended full-theory bundles, each with a reason) live in
-      # scripts/unused-premise-exemptions.json (owner decision on #571).
+      # scripts/unused-premise-exemptions.json (owner decision on #571). The
+      # release CLI orchestrates scripts/BindTypes.lean and
+      # scripts/UnusedPremises.lean (#954 A2).
       - name: Check that result proofs use every listed premise
         if: needs.comparator-plan.outputs.lean == 'true'
-        run: python3 scripts/corpus.py unused-premises --strict
+        run: target/release/truth unused-premises --strict
       - name: Test corpus tooling and media-span and web-snapshot evidence offline
         env:
           TRUTH_CORE_LEAN_TESTS: ${{ needs.comparator-plan.outputs.lean }}
@@ -165,7 +167,7 @@ jobs:
           fi
       - name: Report the orphan-count delta
         if: always() && github.event_name == 'pull_request'
-        run: python3 scripts/orphan_summary.py --base HEAD^1 | tee -a "$GITHUB_STEP_SUMMARY"
+        run: target/release/truth orphans --base HEAD^1 | tee -a "$GITHUB_STEP_SUMMARY"
       # Attribution self-check (#989, owner decision 2026-11-05): on a PR, every new or
       # changed stating claim (or claim whose statement text or passage changed) must
       # record "The passage states X, which is the premise." CI checks the record
@@ -329,9 +331,13 @@ jobs:
           include-hidden-files: true
           if-no-files-found: error
           retention-days: 7
+      # The Rust CLI orchestrates scripts/PropositionStructure.lean (truth/README.md).
+      - name: Build the truth CLI
+        if: needs.comparator-plan.outputs.report == 'true'
+        run: cargo build --locked --release -p truth
       - name: Derive proposition structure from Lean
         if: needs.comparator-plan.outputs.report == 'true'
-        run: python3 scripts/corpus.py structure-report --output .cache/proposition-structure.json
+        run: target/release/truth structure-report --output .cache/proposition-structure.json
       - name: Upload derived proposition structure
         if: needs.comparator-plan.outputs.report == 'true'
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7

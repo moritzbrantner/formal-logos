@@ -16,6 +16,8 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         || args.senses
         || args.group_by.is_some()
         || args.frontier_root_set()
+        || args.issues.own()
+        || args.issues.issues_from.is_some()
     {
         return Err(usage("check takes no options besides --root and --json"));
     }

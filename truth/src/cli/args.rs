@@ -37,6 +37,74 @@ pub struct BindArgs {
     pub print_input: bool,
 }
 
+/// The `structure` and `structure-report` options.
+#[derive(Default)]
+pub struct StructureArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    /// `--unfold DECLARATION`, repeatable (`structure`).
+    pub unfold: Vec<String>,
+    /// `--output FILE` (`structure-report`).
+    pub output: Option<String>,
+    /// `--build-input` (`structure-report`, the default action).
+    pub build_input: bool,
+    /// `--check-input` (`structure-report`).
+    pub check_input: bool,
+    /// `--extractor-json FILE`: a saved `scripts/PropositionStructure.lean`
+    /// output used instead of running Lean.
+    pub extractor_json: Option<String>,
+}
+
+/// The options of `unused-premises`, `lean-reuse` and `context --proof-use`
+/// (the commands that orchestrate the proof-term exporters).
+#[derive(Default)]
+pub struct ProofArgs {
+    /// `--strict` (`unused-premises`)
+    pub strict: bool,
+    /// `--review` (`lean-reuse`)
+    pub review: bool,
+    /// `--proof-use` (`context`)
+    pub proof_use: bool,
+    /// `--exemptions FILE` (`unused-premises`)
+    pub exemptions: Option<String>,
+    /// `--bind-json FILE`: a saved `bind-check --json` report (`unused-premises`).
+    pub bind_json: Option<String>,
+    /// `--usage-json FILE`: a saved exporter output (`unused-premises`, `lean-reuse`).
+    pub usage_json: Option<String>,
+    /// `--proof-use-json FILE`: a saved `scripts/LeanReuse.lean` output (`context`).
+    pub proof_use_json: Option<String>,
+}
+
+impl ProofArgs {
+    /// The options given, by their command-line names.
+    pub fn given(&self) -> Vec<&'static str> {
+        [
+            ("--strict", self.strict),
+            ("--review", self.review),
+            ("--proof-use", self.proof_use),
+            ("--exemptions", self.exemptions.is_some()),
+            ("--bind-json", self.bind_json.is_some()),
+            ("--usage-json", self.usage_json.is_some()),
+            ("--proof-use-json", self.proof_use_json.is_some()),
+        ]
+        .into_iter()
+        .filter_map(|(name, given)| given.then_some(name))
+        .collect()
+    }
+
+    /// Rejects the options outside `allowed` that apply to `command`'s siblings.
+    pub fn only(&self, command: &str, allowed: &[&str]) -> Result<(), Failure> {
+        match self
+            .given()
+            .into_iter()
+            .find(|name| !allowed.contains(name))
+        {
+            Some(name) => Err(usage(format!("{name} does not apply to {command}"))),
+            None => Ok(()),
+        }
+    }
+}
+
 #[derive(Default)]
 pub struct ResearchArgs {
     pub flags: bool,
@@ -62,6 +130,24 @@ pub struct ConfigurationArgs {
     pub max_atoms: Option<i64>,
 }
 
+/// `issues --from FILE --for ID` and `dossier --issues-from FILE`.
+#[derive(Default)]
+pub struct IssueArgs {
+    /// `--from`
+    pub from: Option<String>,
+    /// `--for`
+    pub for_id: Option<String>,
+    /// `--issues-from`
+    pub issues_from: Option<String>,
+}
+
+impl IssueArgs {
+    /// Whether `--from` or `--for` was given.
+    pub fn own(&self) -> bool {
+        self.from.is_some() || self.for_id.is_some()
+    }
+}
+
 /// Every option of every command, parsed in one pass in token order.
 pub struct Args {
     pub machine: bool,
@@ -77,8 +163,11 @@ pub struct Args {
     pub research: ResearchArgs,
     /// `--write` (lexicon bootstrap and allowlist)
     pub write: bool,
+    pub issues: IssueArgs,
     pub configuration: ConfigurationArgs,
     pub bind: BindArgs,
+    pub structure: StructureArgs,
+    pub proof: ProofArgs,
 }
 
 /// The shared options a command accepts besides `--root` and `--json`;
@@ -95,6 +184,10 @@ pub struct Accepts {
     pub frontier: bool,
     /// `--base` and `--head`
     pub revisions: bool,
+    /// `--base` alone (`thickness`, `orphans`)
+    pub base: bool,
+    /// `--from` and `--for`
+    pub issues: bool,
     /// The [`ConfigurationArgs`] (each command checks which of them apply)
     pub configuration: bool,
 }
@@ -128,8 +221,11 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         frontier: FrontierArgs::default(),
         research: ResearchArgs::default(),
         write: false,
+        issues: IssueArgs::default(),
         configuration: ConfigurationArgs::default(),
         bind: BindArgs::default(),
+        structure: StructureArgs::default(),
+        proof: ProofArgs::default(),
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -174,7 +270,46 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                     parsed.bind.lean_json = Some(value);
                 }
             }
+            "--build-input" | "--check-input" => {
+                parsed.structure.flags = true;
+                if arg == "--build-input" {
+                    parsed.structure.build_input = true;
+                } else {
+                    parsed.structure.check_input = true;
+                }
+            }
+            "--unfold" | "--output" | "--extractor-json" => {
+                parsed.structure.flags = true;
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                    .to_owned();
+                let structure = &mut parsed.structure;
+                match arg {
+                    "--unfold" => structure.unfold.push(value),
+                    "--output" => structure.output = Some(value),
+                    _ => structure.extractor_json = Some(value),
+                }
+            }
             "--routes" => parsed.frontier.routes = true,
+            "--strict" => parsed.proof.strict = true,
+            "--review" => parsed.proof.review = true,
+            "--proof-use" => parsed.proof.proof_use = true,
+            "--exemptions" | "--bind-json" | "--usage-json" | "--proof-use-json" => {
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 path")))?
+                    .to_owned();
+                let proof = &mut parsed.proof;
+                match arg {
+                    "--exemptions" => proof.exemptions = Some(value),
+                    "--bind-json" => proof.bind_json = Some(value),
+                    "--usage-json" => proof.usage_json = Some(value),
+                    _ => proof.proof_use_json = Some(value),
+                }
+            }
             "--base" | "--head" => {
                 let value = args
                     .next()
@@ -253,6 +388,19 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                     _ => configuration.max_atoms = Some(integer(Some(&value), arg)?),
                 }
             }
+            "--from" | "--for" | "--issues-from" => {
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                    .to_owned();
+                let issues = &mut parsed.issues;
+                match arg {
+                    "--from" => issues.from = Some(value),
+                    "--for" => issues.for_id = Some(value),
+                    _ => issues.issues_from = Some(value),
+                }
+            }
             "--constants" | "--queue-file" | "--target" | "--targets" | "--top" | "--pool" => {
                 parsed.bridge_flags = true;
                 let value = args
@@ -327,7 +475,7 @@ impl Args {
         }
         if !accepts.frontier_root && self.frontier_root_set() {
             return Err(usage(
-                "--frontier-root applies only to thickness, frontier, frontier-diff, next-steps, orphans, dossier and context",
+                "--frontier-root applies only to thickness, frontier, frontier-diff, next-steps, orphans, dossier, context and unused-premises",
             ));
         }
         if !accepts.orphans && (self.senses || self.group_by.is_some()) {
@@ -339,8 +487,20 @@ impl Args {
         if !accepts.frontier && (self.frontier.reaching_root || self.frontier.routes) {
             return Err(usage("--reaching-root and --routes apply only to frontier"));
         }
-        if !accepts.revisions && (self.frontier.base.is_some() || self.frontier.head.is_some()) {
-            return Err(usage("--base and --head apply only to frontier-diff"));
+        if !accepts.revisions && self.frontier.head.is_some()
+            || !(accepts.revisions || accepts.base) && self.frontier.base.is_some()
+        {
+            return Err(usage(if accepts.base {
+                "--head applies only to frontier-diff"
+            } else {
+                "--base applies only to frontier-diff, thickness and orphans; --head only to frontier-diff"
+            }));
+        }
+        if !accepts.issues && self.issues.own() {
+            return Err(usage("--from and --for apply only to issues"));
+        }
+        if self.issues.issues_from.is_some() {
+            return Err(usage("--issues-from applies only to dossier"));
         }
         if !accepts.configuration && self.configuration.flags {
             return Err(usage(

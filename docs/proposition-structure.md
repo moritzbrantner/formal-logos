@@ -42,20 +42,33 @@ visible. Structural presentation discharges no root premise.
 
 ## Inspector commands
 
-Generate the bounded static input after building with the pinned environment:
+The Rust `truth` CLI (`truth/README.md`; build it with
+`cargo build --locked --release -p truth`) runs these commands. It builds the
+selected modules and runs `scripts/PropositionStructure.lean` through
+`scripts/worker_env.py`, the pinned environment, as the retained Python
+`corpus.py structure`/`structure-report` does; Lean stays the authority for the
+elaborated expressions. Generate and validate the bounded static input:
 
 ```bash
-python3 scripts/worker_env.py -- python3 scripts/corpus.py structure-report --build-input
-python3 scripts/corpus.py structure-report --check-input
+target/release/truth structure-report --build-input
+target/release/truth structure-report --check-input
 ```
 
 Inspect a statement with an explicitly selected project body:
 
 ```bash
-python3 scripts/worker_env.py -- python3 scripts/corpus.py structure \
-  STMT-CAUSE-PRINCIPLE-BROAD --json \
+target/release/truth structure STMT-CAUSE-PRINCIPLE-BROAD --json \
   --unfold TruthCore.Greek.Plato.Timaeus.CausePrinciple
 ```
+
+`--extractor-json FILE` replays a saved exporter stdout instead of running
+Lean; the parity harness (`scripts/truth_parity/proposition_structure.py`)
+uses it with `scripts/truth_parity/fixtures/proposition-structure-first-slice.json`,
+the exporter's recorded first-slice output with expression trees cut below
+depth 3. Re-record that fixture when the first slice's declarations change:
+run the exporter on the request that `structure-report` records in
+`revision.request` (`lake env lean --run scripts/PropositionStructure.lean
+REQUEST.json`) and cut it the same way.
 
 The command asks Lake to establish compiled/source freshness for selected
 modules before extraction. The static artifact records input hashes and rejects

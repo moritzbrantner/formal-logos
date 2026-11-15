@@ -177,8 +177,9 @@ its added premises stay on the frontier until sourced or proved.
   before proving from a premise set).
 - #570: anti-trivialization witnesses with no modal collapse or necessitism.
 - #571: flag result proofs that ignore a listed premise hypothesis. After
-  `lake build`, `python3 scripts/corpus.py unused-premises` (`--json` for
-  the full report) runs
+  `lake build`, `target/release/truth unused-premises` (`--json` for
+  the full report; the Rust port of `python3 scripts/corpus.py
+  unused-premises`, whose `--root STATEMENT` is `--frontier-root` there) runs
   `scripts/UnusedPremises.lean` over every result theorem and joins its
   proof-term usage with bind-check's premise binding. A finding names the
   result, the premise statement and its hypothesis (or theory-bundle
