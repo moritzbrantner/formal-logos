@@ -413,3 +413,43 @@ export (`--constants`) and either `--target ID` or a
 `truth thickness --queue --json` or `corpus.py thickness --queue --json` file (`--queue-file`, first `--targets N`,
 default 10). It is a search heuristic, not a proof or equivalence judgment;
 see `docs/bridge-candidates.md` for the pipeline and the optional Lean trial.
+
+## `configurations`, `models`, `territory`
+
+These port the Lean-free parts of `corpus.py configurations`, `models` and
+`territory` (#954 slice B2): `truth::configurations` (`implication_closure`,
+`configuration_report`), `truth::finite_models` (`model_report`) and
+`truth::territory` (`territory_report`). Text output is byte-identical to
+Python's; `--json` prints the Python JSON (plus `input_identity` for `models`
+and `territory`; `configurations` prints Python's list as is). A corpus error
+prints Python's `corpus error: …` with exit code 2.
+
+- `truth configurations --registered [--case ID] [--seed STATEMENT]
+  [--premise STATEMENT]...`: the registered projection (no certified status).
+  It validates the models and cases first, as Python's `configuration_context`
+  does (`truth::check::registered_configurations`), not the whole corpus.
+  Without `--registered` Python builds the modules and checks every
+  certificate and original theorem in Lean; Rust refuses and names the Python
+  command (exit 2). The verified projection is ported in the library and
+  unit-tested against Python's fixture cases; slice A6 wires it to
+  `configuration-report`.
+- `truth models`: every registered model and its co-failure candidates.
+  `--check`, `--argument` and `--verify` Lean-check all registered models in
+  Python, so Rust refuses them and names the Python command; `--premise`
+  without either fails as in Python.
+- `truth territory [--frontier-root STATEMENT] [--max-atoms N]`: Python's
+  `--root` is `--frontier-root` here. Like Python it runs the full `check`
+  validation first (`cli::validate_first`) and reads the in-process Rust
+  frontier. Position IDs hash with a built-in SHA-256. The global position
+  count is exact (Python's unbounded int): the text prints every digit; a
+  count beyond `u64` has no exact JSON number here, so `--json` then fails
+  with `unrepresentable_count` (exit 1) and names the Python command instead
+  of printing a wrong number.
+
+`scripts/truth_parity/configurations.py` compares them on the real corpus
+(every case, filtering by uuid and legacy id, seed and premise selections and
+their errors; `models`; `territory` with the default bound, `--max-atoms` 40
+and -3 and an unknown root) and on a fixture checkout with an incompatibility
+core, an implication rule, a model a fixed constant excludes, co-failures, a
+refutation core and a model that satisfies it (a `DEFECT` line), a broken
+corpus and seven broken registrations.

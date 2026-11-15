@@ -19,12 +19,14 @@ mod args;
 mod bind_check;
 mod bridges;
 mod check;
+mod configurations;
 mod context;
 mod dossier;
 mod frontier;
 mod frontier_diff;
 mod ids;
 mod inspect;
+mod models;
 mod next;
 mod next_steps;
 mod orphans;
@@ -33,6 +35,7 @@ mod research;
 mod sort_lists;
 mod status;
 mod structure;
+mod territory;
 mod thickness;
 
 pub use args::{Accepts, Args};
@@ -54,6 +57,9 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] arguments
        truth [--root PATH] [--json] results
        truth [--root PATH] [--json] sort-lists
+       truth [--root PATH] [--json] configurations --registered [--case ID] [--seed STATEMENT] [--premise STATEMENT]...
+       truth [--root PATH] [--json] models
+       truth [--root PATH] [--json] territory [--frontier-root STATEMENT] [--max-atoms N]
        truth [--root PATH] [--json] bind-check [--result RESULT]... [--affected --base REV [--head REV]]
              [--lean-json FILE] [--print-lean-input]
        truth [--root PATH] [--json] structure STATEMENT [--unfold DECLARATION]... [--extractor-json FILE]
@@ -98,6 +104,9 @@ pub const COMMANDS: &[Command] = &[
     ids::ARGUMENTS,
     ids::RESULTS,
     sort_lists::COMMAND,
+    configurations::COMMAND,
+    models::COMMAND,
+    territory::COMMAND,
     bind_check::COMMAND,
     structure::STRUCTURE,
     structure::REPORT,
@@ -296,7 +305,8 @@ pub fn load(args: &Args) -> Result<(Corpus, Aliases, String), Failure> {
 /// `thickness`, `frontier` and `dossier --all` call `validate()` first; a
 /// Rust port of such a command that must keep that behaviour calls this
 /// before [`load`]. Warnings are not printed (Python prints them only for
-/// `check`). `next`, `next-steps`, `arguments`, `results` and `bind-check`
+/// `check`). `next`, `next-steps`, `arguments`, `results`, `territory` and
+/// `bind-check`
 /// call it; the earlier ports perform only the structural load.
 pub fn validate_first(root: &Path) -> Result<truth::check::Outcome, Failure> {
     truth::check::check(root)

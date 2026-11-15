@@ -2,8 +2,9 @@
 """Compare the Rust CLI with the existing Python corpus readers: the
 structural view (`status`, `inspect`), `thickness [--queue]`, `check`,
 `frontier`, `frontier-diff`, the research navigation commands `related`,
-`dossier` and `context`, `next`, `next-steps`, `arguments`, `results`
-and `sort-lists`, `bind-check` (from recorded BindTypes output) and
+`dossier` and `context`, `next`, `next-steps`, `arguments`, `results`,
+`sort-lists`, `configurations --registered`, `models` and `territory`,
+`bind-check` (from recorded BindTypes output) and
 `structure`/`structure-report` (from recorded PropositionStructure output).
 
 The tests live in the `truth_parity` package, one module per command; this
@@ -22,6 +23,7 @@ from truth_parity.frontier import TruthFrontierParity  # noqa: F401
 from truth_parity.research import TruthResearchParity  # noqa: F401
 from truth_parity.check import TruthCheckParity  # noqa: F401
 from truth_parity.navigation import TruthNavigationParity  # noqa: F401
+from truth_parity.configurations import TruthConfigurationParity  # noqa: F401
 from truth_parity.bind_check import TruthBindCheckParity  # noqa: F401
 from truth_parity.proposition_structure import TruthStructureParity  # noqa: F401
 
