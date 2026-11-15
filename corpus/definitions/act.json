@@ -10,5 +10,24 @@
     "448c2608-b7ba-5399-bda9-66581ed3d6ca"
   ],
   "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel.InAct",
-  "note": "Lean locator: MotionModel.InAct is the field InAct : Being → Respect → Prop, not the whole MotionModel and not a proof of its metaphysical interpretation. The field is a primitive input; the linked premise readings constrain its use but do not define actual possession of a perfection. The match between an intended example and this primitive interpretation remains OPEN."
+  "note": "Lean locator: MotionModel.InAct is the field InAct : Being → Respect → Prop, not the whole MotionModel and not a proof of its metaphysical interpretation. The field is a primitive input; the linked premise readings constrain its use but do not define actual possession of a perfection. The match between an intended example and this primitive interpretation remains OPEN.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "MotionModel.InAct x r says that the being x actually has the perfection or determination r now, as fire is actually hot. It is a supplied relation between a being and a respect. At the distinguished respect esse it says that x has being (DEF-ESSE). Lean does not fix whether 'actually having r' means having it formally (as r itself) or virtually (as able to cause it): DISAMB-IN-ACT records both senses and the case does not choose.",
+    "examples": [
+      "Fire actually hot, with r being hot.",
+      "A knower actually contemplating, with r contemplating."
+    ],
+    "exclusions": [
+      "Being only able to be r: potency (DEF-POTENCY, InPotency x r := CanBe x r ∧ ¬ InAct x r in the adopted sense).",
+      "Having had r in the past, or being going to have it.",
+      "The formal, virtual and inclusive act senses of ActFrame (DEF-IN-ACT-FORMALLY, DEF-IN-ACT-VIRTUALLY, DEF-IN-ACT-FORMALLY-OR-VIRTUALLY) are separate declarations; this field is not identified with any one of them."
+    ],
+    "open_obligations": [
+      "That nothing is in act and in potency in the same respect at once is the premise STMT-NOTHING-IN-ACT-AND-POTENCY-IN-SAME-RESPECT, not a law of the field. For the adopted potency predicate (DEF-POTENCY, defined from CanBe and InAct) it holds by construction; MotionModel.InPotency is a separate field, so in a MotionModel it remains a premise.",
+      "That a mover is in act in the respect in which it moves is the separate premise STMT-NOTHING-MOVES-EXCEPT-AS-IN-ACT.",
+      "Which of the formal and virtual senses a defence of the act premises uses must be fixed and defended for all of them (DISAMB-IN-ACT); this remains OPEN.",
+      "No formalization candidate: actual possession of a perfection is the basic notion from which potency is defined, not defined from other vocabulary."
+    ]
+  }
 }

@@ -9,5 +9,23 @@
     "ebcc0d64-270e-52e2-915a-234351adc452"
   ],
   "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel.Being",
-  "note": "Lean locator: MotionModel.Being is the primitive carrier type, not the whole MotionModel or a predicate establishing which real things are beings. The chosen carrier interpretation is supplied by an application; neither existence nor the categorical reading follows from the field declaration alone. That applicability remains OPEN."
+  "note": "Lean locator: MotionModel.Being is the primitive carrier type, not the whole MotionModel or a predicate establishing which real things are beings. The chosen carrier interpretation is supplied by an application; neither existence nor the categorical reading follows from the field declaration alone. That applicability remains OPEN.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "MotionModel.Being is the carrier type of a model: the things the model's predicates are about, read as beings in the sense of entities (whatever is a thing, as divided by the categories). A model supplies the type; Lean only fixes that its elements are what MovedIn, MovesIn, InAct and the other fields are said of. Membership in the carrier is not itself a claim that something exists actually: actual being is the separate predicate InAct x esse (DEF-ESSE).",
+    "examples": [
+      "Socrates, a fire, a piece of wood, read as elements of the carrier in an application of the prima via.",
+      "In the finite prima via models (TruthCore/Results/Aquinas/SummaTheologiae/PrimaViaModels.lean) the carrier is a three-element type such as StrongBeing with elements g, f, x; these are formal interpretations, not claims about which real things are beings."
+    ],
+    "exclusions": [
+      "Being as the truth of a proposition (DEF-BEING-AS-TRUTH-OF-A-PROPOSITION): 'there is evil' is the truth of a sentence, and sentences are a different Lean type (DISAMB-BEING).",
+      "Privations such as evil or blindness are not elements of the carrier in this sense.",
+      "Respects (MotionModel.Respect) are a separate type, so a respect is not a being of the model."
+    ],
+    "open_obligations": [
+      "Which real things the carrier ranges over, and that the categorical reading applies, are supplied by an application and remain OPEN.",
+      "Whether being is said univocally or analogically of the elements is a separate axis (DISAMB-BEING-UNIVOCITY); nothing in the carrier type decides it, and 'more or less in being' is the separate comparative MoreIn esse.",
+      "No formalization candidate: a carrier type is a parameter of every model and has no definition from other vocabulary."
+    ]
+  }
 }

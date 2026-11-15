@@ -9,5 +9,24 @@
     "309125b3-65b0-5d6a-a727-20317ecb181d"
   ],
   "lean_declaration": "TruthCore.Causality.TermSenseForks.PriorityFrame.PriorInSubstance",
-  "note": "Primitive boundary: the linked declaration projects an independently supplied binary relation on beings from PriorityFrame Being Respect; it is not a definition by temporal, causal or perfection data. See docs/notes/load-bearing-terms.md, Priority semantic linkage audit, for interpretation, dependency boundaries, examples, exclusions and OPEN structural constraints. No statement meaning or frozen Challenge changes."
+  "note": "Primitive boundary: the linked declaration projects an independently supplied binary relation on beings from PriorityFrame Being Respect; it is not a definition by temporal, causal or perfection data. See docs/notes/load-bearing-terms.md, Priority semantic linkage audit, for interpretation, dependency boundaries, examples, exclusions and OPEN structural constraints. No statement meaning or frozen Challenge changes.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "PriorityFrame.PriorInSubstance y x says that y is prior to x in substance and perfection: y comes first in the order of what is more complete or perfect, as Aristotle and Aquinas say incorruptible beings are prior to corruptible ones (Met. IX.8, In Metaph. IX lect. 9 n. 1). It is a supplied binary relation on beings, not defined from temporal, causal or perfection data.",
+    "examples": [
+      "An incorruptible being relative to a corruptible one, under the reading IncorruptiblePriorInSubstanceReading (a conditional intended example)."
+    ],
+    "exclusions": [
+      "Being earlier in time (PriorInTime): chronological age alone is insufficient.",
+      "Simple priority (PriorSimply): ActPriorFromIncorruptibleFacts reaches it only through the explicit unattributed hypothesis PriorInSubstanceIsSimpleReading (DISAMB-PRIORITY-SIMPLE-OR-IN-TIME).",
+      "An assumed causal dependence (CausesIn)."
+    ],
+    "open_obligations": [
+      "A criterion of perfection sufficient to determine the relation is OPEN.",
+      "Irreflexivity, asymmetry and transitivity are not imposed by the frame.",
+      "The bridge from priority in substance to simple priority (PriorInSubstanceIsSimpleReading) is open and cannot be made definitional.",
+      "Coverage and exclusivity of the three priority senses (STMT-PRIOR-SENSES-EXHAUSTIVE, STMT-PRIOR-SENSE-UNIQUE) remain open frontier premises.",
+      "Formalization candidate, conditional on new data: given a perfection order on beings, the relation could be defined as strict precedence in that order; the corpus has no such order yet."
+    ]
+  }
 }

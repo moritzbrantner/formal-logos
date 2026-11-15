@@ -9,5 +9,24 @@
     "9000e8a5-9b99-50db-a902-297c337cf8e2"
   ],
   "lean_declaration": "TruthCore.Causality.TermSenseForks.CauseFrame.CausesOrigin",
-  "note": "Typed parameter location: CausesOrigin : Being → Being → Prop in WhatComesToBeAnewHasInnovatingCauseReading. That usage-site reading is a constraining premise, not a definition of that primitive relation. Its witness separately satisfies c ≠ x; distinctness is not built into every CausesOrigin edge by the parameter type. The intended originating-cause interpretation remains OPEN. Audit #1233: the primary locator now names CauseFrame.CausesOrigin, a primitive relation field, rather than the quantified reading. This change supplies no definition body, structural law or bridge."
+  "note": "Typed parameter location: CausesOrigin : Being → Being → Prop in WhatComesToBeAnewHasInnovatingCauseReading. That usage-site reading is a constraining premise, not a definition of that primitive relation. Its witness separately satisfies c ≠ x; distinctness is not built into every CausesOrigin edge by the parameter type. The intended originating-cause interpretation remains OPEN. Audit #1233: the primary locator now names CauseFrame.CausesOrigin, a primitive relation field, rather than the quantified reading. This change supplies no definition body, structural law or bridge.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "CauseFrame.CausesOrigin c x says that x's coming to be takes its origin from c: c is a cause of x's beginning, read from SCG I.13 for what comes to be anew. It is a supplied binary relation between beings, with no respect argument. It does not say that c continues to sustain x, that c is God, or that c moves x in some respect.",
+    "examples": [
+      "A craftsman from whom a newly made artifact comes to be.",
+      "Parents from whom a child comes to be, read as origin only."
+    ],
+    "exclusions": [
+      "Mere simultaneous presence with x, or conservation of an x that already exists.",
+      "Causing x's being (CausesIn at esse) and moving x in a respect (MovesIn): separate senses in DISAMB-CAUSE and DISAMB-COMING-TO-BE.",
+      "Being present at a first instant: beginning is not equated with existing at an earliest time."
+    ],
+    "open_obligations": [
+      "Distinctness of cause and effect is not built into the relation: the reading WhatComesToBeAnewHasInnovatingCauseReading asserts a witness c with c ≠ x as a separate conjunct.",
+      "Transitivity, asymmetry and well-foundedness are not assumed.",
+      "The originating-cause interpretation and its applicability to real beginnings remain OPEN; the finite-past result does not identify the cause as God.",
+      "No formalization candidate: defining it from a time order and the existence predicate would replace a causal relation by a temporal one."
+    ]
+  }
 }
