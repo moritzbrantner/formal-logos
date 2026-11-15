@@ -665,7 +665,8 @@ class ExplorerInputsTest(unittest.TestCase):
             for match in SCRIPT_REFERENCE.findall(path.read_text(encoding="utf-8"))
             if (REPO / match).is_file()
         }
-        self.assertIn("scripts/corpus.py", referenced)
+        # The explorer reads the corpus through the Rust CLI; it still names the identity module.
+        self.assertIn("scripts/corpus_ids.py", referenced)
         pending = [path for path in referenced if path.endswith(".py")]
         while pending:
             text = (REPO / pending.pop()).read_text(encoding="utf-8")

@@ -22,7 +22,7 @@ use serde_json::{Map, Value, json};
 use std::{
     collections::{BTreeMap, HashMap},
     fs,
-    path::{Component, Path, PathBuf},
+    path::{Path, PathBuf},
     process::Command,
     time::Duration,
 };
@@ -382,32 +382,7 @@ pub fn dumps(value: &Value) -> String {
     ordered(value).dumps(Some(2))
 }
 
-/// pathlib `Path.resolve()` (non-strict): symlinks of the existing prefix
-/// resolved, the rest normalized lexically.
-pub fn resolve(path: &Path) -> PathBuf {
-    let mut existing = path.to_path_buf();
-    let mut rest = Vec::new();
-    while fs::canonicalize(&existing).is_err() {
-        match (existing.file_name(), existing.parent()) {
-            (Some(name), Some(parent)) => {
-                rest.push(name.to_owned());
-                existing = parent.to_path_buf();
-            }
-            _ => return path.to_path_buf(),
-        }
-    }
-    let mut resolved = fs::canonicalize(&existing).unwrap_or(existing);
-    for name in rest.into_iter().rev() {
-        match Path::new(&name).components().next() {
-            Some(Component::ParentDir) => {
-                resolved.pop();
-            }
-            Some(Component::CurDir) | None => {}
-            _ => resolved.push(name),
-        }
-    }
-    resolved
-}
+pub use crate::strength::resolve;
 
 fn is_symlink(path: &Path) -> bool {
     fs::symlink_metadata(path).is_ok_and(|meta| meta.file_type().is_symlink())
@@ -620,6 +595,26 @@ pub fn read_bundle(root: &Path, path: &Path, context: &Context) -> Result<Value,
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn output_must_stay_inside_cache_after_normalization() {
+        let root = std::env::temp_dir().join(format!("truth-config-cache-{}", std::process::id()));
+        fs::create_dir_all(root.join(".cache")).unwrap();
+        let inside = output_path(&root, &root.join(".cache/new/report.json")).unwrap();
+        assert!(inside.ends_with(".cache/new/report.json"));
+        for escaping in [
+            ".cache/new/../../victim.txt",
+            ".cache/../victim.txt",
+            ".cache/a/b/../../../x",
+        ] {
+            assert_eq!(
+                output_path(&root, &root.join(escaping)).unwrap_err(),
+                "configuration report output must be inside the clone .cache directory",
+                "{escaping}"
+            );
+        }
+        let _ = fs::remove_dir_all(&root);
+    }
 
     #[test]
     fn digest_is_compact_sorted_json() {

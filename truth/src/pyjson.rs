@@ -214,10 +214,17 @@ impl<'de> Visitor<'de> for OrderedVisitor {
 
     fn visit_map<A: MapAccess<'de>>(self, mut map: A) -> Result<Ordered, A::Error> {
         let mut entries: Vec<(String, Ordered)> = Vec::new();
+        // Key positions, so a large object (a hashed input manifest) loads
+        // in linear time.
+        let mut positions: std::collections::HashMap<String, usize> =
+            std::collections::HashMap::new();
         while let Some((key, value)) = map.next_entry::<String, Ordered>()? {
-            match entries.iter_mut().find(|(name, _)| *name == key) {
-                Some(entry) => entry.1 = value,
-                None => entries.push((key, value)),
+            match positions.get(&key) {
+                Some(&index) => entries[index].1 = value,
+                None => {
+                    positions.insert(key.clone(), entries.len());
+                    entries.push((key, value));
+                }
             }
         }
         Ok(Ordered::Object(entries))

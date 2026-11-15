@@ -1,6 +1,7 @@
 //! Read-only structural view of the canonical corpus.
 pub mod attribution;
 pub mod bind_check;
+pub mod bridge_experiments;
 pub mod bridges;
 pub mod check;
 pub mod configuration_explorer;
@@ -22,6 +23,7 @@ pub mod pyjson;
 pub mod related;
 pub mod senses;
 pub(crate) mod sha256;
+pub mod strength;
 pub mod structure;
 pub mod subprocess;
 pub mod territory;

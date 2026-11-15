@@ -18,6 +18,7 @@ use truth::{
 mod args;
 mod attribution_check;
 mod bind_check;
+mod bridge_experiments;
 mod bridges;
 mod check;
 mod configuration_report;
@@ -37,8 +38,10 @@ mod next_steps;
 mod orphans;
 mod related;
 mod research;
+mod senses;
 mod sort_lists;
 mod status;
+mod strength;
 mod structure;
 mod territory;
 mod thickness;
@@ -76,10 +79,15 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] structure STATEMENT [--unfold DECLARATION]... [--extractor-json FILE]
        truth [--root PATH] [--json] structure-report [--output FILE] [--build-input | --check-input]
              [--extractor-json FILE]
+       truth [--root PATH] [--json] strength-comparisons [COMPARISON] [--registered]
+       truth [--root PATH] [--json] strength-report [--output FILE] [--build-input | --check-input]
        truth [--root PATH] [--json] unused-premises [--strict] [--exemptions FILE] [--frontier-root STATEMENT]
              [--bind-json FILE] [--usage-json FILE]
        truth [--root PATH] [--json] lean-reuse --review [--usage-json FILE]
        truth [--root PATH] [--json] attribution-check --base REV [--materialize] [--max-chars N]
+       truth [--root PATH] [--json] senses (report [--write] | allowlist [--write] | ratchet --base REV)
+       truth [--root PATH] [--json] bridge-experiments RESULT --profile-module MODULE [--limit N]
+             [--frontier-root STATEMENT]
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
@@ -130,9 +138,13 @@ pub const COMMANDS: &[Command] = &[
     bind_check::COMMAND,
     structure::STRUCTURE,
     structure::REPORT,
+    strength::COMPARISONS,
+    strength::REPORT,
     unused_premises::COMMAND,
     lean_reuse::COMMAND,
     attribution_check::COMMAND,
+    senses::COMMAND,
+    bridge_experiments::COMMAND,
 ];
 
 /// Parses `args` and runs the command it names.
@@ -147,10 +159,18 @@ pub fn run(args: &[OsString]) -> Output {
             Some(command)
                 if args.structure.flags
                     && !command.name.starts_with("structure")
+                    && command.name != "strength-report"
                     && command.name != "configuration-report" =>
             {
                 Err(usage(
-                    "--unfold, --output, --build-input, --check-input and --extractor-json apply only to structure, structure-report and configuration-report",
+                    "--unfold, --output, --build-input, --check-input and --extractor-json apply only to structure, structure-report, strength-report and configuration-report",
+                ))
+            }
+            Some(command)
+                if args.recorded_exporters.is_some() && !command.name.starts_with("strength-") =>
+            {
+                Err(usage(
+                    "--recorded-exporters applies only to strength-comparisons and strength-report",
                 ))
             }
             Some(command)
@@ -165,6 +185,11 @@ pub fn run(args: &[OsString]) -> Output {
             Some(command) if args.attribution.flags && command.name != "attribution-check" => Err(
                 usage("--materialize and --max-chars apply only to attribution-check"),
             ),
+            Some(command)
+                if args.profile_module.is_some() && command.name != "bridge-experiments" =>
+            {
+                Err(usage("--profile-module applies only to bridge-experiments"))
+            }
             Some(command) => (command.run)(&args, operands),
             None => Err(args.shape_error()),
         },
