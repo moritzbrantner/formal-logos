@@ -1,0 +1,7 @@
+{
+  "id": "e5d2e1a0-9b74-468a-9ce5-786141b2a2d6",
+  "label": "theorem (ordinary)",
+  "lemma": "theorem",
+  "class": "ordinary",
+  "gloss": "A proposition proved from stated premises, usually a Lean declaration whose type is the proposition."
+}

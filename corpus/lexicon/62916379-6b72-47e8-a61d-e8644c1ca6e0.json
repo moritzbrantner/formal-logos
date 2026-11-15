@@ -1,0 +1,10 @@
+{
+  "id": "62916379-6b72-47e8-a61d-e8644c1ca6e0",
+  "label": "head (ordinary)",
+  "lemma": "head",
+  "class": "ordinary",
+  "forms": [
+    "heads"
+  ],
+  "gloss": "The top or first item, such as the head of a chain or a head symbol of a Lean term; Heads names one side of a coin in probability examples."
+}

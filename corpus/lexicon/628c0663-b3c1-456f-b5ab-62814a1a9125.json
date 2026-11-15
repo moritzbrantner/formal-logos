@@ -1,0 +1,7 @@
+{
+  "id": "628c0663-b3c1-456f-b5ab-62814a1a9125",
+  "label": "structure (ordinary)",
+  "lemma": "structure",
+  "class": "ordinary",
+  "gloss": "An arrangement of parts; in Lean, a record type."
+}

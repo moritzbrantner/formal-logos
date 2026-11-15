@@ -1,0 +1,7 @@
+{
+  "id": "3cc91e89-10f2-4ff2-bc12-300ec4c3a361",
+  "label": "induction (ordinary)",
+  "lemma": "induction",
+  "class": "ordinary",
+  "gloss": "Proof by induction over a well-founded order; also generalization from cases."
+}

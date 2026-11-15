@@ -1,0 +1,7 @@
+{
+  "id": "029aa23c-48cf-42f8-80ce-3923ddf0ad80",
+  "label": "result (ordinary)",
+  "lemma": "result",
+  "class": "ordinary",
+  "gloss": "An outcome or consequence; in the repository, a result record verifying an argument's Lean theorem (docs/corpus-model.md)."
+}

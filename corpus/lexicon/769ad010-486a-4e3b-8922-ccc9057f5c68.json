@@ -1,0 +1,11 @@
+{
+  "id": "769ad010-486a-4e3b-8922-ccc9057f5c68",
+  "label": "quantify (ordinary)",
+  "lemma": "quantify",
+  "class": "ordinary",
+  "forms": [
+    "quantified",
+    "quantifies"
+  ],
+  "gloss": "To bind a variable by a quantifier such as for all or there exists."
+}

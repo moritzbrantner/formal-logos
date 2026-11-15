@@ -1,0 +1,7 @@
+{
+  "id": "263f3d77-53eb-4493-b320-8414d23e1b4a",
+  "label": "parameter (ordinary)",
+  "lemma": "parameter",
+  "class": "ordinary",
+  "gloss": "A variable input to a definition or theorem, such as a Lean parameter left uninterpreted."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "3205ae61-eea8-4032-b134-a83c78ca0cd2",
+  "label": "materialize (ordinary)",
+  "lemma": "materialize",
+  "class": "ordinary",
+  "forms": [
+    "materialized"
+  ],
+  "gloss": "To fetch and verify a pinned source witness's text locally (source_evidence.py materialize)."
+}

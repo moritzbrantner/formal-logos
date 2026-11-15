@@ -1,0 +1,10 @@
+{
+  "id": "407e8fdc-2996-4e79-8526-84517e2a1cba",
+  "label": "encode (ordinary)",
+  "lemma": "encode",
+  "class": "ordinary",
+  "forms": [
+    "encoded"
+  ],
+  "gloss": "To express in a formal language such as Lean."
+}

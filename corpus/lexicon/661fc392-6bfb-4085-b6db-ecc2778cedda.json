@@ -1,0 +1,7 @@
+{
+  "id": "661fc392-6bfb-4085-b6db-ecc2778cedda",
+  "label": "prop (ordinary)",
+  "lemma": "prop",
+  "class": "ordinary",
+  "gloss": "The Lean type Prop of propositions."
+}

@@ -1,0 +1,7 @@
+{
+  "id": "5ec00e31-b8d1-4a8b-a961-2578e979c26f",
+  "label": "dependent (ordinary)",
+  "lemma": "dependent",
+  "class": "ordinary",
+  "gloss": "Relying on another, or a dependent type in Lean."
+}

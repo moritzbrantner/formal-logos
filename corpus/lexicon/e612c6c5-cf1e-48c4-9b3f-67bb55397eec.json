@@ -1,0 +1,10 @@
+{
+  "id": "e612c6c5-cf1e-48c4-9b3f-67bb55397eec",
+  "label": "doc (ordinary)",
+  "lemma": "doc",
+  "class": "ordinary",
+  "forms": [
+    "docs"
+  ],
+  "gloss": "A repository documentation file, usually under docs/."
+}

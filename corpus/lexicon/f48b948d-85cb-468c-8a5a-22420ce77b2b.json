@@ -1,0 +1,7 @@
+{
+  "id": "f48b948d-85cb-468c-8a5a-22420ce77b2b",
+  "label": "argument (ordinary)",
+  "lemma": "argument",
+  "class": "ordinary",
+  "gloss": "A set of premises offered in support of a conclusion; in the repository, an argument record composing inference steps (docs/corpus-model.md)."
+}

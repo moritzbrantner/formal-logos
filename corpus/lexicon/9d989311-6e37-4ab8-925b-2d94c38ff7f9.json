@@ -1,0 +1,11 @@
+{
+  "id": "9d989311-6e37-4ab8-925b-2d94c38ff7f9",
+  "label": "need (ordinary)",
+  "lemma": "need",
+  "class": "ordinary",
+  "forms": [
+    "needed",
+    "needs"
+  ],
+  "gloss": "To require; a needed premise is one whose omission breaks the result."
+}

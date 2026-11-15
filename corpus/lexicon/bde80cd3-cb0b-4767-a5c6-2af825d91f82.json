@@ -1,0 +1,7 @@
+{
+  "id": "bde80cd3-cb0b-4767-a5c6-2af825d91f82",
+  "label": "propext (ordinary)",
+  "lemma": "propext",
+  "class": "ordinary",
+  "gloss": "Lean's propositional extensionality axiom, one of the permitted axioms."
+}

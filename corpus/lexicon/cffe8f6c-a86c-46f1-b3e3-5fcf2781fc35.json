@@ -1,0 +1,7 @@
+{
+  "id": "cffe8f6c-a86c-46f1-b3e3-5fcf2781fc35",
+  "label": "profile (ordinary)",
+  "lemma": "profile",
+  "class": "ordinary",
+  "gloss": "A bundle of assignments or predicates describing one configuration, often a Lean structure collecting a model's vocabulary."
+}

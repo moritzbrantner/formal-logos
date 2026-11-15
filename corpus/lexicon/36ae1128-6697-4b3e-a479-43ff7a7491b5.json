@@ -1,0 +1,7 @@
+{
+  "id": "36ae1128-6697-4b3e-a479-43ff7a7491b5",
+  "label": "binding (ordinary)",
+  "lemma": "binding",
+  "class": "ordinary",
+  "gloss": "Connecting a record to a Lean declaration (bind-check); also obligatory."
+}

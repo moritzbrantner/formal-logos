@@ -1,0 +1,10 @@
+{
+  "id": "37d1edc2-0ab0-4088-b1b4-0c6266de72f4",
+  "label": "satisfiability (ordinary)",
+  "lemma": "satisfiability",
+  "class": "ordinary",
+  "forms": [
+    "satisfiable"
+  ],
+  "gloss": "Being satisfiable: some model or assignment makes the formula or set true."
+}
