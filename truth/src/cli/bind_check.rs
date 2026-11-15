@@ -6,7 +6,9 @@
 //! `scripts/BindTypes.lean` exporter (or reads its saved output) and binds
 //! every argument record to its theorem's Lean type. The full run also
 //! reports stale pins and, when Lean runs, verifies the registered finite
-//! models. Stdout is Python's, byte for byte, in both modes.
+//! models. Stdout is Python's, byte for byte, in both modes. After running
+//! Lean it also records the described types in the elaborated-type cache
+//! that `context` reads ([`bind_types`]).
 
 use super::{
     Accepts, Args, Command, Failure, Output, corpus_error, load, raw, read_json, resolve_in,
@@ -16,7 +18,10 @@ use std::{
     path::Path,
     process::{Command as Process, Stdio},
 };
-use truth::bind_check::{self, Contracts};
+use truth::{
+    bind_check::{self, Contracts},
+    bind_types,
+};
 
 pub const COMMAND: Command = Command {
     name: "bind-check",
@@ -68,7 +73,13 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         },
         None => {
             let input = bind_check::tool_input(&corpus, &contracts, &requests);
-            bind_check::run_tool(&args.root, &input).map_err(corpus_error)?
+            let described = bind_check::run_tool(&args.root, &input).map_err(corpus_error)?;
+            // The elaborated types `context` shows (#960); a saved
+            // `--lean-json` output has no provenance and is never cached.
+            if let Err(error) = bind_types::write(&args.root, &corpus, &described) {
+                eprintln!("bind-check: elaborated-type cache not written: {error}");
+            }
+            described
         }
     };
     let mut report = bind_check::report(

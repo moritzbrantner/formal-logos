@@ -75,6 +75,14 @@ pub struct Contracts {
 }
 
 impl Contracts {
+    /// No contracts: binding by head constant and pins alone.
+    pub fn none() -> Self {
+        Self {
+            root: PathBuf::new(),
+            by_result: BTreeMap::new(),
+        }
+    }
+
     pub fn load(root: &Path) -> Result<Self, String> {
         let mut paths: Vec<PathBuf> = match fs::read_dir(root.join(CONTRACTS)) {
             Ok(entries) => entries

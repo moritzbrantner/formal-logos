@@ -429,7 +429,34 @@ nothing here closes a statement, changes a route cost or certifies anything.
   ID, a result ID or a statement concluded by exactly one argument. The frozen
   Lean statement and companion theorems are read from each result's Challenge
   module, imports from the Solution modules and permitted axioms from the
-  Comparator config, as Python does.
+  Comparator config, as Python does. Rust adds the elaborated types below.
+
+**Elaborated types (#960, Rust only).** After running Lean, `truth
+bind-check` (full or scoped, but not from a saved `--lean-json`) records
+each described result theorem in `.cache/bind-types.json`
+(`truth::bind_types`; `$TRUTH_BIND_TYPES_CACHE` overrides the path): the
+exporter's binder names, head constants and types as Lean pretty-printed them
+with full names, the result type and theory-bundle conjuncts, and an input
+digest over the Lean toolchain, Lake manifest and configuration,
+`scripts/BindTypes.lean`, the Solution module, every repository module in its
+source import closure and their `.olean.hash` files. A scoped run merges into
+the existing cache. `context` only reads it and never runs Lean: for each
+result whose entry still matches the result record and whose digest it
+recomputes unchanged, the text pack adds an `elaborated` block (parameters,
+each hypothesis or bundle conjunct `h.N` with its type and bound statement or
+`unbound`, the conclusion, unbound premises; hypothesis lines are cut at
+about 1 KB per result, and `--json` carries the full signature and every
+hypothesis under `lean[].elaborated`). The binding is recomputed from the
+cached types and the current records with `bind-check`'s rules, without
+expression contracts or sense checks, so it is advisory and never
+verification evidence. When the cache is absent, unreadable or stale for a
+result, the text pack adds exactly one line saying so under the Lean heading
+and otherwise keeps the source-text view; `--json` always carries the
+`bind_types` summary. Actual axioms are not shown: no Comparator or NanoDa
+output is kept locally (CI logs only), so only the permitted axioms of the
+Comparator config appear. Python's `context` has none of this; the parity
+tests point Rust at an absent cache and drop the notice line and the
+`bind_types` summary before comparing.
 
 `dossier` and `context` consume the frontier report. Without
 `--frontier-json` they compute it in-process with the Rust `frontier` (the

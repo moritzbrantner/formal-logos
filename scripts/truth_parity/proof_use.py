@@ -27,7 +27,7 @@ from pathlib import Path
 import corpus
 from truth_parity.bind_check import FIX, described, hyp
 from truth_parity.check import by_id, write_check_fixture
-from truth_parity.common import U, ParityCase, without_note_field, without_note_mentions
+from truth_parity.common import U, NO_BIND_TYPES, ParityCase, without_bind_types, without_note_field, without_note_mentions
 
 # Stands in for `lake env lean --run TOOL INPUT`: keeps a copy of INPUT under
 # $FAKE_CAPTURE and prints the recorded output for TOOL from $FAKE_OUTPUTS.
@@ -132,7 +132,7 @@ class TruthProofUseParity(ParityCase):
     def run_cli(self, command, root, arguments, capture):
         capture.mkdir(parents=True, exist_ok=True)
         env = dict(os.environ, PATH=f"{self.tools}{os.pathsep}{os.environ['PATH']}",
-                   FAKE_CAPTURE=str(capture), FAKE_OUTPUTS=str(self.outputs))
+                   FAKE_CAPTURE=str(capture), FAKE_OUTPUTS=str(self.outputs), **NO_BIND_TYPES)
         return subprocess.run(command + arguments, capture_output=True, text=True, check=False, env=env,
                               cwd=root)
 
@@ -144,6 +144,8 @@ class TruthProofUseParity(ParityCase):
                                   [*(python_arguments or arguments), *json_flag], root / "capture-python")
             rust = self.run_cli([str(self.binary), "--root", str(root)], root, [*arguments, *json_flag],
                                 root / "capture-rust")
+            if arguments[0] == "context" and rust.returncode == 0:
+                rust.stdout = without_bind_types(rust.stdout)
             self.assertEqual(rust.returncode, python.returncode, (arguments, python.stderr, rust.stderr))
             if python.returncode == 2:
                 message = json.loads(rust.stderr)["error"]["message"] if json_flag else None
@@ -316,7 +318,9 @@ class TruthProofUseParity(ParityCase):
             python = subprocess.run([sys.executable, str(corpus.ROOT / "scripts" / "corpus.py"),
                                      *(python_arguments or arguments)], capture_output=True, text=True, check=False)
             rust = subprocess.run([self.binary, "--root", str(corpus.ROOT), *arguments], capture_output=True,
-                                  text=True, check=False)
+                                  text=True, check=False, env=dict(os.environ, **NO_BIND_TYPES))
+            if arguments[0] == "context" and rust.returncode == 0:
+                rust.stdout = without_bind_types(rust.stdout)
             self.assertEqual(rust.returncode, python.returncode, (arguments, python.stderr, rust.stderr))
             if semantic:
                 report = without_note_field(json.loads(rust.stdout))
