@@ -1,7 +1,7 @@
-import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { isExpressionNode, type StructureDeclaration } from "./proposition-structure";
+import { truthText } from "./truth-cli";
 
 export type StrengthObligation = {
   role: string; result_id: string; theorem: string; argument_id: string; bound: true;
@@ -90,7 +90,7 @@ export function parseStrengthComparisons(value: unknown): StrengthComparison[] {
   return value.comparisons as StrengthComparison[];
 }
 let cached: StrengthComparison[] | undefined;
-/** Static presentation input. Source freshness is owned by the existing Python producer. */
+/** Static presentation input. Source freshness is owned by the producer, `truth strength-report` (truth/README.md). */
 export function getStrengthComparisons(): StrengthComparison[] {
   if (cached === undefined) {
     const root = path.resolve(process.cwd(), "../..");
@@ -100,7 +100,7 @@ export function getStrengthComparisons(): StrengthComparison[] {
       if (process.env.TRUTH_CORE_REQUIRE_STRENGTH_REPORT === "true") throw new Error("Certified comparison input missing; run bun run strength-inputs");
       cached = [];
     } else {
-      execFileSync("python3", ["scripts/corpus.py", "strength-report", "--check-input", "--output", artifact], { cwd: root, timeout: 60000, stdio: "pipe" });
+      truthText(["strength-report", "--check-input", "--output", artifact], 60000);
       cached = parseStrengthComparisons(JSON.parse(readFileSync(artifact, "utf8")));
     }
   }
