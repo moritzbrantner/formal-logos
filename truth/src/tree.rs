@@ -222,9 +222,11 @@ fn strings(record: &Map<String, Value>, field: &str) -> Vec<String> {
         .collect()
 }
 
-struct Index<'a> {
+/// The corpus indexes a tree walk reads, shared by every root of a batch.
+/// Built from a frontier report only for its root-independent
+/// `transcription_results`.
+pub struct Index<'a> {
     corpus: &'a Corpus,
-    report: &'a Value,
     concluding: HashMap<String, Vec<String>>,
     using: HashMap<String, Vec<String>>,
     results: HashMap<String, Vec<ResultRef>>,
@@ -232,7 +234,7 @@ struct Index<'a> {
 }
 
 impl<'a> Index<'a> {
-    fn new(corpus: &'a Corpus, report: &'a Value) -> Self {
+    pub fn new(corpus: &'a Corpus, report: &Value) -> Self {
         let mut concluding: HashMap<String, Vec<String>> = HashMap::new();
         let mut using: HashMap<String, Vec<String>> = HashMap::new();
         for (id, record) in corpus.records_by_id("arguments") {
@@ -298,7 +300,6 @@ impl<'a> Index<'a> {
         }
         Self {
             corpus,
-            report,
             concluding,
             using,
             results,
@@ -354,6 +355,7 @@ impl<'a> Index<'a> {
 
 struct Builder<'a> {
     index: &'a Index<'a>,
+    report: &'a Value,
     options: Options,
     root: String,
     statements: BTreeMap<String, StatementNode>,
@@ -376,7 +378,7 @@ impl Builder<'_> {
             return;
         }
         let index = self.index;
-        let report = index.report;
+        let report = self.report;
         let record = index.statement(id);
         let field = |name: &str| record.and_then(|record| string(record, name));
         let list = |name: &str| {
@@ -495,7 +497,7 @@ impl Builder<'_> {
             .collect();
         let route = (conclusion == self.root)
             .then(|| {
-                index.report["routes"]["routes"]
+                self.report["routes"]["routes"]
                     .as_array()
                     .into_iter()
                     .flatten()
@@ -918,9 +920,30 @@ pub fn tree(
     if corpus.get("statements", root).is_none() {
         return Err(UnknownStatement(root.to_owned()));
     }
-    let index = Index::new(corpus, report);
+    tree_with(
+        &Index::new(corpus, report),
+        report,
+        root,
+        case_root,
+        options,
+    )
+}
+
+/// [`tree`] with a prebuilt [`Index`] over the same corpus; `report` is the
+/// frontier report (or [`crate::frontier::ViewReports`] entry) for `root`.
+pub fn tree_with(
+    index: &Index<'_>,
+    report: &Value,
+    root: &str,
+    case_root: &str,
+    options: Options,
+) -> Result<Tree, UnknownStatement> {
+    if index.corpus.get("statements", root).is_none() {
+        return Err(UnknownStatement(root.to_owned()));
+    }
     let mut builder = Builder {
-        index: &index,
+        index,
+        report,
         options,
         root: root.to_owned(),
         statements: BTreeMap::new(),
@@ -1523,6 +1546,36 @@ mod tests {
                 .iter()
                 .any(|n| n.id == "U" && n.up_depth == Some(2))
         );
+    }
+
+    #[test]
+    fn a_batch_from_one_closure_equals_each_single_tree() {
+        let dir = fixture();
+        let corpus = Corpus::load(&dir.0).unwrap();
+        let roots: Vec<String> = corpus
+            .records_by_id("statements")
+            .map(|(id, _)| id.to_owned())
+            .collect();
+        assert!(roots.len() > 3);
+        let records = crate::thickness::Records::from_corpus(&corpus);
+        let flags = crate::frontier::transcription_flags(&dir.0, &records);
+        // The shared closure comes from the last root, not from each root.
+        let views = crate::frontier::ViewReports::new(&records, &flags, roots.last().unwrap());
+        let index = Index::new(&corpus, &views.report(&roots[0]));
+        for root in &roots {
+            let options = Options {
+                down: 2,
+                up: 2,
+                budget: 6,
+            };
+            let batch = tree_with(&index, &views.report(root), root, "U", options).unwrap();
+            let single = build(&dir, root, options).unwrap();
+            assert_eq!(
+                serde_json::to_value(&batch).unwrap(),
+                serde_json::to_value(&single).unwrap(),
+                "{root}"
+            );
+        }
     }
 
     #[test]

@@ -79,6 +79,7 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
              [--bind-json FILE] [--usage-json FILE]
        truth [--root PATH] [--json] lean-reuse --review [--usage-json FILE]
        truth [--root PATH] [--json] tree STATEMENT [--down N] [--up N] [--budget N]
+       truth [--root PATH] [--json] tree --out-dir DIR STATEMENT... [--down N] [--up N] [--budget N]
        truth [--root PATH] [--json] attribution-check --base REV [--materialize] [--max-chars N]
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
@@ -161,9 +162,9 @@ pub fn run(args: &[OsString]) -> Output {
             Some(command) if args.attribution.flags && command.name != "attribution-check" => Err(
                 usage("--materialize and --max-chars apply only to attribution-check"),
             ),
-            Some(command) if args.tree.flags && command.name != "tree" => {
-                Err(usage("--down, --up and --budget apply only to tree"))
-            }
+            Some(command) if args.tree.flags && command.name != "tree" => Err(usage(
+                "--down, --up, --budget and --out-dir apply only to tree",
+            )),
             Some(command) => (command.run)(&args, operands),
             None => Err(args.shape_error()),
         },

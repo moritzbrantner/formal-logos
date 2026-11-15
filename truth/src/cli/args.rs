@@ -117,13 +117,15 @@ pub struct AttributionArgs {
     pub max_chars: Option<i64>,
 }
 
-/// The `tree` options: `--down N`, `--up N` (0 allowed) and `--budget N`.
+/// The `tree` options: `--down N`, `--up N` (0 allowed), `--budget N` and
+/// `--out-dir DIR` (batch mode: one JSON file per statement operand).
 #[derive(Default)]
 pub struct TreeArgs {
     pub flags: bool,
     pub down: Option<usize>,
     pub up: Option<usize>,
     pub budget: Option<usize>,
+    pub out_dir: Option<String>,
 }
 
 #[derive(Default)]
@@ -326,6 +328,15 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                 parsed.attribution.flags = true;
                 parsed.attribution.max_chars =
                     Some(integer(args.next().and_then(|value| value.to_str()), arg)?);
+            }
+            "--out-dir" => {
+                parsed.tree.flags = true;
+                parsed.tree.out_dir = Some(
+                    args.next()
+                        .and_then(|value| value.to_str())
+                        .ok_or_else(|| usage(format!("{arg} requires a UTF-8 path")))?
+                        .to_owned(),
+                );
             }
             "--down" | "--up" | "--budget" => {
                 parsed.tree.flags = true;

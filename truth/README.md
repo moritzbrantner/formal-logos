@@ -446,6 +446,17 @@ P1, …, Pn ⊢ C, ¬C with the other premises gives ¬Pi; an inverse C ∧ ¬B 
 needs an explicit exhaustiveness premise C → A ∨ B in `extra_premises`. The
 unconditioned inverse C ⊢ A is invalid and is never emitted.
 
+**Batch mode (`--out-dir DIR STATEMENT...`)** writes, for each statement,
+`DIR/<uuid>.json` with exactly the JSON of the single command (same options),
+and prints a summary (`written`, `out_dir`, `options`). Closure, establishment,
+statuses, depths and transcription kinds do not depend on the frontier root,
+so one shared report supplies them (`frontier::ViewReports`); only
+`reaching_root_statements` and the root's routes are recomputed per statement,
+by the same walk and route computation the full report uses. On the real corpus
+this takes about 35 s for all 4,587 statements against about 1.2 s per single
+call. The corpus explorer uses it to prebuild its `/tree` pages
+(`docs/github-pages.md`).
+
 ## `attribution-check`
 
 `truth attribution-check --base REV [--materialize] [--max-chars N]` is

@@ -115,6 +115,37 @@ URL reload, expansion, viewport restoration and mobile overflow. The unit fixtur
 call Python's actual frontier computation for grounded and ungrounded reciprocal
 cycles, shared dependencies and transcription closure.
 
+## Re-rooted argument trees
+
+`/tree?id=<statement-uuid>` (`/formal-logos/tree/?id=…` on Pages, #1674) draws
+the argument graph with any proposition as the root, from `truth --json tree`
+(truth/README.md, `tree`). The selected proposition sits in the middle; the
+arguments concluding it are OR alternatives below it, each with its premises as
+one AND bundle, and the arguments using it lead up to their conclusions.
+Strength orders are dashed, cycle edges dotted; truncation markers show the
+arguments a depth or budget limit left out. Each node shows the CLI's status
+(established, closed, open, bare) and each argument whether its result is
+verified, a transcription or missing. Clicking a proposition re-roots the view
+on it. A side panel lists the definitions (sense labels, Lean declaration,
+formal status once #1673 provides it, otherwise "not yet computed" or "no
+Lean") and disambiguations of every proposition in view. Statement and dossier
+pages link to it. The page only renders CLI JSON and computes no status.
+
+**What is prebuilt.** The build runs one batch, `truth tree --out-dir DIR
+--down 3 --up 3 --budget 80 ID...`, for the case root, the premises of every
+argument concluding it and each route's open leaves (107 statements; `src/lib/argument-tree-data.ts`),
+and serves each file as `tree-data/<uuid>.json`. Other propositions show the
+command that generates their tree locally (`target/release/truth tree <id>`,
+with `--json` for this page's data). Numbers on the corpus of 2026-11-15:
+the batch computes the trees of all 4,587 statements in about 35 s, but they
+are 654 MB of JSON at the CLI defaults and still 202 MB at budget 60, while the
+Pages artifact is already about 1 GB. The prebuilt set is 29 MB (4.6 MB
+compressed). Widening it is a one-line change to `staticTreeIds`.
+
+Affected checks: `bun test apps/corpus-explorer/src/lib/argument-tree.test.ts`,
+and after the build `bun --cwd apps/corpus-explorer test tests/tree.browser.test.ts`,
+repeated with `GITHUB_PAGES=true` and `TEST_BASE_PATH=/formal-logos`.
+
 ## Per-proposition research progress
 
 `/progress` (or `/formal-logos/progress/` on Pages) searches proposition text,
