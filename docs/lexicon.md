@@ -164,6 +164,31 @@ The owner's decision on #1652 is "warn now, strict later". The switch is
   - The `truth check` summary says when the threshold is reached.
   - The flip is a deliberate one-line change, not automatic.
 
+## Formal status (L3)
+
+A technical entry points at `DEF-…` records, and Lean settles what it can of
+their meaning: see [formal status of
+definitions](corpus-model.md#formal-status-of-definitions). The lexicon shows
+that boundary; it does not compute it.
+
+- **`lexicon show WORD`** prints, under each definition and each
+  disambiguation sense, the trace word → sense → definition → Lean
+  declaration with its computed status, constant kind and reason, its
+  one-step unfolding (`unfolds to`, `uses`), and, where Lean does not settle
+  the meaning, the prose: the `formal_gap` block, or the `definition` text
+  with the reason it is the fallback (no Lean declaration, status not
+  computed, or a backlog record without `formal_gap`). `--json` adds a
+  `formal` object to every definition and sense.
+- **`lexicon coverage`** splits technical tokens by what settles their
+  meaning: a Lean definition; a Lean primitive or constraint with
+  `formal_gap` prose; one without prose (the backlog); a definition without
+  a Lean declaration; a technical entry without a definition; a status not
+  computed. A token counts in the weakest status over the definitions its
+  entries reach (an entry's definitions and its disambiguations' senses, or
+  a sense tag's senses), because the scan does not know which sense a use
+  takes. Ordinary, function and name tokens are prose only. The JSON key is
+  `formal_status`.
+
 ## Commands
 
 ```bash

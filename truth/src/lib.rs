@@ -9,6 +9,7 @@ pub mod configuration_explorer;
 pub mod configuration_live;
 pub mod configurations;
 pub mod context;
+pub mod definition_status;
 pub mod dossier;
 pub mod finite_models;
 pub mod frontier;

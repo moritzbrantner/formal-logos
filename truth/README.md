@@ -93,6 +93,26 @@ summary line, kept out of `warnings` and ignored by the parity test, for the all
 backlog), and CI runs `lexicon ratchet` so `corpus/lexicon-allowlist.json` only shrinks.
 The library is `truth/src/lexicon/`.
 
+## `definitions`
+
+`truth definitions (status [--limit N] | refresh [--write] [--lean-json FILE]
+[--print-lean-input] | allowlist [--write] | ratchet --base REV)` computes the
+formal status of every definition record (#1652 L3, docs/corpus-model.md,
+"Formal status of definitions"). It has no Python counterpart. `refresh` runs
+`scripts/DefinitionStatus.lean` through `bind_check::run_exporter` (or reads a
+saved output with `--lean-json`) and writes `corpus/definition-status.json`
+with `--write`. Without `--write` it compares and exits 1 when a fresh
+committed entry disagrees with Lean, or, in strict mode, when an entry is stale
+or missing. CI runs it where bind-check builds. `status` reads the cache
+without Lean and prints counts by status and Lean kind, the definitions still
+without `formal_gap` prose, and the findings. `truth check` adds the findings
+and one `warning: definitions: …` summary line (kept out of `warnings`;
+the parity test ignores it). It reports nothing without the cache file.
+`allowlist` and `ratchet` keep `corpus/definition-prose-allowlist.json`
+shrink-only, as for the lexicon. The library is
+`truth/src/definition_status.rs`; its unit tests replay a recorded exporter
+output (`truth/src/testdata/definition-status-exporter.json`).
+
 ## `check`
 
 `truth check [--json]` ports `python3 scripts/corpus.py check`: `validate()`

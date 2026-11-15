@@ -24,6 +24,7 @@ mod check;
 mod configuration_report;
 mod configurations;
 mod context;
+mod definitions;
 mod dossier;
 mod frontier;
 mod frontier_diff;
@@ -71,6 +72,8 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] results
        truth [--root PATH] [--json] sort-lists
        truth [--root PATH] [--json] lexicon (show WORD | untraced | coverage | check | bootstrap | allowlist | ratchet --base REV) [--limit N] [--write]
+       truth [--root PATH] [--json] definitions (status [--limit N] | refresh [--write] [--lean-json FILE]
+             [--print-lean-input] | allowlist [--write] | ratchet --base REV)
        truth [--root PATH] [--json] configurations [--registered] [--case ID] [--seed STATEMENT] [--premise STATEMENT]...
        truth [--root PATH] [--json] configuration-report (--output PATH | --check PATH | --build-input)
        truth [--root PATH] [--json] models [--check STATEMENT | --argument ARGUMENT] [--premise STATEMENT]... [--verify]
@@ -135,6 +138,7 @@ pub const COMMANDS: &[Command] = &[
     ids::RESULTS,
     sort_lists::COMMAND,
     lexicon::COMMAND,
+    definitions::COMMAND,
     configurations::COMMAND,
     configuration_report::COMMAND,
     models::COMMAND,
