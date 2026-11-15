@@ -162,6 +162,17 @@ pub struct Dossier {
     pub configuration_cases: Vec<ConfigurationCase>,
     pub model_evaluations: Vec<ModelEvaluation>,
     pub route_contributions: Vec<RouteContribution>,
+    /// The issues of an offline snapshot whose acceptance names this
+    /// statement (`--issues-from`); absent without a snapshot.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub targeting_issues: Option<Vec<IssueTarget>>,
+}
+
+/// An issue whose acceptance block names a statement, with its status.
+#[derive(Debug, Clone, Serialize)]
+pub struct IssueTarget {
+    pub number: u64,
+    pub status: &'static str,
 }
 
 fn text<'a>(record: &'a Record, field: &str) -> &'a str {
@@ -529,6 +540,7 @@ impl<'a> DossierIndex<'a> {
                     }
                 })
                 .collect(),
+            targeting_issues: None,
         })
     }
 }
@@ -575,6 +587,20 @@ pub fn format_dossier(dossier: &Dossier, index: &DossierIndex, limit: Option<usi
     let senses = index.senses.labels(statement);
     if !senses.is_empty() {
         lines.insert(2, format!("Senses: {}", format_labels(&senses)));
+    }
+    if let Some(targets) = &dossier.targeting_issues {
+        let listed: Vec<String> = targets
+            .iter()
+            .map(|target| format!("#{} [{}]", target.number, target.status))
+            .collect();
+        lines.push(format!(
+            "Issue targets (offline acceptance snapshot): {}",
+            if listed.is_empty() {
+                "none".to_owned()
+            } else {
+                listed.join(", ")
+            }
+        ));
     }
     if let Some(floor) = &dossier.floor {
         let reasons: Vec<String> = floor["reasons"]
