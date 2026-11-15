@@ -4,7 +4,9 @@ structural view (`status`, `inspect`), `thickness [--queue]`, `check`,
 `frontier`, `frontier-diff`, `thickness --base` and `orphans --base`
 (against `scripts/orphan_summary.py`), the research navigation commands
 `related`, `dossier` and `context`, `next`, `next-steps`, `arguments`,
-`results` and `sort-lists`, and `bind-check` (from recorded BindTypes output).
+`results`, `sort-lists`, `configurations --registered`, `models` and
+`territory`, `bind-check` (from recorded BindTypes output), and `issues`
+with `dossier --issues-from`.
 
 The tests live in the `truth_parity` package, one module per command; this
 file is the entry point CI runs.
@@ -21,7 +23,9 @@ from truth_parity.thickness import TruthThicknessParity  # noqa: F401
 from truth_parity.frontier import TruthFrontierParity  # noqa: F401
 from truth_parity.research import TruthResearchParity  # noqa: F401
 from truth_parity.check import TruthCheckParity  # noqa: F401
+from truth_parity.issues import TruthIssuesParity  # noqa: F401
 from truth_parity.navigation import TruthNavigationParity  # noqa: F401
+from truth_parity.configurations import TruthConfigurationParity  # noqa: F401
 from truth_parity.bind_check import TruthBindCheckParity  # noqa: F401
 from truth_parity.revisions import TruthRevisionParity  # noqa: F401
 

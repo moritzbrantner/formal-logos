@@ -1,0 +1,2153 @@
+{
+ "default": {
+  "bounds": {
+   "atom_count": 9,
+   "closure_limit": 20000,
+   "closure_truncated": false,
+   "core_combination_limit": 4096,
+   "core_combinations_checked": 3,
+   "core_combinations_truncated": false,
+   "enumeration": "minimal conflicts via verified-entailment supports; components by shared conflicts; local positions = complements of minimal hitting sets (Berge); global positions = products",
+   "global_position_limit": 64,
+   "hitting_set_limit": 1024,
+   "hitting_sets_truncated": false,
+   "max_atoms": 512,
+   "universe": "one expansion round: root-path open premises, their recorded rivals, atoms of certified cores derivable from those, statements of models/consistency results that evaluate or commit to one of them",
+   "universe_truncated": false
+  },
+  "classification_counts": {
+   "common_ground_candidate": 1,
+   "contested_uncertified": 2,
+   "split": 2
+  },
+  "common_ground_candidates": [
+   "T"
+  ],
+  "components": [
+   {
+    "atom_ids": [
+     "P",
+     "Q",
+     "R"
+    ],
+    "conflicts": [
+     {
+      "core_statement_ids": [
+       "P",
+       "R"
+      ],
+      "kind": "derives_false",
+      "relation_id": null,
+      "result_ids": [
+       "QR",
+       "CORE"
+      ],
+      "statement_ids": [
+       "P",
+       "Q"
+      ]
+     },
+     {
+      "core_statement_ids": [
+       "P",
+       "R"
+      ],
+      "kind": "derives_false",
+      "relation_id": null,
+      "result_ids": [
+       "CORE"
+      ],
+      "statement_ids": [
+       "P",
+       "R"
+      ]
+     }
+    ],
+    "eliminated_atom_ids": [],
+    "hitting_sets_truncated": false,
+    "index": 0,
+    "position_ids": [
+     "POS-5C62E091B8C0",
+     "POS-9E20743291C3"
+    ]
+   },
+   {
+    "atom_ids": [
+     "S"
+    ],
+    "conflicts": [],
+    "eliminated_atom_ids": [],
+    "hitting_sets_truncated": false,
+    "index": 1,
+    "position_ids": [
+     "POS-8DE0B3C47F11"
+    ]
+   },
+   {
+    "atom_ids": [
+     "T"
+    ],
+    "conflicts": [],
+    "eliminated_atom_ids": [],
+    "hitting_sets_truncated": false,
+    "index": 2,
+    "position_ids": [
+     "POS-E632B7095B0B"
+    ]
+   },
+   {
+    "atom_ids": [
+     "U"
+    ],
+    "conflicts": [],
+    "eliminated_atom_ids": [],
+    "hitting_sets_truncated": false,
+    "index": 3,
+    "position_ids": [
+     "POS-A25513C7E0F6"
+    ]
+   },
+   {
+    "atom_ids": [
+     "V"
+    ],
+    "conflicts": [],
+    "eliminated_atom_ids": [],
+    "hitting_sets_truncated": false,
+    "index": 4,
+    "position_ids": [
+     "POS-DE5A6F78116E"
+    ]
+   },
+   {
+    "atom_ids": [
+     "W",
+     "Y"
+    ],
+    "conflicts": [
+     {
+      "core_statement_ids": [
+       "W",
+       "Y"
+      ],
+      "kind": "refutes",
+      "relation_id": "REL-YW-REFUTES-W",
+      "result_ids": [
+       "YW"
+      ],
+      "statement_ids": [
+       "W",
+       "Y"
+      ]
+     }
+    ],
+    "eliminated_atom_ids": [],
+    "hitting_sets_truncated": false,
+    "index": 5,
+    "position_ids": [
+     "POS-18F5384D58BC",
+     "POS-FCB5F40DF9BE"
+    ]
+   }
+  ],
+  "conflicts": [
+   {
+    "core_statement_ids": [
+     "P",
+     "R"
+    ],
+    "kind": "derives_false",
+    "relation_id": null,
+    "result_ids": [
+     "QR",
+     "CORE"
+    ],
+    "statement_ids": [
+     "P",
+     "Q"
+    ]
+   },
+   {
+    "core_statement_ids": [
+     "P",
+     "R"
+    ],
+    "kind": "derives_false",
+    "relation_id": null,
+    "result_ids": [
+     "CORE"
+    ],
+    "statement_ids": [
+     "P",
+     "R"
+    ]
+   },
+   {
+    "core_statement_ids": [
+     "W",
+     "Y"
+    ],
+    "kind": "refutes",
+    "relation_id": "REL-YW-REFUTES-W",
+    "result_ids": [
+     "YW"
+    ],
+    "statement_ids": [
+     "W",
+     "Y"
+    ]
+   }
+  ],
+  "defects": [],
+  "global_positions": {
+   "count": 4,
+   "enumerated": 4,
+   "positions": [
+    {
+     "atom_count": 6,
+     "attested_by": [],
+     "id": "POS-84CAB03C0E6A",
+     "local_position_ids": [
+      "POS-18F5384D58BC",
+      "POS-5C62E091B8C0",
+      "POS-8DE0B3C47F11",
+      "POS-A25513C7E0F6",
+      "POS-DE5A6F78116E",
+      "POS-E632B7095B0B"
+     ],
+     "status": "not_known_inconsistent",
+     "witnesses": []
+    },
+    {
+     "atom_count": 6,
+     "attested_by": [],
+     "id": "POS-B34BCE84530E",
+     "local_position_ids": [
+      "POS-5C62E091B8C0",
+      "POS-8DE0B3C47F11",
+      "POS-A25513C7E0F6",
+      "POS-DE5A6F78116E",
+      "POS-E632B7095B0B",
+      "POS-FCB5F40DF9BE"
+     ],
+     "status": "not_known_inconsistent",
+     "witnesses": []
+    },
+    {
+     "atom_count": 7,
+     "attested_by": [],
+     "id": "POS-A468E6B01879",
+     "local_position_ids": [
+      "POS-18F5384D58BC",
+      "POS-8DE0B3C47F11",
+      "POS-9E20743291C3",
+      "POS-A25513C7E0F6",
+      "POS-DE5A6F78116E",
+      "POS-E632B7095B0B"
+     ],
+     "status": "not_known_inconsistent",
+     "witnesses": []
+    },
+    {
+     "atom_count": 7,
+     "attested_by": [],
+     "id": "POS-3D017F200487",
+     "local_position_ids": [
+      "POS-8DE0B3C47F11",
+      "POS-9E20743291C3",
+      "POS-A25513C7E0F6",
+      "POS-DE5A6F78116E",
+      "POS-E632B7095B0B",
+      "POS-FCB5F40DF9BE"
+     ],
+     "status": "not_known_inconsistent",
+     "witnesses": []
+    }
+   ],
+   "truncated": false
+  },
+  "inputs": {
+   "certified_cores": 2,
+   "core_atom_statement_ids": [
+    "R",
+    "Y"
+   ],
+   "entailment_result_ids": 3,
+   "rival_statement_ids": [
+    "V",
+    "W"
+   ],
+   "seed_statement_ids": [
+    "P",
+    "Q",
+    "S",
+    "T",
+    "U"
+   ],
+   "unconditionally_entailed_statement_ids": [],
+   "witness_atom_statement_ids": [],
+   "witnesses": 2
+  },
+  "matrix": [
+   {
+    "cheapest_route_cost": 2,
+    "classification": "split",
+    "excluding_conflicts": [
+     {
+      "core_statement_ids": [
+       "P",
+       "R"
+      ],
+      "kind": "derives_false",
+      "relation_id": null,
+      "result_ids": [
+       "QR",
+       "CORE"
+      ],
+      "statement_ids": [
+       "P",
+       "Q"
+      ]
+     },
+     {
+      "core_statement_ids": [
+       "P",
+       "R"
+      ],
+      "kind": "derives_false",
+      "relation_id": null,
+      "result_ids": [
+       "CORE"
+      ],
+      "statement_ids": [
+       "P",
+       "R"
+      ]
+     }
+    ],
+    "in_position_ids": [
+     "POS-5C62E091B8C0"
+    ],
+    "out_position_ids": [
+     "POS-9E20743291C3"
+    ],
+    "rivals": [],
+    "routes": 1,
+    "statement_id": "P",
+    "stating_authors": [
+     "Aquinas"
+    ],
+    "transitive_dependents": 1,
+    "values": {
+     "POS-18F5384D58BC": "undetermined",
+     "POS-5C62E091B8C0": "in",
+     "POS-8DE0B3C47F11": "undetermined",
+     "POS-9E20743291C3": "out",
+     "POS-A25513C7E0F6": "undetermined",
+     "POS-DE5A6F78116E": "undetermined",
+     "POS-E632B7095B0B": "undetermined",
+     "POS-FCB5F40DF9BE": "undetermined"
+    },
+    "witnessed_in_position_ids": [
+     "POS-5C62E091B8C0"
+    ]
+   },
+   {
+    "cheapest_route_cost": 2,
+    "classification": "split",
+    "excluding_conflicts": [
+     {
+      "core_statement_ids": [
+       "P",
+       "R"
+      ],
+      "kind": "derives_false",
+      "relation_id": null,
+      "result_ids": [
+       "QR",
+       "CORE"
+      ],
+      "statement_ids": [
+       "P",
+       "Q"
+      ]
+     }
+    ],
+    "in_position_ids": [
+     "POS-9E20743291C3"
+    ],
+    "out_position_ids": [
+     "POS-5C62E091B8C0"
+    ],
+    "rivals": [],
+    "routes": 2,
+    "statement_id": "Q",
+    "stating_authors": [
+     "Hume"
+    ],
+    "transitive_dependents": 3,
+    "values": {
+     "POS-18F5384D58BC": "undetermined",
+     "POS-5C62E091B8C0": "out",
+     "POS-8DE0B3C47F11": "undetermined",
+     "POS-9E20743291C3": "in",
+     "POS-A25513C7E0F6": "undetermined",
+     "POS-DE5A6F78116E": "undetermined",
+     "POS-E632B7095B0B": "undetermined",
+     "POS-FCB5F40DF9BE": "undetermined"
+    },
+    "witnessed_in_position_ids": [
+     "POS-9E20743291C3"
+    ]
+   },
+   {
+    "cheapest_route_cost": 3,
+    "classification": "contested_uncertified",
+    "excluding_conflicts": [],
+    "in_position_ids": [
+     "POS-8DE0B3C47F11"
+    ],
+    "out_position_ids": [],
+    "rivals": [
+     {
+      "class": "uncertified",
+      "statement_id": "W"
+     }
+    ],
+    "routes": 1,
+    "statement_id": "S",
+    "stating_authors": [],
+    "transitive_dependents": 2,
+    "values": {
+     "POS-18F5384D58BC": "undetermined",
+     "POS-5C62E091B8C0": "undetermined",
+     "POS-8DE0B3C47F11": "in",
+     "POS-9E20743291C3": "undetermined",
+     "POS-A25513C7E0F6": "undetermined",
+     "POS-DE5A6F78116E": "undetermined",
+     "POS-E632B7095B0B": "undetermined",
+     "POS-FCB5F40DF9BE": "undetermined"
+    },
+    "witnessed_in_position_ids": []
+   },
+   {
+    "cheapest_route_cost": 3,
+    "classification": "common_ground_candidate",
+    "excluding_conflicts": [],
+    "in_position_ids": [
+     "POS-E632B7095B0B"
+    ],
+    "out_position_ids": [],
+    "rivals": [],
+    "routes": 1,
+    "statement_id": "T",
+    "stating_authors": [],
+    "transitive_dependents": 1,
+    "values": {
+     "POS-18F5384D58BC": "undetermined",
+     "POS-5C62E091B8C0": "undetermined",
+     "POS-8DE0B3C47F11": "undetermined",
+     "POS-9E20743291C3": "undetermined",
+     "POS-A25513C7E0F6": "undetermined",
+     "POS-DE5A6F78116E": "undetermined",
+     "POS-E632B7095B0B": "in",
+     "POS-FCB5F40DF9BE": "undetermined"
+    },
+    "witnessed_in_position_ids": [
+     "POS-E632B7095B0B"
+    ]
+   },
+   {
+    "cheapest_route_cost": null,
+    "classification": "contested_uncertified",
+    "excluding_conflicts": [],
+    "in_position_ids": [
+     "POS-A25513C7E0F6"
+    ],
+    "out_position_ids": [],
+    "rivals": [
+     {
+      "class": "uncertified",
+      "statement_id": "V"
+     }
+    ],
+    "routes": 0,
+    "statement_id": "U",
+    "stating_authors": [],
+    "transitive_dependents": 1,
+    "values": {
+     "POS-18F5384D58BC": "undetermined",
+     "POS-5C62E091B8C0": "undetermined",
+     "POS-8DE0B3C47F11": "undetermined",
+     "POS-9E20743291C3": "undetermined",
+     "POS-A25513C7E0F6": "in",
+     "POS-DE5A6F78116E": "undetermined",
+     "POS-E632B7095B0B": "undetermined",
+     "POS-FCB5F40DF9BE": "undetermined"
+    },
+    "witnessed_in_position_ids": []
+   }
+  ],
+  "positions": [
+   {
+    "atom_ids": [
+     "Y"
+    ],
+    "attested_by": [],
+    "entailed_statement_ids": [
+     "S"
+    ],
+    "excluded_atom_ids": [
+     "W"
+    ],
+    "id": "POS-18F5384D58BC",
+    "stating_authors": [],
+    "status": "not_known_inconsistent",
+    "witnesses": []
+   },
+   {
+    "atom_ids": [
+     "P"
+    ],
+    "attested_by": [
+     "Aquinas"
+    ],
+    "entailed_statement_ids": [],
+    "excluded_atom_ids": [
+     "Q",
+     "R"
+    ],
+    "id": "POS-5C62E091B8C0",
+    "stating_authors": [
+     {
+      "author": "Aquinas",
+      "claim_ids": [
+       "C-P"
+      ],
+      "covers_all": true,
+      "source_ids": [
+       "SRC-A"
+      ],
+      "statement_ids": [
+       "P"
+      ]
+     }
+    ],
+    "status": "witnessed",
+    "witnesses": [
+     {
+      "id": "MODEL-PT",
+      "kind": "model"
+     }
+    ]
+   },
+   {
+    "atom_ids": [
+     "S"
+    ],
+    "attested_by": [],
+    "entailed_statement_ids": [],
+    "excluded_atom_ids": [],
+    "id": "POS-8DE0B3C47F11",
+    "stating_authors": [],
+    "status": "not_known_inconsistent",
+    "witnesses": []
+   },
+   {
+    "atom_ids": [
+     "Q",
+     "R"
+    ],
+    "attested_by": [
+     "Hume"
+    ],
+    "entailed_statement_ids": [
+     "X"
+    ],
+    "excluded_atom_ids": [
+     "P"
+    ],
+    "id": "POS-9E20743291C3",
+    "stating_authors": [
+     {
+      "author": "Aquinas",
+      "claim_ids": [
+       "C-R2"
+      ],
+      "covers_all": false,
+      "source_ids": [
+       "SRC-A"
+      ],
+      "statement_ids": [
+       "R"
+      ]
+     },
+     {
+      "author": "Hume",
+      "claim_ids": [
+       "C-Q",
+       "C-R"
+      ],
+      "covers_all": true,
+      "source_ids": [
+       "SRC-H"
+      ],
+      "statement_ids": [
+       "Q",
+       "R"
+      ]
+     }
+    ],
+    "status": "witnessed",
+    "witnesses": [
+     {
+      "id": "CONSISTENT",
+      "kind": "consistency_result"
+     }
+    ]
+   },
+   {
+    "atom_ids": [
+     "U"
+    ],
+    "attested_by": [],
+    "entailed_statement_ids": [],
+    "excluded_atom_ids": [],
+    "id": "POS-A25513C7E0F6",
+    "stating_authors": [],
+    "status": "not_known_inconsistent",
+    "witnesses": []
+   },
+   {
+    "atom_ids": [
+     "V"
+    ],
+    "attested_by": [],
+    "entailed_statement_ids": [],
+    "excluded_atom_ids": [],
+    "id": "POS-DE5A6F78116E",
+    "stating_authors": [],
+    "status": "not_known_inconsistent",
+    "witnesses": []
+   },
+   {
+    "atom_ids": [
+     "T"
+    ],
+    "attested_by": [],
+    "entailed_statement_ids": [],
+    "excluded_atom_ids": [],
+    "id": "POS-E632B7095B0B",
+    "stating_authors": [],
+    "status": "witnessed",
+    "witnesses": [
+     {
+      "id": "MODEL-PT",
+      "kind": "model"
+     }
+    ]
+   },
+   {
+    "atom_ids": [
+     "W"
+    ],
+    "attested_by": [],
+    "entailed_statement_ids": [],
+    "excluded_atom_ids": [
+     "Y"
+    ],
+    "id": "POS-FCB5F40DF9BE",
+    "stating_authors": [],
+    "status": "not_known_inconsistent",
+    "witnesses": []
+   }
+  ],
+  "scope": "Computed from registered cores, entailments, models, consistency results and claims only; no position is named or hand-authored and no corpus record is written. Positions are maximal relative to the reported bounded atom universe and certified cores only: absence of a core is not consistency, absence of a witness is not inconsistency. common_ground entries are candidates; marking one still needs #501/#378 evidence.",
+  "territories": [
+   {
+    "in_position_ids": [
+     "POS-9E20743291C3"
+    ],
+    "out_position_ids": [
+     "POS-5C62E091B8C0"
+    ],
+    "routes": 2,
+    "statement_id": "Q",
+    "transitive_dependents": 3
+   },
+   {
+    "in_position_ids": [
+     "POS-5C62E091B8C0"
+    ],
+    "out_position_ids": [
+     "POS-9E20743291C3"
+    ],
+    "routes": 1,
+    "statement_id": "P",
+    "transitive_dependents": 1
+   }
+  ],
+  "universe": [
+   "P",
+   "Q",
+   "S",
+   "T",
+   "U",
+   "V",
+   "W",
+   "R",
+   "Y"
+  ]
+ },
+ "default_text": "Computed from registered cores, entailments, models, consistency results and claims only; no position is named or hand-authored and no corpus record is written. Positions are maximal relative to the reported bounded atom universe and certified cores only: absence of a core is not consistency, absence of a witness is not inconsistency. common_ground entries are candidates; marking one still needs #501/#378 evidence.\n\nUniverse: 9 atoms (max 512); 3 minimal conflicts from 2 certified cores; 2 witnesses.\nComponents: 6 (2 constrained by a conflict); local positions: 8 (3 witnessed, 5 not known inconsistent).\nGlobal positions: 4 (enumerated 4, limit 64); witnessed: 0.\nRoot-path rows: common_ground_candidate 1, contested_uncertified 2, split 2\n\nComponent 0: P, Q, R\n  conflict ['P', 'Q'] (derives_false; QR, CORE)\n  conflict ['P', 'R'] (derives_false; CORE)\n  POS-5C62E091B8C0 [witnessed] ['P']; attested by: Aquinas\n  POS-9E20743291C3 [witnessed] ['Q', 'R']; attested by: Hume\nComponent 5: W, Y\n  conflict ['W', 'Y'] (refutes; YW)\n  POS-18F5384D58BC [not_known_inconsistent] ['Y']; attested by: no author covers all atoms\n  POS-FCB5F40DF9BE [not_known_inconsistent] ['W']; attested by: no author covers all atoms\n\nTerritories (split rows, by routes then dependents):\n  Q: routes 2, dependents 3, in 1, out 1\n  P: routes 1, dependents 1, in 1, out 1\n\ncommon_ground candidates (in every position of their component, witnessed, no recorded rival; no recorded rival usually means unexamined, not agreed):\n  T (stated by: no claim)\n\nContested without certified incompatibility (recorded rivals, no core):\n  S: W (uncertified)\n  U: V (uncertified)",
+ "defect": {
+  "bounds": {
+   "atom_count": 9,
+   "closure_limit": 20000,
+   "closure_truncated": false,
+   "core_combination_limit": 4096,
+   "core_combinations_checked": 3,
+   "core_combinations_truncated": false,
+   "enumeration": "minimal conflicts via verified-entailment supports; components by shared conflicts; local positions = complements of minimal hitting sets (Berge); global positions = products",
+   "global_position_limit": 64,
+   "hitting_set_limit": 1024,
+   "hitting_sets_truncated": false,
+   "max_atoms": 9,
+   "universe": "one expansion round: root-path open premises, their recorded rivals, atoms of certified cores derivable from those, statements of models/consistency results that evaluate or commit to one of them",
+   "universe_truncated": false
+  },
+  "classification_counts": {
+   "common_ground_candidate": 1,
+   "contested_uncertified": 2,
+   "split": 2
+  },
+  "common_ground_candidates": [
+   "T"
+  ],
+  "components": [
+   {
+    "atom_ids": [
+     "P",
+     "Q",
+     "R"
+    ],
+    "conflicts": [
+     {
+      "core_statement_ids": [
+       "P",
+       "R"
+      ],
+      "kind": "derives_false",
+      "relation_id": null,
+      "result_ids": [
+       "QR",
+       "CORE"
+      ],
+      "statement_ids": [
+       "P",
+       "Q"
+      ]
+     },
+     {
+      "core_statement_ids": [
+       "P",
+       "R"
+      ],
+      "kind": "derives_false",
+      "relation_id": null,
+      "result_ids": [
+       "CORE"
+      ],
+      "statement_ids": [
+       "P",
+       "R"
+      ]
+     }
+    ],
+    "eliminated_atom_ids": [],
+    "hitting_sets_truncated": false,
+    "index": 0,
+    "position_ids": [
+     "POS-5C62E091B8C0",
+     "POS-9E20743291C3"
+    ]
+   },
+   {
+    "atom_ids": [
+     "S"
+    ],
+    "conflicts": [],
+    "eliminated_atom_ids": [],
+    "hitting_sets_truncated": false,
+    "index": 1,
+    "position_ids": [
+     "POS-8DE0B3C47F11"
+    ]
+   },
+   {
+    "atom_ids": [
+     "T"
+    ],
+    "conflicts": [],
+    "eliminated_atom_ids": [],
+    "hitting_sets_truncated": false,
+    "index": 2,
+    "position_ids": [
+     "POS-E632B7095B0B"
+    ]
+   },
+   {
+    "atom_ids": [
+     "U"
+    ],
+    "conflicts": [],
+    "eliminated_atom_ids": [],
+    "hitting_sets_truncated": false,
+    "index": 3,
+    "position_ids": [
+     "POS-A25513C7E0F6"
+    ]
+   },
+   {
+    "atom_ids": [
+     "V"
+    ],
+    "conflicts": [],
+    "eliminated_atom_ids": [],
+    "hitting_sets_truncated": false,
+    "index": 4,
+    "position_ids": [
+     "POS-DE5A6F78116E"
+    ]
+   },
+   {
+    "atom_ids": [
+     "W",
+     "Y"
+    ],
+    "conflicts": [
+     {
+      "core_statement_ids": [
+       "W",
+       "Y"
+      ],
+      "kind": "refutes",
+      "relation_id": "REL-YW-REFUTES-W",
+      "result_ids": [
+       "YW"
+      ],
+      "statement_ids": [
+       "W",
+       "Y"
+      ]
+     }
+    ],
+    "eliminated_atom_ids": [],
+    "hitting_sets_truncated": false,
+    "index": 5,
+    "position_ids": [
+     "POS-18F5384D58BC",
+     "POS-FCB5F40DF9BE"
+    ]
+   }
+  ],
+  "conflicts": [
+   {
+    "core_statement_ids": [
+     "P",
+     "R"
+    ],
+    "kind": "derives_false",
+    "relation_id": null,
+    "result_ids": [
+     "QR",
+     "CORE"
+    ],
+    "statement_ids": [
+     "P",
+     "Q"
+    ]
+   },
+   {
+    "core_statement_ids": [
+     "P",
+     "R"
+    ],
+    "kind": "derives_false",
+    "relation_id": null,
+    "result_ids": [
+     "CORE"
+    ],
+    "statement_ids": [
+     "P",
+     "R"
+    ]
+   },
+   {
+    "core_statement_ids": [
+     "W",
+     "Y"
+    ],
+    "kind": "refutes",
+    "relation_id": "REL-YW-REFUTES-W",
+    "result_ids": [
+     "YW"
+    ],
+    "statement_ids": [
+     "W",
+     "Y"
+    ]
+   }
+  ],
+  "defects": [
+   {
+    "conflict": {
+     "core_statement_ids": [
+      "P",
+      "R"
+     ],
+     "kind": "derives_false",
+     "relation_id": null,
+     "result_ids": [
+      "CORE"
+     ],
+     "statement_ids": [
+      "P",
+      "R"
+     ]
+    },
+    "kind": "witness_satisfies_conflict",
+    "witness": {
+     "id": "MODEL-PT",
+     "kind": "model"
+    }
+   }
+  ],
+  "global_positions": {
+   "count": 4,
+   "enumerated": 4,
+   "positions": [
+    {
+     "atom_count": 6,
+     "attested_by": [],
+     "id": "POS-84CAB03C0E6A",
+     "local_position_ids": [
+      "POS-18F5384D58BC",
+      "POS-5C62E091B8C0",
+      "POS-8DE0B3C47F11",
+      "POS-A25513C7E0F6",
+      "POS-DE5A6F78116E",
+      "POS-E632B7095B0B"
+     ],
+     "status": "not_known_inconsistent",
+     "witnesses": []
+    },
+    {
+     "atom_count": 6,
+     "attested_by": [],
+     "id": "POS-B34BCE84530E",
+     "local_position_ids": [
+      "POS-5C62E091B8C0",
+      "POS-8DE0B3C47F11",
+      "POS-A25513C7E0F6",
+      "POS-DE5A6F78116E",
+      "POS-E632B7095B0B",
+      "POS-FCB5F40DF9BE"
+     ],
+     "status": "not_known_inconsistent",
+     "witnesses": []
+    },
+    {
+     "atom_count": 7,
+     "attested_by": [],
+     "id": "POS-A468E6B01879",
+     "local_position_ids": [
+      "POS-18F5384D58BC",
+      "POS-8DE0B3C47F11",
+      "POS-9E20743291C3",
+      "POS-A25513C7E0F6",
+      "POS-DE5A6F78116E",
+      "POS-E632B7095B0B"
+     ],
+     "status": "not_known_inconsistent",
+     "witnesses": []
+    },
+    {
+     "atom_count": 7,
+     "attested_by": [],
+     "id": "POS-3D017F200487",
+     "local_position_ids": [
+      "POS-8DE0B3C47F11",
+      "POS-9E20743291C3",
+      "POS-A25513C7E0F6",
+      "POS-DE5A6F78116E",
+      "POS-E632B7095B0B",
+      "POS-FCB5F40DF9BE"
+     ],
+     "status": "not_known_inconsistent",
+     "witnesses": []
+    }
+   ],
+   "truncated": false
+  },
+  "inputs": {
+   "certified_cores": 2,
+   "core_atom_statement_ids": [
+    "Y"
+   ],
+   "entailment_result_ids": 3,
+   "rival_statement_ids": [
+    "R",
+    "V",
+    "W"
+   ],
+   "seed_statement_ids": [
+    "P",
+    "Q",
+    "S",
+    "T",
+    "U"
+   ],
+   "unconditionally_entailed_statement_ids": [],
+   "witness_atom_statement_ids": [],
+   "witnesses": 2
+  },
+  "matrix": [
+   {
+    "cheapest_route_cost": 2,
+    "classification": "split",
+    "excluding_conflicts": [
+     {
+      "core_statement_ids": [
+       "P",
+       "R"
+      ],
+      "kind": "derives_false",
+      "relation_id": null,
+      "result_ids": [
+       "QR",
+       "CORE"
+      ],
+      "statement_ids": [
+       "P",
+       "Q"
+      ]
+     },
+     {
+      "core_statement_ids": [
+       "P",
+       "R"
+      ],
+      "kind": "derives_false",
+      "relation_id": null,
+      "result_ids": [
+       "CORE"
+      ],
+      "statement_ids": [
+       "P",
+       "R"
+      ]
+     }
+    ],
+    "in_position_ids": [
+     "POS-5C62E091B8C0"
+    ],
+    "out_position_ids": [
+     "POS-9E20743291C3"
+    ],
+    "rivals": [
+     {
+      "class": "certified_incompatible",
+      "statement_id": "R"
+     }
+    ],
+    "routes": 1,
+    "statement_id": "P",
+    "stating_authors": [
+     "Aquinas"
+    ],
+    "transitive_dependents": 1,
+    "values": {
+     "POS-18F5384D58BC": "undetermined",
+     "POS-5C62E091B8C0": "in",
+     "POS-8DE0B3C47F11": "undetermined",
+     "POS-9E20743291C3": "out",
+     "POS-A25513C7E0F6": "undetermined",
+     "POS-DE5A6F78116E": "undetermined",
+     "POS-E632B7095B0B": "undetermined",
+     "POS-FCB5F40DF9BE": "undetermined"
+    },
+    "witnessed_in_position_ids": [
+     "POS-5C62E091B8C0"
+    ]
+   },
+   {
+    "cheapest_route_cost": 2,
+    "classification": "split",
+    "excluding_conflicts": [
+     {
+      "core_statement_ids": [
+       "P",
+       "R"
+      ],
+      "kind": "derives_false",
+      "relation_id": null,
+      "result_ids": [
+       "QR",
+       "CORE"
+      ],
+      "statement_ids": [
+       "P",
+       "Q"
+      ]
+     }
+    ],
+    "in_position_ids": [
+     "POS-9E20743291C3"
+    ],
+    "out_position_ids": [
+     "POS-5C62E091B8C0"
+    ],
+    "rivals": [],
+    "routes": 2,
+    "statement_id": "Q",
+    "stating_authors": [
+     "Hume"
+    ],
+    "transitive_dependents": 3,
+    "values": {
+     "POS-18F5384D58BC": "undetermined",
+     "POS-5C62E091B8C0": "out",
+     "POS-8DE0B3C47F11": "undetermined",
+     "POS-9E20743291C3": "in",
+     "POS-A25513C7E0F6": "undetermined",
+     "POS-DE5A6F78116E": "undetermined",
+     "POS-E632B7095B0B": "undetermined",
+     "POS-FCB5F40DF9BE": "undetermined"
+    },
+    "witnessed_in_position_ids": [
+     "POS-9E20743291C3"
+    ]
+   },
+   {
+    "cheapest_route_cost": 3,
+    "classification": "contested_uncertified",
+    "excluding_conflicts": [],
+    "in_position_ids": [
+     "POS-8DE0B3C47F11"
+    ],
+    "out_position_ids": [],
+    "rivals": [
+     {
+      "class": "uncertified",
+      "statement_id": "W"
+     }
+    ],
+    "routes": 1,
+    "statement_id": "S",
+    "stating_authors": [],
+    "transitive_dependents": 2,
+    "values": {
+     "POS-18F5384D58BC": "undetermined",
+     "POS-5C62E091B8C0": "undetermined",
+     "POS-8DE0B3C47F11": "in",
+     "POS-9E20743291C3": "undetermined",
+     "POS-A25513C7E0F6": "undetermined",
+     "POS-DE5A6F78116E": "undetermined",
+     "POS-E632B7095B0B": "undetermined",
+     "POS-FCB5F40DF9BE": "undetermined"
+    },
+    "witnessed_in_position_ids": []
+   },
+   {
+    "cheapest_route_cost": 3,
+    "classification": "common_ground_candidate",
+    "excluding_conflicts": [],
+    "in_position_ids": [
+     "POS-E632B7095B0B"
+    ],
+    "out_position_ids": [],
+    "rivals": [],
+    "routes": 1,
+    "statement_id": "T",
+    "stating_authors": [],
+    "transitive_dependents": 1,
+    "values": {
+     "POS-18F5384D58BC": "undetermined",
+     "POS-5C62E091B8C0": "undetermined",
+     "POS-8DE0B3C47F11": "undetermined",
+     "POS-9E20743291C3": "undetermined",
+     "POS-A25513C7E0F6": "undetermined",
+     "POS-DE5A6F78116E": "undetermined",
+     "POS-E632B7095B0B": "in",
+     "POS-FCB5F40DF9BE": "undetermined"
+    },
+    "witnessed_in_position_ids": [
+     "POS-E632B7095B0B"
+    ]
+   },
+   {
+    "cheapest_route_cost": null,
+    "classification": "contested_uncertified",
+    "excluding_conflicts": [],
+    "in_position_ids": [
+     "POS-A25513C7E0F6"
+    ],
+    "out_position_ids": [],
+    "rivals": [
+     {
+      "class": "uncertified",
+      "statement_id": "V"
+     }
+    ],
+    "routes": 0,
+    "statement_id": "U",
+    "stating_authors": [],
+    "transitive_dependents": 1,
+    "values": {
+     "POS-18F5384D58BC": "undetermined",
+     "POS-5C62E091B8C0": "undetermined",
+     "POS-8DE0B3C47F11": "undetermined",
+     "POS-9E20743291C3": "undetermined",
+     "POS-A25513C7E0F6": "in",
+     "POS-DE5A6F78116E": "undetermined",
+     "POS-E632B7095B0B": "undetermined",
+     "POS-FCB5F40DF9BE": "undetermined"
+    },
+    "witnessed_in_position_ids": []
+   }
+  ],
+  "positions": [
+   {
+    "atom_ids": [
+     "Y"
+    ],
+    "attested_by": [],
+    "entailed_statement_ids": [
+     "S"
+    ],
+    "excluded_atom_ids": [
+     "W"
+    ],
+    "id": "POS-18F5384D58BC",
+    "stating_authors": [],
+    "status": "not_known_inconsistent",
+    "witnesses": []
+   },
+   {
+    "atom_ids": [
+     "P"
+    ],
+    "attested_by": [
+     "Aquinas"
+    ],
+    "entailed_statement_ids": [],
+    "excluded_atom_ids": [
+     "Q",
+     "R"
+    ],
+    "id": "POS-5C62E091B8C0",
+    "stating_authors": [
+     {
+      "author": "Aquinas",
+      "claim_ids": [
+       "C-P"
+      ],
+      "covers_all": true,
+      "source_ids": [
+       "SRC-A"
+      ],
+      "statement_ids": [
+       "P"
+      ]
+     }
+    ],
+    "status": "witnessed",
+    "witnesses": [
+     {
+      "id": "MODEL-PT",
+      "kind": "model"
+     }
+    ]
+   },
+   {
+    "atom_ids": [
+     "S"
+    ],
+    "attested_by": [],
+    "entailed_statement_ids": [],
+    "excluded_atom_ids": [],
+    "id": "POS-8DE0B3C47F11",
+    "stating_authors": [],
+    "status": "not_known_inconsistent",
+    "witnesses": []
+   },
+   {
+    "atom_ids": [
+     "Q",
+     "R"
+    ],
+    "attested_by": [
+     "Hume"
+    ],
+    "entailed_statement_ids": [
+     "X"
+    ],
+    "excluded_atom_ids": [
+     "P"
+    ],
+    "id": "POS-9E20743291C3",
+    "stating_authors": [
+     {
+      "author": "Aquinas",
+      "claim_ids": [
+       "C-R2"
+      ],
+      "covers_all": false,
+      "source_ids": [
+       "SRC-A"
+      ],
+      "statement_ids": [
+       "R"
+      ]
+     },
+     {
+      "author": "Hume",
+      "claim_ids": [
+       "C-Q",
+       "C-R"
+      ],
+      "covers_all": true,
+      "source_ids": [
+       "SRC-H"
+      ],
+      "statement_ids": [
+       "Q",
+       "R"
+      ]
+     }
+    ],
+    "status": "witnessed",
+    "witnesses": [
+     {
+      "id": "CONSISTENT",
+      "kind": "consistency_result"
+     }
+    ]
+   },
+   {
+    "atom_ids": [
+     "U"
+    ],
+    "attested_by": [],
+    "entailed_statement_ids": [],
+    "excluded_atom_ids": [],
+    "id": "POS-A25513C7E0F6",
+    "stating_authors": [],
+    "status": "not_known_inconsistent",
+    "witnesses": []
+   },
+   {
+    "atom_ids": [
+     "V"
+    ],
+    "attested_by": [],
+    "entailed_statement_ids": [],
+    "excluded_atom_ids": [],
+    "id": "POS-DE5A6F78116E",
+    "stating_authors": [],
+    "status": "not_known_inconsistent",
+    "witnesses": []
+   },
+   {
+    "atom_ids": [
+     "T"
+    ],
+    "attested_by": [],
+    "entailed_statement_ids": [],
+    "excluded_atom_ids": [],
+    "id": "POS-E632B7095B0B",
+    "stating_authors": [],
+    "status": "witnessed",
+    "witnesses": [
+     {
+      "id": "MODEL-PT",
+      "kind": "model"
+     }
+    ]
+   },
+   {
+    "atom_ids": [
+     "W"
+    ],
+    "attested_by": [],
+    "entailed_statement_ids": [],
+    "excluded_atom_ids": [
+     "Y"
+    ],
+    "id": "POS-FCB5F40DF9BE",
+    "stating_authors": [],
+    "status": "not_known_inconsistent",
+    "witnesses": []
+   }
+  ],
+  "scope": "Computed from registered cores, entailments, models, consistency results and claims only; no position is named or hand-authored and no corpus record is written. Positions are maximal relative to the reported bounded atom universe and certified cores only: absence of a core is not consistency, absence of a witness is not inconsistency. common_ground entries are candidates; marking one still needs #501/#378 evidence.",
+  "territories": [
+   {
+    "in_position_ids": [
+     "POS-9E20743291C3"
+    ],
+    "out_position_ids": [
+     "POS-5C62E091B8C0"
+    ],
+    "routes": 2,
+    "statement_id": "Q",
+    "transitive_dependents": 3
+   },
+   {
+    "in_position_ids": [
+     "POS-5C62E091B8C0"
+    ],
+    "out_position_ids": [
+     "POS-9E20743291C3"
+    ],
+    "routes": 1,
+    "statement_id": "P",
+    "transitive_dependents": 1
+   }
+  ],
+  "universe": [
+   "P",
+   "Q",
+   "S",
+   "T",
+   "U",
+   "R",
+   "V",
+   "W",
+   "Y"
+  ]
+ },
+ "defect_text": "Computed from registered cores, entailments, models, consistency results and claims only; no position is named or hand-authored and no corpus record is written. Positions are maximal relative to the reported bounded atom universe and certified cores only: absence of a core is not consistency, absence of a witness is not inconsistency. common_ground entries are candidates; marking one still needs #501/#378 evidence.\n\nUniverse: 9 atoms (max 9); 3 minimal conflicts from 2 certified cores; 2 witnesses.\nComponents: 6 (2 constrained by a conflict); local positions: 8 (3 witnessed, 5 not known inconsistent).\nGlobal positions: 4 (enumerated 4, limit 64); witnessed: 0.\nRoot-path rows: common_ground_candidate 1, contested_uncertified 2, split 2\n\nComponent 0: P, Q, R\n  conflict ['P', 'Q'] (derives_false; QR, CORE)\n  conflict ['P', 'R'] (derives_false; CORE)\n  POS-5C62E091B8C0 [witnessed] ['P']; attested by: Aquinas\n  POS-9E20743291C3 [witnessed] ['Q', 'R']; attested by: Hume\nComponent 5: W, Y\n  conflict ['W', 'Y'] (refutes; YW)\n  POS-18F5384D58BC [not_known_inconsistent] ['Y']; attested by: no author covers all atoms\n  POS-FCB5F40DF9BE [not_known_inconsistent] ['W']; attested by: no author covers all atoms\n\nTerritories (split rows, by routes then dependents):\n  Q: routes 2, dependents 3, in 1, out 1\n  P: routes 1, dependents 1, in 1, out 1\n\ncommon_ground candidates (in every position of their component, witnessed, no recorded rival; no recorded rival usually means unexamined, not agreed):\n  T (stated by: no claim)\n\nContested without certified incompatibility (recorded rivals, no core):\n  S: W (uncertified)\n  U: V (uncertified)\nDEFECT witness_satisfies_conflict: {'kind': 'witness_satisfies_conflict', 'witness': {'kind': 'model', 'id': 'MODEL-PT'}, 'conflict': {'statement_ids': ['P', 'R'], 'core_statement_ids': ['P', 'R'], 'kind': 'derives_false', 'relation_id': None, 'result_ids': ['CORE']}}",
+ "fixture": {
+  "arguments": {
+   "CONSISTENT": {
+    "commitment_statement_ids": [
+     "Q",
+     "R"
+    ],
+    "conclusion_statement_id": "THEORY",
+    "id": "CONSISTENT",
+    "premise_statement_ids": []
+   },
+   "CORE": {
+    "conclusion_statement_id": "FALSE",
+    "id": "CORE",
+    "premise_statement_ids": [
+     "P",
+     "R"
+    ]
+   },
+   "QR": {
+    "conclusion_statement_id": "R",
+    "id": "QR",
+    "premise_statement_ids": [
+     "Q"
+    ]
+   },
+   "QX": {
+    "conclusion_statement_id": "X",
+    "id": "QX",
+    "premise_statement_ids": [
+     "Q"
+    ]
+   },
+   "TRANSCRIBED-CORE": {
+    "conclusion_statement_id": "FALSE",
+    "id": "TRANSCRIBED-CORE",
+    "premise_statement_ids": [
+     "S",
+     "T"
+    ]
+   },
+   "YW": {
+    "conclusion_statement_id": "S",
+    "id": "YW",
+    "premise_statement_ids": [
+     "Y"
+    ]
+   }
+  },
+  "claims": [
+   {
+    "id": "C-P",
+    "source_id": "SRC-A",
+    "statement_id": "P"
+   },
+   {
+    "id": "C-Q",
+    "source_id": "SRC-H",
+    "statement_id": "Q"
+   },
+   {
+    "id": "C-R",
+    "source_id": "SRC-H",
+    "statement_id": "R"
+   },
+   {
+    "id": "C-R2",
+    "source_id": "SRC-A",
+    "statement_id": "R"
+   }
+  ],
+  "models": [
+   {
+    "evaluations": [
+     {
+      "statement_id": "P",
+      "value": "satisfies"
+     },
+     {
+      "statement_id": "T",
+      "value": "satisfies"
+     },
+     {
+      "statement_id": "Q",
+      "value": "violates"
+     }
+    ],
+    "id": "MODEL-PT"
+   }
+  ],
+  "relations": [
+   {
+    "id": "REL-V-ALT-U",
+    "object_id": "U",
+    "predicate": "alternative_to",
+    "subject_id": "V"
+   },
+   {
+    "id": "REL-YW-REFUTES-W",
+    "object_id": "W",
+    "predicate": "refutes",
+    "subject_id": "YW"
+   },
+   {
+    "id": "REL-W-ALT-S",
+    "object_id": "S",
+    "predicate": "alternative_to",
+    "subject_id": "W"
+   }
+  ],
+  "results": {
+   "CONSISTENT": {
+    "argument_id": "CONSISTENT",
+    "id": "CONSISTENT",
+    "theorem": "Fixture.CONSISTENT"
+   },
+   "CORE": {
+    "argument_id": "CORE",
+    "id": "CORE",
+    "theorem": "Fixture.CORE"
+   },
+   "QR": {
+    "argument_id": "QR",
+    "id": "QR",
+    "theorem": "Fixture.QR"
+   },
+   "QX": {
+    "argument_id": "QX",
+    "id": "QX",
+    "theorem": "Fixture.QX"
+   },
+   "TRANSCRIBED-CORE": {
+    "argument_id": "TRANSCRIBED-CORE",
+    "id": "TRANSCRIBED-CORE",
+    "theorem": "Fixture.TRANSCRIBED-CORE"
+   },
+   "YW": {
+    "argument_id": "YW",
+    "id": "YW",
+    "theorem": "Fixture.YW"
+   }
+  },
+  "routes": [
+   {
+    "argument_id": "ROUTE",
+    "cost": 2,
+    "open_premise_statement_ids": [
+     "P",
+     "Q"
+    ],
+    "verified": true
+   },
+   {
+    "argument_id": "ROUTE-2",
+    "cost": 3,
+    "open_premise_statement_ids": [
+     "Q",
+     "S",
+     "T"
+    ],
+    "verified": true
+   }
+  ],
+  "seeds": [
+   {
+    "statement_id": "P",
+    "transitive_dependent_arguments": [
+     "A"
+    ]
+   },
+   {
+    "statement_id": "Q",
+    "transitive_dependent_arguments": [
+     "A",
+     "A",
+     "A"
+    ]
+   },
+   {
+    "statement_id": "S",
+    "transitive_dependent_arguments": [
+     "A",
+     "A"
+    ]
+   },
+   {
+    "statement_id": "T",
+    "transitive_dependent_arguments": [
+     "A"
+    ]
+   },
+   {
+    "statement_id": "U",
+    "transitive_dependent_arguments": [
+     "A"
+    ]
+   }
+  ],
+  "sources": {
+   "SRC-A": {
+    "author": "Aquinas",
+    "id": "SRC-A"
+   },
+   "SRC-H": {
+    "author": "Hume",
+    "id": "SRC-H"
+   }
+  },
+  "statements": {
+   "FALSE": {
+    "id": "FALSE",
+    "lean_declaration": "TruthCore.Logic.ConfigurationFalse"
+   },
+   "P": {
+    "id": "P",
+    "lean_declaration": "Fixture.P"
+   },
+   "Q": {
+    "id": "Q",
+    "lean_declaration": "Fixture.Q"
+   },
+   "R": {
+    "id": "R",
+    "lean_declaration": "Fixture.R"
+   },
+   "S": {
+    "id": "S",
+    "lean_declaration": "Fixture.S"
+   },
+   "T": {
+    "id": "T",
+    "lean_declaration": "Fixture.T"
+   },
+   "THEORY": {
+    "id": "THEORY",
+    "lean_declaration": "Fixture.THEORY"
+   },
+   "U": {
+    "id": "U",
+    "lean_declaration": "Fixture.U"
+   },
+   "V": {
+    "id": "V",
+    "lean_declaration": "Fixture.V"
+   },
+   "W": {
+    "id": "W",
+    "lean_declaration": "Fixture.W"
+   },
+   "X": {
+    "id": "X",
+    "lean_declaration": "Fixture.X"
+   },
+   "Y": {
+    "id": "Y",
+    "lean_declaration": "Fixture.Y"
+   }
+  },
+  "transcription_results": [
+   "TRANSCRIBED-CORE"
+  ]
+ },
+ "truncated": {
+  "bounds": {
+   "atom_count": 9,
+   "closure_limit": 20000,
+   "closure_truncated": false,
+   "core_combination_limit": 4096,
+   "core_combinations_checked": 3,
+   "core_combinations_truncated": false,
+   "enumeration": "minimal conflicts via verified-entailment supports; components by shared conflicts; local positions = complements of minimal hitting sets (Berge); global positions = products",
+   "global_position_limit": 1,
+   "hitting_set_limit": 1,
+   "hitting_sets_truncated": true,
+   "max_atoms": 512,
+   "universe": "one expansion round: root-path open premises, their recorded rivals, atoms of certified cores derivable from those, statements of models/consistency results that evaluate or commit to one of them",
+   "universe_truncated": false
+  },
+  "classification_counts": {
+   "common_ground_candidate": 1,
+   "contested_uncertified": 2,
+   "enumeration_truncated": 2
+  },
+  "common_ground_candidates": [
+   "T"
+  ],
+  "components": [
+   {
+    "atom_ids": [
+     "P",
+     "Q",
+     "R"
+    ],
+    "conflicts": [
+     {
+      "core_statement_ids": [
+       "P",
+       "R"
+      ],
+      "kind": "derives_false",
+      "relation_id": null,
+      "result_ids": [
+       "QR",
+       "CORE"
+      ],
+      "statement_ids": [
+       "P",
+       "Q"
+      ]
+     },
+     {
+      "core_statement_ids": [
+       "P",
+       "R"
+      ],
+      "kind": "derives_false",
+      "relation_id": null,
+      "result_ids": [
+       "CORE"
+      ],
+      "statement_ids": [
+       "P",
+       "R"
+      ]
+     }
+    ],
+    "eliminated_atom_ids": [],
+    "hitting_sets_truncated": true,
+    "index": 0,
+    "position_ids": []
+   },
+   {
+    "atom_ids": [
+     "S"
+    ],
+    "conflicts": [],
+    "eliminated_atom_ids": [],
+    "hitting_sets_truncated": false,
+    "index": 1,
+    "position_ids": [
+     "POS-8DE0B3C47F11"
+    ]
+   },
+   {
+    "atom_ids": [
+     "T"
+    ],
+    "conflicts": [],
+    "eliminated_atom_ids": [],
+    "hitting_sets_truncated": false,
+    "index": 2,
+    "position_ids": [
+     "POS-E632B7095B0B"
+    ]
+   },
+   {
+    "atom_ids": [
+     "U"
+    ],
+    "conflicts": [],
+    "eliminated_atom_ids": [],
+    "hitting_sets_truncated": false,
+    "index": 3,
+    "position_ids": [
+     "POS-A25513C7E0F6"
+    ]
+   },
+   {
+    "atom_ids": [
+     "V"
+    ],
+    "conflicts": [],
+    "eliminated_atom_ids": [],
+    "hitting_sets_truncated": false,
+    "index": 4,
+    "position_ids": [
+     "POS-DE5A6F78116E"
+    ]
+   },
+   {
+    "atom_ids": [
+     "W",
+     "Y"
+    ],
+    "conflicts": [
+     {
+      "core_statement_ids": [
+       "W",
+       "Y"
+      ],
+      "kind": "refutes",
+      "relation_id": "REL-YW-REFUTES-W",
+      "result_ids": [
+       "YW"
+      ],
+      "statement_ids": [
+       "W",
+       "Y"
+      ]
+     }
+    ],
+    "eliminated_atom_ids": [],
+    "hitting_sets_truncated": true,
+    "index": 5,
+    "position_ids": []
+   }
+  ],
+  "conflicts": [
+   {
+    "core_statement_ids": [
+     "P",
+     "R"
+    ],
+    "kind": "derives_false",
+    "relation_id": null,
+    "result_ids": [
+     "QR",
+     "CORE"
+    ],
+    "statement_ids": [
+     "P",
+     "Q"
+    ]
+   },
+   {
+    "core_statement_ids": [
+     "P",
+     "R"
+    ],
+    "kind": "derives_false",
+    "relation_id": null,
+    "result_ids": [
+     "CORE"
+    ],
+    "statement_ids": [
+     "P",
+     "R"
+    ]
+   },
+   {
+    "core_statement_ids": [
+     "W",
+     "Y"
+    ],
+    "kind": "refutes",
+    "relation_id": "REL-YW-REFUTES-W",
+    "result_ids": [
+     "YW"
+    ],
+    "statement_ids": [
+     "W",
+     "Y"
+    ]
+   }
+  ],
+  "defects": [],
+  "global_positions": {
+   "count": null,
+   "enumerated": 0,
+   "positions": [],
+   "truncated": true
+  },
+  "inputs": {
+   "certified_cores": 2,
+   "core_atom_statement_ids": [
+    "R",
+    "Y"
+   ],
+   "entailment_result_ids": 3,
+   "rival_statement_ids": [
+    "V",
+    "W"
+   ],
+   "seed_statement_ids": [
+    "P",
+    "Q",
+    "S",
+    "T",
+    "U"
+   ],
+   "unconditionally_entailed_statement_ids": [],
+   "witness_atom_statement_ids": [],
+   "witnesses": 2
+  },
+  "matrix": [
+   {
+    "cheapest_route_cost": 2,
+    "classification": "enumeration_truncated",
+    "excluding_conflicts": [
+     {
+      "core_statement_ids": [
+       "P",
+       "R"
+      ],
+      "kind": "derives_false",
+      "relation_id": null,
+      "result_ids": [
+       "QR",
+       "CORE"
+      ],
+      "statement_ids": [
+       "P",
+       "Q"
+      ]
+     },
+     {
+      "core_statement_ids": [
+       "P",
+       "R"
+      ],
+      "kind": "derives_false",
+      "relation_id": null,
+      "result_ids": [
+       "CORE"
+      ],
+      "statement_ids": [
+       "P",
+       "R"
+      ]
+     }
+    ],
+    "in_position_ids": [],
+    "out_position_ids": [],
+    "rivals": [],
+    "routes": 1,
+    "statement_id": "P",
+    "stating_authors": [
+     "Aquinas"
+    ],
+    "transitive_dependents": 1,
+    "values": {
+     "POS-8DE0B3C47F11": "undetermined",
+     "POS-A25513C7E0F6": "undetermined",
+     "POS-DE5A6F78116E": "undetermined",
+     "POS-E632B7095B0B": "undetermined"
+    },
+    "witnessed_in_position_ids": []
+   },
+   {
+    "cheapest_route_cost": 2,
+    "classification": "enumeration_truncated",
+    "excluding_conflicts": [
+     {
+      "core_statement_ids": [
+       "P",
+       "R"
+      ],
+      "kind": "derives_false",
+      "relation_id": null,
+      "result_ids": [
+       "QR",
+       "CORE"
+      ],
+      "statement_ids": [
+       "P",
+       "Q"
+      ]
+     }
+    ],
+    "in_position_ids": [],
+    "out_position_ids": [],
+    "rivals": [],
+    "routes": 2,
+    "statement_id": "Q",
+    "stating_authors": [
+     "Hume"
+    ],
+    "transitive_dependents": 3,
+    "values": {
+     "POS-8DE0B3C47F11": "undetermined",
+     "POS-A25513C7E0F6": "undetermined",
+     "POS-DE5A6F78116E": "undetermined",
+     "POS-E632B7095B0B": "undetermined"
+    },
+    "witnessed_in_position_ids": []
+   },
+   {
+    "cheapest_route_cost": 3,
+    "classification": "contested_uncertified",
+    "excluding_conflicts": [],
+    "in_position_ids": [
+     "POS-8DE0B3C47F11"
+    ],
+    "out_position_ids": [],
+    "rivals": [
+     {
+      "class": "uncertified",
+      "statement_id": "W"
+     }
+    ],
+    "routes": 1,
+    "statement_id": "S",
+    "stating_authors": [],
+    "transitive_dependents": 2,
+    "values": {
+     "POS-8DE0B3C47F11": "in",
+     "POS-A25513C7E0F6": "undetermined",
+     "POS-DE5A6F78116E": "undetermined",
+     "POS-E632B7095B0B": "undetermined"
+    },
+    "witnessed_in_position_ids": []
+   },
+   {
+    "cheapest_route_cost": 3,
+    "classification": "common_ground_candidate",
+    "excluding_conflicts": [],
+    "in_position_ids": [
+     "POS-E632B7095B0B"
+    ],
+    "out_position_ids": [],
+    "rivals": [],
+    "routes": 1,
+    "statement_id": "T",
+    "stating_authors": [],
+    "transitive_dependents": 1,
+    "values": {
+     "POS-8DE0B3C47F11": "undetermined",
+     "POS-A25513C7E0F6": "undetermined",
+     "POS-DE5A6F78116E": "undetermined",
+     "POS-E632B7095B0B": "in"
+    },
+    "witnessed_in_position_ids": [
+     "POS-E632B7095B0B"
+    ]
+   },
+   {
+    "cheapest_route_cost": null,
+    "classification": "contested_uncertified",
+    "excluding_conflicts": [],
+    "in_position_ids": [
+     "POS-A25513C7E0F6"
+    ],
+    "out_position_ids": [],
+    "rivals": [
+     {
+      "class": "uncertified",
+      "statement_id": "V"
+     }
+    ],
+    "routes": 0,
+    "statement_id": "U",
+    "stating_authors": [],
+    "transitive_dependents": 1,
+    "values": {
+     "POS-8DE0B3C47F11": "undetermined",
+     "POS-A25513C7E0F6": "in",
+     "POS-DE5A6F78116E": "undetermined",
+     "POS-E632B7095B0B": "undetermined"
+    },
+    "witnessed_in_position_ids": []
+   }
+  ],
+  "positions": [
+   {
+    "atom_ids": [
+     "S"
+    ],
+    "attested_by": [],
+    "entailed_statement_ids": [],
+    "excluded_atom_ids": [],
+    "id": "POS-8DE0B3C47F11",
+    "stating_authors": [],
+    "status": "not_known_inconsistent",
+    "witnesses": []
+   },
+   {
+    "atom_ids": [
+     "U"
+    ],
+    "attested_by": [],
+    "entailed_statement_ids": [],
+    "excluded_atom_ids": [],
+    "id": "POS-A25513C7E0F6",
+    "stating_authors": [],
+    "status": "not_known_inconsistent",
+    "witnesses": []
+   },
+   {
+    "atom_ids": [
+     "V"
+    ],
+    "attested_by": [],
+    "entailed_statement_ids": [],
+    "excluded_atom_ids": [],
+    "id": "POS-DE5A6F78116E",
+    "stating_authors": [],
+    "status": "not_known_inconsistent",
+    "witnesses": []
+   },
+   {
+    "atom_ids": [
+     "T"
+    ],
+    "attested_by": [],
+    "entailed_statement_ids": [],
+    "excluded_atom_ids": [],
+    "id": "POS-E632B7095B0B",
+    "stating_authors": [],
+    "status": "witnessed",
+    "witnesses": [
+     {
+      "id": "MODEL-PT",
+      "kind": "model"
+     }
+    ]
+   }
+  ],
+  "scope": "Computed from registered cores, entailments, models, consistency results and claims only; no position is named or hand-authored and no corpus record is written. Positions are maximal relative to the reported bounded atom universe and certified cores only: absence of a core is not consistency, absence of a witness is not inconsistency. common_ground entries are candidates; marking one still needs #501/#378 evidence.",
+  "territories": [],
+  "universe": [
+   "P",
+   "Q",
+   "S",
+   "T",
+   "U",
+   "V",
+   "W",
+   "R",
+   "Y"
+  ]
+ }
+}

@@ -16,6 +16,7 @@ target/debug/truth dossier STMT-GOD-EXISTS
 target/debug/truth context ARGUMENT-ID --json
 target/debug/truth orphans
 target/debug/truth orphans --senses --json
+target/debug/truth issues --from issues.json --for STMT-GOD-EXISTS
 target/debug/truth next
 target/debug/truth next-steps --frontier-root STMT-CATHOLICISM-TRUE
 target/debug/truth results
@@ -38,8 +39,8 @@ network access. The executable uses only local files. Use `--root PATH` to
 select another checkout. Paths in results are relative to that checkout.
 
 Version 1 JSON uses stdout for results and stderr for errors. Exit codes are
-0 for success, 1 for corpus input errors, 2 for usage errors, and 3 for an
-unknown exact ID. `inspect` includes every matching kind and its canonical
+0 for success, 1 for corpus input errors, 2 for usage errors (and, as in
+Python, for an unusable issue snapshot), and 3 for an unknown exact ID. `inspect` includes every matching kind and its canonical
 record fields, including shared argument/result IDs. Passage entries are
 expanded with their shared snapshot fields as in the Python reader.
 `input_identity` is a non-cryptographic fingerprint of the sorted record
@@ -288,9 +289,8 @@ target or an ambiguous `context` target exits 2;
 an unreadable or non-frontier report or an unknown frontier root exits 1.
 Python prints the same messages with exit code 2.
 
-Not ported (use Python): `dossier --issues-from` (offline issue snapshot),
-`context --proof-use`/`--proof-use-json` (Lean proof-term inspection), the
-full `validate()` that `dossier --all` runs first, `research_index.py`'s other
+Not ported (use Python): `context --proof-use`/`--proof-use-json` (Lean
+proof-term inspection), the full `validate()` that `dossier --all` runs first, `research_index.py`'s other
 subcommands (`build`, `search`, `show`, `duplicates`, `summary`, `parity`,
 `export`, `bundle`, `compare`) and the Explorer's `dossier --all` consumer.
 `scripts/verify_truth_cli.py` checks parity on a sample of 30+ statements
@@ -301,6 +301,32 @@ several `--limit` values, and the error cases, from a saved Python report;
 and, for a subset plus `dossier --all`, that the in-process frontier gives the
 same output.
 
+## `issues` and `dossier --issues-from`
+
+`truth issues --from FILE [--for ID]` is `corpus.py issues --from FILE`: the
+read-only reconciliation of `truth-core-acceptance` blocks (#949) in an
+offline `gh issue list --state open --limit 1000 --json
+number,title,body,url,comments` snapshot against this checkout
+(`truth::issues`, the port of `scripts/issue_acceptance.py`). Each issue is
+`delivered`, `missing`, `malformed` or `untracked`; the JSON adds the
+requirements and a reverse index from IDs to issue numbers, and `--for ID`
+(a uuid, legacy id or label of a result, statement, configuration, attempt or
+argument) keeps the issues naming it. Statement closures come from the Rust
+frontier on the checkout; a `theorems` requirement also needs a declaration
+of exactly that name in the result's Solution module source. `truth dossier
+STATEMENT|--all --issues-from FILE` adds each statement's
+`targeting_issues` (and the text line `Issue targets (offline acceptance
+snapshot): …`), using the closures of the dossier's frontier report.
+
+Unlike Python, `truth issues` requires `--from`: it never calls GitHub.
+Snapshot errors (unreadable file, invalid JSON, a non-array, an issue without
+a positive integer number) exit 2 with Python's `corpus error: …` message;
+only the wording of a JSON parse error differs. Text is byte-identical and
+JSON semantically identical (plus `input_identity`);
+`scripts/truth_parity/issues.py` checks this on the cases of
+`test_issue_acceptance.py` on a fixture checkout and on the recorded snapshot
+`scripts/truth_parity/fixtures/issues-snapshot.json` extended with blocks
+naming real corpus records.
 ## `next`, `next-steps`, `arguments`, `results`, `sort-lists`
 
 Ports of the navigation subcommands of `scripts/corpus.py`
@@ -404,3 +430,43 @@ export (`--constants`) and either `--target ID` or a
 `truth thickness --queue --json` or `corpus.py thickness --queue --json` file (`--queue-file`, first `--targets N`,
 default 10). It is a search heuristic, not a proof or equivalence judgment;
 see `docs/bridge-candidates.md` for the pipeline and the optional Lean trial.
+
+## `configurations`, `models`, `territory`
+
+These port the Lean-free parts of `corpus.py configurations`, `models` and
+`territory` (#954 slice B2): `truth::configurations` (`implication_closure`,
+`configuration_report`), `truth::finite_models` (`model_report`) and
+`truth::territory` (`territory_report`). Text output is byte-identical to
+Python's; `--json` prints the Python JSON (plus `input_identity` for `models`
+and `territory`; `configurations` prints Python's list as is). A corpus error
+prints Python's `corpus error: …` with exit code 2.
+
+- `truth configurations --registered [--case ID] [--seed STATEMENT]
+  [--premise STATEMENT]...`: the registered projection (no certified status).
+  It validates the models and cases first, as Python's `configuration_context`
+  does (`truth::check::registered_configurations`), not the whole corpus.
+  Without `--registered` Python builds the modules and checks every
+  certificate and original theorem in Lean; Rust refuses and names the Python
+  command (exit 2). The verified projection is ported in the library and
+  unit-tested against Python's fixture cases; slice A6 wires it to
+  `configuration-report`.
+- `truth models`: every registered model and its co-failure candidates.
+  `--check`, `--argument` and `--verify` Lean-check all registered models in
+  Python, so Rust refuses them and names the Python command; `--premise`
+  without either fails as in Python.
+- `truth territory [--frontier-root STATEMENT] [--max-atoms N]`: Python's
+  `--root` is `--frontier-root` here. Like Python it runs the full `check`
+  validation first (`cli::validate_first`) and reads the in-process Rust
+  frontier. Position IDs hash with a built-in SHA-256. The global position
+  count is exact (Python's unbounded int): the text prints every digit; a
+  count beyond `u64` has no exact JSON number here, so `--json` then fails
+  with `unrepresentable_count` (exit 1) and names the Python command instead
+  of printing a wrong number.
+
+`scripts/truth_parity/configurations.py` compares them on the real corpus
+(every case, filtering by uuid and legacy id, seed and premise selections and
+their errors; `models`; `territory` with the default bound, `--max-atoms` 40
+and -3 and an unknown root) and on a fixture checkout with an incompatibility
+core, an implication rule, a model a fixed constant excludes, co-failures, a
+refutation core and a model that satisfies it (a `DEFECT` line), a broken
+corpus and seven broken registrations.

@@ -46,6 +46,40 @@ pub struct ResearchArgs {
     pub frontier: Option<String>,
 }
 
+/// The options of `configurations`, `models` and `territory`.
+#[derive(Default)]
+pub struct ConfigurationArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    pub case: Option<String>,
+    pub seed: Option<String>,
+    pub premises: Vec<String>,
+    pub registered: bool,
+    /// `models --check`, `--argument` and `--verify` (Lean; Python only).
+    pub check: Option<String>,
+    pub argument: Option<String>,
+    pub verify: bool,
+    pub max_atoms: Option<i64>,
+}
+
+/// `issues --from FILE --for ID` and `dossier --issues-from FILE`.
+#[derive(Default)]
+pub struct IssueArgs {
+    /// `--from`
+    pub from: Option<String>,
+    /// `--for`
+    pub for_id: Option<String>,
+    /// `--issues-from`
+    pub issues_from: Option<String>,
+}
+
+impl IssueArgs {
+    /// Whether `--from` or `--for` was given.
+    pub fn own(&self) -> bool {
+        self.from.is_some() || self.for_id.is_some()
+    }
+}
+
 /// Every option of every command, parsed in one pass in token order.
 pub struct Args {
     pub machine: bool,
@@ -59,6 +93,8 @@ pub struct Args {
     pub frontier_root: String,
     pub frontier: FrontierArgs,
     pub research: ResearchArgs,
+    pub issues: IssueArgs,
+    pub configuration: ConfigurationArgs,
     pub bind: BindArgs,
 }
 
@@ -78,6 +114,10 @@ pub struct Accepts {
     pub revisions: bool,
     /// `--base` alone (`thickness`, `orphans`)
     pub base: bool,
+    /// `--from` and `--for`
+    pub issues: bool,
+    /// The [`ConfigurationArgs`] (each command checks which of them apply)
+    pub configuration: bool,
 }
 
 fn number(value: Option<&str>, flag: &str) -> Result<usize, Failure> {
@@ -108,6 +148,8 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         frontier_root: thickness::DEFAULT_ROOT.to_owned(),
         frontier: FrontierArgs::default(),
         research: ResearchArgs::default(),
+        issues: IssueArgs::default(),
+        configuration: ConfigurationArgs::default(),
         bind: BindArgs::default(),
     };
     let mut args = args.iter();
@@ -206,6 +248,44 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                     }
                 }
             }
+            "--registered" | "--verify" => {
+                parsed.configuration.flags = true;
+                if arg == "--registered" {
+                    parsed.configuration.registered = true;
+                } else {
+                    parsed.configuration.verify = true;
+                }
+            }
+            "--case" | "--seed" | "--premise" | "--check" | "--argument" | "--max-atoms" => {
+                parsed.configuration.flags = true;
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                    .to_owned();
+                let configuration = &mut parsed.configuration;
+                match arg {
+                    "--case" => configuration.case = Some(value),
+                    "--seed" => configuration.seed = Some(value),
+                    "--premise" => configuration.premises.push(value),
+                    "--check" => configuration.check = Some(value),
+                    "--argument" => configuration.argument = Some(value),
+                    _ => configuration.max_atoms = Some(integer(Some(&value), arg)?),
+                }
+            }
+            "--from" | "--for" | "--issues-from" => {
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                    .to_owned();
+                let issues = &mut parsed.issues;
+                match arg {
+                    "--from" => issues.from = Some(value),
+                    "--for" => issues.for_id = Some(value),
+                    _ => issues.issues_from = Some(value),
+                }
+            }
             "--constants" | "--queue-file" | "--target" | "--targets" | "--top" | "--pool" => {
                 parsed.bridge_flags = true;
                 let value = args
@@ -300,6 +380,17 @@ impl Args {
             } else {
                 "--base applies only to frontier-diff, thickness and orphans; --head only to frontier-diff"
             }));
+        }
+        if !accepts.issues && self.issues.own() {
+            return Err(usage("--from and --for apply only to issues"));
+        }
+        if self.issues.issues_from.is_some() {
+            return Err(usage("--issues-from applies only to dossier"));
+        }
+        if !accepts.configuration && self.configuration.flags {
+            return Err(usage(
+                "--case, --seed, --premise, --registered, --check, --argument, --verify and --max-atoms apply only to configurations, models and territory",
+            ));
         }
         Ok(())
     }
