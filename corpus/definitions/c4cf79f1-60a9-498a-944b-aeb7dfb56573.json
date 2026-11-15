@@ -17,8 +17,8 @@
     ],
     "open_obligations": [
       "No axiom constrains it; two open bridges give sufficient conditions only: 'Whatever is INFINITE_1 is INCOMPREHENSIBLE_1' and 'Whatever is INCOMPREHENSIBLE_2 is INCOMPREHENSIBLE_1'.",
-      "Typed created intellects and a measure of knowability are OPEN.",
-      "Formalization candidate: with Comprehends and a typed 'created intellect', define it as 'no created intellect comprehends g', which is the shape INCOMPREHENSIBLE_2 already types; this would make the sense bridge definitional, so it needs the measure of knowability first."
+      "Typed created intellects and a measure of knowability are OPEN. INCOMPREHENSIBLE_2 quantifies over caused intellects (IsCausedIntellect: has intellect and has its being caused by another), and that every created intellect is a caused one is a separate open reading step.",
+      "Formalization candidate: with Comprehends and a typed 'created intellect', define it as 'no created intellect comprehends g'. This would not make the sense bridge definitional: INCOMPREHENSIBLE_2 also requires Infinite g and quantifies over caused rather than created intellects, so the bridge would still need the created-to-caused inclusion. A knowability measure would type Comprehends but would not supply that inclusion."
     ]
   }
 }
