@@ -27,7 +27,7 @@ from pathlib import Path
 import corpus
 from truth_parity.bind_check import FIX, described, hyp
 from truth_parity.check import by_id, write_check_fixture
-from truth_parity.common import U, ParityCase
+from truth_parity.common import U, ParityCase, without_note_field, without_note_mentions
 
 # Stands in for `lake env lean --run TOOL INPUT`: keeps a copy of INPUT under
 # $FAKE_CAPTURE and prints the recorded output for TOOL from $FAKE_OUTPUTS.
@@ -152,11 +152,11 @@ class TruthProofUseParity(ParityCase):
                 else:
                     self.assertEqual(rust.stderr, python.stderr)
             elif json_flag and semantic_json:
-                report = json.loads(rust.stdout)
+                report = without_note_field(json.loads(rust.stdout))
                 report.pop("input_identity")
                 self.assertEqual(report, json.loads(python.stdout), arguments)
             else:
-                self.assertEqual(rust.stdout, python.stdout, arguments)
+                self.assertEqual(without_note_mentions(rust.stdout), python.stdout, arguments)
             for tool in TOOLS:
                 ran = root / "capture-python" / f"{tool}.json"
                 if ran.exists():
@@ -319,11 +319,11 @@ class TruthProofUseParity(ParityCase):
                                   text=True, check=False)
             self.assertEqual(rust.returncode, python.returncode, (arguments, python.stderr, rust.stderr))
             if semantic:
-                report = json.loads(rust.stdout)
+                report = without_note_field(json.loads(rust.stdout))
                 report.pop("input_identity")
                 self.assertEqual(report, json.loads(python.stdout), arguments)
             else:
-                self.assertEqual(rust.stdout, python.stdout, arguments)
+                self.assertEqual(without_note_mentions(rust.stdout), python.stdout, arguments)
 
         bind, use = os.environ.get("TRUTH_UNUSED_BIND_JSON"), os.environ.get("TRUTH_UNUSED_USAGE_JSON")
         reuse_json = os.environ.get("TRUTH_LEAN_REUSE_JSON")

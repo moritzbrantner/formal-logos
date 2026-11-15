@@ -7,7 +7,7 @@ import tempfile
 from pathlib import Path
 
 import corpus
-from truth_parity.common import humanize, ParityCase
+from truth_parity.common import NOTE_BLOCK, humanize, without_note_mentions, ParityCase
 
 
 def spread(items, count):
@@ -46,14 +46,23 @@ class TruthResearchParity(ParityCase):
         cls.temporary.cleanup()
 
     def truth(self, *args, code=0):
+        """Rust's output without its note-mention block (#952): Python has no
+        note index, so `related`, `dossier` and `context` text ends with
+        `\n\nNotes mentioning the target records …` on the Rust side only."""
         result = subprocess.run([self.binary, *args], cwd=corpus.ROOT,
                                 capture_output=True, text=True, check=False)
         self.assertEqual(result.returncode, code, (args, result.stderr))
-        return result.stdout, result.stderr
+        stdout = result.stdout
+        if code == 0 and "--json" not in args and "--all" not in args:
+            self.assertIn(NOTE_BLOCK, stdout, args)
+            stdout = without_note_mentions(stdout)
+        return stdout, result.stderr
 
     def truth_json(self, *args):
         value = json.loads(self.truth("--json", *args)[0])
         self.assertTrue(value.pop("input_identity").startswith("fnv1a64:"))
+        # Rust only (#952): note sections that mention the target by explicit ID.
+        self.assertIsInstance(value.pop("note_mentions"), list)
         return value
 
     def statement_sample(self):

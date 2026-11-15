@@ -293,6 +293,32 @@ pub fn with_identity(value: impl serde::Serialize, corpus: &Corpus) -> Value {
     value
 }
 
+/// Adds the note sections that explicitly mention one of `ids` (#952) to a
+/// research view: `note_mentions` in the JSON and a final text block of at
+/// most `limit` entries. Python has no note index, so the field and the
+/// block are Rust only (the parity tests remove them).
+pub fn with_note_mentions(
+    args: &Args,
+    corpus: &Corpus,
+    ids: &[&str],
+    value: &mut Value,
+    text: &mut String,
+    limit: usize,
+) -> Result<(), Failure> {
+    let lookup = truth::notes::Lookup::of_corpus(corpus);
+    let ids = ids.iter().copied().collect();
+    let found = truth::notes::mentioning(&args.root, &lookup, &ids)
+        .map_err(|message| input_error(truth::notes::DIRECTORY, message))?;
+    let block = truth::notes::format_mentions(&found, limit);
+    // Always `TEXT\n\nNotes…`, so the block can be cut off exactly.
+    text.push_str("\n\n");
+    text.push_str(block.trim_matches('\n'));
+    if let Some(object) = value.as_object_mut() {
+        object.insert("note_mentions".into(), json!(found));
+    }
+    Ok(())
+}
+
 /// The uuid `token` names (uuid, legacy id, label, case-insensitive label),
 /// `None` when it names no record; naming several records is an error.
 pub fn resolve(

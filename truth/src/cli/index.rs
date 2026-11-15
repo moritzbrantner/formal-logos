@@ -2,9 +2,11 @@
 //! Python `scripts/research_index.py` (see `truth::index`).
 //!
 //! - `build` — rebuild `.cache/truth-index.sqlite` now;
-//! - `search WORDS [--limit N]` — records containing every word, by FTS5 rank;
-//! - `show ID` — one record (`kind:ID` when an ID names several) and the
-//!   records that reference it;
+//! - `search WORDS [--limit N]` — records containing every word, by FTS5
+//!   rank, then note sections (`kind: "note"`, #952) the same way;
+//! - `show ID` — one record (`kind:ID` when an ID names several), the
+//!   records that reference it and the notes that name it; `show
+//!   docs/notes/x.md[#anchor]` — a note or one of its sections;
 //! - `duplicates`, `summary` — exact duplicate argument bundles, inventory;
 //! - `parity` — every corpus file and record against the index;
 //! - `export PATH` — one indexed corpus file's original bytes;

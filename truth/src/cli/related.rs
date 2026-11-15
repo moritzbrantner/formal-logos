@@ -2,6 +2,7 @@
 
 use super::{
     Args, Command, HELP, Output, invalid_target, load, research, unknown, usage, with_identity,
+    with_note_mentions,
 };
 use truth::related;
 
@@ -10,7 +11,8 @@ pub const COMMAND: Command = Command {
     run,
 };
 
-/// JSON as the Python command prints it (plus `input_identity`) and
+/// JSON as the Python command prints it (plus `input_identity` and, #952,
+/// `note_mentions`) and
 /// byte-identical text.
 fn run(args: &Args, operands: &[&str]) -> Output {
     let applies = args.research.frontier.is_none()
@@ -25,9 +27,9 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         related::LookupError::Unknown(message) => unknown(&message),
         related::LookupError::Invalid(message) => invalid_target(&message),
     })?;
-    let text = related::format_related(&report);
-    Ok((
-        with_identity(&report, &corpus),
-        Some(aliases.humanize(&text)),
-    ))
+    let mut text = related::format_related(&report);
+    let mut value = with_identity(&report, &corpus);
+    let shown = usize::try_from(limit).unwrap_or(usize::MAX).max(1);
+    with_note_mentions(args, &corpus, &[&target], &mut value, &mut text, shown)?;
+    Ok((value, Some(aliases.humanize(&text))))
 }

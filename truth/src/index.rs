@@ -19,7 +19,7 @@ use crate::{
     configurations::{self, Index},
     fnv1a64_update,
     identity::{Aliases, Unresolved},
-    pyfmt,
+    notes, pyfmt,
     pyjson::float_repr,
 };
 use rusqlite::{Connection, OpenFlags, OptionalExtension, params};
@@ -37,7 +37,7 @@ type Obj = Map<String, Value>;
 pub const SCHEMA: &str = "3";
 /// The projection semantics; bump it when a change must invalidate every
 /// existing index.
-pub const BUILDER: &str = "truth-index-1";
+pub const BUILDER: &str = "truth-index-2";
 /// The database, relative to the checkout. Python's projection lives in
 /// `.cache/research-index.sqlite`; separate files keep the two from
 /// invalidating each other.
@@ -53,6 +53,20 @@ const TABLES: &str = "
     CREATE TABLE arguments(id TEXT PRIMARY KEY, signature TEXT, conclusion TEXT);
     CREATE INDEX argument_signature ON arguments(signature,conclusion);
     CREATE VIRTUAL TABLE search USING fts5(id UNINDEXED, text, tokenize='unicode61');
+";
+
+/// Free-form notes (#952): Rust only, so the record tables above stay
+/// Python's row for row. A note section's key is `path#anchor` (the bare
+/// path for the preamble); `note_links` holds only explicit mentions.
+const NOTE_TABLES: &str = "
+    CREATE TABLE notes(path TEXT PRIMARY KEY, title TEXT NOT NULL);
+    CREATE TABLE note_sections(key TEXT PRIMARY KEY, path TEXT, anchor TEXT, heading TEXT,
+                               level INTEGER, line INTEGER, body TEXT);
+    CREATE TABLE note_links(section TEXT, kind TEXT, id TEXT, mention TEXT, how TEXT,
+                            line INTEGER);
+    CREATE INDEX note_links_id ON note_links(id);
+    CREATE TABLE note_unresolved(section TEXT, mention TEXT, how TEXT, line INTEGER);
+    CREATE VIRTUAL TABLE note_search USING fts5(key UNINDEXED, text, tokenize='unicode61');
 ";
 
 pub type Result<T> = std::result::Result<T, String>;
@@ -123,6 +137,7 @@ pub fn digest(root: &Path) -> Result<String> {
         let bytes = read(root, &path)?;
         files.push((path, bytes));
     }
+    files.extend(notes::read_all(root)?);
     Ok(identity(files))
 }
 
@@ -237,9 +252,11 @@ pub fn build(root: &Path, destination: &Path) -> Result<()> {
         let bytes = read(root, &path)?;
         files.push((path, bytes));
     }
+    let notes = notes::read_all(root)?;
     let before = identity(
         files
             .iter()
+            .chain(&notes)
             .map(|(path, bytes)| (path.clone(), bytes.clone())),
     );
     let directory = destination.parent().unwrap_or(Path::new("."));
@@ -251,16 +268,23 @@ pub fn build(root: &Path, destination: &Path) -> Result<()> {
         ".truth-index-{}-{nanos}.sqlite.tmp",
         std::process::id()
     ));
-    let outcome = fill(root, &temporary, &files, &before)
+    let outcome = fill(root, &temporary, &files, &notes, &before)
         .and_then(|()| fs::rename(&temporary, destination).map_err(|error| error.to_string()));
     let _ = fs::remove_file(&temporary);
     outcome
 }
 
-fn fill(root: &Path, temporary: &Path, files: &[(String, Vec<u8>)], before: &str) -> Result<()> {
+fn fill(
+    root: &Path,
+    temporary: &Path,
+    files: &[(String, Vec<u8>)],
+    note_files: &[(String, Vec<u8>)],
+    before: &str,
+) -> Result<()> {
     let mut db = Connection::open(temporary).map_err(sql)?;
     let tx = db.transaction().map_err(sql)?;
     tx.execute_batch(TABLES).map_err(sql)?;
+    tx.execute_batch(NOTE_TABLES).map_err(sql)?;
     let mut records = Vec::new();
     {
         let mut insert = tx
@@ -319,6 +343,11 @@ fn fill(root: &Path, temporary: &Path, files: &[(String, Vec<u8>)], before: &str
             }
         }
     }
+    let mut lookup = notes::Lookup::default();
+    for (path, kind, record) in &records {
+        lookup.add(kind, path, record);
+    }
+    fill_notes(&tx, &lookup, note_files)?;
     if digest(root)? != before {
         return Err("corpus changed while indexing; retry".into());
     }
@@ -329,6 +358,76 @@ fn fill(root: &Path, temporary: &Path, files: &[(String, Vec<u8>)], before: &str
     .map_err(sql)?;
     tx.commit().map_err(sql)?;
     db.close().map_err(|(_, error)| sql(error))
+}
+
+/// Projects every note section, its explicit links and unresolved
+/// reference-shaped mentions, and its searchable text (path, title, heading
+/// and body).
+fn fill_notes(
+    tx: &rusqlite::Transaction<'_>,
+    lookup: &notes::Lookup,
+    files: &[(String, Vec<u8>)],
+) -> Result<()> {
+    let mut note_row = tx.prepare("INSERT INTO notes VALUES (?,?)").map_err(sql)?;
+    let mut section_row = tx
+        .prepare("INSERT INTO note_sections VALUES (?,?,?,?,?,?,?)")
+        .map_err(sql)?;
+    let mut link_row = tx
+        .prepare("INSERT INTO note_links VALUES (?,?,?,?,?,?)")
+        .map_err(sql)?;
+    let mut unresolved_row = tx
+        .prepare("INSERT INTO note_unresolved VALUES (?,?,?,?)")
+        .map_err(sql)?;
+    let mut search_row = tx
+        .prepare("INSERT INTO note_search VALUES (?,?)")
+        .map_err(sql)?;
+    for (path, bytes) in files {
+        let note = notes::parse(path, &String::from_utf8_lossy(bytes));
+        note_row.execute(params![path, note.title]).map_err(sql)?;
+        for section in &note.sections {
+            let key = note.key(section);
+            section_row
+                .execute(params![
+                    key,
+                    path,
+                    section.anchor,
+                    section.heading,
+                    section.level,
+                    section.line as i64,
+                    section.body
+                ])
+                .map_err(sql)?;
+            let text = format!(
+                "{path}\n{}\n{}\n{}",
+                note.title, section.heading, section.body
+            );
+            search_row.execute(params![key, text]).map_err(sql)?;
+            let (links, unresolved) = lookup.links(section);
+            for link in links {
+                link_row
+                    .execute(params![
+                        key,
+                        link.kind,
+                        link.id,
+                        link.mention,
+                        link.how.as_str(),
+                        link.line as i64
+                    ])
+                    .map_err(sql)?;
+            }
+            for entry in unresolved {
+                unresolved_row
+                    .execute(params![
+                        key,
+                        entry.mention,
+                        entry.how.as_str(),
+                        entry.line as i64
+                    ])
+                    .map_err(sql)?;
+            }
+        }
+    }
+    Ok(())
 }
 
 /// Python `connect`: the index at `path`, read-only, when it is bound to
@@ -466,8 +565,15 @@ pub fn record(db: &Connection, token: &str) -> Result<Obj> {
 }
 
 /// Python `lookup` (`show`): the record and the records that reference it.
+///
+/// Extensions: `mentioned_by_notes` lists the note sections that mention the
+/// record explicitly, and a `docs/notes/…md[#anchor]` token shows a note.
 pub fn show(db: &Connection, token: &str) -> Result<Value> {
-    let found = record(db, token)?;
+    if token.starts_with(&format!("{}/", notes::DIRECTORY)) {
+        return show_note(db, token);
+    }
+    let key = key_of(db, token)?;
+    let found = record(db, &key)?;
     let id = found
         .get("id")
         .and_then(Value::as_str)
@@ -478,7 +584,99 @@ pub fn show(db: &Connection, token: &str) -> Result<Value> {
         "SELECT r.id,r.kind,r.path FROM refs JOIN records r ON r.key=refs.owner WHERE target=? ORDER BY r.kind,r.id",
         &[&id],
     )?;
-    Ok(json!({"record": found, "referenced_by": referenced_by}))
+    let kind = key.split_once(':').map_or("", |(kind, _)| kind).to_owned();
+    let mentioned_by_notes = note_rows(
+        db,
+        "SELECT l.section,s.path,s.heading,l.line,l.mention,l.how FROM note_links l
+         JOIN note_sections s ON s.key=l.section WHERE l.id=? AND l.kind=? ORDER BY l.rowid",
+        &[&id as &dyn rusqlite::ToSql, &kind],
+    )?;
+    Ok(json!({"record": found, "referenced_by": referenced_by,
+              "mentioned_by_notes": mentioned_by_notes}))
+}
+
+/// Rows of a note query as objects; integer columns stay numbers.
+fn note_rows(db: &Connection, query: &str, values: &[&dyn rusqlite::ToSql]) -> Result<Vec<Value>> {
+    let mut statement = db.prepare(query).map_err(sql)?;
+    let names: Vec<String> = statement.column_names().map(str::to_owned).collect();
+    statement
+        .query_map(values, |row| {
+            let mut object = Obj::new();
+            for (index, name) in names.iter().enumerate() {
+                let value = match row.get_ref(index)? {
+                    rusqlite::types::ValueRef::Integer(number) => json!(number),
+                    rusqlite::types::ValueRef::Text(text) => {
+                        json!(String::from_utf8_lossy(text))
+                    }
+                    _ => Value::Null,
+                };
+                object.insert(name.clone(), value);
+            }
+            Ok(Value::Object(object))
+        })
+        .map_err(sql)?
+        .collect::<std::result::Result<Vec<_>, _>>()
+        .map_err(sql)
+}
+
+/// `show docs/notes/x.md[#anchor]`: a note's sections (or one section with
+/// its body), the records it mentions explicitly and its unresolved
+/// reference-shaped mentions.
+pub fn show_note(db: &Connection, token: &str) -> Result<Value> {
+    let (path, anchor) = token.split_once('#').unwrap_or((token, ""));
+    let title: Option<String> = db
+        .query_row("SELECT title FROM notes WHERE path=?", [path], |row| {
+            row.get(0)
+        })
+        .optional()
+        .map_err(sql)?;
+    let Some(title) = title else {
+        return Err(format!(
+            "unknown note: {path} (indexed: {}/**/*.md up to {} bytes)",
+            notes::DIRECTORY,
+            notes::MAX_BYTES
+        ));
+    };
+    // `?2` is the section key, or empty for the whole note.
+    let section_filter = "s.path=?1 AND (?2='' OR s.key=?2)";
+    let wanted = if token.contains('#') { token } else { "" };
+    let sections = note_rows(
+        db,
+        &format!(
+            "SELECT s.key AS section,s.anchor,s.heading,s.level,s.line{} FROM note_sections s
+             WHERE {section_filter} ORDER BY s.rowid",
+            if token.contains('#') { ",s.body" } else { "" }
+        ),
+        &[&path as &dyn rusqlite::ToSql, &wanted],
+    )?;
+    if sections.is_empty() {
+        return Err(format!("unknown note section: {token} (anchor {anchor:?})"));
+    }
+    let links = note_rows(
+        db,
+        &format!(
+            "SELECT l.section,l.line,l.kind,l.id,l.mention,l.how,r.path AS record_path
+             FROM note_links l JOIN note_sections s ON s.key=l.section
+             LEFT JOIN records r ON r.key=l.kind||':'||l.id
+             WHERE {section_filter} ORDER BY l.rowid"
+        ),
+        &[&path as &dyn rusqlite::ToSql, &wanted],
+    )?;
+    let unresolved = note_rows(
+        db,
+        &format!(
+            "SELECT u.section,u.line,u.mention,u.how FROM note_unresolved u
+             JOIN note_sections s ON s.key=u.section WHERE {section_filter} ORDER BY u.rowid"
+        ),
+        &[&path as &dyn rusqlite::ToSql, &wanted],
+    )?;
+    Ok(json!({
+        "note": {"kind": "note", "path": path, "title": title},
+        "sections": sections,
+        "links": links,
+        "unresolved": unresolved,
+        "boundary": notes::BOUNDARY,
+    }))
 }
 
 /// Python `search`: literal words, all of which must match, by FTS5 rank.
@@ -496,11 +694,41 @@ pub fn search(db: &Connection, query: &str, limit: i64) -> Result<Value> {
         .collect::<Vec<_>>()
         .join(" AND ");
     let limit = limit.clamp(1, 200);
-    Ok(Value::Array(rows(
+    let mut found = rows(
         db,
         "SELECT r.id,r.kind,r.path FROM search JOIN records r ON r.key=search.id WHERE search MATCH ? ORDER BY rank LIMIT ?",
         &[&expression as &dyn rusqlite::ToSql, &limit],
-    )?))
+    )?;
+    found.extend(search_notes(db, &expression, limit)?);
+    Ok(Value::Array(found))
+}
+
+/// The note sections matching an FTS5 expression, by rank, each typed
+/// `kind: "note"` with its excerpt and the records it mentions explicitly
+/// (`kind:ID`).
+fn search_notes(db: &Connection, expression: &str, limit: i64) -> Result<Vec<Value>> {
+    let mut found = note_rows(
+        db,
+        "SELECT 'note' AS kind,s.key AS id,s.path,n.title,s.heading,s.line,
+                snippet(note_search,1,'[',']','…',16) AS excerpt
+         FROM note_search JOIN note_sections s ON s.key=note_search.key
+         JOIN notes n ON n.path=s.path
+         WHERE note_search MATCH ? ORDER BY rank LIMIT ?",
+        &[&expression as &dyn rusqlite::ToSql, &limit],
+    )?;
+    let mut links = db
+        .prepare("SELECT kind||':'||id FROM note_links WHERE section=? GROUP BY kind,id ORDER BY min(rowid)")
+        .map_err(sql)?;
+    for hit in &mut found {
+        let key = hit["id"].as_str().unwrap_or_default().to_owned();
+        let targets: Vec<String> = links
+            .query_map([&key], |row| row.get(0))
+            .map_err(sql)?
+            .collect::<std::result::Result<_, _>>()
+            .map_err(sql)?;
+        hit["links"] = json!(targets);
+    }
+    Ok(found)
 }
 
 /// Python `duplicates`: arguments with the same premise-ID set and
@@ -1101,5 +1329,154 @@ mod tests {
         let position = |path: &str| paths.iter().position(|item| item == path).unwrap();
         assert!(position("corpus/a/x.json") < position("corpus/a-b/x.json"));
         assert!(position("corpus/a-b/x.json") < position("corpus/a.b.json"));
+    }
+
+    /// The #952 pilot in miniature: a note records an open question in
+    /// prose, names one formal result by legacy ID, a statement by label and
+    /// a missing statement; search, show and the reverse listing see only
+    /// those explicit links.
+    fn note_fixture(name: &str) -> Fixture {
+        let fixture = Fixture::new(name);
+        fixture.put(
+            "results",
+            json!({"id": "R", "legacy_id": "JOINT-CERT", "argument_id": "A", "status": "verified"}),
+        );
+        fixture.put(
+            "statements",
+            json!({"id": "T", "label": "Plural sources cooperate", "paraphrase": "plural sources"}),
+        );
+        let notes = fixture.0.join("docs/notes/sub");
+        fs::create_dir_all(&notes).unwrap();
+        fs::write(
+            fixture.0.join("docs/notes/pilot.md"),
+            "# Pilot\n\nResult JOINT-CERT, statement `Plural sources cooperate`.\n\n\
+             ## Open question\n\nCould individually necessary entities stand in contingent \
+             relations? Compare STMT-NOT-RECORDED.\n",
+        )
+        .unwrap();
+        fs::write(
+            notes.join("other.md"),
+            "No headings; a statement paraphrase S.\n",
+        )
+        .unwrap();
+        fs::write(fixture.0.join("docs/notes/data.json"), "{}").unwrap();
+        fixture
+    }
+
+    #[test]
+    fn notes_are_searchable_typed_and_linked_only_explicitly() {
+        let fixture = note_fixture("notes");
+        let db = fixture.open();
+        // A phrase only in a note: a typed note hit, no record.
+        let found = search(&db, "contingent relations", 20).unwrap();
+        assert_eq!(found.as_array().unwrap().len(), 1);
+        assert_eq!(found[0]["kind"], "note");
+        assert_eq!(found[0]["id"], "docs/notes/pilot.md#open-question");
+        assert_eq!(found[0]["links"], json!([]));
+        assert!(
+            found[0]["excerpt"]
+                .as_str()
+                .unwrap()
+                .contains("[contingent]")
+        );
+        // Records come first, unchanged; notes follow.
+        let found = search(&db, "plural sources", 20).unwrap();
+        let kinds: Vec<_> = found
+            .as_array()
+            .unwrap()
+            .iter()
+            .map(|hit| hit["kind"].clone())
+            .collect();
+        assert_eq!(kinds, [json!("statements"), json!("note")]);
+        assert_eq!(found[1]["id"], "docs/notes/pilot.md#pilot");
+        assert_eq!(found[1]["links"], json!(["results:R", "statements:T"]));
+        // Only Markdown under docs/notes, nested directories included.
+        let paths: Vec<String> = db
+            .prepare("SELECT path FROM notes ORDER BY path")
+            .unwrap()
+            .query_map([], |row| row.get(0))
+            .unwrap()
+            .collect::<std::result::Result<_, _>>()
+            .unwrap();
+        assert_eq!(paths, ["docs/notes/pilot.md", "docs/notes/sub/other.md"]);
+
+        let shown = show(&db, "docs/notes/pilot.md").unwrap();
+        assert_eq!(shown["note"]["title"], "Pilot");
+        let links: Vec<_> = shown["links"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .map(|link| {
+                (
+                    link["kind"].clone(),
+                    link["how"].clone(),
+                    link["line"].clone(),
+                )
+            })
+            .collect();
+        assert_eq!(
+            links,
+            [
+                (json!("results"), json!("legacy_id"), json!(3)),
+                (json!("statements"), json!("label"), json!(3))
+            ]
+        );
+        assert_eq!(shown["unresolved"][0]["mention"], "STMT-NOT-RECORDED");
+        assert_eq!(shown["unresolved"][0]["line"], 7);
+        let section = show(&db, "docs/notes/pilot.md#open-question").unwrap();
+        assert_eq!(section["sections"].as_array().unwrap().len(), 1);
+        assert!(
+            section["sections"][0]["body"]
+                .as_str()
+                .unwrap()
+                .contains("necessary")
+        );
+        assert!(
+            show(&db, "docs/notes/pilot.md#nowhere")
+                .unwrap_err()
+                .contains("unknown note section")
+        );
+        assert!(
+            show(&db, "docs/notes/missing.md")
+                .unwrap_err()
+                .contains("unknown note")
+        );
+
+        // Reverse links: only the explicitly named records.
+        let mentioned = show(&db, "JOINT-CERT").unwrap()["mentioned_by_notes"].clone();
+        assert_eq!(mentioned[0]["section"], "docs/notes/pilot.md#pilot");
+        assert_eq!(show(&db, "S").unwrap()["mentioned_by_notes"], json!([]));
+        // A note is not a record and adds no record, status or reference.
+        assert!(show(&db, "pilot").unwrap_err().contains("unknown record"));
+        assert_eq!(summary(&db).unwrap()["records_by_kind"]["results"], 2);
+        assert_eq!(parity(&db, &fixture.0).unwrap()["status"], "equal");
+        let leaked: i64 = db
+            .query_row(
+                "SELECT (SELECT count(*) FROM refs WHERE owner LIKE 'docs/%' OR target LIKE 'docs/%')
+                      + (SELECT count(*) FROM records WHERE path LIKE 'docs/%')",
+                [],
+                |row| row.get(0),
+            )
+            .unwrap();
+        assert_eq!(leaked, 0);
+    }
+
+    #[test]
+    fn a_changed_note_makes_the_index_stale() {
+        let fixture = note_fixture("note-stale");
+        drop(fixture.open());
+        fs::write(
+            fixture.0.join("docs/notes/sub/other.md"),
+            "# Later\nA freshly captured observation.\n",
+        )
+        .unwrap();
+        let path = database(&fixture.0);
+        assert!(connect(&fixture.0, &path).unwrap_err().contains("stale"));
+        let (db, rebuilt) = open(&fixture.0).unwrap();
+        assert!(rebuilt);
+        let found = search(&db, "freshly captured", 5).unwrap();
+        assert_eq!(found[0]["id"], "docs/notes/sub/other.md#later");
+        fs::remove_file(fixture.0.join("docs/notes/sub/other.md")).unwrap();
+        assert!(connect(&fixture.0, &path).unwrap_err().contains("stale"));
     }
 }

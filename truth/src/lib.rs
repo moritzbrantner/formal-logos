@@ -15,6 +15,7 @@ mod kernels;
 pub mod lean_reuse;
 pub mod lexicon;
 pub mod navigation;
+pub mod notes;
 pub mod orphans;
 pub mod pyfmt;
 pub mod pyjson;
