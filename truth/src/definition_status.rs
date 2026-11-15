@@ -13,8 +13,9 @@
 //!   `instance`), a structure, class or inductive type, a constructor;
 //! - `primitive`: an `opaque` or `axiom` constant, a structure field (a
 //!   projection: an uninterpreted component of a frame or signature), or a
-//!   definition whose body applies one of its own parameters to arguments
-//!   without project vocabulary (it renames the parameter);
+//!   definition whose body applies one of its own parameters or a
+//!   structure field to arguments without project vocabulary (it renames
+//!   the parameter or field);
 //! - `constraint`: a constant whose type is a proposition (a theorem, a
 //!   `Prop` axiom or field): it constrains other constants instead of
 //!   defining one;

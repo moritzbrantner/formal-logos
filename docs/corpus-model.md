@@ -32,7 +32,7 @@ Owner direction (2026-11-16, #1652 L3): "A lot of truth should be settled by Lea
 | Status | Lean facts | Meaning settled by |
 | --- | --- | --- |
 | `defined` | a `def`, `abbrev` or `instance` with a body; a structure, class or inductive type; a constructor | Lean |
-| `primitive` | an `opaque` or `axiom` constant; a structure field (projection), such as `PriorityFrame.PriorSimply`; a definition whose body applies one of its own parameters to arguments without project vocabulary (`CapacityPotency CanBe x r := CanBe x r`) | prose (`formal_gap`) |
+| `primitive` | an `opaque` or `axiom` constant; a structure field (projection), such as `PriorityFrame.PriorSimply`; a definition whose body applies one of its own parameters or a structure field to arguments without project vocabulary (`CapacityPotency CanBe x r := CanBe x r`, `ExactDuty n p := n.issued p`) | prose (`formal_gap`) |
 | `constraint` | a constant whose type is a proposition: a theorem, a `Prop` axiom or field. It constrains other constants instead of defining one | prose (`formal_gap`) |
 | `unresolved` | no constant of that name in the environment. A section `variable` is not a constant, so a record naming one is unresolved | prose (`formal_gap`) |
 

@@ -23,9 +23,9 @@ Challenges) and prints one JSON object per declaration, in input order:
   constant is a proof (a premise, law or constraint) rather than a notion;
 - `structure`: for a projection, the structure it belongs to;
 - `parameter_wrapper`: for a definition, whether its body, under its leading
-  lambdas, applies one of its own parameters to at least one argument and no
-  argument mentions a constant of the root package (as `CanBe x r` or
-  `causableAtLeast 5`). Such a definition only renames a parameter (a section
+  lambdas, applies one of its own parameters or a structure field to at least
+  one argument and no argument mentions a constant of the root package (as
+  `CanBe x r`, `causableAtLeast 5` or `n.issued p`). Such a definition only renames a parameter (a section
   variable abstracted at the end of the section, say): the parameter carries
   the meaning. A body that is a bare parameter (`def sensor (o r : Bool) :=
   o`) is a complete function and does not count;
@@ -92,8 +92,16 @@ def describe (package : Name) (decl : Name) : MetaM Json := do
       let body := body.consumeMData
       let fn := body.getAppFn.consumeMData
       let args := body.getAppArgs
-      let wrapper := fn.isFVar && xs.contains fn && !args.isEmpty &&
+      let plainArgs := !args.isEmpty &&
         args.all fun a => a.getUsedConstants.all fun c => !isLocal env package c
+      -- The head is a parameter, or a field of a project structure (a
+      -- primitive packaged in a frame, as `n.issued p`); library fields such
+      -- as `LE.le` are notation with a meaning, not project primitives.
+      let primitiveHead := (fn.isFVar && xs.contains fn) ||
+        (match fn with
+         | .const n _ => isLocal env package n && (env.getProjectionFnInfo? n).isSome
+         | _ => false)
+      let wrapper := primitiveHead && plainArgs
       let head := match fn with
         | .const n _ => Json.str n.toString
         | _ => Json.null

@@ -92,5 +92,28 @@
   "module": "TruthCore.Logic.FormSelection",
   "parameter_wrapper": false,
   "proof": false
+ },
+ {
+  "declaration": "TruthCore.Ethics.RossPermission.ExactDuty",
+  "constants": [
+   "TruthCore.Ethics.RossPermission.Norms",
+   "TruthCore.Ethics.RossPermission.Norms.issued"
+  ],
+  "found": true,
+  "head": "TruthCore.Ethics.RossPermission.Norms.issued",
+  "kind": "definition",
+  "module": "TruthCore.Ethics.RossPermission",
+  "parameter_wrapper": true,
+  "proof": false
+ },
+ {
+  "declaration": "TruthCore.Causality.ActualGroundingPotentialRank.PositiveGap",
+  "constants": [],
+  "found": true,
+  "head": "LT.lt",
+  "kind": "definition",
+  "module": "TruthCore.Causality.ActualGroundingPotentialRank",
+  "parameter_wrapper": false,
+  "proof": false
  }
 ]

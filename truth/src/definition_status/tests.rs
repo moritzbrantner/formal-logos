@@ -63,6 +63,16 @@ fn classifies_every_recorded_kind() {
         Status::Defined
     );
     assert_eq!(status("WellFounded"), Status::Defined);
+    // A definition that only applies a project structure field is primitive;
+    // a library field such as `LT.lt` is not a project primitive.
+    assert_eq!(
+        status("TruthCore.Ethics.RossPermission.ExactDuty"),
+        Status::Primitive
+    );
+    assert_eq!(
+        status("TruthCore.Causality.ActualGroundingPotentialRank.PositiveGap"),
+        Status::Defined
+    );
     assert_eq!(status("TruthCore.Fixture.Opaque"), Status::Primitive);
     assert_eq!(status("TruthCore.Fixture.law"), Status::Constraint);
     assert_eq!(
