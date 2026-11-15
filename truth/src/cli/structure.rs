@@ -24,13 +24,27 @@ use truth::{
 
 pub const STRUCTURE: Command = Command {
     name: "structure",
-    run: run_structure,
+    run: |args, operands| on_large_stack(args, operands, run_structure),
 };
 
 pub const REPORT: Command = Command {
     name: "structure-report",
-    run: run_report,
+    run: |args, operands| on_large_stack(args, operands, run_report),
 };
+
+/// Runs `command` on a thread with [`structure::STACK_SIZE`] of stack:
+/// exporter trees are as deep as Lean's expressions and every pass over
+/// them (parse, clone, print, drop) recurses.
+fn on_large_stack(args: &Args, operands: &[&str], command: fn(&Args, &[&str]) -> Output) -> Output {
+    std::thread::scope(|scope| {
+        std::thread::Builder::new()
+            .stack_size(structure::STACK_SIZE)
+            .spawn_scoped(scope, || command(args, operands))
+            .map_err(|error| corpus_error(error.to_string()))?
+            .join()
+            .unwrap_or_else(|_| Err(corpus_error("structure command panicked".into())))
+    })
+}
 
 /// The checkout as Python's resolved `ROOT`, so messages and the written
 /// path print as Python prints them.
@@ -132,7 +146,7 @@ fn run_report(args: &Args, operands: &[&str]) -> Output {
     if options.check_input {
         let text =
             fs::read_to_string(&output).map_err(|error| corpus_error(os_error(&error, &output)))?;
-        let artifact = Ordered::parse(&text).map_err(corpus_error)?;
+        let artifact = structure::parse(&text).map_err(corpus_error)?;
         structure::check_artifact(&root, &artifact).map_err(corpus_error)?;
         return Ok((
             json!({"schema_version": 1, "output": shown, "inputs_match": true}),

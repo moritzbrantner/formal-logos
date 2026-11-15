@@ -93,7 +93,7 @@ impl Records {
                     .to_string();
                 let text = fs::read_to_string(&path)
                     .map_err(|error| format!("{relative}: cannot read JSON: {error}"))?;
-                let record = Ordered::parse(&text)
+                let record = parse(&text)
                     .map_err(|error| format!("{relative}: cannot read JSON: {error}"))?;
                 if !matches!(record, Ordered::Object(_)) {
                     return Err(format!(
@@ -136,6 +136,23 @@ pub enum Extractor<'a> {
     /// A saved exporter stdout (`--extractor-json`): no Lean runs.
     Saved(&'a str),
 }
+
+/// Python `json.loads` without serde_json's 128-container nesting limit:
+/// each exporter expression level nests three containers and the exporter
+/// allows 100 levels. Recursion is bounded only by the stack, so callers run
+/// on a thread with a large stack ([`STACK_SIZE`]).
+pub fn parse(text: &str) -> Result<Ordered, String> {
+    use serde::Deserialize;
+    let mut deserializer = serde_json::Deserializer::from_str(text);
+    deserializer.disable_recursion_limit();
+    let value = Ordered::deserialize(&mut deserializer).map_err(|error| error.to_string())?;
+    deserializer.end().map_err(|error| error.to_string())?;
+    Ok(value)
+}
+
+/// The stack the structure commands run on: deep expression trees are
+/// parsed, cloned, printed and dropped recursively.
+pub const STACK_SIZE: usize = 512 * 1024 * 1024;
 
 fn str_of<'a>(value: &'a Ordered, key: &str) -> Option<&'a str> {
     match value.get(key) {
@@ -628,7 +645,7 @@ fn run_extractor(
             completed.stdout
         }
     };
-    let output = Ordered::parse(&stdout).map_err(|_| {
+    let output = parse(&stdout).map_err(|_| {
         format!(
             "structure extractor returned invalid JSON: {}",
             pyfmt::head(&stdout, 500)
@@ -1192,6 +1209,35 @@ mod tests {
         let mut scoped = expression.clone();
         scope_nodes(&mut scoped, "S@x:");
         assert!(scoped.dumps(None).contains(r#""binding": "S@x:binder""#));
+    }
+
+    #[test]
+    fn deep_exporter_trees_parse_beyond_serde_default_depth() {
+        // 400 expression levels, three containers each: far beyond 128.
+        let mut tree = String::from(r#"{"id": "leaf", "kind": "sort", "children": []}"#);
+        for level in 0..400 {
+            tree = format!(
+                r#"{{"id": "n{level}", "kind": "app", "children": [{{"role": "arg", "node": {tree}}}]}}"#
+            );
+        }
+        let text = format!(r#"[{{"declaration": "TruthCore.Deep", "type": {tree}}}]"#);
+        assert!(
+            Ordered::parse(&text).is_err(),
+            "serde default limit applies"
+        );
+        let check = std::thread::Builder::new()
+            .stack_size(STACK_SIZE)
+            .spawn(move || {
+                let rows = run_extractor(Path::new("."), &Ordered::Null, &Extractor::Saved(&text))
+                    .unwrap()
+                    .unwrap();
+                let mut found = Vec::new();
+                nodes(&rows[0], &mut found);
+                assert_eq!(found.len(), 401);
+                assert_eq!(parse(&rows[0].dumps(None)).unwrap(), rows[0]);
+            })
+            .unwrap();
+        check.join().unwrap();
     }
 
     #[test]
