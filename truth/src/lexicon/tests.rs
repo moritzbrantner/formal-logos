@@ -317,3 +317,27 @@ fn no_lexicon_directory_means_no_check() {
     fs::remove_dir_all(fx.0.join(DIRECTORY)).unwrap();
     assert!(super::check(&fx.0).unwrap().is_none());
 }
+
+#[test]
+fn compound_parts_are_checked_separately() {
+    let fx = fixture("compound");
+    // `by` is a function word; it must not exempt the technical `cause`.
+    statement(&fx.0, "s1", "The by-cause is prior.", &[]);
+    let error = super::check(&fx.0).unwrap_err();
+    assert!(
+        error.contains("multi-sense technical word 'cause'"),
+        "{error}"
+    );
+}
+
+#[test]
+fn forms_of_a_phrase_are_indexed() {
+    let fx = fixture("phraseform");
+    entry(
+        &fx.0,
+        15,
+        json!({"lemma": "per se", "class": "technical", "definition_ids": [D1], "forms": ["per-se"]}),
+    );
+    statement(&fx.0, "s1", "The cause is per-se prior.", &[D1]);
+    check_ok(&fx.0);
+}

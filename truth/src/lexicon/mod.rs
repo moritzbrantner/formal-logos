@@ -467,14 +467,16 @@ impl Lexicon {
         let mut phrases: HashMap<String, Vec<(Vec<String>, usize)>> = HashMap::new();
         for (index, entry) in entries.iter().enumerate() {
             let lemma = lemma_words(&entry.lemma);
+            let single = (lemma.len() == 1).then(|| &lemma[0]);
             if lemma.len() > 1 {
                 phrases
                     .entry(lemma[0].clone())
                     .or_default()
-                    .push((lemma, index));
-                continue;
+                    .push((lemma.clone(), index));
             }
-            for word in std::iter::once(&lemma[0]).chain(entry.forms.iter()) {
+            // Explicit forms are single words, also for a multi-word lemma
+            // (`per-se` for `per se`).
+            for word in single.into_iter().chain(entry.forms.iter()) {
                 let list = words.entry(word.clone()).or_default();
                 if !list.contains(&index) {
                     list.push(index);
@@ -507,18 +509,21 @@ impl Lexicon {
     }
 
     /// A word, or a hyphenated compound all of whose parts resolve.
-    fn resolve_token(&self, word: &str) -> Option<Vec<usize>> {
+    /// Returns (token, entries) per traced word: the word itself, or each
+    /// part of a hyphenated compound, so that each part's readings are
+    /// checked on their own.
+    fn resolve_token(&self, word: &str) -> Option<Vec<(String, Vec<usize>)>> {
         if let Some((_, found)) = self.resolve_word(word) {
-            return Some(found);
+            return Some(vec![(word.to_owned(), found)]);
         }
         if !word.contains('-') {
             return None;
         }
-        let mut all = Vec::new();
+        let mut parts = Vec::new();
         for part in word.split('-').filter(|part| !part.is_empty()) {
-            all.extend(self.resolve_word(part)?.1);
+            parts.push((part.to_owned(), self.resolve_word(part)?.1));
         }
-        (!all.is_empty()).then_some(all)
+        (!parts.is_empty()).then_some(parts)
     }
 
     /// The longest multi-word lemma starting at `words[i]`, as (length, entry).
@@ -597,11 +602,14 @@ pub fn trace_text(lexicon: &Lexicon, senses: &Senses, text: &str) -> Vec<(String
                 continue;
             }
             let word = &words[i].0;
-            let trace = match lexicon.resolve_token(word) {
-                Some(found) => Trace::Entries(found),
-                None => Trace::Untraced,
-            };
-            out.push((word.clone(), trace));
+            match lexicon.resolve_token(word) {
+                Some(parts) => {
+                    for (part, found) in parts {
+                        out.push((part, Trace::Entries(found)));
+                    }
+                }
+                None => out.push((word.clone(), Trace::Untraced)),
+            }
             i += 1;
         }
         words.clear();
