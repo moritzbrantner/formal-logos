@@ -216,13 +216,26 @@ pub fn novelty(
     for record in super::record_hits(inputs, &query, &record_candidates, limit * 3) {
         let kind = record["kind"].as_str().unwrap_or_default().to_owned();
         let id = record["id"].as_str().unwrap_or_default().to_owned();
-        if Some(id.as_str()) == exclude || hits.iter().any(|hit| hit.key == format!("1:{id}")) {
+        if Some(id.as_str()) == exclude {
             continue;
         }
         let covered = record["coverage"][0].as_u64().unwrap_or_default() as usize;
+        // A statement found structurally keeps one hit: the better-covered
+        // evidence, with the other named in `via`.
+        let mut via = "record prose".to_owned();
+        if let Some(position) = hits.iter().position(|hit| hit.key == format!("1:{id}")) {
+            if hits[position].covered >= covered {
+                continue;
+            }
+            let structural = hits.remove(position);
+            via = format!(
+                "record prose (also {})",
+                structural.value["via"].as_str().unwrap_or("structural")
+            );
+        }
         let mut value = record;
         value["evidence"] = json!(evidence_kind(&kind));
-        value["via"] = json!("record prose");
+        value["via"] = json!(via);
         hits.push(Hit {
             substantial: value["substantial"] == true,
             covered,

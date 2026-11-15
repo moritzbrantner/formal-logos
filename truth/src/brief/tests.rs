@@ -412,6 +412,10 @@ fn historical_false_novelty_dependence_biconditional() {
         .map(|hit| hit["number"].as_u64().unwrap())
         .collect();
     assert_eq!(issues, [1589]);
+    // The note's own notation alone, with no snapshot, still finds it.
+    let symbols = check_novelty(&loaded, &missing(), "D(y,x) ↔ ¬B(y,x)");
+    assert_eq!(symbols["classification"], "already-recorded");
+    assert_eq!(symbols["hits"][0]["line"], first["line"]);
     let text = run(&loaded, &missing(), |inputs| {
         novelty::format_novelty(&report, inputs.aliases, 4)
     });

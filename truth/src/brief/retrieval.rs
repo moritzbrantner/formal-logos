@@ -294,6 +294,18 @@ impl Query {
                 _ => None,
             })
             .collect();
+        // A query written only in function symbols (`D(y,x) ↔ ¬B(y,x)`)
+        // falls back to the symbols themselves (bounded by the caller's
+        // candidate limit and BM25 rank) so its notation can still be read.
+        let parts = if parts.is_empty() {
+            self.items
+                .iter()
+                .filter(|item| item.kind == "symbol")
+                .map(|item| format!("\"{}\"", item.text.replace('"', "\"\"")))
+                .collect()
+        } else {
+            parts
+        };
         (!parts.is_empty()).then(|| parts.join(" OR "))
     }
 
