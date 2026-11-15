@@ -54,12 +54,14 @@ static STATUS_SENTENCE: LazyLock<Regex> = LazyLock::new(|| {
 
 /// Logical operators a query may contain, each with the spellings a unit
 /// may use for it.
+/// Logical operators a query may contain, each with the spellings a unit
+/// may use for it once its symbols are normalized ([`normalize_symbols`]).
 const OPERATORS: &[(&str, &[&str])] = &[
-    ("↔", &["↔", "⇔", "<->", " iff ", "equivalen"]),
-    ("→", &["→", "⇒", "->", "implies"]),
+    ("↔", &["↔", " iff ", "equivalen"]),
+    ("→", &["→", "implies"]),
     ("¬", &["¬"]),
-    ("∧", &["∧", "/\\"]),
-    ("∨", &["∨", "\\/"]),
+    ("∧", &["∧"]),
+    ("∨", &["∨"]),
     ("∀", &["∀", "for all"]),
     ("∃", &["∃", "there exists"]),
 ];
@@ -82,6 +84,32 @@ const SYMBOLS: &[(&str, &str)] = &[
     ("∀", "∀"),
     ("∃", "∃"),
 ];
+
+/// `text` with every symbolic operator spelling replaced by its canonical
+/// operator, longest spelling first, so `<->` is one `↔` and never also an
+/// `→`. A `~` is left alone in evidence (prose uses it for "about").
+pub fn normalize_symbols(text: &str) -> String {
+    let chars: Vec<char> = text.chars().collect();
+    let mut out = String::with_capacity(text.len());
+    let mut index = 0;
+    while index < chars.len() {
+        let rest: String = chars[index..chars.len().min(index + 3)].iter().collect();
+        match SYMBOLS
+            .iter()
+            .find(|(spelling, _)| *spelling != "~" && rest.starts_with(spelling))
+        {
+            Some((spelling, operator)) => {
+                out.push_str(operator);
+                index += spelling.chars().count();
+            }
+            None => {
+                out.push(chars[index]);
+                index += 1;
+            }
+        }
+    }
+    out
+}
 
 const STOPWORDS: &[&str] = &[
     "the", "and", "for", "with", "that", "this", "from", "into", "are", "was", "were", "has",
@@ -276,7 +304,10 @@ impl Query {
         let unit_words: BTreeSet<String> = words(&lower).into_iter().map(str::to_owned).collect();
         let spaced = format!(
             " {} ",
-            lower.split_whitespace().collect::<Vec<_>>().join(" ")
+            normalize_symbols(&lower)
+                .split_whitespace()
+                .collect::<Vec<_>>()
+                .join(" ")
         );
         self.items
             .iter()
@@ -1085,6 +1116,16 @@ mod tests {
         let ascii = Query::parse("DependsForBeing <-> ¬CanBeWithout");
         let unicode = Query::parse("DependsForBeing ↔ ¬CanBeWithout");
         assert_eq!(ascii.items, unicode.items);
+        let arrow = Query::parse("DependsForBeing → CanBeWithout");
+        let none = BTreeMap::new();
+        assert_eq!(
+            coverage(&arrow.matched("DependsForBeing <-> CanBeWithout", &none)),
+            (2, 3)
+        );
+        assert_eq!(
+            coverage(&arrow.matched("DependsForBeing -> CanBeWithout", &none)),
+            (3, 3)
+        );
         for (spelled, canonical) in [
             ("a /\\ b", "a ∧ b"),
             ("a \\/ b", "a ∨ b"),

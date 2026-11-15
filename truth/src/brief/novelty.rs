@@ -187,7 +187,13 @@ pub fn novelty(
     let (paths, record_candidates) = super::candidate_notes(db, &query, &naming_notes)?;
     for score in super::score_notes(inputs.root, &query, &paths) {
         let mut paragraphs: Vec<&super::ParagraphHit> = score.paragraphs.iter().collect();
-        paragraphs.sort_by(|a, b| b.covered().cmp(&a.covered()).then(a.line.cmp(&b.line)));
+        // Substantial paragraphs first, so operator-only matches cannot
+        // crowd out the qualifying one before classification.
+        paragraphs.sort_by(|a, b| {
+            (query.substantial(&b.matched), b.covered())
+                .cmp(&(query.substantial(&a.matched), a.covered()))
+                .then(a.line.cmp(&b.line))
+        });
         for hit in paragraphs.into_iter().take(2) {
             let mut value = super::paragraph_json(&query, hit);
             value["kind"] = json!("note");
