@@ -257,12 +257,13 @@ class TruthRevisionParity(ParityCase):
             revision_fixture(repo)
             args = ["--root", str(repo), "--frontier-root", "ROOT"]
             head = python_thickness(repo, False)["report"]
-            saved = corpus.ROOT
-            corpus.ROOT = repo
+            # The legacy base loads (and caches) the fixture's aliases: restore both.
+            saved = corpus.ROOT, corpus._ALIASES
+            corpus.ROOT, corpus._ALIASES = repo, None
             try:
                 bases = {base: corpus.revision_thickness(base, ROOT_ID) for base in ("LEGACY", "OLD", "SAME")}
             finally:
-                corpus.ROOT = saved
+                corpus.ROOT, corpus._ALIASES = saved
             head_count = orphan_summary.tree_count(repo)
             for base, engine in (("LEGACY", "python"), ("OLD", "python"), ("SAME", "rust")):
                 with self.subTest(base=base):
