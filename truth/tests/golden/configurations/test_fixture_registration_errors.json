@@ -347,5 +347,6 @@
   }
  ],
  "module": "configurations",
+ "shared": [],
  "test": "test_fixture_registration_errors"
 }

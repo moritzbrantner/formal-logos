@@ -19,6 +19,8 @@ What a case holds:
   is a repository; the index is not recorded (the replay resets it to HEAD);
 - `externals`: directories outside the checkout that the invocation names
   (recorded exporter output, a fake `lake`, artifacts);
+- Git histories and external directories are stored once per file, in its
+  `shared` list, and cases name them as `{"shared": N}`;
 - `expect`: the exit code Rust must return and the Python output it must
   reproduce: `stdout`/`stderr` byte for byte, `stdout_json` semantically
   (after dropping the top-level `ignore_keys`), `json_paths` (dotted paths
@@ -264,14 +266,28 @@ def write_all(directory=GOLDEN):
                 shutil.rmtree(path)
     for (module, method), cases in sorted(CASES.items()):
         base = cases[0]["tree"]["files"]
+        shared, index = [], {}
+
+        def intern(value):
+            # Git histories and external directories repeat across a test's
+            # cases: each distinct one is stored once, under `shared`.
+            key = json.dumps(value, sort_keys=True)
+            if key not in index:
+                index[key] = len(shared)
+                shared.append(value)
+            return {"shared": index[key]}
+
         out = []
         for case in cases:
             tree = case["tree"]
             case = dict(case, tree={"overlay": _overlay(base, tree["files"]), "executable": tree["executable"],
-                                    "empty": tree["empty"]})
+                                    "empty": tree["empty"]},
+                        externals=[intern(external) for external in case["externals"]])
+            if "git" in case:
+                case["git"] = intern(case["git"])
             out.append(case)
         path = directory / module / f"{method}.json"
         path.parent.mkdir(parents=True, exist_ok=True)
-        document = {"about": HEADER, "module": module, "test": method, "base": base, "cases": out}
+        document = {"about": HEADER, "module": module, "test": method, "base": base, "shared": shared, "cases": out}
         path.write_text(json.dumps(document, indent=1, ensure_ascii=False, sort_keys=True) + "\n")
     return sorted(CASES)

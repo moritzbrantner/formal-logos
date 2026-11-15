@@ -66,20 +66,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": [\"TruthCore.Fix.fixBC\"]}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"proof_theorems\": [\"TruthCore.Fix.fixAB\"]}]"
-     }
+     "shared": 1
     }
    ],
    "name": "[used] (target='RES-AB', flag='--proof-use')",
@@ -340,20 +330,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": [\"TruthCore.Fix.fixBC\"]}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"proof_theorems\": [\"TruthCore.Fix.fixAB\"]}]"
-     }
+     "shared": 1
     }
    ],
    "name": "[used] (target='RES-AB', flag='--proof-use')",
@@ -391,20 +371,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": [\"TruthCore.Fix.fixBC\"]}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"proof_theorems\": [\"TruthCore.Fix.fixAB\"]}]"
-     }
+     "shared": 1
     }
    ],
    "name": "[used] (target='RES-AB', flag='--proof-use-json')",
@@ -663,20 +633,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": [\"TruthCore.Fix.fixBC\"]}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"proof_theorems\": [\"TruthCore.Fix.fixAB\"]}]"
-     }
+     "shared": 1
     }
    ],
    "name": "[used] (target='RES-AB', flag='--proof-use-json')",
@@ -716,20 +676,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": [\"TruthCore.Fix.fixBC\"]}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"proof_theorems\": [\"TruthCore.Fix.fixAB\"]}]"
-     }
+     "shared": 1
     }
    ],
    "name": "[used] (target='RES-BC', flag='--proof-use')",
@@ -968,20 +918,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": [\"TruthCore.Fix.fixBC\"]}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"proof_theorems\": [\"TruthCore.Fix.fixAB\"]}]"
-     }
+     "shared": 1
     }
    ],
    "name": "[used] (target='RES-BC', flag='--proof-use')",
@@ -1019,20 +959,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": [\"TruthCore.Fix.fixBC\"]}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"proof_theorems\": [\"TruthCore.Fix.fixAB\"]}]"
-     }
+     "shared": 1
     }
    ],
    "name": "[used] (target='RES-BC', flag='--proof-use-json')",
@@ -1269,20 +1199,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": [\"TruthCore.Fix.fixBC\"]}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"proof_theorems\": [\"TruthCore.Fix.fixAB\"]}]"
-     }
+     "shared": 1
     }
    ],
    "name": "[used] (target='RES-BC', flag='--proof-use-json')",
@@ -1322,20 +1242,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": []}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"proof_theorems\": []}]"
-     }
+     "shared": 2
     }
    ],
    "name": "[unused] (target='RES-AB', flag='--proof-use')",
@@ -1594,20 +1504,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": []}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"proof_theorems\": []}]"
-     }
+     "shared": 2
     }
    ],
    "name": "[unused] (target='RES-AB', flag='--proof-use')",
@@ -1645,20 +1545,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": []}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"proof_theorems\": []}]"
-     }
+     "shared": 2
     }
    ],
    "name": "[unused] (target='RES-AB', flag='--proof-use-json')",
@@ -1915,20 +1805,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": []}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"proof_theorems\": []}]"
-     }
+     "shared": 2
     }
    ],
    "name": "[unused] (target='RES-AB', flag='--proof-use-json')",
@@ -1968,20 +1848,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": []}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"proof_theorems\": []}]"
-     }
+     "shared": 2
     }
    ],
    "name": "[unused] (target='RES-BC', flag='--proof-use')",
@@ -2218,20 +2088,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": []}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"proof_theorems\": []}]"
-     }
+     "shared": 2
     }
    ],
    "name": "[unused] (target='RES-BC', flag='--proof-use')",
@@ -2269,20 +2129,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": []}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"proof_theorems\": []}]"
-     }
+     "shared": 2
     }
    ],
    "name": "[unused] (target='RES-BC', flag='--proof-use-json')",
@@ -2517,20 +2367,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": []}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"proof_theorems\": []}]"
-     }
+     "shared": 2
     }
    ],
    "name": "[unused] (target='RES-BC', flag='--proof-use-json')",
@@ -2570,20 +2410,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": []}]"
-     }
+     "shared": 3
     }
    ],
    "name": "[an exporter error] (target='RES-AB', flag='--proof-use')",
@@ -2842,20 +2672,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": []}]"
-     }
+     "shared": 3
     }
    ],
    "name": "[an exporter error] (target='RES-AB', flag='--proof-use')",
@@ -2893,20 +2713,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": []}]"
-     }
+     "shared": 3
     }
    ],
    "name": "[an exporter error] (target='RES-AB', flag='--proof-use-json')",
@@ -3163,20 +2973,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": []}]"
-     }
+     "shared": 3
     }
    ],
    "name": "[an exporter error] (target='RES-AB', flag='--proof-use-json')",
@@ -3216,20 +3016,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": []}]"
-     }
+     "shared": 3
     }
    ],
    "name": "[an exporter error] (target='RES-BC', flag='--proof-use')",
@@ -3270,20 +3060,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": []}]"
-     }
+     "shared": 3
     }
    ],
    "name": "[an exporter error] (target='RES-BC', flag='--proof-use')",
@@ -3321,20 +3101,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": []}]"
-     }
+     "shared": 3
     }
    ],
    "name": "[an exporter error] (target='RES-BC', flag='--proof-use-json')",
@@ -3373,20 +3143,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": []}]"
-     }
+     "shared": 3
     }
    ],
    "name": "[an exporter error] (target='RES-BC', flag='--proof-use-json')",
@@ -3403,5 +3163,37 @@
   }
  ],
  "module": "proof_use",
+ "shared": [
+  {
+   "empty": [],
+   "executable": [
+    "lake"
+   ],
+   "files": {
+    "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
+   }
+  },
+  {
+   "empty": [],
+   "executable": [],
+   "files": {
+    "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": [\"TruthCore.Fix.fixBC\"]}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"proof_theorems\": [\"TruthCore.Fix.fixAB\"]}]"
+   }
+  },
+  {
+   "empty": [],
+   "executable": [],
+   "files": {
+    "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": []}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"proof_theorems\": []}]"
+   }
+  },
+  {
+   "empty": [],
+   "executable": [],
+   "files": {
+    "LeanReuse.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"proof_theorems\": []}]"
+   }
+  }
+ ],
  "test": "test_context_proof_use"
 }

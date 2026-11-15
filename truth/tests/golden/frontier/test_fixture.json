@@ -10452,5 +10452,6 @@
   }
  ],
  "module": "frontier",
+ "shared": [],
  "test": "test_fixture"
 }

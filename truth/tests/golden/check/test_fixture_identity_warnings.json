@@ -82,5 +82,6 @@
   }
  ],
  "module": "check",
+ "shared": [],
  "test": "test_fixture_identity_warnings"
 }

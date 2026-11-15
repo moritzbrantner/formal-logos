@@ -63,21 +63,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "BindTypes.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"binders\": [{\"name\": \"h\", \"prop\": true, \"head\": \"TruthCore.Fix.fixA\", \"type\": \"fixA\", \"senses\": []}], \"result\": {\"name\": null, \"prop\": true, \"head\": \"TruthCore.Fix.fixB\", \"type\": \"fixB\", \"senses\": [\"TruthCore.Fix.fixB\"]}}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"binders\": [{\"name\": \"h\", \"prop\": true, \"head\": \"TruthCore.Fix.fixB\", \"type\": \"fixB\", \"senses\": [\"TruthCore.Fix.fixB\"]}], \"result\": {\"name\": null, \"prop\": true, \"head\": \"TruthCore.Fix.fixC\", \"type\": \"fixC\", \"senses\": []}}]",
-      "UnusedPremises.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"hypotheses\": [{\"position\": 0, \"name\": \"h\", \"used\": false}]}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"hypotheses\": [{\"position\": 0, \"name\": \"h\", \"used\": true}]}]"
-     }
+     "shared": 1
     }
    ],
    "name": "(extra=['--bind-json', '⟪root⟫/bind.json', '--usage-json', '⟪ext:1⟫/UnusedPremises.json'])",
@@ -114,21 +103,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "BindTypes.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"binders\": [{\"name\": \"h\", \"prop\": true, \"head\": \"TruthCore.Fix.fixA\", \"type\": \"fixA\", \"senses\": []}], \"result\": {\"name\": null, \"prop\": true, \"head\": \"TruthCore.Fix.fixB\", \"type\": \"fixB\", \"senses\": [\"TruthCore.Fix.fixB\"]}}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"binders\": [{\"name\": \"h\", \"prop\": true, \"head\": \"TruthCore.Fix.fixB\", \"type\": \"fixB\", \"senses\": [\"TruthCore.Fix.fixB\"]}], \"result\": {\"name\": null, \"prop\": true, \"head\": \"TruthCore.Fix.fixC\", \"type\": \"fixC\", \"senses\": []}}]",
-      "UnusedPremises.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"hypotheses\": [{\"position\": 0, \"name\": \"h\", \"used\": false}]}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"hypotheses\": [{\"position\": 0, \"name\": \"h\", \"used\": true}]}]"
-     }
+     "shared": 1
     }
    ],
    "name": "(extra=['--bind-json', '⟪root⟫/bind.json', '--usage-json', '⟪ext:1⟫/UnusedPremises.json'])",
@@ -167,21 +145,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "BindTypes.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"binders\": [{\"name\": \"h\", \"prop\": true, \"head\": \"TruthCore.Fix.fixA\", \"type\": \"fixA\", \"senses\": []}], \"result\": {\"name\": null, \"prop\": true, \"head\": \"TruthCore.Fix.fixB\", \"type\": \"fixB\", \"senses\": [\"TruthCore.Fix.fixB\"]}}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"binders\": [{\"name\": \"h\", \"prop\": true, \"head\": \"TruthCore.Fix.fixB\", \"type\": \"fixB\", \"senses\": [\"TruthCore.Fix.fixB\"]}], \"result\": {\"name\": null, \"prop\": true, \"head\": \"TruthCore.Fix.fixC\", \"type\": \"fixC\", \"senses\": []}}]",
-      "UnusedPremises.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"hypotheses\": [{\"position\": 0, \"name\": \"h\", \"used\": false}]}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"hypotheses\": [{\"position\": 0, \"name\": \"h\", \"used\": true}]}]"
-     }
+     "shared": 1
     }
    ],
    "name": "(extra=['--bind-json', '⟪root⟫/bind.json', '--usage-json', '⟪ext:1⟫/UnusedPremises.json', '--exemptions', '⟪root⟫/elsewhere.json', '--strict'])",
@@ -221,21 +188,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "BindTypes.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"binders\": [{\"name\": \"h\", \"prop\": true, \"head\": \"TruthCore.Fix.fixA\", \"type\": \"fixA\", \"senses\": []}], \"result\": {\"name\": null, \"prop\": true, \"head\": \"TruthCore.Fix.fixB\", \"type\": \"fixB\", \"senses\": [\"TruthCore.Fix.fixB\"]}}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"binders\": [{\"name\": \"h\", \"prop\": true, \"head\": \"TruthCore.Fix.fixB\", \"type\": \"fixB\", \"senses\": [\"TruthCore.Fix.fixB\"]}], \"result\": {\"name\": null, \"prop\": true, \"head\": \"TruthCore.Fix.fixC\", \"type\": \"fixC\", \"senses\": []}}]",
-      "UnusedPremises.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"hypotheses\": [{\"position\": 0, \"name\": \"h\", \"used\": false}]}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"hypotheses\": [{\"position\": 0, \"name\": \"h\", \"used\": true}]}]"
-     }
+     "shared": 1
     }
    ],
    "name": "(extra=['--bind-json', '⟪root⟫/bind.json', '--usage-json', '⟪ext:1⟫/UnusedPremises.json', '--exemptions', '⟪root⟫/elsewhere.json', '--strict'])",
@@ -272,21 +228,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "BindTypes.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"binders\": [{\"name\": \"h\", \"prop\": true, \"head\": \"TruthCore.Fix.fixA\", \"type\": \"fixA\", \"senses\": []}], \"result\": {\"name\": null, \"prop\": true, \"head\": \"TruthCore.Fix.fixB\", \"type\": \"fixB\", \"senses\": [\"TruthCore.Fix.fixB\"]}}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"binders\": [{\"name\": \"h\", \"prop\": true, \"head\": \"TruthCore.Fix.fixB\", \"type\": \"fixB\", \"senses\": [\"TruthCore.Fix.fixB\"]}], \"result\": {\"name\": null, \"prop\": true, \"head\": \"TruthCore.Fix.fixC\", \"type\": \"fixC\", \"senses\": []}}]",
-      "UnusedPremises.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"hypotheses\": [{\"position\": 0, \"name\": \"h\", \"used\": false}]}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"hypotheses\": [{\"position\": 0, \"name\": \"h\", \"used\": true}]}]"
-     }
+     "shared": 1
     }
    ],
    "name": "(extra=['--usage-json', '⟪ext:1⟫/UnusedPremises.json'])",
@@ -324,21 +269,10 @@
    },
    "externals": [
     {
-     "empty": [],
-     "executable": [
-      "lake"
-     ],
-     "files": {
-      "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
-     }
+     "shared": 0
     },
     {
-     "empty": [],
-     "executable": [],
-     "files": {
-      "BindTypes.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"binders\": [{\"name\": \"h\", \"prop\": true, \"head\": \"TruthCore.Fix.fixA\", \"type\": \"fixA\", \"senses\": []}], \"result\": {\"name\": null, \"prop\": true, \"head\": \"TruthCore.Fix.fixB\", \"type\": \"fixB\", \"senses\": [\"TruthCore.Fix.fixB\"]}}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"binders\": [{\"name\": \"h\", \"prop\": true, \"head\": \"TruthCore.Fix.fixB\", \"type\": \"fixB\", \"senses\": [\"TruthCore.Fix.fixB\"]}], \"result\": {\"name\": null, \"prop\": true, \"head\": \"TruthCore.Fix.fixC\", \"type\": \"fixC\", \"senses\": []}}]",
-      "UnusedPremises.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"hypotheses\": [{\"position\": 0, \"name\": \"h\", \"used\": false}]}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"hypotheses\": [{\"position\": 0, \"name\": \"h\", \"used\": true}]}]"
-     }
+     "shared": 1
     }
    ],
    "name": "(extra=['--usage-json', '⟪ext:1⟫/UnusedPremises.json'])",
@@ -356,5 +290,24 @@
   }
  ],
  "module": "proof_use",
+ "shared": [
+  {
+   "empty": [],
+   "executable": [
+    "lake"
+   ],
+   "files": {
+    "lake": "#!/bin/sh\n[ \"$3\" = --run ] || { echo \"unexpected lake call: $*\" >&2; exit 1; }\n[ -f \"$4\" ] || { echo \"missing exporter $4\" >&2; exit 1; }\nname=$(basename \"$4\" .lean)\ncp \"$5\" \"$FAKE_CAPTURE/$name.json\"\ncat \"$FAKE_OUTPUTS/$name.json\"\n"
+   }
+  },
+  {
+   "empty": [],
+   "executable": [],
+   "files": {
+    "BindTypes.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"binders\": [{\"name\": \"h\", \"prop\": true, \"head\": \"TruthCore.Fix.fixA\", \"type\": \"fixA\", \"senses\": []}], \"result\": {\"name\": null, \"prop\": true, \"head\": \"TruthCore.Fix.fixB\", \"type\": \"fixB\", \"senses\": [\"TruthCore.Fix.fixB\"]}}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"binders\": [{\"name\": \"h\", \"prop\": true, \"head\": \"TruthCore.Fix.fixB\", \"type\": \"fixB\", \"senses\": [\"TruthCore.Fix.fixB\"]}], \"result\": {\"name\": null, \"prop\": true, \"head\": \"TruthCore.Fix.fixC\", \"type\": \"fixC\", \"senses\": []}}]",
+    "UnusedPremises.json": "[{\"theorem\": \"TruthCore.Fix.fixAB\", \"hypotheses\": [{\"position\": 0, \"name\": \"h\", \"used\": false}]}, {\"theorem\": \"TruthCore.Fix.fixBC\", \"hypotheses\": [{\"position\": 0, \"name\": \"h\", \"used\": true}]}]"
+   }
+  }
+ ],
  "test": "test_unused_premises_from_saved_reports"
 }

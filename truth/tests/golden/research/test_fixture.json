@@ -1368,5 +1368,6 @@
   }
  ],
  "module": "research",
+ "shared": [],
  "test": "test_fixture"
 }

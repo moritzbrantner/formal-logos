@@ -351,5 +351,6 @@
   }
  ],
  "module": "issues",
+ "shared": [],
  "test": "test_dossier_issue_targets_on_the_fixture"
 }

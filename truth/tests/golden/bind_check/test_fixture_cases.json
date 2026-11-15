@@ -2315,5 +2315,6 @@
   }
  ],
  "module": "bind_check",
+ "shared": [],
  "test": "test_fixture_cases"
 }

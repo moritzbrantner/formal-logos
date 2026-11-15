@@ -2281,5 +2281,6 @@
   }
  ],
  "module": "issues",
+ "shared": [],
  "test": "test_fixture_cases"
 }

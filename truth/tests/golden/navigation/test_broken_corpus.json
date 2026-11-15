@@ -1085,5 +1085,6 @@
   }
  ],
  "module": "navigation",
+ "shared": [],
  "test": "test_broken_corpus"
 }

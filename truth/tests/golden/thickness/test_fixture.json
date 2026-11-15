@@ -266,5 +266,6 @@
   }
  ],
  "module": "thickness",
+ "shared": [],
  "test": "test_fixture"
 }

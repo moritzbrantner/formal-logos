@@ -3452,5 +3452,6 @@
   }
  ],
  "module": "check",
+ "shared": [],
  "test": "test_fixture_failures"
 }

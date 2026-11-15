@@ -61,5 +61,6 @@
   }
  ],
  "module": "check",
+ "shared": [],
  "test": "test_conclusion_bridge_and_control_are_accepted"
 }

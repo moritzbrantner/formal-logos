@@ -30,16 +30,21 @@ from pathlib import Path
 import corpus
 from truth_parity.bind_check import described
 from truth_parity.check import by_id, write_check_fixture
+from truth_parity import golden
 from truth_parity.common import U, ParityCase
 
 FIX = "TruthCore.Fix."
 
-# Runs `corpus.py` at the checkout `argv[1]` with the Lean subprocesses
-# replaced by the recorded exporter outputs in the directory `argv[2]`.
+# Runs this repository's `corpus.py` on the checkout `argv[1]` with the Lean
+# subprocesses replaced by the recorded exporter outputs in the directory
+# `argv[2]`. The checkout's own `scripts/*.py` are only digest inputs: the
+# fixture replaces them by small stand-ins (`SCRIPT_STAND_INS`), so its
+# golden snapshots stay small.
 ORACLE = """
 import subprocess, sys
+from pathlib import Path
 root, recorded = sys.argv[1], sys.argv[2]
-sys.path.insert(0, root + "/scripts")
+sys.path.insert(0, %r)
 real = subprocess.run
 def fake(cmd, *args, **kwargs):
     if "--run" in cmd:
@@ -50,9 +55,16 @@ def fake(cmd, *args, **kwargs):
         return subprocess.CompletedProcess(cmd, 0, "", "")
     return real(cmd, *args, **kwargs)
 subprocess.run = fake
-import corpus
+import corpus, source_evidence
+corpus.ROOT, corpus.CORPUS, corpus._ALIASES = Path(root), Path(root) / "corpus", None
+source_evidence.ROOT, source_evidence.CORPUS = Path(root), Path(root) / "corpus"
+source_evidence.PASSAGES = Path(root) / "corpus" / "passages"
 sys.exit(corpus.main_with(sys.argv[3:]))
-"""
+""" % str(Path(__file__).resolve().parents[1])
+# The `scripts/*.py` inputs the strength bundle binds by digest.
+SCRIPT_STAND_INS = ("corpus.py", "configurations.py", "configuration_explorer.py", "finite_models.py",
+                    "premise_dossiers.py", "source_evidence.py", "strength_comparisons.py",
+                    "proposition_structure.py", "worker_env.py")
 
 # Records each exporter's stdout of a live `corpus.py strength-comparisons
 # --json` at the checkout `argv[1]` into `argv[2]` (Lean runs; Comparator
@@ -188,6 +200,8 @@ class TruthStrengthParity(ParityCase):
         for name in INPUT_FILES:
             (cls.root / name).parent.mkdir(parents=True, exist_ok=True)
             (cls.root / name).write_text(name + "\n")
+        for name in SCRIPT_STAND_INS:
+            (cls.root / "scripts" / name).write_text(f"# fixture stand-in for scripts/{name}\n")
         commit(cls.root)
         cls.recorded = cls.scratch / "recorded"
         cls.recorded.mkdir()
@@ -215,14 +229,26 @@ class TruthStrengthParity(ParityCase):
         python = subprocess.run([sys.executable, "-c", ORACLE, str(root), str(recorded), *args,
                                  *(["--json"] if machine else [])],
                                 capture_output=True, text=True, check=False)
+        if self.recording is not None and root != corpus.ROOT:
+            code = self.recording
+            golden.record(self, ["--root", root, *(["--json"] if machine else []), *args, "--recorded-exporters",
+                                 recorded], root=root, code=code, stdout=python.stdout,
+                          env={"TRUTH_PARITY_REPLAY": "1"}, externals=[self.scratch],
+                          **({"stderr": python.stderr} if code and not machine else {}))
         rust = subprocess.run([self.binary, "--root", str(root), *(["--json"] if machine else []), *args,
                                "--recorded-exporters", str(recorded)],
                               capture_output=True, text=True, check=False,
                               env={**os.environ, "TRUTH_PARITY_REPLAY": "1"})
         return python, rust
 
+    recording = None  # the exit code `assert_same` expects, while it runs
+
     def assert_same(self, args, code=0, machine=False, **where):
-        python, rust = self.run_both(args, machine=machine, **where)
+        self.recording = code
+        try:
+            python, rust = self.run_both(args, machine=machine, **where)
+        finally:
+            self.recording = None
         self.assertEqual(python.returncode, code, python.stderr)
         self.assertEqual(rust.returncode, code, rust.stderr)
         self.assertEqual(rust.stdout, python.stdout, args)

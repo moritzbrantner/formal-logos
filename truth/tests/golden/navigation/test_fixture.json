@@ -1195,5 +1195,6 @@
   }
  ],
  "module": "navigation",
+ "shared": [],
  "test": "test_fixture"
 }

@@ -114,5 +114,6 @@
   }
  ],
  "module": "navigation",
+ "shared": [],
  "test": "test_sort_lists"
 }

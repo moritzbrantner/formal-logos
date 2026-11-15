@@ -46,6 +46,7 @@ macro_rules! golden {
 golden!(
     attribution,
     bind_check,
+    bridge_experiments,
     check,
     configurations,
     frontier,
@@ -55,6 +56,8 @@ golden!(
     proposition_structure,
     research,
     revisions,
+    senses,
+    strength,
     thickness,
 );
 
@@ -109,7 +112,9 @@ fn replay_module(module: &str) {
         let text = fs::read_to_string(&file).expect("golden file");
         let document: Value = serde_json::from_str(&text).expect("golden JSON");
         let base = document["base"].as_object().expect("base tree");
+        let shared = document["shared"].as_array().cloned().unwrap_or_default();
         for case in document["cases"].as_array().expect("cases") {
+            let case = &resolve_shared(case, &shared);
             count += 1;
             let title = format!(
                 "{}/{} [{}] truth {}",
@@ -129,6 +134,25 @@ fn replay_module(module: &str) {
         failures.len(),
         failures.join("\n\n")
     );
+}
+
+/// The case with its `{"shared": N}` Git history and externals expanded.
+fn resolve_shared(case: &Value, shared: &[Value]) -> Value {
+    let expand = |value: &Value| match value.get("shared").and_then(Value::as_u64) {
+        Some(index) => shared[index as usize].clone(),
+        None => value.clone(),
+    };
+    let mut case = case.clone();
+    if let Some(git) = case.get("git").map(expand) {
+        case["git"] = git;
+    }
+    if let Some(externals) = case["externals"]
+        .as_array()
+        .map(|items| items.iter().map(expand).collect())
+    {
+        case["externals"] = Value::Array(externals);
+    }
+    case
 }
 
 fn strings(value: &Value) -> Vec<String> {

@@ -13,6 +13,7 @@ code. The real corpus is compared against a few base revisions."""
 import contextlib
 import io
 import json
+import shutil
 import subprocess
 import tempfile
 import uuid
@@ -20,6 +21,7 @@ from pathlib import Path
 
 import corpus
 import sense_index
+from truth_parity import golden
 from truth_parity.common import U, ParityCase
 
 S = {name: str(uuid.UUID(int=index + 1, version=4)) for index, name in enumerate(("P1", "P2", "P3", "M1", "M2"))}
@@ -128,6 +130,10 @@ class TruthSensesParity(ParityCase):
     def compare(self, *args, root=None, code=None):
         root = root or self.root
         expected = python(args, root=None if root == corpus.ROOT else root)
+        if root != corpus.ROOT:
+            golden.record(self, ["--root", root, "senses", *args], root=root, code=expected[0], stdout=expected[1],
+                          stderr=expected[2])
+            golden.record(self, ["--root", root, "--json", "senses", *args], root=root, code=expected[0])
         self.assertEqual(self.rust(args, root=root), expected)
         if code is not None:
             self.assertEqual(expected[0], code, expected)
@@ -136,9 +142,6 @@ class TruthSensesParity(ParityCase):
         return expected
 
     def report_json(self, root):
-        code, out, err = self.rust(["report"], root=root, machine=True)
-        self.assertEqual(code, 0, err)
-        report = json.loads(out)
         with checkout(root):
             mixing = sense_index.mixing()
             undeclared = sense_index.undeclared()
@@ -146,6 +149,14 @@ class TruthSensesParity(ParityCase):
 
         def relative(entry):
             return {**entry, "path": Path(entry["path"]).relative_to(root).as_posix()}
+
+        golden.record(self, ["--root", root, "--json", "senses", "report"], root=root, code=0, json_paths={
+            "mixing": [relative(entry) for entry in mixing],
+            "senses_without_lean_declaration": [relative(entry) for entry in undeclared],
+            "disambiguations": len(disambiguations)})
+        code, out, err = self.rust(["report"], root=root, machine=True)
+        self.assertEqual(code, 0, err)
+        report = json.loads(out)
 
         self.assertEqual(report["mixing"], [relative(entry) for entry in mixing])
         self.assertEqual(report["senses_without_lean_declaration"], [relative(entry) for entry in undeclared])
@@ -170,6 +181,8 @@ class TruthSensesParity(ParityCase):
     def test_report_write(self):
         (self.root / "docs" / "notes").mkdir(parents=True)
         expected = python(["report"], root=self.root)[1]
+        golden.record(self, ["--root", self.root, "senses", "report", "--write"], root=self.root, code=0, stdout="",
+                      files={str(self.root / sense_index.NOTE): expected})
         self.assertEqual(self.rust(["report", "--write"])[:2], (0, ""))
         self.assertEqual((self.root / sense_index.NOTE).read_text(), expected)
 
@@ -180,6 +193,14 @@ class TruthSensesParity(ParityCase):
         write(self.root, "corpus/arguments/single.json", argument("ARG-SINGLE", "C", ("B",)))
         self.compare("allowlist", code=1)
         expected = python(["allowlist"], root=self.root)
+        if golden.RECORDING:  # the file Python's `--write` leaves, on a copy of the checkout
+            with tempfile.TemporaryDirectory() as temporary:
+                copy = Path(temporary) / "copy"
+                shutil.copytree(self.root, copy)
+                written = python(["allowlist", "--write"], root=copy)
+                golden.record(self, ["--root", self.root, "senses", "allowlist", "--write"], root=self.root,
+                              code=written[0], stdout=written[1], stderr=written[2],
+                              files={str(self.root / corpus.SENSE_ALLOWLIST): (copy / corpus.SENSE_ALLOWLIST).read_text()})
         self.assertEqual(self.rust(["allowlist", "--write"])[0], 0)
         self.assertEqual(python(["allowlist"], root=self.root)[0], 0, expected)
         self.compare("allowlist", code=0)

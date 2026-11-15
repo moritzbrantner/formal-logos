@@ -244,5 +244,6 @@
   }
  ],
  "module": "bind_check",
+ "shared": [],
  "test": "test_expression_contracts"
 }

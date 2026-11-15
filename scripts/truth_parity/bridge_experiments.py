@@ -21,6 +21,7 @@ import tempfile
 from pathlib import Path
 
 import corpus
+from truth_parity import golden
 from truth_parity.common import ParityCase
 
 PROFILE = "TruthCore.Semantics.Shared"
@@ -118,17 +119,26 @@ class TruthBridgeExperimentsParity(ParityCase):
     def compare(self, *args, root=None, code=None):
         root = root or self.root
         expected = python(list(args), root=None if root == corpus.ROOT else root)
+        fixture = root != corpus.ROOT
+        command = ["--root", root, "bridge-experiments", *rust_args(args)]
+        if fixture:
+            golden.record(self, command, root=root, code=expected[0], stdout=expected[1], stderr=expected[2])
         self.assertEqual(self.rust(list(args), root), expected)
         if code is not None:
             self.assertEqual(expected[0], code, expected)
         if expected[0] == 0:
             py_code, py_json, _ = python([*args, "--json"], root=None if root == corpus.ROOT else root)
+            if fixture:
+                golden.record(self, ["--root", root, "--json", *command[2:]], root=root, code=py_code,
+                              stdout_json=json.loads(py_json))
             rs_code, rs_json, _ = self.rust(list(args), root, machine=True)
             self.assertEqual((rs_code, py_code), (0, 0))
             report = json.loads(rs_json)
             report.pop("input_identity")
             self.assertEqual(report, json.loads(py_json))
             return report
+        if fixture:
+            golden.record(self, ["--root", root, "--json", *command[2:]], root=root, code=expected[0])
         self.assertEqual(self.rust(list(args), root, machine=True)[0], expected[0])
         return None
 

@@ -59,5 +59,6 @@
   }
  ],
  "module": "check",
+ "shared": [],
  "test": "test_fixture_opaque_atom_warning"
 }
