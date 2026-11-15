@@ -8,18 +8,22 @@
 //! The exporter's elaboration stays the authority; nothing here reimplements
 //! it, and the presentation is never proof support or semantic equivalence.
 
-use crate::{bind_check::sha256_hex, identity::legacy_uuid, pyfmt, pyjson::Ordered};
+use crate::{
+    bind_check::sha256_hex,
+    identity::legacy_uuid,
+    pyfmt,
+    pyjson::Ordered,
+    subprocess::{self, Failure, Finished},
+};
 use fancy_regex::Regex;
 use serde_json::{Map, Value};
 use std::{
     collections::{BTreeMap, BTreeSet, HashMap},
     fs,
-    io::Read,
     path::{Path, PathBuf},
-    process::{Command, Stdio},
+    process::Command,
     sync::OnceLock,
-    thread,
-    time::{Duration, Instant, SystemTime, UNIX_EPOCH},
+    time::{Duration, SystemTime, UNIX_EPOCH},
 };
 
 pub const SCHEMA_VERSION: i128 = 1;
@@ -63,6 +67,13 @@ const FIXED_INPUTS: [&str; 7] = [
     "scripts/worker_env.py",
     "lakefile.toml",
 ];
+/// The fingerprint of the truth crate that produces the report (`build.rs`):
+/// its sources, manifest and the workspace `Cargo.lock`. Each report records
+/// it as `revision.producer_sha256`, outside the input digest, and
+/// `--check-input` requires it to match the running binary, so a Rust change
+/// to the report or the frontier statuses it embeds makes old artifacts stale.
+/// (Python's reports bind only `scripts/*.py`; R3 retires those entries.)
+pub const PRODUCER_SHA256: &str = env!("TRUTH_PRODUCER_SHA256");
 const BUILD_TIMEOUT: Duration = Duration::from_secs(600);
 const EXTRACT_TIMEOUT: Duration = Duration::from_secs(180);
 const TIMED_OUT: &str = "structure extraction timed out; inspect the built modules and retry";
@@ -107,7 +118,7 @@ impl Records {
         Ok(Records(kinds))
     }
 
-    fn of(&self, kind: &str) -> impl Iterator<Item = &Ordered> {
+    pub fn of(&self, kind: &str) -> impl Iterator<Item = &Ordered> {
         self.0
             .get(kind)
             .into_iter()
@@ -229,7 +240,7 @@ pub fn os_error(error: &std::io::Error, path: &Path) -> String {
 
 /// The entries directly in `directory` whose name ends with `suffix`
 /// (pathlib `glob("*<suffix>")`), sorted as Python sorts paths.
-fn glob(directory: &Path, suffix: &str) -> Vec<PathBuf> {
+pub(crate) fn glob(directory: &Path, suffix: &str) -> Vec<PathBuf> {
     let mut found: Vec<PathBuf> = fs::read_dir(directory)
         .into_iter()
         .flatten()
@@ -248,7 +259,7 @@ fn glob(directory: &Path, suffix: &str) -> Vec<PathBuf> {
 
 /// pathlib `rglob("*<suffix>")` (without following directory symlinks),
 /// sorted as Python sorts paths (component-wise).
-fn rglob(directory: &Path, suffix: &str) -> Vec<PathBuf> {
+pub(crate) fn rglob(directory: &Path, suffix: &str) -> Vec<PathBuf> {
     fn walk(directory: &Path, suffix: &str, found: &mut Vec<PathBuf>) {
         for entry in fs::read_dir(directory).into_iter().flatten().flatten() {
             let path = entry.path();
@@ -270,14 +281,14 @@ fn rglob(directory: &Path, suffix: &str) -> Vec<PathBuf> {
     found
 }
 
-fn relative(root: &Path, path: &Path) -> String {
+pub(crate) fn relative(root: &Path, path: &Path) -> String {
     path.strip_prefix(root)
         .unwrap_or(path)
         .display()
         .to_string()
 }
 
-fn digest(path: &Path) -> Result<String, String> {
+pub(crate) fn digest(path: &Path) -> Result<String, String> {
     fs::read(path)
         .map(|bytes| sha256_hex(&bytes))
         .map_err(|error| os_error(&error, path))
@@ -500,7 +511,7 @@ fn input_digest(request: &Ordered, inputs: &Ordered) -> String {
 }
 
 /// Python `repr()` of a JSON-loaded value, for a message.
-fn repr(value: &Ordered) -> String {
+pub(crate) fn repr(value: &Ordered) -> String {
     match value {
         Ordered::Null => "None".into(),
         Ordered::Bool(true) => "True".into(),
@@ -526,57 +537,20 @@ fn repr(value: &Ordered) -> String {
     }
 }
 
-/// A finished subprocess: exit success, stdout and stderr.
-struct Finished {
-    success: bool,
-    stdout: String,
-    stderr: String,
-}
-
-/// Runs `program args` in `root`, killing it after `timeout`
+/// Runs `program args` in `root`, killing its process tree after `timeout`
 /// (`subprocess.run(..., timeout=...)`); `Ok(None)` on a timeout.
-fn run_bounded(
+pub(crate) fn run_bounded(
     root: &Path,
     program: &str,
     args: &[String],
     timeout: Duration,
 ) -> Result<Option<Finished>, String> {
-    let mut child = Command::new(program)
-        .args(args)
-        .current_dir(root)
-        .stdin(Stdio::null())
-        .stdout(Stdio::piped())
-        .stderr(Stdio::piped())
-        .spawn()
-        .map_err(|error| os_error(&error, Path::new(program)))?;
-    let pipe = |mut reader: Box<dyn Read + Send>| {
-        thread::spawn(move || {
-            let mut bytes = Vec::new();
-            let _ = reader.read_to_end(&mut bytes);
-            String::from_utf8_lossy(&bytes).into_owned()
-        })
-    };
-    let stdout = pipe(Box::new(child.stdout.take().expect("piped stdout")));
-    let stderr = pipe(Box::new(child.stderr.take().expect("piped stderr")));
-    let start = Instant::now();
-    let status = loop {
-        if let Some(status) = child.try_wait().map_err(|error| error.to_string())? {
-            break Some(status);
-        }
-        if start.elapsed() >= timeout {
-            let _ = child.kill();
-            let _ = child.wait();
-            break None;
-        }
-        thread::sleep(Duration::from_millis(50));
-    };
-    let stdout = stdout.join().unwrap_or_default();
-    let stderr = stderr.join().unwrap_or_default();
-    Ok(status.map(|status| Finished {
-        success: status.success(),
-        stdout,
-        stderr,
-    }))
+    let mut command = Command::new(program);
+    command.args(args).current_dir(root);
+    subprocess::run_bounded(command, timeout).map_err(|failure| match failure {
+        Failure::Spawn(error) => os_error(&error, Path::new(program)),
+        Failure::Wait(error) => error.to_string(),
+    })
 }
 
 fn detail(finished: &Finished) -> &str {
@@ -590,7 +564,7 @@ fn detail(finished: &Finished) -> &str {
 
 /// Python `run_extractor`, with `Ok(None)` for a timeout: Lake builds the
 /// modules (it owns freshness), then the exporter describes the request.
-fn run_extractor(
+pub(crate) fn run_extractor(
     root: &Path,
     request: &Ordered,
     extractor: &Extractor,
@@ -969,6 +943,7 @@ pub fn build_reports(
             (
                 "revision",
                 object(vec![
+                    ("producer_sha256", string(PRODUCER_SHA256)),
                     ("head", string(&head)),
                     ("input_digest", string(&request_hash)),
                     ("inputs", inputs.clone()),
@@ -1022,7 +997,8 @@ fn inventory(paths: Vec<PathBuf>, root: &Path) -> BTreeSet<String> {
 }
 
 /// Python `check_artifact`: the artifact's recorded inputs (inventories,
-/// file hashes and digest) still match the checkout. No Lean runs.
+/// file hashes and digest) still match the checkout, and (Rust only) its
+/// `producer_sha256` is this binary's [`PRODUCER_SHA256`]. No Lean runs.
 pub fn check_artifact(root: &Path, artifact: &Ordered) -> Result<(), String> {
     let schema = match artifact.get("schema_version") {
         Some(Ordered::Int(number)) => *number == SCHEMA_VERSION,
@@ -1092,6 +1068,14 @@ pub fn check_artifact(root: &Path, artifact: &Ordered) -> Result<(), String> {
         {
             return Err("invalid structure artifact input digest".into());
         }
+        // After Python's checks, so a shared failure reports the same message.
+        match revision.get("producer_sha256") {
+            Some(Ordered::String(saved)) if saved == PRODUCER_SHA256 => {}
+            Some(Ordered::String(_)) => {
+                return Err("stale structure artifact producer: truth sources changed".into());
+            }
+            _ => return Err("structure artifact lacks producer provenance".into()),
+        }
     }
     Ok(())
 }
@@ -1149,6 +1133,7 @@ mod tests {
                 Ordered::Array(vec![object(vec![(
                     "revision",
                     object(vec![
+                        ("producer_sha256", string(PRODUCER_SHA256)),
                         ("head", string("other")),
                         ("inputs", inputs),
                         ("request", request),
@@ -1158,6 +1143,28 @@ mod tests {
             ),
         ]);
         check_artifact(&root, &artifact).unwrap();
+        for (producer, message) in [
+            (
+                Some("0".repeat(64)),
+                "stale structure artifact producer: truth sources changed",
+            ),
+            (None, "structure artifact lacks producer provenance"),
+        ] {
+            let mut other = artifact.clone();
+            if let Ordered::Object(fields) = &mut other
+                && let Some((_, Ordered::Array(reports))) = fields.get_mut(1)
+                && let Ordered::Object(report) = &mut reports[0]
+                && let Ordered::Object(revision) = &mut report[0].1
+            {
+                match producer {
+                    Some(value) => revision[0].1 = string(&value),
+                    None => {
+                        revision.remove(0);
+                    }
+                }
+            }
+            assert_eq!(check_artifact(&root, &other).unwrap_err(), message);
+        }
         fs::write(root.join("source.lean"), "P b a").unwrap();
         assert_eq!(
             check_artifact(&root, &artifact).unwrap_err(),

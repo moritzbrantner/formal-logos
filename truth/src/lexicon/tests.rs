@@ -190,8 +190,9 @@ fn allowlist_grandfathers_unchanged_fields_only() {
     // Regeneration only shrinks: the changed field is not re-allowlisted.
     let loaded = load(&fx.0).unwrap().unwrap();
     assert!(needed_allowlist(&loaded.scans, Some(&seeded)).is_empty());
-    // Tracing the word makes the entry removable.
-    statement(&fx.0, "s1", "The cause is mysterious.", &[]);
+    // Tracing the word and linking a sense makes the entry removable; the
+    // link is outside the hashed prose.
+    statement(&fx.0, "s1", "The cause is mysterious.", &[D1]);
     entry(
         &fx.0,
         11,
@@ -203,30 +204,82 @@ fn allowlist_grandfathers_unchanged_fields_only() {
 
 #[test]
 fn ratchet_rejects_growth() {
-    let base: Allowlist = [(
-        "statements/s1/paraphrase".to_owned(),
-        Allowed {
-            hash: "h".into(),
-            untraced: ["a".to_owned()].into(),
-            unlinked: BTreeSet::new(),
-        },
-    )]
-    .into();
+    let key = "statements/s1/paraphrase".to_owned();
+    let base: Allowlist = [(key.clone(), "fnv1a64:01".to_owned())].into();
     assert!(ratchet(&base, &base).is_empty());
     assert!(ratchet(&base, &Allowlist::new()).is_empty());
-    let mut grown = base.clone();
-    grown
-        .get_mut("statements/s1/paraphrase")
-        .unwrap()
-        .untraced
-        .insert("b".into());
-    assert_eq!(ratchet(&base, &grown).len(), 1);
-    let mut rehashed = base.clone();
-    rehashed.get_mut("statements/s1/paraphrase").unwrap().hash = "other".into();
+    let rehashed: Allowlist = [(key, "fnv1a64:02".to_owned())].into();
     assert_eq!(ratchet(&base, &rehashed).len(), 1);
     let mut added = base.clone();
-    added.insert("statements/s2/paraphrase".into(), Allowed::default());
+    added.insert("statements/s2/paraphrase".into(), "fnv1a64:03".into());
     assert_eq!(ratchet(&base, &added).len(), 1);
+}
+
+#[test]
+fn schema_one_allowlists_are_read_for_their_hashes() {
+    let old = r#"{"schema_version": 1, "fields": {"statements/s1/paraphrase": {"hash": "fnv1a64:01", "untraced": ["a"], "unlinked": []}}}"#;
+    let parsed = parse_allowlist(old).unwrap();
+    assert_eq!(parsed["statements/s1/paraphrase"], "fnv1a64:01");
+    assert_eq!(parse_allowlist(&render_allowlist(&parsed)).unwrap(), parsed);
+    assert!(parse_allowlist(r#"{"fields": {"k": 1}}"#).is_err());
+}
+
+fn seed(root: &Path) {
+    let loaded = load(root).unwrap().unwrap();
+    fs::write(
+        root.join(ALLOWLIST),
+        render_allowlist(&needed_allowlist(&loaded.scans, None)),
+    )
+    .unwrap();
+}
+
+#[test]
+fn tracing_a_compound_part_keeps_an_unchanged_field_grandfathered() {
+    // Regression (#1652 L1b): `negation-closure` was untraced as a whole;
+    // tracing `negation` splits it and exposes the multi-sense `cause` part.
+    let fx = fixture("compoundsplit");
+    statement(&fx.0, "s1", "The negation-cause is prior.", &[]);
+    seed(&fx.0);
+    check_ok(&fx.0);
+    entry(
+        &fx.0,
+        17,
+        json!({"lemma": "negation", "class": "ordinary", "gloss": "Denial."}),
+    );
+    let report = check_ok(&fx.0);
+    assert!(report.new_violations.is_empty());
+    assert_eq!(
+        (
+            report.backlog_fields,
+            report.backlog_untraced,
+            report.backlog_unlinked
+        ),
+        (1, 0, 1)
+    );
+}
+
+#[test]
+fn a_new_multi_sense_entry_creates_no_new_violation_in_unchanged_fields() {
+    let fx = fixture("newsense");
+    statement(&fx.0, "s1", "The fixture is concrete.", &[]);
+    seed(&fx.0);
+    check_ok(&fx.0);
+    entry(
+        &fx.0,
+        18,
+        json!({"lemma": "concrete", "class": "technical", "definition_ids": [D1, D2], "disambiguation_ids": [X]}),
+    );
+    let report = check_ok(&fx.0);
+    assert!(report.new_violations.is_empty());
+    assert_eq!(report.backlog_unlinked, 1);
+    // A changed field must link a sense of the new entry.
+    statement(&fx.0, "s1", "The fixture is concrete indeed.", &[]);
+    entry(
+        &fx.0,
+        19,
+        json!({"lemma": "indeed", "class": "ordinary", "gloss": "In fact."}),
+    );
+    assert!(super::check(&fx.0).unwrap_err().contains("'concrete'"));
 }
 
 #[test]
