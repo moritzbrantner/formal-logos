@@ -47,17 +47,18 @@ jobs:
           restore-keys: verifier-${{ runner.os }}-${{ steps.lean.outputs.version }}-
       - name: Build Comparator toolchain
         run: scripts/bootstrap-verifier.sh
-      - name: Produce this workflow's verified configuration explorer report
-        run: python3 scripts/corpus.py configuration-report --output .cache/configuration-explorer.json
-      - name: Install workspace dependencies
-        run: bun install --frozen-lockfile
-      # The explorer reads its frontier and dossiers from the Rust truth CLI.
+      # The explorer reads its frontier and dossiers from the Rust truth CLI, which also
+      # produces the verified configuration report.
       - name: Build the truth CLI
         run: cargo build --locked --release -p truth
+      - name: Produce this workflow's verified configuration explorer report
+        run: target/release/truth configuration-report --output .cache/configuration-explorer.json
+      - name: Install workspace dependencies
+        run: bun install --frozen-lockfile
       - name: Derive proposition structure from Lean
         run: target/release/truth structure-report --output .cache/proposition-structure.json
       - name: Certify registered proposition strength comparisons
-        run: python3 scripts/corpus.py strength-report --output .cache/strength-comparisons.json
+        run: target/release/truth strength-report --output .cache/strength-comparisons.json
       - name: Build static corpus explorer
         env:
           GITHUB_PAGES: "true"

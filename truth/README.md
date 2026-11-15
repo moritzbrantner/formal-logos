@@ -12,6 +12,7 @@ target/debug/truth thickness --queue --json
 target/debug/truth frontier --reaching-root --routes
 target/debug/truth --json frontier-diff --base HEAD^1
 target/debug/truth related STMT-GOD-EXISTS
+target/debug/truth index search 'common nature'
 target/debug/truth dossier STMT-GOD-EXISTS
 target/debug/truth context ARGUMENT-ID --json
 target/debug/truth orphans
@@ -244,6 +245,56 @@ real corpus's first slice (byte-identical artifact apart from Rust's
 in Python with Lean, 1.7 s against 6.3 s from the recorded exporter output,
 and `--check-input` 1.7 s against 2.5 s; the artifacts were identical.
 
+## `strength-comparisons` and `strength-report`
+
+`truth strength-comparisons [COMPARISON] [--registered] [--json]` and
+`truth strength-report [--output FILE] [--build-input | --check-input]
+[--json]` port `python3 scripts/corpus.py strength-comparisons` and
+`strength-report` (`scripts/strength_comparisons.py`,
+`docs/proposition-structure.md`). Lean, Comparator and NanoDa stay the
+authorities: Rust validates the `strength_comparison` registrations and their
+results' Comparator contracts with the rules `truth check` uses, then, as
+Python does and through `scripts/worker_env.py`, has Lake build the modules,
+binds the evidence results with `scripts/BindTypes.lean`, has
+`scripts/CheckStrength.lean` check every complete certificate application and
+the definitional degeneracy guard, attaches the
+`scripts/PropositionStructure.lean` structure of the compared declarations
+and runs `scripts/verify-result.sh` on each evidence result. It only refuses
+incomplete checker responses and projects the checked roles to their labels.
+`strength-comparisons` prints one status line per comparison (humanized) or
+the reports as Python's JSON; a COMPARISON is matched by its exact id, as in
+Python, and `--registered` prints the provenance-only projection without
+Lean. `strength-report` writes the `.cache` bundle byte for byte as Python
+does (sorted keys, atomic replace, refused outside the clone's `.cache`) and
+`--check-input` validates its producer, input manifest, digest and
+projection without rerunning proofs, with Python's equality (key order free,
+`2 == 2.0`). Errors exit 2 as `corpus error: …` (a JSON error object under
+`--json`). The bundle's manifest still binds `scripts/strength_comparisons.py`
+and the other Python inputs, as Python's does, until R3 retires them.
+`--recorded-exporters DIR` replays recorded `BindTypes.json`,
+`CheckStrength.json` and `PropositionStructure.json` without Lake or
+Comparator, for the parity harness only; it is never a verification, so it
+needs `TRUTH_PARITY_REPLAY=1` and refuses to write a bundle named
+`strength-comparisons.json`, the only path the explorer reads.
+
+CI, Pages, the explorer's `strength-inputs` script and its `--check-input`
+call run it; `corpus.py strength-comparisons` and `strength-report` stay until
+their retirement. `scripts/truth_parity/strength.py` runs Python with its Lean
+subprocesses replaced by the recorded outputs and Rust with
+`--recorded-exporters`, on the `check` fixture with two comparisons (text and
+`--json` reports, a selected comparison, `--registered`, invalid registrations
+and Comparator contracts, binding, coverage, degeneracy and exporter failures,
+fresh, stale, forged and symlinked bundles) and on the real corpus
+(`--registered` always; the live reports, the bundle and `--check-input`
+given `TRUTH_STRENGTH_EXPORTERS`, a directory recorded with `python3 -m
+truth_parity.strength record DIR` from `scripts/`). On the real corpus
+(2026-11-15, warm Lake build, 7 comparisons) the live `strength-report`,
+dominated by `verify-result.sh`, took 186 s in Rust and 159 s in Python on a
+loaded machine, with byte-identical bundles; from the recorded exporter output
+it took 0.9 s against 3.4 s, `--check-input` 0.57 s against 0.72 s and
+`--registered` 0.38 s against 0.25 s (Rust also loads the structural
+corpus).
+
 ## `unused-premises`, `lean-reuse`, `context --proof-use`
 
 These port the proof-term exporter commands of `scripts/corpus.py` (#954
@@ -378,12 +429,16 @@ serde-serializable result structs (`truth::related`, `truth::dossier`,
 `truth::context`); `main.rs` only selects output. Text output is
 byte-identical to Python's; `--json` prints the Python JSON object plus
 `input_identity` (`dossier --all` prints exactly the Python object, keyed by
-statement ID). Navigation only: nothing here closes a statement, changes a
-route cost or certifies anything.
+statement ID). Rust adds one part Python lacks (#952): the note sections that
+name the target explicitly, as `note_mentions` in JSON and a final "Notes
+mentioning the target records" text block (`context`: the argument, its
+results and its conclusion). The parity tests drop both. Navigation only:
+nothing here closes a statement, changes a route cost or certifies anything.
 
 - `truth related STATEMENT-ID [--limit N]` (default 10; 1 to 200 shown) ranks
   over the loaded corpus in memory. Python ranks over its disposable SQLite
-  projection `.cache/research-index.sqlite`; Rust needs and writes no cache.
+  projection `.cache/research-index.sqlite`; Rust needs and writes no cache
+  (the separate `truth index`, below, keeps one for search and lookup).
   The paraphrase-overlap score sums word weights in sorted word order, so
   candidates whose scores differ only in the last floating-point bit may
   order differently from Python (none in the sampled corpus).
@@ -394,7 +449,34 @@ route cost or certifies anything.
   ID, a result ID or a statement concluded by exactly one argument. The frozen
   Lean statement and companion theorems are read from each result's Challenge
   module, imports from the Solution modules and permitted axioms from the
-  Comparator config, as Python does.
+  Comparator config, as Python does. Rust adds the elaborated types below.
+
+**Elaborated types (#960, Rust only).** After running Lean, `truth
+bind-check` (full or scoped, but not from a saved `--lean-json`) records
+each described result theorem in `.cache/bind-types.json`
+(`truth::bind_types`; `$TRUTH_BIND_TYPES_CACHE` overrides the path): the
+exporter's binder names, head constants and types as Lean pretty-printed them
+with full names, the result type and theory-bundle conjuncts, and an input
+digest over the Lean toolchain, Lake manifest and configuration,
+`scripts/BindTypes.lean`, the Solution module, every repository module in its
+source import closure and their `.olean.hash` files. A scoped run merges into
+the existing cache. `context` only reads it and never runs Lean: for each
+result whose entry still matches the result record and whose digest it
+recomputes unchanged, the text pack adds an `elaborated` block (parameters,
+each hypothesis or bundle conjunct `h.N` with its type and bound statement or
+`unbound`, the conclusion, unbound premises; hypothesis lines are cut at
+about 1 KB per result, and `--json` carries the full signature and every
+hypothesis under `lean[].elaborated`). The binding is recomputed from the
+cached types and the current records with `bind-check`'s rules, without
+expression contracts or sense checks, so it is advisory and never
+verification evidence. When the cache is absent, unreadable or stale for a
+result, the text pack adds exactly one line saying so under the Lean heading
+and otherwise keeps the source-text view; `--json` always carries the
+`bind_types` summary. Actual axioms are not shown: no Comparator or NanoDa
+output is kept locally (CI logs only), so only the permitted axioms of the
+Comparator config appear. Python's `context` has none of this; the parity
+tests point Rust at an absent cache and drop the notice line and the
+`bind_types` summary before comparing.
 
 `dossier` and `context` consume the frontier report. Without
 `--frontier-json` they compute it in-process with the Rust `frontier` (the
@@ -411,9 +493,8 @@ an unreadable or non-frontier report or an unknown frontier root exits 1.
 Python prints the same messages with exit code 2.
 
 Not ported (use Python): the
-full `validate()` that `dossier --all` runs first, `research_index.py`'s other
-subcommands (`build`, `search`, `show`, `duplicates`, `summary`, `parity`,
-`export`, `bundle`, `compare`) and the Explorer's `dossier --all` consumer.
+full `validate()` that `dossier --all` runs first and the Explorer's
+`dossier --all` consumer.
 `scripts/verify_truth_cli.py` checks parity on a sample of 30+ statements
 (closed, stated, supported, bare, off-frontier and floor-marked), all 3,760
 `dossier --all` entries, 15 `context` targets (12 argument IDs, which here
@@ -421,6 +502,42 @@ coincide with their result IDs, and 3 uniquely concluded statements) with
 several `--limit` values, and the error cases, from a saved Python report;
 and, for a subset plus `dossier --all`, that the in-process frontier gives the
 same output.
+
+## `index`
+
+`truth index (build | search WORDS [--limit N] | show ID | duplicates | summary
+| parity | export PATH | bundle --case ID [--premise S]... | compare --case ID
+[--left S]... [--right S]...)` ports `scripts/research_index.py` (#954 slice
+B7; `truth::index`, rusqlite with bundled SQLite and FTS5). The database
+`.cache/truth-index.sqlite` is a disposable projection of every
+`corpus/**/*.json` file, never an authority. It is bound to the builder
+version and an FNV-1a digest of every indexed path and byte string (the hash
+of `input_identity`); every query reuses it while that binding holds and
+rebuilds it otherwise, and `build` rebuilds it unconditionally. Publication is
+atomic: a failed build leaves the previous database. Tables, rows, the search
+expression, FTS5 ranking and the queries are Python's; `bundle` and `compare`
+run the registered-only `truth::configurations` engine. Output is the Python
+JSON (indented; compact with `--json`; object keys sorted). `export` prints the
+original bytes. Errors exit 1 (Python's messages), usage errors 2.
+
+Research notes (#952): the index also projects `docs/notes/**/*.md` (up to
+1 MiB each) into Rust-only tables, with their paths and bytes in the
+digest. `search` appends up to `--limit` note sections, typed `"kind":
+"note"`, after the records. `show docs/notes/x.md[#anchor]` shows a note or
+one section. `show RECORD` adds `mentioned_by_notes`. Links come only from
+explicit uuid, legacy ID, record-path or code-span label mentions
+(`truth::notes`; `docs/notes/research-index.md`, "Research notes").
+
+Differences from Python: Python's query commands reject a stale index, and its
+digest hashes the script, so the two use separate files
+(`.cache/research-index.sqlite` there). Rust also resolves a legacy id or
+label, optionally `kind:`-prefixed, for `show`, `--case`, `--premise`,
+`--left` and `--right`. Python's `related` subcommand is `truth related`.
+Python has no note tables or note hits. `scripts/truth_parity/index.py`
+compares every record table row for row (all but the digest) and the JSON of
+every subcommand, without the note parts, on the real corpus and a fixture,
+with search ranks including ties, and checks stale refresh, failed-rebuild
+preservation, corrupt-projection detection and exit codes.
 
 ## `attribution-check`
 
@@ -589,29 +706,82 @@ export (`--constants`) and either `--target ID` or a
 default 10). It is a search heuristic, not a proof or equivalence judgment;
 see `docs/bridge-candidates.md` for the pipeline and the optional Lean trial.
 
-## `configurations`, `models`, `territory`
+## `bridge-experiments`
 
-These port the Lean-free parts of `corpus.py configurations`, `models` and
-`territory` (#954 slice B2): `truth::configurations` (`implication_closure`,
-`configuration_report`), `truth::finite_models` (`model_report`) and
-`truth::territory` (`territory_report`). Text output is byte-identical to
-Python's; `--json` prints the Python JSON (plus `input_identity` for `models`
-and `territory`; `configurations` prints Python's list as is). A corpus error
-prints Python's `corpus error: …` with exit code 2.
+`truth bridge-experiments RESULT --profile-module MODULE [--limit N]
+[--frontier-root STATEMENT]` ports `corpus.py bridge-experiments` (#953;
+`truth::bridge_experiments`, the port of `scripts/bridge_experiments.py`): the
+read-only discovery of recorded cross-argument joins where one result's
+Solution directly imports another's, both under the one named Lean profile
+module and both conclusions in the explicit focus of an attempt with an open
+blocker. Lean imports and import closures are the `context` pack's; the
+frontier is computed in-process. Python's `--root STATEMENT` is
+`--frontier-root`. Text is byte-identical, errors are Python's `corpus error:
+…` with exit code 2, and `--json` is Python's report plus `input_identity`;
+`scripts/truth_parity/bridge_experiments.py` compares both on the cases of
+`test_bridge_experiments.py` and on results the real corpus's attempts cite.
+It ranks what to read first; it proves, refutes and closes nothing.
 
-- `truth configurations --registered [--case ID] [--seed STATEMENT]
-  [--premise STATEMENT]...`: the registered projection (no certified status).
-  It validates the models and cases first, as Python's `configuration_context`
-  does (`truth::check::registered_configurations`), not the whole corpus.
-  Without `--registered` Python builds the modules and checks every
-  certificate and original theorem in Lean; Rust refuses and names the Python
-  command (exit 2). The verified projection is ported in the library and
-  unit-tested against Python's fixture cases; slice A6 wires it to
-  `configuration-report`.
-- `truth models`: every registered model and its co-failure candidates.
-  `--check`, `--argument` and `--verify` Lean-check all registered models in
-  Python, so Rust refuses them and names the Python command; `--premise`
-  without either fails as in Python.
+## `senses`
+
+`truth senses (report [--write] | allowlist [--write] | ratchet --base REV)`
+ports `scripts/sense_index.py report|allowlist|ratchet` (#1233): the arguments
+that use several senses of one disambiguated term without a connecting sense
+bridge, and the senses without a distinct Lean declaration (`truth::senses`,
+the same sense index `truth check` validates with). `report` prints (or
+writes) `docs/notes/sense-index-migration.md`; `--json` gives the mixing
+entries and undeclared senses. `allowlist` regenerates
+`corpus/sense-index-allowlist.json` with `--write` and otherwise fails when it
+is stale. `ratchet --base REV` lists the entries that are no longer needed and
+fails (exit 1) when the allowlist gained an entry since REV, arguments compared
+by the uuid their key resolves to; CI's sense-index step runs it. Text,
+stderr and exit codes are Python's byte for byte
+(`scripts/truth_parity/senses.py`, fixtures and the real corpus against
+several bases); `sense_index.py migrate` stays Python.
+
+## `configurations`, `configuration-report`, `models`, `territory`
+
+These port `corpus.py configurations`, `configuration-report`, `models` and
+`territory` (#954 slices B2 and A6): `truth::configurations`
+(`implication_closure`, `configuration_report`), `truth::configuration_live`
+(`verify_case`, `verify_compositions`, the live reports),
+`truth::configuration_explorer` (the verified explorer bundle),
+`truth::finite_models` (`model_report`) and `truth::territory`
+(`territory_report`). Text output is byte-identical to Python's; `--json`
+prints the Python JSON (plus `input_identity` for `models` and `territory`;
+`configurations` prints Python's list as is). A corpus error prints Python's
+`corpus error: …` with exit code 2.
+
+The Lean-backed paths orchestrate; they never compute a verdict. They write
+the same certificate and composition sources as Python, run `lake build`,
+`lake env lean` and `scripts/verify-result.sh` with Python's timeouts (each
+process tree killed on expiry, `truth::subprocess`), read only exit status and
+`#print axioms` lines, and bind original theorems through
+`scripts/BindTypes.lean`. They call `lake` from PATH, as Python does: run them
+under `python3 scripts/worker_env.py --`.
+
+- `truth configurations [--registered] [--case ID] [--seed STATEMENT]
+  [--premise STATEMENT]...`: with `--registered`, the registered projection
+  (no certified status); otherwise every selected case is verified in Lean
+  first and no report is printed if any step fails. It validates the models
+  and cases first, as Python's `configuration_context` does
+  (`truth::check::registered_configurations`), not the whole corpus.
+- `truth configuration-report (--output PATH | --check PATH |
+  --build-input)`: `--output` live-verifies every case, replays the decision
+  tree's family cores and atomically writes the bundle inside `.cache`, byte
+  for byte as Python writes it plus `producer.producer_sha256` (the crate
+  fingerprint `build.rs` computes, outside the input digest). It refuses an
+  output outside `.cache` before running Lean (Python only after). `--check`
+  and `--build-input` (with `TRUTH_CORE_CONFIGURATION_REPORT` /
+  `TRUTH_CORE_REQUIRE_CONFIGURATION_REPORT`) check freshness without Lean,
+  as Python does, and then require the fingerprint to match the running
+  binary. `--json` prints Python's indented projection without the input
+  hashes.
+- `truth models [--check STATEMENT | --argument ARGUMENT] [--premise
+  STATEMENT]... [--verify]`: every registered model, its classification and
+  co-failure candidates; `--check`, `--argument` and `--verify` also
+  Lean-check every registered model (Python `verify_models`); `--premise`
+  without a target fails as in Python.
 - `truth territory [--frontier-root STATEMENT] [--max-atoms N]`: Python's
   `--root` is `--frontier-root` here. Like Python it runs the full `check`
   validation first (`cli::validate_first`) and reads the in-process Rust
@@ -628,3 +798,14 @@ and -3 and an unknown root) and on a fixture checkout with an incompatibility
 core, an implication rule, a model a fixed constant excludes, co-failures, a
 refutation core and a model that satisfies it (a `DEFECT` line), a broken
 corpus and seven broken registrations.
+`scripts/truth_parity/configuration_report.py` runs the Lean-backed paths of
+both implementations on that fixture as a Git checkout with a recorded
+toolchain on PATH (a `lake` that answers builds, prints Lean's `#print
+axioms` lines and describes the theorems as `BindTypes.lean` would, and a
+`verify-result.sh` stub), so no Lean runs: it compares the logged toolchain
+calls, the bundle byte for byte except the fingerprint line, `--check` and
+`--build-input` outcomes on fresh, stale and malformed bundles, live
+`configurations` and `models --check / --argument / --verify`, and the error
+and exit code of a failure at every step (build, certificate, forbidden
+axiom, `verify-result.sh`, model certificates, composition, binding, a
+verification defect, no `lake`).

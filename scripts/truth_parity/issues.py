@@ -13,7 +13,7 @@ import tempfile
 from pathlib import Path
 
 import corpus
-from truth_parity.common import ParityCase
+from truth_parity.common import ParityCase, without_note_field, without_note_mentions
 
 SNAPSHOT = Path(__file__).resolve().parent / "fixtures" / "issues-snapshot.json"
 
@@ -132,12 +132,12 @@ class TruthIssuesParity(ParityCase):
         result = subprocess.run([self.binary, *(["--root", str(root)] if root else []), *args],
                                 cwd=corpus.ROOT, capture_output=True, text=True, check=False)
         self.assertEqual(result.returncode, code, (args, result.stderr))
-        return result.stdout, result.stderr
+        return without_note_mentions(result.stdout), result.stderr
 
     def truth_json(self, *args, root=None):
         value = json.loads(self.truth("--json", *args, root=root)[0])
         self.assertTrue(value.pop("input_identity").startswith("fnv1a64:"))
-        return value
+        return without_note_field(value)
 
     def assert_issues(self, snapshot, root=None, extra=()):
         """Text and JSON of `issues --from SNAPSHOT [extra]` on both sides."""

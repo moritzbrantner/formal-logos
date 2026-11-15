@@ -229,8 +229,10 @@ axiom, Comparator and NanoDa checks on the final inputs.
 Before opening a new proposition investigation or introducing vocabulary, run
 `target/release/truth related <STMT-ID>` for the load-bearing seed. It ranks the
 loaded corpus in memory (no cache) and surfaces related propositions, complete
-argument bundles and previous attempts. Inspect promising matches before
-reinventing them. Rankings and shared vocabulary are discovery aids, not proofs
+argument bundles and previous attempts. Without a seed ID, start with
+`target/release/truth index search 'topic words'` (a disposable SQLite/FTS5
+projection under `.cache/`, rebuilt when the corpus changed; never an authority).
+Inspect promising matches before reinventing them. Rankings and shared vocabulary are discovery aids, not proofs
 of equivalence, implication or incompatibility. Continue with the dossier and
 existing certification workflow below. The repository-local `proposition-reuse`
 skill in `.agents/skills/proposition-reuse/SKILL.md` describes this entry point.

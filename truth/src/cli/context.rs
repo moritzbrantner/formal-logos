@@ -1,11 +1,14 @@
 //! `truth context TARGET`: Python `corpus.py context`, the bounded pack for
 //! an argument or result. `--proof-use` runs `scripts/LeanReuse.lean` on
 //! the argument's result theorems (`--proof-use-json FILE` reads a saved
-//! output) and classifies their proof-term references, review only.
+//! output) and classifies their proof-term references, review only. When
+//! `truth bind-check` left a fresh elaborated-type cache, each result also
+//! shows its elaborated type and hypothesis binding (#960); otherwise one
+//! line says why not. Python has no such section.
 
 use super::{
     Args, Command, Output, corpus_error, invalid_target, lean_reuse, load, research, unknown,
-    with_identity,
+    with_identity, with_note_mentions,
 };
 use serde_json::Value;
 use truth::{context, lean_reuse as reuse, related};
@@ -15,7 +18,8 @@ pub const COMMAND: Command = Command {
     run,
 };
 
-/// JSON as the Python command prints it (plus `input_identity`) and
+/// JSON as the Python command prints it (plus `input_identity` and, #952,
+/// `note_mentions`) and
 /// byte-identical text.
 fn run(args: &Args, operands: &[&str]) -> Output {
     let target = research::operand(args, "context", operands, true)?;
@@ -63,7 +67,7 @@ fn run(args: &Args, operands: &[&str]) -> Output {
     } else {
         None
     };
-    let pack = context::context_pack(
+    let mut pack = context::context_pack(
         &args.root,
         &corpus,
         &view,
@@ -71,7 +75,27 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         &matches,
         proof_uses.as_ref(),
     );
+    context::attach_bind_types(&args.root, &corpus, &mut pack);
     let limit = args.research.limit.unwrap_or(context::DEFAULT_LIMIT);
-    let text = context::format_context(&pack, limit);
-    Ok((with_identity(&pack, &corpus), Some(aliases.humanize(&text))))
+    let mut text = context::format_context(&pack, limit);
+    let mut value = with_identity(&pack, &corpus);
+    // Notes naming the argument, one of its results or its conclusion.
+    let conclusion = corpus
+        .get("arguments", &argument)
+        .and_then(|record| record.fields.get("conclusion_statement_id"))
+        .and_then(Value::as_str);
+    let results: Vec<&str> = corpus
+        .records("results")
+        .into_iter()
+        .filter(|result| {
+            result.get("argument_id").and_then(Value::as_str) == Some(argument.as_str())
+        })
+        .filter_map(|result| result.get("id").and_then(Value::as_str))
+        .collect();
+    let mut ids = vec![argument.as_str()];
+    ids.extend(results);
+    ids.extend(conclusion);
+    let shown = usize::try_from(limit).unwrap_or(usize::MAX).max(1);
+    with_note_mentions(args, &corpus, &ids, &mut value, &mut text, shown)?;
+    Ok((value, Some(aliases.humanize(&text))))
 }

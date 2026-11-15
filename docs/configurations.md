@@ -8,15 +8,14 @@ closure. Statements, arguments, results, model evaluations and attempts retain
 their existing owners.
 
 ```bash
-# Metadata inspection: explicitly no verified status (Rust port of
-# `corpus.py configurations --registered`, same flags and output).
+# Metadata inspection: explicitly no verified status.
 target/release/truth configurations --registered --json
-# Live certificates; hold the normal heavy-work lock.
-flock /tmp/moenarch/truth-core-heavy.lock \
-  python3 scripts/corpus.py configurations --case CONFIG-NECESSARY-INDIVIDUAL --json
+# Live certificates; hold the normal heavy-work lock (worker_env puts lake on PATH).
+flock /tmp/moenarch/truth-core-heavy.lock python3 scripts/worker_env.py -- \
+  target/release/truth --json configurations --case CONFIG-NECESSARY-INDIVIDUAL
 # Test a supplied finite assumption set, without enumerating its powerset.
-flock /tmp/moenarch/truth-core-heavy.lock \
-  python3 scripts/corpus.py configurations --case CONFIG-NECESSARY-INDIVIDUAL \
+flock /tmp/moenarch/truth-core-heavy.lock python3 scripts/worker_env.py -- \
+  target/release/truth configurations --case CONFIG-NECESSARY-INDIVIDUAL \
   --premise STMT-NECESSARY-INDIVIDUAL-DE-DICTO
 ```
 
@@ -24,9 +23,10 @@ The last command's statement ID must occur in that case's explicit applications;
 there is no matching by text or automatic replacement by a similar statement.
 `--seed STMT-…` selects cases by their exact seed. Selection IDs and output
 ordering are stable. Failure returns nonzero and emits no successful JSON report.
-`truth configurations` takes `--case`, `--seed` and `--premise` too, but only
-with `--registered`: the live certificate check runs Lean and stays
-`corpus.py configurations` (#954).
+`truth configurations` ports `corpus.py configurations` (#954): the Rust CLI
+writes the same Lean certificate and composition sources, runs `lake`,
+`scripts/verify-result.sh` and `scripts/BindTypes.lean` as Python does, and
+reads only their results; Lean stays the verifier.
 
 ## Persistent contract
 
@@ -179,13 +179,19 @@ root-route premises; these configuration inputs discharge none.
 Generate a disposable output after checking the exact current proofs:
 
 ```bash
-flock /tmp/moenarch/truth-core-heavy.lock \
-  python3 scripts/corpus.py configuration-report --output .cache/configuration-explorer.json
+flock /tmp/moenarch/truth-core-heavy.lock python3 scripts/worker_env.py -- \
+  target/release/truth configuration-report --output .cache/configuration-explorer.json
 TRUTH_CORE_CONFIGURATION_REPORT=.cache/configuration-explorer.json \
 TRUTH_CORE_REQUIRE_CONFIGURATION_REPORT=true bun run build
 ```
 
-`configuration-report --check .cache/configuration-explorer.json` checks a
+The bundle is byte for byte what `corpus.py configuration-report` writes, plus
+`producer.producer_sha256`: the fingerprint of the truth crate that produced it
+(as the structure report records). `truth configuration-report --check` (and
+`--build-input`) require it to match the running binary, so a bundle from other
+Rust code, or from the Python producer, is stale.
+
+`truth configuration-report --check .cache/configuration-explorer.json` checks a
 **trusted producer's output** against the current checkout head, input manifest,
 canonical report, theorem/model provenance and decision tree. It does not rerun
 Lean or independently prove that a producer executed. A matching digest provides

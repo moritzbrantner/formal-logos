@@ -1,6 +1,9 @@
 //! `truth dossier (STATEMENT | --all)`: Python `corpus.py dossier`.
 
-use super::{Args, Command, HELP, Output, issues, load, research, unknown, usage, with_identity};
+use super::{
+    Args, Command, HELP, Output, issues, load, research, unknown, usage, with_identity,
+    with_note_mentions,
+};
 use serde_json::{Value, json};
 use truth::dossier;
 
@@ -9,8 +12,9 @@ pub const COMMAND: Command = Command {
     run,
 };
 
-/// JSON as the Python command prints it (plus `input_identity`, except
-/// `--all`, which is machine output printed as is) and byte-identical text.
+/// JSON as the Python command prints it, plus `input_identity` and (#952)
+/// `note_mentions`, and Python's text plus a final notes block; `--all` is
+/// machine output printed exactly as Python's.
 fn run(args: &Args, operands: &[&str]) -> Output {
     let applies = args.research.related.is_none();
     let target = research::operand(args, "dossier", operands, applies)?;
@@ -86,9 +90,9 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         .try_into()
         .ok()
         .filter(|limit: &usize| *limit > 0);
-    let text = dossier::format_dossier(&found, &index, limit);
-    Ok((
-        with_identity(&found, &corpus),
-        Some(aliases.humanize(&text)),
-    ))
+    let mut text = dossier::format_dossier(&found, &index, limit);
+    let mut value = with_identity(&found, &corpus);
+    let shown = limit.unwrap_or(usize::MAX);
+    with_note_mentions(args, &corpus, &[&id], &mut value, &mut text, shown)?;
+    Ok((value, Some(aliases.humanize(&text))))
 }

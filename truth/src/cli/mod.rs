@@ -18,8 +18,10 @@ use truth::{
 mod args;
 mod attribution_check;
 mod bind_check;
+mod bridge_experiments;
 mod bridges;
 mod check;
+mod configuration_report;
 mod configurations;
 mod context;
 mod definitions;
@@ -27,6 +29,7 @@ mod dossier;
 mod frontier;
 mod frontier_diff;
 mod ids;
+mod index;
 mod inspect;
 mod issues;
 mod lean_reuse;
@@ -37,8 +40,10 @@ mod next_steps;
 mod orphans;
 mod related;
 mod research;
+mod senses;
 mod sort_lists;
 mod status;
+mod strength;
 mod structure;
 mod territory;
 mod thickness;
@@ -69,18 +74,27 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] lexicon (show WORD | untraced | coverage | check | bootstrap | allowlist | ratchet --base REV) [--limit N] [--write]
        truth [--root PATH] [--json] definitions (status [--limit N] | refresh [--write] [--lean-json FILE]
              [--print-lean-input] | allowlist [--write] | ratchet --base REV)
-       truth [--root PATH] [--json] configurations --registered [--case ID] [--seed STATEMENT] [--premise STATEMENT]...
-       truth [--root PATH] [--json] models
+       truth [--root PATH] [--json] configurations [--registered] [--case ID] [--seed STATEMENT] [--premise STATEMENT]...
+       truth [--root PATH] [--json] configuration-report (--output PATH | --check PATH | --build-input)
+       truth [--root PATH] [--json] models [--check STATEMENT | --argument ARGUMENT] [--premise STATEMENT]... [--verify]
        truth [--root PATH] [--json] territory [--frontier-root STATEMENT] [--max-atoms N]
        truth [--root PATH] [--json] bind-check [--result RESULT]... [--affected --base REV [--head REV]]
              [--lean-json FILE] [--print-lean-input]
        truth [--root PATH] [--json] structure STATEMENT [--unfold DECLARATION]... [--extractor-json FILE]
        truth [--root PATH] [--json] structure-report [--output FILE] [--build-input | --check-input]
              [--extractor-json FILE]
+       truth [--root PATH] [--json] strength-comparisons [COMPARISON] [--registered]
+       truth [--root PATH] [--json] strength-report [--output FILE] [--build-input | --check-input]
        truth [--root PATH] [--json] unused-premises [--strict] [--exemptions FILE] [--frontier-root STATEMENT]
              [--bind-json FILE] [--usage-json FILE]
        truth [--root PATH] [--json] lean-reuse --review [--usage-json FILE]
        truth [--root PATH] [--json] attribution-check --base REV [--materialize] [--max-chars N]
+       truth [--root PATH] [--json] index (build | search WORDS [--limit N] | show ID | duplicates | summary
+             | parity | export PATH | bundle --case ID [--premise STATEMENT]...
+             | compare --case ID [--left STATEMENT]... [--right STATEMENT]...)
+       truth [--root PATH] [--json] senses (report [--write] | allowlist [--write] | ratchet --base REV)
+       truth [--root PATH] [--json] bridge-experiments RESULT --profile-module MODULE [--limit N]
+             [--frontier-root STATEMENT]
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
@@ -126,14 +140,20 @@ pub const COMMANDS: &[Command] = &[
     lexicon::COMMAND,
     definitions::COMMAND,
     configurations::COMMAND,
+    configuration_report::COMMAND,
     models::COMMAND,
     territory::COMMAND,
     bind_check::COMMAND,
     structure::STRUCTURE,
     structure::REPORT,
+    strength::COMPARISONS,
+    strength::REPORT,
     unused_premises::COMMAND,
     lean_reuse::COMMAND,
     attribution_check::COMMAND,
+    index::COMMAND,
+    senses::COMMAND,
+    bridge_experiments::COMMAND,
 ];
 
 /// Parses `args` and runs the command it names.
@@ -145,9 +165,21 @@ pub fn run(args: &[OsString]) -> Output {
             Some(command) if args.bind.flags && command.name != "bind-check" => Err(usage(
                 "--result, --affected, --lean-json and --print-lean-input apply only to bind-check",
             )),
-            Some(command) if args.structure.flags && !command.name.starts_with("structure") => {
+            Some(command)
+                if args.structure.flags
+                    && !command.name.starts_with("structure")
+                    && command.name != "strength-report"
+                    && command.name != "configuration-report" =>
+            {
                 Err(usage(
-                    "--unfold, --output, --build-input, --check-input and --extractor-json apply only to structure and structure-report",
+                    "--unfold, --output, --build-input, --check-input and --extractor-json apply only to structure, structure-report, strength-report and configuration-report",
+                ))
+            }
+            Some(command)
+                if args.recorded_exporters.is_some() && !command.name.starts_with("strength-") =>
+            {
+                Err(usage(
+                    "--recorded-exporters applies only to strength-comparisons and strength-report",
                 ))
             }
             Some(command)
@@ -162,6 +194,14 @@ pub fn run(args: &[OsString]) -> Output {
             Some(command) if args.attribution.flags && command.name != "attribution-check" => Err(
                 usage("--materialize and --max-chars apply only to attribution-check"),
             ),
+            Some(command) if args.index.flags && command.name != "index" => {
+                Err(usage("--left and --right apply only to index compare"))
+            }
+            Some(command)
+                if args.profile_module.is_some() && command.name != "bridge-experiments" =>
+            {
+                Err(usage("--profile-module applies only to bridge-experiments"))
+            }
             Some(command) => (command.run)(&args, operands),
             None => Err(args.shape_error()),
         },
@@ -287,6 +327,32 @@ pub fn with_identity(value: impl serde::Serialize, corpus: &Corpus) -> Value {
         object.insert("input_identity".into(), json!(corpus.input_identity()));
     }
     value
+}
+
+/// Adds the note sections that explicitly mention one of `ids` (#952) to a
+/// research view: `note_mentions` in the JSON and a final text block of at
+/// most `limit` entries. Python has no note index, so the field and the
+/// block are Rust only (the parity tests remove them).
+pub fn with_note_mentions(
+    args: &Args,
+    corpus: &Corpus,
+    ids: &[&str],
+    value: &mut Value,
+    text: &mut String,
+    limit: usize,
+) -> Result<(), Failure> {
+    let lookup = truth::notes::Lookup::of_corpus(corpus);
+    let ids = ids.iter().copied().collect();
+    let found = truth::notes::mentioning(&args.root, &lookup, &ids)
+        .map_err(|message| input_error(truth::notes::DIRECTORY, message))?;
+    let block = truth::notes::format_mentions(&found, limit);
+    // Always `TEXT\n\nNotes…`, so the block can be cut off exactly.
+    text.push_str("\n\n");
+    text.push_str(block.trim_matches('\n'));
+    if let Some(object) = value.as_object_mut() {
+        object.insert("note_mentions".into(), json!(found));
+    }
+    Ok(())
 }
 
 /// The uuid `token` names (uuid, legacy id, label, case-insensitive label),
