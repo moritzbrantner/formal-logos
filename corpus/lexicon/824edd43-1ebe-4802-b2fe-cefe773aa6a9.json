@@ -1,0 +1,11 @@
+{
+  "id": "824edd43-1ebe-4802-b2fe-cefe773aa6a9",
+  "label": "guard (ordinary)",
+  "lemma": "guard",
+  "class": "ordinary",
+  "forms": [
+    "guarded",
+    "guards"
+  ],
+  "gloss": "A condition that restricts when a rule or step applies; to restrict it in this way."
+}

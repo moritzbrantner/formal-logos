@@ -1,0 +1,7 @@
+{
+  "id": "c490a962-7946-4ca3-8011-6864456c5d26",
+  "label": "self-sweep (ordinary)",
+  "lemma": "self-sweep",
+  "class": "ordinary",
+  "gloss": "A worker's own review of a diff against the review guidelines before requesting review (AGENTS.md)."
+}

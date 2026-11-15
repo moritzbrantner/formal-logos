@@ -1,0 +1,7 @@
+{
+  "id": "1fb02d08-ec17-40be-8a8e-b1debd202f82",
+  "label": "helper (ordinary)",
+  "lemma": "helper",
+  "class": "ordinary",
+  "gloss": "An auxiliary Lean lemma or definition used inside a proof."
+}
