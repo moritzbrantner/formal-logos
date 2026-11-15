@@ -1,0 +1,7 @@
+{
+  "id": "d909330f-4dd5-4353-93ed-082dd0649b01",
+  "label": "subtype (ordinary)",
+  "lemma": "subtype",
+  "class": "ordinary",
+  "gloss": "The Lean type of elements of a type satisfying a predicate."
+}

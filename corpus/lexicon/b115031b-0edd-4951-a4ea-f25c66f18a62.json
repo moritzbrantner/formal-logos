@@ -1,0 +1,7 @@
+{
+  "id": "b115031b-0edd-4951-a4ea-f25c66f18a62",
+  "label": "cone (ordinary)",
+  "lemma": "cone",
+  "class": "ordinary",
+  "gloss": "The set of items reachable from a given node in one direction of a relation."
+}

@@ -1,0 +1,7 @@
+{
+  "id": "27f67a12-8c2d-40c1-9678-7f090c098157",
+  "label": "intervention (ordinary)",
+  "lemma": "intervention",
+  "class": "ordinary",
+  "gloss": "An action that sets a variable from outside a model, as in causal modeling."
+}

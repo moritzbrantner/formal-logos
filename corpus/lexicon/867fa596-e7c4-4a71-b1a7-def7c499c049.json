@@ -1,0 +1,7 @@
+{
+  "id": "867fa596-e7c4-4a71-b1a7-def7c499c049",
+  "label": "uninterpreted (ordinary)",
+  "lemma": "uninterpreted",
+  "class": "ordinary",
+  "gloss": "Left without a fixed meaning, as an uninterpreted Lean parameter."
+}

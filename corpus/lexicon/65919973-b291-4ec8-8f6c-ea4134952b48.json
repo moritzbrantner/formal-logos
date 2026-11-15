@@ -1,0 +1,10 @@
+{
+  "id": "65919973-b291-4ec8-8f6c-ea4134952b48",
+  "label": "diagnostic (ordinary)",
+  "lemma": "diagnostic",
+  "class": "ordinary",
+  "forms": [
+    "diagnostics"
+  ],
+  "gloss": "A report that helps find problems, not itself a gate or score."
+}
