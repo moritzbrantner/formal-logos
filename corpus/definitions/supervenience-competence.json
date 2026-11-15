@@ -13,7 +13,7 @@
     "kind": "primitive",
     "meaning": "SupervenienceExplainedByPurposesReading Explains purposes constraint says that the purposes of moral talk explain the conceptual requirement that competent moral judgments not distinguish items without a nonmoral difference (Blackburn, as SEP §3.4 reports). Its body is one edge of the supplied relation Explains.",
     "examples": [
-      "Blackburn's explanation: moral talk serves to guide choice, so a competent speaker cannot treat two naturally identical cases differently."
+      "Blackburn's explanation: because moral talk serves to guide choice, a competent speaker does not assign different moral verdicts to two cases that are identical in every nonmoral respect."
     ],
     "exclusions": [
       "A complete supervenience semantics or a metaphysical truthmaker.",
