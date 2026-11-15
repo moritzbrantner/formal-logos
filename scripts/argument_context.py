@@ -572,7 +572,7 @@ def format_context(pack: dict[str, Any], limit: int = 6, width: int = 150, overf
     if u["unchecked_companion_theorems"]:
         lines.append("  companion theorems not checked by Comparator: " + ", ".join(u["unchecked_companion_theorems"]))
 
-    lines.append("\nTerms linked by the argument (IDs; read with research_index.py show):")
+    lines.append("\nTerms linked by the argument (IDs; read with truth index show):")
     lines.append("  " + (", ".join(d["id"] for d in pack["definitions"] + pack["disambiguations"]) or "none"))
     lines.append("\nNext: corpus.py dossier <open premise>; corpus.py related <conclusion>; "
                  "scripts/verify-result.sh <result> after lake build.")

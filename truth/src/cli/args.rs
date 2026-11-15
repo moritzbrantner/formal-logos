@@ -117,6 +117,17 @@ pub struct AttributionArgs {
     pub max_chars: Option<i64>,
 }
 
+/// The `index compare` options.
+#[derive(Default)]
+pub struct IndexArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    /// `--left STATEMENT`, repeatable.
+    pub left: Vec<String>,
+    /// `--right STATEMENT`, repeatable.
+    pub right: Vec<String>,
+}
+
 #[derive(Default)]
 pub struct ResearchArgs {
     pub flags: bool,
@@ -181,6 +192,7 @@ pub struct Args {
     pub structure: StructureArgs,
     pub proof: ProofArgs,
     pub attribution: AttributionArgs,
+    pub index: IndexArgs,
 }
 
 /// The shared options a command accepts besides `--root` and `--json`;
@@ -240,6 +252,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         structure: StructureArgs::default(),
         proof: ProofArgs::default(),
         attribution: AttributionArgs::default(),
+        index: IndexArgs::default(),
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -315,6 +328,19 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                 parsed.attribution.flags = true;
                 parsed.attribution.max_chars =
                     Some(integer(args.next().and_then(|value| value.to_str()), arg)?);
+            }
+            "--left" | "--right" => {
+                parsed.index.flags = true;
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                    .to_owned();
+                if arg == "--left" {
+                    parsed.index.left.push(value);
+                } else {
+                    parsed.index.right.push(value);
+                }
             }
             "--strict" => parsed.proof.strict = true,
             "--review" => parsed.proof.review = true,

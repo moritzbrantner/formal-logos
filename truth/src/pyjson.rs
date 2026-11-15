@@ -137,7 +137,7 @@ fn write_string(out: &mut String, text: &str) {
 
 /// Python `float.__repr__`: the shortest round-trip digits, in exponent form
 /// when the decimal exponent is below -4 or at least 16.
-fn float_repr(value: f64) -> String {
+pub fn float_repr(value: f64) -> String {
     if value.is_nan() {
         return "NaN".into();
     }

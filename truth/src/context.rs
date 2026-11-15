@@ -1813,7 +1813,7 @@ pub fn format_context(pack: &ContextPack, limit: i64) -> String {
             u.unchecked_companion_theorems.join(", ")
         ));
     }
-    lines.push("\nTerms linked by the argument (IDs; read with research_index.py show):".into());
+    lines.push("\nTerms linked by the argument (IDs; read with truth index show):".into());
     let terms: Vec<String> = pack
         .definitions
         .iter()

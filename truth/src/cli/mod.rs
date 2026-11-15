@@ -26,6 +26,7 @@ mod dossier;
 mod frontier;
 mod frontier_diff;
 mod ids;
+mod index;
 mod inspect;
 mod issues;
 mod lean_reuse;
@@ -78,6 +79,9 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
              [--bind-json FILE] [--usage-json FILE]
        truth [--root PATH] [--json] lean-reuse --review [--usage-json FILE]
        truth [--root PATH] [--json] attribution-check --base REV [--materialize] [--max-chars N]
+       truth [--root PATH] [--json] index (build | search WORDS [--limit N] | show ID | duplicates | summary
+             | parity | export PATH | bundle --case ID [--premise STATEMENT]...
+             | compare --case ID [--left STATEMENT]... [--right STATEMENT]...)
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
@@ -130,6 +134,7 @@ pub const COMMANDS: &[Command] = &[
     unused_premises::COMMAND,
     lean_reuse::COMMAND,
     attribution_check::COMMAND,
+    index::COMMAND,
 ];
 
 /// Parses `args` and runs the command it names.
@@ -158,6 +163,9 @@ pub fn run(args: &[OsString]) -> Output {
             Some(command) if args.attribution.flags && command.name != "attribution-check" => Err(
                 usage("--materialize and --max-chars apply only to attribution-check"),
             ),
+            Some(command) if args.index.flags && command.name != "index" => {
+                Err(usage("--left and --right apply only to index compare"))
+            }
             Some(command) => (command.run)(&args, operands),
             None => Err(args.shape_error()),
         },
