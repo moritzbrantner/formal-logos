@@ -230,11 +230,7 @@ class TruthStrengthParity(ParityCase):
                                  *(["--json"] if machine else [])],
                                 capture_output=True, text=True, check=False)
         if self.recording is not None and root != corpus.ROOT:
-            code = self.recording
-            golden.record(self, ["--root", root, *(["--json"] if machine else []), *args, "--recorded-exporters",
-                                 recorded], root=root, code=code, stdout=python.stdout,
-                          env={"TRUTH_PARITY_REPLAY": "1"}, externals=[self.scratch],
-                          **({"stderr": python.stderr} if code and not machine else {}))
+            self.record_case(root, recorded, args, machine, python)
         rust = subprocess.run([self.binary, "--root", str(root), *(["--json"] if machine else []), *args,
                                "--recorded-exporters", str(recorded)],
                               capture_output=True, text=True, check=False,
@@ -242,6 +238,26 @@ class TruthStrengthParity(ParityCase):
         return python, rust
 
     recording = None  # the exit code `assert_same` expects, while it runs
+
+    def record_case(self, root, recorded, args, machine, python):
+        """A golden case for this run. A bundle Python wrote is expected of
+        Rust byte for byte, and the recorded tree is the one before the
+        write (without the destination file)."""
+        code, files, target = self.recording, None, None
+        if args[0] == "strength-report" and "--check-input" not in args and python.returncode == 0:
+            output = Path(args[args.index("--output") + 1])
+            target = output if output.is_absolute() else root / output
+            written = target.read_bytes()
+            files = {str(target): written.decode("utf-8")}
+            target.unlink()
+        try:
+            golden.record(self, ["--root", root, *(["--json"] if machine else []), *args, "--recorded-exporters",
+                                 recorded], root=root, code=code, stdout=python.stdout, files=files,
+                          env={"TRUTH_PARITY_REPLAY": "1"}, externals=[self.scratch],
+                          **({"stderr": python.stderr} if code and not machine else {}))
+        finally:
+            if target is not None:
+                target.write_bytes(written)
 
     def assert_same(self, args, code=0, machine=False, **where):
         self.recording = code
@@ -364,7 +380,11 @@ class TruthStrengthParity(ParityCase):
         written = {}
         for side in ("python", "rust"):
             path = self.root / ".cache" / f"{side}.json"
-            python, rust = self.run_both(["strength-report", "--output", f".cache/{side}.json"])
+            self.recording = 0
+            try:
+                python, rust = self.run_both(["strength-report", "--output", f".cache/{side}.json"])
+            finally:
+                self.recording = None
             result = python if side == "python" else rust
             self.assertEqual(result.returncode, 0, result.stderr)
             written[side] = (path.read_bytes(), result.stdout)
