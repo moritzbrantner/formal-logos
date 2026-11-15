@@ -68,7 +68,8 @@ corpus/
   results/                      mechanical verification metadata
 results/<RESULT-ID>/            Comparator configurations
 scripts/source_evidence.py      check source records/materialize selected passages
-scripts/corpus.py               inspect/validate the work queue and corpus graph
+truth/                          Rust corpus validation, navigation, and research CLI
+scripts/corpus.py               legacy commands pending Rust retirement (#954)
 verifier/                       Rust Comparator implementation
 scripts/verify-result.sh        run Comparator for one result
 scripts/bootstrap-verifier.sh   build pinned verification tools
@@ -79,17 +80,17 @@ There is intentionally no RDF, graph database, embedding index, identity resolve
 
 ## Quick start
 
-Requires Lean via `elan`/`lake`.
+Requires Lean via `elan`/`lake` and the Rust toolchain.
 
 ```bash
 python3 scripts/source_evidence.py check
-python3 scripts/corpus.py check
+cargo build --locked --release -p truth
+target/release/truth check
 lake exe cache get   # prebuilt Mathlib, once per Mathlib/toolchain bump
 lake build
-python3 scripts/corpus.py status
-cargo build --locked --release -p truth   # the Rust corpus CLI, truth/README.md
+target/release/truth status
 target/release/truth next
-python3 scripts/corpus.py frontier --reaching-root
+target/release/truth frontier --reaching-root
 ```
 
 `lake build` compiles the source formalizations and proved `Solution` modules. Deliberately incomplete `Challenge` modules are kept out of the normal default build. Mathlib is the one external Lean dependency (AGENTS.md invariant 14); `lean-toolchain` pins the exact Lean version its pinned release requires.
@@ -109,7 +110,7 @@ There is no full-source refetch gate. Source acquisition is part of selected
 research through `materialize <PASSAGE-ID>`; external availability and page drift
 do not control repository CI.
 
-`python3 scripts/corpus.py check` refuses any formalized claim that does not resolve to exactly one registered passage witness. This checks the recorded **source binding**, without certifying current source availability or bytes. Whether the interpretation is faithful remains a separate scholarly/review question.
+`target/release/truth check` refuses any formalized claim that does not resolve to exactly one registered passage witness. This checks the recorded **source binding**, without certifying current source availability or bytes. Whether the interpretation is faithful remains a separate scholarly/review question.
 
 ### Comparator verification
 
