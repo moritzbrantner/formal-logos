@@ -366,6 +366,9 @@ struct Builder<'a> {
     edge_keys: HashSet<(&'static str, String, String)>,
     truncated: Vec<Truncation>,
     case_root: String,
+    /// The support walk's pending statements: (statement, depth, first
+    /// argument not yet admitted), kept so the walk can resume.
+    down_queue: VecDeque<(String, usize, usize)>,
 }
 
 impl Builder<'_> {
@@ -538,9 +541,11 @@ impl Builder<'_> {
         });
     }
 
-    fn down(&mut self) {
-        let mut queue = VecDeque::from([(self.root.clone(), 0usize)]);
-        while let Some((statement, depth)) = queue.pop_front() {
+    /// The support walk up to `cap` nodes. When `last` is false, a budget cut
+    /// pauses the walk instead of marking it, so a later call resumes it with
+    /// whatever the dependent side left unused.
+    fn down(&mut self, cap: usize, last: bool) {
+        while let Some((statement, depth, start)) = self.down_queue.pop_front() {
             let arguments = self.index.ordered(self.index.concluding.get(&statement));
             if arguments.is_empty() {
                 continue;
@@ -549,7 +554,7 @@ impl Builder<'_> {
                 self.truncate(&statement, "down", "depth", arguments.len());
                 continue;
             }
-            for (position, argument) in arguments.iter().enumerate() {
+            for (position, argument) in arguments.iter().enumerate().skip(start) {
                 let premises = self
                     .index
                     .argument(argument)
@@ -559,19 +564,37 @@ impl Builder<'_> {
                     .iter()
                     .filter(|premise| !self.statements.contains_key(*premise))
                     .collect();
-                if self.count() + 1 + fresh.len() > self.options.budget {
-                    self.truncate(&statement, "down", "budget", arguments.len() - position);
-                    break;
+                let cost = usize::from(!self.arguments.contains_key(argument)) + fresh.len();
+                if self.count() + cost > cap {
+                    if last {
+                        self.truncate(&statement, "down", "budget", arguments.len() - position);
+                        break;
+                    }
+                    self.down_queue.push_front((statement, depth, position));
+                    return;
                 }
-                self.add_argument(argument, "down");
+                // A resumed walk can meet an argument or co-premise the
+                // dependent walk admitted first.
+                if let Some(node) = self.arguments.get_mut(argument) {
+                    if !node.sides.contains(&"down") {
+                        node.sides.insert(0, "down");
+                    }
+                } else {
+                    self.add_argument(argument, "down");
+                }
                 self.edge("supports", argument, &statement, Some(argument));
                 for premise in &premises {
-                    if !self.statements.contains_key(premise) {
+                    let co_premise = self
+                        .statements
+                        .get(premise)
+                        .is_some_and(|node| node.role == "co_premise" && node.down_depth.is_none());
+                    if !self.statements.contains_key(premise) || co_premise {
                         self.add_statement(premise, "support");
                         if let Some(node) = self.statements.get_mut(premise) {
+                            node.role = "support";
                             node.down_depth = Some(depth + 1);
                         }
-                        queue.push_back((premise.clone(), depth + 1));
+                        self.down_queue.push_back((premise.clone(), depth + 1, 0));
                     }
                     self.edge("uses", argument, premise, Some(argument));
                 }
@@ -627,6 +650,10 @@ impl Builder<'_> {
                     self.add_statement(&conclusion, "dependent");
                     if let Some(node) = self.statements.get_mut(&conclusion) {
                         node.up_depth = Some(depth + 1);
+                        // A co-premise the upward walk now expands is a dependent.
+                        if node.role == "co_premise" {
+                            node.role = "dependent";
+                        }
                     }
                     queue.push_back((conclusion.clone(), depth + 1));
                 }
@@ -954,14 +981,25 @@ pub fn tree_with(
         edge_keys: HashSet::new(),
         truncated: Vec::new(),
         case_root: case_root.to_owned(),
+        down_queue: VecDeque::from([(root.to_owned(), 0, 0)]),
     };
     builder.add_statement(root, "root");
     if let Some(node) = builder.statements.get_mut(root) {
         node.down_depth = Some(0);
         node.up_depth = Some(0);
     }
-    builder.down();
+    // Each side is guaranteed about half the budget when it needs it: the
+    // support walk first stops at its share, the dependent walk may take all
+    // that is left, then the support walk resumes with what remains.
+    let dependents = options.up > 0 && index.using.get(root).is_some_and(|using| !using.is_empty());
+    let reserve = if dependents {
+        options.budget.saturating_sub(1) / 2
+    } else {
+        0
+    };
+    builder.down(options.budget.saturating_sub(reserve), false);
     builder.up();
+    builder.down(options.budget, true);
     builder.strength();
     Ok(builder.finish())
 }
@@ -1473,23 +1511,58 @@ mod tests {
         assert!(view.statements.iter().all(|n| n.id != "D2"));
         assert_eq!(marker("X", "up"), Some(("depth", 1)));
         assert!(format_tree(&view).contains("… truncated (depth): 1 more argument(s) not shown"));
-        // A budget of 4 nodes: X, ARG-1, A, P; ARG-2 does not fit.
-        let view = build(
-            &dir,
-            "X",
-            Options {
-                down: 3,
-                up: 3,
-                budget: 4,
-            },
-        )
-        .unwrap();
-        assert_eq!(view.node_count, 4);
+        // Without dependents in view the support side has the whole budget
+        // of 4 nodes: X, ARG-1, A, P; ARG-2 does not fit.
+        let budget = |up, budget| {
+            build(
+                &dir,
+                "X",
+                Options {
+                    down: 3,
+                    up,
+                    budget,
+                },
+            )
+            .unwrap()
+        };
+        let ids = |view: &Tree| -> Vec<String> {
+            let mut ids: Vec<String> = view.statements.iter().map(|n| n.id.clone()).collect();
+            ids.extend(view.arguments.iter().map(|a| a.id.clone()));
+            ids.sort();
+            ids
+        };
+        let view = budget(0, 4);
+        assert_eq!(ids(&view), ["A", "ARG-1", "P", "X"]);
         assert!(view.truncated.iter().any(|t| t.statement_id == "X"
             && t.side == "down"
             && t.reason == "budget"
             && t.omitted_arguments == 1));
-        assert!(view.node_count <= 4);
+        // With dependents the support side first stops at its share (4 - 1),
+        // so the dependent side keeps ARG-U, U and Q and ARG-1 is cut.
+        let view = budget(3, 4);
+        assert_eq!(ids(&view), ["ARG-U", "Q", "U", "X"]);
+        assert!(view.truncated.iter().any(|t| t.statement_id == "X"
+            && t.side == "down"
+            && t.reason == "budget"
+            && t.omitted_arguments == 2));
+        // Budget 7: the support share (7 - 3) admits ARG-1 with A and P, the
+        // dependents take the rest, and the resumed support walk finds no room.
+        let view = budget(3, 7);
+        assert_eq!(ids(&view), ["A", "ARG-1", "ARG-U", "P", "Q", "U", "X"]);
+        assert_eq!(view.node_count, 7);
+        // Budget 9: the dependents leave room, so the resumed support walk
+        // goes on (ARG-2 with B), in the same breadth-first order.
+        let view = budget(3, 9);
+        assert!(ids(&view).contains(&"ARG-2".to_owned()));
+        assert!(view.node_count <= 9);
+        assert_eq!(
+            view.statements
+                .iter()
+                .find(|n| n.id == "B")
+                .unwrap()
+                .down_depth,
+            Some(1)
+        );
     }
 
     #[test]
@@ -1576,6 +1649,41 @@ mod tests {
                 "{root}"
             );
         }
+    }
+
+    #[test]
+    fn a_co_premise_the_upward_walk_expands_becomes_a_dependent() {
+        let dir = fixture();
+        // V first joins as a co-premise of ARG-W (X, V ⊢ W), then the walk
+        // from U reaches it as the conclusion of ARG-V (U ⊢ V).
+        for id in ["V", "W"] {
+            write(
+                &dir.0,
+                &format!("corpus/statements/{id}.json"),
+                json!({"id": id, "label": format!("statement {id}"), "paraphrase": "p"}),
+            );
+        }
+        for (id, premises, conclusion) in
+            [("ARG-V", vec!["U"], "V"), ("ARG-W", vec!["X", "V"], "W")]
+        {
+            write(
+                &dir.0,
+                &format!("corpus/arguments/{id}.json"),
+                json!({"id": id, "label": format!("argument {id}"),
+                    "premise_statement_ids": premises, "inference_ids": [format!("I-{id}")],
+                    "conclusion_statement_id": conclusion, "meaning": "m"}),
+            );
+            write(
+                &dir.0,
+                &format!("corpus/inferences/I-{id}.json"),
+                json!({"id": format!("I-{id}"), "input_statement_ids": premises,
+                    "output_statement_id": conclusion, "rule": "modus ponens", "meaning": "m",
+                    "assumption_statement_ids": [], "discharged_statement_ids": []}),
+            );
+        }
+        let view = build(&dir, "X", Options::default()).unwrap();
+        let v = view.statements.iter().find(|n| n.id == "V").unwrap();
+        assert_eq!((v.role, v.up_depth), ("dependent", Some(2)));
     }
 
     #[test]

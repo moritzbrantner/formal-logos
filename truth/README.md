@@ -480,8 +480,16 @@ The walk is breadth-first, so each node sits at its shallowest depth; a shared
 node appears once (`(shown above)` in the text), and an edge back to a node on
 the current path is marked `cycle` and not followed. `--budget` (default 400)
 caps statement plus argument nodes; an argument is added with all its new
-premises or not at all. Every cut leaves a `truncated` entry (`side`, `reason`
-`depth` or `budget`, `omitted_arguments`) and a `… truncated` text line.
+premises or not at all. The two sides share the budget so that neither can
+crowd out the other: when the statement has dependents (`--up` above 0 and an
+argument using it), the support walk first stops at `budget - (budget - 1) / 2`
+nodes, the dependent walk may then use everything left, and the support walk
+resumes, in the same breadth-first order, with whatever the dependents did not
+use. A side that needs less leaves its share to the other. A co-premise that
+the upward walk later reaches as a conclusion becomes a `dependent`, and one
+the resumed support walk reaches becomes a `support` statement. Every cut leaves
+a `truncated` entry (`side`, `reason` `depth` or `budget`, `omitted_arguments`)
+and a `… truncated` text line.
 
 JSON (`schema_version` 1, with `input_identity`): `root`, `case_root`,
 `options`, `statements` (status, depth, closed reason, established,
