@@ -339,7 +339,11 @@ prints Python's `corpus error: …` with exit code 2.
 - `truth territory [--frontier-root STATEMENT] [--max-atoms N]`: Python's
   `--root` is `--frontier-root` here. Like Python it runs the full `check`
   validation first (`cli::validate_first`) and reads the in-process Rust
-  frontier. Position IDs hash with a built-in SHA-256.
+  frontier. Position IDs hash with a built-in SHA-256. The global position
+  count is exact (Python's unbounded int): the text prints every digit; a
+  count beyond `u64` has no exact JSON number here, so `--json` then fails
+  with `unrepresentable_count` (exit 1) and names the Python command instead
+  of printing a wrong number.
 
 `scripts/truth_parity/configurations.py` compares them on the real corpus
 (every case, filtering by uuid and legacy id, seed and premise selections and

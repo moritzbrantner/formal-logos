@@ -363,8 +363,96 @@ impl Evidence<'_> {
 }
 
 /// Python `territory_report`, and the Python `repr` of each defect (which
-/// the text's `DEFECT` lines print, in Python's key order).
-pub fn territory_report(inputs: &Inputs, bounds: &Bounds) -> (Value, Vec<String>) {
+/// An exact nonnegative integer (little-endian base-2^32 limbs), for the
+/// global position count, which Python computes as an unbounded int.
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub struct Count(Vec<u32>);
+
+impl Count {
+    pub fn one() -> Self {
+        Self(vec![1])
+    }
+
+    pub fn multiply(&mut self, factor: u32) {
+        let mut carry = 0u64;
+        for limb in &mut self.0 {
+            let product = u64::from(*limb) * u64::from(factor) + carry;
+            *limb = product as u32;
+            carry = product >> 32;
+        }
+        if carry > 0 {
+            self.0.push(carry as u32);
+        }
+        while self.0.len() > 1 && self.0.last() == Some(&0) {
+            self.0.pop();
+        }
+    }
+
+    /// The value, when it fits a `u64`.
+    pub fn to_u64(&self) -> Option<u64> {
+        match self.0.as_slice() {
+            [low] => Some(u64::from(*low)),
+            [low, high] => Some(u64::from(*low) | (u64::from(*high) << 32)),
+            _ => None,
+        }
+    }
+
+    pub fn exceeds(&self, value: u64) -> bool {
+        self.to_u64().is_none_or(|count| count > value)
+    }
+
+    /// Decimal digits, as Python prints the int.
+    pub fn decimal(&self) -> String {
+        let mut limbs = self.0.clone();
+        let mut chunks = Vec::new();
+        while limbs.iter().any(|limb| *limb != 0) {
+            let mut remainder = 0u64;
+            for limb in limbs.iter_mut().rev() {
+                let value = (remainder << 32) | u64::from(*limb);
+                *limb = (value / 1_000_000_000) as u32;
+                remainder = value % 1_000_000_000;
+            }
+            chunks.push(remainder);
+        }
+        match chunks.split_last() {
+            None => "0".into(),
+            Some((first, rest)) => {
+                let mut text = first.to_string();
+                for chunk in rest.iter().rev() {
+                    text.push_str(&format!("{chunk:09}"));
+                }
+                text
+            }
+        }
+    }
+}
+
+/// A territory report.
+pub struct Territory {
+    /// The Python JSON object. Its `global_positions.count` is `null` both
+    /// when the count is unknown and when it exceeds `u64`; see
+    /// `global_count` and [`Territory::count_unrepresentable`].
+    pub report: Value,
+    /// The Python `repr` of each defect (which the text's `DEFECT` lines
+    /// print, in Python's key order).
+    pub defects: Vec<String>,
+    /// The exact global position count; `None` when it is unknown (a
+    /// component's enumeration was truncated).
+    pub global_count: Option<Count>,
+}
+
+impl Territory {
+    /// Whether the JSON count is `null` only because the exact count does
+    /// not fit a `u64`, so the JSON would misreport it.
+    pub fn count_unrepresentable(&self) -> bool {
+        self.global_count
+            .as_ref()
+            .is_some_and(|count| count.to_u64().is_none())
+    }
+}
+
+/// Python `territory_report`.
+pub fn territory_report(inputs: &Inputs, bounds: &Bounds) -> Territory {
     let seed_ids: Vec<&str> = sorted_set(inputs.seeds.iter().map(|(sid, _)| sid.as_str()));
     let mut alternatives: HashMap<&str, Set> = HashMap::new();
     for relation in &inputs.relations {
@@ -749,11 +837,14 @@ pub fn territory_report(inputs: &Inputs, bounds: &Bounds) -> (Value, Vec<String>
         .flat_map(|component| component.eliminated.iter().copied())
         .collect();
 
-    // A truncated component has withheld positions, so the global count is unknown.
-    let global_count: Option<u64> = (!hitting_truncated).then(|| {
-        components.iter().fold(1u64, |count, component| {
-            count.saturating_mul(component.position_ids.len() as u64)
-        })
+    // A truncated component has withheld positions, so the global count is
+    // unknown. Python's product is an unbounded int: count exactly.
+    let global_count: Option<Count> = (!hitting_truncated).then(|| {
+        let mut count = Count::one();
+        for component in &components {
+            count.multiply(component.position_ids.len() as u32);
+        }
+        count
     });
     let mut global_positions: Vec<Value> = Vec::new();
     if !hitting_truncated {
@@ -962,8 +1053,10 @@ pub fn territory_report(inputs: &Inputs, bounds: &Bounds) -> (Value, Vec<String>
         "components": components.iter().map(|component| component.json.clone()).collect::<Vec<_>>(),
         "positions": local_positions.values().collect::<Vec<_>>(),
         "global_positions": {
-            "count": global_count, "enumerated": enumerated,
-            "truncated": global_count.is_none_or(|count| count > enumerated as u64),
+            // A count beyond u64 has no exact JSON number here (`null`); the
+            // returned `Territory::global_count` keeps it exactly.
+            "count": global_count.as_ref().and_then(Count::to_u64), "enumerated": enumerated,
+            "truncated": global_count.as_ref().is_none_or(|count| count.exceeds(enumerated as u64)),
             "positions": global_positions,
         },
         "matrix": rows.iter().map(|row| row.json.clone()).collect::<Vec<_>>(),
@@ -978,15 +1071,17 @@ pub fn territory_report(inputs: &Inputs, bounds: &Bounds) -> (Value, Vec<String>
         "classification_counts": counts,
         "defects": defects.iter().map(|(value, _)| value.clone()).collect::<Vec<_>>(),
     });
-    (
+    Territory {
         report,
-        defects.into_iter().map(|(_, shown)| shown).collect(),
-    )
+        defects: defects.into_iter().map(|(_, shown)| shown).collect(),
+        global_count,
+    }
 }
 
-/// Python `format_territory`; `defects` are the defect `repr`s that
-/// [`territory_report`] returns.
-pub fn format_territory(report: &Value, defects: &[String]) -> String {
+/// Python `format_territory` of a [`territory_report`] (whose `report` may
+/// carry other fields, such as the command's `root`).
+pub fn format_territory(territory: &Territory) -> String {
+    let (report, defects) = (&territory.report, &territory.defects);
     let array = |value: &Value| {
         value
             .as_array()
@@ -1042,7 +1137,10 @@ pub fn format_territory(report: &Value, defects: &[String]) -> String {
         ),
         format!(
             "Global positions: {} (enumerated {}, limit {}); witnessed: {}.",
-            text(&global["count"]),
+            territory
+                .global_count
+                .as_ref()
+                .map_or_else(|| "None".to_owned(), Count::decimal),
             text(&global["enumerated"]),
             text(&bounds["global_position_limit"]),
             global_witnessed
@@ -1231,21 +1329,24 @@ mod tests {
     fn matches_python_on_the_fixture() {
         let data = data();
         let fixture = inputs(&data["fixture"]);
-        let (report, defects) = territory_report(&fixture, &Bounds::default());
-        assert_eq!(report, data["default"]);
-        assert_eq!(format_territory(&report, &defects), data["default_text"]);
+        let territory = territory_report(&fixture, &Bounds::default());
+        assert_eq!(territory.report, data["default"]);
+        assert_eq!(format_territory(&territory), data["default_text"]);
         let bounds = Bounds {
             hitting_set_limit: 1,
             global_position_limit: 1,
             ..Bounds::default()
         };
-        assert_eq!(territory_report(&fixture, &bounds).0, data["truncated"]);
+        assert_eq!(
+            territory_report(&fixture, &bounds).report,
+            data["truncated"]
+        );
     }
 
     #[test]
     fn python_assertions() {
         let data = data();
-        let report = territory_report(&inputs(&data["fixture"]), &Bounds::default()).0;
+        let report = territory_report(&inputs(&data["fixture"]), &Bounds::default()).report;
         let conflicts: Vec<&Value> = report["conflicts"]
             .as_array()
             .unwrap()
@@ -1287,8 +1388,98 @@ mod tests {
             max_atoms: 9,
             ..Bounds::default()
         };
-        let (report, defects) = territory_report(&inputs(&changed), &bounds);
-        assert_eq!(report, data["defect"]);
-        assert_eq!(format_territory(&report, &defects), data["defect_text"]);
+        let territory = territory_report(&inputs(&changed), &bounds);
+        assert_eq!(territory.report, data["defect"]);
+        assert_eq!(format_territory(&territory), data["defect_text"]);
+    }
+
+    #[test]
+    fn count_is_exact_beyond_u64() {
+        let mut count = Count::one();
+        assert_eq!(count.decimal(), "1");
+        for _ in 0..64 {
+            count.multiply(2);
+        }
+        assert_eq!(count.to_u64(), None);
+        assert_eq!(count.decimal(), "18446744073709551616");
+        let mut fits = Count::one();
+        for _ in 0..63 {
+            fits.multiply(2);
+        }
+        assert_eq!(fits.to_u64(), Some(1 << 63));
+        assert!(!fits.exceeds(1 << 63) && fits.exceeds((1 << 63) - 1));
+        for _ in 0..192 {
+            count.multiply(2);
+        }
+        // 2^256, as Python prints it.
+        assert_eq!(
+            count.decimal(),
+            "115792089237316195423570985008687907853269984665640564039457584007913129639936"
+        );
+        let mut zero = Count::one();
+        zero.multiply(0);
+        assert_eq!((zero.decimal(), zero.to_u64()), ("0".to_owned(), Some(0)));
+    }
+
+    #[test]
+    fn global_count_beyond_u64_is_not_saturated() {
+        // 64 independent two-atom conflicts within the default bounds give
+        // 2^64 global positions (the review's case): never u64::MAX.
+        let mut statements = Map::new();
+        let mut arguments = Map::new();
+        let mut results = Map::new();
+        statements.insert(
+            "FALSE".into(),
+            json!({"id": "FALSE", "lean_declaration": FALSE_DECLARATION}),
+        );
+        let mut seeds = Vec::new();
+        for index in 0..64 {
+            let (seed, rival, id) = (
+                format!("S{index:02}"),
+                format!("R{index:02}"),
+                format!("CORE{index:02}"),
+            );
+            for sid in [&seed, &rival] {
+                statements.insert(sid.clone(), json!({"id": sid}));
+            }
+            arguments.insert(id.clone(), json!({"id": id, "premise_statement_ids": [seed, rival], "conclusion_statement_id": "FALSE"}));
+            results.insert(id.clone(), json!({"id": id, "argument_id": id}));
+            seeds.push((seed, 0));
+        }
+        let statements = Value::Object(statements);
+        let arguments = Value::Object(arguments);
+        let results = Value::Object(results);
+        let rivals: Vec<Value> = (0..64)
+            .map(|index| json!({"id": format!("REL{index:02}"), "predicate": "alternative_to",
+                                "subject_id": format!("R{index:02}"), "object_id": format!("S{index:02}")}))
+            .collect();
+        let inputs = Inputs {
+            statements: index(&statements),
+            arguments: index(&arguments),
+            results: index(&results).into_iter().collect(),
+            relations: rivals
+                .iter()
+                .map(|relation| relation.as_object().unwrap())
+                .collect(),
+            claims: Vec::new(),
+            sources: Index::new(),
+            models: Vec::new(),
+            transcription_results: BTreeSet::new(),
+            seeds,
+            routes: Vec::new(),
+        };
+        let territory = territory_report(&inputs, &Bounds::default());
+        assert_eq!(territory.report["components"].as_array().unwrap().len(), 64);
+        assert_eq!(
+            territory.global_count.as_ref().unwrap().decimal(),
+            "18446744073709551616"
+        );
+        assert!(territory.count_unrepresentable());
+        assert!(territory.report["global_positions"]["count"].is_null());
+        assert_eq!(territory.report["global_positions"]["truncated"], true);
+        assert!(
+            format_territory(&territory)
+                .contains("Global positions: 18446744073709551616 (enumerated 64, limit 64)")
+        );
     }
 }

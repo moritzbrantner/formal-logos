@@ -91,8 +91,19 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         max_atoms: options.max_atoms.unwrap_or(Bounds::default().max_atoms),
         ..Bounds::default()
     };
-    let (mut territory, defects) = territory::territory_report(&inputs, &bounds);
-    territory["root"] = Value::String(frontier_root);
-    let text = aliases.humanize(&territory::format_territory(&territory, &defects));
-    Ok((with_identity(&territory, &corpus), Some(text)))
+    let mut territory = territory::territory_report(&inputs, &bounds);
+    territory.report["root"] = Value::String(frontier_root);
+    if args.machine && territory.count_unrepresentable() {
+        // Python prints the exact (unbounded) int; serde_json has no exact
+        // number beyond u64 here, so refuse instead of misreporting it.
+        let count = territory.global_count.as_ref().map(|count| count.decimal());
+        return Err((
+            1,
+            serde_json::json!({"code": "unrepresentable_count", "message": format!(
+                "the global position count {} exceeds the JSON integers truth prints; use `python3 scripts/corpus.py territory --json`",
+                count.unwrap_or_default())}),
+        ));
+    }
+    let text = aliases.humanize(&territory::format_territory(&territory));
+    Ok((with_identity(&territory.report, &corpus), Some(text)))
 }
