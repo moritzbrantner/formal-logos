@@ -219,22 +219,20 @@ requires the non-transcription `proved` closure, and `sourced` requires an
 attributed source claim with a locator. Configuration and attempt IDs require
 records to exist; a failed attempt is **not** evidence of derivability.
 
-The commands below are **Python-only issue-reconciliation tooling**, not
-the primary corpus CLI. Use Rust `truth check`, `truth frontier`,
-`truth frontier-diff`, `truth related`, `truth dossier`, `truth context`
-and `truth orphans` for their migrated functions. Issue acceptance
-(`corpus.py issues`) and issue-linked dossiers (`dossier --issues-from`)
-are not yet in Rust; [#954](https://github.com/moritzbrantner/truth-core/issues/954)
-tracks the remaining migration. Rust `frontier-diff` may still use Python for
-an older base revision with different frontier rules. Do not create a second
-issue-status implementation.
+Issue reconciliation runs in the Rust CLI: `truth issues` and the
+issue-linked `truth dossier --issues-from` read one offline issue snapshot and
+never call GitHub; take the snapshot with `gh issue list` first. The Python
+`corpus.py issues` (which can also fetch the list itself) and
+`corpus.py dossier --issues-from` remain until their retirement under
+[#954](https://github.com/moritzbrantner/truth-core/issues/954) and print the
+same reports. Do not create a second issue-status implementation.
 
 ```bash
-python3 scripts/corpus.py issues                        # read-only gh issue list
 gh issue list --state open --limit 1000 --json number,title,body,url,comments > /tmp/truth-core-issues.json
-python3 scripts/corpus.py issues --from /tmp/truth-core-issues.json --json
-python3 scripts/corpus.py issues --from /tmp/truth-core-issues.json --for STMT-ID
-python3 scripts/corpus.py dossier STMT-ID --issues-from /tmp/truth-core-issues.json
+target/release/truth issues --from /tmp/truth-core-issues.json
+target/release/truth --json issues --from /tmp/truth-core-issues.json
+target/release/truth issues --from /tmp/truth-core-issues.json --for STMT-ID
+target/release/truth dossier STMT-ID --issues-from /tmp/truth-core-issues.json
 ```
 
 The report distinguishes `delivered`, `missing`, `malformed` and `untracked`;

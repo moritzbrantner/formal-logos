@@ -23,6 +23,7 @@ mod dossier;
 mod frontier;
 mod frontier_diff;
 mod inspect;
+mod issues;
 mod orphans;
 mod related;
 mod research;
@@ -42,11 +43,15 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
              [--targets N] [--top K] [--pool M]
        truth [--root PATH] [--json] related STATEMENT [--limit N]
        truth [--root PATH] [--json] dossier (STATEMENT | --all) [--frontier-json FILE] [--limit N]
+             [--issues-from FILE]
        truth [--root PATH] [--json] context TARGET [--frontier-json FILE] [--limit N] [--related N]
+       truth [--root PATH] [--json] issues --from FILE [--for ID]
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
-`python3 scripts/corpus.py frontier --json [--root STATEMENT]` on the same checkout.";
+`python3 scripts/corpus.py frontier --json [--root STATEMENT]` on the same checkout.
+issues and dossier --issues-from read an offline `gh issue list --json
+number,title,body,url,comments` snapshot; truth never calls GitHub.";
 
 /// An error: exit code and the JSON error object (`code`, `message`, ...).
 pub type Failure = (u8, Value);
@@ -77,6 +82,7 @@ pub const COMMANDS: &[Command] = &[
     related::COMMAND,
     dossier::COMMAND,
     context::COMMAND,
+    issues::COMMAND,
 ];
 
 /// Parses `args` and runs the command it names.

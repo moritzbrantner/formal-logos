@@ -1,0 +1,116 @@
+[
+ {
+  "body": "## Goal\n\nContinue the source-first Aristotle *Physics* program through Books IV–VIII after the III campaign and the I–II backfill, unless a concrete proof dependency justifies temporarily reordering work.\n\nThis ticket deliberately stays coarse. Workers should seed chapter/range candidates just ahead",
+  "comments": [
+   {
+    "id": "IC_kwDOT-76Fs8AAAABRJRsIA",
+    "author": {
+     "login": "moritzbrantner"
+    },
+    "authorAssociation": "OWNER",
+    "body": "The Physics I–II backfill (#7) is complete. PR #43 seeds ARIST-PHYS-IV-1 as this campaign's first contiguous range; corpus.py next selects it. Beginning Physics IV.1 automatically.",
+    "createdAt": "2026-08-27T21:40:06Z",
+    "includesCreatedEdit": false,
+    "isMinimized": false,
+    "minimizedReason": "",
+    "reactionGroups": [],
+    "url": "https://github.com/moritzbrantner/formal-logos/issues/8#issuecomment-5445544992",
+    "viewerDidAuthor": true
+   },
+   {
+    "id": "IC_kwDOT-76Fs8AAAABRJUGBg",
+    "author": {
+     "login": "moritzbrantner"
+    },
+    "authorAssociation": "OWNER",
+    "body": "Physics IV.1 has begun in PR #44. The verified 208a27–209a1 batch adds eight readings and a Comparator-checked mutual-replacement argument; the same candidate now resumes at 209a2 for the chapter's on",
+    "createdAt": "2026-08-27T21:44:30Z",
+    "includesCreatedEdit": false,
+    "isMinimized": false,
+    "minimizedReason": "",
+    "reactionGroups": [],
+    "url": "https://github.com/moritzbrantner/formal-logos/issues/8#issuecomment-5445584390",
+    "viewerDidAuthor": true
+   }
+  ],
+  "number": 8,
+  "title": "Corpus campaign: systematically continue Aristotle, Physics IV–VIII",
+  "url": "https://github.com/moritzbrantner/formal-logos/issues/8"
+ },
+ {
+  "body": "## Goal (owner, 2026-10-23)\n\nFormalize the case that Catholicism is true as Lean 4 arguments in truth-core, so that each logical step is machine-verified. Continuously expand it so that it also shows the major objections and alternative positions to be false.\n\ntruth-core's invariants still apply in ",
+  "comments": [
+   {
+    "id": "IC_kwDOT-76Fs8AAAABe2kTDg",
+    "author": {
+     "login": "moritzbrantner"
+    },
+    "authorAssociation": "OWNER",
+    "body": "**Owner decision (2026-10-23), stage 4–6 modeling:** historical findings enter as explicit premises. Each is its own statement, sourced via historical-source-atlas and defended separately, with its ev",
+    "createdAt": "2026-10-23T12:59:55Z",
+    "includesCreatedEdit": false,
+    "isMinimized": false,
+    "minimizedReason": "",
+    "reactionGroups": [],
+    "url": "https://github.com/moritzbrantner/formal-logos/issues/143#issuecomment-6365451022",
+    "viewerDidAuthor": true
+   },
+   {
+    "id": "IC_kwDOT-76Fs8AAAABe2mR_A",
+    "author": {
+     "login": "moritzbrantner"
+    },
+    "authorAssociation": "OWNER",
+    "body": "**Owner refinement (2026-10-23), stage 4–6 modeling:** no minimal-facts case. The historical stages show a **cohesive worldview** and contrast it with rival theories as whole systems: naturalistic rec",
+    "createdAt": "2026-10-23T13:01:35Z",
+    "includesCreatedEdit": false,
+    "isMinimized": false,
+    "minimizedReason": "",
+    "reactionGroups": [],
+    "url": "https://github.com/moritzbrantner/formal-logos/issues/143#issuecomment-6365483516",
+    "viewerDidAuthor": true
+   }
+  ],
+  "number": 143,
+  "title": "Epic: formalize the case for Catholicism (classical chain + refutation of alternatives)",
+  "url": "https://github.com/moritzbrantner/formal-logos/issues/143"
+ },
+ {
+  "body": "## Current issue routing — 2026-11-12\n\nThe delivered bridge-search brief #415 is retired. Its missing countermodel filter and vocabulary-duplication lint continue in #1547; #953 still owns retrieval-baseline evaluation. #952/#960/#961 and the port/retirement inventory remain open. This changes issue",
+  "comments": [
+   {
+    "id": "IC_kwDOT-76Fs8AAAABikVTTA",
+    "author": {
+     "login": "moritzbrantner"
+    },
+    "authorAssociation": "OWNER",
+    "body": "First executable slice is in draft PR #965 (`9de72e49e40caf14bd92302c83ed8651b2983e8e`). It adds offline structural loading, `truth status`, and `truth inspect <ID>` with text/JSON output and input fi",
+    "createdAt": "2026-11-03T20:33:03Z",
+    "includesCreatedEdit": false,
+    "isMinimized": false,
+    "minimizedReason": "",
+    "reactionGroups": [],
+    "url": "https://github.com/moritzbrantner/formal-logos/issues/954#issuecomment-6614766412",
+    "viewerDidAuthor": true
+   },
+   {
+    "id": "IC_kwDOT-76Fs8AAAABk5Yz4g",
+    "author": {
+     "login": "moritzbrantner"
+    },
+    "authorAssociation": "OWNER",
+    "body": "Handoff 2026-11-10 (slice 4 → 5):\n- #1370 (`feat/truth-check-complete`): `truth check` port complete (passage manifest schema + opaque-atom warning); stderr byte-identical to Python; 149 broken-fixtur",
+    "createdAt": "2026-11-10T15:13:18Z",
+    "includesCreatedEdit": false,
+    "isMinimized": false,
+    "minimizedReason": "",
+    "reactionGroups": [],
+    "url": "https://github.com/moritzbrantner/formal-logos/issues/954#issuecomment-6771061730",
+    "viewerDidAuthor": true
+   }
+  ],
+  "number": 954,
+  "title": "Unify Truth Core's human and agent tooling in one Rust engine and CLI",
+  "url": "https://github.com/moritzbrantner/formal-logos/issues/954"
+ }
+]

@@ -21,7 +21,14 @@ pub fn operand<'a>(
         [id] if !id.is_empty() && !args.research.all => Some(*id),
         _ => return Err(usage(HELP)),
     };
-    if !applies || args.queue || args.frontier_flags() || args.senses || args.group_by.is_some() {
+    if !applies
+        || args.queue
+        || args.frontier_flags()
+        || args.senses
+        || args.group_by.is_some()
+        || args.issues.own()
+        || (command != "dossier" && args.issues.issues_from.is_some())
+    {
         return Err(usage(format!("an option does not apply to {command}")));
     }
     Ok(target)

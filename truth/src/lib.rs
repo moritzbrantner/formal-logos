@@ -5,6 +5,7 @@ pub mod context;
 pub mod dossier;
 pub mod frontier;
 pub mod identity;
+pub mod issues;
 mod kernels;
 pub mod orphans;
 pub mod pyfmt;

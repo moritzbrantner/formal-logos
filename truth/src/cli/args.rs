@@ -31,6 +31,24 @@ pub struct ResearchArgs {
     pub frontier: Option<String>,
 }
 
+/// `issues --from FILE --for ID` and `dossier --issues-from FILE`.
+#[derive(Default)]
+pub struct IssueArgs {
+    /// `--from`
+    pub from: Option<String>,
+    /// `--for`
+    pub for_id: Option<String>,
+    /// `--issues-from`
+    pub issues_from: Option<String>,
+}
+
+impl IssueArgs {
+    /// Whether `--from` or `--for` was given.
+    pub fn own(&self) -> bool {
+        self.from.is_some() || self.for_id.is_some()
+    }
+}
+
 /// Every option of every command, parsed in one pass in token order.
 pub struct Args {
     pub machine: bool,
@@ -44,6 +62,7 @@ pub struct Args {
     pub frontier_root: String,
     pub frontier: FrontierArgs,
     pub research: ResearchArgs,
+    pub issues: IssueArgs,
 }
 
 /// The shared options a command accepts besides `--root` and `--json`;
@@ -60,6 +79,8 @@ pub struct Accepts {
     pub frontier: bool,
     /// `--base` and `--head`
     pub revisions: bool,
+    /// `--from` and `--for`
+    pub issues: bool,
 }
 
 fn number(value: Option<&str>, flag: &str) -> Result<usize, Failure> {
@@ -90,6 +111,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         frontier_root: thickness::DEFAULT_ROOT.to_owned(),
         frontier: FrontierArgs::default(),
         research: ResearchArgs::default(),
+        issues: IssueArgs::default(),
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -164,6 +186,19 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                                 .to_owned(),
                         )
                     }
+                }
+            }
+            "--from" | "--for" | "--issues-from" => {
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                    .to_owned();
+                let issues = &mut parsed.issues;
+                match arg {
+                    "--from" => issues.from = Some(value),
+                    "--for" => issues.for_id = Some(value),
+                    _ => issues.issues_from = Some(value),
                 }
             }
             "--constants" | "--queue-file" | "--target" | "--targets" | "--top" | "--pool" => {
@@ -254,6 +289,12 @@ impl Args {
         }
         if !accepts.revisions && (self.frontier.base.is_some() || self.frontier.head.is_some()) {
             return Err(usage("--base and --head apply only to frontier-diff"));
+        }
+        if !accepts.issues && self.issues.own() {
+            return Err(usage("--from and --for apply only to issues"));
+        }
+        if self.issues.issues_from.is_some() {
+            return Err(usage("--issues-from applies only to dossier"));
         }
         Ok(())
     }
