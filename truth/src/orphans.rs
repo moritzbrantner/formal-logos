@@ -304,13 +304,17 @@ fn python_orphan_count(output: &Value) -> Result<usize, String> {
 /// `frontier-diff`, the Rust engine runs when the revision's
 /// `scripts/corpus.py` is the checkout's; otherwise that revision's own
 /// Python computes it. `root` is `None` for the default frontier root (the
-/// revision's own default, as in Python).
+/// revision's own default, as in Python), otherwise the root's uuid and
+/// legacy id: a revision from before the uuid migration is asked for the
+/// legacy id, as `frontier-diff` asks it.
 pub fn revision_count(
     checkout: &Path,
     revision: &str,
-    root: Option<&str>,
+    root: Option<(&str, &str)>,
 ) -> Result<(usize, &'static str), String> {
     let tree = crate::frontier::extract(checkout, revision)?;
+    let legacy = !crate::frontier::uses_uuid_identity(tree.path());
+    let root = root.map(|(uuid, legacy_id)| if legacy { legacy_id } else { uuid });
     if crate::frontier::same_rules(checkout, revision) {
         let corpus = Corpus::load(tree.path())
             .map_err(|error| format!("{}: {}", error.path, error.message))?;

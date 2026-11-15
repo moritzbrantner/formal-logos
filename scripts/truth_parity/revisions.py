@@ -36,6 +36,9 @@ DEFAULT_FRONTIER_ROOT = "%s"
 
 
 def current_frontier(root, reaching_root, next_steps=True):
+    # Like the real walk, a root this corpus does not know reaches nothing.
+    if root is not None and root not in {record["id"] for _, record in load_dir("statements")}:
+        raise SystemExit(f"unknown root {root}")
     return json.loads((HERE / "frontier.json").read_text())
 
 
@@ -52,20 +55,21 @@ def load_dir(kind):
 if __name__ == "__main__":
     if sys.argv[1:3] != ["frontier", "--json"]:
         sys.exit("unsupported")
-    print(json.dumps(current_frontier(None, False)))
+    print(json.dumps(current_frontier(sys.argv[4] if sys.argv[3:4] == ["--root"] else None, False)))
 ''' % ROOT_ID
 
 
-def write_state(repo, extra):
+def write_state(repo, extra, legacy=False):
     """The thickness fixture plus `extra` (kind, legacy record) records, in
-    uuid identity, as `repo`'s corpus, and its Python frontier report as
-    `scripts/frontier.json`."""
+    uuid identity (readable ids when `legacy`), as `repo`'s corpus, and its
+    Python frontier report as `scripts/frontier.json`."""
     with tempfile.TemporaryDirectory() as temporary:
         state = Path(temporary)
         thickness_fixture(state, convert=False)
         for kind, record in extra:
             (state / "corpus" / kind / f"{record['id']}.json").write_text(json.dumps(record))
-        migrate(state)
+        if not legacy:
+            migrate(state)
         shutil.rmtree(repo / "corpus", ignore_errors=True)
         shutil.copytree(state / "corpus", repo / "corpus")
         if not (repo / "Fixture").exists():
@@ -79,7 +83,7 @@ def write_state(repo, extra):
     finally:
         corpus.ROOT = saved
     report = corpus.frontier_report(records["statements"], records["arguments"], records["results"],
-                                    records["relations"], root=ROOT_ID, transcription=flags,
+                                    records["relations"], root="ROOT" if legacy else ROOT_ID, transcription=flags,
                                     claims=records["claims"])
     (repo / "scripts" / "frontier.json").write_text(json.dumps(report))
     records["results"] = [json.loads(path.read_text()) for path in sorted((repo / "corpus" / "results").glob("*.json"))]
@@ -106,7 +110,8 @@ EXTRA_IDLE = [  # A verified result whose conclusion does not reach the root.
 
 
 def revision_fixture(repo):
-    """Commits OLD (the fixture; a stub with other bytes, so its own Python
+    """Commits LEGACY (readable ids, before the uuid migration; its own
+    Python is asked for the root's legacy id), OLD (the fixture; a stub with other bytes, so its own Python
     runs) and SAME (plus a derivation; the checkout's stub, so the Rust engine
     runs), and a working tree adding a disconnected result."""
     def git(*args):
@@ -116,6 +121,13 @@ def revision_fixture(repo):
     git("config", "user.email", "fixture@example.invalid")
     git("config", "user.name", "fixture")
     (repo / "scripts").mkdir()
+    (repo / "docs" / "notes").mkdir(parents=True)
+    (repo / "docs" / "notes" / "README.md").write_text("fixture\n")
+    (repo / "scripts" / "corpus.py").write_text(STUB.replace(ROOT_ID, "ROOT") + "\ndel refutation_support\n")
+    write_state(repo, [], legacy=True)
+    git("add", "-A")
+    git("commit", "-q", "-m", "legacy")
+    git("tag", "LEGACY")
     # Older rules: no refutation support (orphan_summary's `hasattr` branch).
     (repo / "scripts" / "corpus.py").write_text(STUB + "\ndel refutation_support\n")
     write_state(repo, [])
@@ -128,6 +140,9 @@ def revision_fixture(repo):
     git("commit", "-q", "-m", "same")
     git("tag", "SAME")
     write_state(repo, EXTRA_DERIVATION + EXTRA_IDLE)
+    # The checkout's uuid migration, which converts a pre-migration base.
+    for name in ("migrate_uuid.py", "corpus_ids.py", "uuid_labels.py"):
+        shutil.copy(SCRIPTS / name, repo / "scripts" / name)
 
 
 class TruthRevisionParity(ParityCase):
@@ -244,11 +259,11 @@ class TruthRevisionParity(ParityCase):
             saved = corpus.ROOT
             corpus.ROOT = repo
             try:
-                bases = {base: corpus.revision_thickness(base, ROOT_ID) for base in ("OLD", "SAME")}
+                bases = {base: corpus.revision_thickness(base, ROOT_ID) for base in ("LEGACY", "OLD", "SAME")}
             finally:
                 corpus.ROOT = saved
             head_count = orphan_summary.tree_count(repo)
-            for base, engine in (("OLD", "python"), ("SAME", "rust")):
+            for base, engine in (("LEGACY", "python"), ("OLD", "python"), ("SAME", "rust")):
                 with self.subTest(base=base):
                     delta = corpus.thickness_delta(bases[base], head)
                     actual = self.json_truth(*args, "thickness", "--base", base)

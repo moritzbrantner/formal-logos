@@ -55,7 +55,10 @@ fn count_delta(
     base: &str,
 ) -> (Value, Option<String>) {
     let head = orphans::disconnected_count(&args.root, corpus, frontier_root);
-    let root = args.frontier_root_set().then_some(frontier_root);
+    let legacy_root = aliases.legacy(frontier_root);
+    let root = args
+        .frontier_root_set()
+        .then_some((frontier_root, legacy_root));
     let (previous, engine, error) = match orphans::revision_count(&args.root, base, root) {
         Ok((count, engine)) => (Some(count), Some(engine), None),
         Err(error) => {
@@ -63,7 +66,6 @@ fn count_delta(
             (None, None, Some(error))
         }
     };
-    let legacy_root = aliases.legacy(frontier_root);
     let text = orphans::format_count_summary(legacy_root, base, head, previous);
     let output = json!({
         "schema_version": 1,
