@@ -8,5 +8,20 @@
   "lean_declaration": "TruthCore.English.Rowe.Sig.IntenseSuffering",
   "claim_ids": [
     "77c8065c-c5b6-5d8e-ace7-33c2ccc23014"
-  ]
+  ],
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Sig.IntenseSuffering e says that the event e is intense suffering of a human or an animal, which Rowe treats as bad in itself even when it is justified as a means. It is a supplied predicate on the events of the Rowe signature (TruthCore.English.Rowe.EvidentialEvil).",
+    "examples": [
+      "Rowe's fawn, badly burned in a forest fire and dying slowly over several days."
+    ],
+    "exclusions": [
+      "A culpable human act or moral fault: the predicate does not assert one (DISAMB-ROWE-SUFFERING-AND-CULPA).",
+      "Mild discomfort, which is not intense."
+    ],
+    "open_obligations": [
+      "The reading presupposes its intended suffering interpretation; no finite interpretation establishes actual badness.",
+      "No formalization candidate."
+    ]
+  }
 }

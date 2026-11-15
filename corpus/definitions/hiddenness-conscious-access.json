@@ -6,5 +6,20 @@
   "definition": "Available w p t means being in a position to participate in interactive conscious relationship recognizing God just by trying at t. It is neither constant vivid sensation nor merely some causal dependence, anonymous relation, or salvific help. The negative belief constraint and the love-to-access requirement are separate premises.",
   "basis": "stipulative",
   "note": "Explicit interpretation vocabulary for #252. Source claims retain their own pinned locators; these records do not add axioms or establish the truth of the interpreted predicates.",
-  "lean_declaration": "TruthCore.Hiddenness.Sig.Available"
+  "lean_declaration": "TruthCore.Hiddenness.Sig.Available",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Sig.Available w p t says that, at world w, person p is at time t in a position to participate in an interactive conscious relationship recognizing God just by trying. It is a field of the hiddenness signature (TruthCore.Hiddenness.Vocabulary.Sig, #252), indexed by world, person and time and supplied by each interpretation; worlds carry no modal accessibility laws.",
+    "examples_unavailable": "Whether anyone is actually in that position depends on whether God exists, which the hiddenness argument disputes; examples would presuppose an answer.",
+    "exclusions": [
+      "Constant vivid sensation of God.",
+      "Mere causal dependence on God, an anonymous relation or salvific help (DISAMB-HIDDENNESS-RELATIONSHIP).",
+      "Perfect love itself: the requirement from love to access is a separate premise (DISAMB-HIDDENNESS-LOVE-ACCESS)."
+    ],
+    "open_obligations": [
+      "AccessNeedsBelief and the love-to-access norms AlwaysOpen and QualifiedOpen are separate open premises; QualifiedDoesNotForceAlways shows the weaker norm does not force the stronger.",
+      "These records add no axioms; whether the interpreted predicate holds of real persons is not established by any finite model.",
+      "No formalization candidate."
+    ]
+  }
 }
