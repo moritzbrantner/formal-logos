@@ -221,7 +221,7 @@ impl<'a> Lean<'a> {
             .flatten()
     }
 
-    fn imports(&self, module: &str) -> Vec<String> {
+    pub(crate) fn imports(&self, module: &str) -> Vec<String> {
         if let Some(found) = self.imports.borrow().get(module) {
             return found.clone();
         }

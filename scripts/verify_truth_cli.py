@@ -5,7 +5,8 @@ structural view (`status`, `inspect`), `thickness [--queue]`, `check`,
 (against `scripts/orphan_summary.py`), the research navigation commands
 `related`, `dossier` and `context`, `next`, `next-steps`, `arguments`,
 `results`, `sort-lists`, `configurations --registered`, `models` and
-`territory`, `bind-check` (from recorded BindTypes output), `unused-premises`,
+`territory`, `senses` (against `scripts/sense_index.py`),
+`bridge-experiments`, `bind-check` (from recorded BindTypes output), `unused-premises`,
 `lean-reuse` and `context --proof-use` (from recorded UnusedPremises and
 LeanReuse output), `structure`/`structure-report` (from recorded
 PropositionStructure output), `strength-comparisons`/`strength-report` (from
@@ -36,6 +37,8 @@ from truth_parity.proof_use import TruthProofUseParity  # noqa: F401
 from truth_parity.revisions import TruthRevisionParity  # noqa: F401
 from truth_parity.strength import TruthStrengthParity  # noqa: F401
 from truth_parity.attribution import TruthAttributionParity  # noqa: F401
+from truth_parity.senses import TruthSensesParity  # noqa: F401
+from truth_parity.bridge_experiments import TruthBridgeExperimentsParity  # noqa: F401
 
 
 if __name__ == "__main__":
