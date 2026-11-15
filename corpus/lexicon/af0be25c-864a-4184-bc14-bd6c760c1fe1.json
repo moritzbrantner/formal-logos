@@ -1,0 +1,10 @@
+{
+  "id": "af0be25c-864a-4184-bc14-bd6c760c1fe1",
+  "label": "verify (ordinary)",
+  "lemma": "verify",
+  "class": "ordinary",
+  "forms": [
+    "verified"
+  ],
+  "gloss": "To confirm by checking; verified: checked by Lean and the repository's verification gates."
+}

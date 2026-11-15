@@ -1,0 +1,7 @@
+{
+  "id": "f0df6c1a-cf0c-4627-83d0-d3e7a528de7d",
+  "label": "bool (ordinary)",
+  "lemma": "bool",
+  "class": "ordinary",
+  "gloss": "The Lean type of Boolean values, true and false."
+}

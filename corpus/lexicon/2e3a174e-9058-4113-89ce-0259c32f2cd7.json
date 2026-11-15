@@ -1,0 +1,7 @@
+{
+  "id": "2e3a174e-9058-4113-89ce-0259c32f2cd7",
+  "label": "proof (ordinary)",
+  "lemma": "proof",
+  "class": "ordinary",
+  "gloss": "A derivation showing that a conclusion follows from premises; in the repository usually a Lean proof term checked by the kernel."
+}

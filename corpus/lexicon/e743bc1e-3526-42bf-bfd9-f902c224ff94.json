@@ -1,0 +1,7 @@
+{
+  "id": "e743bc1e-3526-42bf-bfd9-f902c224ff94",
+  "label": "claim (ordinary)",
+  "lemma": "claim",
+  "class": "ordinary",
+  "gloss": "An assertion; in the repository, a claim record saying that a source supports a statement under an interpretation (docs/corpus-model.md)."
+}

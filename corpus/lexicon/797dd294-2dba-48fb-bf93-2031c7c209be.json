@@ -1,0 +1,7 @@
+{
+  "id": "797dd294-2dba-48fb-bf93-2031c7c209be",
+  "label": "comparator (ordinary)",
+  "lemma": "comparator",
+  "class": "ordinary",
+  "gloss": "The Comparator tool that checks a Lean theorem against its frozen Challenge and permitted axioms."
+}

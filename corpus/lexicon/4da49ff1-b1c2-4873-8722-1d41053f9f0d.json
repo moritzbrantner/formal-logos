@@ -1,0 +1,7 @@
+{
+  "id": "4da49ff1-b1c2-4873-8722-1d41053f9f0d",
+  "label": "application (ordinary)",
+  "lemma": "application",
+  "class": "ordinary",
+  "gloss": "Applying a rule, theorem or premise to a case; also a function application in Lean."
+}

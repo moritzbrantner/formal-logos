@@ -1,0 +1,10 @@
+{
+  "id": "9337e9f4-2d39-45f3-8676-3cf8097eea41",
+  "label": "finite (ordinary)",
+  "lemma": "finite",
+  "class": "ordinary",
+  "forms": [
+    "finitely"
+  ],
+  "gloss": "Having only finitely many elements, steps or stages, in the standard mathematical sense (Mathlib's Finite where formalized)."
+}

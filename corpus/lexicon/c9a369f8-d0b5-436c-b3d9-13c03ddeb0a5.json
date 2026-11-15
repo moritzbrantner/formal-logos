@@ -1,0 +1,7 @@
+{
+  "id": "c9a369f8-d0b5-436c-b3d9-13c03ddeb0a5",
+  "label": "type (ordinary)",
+  "lemma": "type",
+  "class": "ordinary",
+  "gloss": "A kind or category; in Lean, a type such as Prop, Bool or a carrier of individuals."
+}
