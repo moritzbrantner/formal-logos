@@ -15,11 +15,11 @@ the progress KPI. The CLI returns
 exactly the same presentation:
 
 ```sh
-python3 scripts/corpus.py next-steps --json
-python3 scripts/corpus.py next-steps --root STMT-CATHOLICISM-TRUE
+target/release/truth --json next-steps
+target/release/truth next-steps --frontier-root STMT-CATHOLICISM-TRUE
 ```
 
-Both consumers read the `next_steps` projection of `corpus.py frontier --json`.
+Both consumers read the `next_steps` projection of `truth frontier --json`.
 Closure, established status, source depth, counted refutations and route cost
 continue to have one authority. A theorem can be verified and still depend on
 open premises. In particular, a `proved_unestablished` route leaf also retains
@@ -108,7 +108,7 @@ recorded rivals and dependent arguments/statements. Reproduce that register
 without maintaining a second table:
 
 ```sh
-python3 scripts/corpus.py next-steps --json | python3 -c \
+target/release/truth --json next-steps | python3 -c \
   'import json,sys; print(json.dumps(json.load(sys.stdin)["floor_register"], indent=2))'
 ```
 

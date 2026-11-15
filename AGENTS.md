@@ -503,7 +503,7 @@ Select work from the owner-scoped investigation and its current handoff/issue, u
 
 For source ingestion when a frontier obligation needs it:
 
-1. Run `python3 scripts/corpus.py next` for the highest-priority source candidate; each candidate is a coherent chapter/range, not a sentence or proposition.
+1. Run `target/release/truth next` for the highest-priority source candidate; each candidate is a coherent chapter/range, not a sentence or proposition.
 2. Materialize its pinned witness, read the whole range and context, then process substantive readings in order under the atomic contract below. Reuse statements; preserve distinct defensible interpretations.
 3. Stop at one argument cluster or a reviewable batch of roughly 5–10 source claims. Advance the same candidate's locator if unfinished; delete it only after the range is exhausted.
 4. Seed the prescribed successor campaign/range before closing the current one. Continue without reprompting unless evidence is unavailable, a genuine owner scope/modeling decision is needed, a cross-cutting defect blocks verification, or the successor is ambiguous.

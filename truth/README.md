@@ -16,6 +16,9 @@ target/debug/truth dossier STMT-GOD-EXISTS
 target/debug/truth context ARGUMENT-ID --json
 target/debug/truth orphans
 target/debug/truth orphans --senses --json
+target/debug/truth next
+target/debug/truth next-steps --frontier-root STMT-CATHOLICISM-TRUE
+target/debug/truth results
 cargo fmt --all --check
 cargo clippy --locked -p truth --all-targets -- -D warnings
 cargo test --locked -p truth
@@ -69,7 +72,8 @@ rejects the shared options it does not take with `Args::simple` or
 first (`bind-check`, `next`, the ID lists, …) calls `cli::validate_first`
 before its own work: it runs the full `check` validation and, on a broken
 corpus, fails as Python does, with the first `corpus error: …` and exit
-code 2. `bind-check` calls it.
+code 2. `next`, `next-steps`, `arguments`, `results` and `bind-check` call
+it; the earlier ports perform only the structural load.
 
 Parity tests live in `scripts/truth_parity/`, one module per command, with
 shared fixtures and the `ParityCase` base class in `common.py`; a new
@@ -286,6 +290,36 @@ coincide with their result IDs, and 3 uniquely concluded statements) with
 several `--limit` values, and the error cases, from a saved Python report;
 and, for a subset plus `dossier --all`, that the in-process frontier gives the
 same output.
+
+## `next`, `next-steps`, `arguments`, `results`, `sort-lists`
+
+Ports of the navigation subcommands of `scripts/corpus.py`
+(`truth/src/navigation.rs`):
+
+- `truth next` validates first and prints the source candidate with the least
+  `(priority, id)` as Python prints it: `json.dumps(candidate, indent=2,
+  ensure_ascii=False)` with keys in file order (`truth/src/pyjson.rs`) and
+  uuids humanized. Without candidates it prints `no candidates` and exits 1.
+  `--json` prints the candidate record itself.
+- `truth next-steps [--frontier-root STATEMENT]` validates first and prints
+  the frontier's `next_steps` projection (`frontier --json` computes the same
+  projection; there is no second engine): text as
+  `next_steps.format_next_steps`, `--json` as Python's `next-steps --json`
+  plus `input_identity`. Python's `--root STATEMENT` is `--frontier-root`
+  here, as for `frontier`.
+- `truth arguments` and `truth results` validate first and print the IDs in
+  file order, one per line, not humanized; `--json` lists them under `ids`.
+- `truth sort-lists` sorts the order-free lists (`edition_urns` of sources)
+  in place, without validating first, and rewrites each changed record as
+  Python does (indent 2 when the file was indented, keys in file order,
+  trailing newline). A list with a non-string item is reported, not sorted.
+
+`scripts/truth_parity/navigation.py` compares every command with Python on
+the real corpus and on the `check` fixture (byte-identical text and stdout,
+the rewritten files, the same `corpus error:` line and exit code 2 on broken
+variants). `scripts/verify-all.sh` lists results with `truth results`; the
+explorer's next-work browser test reads `truth next-steps`. The Python
+implementations stay until their retirement (#954, R2).
 
 ## `orphans`
 

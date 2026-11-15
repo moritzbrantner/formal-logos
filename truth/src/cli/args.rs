@@ -278,7 +278,7 @@ impl Args {
         }
         if !accepts.frontier_root && self.frontier_root_set() {
             return Err(usage(
-                "--frontier-root applies only to thickness, frontier, frontier-diff, orphans, dossier and context",
+                "--frontier-root applies only to thickness, frontier, frontier-diff, next-steps, orphans, dossier and context",
             ));
         }
         if !accepts.orphans && (self.senses || self.group_by.is_some()) {
