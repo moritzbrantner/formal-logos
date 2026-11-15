@@ -8,8 +8,9 @@ closure. Statements, arguments, results, model evaluations and attempts retain
 their existing owners.
 
 ```bash
-# Metadata inspection: explicitly no verified status.
-python3 scripts/corpus.py configurations --registered --json
+# Metadata inspection: explicitly no verified status (Rust port of
+# `corpus.py configurations --registered`, same flags and output).
+target/release/truth configurations --registered --json
 # Live certificates; hold the normal heavy-work lock.
 flock /tmp/moenarch/truth-core-heavy.lock \
   python3 scripts/corpus.py configurations --case CONFIG-NECESSARY-INDIVIDUAL --json
@@ -23,6 +24,9 @@ The last command's statement ID must occur in that case's explicit applications;
 there is no matching by text or automatic replacement by a similar statement.
 `--seed STMT-…` selects cases by their exact seed. Selection IDs and output
 ordering are stable. Failure returns nonzero and emits no successful JSON report.
+`truth configurations` takes `--case`, `--seed` and `--premise` too, but only
+with `--registered`: the live certificate check runs Lean and stays
+`corpus.py configurations` (#954).
 
 ## Persistent contract
 
