@@ -314,7 +314,7 @@ jobs:
         if: steps.verifier.outputs.cache-hit != 'true'
         with:
           go-version: stable
-      - uses: dtolnay/rust-toolchain@b725eda525362e7cf34af9a7243cac1e3f01a7ec # stable
+      - uses: dtolnay/rust-toolchain@39008827e6b4319a349e9a42dfc90579dd25f1ca # stable
         if: steps.verifier.outputs.cache-hit != 'true' || needs.comparator-plan.outputs.library_changed == 'true'
       - name: Build Comparator toolchain
         if: steps.verifier.outputs.cache-hit != 'true'
@@ -447,7 +447,7 @@ jobs:
         if: steps.verifier.outputs.cache-hit != 'true'
         with:
           go-version: stable
-      - uses: dtolnay/rust-toolchain@b725eda525362e7cf34af9a7243cac1e3f01a7ec # stable
+      - uses: dtolnay/rust-toolchain@39008827e6b4319a349e9a42dfc90579dd25f1ca # stable
         if: steps.verifier.outputs.cache-hit != 'true'
       - name: Build Comparator toolchain
         if: steps.verifier.outputs.cache-hit != 'true'
