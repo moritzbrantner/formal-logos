@@ -22,6 +22,21 @@ pub struct FrontierArgs {
     pub head: Option<String>,
 }
 
+/// The `bind-check` options.
+#[derive(Default)]
+pub struct BindArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    /// `--result ID`, repeatable.
+    pub results: Vec<String>,
+    /// `--affected`
+    pub affected: bool,
+    /// `--lean-json FILE`: a saved `scripts/BindTypes.lean` output.
+    pub lean_json: Option<String>,
+    /// `--print-lean-input`: print the exporter input and stop.
+    pub print_input: bool,
+}
+
 #[derive(Default)]
 pub struct ResearchArgs {
     pub flags: bool,
@@ -61,6 +76,7 @@ pub struct Args {
     pub frontier: FrontierArgs,
     pub research: ResearchArgs,
     pub configuration: ConfigurationArgs,
+    pub bind: BindArgs,
 }
 
 /// The shared options a command accepts besides `--root` and `--json`;
@@ -110,6 +126,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         frontier: FrontierArgs::default(),
         research: ResearchArgs::default(),
         configuration: ConfigurationArgs::default(),
+        bind: BindArgs::default(),
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -132,6 +149,27 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                 );
             }
             "--reaching-root" => parsed.frontier.reaching_root = true,
+            "--affected" => {
+                parsed.bind.flags = true;
+                parsed.bind.affected = true;
+            }
+            "--print-lean-input" => {
+                parsed.bind.flags = true;
+                parsed.bind.print_input = true;
+            }
+            "--result" | "--lean-json" => {
+                parsed.bind.flags = true;
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                    .to_owned();
+                if arg == "--result" {
+                    parsed.bind.results.push(value);
+                } else {
+                    parsed.bind.lean_json = Some(value);
+                }
+            }
             "--routes" => parsed.frontier.routes = true,
             "--base" | "--head" => {
                 let value = args
