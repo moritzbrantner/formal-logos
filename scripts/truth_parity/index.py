@@ -127,6 +127,13 @@ class TruthIndexParity(ParityCase):
         by_id = self.truth_json(corpus.ROOT, "show", statement["id"])
         self.assertEqual(self.truth_json(corpus.ROOT, "show", statement["legacy_id"]), by_id)
         self.assertEqual(self.truth_json(corpus.ROOT, "show", "statements:" + statement["label"]), by_id)
+        # A label may contain a colon; `statements:` prefixes premise tokens.
+        case = next(record for _, record in corpus.load_dir("configurations")
+                    if ":" in record.get("label", "") and record.get("semantics", {}).get("applications"))
+        premise = sorted(case["semantics"]["applications"])[0]
+        expected = self.truth_json(corpus.ROOT, "bundle", "--case", case["id"], "--premise", premise)
+        self.assertEqual(self.truth_json(corpus.ROOT, "bundle", "--case", case["label"],
+                                         "--premise", "statements:" + premise), expected)
 
     def fixture(self, directory):
         root = Path(directory)

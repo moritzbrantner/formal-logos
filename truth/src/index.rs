@@ -425,11 +425,25 @@ fn key_of(db: &Connection, token: &str) -> Result<String> {
         [] => {}
     }
     let aliases = aliases(db)?;
-    let (kinds, name) = match token.split_once(':') {
-        Some((kind, name)) => (Some(vec![kind]), name),
-        None => (None, token),
+    let kinds: BTreeSet<String> = {
+        let mut statement = db
+            .prepare("SELECT DISTINCT kind FROM records")
+            .map_err(sql)?;
+        statement
+            .query_map([], |row| row.get(0))
+            .map_err(sql)?
+            .collect::<std::result::Result<_, _>>()
+            .map_err(sql)?
     };
-    let candidates = aliases.candidates(name, kinds.as_deref());
+    // A `kind:` prefix counts only when it names an indexed kind and the
+    // rest names a record of it; otherwise the whole token (a label may
+    // contain a colon) is looked up.
+    let scoped = token
+        .split_once(':')
+        .filter(|(kind, _)| kinds.contains(*kind))
+        .map(|(kind, name)| aliases.candidates(name, Some(&[kind])))
+        .filter(|found| !found.is_empty());
+    let candidates = scoped.unwrap_or_else(|| aliases.candidates(token, None));
     match candidates.as_slice() {
         [] => Err(format!("unknown record: {token}")),
         [(kind, id)] => Ok(format!("{kind}:{id}")),
@@ -671,6 +685,9 @@ pub fn statements(db: &Connection, tokens: &[String]) -> Result<Vec<String>> {
     let mut aliases = None;
     let mut out = Vec::new();
     for token in tokens {
+        let token = &token
+            .strip_prefix("statements:")
+            .map_or_else(|| token.clone(), str::to_owned);
         let exact: Option<String> = db
             .query_row(
                 "SELECT id FROM records WHERE key=?",
@@ -1029,6 +1046,42 @@ mod tests {
                 .as_str()
                 .unwrap()
                 .contains("verification required")
+        );
+    }
+
+    #[test]
+    fn labels_with_colons_and_kind_prefixes_resolve() {
+        let fixture = Fixture::new("labels");
+        fixture.put(
+            "configurations",
+            json!({"id": "CONFIG-X", "label": "First slice: a case",
+                   "semantics": {"applications": {"S": []}}, "configurations": []}),
+        );
+        fixture.put(
+            "statements",
+            json!({"id": "U", "legacy_id": "STMT-U", "label": "U: a premise"}),
+        );
+        let db = fixture.open();
+        assert_eq!(
+            record(&db, "First slice: a case").unwrap()["id"],
+            "CONFIG-X"
+        );
+        assert_eq!(
+            record(&db, "configurations:First slice: a case").unwrap()["id"],
+            "CONFIG-X"
+        );
+        assert_eq!(record(&db, "statements:STMT-U").unwrap()["id"], "U");
+        assert_eq!(
+            statements(
+                &db,
+                &[
+                    "statements:S".into(),
+                    "statements:STMT-U".into(),
+                    "U: a premise".into()
+                ]
+            )
+            .unwrap(),
+            vec!["S", "U", "U"]
         );
     }
 
