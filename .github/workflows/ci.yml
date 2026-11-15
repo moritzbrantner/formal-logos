@@ -128,6 +128,7 @@ jobs:
           if git rev-parse --verify HEAD^1 >/dev/null 2>&1; then
             python3 scripts/sense_index.py ratchet --base HEAD^1
             target/release/truth lexicon ratchet --base HEAD^1
+            target/release/truth definitions ratchet --base HEAD^1
           fi
       - name: Check bounded migration coverage and review freshness
         run: python3 scripts/bundle_audit.py
@@ -139,6 +140,15 @@ jobs:
       - name: Bind argument records to result theorem types
         if: needs.comparator-plan.outputs.lean == 'true'
         run: target/release/truth bind-check
+      # The formal status of every definition (#1652 L3): Lean recomputes
+      # corpus/definition-status.json. A fresh entry that disagrees with Lean
+      # fails; stale entries fail only once corpus/definition-status-config.json
+      # is strict (`truth definitions refresh --write` after `lake build`).
+      - name: Recompute the formal status of definitions
+        if: needs.comparator-plan.outputs.lean == 'true'
+        run: |
+          set -o pipefail
+          target/release/truth definitions refresh 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
       # Exemptions (intended full-theory bundles, each with a reason) live in
       # scripts/unused-premise-exemptions.json (owner decision on #571). The
       # release CLI orchestrates scripts/BindTypes.lean and

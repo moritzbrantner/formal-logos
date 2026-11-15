@@ -1,0 +1,96 @@
+[
+ {
+  "declaration": "TruthCore.Alternatives.ActPotencyRegress.ChangeOfStateOnlyByImpressedForceReading",
+  "constants": [],
+  "found": true,
+  "head": null,
+  "kind": "definition",
+  "module": "TruthCore.Alternatives.ActPotencyRegress",
+  "parameter_wrapper": false,
+  "proof": false
+ },
+ {
+  "declaration": "TruthCore.Alternatives.ConciliarGrammarDefinitions.RoleProfile",
+  "found": true,
+  "kind": "structure",
+  "module": "TruthCore.Alternatives.ConciliarGrammarDefinitions",
+  "proof": false
+ },
+ {
+  "declaration": "TruthCore.Alternatives.Fideism.Practice.AnswersToSharedReason",
+  "constants": [
+   "TruthCore.Alternatives.Fideism.Practice"
+  ],
+  "found": true,
+  "head": null,
+  "kind": "projection",
+  "module": "TruthCore.Alternatives.Fideism",
+  "parameter_wrapper": false,
+  "proof": false,
+  "structure": "TruthCore.Alternatives.Fideism.Practice"
+ },
+ {
+  "declaration": "TruthCore.Alternatives.PhysicalGround.compositeRoot",
+  "constants": [
+   "TruthCore.Alternatives.PhysicalGround.route2"
+  ],
+  "found": true,
+  "head": "TruthCore.Alternatives.PhysicalGround.route2",
+  "kind": "abbrev",
+  "module": "TruthCore.Alternatives.PhysicalGround",
+  "parameter_wrapper": false,
+  "proof": false
+ },
+ {
+  "declaration": "TruthCore.Alternatives.PhysicalSpecification.PathFormula",
+  "found": true,
+  "kind": "inductive",
+  "module": "TruthCore.Alternatives.PhysicalSpecificationPaths",
+  "proof": false
+ },
+ {
+  "declaration": "TruthCore.Causality.NecessaryBeingSurvey.FiveCausable",
+  "constants": [],
+  "found": true,
+  "head": null,
+  "kind": "definition",
+  "module": "TruthCore.Causality.NecessaryBeingSurvey",
+  "parameter_wrapper": true,
+  "proof": false
+ },
+ {
+  "declaration": "WellFounded",
+  "found": true,
+  "kind": "class",
+  "module": "Init.WF",
+  "proof": false
+ },
+ {
+  "declaration": "TruthCore.Fixture.SectionVariable",
+  "found": false
+ },
+ {
+  "declaration": "TruthCore.Fixture.law",
+  "found": true,
+  "module": "TruthCore.Fixture",
+  "kind": "theorem",
+  "proof": true
+ },
+ {
+  "declaration": "TruthCore.Fixture.Opaque",
+  "found": true,
+  "module": "TruthCore.Fixture",
+  "kind": "opaque",
+  "proof": false
+ },
+ {
+  "declaration": "TruthCore.Logic.FormSelection.sensor",
+  "constants": [],
+  "found": true,
+  "head": null,
+  "kind": "definition",
+  "module": "TruthCore.Logic.FormSelection",
+  "parameter_wrapper": false,
+  "proof": false
+ }
+]
