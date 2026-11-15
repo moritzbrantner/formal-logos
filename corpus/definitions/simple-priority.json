@@ -9,5 +9,24 @@
     "1ae479bc-06f5-5e83-b947-72e9d94e4799"
   ],
   "lean_declaration": "TruthCore.Causality.TermSenseForks.PriorityFrame.PriorSimply",
-  "note": "Primitive boundary: the linked declaration projects an independently supplied binary relation on beings from PriorityFrame Being Respect; it is not a definition by temporal, causal or perfection data. See docs/notes/load-bearing-terms.md, Priority semantic linkage audit, for interpretation, dependency boundaries, examples, exclusions and OPEN structural constraints. No statement meaning or frozen Challenge changes."
+  "note": "Primitive boundary: the linked declaration projects an independently supplied binary relation on beings from PriorityFrame Being Respect; it is not a definition by temporal, causal or perfection data. See docs/notes/load-bearing-terms.md, Priority semantic linkage audit, for interpretation, dependency boundaries, examples, exclusions and OPEN structural constraints. No statement meaning or frozen Challenge changes.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "PriorityFrame.PriorSimply y x says that y is prior to x simply, not in time: x depends on y in the order of actuality, as whatever is in potency in a respect presupposes some being in act in that respect (ST I q.3 a.1). It is a supplied binary relation on beings; the gloss is carried by the premise ActSimplyPriorToPotencyReading, which constrains it, not by a definitional equation.",
+    "examples": [
+      "An actual agent relative to a capacity it actualizes, such as fire relative to wood that is able to be hot (an intended example; its applicability is open)."
+    ],
+    "exclusions": [
+      "Being earlier in time (PriorInTime): a merely earlier event is not sufficient.",
+      "Present moving (MovesIn): simple priority is a dependence relation distinct from moving.",
+      "Causing the being of x (CausesIn at esse): the passage is the open premise STMT-SIMPLY-PRIOR-IS-CAUSE-OF-BEING (DISAMB-CAUSE).",
+      "Priority in substance (PriorInSubstance): passes to simple priority only by an explicit hypothesis (DISAMB-PRIORITY-SIMPLE-OR-IN-TIME)."
+    ],
+    "open_obligations": [
+      "STMT-ACT-SIMPLY-PRIOR-TO-POTENCY (ActSimplyPriorToPotencyReading) is the open premise that supplies its use.",
+      "Transitivity, asymmetry and well-foundedness are not imposed; what dependence consists in beyond the supplied relation is OPEN.",
+      "Coverage and exclusivity of the three priority senses (STMT-PRIOR-SENSES-EXHAUSTIVE, STMT-PRIOR-SENSE-UNIQUE) remain open frontier premises.",
+      "Not a formalization candidate from existing vocabulary: defining it as 'y is in act where x is in potency' would make STMT-ACT-SIMPLY-PRIOR-TO-POTENCY nearly analytic and conceal the dependence it asserts."
+    ]
+  }
 }

@@ -10,5 +10,21 @@
     "50df1fd8-8c2a-5dd5-8f9b-33f7994f51c6"
   ],
   "lean_declaration": "TruthCore.Causality.TermSenseForks.ActFrame.InActFormally",
-  "note": "Lean: a primitive parameter of the sense-fork frame (its own declaration, distinct from the other senses of its disambiguation); it carries no definitional body."
+  "note": "Lean: a primitive parameter of the sense-fork frame (its own declaration, distinct from the other senses of its disambiguation); it carries no definitional body.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "ActFrame.InActFormally x r says that x has the perfection r in the same form in which it produces it in another, as fire that is hot makes wood hot. It is a supplied relation between a being and a respect: the formal (univocal) sense of 'in act' (DISAMB-IN-ACT).",
+    "examples": [
+      "Hot fire heating wood, with r being hot."
+    ],
+    "exclusions": [
+      "Having r only virtually or eminently, as a power to produce it without having it in the same form (InActVirtually).",
+      "Being in potency to r."
+    ],
+    "open_obligations": [
+      "Its relation to InActVirtually and to the shared InAct (DEF-ACT) is fixed only by the fork's open premises; formal act is not assumed to imply virtual act or conversely.",
+      "Non-simultaneity with InPotency is an explicit premise in each sense, not a law of the field.",
+      "No formalization candidate from existing vocabulary."
+    ]
+  }
 }

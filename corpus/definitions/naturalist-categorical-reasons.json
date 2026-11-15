@@ -9,5 +9,20 @@
   "claim_ids": [
     "25d94c29-59a7-5b98-ab47-8694d2d59cf6",
     "8b78c43d-1742-55b6-ac18-8dffb49da81f"
-  ]
+  ],
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "NaturalisticRealism.Sig.InstrumentalReason x a says that the agent x has an instrumental reason for the act a: a reason that depends on x's contingent ends. It is a supplied relation in the naturalistic-realism consistency tests.",
+    "examples": [
+      "Someone who wants to catch a train has an instrumental reason to leave now."
+    ],
+    "exclusions": [
+      "A categorical reason, which would hold independently of contingent ends; no pro-tanto normative-reason relation of that kind is encoded.",
+      "Actual desire, motivation, obligation, decisive priority or impartial rightness."
+    ],
+    "open_obligations": [
+      "The consistency models show only that the selected realist fragments coexist with an agent's lacking an instrumental reason; they do not show that categorical reasons fail.",
+      "No formalization candidate: ends and reasons are supplied inputs."
+    ]
+  }
 }

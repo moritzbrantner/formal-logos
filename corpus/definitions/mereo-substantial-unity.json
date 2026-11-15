@@ -6,5 +6,20 @@
   "definition": "The disputed status of a material individual as one substance in its own right, rather than merely a collection or operationally integrated plurality. In the independence test this is a primitive metaphysical predicate, not defined by composition, survival, organismic activity or the presence of a soul.",
   "basis": "stipulative",
   "note": "Open research vocabulary for #325/#329, not a proof that substantial unity exists. Source traditions, criteria and their adequacy require independent justification. Keeping this predicate independent prevents a circular argument from life to soul.",
-  "lean_declaration": "TruthCore.Mereology.Vitalism.Scenario.SubstantialUnity"
+  "lean_declaration": "TruthCore.Mereology.Vitalism.Scenario.SubstantialUnity",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Scenario.SubstantialUnity p says that the material system at phase p is one substance in its own right, rather than merely a collection or an operationally integrated plurality. It is a predicate on the two phases (early, late) of the toy turnover history in TruthCore.Mereology.Vitalism (#329), supplied by each scenario, deliberately not defined by composition, survival, organismic activity or the presence of a soul.",
+    "examples_unavailable": "Which material individuals have substantial unity is the disputed question (#325, #329); the toy scenarios give the predicate both values on the same observable history to show that the data do not decide it.",
+    "exclusions": [
+      "Structural or functional integration (Integrated) (DISAMB-MEREO-UNITY).",
+      "A system or whole only as a description (DISAMB-MEREO-DESCRIPTION-BEARER).",
+      "Soul as form (SoulAsForm): kept independent so that an argument from life to soul is not circular."
+    ],
+    "open_obligations": [
+      "Criteria of substantial unity and their adequacy need independent justification.",
+      "the formal statement SoulUnityIndependence, proved in result MEREO-005-SOUL-UNITY-INDEPENDENCE, says the observable profile fixes neither SubstantialUnity nor SoulAsForm; any bridge between them is an open premise.",
+      "No formalization candidate: kept primitive on purpose in the independence test."
+    ]
+  }
 }

@@ -5,5 +5,20 @@
   "definition": "PRIMITIVE. Immense g: g is measured or contained by no place and is present to everything that is. After ST I q.8 (God is in all things as an agent is present to what it acts on, and in every place by giving it being). Counterexample: a body, which is contained by its place and absent from other places.",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Causality.DeiFiliusAttributeField.Primitives.Immense",
-  "note": "Explicitly identified primitive (Encode first). Open semantic obligation: typed accounts of place and of an agent's presence to its effect. Distinct from INFINITE_2 (quantitative or spatial infinity of extent): immensity here is not having infinite extent. Two open bridges constrain it, each giving a sufficient condition: 'Whatever causes the being of everything else is IMMENSE_1' and the weaker sense bridge 'Whatever is IMMENSE_2 is IMMENSE_1', from the typed sibling IMMENSE_2 (641c767b: infinite and causes the being of everything else; disambiguation 3fc3ee02). IMMENSE_2 types the grounds, not place, measure or presence by power and knowledge, so the typed account of place and presence remains open."
+  "note": "Explicitly identified primitive (Encode first). Open semantic obligation: typed accounts of place and of an agent's presence to its effect. Distinct from INFINITE_2 (quantitative or spatial infinity of extent): immensity here is not having infinite extent. Two open bridges constrain it, each giving a sufficient condition: 'Whatever causes the being of everything else is IMMENSE_1' and the weaker sense bridge 'Whatever is IMMENSE_2 is IMMENSE_1', from the typed sibling IMMENSE_2 (641c767b: infinite and causes the being of everything else; disambiguation 3fc3ee02). IMMENSE_2 types the grounds, not place, measure or presence by power and knowledge, so the typed account of place and presence remains open.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Primitives.Immense g says that g is measured or contained by no place and is present to everything that is, as an agent is present to what it acts on (ST I q.8). It is a supplied predicate on beings, one of the Dei Filius ch. 1 attribute primitives. It is not having infinite spatial extent.",
+    "examples_unavailable": "Presence to everything that is, contained by no place, is claimed only of the being the case investigates; giving an instance would presuppose that conclusion. The record's counterexample (a body, contained by its place and absent from other places) marks its boundary.",
+    "exclusions": [
+      "A body, which is contained by its place and absent from other places.",
+      "INFINITE_2, quantitative or spatial infinity of extent.",
+      "IMMENSE_2, the typed sibling (infinite and causes the being of everything else): it types grounds, not place, measure or presence, and reaches IMMENSE_1 only by an open sense bridge (Immense disambiguation 3fc3ee02)."
+    ],
+    "open_obligations": [
+      "No axiom constrains it; two open bridges give sufficient conditions only: 'Whatever causes the being of everything else is IMMENSE_1' and 'Whatever is IMMENSE_2 is IMMENSE_1'.",
+      "Typed accounts of place, measure and an agent's presence to its effect are OPEN.",
+      "Formalization candidate only after those accounts exist."
+    ]
+  }
 }

@@ -6,5 +6,22 @@
   "definition": "`C.AuthoritiesFixGrammar`: what counts as a correct move of the practice is settled by its recognized authorities (for the Catholic practice, the magisterium: councils and the pope teaching definitively).",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Alternatives.FideismGrammarCases.CasedPractice.AuthoritiesFixGrammar",
-  "note": "One answer to who fixes a practice's grammar (owner decision 2026-11-06, #1010). A proposition about the practice, constrained only through STMT-AUTHORITY-GRAMMAR-MAKES-DEFINITIONS-OWN-STANDARD."
+  "note": "One answer to who fixes a practice's grammar (owner decision 2026-11-06, #1010). A proposition about the practice, constrained only through STMT-AUTHORITY-GRAMMAR-MAKES-DEFINITIONS-OWN-STANDARD.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "CasedPractice.AuthoritiesFixGrammar is a proposition about one practice: what counts as a correct move of the practice is settled by its recognized authorities (for the Catholic practice, the magisterium: councils and the pope teaching definitively). It is one cell of the three grammar-fixing cases (owner decision 2026-11-06, #1010), supplied by each model.",
+    "examples": [
+      "The Catholic practice, read with the magisterium as its grammar-fixing authority."
+    ],
+    "exclusions": [
+      "Grammar fixed by ordinary practitioners' use (UseFixesGrammar), the second cell.",
+      "The case where neither authorities nor ordinary use fix the grammar, the third cell."
+    ],
+    "open_obligations": [
+      "Constrained only through STMT-AUTHORITY-GRAMMAR-MAKES-DEFINITIONS-OWN-STANDARD, which remains open.",
+      "Coverage of the three cells is the open statement STMT-FIDEISM-GRAMMAR-CASES-COVER; the cells are not assumed exclusive beyond its stated form.",
+      "Which cell holds for the Catholic practice is not decided by any record.",
+      "No formalization candidate from existing vocabulary."
+    ]
+  }
 }

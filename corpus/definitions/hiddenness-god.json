@@ -6,5 +6,19 @@
   "definition": "God denotes a personal religious ultimate whose personal perfection is the target of this argument. Sig.God w says such a being exists at w; it does not define God as nonexistent whenever a particular human lacks belief. God-to-perfect-love is a separate open premise. This is not the broader possibility of a nonpersonal religious ultimate, nor an automatic identification of the root signature with this interpretation.",
   "basis": "stipulative",
   "note": "Explicit interpretation vocabulary for #252. Source claims retain their own pinned locators; these records do not add axioms or establish the truth of the interpreted predicates.",
-  "lean_declaration": "TruthCore.Hiddenness.Sig.God"
+  "lean_declaration": "TruthCore.Hiddenness.Sig.God",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Sig.God w says that a personal religious ultimate, whose personal perfection is the argument's target, exists at world w. It is a predicate on the worlds of the hiddenness signature (#252), supplied by each interpretation. It does not define God as nonexistent whenever some person lacks belief.",
+    "examples_unavailable": "Whether such a being exists at the actual world is the conclusion the hiddenness argument disputes; an example would presuppose an answer.",
+    "exclusions": [
+      "A nonpersonal religious ultimate (DISAMB-HIDDENNESS-RELIGIOUS-ULTIMATE).",
+      "The case root's Signature.IsGod (DEF-GOD-OF-CLASSICAL-THEISM): the two are not identified automatically."
+    ],
+    "open_obligations": [
+      "GodLoves (God at w implies perfect love at w) is a separate open premise.",
+      "Any bridge from this predicate to the root signature's IsGod is open and unrecorded.",
+      "No formalization candidate."
+    ]
+  }
 }

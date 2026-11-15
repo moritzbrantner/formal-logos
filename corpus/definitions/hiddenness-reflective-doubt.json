@@ -6,5 +6,21 @@
   "definition": "Doubt resulting from conflicting considerations about God, rather than an inference that all doubt must be resistant. ReflectiveDoubt is an interpreted predicate, not an automatic certificate of nonresistance. The universal DevelopmentalAccount claims more coverage than the source’s examples and remains an unattributed open premise.",
   "basis": "stipulative",
   "note": "Explicit interpretation vocabulary for #252. Source claims retain their own pinned locators; these records do not add axioms or establish the truth of the interpreted predicates.",
-  "lean_declaration": "TruthCore.Hiddenness.Sig.ReflectiveDoubt"
+  "lean_declaration": "TruthCore.Hiddenness.Sig.ReflectiveDoubt",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Sig.ReflectiveDoubt w p t says that, at world w, person p has at time t doubt about God that results from conflicting considerations. It is a field of the hiddenness signature (TruthCore.Hiddenness.Vocabulary.Sig, #252), indexed by world, person and time and supplied by each interpretation; worlds carry no modal accessibility laws.",
+    "examples": [
+      "Someone who weighs the argument from evil against arguments for God and suspends judgment."
+    ],
+    "exclusions": [
+      "A certificate of nonresistance: reflective doubt is not by definition free of resistance (Resists).",
+      "An inference that all doubt must be resistant."
+    ],
+    "open_obligations": [
+      "The universal DevelopmentalAccount (every actual nonbeliever lacks the concept or has reflective doubt) claims more coverage than the source's examples and remains an unattributed open premise.",
+      "These records add no axioms; whether the interpreted predicate holds of real persons is not established by any finite model.",
+      "No formalization candidate."
+    ]
+  }
 }

@@ -1227,12 +1227,12 @@
       "path": "corpus/definitions/act.json",
       "status": "repaired",
       "classification": "reviewed_locator_clarification",
-      "finding": "Reuse unchanged prior audit disposition: Existing interpretation retained: `InAct x r`: x actually has the perfection r, as fire is actually hot. In Lean `InAct` is a parameter, not a definition: its content is fixed only by the premises that use it, above all that nothing is in act and in potency in the same respect at once. Whether a mover must have the perfection formally or may have it virtually is left open (DISAMB-IN-ACT). No new structural law, source attribution or independently established premise is introduced. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel.InAct. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes.",
+      "finding": "Reuse unchanged prior audit disposition: Existing interpretation retained: `InAct x r`: x actually has the perfection r, as fire is actually hot. In Lean `InAct` is a parameter, not a definition: its content is fixed only by the premises that use it, above all that nothing is in act and in potency in the same respect at once. Whether a mover must have the perfection formally or may have it virtually is left open (DISAMB-IN-ACT). No new structural law, source attribution or independently established premise is introduced. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel.InAct. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "8c6234dd02f06f7293da6dbb41bbd3c8b79f2a064582cccc942674f6dbd9a76f",
         "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel"
       },
-      "reviewed_sha256": "b3157f592d401928d11c74dfff4bf19333e74f47d87babe4ea30c9d6d7948b3b"
+      "reviewed_sha256": "5cde2cba5e3785d917d0dea1b6b5841fbe29e303cbb1b96e6849008646b99319"
     },
     {
       "kind": "definitions",
@@ -1253,12 +1253,12 @@
       "path": "corpus/definitions/catholic-church-proposal-subject.json",
       "status": "inspected",
       "classification": "bounded_inspection",
-      "finding": "Inspected existing semantic record at its advertised scope: The institutional Church whose binding teaching office is exercised by the Roman Pontiff and the College of Bishops in communion with him, rather than any assertion by a member or office-holder. For definitive doctrinal proposal, the specified modes include the Roman Pontiff speaking ex cathedra, the College of Bishops gathered in council, and the ordinary and universal magisterium of bishops dispersed throughout the world in communion with the Pope. This is the subject of the CDF classification, used for the skeleton’s named Catholic society. No meaning change or renewed source certification.",
+      "finding": "Inspected existing semantic record at its advertised scope: The institutional Church whose binding teaching office is exercised by the Roman Pontiff and the College of Bishops in communion with him, rather than any assertion by a member or office-holder. For definitive doctrinal proposal, the specified modes include the Roman Pontiff speaking ex cathedra, the College of Bishops gathered in council, and the ordinary and universal magisterium of bishops dispersed throughout the world in communion with the Pope. This is the subject of the CDF classification, used for the skeleton’s named Catholic society. No meaning change or renewed source certification. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "864fed17ce698755839362ba28967453ab7abcea38fbc8f4cb7c22e0efa029c1",
         "lean_declaration": "TruthCore.Case.Catholicism.Signature.catholicChurch"
       },
-      "reviewed_sha256": "53d87dd92057b1db448405e9171d59caf54aadb573582c3edc64ec0068268892"
+      "reviewed_sha256": "57ca60419aa362325fee731c5b2ae8bd9546059ffc02e67c09c471dcfe4c9dd7"
     },
     {
       "kind": "definitions",
@@ -1279,12 +1279,12 @@
       "path": "corpus/definitions/cause-of-perfection.json",
       "status": "repaired",
       "classification": "reviewed_locator_clarification",
-      "finding": "Prior semantic disposition retained after reviewing the causal-transfer additions: Existing interpretation retained: `CausesIn c x r`: c is a cause of x's being r, as fire is a cause of the heat of hot things. It is not identified with moving (`MovesIn`): causing a perfection need not be a present reduction from potency to act. 'Cause of being' is the instance r = esse. No new structural law, source attribution or independently established premise is introduced. Follow-up review for PR #732: the added causal-transfer note distinguishes originating, sustaining, primary/secondary responsibility, enablement and possession, and leaves universal esse scope distinct from God or firstness in every order. The original causal definition, sense separation, source claim links and Lean binding are unchanged; no structural law or premise truth is added. Exact source/interpretation boundaries and open applicability burdens: docs/notes/causal-perfection-transfer.md. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. The retained locator is explicitly classified as a usage/constraining premise or vocabulary-container anchor; exact primitive parameter/field locations are recorded in the definition note. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes. Follow-up #1233: inspected CauseFrame field signatures and CausesBy branches against stable corpus identities. Primary locators now identify primitive relation fields, not quantified readings. CAUSE_3 remains four-mode classification, not the enum perfection branch; this mismatch and incomplete semantic typing remain explicit open work. The audited root proof keeps its original fixed parameters and all premises. No theorem, source claim, causal law or premise truth changes. Integration re-review for #1278: The CausesIn locator is now CauseFrame.CausesIn, a primitive field with the same Being/Respect relation shape. Universal genus scope remains a separate constraint; no new causal law or identification with motion is encoded. Existing local-logic and frozen assembly Lean inputs are unchanged; main's metadata correction is preserved, not reverted.",
+      "finding": "Prior semantic disposition retained after reviewing the causal-transfer additions: Existing interpretation retained: `CausesIn c x r`: c is a cause of x's being r, as fire is a cause of the heat of hot things. It is not identified with moving (`MovesIn`): causing a perfection need not be a present reduction from potency to act. 'Cause of being' is the instance r = esse. No new structural law, source attribution or independently established premise is introduced. Follow-up review for PR #732: the added causal-transfer note distinguishes originating, sustaining, primary/secondary responsibility, enablement and possession, and leaves universal esse scope distinct from God or firstness in every order. The original causal definition, sense separation, source claim links and Lean binding are unchanged; no structural law or premise truth is added. Exact source/interpretation boundaries and open applicability burdens: docs/notes/causal-perfection-transfer.md. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. The retained locator is explicitly classified as a usage/constraining premise or vocabulary-container anchor; exact primitive parameter/field locations are recorded in the definition note. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes. Follow-up #1233: inspected CauseFrame field signatures and CausesBy branches against stable corpus identities. Primary locators now identify primitive relation fields, not quantified readings. CAUSE_3 remains four-mode classification, not the enum perfection branch; this mismatch and incomplete semantic typing remain explicit open work. The audited root proof keeps its original fixed parameters and all premises. No theorem, source claim, causal law or premise truth changes. Integration re-review for #1278: The CausesIn locator is now CauseFrame.CausesIn, a primitive field with the same Being/Respect relation shape. Universal genus scope remains a separate constraint; no new causal law or identification with motion is encoded. Existing local-logic and frozen assembly Lean inputs are unchanged; main's metadata correction is preserved, not reverted. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "14ec77a96530074043a3ce9795f02ce35e8a8fb43516a3a15870e56d488090e3",
         "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.CausesAllInGenus"
       },
-      "reviewed_sha256": "4b4336ed9ae6a5e9e770b007f4b74feaf03220b3ad6a82e9d57ca90c626e1238"
+      "reviewed_sha256": "b5a1134581ef33ddd2c5a1f1054edf1d10033dd0576c08f6c5ead3b559a30f3b"
     },
     {
       "kind": "definitions",
@@ -1292,12 +1292,12 @@
       "path": "corpus/definitions/church-visible-authoritative-society.json",
       "status": "inspected",
       "classification": "bounded_inspection",
-      "finding": "Inspected existing semantic record at its advertised scope: The community described in Lumen gentium §8 as visibly constituted, continually sustained, equipped with hierarchical organs, entrusted to Peter and the apostles for pastoral government, and established in perpetuity. This is the visible/social aspect of the one complex Church of which the source also speaks spiritually; it is not a claim that the Church is exhausted by an external organization or that every later institutional detail was fixed at its inception. No meaning change or renewed source certification.",
+      "finding": "Inspected existing semantic record at its advertised scope: The community described in Lumen gentium §8 as visibly constituted, continually sustained, equipped with hierarchical organs, entrusted to Peter and the apostles for pastoral government, and established in perpetuity. This is the visible/social aspect of the one complex Church of which the source also speaks spiritually; it is not a claim that the Church is exhausted by an external organization or that every later institutional detail was fixed at its inception. No meaning change or renewed source certification. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "550e3c376e73e45eb91aaf1e76edf674dd1778572aeb20f40f32bd2317cdf2cb",
         "lean_declaration": "TruthCore.Case.Catholicism.Signature.VisibleWithAuthority"
       },
-      "reviewed_sha256": "40b4b0dba1c6a0685e1cf7beef2ea3c08041dc1af9c5c740b5c8addf04274706"
+      "reviewed_sha256": "1d9183d8419daf36c0a59d4d608751d87da766d1f1e94efaca03e31bb5fb8796"
     },
     {
       "kind": "definitions",
@@ -1331,12 +1331,12 @@
       "path": "corpus/definitions/definitively-proposes-as-revealed.json",
       "status": "inspected",
       "classification": "reused_unchanged_audit",
-      "finding": "Reuse unchanged prior audit disposition: Existing interpretation retained: A Church proposal that a proposition is to be believed as divinely revealed, made by solemn judgment or by the ordinary and universal magisterium. This is the proposal condition in Dei Filius ch. 3, paragraph 4, not an arbitrary assertion by Church members or authorities. The source's rule for divine and catholic faith separately requires that the content be contained in the word of God written or handed down; the act of proposing it does not by definition establish that separate condition or its truth. No new structural law, source attribution or independently established premise is introduced.",
+      "finding": "Reuse unchanged prior audit disposition: Existing interpretation retained: A Church proposal that a proposition is to be believed as divinely revealed, made by solemn judgment or by the ordinary and universal magisterium. This is the proposal condition in Dei Filius ch. 3, paragraph 4, not an arbitrary assertion by Church members or authorities. The source's rule for divine and catholic faith separately requires that the content be contained in the word of God written or handed down; the act of proposing it does not by definition establish that separate condition or its truth. No new structural law, source attribution or independently established premise is introduced. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "98111b7b66873c2cf8f978c755a79ca089b3ed1d35d40e72d0adbd3191248282",
         "lean_declaration": "TruthCore.Case.Catholicism.Signature.DefinitivelyProposesAsRevealed"
       },
-      "reviewed_sha256": "136c7810326b7a11dbf4b2c8c46d72d218142d763de44664618848ad647a67d5"
+      "reviewed_sha256": "f364b0073d5b4c03e26821506e88df1c9da15a81014f128023049dfb331ef81f"
     },
     {
       "kind": "definitions",
@@ -1357,12 +1357,12 @@
       "path": "corpus/definitions/essence-thomistic-nature.json",
       "status": "repaired",
       "classification": "reviewed_locator_clarification",
-      "finding": "Reuse unchanged prior audit disposition: Existing interpretation retained: Essence is what a thing is, its nature or quiddity, contrasted with its act of being (esse). The statement that God is his own esse identifies these in its theological context; the words essence and esse alone do not make that identity hold. This sense is not Scott’s modal essence of an individual or the 1970 Gödel variant’s different essence definition. No new structural law, source attribution or independently established premise is introduced. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile.essenceOf. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes.",
+      "finding": "Reuse unchanged prior audit disposition: Existing interpretation retained: Essence is what a thing is, its nature or quiddity, contrasted with its act of being (esse). The statement that God is his own esse identifies these in its theological context; the words essence and esse alone do not make that identity hold. This sense is not Scott’s modal essence of an individual or the 1970 Gödel variant’s different essence definition. No new structural law, source attribution or independently established premise is introduced. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile.essenceOf. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "256b634683a261c9c539d84335321cf0a87c13bc43e28fc3ace8842898a8fc86",
         "lean_declaration": null
       },
-      "reviewed_sha256": "afd7bc8253ebe399a2c4831c083ce86f85b27af2906f0f620e423bb22f1d34da"
+      "reviewed_sha256": "c1448badfdb738bc73d160fb55813e35f6c074c4a6cdeaee04c1faf0f8841bcf"
     },
     {
       "kind": "definitions",
@@ -1448,12 +1448,12 @@
       "path": "corpus/definitions/god-of-classical-theism.json",
       "status": "repaired",
       "classification": "reviewed_locator_clarification",
-      "finding": "Reuse unchanged prior audit disposition: Existing interpretation retained: The case signature's `IsGod g`: g is God in the sense of the God of classical theism, not merely what is called God. The stages after stage 1 and the root use this predicate. Its content is fixed only by the open premises that use it: STMT-GOD-HAS-CLASSICAL-DIVINE-ATTRIBUTES (simple, perfect, good, infinite, immutable, eternal, one, with intellect and will) and, on the older stage-1 routes, the identification premise STMT-UNIQUE-PURE-ACT-FIRST-MOVER-IS-GOD. On the designated route it is also fixed by the fuller nominal premise STMT-GOD-NAMES-THE-FULLY-DESCRIBED-PRINCIPLE, which applies the proper name 'God' to `IsGod` directly (DISAMB-GOD). The individual attribute senses and their one-way mapping to the skeleton field are recorded in DEF-CLASSICAL-ATTRIBUTES-BUNDLE and linked from STMT-GOD-HAS-CLASSICAL-DIVINE-ATTRIBUTES. No new structural law, source attribution or independently established premise is introduced. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Case.Catholicism.Signature.IsGod. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes.",
+      "finding": "Reuse unchanged prior audit disposition: Existing interpretation retained: The case signature's `IsGod g`: g is God in the sense of the God of classical theism, not merely what is called God. The stages after stage 1 and the root use this predicate. Its content is fixed only by the open premises that use it: STMT-GOD-HAS-CLASSICAL-DIVINE-ATTRIBUTES (simple, perfect, good, infinite, immutable, eternal, one, with intellect and will) and, on the older stage-1 routes, the identification premise STMT-UNIQUE-PURE-ACT-FIRST-MOVER-IS-GOD. On the designated route it is also fixed by the fuller nominal premise STMT-GOD-NAMES-THE-FULLY-DESCRIBED-PRINCIPLE, which applies the proper name 'God' to `IsGod` directly (DISAMB-GOD). The individual attribute senses and their one-way mapping to the skeleton field are recorded in DEF-CLASSICAL-ATTRIBUTES-BUNDLE and linked from STMT-GOD-HAS-CLASSICAL-DIVINE-ATTRIBUTES. No new structural law, source attribution or independently established premise is introduced. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Case.Catholicism.Signature.IsGod. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "0db89c7e0f0c32183e391255225d564b1e855d0619058e3477ef4d18d6b2b43e",
         "lean_declaration": "TruthCore.Case.Catholicism.Signature"
       },
-      "reviewed_sha256": "99850d49917138e6d304b43be90af44bd397d2ffd18c6af3d1acde624a32091f"
+      "reviewed_sha256": "946f3d8919431425a71ebdfd72c6852cebb59c06de9d04f4790ba6850caffa73"
     },
     {
       "kind": "definitions",
@@ -1565,12 +1565,12 @@
       "path": "corpus/definitions/motion-as-reduction.json",
       "status": "repaired",
       "classification": "reviewed_locator_clarification",
-      "finding": "Reuse unchanged prior audit disposition: Existing interpretation retained: To move is nothing other than to educe something from potency to act. `MovedIn x r`: x is being reduced from potency to act in respect r; `MovesIn y x r`: y so reduces x. Read at one time (simul): a present series of movers, not a history. Nothing restricts it to local motion or to bodies. Aristotle's definition of motion as the actuality of the potential as such, read for beings and respects (STMT-BEING-MOVED-IS-ACTUALIZATION-OF-POTENCY), would make STMT-NOTHING-MOVED-EXCEPT-AS-IN-POTENCY analytic if adopted as the Lean definition of `MovedIn`; it is no stronger than that premise (result ACT-POTENCY-DEFINITIONAL-ANALYSES-CONSERVATIVE), so `MovedIn` stays a parameter. No new structural law, source attribution or independently established premise is introduced. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel.MovedIn. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes.",
+      "finding": "Reuse unchanged prior audit disposition: Existing interpretation retained: To move is nothing other than to educe something from potency to act. `MovedIn x r`: x is being reduced from potency to act in respect r; `MovesIn y x r`: y so reduces x. Read at one time (simul): a present series of movers, not a history. Nothing restricts it to local motion or to bodies. Aristotle's definition of motion as the actuality of the potential as such, read for beings and respects (STMT-BEING-MOVED-IS-ACTUALIZATION-OF-POTENCY), would make STMT-NOTHING-MOVED-EXCEPT-AS-IN-POTENCY analytic if adopted as the Lean definition of `MovedIn`; it is no stronger than that premise (result ACT-POTENCY-DEFINITIONAL-ANALYSES-CONSERVATIVE), so `MovedIn` stays a parameter. No new structural law, source attribution or independently established premise is introduced. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel.MovedIn. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "df7c8fa669493ad3e42b4f84dc14344f9e6d76b37aed42f6166ef8e5f636e8d7",
         "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel"
       },
-      "reviewed_sha256": "f35a0159d63507eec1b037647885ef7e197b34209950106b6b3f07ec36d315e9"
+      "reviewed_sha256": "fe47a38f5a3f4b26599136b8f391048b8f369a0d61c6a56f1b532c7f98d3056a"
     },
     {
       "kind": "definitions",
@@ -1708,12 +1708,12 @@
       "path": "corpus/definitions/respect.json",
       "status": "repaired",
       "classification": "reviewed_locator_clarification",
-      "finding": "Reuse unchanged prior audit disposition: Existing interpretation retained: `Respect`: that with respect to which a thing is moved, in act or in potency, such as being hot. The quarta via reads a respect as a perfection (ST I q.4 a.1: a thing is called perfect insofar as it is in act). 'Moved in no respect' quantifies over all respects. No new structural law, source attribution or independently established premise is introduced. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel.Respect. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes.",
+      "finding": "Reuse unchanged prior audit disposition: Existing interpretation retained: `Respect`: that with respect to which a thing is moved, in act or in potency, such as being hot. The quarta via reads a respect as a perfection (ST I q.4 a.1: a thing is called perfect insofar as it is in act). 'Moved in no respect' quantifies over all respects. No new structural law, source attribution or independently established premise is introduced. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel.Respect. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "2311bf6a4d5eae003aa035b80f4206ebda5655ba28555fb3cd15a26e2a094c4b",
         "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel"
       },
-      "reviewed_sha256": "8cb92cc276caaa74813c22240ca775a6ea2b84e811050b98f2d0fe80e2e9d820"
+      "reviewed_sha256": "98fa25e2d114699bdaf77d94c187ff3369f6d4f3c47cd43c67396c2ae1db315d"
     },
     {
       "kind": "definitions",
@@ -1747,12 +1747,12 @@
       "path": "corpus/definitions/simple-priority.json",
       "status": "inspected",
       "classification": "reused_unchanged_audit",
-      "finding": "Reuse unchanged prior audit disposition: Existing interpretation retained: `PriorSimply y x`: y is prior to x simply, not in time: whatever is in potency in a respect presupposes some being in act in that respect, because potency is reduced to act only by a being in act. It is a dependence relation distinct from present moving. Whether simple priority makes y a cause of x's being is not part of this definition: that is the open premise STMT-SIMPLY-PRIOR-IS-CAUSE-OF-BEING. No new structural law, source attribution or independently established premise is introduced. Re-reviewed in the #1103 definitions audit: the definition now says PriorSimply is a primitive constrained only by the linked premise ActSimplyPriorToPotencyReading. Priority linkage re-reviewed 2026-11-09 against PriorityFrame field types and Article1/BookIX quantified readings: relation projection distinguished from constraining premise; primitive semantic obligations remain OPEN (load-bearing-terms.md). Statement meanings, theorem inputs and output unchanged; no new proof or closure.",
+      "finding": "Reuse unchanged prior audit disposition: Existing interpretation retained: `PriorSimply y x`: y is prior to x simply, not in time: whatever is in potency in a respect presupposes some being in act in that respect, because potency is reduced to act only by a being in act. It is a dependence relation distinct from present moving. Whether simple priority makes y a cause of x's being is not part of this definition: that is the open premise STMT-SIMPLY-PRIOR-IS-CAUSE-OF-BEING. No new structural law, source attribution or independently established premise is introduced. Re-reviewed in the #1103 definitions audit: the definition now says PriorSimply is a primitive constrained only by the linked premise ActSimplyPriorToPotencyReading. Priority linkage re-reviewed 2026-11-09 against PriorityFrame field types and Article1/BookIX quantified readings: relation projection distinguished from constraining premise; primitive semantic obligations remain OPEN (load-bearing-terms.md). Statement meanings, theorem inputs and output unchanged; no new proof or closure. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "875e4d5d931b5ec580cc42ddbcf305645c65fdd3d781b423589ffafbe8bb9189",
         "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.ActSimplyPriorToPotencyReading"
       },
-      "reviewed_sha256": "0de0db09634feef7b0ac73e665b7ab92a0d5000c3be42a784dae4555a10c0652"
+      "reviewed_sha256": "c9c9663a1a46b0220eb65c6405f1549df21a110ee860dd6dfe4a919404c70763"
     },
     {
       "kind": "definitions",

@@ -9,5 +9,22 @@
     "40aefb2e-c9b3-5bb1-8802-96bbc4e2ed83"
   ],
   "lean_declaration": "TruthCore.Causality.TermSenseForks.BecomingBeingFrame.CausesOrigin",
-  "note": "Lean: a primitive parameter of the sense-fork frame (its own declaration, distinct from the other senses of its disambiguation); it carries no definitional body."
+  "note": "Lean: a primitive parameter of the sense-fork frame (its own declaration, distinct from the other senses of its disambiguation); it carries no definitional body.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "BecomingBeingFrame.CausesOrigin c x says that c has a causal role in x's coming to be: c is a cause of x's becoming. It is a supplied binary relation on beings. In q.104 terms a builder is such a cause of a house without being a cause on which the house's continued existence directly depends.",
+    "examples": [
+      "A builder relative to the house built."
+    ],
+    "exclusions": [
+      "Being a cause of esse in the mode-unspecified senses 2 and 3 of DISAMB-BECOMING-BEING-CAUSE (the q.3 a.4 HasExternalEsseCause and CausesIn c x esse): their types do not fix the mode of causing, so reading them as direct conservation needs a separate bridge. The builder example shows that causing becoming need not be causing continued being; it does not show the roles are disjoint.",
+      "Removing a threat to x, which q.104 a.1 counts as indirect preservation."
+    ],
+    "open_obligations": [
+      "It does not say that coming to be and being have no causal connection; any passage between sense 1 and the other senses is an explicit premise.",
+      "No transitivity, asymmetry or well-foundedness is assumed.",
+      "It is a separate field from CauseFrame.CausesOrigin (DEF-CAUSE-OF-ORIGIN); the two are not identified in Lean.",
+      "No formalization candidate from existing vocabulary."
+    ]
+  }
 }

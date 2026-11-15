@@ -403,12 +403,12 @@
       "path": "corpus/definitions/act.json",
       "status": "repaired",
       "classification": "reviewed_locator_clarification",
-      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced.  Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel.InAct. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes.",
+      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced.  Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel.InAct. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "8c6234dd02f06f7293da6dbb41bbd3c8b79f2a064582cccc942674f6dbd9a76f",
         "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel"
       },
-      "reviewed_sha256": "b3157f592d401928d11c74dfff4bf19333e74f47d87babe4ea30c9d6d7948b3b"
+      "reviewed_sha256": "5cde2cba5e3785d917d0dea1b6b5841fbe29e303cbb1b96e6849008646b99319"
     },
     {
       "kind": "definitions",
@@ -416,12 +416,12 @@
       "path": "corpus/definitions/cause-of-perfection.json",
       "status": "repaired",
       "classification": "reviewed_locator_clarification",
-      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced.  Follow-up review for PR #732: the added causal-transfer note distinguishes originating, sustaining, primary/secondary responsibility, enablement and possession, and leaves universal esse scope distinct from God or firstness in every order. The original causal definition, sense separation, source claim links and Lean binding are unchanged; no structural law or premise truth is added. Exact source/interpretation boundaries and open applicability burdens: docs/notes/causal-perfection-transfer.md. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. The retained locator is explicitly classified as a usage/constraining premise or vocabulary-container anchor; exact primitive parameter/field locations are recorded in the definition note. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes. Follow-up #1233: inspected CauseFrame field signatures and CausesBy branches against stable corpus identities. Primary locators now identify primitive relation fields, not quantified readings. CAUSE_3 remains four-mode classification, not the enum perfection branch; this mismatch and incomplete semantic typing remain explicit open work. The audited root proof keeps its original fixed parameters and all premises. No theorem, source claim, causal law or premise truth changes. Integration re-review for #1278: The CausesIn locator is now CauseFrame.CausesIn, a primitive field with the same Being/Respect relation shape. Universal genus scope remains a separate constraint; no new causal law or identification with motion is encoded. Existing local-logic and frozen assembly Lean inputs are unchanged; main's metadata correction is preserved, not reverted.",
+      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced.  Follow-up review for PR #732: the added causal-transfer note distinguishes originating, sustaining, primary/secondary responsibility, enablement and possession, and leaves universal esse scope distinct from God or firstness in every order. The original causal definition, sense separation, source claim links and Lean binding are unchanged; no structural law or premise truth is added. Exact source/interpretation boundaries and open applicability burdens: docs/notes/causal-perfection-transfer.md. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. The retained locator is explicitly classified as a usage/constraining premise or vocabulary-container anchor; exact primitive parameter/field locations are recorded in the definition note. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes. Follow-up #1233: inspected CauseFrame field signatures and CausesBy branches against stable corpus identities. Primary locators now identify primitive relation fields, not quantified readings. CAUSE_3 remains four-mode classification, not the enum perfection branch; this mismatch and incomplete semantic typing remain explicit open work. The audited root proof keeps its original fixed parameters and all premises. No theorem, source claim, causal law or premise truth changes. Integration re-review for #1278: The CausesIn locator is now CauseFrame.CausesIn, a primitive field with the same Being/Respect relation shape. Universal genus scope remains a separate constraint; no new causal law or identification with motion is encoded. Existing local-logic and frozen assembly Lean inputs are unchanged; main's metadata correction is preserved, not reverted. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "14ec77a96530074043a3ce9795f02ce35e8a8fb43516a3a15870e56d488090e3",
         "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.CausesAllInGenus"
       },
-      "reviewed_sha256": "4b4336ed9ae6a5e9e770b007f4b74feaf03220b3ad6a82e9d57ca90c626e1238"
+      "reviewed_sha256": "b5a1134581ef33ddd2c5a1f1054edf1d10033dd0576c08f6c5ead3b559a30f3b"
     },
     {
       "kind": "definitions",
@@ -456,12 +456,12 @@
       "path": "corpus/definitions/essence-thomistic-nature.json",
       "status": "repaired",
       "classification": "reviewed_locator_clarification",
-      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced. A terminological stipulation for the existing attribute records, checked against the materialized q.3 a.4 contrast of what a thing is with its esse. No new Lean essence predicate or identity proof is introduced; sourcing a general essence theory remains separate from this vocabulary link. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile.essenceOf. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes.",
+      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced. A terminological stipulation for the existing attribute records, checked against the materialized q.3 a.4 contrast of what a thing is with its esse. No new Lean essence predicate or identity proof is introduced; sourcing a general essence theory remains separate from this vocabulary link. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile.essenceOf. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "256b634683a261c9c539d84335321cf0a87c13bc43e28fc3ace8842898a8fc86",
         "lean_declaration": null
       },
-      "reviewed_sha256": "afd7bc8253ebe399a2c4831c083ce86f85b27af2906f0f620e423bb22f1d34da"
+      "reviewed_sha256": "c1448badfdb738bc73d160fb55813e35f6c074c4a6cdeaee04c1faf0f8841bcf"
     },
     {
       "kind": "definitions",
@@ -495,12 +495,12 @@
       "path": "corpus/definitions/god-of-classical-theism.json",
       "status": "repaired",
       "classification": "reviewed_locator_clarification",
-      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced. Case vocabulary (TruthCore/Case/Catholicism/Root.lean), not a new proof that anything satisfies it. Dei Filius ch. 1 supplies the attribute list; the open bridge and its parameter mapping are explicit in DEF-CLASSICAL-ATTRIBUTES-BUNDLE. The linked sourced term definitions do not make the primitive IsGod or HasClassicalAttributes fields definitionally equivalent to their natural-language descriptions. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Case.Catholicism.Signature.IsGod. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes.",
+      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced. Case vocabulary (TruthCore/Case/Catholicism/Root.lean), not a new proof that anything satisfies it. Dei Filius ch. 1 supplies the attribute list; the open bridge and its parameter mapping are explicit in DEF-CLASSICAL-ATTRIBUTES-BUNDLE. The linked sourced term definitions do not make the primitive IsGod or HasClassicalAttributes fields definitionally equivalent to their natural-language descriptions. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Case.Catholicism.Signature.IsGod. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "0db89c7e0f0c32183e391255225d564b1e855d0619058e3477ef4d18d6b2b43e",
         "lean_declaration": "TruthCore.Case.Catholicism.Signature"
       },
-      "reviewed_sha256": "99850d49917138e6d304b43be90af44bd397d2ffd18c6af3d1acde624a32091f"
+      "reviewed_sha256": "946f3d8919431425a71ebdfd72c6852cebb59c06de9d04f4790ba6850caffa73"
     },
     {
       "kind": "definitions",
@@ -561,12 +561,12 @@
       "path": "corpus/definitions/in-act-formally.json",
       "status": "inspected",
       "classification": "intentional_abstraction",
-      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced. Sense-indexed follow-up: lean_declaration now names the sense's own declaration in the sense-fork frame; the definition text and the audited results are unchanged.",
+      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced. Sense-indexed follow-up: lean_declaration now names the sense's own declaration in the sense-fork frame; the definition text and the audited results are unchanged. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "3575a6f229d79aab36ae187d9cff79515bc2b3ea4b6ea67142b9d80f5740fe8b",
         "lean_declaration": null
       },
-      "reviewed_sha256": "c4400aa87a336e0bf3c0121d9d8644fbe2a78bab03aeff26549ea82a722ca541"
+      "reviewed_sha256": "64489510f8add8846a344f0e8f223c87c8afe076eb489966d59ab14cc22e72df"
     },
     {
       "kind": "definitions",
@@ -574,12 +574,12 @@
       "path": "corpus/definitions/in-act-virtually.json",
       "status": "inspected",
       "classification": "intentional_abstraction",
-      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced. Sense-indexed follow-up: lean_declaration now names the sense's own declaration in the sense-fork frame; the definition text and the audited results are unchanged.",
+      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced. Sense-indexed follow-up: lean_declaration now names the sense's own declaration in the sense-fork frame; the definition text and the audited results are unchanged. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "cce492e875524e50c7ab8b9ccde2d4329996ab639a8ba7edeb9503ffeefeedc9",
         "lean_declaration": null
       },
-      "reviewed_sha256": "df703e3bbff97b25897d59a06c99536fccdba482e490848cda7e079d5d4eee73"
+      "reviewed_sha256": "b9ead212b973d3b468acffa5d72e7343675d44836b5e8fabca403d2de2968074"
     },
     {
       "kind": "definitions",
@@ -665,12 +665,12 @@
       "path": "corpus/definitions/respect.json",
       "status": "repaired",
       "classification": "reviewed_locator_clarification",
-      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced. A modeling parameter of the prima via reconstruction (TruthCore/Latin/Aquinas/SummaTheologiae/PrimaPars/Question2/Article3.lean), kept abstract so that the formal results do not depend on what motus covers. The reading as perfection follows ST I q.4 a.1 (passage AQUINAS-ST-I-Q4-A1); no claim states it in this form yet. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel.Respect. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes.",
+      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced. A modeling parameter of the prima via reconstruction (TruthCore/Latin/Aquinas/SummaTheologiae/PrimaPars/Question2/Article3.lean), kept abstract so that the formal results do not depend on what motus covers. The reading as perfection follows ST I q.4 a.1 (passage AQUINAS-ST-I-Q4-A1); no claim states it in this form yet. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel.Respect. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "2311bf6a4d5eae003aa035b80f4206ebda5655ba28555fb3cd15a26e2a094c4b",
         "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel"
       },
-      "reviewed_sha256": "8cb92cc276caaa74813c22240ca775a6ea2b84e811050b98f2d0fe80e2e9d820"
+      "reviewed_sha256": "98fa25e2d114699bdaf77d94c187ff3369f6d4f3c47cd43c67396c2ae1db315d"
     },
     {
       "kind": "definitions",

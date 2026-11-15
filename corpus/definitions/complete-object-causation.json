@@ -9,5 +9,20 @@
     "7b61df12-2f87-5d0d-86d4-e650a0d7c650"
   ],
   "lean_declaration": "TruthCore.Logic.Regress.Graph.edge",
-  "note": "Graph.edge is still mathematically primitive: the name certifies no real causal role. Ordinary production suggests the interpretation, but no independently established physical example of the ENTIRE atomicity/complete-cause/nonoverlap/fusion profile is supplied here; the two-object model is only formal. Complete production differs from constitutive parthood, partial enabling contribution, temporal precedence and generic grounds. Nonoverlap/activity/unique-cause are separate policies, not laws inserted into Graph. No causal transitivity or WF is assumed. In particular R⊆Ground does not lift an uncaused R-source into a grounding root; Ground⊆R, contingent-R-causation or another faithful dictionary would need independent defense."
+  "note": "Graph.edge is still mathematically primitive: the name certifies no real causal role. Ordinary production suggests the interpretation, but no independently established physical example of the ENTIRE atomicity/complete-cause/nonoverlap/fusion profile is supplied here; the two-object model is only formal. Complete production differs from constitutive parthood, partial enabling contribution, temporal precedence and generic grounds. Nonoverlap/activity/unique-cause are separate policies, not laws inserted into Graph. No causal transitivity or WF is assumed. In particular R⊆Ground does not lift an uncaused R-source into a grounding root; Ground⊆R, contingent-R-causation or another faithful dictionary would need independent defense.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Regress.Graph.edge c e is a bare directed edge of the analyst's structural regress schema (#412), from an upstream relatum to its dependent. Under Rutten's interpretation, the one this DEF records, it says that c brings e into existence as its complete cause; several partial contributors jointly form one sum-cause.",
+    "examples_unavailable": "No independently established physical example of the whole atomicity, complete-cause, nonoverlap and fusion profile is supplied; the two-object model is only formal. Ordinary production suggests the interpretation without instantiating the full profile.",
+    "exclusions": [
+      "Constitutive parthood, partial enabling contribution, temporal precedence and generic grounds (DISAMB-COMPLETE-CAUSE-PARTIAL-GROUND).",
+      "Each of several partial contributors taken alone: they form one sum-cause."
+    ],
+    "open_obligations": [
+      "The name certifies no real causal role; the edge is mathematically primitive.",
+      "One incoming complete cause per effect, nonoverlap and activity are separate policies, not laws of the graph; no transitivity or well-foundedness is assumed.",
+      "A causal-to-grounding dictionary (R ⊆ Ground, Ground ⊆ R or another) would need independent defense; R ⊆ Ground does not lift an uncaused source into a grounding root.",
+      "No formalization candidate: the graph is a parameter of the schema."
+    ]
+  }
 }

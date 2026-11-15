@@ -10,5 +10,25 @@
     "0a4a8418-056e-5d6d-b0a8-51b5ee4d0eb4"
   ],
   "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel.MovedIn",
-  "note": "Lean locators: MotionModel.MovedIn : Being → Respect → Prop is the primary field for being moved, and MotionModel.MovesIn : Being → Being → Respect → Prop is the separate mover field. These are primitive parameters, not definitions that reduce one relation to the other. The source-reading premises constrain them; the intended reduction interpretation and its applicability remain OPEN."
+  "note": "Lean locators: MotionModel.MovedIn : Being → Respect → Prop is the primary field for being moved, and MotionModel.MovesIn : Being → Being → Respect → Prop is the separate mover field. These are primitive parameters, not definitions that reduce one relation to the other. The source-reading premises constrain them; the intended reduction interpretation and its applicability remain OPEN.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "MotionModel.MovedIn x r says that the being x is being moved in the respect r, where 'moved' is read broadly as being brought from potency to act in r, at one time (the present phase of a reduction, not a past history). In a MotionModel it is a supplied relation between a being and a respect; nothing in its type limits it to local motion, to bodies or to change in time. Its companion field MovesIn y x r (y so reduces x) is separate: Lean does not define either relation through the other.",
+    "examples": [
+      "Wood being heated by fire, read with x the wood and r being hot (the stock example of ST I q.2 a.3).",
+      "A knower passing from not contemplating to contemplating, read with r the respect of contemplating, falls under the broad reading; it is not a local motion."
+    ],
+    "exclusions": [
+      "Having been changed in the past: a finished change is not a present MovedIn edge.",
+      "Merely being in potency to r without being brought towards act (InPotency alone).",
+      "Aristotle's physical change (DEF-MOTION-AS-PHYSICAL-CHANGE) is only one kind of such reduction; DISAMB-MOTION keeps the two senses apart and restricts the typed Physics readings to physical respects (DEF-PHYSICAL-RESPECT).",
+      "The causal senses moving, causing a perfection and cause of origin are kept apart in DISAMB-CAUSE; MovedIn is the patient side of moving only."
+    ],
+    "open_obligations": [
+      "The link to potency is a premise, not a law of the field: STMT-NOTHING-MOVED-EXCEPT-AS-IN-POTENCY (MovedOnlyAsInPotencyReading) constrains it, and STMT-SOMETHING-IS-MOVED-IN-THIS-WORLD supplies an instance; both are open.",
+      "That whatever is moved has a mover (ReducedOnlyByAMoverReading) and that nothing moves itself in the same respect are separate open premises; neither holds by the type of MovedIn.",
+      "Whether the intended reduction reading applies to an observed change remains OPEN.",
+      "Formalization candidate: Physics III.1's analysis (BeingMovedIsActualizationOfPotencyReading) could define MovedIn as being in potency with that potency actualized; ACT-POTENCY-DEFINITIONAL-ANALYSES-CONSERVATIVE shows this is conservative over the premise it makes analytic, so it moves the question to the new primitive ActualizedQuaPotential rather than settling it."
+    ]
+  }
 }

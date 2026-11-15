@@ -6,5 +6,21 @@
   "definition": "A weaker, potentially reductionist use of the word soul in which it designates the coordinated powers or organization of a living system, without adding an irreducible intrinsic formal principle. The toy model locates those features in its observable predicates instead of counting them as its distinct SoulAsForm predicate.",
   "basis": "stipulative",
   "note": "Comparative terminology only (#329), not attributed to a particular author. Whether a particular hylomorphist's form is functionally reducible is a separate source and metaphysical question.",
-  "lean_declaration": "TruthCore.Mereology.Vitalism.Scenario.Integrated"
+  "lean_declaration": "TruthCore.Mereology.Vitalism.Scenario.Integrated",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "In the reading 'soul as functional organization', the word soul names the coordinated powers or organization of a living system without an added irreducible formal principle. In the toy model that organization is represented by Scenario.Integrated p: the system at phase p shows coordinated activity. Integrated is a predicate on the two phases (early, late) of the toy turnover history in TruthCore.Mereology.Vitalism (#329), supplied by each scenario.",
+    "examples": [
+      "The coordinated subsystems of an organism (circulation, metabolism, repair), described functionally."
+    ],
+    "exclusions": [
+      "Soul as irreducible principle of substantial unity (SoulAsForm): DISAMB-MEREO-SOUL.",
+      "Substantial unity (SubstantialUnity): integration does not by itself make the system one substance (DISAMB-MEREO-UNITY)."
+    ],
+    "open_obligations": [
+      "Whether a particular hylomorphist's form is functionally reducible is a separate source and metaphysical question.",
+      "The same Lean field also carries structural unity (DEF-MEREO-STRUCTURAL-UNITY); the two readings share the observable predicate and differ only in the word's use, not in the model.",
+      "No formalization candidate: in the toy model Integrated is an observable input."
+    ]
+  }
 }
