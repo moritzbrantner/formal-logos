@@ -18,15 +18,18 @@ use truth::{
 mod args;
 mod bridges;
 mod check;
+mod configurations;
 mod context;
 mod dossier;
 mod frontier;
 mod frontier_diff;
 mod inspect;
+mod models;
 mod orphans;
 mod related;
 mod research;
 mod status;
+mod territory;
 mod thickness;
 
 pub use args::{Accepts, Args};
@@ -43,6 +46,9 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] related STATEMENT [--limit N]
        truth [--root PATH] [--json] dossier (STATEMENT | --all) [--frontier-json FILE] [--limit N]
        truth [--root PATH] [--json] context TARGET [--frontier-json FILE] [--limit N] [--related N]
+       truth [--root PATH] [--json] configurations --registered [--case ID] [--seed STATEMENT] [--premise STATEMENT]...
+       truth [--root PATH] [--json] models
+       truth [--root PATH] [--json] territory [--frontier-root STATEMENT] [--max-atoms N]
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
@@ -77,6 +83,9 @@ pub const COMMANDS: &[Command] = &[
     related::COMMAND,
     dossier::COMMAND,
     context::COMMAND,
+    configurations::COMMAND,
+    models::COMMAND,
+    territory::COMMAND,
 ];
 
 /// Parses `args` and runs the command it names.
@@ -244,9 +253,8 @@ pub fn load(args: &Args) -> Result<(Corpus, Aliases, String), Failure> {
 /// `thickness`, `frontier` and `dossier --all` call `validate()` first; a
 /// Rust port of such a command that must keep that behaviour calls this
 /// before [`load`]. Warnings are not printed (Python prints them only for
-/// `check`). The commands ported so far perform only the structural load and
-/// do not call it.
-#[allow(dead_code)]
+/// `check`). `territory` calls it; the other ported commands perform only
+/// the structural load.
 pub fn validate_first(root: &Path) -> Result<truth::check::Outcome, Failure> {
     truth::check::check(root)
         .map_err(|message| (2, json!({"code": "corpus_error", "message": message})))

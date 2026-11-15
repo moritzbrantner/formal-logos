@@ -31,6 +31,22 @@ pub struct ResearchArgs {
     pub frontier: Option<String>,
 }
 
+/// The options of `configurations`, `models` and `territory`.
+#[derive(Default)]
+pub struct ConfigurationArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    pub case: Option<String>,
+    pub seed: Option<String>,
+    pub premises: Vec<String>,
+    pub registered: bool,
+    /// `models --check`, `--argument` and `--verify` (Lean; Python only).
+    pub check: Option<String>,
+    pub argument: Option<String>,
+    pub verify: bool,
+    pub max_atoms: Option<i64>,
+}
+
 /// Every option of every command, parsed in one pass in token order.
 pub struct Args {
     pub machine: bool,
@@ -44,6 +60,7 @@ pub struct Args {
     pub frontier_root: String,
     pub frontier: FrontierArgs,
     pub research: ResearchArgs,
+    pub configuration: ConfigurationArgs,
 }
 
 /// The shared options a command accepts besides `--root` and `--json`;
@@ -60,6 +77,8 @@ pub struct Accepts {
     pub frontier: bool,
     /// `--base` and `--head`
     pub revisions: bool,
+    /// The [`ConfigurationArgs`] (each command checks which of them apply)
+    pub configuration: bool,
 }
 
 fn number(value: Option<&str>, flag: &str) -> Result<usize, Failure> {
@@ -90,6 +109,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         frontier_root: thickness::DEFAULT_ROOT.to_owned(),
         frontier: FrontierArgs::default(),
         research: ResearchArgs::default(),
+        configuration: ConfigurationArgs::default(),
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -164,6 +184,31 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                                 .to_owned(),
                         )
                     }
+                }
+            }
+            "--registered" | "--verify" => {
+                parsed.configuration.flags = true;
+                if arg == "--registered" {
+                    parsed.configuration.registered = true;
+                } else {
+                    parsed.configuration.verify = true;
+                }
+            }
+            "--case" | "--seed" | "--premise" | "--check" | "--argument" | "--max-atoms" => {
+                parsed.configuration.flags = true;
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                    .to_owned();
+                let configuration = &mut parsed.configuration;
+                match arg {
+                    "--case" => configuration.case = Some(value),
+                    "--seed" => configuration.seed = Some(value),
+                    "--premise" => configuration.premises.push(value),
+                    "--check" => configuration.check = Some(value),
+                    "--argument" => configuration.argument = Some(value),
+                    _ => configuration.max_atoms = Some(integer(Some(&value), arg)?),
                 }
             }
             "--constants" | "--queue-file" | "--target" | "--targets" | "--top" | "--pool" => {
@@ -254,6 +299,11 @@ impl Args {
         }
         if !accepts.revisions && (self.frontier.base.is_some() || self.frontier.head.is_some()) {
             return Err(usage("--base and --head apply only to frontier-diff"));
+        }
+        if !accepts.configuration && self.configuration.flags {
+            return Err(usage(
+                "--case, --seed, --premise, --registered, --check, --argument, --verify and --max-atoms apply only to configurations, models and territory",
+            ));
         }
         Ok(())
     }

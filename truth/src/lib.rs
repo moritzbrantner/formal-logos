@@ -1,8 +1,10 @@
 //! Read-only structural view of the canonical corpus.
 pub mod bridges;
 pub mod check;
+pub mod configurations;
 pub mod context;
 pub mod dossier;
+pub mod finite_models;
 pub mod frontier;
 pub mod identity;
 mod kernels;
@@ -10,6 +12,7 @@ pub mod orphans;
 pub mod pyfmt;
 pub mod related;
 pub mod senses;
+pub mod territory;
 pub mod thickness;
 mod transcription;
 
