@@ -204,6 +204,20 @@ def write_contract(root, lean, *, tamper=False):
     (root / "scripts" / "contracts" / "fix.json").write_text(json.dumps(contract))
 
 
+FAKE_LAKE = """#!/bin/sh
+# Stands in for `lake`: requires every file argument to exist from the
+# working directory it is run in, as the real Lean would.
+if [ "$1" = build ]; then exit 0; fi
+if [ "$3" = --run ]; then
+  [ -f "$4" ] || { echo "missing exporter $4" >&2; exit 1; }
+  [ -f "$5" ] || { echo "missing input $5" >&2; exit 1; }
+  cat "$FAKE_DESCRIBED"; exit 0
+fi
+[ -f "$3" ] || { echo "missing certificates $3" >&2; exit 1; }
+sed -n "s/^#print axioms \\(.*\\)/'FiniteModelCertificates.\\1' does not depend on any axioms/p" "$3"
+"""
+
+
 class TruthBindCheckParity(ParityCase):
     """`truth bind-check` against `corpus.py bind-check` from one exporter output."""
 
@@ -270,6 +284,31 @@ class TruthBindCheckParity(ParityCase):
                 broken = copy.deepcopy(lean)
                 entry(broken, "fixAB")["expression_contract"]["encoding"] = "other"
                 self.run_both(root, broken, self.resolve(RES_AB))
+
+    def test_relative_root_runs_the_exporter_and_models(self):
+        """A relative `--root` other than `.` (PR #1650 review): the exporter
+        and certificate paths must name the files from the child's working
+        directory, the checkout itself."""
+        with tempfile.TemporaryDirectory() as temporary:
+            parent = Path(temporary)
+            root = parent / "checkout"
+            root.mkdir()
+            write_check_fixture(root)
+            (root / "scripts" / "BindTypes.lean").write_text("-- exporter stand-in\n")
+            described_path = parent / "described.json"
+            described_path.write_text(json.dumps(described()))
+            tools = parent / "bin"
+            tools.mkdir()
+            (tools / "lake").write_text(FAKE_LAKE)
+            (tools / "lake").chmod(0o755)
+            env = dict(os.environ, PATH=f"{tools}{os.pathsep}{os.environ['PATH']}",
+                       FAKE_DESCRIBED=str(described_path))
+            rust = subprocess.run([self.binary, "--root", "checkout", "--json", "bind-check"], cwd=parent,
+                                  env=env, capture_output=True, text=True, check=False)
+            self.assertEqual(rust.returncode, 1, rust.stderr)  # the fixture's unused pins are stale
+            report = json.loads(rust.stdout)
+            self.assertEqual(report["models"], {"models": 1, "certificates": 3, "axioms": []})
+            self.assertEqual(len(report["stale_pins"]), 2)
 
     def test_real_corpus_exporter_input(self):
         """The exporter input is Python's byte for byte; with a recorded

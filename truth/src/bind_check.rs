@@ -367,6 +367,7 @@ pub fn tool_input(corpus: &Corpus, contracts: &Contracts, requests: &[Request]) 
 
 /// Runs the exporter on `input` (Python `run_bind_tool`); needs `lake build`.
 pub fn run_tool(root: &Path, input: &str) -> Result<Vec<Value>, String> {
+    let root = &absolute(root);
     let path = std::env::temp_dir().join(format!(
         "truth-bind-check-{}-{}.json",
         std::process::id(),
@@ -1235,6 +1236,7 @@ fn run_limited(
 /// Python `finite_models.verify_models`: builds the models' modules, compiles
 /// the certificates and requires each to be zero-axiom.
 pub fn verify_models(root: &Path, corpus: &Corpus) -> Result<Value, String> {
+    let root = &absolute(root);
     let models = corpus.records("models");
     if models.is_empty() {
         return Ok(json!({"models": 0, "certificates": 0, "axioms": []}));
@@ -1284,6 +1286,15 @@ pub fn verify_models(root: &Path, corpus: &Corpus) -> Result<Value, String> {
         }
     }
     Ok(json!({"models": models.len(), "certificates": names.len(), "axioms": []}))
+}
+
+/// `root` as an absolute path, so a path built from it still names the same
+/// file inside a child process whose working directory is `root` (a relative
+/// `--root` other than `.` would otherwise be resolved twice).
+pub fn absolute(root: &Path) -> PathBuf {
+    fs::canonicalize(root)
+        .or_else(|_| std::path::absolute(root))
+        .unwrap_or_else(|_| root.to_owned())
 }
 
 /// SHA-256 as lowercase hex (FIPS 180-4).
@@ -1355,6 +1366,17 @@ pub fn sha256_hex(bytes: &[u8]) -> String {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn absolute_root_survives_a_child_working_directory() {
+        let parent = std::env::current_dir().unwrap();
+        let relative = Path::new("src");
+        let root = absolute(relative);
+        assert!(root.is_absolute());
+        assert_eq!(root, fs::canonicalize(parent.join("src")).unwrap());
+        // The exporter path is the same file whatever the child's directory.
+        assert!(root.join("bind_check.rs").is_file());
+    }
 
     #[test]
     fn sha256_matches_known_vectors() {
