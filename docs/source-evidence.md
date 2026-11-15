@@ -200,9 +200,14 @@ Workers must read that materialized text and relevant context before creating cl
 Offline structural validation:
 
 ```bash
-python3 scripts/source_evidence.py check
-python3 scripts/corpus.py check
+target/release/truth check
 ```
+
+`truth check` runs every offline rule of `python3 scripts/source_evidence.py
+check` (passage manifest schema, source and edition bindings, overlapping
+ranges, one passage per claim, translation basis and witness markers) with
+the same messages; the Python command stays for its summary line and other
+users.
 
 **No full-source verification requirement** (owner direction, 2026-11-11).
 PR, `main`, scheduled and manual CI runs use offline corpus/source validation
@@ -213,7 +218,7 @@ Public hosts, archives and historical response bytes are not CI dependencies.
 The PR attribution check also runs offline:
 
 ```bash
-python3 scripts/corpus.py attribution-check --base <merge-base>
+target/release/truth attribution-check --base <merge-base>
 ```
 
 It checks the presence and form of the attribution for selected changed claims,
@@ -225,7 +230,7 @@ researcher read the cited material; fidelity remains a research/review judgment.
 
 For a selected source question, use `materialize <PASSAGE-ID>` and read the text
 and context. The optional `attribution-check --materialize` acquires the selected
-claims' passages and fails on acquisition or hash/extraction errors. These
+claims' passages (through `source_evidence.py materialize`) and fails on acquisition or hash/extraction errors. These
 explicit research tools keep their integrity checks; they are not routine
 merge, build or local verification requirements. Preserve existing source
 records and pins, and follow the fidelity-review process when revising a witness.

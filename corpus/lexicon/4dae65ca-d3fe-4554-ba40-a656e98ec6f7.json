@@ -1,0 +1,11 @@
+{
+  "id": "4dae65ca-d3fe-4554-ba40-a656e98ec6f7",
+  "label": "follow (ordinary)",
+  "lemma": "follow",
+  "class": "ordinary",
+  "forms": [
+    "follows",
+    "followed"
+  ],
+  "gloss": "(of a conclusion) to be a logical consequence of premises; also to come after."
+}

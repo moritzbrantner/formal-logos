@@ -16,6 +16,7 @@ use truth::{
 };
 
 mod args;
+mod attribution_check;
 mod bind_check;
 mod bridges;
 mod check;
@@ -79,6 +80,7 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] unused-premises [--strict] [--exemptions FILE] [--frontier-root STATEMENT]
              [--bind-json FILE] [--usage-json FILE]
        truth [--root PATH] [--json] lean-reuse --review [--usage-json FILE]
+       truth [--root PATH] [--json] attribution-check --base REV [--materialize] [--max-chars N]
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
@@ -132,6 +134,7 @@ pub const COMMANDS: &[Command] = &[
     strength::REPORT,
     unused_premises::COMMAND,
     lean_reuse::COMMAND,
+    attribution_check::COMMAND,
 ];
 
 /// Parses `args` and runs the command it names.
@@ -168,6 +171,9 @@ pub fn run(args: &[OsString]) -> Output {
                      --proof-use-json apply only to unused-premises, lean-reuse and context",
                 ))
             }
+            Some(command) if args.attribution.flags && command.name != "attribution-check" => Err(
+                usage("--materialize and --max-chars apply only to attribution-check"),
+            ),
             Some(command) => (command.run)(&args, operands),
             None => Err(args.shape_error()),
         },
@@ -203,6 +209,7 @@ pub fn main(args: &[OsString]) -> ExitCode {
         }
         Err((code, error)) if error["code"] == "raw_output" => {
             print!("{}", error["stdout"].as_str().unwrap_or_default());
+            eprint!("{}", error["stderr"].as_str().unwrap_or_default());
             ExitCode::from(code)
         }
         Err((code, error)) => {
@@ -235,6 +242,15 @@ pub fn main(args: &[OsString]) -> ExitCode {
 /// may be nonzero on success: `main` prints `stdout` exactly and exits `code`.
 pub fn raw(code: u8, stdout: String) -> Failure {
     (code, json!({"code": "raw_output", "stdout": stdout}))
+}
+
+/// [`raw`] with `stderr` printed exactly after `stdout` (a Python report
+/// that prints its findings to stdout and its failures to stderr).
+pub fn raw_with_stderr(code: u8, stdout: String, stderr: String) -> Failure {
+    (
+        code,
+        json!({"code": "raw_output", "stdout": stdout, "stderr": stderr}),
+    )
 }
 
 /// A Python `CorpusError`: `corpus error: …`, exit code 2.

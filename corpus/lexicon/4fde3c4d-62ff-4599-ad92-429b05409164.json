@@ -1,0 +1,11 @@
+{
+  "id": "4fde3c4d-62ff-4599-ad92-429b05409164",
+  "label": "fail (ordinary)",
+  "lemma": "fail",
+  "class": "ordinary",
+  "forms": [
+    "fails",
+    "failed"
+  ],
+  "gloss": "(of a proposition) to be false at the point of evaluation; (of a proof or check) not to succeed."
+}

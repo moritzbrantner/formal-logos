@@ -1,0 +1,7 @@
+{
+  "id": "a21833fa-27df-406e-ab8d-4438791a1026",
+  "label": "bound (ordinary)",
+  "lemma": "bound",
+  "class": "ordinary",
+  "gloss": "A limit, such as an upper or lower bound in an order; also, of a variable or premise, tied to a quantifier or a Lean declaration."
+}

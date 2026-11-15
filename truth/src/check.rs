@@ -1968,12 +1968,27 @@ fn load_passages(root: &Path) -> Res<Vec<Record>> {
     Ok(passages)
 }
 
-fn validate_bindings(root: &Path, sources: &[Record], claims: &[Record]) -> Res<usize> {
-    let source_index = index_by_id(sources, "source")?;
+/// `source_evidence.passage_index`: every passage (snapshot fields merged
+/// into each entry), in load order, after the per-kind manifest validation
+/// and the unique-id check, failing with Python's first message.
+pub fn passage_index(root: &Path) -> Res<Vec<Record>> {
     let passages = load_passages(root)?;
     for record in &passages {
         manifest::validate_manifest(&record.path, &record.fields)?;
     }
+    index_by_id(&passages, "passage")?;
+    Ok(passages)
+}
+
+/// `source_evidence.load_json_dir`: every `corpus/<name>/*.json` object, in
+/// path order.
+pub fn load_json_dir(root: &Path, name: &str) -> Res<Vec<Record>> {
+    load_dir(root, name)
+}
+
+fn validate_bindings(root: &Path, sources: &[Record], claims: &[Record]) -> Res<usize> {
+    let source_index = index_by_id(sources, "source")?;
+    let passages = passage_index(root)?;
     let passage_index = index_by_id(&passages, "passage")?;
     // IDs are unique now, so the index order is the load order.
     let ordered: Vec<&Record> = passages.iter().collect();

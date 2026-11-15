@@ -1,0 +1,10 @@
+{
+  "id": "e5a37361-72ab-405b-b9d8-7c04cab0c5aa",
+  "label": "discharge (ordinary)",
+  "lemma": "discharge",
+  "class": "ordinary",
+  "forms": [
+    "discharged"
+  ],
+  "gloss": "To settle a premise or assumption, by proving it or closing it under the frontier rules."
+}

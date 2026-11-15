@@ -1,0 +1,7 @@
+{
+  "id": "95c940cb-0867-4da0-bd30-3963bfdd0010",
+  "label": "sense (ordinary)",
+  "lemma": "sense",
+  "class": "ordinary",
+  "gloss": "One meaning of a word or term; in the repository, a numbered sense label such as TERM_n recorded in a disambiguation (docs/corpus-model.md, \"Sense-indexed terms\")."
+}

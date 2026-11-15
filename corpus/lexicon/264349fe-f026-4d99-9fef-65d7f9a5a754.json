@@ -1,0 +1,10 @@
+{
+  "id": "264349fe-f026-4d99-9fef-65d7f9a5a754",
+  "label": "import (ordinary)",
+  "lemma": "import",
+  "class": "ordinary",
+  "forms": [
+    "imported"
+  ],
+  "gloss": "To bring a Lean module into scope; also to take over from elsewhere."
+}
