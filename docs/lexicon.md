@@ -102,30 +102,42 @@ silence the rule for a word such as *necessary* or *being*.
 
 ## Ratchet
 
-`corpus/lexicon-allowlist.json` is generated. It holds one line per legacy
-prose field with a violation: the field's `fnv1a64` text hash, its untraced
-words and its unlinked lemmas.
+`corpus/lexicon-allowlist.json` is generated. It grandfathers whole fields.
+Each line maps a legacy prose field (`kind/id/field`) to the `fnv1a64` hash of
+its text when it was allowlisted. It lists no words (#1652 L1b).
 
-- **An unchanged field may keep its listed words.** `truth check` reports the
-  backlog as one `warning: lexicon: …` summary line.
-- **Any other violation is reported per field.** This covers:
-  - a new field;
-  - a changed field, whose hash no longer matches;
-  - a word that is not listed.
+- **An unchanged field is legacy backlog.** While the text hash matches, every
+  current finding in the field counts as backlog, never as new. Findings are
+  untraced words and unlinked senses, whatever the current lexicon makes of
+  them, so the lexicon can grow without creating new violations in old prose.
+  For example:
+  - a newly traced part of a hyphenated compound (`negation-closure` → `closure`)
+    can expose a multi-sense part;
+  - a new multi-sense technical entry (*concrete*, *cause*) can turn ordinary
+    old uses into unlinked senses.
 
-  Each report names the field and gives the count and the offending words.
-  While the lexicon is in warn mode (below), these are `warning: lexicon: …`
-  lines. In strict mode they are a `truth check` error, so every new or changed
-  prose field must be fully traced.
-- **The allowlist may only shrink.** CI runs
-  `truth lexicon ratchet --base HEAD^1` on pull requests. It fails when an
-  entry is added, re-hashed or gains a word. This mirrors the sense-index
-  allowlist (#1233).
+  `truth check` reports the backlog as one `warning: lexicon: …` summary line,
+  with the counts computed live.
+- **A new field, or a changed field whose hash no longer matches, must be fully
+  traced.** Each finding is reported per field with its count and words. In
+  warn mode (below) these are `warning: lexicon: …` lines. In strict mode they
+  are a `truth check` error.
+- **The allowlist may only shrink, field by field.** CI runs
+  `truth lexicon ratchet --base HEAD^1` on pull requests. It fails when a field
+  is added or listed again with a different hash. Fields only disappear:
+  - when they are fully traced and `truth lexicon allowlist --write` removes
+    them;
+  - when their text changes. A changed field is never re-listed.
+
+  This mirrors the sense-index allowlist (#1233).
 - **Regenerate with `truth lexicon allowlist --write`.** When the file exists,
-  regeneration only removes entries. It seeds the file only when it is absent.
-  Stale entries are harmless, and `truth check` counts them as removable.
-  After a merge conflict in the file, take either side and rerun the
-  generator.
+  regeneration keeps only listed fields with an unchanged hash that still have a
+  finding. It seeds the file only when it is absent. Stale entries are harmless,
+  and `truth check` counts them as removable. After a merge conflict in the
+  file, take either side and rerun the generator. The ratchet reads the older
+  schema-1 file (with word lists) for its hashes.
+- **Live worklists.** Coverage numbers and the `untraced` worklist are
+  computed from the current scan, not from the allowlist.
 
 ## Enforcement: warn now, strict later
 
