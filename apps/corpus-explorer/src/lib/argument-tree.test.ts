@@ -68,7 +68,11 @@ describe("re-rooted argument tree view", () => {
   test("accepts the CLI shape and rejects a tree without its root node", () => {
     expect(parseArgumentTree(fixture).root).toBe("X");
     expect(() => parseArgumentTree({ ...fixture, statements: fixture.statements.slice(1) })).toThrow("no root node");
-    expect(() => parseArgumentTree({ ...fixture, schema_version: 2 })).toThrow();
+    expect(() => parseArgumentTree({ ...fixture, schema_version: 3 })).toThrow();
+    const derived = { kind: "contrapositive", from: "X", to: "Y", argument_id: null, relation_id: null, result_id: null, extra_premises: [], verified: false, derivation: null, cycle: false };
+    const v2 = parseArgumentTree({ ...fixture, schema_version: 2, edges: [...fixture.edges, derived] });
+    expect(v2.edges.some((edge) => edge.kind === "contrapositive")).toBe(false);
+    expect(v2.derived_edges).toHaveLength(1);
   });
 
   test("puts support below and dependents above, co-premises and strength neighbours beside their partners", () => {
