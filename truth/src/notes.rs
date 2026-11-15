@@ -373,14 +373,16 @@ pub fn parse(path: &str, text: &str) -> Note {
         } else if let Some(found) = fence(line) {
             open = Some(found);
         } else if let Some((level, heading)) = heading(line) {
+            // github-slugger: a taken anchor gets the next `-N` suffix that is
+            // itself free, and every assigned anchor is reserved.
             let base = slug(&heading);
-            let count = used.entry(base.clone()).or_insert(0);
-            let anchor = if *count == 0 {
-                base.clone()
-            } else {
-                format!("{base}-{count}")
-            };
-            *count += 1;
+            let mut anchor = base.clone();
+            while used.contains_key(&anchor) {
+                let count = used.get_mut(&base).expect("base is reserved");
+                *count += 1;
+                anchor = format!("{base}-{count}");
+            }
+            used.insert(anchor.clone(), 0);
             if level == 1 && title.is_none() {
                 title = Some(heading.clone());
             }
@@ -618,6 +620,9 @@ mod tests {
             "follow-up-2026-11-03-the-law"
         );
         assert_eq!(parse("docs/notes/x.md", "no heading").title, "x");
+        let note = parse("docs/notes/d.md", "# R\n## R\n## R-1\n## R\n");
+        let anchors: Vec<_> = note.sections.iter().map(|s| s.anchor.as_str()).collect();
+        assert_eq!(anchors, ["r", "r-1", "r-1-1", "r-2"]);
     }
 
     #[test]
