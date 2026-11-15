@@ -42,3 +42,17 @@ export function truthJson(args: string[]): unknown {
     }),
   );
 }
+
+/**
+ * Run `truth <args>` on the repository for its exit status and text output
+ * (for example `structure-report --check-input`); a failure throws.
+ */
+export function truthText(args: string[], timeout?: number): string {
+  return execFileSync(truthBinary(), args, {
+    cwd: repositoryRoot,
+    encoding: "utf8",
+    stdio: "pipe",
+    timeout,
+    maxBuffer: 64 * 1024 * 1024,
+  });
+}

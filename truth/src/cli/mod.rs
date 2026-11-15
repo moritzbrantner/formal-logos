@@ -32,6 +32,7 @@ mod related;
 mod research;
 mod sort_lists;
 mod status;
+mod structure;
 mod thickness;
 
 pub use args::{Accepts, Args};
@@ -55,6 +56,9 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] sort-lists
        truth [--root PATH] [--json] bind-check [--result RESULT]... [--affected --base REV [--head REV]]
              [--lean-json FILE] [--print-lean-input]
+       truth [--root PATH] [--json] structure STATEMENT [--unfold DECLARATION]... [--extractor-json FILE]
+       truth [--root PATH] [--json] structure-report [--output FILE] [--build-input | --check-input]
+             [--extractor-json FILE]
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
@@ -95,6 +99,8 @@ pub const COMMANDS: &[Command] = &[
     ids::RESULTS,
     sort_lists::COMMAND,
     bind_check::COMMAND,
+    structure::STRUCTURE,
+    structure::REPORT,
 ];
 
 /// Parses `args` and runs the command it names.
@@ -106,6 +112,11 @@ pub fn run(args: &[OsString]) -> Output {
             Some(command) if args.bind.flags && command.name != "bind-check" => Err(usage(
                 "--result, --affected, --lean-json and --print-lean-input apply only to bind-check",
             )),
+            Some(command) if args.structure.flags && !command.name.starts_with("structure") => {
+                Err(usage(
+                    "--unfold, --output, --build-input, --check-input and --extractor-json apply only to structure and structure-report",
+                ))
+            }
             Some(command) => (command.run)(&args, operands),
             None => Err(args.shape_error()),
         },

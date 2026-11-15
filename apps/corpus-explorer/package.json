@@ -13,7 +13,7 @@
     "test:stories": "bun --max-http-header-size=65536 test tests/*.stories.test.ts",
     "stories:coverage": "bun tests/forest-story-model.ts",
     "configuration-inputs": "python3 ../../scripts/corpus.py configuration-report --build-input",
-    "structure-inputs": "python3 ../../scripts/worker_env.py -- python3 ../../scripts/corpus.py structure-report --build-input",
+    "structure-inputs": "cd ../.. && cargo build --locked --release --quiet -p truth && target/release/truth structure-report --build-input",
     "strength-inputs": "python3 ../../scripts/worker_env.py -- python3 ../../scripts/corpus.py strength-report --build-input"
   },
   "dependencies": {

@@ -55,7 +55,7 @@ jobs:
       - name: Build the truth CLI
         run: cargo build --locked --release -p truth
       - name: Derive proposition structure from Lean
-        run: python3 scripts/corpus.py structure-report --output .cache/proposition-structure.json
+        run: target/release/truth structure-report --output .cache/proposition-structure.json
       - name: Certify registered proposition strength comparisons
         run: python3 scripts/corpus.py strength-report --output .cache/strength-comparisons.json
       - name: Build static corpus explorer

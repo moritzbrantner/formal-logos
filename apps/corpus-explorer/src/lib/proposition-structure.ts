@@ -1,6 +1,6 @@
-import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
+import { truthText } from "./truth-cli";
 
 export type ExpressionNode = {
   id: string; kind: string; text: string; type: string; coverage: string;
@@ -62,7 +62,7 @@ export function getStructureReport(statementId: string): StructureReport | undef
       cached = [];
     }
     else {
-      execFileSync("python3", ["scripts/corpus.py", "structure-report", "--check-input", "--output", artifact], { cwd: root, timeout: 60000, stdio: "pipe" });
+      truthText(["structure-report", "--check-input", "--output", artifact], 60000);
       cached = parseStructureReports(JSON.parse(readFileSync(artifact, "utf8")));
     }
   }

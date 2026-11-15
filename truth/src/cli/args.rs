@@ -37,6 +37,24 @@ pub struct BindArgs {
     pub print_input: bool,
 }
 
+/// The `structure` and `structure-report` options.
+#[derive(Default)]
+pub struct StructureArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    /// `--unfold DECLARATION`, repeatable (`structure`).
+    pub unfold: Vec<String>,
+    /// `--output FILE` (`structure-report`).
+    pub output: Option<String>,
+    /// `--build-input` (`structure-report`, the default action).
+    pub build_input: bool,
+    /// `--check-input` (`structure-report`).
+    pub check_input: bool,
+    /// `--extractor-json FILE`: a saved `scripts/PropositionStructure.lean`
+    /// output used instead of running Lean.
+    pub extractor_json: Option<String>,
+}
+
 #[derive(Default)]
 pub struct ResearchArgs {
     pub flags: bool,
@@ -60,6 +78,7 @@ pub struct Args {
     pub frontier: FrontierArgs,
     pub research: ResearchArgs,
     pub bind: BindArgs,
+    pub structure: StructureArgs,
 }
 
 /// The shared options a command accepts besides `--root` and `--json`;
@@ -107,6 +126,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         frontier: FrontierArgs::default(),
         research: ResearchArgs::default(),
         bind: BindArgs::default(),
+        structure: StructureArgs::default(),
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -148,6 +168,28 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                     parsed.bind.results.push(value);
                 } else {
                     parsed.bind.lean_json = Some(value);
+                }
+            }
+            "--build-input" | "--check-input" => {
+                parsed.structure.flags = true;
+                if arg == "--build-input" {
+                    parsed.structure.build_input = true;
+                } else {
+                    parsed.structure.check_input = true;
+                }
+            }
+            "--unfold" | "--output" | "--extractor-json" => {
+                parsed.structure.flags = true;
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                    .to_owned();
+                let structure = &mut parsed.structure;
+                match arg {
+                    "--unfold" => structure.unfold.push(value),
+                    "--output" => structure.output = Some(value),
+                    _ => structure.extractor_json = Some(value),
                 }
             }
             "--routes" => parsed.frontier.routes = true,
