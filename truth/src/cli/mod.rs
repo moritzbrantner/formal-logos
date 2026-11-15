@@ -19,6 +19,7 @@ mod args;
 mod attribution_check;
 mod bind_check;
 mod bridges;
+mod brief;
 mod check;
 mod configurations;
 mod context;
@@ -61,6 +62,10 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] context TARGET [--frontier-json FILE] [--limit N] [--related N]
              [--proof-use | --proof-use-json FILE]
        truth [--root PATH] [--json] issues --from FILE [--for ID]
+       truth [--root PATH] [--json] brief (TARGET | --question TEXT) [--issues-from FILE] [--limit N]
+             [--frontier-json FILE] [--frontier-root STATEMENT]
+       truth [--root PATH] [--json] novelty (TEXT | --statement STATEMENT) [--issues-from FILE] [--limit N]
+             [--frontier-json FILE] [--frontier-root STATEMENT]
        truth [--root PATH] [--json] next
        truth [--root PATH] [--json] next-steps [--frontier-root STATEMENT]
        truth [--root PATH] [--json] arguments
@@ -87,7 +92,8 @@ An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a 
 dossier and context compute the frontier in-process, or read it from FILE, written by
 `python3 scripts/corpus.py frontier --json [--root STATEMENT]` on the same checkout.
 issues and dossier --issues-from read an offline `gh issue list --json
-number,title,body,url,comments` snapshot; truth never calls GitHub.";
+number,title,body,url,comments` snapshot; truth never calls GitHub. brief and novelty
+--issues-from also take `{\"captured_at\": ISO, \"items\": [...]}` with closed issues and PRs.";
 
 /// An error: exit code and the JSON error object (`code`, `message`, ...).
 pub type Failure = (u8, Value);
@@ -119,6 +125,8 @@ pub const COMMANDS: &[Command] = &[
     dossier::COMMAND,
     context::COMMAND,
     issues::COMMAND,
+    brief::BRIEF,
+    brief::NOVELTY,
     next::COMMAND,
     next_steps::COMMAND,
     ids::ARGUMENTS,
@@ -165,6 +173,11 @@ pub fn run(args: &[OsString]) -> Output {
             ),
             Some(command) if args.index.flags && command.name != "index" => {
                 Err(usage("--left and --right apply only to index compare"))
+            }
+            Some(command) if args.brief.flags && !["brief", "novelty"].contains(&command.name) => {
+                Err(usage(
+                    "--question and --statement apply only to brief and novelty",
+                ))
             }
             Some(command) => (command.run)(&args, operands),
             None => Err(args.shape_error()),

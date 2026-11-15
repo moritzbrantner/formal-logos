@@ -171,6 +171,15 @@ impl IssueArgs {
     }
 }
 
+/// `brief --question TEXT` and `novelty --statement ID`.
+#[derive(Default)]
+pub struct BriefArgs {
+    /// Whether either was given.
+    pub flags: bool,
+    pub question: Option<String>,
+    pub statement: Option<String>,
+}
+
 /// Every option of every command, parsed in one pass in token order.
 pub struct Args {
     pub machine: bool,
@@ -193,6 +202,7 @@ pub struct Args {
     pub proof: ProofArgs,
     pub attribution: AttributionArgs,
     pub index: IndexArgs,
+    pub brief: BriefArgs,
 }
 
 /// The shared options a command accepts besides `--root` and `--json`;
@@ -253,6 +263,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         proof: ProofArgs::default(),
         attribution: AttributionArgs::default(),
         index: IndexArgs::default(),
+        brief: BriefArgs::default(),
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -340,6 +351,20 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                     parsed.index.left.push(value);
                 } else {
                     parsed.index.right.push(value);
+                }
+            }
+            "--question" | "--statement" => {
+                parsed.brief.flags = true;
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .filter(|value| !value.trim().is_empty())
+                    .ok_or_else(|| usage(format!("{arg} requires a nonempty UTF-8 value")))?
+                    .to_owned();
+                if arg == "--question" {
+                    parsed.brief.question = Some(value);
+                } else {
+                    parsed.brief.statement = Some(value);
                 }
             }
             "--strict" => parsed.proof.strict = true,
@@ -549,7 +574,9 @@ impl Args {
             return Err(usage("--from and --for apply only to issues"));
         }
         if self.issues.issues_from.is_some() {
-            return Err(usage("--issues-from applies only to dossier"));
+            return Err(usage(
+                "--issues-from applies only to dossier, brief and novelty",
+            ));
         }
         if !accepts.configuration && self.configuration.flags {
             return Err(usage(

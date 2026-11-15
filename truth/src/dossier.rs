@@ -370,6 +370,11 @@ impl<'a> DossierIndex<'a> {
         }
     }
 
+    /// The term -> sense labels of `record` (Python `record_sense_labels`).
+    pub fn sense_labels(&self, record: &'a Record) -> BTreeMap<String, Vec<String>> {
+        self.senses.labels(record)
+    }
+
     pub fn statement_ids(&self) -> Vec<&'a str> {
         let mut ids: Vec<&str> = self.statements.keys().copied().collect();
         ids.sort_unstable();

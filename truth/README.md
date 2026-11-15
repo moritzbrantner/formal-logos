@@ -18,6 +18,9 @@ target/debug/truth context ARGUMENT-ID --json
 target/debug/truth orphans
 target/debug/truth orphans --senses --json
 target/debug/truth issues --from issues.json --for STMT-GOD-EXISTS
+target/debug/truth brief STMT-GOD-EXISTS --issues-from snapshot.json
+target/debug/truth brief --question 'ultimate explanation, brute fact or infinite regress'
+target/debug/truth novelty 'DependsForBeing ↔ ¬CanBeWithout' --issues-from snapshot.json
 target/debug/truth next
 target/debug/truth next-steps --frontier-root STMT-CATHOLICISM-TRUE
 target/debug/truth results
@@ -478,6 +481,64 @@ scripts/source_evidence.py check` (`validate_manifest` and
 `validate_bindings`, with Python's messages; the `check` parity fixture covers
 them). Only the summary line counting bibliographic and permanently
 unavailable passages is Python's; the separate command is no longer a gate.
+
+## `brief` and `novelty`
+
+`truth brief (TARGET | --question TEXT)` and `truth novelty (TEXT |
+--statement STATEMENT)` (#1643, #954 slice B9; `truth::brief`) retrieve the
+cumulative record before a worker judges a premise's maturity or calls a
+result new. Both are read-only views over existing authorities; they add no
+status, judgment or record.
+
+- `brief TARGET` (a statement, or an argument or result read through its
+  conclusion): identity and revision; senses and definitions; **formal
+  status** from the frontier only (closure, `established`, root reach, open
+  leaves; a closure such as `proved` is not establishment); every argument
+  concluding it with its results and unestablished premises (a verified
+  result with an unestablished premise is reported as a conditional
+  consequence); arguments using it; rivals, objections and refutations of
+  rivals; strength orders and equivalences; attempts, newest first; the note
+  sections naming it or its arguments (explicit mentions, `truth::notes`),
+  with the judgment- and rival-headed sections of those notes quoted with
+  their dates and listed newest first, never reconciled; issues and PRs from
+  the snapshot that name it, target it in an acceptance block or are
+  referenced from those notes; `truth related` neighbours; and an `absent`
+  list of what is not recorded or unknown.
+- `brief --question TEXT`: the notes the `truth index` FTS5 projection ranks
+  for any query word (by stem prefix) or identifier, each scored paragraph by
+  paragraph (coverage = query items found in one paragraph), with its best
+  paragraphs, recorded assessments, superseded/retired markers and recent
+  first-parent git history (the PRs that changed it); the statements the best
+  sections name; records by prose coverage; issue numbers the matched
+  sections reference; and snapshot items ranked by evidence weight
+  (referenced from a matched section or a PR that changed a matched note,
+  naming a matched note, naming a statement those notes name, lexical).
+- `novelty TEXT`: exact IDs/labels/paths in the text; corpus statements whose
+  Lean declaration uses the text's identifiers (structural), and arguments
+  using several of them; note paragraphs, read with each note's own notation
+  (`` `D(x,y)` for the existing `DependsForBeing x y` ``) so `D(y,x) ↔
+  ¬B(y,x)` matches `DependsForBeing ↔ ¬CanBeWithout`; record prose; and
+  snapshot issues/PRs. The classification is `already-recorded` (some unit
+  contains every query item, at least two, or the text names a record
+  exactly), `partially-recorded` (at least half) or `no-match-found`, never
+  "novel"; each hit says its evidence kind (an uncertified note, a statement
+  whose status is the frontier's, workflow history). `--statement ID` checks a
+  statement's Lean vocabulary and connectives against everything except that
+  statement. Containment is not equivalence: read the hits.
+
+Both take `--limit N` (entries per text section, default 6; JSON lists more,
+bounded per group) and `--frontier-json`/`--frontier-root` as `dossier`. Hits
+are ordered deterministically (coverage, then evidence kind, then path,
+line, number or id). Note and record search reuses `.cache/truth-index.sqlite`
+while its digest matches and rebuilds it otherwise; the JSON `index` field
+records which. `--issues-from FILE` reads an offline snapshot, either a `gh
+issue list`/`gh pr list --json number,title,body,url,state,comments,updatedAt`
+array or `{"captured_at": ISO, "items": [...]}` (merge issues and PRs with
+`--state all` so closed and superseded work is searchable). Without it the
+output says issue history is **unknown**, never that there is none; a
+snapshot without closed items, or captured before the checkout's HEAD
+commit, is flagged. Errors: an unknown target exits 3; an unreadable
+snapshot exits 2; index errors exit 1. Python has no counterpart.
 
 ## `issues` and `dossier --issues-from`
 
