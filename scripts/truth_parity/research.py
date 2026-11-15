@@ -2,12 +2,13 @@
 import contextlib
 import io
 import json
+import os
 import subprocess
 import tempfile
 from pathlib import Path
 
 import corpus
-from truth_parity.common import humanize, ParityCase
+from truth_parity.common import humanize, NO_BIND_TYPES, ParityCase, without_bind_types
 
 
 def spread(items, count):
@@ -46,10 +47,11 @@ class TruthResearchParity(ParityCase):
         cls.temporary.cleanup()
 
     def truth(self, *args, code=0):
-        result = subprocess.run([self.binary, *args], cwd=corpus.ROOT,
+        result = subprocess.run([self.binary, *args], cwd=corpus.ROOT, env=dict(os.environ, **NO_BIND_TYPES),
                                 capture_output=True, text=True, check=False)
         self.assertEqual(result.returncode, code, (args, result.stderr))
-        return result.stdout, result.stderr
+        stdout = without_bind_types(result.stdout) if "context" in args and code == 0 else result.stdout
+        return stdout, result.stderr
 
     def truth_json(self, *args):
         value = json.loads(self.truth("--json", *args)[0])

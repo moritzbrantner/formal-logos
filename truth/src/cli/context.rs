@@ -1,7 +1,10 @@
 //! `truth context TARGET`: Python `corpus.py context`, the bounded pack for
 //! an argument or result. `--proof-use` runs `scripts/LeanReuse.lean` on
 //! the argument's result theorems (`--proof-use-json FILE` reads a saved
-//! output) and classifies their proof-term references, review only.
+//! output) and classifies their proof-term references, review only. When
+//! `truth bind-check` left a fresh elaborated-type cache, each result also
+//! shows its elaborated type and hypothesis binding (#960); otherwise one
+//! line says why not. Python has no such section.
 
 use super::{
     Args, Command, Output, corpus_error, invalid_target, lean_reuse, load, research, unknown,
@@ -63,7 +66,7 @@ fn run(args: &Args, operands: &[&str]) -> Output {
     } else {
         None
     };
-    let pack = context::context_pack(
+    let mut pack = context::context_pack(
         &args.root,
         &corpus,
         &view,
@@ -71,6 +74,7 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         &matches,
         proof_uses.as_ref(),
     );
+    context::attach_bind_types(&args.root, &corpus, &mut pack);
     let limit = args.research.limit.unwrap_or(context::DEFAULT_LIMIT);
     let text = context::format_context(&pack, limit);
     Ok((with_identity(&pack, &corpus), Some(aliases.humanize(&text))))

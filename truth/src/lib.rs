@@ -1,6 +1,7 @@
 //! Read-only structural view of the canonical corpus.
 pub mod attribution;
 pub mod bind_check;
+pub mod bind_types;
 pub mod bridges;
 pub mod check;
 pub mod configurations;
