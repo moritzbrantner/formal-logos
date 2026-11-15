@@ -71,7 +71,8 @@ run the exporter on the request that `structure-report` records in
 REQUEST.json`) and cut it the same way.
 
 The command asks Lake to establish compiled/source freshness for selected
-modules before extraction. The static artifact records input hashes and rejects
+modules before extraction. The static artifact records input hashes and the
+producing `truth` build's source fingerprint, and rejects
 changed source/corpus inventories. CI and Pages produce it alongside the existing
 configuration input; browser builds validate it without running Lean. Local
 builds without the artifact visibly report unavailable coverage. Published

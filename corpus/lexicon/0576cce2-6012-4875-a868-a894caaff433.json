@@ -1,0 +1,7 @@
+{
+  "id": "0576cce2-6012-4875-a868-a894caaff433",
+  "label": "boolean (ordinary)",
+  "lemma": "boolean",
+  "class": "ordinary",
+  "gloss": "Concerning the two truth values true and false, or the Lean type Bool."
+}

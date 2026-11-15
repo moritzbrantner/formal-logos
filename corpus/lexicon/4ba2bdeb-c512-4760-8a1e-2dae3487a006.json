@@ -1,0 +1,7 @@
+{
+  "id": "4ba2bdeb-c512-4760-8a1e-2dae3487a006",
+  "label": "ci (ordinary)",
+  "lemma": "ci",
+  "class": "ordinary",
+  "gloss": "Abbreviation for continuous integration, the automated checks run on each pull request."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "6d3551f2-2f61-4d6e-8710-36951bbec100",
+  "label": "generate (ordinary)",
+  "lemma": "generate",
+  "class": "ordinary",
+  "forms": [
+    "generated"
+  ],
+  "gloss": "To produce; generated files are written by a tool, not by hand."
+}

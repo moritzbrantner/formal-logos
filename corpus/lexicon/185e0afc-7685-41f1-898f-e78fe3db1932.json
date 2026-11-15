@@ -1,0 +1,7 @@
+{
+  "id": "185e0afc-7685-41f1-898f-e78fe3db1932",
+  "label": "transitivity (ordinary)",
+  "lemma": "transitivity",
+  "class": "ordinary",
+  "gloss": "The property of a relation that if a relates to b and b to c then a relates to c."
+}

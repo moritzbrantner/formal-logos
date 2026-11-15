@@ -1,0 +1,7 @@
+{
+  "id": "c67f5448-c07b-46e7-8b27-f7c34e9b18f2",
+  "label": "hypothesis (ordinary)",
+  "lemma": "hypothesis",
+  "class": "ordinary",
+  "gloss": "A proposition supposed for the sake of argument; in Lean, a named assumption of a theorem."
+}

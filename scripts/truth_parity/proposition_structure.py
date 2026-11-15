@@ -16,8 +16,16 @@ artifacts. The real-corpus cases replay
 `fixtures/proposition-structure-first-slice.json`: the exporter's output for
 the explorer's first slice, recorded from `scripts/PropositionStructure.lean`
 with expression trees cut below depth 3 to keep the file small. If the first
-slice's declarations change, re-record it (see `docs/proposition-structure.md`)."""
+slice's declarations change, re-record it (see `docs/proposition-structure.md`).
+
+Rust's reports add one field Python's lack: `revision.producer_sha256`, the
+fingerprint of the truth crate that produced them (`truth/build.rs`), which
+Rust's `--check-input` requires to match the running binary. It lies outside
+the input digest and the node ids, so the comparisons strip that one field
+from Rust's output (`without_producer`) and compare everything else byte for
+byte; `test_producer_provenance` checks the field itself."""
 import json
+import re
 import subprocess
 import sys
 import tempfile
@@ -49,6 +57,14 @@ sys.exit(corpus.main_with(sys.argv[3:]))
 """
 
 FIX = "TruthCore.Fix."
+
+PRODUCER = re.compile(r'"producer_sha256": "[0-9a-f]{64}",\s*')
+
+
+def without_producer(text):
+    """Rust's output with its `revision.producer_sha256` entries removed: the
+    only field Python's reports do not have (see the module docstring)."""
+    return PRODUCER.sub("", text)
 
 STRUCTURE_LEAN = """public import TruthCore.Fix.Solution
 import Mathlib.Order.Basic
@@ -134,11 +150,12 @@ class TruthStructureParity(ParityCase):
         path.write_text(value if isinstance(value, str) else json.dumps(value, ensure_ascii=False))
         return path
 
-    def run_both(self, root, fixture, args, machine=False):
+    def run_both(self, root, fixture, args, machine=False, rust_args=None):
         python = subprocess.run([sys.executable, "-c", ORACLE, str(root), str(fixture), *args,
                                  *(["--json"] if machine and args[0] == "structure" else [])],
                                 capture_output=True, text=True, check=False)
-        rust = subprocess.run([self.binary, "--root", str(root), *(["--json"] if machine else []), *args,
+        rust = subprocess.run([self.binary, "--root", str(root), *(["--json"] if machine else []),
+                               *(args if rust_args is None else rust_args),
                                "--extractor-json", str(fixture)],
                               capture_output=True, text=True, check=False)
         return python, rust
@@ -149,19 +166,19 @@ class TruthStructureParity(ParityCase):
         python, rust = self.run_both(root, fixture, args, machine)
         self.assertEqual(python.returncode, code, python.stderr)
         self.assertEqual(rust.returncode, code, rust.stderr)
-        self.assertEqual(rust.stdout, python.stdout, args)
+        self.assertEqual(without_producer(rust.stdout), python.stdout, args)
         if code and not machine:
             self.assertEqual(rust.stderr, python.stderr, args)
-        return python
+        return python, rust
 
     def test_statement_reports_text_and_json(self):
         for args in (["structure", "STMT-B"], ["structure", U("statement", "STMT-A"), "--unfold", FIX + "fixA"],
                      ["structure", "STMT-C", "--unfold", FIX + "fixB", "--unfold", FIX + "fixB"]):
             for machine in (False, True):
                 with self.subTest(args=args, machine=machine):
-                    out = self.assert_same(args, machine=machine)
+                    out, _ = self.assert_same(args, machine=machine)
                     self.assertIn("TruthCore.Fix.fixB", out.stdout)
-        report = json.loads(self.assert_same(["structure", "STMT-A"], machine=True).stdout)
+        report = json.loads(self.assert_same(["structure", "STMT-A"], machine=True)[0].stdout)
         self.assertEqual(report["semantic_links"]["definitions"][0]["expression_ids"][0].split("@")[0],
                          U("statement", "STMT-A"))
         self.assertTrue(report["revision"]["head"])
@@ -188,7 +205,8 @@ class TruthStructureParity(ParityCase):
                 self.assertEqual((python.returncode, rust.returncode), (2, 2), (python.stderr, rust.stderr))
 
     def test_check_input(self):
-        report = json.loads(self.assert_same(["structure", "STMT-B"], machine=True).stdout)
+        # Rust's report: Python ignores its producer field, Rust requires it.
+        report = json.loads(self.assert_same(["structure", "STMT-B"], machine=True)[1].stdout)
         artifact = self.scratch / "artifact.json"
 
         def check(value, code, mutate=None):
@@ -217,21 +235,49 @@ class TruthStructureParity(ParityCase):
                                      ["structure-report", "--check-input", "--output", str(self.scratch / "absent.json")])
         self.assertEqual((python.returncode, rust.returncode, rust.stderr), (2, 2, python.stderr))
 
+    def test_producer_provenance(self):
+        """Rust records the producing crate's fingerprint and `--check-input`
+        rejects an artifact without it (Python's) or from other Rust code;
+        Python's checker ignores the field."""
+        python, rust = self.assert_same(["structure", "STMT-B"], machine=True)
+        report = json.loads(rust.stdout)
+        producer = report["revision"]["producer_sha256"]
+        self.assertRegex(producer, r"^[0-9a-f]{64}$")
+        self.assertNotIn("producer_sha256", python.stdout)
+        artifact = self.scratch / "producer.json"
+        args = ["structure-report", "--check-input", "--output", str(artifact)]
+        for name, value, message in (
+            ("stale", "0" * 64, "stale structure artifact producer: truth sources changed"),
+            ("missing", None, "structure artifact lacks producer provenance"),
+        ):
+            with self.subTest(name):
+                revision = dict(report["revision"])
+                if value is None:
+                    del revision["producer_sha256"]
+                else:
+                    revision["producer_sha256"] = value
+                artifact.write_text(json.dumps({"schema_version": 1, "reports": [{**report, "revision": revision}]}))
+                python, rust = self.run_both(self.root, self.exporter([]), args)
+                self.assertEqual(python.returncode, 0, python.stderr)
+                self.assertEqual(rust.returncode, 2, rust.stderr)
+                self.assertIn(message, rust.stderr)
+
     def test_real_first_slice_artifact(self):
         root = corpus.ROOT
+        paths = {side: self.scratch / f"{side}-structure.json" for side in ("python", "rust")}
+        python, rust = self.run_both(root, FIRST_SLICE_FIXTURE, ["structure-report", "--output", str(paths["python"])],
+                                     rust_args=["structure-report", "--output", str(paths["rust"])])
         written = {}
-        for side in ("python", "rust"):
-            path = self.scratch / f"{side}-structure.json"
-            python, rust = self.run_both(root, FIRST_SLICE_FIXTURE, ["structure-report", "--output", str(path)])
-            result = python if side == "python" else rust
+        for side, result in (("python", python), ("rust", rust)):
             self.assertEqual(result.returncode, 0,
                              f"{side}: {result.stderr}\nre-record {FIRST_SLICE_FIXTURE.name} if the first slice changed")
-            self.assertEqual(result.stdout, f"wrote {path}\n")
-            written[side] = path.read_bytes()
-        self.assertEqual(written["rust"], written["python"])
-        artifact = json.loads(written["python"])
+            self.assertEqual(result.stdout, f"wrote {paths[side]}\n")
+            written[side] = paths[side].read_bytes()
+        self.assertEqual(without_producer(written["rust"].decode()), written["python"].decode())
+        artifact = json.loads(written["rust"])
         self.assertEqual(len(artifact["reports"]), 8)
-        path = self.scratch / "python-structure.json"
+        self.assertTrue(all(report["revision"]["producer_sha256"] for report in artifact["reports"]))
+        path = self.scratch / "rust-structure.json"
         self.assert_same(["structure-report", "--check-input", "--output", str(path)], root=root,
                          fixture=FIRST_SLICE_FIXTURE)
 

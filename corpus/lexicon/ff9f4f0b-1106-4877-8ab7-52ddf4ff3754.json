@@ -1,0 +1,7 @@
+{
+  "id": "ff9f4f0b-1106-4877-8ab7-52ddf4ff3754",
+  "label": "unit (ordinary)",
+  "lemma": "unit",
+  "class": "ordinary",
+  "gloss": "One item or measure; in Lean the one-element type Unit."
+}
