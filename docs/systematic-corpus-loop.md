@@ -183,6 +183,32 @@ copying them into the issue:
    requeue genuine remaining research through the current handoff or a
    distinct, linked issue, never a duplicate activity tracker.
 
+**Deferred-research issue retirement (owner direction, 2026-11-15).**
+GitHub is the **active execution queue**, not a permanent catalogue of every
+unresolved proposition. Before filing any new issue, check existing scoped
+issues, statements, definitions/senses, arguments, attempts, dossiers and
+subject notes; keep new interpretations, failed attempts and alternative
+premises there unless a distinct **currently selected and answerable** research
+assignment actually needs its own issue. Keep roughly 8–10 active dispatch
+issues in the single #143 handoff, selected for substantive value; it is a
+working priority, not a quota on philosophical investigations.
+
+An owner-approved **deferral** is a separate GitHub disposition from
+completed research. First preserve the substantive question, relevant
+statement/sense and source references, known established and failed findings,
+and the next discriminating test or reopening condition in an **existing**
+case/subject note or relevant corpus record. Link that note in a GitHub
+comment, retain the issue's full historical discussion, then close it with
+GitHub's **not planned** reason and the explicit words **deferred, not
+resolved**. Do not close genuine research merely to change a metric before
+it has been preserved. A deferred issue is not a verified result, established
+premise, defeated rival or delivered acceptance; no Lean/corpus status changes
+on administrative closure. When the question becomes the next selected
+investigation, consult its evidence first and reopen the issue or create only
+one genuinely separate scoped successor. The existing root epic #143 remains
+the active handoff. The normal completed-issue rule above still applies to
+work that was actually delivered.
+
 **Dispatch and reconciliation.** The coordinator selects one live uncertainty
 and its file/graph ownership from the issue for a worker brief, allowing the
 worker to follow substantive dependencies without a fixed work cap. On
