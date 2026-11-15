@@ -7,7 +7,8 @@ checkout's, otherwise by that revision's own Python. The fixtures are Git
 repositories whose `scripts/corpus.py` is a stub serving a frontier report
 precomputed by the real Python `frontier_report`, so both engines run on
 them: a base commit with a different stub runs its own Python, one with the
-same stub the Rust engine."""
+same stub the Rust engine. A pre-migration (readable-id) base is asked for
+the root's legacy id; its stub rejects a root it does not know."""
 import json
 import os
 import shutil
