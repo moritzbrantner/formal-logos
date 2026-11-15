@@ -178,10 +178,10 @@ jobs:
           set -o pipefail
           if git rev-parse --verify HEAD^1 >/dev/null 2>&1; then
             {
-              echo "### Attribution self-check (\`corpus.py attribution-check --base HEAD^1\`)"
+              echo "### Attribution self-check (\`truth attribution-check --base HEAD^1\`)"
               echo '```text'
               status=0
-              python3 scripts/corpus.py attribution-check --base HEAD^1 --max-chars 2000 2>&1 || status=$?
+              target/release/truth attribution-check --base HEAD^1 --max-chars 2000 2>&1 || status=$?
               echo '```'
               exit $status
             } | tee -a "$GITHUB_STEP_SUMMARY"

@@ -393,6 +393,43 @@ several `--limit` values, and the error cases, from a saved Python report;
 and, for a subset plus `dossier --all`, that the in-process frontier gives the
 same output.
 
+## `attribution-check`
+
+`truth attribution-check --base REV [--materialize] [--max-chars N]` is
+`corpus.py attribution-check` (#989; `scripts/attribution_check.py`), the
+pre-push attribution self-check for stating claims (`truth::attribution`).
+The working tree is the head. It selects the claims added or changed since
+`REV` in an attributed field (`statement_id`, `source_id`, `locator`,
+`interpretation`, `attribution`), compared by id so a moved file is not new,
+those whose statement paraphrase changed and those whose resolved passage
+manifest changed apart from labels; a pre-migration base is read under the
+uuid ids. For each it prints the premise beside the claim locator and the
+cached passage text (`.cache/truth-core/sources`, clipped to `--max-chars`,
+default 6000, 0 never), and fails unless the claim records an `attribution`
+of the required shape. The check is offline: missing or stale cached text is
+reported as not checked. `--materialize` runs `python3
+scripts/source_evidence.py materialize PASSAGE` for each selected passage
+(network acquisition stays Python) and fails on its errors.
+
+Text is Python's byte for byte: the report on stdout (records named `label
+[uuid8]`), the problems on stderr with exit code 1, and `attribution-check
+error: …` on stderr with exit code 2 (an unknown base, a claim that does not
+resolve to one passage, an invalid manifest). Python crashes with a traceback
+on a malformed record (invalid JSON in a changed file); Rust reports it as
+such an error. `--json` prints `base`, `claims` (id, reason, premise,
+locator, interpretation, passage, text or why it was not checked,
+attribution), `problems` and `ok` on stdout with the same exit code; Python
+has no JSON output. `scripts/truth_parity/attribution.py` compares both on
+the cases of `test_attribution_check.py` on fixture repositories (including
+a readable-id base and a stub `materialize`) and on the real corpus against
+several base revisions. CI's attribution step runs it.
+
+`truth check` already includes every offline rule of `python3
+scripts/source_evidence.py check` (`validate_manifest` and
+`validate_bindings`, with Python's messages; the `check` parity fixture covers
+them). Only the summary line counting bibliographic and permanently
+unavailable passages is Python's; the separate command is no longer a gate.
+
 ## `issues` and `dossier --issues-from`
 
 `truth issues --from FILE [--for ID]` is `corpus.py issues --from FILE`: the
