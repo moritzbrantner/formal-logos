@@ -238,7 +238,9 @@ pub fn novelty(
             for (place, unit) in retrieval::issue_units(issue) {
                 let matched = query.matched(&unit, &none);
                 let covered = retrieval::coverage(&matched).0;
-                if covered > best.0 {
+                // A substantial unit beats an operator-only one of equal or
+                // higher coverage, so paragraph order cannot hide it.
+                if (query.substantial(&matched), covered) > (query.substantial(&best.3), best.0) {
                     best = (
                         covered,
                         place.clone(),

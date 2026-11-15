@@ -64,6 +64,25 @@ const OPERATORS: &[(&str, &[&str])] = &[
     ("∃", &["∃", "there exists"]),
 ];
 
+/// Symbolic operator spellings a query may use, longest first, with the
+/// operator each normalizes to.
+const SYMBOLS: &[(&str, &str)] = &[
+    ("<->", "↔"),
+    ("->", "→"),
+    ("/\\", "∧"),
+    ("\\/", "∨"),
+    ("↔", "↔"),
+    ("⇔", "↔"),
+    ("→", "→"),
+    ("⇒", "→"),
+    ("¬", "¬"),
+    ("~", "¬"),
+    ("∧", "∧"),
+    ("∨", "∨"),
+    ("∀", "∀"),
+    ("∃", "∃"),
+];
+
 const STOPWORDS: &[&str] = &[
     "the", "and", "for", "with", "that", "this", "from", "into", "are", "was", "were", "has",
     "have", "had", "not", "but", "its", "his", "her", "their", "our", "your", "any", "all", "some",
@@ -183,17 +202,10 @@ impl Query {
             // An ASCII spelling is consumed whole, so `<->` is one `↔`, not
             // also a `→`.
             let rest: String = chars[index..chars.len().min(index + 3)].iter().collect();
-            let found = [("<->", "↔"), ("->", "→")]
-                .into_iter()
-                .find(|(ascii, _)| rest.starts_with(ascii))
-                .map(|(ascii, operator)| (ascii.chars().count(), operator))
-                .or_else(|| {
-                    OPERATORS
-                        .iter()
-                        .find(|(operator, _)| rest.starts_with(operator))
-                        .map(|(operator, _)| (1, *operator))
-                })
-                .or_else(|| (c == '~').then_some((1, "¬")));
+            let found = SYMBOLS
+                .iter()
+                .find(|(spelling, _)| rest.starts_with(spelling))
+                .map(|(spelling, operator)| (spelling.chars().count(), *operator));
             match found {
                 Some((width, operator)) => {
                     push(Item {
@@ -1073,6 +1085,13 @@ mod tests {
         let ascii = Query::parse("DependsForBeing <-> ¬CanBeWithout");
         let unicode = Query::parse("DependsForBeing ↔ ¬CanBeWithout");
         assert_eq!(ascii.items, unicode.items);
+        for (spelled, canonical) in [
+            ("a /\\ b", "a ∧ b"),
+            ("a \\/ b", "a ∨ b"),
+            ("a ⇔ b ⇒ c", "a ↔ b → c"),
+        ] {
+            assert_eq!(Query::parse(spelled).items, Query::parse(canonical).items);
+        }
         assert!(!query.substantial(&query.matched("↔ ¬ and not", &BTreeMap::new())));
         assert!(!has_call("BAD(x)", "D"));
         assert_eq!(

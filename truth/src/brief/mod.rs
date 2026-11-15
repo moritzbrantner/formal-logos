@@ -1123,7 +1123,7 @@ fn question_issues(
         for (place, unit) in retrieval::issue_units(issue) {
             let matched = query.matched(&unit, &none);
             let covered = retrieval::coverage(&matched).0;
-            if covered > best.0 {
+            if (query.substantial(&matched), covered) > (best.3, best.0) {
                 best = (
                     covered,
                     place.clone(),
