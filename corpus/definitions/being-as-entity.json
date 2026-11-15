@@ -20,7 +20,7 @@
     "exclusions": [
       "Being as the truth of a proposition (DEF-BEING-AS-TRUTH-OF-A-PROPOSITION): 'there is evil' is the truth of a sentence, and sentences are a different Lean type (DISAMB-BEING).",
       "Privations such as evil or blindness are not elements of the carrier in this sense.",
-      "Respects (MotionModel.Respect) are a separate type, so a respect is not a being of the model."
+      "Respects (MotionModel.Respect): in the intended interpretation a respect is not a being of the model; Lean supplies the two carriers as independently given types without making them distinct (a model may use the same type for both), so this is an interpretive requirement, not a consequence of the declaration."
     ],
     "open_obligations": [
       "Which real things the carrier ranges over, and that the categorical reading applies, are supplied by an application and remain OPEN.",

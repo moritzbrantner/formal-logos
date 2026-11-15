@@ -1713,7 +1713,7 @@
         "sha256": "2311bf6a4d5eae003aa035b80f4206ebda5655ba28555fb3cd15a26e2a094c4b",
         "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel"
       },
-      "reviewed_sha256": "54608ecdb8ad30aa8ed725ae2d6b3a7191ad30c8b890bd83582304ef0f9d9d86"
+      "reviewed_sha256": "98fa25e2d114699bdaf77d94c187ff3369f6d4f3c47cd43c67396c2ae1db315d"
     },
     {
       "kind": "definitions",

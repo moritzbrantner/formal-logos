@@ -16,7 +16,7 @@
       "The distinguished respect esse (DEF-ESSE)."
     ],
     "exclusions": [
-      "A being: respects and beings are separate types, so no respect is an element of the carrier.",
+      "A being: a respect is that in which something is moved or in act, a being is what is moved or in act. This separation of roles is the intended interpretation; Lean supplies Being and Respect as two independently given types, which a model may instantiate with the same type, so the field declarations do not enforce it.",
       "A time or a stage of a process.",
       "Physical respects (DEF-PHYSICAL-RESPECT) are a guarded subclass used by the typed Physics readings, not the whole type (DISAMB-MOTION)."
     ],
