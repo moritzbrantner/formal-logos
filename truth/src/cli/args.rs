@@ -105,6 +105,18 @@ impl ProofArgs {
     }
 }
 
+/// The `attribution-check` options.
+#[derive(Default)]
+pub struct AttributionArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    /// `--materialize`: acquire each selected passage (Python
+    /// `source_evidence.py materialize`).
+    pub materialize: bool,
+    /// `--max-chars N`: clip each passage text (0 or less: never).
+    pub max_chars: Option<i64>,
+}
+
 #[derive(Default)]
 pub struct ResearchArgs {
     pub flags: bool,
@@ -168,6 +180,7 @@ pub struct Args {
     pub bind: BindArgs,
     pub structure: StructureArgs,
     pub proof: ProofArgs,
+    pub attribution: AttributionArgs,
 }
 
 /// The shared options a command accepts besides `--root` and `--json`;
@@ -226,6 +239,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         bind: BindArgs::default(),
         structure: StructureArgs::default(),
         proof: ProofArgs::default(),
+        attribution: AttributionArgs::default(),
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -293,6 +307,15 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                 }
             }
             "--routes" => parsed.frontier.routes = true,
+            "--materialize" => {
+                parsed.attribution.flags = true;
+                parsed.attribution.materialize = true;
+            }
+            "--max-chars" => {
+                parsed.attribution.flags = true;
+                parsed.attribution.max_chars =
+                    Some(integer(args.next().and_then(|value| value.to_str()), arg)?);
+            }
             "--strict" => parsed.proof.strict = true,
             "--review" => parsed.proof.review = true,
             "--proof-use" => parsed.proof.proof_use = true,

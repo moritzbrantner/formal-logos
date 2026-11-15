@@ -35,10 +35,10 @@ python3 scripts/docs_index.py --write
 scripts/root-imports.sh
 python3 scripts/docs_index.py
 python3 -m unittest discover -s scripts -p 'test_*.py'
-python3 scripts/source_evidence.py check
 LEAN_NUM_THREADS=2 lake build
 cargo build --locked --release -p truth
-target/release/truth check
+target/release/truth check    # includes the source_evidence.py check bindings
+target/release/truth attribution-check --base <BASE>
 python3 scripts/bundle_audit.py
 target/release/truth bind-check
 scripts/verify-result.sh <RESULT-ID>
