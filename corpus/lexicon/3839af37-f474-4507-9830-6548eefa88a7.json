@@ -1,7 +1,7 @@
 {
   "id": "3839af37-f474-4507-9830-6548eefa88a7",
-  "label": "EM (name)",
-  "lemma": "EM",
-  "class": "name",
-  "gloss": "Abbreviation for the law of excluded middle."
+  "label": "em (ordinary)",
+  "lemma": "em",
+  "class": "ordinary",
+  "gloss": "Abbreviation for excluded middle, the law that every proposition or its negation holds."
 }
