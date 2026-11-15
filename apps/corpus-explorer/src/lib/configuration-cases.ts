@@ -1,5 +1,4 @@
-import { execFileSync } from "node:child_process";
-import path from "node:path";
+import { truthJson } from "./truth-cli";
 
 type Core = { statement_ids: string[]; result_id: string; theorem: string; minimality: string };
 export type RegisteredConfigurationCase = {
@@ -49,10 +48,8 @@ let cached: RegisteredConfigurationCase[] | undefined;
 /** Registered provenance only. A static build must never infer fresh verification. */
 export function getRegisteredConfigurationCases(): RegisteredConfigurationCase[] {
   if (!cached) {
-    const output: unknown = JSON.parse(execFileSync("python3", ["scripts/corpus.py", "configurations", "--registered", "--json"], {
-      cwd: path.resolve(process.cwd(), "../.."), encoding: "utf8", timeout: 60000, maxBuffer: 16 * 1024 * 1024,
-    }));
-    cached = parseRegisteredConfigurationCases(output);
+    // `truth configurations --registered` ports `corpus.py configurations --registered` (#954).
+    cached = parseRegisteredConfigurationCases(truthJson(["configurations", "--registered"]));
   }
   return cached;
 }

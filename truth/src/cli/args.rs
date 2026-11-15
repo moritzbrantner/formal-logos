@@ -22,6 +22,21 @@ pub struct FrontierArgs {
     pub head: Option<String>,
 }
 
+/// The `bind-check` options.
+#[derive(Default)]
+pub struct BindArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    /// `--result ID`, repeatable.
+    pub results: Vec<String>,
+    /// `--affected`
+    pub affected: bool,
+    /// `--lean-json FILE`: a saved `scripts/BindTypes.lean` output.
+    pub lean_json: Option<String>,
+    /// `--print-lean-input`: print the exporter input and stop.
+    pub print_input: bool,
+}
+
 #[derive(Default)]
 pub struct ResearchArgs {
     pub flags: bool,
@@ -29,6 +44,22 @@ pub struct ResearchArgs {
     pub limit: Option<i64>,
     pub related: Option<i64>,
     pub frontier: Option<String>,
+}
+
+/// The options of `configurations`, `models` and `territory`.
+#[derive(Default)]
+pub struct ConfigurationArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    pub case: Option<String>,
+    pub seed: Option<String>,
+    pub premises: Vec<String>,
+    pub registered: bool,
+    /// `models --check`, `--argument` and `--verify` (Lean; Python only).
+    pub check: Option<String>,
+    pub argument: Option<String>,
+    pub verify: bool,
+    pub max_atoms: Option<i64>,
 }
 
 /// Every option of every command, parsed in one pass in token order.
@@ -46,6 +77,8 @@ pub struct Args {
     pub research: ResearchArgs,
     /// `--write` (lexicon bootstrap and allowlist)
     pub write: bool,
+    pub configuration: ConfigurationArgs,
+    pub bind: BindArgs,
 }
 
 /// The shared options a command accepts besides `--root` and `--json`;
@@ -62,6 +95,8 @@ pub struct Accepts {
     pub frontier: bool,
     /// `--base` and `--head`
     pub revisions: bool,
+    /// The [`ConfigurationArgs`] (each command checks which of them apply)
+    pub configuration: bool,
 }
 
 fn number(value: Option<&str>, flag: &str) -> Result<usize, Failure> {
@@ -93,6 +128,8 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         frontier: FrontierArgs::default(),
         research: ResearchArgs::default(),
         write: false,
+        configuration: ConfigurationArgs::default(),
+        bind: BindArgs::default(),
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -116,6 +153,27 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                 );
             }
             "--reaching-root" => parsed.frontier.reaching_root = true,
+            "--affected" => {
+                parsed.bind.flags = true;
+                parsed.bind.affected = true;
+            }
+            "--print-lean-input" => {
+                parsed.bind.flags = true;
+                parsed.bind.print_input = true;
+            }
+            "--result" | "--lean-json" => {
+                parsed.bind.flags = true;
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                    .to_owned();
+                if arg == "--result" {
+                    parsed.bind.results.push(value);
+                } else {
+                    parsed.bind.lean_json = Some(value);
+                }
+            }
             "--routes" => parsed.frontier.routes = true,
             "--base" | "--head" => {
                 let value = args
@@ -168,6 +226,31 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                                 .to_owned(),
                         )
                     }
+                }
+            }
+            "--registered" | "--verify" => {
+                parsed.configuration.flags = true;
+                if arg == "--registered" {
+                    parsed.configuration.registered = true;
+                } else {
+                    parsed.configuration.verify = true;
+                }
+            }
+            "--case" | "--seed" | "--premise" | "--check" | "--argument" | "--max-atoms" => {
+                parsed.configuration.flags = true;
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                    .to_owned();
+                let configuration = &mut parsed.configuration;
+                match arg {
+                    "--case" => configuration.case = Some(value),
+                    "--seed" => configuration.seed = Some(value),
+                    "--premise" => configuration.premises.push(value),
+                    "--check" => configuration.check = Some(value),
+                    "--argument" => configuration.argument = Some(value),
+                    _ => configuration.max_atoms = Some(integer(Some(&value), arg)?),
                 }
             }
             "--constants" | "--queue-file" | "--target" | "--targets" | "--top" | "--pool" => {
@@ -258,6 +341,11 @@ impl Args {
         }
         if !accepts.revisions && (self.frontier.base.is_some() || self.frontier.head.is_some()) {
             return Err(usage("--base and --head apply only to frontier-diff"));
+        }
+        if !accepts.configuration && self.configuration.flags {
+            return Err(usage(
+                "--case, --seed, --premise, --registered, --check, --argument, --verify and --max-atoms apply only to configurations, models and territory",
+            ));
         }
         Ok(())
     }

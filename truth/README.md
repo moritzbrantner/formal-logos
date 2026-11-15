@@ -72,8 +72,8 @@ rejects the shared options it does not take with `Args::simple` or
 first (`bind-check`, `next`, the ID lists, …) calls `cli::validate_first`
 before its own work: it runs the full `check` validation and, on a broken
 corpus, fails as Python does, with the first `corpus error: …` and exit
-code 2. `next`, `next-steps`, `arguments` and `results` call it; the
-earlier ports perform only the structural load.
+code 2. `next`, `next-steps`, `arguments`, `results` and `bind-check` call
+it; the earlier ports perform only the structural load.
 
 Parity tests live in `scripts/truth_parity/`, one module per command, with
 shared fixtures and the `ParityCase` base class in `common.py`; a new
@@ -146,6 +146,41 @@ deliberately broken variants, one per rule (56 for the passage manifest
 schema), each of which must give the same `corpus error:` line. On the real
 corpus (2026-11-07, 3731 statements) the release binary took 0.9–2.6 s and
 Python 6.3–16.5 s on the same loaded machine (best of three: 0.9 s vs 6.3 s).
+
+## `bind-check`
+
+`truth bind-check [--json] [--result ID]... [--affected --base REV [--head REV]]
+[--lean-json FILE] [--print-lean-input]` ports `python3 scripts/corpus.py
+bind-check` (#162): after validating the corpus it binds every argument record
+(premises, conclusion, commitments, theory-bundle conjuncts, declared senses)
+to its result theorem's Lean type, and binds both sides of each schema
+registration. Lean stays the verifier: Rust writes the input of
+`scripts/BindTypes.lean` byte for byte as Python's `json.dump` does
+(`--print-lean-input` prints it), runs `lake env lean --run` on it (or reads a
+saved output with `--lean-json`) and applies Python's binding rules to the
+description, including the pinned undeclared bindings, the exact-expression
+contracts of `scripts/contracts/` and the sense and sense-alias checks. The
+full run also reports stale pins and, when Lean runs, compiles the registered
+finite-model certificates and requires each to be zero-axiom
+(`finite_models.verify_models`). `--result` (repeatable; a uuid, legacy id or
+label) and `--affected` (results `scripts/affected_results.py` selects for the
+diff from `--base`, which stays Python) scope the run and skip the stale-pin
+and model checks. Stdout is Python's byte for byte, the sorted indented
+`--json` report as well as the humanized text, with exit 1 on a mismatch,
+stale pin or sense alias; corpus errors exit 2 as `corpus error: …` (a JSON
+error object under `--json`).
+
+CI's corpus job and the worker contract run it; `corpus.py bind-check` stays
+until its retirement. `scripts/truth_parity/bind_check.py` compares both from
+one recorded exporter output on the `check` fixture (scoped success, stale
+pins, unbound and missing hypotheses, theory bundles, consistency
+commitments, pinned-type failures, schema registrations, sense problems and
+aliases, expression contracts, scope and validate-first errors) and checks the
+real corpus's exporter input byte for byte; with `TRUTH_BIND_LEAN_JSON` set to
+a recorded exporter output it also compares the real-corpus reports. On the
+real corpus (2026-11-15, 2151 results, 111 models) the full run with Lean took
+17.9 s in Rust and 28.1 s in Python, and from a saved exporter output 3.9 s
+against 14.9 s, on the same loaded machine; the outputs were identical.
 
 ## `thickness`
 
@@ -357,3 +392,43 @@ export (`--constants`) and either `--target ID` or a
 `truth thickness --queue --json` or `corpus.py thickness --queue --json` file (`--queue-file`, first `--targets N`,
 default 10). It is a search heuristic, not a proof or equivalence judgment;
 see `docs/bridge-candidates.md` for the pipeline and the optional Lean trial.
+
+## `configurations`, `models`, `territory`
+
+These port the Lean-free parts of `corpus.py configurations`, `models` and
+`territory` (#954 slice B2): `truth::configurations` (`implication_closure`,
+`configuration_report`), `truth::finite_models` (`model_report`) and
+`truth::territory` (`territory_report`). Text output is byte-identical to
+Python's; `--json` prints the Python JSON (plus `input_identity` for `models`
+and `territory`; `configurations` prints Python's list as is). A corpus error
+prints Python's `corpus error: …` with exit code 2.
+
+- `truth configurations --registered [--case ID] [--seed STATEMENT]
+  [--premise STATEMENT]...`: the registered projection (no certified status).
+  It validates the models and cases first, as Python's `configuration_context`
+  does (`truth::check::registered_configurations`), not the whole corpus.
+  Without `--registered` Python builds the modules and checks every
+  certificate and original theorem in Lean; Rust refuses and names the Python
+  command (exit 2). The verified projection is ported in the library and
+  unit-tested against Python's fixture cases; slice A6 wires it to
+  `configuration-report`.
+- `truth models`: every registered model and its co-failure candidates.
+  `--check`, `--argument` and `--verify` Lean-check all registered models in
+  Python, so Rust refuses them and names the Python command; `--premise`
+  without either fails as in Python.
+- `truth territory [--frontier-root STATEMENT] [--max-atoms N]`: Python's
+  `--root` is `--frontier-root` here. Like Python it runs the full `check`
+  validation first (`cli::validate_first`) and reads the in-process Rust
+  frontier. Position IDs hash with a built-in SHA-256. The global position
+  count is exact (Python's unbounded int): the text prints every digit; a
+  count beyond `u64` has no exact JSON number here, so `--json` then fails
+  with `unrepresentable_count` (exit 1) and names the Python command instead
+  of printing a wrong number.
+
+`scripts/truth_parity/configurations.py` compares them on the real corpus
+(every case, filtering by uuid and legacy id, seed and premise selections and
+their errors; `models`; `territory` with the default bound, `--max-atoms` 40
+and -3 and an unknown root) and on a fixture checkout with an incompatibility
+core, an implication rule, a model a fixed constant excludes, co-failures, a
+refutation core and a model that satisfies it (a `DEFECT` line), a broken
+corpus and seven broken registrations.

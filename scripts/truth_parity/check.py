@@ -424,11 +424,12 @@ CHECK_WARNINGS = {
 }
 
 
-def write_check_fixture(root, change=None):
-    """Write the fixture checkout with readable ids, convert it to uuid
-    identity, apply `change` to the migrated records, and copy `scripts/*.py`
-    so the unmodified Python validator runs against it."""
-    records = check_records()
+def write_check_fixture(root, change=None, records=None):
+    """Write the fixture checkout (`records`, by default `check_records()`)
+    with readable ids, convert it to uuid identity, apply `change` to the
+    migrated records, and copy `scripts/*.py` so the unmodified Python
+    validator runs against it."""
+    records = check_records() if records is None else records
     configs = {result["id"]: {"challenge_module": result["challenge_module"],
                               "solution_module": result["solution_module"],
                               "theorem_names": [result["theorem"]], "permitted_axioms": [],
