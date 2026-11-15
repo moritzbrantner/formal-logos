@@ -15,7 +15,7 @@
     ],
     "exclusions": [
       "A move some participant makes that the rules do not license.",
-      "Truth of the move's content judged by a standard outside the practice: that is the separate predicate AnswersToSharedReason."
+      "Answerability to standards of reason shared with those outside the practice: the separate predicate AnswersToSharedReason. Neither predicate represents the external truth of a move's content, which would need its own predicate and bridge."
     ],
     "open_obligations": [
       "No theory of what makes a move correct is fixed; the internal-grammar thesis STMT-WF-RELIGION-INTERNAL-GRAMMAR (OwnStandard m → Correct m) supplies only one direction, and it is an open fideist commitment.",
