@@ -1,0 +1,7 @@
+{
+  "id": "8cb48175-5ac9-4d12-9839-addce1e54e04",
+  "label": "declaration (ordinary)",
+  "lemma": "declaration",
+  "class": "ordinary",
+  "gloss": "A named Lean definition, theorem or axiom; also a formal statement such as a Church declaration."
+}

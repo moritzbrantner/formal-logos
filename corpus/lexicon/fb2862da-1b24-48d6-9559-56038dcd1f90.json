@@ -1,0 +1,10 @@
+{
+  "id": "fb2862da-1b24-48d6-9559-56038dcd1f90",
+  "label": "prove (ordinary)",
+  "lemma": "prove",
+  "class": "ordinary",
+  "forms": [
+    "proved"
+  ],
+  "gloss": "To show by a valid argument; in Lean, to supply a proof term."
+}

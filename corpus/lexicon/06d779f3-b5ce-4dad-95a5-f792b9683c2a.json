@@ -1,0 +1,7 @@
+{
+  "id": "06d779f3-b5ce-4dad-95a5-f792b9683c2a",
+  "label": "Nat (name)",
+  "lemma": "Nat",
+  "class": "name",
+  "gloss": "The Lean type of natural numbers 0, 1, 2 and so on."
+}

@@ -1,0 +1,7 @@
+{
+  "id": "c6a9815b-5c96-4b5c-a660-1d410d2465b8",
+  "label": "pinned (ordinary)",
+  "lemma": "pinned",
+  "class": "ordinary",
+  "gloss": "Fixed to an exact version by revision or hash, as a pinned source witness or pinned Mathlib release."
+}
