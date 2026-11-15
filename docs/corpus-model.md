@@ -110,12 +110,17 @@ error.
   come from the reviewed list `truth/src/lexicon/function_words.txt`.
 - **`name`.** `gloss` is required. `source_ids` is optional.
 
-`truth check` validates the schema and enforces both lexicon rules on every
+`truth check` validates the schema and checks both lexicon rules on every
 new or changed prose field:
 
 - every word is traced;
 - a multi-sense technical word is used only in a record that links one of
   its senses.
+
+Violations are warnings while `corpus/lexicon-config.json` has `strict: false`
+("warn now, strict later", #1652). They become errors once the owner sets
+`strict`, which is planned when token coverage reaches `strict_token_coverage`
+(95%).
 
 The legacy backlog is listed in `corpus/lexicon-allowlist.json`, a generated
 ratchet that may only shrink (`truth lexicon ratchet`, run in CI like the

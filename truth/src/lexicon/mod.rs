@@ -24,6 +24,80 @@ use tokenize::{Token, candidates, key};
 
 pub const DIRECTORY: &str = "corpus/lexicon";
 pub const ALLOWLIST: &str = "corpus/lexicon-allowlist.json";
+pub const CONFIG: &str = "corpus/lexicon-config.json";
+
+/// The enforcement switch (owner decision on #1652, "warn now, strict
+/// later"): while `strict` is false, untraced words and unlinked senses in
+/// new or changed prose fields are warnings; once token coverage reaches
+/// `strict_token_coverage`, the owner's plan is to set `strict` and make
+/// them errors. Schema errors and the shrink-only allowlist are enforced
+/// either way. Without the file: warn mode at the default threshold.
+#[derive(Clone, Debug, PartialEq)]
+pub struct Config {
+    pub strict: bool,
+    pub strict_token_coverage: f64,
+}
+
+pub const DEFAULT_THRESHOLD: f64 = 0.95;
+
+impl Default for Config {
+    fn default() -> Self {
+        Self {
+            strict: false,
+            strict_token_coverage: DEFAULT_THRESHOLD,
+        }
+    }
+}
+
+pub fn read_config(root: &Path) -> Result<Config, String> {
+    let source = match fs::read_to_string(root.join(CONFIG)) {
+        Ok(source) => source,
+        Err(error) if error.kind() == std::io::ErrorKind::NotFound => return Ok(Config::default()),
+        Err(error) => return Err(format!("{CONFIG}: {error}")),
+    };
+    let value: Obj = serde_json::from_str(&source)
+        .map_err(|error| format!("{CONFIG}: invalid JSON object: {error}"))?;
+    if let Some(field) = value.keys().find(|field| {
+        !["schema_version", "strict", "strict_token_coverage", "note"].contains(&field.as_str())
+    }) {
+        return Err(format!("{CONFIG}: unknown field {field}"));
+    }
+    let strict = value
+        .get("strict")
+        .and_then(Value::as_bool)
+        .ok_or_else(|| format!("{CONFIG}: strict must be true or false"))?;
+    let threshold = value
+        .get("strict_token_coverage")
+        .and_then(Value::as_f64)
+        .filter(|x| *x > 0.0 && *x <= 1.0)
+        .ok_or_else(|| format!("{CONFIG}: strict_token_coverage must be a number in (0, 1]"))?;
+    Ok(Config {
+        strict,
+        strict_token_coverage: threshold,
+    })
+}
+
+/// (traced tokens, tokens) over every scanned field.
+pub fn token_counts(scans: &[FieldScan]) -> (usize, usize) {
+    let mut traced = 0;
+    let mut total = 0;
+    for scan in scans {
+        for (_, trace) in &scan.occurrences {
+            total += 1;
+            traced += usize::from(*trace != Trace::Untraced);
+        }
+    }
+    (traced, total)
+}
+
+/// Token coverage as a fraction (1.0 when there is no prose).
+pub fn ratio(traced: usize, total: usize) -> f64 {
+    if total == 0 {
+        1.0
+    } else {
+        traced as f64 / total as f64
+    }
+}
 
 /// The prose fields the check scans, per record kind (#1652).
 pub const SCANNED: &[(&str, &[&str])] = &[
@@ -894,6 +968,13 @@ pub struct Report {
     pub backlog_unlinked: usize,
     pub removable: usize,
     pub warnings: Vec<String>,
+    /// Untraced words and unlinked senses in new or changed prose fields,
+    /// one line per field and rule: warnings while not strict.
+    pub new_violations: Vec<String>,
+    pub strict: bool,
+    pub threshold: f64,
+    pub tokens: usize,
+    pub tokens_traced: usize,
 }
 
 impl Report {
@@ -907,6 +988,25 @@ impl Report {
             self.backlog_fields,
             self.fields
         );
+        if !self.new_violations.is_empty() {
+            text.push_str(&format!(
+                "; {} new or changed prose field problems (warnings during the backfill, listed above)",
+                self.new_violations.len()
+            ));
+        }
+        let coverage = ratio(self.tokens_traced, self.tokens);
+        text.push_str(&format!(
+            "; token coverage {:.1}% of the {:.1}% strict threshold ({})",
+            100.0 * coverage,
+            100.0 * self.threshold,
+            if self.strict {
+                "strict: new or changed fields must be fully traced"
+            } else if coverage >= self.threshold {
+                "threshold reached: set strict in corpus/lexicon-config.json"
+            } else {
+                "warn mode"
+            }
+        ));
         if self.removable > 0 {
             text.push_str(&format!(
                 "; {} allowlist entries can shrink (`truth lexicon allowlist --write`)",
@@ -964,9 +1064,10 @@ pub fn violations(scans: &[FieldScan], allowlist: &Allowlist) -> Vec<String> {
         let lemmas: Vec<&String> = scan.unlinked.difference(unlinked).collect();
         if !words.is_empty() {
             errors.push(format!(
-                "{}: {}: untraced word{} {} (add lexicon entries or forms; docs/lexicon.md)",
+                "{}: {}: {} untraced word{}: {} (add lexicon entries or forms; docs/lexicon.md)",
                 scan.path,
                 scan.field,
+                words.len(),
                 if words.len() == 1 { "" } else { "s" },
                 words
                     .iter()
@@ -977,12 +1078,13 @@ pub fn violations(scans: &[FieldScan], allowlist: &Allowlist) -> Vec<String> {
         }
         if !lemmas.is_empty() {
             errors.push(format!(
-                "{}: {}: uses multi-sense technical word{} {} but links none of {} senses (definition_ids, disambiguation_ids or a sense tag such as PRIOR_1)",
+                "{}: {}: {} multi-sense technical word{} with none of {} senses linked: {} (definition_ids, disambiguation_ids or a sense tag such as PRIOR_1)",
                 scan.path,
                 scan.field,
+                lemmas.len(),
                 if lemmas.len() == 1 { "" } else { "s" },
-                lemmas.iter().map(|w| format!("'{w}'")).collect::<Vec<_>>().join(", "),
-                if lemmas.len() == 1 { "its" } else { "their" }
+                if lemmas.len() == 1 { "its" } else { "their" },
+                lemmas.iter().map(|w| format!("'{w}'")).collect::<Vec<_>>().join(", ")
             ));
         }
     }
@@ -995,9 +1097,10 @@ pub fn check(root: &Path) -> Result<Option<Report>, String> {
     let Some(loaded) = load(root)? else {
         return Ok(None);
     };
+    let config = read_config(root)?;
     let allowlist = read_allowlist(root)?.unwrap_or_default();
     let errors = violations(&loaded.scans, &allowlist);
-    if !errors.is_empty() {
+    if config.strict && !errors.is_empty() {
         const SHOWN: usize = 20;
         let mut message = format!(
             "lexicon: {} new or changed prose field problem{} (a new or changed prose field must be fully traced; {ALLOWLIST} may only shrink):",
@@ -1026,8 +1129,12 @@ pub fn check(root: &Path) -> Result<Option<Report>, String> {
         fields: loaded.scans.len(),
         removable,
         warnings: loaded.lexicon.warnings.clone(),
+        new_violations: errors,
+        strict: config.strict,
+        threshold: config.strict_token_coverage,
         ..Report::default()
     };
+    (report.tokens_traced, report.tokens) = token_counts(&loaded.scans);
     for allowed in needed.values() {
         report.backlog_fields += 1;
         report.backlog_untraced += allowed.untraced.len();
@@ -1040,7 +1147,7 @@ pub fn check(root: &Path) -> Result<Option<Report>, String> {
 // Reports for the commands.
 
 /// Token and type coverage of the scanned prose.
-pub fn coverage(loaded: &Loaded, top: usize) -> Value {
+pub fn coverage(loaded: &Loaded, config: &Config, top: usize) -> Value {
     let mut tokens = 0usize;
     let mut traced = 0usize;
     let mut tags = 0usize;
@@ -1090,6 +1197,10 @@ pub fn coverage(loaded: &Loaded, top: usize) -> Value {
         "unlinked_multi_sense_uses": loaded.scans.iter().map(|s| s.unlinked.len()).sum::<usize>(),
         "top_untraced": untraced(loaded, top),
         "entry_warnings": loaded.lexicon.warnings,
+        "strict": config.strict,
+        "strict_token_coverage": config.strict_token_coverage,
+        "token_coverage": ratio(traced, tokens),
+        "tokens_to_threshold": ((config.strict_token_coverage * tokens as f64).ceil() as usize).saturating_sub(traced),
     })
 }
 

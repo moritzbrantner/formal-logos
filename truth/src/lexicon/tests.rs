@@ -64,6 +64,13 @@ fn fixture(name: &str) -> Fixture {
                "senses": [{"id": "44444444-4444-4444-8444-444444444444", "label": "CAUSE_1", "definition_id": D1},
                           {"id": "55555555-5555-4555-8555-555555555555", "label": "CAUSE_2", "definition_id": D2}]}),
     );
+    // Strict, so violations are errors; `warn_mode_reports_without_failing`
+    // covers the default.
+    write(
+        &root,
+        CONFIG,
+        json!({"schema_version": 1, "strict": true, "strict_token_coverage": 0.95}),
+    );
     entry(
         &root,
         1,
@@ -142,9 +149,9 @@ fn untraced_word_and_unlinked_sense_fail() {
     let fx = fixture("fail");
     statement(&fx.0, "s1", "The cause is mysterious.", &[]);
     let error = super::check(&fx.0).unwrap_err();
-    assert!(error.contains("untraced word 'mysterious'"), "{error}");
+    assert!(error.contains("untraced word: 'mysterious'"), "{error}");
     assert!(
-        error.contains("multi-sense technical word 'cause'"),
+        error.contains("senses linked: 'cause'"),
         "{error}"
     );
 }
@@ -325,7 +332,7 @@ fn compound_parts_are_checked_separately() {
     statement(&fx.0, "s1", "The by-cause is prior.", &[]);
     let error = super::check(&fx.0).unwrap_err();
     assert!(
-        error.contains("multi-sense technical word 'cause'"),
+        error.contains("senses linked: 'cause'"),
         "{error}"
     );
 }
@@ -363,5 +370,51 @@ fn an_ordinary_phrase_sibling_exempts_regardless_of_file_order() {
             "{DIRECTORY}/{n:08x}-0000-4000-8000-000000000000.json"
         )))
         .unwrap();
+    }
+}
+
+#[test]
+fn warn_mode_reports_without_failing() {
+    let fx = fixture("warn");
+    write(
+        &fx.0,
+        CONFIG,
+        json!({"schema_version": 1, "strict": false, "strict_token_coverage": 0.5}),
+    );
+    statement(&fx.0, "s1", "The cause is mysterious.", &[]);
+    let report = check_ok(&fx.0);
+    assert!(!report.strict);
+    assert_eq!(
+        report.new_violations.len(),
+        2,
+        "{:?}",
+        report.new_violations
+    );
+    assert!(report.new_violations[0].contains("1 untraced word: 'mysterious'"));
+    assert!(report.new_violations[1].contains("'cause'"));
+    assert!(
+        report.summary().contains("threshold reached"),
+        "{}",
+        report.summary()
+    );
+    // Without the file: warn mode at the default threshold.
+    fs::remove_file(fx.0.join(CONFIG)).unwrap();
+    assert_eq!(read_config(&fx.0).unwrap(), Config::default());
+    assert!(check_ok(&fx.0).summary().contains("warn mode"));
+    // Schema errors stay errors in warn mode.
+    entry(&fx.0, 13, json!({"lemma": "odd", "class": "nonsense"}));
+    assert!(super::check(&fx.0).is_err());
+}
+
+#[test]
+fn config_errors() {
+    let fx = fixture("config");
+    for bad in [
+        json!({"strict": "no", "strict_token_coverage": 0.9}),
+        json!({"strict": true, "strict_token_coverage": 1.5}),
+        json!({"strict": true, "strict_token_coverage": 0.9, "extra": 1}),
+    ] {
+        write(&fx.0, CONFIG, bad);
+        assert!(super::check(&fx.0).unwrap_err().contains(CONFIG));
     }
 }

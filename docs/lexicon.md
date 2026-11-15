@@ -107,13 +107,16 @@ prose field with a violation: the field's `fnv1a64` text hash, its untraced
 words and its unlinked lemmas.
 
 - **An unchanged field may keep its listed words.** `truth check` reports the
-  backlog as one `warning: lexicon: …` line.
-- **Any other violation is a `truth check` error.** This covers:
+  backlog as one `warning: lexicon: …` summary line.
+- **Any other violation is reported per field.** This covers:
   - a new field;
   - a changed field, whose hash no longer matches;
   - a word that is not listed.
 
-  A new or changed prose field must therefore be fully traced.
+  Each report names the field and gives the count and the offending words.
+  While the lexicon is in warn mode (below), these are `warning: lexicon: …`
+  lines. In strict mode they are a `truth check` error, so every new or changed
+  prose field must be fully traced.
 - **The allowlist may only shrink.** CI runs
   `truth lexicon ratchet --base HEAD^1` on pull requests. It fails when an
   entry is added, re-hashed or gains a word. This mirrors the sense-index
@@ -123,6 +126,31 @@ words and its unlinked lemmas.
   Stale entries are harmless, and `truth check` counts them as removable.
   After a merge conflict in the file, take either side and rerun the
   generator.
+
+## Enforcement: warn now, strict later
+
+The owner's decision on #1652 is "warn now, strict later". The switch is
+`corpus/lexicon-config.json`:
+
+```json
+{"schema_version": 1, "strict": false, "strict_token_coverage": 0.95, "note": "…"}
+```
+
+- **`strict: false` (warn mode, the current setting).** Untraced words and
+  unlinked multi-sense terms in new or changed prose fields are warnings,
+  printed per field with counts and words. This holds during the ordinary
+  backfill (L2). Without the file, the lexicon is in warn mode at the default
+  threshold.
+- **`strict: true`.** The same reports are `truth check` errors.
+- **Enforced in both modes.**
+  - Schema and config validation errors.
+  - The allowlist ratchet: the allowlist may never grow.
+- **The plan.** Set `strict` to true once **token coverage reaches
+  `strict_token_coverage`**, proposed at 95% of the scanned tokens.
+  - `truth lexicon coverage` prints the progress: the current share, the
+    threshold, and the number of tokens still to trace.
+  - The `truth check` summary says when the threshold is reached.
+  - The flip is a deliberate one-line change, not automatic.
 
 ## Commands
 

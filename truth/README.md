@@ -84,8 +84,9 @@ command adds its module there and imports its test classes in
 
 `truth lexicon (show WORD | untraced | coverage | check | bootstrap | allowlist | ratchet --base REV)`
 traces corpus prose to `corpus/lexicon/` (#1652, `docs/lexicon.md`). It has no Python
-counterpart: `truth check` runs the lexicon check after the ported validation (an error
-for a new or changed prose field that is not fully traced; one `warning: lexicon: …`
+counterpart: `truth check` runs the lexicon check after the ported validation (a
+per-field warning, or an error once `corpus/lexicon-config.json` sets `strict`, for a new
+or changed prose field that is not fully traced; one `warning: lexicon: …`
 summary line, kept out of `warnings` and ignored by the parity test, for the allowlisted
 backlog), and CI runs `lexicon ratchet` so `corpus/lexicon-allowlist.json` only shrinks.
 The library is `truth/src/lexicon/`.

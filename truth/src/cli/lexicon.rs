@@ -99,7 +99,8 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         }
         ("coverage", []) => {
             let loaded = loaded(args)?;
-            let value = lexicon::coverage(&loaded, limit(args, 25)?);
+            let config = lexicon::read_config(&args.root).map_err(error)?;
+            let value = lexicon::coverage(&loaded, &config, limit(args, 25)?);
             let text = coverage_text(&value);
             Ok((value, Some(text)))
         }
@@ -107,9 +108,15 @@ fn run(args: &Args, operands: &[&str]) -> Output {
             None => Err(error(format!("{} does not exist", lexicon::DIRECTORY))),
             Some(report) => {
                 let summary = report.summary();
+                let mut text: Vec<String> = report
+                    .new_violations
+                    .iter()
+                    .map(|line| format!("warning: lexicon: {line}"))
+                    .collect();
+                text.push(summary.clone());
                 Ok((
-                    json!({"schema_version": 1, "ok": true, "summary": summary, "warnings": report.warnings}),
-                    Some(summary),
+                    json!({"schema_version": 1, "ok": true, "summary": summary, "strict": report.strict, "new_violations": report.new_violations, "warnings": report.warnings}),
+                    Some(text.join("\n")),
                 ))
             }
         },
@@ -324,6 +331,23 @@ fn coverage_text(value: &Value) -> String {
             "prose fields fully traced: {} of {}; unlinked multi-sense uses: {}",
             value["fields_fully_traced"], value["fields"], value["unlinked_multi_sense_uses"]
         ),
+        {
+            let coverage = value["token_coverage"].as_f64().unwrap_or(0.0);
+            let threshold = value["strict_token_coverage"].as_f64().unwrap_or(0.0);
+            format!(
+                "strict threshold: {:.1}% of tokens; now {:.1}% ({} more tokens to trace); strict mode {}",
+                100.0 * threshold,
+                100.0 * coverage,
+                value["tokens_to_threshold"],
+                if value["strict"] == json!(true) {
+                    "on"
+                } else if coverage >= threshold {
+                    "off — threshold reached, set strict in corpus/lexicon-config.json"
+                } else {
+                    "off (new or changed fields warn)"
+                }
+            )
+        },
         "top untraced:".into(),
     ];
     for row in value["top_untraced"].as_array().into_iter().flatten() {
