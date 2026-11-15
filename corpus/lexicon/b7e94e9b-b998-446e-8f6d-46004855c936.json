@@ -1,0 +1,13 @@
+{
+  "id": "b7e94e9b-b998-446e-8f6d-46004855c936",
+  "label": "they (function word)",
+  "lemma": "they",
+  "class": "function",
+  "category": "pronoun",
+  "forms": [
+    "them",
+    "their",
+    "theirs",
+    "themselves"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "3cf327f5-87d3-4831-bb22-95d4921556ab",
+  "label": "primitive thisness (technical)",
+  "lemma": "primitive thisness",
+  "class": "technical",
+  "definition_ids": [
+    "cc4cc264-0d8f-58d9-b718-cc6684fedb7d",
+    "eaefcc0d-d2b8-56e3-af67-6144ccec10b4"
+  ],
+  "disambiguation_ids": [
+    "567c3e74-9514-52d9-b3b6-f5a3af078784"
+  ]
+}

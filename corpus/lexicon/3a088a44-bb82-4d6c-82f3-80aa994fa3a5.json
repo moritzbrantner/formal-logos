@@ -1,0 +1,9 @@
+{
+  "id": "3a088a44-bb82-4d6c-82f3-80aa994fa3a5",
+  "label": "shared-only error dependence (technical)",
+  "lemma": "shared-only error dependence",
+  "class": "technical",
+  "definition_ids": [
+    "7d340922-35b3-417f-bb8b-51880270da9c"
+  ]
+}

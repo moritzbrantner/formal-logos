@@ -1,0 +1,9 @@
+{
+  "id": "33c46e99-78da-4657-910c-a55cf09c2438",
+  "label": "fact (technical)",
+  "lemma": "fact",
+  "class": "technical",
+  "definition_ids": [
+    "651037be-3748-5adb-838e-54bcf913a3b1"
+  ]
+}

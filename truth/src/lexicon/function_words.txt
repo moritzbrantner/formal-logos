@@ -1,0 +1,262 @@
+# The reviewed closed-class word list of the lexicon (#1652, slice L1).
+#
+# `truth lexicon bootstrap --write` turns each line into one `function` entry
+# of corpus/lexicon/: `lemma: form form ...` under a `[category]` header. The
+# forms are the inflected or contracted spellings the rule-based lemmatizer
+# cannot derive. A `[separation]` line `lemma: text` records, for a function
+# word that also has a technical entry, how its function use differs from the
+# technical senses (the lexicon's `technical_separation` field).
+#
+# Edit this list, not the generated records; review additions as closed-class
+# words only (articles, determiners, quantifiers, pronouns, prepositions,
+# conjunctions, auxiliaries and modals, negation and connective particles,
+# cardinal and ordinal numerals). Content words belong to `ordinary` or
+# `technical` entries.
+
+[article]
+the
+a
+an
+
+[determiner]
+this: these
+that: those
+each
+every
+either
+neither
+no
+some
+any
+all
+both
+such
+own
+other: others
+another
+same
+what
+which
+whose
+whatever
+whichever
+whether
+
+[quantifier]
+many
+much
+more
+most
+few: fewer fewest
+less: least
+several
+enough
+none
+only
+just
+
+[pronoun]
+i: me my mine myself
+we: us our ours ourselves
+you: your yours yourself yourselves
+he: him his himself
+she: her hers herself
+it: its itself
+they: them their theirs themselves
+one: one's oneself
+who: whom
+someone
+somebody
+something
+anyone
+anybody
+anything
+everyone
+everybody
+everything
+nobody
+nothing
+nowhere
+somewhere
+everywhere
+anywhere
+there
+here
+
+[preposition]
+of
+in
+on
+at
+by
+for
+from
+to
+with
+without
+within
+into
+onto
+upon
+about
+above
+across
+after
+against
+along
+among
+around
+as
+before
+behind
+below
+beneath
+beside
+besides
+between
+beyond
+despite
+down
+during
+except
+inside
+like
+near
+off
+out
+outside
+over
+past
+per
+since
+than
+through
+throughout
+toward: towards
+under
+underneath
+unlike
+until
+up
+via
+versus: vs
+amid
+regarding
+concerning
+
+[conjunction]
+and
+or
+nor
+but
+yet
+so
+if
+unless
+because
+although
+though
+while
+whereas
+whereby
+wherein
+whereof
+when
+whenever
+where
+wherever
+once
+lest
+whilst
+
+[auxiliary]
+be: is am are was were been isn't aren't wasn't weren't
+have: has had having hasn't haven't hadn't
+do: does did doing done doesn't don't didn't
+can: cannot can't
+could: couldn't
+may
+might
+must: mustn't
+shall
+should: shouldn't
+will: won't
+would: wouldn't
+ought
+
+[particle]
+not
+also
+too
+very
+even
+still
+again
+already
+always
+never
+ever
+often
+sometimes
+rather
+quite
+almost
+merely
+instead
+then
+thus
+hence
+therefore
+however
+moreover
+furthermore
+nevertheless
+nonetheless
+otherwise
+accordingly
+consequently
+indeed
+namely
+e.g.
+i.e.
+cf
+etc
+viz
+how
+why
+yes
+whereupon
+thereby
+therein
+thereof
+herein
+hereby
+else
+so-called
+respectively
+
+[numeral]
+zero
+two
+three
+four
+five
+six
+seven
+eight
+nine
+ten
+twelve
+hundred
+thousand
+million
+first
+second
+third
+fourth
+fifth
+twice
+half
+
+[separation]
+one: As a function word "one" is the numeral or the generic pronoun ("one of the premises", "one may object"). The technical senses of ONE (the One itself, received unity, numerical uniqueness of God) are a predicate or designated entity and are written with a sense tag or a linked definition.

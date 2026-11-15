@@ -1,0 +1,21 @@
+{
+  "id": "3cf1eedf-5803-4c60-b3af-a8d6efcb586e",
+  "label": "cause (technical)",
+  "lemma": "cause",
+  "class": "technical",
+  "definition_ids": [
+    "05dc1385-d245-5137-bf8b-dbdb1d3d9a7a",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "a14899b8-3314-595a-a578-2af9c83af63c",
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "d57222e9-d0f2-5fd4-97c3-b5f0462dd623",
+    "eadff578-bc52-5b16-8aa2-02eda838ce32",
+    "f1f49212-b37b-5ead-8040-96bbeff01a3f",
+    "fefbb205-07a2-595f-80d6-c6975c7cd185"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "117bfae1-68c7-5891-a971-79e24325eb76",
+    "a0786cf3-0248-58b6-ad97-12b00af85056"
+  ]
+}

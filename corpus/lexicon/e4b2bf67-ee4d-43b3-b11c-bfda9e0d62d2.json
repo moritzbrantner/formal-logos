@@ -1,0 +1,9 @@
+{
+  "id": "e4b2bf67-ee4d-43b3-b11c-bfda9e0d62d2",
+  "label": "equal (technical)",
+  "lemma": "equal",
+  "class": "technical",
+  "definition_ids": [
+    "e298b751-eec8-5719-bb1e-565e5040438f"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "f1f1fe43-df11-4f43-ba69-6cad792daafa",
+  "label": "emotivism expressivism subjectivism (technical)",
+  "lemma": "emotivism expressivism subjectivism",
+  "class": "technical",
+  "definition_ids": [
+    "26d45e80-3ca9-5d53-9e9d-b1df65d5052f",
+    "299e0a83-bef3-5ded-b153-6e65c29b4875",
+    "b3a48f2f-1e63-5899-b8f4-de69de18cb8e",
+    "c7db6f2b-22bb-597e-ac91-fe396591a034"
+  ],
+  "disambiguation_ids": [
+    "8ee14b40-9ec9-500b-bf89-e19cf52b6b4a"
+  ]
+}

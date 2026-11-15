@@ -1,0 +1,9 @@
+{
+  "id": "87108957-f2bd-4dc7-ba84-ada8cfe3d3f6",
+  "label": "survey recognition completeness (technical)",
+  "lemma": "survey recognition completeness",
+  "class": "technical",
+  "definition_ids": [
+    "afd59d06-6528-47de-8a27-933c1163a1f3"
+  ]
+}

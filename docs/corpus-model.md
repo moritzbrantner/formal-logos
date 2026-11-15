@@ -69,6 +69,59 @@ Owner direction (2026-11-07): an argument's words may have several meanings, and
 - **Display and naming.** `corpus.py dossier` and `context` show sense labels next to statements, definitions and arguments. `scripts/sense_labels.py` (`record_sense_labels`) returns any record's term → sense-label map, for naming and label checks.
 - **Opaque ids for new records.** Validators that required a readable prefix (`DEF-`, `DISAMB-`, `MODEL-`, `ATTEMPT-`, `CONFIG-`, `scaffold_result.py --id`) also accept a lowercase uuid4, in Python and in `truth check`.
 
+## Lexicon
+
+`corpus/lexicon/<uuid>.json` holds one record per lemma (#1652). The lexicon
+traces every word of corpus prose to an entry and explains it there; the
+method, scanned fields, tokenizer, ratchet and commands are in
+[the lexicon guide](lexicon.md). A gloss is explanation, not evidence, and
+lexicon status never affects proof, source or frontier closure.
+
+Every record has these fields:
+
+- `id`: a lowercase uuid4 (`python3 scripts/new_id.py`). The file name is
+  `<id>.json`.
+- `label`: unique among lexicon records, at most 100 characters, with no
+  id-like text. Bootstrapped entries use `<lemma> (technical)` or
+  `<lemma> (function word)`.
+- `lemma`: lowercase words separated by single spaces. A `name` keeps its
+  case. A lemma is unique within its class, but one lemma may have entries in
+  several classes: *cause* can be both ordinary and technical.
+- `class`: `technical`, `ordinary`, `function` or `name`.
+- `forms` (optional): extra lowercase single-word spellings that resolve to
+  this entry, such as irregular inflections. They override the lemmatizer's
+  rules.
+- `note` (optional).
+
+Each class has its own fields. A field that belongs to another class is an
+error.
+
+- **`technical`.** `definition_ids` is required: one or more `DEF` ids.
+  `disambiguation_ids` is optional; each listed disambiguation must have one
+  of the entry's definitions as a sense. When two or more definitions are not
+  covered by a listed disambiguation, `truth check` counts a warning, because
+  the corpus has no disambiguation relating them yet.
+- **`ordinary`.** `gloss` is required: the everyday sense the corpus uses.
+  `technical_separation` is required exactly when a technical entry has the
+  same lemma.
+- **`function`.** `category` is required: one of article, determiner,
+  quantifier, pronoun, preposition, conjunction, auxiliary, particle or
+  numeral. `technical_separation` is required as for `ordinary`. These entries
+  come from the reviewed list `truth/src/lexicon/function_words.txt`.
+- **`name`.** `gloss` is required. `source_ids` is optional.
+
+`truth check` validates the schema and enforces both lexicon rules on every
+new or changed prose field:
+
+- every word is traced;
+- a multi-sense technical word is used only in a record that links one of
+  its senses.
+
+The legacy backlog is listed in `corpus/lexicon-allowlist.json`, a generated
+ratchet that may only shrink (`truth lexicon ratchet`, run in CI like the
+sense-index ratchet). The lexicon check is Rust-only: `scripts/corpus.py check`
+does not run it.
+
 ## Identity and equivalence
 
 **Record ids are opaque uuids** (owner decision 2026-11-07, docs/decisions/2026-11-07-03-opaque-uuid-identity.md). A readable id such as `STMT-NOTHING-PRIOR-TO-ITSELF` put words, and therefore senses, into identity; it survives only as the record's `legacy_id`, an alias that never changes and is never minted again. Every record has:

@@ -1,0 +1,13 @@
+{
+  "id": "af6a959d-0193-4ee7-a64a-20b96e8fb343",
+  "label": "per se necessary (technical)",
+  "lemma": "per se necessary",
+  "class": "technical",
+  "definition_ids": [
+    "d9716c00-9d36-4814-9ee5-456eb0bf7dce",
+    "fba1a66a-5721-4354-a649-93e368654cbf"
+  ],
+  "disambiguation_ids": [
+    "a4b9e53e-d4d9-4f15-bc7f-e5fa913a96ea"
+  ]
+}

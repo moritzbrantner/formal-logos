@@ -1,0 +1,17 @@
+{
+  "id": "945ee108-470f-4f65-a96d-bb12c0b4e090",
+  "label": "god (technical)",
+  "lemma": "god",
+  "class": "technical",
+  "definition_ids": [
+    "18945900-2de0-5040-bdab-26268f257684",
+    "23e73af5-a0df-5838-9689-5899c37fdcda",
+    "449a3134-3201-5f8b-bae0-76bd666e3818",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "90644066-e830-5e1b-a9f0-911743369129",
+    "e68a730e-ff16-5998-ac2b-f6f08728009b"
+  ],
+  "disambiguation_ids": [
+    "205a39c3-915d-5fe4-8076-a9ff91329e08"
+  ]
+}

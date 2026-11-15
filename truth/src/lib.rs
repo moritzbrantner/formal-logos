@@ -6,6 +6,7 @@ pub mod dossier;
 pub mod frontier;
 pub mod identity;
 mod kernels;
+pub mod lexicon;
 pub mod navigation;
 pub mod orphans;
 pub mod pyfmt;

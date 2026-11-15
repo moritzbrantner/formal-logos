@@ -1,0 +1,14 @@
+{
+  "id": "3c858a3d-39a9-44ff-b6e2-9fdec76332be",
+  "label": "truth-apt (technical)",
+  "lemma": "truth-apt",
+  "class": "technical",
+  "definition_ids": [
+    "5ba4f9a9-befa-5940-ac1c-4193fd53a54a",
+    "b83ce6c8-65a0-5006-a68c-250addcf1eac",
+    "ebde7b6b-f826-55a2-a6d1-73df6b9475df"
+  ],
+  "disambiguation_ids": [
+    "8e55e523-3436-5f78-a43a-85d1233db2c5"
+  ]
+}

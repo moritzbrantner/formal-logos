@@ -1,0 +1,13 @@
+{
+  "id": "9b86ac66-cdd0-4d9e-ab8e-86318bacbd2d",
+  "label": "reason (technical)",
+  "lemma": "reason",
+  "class": "technical",
+  "definition_ids": [
+    "02c59c61-4cd1-5698-9338-e4a37ebf71f4",
+    "179d4557-bda1-59c4-938a-b91e9974a27f"
+  ],
+  "disambiguation_ids": [
+    "a61d3807-50e9-595e-9011-9123fd606a4b"
+  ]
+}

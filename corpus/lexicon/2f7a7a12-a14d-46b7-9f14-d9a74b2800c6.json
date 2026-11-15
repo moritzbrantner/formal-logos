@@ -1,0 +1,9 @@
+{
+  "id": "2f7a7a12-a14d-46b7-9f14-d9a74b2800c6",
+  "label": "information acquisition (technical)",
+  "lemma": "information acquisition",
+  "class": "technical",
+  "definition_ids": [
+    "cf1a7131-4085-5918-9cef-626cdf499147"
+  ]
+}

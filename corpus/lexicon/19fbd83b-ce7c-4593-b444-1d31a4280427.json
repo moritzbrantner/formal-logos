@@ -1,0 +1,15 @@
+{
+  "id": "19fbd83b-ce7c-4593-b444-1d31a4280427",
+  "label": "hinge (technical)",
+  "lemma": "hinge",
+  "class": "technical",
+  "definition_ids": [
+    "1ef9cc6e-1bd9-53e5-9e48-ea908e73df8e",
+    "2473bc4f-5d3b-553c-9831-28f078f4496b",
+    "5f5498c4-efbb-563f-b8fc-efe4da14f0c0",
+    "b00ed388-bc6d-5812-9a63-bce3687f76aa"
+  ],
+  "disambiguation_ids": [
+    "988283f3-1e54-5296-aa5e-9726e52987ab"
+  ]
+}

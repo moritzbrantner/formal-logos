@@ -1,0 +1,13 @@
+{
+  "id": "2456c8b4-a361-4427-9623-5f9db7bdb908",
+  "label": "cause of being (technical)",
+  "lemma": "cause of being",
+  "class": "technical",
+  "definition_ids": [
+    "142e451d-a24f-4aa1-b38b-344e5f235e72",
+    "ed47a5a7-fa84-43cb-950b-2552b33b99ff"
+  ],
+  "disambiguation_ids": [
+    "88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "57e99248-291c-4181-b412-28b66007c8c7",
+  "label": "potency and mutability (technical)",
+  "lemma": "potency and mutability",
+  "class": "technical",
+  "definition_ids": [
+    "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "f2aefafa-0e58-5e0f-9d66-cc3ef34bcb4f"
+  ],
+  "disambiguation_ids": [
+    "7edf933a-88b6-5c64-82df-4ef40becd970"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "48cc9366-8d07-4b29-9193-12a79119c229",
+  "label": "critic utterance semantics (technical)",
+  "lemma": "critic utterance semantics",
+  "class": "technical",
+  "definition_ids": [
+    "b3d5b1ba-35a4-5404-b467-66d1bb61954b"
+  ]
+}

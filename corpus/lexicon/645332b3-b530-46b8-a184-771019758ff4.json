@@ -1,0 +1,13 @@
+{
+  "id": "645332b3-b530-46b8-a184-771019758ff4",
+  "label": "we (function word)",
+  "lemma": "we",
+  "class": "function",
+  "category": "pronoun",
+  "forms": [
+    "us",
+    "our",
+    "ours",
+    "ourselves"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "996e5bbe-9d70-48a5-8ca4-828d9df47225",
+  "label": "semantic entailment (technical)",
+  "lemma": "semantic entailment",
+  "class": "technical",
+  "definition_ids": [
+    "0ff13cc6-d04d-4b35-9b64-fe75d11ce482"
+  ]
+}

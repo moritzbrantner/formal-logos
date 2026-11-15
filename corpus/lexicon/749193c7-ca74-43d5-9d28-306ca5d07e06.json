@@ -1,0 +1,13 @@
+{
+  "id": "749193c7-ca74-43d5-9d28-306ca5d07e06",
+  "label": "worldview consistency (technical)",
+  "lemma": "worldview consistency",
+  "class": "technical",
+  "definition_ids": [
+    "6523a45a-b797-57ed-b323-27a0d14d7832",
+    "deefafab-16f0-587e-b704-63ee447ae99d"
+  ],
+  "disambiguation_ids": [
+    "94fe8dfe-9a48-51ff-ad2a-59c98fc58dfe"
+  ]
+}

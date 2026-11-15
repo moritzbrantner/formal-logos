@@ -1,0 +1,13 @@
+{
+  "id": "dcdc9941-1293-4751-99ff-a8e517d7bbaf",
+  "label": "nonsense (technical)",
+  "lemma": "nonsense",
+  "class": "technical",
+  "definition_ids": [
+    "44b1fb35-d7ec-57fc-8a89-1830af53e0ce",
+    "d94541de-78e7-5634-a11c-9d7d81b6e58f"
+  ],
+  "disambiguation_ids": [
+    "ace52a9c-b9d3-5ee0-81fe-8723230fc5b8"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "ce4f47c9-48b0-4063-bdfd-abb663f4a79e",
+  "label": "necessary existence (technical)",
+  "lemma": "necessary existence",
+  "class": "technical",
+  "definition_ids": [
+    "82629c7d-94a0-5953-90c9-6eb0dbee2944",
+    "9400c10f-e80b-5241-b9b6-e59c15631e19"
+  ]
+}

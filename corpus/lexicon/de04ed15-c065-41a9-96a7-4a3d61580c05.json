@@ -1,0 +1,13 @@
+{
+  "id": "de04ed15-c065-41a9-96a7-4a3d61580c05",
+  "label": "positive (technical)",
+  "lemma": "positive",
+  "class": "technical",
+  "definition_ids": [
+    "6300d642-4116-591e-bac8-7af32093ea6d",
+    "9a9e4fd6-d810-5039-9185-a93a2e0a358a"
+  ],
+  "disambiguation_ids": [
+    "1850cad4-6eff-547f-b60c-e744dad7830d"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "707ca850-947d-475e-a4e4-ee7681d44c9c",
+  "label": "motion (technical)",
+  "lemma": "motion",
+  "class": "technical",
+  "definition_ids": [
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "ab0d1d6b-b777-51cc-ae11-c033081830e8"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

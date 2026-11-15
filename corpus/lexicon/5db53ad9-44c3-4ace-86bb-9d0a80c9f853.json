@@ -1,0 +1,13 @@
+{
+  "id": "5db53ad9-44c3-4ace-86bb-9d0a80c9f853",
+  "label": "intention (technical)",
+  "lemma": "intention",
+  "class": "technical",
+  "definition_ids": [
+    "09b82309-2d34-512e-901f-aaeb2bac2996",
+    "2847d4f1-a13a-5d0f-8cc1-abf1c807f92f"
+  ],
+  "disambiguation_ids": [
+    "2e3e5bfd-2e1a-5766-933d-79a7824c6249"
+  ]
+}

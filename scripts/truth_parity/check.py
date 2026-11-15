@@ -502,7 +502,10 @@ class TruthCheckParity(ParityCase):
         rust = self.truth_check(corpus.ROOT)
         self.assertEqual(python.returncode, rust.returncode, rust.stderr)
         self.assertEqual(rust.stdout, python.stdout)
-        self.assertEqual(rust.stderr, python.stderr)
+        # The lexicon check (#1652) is Rust-only; its summary line is appended last.
+        lexicon = "warning: lexicon: "
+        self.assertEqual("".join(line for line in rust.stderr.splitlines(keepends=True)
+                                 if not line.startswith(lexicon)), python.stderr)
         machine = subprocess.run([self.binary, "--json", "check"], cwd=corpus.ROOT,
                                  capture_output=True, text=True, check=False)
         report = json.loads(machine.stdout)

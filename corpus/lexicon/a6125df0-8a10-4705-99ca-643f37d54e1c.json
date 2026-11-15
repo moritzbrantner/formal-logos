@@ -1,0 +1,13 @@
+{
+  "id": "a6125df0-8a10-4705-99ca-643f37d54e1c",
+  "label": "contingency (technical)",
+  "lemma": "contingency",
+  "class": "technical",
+  "definition_ids": [
+    "7d7a0401-4606-522d-b78c-5c12b799e3cf",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d"
+  ],
+  "disambiguation_ids": [
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

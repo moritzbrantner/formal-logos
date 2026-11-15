@@ -1,0 +1,13 @@
+{
+  "id": "25a56a43-bbac-41bc-9f44-f33c6ebc1c13",
+  "label": "religious ultimate (technical)",
+  "lemma": "religious ultimate",
+  "class": "technical",
+  "definition_ids": [
+    "5fc52e92-0783-5a76-bd99-dca53df00800",
+    "759c2050-662a-54db-bcf5-9f5ba0da7741"
+  ],
+  "disambiguation_ids": [
+    "6848dc39-2ccb-5e86-a5e6-decd165a9725"
+  ]
+}

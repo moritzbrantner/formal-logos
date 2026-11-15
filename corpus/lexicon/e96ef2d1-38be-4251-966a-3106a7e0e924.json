@@ -1,0 +1,19 @@
+{
+  "id": "e96ef2d1-38be-4251-966a-3106a7e0e924",
+  "label": "be (function word)",
+  "lemma": "be",
+  "class": "function",
+  "category": "auxiliary",
+  "forms": [
+    "is",
+    "am",
+    "are",
+    "was",
+    "were",
+    "been",
+    "isn't",
+    "aren't",
+    "wasn't",
+    "weren't"
+  ]
+}

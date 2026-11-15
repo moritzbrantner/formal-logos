@@ -1,0 +1,13 @@
+{
+  "id": "5ae9bd39-bdd5-4a7f-a295-2f75e5e487fe",
+  "label": "creature (technical)",
+  "lemma": "creature",
+  "class": "technical",
+  "definition_ids": [
+    "afcdd2c5-1167-5a73-97d7-cb99a6ad5817",
+    "fdfbbc59-1f33-4fab-a96f-b41f37974af5"
+  ],
+  "disambiguation_ids": [
+    "c49de1e9-c34f-424f-b144-b80c885974ca"
+  ]
+}

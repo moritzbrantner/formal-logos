@@ -1,0 +1,9 @@
+{
+  "id": "7d3e28c5-e4d1-4fa2-a5c3-39923d56a19c",
+  "label": "bounded process protection (technical)",
+  "lemma": "bounded process protection",
+  "class": "technical",
+  "definition_ids": [
+    "a2ba53c6-6eca-4572-acf1-8bd78a0967a5"
+  ]
+}

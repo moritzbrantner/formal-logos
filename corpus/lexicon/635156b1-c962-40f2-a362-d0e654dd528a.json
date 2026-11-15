@@ -1,0 +1,13 @@
+{
+  "id": "635156b1-c962-40f2-a362-d0e654dd528a",
+  "label": "lord (technical)",
+  "lemma": "lord",
+  "class": "technical",
+  "definition_ids": [
+    "59350e3b-1b76-45cd-b9fd-548f3f4658b5",
+    "c8e458bd-3b8a-4e10-8e2d-43d1c1912c63"
+  ],
+  "disambiguation_ids": [
+    "aa1de96a-e0d2-4739-a34f-9b98f1034a34"
+  ]
+}

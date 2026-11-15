@@ -1,0 +1,12 @@
+{
+  "id": "4da6c34a-80f1-4cdf-817d-292c40a3af5f",
+  "label": "he (function word)",
+  "lemma": "he",
+  "class": "function",
+  "category": "pronoun",
+  "forms": [
+    "him",
+    "his",
+    "himself"
+  ]
+}

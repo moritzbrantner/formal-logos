@@ -1,0 +1,9 @@
+{
+  "id": "32fc95b9-8b6c-4131-bd41-e40dcd4311ff",
+  "label": "finite centered allocation (technical)",
+  "lemma": "finite centered allocation",
+  "class": "technical",
+  "definition_ids": [
+    "bd35e4c3-1882-4373-8a39-bea840976e93"
+  ]
+}

@@ -24,6 +24,7 @@ mod frontier;
 mod frontier_diff;
 mod ids;
 mod inspect;
+mod lexicon;
 mod next;
 mod next_steps;
 mod orphans;
@@ -52,6 +53,7 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] arguments
        truth [--root PATH] [--json] results
        truth [--root PATH] [--json] sort-lists
+       truth [--root PATH] [--json] lexicon (show WORD | untraced | coverage | check | bootstrap | allowlist | ratchet --base REV) [--limit N] [--write]
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
@@ -91,6 +93,7 @@ pub const COMMANDS: &[Command] = &[
     ids::ARGUMENTS,
     ids::RESULTS,
     sort_lists::COMMAND,
+    lexicon::COMMAND,
 ];
 
 /// Parses `args` and runs the command it names.

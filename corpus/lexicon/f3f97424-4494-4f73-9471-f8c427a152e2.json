@@ -1,0 +1,13 @@
+{
+  "id": "f3f97424-4494-4f73-9471-f8c427a152e2",
+  "label": "scientism (technical)",
+  "lemma": "scientism",
+  "class": "technical",
+  "definition_ids": [
+    "9424e383-2872-5587-8b54-c915516aa395",
+    "fee8ffa5-ec96-5f31-8e71-525bb6249f68"
+  ],
+  "disambiguation_ids": [
+    "610878b5-cb48-550f-9908-1297495daf7e"
+  ]
+}

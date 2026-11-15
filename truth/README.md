@@ -80,6 +80,16 @@ shared fixtures and the `ParityCase` base class in `common.py`; a new
 command adds its module there and imports its test classes in
 `scripts/verify_truth_cli.py`, the entry point CI runs.
 
+## `lexicon`
+
+`truth lexicon (show WORD | untraced | coverage | check | bootstrap | allowlist | ratchet --base REV)`
+traces corpus prose to `corpus/lexicon/` (#1652, `docs/lexicon.md`). It has no Python
+counterpart: `truth check` runs the lexicon check after the ported validation (an error
+for a new or changed prose field that is not fully traced; one `warning: lexicon: …`
+summary line, kept out of `warnings` and ignored by the parity test, for the allowlisted
+backlog), and CI runs `lexicon ratchet` so `corpus/lexicon-allowlist.json` only shrinks.
+The library is `truth/src/lexicon/`.
+
 ## `check`
 
 `truth check [--json]` ports `python3 scripts/corpus.py check`: `validate()`

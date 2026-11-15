@@ -1,0 +1,13 @@
+{
+  "id": "7791b659-0118-427a-8ad2-04ebb5cf4867",
+  "label": "recognizable revelation (technical)",
+  "lemma": "recognizable revelation",
+  "class": "technical",
+  "definition_ids": [
+    "c0b671c6-ae2f-5ccb-9330-6bd8f4bda866",
+    "c6310dd8-4b5b-5f2e-ac10-461424bf1b3e"
+  ],
+  "disambiguation_ids": [
+    "1fd4651d-77a7-5f25-9a1c-e28df367c602"
+  ]
+}

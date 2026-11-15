@@ -1,0 +1,16 @@
+{
+  "id": "a81fccb8-ad72-458f-bb02-4c287c2220e9",
+  "label": "do (function word)",
+  "lemma": "do",
+  "class": "function",
+  "category": "auxiliary",
+  "forms": [
+    "does",
+    "did",
+    "doing",
+    "done",
+    "doesn't",
+    "don't",
+    "didn't"
+  ]
+}

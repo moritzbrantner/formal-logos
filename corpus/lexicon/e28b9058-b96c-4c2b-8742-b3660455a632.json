@@ -1,0 +1,14 @@
+{
+  "id": "e28b9058-b96c-4c2b-8742-b3660455a632",
+  "label": "love access (technical)",
+  "lemma": "love access",
+  "class": "technical",
+  "definition_ids": [
+    "4b2943ad-3bc5-5492-94bc-f21e9f1a12ab",
+    "e83e512d-ae8d-5e80-a697-8fc1d672b7d3",
+    "ff4cfd4c-1116-5531-b959-34a8fbe626cd"
+  ],
+  "disambiguation_ids": [
+    "fa0875d8-68c8-5520-ae18-58bb8a5808e8"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "c84dbba1-f310-4f39-8901-1a4652ebb1a8",
+  "label": "said of (technical)",
+  "lemma": "said of",
+  "class": "technical",
+  "definition_ids": [
+    "524b331e-25da-5146-aca6-2d2707e7e579",
+    "d24eef0b-f010-5010-8390-0fcd65e20dd2"
+  ],
+  "disambiguation_ids": [
+    "87640bd5-b7e1-5032-9325-ef51c7d726d3"
+  ]
+}

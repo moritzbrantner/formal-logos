@@ -1,0 +1,11 @@
+{
+  "id": "b433f9cc-9cc0-4a96-a631-693bbdf5b579",
+  "label": "can (function word)",
+  "lemma": "can",
+  "class": "function",
+  "category": "auxiliary",
+  "forms": [
+    "cannot",
+    "can't"
+  ]
+}

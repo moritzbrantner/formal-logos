@@ -1,0 +1,13 @@
+{
+  "id": "753a9735-c993-44d5-82f9-c1931790f712",
+  "label": "scope (technical)",
+  "lemma": "scope",
+  "class": "technical",
+  "definition_ids": [
+    "674187f4-832b-5287-9ece-28c75772c54f",
+    "f86bce00-104a-5653-8efa-8b0dae727bc6"
+  ],
+  "disambiguation_ids": [
+    "ff5e8e42-dcb9-50f0-9173-e6f0a67e073c"
+  ]
+}

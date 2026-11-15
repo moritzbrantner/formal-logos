@@ -1,0 +1,13 @@
+{
+  "id": "49b4d997-b70e-4148-b6c7-abbe76aced92",
+  "label": "immense (technical)",
+  "lemma": "immense",
+  "class": "technical",
+  "definition_ids": [
+    "641c767b-4289-4d92-b900-da7ad603d282",
+    "bf2f30d1-609f-4b23-b819-786d877b949c"
+  ],
+  "disambiguation_ids": [
+    "3fc3ee02-c3cc-4a61-9724-914d9d07b0dd"
+  ]
+}

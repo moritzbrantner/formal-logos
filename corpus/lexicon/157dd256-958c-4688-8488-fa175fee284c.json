@@ -1,0 +1,13 @@
+{
+  "id": "157dd256-958c-4688-8488-fa175fee284c",
+  "label": "classical-attributes field content (technical)",
+  "lemma": "classical-attributes field content",
+  "class": "technical",
+  "definition_ids": [
+    "e86ef332-e32e-4714-b34e-2295d3cc4a21",
+    "edcfac86-6c19-4c82-9dfa-79bbf3287e6f"
+  ],
+  "disambiguation_ids": [
+    "2cbf40b4-3ea9-47a3-b532-7085ba3b53fa"
+  ]
+}

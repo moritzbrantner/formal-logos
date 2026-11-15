@@ -1,0 +1,9 @@
+{
+  "id": "f80ca0df-c02f-47c1-a38e-4c654f534ef5",
+  "label": "actual-only necessary-if-existent conditional (technical)",
+  "lemma": "actual-only necessary-if-existent conditional",
+  "class": "technical",
+  "definition_ids": [
+    "a921dd64-256a-5c99-99d1-4307d6275018"
+  ]
+}

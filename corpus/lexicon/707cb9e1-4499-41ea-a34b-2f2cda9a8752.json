@@ -1,0 +1,13 @@
+{
+  "id": "707cb9e1-4499-41ea-a34b-2f2cda9a8752",
+  "label": "unity (technical)",
+  "lemma": "unity",
+  "class": "technical",
+  "definition_ids": [
+    "a906fd43-c40e-5ec5-9ddb-b8e58baa3e05",
+    "e3da62cd-f921-5302-b3a2-2d67c4744d15"
+  ],
+  "disambiguation_ids": [
+    "b112ca97-8ab8-54aa-bff2-7c71600b1705"
+  ]
+}

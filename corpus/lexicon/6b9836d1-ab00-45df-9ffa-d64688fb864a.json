@@ -1,0 +1,15 @@
+{
+  "id": "6b9836d1-ab00-45df-9ffa-d64688fb864a",
+  "label": "t-frame collapse configurations (technical)",
+  "lemma": "t-frame collapse configurations",
+  "class": "technical",
+  "definition_ids": [
+    "02ccdd4f-e48b-5eb6-b1c6-31249b7eaec8",
+    "18bd1139-01b1-5733-b2f6-76bbaced1591",
+    "ad1d492d-27c6-5749-9fb2-481b51e9ccd5",
+    "b6ddbdde-8055-5632-b934-ccd5eb79bbeb"
+  ],
+  "disambiguation_ids": [
+    "bded9270-4ca2-5eae-8ffd-ba7d5b1a5128"
+  ]
+}

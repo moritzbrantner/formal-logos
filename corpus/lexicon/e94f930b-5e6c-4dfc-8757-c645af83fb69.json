@@ -1,0 +1,9 @@
+{
+  "id": "e94f930b-5e6c-4dfc-8757-c645af83fb69",
+  "label": "issued authorization (technical)",
+  "lemma": "issued authorization",
+  "class": "technical",
+  "definition_ids": [
+    "71a1b029-8b24-42ec-800d-f797ebf4f961"
+  ]
+}

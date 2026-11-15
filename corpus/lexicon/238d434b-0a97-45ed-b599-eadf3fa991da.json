@@ -1,0 +1,13 @@
+{
+  "id": "238d434b-0a97-45ed-b599-eadf3fa991da",
+  "label": "sum and fusion (technical)",
+  "lemma": "sum and fusion",
+  "class": "technical",
+  "definition_ids": [
+    "82e3885b-a845-5116-949e-07cb05353bf7",
+    "9ec56dce-572e-5230-8247-6b3e994cb98a"
+  ],
+  "disambiguation_ids": [
+    "93b2e596-3c96-52d3-9d5e-820dc82e5471"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "380282b9-e05f-46e0-9c37-ef82cf6195e5",
+  "label": "i (function word)",
+  "lemma": "i",
+  "class": "function",
+  "category": "pronoun",
+  "forms": [
+    "me",
+    "my",
+    "mine",
+    "myself"
+  ]
+}

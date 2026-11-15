@@ -1,0 +1,14 @@
+{
+  "id": "e0dcc467-0e8c-412a-9278-74bb62546c01",
+  "label": "series of causes (technical)",
+  "lemma": "series of causes",
+  "class": "technical",
+  "definition_ids": [
+    "4a101a4c-12de-53c8-80c6-de7a523ea9d9",
+    "6ed9fbb9-f419-5eee-9ef5-a2c4f0f1ffa7",
+    "c9798301-e990-5ca2-a36e-6b11f76206c1"
+  ],
+  "disambiguation_ids": [
+    "81c233d4-01b4-528c-8bbd-7da228443ffe"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "b68d7f0f-0fb6-4f59-8b38-15ad9ac0afc5",
+  "label": "fallible correction (technical)",
+  "lemma": "fallible correction",
+  "class": "technical",
+  "definition_ids": [
+    "0331d7b3-ad25-59d1-b4c2-94218ddda0ca",
+    "63f0647d-d7f6-5101-ba15-efdcdb6e6530"
+  ],
+  "disambiguation_ids": [
+    "1e0e196b-d327-508d-bad1-31df3e27d587"
+  ]
+}

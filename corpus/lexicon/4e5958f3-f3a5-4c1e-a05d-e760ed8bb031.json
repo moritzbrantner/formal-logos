@@ -1,0 +1,13 @@
+{
+  "id": "4e5958f3-f3a5-4c1e-a05d-e760ed8bb031",
+  "label": "preservation (technical)",
+  "lemma": "preservation",
+  "class": "technical",
+  "definition_ids": [
+    "56989bd0-a232-56ea-9093-c89350effff4",
+    "8d71c8ed-2df6-583b-8a39-8526a4e7e110"
+  ],
+  "disambiguation_ids": [
+    "89d65409-48a7-5ecb-a697-f81c5098ee5f"
+  ]
+}

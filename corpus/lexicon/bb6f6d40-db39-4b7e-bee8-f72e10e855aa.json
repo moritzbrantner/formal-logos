@@ -1,0 +1,9 @@
+{
+  "id": "bb6f6d40-db39-4b7e-bee8-f72e10e855aa",
+  "label": "four-clause reason-closed account (technical)",
+  "lemma": "four-clause reason-closed account",
+  "class": "technical",
+  "definition_ids": [
+    "d44e1390-7faa-56d3-b63f-c81cf0a458b6"
+  ]
+}

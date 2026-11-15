@@ -1,0 +1,13 @@
+{
+  "id": "4765ca09-f1e0-4059-a73a-e0da93a1b5de",
+  "label": "incomprehensible (technical)",
+  "lemma": "incomprehensible",
+  "class": "technical",
+  "definition_ids": [
+    "94ebe0d2-7cf9-4360-87ce-61c598b4e666",
+    "c4cf79f1-60a9-498a-944b-aeb7dfb56573"
+  ],
+  "disambiguation_ids": [
+    "d63d0696-e5fb-4c85-932e-812989c83b29"
+  ]
+}

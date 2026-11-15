@@ -44,6 +44,8 @@ pub struct Args {
     pub frontier_root: String,
     pub frontier: FrontierArgs,
     pub research: ResearchArgs,
+    /// `--write` (lexicon bootstrap and allowlist)
+    pub write: bool,
 }
 
 /// The shared options a command accepts besides `--root` and `--json`;
@@ -90,6 +92,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         frontier_root: thickness::DEFAULT_ROOT.to_owned(),
         frontier: FrontierArgs::default(),
         research: ResearchArgs::default(),
+        write: false,
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -103,6 +106,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
             "--json" => {}
             "--queue" => parsed.queue = true,
             "--senses" => parsed.senses = true,
+            "--write" => parsed.write = true,
             "--by" => {
                 parsed.group_by = Some(
                     args.next()

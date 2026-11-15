@@ -1,0 +1,13 @@
+{
+  "id": "f2919459-4ea7-42da-88e5-9234ee0fa8bc",
+  "label": "collapse of truth (technical)",
+  "lemma": "collapse of truth",
+  "class": "technical",
+  "definition_ids": [
+    "2bcafccd-05ce-507b-b0d7-a8a503b8b5bd",
+    "7ab6ece2-890b-5382-a73e-15e4b18a955c"
+  ],
+  "disambiguation_ids": [
+    "5dd0732d-712e-53fb-ad41-a412a951a5f5"
+  ]
+}

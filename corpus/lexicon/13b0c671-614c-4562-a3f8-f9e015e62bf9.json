@@ -1,0 +1,15 @@
+{
+  "id": "13b0c671-614c-4562-a3f8-f9e015e62bf9",
+  "label": "the creative act (technical)",
+  "lemma": "the creative act",
+  "class": "technical",
+  "definition_ids": [
+    "01b44013-2db5-546c-a22e-06104e8e724c",
+    "4e8282b7-d0aa-5936-9096-eee699480d2a",
+    "85f7f569-ab4d-514b-aa2c-cf75171ad105",
+    "9f05ee43-73f8-5158-a2f2-ab3c6046c6cc"
+  ],
+  "disambiguation_ids": [
+    "441c08cd-8b78-5ff6-82cf-18efad3d88f7"
+  ]
+}

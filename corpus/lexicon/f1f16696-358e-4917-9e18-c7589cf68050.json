@@ -1,0 +1,13 @@
+{
+  "id": "f1f16696-358e-4917-9e18-c7589cf68050",
+  "label": "private language (technical)",
+  "lemma": "private language",
+  "class": "technical",
+  "definition_ids": [
+    "2d2aca32-9490-598e-b55e-376cc2585a99",
+    "c1b29adf-421d-5181-99fb-68d4987ea74a"
+  ],
+  "disambiguation_ids": [
+    "96c77ed2-2ca7-5579-95f3-573c94e397ed"
+  ]
+}

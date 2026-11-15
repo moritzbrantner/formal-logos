@@ -1,0 +1,13 @@
+{
+  "id": "973fff1f-a763-48f7-8f0e-f216ee5da0ca",
+  "label": "names (technical)",
+  "lemma": "names",
+  "class": "technical",
+  "definition_ids": [
+    "0cffde19-8afb-5fe5-9e0f-ef9a11283845",
+    "ade44ac7-1482-56ae-ab9d-a6dd719afced"
+  ],
+  "disambiguation_ids": [
+    "055037e0-ff57-5cee-ac76-6e3e5318f689"
+  ]
+}

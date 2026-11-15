@@ -1,0 +1,14 @@
+{
+  "id": "438fa366-bca8-433c-89a3-6f0eab1927d7",
+  "label": "nonresistance (technical)",
+  "lemma": "nonresistance",
+  "class": "technical",
+  "definition_ids": [
+    "31d85ba8-5fb1-5fb8-bdfb-cedca7e8854e",
+    "3bc3811d-b99d-5a07-b57c-8e97361e658b",
+    "4bbdc006-f5f9-5fef-9a01-84fabe6f98b6"
+  ],
+  "disambiguation_ids": [
+    "14bdf48f-9ea1-5329-9489-9674bea6132a"
+  ]
+}

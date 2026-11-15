@@ -1,0 +1,18 @@
+{
+  "id": "464fbbe8-65ae-4adf-9545-f4da0e996c79",
+  "label": "causing an effect (technical)",
+  "lemma": "causing an effect",
+  "class": "technical",
+  "definition_ids": [
+    "142e451d-a24f-4aa1-b38b-344e5f235e72",
+    "196be87e-b944-5924-b791-87406fbe48f6",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "d8963cdd-0283-4b03-b006-6fb946a8c9e4",
+    "e9630411-ffc6-534a-8509-bf357272dec9",
+    "ed47a5a7-fa84-43cb-950b-2552b33b99ff"
+  ],
+  "disambiguation_ids": [
+    "88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d",
+    "c3c01e92-520e-5358-a58f-0cc7e9c9e6fa"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "0b967bc9-f224-4f49-aa1b-78ab0aa54c75",
+  "label": "reason for action (technical)",
+  "lemma": "reason for action",
+  "class": "technical",
+  "definition_ids": [
+    "73b35a14-aa85-5469-8d4b-1c4652bfae35",
+    "8c87d0c8-bf67-5a51-adcd-a9d15ebd5437"
+  ],
+  "disambiguation_ids": [
+    "760352b8-f7b7-5d63-890f-3f88c2f81daa"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "ff630a2b-26b7-4ad3-9a6e-ba7169319d7f",
+  "label": "explanation and entailment (technical)",
+  "lemma": "explanation and entailment",
+  "class": "technical",
+  "definition_ids": [
+    "ca6cb143-0387-54de-9d94-278bfd767a51"
+  ]
+}

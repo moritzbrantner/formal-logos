@@ -1,0 +1,13 @@
+{
+  "id": "222fa9af-420e-429f-9fea-1639685696b9",
+  "label": "complete physical information (technical)",
+  "lemma": "complete physical information",
+  "class": "technical",
+  "definition_ids": [
+    "497142e6-35f5-5127-87b6-05563a53bf3b",
+    "586f8f47-04c8-5a2c-aadf-33bf4345c608"
+  ],
+  "disambiguation_ids": [
+    "29db44a8-6e40-533e-a252-0a682374e596"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "69fd853a-b743-4cce-abfe-dbaf4bbe432f",
+  "label": "time clock (technical)",
+  "lemma": "time clock",
+  "class": "technical",
+  "definition_ids": [
+    "375676b0-a295-4a17-a9e4-3db23319d517",
+    "cf39ccc3-d092-4b8a-b929-6b2ad92d6ab8"
+  ],
+  "disambiguation_ids": [
+    "725f3417-73d0-489f-b8ab-7b2628ff36b7"
+  ]
+}

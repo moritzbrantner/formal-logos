@@ -1,0 +1,14 @@
+{
+  "id": "c9b0280c-f4ce-4c56-9b22-6db0d73f287c",
+  "label": "prior (technical)",
+  "lemma": "prior",
+  "class": "technical",
+  "definition_ids": [
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "21788f3f-80d3-5eb6-ad91-86a1a5077799",
+    "c3af1987-2909-5b84-8950-fe5573c55e04"
+  ],
+  "disambiguation_ids": [
+    "be54be36-3ce8-53f9-8168-50d1114e6c76"
+  ]
+}

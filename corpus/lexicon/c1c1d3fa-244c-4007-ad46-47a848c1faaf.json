@@ -1,0 +1,9 @@
+{
+  "id": "c1c1d3fa-244c-4007-ad46-47a848c1faaf",
+  "label": "badness as disapproval (technical)",
+  "lemma": "badness as disapproval",
+  "class": "technical",
+  "definition_ids": [
+    "c691e9a5-d493-5ee2-9efb-e52db55751cd"
+  ]
+}

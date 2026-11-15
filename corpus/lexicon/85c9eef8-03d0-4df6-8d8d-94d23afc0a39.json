@@ -1,0 +1,15 @@
+{
+  "id": "85c9eef8-03d0-4df6-8d8d-94d23afc0a39",
+  "label": "one over many (technical)",
+  "lemma": "one over many",
+  "class": "technical",
+  "definition_ids": [
+    "0c06ef42-f495-56e8-bbe8-57efc70a22e9",
+    "4046121a-c2c0-5f01-aa3d-4dac4605e1b0",
+    "720f6196-960a-5adb-a773-eef008044c58",
+    "fd27651c-d330-551d-b993-c02d6f86b9f6"
+  ],
+  "disambiguation_ids": [
+    "30621afd-a74c-5976-b264-6066fb458ed0"
+  ]
+}

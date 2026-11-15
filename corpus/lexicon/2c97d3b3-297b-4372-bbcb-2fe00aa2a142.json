@@ -1,0 +1,14 @@
+{
+  "id": "2c97d3b3-297b-4372-bbcb-2fe00aa2a142",
+  "label": "same ship (technical)",
+  "lemma": "same ship",
+  "class": "technical",
+  "definition_ids": [
+    "123ae3d8-8ad1-5c51-9606-ce0f399cde67",
+    "5d56fb19-e9f0-5f16-8e36-cd852824e0e5",
+    "e548fee9-1ead-5138-9927-8aa709dc000e"
+  ],
+  "disambiguation_ids": [
+    "227c2c8f-1a08-5481-9670-0df7ee78f345"
+  ]
+}

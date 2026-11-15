@@ -1,0 +1,9 @@
+{
+  "id": "7658a1f0-e011-4696-9579-4bd86ba92ec4",
+  "label": "agent (technical)",
+  "lemma": "agent",
+  "class": "technical",
+  "definition_ids": [
+    "a5ea40ca-d78b-5fad-8fa1-a7e35602ad26"
+  ]
+}

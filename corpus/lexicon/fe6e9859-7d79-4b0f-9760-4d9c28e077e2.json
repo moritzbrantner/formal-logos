@@ -1,0 +1,13 @@
+{
+  "id": "fe6e9859-7d79-4b0f-9760-4d9c28e077e2",
+  "label": "admissible essence property (technical)",
+  "lemma": "admissible essence property",
+  "class": "technical",
+  "definition_ids": [
+    "9c889aee-c88e-59ee-bd2e-ba0f7adde9da",
+    "a2abc3ab-df27-5cc2-b043-274d7e83a2ef"
+  ],
+  "disambiguation_ids": [
+    "d3dc5a8a-ba37-5f0c-9265-285b4e57ff1c"
+  ]
+}

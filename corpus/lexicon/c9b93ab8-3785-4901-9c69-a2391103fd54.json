@@ -1,0 +1,13 @@
+{
+  "id": "c9b93ab8-3785-4901-9c69-a2391103fd54",
+  "label": "remainder (technical)",
+  "lemma": "remainder",
+  "class": "technical",
+  "definition_ids": [
+    "491073fa-38af-5d98-a6b8-77bf9c472525",
+    "700326c9-b157-5670-8ed5-9b4044581d41"
+  ],
+  "disambiguation_ids": [
+    "1cf6af1c-c1c6-544d-a6a7-7060d7aebd8f"
+  ]
+}

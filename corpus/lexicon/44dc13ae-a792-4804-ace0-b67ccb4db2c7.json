@@ -1,0 +1,13 @@
+{
+  "id": "44dc13ae-a792-4804-ace0-b67ccb4db2c7",
+  "label": "language-game internality (technical)",
+  "lemma": "language-game internality",
+  "class": "technical",
+  "definition_ids": [
+    "24285d49-4ef4-5a88-a362-4bf09c11eb56",
+    "8c86d489-cd62-5d8e-9207-2d846caf9c14"
+  ],
+  "disambiguation_ids": [
+    "5fd26045-b3db-5820-a055-cd8c89bc41e5"
+  ]
+}

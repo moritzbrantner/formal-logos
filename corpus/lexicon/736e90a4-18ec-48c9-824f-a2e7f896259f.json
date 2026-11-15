@@ -1,0 +1,9 @@
+{
+  "id": "736e90a4-18ec-48c9-824f-a2e7f896259f",
+  "label": "context-indexed belief-pool closure (technical)",
+  "lemma": "context-indexed belief-pool closure",
+  "class": "technical",
+  "definition_ids": [
+    "d3e575bc-a358-5fa8-8129-7b9255effe2d"
+  ]
+}

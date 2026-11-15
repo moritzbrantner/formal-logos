@@ -1,0 +1,16 @@
+{
+  "id": "c3660ea8-db31-455c-94a8-8f313c074b3e",
+  "label": "being (technical)",
+  "lemma": "being",
+  "class": "technical",
+  "definition_ids": [
+    "3c9fbe24-66c5-587e-9f7a-df0783510328",
+    "4b8fac5c-91f0-5e82-b095-9f4e96d1d6a9",
+    "954583f0-97f4-5f94-8fce-9e52ea267929",
+    "fe68613e-b803-5677-a095-5df53a7c7764"
+  ],
+  "disambiguation_ids": [
+    "3b0d67c5-59e4-5556-a728-26bd567f0fb1",
+    "d16b94fa-886f-54f3-85a3-7fc0c43d2b58"
+  ]
+}
