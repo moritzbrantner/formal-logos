@@ -1258,7 +1258,7 @@
         "sha256": "864fed17ce698755839362ba28967453ab7abcea38fbc8f4cb7c22e0efa029c1",
         "lean_declaration": "TruthCore.Case.Catholicism.Signature.catholicChurch"
       },
-      "reviewed_sha256": "baaef25e7a9b0c3c77c048f248d995550e114c88f910b6c8c3e9fd086ef7b92a"
+      "reviewed_sha256": "57ca60419aa362325fee731c5b2ae8bd9546059ffc02e67c09c471dcfe4c9dd7"
     },
     {
       "kind": "definitions",
