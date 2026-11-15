@@ -3,5 +3,9 @@
   "label": "contraposition (ordinary)",
   "lemma": "contraposition",
   "class": "ordinary",
+  "forms": [
+    "contrapositive",
+    "contrapositives"
+  ],
   "gloss": "The inference from 'if P then Q' to 'if not Q then not P'; also its result."
 }
