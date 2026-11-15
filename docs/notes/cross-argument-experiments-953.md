@@ -8,15 +8,16 @@ not replace source reading, Lean type checking, or Comparator verification.
 
 ## Discovery: the small first slice
 
-`scripts/corpus.py bridge-experiments` reads existing attempts, result records,
+`target/release/truth bridge-experiments` (the Rust port of `scripts/corpus.py
+bridge-experiments`, same output) reads existing attempts, result records,
 the full premise bundles of their arguments, and actual direct Lean Solution
 imports. Its input is **one result and one explicit Lean profile module**:
 
 ```bash
-python3 scripts/corpus.py bridge-experiments ULTIMATE-ADEQUACY-COMPARISON \
+target/release/truth bridge-experiments ULTIMATE-ADEQUACY-COMPARISON \
   --profile-module TruthCore.Explanation.UltimateAdequacy
-python3 scripts/corpus.py bridge-experiments ULTIMATE-ADEQUACY-COMPARISON \
-  --profile-module TruthCore.Explanation.UltimateAdequacy --json
+target/release/truth --json bridge-experiments ULTIMATE-ADEQUACY-COMPARISON \
+  --profile-module TruthCore.Explanation.UltimateAdequacy
 ```
 
 At the implementation snapshot the anchor appeared in **six** attempt evidence
