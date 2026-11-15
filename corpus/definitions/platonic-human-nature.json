@@ -6,5 +6,18 @@
   "definition": "Human as a quality is a Quality parameter; HumanFormAdmitted marks its inclusion in the range of Forms as an explicit optional open commitment. It asserts neither a human Form’s existence by itself nor that the Form is an ordinary human.",
   "basis": "stipulative",
   "note": "Semantic interface for the bounded issue #257 readings. Primary passages motivate this sense but do not define this modern relational encoding. A sourced replacement would need a passage fixing precisely these semantic boundaries.",
-  "lean_declaration": "TruthCore.Greek.Plato.Forms.HumanFormAdmitted"
+  "lean_declaration": "TruthCore.Greek.Plato.Forms.HumanFormAdmitted",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Forms.HumanFormAdmitted s human says that the quality human is admitted into the range of Forms of the vocabulary s: the optional commitment that there is a Form of human. Its body applies the supplied predicate s.Admitted.",
+    "examples_unavailable": "Whether a Form of human is admitted is the question Parmenides 130c leaves undecided; the commitment is recorded as optional and open, so no instance is asserted.",
+    "exclusions": [
+      "The existence of a human Form by itself.",
+      "A human being: the Form, if admitted, is not an ordinary human (DISAMB-PLATONIC-HUMAN)."
+    ],
+    "open_obligations": [
+      "Not attributed to the young Socrates; a sourced replacement would need a passage fixing these boundaries.",
+      "No formalization candidate: admission is the supplied Admitted predicate."
+    ]
+  }
 }

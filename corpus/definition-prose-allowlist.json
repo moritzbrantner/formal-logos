@@ -1,20 +1,4 @@
 {
   "schema_version": 1,
-  "definitions": {
-    "09650b37-d088-51d1-a423-4fdba7f96d29": "fnv1a64:00f47e70d69528d6",
-    "111420d8-cc79-5fde-9555-7305b010c929": "fnv1a64:37b2de2be1448078",
-    "20fddea1-4b27-5021-8c0d-ecc5bef50a27": "fnv1a64:3a335c2b62823e28",
-    "34408202-b4c3-5d8c-856e-2e2ad4397988": "fnv1a64:65abd32c804232ee",
-    "3a9434cc-677b-56b5-b233-8eaee7fceaa9": "fnv1a64:049e3d55bb4016bd",
-    "4bf71609-9f30-5161-b188-ffa1cce02bb4": "fnv1a64:02a71a1ccfd934cf",
-    "4d6a0f0e-637a-4f1c-bf86-ac082b139de5": "fnv1a64:e714154397b399bf",
-    "688f2e05-6390-5460-9bd0-190a819df1fa": "fnv1a64:df7f5e121fb76507",
-    "71a1b029-8b24-42ec-800d-f797ebf4f961": "fnv1a64:ddccc97e6554886e",
-    "92ee243f-3674-5ef9-8317-872d022bc79c": "fnv1a64:b48509f7b26fe520",
-    "974180e2-5483-50af-b946-044088d6f8b7": "fnv1a64:3dd302a410abca98",
-    "b5ca3837-c09d-4fa0-8fe7-95ca1a2559ff": "fnv1a64:3150d18370655a8a",
-    "c31c763a-c8e3-56ba-9def-79dcc818eb3d": "fnv1a64:b17766f5b4327b0c",
-    "d24cc01a-d6c5-5a1d-bdde-989511bbd1b7": "fnv1a64:99160f1c078194fc",
-    "e7812110-d4a0-44b2-b026-080b0d686470": "fnv1a64:67c64ff373ede611"
-  }
+  "definitions": {}
 }

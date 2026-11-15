@@ -6,5 +6,21 @@
   "definition": "The model separately supplies innocent and nonthreatening predicates, each applied to the victim in the killing context; neither is defined from or entails the other.",
   "basis": "stipulative",
   "note": "These are separate factual case classifications, not definitions of legal guilt, moral innocence or threat, and not an identification with Aquinas’s innocent/righteous contrast. Their applicability to real cases requires independent support.",
-  "lean_declaration": "TruthCore.Ethics.HardCaseTyped.Facts.innocent"
+  "lean_declaration": "TruthCore.Ethics.HardCaseTyped.Facts.innocent",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Facts.innocent c v says that, in the killing context c, the person v is innocent. It is a field of the typed hard-case facts (TruthCore.Ethics.HardCaseTyped.Facts), supplied by each model as an independent factual classification; the separate field nonthreatening classifies threat, and neither is defined from or entails the other.",
+    "examples": [
+      "The victim of the hard case's deliberate killing, stipulated innocent in that context."
+    ],
+    "exclusions": [
+      "Legal guilt or a theory of moral innocence.",
+      "Nonthreat: a separate predicate.",
+      "Aquinas's innocent/righteous contrast: not identified with it (DISAMB-INNOCENCE-HARD-CASE-AQUINAS)."
+    ],
+    "open_obligations": [
+      "Applicability to real cases requires independent support.",
+      "No formalization candidate: a stipulated case classification."
+    ]
+  }
 }

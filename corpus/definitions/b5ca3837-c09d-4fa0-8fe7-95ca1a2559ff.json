@@ -7,5 +7,22 @@
   "claim_ids": [
     "676bdaeb-d699-49ee-968b-0cd2a123927c"
   ],
-  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.NatureSource.fromNature"
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.NatureSource.fromNature",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "NatureSource.fromNature x r says that x's having r is caused from the principles of x's own nature, in an unspecified mode, as risibility is in man (De ente c.3). It is a supplied relation between a being and a respect (NATURE_SOURCE_1).",
+    "examples": [
+      "Risibility in a human being, caused from the principles of human nature."
+    ],
+    "exclusions": [
+      "The thing's own CausesIn self-edge.",
+      "Exclusive causation: it does not exclude that something else also contributes.",
+      "Efficient causation by the quiddity (quiddityEfficientlyCauses, NATURE_SOURCE_2) is a narrower sense reached only by an open bridge (disambiguation 87ac7ae0)."
+    ],
+    "open_obligations": [
+      "The mode is left open: it may cover an essence as active principle of its proper accidents and, on the analyst's Thomist gloss, a form as formal, non-efficient principle of being.",
+      "The bridge NatureSourcedDistinctEsseIsEfficient to the efficient reading is open.",
+      "No formalization candidate from existing vocabulary."
+    ]
+  }
 }
