@@ -1,10 +1,10 @@
 import { afterAll, beforeAll, expect, test } from "bun:test";
-import { execFileSync } from "node:child_process";
 import path from "node:path";
 import { chromium, type Browser } from "playwright";
 import type { FrontierReport } from "../src/lib/site-state";
 import type { NextStepsReport } from "../src/lib/next-steps";
 import { shortId } from "../src/lib/corpus-ids";
+import { truthJson } from "../src/lib/truth-cli";
 
 let browser: Browser;
 let server: ReturnType<typeof Bun.serve> | undefined;
@@ -13,9 +13,7 @@ let report: NextStepsReport & { support_options: FrontierReport["support_options
 const basePath = process.env.TEST_BASE_PATH ?? "";
 
 beforeAll(async () => {
-  report = JSON.parse(execFileSync("python3", ["scripts/corpus.py", "next-steps", "--json"], {
-    cwd: path.resolve(import.meta.dir, "../../.."), encoding: "utf8", maxBuffer: 64 * 1024 * 1024,
-  }));
+  report = truthJson(["next-steps"]) as typeof report;
   if (process.env.TEST_NEXT_URL) url = process.env.TEST_NEXT_URL;
   else {
     const root = path.resolve(import.meta.dir, "../out");
