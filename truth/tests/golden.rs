@@ -48,8 +48,10 @@ golden!(
     bind_check,
     bridge_experiments,
     check,
+    configuration_report,
     configurations,
     frontier,
+    index,
     issues,
     navigation,
     proof_use,
@@ -613,7 +615,10 @@ fn compare(
     if let Some(files) = expect["files"].as_object() {
         for (relative, expected) in files {
             let target = PathBuf::from(tokens.apply(relative));
-            let actual = fs::read_to_string(&target).unwrap_or_default();
+            let mut actual = fs::read_to_string(&target).unwrap_or_default();
+            if expect["strip_producer"].as_bool() == Some(true) {
+                actual = strip_producer(&actual);
+            }
             let expected = tokens.apply(expected.as_str().expect("file content"));
             if actual != expected {
                 problems.push(text_difference(relative, &expected, &actual));

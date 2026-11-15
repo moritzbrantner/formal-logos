@@ -17,6 +17,7 @@ import sys
 import tempfile
 from pathlib import Path
 
+from truth_parity import golden
 from truth_parity.check import write_check_fixture
 from truth_parity.common import U, ParityCase
 from truth_parity.configurations import configuration_records
@@ -87,6 +88,47 @@ if os.environ.get("FAKE_FAIL") == "verify":
     sys.exit(1)
 '''
 
+# Runs this repository's `corpus.py` as `python3 scripts/corpus.py ARGV` would
+# run the checkout's copy at `argv[1]`: as `__main__` with `__file__` in the
+# checkout, beside an imported `corpus` module whose repository paths are
+# rebased onto the checkout (the copy other modules import), and with
+# `configuration_explorer` reading the checkout's aliases. The checkout's
+# own digest-bound `scripts/*.py` are then only report inputs: the fixture
+# replaces them by small stand-ins (`SCRIPT_STAND_INS`), so its golden
+# snapshots stay small.
+ORACLE = """
+import sys
+from pathlib import Path
+scripts = %r
+root = Path(sys.argv[1])
+sys.path.insert(0, scripts)
+import corpus, source_evidence
+def rebase(value, real):
+    if isinstance(value, Path) and (value == real or real in value.parents):
+        return root / value.relative_to(real)
+    return value
+for module in (corpus, source_evidence):
+    real = module.ROOT
+    for name, value in list(vars(module).items()):
+        setattr(module, name, rebase(value, real))
+        if callable(value) and getattr(value, "__defaults__", None):
+            value.__defaults__ = tuple(rebase(item, real) for item in value.__defaults__)
+        if callable(value) and getattr(value, "__kwdefaults__", None):
+            value.__kwdefaults__ = {key: rebase(item, real) for key, item in value.__kwdefaults__.items()}
+# configuration_explorer orders by legacy id from its own checkout's aliases.
+import configuration_explorer
+from corpus_ids import Aliases
+configuration_explorer._ALIASES = Aliases.load(root)
+main = root / "scripts" / "corpus.py"
+sys.argv = [str(main), *sys.argv[2:]]
+with open(scripts + "/corpus.py", encoding="utf-8") as handle:
+    code = compile(handle.read(), str(main), "exec")
+exec(code, {"__name__": "__main__", "__file__": str(main), "__builtins__": __builtins__})
+""" % str(Path(__file__).resolve().parents[1])
+SCRIPT_STAND_INS = ("corpus.py", "configurations.py", "configuration_explorer.py", "finite_models.py",
+                    "premise_dossiers.py", "source_evidence.py")
+SCRATCH = re.compile(r"'[^']*/[^'/]*\.lean'")
+
 # The configuration report's fixed inputs besides the copied scripts/*.py.
 STUB_INPUTS = ("lean-toolchain", "lakefile.toml", "lake-manifest.json", "TruthCore.lean",
                "scripts/BindTypes.lean", "scripts/verifier-pins.env", "scripts/bootstrap-verifier.sh",
@@ -106,6 +148,8 @@ def write_fixture(root, defect=False):
     for path in STUB_INPUTS:
         (root / path).parent.mkdir(parents=True, exist_ok=True)
         (root / path).write_text(f"stub {path}\n")
+    for name in SCRIPT_STAND_INS:
+        (root / "scripts" / name).write_text(f"# fixture stand-in for scripts/{name}\n")
     for path, text in (("bin/lake", FAKE_LAKE), ("scripts/verify-result.sh", FAKE_VERIFY)):
         (root / path).parent.mkdir(parents=True, exist_ok=True)
         (root / path).write_text(text)
@@ -119,12 +163,13 @@ def write_fixture(root, defect=False):
 class TruthConfigurationReportParity(ParityCase):
     """Live configuration paths through a recorded toolchain."""
 
-    def run_both(self, root, argv, rust_argv=None, fail="", path=None):
+    def run_both(self, root, argv, rust_argv=None, fail="", path=None, record=None):
         """(Python, Rust) results of one command, each with its normalized
-        toolchain log."""
+        toolchain log. `record(python, log_text)` runs between the two, on the
+        tree Rust then sees (keeps a golden case)."""
         outcomes = []
-        for command in ([sys.executable, str(root / "scripts" / "corpus.py"), *argv],
-                        [str(self.binary), "--root", str(root), *(rust_argv or argv)]):
+        for side, command in (("python", [sys.executable, "-c", ORACLE, str(root), *argv]),
+                              ("rust", [str(self.binary), "--root", str(root), *(rust_argv or argv)])):
             log = root / "fake.log"
             log.unlink(missing_ok=True)
             environment = {**os.environ, "FAKE_LOG": str(log), "FAKE_FAIL": fail,
@@ -132,9 +177,43 @@ class TruthConfigurationReportParity(ParityCase):
             for name in ("TRUTH_CORE_CONFIGURATION_REPORT", "TRUTH_CORE_REQUIRE_CONFIGURATION_REPORT"):
                 environment.pop(name, None)
             result = subprocess.run(command, cwd=root, env=environment, capture_output=True, text=True, check=False)
-            calls = [json.loads(line) for line in log.read_text().splitlines()] if log.exists() else []
+            text = log.read_text() if log.exists() else None
+            calls = [json.loads(line) for line in text.splitlines()] if text is not None else []
+            if side == "python" and record is not None and path is None:
+                log.unlink(missing_ok=True)
+                record(result, text)
+            if side == "rust":
+                for output in (rust_argv or argv)[1:]:
+                    if output.endswith(".json") and (root / output).is_file():
+                        golden.note_producer((root / output).read_text())
             outcomes.append((result, calls))
         return outcomes
+
+    def golden_case(self, root, argv, rust_argv, fail, code, compare=None, same_calls=True, written=None):
+        """A `record` callback for `run_both`: Rust must reproduce Python's
+        exit code, output, toolchain log and (`written`: Rust's output path)
+        the bundle Python wrote, without Rust's producer fingerprint."""
+        def record(python, log):
+            expected = {}
+            if code:
+                if SCRATCH.search(python.stderr) is None:  # temporary certificate paths differ by design
+                    expected["stderr"] = python.stderr
+                expected["stdout"] = python.stdout
+            elif compare is not None:
+                expected["stdout_json"] = json.loads(python.stdout)
+            else:
+                expected["stdout"] = python.stdout
+            files = {}
+            if same_calls and log is not None:
+                files[str(root / "fake.log")] = log
+            if written is not None:
+                python_output = Path(argv[argv.index("--output") + 1])
+                files[str(root / written)] = (python_output if python_output.is_absolute()
+                                              else root / python_output).read_text()
+            golden.record(self, ["--root", root, *(rust_argv or argv)], root=root, code=code,
+                          env={"FAKE_LOG": root / "fake.log", "FAKE_FAIL": fail}, path_prepend=[root / "bin"],
+                          files=files or None, strip_producer=written is not None, **expected)
+        return record
 
     @staticmethod
     def scratch(text):
@@ -142,7 +221,8 @@ class TruthConfigurationReportParity(ParityCase):
         return re.sub(r"'[^']*/[^'/]*\.lean'", "'<scratch>.lean'", text)
 
     def assert_same(self, root, argv, rust_argv=None, code=0, fail="", path=None, compare=None, same_calls=True):
-        (python, python_calls), (rust, rust_calls) = self.run_both(root, argv, rust_argv, fail, path)
+        record = self.golden_case(root, argv, rust_argv, fail, code, compare, same_calls)
+        (python, python_calls), (rust, rust_calls) = self.run_both(root, argv, rust_argv, fail, path, record)
         self.assertEqual(python.returncode, code, (argv, python.stderr))
         self.assertEqual(rust.returncode, code, (argv, rust.stderr))
         if same_calls:
@@ -170,9 +250,11 @@ class TruthConfigurationReportParity(ParityCase):
             write_fixture(root)
             python_bundle = root / ".cache" / "configuration-explorer.json"
             rust_bundle = root / ".cache" / "rust.json"
+            argv = ["configuration-report", "--output", str(python_bundle)]
+            rust_argv = ["configuration-report", "--output", ".cache/rust.json"]
             (python, python_calls), (rust, rust_calls) = self.run_both(
-                root, ["configuration-report", "--output", str(python_bundle)],
-                ["configuration-report", "--output", ".cache/rust.json"])
+                root, argv, rust_argv,
+                record=self.golden_case(root, argv, rust_argv, "", 0, written=".cache/rust.json"))
             self.assertEqual(python.returncode, 0, python.stderr)
             self.assertEqual(rust.returncode, 0, rust.stderr)
             self.assertEqual(rust_calls, python_calls)
@@ -224,7 +306,7 @@ class TruthConfigurationReportParity(ParityCase):
                                       ({"TRUTH_CORE_CONFIGURATION_REPORT": ".cache/configuration-explorer.json"}, None)):
                 with self.subTest(environment=environment):
                     results = []
-                    for command in ([sys.executable, str(root / "scripts" / "corpus.py"), "configuration-report", "--build-input"],
+                    for command in ([sys.executable, "-c", ORACLE, str(root), "configuration-report", "--build-input"],
                                     [str(self.binary), "--root", str(root), "configuration-report", "--build-input"]):
                         results.append(subprocess.run(command, cwd=root, env={**os.environ, **environment},
                                                       capture_output=True, text=True, check=False))

@@ -39,8 +39,9 @@ file contents alike:
   position in topological order (the replay's commits have other ids);
 - the Rust structure producer fingerprint (`truth/build.rs`) becomes
   `⟪producer⟫`, so an artifact Rust wrote stays fresh across Rust changes;
-  `strip_producer` drops `"producer_sha256": "…",` from Rust's stdout before
-  comparing, as `proposition_structure.without_producer` does;
+  `strip_producer` drops `"producer_sha256": "…",` from Rust's stdout and
+  expected files before comparing, as `proposition_structure.without_producer`
+  does (Python's reports and bundles have no such field);
 - `scripts/*.py` files byte-identical to the repository's own copies (the
   `check` fixture copies them so the unmodified Python CLI runs) are left
   out, except the paths a case lists in `keep_repo`, which are recorded as
