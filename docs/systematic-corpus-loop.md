@@ -308,7 +308,7 @@ A coarse GitHub issue names a coherent source objective and completion criteria;
 
 ## 2. Candidate: the next contiguous source range
 
-`corpus/candidates/*.json` queues chapter-sized or similarly coherent ranges. Use `python3 scripts/corpus.py next` when doing source ingestion:
+`corpus/candidates/*.json` queues chapter-sized or similarly coherent ranges. Use `target/release/truth next` when doing source ingestion:
 
 1. Materialize the verified witness; read the whole range and context before splitting it.
 2. Proceed in source order. Record substantive readings and inferential steps, reuse existing identities, and preserve defensible alternatives. Skip filler; not one claim per sentence.
