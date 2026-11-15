@@ -68,6 +68,8 @@ match exactly, ties included. Rust additionally resolves a legacy id or label
 `--right`; Python accepts only indexed IDs.
 
 Search treats input as literal words joined by AND and returns corpus paths.
+It also searches the research notes (next section): up to `--limit` records
+come first, exactly as before, followed by up to `--limit` note sections.
 `show` returns the full record and reverse references, including relevant
 attempts when linked by ID. Keys are namespaced by record kind (`kind:ID`), and
 an ID that names several records needs that form.
@@ -101,7 +103,7 @@ counts. Publication is atomic and a failed rebuild preserves the old database
 (the query then fails with exit 1). The database is disposable and ignored by
 Git.
 
-Validation: `cargo test -p truth index` and `python3 scripts/verify_truth_cli.py
+Validation: `cargo test -p truth -- index notes` and `python3 scripts/verify_truth_cli.py
 target/debug/truth TruthIndexParity` (Python's own tests:
 `python3 -m unittest discover -s scripts -p test_research_index.py`). Tests
 cover namespaced identity, inverse references, exact duplicate bundles, stale
@@ -125,6 +127,88 @@ fields. Export does not overwrite the corpus. Source files are retained in the
 
 Next parity work should add typed reference resolution, then compare query outputs with the existing corpus commands. Existing
 proof, source, dossier and frontier authorities remain unchanged throughout.
+
+## Research notes (#952)
+
+Free-form notes are discovery material, not corpus records. `truth index`
+also projects every `docs/notes/**/*.md` file of at most 1 MiB (no other
+file type, no generated JSON, no front matter required) into Rust-only
+tables (`notes`, `note_sections`, `note_links`, `note_unresolved`,
+`note_search`). The record tables stay Python's row for row. Note paths
+and bytes are part of the freshness digest, so editing, adding or removing
+a note rebuilds the index on the next query.
+
+- **Sections.** A note is split at its Markdown headings (outside fenced
+  code); a section is named `path#anchor` with GitHub's anchor, and the
+  text before the first heading is the bare path. The title is the first
+  level-1 heading, else the file name.
+- **Search.** A note hit is typed `"kind": "note"`, with its section `id`,
+  `path`, `title`, `heading`, `line`, an FTS5 `excerpt` (matches in
+  brackets) and `links`: the records the section names explicitly, as
+  `kind:ID`.
+- **Show.** `truth index show docs/notes/x.md` lists the note's sections,
+  the records it names (`links`: section, line, record, the mention and how
+  it was read) and its unresolved mentions; `…x.md#anchor` shows one
+  section with its body. `truth index show RECORD` adds
+  `mentioned_by_notes`.
+- **Explicit links only.** A section links to a record only when it names
+  it: a whole uuid or legacy ID token (a file name `LEGACY-ID.json`
+  counts as `LEGACY-ID`), a corpus record path (`corpus/statements/x.json`,
+  also inside a link), or an exact label written as a whole inline code
+  span containing a space. Single-word code spans are usually Lean or
+  shell identifiers and are not read as labels. A uuid, a reserved-prefix
+  token (`STMT-`, `DEF-`, `DISAMB-`, `INF-`, `REL-`, `ATTEMPT-`, `MODEL-`,
+  `CONFIG-`) or a corpus path that names no record is listed as
+  unresolved and never linked. Word overlap, similarity and issue numbers
+  link nothing.
+- **Reverse listing.** `truth dossier STATEMENT`, `truth related STATEMENT`
+  and `truth context ARGUMENT` (the argument, its results and its
+  conclusion) end their text with "Notes mentioning the target records"
+  and add `note_mentions` to their JSON. They read the notes directly and
+  write no cache. `dossier --all` is unchanged.
+
+A mention is a navigation link. It is not an entailment, a status, an
+equivalence or source evidence, and it creates no record. A note that
+discusses a formal result should link it by ID rather than restate its
+proof or provenance.
+
+Python has no note index. This is an intentional divergence: the parity
+tests compare the record part of `search`, drop `mentioned_by_notes` from
+`show`, and drop `note_mentions` and the final notes block from
+`related`, `dossier` and `context`.
+
+### Walkthrough: plural cooperation (#744, #743, #735)
+
+The open question is whether individually necessary entities could stand in
+contingent relations. It is already recorded as the plural-source survivor in
+[`joint-cooperation-744.md`](joint-cooperation-744.md#three-live-arguments-under-one-explanatory-standard),
+together with its burden: a non-circular account of the relational principle
+and of any contingent *exercise*. [`law-actuality-743.md`](law-actuality-743.md)
+covers the neighbouring law-selection test. No new note, statement or claim
+is needed.
+
+1. **Capture.** The question stays in that note's prose. It is a question,
+   not a premise, and it has no status.
+2. **Discovery.** `truth index search plural-source survivor` finds only that
+   note section. `truth index search necessary relational structure` returns
+   the attempt `aa8b9faf-7d0d-5828-bebf-902363b351ea` (the #744 follow-up on
+   law grounding) first, then the note sections.
+3. **Linked formal experiment.** `truth index show
+   docs/notes/joint-cooperation-744.md` lists the records the note names:
+   `JOINT-COOPERATION-CERTIFICATE` (argument and result) in its opening
+   line, `COMPLETE-RESPONSE-PARITY` and `MECHANISM-INTERVENTION-PARITY` in
+   their sections, the q.11 a.3 claim and the `MANY-CAUSE-ONE-PER-ACCIDENS`
+   candidate. `truth context JOINT-COOPERATION-CERTIFICATE` gives the
+   certificate's frozen theorem and open premises and ends by listing the
+   notes that name it. Those results remain conditional on their premises.
+   The note's question is not discharged by them, and no theorem about
+   necessary entities with contingent relations exists.
+
+`test_note_pilot_walkthrough` in `scripts/truth_parity/index.py` runs these
+steps on the real corpus. The Rust tests in `truth/src/index.rs` and
+`truth/src/notes.rs` cover the same steps on a fixture. They also cover
+stale rebuilding after a note edit or removal, unresolved references,
+notes versus statements, and the absence of any inferred link or status.
 
 ## Research workflow integration
 

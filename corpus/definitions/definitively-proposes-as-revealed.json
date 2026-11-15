@@ -10,5 +10,24 @@
     "7748075b-143b-5167-93cd-990a67508f41"
   ],
   "lean_declaration": "TruthCore.Case.Catholicism.Signature.DefinitivelyProposesAsRevealed",
-  "note": "The skeleton uses 'definitively' as its technical label for these specified modes of proposing something as revealed; the cited sentence does not supply a general theory of irreformability. The field DefinitivelyProposesAsRevealed c p is primitive: it has no constructor or axiom mechanically imposing either mode or actual containment in revelation. A model using the sourced sense must interpret the field accordingly. The only-truth bridge remains an open premise and cannot be obtained merely from this definition. For arbitrary societies c, using the Church's proposal mode is the skeleton's interpretive extension, not a claim that Dei Filius describes every society."
+  "note": "The skeleton uses 'definitively' as its technical label for these specified modes of proposing something as revealed; the cited sentence does not supply a general theory of irreformability. The field DefinitivelyProposesAsRevealed c p is primitive: it has no constructor or axiom mechanically imposing either mode or actual containment in revelation. A model using the sourced sense must interpret the field accordingly. The only-truth bridge remains an open premise and cannot be obtained merely from this definition. For arbitrary societies c, using the Church's proposal mode is the skeleton's interpretive extension, not a claim that Dei Filius describes every society.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Signature.DefinitivelyProposesAsRevealed c p says that the society c proposes the proposition p to be believed as divinely revealed, by solemn judgment or by the ordinary and universal magisterium (Dei Filius ch. 3). It is a supplied relation between a society and a proposition. Proposing p does not by definition make p revealed or true.",
+    "examples": [
+      "An ecumenical council solemnly defining an article of faith.",
+      "The open premise STMT-CATHOLIC-CHURCH-DEFINITIVELY-PROPOSES-CREED: the Catholic Church so proposes each article of the Creed."
+    ],
+    "exclusions": [
+      "An arbitrary assertion by Church members or authorities.",
+      "A proposal not made as divinely revealed, such as a prudential or disciplinary decision.",
+      "Containment in the word of God, written or handed down: Dei Filius states it as a separate condition."
+    ],
+    "open_obligations": [
+      "No constructor or axiom imposes either mode of proposing or actual containment in revelation; a model using the sourced sense must interpret the field accordingly.",
+      "The only-truth bridge STMT-BRIDGE-GOD-FOUNDED-AUTHORITY-PROPOSES-ONLY-TRUTH remains open and does not follow from this definition.",
+      "Applying the Church's proposal modes to arbitrary societies is the skeleton's interpretive extension.",
+      "No formalization candidate from existing vocabulary."
+    ]
+  }
 }

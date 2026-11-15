@@ -11,5 +11,22 @@
     "9b52e1a5-9008-51e9-b666-892da74e45b1"
   ],
   "lean_declaration": "TruthCore.Causality.TermSenseForks.CalledGod",
-  "note": "CalledGod Calls godName x := Calls godName x, a speech community applying the name to x: GOD_3 of the DISAMB-GOD fork (batch 4 of #1233). The prima via instance remains the statement-level reading FirstUnmovedMoverIsWhatAllUnderstandAsGodReading."
+  "note": "CalledGod Calls godName x := Calls godName x, a speech community applying the name to x: GOD_3 of the DISAMB-GOD fork (batch 4 of #1233). The prima via instance remains the statement-level reading FirstUnmovedMoverIsWhatAllUnderstandAsGodReading.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "CalledGod Calls godName x says that a speech community applies the name godName to x: the usage reported at the end of each of the five ways ('et hoc omnes intelligunt Deum'). Its body just applies the supplied usage relation Calls, so its content is that relation. It is a fact about naming, not a claim about what x is.",
+    "examples": [
+      "The community the five ways speak for calling the first unmoved mover 'God' (ST I q.2 a.3).",
+      "Any community that applies the word 'god' to a being it worships, read with its own name."
+    ],
+    "exclusions": [
+      "Being God in the sense of classical theism (Signature.IsGod, GOD_4): the step from usage to IsGod is the open bridge STMT-CALLED-GOD-IS-CLASSICAL-GOD (DISAMB-GOD).",
+      "Meeting the nominal description of q.13 (NominalGod, GOD_1): that is a description of what the name signifies, not who uses it."
+    ],
+    "open_obligations": [
+      "The relation Calls is supplied by a model; which community, which name and which applications it records are not fixed in Lean.",
+      "The bridge STMT-CALLED-GOD-IS-CLASSICAL-GOD remains open, and the GOD_3 branch reaches the naming premise only through it.",
+      "No formalization candidate: a usage relation is an empirical, linguistic input."
+    ]
+  }
 }

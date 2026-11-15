@@ -9,5 +9,25 @@
     "73eece80-ee7d-564f-9e40-c00c71492a02"
   ],
   "lean_declaration": "TruthCore.Causality.TermSenseForks.CauseFrame.CausesIn",
-  "note": "Causal scope and originating/sustaining/primary/secondary distinctions, source locators, examples, competing reading and open semantic burdens: docs/notes/causal-perfection-transfer.md. The shared relation has no built-in temporal, modal, transitivity or exclusive-cause law; mere enablement and possession of a perfection are not effective production. Typed parameter location: CausesIn : Being → Being → Respect → Prop in CausesAllInGenus. That usage-site declaration defines the universal scope of a selected cause, ∀ x, x ≠ c → InAct x r → CausesIn c x r; it does not define the primitive CausesIn relation. DEF-UNIVERSAL-ESSE-CAUSE-SCOPE documents that separate scope construction. The primary field locator leaves the originating/sustaining interpretation and applicability OPEN. Audit #1233: the primary locator now names CauseFrame.CausesIn, a primitive relation field, rather than the quantified reading. This change supplies no definition body, structural law or bridge."
+  "note": "Causal scope and originating/sustaining/primary/secondary distinctions, source locators, examples, competing reading and open semantic burdens: docs/notes/causal-perfection-transfer.md. The shared relation has no built-in temporal, modal, transitivity or exclusive-cause law; mere enablement and possession of a perfection are not effective production. Typed parameter location: CausesIn : Being → Being → Respect → Prop in CausesAllInGenus. That usage-site declaration defines the universal scope of a selected cause, ∀ x, x ≠ c → InAct x r → CausesIn c x r; it does not define the primitive CausesIn relation. DEF-UNIVERSAL-ESSE-CAUSE-SCOPE documents that separate scope construction. The primary field locator leaves the originating/sustaining interpretation and applicability OPEN. Audit #1233: the primary locator now names CauseFrame.CausesIn, a primitive relation field, rather than the quantified reading. This change supplies no definition body, structural law or bridge.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "CauseFrame.CausesIn c x r says that c is effectively causally responsible for x's actually having the perfection r: as fire is responsible for the heat of a heated thing. At r = esse it says that c causes x's being, not merely x's coming to be. It is a supplied ternary relation among two beings and a respect; it does not say how c causes (it may include a primary cause working through a secondary one) and is not identified with moving.",
+    "examples": [
+      "Fire causing the heat of water it heats, with r being hot.",
+      "Read at esse, a cause on which a thing depends for its continuing to be, as q.104 a.1 contrasts the sun and illuminated air with a builder and a house (docs/notes/causal-perfection-transfer.md)."
+    ],
+    "exclusions": [
+      "Merely possessing the perfection r: c's being hot does not make c a cause of x's heat.",
+      "A merely necessary enabling condition, or indirect preservation such as removing a threat (q.104 a.1).",
+      "Moving (MovesIn, present reduction from potency to act), efficient causing in the secunda via sense, and cause of origin (CausesOrigin) are separate senses in DISAMB-CAUSE; simple priority (PriorSimply) is a separate relation, linked to cause of being only by the open premise STMT-SIMPLY-PRIOR-IS-CAUSE-OF-BEING."
+    ],
+    "open_obligations": [
+      "No transitivity, asymmetry, irreflexivity, well-foundedness, exclusivity, temporal or modal law follows from the field's type; any such property is an explicit premise where used.",
+      "Whether a cause of x's esse causes x's other perfections is the open transfer premise (STMT-UNIVERSAL-CAUSE-TRANSFERS-PERFECTIONS and its legacy form).",
+      "Coverage and exclusivity of the cause senses (STMT-CAUSE-SENSES-EXHAUSTIVE, STMT-CAUSE-SENSE-UNIQUE) remain open frontier premises.",
+      "Whether the originating or sustaining interpretation applies at esse, and whether the ordinary examples extend to existential causation, remain OPEN bridges.",
+      "No formalization candidate from existing vocabulary: defining it by moving, by priority or by grounding would conceal one of the bridges above."
+    ]
+  }
 }

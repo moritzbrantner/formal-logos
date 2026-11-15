@@ -6,5 +6,23 @@
   "definition": "Grounds a b is the separately interpreted directed relation of a grounding b, using Fact tokens. It is distinct from material implication, Forms.Explains, efficient causation and epistemic identification. Neither asymmetry nor actuality follows from the interface alone.",
   "basis": "stipulative",
   "note": "Modern analytical test vocabulary for issue #260. The primary passages motivate the question, not these formal definitions. A sourced replacement would require a passage specifying these precise relations and restrictions. Lean locator: Explanation.Grounds is the separately supplied Fact → Fact → Prop field, not the enclosing Explanation structure or a definition of implication. Its grounding interpretation and applicability remain OPEN; no structural law follows from having the field.",
-  "lean_declaration": "TruthCore.Greek.Plato.ParticipationGrounding.Explanation.Grounds"
+  "lean_declaration": "TruthCore.Greek.Plato.ParticipationGrounding.Explanation.Grounds",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Explanation.Grounds a b says that the fact a metaphysically grounds the fact b: b obtains in virtue of a, a directed relation of dependence between facts (base facts, participation facts, exemplification facts). It is part of a modern test vocabulary for the participant-selection objection (#260), supplied by an Explanation; nothing is attributed to Plato or Aristotle.",
+    "examples": [
+      "A test case: a base fact about a bearer's feature grounding that bearer's participation in a Form, under the unattributed commitment GroundedSelection.",
+      "Ordinary grounding illustration: the fact that a set has members grounding the fact that it is nonempty."
+    ],
+    "exclusions": [
+      "Material implication: a true conditional between facts is not grounding.",
+      "Formative change (Produces), an agent's identification (Identifies) and the shared Forms.Explains relation: separate senses in DISAMB-PARTICIPATION-EXPLANATION.",
+      "Efficient causation between beings: grounding relates facts, not agents."
+    ],
+    "open_obligations": [
+      "Asymmetry is the optional norm AsymmetricGround, not a law of the field; irreflexivity, transitivity and well-foundedness are likewise not imposed.",
+      "Whether any real participation facts stand in this relation, and whether it applies to Plato's account, remain OPEN.",
+      "No formalization candidate: grounding is taken as primitive in this vocabulary."
+    ]
+  }
 }

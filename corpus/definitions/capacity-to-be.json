@@ -9,5 +9,23 @@
     "4eb6f90c-55cd-59bd-8a25-48f9e09196a2"
   ],
   "lean_declaration": "TruthCore.Causality.TermSenseForks.CapacityPotency",
-  "note": "Sense fork batch 3 (POTENCY_3): CapacityPotency CanBe x r := CanBe x r is the sense's own declaration, so that capacity statements mention neither adopted nor independent potency. The CanBe parameter of PotencyIsUnactualizedCapacityReading is the same relation."
+  "note": "Sense fork batch 3 (POTENCY_3): CapacityPotency CanBe x r := CanBe x r is the sense's own declaration, so that capacity statements mention neither adopted nor independent potency. The CanBe parameter of PotencyIsUnactualizedCapacityReading is the same relation.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "CapacityPotency CanBe x r is the capacity sense of potency (POTENCY_3): x is able to be r, whether or not it is r now, as a knower who is not contemplating can contemplate. Its body only applies the supplied relation CanBe, the primitive of the Metaphysics IX.6 analysis, so its content is that relation.",
+    "examples": [
+      "A knower not now contemplating, with r contemplating.",
+      "Wood that can have a Hermes cut out of it."
+    ],
+    "exclusions": [
+      "Adopted potency (DEF-POTENCY, CanBe x r ∧ ¬ InAct x r): capacity alone does not exclude being actually r (DISAMB-POTENCY).",
+      "Modal possibility at an alternative world: the passage from CanBe to accessible actuality is the separate open premise ModalCapacity (DISAMB-CAN-BE-MODAL-CAPACITY).",
+      "Active power to produce r in another."
+    ],
+    "open_obligations": [
+      "Nothing in the case constrains CanBe beyond the IX.6 analysis (PotencyIsUnactualizedCapacityReading).",
+      "The bridge to modal capacity remains open, and its failure is kept as an option in the RootExposure fork.",
+      "No formalization candidate: CanBe is the basic capacity notion from which adopted potency is defined."
+    ]
+  }
 }

@@ -6,5 +6,21 @@
   "definition": "In the proposition-2 projection, Participates x one marks x participating in the designated One. It is a bare directed attribution relation: the received-unity and nonidentity commitments are in the statement, not built into this definition. No spatial parts, efficient production, shared genus or Platonic Form classification follows.",
   "basis": "stipulative",
   "note": "The primary Lean locator names the existing shared Vocabulary.Participates field on the SAME Entity/Quality dictionary used by the Proclus projection. Its second argument one is interpreted as the designated One, not silently as a Platonic Form. TruthCore.Greek.Proclus.ElementsTheology.ParticipantUnityContrast is the separate statement constraining that field by received unity and nonidentity; it is not the relation's definition. Sharing an interface proves no historical or philosophical equivalence between Proclus and Plato. A fuller account of how participation occurs remains open.",
-  "lean_declaration": "TruthCore.Greek.Plato.Forms.Vocabulary.Participates"
+  "lean_declaration": "TruthCore.Greek.Plato.Forms.Vocabulary.Participates",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Vocabulary.Participates x f is the shared participation relation of the Forms vocabulary. In the Proclus proposition-2 projection, Participates x one says that x participates in the designated One. Read there, it is a bare directed attribution relation; the received-unity and nonidentity commitments are in the constraining statement ParticipantUnityContrast, not in the relation.",
+    "examples": [
+      "Elements of Theology prop. 2: whatever participates in the One is both one and not-one; each such participant x stands in Participates x one."
+    ],
+    "exclusions": [
+      "Spatial parthood, efficient production, membership in a shared genus, or classification under a Platonic Form: none follows from the relation (DISAMB-PROCLUS-UNITY-PARTICIPATION).",
+      "Identity with the One: nonidentity is a separate commitment of the statement."
+    ],
+    "open_obligations": [
+      "Sharing the interface with Plato's Forms vocabulary proves no historical or philosophical equivalence between Proclus and Plato.",
+      "A fuller account of how participation occurs remains open.",
+      "No formalization candidate: participation is taken as primitive in this vocabulary."
+    ]
+  }
 }

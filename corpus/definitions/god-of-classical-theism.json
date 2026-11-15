@@ -6,5 +6,21 @@
   "definition": "The case signature's `IsGod g`: g is God in the sense of the God of classical theism, not merely what is called God. The stages after stage 1 and the root use this predicate. Its content is fixed only by the open premises that use it: STMT-GOD-HAS-CLASSICAL-DIVINE-ATTRIBUTES (simple, perfect, good, infinite, immutable, eternal, one, with intellect and will) and, on the older stage-1 routes, the identification premise STMT-UNIQUE-PURE-ACT-FIRST-MOVER-IS-GOD. On the designated route it is also fixed by the fuller nominal premise STMT-GOD-NAMES-THE-FULLY-DESCRIBED-PRINCIPLE, which applies the proper name 'God' to `IsGod` directly (DISAMB-GOD). The individual attribute senses and their one-way mapping to the skeleton field are recorded in DEF-CLASSICAL-ATTRIBUTES-BUNDLE and linked from STMT-GOD-HAS-CLASSICAL-DIVINE-ATTRIBUTES.",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Case.Catholicism.Signature.IsGod",
-  "note": "Case vocabulary (TruthCore/Case/Catholicism/Root.lean), not a new proof that anything satisfies it. Dei Filius ch. 1 supplies the attribute list; the open bridge and its parameter mapping are explicit in DEF-CLASSICAL-ATTRIBUTES-BUNDLE. The linked sourced term definitions do not make the primitive IsGod or HasClassicalAttributes fields definitionally equivalent to their natural-language descriptions. Lean locator: Signature.IsGod : Being → Prop is the primitive field, not the enclosing Signature. The listed attribute and naming statements are distinct constraining premises, not the body of an independent definition of IsGod; their acceptance and the field interpretation remain OPEN."
+  "note": "Case vocabulary (TruthCore/Case/Catholicism/Root.lean), not a new proof that anything satisfies it. Dei Filius ch. 1 supplies the attribute list; the open bridge and its parameter mapping are explicit in DEF-CLASSICAL-ATTRIBUTES-BUNDLE. The linked sourced term definitions do not make the primitive IsGod or HasClassicalAttributes fields definitionally equivalent to their natural-language descriptions. Lean locator: Signature.IsGod : Being → Prop is the primitive field, not the enclosing Signature. The listed attribute and naming statements are distinct constraining premises, not the body of an independent definition of IsGod; their acceptance and the field interpretation remain OPEN.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Signature.IsGod g says that g is God in the sense of the God of classical theism, the predicate the case's stages after stage 1 and the root are about. The case signature supplies it as a predicate on beings. Lean gives it no content beyond what the open premises that use it say: that whatever is God has the classical attributes (GodHasClassicalAttributes), and the naming premises that apply the name to a described being.",
+    "examples_unavailable": "Whether anything satisfies IsGod is the conclusion the case investigates (STMT-GOD-EXISTS), so no example can be given without presupposing it; the finite models of the stage results interpret IsGod over formal carriers only.",
+    "exclusions": [
+      "Whatever a community merely calls God (CalledGod, GOD_3): the passage from usage to IsGod is the open bridge STMT-CALLED-GOD-IS-CLASSICAL-GOD.",
+      "The nominal description (NominalGod, DEF-GOD-NOMINAL-Q13) and the Summa's God parameter (DEF-GOD-AS-NAMED-IN-THE-SUMMA): DISAMB-GOD keeps them separate predicates.",
+      "The bundle predicate HasClassicalAttributes is a different field; IsGod is not defined as having the attributes."
+    ],
+    "open_obligations": [
+      "STMT-GOD-HAS-CLASSICAL-DIVINE-ATTRIBUTES (IsGod g → HasClassicalAttributes g) and the mapping of the nine attribute senses to that bundle (DEF-CLASSICAL-ATTRIBUTES-BUNDLE) are open premises.",
+      "STMT-GOD-NAMES-THE-FULLY-DESCRIBED-PRINCIPLE applies the name to a being that meets the full nominal description; on the older stage-1 routes STMT-UNIQUE-PURE-ACT-FIRST-MOVER-IS-GOD does so. Both remain open.",
+      "Uniqueness is not built in: IsTheOneGod is a separate attribute.",
+      "Not a formalization candidate: defining IsGod as NominalGod would turn the open naming premise into a definitional equality and hide a contested bridge."
+    ]
+  }
 }

@@ -6,5 +6,21 @@
   "definition": "`N.RefersTo n b`: in the practice's use, the name n refers to (applies to) the being b. The practice-use sense of a name's application, as minimalists speak of reference inside a language game; not the proper sense fixed by a nominal definition (DEF-GOD-NOMINAL-Q13).",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Alternatives.FideismReference.NamingPractice.RefersTo",
-  "note": "Typed reference relation for #1010 (owner request 2026-11-05). It fixes no theory of reference; DISAMB-NAME-APPLICATION says how it relates to the leaves' proper-sense predicate."
+  "note": "Typed reference relation for #1010 (owner request 2026-11-05). It fixes no theory of reference; DISAMB-NAME-APPLICATION says how it relates to the leaves' proper-sense predicate.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "NamingPractice.RefersTo n b says that, in the practice's use, the name n refers to (applies to) the being b: the practice-use sense of a name's application, as minimalists speak of reference inside a language game. It is a supplied relation between names and beings and fixes no theory of reference.",
+    "examples": [
+      "In ordinary English use the name 'Socrates' refers to Socrates."
+    ],
+    "exclusions": [
+      "The proper sense of a name fixed by its nominal definition (DEF-GOD-NOMINAL-Q13): DISAMB-NAME-APPLICATION keeps the two senses apart; the link theorems use the practice-use relation for the leaves only as a schema, under an identification no record asserts.",
+      "A move's confessing that a name names a being (ConfessesReferent): a property of content, not reference."
+    ],
+    "open_obligations": [
+      "The identification of practice-use reference with the proper sense is open and asserted nowhere.",
+      "STMT-GRAMMAR-FIXES-REFERENCE and STMT-GOD-NAMES-NO-BEING-WF-P1 constrain it as open premises.",
+      "No formalization candidate: reference in use is taken as primitive."
+    ]
+  }
 }

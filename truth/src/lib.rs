@@ -1,6 +1,7 @@
 //! Read-only structural view of the canonical corpus.
 pub mod attribution;
 pub mod bind_check;
+pub mod bind_types;
 pub mod bridge_experiments;
 pub mod bridges;
 pub mod check;
@@ -8,6 +9,7 @@ pub mod configuration_explorer;
 pub mod configuration_live;
 pub mod configurations;
 pub mod context;
+pub mod definition_status;
 pub mod dossier;
 pub mod finite_models;
 pub mod frontier;
@@ -19,6 +21,7 @@ mod kernels;
 pub mod lean_reuse;
 pub mod lexicon;
 pub mod navigation;
+pub mod notes;
 pub mod orphans;
 pub mod pyfmt;
 pub mod pyjson;

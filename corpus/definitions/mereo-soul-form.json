@@ -6,5 +6,20 @@
   "definition": "The owner's strong proposed interpretation: an intrinsic formal principle that accounts for an organism being one living substance, and whose explanatory status is not stipulated to be identical with a purely operational summary of coordinated functions. In the toy model this is an independent predicate; it is not treated as a third material part.",
   "basis": "stipulative",
   "note": "The need for a genuinely irreducible explanatory principle is precisely the open thesis at #329. This is neither an established interpretation of Aristotle's De Anima II.1 nor a proof that an immaterial separate substance exists.",
-  "lean_declaration": "TruthCore.Mereology.Vitalism.Scenario.SoulAsForm"
+  "lean_declaration": "TruthCore.Mereology.Vitalism.Scenario.SoulAsForm",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Scenario.SoulAsForm p says that, at phase p, the living system has an intrinsic formal principle that accounts for its being one living substance, and whose explanatory role is not stipulated to be the same as a summary of its coordinated functions (the owner's strong proposed interpretation). It is a predicate on the two phases (early, late) of the toy turnover history in TruthCore.Mereology.Vitalism (#329), supplied by each scenario; it is not a third material part.",
+    "examples_unavailable": "Whether any organism has such a principle is the open thesis of #329; the toy scenarios give SoulAsForm both values on the same observable history precisely to show that the data do not settle it.",
+    "exclusions": [
+      "Soul as functional organization (represented by Integrated): DISAMB-MEREO-SOUL keeps the irreducible-form thesis apart from the coordination of subsystems.",
+      "A separate immaterial substance: the predicate does not assert one.",
+      "A material component of the system."
+    ],
+    "open_obligations": [
+      "The bridge from soul to substantial unity must be defended independently (module documentation); the formal statement SoulUnityIndependence, proved in result MEREO-005-SOUL-UNITY-INDEPENDENCE, says the observable profile fixes neither predicate.",
+      "This is not an established interpretation of De Anima II.1.",
+      "No formalization candidate: the predicate is kept independent of the observable vocabulary on purpose, so that life-to-soul arguments cannot be circular."
+    ]
+  }
 }
