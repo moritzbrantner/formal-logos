@@ -122,8 +122,9 @@ Violations are warnings while `corpus/lexicon-config.json` has `strict: false`
 `strict`, which is planned when token coverage reaches `strict_token_coverage`
 (95%).
 
-The legacy backlog is listed in `corpus/lexicon-allowlist.json`, a generated
-ratchet that may only shrink (`truth lexicon ratchet`, run in CI like the
+The legacy backlog is listed in `corpus/lexicon-allowlist.json`. It is a
+generated, field-level ratchet: each legacy field maps to its text hash, and
+all findings in an unchanged field are backlog. It may only shrink (`truth lexicon ratchet`, run in CI like the
 sense-index ratchet). The lexicon check is Rust-only: `scripts/corpus.py check`
 does not run it.
 
