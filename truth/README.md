@@ -172,6 +172,38 @@ real corpus (2026-11-15, 2151 results, 111 models) the full run with Lean took
 17.9 s in Rust and 28.1 s in Python, and from a saved exporter output 3.9 s
 against 14.9 s, on the same loaded machine; the outputs were identical.
 
+## `structure` and `structure-report`
+
+`truth structure STATEMENT [--json] [--unfold DECLARATION]...` and
+`truth structure-report [--output FILE] [--build-input | --check-input]` port
+`python3 scripts/corpus.py structure` and `structure-report`
+(`scripts/proposition_structure.py`, `docs/proposition-structure.md`). Lean
+stays the authority for the elaborated expressions: Rust locates the project
+modules as Python's source locator does, has Lake build them and runs
+`scripts/PropositionStructure.lean` through `scripts/worker_env.py`, with
+Python's timeouts and messages, then assembles the same reports: the input
+manifest and digest, the Git head, the compiled inputs, the scoped node ids,
+semantic links, support and frontier statuses. `structure` prints the
+statement's report as Python's indented JSON (humanized without `--json`);
+`structure-report` writes the first-slice explorer artifact byte for byte as
+Python does and prints `wrote PATH`; `--check-input` validates an artifact's
+recorded inventories, hashes and digest without Lean. `--extractor-json FILE`
+replays a saved exporter stdout instead of running Lean. Errors exit 2 as
+`corpus error: …` (a JSON error object under `--json`). The artifact's
+manifest still binds `scripts/proposition_structure.py` and
+`scripts/corpus.py`, as Python's does, until R3 retires them.
+
+CI, Pages, the explorer's `structure-inputs` script and its `--check-input`
+call run it; `corpus.py structure` stays until its retirement.
+`scripts/truth_parity/proposition_structure.py` runs Python with its two Lean
+subprocesses replaced by a recorded exporter stdout and Rust with
+`--extractor-json`, on the `check` fixture (text and `--json` reports, ID
+resolution, the error paths, fresh, stale and forged artifacts) and on the
+real corpus's first slice (byte-identical artifact). On the real corpus
+(2026-11-15, warm Lake build) `structure-report` took 4.3 s in Rust and 9.0 s
+in Python with Lean, 1.7 s against 6.3 s from the recorded exporter output,
+and `--check-input` 1.7 s against 2.5 s; the artifacts were identical.
+
 ## `unused-premises`, `lean-reuse`, `context --proof-use`
 
 These port the proof-term exporter commands of `scripts/corpus.py` (#954

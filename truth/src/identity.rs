@@ -836,13 +836,19 @@ impl Aliases {
     /// stay as they are.
     pub fn humanize(&self, text: &str) -> String {
         static CELL: OnceLock<Regex> = OnceLock::new();
+        // The `materialize ` exclusion is checked by hand: a look-behind
+        // makes fancy-regex backtrack, which exceeds its limit and ends the
+        // scan early on long texts (`structure` prints megabytes).
         let pattern = regex(
             &CELL,
-            r"(?<!materialize )\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b",
+            r"\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b",
         );
         let mut out = String::with_capacity(text.len());
         let mut last = 0;
         for found in pattern.find_iter(text).flatten() {
+            if text[..found.start()].ends_with("materialize ") {
+                continue;
+            }
             out.push_str(&text[last..found.start()]);
             out.push_str(&self.show(found.as_str()));
             last = found.end();
@@ -928,5 +934,7 @@ mod tests {
             aliases.humanize(&format!("x {a}, materialize {a}, {b}0")),
             format!("x Alpha [{}], materialize {a}, {b}0", &a[..8])
         );
+        let long = format!("{a} {} {a}", "x".repeat(2_000_000));
+        assert_eq!(aliases.humanize(&long).matches("Alpha [").count(), 2);
     }
 }

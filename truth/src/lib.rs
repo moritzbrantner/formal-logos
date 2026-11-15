@@ -17,6 +17,7 @@ pub mod pyfmt;
 pub mod pyjson;
 pub mod related;
 pub mod senses;
+pub mod structure;
 pub mod territory;
 pub mod thickness;
 mod transcription;
