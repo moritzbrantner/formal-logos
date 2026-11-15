@@ -28,6 +28,7 @@ mod ids;
 mod inspect;
 mod issues;
 mod lean_reuse;
+mod lexicon;
 mod models;
 mod next;
 mod next_steps;
@@ -63,6 +64,7 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] arguments
        truth [--root PATH] [--json] results
        truth [--root PATH] [--json] sort-lists
+       truth [--root PATH] [--json] lexicon (show WORD | untraced | coverage | check | bootstrap | allowlist | ratchet --base REV) [--limit N] [--write]
        truth [--root PATH] [--json] configurations --registered [--case ID] [--seed STATEMENT] [--premise STATEMENT]...
        truth [--root PATH] [--json] models
        truth [--root PATH] [--json] territory [--frontier-root STATEMENT] [--max-atoms N]
@@ -116,6 +118,7 @@ pub const COMMANDS: &[Command] = &[
     ids::ARGUMENTS,
     ids::RESULTS,
     sort_lists::COMMAND,
+    lexicon::COMMAND,
     configurations::COMMAND,
     models::COMMAND,
     territory::COMMAND,

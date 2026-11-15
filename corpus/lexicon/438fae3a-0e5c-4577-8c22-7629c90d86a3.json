@@ -1,0 +1,10 @@
+{
+  "id": "438fae3a-0e5c-4577-8c22-7629c90d86a3",
+  "label": "must (function word)",
+  "lemma": "must",
+  "class": "function",
+  "category": "auxiliary",
+  "forms": [
+    "mustn't"
+  ]
+}

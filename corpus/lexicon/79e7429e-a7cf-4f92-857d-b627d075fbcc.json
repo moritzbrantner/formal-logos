@@ -1,0 +1,15 @@
+{
+  "id": "79e7429e-a7cf-4f92-857d-b627d075fbcc",
+  "label": "naturalism (technical)",
+  "lemma": "naturalism",
+  "class": "technical",
+  "definition_ids": [
+    "0f3ffba6-5882-5d97-80be-9129f75c7264",
+    "1d25373b-7781-5177-add3-337874b8670b",
+    "294b6100-7b0d-5012-848c-e2ccabe22079",
+    "7fac7b7a-4440-51f5-9009-27b3e93d8535"
+  ],
+  "disambiguation_ids": [
+    "726527df-c7a8-5be7-9f30-2bc23b115982"
+  ]
+}

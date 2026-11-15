@@ -1,0 +1,13 @@
+{
+  "id": "93e3740a-3870-4fdc-a40d-9358bbe28cfc",
+  "label": "prior demonstration (technical)",
+  "lemma": "prior demonstration",
+  "class": "technical",
+  "definition_ids": [
+    "67a11f33-c4c5-4406-befa-2b9e66be52db",
+    "72b2f936-34ec-4982-b120-b5c5ffd1f8b8"
+  ],
+  "disambiguation_ids": [
+    "478d0c3a-dcde-4d8d-ad71-e88150ce772f"
+  ]
+}

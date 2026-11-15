@@ -1,0 +1,13 @@
+{
+  "id": "a65f51dd-6812-4ed7-92fe-d3d42eeaeca0",
+  "label": "comprehend (technical)",
+  "lemma": "comprehend",
+  "class": "technical",
+  "definition_ids": [
+    "1218cc1e-e6ef-4f27-9036-d6e28cae67ad",
+    "4afe4ab4-f8cc-4120-b284-f1f0140e76c1"
+  ],
+  "disambiguation_ids": [
+    "e151d506-c074-4e5d-a0f9-e9c51f1a73d7"
+  ]
+}

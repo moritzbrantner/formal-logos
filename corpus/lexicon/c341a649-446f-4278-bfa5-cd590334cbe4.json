@@ -1,0 +1,13 @@
+{
+  "id": "c341a649-446f-4278-bfa5-cd590334cbe4",
+  "label": "fusion (technical)",
+  "lemma": "fusion",
+  "class": "technical",
+  "definition_ids": [
+    "5a195922-93f5-5792-aeed-a532e32b1e4b",
+    "9ec56dce-572e-5230-8247-6b3e994cb98a"
+  ],
+  "disambiguation_ids": [
+    "27169651-d75e-5c1e-bc20-03d0eb678b81"
+  ]
+}

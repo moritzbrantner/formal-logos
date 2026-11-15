@@ -1,0 +1,14 @@
+{
+  "id": "181b1c93-4c0d-4f43-9e2b-69213f8f4725",
+  "label": "change (technical)",
+  "lemma": "change",
+  "class": "technical",
+  "definition_ids": [
+    "6b30d5d8-9d30-51f1-9830-e356325c2529",
+    "9bd881c9-2227-5883-9595-96db5e630da3",
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43"
+  ],
+  "disambiguation_ids": [
+    "784f3293-6601-5730-a89a-c0b84d8d8b57"
+  ]
+}

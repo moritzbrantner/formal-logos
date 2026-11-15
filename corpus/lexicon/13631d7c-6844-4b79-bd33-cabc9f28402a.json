@@ -1,0 +1,9 @@
+{
+  "id": "13631d7c-6844-4b79-bd33-cabc9f28402a",
+  "label": "contingent-only existence-psr (technical)",
+  "lemma": "contingent-only existence-psr",
+  "class": "technical",
+  "definition_ids": [
+    "afeeb7ff-92c0-578f-8a0d-ac38dc245672"
+  ]
+}

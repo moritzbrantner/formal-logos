@@ -1,0 +1,13 @@
+{
+  "id": "239b1524-d9ab-48c0-80ab-5215946f846e",
+  "label": "living (technical)",
+  "lemma": "living",
+  "class": "technical",
+  "definition_ids": [
+    "885a98f3-cd54-41c5-89bc-25c341415890",
+    "f91f5056-8a32-416b-b234-d0e78cd16ce8"
+  ],
+  "disambiguation_ids": [
+    "1f2d3b9b-0b6b-459c-8871-3f136ad6d78a"
+  ]
+}

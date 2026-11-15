@@ -1,0 +1,16 @@
+{
+  "id": "29728f21-ca7e-4713-bcd9-8605bacc9413",
+  "label": "closure (technical)",
+  "lemma": "closure",
+  "class": "technical",
+  "definition_ids": [
+    "23c2e2a9-25c4-50ec-9386-ec2132601f44",
+    "800637b5-8f4b-54ea-865d-c4fd444d1632",
+    "aa8a8cd7-3ad0-5ddc-b8ff-6433bfcaa9c6",
+    "afeeb7ff-92c0-578f-8a0d-ac38dc245672",
+    "fc7264ad-1e74-5419-91be-6ac7ec796b07"
+  ],
+  "disambiguation_ids": [
+    "a51b25cd-9e92-5531-a7bc-94c6d5e4f6b9"
+  ]
+}

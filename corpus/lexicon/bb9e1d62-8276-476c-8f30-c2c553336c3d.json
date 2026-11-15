@@ -1,0 +1,16 @@
+{
+  "id": "bb9e1d62-8276-476c-8f30-c2c553336c3d",
+  "label": "per se (technical)",
+  "lemma": "per se",
+  "class": "technical",
+  "definition_ids": [
+    "2282c0ee-9da9-5c8b-9f37-cb312ed4b676",
+    "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740",
+    "500ba323-cca5-5b35-8b75-947008256c43",
+    "c9798301-e990-5ca2-a36e-6b11f76206c1",
+    "e5479060-c1e7-5eea-ac3e-2b3a74f4db05"
+  ],
+  "disambiguation_ids": [
+    "002f42cb-3015-5644-80b3-d408538394e6"
+  ]
+}

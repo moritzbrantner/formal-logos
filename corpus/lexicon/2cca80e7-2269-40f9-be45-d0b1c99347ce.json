@@ -1,0 +1,14 @@
+{
+  "id": "2cca80e7-2269-40f9-be45-d0b1c99347ce",
+  "label": "one (technical)",
+  "lemma": "one",
+  "class": "technical",
+  "definition_ids": [
+    "52173931-f238-58b8-8fa2-3174884dfc34",
+    "8676eedf-9455-54b6-8c74-35e4ad54935b",
+    "d980bbd2-1a96-564c-bc0d-4065d7786715"
+  ],
+  "disambiguation_ids": [
+    "eddb2474-f994-5c7b-a061-bc26a3167b38"
+  ]
+}

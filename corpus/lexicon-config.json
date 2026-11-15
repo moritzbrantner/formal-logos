@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "strict": false,
+  "strict_token_coverage": 0.95,
+  "note": "Owner decision on #1652: warn now, strict later. While strict is false, untraced words and unlinked multi-sense terms in new or changed prose fields are truth check warnings; the plan is to set strict to true, making them errors, once token coverage (truth lexicon coverage) reaches strict_token_coverage. Schema errors and the shrink-only allowlist are enforced in both modes."
+}

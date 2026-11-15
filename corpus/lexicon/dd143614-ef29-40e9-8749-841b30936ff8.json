@@ -1,0 +1,14 @@
+{
+  "id": "dd143614-ef29-40e9-8749-841b30936ff8",
+  "label": "meaningful (technical)",
+  "lemma": "meaningful",
+  "class": "technical",
+  "definition_ids": [
+    "3b773947-a8cd-562d-91d9-952a9ce7cc58",
+    "cb0b59e9-7a00-5d8c-ba11-802974a42992",
+    "d3d9f3a5-7791-552c-8271-5cb1aeccfb15"
+  ],
+  "disambiguation_ids": [
+    "21cdb9e0-d4f0-5a57-8277-3345ec8c0fde"
+  ]
+}

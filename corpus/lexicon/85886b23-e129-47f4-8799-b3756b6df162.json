@@ -1,0 +1,13 @@
+{
+  "id": "85886b23-e129-47f4-8799-b3756b6df162",
+  "label": "reality identity (technical)",
+  "lemma": "reality identity",
+  "class": "technical",
+  "definition_ids": [
+    "79c08b30-2adf-59e1-b607-3f5cb485946a",
+    "c7c2f208-9651-5351-afc3-d5f3423ef415"
+  ],
+  "disambiguation_ids": [
+    "29947523-056c-5415-a9e7-c6968fb926e1"
+  ]
+}

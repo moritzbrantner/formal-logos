@@ -1,0 +1,9 @@
+{
+  "id": "0401b9a8-2b80-49ad-94c7-d159a113c7b0",
+  "label": "reason-closed account (technical)",
+  "lemma": "reason-closed account",
+  "class": "technical",
+  "definition_ids": [
+    "fc7264ad-1e74-5419-91be-6ac7ec796b07"
+  ]
+}

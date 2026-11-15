@@ -1,0 +1,9 @@
+{
+  "id": "6b803db6-bfe6-45f2-afd1-462d973fa4f4",
+  "label": "degree-bounded polynomial identifiability (technical)",
+  "lemma": "degree-bounded polynomial identifiability",
+  "class": "technical",
+  "definition_ids": [
+    "c68d7141-78bd-4633-a235-515c0b236509"
+  ]
+}

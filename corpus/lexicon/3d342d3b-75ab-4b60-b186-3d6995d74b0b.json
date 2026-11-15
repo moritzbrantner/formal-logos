@@ -1,0 +1,14 @@
+{
+  "id": "3d342d3b-75ab-4b60-b186-3d6995d74b0b",
+  "label": "genus (technical)",
+  "lemma": "genus",
+  "class": "technical",
+  "definition_ids": [
+    "414f094b-7403-5a35-8527-b36ed4ea8bc1",
+    "486bb45e-c4a2-5ba5-8b12-498a24eb1678",
+    "9146daed-3e78-5804-8291-70c4e2c9d6c1"
+  ],
+  "disambiguation_ids": [
+    "4822a4f5-a93b-52dc-855a-00b7d57928d5"
+  ]
+}

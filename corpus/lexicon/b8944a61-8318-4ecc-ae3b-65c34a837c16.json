@@ -1,0 +1,17 @@
+{
+  "id": "b8944a61-8318-4ecc-ae3b-65c34a837c16",
+  "label": "participation (technical)",
+  "lemma": "participation",
+  "class": "technical",
+  "definition_ids": [
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "30672e93-1629-5da8-9ee7-e6aec3f6f623",
+    "4b5717bb-05ab-5d14-b95b-3143d8f8cd26",
+    "8504bbdf-329b-5e23-9d12-0faf94e00914"
+  ],
+  "disambiguation_ids": [
+    "54f33165-05df-5205-807a-04154b5fd6ad",
+    "58a69964-25a1-53d2-a65d-660ed3a0cf4c",
+    "d191b2a8-70d7-5273-9263-7f0051154823"
+  ]
+}

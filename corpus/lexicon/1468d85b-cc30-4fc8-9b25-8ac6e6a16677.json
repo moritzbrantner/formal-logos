@@ -1,0 +1,9 @@
+{
+  "id": "1468d85b-cc30-4fc8-9b25-8ac6e6a16677",
+  "label": "finite dependency path (technical)",
+  "lemma": "finite dependency path",
+  "class": "technical",
+  "definition_ids": [
+    "822c9912-2313-584b-b2b7-77031da20107"
+  ]
+}

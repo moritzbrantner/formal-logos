@@ -1,0 +1,9 @@
+{
+  "id": "8a65010b-ca15-4e70-9bb0-0301e1a9b275",
+  "label": "deterministic finite model (technical)",
+  "lemma": "deterministic finite model",
+  "class": "technical",
+  "definition_ids": [
+    "f57a0812-732f-5680-9711-9ab440869861"
+  ]
+}

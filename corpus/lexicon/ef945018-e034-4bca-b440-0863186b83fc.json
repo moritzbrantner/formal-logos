@@ -1,0 +1,13 @@
+{
+  "id": "ef945018-e034-4bca-b440-0863186b83fc",
+  "label": "knowledge (technical)",
+  "lemma": "knowledge",
+  "class": "technical",
+  "definition_ids": [
+    "80cbb7c2-281a-5045-9221-cd15f9647596",
+    "e8f75ab4-06f8-504e-a90e-728229729216"
+  ],
+  "disambiguation_ids": [
+    "5a295045-b91a-5c62-ac84-9b24bb399ddd"
+  ]
+}

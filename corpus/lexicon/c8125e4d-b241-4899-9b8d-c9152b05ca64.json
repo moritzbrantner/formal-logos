@@ -1,0 +1,13 @@
+{
+  "id": "c8125e4d-b241-4899-9b8d-c9152b05ca64",
+  "label": "necessary being (technical)",
+  "lemma": "necessary being",
+  "class": "technical",
+  "definition_ids": [
+    "7fde5dc0-6ca7-5ce6-a2e1-571acfd15dcf",
+    "d77ab971-b9cb-5b31-85f7-7bf7f39fb237"
+  ],
+  "disambiguation_ids": [
+    "6feac787-378d-5c78-b49c-2414847d33cb"
+  ]
+}

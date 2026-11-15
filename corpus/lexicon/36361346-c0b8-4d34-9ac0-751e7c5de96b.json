@@ -1,0 +1,27 @@
+{
+  "id": "36361346-c0b8-4d34-9ac0-751e7c5de96b",
+  "label": "necessary (technical)",
+  "lemma": "necessary",
+  "class": "technical",
+  "definition_ids": [
+    "153fcebf-66f6-53de-bad7-82a30a359c9c",
+    "2282c0ee-9da9-5c8b-9f37-cb312ed4b676",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "39ee9ec8-6405-5779-b01e-61468faab2dc",
+    "3be2906f-9f8e-4dff-b523-41de89c6000d",
+    "560fae51-532f-46d8-81e8-6f4386e10a34",
+    "5bd704bb-4915-4657-9801-022247312147",
+    "6c825ee1-db34-5cf7-933f-689d3e615f19",
+    "82629c7d-94a0-5953-90c9-6eb0dbee2944",
+    "9010544f-188a-5d00-83dc-85d0c0b4052d",
+    "9400c10f-e80b-5241-b9b6-e59c15631e19",
+    "d77ab971-b9cb-5b31-85f7-7bf7f39fb237",
+    "ea0a177a-b3a7-4559-946d-d9401ba1c6e3",
+    "f7b80cb6-a233-5525-bb2b-ed5996a6099d",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2"
+  ],
+  "disambiguation_ids": [
+    "3310d182-2ded-5baa-a5de-9dad52b0985e",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ]
+}

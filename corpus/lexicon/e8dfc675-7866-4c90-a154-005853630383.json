@@ -1,0 +1,15 @@
+{
+  "id": "e8dfc675-7866-4c90-a154-005853630383",
+  "label": "have (function word)",
+  "lemma": "have",
+  "class": "function",
+  "category": "auxiliary",
+  "forms": [
+    "has",
+    "had",
+    "having",
+    "hasn't",
+    "haven't",
+    "hadn't"
+  ]
+}

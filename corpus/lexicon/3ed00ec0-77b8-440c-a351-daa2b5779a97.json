@@ -1,0 +1,13 @@
+{
+  "id": "3ed00ec0-77b8-440c-a351-daa2b5779a97",
+  "label": "permission (technical)",
+  "lemma": "permission",
+  "class": "technical",
+  "definition_ids": [
+    "03c610d3-5df4-48fc-baf0-e78fe8a084e3",
+    "71a1b029-8b24-42ec-800d-f797ebf4f961"
+  ],
+  "disambiguation_ids": [
+    "7a45ad77-ca83-45bb-8a51-ebb37597388a"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "392ad7d3-c716-4569-851e-63fa9e476c1e",
+  "label": "eternal (technical)",
+  "lemma": "eternal",
+  "class": "technical",
+  "definition_ids": [
+    "1291944d-a8b2-54eb-899d-66bd5f8b4762",
+    "cb13f508-17f7-55b8-bf5d-52959b7a2ee5"
+  ],
+  "disambiguation_ids": [
+    "f561d4e4-ab8f-5d20-9926-d63a74df3b4e"
+  ]
+}

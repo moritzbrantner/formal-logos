@@ -1,0 +1,15 @@
+{
+  "id": "a4512a60-e663-40dc-a974-c3e78865777a",
+  "label": "essence (technical)",
+  "lemma": "essence",
+  "class": "technical",
+  "definition_ids": [
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "2e31f6cf-433e-5e11-bb65-233499985668",
+    "30ebc834-1c04-5b83-98c5-523c1dfdf436",
+    "85a4aa8b-11cc-5aeb-b5a6-3f163178002d"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1"
+  ]
+}

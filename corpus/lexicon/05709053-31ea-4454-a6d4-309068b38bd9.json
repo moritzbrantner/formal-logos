@@ -1,0 +1,11 @@
+{
+  "id": "05709053-31ea-4454-a6d4-309068b38bd9",
+  "label": "it (function word)",
+  "lemma": "it",
+  "class": "function",
+  "category": "pronoun",
+  "forms": [
+    "its",
+    "itself"
+  ]
+}

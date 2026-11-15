@@ -1,0 +1,9 @@
+{
+  "id": "3225b928-86a3-4235-b455-7271ca9129f9",
+  "label": "physical as composite-bearer (technical)",
+  "lemma": "physical as composite-bearer",
+  "class": "technical",
+  "definition_ids": [
+    "acac5147-62dc-5a5a-8cd1-6b8aab30a7ee"
+  ]
+}

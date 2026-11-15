@@ -1,0 +1,9 @@
+{
+  "id": "ba70c80c-b041-4c58-be4e-ff7daedbf411",
+  "label": "fixed-baseline no-low-replication constraint (technical)",
+  "lemma": "fixed-baseline no-low-replication constraint",
+  "class": "technical",
+  "definition_ids": [
+    "562e9c64-0882-519b-885e-ad870b8ed6df"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "11a526d3-c380-4fef-81da-8325f8b68f29",
+  "label": "criterion of correctness (technical)",
+  "lemma": "criterion of correctness",
+  "class": "technical",
+  "definition_ids": [
+    "63f0647d-d7f6-5101-ba15-efdcdb6e6530",
+    "a6e1ef95-8138-5cfc-8fe2-1202ba3b9a5c"
+  ],
+  "disambiguation_ids": [
+    "ba851630-7eec-5851-8ad2-d8eff7430e41"
+  ]
+}

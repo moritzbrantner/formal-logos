@@ -1,0 +1,14 @@
+{
+  "id": "0abe0cdb-5b1a-450a-a7cf-3729ed2e5312",
+  "label": "regress-generating rule (technical)",
+  "lemma": "regress-generating rule",
+  "class": "technical",
+  "definition_ids": [
+    "0c06ef42-f495-56e8-bbe8-57efc70a22e9",
+    "3758cb7e-cb6b-508c-a0ef-6c3b83bc73f9",
+    "f3f069cf-0264-50cb-b91a-b0ec96380c3f"
+  ],
+  "disambiguation_ids": [
+    "7fc6cbb8-5618-5385-bc4f-82f0f719503a"
+  ]
+}

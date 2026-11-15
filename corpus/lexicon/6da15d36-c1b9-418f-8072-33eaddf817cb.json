@@ -1,0 +1,14 @@
+{
+  "id": "6da15d36-c1b9-418f-8072-33eaddf817cb",
+  "label": "reason-responsive control (technical)",
+  "lemma": "reason-responsive control",
+  "class": "technical",
+  "definition_ids": [
+    "02a62efa-387e-5ccf-8926-47e3ba0a89fc",
+    "184910cf-7d7e-5afb-9ea9-78e468498b76",
+    "98d88d95-fff8-57a8-b7b5-73658fd2484e"
+  ],
+  "disambiguation_ids": [
+    "019a07a5-184f-57b5-aa55-8251ba256cd0"
+  ]
+}

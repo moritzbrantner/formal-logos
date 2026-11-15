@@ -1,0 +1,14 @@
+{
+  "id": "4d9853e5-a545-43f1-8e2f-f4b12d2c9f15",
+  "label": "existence (technical)",
+  "lemma": "existence",
+  "class": "technical",
+  "definition_ids": [
+    "5873c837-35ba-5ca2-91a8-07808c67e461",
+    "9347232c-7f95-5f24-85de-94d3d49f5027",
+    "9df718d1-8bfb-519b-b9f5-f58f6d2c256f"
+  ],
+  "disambiguation_ids": [
+    "031a741a-57b4-5a20-b9f3-170876e69a02"
+  ]
+}

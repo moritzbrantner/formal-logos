@@ -1,0 +1,14 @@
+{
+  "id": "bf37e0f3-3046-4c42-8a16-72fc0c5043d4",
+  "label": "end-directedness (technical)",
+  "lemma": "end-directedness",
+  "class": "technical",
+  "definition_ids": [
+    "2847d4f1-a13a-5d0f-8cc1-abf1c807f92f",
+    "4055cd38-c059-55cc-88d0-0c864f4a21aa",
+    "996de6a6-f12e-53ea-86bb-d3803f93f1ca"
+  ],
+  "disambiguation_ids": [
+    "066d546d-53f8-5319-8333-6b117a152002"
+  ]
+}

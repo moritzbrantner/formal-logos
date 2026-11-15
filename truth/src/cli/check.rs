@@ -23,12 +23,25 @@ fn run(args: &Args, operands: &[&str]) -> Output {
     }
     match truth::check::check(&args.root) {
         Ok(outcome) => {
+            // The lexicon check (#1652) runs only in Rust, after the ported
+            // validation; its summary stays out of `warnings` (Python parity).
+            let lexicon = truth::lexicon::check(&args.root)
+                .map_err(|message| (1, json!({"code": "corpus_error", "message": message})))?;
             let summary = outcome.summary();
-            let text: Vec<String> = outcome
+            let mut text: Vec<String> = outcome
                 .warnings
                 .iter()
                 .map(|warning| format!("warning: {warning}"))
                 .collect();
+            if let Some(report) = &lexicon {
+                text.extend(
+                    report
+                        .new_violations
+                        .iter()
+                        .map(|line| format!("warning: lexicon: {line}")),
+                );
+                text.push(format!("warning: {}", report.summary()));
+            }
             Ok((
                 json!({
                     "schema_version": 1,
@@ -36,6 +49,11 @@ fn run(args: &Args, operands: &[&str]) -> Output {
                     "counts": outcome.counts.iter().map(|(k, v)| (k.to_string(), json!(v))).collect::<serde_json::Map<_, _>>(),
                     "warnings": outcome.warnings,
                     "summary": summary,
+                    "lexicon": lexicon.as_ref().map(|report| json!({
+                        "summary": report.summary(),
+                        "strict": report.strict,
+                        "new_violations": report.new_violations,
+                    })),
                 }),
                 // `main` prints the part between the NULs to stderr.
                 Some(format!("\u{0}{}\u{0}{summary}", text.join("\n"))),

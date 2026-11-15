@@ -1,0 +1,11 @@
+{
+  "id": "891e517a-cf33-4660-b273-5fe73c29d2c8",
+  "label": "few (function word)",
+  "lemma": "few",
+  "class": "function",
+  "category": "quantifier",
+  "forms": [
+    "fewer",
+    "fewest"
+  ]
+}

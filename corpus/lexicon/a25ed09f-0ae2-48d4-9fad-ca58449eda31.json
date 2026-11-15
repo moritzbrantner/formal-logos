@@ -1,0 +1,10 @@
+{
+  "id": "a25ed09f-0ae2-48d4-9fad-ca58449eda31",
+  "label": "should (function word)",
+  "lemma": "should",
+  "class": "function",
+  "category": "auxiliary",
+  "forms": [
+    "shouldn't"
+  ]
+}

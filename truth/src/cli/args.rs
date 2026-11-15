@@ -161,6 +161,8 @@ pub struct Args {
     pub frontier_root: String,
     pub frontier: FrontierArgs,
     pub research: ResearchArgs,
+    /// `--write` (lexicon bootstrap and allowlist)
+    pub write: bool,
     pub issues: IssueArgs,
     pub configuration: ConfigurationArgs,
     pub bind: BindArgs,
@@ -218,6 +220,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         frontier_root: thickness::DEFAULT_ROOT.to_owned(),
         frontier: FrontierArgs::default(),
         research: ResearchArgs::default(),
+        write: false,
         issues: IssueArgs::default(),
         configuration: ConfigurationArgs::default(),
         bind: BindArgs::default(),
@@ -236,6 +239,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
             "--json" => {}
             "--queue" => parsed.queue = true,
             "--senses" => parsed.senses = true,
+            "--write" => parsed.write = true,
             "--by" => {
                 parsed.group_by = Some(
                     args.next()

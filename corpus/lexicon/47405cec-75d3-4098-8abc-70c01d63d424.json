@@ -1,0 +1,15 @@
+{
+  "id": "47405cec-75d3-4098-8abc-70c01d63d424",
+  "label": "mind-independent (technical)",
+  "lemma": "mind-independent",
+  "class": "technical",
+  "definition_ids": [
+    "21fb2d8d-0866-46c5-b869-c1ea81b2e28c",
+    "388418b3-4658-4e85-8b8e-ade67bef5fc1",
+    "97de11fe-72e4-5a9d-bb75-828c6d5ee079",
+    "d119699c-0794-519d-bfa5-8b2681886e5f"
+  ],
+  "disambiguation_ids": [
+    "31931aba-44bc-544c-b514-aeb64901ccc6"
+  ]
+}

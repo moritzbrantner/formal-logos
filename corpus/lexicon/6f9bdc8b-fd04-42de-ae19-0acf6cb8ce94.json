@@ -1,0 +1,14 @@
+{
+  "id": "6f9bdc8b-fd04-42de-ae19-0acf6cb8ce94",
+  "label": "self-motion (technical)",
+  "lemma": "self-motion",
+  "class": "technical",
+  "definition_ids": [
+    "2fccff11-d956-4ec2-9705-922413f76a5c",
+    "8e970ec8-4a38-53bb-8786-f52af8664cc2",
+    "e13e749b-d266-5f18-bc50-59b340444c1f"
+  ],
+  "disambiguation_ids": [
+    "aa925dce-cf10-535e-a9ef-a5a0f00a677f"
+  ]
+}

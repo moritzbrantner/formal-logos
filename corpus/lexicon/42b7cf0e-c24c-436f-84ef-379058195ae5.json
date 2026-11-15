@@ -1,0 +1,12 @@
+{
+  "id": "42b7cf0e-c24c-436f-84ef-379058195ae5",
+  "label": "one (function word)",
+  "lemma": "one",
+  "class": "function",
+  "category": "pronoun",
+  "forms": [
+    "one's",
+    "oneself"
+  ],
+  "technical_separation": "As a function word \"one\" is the numeral or the generic pronoun (\"one of the premises\", \"one may object\"). The technical senses of ONE (the One itself, received unity, numerical uniqueness of God) are a predicate or designated entity and are written with a sense tag or a linked definition."
+}

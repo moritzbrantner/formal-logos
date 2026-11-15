@@ -1,0 +1,16 @@
+{
+  "id": "2e5f7f3e-32ca-49a8-bc13-a5f1be8c6d23",
+  "label": "evil (technical)",
+  "lemma": "evil",
+  "class": "technical",
+  "definition_ids": [
+    "086f1ece-8e43-5363-97cd-2d165e7dc3ed",
+    "9bcf08c8-b0e8-5fff-a537-f32d043976e9",
+    "c1843452-7896-550a-916d-c5c31b78a930",
+    "ef16d61e-a087-5d53-898a-7d79f51895a4"
+  ],
+  "disambiguation_ids": [
+    "008747c9-744a-581c-adad-570e834abb4e",
+    "3d6d3fd7-2acc-5ceb-9550-f968d0732b2a"
+  ]
+}

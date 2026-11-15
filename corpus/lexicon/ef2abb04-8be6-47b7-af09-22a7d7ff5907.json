@@ -1,0 +1,9 @@
+{
+  "id": "ef2abb04-8be6-47b7-af09-22a7d7ff5907",
+  "label": "single issued-content consequence (technical)",
+  "lemma": "single issued-content consequence",
+  "class": "technical",
+  "definition_ids": [
+    "be4788e8-2e87-4ad1-8f46-6c36846989be"
+  ]
+}

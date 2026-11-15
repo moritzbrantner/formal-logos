@@ -1,0 +1,20 @@
+{
+  "id": "51ca468b-0df2-4d4a-bc04-0dff832e8291",
+  "label": "concrete and abstract (technical)",
+  "lemma": "concrete and abstract",
+  "class": "technical",
+  "definition_ids": [
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "2b015a2c-4d31-5511-b391-41413edf45ac",
+    "4ea97730-c6b8-5205-8848-939d0dc68f76",
+    "632ad5ee-e94f-574d-bb37-c02b774984f4",
+    "7fb33727-84fc-5003-bba6-3000e624d343",
+    "a8fa0c36-adcb-5221-b61f-41189f09f357",
+    "ba85645e-b933-5a7f-a648-b527dea115fa",
+    "d4feb449-8b67-4dbc-84c6-bd9e749ea67f",
+    "d609a32e-8479-511d-85d6-c10d864dc85c"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

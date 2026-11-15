@@ -1,0 +1,14 @@
+{
+  "id": "c04be933-279d-401d-896f-f9f0b49273bf",
+  "label": "presence (technical)",
+  "lemma": "presence",
+  "class": "technical",
+  "definition_ids": [
+    "8504bbdf-329b-5e23-9d12-0faf94e00914",
+    "b5f94c92-b4cd-5bcc-a6d4-6e3fe2d1ad60",
+    "f16f85ba-4060-520c-9b52-43c4154760f5"
+  ],
+  "disambiguation_ids": [
+    "94cbac02-1a9b-585f-b69d-90ca8e29c8b0"
+  ]
+}

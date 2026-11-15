@@ -1,0 +1,13 @@
+{
+  "id": "b7d4986a-d686-465f-9efd-c3d4550502d1",
+  "label": "pure act (technical)",
+  "lemma": "pure act",
+  "class": "technical",
+  "definition_ids": [
+    "a49e4cf1-ca4f-5519-9724-892af257cedb",
+    "b5ac268c-7497-5780-a154-3f84c34ac709"
+  ],
+  "disambiguation_ids": [
+    "b1640e51-d7d4-5a80-9992-29fa1ded8048"
+  ]
+}

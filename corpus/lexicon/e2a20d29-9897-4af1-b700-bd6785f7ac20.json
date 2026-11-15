@@ -1,0 +1,13 @@
+{
+  "id": "e2a20d29-9897-4af1-b700-bd6785f7ac20",
+  "label": "the rule-following paradox (technical)",
+  "lemma": "the rule-following paradox",
+  "class": "technical",
+  "definition_ids": [
+    "35ecbcaf-af7d-593b-8f39-cb0cc4be2867",
+    "d4a9bed5-48d8-57fb-bac8-f957777cc4ae"
+  ],
+  "disambiguation_ids": [
+    "a8566ae9-153c-5329-b680-2755193dab9b"
+  ]
+}

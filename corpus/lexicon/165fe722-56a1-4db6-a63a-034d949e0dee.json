@@ -1,0 +1,13 @@
+{
+  "id": "165fe722-56a1-4db6-a63a-034d949e0dee",
+  "label": "belief response (technical)",
+  "lemma": "belief response",
+  "class": "technical",
+  "definition_ids": [
+    "608e0f97-3dbb-5bfd-9688-acecfb2f1fdf",
+    "ebab35c1-14a4-5beb-b44f-c67b3363d0c1"
+  ],
+  "disambiguation_ids": [
+    "93eabf90-e39b-5546-8a01-6c4b66d700d0"
+  ]
+}

@@ -11,6 +11,7 @@ pub mod identity;
 pub mod issues;
 mod kernels;
 pub mod lean_reuse;
+pub mod lexicon;
 pub mod navigation;
 pub mod orphans;
 pub mod pyfmt;

@@ -1,0 +1,13 @@
+{
+  "id": "f177a478-5834-4e05-b260-e302adea571e",
+  "label": "explains (technical)",
+  "lemma": "explains",
+  "class": "technical",
+  "definition_ids": [
+    "179d4557-bda1-59c4-938a-b91e9974a27f",
+    "82ff401e-5108-592e-925a-66f6833981d6"
+  ],
+  "disambiguation_ids": [
+    "463466e2-a5cc-556c-bbb0-025eb24e4cf1"
+  ]
+}

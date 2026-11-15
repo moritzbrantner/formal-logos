@@ -1,0 +1,14 @@
+{
+  "id": "464348ed-dee7-4754-af50-5c58908e3f81",
+  "label": "spatiotemporal (technical)",
+  "lemma": "spatiotemporal",
+  "class": "technical",
+  "definition_ids": [
+    "56434b15-ed8e-5896-b1af-9fdbc18dd99b",
+    "cc2b5981-93cb-5ba7-9731-1512cd0f69e7",
+    "ddde7152-b698-5a85-8060-b8c6c9905758"
+  ],
+  "disambiguation_ids": [
+    "1ea8b036-7a66-540a-be38-301a8db9077c"
+  ]
+}

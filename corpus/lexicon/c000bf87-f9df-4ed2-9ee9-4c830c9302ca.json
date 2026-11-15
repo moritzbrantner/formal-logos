@@ -1,0 +1,14 @@
+{
+  "id": "c000bf87-f9df-4ed2-9ee9-4c830c9302ca",
+  "label": "selecting an outcome (technical)",
+  "lemma": "selecting an outcome",
+  "class": "technical",
+  "definition_ids": [
+    "6f5a06e5-76aa-53be-843c-bc2623f948c1",
+    "7e29ff7f-5bb3-56ec-995d-fbf72aa014b0",
+    "b64af87d-c8ab-5063-babe-a2db2af5704e"
+  ],
+  "disambiguation_ids": [
+    "59b60fe6-1bfe-512f-a90c-17416218bba4"
+  ]
+}

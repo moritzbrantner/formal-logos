@@ -1,0 +1,9 @@
+{
+  "id": "6e2078bf-54e0-43d4-8847-1ccfd733de46",
+  "label": "filtered necessary existence (technical)",
+  "lemma": "filtered necessary existence",
+  "class": "technical",
+  "definition_ids": [
+    "6c825ee1-db34-5cf7-933f-689d3e615f19"
+  ]
+}

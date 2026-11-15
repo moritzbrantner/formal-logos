@@ -1,0 +1,13 @@
+{
+  "id": "e394f84e-736c-4261-995e-3fcff5cab384",
+  "label": "infinite (technical)",
+  "lemma": "infinite",
+  "class": "technical",
+  "definition_ids": [
+    "1d8890c0-afe2-5cdb-a400-0bbd4b79053d",
+    "b4590519-63a3-5110-aa2d-3e5f1a02ac2b"
+  ],
+  "disambiguation_ids": [
+    "587c53cf-c2a8-51f6-b8c1-013e67756dc6"
+  ]
+}

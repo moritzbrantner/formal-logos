@@ -1,0 +1,13 @@
+{
+  "id": "6ed93db1-da3c-415e-9e6c-4188c8fa146e",
+  "label": "nicene-constantinopolitan creed (technical)",
+  "lemma": "nicene-constantinopolitan creed",
+  "class": "technical",
+  "definition_ids": [
+    "24ee54ec-d84a-572e-b3b9-134da286f1e6",
+    "e67ab833-b652-53a1-aa13-e58389158dde"
+  ],
+  "disambiguation_ids": [
+    "1e2ba680-dd18-5f7d-b5b5-198256c7bd6a"
+  ]
+}

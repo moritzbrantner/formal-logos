@@ -1,0 +1,13 @@
+{
+  "id": "61539352-6812-4e76-8140-ed3bec31300f",
+  "label": "likeness (technical)",
+  "lemma": "likeness",
+  "class": "technical",
+  "definition_ids": [
+    "2887f878-d786-5205-9d73-8142cd156ec3",
+    "cd195b17-e7f9-5199-9e4a-b7645007806e"
+  ],
+  "disambiguation_ids": [
+    "2d7d9715-6d9a-5bff-84ec-5e3209f72e75"
+  ]
+}

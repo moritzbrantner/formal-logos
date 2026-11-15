@@ -1,0 +1,13 @@
+{
+  "id": "ab9928ab-1a5c-4968-9df2-ed7ed6feb264",
+  "label": "soul (technical)",
+  "lemma": "soul",
+  "class": "technical",
+  "definition_ids": [
+    "0f07e16d-9f5a-5efe-b2b6-e83db2e4a017",
+    "4b3dcb30-878d-5f1a-9cb4-92441f5203f8"
+  ],
+  "disambiguation_ids": [
+    "23ea68c9-9d49-5054-9701-2ed40ced2a2d"
+  ]
+}

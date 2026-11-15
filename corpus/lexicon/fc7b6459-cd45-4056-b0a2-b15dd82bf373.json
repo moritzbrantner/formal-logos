@@ -1,0 +1,9 @@
+{
+  "id": "fc7b6459-cd45-4056-b0a2-b15dd82bf373",
+  "label": "closed admission (technical)",
+  "lemma": "closed admission",
+  "class": "technical",
+  "definition_ids": [
+    "e45c109e-0311-5d0e-868b-49791595a013"
+  ]
+}

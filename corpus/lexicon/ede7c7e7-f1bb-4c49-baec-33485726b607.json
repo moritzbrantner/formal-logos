@@ -1,0 +1,9 @@
+{
+  "id": "ede7c7e7-f1bb-4c49-baec-33485726b607",
+  "label": "well-founded fact-dependency relation (technical)",
+  "lemma": "well-founded fact-dependency relation",
+  "class": "technical",
+  "definition_ids": [
+    "303d8860-4e9b-5ae0-b726-a07e0f592df9"
+  ]
+}

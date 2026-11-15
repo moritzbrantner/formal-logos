@@ -1,0 +1,9 @@
+{
+  "id": "4a830989-0a63-4bb2-82b3-859be7402a17",
+  "label": "boxed fact truth (technical)",
+  "lemma": "boxed fact truth",
+  "class": "technical",
+  "definition_ids": [
+    "0c3c8234-269b-55f6-8c96-34522dda62bf"
+  ]
+}

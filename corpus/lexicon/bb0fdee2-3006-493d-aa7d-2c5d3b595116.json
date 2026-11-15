@@ -1,0 +1,13 @@
+{
+  "id": "bb0fdee2-3006-493d-aa7d-2c5d3b595116",
+  "label": "exists (technical)",
+  "lemma": "exists",
+  "class": "technical",
+  "definition_ids": [
+    "7ed3d53e-7b11-4239-8f02-81a841020f89",
+    "b3b4e279-e1cf-4e54-a999-80c5bb5a43cc"
+  ],
+  "disambiguation_ids": [
+    "620f1cde-0f67-5ecd-a96c-2851588725d5"
+  ]
+}

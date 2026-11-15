@@ -1,0 +1,13 @@
+{
+  "id": "7eb6f951-eb42-4afb-80f6-ba22d0e8f26e",
+  "label": "sufficient reason (technical)",
+  "lemma": "sufficient reason",
+  "class": "technical",
+  "definition_ids": [
+    "179d4557-bda1-59c4-938a-b91e9974a27f",
+    "3055e6f1-5de7-5c32-9b6f-d023d0c82025"
+  ],
+  "disambiguation_ids": [
+    "f9e260b1-c206-5d41-a054-fac13cf68e67"
+  ]
+}

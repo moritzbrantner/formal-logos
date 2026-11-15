@@ -1,0 +1,18 @@
+{
+  "id": "a22ef39a-3a72-42e2-a3a3-5cc77d413682",
+  "label": "true (technical)",
+  "lemma": "true",
+  "class": "technical",
+  "definition_ids": [
+    "295c5c65-7654-5a9f-8f01-cd9071dd31f1",
+    "543c2ef3-ff28-55bd-8442-1906661502bc",
+    "b412016a-43c1-5c4a-abb0-4e53d343d508",
+    "bfb442ed-de24-5be7-92fa-838b93157c91",
+    "c137a1e2-6b0f-5413-b6c9-e13918c61b6b",
+    "cbb0ffe9-46e6-5bc4-aa8b-e705635ce0e7"
+  ],
+  "disambiguation_ids": [
+    "80b5fc49-ed55-5c61-b14b-3621d2aa1520",
+    "d62cd674-9ae4-564a-8016-13d11ba0c407"
+  ]
+}

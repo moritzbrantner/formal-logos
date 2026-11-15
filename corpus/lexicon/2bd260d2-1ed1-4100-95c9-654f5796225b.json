@@ -1,0 +1,18 @@
+{
+  "id": "2bd260d2-1ed1-4100-95c9-654f5796225b",
+  "label": "separation (technical)",
+  "lemma": "separation",
+  "class": "technical",
+  "definition_ids": [
+    "0e46bfe6-5b88-5209-bb7c-de08c176b7fb",
+    "408fb3a5-02ea-53ca-a79d-32134c6cac69",
+    "54f18827-52a3-5979-a4e7-70380e3c7dd6",
+    "9c0ca5cc-5c7b-51e1-8a54-9cde0829c0c2",
+    "a2c9b587-0b72-5e27-8188-242348b95eed"
+  ],
+  "disambiguation_ids": [
+    "2e81d282-81fe-5f88-a787-ae9ad3403164",
+    "7a593478-3895-5bf0-b87d-3417ed1088c7",
+    "e8547175-8208-5cc0-b5bb-39577315f2ac"
+  ]
+}

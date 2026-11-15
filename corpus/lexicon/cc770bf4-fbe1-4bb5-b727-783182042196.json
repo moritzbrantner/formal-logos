@@ -1,0 +1,14 @@
+{
+  "id": "cc770bf4-fbe1-4bb5-b727-783182042196",
+  "label": "verifiable (technical)",
+  "lemma": "verifiable",
+  "class": "technical",
+  "definition_ids": [
+    "851dbf2e-5030-51ad-9b74-b960a87683f4",
+    "b756092b-697b-52f9-aa64-7e6da9e87b60",
+    "bd8abce7-0de2-528a-b7dd-f8418398846b"
+  ],
+  "disambiguation_ids": [
+    "e1eb387a-1052-5f34-b7f1-ea076303e1cd"
+  ]
+}

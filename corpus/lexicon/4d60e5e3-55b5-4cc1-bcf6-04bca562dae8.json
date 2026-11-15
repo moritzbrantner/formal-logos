@@ -1,0 +1,23 @@
+{
+  "id": "4d60e5e3-55b5-4cc1-bcf6-04bca562dae8",
+  "label": "explanation (technical)",
+  "lemma": "explanation",
+  "class": "technical",
+  "definition_ids": [
+    "0716eaf4-795e-562f-b83a-ac8595d93c19",
+    "388c4103-f5a1-5149-9461-942a4b3af6a4",
+    "77060332-2129-5e1d-b477-908cbe74080f",
+    "7917975f-a920-5ade-99df-11f19231f0a0",
+    "c4694c5b-b6a1-5f16-af94-4b63bd62ab05",
+    "c9c7c2cc-f7bc-5201-8e7c-872b08754a62",
+    "d6064caf-8539-55af-84b5-fcd1161d043b",
+    "ddef645b-61e3-5df3-97a5-880f318f2e96",
+    "eadff578-bc52-5b16-8aa2-02eda838ce32",
+    "f1f49212-b37b-5ead-8040-96bbeff01a3f"
+  ],
+  "disambiguation_ids": [
+    "26477066-f7f5-596a-9d5e-bf01695d578b",
+    "2766e56a-078f-56e7-93c7-186002114be8",
+    "a43c7122-d309-5b54-8922-6d459df33f21"
+  ]
+}

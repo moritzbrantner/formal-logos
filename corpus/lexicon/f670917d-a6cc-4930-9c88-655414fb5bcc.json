@@ -1,0 +1,9 @@
+{
+  "id": "f670917d-a6cc-4930-9c88-655414fb5bcc",
+  "label": "direct fact (technical)",
+  "lemma": "direct fact",
+  "class": "technical",
+  "definition_ids": [
+    "837b6e34-2082-51d3-9214-45a36ce9e2aa"
+  ]
+}

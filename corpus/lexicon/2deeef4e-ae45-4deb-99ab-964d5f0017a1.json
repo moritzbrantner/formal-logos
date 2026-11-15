@@ -1,0 +1,15 @@
+{
+  "id": "2deeef4e-ae45-4deb-99ab-964d5f0017a1",
+  "label": "relationship (technical)",
+  "lemma": "relationship",
+  "class": "technical",
+  "definition_ids": [
+    "0c18c98d-bc06-5e11-a332-e9f1c950292b",
+    "1b8d31ef-b044-5366-8456-2481b0b670be",
+    "ba2f8e27-dc34-5e8b-91bb-fdca32f9a7ba",
+    "e83e512d-ae8d-5e80-a697-8fc1d672b7d3"
+  ],
+  "disambiguation_ids": [
+    "a4359a96-a726-5755-8359-a02b64f42f15"
+  ]
+}

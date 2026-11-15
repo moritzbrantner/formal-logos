@@ -1,0 +1,13 @@
+{
+  "id": "7174fb48-5449-4ab2-9e2e-58db03d5107f",
+  "label": "perfect (technical)",
+  "lemma": "perfect",
+  "class": "technical",
+  "definition_ids": [
+    "5f851204-5991-5e16-87f1-e8b3ed729708",
+    "bf9ced33-dbd9-5921-99ef-e1e92fa7e063"
+  ],
+  "disambiguation_ids": [
+    "b4099355-0e3b-510a-9398-8ef97b4881b1"
+  ]
+}
