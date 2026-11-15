@@ -25,6 +25,7 @@ pub mod subprocess;
 pub mod territory;
 pub mod thickness;
 mod transcription;
+pub mod tree;
 pub mod unused_premises;
 
 use serde_json::{Map, Value};

@@ -117,6 +117,15 @@ pub struct AttributionArgs {
     pub max_chars: Option<i64>,
 }
 
+/// The `tree` options: `--down N`, `--up N` (0 allowed) and `--budget N`.
+#[derive(Default)]
+pub struct TreeArgs {
+    pub flags: bool,
+    pub down: Option<usize>,
+    pub up: Option<usize>,
+    pub budget: Option<usize>,
+}
+
 #[derive(Default)]
 pub struct ResearchArgs {
     pub flags: bool,
@@ -181,6 +190,7 @@ pub struct Args {
     pub structure: StructureArgs,
     pub proof: ProofArgs,
     pub attribution: AttributionArgs,
+    pub tree: TreeArgs,
 }
 
 /// The shared options a command accepts besides `--root` and `--json`;
@@ -240,6 +250,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         structure: StructureArgs::default(),
         proof: ProofArgs::default(),
         attribution: AttributionArgs::default(),
+        tree: TreeArgs::default(),
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -315,6 +326,25 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                 parsed.attribution.flags = true;
                 parsed.attribution.max_chars =
                     Some(integer(args.next().and_then(|value| value.to_str()), arg)?);
+            }
+            "--down" | "--up" | "--budget" => {
+                parsed.tree.flags = true;
+                let value = args.next().and_then(|value| value.to_str());
+                let tree = &mut parsed.tree;
+                match arg {
+                    "--budget" => tree.budget = Some(number(value, arg)?),
+                    _ => {
+                        let depth =
+                            value.and_then(|value| value.parse().ok()).ok_or_else(|| {
+                                usage(format!("{arg} requires a non-negative integer"))
+                            })?;
+                        if arg == "--down" {
+                            tree.down = Some(depth);
+                        } else {
+                            tree.up = Some(depth);
+                        }
+                    }
+                }
             }
             "--strict" => parsed.proof.strict = true,
             "--review" => parsed.proof.review = true,

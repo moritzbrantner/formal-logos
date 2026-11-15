@@ -14,6 +14,7 @@ target/debug/truth --json frontier-diff --base HEAD^1
 target/debug/truth related STMT-GOD-EXISTS
 target/debug/truth dossier STMT-GOD-EXISTS
 target/debug/truth context ARGUMENT-ID --json
+target/debug/truth tree STMT-GOD-EXISTS --down 2 --up 2
 target/debug/truth orphans
 target/debug/truth orphans --senses --json
 target/debug/truth issues --from issues.json --for STMT-GOD-EXISTS
@@ -401,6 +402,49 @@ coincide with their result IDs, and 3 uniquely concluded statements) with
 several `--limit` values, and the error cases, from a saved Python report;
 and, for a subset plus `dossier --all`, that the in-process frontier gives the
 same output.
+
+## `tree`
+
+`truth tree STATEMENT [--down N] [--up N] [--budget N]` draws the argument
+graph re-rooted at any statement, with the definitions of every statement in
+view (#1674). It has no Python counterpart. All statuses come from one
+frontier report computed with STATEMENT as the frontier root
+(`frontier::current_frontier`); the command creates no second closure
+semantics and closes nothing.
+
+- **Down (support, `--down`, default 3 argument levels):** the arguments
+  concluding the statement are OR alternatives (verified non-transcription
+  first, then transcriptions, then arguments without a result; each by label),
+  each with its inference steps and its premises as an AND bundle, recursively.
+- **Up (dependents, `--up`, default 3):** the arguments using the statement as a
+  premise, their other premises (`co_premise`, not expanded) and their
+  conclusions, recursively toward the case root (`is_case_root`).
+- **Strength orders:** every `strengthens` relation with an end in view; a
+  missing end joins as an unexpanded `strength_neighbor` while the budget allows.
+- **Terms:** each statement's `definition_ids` and `disambiguation_ids` and the
+  sense labels its definitions carry; each definition's `lean_declaration` and
+  `formal_status` (`null` until the lexicon's formal-status data, #1652 L3,
+  exists).
+
+The walk is breadth-first, so each node sits at its shallowest depth; a shared
+node appears once (`(shown above)` in the text), and an edge back to a node on
+the current path is marked `cycle` and not followed. `--budget` (default 400)
+caps statement plus argument nodes; an argument is added with all its new
+premises or not at all. Every cut leaves a `truncated` entry (`side`, `reason`
+`depth` or `budget`, `omitted_arguments`) and a `… truncated` text line.
+
+JSON (`schema_version` 1, with `input_identity`): `root`, `case_root`,
+`options`, `statements` (status, depth, closed reason, established,
+`reaches_tree_root`, role, depths, definitions, senses), `arguments` (premises,
+steps, results with theorem and transcription kind, the root route entry),
+`edges`, `definitions`, `disambiguations`, `truncated`, `node_count`. Each edge
+has a `kind` (`supports`: argument → conclusion, `uses`: argument → premise,
+`strengthens`: strong → weak statement), `extra_premises`, `verified`,
+`derivation` and `cycle`. The kinds `contrapositive` and `inverse_conditional`
+are reserved (`reserved_edge_kinds`) for derived inversions: from a verified
+P1, …, Pn ⊢ C, ¬C with the other premises gives ¬Pi; an inverse C ∧ ¬B ⊢ A
+needs an explicit exhaustiveness premise C → A ∨ B in `extra_premises`. The
+unconditioned inverse C ⊢ A is invalid and is never emitted.
 
 ## `attribution-check`
 
