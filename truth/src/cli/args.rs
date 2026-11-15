@@ -135,7 +135,8 @@ pub struct ConfigurationArgs {
     pub seed: Option<String>,
     pub premises: Vec<String>,
     pub registered: bool,
-    /// `models --check`, `--argument` and `--verify` (Lean; Python only).
+    /// `models --check`, `--argument` and `--verify` (Lean), and
+    /// `configuration-report --check PATH`.
     pub check: Option<String>,
     pub argument: Option<String>,
     pub verify: bool,

@@ -4,8 +4,9 @@ structural view (`status`, `inspect`), `thickness [--queue]`, `check`,
 `frontier`, `frontier-diff`, `thickness --base` and `orphans --base`
 (against `scripts/orphan_summary.py`), the research navigation commands
 `related`, `dossier` and `context`, `next`, `next-steps`, `arguments`,
-`results`, `sort-lists`, `configurations --registered`, `models` and
-`territory`, `bind-check` (from recorded BindTypes output), `unused-premises`,
+`results`, `sort-lists`, `configurations` (registered, and live through a
+recorded toolchain with `configuration-report` and `models --check /
+--argument / --verify`), `models` and `territory`, `bind-check` (from recorded BindTypes output), `unused-premises`,
 `lean-reuse` and `context --proof-use` (from recorded UnusedPremises and
 LeanReuse output), `structure`/`structure-report` (from recorded
 PropositionStructure output), `issues` with `dossier --issues-from`, and
@@ -29,6 +30,7 @@ from truth_parity.check import TruthCheckParity  # noqa: F401
 from truth_parity.issues import TruthIssuesParity  # noqa: F401
 from truth_parity.navigation import TruthNavigationParity  # noqa: F401
 from truth_parity.configurations import TruthConfigurationParity  # noqa: F401
+from truth_parity.configuration_report import TruthConfigurationReportParity  # noqa: F401
 from truth_parity.bind_check import TruthBindCheckParity  # noqa: F401
 from truth_parity.proposition_structure import TruthStructureParity  # noqa: F401
 from truth_parity.proof_use import TruthProofUseParity  # noqa: F401

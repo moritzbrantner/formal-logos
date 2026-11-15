@@ -20,6 +20,7 @@ mod attribution_check;
 mod bind_check;
 mod bridges;
 mod check;
+mod configuration_report;
 mod configurations;
 mod context;
 mod dossier;
@@ -66,8 +67,9 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] results
        truth [--root PATH] [--json] sort-lists
        truth [--root PATH] [--json] lexicon (show WORD | untraced | coverage | check | bootstrap | allowlist | ratchet --base REV) [--limit N] [--write]
-       truth [--root PATH] [--json] configurations --registered [--case ID] [--seed STATEMENT] [--premise STATEMENT]...
-       truth [--root PATH] [--json] models
+       truth [--root PATH] [--json] configurations [--registered] [--case ID] [--seed STATEMENT] [--premise STATEMENT]...
+       truth [--root PATH] [--json] configuration-report (--output PATH | --check PATH | --build-input)
+       truth [--root PATH] [--json] models [--check STATEMENT | --argument ARGUMENT] [--premise STATEMENT]... [--verify]
        truth [--root PATH] [--json] territory [--frontier-root STATEMENT] [--max-atoms N]
        truth [--root PATH] [--json] bind-check [--result RESULT]... [--affected --base REV [--head REV]]
              [--lean-json FILE] [--print-lean-input]
@@ -122,6 +124,7 @@ pub const COMMANDS: &[Command] = &[
     sort_lists::COMMAND,
     lexicon::COMMAND,
     configurations::COMMAND,
+    configuration_report::COMMAND,
     models::COMMAND,
     territory::COMMAND,
     bind_check::COMMAND,
@@ -141,9 +144,13 @@ pub fn run(args: &[OsString]) -> Output {
             Some(command) if args.bind.flags && command.name != "bind-check" => Err(usage(
                 "--result, --affected, --lean-json and --print-lean-input apply only to bind-check",
             )),
-            Some(command) if args.structure.flags && !command.name.starts_with("structure") => {
+            Some(command)
+                if args.structure.flags
+                    && !command.name.starts_with("structure")
+                    && command.name != "configuration-report" =>
+            {
                 Err(usage(
-                    "--unfold, --output, --build-input, --check-input and --extractor-json apply only to structure and structure-report",
+                    "--unfold, --output, --build-input, --check-input and --extractor-json apply only to structure, structure-report and configuration-report",
                 ))
             }
             Some(command)
