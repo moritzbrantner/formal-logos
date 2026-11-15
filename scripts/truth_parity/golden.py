@@ -48,7 +48,13 @@ file contents alike:
   references to the repository file of the same path;
 - `__pycache__` directories and the paths in `exclude` are left out;
 - a symbolic link is recorded as `{"symlink": target}` (its target tokenized);
-- a case's `name` (the subtest description) is tokenized like the rest.
+- a case's `name` (the subtest description) is tokenized like the rest;
+- `normalize` names the Rust-only additions the parity test removes from
+  Rust's stdout before comparing (`truth_parity.common`): `note_mentions`
+  (the trailing `Notes mentioning the target records` block, or the JSON
+  `note_mentions` field), `bind_types` (the `elaborated types:` notice line or
+  the JSON `bind_types` field), `mentioned_by_notes` (that JSON field) and
+  `note_hits` (JSON list entries of kind `note`).
 
 Exit codes are Rust's contract: where Rust differs from Python (`check`
 exits 1 on a corpus error, Python 2) the call site passes Rust's code and
@@ -214,7 +220,7 @@ def note_producer(text):
 
 def record(test, args, *, root, code, stdout=None, stderr=None, stdout_json=None, ignore_keys=("input_identity",),
            json_paths=None, error_message=None, files=None, env=None, path_prepend=(), externals=(), cwd=None,
-           exclude=(), keep_repo=(), strip_producer=False, label=""):
+           exclude=(), keep_repo=(), strip_producer=False, normalize=(), label=""):
     """Keep one golden case (only while recording): Rust run as `truth ARGS`
     on the checkout `root` must reproduce the given Python output."""
     if not RECORDING:
@@ -232,6 +238,8 @@ def record(test, args, *, root, code, stdout=None, stderr=None, stdout_json=None
         expect["ignore_keys"] = list(ignore_keys)
     if strip_producer:
         expect["strip_producer"] = True
+    if normalize:
+        expect["normalize"] = list(normalize)
     module = type(test).__module__.rsplit(".", 1)[-1]
     method = test._testMethodName
     name = " ".join(filter(None, [_description(test), label]))

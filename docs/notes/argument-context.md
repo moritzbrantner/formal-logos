@@ -21,6 +21,7 @@ reuse. Open dossiers only for the premises it reports open.
 | Section | Derived from |
 | --- | --- |
 | Frozen advertised theorem, verbatim, with `file:line` | the result's Challenge module (Lean source) |
+| Elaborated theorem type with full names and the statement each hypothesis binds, when fresh | `.cache/bind-types.json`, written by `truth bind-check` from `scripts/BindTypes.lean` |
 | Companion theorems (often omission/independence models) and whether Comparator checks them | the same Challenge module and `comparator.json` `theorem_names` |
 | Results reachable through Lean imports, with statement-level graph links | the Solution module's source import closure mapped to result modules (proximity, not proof use) |
 | Optional theorem use: theorem-used/graph-linked, theorem-used/not in argument graph, or import only | elaborated Lean proof terms in existing .olean files, plus the corpus argument graph |
@@ -40,6 +41,13 @@ added. The corpus JSON records remain authoritative for interpretation, sources
 and result status; `frontier_report` remains authoritative for closure. The pack
 does no validation (run `corpus.py check`) and no verification
 (`scripts/verify-result.sh`), and never upgrades `solution-present`.
+
+When `truth bind-check` has run Lean on the current Lean inputs, `truth
+context` also shows each result's elaborated type with full names and the
+statement each hypothesis binds (or `unbound`), from `.cache/bind-types.json`;
+when that cache is absent or stale it says so in one line and shows only the
+source text (#960; `truth/README.md`, "Elaborated types"). The cached view is
+navigation, not verification evidence.
 
 By default `context` remains a fast, source-only navigation view: imports are
 **not** proof use. After `lake build`, opt into `--proof-use` to inspect existing

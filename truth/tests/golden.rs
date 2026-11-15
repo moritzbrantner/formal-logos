@@ -516,6 +516,49 @@ fn strip_producer(text: &str) -> String {
     out
 }
 
+/// The Rust-only additions a parity test removes from Rust's stdout before
+/// comparing it with Python's (`scripts/truth_parity/common.py`).
+fn normalize(name: &str, stdout: &str) -> String {
+    const NOTE_BLOCK: &str = "\n\nNotes mentioning the target records (";
+    const BIND_TYPES_NOTICE: &str = "  elaborated types: no bind-check cache at ";
+    let json_key = match name {
+        "note_mentions" => "note_mentions",
+        "bind_types" => "bind_types",
+        "mentioned_by_notes" => "mentioned_by_notes",
+        "note_hits" => "",
+        other => panic!("unknown golden normalization {other}"),
+    };
+    if let Ok(mut value) = serde_json::from_str::<Value>(stdout) {
+        // Re-serialized only when something was removed, so byte-exact
+        // expectations of untouched JSON output keep their formatting.
+        let changed = match &mut value {
+            Value::Object(entries) if !json_key.is_empty() => entries.remove(json_key).is_some(),
+            Value::Array(items) if name == "note_hits" => {
+                let before = items.len();
+                items.retain(|item| item["kind"] != "note");
+                items.len() != before
+            }
+            _ => false,
+        };
+        return if changed {
+            value.to_string()
+        } else {
+            stdout.to_owned()
+        };
+    }
+    match name {
+        "note_mentions" => match stdout.rfind(NOTE_BLOCK) {
+            Some(cut) => format!("{}\n", &stdout[..cut]),
+            None => stdout.to_owned(),
+        },
+        "bind_types" => stdout
+            .split_inclusive('\n')
+            .filter(|line| !line.starts_with(BIND_TYPES_NOTICE))
+            .collect(),
+        _ => stdout.to_owned(),
+    }
+}
+
 fn text_difference(label: &str, expected: &str, actual: &str) -> String {
     let expected_lines: Vec<&str> = expected.split_inclusive('\n').collect();
     let actual_lines: Vec<&str> = actual.split_inclusive('\n').collect();
@@ -552,11 +595,14 @@ fn compare(
             "  exit code: expected {wanted:?}, actual {code:?}; stderr: {stderr:?}"
         ));
     }
-    let stdout = if expect["strip_producer"].as_bool() == Some(true) {
+    let mut stdout = if expect["strip_producer"].as_bool() == Some(true) {
         strip_producer(stdout)
     } else {
         stdout.to_owned()
     };
+    for name in strings(&expect["normalize"]) {
+        stdout = normalize(&name, &stdout);
+    }
     for (label, actual) in [("stdout", stdout.as_str()), ("stderr", stderr)] {
         if let Some(expected) = expect[label].as_str() {
             let expected = tokens.apply(expected);

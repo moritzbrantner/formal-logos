@@ -28,7 +28,7 @@ import corpus
 from truth_parity.bind_check import FIX, described, hyp
 from truth_parity.check import by_id, write_check_fixture
 from truth_parity import golden
-from truth_parity.common import U, ParityCase
+from truth_parity.common import U, NO_BIND_TYPES, ParityCase, without_bind_types, without_note_field, without_note_mentions
 
 # Stands in for `lake env lean --run TOOL INPUT`: keeps a copy of INPUT under
 # $FAKE_CAPTURE and prints the recorded output for TOOL from $FAKE_OUTPUTS.
@@ -133,7 +133,7 @@ class TruthProofUseParity(ParityCase):
     def run_cli(self, command, root, arguments, capture):
         capture.mkdir(parents=True, exist_ok=True)
         env = dict(os.environ, PATH=f"{self.tools}{os.pathsep}{os.environ['PATH']}",
-                   FAKE_CAPTURE=str(capture), FAKE_OUTPUTS=str(self.outputs))
+                   FAKE_CAPTURE=str(capture), FAKE_OUTPUTS=str(self.outputs), **NO_BIND_TYPES)
         return subprocess.run(command + arguments, capture_output=True, text=True, check=False, env=env,
                               cwd=root)
 
@@ -155,11 +155,14 @@ class TruthProofUseParity(ParityCase):
                         for tool in TOOLS if (root / "capture-python" / f"{tool}.json").exists()}
             (root / "capture-rust").mkdir(exist_ok=True)
             golden.record(self, ["--root", root, *arguments, *json_flag], root=root, code=python.returncode,
-                          files=captured or None, env={"FAKE_CAPTURE": root / "capture-rust", "FAKE_OUTPUTS": self.outputs},
+                          files=captured or None, normalize=["bind_types", "note_mentions"],
+                          env={"FAKE_CAPTURE": root / "capture-rust", "FAKE_OUTPUTS": self.outputs, **NO_BIND_TYPES},
                           path_prepend=[self.tools], externals=[self.tools, self.outputs],
                           exclude=("capture-python",), **expected)
             rust = self.run_cli([str(self.binary), "--root", str(root)], root, [*arguments, *json_flag],
                                 root / "capture-rust")
+            if arguments[0] == "context" and rust.returncode == 0:
+                rust.stdout = without_bind_types(rust.stdout)
             self.assertEqual(rust.returncode, python.returncode, (arguments, python.stderr, rust.stderr))
             if python.returncode == 2:
                 message = json.loads(rust.stderr)["error"]["message"] if json_flag else None
@@ -168,11 +171,11 @@ class TruthProofUseParity(ParityCase):
                 else:
                     self.assertEqual(rust.stderr, python.stderr)
             elif json_flag and semantic_json:
-                report = json.loads(rust.stdout)
+                report = without_note_field(json.loads(rust.stdout))
                 report.pop("input_identity")
                 self.assertEqual(report, json.loads(python.stdout), arguments)
             else:
-                self.assertEqual(rust.stdout, python.stdout, arguments)
+                self.assertEqual(without_note_mentions(rust.stdout), python.stdout, arguments)
             for tool in TOOLS:
                 ran = root / "capture-python" / f"{tool}.json"
                 if ran.exists():
@@ -332,14 +335,16 @@ class TruthProofUseParity(ParityCase):
             python = subprocess.run([sys.executable, str(corpus.ROOT / "scripts" / "corpus.py"),
                                      *(python_arguments or arguments)], capture_output=True, text=True, check=False)
             rust = subprocess.run([self.binary, "--root", str(corpus.ROOT), *arguments], capture_output=True,
-                                  text=True, check=False)
+                                  text=True, check=False, env=dict(os.environ, **NO_BIND_TYPES))
+            if arguments[0] == "context" and rust.returncode == 0:
+                rust.stdout = without_bind_types(rust.stdout)
             self.assertEqual(rust.returncode, python.returncode, (arguments, python.stderr, rust.stderr))
             if semantic:
-                report = json.loads(rust.stdout)
+                report = without_note_field(json.loads(rust.stdout))
                 report.pop("input_identity")
                 self.assertEqual(report, json.loads(python.stdout), arguments)
             else:
-                self.assertEqual(rust.stdout, python.stdout, arguments)
+                self.assertEqual(without_note_mentions(rust.stdout), python.stdout, arguments)
 
         bind, use = os.environ.get("TRUTH_UNUSED_BIND_JSON"), os.environ.get("TRUTH_UNUSED_USAGE_JSON")
         reuse_json = os.environ.get("TRUTH_LEAN_REUSE_JSON")

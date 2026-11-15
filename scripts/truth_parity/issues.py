@@ -14,7 +14,7 @@ from pathlib import Path
 
 import corpus
 from truth_parity import golden
-from truth_parity.common import ParityCase
+from truth_parity.common import ParityCase, without_note_field, without_note_mentions
 
 SNAPSHOT = Path(__file__).resolve().parent / "fixtures" / "issues-snapshot.json"
 
@@ -133,12 +133,12 @@ class TruthIssuesParity(ParityCase):
         result = subprocess.run([self.binary, *(["--root", str(root)] if root else []), *args],
                                 cwd=corpus.ROOT, capture_output=True, text=True, check=False)
         self.assertEqual(result.returncode, code, (args, result.stderr))
-        return result.stdout, result.stderr
+        return without_note_mentions(result.stdout), result.stderr
 
     def truth_json(self, *args, root=None):
         value = json.loads(self.truth("--json", *args, root=root)[0])
         self.assertTrue(value.pop("input_identity").startswith("fnv1a64:"))
-        return value
+        return without_note_field(value)
 
     def assert_issues(self, snapshot, root=None, extra=()):
         """Text and JSON of `issues --from SNAPSHOT [extra]` on both sides."""
@@ -146,13 +146,15 @@ class TruthIssuesParity(ParityCase):
         code, text, _ = python(args, root)
         self.assertEqual(code, 0)
         if root is not None:
-            golden.record(self, ["--root", root, *args], root=root, code=0, stdout=text)
+            golden.record(self, ["--root", root, *args], root=root, code=0, stdout=text,
+                          normalize=["note_mentions"])
         self.assertEqual(self.truth(*args, root=root)[0], text, extra)
         code, machine, _ = python([*args, "--json"], root)
         self.assertEqual(code, 0)
         expected = json.loads(machine)
         if root is not None:
-            golden.record(self, ["--root", root, "--json", *args], root=root, code=0, stdout_json=expected)
+            golden.record(self, ["--root", root, "--json", *args], root=root, code=0, stdout_json=expected,
+                          normalize=["note_mentions"])
         self.assertEqual(self.truth_json(*args, root=root), expected, extra)
         return expected
 
@@ -201,11 +203,12 @@ class TruthIssuesParity(ParityCase):
                 self.assertEqual(code, 0)
                 self.assertIn("Issue targets (offline acceptance snapshot): ", text)
                 args += ["--frontier-root", "STMT-P"]
-                golden.record(self, ["--root", root, *args], root=root, code=0, stdout=text)
+                golden.record(self, ["--root", root, *args], root=root, code=0, stdout=text,
+                          normalize=["note_mentions"])
                 self.assertEqual(self.truth(*args, root=root)[0], text, statement)
                 code, machine, _ = python([*args[:-2], "--root", "STMT-P", "--json"], root)
                 golden.record(self, ["--root", root, "--json", *args], root=root, code=0,
-                              stdout_json=json.loads(machine))
+                              stdout_json=json.loads(machine), normalize=["note_mentions"])
                 self.assertEqual(self.truth_json(*args, root=root), json.loads(machine), statement)
 
     def real_snapshot(self, directory):

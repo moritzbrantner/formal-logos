@@ -445,8 +445,11 @@ serde-serializable result structs (`truth::related`, `truth::dossier`,
 `truth::context`); `main.rs` only selects output. Text output is
 byte-identical to Python's; `--json` prints the Python JSON object plus
 `input_identity` (`dossier --all` prints exactly the Python object, keyed by
-statement ID). Navigation only: nothing here closes a statement, changes a
-route cost or certifies anything.
+statement ID). Rust adds one part Python lacks (#952): the note sections that
+name the target explicitly, as `note_mentions` in JSON and a final "Notes
+mentioning the target records" text block (`context`: the argument, its
+results and its conclusion). The parity tests drop both. Navigation only:
+nothing here closes a statement, changes a route cost or certifies anything.
 
 - `truth related STATEMENT-ID [--limit N]` (default 10; 1 to 200 shown) ranks
   over the loaded corpus in memory. Python ranks over its disposable SQLite
@@ -462,7 +465,34 @@ route cost or certifies anything.
   ID, a result ID or a statement concluded by exactly one argument. The frozen
   Lean statement and companion theorems are read from each result's Challenge
   module, imports from the Solution modules and permitted axioms from the
-  Comparator config, as Python does.
+  Comparator config, as Python does. Rust adds the elaborated types below.
+
+**Elaborated types (#960, Rust only).** After running Lean, `truth
+bind-check` (full or scoped, but not from a saved `--lean-json`) records
+each described result theorem in `.cache/bind-types.json`
+(`truth::bind_types`; `$TRUTH_BIND_TYPES_CACHE` overrides the path): the
+exporter's binder names, head constants and types as Lean pretty-printed them
+with full names, the result type and theory-bundle conjuncts, and an input
+digest over the Lean toolchain, Lake manifest and configuration,
+`scripts/BindTypes.lean`, the Solution module, every repository module in its
+source import closure and their `.olean.hash` files. A scoped run merges into
+the existing cache. `context` only reads it and never runs Lean: for each
+result whose entry still matches the result record and whose digest it
+recomputes unchanged, the text pack adds an `elaborated` block (parameters,
+each hypothesis or bundle conjunct `h.N` with its type and bound statement or
+`unbound`, the conclusion, unbound premises; hypothesis lines are cut at
+about 1 KB per result, and `--json` carries the full signature and every
+hypothesis under `lean[].elaborated`). The binding is recomputed from the
+cached types and the current records with `bind-check`'s rules, without
+expression contracts or sense checks, so it is advisory and never
+verification evidence. When the cache is absent, unreadable or stale for a
+result, the text pack adds exactly one line saying so under the Lean heading
+and otherwise keeps the source-text view; `--json` always carries the
+`bind_types` summary. Actual axioms are not shown: no Comparator or NanoDa
+output is kept locally (CI logs only), so only the permitted axioms of the
+Comparator config appear. Python's `context` has none of this; the parity
+tests point Rust at an absent cache and drop the notice line and the
+`bind_types` summary before comparing.
 
 `dossier` and `context` consume the frontier report. Without
 `--frontier-json` they compute it in-process with the Rust `frontier` (the
@@ -506,13 +536,22 @@ run the registered-only `truth::configurations` engine. Output is the Python
 JSON (indented; compact with `--json`; object keys sorted). `export` prints the
 original bytes. Errors exit 1 (Python's messages), usage errors 2.
 
+Research notes (#952): the index also projects `docs/notes/**/*.md` (up to
+1 MiB each) into Rust-only tables, with their paths and bytes in the
+digest. `search` appends up to `--limit` note sections, typed `"kind":
+"note"`, after the records. `show docs/notes/x.md[#anchor]` shows a note or
+one section. `show RECORD` adds `mentioned_by_notes`. Links come only from
+explicit uuid, legacy ID, record-path or code-span label mentions
+(`truth::notes`; `docs/notes/research-index.md`, "Research notes").
+
 Differences from Python: Python's query commands reject a stale index, and its
 digest hashes the script, so the two use separate files
 (`.cache/research-index.sqlite` there). Rust also resolves a legacy id or
 label, optionally `kind:`-prefixed, for `show`, `--case`, `--premise`,
 `--left` and `--right`. Python's `related` subcommand is `truth related`.
-`scripts/truth_parity/index.py` compares every table row for row (all but the
-digest) and the JSON of every subcommand on the real corpus and a fixture,
+Python has no note tables or note hits. `scripts/truth_parity/index.py`
+compares every record table row for row (all but the digest) and the JSON of
+every subcommand, without the note parts, on the real corpus and a fixture,
 with search ranks including ties, and checks stale refresh, failed-rebuild
 preservation, corrupt-projection detection and exit codes.
 

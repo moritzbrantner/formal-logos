@@ -46,14 +46,14 @@ class TruthIndexParity(ParityCase):
         self.assertEqual(result.returncode, code, (args, result.stderr.decode()))
         return result.stdout, result.stderr.decode()
 
-    def expect(self, root, args, value):
+    def expect(self, root, args, value, normalize=()):
         """A golden case (fixture checkouts only): `index ARGS` in text and
         `--json` prints Python's `value`. The database under `.cache/` is not
         recorded: Rust builds it on the first query."""
         if root != corpus.ROOT:
             for machine in ([], ["--json"]):
                 golden.record(self, ["--root", root, *machine, "index", *args], root=root, code=0,
-                              stdout_json=value, exclude=(".cache",))
+                              stdout_json=value, exclude=(".cache",), normalize=normalize)
 
     def truth_json(self, root, *args):
         value = json.loads(self.truth(root, "--json", "index", *args)[0])
@@ -74,12 +74,18 @@ class TruthIndexParity(ParityCase):
                 expected = [dict(row) for row in db.execute(
                     "SELECT r.id,r.kind,r.path FROM search JOIN records r ON r.key=search.id "
                     "WHERE search MATCH ? ORDER BY rank LIMIT ?", (expression, limit))]
-                self.expect(root, ["search", words, "--limit", str(limit)], expected)
-                self.assertEqual(self.truth_json(root, "search", words, "--limit", str(limit)), expected,
-                                 (words, limit))
+                self.expect(root, ["search", words, "--limit", str(limit)], expected, normalize=["note_hits"])
+                found = self.truth_json(root, "search", words, "--limit", str(limit))
+                records = [hit for hit in found if hit["kind"] != "note"]
+                # Rust appends up to `limit` note sections after the records (#952).
+                self.assertEqual(found[:len(records)], records, (words, limit))
+                self.assertEqual(records, expected, (words, limit))
+                self.assertLessEqual(len(found) - len(records), limit)
         for token in shows:
-            self.expect(root, ["show", token], research_index.lookup(db, token))
-            self.assertEqual(self.truth_json(root, "show", token), research_index.lookup(db, token), token)
+            self.expect(root, ["show", token], research_index.lookup(db, token), normalize=["mentioned_by_notes"])
+            shown = self.truth_json(root, "show", token)
+            self.assertIsInstance(shown.pop("mentioned_by_notes"), list)  # Rust only (#952)
+            self.assertEqual(shown, research_index.lookup(db, token), token)
         self.expect(root, ["duplicates"], research_index.duplicates(db))
         self.assertEqual(self.truth_json(root, "duplicates"), research_index.duplicates(db))
         expected = {"mode": "registered inventory, not certified progress",
@@ -141,6 +147,32 @@ class TruthIndexParity(ParityCase):
         for args in (["nonsense"], ["show"], ["search"], ["build", "--premise", "X"], ["summary", "--limit", "3"]):
             self.truth(root, "index", *args, code=2)
         self.truth(root, "related", shows[0], "--left", "X", code=2)
+
+    def test_note_pilot_walkthrough(self):
+        """#952 on the real corpus: capture (an existing note), discovery
+        (a phrase found only in notes), the explicitly linked formal result,
+        and the reverse listing in `context`. Notes stay notes."""
+        root = corpus.ROOT
+        note = "docs/notes/joint-cooperation-744.md"
+        found = self.truth_json(root, "search", "plural-source survivor")
+        self.assertTrue(found)
+        self.assertEqual({hit["kind"] for hit in found}, {"note"})
+        hit = next(hit for hit in found if hit["path"] == note)
+        self.assertTrue(hit["id"].startswith(note + "#"))
+        shown = self.truth_json(root, "show", note)
+        self.assertEqual(shown["note"]["kind"], "note")
+        self.assertEqual({link["how"] for link in shown["links"]} - {"id", "legacy_id", "label", "path"}, set())
+        result = corpus.load_dir("results")
+        certificate = next(record for _, record in result
+                           if record.get("legacy_id") == "JOINT-COOPERATION-CERTIFICATE")
+        linked = {(link["kind"], link["id"]) for link in shown["links"]}
+        self.assertIn(("results", certificate["id"]), linked)
+        mentions = self.truth_json(root, "show", certificate["id"])["mentioned_by_notes"]
+        self.assertIn(note, {entry["path"] for entry in mentions})
+        context = json.loads(self.truth(root, "--json", "context", certificate["id"], "--related", "0")[0])
+        self.assertIn(note, {entry["path"] for entry in context["note_mentions"]})
+        # The note is not a record: it resolves only as a note path.
+        self.assertIn("unknown record", self.truth(root, "index", "show", "joint-cooperation-744", code=1)[1])
 
     def test_legacy_ids_and_labels_resolve(self):
         statement = next(record for _, record in corpus.load_dir("statements") if record.get("legacy_id"))
