@@ -57,11 +57,11 @@ static STATUS_SENTENCE: LazyLock<Regex> = LazyLock::new(|| {
 const OPERATORS: &[(&str, &[&str])] = &[
     ("↔", &["↔", "⇔", "<->", " iff ", "equivalen"]),
     ("→", &["→", "⇒", "->", "implies"]),
-    ("¬", &["¬", "not "]),
+    ("¬", &["¬"]),
     ("∧", &["∧", "/\\"]),
     ("∨", &["∨", "\\/"]),
-    ("∀", &["∀", "for all", "every"]),
-    ("∃", &["∃", "exists", "there is"]),
+    ("∀", &["∀", "for all"]),
+    ("∃", &["∃", "there exists"]),
 ];
 
 const STOPWORDS: &[&str] = &[
@@ -208,6 +208,27 @@ impl Query {
             text: text.to_owned(),
             items,
         }
+    }
+
+    /// How many of `matched` are content items (words, identifiers,
+    /// symbols) rather than operators, and of how many.
+    pub fn content_coverage(&self, matched: &[bool]) -> (usize, usize) {
+        let content: Vec<bool> = self
+            .items
+            .iter()
+            .zip(matched)
+            .filter(|(item, _)| item.kind != "operator")
+            .map(|(_, hit)| *hit)
+            .collect();
+        coverage(&content)
+    }
+
+    /// Whether `matched` covers at least half of all items and at least
+    /// half of the content items: operators alone are weak evidence.
+    pub fn substantial(&self, matched: &[bool]) -> bool {
+        let (covered, total) = coverage(matched);
+        let (content, content_total) = self.content_coverage(matched);
+        covered > 0 && covered * 2 >= total && content * 2 >= content_total
     }
 
     /// The identifiers of the query.
@@ -925,6 +946,7 @@ mod tests {
         // Without the note's notation, `B(` is not CanBeWithout.
         let hit = query.matched("imply `D(y,x) ↔ ¬B(y,x)`", &BTreeMap::new());
         assert_eq!(coverage(&hit), (3, 6));
+        assert!(!query.substantial(&query.matched("↔ ¬ and not", &BTreeMap::new())));
         assert!(!has_call("BAD(x)", "D"));
         assert_eq!(
             Query::parse("p iff q -> r")

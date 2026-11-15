@@ -16,8 +16,9 @@ use retrieval::{Issues, Query};
 use serde_json::{Value, json};
 use std::collections::{BTreeMap, BTreeSet};
 
-pub const CLASSIFICATIONS: &str = "already-recorded: some unit contains every query item (at least two); \
-     partially-recorded: some unit contains at least half; no-match-found: neither";
+pub const CLASSIFICATIONS: &str = "already-recorded: some unit contains every query item (at least two), \
+     or the text names a record exactly; partially-recorded: some unit contains at least half of the items \
+     and half of the words and identifiers (operators alone are weak); no-match-found: neither";
 
 pub const NOVELTY_BOUNDARY: &str = "advisory retrieval: a hit shows where the query's words, identifiers and \
      operators occur, not that the texts are equivalent; a note or issue is not a certified entailment; \
@@ -26,6 +27,8 @@ pub const NOVELTY_BOUNDARY: &str = "advisory retrieval: a hit shows where the qu
 /// One hit: its evidence kind, reference, coverage and why it matched.
 struct Hit {
     covered: usize,
+    /// At least half of all items and of the content items (not operators).
+    substantial: bool,
     rank: u8,
     key: String,
     value: Value,
@@ -72,6 +75,7 @@ pub fn novelty(
             continue;
         }
         hits.push(Hit {
+            substantial: true,
             covered: usize::MAX,
             rank: 0,
             key: format!("0:{}:{}", link.kind, link.id),
@@ -115,6 +119,7 @@ pub fn novelty(
             let covered = retrieval::coverage(&matched).0;
             structural.push((covered, id.to_owned()));
             hits.push(Hit {
+                substantial: query.substantial(&matched),
                 covered,
                 rank: 1,
                 key: format!("1:{id}"),
@@ -155,6 +160,7 @@ pub fn novelty(
         }
         let id = fields.get("id").and_then(Value::as_str).unwrap_or_default();
         hits.push(Hit {
+            substantial: false,
             covered: used.len().min(total),
             rank: 2,
             key: format!("2:{id}"),
@@ -192,6 +198,7 @@ pub fn novelty(
                 value["via"] = json!("note names a structurally matched statement");
             }
             hits.push(Hit {
+                substantial: query.substantial(&hit.matched),
                 covered: hit.covered(),
                 rank: 3,
                 key: format!("3:{}:{:08}", hit.path, hit.line),
@@ -211,6 +218,7 @@ pub fn novelty(
         value["evidence"] = json!(evidence_kind(&kind));
         value["via"] = json!("record prose");
         hits.push(Hit {
+            substantial: value["substantial"] == true,
             covered,
             rank: 4,
             key: format!("4:{kind}:{id}"),
@@ -251,8 +259,7 @@ pub fn novelty(
                     }
                 }
             }
-            let half = total.div_ceil(2).max(1);
-            if best.0 < half && names.is_empty() {
+            if !query.substantial(&best.3) && names.is_empty() {
                 continue;
             }
             let mut value = retrieval::issue_header(issue);
@@ -275,6 +282,7 @@ pub fn novelty(
                 u64::MAX / 2 - number
             );
             hits.push(Hit {
+                substantial: query.substantial(&best.3),
                 covered: best.0,
                 rank: 5,
                 key,
@@ -299,7 +307,10 @@ pub fn novelty(
     let full = total >= 2 && best == total;
     let classification = if exact || full {
         "already-recorded"
-    } else if total > 0 && best * 2 >= total {
+    } else if hits
+        .iter()
+        .any(|hit| hit.substantial && hit.rank != 0 && hit.rank != 2)
+    {
         "partially-recorded"
     } else {
         "no-match-found"
@@ -320,7 +331,9 @@ pub fn novelty(
         "partially-recorded" => {
             "units contain at least half of the query items: related prior work exists; compare it before claiming novelty".to_owned()
         }
-        _ => "no unit contains half of the query items; this is not evidence of novelty".to_owned(),
+        _ => "no unit contains half of the query items (and half of its words and identifiers); \
+              this is not evidence of novelty"
+            .to_owned(),
     };
     if !full_kinds.is_empty()
         && full_kinds

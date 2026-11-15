@@ -570,7 +570,9 @@ status, judgment or record.
   ¬B(y,x)` matches `DependsForBeing ↔ ¬CanBeWithout`; record prose; and
   snapshot issues/PRs. The classification is `already-recorded` (some unit
   contains every query item, at least two, or the text names a record
-  exactly), `partially-recorded` (at least half) or `no-match-found`, never
+  exactly), `partially-recorded` (at least half of the items and of its
+  words and identifiers; an operator alone is weak evidence) or
+  `no-match-found`, never
   "novel"; each hit says its evidence kind (an uncertified note, a statement
   whose status is the frontier's, workflow history). `--statement ID` checks a
   statement's Lean vocabulary and connectives against everything except that

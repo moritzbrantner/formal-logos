@@ -1000,6 +1000,7 @@ pub fn record_hits(
                 "path": inputs.corpus.get(kind, id).map(|record| record.path.clone()),
                 "coverage": [covered, query.items.len()],
                 "matched": retrieval::matched_items(query, &matched),
+                "substantial": query.substantial(&matched),
                 "formal_state": (kind == "statements").then(|| inputs.formal_state(id)["state"].clone()),
                 "outcome": record.get("outcome"),
                 "date": record.get("date"),
@@ -1039,7 +1040,6 @@ fn question_issues(
     let lookup = notes::Lookup::of_corpus(inputs.corpus);
     let none = BTreeMap::new();
     let total = query.items.len();
-    let half = total.div_ceil(2).max(1);
     let mut out: Vec<(usize, usize, u64, Value)> = Vec::new();
     for issue in &snapshot.issues {
         let number = issue
@@ -1060,13 +1060,19 @@ fn question_issues(
                 json!({"why": "merged change to a matched note (git history)", "notes": paths}),
             );
         }
-        let mut best: (usize, String, String) = (0, String::new(), String::new());
+        let mut best: (usize, String, String, bool) = (0, String::new(), String::new(), false);
         let mut named = BTreeSet::new();
         let mut paths = BTreeSet::new();
         for (place, unit) in retrieval::issue_units(issue) {
-            let covered = retrieval::coverage(&query.matched(&unit, &none)).0;
+            let matched = query.matched(&unit, &none);
+            let covered = retrieval::coverage(&matched).0;
             if covered > best.0 {
-                best = (covered, place.clone(), retrieval::excerpt(&unit, 240));
+                best = (
+                    covered,
+                    place.clone(),
+                    retrieval::excerpt(&unit, 240),
+                    query.substantial(&matched),
+                );
             }
             for path in note_paths {
                 if unit.contains(path.as_str())
@@ -1107,7 +1113,7 @@ fn question_issues(
             reasons
                 .push(json!({"why": "names a statement the matched notes name", "records": named}));
         }
-        if best.0 >= half {
+        if best.3 {
             weight += 1;
             reasons.push(json!({"why": "lexical", "where": best.1, "coverage": [best.0, total], "excerpt": best.2}));
         }
