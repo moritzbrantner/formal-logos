@@ -117,6 +117,19 @@ pub struct AttributionArgs {
     pub max_chars: Option<i64>,
 }
 
+/// The `tree` options: `--down N`, `--up N` (0 allowed), `--budget N` and
+/// `--out-dir DIR` (batch mode: one JSON file per statement operand) and
+/// `--materialize-edge KEY`.
+#[derive(Default)]
+pub struct TreeArgs {
+    pub flags: bool,
+    pub down: Option<usize>,
+    pub up: Option<usize>,
+    pub budget: Option<usize>,
+    pub out_dir: Option<String>,
+    pub materialize_edge: Option<String>,
+}
+
 /// The `index compare` options.
 #[derive(Default)]
 pub struct IndexArgs {
@@ -205,6 +218,7 @@ pub struct Args {
     /// `strength-comparisons` and `strength-report` replay (parity only).
     pub recorded_exporters: Option<String>,
     pub attribution: AttributionArgs,
+    pub tree: TreeArgs,
     pub index: IndexArgs,
     pub brief: BriefArgs,
     /// `--profile-module MODULE` (`bridge-experiments`)
@@ -269,6 +283,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         proof: ProofArgs::default(),
         recorded_exporters: None,
         attribution: AttributionArgs::default(),
+        tree: TreeArgs::default(),
         index: IndexArgs::default(),
         brief: BriefArgs::default(),
         profile_module: None,
@@ -355,6 +370,43 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                 parsed.attribution.flags = true;
                 parsed.attribution.max_chars =
                     Some(integer(args.next().and_then(|value| value.to_str()), arg)?);
+            }
+            "--out-dir" => {
+                parsed.tree.flags = true;
+                parsed.tree.out_dir = Some(
+                    args.next()
+                        .and_then(|value| value.to_str())
+                        .ok_or_else(|| usage(format!("{arg} requires a UTF-8 path")))?
+                        .to_owned(),
+                );
+            }
+            "--materialize-edge" => {
+                parsed.tree.flags = true;
+                parsed.tree.materialize_edge = Some(
+                    args.next()
+                        .and_then(|value| value.to_str())
+                        .ok_or_else(|| usage("--materialize-edge requires an edge key"))?
+                        .to_owned(),
+                );
+            }
+            "--down" | "--up" | "--budget" => {
+                parsed.tree.flags = true;
+                let value = args.next().and_then(|value| value.to_str());
+                let tree = &mut parsed.tree;
+                match arg {
+                    "--budget" => tree.budget = Some(number(value, arg)?),
+                    _ => {
+                        let depth =
+                            value.and_then(|value| value.parse().ok()).ok_or_else(|| {
+                                usage(format!("{arg} requires a non-negative integer"))
+                            })?;
+                        if arg == "--down" {
+                            tree.down = Some(depth);
+                        } else {
+                            tree.up = Some(depth);
+                        }
+                    }
+                }
             }
             "--left" | "--right" => {
                 parsed.index.flags = true;

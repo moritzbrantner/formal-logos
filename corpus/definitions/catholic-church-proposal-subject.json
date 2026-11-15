@@ -9,5 +9,22 @@
     "7748075b-143b-5167-93cd-990a67508f41"
   ],
   "lean_declaration": "TruthCore.Case.Catholicism.Signature.catholicChurch",
-  "note": "The source distinction is Doctrinal Commentary nn. 4–5 and 9. The classification is consulted as evidence of the Church’s proposal status; publication by the CDF is not thereby called a new solemn definition. This does not identify the modern society with the Church founded by Christ or establish divine authority; those remain separate skeleton premises."
+  "note": "The source distinction is Doctrinal Commentary nn. 4–5 and 9. The classification is consulted as evidence of the Church’s proposal status; publication by the CDF is not thereby called a new solemn definition. This does not identify the modern society with the Church founded by Christ or establish divine authority; those remain separate skeleton premises.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Signature.catholicChurch is the case signature's named society: the institutional Church whose binding teaching office is exercised by the Roman Pontiff and the College of Bishops in communion with him (Doctrinal Commentary nn. 4–5, 9). It is a supplied element of the signature's Society type.",
+    "examples": [
+      "The society in communion with the bishop of Rome, whose teaching office acts through the Pope speaking ex cathedra, an ecumenical council, or the ordinary and universal magisterium."
+    ],
+    "exclusions": [
+      "A private or arbitrary assertion by a member or office-holder. An office-holder acting through the recognized teaching office, such as the Pope speaking ex cathedra, is an act of this subject.",
+      "The Church founded by Christ: identity with it is the separate open stage-6 premise STMT-CHRISTS-CHURCH-IS-THE-CATHOLIC-CHURCH.",
+      "Divine authority: being God-founded as teaching authority is the separate open premise stated by CatholicChurchIsGodFoundedTeachingAuthority."
+    ],
+    "open_obligations": [
+      "That the named element denotes the intended society in a model is an interpretation supplied by the model.",
+      "Its historical identity with Christ's Church and its divine teaching authority remain open skeleton premises.",
+      "No formalization candidate: a named individual of a signature has no definition from other vocabulary."
+    ]
+  }
 }

@@ -9,5 +9,24 @@
     "1ae479bc-06f5-5e83-b947-72e9d94e4799"
   ],
   "lean_declaration": "TruthCore.Causality.TermSenseForks.PriorityFrame.PriorInTime",
-  "note": "Primitive boundary: the linked declaration projects an independently supplied binary relation on beings from PriorityFrame Being Respect; it is not a definition by temporal, causal or perfection data. See docs/notes/load-bearing-terms.md, Priority semantic linkage audit, for interpretation, dependency boundaries, examples, exclusions and OPEN structural constraints. No statement meaning or frozen Challenge changes."
+  "note": "Primitive boundary: the linked declaration projects an independently supplied binary relation on beings from PriorityFrame Being Respect; it is not a definition by temporal, causal or perfection data. See docs/notes/load-bearing-terms.md, Priority semantic linkage audit, for interpretation, dependency boundaries, examples, exclusions and OPEN structural constraints. No statement meaning or frozen Challenge changes.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "PriorityFrame.PriorInTime y x says that y is or occurs before x. It is a supplied binary relation on beings; the frame has no clock, time domain or occurrence map from which it is computed.",
+    "examples": [
+      "A seed relative to the mature tree grown from it.",
+      "Within one changing thing, its potency precedes its act in time (ST I q.3 a.1); this is about one subject, so it supplies no edge between two distinct beings by itself."
+    ],
+    "exclusions": [
+      "Simultaneous dependence: a cause present at the same time as its effect is not thereby prior in time.",
+      "Simple priority (PriorSimply) and priority in substance (PriorInSubstance): separate senses in DISAMB-PRIORITY-SIMPLE-OR-IN-TIME; a thing can be first in potency and later in act while its potency still depends on a being in act."
+    ],
+    "open_obligations": [
+      "Irreflexivity and transitivity are not imposed by the frame.",
+      "Selecting occurrences for persisting beings and an ordered time domain are OPEN.",
+      "TemporallyFirstBeingInPotency, which refutes the temporal branch conditionally, is an open analyst premise.",
+      "Coverage and exclusivity of the three priority senses (STMT-PRIOR-SENSES-EXHAUSTIVE, STMT-PRIOR-SENSE-UNIQUE) remain open frontier premises.",
+      "Formalization candidate: with an occurrence map occ : Being → Time into a Mathlib order, define PriorInTime y x := occ y < occ x; this would supply irreflexivity and transitivity by proof, but needs the occurrence data the frame lacks."
+    ]
+  }
 }

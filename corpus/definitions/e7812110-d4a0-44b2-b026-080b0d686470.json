@@ -5,5 +5,21 @@
   "definition": "ExactDuty n p means n.issued p, where Norms is a supplied extensional neighborhood of issued obligation contents. The obligation and authorization applications use separate Norms inputs; identical membership shape does not identify their normative force. issuedMail contains exactly predicates pointwise equivalent to mail. It excludes mail-or-burn because burn is a distinct outcome. No entailment closure is stipulated.",
   "basis": "stipulative",
   "note": "Analyst semantics for #1398. Interpretation and legitimate normative authority remain OPEN. See docs/notes/carneades-deontology-boundary.md, Ross section.",
-  "lean_declaration": "TruthCore.Ethics.RossPermission.ExactDuty"
+  "lean_declaration": "TruthCore.Ethics.RossPermission.ExactDuty",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "RossPermission.ExactDuty n p says that an obligation with exactly the content p has been issued: p belongs to the supplied issued-obligation contents. Its body is n.issued p. Norms n is a supplied extensional family of outcome predicates (n.issued) in TruthCore.Ethics.RossPermission (#1398); the obligation and authorization applications use separate Norms inputs.",
+    "examples": [
+      "In the Ross test model, issuedMail contains exactly the predicates pointwise equivalent to mail, so mail is an exact duty."
+    ],
+    "exclusions": [
+      "Mail-or-burn: a logically weaker content is not issued, because burn is a distinct outcome and no entailment closure is stipulated.",
+      "Authorization (Strong): the same membership shape does not identify their normative force."
+    ],
+    "open_obligations": [
+      "The interpretation and the legitimacy of the normative authority remain OPEN.",
+      "The extensional account does not distinguish logically equivalent presentations; whether duties are hyperintensional is open.",
+      "No formalization candidate: issued content is a supplied input."
+    ]
+  }
 }

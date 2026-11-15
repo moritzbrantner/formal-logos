@@ -33,6 +33,8 @@ public import TruthCore.Logic.ForeknowledgeDiscrimination
 public import TruthCore.Logic.FormSelection
 public import TruthCore.Logic.GlobalThesisBoundaries
 public import TruthCore.Logic.IntuitionisticKnowability
+public import TruthCore.Logic.Inversion
+public import TruthCore.Logic.Inversions.DivineVeracity1410AssertionTruthAContra2
 public import TruthCore.Logic.JointRouteFailure
 public import TruthCore.Logic.JustificationIntrospection
 public import TruthCore.Logic.KnowabilityCompatibility

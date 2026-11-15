@@ -15,6 +15,7 @@ target/debug/truth related STMT-GOD-EXISTS
 target/debug/truth index search 'common nature'
 target/debug/truth dossier STMT-GOD-EXISTS
 target/debug/truth context ARGUMENT-ID --json
+target/debug/truth tree STMT-GOD-EXISTS --down 2 --up 2
 target/debug/truth orphans
 target/debug/truth orphans --senses --json
 target/debug/truth issues --from issues.json --for STMT-GOD-EXISTS
@@ -95,6 +96,26 @@ or changed prose field that is not fully traced; one `warning: lexicon: …`
 summary line, kept out of `warnings` and ignored by the parity test, for the allowlisted
 backlog), and CI runs `lexicon ratchet` so `corpus/lexicon-allowlist.json` only shrinks.
 The library is `truth/src/lexicon/`.
+
+## `definitions`
+
+`truth definitions (status [--limit N] | refresh [--write] [--lean-json FILE]
+[--print-lean-input] | allowlist [--write] | ratchet --base REV)` computes the
+formal status of every definition record (#1652 L3, docs/corpus-model.md,
+"Formal status of definitions"). It has no Python counterpart. `refresh` runs
+`scripts/DefinitionStatus.lean` through `bind_check::run_exporter` (or reads a
+saved output with `--lean-json`) and writes `corpus/definition-status.json`
+with `--write`. Without `--write` it compares and exits 1 when a fresh
+committed entry disagrees with Lean, or, in strict mode, when an entry is stale
+or missing. CI runs it where bind-check builds. `status` reads the cache
+without Lean and prints counts by status and Lean kind, the definitions still
+without `formal_gap` prose, and the findings. `truth check` adds the findings
+and one `warning: definitions: …` summary line (kept out of `warnings`;
+the parity test ignores it). It reports nothing without the cache file.
+`allowlist` and `ratchet` keep `corpus/definition-prose-allowlist.json`
+shrink-only, as for the lexicon. The library is
+`truth/src/definition_status.rs`; its unit tests replay a recorded exporter
+output (`truth/src/testdata/definition-status-exporter.json`).
 
 ## `check`
 
@@ -432,7 +453,34 @@ nothing here closes a statement, changes a route cost or certifies anything.
   ID, a result ID or a statement concluded by exactly one argument. The frozen
   Lean statement and companion theorems are read from each result's Challenge
   module, imports from the Solution modules and permitted axioms from the
-  Comparator config, as Python does.
+  Comparator config, as Python does. Rust adds the elaborated types below.
+
+**Elaborated types (#960, Rust only).** After running Lean, `truth
+bind-check` (full or scoped, but not from a saved `--lean-json`) records
+each described result theorem in `.cache/bind-types.json`
+(`truth::bind_types`; `$TRUTH_BIND_TYPES_CACHE` overrides the path): the
+exporter's binder names, head constants and types as Lean pretty-printed them
+with full names, the result type and theory-bundle conjuncts, and an input
+digest over the Lean toolchain, Lake manifest and configuration,
+`scripts/BindTypes.lean`, the Solution module, every repository module in its
+source import closure and their `.olean.hash` files. A scoped run merges into
+the existing cache. `context` only reads it and never runs Lean: for each
+result whose entry still matches the result record and whose digest it
+recomputes unchanged, the text pack adds an `elaborated` block (parameters,
+each hypothesis or bundle conjunct `h.N` with its type and bound statement or
+`unbound`, the conclusion, unbound premises; hypothesis lines are cut at
+about 1 KB per result, and `--json` carries the full signature and every
+hypothesis under `lean[].elaborated`). The binding is recomputed from the
+cached types and the current records with `bind-check`'s rules, without
+expression contracts or sense checks, so it is advisory and never
+verification evidence. When the cache is absent, unreadable or stale for a
+result, the text pack adds exactly one line saying so under the Lean heading
+and otherwise keeps the source-text view; `--json` always carries the
+`bind_types` summary. Actual axioms are not shown: no Comparator or NanoDa
+output is kept locally (CI logs only), so only the permitted axioms of the
+Comparator config appear. Python's `context` has none of this; the parity
+tests point Rust at an absent cache and drop the notice line and the
+`bind_types` summary before comparing.
 
 `dossier` and `context` consume the frontier report. Without
 `--frontier-json` they compute it in-process with the Rust `frontier` (the
@@ -458,6 +506,113 @@ coincide with their result IDs, and 3 uniquely concluded statements) with
 several `--limit` values, and the error cases, from a saved Python report;
 and, for a subset plus `dossier --all`, that the in-process frontier gives the
 same output.
+
+## `tree`
+
+`truth tree STATEMENT [--down N] [--up N] [--budget N] [--materialize-edge KEY]`
+draws the argument graph re-rooted at any statement, with the definitions of
+every statement in view (#1674). It has no Python counterpart. All statuses come from one
+frontier report computed with STATEMENT as the frontier root
+(`frontier::current_frontier`); the command creates no second closure
+semantics and closes nothing.
+
+- **Down (support, `--down`, default 3 argument levels):** the arguments
+  concluding the statement are OR alternatives (verified non-transcription
+  first, then transcriptions, then arguments without a result; each by label),
+  each with its inference steps and its premises as an AND bundle, recursively.
+- **Up (dependents, `--up`, default 3):** the arguments using the statement as a
+  premise, their other premises (`co_premise`, not expanded) and their
+  conclusions, recursively toward the case root (`is_case_root`).
+- **Strength orders:** every `strengthens` relation with an end in view; a
+  missing end joins as an unexpanded `strength_neighbor` while the budget allows.
+- **Terms:** each statement's `definition_ids` and `disambiguation_ids` and the
+  sense labels its definitions carry; each definition's `lean_declaration` and
+  `formal_status` (`null` until the lexicon's formal-status data, #1652 L3,
+  exists).
+
+The walk is breadth-first, so each node sits at its shallowest depth; a shared
+node appears once (`(shown above)` in the text), and an edge back to a node on
+the current path is marked `cycle` and not followed. `--budget` (default 400)
+caps statement plus argument nodes; an argument is added with all its new
+premises or not at all. The two sides share the budget so that neither can
+crowd out the other: when the statement has dependents (`--up` above 0 and an
+argument using it), the support walk first stops at `budget - (budget - 1) / 2`
+nodes, the dependent walk may then use everything left, and the support walk
+resumes, in the same breadth-first order, with whatever the dependents did not
+use. A side that needs less leaves its share to the other. A co-premise that
+the upward walk later reaches as a conclusion becomes a `dependent`, and one
+the resumed support walk reaches becomes a `support` statement. The resumed
+support walk expands every premise that has no `down_depth` yet, whichever
+walk admitted it: a `dependent` it reaches keeps its role (the first walk to
+admit a statement names it) and carries both `up_depth` and `down_depth`. Every cut leaves
+a `truncated` entry (`side`, `reason` `depth` or `budget`, `omitted_arguments`)
+and a `… truncated` text line.
+
+JSON (`schema_version` 2, with `input_identity`): `root`, `case_root`,
+`options`, `statements` (status, depth, closed reason, established,
+`reaches_tree_root`, role, depths, definitions, senses), `arguments` (premises,
+steps, results with theorem, Solution module and transcription kind, the root
+route entry), `edges`, `definitions`, `disambiguations`, `truncated`,
+`node_count`. Each edge has a `kind` (`supports`: argument → conclusion,
+`uses`: argument → premise, `strengthens`: strong → weak statement, and the
+derived kinds below), `extra_premises`, `verified`, `derivation`, `cycle` and
+`inversion` (`null` for record edges).
+
+**Inversions (#1674 phase 2).** Re-rooting turns arguments around, and only
+some inversions are valid; the generic lemmas are in
+`TruthCore/Logic/Inversion.lean` (zero axioms, constructive). The view derives
+two edge kinds and creates no records:
+
+- `contrapositive`, for every premise Pi of every verified non-transcription
+  argument P1, …, Pn ⊢ C in view: ¬C with the other premises gives ¬Pi
+  (`from` C, `to` Pi, `inversion.negated` true, the other premises in
+  `extra_premises`). It instantiates `TruthCore.Logic.Inversion.contrapositive`
+  at the argument's result theorem (`derivation`, `inversion.source_theorem`).
+  It is `verified` only when its materialized result exists.
+- `inverse_conditional`, at the tree root A, for each argument in view that
+  uses A and concludes a C with at least one other recorded argument: C, with
+  the premise bundle of every other alternative failing, gives A
+  (`inverse_premise_of_exhaustive_at`), but only under the exhaustiveness
+  premise that C holds only through its recorded arguments. That premise is
+  listed in `inversion.requires` (role `exhaustiveness`, the alternatives in
+  `argument_ids`); no corpus record type states such coverage, so it is
+  reported as an unregistered open premise, and the edge is never verified.
+
+The unconditioned inverse C ⊢ A is invalid (A = B = false, C = true;
+`unconditioned_inverse_invalid`) and is never emitted. Each derived edge has an
+`inversion.key` (`contrapositive:<argument>:<premise>`), printed raw in the
+text's Inversions section. That section lists the contrapositives toward the
+root and every inverse edge, and counts the rest.
+
+`--materialize-edge KEY` turns one `contrapositive` edge of the view into
+source files, only on that explicit request (`inversion.rs`): a batch spec
+`specs/inversion-<name>.toml`, a vocabulary module
+`TruthCore/Logic/Inversions/<Name>.lean` defining each negation the corpus
+does not already state (an existing statement whose declaration is defined as
+that negation, such as `NoGratuitousSuffering`, is reused), and a Solution
+`TruthCore/Results/Logic/Inversions/<Name>/Solution.lean` whose theorem
+`contrapositive` instantiates the lemma at the original theorem. The argument
+is declared an `instantiation` transcription (invariant 16): it closes its
+conclusion only when every premise, including the negated conclusion, is
+closed. It prints the remaining ordinary steps (`argument_batch.py challenge`
+and `records --write --fix`, `root-imports.sh --write`, `lake build`,
+`bind-check`, `verify-result.sh`). Existing files with other content are never
+overwritten. A source whose header premises are not `(h : P …)` groups, that
+has `sense_bridges`, or that is in the legacy sense allowlist is refused, since
+the generated argument could not bind or pass `truth check`. An
+`inverse_conditional` edge is not materialized until its exhaustiveness
+premise is registered.
+
+**Batch mode (`--out-dir DIR STATEMENT...`)** writes, for each statement,
+`DIR/<uuid>.json` with exactly the JSON of the single command (same options),
+and prints a summary (`written`, `out_dir`, `options`). Closure, establishment,
+statuses, depths and transcription kinds do not depend on the frontier root,
+so one shared report supplies them (`frontier::ViewReports`); only
+`reaching_root_statements` and the root's routes are recomputed per statement,
+by the same walk and route computation the full report uses. On the real corpus
+this takes about 35 s for all 4,587 statements against about 1.2 s per single
+call. The corpus explorer uses it to prebuild its `/tree` pages
+(`docs/github-pages.md`).
 
 ## `index`
 

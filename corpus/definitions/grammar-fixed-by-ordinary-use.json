@@ -6,5 +6,21 @@
   "definition": "`C.UseFixesGrammar`: what counts as a correct move of the practice is settled by its ordinary practitioners' use (what they are taught, profess and do).",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Alternatives.FideismGrammarCases.CasedPractice.UseFixesGrammar",
-  "note": "The second answer (owner decision 2026-11-06). Constrained only through STMT-USE-GRAMMAR-MAKES-ORDINARY-USE-OWN-STANDARD."
+  "note": "The second answer (owner decision 2026-11-06). Constrained only through STMT-USE-GRAMMAR-MAKES-ORDINARY-USE-OWN-STANDARD.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "CasedPractice.UseFixesGrammar is a proposition about one practice: what counts as a correct move of the practice is settled by its ordinary practitioners' use (what they are taught, profess and do). It is the second of the three grammar-fixing cases (owner decision 2026-11-06, #1010), supplied by each model.",
+    "examples": [
+      "A practice whose norms of correct confession are whatever its members are catechized in and profess."
+    ],
+    "exclusions": [
+      "Grammar fixed by recognized authorities (AuthoritiesFixGrammar).",
+      "The case where neither fixes the grammar."
+    ],
+    "open_obligations": [
+      "Constrained only through STMT-USE-GRAMMAR-MAKES-ORDINARY-USE-OWN-STANDARD, which remains open.",
+      "Coverage of the three cells is the open statement STMT-FIDEISM-GRAMMAR-CASES-COVER.",
+      "No formalization candidate from existing vocabulary."
+    ]
+  }
 }

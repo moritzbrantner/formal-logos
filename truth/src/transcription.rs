@@ -133,7 +133,7 @@ fn binder_groups(header: &str) -> (Vec<(char, Vec<String>, String)>, String) {
 }
 
 /// `LEAN_IDENT_RE.match` at the start: `[A-Za-z_][\w.']*`.
-fn ident_prefix(text: &str) -> Option<&str> {
+pub(crate) fn ident_prefix(text: &str) -> Option<&str> {
     let mut chars = text.char_indices();
     let (_, first) = chars.next()?;
     if !ident_start(first) {
@@ -524,6 +524,12 @@ impl Definitions {
             }
         }
         Self(definitions)
+    }
+
+    /// The explicit parameter names and normalized body of the definition
+    /// whose last name component is `tail`.
+    pub fn get(&self, tail: &str) -> Option<&(Vec<String>, String)> {
+        self.0.get(tail)
     }
 
     #[cfg(test)]

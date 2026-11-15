@@ -5,5 +5,24 @@
   "definition": "`EfficientlyCausesEsse y x`: y is an efficient (agent) cause of x's esse, that is, x's being proceeds from y as from an agent, as the heat in water proceeds from fire and the light in air from the sun (the examples of ST I q.3 a.4 and De ente c.3). Tenseless: an originating and a sustaining agent both count; no present or simultaneous causing is built in. A primitive relation of `EfficiencyProfile`, the q.3 a.4 profile extended by this field; it has no Lean body. Exclusions: a formal or constitutive principle of x (a form as that by which x is, De ente's nature 'from whose principles' something is caused, NATURE_SOURCE_1), an exemplar, an end, a mere structure x belongs to, and a necessary or enabling condition are not efficient causes merely by causing or explaining x's esse. Distinct from: the mode-unspecified cause of being `CausesIn y x esse` (DEF-CAUSE-OF-PERFECTION), which it does not imply or follow from by definition; the secunda via's here-and-now `EfficientlyCausesIn` (DEF-EFFICIENT-CAUSING), whose relation to this tenseless one is an open bridge not used; a cause of becoming (DEF-CAUSE-OF-BECOMING); and the time-indexed originating and sustaining causes of being (CAUSING_AN_EFFECT_4 and _5).",
   "basis": "stipulative",
   "note": "Stipulated for #1633 so that the efficient reading of 'causatum ab alio' can be stated in a type that can fail. Primitive boundary: no structural law is assumed (not irreflexive, transitive, asymmetric or well-founded; no-self-causation is a separate premise), and the applicability of agent causation, abstracted from ordinary productive cases such as fire heating water, to causes of esse is an explicit OPEN bridge (`DistinctActualEsseCauseIsEfficient`, `CausingAnothersEsseIsEfficient`), not part of this definition. A source would be Aquinas's account of the efficient cause (In Phys. II lect. 5; De principiis naturae c.3), not pinned. Note docs/notes/esse-cause-efficiency-1633.md.",
-  "lean_declaration": "TruthCore.Causality.EsseCauseEfficiency.EfficiencyProfile.EfficientlyCausesEsse"
+  "lean_declaration": "TruthCore.Causality.EsseCauseEfficiency.EfficiencyProfile.EfficientlyCausesEsse",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "EfficiencyProfile.EfficientlyCausesEsse y x says that y is an agent cause of x's esse: x's being proceeds from y as from an agent, as the heat in water proceeds from fire (ST I q.3 a.4, De ente c.3). It is a supplied, tenseless binary relation on beings: an originating and a sustaining agent both count.",
+    "examples": [
+      "Fire relative to the heat in water, the stock example from which the relation is abstracted; applying it to the esse of a thing is an open bridge.",
+      "The sun relative to the light in the air."
+    ],
+    "exclusions": [
+      "A formal or constitutive principle of x, such as the form by which x is (NATURE_SOURCE_1).",
+      "An exemplar, an end, a structure x belongs to, or a necessary or enabling condition.",
+      "The mode-unspecified cause of being CausesIn y x esse (DEF-CAUSE-OF-PERFECTION), the secunda via's present EfficientlyCausesIn (DEF-EFFICIENT-CAUSING) and a cause of becoming (DEF-CAUSE-OF-BECOMING): none implies or follows from it by definition."
+    ],
+    "open_obligations": [
+      "No irreflexivity, transitivity, asymmetry or well-foundedness is assumed; no-self-causation is a separate premise.",
+      "Applying agent causation to causes of esse is an explicit OPEN bridge (DistinctActualEsseCauseIsEfficient, CausingAnothersEsseIsEfficient).",
+      "Its relation to the here-and-now EfficientlyCausesIn is an open bridge not used.",
+      "No formalization candidate from existing vocabulary."
+    ]
+  }
 }

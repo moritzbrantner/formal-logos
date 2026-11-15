@@ -1,0 +1,236 @@
+.page {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.summary,
+.notice {
+  border: 1px solid var(--line);
+  background: var(--callout);
+  padding: 1rem 1.25rem;
+}
+
+.command {
+  margin-top: 0.75rem;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  padding: 0.6rem 0.8rem;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 0.8rem;
+}
+
+.body {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 1100px) {
+  .body {
+    grid-template-columns: minmax(0, 1fr) 22rem;
+  }
+}
+
+.canvasScroll {
+  overflow: auto;
+  max-height: 80vh;
+  border: 1px solid var(--line);
+}
+
+.canvas {
+  position: relative;
+  margin: 0 auto;
+}
+
+.edges {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.edge {
+  fill: none;
+  stroke: var(--line-strong);
+  stroke-width: 1.2;
+}
+
+.edge_supports {
+  stroke: var(--ink);
+  stroke-width: 1.6;
+}
+
+.edge_uses {
+  stroke: var(--line-strong);
+}
+
+.edge_strengthens {
+  stroke: var(--status-alternative);
+  stroke-dasharray: 6 4;
+  stroke-width: 1.6;
+}
+
+.edge_cycle {
+  stroke: var(--status-objection);
+  stroke-dasharray: 3 3;
+  stroke-width: 1.6;
+}
+
+.arrow_supports { fill: var(--ink); }
+.arrow_uses { fill: var(--line-strong); }
+.arrow_strengthens { fill: var(--status-alternative); }
+.arrow_cycle { fill: var(--status-objection); }
+
+.statement,
+.argument {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.25rem;
+  overflow: hidden;
+  background: var(--paper);
+  padding: 0.35rem 0.5rem;
+  font-size: 0.72rem;
+  line-height: 1.25;
+}
+
+.statement {
+  border: 1px solid var(--line-strong);
+  border-left-width: 5px;
+}
+
+.rootNode {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.frame_established { border-left-color: var(--status-self-evident); }
+.frame_closed { border-left-color: var(--status-proved); }
+.frame_open { border-left-color: var(--status-transcription); }
+.frame_bare { border-left-color: var(--status-open); }
+
+.statementLink {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.statementLink:hover,
+.statementLink:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.statementLabel,
+.argumentLabel {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.argumentLabel {
+  -webkit-line-clamp: 2;
+  color: var(--muted);
+}
+
+.argument {
+  border: 1px dashed var(--line-strong);
+  border-radius: 0.6rem;
+}
+
+.argument_verified { border-style: solid; }
+.argument_transcription { border-color: var(--status-transcription); }
+.argument_unverified { opacity: 0.85; }
+
+.nodeMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.badge,
+.status,
+.sense {
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0 0.4rem;
+  font-size: 0.65rem;
+  white-space: nowrap;
+}
+
+.sense {
+  margin: 0 0.25rem 0.25rem 0;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  font-family: var(--font-mono, ui-monospace, monospace);
+}
+
+.status { color: var(--paper); border-color: transparent; }
+.status_established { background: var(--status-self-evident); }
+.status_closed { background: var(--status-proved); }
+.status_open { background: var(--status-transcription); }
+.status_bare { background: var(--status-open); }
+
+.truncation {
+  border-color: var(--status-open);
+  color: var(--status-open);
+}
+
+.cycleBadge {
+  border-color: var(--status-objection);
+  color: var(--status-objection);
+}
+
+.terms {
+  min-width: 0;
+  overflow-x: hidden;
+  max-height: 80vh;
+  overflow: auto;
+  border: 1px solid var(--line);
+  padding: 1rem;
+}
+
+.term {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.6rem;
+  overflow-wrap: anywhere;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dot {
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 999px;
+}
+
+.lineSupports,
+.lineUses,
+.lineStrengthens,
+.lineCycle {
+  display: inline-block;
+  width: 1.6rem;
+  border-top: 2px solid var(--ink);
+}
+
+.lineUses { border-top-color: var(--line-strong); }
+.lineStrengthens { border-top: 2px dashed var(--status-alternative); }
+.lineCycle { border-top: 2px dotted var(--status-objection); }

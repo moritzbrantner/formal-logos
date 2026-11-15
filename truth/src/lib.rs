@@ -1,6 +1,7 @@
 //! Read-only structural view of the canonical corpus.
 pub mod attribution;
 pub mod bind_check;
+pub mod bind_types;
 pub mod bridge_experiments;
 pub mod bridges;
 pub mod brief;
@@ -9,11 +10,13 @@ pub mod configuration_explorer;
 pub mod configuration_live;
 pub mod configurations;
 pub mod context;
+pub mod definition_status;
 pub mod dossier;
 pub mod finite_models;
 pub mod frontier;
 pub mod identity;
 pub mod index;
+pub mod inversion;
 pub mod issues;
 mod kernels;
 pub mod lean_reuse;
@@ -32,6 +35,7 @@ pub mod subprocess;
 pub mod territory;
 pub mod thickness;
 mod transcription;
+pub mod tree;
 pub mod unused_premises;
 
 use serde_json::{Map, Value};

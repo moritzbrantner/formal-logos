@@ -1,0 +1,13 @@
+{
+  "id": "e71b0f0c-d4b2-474b-8bb1-df807bf1bfae",
+  "label": "Contraposition: not veracity GodAssentAccurate, from not veracity GodAssertsOnlyTruth (inference)",
+  "input_statement_ids": [
+    "8e136583-7d7a-420a-b407-b84b7e6ff063",
+    "1496f7ec-2c22-4b26-aef2-39c77ca6ea49"
+  ],
+  "output_statement_id": "fa13d33c-0b71-453e-8f4d-b9946ccb95cf",
+  "rule": "contraposition (modus tollens) of a verified result",
+  "meaning": "Contraposition of the verified argument d1fb84b0-9ed8-4383-8543-617604d7f4ce at its premise 7dd8a624-b04d-4ea0-9ecf-2d9e5cab95ad: the negation of its conclusion 5a035a1e-e668-4327-b989-2f0aff4aece2, together with its other premises, gives the negation of that premise. The proof instantiates TruthCore.Logic.Inversion.contrapositive at the result theorem TruthCore.Results.Causality.DivineVeracity1410.assertionTruthA.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

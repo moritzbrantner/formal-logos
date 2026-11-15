@@ -186,6 +186,12 @@ struct Closure<'a> {
     refuted_via_strength: HashMap<&'a str, usize>,
 }
 
+/// The root-independent open-premise leaves behind `root_routes`.
+struct RouteLeaves<'a> {
+    leaves: HashMap<&'a str, Option<BTreeSet<&'a str>>>,
+    results_by_argument: HashMap<&'a str, Vec<&'a str>>,
+}
+
 struct Route<'a> {
     argument_id: &'a str,
     cost: usize,
@@ -1021,6 +1027,13 @@ impl<'a> Frontier<'a> {
 
     /// Python `root_routes`: per-route open-premise leaves (#391).
     fn root_routes(&self, closure: &Closure<'a>) -> (Option<&'a str>, Vec<Route<'a>>) {
+        let leaves = self.route_leaves(closure);
+        self.routes_to(self.root, closure, &leaves)
+    }
+
+    /// The open-premise leaves of every statement: the root-independent half
+    /// of `root_routes`, shared by re-rooted views (#1674).
+    fn route_leaves(&self, closure: &Closure<'a>) -> RouteLeaves<'a> {
         // Route expansion follows registrations like any verified derivation;
         // `closure` still decides what is closed and established.
         let mut results_by_argument: HashMap<&str, Vec<&str>> = HashMap::new();
@@ -1158,14 +1171,31 @@ impl<'a> Frontier<'a> {
             }
             propagate(&mut leaves);
         }
+        RouteLeaves {
+            leaves,
+            results_by_argument,
+        }
+    }
 
-        let designated = self.routes.get(self.root);
+    /// The routes concluding `root` from precomputed leaves: the root-relative
+    /// half of `root_routes`.
+    fn routes_to(
+        &self,
+        root: &'a str,
+        closure: &Closure<'a>,
+        leaves: &RouteLeaves<'a>,
+    ) -> (Option<&'a str>, Vec<Route<'a>>) {
+        let RouteLeaves {
+            leaves,
+            results_by_argument,
+        } = leaves;
+        let designated = self.routes.get(root);
         let mut argument_ids: Vec<&str> = self.argument_by_id.keys().copied().collect();
         argument_ids.sort_by_key(|argument_id| self.argument_order(argument_id));
         let mut entries = Vec::new();
         for argument_id in argument_ids {
             let argument = self.argument_by_id[argument_id];
-            if text(argument, "conclusion_statement_id") != self.root {
+            if text(argument, "conclusion_statement_id") != root {
                 continue;
             }
             let premises: BTreeSet<&str> = Self::premises(argument).into_iter().collect();
@@ -1314,6 +1344,80 @@ impl<'a> Frontier<'a> {
         }
     }
 
+    /// The JSON entries of `routes` (the report's `routes.routes`).
+    fn route_entries(&self, routes: &[Route<'a>]) -> Vec<Value> {
+        routes
+            .iter()
+            .map(|route| {
+                let unestablished: HashSet<&str> =
+                    route.proved_unestablished.iter().copied().collect();
+                let mut depths = Map::new();
+                let mut counts: BTreeMap<&str, usize> = DEPTHS
+                    .iter()
+                    .chain([&PROVED_UNESTABLISHED])
+                    .map(|depth| (*depth, 0))
+                    .collect();
+                for statement in &route.open {
+                    let depth = if unestablished.contains(statement) {
+                        PROVED_UNESTABLISHED
+                    } else {
+                        self.source_depth(statement)
+                    };
+                    depths.insert((*statement).to_owned(), json!(depth));
+                    *counts.entry(depth).or_default() += 1;
+                }
+                json!({
+                    "argument_id": route.argument_id,
+                    "cost": route.cost,
+                    "premise_count": route.premise_count,
+                    "verified": route.verified,
+                    "transcription": route.transcription,
+                    "designated": route.designated,
+                    "cheapest": route.cheapest,
+                    "open_premise_statement_ids": route.open,
+                    "proved_unestablished_statement_ids": route.proved_unestablished,
+                    "open_premise_depths": depths,
+                    "depth_counts": counts,
+                })
+            })
+            .collect()
+    }
+
+    /// The statements reaching `root` through the route-aware walk (the
+    /// report's `reaching_root_statements`).
+    fn reaching(&self, root: &'a str) -> BTreeSet<&'a str> {
+        let mut reaching_root: BTreeSet<&'a str> = BTreeSet::new();
+        if self.statement_by_id.contains_key(root) {
+            let mut concluding: HashMap<&str, Vec<&str>> = HashMap::new();
+            for argument in &self.records.arguments {
+                concluding
+                    .entry(text(argument, "conclusion_statement_id"))
+                    .or_default()
+                    .push(text(argument, "id"));
+            }
+            reaching_root.insert(root);
+            let mut pending = vec![root];
+            while let Some(conclusion) = pending.pop() {
+                for argument_id in concluding.get(conclusion).into_iter().flatten() {
+                    if self
+                        .routes
+                        .get(conclusion)
+                        .is_some_and(|designated| !designated.contains(argument_id))
+                        && !self.sound_arguments.contains(*argument_id)
+                    {
+                        continue;
+                    }
+                    for premise in Self::premises(self.argument_by_id[argument_id]) {
+                        if reaching_root.insert(premise) {
+                            pending.push(premise);
+                        }
+                    }
+                }
+            }
+        }
+        reaching_root
+    }
+
     /// Python `frontier_report`; `next_steps` adds the next-work projection.
     pub fn report(&self, next_steps: bool) -> Value {
         let closure = self.closure(None);
@@ -1388,41 +1492,7 @@ impl<'a> Frontier<'a> {
         }
 
         let (cheapest, routes) = self.root_routes(&closure);
-        let route_entries: Vec<Value> = routes
-            .iter()
-            .map(|route| {
-                let unestablished: HashSet<&str> =
-                    route.proved_unestablished.iter().copied().collect();
-                let mut depths = Map::new();
-                let mut counts: BTreeMap<&str, usize> = DEPTHS
-                    .iter()
-                    .chain([&PROVED_UNESTABLISHED])
-                    .map(|depth| (*depth, 0))
-                    .collect();
-                for statement in &route.open {
-                    let depth = if unestablished.contains(statement) {
-                        PROVED_UNESTABLISHED
-                    } else {
-                        self.source_depth(statement)
-                    };
-                    depths.insert((*statement).to_owned(), json!(depth));
-                    *counts.entry(depth).or_default() += 1;
-                }
-                json!({
-                    "argument_id": route.argument_id,
-                    "cost": route.cost,
-                    "premise_count": route.premise_count,
-                    "verified": route.verified,
-                    "transcription": route.transcription,
-                    "designated": route.designated,
-                    "cheapest": route.cheapest,
-                    "open_premise_statement_ids": route.open,
-                    "proved_unestablished_statement_ids": route.proved_unestablished,
-                    "open_premise_depths": depths,
-                    "depth_counts": counts,
-                })
-            })
-            .collect();
+        let route_entries = self.route_entries(&routes);
         let floor_bases: Vec<Value> = floor_report
             .iter()
             .filter(|entry| entry["met"] == true && entry["reaches_root"] == true)
@@ -1508,35 +1578,7 @@ impl<'a> Frontier<'a> {
         });
         let items: Vec<Value> = items.into_iter().map(|item| item.0).collect();
 
-        let mut reaching_root: BTreeSet<&str> = BTreeSet::new();
-        if self.statement_by_id.contains_key(self.root) {
-            let mut concluding: HashMap<&str, Vec<&str>> = HashMap::new();
-            for argument in &self.records.arguments {
-                concluding
-                    .entry(text(argument, "conclusion_statement_id"))
-                    .or_default()
-                    .push(text(argument, "id"));
-            }
-            reaching_root.insert(self.root);
-            let mut pending = vec![self.root];
-            while let Some(conclusion) = pending.pop() {
-                for argument_id in concluding.get(conclusion).into_iter().flatten() {
-                    if self
-                        .routes
-                        .get(conclusion)
-                        .is_some_and(|designated| !designated.contains(argument_id))
-                        && !self.sound_arguments.contains(*argument_id)
-                    {
-                        continue;
-                    }
-                    for premise in Self::premises(self.argument_by_id[argument_id]) {
-                        if reaching_root.insert(premise) {
-                            pending.push(premise);
-                        }
-                    }
-                }
-            }
-        }
+        let reaching_root = self.reaching(self.root);
         // Distinct conditional obligation sets, retaining every witness.
         let mut bundles: SupportBundles<'_> = BTreeMap::new();
         for result in &self.records.results {
@@ -3162,6 +3204,78 @@ pub fn current_frontier(
         restrict_to_root(&mut report);
     }
     report
+}
+
+/// The report fields a re-rooted view reads (`truth tree`, #1674) that do
+/// not depend on the frontier root: closure, establishment, statuses, depths
+/// and transcription kinds are computed once, over the whole corpus.
+const ROOT_INDEPENDENT_VIEW_FIELDS: &[&str] = &[
+    "closed_statements",
+    "established_statements",
+    "refuted_statements",
+    "statement_depths",
+    "statement_statuses",
+    "transcription_results",
+];
+
+/// Frontier reports for many roots sharing one closure (#1674 batch tree).
+///
+/// [`ViewReports::report`] returns, for one root, exactly the fields of
+/// `Frontier::new(root, ..).report(false)` that a re-rooted view reads:
+/// [`ROOT_INDEPENDENT_VIEW_FIELDS`] from one shared report, and `root`,
+/// `root_known`, `reaching_root_statements` and `routes` (`root`,
+/// `cheapest_argument_id`, `routes`; no `floor_bases`) for that root, from the
+/// same `reaching` walk and `routes_to` computation the full report uses. It is
+/// not a full frontier report and closes nothing.
+pub struct ViewReports<'a> {
+    frontier: Frontier<'a>,
+    closure: Closure<'a>,
+    leaves: RouteLeaves<'a>,
+    base: Map<String, Value>,
+}
+
+impl<'a> ViewReports<'a> {
+    pub fn new(records: &'a Records<'a>, flags: &'a [Flag], any_root: &'a str) -> Self {
+        let frontier = Frontier::new(any_root, records, flags);
+        let full = frontier.report(false);
+        let base = ROOT_INDEPENDENT_VIEW_FIELDS
+            .iter()
+            .map(|field| ((*field).to_owned(), full[*field].clone()))
+            .collect();
+        let closure = frontier.closure(None);
+        let leaves = frontier.route_leaves(&closure);
+        Self {
+            frontier,
+            closure,
+            leaves,
+            base,
+        }
+    }
+
+    /// The view fields of the frontier report with `root` as frontier root.
+    pub fn report(&self, root: &'a str) -> Value {
+        let frontier = &self.frontier;
+        let (cheapest, routes) = frontier.routes_to(root, &self.closure, &self.leaves);
+        let mut report = self.base.clone();
+        report.insert("root".into(), json!(root));
+        report.insert(
+            "root_known".into(),
+            json!(frontier.statement_by_id.contains_key(root)),
+        );
+        report.insert(
+            "reaching_root_statements".into(),
+            json!(frontier.reaching(root)),
+        );
+        report.insert(
+            "routes".into(),
+            json!({
+                "root": root,
+                "cheapest_argument_id": cheapest,
+                "routes": frontier.route_entries(&routes),
+            }),
+        );
+        Value::Object(report)
+    }
 }
 
 fn git(checkout: &Path, args: &[&str]) -> Result<Vec<u8>, String> {

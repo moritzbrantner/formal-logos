@@ -2,12 +2,13 @@
 import contextlib
 import io
 import json
+import os
 import subprocess
 import tempfile
 from pathlib import Path
 
 import corpus
-from truth_parity.common import NOTE_BLOCK, humanize, without_note_mentions, ParityCase
+from truth_parity.common import NOTE_BLOCK, humanize, without_note_mentions, NO_BIND_TYPES, ParityCase, without_bind_types
 
 
 def spread(items, count):
@@ -46,13 +47,15 @@ class TruthResearchParity(ParityCase):
         cls.temporary.cleanup()
 
     def truth(self, *args, code=0):
-        """Rust's output without its note-mention block (#952): Python has no
-        note index, so `related`, `dossier` and `context` text ends with
-        `\n\nNotes mentioning the target records …` on the Rust side only."""
-        result = subprocess.run([self.binary, *args], cwd=corpus.ROOT,
+        """Rust's output without its note-mention block (#952) and its
+        elaborated-type notice (#960): Python has neither, so `related`,
+        `dossier` and `context` text ends with `\n\nNotes mentioning the target
+        records …` on the Rust side only, and Rust's `context` reads no
+        bind-types cache here."""
+        result = subprocess.run([self.binary, *args], cwd=corpus.ROOT, env=dict(os.environ, **NO_BIND_TYPES),
                                 capture_output=True, text=True, check=False)
         self.assertEqual(result.returncode, code, (args, result.stderr))
-        stdout = result.stdout
+        stdout = without_bind_types(result.stdout) if "context" in args and code == 0 else result.stdout
         if code == 0 and "--json" not in args and "--all" not in args:
             self.assertIn(NOTE_BLOCK, stdout, args)
             stdout = without_note_mentions(stdout)

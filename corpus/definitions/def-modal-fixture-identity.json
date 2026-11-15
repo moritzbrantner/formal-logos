@@ -6,5 +6,21 @@
   "definition": "IdentityAdmissible D w means D admits the predicate v = w. Only this admission and local MC are needed to identify accessible successors with the root. Full world-predicate comprehension admits it; fixed languages and corpus inventories need not.",
   "basis": "stipulative",
   "note": "Repository-native mathematical fixture requested in #261. No historical attribution or metaphysical endorsement; source-based adoption requires a separate witnessed reading.",
-  "lean_declaration": "TruthCore.Modal.ResearchFixture.IdentityAdmissible"
+  "lean_declaration": "TruthCore.Modal.ResearchFixture.IdentityAdmissible",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "ResearchFixture.IdentityAdmissible D w says that the proposition domain D admits the identity predicate 'is the world w' (fun v => v = w). Its body applies the supplied domain D. It is a repository-native mathematical fixture (#261).",
+    "examples": [
+      "A domain with full world-predicate comprehension, which admits every such identity predicate."
+    ],
+    "exclusions": [
+      "A fixed language or a corpus inventory of propositions, which need not admit it.",
+      "Agreement of two worlds on every proposition of D (Agree): a separate relation, which does not by itself identify worlds."
+    ],
+    "open_obligations": [
+      "Whether a given D contains complete propositions is an additional interpretive commitment.",
+      "No historical attribution or metaphysical endorsement; a source-based adoption would need a witnessed reading.",
+      "No formalization candidate: it is already a definition over the supplied domain; the remaining gap is the domain."
+    ]
+  }
 }

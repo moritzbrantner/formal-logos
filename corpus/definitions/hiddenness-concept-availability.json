@@ -6,5 +6,22 @@
   "definition": "HasConcept records having access to the concept of a personal religious ultimate at that time. The open ConceptNeeded constraint prevents belief without the concept, while allowing concept possession without belief. This is separate from raw cognitive capacity for relationship. The model does not settle prehistoric concept availability.",
   "basis": "stipulative",
   "note": "Explicit interpretation vocabulary for #252. Source claims retain their own pinned locators; these records do not add axioms or establish the truth of the interpreted predicates.",
-  "lean_declaration": "TruthCore.Hiddenness.Sig.HasConcept"
+  "lean_declaration": "TruthCore.Hiddenness.Sig.HasConcept",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Sig.HasConcept w p t says that, at world w, person p has access at time t to the concept of a personal religious ultimate. It is a field of the hiddenness signature (TruthCore.Hiddenness.Vocabulary.Sig, #252), indexed by world, person and time and supplied by each interpretation; worlds carry no modal accessibility laws.",
+    "examples": [
+      "A person raised in a culture with theistic religion, who has heard of a personal God."
+    ],
+    "exclusions": [
+      "Believing: concept possession without belief is allowed.",
+      "Raw cognitive capacity for relationship (Capable)."
+    ],
+    "open_obligations": [
+      "ConceptNeeded (no belief without the concept) is an open constraint.",
+      "The model does not settle whether the concept was available in prehistory; the DevelopmentalAccount rival uses its absence as an open coverage premise.",
+      "These records add no axioms; whether the interpreted predicate holds of real persons is not established by any finite model.",
+      "No formalization candidate."
+    ]
+  }
 }

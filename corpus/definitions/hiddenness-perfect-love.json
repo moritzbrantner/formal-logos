@@ -6,5 +6,18 @@
   "definition": "Sig.PerfectLove w means a perfectly loving God exists at w. Love seeks the good and personal relationship of capable creatures; whether that entails immediate conscious access at every capable time is not part of the predicate definition. GodLoves, AlwaysOpen and QualifiedOpen are distinct open normative readings.",
   "basis": "stipulative",
   "note": "Explicit interpretation vocabulary for #252. Source claims retain their own pinned locators; these records do not add axioms or establish the truth of the interpreted predicates.",
-  "lean_declaration": "TruthCore.Hiddenness.Sig.PerfectLove"
+  "lean_declaration": "TruthCore.Hiddenness.Sig.PerfectLove",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Sig.PerfectLove w says that a perfectly loving God exists at world w: love that seeks the good and the personal relationship of capable creatures. It is a predicate on the worlds of the hiddenness signature (#252), supplied by each interpretation.",
+    "examples_unavailable": "Whether a perfectly loving God exists at the actual world is what the hiddenness argument disputes; an example would presuppose an answer.",
+    "exclusions": [
+      "Immediate conscious access at every capable time: whether love entails it is not part of the predicate (DISAMB-HIDDENNESS-LOVE-ACCESS).",
+      "Sig.God alone: GodLoves links the two as an open premise."
+    ],
+    "open_obligations": [
+      "GodLoves, AlwaysOpen and QualifiedOpen are distinct open normative readings that use it.",
+      "No formalization candidate."
+    ]
+  }
 }

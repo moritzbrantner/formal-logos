@@ -64,6 +64,28 @@ def migrated_revision(revision):
     return is_uuid(json.loads(text).get("id"))
 
 
+# `truth context` adds the elaborated types of #960, read from the cache that
+# `truth bind-check` writes; Python's `context` has no such section. Parity
+# runs point Rust at an absent cache, so its only addition is the one-line
+# notice (text) or the `bind_types` summary (JSON), which this removes.
+NO_BIND_TYPES = {"TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"}
+BIND_TYPES_NOTICE = "  elaborated types: no bind-check cache at .cache/parity-absent-bind-types.json "
+
+
+def without_bind_types(stdout):
+    """Rust `context` stdout (text or JSON) without its #960 additions."""
+    if stdout.startswith("{"):
+        report = json.loads(stdout)
+        summary = report.pop("bind_types", None)
+        assert summary is None or summary["fresh"] == 0, summary
+        assert not any("elaborated" in entry for entry in report.get("lean", [])), report
+        return json.dumps(report)
+    lines = stdout.split("\n")
+    kept = [line for line in lines if not line.startswith(BIND_TYPES_NOTICE)]
+    assert len(lines) - len(kept) <= 1, stdout
+    return "\n".join(kept)
+
+
 class ParityCase(unittest.TestCase):
     """A parity test; `binary` is the `truth` executable under test."""
     binary = None

@@ -5,5 +5,20 @@
   "definition": "Strong n p means n.issued p. Norms supplies an extensional family of outcome predicates as a primitive issued-content input. No issuance history, legitimate authority, closure, feasibility or ideal compatibility is implicit.",
   "basis": "stipulative",
   "note": "Analyst semantics for #1398. Interpretation and legitimate normative authority remain OPEN. See docs/notes/carneades-deontology-boundary.md, Ross section.",
-  "lean_declaration": "TruthCore.Ethics.RossPermission.Strong"
+  "lean_declaration": "TruthCore.Ethics.RossPermission.Strong",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "RossPermission.Strong n p says that the authorization with content p has been issued: p belongs to the norm source's issued contents. Its body is n.issued p, so its content is that supplied membership. Norms n is a supplied extensional family of outcome predicates (n.issued) in TruthCore.Ethics.RossPermission (#1398).",
+    "examples": [
+      "In the Ross test model, an authorization issued with the content 'mail the letter'."
+    ],
+    "exclusions": [
+      "Permission as compatibility with the ideal (the weak, ideal-compatible permission sense; disambiguation 7a45ad77).",
+      "Any issuance history, legitimate authority, closure under entailment or feasibility: none is implicit."
+    ],
+    "open_obligations": [
+      "The interpretation and the legitimacy of the normative authority remain OPEN (docs/notes/carneades-deontology-boundary.md, Ross section).",
+      "No formalization candidate: issued content is a supplied input."
+    ]
+  }
 }

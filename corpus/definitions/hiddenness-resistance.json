@@ -6,5 +6,21 @@
   "definition": "The person’s resistance to God or relationship causally explains the absence of belief at this time. An unrelated fault, unobserved vice, not actively seeking, or disagreement about evidence is not definitionally such resistance. Resists is an interpreted causal predicate: its absence in real people is an open empirical claim.",
   "basis": "stipulative",
   "note": "Explicit interpretation vocabulary for #252. Source claims retain their own pinned locators; these records do not add axioms or establish the truth of the interpreted predicates.",
-  "lean_declaration": "TruthCore.Hiddenness.Sig.Resists"
+  "lean_declaration": "TruthCore.Hiddenness.Sig.Resists",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Sig.Resists w p t says that, at world w, person p's resistance to God or to the relationship causally explains p's absence of belief at time t. It is an interpreted causal predicate and a field of the hiddenness signature (TruthCore.Hiddenness.Vocabulary.Sig, #252), indexed by world, person and time and supplied by each interpretation; worlds carry no modal accessibility laws.",
+    "examples": [
+      "Someone who avoids considering whether God exists because they do not want to be accountable to anyone, where that avoidance explains their nonbelief."
+    ],
+    "exclusions": [
+      "An unrelated fault, an unobserved vice, not actively seeking, or disagreement about evidence: none of these is resistance by definition (DISAMB-HIDDENNESS-NONRESISTANCE).",
+      "A refusal that already presupposes belief."
+    ],
+    "open_obligations": [
+      "Its absence in real people is the open empirical premise NonresistantNonbelief.",
+      "The causal-explanation reading is not further analysed; no structural law is assumed.",
+      "No formalization candidate."
+    ]
+  }
 }
