@@ -12,6 +12,7 @@ target/debug/truth thickness --queue --json
 target/debug/truth frontier --reaching-root --routes
 target/debug/truth --json frontier-diff --base HEAD^1
 target/debug/truth related STMT-GOD-EXISTS
+target/debug/truth index search 'common nature'
 target/debug/truth dossier STMT-GOD-EXISTS
 target/debug/truth context ARGUMENT-ID --json
 target/debug/truth tree STMT-GOD-EXISTS --down 2 --up 2
@@ -414,7 +415,8 @@ route cost or certifies anything.
 
 - `truth related STATEMENT-ID [--limit N]` (default 10; 1 to 200 shown) ranks
   over the loaded corpus in memory. Python ranks over its disposable SQLite
-  projection `.cache/research-index.sqlite`; Rust needs and writes no cache.
+  projection `.cache/research-index.sqlite`; Rust needs and writes no cache
+  (the separate `truth index`, below, keeps one for search and lookup).
   The paraphrase-overlap score sums word weights in sorted word order, so
   candidates whose scores differ only in the last floating-point bit may
   order differently from Python (none in the sampled corpus).
@@ -442,9 +444,8 @@ an unreadable or non-frontier report or an unknown frontier root exits 1.
 Python prints the same messages with exit code 2.
 
 Not ported (use Python): the
-full `validate()` that `dossier --all` runs first, `research_index.py`'s other
-subcommands (`build`, `search`, `show`, `duplicates`, `summary`, `parity`,
-`export`, `bundle`, `compare`) and the Explorer's `dossier --all` consumer.
+full `validate()` that `dossier --all` runs first and the Explorer's
+`dossier --all` consumer.
 `scripts/verify_truth_cli.py` checks parity on a sample of 30+ statements
 (closed, stated, supported, bare, off-frontier and floor-marked), all 3,760
 `dossier --all` entries, 15 `context` targets (12 argument IDs, which here
@@ -487,7 +488,10 @@ nodes, the dependent walk may then use everything left, and the support walk
 resumes, in the same breadth-first order, with whatever the dependents did not
 use. A side that needs less leaves its share to the other. A co-premise that
 the upward walk later reaches as a conclusion becomes a `dependent`, and one
-the resumed support walk reaches becomes a `support` statement. Every cut leaves
+the resumed support walk reaches becomes a `support` statement. The resumed
+support walk expands every premise that has no `down_depth` yet, whichever
+walk admitted it: a `dependent` it reaches keeps its role (the first walk to
+admit a statement names it) and carries both `up_depth` and `down_depth`. Every cut leaves
 a `truncated` entry (`side`, `reason` `depth` or `budget`, `omitted_arguments`)
 and a `… truncated` text line.
 
@@ -514,6 +518,33 @@ by the same walk and route computation the full report uses. On the real corpus
 this takes about 35 s for all 4,587 statements against about 1.2 s per single
 call. The corpus explorer uses it to prebuild its `/tree` pages
 (`docs/github-pages.md`).
+
+## `index`
+
+`truth index (build | search WORDS [--limit N] | show ID | duplicates | summary
+| parity | export PATH | bundle --case ID [--premise S]... | compare --case ID
+[--left S]... [--right S]...)` ports `scripts/research_index.py` (#954 slice
+B7; `truth::index`, rusqlite with bundled SQLite and FTS5). The database
+`.cache/truth-index.sqlite` is a disposable projection of every
+`corpus/**/*.json` file, never an authority. It is bound to the builder
+version and an FNV-1a digest of every indexed path and byte string (the hash
+of `input_identity`); every query reuses it while that binding holds and
+rebuilds it otherwise, and `build` rebuilds it unconditionally. Publication is
+atomic: a failed build leaves the previous database. Tables, rows, the search
+expression, FTS5 ranking and the queries are Python's; `bundle` and `compare`
+run the registered-only `truth::configurations` engine. Output is the Python
+JSON (indented; compact with `--json`; object keys sorted). `export` prints the
+original bytes. Errors exit 1 (Python's messages), usage errors 2.
+
+Differences from Python: Python's query commands reject a stale index, and its
+digest hashes the script, so the two use separate files
+(`.cache/research-index.sqlite` there). Rust also resolves a legacy id or
+label, optionally `kind:`-prefixed, for `show`, `--case`, `--premise`,
+`--left` and `--right`. Python's `related` subcommand is `truth related`.
+`scripts/truth_parity/index.py` compares every table row for row (all but the
+digest) and the JSON of every subcommand on the real corpus and a fixture,
+with search ranks including ties, and checks stale refresh, failed-rebuild
+preservation, corrupt-projection detection and exit codes.
 
 ## `attribution-check`
 
@@ -715,29 +746,49 @@ stderr and exit codes are Python's byte for byte
 (`scripts/truth_parity/senses.py`, fixtures and the real corpus against
 several bases); `sense_index.py migrate` stays Python.
 
-## `configurations`, `models`, `territory`
+## `configurations`, `configuration-report`, `models`, `territory`
 
-These port the Lean-free parts of `corpus.py configurations`, `models` and
-`territory` (#954 slice B2): `truth::configurations` (`implication_closure`,
-`configuration_report`), `truth::finite_models` (`model_report`) and
-`truth::territory` (`territory_report`). Text output is byte-identical to
-Python's; `--json` prints the Python JSON (plus `input_identity` for `models`
-and `territory`; `configurations` prints Python's list as is). A corpus error
-prints Python's `corpus error: …` with exit code 2.
+These port `corpus.py configurations`, `configuration-report`, `models` and
+`territory` (#954 slices B2 and A6): `truth::configurations`
+(`implication_closure`, `configuration_report`), `truth::configuration_live`
+(`verify_case`, `verify_compositions`, the live reports),
+`truth::configuration_explorer` (the verified explorer bundle),
+`truth::finite_models` (`model_report`) and `truth::territory`
+(`territory_report`). Text output is byte-identical to Python's; `--json`
+prints the Python JSON (plus `input_identity` for `models` and `territory`;
+`configurations` prints Python's list as is). A corpus error prints Python's
+`corpus error: …` with exit code 2.
 
-- `truth configurations --registered [--case ID] [--seed STATEMENT]
-  [--premise STATEMENT]...`: the registered projection (no certified status).
-  It validates the models and cases first, as Python's `configuration_context`
-  does (`truth::check::registered_configurations`), not the whole corpus.
-  Without `--registered` Python builds the modules and checks every
-  certificate and original theorem in Lean; Rust refuses and names the Python
-  command (exit 2). The verified projection is ported in the library and
-  unit-tested against Python's fixture cases; slice A6 wires it to
-  `configuration-report`.
-- `truth models`: every registered model and its co-failure candidates.
-  `--check`, `--argument` and `--verify` Lean-check all registered models in
-  Python, so Rust refuses them and names the Python command; `--premise`
-  without either fails as in Python.
+The Lean-backed paths orchestrate; they never compute a verdict. They write
+the same certificate and composition sources as Python, run `lake build`,
+`lake env lean` and `scripts/verify-result.sh` with Python's timeouts (each
+process tree killed on expiry, `truth::subprocess`), read only exit status and
+`#print axioms` lines, and bind original theorems through
+`scripts/BindTypes.lean`. They call `lake` from PATH, as Python does: run them
+under `python3 scripts/worker_env.py --`.
+
+- `truth configurations [--registered] [--case ID] [--seed STATEMENT]
+  [--premise STATEMENT]...`: with `--registered`, the registered projection
+  (no certified status); otherwise every selected case is verified in Lean
+  first and no report is printed if any step fails. It validates the models
+  and cases first, as Python's `configuration_context` does
+  (`truth::check::registered_configurations`), not the whole corpus.
+- `truth configuration-report (--output PATH | --check PATH |
+  --build-input)`: `--output` live-verifies every case, replays the decision
+  tree's family cores and atomically writes the bundle inside `.cache`, byte
+  for byte as Python writes it plus `producer.producer_sha256` (the crate
+  fingerprint `build.rs` computes, outside the input digest). It refuses an
+  output outside `.cache` before running Lean (Python only after). `--check`
+  and `--build-input` (with `TRUTH_CORE_CONFIGURATION_REPORT` /
+  `TRUTH_CORE_REQUIRE_CONFIGURATION_REPORT`) check freshness without Lean,
+  as Python does, and then require the fingerprint to match the running
+  binary. `--json` prints Python's indented projection without the input
+  hashes.
+- `truth models [--check STATEMENT | --argument ARGUMENT] [--premise
+  STATEMENT]... [--verify]`: every registered model, its classification and
+  co-failure candidates; `--check`, `--argument` and `--verify` also
+  Lean-check every registered model (Python `verify_models`); `--premise`
+  without a target fails as in Python.
 - `truth territory [--frontier-root STATEMENT] [--max-atoms N]`: Python's
   `--root` is `--frontier-root` here. Like Python it runs the full `check`
   validation first (`cli::validate_first`) and reads the in-process Rust
@@ -754,3 +805,14 @@ and -3 and an unknown root) and on a fixture checkout with an incompatibility
 core, an implication rule, a model a fixed constant excludes, co-failures, a
 refutation core and a model that satisfies it (a `DEFECT` line), a broken
 corpus and seven broken registrations.
+`scripts/truth_parity/configuration_report.py` runs the Lean-backed paths of
+both implementations on that fixture as a Git checkout with a recorded
+toolchain on PATH (a `lake` that answers builds, prints Lean's `#print
+axioms` lines and describes the theorems as `BindTypes.lean` would, and a
+`verify-result.sh` stub), so no Lean runs: it compares the logged toolchain
+calls, the bundle byte for byte except the fingerprint line, `--check` and
+`--build-input` outcomes on fresh, stale and malformed bundles, live
+`configurations` and `models --check / --argument / --verify`, and the error
+and exit code of a failure at every step (build, certificate, forbidden
+axiom, `verify-result.sh`, model certificates, composition, binding, a
+verification defect, no `lake`).

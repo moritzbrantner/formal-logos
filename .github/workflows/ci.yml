@@ -319,9 +319,14 @@ jobs:
       - name: Build Comparator toolchain
         if: steps.verifier.outputs.cache-hit != 'true'
         run: scripts/bootstrap-verifier.sh
+      # The Rust CLI orchestrates Lean, verify-result.sh and scripts/PropositionStructure.lean
+      # (truth/README.md).
+      - name: Build the truth CLI
+        if: needs.comparator-plan.outputs.report == 'true'
+        run: cargo build --locked --release -p truth
       - name: Produce this workflow's verified configuration explorer report
         if: needs.comparator-plan.outputs.report == 'true'
-        run: python3 scripts/corpus.py configuration-report --output .cache/configuration-explorer.json
+        run: target/release/truth configuration-report --output .cache/configuration-explorer.json
       - name: Upload the verified configuration report
         if: needs.comparator-plan.outputs.report == 'true'
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
@@ -331,10 +336,6 @@ jobs:
           include-hidden-files: true
           if-no-files-found: error
           retention-days: 7
-      # The Rust CLI orchestrates scripts/PropositionStructure.lean (truth/README.md).
-      - name: Build the truth CLI
-        if: needs.comparator-plan.outputs.report == 'true'
-        run: cargo build --locked --release -p truth
       - name: Derive proposition structure from Lean
         if: needs.comparator-plan.outputs.report == 'true'
         run: target/release/truth structure-report --output .cache/proposition-structure.json

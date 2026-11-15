@@ -584,14 +584,21 @@ impl Builder<'_> {
                 }
                 self.edge("supports", argument, &statement, Some(argument));
                 for premise in &premises {
-                    let co_premise = self
+                    // Expand every premise without a support depth, whichever
+                    // walk admitted it first: a resumed walk can meet a
+                    // dependent or co-premise of the upward walk. A dependent
+                    // keeps its role and carries both depths; a co-premise
+                    // (not expanded upward) becomes a support statement.
+                    let unexpanded = self
                         .statements
                         .get(premise)
-                        .is_some_and(|node| node.role == "co_premise" && node.down_depth.is_none());
-                    if !self.statements.contains_key(premise) || co_premise {
+                        .is_none_or(|node| node.down_depth.is_none());
+                    if unexpanded {
                         self.add_statement(premise, "support");
                         if let Some(node) = self.statements.get_mut(premise) {
-                            node.role = "support";
+                            if node.role == "co_premise" {
+                                node.role = "support";
+                            }
                             node.down_depth = Some(depth + 1);
                         }
                         self.down_queue.push_back((premise.clone(), depth + 1, 0));
@@ -1684,6 +1691,67 @@ mod tests {
         let view = build(&dir, "X", Options::default()).unwrap();
         let v = view.statements.iter().find(|n| n.id == "V").unwrap();
         assert_eq!((v.role, v.up_depth), ("dependent", Some(2)));
+    }
+
+    #[test]
+    fn the_resumed_support_walk_expands_a_dependent() {
+        let dir = fixture();
+        // U is a dependent of X (ARG-U) and also supports A (ARG-Z: U ⊢ A);
+        // ARG-Y (Q ⊢ U) supports U.
+        for (id, premises, conclusion) in [("ARG-Z", vec!["U"], "A"), ("ARG-Y", vec!["Q"], "U")] {
+            write(
+                &dir.0,
+                &format!("corpus/arguments/{id}.json"),
+                json!({"id": id, "label": format!("argument {id}"),
+                    "premise_statement_ids": premises, "inference_ids": [format!("I-{id}")],
+                    "conclusion_statement_id": conclusion, "meaning": "m"}),
+            );
+            write(
+                &dir.0,
+                &format!("corpus/inferences/I-{id}.json"),
+                json!({"id": format!("I-{id}"), "input_statement_ids": premises,
+                    "output_statement_id": conclusion, "rule": "modus ponens", "meaning": "m",
+                    "assumption_statement_ids": [], "discharged_statement_ids": []}),
+            );
+        }
+        let options = Options {
+            down: 3,
+            up: 1,
+            budget: 40,
+        };
+        let view = build(&dir, "X", options).unwrap();
+        let node = |id: &str| view.statements.iter().find(|n| n.id == id).unwrap();
+        // The support walk first stops at 40 - 19 = 21 nodes before reaching
+        // U only if it needs more; either way U ends with both depths.
+        let u = node("U");
+        assert_eq!(u.up_depth, Some(1));
+        assert_eq!(u.down_depth, Some(2));
+        assert!(view.arguments.iter().any(|a| a.id == "ARG-Y"));
+        // At budget 13 the upward walk admits U first (X, ARG-1, A, P, ARG-2,
+        // B; then ARG-U, U, Q); the resumed support walk reaches U through
+        // ARG-Z, keeps its role and still records and expands its support depth.
+        let view = build(
+            &dir,
+            "X",
+            Options {
+                budget: 13,
+                ..options
+            },
+        )
+        .unwrap();
+        let u = view.statements.iter().find(|n| n.id == "U").unwrap();
+        assert_eq!(
+            (u.role, u.up_depth, u.down_depth),
+            ("dependent", Some(1), Some(2))
+        );
+        assert!(view.arguments.iter().any(|a| a.id == "ARG-Z"));
+        assert!(
+            view.arguments.iter().any(|a| a.id == "ARG-Y")
+                || view
+                    .truncated
+                    .iter()
+                    .any(|t| t.statement_id == "U" && t.side == "down")
+        );
     }
 
     #[test]

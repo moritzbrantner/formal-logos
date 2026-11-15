@@ -128,6 +128,17 @@ pub struct TreeArgs {
     pub out_dir: Option<String>,
 }
 
+/// The `index compare` options.
+#[derive(Default)]
+pub struct IndexArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    /// `--left STATEMENT`, repeatable.
+    pub left: Vec<String>,
+    /// `--right STATEMENT`, repeatable.
+    pub right: Vec<String>,
+}
+
 #[derive(Default)]
 pub struct ResearchArgs {
     pub flags: bool,
@@ -146,7 +157,8 @@ pub struct ConfigurationArgs {
     pub seed: Option<String>,
     pub premises: Vec<String>,
     pub registered: bool,
-    /// `models --check`, `--argument` and `--verify` (Lean; Python only).
+    /// `models --check`, `--argument` and `--verify` (Lean), and
+    /// `configuration-report --check PATH`.
     pub check: Option<String>,
     pub argument: Option<String>,
     pub verify: bool,
@@ -196,6 +208,7 @@ pub struct Args {
     pub recorded_exporters: Option<String>,
     pub attribution: AttributionArgs,
     pub tree: TreeArgs,
+    pub index: IndexArgs,
     /// `--profile-module MODULE` (`bridge-experiments`)
     pub profile_module: Option<String>,
 }
@@ -259,6 +272,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         recorded_exporters: None,
         attribution: AttributionArgs::default(),
         tree: TreeArgs::default(),
+        index: IndexArgs::default(),
         profile_module: None,
     };
     let mut args = args.iter();
@@ -370,6 +384,19 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                             tree.up = Some(depth);
                         }
                     }
+                }
+            }
+            "--left" | "--right" => {
+                parsed.index.flags = true;
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                    .to_owned();
+                if arg == "--left" {
+                    parsed.index.left.push(value);
+                } else {
+                    parsed.index.right.push(value);
                 }
             }
             "--profile-module" => {

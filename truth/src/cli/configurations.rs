@@ -1,9 +1,13 @@
-//! `truth configurations --registered`: Python `corpus.py configurations
-//! --registered` (#954 slice B2).
+//! `truth configurations [--registered]`: Python `corpus.py configurations`
+//! (#954 slices B2 and A6). Without `--registered` every selected case is
+//! verified live in Lean ([`configuration_live::verified_reports`]).
 
 use super::{Accepts, Args, Command, Failure, Output, load, resolve_in, resolve_statement, usage};
 use serde_json::{Value, json};
-use truth::configurations::{self, Context};
+use truth::{
+    configuration_live,
+    configurations::{self, Context},
+};
 
 pub const COMMAND: Command = Command {
     name: "configurations",
@@ -18,9 +22,9 @@ pub fn corpus_error(message: impl Into<String>) -> Failure {
     )
 }
 
-/// The registered projection only: without `--registered` Python builds the
-/// selected modules, checks certificates and binds the original theorems in
-/// Lean, which stays Python's (`configuration-report`, slice A6).
+/// The registered projection with `--registered`; otherwise Lean builds the
+/// selected modules, checks the certificates and models, replays the cores
+/// and binds the original theorems before any report is printed.
 fn run(args: &Args, operands: &[&str]) -> Output {
     let accepts = Accepts {
         configuration: true,
@@ -35,11 +39,6 @@ fn run(args: &Args, operands: &[&str]) -> Output {
     {
         return Err(usage(
             "--check, --argument, --verify and --max-atoms do not apply to configurations",
-        ));
-    }
-    if !options.registered {
-        return Err(usage(
-            "truth configurations needs --registered: live certificate verification runs Lean; use `python3 scripts/corpus.py configurations`",
         ));
     }
     truth::check::registered_configurations(&args.root).map_err(corpus_error)?;
@@ -77,7 +76,7 @@ fn run(args: &Args, operands: &[&str]) -> Output {
     if !premises.is_empty() && cases.len() != 1 {
         return Err(corpus_error("--premise requires exactly one selected case"));
     }
-    let mut reports = Vec::new();
+    let mut selections = Vec::new();
     for case in cases {
         let selection = if premises.is_empty() {
             None
@@ -100,20 +99,30 @@ fn run(args: &Args, operands: &[&str]) -> Output {
                     "premises must be unique explicit statement IDs in this profile",
                 ));
             }
-            Some(("selection", premises.iter().map(String::as_str).collect()))
+            Some(premises.iter().map(String::as_str).collect::<Vec<_>>())
         };
-        let mut report = configurations::configuration_report(
-            case,
-            &context.results,
-            &context.arguments,
-            &context.models,
-            false,
-            selection,
-        )
-        .map_err(corpus_error)?;
-        report["verification"] = Value::Null;
-        reports.push(report);
+        selections.push((case, selection));
     }
+    let reports = if options.registered {
+        let mut reports = Vec::new();
+        for (case, selection) in &selections {
+            let mut report = configurations::configuration_report(
+                case,
+                &context.results,
+                &context.arguments,
+                &context.models,
+                false,
+                selection.as_ref().map(|ids| ("selection", ids.to_vec())),
+            )
+            .map_err(corpus_error)?;
+            report["verification"] = Value::Null;
+            reports.push(report);
+        }
+        reports
+    } else {
+        configuration_live::verified_reports(&args.root, &corpus, &context, &selections)
+            .map_err(corpus_error)?
+    };
     let text = configurations::format_configurations(&reports);
     // Python prints nothing at all for no selected case.
     let text = (!reports.is_empty()).then(|| aliases.humanize(&text));
