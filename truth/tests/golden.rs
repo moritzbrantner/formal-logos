@@ -202,10 +202,20 @@ impl Tokens {
 
 type Tree = BTreeMap<String, String>;
 
-/// A file entry's content: the text, or a repository file it references.
+/// A symbolic link entry's content: the target behind this marker.
+const SYMLINK: &str = "\u{0}symlink:";
+
+/// A file entry's content: the text, a repository file it references or a
+/// symbolic link (`SYMLINK` and its target).
 fn content(value: &Value) -> String {
     match value {
         Value::String(text) => text.clone(),
+        Value::Object(entry) if entry.contains_key("symlink") => {
+            format!(
+                "{SYMLINK}{}",
+                entry["symlink"].as_str().expect("symlink target")
+            )
+        }
         Value::Object(entry) => {
             let path = entry["repo"].as_str().expect("repo reference");
             fs::read_to_string(repository().join(path))
@@ -235,7 +245,14 @@ fn write_tree(
     for (path, text) in tree {
         let target = directory.join(path);
         fs::create_dir_all(target.parent().expect("parent")).expect("directory");
-        fs::write(&target, tokens.apply(text)).expect("fixture file");
+        if let Some(link) = text.strip_prefix(SYMLINK) {
+            #[cfg(unix)]
+            std::os::unix::fs::symlink(tokens.apply(link), &target).expect("fixture symlink");
+            #[cfg(not(unix))]
+            panic!("golden symlinks need a Unix host: {link}");
+        } else {
+            fs::write(&target, tokens.apply(text)).expect("fixture file");
+        }
     }
     for path in empty {
         fs::create_dir_all(directory.join(path)).expect("empty directory");

@@ -44,6 +44,7 @@ file contents alike:
   out, except the paths a case lists in `keep_repo`, which are recorded as
   references to the repository file of the same path;
 - `__pycache__` directories and the paths in `exclude` are left out;
+- a symbolic link is recorded as `{"symlink": target}` (its target tokenized);
 - a case's `name` (the subtest description) is tokenized like the rest.
 
 Exit codes are Rust's contract: where Rust differs from Python (`check`
@@ -114,7 +115,8 @@ def snapshot(directory, exclude=(), keep_repo=(), skip=()):
             if _excluded(relative, exclude):
                 continue
             if path.is_symlink():
-                raise AssertionError(f"golden fixtures cannot hold symlinks: {path}")
+                files[relative] = {"symlink": os.readlink(path)}
+                continue
             data = path.read_bytes()
             if relative in keep_repo:
                 files[relative] = {"repo": relative}
@@ -141,7 +143,9 @@ def git_history(root, keep_repo=()):
             meta, path = entry.split("\t", 1)
             mode, _, blob = meta.split()
             data = _git(root, "cat-file", "blob", blob, text=False)
-            if path in keep_repo:
+            if mode == "120000":
+                tree[path] = ({"symlink": data.decode("utf-8")}, False)
+            elif path in keep_repo:
                 tree[path] = ({"repo": path}, mode == "100755")
             elif not _repo_copy(path, data):
                 tree[path] = (data.decode("utf-8"), mode == "100755")
