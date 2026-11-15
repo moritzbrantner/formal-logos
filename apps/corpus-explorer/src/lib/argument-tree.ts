@@ -97,21 +97,32 @@ export type ArgumentTree = {
   disambiguations: TreeDisambiguation[];
   truncated: TreeTruncation[];
   node_count: number;
+  /** Derived inversion edges (schema 2), kept out of the drawn graph. */
+  derived_edges?: TreeEdge[];
 };
 
 function isObject(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
+/** Tree JSON versions this view reads (`truth tree`): 2 adds derived inversion edges. */
+export const SCHEMA_VERSIONS = [1, 2];
+/** Edges between records; the others (`contrapositive`, `inverse_conditional`) are derived. */
+export const RECORD_EDGE_KINDS = ["supports", "uses", "strengthens"];
+
 /** Check the transport shape of one tree file; references are the CLI's job. */
 export function parseArgumentTree(value: unknown): ArgumentTree {
-  if (!isObject(value) || value.schema_version !== 1 || typeof value.root !== "string") {
-    throw new Error("Tree report must be a schema_version 1 object with a root");
+  if (!isObject(value) || !SCHEMA_VERSIONS.includes(value.schema_version as number) || typeof value.root !== "string") {
+    throw new Error(`Tree report must be a schema_version ${SCHEMA_VERSIONS.join(" or ")} object with a root`);
   }
   for (const field of ["statements", "arguments", "edges", "definitions", "disambiguations", "truncated"]) {
     if (!Array.isArray(value[field])) throw new Error(`Tree report lacks ${field}`);
   }
   const tree = value as unknown as ArgumentTree;
+  // Schema 2 adds derived inversion edges (#1674 phase 2). They connect no new
+  // nodes and the graph draws record edges only; derived edges are counted.
+  tree.derived_edges = tree.edges.filter((edge) => !RECORD_EDGE_KINDS.includes(edge.kind));
+  tree.edges = tree.edges.filter((edge) => RECORD_EDGE_KINDS.includes(edge.kind));
   if (!tree.statements.some((statement) => statement.id === tree.root && statement.role === "root")) {
     throw new Error(`Tree report has no root node ${tree.root}`);
   }
