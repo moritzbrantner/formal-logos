@@ -117,6 +117,17 @@ pub struct AttributionArgs {
     pub max_chars: Option<i64>,
 }
 
+/// The `index compare` options.
+#[derive(Default)]
+pub struct IndexArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    /// `--left STATEMENT`, repeatable.
+    pub left: Vec<String>,
+    /// `--right STATEMENT`, repeatable.
+    pub right: Vec<String>,
+}
+
 #[derive(Default)]
 pub struct ResearchArgs {
     pub flags: bool,
@@ -184,6 +195,7 @@ pub struct Args {
     /// `strength-comparisons` and `strength-report` replay (parity only).
     pub recorded_exporters: Option<String>,
     pub attribution: AttributionArgs,
+    pub index: IndexArgs,
     /// `--profile-module MODULE` (`bridge-experiments`)
     pub profile_module: Option<String>,
 }
@@ -246,6 +258,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         proof: ProofArgs::default(),
         recorded_exporters: None,
         attribution: AttributionArgs::default(),
+        index: IndexArgs::default(),
         profile_module: None,
     };
     let mut args = args.iter();
@@ -330,6 +343,19 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                 parsed.attribution.flags = true;
                 parsed.attribution.max_chars =
                     Some(integer(args.next().and_then(|value| value.to_str()), arg)?);
+            }
+            "--left" | "--right" => {
+                parsed.index.flags = true;
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                    .to_owned();
+                if arg == "--left" {
+                    parsed.index.left.push(value);
+                } else {
+                    parsed.index.right.push(value);
+                }
             }
             "--profile-module" => {
                 parsed.profile_module = Some(

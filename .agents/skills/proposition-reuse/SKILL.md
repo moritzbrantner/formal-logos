@@ -21,8 +21,10 @@ entry); then open dossiers only for the premises it reports open.
 `related` ranks the loaded corpus in memory; it needs and writes no cache.
 Use `--json` for complete machine-readable match evidence and attempt blockers.
 If no seed ID is known, start with
-`python3 scripts/research_index.py build` and
-`python3 scripts/research_index.py search 'topic words'`.
+`target/release/truth index search 'topic words'` and read a hit with
+`target/release/truth index show <ID>`. The index is a disposable SQLite/FTS5
+projection in `.cache/truth-index.sqlite`; each query reuses it while it matches
+the corpus and rebuilds it otherwise.
 
 Inspect the smallest relevant argument bundles, their exact Lean declarations,
 and prior attempts before proposing another result or new vocabulary. Preserve

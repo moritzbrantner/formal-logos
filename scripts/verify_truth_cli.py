@@ -11,7 +11,8 @@ structural view (`status`, `inspect`), `thickness [--queue]`, `check`,
 LeanReuse output), `structure`/`structure-report` (from recorded
 PropositionStructure output), `strength-comparisons`/`strength-report` (from
 recorded BindTypes, CheckStrength and PropositionStructure output), `issues`
-with `dossier --issues-from`, and `attribution-check`.
+with `dossier --issues-from`, `attribution-check` and `index` (against
+`scripts/research_index.py`).
 
 The tests live in the `truth_parity` package, one module per command; this
 file is the entry point CI runs.
@@ -37,6 +38,7 @@ from truth_parity.proof_use import TruthProofUseParity  # noqa: F401
 from truth_parity.revisions import TruthRevisionParity  # noqa: F401
 from truth_parity.strength import TruthStrengthParity  # noqa: F401
 from truth_parity.attribution import TruthAttributionParity  # noqa: F401
+from truth_parity.index import TruthIndexParity  # noqa: F401
 from truth_parity.senses import TruthSensesParity  # noqa: F401
 from truth_parity.bridge_experiments import TruthBridgeExperimentsParity  # noqa: F401
 

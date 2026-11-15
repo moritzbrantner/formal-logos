@@ -12,6 +12,7 @@ target/debug/truth thickness --queue --json
 target/debug/truth frontier --reaching-root --routes
 target/debug/truth --json frontier-diff --base HEAD^1
 target/debug/truth related STMT-GOD-EXISTS
+target/debug/truth index search 'common nature'
 target/debug/truth dossier STMT-GOD-EXISTS
 target/debug/truth context ARGUMENT-ID --json
 target/debug/truth orphans
@@ -413,7 +414,8 @@ route cost or certifies anything.
 
 - `truth related STATEMENT-ID [--limit N]` (default 10; 1 to 200 shown) ranks
   over the loaded corpus in memory. Python ranks over its disposable SQLite
-  projection `.cache/research-index.sqlite`; Rust needs and writes no cache.
+  projection `.cache/research-index.sqlite`; Rust needs and writes no cache
+  (the separate `truth index`, below, keeps one for search and lookup).
   The paraphrase-overlap score sums word weights in sorted word order, so
   candidates whose scores differ only in the last floating-point bit may
   order differently from Python (none in the sampled corpus).
@@ -441,9 +443,8 @@ an unreadable or non-frontier report or an unknown frontier root exits 1.
 Python prints the same messages with exit code 2.
 
 Not ported (use Python): the
-full `validate()` that `dossier --all` runs first, `research_index.py`'s other
-subcommands (`build`, `search`, `show`, `duplicates`, `summary`, `parity`,
-`export`, `bundle`, `compare`) and the Explorer's `dossier --all` consumer.
+full `validate()` that `dossier --all` runs first and the Explorer's
+`dossier --all` consumer.
 `scripts/verify_truth_cli.py` checks parity on a sample of 30+ statements
 (closed, stated, supported, bare, off-frontier and floor-marked), all 3,760
 `dossier --all` entries, 15 `context` targets (12 argument IDs, which here
@@ -451,6 +452,33 @@ coincide with their result IDs, and 3 uniquely concluded statements) with
 several `--limit` values, and the error cases, from a saved Python report;
 and, for a subset plus `dossier --all`, that the in-process frontier gives the
 same output.
+
+## `index`
+
+`truth index (build | search WORDS [--limit N] | show ID | duplicates | summary
+| parity | export PATH | bundle --case ID [--premise S]... | compare --case ID
+[--left S]... [--right S]...)` ports `scripts/research_index.py` (#954 slice
+B7; `truth::index`, rusqlite with bundled SQLite and FTS5). The database
+`.cache/truth-index.sqlite` is a disposable projection of every
+`corpus/**/*.json` file, never an authority. It is bound to the builder
+version and an FNV-1a digest of every indexed path and byte string (the hash
+of `input_identity`); every query reuses it while that binding holds and
+rebuilds it otherwise, and `build` rebuilds it unconditionally. Publication is
+atomic: a failed build leaves the previous database. Tables, rows, the search
+expression, FTS5 ranking and the queries are Python's; `bundle` and `compare`
+run the registered-only `truth::configurations` engine. Output is the Python
+JSON (indented; compact with `--json`; object keys sorted). `export` prints the
+original bytes. Errors exit 1 (Python's messages), usage errors 2.
+
+Differences from Python: Python's query commands reject a stale index, and its
+digest hashes the script, so the two use separate files
+(`.cache/research-index.sqlite` there). Rust also resolves a legacy id or
+label, optionally `kind:`-prefixed, for `show`, `--case`, `--premise`,
+`--left` and `--right`. Python's `related` subcommand is `truth related`.
+`scripts/truth_parity/index.py` compares every table row for row (all but the
+digest) and the JSON of every subcommand on the real corpus and a fixture,
+with search ranks including ties, and checks stale refresh, failed-rebuild
+preservation, corrupt-projection detection and exit codes.
 
 ## `attribution-check`
 
