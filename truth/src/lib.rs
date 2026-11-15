@@ -8,6 +8,7 @@ pub mod dossier;
 pub mod finite_models;
 pub mod frontier;
 pub mod identity;
+pub mod issues;
 mod kernels;
 pub mod navigation;
 pub mod orphans;

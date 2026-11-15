@@ -62,6 +62,24 @@ pub struct ConfigurationArgs {
     pub max_atoms: Option<i64>,
 }
 
+/// `issues --from FILE --for ID` and `dossier --issues-from FILE`.
+#[derive(Default)]
+pub struct IssueArgs {
+    /// `--from`
+    pub from: Option<String>,
+    /// `--for`
+    pub for_id: Option<String>,
+    /// `--issues-from`
+    pub issues_from: Option<String>,
+}
+
+impl IssueArgs {
+    /// Whether `--from` or `--for` was given.
+    pub fn own(&self) -> bool {
+        self.from.is_some() || self.for_id.is_some()
+    }
+}
+
 /// Every option of every command, parsed in one pass in token order.
 pub struct Args {
     pub machine: bool,
@@ -75,6 +93,7 @@ pub struct Args {
     pub frontier_root: String,
     pub frontier: FrontierArgs,
     pub research: ResearchArgs,
+    pub issues: IssueArgs,
     pub configuration: ConfigurationArgs,
     pub bind: BindArgs,
 }
@@ -93,6 +112,8 @@ pub struct Accepts {
     pub frontier: bool,
     /// `--base` and `--head`
     pub revisions: bool,
+    /// `--from` and `--for`
+    pub issues: bool,
     /// The [`ConfigurationArgs`] (each command checks which of them apply)
     pub configuration: bool,
 }
@@ -125,6 +146,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         frontier_root: thickness::DEFAULT_ROOT.to_owned(),
         frontier: FrontierArgs::default(),
         research: ResearchArgs::default(),
+        issues: IssueArgs::default(),
         configuration: ConfigurationArgs::default(),
         bind: BindArgs::default(),
     };
@@ -249,6 +271,19 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                     _ => configuration.max_atoms = Some(integer(Some(&value), arg)?),
                 }
             }
+            "--from" | "--for" | "--issues-from" => {
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                    .to_owned();
+                let issues = &mut parsed.issues;
+                match arg {
+                    "--from" => issues.from = Some(value),
+                    "--for" => issues.for_id = Some(value),
+                    _ => issues.issues_from = Some(value),
+                }
+            }
             "--constants" | "--queue-file" | "--target" | "--targets" | "--top" | "--pool" => {
                 parsed.bridge_flags = true;
                 let value = args
@@ -337,6 +372,12 @@ impl Args {
         }
         if !accepts.revisions && (self.frontier.base.is_some() || self.frontier.head.is_some()) {
             return Err(usage("--base and --head apply only to frontier-diff"));
+        }
+        if !accepts.issues && self.issues.own() {
+            return Err(usage("--from and --for apply only to issues"));
+        }
+        if self.issues.issues_from.is_some() {
+            return Err(usage("--issues-from applies only to dossier"));
         }
         if !accepts.configuration && self.configuration.flags {
             return Err(usage(
