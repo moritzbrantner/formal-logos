@@ -20,6 +20,7 @@ pub mod pyjson;
 pub mod related;
 pub mod senses;
 mod sha256;
+pub mod strength;
 pub mod structure;
 pub mod subprocess;
 pub mod territory;

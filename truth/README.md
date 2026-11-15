@@ -224,6 +224,56 @@ real corpus's first slice (byte-identical artifact apart from Rust's
 in Python with Lean, 1.7 s against 6.3 s from the recorded exporter output,
 and `--check-input` 1.7 s against 2.5 s; the artifacts were identical.
 
+## `strength-comparisons` and `strength-report`
+
+`truth strength-comparisons [COMPARISON] [--registered] [--json]` and
+`truth strength-report [--output FILE] [--build-input | --check-input]
+[--json]` port `python3 scripts/corpus.py strength-comparisons` and
+`strength-report` (`scripts/strength_comparisons.py`,
+`docs/proposition-structure.md`). Lean, Comparator and NanoDa stay the
+authorities: Rust validates the `strength_comparison` registrations and their
+results' Comparator contracts with the rules `truth check` uses, then, as
+Python does and through `scripts/worker_env.py`, has Lake build the modules,
+binds the evidence results with `scripts/BindTypes.lean`, has
+`scripts/CheckStrength.lean` check every complete certificate application and
+the definitional degeneracy guard, attaches the
+`scripts/PropositionStructure.lean` structure of the compared declarations
+and runs `scripts/verify-result.sh` on each evidence result. It only refuses
+incomplete checker responses and projects the checked roles to their labels.
+`strength-comparisons` prints one status line per comparison (humanized) or
+the reports as Python's JSON; a COMPARISON is matched by its exact id, as in
+Python, and `--registered` prints the provenance-only projection without
+Lean. `strength-report` writes the `.cache` bundle byte for byte as Python
+does (sorted keys, atomic replace, refused outside the clone's `.cache`) and
+`--check-input` validates its producer, input manifest, digest and
+projection without rerunning proofs, with Python's equality (key order free,
+`2 == 2.0`). Errors exit 2 as `corpus error: …` (a JSON error object under
+`--json`). The bundle's manifest still binds `scripts/strength_comparisons.py`
+and the other Python inputs, as Python's does, until R3 retires them.
+`--recorded-exporters DIR` replays recorded `BindTypes.json`,
+`CheckStrength.json` and `PropositionStructure.json` without Lake or
+Comparator, for the parity harness only; it is never a verification, so it
+needs `TRUTH_PARITY_REPLAY=1` and refuses to write a bundle named
+`strength-comparisons.json`, the only path the explorer reads.
+
+CI, Pages, the explorer's `strength-inputs` script and its `--check-input`
+call run it; `corpus.py strength-comparisons` and `strength-report` stay until
+their retirement. `scripts/truth_parity/strength.py` runs Python with its Lean
+subprocesses replaced by the recorded outputs and Rust with
+`--recorded-exporters`, on the `check` fixture with two comparisons (text and
+`--json` reports, a selected comparison, `--registered`, invalid registrations
+and Comparator contracts, binding, coverage, degeneracy and exporter failures,
+fresh, stale, forged and symlinked bundles) and on the real corpus
+(`--registered` always; the live reports, the bundle and `--check-input`
+given `TRUTH_STRENGTH_EXPORTERS`, a directory recorded with `python3 -m
+truth_parity.strength record DIR` from `scripts/`). On the real corpus
+(2026-11-15, warm Lake build, 7 comparisons) the live `strength-report`,
+dominated by `verify-result.sh`, took 186 s in Rust and 159 s in Python on a
+loaded machine, with byte-identical bundles; from the recorded exporter output
+it took 0.9 s against 3.4 s, `--check-input` 0.57 s against 0.72 s and
+`--registered` 0.38 s against 0.25 s (Rust also loads the structural
+corpus).
+
 ## `unused-premises`, `lean-reuse`, `context --proof-use`
 
 These port the proof-term exporter commands of `scripts/corpus.py` (#954
