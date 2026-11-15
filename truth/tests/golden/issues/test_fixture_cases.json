@@ -27,6 +27,9 @@
    ],
    "expect": {
     "code": 0,
+    "normalize": [
+     "note_mentions"
+    ],
     "stdout": "#3 [malformed]: Research #3\n  malformed: acceptance block contains no requirements\n#4 [delivered]: Research #4\n  ok results: RESULT-1 (solution-present)\n  ok statements: STMT-Q: sourced (sourced)\n#7 [missing]: Research #7\n  ok statements: STMT-P: proved (proved)\n  missing statements: STMT-Q: closed (sourced)\n  missing statements: STMT-R: sourced (open/absent)\n  ok statements: STMT-SE: closed (self_evident)\n  ok attempts: ATTEMPT-2 (present)\n  missing attempts: ATTEMPT-MISSING (absent)\n#9 [delivered]: Research #9\n  ok results: RESULT-1 (solution-present)\n  ok theorems: TruthCore.Demo.proof (registered/source-present)\n  ok statements: STMT-P: proved (proved)\n  ok statements: STMT-Q: sourced (sourced)\n  ok configurations: CONFIG-1 (present)\n  ok attempts: ATTEMPT-1 (failed)\n#9 [delivered]: Research #9\n  ok statements: STMT-P: closed (proved)\n#10 [missing]: Research #10\n  missing results: RESULT-PENDING (pending)\n  missing statements: STMT-R: closed (open/absent)\n#11 [untracked]: Research #11\n#12 [delivered]: Research #12\n  ok statements: STMT-Q: sourced (sourced)\n#13 [missing]: Research #13\n  missing theorems: TruthCore.Demo.pending (not a present registered solution theorem)\n  missing theorems: TruthCore.Demo.other (not a present registered solution theorem)\n  missing theorems: TruthCore.Demo.nosuch (not a present registered solution theorem)\n#14 [delivered]: Research #14\n  ok results: RESULT-1 (solution-present)\n#15 [malformed]: Research #15\n  malformed: multiple truth-core-acceptance blocks; select one canonical block\n#16 [malformed]: Research #16\n  malformed: unterminated or malformed truth-core-acceptance fence\n#17 [malformed]: Research #17\n  malformed: comments must be a list\n#18 [untracked]: None\n#19 [missing]: Research #19\n  missing results: RESULT-NOSTATUS (verified)\n  missing results: RESULT-MISSING (absent)\n#20 [malformed]: Research #20\n  malformed: multiple truth-core-acceptance blocks; select one canonical block\n#100 [malformed]: Research #100\n  malformed: line 1: expected `field: [ID, ...]`\n  malformed: acceptance block contains no requirements\n#101 [malformed]: Research #101\n  malformed: line 2: duplicate field results\n#102 [malformed]: Research #102\n  malformed: line 1: unknown field unknown\n  malformed: acceptance block contains no requirements\n#103 [malformed]: Research #103\n  malformed: line 1: invalid statements requirement 'STMT-P: magic'\n  malformed: line 1: statements list must not be empty\n#104 [malformed]: Research #104\n  malformed: line 1: duplicate results requirement\n#105 [malformed]: Research #105\n  malformed: line 1: duplicate statements requirement\n#106 [malformed]: Research #106\n  malformed: line 1: invalid results requirement ''\n  malformed: line 1: results list must not be empty\n#107 [malformed]: Research #107\n  malformed: line 1: invalid statements requirement 'STMT-P'\n  malformed: line 1: statements list must not be empty\n#108 [malformed]: Research #108\n  malformed: line 1: invalid results requirement 'bad id'\n  malformed: line 1: results list must not be empty\n#109 [malformed]: Research #109\n  malformed: acceptance block contains no requirements\n#110 [malformed]: Research #110\n  malformed: line 1: invalid theorems requirement ''\nSummary: delivered=5, missing=4, malformed=16, untracked=2\n"
    },
    "externals": [],
@@ -52,6 +55,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_mentions"
     ],
     "stdout_json": {
      "issues": [
@@ -574,6 +580,9 @@
    ],
    "expect": {
     "code": 0,
+    "normalize": [
+     "note_mentions"
+    ],
     "stdout": "#4 [delivered]: Research #4\n  ok results: RESULT-1 (solution-present)\n  ok statements: STMT-Q: sourced (sourced)\n#7 [missing]: Research #7\n  ok statements: STMT-P: proved (proved)\n  missing statements: STMT-Q: closed (sourced)\n  missing statements: STMT-R: sourced (open/absent)\n  ok statements: STMT-SE: closed (self_evident)\n  ok attempts: ATTEMPT-2 (present)\n  missing attempts: ATTEMPT-MISSING (absent)\n#9 [delivered]: Research #9\n  ok results: RESULT-1 (solution-present)\n  ok theorems: TruthCore.Demo.proof (registered/source-present)\n  ok statements: STMT-P: proved (proved)\n  ok statements: STMT-Q: sourced (sourced)\n  ok configurations: CONFIG-1 (present)\n  ok attempts: ATTEMPT-1 (failed)\n#9 [delivered]: Research #9\n  ok statements: STMT-P: closed (proved)\n#12 [delivered]: Research #12\n  ok statements: STMT-Q: sourced (sourced)\nSummary: delivered=5, missing=4, malformed=16, untracked=2\n"
    },
    "externals": [],
@@ -601,6 +610,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_mentions"
     ],
     "stdout_json": {
      "issues": [
@@ -850,6 +862,9 @@
    ],
    "expect": {
     "code": 0,
+    "normalize": [
+     "note_mentions"
+    ],
     "stdout": "#4 [delivered]: Research #4\n  ok results: RESULT-1 (solution-present)\n  ok statements: STMT-Q: sourced (sourced)\n#9 [delivered]: Research #9\n  ok results: RESULT-1 (solution-present)\n  ok theorems: TruthCore.Demo.proof (registered/source-present)\n  ok statements: STMT-P: proved (proved)\n  ok statements: STMT-Q: sourced (sourced)\n  ok configurations: CONFIG-1 (present)\n  ok attempts: ATTEMPT-1 (failed)\n#9 [delivered]: Research #9\n  ok statements: STMT-P: closed (proved)\n#14 [delivered]: Research #14\n  ok results: RESULT-1 (solution-present)\nSummary: delivered=5, missing=4, malformed=16, untracked=2\n"
    },
    "externals": [],
@@ -877,6 +892,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_mentions"
     ],
     "stdout_json": {
      "issues": [
@@ -1075,6 +1093,9 @@
    ],
    "expect": {
     "code": 0,
+    "normalize": [
+     "note_mentions"
+    ],
     "stdout": "Summary: delivered=5, missing=4, malformed=16, untracked=2\n"
    },
    "externals": [],
@@ -1102,6 +1123,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_mentions"
     ],
     "stdout_json": {
      "issues": [],
@@ -1193,6 +1217,9 @@
    ],
    "expect": {
     "code": 0,
+    "normalize": [
+     "note_mentions"
+    ],
     "stdout": "#3 [malformed]: Research #3\n  malformed: acceptance block contains no requirements\n#4 [delivered]: Research #4\n  ok results: RESULT-1 (solution-present)\n  ok statements: STMT-Q: sourced (sourced)\n#7 [missing]: Research #7\n  ok statements: STMT-P: proved (proved)\n  missing statements: STMT-Q: closed (sourced)\n  missing statements: STMT-R: sourced (open/absent)\n  ok statements: STMT-SE: closed (self_evident)\n  ok attempts: ATTEMPT-2 (present)\n  missing attempts: ATTEMPT-MISSING (absent)\n#9 [delivered]: Research #9\n  ok results: RESULT-1 (solution-present)\n  ok theorems: TruthCore.Demo.proof (registered/source-present)\n  ok statements: STMT-P: proved (proved)\n  ok statements: STMT-Q: sourced (sourced)\n  ok configurations: CONFIG-1 (present)\n  ok attempts: ATTEMPT-1 (failed)\n#9 [delivered]: Research #9\n  ok statements: STMT-P: closed (proved)\n#10 [missing]: Research #10\n  missing results: RESULT-PENDING (pending)\n  missing statements: STMT-R: closed (open/absent)\n#11 [untracked]: Research #11\n#12 [delivered]: Research #12\n  ok statements: STMT-Q: sourced (sourced)\n#13 [missing]: Research #13\n  missing theorems: TruthCore.Demo.pending (not a present registered solution theorem)\n  missing theorems: TruthCore.Demo.other (not a present registered solution theorem)\n  missing theorems: TruthCore.Demo.nosuch (not a present registered solution theorem)\n#14 [delivered]: Research #14\n  ok results: RESULT-1 (solution-present)\n#15 [malformed]: Research #15\n  malformed: multiple truth-core-acceptance blocks; select one canonical block\n#16 [malformed]: Research #16\n  malformed: unterminated or malformed truth-core-acceptance fence\n#17 [malformed]: Research #17\n  malformed: comments must be a list\n#18 [untracked]: None\n#19 [missing]: Research #19\n  missing results: RESULT-NOSTATUS (verified)\n  missing results: RESULT-MISSING (absent)\n#20 [malformed]: Research #20\n  malformed: multiple truth-core-acceptance blocks; select one canonical block\n#100 [malformed]: Research #100\n  malformed: line 1: expected `field: [ID, ...]`\n  malformed: acceptance block contains no requirements\n#101 [malformed]: Research #101\n  malformed: line 2: duplicate field results\n#102 [malformed]: Research #102\n  malformed: line 1: unknown field unknown\n  malformed: acceptance block contains no requirements\n#103 [malformed]: Research #103\n  malformed: line 1: invalid statements requirement 'STMT-P: magic'\n  malformed: line 1: statements list must not be empty\n#104 [malformed]: Research #104\n  malformed: line 1: duplicate results requirement\n#105 [malformed]: Research #105\n  malformed: line 1: duplicate statements requirement\n#106 [malformed]: Research #106\n  malformed: line 1: invalid results requirement ''\n  malformed: line 1: results list must not be empty\n#107 [malformed]: Research #107\n  malformed: line 1: invalid statements requirement 'STMT-P'\n  malformed: line 1: statements list must not be empty\n#108 [malformed]: Research #108\n  malformed: line 1: invalid results requirement 'bad id'\n  malformed: line 1: results list must not be empty\n#109 [malformed]: Research #109\n  malformed: acceptance block contains no requirements\n#110 [malformed]: Research #110\n  malformed: line 1: invalid theorems requirement ''\nSummary: delivered=5, missing=4, malformed=16, untracked=2\n"
    },
    "externals": [],
@@ -1220,6 +1247,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_mentions"
     ],
     "stdout_json": {
      "issues": [
@@ -1740,6 +1770,9 @@
    ],
    "expect": {
     "code": 0,
+    "normalize": [
+     "note_mentions"
+    ],
     "stdout": "#3 [malformed]: Research #3\n  malformed: acceptance block contains no requirements\n#4 [delivered]: Research #4\n  ok results: RESULT-1 (solution-present)\n  ok statements: STMT-Q: sourced (sourced)\n#7 [missing]: Research #7\n  ok statements: STMT-P: proved (proved)\n  missing statements: STMT-Q: closed (sourced)\n  missing statements: STMT-R: sourced (open/absent)\n  ok statements: STMT-SE: closed (self_evident)\n  ok attempts: ATTEMPT-2 (present)\n  missing attempts: ATTEMPT-MISSING (absent)\n#9 [missing]: Research #9\n  ok results: RESULT-1 (solution-present)\n  missing theorems: TruthCore.Demo.proof (not a present registered solution theorem)\n  ok statements: STMT-P: proved (proved)\n  ok statements: STMT-Q: sourced (sourced)\n  ok configurations: CONFIG-1 (present)\n  ok attempts: ATTEMPT-1 (failed)\n#9 [delivered]: Research #9\n  ok statements: STMT-P: closed (proved)\n#10 [missing]: Research #10\n  missing results: RESULT-PENDING (pending)\n  missing statements: STMT-R: closed (open/absent)\n#11 [untracked]: Research #11\n#12 [delivered]: Research #12\n  ok statements: STMT-Q: sourced (sourced)\n#13 [missing]: Research #13\n  missing theorems: TruthCore.Demo.pending (not a present registered solution theorem)\n  missing theorems: TruthCore.Demo.other (not a present registered solution theorem)\n  missing theorems: TruthCore.Demo.nosuch (not a present registered solution theorem)\n#14 [delivered]: Research #14\n  ok results: RESULT-1 (solution-present)\n#15 [malformed]: Research #15\n  malformed: multiple truth-core-acceptance blocks; select one canonical block\n#16 [malformed]: Research #16\n  malformed: unterminated or malformed truth-core-acceptance fence\n#17 [malformed]: Research #17\n  malformed: comments must be a list\n#18 [untracked]: None\n#19 [missing]: Research #19\n  missing results: RESULT-NOSTATUS (verified)\n  missing results: RESULT-MISSING (absent)\n#20 [malformed]: Research #20\n  malformed: multiple truth-core-acceptance blocks; select one canonical block\n#100 [malformed]: Research #100\n  malformed: line 1: expected `field: [ID, ...]`\n  malformed: acceptance block contains no requirements\n#101 [malformed]: Research #101\n  malformed: line 2: duplicate field results\n#102 [malformed]: Research #102\n  malformed: line 1: unknown field unknown\n  malformed: acceptance block contains no requirements\n#103 [malformed]: Research #103\n  malformed: line 1: invalid statements requirement 'STMT-P: magic'\n  malformed: line 1: statements list must not be empty\n#104 [malformed]: Research #104\n  malformed: line 1: duplicate results requirement\n#105 [malformed]: Research #105\n  malformed: line 1: duplicate statements requirement\n#106 [malformed]: Research #106\n  malformed: line 1: invalid results requirement ''\n  malformed: line 1: results list must not be empty\n#107 [malformed]: Research #107\n  malformed: line 1: invalid statements requirement 'STMT-P'\n  malformed: line 1: statements list must not be empty\n#108 [malformed]: Research #108\n  malformed: line 1: invalid results requirement 'bad id'\n  malformed: line 1: results list must not be empty\n#109 [malformed]: Research #109\n  malformed: acceptance block contains no requirements\n#110 [malformed]: Research #110\n  malformed: line 1: invalid theorems requirement ''\nSummary: delivered=4, missing=5, malformed=16, untracked=2\n"
    },
    "externals": [],
@@ -1767,6 +1800,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_mentions"
     ],
     "stdout_json": {
      "issues": [

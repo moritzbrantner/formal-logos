@@ -50,13 +50,18 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "lean-reuse: results_inspected: 2, theorem-used, graph-linked: 1, theorem-used, not in argument graph: 0, import only: 1\nAll classifications: lean-reuse --review --json (advisory; no graph changes)\n"
    },
    "externals": [
@@ -89,7 +94,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -98,6 +104,10 @@
     },
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "bind_types",
+     "note_mentions"
     ],
     "stdout_json": {
      "authority": "Lean proof-term references; advisory only, not graph or proof certification",
@@ -166,10 +176,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "lean-reuse: results_inspected: 2, theorem-used, graph-linked: 1, theorem-used, not in argument graph: 0, import only: 1\nAll classifications: lean-reuse --review --json (advisory; no graph changes)\n"
    },
    "externals": [
@@ -204,12 +219,17 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "bind_types",
+     "note_mentions"
     ],
     "stdout_json": {
      "authority": "Lean proof-term references; advisory only, not graph or proof certification",
@@ -276,13 +296,18 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "review: B, from A [eeccc009] uses C, from B (2) [42dd2d14] (TruthCore.Fix.fixBC; 1; no matching argument premise)\nlean-reuse: results_inspected: 2, theorem-used, graph-linked: 0, theorem-used, not in argument graph: 1, import only: 1\nAll classifications: lean-reuse --review --json (advisory; no graph changes)\n"
    },
    "externals": [
@@ -315,7 +340,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -324,6 +350,10 @@
     },
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "bind_types",
+     "note_mentions"
     ],
     "stdout_json": {
      "authority": "Lean proof-term references; advisory only, not graph or proof certification",
@@ -392,10 +422,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "review: B, from A [eeccc009] uses C, from B (2) [42dd2d14] (TruthCore.Fix.fixBC; 1; no matching argument premise)\nlean-reuse: results_inspected: 2, theorem-used, graph-linked: 0, theorem-used, not in argument graph: 1, import only: 1\nAll classifications: lean-reuse --review --json (advisory; no graph changes)\n"
    },
    "externals": [
@@ -430,12 +465,17 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "bind_types",
+     "note_mentions"
     ],
     "stdout_json": {
      "authority": "Lean proof-term references; advisory only, not graph or proof certification",
@@ -501,10 +541,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: lean-reuse is review-only; pass --review\n"
    },
    "externals": [
@@ -536,11 +581,16 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
-    "error_message": "lean-reuse is review-only; pass --review"
+    "error_message": "lean-reuse is review-only; pass --review",
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {
@@ -572,10 +622,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: lean-reuse is review-only; pass --review\n"
    },
    "externals": [
@@ -609,11 +664,16 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
-    "error_message": "lean-reuse is review-only; pass --review"
+    "error_message": "lean-reuse is review-only; pass --review",
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {
@@ -644,13 +704,18 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: Lean reuse did not inspect these theorems (built library may be stale): TruthCore.Fix.fixBC\n"
    },
    "externals": [
@@ -683,14 +748,19 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
     "error_message": "Lean reuse did not inspect these theorems (built library may be stale): TruthCore.Fix.fixBC",
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"]}"
-    }
+    },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {
@@ -723,10 +793,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: Lean reuse did not inspect these theorems (built library may be stale): TruthCore.Fix.fixBC\n"
    },
    "externals": [
@@ -761,11 +836,16 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
-    "error_message": "Lean reuse did not inspect these theorems (built library may be stale): TruthCore.Fix.fixBC"
+    "error_message": "Lean reuse did not inspect these theorems (built library may be stale): TruthCore.Fix.fixBC",
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {
@@ -796,13 +876,18 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: duplicate Lean reuse entry for TruthCore.Fix.fixAB\n"
    },
    "externals": [
@@ -835,14 +920,19 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
     "error_message": "duplicate Lean reuse entry for TruthCore.Fix.fixAB",
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"]}"
-    }
+    },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {
@@ -875,10 +965,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: duplicate Lean reuse entry for TruthCore.Fix.fixAB\n"
    },
    "externals": [
@@ -913,11 +1008,16 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
-    "error_message": "duplicate Lean reuse entry for TruthCore.Fix.fixAB"
+    "error_message": "duplicate Lean reuse entry for TruthCore.Fix.fixAB",
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {
@@ -948,13 +1048,18 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: Lean reuse could not inspect TruthCore.Fix.fixAB: unknown theorem\n"
    },
    "externals": [
@@ -987,14 +1092,19 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
     "error_message": "Lean reuse could not inspect TruthCore.Fix.fixAB: unknown theorem",
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"]}"
-    }
+    },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {
@@ -1027,10 +1137,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: Lean reuse could not inspect TruthCore.Fix.fixAB: unknown theorem\n"
    },
    "externals": [
@@ -1065,11 +1180,16 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
-    "error_message": "Lean reuse could not inspect TruthCore.Fix.fixAB: unknown theorem"
+    "error_message": "Lean reuse could not inspect TruthCore.Fix.fixAB: unknown theorem",
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {
@@ -1100,13 +1220,18 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: Lean reuse entry for TruthCore.Fix.fixAB needs proof_theorems: [strings]\n"
    },
    "externals": [
@@ -1139,14 +1264,19 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
     "error_message": "Lean reuse entry for TruthCore.Fix.fixAB needs proof_theorems: [strings]",
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"]}"
-    }
+    },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {
@@ -1179,10 +1309,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: Lean reuse entry for TruthCore.Fix.fixAB needs proof_theorems: [strings]\n"
    },
    "externals": [
@@ -1217,11 +1352,16 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
-    "error_message": "Lean reuse entry for TruthCore.Fix.fixAB needs proof_theorems: [strings]"
+    "error_message": "Lean reuse entry for TruthCore.Fix.fixAB needs proof_theorems: [strings]",
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {
@@ -1252,13 +1392,18 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: Lean reuse output contains an invalid theorem entry\n"
    },
    "externals": [
@@ -1291,14 +1436,19 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
     "error_message": "Lean reuse output contains an invalid theorem entry",
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"]}"
-    }
+    },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {
@@ -1331,10 +1481,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: Lean reuse output contains an invalid theorem entry\n"
    },
    "externals": [
@@ -1369,11 +1524,16 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
-    "error_message": "Lean reuse output contains an invalid theorem entry"
+    "error_message": "Lean reuse output contains an invalid theorem entry",
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {
@@ -1404,13 +1564,18 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: scripts/LeanReuse.lean must print a JSON array\n"
    },
    "externals": [
@@ -1443,14 +1608,19 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
     "error_message": "scripts/LeanReuse.lean must print a JSON array",
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"]}"
-    }
+    },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {
@@ -1483,10 +1653,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: Lean reuse output must be a JSON array\n"
    },
    "externals": [
@@ -1521,11 +1696,16 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
-    "error_message": "Lean reuse output must be a JSON array"
+    "error_message": "Lean reuse output must be a JSON array",
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {

@@ -55,10 +55,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "unused: B, from A [eeccc009]: A [a8459a54] via h\nskipped: C, from B (2) [42dd2d14] (not bound by bind-check)\nunused-premises: 1 results checked, 1 unexempted and 0 exempted unused premise(s), 0 stale exemption(s), 1 skipped\n"
    },
    "externals": [
@@ -95,10 +100,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "{\n  \"exempted\": [],\n  \"findings\": [\n    {\n      \"hypothesis\": \"h\",\n      \"open_on_root_path\": false,\n      \"result_id\": \"eeccc009-609e-5ceb-88ab-40327322af7f\",\n      \"statement_id\": \"a8459a54-228d-545e-9e81-bf462fcca7a6\",\n      \"theorem\": \"TruthCore.Fix.fixAB\"\n    }\n  ],\n  \"skipped\": [\n    \"42dd2d14-bbc0-51ac-8c6d-84b6c766ce1b\"\n  ],\n  \"stale_exemptions\": [],\n  \"summary\": {\n    \"checked\": 1,\n    \"exempted\": 0,\n    \"findings\": 1,\n    \"gating\": 1,\n    \"skipped\": 1,\n    \"stale_exemptions\": 0\n  }\n}\n"
    },
    "externals": [
@@ -137,10 +147,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "exempted: B, from A [eeccc009]: A [a8459a54] (intended bundle)\nskipped: C, from B (2) [42dd2d14] (not bound by bind-check)\nunused-premises: 1 results checked, 0 unexempted and 1 exempted unused premise(s), 0 stale exemption(s), 1 skipped\n"
    },
    "externals": [
@@ -180,10 +195,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "{\n  \"exempted\": [\n    {\n      \"exemption_reason\": \"intended bundle\",\n      \"hypothesis\": \"h\",\n      \"open_on_root_path\": false,\n      \"result_id\": \"eeccc009-609e-5ceb-88ab-40327322af7f\",\n      \"statement_id\": \"a8459a54-228d-545e-9e81-bf462fcca7a6\",\n      \"theorem\": \"TruthCore.Fix.fixAB\"\n    }\n  ],\n  \"findings\": [],\n  \"skipped\": [\n    \"42dd2d14-bbc0-51ac-8c6d-84b6c766ce1b\"\n  ],\n  \"stale_exemptions\": [],\n  \"summary\": {\n    \"checked\": 1,\n    \"exempted\": 1,\n    \"findings\": 1,\n    \"gating\": 0,\n    \"skipped\": 1,\n    \"stale_exemptions\": 0\n  }\n}\n"
    },
    "externals": [
@@ -217,13 +237,18 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
     "files": {
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "unused: B, from A [eeccc009]: A [a8459a54] via h\nunused-premises: 2 results checked, 1 unexempted and 0 exempted unused premise(s), 0 stale exemption(s), 0 skipped\n"
    },
    "externals": [
@@ -258,13 +283,18 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
     "files": {
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "{\n  \"exempted\": [],\n  \"findings\": [\n    {\n      \"hypothesis\": \"h\",\n      \"open_on_root_path\": false,\n      \"result_id\": \"eeccc009-609e-5ceb-88ab-40327322af7f\",\n      \"statement_id\": \"a8459a54-228d-545e-9e81-bf462fcca7a6\",\n      \"theorem\": \"TruthCore.Fix.fixAB\"\n    }\n  ],\n  \"skipped\": [],\n  \"stale_exemptions\": [],\n  \"summary\": {\n    \"checked\": 2,\n    \"exempted\": 0,\n    \"findings\": 1,\n    \"gating\": 1,\n    \"skipped\": 0,\n    \"stale_exemptions\": 0\n  }\n}\n"
    },
    "externals": [

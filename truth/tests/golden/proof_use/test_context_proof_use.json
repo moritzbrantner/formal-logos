@@ -55,13 +55,18 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "Argument B, from A [541a7716] (derived context; navigation only, not verification)\n  m\n  Senses: T_1\n\nConclusion B [3be459bf]: closed (proved); reaches C [b5a9b5d5]: true\n  STMT-B [Lean TruthCore.Fix.fixB] [senses T_1]\n  no other argument concludes it\n\nPremises (1; every one is required jointly):\n  A [a8459a54]: open (stated); no other argument concludes it\n    STMT-A [Lean TruthCore.Fix.fixA]\n\nLean (authoritative; text copied from the frozen Challenge module):\n  result B, from A [eeccc009] [verified] axioms none\n  TruthCore/Fix/Challenge.lean:1  solution TruthCore/Fix/Solution.lean\n    theorem fixAB (h : fixA) : fixB\n  theorem reuse: Lean proof-term reachability (review only); d = import depth:\n    C, from B (2) [42dd2d14] d1 [verified; theorem-used, not in argument graph] TruthCore.Fix.fixBC\n  results whose Solution imports this Solution: none\n\nInference steps:\n  B, by Mp [7c31b1f2] (mp): A [a8459a54] ⊢ B [3be459bf]\n\nDownstream arguments using the conclusion as a premise:\n  C, from B [5a7649a5] ⊢ C [b5a9b5d5]\n  C, from B (2) [79139f8b] ⊢ C [b5a9b5d5]\nArguments sharing a premise (most shared first):\n  D, from A [43fd1d4c] [no result] shares A [a8459a54] ⊢ D [f6b10efb]\nLean neighbours (Solutions importing the same vocabulary modules; proximity, not entailment):\n  none recorded\n\nRoutes to C [b5a9b5d5] touching this argument (cost = open leaves):\n  C, from B (2) [79139f8b]: cost 1\n  C, from B [5a7649a5]: cost 1\n\nCountermodels and rivals (formal interpretations; no premise closure):\n  model evaluations: 1 satisfies\n  rival relations (alternative_to / attacks / refutes):\n  none recorded\n  configuration cases: Fix [7c83afb6] (p)\n\nAttempts on these statements, newest first (outcomes establish nothing):\n  Derived b [57114f77] [2026-11-07; derivation; succeeded]: Derived STMT-B.\n\nCandidates mentioning these IDs:\n  none recorded\n\nUnresolved:\n  open premises: A [a8459a54]\n  open with no other recorded argument: A [a8459a54]\n  blocked/failed attempts: none\n\nTerms linked by the argument (IDs; read with truth index show):\n  none\n\nNext: corpus.py dossier <open premise>; corpus.py related <conclusion>; scripts/verify-result.sh <result> after lake build.\n"
    },
    "externals": [
@@ -99,7 +104,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -108,6 +114,10 @@
     },
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "bind_types",
+     "note_mentions"
     ],
     "stdout_json": {
      "argument_id": "541a7716-1726-5023-b1c2-d2a656b1a92c",
@@ -363,10 +373,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "Argument B, from A [541a7716] (derived context; navigation only, not verification)\n  m\n  Senses: T_1\n\nConclusion B [3be459bf]: closed (proved); reaches C [b5a9b5d5]: true\n  STMT-B [Lean TruthCore.Fix.fixB] [senses T_1]\n  no other argument concludes it\n\nPremises (1; every one is required jointly):\n  A [a8459a54]: open (stated); no other argument concludes it\n    STMT-A [Lean TruthCore.Fix.fixA]\n\nLean (authoritative; text copied from the frozen Challenge module):\n  result B, from A [eeccc009] [verified] axioms none\n  TruthCore/Fix/Challenge.lean:1  solution TruthCore/Fix/Solution.lean\n    theorem fixAB (h : fixA) : fixB\n  theorem reuse: Lean proof-term reachability (review only); d = import depth:\n    C, from B (2) [42dd2d14] d1 [verified; theorem-used, not in argument graph] TruthCore.Fix.fixBC\n  results whose Solution imports this Solution: none\n\nInference steps:\n  B, by Mp [7c31b1f2] (mp): A [a8459a54] ⊢ B [3be459bf]\n\nDownstream arguments using the conclusion as a premise:\n  C, from B [5a7649a5] ⊢ C [b5a9b5d5]\n  C, from B (2) [79139f8b] ⊢ C [b5a9b5d5]\nArguments sharing a premise (most shared first):\n  D, from A [43fd1d4c] [no result] shares A [a8459a54] ⊢ D [f6b10efb]\nLean neighbours (Solutions importing the same vocabulary modules; proximity, not entailment):\n  none recorded\n\nRoutes to C [b5a9b5d5] touching this argument (cost = open leaves):\n  C, from B (2) [79139f8b]: cost 1\n  C, from B [5a7649a5]: cost 1\n\nCountermodels and rivals (formal interpretations; no premise closure):\n  model evaluations: 1 satisfies\n  rival relations (alternative_to / attacks / refutes):\n  none recorded\n  configuration cases: Fix [7c83afb6] (p)\n\nAttempts on these statements, newest first (outcomes establish nothing):\n  Derived b [57114f77] [2026-11-07; derivation; succeeded]: Derived STMT-B.\n\nCandidates mentioning these IDs:\n  none recorded\n\nUnresolved:\n  open premises: A [a8459a54]\n  open with no other recorded argument: A [a8459a54]\n  blocked/failed attempts: none\n\nTerms linked by the argument (IDs; read with truth index show):\n  none\n\nNext: corpus.py dossier <open premise>; corpus.py related <conclusion>; scripts/verify-result.sh <result> after lake build.\n"
    },
    "externals": [
@@ -405,12 +420,17 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "bind_types",
+     "note_mentions"
     ],
     "stdout_json": {
      "argument_id": "541a7716-1726-5023-b1c2-d2a656b1a92c",
@@ -665,13 +685,18 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixBC\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "Argument C, from B (2) [79139f8b] (derived context; navigation only, not verification)\n  m\n  Senses: T_1, T_2 (several senses of T)\n\nConclusion C [b5a9b5d5]: closed (proved); reaches C [b5a9b5d5]: true\n  STMT-C [Lean TruthCore.Fix.fixC] [senses T_2]\n  also concluded by C, from B [5a7649a5] [no result]\n\nPremises (1; every one is required jointly):\n  B [3be459bf]: closed (proved); also concluded by B, from A [541a7716] [verified]\n    STMT-B [Lean TruthCore.Fix.fixB] [senses T_1]\n\nLean (authoritative; text copied from the frozen Challenge module):\n  result C, from B (2) [42dd2d14] [verified] axioms none\n  TruthCore/Fix/Challenge.lean:?  solution TruthCore/Fix/Solution.lean\n    theorem TruthCore.Fix.fixBC not found in the Challenge source\n  companion theorems in the same Challenge (often countermodels/independence):\n    L1 theorem fixAB (h : fixA) : fixB [NOT in comparator theorem_names]\n  theorem reuse: Lean proof-term reachability (review only); d = import depth:\n    B, from A [eeccc009] d1 [verified; theorem-used, graph-linked] TruthCore.Fix.fixAB\n  results whose Solution imports this Solution: none\n\nInference steps:\n  C, by Mp [3cdaf6ca] (mp): B [3be459bf] ⊢ C [b5a9b5d5]\n\nDownstream arguments using the conclusion as a premise:\n  none recorded\nArguments sharing a premise (most shared first):\n  C, from B [5a7649a5] [no result] shares B [3be459bf] ⊢ C [b5a9b5d5]\nLean neighbours (Solutions importing the same vocabulary modules; proximity, not entailment):\n  none recorded\nSame premise bundle and conclusion (possible duplicate): C, from B [5a7649a5]\n\nRoutes to C [b5a9b5d5] touching this argument (cost = open leaves):\n  C, from B (2) [79139f8b]: cost 1\n  other open leaves on these routes (most routes first): A [a8459a54]\n\nCountermodels and rivals (formal interpretations; no premise closure):\n  model evaluations: none registered\n  rival relations (alternative_to / attacks / refutes):\n    E alternative to C [8e566795]: E [6dbf4ed2] alternative_to C [b5a9b5d5]\n\nAttempts on these statements, newest first (outcomes establish nothing):\n  none recorded\n\nCandidates mentioning these IDs:\n  none recorded\n\nUnresolved:\n  open premises: none\n  open with no other recorded argument: none\n  blocked/failed attempts: none\n  companion theorems not checked by Comparator: C, from B (2) [42dd2d14]:fixAB\n\nTerms linked by the argument (IDs; read with truth index show):\n  T [773fd0bb]\n\nNext: corpus.py dossier <open premise>; corpus.py related <conclusion>; scripts/verify-result.sh <result> after lake build.\n"
    },
    "externals": [
@@ -709,7 +734,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -718,6 +744,10 @@
     },
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "bind_types",
+     "note_mentions"
     ],
     "stdout_json": {
      "argument_id": "79139f8b-4871-5213-9292-b73e0ee11a7d",
@@ -951,10 +981,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "Argument C, from B (2) [79139f8b] (derived context; navigation only, not verification)\n  m\n  Senses: T_1, T_2 (several senses of T)\n\nConclusion C [b5a9b5d5]: closed (proved); reaches C [b5a9b5d5]: true\n  STMT-C [Lean TruthCore.Fix.fixC] [senses T_2]\n  also concluded by C, from B [5a7649a5] [no result]\n\nPremises (1; every one is required jointly):\n  B [3be459bf]: closed (proved); also concluded by B, from A [541a7716] [verified]\n    STMT-B [Lean TruthCore.Fix.fixB] [senses T_1]\n\nLean (authoritative; text copied from the frozen Challenge module):\n  result C, from B (2) [42dd2d14] [verified] axioms none\n  TruthCore/Fix/Challenge.lean:?  solution TruthCore/Fix/Solution.lean\n    theorem TruthCore.Fix.fixBC not found in the Challenge source\n  companion theorems in the same Challenge (often countermodels/independence):\n    L1 theorem fixAB (h : fixA) : fixB [NOT in comparator theorem_names]\n  theorem reuse: Lean proof-term reachability (review only); d = import depth:\n    B, from A [eeccc009] d1 [verified; theorem-used, graph-linked] TruthCore.Fix.fixAB\n  results whose Solution imports this Solution: none\n\nInference steps:\n  C, by Mp [3cdaf6ca] (mp): B [3be459bf] ⊢ C [b5a9b5d5]\n\nDownstream arguments using the conclusion as a premise:\n  none recorded\nArguments sharing a premise (most shared first):\n  C, from B [5a7649a5] [no result] shares B [3be459bf] ⊢ C [b5a9b5d5]\nLean neighbours (Solutions importing the same vocabulary modules; proximity, not entailment):\n  none recorded\nSame premise bundle and conclusion (possible duplicate): C, from B [5a7649a5]\n\nRoutes to C [b5a9b5d5] touching this argument (cost = open leaves):\n  C, from B (2) [79139f8b]: cost 1\n  other open leaves on these routes (most routes first): A [a8459a54]\n\nCountermodels and rivals (formal interpretations; no premise closure):\n  model evaluations: none registered\n  rival relations (alternative_to / attacks / refutes):\n    E alternative to C [8e566795]: E [6dbf4ed2] alternative_to C [b5a9b5d5]\n\nAttempts on these statements, newest first (outcomes establish nothing):\n  none recorded\n\nCandidates mentioning these IDs:\n  none recorded\n\nUnresolved:\n  open premises: none\n  open with no other recorded argument: none\n  blocked/failed attempts: none\n  companion theorems not checked by Comparator: C, from B (2) [42dd2d14]:fixAB\n\nTerms linked by the argument (IDs; read with truth index show):\n  T [773fd0bb]\n\nNext: corpus.py dossier <open premise>; corpus.py related <conclusion>; scripts/verify-result.sh <result> after lake build.\n"
    },
    "externals": [
@@ -993,12 +1028,17 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "bind_types",
+     "note_mentions"
     ],
     "stdout_json": {
      "argument_id": "79139f8b-4871-5213-9292-b73e0ee11a7d",
@@ -1231,13 +1271,18 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "Argument B, from A [541a7716] (derived context; navigation only, not verification)\n  m\n  Senses: T_1\n\nConclusion B [3be459bf]: closed (proved); reaches C [b5a9b5d5]: true\n  STMT-B [Lean TruthCore.Fix.fixB] [senses T_1]\n  no other argument concludes it\n\nPremises (1; every one is required jointly):\n  A [a8459a54]: open (stated); no other argument concludes it\n    STMT-A [Lean TruthCore.Fix.fixA]\n\nLean (authoritative; text copied from the frozen Challenge module):\n  result B, from A [eeccc009] [verified] axioms none\n  TruthCore/Fix/Challenge.lean:1  solution TruthCore/Fix/Solution.lean\n    theorem fixAB (h : fixA) : fixB\n  theorem reuse: Lean proof-term reachability (review only); d = import depth:\n    C, from B (2) [42dd2d14] d1 [verified; import only] TruthCore.Fix.fixBC\n  results whose Solution imports this Solution: none\n\nInference steps:\n  B, by Mp [7c31b1f2] (mp): A [a8459a54] ⊢ B [3be459bf]\n\nDownstream arguments using the conclusion as a premise:\n  C, from B [5a7649a5] ⊢ C [b5a9b5d5]\n  C, from B (2) [79139f8b] ⊢ C [b5a9b5d5]\nArguments sharing a premise (most shared first):\n  D, from A [43fd1d4c] [no result] shares A [a8459a54] ⊢ D [f6b10efb]\nLean neighbours (Solutions importing the same vocabulary modules; proximity, not entailment):\n  none recorded\n\nRoutes to C [b5a9b5d5] touching this argument (cost = open leaves):\n  C, from B (2) [79139f8b]: cost 1\n  C, from B [5a7649a5]: cost 1\n\nCountermodels and rivals (formal interpretations; no premise closure):\n  model evaluations: 1 satisfies\n  rival relations (alternative_to / attacks / refutes):\n  none recorded\n  configuration cases: Fix [7c83afb6] (p)\n\nAttempts on these statements, newest first (outcomes establish nothing):\n  Derived b [57114f77] [2026-11-07; derivation; succeeded]: Derived STMT-B.\n\nCandidates mentioning these IDs:\n  none recorded\n\nUnresolved:\n  open premises: A [a8459a54]\n  open with no other recorded argument: A [a8459a54]\n  blocked/failed attempts: none\n\nTerms linked by the argument (IDs; read with truth index show):\n  none\n\nNext: corpus.py dossier <open premise>; corpus.py related <conclusion>; scripts/verify-result.sh <result> after lake build.\n"
    },
    "externals": [
@@ -1275,7 +1320,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -1284,6 +1330,10 @@
     },
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "bind_types",
+     "note_mentions"
     ],
     "stdout_json": {
      "argument_id": "541a7716-1726-5023-b1c2-d2a656b1a92c",
@@ -1537,10 +1587,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "Argument B, from A [541a7716] (derived context; navigation only, not verification)\n  m\n  Senses: T_1\n\nConclusion B [3be459bf]: closed (proved); reaches C [b5a9b5d5]: true\n  STMT-B [Lean TruthCore.Fix.fixB] [senses T_1]\n  no other argument concludes it\n\nPremises (1; every one is required jointly):\n  A [a8459a54]: open (stated); no other argument concludes it\n    STMT-A [Lean TruthCore.Fix.fixA]\n\nLean (authoritative; text copied from the frozen Challenge module):\n  result B, from A [eeccc009] [verified] axioms none\n  TruthCore/Fix/Challenge.lean:1  solution TruthCore/Fix/Solution.lean\n    theorem fixAB (h : fixA) : fixB\n  theorem reuse: Lean proof-term reachability (review only); d = import depth:\n    C, from B (2) [42dd2d14] d1 [verified; import only] TruthCore.Fix.fixBC\n  results whose Solution imports this Solution: none\n\nInference steps:\n  B, by Mp [7c31b1f2] (mp): A [a8459a54] ⊢ B [3be459bf]\n\nDownstream arguments using the conclusion as a premise:\n  C, from B [5a7649a5] ⊢ C [b5a9b5d5]\n  C, from B (2) [79139f8b] ⊢ C [b5a9b5d5]\nArguments sharing a premise (most shared first):\n  D, from A [43fd1d4c] [no result] shares A [a8459a54] ⊢ D [f6b10efb]\nLean neighbours (Solutions importing the same vocabulary modules; proximity, not entailment):\n  none recorded\n\nRoutes to C [b5a9b5d5] touching this argument (cost = open leaves):\n  C, from B (2) [79139f8b]: cost 1\n  C, from B [5a7649a5]: cost 1\n\nCountermodels and rivals (formal interpretations; no premise closure):\n  model evaluations: 1 satisfies\n  rival relations (alternative_to / attacks / refutes):\n  none recorded\n  configuration cases: Fix [7c83afb6] (p)\n\nAttempts on these statements, newest first (outcomes establish nothing):\n  Derived b [57114f77] [2026-11-07; derivation; succeeded]: Derived STMT-B.\n\nCandidates mentioning these IDs:\n  none recorded\n\nUnresolved:\n  open premises: A [a8459a54]\n  open with no other recorded argument: A [a8459a54]\n  blocked/failed attempts: none\n\nTerms linked by the argument (IDs; read with truth index show):\n  none\n\nNext: corpus.py dossier <open premise>; corpus.py related <conclusion>; scripts/verify-result.sh <result> after lake build.\n"
    },
    "externals": [
@@ -1579,12 +1634,17 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "bind_types",
+     "note_mentions"
     ],
     "stdout_json": {
      "argument_id": "541a7716-1726-5023-b1c2-d2a656b1a92c",
@@ -1837,13 +1897,18 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixBC\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "Argument C, from B (2) [79139f8b] (derived context; navigation only, not verification)\n  m\n  Senses: T_1, T_2 (several senses of T)\n\nConclusion C [b5a9b5d5]: closed (proved); reaches C [b5a9b5d5]: true\n  STMT-C [Lean TruthCore.Fix.fixC] [senses T_2]\n  also concluded by C, from B [5a7649a5] [no result]\n\nPremises (1; every one is required jointly):\n  B [3be459bf]: closed (proved); also concluded by B, from A [541a7716] [verified]\n    STMT-B [Lean TruthCore.Fix.fixB] [senses T_1]\n\nLean (authoritative; text copied from the frozen Challenge module):\n  result C, from B (2) [42dd2d14] [verified] axioms none\n  TruthCore/Fix/Challenge.lean:?  solution TruthCore/Fix/Solution.lean\n    theorem TruthCore.Fix.fixBC not found in the Challenge source\n  companion theorems in the same Challenge (often countermodels/independence):\n    L1 theorem fixAB (h : fixA) : fixB [NOT in comparator theorem_names]\n  theorem reuse: Lean proof-term reachability (review only); d = import depth:\n    B, from A [eeccc009] d1 [verified; import only] TruthCore.Fix.fixAB\n  results whose Solution imports this Solution: none\n\nInference steps:\n  C, by Mp [3cdaf6ca] (mp): B [3be459bf] ⊢ C [b5a9b5d5]\n\nDownstream arguments using the conclusion as a premise:\n  none recorded\nArguments sharing a premise (most shared first):\n  C, from B [5a7649a5] [no result] shares B [3be459bf] ⊢ C [b5a9b5d5]\nLean neighbours (Solutions importing the same vocabulary modules; proximity, not entailment):\n  none recorded\nSame premise bundle and conclusion (possible duplicate): C, from B [5a7649a5]\n\nRoutes to C [b5a9b5d5] touching this argument (cost = open leaves):\n  C, from B (2) [79139f8b]: cost 1\n  other open leaves on these routes (most routes first): A [a8459a54]\n\nCountermodels and rivals (formal interpretations; no premise closure):\n  model evaluations: none registered\n  rival relations (alternative_to / attacks / refutes):\n    E alternative to C [8e566795]: E [6dbf4ed2] alternative_to C [b5a9b5d5]\n\nAttempts on these statements, newest first (outcomes establish nothing):\n  none recorded\n\nCandidates mentioning these IDs:\n  none recorded\n\nUnresolved:\n  open premises: none\n  open with no other recorded argument: none\n  blocked/failed attempts: none\n  companion theorems not checked by Comparator: C, from B (2) [42dd2d14]:fixAB\n\nTerms linked by the argument (IDs; read with truth index show):\n  T [773fd0bb]\n\nNext: corpus.py dossier <open premise>; corpus.py related <conclusion>; scripts/verify-result.sh <result> after lake build.\n"
    },
    "externals": [
@@ -1881,7 +1946,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -1890,6 +1956,10 @@
     },
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "bind_types",
+     "note_mentions"
     ],
     "stdout_json": {
      "argument_id": "79139f8b-4871-5213-9292-b73e0ee11a7d",
@@ -2121,10 +2191,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "Argument C, from B (2) [79139f8b] (derived context; navigation only, not verification)\n  m\n  Senses: T_1, T_2 (several senses of T)\n\nConclusion C [b5a9b5d5]: closed (proved); reaches C [b5a9b5d5]: true\n  STMT-C [Lean TruthCore.Fix.fixC] [senses T_2]\n  also concluded by C, from B [5a7649a5] [no result]\n\nPremises (1; every one is required jointly):\n  B [3be459bf]: closed (proved); also concluded by B, from A [541a7716] [verified]\n    STMT-B [Lean TruthCore.Fix.fixB] [senses T_1]\n\nLean (authoritative; text copied from the frozen Challenge module):\n  result C, from B (2) [42dd2d14] [verified] axioms none\n  TruthCore/Fix/Challenge.lean:?  solution TruthCore/Fix/Solution.lean\n    theorem TruthCore.Fix.fixBC not found in the Challenge source\n  companion theorems in the same Challenge (often countermodels/independence):\n    L1 theorem fixAB (h : fixA) : fixB [NOT in comparator theorem_names]\n  theorem reuse: Lean proof-term reachability (review only); d = import depth:\n    B, from A [eeccc009] d1 [verified; import only] TruthCore.Fix.fixAB\n  results whose Solution imports this Solution: none\n\nInference steps:\n  C, by Mp [3cdaf6ca] (mp): B [3be459bf] ⊢ C [b5a9b5d5]\n\nDownstream arguments using the conclusion as a premise:\n  none recorded\nArguments sharing a premise (most shared first):\n  C, from B [5a7649a5] [no result] shares B [3be459bf] ⊢ C [b5a9b5d5]\nLean neighbours (Solutions importing the same vocabulary modules; proximity, not entailment):\n  none recorded\nSame premise bundle and conclusion (possible duplicate): C, from B [5a7649a5]\n\nRoutes to C [b5a9b5d5] touching this argument (cost = open leaves):\n  C, from B (2) [79139f8b]: cost 1\n  other open leaves on these routes (most routes first): A [a8459a54]\n\nCountermodels and rivals (formal interpretations; no premise closure):\n  model evaluations: none registered\n  rival relations (alternative_to / attacks / refutes):\n    E alternative to C [8e566795]: E [6dbf4ed2] alternative_to C [b5a9b5d5]\n\nAttempts on these statements, newest first (outcomes establish nothing):\n  none recorded\n\nCandidates mentioning these IDs:\n  none recorded\n\nUnresolved:\n  open premises: none\n  open with no other recorded argument: none\n  blocked/failed attempts: none\n  companion theorems not checked by Comparator: C, from B (2) [42dd2d14]:fixAB\n\nTerms linked by the argument (IDs; read with truth index show):\n  T [773fd0bb]\n\nNext: corpus.py dossier <open premise>; corpus.py related <conclusion>; scripts/verify-result.sh <result> after lake build.\n"
    },
    "externals": [
@@ -2163,12 +2238,17 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "bind_types",
+     "note_mentions"
     ],
     "stdout_json": {
      "argument_id": "79139f8b-4871-5213-9292-b73e0ee11a7d",
@@ -2399,13 +2479,18 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "Argument B, from A [541a7716] (derived context; navigation only, not verification)\n  m\n  Senses: T_1\n\nConclusion B [3be459bf]: closed (proved); reaches C [b5a9b5d5]: true\n  STMT-B [Lean TruthCore.Fix.fixB] [senses T_1]\n  no other argument concludes it\n\nPremises (1; every one is required jointly):\n  A [a8459a54]: open (stated); no other argument concludes it\n    STMT-A [Lean TruthCore.Fix.fixA]\n\nLean (authoritative; text copied from the frozen Challenge module):\n  result B, from A [eeccc009] [verified] axioms none\n  TruthCore/Fix/Challenge.lean:1  solution TruthCore/Fix/Solution.lean\n    theorem fixAB (h : fixA) : fixB\n  theorem reuse: Lean proof-term reachability (review only); d = import depth:\n    C, from B (2) [42dd2d14] d1 [verified; import only] TruthCore.Fix.fixBC\n  results whose Solution imports this Solution: none\n\nInference steps:\n  B, by Mp [7c31b1f2] (mp): A [a8459a54] ⊢ B [3be459bf]\n\nDownstream arguments using the conclusion as a premise:\n  C, from B [5a7649a5] ⊢ C [b5a9b5d5]\n  C, from B (2) [79139f8b] ⊢ C [b5a9b5d5]\nArguments sharing a premise (most shared first):\n  D, from A [43fd1d4c] [no result] shares A [a8459a54] ⊢ D [f6b10efb]\nLean neighbours (Solutions importing the same vocabulary modules; proximity, not entailment):\n  none recorded\n\nRoutes to C [b5a9b5d5] touching this argument (cost = open leaves):\n  C, from B (2) [79139f8b]: cost 1\n  C, from B [5a7649a5]: cost 1\n\nCountermodels and rivals (formal interpretations; no premise closure):\n  model evaluations: 1 satisfies\n  rival relations (alternative_to / attacks / refutes):\n  none recorded\n  configuration cases: Fix [7c83afb6] (p)\n\nAttempts on these statements, newest first (outcomes establish nothing):\n  Derived b [57114f77] [2026-11-07; derivation; succeeded]: Derived STMT-B.\n\nCandidates mentioning these IDs:\n  none recorded\n\nUnresolved:\n  open premises: A [a8459a54]\n  open with no other recorded argument: A [a8459a54]\n  blocked/failed attempts: none\n\nTerms linked by the argument (IDs; read with truth index show):\n  none\n\nNext: corpus.py dossier <open premise>; corpus.py related <conclusion>; scripts/verify-result.sh <result> after lake build.\n"
    },
    "externals": [
@@ -2443,7 +2528,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -2452,6 +2538,10 @@
     },
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "bind_types",
+     "note_mentions"
     ],
     "stdout_json": {
      "argument_id": "541a7716-1726-5023-b1c2-d2a656b1a92c",
@@ -2705,10 +2795,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "Argument B, from A [541a7716] (derived context; navigation only, not verification)\n  m\n  Senses: T_1\n\nConclusion B [3be459bf]: closed (proved); reaches C [b5a9b5d5]: true\n  STMT-B [Lean TruthCore.Fix.fixB] [senses T_1]\n  no other argument concludes it\n\nPremises (1; every one is required jointly):\n  A [a8459a54]: open (stated); no other argument concludes it\n    STMT-A [Lean TruthCore.Fix.fixA]\n\nLean (authoritative; text copied from the frozen Challenge module):\n  result B, from A [eeccc009] [verified] axioms none\n  TruthCore/Fix/Challenge.lean:1  solution TruthCore/Fix/Solution.lean\n    theorem fixAB (h : fixA) : fixB\n  theorem reuse: Lean proof-term reachability (review only); d = import depth:\n    C, from B (2) [42dd2d14] d1 [verified; import only] TruthCore.Fix.fixBC\n  results whose Solution imports this Solution: none\n\nInference steps:\n  B, by Mp [7c31b1f2] (mp): A [a8459a54] ⊢ B [3be459bf]\n\nDownstream arguments using the conclusion as a premise:\n  C, from B [5a7649a5] ⊢ C [b5a9b5d5]\n  C, from B (2) [79139f8b] ⊢ C [b5a9b5d5]\nArguments sharing a premise (most shared first):\n  D, from A [43fd1d4c] [no result] shares A [a8459a54] ⊢ D [f6b10efb]\nLean neighbours (Solutions importing the same vocabulary modules; proximity, not entailment):\n  none recorded\n\nRoutes to C [b5a9b5d5] touching this argument (cost = open leaves):\n  C, from B (2) [79139f8b]: cost 1\n  C, from B [5a7649a5]: cost 1\n\nCountermodels and rivals (formal interpretations; no premise closure):\n  model evaluations: 1 satisfies\n  rival relations (alternative_to / attacks / refutes):\n  none recorded\n  configuration cases: Fix [7c83afb6] (p)\n\nAttempts on these statements, newest first (outcomes establish nothing):\n  Derived b [57114f77] [2026-11-07; derivation; succeeded]: Derived STMT-B.\n\nCandidates mentioning these IDs:\n  none recorded\n\nUnresolved:\n  open premises: A [a8459a54]\n  open with no other recorded argument: A [a8459a54]\n  blocked/failed attempts: none\n\nTerms linked by the argument (IDs; read with truth index show):\n  none\n\nNext: corpus.py dossier <open premise>; corpus.py related <conclusion>; scripts/verify-result.sh <result> after lake build.\n"
    },
    "externals": [
@@ -2747,12 +2842,17 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "bind_types",
+     "note_mentions"
     ],
     "stdout_json": {
      "argument_id": "541a7716-1726-5023-b1c2-d2a656b1a92c",
@@ -3005,13 +3105,18 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixBC\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: Lean reuse did not inspect these theorems (built library may be stale): TruthCore.Fix.fixBC\n"
    },
    "externals": [
@@ -3049,14 +3154,19 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
     "error_message": "Lean reuse did not inspect these theorems (built library may be stale): TruthCore.Fix.fixBC",
     "files": {
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixBC\"]}"
-    }
+    },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {
@@ -3093,10 +3203,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: Lean reuse did not inspect these theorems (built library may be stale): TruthCore.Fix.fixBC\n"
    },
    "externals": [
@@ -3135,11 +3250,16 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
-    "error_message": "Lean reuse did not inspect these theorems (built library may be stale): TruthCore.Fix.fixBC"
+    "error_message": "Lean reuse did not inspect these theorems (built library may be stale): TruthCore.Fix.fixBC",
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {

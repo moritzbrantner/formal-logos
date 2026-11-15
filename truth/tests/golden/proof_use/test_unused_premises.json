@@ -49,7 +49,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -57,6 +58,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "unused-premises: 2 results checked, 0 unexempted and 0 exempted unused premise(s), 0 stale exemption(s), 0 skipped\n"
    },
    "externals": [
@@ -88,7 +93,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -96,6 +102,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "{\n  \"exempted\": [],\n  \"findings\": [],\n  \"skipped\": [],\n  \"stale_exemptions\": [],\n  \"summary\": {\n    \"checked\": 2,\n    \"exempted\": 0,\n    \"findings\": 0,\n    \"gating\": 0,\n    \"skipped\": 0,\n    \"stale_exemptions\": 0\n  }\n}\n"
    },
    "externals": [
@@ -126,7 +136,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -134,6 +145,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "unused: B, from A [eeccc009]: A [a8459a54] via h\nunused-premises: 2 results checked, 1 unexempted and 0 exempted unused premise(s), 0 stale exemption(s), 0 skipped\n"
    },
    "externals": [
@@ -165,7 +180,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -173,6 +189,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "{\n  \"exempted\": [],\n  \"findings\": [\n    {\n      \"hypothesis\": \"h\",\n      \"open_on_root_path\": false,\n      \"result_id\": \"eeccc009-609e-5ceb-88ab-40327322af7f\",\n      \"statement_id\": \"a8459a54-228d-545e-9e81-bf462fcca7a6\",\n      \"theorem\": \"TruthCore.Fix.fixAB\"\n    }\n  ],\n  \"skipped\": [],\n  \"stale_exemptions\": [],\n  \"summary\": {\n    \"checked\": 2,\n    \"exempted\": 0,\n    \"findings\": 1,\n    \"gating\": 1,\n    \"skipped\": 0,\n    \"stale_exemptions\": 0\n  }\n}\n"
    },
    "externals": [
@@ -204,7 +224,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 1,
@@ -212,6 +233,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "unused: B, from A [eeccc009]: A [a8459a54] via h\nunused-premises: 2 results checked, 1 unexempted and 0 exempted unused premise(s), 0 stale exemption(s), 0 skipped\n"
    },
    "externals": [
@@ -244,7 +269,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 1,
@@ -252,6 +278,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "{\n  \"exempted\": [],\n  \"findings\": [\n    {\n      \"hypothesis\": \"h\",\n      \"open_on_root_path\": false,\n      \"result_id\": \"eeccc009-609e-5ceb-88ab-40327322af7f\",\n      \"statement_id\": \"a8459a54-228d-545e-9e81-bf462fcca7a6\",\n      \"theorem\": \"TruthCore.Fix.fixAB\"\n    }\n  ],\n  \"skipped\": [],\n  \"stale_exemptions\": [],\n  \"summary\": {\n    \"checked\": 2,\n    \"exempted\": 0,\n    \"findings\": 1,\n    \"gating\": 1,\n    \"skipped\": 0,\n    \"stale_exemptions\": 0\n  }\n}\n"
    },
    "externals": [
@@ -284,7 +314,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -292,6 +323,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "unused: B, from A [eeccc009]: A [a8459a54] via h [open, on root path]\nunused-premises: 2 results checked, 1 unexempted and 0 exempted unused premise(s), 0 stale exemption(s), 0 skipped\n"
    },
    "externals": [
@@ -325,7 +360,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -333,6 +369,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "{\n  \"exempted\": [],\n  \"findings\": [\n    {\n      \"hypothesis\": \"h\",\n      \"open_on_root_path\": true,\n      \"result_id\": \"eeccc009-609e-5ceb-88ab-40327322af7f\",\n      \"statement_id\": \"a8459a54-228d-545e-9e81-bf462fcca7a6\",\n      \"theorem\": \"TruthCore.Fix.fixAB\"\n    }\n  ],\n  \"skipped\": [],\n  \"stale_exemptions\": [],\n  \"summary\": {\n    \"checked\": 2,\n    \"exempted\": 0,\n    \"findings\": 1,\n    \"gating\": 1,\n    \"skipped\": 0,\n    \"stale_exemptions\": 0\n  }\n}\n"
    },
    "externals": [
@@ -364,7 +404,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 1,
@@ -372,6 +413,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "unused: B, from A [eeccc009]: A [a8459a54] via T.1 (conjunct 1 of TruthCore.Comparison.Theory)\nunused-premises: 2 results checked, 1 unexempted and 0 exempted unused premise(s), 0 stale exemption(s), 0 skipped\n"
    },
    "externals": [
@@ -404,7 +449,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 1,
@@ -412,6 +458,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "{\n  \"exempted\": [],\n  \"findings\": [\n    {\n      \"bundle\": \"TruthCore.Comparison.Theory\",\n      \"conjunct\": 0,\n      \"hypothesis\": \"T.1\",\n      \"open_on_root_path\": false,\n      \"result_id\": \"eeccc009-609e-5ceb-88ab-40327322af7f\",\n      \"statement_id\": \"a8459a54-228d-545e-9e81-bf462fcca7a6\",\n      \"theorem\": \"TruthCore.Fix.fixAB\"\n    }\n  ],\n  \"skipped\": [],\n  \"stale_exemptions\": [],\n  \"summary\": {\n    \"checked\": 2,\n    \"exempted\": 0,\n    \"findings\": 1,\n    \"gating\": 1,\n    \"skipped\": 0,\n    \"stale_exemptions\": 0\n  }\n}\n"
    },
    "externals": [
@@ -443,7 +493,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -451,6 +502,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "unused-premises: 2 results checked, 0 unexempted and 0 exempted unused premise(s), 0 stale exemption(s), 0 skipped\n"
    },
    "externals": [
@@ -483,7 +538,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -491,6 +547,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "{\n  \"exempted\": [],\n  \"findings\": [],\n  \"skipped\": [],\n  \"stale_exemptions\": [],\n  \"summary\": {\n    \"checked\": 2,\n    \"exempted\": 0,\n    \"findings\": 0,\n    \"gating\": 0,\n    \"skipped\": 0,\n    \"stale_exemptions\": 0\n  }\n}\n"
    },
    "externals": [
@@ -522,7 +582,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -530,6 +591,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "exempted: B, from A [eeccc009]: A [a8459a54] (intended bundle)\nunused-premises: 2 results checked, 0 unexempted and 1 exempted unused premise(s), 0 stale exemption(s), 0 skipped\n"
    },
    "externals": [
@@ -564,7 +629,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -572,6 +638,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "{\n  \"exempted\": [\n    {\n      \"exemption_reason\": \"intended bundle\",\n      \"hypothesis\": \"h\",\n      \"open_on_root_path\": false,\n      \"result_id\": \"eeccc009-609e-5ceb-88ab-40327322af7f\",\n      \"statement_id\": \"a8459a54-228d-545e-9e81-bf462fcca7a6\",\n      \"theorem\": \"TruthCore.Fix.fixAB\"\n    }\n  ],\n  \"findings\": [],\n  \"skipped\": [],\n  \"stale_exemptions\": [],\n  \"summary\": {\n    \"checked\": 2,\n    \"exempted\": 1,\n    \"findings\": 1,\n    \"gating\": 0,\n    \"skipped\": 0,\n    \"stale_exemptions\": 0\n  }\n}\n"
    },
    "externals": [
@@ -605,7 +675,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 1,
@@ -613,6 +684,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "stale exemption: C, from B (2) [42dd2d14] / B [3be459bf] has no unused-premise finding; remove it from unused-premise-exemptions.json\nunused-premises: 2 results checked, 0 unexempted and 0 exempted unused premise(s), 1 stale exemption(s), 0 skipped\n"
    },
    "externals": [
@@ -647,7 +722,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 1,
@@ -655,6 +731,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "{\n  \"exempted\": [],\n  \"findings\": [],\n  \"skipped\": [],\n  \"stale_exemptions\": [\n    \"42dd2d14-bbc0-51ac-8c6d-84b6c766ce1b / 3be459bf-458d-516d-84b8-483b47465286\"\n  ],\n  \"summary\": {\n    \"checked\": 2,\n    \"exempted\": 0,\n    \"findings\": 0,\n    \"gating\": 0,\n    \"skipped\": 0,\n    \"stale_exemptions\": 1\n  }\n}\n"
    },
    "externals": [
@@ -687,7 +767,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -695,6 +776,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "exempted: B, from A [eeccc009]: A [a8459a54] (intended bundle)\nstale exemption: C, from B (2) [42dd2d14] / B [3be459bf] has no unused-premise finding; remove it from unused-premise-exemptions.json\nunused-premises: 2 results checked, 0 unexempted and 1 exempted unused premise(s), 1 stale exemption(s), 0 skipped\n"
    },
    "externals": [
@@ -728,7 +813,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -736,6 +822,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "{\n  \"exempted\": [\n    {\n      \"exemption_reason\": \"intended bundle\",\n      \"hypothesis\": \"h\",\n      \"open_on_root_path\": false,\n      \"result_id\": \"eeccc009-609e-5ceb-88ab-40327322af7f\",\n      \"statement_id\": \"a8459a54-228d-545e-9e81-bf462fcca7a6\",\n      \"theorem\": \"TruthCore.Fix.fixAB\"\n    }\n  ],\n  \"findings\": [],\n  \"skipped\": [],\n  \"stale_exemptions\": [\n    \"42dd2d14-bbc0-51ac-8c6d-84b6c766ce1b / 3be459bf-458d-516d-84b8-483b47465286\"\n  ],\n  \"summary\": {\n    \"checked\": 2,\n    \"exempted\": 1,\n    \"findings\": 1,\n    \"gating\": 0,\n    \"skipped\": 0,\n    \"stale_exemptions\": 1\n  }\n}\n"
    },
    "externals": [
@@ -769,7 +859,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -777,6 +868,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "skipped: B, from A [eeccc009] (not bound by bind-check)\nunused-premises: 1 results checked, 0 unexempted and 0 exempted unused premise(s), 0 stale exemption(s), 1 skipped\n"
    },
    "externals": [
@@ -809,7 +904,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -817,6 +913,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "{\n  \"exempted\": [],\n  \"findings\": [],\n  \"skipped\": [\n    \"eeccc009-609e-5ceb-88ab-40327322af7f\"\n  ],\n  \"stale_exemptions\": [],\n  \"summary\": {\n    \"checked\": 1,\n    \"exempted\": 0,\n    \"findings\": 0,\n    \"gating\": 0,\n    \"skipped\": 1,\n    \"stale_exemptions\": 0\n  }\n}\n"
    },
    "externals": [
@@ -847,7 +947,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -855,6 +956,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "skipped: B, from A [eeccc009] (not bound by bind-check)\nunused-premises: 1 results checked, 0 unexempted and 0 exempted unused premise(s), 0 stale exemption(s), 1 skipped\n"
    },
    "externals": [
@@ -886,7 +991,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -894,6 +1000,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "{\n  \"exempted\": [],\n  \"findings\": [],\n  \"skipped\": [\n    \"eeccc009-609e-5ceb-88ab-40327322af7f\"\n  ],\n  \"stale_exemptions\": [],\n  \"summary\": {\n    \"checked\": 1,\n    \"exempted\": 0,\n    \"findings\": 0,\n    \"gating\": 0,\n    \"skipped\": 1,\n    \"stale_exemptions\": 0\n  }\n}\n"
    },
    "externals": [
@@ -924,7 +1034,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -932,6 +1043,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "skipped: B, from A [eeccc009] (not bound by bind-check)\nunused-premises: 1 results checked, 0 unexempted and 0 exempted unused premise(s), 0 stale exemption(s), 1 skipped\n"
    },
    "externals": [
@@ -963,7 +1078,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -971,6 +1087,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "{\n  \"exempted\": [],\n  \"findings\": [],\n  \"skipped\": [\n    \"eeccc009-609e-5ceb-88ab-40327322af7f\"\n  ],\n  \"stale_exemptions\": [],\n  \"summary\": {\n    \"checked\": 1,\n    \"exempted\": 0,\n    \"findings\": 0,\n    \"gating\": 0,\n    \"skipped\": 1,\n    \"stale_exemptions\": 0\n  }\n}\n"
    },
    "externals": [
@@ -1001,7 +1121,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -1009,6 +1130,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "skipped: B, from A [eeccc009] (not bound by bind-check)\nunused-premises: 2 results checked, 0 unexempted and 0 exempted unused premise(s), 0 stale exemption(s), 1 skipped\n"
    },
    "externals": [
@@ -1040,7 +1165,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 0,
@@ -1048,6 +1174,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stdout": "{\n  \"exempted\": [],\n  \"findings\": [],\n  \"skipped\": [\n    \"eeccc009-609e-5ceb-88ab-40327322af7f\"\n  ],\n  \"stale_exemptions\": [],\n  \"summary\": {\n    \"checked\": 2,\n    \"exempted\": 0,\n    \"findings\": 0,\n    \"gating\": 0,\n    \"skipped\": 1,\n    \"stale_exemptions\": 0\n  }\n}\n"
    },
    "externals": [
@@ -1078,7 +1208,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
@@ -1086,6 +1217,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: unused-premise-exemptions.json: exemption 0 (eeccc009-609e-5ceb-88ab-40327322af7f): `reason` must be a nonempty string\n"
    },
    "externals": [
@@ -1119,7 +1254,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
@@ -1127,7 +1263,11 @@
     "files": {
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
-    }
+    },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {
@@ -1159,7 +1299,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
@@ -1167,6 +1308,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: unused-premise-exemptions.json: exemption 0: needs exactly `result_id`, `statement_ids` and `reason`\n"
    },
    "externals": [
@@ -1200,7 +1345,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
@@ -1208,7 +1354,11 @@
     "files": {
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
-    }
+    },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {
@@ -1240,7 +1390,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
@@ -1248,6 +1399,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: unused-premise-exemptions.json: exemption 0 (eeccc009-609e-5ceb-88ab-40327322af7f): `statement_ids` must be a nonempty list of ids\n"
    },
    "externals": [
@@ -1281,7 +1436,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
@@ -1289,7 +1445,11 @@
     "files": {
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
-    }
+    },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {
@@ -1321,7 +1481,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
@@ -1329,6 +1490,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: unused-premise-exemptions.json: exemption 0: `result_id` must be a nonempty string\n"
    },
    "externals": [
@@ -1362,7 +1527,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
@@ -1370,7 +1536,11 @@
     "files": {
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
-    }
+    },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {
@@ -1402,7 +1572,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
@@ -1410,6 +1581,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: unused-premise-exemptions.json: exemption 1: eeccc009-609e-5ceb-88ab-40327322af7f / a8459a54-228d-545e-9e81-bf462fcca7a6 is exempted twice\n"
    },
    "externals": [
@@ -1443,7 +1618,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
@@ -1451,7 +1627,11 @@
     "files": {
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
-    }
+    },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {
@@ -1483,7 +1663,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
@@ -1491,6 +1672,10 @@
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
     },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: unused-premise-exemptions.json: expected an object with an `exemptions` list\n"
    },
    "externals": [
@@ -1524,7 +1709,8 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
@@ -1532,7 +1718,11 @@
     "files": {
      "⟪root⟫/capture-rust/BindTypes.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}",
      "⟪root⟫/capture-rust/UnusedPremises.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixBC\", \"TruthCore.Fix.fixAB\"], \"bundle_prefixes\": [\"TruthCore.Comparison.\"]}"
-    }
+    },
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {

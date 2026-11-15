@@ -27,56 +27,8 @@
     "ignore_keys": [
      "input_identity"
     ],
-    "stdout_json": []
-   },
-   "externals": [],
-   "name": "",
-   "tree": {
-    "empty": [],
-    "executable": [],
-    "overlay": {}
-   }
-  },
-  {
-   "args": [
-    "--root",
-    "⟪root⟫",
-    "--json",
-    "index",
-    "search",
-    "common nature",
-    "--limit",
-    "20"
-   ],
-   "expect": {
-    "code": 0,
-    "ignore_keys": [
-     "input_identity"
-    ],
-    "stdout_json": []
-   },
-   "externals": [],
-   "name": "",
-   "tree": {
-    "empty": [],
-    "executable": [],
-    "overlay": {}
-   }
-  },
-  {
-   "args": [
-    "--root",
-    "⟪root⟫",
-    "index",
-    "search",
-    "common nature",
-    "--limit",
-    "3"
-   ],
-   "expect": {
-    "code": 0,
-    "ignore_keys": [
-     "input_identity"
+    "normalize": [
+     "note_hits"
     ],
     "stdout_json": []
    },
@@ -97,12 +49,72 @@
     "search",
     "common nature",
     "--limit",
+    "20"
+   ],
+   "expect": {
+    "code": 0,
+    "ignore_keys": [
+     "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
+    ],
+    "stdout_json": []
+   },
+   "externals": [],
+   "name": "",
+   "tree": {
+    "empty": [],
+    "executable": [],
+    "overlay": {}
+   }
+  },
+  {
+   "args": [
+    "--root",
+    "⟪root⟫",
+    "index",
+    "search",
+    "common nature",
+    "--limit",
     "3"
    ],
    "expect": {
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
+    ],
+    "stdout_json": []
+   },
+   "externals": [],
+   "name": "",
+   "tree": {
+    "empty": [],
+    "executable": [],
+    "overlay": {}
+   }
+  },
+  {
+   "args": [
+    "--root",
+    "⟪root⟫",
+    "--json",
+    "index",
+    "search",
+    "common nature",
+    "--limit",
+    "3"
+   ],
+   "expect": {
+    "code": 0,
+    "ignore_keys": [
+     "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
     ],
     "stdout_json": []
    },
@@ -129,56 +141,8 @@
     "ignore_keys": [
      "input_identity"
     ],
-    "stdout_json": []
-   },
-   "externals": [],
-   "name": "",
-   "tree": {
-    "empty": [],
-    "executable": [],
-    "overlay": {}
-   }
-  },
-  {
-   "args": [
-    "--root",
-    "⟪root⟫",
-    "--json",
-    "index",
-    "search",
-    "cause",
-    "--limit",
-    "20"
-   ],
-   "expect": {
-    "code": 0,
-    "ignore_keys": [
-     "input_identity"
-    ],
-    "stdout_json": []
-   },
-   "externals": [],
-   "name": "",
-   "tree": {
-    "empty": [],
-    "executable": [],
-    "overlay": {}
-   }
-  },
-  {
-   "args": [
-    "--root",
-    "⟪root⟫",
-    "index",
-    "search",
-    "cause",
-    "--limit",
-    "3"
-   ],
-   "expect": {
-    "code": 0,
-    "ignore_keys": [
-     "input_identity"
+    "normalize": [
+     "note_hits"
     ],
     "stdout_json": []
    },
@@ -199,12 +163,72 @@
     "search",
     "cause",
     "--limit",
+    "20"
+   ],
+   "expect": {
+    "code": 0,
+    "ignore_keys": [
+     "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
+    ],
+    "stdout_json": []
+   },
+   "externals": [],
+   "name": "",
+   "tree": {
+    "empty": [],
+    "executable": [],
+    "overlay": {}
+   }
+  },
+  {
+   "args": [
+    "--root",
+    "⟪root⟫",
+    "index",
+    "search",
+    "cause",
+    "--limit",
     "3"
    ],
    "expect": {
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
+    ],
+    "stdout_json": []
+   },
+   "externals": [],
+   "name": "",
+   "tree": {
+    "empty": [],
+    "executable": [],
+    "overlay": {}
+   }
+  },
+  {
+   "args": [
+    "--root",
+    "⟪root⟫",
+    "--json",
+    "index",
+    "search",
+    "cause",
+    "--limit",
+    "3"
+   ],
+   "expect": {
+    "code": 0,
+    "ignore_keys": [
+     "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
     ],
     "stdout_json": []
    },
@@ -231,56 +255,8 @@
     "ignore_keys": [
      "input_identity"
     ],
-    "stdout_json": []
-   },
-   "externals": [],
-   "name": "",
-   "tree": {
-    "empty": [],
-    "executable": [],
-    "overlay": {}
-   }
-  },
-  {
-   "args": [
-    "--root",
-    "⟪root⟫",
-    "--json",
-    "index",
-    "search",
-    "act potency",
-    "--limit",
-    "20"
-   ],
-   "expect": {
-    "code": 0,
-    "ignore_keys": [
-     "input_identity"
-    ],
-    "stdout_json": []
-   },
-   "externals": [],
-   "name": "",
-   "tree": {
-    "empty": [],
-    "executable": [],
-    "overlay": {}
-   }
-  },
-  {
-   "args": [
-    "--root",
-    "⟪root⟫",
-    "index",
-    "search",
-    "act potency",
-    "--limit",
-    "3"
-   ],
-   "expect": {
-    "code": 0,
-    "ignore_keys": [
-     "input_identity"
+    "normalize": [
+     "note_hits"
     ],
     "stdout_json": []
    },
@@ -301,12 +277,72 @@
     "search",
     "act potency",
     "--limit",
+    "20"
+   ],
+   "expect": {
+    "code": 0,
+    "ignore_keys": [
+     "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
+    ],
+    "stdout_json": []
+   },
+   "externals": [],
+   "name": "",
+   "tree": {
+    "empty": [],
+    "executable": [],
+    "overlay": {}
+   }
+  },
+  {
+   "args": [
+    "--root",
+    "⟪root⟫",
+    "index",
+    "search",
+    "act potency",
+    "--limit",
     "3"
    ],
    "expect": {
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
+    ],
+    "stdout_json": []
+   },
+   "externals": [],
+   "name": "",
+   "tree": {
+    "empty": [],
+    "executable": [],
+    "overlay": {}
+   }
+  },
+  {
+   "args": [
+    "--root",
+    "⟪root⟫",
+    "--json",
+    "index",
+    "search",
+    "act potency",
+    "--limit",
+    "3"
+   ],
+   "expect": {
+    "code": 0,
+    "ignore_keys": [
+     "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
     ],
     "stdout_json": []
    },
@@ -333,56 +369,8 @@
     "ignore_keys": [
      "input_identity"
     ],
-    "stdout_json": []
-   },
-   "externals": [],
-   "name": "",
-   "tree": {
-    "empty": [],
-    "executable": [],
-    "overlay": {}
-   }
-  },
-  {
-   "args": [
-    "--root",
-    "⟪root⟫",
-    "--json",
-    "index",
-    "search",
-    "god",
-    "--limit",
-    "20"
-   ],
-   "expect": {
-    "code": 0,
-    "ignore_keys": [
-     "input_identity"
-    ],
-    "stdout_json": []
-   },
-   "externals": [],
-   "name": "",
-   "tree": {
-    "empty": [],
-    "executable": [],
-    "overlay": {}
-   }
-  },
-  {
-   "args": [
-    "--root",
-    "⟪root⟫",
-    "index",
-    "search",
-    "god",
-    "--limit",
-    "3"
-   ],
-   "expect": {
-    "code": 0,
-    "ignore_keys": [
-     "input_identity"
+    "normalize": [
+     "note_hits"
     ],
     "stdout_json": []
    },
@@ -403,12 +391,72 @@
     "search",
     "god",
     "--limit",
+    "20"
+   ],
+   "expect": {
+    "code": 0,
+    "ignore_keys": [
+     "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
+    ],
+    "stdout_json": []
+   },
+   "externals": [],
+   "name": "",
+   "tree": {
+    "empty": [],
+    "executable": [],
+    "overlay": {}
+   }
+  },
+  {
+   "args": [
+    "--root",
+    "⟪root⟫",
+    "index",
+    "search",
+    "god",
+    "--limit",
     "3"
    ],
    "expect": {
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
+    ],
+    "stdout_json": []
+   },
+   "externals": [],
+   "name": "",
+   "tree": {
+    "empty": [],
+    "executable": [],
+    "overlay": {}
+   }
+  },
+  {
+   "args": [
+    "--root",
+    "⟪root⟫",
+    "--json",
+    "index",
+    "search",
+    "god",
+    "--limit",
+    "3"
+   ],
+   "expect": {
+    "code": 0,
+    "ignore_keys": [
+     "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
     ],
     "stdout_json": []
    },
@@ -435,56 +483,8 @@
     "ignore_keys": [
      "input_identity"
     ],
-    "stdout_json": []
-   },
-   "externals": [],
-   "name": "",
-   "tree": {
-    "empty": [],
-    "executable": [],
-    "overlay": {}
-   }
-  },
-  {
-   "args": [
-    "--root",
-    "⟪root⟫",
-    "--json",
-    "index",
-    "search",
-    "necessary being",
-    "--limit",
-    "20"
-   ],
-   "expect": {
-    "code": 0,
-    "ignore_keys": [
-     "input_identity"
-    ],
-    "stdout_json": []
-   },
-   "externals": [],
-   "name": "",
-   "tree": {
-    "empty": [],
-    "executable": [],
-    "overlay": {}
-   }
-  },
-  {
-   "args": [
-    "--root",
-    "⟪root⟫",
-    "index",
-    "search",
-    "necessary being",
-    "--limit",
-    "3"
-   ],
-   "expect": {
-    "code": 0,
-    "ignore_keys": [
-     "input_identity"
+    "normalize": [
+     "note_hits"
     ],
     "stdout_json": []
    },
@@ -505,12 +505,72 @@
     "search",
     "necessary being",
     "--limit",
+    "20"
+   ],
+   "expect": {
+    "code": 0,
+    "ignore_keys": [
+     "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
+    ],
+    "stdout_json": []
+   },
+   "externals": [],
+   "name": "",
+   "tree": {
+    "empty": [],
+    "executable": [],
+    "overlay": {}
+   }
+  },
+  {
+   "args": [
+    "--root",
+    "⟪root⟫",
+    "index",
+    "search",
+    "necessary being",
+    "--limit",
     "3"
    ],
    "expect": {
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
+    ],
+    "stdout_json": []
+   },
+   "externals": [],
+   "name": "",
+   "tree": {
+    "empty": [],
+    "executable": [],
+    "overlay": {}
+   }
+  },
+  {
+   "args": [
+    "--root",
+    "⟪root⟫",
+    "--json",
+    "index",
+    "search",
+    "necessary being",
+    "--limit",
+    "3"
+   ],
+   "expect": {
+    "code": 0,
+    "ignore_keys": [
+     "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
     ],
     "stdout_json": []
    },
@@ -537,56 +597,8 @@
     "ignore_keys": [
      "input_identity"
     ],
-    "stdout_json": []
-   },
-   "externals": [],
-   "name": "",
-   "tree": {
-    "empty": [],
-    "executable": [],
-    "overlay": {}
-   }
-  },
-  {
-   "args": [
-    "--root",
-    "⟪root⟫",
-    "--json",
-    "index",
-    "search",
-    "Aquinas",
-    "--limit",
-    "20"
-   ],
-   "expect": {
-    "code": 0,
-    "ignore_keys": [
-     "input_identity"
-    ],
-    "stdout_json": []
-   },
-   "externals": [],
-   "name": "",
-   "tree": {
-    "empty": [],
-    "executable": [],
-    "overlay": {}
-   }
-  },
-  {
-   "args": [
-    "--root",
-    "⟪root⟫",
-    "index",
-    "search",
-    "Aquinas",
-    "--limit",
-    "3"
-   ],
-   "expect": {
-    "code": 0,
-    "ignore_keys": [
-     "input_identity"
+    "normalize": [
+     "note_hits"
     ],
     "stdout_json": []
    },
@@ -607,12 +619,72 @@
     "search",
     "Aquinas",
     "--limit",
+    "20"
+   ],
+   "expect": {
+    "code": 0,
+    "ignore_keys": [
+     "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
+    ],
+    "stdout_json": []
+   },
+   "externals": [],
+   "name": "",
+   "tree": {
+    "empty": [],
+    "executable": [],
+    "overlay": {}
+   }
+  },
+  {
+   "args": [
+    "--root",
+    "⟪root⟫",
+    "index",
+    "search",
+    "Aquinas",
+    "--limit",
     "3"
    ],
    "expect": {
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
+    ],
+    "stdout_json": []
+   },
+   "externals": [],
+   "name": "",
+   "tree": {
+    "empty": [],
+    "executable": [],
+    "overlay": {}
+   }
+  },
+  {
+   "args": [
+    "--root",
+    "⟪root⟫",
+    "--json",
+    "index",
+    "search",
+    "Aquinas",
+    "--limit",
+    "3"
+   ],
+   "expect": {
+    "code": 0,
+    "ignore_keys": [
+     "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
     ],
     "stdout_json": []
    },
@@ -639,56 +711,8 @@
     "ignore_keys": [
      "input_identity"
     ],
-    "stdout_json": []
-   },
-   "externals": [],
-   "name": "",
-   "tree": {
-    "empty": [],
-    "executable": [],
-    "overlay": {}
-   }
-  },
-  {
-   "args": [
-    "--root",
-    "⟪root⟫",
-    "--json",
-    "index",
-    "search",
-    "say \"hello\"",
-    "--limit",
-    "20"
-   ],
-   "expect": {
-    "code": 0,
-    "ignore_keys": [
-     "input_identity"
-    ],
-    "stdout_json": []
-   },
-   "externals": [],
-   "name": "",
-   "tree": {
-    "empty": [],
-    "executable": [],
-    "overlay": {}
-   }
-  },
-  {
-   "args": [
-    "--root",
-    "⟪root⟫",
-    "index",
-    "search",
-    "say \"hello\"",
-    "--limit",
-    "3"
-   ],
-   "expect": {
-    "code": 0,
-    "ignore_keys": [
-     "input_identity"
+    "normalize": [
+     "note_hits"
     ],
     "stdout_json": []
    },
@@ -709,12 +733,72 @@
     "search",
     "say \"hello\"",
     "--limit",
+    "20"
+   ],
+   "expect": {
+    "code": 0,
+    "ignore_keys": [
+     "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
+    ],
+    "stdout_json": []
+   },
+   "externals": [],
+   "name": "",
+   "tree": {
+    "empty": [],
+    "executable": [],
+    "overlay": {}
+   }
+  },
+  {
+   "args": [
+    "--root",
+    "⟪root⟫",
+    "index",
+    "search",
+    "say \"hello\"",
+    "--limit",
     "3"
    ],
    "expect": {
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
+    ],
+    "stdout_json": []
+   },
+   "externals": [],
+   "name": "",
+   "tree": {
+    "empty": [],
+    "executable": [],
+    "overlay": {}
+   }
+  },
+  {
+   "args": [
+    "--root",
+    "⟪root⟫",
+    "--json",
+    "index",
+    "search",
+    "say \"hello\"",
+    "--limit",
+    "3"
+   ],
+   "expect": {
+    "code": 0,
+    "ignore_keys": [
+     "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
     ],
     "stdout_json": []
    },
@@ -740,6 +824,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
     ],
     "stdout_json": []
    },
@@ -767,6 +854,9 @@
     "ignore_keys": [
      "input_identity"
     ],
+    "normalize": [
+     "note_hits"
+    ],
     "stdout_json": []
    },
    "externals": [],
@@ -791,6 +881,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
     ],
     "stdout_json": []
    },
@@ -817,6 +910,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
     ],
     "stdout_json": []
    },
@@ -843,6 +939,9 @@
     "ignore_keys": [
      "input_identity"
     ],
+    "normalize": [
+     "note_hits"
+    ],
     "stdout_json": []
    },
    "externals": [],
@@ -869,6 +968,9 @@
     "ignore_keys": [
      "input_identity"
     ],
+    "normalize": [
+     "note_hits"
+    ],
     "stdout_json": []
    },
    "externals": [],
@@ -893,6 +995,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
     ],
     "stdout_json": []
    },
@@ -919,6 +1024,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_hits"
     ],
     "stdout_json": []
    },
@@ -942,6 +1050,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "mentioned_by_notes"
     ],
     "stdout_json": {
      "record": {
@@ -996,6 +1107,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "mentioned_by_notes"
     ],
     "stdout_json": {
      "record": {
@@ -1049,6 +1163,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "mentioned_by_notes"
     ],
     "stdout_json": {
      "record": {
@@ -1090,6 +1207,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "mentioned_by_notes"
     ],
     "stdout_json": {
      "record": {
@@ -1130,6 +1250,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "mentioned_by_notes"
     ],
     "stdout_json": {
      "record": {
@@ -1173,6 +1296,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "mentioned_by_notes"
     ],
     "stdout_json": {
      "record": {
@@ -1215,6 +1341,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "mentioned_by_notes"
     ],
     "stdout_json": {
      "record": {
@@ -1259,6 +1388,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "mentioned_by_notes"
     ],
     "stdout_json": {
      "record": {
@@ -1302,6 +1434,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "mentioned_by_notes"
     ],
     "stdout_json": {
      "record": {
@@ -1340,6 +1475,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "mentioned_by_notes"
     ],
     "stdout_json": {
      "record": {
@@ -1377,6 +1515,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "mentioned_by_notes"
     ],
     "stdout_json": {
      "record": {
@@ -1410,6 +1551,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "mentioned_by_notes"
     ],
     "stdout_json": {
      "record": {

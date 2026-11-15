@@ -49,10 +49,15 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ],
     "stderr": "corpus error: corpus/arguments/00-ARG-AB.json: unknown statement id STMT-MISSING\n"
    },
    "externals": [
@@ -84,11 +89,16 @@
    ],
    "env": {
     "FAKE_CAPTURE": "⟪root⟫/capture-rust",
-    "FAKE_OUTPUTS": "⟪ext:1⟫"
+    "FAKE_OUTPUTS": "⟪ext:1⟫",
+    "TRUTH_BIND_TYPES_CACHE": ".cache/parity-absent-bind-types.json"
    },
    "expect": {
     "code": 2,
-    "error_message": "corpus/arguments/00-ARG-AB.json: unknown statement id STMT-MISSING"
+    "error_message": "corpus/arguments/00-ARG-AB.json: unknown statement id STMT-MISSING",
+    "normalize": [
+     "bind_types",
+     "note_mentions"
+    ]
    },
    "externals": [
     {

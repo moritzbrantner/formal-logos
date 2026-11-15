@@ -30,6 +30,9 @@
    ],
    "expect": {
     "code": 0,
+    "normalize": [
+     "note_mentions"
+    ],
     "stdout": "STMT-Q\nSTMT-Q\nLean: none\nStatus: not on the frontier; established: false\nIssue targets (offline acceptance snapshot): #4 [delivered], #7 [missing], #9 [delivered], #12 [delivered]\n\nSource readings:\n  CLAIM-Q: SOURCE-1 section 1: Reading\n\nSupporting source readings:\n  none recorded\n\nDefinitions:\n  none recorded\n\nDisambiguations:\n  none recorded\n\nAlternatives:\n  none recorded\n\nObjections:\n  none recorded\n\nArguments (premise, conclusion, commitment or inference):\n  none recorded\n\nResults:\n  none recorded\n\nTranscriptions: none recorded\n\nDeclared/recognized instantiations (not a mode-5 schema registry): none recorded\n\nConfiguration cases (registration only; run configurations for live verification):\n\nAttempts (outcomes do not establish truth or close premises):\n  none recorded\n\nCountermodel attempts: none recorded\nRegistered finite evaluations (formal interpretations only; no premise closure):\n  none registered; no conclusion about consistency or derivability\nExplicit instance_of_schema registrations are recorded in corpus/relations/ (see docs/schemas.md); this dossier does not project them. No links are inferred from prose.\n\nRoutes to STMT-P (one counted leaf when open_leaf=true, not a counterfactual cost reduction):\n  ARG-P: cost=0, open_leaf=false, direct_premise=false\n"
    },
    "externals": [],
@@ -58,6 +61,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_mentions"
     ],
     "stdout_json": {
      "alternative_relation_ids": [],
@@ -138,6 +144,9 @@
    ],
    "expect": {
     "code": 0,
+    "normalize": [
+     "note_mentions"
+    ],
     "stdout": "STMT-P\nSTMT-P\nLean: none\nStatus: proved; established: true\nIssue targets (offline acceptance snapshot): #7 [missing], #9 [delivered]\n\nSource readings:\n  none recorded\n\nSupporting source readings:\n  none recorded\n\nDefinitions:\n  none recorded\n\nDisambiguations:\n  none recorded\n\nAlternatives:\n  none recorded\n\nObjections:\n  none recorded\n\nArguments (premise, conclusion, commitment or inference):\n  ARG-P: m\n\nResults:\n  RESULT-1: TruthCore.Demo.proof;\n  RESULT-NOSTATUS: TruthCore.Demo.other;\n  RESULT-PENDING: TruthCore.Demo.pending;\n\nTranscriptions: none recorded\n\nDeclared/recognized instantiations (not a mode-5 schema registry): none recorded\n\nConfiguration cases (registration only; run configurations for live verification):\n\nAttempts (outcomes do not establish truth or close premises):\n  ATTEMPT-1 [2026-11-15; derivation; failed]: s\n    evidence: none recorded\n    blocker: b\n\nCountermodel attempts: none recorded\nRegistered finite evaluations (formal interpretations only; no premise closure):\n  none registered; no conclusion about consistency or derivability\nExplicit instance_of_schema registrations are recorded in corpus/relations/ (see docs/schemas.md); this dossier does not project them. No links are inferred from prose.\n\nRoutes to STMT-P (one counted leaf when open_leaf=true, not a counterfactual cost reduction):\n  ARG-P: cost=0, open_leaf=false, direct_premise=false\n"
    },
    "externals": [],
@@ -166,6 +175,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_mentions"
     ],
     "stdout_json": {
      "alternative_relation_ids": [],
@@ -255,6 +267,9 @@
    ],
    "expect": {
     "code": 0,
+    "normalize": [
+     "note_mentions"
+    ],
     "stdout": "STMT-SE\nSE\nLean: none\nStatus: self_evident; established: true\nIssue targets (offline acceptance snapshot): #7 [missing]\nFloor basis: legacy (met); justification: \nFloor disagreement (#378): not recorded\n\nSource readings:\n  none recorded\n\nSupporting source readings:\n  none recorded\n\nDefinitions:\n  none recorded\n\nDisambiguations:\n  none recorded\n\nAlternatives:\n  none recorded\n\nObjections:\n  none recorded\n\nArguments (premise, conclusion, commitment or inference):\n  none recorded\n\nResults:\n  none recorded\n\nTranscriptions: none recorded\n\nDeclared/recognized instantiations (not a mode-5 schema registry): none recorded\n\nConfiguration cases (registration only; run configurations for live verification):\n\nAttempts (outcomes do not establish truth or close premises):\n  none recorded\n\nCountermodel attempts: none recorded\nRegistered finite evaluations (formal interpretations only; no premise closure):\n  none registered; no conclusion about consistency or derivability\nExplicit instance_of_schema registrations are recorded in corpus/relations/ (see docs/schemas.md); this dossier does not project them. No links are inferred from prose.\n\nRoutes to STMT-P (one counted leaf when open_leaf=true, not a counterfactual cost reduction):\n  ARG-P: cost=0, open_leaf=false, direct_premise=false\n"
    },
    "externals": [],
@@ -283,6 +298,9 @@
     "code": 0,
     "ignore_keys": [
      "input_identity"
+    ],
+    "normalize": [
+     "note_mentions"
     ],
     "stdout_json": {
      "alternative_relation_ids": [],
