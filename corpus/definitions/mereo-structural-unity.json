@@ -9,9 +9,9 @@
   "lean_declaration": "TruthCore.Mereology.Vitalism.Scenario.Integrated",
   "formal_gap": {
     "kind": "primitive",
-    "meaning": "Scenario.Integrated p, read as structural unity, says that the system at phase p shows coordinated self-maintaining activity, joined to other phases by operational causal continuity across replacement of components. It is a predicate on the two phases (early, late) of the toy turnover history in TruthCore.Mereology.Vitalism (#329), supplied by each scenario. It is an operational component, not a criterion of being one substance.",
+    "meaning": "Scenario.Integrated p, read as structural unity, says that the system at phase p shows coordinated activity: the integration component of structural unity. It is a predicate on the two phases (early, late) of the toy turnover history in TruthCore.Mereology.Vitalism (#329), supplied by each scenario. Self-maintenance (SelfMaintaining), process continuity across phases (Continuity) and component membership (MemberAt) are separate, independent fields; the full structural profile (coordinated self-maintaining activity continued across replacement of components) is their conjunction in TurnoverProfile, not this single field. It is an operational component, not a criterion of being one substance.",
     "examples": [
-      "Both phases of the turnover profile: the system remains integrated though every original component has been replaced."
+      "Both phases of the turnover profile, where Integrated holds together with SelfMaintaining and Continuity although every original component has been replaced."
     ],
     "exclusions": [
       "Substantial unity (SubstantialUnity): no inference passes from integration to substantial status; the countermodels differ exactly there (DISAMB-MEREO-UNITY).",
