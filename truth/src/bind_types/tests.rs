@@ -14,7 +14,7 @@ const RECORDED: &str = r#"[{"theorem": "TruthCore.Fix.Solution.fixAB",
     {"name": "Being", "prop": false, "head": null, "core_head": null, "wrappers": [], "type": "Type"},
     {"name": "h", "prop": true, "head": "TruthCore.Fix.Vocab.FixA", "core_head": "TruthCore.Fix.Vocab.FixA",
      "wrappers": [], "type": "TruthCore.Fix.Vocab.FixA Being", "senses": []},
-    {"name": "k", "prop": true, "head": "TruthCore.Fix.Vocab.FixE", "core_head": "TruthCore.Fix.Vocab.FixE",
+    {"name": "h", "prop": true, "head": "TruthCore.Fix.Vocab.FixE", "core_head": "TruthCore.Fix.Vocab.FixE",
      "wrappers": [], "type": "TruthCore.Fix.Vocab.FixE Being"},
     {"name": "T", "prop": true, "head": "TruthCore.Comparison.Theory", "core_head": "TruthCore.Comparison.Theory",
      "wrappers": [], "type": "TruthCore.Comparison.Theory Being",
@@ -133,7 +133,7 @@ fn recorded_output_gives_the_elaborated_binding() {
     assert_eq!(
         elaborated.statement,
         "theorem TruthCore.Fix.Solution.fixAB (Being : Type) (h : TruthCore.Fix.Vocab.FixA Being) \
-         (k : TruthCore.Fix.Vocab.FixE Being) (T : TruthCore.Comparison.Theory Being) : \
+         (h : TruthCore.Fix.Vocab.FixE Being) (T : TruthCore.Comparison.Theory Being) : \
          TruthCore.Fix.Vocab.FixB Being"
     );
     assert_eq!(
@@ -150,7 +150,8 @@ fn recorded_output_gives_the_elaborated_binding() {
         .collect();
     assert_eq!(
         bindings,
-        vec![("h", Some("STMT-A")), ("k", None), ("T.1", Some("STMT-C"))]
+        // The two hypotheses named `h` bind by position, not by name.
+        vec![("h", Some("STMT-A")), ("h", None), ("T.1", Some("STMT-C"))]
     );
     assert_eq!(
         elaborated.conclusion.statement_id.as_deref(),

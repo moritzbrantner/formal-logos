@@ -342,16 +342,27 @@ pub fn elaborate(corpus: &Corpus, result: &Obj, description: &Value, digest: &st
     .into_iter()
     .next()
     .unwrap_or(Value::Null);
-    let bound: HashMap<String, String> = binding["premises"]
+    // Keyed by binder position and conjunct: binder names need not be
+    // unique (anonymous arrow hypotheses all print as `a✝`).
+    let bound: HashMap<(u64, Option<u64>), String> = binding["premises"]
         .as_array()
         .into_iter()
         .flatten()
-        .map(|entry| (string(&entry["hypothesis"]), string(&entry["statement_id"])))
+        .filter_map(|entry| {
+            let key = (entry["position"].as_u64()?, entry["conjunct"].as_u64());
+            Some((key, string(&entry["statement_id"])))
+        })
         .collect();
     let mut parameters = Vec::new();
     let mut hypotheses = Vec::new();
     let mut signature = Vec::new();
-    for binder in description["binders"].as_array().into_iter().flatten() {
+    for (position, binder) in description["binders"]
+        .as_array()
+        .into_iter()
+        .flatten()
+        .enumerate()
+    {
+        let position = position as u64;
         let name = string(&binder["name"]);
         let lean_type = string(&binder["type"]);
         signature.push(format!("({name} : {lean_type})"));
@@ -364,7 +375,7 @@ pub fn elaborate(corpus: &Corpus, result: &Obj, description: &Value, digest: &st
                 for (number, conjunct) in conjuncts.iter().enumerate() {
                     let name = format!("{name}.{}", number + 1);
                     hypotheses.push(Hypothesis {
-                        statement_id: bound.get(&name).cloned(),
+                        statement_id: bound.get(&(position, Some(number as u64))).cloned(),
                         name,
                         head: conjunct["head"].clone(),
                         lean_type: string(&conjunct["type"]),
@@ -372,7 +383,7 @@ pub fn elaborate(corpus: &Corpus, result: &Obj, description: &Value, digest: &st
                 }
             }
             _ => hypotheses.push(Hypothesis {
-                statement_id: bound.get(&name).cloned(),
+                statement_id: bound.get(&(position, None)).cloned(),
                 name,
                 head: binder["head"].clone(),
                 lean_type,
