@@ -409,8 +409,11 @@ serde-serializable result structs (`truth::related`, `truth::dossier`,
 `truth::context`); `main.rs` only selects output. Text output is
 byte-identical to Python's; `--json` prints the Python JSON object plus
 `input_identity` (`dossier --all` prints exactly the Python object, keyed by
-statement ID). Navigation only: nothing here closes a statement, changes a
-route cost or certifies anything.
+statement ID). Rust adds one part Python lacks (#952): the note sections that
+name the target explicitly, as `note_mentions` in JSON and a final "Notes
+mentioning the target records" text block (`context`: the argument, its
+results and its conclusion). The parity tests drop both. Navigation only:
+nothing here closes a statement, changes a route cost or certifies anything.
 
 - `truth related STATEMENT-ID [--limit N]` (default 10; 1 to 200 shown) ranks
   over the loaded corpus in memory. Python ranks over its disposable SQLite
@@ -497,13 +500,22 @@ run the registered-only `truth::configurations` engine. Output is the Python
 JSON (indented; compact with `--json`; object keys sorted). `export` prints the
 original bytes. Errors exit 1 (Python's messages), usage errors 2.
 
+Research notes (#952): the index also projects `docs/notes/**/*.md` (up to
+1 MiB each) into Rust-only tables, with their paths and bytes in the
+digest. `search` appends up to `--limit` note sections, typed `"kind":
+"note"`, after the records. `show docs/notes/x.md[#anchor]` shows a note or
+one section. `show RECORD` adds `mentioned_by_notes`. Links come only from
+explicit uuid, legacy ID, record-path or code-span label mentions
+(`truth::notes`; `docs/notes/research-index.md`, "Research notes").
+
 Differences from Python: Python's query commands reject a stale index, and its
 digest hashes the script, so the two use separate files
 (`.cache/research-index.sqlite` there). Rust also resolves a legacy id or
 label, optionally `kind:`-prefixed, for `show`, `--case`, `--premise`,
 `--left` and `--right`. Python's `related` subcommand is `truth related`.
-`scripts/truth_parity/index.py` compares every table row for row (all but the
-digest) and the JSON of every subcommand on the real corpus and a fixture,
+Python has no note tables or note hits. `scripts/truth_parity/index.py`
+compares every record table row for row (all but the digest) and the JSON of
+every subcommand, without the note parts, on the real corpus and a fixture,
 with search ranks including ties, and checks stale refresh, failed-rebuild
 preservation, corrupt-projection detection and exit codes.
 

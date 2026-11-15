@@ -8,7 +8,7 @@ import tempfile
 from pathlib import Path
 
 import corpus
-from truth_parity.common import humanize, NO_BIND_TYPES, ParityCase, without_bind_types
+from truth_parity.common import NOTE_BLOCK, humanize, without_note_mentions, NO_BIND_TYPES, ParityCase, without_bind_types
 
 
 def spread(items, count):
@@ -47,15 +47,25 @@ class TruthResearchParity(ParityCase):
         cls.temporary.cleanup()
 
     def truth(self, *args, code=0):
+        """Rust's output without its note-mention block (#952) and its
+        elaborated-type notice (#960): Python has neither, so `related`,
+        `dossier` and `context` text ends with `\n\nNotes mentioning the target
+        records …` on the Rust side only, and Rust's `context` reads no
+        bind-types cache here."""
         result = subprocess.run([self.binary, *args], cwd=corpus.ROOT, env=dict(os.environ, **NO_BIND_TYPES),
                                 capture_output=True, text=True, check=False)
         self.assertEqual(result.returncode, code, (args, result.stderr))
         stdout = without_bind_types(result.stdout) if "context" in args and code == 0 else result.stdout
+        if code == 0 and "--json" not in args and "--all" not in args:
+            self.assertIn(NOTE_BLOCK, stdout, args)
+            stdout = without_note_mentions(stdout)
         return stdout, result.stderr
 
     def truth_json(self, *args):
         value = json.loads(self.truth("--json", *args)[0])
         self.assertTrue(value.pop("input_identity").startswith("fnv1a64:"))
+        # Rust only (#952): note sections that mention the target by explicit ID.
+        self.assertIsInstance(value.pop("note_mentions"), list)
         return value
 
     def statement_sample(self):

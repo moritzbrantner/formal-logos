@@ -21,6 +21,25 @@ def migrate(root):
     Migration(root).run(write=True)
 
 
+# Rust `related|dossier|context` end their text with this block and add a
+# `note_mentions` JSON field: the note sections that mention the target by
+# explicit ID (#952). Python has no note index; parity compares the rest.
+NOTE_BLOCK = "\n\nNotes mentioning the target records ("
+
+
+def without_note_mentions(stdout):
+    """Rust text output without its trailing note-mention block, if any."""
+    cut = stdout.rfind(NOTE_BLOCK)
+    return stdout if cut < 0 else stdout[:cut] + "\n"
+
+
+def without_note_field(value):
+    """Rust JSON output without its `note_mentions` field, if any."""
+    if isinstance(value, dict):
+        value.pop("note_mentions", None)
+    return value
+
+
 def humanize(text, root=None):
     """Python CLI text output (`corpus.humanize`) for the checkout at `root`."""
     if root is None:
