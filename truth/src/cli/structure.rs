@@ -35,7 +35,11 @@ pub const REPORT: Command = Command {
 /// Runs `command` on a thread with [`structure::STACK_SIZE`] of stack:
 /// exporter trees are as deep as Lean's expressions and every pass over
 /// them (parse, clone, print, drop) recurses.
-fn on_large_stack(args: &Args, operands: &[&str], command: fn(&Args, &[&str]) -> Output) -> Output {
+pub(super) fn on_large_stack(
+    args: &Args,
+    operands: &[&str],
+    command: fn(&Args, &[&str]) -> Output,
+) -> Output {
     std::thread::scope(|scope| {
         std::thread::Builder::new()
             .stack_size(structure::STACK_SIZE)
@@ -48,7 +52,7 @@ fn on_large_stack(args: &Args, operands: &[&str], command: fn(&Args, &[&str]) ->
 
 /// The checkout as Python's resolved `ROOT`, so messages and the written
 /// path print as Python prints them.
-fn checkout(args: &Args) -> Result<PathBuf, Failure> {
+pub(super) fn checkout(args: &Args) -> Result<PathBuf, Failure> {
     fs::canonicalize(&args.root).map_err(|error| corpus_error(os_error(&error, &args.root)))
 }
 

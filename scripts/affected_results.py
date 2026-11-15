@@ -102,6 +102,8 @@ EXPLORER_INPUT_PATTERNS = (
     "scripts/finite_models.py",
     "scripts/configurations.py",
     "scripts/configuration_explorer.py",
+    # Named by the configuration page's verification command.
+    "scripts/worker_env.py",
     "scripts/proposition_structure.py",
     "scripts/PropositionStructure.lean",
     "scripts/strength_comparisons.py",

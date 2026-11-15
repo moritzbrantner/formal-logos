@@ -221,7 +221,7 @@ impl<'a> Lean<'a> {
             .flatten()
     }
 
-    fn imports(&self, module: &str) -> Vec<String> {
+    pub(crate) fn imports(&self, module: &str) -> Vec<String> {
         if let Some(found) = self.imports.borrow().get(module) {
             return found.clone();
         }
@@ -348,6 +348,9 @@ pub struct LeanEntry {
     /// With `--proof-use`: always true (review only, not certification).
     #[serde(skip_serializing_if = "Option::is_none")]
     pub proof_use_advisory: Option<bool>,
+    /// The elaborated type from a fresh bind-check cache entry (#960).
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub elaborated: Option<crate::bind_types::Elaborated>,
 }
 
 #[derive(Debug, Clone, Serialize)]
@@ -479,6 +482,10 @@ pub struct ContextPack {
     pub attempt_cited_ids: Vec<String>,
     pub definitions: Vec<Term>,
     pub disambiguations: Vec<Term>,
+    /// The elaborated-type cache state, once [`attach_bind_types`] ran
+    /// (Rust only; Python's pack has no such section).
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub bind_types: Option<crate::bind_types::Summary>,
 }
 
 /// Why a target does not name exactly one argument.
@@ -813,6 +820,7 @@ pub fn context_pack(
             lean_consumers_depth2: consumers_depth2.into_iter().collect(),
             proof_theorems: proof_use.cloned(),
             proof_use_advisory: proof_use.map(|_| true),
+            elaborated: None,
         });
     }
 
@@ -1205,7 +1213,95 @@ pub fn context_pack(
         attempt_cited_ids: by_count(cited),
         definitions: terms("definitions", "definition", "definition_ids"),
         disambiguations: terms("disambiguations", "resolution", "disambiguation_ids"),
+        bind_types: None,
     }
+}
+
+/// Adds the elaborated types of the pack's results from a fresh
+/// `bind-check` cache (#960); reads the cache only, never runs Lean.
+pub fn attach_bind_types(root: &Path, corpus: &Corpus, pack: &mut ContextPack) {
+    let ids: Vec<String> = pack
+        .lean
+        .iter()
+        .map(|entry| entry.result_id.clone())
+        .collect();
+    let ids: Vec<&str> = ids.iter().map(String::as_str).collect();
+    let (summary, mut found) = crate::bind_types::attach(root, corpus, &ids);
+    for entry in &mut pack.lean {
+        entry.elaborated = found.remove(&entry.result_id);
+    }
+    pack.bind_types = Some(summary);
+}
+
+/// Width of a type, and bytes of hypothesis lines before the statement
+/// labels are filled in, in the elaborated view: about 1 KB per result.
+const TYPE_WIDTH: usize = 80;
+const HYPOTHESIS_BUDGET: usize = 400;
+
+fn elaborated_lines(elaborated: &crate::bind_types::Elaborated) -> Vec<String> {
+    let bound = |statement: &Option<String>| statement.as_deref().unwrap_or("unbound").to_owned();
+    let digest = elaborated.input_digest.trim_start_matches("sha256:");
+    let mut lines = vec![format!(
+        "  elaborated (fresh bind-check cache {}; binding {}; not verification evidence):",
+        &digest[..digest.len().min(8)],
+        elaborated.binding
+    )];
+    if !elaborated.parameters.is_empty() {
+        let names: Vec<&str> = elaborated
+            .parameters
+            .iter()
+            .map(|p| p.name.as_str())
+            .collect();
+        lines.push(format!(
+            "    parameters: {}",
+            pyfmt::short(Some(&names.join(" ")), WIDTH)
+        ));
+    }
+    let mut used = 0;
+    let mut hidden = Vec::new();
+    for hypothesis in &elaborated.hypotheses {
+        let line = format!(
+            "    {} : {} ↦ {}",
+            hypothesis.name,
+            pyfmt::short(Some(&hypothesis.lean_type), TYPE_WIDTH),
+            bound(&hypothesis.statement_id)
+        );
+        used += line.len();
+        if used > HYPOTHESIS_BUDGET && used != line.len() {
+            hidden.push(hypothesis);
+        } else {
+            lines.push(line);
+        }
+    }
+    if !hidden.is_empty() {
+        let unbound: Vec<&str> = hidden
+            .iter()
+            .filter(|h| h.statement_id.is_none())
+            .map(|h| h.name.as_str())
+            .collect();
+        lines.push(format!(
+            "    … {} more hypotheses ({}); --json lists them",
+            hidden.len(),
+            if unbound.is_empty() {
+                "all bound".to_owned()
+            } else {
+                format!("unbound: {}", unbound.join(" "))
+            }
+        ));
+    }
+    let conclusion = &elaborated.conclusion;
+    lines.push(format!(
+        "    ⊢ {} ↦ {}",
+        pyfmt::short(Some(&conclusion.lean_type), TYPE_WIDTH),
+        bound(&conclusion.statement_id)
+    ));
+    if !elaborated.missing_premises.is_empty() {
+        lines.push(format!(
+            "    premises no hypothesis binds: {}",
+            elaborated.missing_premises.join(", ")
+        ));
+    }
+    lines
 }
 
 fn str_list(value: &Value) -> Vec<String> {
@@ -1414,6 +1510,9 @@ pub fn format_context(pack: &ContextPack, limit: i64) -> String {
     }
 
     lines.push("\nLean (authoritative; text copied from the frozen Challenge module):".into());
+    if let Some(notice) = pack.bind_types.as_ref().and_then(|s| s.notice.as_ref()) {
+        lines.push(format!("  {notice}"));
+    }
     for entry in &pack.lean {
         let flag = if entry.transcription {
             "; TRANSCRIPTION"
@@ -1448,6 +1547,9 @@ pub fn format_context(pack: &ContextPack, limit: i64) -> String {
                 "    theorem {} not found in the Challenge source",
                 entry.theorem
             )),
+        }
+        if let Some(elaborated) = &entry.elaborated {
+            lines.extend(elaborated_lines(elaborated));
         }
         let companions = &entry.companion_theorems;
         if !companions.is_empty() {
@@ -1813,7 +1915,7 @@ pub fn format_context(pack: &ContextPack, limit: i64) -> String {
             u.unchecked_companion_theorems.join(", ")
         ));
     }
-    lines.push("\nTerms linked by the argument (IDs; read with research_index.py show):".into());
+    lines.push("\nTerms linked by the argument (IDs; read with truth index show):".into());
     let terms: Vec<String> = pack
         .definitions
         .iter()
@@ -1831,6 +1933,53 @@ pub fn format_context(pack: &ContextPack, limit: i64) -> String {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn elaborated_block_stays_near_one_kilobyte() {
+        use crate::bind_types::{Elaborated, Hypothesis, Parameter};
+        let hypothesis = |n: usize, bound: bool| Hypothesis {
+            name: format!("h{n}"),
+            head: json!("TruthCore.Fix.P"),
+            lean_type: format!("TruthCore.Fix.P {}", "x ".repeat(60)),
+            statement_id: bound.then(|| "11111111-1111-4111-8111-111111111111".to_owned()),
+        };
+        let elaborated = Elaborated {
+            input_digest: "sha256:0123456789abcdef".into(),
+            statement: String::new(),
+            parameters: vec![Parameter {
+                name: "W".into(),
+                lean_type: "Type".into(),
+            }],
+            hypotheses: (0..30).map(|n| hypothesis(n, n != 20)).collect(),
+            conclusion: hypothesis(99, false),
+            missing_premises: vec!["STMT-D".into()],
+            binding: "mismatch".into(),
+            advisory: true,
+        };
+        let lines = elaborated_lines(&elaborated);
+        assert_eq!(
+            lines[0],
+            "  elaborated (fresh bind-check cache 01234567; binding mismatch; not verification evidence):"
+        );
+        assert_eq!(lines[1], "    parameters: W");
+        assert!(
+            lines[2].starts_with("    h0 : TruthCore.Fix.P x x")
+                && lines[2].ends_with("… ↦ 11111111-1111-4111-8111-111111111111")
+        );
+        assert_eq!(
+            lines[lines.len() - 3],
+            "    … 27 more hypotheses (unbound: h20); --json lists them"
+        );
+        assert!(
+            lines[lines.len() - 2].starts_with("    ⊢ TruthCore.Fix.P")
+                && lines[lines.len() - 2].ends_with(" ↦ unbound")
+        );
+        assert_eq!(
+            lines[lines.len() - 1],
+            "    premises no hypothesis binds: STMT-D"
+        );
+        assert!(lines.join("\n").len() < 1024);
+    }
 
     #[test]
     fn lean_text_scanners_follow_python_patterns() {

@@ -75,6 +75,14 @@ pub struct Contracts {
 }
 
 impl Contracts {
+    /// No contracts: binding by head constant and pins alone.
+    pub fn none() -> Self {
+        Self {
+            root: PathBuf::new(),
+            by_result: BTreeMap::new(),
+        }
+    }
+
     pub fn load(root: &Path) -> Result<Self, String> {
         let mut paths: Vec<PathBuf> = match fs::read_dir(root.join(CONTRACTS)) {
             Ok(entries) => entries
@@ -686,6 +694,86 @@ fn bind_result(
     })
 }
 
+/// The configuration gate's original-theorem binding (the end of Python
+/// `collect_configuration_reports`): describes the results `ids` together in
+/// one exporter run (without sense constants) and requires each to bind
+/// exactly (`bound`; a pinned binding is rejected too).
+pub fn bind_originals(root: &Path, corpus: &Corpus, ids: &BTreeSet<String>) -> Result<(), String> {
+    let contracts = Contracts::load(root)?;
+    let mut requests = result_requests(corpus, Some(ids));
+    requests.sort_by_key(|request| text(field(&request.record, "id")));
+    let described = run_tool(root, &tool_input_with(corpus, &contracts, &requests, false))?;
+    let statements = statements(corpus);
+    let pins = pins();
+    let lookup = by_theorem(&described);
+    let fallback = json!({"error": "missing original theorem description"});
+    for request in &requests {
+        let theorem = text(field(&request.record, "theorem"));
+        let entry = bind_result(
+            request,
+            &statements,
+            lookup.get(theorem.as_str()).copied().unwrap_or(&fallback),
+            &pins,
+            &contracts,
+        );
+        if entry["status"] != "bound" {
+            return Err(format!(
+                "{}: original theorem binding rejected: {}",
+                text(field(&request.record, "id")),
+                problems_repr(&entry["problems"])
+            ));
+        }
+    }
+    Ok(())
+}
+
+/// Python `repr` of binding problems, each dictionary in the key order
+/// `bind_result` and `expression_contracts.check` build it (one ranking
+/// covers every problem kind).
+fn problems_repr(problems: &Value) -> String {
+    const ORDER: [&str; 15] = [
+        "kind",
+        "role",
+        "hypothesis",
+        "bundle",
+        "position",
+        "statement_id",
+        "lean_declaration",
+        "head",
+        "type",
+        "pinned_type",
+        "detail",
+        "expected",
+        "actual",
+        "path",
+        "declarations",
+    ];
+    let rank = |key: &str| {
+        ORDER
+            .iter()
+            .position(|known| *known == key)
+            .unwrap_or(ORDER.len())
+    };
+    let items: Vec<String> = problems
+        .as_array()
+        .into_iter()
+        .flatten()
+        .map(|problem| match problem.as_object() {
+            Some(map) => {
+                let mut keys: Vec<&String> = map.keys().collect();
+                keys.sort_by_key(|key| rank(key));
+                let fields: Vec<String> = keys
+                    .into_iter()
+                    .map(|key| format!("{}: {}", pyfmt::repr_str(key), pyfmt::repr(&map[key])))
+                    .collect();
+                format!("{{{}}}", fields.join(", "))
+            }
+            None => pyfmt::repr(problem),
+        })
+        .collect();
+    format!("[{}]", items.join(", "))
+}
+
 /// The exporter descriptions by theorem name (a later entry wins, as in
 /// Python's dict comprehension).
 fn by_theorem(described: &[Value]) -> HashMap<&str, &Value> {
@@ -1147,8 +1235,15 @@ pub fn failed(report: &Value) -> bool {
 /// Python `finite_models.certificate_source`: the Lean file that checks every
 /// registered model's exact closed applications, and its theorem names.
 pub fn certificate_source(corpus: &Corpus) -> (String, Vec<String>) {
-    let models = corpus.records("models");
-    let statements = statements(corpus);
+    model_certificate_source(&corpus.records("models"), &statements(corpus))
+}
+
+/// [`certificate_source`] for `models` (in order), as Python
+/// `certificate_source(models, statements)`.
+pub fn model_certificate_source(
+    models: &[&Obj],
+    statements: &HashMap<&str, &Obj>,
+) -> (String, Vec<String>) {
     let modules: BTreeSet<String> = models
         .iter()
         .flat_map(|model| strings(model.get("modules")))
@@ -1247,11 +1342,20 @@ fn run_limited(
     command.args(args).current_dir(root);
     match crate::subprocess::run_bounded(command, MODEL_TIMEOUT) {
         Ok(Some(done)) => Ok((done.success, done.stdout, done.stderr)),
-        Ok(None) => Err(format!(
-            "finite model verification unavailable: Command '{program} {}' timed out after 600 seconds",
-            args.join(" ")
+        Ok(None) => {
+            let argv: Vec<&str> = std::iter::once(program)
+                .chain(args.iter().copied())
+                .collect();
+            Err(format!(
+                "finite model verification unavailable: Command '{}' timed out after 600 seconds",
+                pyfmt::repr(&json!(argv))
+            ))
+        }
+        Err(crate::subprocess::Failure::Spawn(error)) => Err(format!(
+            "finite model verification unavailable: {}",
+            crate::structure::os_error(&error, Path::new(program))
         )),
-        Err(crate::subprocess::Failure::Spawn(error) | crate::subprocess::Failure::Wait(error)) => {
+        Err(crate::subprocess::Failure::Wait(error)) => {
             Err(format!("finite model verification unavailable: {error}"))
         }
     }
@@ -1260,15 +1364,26 @@ fn run_limited(
 /// Python `finite_models.verify_models`: builds the models' modules, compiles
 /// the certificates and requires each to be zero-axiom.
 pub fn verify_models(root: &Path, corpus: &Corpus) -> Result<Value, String> {
+    verify_model_records(root, &corpus.records("models"), &statements(corpus))
+}
+
+/// [`verify_models`] for `models` (Python `verify_models(models, statements,
+/// root)`, as `verify_case` calls it for a profile's eligible witnesses).
+pub fn verify_model_records(
+    root: &Path,
+    models: &[&Obj],
+    statements: &HashMap<&str, &Obj>,
+) -> Result<Value, String> {
+    static NEXT: std::sync::atomic::AtomicUsize = std::sync::atomic::AtomicUsize::new(0);
     let root = &absolute(root);
-    let models = corpus.records("models");
     if models.is_empty() {
         return Ok(json!({"models": 0, "certificates": 0, "axioms": []}));
     }
-    let (source, names) = certificate_source(corpus);
+    let (source, names) = model_certificate_source(models, statements);
     let file = root.join(format!(
-        ".truth-model-certificates-{}.lean",
-        std::process::id()
+        ".truth-model-certificates-{}-{}.lean",
+        std::process::id(),
+        NEXT.fetch_add(1, std::sync::atomic::Ordering::Relaxed)
     ));
     fs::write(&file, source)
         .map_err(|error| format!("finite model verification unavailable: {error}"))?;
