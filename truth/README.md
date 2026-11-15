@@ -16,6 +16,7 @@ target/debug/truth dossier STMT-GOD-EXISTS
 target/debug/truth context ARGUMENT-ID --json
 target/debug/truth orphans
 target/debug/truth orphans --senses --json
+target/debug/truth issues --from issues.json --for STMT-GOD-EXISTS
 target/debug/truth next
 target/debug/truth next-steps --frontier-root STMT-CATHOLICISM-TRUE
 target/debug/truth results
@@ -38,8 +39,8 @@ network access. The executable uses only local files. Use `--root PATH` to
 select another checkout. Paths in results are relative to that checkout.
 
 Version 1 JSON uses stdout for results and stderr for errors. Exit codes are
-0 for success, 1 for corpus input errors, 2 for usage errors, and 3 for an
-unknown exact ID. `inspect` includes every matching kind and its canonical
+0 for success, 1 for corpus input errors, 2 for usage errors (and, as in
+Python, for an unusable issue snapshot), and 3 for an unknown exact ID. `inspect` includes every matching kind and its canonical
 record fields, including shared argument/result IDs. Passage entries are
 expanded with their shared snapshot fields as in the Python reader.
 `input_identity` is a non-cryptographic fingerprint of the sorted record
@@ -72,8 +73,8 @@ rejects the shared options it does not take with `Args::simple` or
 first (`bind-check`, `next`, the ID lists, …) calls `cli::validate_first`
 before its own work: it runs the full `check` validation and, on a broken
 corpus, fails as Python does, with the first `corpus error: …` and exit
-code 2. `next`, `next-steps`, `arguments`, `results` and `bind-check` call
-it; the earlier ports perform only the structural load.
+code 2. `next`, `next-steps`, `arguments`, `results`, `bind-check` and
+`unused-premises` call it; the earlier ports perform only the structural load.
 
 Parity tests live in `scripts/truth_parity/`, one module per command, with
 shared fixtures and the `ParityCase` base class in `common.py`; a new
@@ -203,6 +204,55 @@ real corpus's first slice (byte-identical artifact). On the real corpus
 in Python with Lean, 1.7 s against 6.3 s from the recorded exporter output,
 and `--check-input` 1.7 s against 2.5 s; the artifacts were identical.
 
+## `unused-premises`, `lean-reuse`, `context --proof-use`
+
+These port the proof-term exporter commands of `scripts/corpus.py` (#954
+A2). Lean stays the verifier: Rust writes each exporter's input byte for
+byte as Python's `json.dump` does, runs it with `lake env lean --run` through
+the code `bind-check` uses (`bind_check::run_exporter`), or reads a saved
+output, and applies Python's joins and classifications to what Lean printed.
+
+- `truth unused-premises [--strict] [--exemptions FILE] [--frontier-root
+  STATEMENT] [--bind-json FILE] [--usage-json FILE]` (#571) validates first,
+  binds every result with `scripts/BindTypes.lean` (Python's input without
+  sense constants, and bindings without sense problems, as Python's command
+  does) or reads a saved `bind-check --json` report, runs
+  `scripts/UnusedPremises.lean` on the same input or reads its saved output,
+  and reports each bound premise or theory-bundle conjunct the proof term
+  never uses, flagged when it is open on a path to the frontier root.
+  Exemptions come from `scripts/unused-premise-exemptions.json` (or
+  `--exemptions FILE`); `--strict` exits 1 on an unexempted finding or a
+  stale exemption. Python's `--root STATEMENT` is `--frontier-root` here.
+  Stdout is Python's byte for byte, text and the sorted `--json` report; CI's
+  corpus job runs `truth unused-premises --strict`.
+- `truth lean-reuse --review [--usage-json FILE]` (#959) runs
+  `scripts/LeanReuse.lean` on every result theorem (or reads its saved
+  output) and classifies each result reached through a Solution's import
+  closure or its proof term as theorem-used and graph-linked, theorem-used
+  but not in the argument graph, or import only. Text is Python's byte for
+  byte; `--json` is Python's report plus `input_identity`. Advisory only.
+- `truth context TARGET --proof-use` (or `--proof-use-json FILE`) runs the
+  same exporter on the target argument's result theorems and replaces each
+  result's import reuse by that classification, as Python's flag does.
+
+Exporter failures, a missing `lake`, a theorem the exporter did not inspect
+and malformed saved output are `corpus error: …` with exit code 2, as in
+Python; Rust reports serde's message for an unreadable saved file where
+Python raised a traceback or printed its own JSON parser's message.
+`scripts/truth_parity/proof_use.py` compares every command with Python on
+the `check` fixture under a stand-in `lake` that records the exporter input
+and prints a recorded output, so both the inputs (byte for byte) and the
+reports are compared, including findings, bundle conjuncts, the root-path
+flag, exemptions and their errors, skipped results, validate-first,
+classifications and usage-map errors; on the real corpus it compares the
+exporter inputs and, given `TRUTH_UNUSED_BIND_JSON`, `TRUTH_UNUSED_USAGE_JSON`
+and `TRUTH_LEAN_REUSE_JSON` (recorded outputs for the checkout), the
+reports. On the real corpus (2026-11-15, 2151 results, same loaded machine)
+`unused-premises` with Lean took 21.5–24.7 s in Rust and 26.9–44.8 s in
+Python, and from saved outputs 4.1 s against 11.8 s; `lean-reuse --review`
+from a saved output took 0.75 s against 2.6 s (with Lean, both are dominated
+by the exporter's ~30 s); the outputs were identical.
+
 ## `thickness`
 
 `truth thickness [--queue] [--frontier-root STATEMENT-ID]` ports
@@ -219,9 +269,19 @@ two commands share one closure computation. No Python runs. `input_identity`
 covers the corpus records only, not the Lean files the transcription
 heuristics read.
 
-Not ported: `--base` (it runs the base revision's own `corpus.py` on a
-`git archive` extract; use Python) and the full `validate()` that the Python
-command runs first (Rust performs only the structural load).
+`truth thickness --base REV` ports `corpus.py thickness --base REV`: the
+head report plus the derivation sets and summary counts that changed from the
+base revision. The base is read as `frontier-diff` reads it (below): a `git
+archive` extract whose frontier report the Rust engine computes when that
+revision's `scripts/corpus.py` is the checkout's, and that revision's own
+`corpus.py frontier --json` otherwise; a pre-migration base is mapped to uuids
+as Python maps it (its records by the checkout's `scripts/migrate_uuid.py`).
+The JSON adds `engines` (`rust` or `python` for the base; the head is always
+Rust). `--queue` with `--base`, and a revision that cannot be read, fail as
+Python's `corpus error:` with exit 2.
+
+Not ported: the full `validate()` that the Python command runs first (Rust
+performs only the structural load).
 
 ## `frontier` and `frontier-diff`
 
@@ -310,8 +370,7 @@ target or an ambiguous `context` target exits 2;
 an unreadable or non-frontier report or an unknown frontier root exits 1.
 Python prints the same messages with exit code 2.
 
-Not ported (use Python): `dossier --issues-from` (offline issue snapshot),
-`context --proof-use`/`--proof-use-json` (Lean proof-term inspection), the
+Not ported (use Python): the
 full `validate()` that `dossier --all` runs first, `research_index.py`'s other
 subcommands (`build`, `search`, `show`, `duplicates`, `summary`, `parity`,
 `export`, `bundle`, `compare`) and the Explorer's `dossier --all` consumer.
@@ -323,6 +382,32 @@ several `--limit` values, and the error cases, from a saved Python report;
 and, for a subset plus `dossier --all`, that the in-process frontier gives the
 same output.
 
+## `issues` and `dossier --issues-from`
+
+`truth issues --from FILE [--for ID]` is `corpus.py issues --from FILE`: the
+read-only reconciliation of `truth-core-acceptance` blocks (#949) in an
+offline `gh issue list --state open --limit 1000 --json
+number,title,body,url,comments` snapshot against this checkout
+(`truth::issues`, the port of `scripts/issue_acceptance.py`). Each issue is
+`delivered`, `missing`, `malformed` or `untracked`; the JSON adds the
+requirements and a reverse index from IDs to issue numbers, and `--for ID`
+(a uuid, legacy id or label of a result, statement, configuration, attempt or
+argument) keeps the issues naming it. Statement closures come from the Rust
+frontier on the checkout; a `theorems` requirement also needs a declaration
+of exactly that name in the result's Solution module source. `truth dossier
+STATEMENT|--all --issues-from FILE` adds each statement's
+`targeting_issues` (and the text line `Issue targets (offline acceptance
+snapshot): …`), using the closures of the dossier's frontier report.
+
+Unlike Python, `truth issues` requires `--from`: it never calls GitHub.
+Snapshot errors (unreadable file, invalid JSON, a non-array, an issue without
+a positive integer number) exit 2 with Python's `corpus error: …` message;
+only the wording of a JSON parse error differs. Text is byte-identical and
+JSON semantically identical (plus `input_identity`);
+`scripts/truth_parity/issues.py` checks this on the cases of
+`test_issue_acceptance.py` on a fixture checkout and on the recorded snapshot
+`scripts/truth_parity/fixtures/issues-snapshot.json` extended with blocks
+naming real corpus records.
 ## `next`, `next-steps`, `arguments`, `results`, `sort-lists`
 
 Ports of the navigation subcommands of `scripts/corpus.py`
@@ -367,6 +452,19 @@ already reach the root, so such work is otherwise invisible to round
 selection. Reaching the root is the same route-aware walk as `thickness`;
 `scripts/verify_truth_cli.py` checks the disconnected set against Python's
 `reaching_root_statements` plus `corpus.refutation_support`.
+
+`truth orphans --base REV` ports `scripts/orphan_summary.py --base REV`, the
+Markdown table CI adds to a PR's job summary: the disconnected count at the
+base revision and at the working tree, and their difference. The base is read
+as `frontier-diff` reads it: the Rust engine when the revision's
+`scripts/corpus.py` is the checkout's, otherwise the revision's own Python
+(`orphan_summary`'s historical snippet, which tolerates a revision without
+refutation support). A base that cannot be read or computed is reported as
+unavailable (stderr names the error; `--json` has `base_error`) and does not
+fail the command; a head failure does. The text is byte-identical to
+Python's for the default root (Python always names `STMT-CATHOLICISM-TRUE`;
+Rust names the `--frontier-root` used); `--json` gives `base_count`,
+`head_count`, `delta` and `engines`. It excludes `--by` and `--senses`.
 
 Results are grouped by Lean module area (`--by module`, the default: the
 first namespace component below `TruthCore`, after `Results`, so

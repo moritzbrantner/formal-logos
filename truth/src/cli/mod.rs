@@ -26,6 +26,8 @@ mod frontier;
 mod frontier_diff;
 mod ids;
 mod inspect;
+mod issues;
+mod lean_reuse;
 mod models;
 mod next;
 mod next_steps;
@@ -37,21 +39,25 @@ mod status;
 mod structure;
 mod territory;
 mod thickness;
+mod unused_premises;
 
 pub use args::{Accepts, Args};
 
 pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] check
        truth [--root PATH] [--json] inspect ID
-       truth [--root PATH] [--json] thickness [--queue] [--frontier-root STATEMENT]
+       truth [--root PATH] [--json] thickness [--queue | --base REV] [--frontier-root STATEMENT]
        truth [--root PATH] [--json] frontier [--reaching-root] [--routes] [--frontier-root STATEMENT]
        truth [--root PATH] [--json] frontier-diff --base REV [--head REV] [--frontier-root STATEMENT]
-       truth [--root PATH] [--json] orphans [--frontier-root STATEMENT] [--by module|family] [--senses]
+       truth [--root PATH] [--json] orphans [--frontier-root STATEMENT] [--by module|family | --senses | --base REV]
        truth [--root PATH] [--json] bridges --constants FILE (--queue-file FILE | --target ID)...
              [--targets N] [--top K] [--pool M]
        truth [--root PATH] [--json] related STATEMENT [--limit N]
        truth [--root PATH] [--json] dossier (STATEMENT | --all) [--frontier-json FILE] [--limit N]
+             [--issues-from FILE]
        truth [--root PATH] [--json] context TARGET [--frontier-json FILE] [--limit N] [--related N]
+             [--proof-use | --proof-use-json FILE]
+       truth [--root PATH] [--json] issues --from FILE [--for ID]
        truth [--root PATH] [--json] next
        truth [--root PATH] [--json] next-steps [--frontier-root STATEMENT]
        truth [--root PATH] [--json] arguments
@@ -65,10 +71,15 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] structure STATEMENT [--unfold DECLARATION]... [--extractor-json FILE]
        truth [--root PATH] [--json] structure-report [--output FILE] [--build-input | --check-input]
              [--extractor-json FILE]
+       truth [--root PATH] [--json] unused-premises [--strict] [--exemptions FILE] [--frontier-root STATEMENT]
+             [--bind-json FILE] [--usage-json FILE]
+       truth [--root PATH] [--json] lean-reuse --review [--usage-json FILE]
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
-`python3 scripts/corpus.py frontier --json [--root STATEMENT]` on the same checkout.";
+`python3 scripts/corpus.py frontier --json [--root STATEMENT]` on the same checkout.
+issues and dossier --issues-from read an offline `gh issue list --json
+number,title,body,url,comments` snapshot; truth never calls GitHub.";
 
 /// An error: exit code and the JSON error object (`code`, `message`, ...).
 pub type Failure = (u8, Value);
@@ -99,6 +110,7 @@ pub const COMMANDS: &[Command] = &[
     related::COMMAND,
     dossier::COMMAND,
     context::COMMAND,
+    issues::COMMAND,
     next::COMMAND,
     next_steps::COMMAND,
     ids::ARGUMENTS,
@@ -110,6 +122,8 @@ pub const COMMANDS: &[Command] = &[
     bind_check::COMMAND,
     structure::STRUCTURE,
     structure::REPORT,
+    unused_premises::COMMAND,
+    lean_reuse::COMMAND,
 ];
 
 /// Parses `args` and runs the command it names.
@@ -124,6 +138,15 @@ pub fn run(args: &[OsString]) -> Output {
             Some(command) if args.structure.flags && !command.name.starts_with("structure") => {
                 Err(usage(
                     "--unfold, --output, --build-input, --check-input and --extractor-json apply only to structure and structure-report",
+                ))
+            }
+            Some(command)
+                if !args.proof.given().is_empty()
+                    && !["unused-premises", "lean-reuse", "context"].contains(&command.name) =>
+            {
+                Err(usage(
+                    "--strict, --exemptions, --bind-json, --usage-json, --review, --proof-use and \
+                     --proof-use-json apply only to unused-premises, lean-reuse and context",
                 ))
             }
             Some(command) => (command.run)(&args, operands),
@@ -305,9 +328,9 @@ pub fn load(args: &Args) -> Result<(Corpus, Aliases, String), Failure> {
 /// `thickness`, `frontier` and `dossier --all` call `validate()` first; a
 /// Rust port of such a command that must keep that behaviour calls this
 /// before [`load`]. Warnings are not printed (Python prints them only for
-/// `check`). `next`, `next-steps`, `arguments`, `results`, `territory` and
-/// `bind-check`
-/// call it; the earlier ports perform only the structural load.
+/// `check`). `next`, `next-steps`, `arguments`, `results`, `territory`,
+/// `bind-check` and `unused-premises` call it; the earlier ports perform only
+/// the structural load.
 pub fn validate_first(root: &Path) -> Result<truth::check::Outcome, Failure> {
     truth::check::check(root)
         .map_err(|message| (2, json!({"code": "corpus_error", "message": message})))

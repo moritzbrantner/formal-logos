@@ -289,6 +289,18 @@ pub fn result_requests(corpus: &Corpus, scope: Option<&BTreeSet<String>>) -> Vec
 /// Python `bind_tool_input(..., senses=True)`, serialized as `json.dump`
 /// writes it (insertion order, `", "`/`": "` separators, ASCII escapes).
 pub fn tool_input(corpus: &Corpus, contracts: &Contracts, requests: &[Request]) -> String {
+    tool_input_with(corpus, contracts, requests, true)
+}
+
+/// Python `bind_tool_input(..., senses)`: without `senses` (as
+/// `unused-premises` calls it) the input names no sense constants or
+/// sense theorems, so the exporter adds no `sense_aliases` element.
+pub fn tool_input_with(
+    corpus: &Corpus,
+    contracts: &Contracts,
+    requests: &[Request],
+    senses: bool,
+) -> String {
     let mut ordered: Vec<&Request> = requests.iter().collect();
     ordered.sort_by_key(|request| text(field(&request.record, "id")));
     let modules: BTreeSet<String> = ordered
@@ -348,13 +360,18 @@ pub fn tool_input(corpus: &Corpus, contracts: &Contracts, requests: &[Request]) 
         .map(|p| p.to_string())
         .collect();
     let mut out = format!(
-        "{{\"modules\": {}, \"theorems\": {}, \"bundle_prefixes\": {}, \"sense_constants\": {}, \"sense_theorems\": {}",
+        "{{\"modules\": {}, \"theorems\": {}, \"bundle_prefixes\": {}",
         list(&mut modules.iter()),
         list(&mut theorems.iter()),
         list(&mut prefixes.iter()),
-        list(&mut sense_constants.iter()),
-        list(&mut sense_theorems.iter()),
     );
+    if senses {
+        out.push_str(&format!(
+            ", \"sense_constants\": {}, \"sense_theorems\": {}",
+            list(&mut sense_constants.iter()),
+            list(&mut sense_theorems.iter()),
+        ));
+    }
     if !contract_theorems.is_empty() {
         out.push_str(&format!(
             ", \"contract_theorems\": {}",
@@ -367,14 +384,29 @@ pub fn tool_input(corpus: &Corpus, contracts: &Contracts, requests: &[Request]) 
 
 /// Runs the exporter on `input` (Python `run_bind_tool`); needs `lake build`.
 pub fn run_tool(root: &Path, input: &str) -> Result<Vec<Value>, String> {
+    run_exporter(root, BIND_TOOL, input, "bind-check")
+}
+
+/// Runs the Lean exporter `tool` (a path below `root`, such as
+/// `scripts/BindTypes.lean`) on `input` with `lake env lean --run`, as
+/// Python `run_bind_tool(tool_input, tool=…, command_name=…)` does, and
+/// returns the JSON array it prints. `command` names the command in the
+/// missing-`lake` message. Lean stays the verifier; this only runs it.
+pub fn run_exporter(
+    root: &Path,
+    tool_path: &str,
+    input: &str,
+    command: &str,
+) -> Result<Vec<Value>, String> {
+    static NEXT: std::sync::atomic::AtomicUsize = std::sync::atomic::AtomicUsize::new(0);
     let root = &absolute(root);
     let path = std::env::temp_dir().join(format!(
-        "truth-bind-check-{}-{}.json",
+        "truth-{command}-{}-{}.json",
         std::process::id(),
-        Instant::now().elapsed().as_nanos()
+        NEXT.fetch_add(1, std::sync::atomic::Ordering::Relaxed)
     ));
     fs::write(&path, input).map_err(|error| format!("cannot write the exporter input: {error}"))?;
-    let tool = root.join(BIND_TOOL);
+    let tool = root.join(tool_path);
     let output = Command::new("lake")
         .args(["env", "lean", "--run"])
         .arg(&tool)
@@ -385,9 +417,11 @@ pub fn run_tool(root: &Path, input: &str) -> Result<Vec<Value>, String> {
     let output = match output {
         Ok(output) => output,
         Err(error) if error.kind() == std::io::ErrorKind::NotFound => {
-            return Err("bind-check needs `lake` on PATH (run after `lake build`)".into());
+            return Err(format!(
+                "{command} needs `lake` on PATH (run after `lake build`)"
+            ));
         }
-        Err(error) => return Err(format!("cannot run {BIND_TOOL}: {error}")),
+        Err(error) => return Err(format!("cannot run {tool_path}: {error}")),
     };
     if !output.status.success() {
         let stderr = String::from_utf8_lossy(&output.stderr);
@@ -398,14 +432,14 @@ pub fn run_tool(root: &Path, input: &str) -> Result<Vec<Value>, String> {
             stderr.trim()
         };
         return Err(format!(
-            "{BIND_TOOL} failed (exit {}):\n{detail}",
+            "{tool_path} failed (exit {}):\n{detail}",
             output.status.code().unwrap_or(-1)
         ));
     }
     match serde_json::from_slice::<Value>(&output.stdout) {
         Ok(Value::Array(items)) => Ok(items),
-        Ok(_) => Err(format!("{BIND_TOOL} must print a JSON array")),
-        Err(error) => Err(format!("{BIND_TOOL} printed invalid JSON: {error}")),
+        Ok(_) => Err(format!("{tool_path} must print a JSON array")),
+        Err(error) => Err(format!("{tool_path} printed invalid JSON: {error}")),
     }
 }
 
@@ -666,16 +700,15 @@ fn by_theorem(described: &[Value]) -> HashMap<&str, &Value> {
         .collect()
 }
 
-/// Python `bind_report` followed by `add_sense_bind_problems`: binds every
-/// request; a scoped report (`scope`) checks no stale pins.
-pub fn report(
-    root: &Path,
+/// The binding entries of Python `bind_report` (results in id order, then
+/// schema registrations), before `add_sense_bind_problems`: what
+/// `unused-premises` reads.
+pub fn bind_entries(
     corpus: &Corpus,
     contracts: &Contracts,
     described: &[Value],
     requests: &[Request],
-    scope: Option<&BTreeSet<String>>,
-) -> Result<Value, String> {
+) -> Vec<Value> {
     let statements = statements(corpus);
     let pins = pins();
     let lookup = by_theorem(described);
@@ -708,6 +741,23 @@ pub fn report(
         entry["kind"] = json!("schema-registration");
         entries.push(entry);
     }
+    entries
+}
+
+/// Python `bind_report` followed by `add_sense_bind_problems`: binds every
+/// request; a scoped report (`scope`) checks no stale pins.
+pub fn report(
+    root: &Path,
+    corpus: &Corpus,
+    contracts: &Contracts,
+    described: &[Value],
+    requests: &[Request],
+    scope: Option<&BTreeSet<String>>,
+) -> Result<Value, String> {
+    let statements = statements(corpus);
+    let pins = pins();
+    let lookup = by_theorem(described);
+    let mut entries = bind_entries(corpus, contracts, described, requests);
     let used: BTreeSet<(String, String, String)> = entries
         .iter()
         .flat_map(|entry| entry["undecidable"].as_array().into_iter().flatten())
