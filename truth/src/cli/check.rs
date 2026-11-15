@@ -42,6 +42,18 @@ fn run(args: &Args, operands: &[&str]) -> Output {
                 );
                 text.push(format!("warning: {}", report.summary()));
             }
+            // The formal status of definitions (#1652 L3), also Rust-only.
+            let definitions = truth::definition_status::check(&args.root)
+                .map_err(|message| (1, json!({"code": "corpus_error", "message": message})))?;
+            if let Some(report) = &definitions {
+                text.extend(
+                    report
+                        .findings
+                        .iter()
+                        .map(|line| format!("warning: definitions: {line}")),
+                );
+                text.push(format!("warning: {}", report.summary()));
+            }
             Ok((
                 json!({
                     "schema_version": 1,
@@ -53,6 +65,11 @@ fn run(args: &Args, operands: &[&str]) -> Output {
                         "summary": report.summary(),
                         "strict": report.strict,
                         "new_violations": report.new_violations,
+                    })),
+                    "definition_status": definitions.as_ref().map(|report| json!({
+                        "summary": report.summary(),
+                        "strict": report.strict,
+                        "findings": report.findings,
                     })),
                 }),
                 // `main` prints the part between the NULs to stderr.

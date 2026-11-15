@@ -1,0 +1,12 @@
+{
+  "id": "5883fae0-8619-45ab-acae-39cdc4456685",
+  "label": "negate (ordinary)",
+  "lemma": "negate",
+  "class": "ordinary",
+  "forms": [
+    "negated",
+    "negates",
+    "negating"
+  ],
+  "gloss": "To deny a proposition; to form its negation."
+}

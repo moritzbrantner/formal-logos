@@ -5,5 +5,21 @@
   "definition": "PRIMITIVE. IsLord g: g has dominion over everything else, i.e. authority to dispose of it as subject to g. After ST I q.13 a.7, where 'Lord' is said of God relative to creatures, which are subject to him. Example: an owner of a field, with respect to the field (a limited dominion). Counterexample: a cause whose effect is not subject to its disposal (a parent of an adult, in the respect in which the adult is independent).",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Causality.DeiFiliusAttributeField.Primitives.IsLord",
-  "note": "Explicitly identified primitive (Encode first). Open semantic obligation: a typed account of dominion (subjection, authority to dispose) that would let the bridge from causing the being of all to lordship be derived or fail. Two open bridges constrain it, each giving a sufficient condition: 'Whatever causes the being of everything else is LORD_1 of everything else' and the weaker sense bridge 'Whatever is LORD_2 is LORD_1' (eb6611a5), from the typed sibling LORD_2 (c8e458bd: causes the being of and governs everything else; disambiguation aa1de96a). LORD_2 types the grounds of dominion, not authority itself, so the typed account of authority remains open."
+  "note": "Explicitly identified primitive (Encode first). Open semantic obligation: a typed account of dominion (subjection, authority to dispose) that would let the bridge from causing the being of all to lordship be derived or fail. Two open bridges constrain it, each giving a sufficient condition: 'Whatever causes the being of everything else is LORD_1 of everything else' and the weaker sense bridge 'Whatever is LORD_2 is LORD_1' (eb6611a5), from the typed sibling LORD_2 (c8e458bd: causes the being of and governs everything else; disambiguation aa1de96a). LORD_2 types the grounds of dominion, not authority itself, so the typed account of authority remains open.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Primitives.IsLord g says that g has dominion over everything else: authority to dispose of it as subject to g (ST I q.13 a.7, 'Lord' said of God relative to creatures). It is a supplied predicate on beings, one of the Dei Filius ch. 1 attribute primitives.",
+    "examples": [
+      "The owner of a field with respect to the field, as a limited dominion of the same kind (the predicate itself requires dominion over everything else)."
+    ],
+    "exclusions": [
+      "A cause whose effect is not subject to its disposal, such as a parent of an adult in the respect in which the adult is independent: causing is not by itself dominion.",
+      "LORD_2, the typed sibling (causes the being of and governs everything else): it types grounds of dominion, not authority, and reaches LORD_1 only by an open sense bridge (Lord disambiguation aa1de96a)."
+    ],
+    "open_obligations": [
+      "No axiom constrains it; two open bridges give sufficient conditions only: 'Whatever causes the being of everything else is LORD_1 of everything else' and 'Whatever is LORD_2 is LORD_1'.",
+      "A typed account of authority and subjection is OPEN; until it exists the bridge from causing being to lordship can neither be derived nor fail.",
+      "Formalization candidate only after such an account: nothing in the current vocabulary types authority."
+    ]
+  }
 }

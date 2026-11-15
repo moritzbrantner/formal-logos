@@ -242,6 +242,15 @@ When the target is an existing argument or result, start with
 the frozen Lean statement, Lean-import reuse, premise status and other routes,
 countermodels, attempts and open work, derived on demand (`docs/notes/argument-context.md`).
 
+Before judging how mature a premise's research is, or calling a theorem,
+connection or research issue new, run `target/release/truth brief <STMT-ID>`
+(or `brief --question "..."`) and `target/release/truth novelty "<claim>"`,
+with `--issues-from` an offline `gh issue list`/`gh pr list --state all`
+snapshot where available. They retrieve prior notes, attempts, rivals,
+conditional results, recorded judgments and issues with their references;
+they are advisory and certify nothing, and a missing hit or snapshot is not
+evidence that no prior work exists (truth/README.md, "`brief` and `novelty`").
+
 For every premise touched, inspect `target/release/truth dossier <STMT-ID>`
 (the explorer links the same generated dossier from the statement page). Before
 handoff, update `corpus/attempts/` for failed derivations, rejected readings,

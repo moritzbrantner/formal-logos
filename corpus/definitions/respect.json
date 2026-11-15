@@ -6,5 +6,23 @@
   "definition": "`Respect`: that with respect to which a thing is moved, in act or in potency, such as being hot. The quarta via reads a respect as a perfection (ST I q.4 a.1: a thing is called perfect insofar as it is in act). 'Moved in no respect' quantifies over all respects.",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel.Respect",
-  "note": "A modeling parameter of the prima via reconstruction (TruthCore/Latin/Aquinas/SummaTheologiae/PrimaPars/Question2/Article3.lean), kept abstract so that the formal results do not depend on what motus covers. The reading as perfection follows ST I q.4 a.1 (passage AQUINAS-ST-I-Q4-A1); no claim states it in this form yet. Lean locator: MotionModel.Respect is the primitive index type. It introduces no independent account of what a perfection or respect is; application of the intended reading remains OPEN."
+  "note": "A modeling parameter of the prima via reconstruction (TruthCore/Latin/Aquinas/SummaTheologiae/PrimaPars/Question2/Article3.lean), kept abstract so that the formal results do not depend on what motus covers. The reading as perfection follows ST I q.4 a.1 (passage AQUINAS-ST-I-Q4-A1); no claim states it in this form yet. Lean locator: MotionModel.Respect is the primitive index type. It introduces no independent account of what a perfection or respect is; application of the intended reading remains OPEN.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "MotionModel.Respect is the type of respects of a model: that with respect to which a thing is moved, or is in act or in potency, such as being hot, being in a place, or having being (esse). The quarta via reads a respect as a perfection. A model supplies the type; 'moved in no respect' quantifies over all its elements.",
+    "examples": [
+      "Being hot (fire heating wood).",
+      "Being in a place, for local motion.",
+      "The distinguished respect esse (DEF-ESSE)."
+    ],
+    "exclusions": [
+      "A being: a respect is that in which something is moved or in act, a being is what is moved or in act. This separation of roles is the intended interpretation; Lean supplies Being and Respect as two independently given types, which a model may instantiate with the same type, so the field declarations do not enforce it.",
+      "A time or a stage of a process.",
+      "Physical respects (DEF-PHYSICAL-RESPECT) are a guarded subclass used by the typed Physics readings, not the whole type (DISAMB-MOTION)."
+    ],
+    "open_obligations": [
+      "Which respects there are, and whether each is a perfection, is supplied by an application; the reading as perfection follows ST I q.4 a.1 but no claim states it in this form, so it remains OPEN.",
+      "No formalization candidate: an index type of a model has no definition from other vocabulary."
+    ]
+  }
 }

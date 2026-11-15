@@ -1,0 +1,10 @@
+{
+  "id": "fa13d33c-0b71-453e-8f4d-b9946ccb95cf",
+  "label": "Negation: Veracity GodAssentAccurate",
+  "paraphrase": "The negation of statement 7dd8a624-b04d-4ea0-9ecf-2d9e5cab95ad, introduced by a materialized contraposition: it is not the case that the following holds. Analyst formulation. Every actual assent of such a GOD_4 is true; not factivity by definition.",
+  "lean_declaration": "TruthCore.Logic.Inversions.DivineVeracity1410AssertionTruthAContra2.NotGodAssentAccurate",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "f2c09ae8-848d-5a3b-ab79-92c2b01d414c"
+  ]
+}

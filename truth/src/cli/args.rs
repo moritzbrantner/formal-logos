@@ -117,6 +117,19 @@ pub struct AttributionArgs {
     pub max_chars: Option<i64>,
 }
 
+/// The `tree` options: `--down N`, `--up N` (0 allowed), `--budget N` and
+/// `--out-dir DIR` (batch mode: one JSON file per statement operand) and
+/// `--materialize-edge KEY`.
+#[derive(Default)]
+pub struct TreeArgs {
+    pub flags: bool,
+    pub down: Option<usize>,
+    pub up: Option<usize>,
+    pub budget: Option<usize>,
+    pub out_dir: Option<String>,
+    pub materialize_edge: Option<String>,
+}
+
 /// The `index compare` options.
 #[derive(Default)]
 pub struct IndexArgs {
@@ -172,6 +185,15 @@ impl IssueArgs {
     }
 }
 
+/// `brief --question TEXT` and `novelty --statement ID`.
+#[derive(Default)]
+pub struct BriefArgs {
+    /// Whether either was given.
+    pub flags: bool,
+    pub question: Option<String>,
+    pub statement: Option<String>,
+}
+
 /// Every option of every command, parsed in one pass in token order.
 pub struct Args {
     pub machine: bool,
@@ -196,7 +218,9 @@ pub struct Args {
     /// `strength-comparisons` and `strength-report` replay (parity only).
     pub recorded_exporters: Option<String>,
     pub attribution: AttributionArgs,
+    pub tree: TreeArgs,
     pub index: IndexArgs,
+    pub brief: BriefArgs,
     /// `--profile-module MODULE` (`bridge-experiments`)
     pub profile_module: Option<String>,
 }
@@ -259,7 +283,9 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         proof: ProofArgs::default(),
         recorded_exporters: None,
         attribution: AttributionArgs::default(),
+        tree: TreeArgs::default(),
         index: IndexArgs::default(),
+        brief: BriefArgs::default(),
         profile_module: None,
     };
     let mut args = args.iter();
@@ -345,6 +371,43 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                 parsed.attribution.max_chars =
                     Some(integer(args.next().and_then(|value| value.to_str()), arg)?);
             }
+            "--out-dir" => {
+                parsed.tree.flags = true;
+                parsed.tree.out_dir = Some(
+                    args.next()
+                        .and_then(|value| value.to_str())
+                        .ok_or_else(|| usage(format!("{arg} requires a UTF-8 path")))?
+                        .to_owned(),
+                );
+            }
+            "--materialize-edge" => {
+                parsed.tree.flags = true;
+                parsed.tree.materialize_edge = Some(
+                    args.next()
+                        .and_then(|value| value.to_str())
+                        .ok_or_else(|| usage("--materialize-edge requires an edge key"))?
+                        .to_owned(),
+                );
+            }
+            "--down" | "--up" | "--budget" => {
+                parsed.tree.flags = true;
+                let value = args.next().and_then(|value| value.to_str());
+                let tree = &mut parsed.tree;
+                match arg {
+                    "--budget" => tree.budget = Some(number(value, arg)?),
+                    _ => {
+                        let depth =
+                            value.and_then(|value| value.parse().ok()).ok_or_else(|| {
+                                usage(format!("{arg} requires a non-negative integer"))
+                            })?;
+                        if arg == "--down" {
+                            tree.down = Some(depth);
+                        } else {
+                            tree.up = Some(depth);
+                        }
+                    }
+                }
+            }
             "--left" | "--right" => {
                 parsed.index.flags = true;
                 let value = args
@@ -356,6 +419,20 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                     parsed.index.left.push(value);
                 } else {
                     parsed.index.right.push(value);
+                }
+            }
+            "--question" | "--statement" => {
+                parsed.brief.flags = true;
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .filter(|value| !value.trim().is_empty())
+                    .ok_or_else(|| usage(format!("{arg} requires a nonempty UTF-8 value")))?
+                    .to_owned();
+                if arg == "--question" {
+                    parsed.brief.question = Some(value);
+                } else {
+                    parsed.brief.statement = Some(value);
                 }
             }
             "--profile-module" => {
@@ -573,7 +650,9 @@ impl Args {
             return Err(usage("--from and --for apply only to issues"));
         }
         if self.issues.issues_from.is_some() {
-            return Err(usage("--issues-from applies only to dossier"));
+            return Err(usage(
+                "--issues-from applies only to dossier, brief and novelty",
+            ));
         }
         if !accepts.configuration && self.configuration.flags {
             return Err(usage(

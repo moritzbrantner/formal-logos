@@ -7,5 +7,22 @@
   "claim_ids": [
     "ce55e563-a4c9-4999-b463-b8e23004dfdd"
   ],
-  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.NatureSource.quiddityEfficientlyCauses"
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.NatureSource.quiddityEfficientlyCauses",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "NatureSource.quiddityEfficientlyCauses x r says that x's own form or quiddity is an efficient cause of x's having r: the having of r proceeds from x's nature as from an agent ('dico sicut a causa efficiente', De ente c.3). It is a supplied relation between a being and a respect (NATURE_SOURCE_2).",
+    "examples": [
+      "A subject that actively causes its proper accidents, on the q.77 a.6 reading (the record's example of efficient causation by a nature)."
+    ],
+    "exclusions": [
+      "A merely formal principle by which x has r.",
+      "The broad, mode-unspecified fromNature (NATURE_SOURCE_1); the passage from it to this efficient reading is the open bridge NatureSourcedDistinctEsseIsEfficient (disambiguation 87ac7ae0).",
+      "x's own causing as a CausesIn x x r self-edge: identifying them is the separate source reading QuiddityCausingEsseIsSelfCausationReading."
+    ],
+    "open_obligations": [
+      "NatureSourcedDistinctEsseIsEfficient and QuiddityCausingEsseIsSelfCausationReading remain separate premises.",
+      "No order law is assumed.",
+      "No formalization candidate from existing vocabulary."
+    ]
+  }
 }

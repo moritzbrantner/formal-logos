@@ -9,5 +9,21 @@
     "96296e76-d7eb-55c6-a2b3-8c4e899b3a7b"
   ],
   "lean_declaration": "TruthCore.Alternatives.Fideism.Practice.Defined",
-  "note": "Stipulated as the form of Dei Filius's canons; whether such a definition belongs to the practice's grammar is the open bridge STMT-CONCILIAR-DEFINITION-IS-PRACTICE-OWN-STANDARD, not part of this sense."
+  "note": "Stipulated as the form of Dei Filius's canons; whether such a definition belongs to the practice's grammar is the open bridge STMT-CONCILIAR-DEFINITION-IS-PRACTICE-OWN-STANDARD, not part of this sense.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Practice.Defined m says that an ecumenical council of the practice defines the move m, condemning its denial by canon (anathema sit). It is a field of a religious practice viewed as a language game (TruthCore.Alternatives.Fideism, #1010), supplied by each model. It records the conciliar form of a move, not that the move is correct or that the practice counts it as its own standard.",
+    "examples": [
+      "The Vatican I canon condemning the denial that God can be known with certainty from created things by natural reason, read as a defined move of the Catholic practice."
+    ],
+    "exclusions": [
+      "A teaching proposed without a canon condemning its denial.",
+      "Endorsement by the practice's own standards (OwnStandard): whether a conciliar definition is such an endorsement is the open bridge STMT-CONCILIAR-DEFINITION-IS-PRACTICE-OWN-STANDARD.",
+      "Correctness by the practice's grammar (Correct)."
+    ],
+    "open_obligations": [
+      "STMT-CONCILIAR-DEFINITION-IS-PRACTICE-OWN-STANDARD remains open; the descriptive-theology sibling readings are kept apart in DISAMB-THEOLOGICAL-FORMULATION-AND-NORMATIVE-GRAMMAR.",
+      "No formalization candidate: whether a council defined a move is a historical input to the model."
+    ]
+  }
 }

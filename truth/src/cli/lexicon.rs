@@ -12,6 +12,7 @@
 use super::{Accepts, Args, Command, Output, usage};
 use serde_json::{Value, json};
 use std::{fs, process};
+use truth::definition_status;
 use truth::lexicon::{self, Loaded, bootstrap};
 
 pub const COMMAND: Command = Command {
@@ -75,7 +76,8 @@ fn run(args: &Args, operands: &[&str]) -> Output {
     match (*sub, rest) {
         ("show", [word]) => {
             let loaded = loaded(args)?;
-            let value = lexicon::show(&loaded, word, limit(args, 15)?);
+            let mut value = lexicon::show(&loaded, word, limit(args, 15)?);
+            add_formal_status(args, &loaded, &mut value)?;
             let text = show_text(&value);
             Ok((value, Some(text)))
         }
@@ -100,7 +102,9 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         ("coverage", []) => {
             let loaded = loaded(args)?;
             let config = lexicon::read_config(&args.root).map_err(error)?;
-            let value = lexicon::coverage(&loaded, &config, limit(args, 25)?);
+            let mut value = lexicon::coverage(&loaded, &config, limit(args, 25)?);
+            let formal = formal_definitions(args, &loaded)?;
+            value["formal_status"] = truth::definition_status::coverage_split(&loaded, &formal);
             let text = coverage_text(&value);
             Ok((value, Some(text)))
         }
@@ -236,6 +240,131 @@ fn run(args: &Args, operands: &[&str]) -> Output {
     }
 }
 
+/// The formal status of every definition (#1652 L3), from the committed
+/// cache; no Lean runs.
+fn formal_definitions(
+    args: &Args,
+    loaded: &Loaded,
+) -> Result<Vec<definition_status::Definition>, super::Failure> {
+    Ok(definition_status::load(&args.root, &loaded.corpus)
+        .map_err(error)?
+        .definitions)
+}
+
+/// Adds `formal` to every definition and sense `show` lists: word → sense →
+/// definition → Lean declaration and its computed kind, or the prose
+/// fallback and why.
+fn add_formal_status(
+    args: &Args,
+    loaded: &Loaded,
+    value: &mut Value,
+) -> Result<(), super::Failure> {
+    let formal = formal_definitions(args, loaded)?;
+    let describe = |id: &str| -> Value {
+        formal
+            .iter()
+            .find(|definition| definition.id == id)
+            .map(|definition| {
+                definition_status::describe(
+                    definition,
+                    loaded.corpus.get("definitions", id).map(|r| &r.fields),
+                )
+            })
+            .unwrap_or(Value::Null)
+    };
+    for entry in value["entries"].as_array_mut().into_iter().flatten() {
+        for definition in entry["definitions"].as_array_mut().into_iter().flatten() {
+            let id = definition["id"].as_str().unwrap_or_default().to_owned();
+            definition["formal"] = describe(&id);
+        }
+        for disambiguation in entry["disambiguations"]
+            .as_array_mut()
+            .into_iter()
+            .flatten()
+        {
+            for sense in disambiguation["senses"]
+                .as_array_mut()
+                .into_iter()
+                .flatten()
+            {
+                let id = sense["definition_id"]
+                    .as_str()
+                    .unwrap_or_default()
+                    .to_owned();
+                sense["formal"] = describe(&id);
+            }
+        }
+    }
+    Ok(())
+}
+
+fn clip(text: &str, n: usize) -> String {
+    let mut out: String = text.chars().take(n).collect();
+    if text.chars().count() > n {
+        out.push('…');
+    }
+    out
+}
+
+/// The lines of one `formal` description, indented by `pad`.
+fn formal_lines(formal: &Value, pad: &str) -> Vec<String> {
+    let mut lines = Vec::new();
+    let status = formal["status"].as_str().unwrap_or_default();
+    if let Some(declaration) = formal["lean_declaration"].as_str() {
+        let mut line = format!("{pad}lean: {declaration} — {status}");
+        if let Some(kind) = formal["kind"].as_str() {
+            line.push_str(&format!(
+                " ({kind}: {})",
+                formal["reason"].as_str().unwrap_or_default()
+            ));
+        }
+        lines.push(line);
+        if let Some(head) = formal["head"].as_str() {
+            lines.push(format!("{pad}  unfolds to {head}"));
+        }
+        let constants: Vec<&str> = formal["constants"]
+            .as_array()
+            .into_iter()
+            .flatten()
+            .filter_map(Value::as_str)
+            .collect();
+        if !constants.is_empty() {
+            lines.push(format!("{pad}  uses {}", constants.join(", ")));
+        }
+    } else {
+        lines.push(format!("{pad}lean: none — {status}"));
+    }
+    let prose = &formal["prose"];
+    match prose["source"].as_str() {
+        Some("formal_gap") => {
+            let gap = &prose["formal_gap"];
+            lines.push(format!(
+                "{pad}prose (formal_gap, {}): {}",
+                gap["kind"].as_str().unwrap_or_default(),
+                clip(gap["meaning"].as_str().unwrap_or_default(), 200)
+            ));
+            for field in ["examples", "exclusions", "open_obligations"] {
+                let items: Vec<&str> = gap[field]
+                    .as_array()
+                    .into_iter()
+                    .flatten()
+                    .filter_map(Value::as_str)
+                    .collect();
+                if !items.is_empty() {
+                    lines.push(format!("{pad}  {field}: {}", items.join("; ")));
+                }
+            }
+        }
+        Some(_) => lines.push(format!(
+            "{pad}prose fallback ({}): {}",
+            prose["reason"].as_str().unwrap_or_default(),
+            clip(prose["definition"].as_str().unwrap_or_default(), 200)
+        )),
+        None => {}
+    }
+    lines
+}
+
 fn show_text(value: &Value) -> String {
     let mut lines = Vec::new();
     let word = value["word"].as_str().unwrap_or_default();
@@ -266,6 +395,7 @@ fn show_text(value: &Value) -> String {
                     [..8.min(definition["id"].as_str().unwrap_or_default().len())],
                 definition["label"].as_str().unwrap_or_default()
             ));
+            lines.extend(formal_lines(&definition["formal"], "    "));
         }
         for disambiguation in entry["disambiguations"].as_array().into_iter().flatten() {
             let senses: Vec<&str> = disambiguation["senses"]
@@ -280,6 +410,15 @@ fn show_text(value: &Value) -> String {
                 disambiguation["label"].as_str().unwrap_or_default(),
                 senses.join(", ")
             ));
+            for sense in disambiguation["senses"].as_array().into_iter().flatten() {
+                let id = sense["definition_id"].as_str().unwrap_or_default();
+                lines.push(format!(
+                    "    {} → definition {}",
+                    sense["label"].as_str().unwrap_or_default(),
+                    &id[..8.min(id.len())]
+                ));
+                lines.extend(formal_lines(&sense["formal"], "      "));
+            }
         }
     }
     lines.push(format!("used in {} prose fields", value["fields_using"]));
@@ -348,6 +487,36 @@ fn coverage_text(value: &Value) -> String {
                 } else {
                     "off (new or changed fields warn)"
                 }
+            )
+        },
+        {
+            let formal = &value["formal_status"];
+            let buckets = &formal["buckets"];
+            let n = |key: &str| buckets[key].as_u64().unwrap_or(0);
+            format!(
+                "technical tokens by formal status ({} tokens): settled by a Lean definition {}; Lean primitive/constraint with formal_gap prose {}; without prose (backlog) {}; definition without a Lean declaration {}; technical entry without a definition {}; status not computed {}. Prose-only (ordinary, function, name) tokens: {}",
+                formal["technical_tokens"],
+                n("lean_defined"),
+                n("lean_gap_with_prose"),
+                n("lean_gap_without_prose"),
+                n("definition_without_lean"),
+                n("technical_without_definition"),
+                n("not_computed"),
+                formal["prose_only"]
+            ) + &format!(
+                "\n  (a token counts in the weakest status over the definitions its entries reach); most frequent without prose: {}",
+                formal["top_without_prose"]
+                    .as_array()
+                    .into_iter()
+                    .flatten()
+                    .take(10)
+                    .map(|row| format!(
+                        "{} {}",
+                        row["word"].as_str().unwrap_or_default(),
+                        row["occurrences"]
+                    ))
+                    .collect::<Vec<_>>()
+                    .join(", ")
             )
         },
         "top untraced:".into(),

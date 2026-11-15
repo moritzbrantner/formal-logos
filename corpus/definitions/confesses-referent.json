@@ -6,5 +6,20 @@
   "definition": "`N.ConfessesReferent m n`: the move m confesses, with the name n, that there is a being n names, as the confession of 'unum verum Deum ... Creatorem et Dominum' does. A property of the move's content, not a fact about reference.",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Alternatives.FideismReference.NamingPractice.ConfessesReferent",
-  "note": "Stipulated for #1010; whether a correct such move makes the name refer is the open bridge STMT-GRAMMAR-FIXES-REFERENCE."
+  "note": "Stipulated for #1010; whether a correct such move makes the name refer is the open bridge STMT-GRAMMAR-FIXES-REFERENCE.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "NamingPractice.ConfessesReferent m n says that the move m confesses, with the name n, that there is a being n names, as the confession of 'unum verum Deum ... Creatorem et Dominum' does. It is a property of the move's content, a field of a naming practice (TruthCore.Alternatives.FideismReference) supplied by each model; it is not a fact about reference.",
+    "examples": [
+      "Dei Filius ch. 1's confession of one true God, creator and lord, read with n the name 'God'."
+    ],
+    "exclusions": [
+      "The name's actually referring to a being (RefersTo): whether a correct confessing move makes the name refer is the open bridge STMT-GRAMMAR-FIXES-REFERENCE.",
+      "Praise or address that does not assert that there is a being named."
+    ],
+    "open_obligations": [
+      "STMT-GRAMMAR-FIXES-REFERENCE remains open.",
+      "No formalization candidate: the content of a move is an input to the model."
+    ]
+  }
 }

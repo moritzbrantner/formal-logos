@@ -50,6 +50,10 @@ pub struct FrontierView {
     pub floor: Vec<Value>,
     #[serde(default)]
     pub items: Vec<Value>,
+    /// The frontier's refutation entries (`relation_id`, `verified`,
+    /// `unestablished_premise_statement_ids`, `counted`, …).
+    #[serde(default)]
+    pub refutations: Vec<Value>,
     #[serde(default)]
     routes: RouteReport,
     #[serde(skip)]
@@ -368,6 +372,11 @@ impl<'a> DossierIndex<'a> {
             disambiguations: corpus.records("disambiguations"),
             index,
         }
+    }
+
+    /// The term -> sense labels of `record` (Python `record_sense_labels`).
+    pub fn sense_labels(&self, record: &'a Record) -> BTreeMap<String, Vec<String>> {
+        self.senses.labels(record)
     }
 
     pub fn statement_ids(&self) -> Vec<&'a str> {

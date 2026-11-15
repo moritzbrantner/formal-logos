@@ -6,5 +6,20 @@
   "definition": "The typed control uses the supplied predicate nonconsensual, applied to the specified action in the specified violation context, to record that the victim does not consent. The finite witness supplies that classification directly.",
   "basis": "stipulative",
   "note": "This is a factual modeling stipulation, not an analysis of consent or a universal legal definition. The model does not define coercion, capacity, sexual acts or consent conditions, and does not equate the predicate with Aquinas’s historical rape category.",
-  "lean_declaration": "TruthCore.Ethics.HardCaseTyped.Facts.nonconsensual"
+  "lean_declaration": "TruthCore.Ethics.HardCaseTyped.Facts.nonconsensual",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Facts.nonconsensual c a says that the victim does not consent to the action a in the violation context c. It is a field of the typed hard-case facts (TruthCore.Ethics.HardCaseTyped.Facts), supplied by each model as an independent factual classification; the finite witness supplies the classification directly.",
+    "examples": [
+      "The hard case's specified action, classified nonconsensual in its context."
+    ],
+    "exclusions": [
+      "An analysis of consent, coercion or capacity, or a universal legal definition.",
+      "Aquinas's historical rape category: not equated with it (DISAMB-HISTORICAL-RAPE-AND-NONCONSENT)."
+    ],
+    "open_obligations": [
+      "Consent conditions are not modeled.",
+      "No formalization candidate: a stipulated case classification."
+    ]
+  }
 }

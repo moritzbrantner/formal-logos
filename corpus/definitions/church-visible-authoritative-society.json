@@ -9,5 +9,22 @@
     "e0b48c65-90b6-584b-b1ba-f0dd39fa2fbf"
   ],
   "lean_declaration": "TruthCore.Case.Catholicism.Signature.VisibleWithAuthority",
-  "note": "This sense interprets VisibleWithAuthority in the stage-5 source reading, not every possible society in Signature. Source evidence for the reading does not establish its historical truth or supply stage-6 identity."
+  "note": "This sense interprets VisibleWithAuthority in the stage-5 source reading, not every possible society in Signature. Source evidence for the reading does not establish its historical truth or supply stage-6 identity.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Signature.VisibleWithAuthority c says that the society c is visibly constituted, enduring and equipped with an authority structure for its government, as Lumen gentium §8 describes the Church's visible, social aspect. It is a supplied predicate on societies.",
+    "examples": [
+      "A society with hierarchical organs and continuous government, such as the one stage 5 says Christ founded."
+    ],
+    "exclusions": [
+      "An invisible communion alone, without visible organization.",
+      "The spiritual community of the Church (DEF-CHURCH-SPIRITUAL-COMMUNITY): a separate aspect that the source joins with this one without reducing either (DISAMB-CHURCH-VISIBLE-SPIRITUAL-ASPECTS).",
+      "A claim that every later institutional detail was fixed at the society's beginning."
+    ],
+    "open_obligations": [
+      "Stage 5 (STMT-CHRIST-FOUNDED-VISIBLE-CHURCH) and stage 6 (STMT-CHRISTS-CHURCH-IS-THE-CATHOLIC-CHURCH) use it in open premises; source evidence for the reading does not establish their historical truth.",
+      "What counts as visibility, endurance and authority for arbitrary societies of the signature is not fixed in Lean.",
+      "No formalization candidate from existing vocabulary."
+    ]
+  }
 }

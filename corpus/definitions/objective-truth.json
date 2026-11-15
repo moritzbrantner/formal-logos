@@ -10,5 +10,20 @@
     "e52d69cd-96a4-5b53-aaa4-761175136c60"
   ],
   "lean_declaration": "TruthCore.Comparison.Metaethics.Sig.ObjectiveTruth",
-  "note": "The linked projection is the primitive ObjectiveTruth field of the existing comparison signature; the source readings likewise take an independently supplied predicate. It is not a definition reducing the predicate to a truth/attitude criterion. Source claims and that predicate remain unchanged. Analyst profile calibrations and the weakest objective-implies-truth proposition are recorded separately in DISAMB-OBJECTIVE-TRUTH-CALIBRATIONS; none is silently attributed to these sources or adopted as every philosophical sense of objectivity."
+  "note": "The linked projection is the primitive ObjectiveTruth field of the existing comparison signature; the source readings likewise take an independently supplied predicate. It is not a definition reducing the predicate to a truth/attitude criterion. Source claims and that predicate remain unchanged. Analyst profile calibrations and the weakest objective-implies-truth proposition are recorded separately in DISAMB-OBJECTIVE-TRUTH-CALIBRATIONS; none is silently attributed to these sources or adopted as every philosophical sense of objectivity.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Metaethics.Sig.ObjectiveTruth φ says that the sentence φ is true independently of anyone's attitudes or conventions. It is a supplied predicate on the sentences of the metaethics comparison signature.",
+    "examples": [
+      "On a moral realist's view, 'gratuitous cruelty is wrong' would be objectively true."
+    ],
+    "exclusions": [
+      "Truth relative to an agent's attitudes or a community's conventions.",
+      "Any reduction of the predicate to a truth-plus-attitude criterion: the analyst calibrations are recorded separately in DISAMB-OBJECTIVE-TRUTH-CALIBRATIONS."
+    ],
+    "open_obligations": [
+      "The weakest objective-implies-truth proposition is recorded separately and not adopted as every sense of objectivity.",
+      "No formalization candidate: defining it by one calibration would choose among recorded rivals."
+    ]
+  }
 }

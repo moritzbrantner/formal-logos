@@ -6,5 +6,18 @@
   "definition": "A separately interpreted predicate on actions, represented by GoalPractice.categoricalOught. It does not depend by definition on what an agent values, performs or successfully produces. Its intended contrast is with a conditional means-end requirement; it is not a theory of objectively binding morality or its justification.",
   "basis": "stipulative",
   "note": "The finite control alters this predicate while keeping the same valued goal, performed action and efficacy. This witnesses an absence of logical entailment only in the stated product profile; an ethical realist, constructivist or expressivist must defend a substantive bridge if an entailment is proposed. See docs/notes/transcendental-foundation-routes.md.",
-  "lean_declaration": "TruthCore.Logic.TranscendentalPractice.GoalPractice.categoricalOught"
+  "lean_declaration": "TruthCore.Logic.TranscendentalPractice.GoalPractice.categoricalOught",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "GoalPractice.categoricalOught a says that the action a is required by a categorical duty: a requirement that does not depend by definition on what the agent values, performs or successfully produces. It is a separately interpreted field of the agency control in TruthCore.Logic.TranscendentalPractice.",
+    "examples_unavailable": "Whether any action is categorically required is the contested question; the finite control varies the predicate while keeping goals, actions and efficacy fixed, and asserts no real instance.",
+    "exclusions": [
+      "A conditional means-end requirement.",
+      "A theory of objectively binding morality or of its justification (DISAMB-TRANSCENDENTAL-AGENCY-AND-MORAL-DUTY)."
+    ],
+    "open_obligations": [
+      "The control shows only that no logical entailment from the stated agency profile holds; a realist, constructivist or expressivist proposing an entailment must defend a substantive bridge (docs/notes/transcendental-foundation-routes.md).",
+      "No formalization candidate."
+    ]
+  }
 }

@@ -10,5 +10,20 @@
     "611e63b7-e183-5fa4-a963-657cc09a9d9c"
   ],
   "lean_declaration": "TruthCore.Causality.TermSenseForks.ActFrame.InActVirtually",
-  "note": "Lean: a primitive parameter of the sense-fork frame (its own declaration, distinct from the other senses of its disambiguation); it carries no definitional body."
+  "note": "Lean: a primitive parameter of the sense-fork frame (its own declaration, distinct from the other senses of its disambiguation); it carries no definitional body.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "ActFrame.InActVirtually x r says that x has the perfection r in a higher way, as a power to produce it, without having it in the same form: whatever perfection is in an effect is in its effective cause 'univocally or more eminently' (ST I q.4 a.2). It is a supplied relation between a being and a respect: the virtual (eminent) sense of 'in act' (DISAMB-IN-ACT).",
+    "examples_unavailable": "The corpus records no concrete instance: q.4 a.2 states the notion only generally ('univocally or more eminently'), and any instance would need a separate reading of which causes are equivocal.",
+    "exclusions": [
+      "Having r in the same form (InActFormally).",
+      "Being in potency to r.",
+      "Merely being able to receive r: virtual act is an active power to produce, not a passive capacity."
+    ],
+    "open_obligations": [
+      "That nothing is virtually in act and in potency in the same respect is the open premise NothingVirtuallyInActAndInPotency; DISAMB-IN-ACT notes that the Metaphysics IX.6 support for non-simultaneity carries over only on the formal reading.",
+      "Its relation to InActFormally and to the shared InAct (DEF-ACT) remains open.",
+      "No formalization candidate from existing vocabulary."
+    ]
+  }
 }

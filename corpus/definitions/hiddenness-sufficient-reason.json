@@ -6,5 +6,18 @@
   "definition": "GoodReason w p t is interpreted as a genuinely sufficient reason compatible with perfect love for delaying immediate conscious access here. A suggested benefit, unknown reason or conceivable excuse does not establish this predicate. ReasonForEachGap is an explicit open application premise, not a definition of love and not inferred from the finite model.",
   "basis": "stipulative",
   "note": "Explicit interpretation vocabulary for #252. Source claims retain their own pinned locators; these records do not add axioms or establish the truth of the interpreted predicates.",
-  "lean_declaration": "TruthCore.Hiddenness.Sig.GoodReason"
+  "lean_declaration": "TruthCore.Hiddenness.Sig.GoodReason",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Sig.GoodReason w p t says that, at world w, there is a genuinely sufficient reason, compatible with perfect love, for delaying p's immediate conscious access at time t. It is a field of the hiddenness signature (TruthCore.Hiddenness.Vocabulary.Sig, #252), indexed by world, person and time and supplied by each interpretation; worlds carry no modal accessibility laws.",
+    "examples_unavailable": "No case is established in which such a reason exists. ReasonForEachGap is only a guarded coverage premise: at every world where God exists, any capable, nonresistant person who lacks access at a time has a GoodReason then. It asserts neither an actual gap nor an actual reason, and it holds vacuously at worlds without God.",
+    "exclusions": [
+      "A suggested benefit, an unknown reason or a conceivable excuse: none establishes the predicate.",
+      "A definition of love: the predicate is used by the normative reading QualifiedOpen, not part of PerfectLove (DISAMB-HIDDENNESS-LOVE-ACCESS)."
+    ],
+    "open_obligations": [
+      "ReasonForEachGap is an explicit open application premise, not inferred from the finite model.",
+      "No formalization candidate."
+    ]
+  }
 }

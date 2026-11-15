@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "strict": false,
+  "note": "Owner direction on #1652 (L3): Lean decides each definition's formal status; a definition Lean leaves primitive, constraint or unresolved carries a formal_gap prose meaning. Warn now, strict later, as for the lexicon: while strict is false, a missing or disagreeing formal_gap in a new or changed definition is a truth check warning and a stale cache entry does not fail `truth definitions refresh`; strict makes both errors. Malformed formal_gap blocks and the shrink-only allowlist are enforced either way."
+}

@@ -6,5 +6,21 @@
   "definition": "Accepts records a person’s accepting the proposed relationship. It is not identified with believing God exists, nor is its negation identified with causal resistance responsible for nonbelief. The finite believer-with-refusal witness defeats a logical implication from belief alone, not every motivation-based objection.",
   "basis": "stipulative",
   "note": "Explicit interpretation vocabulary for #252. Source claims retain their own pinned locators; these records do not add axioms or establish the truth of the interpreted predicates.",
-  "lean_declaration": "TruthCore.Hiddenness.Sig.Accepts"
+  "lean_declaration": "TruthCore.Hiddenness.Sig.Accepts",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Sig.Accepts w p t says that, at world w, person p freely accepts the proposed relationship with God at time t. It is a field of the hiddenness signature (TruthCore.Hiddenness.Vocabulary.Sig, #252), indexed by world, person and time and supplied by each interpretation; worlds carry no modal accessibility laws.",
+    "examples": [
+      "A believer who, having come to believe, assents to and enters the relationship."
+    ],
+    "exclusions": [
+      "Believing that God exists (Believes): belief can coexist with refusal, which the finite witness BeliefWithoutAcceptancePossible exhibits (DISAMB-HIDDENNESS-BELIEF-RESPONSE).",
+      "Its negation is not causal resistance responsible for nonbelief (Resists)."
+    ],
+    "open_obligations": [
+      "The believer-with-refusal witness defeats only a logical implication from belief alone to acceptance, not every motivation-based objection.",
+      "These records add no axioms; whether the interpreted predicate holds of real persons is not established by any finite model.",
+      "No formalization candidate: acceptance is an interpreted psychological input."
+    ]
+  }
 }

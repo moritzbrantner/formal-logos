@@ -9,5 +9,21 @@
     "be04b2ea-f9a7-5a6b-a3f3-5508efa585de"
   ],
   "lean_declaration": "TruthCore.Alternatives.Fideism.Practice.AnswersToSharedReason",
-  "note": "Stipulated reading of the council's phrase; the text supports it by the contrast with the supernatural way but does not define the phrase. DISAMB-NATURAL-REASON records the rival practice-internal sense."
+  "note": "Stipulated reading of the council's phrase; the text supports it by the contrast with the supernatural way but does not define the phrase. DISAMB-NATURAL-REASON records the rival practice-internal sense.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Practice.AnswersToSharedReason m says that the correctness of the move m answers to standards of reason shared with those outside the practice, available without the practice's revelation or authority. It is the shared sense in which STMT-NATURAL-REASON-IS-SHARED-REASON reads Dei Filius's 'naturali humanae rationis lumine'. It is a field of a religious practice viewed as a language game (TruthCore.Alternatives.Fideism, #1010), supplied by each model.",
+    "examples": [
+      "An argument from created things to a first cause whose validity a nonbeliever can assess, read as a move answering to shared reason."
+    ],
+    "exclusions": [
+      "The practice-internal re-reading of natural reason (DEF-NATURAL-REASON-PRACTICE-INTERNAL), the rival sense in DISAMB-NATURAL-REASON.",
+      "Correctness by the practice's own grammar (Correct) or own standards (OwnStandard)."
+    ],
+    "open_obligations": [
+      "The reading of the council's phrase is stipulated; the text supports it by the contrast with the supernatural way but does not define it.",
+      "STMT-NATURAL-REASON-IS-SHARED-REASON remains an open bridge.",
+      "No formalization candidate from existing vocabulary."
+    ]
+  }
 }

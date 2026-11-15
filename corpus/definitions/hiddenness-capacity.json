@@ -6,5 +6,22 @@
   "definition": "Cognitive and affective capacity at the indicated world, person and time for reciprocal conscious interaction recognizing the other party. This is a capacity, not possession of belief or actual relationship. Not all humans at all times are assumed capable; the existential premise supplies its own witness.",
   "basis": "stipulative",
   "note": "Explicit interpretation vocabulary for #252. Source claims retain their own pinned locators; these records do not add axioms or establish the truth of the interpreted predicates.",
-  "lean_declaration": "TruthCore.Hiddenness.Sig.Capable"
+  "lean_declaration": "TruthCore.Hiddenness.Sig.Capable",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Sig.Capable w p t says that, at world w, person p has at time t the cognitive and affective capacity for reciprocal conscious interaction that recognizes the other party. It is a capacity, not belief or an actual relationship. It is a field of the hiddenness signature (TruthCore.Hiddenness.Vocabulary.Sig, #252), indexed by world, person and time and supplied by each interpretation; worlds carry no modal accessibility laws.",
+    "examples": [
+      "An adult of ordinary cognitive development, at a time when that development is present."
+    ],
+    "exclusions": [
+      "Holding the belief (Believes) or having immediate access to the relationship just by trying (Available); access is itself not being in the relationship, since access can hold while Accepts fails.",
+      "Having the concept of a personal God (HasConcept), a separate predicate.",
+      "An infant, or a person at a time when the capacity is absent: not all humans at all times are assumed capable."
+    ],
+    "open_obligations": [
+      "The empirical premise NonresistantNonbelief supplies its own capable witness at the actual world; that premise is open.",
+      "These records add no axioms; whether the interpreted predicate holds of real persons is not established by any finite model.",
+      "No formalization candidate."
+    ]
+  }
 }

@@ -6,5 +6,21 @@
   "definition": "`P.OwnStandard m`: the practice's own authoritative standards endorse m as a correct move, as opposed to a standard imported from outside the practice (a philosopher's, a scientist's).",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Alternatives.Fideism.Practice.OwnStandard",
-  "note": "Analytical vocabulary (#1010). Which instances count as the practice's own standards is not fixed here; for the Catholic practice the open bridge STMT-CONCILIAR-DEFINITION-IS-PRACTICE-OWN-STANDARD counts conciliar definitions among them."
+  "note": "Analytical vocabulary (#1010). Which instances count as the practice's own standards is not fixed here; for the Catholic practice the open bridge STMT-CONCILIAR-DEFINITION-IS-PRACTICE-OWN-STANDARD counts conciliar definitions among them.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Practice.OwnStandard m says that the practice's own authoritative standards endorse the move m as correct, as opposed to a standard imported from outside the practice (a philosopher's or a scientist's). It is a field of a religious practice viewed as a language game (TruthCore.Alternatives.Fideism, #1010), supplied by each model.",
+    "examples": [
+      "A conciliar definition of the Catholic practice, under the open bridge STMT-CONCILIAR-DEFINITION-IS-PRACTICE-OWN-STANDARD."
+    ],
+    "exclusions": [
+      "Endorsement by a standard from outside the practice.",
+      "Merely theological formulation or a practical role in religious life: DISAMB-THEOLOGICAL-FORMULATION-AND-NORMATIVE-GRAMMAR separates these from normative own-standard endorsement."
+    ],
+    "open_obligations": [
+      "Which instances count as the practice's own standards is not fixed; STMT-CONCILIAR-DEFINITION-IS-PRACTICE-OWN-STANDARD, STMT-AUTHORITY-GRAMMAR-MAKES-DEFINITIONS-OWN-STANDARD and STMT-USE-GRAMMAR-MAKES-ORDINARY-USE-OWN-STANDARD are open bridges into it.",
+      "STMT-WF-RELIGION-INTERNAL-GRAMMAR (own-standard moves are correct) is an open fideist commitment.",
+      "No formalization candidate from existing vocabulary."
+    ]
+  }
 }
