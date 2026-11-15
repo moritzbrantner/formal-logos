@@ -3,5 +3,8 @@
   "label": "take (ordinary)",
   "lemma": "take",
   "class": "ordinary",
+  "forms": [
+    "taken"
+  ],
   "gloss": "To accept or use."
 }

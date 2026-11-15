@@ -1,0 +1,10 @@
+{
+  "id": "5b77b703-f360-4191-8ece-ab272eeec687",
+  "label": "dossier (ordinary)",
+  "lemma": "dossier",
+  "class": "ordinary",
+  "forms": [
+    "dossiers"
+  ],
+  "gloss": "The computed summary of evidence and attempts for one premise (truth dossier)."
+}

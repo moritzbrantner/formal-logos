@@ -1,0 +1,7 @@
+{
+  "id": "5e2d9091-3f9d-4115-8d1f-7e9da8f4536b",
+  "label": "terminal (ordinary)",
+  "lemma": "terminal",
+  "class": "ordinary",
+  "gloss": "A final node with no outgoing edge."
+}
