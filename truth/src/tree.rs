@@ -31,15 +31,40 @@ pub const DEFAULT_DOWN: usize = 3;
 pub const DEFAULT_UP: usize = 3;
 pub const DEFAULT_BUDGET: usize = 400;
 
-/// Edge kinds this version emits.
-pub const EDGE_KINDS: &[&str] = &["supports", "uses", "strengthens"];
-/// Edge kinds reserved for derived inversions (#1674 phase 2), never emitted
-/// yet: `contrapositive` (from a verified argument P1..Pn ⊢ C, the edge
-/// ¬C ∧ the other premises ⊢ ¬Pi) and `inverse_conditional` (C ∧ ¬B ⊢ A,
-/// only with an explicit exhaustiveness premise C → A ∨ B in
-/// `extra_premises`). The unconditioned inverse C ⊢ A is invalid and is never
+/// Edge kinds this version emits. `supports`, `uses` and `strengthens` are
+/// record edges; `contrapositive` and `inverse_conditional` are derived
+/// inversions (#1674 phase 2), computed in the view and never corpus records
+/// unless materialized (`--materialize-edge`):
+///
+/// - `contrapositive`, from a verified non-transcription argument
+///   P1, …, Pn ⊢ C: ¬C with the other premises gives ¬Pi (always valid;
+///   [`CONTRAPOSITIVE_LEMMA`]). The edge runs from C to Pi and negates both.
+/// - `inverse_conditional`, at the tree root A used by one of several
+///   alternative arguments for C: C, with every other alternative's premise
+///   bundle failing, gives A, but only under the exhaustiveness premise
+///   "C holds only through these arguments", listed under the edge's
+///   `inversion.requires` ([`INVERSE_LEMMA`]).
+///
+/// The unconditioned inverse C ⊢ A is invalid (A = B = false, C = true;
+/// `TruthCore.Logic.Inversion.unconditioned_inverse_invalid`) and is never
 /// emitted.
-pub const RESERVED_KINDS: &[&str] = &["contrapositive", "inverse_conditional"];
+pub const EDGE_KINDS: &[&str] = &[
+    "supports",
+    "uses",
+    "strengthens",
+    "contrapositive",
+    "inverse_conditional",
+];
+/// Edge kinds reserved for later phases (none now).
+pub const RESERVED_KINDS: &[&str] = &[];
+/// The generic lemma a `contrapositive` edge instantiates at its argument's
+/// result theorem.
+pub const CONTRAPOSITIVE_LEMMA: &str = "TruthCore.Logic.Inversion.contrapositive";
+/// The generic lemma an `inverse_conditional` edge instantiates.
+pub const INVERSE_LEMMA: &str = "TruthCore.Logic.Inversion.inverse_premise_of_exhaustive_at";
+/// Where materialized inversions live (`--materialize-edge`).
+pub const MATERIALIZED_RESULTS: &str = "TruthCore.Results.Logic.Inversions";
+pub const MATERIALIZED_VOCABULARY: &str = "TruthCore.Logic.Inversions";
 
 #[derive(Debug, Clone, Copy)]
 pub struct Options {
@@ -84,13 +109,64 @@ pub struct Edge {
     /// edges; derived edges list theirs here).
     pub extra_premises: Vec<String>,
     /// Backed by a result record (`supports`/`uses`: the argument has one;
-    /// `strengthens`: the registration's backing result exists).
+    /// `strengthens`: the registration's backing result exists). A derived
+    /// edge is verified only when its materialized result exists.
     pub verified: bool,
     /// How a derived edge was obtained; `null` for record edges.
     pub derivation: Option<String>,
     /// The edge returns to a node on the current path of the walk from the
     /// root (the walk does not continue through it).
     pub cycle: bool,
+    /// The inversion a derived edge states; `null` for record edges.
+    pub inversion: Option<Inversion>,
+}
+
+/// One premise a derived edge needs besides its source statement.
+#[derive(Debug, Clone, Serialize)]
+pub struct Requirement {
+    /// `negated_conclusion` (¬C of a contrapositive), `co_premise` (another
+    /// premise of the argument), `negated_alternative` (the premise bundle of
+    /// another argument for C fails) or `exhaustiveness` (C holds only
+    /// through the listed arguments).
+    pub role: &'static str,
+    /// The corpus statement stating it, `null` when none is registered.
+    pub statement_id: Option<String>,
+    /// For `negated_alternative`: the alternative argument.
+    pub argument_id: Option<String>,
+    /// For `negated_alternative`: its premise bundle; for `exhaustiveness`:
+    /// the alternative arguments' conclusions are all C, so this lists the
+    /// arguments it ranges over.
+    pub argument_ids: Vec<String>,
+    pub premise_statement_ids: Vec<String>,
+    pub registered: bool,
+    /// Frontier closure reason of the registered statement, `null` when open
+    /// or unregistered.
+    pub closed: Value,
+    pub established: bool,
+    pub description: String,
+}
+
+/// What a derived edge states and how it would be checked.
+#[derive(Debug, Clone, Serialize)]
+pub struct Inversion {
+    /// Stable edge key, accepted by `--materialize-edge`:
+    /// `contrapositive:<argument>:<premise>` or
+    /// `inverse_conditional:<argument>:<premise>`.
+    pub key: String,
+    /// The generic Lean lemma it instantiates.
+    pub lemma: &'static str,
+    /// The result theorem it is composed with (`contrapositive` only).
+    pub source_theorem: Option<String>,
+    /// The edge concludes ¬`to` from ¬`from` (contrapositive) rather than
+    /// `to` from `from` (inverse).
+    pub negated: bool,
+    /// Every premise besides `from`, registered or not.
+    pub requires: Vec<Requirement>,
+    /// The theorem a materialization of this edge defines.
+    pub materialized_theorem: Option<String>,
+    /// The materialized result, when it exists.
+    pub materialized_result_id: Option<String>,
+    pub materialized_argument_id: Option<String>,
 }
 
 #[derive(Debug, Clone, Serialize)]
@@ -167,6 +243,7 @@ pub struct Step {
 pub struct ResultRef {
     pub id: String,
     pub theorem: Option<String>,
+    pub solution_module: Option<String>,
     pub status: Option<String>,
     /// Declared or detected transcription kind, `null` otherwise.
     pub transcription: Option<String>,
@@ -222,6 +299,40 @@ fn strings(record: &Map<String, Value>, field: &str) -> Vec<String> {
         .collect()
 }
 
+/// `foo_bar` -> `FooBar`, keeping ASCII letters and digits only.
+fn pascal(text: &str) -> String {
+    text.split(|c: char| !c.is_ascii_alphanumeric())
+        .filter(|part| !part.is_empty())
+        .map(|part| {
+            let mut chars = part.chars();
+            chars.next().map_or_else(String::new, |first| {
+                first.to_ascii_uppercase().to_string() + chars.as_str()
+            })
+        })
+        .collect()
+}
+
+/// The module name of a materialized contrapositive of `theorem` (in the
+/// Solution module `solution_module`) at its argument's premise `position`
+/// (1-based): under [`MATERIALIZED_RESULTS`] and [`MATERIALIZED_VOCABULARY`].
+pub fn materialized_name(solution_module: &str, theorem: &str, position: usize) -> String {
+    let segment = solution_module
+        .strip_suffix(".Solution")
+        .unwrap_or(solution_module)
+        .rsplit('.')
+        .next()
+        .unwrap_or_default();
+    let mut name = pascal(segment);
+    let last = pascal(theorem.rsplit('.').next().unwrap_or(theorem));
+    if last != name {
+        name.push_str(&last);
+    }
+    if name.is_empty() || name.starts_with(|c: char| c.is_ascii_digit()) {
+        name.insert(0, 'R');
+    }
+    format!("{name}Contra{position}")
+}
+
 /// The corpus indexes a tree walk reads, shared by every root of a batch.
 /// Built from a frontier report only for its root-independent
 /// `transcription_results`.
@@ -230,6 +341,8 @@ pub struct Index<'a> {
     concluding: HashMap<String, Vec<String>>,
     using: HashMap<String, Vec<String>>,
     results: HashMap<String, Vec<ResultRef>>,
+    /// Result theorem -> (result id, argument id).
+    by_theorem: HashMap<String, (String, String)>,
     senses_of: HashMap<String, Vec<SenseUse>>,
 }
 
@@ -252,10 +365,16 @@ impl<'a> Index<'a> {
             }
         }
         let mut results: HashMap<String, Vec<ResultRef>> = HashMap::new();
+        let mut by_theorem = HashMap::new();
         for (id, record) in corpus.records_by_id("results") {
             let Some(argument) = string(&record.fields, "argument_id") else {
                 continue;
             };
+            if let Some(theorem) = string(&record.fields, "theorem") {
+                by_theorem
+                    .entry(theorem)
+                    .or_insert_with(|| (id.to_owned(), argument.clone()));
+            }
             let transcription = report["transcription_results"][id]["kind"]
                 .as_str()
                 .map(str::to_owned)
@@ -263,6 +382,7 @@ impl<'a> Index<'a> {
             results.entry(argument).or_default().push(ResultRef {
                 id: id.to_owned(),
                 theorem: string(&record.fields, "theorem"),
+                solution_module: string(&record.fields, "solution_module"),
                 status: string(&record.fields, "status"),
                 transcription,
             });
@@ -303,6 +423,7 @@ impl<'a> Index<'a> {
             concluding,
             using,
             results,
+            by_theorem,
             senses_of,
         }
     }
@@ -474,6 +595,7 @@ impl Builder<'_> {
             verified: argument.is_some_and(|argument| self.index.verified(argument)),
             derivation: None,
             cycle: false,
+            inversion: None,
         });
     }
 
@@ -720,8 +842,198 @@ impl Builder<'_> {
                 verified,
                 derivation: None,
                 cycle: false,
+                inversion: None,
             });
         }
+    }
+
+    /// The derived inversion edges (#1674 phase 2): a `contrapositive` edge
+    /// for every premise of every verified non-transcription argument in
+    /// view, and an `inverse_conditional` edge for every argument in view
+    /// that uses the tree root and has an alternative argument for its
+    /// conclusion. They add no nodes.
+    fn inversions(&mut self) {
+        let index = self.index;
+        let report = self.report;
+        let registered = |role: &'static str, statement: &str, description: String| Requirement {
+            role,
+            statement_id: Some(statement.to_owned()),
+            argument_id: None,
+            argument_ids: Vec::new(),
+            premise_statement_ids: Vec::new(),
+            registered: true,
+            closed: report["closed_statements"]
+                .get(statement)
+                .cloned()
+                .unwrap_or(Value::Null),
+            established: report["established_statements"]
+                .as_array()
+                .is_some_and(|ids| ids.iter().any(|value| value == statement)),
+            description,
+        };
+        let mut derived = Vec::new();
+        for argument in &self.argument_order {
+            let node = &self.arguments[argument];
+            let Some(result) = node
+                .results
+                .iter()
+                .find(|result| result.transcription.is_none())
+            else {
+                continue;
+            };
+            let conclusion = &node.conclusion_statement_id;
+            let mut premises: Vec<&String> = Vec::new();
+            for premise in &node.premise_statement_ids {
+                if !premises.contains(&premise) {
+                    premises.push(premise);
+                }
+            }
+            for (position, premise) in premises.iter().enumerate() {
+                let others: Vec<String> = premises
+                    .iter()
+                    .filter(|other| *other != premise)
+                    .map(|other| (*other).clone())
+                    .collect();
+                let materialized_theorem = result
+                    .solution_module
+                    .as_deref()
+                    .zip(result.theorem.as_deref())
+                    .map(|(module, theorem)| {
+                        format!(
+                            "{MATERIALIZED_RESULTS}.{}.contrapositive",
+                            materialized_name(module, theorem, position + 1)
+                        )
+                    });
+                let materialized = materialized_theorem
+                    .as_ref()
+                    .and_then(|theorem| index.by_theorem.get(theorem));
+                // The materialized argument's premise outside the other
+                // premises is its registered ¬C.
+                let negated_conclusion = materialized.and_then(|(_, argument)| {
+                    index.argument(argument).and_then(|record| {
+                        strings(record, "premise_statement_ids")
+                            .into_iter()
+                            .find(|premise| !others.contains(premise))
+                    })
+                });
+                let description = format!("the negation of {conclusion}");
+                let mut requires = vec![match &negated_conclusion {
+                    Some(statement) => registered("negated_conclusion", statement, description),
+                    None => Requirement {
+                        role: "negated_conclusion",
+                        statement_id: None,
+                        argument_id: None,
+                        argument_ids: Vec::new(),
+                        premise_statement_ids: Vec::new(),
+                        registered: false,
+                        closed: Value::Null,
+                        established: false,
+                        description,
+                    },
+                }];
+                requires.extend(others.iter().map(|other| {
+                    registered(
+                        "co_premise",
+                        other,
+                        format!("another premise of {argument}"),
+                    )
+                }));
+                derived.push(Edge {
+                    kind: "contrapositive",
+                    from: conclusion.clone(),
+                    to: (*premise).clone(),
+                    argument_id: Some(argument.clone()),
+                    relation_id: None,
+                    result_id: Some(result.id.clone()),
+                    extra_premises: others,
+                    verified: materialized.is_some(),
+                    derivation: Some(format!(
+                        "not {conclusion}, with the other premises, gives not {premise}: {} composed with {CONTRAPOSITIVE_LEMMA}",
+                        result.theorem.as_deref().unwrap_or("?")
+                    )),
+                    cycle: false,
+                    inversion: Some(Inversion {
+                        key: format!("contrapositive:{argument}:{premise}"),
+                        lemma: CONTRAPOSITIVE_LEMMA,
+                        source_theorem: result.theorem.clone(),
+                        negated: true,
+                        requires,
+                        materialized_theorem,
+                        materialized_result_id: materialized.map(|(result, _)| result.clone()),
+                        materialized_argument_id: materialized
+                            .map(|(_, argument)| argument.clone()),
+                    }),
+                });
+            }
+        }
+        let root = self.root.clone();
+        for argument in &self.argument_order {
+            let node = &self.arguments[argument];
+            if !node.up_from.contains(&root) {
+                continue;
+            }
+            let conclusion = &node.conclusion_statement_id;
+            let alternatives = index.ordered(index.concluding.get(conclusion));
+            if alternatives.len() < 2 {
+                continue;
+            }
+            let mut requires = vec![Requirement {
+                role: "exhaustiveness",
+                statement_id: None,
+                argument_id: None,
+                argument_ids: alternatives.clone(),
+                premise_statement_ids: Vec::new(),
+                registered: false,
+                closed: Value::Null,
+                established: false,
+                description: format!(
+                    "{conclusion} holds only through the {} recorded arguments for it: if it holds, all premises of one of them hold (unregistered open premise; no corpus record states this coverage)",
+                    alternatives.len()
+                ),
+            }];
+            for alternative in alternatives.iter().filter(|other| *other != argument) {
+                let premises = index
+                    .argument(alternative)
+                    .map(|record| strings(record, "premise_statement_ids"))
+                    .unwrap_or_default();
+                requires.push(Requirement {
+                    role: "negated_alternative",
+                    statement_id: None,
+                    argument_id: Some(alternative.clone()),
+                    argument_ids: Vec::new(),
+                    description: format!("not all premises of {alternative} hold"),
+                    premise_statement_ids: premises,
+                    registered: false,
+                    closed: Value::Null,
+                    established: false,
+                });
+            }
+            derived.push(Edge {
+                kind: "inverse_conditional",
+                from: conclusion.clone(),
+                to: root.clone(),
+                argument_id: Some(argument.clone()),
+                relation_id: None,
+                result_id: None,
+                extra_premises: Vec::new(),
+                verified: false,
+                derivation: Some(format!(
+                    "{conclusion}, with every other alternative failing, gives {root} only under the exhaustiveness premise: {INVERSE_LEMMA}"
+                )),
+                cycle: false,
+                inversion: Some(Inversion {
+                    key: format!("inverse_conditional:{argument}:{root}"),
+                    lemma: INVERSE_LEMMA,
+                    source_theorem: None,
+                    negated: false,
+                    requires,
+                    materialized_theorem: None,
+                    materialized_result_id: None,
+                    materialized_argument_id: None,
+                }),
+            });
+        }
+        self.edges.extend(derived);
     }
 
     /// Marks the edges that return to a node on the current path of a
@@ -803,7 +1115,7 @@ impl Builder<'_> {
         let mut statements = self.statements;
         let mut arguments = self.arguments;
         Tree {
-            schema_version: 1,
+            schema_version: 2,
             options: json!({
                 "down": self.options.down,
                 "up": self.options.up,
@@ -1008,6 +1320,7 @@ pub fn tree_with(
     builder.up();
     builder.down(options.budget, true);
     builder.strength();
+    builder.inversions();
     Ok(builder.finish())
 }
 
@@ -1180,6 +1493,86 @@ impl Printer<'_> {
     }
 }
 
+impl Printer<'_> {
+    /// Derived inversions: the contrapositives toward the root and every
+    /// conditional inverse in full, the other contrapositives as a count.
+    fn inversions(&mut self) {
+        let tree = self.tree;
+        let derived: Vec<&Edge> = tree
+            .edges
+            .iter()
+            .filter(|edge| edge.inversion.is_some())
+            .collect();
+        let count = |kind: &str| derived.iter().filter(|edge| edge.kind == kind).count();
+        self.lines.push(format!(
+            "Inversions (derived in this view, not corpus arguments; {} contrapositive, {} inverse_conditional; the unconditioned inverse C => A is invalid and never derived):",
+            count("contrapositive"),
+            count("inverse_conditional")
+        ));
+        let mut shown = 0;
+        for edge in &derived {
+            let Some(inversion) = &edge.inversion else {
+                continue;
+            };
+            let argument = edge.argument_id.as_deref().unwrap_or("?");
+            if edge.kind == "contrapositive" {
+                if edge.to != tree.root {
+                    continue;
+                }
+                let others: Vec<String> = edge
+                    .extra_premises
+                    .iter()
+                    .map(|other| format!(" WITH {other}"))
+                    .collect();
+                let checked = match &inversion.materialized_result_id {
+                    Some(result) => format!("materialized: result {result}"),
+                    None => "not materialized".to_owned(),
+                };
+                self.lines.push(format!(
+                    "  NOT {}{} => NOT {} (contrapositive of {argument}; {} with {}; {checked})",
+                    edge.from,
+                    others.join(""),
+                    edge.to,
+                    inversion.source_theorem.as_deref().unwrap_or("?"),
+                    inversion.lemma
+                ));
+            } else {
+                let failing: Vec<String> = inversion
+                    .requires
+                    .iter()
+                    .filter_map(|requirement| requirement.argument_id.as_deref())
+                    .map(|alternative| format!(" WITH NOT ALL OF {alternative}"))
+                    .collect();
+                let alternatives = inversion
+                    .requires
+                    .iter()
+                    .find(|requirement| requirement.role == "exhaustiveness")
+                    .map_or(0, |requirement| requirement.argument_ids.len());
+                self.lines.push(format!(
+                    "  {}{} => {} GIVEN the unregistered open premise that {} holds only through its {alternatives} recorded arguments (inverse via {argument}; {})",
+                    edge.from,
+                    failing.join(""),
+                    edge.to,
+                    edge.from,
+                    inversion.lemma
+                ));
+            }
+            self.lines.push(format!("     key {}", inversion.key));
+            shown += 1;
+        }
+        let hidden = derived.len() - shown;
+        if hidden > 0 {
+            self.lines.push(format!(
+                "  … {hidden} further contrapositive edge(s) toward other premises (listed in --json)"
+            ));
+        }
+        if derived.is_empty() {
+            self.lines
+                .push("  (no verified non-transcription argument in view)".into());
+        }
+    }
+}
+
 /// The indented text form: support tree, dependents, strength orders and
 /// terms. Ids are raw uuids; the CLI humanizes them.
 pub fn format_tree(tree: &Tree) -> String {
@@ -1248,6 +1641,7 @@ pub fn format_tree(tree: &Tree) -> String {
             ));
         }
     }
+    printer.inversions();
     printer.lines.push(format!(
         "Terms ({} definitions, {} disambiguations across {} statements):",
         tree.definitions.len(),
@@ -1456,10 +1850,18 @@ mod tests {
         assert_eq!(node("Q").role, "co_premise");
         assert_eq!(node("U").role, "dependent");
         assert!(node("U").is_case_root);
-        // Every edge has a kind and an (empty) extra-premise list.
-        assert!(view.edges.iter().all(|edge| EDGE_KINDS.contains(&edge.kind)
-            && edge.extra_premises.is_empty()
-            && edge.derivation.is_none()));
+        // Every record edge has a kind and an (empty) extra-premise list.
+        assert!(
+            view.edges
+                .iter()
+                .all(|edge| EDGE_KINDS.contains(&edge.kind))
+        );
+        assert!(
+            view.edges
+                .iter()
+                .filter(|edge| edge.inversion.is_none())
+                .all(|edge| edge.extra_premises.is_empty() && edge.derivation.is_none())
+        );
         // Terms: X's definition with its sense label.
         assert_eq!(node("X").senses[0].sense_label.as_deref(), Some("XNESS_1"));
         assert_eq!(view.definitions[0].id, "DEF-1");
@@ -1626,6 +2028,193 @@ mod tests {
                 .iter()
                 .any(|n| n.id == "U" && n.up_depth == Some(2))
         );
+    }
+
+    fn derived<'a>(tree: &'a Tree, kind: &str) -> Vec<&'a Edge> {
+        tree.edges.iter().filter(|edge| edge.kind == kind).collect()
+    }
+
+    #[test]
+    fn contrapositive_edges_come_from_verified_arguments() {
+        let dir = fixture();
+        let view = build(&dir, "X", Options::default()).unwrap();
+        let contrapositive = derived(&view, "contrapositive");
+        // ARG-1 (A, P ⊢ X) is verified: ¬X with P gives ¬A, ¬X with A gives ¬P.
+        let of = |argument: &str| -> Vec<(&str, &str, Vec<String>)> {
+            contrapositive
+                .iter()
+                .filter(|edge| edge.argument_id.as_deref() == Some(argument))
+                .map(|edge| {
+                    (
+                        edge.from.as_str(),
+                        edge.to.as_str(),
+                        edge.extra_premises.clone(),
+                    )
+                })
+                .collect()
+        };
+        assert_eq!(
+            of("ARG-1"),
+            [
+                ("X", "A", vec!["P".to_owned()]),
+                ("X", "P", vec!["A".to_owned()])
+            ]
+        );
+        // ARG-2 has no result: no contrapositive.
+        assert!(of("ARG-2").is_empty());
+        // ARG-U (X, Q ⊢ U), on the up side: ¬U with Q gives ¬X.
+        assert!(of("ARG-U").contains(&("U", "X", vec!["Q".to_owned()])));
+        let edge = contrapositive
+            .iter()
+            .find(|edge| edge.argument_id.as_deref() == Some("ARG-1") && edge.to == "A")
+            .unwrap();
+        let inversion = edge.inversion.as_ref().unwrap();
+        assert_eq!(inversion.key, "contrapositive:ARG-1:A");
+        assert_eq!(inversion.lemma, CONTRAPOSITIVE_LEMMA);
+        assert_eq!(inversion.source_theorem.as_deref(), Some("M.ARG-1"));
+        assert!(inversion.negated);
+        // Not checked in Lean until materialized.
+        assert!(!edge.verified);
+        assert_eq!(edge.result_id.as_deref(), Some("RES-ARG-1"));
+        assert_eq!(
+            inversion.materialized_theorem.as_deref(),
+            Some("TruthCore.Results.Logic.Inversions.MARG1Contra1.contrapositive")
+        );
+        let roles: Vec<(&str, bool)> = inversion
+            .requires
+            .iter()
+            .map(|requirement| (requirement.role, requirement.registered))
+            .collect();
+        assert_eq!(roles, [("negated_conclusion", false), ("co_premise", true)]);
+        assert!(edge.derivation.as_deref().unwrap().contains("M.ARG-1"));
+        // At X no argument using X has an alternative for its conclusion
+        // (U has one argument): no inverse at all. In particular the
+        // unconditioned inverse U ⊢ X is never emitted.
+        assert!(derived(&view, "inverse_conditional").is_empty());
+        let text = format_tree(&view);
+        assert!(text.contains("NOT U WITH Q => NOT X"), "{text}");
+        assert!(text.contains("key contrapositive:ARG-U:X"), "{text}");
+        assert!(text.contains("never derived"), "{text}");
+    }
+
+    #[test]
+    fn a_materialized_contrapositive_is_verified() {
+        let dir = fixture();
+        let theorem = "TruthCore.Results.Logic.Inversions.MARG1Contra1.contrapositive";
+        for (id, premises, conclusion) in [("ARG-NOT-A", ["NOT-X", "P"], "NOT-A")] {
+            for statement in [premises[0], conclusion] {
+                write(
+                    &dir.0,
+                    &format!("corpus/statements/{statement}.json"),
+                    json!({"id": statement, "paraphrase": "p"}),
+                );
+            }
+            write(
+                &dir.0,
+                &format!("corpus/arguments/{id}.json"),
+                json!({"id": id, "premise_statement_ids": premises, "inference_ids": ["I-1"],
+                    "conclusion_statement_id": conclusion, "meaning": "m"}),
+            );
+            write(
+                &dir.0,
+                &format!("corpus/results/RES-{id}.json"),
+                json!({"id": format!("RES-{id}"), "argument_id": id, "theorem": theorem,
+                    "challenge_module": "C", "solution_module": "S", "comparator_config": "c",
+                    "status": "solution-present", "transcription": "instantiation"}),
+            );
+        }
+        let view = build(&dir, "X", Options::default()).unwrap();
+        let edge = derived(&view, "contrapositive")
+            .into_iter()
+            .find(|edge| edge.argument_id.as_deref() == Some("ARG-1") && edge.to == "A")
+            .unwrap();
+        assert!(edge.verified);
+        let inversion = edge.inversion.as_ref().unwrap();
+        assert_eq!(
+            inversion.materialized_result_id.as_deref(),
+            Some("RES-ARG-NOT-A")
+        );
+        assert_eq!(
+            inversion.materialized_argument_id.as_deref(),
+            Some("ARG-NOT-A")
+        );
+        // Its ¬X is now a registered (open) statement.
+        assert_eq!(inversion.requires[0].statement_id.as_deref(), Some("NOT-X"));
+        assert!(inversion.requires[0].registered);
+        assert!(inversion.requires[0].closed.is_null());
+        // The other premise edge stays unverified.
+        assert!(
+            !derived(&view, "contrapositive")
+                .iter()
+                .any(|edge| edge.argument_id.as_deref() == Some("ARG-1")
+                    && edge.to == "P"
+                    && edge.verified)
+        );
+    }
+
+    #[test]
+    fn inverse_edges_need_an_exhaustiveness_premise() {
+        let dir = fixture();
+        // At A: ARG-1 uses A and concludes X, which ARG-2 also concludes.
+        let view = build(&dir, "A", Options::default()).unwrap();
+        let inverse = derived(&view, "inverse_conditional");
+        assert_eq!(inverse.len(), 1, "{inverse:?}");
+        let edge = inverse[0];
+        assert_eq!((edge.from.as_str(), edge.to.as_str()), ("X", "A"));
+        assert_eq!(edge.argument_id.as_deref(), Some("ARG-1"));
+        assert!(!edge.verified);
+        let inversion = edge.inversion.as_ref().unwrap();
+        assert_eq!(inversion.lemma, INVERSE_LEMMA);
+        assert!(!inversion.negated);
+        let exhaustiveness = &inversion.requires[0];
+        assert_eq!(exhaustiveness.role, "exhaustiveness");
+        assert!(!exhaustiveness.registered);
+        assert!(exhaustiveness.statement_id.is_none());
+        assert_eq!(exhaustiveness.argument_ids, ["ARG-1", "ARG-2"]);
+        let alternative = &inversion.requires[1];
+        assert_eq!(alternative.role, "negated_alternative");
+        assert_eq!(alternative.argument_id.as_deref(), Some("ARG-2"));
+        assert_eq!(alternative.premise_statement_ids, ["B", "P"]);
+        // ARG-4 uses A for C, the only argument for C: no inverse C ⊢ A.
+        assert!(inverse.iter().all(|edge| edge.from != "C"));
+        // Regression (#1674): no derived edge is the unconditioned inverse.
+        // Every inverse edge lists the exhaustiveness premise.
+        for root in ["A", "B", "C", "P", "X", "Q", "D1"] {
+            let view = build(&dir, root, Options::default()).unwrap();
+            for edge in derived(&view, "inverse_conditional") {
+                let inversion = edge.inversion.as_ref().unwrap();
+                assert!(
+                    inversion
+                        .requires
+                        .iter()
+                        .any(|requirement| requirement.role == "exhaustiveness"),
+                    "{edge:?}"
+                );
+                assert_eq!(edge.to, root);
+            }
+        }
+        let text = format_tree(&view);
+        assert!(
+            text.contains("X WITH NOT ALL OF ARG-2 => A GIVEN the unregistered open premise"),
+            "{text}"
+        );
+    }
+
+    #[test]
+    fn materialized_names_are_lean_identifiers() {
+        assert_eq!(
+            materialized_name(
+                "TruthCore.Results.Comparison.ProblemOfEvil.RoweDeductiveCore.Solution",
+                "TruthCore.Results.Comparison.ProblemOfEvil.RoweDeductiveCore.roweDeductiveCore",
+                1
+            ),
+            "RoweDeductiveCoreContra1"
+        );
+        assert_eq!(
+            materialized_name("A.Projection.Solution", "A.Projection.checks", 2),
+            "ProjectionChecksContra2"
+        );
+        assert_eq!(materialized_name("A.Solution", "A.x_1", 3), "AX1Contra3");
     }
 
     #[test]

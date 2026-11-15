@@ -832,7 +832,8 @@ impl Aliases {
     }
 
     /// `corpus.humanize`: every uuid in `text` as `label [uuid8]`, except a
-    /// uuid that is a command argument (`materialize <uuid>`); unknown uuids
+    /// uuid that is a command argument (`materialize <uuid>`) or part of a
+    /// `truth tree` edge key (`contrapositive:<uuid>:<uuid>`); unknown uuids
     /// stay as they are.
     pub fn humanize(&self, text: &str) -> String {
         static CELL: OnceLock<Regex> = OnceLock::new();
@@ -846,7 +847,17 @@ impl Aliases {
         let mut out = String::with_capacity(text.len());
         let mut last = 0;
         for found in pattern.find_iter(text).flatten() {
-            if text[..found.start()].ends_with("materialize ") {
+            let before = &text[..found.start()];
+            // An edge key (`truth tree --materialize-edge`) stays raw so it
+            // can be pasted back.
+            let token = before
+                .rsplit(char::is_whitespace)
+                .next()
+                .unwrap_or_default();
+            if before.ends_with("materialize ")
+                || token.starts_with("contrapositive:")
+                || token.starts_with("inverse_conditional:")
+            {
                 continue;
             }
             out.push_str(&text[last..found.start()]);
@@ -933,6 +944,10 @@ mod tests {
         assert_eq!(
             aliases.humanize(&format!("x {a}, materialize {a}, {b}0")),
             format!("x Alpha [{}], materialize {a}, {b}0", &a[..8])
+        );
+        assert_eq!(
+            aliases.humanize(&format!("key contrapositive:{a}:{a} ({a})")),
+            format!("key contrapositive:{a}:{a} (Alpha [{}])", &a[..8])
         );
         let long = format!("{a} {} {a}", "x".repeat(2_000_000));
         assert_eq!(aliases.humanize(&long).matches("Alpha [").count(), 2);

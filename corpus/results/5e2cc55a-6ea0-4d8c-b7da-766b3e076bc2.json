@@ -1,0 +1,12 @@
+{
+  "id": "5e2cc55a-6ea0-4d8c-b7da-766b3e076bc2",
+  "label": "Contraposition: not veracity GodAssentAccurate, from not veracity GodAssertsOnlyTruth",
+  "argument_id": "709f3d00-4dba-410c-8a44-b0581d2f7fee",
+  "challenge_module": "TruthCore.Results.Logic.Inversions.DivineVeracity1410AssertionTruthAContra2.Challenge",
+  "solution_module": "TruthCore.Results.Logic.Inversions.DivineVeracity1410AssertionTruthAContra2.Solution",
+  "theorem": "TruthCore.Results.Logic.Inversions.DivineVeracity1410AssertionTruthAContra2.contrapositive",
+  "comparator_config": "results/5e2cc55a-6ea0-4d8c-b7da-766b3e076bc2/comparator.json",
+  "status": "solution-present",
+  "description": "Logical transcription (instantiation): the proof instantiates the generic contraposition lemma TruthCore.Logic.Inversion.contrapositive at the verified result TruthCore.Results.Causality.DivineVeracity1410.assertionTruthA. It adds no structure beyond that result, so by the transcription rule it closes its conclusion only when every premise, including the negated conclusion, is already closed.",
+  "transcription": "instantiation"
+}

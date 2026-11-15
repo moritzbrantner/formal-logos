@@ -1,0 +1,20 @@
+{
+  "id": "97b0b56c-9dba-491d-977b-f126fae0c143",
+  "label": "Materialized contrapositives of verified arguments (#1674 phase 2)",
+  "statement_ids": [
+    "7dd8a624-b04d-4ea0-9ecf-2d9e5cab95ad",
+    "5a035a1e-e668-4327-b989-2f0aff4aece2",
+    "8eebfefd-e24a-52f0-bf85-5ced6b569eae",
+    "cf17054d-5350-58c8-882c-604ccd08ad70"
+  ],
+  "date": "2026-11-15",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "truth tree derives contrapositive edges (not C with the other premises gives not Pi) from verified non-transcription arguments, and inverse_conditional edges only under an explicit exhaustiveness premise. The generic lemmas in TruthCore/Logic/Inversion.lean have zero axioms. truth tree --materialize-edge turned the contrapositive of assertionTruthA (argument d1fb84b0) at premise 7dd8a624 into result 5e2cc55a, which passes bind-check, Comparator and NanoDa. It is declared an instantiation transcription. Its premise, the negation of 5a035a1e (new statement 8e136583), is bare, so its conclusion fa13d33c stays open, and neither reaches the root. Rejected first choice: the contrapositive of roweDeductiveCore (9d5e7d00) at 8eebfefd, whose conclusion would reuse NoGratuitousSuffering (cf17054d). Its source statements link both POINTLESS_GRATUITOUS senses, and the source argument passes only through the legacy sense allowlist, so any new argument over them fails the sense-mixing check.",
+  "blocker": "No blocker for the contrapositive path. Open: (1) A Rowe contraposition (a Moore shift) needs the definition links of the Rowe statements repaired first: 8eebfefd, 0a95a3c3, ebcd1744 and cf17054d also link APPARENTLY_POINTLESS_SUFFERING_2 (9ad17723), which their Lean types do not use. (2) No corpus record type states that the recorded arguments for a statement exhaust its routes. Every inverse_conditional edge therefore rests on an unregistered open premise and is not materialized.",
+  "evidence": [
+    "5e2cc55a-6ea0-4d8c-b7da-766b3e076bc2",
+    "eaed24fb-314c-4aec-a142-138231bbedbf",
+    "63481f67-a60f-5414-8946-8cabe33065b7"
+  ]
+}

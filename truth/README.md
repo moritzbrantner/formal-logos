@@ -456,9 +456,9 @@ same output.
 
 ## `tree`
 
-`truth tree STATEMENT [--down N] [--up N] [--budget N]` draws the argument
-graph re-rooted at any statement, with the definitions of every statement in
-view (#1674). It has no Python counterpart. All statuses come from one
+`truth tree STATEMENT [--down N] [--up N] [--budget N] [--materialize-edge KEY]`
+draws the argument graph re-rooted at any statement, with the definitions of
+every statement in view (#1674). It has no Python counterpart. All statuses come from one
 frontier report computed with STATEMENT as the frontier root
 (`frontier::current_frontier`); the command creates no second closure
 semantics and closes nothing.
@@ -495,18 +495,60 @@ admit a statement names it) and carries both `up_depth` and `down_depth`. Every 
 a `truncated` entry (`side`, `reason` `depth` or `budget`, `omitted_arguments`)
 and a `… truncated` text line.
 
-JSON (`schema_version` 1, with `input_identity`): `root`, `case_root`,
+JSON (`schema_version` 2, with `input_identity`): `root`, `case_root`,
 `options`, `statements` (status, depth, closed reason, established,
 `reaches_tree_root`, role, depths, definitions, senses), `arguments` (premises,
-steps, results with theorem and transcription kind, the root route entry),
-`edges`, `definitions`, `disambiguations`, `truncated`, `node_count`. Each edge
-has a `kind` (`supports`: argument → conclusion, `uses`: argument → premise,
-`strengthens`: strong → weak statement), `extra_premises`, `verified`,
-`derivation` and `cycle`. The kinds `contrapositive` and `inverse_conditional`
-are reserved (`reserved_edge_kinds`) for derived inversions: from a verified
-P1, …, Pn ⊢ C, ¬C with the other premises gives ¬Pi; an inverse C ∧ ¬B ⊢ A
-needs an explicit exhaustiveness premise C → A ∨ B in `extra_premises`. The
-unconditioned inverse C ⊢ A is invalid and is never emitted.
+steps, results with theorem, Solution module and transcription kind, the root
+route entry), `edges`, `definitions`, `disambiguations`, `truncated`,
+`node_count`. Each edge has a `kind` (`supports`: argument → conclusion,
+`uses`: argument → premise, `strengthens`: strong → weak statement, and the
+derived kinds below), `extra_premises`, `verified`, `derivation`, `cycle` and
+`inversion` (`null` for record edges).
+
+**Inversions (#1674 phase 2).** Re-rooting turns arguments around, and only
+some inversions are valid; the generic lemmas are in
+`TruthCore/Logic/Inversion.lean` (zero axioms, constructive). The view derives
+two edge kinds and creates no records:
+
+- `contrapositive`, for every premise Pi of every verified non-transcription
+  argument P1, …, Pn ⊢ C in view: ¬C with the other premises gives ¬Pi
+  (`from` C, `to` Pi, `inversion.negated` true, the other premises in
+  `extra_premises`). It instantiates `TruthCore.Logic.Inversion.contrapositive`
+  at the argument's result theorem (`derivation`, `inversion.source_theorem`).
+  It is `verified` only when its materialized result exists.
+- `inverse_conditional`, at the tree root A, for each argument in view that
+  uses A and concludes a C with at least one other recorded argument: C, with
+  the premise bundle of every other alternative failing, gives A
+  (`inverse_premise_of_exhaustive_at`), but only under the exhaustiveness
+  premise that C holds only through its recorded arguments. That premise is
+  listed in `inversion.requires` (role `exhaustiveness`, the alternatives in
+  `argument_ids`); no corpus record type states such coverage, so it is
+  reported as an unregistered open premise, and the edge is never verified.
+
+The unconditioned inverse C ⊢ A is invalid (A = B = false, C = true;
+`unconditioned_inverse_invalid`) and is never emitted. Each derived edge has an
+`inversion.key` (`contrapositive:<argument>:<premise>`), printed raw in the
+text's Inversions section. That section lists the contrapositives toward the
+root and every inverse edge, and counts the rest.
+
+`--materialize-edge KEY` turns one `contrapositive` edge of the view into
+source files, only on that explicit request (`inversion.rs`): a batch spec
+`specs/inversion-<name>.toml`, a vocabulary module
+`TruthCore/Logic/Inversions/<Name>.lean` defining each negation the corpus
+does not already state (an existing statement whose declaration is defined as
+that negation, such as `NoGratuitousSuffering`, is reused), and a Solution
+`TruthCore/Results/Logic/Inversions/<Name>/Solution.lean` whose theorem
+`contrapositive` instantiates the lemma at the original theorem. The argument
+is declared an `instantiation` transcription (invariant 16): it closes its
+conclusion only when every premise, including the negated conclusion, is
+closed. It prints the remaining ordinary steps (`argument_batch.py challenge`
+and `records --write --fix`, `root-imports.sh --write`, `lake build`,
+`bind-check`, `verify-result.sh`). Existing files with other content are never
+overwritten. A source whose header premises are not `(h : P …)` groups, that
+has `sense_bridges`, or that is in the legacy sense allowlist is refused, since
+the generated argument could not bind or pass `truth check`. An
+`inverse_conditional` edge is not materialized until its exhaustiveness
+premise is registered.
 
 **Batch mode (`--out-dir DIR STATEMENT...`)** writes, for each statement,
 `DIR/<uuid>.json` with exactly the JSON of the single command (same options),

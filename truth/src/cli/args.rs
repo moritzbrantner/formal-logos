@@ -118,7 +118,8 @@ pub struct AttributionArgs {
 }
 
 /// The `tree` options: `--down N`, `--up N` (0 allowed), `--budget N` and
-/// `--out-dir DIR` (batch mode: one JSON file per statement operand).
+/// `--out-dir DIR` (batch mode: one JSON file per statement operand) and
+/// `--materialize-edge KEY`.
 #[derive(Default)]
 pub struct TreeArgs {
     pub flags: bool,
@@ -126,6 +127,7 @@ pub struct TreeArgs {
     pub up: Option<usize>,
     pub budget: Option<usize>,
     pub out_dir: Option<String>,
+    pub materialize_edge: Option<String>,
 }
 
 /// The `index compare` options.
@@ -364,6 +366,15 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                     args.next()
                         .and_then(|value| value.to_str())
                         .ok_or_else(|| usage(format!("{arg} requires a UTF-8 path")))?
+                        .to_owned(),
+                );
+            }
+            "--materialize-edge" => {
+                parsed.tree.flags = true;
+                parsed.tree.materialize_edge = Some(
+                    args.next()
+                        .and_then(|value| value.to_str())
+                        .ok_or_else(|| usage("--materialize-edge requires an edge key"))?
                         .to_owned(),
                 );
             }

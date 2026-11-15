@@ -1,0 +1,7 @@
+{
+  "id": "5480f60c-7be2-4366-807f-c9382d1eaf2b",
+  "label": "lemma (ordinary)",
+  "lemma": "lemma",
+  "class": "ordinary",
+  "gloss": "A proved auxiliary proposition used in other proofs, usually a general Lean theorem."
+}
