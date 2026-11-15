@@ -869,9 +869,18 @@ pub fn question_brief(
                 }
             }
         }
-        let history = retrieval::history(inputs.root, &score.note.path, 5);
-        for change in &history {
+        let mut history = retrieval::history(inputs.root, &score.note.path, 5);
+        for change in &mut history {
             if let Some(number) = change["pull_request"].as_u64() {
+                if let Some(issue) = inputs.issues.snapshot().and_then(|snapshot| {
+                    snapshot
+                        .issues
+                        .iter()
+                        .find(|issue| issue.get("number").and_then(Value::as_u64) == Some(number))
+                }) {
+                    change["title"] = issue.get("title").cloned().unwrap_or(Value::Null);
+                    change["state"] = issue.get("state").cloned().unwrap_or(Value::Null);
+                }
                 let paths = changed_by.entry(number).or_default();
                 if !paths.contains(&score.note.path) {
                     paths.push(score.note.path.clone());
@@ -1338,9 +1347,14 @@ pub fn format_brief(brief: &Value, aliases: &Aliases, limit: usize) -> String {
                 .flatten()
                 .take(3)
                 .map(|change| match change["pull_request"].as_u64() {
-                    Some(number) => {
-                        format!("{} #{number}", change["date"].as_str().unwrap_or_default())
-                    }
+                    Some(number) => format!(
+                        "{} #{number}{}",
+                        change["date"].as_str().unwrap_or_default(),
+                        change["title"]
+                            .as_str()
+                            .map(|title| format!(" \"{}\"", retrieval::excerpt(title, 70)))
+                            .unwrap_or_default()
+                    ),
                     None => format!(
                         "{} {}",
                         change["date"].as_str().unwrap_or_default(),
@@ -1350,7 +1364,7 @@ pub fn format_brief(brief: &Value, aliases: &Aliases, limit: usize) -> String {
                 .collect();
             if !changes.is_empty() {
                 lines.push(format!(
-                    "    last changed (git, first parent): {}",
+                    "    last changed (git first-parent merges, newest first): {}",
                     changes.join(", ")
                 ));
             }
