@@ -187,9 +187,19 @@ two commands share one closure computation. No Python runs. `input_identity`
 covers the corpus records only, not the Lean files the transcription
 heuristics read.
 
-Not ported: `--base` (it runs the base revision's own `corpus.py` on a
-`git archive` extract; use Python) and the full `validate()` that the Python
-command runs first (Rust performs only the structural load).
+`truth thickness --base REV` ports `corpus.py thickness --base REV`: the
+head report plus the derivation sets and summary counts that changed from the
+base revision. The base is read as `frontier-diff` reads it (below): a `git
+archive` extract whose frontier report the Rust engine computes when that
+revision's `scripts/corpus.py` is the checkout's, and that revision's own
+`corpus.py frontier --json` otherwise; a pre-migration base is mapped to uuids
+as Python maps it (its records by the checkout's `scripts/migrate_uuid.py`).
+The JSON adds `engines` (`rust` or `python` for the base; the head is always
+Rust). `--queue` with `--base`, and a revision that cannot be read, fail as
+Python's `corpus error:` with exit 2.
+
+Not ported: the full `validate()` that the Python command runs first (Rust
+performs only the structural load).
 
 ## `frontier` and `frontier-diff`
 
@@ -335,6 +345,19 @@ already reach the root, so such work is otherwise invisible to round
 selection. Reaching the root is the same route-aware walk as `thickness`;
 `scripts/verify_truth_cli.py` checks the disconnected set against Python's
 `reaching_root_statements` plus `corpus.refutation_support`.
+
+`truth orphans --base REV` ports `scripts/orphan_summary.py --base REV`, the
+Markdown table CI adds to a PR's job summary: the disconnected count at the
+base revision and at the working tree, and their difference. The base is read
+as `frontier-diff` reads it: the Rust engine when the revision's
+`scripts/corpus.py` is the checkout's, otherwise the revision's own Python
+(`orphan_summary`'s historical snippet, which tolerates a revision without
+refutation support). A base that cannot be read or computed is reported as
+unavailable (stderr names the error; `--json` has `base_error`) and does not
+fail the command; a head failure does. The text is byte-identical to
+Python's for the default root (Python always names `STMT-CATHOLICISM-TRUE`;
+Rust names the `--frontier-root` used); `--json` gives `base_count`,
+`head_count`, `delta` and `engines`. It excludes `--by` and `--senses`.
 
 Results are grouped by Lean module area (`--by module`, the default: the
 first namespace component below `TruthCore`, after `Results`, so

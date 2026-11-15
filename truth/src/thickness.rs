@@ -101,7 +101,11 @@ impl<'a> Records<'a> {
 /// from the one frontier computation (`crate::frontier`), so thickness and
 /// frontier cannot disagree on closure, depths or walks.
 pub fn frontier_inputs(root: &str, records: &Records, flags: &[Flag]) -> FrontierInputs {
-    let report = Frontier::new(root, records, flags).report(false);
+    inputs_from_report(root, &Frontier::new(root, records, flags).report(false))
+}
+
+/// The thickness inputs of a full frontier report (`frontier --json`).
+pub fn inputs_from_report(root: &str, report: &Value) -> FrontierInputs {
     let strings = |value: &Value| -> Vec<String> {
         value
             .as_array()
@@ -473,7 +477,7 @@ fn python_repr(value: &Value) -> String {
 }
 
 /// Python `format_thickness` without a base.
-pub fn format_thickness(report: &Value) -> String {
+pub fn format_thickness(report: &Value, delta: Option<&Value>) -> String {
     let mut lines = vec![
         format!(
             "derivational thickness for {} (presentation only; closes nothing)",
@@ -493,11 +497,143 @@ pub fn format_thickness(report: &Value) -> String {
         ),
         format!("derivations in total: {}", report["derivation_count"]),
     ];
-    for (statement, ids) in report["derivations"].as_object().into_iter().flatten() {
-        let count = ids.as_array().map_or(0, Vec::len);
-        lines.push(format!("  {count:2}  {statement}"));
+    if let Some(delta) = delta {
+        lines.push("change from base:".into());
+        for key in SUMMARY_KEYS {
+            let pair = &delta["summary"][key];
+            lines.push(format!("  {key}: {} -> {}", pair[0], pair[1]));
+        }
+        for (statement, change) in delta["changed"].as_object().into_iter().flatten() {
+            let ids = |field: &str, sign: char| -> Vec<String> {
+                change[field]
+                    .as_array()
+                    .into_iter()
+                    .flatten()
+                    .map(|id| format!("{sign}{}", id.as_str().unwrap_or_default()))
+                    .collect()
+            };
+            let parts = [ids("added", '+'), ids("removed", '-')].concat();
+            lines.push(format!("  {statement}: {}", parts.join(" ")));
+        }
+    } else {
+        for (statement, ids) in report["derivations"].as_object().into_iter().flatten() {
+            let count = ids.as_array().map_or(0, Vec::len);
+            lines.push(format!("  {count:2}  {statement}"));
+        }
     }
     lines.join("\n")
+}
+
+/// The summary counts `thickness_delta` compares, in report order.
+const SUMMARY_KEYS: [&str; 4] = [
+    "statement_count",
+    "derived_statement_count",
+    "multiply_derived_statement_count",
+    "derivation_count",
+];
+
+/// Python `thickness_delta`: statements reaching the root whose derivation
+/// set changed from `base` to `head`, and the summary counts of both.
+pub fn thickness_delta(base: &Value, head: &Value) -> Value {
+    let set = |report: &Value, statement: &str| -> BTreeSet<String> {
+        report["derivations"][statement]
+            .as_array()
+            .into_iter()
+            .flatten()
+            .filter_map(Value::as_str)
+            .map(str::to_owned)
+            .collect()
+    };
+    let statements: BTreeSet<&String> = [base, head]
+        .iter()
+        .flat_map(|report| report["derivations"].as_object().into_iter().flatten())
+        .map(|(statement, _)| statement)
+        .collect();
+    let mut changed = Map::new();
+    for statement in statements {
+        let (before, after) = (set(base, statement), set(head, statement));
+        if before != after {
+            changed.insert(
+                statement.clone(),
+                json!({
+                    "added": after.difference(&before).collect::<Vec<_>>(),
+                    "removed": before.difference(&after).collect::<Vec<_>>(),
+                }),
+            );
+        }
+    }
+    let summary: Map<String, Value> = SUMMARY_KEYS
+        .iter()
+        .map(|key| ((*key).to_owned(), json!([base[*key], head[*key]])))
+        .collect();
+    json!({"summary": summary, "changed": changed})
+}
+
+/// Python `revision_thickness`: the thickness report at a Git revision, from
+/// that revision's full frontier report (`frontier::revision_report`, which
+/// names the engine used) and its argument and result records on a `git
+/// archive` extract. A pre-migration revision's records are first converted
+/// to uuids by `scripts/migrate_uuid.py` of the checkout, as Python does.
+pub fn revision_thickness(
+    checkout: &std::path::Path,
+    revision: &str,
+    root: &str,
+    legacy_root: &str,
+) -> Result<(Value, &'static str), String> {
+    let tree = crate::frontier::extract(checkout, revision)?;
+    let legacy = !crate::frontier::uses_uuid_identity(tree.path());
+    let (report, engine) =
+        crate::frontier::revision_report(checkout, tree.path(), revision, root, legacy_root)?;
+    if legacy {
+        let output = std::process::Command::new("python3")
+            .arg(checkout.join("scripts").join("migrate_uuid.py"))
+            .arg("--write")
+            .arg("--root")
+            .arg(tree.path())
+            .output()
+            .map_err(|error| format!("cannot run python3: {error}"))?;
+        if !output.status.success() {
+            return Err(format!(
+                "uuid migration of {revision} failed: {}",
+                String::from_utf8_lossy(&output.stderr).trim()
+            ));
+        }
+    }
+    let read = |kind: &str| -> Result<Vec<Record>, String> {
+        let mut paths: Vec<std::path::PathBuf> =
+            std::fs::read_dir(tree.path().join("corpus").join(kind))
+                .into_iter()
+                .flatten()
+                .filter_map(|entry| entry.ok().map(|entry| entry.path()))
+                .filter(|path| path.extension().is_some_and(|ext| ext == "json"))
+                .collect();
+        paths.sort();
+        paths
+            .iter()
+            .map(|path| {
+                let text = std::fs::read_to_string(path).map_err(|error| error.to_string())?;
+                match serde_json::from_str(&text) {
+                    Ok(Value::Object(record)) => Ok(record),
+                    Ok(_) => Err(format!("{}: not a JSON object", path.display())),
+                    Err(error) => Err(format!("{}: {error}", path.display())),
+                }
+            })
+            .collect()
+    };
+    let (arguments, results) = (read("arguments")?, read("results")?);
+    let records = Records {
+        statements: Vec::new(),
+        arguments: arguments.iter().collect(),
+        results: results.iter().collect(),
+        relations: Vec::new(),
+        claims: Vec::new(),
+        attempts: Vec::new(),
+        definitions: Vec::new(),
+        inferences: Vec::new(),
+    };
+    let root = report["root"].as_str().unwrap_or(root).to_owned();
+    let inputs = inputs_from_report(&root, &report);
+    Ok((thickness_report(&inputs, &records), engine))
 }
 
 /// Python `format_thickness_queue`.
@@ -762,5 +898,27 @@ mod tests {
         );
         let text = format_thickness_queue("ROOT", &queue);
         assert!(text.contains("B [supported; 1 dependent arguments; examined]"));
+    }
+
+    #[test]
+    fn delta_lists_changed_derivation_sets_and_summary() {
+        let report = |a: Vec<&str>, b: Vec<&str>| {
+            json!({"statement_count": 2, "derived_statement_count": 2,
+                   "multiply_derived_statement_count": usize::from(a.len() > 1),
+                   "derivation_count": a.len() + b.len(),
+                   "derivations": {"A": a, "B": b}, "root": "ROOT"})
+        };
+        let base = report(vec!["ARG-1"], vec!["ARG-3"]);
+        let head = report(vec!["ARG-1", "ARG-2"], vec!["ARG-3"]);
+        let delta = thickness_delta(&base, &head);
+        assert_eq!(
+            delta["changed"],
+            json!({"A": {"added": ["ARG-2"], "removed": []}})
+        );
+        assert_eq!(delta["summary"]["derivation_count"], json!([2, 3]));
+        let text = format_thickness(&head, Some(&delta));
+        assert!(text.ends_with(
+            "change from base:\n  statement_count: 2 -> 2\n  derived_statement_count: 2 -> 2\n  multiply_derived_statement_count: 0 -> 1\n  derivation_count: 2 -> 3\n  A: +ARG-2"
+        ));
     }
 }
