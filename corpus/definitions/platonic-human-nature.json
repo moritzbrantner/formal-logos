@@ -12,8 +12,8 @@
     "meaning": "Forms.HumanFormAdmitted s human says only that the quality human is admitted in the vocabulary s: s.Admitted human, the explicit optional open commitment to include human among the qualities whose Forms are in question. Its body applies the supplied predicate s.Admitted. Admission alone does not give a Form of human: a vocabulary can admit human while its FormOf relation is empty; existence of such a Form follows only with a further commitment such as OneOverMany.",
     "examples_unavailable": "Whether human is admitted is what Parmenides 130c leaves undecided; the commitment is recorded as optional and open, so no instance is asserted.",
     "exclusions": [
-      "The existence of a human Form by itself.",
-      "A human being: the Form, if admitted, is not an ordinary human (DISAMB-PLATONIC-HUMAN)."
+      "The existence of a human Form: admission does not supply one.",
+      "A human being: a Form of human, if there is one, is not an ordinary human (DISAMB-PLATONIC-HUMAN)."
     ],
     "open_obligations": [
       "Not attributed to the young Socrates; a sourced replacement would need a passage fixing these boundaries.",
