@@ -1,0 +1,10 @@
+{
+  "id": "f909f8f1-5ec1-4dff-ad32-f50cb8327004",
+  "label": "pin (ordinary)",
+  "lemma": "pin",
+  "class": "ordinary",
+  "forms": [
+    "pins"
+  ],
+  "gloss": "To fix to an exact version by revision or hash."
+}

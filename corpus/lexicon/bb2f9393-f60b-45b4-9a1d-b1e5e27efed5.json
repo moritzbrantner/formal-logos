@@ -3,5 +3,8 @@
   "label": "build (ordinary)",
   "lemma": "build",
   "class": "ordinary",
+  "forms": [
+    "built"
+  ],
   "gloss": "To compile the Lean library (lake build); also to construct."
 }

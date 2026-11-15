@@ -1,0 +1,7 @@
+{
+  "id": "b1e78cc1-bf48-4921-b599-086656e2401c",
+  "label": "library (ordinary)",
+  "lemma": "library",
+  "class": "ordinary",
+  "gloss": "A collection of Lean modules or other code."
+}
