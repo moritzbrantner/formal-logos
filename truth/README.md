@@ -255,7 +255,13 @@ and Comparator contracts, binding, coverage, degeneracy and exporter failures,
 fresh, stale, forged and symlinked bundles) and on the real corpus
 (`--registered` always; the live reports, the bundle and `--check-input`
 given `TRUTH_STRENGTH_EXPORTERS`, a directory recorded with `python3 -m
-truth_parity.strength record DIR` from `scripts/`). TIMING
+truth_parity.strength record DIR` from `scripts/`). On the real corpus
+(2026-11-15, warm Lake build, 7 comparisons) the live `strength-report`,
+dominated by `verify-result.sh`, took 186 s in Rust and 159 s in Python on a
+loaded machine, with byte-identical bundles; from the recorded exporter output
+it took 0.9 s against 3.4 s, `--check-input` 0.57 s against 0.72 s and
+`--registered` 0.38 s against 0.25 s (Rust also loads the structural
+corpus).
 
 ## `unused-premises`, `lean-reuse`, `context --proof-use`
 
