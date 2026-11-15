@@ -2476,72 +2476,26 @@ fn validate(
 
     // registered_models
     let models = load("models")?;
-    index_by_id(&models, "model")?;
-    for model in &models {
-        validate_model(&model.fields, &statement_by_id, root)
-            .map_err(|error| format!("{}: {error}", model.path))?;
-    }
+    validate_models(root, &models, &statement_by_id)?;
 
     identity::validate(root)?;
 
     // registered_configurations
     let configurations = load("configurations")?;
-    index_by_id(&configurations, "configuration")?;
-    let selected: BTreeSet<&str> = configurations
-        .iter()
-        .flat_map(|case| {
-            strings(&case.fields, "incompatibility_result_ids")
-                .into_iter()
-                .chain(strings(&case.fields, "implication_result_ids"))
-        })
-        .collect();
-    for rid in selected {
-        if let Some(result) = result_by_id.get(rid) {
-            checker.result_config(
-                &format!("corpus/results/{rid}.json"),
-                result,
-                &argument_index,
-            )?;
-        }
-    }
-    if configurations
-        .iter()
-        .any(|case| truthy(case.fields.get("implication_result_ids")))
-    {
-        let refs: Vec<&Obj> = results.iter().map(|result| &result.fields).collect();
-        let transcriptions = thickness::transcription_kinds(root, &refs);
-        for case in &configurations {
-            let mut rejected: Vec<&str> = strings(&case.fields, "implication_result_ids")
-                .into_iter()
-                .filter(|rid| transcriptions.contains_key(*rid))
-                .collect::<BTreeSet<_>>()
-                .into_iter()
-                .collect();
-            rejected.sort();
-            if !rejected.is_empty() {
-                return Err(format!(
-                    "{}: transcriptions cannot supply deductions: {}",
-                    case.path,
-                    str_list_repr(&rejected)
-                ));
-            }
-        }
-    }
-    let model_by_id: BTreeMap<&str, &Obj> = models
-        .iter()
-        .map(|model| (text(&model.fields, "id"), &model.fields))
-        .collect();
-    let case_context = CaseContext {
-        statements: &statement_by_id,
-        results: &result_by_id,
-        arguments: &argument_by_id,
-        models: &model_by_id,
-        root,
-    };
-    for case in &configurations {
-        validate_case(&case.fields, &case_context)
-            .map_err(|error| format!("{}: {error}", case.path))?;
-    }
+    validate_configurations(
+        &checker,
+        &configurations,
+        &models,
+        &results,
+        &argument_index,
+        &CaseContext {
+            statements: &statement_by_id,
+            results: &result_by_id,
+            arguments: &argument_by_id,
+            models: &BTreeMap::new(),
+            root,
+        },
+    )?;
 
     let statement_ids: HashSet<&str> = statement_index.keys().map(String::as_str).collect();
     let claim_ids: HashSet<&str> = claim_index.keys().map(String::as_str).collect();
@@ -3682,6 +3636,131 @@ fn check_warnings(root: &Path, loaded: &Loaded, files: &[(Vec<String>, PathBuf)]
 
 /// Run the ported part of `corpus.py check`: the first error, or the counts
 /// and warnings.
+/// Python `registered_models`, after the statement index: the model index
+/// and every model rule.
+fn validate_models(root: &Path, models: &[Record], statements: &HashMap<&str, &Obj>) -> Res<()> {
+    index_by_id(models, "model")?;
+    for model in models {
+        validate_model(&model.fields, statements, root)
+            .map_err(|error| format!("{}: {error}", model.path))?;
+    }
+    Ok(())
+}
+
+/// Python `registered_configurations`: the case index, the result configs of
+/// every selected result, the transcription rejection and every case rule
+/// (`cx.models` is replaced by the index of `models`).
+fn validate_configurations(
+    checker: &Checker,
+    configurations: &[Record],
+    models: &[Record],
+    results: &[Record],
+    argument_index: &HashMap<String, usize>,
+    cx: &CaseContext,
+) -> Res<()> {
+    let root = checker.root;
+    index_by_id(configurations, "configuration")?;
+    let selected: BTreeSet<&str> = configurations
+        .iter()
+        .flat_map(|case| {
+            strings(&case.fields, "incompatibility_result_ids")
+                .into_iter()
+                .chain(strings(&case.fields, "implication_result_ids"))
+        })
+        .collect();
+    for rid in selected {
+        if let Some(result) = cx.results.get(rid) {
+            checker.result_config(
+                &format!("corpus/results/{rid}.json"),
+                result,
+                argument_index,
+            )?;
+        }
+    }
+    if configurations
+        .iter()
+        .any(|case| truthy(case.fields.get("implication_result_ids")))
+    {
+        let refs: Vec<&Obj> = results.iter().map(|result| &result.fields).collect();
+        let transcriptions = thickness::transcription_kinds(root, &refs);
+        for case in configurations {
+            let rejected: Vec<&str> = strings(&case.fields, "implication_result_ids")
+                .into_iter()
+                .filter(|rid| transcriptions.contains_key(*rid))
+                .collect::<BTreeSet<_>>()
+                .into_iter()
+                .collect();
+            if !rejected.is_empty() {
+                return Err(format!(
+                    "{}: transcriptions cannot supply deductions: {}",
+                    case.path,
+                    str_list_repr(&rejected)
+                ));
+            }
+        }
+    }
+    let model_by_id: BTreeMap<&str, &Obj> = models
+        .iter()
+        .map(|model| (text(&model.fields, "id"), &model.fields))
+        .collect();
+    let case_context = CaseContext {
+        models: &model_by_id,
+        ..*cx
+    };
+    for case in configurations {
+        validate_case(&case.fields, &case_context)
+            .map_err(|error| format!("{}: {error}", case.path))?;
+    }
+    Ok(())
+}
+
+/// The validation `corpus.py configurations`, `models` and
+/// `configuration-report` run before reading the registrations (Python
+/// `configuration_context`: `registered_models` then
+/// `registered_configurations`), without the rest of `validate()`.
+pub fn registered_configurations(root: &Path) -> Result<(), String> {
+    let load = |name| load_dir(root, name);
+    let statements = load("statements")?;
+    let results = load("results")?;
+    let arguments = load("arguments")?;
+    registered_models(root)?;
+    // Python indexes these three by `{r["id"]: r}`: no duplicate check, the
+    // last record wins.
+    let argument_index: HashMap<String, usize> = arguments
+        .iter()
+        .enumerate()
+        .map(|(position, record)| (text(&record.fields, "id").to_owned(), position))
+        .collect();
+    let checker = Checker {
+        root,
+        imports: Default::default(),
+    };
+    let configurations = load("configurations")?;
+    validate_configurations(
+        &checker,
+        &configurations,
+        &load("models")?,
+        &results,
+        &argument_index,
+        &CaseContext {
+            statements: &ids_of(&statements),
+            results: &ids_of(&results),
+            arguments: &ids_of(&arguments),
+            models: &BTreeMap::new(),
+            root,
+        },
+    )
+}
+
+/// Python `registered_models()` with its default statement index: the
+/// statement and model indexes and every model rule.
+pub fn registered_models(root: &Path) -> Result<(), String> {
+    let statements = load_dir(root, "statements")?;
+    index_by_id(&statements, "statement")?;
+    let models = load_dir(root, "models")?;
+    validate_models(root, &models, &ids_of(&statements))
+}
+
 pub fn check(root: &Path) -> Result<Outcome, String> {
     let files = lean_files(root);
     let (loaded, counts) = validate(root, &files)?;

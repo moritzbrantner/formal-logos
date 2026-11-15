@@ -25,7 +25,8 @@ if [[ -n "$RESULTS_FILE" ]]; then
   [[ -f "$RESULTS_FILE" ]] || { echo "missing results file: $RESULTS_FILE" >&2; exit 2; }
   mapfile -t results < <(sed '/^$/d' "$RESULTS_FILE")
 else
-  all_ids="$(python3 "$ROOT/scripts/corpus.py" results)"
+  cargo build --locked --release --quiet -p truth --manifest-path "$ROOT/Cargo.toml"
+  all_ids="$("$ROOT/target/release/truth" --root "$ROOT" results)"
   mapfile -t results < <(printf '%s\n' "$all_ids" | sed '/^$/d')
 fi
 if [[ -n "$SHARD" ]]; then

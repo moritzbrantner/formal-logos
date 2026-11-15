@@ -22,6 +22,7 @@ pub fn operand<'a>(
         _ => return Err(usage(HELP)),
     };
     if !applies
+        || args.configuration.flags
         || args.queue
         || args.frontier_flags()
         || args.senses

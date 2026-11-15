@@ -8,7 +8,7 @@ adapter on `127.0.0.1` over commands that already exist:
   there is no second proof-status registry;
 - Lean operations keep one `lake env lean --server` process (LSP) per
   workspace and session id;
-- `lake build`, `corpus.py bind-check` and `scripts/verify-result.sh` run as
+- `lake build`, `truth bind-check` (through `cargo run --release`) and `scripts/verify-result.sh` run as
   queued jobs, one at a time.
 
 Interactive diagnostics do not replace the build, binding, axiom, Comparator

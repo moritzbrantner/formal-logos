@@ -22,6 +22,21 @@ pub struct FrontierArgs {
     pub head: Option<String>,
 }
 
+/// The `bind-check` options.
+#[derive(Default)]
+pub struct BindArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    /// `--result ID`, repeatable.
+    pub results: Vec<String>,
+    /// `--affected`
+    pub affected: bool,
+    /// `--lean-json FILE`: a saved `scripts/BindTypes.lean` output.
+    pub lean_json: Option<String>,
+    /// `--print-lean-input`: print the exporter input and stop.
+    pub print_input: bool,
+}
+
 #[derive(Default)]
 pub struct ResearchArgs {
     pub flags: bool,
@@ -29,6 +44,22 @@ pub struct ResearchArgs {
     pub limit: Option<i64>,
     pub related: Option<i64>,
     pub frontier: Option<String>,
+}
+
+/// The options of `configurations`, `models` and `territory`.
+#[derive(Default)]
+pub struct ConfigurationArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    pub case: Option<String>,
+    pub seed: Option<String>,
+    pub premises: Vec<String>,
+    pub registered: bool,
+    /// `models --check`, `--argument` and `--verify` (Lean; Python only).
+    pub check: Option<String>,
+    pub argument: Option<String>,
+    pub verify: bool,
+    pub max_atoms: Option<i64>,
 }
 
 /// `issues --from FILE --for ID` and `dossier --issues-from FILE`.
@@ -63,6 +94,8 @@ pub struct Args {
     pub frontier: FrontierArgs,
     pub research: ResearchArgs,
     pub issues: IssueArgs,
+    pub configuration: ConfigurationArgs,
+    pub bind: BindArgs,
 }
 
 /// The shared options a command accepts besides `--root` and `--json`;
@@ -81,6 +114,8 @@ pub struct Accepts {
     pub revisions: bool,
     /// `--from` and `--for`
     pub issues: bool,
+    /// The [`ConfigurationArgs`] (each command checks which of them apply)
+    pub configuration: bool,
 }
 
 fn number(value: Option<&str>, flag: &str) -> Result<usize, Failure> {
@@ -112,6 +147,8 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         frontier: FrontierArgs::default(),
         research: ResearchArgs::default(),
         issues: IssueArgs::default(),
+        configuration: ConfigurationArgs::default(),
+        bind: BindArgs::default(),
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -134,6 +171,27 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                 );
             }
             "--reaching-root" => parsed.frontier.reaching_root = true,
+            "--affected" => {
+                parsed.bind.flags = true;
+                parsed.bind.affected = true;
+            }
+            "--print-lean-input" => {
+                parsed.bind.flags = true;
+                parsed.bind.print_input = true;
+            }
+            "--result" | "--lean-json" => {
+                parsed.bind.flags = true;
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                    .to_owned();
+                if arg == "--result" {
+                    parsed.bind.results.push(value);
+                } else {
+                    parsed.bind.lean_json = Some(value);
+                }
+            }
             "--routes" => parsed.frontier.routes = true,
             "--base" | "--head" => {
                 let value = args
@@ -186,6 +244,31 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                                 .to_owned(),
                         )
                     }
+                }
+            }
+            "--registered" | "--verify" => {
+                parsed.configuration.flags = true;
+                if arg == "--registered" {
+                    parsed.configuration.registered = true;
+                } else {
+                    parsed.configuration.verify = true;
+                }
+            }
+            "--case" | "--seed" | "--premise" | "--check" | "--argument" | "--max-atoms" => {
+                parsed.configuration.flags = true;
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                    .to_owned();
+                let configuration = &mut parsed.configuration;
+                match arg {
+                    "--case" => configuration.case = Some(value),
+                    "--seed" => configuration.seed = Some(value),
+                    "--premise" => configuration.premises.push(value),
+                    "--check" => configuration.check = Some(value),
+                    "--argument" => configuration.argument = Some(value),
+                    _ => configuration.max_atoms = Some(integer(Some(&value), arg)?),
                 }
             }
             "--from" | "--for" | "--issues-from" => {
@@ -275,7 +358,7 @@ impl Args {
         }
         if !accepts.frontier_root && self.frontier_root_set() {
             return Err(usage(
-                "--frontier-root applies only to thickness, frontier, frontier-diff, orphans, dossier and context",
+                "--frontier-root applies only to thickness, frontier, frontier-diff, next-steps, orphans, dossier and context",
             ));
         }
         if !accepts.orphans && (self.senses || self.group_by.is_some()) {
@@ -295,6 +378,11 @@ impl Args {
         }
         if self.issues.issues_from.is_some() {
             return Err(usage("--issues-from applies only to dossier"));
+        }
+        if !accepts.configuration && self.configuration.flags {
+            return Err(usage(
+                "--case, --seed, --premise, --registered, --check, --argument, --verify and --max-atoms apply only to configurations, models and territory",
+            ));
         }
         Ok(())
     }

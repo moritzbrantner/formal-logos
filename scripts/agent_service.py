@@ -5,7 +5,7 @@ The service is an experiment (AGENTS.md, "Local server experiment for the next
 workloop"). It adds no proof-status registry and no dependency: corpus
 operations run the existing `scripts/corpus.py` commands in the requested
 workspace, Lean operations talk to `lake env lean --server` over LSP, and
-verification jobs run `lake build`, `corpus.py bind-check` and
+verification jobs run `lake build`, `truth bind-check` and
 `scripts/verify-result.sh` one at a time. Interactive diagnostics do not
 replace those checks on the final inputs.
 
@@ -358,7 +358,8 @@ def job_command(kind: str, body: dict) -> list[str]:
             check_id(target, "build target")
         return ["lake", "build", *targets]
     if kind == "bind-check":
-        return [sys.executable, "scripts/corpus.py", "bind-check"]
+        # The Rust CLI (#954); cargo rebuilds it only when its inputs changed.
+        return ["cargo", "run", "--quiet", "--locked", "--release", "-p", "truth", "--", "bind-check"]
     if kind == "verify-result":
         return ["scripts/verify-result.sh", check_id(body.get("result_id"), "result_id")]
     raise RequestError(400, f"unknown job kind {kind!r}; expected build, bind-check or verify-result")

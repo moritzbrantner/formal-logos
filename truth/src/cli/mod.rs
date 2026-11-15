@@ -16,18 +16,26 @@ use truth::{
 };
 
 mod args;
+mod bind_check;
 mod bridges;
 mod check;
+mod configurations;
 mod context;
 mod dossier;
 mod frontier;
 mod frontier_diff;
+mod ids;
 mod inspect;
 mod issues;
+mod models;
+mod next;
+mod next_steps;
 mod orphans;
 mod related;
 mod research;
+mod sort_lists;
 mod status;
+mod territory;
 mod thickness;
 
 pub use args::{Accepts, Args};
@@ -46,6 +54,16 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
              [--issues-from FILE]
        truth [--root PATH] [--json] context TARGET [--frontier-json FILE] [--limit N] [--related N]
        truth [--root PATH] [--json] issues --from FILE [--for ID]
+       truth [--root PATH] [--json] next
+       truth [--root PATH] [--json] next-steps [--frontier-root STATEMENT]
+       truth [--root PATH] [--json] arguments
+       truth [--root PATH] [--json] results
+       truth [--root PATH] [--json] sort-lists
+       truth [--root PATH] [--json] configurations --registered [--case ID] [--seed STATEMENT] [--premise STATEMENT]...
+       truth [--root PATH] [--json] models
+       truth [--root PATH] [--json] territory [--frontier-root STATEMENT] [--max-atoms N]
+       truth [--root PATH] [--json] bind-check [--result RESULT]... [--affected --base REV [--head REV]]
+             [--lean-json FILE] [--print-lean-input]
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
@@ -83,6 +101,15 @@ pub const COMMANDS: &[Command] = &[
     dossier::COMMAND,
     context::COMMAND,
     issues::COMMAND,
+    next::COMMAND,
+    next_steps::COMMAND,
+    ids::ARGUMENTS,
+    ids::RESULTS,
+    sort_lists::COMMAND,
+    configurations::COMMAND,
+    models::COMMAND,
+    territory::COMMAND,
+    bind_check::COMMAND,
 ];
 
 /// Parses `args` and runs the command it names.
@@ -91,6 +118,9 @@ pub fn run(args: &[OsString]) -> Output {
     let positional: Vec<&str> = args.positional.iter().map(String::as_str).collect();
     match positional.split_first() {
         Some((name, operands)) => match COMMANDS.iter().find(|command| command.name == *name) {
+            Some(command) if args.bind.flags && command.name != "bind-check" => Err(usage(
+                "--result, --affected, --lean-json and --print-lean-input apply only to bind-check",
+            )),
             Some(command) => (command.run)(&args, operands),
             None => Err(args.shape_error()),
         },
@@ -124,9 +154,17 @@ pub fn main(args: &[OsString]) -> ExitCode {
             }
             ExitCode::SUCCESS
         }
+        Err((code, error)) if error["code"] == "raw_output" => {
+            print!("{}", error["stdout"].as_str().unwrap_or_default());
+            ExitCode::from(code)
+        }
         Err((code, error)) => {
             if machine {
                 eprintln!("{}", json!({"schema_version":1,"error":error}));
+            } else if error["stdout"] == true {
+                // A Python report that prints its outcome to stdout and
+                // exits nonzero (`next` without candidates).
+                println!("{}", error["message"].as_str().unwrap_or_default());
             } else if error["code"] == "corpus_error" {
                 eprintln!(
                     "corpus error: {}",
@@ -143,6 +181,18 @@ pub fn main(args: &[OsString]) -> ExitCode {
             ExitCode::from(code)
         }
     }
+}
+
+/// A command whose stdout must be byte-identical to Python's in both modes
+/// (`bind-check`'s sorted, indented JSON and its text) and whose exit code
+/// may be nonzero on success: `main` prints `stdout` exactly and exits `code`.
+pub fn raw(code: u8, stdout: String) -> Failure {
+    (code, json!({"code": "raw_output", "stdout": stdout}))
+}
+
+/// A Python `CorpusError`: `corpus error: …`, exit code 2.
+pub fn corpus_error(message: String) -> Failure {
+    (2, json!({"code": "corpus_error", "message": message}))
 }
 
 pub fn usage(message: impl Into<String>) -> Failure {
@@ -250,9 +300,9 @@ pub fn load(args: &Args) -> Result<(Corpus, Aliases, String), Failure> {
 /// `thickness`, `frontier` and `dossier --all` call `validate()` first; a
 /// Rust port of such a command that must keep that behaviour calls this
 /// before [`load`]. Warnings are not printed (Python prints them only for
-/// `check`). The commands ported so far perform only the structural load and
-/// do not call it.
-#[allow(dead_code)]
+/// `check`). `next`, `next-steps`, `arguments`, `results`, `territory` and
+/// `bind-check`
+/// call it; the earlier ports perform only the structural load.
 pub fn validate_first(root: &Path) -> Result<truth::check::Outcome, Failure> {
     truth::check::check(root)
         .map_err(|message| (2, json!({"code": "corpus_error", "message": message})))
