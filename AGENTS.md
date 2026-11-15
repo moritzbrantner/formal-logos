@@ -604,9 +604,10 @@ or a relevant change or failure invalidates its earlier evidence:
 clone with `cargo build --locked --release -p truth` (rerun after Rust source
 or Cargo input changes) and run it from the
 repository root. Its `check`, `frontier`, `frontier-diff`, `related`,
-`dossier`, `context` and `bind-check` replace the `scripts/corpus.py` commands of the same
-names, which stay until their retirement; `frontier --root` is
-`--frontier-root` there. Rust `--root PATH` selects the input repository;
+`dossier`, `context` (including `--proof-use`), `bind-check`, `unused-premises`
+and `lean-reuse` replace the `scripts/corpus.py` commands of the same
+names, which stay until their retirement; `frontier --root` and
+`unused-premises --root` are `--frontier-root` there. Rust `--root PATH` selects the input repository;
 `--json` selects machine-readable output, including frontier reports usable by
 `dossier` and `context` via `--frontier-json FILE` on the same inputs.
 Other `corpus.py` commands are still Python.

@@ -199,12 +199,21 @@ pub fn theorem_blocks_in(text: &str) -> Vec<TheoremBlock> {
 }
 
 /// Lean source reads, cached per module for one pack.
-struct Lean<'a> {
+pub(crate) struct Lean<'a> {
     root: &'a Path,
     imports: RefCell<HashMap<String, Vec<String>>>,
+    closures: RefCell<HashMap<String, Vec<(String, usize)>>>,
 }
 
 impl<'a> Lean<'a> {
+    pub(crate) fn new(root: &'a Path) -> Self {
+        Self {
+            root,
+            imports: RefCell::new(HashMap::new()),
+            closures: RefCell::new(HashMap::new()),
+        }
+    }
+
     fn read(&self, module: &str) -> Option<String> {
         let path = self.root.join(module_path(module));
         path.is_file()
@@ -225,8 +234,20 @@ impl<'a> Lean<'a> {
         found
     }
 
-    /// Repository modules transitively imported, with BFS depth, in discovery order.
-    fn closure(&self, module: &str) -> Vec<(String, usize)> {
+    /// Repository modules transitively imported, with BFS depth, in
+    /// discovery order (Python `import_closure`), cached per module.
+    pub(crate) fn closure(&self, module: &str) -> Vec<(String, usize)> {
+        if let Some(found) = self.closures.borrow().get(module) {
+            return found.clone();
+        }
+        let found = self.compute_closure(module);
+        self.closures
+            .borrow_mut()
+            .insert(module.to_owned(), found.clone());
+        found
+    }
+
+    fn compute_closure(&self, module: &str) -> Vec<(String, usize)> {
         let mut seen: Vec<(String, usize)> = Vec::new();
         let mut known: HashSet<String> = HashSet::new();
         let mut frontier = vec![module.to_owned()];
@@ -282,11 +303,21 @@ pub struct StatementEntry {
 
 #[derive(Debug, Clone, Serialize)]
 pub struct ReusedResult {
-    pub module: String,
-    pub depth: usize,
+    /// The imported module (a result's Solution module when the proof term
+    /// reaches a result outside the import closure).
+    pub module: Value,
+    /// Import depth (1 = direct); `None` only for a proof-term reference
+    /// outside the import closure.
+    pub depth: Option<usize>,
     #[serde(flatten)]
     pub result: ResultSummary,
     pub graph_linked: bool,
+    /// With `--proof-use`: whether the proof term references the theorem.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub theorem_used: Option<bool>,
+    /// With `--proof-use`: the `lean-reuse` classification.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub classification: Option<&'static str>,
 }
 
 #[derive(Debug, Clone, Serialize)]
@@ -311,6 +342,12 @@ pub struct LeanEntry {
     pub reused_results: Vec<ReusedResult>,
     pub lean_consumers: Vec<String>,
     pub lean_consumers_depth2: Vec<String>,
+    /// With `--proof-use`: the result theorems the proof term reaches.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub proof_theorems: Option<Vec<String>>,
+    /// With `--proof-use`: always true (review only, not certification).
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub proof_use_advisory: Option<bool>,
 }
 
 #[derive(Debug, Clone, Serialize)]
@@ -546,18 +583,17 @@ fn role(sid: &str, premises: &[&str], conclusion: &str) -> &'static str {
     }
 }
 
-/// Python `context_pack` without proof-term inspection.
+/// Python `context_pack`; `proof_uses` (from `lean_reuse::usage_map`)
+/// replaces a result's import reuse by its proof-term classification.
 pub fn context_pack(
     root: &Path,
     corpus: &Corpus,
     report: &FrontierView,
     argument_id: &str,
     related: &[Match],
+    proof_uses: Option<&BTreeMap<String, Vec<String>>>,
 ) -> ContextPack {
-    let lean_files = Lean {
-        root,
-        imports: RefCell::new(HashMap::new()),
-    };
+    let lean_files = Lean::new(root);
     let sense_labels = SenseLabels::new(corpus);
     let statements: HashMap<&str, &Record> = corpus
         .records("statements")
@@ -687,16 +723,39 @@ pub fn context_pack(
             .filter_map(|(module, depth)| {
                 let other = module_to_result.get(module.as_str())?;
                 (text(other, "id") != text(result, "id")).then(|| ReusedResult {
-                    module: module.clone(),
-                    depth: *depth,
+                    module: json!(module),
+                    depth: Some(*depth),
                     result: summary(other),
                     graph_linked: arguments
                         .get(text(other, "argument_id"))
                         .is_some_and(|a| premise_set.contains(text(a, "conclusion_statement_id"))),
+                    theorem_used: None,
+                    classification: None,
                 })
             })
             .collect();
         reused.sort_by(|a, b| (a.depth, &a.result.result_id).cmp(&(b.depth, &b.result.result_id)));
+        let proof_use = proof_uses.and_then(|uses| uses.get(theorem));
+        if let Some(used) = proof_use {
+            let index = crate::lean_reuse::Results::new(corpus);
+            reused = crate::lean_reuse::classify(&lean_files, corpus, &index, result, used)
+                .into_iter()
+                .map(|reuse| ReusedResult {
+                    module: reuse.module,
+                    depth: reuse.depth,
+                    result: ResultSummary {
+                        transcription: transcriptions.contains_key(reuse.result_id.as_str()),
+                        result_id: reuse.result_id,
+                        argument_id: reuse.argument_id,
+                        theorem: reuse.theorem,
+                        status: reuse.status,
+                    },
+                    graph_linked: reuse.graph_linked,
+                    theorem_used: Some(reuse.theorem_used),
+                    classification: Some(reuse.classification),
+                })
+                .collect();
+        }
         let consumers: BTreeSet<String> = all_results
             .iter()
             .filter(|other| {
@@ -752,6 +811,8 @@ pub fn context_pack(
             reused_results: reused,
             lean_consumers: consumers.into_iter().collect(),
             lean_consumers_depth2: consumers_depth2.into_iter().collect(),
+            proof_theorems: proof_use.cloned(),
+            proof_use_advisory: proof_use.map(|_| true),
         });
     }
 
@@ -1411,29 +1472,53 @@ pub fn format_context(pack: &ContextPack, limit: i64) -> String {
                 lines.push(format!("    … {} more", companions.len() as i64 - limit));
             }
         }
-        lines.push(
-            "  reuses results through Lean imports (depth 1 = direct; not proof use):".into(),
-        );
-        capped(
-            &mut lines,
-            limit,
-            &entry.reused_results,
-            |r| {
-                vec![format!(
-                    "    {} d{} [{}; {}] {}",
-                    r.result.result_id,
-                    r.depth,
-                    pyfmt::text(&r.result.status),
-                    if r.graph_linked {
-                        "graph-linked"
-                    } else {
-                        "import only, not an argument premise"
-                    },
-                    pyfmt::text(&r.result.theorem)
-                )]
-            },
-            |r| vec![r.result.result_id.clone()],
-        );
+        if entry.proof_use_advisory == Some(true) {
+            lines.push(
+                "  theorem reuse: Lean proof-term reachability (review only); d = import depth:"
+                    .into(),
+            );
+            capped(
+                &mut lines,
+                limit,
+                &entry.reused_results,
+                |r| {
+                    vec![format!(
+                        "    {} d{} [{}; {}] {}",
+                        r.result.result_id,
+                        r.depth
+                            .map_or_else(|| "?".to_owned(), |depth| depth.to_string()),
+                        pyfmt::text(&r.result.status),
+                        r.classification.unwrap_or_default(),
+                        pyfmt::text(&r.result.theorem)
+                    )]
+                },
+                |r| vec![r.result.result_id.clone()],
+            );
+        } else {
+            lines.push(
+                "  reuses results through Lean imports (depth 1 = direct; not proof use):".into(),
+            );
+            capped(
+                &mut lines,
+                limit,
+                &entry.reused_results,
+                |r| {
+                    vec![format!(
+                        "    {} d{} [{}; {}] {}",
+                        r.result.result_id,
+                        r.depth.unwrap_or_default(),
+                        pyfmt::text(&r.result.status),
+                        if r.graph_linked {
+                            "graph-linked"
+                        } else {
+                            "import only, not an argument premise"
+                        },
+                        pyfmt::text(&r.result.theorem)
+                    )]
+                },
+                |r| vec![r.result.result_id.clone()],
+            );
+        }
         lines.push(format!(
             "  results whose Solution imports this Solution: {}",
             joined_or(&entry.lean_consumers, "none")

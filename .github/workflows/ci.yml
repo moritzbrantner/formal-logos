@@ -139,10 +139,12 @@ jobs:
         if: needs.comparator-plan.outputs.lean == 'true'
         run: target/release/truth bind-check
       # Exemptions (intended full-theory bundles, each with a reason) live in
-      # scripts/unused-premise-exemptions.json (owner decision on #571).
+      # scripts/unused-premise-exemptions.json (owner decision on #571). The
+      # release CLI orchestrates scripts/BindTypes.lean and
+      # scripts/UnusedPremises.lean (#954 A2).
       - name: Check that result proofs use every listed premise
         if: needs.comparator-plan.outputs.lean == 'true'
-        run: python3 scripts/corpus.py unused-premises --strict
+        run: target/release/truth unused-premises --strict
       - name: Test corpus tooling and media-span and web-snapshot evidence offline
         env:
           TRUTH_CORE_LEAN_TESTS: ${{ needs.comparator-plan.outputs.lean }}

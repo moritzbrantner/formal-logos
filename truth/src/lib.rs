@@ -7,6 +7,7 @@ pub mod dossier;
 pub mod frontier;
 pub mod identity;
 mod kernels;
+pub mod lean_reuse;
 pub mod navigation;
 pub mod orphans;
 pub mod pyfmt;
@@ -15,6 +16,7 @@ pub mod related;
 pub mod senses;
 pub mod thickness;
 mod transcription;
+pub mod unused_premises;
 
 use serde_json::{Map, Value};
 use std::{collections::BTreeMap, fs, path::Path};

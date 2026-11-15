@@ -25,6 +25,7 @@ mod frontier;
 mod frontier_diff;
 mod ids;
 mod inspect;
+mod lean_reuse;
 mod next;
 mod next_steps;
 mod orphans;
@@ -33,6 +34,7 @@ mod research;
 mod sort_lists;
 mod status;
 mod thickness;
+mod unused_premises;
 
 pub use args::{Accepts, Args};
 
@@ -48,6 +50,7 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] related STATEMENT [--limit N]
        truth [--root PATH] [--json] dossier (STATEMENT | --all) [--frontier-json FILE] [--limit N]
        truth [--root PATH] [--json] context TARGET [--frontier-json FILE] [--limit N] [--related N]
+             [--proof-use | --proof-use-json FILE]
        truth [--root PATH] [--json] next
        truth [--root PATH] [--json] next-steps [--frontier-root STATEMENT]
        truth [--root PATH] [--json] arguments
@@ -55,6 +58,9 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] sort-lists
        truth [--root PATH] [--json] bind-check [--result RESULT]... [--affected --base REV [--head REV]]
              [--lean-json FILE] [--print-lean-input]
+       truth [--root PATH] [--json] unused-premises [--strict] [--exemptions FILE] [--frontier-root STATEMENT]
+             [--bind-json FILE] [--usage-json FILE]
+       truth [--root PATH] [--json] lean-reuse --review [--usage-json FILE]
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
@@ -95,6 +101,8 @@ pub const COMMANDS: &[Command] = &[
     ids::RESULTS,
     sort_lists::COMMAND,
     bind_check::COMMAND,
+    unused_premises::COMMAND,
+    lean_reuse::COMMAND,
 ];
 
 /// Parses `args` and runs the command it names.
@@ -106,6 +114,15 @@ pub fn run(args: &[OsString]) -> Output {
             Some(command) if args.bind.flags && command.name != "bind-check" => Err(usage(
                 "--result, --affected, --lean-json and --print-lean-input apply only to bind-check",
             )),
+            Some(command)
+                if !args.proof.given().is_empty()
+                    && !["unused-premises", "lean-reuse", "context"].contains(&command.name) =>
+            {
+                Err(usage(
+                    "--strict, --exemptions, --bind-json, --usage-json, --review, --proof-use and \
+                     --proof-use-json apply only to unused-premises, lean-reuse and context",
+                ))
+            }
             Some(command) => (command.run)(&args, operands),
             None => Err(args.shape_error()),
         },
@@ -285,8 +302,8 @@ pub fn load(args: &Args) -> Result<(Corpus, Aliases, String), Failure> {
 /// `thickness`, `frontier` and `dossier --all` call `validate()` first; a
 /// Rust port of such a command that must keep that behaviour calls this
 /// before [`load`]. Warnings are not printed (Python prints them only for
-/// `check`). `next`, `next-steps`, `arguments`, `results` and `bind-check`
-/// call it; the earlier ports perform only the structural load.
+/// `check`). `next`, `next-steps`, `arguments`, `results`, `bind-check`
+/// and `unused-premises` call it; the earlier ports perform only the structural load.
 pub fn validate_first(root: &Path) -> Result<truth::check::Outcome, Failure> {
     truth::check::check(root)
         .map_err(|message| (2, json!({"code": "corpus_error", "message": message})))
