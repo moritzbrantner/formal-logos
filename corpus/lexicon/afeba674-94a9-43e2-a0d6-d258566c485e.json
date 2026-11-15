@@ -1,0 +1,10 @@
+{
+  "id": "afeba674-94a9-43e2-a0d6-d258566c485e",
+  "label": "well-founded (ordinary)",
+  "lemma": "well-founded",
+  "class": "ordinary",
+  "forms": [
+    "well-foundedness"
+  ],
+  "gloss": "(of a relation) having no infinite descending chain, so every nonempty set has a minimal element (Mathlib's WellFounded)."
+}

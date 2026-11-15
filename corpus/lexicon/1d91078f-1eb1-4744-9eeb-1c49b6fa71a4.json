@@ -1,0 +1,10 @@
+{
+  "id": "1d91078f-1eb1-4744-9eeb-1c49b6fa71a4",
+  "label": "register (ordinary)",
+  "lemma": "register",
+  "class": "ordinary",
+  "forms": [
+    "registered"
+  ],
+  "gloss": "To add a record to the corpus, such as registering a strength order."
+}

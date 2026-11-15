@@ -1,0 +1,7 @@
+{
+  "id": "9b6b3783-07aa-4c77-9e2a-10754ef9374a",
+  "label": "proposition (ordinary)",
+  "lemma": "proposition",
+  "class": "ordinary",
+  "gloss": "What a declarative sentence asserts, which is true or false; in Lean a term of type Prop."
+}

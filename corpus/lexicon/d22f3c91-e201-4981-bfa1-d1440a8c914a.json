@@ -1,0 +1,7 @@
+{
+  "id": "d22f3c91-e201-4981-bfa1-d1440a8c914a",
+  "label": "premise (ordinary)",
+  "lemma": "premise",
+  "class": "ordinary",
+  "gloss": "A proposition an argument takes as given and reasons from; in the repository also a node of the premise frontier (docs/corpus-model.md, \"Premise program and frontier\")."
+}

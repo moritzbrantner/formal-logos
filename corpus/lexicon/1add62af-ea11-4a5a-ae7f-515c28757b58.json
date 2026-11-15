@@ -1,0 +1,7 @@
+{
+  "id": "1add62af-ea11-4a5a-ae7f-515c28757b58",
+  "label": "inference (ordinary)",
+  "lemma": "inference",
+  "class": "ordinary",
+  "gloss": "A step from premises to a conclusion; in the repository, an inference record."
+}

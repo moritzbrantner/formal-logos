@@ -1,0 +1,10 @@
+{
+  "id": "511f6e09-aa2a-4cc0-af25-9ab1df172759",
+  "label": "formal (ordinary)",
+  "lemma": "formal",
+  "class": "ordinary",
+  "forms": [
+    "formally"
+  ],
+  "gloss": "Concerning logical form or a formal system, especially stated or proved in Lean, as opposed to informal prose or real-world applicability."
+}

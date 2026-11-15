@@ -1,0 +1,7 @@
+{
+  "id": "f8bc7128-7440-4889-ba33-075fd663ca34",
+  "label": "typed (ordinary)",
+  "lemma": "typed",
+  "class": "ordinary",
+  "gloss": "Given a Lean type or stated with typed vocabulary, so that misuse is a type error rather than an unchecked word."
+}

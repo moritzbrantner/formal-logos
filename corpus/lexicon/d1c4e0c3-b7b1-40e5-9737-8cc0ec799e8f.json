@@ -1,0 +1,7 @@
+{
+  "id": "d1c4e0c3-b7b1-40e5-9737-8cc0ec799e8f",
+  "label": "theory (ordinary)",
+  "lemma": "theory",
+  "class": "ordinary",
+  "gloss": "A set of propositions or commitments taken together; in the repository also a theory bundle defined in Lean."
+}

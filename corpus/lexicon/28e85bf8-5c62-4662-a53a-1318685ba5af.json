@@ -1,0 +1,7 @@
+{
+  "id": "28e85bf8-5c62-4662-a53a-1318685ba5af",
+  "label": "axiom (ordinary)",
+  "lemma": "axiom",
+  "class": "ordinary",
+  "gloss": "A proposition taken as basic; in Lean, a declared axiom such as propext."
+}

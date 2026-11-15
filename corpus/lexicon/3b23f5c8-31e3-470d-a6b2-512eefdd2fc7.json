@@ -1,0 +1,7 @@
+{
+  "id": "3b23f5c8-31e3-470d-a6b2-512eefdd2fc7",
+  "label": "predicate (ordinary)",
+  "lemma": "predicate",
+  "class": "ordinary",
+  "gloss": "A property or relation expression applied to arguments; in Lean, a function into Prop."
+}

@@ -1,0 +1,7 @@
+{
+  "id": "95bfd75c-c642-4ec1-9ac4-fe2543d4a6b4",
+  "label": "Mathlib (name)",
+  "lemma": "Mathlib",
+  "class": "name",
+  "gloss": "The Lean mathematics library, an approved dependency of the repository."
+}

@@ -1,0 +1,7 @@
+{
+  "id": "e248c9a6-f14a-4f37-a3a7-e50543f3a0bd",
+  "label": "Lean (name)",
+  "lemma": "Lean",
+  "class": "name",
+  "gloss": "The Lean 4 theorem prover and programming language in which the repository's proofs are written and kernel-checked."
+}

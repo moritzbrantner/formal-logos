@@ -1,0 +1,7 @@
+{
+  "id": "d13e4e62-5646-4980-a47b-7cc0871f7d29",
+  "label": "vocabulary (ordinary)",
+  "lemma": "vocabulary",
+  "class": "ordinary",
+  "gloss": "A set of terms, predicates or Lean declarations used to state propositions."
+}
