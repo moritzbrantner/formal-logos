@@ -26,6 +26,7 @@ from unittest import mock
 import attribution_check as ac
 import corpus
 import source_evidence as se
+from truth_parity import golden
 from truth_parity.common import U, ParityCase
 
 GOOD = "The passage states that whatever is changed in any way is in potency, which is the premise."
@@ -169,6 +170,13 @@ class TruthAttributionParity(ParityCase):
         selection and problems; returns Python's stdout."""
         root = root or self.root
         expected = python(list(args), root=None if root == corpus.ROOT else root)
+        if root != corpus.ROOT:
+            command = ["--root", root, "attribution-check", *args]
+            golden.record(self, command, root=root, code=expected[0], stdout=expected[1], stderr=expected[2])
+            if expected[0] != 2:
+                problems = [line[2:] for line in expected[2].splitlines() if line.startswith("  ")]
+                golden.record(self, ["--root", root, "--json", "attribution-check", *args], root=root,
+                              code=expected[0], json_paths={"problems": problems, "ok": not problems})
         self.assertEqual(self.rust(list(args), root=root), expected)
         if code is not None:
             self.assertEqual(expected[0], code, expected)

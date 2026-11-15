@@ -15,6 +15,7 @@ from pathlib import Path
 import corpus
 from territory import format_territory, territory_report
 from truth_parity.check import check_records, write_check_fixture, mutate, CHECK_FAILURES
+from truth_parity import golden
 from truth_parity.common import U, ParityCase
 
 
@@ -102,6 +103,10 @@ class TruthConfigurationParity(ParityCase):
         """Python's (code, stdout, stderr) against Rust: text byte-identical,
         `--json` semantically equal (Rust adds `input_identity` to objects)."""
         code, stdout, stderr = python
+        if root is not None:
+            expected = ({"stderr": stderr, "stdout": ""} if code else
+                        {"stdout_json": json.loads(stdout)} if "--json" in args else {"stdout": stdout})
+            golden.record(self, ["--root", root, *args], root=root, code=code, **expected)
         result = self.truth(*args, root=root, code=code)
         if code:
             self.assertEqual(result.stderr, stderr, args)

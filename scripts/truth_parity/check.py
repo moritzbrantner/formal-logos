@@ -9,6 +9,7 @@ from pathlib import Path
 import corpus
 import source_evidence
 from corpus_ids import KIND_DIRS
+from truth_parity import golden
 from truth_parity.common import U, migrate, ParityCase
 
 
@@ -485,7 +486,11 @@ class TruthCheckParity(ParityCase):
                               capture_output=True, text=True, check=False)
 
     def assert_same(self, root):
-        python, rust = python_check(root), self.truth_check(root)
+        python = python_check(root)
+        # Rust's exit code: 1 on a corpus error, where Python exits 2.
+        golden.record(self, ["--root", root, "check"], root=root, code=1 if python.returncode == 2 else python.returncode,
+                      stdout=python.stdout, stderr=python.stderr)
+        rust = self.truth_check(root)
         if python.returncode == 0:
             self.assertEqual(rust.returncode, 0, rust.stderr)
             self.assertEqual(rust.stdout, python.stdout)

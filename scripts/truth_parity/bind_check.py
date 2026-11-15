@@ -22,6 +22,7 @@ from pathlib import Path
 
 import corpus
 from truth_parity.check import SENSE_X, SENSE_Y, by_id, write_check_fixture
+from truth_parity import golden
 from truth_parity.common import U, ParityCase
 
 FIX = "TruthCore.Fix."
@@ -229,6 +230,11 @@ class TruthBindCheckParity(ParityCase):
             arguments = ["bind-check", "--lean-json", str(lean_path), *json_flag, *extra]
             python = subprocess.run([sys.executable, str(root / "scripts" / "corpus.py"), *arguments],
                                     capture_output=True, text=True, check=False)
+            # A corpus error is a JSON error object on stderr under --json.
+            corpus_error = python.returncode == 2 and json_flag
+            golden.record(self, ["--root", root, *arguments], root=root, code=python.returncode, stdout=python.stdout,
+                          **({"error_message": python.stderr.removeprefix("corpus error: ").removesuffix("\n")}
+                             if corpus_error else {"stderr": python.stderr}))
             rust = subprocess.run([self.binary, "--root", str(root), *arguments],
                                   capture_output=True, text=True, check=False)
             self.assertEqual(rust.returncode, python.returncode, (extra, python.stderr, rust.stderr))

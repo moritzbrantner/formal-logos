@@ -27,6 +27,7 @@ from pathlib import Path
 import corpus
 from truth_parity.bind_check import FIX, described, hyp
 from truth_parity.check import by_id, write_check_fixture
+from truth_parity import golden
 from truth_parity.common import U, ParityCase
 
 # Stands in for `lake env lean --run TOOL INPUT`: keeps a copy of INPUT under
@@ -142,6 +143,21 @@ class TruthProofUseParity(ParityCase):
         for json_flag in ([], ["--json"]):
             python = self.run_cli([sys.executable, str(root / "scripts" / "corpus.py")], root,
                                   [*(python_arguments or arguments), *json_flag], root / "capture-python")
+            if python.returncode == 2:
+                expected = ({"error_message": python.stderr.removeprefix("corpus error: ").removesuffix("\n")}
+                            if json_flag else {"stderr": python.stderr})
+            elif json_flag and semantic_json:
+                expected = {"stdout_json": json.loads(python.stdout)}
+            else:
+                expected = {"stdout": python.stdout}
+            # The exporter inputs the stand-in `lake` captured from Python, which Rust's must equal.
+            captured = {str(root / "capture-rust" / f"{tool}.json"): (root / "capture-python" / f"{tool}.json").read_text()
+                        for tool in TOOLS if (root / "capture-python" / f"{tool}.json").exists()}
+            (root / "capture-rust").mkdir(exist_ok=True)
+            golden.record(self, ["--root", root, *arguments, *json_flag], root=root, code=python.returncode,
+                          files=captured or None, env={"FAKE_CAPTURE": root / "capture-rust", "FAKE_OUTPUTS": self.outputs},
+                          path_prepend=[self.tools], externals=[self.tools, self.outputs],
+                          exclude=("capture-python",), **expected)
             rust = self.run_cli([str(self.binary), "--root", str(root)], root, [*arguments, *json_flag],
                                 root / "capture-rust")
             self.assertEqual(rust.returncode, python.returncode, (arguments, python.stderr, rust.stderr))

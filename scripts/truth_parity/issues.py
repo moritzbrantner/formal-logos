@@ -13,6 +13,7 @@ import tempfile
 from pathlib import Path
 
 import corpus
+from truth_parity import golden
 from truth_parity.common import ParityCase
 
 SNAPSHOT = Path(__file__).resolve().parent / "fixtures" / "issues-snapshot.json"
@@ -144,10 +145,14 @@ class TruthIssuesParity(ParityCase):
         args = ["issues", "--from", str(snapshot), *extra]
         code, text, _ = python(args, root)
         self.assertEqual(code, 0)
+        if root is not None:
+            golden.record(self, ["--root", root, *args], root=root, code=0, stdout=text)
         self.assertEqual(self.truth(*args, root=root)[0], text, extra)
         code, machine, _ = python([*args, "--json"], root)
         self.assertEqual(code, 0)
         expected = json.loads(machine)
+        if root is not None:
+            golden.record(self, ["--root", root, "--json", *args], root=root, code=0, stdout_json=expected)
         self.assertEqual(self.truth_json(*args, root=root), expected, extra)
         return expected
 
@@ -196,8 +201,11 @@ class TruthIssuesParity(ParityCase):
                 self.assertEqual(code, 0)
                 self.assertIn("Issue targets (offline acceptance snapshot): ", text)
                 args += ["--frontier-root", "STMT-P"]
+                golden.record(self, ["--root", root, *args], root=root, code=0, stdout=text)
                 self.assertEqual(self.truth(*args, root=root)[0], text, statement)
                 code, machine, _ = python([*args[:-2], "--root", "STMT-P", "--json"], root)
+                golden.record(self, ["--root", root, "--json", *args], root=root, code=0,
+                              stdout_json=json.loads(machine))
                 self.assertEqual(self.truth_json(*args, root=root), json.loads(machine), statement)
 
     def real_snapshot(self, directory):

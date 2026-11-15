@@ -19,6 +19,7 @@ from pathlib import Path
 
 import corpus
 import orphan_summary
+from truth_parity import golden
 from truth_parity.common import U, migrate, humanize, ParityCase
 from truth_parity.thickness import thickness_fixture, python_thickness
 
@@ -268,15 +269,27 @@ class TruthRevisionParity(ParityCase):
             for base, engine in (("LEGACY", "python"), ("OLD", "python"), ("SAME", "rust")):
                 with self.subTest(base=base):
                     delta = corpus.thickness_delta(bases[base], head)
+                    previous = orphan_summary.base_count(repo, base)
+                    # Python names the default root whatever the corpus; Rust the root used.
+                    expected = orphan_summary.summary(base, head_count, previous).replace(
+                        "Root: STMT-CATHOLICISM-TRUE.", "Root: ROOT.")
+                    keep = ("scripts/migrate_uuid.py", "scripts/corpus_ids.py", "scripts/uuid_labels.py")
+                    for command, outputs in (
+                        (["--json", *args, "thickness", "--base", base],
+                         {"stdout_json": {"report": head, "delta": delta,
+                                          "engines": {"base": engine, "head": "rust"}}}),
+                        ([*args, "thickness", "--base", base],
+                         {"stdout": humanize(corpus.format_thickness(head, delta), repo) + "\n"}),
+                        ([*args, "orphans", "--base", base], {"stdout": expected + "\n"}),
+                        (["--json", *args, "orphans", "--base", base],
+                         {"json_paths": {"base_count": previous, "head_count": head_count, "engines.base": engine}}),
+                    ):
+                        golden.record(self, command, root=repo, code=0, keep_repo=keep, **outputs)
                     actual = self.json_truth(*args, "thickness", "--base", base)
                     self.assertEqual(actual.pop("engines"), {"base": engine, "head": "rust"})
                     self.assertEqual(actual, {"report": head, "delta": delta})
                     self.assertEqual(self.run_truth(*args, "thickness", "--base", base),
                                      humanize(corpus.format_thickness(head, delta), repo) + "\n")
-                    previous = orphan_summary.base_count(repo, base)
-                    # Python names the default root whatever the corpus; Rust the root used.
-                    expected = orphan_summary.summary(base, head_count, previous).replace(
-                        "Root: STMT-CATHOLICISM-TRUE.", "Root: ROOT.")
                     self.assertEqual(self.run_truth(*args, "orphans", "--base", base), expected + "\n")
                     counts = self.json_truth(*args, "orphans", "--base", base)
                     self.assertEqual((counts["base_count"], counts["head_count"], counts["engines"]["base"]),

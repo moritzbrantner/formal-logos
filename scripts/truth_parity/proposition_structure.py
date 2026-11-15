@@ -33,16 +33,20 @@ from pathlib import Path
 
 import corpus
 from truth_parity.check import by_id, write_check_fixture
+from truth_parity import golden
 from truth_parity.common import U, ParityCase
 
 FIRST_SLICE_FIXTURE = Path(__file__).resolve().parent / "fixtures" / "proposition-structure-first-slice.json"
 
-# Runs `corpus.py` at the checkout `argv[1]` with the Lean subprocesses
-# replaced by the exporter stdout in `argv[2]`.
+# Runs this repository's `corpus.py` on the checkout `argv[1]` with the Lean
+# subprocesses replaced by the exporter stdout in `argv[2]`. The checkout's
+# own `scripts/*.py` are only digest inputs: the fixture replaces them by
+# small stand-ins (`SCRIPT_STAND_INS`), so its golden snapshots stay small.
 ORACLE = """
 import subprocess, sys
+from pathlib import Path
 root, fixture = sys.argv[1], sys.argv[2]
-sys.path.insert(0, root + "/scripts")
+sys.path.insert(0, %r)
 real = subprocess.run
 def fake(cmd, *args, **kwargs):
     if "lake" in cmd and "build" in cmd:
@@ -52,9 +56,14 @@ def fake(cmd, *args, **kwargs):
             return subprocess.CompletedProcess(cmd, 0, handle.read(), "")
     return real(cmd, *args, **kwargs)
 subprocess.run = fake
-import corpus
+import corpus, source_evidence
+corpus.ROOT, corpus.CORPUS, corpus._ALIASES = Path(root), Path(root) / "corpus", None
+source_evidence.ROOT, source_evidence.CORPUS = Path(root), Path(root) / "corpus"
+source_evidence.PASSAGES = Path(root) / "corpus" / "passages"
 sys.exit(corpus.main_with(sys.argv[3:]))
-"""
+""" % str(Path(__file__).resolve().parents[1])
+# The fixed `scripts/` inputs every structure report binds by digest.
+SCRIPT_STAND_INS = ("corpus.py", "proposition_structure.py", "worker_env.py")
 
 FIX = "TruthCore.Fix."
 
@@ -138,6 +147,8 @@ class TruthStructureParity(ParityCase):
         (cls.root / "TruthCore" / "Fix" / "Structure.lean").write_text(STRUCTURE_LEAN)
         for name in ("lean-toolchain", "lakefile.toml"):
             (cls.root / name).write_text(name + "\n")
+        for name in SCRIPT_STAND_INS:
+            (cls.root / "scripts" / name).write_text(f"# fixture stand-in for scripts/{name}\n")
         commit(cls.root)
         cls.scratch = Path(cls.directory.name)
 
@@ -150,10 +161,19 @@ class TruthStructureParity(ParityCase):
         path.write_text(value if isinstance(value, str) else json.dumps(value, ensure_ascii=False))
         return path
 
+    def run_python(self, root, fixture, args, machine=False):
+        return subprocess.run([sys.executable, "-c", ORACLE, str(root), str(fixture), *args,
+                               *(["--json"] if machine and args[0] == "structure" else [])],
+                              capture_output=True, text=True, check=False)
+
+    def run_rust(self, root, fixture, args, machine=False):
+        rust = subprocess.run([self.binary, "--root", str(root), *(["--json"] if machine else []), *args,
+                               "--extractor-json", str(fixture)], capture_output=True, text=True, check=False)
+        golden.note_producer(rust.stdout)
+        return rust
+
     def run_both(self, root, fixture, args, machine=False, rust_args=None):
-        python = subprocess.run([sys.executable, "-c", ORACLE, str(root), str(fixture), *args,
-                                 *(["--json"] if machine and args[0] == "structure" else [])],
-                                capture_output=True, text=True, check=False)
+        python = self.run_python(root, fixture, args, machine)
         rust = subprocess.run([self.binary, "--root", str(root), *(["--json"] if machine else []),
                                *(args if rust_args is None else rust_args),
                                "--extractor-json", str(fixture)],
@@ -163,7 +183,12 @@ class TruthStructureParity(ParityCase):
     def assert_same(self, args, value=None, code=0, machine=False, root=None, fixture=None):
         root = root or self.root
         fixture = fixture or self.exporter(exporter_rows() if value is None else value)
-        python, rust = self.run_both(root, fixture, args, machine)
+        python = self.run_python(root, fixture, args, machine)
+        if root != corpus.ROOT:
+            golden.record(self, ["--root", root, *(["--json"] if machine else []), *args, "--extractor-json", fixture],
+                          root=root, code=code, stdout=python.stdout, strip_producer=True,
+                          externals=[self.scratch], **({"stderr": python.stderr} if code and not machine else {}))
+        rust = self.run_rust(root, fixture, args, machine)
         self.assertEqual(python.returncode, code, python.stderr)
         self.assertEqual(rust.returncode, code, rust.stderr)
         self.assertEqual(without_producer(rust.stdout), python.stdout, args)
