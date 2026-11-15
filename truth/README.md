@@ -755,29 +755,49 @@ stderr and exit codes are Python's byte for byte
 (`scripts/truth_parity/senses.py`, fixtures and the real corpus against
 several bases); `sense_index.py migrate` stays Python.
 
-## `configurations`, `models`, `territory`
+## `configurations`, `configuration-report`, `models`, `territory`
 
-These port the Lean-free parts of `corpus.py configurations`, `models` and
-`territory` (#954 slice B2): `truth::configurations` (`implication_closure`,
-`configuration_report`), `truth::finite_models` (`model_report`) and
-`truth::territory` (`territory_report`). Text output is byte-identical to
-Python's; `--json` prints the Python JSON (plus `input_identity` for `models`
-and `territory`; `configurations` prints Python's list as is). A corpus error
-prints Python's `corpus error: …` with exit code 2.
+These port `corpus.py configurations`, `configuration-report`, `models` and
+`territory` (#954 slices B2 and A6): `truth::configurations`
+(`implication_closure`, `configuration_report`), `truth::configuration_live`
+(`verify_case`, `verify_compositions`, the live reports),
+`truth::configuration_explorer` (the verified explorer bundle),
+`truth::finite_models` (`model_report`) and `truth::territory`
+(`territory_report`). Text output is byte-identical to Python's; `--json`
+prints the Python JSON (plus `input_identity` for `models` and `territory`;
+`configurations` prints Python's list as is). A corpus error prints Python's
+`corpus error: …` with exit code 2.
 
-- `truth configurations --registered [--case ID] [--seed STATEMENT]
-  [--premise STATEMENT]...`: the registered projection (no certified status).
-  It validates the models and cases first, as Python's `configuration_context`
-  does (`truth::check::registered_configurations`), not the whole corpus.
-  Without `--registered` Python builds the modules and checks every
-  certificate and original theorem in Lean; Rust refuses and names the Python
-  command (exit 2). The verified projection is ported in the library and
-  unit-tested against Python's fixture cases; slice A6 wires it to
-  `configuration-report`.
-- `truth models`: every registered model and its co-failure candidates.
-  `--check`, `--argument` and `--verify` Lean-check all registered models in
-  Python, so Rust refuses them and names the Python command; `--premise`
-  without either fails as in Python.
+The Lean-backed paths orchestrate; they never compute a verdict. They write
+the same certificate and composition sources as Python, run `lake build`,
+`lake env lean` and `scripts/verify-result.sh` with Python's timeouts (each
+process tree killed on expiry, `truth::subprocess`), read only exit status and
+`#print axioms` lines, and bind original theorems through
+`scripts/BindTypes.lean`. They call `lake` from PATH, as Python does: run them
+under `python3 scripts/worker_env.py --`.
+
+- `truth configurations [--registered] [--case ID] [--seed STATEMENT]
+  [--premise STATEMENT]...`: with `--registered`, the registered projection
+  (no certified status); otherwise every selected case is verified in Lean
+  first and no report is printed if any step fails. It validates the models
+  and cases first, as Python's `configuration_context` does
+  (`truth::check::registered_configurations`), not the whole corpus.
+- `truth configuration-report (--output PATH | --check PATH |
+  --build-input)`: `--output` live-verifies every case, replays the decision
+  tree's family cores and atomically writes the bundle inside `.cache`, byte
+  for byte as Python writes it plus `producer.producer_sha256` (the crate
+  fingerprint `build.rs` computes, outside the input digest). It refuses an
+  output outside `.cache` before running Lean (Python only after). `--check`
+  and `--build-input` (with `TRUTH_CORE_CONFIGURATION_REPORT` /
+  `TRUTH_CORE_REQUIRE_CONFIGURATION_REPORT`) check freshness without Lean,
+  as Python does, and then require the fingerprint to match the running
+  binary. `--json` prints Python's indented projection without the input
+  hashes.
+- `truth models [--check STATEMENT | --argument ARGUMENT] [--premise
+  STATEMENT]... [--verify]`: every registered model, its classification and
+  co-failure candidates; `--check`, `--argument` and `--verify` also
+  Lean-check every registered model (Python `verify_models`); `--premise`
+  without a target fails as in Python.
 - `truth territory [--frontier-root STATEMENT] [--max-atoms N]`: Python's
   `--root` is `--frontier-root` here. Like Python it runs the full `check`
   validation first (`cli::validate_first`) and reads the in-process Rust
@@ -794,3 +814,14 @@ and -3 and an unknown root) and on a fixture checkout with an incompatibility
 core, an implication rule, a model a fixed constant excludes, co-failures, a
 refutation core and a model that satisfies it (a `DEFECT` line), a broken
 corpus and seven broken registrations.
+`scripts/truth_parity/configuration_report.py` runs the Lean-backed paths of
+both implementations on that fixture as a Git checkout with a recorded
+toolchain on PATH (a `lake` that answers builds, prints Lean's `#print
+axioms` lines and describes the theorems as `BindTypes.lean` would, and a
+`verify-result.sh` stub), so no Lean runs: it compares the logged toolchain
+calls, the bundle byte for byte except the fingerprint line, `--check` and
+`--build-input` outcomes on fresh, stale and malformed bundles, live
+`configurations` and `models --check / --argument / --verify`, and the error
+and exit code of a failure at every step (build, certificate, forbidden
+axiom, `verify-result.sh`, model certificates, composition, binding, a
+verification defect, no `lake`).

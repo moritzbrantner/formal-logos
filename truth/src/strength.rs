@@ -1382,8 +1382,10 @@ fn is_symlink(path: &Path) -> bool {
 }
 
 /// Python `Path.resolve()` (non-strict): the longest existing prefix
-/// canonicalized, the rest normalized lexically.
-fn resolve(path: &Path) -> PathBuf {
+/// canonicalized, the rest normalized lexically (a `..` after a missing
+/// directory still removes a component). Shared by the configuration
+/// explorer's `.cache` containment check.
+pub fn resolve(path: &Path) -> PathBuf {
     let mut existing = path.to_path_buf();
     let mut rest: Vec<Component> = Vec::new();
     let components: Vec<Component> = path.components().collect();

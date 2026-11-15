@@ -63,7 +63,7 @@ export default async function ConfigurationPage({ params }: { params: Promise<{ 
       </div>)}
       {entry.model_ids.length > 0 ? <p className="mt-3 text-sm">Registered matching models: {entry.model_ids.map(nameOf).join(", ")}</p> : null}
       <details className="mt-4 text-sm"><summary>Verify this assumption set</summary>
-        <pre className="mt-3 whitespace-pre-wrap rounded border border-[var(--line)] p-3 text-xs">{`flock /tmp/moenarch/truth-core-heavy.lock python3 scripts/corpus.py configurations --case ${configuration.id}${entry.statement_ids.map((sid) => ` --premise ${sid}`).join("")} --json`}</pre>
+        <pre className="mt-3 whitespace-pre-wrap rounded border border-[var(--line)] p-3 text-xs">{`flock /tmp/moenarch/truth-core-heavy.lock python3 scripts/worker_env.py -- target/release/truth --json configurations --case ${configuration.id}${entry.statement_ids.map((sid) => ` --premise ${sid}`).join("")}`}</pre>
       </details>
     </section>)}
     <p className="mt-6 text-sm text-[var(--muted)]">{configuration.scope}</p>
