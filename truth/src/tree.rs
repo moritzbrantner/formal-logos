@@ -176,8 +176,10 @@ pub struct ResultRef {
 pub struct ArgumentNode {
     pub id: String,
     pub label: Option<String>,
-    /// `down` or `up`.
-    pub side: &'static str,
+    /// The walks that admitted it: `down` (from its conclusion) and/or `up`.
+    pub sides: Vec<&'static str>,
+    /// The premises from which the upward walk admitted it.
+    pub up_from: Vec<String>,
     pub conclusion_statement_id: String,
     pub premise_statement_ids: Vec<String>,
     pub steps: Vec<Step>,
@@ -512,7 +514,8 @@ impl Builder<'_> {
             ArgumentNode {
                 id: id.to_owned(),
                 label: string(&record, "label"),
-                side,
+                sides: vec![side],
+                up_from: Vec::new(),
                 conclusion_statement_id: conclusion,
                 premise_statement_ids: premises,
                 steps,
@@ -612,6 +615,12 @@ impl Builder<'_> {
                 if !self.arguments.contains_key(argument) {
                     self.add_argument(argument, "up");
                 }
+                if let Some(node) = self.arguments.get_mut(argument) {
+                    if !node.sides.contains(&"up") {
+                        node.sides.push("up");
+                    }
+                    node.up_from.push(statement.clone());
+                }
                 if expand {
                     self.add_statement(&conclusion, "dependent");
                     if let Some(node) = self.statements.get_mut(&conclusion) {
@@ -681,7 +690,7 @@ impl Builder<'_> {
     /// through their reverse, in display order.
     fn mark_cycles(&mut self) {
         let mut cycles = HashSet::new();
-        let walk = Walk::new(&self.edges);
+        let walk = Walk::new(&self.edges, self.arguments.values());
         for side in ["down", "up"] {
             walk.visit(
                 &self.root,
@@ -787,12 +796,28 @@ impl Builder<'_> {
 /// The depth-first walk shared by cycle marking and the text form.
 struct Walk<'a> {
     edges: &'a [Edge],
+    /// (statement, argument, side): the walk on `side` admitted the argument
+    /// from the statement, so the display follows exactly the traversal.
+    admitted: HashSet<(String, String, &'static str)>,
     into: HashMap<&'a str, Vec<usize>>,
     out: HashMap<&'a str, Vec<usize>>,
 }
 
 impl<'a> Walk<'a> {
-    fn new(edges: &'a [Edge]) -> Self {
+    fn new<'n>(edges: &'a [Edge], arguments: impl Iterator<Item = &'n ArgumentNode>) -> Self {
+        let mut admitted = HashSet::new();
+        for argument in arguments {
+            if argument.sides.contains(&"down") {
+                admitted.insert((
+                    argument.conclusion_statement_id.clone(),
+                    argument.id.clone(),
+                    "down",
+                ));
+            }
+            for premise in &argument.up_from {
+                admitted.insert((premise.clone(), argument.id.clone(), "up"));
+            }
+        }
         let mut into: HashMap<&str, Vec<usize>> = HashMap::new();
         let mut out: HashMap<&str, Vec<usize>> = HashMap::new();
         for (position, edge) in edges.iter().enumerate() {
@@ -801,18 +826,27 @@ impl<'a> Walk<'a> {
                 out.entry(edge.from.as_str()).or_default().push(position);
             }
         }
-        Self { edges, into, out }
+        Self {
+            edges,
+            admitted,
+            into,
+            out,
+        }
     }
 
     /// The (edge, argument, next statements) steps from `statement` on
     /// `side`: down, the arguments supporting it and their premises; up, the
     /// arguments using it and their conclusions.
-    fn steps(&self, statement: &str, side: &str) -> Vec<(String, Vec<(usize, String)>)> {
+    fn steps(&self, statement: &str, side: &'static str) -> Vec<(String, Vec<(usize, String)>)> {
         let edges = self.edges;
         let (first, second) = if side == "down" {
             ("supports", "uses")
         } else {
             ("uses", "supports")
+        };
+        let admitted = |argument: &str| {
+            self.admitted
+                .contains(&(statement.to_owned(), argument.to_owned(), side))
         };
         let mut arguments: Vec<&str> = self
             .into
@@ -821,6 +855,7 @@ impl<'a> Walk<'a> {
             .flatten()
             .filter(|&&position| edges[position].kind == first)
             .map(|&position| edges[position].from.as_str())
+            .filter(|argument| admitted(argument))
             .collect();
         arguments.dedup();
         arguments
@@ -842,7 +877,7 @@ impl<'a> Walk<'a> {
     fn visit(
         &self,
         statement: &str,
-        side: &str,
+        side: &'static str,
         path: &mut Vec<String>,
         done: &mut HashSet<String>,
         cycles: &mut HashSet<usize>,
@@ -1079,7 +1114,7 @@ impl Printer<'_> {
 pub fn format_tree(tree: &Tree) -> String {
     let mut printer = Printer {
         tree,
-        walk: Walk::new(&tree.edges),
+        walk: Walk::new(&tree.edges, tree.arguments.iter()),
         statements: tree.statements.iter().map(|n| (n.id.as_str(), n)).collect(),
         arguments: tree.arguments.iter().map(|n| (n.id.as_str(), n)).collect(),
         truncated: tree
@@ -1408,6 +1443,44 @@ mod tests {
             && t.reason == "budget"
             && t.omitted_arguments == 1));
         assert!(view.node_count <= 4);
+    }
+
+    #[test]
+    fn the_text_follows_each_side_s_own_walk() {
+        let dir = fixture();
+        // At A, the support walk admits ARG-3 and ARG-4 (the cycle); with
+        // up 0 the dependents section shows none of them.
+        let view = build(
+            &dir,
+            "A",
+            Options {
+                down: 3,
+                up: 0,
+                budget: 100,
+            },
+        )
+        .unwrap();
+        let text = format_tree(&view);
+        let dependents = text.split("Dependents").nth(1).unwrap();
+        assert!(!dependents.contains("USED BY"), "{text}");
+        assert!(text.contains("BY ARG-3"));
+        // With down 0 the support section shows nothing the upward walk added.
+        let view = build(
+            &dir,
+            "A",
+            Options {
+                down: 0,
+                up: 3,
+                budget: 100,
+            },
+        )
+        .unwrap();
+        let text = format_tree(&view);
+        let support = text.split("Dependents").next().unwrap();
+        assert!(!support.contains("BY ARG"), "{text}");
+        assert!(support.contains("… truncated (depth): 1 more argument(s) not shown"));
+        assert!(text.contains("USED BY ARG-4"));
+        assert!(text.contains("USED BY ARG-1"));
     }
 
     #[test]
