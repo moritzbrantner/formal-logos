@@ -173,6 +173,41 @@ fn argument_entry(inputs: &Inputs, argument: &Record, results: &[&Record]) -> Va
     })
 }
 
+/// The frontier's verdict on one `refutes` relation: whether it is
+/// verified and counted, and its unestablished premises. A refutation with
+/// unestablished premises is conditional: it does not defeat the rival.
+fn refutation_status(inputs: &Inputs, relation: &str) -> Value {
+    match inputs
+        .view
+        .refutations
+        .iter()
+        .find(|entry| entry["relation_id"] == relation)
+    {
+        Some(entry) => {
+            let unestablished = entry["unestablished_premise_statement_ids"].clone();
+            let conditional = unestablished
+                .as_array()
+                .is_some_and(|items| !items.is_empty());
+            json!({
+                "verified": entry["verified"],
+                "counted": entry["counted"],
+                "unestablished_premises": unestablished,
+                "reading": if entry["counted"] == true && !conditional {
+                    "counted by the frontier: verified with established premises"
+                } else if entry["verified"] == true {
+                    "conditional refutation: verified, but not counted; the rival is not defeated unless its unestablished premises are established"
+                } else {
+                    "unverified refutation record: the rival is not defeated"
+                },
+            })
+        }
+        None => json!({
+            "counted": false,
+            "reading": "not in the frontier report: the rival is not defeated",
+        }),
+    }
+}
+
 /// The note sections explicitly mentioning `ids`, grouped by section, with
 /// the note's latest written date, superseded markers and the recorded
 /// assessments and rival analysis of each mentioning note.
@@ -237,7 +272,7 @@ fn note_evidence(
     });
     let mut assessments = Vec::new();
     for (path, note) in &notes_read {
-        assessments.extend(assessment_sections(note, &texts[path], 4));
+        assessments.extend(assessment_sections(note, &texts[path]));
     }
     sort_assessments(&mut assessments);
     Ok((out, assessments))
@@ -252,56 +287,60 @@ fn superseded(raw: &str, path: &str) -> Vec<Value> {
 
 /// The judgment-headed and rival-headed sections of a note (at most `limit`
 /// of each), each with the paragraph that states what is or is not settled.
-pub fn assessment_sections(note: &notes::Note, raw: &str, limit: usize) -> Vec<Value> {
+pub fn assessment_sections(note: &notes::Note, raw: &str) -> Vec<Value> {
     let note_date = retrieval::latest_date(raw);
     let mut out = Vec::new();
-    for (kind, heading) in [
-        ("assessment", &*retrieval::ASSESSMENT_HEADING),
-        ("rival_analysis", &*retrieval::RIVAL_HEADING),
-    ] {
-        let mut taken = 0;
-        for section in &note.sections {
-            if taken == limit
-                || section.level == 0
-                || !heading.is_match(&section.heading).unwrap_or(false)
-            {
-                continue;
-            }
-            // A judgment heading takes precedence over a rival heading.
-            if kind == "rival_analysis"
-                && retrieval::ASSESSMENT_HEADING
-                    .is_match(&section.heading)
-                    .unwrap_or(false)
-            {
-                continue;
-            }
-            let paragraphs = retrieval::paragraphs(&section.body, retrieval::body_line(section));
-            let Some((line, paragraph)) = retrieval::status_paragraph(&paragraphs) else {
-                continue;
-            };
-            taken += 1;
-            out.push(json!({
-                "kind": kind,
-                "section": note.key(section),
-                "heading": section.heading,
-                "line": line,
-                "date": retrieval::latest_date(&section.heading).or_else(|| note_date.clone()),
-                "dated_by": if retrieval::latest_date(&section.heading).is_some() { "heading" } else { "latest date written in the note" },
-                "excerpt": retrieval::excerpt(paragraph, 360),
-            }));
+    for section in &note.sections {
+        if section.level == 0 {
+            continue;
         }
+        // A judgment heading takes precedence over a rival heading.
+        let kind = if retrieval::ASSESSMENT_HEADING
+            .is_match(&section.heading)
+            .unwrap_or(false)
+        {
+            "assessment"
+        } else if retrieval::RIVAL_HEADING
+            .is_match(&section.heading)
+            .unwrap_or(false)
+        {
+            "rival_analysis"
+        } else {
+            continue;
+        };
+        let paragraphs = retrieval::paragraphs(&section.body, retrieval::body_line(section));
+        let Some((line, paragraph)) = retrieval::status_paragraph(&paragraphs) else {
+            continue;
+        };
+        let heading_date = retrieval::latest_date(&section.heading);
+        out.push(json!({
+            "kind": kind,
+            "section": note.key(section),
+            "heading": section.heading,
+            "line": line,
+            "date": heading_date.clone().or_else(|| note_date.clone()),
+            "dated_by": if heading_date.is_some() { "heading" } else { "latest date written in the note" },
+            "excerpt": retrieval::excerpt(paragraph, 360),
+        }));
     }
+    sort_assessments(&mut out);
     out
 }
 
 /// Newest first by recorded date, then location: several notes' judgments
 /// are listed side by side, never reconciled.
 pub fn sort_assessments(assessments: &mut [Value]) {
+    // Within a date, a later position in the same note is the later text.
+    let path = |value: &Value| {
+        let section = value["section"].as_str().unwrap_or_default();
+        section.split('#').next().unwrap_or(section).to_owned()
+    };
     assessments.sort_by(|a, b| {
         b["date"]
             .as_str()
             .cmp(&a["date"].as_str())
-            .then_with(|| a["section"].as_str().cmp(&b["section"].as_str()))
+            .then_with(|| path(a).cmp(&path(b)))
+            .then_with(|| b["line"].as_u64().cmp(&a["line"].as_u64()))
     });
 }
 
@@ -465,13 +504,18 @@ pub fn statement_brief(
             .entries("relations")
             .into_iter()
             .filter(|relation| {
-                text(&relation.fields, "predicate") == "refutes" && text(&relation.fields, "object_id") == target
+                text(&relation.fields, "predicate") == "refutes"
+                    && text(&relation.fields, "object_id") == target
             })
             .map(|relation| {
-                json!({
-                    "relation": text(&relation.fields, "id"),
-                    "by": inputs.reference(text(&relation.fields, "subject_kind"), text(&relation.fields, "subject_id")),
-                })
+                let id = text(&relation.fields, "id");
+                let mut entry = refutation_status(inputs, id);
+                entry["relation"] = json!(id);
+                entry["by"] = inputs.reference(
+                    text(&relation.fields, "subject_kind"),
+                    text(&relation.fields, "subject_id"),
+                );
+                entry
             })
             .collect()
     };
@@ -502,7 +546,11 @@ pub fn statement_brief(
                 }
                 rivals.push(entry);
             }
-            "refutes" if !outgoing => rivals.push(entry),
+            "refutes" if !outgoing => {
+                let mut entry = entry;
+                entry["refutation"] = refutation_status(inputs, text(fields, "id"));
+                rivals.push(entry)
+            }
             "strengthens"
             | "strength_comparison"
             | "logically_equivalent_to"
@@ -649,7 +697,7 @@ pub fn statement_brief(
         "attempts": attempts,
         "notes": {"boundary": notes::BOUNDARY, "sections": note_sections},
         "assessments": {
-            "boundary": "judgment- and rival-headed sections of the notes naming the target, newest first; \
+            "boundary": "every judgment- and rival-headed section of the notes naming the target, newest first; \
                          quoted, not reconciled, and not formal status",
             "sections": assessments,
         },
@@ -895,7 +943,7 @@ pub fn question_brief(
             "best_coverage": [best, total],
             "paragraphs_with_half_or_more": strong,
             "best_paragraphs": hits.iter().take(3).map(|hit| paragraph_json(&query, hit)).collect::<Vec<_>>(),
-            "assessments": assessment_sections(&score.note, &score.raw, 3),
+            "assessments": assessment_sections(&score.note, &score.raw),
             "superseded_markers": superseded(&score.raw, &score.note.path),
         }));
     }
@@ -1597,7 +1645,17 @@ pub fn format_brief(brief: &Value, aliases: &Aliases, limit: usize) -> String {
                 .as_array()
                 .into_iter()
                 .flatten()
-                .map(|r| show(aliases, &r["by"]))
+                .map(|r| {
+                    let open = r["unestablished_premises"].as_array().map_or(0, Vec::len);
+                    if r["counted"] == true && open == 0 {
+                        format!("{} (counted)", show(aliases, &r["by"]))
+                    } else {
+                        format!(
+                            "{} (NOT counted: conditional on {open} unestablished premise(s))",
+                            show(aliases, &r["by"])
+                        )
+                    }
+                })
                 .collect();
             lines.push(format!(
                 "  {} {} ({}){}{} [{}]",
@@ -1611,7 +1669,10 @@ pub fn format_brief(brief: &Value, aliases: &Aliases, limit: usize) -> String {
                 if refuted.is_empty() {
                     String::new()
                 } else {
-                    format!("; rival refuted by {}", refuted.join(", "))
+                    format!(
+                        "; recorded refutations of the rival: {}",
+                        refuted.join(", ")
+                    )
                 },
                 rival["relation"]
                     .as_str()

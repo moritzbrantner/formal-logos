@@ -182,6 +182,15 @@ fn fixture(name: &str) -> PathBuf {
                "subject_kind": "statement", "subject_id": RIVAL, "predicate": "alternative_to",
                "object_kind": "statement", "object_id": GOAL}),
     );
+    // The open-premise argument also "refutes" the rival: a conditional
+    // refutation that the frontier does not count.
+    record(
+        &root,
+        "relations",
+        json!({"id": "d0000000-0000-4000-8000-000000000002", "label": "Conditional refutation",
+               "subject_kind": "argument", "subject_id": ARGUMENT, "predicate": "refutes",
+               "object_kind": "statement", "object_id": RIVAL}),
+    );
     record(
         &root,
         "attempts",
@@ -311,6 +320,22 @@ fn conditional_consequence_closed_issue_and_note_keep_their_boundaries() {
     assert!(super::BOUNDARY.contains("issue state is workflow history, not warrant"));
     // The rival and the attempt are retrieved with their records.
     assert_eq!(brief["rivals"][0]["other"]["id"], RIVAL);
+    let refutation = &brief["rivals"][0]["rival_refuted_by"][0];
+    assert_eq!(refutation["counted"], false);
+    assert_eq!(refutation["unestablished_premises"], json!([OPEN_PREMISE]));
+    assert!(
+        refutation["reading"]
+            .as_str()
+            .unwrap()
+            .starts_with("conditional refutation")
+    );
+    let text = run(&loaded, &issues, |inputs| {
+        super::format_brief(&brief, inputs.aliases, 6)
+    });
+    assert!(
+        text.contains("NOT counted: conditional on 1 unestablished premise(s)"),
+        "{text}"
+    );
     assert_eq!(brief["attempts"][0]["outcome"], "succeeded");
     // A note deriving the biconditional does not close the premise it names.
     let brief = run(&loaded, &issues, |inputs| {

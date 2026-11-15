@@ -180,29 +180,31 @@ impl Query {
                 }
                 continue;
             }
+            // An ASCII spelling is consumed whole, so `<->` is one `↔`, not
+            // also a `→`.
             let rest: String = chars[index..chars.len().min(index + 3)].iter().collect();
-            for (operator, _) in OPERATORS {
-                let ascii = match *operator {
-                    "↔" => rest.starts_with("<->"),
-                    "→" => rest.starts_with("->") && !rest.starts_with("<-"),
-                    _ => false,
-                };
-                if rest.starts_with(operator) || ascii {
+            let found = [("<->", "↔"), ("->", "→")]
+                .into_iter()
+                .find(|(ascii, _)| rest.starts_with(ascii))
+                .map(|(ascii, operator)| (ascii.chars().count(), operator))
+                .or_else(|| {
+                    OPERATORS
+                        .iter()
+                        .find(|(operator, _)| rest.starts_with(operator))
+                        .map(|(operator, _)| (1, *operator))
+                })
+                .or_else(|| (c == '~').then_some((1, "¬")));
+            match found {
+                Some((width, operator)) => {
                     push(Item {
-                        key: (*operator).into(),
-                        text: (*operator).into(),
+                        key: operator.into(),
+                        text: operator.into(),
                         kind: "operator",
                     });
+                    index += width;
                 }
+                None => index += 1,
             }
-            if c == '~' {
-                push(Item {
-                    key: "¬".into(),
-                    text: "¬".into(),
-                    kind: "operator",
-                });
-            }
-            index += 1;
         }
         Self {
             text: text.to_owned(),
@@ -841,39 +843,145 @@ pub fn record_prose(fields: &Map<String, Value>) -> String {
         .join("\n")
 }
 
-/// Lean declaration source blocks, read lazily per module file.
+/// Lean declaration source blocks, read lazily per module file, with a
+/// repository-wide declaration index built on the first miss.
 #[derive(Default)]
 pub struct LeanSource {
     root: PathBuf,
     files: HashMap<PathBuf, Option<String>>,
+    /// Fully qualified name -> (file, 0-based line), over `TruthCore/**/*.lean`.
+    index: Option<HashMap<String, Vec<(PathBuf, usize)>>>,
 }
 
 static DECLARATION_KEYWORD: LazyLock<Regex> = LazyLock::new(|| {
     pattern(
-        r"^\s*(?:@\[[^\]]*\]\s*)?(?:(?:private|protected|noncomputable|partial|unsafe|public)\s+)*(?:def|abbrev|theorem|lemma|structure|class|inductive|opaque|axiom|instance)\s+(?:[\w.']*\.)?([\w']+)",
+        r"^\s*(?:@\[[^\]]*\]\s*)?(?:(?:private|protected|noncomputable|partial|unsafe|public)\s+)*(?:def|abbrev|theorem|lemma|structure|class|inductive|opaque|axiom|instance)\s+([\w.']+)",
     )
 });
+
+/// The declared name on `line` (as written, possibly dotted).
+fn declared(line: &str) -> Option<&str> {
+    DECLARATION_KEYWORD
+        .captures(line)
+        .ok()
+        .flatten()
+        .and_then(|captures| captures.get(1))
+        .map(|found| found.as_str())
+}
+
+/// Every declaration of a Lean source with its fully qualified name, by a
+/// lexical `namespace`/`section`/`end` stack (enough to tell modules apart;
+/// not Lean's full name resolution).
+pub fn qualified_declarations(text: &str) -> Vec<(String, usize)> {
+    let mut stack: Vec<Vec<String>> = Vec::new();
+    let mut out = Vec::new();
+    for (index, line) in text.lines().enumerate() {
+        let trimmed = line.trim_start();
+        let mut words = trimmed.split_whitespace();
+        match words.next() {
+            Some("namespace") => stack.push(
+                words
+                    .next()
+                    .unwrap_or_default()
+                    .split('.')
+                    .map(str::to_owned)
+                    .collect(),
+            ),
+            Some("section") | Some("noncomputable")
+                if trimmed.starts_with("section")
+                    || trimmed.starts_with("noncomputable section") =>
+            {
+                stack.push(Vec::new())
+            }
+            Some("end") if line.starts_with("end") => {
+                stack.pop();
+            }
+            _ => {
+                if let Some(name) = declared(line) {
+                    let mut parts: Vec<&str> = stack.iter().flatten().map(String::as_str).collect();
+                    parts.push(name.strip_prefix("_root_.").unwrap_or(name));
+                    out.push((parts.join("."), index));
+                }
+            }
+        }
+    }
+    out
+}
+
+/// The declaration's block: its line and indented continuation, at most 40
+/// lines.
+fn extract(lines: &[&str], start: usize) -> String {
+    let mut block = vec![lines[start]];
+    for line in lines.iter().skip(start + 1).take(39) {
+        if !line.is_empty() && !line.starts_with(char::is_whitespace) {
+            break;
+        }
+        if line.trim().is_empty() && block.last().is_some_and(|last| last.trim().is_empty()) {
+            break;
+        }
+        block.push(line);
+    }
+    block.join("\n").trim_end().to_owned()
+}
 
 impl LeanSource {
     pub fn new(root: &Path) -> Self {
         Self {
             root: root.to_path_buf(),
             files: HashMap::new(),
+            index: None,
         }
     }
 
-    fn file(&mut self, relative: PathBuf) -> Option<&str> {
+    fn file(&mut self, relative: &Path) -> Option<&str> {
         let root = self.root.clone();
         self.files
-            .entry(relative.clone())
-            .or_insert_with(|| std::fs::read_to_string(root.join(&relative)).ok())
+            .entry(relative.to_path_buf())
+            .or_insert_with(|| std::fs::read_to_string(root.join(relative)).ok())
             .as_deref()
     }
 
-    /// The source block of the fully qualified `declaration`: the module is
-    /// the longest prefix naming an existing file; the block runs from the
-    /// declaration line through its indented continuation (at most 40
-    /// lines). Returns the file, 1-based line and text.
+    fn build_index(&mut self) {
+        fn walk(directory: &Path, root: &Path, out: &mut Vec<PathBuf>) {
+            let Ok(entries) = std::fs::read_dir(directory) else {
+                return;
+            };
+            let mut entries: Vec<_> = entries.flatten().collect();
+            entries.sort_by_key(|entry| entry.file_name());
+            for entry in entries {
+                let Ok(kind) = entry.file_type() else {
+                    continue;
+                };
+                let path = entry.path();
+                if kind.is_dir() && entry.file_name() != ".lake" {
+                    walk(&path, root, out);
+                } else if kind.is_file()
+                    && path.extension().is_some_and(|ext| ext == "lean")
+                    && let Ok(relative) = path.strip_prefix(root)
+                {
+                    out.push(relative.to_path_buf());
+                }
+            }
+        }
+        let mut paths = Vec::new();
+        walk(&self.root.join("TruthCore"), &self.root, &mut paths);
+        let mut index: HashMap<String, Vec<(PathBuf, usize)>> = HashMap::new();
+        for path in paths {
+            let Some(text) = self.file(&path).map(str::to_owned) else {
+                continue;
+            };
+            for (name, line) in qualified_declarations(&text) {
+                index.entry(name).or_default().push((path.clone(), line));
+            }
+        }
+        self.index = Some(index);
+    }
+
+    /// The source block of the fully qualified `declaration`: first in the
+    /// module its namespace names (the longest existing prefix file), else
+    /// through a repository-wide index of qualified declaration names, else
+    /// the unique declaration with that last component. Returns the file,
+    /// 1-based line and text.
     pub fn block(&mut self, declaration: &str) -> Option<(String, usize, String)> {
         let parts: Vec<&str> = declaration.split('.').collect();
         let name = *parts.last()?;
@@ -882,31 +990,47 @@ impl LeanSource {
             if !self.root.join(&relative).is_file() {
                 continue;
             }
-            let display = relative.to_string_lossy().into_owned();
-            let text = self.file(relative)?;
+            let Some(text) = self.file(&relative) else {
+                continue;
+            };
             let lines: Vec<&str> = text.lines().collect();
-            let start = lines.iter().position(|line| {
-                DECLARATION_KEYWORD
-                    .captures(line)
-                    .ok()
-                    .flatten()
-                    .and_then(|captures| captures.get(1))
-                    .is_some_and(|found| found.as_str() == name)
-            })?;
-            let mut block = vec![lines[start]];
-            for line in lines.iter().skip(start + 1).take(39) {
-                if !line.is_empty() && !line.starts_with(char::is_whitespace) {
-                    break;
-                }
-                if line.trim().is_empty() && block.last().is_some_and(|last| last.trim().is_empty())
-                {
-                    break;
-                }
-                block.push(line);
+            if let Some(start) = lines.iter().position(|line| {
+                declared(line).is_some_and(|found| found.rsplit('.').next() == Some(name))
+            }) {
+                let block = extract(&lines, start);
+                return Some((relative.to_string_lossy().into_owned(), start + 1, block));
             }
-            return Some((display, start + 1, block.join("\n").trim_end().to_owned()));
+            break;
         }
-        None
+        if self.index.is_none() {
+            self.build_index();
+        }
+        let index = self.index.as_ref()?;
+        let found = index
+            .get(declaration)
+            .and_then(|places| places.first())
+            .cloned()
+            .or_else(|| {
+                let suffix = format!(".{name}");
+                let mut matches = index
+                    .iter()
+                    .filter(|(qualified, _)| {
+                        qualified.ends_with(&suffix) || qualified.as_str() == name
+                    })
+                    .flat_map(|(_, places)| places.iter());
+                match (matches.next(), matches.next()) {
+                    (Some(one), None) => Some(one.clone()),
+                    _ => None,
+                }
+            })?;
+        let (path, start) = found;
+        let text = self.file(&path)?;
+        let lines: Vec<&str> = text.lines().collect();
+        Some((
+            path.to_string_lossy().into_owned(),
+            start + 1,
+            extract(&lines, start),
+        ))
     }
 }
 
@@ -946,6 +1070,9 @@ mod tests {
         // Without the note's notation, `B(` is not CanBeWithout.
         let hit = query.matched("imply `D(y,x) ↔ ¬B(y,x)`", &BTreeMap::new());
         assert_eq!(coverage(&hit), (3, 6));
+        let ascii = Query::parse("DependsForBeing <-> ¬CanBeWithout");
+        let unicode = Query::parse("DependsForBeing ↔ ¬CanBeWithout");
+        assert_eq!(ascii.items, unicode.items);
         assert!(!query.substantial(&query.matched("↔ ¬ and not", &BTreeMap::new())));
         assert!(!has_call("BAD(x)", "D"));
         assert_eq!(
@@ -981,6 +1108,33 @@ mod tests {
             superseded_lines("a\nSuperseded by the 2026 note\nc").len(),
             1
         );
+    }
+
+    #[test]
+    fn declarations_resolve_outside_their_namespace_module() {
+        let root = std::env::temp_dir().join(format!("truth-lean-source-{}", std::process::id()));
+        let _ = std::fs::remove_dir_all(&root);
+        let file = root.join("TruthCore/Greek/Physics/BookIV/Chapter8.lean");
+        std::fs::create_dir_all(file.parent().unwrap()).unwrap();
+        std::fs::write(
+            &file,
+            "namespace TruthCore.Greek.Physics\nsection\n/-- doc -/\ndef VoidReading (R : Prop) : Prop :=\n  R → ¬ R\nend\nend TruthCore.Greek.Physics\n",
+        )
+        .unwrap();
+        std::fs::write(
+            root.join("TruthCore/Greek/Physics.lean"),
+            "namespace TruthCore.Greek.Physics\nend TruthCore.Greek.Physics\n",
+        )
+        .unwrap();
+        let mut source = LeanSource::new(&root);
+        let (path, line, block) = source.block("TruthCore.Greek.Physics.VoidReading").unwrap();
+        assert_eq!(
+            (path.as_str(), line),
+            ("TruthCore/Greek/Physics/BookIV/Chapter8.lean", 4)
+        );
+        assert!(block.ends_with("R → ¬ R"));
+        assert!(source.block("TruthCore.Greek.Physics.Missing").is_none());
+        std::fs::remove_dir_all(&root).unwrap();
     }
 
     #[test]

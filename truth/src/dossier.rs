@@ -50,6 +50,10 @@ pub struct FrontierView {
     pub floor: Vec<Value>,
     #[serde(default)]
     pub items: Vec<Value>,
+    /// The frontier's refutation entries (`relation_id`, `verified`,
+    /// `unestablished_premise_statement_ids`, `counted`, …).
+    #[serde(default)]
+    pub refutations: Vec<Value>,
     #[serde(default)]
     routes: RouteReport,
     #[serde(skip)]
