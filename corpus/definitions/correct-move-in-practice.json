@@ -6,5 +6,20 @@
   "definition": "`P.Correct m`: the move m (an affirmation, confession or condemnation made in the practice) is correct by the grammar of the practice P, that is, it is a move the practice's rules make right, not merely one some participant makes.",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Alternatives.Fideism.Practice.Correct",
-  "note": "Analytical vocabulary for the fideist bundle (#1010): 'grammar' in the Wittgensteinian sense the SEP entries report. It fixes no theory of what makes a move correct; the internal-grammar thesis supplies one direction."
+  "note": "Analytical vocabulary for the fideist bundle (#1010): 'grammar' in the Wittgensteinian sense the SEP entries report. It fixes no theory of what makes a move correct; the internal-grammar thesis supplies one direction.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Practice.Correct m says that the move m (an affirmation, confession or condemnation made in the practice) is correct by the practice's grammar: the practice's rules make it right, not merely that some participant makes it. 'Grammar' is meant in the Wittgensteinian sense the SEP entries report. It is a field of a religious practice viewed as a language game (TruthCore.Alternatives.Fideism, #1010), supplied by each model.",
+    "examples": [
+      "Confessing the creed's 'one God, the Father almighty' in the Catholic practice, as a move its rules make right."
+    ],
+    "exclusions": [
+      "A move some participant makes that the rules do not license.",
+      "Truth of the move's content judged by a standard outside the practice: that is the separate predicate AnswersToSharedReason."
+    ],
+    "open_obligations": [
+      "No theory of what makes a move correct is fixed; the internal-grammar thesis STMT-WF-RELIGION-INTERNAL-GRAMMAR (OwnStandard m → Correct m) supplies only one direction, and it is an open fideist commitment.",
+      "No formalization candidate from existing vocabulary."
+    ]
+  }
 }

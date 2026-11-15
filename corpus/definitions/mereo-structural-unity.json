@@ -6,5 +6,20 @@
   "definition": "Within the toy history, coordinated self-maintaining activity joined by operational causal continuity across replacement of components. Such organization is represented by observable predicates and is not defined to be an individual substance.",
   "basis": "stipulative",
   "note": "An operational model component, not a sufficient metaphysical criterion for a substance. Needed to distinguish functional integration from substantial unity in #329 and #330.",
-  "lean_declaration": "TruthCore.Mereology.Vitalism.Scenario.Integrated"
+  "lean_declaration": "TruthCore.Mereology.Vitalism.Scenario.Integrated",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Scenario.Integrated p, read as structural unity, says that the system at phase p shows coordinated self-maintaining activity, joined to other phases by operational causal continuity across replacement of components. It is a predicate on the two phases (early, late) of the toy turnover history in TruthCore.Mereology.Vitalism (#329), supplied by each scenario. It is an operational component, not a criterion of being one substance.",
+    "examples": [
+      "Both phases of the turnover profile: the system remains integrated though every original component has been replaced."
+    ],
+    "exclusions": [
+      "Substantial unity (SubstantialUnity): no inference passes from integration to substantial status; the countermodels differ exactly there (DISAMB-MEREO-UNITY).",
+      "Numerical identity of a substance across phases (Continuity is a process-level successor relation, not identity)."
+    ],
+    "open_obligations": [
+      "Whether structural unity is sufficient or necessary for substantial unity is the open question of #329 and #330.",
+      "No formalization candidate: the field is an observable input of the toy history."
+    ]
+  }
 }
