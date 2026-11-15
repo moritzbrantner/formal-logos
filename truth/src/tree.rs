@@ -641,6 +641,9 @@ impl Builder<'_> {
     /// an unexpanded `strength_neighbor` while the budget allows.
     fn strength(&mut self) {
         let corpus = self.index.corpus;
+        // The statements the walks reached: a neighbor added here does not
+        // admit further relations, whatever the relation order.
+        let seeds: HashSet<String> = self.statements.keys().cloned().collect();
         for (id, record) in corpus.records_by_id("relations") {
             let fields = &record.fields;
             if fields.get("predicate").and_then(Value::as_str) != Some("strengthens") {
@@ -651,10 +654,10 @@ impl Builder<'_> {
             else {
                 continue;
             };
-            let known = |id: &str| self.statements.contains_key(id);
-            if !known(&strong) && !known(&weak) {
+            if !seeds.contains(&strong) && !seeds.contains(&weak) {
                 continue;
             }
+            let known = |id: &str| self.statements.contains_key(id);
             let missing = usize::from(!known(&strong)) + usize::from(!known(&weak));
             if missing > 0 {
                 if self.count() + missing > self.options.budget {
@@ -1299,6 +1302,22 @@ mod tests {
                 "predicate": "strengthens", "object_kind": "statement", "object_id": "P",
                 "verification_result_id": "RES-ARG-REG", "note": "S entails P"}),
         );
+        // A chain beyond the view: N1 strengthens Q (a co-premise) and N2
+        // strengthens N1; only the first touches a reached statement.
+        for (id, strong, weak) in [("REL-N1", "N1", "Q"), ("REL-N2", "N2", "N1")] {
+            write(
+                &root,
+                &format!("corpus/statements/{strong}.json"),
+                json!({"id": strong, "paraphrase": "p"}),
+            );
+            write(
+                &root,
+                &format!("corpus/relations/{id}.json"),
+                json!({"id": id, "subject_kind": "statement", "subject_id": strong,
+                    "predicate": "strengthens", "object_kind": "statement", "object_id": weak,
+                    "verification_result_id": "RES-NONE", "note": "n"}),
+            );
+        }
         write(
             &root,
             "corpus/definitions/DEF-1.json",
@@ -1356,6 +1375,11 @@ mod tests {
         assert_eq!(strength[0].from, "S");
         assert_eq!(strength[0].relation_id.as_deref(), Some("REL-S"));
         assert!(strength[0].verified);
+        // A neighbor does not admit further strength relations.
+        assert_eq!(edges(&view, "strengthens", "Q")[0].from, "N1");
+        assert!(!edges(&view, "strengthens", "Q")[0].verified);
+        assert!(edges(&view, "strengthens", "N1").is_empty());
+        assert!(view.statements.iter().all(|n| n.id != "N2"));
         // Up: ARG-U uses X; its co-premise Q and conclusion U join the view.
         let up = edges(&view, "uses", "X");
         assert_eq!(up.len(), 1);
