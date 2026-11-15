@@ -133,6 +133,46 @@ reading is not a silent replacement. Historical reports, mechanisms and
 bounded map availability remain distinct from historical truth, fulfilled
 causation and a census of possible theories.
 
+## Deferred research directions (owner decision, 2026-11-15)
+
+These are **unresolved research questions**, preserved here after being removed from the
+active GitHub issue queue. Deferral means *not currently scheduled*, not proved,
+refuted, completed, abandoned forever, or excluded from the argument graph.
+Existing statements, definitions, results, attempts, sources and linked subject
+notes retain their own evidence status. The closed issue remains a permanent
+link to its full original brief, witness references and earlier findings.
+Resume a direction by checking its current dossier and evidence first, then
+opening or reopening **one bounded investigation** in the [current #143
+handoff](https://github.com/moritzbrantner/formal-logos/issues/143). This
+paragraph is research context in the existing case note, **not a second task
+registry**. Existing active issues #345 (Fourth Way) and #349 (ground logic)
+remain open despite their historical connection to the deferred prior-art survey.
+
+### Historical stage-3 routes — still premises on the Catholicism root
+
+- [#379](https://github.com/moritzbrantner/formal-logos/issues/379) **Campaign umbrella:** the Church/Christ/revelation branch remains required on the Catholicism root. Existing roots and provisional historical comparison are in the [resurrection pilot](resurrection-pilot.md), [founding note](founding-authorization-source.md) and [creed evidence](creed-proposal-evidence.md). Resume when a scoped historical/abductive question becomes the selected highest-value research step, not by assuming stage 3 is established.
+- [#380](https://github.com/moritzbrantner/formal-logos/issues/380) **Revelation:** can a divine agent communicate recognizable revelation, and what evidence would distinguish miraculous signs from Hume's testimonial rival? Retain the attribute-to-communication bridge and its OPEN evidential standard in [recognition research](notes/revelation-positive-recognition.md) and the [premise dossier](alternatives/premises/revelation-possible-and-recognizable.md).
+- [#381](https://github.com/moritzbrantner/formal-logos/issues/381) **Jesus' authority claims:** distinguish Mk 2/14, Jn 8/10, Mt 11 and Pauline claims from later legendary development or a merely apocalyptic reading. Separate historical warrant for his claims from the resurrection; [Philippians research](philippians-christology.md) preserves relevant text/formalization boundaries.
+- [#382](https://github.com/moritzbrantner/formal-logos/issues/382) **Resurrection:** the [six-profile, fifteen-question pilot](resurrection-pilot.md) does not settle historical truth or priors. Test separately attested crucifixion, burial, tomb, appearance and conversion claims against swoon, theft, wrong-tomb, vision and legend accounts with explicit evidence and assumptions.
+- [#383](https://github.com/moritzbrantner/formal-logos/issues/383) **Visible Church:** test whether the Mt/John/Acts/1 Clement commissions warrant an enduring visible society, officers and authority rather than invisible/charismatic rival accounts; Ignatius and Irenaeus require retained reading/interpretation work. Reuse the [source note](visible-church-source.md) and [founding note](founding-authorization-source.md).
+- [#384](https://github.com/moritzbrantner/formal-logos/issues/384) **Catholic identity:** evaluate continuity of succession, doctrine, sacraments and Rome, with Orthodox/Anglican/Protestant comparators. Do not identify `subsistit in` with unrestricted institutional identity by definition. See the [identity premise](alternatives/premises/christs-church-is-the-catholic-church.md).
+
+### Ancient argument/source campaigns — candidates for later selected warrants
+
+- [#8](https://github.com/moritzbrantner/formal-logos/issues/8) **Aristotle Physics IV–VIII:** substantive chapter-range readings and actual argument reconstruction remain incomplete. Continue from already represented passages/arguments and the [act/potency assessment](act-potency-theory.md) only when a live inference requires the range; skip repetitive material, and do not make exhaustive source coverage a logic prerequisite.
+- [#359](https://github.com/moritzbrantner/formal-logos/issues/359) **Proclus:** propositions 1–13 beyond the already pinned propositions 1–2, especially participatory unity, superiority of producing cause and the Good, could bear on composition and first-ground routes. The [Proclus unity note](proclus-unity.md) retains current interpretation boundaries; any derivation and sense bridges remain OPEN.
+- [#360](https://github.com/moritzbrantner/formal-logos/issues/360) **Plato:** test Phaedo participation-as-cause, Symposium's Beauty, and Republic's Good against Fourth-Way maximum/perfection transfers. Reuse [forms](platonic-forms.md), [participation](participation-grounding.md) and [Third Man](third-man.md) analyses; do not turn a participation claim into a causal bridge silently.
+- [#361](https://github.com/moritzbrantner/formal-logos/issues/361) **Plotinus:** test V.4.1 and VI.9.1–6 on composition, simplicity and uniqueness against explicit two-simple-root countermodels in the [uniqueness research](q11-uniqueness-connection.md) and [plurality analysis](notes/necessary-simple-plurality.md). The missing exclusion premise is not assumed.
+- [#362](https://github.com/moritzbrantner/formal-logos/issues/362) **Aristotle Metaphysics Λ/Physics VIII:** contrast an eternal-motion-to-pure-act argument and regress-to-first-mover with the First-Way [act/potency note](act-potency-theory.md), preserving the extra eternal-motion premise and the distinction from Aquinas's route.
+
+### Comparative prior art — reference work, not active root-route prerequisites
+
+- [#342](https://github.com/moritzbrantner/formal-logos/issues/342) **Survey inventory:** the 2026-10-26 comparison remains a historical list, not a live claim of novelty. Its future cross-checks below do not block already scoped core arguments, and active #345/#349 retain their separate issues.
+- [#343](https://github.com/moritzbrantner/formal-logos/issues/343) **Benzmüller's Lean Scott/Gödel port:** compare exact modal-frame assumptions and NE/collapse claims against the [Scott audit](scott-necessary-existence-audit.md); no foreign Lean package or stronger theorem is inferred.
+- [#344](https://github.com/moritzbrantner/formal-logos/issues/344) **Romero–Pérez on Aquinas/Kalam:** test alleged First/Second-Way conclusion weakness and cause-sense equivocation against currently typed causal arguments, preserving the distinction between a valid conditional theorem and the intended metaphysical reading.
+- [#346](https://github.com/moritzbrantner/formal-logos/issues/346) **Blumson AFP Mereology:** outstanding correspondence table for M/MM/EM/CEM/GEM and exact axiom dependencies or countermodels; Lean mereology discriminators already exist but do not complete that source comparison. See [fusion and remainder](notes/universal-fusion-grounding.md).
+- [#347](https://github.com/moritzbrantner/formal-logos/issues/347) **Nakamura's Spinoza models:** compare four-element PSR/P5 countermodels with current necessary-root/uniqueness countermodels in the [plurality analysis](notes/necessary-simple-plurality.md); model resemblance is not proof of philosophical equivalence.
+
 ## Working method
 
 - **Coordinator and bounded workers.** Follow the [systematic loop](systematic-corpus-loop.md): the master prioritizes live uncertainties, gives fresh workers explicit context and budgets, integrates useful early returns, revises provisional judgments and requeues concrete next steps. Use isolated writer checkouts and the ownership rules in `AGENTS.md`; parallel lanes A/B/C remain available. Keep decisions and the one current handoff in the existing records.
