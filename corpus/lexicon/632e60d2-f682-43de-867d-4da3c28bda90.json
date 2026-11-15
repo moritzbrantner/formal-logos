@@ -1,0 +1,7 @@
+{
+  "id": "632e60d2-f682-43de-867d-4da3c28bda90",
+  "label": "dependency (ordinary)",
+  "lemma": "dependency",
+  "class": "ordinary",
+  "gloss": "A module, library or record that another relies on."
+}
