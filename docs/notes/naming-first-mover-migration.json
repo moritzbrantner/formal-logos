@@ -1253,12 +1253,12 @@
       "path": "corpus/definitions/catholic-church-proposal-subject.json",
       "status": "inspected",
       "classification": "bounded_inspection",
-      "finding": "Inspected existing semantic record at its advertised scope: The institutional Church whose binding teaching office is exercised by the Roman Pontiff and the College of Bishops in communion with him, rather than any assertion by a member or office-holder. For definitive doctrinal proposal, the specified modes include the Roman Pontiff speaking ex cathedra, the College of Bishops gathered in council, and the ordinary and universal magisterium of bishops dispersed throughout the world in communion with the Pope. This is the subject of the CDF classification, used for the skeleton’s named Catholic society. No meaning change or renewed source certification.",
+      "finding": "Inspected existing semantic record at its advertised scope: The institutional Church whose binding teaching office is exercised by the Roman Pontiff and the College of Bishops in communion with him, rather than any assertion by a member or office-holder. For definitive doctrinal proposal, the specified modes include the Roman Pontiff speaking ex cathedra, the College of Bishops gathered in council, and the ordinary and universal magisterium of bishops dispersed throughout the world in communion with the Pope. This is the subject of the CDF classification, used for the skeleton’s named Catholic society. No meaning change or renewed source certification. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "864fed17ce698755839362ba28967453ab7abcea38fbc8f4cb7c22e0efa029c1",
         "lean_declaration": "TruthCore.Case.Catholicism.Signature.catholicChurch"
       },
-      "reviewed_sha256": "53d87dd92057b1db448405e9171d59caf54aadb573582c3edc64ec0068268892"
+      "reviewed_sha256": "baaef25e7a9b0c3c77c048f248d995550e114c88f910b6c8c3e9fd086ef7b92a"
     },
     {
       "kind": "definitions",
@@ -1292,12 +1292,12 @@
       "path": "corpus/definitions/church-visible-authoritative-society.json",
       "status": "inspected",
       "classification": "bounded_inspection",
-      "finding": "Inspected existing semantic record at its advertised scope: The community described in Lumen gentium §8 as visibly constituted, continually sustained, equipped with hierarchical organs, entrusted to Peter and the apostles for pastoral government, and established in perpetuity. This is the visible/social aspect of the one complex Church of which the source also speaks spiritually; it is not a claim that the Church is exhausted by an external organization or that every later institutional detail was fixed at its inception. No meaning change or renewed source certification.",
+      "finding": "Inspected existing semantic record at its advertised scope: The community described in Lumen gentium §8 as visibly constituted, continually sustained, equipped with hierarchical organs, entrusted to Peter and the apostles for pastoral government, and established in perpetuity. This is the visible/social aspect of the one complex Church of which the source also speaks spiritually; it is not a claim that the Church is exhausted by an external organization or that every later institutional detail was fixed at its inception. No meaning change or renewed source certification. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "550e3c376e73e45eb91aaf1e76edf674dd1778572aeb20f40f32bd2317cdf2cb",
         "lean_declaration": "TruthCore.Case.Catholicism.Signature.VisibleWithAuthority"
       },
-      "reviewed_sha256": "40b4b0dba1c6a0685e1cf7beef2ea3c08041dc1af9c5c740b5c8addf04274706"
+      "reviewed_sha256": "1d9183d8419daf36c0a59d4d608751d87da766d1f1e94efaca03e31bb5fb8796"
     },
     {
       "kind": "definitions",
@@ -1331,12 +1331,12 @@
       "path": "corpus/definitions/definitively-proposes-as-revealed.json",
       "status": "inspected",
       "classification": "reused_unchanged_audit",
-      "finding": "Reuse unchanged prior audit disposition: Existing interpretation retained: A Church proposal that a proposition is to be believed as divinely revealed, made by solemn judgment or by the ordinary and universal magisterium. This is the proposal condition in Dei Filius ch. 3, paragraph 4, not an arbitrary assertion by Church members or authorities. The source's rule for divine and catholic faith separately requires that the content be contained in the word of God written or handed down; the act of proposing it does not by definition establish that separate condition or its truth. No new structural law, source attribution or independently established premise is introduced.",
+      "finding": "Reuse unchanged prior audit disposition: Existing interpretation retained: A Church proposal that a proposition is to be believed as divinely revealed, made by solemn judgment or by the ordinary and universal magisterium. This is the proposal condition in Dei Filius ch. 3, paragraph 4, not an arbitrary assertion by Church members or authorities. The source's rule for divine and catholic faith separately requires that the content be contained in the word of God written or handed down; the act of proposing it does not by definition establish that separate condition or its truth. No new structural law, source attribution or independently established premise is introduced. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "98111b7b66873c2cf8f978c755a79ca089b3ed1d35d40e72d0adbd3191248282",
         "lean_declaration": "TruthCore.Case.Catholicism.Signature.DefinitivelyProposesAsRevealed"
       },
-      "reviewed_sha256": "136c7810326b7a11dbf4b2c8c46d72d218142d763de44664618848ad647a67d5"
+      "reviewed_sha256": "f364b0073d5b4c03e26821506e88df1c9da15a81014f128023049dfb331ef81f"
     },
     {
       "kind": "definitions",

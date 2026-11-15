@@ -5,5 +5,20 @@
   "definition": "PRIMITIVE. Incomprehensible g: no created intellect knows g as perfectly as g is knowable. After ST I q.12 a.7 (to comprehend is to know a thing as perfectly as it is knowable; God is infinitely knowable and a created intellect knows finitely). Not 'unknowable': a thing can be known truly without being comprehended. Counterexample: a theorem fully understood by a mathematician.",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Causality.DeiFiliusAttributeField.Primitives.Incomprehensible",
-  "note": "Explicitly identified primitive (Encode first). Open semantic obligation: typed created intellects and a measure of knowability. Two open bridges constrain it, each giving a sufficient condition: 'Whatever is INFINITE_1 is INCOMPREHENSIBLE_1' and the weaker sense bridge 'Whatever is INCOMPREHENSIBLE_2 is INCOMPREHENSIBLE_1', from the typed sibling INCOMPREHENSIBLE_2 (94ebe0d2: infinite and comprehended by no caused intellect, with the primitive relation Comprehends, 4afe4ab4; disambiguation d63d0696). INCOMPREHENSIBLE_2 types the quantifier structure and the ground; a measure of knowability, from which Comprehends could be defined, remains open."
+  "note": "Explicitly identified primitive (Encode first). Open semantic obligation: typed created intellects and a measure of knowability. Two open bridges constrain it, each giving a sufficient condition: 'Whatever is INFINITE_1 is INCOMPREHENSIBLE_1' and the weaker sense bridge 'Whatever is INCOMPREHENSIBLE_2 is INCOMPREHENSIBLE_1', from the typed sibling INCOMPREHENSIBLE_2 (94ebe0d2: infinite and comprehended by no caused intellect, with the primitive relation Comprehends, 4afe4ab4; disambiguation d63d0696). INCOMPREHENSIBLE_2 types the quantifier structure and the ground; a measure of knowability, from which Comprehends could be defined, remains open.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Primitives.Incomprehensible g says that no created intellect knows g as perfectly as g is knowable (ST I q.12 a.7). It is a supplied predicate on beings, one of the Dei Filius ch. 1 attribute primitives. It does not mean unknowable: a thing can be known truly without being comprehended.",
+    "examples_unavailable": "The corpus applies the predicate only to the being the case investigates; an instance would presuppose that conclusion. Its counterexample (a theorem fully understood by a mathematician) marks the boundary.",
+    "exclusions": [
+      "Being unknowable, or known by no one at all.",
+      "A theorem fully understood by a mathematician.",
+      "INCOMPREHENSIBLE_2, the typed sibling (infinite and comprehended by no caused intellect, with the primitive relation Comprehends): reaches INCOMPREHENSIBLE_1 only by an open sense bridge (Incomprehensible disambiguation d63d0696)."
+    ],
+    "open_obligations": [
+      "No axiom constrains it; two open bridges give sufficient conditions only: 'Whatever is INFINITE_1 is INCOMPREHENSIBLE_1' and 'Whatever is INCOMPREHENSIBLE_2 is INCOMPREHENSIBLE_1'.",
+      "Typed created intellects and a measure of knowability are OPEN.",
+      "Formalization candidate: with Comprehends and a typed 'created intellect', define it as 'no created intellect comprehends g', which is the shape INCOMPREHENSIBLE_2 already types; this would make the sense bridge definitional, so it needs the measure of knowability first."
+    ]
+  }
 }

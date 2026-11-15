@@ -5,5 +5,20 @@
   "definition": "PRIMITIVE. MostBlessed g: g has, in and from itself, the perfect good of an intellectual nature. After ST I q.26 a.1 (beatitude is the perfect good of an intellectual nature, and belongs to God in the highest degree). Counterexample: a stone (no intellectual nature); a human being in this life (an intellectual nature without its perfect good).",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Causality.DeiFiliusAttributeField.Primitives.MostBlessed",
-  "note": "Explicitly identified primitive (Encode first). Open semantic obligation: a typed account of beatitude as possession of an intellectual nature's perfect good. Two open bridges constrain it, each giving a sufficient condition: 'Whatever is PERFECT_2 and HAS_INTELLECT_1 is BLESSED_1' and the weaker sense bridge 'Whatever is BLESSED_2 is BLESSED_1' (a23dd1ac), from the typed sibling BLESSED_2 (d0b7b32b: intellect, universal perfection, goodness as to being and act in understanding; disambiguation 70f4f510). Ex se, self-knowledge of one's sufficiency and formal understanding remain untyped."
+  "note": "Explicitly identified primitive (Encode first). Open semantic obligation: a typed account of beatitude as possession of an intellectual nature's perfect good. Two open bridges constrain it, each giving a sufficient condition: 'Whatever is PERFECT_2 and HAS_INTELLECT_1 is BLESSED_1' and the weaker sense bridge 'Whatever is BLESSED_2 is BLESSED_1' (a23dd1ac), from the typed sibling BLESSED_2 (d0b7b32b: intellect, universal perfection, goodness as to being and act in understanding; disambiguation 70f4f510). Ex se, self-knowledge of one's sufficiency and formal understanding remain untyped.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Primitives.MostBlessed g says that g has, in and from itself, the perfect good of an intellectual nature (beatitude, ST I q.26 a.1), to the highest degree. It is a supplied predicate on beings, one of the Dei Filius ch. 1 attribute primitives.",
+    "examples_unavailable": "The predicate is meant for the highest degree of beatitude, which the corpus applies only to the being the case investigates; no uncontested instance can be given without presupposing that conclusion. The record's counterexamples (a stone, a human being in this life) mark its boundary.",
+    "exclusions": [
+      "A being without an intellectual nature, such as a stone.",
+      "An intellectual nature without its perfect good, such as a human being in this life.",
+      "BLESSED_2, the typed sibling (intellect, universal perfection, goodness as to being and act in understanding): passes to BLESSED_1 only by an open sense bridge (Most blessed disambiguation 70f4f510)."
+    ],
+    "open_obligations": [
+      "No axiom constrains it; two open bridges give sufficient conditions only: 'Whatever is PERFECT_2 and HAS_INTELLECT_1 is BLESSED_1' and 'Whatever is BLESSED_2 is BLESSED_1'.",
+      "'Ex se', self-knowledge of one's own sufficiency and formal understanding remain untyped.",
+      "Formalization candidate: a typed account of beatitude as possession of an intellectual nature's perfect good would allow a definition; BLESSED_2 types only some of its grounds."
+    ]
+  }
 }

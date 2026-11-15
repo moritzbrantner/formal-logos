@@ -1118,12 +1118,12 @@
       "path": "corpus/definitions/definitively-proposes-as-revealed.json",
       "status": "inspected",
       "classification": "intentional_abstraction",
-      "finding": "Existing interpretation retained: A Church proposal that a proposition is to be believed as divinely revealed, made by solemn judgment or by the ordinary and universal magisterium. This is the proposal condition in Dei Filius ch. 3, paragraph 4, not an arbitrary assertion by Church members or authorities. The source's rule for divine and catholic faith separately requires that the content be contained in the word of God written or handed down; the act of proposing it does not by definition establish that separate condition or its truth. No new structural law, source attribution or independently established premise is introduced.",
+      "finding": "Existing interpretation retained: A Church proposal that a proposition is to be believed as divinely revealed, made by solemn judgment or by the ordinary and universal magisterium. This is the proposal condition in Dei Filius ch. 3, paragraph 4, not an arbitrary assertion by Church members or authorities. The source's rule for divine and catholic faith separately requires that the content be contained in the word of God written or handed down; the act of proposing it does not by definition establish that separate condition or its truth. No new structural law, source attribution or independently established premise is introduced. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "98111b7b66873c2cf8f978c755a79ca089b3ed1d35d40e72d0adbd3191248282",
         "lean_declaration": "TruthCore.Case.Catholicism.Signature.DefinitivelyProposesAsRevealed"
       },
-      "reviewed_sha256": "136c7810326b7a11dbf4b2c8c46d72d218142d763de44664618848ad647a67d5"
+      "reviewed_sha256": "f364b0073d5b4c03e26821506e88df1c9da15a81014f128023049dfb331ef81f"
     },
     {
       "kind": "definitions",
@@ -1300,12 +1300,12 @@
       "path": "corpus/definitions/in-act-formally.json",
       "status": "inspected",
       "classification": "intentional_abstraction",
-      "finding": "Existing interpretation retained: A cause is in act formally in a perfection when it has that perfection in the same form in which it produces it, as fire that is hot makes the wood hot. No new structural law, source attribution or independently established premise is introduced. Sense-indexed follow-up: lean_declaration now names the sense's own declaration in the sense-fork frame; the definition text and the audited results are unchanged.",
+      "finding": "Existing interpretation retained: A cause is in act formally in a perfection when it has that perfection in the same form in which it produces it, as fire that is hot makes the wood hot. No new structural law, source attribution or independently established premise is introduced. Sense-indexed follow-up: lean_declaration now names the sense's own declaration in the sense-fork frame; the definition text and the audited results are unchanged. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "3575a6f229d79aab36ae187d9cff79515bc2b3ea4b6ea67142b9d80f5740fe8b",
         "lean_declaration": null
       },
-      "reviewed_sha256": "c4400aa87a336e0bf3c0121d9d8644fbe2a78bab03aeff26549ea82a722ca541"
+      "reviewed_sha256": "64489510f8add8846a344f0e8f223c87c8afe076eb489966d59ab14cc22e72df"
     },
     {
       "kind": "definitions",
@@ -1313,12 +1313,12 @@
       "path": "corpus/definitions/in-act-virtually.json",
       "status": "inspected",
       "classification": "intentional_abstraction",
-      "finding": "Existing interpretation retained: A cause is in act virtually, or eminently, in a perfection when it has it in a higher way, as a power to produce it, without having it in the same form: whatever perfection is in the effect is in the effective cause 'univocally or more eminently' (ST I q.4 a.2). No new structural law, source attribution or independently established premise is introduced. Sense-indexed follow-up: lean_declaration now names the sense's own declaration in the sense-fork frame; the definition text and the audited results are unchanged.",
+      "finding": "Existing interpretation retained: A cause is in act virtually, or eminently, in a perfection when it has it in a higher way, as a power to produce it, without having it in the same form: whatever perfection is in the effect is in the effective cause 'univocally or more eminently' (ST I q.4 a.2). No new structural law, source attribution or independently established premise is introduced. Sense-indexed follow-up: lean_declaration now names the sense's own declaration in the sense-fork frame; the definition text and the audited results are unchanged. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "cce492e875524e50c7ab8b9ccde2d4329996ab639a8ba7edeb9503ffeefeedc9",
         "lean_declaration": null
       },
-      "reviewed_sha256": "df703e3bbff97b25897d59a06c99536fccdba482e490848cda7e079d5d4eee73"
+      "reviewed_sha256": "b9ead212b973d3b468acffa5d72e7343675d44836b5e8fabca403d2de2968074"
     },
     {
       "kind": "definitions",

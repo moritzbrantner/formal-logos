@@ -561,12 +561,12 @@
       "path": "corpus/definitions/in-act-formally.json",
       "status": "inspected",
       "classification": "intentional_abstraction",
-      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced. Sense-indexed follow-up: lean_declaration now names the sense's own declaration in the sense-fork frame; the definition text and the audited results are unchanged.",
+      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced. Sense-indexed follow-up: lean_declaration now names the sense's own declaration in the sense-fork frame; the definition text and the audited results are unchanged. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "3575a6f229d79aab36ae187d9cff79515bc2b3ea4b6ea67142b9d80f5740fe8b",
         "lean_declaration": null
       },
-      "reviewed_sha256": "c4400aa87a336e0bf3c0121d9d8644fbe2a78bab03aeff26549ea82a722ca541"
+      "reviewed_sha256": "64489510f8add8846a344f0e8f223c87c8afe076eb489966d59ab14cc22e72df"
     },
     {
       "kind": "definitions",
@@ -574,12 +574,12 @@
       "path": "corpus/definitions/in-act-virtually.json",
       "status": "inspected",
       "classification": "intentional_abstraction",
-      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced. Sense-indexed follow-up: lean_declaration now names the sense's own declaration in the sense-fork frame; the definition text and the audited results are unchanged.",
+      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced. Sense-indexed follow-up: lean_declaration now names the sense's own declaration in the sense-fork frame; the definition text and the audited results are unchanged. L3b review (#1652): added a formal_gap prose block (meaning, examples, exclusions, open obligations); term, definition, note and lean_declaration unchanged, and the block adds no binding, premise or bridge.",
       "before": {
         "sha256": "cce492e875524e50c7ab8b9ccde2d4329996ab639a8ba7edeb9503ffeefeedc9",
         "lean_declaration": null
       },
-      "reviewed_sha256": "df703e3bbff97b25897d59a06c99536fccdba482e490848cda7e079d5d4eee73"
+      "reviewed_sha256": "b9ead212b973d3b468acffa5d72e7343675d44836b5e8fabca403d2de2968074"
     },
     {
       "kind": "definitions",
