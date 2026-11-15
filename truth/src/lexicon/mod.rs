@@ -526,19 +526,27 @@ impl Lexicon {
         (!parts.is_empty()).then_some(parts)
     }
 
-    /// The longest multi-word lemma starting at `words[i]`, as (length, entry).
-    fn phrase_at(&self, words: &[(String, bool)], i: usize) -> Option<(usize, usize)> {
+    /// The longest multi-word lemma starting at `words[i]`, as (length, every
+    /// entry with that lemma), so an ordinary sibling of a technical phrase is
+    /// kept as an alternative reading.
+    fn phrase_at(&self, words: &[(String, bool)], i: usize) -> Option<(usize, Vec<usize>)> {
         let list = self.phrases.get(&words[i].0)?;
-        list.iter().find_map(|(phrase, index)| {
+        let matches = |phrase: &Vec<String>| {
             let n = phrase.len();
             if i + n > words.len() || !(1..n).all(|k| words[i + k].1) {
-                return None;
+                return false;
             }
             let inner = (1..n - 1).all(|k| words[i + k].0 == phrase[k]);
             let last = &words[i + n - 1].0;
-            let tail = *last == phrase[n - 1] || candidates(last).contains(&phrase[n - 1]);
-            (inner && tail).then_some((n, *index))
-        })
+            inner && (*last == phrase[n - 1] || candidates(last).contains(&phrase[n - 1]))
+        };
+        let (best, _) = list.iter().find(|(phrase, _)| matches(phrase))?;
+        let found = list
+            .iter()
+            .filter(|(phrase, _)| phrase == best)
+            .map(|(_, index)| *index)
+            .collect();
+        Some((best.len(), found))
     }
 }
 
@@ -594,9 +602,9 @@ pub fn trace_text(lexicon: &Lexicon, senses: &Senses, text: &str) -> Vec<(String
     let flush = |words: &mut Vec<(String, bool)>, out: &mut Vec<(String, Trace)>| {
         let mut i = 0;
         while i < words.len() {
-            if let Some((n, index)) = lexicon.phrase_at(words, i) {
+            if let Some((n, found)) = lexicon.phrase_at(words, i) {
                 for (word, _) in &words[i..i + n] {
-                    out.push((word.clone(), Trace::Entries(vec![index])));
+                    out.push((word.clone(), Trace::Entries(found.clone())));
                 }
                 i += n;
                 continue;

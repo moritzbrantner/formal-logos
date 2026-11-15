@@ -341,3 +341,27 @@ fn forms_of_a_phrase_are_indexed() {
     statement(&fx.0, "s1", "The cause is per-se prior.", &[D1]);
     check_ok(&fx.0);
 }
+
+#[test]
+fn an_ordinary_phrase_sibling_exempts_regardless_of_file_order() {
+    let fx = fixture("phrasesibling");
+    entry(
+        &fx.0,
+        16,
+        json!({"lemma": "per se", "class": "technical", "definition_ids": [D1, D2], "disambiguation_ids": [X]}),
+    );
+    statement(&fx.0, "s1", "The fixture is per se prior.", &[]);
+    assert!(super::check(&fx.0).unwrap_err().contains("'per se'"));
+    for n in [1u32 << 31, 0x0f] {
+        entry(
+            &fx.0,
+            n,
+            json!({"lemma": "per se", "class": "ordinary", "gloss": "Of itself.", "technical_separation": "Everyday use."}),
+        );
+        check_ok(&fx.0);
+        fs::remove_file(fx.0.join(format!(
+            "{DIRECTORY}/{n:08x}-0000-4000-8000-000000000000.json"
+        )))
+        .unwrap();
+    }
+}
