@@ -2,6 +2,7 @@ import { afterAll, beforeAll, expect, test } from "bun:test";
 import path from "node:path";
 import { chromium, type Browser } from "playwright";
 import { label, uid } from "./corpus-records";
+import { expectCount, expectCountAtLeast } from "./browser-waits";
 
 let browser: Browser;
 let server: ReturnType<typeof Bun.serve>;
@@ -72,12 +73,12 @@ test("certified comparisons preserve selected backgrounds, all obligations and s
   await proof.click();
   await page.waitForURL("**/results/**");
   expect(page.url()).toContain("/results/");
-  expect(await page.getByRole("region", { name: "Certified strength comparisons", exact: true }).count()).toBe(1);
+  await expectCount(page.getByRole("region", { name: "Certified strength comparisons", exact: true }), 1);
   await page.goto(`${base}comparisons/`);
   const all = page.locator("[data-strength-comparison]");
-  expect(await all.count()).toBeGreaterThanOrEqual(3);
-  expect(await page.locator('[data-strength-role="allowed_cases"]').count()).toBeGreaterThanOrEqual(1);
-  expect(await page.locator('[data-strength-role="remainder_identity"]').count()).toBeGreaterThanOrEqual(1);
+  await expectCountAtLeast(all, 3);
+  await expectCountAtLeast(page.locator('[data-strength-role="allowed_cases"]'), 1);
+  await expectCountAtLeast(page.locator('[data-strength-role="remainder_identity"]'), 1);
   expect(await page.locator("main").innerText()).toMatch(/at.?most.?one/i);
   expect(await page.locator("main").innerText()).toContain("No claim of a unique or minimal");
   expect(errors).toEqual([]);

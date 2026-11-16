@@ -3,6 +3,7 @@ import path from "node:path";
 import { chromium, type Browser } from "playwright";
 
 import { uid } from "./corpus-records";
+import { expectCount, expectCountAbove } from "./browser-waits";
 
 let browser: Browser;
 let server: ReturnType<typeof Bun.serve>;
@@ -38,11 +39,11 @@ test("the case-root tree re-roots by click, marks truncation and lists definitio
   page.on("pageerror", (error) => errors.push(error.message));
   await page.goto(new URL(`${basePath}/tree/`, server.url).toString());
   await page.locator(`#tree-root[data-root-id="${caseRoot}"]`).waitFor();
-  expect(await page.locator('[data-testid="tree-truncation"]').count()).toBeGreaterThan(0);
+  await expectCountAbove(page.locator('[data-testid="tree-truncation"]'), 0);
   await page.locator('[data-testid="tree-truncation"]').first().scrollIntoViewIfNeeded();
   expect(await page.locator('[data-testid="tree-truncation"]').first().isVisible()).toBe(true);
   const definitions = page.locator('[data-testid="tree-definitions"] li');
-  expect(await definitions.count()).toBeGreaterThan(0);
+  await expectCountAbove(definitions, 0);
   await definitions.first().locator(`a[href^="${basePath}/definitions/"]`).waitFor();
   expect(await page.locator('[data-testid="tree-formal-status"]').first().textContent()).toMatch(/Lean definition|primitive|no Lean|not yet computed/);
 
@@ -55,7 +56,7 @@ test("the case-root tree re-roots by click, marks truncation and lists definitio
   const url = new URL(page.url());
   expect(url.pathname).toBe(`${basePath}/tree/`);
   expect(url.searchParams.get("id")).toBe(nextId);
-  expect(await page.locator(`[data-testid="tree-statement"][data-role="root"][data-statement-id="${nextId}"]`).count()).toBe(1);
+  await expectCount(page.locator(`[data-testid="tree-statement"][data-role="root"][data-statement-id="${nextId}"]`), 1);
   // The former root, when the budget leaves room for it, is now a dependent of the new root.
   const former = page.locator(`[data-testid="tree-statement"][data-statement-id="${caseRoot}"]`);
   if (await former.count()) expect(await former.getAttribute("data-role")).toBe("dependent");
@@ -72,7 +73,7 @@ test("a statement without a prebuilt tree gives the local command, and statement
   const id = "00000000-0000-4000-8000-000000000000";
   await page.goto(new URL(`${basePath}/tree/?id=${id}`, server.url).toString());
   await page.getByRole("heading", { name: "This tree is generated locally" }).waitFor();
-  expect(await page.getByText(`target/release/truth tree ${id}`).count()).toBe(1);
+  await expectCount(page.getByText(`target/release/truth tree ${id}`), 1);
   await page.goto(new URL(`${basePath}/statements/${caseRoot}/`, server.url).toString());
   await page.getByRole("link", { name: "Argument tree with this proposition as root →" }).click();
   await page.locator(`#tree-root[data-root-id="${caseRoot}"]`).waitFor();

@@ -2,6 +2,7 @@ import { afterAll, beforeAll, expect, test } from "bun:test";
 import { chromium, type Browser } from "playwright";
 import path from "node:path";
 import { paraphrase, short, uid } from "./corpus-records";
+import { expectCountAbove } from "./browser-waits";
 
 let browser: Browser;
 let server: ReturnType<typeof Bun.serve>;
@@ -49,7 +50,7 @@ test("proof exploration retains exact intermediate, overlays and shareable inspe
   await panel.getByText(/Exploration complete/).waitFor();
   await page.locator(`[data-id="${target}"] [data-proof-target="true"]`).waitFor();
   await page.locator(`[data-id="${intermediate}"] [data-proof-junction="true"]`).waitFor();
-  expect(await panel.getByRole("link", { name: short("result", "PILOT-COMPOSED-WITNESS"), exact: true }).count()).toBeGreaterThan(0);
+  await expectCountAbove(panel.getByRole("link", { name: short("result", "PILOT-COMPOSED-WITNESS"), exact: true }), 0);
   await panel.locator(`button[title="${intermediate}"]`).first().click();
   await page.waitForURL((url) => url.searchParams.get("node") === intermediate);
   expect(new URL(page.url()).searchParams.get("explore")).toBe("1");

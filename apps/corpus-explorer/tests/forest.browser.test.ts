@@ -2,6 +2,7 @@ import { afterAll, beforeAll, expect, test } from "bun:test";
 import path from "node:path";
 import { chromium, type Browser, type Locator, type Page } from "playwright";
 import { paraphrase, short, uid } from "./corpus-records";
+import { expectCount, expectCountAbove } from "./browser-waits";
 
 const ROOT = uid("statement", "STMT-CATHOLICISM-TRUE");
 const GOD_ROOT = uid("statement", "STMT-NECESSARY-CLASSICAL-GOD-ROOT");
@@ -47,8 +48,8 @@ test("argument forest: real conclusion routes, comparison, hypothetical reversal
   const primary = page.getByRole("region", { name: "Primary conclusion" });
   const comparison = page.getByRole("region", { name: "Compared conclusion" });
   await primary.getByRole("button", { name: /^Select proposition:/ }).first().waitFor();
-  expect(await comparison.getByRole("button", { name: /^Select proposition:/ }).count()).toBeGreaterThan(0);
-  expect(await primary.getByText(/^OR ·/).count()).toBeGreaterThan(0);
+  await expectCountAbove(comparison.getByRole("button", { name: /^Select proposition:/ }), 0);
+  await expectCountAbove(primary.getByText(/^OR ·/), 0);
 
   const premise = primary.getByRole("button", { name: /^Select proposition:/ }).last();
   await premise.click();
@@ -63,7 +64,7 @@ test("argument forest: real conclusion routes, comparison, hypothetical reversal
   await page.getByRole("region", { name: "Compared conclusion" }).waitFor();
 
   const choices = page.getByLabel("Compare against");
-  expect(await choices.locator("option").count()).toBeGreaterThan(0);
+  await expectCountAbove(choices.locator("option"), 0);
   const last = await choices.locator("option").last().getAttribute("value");
   if (last) {
     await choices.selectOption(last);
@@ -93,18 +94,18 @@ test("single-tree assumptions: all argument routes, deep expansion, scenario sel
   await orLabel.waitFor();
   const total = Number((await orLabel.textContent())?.match(/OR · (\d+)/)?.[1]);
   expect(total).toBeGreaterThan(2);
-  expect(await tree.getByRole("region", { name: /^Argument / }).count()).toBe(total);
-  expect(await tree.locator("[data-readiness]").count()).toBe(total);
-  expect(await tree.getByText("More premises needed").count()).toBeGreaterThan(0);
+  await expectCount(tree.getByRole("region", { name: /^Argument / }), total);
+  await expectCount(tree.locator("[data-readiness]"), total);
+  await expectCountAbove(tree.getByText("More premises needed"), 0);
   await tree.getByText("What-if · unresolved").first().waitFor();
 
   const deeper = tree.getByRole("button", { name: /^Expand all arguments for / });
-  expect(await deeper.count()).toBeGreaterThan(0);
+  await expectCountAbove(deeper, 0);
   await deeper.first().click();
   await page.waitForURL((next) => next.searchParams.getAll("open").some((entry) => entry.includes("/")));
-  expect(await tree.getByText(/^OR · \d+ recorded argument/).count()).toBeGreaterThan(1);
+  await expectCountAbove(tree.getByText(/^OR · \d+ recorded argument/), 1);
   await page.reload();
-  expect(await tree.getByText(/^OR · \d+ recorded argument/).count()).toBeGreaterThan(1);
+  await expectCountAbove(tree.getByText(/^OR · \d+ recorded argument/), 1);
   for (let depth = 0; depth < 3; depth += 1) {
     const next = tree.getByRole("button", { name: /^Expand all arguments for / }).first();
     if (!(await next.count())) { break; }
@@ -149,7 +150,7 @@ test("single-tree assumptions: all argument routes, deep expansion, scenario sel
   await expectPressed(page, rootChoice.getByRole("button", { name: "False" }));
   await page.getByLabel("Find a proposition to investigate or assume").fill(GOD_ROOT);
   const searchResults = page.getByRole("list", { name: "Matching propositions" });
-  expect(await searchResults.getByRole("button").first().getByText(short("statement", "STMT-NECESSARY-CLASSICAL-GOD-ROOT"), { exact: true }).count()).toBe(1);
+  await expectCount(searchResults.getByRole("button").first().getByText(short("statement", "STMT-NECESSARY-CLASSICAL-GOD-ROOT"), { exact: true }), 1);
   await searchResults.getByText(short("statement", "STMT-NECESSARY-CLASSICAL-GOD-ROOT"), { exact: true }).click();
   await page.waitForURL((next) => next.searchParams.get("goal") === GOD_ROOT);
   if (process.env.FOREST_SCREENSHOTS) {
@@ -186,6 +187,6 @@ test("network markers render only their custom label, without a native title too
   const marker = page.locator(".network-marker").first();
   await marker.waitFor();
   expect(await marker.getAttribute("title")).toBeNull();
-  expect(await marker.locator(".network-label").count()).toBe(1);
+  await expectCount(marker.locator(".network-label"), 1);
   await page.close();
 }, 60000);

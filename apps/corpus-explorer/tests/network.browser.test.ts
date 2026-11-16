@@ -2,6 +2,7 @@ import { afterAll, beforeAll, expect, test } from "bun:test";
 import { chromium, type Browser } from "playwright";
 import path from "node:path";
 import { getPropositionGraph } from "../src/lib/proposition-graph-data";
+import { expectCount, expectCountAbove } from "./browser-waits";
 
 let browser: Browser;
 let server: ReturnType<typeof Bun.serve>;
@@ -64,7 +65,7 @@ for (const mobile of [false, true]) {
     await page.getByText(/Each application requires all its premises/).waitFor();
     await page.getByRole("button", { name: "Focus here", exact: true }).click();
     await page.waitForURL((location) => location.searchParams.get("view") === "focus");
-    expect(await page.locator(".graph-node-statement").count()).toBeGreaterThan(0);
+    await expectCountAbove(page.locator(".graph-node-statement"), 0);
     await page.getByRole("button", { name: "Return to overview", exact: true }).click();
     await page.waitForURL((location) => location.searchParams.get("view") !== "focus");
     await marker.locator(".network-marker").waitFor();
@@ -141,12 +142,14 @@ test("frontier is the homepage: dot statuses, direct workspace, and durable emph
   await page.goto(new URL(`${basePath}/`, server.url).toString());
   await page.getByRole("heading", { name: "Epistemic frontier" }).waitFor();
   await page.locator(".network-marker[data-kind='statement']").first().waitFor();
-  expect(await page.locator(".network-marker[data-frontier='true']").count()).toBeGreaterThan(0);
-  expect(await page.locator(".network-marker[data-frontier-depth='bare']").count()).toBeGreaterThan(0);
-  expect(await page.locator(".network-marker[data-established='true']").count()).toBeGreaterThan(0);
+  // Count only once every wanted graph bucket has loaded (#491, #1609).
+  await page.locator('.graph-buckets[aria-busy="false"]').waitFor({ state: "attached" });
+  await expectCountAbove(page.locator(".network-marker[data-frontier='true']"), 0);
+  await expectCountAbove(page.locator(".network-marker[data-frontier-depth='bare']"), 0);
+  await expectCountAbove(page.locator(".network-marker[data-established='true']"), 0);
   const established = page.locator('.network-marker[data-established="true"][data-dimmed="false"]:not([data-selected="true"])').first();
   expect(await established.evaluate((element) => getComputedStyle(element).opacity)).toBe("0.85");
-  expect(await page.locator(".network-marker[data-kind='inference']").count()).toBeGreaterThan(0);
+  await expectCountAbove(page.locator(".network-marker[data-kind='inference']"), 0);
   expect(await page.locator(".frontier-map-key").isVisible()).toBe(true);
   expect(await page.getByRole("link", { name: "Case", exact: true }).getAttribute("href")).toContain("/state");
   const count = await page.locator(".network-marker[data-frontier='true']").count();
@@ -155,8 +158,9 @@ test("frontier is the homepage: dot statuses, direct workspace, and durable emph
   await page.reload();
   // Graph data loads asynchronously in buckets (#491).
   await page.locator(".network-marker[data-frontier='true']").first().waitFor();
+  await page.locator('.graph-buckets[aria-busy="false"]').waitFor({ state: "attached" });
   expect(await page.getByRole("button", { name: "Show all equally" }).getAttribute("aria-pressed")).toBe("false");
-  expect(await page.locator(".network-marker[data-frontier='true']").count()).toBe(count);
+  await expectCount(page.locator(".network-marker[data-frontier='true']"), count);
   await page.goto(new URL(`${basePath}/?q=no-statement-has-this-query`, server.url).toString());
   const dimmedEstablished = page.locator('.network-marker[data-established="true"][data-dimmed="true"]').first();
   await dimmedEstablished.waitFor();
@@ -174,15 +178,15 @@ test("recorded claim evidence links related propositions without changing proof 
   await page.goto(url.toString());
   await page.locator(".network-marker[data-kind='statement']").first().waitFor();
   await page.locator(".graph-detail").getByRole("link", { name: `${projected.originId} →`, exact: true }).first().waitFor();
-  expect(await page.locator('.react-flow__edge[data-id^="relation:"]').count()).toBeGreaterThan(0);
+  await expectCountAbove(page.locator('.react-flow__edge[data-id^="relation:"]'), 0);
   await page.locator(".frontier-advanced > summary").click();
   const relationsToggle = page.getByRole("checkbox", { name: "Recorded research links (not proof)" });
   await relationsToggle.click();
   await page.waitForURL((location) => location.searchParams.get("relations") === "0");
   await page.locator('.react-flow__edge[data-id^="relation:"]').first().waitFor({ state: "detached" });
   expect(await relationsToggle.isChecked()).toBe(false);
-  expect(await page.locator('.react-flow__edge[data-id^="relation:"]').count()).toBe(0);
-  expect(await page.locator(".network-marker[data-kind='inference']").count()).toBeGreaterThan(0);
+  await expectCount(page.locator('.react-flow__edge[data-id^="relation:"]'), 0);
+  await expectCountAbove(page.locator(".network-marker[data-kind='inference']"), 0);
   await page.reload();
   await page.locator(".frontier-advanced > summary").click();
   expect(await page.getByRole("checkbox", { name: "Recorded research links (not proof)" }).isChecked()).toBe(false);
@@ -205,7 +209,7 @@ for (const mobile of [false, true]) {
     const depth = page.getByLabel("Neighborhood depth");
     await depth.selectOption("0");
     await page.waitForURL((location) => location.searchParams.get("hops") === "0");
-    expect(await page.locator(".network-marker").count()).toBe(1);
+    await expectCount(page.locator(".network-marker"), 1);
     await depth.selectOption("1");
     await page.waitForURL((location) => location.searchParams.get("hops") === "1");
     const peer = page.locator(`.react-flow__node[data-id="${relation.object}"]`);
@@ -215,7 +219,7 @@ for (const mobile of [false, true]) {
     await page.locator('.react-flow__edge[data-id^="relation:"]').first().waitFor({ state: "attached" });
     if (!mobile) {
       await page.locator(`.react-flow__node[data-id="${relation.subject}"]`).hover();
-      expect(await peer.locator('.network-marker[data-hover-neighbor="true"]').count()).toBe(1);
+      await expectCount(peer.locator('.network-marker[data-hover-neighbor="true"]'), 1);
     }
     await depth.selectOption("2");
     // The serializer omits the default two-hop depth from shareable URLs.
@@ -228,7 +232,7 @@ for (const mobile of [false, true]) {
     await researchLinks.click();
     await page.waitForURL((location) => location.searchParams.get("relations") === "0");
     expect(await researchLinks.isChecked()).toBe(false);
-    expect(await page.locator('.react-flow__edge[data-id^="relation:"]').count()).toBe(0);
+    await expectCount(page.locator('.react-flow__edge[data-id^="relation:"]'), 0);
     await page.getByRole("button", { name: "Return to overview", exact: true }).click();
     await page.waitForURL((location) => location.searchParams.get("view") !== "local");
     expect(errors).toEqual([]);

@@ -1,6 +1,7 @@
 import { afterAll, beforeAll, expect, test } from "bun:test";
 import path from "node:path";
 import { chromium, type Browser } from "playwright";
+import { expectCount, expectCountAbove } from "./browser-waits";
 
 let browser: Browser;
 let server: ReturnType<typeof Bun.serve>;
@@ -36,10 +37,10 @@ test("atlas's five lenses use the current static reports, expose evidence, and p
   await page.goto(`${base}atlas/`);
   await page.getByRole("heading", { name: "Progress atlas", exact: true }).waitFor();
   const navigation = page.getByRole("navigation", { name: "Atlas visualizations" });
-  expect(await navigation.getByRole("button").count()).toBe(5);
+  await expectCount(navigation.getByRole("button"), 5);
   if (certified) {
     await page.getByRole("group", { name: /Incompatible cores connected/ }).waitFor();
-    expect(await page.locator(`a[href*="/statements/"]`).count()).toBeGreaterThan(0);
+    await expectCountAbove(page.locator(`a[href*="/statements/"]`), 0);
   } else {
     await page.getByRole("region", { name: "Certification unavailable" }).waitFor();
   }
@@ -52,13 +53,13 @@ test("atlas's five lenses use the current static reports, expose evidence, and p
     await first.click();
     await page.waitForURL((url) => url.searchParams.has("mask"));
   } else {
-    expect(await page.getByRole("region", { name: "Certification unavailable" }).count()).toBe(1);
+    await expectCount(page.getByRole("region", { name: "Certification unavailable" }), 1);
   }
 
   await navigation.getByRole("button", { name: /Proof routes/ }).click();
   await page.getByRole("region", { name: "Compare conditional proof routes" }).waitFor();
   const routes = page.getByRole("region", { name: "Compare conditional proof routes" }).getByRole("button");
-  expect(await routes.count()).toBeGreaterThan(0);
+  await expectCountAbove(routes, 0);
   await routes.last().click();
   await page.waitForURL((url) => url.searchParams.has("route"));
 
@@ -70,7 +71,7 @@ test("atlas's five lenses use the current static reports, expose evidence, and p
   await navigation.getByRole("button", { name: /Impact waves/ }).click();
   await page.getByText("Hypothetical challenge / recorded dependencies").waitFor();
   const picker = page.getByLabel("Challenge an open premise");
-  expect(await picker.locator("option").count()).toBeGreaterThan(0);
+  await expectCountAbove(picker.locator("option"), 0);
   const option = await picker.locator("option").last().getAttribute("value");
   if (option) { await picker.selectOption(option); }
   await page.waitForURL((url) => url.searchParams.get("premise") === option);

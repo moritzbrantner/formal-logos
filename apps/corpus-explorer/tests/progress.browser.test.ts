@@ -2,6 +2,7 @@ import { afterAll, beforeAll, expect, test } from "bun:test";
 import path from "node:path";
 import { chromium, type Browser } from "playwright";
 import { uid } from "./corpus-records";
+import { expectCount, expectCountAbove } from "./browser-waits";
 let browser: Browser;
 let server: ReturnType<typeof Bun.serve>;
 const root = path.resolve(import.meta.dir, "../out");
@@ -37,7 +38,7 @@ test("progress search drills into canonical comparison and evidence with deploym
   await page.goto(new URL(`${basePath}/progress/`, server.url).toString());
   await page.getByRole("heading", { name: "Research progress", exact: true }).waitFor();
   await page.getByLabel("Find proposition, argument or sense").fill("NECESSARY_1");
-  expect(await page.getByText("0 matching propositions", { exact: true }).count()).toBe(0);
+  await expectCount(page.getByText("0 matching propositions", { exact: true }), 0);
   await page.getByLabel("Find proposition, argument or sense").fill("COGNITIVE_RECEPTION_AND_KNOWING_1");
   const receptionId = "180f5ad2-a421-541a-85c9-9bca578b4a43";
   await page.locator(`a[href="${basePath}/dossiers/${receptionId}/#research-comparison"]`).waitFor();
@@ -51,10 +52,10 @@ test("progress search drills into canonical comparison and evidence with deploym
   await page.locator(`a[href="${basePath}/dossiers/${id}/#research-comparison"]`).click();
   await page.getByRole("heading", { name: "Sense and rival comparison", exact: true }).waitFor();
   expect(new URL(page.url()).pathname).toBe(`${basePath}/dossiers/${id}/`);
-  expect(await page.getByText("Not established.", { exact: false }).count()).toBeGreaterThan(0);
+  await expectCountAbove(page.getByText("Not established.", { exact: false }), 0);
   await page.getByRole("heading", { name: "Remaining gap and next step", exact: true }).waitFor();
   const proof = page.locator('article a[href*="/results/"]').first();
-  expect(await proof.count()).toBe(1);
+  await expectCount(proof, 1);
   await proof.click();
   await page.getByRole("heading", { name: "The advertised theorem", exact: true }).waitFor();
   await page.goto(new URL(`${basePath}/dossiers/${id}/#research-comparison`, server.url).toString());
@@ -76,7 +77,7 @@ test("comparison includes an explicit configuration application that is not its 
     const comparison = page.locator("#research-comparison");
     await comparison.getByRole("heading", { name: "Scoped assumption comparisons", exact: true }).waitFor();
     await comparison.locator(`a[href^="${basePath}/configurations/${configuration}"]`).waitFor();
-    expect(await comparison.getByText("Untested: no assumption comparison registered for this target.", { exact: false }).count()).toBe(0);
+    await expectCount(comparison.getByText("Untested: no assumption comparison registered for this target.", { exact: false }), 0);
   } finally {
     await page.close();
   }
