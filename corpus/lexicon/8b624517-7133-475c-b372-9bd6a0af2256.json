@@ -3,5 +3,8 @@
   "label": "cheap (ordinary)",
   "lemma": "cheap",
   "class": "ordinary",
+  "forms": [
+    "cheapest"
+  ],
   "gloss": "Costing little; the cheapest route has the fewest open premises in the route-cost diagnostic."
 }
