@@ -1,0 +1,7 @@
+{
+  "id": "ffa03112-78d9-4a4f-af53-00c800dab264",
+  "label": "typechecker (ordinary)",
+  "lemma": "typechecker",
+  "class": "ordinary",
+  "gloss": "A program that checks Lean declarations against Lean's type theory, such as the kernel or NanoDa."
+}

@@ -1,0 +1,7 @@
+{
+  "id": "a412fceb-ca6d-49f0-80ef-be34a6040c52",
+  "label": "constructor (ordinary)",
+  "lemma": "constructor",
+  "class": "ordinary",
+  "gloss": "In Lean, a function that builds a value of an inductive type."
+}

@@ -1,0 +1,7 @@
+{
+  "id": "4a0acae1-8f18-4fdd-a42d-c39b56fc105b",
+  "label": "preview (ordinary)",
+  "lemma": "preview",
+  "class": "ordinary",
+  "gloss": "A preliminary view, as the local Lean preview service."
+}

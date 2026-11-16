@@ -1,0 +1,10 @@
+{
+  "id": "2047bd0f-bfc6-4d02-9f12-89e335e7a3e5",
+  "label": "id (ordinary)",
+  "lemma": "id",
+  "class": "ordinary",
+  "forms": [
+    "ids"
+  ],
+  "gloss": "An identifier of a record (a uuid or legacy id)."
+}
