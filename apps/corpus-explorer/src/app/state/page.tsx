@@ -77,7 +77,7 @@ export default function StatePage() {
   };
   const stagesOf = (statementId: string) => report.statement_stages[statementId] ?? [];
 
-  // The root's paths: the route-aware upward walk of `corpus.py frontier` (#527), not every stage member.
+  // The root's paths: the route-aware upward walk of `truth frontier` (#527), not every stage member.
   const onRootPath = new Set(report.reaching_root_statements);
 
   const stages = report.stages.map(({ stage, statement_id: statementId }) => {
@@ -202,7 +202,7 @@ export default function StatePage() {
         <p className="mt-3 max-w-3xl text-sm leading-6 text-[var(--muted)]">
           A stage is established only when its conclusion and everything beneath it are closed. The bar counts only what
           the stage rests on that is also on the root&apos;s paths (the route-aware set of{" "}
-          <code className="font-mono">corpus.py frontier</code>): closed statements against open premises. What the stage
+          <code className="font-mono">truth frontier</code>): closed statements against open premises. What the stage
           rests on off the root&apos;s route is counted separately and not as on the root&apos;s paths.
         </p>
         <div className="mt-6">
@@ -282,7 +282,7 @@ export default function StatePage() {
           <strong className="text-[var(--ink)]">Bare</strong>: no source states or supports it.{" "}
           <strong className="text-[var(--ink)]">Sourced</strong>: a source states or supports it, but it is not yet defended.
           Bare premises come first; the project drives them to zero first. Same list as{" "}
-          <code className="font-mono">corpus.py frontier --reaching-root</code>.
+          <code className="font-mono">truth frontier --reaching-root</code>.
         </p>
         <ul className="premise-list mt-6">
           {sortedReaching.map((item) => (
@@ -340,7 +340,7 @@ export default function StatePage() {
         <h2 className="mt-3 font-serif text-3xl tracking-[-0.03em]">Self-evident markings and their bases</h2>
         <p className="mt-3 max-w-3xl text-sm leading-6 text-[var(--muted)]">
           A self_evident marking closes its statement only while its basis criterion holds on the current records, as{" "}
-          <code className="font-mono">corpus.py frontier</code> recomputes it. Closure of the root is relative to the met
+          <code className="font-mono">truth frontier</code> recomputes it. Closure of the root is relative to the met
           bases that reach it.
         </p>
         {report.floor.length ? (

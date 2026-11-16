@@ -19,7 +19,7 @@ Each passage manifest has two parts:
 - a **snapshot**, shared by one or more passage ranges, containing the source ID, exact edition URN, language, public repository, immutable revision SHA, file path, Git blob SHA, immutable raw URL, and license;
 - one or more **passages**, containing a stable passage ID, conventional human locator, claim-locator prefixes, and an optional extraction selector: a CTS path (`cts_path`) or, for TEI witnesses without CTS structure, the unique `xml:id` of the range's element (`tei_xml_id`).
 
-CTS edition URNs must extend the source's work URN. Works without CTS identifiers (for example Aquinas via SCTA resource URIs) instead list each admitted edition identifier in the source record's `edition_urns`, kept sorted (`corpus.py check` requires it, and `target/release/truth sort-lists` sorts it) so that concurrent additions do not all conflict at the end of the list. Materialization joins words across TEI `<lb break="no"/>` line breaks.
+CTS edition URNs must extend the source's work URN. Works without CTS identifiers (for example Aquinas via SCTA resource URIs) instead list each admitted edition identifier in the source record's `edition_urns`, kept sorted (`truth check` requires it, and `target/release/truth sort-lists` sorts it) so that concurrent additions do not all conflict at the end of the list. Materialization joins words across TEI `<lb break="no"/>` line breaks.
 
 The conventional locator remains the citation scholars should read, such as `Physics I.4, 187b7-13` or `Timaeus 28a`. The pinned digital witness answers the different question: exactly which edition bytes did the worker inspect?
 
@@ -131,7 +131,7 @@ When every pinned URL of a web snapshot is gone for good and no archive capture 
 
 - Offline checks validate its unavailable marking and claim bindings; they make no byte-verification claim.
 - `materialize` serves it only from a hash-checked local cache of the pinned bytes and otherwise refuses; it never fetches.
-- **Integrity marking.** Every claim on it carries `"witness": "unavailable"`, and `check` rejects that value on any other claim. As with bibliographic claims, the marking is shown by `corpus.py frontier` (`permanently unavailable witness, not byte-verified: …`), in the premise dossier and on the explorer's claim and dossier pages. Because its bytes can no longer be re-verified, a statement stated only by such claims counts as `supported`, not `stated`, on the frontier, exactly as for a bibliographic claim (owner decision 2026-11-05). It becomes `stated` again once a new witness is pinned.
+- **Integrity marking.** Every claim on it carries `"witness": "unavailable"`, and `check` rejects that value on any other claim. As with bibliographic claims, the marking is shown by `truth frontier` (`permanently unavailable witness, not byte-verified: …`), in the premise dossier and on the explorer's claim and dossier pages. Because its bytes can no longer be re-verified, a statement stated only by such claims counts as `supported`, not `stated`, on the frontier, exactly as for a bibliographic claim (owner decision 2026-11-05). It becomes `stated` again once a new witness is pinned.
 - If a witness becomes available again, or a new pinnable one is found, remove `unavailable` and the claims' `witness` field and re-verify, following the [upgrade path](#upgrade-path).
 
 ## Bibliographic spans (copyrighted works without a pinnable witness)
@@ -145,7 +145,7 @@ Copyrighted modern works (for example Plantinga, Flew, Ross, Pruss, van Inwagen,
 
 **Precedence.** `check` rejects a bibliographic span whose claim-locator prefixes overlap those of a pinned text witness or web snapshot of the same source: where the bytes can be pinned, cite them.
 
-**Integrity marking.** Every claim on a bibliographic span carries `"witness": "bibliographic"`, and `check` rejects the field on any other claim. The marking is shown next to the claim by `corpus.py frontier` (`bibliographic witness, not byte-verified: …`), in the premise dossier, and on the explorer's claim and dossier pages, so a reader can tell verified bytes from a bibliographic reference.
+**Integrity marking.** Every claim on a bibliographic span carries `"witness": "bibliographic"`, and `check` rejects the field on any other claim. The marking is shown next to the claim by `truth frontier` (`bibliographic witness, not byte-verified: …`), in the premise dossier, and on the explorer's claim and dossier pages, so a reader can tell verified bytes from a bibliographic reference.
 
 **Verification.** `check` validates the record and its claim bindings. `materialize` refuses it: there are no bytes to extract. A worker therefore claims from a bibliographic span only after reading the cited pages in the edition itself (for example the owner's copy), never from memory or a search snippet (invariant 2). Source integrity for such a claim rests on the citation and the reader's checking, not on a hash; source fidelity remains a review question as everywhere.
 

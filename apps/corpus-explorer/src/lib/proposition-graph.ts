@@ -11,7 +11,7 @@ import type { ClosureReason, FloorEntry, FrontierReport, StatementStatus } from 
  * non-inferential edge kind.
  *
  * Every status, closure, stage, dependent count and default target is read
- * from the build-time `corpus.py frontier --json` report (#507); this module
+ * from the build-time `truth frontier --json` report (#507); this module
  * only joins it with the records for display and never recomputes it.
  */
 
@@ -147,16 +147,16 @@ export type GraphStatement = {
   status: GraphStatus;
   established: boolean;
   closureReason?: ClosureReason;
-  /** Its upward argument walk reaches the root (`reaching_root_statements` of `corpus.py frontier`). */
+  /** Its upward argument walk reaches the root (`reaching_root_statements` of `truth frontier`). */
   reachesRoot: boolean;
   /** Import area of its Lean namespace (scripts/root_imports.py); set by the /graph buckets. */
   area?: string;
   /** Lane owning that area (AGENTS.md, "Lanes"); set by the /graph buckets. */
   lane?: string;
-  /** Open premise by the corpus.py frontier rule. */
+  /** Open premise by the truth frontier rule. */
   frontier: boolean;
   /**
-   * Depth of an open premise, as in `corpus.py frontier` (#143, 2026-10-24):
+   * Depth of an open premise, as in `truth frontier` (#143, 2026-10-24):
    * "bare" when no claim states it and no `supports` relation points to it,
    * otherwise "supported" when only a `supports` relation or a bibliographic
    * claim points to it, and "stated" when a claim on a pinned source states it
@@ -173,7 +173,7 @@ export type GraphStatement = {
   selfEvidentJustification: string[];
   /** An actual corpus-recorded denial, not an arbitrary `alternative_to` rival. */
   denialStatementId?: string;
-  /** Its self_evident marking with basis, criterion and disagreement (`floor` of `corpus.py frontier`). */
+  /** Its self_evident marking with basis, criterion and disagreement (`floor` of `truth frontier`). */
   floor?: FloorEntry;
   tags: string[];
   claims: GraphClaim[];
@@ -233,10 +233,10 @@ export type PropositionGraph = {
   arguments: GraphArgument[];
   relations: GraphRelation[];
   sources: CorpusSourceInput[];
-  /** `default_target` of `corpus.py frontier`: the root when present, otherwise the verified conclusion resting on the most statements. */
+  /** `default_target` of `truth frontier`: the root when present, otherwise the verified conclusion resting on the most statements. */
   defaultTarget: string | null;
   rootPresent: boolean;
-  /** Stage conclusions of the root skeleton present in the corpus (`stages` of `corpus.py frontier`). */
+  /** Stage conclusions of the root skeleton present in the corpus (`stages` of `truth frontier`). */
   stageConclusions: Array<{ stage: number; statementId: string }>;
 };
 
@@ -413,7 +413,7 @@ export function buildPropositionGraph(input: PropositionGraphInput, report: Fron
     const frontier = frontierById.has(id);
     const status = report.statement_statuses[id];
     if (!status) {
-      throw new Error(`corpus.py frontier reports no status for ${id}`);
+      throw new Error(`truth frontier reports no status for ${id}`);
     }
 
     const claims = claimsByStatement.get(id) ?? [];

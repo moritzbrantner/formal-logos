@@ -4,8 +4,9 @@
 in [AGENTS.md](../AGENTS.md#local-lean-preview-service) (#489). It is a Python-stdlib HTTP
 adapter on `127.0.0.1` over commands that already exist:
 
-- corpus operations run `scripts/corpus.py` in the requested workspace, so
-  there is no second proof-status registry;
+- corpus operations run the workspace's Rust `truth` CLI (`TRUTH_CLI`, or
+  `cargo run --release`) on the requested workspace, so there is no second
+  proof-status registry;
 - Lean operations keep one `lake env lean --server` process (LSP) per
   workspace and session id;
 - `lake build`, `truth bind-check` (through `cargo run --release`) and `scripts/verify-result.sh` run as
@@ -106,9 +107,9 @@ create parallel Lean sessions.
 |---|---|
 | `GET /health` | toolchain and binding |
 | `GET /corpus/record?id=ID` | the record resolved by `corpus_ids.Aliases` from a UUID, legacy alias or label (including case-insensitive label fallback); 404 if unknown, 400 if ambiguous or missing |
-| `GET /corpus/dossier?id=STMT-…` | `corpus.py dossier --json ID` |
-| `GET /corpus/frontier[?root=…&reaching_root=1&routes=1]` | `corpus.py frontier --json [--root] [--reaching-root]`, or the text `--routes` report |
-| `POST /corpus/check` | `corpus.py check` |
+| `GET /corpus/dossier?id=STMT-…` | `truth dossier --json ID` |
+| `GET /corpus/frontier[?root=…&reaching_root=1&routes=1]` | `truth frontier --json [--frontier-root] [--reaching-root]`, or the text `--routes` report |
+| `POST /corpus/check` | `truth check` |
 | `POST /lean/diagnostics {path, session?, content?, timeout?}` | open or update the file in the session, wait for elaboration (`textDocument/waitForDiagnostics`), return its diagnostics |
 | `POST /lean/goal {…, line, character}` | the same, then `$/lean/plainGoal` and `$/lean/plainTermGoal` at the 0-based position |
 | `GET /lean/sessions` | open sessions, their files and versions |

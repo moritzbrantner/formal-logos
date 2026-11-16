@@ -11,7 +11,7 @@ attempt records do not participate in frontier closure.
 ## Looking up an attempted derivation
 
 ```bash
-target/release/truth models   # the registrations; Rust port of `corpus.py models`
+target/release/truth models   # the registrations
 flock /tmp/moenarch/truth-core-heavy.lock python3 scripts/worker_env.py -- \
   target/release/truth models --check STMT-ACT-SIMPLY-PRIOR-TO-POTENCY \
   --premise STMT-NOTHING-IN-ACT-AND-POTENCY-IN-SAME-RESPECT
@@ -39,7 +39,7 @@ stale build output and edits to certificates or registry arguments. Hold the
 existing heavy-job lock when running them. `models --verify` performs the same
 verification without selecting a target. Plain `models` and dossier/explorer
 pages display registrations; they are not independent live verification runs.
-Normal `corpus.py bind-check` includes the model gate after checking arguments;
+Normal `truth bind-check` includes the model gate after checking arguments;
 its fixture-only `--lean-json` path does not verify models. `--json` provides the
 same projection as text output.
 

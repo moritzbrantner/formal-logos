@@ -23,7 +23,7 @@ applications of them.
 To apply the schema, choose the claim type, the norm's scope and standard, and
 the acceptance predicate. Then state the scope premise (`self` in scope) and
 the failure premise (`self` fails the standard) as their own named
-definitions, so that `corpus.py bind-check` can bind them to statements. Then
+definitions, so that `truth bind-check` can bind them to statements. Then
 call `selfApplicationDilemma` or `demarcationTest`, as
 `RELATIVISM-NO-ABSOLUTE-TRUTH-SELF-FALSIFYING` and `SCIENTISM-STRONG-DILEMMA`
 do. For a strong/weak pair (owner method, 2026-10-26), also record three
@@ -126,7 +126,7 @@ explicitly unattributed.
 | Strong scientism (alternative to `STMT-SOME-NON-EMPIRICAL-ESTABLISHED`) | both proved | unsourced | **refuted as an established thesis, conditionally**: open non-empirical premise; scientism true but unestablished remains |
 | Weak scientism | test proved; model | — | **survives**; cost: concedes non-empirical knowledge when its formulation lies outside its domain |
 
-`refutes` is withheld everywhere for a mechanical reason. `corpus.py frontier`
+`refutes` is withheld everywhere for a mechanical reason. `truth frontier`
 counts a `refutes` relation as soon as its argument has a result, whatever the
 status of that argument's premises. A `refutes` from a conditional argument
 would therefore close an alternative on an open premise. A future `refutes`

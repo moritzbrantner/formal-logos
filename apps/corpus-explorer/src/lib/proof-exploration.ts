@@ -45,7 +45,7 @@ const sorted = (ids: Iterable<string>) => [...new Set(ids)].sort();
 /**
  * Bounded exact-ID exploration over the existing graph. One yield is one budgeted
  * work item, letting callers return to the browser event loop and cancel. Seeds
- * come exclusively from corpus.py's established projection. Checked argument
+ * come exclusively from the frontier's established projection. Checked argument
  * boundaries, rather than individual unchecked inference edges, govern forward
  * proposals: their complete premises must be available. A proposal still needs
  * Lean/Comparator/NanoDa composition and exact premise bindings before recording.

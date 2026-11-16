@@ -69,7 +69,7 @@ corpus/
 results/<RESULT-ID>/            Comparator configurations
 scripts/source_evidence.py      check source records/materialize selected passages
 truth/                          Rust corpus validation, navigation, and research CLI
-scripts/corpus.py               legacy commands pending Rust retirement (#954)
+scripts/corpus.py               remaining Python commands pending retirement (#954 R3)
 verifier/                       Rust Comparator implementation
 scripts/verify-result.sh        run Comparator for one result
 scripts/bootstrap-verifier.sh   build pinned verification tools

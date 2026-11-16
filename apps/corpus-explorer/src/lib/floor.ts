@@ -2,7 +2,7 @@ import type { FloorBasis, FloorDisagreement } from "./site-state";
 
 /**
  * Display text for floor markings (#500). Whether a criterion holds is read
- * from `floor` of `corpus.py frontier --json`; nothing here evaluates it.
+ * from `floor` of `truth frontier --json`; nothing here evaluates it.
  * Client-safe: no Node imports.
  */
 

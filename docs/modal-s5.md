@@ -139,7 +139,7 @@ The custom projection exposes the remaining commitments without changing the
 Catholic root route:
 
 ```bash
-python3 scripts/corpus.py frontier --root STMT-MODAL-S5-COLLAPSE-CONCEPTION-EXCLUDED --reaching-root
+target/release/truth frontier --frontier-root STMT-MODAL-S5-COLLAPSE-CONCEPTION-EXCLUDED --reaching-root
 ```
 
 It lists the three scenario premises as bare open premises on the path to the

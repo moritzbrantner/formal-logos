@@ -5,7 +5,7 @@ inference, argument and result records. It matches exact statement IDs only.
 Equal wording, synonyms and apparent philosophical equivalence cannot merge
 nodes. No new canonical graph, runtime service, axiom or witness is introduced.
 
-Forward seeds come from `corpus.py frontier --json`'s established statements,
+Forward seeds come from `truth frontier --json`'s established statements,
 projected onto the graph. A selected scope can restrict these facts; selecting an
 open statement cannot establish it. The forward search proposes applications of
 recorded checked arguments only when **all** their premises are available. Its
@@ -123,7 +123,7 @@ paradox was known and the route was new.)
 
 - **Countermodels per step.** Omission countermodels (for example
   `premisesNeeded` in [act-potency-theory.md](act-potency-theory.md)) and the
-  registered finite models with `corpus.py models --check/--argument`
+  registered finite models with `truth models --check/--argument`
   ([finite-models.md](finite-models.md)) play Nitpick's role, but certified in
   Lean instead of found by a model finder.
 - **Hidden premises become explicit.** Where [AFP-Lowe] adds "abstractness is

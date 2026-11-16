@@ -128,7 +128,7 @@ whether a primitive fact is an adequate stopping point. RUSSELL-INDIVIDUAL-SEMAN
 asks which significance/domain conditions should be adopted. Their candidate
 records identify the source range to revisit and do not fabricate new claims.
 The conditional explanatory route exposes exactly two open inputs in the graph:
-`python3 scripts/corpus.py frontier --root STMT-RUSSELL-GROUNDING-PROJECTION --reaching-root`.
+`target/release/truth frontier --frontier-root STMT-RUSSELL-GROUNDING-PROJECTION --reaching-root`.
 They are STMT-RUSSELL-REALIZED and STMT-RUSSELL-INSTANCE-BASIS-LAW, both
 unattributed, unestablished premises; the countermodels show their role in this
 route without asserting the truth of either. The separate A2 sufficiency target

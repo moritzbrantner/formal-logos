@@ -1,6 +1,6 @@
 # Premise dossiers and research attempts
 
-`python3 scripts/corpus.py dossier STMT-ACT-SIMPLY-PRIOR-TO-POTENCY` collects the
+`target/release/truth dossier STMT-ACT-SIMPLY-PRIOR-TO-POTENCY` collects the
 statement, Lean declaration, source readings/support, linked definitions and
 senses, alternatives/objections, arguments and results, transcriptions, attempts,
 and current root-route contribution. `--json` emits the same projection as JSON;
@@ -8,7 +8,7 @@ and current root-route contribution. `--json` emits the same projection as JSON;
 in one call for static explorer generation. Unknown statements or roots fail.
 
 A single-statement dossier projects only that statement and skips corpus
-validation (run `corpus.py check`); `--all` still validates. Text output shows at
+validation (run `truth check`); `--all` still validates. Text output shows at
 most `--limit` entries per section (default 8; the newest attempts) and shortens
 long prose, saying how many entries `--json` adds. `--limit 0` gives the full
 text. `--json` is always complete and unchanged (#958).
@@ -60,7 +60,7 @@ the original merged evidence and preserve its limitations.
 - `evidence` lists existing result or claim IDs, or `PR-<positive number>` for a
   truth-core pull request. It may be empty when no evidence reference exists yet;
   the dossier makes that absence visible. Local result/claim references resolve
-  during `corpus.py check`. PR references are syntax-checked and link to this
+  during `truth check`. PR references are syntax-checked and link to this
   repository; checking their remote existence is outside the offline validator.
   Neither a PR reference nor an attempt outcome is proof verification evidence.
 

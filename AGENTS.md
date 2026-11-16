@@ -614,14 +614,18 @@ or a relevant change or failure invalidates its earlier evidence:
 `truth` is the repository's Rust CLI (`truth/README.md`): build it once per
 clone with `cargo build --locked --release -p truth` (rerun after Rust source
 or Cargo input changes) and run it from the
-repository root. Its `check`, `frontier`, `frontier-diff`, `related`,
-`dossier`, `context` (including `--proof-use`), `bind-check`, `unused-premises`
-and `lean-reuse` replace the `scripts/corpus.py` commands of the same
-names, which stay until their retirement; `frontier --root` and
-`unused-premises --root` are `--frontier-root` there. Rust `--root PATH` selects the input repository;
+repository root. It is the only implementation of the navigation, gate and
+research commands (`check`, `frontier`, `frontier-diff`, `thickness`, `next`,
+`related`, `dossier`, `context` including `--proof-use`, `bind-check`,
+`unused-premises`, `lean-reuse`, `attribution-check`, `configurations`,
+`models`, `issues`, `senses`, `index`, …); their `scripts/corpus.py`
+versions were retired (#954 R2). A statement root is `--frontier-root`
+(the Python `--root`). Rust `--root PATH` selects the input repository;
 `--json` selects machine-readable output, including frontier reports usable by
 `dossier` and `context` via `--frontier-json FILE` on the same inputs.
-Other `corpus.py` commands are still Python.
+Until #954 R3, `scripts/corpus.py` keeps only `check` (for the merge queue),
+`frontier`/`frontier-diff` (the engine `truth frontier-diff` runs at a
+revision whose `corpus.py` differs) and the report commands.
 
 ```bash
 lake build

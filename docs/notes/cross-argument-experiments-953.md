@@ -140,12 +140,12 @@ discriminates it; an absence of a proof is not evidence against the rival.
 
 ## Before a follow-up implementation
 
-For the selected experiment, read `corpus.py context` for both registered
-results, `corpus.py related` for the focus statements, and `corpus.py dossier`
+For the selected experiment, read `truth context` for both registered
+results, `truth related` for the focus statements, and `truth dossier`
 for every proposed open premise. Preserve every argument's **AND** premise
 set, all alternative **OR** routes, and the same source/witness identity.
 Formulate the candidate as a typed Lean proposition only after a positive
 interpretation and a matched rival/omission control are explicit. Use a
 focused Comparator; do not run `verify-all` merely to prepare a research
-question. Recompute `corpus.py frontier-diff --base origin/main` if a
+question. Recompute `truth frontier-diff --base origin/main` if a
 registered result or premise actually changes.

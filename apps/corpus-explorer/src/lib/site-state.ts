@@ -8,7 +8,7 @@ import { DEFAULT_ROOT_STATEMENT_ID } from "./proposition-graph";
 
 /**
  * The project's current state, as computed by `truth frontier --json`
- * (the Rust CLI's port of `corpus.py frontier`) at build time (#200). The explorer does not re-implement
+ * at build time (#200). The explorer does not re-implement
  * the closure rules here: every "closed", "open", "bare", "supported" or "stated" on the
  * state, statement and result pages comes from that report.
  */
@@ -59,7 +59,7 @@ export type FloorDisagreement =
   | { rival_statement_ids?: string[]; claim_ids?: string[]; note?: string }
   | null;
 
-/** A self_evident marking, with its criterion recomputed by `corpus.py frontier` (#500). */
+/** A self_evident marking, with its criterion recomputed by `truth frontier` (#500). */
 export type FloorEntry = {
   statement_id: string;
   basis: FloorBasis;
@@ -72,7 +72,7 @@ export type FloorEntry = {
   reaches_root: boolean;
 };
 
-/** Display status of a statement (`statement_statuses` of `corpus.py frontier`); not a closure rule. */
+/** Display status of a statement (`statement_statuses` of `truth frontier`); not a closure rule. */
 export type StatementStatus =
   | "proved"
   | "transcription"
@@ -273,7 +273,7 @@ export function statementState(report: FrontierReport, statementId: string): Sta
 }
 
 /**
- * A result is a transcription (invariant 16) when `corpus.py frontier` lists it
+ * A result is a transcription (invariant 16) when `truth frontier` lists it
  * in `transcription_results`: its record declares a `transcription` kind, or
  * its proof is a single application of one hypothesis or only assembles
  * hypotheses (#391). That set is what closure uses. The other flags (goal as a
@@ -315,7 +315,7 @@ export const CLOSURE_DESCRIPTIONS: Record<ClosureReason, string> = {
   via_transcription: "Conclusion of a transcription result whose premises are all closed.",
 };
 
-/** The self_evident marking of a statement, as `corpus.py frontier` evaluates it. */
+/** The self_evident marking of a statement, as `truth frontier` evaluates it. */
 export function floorEntry(report: FrontierReport, statementId: string): FloorEntry | undefined {
   return report.floor.find((entry) => entry.statement_id === statementId);
 }

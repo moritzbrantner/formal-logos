@@ -12,8 +12,8 @@ export type RecordFacet = "claim" | "argument" | "result" | "inference" | "relat
 export type ReachFacet = "root" | "other";
 
 export const CLOSURE_FACETS: ReadonlyArray<{ id: ClosureFacet; label: string; description: string }> = [
-  { id: "established", label: "Established", description: "In established_statements of corpus.py frontier." },
-  { id: "conditional", label: "Closed · conditional", description: "Closed by corpus.py frontier but resting on open premises." },
+  { id: "established", label: "Established", description: "In established_statements of truth frontier." },
+  { id: "conditional", label: "Closed · conditional", description: "Closed by truth frontier but resting on open premises." },
   { id: "frontier-bare", label: "Frontier · bare", description: "Open premise that no claim states and no supports relation backs." },
   { id: "frontier-supported", label: "Frontier · supported", description: "Open premise that only a supports relation, a bibliographic citation or an unavailable witness backs; no claim on a re-verifiable pinned source states it." },
   { id: "frontier-stated", label: "Frontier · stated", description: "Open premise that a claim on a pinned source states." },
