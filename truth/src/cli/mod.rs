@@ -57,7 +57,7 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] check
        truth [--root PATH] [--json] inspect ID
        truth [--root PATH] [--json] thickness [--queue | --base REV] [--frontier-root STATEMENT]
-       truth [--root PATH] [--json] frontier [--reaching-root] [--routes] [--frontier-root STATEMENT]
+       truth [--root PATH] [--json] frontier [--reaching-root] [--routes] [--frontier-root STATEMENT] [--fixture FILE]
        truth [--root PATH] [--json] frontier-diff --base REV [--head REV] [--frontier-root STATEMENT]
        truth [--root PATH] [--json] orphans [--frontier-root STATEMENT] [--by module|family | --senses | --base REV]
        truth [--root PATH] [--json] bridges --constants FILE (--queue-file FILE | --target ID)...
@@ -108,6 +108,8 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
 `python3 scripts/corpus.py frontier --json [--root STATEMENT]` on the same checkout.
+frontier --fixture reads a JSON object of statements, arguments, results, relations, claims,
+inferences and transcription_flags (FILE, or - for stdin) instead of the checkout at --root.
 issues and dossier --issues-from read an offline `gh issue list --json
 number,title,body,url,comments` snapshot; truth never calls GitHub. brief and novelty
 --issues-from also take `{\"captured_at\": ISO, \"items\": [...]}` with closed issues and PRs.";

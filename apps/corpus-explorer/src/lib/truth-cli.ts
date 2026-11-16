@@ -31,12 +31,14 @@ function truthBinary(): string {
  * Run `truth <args>` on the repository and parse its JSON stdout. Closure,
  * statuses and dossiers stay owned by the CLI (#507); the explorer only reads
  * them. Frontier and single-dossier JSON include `input_identity`, which the explorer
- * ignores; dossier --all remains a plain map keyed by statement ID.
+ * ignores; dossier --all remains a plain map keyed by statement ID. `input`
+ * is written to its stdin (`frontier --fixture -`).
  */
-export function truthJson(args: string[]): unknown {
+export function truthJson(args: string[], input?: string): unknown {
   return JSON.parse(
     execFileSync(truthBinary(), ["--json", ...args], {
       cwd: repositoryRoot,
+      input,
       encoding: "utf8",
       maxBuffer: 64 * 1024 * 1024,
     }),
