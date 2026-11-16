@@ -3206,6 +3206,186 @@ pub fn current_frontier(
     report
 }
 
+/// The record kinds a frontier fixture (`truth frontier --fixture FILE`) may
+/// hold: exactly the inputs of Python `frontier_report`.
+pub const FIXTURE_KINDS: [&str; 6] = [
+    "statements",
+    "arguments",
+    "results",
+    "relations",
+    "claims",
+    "inferences",
+];
+
+/// One `transcription_flags` entry of a fixture, as Python
+/// `transcription_flags` returns it; absent fields take their empty value.
+fn fixture_flag(value: &Value) -> Result<Flag, String> {
+    let object = value
+        .as_object()
+        .ok_or("each transcription flag must be an object")?;
+    let string = |key: &str| -> Result<Option<String>, String> {
+        match object.get(key) {
+            None | Some(Value::Null) => Ok(None),
+            Some(Value::String(text)) => Ok(Some(text.clone())),
+            Some(_) => Err(format!("transcription flag field {key} must be a string")),
+        }
+    };
+    let strings = |value: &Value, key: &str| -> Result<Vec<String>, String> {
+        value
+            .as_array()
+            .ok_or_else(|| format!("transcription flag field {key} must be a list"))?
+            .iter()
+            .map(|entry| {
+                entry
+                    .as_str()
+                    .map(str::to_owned)
+                    .ok_or_else(|| format!("transcription flag field {key} must list strings"))
+            })
+            .collect()
+    };
+    let result_id = string("result_id")?.ok_or("a transcription flag needs a result_id")?;
+    let goal_consequent_premises = match object.get("goal_consequent_premises") {
+        None | Some(Value::Null) => Vec::new(),
+        Some(premises) => premises
+            .as_array()
+            .ok_or("transcription flag field goal_consequent_premises must be a list")?
+            .iter()
+            .map(|premise| {
+                Ok(transcription::GoalPremise {
+                    hypothesis: premise
+                        .get("hypothesis")
+                        .and_then(Value::as_str)
+                        .ok_or("a goal-consequent premise needs a hypothesis")?
+                        .to_owned(),
+                    statement_ids: strings(
+                        premise.get("statement_ids").unwrap_or(&Value::Null),
+                        "statement_ids",
+                    )?,
+                })
+            })
+            .collect::<Result<_, String>>()?,
+    };
+    Ok(Flag {
+        result_id,
+        argument_id: string("argument_id")?.unwrap_or_default(),
+        proof_steps: match object.get("proof_steps") {
+            None | Some(Value::Null) => 0,
+            Some(steps) => steps
+                .as_u64()
+                .ok_or("transcription flag field proof_steps must be a natural number")?
+                as usize,
+        },
+        single_application_of: string("single_application_of")?,
+        assembly_of: match object.get("assembly_of") {
+            None | Some(Value::Null) => None,
+            Some(value) => Some(strings(value, "assembly_of")?),
+        },
+        opaque_atoms: match object.get("opaque_atoms") {
+            None | Some(Value::Null) => false,
+            Some(Value::Bool(flag)) => *flag,
+            Some(_) => return Err("transcription flag field opaque_atoms must be a boolean".into()),
+        },
+        goal_consequent_premises,
+    })
+}
+
+/// A frontier fixture: in-memory corpus records and the transcription flags
+/// the Lean heuristics would report for them (#954 B12). It replaces calls
+/// of Python `frontier_report` on synthetic corpora: the records are taken as
+/// given, in the given order, with no corpus validation, no Lean source and
+/// no checkout.
+pub struct Fixture {
+    records: BTreeMap<&'static str, Vec<Record>>,
+    flags: Vec<Flag>,
+}
+
+impl Fixture {
+    /// Parses `{"statements": [...], ..., "transcription_flags": [...]}`;
+    /// every key is optional, and any other key is an error.
+    pub fn parse(input: &Value) -> Result<Self, String> {
+        let object = input
+            .as_object()
+            .ok_or("a frontier fixture must be a JSON object")?;
+        if let Some(key) = object
+            .keys()
+            .find(|key| *key != "transcription_flags" && !FIXTURE_KINDS.contains(&key.as_str()))
+        {
+            return Err(format!(
+                "unknown frontier fixture key {key:?}; expected {} or transcription_flags",
+                FIXTURE_KINDS.join(", ")
+            ));
+        }
+        let mut records = BTreeMap::new();
+        for kind in FIXTURE_KINDS {
+            let entries = match object.get(kind) {
+                None | Some(Value::Null) => Vec::new(),
+                Some(Value::Array(entries)) => entries
+                    .iter()
+                    .map(|entry| {
+                        entry
+                            .as_object()
+                            .filter(|record| record.get("id").is_some_and(Value::is_string))
+                            .cloned()
+                            .ok_or_else(|| {
+                                format!("each {kind} entry must be an object with a string id")
+                            })
+                    })
+                    .collect::<Result<_, String>>()?,
+                Some(_) => return Err(format!("frontier fixture key {kind} must be a list")),
+            };
+            records.insert(kind, entries);
+        }
+        let flags = match object.get("transcription_flags") {
+            None | Some(Value::Null) => Vec::new(),
+            Some(Value::Array(flags)) => {
+                flags.iter().map(fixture_flag).collect::<Result<_, _>>()?
+            }
+            Some(_) => return Err("frontier fixture key transcription_flags must be a list".into()),
+        };
+        Ok(Self { records, flags })
+    }
+
+    /// The uuid / legacy id / label lookup over the fixture's records.
+    pub fn aliases(&self) -> crate::identity::Aliases {
+        let mut aliases = crate::identity::Aliases::default();
+        for (kind, records) in &self.records {
+            for record in records {
+                aliases.add(kind, record);
+            }
+        }
+        aliases
+    }
+
+    fn kind(&self, kind: &str) -> Vec<&Record> {
+        self.records
+            .get(kind)
+            .map(|records| records.iter().collect())
+            .unwrap_or_default()
+    }
+
+    /// Python `frontier_report(..., root=root, transcription=flags, claims=...,
+    /// inferences=..., _include_next_steps=next_steps)` on the fixture, then
+    /// `restrict_to_root` when `reaching_root`: what [`current_frontier`]
+    /// computes for a checkout with these records and flags.
+    pub fn report(&self, root: &str, reaching_root: bool, next_steps: bool) -> Value {
+        let records = Records {
+            statements: self.kind("statements"),
+            arguments: self.kind("arguments"),
+            results: self.kind("results"),
+            relations: self.kind("relations"),
+            claims: self.kind("claims"),
+            attempts: Vec::new(),
+            definitions: Vec::new(),
+            inferences: self.kind("inferences"),
+        };
+        let mut report = Frontier::new(root, &records, &self.flags).report(next_steps);
+        if reaching_root {
+            restrict_to_root(&mut report);
+        }
+        report
+    }
+}
+
 /// The report fields a re-rooted view reads (`truth tree`, #1674) that do
 /// not depend on the frontier root: closure, establishment, statuses, depths
 /// and transcription kinds are computed once, over the whole corpus.
