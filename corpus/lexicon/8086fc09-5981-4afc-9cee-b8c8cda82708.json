@@ -1,0 +1,7 @@
+{
+  "id": "8086fc09-5981-4afc-9cee-b8c8cda82708",
+  "label": "allowlist (ordinary)",
+  "lemma": "allowlist",
+  "class": "ordinary",
+  "gloss": "A generated list of grandfathered exceptions to a check, which may only shrink."
+}

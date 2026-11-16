@@ -3,5 +3,8 @@
   "label": "analysis (ordinary)",
   "lemma": "analysis",
   "class": "ordinary",
+  "forms": [
+    "analyses"
+  ],
   "gloss": "Examination of something by separating it into its parts or cases."
 }

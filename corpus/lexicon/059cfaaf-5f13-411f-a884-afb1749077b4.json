@@ -1,0 +1,7 @@
+{
+  "id": "059cfaaf-5f13-411f-a884-afb1749077b4",
+  "label": "fun (ordinary)",
+  "lemma": "fun",
+  "class": "ordinary",
+  "gloss": "Lean's keyword for an anonymous function, as fun x => …."
+}

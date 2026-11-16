@@ -1,0 +1,7 @@
+{
+  "id": "054a8282-dc0b-4695-8408-5d65aaa79a0b",
+  "label": "sorry (ordinary)",
+  "lemma": "sorry",
+  "class": "ordinary",
+  "gloss": "Lean's placeholder that admits a goal without proof."
+}

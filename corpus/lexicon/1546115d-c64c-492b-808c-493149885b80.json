@@ -1,0 +1,7 @@
+{
+  "id": "1546115d-c64c-492b-808c-493149885b80",
+  "label": "recursive (ordinary)",
+  "lemma": "recursive",
+  "class": "ordinary",
+  "gloss": "Defined in terms of itself on smaller inputs."
+}
