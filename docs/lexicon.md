@@ -220,5 +220,4 @@ It keeps ids and hand-added fields and only adds links. It never deletes an
 entry and never writes an ordinary gloss: ordinary glosses are slice L2,
 authored in frequency order from `untraced`.
 
-The lexicon check runs only in `truth check`. `scripts/corpus.py check` does
-not run it, and the parity test ignores its summary line.
+The lexicon check runs in `truth check`.

@@ -45,9 +45,9 @@ visible. Structural presentation discharges no root premise.
 The Rust `truth` CLI (`truth/README.md`; build it with
 `cargo build --locked --release -p truth`) runs these commands. It builds the
 selected modules and runs `scripts/PropositionStructure.lean` through
-`scripts/worker_env.py`, the pinned environment, as the retained Python
-`corpus.py structure`/`structure-report` does; Lean stays the authority for the
-elaborated expressions. Generate and validate the bounded static input:
+`scripts/worker_env.py`, the pinned environment (the Python
+`corpus.py structure`/`structure-report` it ports was retired in #954 R3); Lean
+stays the authority for the elaborated expressions. Generate and validate the bounded static input:
 
 ```bash
 target/release/truth structure-report --build-input
@@ -62,13 +62,11 @@ target/release/truth structure STMT-CAUSE-PRINCIPLE-BROAD --json \
 ```
 
 `--extractor-json FILE` replays a saved exporter stdout instead of running
-Lean; the parity harness (`scripts/truth_parity/proposition_structure.py`)
-uses it with `scripts/truth_parity/fixtures/proposition-structure-first-slice.json`,
-the exporter's recorded first-slice output with expression trees cut below
-depth 3. Re-record that fixture when the first slice's declarations change:
-run the exporter on the request that `structure-report` records in
-`revision.request` (`lake env lean --run scripts/PropositionStructure.lean
-REQUEST.json`) and cut it the same way.
+Lean; the frozen goldens `truth/tests/golden/proposition_structure/` use it
+with recorded exporter output. To replay the real first slice, run the
+exporter on the request that `structure-report` records in `revision.request`
+(`lake env lean --run scripts/PropositionStructure.lean REQUEST.json`) and
+pass its output.
 
 The command asks Lake to establish compiled/source freshness for selected
 modules before extraction. The static artifact records input hashes and the
@@ -81,7 +79,7 @@ project bodies remain available through the CLI. The default extraction depth
 is bounded and truncation stays typed and visibly partial. Source discovery is a
 locator; Lean validates the declaration, not the locator's textual match.
 
-Focused regressions are `scripts/test_proposition_structure.py`,
+Focused regressions are the Rust `structure` tests and goldens,
 `scripts/test_proposition_structure_lean.py` and the explorer's structure tests.
 The Lean fixture checks two-element separators for argument order, shared
 versus separate existential witnesses, and alternating versus uniform
@@ -103,9 +101,9 @@ in the follow-up PR handoff. This stage uses the
 existing statement, inference, argument, result and relation records; there is
 no all-pairs search and no solver service.
 
-`scripts/strength_comparisons.py` is the single semantic owner of the narrow
-comparison registration carried by relations (`truth strength-comparisons` and
-`strength-report` port it byte for byte; see `truth/README.md`). A registered Lean specification
+`truth strength-comparisons` is the single semantic owner of the narrow
+comparison registration carried by relations (it and `strength-report` port the
+retired `scripts/strength_comparisons.py` byte for byte; see `truth/README.md`). A registered Lean specification
 fixes shared vocabulary/typeclass parameters, an ordered explicit background,
 stronger and weaker formulas, a named proposed delta, and an allowed-case
 remainder. `scripts/CheckStrength.lean` checks complete certificate types against

@@ -46,7 +46,7 @@ A case has these fields:
   or tactic bodies. The two carrier types currently have universe zero.
   Later profiles add carrier-valued relations and two audited data-only
   structures over declared carriers (`DATA_STRUCTURES` in
-  `scripts/configurations.py`: `ExistencePSR.Model` and Kant's `Ontic`, whose
+  `truth/src/check.rs`: `ExistencePSR.Model` and Kant's `Ontic`, whose
   fields are a frame and relations, never proofs).
 - Optional `constants` fix role names to closed Lean terms (for example
   `{"W": "Nat", "I": "Bool"}`); only literal `Bool`/`Nat` carrier constants are
@@ -185,11 +185,12 @@ TRUTH_CORE_CONFIGURATION_REPORT=.cache/configuration-explorer.json \
 TRUTH_CORE_REQUIRE_CONFIGURATION_REPORT=true bun run build
 ```
 
-The bundle is byte for byte what `corpus.py configuration-report` writes, plus
-`producer.producer_sha256`: the fingerprint of the truth crate that produced it
-(as the structure report records). `truth configuration-report --check` (and
-`--build-input`) require it to match the running binary, so a bundle from other
-Rust code, or from the Python producer, is stale.
+The bundle has the format of the retired `corpus.py configuration-report`
+(#954 R3), plus `producer.producer_sha256`: the fingerprint of the truth crate
+that produced it (as the structure report records). `truth configuration-report
+--check` (and `--build-input`) require it to match the running binary, so a
+bundle from other Rust code is stale. The input digest binds the Lean, verifier
+and corpus inputs; the retired Python report scripts are no longer inputs.
 
 `truth configuration-report --check .cache/configuration-explorer.json` checks a
 **trusted producer's output** against the current checkout head, input manifest,
