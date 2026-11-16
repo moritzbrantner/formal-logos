@@ -5,6 +5,7 @@ import type { FrontierReport } from "../src/lib/site-state";
 import type { NextStepsReport } from "../src/lib/next-steps";
 import { shortId } from "../src/lib/corpus-ids";
 import { truthJson } from "../src/lib/truth-cli";
+import { expectCount } from "./browser-waits";
 
 let browser: Browser;
 let server: ReturnType<typeof Bun.serve> | undefined;
@@ -64,16 +65,16 @@ test("next-work view shares frontier routes, costs, leaves, floor and DAG naviga
     }
   }
   const routes = page.getByRole("heading", { name: "Expanded-route cost (diagnostic)", exact: true }).locator("..").getByRole("row");
-  expect(await routes.count()).toBe(report.routes.length + 1);
+  await expectCount(routes, report.routes.length + 1);
   expect(await routes.nth(1).innerText()).toContain(report.cheapest_argument_id!);
   expect(await routes.nth(1).innerText()).toContain(String(report.routes.find((route) => route.cheapest)!.cost));
   const leaves = report.leaves.filter((leaf) => leaf.on_cheapest_route);
-  for (const leaf of leaves) expect(await page.locator(`[id="leaf-${leaf.statement_id}"]`).count()).toBe(1);
+  for (const leaf of leaves) await expectCount(page.locator(`[id="leaf-${leaf.statement_id}"]`), 1);
   const first = page.locator(`[id="leaf-${leaves[0].statement_id}"]`);
   expect(await first.innerText()).toContain(`${leaves[0].impact.routes_improved} routes improve`);
   expect(await first.innerText()).toContain("accepting this as floor requires approval");
   expect(await page.locator("#joint-settlements").innerText()).toContain("every failure mode");
-  expect(await page.locator("#floor-register").getByRole("link", { name: "Owner approval" }).count()).toBe(report.floor_register.filter((entry) => entry.owner_approval).length);
+  await expectCount(page.locator("#floor-register").getByRole("link", { name: "Owner approval" }), report.floor_register.filter((entry) => entry.owner_approval).length);
   const map = page.getByRole("region", { name: "Follow the argument DAG" });
   const chosen = report.dag.arguments.find((argument) => argument.argument_id === report.cheapest_argument_id)!;
   const sid = chosen.premise_statement_ids[0];

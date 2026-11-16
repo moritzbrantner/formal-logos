@@ -2,6 +2,7 @@ import { afterAll, beforeAll, expect, test } from "bun:test";
 import path from "node:path";
 import { chromium, type Browser } from "playwright";
 import { uid } from "./corpus-records";
+import { expectCount } from "./browser-waits";
 
 let browser: Browser;
 let server: ReturnType<typeof Bun.serve>;
@@ -42,12 +43,12 @@ test("truth pilot: logical scope, open bridges, reciprocal comparison and scoped
   await page.goto(`${base}objective-truth/`);
   await page.getByRole("heading", { name: "The two logical propositions", exact: true }).waitFor();
   const logical = page.locator("section").filter({ has: page.getByRole("heading", { name: "The two logical propositions", exact: true }) });
-  expect(await logical.getByText("Proved · established", { exact: true }).count()).toBe(2);
+  await expectCount(logical.getByText("Proved · established", { exact: true }), 2);
   const bridge = page.locator("section").filter({ has: page.getByRole("heading", { name: "Interpretation bridges still to defend", exact: true }) });
-  expect(await bridge.getByText("Open · bare", { exact: true }).count()).toBe(2);
+  await expectCount(bridge.getByText("Open · bare", { exact: true }), 2);
   const table = page.getByRole("table", { name: "Authoritative frontier calculation for the reciprocal-entailment fixture" });
-  expect(await table.getByText("Neither", { exact: true }).count()).toBe(2);
-  expect(await table.getByText("A and B", { exact: true }).count()).toBe(1);
+  await expectCount(table.getByText("Neither", { exact: true }), 2);
+  await expectCount(table.getByText("A and B", { exact: true }), 1);
   await bridge.getByRole("link", { name: "Inspect graph and frontier", exact: true }).first().click();
   await page.waitForURL((url) => url.searchParams.get("target") === uid("statement", "STMT-PILOT-LOGICAL-SENTENCE-STABLE"));
   await page.getByRole("button", { name: "Selected goal frontier", exact: true }).waitFor();

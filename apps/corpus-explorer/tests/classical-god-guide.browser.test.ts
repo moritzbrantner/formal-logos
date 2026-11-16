@@ -2,6 +2,7 @@ import { afterAll, beforeAll, expect, test } from "bun:test";
 import path from "node:path";
 import { chromium, type Browser } from "playwright";
 import { uid } from "./corpus-records";
+import { expectCount } from "./browser-waits";
 
 let browser: Browser;
 let server: ReturnType<typeof Bun.serve>;
@@ -32,7 +33,7 @@ test("classical-God guide links exact evidence, navigates all stages, and fits m
   page.on("pageerror", (error) => errors.push(error.message));
   await page.goto(new URL(basePath + "/guide/classical-god/", server.url).toString());
   await page.getByRole("heading", { name: "From a necessary being to a classical-God conclusion" }).waitFor();
-  expect(await page.locator("section[id^='step-']").count()).toBe(3);
+  await expectCount(page.locator("section[id^='step-']"), 3);
   await page.getByText(/Conditional conclusion, not an unconditional proof of God/).waitFor();
   await page.getByText(/Fewest open leaves on any route/).waitFor();
 
@@ -42,10 +43,10 @@ test("classical-God guide links exact evidence, navigates all stages, and fits m
   await finalStep.getByRole("heading", { name: "The conditional classical-God conclusion" }).waitFor();
   const evidence = finalStep.locator("details").first();
   await evidence.getByText(/all 11 named inputs/).click();
-  expect(await evidence.locator("ol li").count()).toBe(11);
+  await expectCount(evidence.locator("ol li"), 11);
   expect(await finalStep.getByRole("link", { name: "Lean solution ↗" }).getAttribute("href"))
     .toContain("ClassicalGodFromPositiveRoot/Solution.lean");
-  expect(await finalStep.getByRole("link", { name: "Source, rivals and countermodel status" }).count()).toBe(3);
+  await expectCount(finalStep.getByRole("link", { name: "Source, rivals and countermodel status" }), 3);
   await page.reload();
   await page.locator("#step-3").waitFor();
 

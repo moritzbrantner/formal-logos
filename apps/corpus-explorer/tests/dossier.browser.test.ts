@@ -4,6 +4,7 @@ import { chromium, type Browser } from "playwright";
 
 import { getDossiers } from "../src/lib/premise-dossier";
 import { label, uid } from "./corpus-records";
+import { expectCount } from "./browser-waits";
 
 const premise = uid("statement", "STMT-ACT-SIMPLY-PRIOR-TO-POTENCY");
 const attempt = uid("attempt", "ATTEMPT-ACT-POTENCY-INDEPENDENCE");
@@ -66,7 +67,7 @@ test("premise dossier: statement navigation, durable attempt evidence and route 
   // A new route to the root adds a row; the expectation follows the emitted dossier (#520).
   const routeCount = getDossiers()[premise].route_contributions.length;
   expect(routeCount).toBeGreaterThan(0);
-  expect(await routes.locator("tbody tr").count()).toBe(routeCount);
+  await expectCount(routes.locator("tbody tr"), routeCount);
   await page.reload();
   await page.getByRole("heading", { name: "Attempt log", exact: true }).waitFor();
   await page.setViewportSize({ width: 390, height: 844 });

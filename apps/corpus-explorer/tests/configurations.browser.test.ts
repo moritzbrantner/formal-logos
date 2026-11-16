@@ -3,6 +3,7 @@ import path from "node:path";
 import { chromium, type Browser } from "playwright";
 
 import { label, short, uid } from "./corpus-records";
+import { expectCount } from "./browser-waits";
 
 let browser: Browser;
 let server: ReturnType<typeof Bun.serve>;
@@ -43,7 +44,7 @@ test.skipIf(certified)("configuration dossier link preserves named selection and
   await page.getByRole("link", { name: label("configuration", "CONFIG-NECESSARY-INDIVIDUAL"), exact: true }).click();
   await page.waitForURL((url) => url.pathname.endsWith(`/configurations/${uid("configuration", "CONFIG-NECESSARY-INDIVIDUAL")}/`));
   await page.getByRole("heading", { name: "Configuration assumptions", level: 1, exact: true }).waitFor();
-  expect(await page.getByText("Registered provenance · verification required", { exact: true }).count()).toBe(1);
+  await expectCount(page.getByText("Registered provenance · verification required", { exact: true }), 1);
   await page.getByRole("navigation", { name: "Named assumption sets" }).getByRole("link", { name: "varying-bearers-control", exact: true }).click();
   expect(new URL(page.url()).hash).toBe("#varying-bearers-control");
   const control = page.getByRole("region", { name: "varying-bearers-control", exact: true });
@@ -56,7 +57,7 @@ test.skipIf(certified)("configuration dossier link preserves named selection and
   expect(await page.locator("article").evaluate((element) => element.scrollWidth <= element.clientWidth + 1 && element.getBoundingClientRect().right <= window.innerWidth + 1)).toBe(true);
   await page.goto(`${base}configurations/${uid("configuration", "CONFIG-NECESSARY-INDIVIDUAL-NAT-WORLDS")}/`);
   await page.getByText("Models excluded by this profile", { exact: true }).click();
-  expect(await page.getByText("W: profile requires Nat; registration uses Bool", { exact: true }).count()).toBe(3);
+  await expectCount(page.getByText("W: profile requires Nat; registration uses Bool", { exact: true }), 3);
   await page.close();
 }, 60000);
 
@@ -75,12 +76,12 @@ test.skipIf(!certified)("certified configurations preserve exact assumptions, co
   await page.getByRole("heading", { name: "verified incompatible", exact: true }).waitFor();
   expect(await checkbox("DE-RE").isChecked()).toBe(true);
   expect(await page.getByRole("region", { name: "verified incompatible", exact: true }).innerText()).toContain(label("result", "NECESSARY-INDIVIDUAL-RE-CONTINGENCY-INCOMPATIBLE"));
-  expect(await page.getByRole("heading", { name: "Verified conditional applications", exact: true }).count()).toBe(0);
+  await expectCount(page.getByRole("heading", { name: "Verified conditional applications", exact: true }), 0);
   await checkbox("INDIVIDUAL-CONTINGENCY").click();
   await page.getByRole("heading", { name: "model witnessed", exact: true }).waitFor();
   await checkbox("DE-DICTO").click();
   await page.getByRole("heading", { name: "Verified conditional applications", exact: true }).waitFor();
-  expect(await page.getByRole("link", { name: label("result", "NECESSARY-INDIVIDUAL-RE-TO-DICTO"), exact: true }).count()).toBe(1);
+  await expectCount(page.getByRole("link", { name: label("result", "NECESSARY-INDIVIDUAL-RE-TO-DICTO"), exact: true }), 1);
   await checkbox("JOINT-ABSENCE").click();
   await page.getByRole("heading", { name: "verified incompatible", exact: true }).waitFor();
   const core = page.getByRole("region", { name: "verified incompatible", exact: true });
@@ -101,13 +102,13 @@ test.skipIf(!certified)("certified configurations preserve exact assumptions, co
   await page.goto(`${base}configurations/${uid("configuration", "CONFIG-NECESSARY-INDIVIDUAL-NAT-WORLDS")}/?set=inventory-unresolved`);
   await page.getByRole("heading", { name: "unresolved", exact: true }).waitFor();
   await page.getByText("Models excluded by this profile", { exact: true }).click();
-  expect(await page.getByText("W: profile requires Nat; registration uses Bool", { exact: true }).count()).toBe(3);
+  await expectCount(page.getByText("W: profile requires Nat; registration uses Bool", { exact: true }), 3);
   await page.getByText("Verification provenance and limits", { exact: true }).click();
   expect(await page.locator("article").innerText()).toContain("Input digest:");
   expect(await page.locator("article").innerText()).toContain("not philosophically distinct theories");
   await page.goto(`${base}configurations/${uid("configuration", "CONFIG-NECESSARY-INDIVIDUAL")}/?set=custom&premise=STMT-UNKNOWN`);
   await page.locator("article").getByRole("alert").waitFor();
   expect(await page.locator("article").getByRole("alert").innerText()).toContain("unsupported");
-  expect(await page.getByRole("heading", { name: "model witnessed", exact: true }).count()).toBe(0);
+  await expectCount(page.getByRole("heading", { name: "model witnessed", exact: true }), 0);
   await page.close();
 }, 60000);

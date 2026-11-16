@@ -3,6 +3,7 @@ import { chromium, type Browser } from "playwright";
 import path from "node:path";
 
 import { truthJson } from "../src/lib/truth-cli";
+import { eventually, expectCount, expectCountAbove } from "./browser-waits";
 
 let browser: Browser;
 let server: ReturnType<typeof Bun.serve>;
@@ -60,7 +61,7 @@ test("static frontier: queue ↔ graph, goal/global, reload, expansion, focus re
   const obligationCount = async () => Number((await queue.locator('[aria-live="polite"]').innerText()).match(/^(\d+) obligations$/)![1]);
   const globalCount = await obligationCount();
   expect(globalCount).toBeGreaterThan(50);
-  expect(await queue.locator("ol > li").count()).toBe(Math.min(globalCount, 100));
+  await expectCount(queue.locator("ol > li"), Math.min(globalCount, 100));
   await queue.locator(".research-select").first().click();
   await page.waitForURL((url) => url.searchParams.has("obligation") && url.searchParams.has("sel"));
   const selected = new URL(page.url()).searchParams.get("sel")!;
@@ -72,14 +73,15 @@ test("static frontier: queue ↔ graph, goal/global, reload, expansion, focus re
   expect(new URL(page.url()).searchParams.get("obligation")).toBe(obligation);
   await page.getByRole("button", { name: "Selected goal frontier", exact: true }).click();
   await page.waitForURL((url) => url.searchParams.get("scope") === "goal");
-  expect(await obligationCount()).toBeLessThan(globalCount);
+  // The queue heading re-renders after the URL changes.
+  expect(await eventually(obligationCount, (count) => count < globalCount)).toBeLessThan(globalCount);
   await page.getByRole("button", { name: "Global frontier", exact: true }).click();
   await page.waitForURL((url) => !url.searchParams.has("scope"));
-  expect(await obligationCount()).toBe(globalCount);
+  expect(await eventually(obligationCount, (count) => count === globalCount)).toBe(globalCount);
   // Selecting the graph changes the queue's related-node highlights.
   await queue.locator(".research-select").first().click();
   await page.locator(`[data-id="${selected}"]`).click();
-  expect(await queue.locator('[data-related="true"]').count()).toBeGreaterThan(0);
+  await expectCountAbove(queue.locator('[data-related="true"]'), 0);
   const overviewUrl = new URL(page.url());
   const savedViewport = await page.locator(".react-flow__viewport").evaluate((element) => {
     const matrix = new DOMMatrixReadOnly(getComputedStyle(element).transform);
@@ -118,7 +120,7 @@ test("static frontier: queue ↔ graph, goal/global, reload, expansion, focus re
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true);
   // "Show all" lists every obligation the heading counts.
   await queue.getByRole("button", { name: `Show all ${globalCount} obligations`, exact: true }).click();
-  expect(await queue.locator("ol > li").count()).toBe(globalCount);
+  await expectCount(queue.locator("ol > li"), globalCount);
   expect(errors).toEqual([]);
   await page.close();
 }, 60000);

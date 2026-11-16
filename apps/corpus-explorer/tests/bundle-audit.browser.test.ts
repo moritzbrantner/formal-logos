@@ -7,6 +7,7 @@ import completeAudit from "../../../docs/notes/classical-attributes-all-migratio
 import namingAudit from "../../../docs/notes/naming-first-mover-migration.json";
 import { nameOf } from "../src/lib/corpus";
 import { label, uid } from "./corpus-records";
+import { expectCount, expectCountAtLeast } from "./browser-waits";
 
 
 let browser: Browser;
@@ -51,7 +52,7 @@ test("bounded audit exposes exact scope, open premises and unresolved converse o
   expect(await audit.innerText()).toContain("25 definitions");
   expect(await audit.innerText()).toContain("No change");
   await audit.locator("[data-audit-records] > summary").click();
-  expect(await audit.locator("li").count()).toBeGreaterThanOrEqual(baseAudit.records.length);
+  await expectCountAtLeast(audit.locator("li"), baseAudit.records.length);
   const open = audit.locator("li").filter({ has: page.locator("a", { hasText: label("statement", "STMT-CAUSE-OF-QUALITY-IN-ANOTHER-IS-MORE-SUCH") }) });
   expect((await open.innerText()).toLowerCase()).toContain("unresolved");
   expect(await open.innerText()).toContain("removed its Aristotle attribution");
@@ -87,8 +88,8 @@ test("complete specialization and consumers expose same-witness and identity bou
     expect(await panel.innerText()).toContain("same witness");
     expect(await panel.innerText()).toContain("Q11-NATURE");
     await panel.locator("[data-audit-records] > summary").click();
-    expect(await panel.getByRole("link", { name: label("definition", "DEF-INDEPENDENT-POTENCY"), exact: true }).count()).toBe(1);
-    expect(await panel.getByRole("link", { name: label("disambiguation", "DISAMB-POTENCY"), exact: true }).count()).toBe(1);
+    await expectCount(panel.getByRole("link", { name: label("definition", "DEF-INDEPENDENT-POTENCY"), exact: true }), 1);
+    await expectCount(panel.getByRole("link", { name: label("disambiguation", "DISAMB-POTENCY"), exact: true }), 1);
     const immutable = panel.locator("li").filter({ has: page.locator("a", { hasText: label("statement", "STMT-GOD-IS-IMMUTABLE") }) });
     expect(await immutable.innerText()).toContain("IsImmutable InPotency");
     expect(await immutable.innerText()).toContain("same Respect");
@@ -133,8 +134,8 @@ test("naming route exposes one-way applications, witness identity and explicit e
     expect(await panel.innerText()).toContain("same witness");
     expect(await panel.innerText()).toContain("one-way");
     await panel.locator("[data-audit-records] > summary").click();
-    expect(await panel.getByRole("link", { name: label("definition", "DEF-INDEPENDENT-POTENCY"), exact: true }).count()).toBe(1);
-    expect(await panel.getByRole("link", { name: label("disambiguation", "DISAMB-POTENCY"), exact: true }).count()).toBe(1);
+    await expectCount(panel.getByRole("link", { name: label("definition", "DEF-INDEPENDENT-POTENCY"), exact: true }), 1);
+    await expectCount(panel.getByRole("link", { name: label("disambiguation", "DISAMB-POTENCY"), exact: true }), 1);
     const bridge = panel.locator("li").filter({ has: page.locator("a", { hasText: label("statement", "STMT-FIRST-UNMOVED-MOVER-IS-MAXIME-ENS") }) });
     expect(await bridge.innerText()).toContain("Every first mover");
     // Exact reviewed semantic rows must survive the presentation, including
@@ -146,7 +147,7 @@ test("naming route exposes one-way applications, witness identity and explicit e
       uid("definition", "DEF-CHURCH-CRITERION-CALIBRATION"),
     ]);
     for (const row of namingAudit.records.filter((row) => semanticIds.has(row.id))) {
-      expect(await panel.getByRole("link", { name: nameOf(row.id), exact: true }).count()).toBe(1);
+      await expectCount(panel.getByRole("link", { name: nameOf(row.id), exact: true }), 1);
     }
   }
   await page.close();

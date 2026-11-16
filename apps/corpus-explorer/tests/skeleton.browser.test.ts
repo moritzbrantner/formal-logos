@@ -9,6 +9,7 @@ import { getFrontierReport } from "../src/lib/site-state";
 import { skeletonProgress } from "../src/app/skeleton/progress";
 import { nameOf as label } from "../src/lib/corpus";
 import { label as legacyLabel, uid } from "./corpus-records";
+import { expectCount, expectCountAbove } from "./browser-waits";
 
 let browser: Browser;
 let server: ReturnType<typeof Bun.serve>;
@@ -48,15 +49,15 @@ test("skeleton: route, conditional versus discharged, next gap, proof links, rel
   const url = new URL(`${basePath}/skeleton/`, server.url).toString();
   await page.goto(url);
   await page.getByRole("heading", { name: "Skeleton progress", exact: true }).waitFor();
-  expect(await page.getByText(`${progress.obligations.length} open premises`, { exact: false }).count()).toBeGreaterThan(0);
-  expect(await page.getByText("Root not discharged.", { exact: false }).count()).toBe(1);
+  await expectCountAbove(page.getByText(`${progress.obligations.length} open premises`, { exact: false }), 0);
+  await expectCount(page.getByText("Root not discharged.", { exact: false }), 1);
   const connections = page.getByRole("region", { name: "Checked connections" });
-  expect(await connections.getByText("Connected · conditional proof", { exact: true }).count()).toBeGreaterThan(0);
-  expect(await connections.getByText("Discharged · established", { exact: true }).count()).toBeGreaterThan(0);
+  await expectCountAbove(connections.getByText("Connected · conditional proof", { exact: true }), 0);
+  await expectCountAbove(connections.getByText("Discharged · established", { exact: true }), 0);
   const rootRoute = connections.locator("details").first();
   await rootRoute.locator("summary").click();
-  expect(await rootRoute.getByRole("link", { name: label(progress.routes[0].results[0].id), exact: true }).count()).toBe(1);
-  expect(await rootRoute.getByRole("link", { name: legacyLabel("result", "CATHOLICISM-FROM-PRIMA-VIA-WITH-Q11-UNIQUENESS"), exact: true }).count()).toBe(0);
+  await expectCount(rootRoute.getByRole("link", { name: label(progress.routes[0].results[0].id), exact: true }), 1);
+  await expectCount(rootRoute.getByRole("link", { name: legacyLabel("result", "CATHOLICISM-FROM-PRIMA-VIA-WITH-Q11-UNIQUENESS"), exact: true }), 0);
 
   // Exact theorem provenance remains inspectable even when the conclusion is conditional.
   const witnessStep = connections.locator("ol > li").filter({ hasText: legacyLabel("result", "CATHOLICISM-STAGES-ONE-TWO-SAME-WITNESS") }).first();
@@ -67,13 +68,13 @@ test("skeleton: route, conditional versus discharged, next gap, proof links, rel
   await page.goto(url);
 
   const obligations = page.getByRole("region", { name: "Root obligations" });
-  expect(await obligations.locator("ol > li").count()).toBe(progress.obligations.length);
+  await expectCount(obligations.locator("ol > li"), progress.obligations.length);
   const gap = progress.obligations.find((entry) => entry.candidates.length > 0)!;
   const gapPanel = page.locator(`#obligation-${gap.item.statement_id}`);
   await gapPanel.locator("summary").click();
   await gapPanel.getByRole("heading", { name: "Next recorded gap", exact: true }).waitFor();
-  expect(await gapPanel.getByRole("link", { name: "Read queued source and interpretation notes", exact: true }).count()).toBe(gap.candidates.length);
-  expect(await gapPanel.getByText("Discharged · established", { exact: true }).count()).toBe(0);
+  await expectCount(gapPanel.getByRole("link", { name: "Read queued source and interpretation notes", exact: true }), gap.candidates.length);
+  await expectCount(gapPanel.getByText("Discharged · established", { exact: true }), 0);
   const unrecorded = progress.obligations.find((entry) => entry.candidates.length === 0)!;
   const unrecordedPanel = page.locator(`#obligation-${unrecorded.item.statement_id}`);
   await unrecordedPanel.locator("summary").click();
