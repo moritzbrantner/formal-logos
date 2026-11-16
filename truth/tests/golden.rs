@@ -109,13 +109,19 @@ fn replay_module(module: &str) {
         directory.display()
     );
     let mut failures = Vec::new();
+    let mut blessings = Vec::new();
     let mut count = 0;
     for file in files {
         let text = fs::read_to_string(&file).expect("golden file");
         let document: Value = serde_json::from_str(&text).expect("golden JSON");
         let base = document["base"].as_object().expect("base tree");
         let shared = document["shared"].as_array().cloned().unwrap_or_default();
-        for case in document["cases"].as_array().expect("cases") {
+        for (case_index, case) in document["cases"]
+            .as_array()
+            .expect("cases")
+            .iter()
+            .enumerate()
+        {
             let case = &resolve_shared(case, &shared);
             count += 1;
             let title = format!(
@@ -125,10 +131,19 @@ fn replay_module(module: &str) {
                 case["name"].as_str().unwrap_or(""),
                 strings(&case["args"]).join(" ")
             );
-            if let Err(message) = replay(base, case) {
+            if let Err((message, blessed)) = replay(base, case) {
                 failures.push(format!("{title}\n{message}"));
+                blessings.push((file.clone(), case_index, blessed));
             }
         }
+    }
+    if env::var_os("TRUTH_GOLDEN_BLESS").is_some() && !failures.is_empty() {
+        bless(&blessings);
+        eprintln!(
+            "TRUTH_GOLDEN_BLESS: rewrote {} cases of {module}; review the diff",
+            blessings.len()
+        );
+        return;
     }
     assert!(
         failures.is_empty(),
@@ -407,7 +422,31 @@ fn replay_history(root: &Path, scratch: &Path, history: &Value) -> Vec<String> {
     ids
 }
 
-fn replay(base: &Map<String, Value>, case: &Value) -> Result<(), String> {
+/// `TRUTH_GOLDEN_BLESS=1`: rewrites the `expect` of every differing case
+/// with what the binary produced (tokenized like the recorder did), in the
+/// recorder's format (`json.dumps(indent=1, sort_keys=True)`). There is no
+/// Python oracle after #954 R3, so a deliberate output change is blessed
+/// this way and its golden diff reviewed in the PR.
+fn bless(blessings: &[(PathBuf, usize, Value)]) {
+    let mut documents: BTreeMap<PathBuf, Value> = BTreeMap::new();
+    for (file, index, expect) in blessings {
+        let document = documents.entry(file.clone()).or_insert_with(|| {
+            serde_json::from_str(&fs::read_to_string(file).expect("golden file"))
+                .expect("golden JSON")
+        });
+        document["cases"][*index]["expect"] = expect.clone();
+    }
+    for (file, document) in documents {
+        let mut out = Vec::new();
+        let formatter = serde_json::ser::PrettyFormatter::with_indent(b" ");
+        let mut serializer = serde_json::Serializer::with_formatter(&mut out, formatter);
+        serde::Serialize::serialize(&document, &mut serializer).expect("serialize golden");
+        out.push(b'\n');
+        fs::write(&file, out).expect("write golden");
+    }
+}
+
+fn replay(base: &Map<String, Value>, case: &Value) -> Result<(), (String, Value)> {
     let scratch = Scratch::new();
     let root = scratch.0.join("root");
     fs::create_dir_all(&root).expect("root");
@@ -488,6 +527,109 @@ fn replay(base: &Map<String, Value>, case: &Value) -> Result<(), String> {
         &stdout,
         &stderr,
     )
+    .map_err(|message| {
+        let blessed = blessed(
+            &case["expect"],
+            &tokens,
+            output.status.code(),
+            &stdout,
+            &stderr,
+        );
+        (message, blessed)
+    })
+}
+
+impl Tokens {
+    /// The inverse substitution: each concrete value becomes its token,
+    /// longest value first.
+    fn tokenize(&self, text: &str) -> String {
+        let mut pairs: Vec<&(String, String)> = self.0.iter().collect();
+        pairs.sort_by_key(|pair| std::cmp::Reverse(pair.1.len()));
+        let mut text = text.to_owned();
+        for (token, value) in pairs {
+            if text.contains(value.as_str()) {
+                text = text.replace(value.as_str(), token);
+            }
+        }
+        text
+    }
+
+    fn tokenize_value(&self, value: &Value) -> Value {
+        match value {
+            Value::String(text) => Value::String(self.tokenize(text)),
+            Value::Array(items) => {
+                Value::Array(items.iter().map(|item| self.tokenize_value(item)).collect())
+            }
+            Value::Object(entries) => Value::Object(
+                entries
+                    .iter()
+                    .map(|(key, item)| (self.tokenize(key), self.tokenize_value(item)))
+                    .collect(),
+            ),
+            other => other.clone(),
+        }
+    }
+}
+
+/// `expect` with each compared field replaced by the actual output, after
+/// the same producer stripping and normalizations `compare` applies.
+fn blessed(
+    expect: &Value,
+    tokens: &Tokens,
+    code: Option<i32>,
+    stdout: &str,
+    stderr: &str,
+) -> Value {
+    let mut expect = expect.clone();
+    expect["code"] = code.map_or(Value::Null, Value::from);
+    let strip = expect["strip_producer"].as_bool() == Some(true);
+    let mut stdout = if strip {
+        strip_producer(stdout)
+    } else {
+        stdout.to_owned()
+    };
+    for name in strings(&expect["normalize"]) {
+        stdout = normalize(&name, &stdout);
+    }
+    if expect.get("stdout").is_some() {
+        expect["stdout"] = Value::String(tokens.tokenize(&stdout));
+    }
+    if expect.get("stderr").is_some() {
+        expect["stderr"] = Value::String(tokens.tokenize(stderr));
+    }
+    let parsed = serde_json::from_str::<Value>(&stdout).ok();
+    if let (true, Some(mut actual)) = (expect.get("stdout_json").is_some(), parsed.clone()) {
+        if let Value::Object(entries) = &mut actual {
+            for key in strings(&expect["ignore_keys"]) {
+                entries.remove(&key);
+            }
+        }
+        expect["stdout_json"] = tokens.tokenize_value(&actual);
+    }
+    if let (Some(paths), Some(actual)) = (expect["json_paths"].as_object().cloned(), &parsed) {
+        for dotted in paths.keys() {
+            if let Some(value) = path(actual, dotted) {
+                expect["json_paths"][dotted] = tokens.tokenize_value(value);
+            }
+        }
+    }
+    let message = serde_json::from_str::<Value>(stderr)
+        .ok()
+        .and_then(|value| value["error"]["message"].as_str().map(str::to_owned));
+    if let (true, Some(message)) = (expect["error_message"].is_string(), message) {
+        expect["error_message"] = Value::String(tokens.tokenize(&message));
+    }
+    if let Some(files) = expect["files"].as_object().cloned() {
+        for relative in files.keys() {
+            let target = PathBuf::from(tokens.apply(relative));
+            let mut actual = fs::read_to_string(&target).unwrap_or_default();
+            if strip {
+                actual = strip_producer(&actual);
+            }
+            expect["files"][relative] = Value::String(tokens.tokenize(&actual));
+        }
+    }
+    expect
 }
 
 fn strip_producer(text: &str) -> String {

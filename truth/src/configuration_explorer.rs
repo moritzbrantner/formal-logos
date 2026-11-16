@@ -37,17 +37,13 @@ pub const PRODUCER_TRUST: &str = "Output of the trusted verification producer. D
 /// The only bundle path a certified build reads.
 pub const CACHE_PATH: &str = ".cache/configuration-explorer.json";
 
-const INPUT_FILES: [&str; 16] = [
+/// The fixed inputs. The retired Python report scripts are no longer inputs
+/// (#954 R3); `structure::PRODUCER_SHA256` binds the Rust producer.
+const INPUT_FILES: [&str; 10] = [
     "lean-toolchain",
     "lakefile.toml",
     "lake-manifest.json",
     "TruthCore.lean",
-    "scripts/corpus.py",
-    "scripts/configurations.py",
-    "scripts/configuration_explorer.py",
-    "scripts/finite_models.py",
-    "scripts/premise_dossiers.py",
-    "scripts/source_evidence.py",
     "scripts/BindTypes.lean",
     "scripts/verify-result.sh",
     "scripts/verifier-pins.env",
