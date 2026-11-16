@@ -22,6 +22,9 @@ adapter of #1645?
   `--check-key` verifies that each pinned reference resolves.
 - **Snapshot hygiene.** #1643, #1644 and PR #1686 state the benchmark's own
   answers, so they are removed from the snapshot that both workflows read.
+  Both workflows also run in a detached worktree of HEAD that leaves out
+  this note and the answer key (`evaluation_excludes`), so the note index
+  cannot retrieve the answers. A rerun this way gave the same scores.
 - **Baseline.** The documented route (AGENTS.md "Premise dossiers and
   attempts", `research-index.md`): `truth index search` for the case's words
   (notes have been indexed since #952); `truth related` and `truth dossier
