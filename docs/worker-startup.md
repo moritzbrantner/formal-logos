@@ -51,8 +51,10 @@ and [scoped execution context](systematic-corpus-loop.md#worker-ownership-and-in
 including its policy revision, checkout, ownership/authority, service setup and
 existing check evidence. Retain that worker through repairs to the same slice.
 Read mandatory policy once, then refresh changed applicable inputs. Inspect
-`target/release/truth dossier <STMT-ID>` and its recorded attempts before restarting
-research; preserve new findings there. Keep engineering timing out of philosophical
+`target/release/truth dossier <STMT-ID>`, `target/release/truth brief <STMT-ID>`
+and its recorded attempts before restarting research (`context` for an existing
+argument or result; `index search` and `novelty` when no seed is known, as in
+the [premise dossier workflow](../AGENTS.md#premise-dossiers-and-attempts)); preserve new findings there. Keep engineering timing out of philosophical
 records. Designate warm clones explicitly and exclude them from disposable-clone
 cleanup under the ownership contract, preserving `target/release/truth` and Lean
 build seeds for reuse.

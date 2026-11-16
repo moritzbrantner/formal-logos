@@ -231,7 +231,8 @@ Before opening a new proposition investigation or introducing vocabulary, run
 loaded corpus in memory (no cache) and surfaces related propositions, complete
 argument bundles and previous attempts. Without a seed ID, start with
 `target/release/truth index search 'topic words'` (a disposable SQLite/FTS5
-projection under `.cache/`, rebuilt when the corpus changed; never an authority).
+projection under `.cache/` of the corpus records and the `docs/notes/` sections
+(#952), rebuilt when either changed; never an authority).
 Inspect promising matches before reinventing them. Rankings and shared vocabulary are discovery aids, not proofs
 of equivalence, implication or incompatibility. Continue with the dossier and
 existing certification workflow below. The repository-local `proposition-reuse`
@@ -332,7 +333,8 @@ not a prerequisite for every investigation in the systematic loop.
 Before research, inspect `/progress` in the corpus explorer and the target's
 `/dossiers/<statement-uuid>#research-comparison`; use
 `target/release/truth context <ARGUMENT-OR-RESULT-ID>`,
-`target/release/truth dossier <STMT-ID>` for every touched premise, and
+`target/release/truth dossier <STMT-ID>` for every touched premise,
+`target/release/truth brief <STMT-ID>` for prior rivals and judgments, and
 `target/release/truth related <STMT-ID>` before introducing vocabulary.
 These views reuse canonical corpus evidence; they are not a separate status registry.
 

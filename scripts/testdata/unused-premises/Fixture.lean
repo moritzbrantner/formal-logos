@@ -1,5 +1,5 @@
 /-
-Fixture for `scripts/test_unused_premises.py` (#571). Compiled by the test as
+Fixture for `scripts/test_unused_premises_lean.py` (#571). Compiled by the test as
 module `TruthCore.UnusedPremisesFixture` (outside the library), then described
 by `scripts/UnusedPremises.lean`. Each theorem's comment gives the expected
 usage.

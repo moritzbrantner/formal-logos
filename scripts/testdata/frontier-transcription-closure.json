@@ -1,5 +1,5 @@
 {
-  "description": "Shared parity fixture for frontier rules (c) and (d): a transcription result (heuristic or declared in the result's transcription field, #391) closes its conclusion only when all of its premises are closed, and a refutes relation counts only when its argument's premises are all closed (#391). Read by scripts/test_corpus_frontier.py and apps/corpus-explorer/src/lib/proposition-graph.test.ts; both must produce the expected frontier, closures and open-premise depths (bare: no stating claim and no supports relation; sourced otherwise).",
+  "description": "Shared parity fixture for frontier rules (c) and (d): a transcription result (heuristic or declared in the result's transcription field, #391) closes its conclusion only when all of its premises are closed, and a refutes relation counts only when its argument's premises are all closed (#391). Read by truth/tests/frontier_fixture.rs and apps/corpus-explorer/src/lib/proposition-graph.test.ts; both must produce the expected frontier, closures and open-premise depths (bare: no stating claim and no supports relation; sourced otherwise).",
   "statements": [
     {"id": "SE", "paraphrase": "self-evident", "self_evident": {"justification_ids": ["CL-SE"]}},
     {"id": "OPEN", "paraphrase": "open premise"},

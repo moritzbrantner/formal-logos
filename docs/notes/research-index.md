@@ -86,7 +86,7 @@ For actual certification, use the existing gates:
 ```bash
 target/release/truth configurations --registered --case CONFIG-MEGARIAN-CAPACITY-MOTION
 target/release/truth configurations --case CONFIG-MEGARIAN-CAPACITY-MOTION
-python3 scripts/corpus.py configuration-report --help
+target/release/truth configuration-report --check .cache/configuration-explorer.json
 ```
 
 Reuse existing fresh verification evidence where available. This index never
@@ -163,10 +163,11 @@ equivalence or source evidence, and it creates no record. A note that
 discusses a formal result should link it by ID rather than restate its
 proof or provenance.
 
-Python has no note index. This is an intentional divergence: the parity
-tests compare the record part of `search`, drop `mentioned_by_notes` from
-`show`, and drop `note_mentions` and the final notes block from
-`related`, `dossier` and `context`.
+The retired Python index had no note index. The frozen goldens
+`truth/tests/golden/index/` therefore cover the record part of `search`,
+without `mentioned_by_notes` in `show` and without `note_mentions` and the
+final notes block of `related`, `dossier` and `context`; the Rust tests in
+`truth/src/notes.rs` cover the note parts.
 
 ### Walkthrough: plural cooperation (#744, #743, #735)
 
@@ -195,8 +196,8 @@ is needed.
    The note's question is not discharged by them, and no theorem about
    necessary entities with contingent relations exists.
 
-`test_note_pilot_walkthrough` in `scripts/truth_parity/index.py` runs these
-steps on the real corpus. The Rust tests in `truth/src/index.rs` and
+The retired `scripts/truth_parity/index.py` ran these steps on the real
+corpus (`test_note_pilot_walkthrough`). The Rust tests in `truth/src/index.rs` and
 `truth/src/notes.rs` cover the same steps on a fixture. They also cover
 stale rebuilding after a note edit or removal, unresolved references,
 notes versus statements, and the absence of any inferred link or status.

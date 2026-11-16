@@ -107,7 +107,7 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
-`python3 scripts/corpus.py frontier --json [--root STATEMENT]` on the same checkout.
+`truth --json frontier [--frontier-root STATEMENT]` on the same checkout.
 frontier --fixture reads a JSON object of statements, arguments, results, relations, claims,
 inferences and transcription_flags (FILE, or - for stdin) instead of the checkout at --root.
 issues and dossier --issues-from read an offline `gh issue list --json

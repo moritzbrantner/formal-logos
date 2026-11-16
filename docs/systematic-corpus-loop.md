@@ -249,8 +249,9 @@ Issue reconciliation runs in the Rust CLI: `truth issues` and the
 issue-linked `truth dossier --issues-from` read one offline issue snapshot and
 never call GitHub; take the snapshot with `gh issue list` first. Their Python
 versions were retired under [#954](https://github.com/moritzbrantner/truth-core/issues/954)
-(R2). Rust `frontier-diff`, `thickness --base` and `orphans --base` may still
-run a base revision's own Python frontier when its rules differ. Do not create
+(R2). `frontier-diff`, `thickness --base` and `orphans --base` judge the base
+revision's committed corpus by the running binary's rules (R3, "head rules on
+base data"); no base revision's Python runs. Do not create
 a second issue-status implementation.
 
 ```bash
