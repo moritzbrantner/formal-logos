@@ -14,7 +14,7 @@ from unittest import mock
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-import corpus  # noqa: E402
+import corpus_records as corpus  # noqa: E402
 
 MATHLIB_AXIOMS = ["propext", "Classical.choice", "Quot.sound"]
 

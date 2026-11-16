@@ -1,14 +1,66 @@
-//! Golden snapshots of the Python oracle (#954 slice R1), replayed against
-//! the Rust CLI alone: no `corpus.py`, no Lean.
+//! Golden snapshots of the retired Python oracle (#954 slices R1-R3),
+//! replayed against the Rust CLI alone: no `corpus.py`, no Lean.
 //!
-//! `scripts/truth_parity/record_goldens.py` writes
-//! `tests/golden/<module>/<test>.json` from the Python side of each fixture
-//! parity comparison (format and normalizations: `scripts/truth_parity/golden.py`).
-//! Each case is a fixture checkout (files, optionally a Git history),
-//! directories outside it, a `truth` command line and the output Python
-//! gave; this test rebuilds the checkout in a temporary directory, runs the
-//! binary and compares. Covering a new parity module is one `golden!` line
-//! below; `every_golden_directory_is_replayed` fails until it is added.
+//! The retired recorder (`scripts/truth_parity/record_goldens.py`, deleted in
+//! R3 with the Python implementations) wrote `tests/golden/<module>/<test>.json`
+//! from the Python side of each fixture parity comparison. Each case is a
+//! fixture checkout (files, optionally a Git history), directories outside it,
+//! a `truth` command line and the output Python gave; this test rebuilds the
+//! checkout in a temporary directory, runs the binary and compares. A new
+//! golden directory is one `golden!` line below;
+//! `every_golden_directory_is_replayed` fails until it is added. With no
+//! oracle left, a deliberate output change is blessed with
+//! `TRUTH_GOLDEN_BLESS=1` (`bless`) and its golden diff reviewed.
+//!
+//! What a case holds:
+//!
+//! - `args`, `env`, `path_prepend`, `cwd`: the Rust invocation (cwd defaults to
+//!   the fixture root);
+//! - `tree`: the fixture checkout at the moment Rust ran, as an overlay on the
+//!   file's `base` tree (the first case's tree), and its Git history (`git`:
+//!   commits as overlays on their first parent, refs and HEAD) when the fixture
+//!   is a repository; the index is not recorded (the replay resets it to HEAD);
+//! - `externals`: directories outside the checkout that the invocation names
+//!   (recorded exporter output, a fake `lake`, artifacts);
+//! - Git histories and external directories are stored once per file, in its
+//!   `shared` list, and cases name them as `{"shared": N}`;
+//! - `expect`: the exit code Rust must return and the Python output it must
+//!   reproduce: `stdout`/`stderr` byte for byte, `stdout_json` semantically
+//!   (after dropping the top-level `ignore_keys`), `json_paths` (dotted paths
+//!   into the stdout JSON), `error_message` (the `error.message` of a JSON
+//!   error on stderr) and `files` (files the run must leave, byte for byte).
+//!   An absent key is not compared, exactly as the parity test does not.
+//!
+//! Normalizations, applied to arguments, environment, expected output and
+//! file contents alike:
+//!
+//! - the fixture root and each external directory become `⟪root⟫` and
+//!   `⟪ext:N⟫` (their temporary paths differ on every run); the `⟪…⟫`
+//!   markers cannot clash with fixture text, since recording fails if any
+//!   recorded text already contains `⟪`;
+//! - each commit id of the fixture repository becomes `⟪commit:N⟫`, N its
+//!   position in topological order (the replay's commits have other ids);
+//! - the Rust structure producer fingerprint (`truth/build.rs`) becomes
+//!   `⟪producer⟫`, so an artifact Rust wrote stays fresh across Rust changes;
+//!   `strip_producer` drops `"producer_sha256": "…",` from Rust's stdout and
+//!   expected files before comparing, as `proposition_structure.without_producer`
+//!   does (Python's reports and bundles have no such field);
+//! - `scripts/*.py` files byte-identical to the repository's own copies were
+//!   left out, except the paths a case listed in `keep_repo`, which are recorded as
+//!   `{"repo": PATH}` references to the repository file of the same path;
+//! - `__pycache__` directories and the paths in `exclude` are left out;
+//! - a symbolic link is recorded as `{"symlink": target}` (its target tokenized);
+//! - a case's `name` (the subtest description) is tokenized like the rest;
+//! - `normalize` names the Rust-only additions the parity test removes from
+//!   Rust's stdout before comparing (`truth_parity.common`): `note_mentions`
+//!   (the trailing `Notes mentioning the target records` block, or the JSON
+//!   `note_mentions` field), `bind_types` (the `elaborated types:` notice line or
+//!   the JSON `bind_types` field), `mentioned_by_notes` (that JSON field) and
+//!   `note_hits` (JSON list entries of kind `note`).
+//!
+//! Exit codes are Rust's contract: where Rust differs from Python (`check`
+//! exits 1 on a corpus error, Python 2) the call site passes Rust's code and
+//! says why.
 
 use serde_json::{Map, Value};
 use std::{
@@ -658,8 +710,8 @@ fn strip_producer(text: &str) -> String {
     out
 }
 
-/// The Rust-only additions a parity test removes from Rust's stdout before
-/// comparing it with Python's (`scripts/truth_parity/common.py`).
+/// The Rust-only additions the parity tests removed from Rust's stdout before
+/// comparing it with Python's (the retired `scripts/truth_parity/common.py`).
 fn normalize(name: &str, stdout: &str) -> String {
     const NOTE_BLOCK: &str = "\n\nNotes mentioning the target records (";
     const BIND_TYPES_NOTICE: &str = "  elaborated types: no bind-check cache at ";

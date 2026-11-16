@@ -12,7 +12,7 @@ Every record whose id is not a uuid gets
 
 and every reference field (``corpus_ids.REFERENCE_FIELDS``) that names a known
 legacy id is rewritten to that record's uuid. A reference to an unknown id is
-left as it is, so ``corpus.py check`` still reports it.
+left as it is, so ``truth check`` still reports it.
 
 The conversion is deterministic and idempotent: rerunning it on a migrated tree
 changes nothing, and running it after merging a branch converts the branch's
@@ -351,7 +351,7 @@ def cleanup_markdown(entries: list[dict[str, Any]], generated: int | None) -> st
         "derivation needed a compromise, so they can be fixed in follow-ups. The machine-readable",
         "list is `docs/notes/label-cleanup.json` (`kind`, `id`, `legacy_id`, `label`, `flags`).",
         "",
-        "`corpus.py check` treats its `untagged-sense` entries as the allowlist for the sense-tag",
+        "`truth check` treats its `untagged-sense` entries as the allowlist for the sense-tag",
         "rule: they are warnings, while a new record with an untagged linked-sense term is an error.",
         "Editing a label is safe: ids never change, and the label only has to stay unique within",
         "its kind, free of id-like text and at most 100 characters. The list may only shrink",

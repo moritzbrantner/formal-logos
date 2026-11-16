@@ -12,7 +12,7 @@ shrink:
 
 An entry passes once its record's label was rewritten (it differs from the
 recorded mechanical label) and the label has no untagged linked-sense term, or
-once the record is gone. `corpus.py check` warns about each passing entry so it
+once the record is gone. `truth check` warns about each passing entry so it
 is removed; its `untagged-sense` entries are the allowlist of the sense-tag rule.
 """
 

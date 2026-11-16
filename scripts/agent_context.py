@@ -16,7 +16,7 @@ def context(cwd: Path) -> str:
         ["git", "-C", str(cwd), "rev-parse", "--show-toplevel"], text=True,
         stderr=subprocess.DEVNULL, timeout=2).strip()
     root = Path(top)
-    if not all((root / path).is_file() for path in ("TruthCore.lean", "AGENTS.md", "scripts/corpus.py")):
+    if not all((root / path).is_file() for path in ("TruthCore.lean", "AGENTS.md", "truth/Cargo.toml")):
         return ""
     head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True, timeout=2).strip()
     service = settings(root, dict(os.environ))

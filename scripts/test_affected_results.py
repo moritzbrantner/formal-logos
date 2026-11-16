@@ -108,7 +108,7 @@ class AffectedResultsTest(unittest.TestCase):
             "scripts/verifier-pins.env",
             "scripts/affected_results.py",
             "scripts/TruthCoreConstants.lean",
-            "scripts/corpus.py",
+            "scripts/corpus_records.py",
             "verifier/src/main.rs",
             "verifier/Cargo.lock",
             ".github/workflows/ci.yml",
@@ -117,7 +117,7 @@ class AffectedResultsTest(unittest.TestCase):
                 self.assertEqual(self.select(path, "docs/x.md"), everything)
 
     def test_script_changes_use_the_conservative_safety_path(self):
-        self.assertEqual(self.select("scripts/source_evidence.py", "scripts/test_corpus_frontier.py"),
+        self.assertEqual(self.select("scripts/source_evidence.py", "scripts/test_scaffold_result.py"),
                          ("full", ["RESULT-A", "RESULT-B", "RESULT-C"]))
 
     def test_nanoda_scope_is_changed_modules_and_reverse_dependents(self):
@@ -292,8 +292,8 @@ class ImpactPlanTest(unittest.TestCase):
                      "TruthCore/Results/A/Solution.lean", "AGENTS.md"):
             with self.subTest(path=path):
                 self.assertFalse(self.plan(path)["checks"]["truth_cli"])
-        for path in ("truth/src/frontier.rs", "Cargo.toml", "Cargo.lock", "scripts/corpus.py",
-                     "scripts/verify_truth_cli.py", ".github/workflows/ci.yml"):
+        for path in ("truth/src/frontier.rs", "truth/tests/golden/frontier/test_fixture.json", "Cargo.toml",
+                     "Cargo.lock", "scripts/truth_cli.py", ".github/workflows/ci.yml"):
             with self.subTest(path=path):
                 self.assertTrue(self.plan(path)["checks"]["truth_cli"])
         # Corpus drift on the real corpus is still compared after merge and nightly.
@@ -303,7 +303,7 @@ class ImpactPlanTest(unittest.TestCase):
     def test_truth_cli_changes_select_no_results_but_run_the_cli_on_the_corpus(self):
         for path in ("truth/src/frontier.rs", "truth/tests/golden/frontier/test_fixture.json",
                      "truth/tests/golden.rs", "truth/Cargo.toml", "truth/README.md", "Cargo.toml",
-                     "Cargo.lock", "scripts/truth_parity/frontier.py", "scripts/verify_truth_cli.py"):
+                     "Cargo.lock"):
             for main in (False, True):
                 with self.subTest(path=path, main=main):
                     self.assertEqual(ar.input_kind(path), "tooling")
@@ -334,24 +334,6 @@ class ImpactPlanTest(unittest.TestCase):
                 self.assertEqual(plan["mode"], "full")
                 self.assertEqual(plan["selected"], ["RESULT-A", "RESULT-B", "RESULT-C"])
                 self.assertTrue(all(plan["checks"].values()))
-
-    def test_offline_frontier_test_only_keeps_fast_checks(self):
-        for main in (False, True):
-            with self.subTest(main=main):
-                plan = self.plan("scripts/test_corpus_frontier.py", main=main)
-                self.assertEqual(plan["mode"], "subset")
-                self.assertEqual(plan["selected"], [])
-                self.assertEqual([key for key, enabled in plan["checks"].items() if enabled], ["fast"])
-
-    def test_offline_frontier_test_does_not_change_mixed_diff_coverage(self):
-        for path in ("TruthCore/Base.lean", "corpus/passages/P.json", "scripts/source_evidence.py",
-                     "scripts/testdata/frontier-transcription-closure.json", "scripts/test_other.py"):
-            for main in (False, True):
-                with self.subTest(path=path, main=main):
-                    expected = self.plan(path, main=main)
-                    actual = self.plan(path, "scripts/test_corpus_frontier.py", main=main)
-                    for key in ("mode", "selected", "checks"):
-                        self.assertEqual(actual[key], expected[key], key)
 
     def test_source_and_corpus_changes_retain_integrity_binding_and_data_tests(self):
         for path in ("corpus/passages/P.json", "corpus/claims/C.json", "corpus/sources/S.json",
@@ -609,8 +591,7 @@ class ComparatorAggregateTest(unittest.TestCase):
         verify = job.split("- name: Verify Rust corpus CLI\n", 1)[1].split("      - name:", 1)[0]
         self.assertNotIn("if:", verify)
         for command in ("cargo fmt --all --check", "cargo clippy --locked -p truth --all-targets -- -D warnings",
-                        "cargo test --locked -p truth", "cargo build --locked -p truth",
-                        "python3 scripts/verify_truth_cli.py target/debug/truth"):
+                        "cargo test --locked -p truth"):
             self.assertIn(command, verify)
         save = job.split("- name: Save Cargo downloads and workspace build output\n", 1)[1]
         self.assertIn("github.ref == 'refs/heads/main' && github.event_name != 'pull_request'", save)
@@ -666,7 +647,7 @@ class ExplorerInputsTest(unittest.TestCase):
                     "results/RESULT-X/comparator.json",
                     "docs/decisions/x.md",
                     "scripts/verify-result.sh",
-                    "scripts/test_corpus_frontier.py",
+                    "scripts/test_scaffold_result.py",
                 ]
             ),
             [],
@@ -677,8 +658,7 @@ class ExplorerInputsTest(unittest.TestCase):
             "apps/corpus-explorer/src/lib/corpus.ts",
             "apps/corpus-explorer/tests/graph-buckets.browser.test.ts",
             "bun.lock",
-            "scripts/premise_dossiers.py",
-            "scripts/research_comparisons.py",
+            "scripts/corpus_ids.py",
             "scripts/bundle_audit.py",
             "scripts/expression_contracts.py",
             "scripts/contracts/classical-attributes.json",

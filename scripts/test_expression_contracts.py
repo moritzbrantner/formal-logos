@@ -89,16 +89,6 @@ class ExpressionContractTest(unittest.TestCase):
             self.assertEqual(contracts.check(result, self.rows['swapped'], ROOT)[0]['kind'], 'expression-contract-type')
             self.assertEqual(contracts.check(result, self.changed_definition['ordered'], ROOT)[0]['kind'], 'expression-contract-dependencies')
 
-    def test_live_contract_is_requested_by_standard_binding_input(self):
-        import corpus
-        result_id = 'CATHOLICISM-STAGE2-CLASSICAL-ATTRIBUTES'
-        result = json.loads((ROOT / 'corpus/results' / f'{result_id}.json').read_text())
-        request = corpus.bind_tool_input([(ROOT, result)])
-        self.assertEqual(request['contract_theorems'], [result['theorem']])
-        # Saved legacy head-only descriptions can no longer pass this scope.
-        problems = contracts.check(result, {}, ROOT)
-        self.assertTrue(any(p['kind'] == 'expression-contract-unavailable' for p in problems))
-
 
 if __name__ == '__main__':
     unittest.main()

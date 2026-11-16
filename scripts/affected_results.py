@@ -28,8 +28,7 @@ on any cache state.
 keys its once-per-pin full NanoDa check on them.
 
 `select` also emits the heavyweight impact decisions to GITHUB_OUTPUT and the
-Actions summary (#568). Recognized documentation and the offline frontier test
-bypass expensive work;
+Actions summary (#568). Recognized documentation bypasses expensive work;
 missing diff bases and nightly/manual requests select full coverage. --main
 retains exhaustive verification for formal/corpus edits on main.
 
@@ -71,56 +70,42 @@ FULL_RUN_PATTERNS = (
     "verifier/*",
 )
 
-# The Rust `truth` CLI crate, its tests and README, the root Cargo workspace (it builds
-# only `truth`; verifier/ is excluded and has its own Cargo.lock) and the Python parity
-# harness run only by the truth-cli job. The Comparator path (verify-all.sh with
+# The Rust `truth` CLI crate, its tests (Rust unit tests and the frozen golden replay)
+# and README, and the root Cargo workspace (it builds only `truth`; verifier/ is excluded
+# and has its own Cargo.lock), run by the truth-cli job. The Comparator path (verify-all.sh with
 # --results-file, verify-result.sh, the verifier) never runs `truth`, so these select
 # no results but keep every check that runs the CLI on the real corpus (#954).
 TOOLING_PATTERNS = (
     "truth/*",
     "Cargo.toml",
     "Cargo.lock",
-    "scripts/truth_parity/*",
-    "scripts/verify_truth_cli.py",
 )
 
 # What the explorer build and its browser tests run, apart from corpus data: the app, the
-# workspace manifests, the Python it imports or shells out to (scripts/corpus.py and its
-# imports, the AREAS text of root_imports.py, the pilot fixture) and the workflows.
+# workspace manifests, the data files the Rust CLI it shells out to reads besides the
+# corpus, the Python it imports or shells out to (bundle_audit.py and its imports, the
+# AREAS text of root_imports.py, the pilot fixture) and the workflows. The CLI itself
+# (truth/*) is tooling, which runs the browser jobs too.
 # test_affected_results.py checks this list against the explorer's sources.
 EXPLORER_INPUT_PATTERNS = (
     "apps/corpus-explorer/*",
     "package.json",
     "bun.lock",
     "turbo.json",
-    "scripts/corpus.py",
-    # Identity (uuid ids, labels, the label clean-up list) read by corpus.py.
+    # Identity (uuid ids, labels) named by the explorer; the CLI reads the clean-up list.
     "scripts/corpus_ids.py",
-    "scripts/identity_check.py",
-    "scripts/label_cleanup.py",
-    "scripts/migrate_uuid.py",
-    "scripts/uuid_labels.py",
+    "scripts/sense_labels.py",
     "docs/notes/label-cleanup.json",
-    "scripts/next_steps.py",
     "scripts/bundle_audit.py",
     "scripts/expression_contracts.py",
     "scripts/contracts/*.json",
     "docs/notes/classical-attributes-migration.json",
     "docs/notes/classical-attributes-all-migration.json",
     "docs/notes/naming-first-mover-migration.json",
-    "scripts/source_evidence.py",
-    "scripts/premise_dossiers.py",
-    "scripts/research_comparisons.py",
-    "scripts/sense_labels.py",
-    "scripts/attribution_check.py",
-    "scripts/finite_models.py",
-    "scripts/configurations.py",
-    "scripts/configuration_explorer.py",
-    # Named by the configuration page's verification command.
+    # Named by the configuration page's verification command, and run by the structure
+    # and strength exporters with their Lean drivers.
     "scripts/worker_env.py",
-    "scripts/proposition_structure.py",
     "scripts/PropositionStructure.lean",
-    "scripts/strength_comparisons.py",
     "scripts/CheckStrength.lean",
     "scripts/root_imports.py",
     # root_imports.py imports it to detect fully converted areas (#986).
@@ -158,10 +143,6 @@ def input_kind(path: str) -> str:
         path.startswith("docs/") and path.endswith(".md")
     ):
         return "docs"
-    # CI runs this file through unconditional unittest discovery. Its shared
-    # fixtures and the production code under test keep their own classifications.
-    if path == "scripts/test_corpus_frontier.py":
-        return "offline-test"
     if any(fnmatch.fnmatchcase(path, pattern) for pattern in TOOLING_PATTERNS):
         return "tooling"
     if changed_module(path):
@@ -248,7 +229,7 @@ def needs_full_run(changed: Iterable[str]) -> list[str]:
     unsafe = []
     for path in changed:
         kind = input_kind(path)
-        if kind in {"offline-test", "tooling"}:
+        if kind == "tooling":
             continue
         if kind == "unknown" or any(fnmatch.fnmatchcase(path, pattern) for pattern in FULL_RUN_PATTERNS):
             unsafe.append(path)
@@ -283,9 +264,10 @@ def impact_plan(root: Path, changed: Iterable[str] | None, *, main: bool = False
     checks = {"fast": True, "lean": lean, "library_changed": library,
               "explorer_tests": explorer, "explorer": browser, "report": report,
               "comparator_library": library or report,
-              # Python/Rust CLI parity (~16 min) compares two implementations; an exact diff
-              # inside corpus data or Lean changes neither, so only CLI changes and full runs
-              # (unknown or script inputs, main formal changes, nightly) re-check it.
+              # The truth-cli job (Rust tests, golden replay) depends only on the CLI and its
+              # fixtures; an exact diff inside corpus data or Lean changes neither, so only CLI
+              # changes and full runs (unknown or script inputs, main formal changes, nightly)
+              # re-run it.
               "truth_cli": full or tooling, "full": full}
     return {"mode": mode, "selected": selected, "checks": checks, "reason": reason}
 

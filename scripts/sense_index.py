@@ -21,7 +21,7 @@ import uuid
 from pathlib import Path
 from typing import Any
 
-import corpus
+import corpus_records
 
 
 MAX_TERM_WORDS = 6
@@ -87,8 +87,8 @@ def migrate(write: bool) -> list[str]:
     """Label every disambiguation without senses and give each sense the Lean
     declaration of its definition when it has one; existing labels, uuids and
     declarations are kept."""
-    records = corpus.load_dir("disambiguations")
-    declarations = {record["id"]: record["lean_declaration"] for _, record in corpus.load_dir("definitions")
+    records = corpus_records.load_dir("disambiguations")
+    declarations = {record["id"]: record["lean_declaration"] for _, record in corpus_records.load_dir("definitions")
                     if record.get("lean_declaration")}
     assigned: dict[tuple[str, str], dict[str, str]] = {}
     counters: dict[str, int] = {}

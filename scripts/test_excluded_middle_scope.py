@@ -9,7 +9,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import corpus
+import truth_cli
 from corpus_ids import legacy_uuid  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -43,7 +43,7 @@ class ExcludedMiddleScopeTest(unittest.TestCase):
         ]]
         if not global_rival:
             relations = [item for item in relations if item["subject_id"] != GLOBAL_DENIAL]
-        return corpus.frontier_report(
+        return truth_cli.frontier_fixture(
             copy.deepcopy(statements),
             [record("arguments", legacy_uuid("argument", "LOGIC-EXCLUDED-MIDDLE-NOT-DENIABLE"))],
             [record("results", legacy_uuid("result", "LOGIC-EXCLUDED-MIDDLE-NOT-DENIABLE"))],

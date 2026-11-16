@@ -11,7 +11,8 @@ Processes the PRs in the given order until each is merged or blocked:
   no one else writes to), check out the PR branch, merge origin/main, and
   resolve conflicts ONLY in generated files by regenerating them
   (`scripts/root-imports.sh --write`, `python3 scripts/docs_index.py --write`).
-  Then run `python3 scripts/corpus.py check` and push, which restarts CI. A
+  Then run `truth check` (the clone's own Rust CLI: `TRUTH_CLI`, or
+  `cargo run --locked --release -p truth`) and push, which restarts CI. A
   conflict in any other file aborts the merge and reports the PR as blocked: it
   needs a human or the authoring worker.
 * A failing check: report and leave the PR alone.
@@ -30,6 +31,8 @@ import subprocess
 import sys
 import time
 from pathlib import Path
+
+import truth_cli
 
 GENERATED_PREFIXES = ("TruthCore/Imports/",)
 GENERATED_FILES = ("TruthCore.lean",)
@@ -93,7 +96,8 @@ def refresh(number: int, head: str, workdir: Path) -> str:
     if merge.returncode != 0 or run(["git", "diff", "--cached", "--quiet"], cwd=workdir, check=False).returncode:
         run(["git", "commit", "-q", "--no-edit"] if merge.returncode != 0 else
             ["git", "commit", "-q", "-m", "Regenerate generated files"], cwd=workdir)
-    check = run([sys.executable, "scripts/corpus.py", "check"], cwd=workdir, check=False)
+    check = run([*truth_cli.command(workdir, existing_build=False), "--root", str(Path(workdir).resolve()), "check"],
+                cwd=workdir, check=False)
     if check.returncode != 0:
         tail = (check.stdout + check.stderr).strip().splitlines()[-1:]
         return f"blocked: corpus check fails after merging main: {' '.join(tail)}"

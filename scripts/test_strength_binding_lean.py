@@ -94,61 +94,13 @@ class StrengthBindingTest(unittest.TestCase):
                     self.assertFalse(b['bound'])
                     self.assertIn('expected', b['diagnostic'])
                     self.assertIn('actual', b['diagnostic'])
-                # The live producer refuses these exact Lean responses before any
-                # verifier run, report write, or displayed certified projection.
-                import strength_comparisons as producer
-                with self.assertRaises(ValueError):
-                    producer.projection({'id': cid, 'comparison_spec': row['specification']}, {}, row, verified=True)
         self.assertTrue(self.rows['poly-fields']['bound'])
-
-    def test_producer_writes_no_certified_bundle_for_rejected_fields(self):
-        from unittest.mock import patch
-        import strength_comparisons as producer
-        import corpus
-        for cid in ['specialized', 'field-permuted', 'field-background']:
-            row = self.rows[cid]
-            certificate = row['certificates'][0]
-            relation = {'id': cid, 'comparison_spec': row['specification'],
-                        'evidence_result_ids': {certificate['role']: 'RESULT'},
-                        'subject_id': 'S', 'object_id': 'W', 'delta_statement_id': 'D',
-                        'background_statement_ids': ['BG'] if cid == 'field-background' else [],
-                        'statement_parameter_indices': {f['role']: f['parameter_indices'] for f in row['field_bindings']}}
-            by_role = {f['role']: f['declaration'] for f in row['field_bindings']}
-            data = {'comparisons': [relation], 'results': {'RESULT': {
-                'id': 'RESULT', 'theorem': certificate['theorem'], 'solution_module': 'StrengthBindingFixture', 'argument_id': 'ARG'}},
-                'arguments': {'ARG': {}}, 'statements': {sid: {'lean_declaration': by_role[role]} for sid, role in
-                    [('S', 'stronger'), ('W', 'weaker'), ('D', 'delta')] + ([('BG', 'background.0')] if cid == 'field-background' else [])}}
-            with tempfile.TemporaryDirectory() as directory, patch.object(producer, 'input_manifest', return_value={}), \
-                 patch.object(producer, 'module_for', return_value='StrengthBindingFixture'), \
-                 patch.object(producer, 'run') as run, \
-                 patch.object(producer, 'json_tool', side_effect=[[], [row]]), \
-                 patch.object(corpus, 'bind_result', return_value={'status': 'bound'}), \
-                 patch.object(corpus, 'bind_tool_input', return_value={}):
-                root = Path(directory)
-                output = root / '.cache/report.json'
-                with self.subTest(cid=cid), self.assertRaisesRegex(ValueError, 'application/background mismatch'):
-                    producer.write_bundle(root, output, data)
-                self.assertFalse(output.exists())
-                self.assertFalse(any('scripts/verify-result.sh' in call.args[1] for call in run.call_args_list))
 
     def test_padding_factorization_does_not_certify_informativeness(self):
         self.assertTrue(self.rows['padded']['bound'])
         self.assertFalse(self.rows['padded']['delta_degenerate'])
         row = self.rows['padded']
         self.assertTrue(all(c['bound'] for c in row['certificates']))
-        import strength_comparisons as producer
-        fields = {f['role']: f for f in row['field_bindings']}
-        relation = dict(id='padded', comparison_spec=row['specification'],
-                        evidence_result_ids={c['role']: c['role'] for c in row['certificates']},
-                        subject_id='S', object_id='W', delta_statement_id='D',
-                        background_statement_ids=[], note='S padded with True',
-                        statement_parameter_indices={role: f['parameter_indices'] for role, f in fields.items()})
-        data = dict(results={c['role']: dict(theorem=c['theorem'], argument_id=c['role']) for c in row['certificates']},
-                    statements={sid: dict(lean_declaration=fields[role]['declaration']) for sid, role in
-                                [('S', 'stronger'), ('W', 'weaker'), ('D', 'delta')]}, definitions={}, disambiguations={})
-        report = producer.projection(relation, data, row, verified=True)
-        self.assertEqual(report['delta_status'], 'exact factorization proved')
-        self.assertIn('not certified', report['explanatory_status'])
 
     def test_exact_application_and_field_identity(self):
         self.assertTrue(self.rows['correct']['bound'])

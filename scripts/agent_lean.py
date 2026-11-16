@@ -85,7 +85,7 @@ def submit(url: str, workspace: Path, session: str, path: str, content: str,
            lock: Path, timeout: float, expect_head: str | None = None,
            position: tuple[int, int] | None = None) -> dict:
     workspace = workspace.expanduser().resolve()
-    if not (workspace / "scripts/corpus.py").is_file():
+    if not (workspace / "truth" / "Cargo.toml").is_file():
         raise ValueError("workspace must name the coordinator-supplied truth-core preview")
     check_id(session, "session")
     if Path(path).is_absolute():

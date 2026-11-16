@@ -28,19 +28,16 @@ target/debug/truth results
 cargo fmt --all --check
 cargo clippy --locked -p truth --all-targets -- -D warnings
 cargo test --locked -p truth
-python3 scripts/verify_truth_cli.py target/debug/truth
 ```
 
-CI runs the `truth-cli` job (format, Clippy, tests and the Python/Rust parity
-script, about 16 minutes) only when the exact-head impact plan
-(`scripts/affected_results.py select`) selects it: a change to this crate,
-the root Cargo workspace, `scripts/truth_parity/` or `scripts/verify_truth_cli.py`
-(the "tooling" kind, which selects no Comparator results but keeps the corpus,
+CI runs the `truth-cli` job (format, Clippy, and the Rust tests, which include
+the golden replay below) only when the exact-head impact plan
+(`scripts/affected_results.py select`) selects it: a change to this crate or
+the root Cargo workspace (the "tooling" kind, which selects no Comparator results but keeps the corpus,
 Lean binding, explorer and report checks that run the CLI on the real corpus),
 or a full run: other `scripts/`, CI or another unclassified input, a formal
 change pushed to `main`, and the nightly and manual runs. A PR that changes only corpus data,
-result records, Lean modules or prose changes neither implementation and skips
-it; corpus-driven divergence is caught on the next `main` run.
+result records, Lean modules or prose does not change the CLI and skips it.
 
 After fetching Cargo dependencies, add `--offline` to the build to work without
 network access. The executable uses only local files. Use `--root PATH` to
@@ -60,8 +57,7 @@ shape, and selected required scalar and list fields. It also counts
 configuration records. On malformed input Python and Rust can report
 different first errors because they validate different scopes. The full
 corpus validation, including cross-record links, semantic constraints, and
-evidence bindings, is `truth check` (below); Python `scripts/corpus.py check`
-remains until #954 R3 for the merge queue only. Lean and the existing
+evidence bindings, is `truth check` (below). Lean and the existing
 verifier retain proof authority. Neither Rust command writes a database or
 cache.
 
@@ -83,15 +79,14 @@ corpus, fails as Python does, with the first `corpus error: …` and exit
 code 2. `next`, `next-steps`, `arguments`, `results`, `bind-check` and
 `unused-premises` call it; the earlier ports perform only the structural load.
 
-Parity tests live in `scripts/truth_parity/`, one module per command, with
-shared fixtures and the `ParityCase` base class in `common.py`; a new
-command adds its module there and imports its test classes in
-`scripts/verify_truth_cli.py`, the entry point CI runs.
+A new command's tests are Rust unit tests in its library module and, for
+whole-command behaviour, integration tests under `truth/tests/` (for example
+`base_revision.rs`, `frontier_fixture.rs`).
 
 ## Golden snapshots of the Python oracle
 
-Before the Python implementations retire (#954 R2/R3), the Python side of
-every fixture parity comparison is frozen in `truth/tests/golden/<module>/<test>.json`,
+Before the Python implementations retired (#954 R1-R3), the Python side of
+every fixture parity comparison was frozen in `truth/tests/golden/<module>/<test>.json`,
 and `cargo test --locked -p truth --test golden` (part of `cargo test`, so
 of the `truth-cli` CI job) replays each case against the Rust binary alone:
 no `corpus.py`, no Lean. A case holds the fixture checkout (files, and the
@@ -99,41 +94,29 @@ Git history where the fixture is a repository), any directories outside it
 (recorded exporter output, a stand-in `lake`, artifacts), the `truth`
 command line and the output Python gave: exit code, stdout and stderr byte
 for byte, or `--json` output semantically without `input_identity`, as the
-parity test compares it. `scripts/truth_parity/golden.py` documents the
-format and each normalization (temporary paths, commit ids, the structure
-producer fingerprint, `scripts/*.py` copies of the repository's own files).
+parity test compared it. The format and its normalizations (temporary paths
+as `⟪root⟫`/`⟪ext:N⟫`, commit ids as `⟪commit:N⟫`, the structure producer
+fingerprint as `⟪producer⟫`, `{"repo": PATH}` references to repository files)
+are documented in `truth/tests/golden.rs`.
 
-To regenerate after a deliberate change to Python and Rust alike:
+No Python oracle remains (#954 R3 deleted `scripts/corpus.py`, the report
+scripts, the parity harness `scripts/truth_parity/` and its recorder), so the
+goldens pin the Rust behaviour. A deliberate output change updates the
+affected expectations with
 
 ```sh
-cargo build --locked -p truth
-python3 scripts/truth_parity/record_goldens.py target/debug/truth
-cargo test --locked -p truth --test golden
+TRUTH_GOLDEN_BLESS=1 cargo test --locked -p truth --test golden -- --nocapture
 ```
 
-The recorder runs the fixture parity tests (all but the real-corpus ones)
-and rewrites `truth/tests/golden/` only if every test passes, so a written
-case is one on which Rust and Python agree; regenerating twice gives
-identical files. A new fixture comparison calls `golden.record(...)` with
-the Python output before running Rust; a new parity module also adds one
-`golden!` line in `truth/tests/golden.rs` (a test fails until it does).
-The `status`/`inspect`/`bridges` tests (`truth_parity/structure.py`) assert
-Rust behaviour without a Python oracle and record nothing.
-
-R2 deleted the Python navigation, gate and research commands and their parity
-modules (`next`, `next-steps`, `status`, `sort-lists`, `arguments`, `results`,
-`thickness`, `territory`, `configurations`, `models`, `related`, `dossier`,
-`context`, `bridge-experiments`, `issues`, `lean-reuse`, `attribution-check`,
-`bind-check`, `unused-premises`, and the `scripts/research_index.py`,
-`scripts/orphan_summary.py` scripts and the report/allowlist/ratchet of
-`scripts/sense_index.py`). Their goldens can no longer be regenerated: the
-recorder rewrites only the files of the tests it still records and keeps the
-others frozen, so they pin the Rust behaviour, and an intended change edits
-them with the change that needs it. Live parity remains for what stays in
-Python until R3: `check` (kept for `scripts/merge_queue.py`),
-`frontier`/`frontier-diff` (the base-revision engine, below),
-`configuration-report`, `structure`/`structure-report` and
-`strength-comparisons`/`strength-report`.
+which rewrites the `expect` of every differing case with the binary's output
+(tokenized as the recorder did, in its format); the resulting golden diff is
+reviewed with the change. Blessing rewrites expectations only: a case whose
+fixture tree holds a saved artifact that the change makes stale needs that
+fixture edited instead, and a case whose scenario no longer exists is
+deleted. R3 changed goldens this way for the head-rules base revisions
+(`revisions/`) and for the report inventories that no longer list the retired
+Python scripts (`configuration_report/`, `strength/`,
+`proposition_structure/`); each such file's `about` says so.
 
 ## `lexicon`
 
@@ -168,7 +151,7 @@ output (`truth/src/testdata/definition-status-exporter.json`).
 
 ## `check`
 
-`truth check [--json]` ports `python3 scripts/corpus.py check`: `validate()`
+`truth check [--json]` ports the retired `python3 scripts/corpus.py check`: `validate()`
 and every warning of `check_warnings()`, rule for rule and in Python's order,
 so a broken corpus reports the same first error. On success stdout is
 Python's `corpus ok: …` counts line and stderr carries Python's `warning: …`
@@ -179,9 +162,9 @@ lines in Python's order, byte for byte; on failure stderr is Python's
 
 The port is complete, and `truth check` is the corpus gate: CI's corpus job
 and the worker contract (`AGENTS.md`, `docs/worker-startup.md`) run it, as
-they run `truth frontier` and `truth frontier-diff` for the premise report.
-`scripts/corpus.py check` stays until R3 only for `scripts/merge_queue.py`;
-the `truth-cli` job's parity script keeps the two in agreement.
+they run `truth frontier` and `truth frontier-diff` for the premise report,
+and `scripts/merge_queue.py` runs it after merging main. `scripts/corpus.py
+check` was retired in #954 R3.
 
 Ported: record loading and ID indexes; the per-kind passage manifest schema
 (`source_evidence.validate_manifest`: text witness, media span, web snapshot,
@@ -213,9 +196,10 @@ expected) are reported, not raised as a traceback. A web snapshot's
 aliases (`codecs.lookup`); a rare codec outside that list is reported
 unknown by Rust only.
 
-`scripts/verify_truth_cli.py` compares both on the real corpus (stdout and
-every warning line) and on a fixture checkout with a copy of `scripts/*.py`,
-so the unmodified Python validator runs on it: the passing fixture (one
+Until #954 R3 the retired parity script compared both on the real corpus
+(stdout and every warning line) and on a fixture checkout with a copy of
+`scripts/*.py`; the frozen goldens `truth/tests/golden/check/` keep its
+fixture cases: the passing fixture (one
 warning of each kind, the opaque-atom warning on a variant) and 149
 deliberately broken variants, one per rule (56 for the passage manifest
 schema), each of which must give the same `corpus error:` line. On the real
@@ -261,8 +245,8 @@ against 14.9 s, on the same loaded machine; the outputs were identical.
 
 `truth structure STATEMENT [--json] [--unfold DECLARATION]...` and
 `truth structure-report [--output FILE] [--build-input | --check-input]` port
-`python3 scripts/corpus.py structure` and `structure-report`
-(`scripts/proposition_structure.py`, `docs/proposition-structure.md`). Lean
+the retired `python3 scripts/corpus.py structure` and `structure-report`
+(`scripts/proposition_structure.py`, #954 R3; `docs/proposition-structure.md`). Lean
 stays the authority for the elaborated expressions: Rust locates the project
 modules as Python's source locator does, has Lake build them and runs
 `scripts/PropositionStructure.lean` through `scripts/worker_env.py`, with
@@ -275,8 +259,9 @@ Python does and prints `wrote PATH`; `--check-input` validates an artifact's
 recorded inventories, hashes and digest without Lean. `--extractor-json FILE`
 replays a saved exporter stdout instead of running Lean. Errors exit 2 as
 `corpus error: …` (a JSON error object under `--json`). The artifact's
-manifest still binds `scripts/proposition_structure.py` and
-`scripts/corpus.py`, as Python's does, until R3 retires them. Each Rust report
+manifest binds the exporter, the toolchain files, `scripts/worker_env.py`, the
+project Lean sources and the corpus records; since R3 it no longer lists the
+retired Python scripts. Each Rust report
 also records `revision.producer_sha256`, the fingerprint of the truth crate
 that wrote it (its sources, manifest and `Cargo.lock`, computed by
 `truth/build.rs`), outside the input digest; `--check-input` rejects an
@@ -287,13 +272,13 @@ finite-model certificates): a timeout kills the whole group and bounds pipe
 draining, so a compiler started by `lake build` cannot outlive the timeout.
 
 CI, Pages, the explorer's `structure-inputs` script and its `--check-input`
-call run it; `corpus.py structure` stays until its retirement.
-`scripts/truth_parity/proposition_structure.py` runs Python with its two Lean
-subprocesses replaced by a recorded exporter stdout and Rust with
-`--extractor-json`, on the `check` fixture (text and `--json` reports, ID
+call run it. Until R3 the retired `scripts/truth_parity/proposition_structure.py`
+ran Python with its two Lean subprocesses replaced by a recorded exporter
+stdout and Rust with `--extractor-json`, on the `check` fixture (text and `--json` reports, ID
 resolution, the error paths, fresh, stale and forged artifacts) and on the
 real corpus's first slice (byte-identical artifact apart from Rust's
-`producer_sha256`, which the harness strips and checks separately). On the real corpus
+`producer_sha256`, which the harness strips and checks separately); the frozen
+goldens `truth/tests/golden/proposition_structure/` keep its fixture cases. On the real corpus
 (2026-11-15, warm Lake build) `structure-report` took 4.3 s in Rust and 9.0 s
 in Python with Lean, 1.7 s against 6.3 s from the recorded exporter output,
 and `--check-input` 1.7 s against 2.5 s; the artifacts were identical.
@@ -302,8 +287,8 @@ and `--check-input` 1.7 s against 2.5 s; the artifacts were identical.
 
 `truth strength-comparisons [COMPARISON] [--registered] [--json]` and
 `truth strength-report [--output FILE] [--build-input | --check-input]
-[--json]` port `python3 scripts/corpus.py strength-comparisons` and
-`strength-report` (`scripts/strength_comparisons.py`,
+[--json]` port the retired `python3 scripts/corpus.py strength-comparisons` and
+`strength-report` (`scripts/strength_comparisons.py`, #954 R3;
 `docs/proposition-structure.md`). Lean, Comparator and NanoDa stay the
 authorities: Rust validates the `strength_comparison` registrations and their
 results' Comparator contracts with the rules `truth check` uses, then, as
@@ -322,25 +307,23 @@ does (sorted keys, atomic replace, refused outside the clone's `.cache`) and
 `--check-input` validates its producer, input manifest, digest and
 projection without rerunning proofs, with Python's equality (key order free,
 `2 == 2.0`). Errors exit 2 as `corpus error: …` (a JSON error object under
-`--json`). The bundle's manifest still binds `scripts/strength_comparisons.py`
-and the other Python inputs, as Python's does, until R3 retires them.
-`--recorded-exporters DIR` replays recorded `BindTypes.json`,
+`--json`). Since R3 the bundle's manifest no longer lists the retired Python
+scripts. `--recorded-exporters DIR` replays recorded `BindTypes.json`,
 `CheckStrength.json` and `PropositionStructure.json` without Lake or
-Comparator, for the parity harness only; it is never a verification, so it
+Comparator, for the golden replay only; it is never a verification, so it
 needs `TRUTH_PARITY_REPLAY=1` and refuses to write a bundle named
 `strength-comparisons.json`, the only path the explorer reads.
 
 CI, Pages, the explorer's `strength-inputs` script and its `--check-input`
-call run it; `corpus.py strength-comparisons` and `strength-report` stay until
-their retirement. `scripts/truth_parity/strength.py` runs Python with its Lean
-subprocesses replaced by the recorded outputs and Rust with
+call run it. Until R3 the retired `scripts/truth_parity/strength.py` ran Python
+with its Lean subprocesses replaced by the recorded outputs and Rust with
 `--recorded-exporters`, on the `check` fixture with two comparisons (text and
 `--json` reports, a selected comparison, `--registered`, invalid registrations
 and Comparator contracts, binding, coverage, degeneracy and exporter failures,
 fresh, stale, forged and symlinked bundles) and on the real corpus
 (`--registered` always; the live reports, the bundle and `--check-input`
-given `TRUTH_STRENGTH_EXPORTERS`, a directory recorded with `python3 -m
-truth_parity.strength record DIR` from `scripts/`). On the real corpus
+given recorded exporter output); the frozen goldens `truth/tests/golden/strength/`
+keep its fixture cases. On the real corpus
 (2026-11-15, warm Lake build, 7 comparisons) the live `strength-report`,
 dominated by `verify-result.sh`, took 186 s in Rust and 159 s in Python on a
 loaded machine, with byte-identical bundles; from the recorded exporter output
@@ -404,8 +387,8 @@ by the exporter's ~30 s); the outputs were identical.
 (`--root` already selects the checkout here; the frontier root defaults to
 `STMT-CATHOLICISM-TRUE`). Its `--json` output is the Python JSON object plus
 `input_identity`; its text output is byte-identical to Python's.
-`scripts/verify_truth_cli.py` checks both on the real corpus and on a fixture
-corpus. Presentation only: it closes nothing and changes no route cost.
+The frozen goldens `truth/tests/golden/thickness/` and `revisions/` keep the
+retired parity script's fixture cases. Presentation only: it closes nothing and changes no route cost.
 
 Its inputs (transcription kinds, reaching-root statements, source depths,
 upward walks, counted refutations) come from the Rust `frontier` below, so the
@@ -415,14 +398,10 @@ heuristics read.
 
 `truth thickness --base REV` ports `corpus.py thickness --base REV`: the
 head report plus the derivation sets and summary counts that changed from the
-base revision. The base is read as `frontier-diff` reads it (below): a `git
-archive` extract whose frontier report the Rust engine computes when that
-revision's `scripts/corpus.py` is the checkout's, and that revision's own
-`corpus.py frontier --json` otherwise; a pre-migration base is mapped to uuids
-as Python maps it (its records by the checkout's `scripts/migrate_uuid.py`).
-The JSON adds `engines` (`rust` or `python` for the base; the head is always
-Rust). `--queue` with `--base`, and a revision that cannot be read, fail as
-Python's `corpus error:` with exit 2.
+base revision. The base is read as `frontier-diff` reads it (below): its
+`git archive` extract, judged by this binary's rules. The JSON adds `engines`
+(always `rust` for base and head). `--queue` with `--base`, and a revision
+that cannot be read, fail as Python's `corpus error:` with exit 2.
 
 Not ported: the full `validate()` that the Python command runs first (Rust
 performs only the structural load).
@@ -452,21 +431,28 @@ lists (the inputs of Python `frontier_report`, in the given order) and a
 are empty). No corpus validation runs and no Lean source is read; any other
 key is an error (exit 1, `fixture_error`). `--frontier-root` resolves against
 the fixture's records, and `input_identity` hashes the fixture bytes. The
-Explorer's synthetic-corpus tests and the parity test `test_fixture_input` use
-it (#954 B12), so fixture tests need no Python oracle.
+Explorer's synthetic-corpus tests, the Python corpus-content tests
+(`scripts/truth_cli.py`'s `frontier_fixture`), the shared rule (d) fixture
+(`truth/tests/frontier_fixture.rs`) and the golden `test_fixture_input` use it
+(#954 B12/R3), so fixture tests need no Python oracle.
 
 `truth frontier-diff --base REV [--head REV] [--frontier-root STATEMENT-ID]`
 ports `corpus.py frontier-diff`: the delta between the reaching-root frontier
-of the base revision and of the head revision or working tree. Python runs
-each revision's own `corpus.py` on a `git archive` extract, so a change of the
-frontier rules between revisions shows in the delta. Rust computes a revision
-with its own engine only when that revision's `scripts/corpus.py` is
-byte-identical (same Git blob) to the checkout's, the rules this port is
-verified against; otherwise it runs that revision's Python, exactly as
-`corpus.py frontier-diff` does. The working tree is always computed in Rust.
-The JSON adds `engines` (`rust` or `python` for base and head) and
-`input_identity`; the text output is byte-identical to Python's. It needs
-`git` and `tar`, and `python3` for the fallback.
+of the base revision and of the head revision or working tree.
+
+**Head rules on base data** (owner decision for #954 R3, 2026-11-16): a
+revision is read from its `git archive` extract (its committed corpus and Lean
+sources, in a temporary directory, offline) and judged by this binary's own
+rules (`frontier::base_tree`). The revision's own tooling is never run and its
+`truth` is never built, so base and head are judged by one rule set: a PR that
+changes the frontier rules shows the effect of that change as a delta, and a
+PR that changes no rule and no data shows none. A revision from before the
+uuid migration is first converted to uuid identity by the checkout's
+`scripts/migrate_uuid.py` (a data migration). `thickness --base` and
+`orphans --base` read their base the same way. The JSON adds `engines`
+(always `rust`, kept for compatibility) and `input_identity`; the text output
+is unchanged. It needs `git` and `tar` (and `python3` only for a
+pre-migration base). `truth/tests/base_revision.rs` covers the extract path.
 
 Measured on the real corpus (release build, best of three, one machine,
 2026-11-07): `frontier` 10.5 s in Python vs 0.7 s, `frontier --json` (with
@@ -474,12 +460,13 @@ next steps) 10.1 s vs 1.3 s, `frontier --reaching-root --routes` 5.3 s vs
 0.35 s, `frontier-diff --base HEAD~1` 17.7 s vs 1.8 s (both revisions in Rust).
 Python's figures include its full `validate()`.
 
-`scripts/verify_truth_cli.py` checks every form on the real corpus (JSON
+Until R3 the retired parity script checked every form on the real corpus (JSON
 equal after dropping `input_identity`/`engines`, text byte-identical; the
 diff against `HEAD`) and on a fixture covering every floor basis, an
 owner-approved and a stale marking, counted and uncounted refutations,
 transcription closure, the warning heuristics, witnesses, a case split and an
-unknown root. Not ported: the full `validate()` that Python runs first (Rust
+unknown root; the frozen goldens `truth/tests/golden/frontier/` keep the
+fixture cases. Not ported: the full `validate()` that Python runs first (Rust
 performs only the structural load, so a corpus that Python rejects can still
 produce a Rust report). CI's premise-report step and the Explorer build run the Rust commands. Lean and Comparator keep proof authority: a "verified" argument is one
 with a result record.
@@ -555,10 +542,9 @@ target or an ambiguous `context` target exits 2;
 an unreadable or non-frontier report or an unknown frontier root exits 1.
 Python prints the same messages with exit code 2.
 
-Not ported (use Python): the
-full `validate()` that `dossier --all` runs first and the Explorer's
-`dossier --all` consumer.
-`scripts/verify_truth_cli.py` checks parity on a sample of 30+ statements
+Not ported: the full `validate()` that the retired Python `dossier --all`
+ran first (run `truth check` for it).
+The retired parity script checked parity on a sample of 30+ statements
 (closed, stated, supported, bare, off-frontier and floor-marked), all 3,760
 `dossier --all` entries, 15 `context` targets (12 argument IDs, which here
 coincide with their result IDs, and 3 uniquely concluded statements) with
@@ -883,16 +869,14 @@ Open assumptions permit conditional connection; this does not close them or
 establish root truth. Solution imports alone remain advisory contacts. `thickness --queue` ranks only statements that
 already reach the root, so such work is otherwise invisible to round
 selection. Reaching the root is the same route-aware walk as `thickness`;
-`scripts/verify_truth_cli.py` checks the disconnected set against Python's
+The retired parity script checked the disconnected set against Python's
 `reaching_root_statements` plus `corpus.refutation_support`.
 
 `truth orphans --base REV` ports `scripts/orphan_summary.py --base REV`, the
 Markdown table CI adds to a PR's job summary: the disconnected count at the
 base revision and at the working tree, and their difference. The base is read
-as `frontier-diff` reads it: the Rust engine when the revision's
-`scripts/corpus.py` is the checkout's, otherwise the revision's own Python
-(`orphan_summary`'s historical snippet, which tolerates a revision without
-refutation support). A base that cannot be read or computed is reported as
+as `frontier-diff` reads it: its `git archive` extract, judged by this
+binary's rules ("head rules on base data"). A base that cannot be read or computed is reported as
 unavailable (stderr names the error; `--json` has `base_error`) and does not
 fail the command; a head failure does. The text is byte-identical to
 Python's for the default root (Python always names `STMT-CATHOLICISM-TRUE`;
@@ -1038,7 +1022,7 @@ and -3 and an unknown root) and on a fixture checkout with an incompatibility
 core, an implication rule, a model a fixed constant excludes, co-failures, a
 refutation core and a model that satisfies it (a `DEFECT` line), a broken
 corpus and seven broken registrations.
-`scripts/truth_parity/configuration_report.py` runs the Lean-backed paths of
+Until R3 the retired `scripts/truth_parity/configuration_report.py` ran the Lean-backed paths of
 both implementations on that fixture as a Git checkout with a recorded
 toolchain on PATH (a `lake` that answers builds, prints Lean's `#print
 axioms` lines and describes the theorems as `BindTypes.lean` would, and a
@@ -1048,4 +1032,5 @@ calls, the bundle byte for byte except the fingerprint line, `--check` and
 `configurations` and `models --check / --argument / --verify`, and the error
 and exit code of a failure at every step (build, certificate, forbidden
 axiom, `verify-result.sh`, model certificates, composition, binding, a
-verification defect, no `lake`).
+verification defect, no `lake`); the frozen goldens
+`truth/tests/golden/configuration_report/` keep those cases.

@@ -401,8 +401,8 @@ def build_records(spec: dict, write: bool) -> list[str]:
             if key in r:
                 record[key] = handles.ref("result", r[key])
         if r["predicate"] == "strength_comparison":
-            # Certified strength comparison (#1598): fields of
-            # scripts/strength_comparisons.py, handles resolved.
+            # Certified strength comparison (#1598): the registration fields
+            # `truth strength-comparisons` reads, handles resolved.
             record["comparison_spec"] = lean_name(batch, r["comparison_spec"])
             record["delta_statement_id"] = handles.ref("statement", r["delta_statement_id"])
             record["background_statement_ids"] = refs("statement", r.get("background_statement_ids", []))
