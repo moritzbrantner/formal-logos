@@ -115,36 +115,3 @@ def verify_models(models, statements, root):
     return {'models': len(models), 'certificates': len(names), 'axioms': []}
 
 
-def model_report(models, target=None, premises=()):
-    """Unknown evaluations stay unknown; every requested premise must hold."""
-    entries = []
-    for model in sorted(models, key=lambda m: m['id']):
-        values = {e['statement_id']: e['value'] for e in model['evaluations']}
-        if target is not None and target not in values:
-            continue
-        missing = sorted(set(premises) - values.keys())
-        failed = sorted(p for p in premises if values.get(p) == 'violates')
-        qualifies = not missing and not failed
-        entries.append({**model, 'target_value': values.get(target), 'missing_premises': missing,
-                        'violated_premises': failed,
-                        'classification': ('counterexample' if values.get(target) == 'violates' else 'satisfying_interpretation')
-                        if qualifies and target else 'incomplete_or_inapplicable'})
-    # Equal, nonempty failure sets across the same complete evaluation coverage.
-    # Never compare vocabularies or treat absent evaluations as success.
-    patterns = []
-    for vocabulary in sorted({m['vocabulary'] for m in models}):
-        group = [m for m in models if m['vocabulary'] == vocabulary]
-        ids = sorted({e['statement_id'] for m in group for e in m['evaluations']})
-        for a, b in combinations(ids, 2):
-            evaluated = {m['id']: {e['statement_id']: e['value'] for e in m['evaluations']} for m in group}
-            if not all(a in v and b in v for v in evaluated.values()):
-                continue
-            failures = [mid for mid, v in evaluated.items() if v[a] == 'violates']
-            if failures and all((v[a] == 'violates') == (v[b] == 'violates') for v in evaluated.values()):
-                patterns.append({'statement_ids': [a, b], 'vocabulary': vocabulary,
-                                 'model_ids': sorted(evaluated), 'cofailure_model_ids': sorted(failures), 'status': 'candidate_only'})
-    if target is not None:
-        patterns = [pattern for pattern in patterns if target in pattern['statement_ids']]
-    return {'target': target, 'premise_statement_ids': sorted(set(premises)), 'models': entries,
-            'cofailure_candidates': patterns,
-            'scope': 'Closed Lean applications in the registered finite vocabulary only; no metaphysical possibility, premise closure or entailment follows from registration.'}

@@ -182,55 +182,6 @@ def next_steps_report(report: dict, statements: list[dict], arguments: list[dict
             "dag": {"statements": [statement(sid) for sid in sorted(graph_ids)], "arguments": graph_arguments}}
 
 
-def format_next_steps(report: dict) -> str:
-    root = report.get("root")
-    lines = [f"Next steps for {root['statement_id'] if root else 'no root'}"]
-    progress = report["progress"]
-    lines.append(
-        f"Foundational progress: {progress['root_reaching_established_count']} established root-reaching statements; "
-        f"{progress['with_verified_alternative_count']} of {progress['unestablished_premise_count']} "
-        "unestablished premises with verified support alternatives; "
-        f"{progress['verified_alternative_bundle_count']} distinct conditional bundles"
-    )
-    lines.append("Inspectable premise support options (conditional; not independence certificates):")
-    for item in report["support_options"]["items"]:
-        lines.append(f"  {item['statement_id']}: " + ("direct assumption available" if item["direct_assumption_available"] else "established in corpus"))
-        for bundle in item["verified_alternative_bundles"]:
-            lines.append("    premises: " + (", ".join(bundle["premise_statement_ids"]) or "none"))
-            lines.append("    arguments: " + ", ".join(bundle["argument_ids"]))
-            lines.append("    verified results: " + ", ".join(bundle["result_ids"]))
-    lines.extend(f"{kind}: {text}" for kind, text in report["settlement_rules"].items())
-    lines.append("Expanded routes (cost diagnostic; joint settlement unresolved without complete failure-mode coverage):")
-    lines.extend(f"  {route['cost']:>3} {route['argument_id']}" for route in report["routes"])
-    lines.append("Lowest-expanded-cost route leaves, ranked by counterfactual settlement impact (diagnostic):")
-    for leaf in report["leaves"]:
-        if not leaf["on_cheapest_route"]:
-            continue
-        lines.append(f"  {leaf['statement_id']} [{leaf['depth'] or 'proved from open premises'}]: "
-                     f"{leaf['impact']['routes_improved']} routes improve; total cost drop {leaf['impact']['total_cost_drop']}")
-        lines.append("    floor: owner decision required")
-        for proof in leaf["derivations"]:
-            lines.append(f"    derive via {proof['argument_id']}: missing {', '.join(proof['missing_statement_ids']) or 'none'}"
-                         + (" (no verified result)" if not proof["verified"] else ""))
-        lines.append("    defend: undefeated recorded rivals " + ", ".join(leaf["defense"]["undefeated_statement_ids"]))
-    lines.append("Recorded owner decisions:")
-    for decision in report["owner_decisions"]:
-        for action in decision["actions"]:
-            lines.append(f"  {decision['statement_id']}: {action['kind']} / {action['status']}: {action['description']}")
-    lines.append("Partition opportunities:")
-    for partition in report["partitions"]:
-        lines.append(f"  {partition['result_id']}: target {partition['target_statement_id']}; missing background {', '.join(partition['missing_background_statement_ids']) or 'none'}")
-        for cell in partition["cases"]:
-            lines.append(f"    {cell['label']}: {'refuted' if cell['refuted'] else 'undefeated'} ({cell['lean_declaration']})")
-    lines.append(f"Joint settlement: {len(report['joint_settlements'])} unresolved route pairs; see JSON for all failure modes.")
-    joint = report["joint_settlement_summary"]
-    lines.append(f"Shared by all {joint['verified_route_count']} reported verified routes: "
-                 f"{len(joint['shared_by_all_reported_routes'])} open obligations (not exhaustive route necessity).")
-    lines.extend(f"  {sid}" for sid in joint["shared_by_all_reported_routes"])
-    lines.append(report["impact_scope"])
-    return "\n".join(lines)
-
-
 def validate_settlement_actions(statement: dict) -> None:
     """Optional owner-navigation hints never participate in closure."""
     actions = statement.get("settlement_actions", [])

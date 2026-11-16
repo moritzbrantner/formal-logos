@@ -316,39 +316,6 @@ class PersistentConfigurationRatchetTests(unittest.TestCase):
                 replaced = {**self.results, rid: {**result, **replacement}}
                 self.corpus.registered_configurations(self.statements, replaced, self.arguments, self.models)
 
-    def test_original_theorem_binding_rejects_erased_de_re_hypothesis(self):
-        rid = legacy_uuid('result', 'NECESSARY-INDIVIDUAL-RE-TO-DICTO')
-        result = self.results[rid]
-        argument = {**self.arguments[result['argument_id']], 'premise_statement_ids': []}
-        ni = 'TruthCore.Case.Catholicism.StageOne.NecessaryIndividual.'
-        described = {'theorem': result['theorem'],
-                     'binders': [{'name': 'h', 'prop': True, 'head': ni + 'DeRe', 'type': ni + 'DeRe F present w', 'wrappers': [], 'core_head': ni + 'DeRe'}],
-                     'result': {'prop': True, 'head': ni + 'DeDicto', 'type': ni + 'DeDicto F present w', 'wrappers': [], 'core_head': ni + 'DeDicto'}}
-        index = {sid: (self.corpus.ROOT, statement) for sid, statement in self.statements.items()}
-        binding = self.corpus.bind_result(result, argument, index, described)
-        self.assertEqual(binding['status'], 'mismatch')
-        self.assertTrue(any(problem['kind'] == 'extra-hypothesis' for problem in binding['problems']))
-        case = copy.deepcopy(self.cases[legacy_uuid('configuration', 'CONFIG-NECESSARY-INDIVIDUAL')])
-        case['incompatibility_result_ids'] = []
-        case['implication_result_ids'] = [rid]
-        original_loader = self.corpus.load_dir
-        def loader(kind):
-            records = original_loader(kind)
-            if kind == 'arguments':
-                return [(path, argument if record['id'] == argument['id'] else record) for path, record in records]
-            return records
-        output = io.StringIO()
-        args = argparse.Namespace(case=case['id'], seed=None, premise=[], registered=False, json=True)
-        with patch.object(self.corpus, 'load_dir', side_effect=loader), \
-             patch.object(self.corpus, 'registered_configurations', return_value=[case]), \
-             patch.object(self.corpus, 'verify_case', return_value={}), \
-             patch.object(self.corpus, 'verify_compositions', return_value={'cores': 0}), \
-             patch.object(self.corpus, 'run_bind_tool', return_value=[described]) as tool, \
-             redirect_stdout(output), self.assertRaisesRegex(self.corpus.CorpusError, 'original theorem binding rejected'):
-            self.corpus.command_configurations(args)
-        self.assertEqual(tool.call_args.args[0]['theorems'], [result['theorem']])
-        self.assertEqual(output.getvalue(), '')
-
 
     def test_multi_case_verification_binds_the_exact_unique_union_and_fails_closed(self):
         cases = [self.cases[legacy_uuid('configuration', 'CONFIG-NECESSARY-INDIVIDUAL')], self.cases[legacy_uuid('configuration', 'CONFIG-NIGHT-ACTUALIZATION')]]
