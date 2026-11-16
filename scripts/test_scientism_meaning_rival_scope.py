@@ -6,7 +6,7 @@ import sys
 import unittest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import corpus
+import truth_cli
 from corpus_ids import legacy_uuid  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -33,7 +33,7 @@ class ScopedRivalTest(unittest.TestCase):
             'subject_id': argument['id'], 'predicate': 'refutes',
             'object_kind': 'statement', 'object_id': raw}
         def report(rival):
-            return corpus.frontier_report(copy.deepcopy(statements), [argument],
+            return truth_cli.frontier_fixture(copy.deepcopy(statements), [argument],
                 [{'id': 'TEST-RESULT', 'argument_id': argument['id']}],
                 [refutation, rival], root=target)
         fixed = report(relation)

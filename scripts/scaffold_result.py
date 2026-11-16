@@ -3,13 +3,12 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 from pathlib import Path
 import re
 import sys
 
-import corpus
+import corpus_records
 
 # New Solutions are modules; Challenges stay ordinary files (owner decision on #986).
 SOLUTION_MODULE_HEADER = "module\n\npublic import <VOCABULARY-MODULE>\n\n@[expose] public section\n"
@@ -18,28 +17,28 @@ SOLUTION_MODULE_HEADER = "module\n\npublic import <VOCABULARY-MODULE>\n\n@[expos
 def bundle(args: argparse.Namespace) -> dict:
     """Build drafts from authoritative statements, optionally comparing saved types."""
     if not re.fullmatch(r"[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)*|" + r'[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}', args.id):
-        raise corpus.CorpusError("--id must be an uppercase hyphenated identifier or a uuid4")
+        raise corpus_records.CorpusError("--id must be an uppercase hyphenated identifier or a uuid4")
     for name in (args.challenge_module, args.solution_module, args.theorem):
         if not re.fullmatch(r"TruthCore(?:\.[A-Za-z_][A-Za-z0-9_]*)+", name):
-            raise corpus.CorpusError(f"unsupported Lean name: {name}")
+            raise corpus_records.CorpusError(f"unsupported Lean name: {name}")
     if not args.challenge_module.endswith(".Challenge") or not args.solution_module.endswith(".Solution"):
-        raise corpus.CorpusError("module names must end in .Challenge and .Solution")
+        raise corpus_records.CorpusError("module names must end in .Challenge and .Solution")
     meaning = args.meaning_file.read_text(encoding="utf-8").strip()
     if not meaning or not args.rule.strip():
-        raise corpus.CorpusError("meaning and inference rule must be supplied explicitly")
+        raise corpus_records.CorpusError("meaning and inference rule must be supplied explicitly")
     if len(args.premise) != len(set(args.premise)):
-        raise corpus.CorpusError("duplicate premise IDs: use distinct statement roles explicitly")
-    statements = corpus.index_by_id(corpus.load_dir("statements"), "statement")
+        raise corpus_records.CorpusError("duplicate premise IDs: use distinct statement roles explicitly")
+    statements = corpus_records.index_by_id(corpus_records.load_dir("statements"), "statement")
     selected = [*args.premise, args.conclusion]
     for sid in selected:
         if sid not in statements:
-            raise corpus.CorpusError(f"unknown statement: {sid}")
+            raise corpus_records.CorpusError(f"unknown statement: {sid}")
         if not statements[sid][1].get("lean_declaration"):
-            raise corpus.CorpusError(f"statement has no authoritative lean_declaration: {sid}")
+            raise corpus_records.CorpusError(f"statement has no authoritative lean_declaration: {sid}")
     inference_id = f"INF-{args.id}"
     for directory, record_id in (("inferences", inference_id), ("arguments", args.id), ("results", args.id)):
-        if record_id in corpus.index_by_id(corpus.load_dir(directory), directory):
-            raise corpus.CorpusError(f"existing {directory} ID: {record_id}")
+        if record_id in corpus_records.index_by_id(corpus_records.load_dir(directory), directory):
+            raise corpus_records.CorpusError(f"existing {directory} ID: {record_id}")
     slug = args.id.lower()
     config_path = f"results/{args.id}/comparator.json"
     result = {
@@ -68,9 +67,9 @@ def bundle(args: argparse.Namespace) -> dict:
         "theorem_names": [args.theorem], "permitted_axioms": sorted(set(args.axiom)),
         "enable_nanoda": True,
     }
-    error = corpus.permitted_axioms_error(config)
+    error = corpus_records.permitted_axioms_error(config)
     if error:
-        raise corpus.CorpusError(error)
+        raise corpus_records.CorpusError(error)
     records = {
         f"corpus/inferences/{slug}.json": inference,
         f"corpus/arguments/{args.id}.json": argument,
@@ -78,32 +77,15 @@ def bundle(args: argparse.Namespace) -> dict:
         config_path: config,
     }
     for path in records:
-        if (corpus.ROOT / path).exists():
-            raise corpus.CorpusError(f"canonical path already exists: {path}")
-    binding = None
-    if args.type_evidence:
-        raw = args.type_evidence.read_bytes()
-        descriptions = json.loads(raw)
-        if not isinstance(descriptions, list):
-            raise corpus.CorpusError("--type-evidence expects the JSON array exported by BindTypes.lean")
-        matches = [item for item in descriptions if isinstance(item, dict) and item.get("theorem") == args.theorem]
-        if len(matches) != 1:
-            raise corpus.CorpusError("type evidence must contain the requested theorem exactly once")
-        try:
-            report = corpus.bind_result(result, argument, statements, matches[0], pins={})
-        except (KeyError, TypeError, AttributeError) as exc:
-            raise corpus.CorpusError(f"malformed BindTypes description: {exc}") from exc
-        if report["status"] != "bound":
-            raise corpus.CorpusError(f"supplied type evidence does not bind: {json.dumps(report['problems'])}")
-        binding = {"sha256": hashlib.sha256(raw).hexdigest(), "report": report}
+        if (corpus_records.ROOT / path).exists():
+            raise corpus_records.CorpusError(f"canonical path already exists: {path}")
     return {
         "notice": "DRAFT ONLY. No Lean, source, axiom, Comparator or NanoDa verification was run.",
         "existing_statements": [
-            {"id": sid, "path": str(statements[sid][0].relative_to(corpus.ROOT)),
+            {"id": sid, "path": str(statements[sid][0].relative_to(corpus_records.ROOT)),
              "lean_declaration": statements[sid][1]["lean_declaration"]}
             for sid in dict.fromkeys(selected)
         ],
-        "supplied_type_comparison": binding,
         "solution_header": SOLUTION_MODULE_HEADER,
         "remaining": [
             "Review the supplied meaning against the Lean type and source evidence; inspect premise dossiers.",
@@ -112,7 +94,7 @@ def bundle(args: argparse.Namespace) -> dict:
             "Keep Challenge.lean an ordinary file; write Solution.lean as a module (`module`, `public import`, "
             "`@[expose] public section`; see solution_header and scripts/convert_to_module.py).",
             "Complete required result status only after the corresponding workflow step; never copy the manifest into corpus.",
-            "Run required final binding, axiom, Comparator, NanoDa and repository gates on final inputs.",
+            "Run required final binding (`truth bind-check --result ID` once registered), axiom, Comparator, NanoDa and repository gates on final inputs.",
         ],
         "records": records,
     }
@@ -121,9 +103,9 @@ def bundle(args: argparse.Namespace) -> dict:
 def write_drafts(output: Path, draft: dict) -> None:
     """A new directory only: an existing destination is never touched."""
     output = output.resolve()
-    for protected in (corpus.ROOT, corpus.CORPUS, corpus.ROOT / "results", corpus.ROOT / "TruthCore"):
-        if output == protected or (protected != corpus.ROOT and protected in output.parents):
-            raise corpus.CorpusError("output must be a separate draft directory, outside canonical record/module trees")
+    for protected in (corpus_records.ROOT, corpus_records.ROOT / "corpus", corpus_records.ROOT / "results", corpus_records.ROOT / "TruthCore"):
+        if output == protected or (protected != corpus_records.ROOT and protected in output.parents):
+            raise corpus_records.CorpusError("output must be a separate draft directory, outside canonical record/module trees")
     output.mkdir(parents=True, exist_ok=False)
     for relative, record in draft["records"].items():
         path = output / relative
@@ -147,7 +129,6 @@ def main() -> int:
     parser.add_argument("--solution-module", required=True)
     parser.add_argument("--theorem", required=True)
     parser.add_argument("--axiom", action="append", default=[], choices=["propext", "Classical.choice", "Quot.sound"], help="explicit permission only; default none, no axiom inspection")
-    parser.add_argument("--type-evidence", type=Path, help="optional existing BindTypes.lean output; compared as supplied, never trusted as fresh verification")
     parser.add_argument("--output-dir", type=Path, help="create a NEW draft directory; default prints the bundle to stdout")
     args = parser.parse_args()
     try:
@@ -157,7 +138,7 @@ def main() -> int:
             print(f"Drafts written to {args.output_dir}; result status is intentionally unset.")
         else:
             print(json.dumps(draft, indent=2, ensure_ascii=False))
-    except (corpus.CorpusError, OSError, ValueError) as exc:
+    except (corpus_records.CorpusError, OSError, ValueError) as exc:
         parser.exit(2, f"scaffold_result: {exc}\n")
     return 0
 

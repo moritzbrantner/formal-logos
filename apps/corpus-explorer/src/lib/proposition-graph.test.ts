@@ -100,7 +100,7 @@ describe("proposition graph status", () => {
 });
 
 describe("rule (d): transcription from closed premises", () => {
-  // Shared with scripts/test_corpus_frontier.py so both implementations agree.
+  // Shared with truth/tests/frontier_fixture.rs so both implementations agree.
   const shared = JSON.parse(
     readFileSync(
       fileURLToPath(new URL("../../../../scripts/testdata/frontier-transcription-closure.json", import.meta.url)),

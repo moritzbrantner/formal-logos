@@ -1,14 +1,66 @@
-//! Golden snapshots of the Python oracle (#954 slice R1), replayed against
-//! the Rust CLI alone: no `corpus.py`, no Lean.
+//! Golden snapshots of the retired Python oracle (#954 slices R1-R3),
+//! replayed against the Rust CLI alone: no `corpus.py`, no Lean.
 //!
-//! `scripts/truth_parity/record_goldens.py` writes
-//! `tests/golden/<module>/<test>.json` from the Python side of each fixture
-//! parity comparison (format and normalizations: `scripts/truth_parity/golden.py`).
-//! Each case is a fixture checkout (files, optionally a Git history),
-//! directories outside it, a `truth` command line and the output Python
-//! gave; this test rebuilds the checkout in a temporary directory, runs the
-//! binary and compares. Covering a new parity module is one `golden!` line
-//! below; `every_golden_directory_is_replayed` fails until it is added.
+//! The retired recorder (`scripts/truth_parity/record_goldens.py`, deleted in
+//! R3 with the Python implementations) wrote `tests/golden/<module>/<test>.json`
+//! from the Python side of each fixture parity comparison. Each case is a
+//! fixture checkout (files, optionally a Git history), directories outside it,
+//! a `truth` command line and the output Python gave; this test rebuilds the
+//! checkout in a temporary directory, runs the binary and compares. A new
+//! golden directory is one `golden!` line below;
+//! `every_golden_directory_is_replayed` fails until it is added. With no
+//! oracle left, a deliberate output change is blessed with
+//! `TRUTH_GOLDEN_BLESS=1` (`bless`) and its golden diff reviewed.
+//!
+//! What a case holds:
+//!
+//! - `args`, `env`, `path_prepend`, `cwd`: the Rust invocation (cwd defaults to
+//!   the fixture root);
+//! - `tree`: the fixture checkout at the moment Rust ran, as an overlay on the
+//!   file's `base` tree (the first case's tree), and its Git history (`git`:
+//!   commits as overlays on their first parent, refs and HEAD) when the fixture
+//!   is a repository; the index is not recorded (the replay resets it to HEAD);
+//! - `externals`: directories outside the checkout that the invocation names
+//!   (recorded exporter output, a fake `lake`, artifacts);
+//! - Git histories and external directories are stored once per file, in its
+//!   `shared` list, and cases name them as `{"shared": N}`;
+//! - `expect`: the exit code Rust must return and the Python output it must
+//!   reproduce: `stdout`/`stderr` byte for byte, `stdout_json` semantically
+//!   (after dropping the top-level `ignore_keys`), `json_paths` (dotted paths
+//!   into the stdout JSON), `error_message` (the `error.message` of a JSON
+//!   error on stderr) and `files` (files the run must leave, byte for byte).
+//!   An absent key is not compared, exactly as the parity test does not.
+//!
+//! Normalizations, applied to arguments, environment, expected output and
+//! file contents alike:
+//!
+//! - the fixture root and each external directory become `⟪root⟫` and
+//!   `⟪ext:N⟫` (their temporary paths differ on every run); the `⟪…⟫`
+//!   markers cannot clash with fixture text, since recording fails if any
+//!   recorded text already contains `⟪`;
+//! - each commit id of the fixture repository becomes `⟪commit:N⟫`, N its
+//!   position in topological order (the replay's commits have other ids);
+//! - the Rust structure producer fingerprint (`truth/build.rs`) becomes
+//!   `⟪producer⟫`, so an artifact Rust wrote stays fresh across Rust changes;
+//!   `strip_producer` drops `"producer_sha256": "…",` from Rust's stdout and
+//!   expected files before comparing, as `proposition_structure.without_producer`
+//!   does (Python's reports and bundles have no such field);
+//! - `scripts/*.py` files byte-identical to the repository's own copies were
+//!   left out, except the paths a case listed in `keep_repo`, which are recorded as
+//!   `{"repo": PATH}` references to the repository file of the same path;
+//! - `__pycache__` directories and the paths in `exclude` are left out;
+//! - a symbolic link is recorded as `{"symlink": target}` (its target tokenized);
+//! - a case's `name` (the subtest description) is tokenized like the rest;
+//! - `normalize` names the Rust-only additions the parity test removes from
+//!   Rust's stdout before comparing (`truth_parity.common`): `note_mentions`
+//!   (the trailing `Notes mentioning the target records` block, or the JSON
+//!   `note_mentions` field), `bind_types` (the `elaborated types:` notice line or
+//!   the JSON `bind_types` field), `mentioned_by_notes` (that JSON field) and
+//!   `note_hits` (JSON list entries of kind `note`).
+//!
+//! Exit codes are Rust's contract: where Rust differs from Python (`check`
+//! exits 1 on a corpus error, Python 2) the call site passes Rust's code and
+//! says why.
 
 use serde_json::{Map, Value};
 use std::{
@@ -109,13 +161,19 @@ fn replay_module(module: &str) {
         directory.display()
     );
     let mut failures = Vec::new();
+    let mut blessings = Vec::new();
     let mut count = 0;
     for file in files {
         let text = fs::read_to_string(&file).expect("golden file");
         let document: Value = serde_json::from_str(&text).expect("golden JSON");
         let base = document["base"].as_object().expect("base tree");
         let shared = document["shared"].as_array().cloned().unwrap_or_default();
-        for case in document["cases"].as_array().expect("cases") {
+        for (case_index, case) in document["cases"]
+            .as_array()
+            .expect("cases")
+            .iter()
+            .enumerate()
+        {
             let case = &resolve_shared(case, &shared);
             count += 1;
             let title = format!(
@@ -125,10 +183,19 @@ fn replay_module(module: &str) {
                 case["name"].as_str().unwrap_or(""),
                 strings(&case["args"]).join(" ")
             );
-            if let Err(message) = replay(base, case) {
+            if let Err((message, blessed)) = replay(base, case) {
                 failures.push(format!("{title}\n{message}"));
+                blessings.push((file.clone(), case_index, blessed));
             }
         }
+    }
+    if env::var_os("TRUTH_GOLDEN_BLESS").is_some() && !failures.is_empty() {
+        bless(&blessings);
+        eprintln!(
+            "TRUTH_GOLDEN_BLESS: rewrote {} cases of {module}; review the diff",
+            blessings.len()
+        );
+        return;
     }
     assert!(
         failures.is_empty(),
@@ -407,7 +474,31 @@ fn replay_history(root: &Path, scratch: &Path, history: &Value) -> Vec<String> {
     ids
 }
 
-fn replay(base: &Map<String, Value>, case: &Value) -> Result<(), String> {
+/// `TRUTH_GOLDEN_BLESS=1`: rewrites the `expect` of every differing case
+/// with what the binary produced (tokenized like the recorder did), in the
+/// recorder's format (`json.dumps(indent=1, sort_keys=True)`). There is no
+/// Python oracle after #954 R3, so a deliberate output change is blessed
+/// this way and its golden diff reviewed in the PR.
+fn bless(blessings: &[(PathBuf, usize, Value)]) {
+    let mut documents: BTreeMap<PathBuf, Value> = BTreeMap::new();
+    for (file, index, expect) in blessings {
+        let document = documents.entry(file.clone()).or_insert_with(|| {
+            serde_json::from_str(&fs::read_to_string(file).expect("golden file"))
+                .expect("golden JSON")
+        });
+        document["cases"][*index]["expect"] = expect.clone();
+    }
+    for (file, document) in documents {
+        let mut out = Vec::new();
+        let formatter = serde_json::ser::PrettyFormatter::with_indent(b" ");
+        let mut serializer = serde_json::Serializer::with_formatter(&mut out, formatter);
+        serde::Serialize::serialize(&document, &mut serializer).expect("serialize golden");
+        out.push(b'\n');
+        fs::write(&file, out).expect("write golden");
+    }
+}
+
+fn replay(base: &Map<String, Value>, case: &Value) -> Result<(), (String, Value)> {
     let scratch = Scratch::new();
     let root = scratch.0.join("root");
     fs::create_dir_all(&root).expect("root");
@@ -488,6 +579,109 @@ fn replay(base: &Map<String, Value>, case: &Value) -> Result<(), String> {
         &stdout,
         &stderr,
     )
+    .map_err(|message| {
+        let blessed = blessed(
+            &case["expect"],
+            &tokens,
+            output.status.code(),
+            &stdout,
+            &stderr,
+        );
+        (message, blessed)
+    })
+}
+
+impl Tokens {
+    /// The inverse substitution: each concrete value becomes its token,
+    /// longest value first.
+    fn tokenize(&self, text: &str) -> String {
+        let mut pairs: Vec<&(String, String)> = self.0.iter().collect();
+        pairs.sort_by_key(|pair| std::cmp::Reverse(pair.1.len()));
+        let mut text = text.to_owned();
+        for (token, value) in pairs {
+            if text.contains(value.as_str()) {
+                text = text.replace(value.as_str(), token);
+            }
+        }
+        text
+    }
+
+    fn tokenize_value(&self, value: &Value) -> Value {
+        match value {
+            Value::String(text) => Value::String(self.tokenize(text)),
+            Value::Array(items) => {
+                Value::Array(items.iter().map(|item| self.tokenize_value(item)).collect())
+            }
+            Value::Object(entries) => Value::Object(
+                entries
+                    .iter()
+                    .map(|(key, item)| (self.tokenize(key), self.tokenize_value(item)))
+                    .collect(),
+            ),
+            other => other.clone(),
+        }
+    }
+}
+
+/// `expect` with each compared field replaced by the actual output, after
+/// the same producer stripping and normalizations `compare` applies.
+fn blessed(
+    expect: &Value,
+    tokens: &Tokens,
+    code: Option<i32>,
+    stdout: &str,
+    stderr: &str,
+) -> Value {
+    let mut expect = expect.clone();
+    expect["code"] = code.map_or(Value::Null, Value::from);
+    let strip = expect["strip_producer"].as_bool() == Some(true);
+    let mut stdout = if strip {
+        strip_producer(stdout)
+    } else {
+        stdout.to_owned()
+    };
+    for name in strings(&expect["normalize"]) {
+        stdout = normalize(&name, &stdout);
+    }
+    if expect.get("stdout").is_some() {
+        expect["stdout"] = Value::String(tokens.tokenize(&stdout));
+    }
+    if expect.get("stderr").is_some() {
+        expect["stderr"] = Value::String(tokens.tokenize(stderr));
+    }
+    let parsed = serde_json::from_str::<Value>(&stdout).ok();
+    if let (true, Some(mut actual)) = (expect.get("stdout_json").is_some(), parsed.clone()) {
+        if let Value::Object(entries) = &mut actual {
+            for key in strings(&expect["ignore_keys"]) {
+                entries.remove(&key);
+            }
+        }
+        expect["stdout_json"] = tokens.tokenize_value(&actual);
+    }
+    if let (Some(paths), Some(actual)) = (expect["json_paths"].as_object().cloned(), &parsed) {
+        for dotted in paths.keys() {
+            if let Some(value) = path(actual, dotted) {
+                expect["json_paths"][dotted] = tokens.tokenize_value(value);
+            }
+        }
+    }
+    let message = serde_json::from_str::<Value>(stderr)
+        .ok()
+        .and_then(|value| value["error"]["message"].as_str().map(str::to_owned));
+    if let (true, Some(message)) = (expect["error_message"].is_string(), message) {
+        expect["error_message"] = Value::String(tokens.tokenize(&message));
+    }
+    if let Some(files) = expect["files"].as_object().cloned() {
+        for relative in files.keys() {
+            let target = PathBuf::from(tokens.apply(relative));
+            let mut actual = fs::read_to_string(&target).unwrap_or_default();
+            if strip {
+                actual = strip_producer(&actual);
+            }
+            expect["files"][relative] = Value::String(tokens.tokenize(&actual));
+        }
+    }
+    expect
 }
 
 fn strip_producer(text: &str) -> String {
@@ -516,8 +710,8 @@ fn strip_producer(text: &str) -> String {
     out
 }
 
-/// The Rust-only additions a parity test removes from Rust's stdout before
-/// comparing it with Python's (`scripts/truth_parity/common.py`).
+/// The Rust-only additions the parity tests removed from Rust's stdout before
+/// comparing it with Python's (the retired `scripts/truth_parity/common.py`).
 fn normalize(name: &str, stdout: &str) -> String {
     const NOTE_BLOCK: &str = "\n\nNotes mentioning the target records (";
     const BIND_TYPES_NOTICE: &str = "  elaborated types: no bind-check cache at ";

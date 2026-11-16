@@ -11,7 +11,7 @@
 //!
 //! Contacts are discovery leads, not equivalences or entailments (AGENTS.md
 //! invariants 6 and 16). Nothing here closes a statement, changes a route
-//! cost or writes a record; `scripts/corpus.py frontier` stays the closure
+//! cost or writes a record; `truth frontier` stays the closure
 //! authority. Reaching the root uses the same route-aware walk as
 //! `thickness` (`thickness::frontier_inputs`).
 use crate::{
@@ -227,111 +227,21 @@ pub fn disconnected_count(checkout: &Path, corpus: &Corpus, root: &str) -> usize
         .count()
 }
 
-/// The disconnected count of the corpus that a Python `scripts/` directory
-/// computes with its own `corpus.py` (`orphan_summary.tree_count`). It prints
-/// `[reaching, arguments, results, support, refuters]`.
-const PYTHON_TREE_COUNT: &str = r#"
-import json
-import sys
-import corpus
-root = sys.argv[1] if len(sys.argv) > 1 else corpus.DEFAULT_FRONTIER_ROOT
-frontier = corpus.current_frontier(root, False, next_steps=False)
-if 'reaching_root_statements' not in frontier:
-    raise RuntimeError('historical frontier lacks all-route reachability')
-reaching = frontier['reaching_root_statements']
-arguments = [r for _, r in corpus.load_dir('arguments')]
-results = [r for _, r in corpus.load_dir('results')]
-support, refuters = (), ()
-if hasattr(corpus, 'refutation_support'):
-    support, refuters = corpus.refutation_support(
-        arguments, results, [r for _, r in corpus.load_dir('relations')], set(reaching))
-print(json.dumps([reaching, arguments, results, sorted(support), sorted(refuters)]))
-"#;
-
-/// Python `orphan_summary.orphan_count` on the output of [`PYTHON_TREE_COUNT`].
-fn python_orphan_count(output: &Value) -> Result<usize, String> {
-    let strings = |value: &Value| -> BTreeSet<String> {
-        value
-            .as_array()
-            .into_iter()
-            .flatten()
-            .filter_map(Value::as_str)
-            .map(str::to_owned)
-            .collect()
-    };
-    let [reaching, arguments, results, support, refuters] =
-        output.as_array().map(Vec::as_slice).unwrap_or_default()
-    else {
-        return Err("unexpected historical orphan output".into());
-    };
-    let connected: BTreeSet<String> = strings(reaching)
-        .union(&strings(support))
-        .cloned()
-        .collect();
-    let refuters = strings(refuters);
-    let by_id: HashMap<&str, &Value> = arguments
-        .as_array()
-        .into_iter()
-        .flatten()
-        .filter_map(|argument| argument["id"].as_str().map(|id| (id, argument)))
-        .collect();
-    Ok(results
-        .as_array()
-        .into_iter()
-        .flatten()
-        .filter(|result| {
-            matches!(
-                result["status"].as_str(),
-                Some("solution-present" | "verified")
-            )
-        })
-        .filter_map(|result| {
-            let id = result["argument_id"].as_str()?;
-            by_id.get(id).map(|argument| (id, *argument))
-        })
-        .filter(|(id, argument)| {
-            !connected.contains(
-                argument["conclusion_statement_id"]
-                    .as_str()
-                    .unwrap_or_default(),
-            ) && !refuters.contains(*id)
-        })
-        .count())
-}
-
 /// The disconnected count at a Git revision (Python `orphan_summary.base_count`)
-/// and the engine that computed it, on a `git archive` extract. As for
-/// `frontier-diff`, the Rust engine runs when the revision's
-/// `scripts/corpus.py` is the checkout's; otherwise that revision's own
-/// Python computes it. `root` is `None` for the default frontier root (the
-/// revision's own default, as in Python), otherwise the root's uuid and
-/// legacy id: a revision from before the uuid migration is asked for the
-/// legacy id, as `frontier-diff` asks it.
+/// on its `frontier::base_tree`, under this binary's rules, as for
+/// `frontier-diff`. `root` is `None` for the default frontier root,
+/// otherwise the root's uuid (a pre-migration revision is converted to uuids
+/// first).
 pub fn revision_count(
     checkout: &Path,
     revision: &str,
-    root: Option<(&str, &str)>,
-) -> Result<(usize, &'static str), String> {
-    let tree = crate::frontier::extract(checkout, revision)?;
-    let legacy = !crate::frontier::uses_uuid_identity(tree.path());
-    let root = root.map(|(uuid, legacy_id)| if legacy { legacy_id } else { uuid });
-    if crate::frontier::same_rules(checkout, revision) {
-        let corpus = Corpus::load(tree.path())
-            .map_err(|error| format!("{}: {}", error.path, error.message))?;
-        let root = root.unwrap_or(thickness::DEFAULT_ROOT);
-        return Ok((disconnected_count(tree.path(), &corpus, root), "rust"));
-    }
-    let output = std::process::Command::new("python3")
-        .args(["-c", PYTHON_TREE_COUNT])
-        .args(root)
-        .current_dir(tree.path().join("scripts"))
-        .output()
-        .map_err(|error| format!("cannot run python3: {error}"))?;
-    if !output.status.success() {
-        return Err(String::from_utf8_lossy(&output.stderr).trim().to_owned());
-    }
-    let value: Value = serde_json::from_slice(&output.stdout).map_err(|error| error.to_string())?;
-    Ok((python_orphan_count(&value)?, "python"))
+    root: Option<&str>,
+) -> Result<usize, String> {
+    let tree = crate::frontier::base_tree(checkout, revision)?;
+    let corpus =
+        Corpus::load(tree.path()).map_err(|error| format!("{}: {}", error.path, error.message))?;
+    let root = root.unwrap_or(thickness::DEFAULT_ROOT);
+    Ok(disconnected_count(tree.path(), &corpus, root))
 }
 
 /// Python `orphan_summary.summary`: the Markdown orphan-count table CI adds
@@ -1548,27 +1458,5 @@ mod tests {
         let text = format_count_summary("ROOT", "BASE", 3, None);
         assert!(text.contains("| `BASE` | unavailable | 3 | unavailable |"));
         assert!(text.ends_with("No zero baseline is assumed."));
-    }
-
-    #[test]
-    fn python_count_follows_orphan_summary() {
-        let output = json!([
-            ["ROOT"],
-            [{"id": "A1", "conclusion_statement_id": "ROOT"},
-             {"id": "A2", "conclusion_statement_id": "IDLE"},
-             {"id": "A3", "conclusion_statement_id": "SUPPORT"},
-             {"id": "A4", "conclusion_statement_id": "X"}],
-            [{"argument_id": "A1", "status": "verified"},
-             {"argument_id": "A2", "status": "verified"},
-             {"argument_id": "A2", "status": "solution-present"},
-             {"argument_id": "A2", "status": "pending"},
-             {"argument_id": "A3", "status": "verified"},
-             {"argument_id": "A4", "status": "verified"},
-             {"argument_id": "MISSING", "status": "verified"}],
-            ["SUPPORT"],
-            ["A4"]
-        ]);
-        assert_eq!(python_orphan_count(&output), Ok(2));
-        assert!(python_orphan_count(&json!([])).is_err());
     }
 }

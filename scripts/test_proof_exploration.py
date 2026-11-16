@@ -4,18 +4,19 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import corpus
+import corpus_records
+import truth_cli
 from corpus_ids import Aliases, legacy_uuid  # noqa: E402
 
 
-ALIASES = Aliases.load(corpus.ROOT)
+ALIASES = Aliases.load(corpus_records.ROOT)
 
 
 def selected(kind, ids):
     """Records of `kind` named by uuid, or by the legacy id behind a uuid of
     another kind (a migrated result and its argument share their legacy id)."""
     legacy = {ALIASES.legacy(record_id) for record_id in ids}
-    return [record for _, record in corpus.load_dir(kind)
+    return [record for _, record in corpus_records.load_dir(kind)
             if record["id"] in ids or record.get("legacy_id") in legacy]
 
 
@@ -32,7 +33,7 @@ class ProofExplorationTest(unittest.TestCase):
             legacy_uuid("inference", "INF-PILOT-WITNESS-AND-CONSEQUENCE"),
         ])
         statements = selected("statements", [target])
-        report = corpus.frontier_report(statements, arguments,
+        report = truth_cli.frontier_fixture(statements, arguments,
                                        selected("results", [result_id]), [], root=target)
         self.assertIn(target, report["established_statements"])
         self.assertEqual(report["items"], [])
@@ -45,10 +46,10 @@ class ProofExplorationTest(unittest.TestCase):
                  legacy_uuid("result", "PILOT-CONSEQUENCE-ENTAILS-CONJUNCTION")]
         statements = selected("statements", [a, b, c])
         arguments = selected("arguments", chain + [legacy_uuid("argument", "LOGIC-SOME-PROPOSITION-HOLDS")])
-        ungrounded = corpus.frontier_report(statements, arguments,
+        ungrounded = truth_cli.frontier_fixture(statements, arguments,
                                             selected("results", chain), [], root=c)
         self.assertNotIn(c, ungrounded["established_statements"])
-        grounded = corpus.frontier_report(statements, arguments,
+        grounded = truth_cli.frontier_fixture(statements, arguments,
                                           selected("results", chain + [legacy_uuid("result", "LOGIC-SOME-PROPOSITION-HOLDS")]), [], root=c)
         self.assertEqual(sorted(grounded["established_statements"]), sorted([a, b, c]))
         helper = selected("arguments", [chain[1]])[0]
@@ -58,7 +59,7 @@ class ProofExplorationTest(unittest.TestCase):
     def test_profile_stability_is_still_an_open_interpretation_obligation(self):
         ids = [legacy_uuid("statement", "STMT-PILOT-LOGICAL-SENTENCE-STABLE"), legacy_uuid("statement", "STMT-PILOT-NOT-GLOBAL-PROFILE-VARIATION")]
         result_id = legacy_uuid("result", "PILOT-STABLE-SENTENCE-EXCLUDES-GLOBAL-VARIATION")
-        report = corpus.frontier_report(selected("statements", ids),
+        report = truth_cli.frontier_fixture(selected("statements", ids),
                                        selected("arguments", [result_id]),
                                        selected("results", [result_id]), [], root=ids[1])
         self.assertNotIn(ids[1], report["established_statements"])

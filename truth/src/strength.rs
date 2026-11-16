@@ -47,18 +47,13 @@ const SCOPE_NOTES: [&str; 7] = [
     "No unique or minimal delta is claimed. Proof-term use does not establish premise necessity.",
     "The artifact is derived presentation; corpus results, Comparator and NanoDa remain the proof authorities.",
 ];
-/// `configuration_explorer.INPUT_FILES`.
-const CONFIGURATION_FILES: [&str; 16] = [
+/// `configuration_explorer::INPUT_FILES` (the retired Python report scripts
+/// are no longer inputs, #954 R3).
+const CONFIGURATION_FILES: [&str; 10] = [
     "lean-toolchain",
     "lakefile.toml",
     "lake-manifest.json",
     "TruthCore.lean",
-    "scripts/corpus.py",
-    "scripts/configurations.py",
-    "scripts/configuration_explorer.py",
-    "scripts/finite_models.py",
-    "scripts/premise_dossiers.py",
-    "scripts/source_evidence.py",
     "scripts/BindTypes.lean",
     "scripts/verify-result.sh",
     "scripts/verifier-pins.env",
@@ -79,10 +74,8 @@ const CONFIGURATION_DIRECTORIES: [(&str, &str); 8] = [
     ("corpus/configurations", "*.json"),
 ];
 /// The relation-interpretation inputs `input_manifest` adds.
-const STRENGTH_FILES: [&str; 5] = [
-    "scripts/strength_comparisons.py",
+const STRENGTH_FILES: [&str; 3] = [
     "scripts/CheckStrength.lean",
-    "scripts/proposition_structure.py",
     "scripts/PropositionStructure.lean",
     "scripts/worker_env.py",
 ];

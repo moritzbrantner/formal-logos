@@ -1,4 +1,4 @@
-"""Offline scaffold contract: linked drafts, supplied binding, no overwrites."""
+"""Offline scaffold contract: linked drafts, no overwrites."""
 import argparse
 import json
 from pathlib import Path
@@ -6,7 +6,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-import corpus
+import corpus_records as corpus
 import scaffold_result as scaffold
 
 
@@ -30,22 +30,11 @@ class ScaffoldResultTest(unittest.TestCase):
             id="TEST-DRAFT", premise=["STMT-P"], conclusion="STMT-C", meaning_file=meaning,
             rule="direct-proof", challenge_module="TruthCore.Results.Test.Challenge",
             solution_module="TruthCore.Results.Test.Solution", theorem="TruthCore.Results.Test.checks",
-            axiom=[], type_evidence=None,
+            axiom=[],
         )
-        self.patch = patch.multiple(corpus, ROOT=self.root, CORPUS=self.root / "corpus")
+        self.patch = patch.multiple(corpus, ROOT=self.root)
         self.patch.start()
         self.addCleanup(self.patch.stop)
-
-    def evidence(self, premises):
-        path = self.root / "types.json"
-        path.write_text(json.dumps([{
-            "theorem": self.args.theorem,
-            "binders": [{"name": "h" + p, "prop": True,
-                         "head": "TruthCore.Test." + p, "type": "TruthCore.Test." + p}
-                        for p in premises],
-            "result": {"prop": True, "head": "TruthCore.Test.C", "type": "TruthCore.Test.C"},
-        }]))
-        self.args.type_evidence = path
 
     def test_linked_drafts_and_new_directory_only(self):
         before = sorted(p.relative_to(self.root) for p in self.root.rglob("*"))
@@ -63,7 +52,6 @@ class ScaffoldResultTest(unittest.TestCase):
         self.assertEqual(argument["definition_ids"], ["DEF-TEST"])
         self.assertNotIn("status", result)
         self.assertEqual(config["permitted_axioms"], [])
-        self.assertIsNone(draft["supplied_type_comparison"])
         self.assertTrue(draft["solution_header"].startswith("module\n\npublic import "))
         self.assertIn("@[expose] public section", draft["solution_header"])
         self.assertEqual(before, sorted(p.relative_to(self.root) for p in self.root.rglob("*")))
@@ -78,17 +66,7 @@ class ScaffoldResultTest(unittest.TestCase):
             with self.assertRaises(corpus.CorpusError):
                 scaffold.write_drafts(output, draft)
 
-    def test_binding_reuses_existing_heads_and_rejects_missing_premises(self):
-        self.evidence(["P"])
-        draft = scaffold.bundle(self.args)
-        self.assertEqual(draft["supplied_type_comparison"]["report"]["status"], "bound")
-        self.args.premise = []
-        with self.assertRaisesRegex(corpus.CorpusError, "extra-hypothesis"):
-            scaffold.bundle(self.args)
-        self.args.premise = ["STMT-P"]
-        self.evidence([])
-        with self.assertRaisesRegex(corpus.CorpusError, "missing-premise"):
-            scaffold.bundle(self.args)
+    def test_unknown_statement_is_rejected(self):
         self.args.premise = ["STMT-MISSING"]
         with self.assertRaisesRegex(corpus.CorpusError, "unknown statement"):
             scaffold.bundle(self.args)

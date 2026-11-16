@@ -20,8 +20,8 @@ class AgentLeanTest(unittest.TestCase):
         self.addCleanup(directory.cleanup)
         self.root = Path(directory.name)
         self.workspace = self.root / "preview"
-        (self.workspace / "scripts").mkdir(parents=True)
-        (self.workspace / "scripts/corpus.py").write_text("# fixture\n")
+        (self.workspace / "truth").mkdir(parents=True)
+        (self.workspace / "truth/Cargo.toml").write_text("# fixture\n")
         self.input = self.root / "canonical.lean"
         self.input.write_text("example : True := True.intro\n")
         self.lock = self.root / "shared.lock"
@@ -110,7 +110,7 @@ class AgentLeanTest(unittest.TestCase):
                     self.submit()
 
     def test_changed_preview_rejected(self):
-        self.alter = lambda response: (self.workspace / "scripts/corpus.py").write_text("# modified\n")
+        self.alter = lambda response: (self.workspace / "truth/Cargo.toml").write_text("# modified\n")
         with self.assertRaisesRegex(ValueError, "changed during"):
             self.submit()
 

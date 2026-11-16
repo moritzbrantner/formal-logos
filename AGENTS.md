@@ -614,18 +614,20 @@ or a relevant change or failure invalidates its earlier evidence:
 `truth` is the repository's Rust CLI (`truth/README.md`): build it once per
 clone with `cargo build --locked --release -p truth` (rerun after Rust source
 or Cargo input changes) and run it from the
-repository root. It is the only implementation of the navigation, gate and
-research commands (`check`, `frontier`, `frontier-diff`, `thickness`, `next`,
-`related`, `dossier`, `context` including `--proof-use`, `bind-check`,
+repository root. It is the only implementation of the corpus commands
+(`check`, `frontier`, `frontier-diff`, `thickness`, `next`, `related`,
+`dossier`, `context` including `--proof-use`, `bind-check`,
 `unused-premises`, `lean-reuse`, `attribution-check`, `configurations`,
-`models`, `issues`, `senses`, `index`, …); their `scripts/corpus.py`
-versions were retired (#954 R2). A statement root is `--frontier-root`
-(the Python `--root`). Rust `--root PATH` selects the input repository;
+`configuration-report`, `models`, `strength-comparisons`, `strength-report`,
+`structure`, `structure-report`, `issues`, `senses`, `index`, …);
+`scripts/corpus.py` was retired (#954 R2/R3). A statement root is
+`--frontier-root`. Rust `--root PATH` selects the input repository;
 `--json` selects machine-readable output, including frontier reports usable by
 `dossier` and `context` via `--frontier-json FILE` on the same inputs.
-Until #954 R3, `scripts/corpus.py` keeps only `check` (for the merge queue),
-`frontier`/`frontier-diff` (the engine `truth frontier-diff` runs at a
-revision whose `corpus.py` differs) and the report commands.
+`frontier-diff`, `thickness --base` and `orphans --base` judge the base
+revision's committed corpus and Lean sources by the running binary's rules
+(owner decision 2026-11-16, "head rules on base data"), so a PR that changes
+the frontier rules shows that change in its delta.
 
 ```bash
 lake build

@@ -57,13 +57,14 @@ const NOTES: [&str; 4] = [
     "A primitive parameter or field is intentional vocabulary; an unsupported node is an extraction limitation. Neither supplies an independent-atom semantics.",
     "Disjunction preserves alternatives and selects no branch. Structural presentation discharges no root premise.",
 ];
-/// Inputs outside `TruthCore/` and the corpus that every report binds.
-const FIXED_INPUTS: [&str; 7] = [
+/// Inputs outside `TruthCore/` and the corpus that every report binds: the
+/// exporter, the toolchain and the `worker_env.py` launcher it runs through.
+/// The retired Python report scripts are no longer inputs (#954 R3); the
+/// producer fingerprint below binds the Rust producer.
+const FIXED_INPUTS: [&str; 5] = [
     "lean-toolchain",
     "lake-manifest.json",
     "scripts/PropositionStructure.lean",
-    "scripts/proposition_structure.py",
-    "scripts/corpus.py",
     "scripts/worker_env.py",
     "lakefile.toml",
 ];
@@ -72,7 +73,6 @@ const FIXED_INPUTS: [&str; 7] = [
 /// it as `revision.producer_sha256`, outside the input digest, and
 /// `--check-input` requires it to match the running binary, so a Rust change
 /// to the report or the frontier statuses it embeds makes old artifacts stale.
-/// (Python's reports bind only `scripts/*.py`; R3 retires those entries.)
 pub const PRODUCER_SHA256: &str = env!("TRUTH_PRODUCER_SHA256");
 const BUILD_TIMEOUT: Duration = Duration::from_secs(600);
 const EXTRACT_TIMEOUT: Duration = Duration::from_secs(180);

@@ -4,7 +4,7 @@ Each disambiguation gives its term a `term_label` (PRIOR) and its senses an
 opaque uuid identity plus a stable display label TERM_n (PRIOR_1). This module
 answers, for any record, which sense label each disambiguated term takes in it,
 so a dossier can show "prior [PRIOR_1]" and a record label can carry the tag
-("Act is PRIOR_1 to potency"). It is lenient: `corpus.py check` validates the
+("Act is PRIOR_1 to potency"). It is lenient: `truth check` validates the
 senses; this only reads them.
 """
 from __future__ import annotations

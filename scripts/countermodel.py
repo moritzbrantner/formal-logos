@@ -24,12 +24,53 @@ import tempfile
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from proposition_structure import module_for  # noqa: E402
-
 LEAN_ENV = ["python3", "scripts/worker_env.py", "--", "lake"]
 
 
 # --- extraction -------------------------------------------------------------
+
+def module_for(root: Path, declaration: str) -> str:
+    """Discover the source module; Lean still resolves and validates the name.
+
+    Namespaces need not match file names (Catholicism lives in Root/StageTwo).
+    This small source locator follows the explorer's lean-source.ts conventions
+    (moved here from the retired proposition_structure.py, #954 R3);
+    it is not a parser or a semantic binding authority.
+    """
+    candidates = []
+    header = re.compile(r"^(?:@\[[^\]]*\]\s*)?(?:(?:noncomputable|private|protected|partial|unsafe)\s+)*(?:def|abbrev|theorem|lemma|structure|inductive|class|opaque|axiom|instance)\s+([^\s(:{\[]+)")
+    for path in sorted((root / "TruthCore").rglob("*.lean")):
+        namespaces = []
+        comment_depth = 0
+        for line in path.read_text().splitlines():
+            was_comment = comment_depth > 0
+            comment_depth = max(0, comment_depth + line.count("/-") - line.count("-/"))
+            if was_comment or comment_depth:
+                continue
+            line = line.strip()
+            match = re.match(r"namespace\s+(\S+)", line)
+            if match:
+                namespaces.append(match[1])
+                continue
+            match = re.match(r"end\s+(\S+)", line)
+            if match and namespaces and namespaces[-1] == match[1]:
+                namespaces.pop()
+                continue
+            match = header.match(line)
+            if match:
+                local = match[1]
+                name = local[7:] if local.startswith("_root_.") else ".".join(namespaces + [local])
+                if declaration == name or declaration.startswith(name + "."):
+                    candidates.append((len(name), path))
+    if not candidates:
+        raise ValueError(f"cannot locate project module for {declaration}")
+    best = max(length for length, _ in candidates)
+    paths = {path for length, path in candidates if length == best}
+    if len(paths) != 1:
+        raise ValueError(f"ambiguous source module for {declaration}: {sorted(map(str, paths))}")
+    return str(paths.pop().relative_to(root).with_suffix("")).replace("/", ".")
+
+
 
 def locate(root: Path, theorem: str) -> str:
     """Module declaring `theorem`; a Challenge/Solution pair resolves to the Solution."""

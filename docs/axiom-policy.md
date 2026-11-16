@@ -17,8 +17,9 @@ No other axiom is ever permitted: no `sorryAx`, no `Lean.ofReduceBool` or
 `Lean.trustCompiler`, and no axiom declared in this repository. A result that
 can be proved without the three keeps `[]`, even if it imports Mathlib.
 
-`target/release/truth check` enforces this for every result record
-(`permitted_axioms_error` in `scripts/corpus.py`, tested by
+`target/release/truth check` enforces this for every result record,
+`scripts/scaffold_result.py` and `scripts/verify-result.sh` apply the same rule
+(`permitted_axioms_error` in `scripts/corpus_records.py`, tested by
 `scripts/test_axiom_policy.py`), and `scripts/verify-result.sh` refuses a
 config that breaks it before Comparator runs. Comparator then rejects any
 axiom the Solution uses beyond the config's list.
@@ -91,9 +92,9 @@ whose Challenge or Solution module, or any `TruthCore` module either imports
 transitively, changed. A change to the toolchain, the Lake files, the verifier
 scripts or pins, `verifier/`, any tooling script or a workflow selects every
 result, as does an unknown input or an unavailable exact diff. A change only to
-the Rust `truth` CLI crate, the root Cargo workspace or its parity harness
-(`scripts/truth_parity/`, `scripts/verify_truth_cli.py`) selects no result,
-since the Comparator path never runs `truth`; the CLI parity, corpus, binding,
+the Rust `truth` CLI crate (including its tests and frozen goldens) or the root
+Cargo workspace selects no result,
+since the Comparator path never runs `truth`; the CLI tests, corpus, binding,
 explorer and report checks still run. Every formal/corpus change on `main`, a nightly
 scheduled run and any manual run verify every result, split across parallel
 shards (`scripts/verify-all.sh --shard INDEX/COUNT`).
@@ -139,9 +140,9 @@ The Rust corpus CLI job caches Cargo registry/git downloads and the workspace
 and `cargo -vV` identity, workspace manifests/lockfile, Cargo/toolchain configuration
 and crate inputs. The dependency-key prefix restores an earlier main build across
 crate edits; Cargo fingerprints decide which units need rebuilding. Only main
-writes the cache. Formatting, Clippy, tests, build and `verify_truth_cli.py` run on
+writes the cache. Formatting, Clippy and tests (with the golden replay) run on
 every job, including exact cache hits. A cold dependency/compiler key still
-compiles normally; warm reuse saves compilation work, not CLI parity checks.
+compiles normally; warm reuse saves compilation work, not CLI checks.
 
 ## Toolchain pin and rebuilding the verifier
 
