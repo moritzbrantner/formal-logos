@@ -1,7 +1,17 @@
 {
   "id": "c99a6bba-4f4d-4516-9f62-7b9173f2f9c3",
-  "label": "supervenience (ordinary)",
+  "label": "supervenience (technical)",
   "lemma": "supervenience",
-  "class": "ordinary",
-  "gloss": "The relation where there is no difference in one family of properties without a difference in another."
+  "class": "technical",
+  "definition_ids": [
+    "1cdfd808-40bd-47ec-8f24-fb5e2fc20e2c",
+    "34408202-b4c3-5d8c-856e-2e2ad4397988",
+    "6bfb958a-b7f4-430c-acc1-8075fdbf5f81",
+    "8de558f2-ed86-4779-babf-09a425367ada",
+    "ae2fbfcd-10d5-498a-a1d2-aba55d521712",
+    "c67d9233-8c36-5f53-9003-b011f7cdebfd",
+    "e27d58e4-38ba-4152-89be-95a407cf5e9f",
+    "fbb33d0b-6057-4a22-a636-69d8939ad1b7"
+  ],
+  "note": "Lists the existing supervenience definitions: weak and strong moral supervenience, competent-verdict and rational supervenience, the moral comparison profile, moral-property supervenience of undetermined modal scope, phenomenal-report supervenience and supervenience as a requirement of linguistic competence. A record fixes which one it uses by its sense link."
 }
