@@ -1,0 +1,366 @@
+{
+  "about": "Hand-pinned answer key for the #1644 retrieval benchmark (scripts/retrieval_benchmark.py). Every reference was located by grep over docs/notes, corpus records and an offline GitHub snapshot, never from `truth brief`/`truth novelty` output. A reference counts as surfaced when its token appears in a workflow's output (a lexical proxy, as in #962). `primary` references are the prior work whose absence would make a worker report the question as unexplored. Patterns are Python regular expressions over the combined text output of one workflow; `present` patterns must match and `absent` patterns must not. `classification` constrains only the candidate's novelty verdict. Cases with `held_out: true` were not inspected against candidate output before the answer key was fixed and must stay unchanged when ranking rules change.",
+  "pinned_revision": "c393bc7d18203bd329eaa04a3865860c214058e6",
+  "snapshot": {
+    "command": "gh issue list --state all --limit 2000 --json number,title,body,url,state,comments,updatedAt; gh pr list --state all --limit 2000 --json number,title,body,url,state,comments,updatedAt; merged as {captured_at, items}",
+    "exclude_numbers": [1643, 1644, 1686],
+    "exclude_reason": "#1643/#1644 and PR #1686 state the benchmark's own answers; removing them from the snapshot fed to both workflows keeps the evaluation from reading its answer key."
+  },
+  "cases": [
+    {
+      "id": "A1-ultimate-explanation",
+      "category": "researched-open",
+      "question": "Has ultimate explanation against brute-fact or infinite-regress rivals been investigated, and what is still open?",
+      "candidate": ["brief", "--question", "ultimate explanation, brute fact or infinite regress"],
+      "baseline": {"search": ["ultimate explanation brute fact", "infinite regress explanation"]},
+      "refs": [
+        {"ref": "ultimate-adequacy-integration-735.md", "kind": "note", "primary": true},
+        {"ref": "explanatory-adequacy-750.md", "kind": "note"},
+        {"ref": "explanatory-selection-736.md", "kind": "note"},
+        {"ref": "stopping-points-746.md", "kind": "note"},
+        {"ref": "#735", "kind": "issue", "primary": true},
+        {"ref": "#750", "kind": "issue"},
+        {"ref": "#736", "kind": "issue"},
+        {"ref": "#613", "kind": "issue"},
+        {"ref": "#1445", "kind": "issue"},
+        {"ref": "#746", "kind": "issue"}
+      ],
+      "distinctions": [
+        {"name": "reports the open universal-coverage burden", "present": "(?i)not (?:been )?established|has not established"}
+      ]
+    },
+    {
+      "id": "A2-whole-series",
+      "category": "researched-open",
+      "question": "Can a whole infinite series of contingent beings be explained as a whole?",
+      "candidate": ["brief", "--question", "whole-series explanation of the contingent series"],
+      "baseline": {"search": ["whole-series explanation"]},
+      "refs": [
+        {"ref": "ultimate-adequacy-integration-735.md", "kind": "note", "primary": true},
+        {"ref": "unique-feedback-explanation-311.md", "kind": "note"},
+        {"ref": "#1445", "kind": "issue", "primary": true},
+        {"ref": "#311", "kind": "issue"}
+      ],
+      "distinctions": [
+        {"name": "reports an assessment rather than a verdict", "present": "(?i)assessment|judgment"}
+      ]
+    },
+    {
+      "id": "A3-brute-stopping-points",
+      "category": "researched-open",
+      "question": "Can brute foundations be explanatory stopping points under consistent standards?",
+      "candidate": ["brief", "--question", "brute foundations as explanatory stopping points"],
+      "baseline": {"search": ["stopping point brute"]},
+      "refs": [
+        {"ref": "stopping-points-746.md", "kind": "note", "primary": true},
+        {"ref": "explanatory-adequacy-750.md", "kind": "note"},
+        {"ref": "#746", "kind": "issue", "primary": true},
+        {"ref": "#750", "kind": "issue"}
+      ],
+      "distinctions": []
+    },
+    {
+      "id": "A4-psr-self-application",
+      "category": "researched-open",
+      "question": "Does the principle of sufficient reason apply to itself, and how strong a PSR does each route need?",
+      "candidate": ["brief", "--question", "principle of sufficient reason self-application"],
+      "baseline": {"search": ["sufficient reason self-application"]},
+      "refs": [
+        {"ref": "psr-self-application-756.md", "kind": "note", "primary": true},
+        {"ref": "psr-strength-755.md", "kind": "note"},
+        {"ref": "#756", "kind": "issue", "primary": true},
+        {"ref": "#755", "kind": "issue"}
+      ],
+      "distinctions": []
+    },
+    {
+      "id": "B1-dependence-inseparability-formula",
+      "category": "false-novelty",
+      "question": "Is D(x,y) <-> not CanBeWithout(x,y) a new theorem?",
+      "candidate": ["novelty", "D(x,y) ↔ ¬CanBeWithout(x,y)"],
+      "baseline": {"search": ["CanBeWithout DependsForBeing"]},
+      "refs": [
+        {"ref": "priority-independence-logic-support-investigation.md", "kind": "note", "primary": true},
+        {"ref": "#1589", "kind": "issue", "primary": true},
+        {"ref": "8ab3d114", "kind": "record"},
+        {"ref": "000e1f65", "kind": "record"}
+      ],
+      "classification": ["already-recorded", "partially-recorded"],
+      "distinctions": [
+        {"name": "containment is not presented as equivalence", "present": "(?i)containment is not equivalence|not a certified entailment"}
+      ]
+    },
+    {
+      "id": "B2-dependence-inseparability-prose",
+      "category": "false-novelty",
+      "question": "Prose paraphrase of B1: is 'depending for being is equivalent to being unable to be without' new?",
+      "candidate": ["novelty", "depending for its being is equivalent to being unable to be without"],
+      "baseline": {"search": ["depends being without"]},
+      "refs": [
+        {"ref": "priority-independence-logic-support-investigation.md", "kind": "note", "primary": true},
+        {"ref": "#1589", "kind": "issue"},
+        {"ref": "000e1f65", "kind": "record"}
+      ],
+      "classification": ["already-recorded", "partially-recorded"],
+      "distinctions": []
+    },
+    {
+      "id": "B3-weak-explanatory-coverage",
+      "category": "false-novelty",
+      "question": "Is 'weak explanatory coverage adds no ontic constraints' a new result?",
+      "candidate": ["novelty", "weak explanatory coverage adds no ontic constraints"],
+      "baseline": {"search": ["weak explanatory coverage"]},
+      "refs": [
+        {"ref": "weak-explanation-conservative-expansion.md", "kind": "note", "primary": true},
+        {"ref": "#677", "kind": "issue", "primary": true}
+      ],
+      "classification": ["already-recorded", "partially-recorded"],
+      "distinctions": []
+    },
+    {
+      "id": "B4-simplicity-modal-collapse",
+      "category": "false-novelty",
+      "question": "Is a divine-simplicity modal-collapse argument new here?",
+      "candidate": ["novelty", "divine simplicity with a rigid act and contingent creation yields modal collapse"],
+      "baseline": {"search": ["simplicity modal collapse"]},
+      "refs": [
+        {"ref": "simplicity-collapse-555.md", "kind": "note", "primary": true},
+        {"ref": "#555", "kind": "issue", "primary": true}
+      ],
+      "classification": ["already-recorded", "partially-recorded"],
+      "distinctions": []
+    },
+    {
+      "id": "B5-causal-transitivity",
+      "category": "false-novelty",
+      "held_out": true,
+      "question": "Is the failure of transitivity for but-for dependence, unlike structural ancestry, new here?",
+      "candidate": ["novelty", "but-for counterfactual dependence is not transitive while structural causal ancestry is"],
+      "baseline": {"search": ["causal transitivity"]},
+      "refs": [
+        {"ref": "causal-transitivity-1399.md", "kind": "note", "primary": true},
+        {"ref": "#1399", "kind": "issue", "primary": true}
+      ],
+      "classification": ["already-recorded", "partially-recorded"],
+      "distinctions": []
+    },
+    {
+      "id": "B6-statement-vocabulary",
+      "category": "false-novelty",
+      "question": "Does anything besides the independence-allows-being-without statement already use its vocabulary and connectives?",
+      "candidate": ["novelty", "--statement", "8ab3d114-d6e2-5f6d-805b-ae901f56d39b"],
+      "baseline": {"seeds": ["8ab3d114-d6e2-5f6d-805b-ae901f56d39b"], "search": ["IndependenceAllowsBeingWithout"]},
+      "refs": [
+        {"ref": "priority-independence-logic-support-investigation.md", "kind": "note", "primary": true},
+        {"ref": "000e1f65", "kind": "record", "primary": true},
+        {"ref": "nine-premise-support-investigation.md", "kind": "note"}
+      ],
+      "classification": ["already-recorded", "partially-recorded"],
+      "distinctions": []
+    },
+    {
+      "id": "C1-conditional-origin-result",
+      "category": "formal-vs-warrant",
+      "question": "Does the verified no-self-origination result settle that nothing originates itself?",
+      "candidate": ["brief", "3630bbec-598e-4145-8d57-5f4c6a39d23f"],
+      "baseline": {"seeds": ["b241b5ca-e790-5145-bc9a-4154e266bb55"], "context": ["3630bbec-598e-4145-8d57-5f4c6a39d23f"]},
+      "refs": [
+        {"ref": "be90bb15", "kind": "record", "primary": true},
+        {"ref": "8550ca62", "kind": "record"},
+        {"ref": "unique-feedback-explanation-311.md", "kind": "note"},
+        {"ref": "#1526", "kind": "issue"}
+      ],
+      "distinctions": [
+        {"name": "verified result reported as conditional", "present": "(?i)conditional"},
+        {"name": "closure not reported as establishment", "present": "(?i)established: false|not established|unestablished"}
+      ]
+    },
+    {
+      "id": "C2-refutation-under-assumptions",
+      "category": "formal-vs-warrant",
+      "question": "Which rivals of 'something changes' are refuted, and under what assumptions?",
+      "candidate": ["brief", "STMT-SOMETHING-CHANGES"],
+      "baseline": {"seeds": ["STMT-SOMETHING-CHANGES"]},
+      "refs": [
+        {"ref": "cc003313", "kind": "objection", "primary": true},
+        {"ref": "d908f7a8", "kind": "objection"},
+        {"ref": "0a86321b", "kind": "record"},
+        {"ref": "causal-temporal-rival-coverage.md", "kind": "note"}
+      ],
+      "distinctions": [
+        {"name": "surviving rival stays visible as open", "present": "cc003313[^\\n]*open|open[^\\n]*cc003313"}
+      ]
+    },
+    {
+      "id": "C3-one-missing-prerequisite",
+      "category": "formal-vs-warrant",
+      "question": "Does the finite per se path result give every being a finite path to an uncaused cause?",
+      "candidate": ["brief", "d2e5db3f-9e0c-5cb9-9db9-54e12eaf61e8"],
+      "baseline": {"seeds": ["99b1a274-ce1a-5019-9b0f-5cc6e70b07dc"], "context": ["d2e5db3f-9e0c-5cb9-9db9-54e12eaf61e8"]},
+      "refs": [
+        {"ref": "97f5850f", "kind": "record", "primary": true},
+        {"ref": "productive-store-1378.md", "kind": "note"},
+        {"ref": "contractive-borrowed-power-1378.md", "kind": "note"}
+      ],
+      "distinctions": [
+        {"name": "missing prerequisite named beside an open/unestablished marker", "present": "(?i)97f5850f[^\\n]*(?:open|unestablished)|(?:open|unestablished)[^\\n]*97f5850f"},
+        {"name": "verified result reported as conditional", "present": "(?i)conditional"}
+      ]
+    },
+    {
+      "id": "C4-investigated-open-premise",
+      "category": "formal-vs-warrant",
+      "question": "How mature is the research on 'independence allows being without'?",
+      "candidate": ["brief", "8ab3d114-d6e2-5f6d-805b-ae901f56d39b"],
+      "baseline": {"seeds": ["8ab3d114-d6e2-5f6d-805b-ae901f56d39b"]},
+      "refs": [
+        {"ref": "priority-independence-logic-support-investigation.md", "kind": "note", "primary": true},
+        {"ref": "#1589", "kind": "issue", "primary": true},
+        {"ref": "#1590", "kind": "issue"}
+      ],
+      "distinctions": [
+        {"name": "open formal status shown", "present": "(?i)(?:frontier|status)[^\\n]*\\bopen\\b"}
+      ]
+    },
+    {
+      "id": "D1-closed-with-successor",
+      "category": "workflow",
+      "question": "Was the preface paradox investigated, and where does its remaining scope live?",
+      "candidate": ["brief", "--question", "preface paradox interconnected beliefs and isolated error"],
+      "baseline": {"search": ["preface paradox"]},
+      "refs": [
+        {"ref": "preface-connectivity-1584.md", "kind": "note", "primary": true},
+        {"ref": "#1584", "kind": "issue", "primary": true},
+        {"ref": "#1620", "kind": "issue"}
+      ],
+      "distinctions": [
+        {"name": "closed issue shown with its state", "present": "#1584[^\\n]*CLOSED"},
+        {"name": "open successor shown with its state", "present": "#1620[^\\n]*OPEN"}
+      ]
+    },
+    {
+      "id": "D2-retired-superseded",
+      "category": "workflow",
+      "question": "Does actual existential dependence terminate in substance (bearer regress)?",
+      "candidate": ["brief", "--question", "bearer regress: does existential dependence terminate in substance"],
+      "baseline": {"search": ["bearer regress"]},
+      "refs": [
+        {"ref": "bearer-regress.md", "kind": "note", "primary": true},
+        {"ref": "#562", "kind": "issue", "primary": true},
+        {"ref": "#1555", "kind": "issue"}
+      ],
+      "distinctions": [
+        {"name": "retired issue shown as closed", "present": "#562[^\\n]*CLOSED"}
+      ]
+    },
+    {
+      "id": "D3-newer-assessment",
+      "category": "workflow",
+      "question": "What is the current assessment of the origin-to-productive-exercise bridge?",
+      "candidate": ["brief", "--question", "origin edge productive exercise warrant reassessment"],
+      "baseline": {"search": ["productive exercise origin"]},
+      "refs": [
+        {"ref": "unique-feedback-explanation-311.md", "kind": "note", "primary": true},
+        {"ref": "#1526", "kind": "issue"},
+        {"ref": "#1627", "kind": "issue"}
+      ],
+      "distinctions": [
+        {"name": "dated newer reassessment visible", "present": "2026-11-1[2-4]"}
+      ]
+    },
+    {
+      "id": "D4-no-issue-snapshot",
+      "category": "workflow",
+      "snapshot": "none",
+      "question": "B1 without any issue snapshot: is missing issue data reported as unknown?",
+      "candidate": ["novelty", "D(x,y) ↔ ¬CanBeWithout(x,y)"],
+      "baseline": {"search": ["CanBeWithout DependsForBeing"]},
+      "refs": [
+        {"ref": "priority-independence-logic-support-investigation.md", "kind": "note", "primary": true}
+      ],
+      "classification": ["already-recorded", "partially-recorded"],
+      "distinctions": [
+        {"name": "issue history reported as unknown", "present": "(?i)unknown"},
+        {"name": "no claim that there are no issues", "absent": "(?i)(?<!evidence that )no (?:prior |related )?(?:issues|work) (?:found|exists?)"}
+      ]
+    },
+    {
+      "id": "D5-stale-snapshot",
+      "category": "workflow",
+      "snapshot": "stale",
+      "question": "A1 with a snapshot captured before the checkout: is the staleness flagged?",
+      "candidate": ["brief", "--question", "ultimate explanation, brute fact or infinite regress"],
+      "baseline": {"search": ["ultimate explanation brute fact"]},
+      "refs": [
+        {"ref": "ultimate-adequacy-integration-735.md", "kind": "note", "primary": true}
+      ],
+      "distinctions": [
+        {"name": "stale snapshot flagged", "present": "(?i)older than|before the checkout|stale|predates"}
+      ]
+    },
+    {
+      "id": "E1-unrecorded-proposal",
+      "category": "negative-control",
+      "question": "A genuinely unrecorded proposal.",
+      "candidate": ["novelty", "the Lydian hymn count of the seraphim is a prime number"],
+      "baseline": {"search": ["Lydian hymn seraphim"]},
+      "refs": [],
+      "classification": ["no-match-found"],
+      "distinctions": [
+        {"name": "absence not presented as novelty proof", "present": "(?i)not evidence|never .?novel|no-match-found"}
+      ]
+    },
+    {
+      "id": "E2-converse-not-equivalence",
+      "category": "negative-control",
+      "question": "The converse CanBeWithout(x,y) -> DependsForBeing(x,y) shares every symbol with recorded work but is not a recorded thesis.",
+      "candidate": ["novelty", "CanBeWithout(x,y) → DependsForBeing(x,y)"],
+      "baseline": {"search": ["CanBeWithout DependsForBeing"]},
+      "refs": [],
+      "classification": ["partially-recorded", "no-match-found"],
+      "distinctions": [
+        {"name": "containment caveat present", "present": "(?i)containment is not equivalence"}
+      ]
+    },
+    {
+      "id": "E3-same-word-other-sense",
+      "category": "negative-control",
+      "question": "'Act is prior to potency in time': the corpus records priority in several senses (PRIOR_1..3); the hit must carry its sense.",
+      "candidate": ["novelty", "act is prior to potency in time"],
+      "baseline": {"search": ["prior potency time"]},
+      "refs": [
+        {"ref": "197ac723", "kind": "record", "primary": true}
+      ],
+      "classification": ["already-recorded", "partially-recorded"],
+      "distinctions": [
+        {"name": "sense tag visible on the hit", "present": "PRIOR_\\d|POTENCY_\\d"}
+      ]
+    },
+    {
+      "id": "H1-sleeping-beauty",
+      "category": "researched-open",
+      "held_out": true,
+      "question": "Has Sleeping Beauty (self-locating evidence, halfer/thirder) been investigated?",
+      "candidate": ["brief", "--question", "Sleeping Beauty self-locating evidence"],
+      "baseline": {"search": ["Sleeping Beauty"]},
+      "refs": [
+        {"ref": "sleeping-beauty-1401.md", "kind": "note", "primary": true},
+        {"ref": "#1401", "kind": "issue", "primary": true}
+      ],
+      "distinctions": []
+    },
+    {
+      "id": "H2-personal-identity-fission",
+      "category": "researched-open",
+      "held_out": true,
+      "question": "Has personal identity under fission been investigated?",
+      "candidate": ["brief", "--question", "personal identity under fission"],
+      "baseline": {"search": ["fission personal identity"]},
+      "refs": [
+        {"ref": "personal-identity-fission-1397.md", "kind": "note", "primary": true},
+        {"ref": "#1397", "kind": "issue", "primary": true}
+      ],
+      "distinctions": []
+    }
+  ]
+}

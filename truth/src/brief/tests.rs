@@ -596,3 +596,117 @@ fn index_freshness_ordering_and_bounds() {
     assert!(report["hits"].as_array().unwrap().len() <= 3 * 4 * 3);
     std::fs::remove_dir_all(&root).unwrap();
 }
+
+/// The #1644 benchmark's retrieval failures, in miniature: a note dedicated
+/// to the question (by title) must outrank long notes that only touch it;
+/// a closed issue's successor is shown with its state ("Successor to #N"
+/// names a predecessor and is not); a note citing a result by its Lean
+/// theorem name is a note naming the target; and a note heading is
+/// matched as text of its own.
+#[test]
+fn benchmark_1644_dedicated_notes_successors_and_theorem_names() {
+    let root = fixture("benchmark-1644");
+    // A long note touching every query word in one paragraph, and a short
+    // note titled for the question whose body never repeats it.
+    write(
+        &root,
+        "docs/notes/a-long-survey.md",
+        "# A long survey of many topics\n\n## Assorted remarks\n\n\
+         Brute foundations, explanatory points and stopping rules all appear here.\n\n\
+         Brute foundations and explanatory stopping are mentioned again.\n",
+    );
+    write(
+        &root,
+        "docs/notes/stopping.md",
+        "# One standard for every explanatory stopping point (#746)\n\n\
+         The map applies the same tests to each stop.\n\n\
+         ## Results\n\n`Fixture.goal` consumes the open bridge; nothing here establishes it.\n",
+    );
+    write(
+        &root,
+        "docs/notes/weak-coverage.md",
+        "# What weak explanatory coverage actually adds\n\nIt adds no frame constraint.\n",
+    );
+    write(
+        &root,
+        "snapshot-1644.json",
+        &json!({"captured_at": "2026-11-15T11:27:00Z", "items": [
+            {"number": 746, "title": "Explanatory stopping points", "state": "OPEN",
+             "url": "https://github.com/o/r/issues/746", "body": "Compare termini."},
+            {"number": 562, "title": "Bearer regress", "state": "CLOSED",
+             "url": "https://github.com/o/r/issues/562",
+             "body": "Are brute foundations explanatory stopping points?",
+             "comments": [{"body": "## Retired\n\nSuperseded by https://github.com/o/r/issues/1555. Completed evidence stays here."}]},
+            {"number": 1555, "title": "Bearer follow-up", "state": "OPEN",
+             "url": "https://github.com/o/r/issues/1555",
+             "body": "Successor to #562 in the clean-up; brute foundations remain open."}
+        ]})
+        .to_string(),
+    );
+    let loaded = load(&root);
+    let issues = Issues::Snapshot(
+        retrieval::read_snapshot(root.join("snapshot-1644.json").to_str().unwrap(), None).unwrap(),
+    );
+    let brief = question(
+        &loaded,
+        &issues,
+        "brute foundations as explanatory stopping points",
+        4,
+    );
+    let ranked = brief["notes"]["ranked"].as_array().unwrap();
+    assert_eq!(ranked[0]["path"], "docs/notes/stopping.md", "{ranked:?}");
+    // The note's own issue is listed, and the retired issue shows where its
+    // scope went; the successor's "Successor to #562" is not read as a
+    // successor of its own.
+    let matches = brief["issues"]["matches"].as_array().unwrap();
+    let find = |number: u64| matches.iter().find(|issue| issue["number"] == number);
+    let own = find(746).expect("the note's own issue");
+    assert!(own["reasons"].to_string().contains("titled for"), "{own}");
+    let retired = find(562).expect("the retired issue");
+    assert_eq!(
+        retired["successors"],
+        json!([{"number": 1555, "kind": "issue", "state": "OPEN", "title": "Bearer follow-up"}])
+    );
+    assert!(find(1555).is_none_or(|issue| issue.get("successors").is_none()));
+    let text = run(&loaded, &issues, |inputs| {
+        super::format_brief(&brief, inputs.aliases, 6)
+    });
+    assert!(text.contains("scope handed to #1555 [OPEN]"), "{text}");
+    // A note citing the result's theorem by name is a note naming the goal.
+    let goal = run(&loaded, &issues, |inputs| {
+        super::statement_brief(inputs, GOAL, None).unwrap()
+    });
+    let sections = goal["notes"]["sections"].to_string();
+    assert!(
+        sections.contains("docs/notes/stopping.md#results"),
+        "{sections}"
+    );
+    assert!(sections.contains("Fixture.goal (results)"), "{sections}");
+    // A longer identifier containing the name is not a mention.
+    assert!(!super::names_lean("`Fixture.goalExtra`", "Fixture.goal"));
+    assert!(super::names_lean(
+        "`TruthCore.Results.Fixture.goal`",
+        "Fixture.goal"
+    ));
+    // The title is matched even though no body paragraph repeats it.
+    let report = check_novelty(&loaded, &missing(), "weak explanatory coverage adds");
+    assert!(
+        report["hits"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .any(|hit| hit["path"] == "docs/notes/weak-coverage.md"
+                && hit["coverage"] == json!([4, 4])),
+        "{report}"
+    );
+    assert_eq!(
+        retrieval::successor_numbers(
+            &serde_json::from_value(json!({
+                "number": 17, "body": "Successor to #16. Remaining scope continues in #18, #19."
+            }))
+            .unwrap()
+        ),
+        [18, 19]
+    );
+    std::fs::remove_dir_all(&root).unwrap();
+}

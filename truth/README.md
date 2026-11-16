@@ -732,7 +732,8 @@ result new. Both are read-only views over existing authorities; they add no
 status, judgment or record.
 
 - `brief TARGET` (a statement, or an argument or result read through its
-  conclusion): identity and revision; senses and definitions; **formal
+  conclusion; notes citing one of its result theorems by its last two name
+  components count as naming it): identity and revision; senses and definitions; **formal
   status** from the frontier only (closure, `established`, root reach, open
   leaves; a closure such as `proved` is not establishment); every argument
   concluding it with its results and unestablished premises (a verified
@@ -747,12 +748,13 @@ status, judgment or record.
   list of what is not recorded or unknown.
 - `brief --question TEXT`: the notes the `truth index` FTS5 projection ranks
   for any query word (by stem prefix) or identifier, each scored paragraph by
-  paragraph (coverage = query items found in one paragraph), with its best
+  paragraph and heading by heading (coverage = query items found in one
+  unit), a note whose title covers half the question ranked first, with its best
   paragraphs, recorded assessments, superseded/retired markers and recent
   first-parent git history (the PRs that changed it); the statements the best
   sections name; records by prose coverage; issue numbers the matched
   sections reference; and snapshot items ranked by evidence weight
-  (referenced from a matched section or a PR that changed a matched note,
+  (referenced from a matched section or a matched note's title, or a PR that changed a matched note,
   naming a matched note, naming a statement those notes name, lexical).
 - `novelty TEXT`: exact IDs/labels/paths in the text; corpus statements whose
   Lean declaration uses the text's identifiers (structural), and arguments
@@ -768,6 +770,12 @@ status, judgment or record.
   whose status is the frontier's, workflow history). `--statement ID` checks a
   statement's Lean vocabulary and connectives against everything except that
   statement. Containment is not equivalence: read the hits.
+
+A listed issue or PR that hands its scope on ("Superseded by #N", "the
+distinct successor #N", "Remaining scope continues in #N") shows `scope
+handed to #N [STATE]`. #1644 benchmarks both commands against the earlier
+lookup workflow (`scripts/retrieval_benchmark.py`,
+`docs/notes/retrieval-benchmark-1644.md`).
 
 Both take `--limit N` (entries per text section, default 6; JSON lists more,
 bounded per group) and `--frontier-json`/`--frontier-root` as `dossier`. Hits

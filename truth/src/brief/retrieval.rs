@@ -164,7 +164,11 @@ fn stem(word: &str) -> String {
     let lower = word.to_lowercase();
     let count = lower.chars().count();
     if count <= 6 {
-        lower
+        // A short plural matches its singular (`points` finds `point`).
+        match lower.strip_suffix('s') {
+            Some(singular) if count > 4 && !singular.ends_with('s') => singular.to_owned(),
+            _ => lower,
+        }
     } else {
         lower.chars().take((count - 3).max(5)).collect()
     }
@@ -788,6 +792,90 @@ pub fn issue_units(issue: &Map<String, Value>) -> Vec<(String, String)> {
         }
     }
     units
+}
+
+/// Phrases with which an item hands its remaining scope to another item
+/// ("Superseded by #N", "the distinct successor #N", "Remaining scope
+/// continues in #N"). "Successor to #N" names a predecessor and is skipped.
+static SUCCESSOR: LazyLock<Regex> = LazyLock::new(|| {
+    pattern(r"(?i)\b(?:superseded by|successors?\b|scope continues (?:in|there)|continued in)")
+});
+
+/// The items `issue` names as carrying its remaining scope, in
+/// first-occurrence order (#1644): workflow history, not a judgment that
+/// the successor settles anything.
+pub fn successor_numbers(issue: &Map<String, Value>) -> Vec<u64> {
+    let own = issue.get("number").and_then(Value::as_u64);
+    let mut out = Vec::new();
+    for (_, unit) in issue_units(issue) {
+        for found in SUCCESSOR.find_iter(&unit).flatten() {
+            let rest = &unit[found.end()..];
+            if rest.trim_start().to_lowercase().starts_with("to ") {
+                continue;
+            }
+            // The rest of the sentence: up to a sentence break or line end.
+            let end = rest
+                .char_indices()
+                .find(|(index, c)| {
+                    *c == '\n' || (*c == '.' && rest[index + 1..].starts_with([' ', '\n']))
+                })
+                .map_or(rest.len(), |(index, _)| index);
+            for number in issue_references(&rest[..end]) {
+                if Some(number) != own && !out.contains(&number) {
+                    out.push(number);
+                }
+            }
+        }
+    }
+    out
+}
+
+/// Adds `successors` (number, kind, state, title) to `header` when `issue`
+/// hands its scope to other items of `snapshot`; a successor missing from
+/// the snapshot has state `unknown`.
+pub fn attach_successors(header: &mut Value, issue: &Map<String, Value>, snapshot: &Snapshot) {
+    let successors: Vec<Value> = successor_numbers(issue)
+        .into_iter()
+        .map(|number| {
+            snapshot
+                .issues
+                .iter()
+                .find(|item| item.get("number").and_then(Value::as_u64) == Some(number))
+                .map_or_else(
+                    || serde_json::json!({"number": number, "state": "unknown"}),
+                    |item| {
+                        let full = issue_header(item);
+                        serde_json::json!({
+                            "number": number,
+                            "kind": full["kind"],
+                            "state": full["state"],
+                            "title": full["title"],
+                        })
+                    },
+                )
+        })
+        .collect();
+    if !successors.is_empty() {
+        header["successors"] = Value::Array(successors);
+    }
+}
+
+/// `; scope handed to #N [STATE]` for a header with successors, else empty.
+pub fn successor_text(header: &Value) -> String {
+    let Some(successors) = header["successors"].as_array() else {
+        return String::new();
+    };
+    let shown: Vec<String> = successors
+        .iter()
+        .map(|item| {
+            format!(
+                "#{} [{}]",
+                item["number"],
+                item["state"].as_str().unwrap_or("unknown")
+            )
+        })
+        .collect();
+    format!("; scope handed to {}", shown.join(", "))
 }
 
 /// An issue's compact identity for output.
