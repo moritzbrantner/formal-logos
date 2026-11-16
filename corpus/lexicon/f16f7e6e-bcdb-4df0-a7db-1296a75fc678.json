@@ -1,0 +1,8 @@
+{
+  "id": "f16f7e6e-bcdb-4df0-a7db-1296a75fc678",
+  "label": "composition (ordinary)",
+  "lemma": "composition",
+  "class": "ordinary",
+  "gloss": "Combining verified results, one result's conclusion serving as another's premise (docs/configuration-elimination-loop.md).",
+  "technical_separation": "Composition of results is a workflow operation. Composition of a thing from components, denied by simplicity, is the technical entry (ComponentOf, IsSimple)."
+}

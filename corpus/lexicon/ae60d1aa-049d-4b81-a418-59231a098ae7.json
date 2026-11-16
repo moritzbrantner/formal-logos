@@ -1,0 +1,14 @@
+{
+  "id": "ae60d1aa-049d-4b81-a418-59231a098ae7",
+  "label": "intellect (technical)",
+  "lemma": "intellect",
+  "class": "technical",
+  "definition_ids": [
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "f61bbc23-dd58-5bf5-95a5-f1ddc1e407c0"
+  ],
+  "disambiguation_ids": [
+    "c0fda0ee-3508-5101-94ba-043e3eb28b0e"
+  ],
+  "note": "Having intellect, intellectual cognition as distinct from sense (COGNITION_INTELLECT), and the intellective episode."
+}

@@ -1,0 +1,21 @@
+{
+  "id": "398b4444-152b-473b-a302-0e8331519a1f",
+  "label": "concretum (technical)",
+  "lemma": "concretum",
+  "class": "technical",
+  "forms": [
+    "concreta"
+  ],
+  "definition_ids": [
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "2b015a2c-4d31-5511-b391-41413edf45ac",
+    "4ea97730-c6b8-5205-8848-939d0dc68f76",
+    "a8fa0c36-adcb-5221-b61f-41189f09f357",
+    "ba85645e-b933-5a7f-a648-b527dea115fa"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "63162530-ff9f-539a-af19-3458e48e6a9e"
+  ],
+  "note": "A concrete individual (plural concreta), in the senses of the concrete entry."
+}

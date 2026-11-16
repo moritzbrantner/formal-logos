@@ -3,6 +3,9 @@
   "label": "pure act (technical)",
   "lemma": "pure act",
   "class": "technical",
+  "forms": [
+    "pure-act"
+  ],
   "definition_ids": [
     "a49e4cf1-ca4f-5519-9724-892af257cedb",
     "b5ac268c-7497-5780-a154-3f84c34ac709"

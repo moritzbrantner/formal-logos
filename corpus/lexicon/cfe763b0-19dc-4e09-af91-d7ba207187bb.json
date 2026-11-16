@@ -1,0 +1,21 @@
+{
+  "id": "cfe763b0-19dc-4e09-af91-d7ba207187bb",
+  "label": "power (technical)",
+  "lemma": "power",
+  "class": "technical",
+  "definition_ids": [
+    "00ab0133-e353-5a2e-a231-b24a5c85107a",
+    "4ada8322-c61c-567c-b615-d056bde1c2e9",
+    "5aef0b49-016a-5716-9bd9-423d957b28ab",
+    "6dea072c-97c4-5ee9-9958-a3da6a2a049c",
+    "7059cad2-e5b6-5003-8871-a85c8f1924f5",
+    "8ce4f4d6-a221-5db8-aef5-2f0babdfb416",
+    "febac82d-1ca3-5773-89ec-0401f1bac7a0"
+  ],
+  "disambiguation_ids": [
+    "1da63c28-4572-5787-82a0-51425c0f4b6a",
+    "4bd8469b-0101-5628-b94d-daa4264972d5",
+    "508617ab-cf24-5f3b-a387-64b3991359ec"
+  ],
+  "note": "Causal power as capacity, as modeled exercise, as original or as inductively grounded power (CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE); ability to be (POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED); governing power in a commission (GOVERNING_POWER_IN_A_COMMISSION)."
+}

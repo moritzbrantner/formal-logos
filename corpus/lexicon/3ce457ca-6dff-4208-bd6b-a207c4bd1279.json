@@ -1,0 +1,10 @@
+{
+  "id": "3ce457ca-6dff-4208-bd6b-a207c4bd1279",
+  "label": "simplicity (technical)",
+  "lemma": "simplicity",
+  "class": "technical",
+  "definition_ids": [
+    "85f7f569-ab4d-514b-aa2c-cf75171ad105"
+  ],
+  "note": "Being simple: without composition of any kind (IsSimple)."
+}

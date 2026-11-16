@@ -1,0 +1,14 @@
+{
+  "id": "7ccdfb74-2953-49f8-b63b-e96e7857750a",
+  "label": "infinity (technical)",
+  "lemma": "infinity",
+  "class": "technical",
+  "definition_ids": [
+    "1d8890c0-afe2-5cdb-a400-0bbd4b79053d",
+    "b4590519-63a3-5110-aa2d-3e5f1a02ac2b"
+  ],
+  "disambiguation_ids": [
+    "587c53cf-c2a8-51f6-b8c1-013e67756dc6"
+  ],
+  "note": "Noun of infinite: divine or quantitative infinity (INFINITE)."
+}

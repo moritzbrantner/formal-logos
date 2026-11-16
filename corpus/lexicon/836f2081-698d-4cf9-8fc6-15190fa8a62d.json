@@ -1,0 +1,10 @@
+{
+  "id": "836f2081-698d-4cf9-8fc6-15190fa8a62d",
+  "label": "composite (technical)",
+  "lemma": "composite",
+  "class": "technical",
+  "definition_ids": [
+    "98ac7aa1-54cb-553c-826b-2a69257f6cbe"
+  ],
+  "note": "Composed of components (ComponentOf: quantitative parts, matter and form, essence and esse, or another q.3 a.7 principle). IsSimple denies the primitive Composite."
+}

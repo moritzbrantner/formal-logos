@@ -1,0 +1,19 @@
+{
+  "id": "b93c8d71-e613-46d1-9d73-f9d0266df0eb",
+  "label": "existing (technical)",
+  "lemma": "existing",
+  "class": "technical",
+  "definition_ids": [
+    "5873c837-35ba-5ca2-91a8-07808c67e461",
+    "7ed3d53e-7b11-4239-8f02-81a841020f89",
+    "9347232c-7f95-5f24-85de-94d3d49f5027",
+    "9df718d1-8bfb-519b-b9f5-f58f6d2c256f",
+    "b3b4e279-e1cf-4e54-a999-80c5bb5a43cc",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "031a741a-57b4-5a20-b9f3-170876e69a02",
+    "620f1cde-0f67-5ecd-a96c-2851588725d5"
+  ],
+  "note": "Participle of exist, in the senses of the exist entry. The workflow sense 'already present in the corpus' is the ordinary entry."
+}

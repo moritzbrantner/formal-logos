@@ -1,0 +1,13 @@
+{
+  "id": "49c4af9a-ef22-4ab9-9287-ab39ab3502ab",
+  "label": "actualization (technical)",
+  "lemma": "actualization",
+  "class": "technical",
+  "forms": [
+    "actualizations"
+  ],
+  "definition_ids": [
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43"
+  ],
+  "note": "Reduction from potency to act, as in MOTION_1 (to move is to educe something from potency to act)."
+}

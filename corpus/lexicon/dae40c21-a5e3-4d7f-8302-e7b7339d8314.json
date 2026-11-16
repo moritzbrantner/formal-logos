@@ -1,0 +1,22 @@
+{
+  "id": "dae40c21-a5e3-4d7f-8302-e7b7339d8314",
+  "label": "actual (technical)",
+  "lemma": "actual",
+  "class": "technical",
+  "forms": [
+    "actually"
+  ],
+  "definition_ids": [
+    "115f23e3-2a19-5dcb-bc7f-96408004f110",
+    "9347232c-7f95-5f24-85de-94d3d49f5027",
+    "a5bda545-3e76-5240-808d-25f897a07be5",
+    "b3b4e279-e1cf-4e54-a999-80c5bb5a43cc",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f7833666-c764-5624-a766-708949d9feee",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
+  ],
+  "note": "Two families of senses: in act (having a perfection, ACT and IN_ACT) and, in the modal profiles, existing at the selected world (world-relative ExistsAt, ActualAt, EXISTS_2). A record fixes which one it uses by its sense link."
+}

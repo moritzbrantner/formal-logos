@@ -1,0 +1,14 @@
+{
+  "id": "cdf7cf04-109f-494c-89a7-eb473a84ca51",
+  "label": "intellectual (technical)",
+  "lemma": "intellectual",
+  "class": "technical",
+  "definition_ids": [
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "f61bbc23-dd58-5bf5-95a5-f1ddc1e407c0"
+  ],
+  "disambiguation_ids": [
+    "c0fda0ee-3508-5101-94ba-043e3eb28b0e"
+  ],
+  "note": "Of intellect, in the senses of the intellect entry."
+}

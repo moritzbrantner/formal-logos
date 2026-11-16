@@ -3,6 +3,9 @@
   "label": "per se (technical)",
   "lemma": "per se",
   "class": "technical",
+  "forms": [
+    "per-se"
+  ],
   "definition_ids": [
     "2282c0ee-9da9-5c8b-9f37-cb312ed4b676",
     "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740",

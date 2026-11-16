@@ -1,0 +1,17 @@
+{
+  "id": "2a9d6163-aa5c-4403-b77d-da5048203bd7",
+  "label": "efficient (technical)",
+  "lemma": "efficient",
+  "class": "technical",
+  "forms": [
+    "efficiently"
+  ],
+  "definition_ids": [
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "8934912c-7997-4af7-9520-ec94ff221043"
+  ],
+  "disambiguation_ids": [
+    "57f80020-fa6f-5b69-be58-b4cf95b7226f"
+  ],
+  "note": "Efficient causing (EfficientlyCausesIn) and efficient causing of esse (EfficientlyCausesEsse)."
+}

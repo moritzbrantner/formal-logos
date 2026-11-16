@@ -100,6 +100,31 @@ review: add such an entry only when the everyday reading is common and really
 separable. The function word `one` is an example. Do not add one merely to
 silence the rule for a word such as *necessary* or *being*.
 
+## Technical entries for load-bearing words (L2b)
+
+Load-bearing philosophical words get no ordinary gloss: their meaning comes
+from `DEF-…`/`DISAMB-…` senses. Their technical entries are authored, not
+bootstrapped, and follow these rules:
+
+- **Reuse existing senses.** An entry lists existing definitions and
+  disambiguations. It creates no new definition for a term that already has
+  one, and it does not merge disambiguations of different topics into one.
+- **Derived words share the base word's senses.** A noun, adjective or adverb
+  of a defined word (*truth* of *true*, *causal* of *cause*, *necessity* of
+  *necessary*) is its own lemma. It lists the same senses as the base entry,
+  and its `note` names the base.
+- **A `note` says which senses the entry lists and why.** The list explains
+  how the corpus uses the word. It does not claim to be exhaustive, and the
+  rule-2 link of each record still says which sense that record uses.
+- **An ordinary sibling only for a separable workflow sense.** Examples are
+  *existing* (already in the repository), *move* (a step in an argument) and
+  *composition* (of verified results). Technical inflections are explicit
+  forms of the technical entry (`moved`, `moves`, `moving`), so only the
+  ordinary lemma is exempt from rule 2.
+- **A word with no suitable definition stays untraced.** Examples are *nature*,
+  *matter*, *privation* and *becoming*. Such a word waits for a definition
+  under the existing definition rules; it gets no gloss as a stand-in.
+
 ## Ratchet
 
 `corpus/lexicon-allowlist.json` is generated. It grandfathers whole fields.

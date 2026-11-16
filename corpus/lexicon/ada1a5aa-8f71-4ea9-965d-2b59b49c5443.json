@@ -1,0 +1,22 @@
+{
+  "id": "ada1a5aa-8f71-4ea9-965d-2b59b49c5443",
+  "label": "exist (technical)",
+  "lemma": "exist",
+  "class": "technical",
+  "forms": [
+    "existed"
+  ],
+  "definition_ids": [
+    "5873c837-35ba-5ca2-91a8-07808c67e461",
+    "7ed3d53e-7b11-4239-8f02-81a841020f89",
+    "9347232c-7f95-5f24-85de-94d3d49f5027",
+    "9df718d1-8bfb-519b-b9f5-f58f6d2c256f",
+    "b3b4e279-e1cf-4e54-a999-80c5bb5a43cc",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "031a741a-57b4-5a20-b9f3-170876e69a02",
+    "620f1cde-0f67-5ecd-a96c-2851588725d5"
+  ],
+  "note": "Verb of exists/existence: domain or world-relative existential quantification (EXISTS), quantificational, descriptive or world-relative individual existence (EXISTENCE), and the world-relative ExistsAt of the Ontic profile."
+}

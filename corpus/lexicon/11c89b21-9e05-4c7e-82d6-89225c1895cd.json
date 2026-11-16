@@ -1,0 +1,17 @@
+{
+  "id": "11c89b21-9e05-4c7e-82d6-89225c1895cd",
+  "label": "mover (technical)",
+  "lemma": "mover",
+  "class": "technical",
+  "definition_ids": [
+    "94b121aa-dea5-5740-9287-91fb8b4fcfd4",
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "ab0d1d6b-b777-51cc-ae11-c033081830e8",
+    "b4c14a65-2a0c-5d35-a43d-bf3018f11401"
+  ],
+  "disambiguation_ids": [
+    "9a798385-cf7b-54a4-833d-da5f27ce8a90",
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ],
+  "note": "One that moves, in the MOTION senses; a per accidens mover; the primary (proximate) mover."
+}

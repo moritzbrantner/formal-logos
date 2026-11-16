@@ -1,0 +1,14 @@
+{
+  "id": "79d4c8c0-7ef9-4cac-9253-5f1097d1ef3f",
+  "label": "reception (technical)",
+  "lemma": "reception",
+  "class": "technical",
+  "definition_ids": [
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "cf4875cb-6baf-5bf5-8590-84a21777c66c"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ],
+  "note": "Reception of esse (EsseReceivedIn) and reception of a perfection (ReceivedIn)."
+}

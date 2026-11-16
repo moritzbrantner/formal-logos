@@ -1,0 +1,22 @@
+{
+  "id": "1eed6f97-8703-4891-a169-821ea738fc73",
+  "label": "move (technical)",
+  "lemma": "move",
+  "class": "technical",
+  "forms": [
+    "moved",
+    "moves",
+    "moving"
+  ],
+  "definition_ids": [
+    "7b016011-d896-532f-b6fb-2bd7c2a54bbb",
+    "94b121aa-dea5-5740-9287-91fb8b4fcfd4",
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "ab0d1d6b-b777-51cc-ae11-c033081830e8"
+  ],
+  "disambiguation_ids": [
+    "9a798385-cf7b-54a4-833d-da5f27ce8a90",
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ],
+  "note": "MOTION: reduction from potency to act (MOTION_1) or Aristotle's physical change (MOTION_2); being moved by another or per accidens (MOVED_BY_SOMETHING_BY_ANOTHER_PER). The noun 'move' (a step in an argument) is the ordinary entry."
+}
