@@ -47,7 +47,7 @@ def index_by_id(records: list[tuple[Path, dict[str, Any]]], kind: str) -> dict[s
 # The only axioms a Comparator config may permit, and only when the Solution
 # transitively imports Mathlib (AGENTS.md invariant 14, docs/axiom-policy.md).
 # Results that do not use Mathlib stay zero-axiom. `truth check` enforces the
-# same rule on the corpus; scaffold_result.py applies it to a draft.
+# same rule on the corpus; scaffold_result.py and verify-result.sh apply it.
 MATHLIB_PERMITTED_AXIOMS = ("propext", "Classical.choice", "Quot.sound")
 LEAN_IMPORT_RE = re.compile(r"^(?:public\s+)?import\s+(\S+)", re.MULTILINE)
 

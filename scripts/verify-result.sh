@@ -15,7 +15,7 @@ WORK="${TRUTH_CORE_VERIFIER_HOME:-$HOME/.cache/truth-core-verifier}"
 python3 - "$ROOT" "$CONFIG" <<'PY'
 import json, sys
 sys.path.insert(0, f"{sys.argv[1]}/scripts")
-import corpus
+import corpus_records as corpus
 error = corpus.permitted_axioms_error(json.load(open(sys.argv[2], encoding="utf-8")))
 if error:
     sys.exit(f"{sys.argv[2]}: {error}")

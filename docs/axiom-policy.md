@@ -18,7 +18,7 @@ No other axiom is ever permitted: no `sorryAx`, no `Lean.ofReduceBool` or
 can be proved without the three keeps `[]`, even if it imports Mathlib.
 
 `target/release/truth check` enforces this for every result record,
-`scripts/scaffold_result.py` applies the same rule to a draft
+`scripts/scaffold_result.py` and `scripts/verify-result.sh` apply the same rule
 (`permitted_axioms_error` in `scripts/corpus_records.py`, tested by
 `scripts/test_axiom_policy.py`), and `scripts/verify-result.sh` refuses a
 config that breaks it before Comparator runs. Comparator then rejects any
