@@ -140,8 +140,8 @@ membership is used because some extensional convenience lemmas import axioms.
 The shared conventions resolved to sourceRevision
 `c104800c7aaeaea12d56f9093e71bdef6a2ce6fa`; no policy text is vendored.
 
-Run the repository's source checks, `lake build`, `corpus.py check`,
-`corpus.py bind-check`, and `scripts/verify-result.sh` for each of
+Run the repository's source checks, `lake build`, `truth check`,
+`truth bind-check`, and `scripts/verify-result.sh` for each of
 `THIRD-MAN-REGRESS`, `LIKENESS-REGRESS`, `THIRD-MAN-SENSITIVITY` and
 `THIRD-MAN-NOT-UNIQUE`. The self-sweep checks the bounded source attributions,
 quantifiers, ordinary/essential predication, particulars-only/participant-wide

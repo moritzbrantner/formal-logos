@@ -1,7 +1,8 @@
-import { execFileSync } from "node:child_process";
+import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 
 import { legacyUuid } from "@/lib/corpus-ids";
+import { repositoryRoot, truthJson } from "@/lib/truth-cli";
 
 const statementIds = (...legacyIds: string[]) => legacyIds.map((id) => legacyUuid("statement", id));
 
@@ -40,27 +41,32 @@ export function pilotGraphHref(statementId: string) {
 export type PilotScenario = { id: string; established: string[]; verifiedResults: number };
 let cachedScenarios: PilotScenario[] | undefined;
 
-/** Reuse Python's authoritative computation with explicit verifier-record subsets.
+type PilotFixture = { statement_ids: string[]; argument_ids: string[]; cases: { id: string; result_ids: string[] }[] };
+
+/** Records of `kind` (a corpus directory) whose id is listed, in file order. */
+function selected(kind: string, ids: string[]): unknown[] {
+  const directory = path.join(repositoryRoot, "corpus", kind);
+  return readdirSync(directory).filter((file) => file.endsWith(".json")).sort()
+    .map((file): unknown => JSON.parse(readFileSync(path.join(directory, file), "utf8")))
+    .filter((record) => typeof record === "object" && record !== null && "id" in record &&
+      typeof record.id === "string" && ids.includes(record.id));
+}
+
+/** Reuse the CLI's authoritative frontier (`truth frontier --fixture`, #954 B12) with explicit verifier-record subsets.
  * Removing a record simulates unavailable grounding; it does not undo a theorem. */
 export function getPilotScenarios(): PilotScenario[] {
   if (!cachedScenarios) {
-    const raw: unknown = JSON.parse(execFileSync("python3", ["-c", `
-import json, sys
-from pathlib import Path
-sys.path.insert(0, 'scripts')
-from corpus import load_dir, frontier_report
-fixture = json.loads(Path('scripts/testdata/objective-truth-pilot.json').read_text())
-def selected(kind, ids):
-    return [x for _, x in load_dir(kind) if x['id'] in ids]
-statements = selected('statements', fixture['statement_ids'])
-arguments = selected('arguments', fixture['argument_ids'])
-out = []
-for case in fixture['cases']:
-    results = selected('results', case['result_ids'])
-    report = frontier_report(statements, arguments, results, [], root=fixture['statement_ids'][0])
-    out.append(dict(id=case['id'], established=report['established_statements'], verifiedResults=len(results)))
-print(json.dumps(out))
-`], { cwd: path.resolve(process.cwd(), "../.."), encoding: "utf8" }));
+    const fixture = JSON.parse(readFileSync(path.join(repositoryRoot, "scripts/testdata/objective-truth-pilot.json"), "utf8")) as PilotFixture;
+    const statements = selected("statements", fixture.statement_ids);
+    const argumentRecords = selected("arguments", fixture.argument_ids);
+    const raw: unknown = fixture.cases.map((pilotCase) => {
+      const results = selected("results", pilotCase.result_ids);
+      const report = truthJson(
+        ["frontier", "--fixture", "-", "--frontier-root", fixture.statement_ids[0]],
+        JSON.stringify({ statements, arguments: argumentRecords, results }),
+      ) as { established_statements: unknown };
+      return { id: pilotCase.id, established: report.established_statements, verifiedResults: results.length };
+    });
     if (!Array.isArray(raw)) {
       throw new Error("Invalid pilot scenario report");
     }

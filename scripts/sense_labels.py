@@ -81,14 +81,3 @@ def record_sense_labels(
     return {term: sorted(values) for term, values in sorted(labels.items())}
 
 
-def format_sense_labels(labels: dict[str, list[str]]) -> str:
-    """`PRIOR_1, CAUSE_2` (a mixed term shows each of its senses)."""
-    return ", ".join(label for values in labels.values() for label in values)
-
-
-def sense_labels_from_data(data: dict[str, list[dict[str, Any]]]):
-    """A `record -> {term: [labels]}` function over loaded corpus lists."""
-    statements = {entry["id"]: entry for entry in data.get("statements", [])}
-    arguments = {entry["id"]: entry for entry in data.get("arguments", [])}
-    by_definition = senses_by_definition(data.get("disambiguations", []))
-    return lambda record: record_sense_labels(record, statements, by_definition, arguments)

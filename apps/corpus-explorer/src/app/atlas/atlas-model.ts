@@ -95,7 +95,7 @@ export function buildAtlasModel(
     routes: report.routes.routes.map((route) => ({
       ...route,
       label: argumentsById[route.argument_id] ?? route.argument_id,
-      // Route leaf depths come from corpus.py frontier (#987), not from the items.
+      // Route leaf depths come from truth frontier (#987), not from the items.
       bare: route.depth_counts.bare,
       supported: route.depth_counts.supported,
       stated: route.depth_counts.stated,

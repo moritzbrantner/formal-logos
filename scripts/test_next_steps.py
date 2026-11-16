@@ -4,7 +4,7 @@ import unittest
 from unittest.mock import patch
 
 import corpus
-from next_steps import format_next_steps, validate_case_split, validate_settlement_actions
+from next_steps import validate_case_split, validate_settlement_actions
 
 
 def statement(sid, **kwargs):
@@ -40,28 +40,6 @@ class NextStepsTest(unittest.TestCase):
         self.assertFalse(rival["refuted"])
         self.assertEqual(rival["refutations"][0]["unestablished_premise_statement_ids"], ["A"])
 
-    def test_research_progress_precedes_expanded_route_cost_in_cli(self):
-        view = self.report()["next_steps"]
-        self.assertEqual(view["progress"], {
-            "root_reaching_established_count": 0,
-            "unestablished_premise_count": 2,
-            "with_verified_alternative_count": 0,
-            "verified_alternative_bundle_count": 0,
-        })
-        rendered = format_next_steps(view)
-        self.assertLess(rendered.index("Foundational progress:"), rendered.index("Expanded routes (cost diagnostic"))
-
-    def test_cli_inspects_support_bundles_before_costs(self):
-        statements = [statement(sid) for sid in ["ROOT", "A", "X", "Y"]]
-        arguments = [argument("ROOT-PROOF", ["A"], "ROOT"), argument("A-PROOF", ["X", "Y"], "A")]
-        results = [{"id": aid + "-RESULT", "argument_id": aid} for aid in ["ROOT-PROOF", "A-PROOF"]]
-        view = corpus.frontier_report(statements, arguments, results, [], root="ROOT", _include_next_steps=True)["next_steps"]
-        text = format_next_steps(view)
-        self.assertIn("A: direct assumption available", text)
-        self.assertIn("premises: X, Y", text)
-        self.assertIn("arguments: A-PROOF", text)
-        self.assertIn("verified results: A-PROOF-RESULT", text)
-        self.assertLess(text.index("premises: X, Y"), text.index("Expanded routes (cost diagnostic"))
 
     def test_shared_failure_does_not_certify_joint_settlement(self):
         statements = [statement(sid) for sid in ["ROOT", "A", "B", "C"]]
@@ -124,15 +102,6 @@ class NextStepsTest(unittest.TestCase):
         self.assertFalse(leaf["established"])
         self.assertTrue(leaf["floor"]["owner_decision_required"])
 
-    def test_cli_is_a_projection_of_frontier_only(self):
-        import argparse, contextlib, io
-        report = self.report()
-        output = io.StringIO()
-        with patch.object(corpus, "current_frontier", return_value=report) as current:
-            with contextlib.redirect_stdout(output):
-                self.assertEqual(corpus.command_next_steps(argparse.Namespace(root="ROOT", json=True)), 0)
-        current.assert_called_once_with("ROOT", False)
-        self.assertEqual(json.loads(output.getvalue()), report["next_steps"])
 
     def test_partition_annotation_does_not_establish_target_or_defeat_cases(self):
         statements = [statement(sid) for sid in ["ROOT", "A", "B", "EM", "COVER"]]

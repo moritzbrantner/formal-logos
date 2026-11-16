@@ -3,7 +3,7 @@
 ## Design and migration scope
 
 Statement identity remains in `corpus/statements`; definitions and disambiguations
-remain semantic records. `BindTypes.lean` and `corpus.py bind-check` own theorem
+remain semantic records. `BindTypes.lean` and `truth bind-check` own theorem
 binding, `UnusedPremises.lean` owns conservative proof-term usage, and the existing
 result/Comparator/NanoDa pipeline owns certification. This inspector adds a derived
 view of elaborated expressions, without changing any of those authorities.

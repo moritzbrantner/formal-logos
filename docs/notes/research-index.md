@@ -8,7 +8,7 @@ target/release/truth related STMT-Q11-GOD-SUPPOSITUM-IS-NATURE --limit 10
 
 It ranks the loaded corpus in memory and needs no index; it performs no Lean
 preparation or verification. Add `--json` for complete machine-readable
-evidence. (`python3 scripts/corpus.py related` gives the same ranking from
+evidence. (`target/release/truth related` gives the same ranking from
 Python's SQLite projection until #954 R2.)
 
 `related` returns propositions with explicit reasons and corpus paths. It ranks
@@ -56,16 +56,8 @@ reuses a fresh index and otherwise rebuilds it first; `build` rebuilds
 unconditionally. Output is JSON (indented; compact with `--json`). Errors exit
 1 and usage errors 2.
 
-The Python implementation, `scripts/research_index.py` (same subcommands plus
-`related`, which `truth related` replaces), stays until #954 R2. It writes
-`.cache/research-index.sqlite`, and its query commands reject a stale index
-instead of rebuilding. The two databases have the same tables and rows; only
-the digest differs. `scripts/truth_parity/index.py` compares every table row for
-row, and every query's JSON, on the real corpus and on fixtures. Both sides run
-the same FTS5 `bm25` over rows inserted in the same order, so search results
-match exactly, ties included. Rust additionally resolves a legacy id or label
-(optionally `kind:`-prefixed) in `show`, `--case`, `--premise`, `--left` and
-`--right`; Python accepts only indexed IDs.
+The Python implementation, `scripts/research_index.py`, was retired in #954 R2;
+`truth/tests/golden/index/` freezes what its parity test compared on fixtures.
 
 Search treats input as literal words joined by AND and returns corpus paths.
 It also searches the research notes (next section): up to `--limit` records
@@ -93,7 +85,7 @@ For actual certification, use the existing gates:
 
 ```bash
 target/release/truth configurations --registered --case CONFIG-MEGARIAN-CAPACITY-MOTION
-python3 scripts/corpus.py configurations --case CONFIG-MEGARIAN-CAPACITY-MOTION
+target/release/truth configurations --case CONFIG-MEGARIAN-CAPACITY-MOTION
 python3 scripts/corpus.py configuration-report --help
 ```
 
@@ -103,9 +95,8 @@ counts. Publication is atomic and a failed rebuild preserves the old database
 (the query then fails with exit 1). The database is disposable and ignored by
 Git.
 
-Validation: `cargo test -p truth -- index notes` and `python3 scripts/verify_truth_cli.py
-target/debug/truth TruthIndexParity` (Python's own tests:
-`python3 -m unittest discover -s scripts -p test_research_index.py`). Tests
+Validation: `cargo test -p truth -- index notes` and the golden replay
+`cargo test -p truth --test golden index`. Tests
 cover namespaced identity, inverse references, exact duplicate bundles, stale
 refresh, profile boundaries, uncertified labels, failed rebuild preservation
 and corrupt-projection detection. No Lean declaration or proof input is modified by this tooling.
@@ -221,7 +212,7 @@ installed. Discovery is not run on every commit or every diagnostic request.
 
 For a more selective **cross-argument** investigation, `target/release/truth
 bridge-experiments <RESULT-ID> --profile-module <LEAN-MODULE>` (or the Python
-`corpus.py bridge-experiments`) reads existing
+`truth bridge-experiments`) reads existing
 attempt blockers and exact direct Solution imports, preserving complete
 argument premise bundles in `--json`. It requires both result conclusions to
 be an explicit focus of the same attempt, excluding broad survey citations

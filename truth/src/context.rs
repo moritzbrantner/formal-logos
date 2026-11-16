@@ -1924,7 +1924,7 @@ pub fn format_context(pack: &ContextPack, limit: i64) -> String {
         .collect();
     lines.push(format!("  {}", joined_or(&terms, "none")));
     lines.push(
-        "\nNext: corpus.py dossier <open premise>; corpus.py related <conclusion>; scripts/verify-result.sh <result> after lake build."
+        "\nNext: truth dossier <open premise>; truth related <conclusion>; scripts/verify-result.sh <result> after lake build."
             .into(),
     );
     lines.join("\n")

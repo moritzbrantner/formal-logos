@@ -20,7 +20,7 @@ flock /tmp/moenarch/truth-core-heavy.lock python3 scripts/worker_env.py -- \
 
 # 2. Targets and ranking (Rust, under a second).
 cargo build --locked -p truth
-target/debug/truth thickness --queue --json > /tmp/queue.json   # or: python3 scripts/corpus.py thickness --queue --json
+target/debug/truth thickness --queue --json > /tmp/queue.json
 target/debug/truth --json bridges --constants /tmp/constants.json \
   --queue-file /tmp/queue.json --targets 30 --top 3 > /tmp/bridges.json
 target/debug/truth bridges --constants /tmp/constants.json --target STMT-EXISTING-IN-ACT-AT

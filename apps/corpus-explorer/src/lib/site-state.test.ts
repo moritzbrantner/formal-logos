@@ -9,7 +9,7 @@ describe("state of the case (#200)", () => {
   const corpus = getCorpus();
   const report = getFrontierReport();
 
-  test("every statement and frontier item has a state from corpus.py", () => {
+  test("every statement and frontier item has a state from truth frontier", () => {
     for (const item of report.items) {
       expect(statementState(report, item.statement_id).kind).toBe("open");
     }
@@ -20,7 +20,7 @@ describe("state of the case (#200)", () => {
     expect(statementState(report, legacyUuid("statement", "STMT-CATHOLICISM-TRUE"))).toMatchObject({ kind: "closed", established: false });
   });
 
-  test("transcriptions are the results corpus.py lists as transcriptions", () => {
+  test("transcriptions are the results truth frontier lists as transcriptions", () => {
     const transcriptions = corpus.results.filter((result) => resultKind(report, result.id).kind === "transcription");
     expect(transcriptions.length).toBe(Object.keys(report.transcription_results).length);
     // Declared in the record (#391), or found by the single-application and assembly heuristics.

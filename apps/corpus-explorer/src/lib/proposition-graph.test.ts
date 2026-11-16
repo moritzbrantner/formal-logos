@@ -16,7 +16,7 @@ describe("proposition graph status", () => {
   const graph = fixtureGraph(fixture);
   const byId = new Map(graph.statements.map((entry) => [entry.id, entry]));
 
-  test("derives each status by the corpus.py frontier rules", () => {
+  test("derives each status by the truth frontier rules", () => {
     expect(byId.get("C")?.status).toBe("proved");
     expect(byId.get("ROOT")?.status).toBe("proved");
     expect(byId.get("TC")?.status).toBe("transcription");
@@ -38,7 +38,7 @@ describe("proposition graph status", () => {
     expect(byId.get("P1")?.transitiveDependentArguments).toBe(2);
   });
 
-  test("classifies open premises as bare, supported or stated, as corpus.py frontier does", () => {
+  test("classifies open premises as bare, supported or stated, as truth frontier does", () => {
     const depths = Object.fromEntries(
       graph.statements.filter((entry) => entry.frontier).map((entry) => [entry.id, entry.frontierDepth]),
     );
@@ -123,7 +123,7 @@ describe("rule (d): transcription from closed premises", () => {
     transcriptionResultIds: shared.transcription_result_ids,
   };
 
-  test("matches the corpus.py frontier on the shared parity fixture", () => {
+  test("matches the truth frontier on the shared parity fixture", () => {
     for (const reversed of [false, true]) {
       const order = <T,>(items: T[]) => (reversed ? [...items].reverse() : items);
       const graph = fixtureGraph({

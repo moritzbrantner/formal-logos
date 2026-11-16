@@ -8,7 +8,64 @@ from pathlib import Path
 import corpus
 from truth_parity import golden
 from truth_parity.common import U, migrate, humanize, migrated_revision, ParityCase
-from truth_parity.thickness import thickness_fixture
+
+
+def thickness_fixture(root, convert=True):
+    """A small corpus covering AND premises, a root_route, a strength
+    registration, a counted refutation, a heuristic (Lean-text) and a declared
+    transcription, source depths, attempts and a definition-linked candidate."""
+    def write(kind, record):
+        directory = root / "corpus" / kind
+        directory.mkdir(parents=True, exist_ok=True)
+        (directory / f"{record['id']}.json").write_text(json.dumps(record))
+
+    for statement_id in ["ROOT", "A", "B", "C", "D", "E", "W", "S", "R", "X", "U"]:
+        definitions = ["DEF-T"] if statement_id in {"C", "U"} else []
+        write("statements", {"id": statement_id, "paraphrase": statement_id,
+                             "definition_ids": definitions,
+                             **({"lean_declaration": f"Fixture.{statement_id}"} if statement_id == "A" else {})})
+    for argument_id, premises, conclusion in [
+        ("ARG-ROOT", ["A", "B"], "ROOT"), ("ARG-ROOT-UNROUTED", ["E"], "ROOT"),
+        ("ARG-A", ["C"], "A"), ("ARG-A-T", ["D"], "A"), ("ARG-B", ["W"], "B"),
+        ("ARG-B-H", ["A"], "B"), ("ARG-STRENGTH", ["S"], "W"), ("ARG-REFUTE-R", [], "X"),
+    ]:
+        write("arguments", {"id": argument_id, "premise_statement_ids": premises,
+                            "conclusion_statement_id": conclusion, "inference_ids": ["INF"],
+                            "meaning": argument_id})
+    (root / "Fixture").mkdir()
+    (root / "Fixture" / "Solution.lean").write_text(
+        "theorem b_from_a (A B : Prop) (h : A → B) (a : A) : B := by\n  exact h a\n"
+    )
+    for result_id, argument_id, extra in [
+        ("RES-ROOT", "ARG-ROOT", {}), ("RES-ROOT-UNROUTED", "ARG-ROOT-UNROUTED", {}),
+        ("RES-A", "ARG-A", {}), ("RES-A-T", "ARG-A-T", {"transcription": "assembly"}),
+        ("RES-B-H", "ARG-B-H", {"theorem": "Fixture.b_from_a"}),
+        ("RES-STRENGTH", "ARG-STRENGTH", {}), ("RES-REFUTE", "ARG-REFUTE-R", {}),
+    ]:
+        write("results", {"id": result_id, "argument_id": argument_id, "challenge_module": "Fixture.Challenge",
+                          "solution_module": "Fixture.Solution", "theorem": "Fixture.none",
+                          "comparator_config": "c.json", "status": "verified", **extra})
+    for relation_id, subject_kind, subject, predicate, obj, extra in [
+        ("REL-ROUTE", "argument", "ARG-ROOT", "root_route", "ROOT", {}),
+        ("REL-STRENGTH", "statement", "S", "strengthens", "W", {"verification_result_id": "RES-STRENGTH"}),
+        ("REL-ALT", "statement", "R", "alternative_to", "C", {}),
+        ("REL-REFUTE", "argument", "ARG-REFUTE-R", "refutes", "R", {}),
+        ("REL-SUPPORT", "claim", "CLAIM-B", "supports", "B", {}),
+    ]:
+        write("relations", {"id": relation_id, "subject_kind": subject_kind, "subject_id": subject,
+                            "predicate": predicate, "object_kind": "statement", "object_id": obj, **extra})
+    for claim_id, statement_id, extra in [
+        ("CLAIM-D", "D", {}), ("CLAIM-E", "E", {"witness": "bibliographic"}), ("CLAIM-U", "U", {}),
+    ]:
+        write("claims", {"id": claim_id, "statement_id": statement_id, "source_id": "SRC", "locator": "1",
+                         "interpretation": "i", "status": "accepted", **extra})
+    write("definitions", {"id": "DEF-T", "term": "t", "definition": "t", "basis": "stipulative",
+                          "claim_ids": ["CLAIM-U"]})
+    for attempt_id, outcome, statements in [("ATT-2", "inconclusive", ["W"]), ("ATT-1", "rejected", ["W"])]:
+        write("attempts", {"id": attempt_id, "outcome": outcome, "statement_ids": statements})
+    if convert:
+        migrate(root)
+
 
 
 def frontier_fixture(root):

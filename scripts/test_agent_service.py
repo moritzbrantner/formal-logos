@@ -21,11 +21,15 @@ STATEMENT = {"id": "a3a3b508-17ab-41b5-98c5-633a133878a8", "legacy_id": "STMT-FI
 
 
 def make_workspace(root: Path) -> None:
-    """A git checkout whose corpus.py echoes its arguments as JSON."""
-    (root / "scripts").mkdir()
-    (root / "scripts" / "corpus.py").write_text(
-        "import json, sys\nprint(json.dumps({'argv': sys.argv[1:]}))\n", encoding="utf-8"
-    )
+    """A git checkout with a `truth` crate marker and a stand-in `truth`
+    binary (`bin/truth`, named by `TRUTH_CLI`) that echoes its arguments."""
+    (root / "truth").mkdir()
+    (root / "truth" / "Cargo.toml").write_text("[package]\nname = \"truth\"\n", encoding="utf-8")
+    (root / "bin").mkdir()
+    fake = root / "bin" / "truth"
+    fake.write_text(f"#!{sys.executable}\nimport json, sys\nprint(json.dumps({{'argv': sys.argv[1:]}}))\n",
+                    encoding="utf-8")
+    fake.chmod(0o755)
     (root / "corpus" / "statements").mkdir(parents=True)
     (root / "corpus" / "statements" / "fixture.json").write_text(json.dumps(STATEMENT), encoding="utf-8")
     for args in (["init", "-q"], ["add", "."], ["-c", "user.name=t", "-c", "user.email=t@t", "commit", "-qm", "x"]):
@@ -38,6 +42,9 @@ class AgentServiceTest(unittest.TestCase):
         self.addCleanup(tmp.cleanup)
         self.workspace = Path(tmp.name).resolve()
         make_workspace(self.workspace)
+        environment = mock.patch.dict(agent_service.os.environ, {"TRUTH_CLI": str(self.workspace / "bin" / "truth")})
+        environment.start()
+        self.addCleanup(environment.stop)
         self.server, self.service = agent_service.serve(0, self.workspace, ["false"], log=False)
         threading.Thread(target=self.server.serve_forever, daemon=True).start()
         self.addCleanup(self.server.server_close)
@@ -161,9 +168,11 @@ class AgentServiceTest(unittest.TestCase):
 
     def test_corpus_commands_wrap_cli(self) -> None:
         _, body = self.call("/corpus/dossier?id=STMT-FIXTURE")
-        self.assertEqual(body["result"]["data"]["argv"], ["dossier", "--json", "STMT-FIXTURE"])
-        _, body = self.call("/corpus/frontier?reaching_root=1")
-        self.assertEqual(body["result"]["data"]["argv"], ["frontier", "--json", "--reaching-root"])
+        root = ["--root", str(self.workspace)]
+        self.assertEqual(body["result"]["data"]["argv"], [*root, "dossier", "--json", "STMT-FIXTURE"])
+        _, body = self.call("/corpus/frontier?reaching_root=1&root=STMT-FIXTURE")
+        self.assertEqual(body["result"]["data"]["argv"],
+                         [*root, "frontier", "--json", "--frontier-root", "STMT-FIXTURE", "--reaching-root"])
         _, body = self.call("/corpus/check", {})
         self.assertEqual(body["result"]["returncode"], 0)
 

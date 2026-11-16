@@ -10,9 +10,9 @@ target/release/truth lean-reuse --review             # review missing graph link
 target/release/truth lean-reuse --review --json      # every reuse/import classification
 ```
 
-These are the Rust ports of `python3 scripts/corpus.py context` and
-`corpus.py lean-reuse`, which stay until their retirement (#954); the Python
-`--root STATEMENT` is `--frontier-root` in Rust.
+These are the Rust ports of the retired `corpus.py context` and
+`corpus.py lean-reuse` (#954 R2); the Python `--root STATEMENT` is
+`--frontier-root` in Rust.
 
 One call returns a bounded, derived view of one existing argument. It is the
 first step when a brief names an existing argument or result as its target or
@@ -39,7 +39,7 @@ reuse. Open dossiers only for the premises it reports open.
 Nothing here is stored or maintained by hand, and no new proposition format is
 added. The corpus JSON records remain authoritative for interpretation, sources
 and result status; `frontier_report` remains authoritative for closure. The pack
-does no validation (run `corpus.py check`) and no verification
+does no validation (run `truth check`) and no verification
 (`scripts/verify-result.sh`), and never upgrades `solution-present`.
 
 When `truth bind-check` has run Lean on the current Lean inputs, `truth

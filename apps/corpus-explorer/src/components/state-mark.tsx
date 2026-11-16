@@ -11,7 +11,7 @@ function Mark({ tone, children, title }: { tone: Tone; children: React.ReactNode
   );
 }
 
-/** Frontier status of a statement, as `corpus.py frontier` reports it. */
+/** Frontier status of a statement, as `truth frontier` reports it. */
 export function StatementStateMark({ state }: { state: StatementState }) {
   if (state.kind === "closed") {
     const tone: Tone =

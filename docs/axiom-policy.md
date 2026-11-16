@@ -17,7 +17,7 @@ No other axiom is ever permitted: no `sorryAx`, no `Lean.ofReduceBool` or
 `Lean.trustCompiler`, and no axiom declared in this repository. A result that
 can be proved without the three keeps `[]`, even if it imports Mathlib.
 
-`python3 scripts/corpus.py check` enforces this for every result record
+`target/release/truth check` enforces this for every result record
 (`permitted_axioms_error` in `scripts/corpus.py`, tested by
 `scripts/test_axiom_policy.py`), and `scripts/verify-result.sh` refuses a
 config that breaks it before Comparator runs. Comparator then rejects any

@@ -139,7 +139,7 @@ supported by `IEP-REL-LANG-2A-AYER-GOD` and `AYER-LTL-PELICAN-I-21-CONDEMNED`,
 with their gaps recorded. `AYER-1946-EXCLUSION-FAILS` refutes it from no
 premises.
 
-- **Status:** the refutation counts (`corpus.py frontier --json` shows it as
+- **Status:** the refutation counts (`truth frontier --json` shows it as
   `counted: true`). **Established.**
 - **With closure under negation:** if meaningfulness is closed under negation
   for *every* sentence, then no sentence fails to be meaningful

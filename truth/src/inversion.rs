@@ -581,7 +581,7 @@ pub fn plan_contrapositive(
         format!("python3 scripts/argument_batch.py records {spec_path} --write --fix"),
         "scripts/root-imports.sh --write".to_owned(),
         format!("python3 scripts/worker_env.py -- lake build {solution_module}"),
-        "python3 scripts/corpus.py bind-check --result <new result id>".to_owned(),
+        "target/release/truth bind-check --result <new result id>".to_owned(),
         "scripts/verify-result.sh <new result id>".to_owned(),
     ];
     Ok(Plan {

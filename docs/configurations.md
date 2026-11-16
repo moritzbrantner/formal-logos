@@ -23,7 +23,7 @@ The last command's statement ID must occur in that case's explicit applications;
 there is no matching by text or automatic replacement by a similar statement.
 `--seed STMT-…` selects cases by their exact seed. Selection IDs and output
 ordering are stable. Failure returns nonzero and emits no successful JSON report.
-`truth configurations` ports `corpus.py configurations` (#954): the Rust CLI
+`truth configurations` ports the retired `corpus.py configurations` (#954): the Rust CLI
 writes the same Lean certificate and composition sources, runs `lake`,
 `scripts/verify-result.sh` and `scripts/BindTypes.lean` as Python does, and
 reads only their results; Lean stays the verifier.

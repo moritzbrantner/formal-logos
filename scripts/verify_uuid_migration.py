@@ -10,10 +10,10 @@
    reference graphs isomorphic under the legacy_id bijection. The same holds
    for the tooling data the migration rewrites (bundle audits up to their
    carried-over review hashes, contracts, exemptions, test data).
-2. With --outputs: `corpus.py frontier --json`, `frontier --routes --json`,
-   `thickness --json` and `thickness --queue --json` of the base revision
-   (run in a temporary worktree) equal those of the working tree once uuids are
-   mapped back to legacy ids. List order is compared as a multiset, since id
+2. With --outputs: `frontier --json`, `frontier --routes --json`,
+   `thickness --json` and `thickness --queue --json` of the base revision (its
+   own `corpus.py`, in a temporary worktree) equal those of the working tree
+   (the Rust `truth` CLI, #954 R2) once uuids are mapped back to legacy ids. List order is compared as a multiset, since id
    order changes with the ids themselves.
 """
 
@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -170,11 +171,18 @@ OUTPUTS = (
 )
 
 
-def run_outputs(tree: Path) -> dict[str, Any]:
+def run_outputs(tree: Path, rust: bool = False) -> dict[str, Any]:
+    """The OUTPUTS of `tree`: by its own `corpus.py` (a pre-migration base), or
+    by the Rust `truth` CLI (`TRUTH_CLI`, or the release build)."""
     out = {}
+    if rust:
+        binary = os.environ.get("TRUTH_CLI")
+        if not binary:
+            subprocess.run(["cargo", "build", "--locked", "--release", "--quiet", "-p", "truth"], cwd=ROOT, check=True)
+            binary = str(ROOT / "target" / "release" / "truth")
     for name, args in OUTPUTS:
-        result = subprocess.run([sys.executable, "scripts/corpus.py", *args], cwd=tree,
-                                capture_output=True, text=True, check=True)
+        command = [binary, "--root", str(tree), *args] if rust else [sys.executable, "scripts/corpus.py", *args]
+        result = subprocess.run(command, cwd=tree, capture_output=True, text=True, check=True)
         out[name] = json.loads(result.stdout)
     return out
 
@@ -189,7 +197,7 @@ def check_outputs(base: str) -> list[str]:
             before = run_outputs(tree)
         finally:
             git("worktree", "remove", "--force", str(tree))
-    after = run_outputs(ROOT)
+    after = run_outputs(ROOT, rust=True)
     for name, _ in OUTPUTS:
         old = canonical(before[name])
         new = canonical(unmap(after[name], table, drop_identity=False))

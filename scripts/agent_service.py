@@ -3,8 +3,8 @@
 
 The service is an experiment (AGENTS.md, "Local server experiment for the next
 workloop"). It adds no proof-status registry and no dependency: corpus
-operations run the existing `scripts/corpus.py` commands in the requested
-workspace, Lean operations talk to `lake env lean --server` over LSP, and
+operations run the workspace's Rust `truth` CLI (truth/README.md) on the
+requested workspace, Lean operations talk to `lake env lean --server` over LSP, and
 verification jobs run `lake build`, `truth bind-check` and
 `scripts/verify-result.sh` one at a time. Interactive diagnostics do not
 replace those checks on the final inputs.
@@ -88,7 +88,7 @@ class Workspaces:
 
     def resolve(self, value: str | None) -> Path:
         path = Path(value).expanduser().resolve() if value else self.default
-        if not (path / "scripts" / "corpus.py").is_file():
+        if not (path / "truth" / "Cargo.toml").is_file():
             raise RequestError(400, f"not a truth-core checkout: {path}")
         return path
 
@@ -105,16 +105,27 @@ def file_in(workspace: Path, relative: str | None) -> Path:
 # --- corpus -----------------------------------------------------------------
 
 
+def truth_command(workspace: Path) -> list[str]:
+    """The workspace's `truth` CLI: `TRUTH_CLI` names a prebuilt binary;
+    otherwise Cargo runs the release build (rebuilt only when its inputs
+    changed), as the `bind-check` job does."""
+    binary = os.environ.get("TRUTH_CLI")
+    if binary:
+        return [binary]
+    return ["cargo", "run", "--quiet", "--locked", "--release", "-p", "truth", "--"]
+
+
 def run_corpus(workspace: Path, args: list[str], timeout: float = 300) -> dict:
+    command = [*truth_command(workspace), "--root", str(workspace), *args]
     proc = subprocess.run(
-        [sys.executable, "scripts/corpus.py", *args],
+        command,
         cwd=workspace,
         capture_output=True,
         text=True,
         timeout=timeout,
         check=False,
     )
-    out: dict = {"command": ["python3", "scripts/corpus.py", *args], "returncode": proc.returncode}
+    out: dict = {"command": command, "returncode": proc.returncode}
     if "--json" in args and proc.returncode == 0:
         out["data"] = json.loads(proc.stdout)
     else:
@@ -465,7 +476,7 @@ class Service:
         if method == "GET" and route == "/corpus/frontier":
             args = ["frontier", "--json"]
             if params.get("root"):
-                args += ["--root", check_id(params["root"], "root")]
+                args += ["--frontier-root", check_id(params["root"], "root")]
             if truthy(params.get("reaching_root")):
                 args.append("--reaching-root")
             if truthy(params.get("routes")):

@@ -10,7 +10,7 @@ modules, reads each theorem's type with `forallTelescope` (no reduction), and
 prints one JSON object per theorem: every binder with its name, whether its
 type lives in `Prop` (a propositional hypothesis) or not (a type or vocabulary
 parameter), and the head constant of that type; then the same for the result
-type. `scripts/corpus.py bind-check` compares this with the corpus records.
+type. `truth bind-check` compares this with the corpus records.
 
 Head constants are read syntactically (`getAppFn` after stripping metadata).
 Nothing is unfolded, so a `…Reading` definition applied to arguments reports

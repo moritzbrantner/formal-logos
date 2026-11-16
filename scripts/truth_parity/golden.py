@@ -268,11 +268,10 @@ def _overlay(base, files):
 
 
 def write_all(directory=GOLDEN):
-    """Write every recorded group, replacing all existing golden files."""
-    if directory.exists():
-        for path in directory.iterdir():
-            if path.is_dir():
-                shutil.rmtree(path)
+    """Write every recorded group, replacing its golden file. Files of tests
+    that no longer record are kept unchanged: they are the frozen oracle of
+    the commands whose Python left in #954 R2 (delete one by hand when its
+    command changes on purpose)."""
     for (module, method), cases in sorted(CASES.items()):
         base = cases[0]["tree"]["files"]
         shared, index = [], {}

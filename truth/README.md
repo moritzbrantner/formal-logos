@@ -60,9 +60,8 @@ shape, and selected required scalar and list fields. It also counts
 configuration records. On malformed input Python and Rust can report
 different first errors because they validate different scopes. The full
 corpus validation, including cross-record links, semantic constraints, and
-evidence bindings, is `truth check` (below) or Python `scripts/corpus.py
-check`. Python continues to own the unmigrated commands, agent
-service and Explorer consumers. Lean and the existing
+evidence bindings, is `truth check` (below); Python `scripts/corpus.py check`
+remains until #954 R3 for the merge queue only. Lean and the existing
 verifier retain proof authority. Neither Rust command writes a database or
 cache.
 
@@ -118,12 +117,23 @@ case is one on which Rust and Python agree; regenerating twice gives
 identical files. A new fixture comparison calls `golden.record(...)` with
 the Python output before running Rust; a new parity module also adds one
 `golden!` line in `truth/tests/golden.rs` (a test fails until it does).
-The real-corpus comparisons stay live in `scripts/verify_truth_cli.py` until
-R2 removes them per command family. The `status`/`inspect`/`bridges` tests
-(`truth_parity/structure.py`) assert Rust behaviour without a Python oracle
-and record nothing. Once a command's Python implementation is deleted its
-goldens can no longer be regenerated; they then pin the Rust behaviour, and
-an intended change edits them with the change that needs it.
+The `status`/`inspect`/`bridges` tests (`truth_parity/structure.py`) assert
+Rust behaviour without a Python oracle and record nothing.
+
+R2 deleted the Python navigation, gate and research commands and their parity
+modules (`next`, `next-steps`, `status`, `sort-lists`, `arguments`, `results`,
+`thickness`, `territory`, `configurations`, `models`, `related`, `dossier`,
+`context`, `bridge-experiments`, `issues`, `lean-reuse`, `attribution-check`,
+`bind-check`, `unused-premises`, and the `scripts/research_index.py`,
+`scripts/orphan_summary.py` scripts and the report/allowlist/ratchet of
+`scripts/sense_index.py`). Their goldens can no longer be regenerated: the
+recorder rewrites only the files of the tests it still records and keeps the
+others frozen, so they pin the Rust behaviour, and an intended change edits
+them with the change that needs it. Live parity remains for what stays in
+Python until R3: `check` (kept for `scripts/merge_queue.py`),
+`frontier`/`frontier-diff` (the base-revision engine, below),
+`configuration-report`, `structure`/`structure-report` and
+`strength-comparisons`/`strength-report`.
 
 ## `lexicon`
 
@@ -170,8 +180,8 @@ lines in Python's order, byte for byte; on failure stderr is Python's
 The port is complete, and `truth check` is the corpus gate: CI's corpus job
 and the worker contract (`AGENTS.md`, `docs/worker-startup.md`) run it, as
 they run `truth frontier` and `truth frontier-diff` for the premise report.
-`scripts/corpus.py check` stays until its retirement; the `truth-cli` job's
-parity script keeps the two in agreement.
+`scripts/corpus.py check` stays until R3 only for `scripts/merge_queue.py`;
+the `truth-cli` job's parity script keeps the two in agreement.
 
 Ported: record loading and ID indexes; the per-kind passage manifest schema
 (`source_evidence.validate_manifest`: text witness, media span, web snapshot,
@@ -235,8 +245,8 @@ and model checks. Stdout is Python's byte for byte, the sorted indented
 stale pin or sense alias; corpus errors exit 2 as `corpus error: …` (a JSON
 error object under `--json`).
 
-CI's corpus job and the worker contract run it; `corpus.py bind-check` stays
-until its retirement. `scripts/truth_parity/bind_check.py` compares both from
+CI's corpus job and the worker contract run it; `corpus.py bind-check` was
+retired in #954 R2. The frozen goldens `truth/tests/golden/bind_check/` (recorded by the retired `scripts/truth_parity/bind_check.py`) compare both from
 one recorded exporter output on the `check` fixture (scoped success, stale
 pins, unbound and missing hypotheses, theory bundles, consistency
 commitments, pinned-type failures, schema registrations, sense problems and
@@ -373,7 +383,7 @@ Exporter failures, a missing `lake`, a theorem the exporter did not inspect
 and malformed saved output are `corpus error: …` with exit code 2, as in
 Python; Rust reports serde's message for an unreadable saved file where
 Python raised a traceback or printed its own JSON parser's message.
-`scripts/truth_parity/proof_use.py` compares every command with Python on
+The frozen goldens `truth/tests/golden/proof_use/` (recorded by the retired `scripts/truth_parity/proof_use.py`) compare every command with Python on
 the `check` fixture under a stand-in `lake` that records the exporter input
 and prints a recorded output, so both the inputs (byte for byte) and the
 reports are compared, including findings, bundle conjuncts, the root-path
@@ -471,8 +481,7 @@ owner-approved and a stale marking, counted and uncounted refutations,
 transcription closure, the warning heuristics, witnesses, a case split and an
 unknown root. Not ported: the full `validate()` that Python runs first (Rust
 performs only the structural load, so a corpus that Python rejects can still
-produce a Rust report). CI's premise-report step runs the Rust commands; the
-Explorer build still calls `corpus.py`, which is the next consumer slice. Lean and Comparator keep proof authority: a "verified" argument is one
+produce a Rust report). CI's premise-report step and the Explorer build run the Rust commands. Lean and Comparator keep proof authority: a "verified" argument is one
 with a result record.
 
 ## `related`, `dossier`, `context`
@@ -536,7 +545,7 @@ tests point Rust at an absent cache and drop the notice line and the
 `--frontier-json` they compute it in-process with the Rust `frontier` (the
 port of `corpus.py frontier`, below) on the same checkout and root
 (`--frontier-root`, default `STMT-CATHOLICISM-TRUE`). With `--frontier-json
-FILE` they read a saved `python3 scripts/corpus.py frontier --json [--root
+FILE` they read a saved `truth frontier --json [--frontier-root
 STATEMENT-ID]` report instead (Rust cannot check that it is current), and
 `--frontier-root` only checks that report's root. Either way Rust reads only
 the fields these views consume (`truth::dossier::FrontierView`).
@@ -726,7 +735,7 @@ on a malformed record (invalid JSON in a changed file); Rust reports it as
 such an error. `--json` prints `base`, `claims` (id, reason, premise,
 locator, interpretation, passage, text or why it was not checked,
 attribution), `problems` and `ok` on stdout with the same exit code; Python
-has no JSON output. `scripts/truth_parity/attribution.py` compares both on
+has no JSON output. The frozen goldens `truth/tests/golden/attribution/` (recorded by the retired `scripts/truth_parity/attribution.py`) compare both on
 the cases of `test_attribution_check.py` on fixture repositories (including
 a readable-id base and a stub `materialize`) and on the real corpus against
 several base revisions. CI's attribution step runs it.
@@ -827,10 +836,11 @@ Snapshot errors (unreadable file, invalid JSON, a non-array, an issue without
 a positive integer number) exit 2 with Python's `corpus error: …` message;
 only the wording of a JSON parse error differs. Text is byte-identical and
 JSON semantically identical (plus `input_identity`);
-`scripts/truth_parity/issues.py` checks this on the cases of
+the frozen goldens `truth/tests/golden/issues/` (recorded by the retired `scripts/truth_parity/issues.py`) check this on the cases of
 `test_issue_acceptance.py` on a fixture checkout and on the recorded snapshot
-`scripts/truth_parity/fixtures/issues-snapshot.json` extended with blocks
-naming real corpus records.
+`scripts/truth_parity/fixtures/issues-snapshot.json` (retired with it) extended
+with blocks naming real corpus records.
+
 ## `next`, `next-steps`, `arguments`, `results`, `sort-lists`
 
 Ports of the navigation subcommands of `scripts/corpus.py`
@@ -854,7 +864,7 @@ Ports of the navigation subcommands of `scripts/corpus.py`
   Python does (indent 2 when the file was indented, keys in file order,
   trailing newline). A list with a non-string item is reported, not sorted.
 
-`scripts/truth_parity/navigation.py` compares every command with Python on
+The frozen goldens `truth/tests/golden/navigation/` (recorded by the retired `scripts/truth_parity/navigation.py`) compare every command with Python on
 the real corpus and on the `check` fixture (byte-identical text and stdout,
 the rewritten files, the same `corpus error:` line and exit code 2 on broken
 variants). `scripts/verify-all.sh` lists results with `truth results`; the
@@ -931,7 +941,7 @@ writes records.
 `bridges` ranks advisory bridge candidates for underived statements by the
 Lean constants their declarations share, from a `scripts/StatementConstants.lean`
 export (`--constants`) and either `--target ID` or a
-`truth thickness --queue --json` or `corpus.py thickness --queue --json` file (`--queue-file`, first `--targets N`,
+`truth thickness --queue --json` file (`--queue-file`, first `--targets N`,
 default 10). It is a search heuristic, not a proof or equivalence judgment;
 see `docs/bridge-candidates.md` for the pipeline and the optional Lean trial.
 
@@ -947,7 +957,7 @@ blocker. Lean imports and import closures are the `context` pack's; the
 frontier is computed in-process. Python's `--root STATEMENT` is
 `--frontier-root`. Text is byte-identical, errors are Python's `corpus error:
 …` with exit code 2, and `--json` is Python's report plus `input_identity`;
-`scripts/truth_parity/bridge_experiments.py` compares both on the cases of
+the frozen goldens `truth/tests/golden/bridge_experiments/` (recorded by the retired `scripts/truth_parity/bridge_experiments.py`) compare both on the cases of
 `test_bridge_experiments.py` and on results the real corpus's attempts cite.
 It ranks what to read first; it proves, refutes and closes nothing.
 
@@ -965,8 +975,9 @@ is stale. `ratchet --base REV` lists the entries that are no longer needed and
 fails (exit 1) when the allowlist gained an entry since REV, arguments compared
 by the uuid their key resolves to; CI's sense-index step runs it. Text,
 stderr and exit codes are Python's byte for byte
-(`scripts/truth_parity/senses.py`, fixtures and the real corpus against
-several bases); `sense_index.py migrate` stays Python.
+(frozen in `truth/tests/golden/senses/`; the retired `scripts/truth_parity/senses.py`
+also compared the real corpus against several bases); `sense_index.py migrate`, a
+one-shot migration, stays Python.
 
 ## `configurations`, `configuration-report`, `models`, `territory`
 
@@ -1020,7 +1031,7 @@ under `python3 scripts/worker_env.py --`.
   with `unrepresentable_count` (exit 1) and names the Python command instead
   of printing a wrong number.
 
-`scripts/truth_parity/configurations.py` compares them on the real corpus
+The frozen goldens `truth/tests/golden/configurations/` (recorded by the retired `scripts/truth_parity/configurations.py`) compare them on the real corpus
 (every case, filtering by uuid and legacy id, seed and premise selections and
 their errors; `models`; `territory` with the default bound, `--max-atoms` 40
 and -3 and an unknown root) and on a fixture checkout with an incompatibility

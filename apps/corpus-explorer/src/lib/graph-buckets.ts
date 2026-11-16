@@ -3,7 +3,7 @@
  *
  * Partition: layout components (inference steps plus recorded research links,
  * graph-network.ts) are never split. The components that contain a statement
- * reaching the root (`reaching_root_statements` of `corpus.py frontier`) form
+ * reaching the root (`reaching_root_statements` of `truth frontier`) form
  * the default `root` bucket. Other linked components are grouped by their most
  * frequent import area and chunked; isolated readings (singleton components)
  * are grouped by area separately, so hiding singletons skips those files.
