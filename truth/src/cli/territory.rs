@@ -100,7 +100,7 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         return Err((
             1,
             serde_json::json!({"code": "unrepresentable_count", "message": format!(
-                "the global position count {} exceeds the JSON integers truth prints; use `python3 scripts/corpus.py territory --json`",
+                "the global position count {} exceeds the JSON integers truth prints; the text output (`truth territory` without --json) prints it exactly",
                 count.unwrap_or_default())}),
         ));
     }
