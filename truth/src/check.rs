@@ -2572,7 +2572,7 @@ fn validate(
             sorted.sort();
             if values != sorted {
                 return Err(format!(
-                    "{}: edition_urns must be sorted; run python3 scripts/corpus.py sort-lists",
+                    "{}: edition_urns must be sorted; run target/release/truth sort-lists",
                     relative(root, &path)
                 ));
             }

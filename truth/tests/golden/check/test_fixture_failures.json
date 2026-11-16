@@ -770,7 +770,7 @@
    ],
    "expect": {
     "code": 1,
-    "stderr": "corpus error: corpus/sources/00-SRC.json: edition_urns must be sorted; run python3 scripts/corpus.py sort-lists\n",
+    "stderr": "corpus error: corpus/sources/00-SRC.json: edition_urns must be sorted; run target/release/truth sort-lists\n",
     "stdout": ""
    },
    "externals": [],

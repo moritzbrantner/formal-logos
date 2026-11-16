@@ -197,8 +197,10 @@ class CommandSmokeTests(unittest.TestCase):
 
     def test_fix_without_arguments(self):
         from subprocess import CompletedProcess
-        with patch.object(argument_batch.subprocess, "run", return_value=CompletedProcess([], 0, "", "")):
+        with patch.dict(argument_batch.os.environ, {"TRUTH_CLI": "truth"}), \
+             patch.object(argument_batch.subprocess, "run", return_value=CompletedProcess([], 0, "", "")) as run:
             self.assertEqual(argument_batch.fix_disambiguations({}), 0)
+        self.assertEqual(run.call_args.args[0], ["truth", "--root", str(argument_batch.ROOT), "check"])
 
 
 if __name__ == "__main__":

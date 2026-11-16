@@ -15,9 +15,11 @@ The anchor is the existing result directly imported by the PR's new Lean files
 Two workflows are then run at the base and compared on bytes read, tool calls,
 wall time and recall of the needed IDs:
 
-* baseline: `corpus.py related <conclusion>` and `corpus.py dossier` for the
-  anchor's conclusion and each premise (the documented proposition-reuse route);
-* context: one `corpus.py context <anchor>` call, run with this checkout's scripts.
+* baseline: the base's own `corpus.py related <conclusion>` and `corpus.py
+  dossier` for the anchor's conclusion and each premise (the proposition-reuse
+  route documented at the time);
+* context: one `truth context <anchor>` call by this checkout's Rust CLI
+  (`TRUTH_CLI`, or the release build) on the base tree.
 
 Recall is a lexical proxy: an ID counts as surfaced when it appears in the output.
 It measures navigation coverage, not understanding or proof progress.
@@ -26,8 +28,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
-import shutil
 import subprocess
 import tempfile
 import time
@@ -113,16 +115,24 @@ def measure(outputs: list[tuple[str, float]], needed: set[str]) -> dict:
             "missed": sorted(needed - surfaced)}
 
 
+def truth_binary() -> str:
+    """This checkout's Rust `truth` CLI: `TRUTH_CLI`, or the release build."""
+    binary = os.environ.get("TRUTH_CLI")
+    if not binary:
+        subprocess.run(["cargo", "build", "--locked", "--release", "--quiet", "-p", "truth"], cwd=ROOT, check=True)
+        binary = str(ROOT / "target" / "release" / "truth")
+    return binary
+
+
 def replay(task: dict, scratch: Path) -> dict:
     merge = git("rev-parse", task["merge"]).strip()
     tree = scratch / merge[:12]
     git("worktree", "add", "--quiet", "--detach", "--force", str(tree), f"{merge}^1")
     try:
         needed, anchor = needed_context(merge, tree)
-        # The context command does not exist at historical bases: run this checkout's
-        # scripts against the base corpus/Lean tree (their ROOT is the parent directory).
-        head_scripts = tree / "scripts-head"
-        shutil.copytree(ROOT / "scripts", head_scripts, ignore=shutil.ignore_patterns("__pycache__", "testdata"))
+        # The context command does not exist at historical bases: run this
+        # checkout's `truth` against the base corpus/Lean tree.
+        truth = [truth_binary(), "--root", str(tree)]
         record = json.loads((tree / "corpus" / "arguments" / f"{anchor}.json").read_text(encoding="utf-8")) \
             if (tree / "corpus" / "arguments" / f"{anchor}.json").is_file() else next(
                 json.loads(p.read_text(encoding="utf-8")) for p in (tree / "corpus" / "arguments").glob("*.json")
@@ -130,8 +140,8 @@ def replay(task: dict, scratch: Path) -> dict:
         statements = [record["conclusion_statement_id"], *record["premise_statement_ids"]]
         baseline = [run(["python3", "scripts/corpus.py", "related", record["conclusion_statement_id"]], tree)]
         baseline += [run(["python3", "scripts/corpus.py", "dossier", sid], tree) for sid in statements]
-        context = [run(["python3", "scripts-head/corpus.py", "context", anchor], tree)]
-        context_json = [run(["python3", "scripts-head/corpus.py", "context", "--json", anchor], tree)]
+        context = [run([*truth, "context", anchor], tree)]
+        context_json = [run([*truth, "--json", "context", anchor], tree)]
         return {"pr": task["pr"], "merge": merge[:12], "anchor": anchor, "needed": len(needed),
                 "baseline": measure(baseline, needed), "context": measure(context, needed),
                 "context_json": measure(context_json, needed)}

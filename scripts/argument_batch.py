@@ -31,7 +31,7 @@ and relations named by the spec. Missing `definition_ids` / `disambiguation_ids`
 of an argument default to the union of those of its premises and conclusion
 (existing corpus statements or statements of the same spec). It refuses to
 overwrite an existing record with a different body. `--fix` then runs
-`corpus.py check` and adds every disambiguation the check reports as missing
+`truth check` and adds every disambiguation the check reports as missing
 from a spec argument, until the check passes or no such error remains.
 
 `records --check` writes nothing and fails when regenerating any given spec
@@ -112,6 +112,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import subprocess
 import sys
@@ -439,6 +440,16 @@ def check_specs(paths: list[Path]) -> int:
 MISSING = re.compile(r"corpus error: (\S+): .*does not link ([0-9a-f-]{36})")
 
 
+def truth_binary() -> str:
+    """The Rust `truth` CLI (truth/README.md): `TRUTH_CLI` names a prebuilt
+    binary; otherwise the release binary is built (a no-op when fresh)."""
+    binary = os.environ.get("TRUTH_CLI")
+    if not binary:
+        subprocess.run(["cargo", "build", "--locked", "--release", "--quiet", "-p", "truth"], cwd=ROOT, check=True)
+        binary = str(ROOT / "target" / "release" / "truth")
+    return binary
+
+
 def fix_disambiguations(spec: dict) -> int:
     handles = Handles()
     ours = set()
@@ -448,7 +459,7 @@ def fix_disambiguations(spec: dict) -> int:
             path = load_ids("arguments")[found][0]
             ours.add(str(path.relative_to(ROOT)))
     for _ in range(50):
-        check = subprocess.run([sys.executable, str(ROOT / "scripts" / "corpus.py"), "check"],
+        check = subprocess.run([truth_binary(), "--root", str(ROOT), "check"],
                                cwd=ROOT, capture_output=True, text=True)
         errors = [line for line in (check.stdout + check.stderr).splitlines() if line.startswith("corpus error")]
         fixable = [m for m in map(MISSING.match, errors) if m and m.group(1) in ours]
