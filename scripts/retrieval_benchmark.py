@@ -4,7 +4,10 @@
 The answer key is `scripts/testdata/retrieval-benchmark.json`: hand-pinned
 notes, issues, records and objections per research question, located without
 the system under test. Both workflows run on this checkout with the same
-offline issue snapshot (minus the items that state the benchmark's answers):
+offline issue snapshot (minus the items that state the benchmark's answers),
+in a detached worktree of HEAD without the answer-bearing files listed in the
+fixture's `evaluation_excludes` (this report's note and the key), so the note
+index cannot retrieve the answers:
 
 * baseline: the documented pre-#1643 route (AGENTS.md "Premise dossiers and
   attempts", docs/notes/research-index.md): `truth index search` for the
@@ -41,11 +44,12 @@ ROOT = Path(__file__).resolve().parents[1]
 FIXTURE = ROOT / "scripts" / "testdata" / "retrieval-benchmark.json"
 TRUTH = ROOT / "target" / "release" / "truth"  # --truth selects another build
 STALE_CAPTURE = "2026-01-01T00:00:00Z"
+EVAL_ROOT = ROOT  # replaced by a clean evaluation worktree in main()
 
 
 def run(args: list[str]) -> tuple[str, float]:
     start = time.perf_counter()
-    done = subprocess.run([str(TRUTH), *args], cwd=ROOT, capture_output=True, text=True)
+    done = subprocess.run([str(TRUTH), *args], cwd=EVAL_ROOT, capture_output=True, text=True)
     elapsed = time.perf_counter() - start
     if done.returncode not in (0, 3):
         raise SystemExit(f"truth {' '.join(args)} exited {done.returncode}: {done.stderr.strip()}")
@@ -192,6 +196,23 @@ def summarize(rows: list[dict]) -> dict:
     }
 
 
+def evaluation_checkout(path: Path, excludes: list[str]) -> Path:
+    """A detached worktree of HEAD without the answer-bearing files (this
+    report and its answer key), so neither workflow can retrieve the answers;
+    git history stays available for the notes' change history."""
+    subprocess.run(["git", "worktree", "add", "--detach", "-q", str(path), "HEAD"], cwd=ROOT, check=True)
+    for relative in excludes:
+        target = path / relative
+        if target.exists():
+            target.unlink()
+    return path
+
+
+def remove_checkout(path: Path) -> None:
+    if path != ROOT:
+        subprocess.run(["git", "worktree", "remove", "--force", str(path)], cwd=ROOT, check=False)
+
+
 def check_key(fixture: dict, snapshot: Path) -> list[str]:
     data = json.loads(snapshot.read_text(encoding="utf-8"))
     numbers = {item["number"] for item in (data["items"] if isinstance(data, dict) else data)}
@@ -232,17 +253,22 @@ def main(argv: list[str] | None = None) -> int:
     cases = [case for case in fixture["cases"] if not args.case or case["id"] in args.case]
     with tempfile.TemporaryDirectory() as tmp:
         snaps = snapshots(args.snapshot, set(fixture["snapshot"]["exclude_numbers"]), Path(tmp))
-        run(["index", "build"])  # both workflows then reuse one warm index
-        report = {"revision": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
-                  "baseline": [], "candidate": []}
-        for case in cases:
-            snapshot = snaps[case.get("snapshot", "full")]
-            kinds = [(ref["ref"], ref["kind"]) for ref in case.get("refs", [])]
-            for name, calls, verdict in (("baseline", lambda: baseline(case, snapshot, snaps["array"]), False),
-                                         ("candidate", lambda: candidate(case, snapshot), True)):
-                row = score(case, calls(), verdict)
-                row["_kinds"] = kinds
-                report[name].append(row)
+        global EVAL_ROOT
+        EVAL_ROOT = evaluation_checkout(Path(tmp) / "checkout", fixture["evaluation_excludes"])
+        try:
+            run(["index", "build"])  # both workflows then reuse one warm index
+            report = {"revision": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
+                      "baseline": [], "candidate": []}
+            for case in cases:
+                snapshot = snaps[case.get("snapshot", "full")]
+                kinds = [(ref["ref"], ref["kind"]) for ref in case.get("refs", [])]
+                for name, calls, verdict in (("baseline", lambda: baseline(case, snapshot, snaps["array"]), False),
+                                             ("candidate", lambda: candidate(case, snapshot), True)):
+                    row = score(case, calls(), verdict)
+                    row["_kinds"] = kinds
+                    report[name].append(row)
+        finally:
+            remove_checkout(EVAL_ROOT)
     report["summary"] = {name: summarize(report[name]) for name in ("baseline", "candidate")}
     for name in ("baseline", "candidate"):
         for row in report[name]:

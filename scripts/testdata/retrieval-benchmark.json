@@ -1,6 +1,8 @@
 {
   "about": "Hand-pinned answer key for the #1644 retrieval benchmark (scripts/retrieval_benchmark.py). Every reference was located by grep over docs/notes, corpus records and an offline GitHub snapshot, never from `truth brief`/`truth novelty` output. A reference counts as surfaced when its token appears in a workflow's output (a lexical proxy, as in #962). `primary` references are the prior work whose absence would make a worker report the question as unexplored. Patterns are Python regular expressions over the combined text output of one workflow; `present` patterns must match and `absent` patterns must not. `classification` constrains only the candidate's novelty verdict. Cases with `held_out: true` were not inspected against candidate output before the answer key was fixed and must stay unchanged when ranking rules change.",
   "pinned_revision": "c393bc7d18203bd329eaa04a3865860c214058e6",
+  "evaluation_excludes": ["docs/notes/retrieval-benchmark-1644.md", "scripts/testdata/retrieval-benchmark.json"],
+  "evaluation_excludes_reason": "Both workflows run in a detached worktree of HEAD without these files: the report and the key state the answers, and the note index would otherwise retrieve them.",
   "snapshot": {
     "command": "gh issue list --state all --limit 2000 --json number,title,body,url,state,comments,updatedAt; gh pr list --state all --limit 2000 --json number,title,body,url,state,comments,updatedAt; merged as {captured_at, items}",
     "exclude_numbers": [1643, 1644, 1686],
