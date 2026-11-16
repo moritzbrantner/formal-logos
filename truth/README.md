@@ -431,6 +431,17 @@ closure reasons; per-route open-premise costs; source depths; open items with
 their route-aware walks; statement statuses and stages; and the next-step
 probes, which rerun the same fixpoint with one leaf established.
 
+`truth frontier --fixture FILE` (`-` for stdin) computes the same report on a
+fixture instead of the checkout at `--root`: a JSON object with optional
+`statements`, `arguments`, `results`, `relations`, `claims` and `inferences`
+lists (the inputs of Python `frontier_report`, in the given order) and a
+`transcription_flags` list (Python `transcription_flags` entries; absent fields
+are empty). No corpus validation runs and no Lean source is read; any other
+key is an error (exit 1, `fixture_error`). `--frontier-root` resolves against
+the fixture's records, and `input_identity` hashes the fixture bytes. The
+Explorer's synthetic-corpus tests and the parity test `test_fixture_input` use
+it (#954 B12), so fixture tests need no Python oracle.
+
 `truth frontier-diff --base REV [--head REV] [--frontier-root STATEMENT-ID]`
 ports `corpus.py frontier-diff`: the delta between the reaching-root frontier
 of the base revision and of the head revision or working tree. Python runs

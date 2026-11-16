@@ -100,12 +100,34 @@ def frontier_fixture(root):
     migrate(root)
 
 
+FIXTURE_KINDS = ("statements", "arguments", "results", "relations", "claims", "inferences")
+
+
+def fixture_input(root):
+    """The `truth frontier --fixture` input of a fixture checkout: its records
+    in file order and Python's transcription flags for them."""
+    records = fixture_records(root)
+    return {**records, "transcription_flags": python_flags(root, records)}
+
+
+def fixture_records(root):
+    return {kind: [json.loads(path.read_text()) for path in sorted((root / "corpus" / kind).glob("*.json"))]
+            for kind in FIXTURE_KINDS}
+
+
+def python_flags(root, records):
+    saved = corpus.ROOT
+    corpus.ROOT = root
+    try:
+        return corpus.transcription_flags(records["results"], records["arguments"], records["statements"])
+    finally:
+        corpus.ROOT = saved
+
+
 def python_frontier(root, frontier_root=U("statement", "ROOT")):
     """Python `frontier_report` with next steps on a fixture checkout, without
     the full `validate()` that `corpus.py frontier` runs first."""
-    kinds = ("statements", "arguments", "results", "relations", "claims", "inferences")
-    records = {kind: [json.loads(path.read_text()) for path in sorted((root / "corpus" / kind).glob("*.json"))]
-               for kind in kinds}
+    records = fixture_records(root)
     saved = corpus.ROOT
     corpus.ROOT = root
     try:
@@ -223,9 +245,52 @@ class TruthFrontierParity(ParityCase):
             golden.record(self, ["--json", *unknown_args, "frontier"], root=root, code=0, stdout_json=unknown)
             self.assertEqual(self.json_truth(*unknown_args, "frontier"), unknown)
 
+    def test_fixture_input(self):
+        # #954 B12: `--fixture` takes the records and transcription flags as
+        # JSON, with no checkout, and reproduces Python `frontier_report` on
+        # them (the Explorer's synthetic-corpus tests use this mode).
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            frontier_fixture(root)
+            full = python_frontier(root)
+            data = fixture_input(root)
+            path = root / "fixture-input.json"
+            path.write_text(json.dumps(data))
+            # The checkout's Lean sources and corpus are not read: an empty
+            # --root gives the same report.
+            empty = root / "empty"
+            empty.mkdir()
+            for token in ("ROOT", U("statement", "ROOT")):
+                self.assert_frontier(full, ["--root", str(empty), "--fixture", str(path),
+                                            "--frontier-root", token], checkout=root)
+            # Flags may omit fields Python's heuristics would set; the
+            # explorer passes single-application flags only.
+            minimal = {**data, "transcription_flags": [
+                {"result_id": flag["result_id"], "argument_id": flag["argument_id"], "proof_steps": 1,
+                 "single_application_of": "fixture", "goal_consequent_premises": []}
+                for flag in data["transcription_flags"]]}
+            path.write_text(json.dumps(minimal))
+            expected = corpus.frontier_report(
+                *(minimal[kind] for kind in ("statements", "arguments", "results", "relations")),
+                root=U("statement", "ROOT"), transcription=minimal["transcription_flags"],
+                claims=minimal["claims"], inferences=minimal["inferences"], _include_next_steps=True)
+            expected["transcription_flags"] = [
+                {**flag, "assembly_of": None, "opaque_atoms": False} for flag in expected["transcription_flags"]]
+            args = ["--root", str(empty), "--fixture", str(path), "--frontier-root", "ROOT"]
+            golden.record(self, ["--json", *args, "frontier"], root=root, code=0, stdout_json=expected,
+                          label="minimal flags")
+            self.assertEqual(self.json_truth(*args, "frontier"), expected)
+            for content, message in (("[]", "must be a JSON object"), ('{"definitions": []}', "unknown frontier"),
+                                     ("{", "is not JSON")):
+                path.write_text(content)
+                result = subprocess.run([self.binary, "--json", "--fixture", str(path), "frontier"],
+                                        capture_output=True, text=True, check=False)
+                self.assertEqual(result.returncode, 1, content)
+                self.assertIn(message, json.loads(result.stderr)["error"]["message"])
+
     def test_usage(self):
         for args in (["frontier", "--queue"], ["frontier-diff"], ["status", "--routes"],
-                     ["frontier", "--base", "HEAD"]):
+                     ["frontier", "--base", "HEAD"], ["thickness", "--fixture", "x.json"]):
             result = subprocess.run([self.binary, "--json", *args], cwd=corpus.ROOT,
                                     capture_output=True, text=True, check=False)
             self.assertEqual(result.returncode, 2, args)

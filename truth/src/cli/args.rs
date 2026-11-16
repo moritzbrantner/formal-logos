@@ -20,6 +20,9 @@ pub struct FrontierArgs {
     pub routes: bool,
     pub base: Option<String>,
     pub head: Option<String>,
+    /// `--fixture FILE` (`frontier`): a JSON fixture of records and
+    /// transcription flags instead of the checkout at `--root`; `-` is stdin.
+    pub fixture: Option<String>,
 }
 
 /// The `bind-check` options.
@@ -473,6 +476,15 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                     parsed.frontier.head = Some(value);
                 }
             }
+            "--fixture" => {
+                parsed.frontier.fixture = Some(
+                    args.next()
+                        .and_then(|value| value.to_str())
+                        .filter(|value| !value.is_empty())
+                        .ok_or_else(|| usage("--fixture requires a UTF-8 path"))?
+                        .to_owned(),
+                );
+            }
             "--frontier-root" => {
                 parsed.frontier_root = args
                     .next()
@@ -636,6 +648,9 @@ impl Args {
         }
         if !accepts.frontier && (self.frontier.reaching_root || self.frontier.routes) {
             return Err(usage("--reaching-root and --routes apply only to frontier"));
+        }
+        if !accepts.frontier && self.frontier.fixture.is_some() {
+            return Err(usage("--fixture applies only to frontier"));
         }
         if !accepts.revisions && self.frontier.head.is_some()
             || !(accepts.revisions || accepts.base) && self.frontier.base.is_some()
