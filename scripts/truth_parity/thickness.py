@@ -5,6 +5,7 @@ import tempfile
 from pathlib import Path
 
 import corpus
+from truth_parity import golden
 from truth_parity.common import U, migrate, humanize, ParityCase
 
 
@@ -119,11 +120,15 @@ class TruthThicknessParity(ParityCase):
             root = Path(temporary)
             thickness_fixture(root)
             for flags, queue in (([], False), (["--queue"], True)):
+                golden.record(self, ["--json", "--root", root, "--frontier-root", "ROOT", "thickness", *flags],
+                              root=root, code=0, stdout_json=python_thickness(root, queue))
                 actual = json.loads(self.run_truth("--json", "--root", str(root), "--frontier-root", "ROOT",
                                                    "thickness", *flags))
                 actual.pop("input_identity")
                 self.assertEqual(actual, python_thickness(root, queue), flags)
             # The frontier root may be named by uuid as well as by legacy id.
+            golden.record(self, ["--json", "--root", root, "--frontier-root", U("statement", "ROOT"), "thickness"],
+                          root=root, code=0, stdout_json=python_thickness(root, False))
             actual = json.loads(self.run_truth("--json", "--root", str(root), "--frontier-root",
                                                U("statement", "ROOT"), "thickness"))
             actual.pop("input_identity")

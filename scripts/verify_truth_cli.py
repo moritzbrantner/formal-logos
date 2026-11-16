@@ -29,7 +29,7 @@ from truth_parity.common import ParityCase
 from truth_parity.structure import TruthParity  # noqa: F401
 from truth_parity.thickness import TruthThicknessParity  # noqa: F401
 from truth_parity.frontier import TruthFrontierParity  # noqa: F401
-from truth_parity.research import TruthResearchParity  # noqa: F401
+from truth_parity.research import TruthResearchParity, TruthResearchFixtureParity  # noqa: F401
 from truth_parity.check import TruthCheckParity  # noqa: F401
 from truth_parity.issues import TruthIssuesParity  # noqa: F401
 from truth_parity.navigation import TruthNavigationParity  # noqa: F401

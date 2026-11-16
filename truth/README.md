@@ -86,6 +86,42 @@ shared fixtures and the `ParityCase` base class in `common.py`; a new
 command adds its module there and imports its test classes in
 `scripts/verify_truth_cli.py`, the entry point CI runs.
 
+## Golden snapshots of the Python oracle
+
+Before the Python implementations retire (#954 R2/R3), the Python side of
+every fixture parity comparison is frozen in `truth/tests/golden/<module>/<test>.json`,
+and `cargo test --locked -p truth --test golden` (part of `cargo test`, so
+of the `truth-cli` CI job) replays each case against the Rust binary alone:
+no `corpus.py`, no Lean. A case holds the fixture checkout (files, and the
+Git history where the fixture is a repository), any directories outside it
+(recorded exporter output, a stand-in `lake`, artifacts), the `truth`
+command line and the output Python gave: exit code, stdout and stderr byte
+for byte, or `--json` output semantically without `input_identity`, as the
+parity test compares it. `scripts/truth_parity/golden.py` documents the
+format and each normalization (temporary paths, commit ids, the structure
+producer fingerprint, `scripts/*.py` copies of the repository's own files).
+
+To regenerate after a deliberate change to Python and Rust alike:
+
+```sh
+cargo build --locked -p truth
+python3 scripts/truth_parity/record_goldens.py target/debug/truth
+cargo test --locked -p truth --test golden
+```
+
+The recorder runs the fixture parity tests (all but the real-corpus ones)
+and rewrites `truth/tests/golden/` only if every test passes, so a written
+case is one on which Rust and Python agree; regenerating twice gives
+identical files. A new fixture comparison calls `golden.record(...)` with
+the Python output before running Rust; a new parity module also adds one
+`golden!` line in `truth/tests/golden.rs` (a test fails until it does).
+The real-corpus comparisons stay live in `scripts/verify_truth_cli.py` until
+R2 removes them per command family. The `status`/`inspect`/`bridges` tests
+(`truth_parity/structure.py`) assert Rust behaviour without a Python oracle
+and record nothing. Once a command's Python implementation is deleted its
+goldens can no longer be regenerated; they then pin the Rust behaviour, and
+an intended change edits them with the change that needs it.
+
 ## `lexicon`
 
 `truth lexicon (show WORD | untraced | coverage | check | bootstrap | allowlist | ratchet --base REV)`

@@ -17,6 +17,7 @@ from pathlib import Path
 
 import corpus
 import research_index
+from truth_parity import golden
 from truth_parity.common import ParityCase
 
 TABLES = {
@@ -45,6 +46,15 @@ class TruthIndexParity(ParityCase):
         self.assertEqual(result.returncode, code, (args, result.stderr.decode()))
         return result.stdout, result.stderr.decode()
 
+    def expect(self, root, args, value, normalize=()):
+        """A golden case (fixture checkouts only): `index ARGS` in text and
+        `--json` prints Python's `value`. The database under `.cache/` is not
+        recorded: Rust builds it on the first query."""
+        if root != corpus.ROOT:
+            for machine in ([], ["--json"]):
+                golden.record(self, ["--root", root, *machine, "index", *args], root=root, code=0,
+                              stdout_json=value, exclude=(".cache",), normalize=normalize)
+
     def truth_json(self, root, *args):
         value = json.loads(self.truth(root, "--json", "index", *args)[0])
         text = json.loads(self.truth(root, "index", *args)[0])
@@ -64,6 +74,7 @@ class TruthIndexParity(ParityCase):
                 expected = [dict(row) for row in db.execute(
                     "SELECT r.id,r.kind,r.path FROM search JOIN records r ON r.key=search.id "
                     "WHERE search MATCH ? ORDER BY rank LIMIT ?", (expression, limit))]
+                self.expect(root, ["search", words, "--limit", str(limit)], expected, normalize=["note_hits"])
                 found = self.truth_json(root, "search", words, "--limit", str(limit))
                 records = [hit for hit in found if hit["kind"] != "note"]
                 # Rust appends up to `limit` note sections after the records (#952).
@@ -71,22 +82,30 @@ class TruthIndexParity(ParityCase):
                 self.assertEqual(records, expected, (words, limit))
                 self.assertLessEqual(len(found) - len(records), limit)
         for token in shows:
+            self.expect(root, ["show", token], research_index.lookup(db, token), normalize=["mentioned_by_notes"])
             shown = self.truth_json(root, "show", token)
             self.assertIsInstance(shown.pop("mentioned_by_notes"), list)  # Rust only (#952)
             self.assertEqual(shown, research_index.lookup(db, token), token)
+        self.expect(root, ["duplicates"], research_index.duplicates(db))
         self.assertEqual(self.truth_json(root, "duplicates"), research_index.duplicates(db))
         expected = {"mode": "registered inventory, not certified progress",
                     "records_by_kind": {row[0]: row[1] for row in db.execute(
                         "SELECT kind,count(*) FROM records GROUP BY kind")},
                     "exact_duplicate_argument_groups": len(research_index.duplicates(db))}
+        self.expect(root, ["summary"], expected)
         self.assertEqual(self.truth_json(root, "summary"), expected)
+        self.expect(root, ["parity"], research_index.parity(db, root))
         self.assertEqual(self.truth_json(root, "parity"), research_index.parity(db, root))
         for path in sorted(row[0] for row in db.execute("SELECT path FROM source_files"))[::export_stride]:
+            if root != corpus.ROOT:
+                golden.record(self, ["--root", root, "index", "export", path], root=root, code=0,
+                              stdout=(root / path).read_text(), exclude=(".cache",))
             self.assertEqual(self.truth(root, "index", "export", path)[0], (root / path).read_bytes(), path)
         for case_id, left, right in cases:
             argv = ["--case", case_id]
             for premise in left:
                 argv += ["--premise", premise]
+            self.expect(root, ["bundle", *argv], research_index.bundle(db, case_id, left))
             self.assertEqual(self.truth_json(root, "bundle", *argv), research_index.bundle(db, case_id, left),
                              case_id)
             argv = ["--case", case_id]
@@ -94,6 +113,7 @@ class TruthIndexParity(ParityCase):
                 argv += ["--left", premise]
             for premise in right:
                 argv += ["--right", premise]
+            self.expect(root, ["compare", *argv], research_index.compare(db, case_id, left, right))
             self.assertEqual(self.truth_json(root, "compare", *argv),
                              research_index.compare(db, case_id, left, right), case_id)
 

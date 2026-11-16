@@ -4,11 +4,14 @@ import io
 import json
 import os
 import subprocess
+import sys
 import tempfile
 from pathlib import Path
 
 import corpus
-from truth_parity.common import NOTE_BLOCK, humanize, without_note_mentions, NO_BIND_TYPES, ParityCase, without_bind_types
+from truth_parity import golden
+from truth_parity.check import write_check_fixture
+from truth_parity.common import NOTE_BLOCK, humanize, without_note_mentions, NO_BIND_TYPES, U, ParityCase, without_bind_types
 
 
 def spread(items, count):
@@ -22,6 +25,7 @@ def spread(items, count):
 class TruthResearchParity(ParityCase):
     """`truth related|dossier|context` against `corpus.py related|dossier|context`
     on a broad real-corpus sample, one frontier report shared by both sides."""
+    real_corpus_only = True
 
     @classmethod
     def setUpClass(cls):
@@ -177,3 +181,48 @@ class TruthResearchParity(ParityCase):
         several = next(sid for sid, ids in concluded.items() if len(ids) > 1)
         self.assertIn("is concluded by several arguments",
                       self.truth("context", several, "--frontier-json", self.frontier, code=2)[1])
+
+
+class TruthResearchFixtureParity(ParityCase):
+    """`truth related|dossier|context` against the Python CLI on a fixture checkout."""
+
+    def test_fixture(self):
+        """The Python CLI on the `check` fixture (with a copy of `scripts/*.py`):
+        text and `--json` of `related`, `dossier` and `context`, which the
+        golden snapshots freeze before the Python commands retire."""
+        statement, argument = U("statement", "STMT-B"), U("argument", "ARG-BC")
+        cases = [
+            (["related", "STMT-B"], None), (["related", statement, "--limit", "1"], None),
+        ]
+        # Python names the frontier root `--root`; Rust's `--root` is the checkout.
+        for args in (["dossier", "STMT-B"], ["dossier", "STMT-C", "--limit", "0"], ["dossier", "STMT-A"],
+                     ["context", "ARG-BC"], ["context", argument, "--limit", "1", "--related", "0"],
+                     ["context", "RES-AB"]):
+            cases.append(([*args, "--root", "STMT-C"], [*args, "--frontier-root", "STMT-C"]))
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            write_check_fixture(root)
+            for python_args, rust_args in cases:
+                rust_args = rust_args or python_args
+                for machine in (False, True):
+                    with self.subTest(args=python_args, json=machine):
+                        python = subprocess.run([sys.executable, str(root / "scripts" / "corpus.py"), *python_args,
+                                                 *(["--json"] if machine else [])],
+                                                capture_output=True, text=True, check=False)
+                        self.assertEqual(python.returncode, 0, python.stderr)
+                        expected = {"stdout_json": json.loads(python.stdout)} if machine else {"stdout": python.stdout}
+                        command = ["--root", root, *(["--json"] if machine else []), *rust_args]
+                        golden.record(self, command, root=root, code=0, exclude=(".cache",), env=NO_BIND_TYPES,
+                                      normalize=["bind_types", "note_mentions"], **expected)
+                        rust = subprocess.run([self.binary, *map(str, command)], capture_output=True, text=True,
+                                              check=False, env=dict(os.environ, **NO_BIND_TYPES))
+                        if rust_args[0] == "context":
+                            rust.stdout = without_bind_types(rust.stdout)
+                        self.assertEqual(rust.returncode, 0, rust.stderr)
+                        if machine:
+                            actual = json.loads(rust.stdout)
+                            actual.pop("input_identity", None)
+                            actual.pop("note_mentions", None)
+                            self.assertEqual(actual, expected["stdout_json"])
+                        else:
+                            self.assertEqual(without_note_mentions(rust.stdout), python.stdout)

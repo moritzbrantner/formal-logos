@@ -11,6 +11,7 @@ from pathlib import Path
 
 import corpus
 from truth_parity.check import CHECK_FAILURES, by_id, write_check_fixture
+from truth_parity import golden
 from truth_parity.common import U, ParityCase
 
 
@@ -40,7 +41,10 @@ class TruthNavigationParity(ParityCase):
                               capture_output=True, text=True, check=False)
 
     def assert_same(self, root, *args, rust_args=None):
-        python, rust = python_cli(root, *args), self.truth(root, *(rust_args or args))
+        python = python_cli(root, *args)
+        golden.record(self, ["--root", root, *(rust_args or args)], root=root, code=python.returncode,
+                      stdout=python.stdout, stderr=python.stderr)
+        rust = self.truth(root, *(rust_args or args))
         self.assertEqual((rust.returncode, rust.stdout, rust.stderr),
                          (python.returncode, python.stdout, python.stderr), args)
         return python
@@ -81,6 +85,8 @@ class TruthNavigationParity(ParityCase):
                 self.assertIn("floor / needs-owner-decision: decide A", text)
                 self.assertIn("    verified results: ", text)
                 python = python_cli(root, "next-steps", "--json", "--root", token)
+                golden.record(self, ["--root", root, "--json", "next-steps", "--frontier-root", token], root=root,
+                              code=0, stdout_json=json.loads(python.stdout))
                 machine = json.loads(self.truth(root, "--json", "next-steps", "--frontier-root", token).stdout)
                 machine.pop("input_identity")
                 self.assertEqual(machine, json.loads(python.stdout))
@@ -115,7 +121,12 @@ class TruthNavigationParity(ParityCase):
             compact = sorted((python_root / "corpus" / "sources").glob("*.json"))[-1]
             compact.write_text(json.dumps(json.loads(compact.read_text()), ensure_ascii=False) + "\n")
             shutil.copytree(python_root, rust_root)
-            python, rust = python_cli(python_root, "sort-lists"), self.truth(rust_root, "sort-lists")
+            python = python_cli(python_root, "sort-lists")
+            golden.record(self, ["--root", rust_root, "sort-lists"], root=rust_root, code=python.returncode,
+                          stdout=python.stdout.replace(str(python_root), str(rust_root)), stderr="",
+                          files={str(rust_root / path.relative_to(python_root)): path.read_text()
+                                 for path in sorted((python_root / "corpus").rglob("*.json"))})
+            rust = self.truth(rust_root, "sort-lists")
             self.assertEqual((rust.returncode, rust.stdout, rust.stderr), (python.returncode, python.stdout, ""))
             self.assertEqual(python.stdout.count("sorted edition_urns in corpus/sources/"), 2)
             for path in sorted((python_root / "corpus").rglob("*.json")):

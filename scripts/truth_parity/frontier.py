@@ -6,6 +6,7 @@ import tempfile
 from pathlib import Path
 
 import corpus
+from truth_parity import golden
 from truth_parity.common import U, migrate, humanize, migrated_revision, ParityCase
 from truth_parity.thickness import thickness_fixture
 
@@ -136,6 +137,19 @@ class TruthFrontierParity(ParityCase):
         text as the Python CLI prints it (uuids humanized)."""
         restricted = corpus.restrict_to_root(copy.deepcopy(full))
         for flags, report in (([], full), (["--reaching-root"], restricted)):
+            if checkout is not None:
+                without = {key: value for key, value in report.items() if key != "next_steps"}
+                for extra, expected in (
+                    ([], {"stdout_json": report}),
+                    (["text"], {"stdout": humanize(corpus.format_frontier(without), checkout) + "\n"}),
+                    (["--routes"], {"stdout_json": report["routes"]}),
+                    (["text", "--routes"],
+                     {"stdout": humanize(corpus.format_routes(report["routes"]), checkout) + "\n"}),
+                ):
+                    machine = [] if extra[:1] == ["text"] else ["--json"]
+                    routes = ["--routes"] if "--routes" in extra else []
+                    golden.record(self, [*machine, *args, "frontier", *routes, *flags], root=checkout, code=0,
+                                  **expected)
             self.assertEqual(self.json_truth(*args, "frontier", *flags), report, flags)
             without = {key: value for key, value in report.items() if key != "next_steps"}
             self.assertEqual(self.run_truth(*args, "frontier", *flags),
@@ -206,6 +220,7 @@ class TruthFrontierParity(ParityCase):
             self.assertTrue(cycle_item["ungrounded_cycle"])
             unknown = python_frontier(root, "NOT-A-STATEMENT")
             unknown_args = ["--root", str(root), "--frontier-root", "NOT-A-STATEMENT"]
+            golden.record(self, ["--json", *unknown_args, "frontier"], root=root, code=0, stdout_json=unknown)
             self.assertEqual(self.json_truth(*unknown_args, "frontier"), unknown)
 
     def test_usage(self):
