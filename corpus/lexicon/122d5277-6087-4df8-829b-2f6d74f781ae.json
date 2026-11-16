@@ -1,0 +1,16 @@
+{
+  "id": "122d5277-6087-4df8-829b-2f6d74f781ae",
+  "label": "goodness (technical)",
+  "lemma": "goodness",
+  "class": "technical",
+  "definition_ids": [
+    "4c8f0e6b-7ef6-5be5-851c-cdf4f0301546",
+    "68191121-85f6-5bce-b32e-1900c8b52f57",
+    "a47c7b40-a5da-54f6-ab18-a2f82e7b2efd",
+    "e2f5a593-68e8-57a2-8d45-f02fb0c9ffc3"
+  ],
+  "disambiguation_ids": [
+    "f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"
+  ],
+  "note": "GOODNESS_AS_UNRESTRICTED_ACTUALITY_DUE_ACTUALITY: good as actuality, as due actuality, as ultimate due perfection, or as a moral or welfare ascription."
+}

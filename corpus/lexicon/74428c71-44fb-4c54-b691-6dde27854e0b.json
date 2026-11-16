@@ -1,0 +1,16 @@
+{
+  "id": "74428c71-44fb-4c54-b691-6dde27854e0b",
+  "label": "abstract (technical)",
+  "lemma": "abstract",
+  "class": "technical",
+  "definition_ids": [
+    "632ad5ee-e94f-574d-bb37-c02b774984f4",
+    "7fb33727-84fc-5003-bba6-3000e624d343",
+    "d4feb449-8b67-4dbc-84c6-bd9e749ea67f",
+    "d609a32e-8479-511d-85d6-c10d864dc85c"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ],
+  "note": "CONCRETE_AND_ABSTRACT: no esse in re (adopted), and the rival abstraction-function, Fregean and quotient-value criteria."
+}

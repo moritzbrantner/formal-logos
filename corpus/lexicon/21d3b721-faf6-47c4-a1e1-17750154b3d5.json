@@ -1,0 +1,14 @@
+{
+  "id": "21d3b721-faf6-47c4-a1e1-17750154b3d5",
+  "label": "divine (technical)",
+  "lemma": "divine",
+  "class": "technical",
+  "definition_ids": [
+    "496721fc-6313-5941-81b1-78caf9658520",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807"
+  ],
+  "disambiguation_ids": [
+    "852f282b-a69b-52f3-9d61-e7acadf0d8a7"
+  ],
+  "note": "Of God: the divine being (IsGod) or a divine person (GOD_AS_DIVINE_BEING_VERSUS_DIVINE)."
+}

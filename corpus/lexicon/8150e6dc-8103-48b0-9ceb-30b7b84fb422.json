@@ -1,0 +1,15 @@
+{
+  "id": "8150e6dc-8103-48b0-9ceb-30b7b84fb422",
+  "label": "actualize (technical)",
+  "lemma": "actualize",
+  "class": "technical",
+  "forms": [
+    "actualized",
+    "actualizes",
+    "actualizing"
+  ],
+  "definition_ids": [
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43"
+  ],
+  "note": "To reduce from potency to act, as in MOTION_1."
+}

@@ -1,0 +1,14 @@
+{
+  "id": "849f01f4-1a37-41ab-9d65-d10619acc3ce",
+  "label": "dependence (technical)",
+  "lemma": "dependence",
+  "class": "technical",
+  "definition_ids": [
+    "5d9a94e0-d64b-53ca-b9cc-504735060e0a",
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f"
+  ],
+  "disambiguation_ids": [
+    "23dd6f32-b456-4963-adb3-7befbf0dc4fb"
+  ],
+  "note": "Dependence for being and strict ground (DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND). The error dependence of assertion models is a separate term."
+}

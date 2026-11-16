@@ -1,0 +1,10 @@
+{
+  "id": "04039adb-f06e-4984-9a7e-0eb232309207",
+  "label": "locomotion (technical)",
+  "lemma": "locomotion",
+  "class": "technical",
+  "definition_ids": [
+    "315fb7d0-ddae-5a72-b089-e832cdf8fc66"
+  ],
+  "note": "Local, bodily motion: motion with respect to place of a body."
+}

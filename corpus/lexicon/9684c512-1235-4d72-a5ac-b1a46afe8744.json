@@ -1,0 +1,14 @@
+{
+  "id": "9684c512-1235-4d72-a5ac-b1a46afe8744",
+  "label": "efficiency (technical)",
+  "lemma": "efficiency",
+  "class": "technical",
+  "definition_ids": [
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "8934912c-7997-4af7-9520-ec94ff221043"
+  ],
+  "disambiguation_ids": [
+    "57f80020-fa6f-5b69-be58-b4cf95b7226f"
+  ],
+  "note": "Efficient causality, in the senses of the efficient entry."
+}

@@ -1,0 +1,17 @@
+{
+  "id": "02b4a74b-df35-4af3-90d5-42ba203040ba",
+  "label": "eternity (technical)",
+  "lemma": "eternity",
+  "class": "technical",
+  "definition_ids": [
+    "1291944d-a8b2-54eb-899d-66bd5f8b4762",
+    "5e77da13-998f-56ab-96b7-12731ac95f70",
+    "a26cce29-0205-5671-a1b1-8ad3d962c82a",
+    "cb13f508-17f7-55b8-bf5d-52959b7a2ee5"
+  ],
+  "disambiguation_ids": [
+    "6805c9bd-fade-56d1-a034-c7a87d78c343",
+    "f561d4e4-ab8f-5d20-9926-d63a74df3b4e"
+  ],
+  "note": "ETERNAL and ETERNITY_AND_STABLE_DURATION: eternity without succession, endless duration, participated eternity; and Boethian eternity."
+}
