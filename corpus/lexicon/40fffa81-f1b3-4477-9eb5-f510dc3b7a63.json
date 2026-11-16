@@ -1,7 +1,16 @@
 {
   "id": "40fffa81-f1b3-4477-9eb5-f510dc3b7a63",
-  "label": "gunk (ordinary)",
+  "label": "gunk (technical)",
   "lemma": "gunk",
-  "class": "ordinary",
-  "gloss": "In mereology, stuff every part of which has a proper part."
+  "class": "technical",
+  "definition_ids": [
+    "416dfd08-eb27-5d9a-b2cd-fc8c7a7c2981",
+    "7c8a14ff-2189-5241-b988-626c1e1cb19e",
+    "870ea6ed-87f4-504b-bef4-51bb8c7492c1",
+    "e69257ea-29f2-5b04-b942-a2f865a5e992"
+  ],
+  "disambiguation_ids": [
+    "893a8e17-13a9-5a0d-b5e1-a9bbb9a4167f"
+  ],
+  "note": "The senses of the gunk, atomicity and physical composition disambiguation."
 }

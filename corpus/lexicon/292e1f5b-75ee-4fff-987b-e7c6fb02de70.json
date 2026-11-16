@@ -1,7 +1,10 @@
 {
   "id": "292e1f5b-75ee-4fff-987b-e7c6fb02de70",
-  "label": "supplementation (ordinary)",
+  "label": "supplementation (technical)",
   "lemma": "supplementation",
-  "class": "ordinary",
-  "gloss": "In mereology, the principle that a whole with a proper part has another part disjoint from it."
+  "class": "technical",
+  "definition_ids": [
+    "491073fa-38af-5d98-a6b8-77bf9c472525"
+  ],
+  "note": "Weak and strong mereological supplementation (DEF-MEREOLOGICAL-SUPPLEMENTATION)."
 }
