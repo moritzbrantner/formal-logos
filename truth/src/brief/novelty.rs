@@ -284,6 +284,7 @@ pub fn novelty(
                 continue;
             }
             let mut value = retrieval::issue_header(issue);
+            retrieval::attach_successors(&mut value, issue, snapshot);
             let kind = value["kind"].as_str().unwrap_or_default().to_owned();
             value["evidence"] = json!(evidence_kind(&kind));
             value["coverage"] = json!([best.0, total]);
@@ -463,7 +464,10 @@ fn hit_lines(lines: &mut Vec<String>, hit: &Value, aliases: &crate::identity::Al
             }
         }
     };
-    let mut line = format!("  {kind}{coverage} {place}");
+    let mut line = format!(
+        "  {kind}{coverage} {place}{}",
+        retrieval::successor_text(hit)
+    );
     if let Some(via) = hit["via"].as_str() {
         line.push_str(&format!(" — {via}"));
     }

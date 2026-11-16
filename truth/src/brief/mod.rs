@@ -214,9 +214,11 @@ fn refutation_status(inputs: &Inputs, relation: &str) -> Value {
 fn note_evidence(
     inputs: &Inputs,
     ids: &BTreeSet<&str>,
+    theorems: &[String],
 ) -> Result<(Vec<Value>, Vec<Value>), String> {
     let lookup = notes::Lookup::of_corpus(inputs.corpus);
-    let found = notes::mentioning(inputs.root, &lookup, ids)?;
+    let mut found = notes::mentioning(inputs.root, &lookup, ids)?;
+    found.extend(theorem_mentions(inputs.root, theorems)?);
     let mut sections: BTreeMap<String, (String, String, usize, BTreeSet<String>)> = BTreeMap::new();
     let mut order: Vec<String> = Vec::new();
     for entry in &found {
@@ -276,6 +278,57 @@ fn note_evidence(
     }
     sort_assessments(&mut assessments);
     Ok((out, assessments))
+}
+
+/// The shortest name a note uses for a result theorem: its last two
+/// components (`OriginExerciseBridge.noSelfOriginFromNoSelfProduction`);
+/// `None` for a name with fewer.
+fn theorem_needle(theorem: &str) -> Option<String> {
+    let parts: Vec<&str> = theorem.split('.').collect();
+    (parts.len() >= 2).then(|| parts[parts.len() - 2..].join("."))
+}
+
+/// Whether `text` contains `needle` as a whole dotted Lean name (a longer
+/// qualified prefix is allowed; a longer identifier is not).
+fn names_lean(text: &str, needle: &str) -> bool {
+    let ident = |c: char| c.is_alphanumeric() || c == '_' || c == '\'';
+    text.match_indices(needle).any(|(start, _)| {
+        let before = text[..start].chars().next_back();
+        let after = text[start + needle.len()..].chars().next();
+        !before.is_some_and(ident) && !after.is_some_and(|c| ident(c) || c == '.')
+    })
+}
+
+/// Note sections naming one of the target's result theorems by its Lean
+/// name (#1644): notes cite results by theorem at least as often as by
+/// record ID. Like an ID mention, a name is not an entailment or a status.
+fn theorem_mentions(root: &Path, theorems: &[String]) -> Result<Vec<Value>, String> {
+    let needles: Vec<String> = theorems.iter().filter_map(|t| theorem_needle(t)).collect();
+    if needles.is_empty() {
+        return Ok(Vec::new());
+    }
+    let mut out = Vec::new();
+    for (path, bytes) in notes::read_all(root)? {
+        let note = notes::parse(&path, &String::from_utf8_lossy(&bytes));
+        for section in &note.sections {
+            for (offset, line) in section.body.lines().enumerate() {
+                for needle in &needles {
+                    if names_lean(line, needle) {
+                        out.push(json!({
+                            "path": note.path,
+                            "section": note.key(section),
+                            "heading": section.heading,
+                            "line": retrieval::body_line(section) + offset,
+                            "kind": "results",
+                            "mention": needle,
+                            "how": "lean_theorem",
+                        }));
+                    }
+                }
+            }
+        }
+    }
+    Ok(out)
 }
 
 fn superseded(raw: &str, path: &str) -> Vec<Value> {
@@ -404,6 +457,7 @@ fn issue_evidence(
         if !reasons.is_empty() {
             let mut header = retrieval::issue_header(issue);
             header["reasons"] = json!(reasons);
+            retrieval::attach_successors(&mut header, issue, snapshot);
             out.push(header);
         }
     }
@@ -587,7 +641,12 @@ pub fn statement_brief(
             }
         }
     }
-    let (note_sections, assessments) = note_evidence(inputs, &mention_ids)?;
+    let theorems: Vec<String> = concluding
+        .iter()
+        .flat_map(|argument| argument["results"].as_array().cloned().unwrap_or_default())
+        .filter_map(|result| result["theorem"].as_str().map(str::to_owned))
+        .collect();
+    let (note_sections, assessments) = note_evidence(inputs, &mention_ids, &theorems)?;
     let referenced = note_references(inputs.root, &note_sections);
     let issues = issue_evidence(inputs, Some(sid), &mention_ids, &referenced)?;
     let related = crate::related::related(corpus, sid, 6)
@@ -732,7 +791,7 @@ pub struct NoteScore {
     pub paragraphs: Vec<ParagraphHit>,
 }
 
-/// Scores every paragraph of the notes at `paths` against `query`, with
+/// Scores every heading and paragraph of the notes at `paths` against `query`, with
 /// each note's own notation (`D(x,y)` for `DependsForBeing x y`).
 pub fn score_notes(root: &Path, query: &Query, paths: &[String]) -> Vec<NoteScore> {
     let mut out = Vec::new();
@@ -744,9 +803,15 @@ pub fn score_notes(root: &Path, query: &Query, paths: &[String]) -> Vec<NoteScor
         let aliases = retrieval::note_aliases(&raw);
         let mut paragraphs = Vec::new();
         for section in &note.sections {
-            for (line, paragraph) in
-                retrieval::paragraphs(&section.body, retrieval::body_line(section))
-            {
+            // A heading is a unit of its own: a note titled for the
+            // question ("What weak explanatory coverage actually adds")
+            // need not repeat it in one body paragraph (#1644).
+            let heading =
+                (!section.heading.is_empty()).then(|| (section.line, section.heading.clone()));
+            for (line, paragraph) in heading.into_iter().chain(retrieval::paragraphs(
+                &section.body,
+                retrieval::body_line(section),
+            )) {
                 let matched = query.matched(&paragraph, &aliases);
                 if retrieval::coverage(&matched).0 == 0 {
                     continue;
@@ -861,6 +926,14 @@ pub fn question_brief(
     let scores = score_notes(inputs.root, &query, &paths);
     let total = query.items.len();
     let half = total.div_ceil(2).max(1);
+    // A note whose own title covers at least half of the question (and two
+    // items) is the investigation dedicated to it (#1644): it ranks before
+    // long notes that touch the question in more paragraphs.
+    let none = BTreeMap::new();
+    let dedicated = |score: &NoteScore| {
+        let covered = retrieval::coverage(&query.matched(&score.note.title, &none)).0;
+        covered >= 2 && covered >= half
+    };
     let mut ranked: Vec<(usize, usize, &NoteScore)> = scores
         .iter()
         .map(|score| {
@@ -880,7 +953,9 @@ pub fn question_brief(
         .filter(|(best, ..)| *best > 0)
         .collect();
     ranked.sort_by(|a, b| {
-        b.0.cmp(&a.0)
+        dedicated(b.2)
+            .cmp(&dedicated(a.2))
+            .then(b.0.cmp(&a.0))
             .then(b.1.cmp(&a.1))
             .then_with(|| a.2.note.path.cmp(&b.2.note.path))
     });
@@ -889,7 +964,15 @@ pub fn question_brief(
     let mut anchors: BTreeMap<String, (String, usize)> = BTreeMap::new();
     let mut changed_by: BTreeMap<u64, Vec<String>> = BTreeMap::new();
     let lookup = notes::Lookup::of_corpus(inputs.corpus);
+    let mut titled_for: BTreeMap<u64, Vec<String>> = BTreeMap::new();
     for (best, strong, score) in ranked.iter().take(limit.max(1) * 2) {
+        // The issue a matched note is titled for (`… (#1584)`).
+        for number in retrieval::issue_references(&score.note.title) {
+            let paths = titled_for.entry(number).or_default();
+            if !paths.contains(&score.note.path) {
+                paths.push(score.note.path.clone());
+            }
+        }
         let mut hits: Vec<&ParagraphHit> = score.paragraphs.iter().collect();
         hits.sort_by(|a, b| b.covered().cmp(&a.covered()).then(a.line.cmp(&b.line)));
         let strong_sections: BTreeSet<&str> = hits
@@ -980,8 +1063,11 @@ pub fn question_brief(
         inputs,
         &query,
         &anchor_ids,
-        &referenced,
-        &changed_by,
+        &NoteLinks {
+            referenced: &referenced,
+            titled_for: &titled_for,
+            changed_by: &changed_by,
+        },
         &note_paths,
         limit,
     );
@@ -1077,20 +1163,33 @@ fn referenced_ranked(referenced: &BTreeMap<u64, Vec<String>>) -> Vec<Value> {
         .collect()
 }
 
+/// How the matched notes point at snapshot items: issue numbers their
+/// strong sections reference, numbers in their titles, and the PRs that
+/// changed them.
+struct NoteLinks<'a> {
+    referenced: &'a BTreeMap<u64, Vec<String>>,
+    titled_for: &'a BTreeMap<u64, Vec<String>>,
+    changed_by: &'a BTreeMap<u64, Vec<String>>,
+}
+
 /// Snapshot items for a question, by evidence weight: referenced by number
-/// from a matched note section or a PR that changed a matched note (3
-/// each), naming a matched note (2), naming a statement those notes name
+/// from a matched note section, named in a matched note's title, or a PR
+/// that changed a matched note (3 each), naming a matched note (2), naming a statement those notes name
 /// (1), and lexical coverage of at least half the query (1). At most
 /// `limit * 5` are returned, with the total.
 fn question_issues(
     inputs: &Inputs,
     query: &Query,
     anchors: &BTreeSet<&str>,
-    referenced: &BTreeMap<u64, Vec<String>>,
-    changed_by: &BTreeMap<u64, Vec<String>>,
+    links: &NoteLinks,
     note_paths: &[String],
     limit: usize,
 ) -> (Vec<Value>, usize) {
+    let NoteLinks {
+        referenced,
+        titled_for,
+        changed_by,
+    } = links;
     let Some(snapshot) = inputs.issues.snapshot() else {
         return (Vec::new(), 0);
     };
@@ -1110,6 +1209,10 @@ fn question_issues(
             reasons.push(
                 json!({"why": "referenced by number from a matched note section", "where": places}),
             );
+        }
+        if let Some(paths) = titled_for.get(&number) {
+            weight += 3;
+            reasons.push(json!({"why": "the issue a matched note is titled for", "notes": paths}));
         }
         if let Some(paths) = changed_by.get(&number) {
             weight += 3;
@@ -1179,6 +1282,7 @@ fn question_issues(
             header["reasons"] = json!(reasons);
             header["weight"] = json!(weight);
             header["best_coverage"] = json!([best.0, total]);
+            retrieval::attach_successors(&mut header, issue, snapshot);
             out.push((weight, best.0, number, header));
         }
     }
@@ -1273,12 +1377,13 @@ fn issue_lines(lines: &mut Vec<String>, issues: &Value, limit: usize) {
             })
             .collect();
         lines.push(format!(
-            "  #{} [{} {}] {} — {}",
+            "  #{} [{} {}] {} — {}{}",
             issue["number"],
             issue["kind"].as_str().unwrap_or_default(),
             issue["state"].as_str().unwrap_or("unknown"),
             clip(&issue["title"], 80),
-            reasons.join("; ")
+            reasons.join("; "),
+            retrieval::successor_text(issue)
         ));
     }
     let total = issues["matched_total"]
