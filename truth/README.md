@@ -33,9 +33,12 @@ python3 scripts/verify_truth_cli.py target/debug/truth
 
 CI runs the `truth-cli` job (format, Clippy, tests and the Python/Rust parity
 script, about 16 minutes) only when the exact-head impact plan
-(`scripts/affected_results.py select`) selects a full run: a change to Rust,
-Cargo, `scripts/`, CI or another unclassified input, a formal change pushed to
-`main`, and the nightly and manual runs. A PR that changes only corpus data,
+(`scripts/affected_results.py select`) selects it: a change to this crate,
+the root Cargo workspace, `scripts/truth_parity/` or `scripts/verify_truth_cli.py`
+(the "tooling" kind, which selects no Comparator results but keeps the corpus,
+Lean binding, explorer and report checks that run the CLI on the real corpus),
+or a full run: other `scripts/`, CI or another unclassified input, a formal
+change pushed to `main`, and the nightly and manual runs. A PR that changes only corpus data,
 result records, Lean modules or prose changes neither implementation and skips
 it; corpus-driven divergence is caught on the next `main` run.
 

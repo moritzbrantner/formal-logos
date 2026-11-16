@@ -90,7 +90,11 @@ Comparator (check 1) runs on a PR only for the results the diff can affect
 whose Challenge or Solution module, or any `TruthCore` module either imports
 transitively, changed. A change to the toolchain, the Lake files, the verifier
 scripts or pins, `verifier/`, any tooling script or a workflow selects every
-result, as does an unknown input or an unavailable exact diff. Every formal/corpus change on `main`, a nightly
+result, as does an unknown input or an unavailable exact diff. A change only to
+the Rust `truth` CLI crate, the root Cargo workspace or its parity harness
+(`scripts/truth_parity/`, `scripts/verify_truth_cli.py`) selects no result,
+since the Comparator path never runs `truth`; the CLI parity, corpus, binding,
+explorer and report checks still run. Every formal/corpus change on `main`, a nightly
 scheduled run and any manual run verify every result, split across parallel
 shards (`scripts/verify-all.sh --shard INDEX/COUNT`).
 
