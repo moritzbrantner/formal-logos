@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
-"""Compare the Rust CLI with the existing Python corpus readers: the
-structural view (`status`, `inspect`), `thickness [--queue]`, `check`,
-`frontier`, `frontier-diff`, `thickness --base` and `orphans --base`
-(against `scripts/orphan_summary.py`), the research navigation commands
-`related`, `dossier` and `context`, `next`, `next-steps`, `arguments`,
-`results`, `sort-lists`, `configurations` (registered, and live through a
-recorded toolchain with `configuration-report` and `models --check /
---argument / --verify`), `models` and `territory`, `senses` (against
-`scripts/sense_index.py`), `bridge-experiments`, `bind-check` (from recorded
-BindTypes output), `unused-premises`,
-`lean-reuse` and `context --proof-use` (from recorded UnusedPremises and
-LeanReuse output), `structure`/`structure-report` (from recorded
-PropositionStructure output), `strength-comparisons`/`strength-report` (from
-recorded BindTypes, CheckStrength and PropositionStructure output), `issues`
-with `dossier --issues-from`, `attribution-check` and `index` (against
-`scripts/research_index.py`).
+"""Compare the Rust CLI with the Python corpus code that remains until #954
+slice R3: the structural view (`status`, `inspect`, `bridges`) against the
+Python loaders, `check` (kept for `scripts/merge_queue.py`), `frontier` and
+`frontier-diff` (the Python frontier is the base-revision engine of
+`truth frontier-diff`, `thickness --base` and `orphans --base` when a
+revision's `corpus.py` differs), `configuration-report` (live through a
+recorded toolchain), `structure`/`structure-report` (from recorded
+PropositionStructure output) and `strength-comparisons`/`strength-report`
+(from recorded BindTypes, CheckStrength and PropositionStructure output).
+
+The commands retired from Python in #954 R2 (navigation, gates and research:
+`next`, `next-steps`, `thickness`, `related`, `dossier`, `context`, `issues`,
+`bind-check`, `unused-premises`, `lean-reuse`, `attribution-check`,
+`configurations`, `models`, `territory`, `bridge-experiments`, `senses`,
+`index`, `orphans --base`, ...) have no Python oracle any more: their frozen
+golden snapshots under `truth/tests/golden/` (`cargo test -p truth --test
+golden`) carry it.
 
 The tests live in the `truth_parity` package, one module per command; this
 file is the entry point CI runs.
@@ -27,23 +28,11 @@ from pathlib import Path
 
 from truth_parity.common import ParityCase
 from truth_parity.structure import TruthParity  # noqa: F401
-from truth_parity.thickness import TruthThicknessParity  # noqa: F401
 from truth_parity.frontier import TruthFrontierParity  # noqa: F401
-from truth_parity.research import TruthResearchParity, TruthResearchFixtureParity  # noqa: F401
 from truth_parity.check import TruthCheckParity  # noqa: F401
-from truth_parity.issues import TruthIssuesParity  # noqa: F401
-from truth_parity.navigation import TruthNavigationParity  # noqa: F401
-from truth_parity.configurations import TruthConfigurationParity  # noqa: F401
 from truth_parity.configuration_report import TruthConfigurationReportParity  # noqa: F401
-from truth_parity.bind_check import TruthBindCheckParity  # noqa: F401
 from truth_parity.proposition_structure import TruthStructureParity  # noqa: F401
-from truth_parity.proof_use import TruthProofUseParity  # noqa: F401
-from truth_parity.revisions import TruthRevisionParity  # noqa: F401
 from truth_parity.strength import TruthStrengthParity  # noqa: F401
-from truth_parity.attribution import TruthAttributionParity  # noqa: F401
-from truth_parity.index import TruthIndexParity  # noqa: F401
-from truth_parity.senses import TruthSensesParity  # noqa: F401
-from truth_parity.bridge_experiments import TruthBridgeExperimentsParity  # noqa: F401
 
 
 if __name__ == "__main__":

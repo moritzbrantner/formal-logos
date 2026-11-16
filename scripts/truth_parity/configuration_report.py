@@ -1,5 +1,7 @@
-"""`truth configuration-report`, live `configurations` and `models --check /
---argument / --verify` against `corpus.py` (#954 slice A6), with no Lean.
+"""`truth configuration-report` against `corpus.py` (#954 slice A6), with no
+Lean. Live `configurations` and `models --check / --argument / --verify` left
+Python in R2; their frozen golden cases stay in
+`truth/tests/golden/configuration_report/test_live_commands_and_failures.json`.
 
 Both implementations run on the configuration fixture checkout with a
 recorded toolchain on PATH: a `lake` that answers `lake build`, prints the
@@ -9,6 +11,7 @@ describes the fixture theorems as `scripts/BindTypes.lean` would, plus a
 compares the Lean/verifier calls as well as the outputs: the written bundle
 byte for byte (Rust adds only `producer.producer_sha256`), freshness errors,
 and every failure message and exit code."""
+import copy
 import json
 import os
 import re
@@ -20,7 +23,51 @@ from pathlib import Path
 from truth_parity import golden
 from truth_parity.check import write_check_fixture
 from truth_parity.common import U, ParityCase
-from truth_parity.configurations import configuration_records
+from truth_parity.check import check_records
+
+def configuration_records():
+    """The `check` fixture plus a case with an incompatibility core, an
+    implication rule, a fixed constant one model binds differently, two
+    models whose violations co-fail, a model that satisfies a certified
+    refutation core (a territory defect) and a result for that refutation."""
+    records = check_records()
+    lean = "TruthCore.Fix."
+    records["results"].append({"id": "RES-AD", "argument_id": "ARG-AD", "challenge_module": lean + "Challenge",
+                               "solution_module": lean + "Solution", "theorem": lean + "fixAB",
+                               "comparator_config": "results/RES-AD/comparator.json", "status": "verified"})
+
+    def model(mid, constant, evaluations):
+        return {"id": mid, "description": "d", "vocabulary": "fix", "lean_declaration": lean + "model",
+                "modules": [lean + "Solution"], "bindings": {"W": "Bool", "V": constant},
+                "carriers": [{"binding": "W", "theorem": lean + "enum", "elements": ["true", "false"]}],
+                "evaluations": [{"statement_id": sid, "value": value, "theorem": lean + "eval", "arguments": ["W"]}
+                                for sid, value in evaluations]}
+
+    records["models"] = [
+        model("MODEL-FIX", "Bool", [("STMT-A", "satisfies"), ("STMT-B", "violates"), ("STMT-D", "violates")]),
+        model("MODEL-NAT", "Nat", [("STMT-A", "satisfies"), ("STMT-B", "violates"), ("STMT-D", "violates"),
+                                   ("STMT-E", "satisfies")]),
+        model("MODEL-B", "Bool", [("STMT-A", "satisfies"), ("STMT-B", "satisfies"), ("STMT-C", "satisfies"),
+                                ("STMT-D", "satisfies")]),
+    ]
+    case = records["configurations"][0]
+    case["semantics"].update(constants={"V": "Bool"},
+                             applications={sid: ["W"] for sid in ("STMT-A", "STMT-B", "STMT-C")})
+    case["configurations"] = [{"id": "base", "statement_ids": ["STMT-A"]},
+                              {"id": "pair", "statement_ids": ["STMT-B", "STMT-A"]},
+                              {"id": "consequent", "statement_ids": ["STMT-C", "STMT-B"]},
+                              {"id": "empty", "statement_ids": []}]
+    case["incompatibility_result_ids"] = ["RES-AB"]
+    case["implication_result_ids"] = ["RES-BC"]
+    case["model_bindings"] = [{"model_id": mid, "parameters": {"W": "W", "V": "V"}}
+                              for mid in ("MODEL-FIX", "MODEL-NAT", "MODEL-B")]
+    second = copy.deepcopy(case)
+    second.update(id="CONFIG-SECOND", seed_statement_id="STMT-B", incompatibility_result_ids=[],
+                  implication_result_ids=[])
+    records["configurations"].append(second)
+    return records
+
+
 
 FAKE_LAKE = r'''#!/usr/bin/env python3
 """Recorded Lean for the configuration parity fixture."""
@@ -342,27 +389,18 @@ class TruthConfigurationReportParity(ParityCase):
             # Rust refuses an output outside .cache before verifying; Python after.
             self.assert_same(root, ["configuration-report", "--output", "outside.json"], code=2, same_calls=False)
 
-    def test_live_commands_and_failures(self):
+    def test_live_report_failures(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             write_fixture(root)
-            statement, argument = U("statement", "STMT-A"), U("argument", "ARG-AB")
-            for argv in (["configurations"], ["configurations", "--json"],
-                         ["configurations", "--case", "CONFIG-SECOND", "--premise", "STMT-C", "--premise", "STMT-A"],
-                         ["models", "--verify"], ["models", "--check", statement], ["models", "--check", "STMT-A", "--json"],
-                         ["models", "--argument", argument], ["models", "--argument", "ARG-AB", "--json"],
-                         ["models", "--argument", "ARG-AB", "--premise", "STMT-D"]):
-                with self.subTest(argv=argv):
-                    calls = self.assert_same(root, argv, compare=self.json_equal if "--json" in argv else None)
-                    self.assertTrue(calls, argv)
-            for argv in (["models", "--argument", "ARG-NONE"], ["models", "--argument", "ARG-AB", "--check", "STMT-C"],
-                         ["models", "--check", "STMT-NONE"], ["models", "--premise", "STMT-A"]):
-                with self.subTest(error=argv):
-                    self.assert_same(root, argv, code=2)
-            # Failures at every Lean step, in both commands.
+            # `configurations` and `models` left Python in #954 R2: their
+            # frozen golden cases (truth/tests/golden/configuration_report/
+            # test_live_commands_and_failures.json) cover them; this compares
+            # the live `configuration-report` path, which stays until R3.
+            # Failures at every Lean step.
             for fail in ("build", "ConfigurationCertificates", "axioms", "verify", "FiniteModelCertificates",
                          "ConfigurationCompositions", "bind"):
-                for argv in (["configurations"], ["configuration-report", "--output", ".cache/out.json"]):
+                for argv in (["configuration-report", "--output", ".cache/out.json"],):
                     with self.subTest(fail=fail, argv=argv):
                         self.assert_same(root, argv, code=2, fail=fail)
                         self.assertFalse((root / ".cache" / "out.json").exists())
@@ -370,12 +408,12 @@ class TruthConfigurationReportParity(ParityCase):
             with tempfile.TemporaryDirectory() as other:
                 defective = Path(other)
                 write_fixture(defective, defect=True)
-                for argv in (["configurations"], ["configuration-report", "--output", ".cache/out.json"]):
+                for argv in (["configuration-report", "--output", ".cache/out.json"],):
                     with self.subTest(defect=argv):
                         self.assert_same(defective, argv, code=2)
             # No `lake` at all.
             bare = os.pathsep.join(entry for entry in os.environ["PATH"].split(os.pathsep)
                                    if not (Path(entry) / "lake").exists())
-            for argv in (["configurations"], ["models", "--verify"]):
+            for argv in (["configuration-report", "--output", ".cache/out.json"],):
                 with self.subTest(no_lake=argv):
                     self.assert_same(root, argv, code=2, path=bare)

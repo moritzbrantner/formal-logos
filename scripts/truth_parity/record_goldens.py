@@ -5,7 +5,9 @@
 
 runs every fixture parity test (all but the real-corpus ones: test names
 containing `real` and classes marked `real_corpus_only`) with recording on (`golden.record`), then, only if every
-test passed, rewrites `truth/tests/golden/` from the Python outputs. The
+test passed, rewrites the files of the recorded tests under `truth/tests/golden/`
+from the Python outputs; files of tests whose Python oracle retired (#954 R2)
+stay frozen. The
 Rust binary is needed because the recording run is the ordinary parity run:
 a case is written only when Rust and Python agree on it today. Replay them
 with `cargo test --locked -p truth --test golden`. See `golden.py` for the

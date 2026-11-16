@@ -28,10 +28,32 @@ import tempfile
 from pathlib import Path
 
 import corpus
-from truth_parity.bind_check import described
 from truth_parity.check import by_id, write_check_fixture
 from truth_parity import golden
 from truth_parity.common import U, ParityCase
+
+FIX = "TruthCore.Fix."
+
+
+def hyp(name, decl, senses=(), **extra):
+    """A propositional binder whose type has head `TruthCore.Fix.<decl>`."""
+    head = decl if decl is None or "." in decl or decl in ("Exists", "Not") else FIX + decl
+    return {"name": name, "prop": True, "head": head, "type": extra.pop("type", decl), "senses": list(senses), **extra}
+
+
+def outcome(decl, senses=(), **extra):
+    return hyp("", decl, senses, **extra) | {"name": None}
+
+
+def described():
+    """The exporter output for the fixture's two results, as Lean prints it."""
+    return [
+        {"theorem": FIX + "fixAB", "binders": [hyp("h", "fixA")], "result": outcome("fixB", [FIX + "fixB"])},
+        {"theorem": FIX + "fixBC", "binders": [hyp("h", "fixB", [FIX + "fixB"])], "result": outcome("fixC")},
+        {"sense_aliases": {}},
+    ]
+
+
 
 FIX = "TruthCore.Fix."
 
