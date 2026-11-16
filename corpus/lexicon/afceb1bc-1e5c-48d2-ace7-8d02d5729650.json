@@ -1,0 +1,7 @@
+{
+  "id": "afceb1bc-1e5c-48d2-ace7-8d02d5729650",
+  "label": "Acc (name)",
+  "lemma": "Acc",
+  "class": "name",
+  "gloss": "Lean's accessibility predicate Acc, whose instances give well-founded descent along a relation."
+}

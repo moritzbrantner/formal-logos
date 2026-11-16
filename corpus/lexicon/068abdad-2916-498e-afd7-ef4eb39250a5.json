@@ -3,5 +3,8 @@
   "label": "index (ordinary)",
   "lemma": "index",
   "class": "ordinary",
+  "forms": [
+    "indices"
+  ],
   "gloss": "A label or number that picks out an item."
 }

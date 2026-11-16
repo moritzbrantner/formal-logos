@@ -1,0 +1,7 @@
+{
+  "id": "d0ae11d5-c769-4bea-8350-53ef5fd2ec61",
+  "label": "hash (ordinary)",
+  "lemma": "hash",
+  "class": "ordinary",
+  "gloss": "A fixed-length digest computed from data, used to detect changes."
+}

@@ -1,0 +1,7 @@
+{
+  "id": "60508c84-0cf2-4f73-9c9c-c3bf480af261",
+  "label": "kernel (ordinary)",
+  "lemma": "kernel",
+  "class": "ordinary",
+  "gloss": "The Lean kernel, which checks every proof term."
+}

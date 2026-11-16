@@ -1,0 +1,7 @@
+{
+  "id": "faff4900-65e2-46c3-8545-8edca4f45419",
+  "label": "inhabitedness (ordinary)",
+  "lemma": "inhabitedness",
+  "class": "ordinary",
+  "gloss": "Being nonempty; a Lean type is inhabited when it has an element."
+}

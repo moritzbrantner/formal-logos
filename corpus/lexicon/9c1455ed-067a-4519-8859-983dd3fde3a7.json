@@ -1,0 +1,7 @@
+{
+  "id": "9c1455ed-067a-4519-8859-983dd3fde3a7",
+  "label": "walk (ordinary)",
+  "lemma": "walk",
+  "class": "ordinary",
+  "gloss": "In a graph, a sequence of edges, each starting where the previous one ends."
+}

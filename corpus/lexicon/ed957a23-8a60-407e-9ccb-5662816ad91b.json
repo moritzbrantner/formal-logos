@@ -1,0 +1,7 @@
+{
+  "id": "ed957a23-8a60-407e-9ccb-5662816ad91b",
+  "label": "service (ordinary)",
+  "lemma": "service",
+  "class": "ordinary",
+  "gloss": "A program offering functions to clients, as the local Lean preview service."
+}

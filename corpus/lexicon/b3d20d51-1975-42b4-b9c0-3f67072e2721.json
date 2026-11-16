@@ -1,0 +1,7 @@
+{
+  "id": "b3d20d51-1975-42b4-b9c0-3f67072e2721",
+  "label": "Codex (name)",
+  "lemma": "Codex",
+  "class": "name",
+  "gloss": "An automated code reviewer used on pull requests, and its working branches."
+}

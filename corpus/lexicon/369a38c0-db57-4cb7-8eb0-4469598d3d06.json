@@ -1,0 +1,7 @@
+{
+  "id": "369a38c0-db57-4cb7-8eb0-4469598d3d06",
+  "label": "compilation (ordinary)",
+  "lemma": "compilation",
+  "class": "ordinary",
+  "gloss": "Translating and checking source code, as Lean compiling a module."
+}

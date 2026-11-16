@@ -1,0 +1,7 @@
+{
+  "id": "7df930be-c90b-4e54-acb5-a559a436ee8e",
+  "label": "pretty-printer (ordinary)",
+  "lemma": "pretty-printer",
+  "class": "ordinary",
+  "gloss": "The part of Lean that prints terms and declarations for display."
+}

@@ -1,0 +1,7 @@
+{
+  "id": "241f7ab9-5956-4d73-aa4b-578667d917d8",
+  "label": "definitionally (ordinary)",
+  "lemma": "definitionally",
+  "class": "ordinary",
+  "gloss": "By definition; in Lean, by unfolding definitions."
+}

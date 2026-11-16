@@ -1,0 +1,7 @@
+{
+  "id": "33159028-4518-428b-bc0f-45b5b6d699a5",
+  "label": "Fin (name)",
+  "lemma": "Fin",
+  "class": "name",
+  "gloss": "Lean's type Fin n of the natural numbers below n."
+}

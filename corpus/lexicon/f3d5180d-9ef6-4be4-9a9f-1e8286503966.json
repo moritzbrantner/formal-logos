@@ -3,5 +3,8 @@
   "label": "maximum (ordinary)",
   "lemma": "maximum",
   "class": "ordinary",
+  "forms": [
+    "maxima"
+  ],
   "gloss": "The greatest element of an order or set."
 }

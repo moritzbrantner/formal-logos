@@ -1,0 +1,7 @@
+{
+  "id": "9b2fa408-87e1-4e2a-8511-9c2f8b4d023b",
+  "label": "decidable (ordinary)",
+  "lemma": "decidable",
+  "class": "ordinary",
+  "gloss": "Able to be decided by an algorithm or, in Lean, by a Decidable instance."
+}

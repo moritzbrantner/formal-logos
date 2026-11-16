@@ -1,0 +1,7 @@
+{
+  "id": "9b6d503a-c7d3-4ecd-ade7-3c93b9e67b3a",
+  "label": "confluence (ordinary)",
+  "lemma": "confluence",
+  "class": "ordinary",
+  "gloss": "The graph property that any two paths from a node can be continued to meet again."
+}

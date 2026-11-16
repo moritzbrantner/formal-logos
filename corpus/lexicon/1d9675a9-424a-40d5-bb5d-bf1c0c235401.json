@@ -1,0 +1,7 @@
+{
+  "id": "1d9675a9-424a-40d5-bb5d-bf1c0c235401",
+  "label": "module (ordinary)",
+  "lemma": "module",
+  "class": "ordinary",
+  "gloss": "A Lean source file or a self-contained unit of code."
+}
