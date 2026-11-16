@@ -300,6 +300,41 @@ class ImpactPlanTest(unittest.TestCase):
         self.assertTrue(self.plan("corpus/statements/S.json", main=True)["checks"]["truth_cli"])
         self.assertTrue(ar.impact_plan(self.root, None)["checks"]["truth_cli"])
 
+    def test_truth_cli_changes_select_no_results_but_run_the_cli_on_the_corpus(self):
+        for path in ("truth/src/frontier.rs", "truth/tests/golden/frontier/test_fixture.json",
+                     "truth/tests/golden.rs", "truth/Cargo.toml", "truth/README.md", "Cargo.toml",
+                     "Cargo.lock", "scripts/truth_parity/frontier.py", "scripts/verify_truth_cli.py"):
+            for main in (False, True):
+                with self.subTest(path=path, main=main):
+                    self.assertEqual(ar.input_kind(path), "tooling")
+                    plan = self.plan(path, main=main)
+                    self.assertEqual((plan["mode"], plan["selected"]), ("subset", []))
+                    self.assertEqual(ar.shard_count(self.root, plan["selected"]), 0)
+                    for key in ("fast", "lean", "truth_cli", "explorer_tests", "explorer", "report",
+                                "comparator_library"):
+                        self.assertTrue(plan["checks"][key], key)
+                    for key in ("library_changed", "full"):
+                        self.assertFalse(plan["checks"][key], key)
+                    self.assertEqual(ar.nanoda_scope(self.root, [path]), ("scoped", []))
+
+    def test_truth_cli_mixed_with_lean_keeps_the_scoped_selection(self):
+        plan = self.plan("truth/src/frontier.rs", "TruthCore/Results/A/Solution.lean")
+        self.assertEqual((plan["mode"], plan["selected"]), ("subset", ["RESULT-A"]))
+        self.assertTrue(plan["checks"]["library_changed"])
+        self.assertTrue(plan["checks"]["truth_cli"])
+        self.assertFalse(plan["checks"]["full"])
+
+    def test_selection_and_verifier_inputs_beside_the_cli_still_run_everything(self):
+        for path in ("scripts/affected_results.py", "scripts/verify-all.sh", "scripts/verify-result.sh",
+                     "scripts/bootstrap-verifier.sh", "verifier/Cargo.lock", "verifier/src/main.rs",
+                     ".github/workflows/ci.yml", "lean-toolchain", "lakefile.toml", "scripts/truth_other.py"):
+            with self.subTest(path=path):
+                self.assertNotEqual(ar.input_kind(path), "tooling")
+                plan = self.plan("truth/src/frontier.rs", path)
+                self.assertEqual(plan["mode"], "full")
+                self.assertEqual(plan["selected"], ["RESULT-A", "RESULT-B", "RESULT-C"])
+                self.assertTrue(all(plan["checks"].values()))
+
     def test_offline_frontier_test_only_keeps_fast_checks(self):
         for main in (False, True):
             with self.subTest(main=main):

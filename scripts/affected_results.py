@@ -6,6 +6,10 @@ verification could be affected:
 
 * every result when the change touches the toolchain, Lake files, tooling,
   verifier or workflow, or an input cannot be classified safely;
+* no result when the change touches only the Rust `truth` CLI crate and its
+  parity harness (TOOLING_PATTERNS): Comparator and `verify-all.sh
+  --results-file` never run `truth`, so CI instead runs the CLI on the real
+  corpus (corpus/Lean checks, parity, explorer and report);
 * otherwise each result whose own records (`results/<ID>/**`,
   `corpus/results/<ID>.json`) changed, or whose Challenge or Solution module,
   or any `TruthCore` module either imports transitively, changed.
@@ -56,7 +60,8 @@ ROOT = Path(__file__).resolve().parent.parent
 
 # A change to any of these can change how every result is built or checked.
 FULL_RUN_PATTERNS = (
-    # Tooling and its tests are trust-boundary changes, including new scripts.
+    # Tooling and its tests are trust-boundary changes, including new scripts; only the
+    # CLI-only TOOLING_PATTERNS below are exempt (input_kind runs first).
     "scripts/*",
     ".github/*",
     "lean-toolchain",
@@ -64,6 +69,19 @@ FULL_RUN_PATTERNS = (
     "lakefile.lean",
     "lake-manifest.json",
     "verifier/*",
+)
+
+# The Rust `truth` CLI crate, its tests and README, the root Cargo workspace (it builds
+# only `truth`; verifier/ is excluded and has its own Cargo.lock) and the Python parity
+# harness run only by the truth-cli job. The Comparator path (verify-all.sh with
+# --results-file, verify-result.sh, the verifier) never runs `truth`, so these select
+# no results but keep every check that runs the CLI on the real corpus (#954).
+TOOLING_PATTERNS = (
+    "truth/*",
+    "Cargo.toml",
+    "Cargo.lock",
+    "scripts/truth_parity/*",
+    "scripts/verify_truth_cli.py",
 )
 
 # What the explorer build and its browser tests run, apart from corpus data: the app, the
@@ -151,6 +169,8 @@ def input_kind(path: str) -> str:
     # fixtures and the production code under test keep their own classifications.
     if path == "scripts/test_corpus_frontier.py":
         return "offline-test"
+    if any(fnmatch.fnmatchcase(path, pattern) for pattern in TOOLING_PATTERNS):
+        return "tooling"
     if changed_module(path):
         return "lean"
     # Declarative generator inputs do not change compiled proofs themselves.
@@ -235,7 +255,7 @@ def needs_full_run(changed: Iterable[str]) -> list[str]:
     unsafe = []
     for path in changed:
         kind = input_kind(path)
-        if kind == "offline-test":
+        if kind in {"offline-test", "tooling"}:
             continue
         if kind == "unknown" or any(fnmatch.fnmatchcase(path, pattern) for pattern in FULL_RUN_PATTERNS):
             unsafe.append(path)
@@ -256,9 +276,12 @@ def impact_plan(root: Path, changed: Iterable[str] | None, *, main: bool = False
     formal = bool(kinds & {"lean", "corpus"})
     full = bool(safety) or (main and formal)
     mode, selected = ("full", sorted(load_results(root))) if full else select(root, changed or [])
+    tooling = "tooling" in kinds
     library = full or "lean" in kinds
-    lean = full or formal
-    browser = bool(safety) or bool(explorer_inputs_changed(changed or []))
+    # bind-check, definitions refresh and unused-premises run the CLI against the build.
+    lean = full or formal or tooling
+    # The explorer and its browser tests read the frontier and dossiers from the CLI.
+    browser = bool(safety) or tooling or bool(explorer_inputs_changed(changed or []))
     explorer = browser or formal
     report = lean or browser
     reason = ", ".join(safety) if safety else (
@@ -268,9 +291,9 @@ def impact_plan(root: Path, changed: Iterable[str] | None, *, main: bool = False
               "explorer_tests": explorer, "explorer": browser, "report": report,
               "comparator_library": library or report,
               # Python/Rust CLI parity (~16 min) compares two implementations; an exact diff
-              # inside corpus data or Lean changes neither, so only full runs (unknown or
-              # tooling inputs, main formal changes, nightly) re-check it on the real corpus.
-              "truth_cli": full, "full": full}
+              # inside corpus data or Lean changes neither, so only CLI changes and full runs
+              # (unknown or script inputs, main formal changes, nightly) re-check it.
+              "truth_cli": full or tooling, "full": full}
     return {"mode": mode, "selected": selected, "checks": checks, "reason": reason}
 
 
@@ -352,6 +375,10 @@ def nanoda_scope(root: Path, changed: Iterable[str]) -> tuple[str, list[str]]:
         return "scoped", []
     graph = ImportGraph(root)
     return "scoped", [m for m in library_modules(root) if graph.closure(m) & changed_modules]
+
+
+def tooling_inputs_changed(changed: Iterable[str]) -> list[str]:
+    return sorted(path for path in changed if input_kind(path) == "tooling")
 
 
 def explorer_inputs_changed(changed: Iterable[str]) -> list[str]:
@@ -453,7 +480,8 @@ def command_explorer(args: argparse.Namespace) -> int:
     else:
         changed = changed_files_or_full(Path(args.root), args.base, args.head)
         changed_inputs = (["exact base unavailable"] if changed is None else
-                          needs_full_run(changed) or explorer_inputs_changed(changed))
+                          needs_full_run(changed) or explorer_inputs_changed(changed)
+                          or tooling_inputs_changed(changed))
     run = "true" if changed_inputs else "false"
     print(f"explorer inputs changed: {', '.join(changed_inputs) or 'none'}", file=sys.stderr)
     print(run)
