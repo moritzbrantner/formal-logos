@@ -56,11 +56,9 @@ fn count_delta(
 ) -> (Value, Option<String>) {
     let head = orphans::disconnected_count(&args.root, corpus, frontier_root);
     let legacy_root = aliases.legacy(frontier_root);
-    let root = args
-        .frontier_root_set()
-        .then_some((frontier_root, legacy_root));
+    let root = args.frontier_root_set().then_some(frontier_root);
     let (previous, engine, error) = match orphans::revision_count(&args.root, base, root) {
-        Ok((count, engine)) => (Some(count), Some(engine), None),
+        Ok(count) => (Some(count), Some("rust"), None),
         Err(error) => {
             eprintln!("Orphan baseline unavailable: {error}");
             (None, None, Some(error))

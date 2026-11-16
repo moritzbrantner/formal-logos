@@ -3493,111 +3493,6 @@ pub fn uses_uuid_identity(tree: &Path) -> bool {
         .unwrap_or(false)
 }
 
-/// Python `legacy_report_to_uuid`: every string of a pre-migration report
-/// that is a legacy id of the tree's records becomes that record's uuid.
-/// Only arguments and results share legacy ids; a key naming results picks
-/// the result, any other key the argument.
-pub fn legacy_report_to_uuid(report: Value, tree: &Path) -> Value {
-    // legacy id -> [(kind, uuid)] in first-insertion order (`Migration.load`).
-    let mut table: HashMap<String, Vec<(&'static str, String)>> = HashMap::new();
-    for &(directory, kind) in crate::identity::KIND_DIRS {
-        let mut paths: Vec<PathBuf> = std::fs::read_dir(tree.join("corpus").join(directory))
-            .into_iter()
-            .flatten()
-            .filter_map(|entry| entry.ok().map(|entry| entry.path()))
-            .filter(|path| path.extension().is_some_and(|ext| ext == "json"))
-            .collect();
-        paths.sort();
-        for path in paths {
-            let Ok(Value::Object(data)) = std::fs::read_to_string(&path)
-                .map_err(|_| ())
-                .and_then(|text| serde_json::from_str::<Value>(&text).map_err(|_| ()))
-            else {
-                continue;
-            };
-            let records: Vec<&Map<String, Value>> = if kind == "passage" {
-                data.get("passages")
-                    .and_then(Value::as_array)
-                    .into_iter()
-                    .flatten()
-                    .filter_map(Value::as_object)
-                    .collect()
-            } else {
-                vec![&data]
-            };
-            for record in records {
-                let Some(id) = record.get("id").and_then(Value::as_str) else {
-                    continue;
-                };
-                let uuid = crate::identity::is_uuid(id);
-                let legacy = if uuid {
-                    record.get("legacy_id").and_then(Value::as_str)
-                } else {
-                    Some(id)
-                };
-                let Some(legacy) = legacy.filter(|legacy| !legacy.is_empty()) else {
-                    continue;
-                };
-                let uid = if uuid {
-                    id.to_owned()
-                } else {
-                    crate::identity::legacy_uuid(kind, legacy)
-                };
-                let kinds = table.entry(legacy.to_owned()).or_default();
-                match kinds.iter_mut().find(|(known, _)| *known == kind) {
-                    Some(slot) => slot.1 = uid,
-                    None => kinds.push((kind, uid)),
-                }
-            }
-        }
-    }
-    fn convert(
-        table: &HashMap<String, Vec<(&'static str, String)>>,
-        value: &str,
-        key: &str,
-    ) -> String {
-        let Some(kinds) = table.get(value).filter(|kinds| !kinds.is_empty()) else {
-            return value.to_owned();
-        };
-        if kinds.len() == 1 {
-            return kinds[0].1.clone();
-        }
-        let prefer = if key.contains("result") {
-            ["result", "argument"]
-        } else {
-            ["argument", "result"]
-        };
-        prefer
-            .iter()
-            .find_map(|kind| kinds.iter().find(|(known, _)| known == kind))
-            .unwrap_or(&kinds[0])
-            .1
-            .clone()
-    }
-    fn walk(table: &HashMap<String, Vec<(&'static str, String)>>, node: Value, key: &str) -> Value {
-        match node {
-            Value::Object(object) => Value::Object(
-                object
-                    .into_iter()
-                    .map(|(k, v)| {
-                        let value = walk(table, v, &k);
-                        (convert(table, &k, key), value)
-                    })
-                    .collect(),
-            ),
-            Value::Array(items) => Value::Array(
-                items
-                    .into_iter()
-                    .map(|item| walk(table, item, key))
-                    .collect(),
-            ),
-            Value::String(text) => Value::String(convert(table, &text, key)),
-            other => other,
-        }
-    }
-    walk(&table, report, "")
-}
-
 /// A `git archive` extract of one revision, removed on drop.
 pub struct Extract(PathBuf);
 
@@ -3614,8 +3509,9 @@ impl Drop for Extract {
     }
 }
 
-/// Extracts `revision` of the Git checkout with `git archive` (Python
-/// `revision_frontier`, `revision_thickness`, `orphan_summary.base_count`).
+/// Extracts `revision` of the Git checkout with `git archive`: the
+/// revision's committed corpus and Lean sources, offline, in a temporary
+/// directory. Nothing of the revision is built or run.
 pub fn extract(checkout: &Path, revision: &str) -> Result<Extract, String> {
     let archive = git(checkout, &["archive", "--format=tar", revision])
         .map_err(|error| format!("cannot archive revision {revision}: {error}"))?;
@@ -3647,83 +3543,52 @@ pub fn extract(checkout: &Path, revision: &str) -> Result<Extract, String> {
     Ok(extract)
 }
 
-/// Whether `revision`'s `scripts/corpus.py` is byte-identical to the
-/// checkout's: then the Rust engine computes that revision's rules (the
-/// rules this port matches); otherwise its own Python must run.
-pub fn same_rules(checkout: &Path, revision: &str) -> bool {
-    let script = format!("{revision}:scripts/corpus.py");
-    match (
-        git(checkout, &["rev-parse", &script]),
-        git(checkout, &["hash-object", "scripts/corpus.py"]),
-    ) {
-        (Ok(at_revision), Ok(current)) => at_revision == current,
-        _ => false,
-    }
-}
-
-/// Python `revision_frontier_json`: the full frontier report of an
-/// extracted `revision` (see [`revision_frontier`] for the engine), with
-/// legacy ids mapped to uuids. Returns the report and the engine used.
-pub fn revision_report(
-    checkout: &Path,
-    tree: &Path,
-    revision: &str,
-    root: &str,
-    legacy_root: &str,
-) -> Result<(Value, &'static str), String> {
-    // A revision from before the uuid migration knows only legacy ids: it is
-    // asked for the root's legacy id and its report is mapped to uuids
-    // (Python `revision_frontier_json`).
-    let legacy = !uses_uuid_identity(tree);
-    let root = if legacy { legacy_root } else { root };
-    let (mut report, engine) = if same_rules(checkout, revision) {
-        let corpus = crate::Corpus::load(tree).map_err(|error| {
-            format!(
-                "frontier at {revision} failed: {}: {}",
-                error.path, error.message
-            )
-        })?;
-        (current_frontier(tree, &corpus, root, false, false), "rust")
-    } else {
+/// The base data of `revision` prepared for the head rules ("Head rules on
+/// base data", owner decision for #954 R3, 2026-11-16): its `git archive`
+/// extract ([`extract`]), evaluated by this binary's own rules. A revision
+/// from before the uuid migration is first converted to uuid identity by the
+/// checkout's `scripts/migrate_uuid.py` (a data migration, not a rule
+/// engine), so its records carry the uuids the head knows. The revision's own
+/// tooling is never run and its `truth` is never built: a PR that changes the
+/// frontier rules shows the effect of that change as a delta.
+pub fn base_tree(checkout: &Path, revision: &str) -> Result<Extract, String> {
+    let tree = extract(checkout, revision)?;
+    if !uses_uuid_identity(tree.path()) {
         let output = Command::new("python3")
-            .arg(tree.join("scripts").join("corpus.py"))
-            .args(["frontier", "--json", "--root", root])
-            .current_dir(tree)
+            .arg(checkout.join("scripts").join("migrate_uuid.py"))
+            .arg("--write")
+            .arg("--root")
+            .arg(tree.path())
             .output()
             .map_err(|error| format!("cannot run python3: {error}"))?;
         if !output.status.success() {
             return Err(format!(
-                "frontier at {revision} failed: {}",
+                "uuid migration of {revision} failed: {}",
                 String::from_utf8_lossy(&output.stderr).trim()
             ));
         }
-        let report = serde_json::from_slice(&output.stdout)
-            .map_err(|error| format!("frontier at {revision}: invalid JSON: {error}"))?;
-        (report, "python")
-    };
-    if legacy {
-        report = legacy_report_to_uuid(report, tree);
     }
-    Ok((report, engine))
+    Ok(tree)
 }
 
-/// Python `revision_frontier`: the reaching-root frontier at a Git revision,
-/// on a `git archive` extract, with `all_item_depths` of the full report.
-///
-/// Python runs that revision's own `corpus.py`, so a change of the frontier
-/// rules between base and head shows in the delta. The Rust engine computes
-/// the current rules, so it is used only when the revision's
-/// `scripts/corpus.py` is byte-identical to the checkout's (the rules this
-/// port matches); otherwise that revision's Python runs, as in
-/// `corpus.py frontier-diff`. The engine used is returned with the report.
-pub fn revision_frontier(
-    checkout: &Path,
-    revision: &str,
-    root: &str,
-    legacy_root: &str,
-) -> Result<(Value, &'static str), String> {
-    let tree = extract(checkout, revision)?;
-    let (mut report, engine) = revision_report(checkout, tree.path(), revision, root, legacy_root)?;
+/// The full frontier report of a prepared base tree ([`base_tree`]) under
+/// this binary's rules.
+pub fn revision_report(tree: &Path, revision: &str, root: &str) -> Result<Value, String> {
+    let corpus = crate::Corpus::load(tree).map_err(|error| {
+        format!(
+            "frontier at {revision} failed: {}: {}",
+            error.path, error.message
+        )
+    })?;
+    Ok(current_frontier(tree, &corpus, root, false, false))
+}
+
+/// The reaching-root frontier at a Git revision, on its [`base_tree`], with
+/// `all_item_depths` of the full report (Python `revision_frontier`). Base
+/// and head are judged by one rule set: this binary's.
+pub fn revision_frontier(checkout: &Path, revision: &str, root: &str) -> Result<Value, String> {
+    let tree = base_tree(checkout, revision)?;
+    let mut report = revision_report(tree.path(), revision, root)?;
     let all_item_depths: Map<String, Value> = report["items"]
         .as_array()
         .into_iter()
@@ -3732,7 +3597,7 @@ pub fn revision_frontier(
         .collect();
     restrict_to_root(&mut report);
     report["all_item_depths"] = Value::Object(all_item_depths);
-    Ok((report, engine))
+    Ok(report)
 }
 
 #[cfg(test)]

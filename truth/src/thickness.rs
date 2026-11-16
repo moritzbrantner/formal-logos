@@ -570,35 +570,16 @@ pub fn thickness_delta(base: &Value, head: &Value) -> Value {
 }
 
 /// Python `revision_thickness`: the thickness report at a Git revision, from
-/// that revision's full frontier report (`frontier::revision_report`, which
-/// names the engine used) and its argument and result records on a `git
-/// archive` extract. A pre-migration revision's records are first converted
-/// to uuids by `scripts/migrate_uuid.py` of the checkout, as Python does.
+/// that revision's full frontier report and its argument and result records,
+/// on its `frontier::base_tree` (a pre-migration revision converted to uuids
+/// first) under this binary's rules.
 pub fn revision_thickness(
     checkout: &std::path::Path,
     revision: &str,
     root: &str,
-    legacy_root: &str,
-) -> Result<(Value, &'static str), String> {
-    let tree = crate::frontier::extract(checkout, revision)?;
-    let legacy = !crate::frontier::uses_uuid_identity(tree.path());
-    let (report, engine) =
-        crate::frontier::revision_report(checkout, tree.path(), revision, root, legacy_root)?;
-    if legacy {
-        let output = std::process::Command::new("python3")
-            .arg(checkout.join("scripts").join("migrate_uuid.py"))
-            .arg("--write")
-            .arg("--root")
-            .arg(tree.path())
-            .output()
-            .map_err(|error| format!("cannot run python3: {error}"))?;
-        if !output.status.success() {
-            return Err(format!(
-                "uuid migration of {revision} failed: {}",
-                String::from_utf8_lossy(&output.stderr).trim()
-            ));
-        }
-    }
+) -> Result<Value, String> {
+    let tree = crate::frontier::base_tree(checkout, revision)?;
+    let report = crate::frontier::revision_report(tree.path(), revision, root)?;
     let read = |kind: &str| -> Result<Vec<Record>, String> {
         let mut paths: Vec<std::path::PathBuf> =
             std::fs::read_dir(tree.path().join("corpus").join(kind))
@@ -633,7 +614,7 @@ pub fn revision_thickness(
     };
     let root = report["root"].as_str().unwrap_or(root).to_owned();
     let inputs = inputs_from_report(&root, &report);
-    Ok((thickness_report(&inputs, &records), engine))
+    Ok(thickness_report(&inputs, &records))
 }
 
 /// Python `format_thickness_queue`.

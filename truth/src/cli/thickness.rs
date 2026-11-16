@@ -12,7 +12,7 @@ pub const COMMAND: Command = Command {
 
 /// JSON as `scripts/corpus.py thickness --json` prints it (plus
 /// `input_identity`, and with `--base` the `engines` that computed base and
-/// head), and the same text as the Python command.
+/// head: always this binary's rules), and the same text as the Python command.
 fn run(args: &Args, operands: &[&str]) -> Output {
     let accepts = Accepts {
         queue: true,
@@ -38,15 +38,13 @@ fn run(args: &Args, operands: &[&str]) -> Output {
             text,
         )
     } else if let Some(revision) = base {
-        let legacy_root = aliases.legacy(&frontier_root);
-        let (base_report, engine) =
-            thickness::revision_thickness(&args.root, revision, &frontier_root, legacy_root)
-                .map_err(corpus_error)?;
+        let base_report = thickness::revision_thickness(&args.root, revision, &frontier_root)
+            .map_err(corpus_error)?;
         let delta = thickness::thickness_delta(&base_report, &report);
         let text = thickness::format_thickness(&report, Some(&delta));
         (
             json!({"report": report, "delta": delta,
-                   "engines": {"base": engine, "head": "rust"},
+                   "engines": {"base": "rust", "head": "rust"},
                    "input_identity": corpus.input_identity()}),
             text,
         )
