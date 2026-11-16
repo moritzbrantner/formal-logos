@@ -47,6 +47,7 @@ mod strength;
 mod structure;
 mod territory;
 mod thickness;
+mod tree;
 mod unused_premises;
 
 pub use args::{Accepts, Args};
@@ -88,6 +89,9 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] unused-premises [--strict] [--exemptions FILE] [--frontier-root STATEMENT]
              [--bind-json FILE] [--usage-json FILE]
        truth [--root PATH] [--json] lean-reuse --review [--usage-json FILE]
+       truth [--root PATH] [--json] tree STATEMENT [--down N] [--up N] [--budget N]
+             [--materialize-edge KEY]
+       truth [--root PATH] [--json] tree --out-dir DIR STATEMENT... [--down N] [--up N] [--budget N]
        truth [--root PATH] [--json] attribution-check --base REV [--materialize] [--max-chars N]
        truth [--root PATH] [--json] index (build | search WORDS [--limit N] | show ID | duplicates | summary
              | parity | export PATH | bundle --case ID [--premise STATEMENT]...
@@ -151,6 +155,7 @@ pub const COMMANDS: &[Command] = &[
     unused_premises::COMMAND,
     lean_reuse::COMMAND,
     attribution_check::COMMAND,
+    tree::COMMAND,
     index::COMMAND,
     senses::COMMAND,
     bridge_experiments::COMMAND,
@@ -194,6 +199,9 @@ pub fn run(args: &[OsString]) -> Output {
             Some(command) if args.attribution.flags && command.name != "attribution-check" => Err(
                 usage("--materialize and --max-chars apply only to attribution-check"),
             ),
+            Some(command) if args.tree.flags && command.name != "tree" => Err(usage(
+                "--down, --up, --budget, --out-dir and --materialize-edge apply only to tree",
+            )),
             Some(command) if args.index.flags && command.name != "index" => {
                 Err(usage("--left and --right apply only to index compare"))
             }

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import { findStatement, getCorpus, termsFor, idOf, nameOf } from "@/lib/corpus";
 import { getDossiers } from "@/lib/premise-dossier";
+import { treeHref } from "@/lib/argument-tree";
 
 import { DossierAttemptIndex } from "./dossier-attempt-index";
 import { DossierTermIndex } from "./dossier-term-index";
@@ -30,6 +31,7 @@ export default async function DossierPage({ params }: { params: Promise<{ statem
   return (
     <article className="max-w-5xl [overflow-wrap:anywhere]">
       <Link className="link-quiet text-sm" href={`/statements/${statementId}`}>← Statement and proof context</Link>
+      <Link className="link-quiet ml-4 text-sm" href={treeHref(statementId)}>Argument tree with this proposition as root →</Link>
       <h1 className="mt-8 font-serif text-4xl">Premise dossier</h1>
       <p className="mt-3 font-mono text-xs break-all text-[var(--muted)]">{idOf(statement.id)}</p>
       <p className="mt-4 text-xl leading-8">{statement.paraphrase}</p>

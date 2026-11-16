@@ -7,6 +7,7 @@ const links = [
   { href: "/progress", label: "Progress" },
   { href: "/", label: "Frontier" },
   { href: "/forest", label: "Forest" },
+  { href: "/tree", label: "Tree" },
   { href: "/guide/classical-god", label: "Guide" },
   { href: "/atlas", label: "Atlas" },
   { href: "/state", label: "Case" },

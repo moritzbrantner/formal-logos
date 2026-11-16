@@ -1,4 +1,6 @@
 import Link from "next/link";
+
+import { treeHref } from "@/lib/argument-tree";
 import { PropositionStructure } from "@/components/proposition-structure";
 import { getStructureReport } from "@/lib/proposition-structure";
 import { StrengthComparisons } from "@/components/strength-comparisons";
@@ -72,6 +74,7 @@ export default async function StatementPage({ params }: StatementPageProps) {
       <h1 className="mt-5 font-serif text-4xl leading-[1.02] tracking-[-0.04em] sm:text-5xl">{statement.paraphrase}</h1>
 
       <Link className="link-quiet mt-4 inline-block text-sm" href={`/dossiers/${statement.id}#research-comparison`}>Research progress, senses, rivals and attempt log →</Link>
+      <Link className="link-quiet mt-2 block text-sm" href={treeHref(statement.id)}>Argument tree with this proposition as root →</Link>
 
       <StrengthComparisons comparisons={comparisonsForStatement(getStrengthComparisons(), statement.id)} />
 

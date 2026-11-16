@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Logic.Inversions.DivineVeracity1410AssertionTruthAContra2.Challenge",
+  "solution_module": "TruthCore.Results.Logic.Inversions.DivineVeracity1410AssertionTruthAContra2.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Logic.Inversions.DivineVeracity1410AssertionTruthAContra2.contrapositive"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

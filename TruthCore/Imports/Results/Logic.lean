@@ -45,6 +45,7 @@ public import TruthCore.Results.Logic.FormSelection.Certificate.Solution
 public import TruthCore.Results.Logic.FormSelection.Solution
 public import TruthCore.Results.Logic.GlobalThesisBoundaries.Solution
 public import TruthCore.Results.Logic.IntuitionisticKnowability.Solution
+public import TruthCore.Results.Logic.Inversions.DivineVeracity1410AssertionTruthAContra2.Solution
 public import TruthCore.Results.Logic.JointRouteFailure.Solution
 public import TruthCore.Results.Logic.JustificationIntrospection.Solution
 public import TruthCore.Results.Logic.KnowabilityCompatibility.Solution

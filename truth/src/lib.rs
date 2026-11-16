@@ -15,6 +15,7 @@ pub mod finite_models;
 pub mod frontier;
 pub mod identity;
 pub mod index;
+pub mod inversion;
 pub mod issues;
 mod kernels;
 pub mod lean_reuse;
@@ -33,6 +34,7 @@ pub mod subprocess;
 pub mod territory;
 pub mod thickness;
 mod transcription;
+pub mod tree;
 pub mod unused_premises;
 
 use serde_json::{Map, Value};
