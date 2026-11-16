@@ -1,0 +1,7 @@
+{
+  "id": "ec4571e9-9de0-4aac-bcf3-486299e7a2ad",
+  "label": "antisymmetry (ordinary)",
+  "lemma": "antisymmetry",
+  "class": "ordinary",
+  "gloss": "The order property that a ≤ b and b ≤ a imply a = b."
+}

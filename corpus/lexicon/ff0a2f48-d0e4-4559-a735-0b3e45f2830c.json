@@ -1,0 +1,7 @@
+{
+  "id": "ff0a2f48-d0e4-4559-a735-0b3e45f2830c",
+  "label": "TMPDIR (name)",
+  "lemma": "TMPDIR",
+  "class": "name",
+  "gloss": "The environment variable naming the temporary directory."
+}
