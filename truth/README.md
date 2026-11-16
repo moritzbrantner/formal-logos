@@ -689,11 +689,12 @@ digest hashes the script, so the two use separate files
 (`.cache/research-index.sqlite` there). Rust also resolves a legacy id or
 label, optionally `kind:`-prefixed, for `show`, `--case`, `--premise`,
 `--left` and `--right`. Python's `related` subcommand is `truth related`.
-Python has no note tables or note hits. `scripts/truth_parity/index.py`
-compares every record table row for row (all but the digest) and the JSON of
-every subcommand, without the note parts, on the real corpus and a fixture,
-with search ranks including ties, and checks stale refresh, failed-rebuild
-preservation, corrupt-projection detection and exit codes.
+Python has no note tables or note hits. The retired
+`scripts/truth_parity/index.py` compared every record table row for row (all
+but the digest) and the JSON of every subcommand, without the note parts, on
+the real corpus and a fixture; the frozen goldens `truth/tests/golden/index/`
+keep its fixture query cases, and the unit tests of `truth::index` cover
+stale refresh, failed-rebuild preservation and corrupt-projection detection.
 
 ## `attribution-check`
 

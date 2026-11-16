@@ -23,8 +23,23 @@ Use `--json` for complete machine-readable match evidence and attempt blockers.
 If no seed ID is known, start with
 `target/release/truth index search 'topic words'` and read a hit with
 `target/release/truth index show <ID>`. The index is a disposable SQLite/FTS5
-projection in `.cache/truth-index.sqlite`; each query reuses it while it matches
-the corpus and rebuilds it otherwise.
+projection in `.cache/truth-index.sqlite` of the corpus records and the
+`docs/notes/` sections (#952): note hits follow the record hits, and
+`index show docs/notes/<note>.md` lists the records a note names. Each query
+reuses the index while it matches the corpus and notes, and rebuilds it
+otherwise.
+
+Before judging how mature a premise's research is, or calling a theorem or
+connection new, run:
+
+```bash
+target/release/truth brief <STMT-ID>          # or: brief --question "..."
+target/release/truth novelty "<claim>"        # or: novelty --statement <STMT-ID>
+```
+
+Add `--issues-from FILE` with an offline `gh issue list`/`gh pr list --state all
+--json number,title,body,url,state,comments,updatedAt` snapshot where available. Both are
+advisory: a missing hit or snapshot is not evidence that no prior work exists.
 
 Inspect the smallest relevant argument bundles, their exact Lean declarations,
 and prior attempts before proposing another result or new vocabulary. Preserve

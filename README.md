@@ -82,14 +82,15 @@ There is intentionally no RDF, graph database, embedding index, identity resolve
 Requires Lean via `elan`/`lake` and the Rust toolchain.
 
 ```bash
-python3 scripts/source_evidence.py check
 cargo build --locked --release -p truth
-target/release/truth check
+target/release/truth check   # includes the offline source-evidence bindings
 lake exe cache get   # prebuilt Mathlib, once per Mathlib/toolchain bump
 lake build
 target/release/truth status
 target/release/truth next
 target/release/truth frontier --reaching-root
+target/release/truth index search 'act potency'   # records and research notes
+target/release/truth brief STMT-EXCLUDED-MIDDLE    # prior work on a premise (AGENTS.md)
 ```
 
 `lake build` compiles the source formalizations and proved `Solution` modules. Deliberately incomplete `Challenge` modules are kept out of the normal default build. Mathlib is the one external Lean dependency (AGENTS.md invariant 14); `lean-toolchain` pins the exact Lean version its pinned release requires.

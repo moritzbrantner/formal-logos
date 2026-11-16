@@ -1,7 +1,8 @@
-//! Emergent positions and the territory matrix (#512): Python
-//! `scripts/territory.py` and the `corpus.py territory` command (#954 slice
-//! B2). Nothing is hand-authored and no record is written; see the Python
-//! module for which records feed which relation.
+//! Emergent positions and the territory matrix (#512), the port of the
+//! retired `scripts/territory.py` and `corpus.py territory` (#954 slice B2).
+//! Nothing is hand-authored and no record is written; see
+//! `docs/configuration-elimination-loop.md` for which records feed which
+//! relation.
 
 use crate::configurations::{
     Index, evaluations, implication_closure, product, str_of, strs, unique,
