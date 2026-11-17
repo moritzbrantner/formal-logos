@@ -1,0 +1,6 @@
+{
+  "id": "b023f9c1-3972-441a-b109-5f48c4d4c8df",
+  "label": "Illumination source withdrawal and alternative input controls",
+  "paraphrase": "Declared finite scenarios of one receiver have response 3 with solar input, zero when that emission is withdrawn or its path blocked, and zero with nonreceptivity despite input 3. With solar input absent a lamp gives response 5 for the SAME illumination event; this scenario is allowed in expanded scope and excluded in solar-only scope. Both sources together give response 8 with contributions 3 and 5. Declared exercise is coherent when inputs correspond; the same populated bright input record with empty exercise is also coherent. The source/receiver bearers are distinct. These are analyst circuit assignments, not a witnessed actual episode, general optics, or substantial conservation.",
+  "lean_declaration": "TruthCore.Causality.IlluminationReceipt.Controls"
+}

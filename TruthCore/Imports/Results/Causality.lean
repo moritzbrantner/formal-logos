@@ -25,6 +25,7 @@ public import TruthCore.Results.Causality.BearerRegress.Solution
 public import TruthCore.Results.Causality.BegunComingToBe.Solution
 public import TruthCore.Results.Causality.BoundedPastResource.Solution
 public import TruthCore.Results.Causality.BruteRootDisjunction.Solution
+public import TruthCore.Results.Causality.CapacityInterface.Solution
 public import TruthCore.Results.Causality.CausalConcreteRivals.Controls.Solution
 public import TruthCore.Results.Causality.CausalConcreteRivals.CounterFailure.Solution
 public import TruthCore.Results.Causality.CausalConcreteRivals.CoverageRemainder.Solution
@@ -49,6 +50,7 @@ public import TruthCore.Results.Causality.ClassicalGodAssembly.Solution
 public import TruthCore.Results.Causality.ClassicalGodFromPositiveRoot.Solution
 public import TruthCore.Results.Causality.ClassicalGodRevelationBoundary.Solution
 public import TruthCore.Results.Causality.ClosedGroundingRoots.Solution
+public import TruthCore.Results.Causality.CogitoCapacityInterface.Solution
 public import TruthCore.Results.Causality.CogitoNecessaryConcrete.Solution
 public import TruthCore.Results.Causality.ComingToBeHorns.Solution
 public import TruthCore.Results.Causality.CommonPriority.ContingentGround.Solution
@@ -172,6 +174,7 @@ public import TruthCore.Results.Causality.GroundingIdentityProfile.Solution
 public import TruthCore.Results.Causality.GroundingYieldsRegress.Solution
 public import TruthCore.Results.Causality.HeadlessCausalAncestry.Solution
 public import TruthCore.Results.Causality.HistoricalRemoval.Solution
+public import TruthCore.Results.Causality.IlluminationReceipt.Solution
 public import TruthCore.Results.Causality.IndexedSignalProvenance.Solution
 public import TruthCore.Results.Causality.IndexedSignalReaper.Solution
 public import TruthCore.Results.Causality.InertEmptiness.Solution
@@ -259,12 +262,15 @@ public import TruthCore.Results.Causality.PossibleCauseBruteSurvival.Solution
 public import TruthCore.Results.Causality.Power1392.Solution
 public import TruthCore.Results.Causality.Power1392Exercise.Solution
 public import TruthCore.Results.Causality.PowerExistenceBoundary.Solution
+public import TruthCore.Results.Causality.PreservationMeaning.Solution
 public import TruthCore.Results.Causality.ProductiveStore.Solution
 public import TruthCore.Results.Causality.ProductiveSustained.Solution
 public import TruthCore.Results.Causality.ProtectiveProcess.Solution
 public import TruthCore.Results.Causality.PureActRoot.Solution
 public import TruthCore.Results.Causality.PureActThisness.Solution
 public import TruthCore.Results.Causality.PureIndiscernibility.Solution
+public import TruthCore.Results.Causality.Q44EssentialSource.Solution
+public import TruthCore.Results.Causality.Q44SourceSupply.Solution
 public import TruthCore.Results.Causality.QuantitativeTransferPaths.Solution
 public import TruthCore.Results.Causality.ReceptionLimitation.Solution
 public import TruthCore.Results.Causality.ReflexiveActualFusionNecessaryBeing.Solution

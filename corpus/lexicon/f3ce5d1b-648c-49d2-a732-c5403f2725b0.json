@@ -1,0 +1,10 @@
+{
+  "id": "f3ce5d1b-648c-49d2-a732-c5403f2725b0",
+  "label": "ontic presupposition (technical)",
+  "lemma": "ontic presupposition",
+  "class": "technical",
+  "definition_ids": [
+    "4f7df841-fc53-458e-a4b6-31665aa9e91a"
+  ],
+  "note": "Scoped compound only. The prior bare-word mapping is withdrawn. No verb forms, neighboring role links or family-wide disambiguation are attached; this entry admits only its listed definition."
+}

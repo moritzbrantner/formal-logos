@@ -1,0 +1,9 @@
+{
+  "id": "7a2e0b7c-b12c-4a7c-807c-c3b926b1fc2e",
+  "label": "Finite controls for q44 ancestor-to-source supply",
+  "term": "Finite controls for q44 ancestor-to-source supply",
+  "definition": "Seven explicit finite controls over three beings. The first two separate participant actuality from represented esse-essence distinction. The next four omit causal composition, the unreceived-to-own-being interpretation, the selected identity witness and identity uniqueness, respectively. All retain the common-ancestor facts and the other displayed inputs. The positive model supplies a participant source, exercises causal composition along a two-link esse chain, and makes every other being CREATURE_1. Facts about the encoded interpretations only, without metaphysical possibility or premise-refutation claims.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.Q44SourceSupply.Control.Certificate",
+  "note": "Analyst reconstruction, attribution deferred. Reuses the existing interpreted q3 profile and ActualEsseCause (definition 8163859b-95b3-4dd2-8a69-541bd332f32f), participation (14d30c53-51c2-502d-b009-247dac0421e0) and primitive OwnBeing (5dc08b95-ca15-52ab-b8cd-2b558e9a13f7). Quantifier scope and logical content are given by the Lean body; underlying causal and own-being meanings are not completed by these compounds. Reception, identity, causal composition and source selection remain separate interfaces. See docs/notes/q44-inferential-dependency.md#ancestor-to-source-supply for examples, comparison, premise warrant, controls and open application burdens."
+}

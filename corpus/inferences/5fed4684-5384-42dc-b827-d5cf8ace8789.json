@@ -1,0 +1,13 @@
+{
+  "id": "5fed4684-5384-42dc-b827-d5cf8ace8789",
+  "label": "Others are CREATURE_1 from selected q44 ancestor source supply (inference)",
+  "input_statement_ids": [
+    "11e24b50-06bc-5e2e-b9b6-a4e4dc421237",
+    "8b8bb6df-7b8a-4f08-bfe2-21d52fe9f217"
+  ],
+  "output_statement_id": "612078bf-5a68-5542-8b7b-f862f816ece0",
+  "rule": "Causal-chain induction, explicit reception argument and equality elimination",
+  "meaning": "Participation coverage and the explicit selected-source conclusion give p as cause of each other being in the esse respect. Consequently p is a universal cause at esse and each other being is CREATURE_1, instantiated at IsCreatureOfUniversalCause. No premise that every essential cause equals p, Fourth-Way universal causation, source naming, efficiency or conservation is used.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

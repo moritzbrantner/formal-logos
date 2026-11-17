@@ -1,0 +1,25 @@
+{
+  "id": "48c92c51-7c3c-468d-8fca-71348ef76146",
+  "label": "Admitted explicability property and local rejection pattern",
+  "term": "Admitted explicability property and local rejection pattern",
+  "term_label": "ADMITTED_EXPLICABILITY_ROLE",
+  "sense_definition_ids": [
+    "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d",
+    "a514aecb-59d2-4673-9d47-81ffcc4d6f8b"
+  ],
+  "senses": [
+    {
+      "id": "35db19cf-1f80-4a04-a1e6-db57b9316b59",
+      "label": "ADMITTED_EXPLICABILITY_ROLE_1",
+      "definition_id": "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d",
+      "lean_declaration": "TruthCore.Explanation.PSRStrength.Explained"
+    },
+    {
+      "id": "bf11e38c-c43f-4e85-898e-197a6aff802f",
+      "label": "ADMITTED_EXPLICABILITY_ROLE_2",
+      "definition_id": "a514aecb-59d2-4673-9d47-81ffcc4d6f8b",
+      "lean_declaration": "TruthCore.Logic.FirstPrincipleRoles.LocalInexplicabilityRejection"
+    }
+  ],
+  "resolution": "The property says some explanation is admitted for one fact at one world; the argument pattern supplies a local demand for that property and denies it for the proposed fact. These are different logical roles, not mutually exclusive worldview alternatives or an exhaustive account of explanation. The pattern explicitly uses the property rather than replacing it. No property-to-universal-demand bridge, explanation-adequacy bridge or source-interpretation identity is supplied. The sourced Della Rocca explicability argument remains under its original definition and sense; this analyst pattern does not replace it. See docs/notes/psr-self-application-756.md#property-and-presupposition-roles-1659."
+}

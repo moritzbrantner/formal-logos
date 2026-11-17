@@ -1,0 +1,11 @@
+{
+  "id": "9bbfe378-02bc-48cc-bc12-c90118707f52",
+  "label": "Q44 essential-source supply from actual identity ancestry and reception",
+  "argument_id": "d8509a73-39b1-4fd5-a276-9db1e99ea0d8",
+  "challenge_module": "TruthCore.Results.Causality.Q44SourceSupply.Challenge",
+  "solution_module": "TruthCore.Results.Causality.Q44SourceSupply.Solution",
+  "theorem": "TruthCore.Results.Causality.Q44SourceSupply.sourceSupply",
+  "comparator_config": "results/9bbfe378-02bc-48cc-bc12-c90118707f52/comparator.json",
+  "status": "solution-present",
+  "description": "Each participant is actual with distinct represented esse. Its existing identity-bearing ancestor is therefore distinct from it and actual. The explicit composition law collapses the nonempty actual esse-cause chain. The four existing reception premises exclude a receiver for that identity bearer and pass from nonreception to primitive OwnBeing. This gives the existing existential source-supply statement. The ancestor may vary by participant; no global uniqueness, selected p, Fourth Way or GOD_4 identification is needed. No premise truth or historical derivation is established."
+}

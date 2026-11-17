@@ -1,0 +1,10 @@
+{
+  "id": "f398d0db-dc1b-450c-aa3c-3f6a735d99dd",
+  "label": "Illumination record coverage and source-cut analysis (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "ae7e55d2-7102-46d4-b726-09e2849da155",
+  "rule": "Extract an active input from the forward response, construct its record, and test all admitted source alternatives",
+  "meaning": "Derives RecordCovered for the stipulated response law and selected scenario scopes; it is not an assumed opaque adequacy flag. The expanded roster permits a different illuminating source at the same target, destroying source-specific necessity. Exercise coherence additionally consumes explicit correspondence between independently declared exercise and its admitted active inputs. Genuine productive exercise is not derived from coherence.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

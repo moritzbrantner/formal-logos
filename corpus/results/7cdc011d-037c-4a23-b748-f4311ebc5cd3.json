@@ -1,0 +1,11 @@
+{
+  "id": "7cdc011d-037c-4a23-b748-f4311ebc5cd3",
+  "label": "Q44 essential-source finite controls, checked",
+  "argument_id": "16d2646f-cef3-4b70-a38b-ca40ddc35acd",
+  "challenge_module": "TruthCore.Results.Causality.Q44EssentialSource.Challenge",
+  "solution_module": "TruthCore.Results.Causality.Q44EssentialSource.Solution",
+  "theorem": "TruthCore.Results.Causality.Q44EssentialSource.controls",
+  "comparator_config": "results/7cdc011d-037c-4a23-b748-f4311ebc5cd3/comparator.json",
+  "status": "solution-present",
+  "description": "Three nonempty selection omissions and a positive full-route finite interpretation. The dictionary omission tests an unfaithful supplied map, not metaphysical possibility; the other controls likewise establish encoded non-implications only. All are closed mathematical facts, without a claim that a rival is true or any premise doubtful."
+}

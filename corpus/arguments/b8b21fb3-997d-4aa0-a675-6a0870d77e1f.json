@@ -1,0 +1,29 @@
+{
+  "id": "b8b21fb3-997d-4aa0-a675-6a0870d77e1f",
+  "label": "Relevant essential sources are selected through De ente identity uniqueness",
+  "premise_statement_ids": [
+    "6acd44eb-4b3e-480c-a479-6b4ac7a2522e",
+    "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+    "e2bfd1b1-7d5e-4be3-b5d4-f9db988c5745"
+  ],
+  "conclusion_statement_id": "dcf4bcdd-4feb-4d97-a7e2-f6a08cdf4702",
+  "inference_ids": [
+    "5a1c16b4-3673-40c8-a953-c8183f9847a2"
+  ],
+  "meaning": "For each distinct actual own-being cause of a participant, the dictionary supplies represented identity. The existing at-most-one statement identifies it with the selected actual identity witness. No participation coverage or source supply is required for this restricted selection conclusion, which is vacuous if there are no relevant sources. Each selection input is tested by a nonempty finite control. No source premise is established.",
+  "definition_ids": [
+    "2eab0d94-8956-4500-a3ed-16f1c91d7638",
+    "8a08ca4c-1fac-4020-b0e9-fac2d70de0d5",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7",
+    "d107b55a-9486-4159-8a42-c90fdf925bb2"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "54f33165-05df-5205-807a-04154b5fd6ad"
+  ]
+}

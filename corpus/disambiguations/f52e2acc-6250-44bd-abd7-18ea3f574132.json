@@ -1,0 +1,32 @@
+{
+  "id": "f52e2acc-6250-44bd-abd7-18ea3f574132",
+  "label": "Ontic, inferential and performance presupposition roles",
+  "term": "Ontic, inferential and performance presupposition roles",
+  "term_label": "PRESUPPOSITION_ROLE",
+  "sense_definition_ids": [
+    "4f7df841-fc53-458e-a4b6-31665aa9e91a",
+    "3492ef00-6d09-4008-8ab2-25e2aa03e725",
+    "322dfd2b-04c6-5113-9ab6-6327e617d0c0"
+  ],
+  "senses": [
+    {
+      "id": "0df9fb20-1b5a-4866-810c-bc130e9bc78f",
+      "label": "PRESUPPOSITION_ROLE_1",
+      "definition_id": "4f7df841-fc53-458e-a4b6-31665aa9e91a",
+      "lean_declaration": "TruthCore.Logic.FirstPrincipleRoles.OnticRequirements.requires"
+    },
+    {
+      "id": "c2ebab09-68f2-4a3b-8d2c-a63ddcd1ef4d",
+      "label": "PRESUPPOSITION_ROLE_2",
+      "definition_id": "3492ef00-6d09-4008-8ab2-25e2aa03e725",
+      "lean_declaration": "TruthCore.Logic.RegressDomains.Justification.inferential"
+    },
+    {
+      "id": "64335bfe-cf97-473a-b0e5-f040dc06a9cc",
+      "label": "PRESUPPOSITION_ROLE_3",
+      "definition_id": "322dfd2b-04c6-5113-9ab6-6327e617d0c0",
+      "lean_declaration": "TruthCore.Alternatives.Retorsion.PresuppositionLink"
+    }
+  ],
+  "resolution": "These are three scoped roles, not an exhaustive division of every use of presupposition. Ontic requirement concerns conditions of actuality; inferential dependency concerns premise membership in a selected argument presentation; performance occurrence concerns the token of each performance. The simple-priority.json definition illustrates the first role; the q44-caused-necessity-dependence.json note illustrates the second; presupposition-link.json defines the third. The first two example records are not edited or newly bound by this distinction. No automatic bridge relates the roles. Epistemic standing, semantic sentence presupposition and determinate signification are not silently included. The existing performance definition and its original sense identities are preserved; this new role index adds no new occurrence predicate. See docs/notes/psr-self-application-756.md#property-and-presupposition-roles-1659."
+}

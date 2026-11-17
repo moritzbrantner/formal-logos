@@ -1,0 +1,14 @@
+{
+  "id": "4f5550a6-b88a-4fc8-853b-548fd408d75e",
+  "label": "Others are CREATURE_1 from q44 selected essential sources (inference)",
+  "input_statement_ids": [
+    "11e24b50-06bc-5e2e-b9b6-a4e4dc421237",
+    "de05072a-5db0-4a31-8e24-b18fedf01401",
+    "dcf4bcdd-4feb-4d97-a7e2-f6a08cdf4702"
+  ],
+  "output_statement_id": "612078bf-5a68-5542-8b7b-f862f816ece0",
+  "rule": "Universal instantiation, equality elimination and existential construction",
+  "meaning": "For each x other than the selected p, participation coverage gives Participated x. Its distinct actual own-being cause c is selected as p, so p causes x. Consequently p causes every other actual being, and each other x is CREATURE_1 with that same p as the universal cause. Creature is instantiated at IsCreatureOfUniversalCause, not CREATURE_2. The own-being source law and numerical source selection are explicit premises; no Fourth-Way universal-cause principle, GOD_4 identification, q3 local-to-common-source shortcut, efficiency, conservation or modal conclusion is used.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

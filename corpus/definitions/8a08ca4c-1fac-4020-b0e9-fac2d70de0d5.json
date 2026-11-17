@@ -1,0 +1,9 @@
+{
+  "id": "8a08ca4c-1fac-4020-b0e9-fac2d70de0d5",
+  "label": "Selected p is actual with its represented esse identical to its essence",
+  "term": "Selected p is actual with its represented esse identical to its essence",
+  "basis": "stipulative",
+  "definition": "The selected p is in act as to esse and esseOf p equals essenceOf p in the one supplied q3 profile. These two explicit conjuncts assert neither primitive OwnBeing p nor universal causation, uniqueness, necessity or GOD_4 status.",
+  "lean_declaration": "TruthCore.Causality.Q44EssentialSource.SelectedActualIdentity",
+  "note": "Analyst formulation, attribution deferred. Existing primitive OwnBeing (definition 5dc08b95-ca15-52ab-b8cd-2b558e9a13f7) means the bearer is its own subsistent act of being, rather than a subject having a received act. Participated reuses definition 14d30c53-51c2-502d-b009-247dac0421e0. Causation and essence/esse keep the same q3 Profile fields. These compounds constrain those interpreted primitives; they do not complete their formal meanings or certify their real applicability. Full meaning, examples, exclusions, property warrant, comparison and open burdens: docs/notes/q44-inferential-dependency.md#essential-source-application."
+}

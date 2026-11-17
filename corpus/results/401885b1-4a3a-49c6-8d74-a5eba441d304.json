@@ -1,0 +1,11 @@
+{
+  "id": "401885b1-4a3a-49c6-8d74-a5eba441d304",
+  "label": "Cogito selected capacity transport with activation and mapping controls",
+  "argument_id": "c76a1cfb-cf26-4ac3-b9ba-3c07e727f3b5",
+  "challenge_module": "TruthCore.Results.Causality.CogitoCapacityInterface.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CogitoCapacityInterface.Solution",
+  "theorem": "TruthCore.Results.Causality.CogitoCapacityInterface.certificate",
+  "comparator_config": "results/401885b1-4a3a-49c6-8d74-a5eba441d304/comparator.json",
+  "status": "solution-present",
+  "description": "Proves local formula transport without asserting its mapping premise universally. Finite controls retain the original four noncapacity premises and the applicable concreteness premise, isolating missing exercise-to-capacity and mismatched profile mapping. No metaphysical defeat or root discharge. thinRecovery consumes the existing CapacityInterface.Certificate/result d26f85e9-262c-426d-888c-2a09fef96a17 and preserves any original thin profile exactly."
+}

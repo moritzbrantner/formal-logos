@@ -1,0 +1,35 @@
+[batch]
+vocab = "TruthCore.Causality.CogitoCapacityInterface"
+results = "TruthCore.Results.Causality.CogitoCapacityInterface"
+definitions = ["DEF-POWER-CAPACITY-READING"]
+disambiguations = ["DISAMB-POWER-CAPACITY-EXERCISE"]
+
+[[statement]]
+id = "Cogito selected capacity formula transport and omission controls"
+lean = "Certificate"
+paraphrase = "At one selected world, an explicit pointwise equivalence between an old thin power profile and possession of a specified intellectual-effect capacity preserves exactly IntellectualExerciserHasPowerAt and PowerRequiresConcreteAt. Other worlds and respects are unrestricted. A one-bearer, one-world, one-episode Boolean-respect model has an actual attributed intellectual exercise and another capacity, but no selected intellectual capacity or concrete bearer: all five remaining Cogito premises hold when exercise-to-selected-capacity is omitted. The same model satisfies exercise-to-old-power and selected-capacity-to-concreteness while the mapping and the concrete-existence conclusion fail. These controls expose invalid omission and mixed-profile composition; they supply no evidence against actual capacity or its metaphysical bridges."
+
+[[argument]]
+id = "Cogito CONCRETE_6 existence through selected intellectual capacity"
+theorem = "inhabitedFromSelectedCapacity"
+premises = ["e81971f1-601c-57f5-be2d-c4b0624d0cad", "30e6e01c-b7f1-536c-86ae-0a9be35dd160", "8cf54bde-0c97-5428-9179-0d567293675d", "8061edec-5af6-5d25-81b4-e1ccd98207fa", "c821487b-9c5e-5836-bf27-dcb47f210c94", "61b6e188-39aa-57d9-9e0b-dedc05226995"]
+conclusion = "56f68b40-9737-59a0-8cac-5610980a1547"
+rule = "Existing Cogito consumer instantiated at an explicit fixed-respect capacity profile"
+meaning = "Sibling instantiation of fe08da3c-27e2-5f0c-b688-400e583d0be3 at CapacityInterface.bearerProfile p intellectualEffect. All six original premise statements and the exact inhabited-concrete-world conclusion are retained. The selected effect is ability for understanding or judging under suitable conditions, not production of a separate inner object. Possession stays primitive and exercise-to-capacity stays an assumption. No claim about all events of a bearer, all existents, sourcehood or independence follows. This is explicit consumer adoption and conditional reuse, not premise discharge. Analyst reconstruction, attribution deferred."
+transcription = "instantiation"
+sense_bridges = [
+  {term = "A_THOUGHT_OCCURS_VERSUS_SOMETHING_CONCRETE", from = "A_THOUGHT_OCCURS_VERSUS_SOMETHING_CONCRETE_1", to = "A_THOUGHT_OCCURS_VERSUS_SOMETHING_CONCRETE_2", statement_id = "56f68b40-9737-59a0-8cac-5610980a1547", role = "conclusion"},
+  {term = "CONCRETE_AND_ABSTRACT", from = "CONCRETE_AND_ABSTRACT_5", to = "CONCRETE_AND_ABSTRACT_6", statement_id = "61b6e188-39aa-57d9-9e0b-dedc05226995"}
+]
+senses = { CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE = "CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE_1" }
+
+[[argument]]
+id = "Cogito selected capacity transport with activation and mapping controls"
+theorem = "certificate"
+comparator_theorems = ["thinRecovery"]
+premises = []
+conclusion = "Cogito selected capacity formula transport and omission controls"
+rule = "Pointwise equivalence transport and explicit finite omission witnesses"
+meaning = "Proves local formula transport without asserting its mapping premise universally. Finite controls retain the original four noncapacity premises and the applicable concreteness premise, isolating missing exercise-to-capacity and mismatched profile mapping. No metaphysical defeat or root discharge. thinRecovery consumes the existing CapacityInterface.Certificate/result d26f85e9-262c-426d-888c-2a09fef96a17 and preserves any original thin profile exactly."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+senses = { CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE = "CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE_1" }

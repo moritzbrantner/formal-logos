@@ -1,0 +1,27 @@
+{
+  "id": "4f7df841-fc53-458e-a4b6-31665aa9e91a",
+  "label": "PRESUPPOSITION_ROLE_1: A primitive requirement of actuality",
+  "term": "ontic presupposition",
+  "basis": "stipulative",
+  "definition": "An ontic presupposition is a condition whose actuality is required for the actuality of another condition, in a specified situation. OnticRequirements.requires w d p is oriented from dependent d to prerequisite p. Conditions can describe existence, an exercise, or a respect of actuality; they are not automatically beings or proof premises. The relation is supplied, not defined as material implication, temporal priority, efficient causation or a selected possible-world counterfactual.",
+  "note": "Analyst vocabulary separating the use in simple-priority.json from the argument-dependency use in q44-caused-necessity-dependence.json. The former requires some actual being in the relevant respect, not one fixed being across every situation. Translating its existential clause into these condition tokens remains an explicit application step. RequirementsRespectedAt states the local consequence for obtains; it is an additional constraint, not a definition or proof of the requirement. See docs/notes/psr-self-application-756.md#property-and-presupposition-roles-1659.",
+  "lean_declaration": "TruthCore.Logic.FirstPrincipleRoles.OnticRequirements.requires",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "An ontic presupposition is a condition whose actuality is required for the actuality of another condition, in a specified situation. OnticRequirements.requires w d p is oriented from dependent d to prerequisite p. Conditions can describe existence, an exercise, or a respect of actuality; they are not automatically beings or proof premises. The relation is supplied, not defined as material implication, temporal priority, efficient causation or a selected possible-world counterfactual.",
+    "examples": [
+      "Intended application: the potency condition in simple-priority.json presupposes the existence of some actual being in the same respect. A condition token for that existential requirement preserves the existential quantifier; no fixed individual prerequisite is inferred.",
+      "Presupposed material in the generation example of total-cause-of-being.json is an ontic requirement, not a proposition used in the generator's proof. Applicability of the proposed requirements remains an interpretation obligation."
+    ],
+    "exclusions": [
+      "An earlier result cited by a proof does not thereby sustain the actuality of its conclusion.",
+      "A performance-occurrence link quantifies over performances and their tokens; it is not this relation on interpreted conditions.",
+      "Mere co-truth or material implication does not establish an ontic requirement."
+    ],
+    "open_obligations": [
+      "Specify condition interpretation, situation, and the intended mode of requirement in each use.",
+      "Defend RequirementsRespectedAt on the selected domain; no modal, temporal or causal semantics or order law follows from the primitive projection.",
+      "Relate priority, bearer actuality, efficient dependence or counterpossible dependence only by explicit application premises; do not identify them."
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "a0a04260-e00d-41e1-9e6d-f41615d20eb7",
+  "label": "Illumination record coverage and source-cut analysis",
+  "argument_id": "32183197-27db-4bc4-9ada-41dca21770ea",
+  "challenge_module": "TruthCore.Results.Causality.IlluminationReceipt.Challenge",
+  "solution_module": "TruthCore.Results.Causality.IlluminationReceipt.Solution",
+  "theorem": "TruthCore.Results.Causality.IlluminationReceipt.recordAnalysis",
+  "comparator_config": "results/a0a04260-e00d-41e1-9e6d-f41615d20eb7/comparator.json",
+  "status": "solution-present",
+  "description": "Derives RecordCovered for the stipulated response law and selected scenario scopes; it is not an assumed opaque adequacy flag. The expanded roster permits a different illuminating source at the same target, destroying source-specific necessity. Exercise coherence additionally consumes explicit correspondence between independently declared exercise and its admitted active inputs. Genuine productive exercise is not derived from coherence."
+}

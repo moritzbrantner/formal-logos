@@ -1428,3 +1428,549 @@ necessary target truth, persistence of support and one common WF priority rank.
 It composes the existing necessary-underived union route without defending its
 metaphysical premises; rotating/parity/switching controls preserve the remaining
 escapes and the separate no-contingent-supporter burden.
+
+## Capacity and exercise vocabulary audit (#1659, #1652; 2026-11-17)
+
+This analyst audit uses main `91bcc8dbaef83166c09fbd30e09586764438e191`,
+not pending #1700. It repairs the dictionary for the existing #319 boundary
+and #741 certificate; it neither adds a theorem nor discharges a root premise.
+The two certificate conclusions are not themselves recorded root-route premises.
+Their relevance is the power-to-being boundary and the actual capacity inputs
+of the Eleatic/Cogito routes below. Historical readings in earlier sections
+are not newly attributed or rechecked here.
+
+### Five sense dispositions
+
+The five UUIDs and stable labels in `power-capacity-exercise.json` are preserved.
+The suffixes below all belong to `CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE`.
+
+| Sense | Exact representation and disposition |
+| --- | --- |
+| `_1`, capacity | `8ce4f4d6-a221-5db8-aef5-2f0babdfb416`: expanded primitive prose, still no common named Lean declaration. #741 uses the parameter `cap : S → E → Prop`; the direct capacity consumers use `hasCausalPower : W → B → Prop`. Neither parameter defines capacity. |
+| `_2`, actual transmission | `5aef0b49-016a-5716-9bd9-423d957b28ab`: now points to the existing primitive `PowerExistenceBoundary.Profile.transmitsPower`, with a `formal_gap`. Endpoint existence and causal status follow from `Coherent`, not the field alone. |
+| `_3`, unborrowed power in a respect | Preserve `UnborrowedPowerAt`: existence, intrinsic-power marker and no incoming transmission in this channel. An outgoing edge remains a separate requirement. |
+| `_4`, finite grounding | Preserve `FinitelyGroundedPower`: intrinsic seed or transmission from an already finitely grounded predecessor. This inductive standard is not the definition of every dependence relation. |
+| `_5`, pure act | Preserve `SummaTheologiae.PureAct`: no potency in the supplied respects. No new source assertion, positive exercise condition, exhaustive respect coverage or link to capacity is added. |
+
+The last three existing definitions and declarations are unchanged. Their
+presence in Lean does not settle the interpretation of their predicate inputs.
+Sense `_2` is now traced to a field, not upgraded to a reductive causal account.
+Sense `_1` remains unfinished as a named sense; attaching a nominal wrapper
+or an unrelated declaration would conceal that fact.
+
+### Why the available capacity declarations are not interchangeable
+
+`BorrowedExercise.Borrowed` quantifies over allowed scenarios where a supplied
+capacity holds; `Retained` witnesses such a scenario without a lender.
+`capOccurs` and `capAll` are deliberately different profiles on the same
+exercise, not competing definitions silently interchangeable in every theorem.
+`PowerRequired` only says actual occurrence implies actual capacity; it does
+not define capacity, assert its exercise, or require it at every allowed
+scenario. In particular, `Instrument` and `Secondary` do not themselves include
+`cap m.actual e`; the fork supplies that through `PowerRequired`.
+
+`CausalPowerConcreteness.IntendedProfile.hasCausalPower` is a genuine named
+primitive, but its enclosing structure additionally requires power-implies-
+existence, causal endpoints, exercise-implies-power and power-implies-concrete.
+The generic Eleatic/Cogito formulas take a raw predicate without those fields.
+Naming this projection as the common sense would falsely suggest that those
+consumers reach it and inherit its contract. `NamingVeracityBatch1.Power.CanDo`
+is task-indexed, while `BearerExercise.responseOntic` interprets one activated
+response table; neither is an unrestricted replacement for the supplied profiles.
+These are reuse findings, not reasons to duplicate those frameworks.
+
+For an event/world correspondence one must supply maps from scenarios to worlds
+and events to bearers, fix the effect/respect, and state which event-indexed
+capacity corresponds to which bearer capacity. The existing `Exercise.bearer`
+need not be injective: different exercises of one bearer cannot silently be
+collapsed into one unspecified power. A process interpretation additionally
+needs a time interpretation and explicit activation conditions. A fixed-context
+primitive does not need a universal temporal theory merely to support a
+conditional investigation. This audit therefore specifies the missing maps
+without asserting a universal capacity-to-exercise law.
+
+### Consumer coverage and claim/type self-sweep
+
+The following is the complete direct `definition_ids` coverage of the two
+edited definitions at the audit baseline. Filenames below are under
+`corpus/statements/` or `corpus/arguments/`; each is an existing record, not a
+new registry. All these records and their owning specs remain unchanged.
+
+Capacity statements: `power-existence-simplicity-scope-boundary.json`,
+`intellectual-exerciser-has-power.json`, `every-existent-has-causal-power.json`,
+and `causal-power-requires-concreteness-at.json`.
+Capacity arguments: `POWER-EXISTENCE-SIMPLICITY-SCOPE-BOUNDARY.json`,
+`cogito-inhabited-concrete-from-causal-power.json`,
+`causal-concreteness-commitment-strengthens-power.json`,
+`cogito-inhabited-concrete-from-floor-power.json`,
+`existing-in-act-at-from-eleatic-power.json`,
+`intellectual-exercise-requires-act-from-active-power.json`, and
+`existent-in-act-from-eleatic-power.json`.
+
+Actual-transmission statements: `power-existence-simplicity-scope-boundary.json`,
+`constitutive-nature-omission-controls.json`, `part-free-plurality-joint-control.json`,
+`necessary-simple-plurality-joint-control.json`,
+`root-intellect-will-pure-act-plurality.json`, and
+`plural-root-confluence-control.json`.
+The six corresponding argument filenames are identical except that the boundary
+argument uses `POWER-EXISTENCE-SIMPLICITY-SCOPE-BOUNDARY.json`.
+
+| Consumer | Exact type/prose boundary checked |
+| --- | --- |
+| `powerExistenceBoundary : Boundary` | Two existential model witnesses, each with `Coherent`, an actual source/effect edge and nonintrinsic effect. First: contingent source externally supported in esse. Second: necessary source without external support but with a proper component. No universal metaphysical counterexample is inferred. Capacity is linked as a contrast, not encoded in this model. |
+| `EveryExistentHasCausalPowerAt`, `IntellectualExerciserHasPowerAt`, `PowerRequiresConcreteAt` | Respectively existence → capacity, intellectual attribution → capacity, capacity → concreteness, at a selected world. None defines the supplied capacity predicate or entails outgoing exercise. |
+| `NecessarySimplePlurality.JointControl`, `PartFreePlurality.JointControl` | Their power views use the existing boundary Profile and include its Coherent condition in OntologyControl. The four-being and five-being models remain distinct. |
+| `ConstitutiveNatureUniqueness.Control.Certificate`, `RootIntellectWillPureActPlurality.Control`, `PluralRootConfluence.Control` | Retain PartFreePlurality's JointControl and hence its supplied power view; no capacity activation bridge is added by the dictionary repair. |
+| `BorrowedExercise.certificate : Certificate` | Uses the existing borrowed-power, joint-group and temporal vocabulary, and links this disambiguation rather than either edited DEF directly. Event occurrence (`occurs`) and actual group exercise (`exercised`) are separate fields; neither is the #319 binary transmission relation. |
+
+In the last row, `Lender` requires admission, nonempty contributors and their
+occurrence, plus group exercise at the actual scenario. It does **not** itself
+require every enabler or the effect to occur: `Exercise.coherent` provides those
+conditions for exercised records. It is therefore inaccurate to replace it by
+“a sufficient group” or “an event with a predecessor.” `Retained` gives a
+scenario without a lender and says nothing about acquisition of the power;
+`SelfExercising` excludes a lender in this representation, not all causes or
+existential supporters. `Essential` quantifies capacity over allowed scenarios,
+not the bearer's de re necessary existence. No actual consumer examined here
+licenses any of these substitutions.
+
+The new technical lemma `exercise` includes `exercised`, `exercises` and
+`exercising`. It traces this family's transmission, occurrence/group and staged
+time uses to existing definitions. It is not an ordinary-word exemption and
+does not claim exhaustive coverage of intellectual operation or will. Unlinked
+uses in other families remain review work. `power` and `capacity` now also
+point to the already existing borrowed-power profile; no duplicate profile is
+introduced.
+
+### Assessment, limits and next discriminating step
+
+The precise mismatch repaired is the claim that the transmission field alone
+supplies existing endpoints. Lean's separate `Coherent` condition positively
+justifies that correction. No substantive objection to keeping capacity,
+exercise, intrinsic source status and uncaused esse distinct was identified.
+The strongest standing alternative in the existing #741 investigation is the
+source-free globally organized account: it accepts local lending and occurrence
+but rejects finite `Supply` as a necessary standard of explanation. The existing
+coherent, sufficient regress witnesses show that local conditions do not entail
+that standard. They do not establish real instantiation or count as evidence
+against a metaphysical source premise without independent application warrant.
+This vocabulary audit neither ranks that rival lower nor decides it.
+
+The next discriminating step for `_1` is a narrow, explicitly primitive common
+capacity interface with a checked adapter to the actual `cap` and
+`hasCausalPower` consumers, preserving the existing `capOccurs`/`capAll`
+contrast and `PowerOmission` control. Test whether the proposed event/bearer
+mapping loses distinct powers of one bearer before adopting it. An activation
+claim must be its own assumption, not a definitional identification. Changes to
+those shared consumer modules/specs need coordinator assignment beyond the
+current record ownership.
+
+Readiness also limits verification here: this isolated checkout has neither
+`.lake/packages` nor `.lake/build` (indeed no `.lake` directory), and no preview
+was supplied. The authorized prepared CLI from the coordinator checkout is used
+with `--root` pointing here; both source checkouts were at the baseline above.
+No cold build, new checkout, source fetch, generated status edit or unverified
+Lean module was introduced. A prepared dependency/build seed is needed for any
+new Lean adapter and for the coordinator's status refresh/binding checks. The
+new projection link awaits that generated formal-status refresh; its primitive
+classification is justified by the existing structure declaration, not claimed
+as freshly computed evidence. Independent semantic challenge and final CI remain
+coordinator-owned before publication.
+
+Focused validation of this record-only proposal: `truth check` passed in the
+repository's warn mode, `scripts/bundle_audit.py` passed, the sense, definition
+and lexicon ratchets passed, and `git diff --check` passed. The lexicon display
+confirms the intended trace and exposes `_1` as `no_lean_declaration` and the
+new `_2` link as `not_computed`; other-family exercise uses with no relevant
+link remain visible. New/changed prose still produces lexical backfill warnings;
+no ordinary gloss or allowlist change suppresses them. The sense ratchet identifies
+`1dc8b928-44d3-442a-a886-d6148a9e71a4` as removable from the shared allowlist;
+that cleanup is left to its coordinator owner.
+
+Computed `frontier-diff --base 91bcc8dbaef83166c09fbd30e09586764438e191`
+reported **no change**, with zero verified support alternatives added. This is
+premise-delta evidence, not a judgment about the philosophical premises.
+No statements, claims, arguments, results, specs or Lean sources changed;
+the table above is the claim/type self-sweep for the edited meanings. Formal
+status refresh, affected binding, semantic challenge and required final CI have
+not been run in this unprepared checkout.
+
+Policy sourceRevision: `15f348b072188255da837578eaafc8a98f12fdf0`.
+CLI source checkout: `/home/moenarch/moritzbrantner/truth-core`, observed HEAD
+`91bcc8dbaef83166c09fbd30e09586764438e191`; binary SHA-256
+`7b3c1c1c2196e313eebbe6ec96275bd6c358b6542f6ddd01abee14d17a4910be`.
+The prepared binary does not report an embedded source revision; the observed
+checkout revision is not an independent build-provenance attestation. All CLI
+checks selected this isolated checkout with `--root` through
+`python3 scripts/worker_env.py --`.
+
+### Independent semantic challenge and repair (2026-11-17)
+
+The review of `38fc9e1f33691eb5735e730f5154eaf98e89c6f9` supported the
+primitive transmission linkage, Coherent boundary and inspected consumers. It
+found that the exercise entry's broad disambiguation links admitted non-exercise
+definitions. In particular, intellectual-exerciser-has-power passed the lexical
+check through its capacity definition despite using IntellectualExercise. Both
+broad navigation links were removed from the entry; only its four directly
+selected definitions now count. Intellectual-operation coverage remains pending.
+Thus the trace described above is a scoped mapping, not certification that every
+consumer already links its relevant exercise meaning. No checker exemption or
+allowlist growth masks the remaining uses. The capacity adapter remains the next
+implementation step, with explicit event/bearer/respect correspondence and
+activation assumptions.
+
+Coordinator integration verification: the incremental `lake build` passed on the
+combined record changes with unchanged Lean sources. A subsequent generated
+`definitions refresh --write` adds only the new transmission projection's status;
+its primitive classification is now computed. The selected boundary result
+`a268b937-edc1-5f68-b996-9f3489809979` passes `bind-check` (one bound, no mismatch).
+Final CI remains required. Prepared artifacts were copied into both research
+worktrees for the continuing interface and vocabulary work; they do not verify
+subsequent edits.
+## Indexed capacity adapter (#1659, #1652; continuation)
+
+This continuation is a delta from `38fc9e1f33691eb5735e730f5154eaf98e89c6f9`.
+The coordinator authorized a narrow adapter and its own result bundle, leaving
+existing consumer modules and frozen Challenges untouched. The earlier audit's
+missing interface is addressed here; its philosophical application burdens
+remain. The coordinator's review correction to the `exercise` entry is also
+applied: remove both broad disambiguation links, preserve all four direct DEF
+links. Capacity or PureAct alone must not license a use of the word exercise.
+Intellectual-operation coverage remains pending in its own family.
+
+### Meaning, representation and exact agreement condition
+
+`TruthCore.Causality.CapacityInterface.Capacity W B R` supplies the primitive
+`possesses w b r`: bearer b has the capacity for the specified effect/respect r
+in situation w, including when not exercised. It provides no causal direction,
+activation law, effect occurrence, source status, existential support,
+concreteness, or cross-world persistence. A disconnected charged battery is an
+illustration of possession distinct from exercise, not a newly sourced claim.
+Situation may represent a world or a time-sensitive context; the adapter imposes
+no interpretation of time or accessibility on it. A respect must distinguish
+powers for different effects when that difference matters to the application.
+
+The adapter is more than a new name for an arbitrary predicate: it exposes and
+tests the exact information loss involved in the proposed reuse. `Indexing`
+supplies three maps: scenario → situation, event → bearer, event → respect.
+`eventProfile` reads possession at those indices. `Corresponds` requires
+pointwise equivalence with the original `cap s e`, for **all** scenario/event
+pairs. This is stronger than agreement only on allowed scenarios; an application
+needing only allowed scenarios should explicitly restrict the index domain.
+
+`FiberAgreement` says that whenever two pairs (s,e), (t,f) map to the same
+situation, bearer and respect, `cap s e ↔ cap t f`. It includes different events
+of one bearer/respect and different scenarios mapped to one situation. No
+injectivity or surjectivity is assumed. The proposed `Factorization` theorem
+states exactly:
+
+```
+FiberAgreement i cap ↔ ∃ p : Capacity W B R, Corresponds i cap p
+```
+
+It also supplies a canonical witness `descend`: possession holds if some
+scenario/event pair maps to those three indices and has capacity. Forward
+recovery uses the agreement assumption; reverse necessity uses equality of the
+three possession arguments. `descend` is false outside the represented image.
+This is a mathematical extension choice, not evidence that unmapped bearers or
+respects lack capacity. Correspondence does not determine values there.
+No claim of global uniqueness of the resulting capacity profile is made.
+
+The finite controls can fail in exactly the intended way. With one scenario,
+two Boolean events, one bearer and one respect, assign capacity only to event
+true. No profile on the collapsed indices can recover both truth values.
+A separate control holds event/bearer/respect fixed while identifying two
+Boolean scenarios with different capacity values. Conversely one bearer can
+have different capacities for the two different Boolean respects without any
+contradiction. These are logical controls on representation, not objections to
+metaphysical capacity or evidence against any existing source premise.
+
+### Lossless fallback and actual consumers
+
+An arbitrary event profile need not meet `FiberAgreement`. `fromEvents` therefore
+retains the original scenario, the **actual** `Exercise.bearer` mapping, and the
+pair `(specified respect, event identity)`. Its possession clause checks that
+the retained event belongs to that bearer and respect and then reads the original
+capacity. `retainedIndex` recovers the original profile exactly. This works when
+multiple events have the same bearer/respect because their identities remain;
+it does not prove that identity can subsequently be forgotten. No new Exercise,
+group, occurrence table or activation claim is invented.
+
+`fromBearer` embeds an existing `hasCausalPower : W → B → Prop` with a Unit
+respect. This represents its already selected or unspecified respect; it does
+not assert that every distinct power has the same truth value. `bearerProfile p r`
+fixes one explicit respect and yields the exact W → B → Prop interface. It does
+not silently existentially aggregate powers over respects. The round trip of a
+thin profile is definitionally equal to that original profile.
+
+The certificate's `BorrowedTransport` instantiates `exerciseIndex` with an
+existing Exercise, a scenario/situation map and an event/respect map. Under
+`Corresponds`, its actual `Borrowed`, `Retained` and `PowerRequired` formulas
+are preserved. Pointwise equivalence gives equality of the profiles, so these
+are the same claims about the same groups, occurrences, allowed scenarios and
+actual scenario, not reinterpreted approximations. `PowerRequired` remains a
+separate premise; the adapter neither proves it nor supplies a converse from
+capacity to exercise.
+
+`RootConsumerTransport` explicitly uses the existing
+`EveryExistentHasCausalPowerAt`, `IntellectualExerciserHasPowerAt` and
+`PowerRequiresConcreteAt` declarations with the recovered thin profile. It
+proves equivalence to their original formulas, not existence-to-power,
+intellect-to-power or concreteness themselves. This is the precise connection
+to the same Eleatic/Cogito root-route inputs audited above. Existing consumers
+are unchanged, so the new primitive is available through an adapter, not
+silently substituted for their supplied parameters. The new certificate is
+not wired as a root premise and claims no root discharge.
+
+`ExistingControls` reuses the original `instrument_regress`, `secondary_regress`
+and `power_omission` theorems of the BorrowedExercise Solution. Their exact
+`capOccurs`/`capAll` assignments and no-power omission are unchanged. The general
+`fromEvents` round trip applies to each original profile, including the all-false
+profile of PowerOmission. No activation axiom is added to rule it out by fiat.
+These are reused evidence, not newly discovered rival defeats. A common-bearer
+factorization of an arbitrary profile would be false; the finite control is
+positive evidence for retaining the agreement condition, rather than a merely
+conceivable objection.
+
+### Proposed outcome, self-sweep and integration boundary
+
+All five sense UUIDs and labels remain stable. `_1` now names
+`CapacityInterface.Capacity.possesses`, with a `formal_gap` describing its
+primitive meaning, examples, exclusions and application obligations. `_2`
+through `_5` remain exactly as in the previous commit. The new interface is an
+explicit primitive plus substantive adapter conditions; it is not a completed
+reductive analysis of causal ability. No source or claim record is added.
+
+The bounded bundle is `specs/capacity-interface.toml`, vocabulary
+`TruthCore/Causality/CapacityInterface.lean`, and new
+`TruthCore/Results/Causality/CapacityInterface/{Solution,Challenge}.lean`.
+Result `d26f85e9-262c-426d-888c-2a09fef96a17` binds
+`TruthCore.Results.Causality.CapacityInterface.certificate` to statement
+`813bbcdf-df59-49fe-93f6-54d505259540` (`CapacityInterface.Certificate`).
+Argument `6acc63b4-5d25-4fcb-a1ee-ddcd2351aa43` has no external premises:
+the universally quantified correspondence and agreement assumptions occur
+inside the explicitly conditional conclusions, not as hidden philosophical
+commitments. The conjunction retains the exact old controls. The self-sweep
+checks all quantifiers, the fixed respect of the thin adapter, actual bearer
+preservation, the possibility of many events per bearer/respect, cross-scenario
+collisions, and the distinction between a represented profile and its real
+applicability. No new historical attribution or source-fidelity claim occurs.
+
+Shared imports, generated formal status, allowlists and existing consumer specs
+remain coordinator-owned. The coordinator must generate imports for the new
+modules on integration; a focused build directly targets the Solution without
+requiring a root-aggregator edit. The generic consumers' raw parameters still
+need an explicit adapter adoption if future sense binding is to reach the new
+constant. That migration is separate from this representation theorem.
+
+The substantive reassessment point is now precise: exact mathematical reuse
+requires agreement on the indices actually forgotten, and the event-retaining
+adapter supplies a lossless alternative when such agreement is unavailable.
+Application to a chosen real power still needs its effect/respect, scenario
+interpretation and activation evidence. No additional philosophical objection
+to this scoped representation was identified. The earlier source-free account
+remains a standing rival about explanatory Supply, untouched by these adapters.
+The next discriminating application is to choose one actual root-route profile
+and justify its index correspondence, rather than assume all events of a bearer
+instantiate one power. Publication still requires independent semantic challenge
+of this new adapter outcome.
+
+### Focused verification of the adapter slice
+
+The coordinator subsequently supplied copied pinned packages and a completed
+warm build, resolving the earlier readiness gap. Under
+`flock /tmp/moenarch/truth-core-heavy.lock`, through `worker_env.py`:
+
+- `lake build TruthCore.Results.Causality.CapacityInterface.Solution` passed.
+- `truth bind-check --result d26f85e9-262c-426d-888c-2a09fef96a17` reported
+  **1 bound, 0 pinned, 0 mismatch**, including the declared capacity sense.
+- `scripts/verify-result.sh d26f85e9-262c-426d-888c-2a09fef96a17` passed
+  Comparator and its independent NanoDa solution check. The generated frozen
+  Challenge contains the expected `sorry`; the Solution contains none.
+- The exact certificate's axiom report is `[propext, Classical.choice,
+  Quot.sound]`. Its spec permits precisely this standard policy set. The first
+  generated zero-axiom config rejected `Quot.sound`; the spec was corrected to
+  the actual extensional/classical dependency set and regenerated. No new axiom
+  or weakened philosophical premise was introduced. This result is not evidence
+  against the intuitionist rival or for excluded middle.
+- The existing `DefinitionStatus.lean` exporter, with the new vocabulary as
+  `root_module` and only `Capacity.possesses` requested, returned `found: true`,
+  `kind: projection`, `proof: false`, `parameter_wrapper: false`. This is focused
+  evidence for the explicit primitive boundary, not a shared-cache refresh.
+
+Offline corpus validation, bundle audit, module-format check, spec regeneration
+check, sense/definition/lexicon ratchets and whitespace check passed. Lexical
+backfill warnings and missing generated status entries remain visible. No global
+allowlist, generated formal-status cache or import aggregator was edited.
+The existing transmission-boundary verification supplied by the coordinator was
+not repeated. The computed frontier delta against
+`38fc9e1f33691eb5735e730f5154eaf98e89c6f9` is **no change**, zero support
+alternatives added on root routes. The local checks cover the unchanged final
+Lean sources and binding; later prose changes record their outcome and do not
+alter the checked theorem. The exact new result ID above is the reproduction
+entry point. Independent review of this new consequential interface, shared
+import/status generation and delivered-head integration CI remain outstanding.
+
+### Adapter and role integration review (2026-11-17)
+
+Independent semantic challenge of f4058906f5c494a86bd6d9b6f426c227a62adad7 by GPT-6.1 Sol found no findings across the 14-file delta. It confirmed exact factorization agreement, scenario collisions, event-retaining fallback, fixed-respect transport, primitive obligations and preserved consumer formulas. Mechanical verification was reused, not repeated. Next is one explicit Cogito consumer adoption with a justified intellectual-effect respect and retained exercise-to-capacity premise.
+
+### Selected intellectual-capacity Cogito consumer (2026-11-17)
+
+**Complete proposed outcome for independent semantic challenge.** The sibling
+`CogitoCapacityInterface.inhabitedFromSelectedCapacity` explicitly applies
+`Round4Revisited.inhabitedFromPower` to `bearerProfile p intellectualEffect`.
+It concludes the **existing** `InhabitedConcreteAt m concrete w`, statement
+`56f68b40-9737-59a0-8cac-5610980a1547`, with precisely the six premise statements
+of argument `fe08da3c-27e2-5f0c-b688-400e583d0be3`, in the same order:
+`e81971f1-601c-57f5-be2d-c4b0624d0cad`,
+`30e6e01c-b7f1-536c-86ae-0a9be35dd160`,
+`8cf54bde-0c97-5428-9179-0d567293675d`,
+`8061edec-5af6-5d25-81b4-e1ccd98207fa`,
+`c821487b-9c5e-5836-bf27-dcb47f210c94`, and
+`61b6e188-39aa-57d9-9e0b-dedc05226995`.
+The sibling argument is `660673ca-0506-42b2-9265-00c96fb52cf4`, result
+`39454df8-dd97-46b5-afe8-7ac84a0443b1`. It is honestly classified as
+`instantiation`: consumer adoption supplies no new independent warrant or
+premise discharge. The original frozen contracts remain untouched.
+
+Here the **selected intellectual effect** is performing an act of understanding
+or judging, under suitable cognitive conditions. It need not be the production
+of an inner word, a separate object or an external change. Possession means
+ability for that operation whether or not exercised. A judgement exercised by
+its bearer is an intended application of the exercise-to-capacity premise;
+mere storage of a sentence, or a capacity for locomotion alone, is not that
+application. These are analyst interpretations with attribution deferred, not
+new empirical or historical findings. The generic respect parameter permits a
+specified operation/content class; the theorem does not warrant substituting
+an arbitrary effect for the intended intellectual effect.
+
+No extra capacity definition is needed: `Capacity.possesses` is the existing
+interpreted primitive, with its open effect, conditions and applicability
+obligations. Naming `intellectualEffect` makes the application explicit but does
+not complete a reductive analysis. Suitable conditions must be specified in an
+application without defining them retrospectively as whatever yields success.
+The structure contains no causal mechanism or activation law. The existing
+`IntellectualExerciserHasPowerAt` premise carries the substantive claim that
+an attributed exercise entails the selected ability. It remains unproved;
+its converse (possession entails actual exercise) is neither used nor asserted.
+The capacity-to-concreteness premise and the selected-world existence bridge
+remain equally explicit. No premise says that every event of a bearer is one
+power, or that every existent possesses the selected intellectual capacity.
+
+**Old/new formulas.** `SelectedMapping power p r w` is exactly
+`∀ b, power w b ↔ p.possesses w b r`. Under this explicit assumption,
+`formula_transport` proves equivalence of each of the old exercise-to-power and
+power-to-concreteness formulas with its fixed-respect version. Agreement at
+other worlds, on other respects, or about event identity is unnecessary for this
+consumer. This is a sufficient local mapping for transport, not a claim that
+equivalence of these two formulas alone forces pointwise agreement.
+`thinRecovery` actually consumes the checked generic
+`CapacityInterface.certificate` (result `d26f85e9-262c-426d-888c-2a09fef96a17`)
+for `bearerProfile (fromBearer power) () = power`. The sibling consumer accepts
+an arbitrary indexed capacity and selected respect, beyond the Unit embedding.
+The new certificate result is `401885b1-4a3a-49c6-8d74-a5eba441d304`, statement
+`e68fba46-8eb7-4d84-b8cb-ebf97eaef4fc`.
+
+**Discriminating models.** One world, bearer and episode are Unit; the episode
+occurs, is borne and is attributed an intellectual exercise; the bearer exists.
+There are two respects, Bool. `otherPower` is possessed only at false, while the
+selected intellectual respect is true. Nothing is concrete.
+`MissingActivation` retains all four noncapacity premises and
+power-to-concreteness (vacuously for the absent selected capacity), while
+exercise-to-selected-capacity and the conclusion fail. Despite its short name,
+this tests the *exercise-to-possession* direction, not possession-to-activation.
+Thus an actual exercise is not identified definitionally with capacity.
+`MissingMapping` instead makes the old thin profile everywhere true: old
+exercise-to-power and selected-profile-to-concreteness hold, but their local
+mapping and the conclusion fail. This is a concrete mixed-profile inference
+failure. The original old-profile concreteness premise would be false here;
+the model is not advertised as satisfying the original complete bundle.
+Neither model supports doubt about actual exercise or real capacity: each
+establishes only the precise logical omission failure it was built to test.
+No substantive objection to the scoped conditional adoption was identified.
+
+**Claim/type self-sweep.** The consumer retains the exact six premise constants,
+world, bearer, episode and concrete predicate, with the identical fixed-respect
+profile in both capacity premises. The independent formula/control certificate
+has no external premises; its universally quantified mapping occurs inside a
+conditional, not as an asserted global correspondence. The derived occurrence
+to population bridge is annotated as the conclusion of the complete bundle;
+the capacity-to-concreteness premise is the explicit bridge to the chosen
+CONCRETE_6 predicate, not an equivalence of causal and esse criteria. No new
+source/claim record, owner commitment, primitive, sense or allowlist is added.
+The raw `concrete` parameter still needs its intended esse interpretation; the
+Lean theorem does not establish that interpretation. No sourcehood, finite
+support, persistence, necessity or root truth is inferred.
+
+**Premise comparison and root connection.** The existing conclusion reaches the
+Catholicism root in the corpus graph; the context command reports no enumerated
+root route specifically touching this argument. We add an explicit sibling at
+that same graph destination, not a newly established route or a discharge.
+The computed `truth frontier-diff --base
+d69634db451aabb99ba0be7f2c231747169a478f` reports **no change**: root-reaching open
+premises 490 → 490 (349 bare, 90 supported, 51 stated), lowest expanded route
+cost 16 → 16, verified support alternatives 489 → 489, added 0. This is expected
+for an instantiation plus a transport/control certificate; no premise is
+removed or replaced. Direct assumption and all previous support options remain.
+
+The bounded semantic question is answered conditionally: this actual Cogito
+consumer can use a specified intellectual-effect profile without global event
+collapse or an existence-to-that-respect principle. Actual applicability still
+requires interpreting the intellectual operation, its suitable conditions,
+exercise attribution and the two metaphysical bridges. Next discriminating
+work is to defend that exercise-to-ability application on a specified judgement
+and conditions, or compare a positively justified rival account of that same
+operation. No unsupported rival is invented. Independent challenge should test
+the selected-effect interpretation, formula correspondence, finite witnesses,
+bridge annotations and the instantiation/closure boundary before substantive
+integration.
+
+**Worker evidence and exact readiness boundary.** Checkout:
+`/home/moenarch/.t3/worktrees/truth-core/t3-fa5a0c4a-037c0c7f5743a85b`,
+baseline `d69634db451aabb99ba0be7f2c231747169a478f`. Shared conventions were
+read from the supplied resolved stack, sourceRevision
+`15f348b072188255da837578eaafc8a98f12fdf0`. No preflight was repeated.
+The worktree initially lacked `.lake`; direct focused Lean compilation used
+read-only warm parent imports with temporary local output modules under
+`/tmp/cogito-capacity-olean`, through worker_env and the heavy-job lock. Vocabulary,
+Solution and generated Challenge compiled; only the expected frozen Challenge
+`sorry` warnings occurred. This is new-module compilation, not a full Lake build.
+The two-result BindTypes export against those modules reports **2 bound, 0
+pinned, 0 mismatch**. The command still exits 1 on a global Maximal/Maximum alias
+report (`4f1d0cf6`); no unrelated alias repair or allowlist change was attempted.
+Comparator starts its own sandboxed `lake build` in this unprepared worktree,
+attempts to fetch mathlib revision `56a005855ea17e0b0958f73ec801ae140b0a1679`,
+and fails `cannot exec 'remote-https': Permission denied`. This is an environment
+readiness failure, not a theorem rejection; no cold build was continued.
+Comparator/NanoDa remain **unverified for this slice**. The coordinator should
+prepare the warm local artifacts, then run scoped binding and
+`scripts/verify-result.sh` for the two new result IDs above, reuse the unchanged
+focused proofs, and retain required final CI. Generated imports, status caches
+and any global alias reconciliation remain coordinator-owned.
+
+Axiom inspection on the compiled final modules reports **none** for
+`inhabitedFromSelectedCapacity` and `certificate`; `thinRecovery` inherits
+`[propext, Classical.choice, Quot.sound]` through the reused generic certificate.
+Spec regeneration is unchanged; offline `truth check` and `git diff --check`
+pass (existing/backfill lexical and status warnings remain). The generated
+certificate dossier was inspected after recording the attempt. These results
+are focused evidence only and do not change the pending gates above.
+
+### Cogito integration checks (2026-11-17)
+
+The coordinator's prepared checkout verified both new results with Comparator
+and NanoDa. Scoped binding passes with two bound, zero pins and zero mismatches;
+the baseline Maximal/Maximum alias exceptions were retained separately. The
+integrated offline corpus check, bundle audits and spec regeneration pass.
+Result references in the attempt summary were moved to its supported evidence
+field; the exact argument/result mapping remains in this note. No theorem or
+philosophical meaning changed. Independent semantic challenge is still pending.
+
+Independent GPT-6.1 Sol challenge of worker 311134df9374d4107715e7f2fc66614ffa4fd25c
+and coordinator repairs at b059c1ceec604e1fcd2986a1654107be297060c8 found no
+corrections needed. It confirmed the actual original-theorem application, six
+contracts, fixed profile, local transport, exact omission bundles, sense bridges
+and instantiation boundary. Actual applicability and premise warrant remain open.
+The next application question concerns one specified judgement and independently
+described suitable conditions; it is not a missing generic transport theorem.

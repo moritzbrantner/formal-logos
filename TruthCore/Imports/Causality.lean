@@ -28,6 +28,7 @@ public import TruthCore.Causality.BruteFoundationBoundary
 public import TruthCore.Causality.BruteFoundationDoubling
 public import TruthCore.Causality.BruteFoundationExplanations
 public import TruthCore.Causality.BruteFoundationRoutes
+public import TruthCore.Causality.CapacityInterface
 public import TruthCore.Causality.CausalConcreteRivalBoundary
 public import TruthCore.Causality.CausalMapsBatch1
 public import TruthCore.Causality.CausalPowerConcreteness
@@ -35,6 +36,7 @@ public import TruthCore.Causality.CausalPowerConcretenessStrength
 public import TruthCore.Causality.ChainInstantiation
 public import TruthCore.Causality.ClassicalGodRevelationBoundary
 public import TruthCore.Causality.ClosedGroundingRoots
+public import TruthCore.Causality.CogitoCapacityInterface
 public import TruthCore.Causality.CogitoNecessaryConcrete
 public import TruthCore.Causality.ComingToBeHorns
 public import TruthCore.Causality.CommonPriority
@@ -110,6 +112,7 @@ public import TruthCore.Causality.GroundingLimits
 public import TruthCore.Causality.GroundingRegress
 public import TruthCore.Causality.HeadlessCausalAncestry
 public import TruthCore.Causality.HistoricalRemoval
+public import TruthCore.Causality.IlluminationReceipt
 public import TruthCore.Causality.IndexedSignalProvenance
 public import TruthCore.Causality.IndexedSignalReaper
 public import TruthCore.Causality.InertEmptiness
@@ -170,11 +173,14 @@ public import TruthCore.Causality.Power1392
 public import TruthCore.Causality.Power1392Exercise
 public import TruthCore.Causality.PowerExistenceBoundary
 public import TruthCore.Causality.PreservationCandidates
+public import TruthCore.Causality.PreservationMeaning
 public import TruthCore.Causality.ProductiveStore
 public import TruthCore.Causality.ProtectiveProcess
 public import TruthCore.Causality.PureActRoot
 public import TruthCore.Causality.PureActThisness
 public import TruthCore.Causality.PureIndiscernibility
+public import TruthCore.Causality.Q44EssentialSource
+public import TruthCore.Causality.Q44SourceSupply
 public import TruthCore.Causality.QuantitativeTransferPaths
 public import TruthCore.Causality.ReceptionLimitation
 public import TruthCore.Causality.ReflexiveDependenceScope

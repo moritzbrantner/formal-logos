@@ -1,0 +1,6 @@
+{
+  "id": "13eb2e6d-7263-4543-867e-75a304e6fba2",
+  "label": "Admitted-record source cuts constrain available inputs",
+  "paraphrase": "For every Exercise dictionary, effect event e and source bearer c, IF every admitted alternative for e contains a contributor borne by c, THEN every available record for e has an occurring event of c, and inactivity of all such contributor events prevents any available record. IF additionally every allowed occurrence of e is covered by an available record, that inactivity excludes occurrence of e in allowed scenarios. All conditions are internal hypotheses; no causal exercise, bearer nonexistence, esse interpretation or CausesIn edge is inferred. Analyst formulation; attribution deferred.",
+  "lean_declaration": "TruthCore.Causality.PreservationMeaning.CutConsequences"
+}

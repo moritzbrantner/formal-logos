@@ -1,0 +1,9 @@
+{
+  "id": "3492ef00-6d09-4008-8ab2-25e2aa03e725",
+  "label": "PRESUPPOSITION_ROLE_2: Immediate premise dependency in a selected argument",
+  "term": "argument presupposition",
+  "basis": "stipulative",
+  "definition": "An argument presupposes a claim in the immediate inferential sense when one of its specified rules uses that claim as a premise for a conclusion. Justification.inferential j p c means that some rule r in the supplied presentation j has conclusion c and includes p in its premise set. It does not assert that p alone entails c, that p is indispensable to every proof of c, or that either claim is true or justified. Earlier results used through intermediate steps require an explicit chain of these edges; the predicate itself denotes one edge.",
+  "note": "Reuses the inferential projection already distinguished from GeneratedWarrant in definition 38955650-58d2-5bfc-a6ec-6255f5193090. The q44-caused-necessity-dependence.json note says the selected article argument relies on earlier subsistent-being and unity results. That is an argument-dependency report, not an ontic requirement or an authenticated Lean edge: representing its exact rules and intermediates remains open. Restrict j to the selected argument before claiming a dependency of that argument. See docs/notes/psr-self-application-756.md#property-and-presupposition-roles-1659.",
+  "lean_declaration": "TruthCore.Logic.RegressDomains.Justification.inferential"
+}

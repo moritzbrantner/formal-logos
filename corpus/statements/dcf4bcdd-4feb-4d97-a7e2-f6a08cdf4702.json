@@ -1,0 +1,19 @@
+{
+  "id": "dcf4bcdd-4feb-4d97-a7e2-f6a08cdf4702",
+  "label": "All relevant actual own-being causes are the selected p",
+  "paraphrase": "Analyst formulation, attribution deferred. For each participant x and distinct actual OwnBeing c causing x in the esse respect, c is numerically identical with the selected p. Unrelated own-being bearers are outside this quantifier. This is the conclusion to be derived from an identity dictionary, at-most-one and a selected witness, not a definition making selection true.",
+  "lean_declaration": "TruthCore.Causality.Q44EssentialSource.RelevantEssentialSourcesSelected",
+  "definition_ids": [
+    "2eab0d94-8956-4500-a3ed-16f1c91d7638",
+    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7",
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "54f33165-05df-5205-807a-04154b5fd6ad",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1"
+  ]
+}

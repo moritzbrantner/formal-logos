@@ -1,0 +1,75 @@
+# Analyst reconstruction; no historical attribution or GOD_4 identification.
+[batch]
+vocab = "TruthCore.Causality.Q44EssentialSource"
+results = "TruthCore.Results.Causality.Q44EssentialSource"
+
+[[statement]]
+id = "de05072a-5db0-4a31-8e24-b18fedf01401"
+label = "Each participant has a distinct actual own-being cause of esse"
+lean = "ParticipatedHasEssentialSource"
+paraphrase = "Analyst formulation, attribution deferred. Each x with the existing q44 Participated predicate has some c distinct from x, in act as to esse, that is its own subsistent being (the existing primitive OwnBeing) and causes x in the esse respect. This adds essential possession at the causal source to the local external-cause conclusion. It does not assert the premise, identify all such sources or make causation efficient, conserving or modal."
+definitions = ["75822b6c-e714-4061-8460-4e2afc0a8b4c", "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "14d30c53-51c2-502d-b009-247dac0421e0", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "183b48d2-1753-583d-aef9-4199cff86231"]
+disambiguations = ["DISAMB-CAUSE", "54f33165-05df-5205-807a-04154b5fd6ad", "1aef8986-ed29-564f-9803-d812d2ff63e1"]
+
+[[statement]]
+id = "6acd44eb-4b3e-480c-a479-6b4ac7a2522e"
+label = "Relevant own-being sources respect the essence-esse identity dictionary"
+lean = "RelevantEssentialSourceHasIdentity"
+paraphrase = "Analyst formulation, attribution deferred. For each participant x and each distinct actual OwnBeing c that causes its esse, the represented esseOf c equals essenceOf c in the same q3 profile. This is an open application dictionary restricted to relevant causal sources, not a definition of OwnBeing or a converse from identity to subsistence. Lean does not impose it on arbitrary supplied profile maps."
+definitions = ["d107b55a-9486-4159-8a42-c90fdf925bb2", "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "14d30c53-51c2-502d-b009-247dac0421e0", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "183b48d2-1753-583d-aef9-4199cff86231"]
+disambiguations = ["DISAMB-CAUSE", "54f33165-05df-5205-807a-04154b5fd6ad", "1aef8986-ed29-564f-9803-d812d2ff63e1"]
+
+[[statement]]
+id = "e2bfd1b1-7d5e-4be3-b5d4-f9db988c5745"
+label = "Selected p is actual with its represented esse identical to its essence"
+lean = "SelectedActualIdentity"
+paraphrase = "Analyst formulation, attribution deferred. The selected p is in act as to esse and esseOf p equals essenceOf p in the one supplied q3 profile. These two explicit conjuncts assert neither primitive OwnBeing p nor universal causation, uniqueness, necessity or GOD_4 status."
+definitions = ["8a08ca4c-1fac-4020-b0e9-fac2d70de0d5", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "183b48d2-1753-583d-aef9-4199cff86231"]
+disambiguations = ["DISAMB-CAUSE", "54f33165-05df-5205-807a-04154b5fd6ad", "1aef8986-ed29-564f-9803-d812d2ff63e1"]
+
+[[statement]]
+id = "dcf4bcdd-4feb-4d97-a7e2-f6a08cdf4702"
+label = "All relevant actual own-being causes are the selected p"
+lean = "RelevantEssentialSourcesSelected"
+paraphrase = "Analyst formulation, attribution deferred. For each participant x and distinct actual OwnBeing c causing x in the esse respect, c is numerically identical with the selected p. Unrelated own-being bearers are outside this quantifier. This is the conclusion to be derived from an identity dictionary, at-most-one and a selected witness, not a definition making selection true."
+definitions = ["2eab0d94-8956-4500-a3ed-16f1c91d7638", "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "14d30c53-51c2-502d-b009-247dac0421e0", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "183b48d2-1753-583d-aef9-4199cff86231"]
+disambiguations = ["DISAMB-CAUSE", "54f33165-05df-5205-807a-04154b5fd6ad", "1aef8986-ed29-564f-9803-d812d2ff63e1"]
+
+[[statement]]
+id = "3b601644-d9c2-43a5-8bb1-d16ddfba0a87"
+label = "Finite controls for q44 essential-source selection"
+lean = "Control.Certificate"
+paraphrase = "Analyst formulation, attribution deferred. Four explicit finite interpretations over three beings. The first three each have a participant and a distinct actual OwnBeing cause of its esse but fail selection: respectively the identity dictionary, at-most-one or selected identity witness fails while the other two selection premises hold. The fourth satisfies all selection premises, participant source supply and participation of all others; every other being is CREATURE_1 and the primary causes the effect. Facts about encoded interpretations only, not their metaphysical possibility or evidence against any premise."
+definitions = ["f5a58c9d-95db-48c1-b09f-99bed22c18be", "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "14d30c53-51c2-502d-b009-247dac0421e0", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "183b48d2-1753-583d-aef9-4199cff86231"]
+disambiguations = ["DISAMB-CAUSE", "54f33165-05df-5205-807a-04154b5fd6ad", "1aef8986-ed29-564f-9803-d812d2ff63e1"]
+
+[[argument]]
+id = "b8b21fb3-997d-4aa0-a675-6a0870d77e1f"
+label = "Relevant essential sources are selected through De ente identity uniqueness"
+theorem = "sourcesSelected"
+premises = ["Relevant own-being sources respect the essence-esse identity dictionary", "a576300f-4b01-45ae-902c-cfe3d0fbf2de", "Selected p is actual with its represented esse identical to its essence"]
+conclusion = "All relevant actual own-being causes are the selected p"
+axioms = []
+rule = "Universal instantiation, equality elimination and existential construction"
+meaning = "For each distinct actual own-being cause of a participant, the dictionary supplies represented identity. The existing at-most-one statement identifies it with the selected actual identity witness. No participation coverage or source supply is required for this restricted selection conclusion, which is vacuous if there are no relevant sources. Each selection input is tested by a nonempty finite control. No source premise is established."
+
+[[argument]]
+id = "60447a77-72b9-42f0-ba39-9cb3e317b99c"
+label = "Others are CREATURE_1 from q44 selected essential sources"
+theorem = "othersAreCreatures"
+premises = ["11e24b50-06bc-5e2e-b9b6-a4e4dc421237", "Each participant has a distinct actual own-being cause of esse", "All relevant actual own-being causes are the selected p"]
+conclusion = "612078bf-5a68-5542-8b7b-f862f816ece0"
+axioms = []
+rule = "Universal instantiation, equality elimination and existential construction"
+meaning = "For each x other than the selected p, participation coverage gives Participated x. Its distinct actual own-being cause c is selected as p, so p causes x. Consequently p causes every other actual being, and each other x is CREATURE_1 with that same p as the universal cause. Creature is instantiated at IsCreatureOfUniversalCause, not CREATURE_2. The own-being source law and numerical source selection are explicit premises; no Fourth-Way universal-cause principle, GOD_4 identification, q3 local-to-common-source shortcut, efficiency, conservation or modal conclusion is used."
+senses = { CREATURE = "CREATURE_1" }
+
+[[argument]]
+id = "16d2646f-cef3-4b70-a38b-ca40ddc35acd"
+label = "Q44 essential-source finite controls, checked"
+theorem = "controls"
+premises = []
+conclusion = "Finite controls for q44 essential-source selection"
+axioms = []
+rule = "Universal instantiation, equality elimination and existential construction"
+meaning = "Three nonempty selection omissions and a positive full-route finite interpretation. The dictionary omission tests an unfaithful supplied map, not metaphysical possibility; the other controls likewise establish encoded non-implications only. All are closed mathematical facts, without a claim that a rival is true or any premise doubtful."

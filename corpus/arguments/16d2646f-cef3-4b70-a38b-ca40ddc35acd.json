@@ -1,0 +1,23 @@
+{
+  "id": "16d2646f-cef3-4b70-a38b-ca40ddc35acd",
+  "label": "Q44 essential-source finite controls, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "3b601644-d9c2-43a5-8bb1-d16ddfba0a87",
+  "inference_ids": [
+    "acd3438c-d0e0-4a37-997d-876b7388b188"
+  ],
+  "meaning": "Three nonempty selection omissions and a positive full-route finite interpretation. The dictionary omission tests an unfaithful supplied map, not metaphysical possibility; the other controls likewise establish encoded non-implications only. All are closed mathematical facts, without a claim that a rival is true or any premise doubtful.",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7",
+    "f5a58c9d-95db-48c1-b09f-99bed22c18be"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "54f33165-05df-5205-807a-04154b5fd6ad"
+  ]
+}

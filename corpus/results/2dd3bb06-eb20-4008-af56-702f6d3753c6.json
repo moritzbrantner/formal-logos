@@ -1,0 +1,11 @@
+{
+  "id": "2dd3bb06-eb20-4008-af56-702f6d3753c6",
+  "label": "Admitted-record cut consequences by contributor witness",
+  "argument_id": "af279ff2-c62c-4867-b905-6b3ae885a973",
+  "challenge_module": "TruthCore.Results.Causality.PreservationMeaning.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PreservationMeaning.Solution",
+  "theorem": "TruthCore.Results.Causality.PreservationMeaning.cutConsequences",
+  "comparator_config": "results/2dd3bb06-eb20-4008-af56-702f6d3753c6/comparator.json",
+  "status": "solution-present",
+  "description": "Conditional structural derivation over the existing joint-record dictionary. The all-alternative cut selects an occurring contributor of the source, including when the episode differs between records. The occurrence-loss clause consumes a separate record-coverage hypothesis. No predicate is identified with causal receipt or either original preservation sense; no root premise is discharged."
+}

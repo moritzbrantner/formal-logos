@@ -1,0 +1,6 @@
+{
+  "id": "ae7e55d2-7102-46d4-b726-09e2849da155",
+  "label": "Illumination record coverage and source cuts depend on admitted inputs",
+  "paraphrase": "For arbitrary actual scenario and exercise assignment, every allowed positive illumination in the stipulated circuit has an admitted nonempty input record, and every admitted record with all its inputs present gives positive illumination. In solar-only scope the sun has a source cut and the air does not; admitting the lamp alternative defeats the sun cut for the same illumination event. In either scope, coherence follows IF the actual scenario is allowed and every declared exercised record is admitted with its incoming source input and receiver receptivity active. This does not derive genuine exercise, physical production, or a cause of the air's esse. Analyst formulation; attribution deferred.",
+  "lean_declaration": "TruthCore.Causality.IlluminationReceipt.RecordAnalysis"
+}
