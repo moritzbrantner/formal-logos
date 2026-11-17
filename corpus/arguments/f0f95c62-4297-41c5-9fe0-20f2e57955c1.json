@@ -1,0 +1,35 @@
+{
+  "id": "f0f95c62-4297-41c5-9fe0-20f2e57955c1",
+  "label": "Full J1 upgrades necessary-source paths to all-source paths",
+  "premise_statement_ids": [
+    "dd41c165-129a-59d3-84ce-bd13c0944901",
+    "d0718714-87b2-4f2e-9c8d-87081a7a2d41"
+  ],
+  "conclusion_statement_id": "c36b509c-3057-40f5-ac0b-60751fb0cf27",
+  "inference_ids": [
+    "582eedc0-4d69-4150-9278-1182f00b47f4"
+  ],
+  "meaning": "For each off-world existing concrete source of a necessary concrete target, full J1 makes that SAME source necessary, so the necessary-source path property applies. This maps the two path scopes under an explicit additional assumption; it does not supply J1 or a source witness.",
+  "definition_ids": [
+    "189efe37-3e78-45f9-83e7-bed94bbfd4b3",
+    "9146789d-5b36-572f-baa1-7eef28967793",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "47033c70-0aca-565d-9473-8399577fea54",
+    "b242943a-34cc-582d-8c38-c1203b9d2c91",
+    "e09302b5-83af-4c1c-b4c6-fad1c29804d8"
+  ],
+  "disambiguation_ids": [
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"
+  ],
+  "sense_bridges": [
+    {
+      "term": "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY",
+      "from": "2e064a7b-b29f-4f0b-8978-782674012d86",
+      "to": "57356a7a-ed0a-478f-abfc-2d47dd631135",
+      "statement_id": "c36b509c-3057-40f5-ac0b-60751fb0cf27",
+      "role": "conclusion"
+    }
+  ]
+}

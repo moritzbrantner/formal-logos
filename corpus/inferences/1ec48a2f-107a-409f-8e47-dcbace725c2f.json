@@ -1,0 +1,12 @@
+{
+  "id": "1ec48a2f-107a-409f-8e47-dcbace725c2f",
+  "label": "All-source actual paths restrict to necessary-source actual paths (inference)",
+  "input_statement_ids": [
+    "c36b509c-3057-40f5-ac0b-60751fb0cf27"
+  ],
+  "output_statement_id": "d0718714-87b2-4f2e-9c8d-87081a7a2d41",
+  "rule": "Actual guarded support paths, explicit source scope and existing transitive-closure well-foundedness",
+  "meaning": "Structural scope weakening on the same Profile and actual world, not additional premise warrant. The stronger property omits the source-necessity antecedent and therefore covers each necessary source. Strictness: the existing offWorldContingent interpretation in scopeControls. See the proposed support comparison in docs/notes/conceptual-existence-boundary.md.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "04f4b36e-705e-4ee4-93de-bb1bb73618c9",
+  "label": "Path-scope strictness and coverage-versus-path separation certificate (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "9f2f40b3-0ee5-4a55-adcd-17b60dbdaeb7",
+  "rule": "Actual guarded support paths, explicit source scope and existing transitive-closure well-foundedness",
+  "meaning": "Reuses the prior offWorldContingent and rootedPair certificates; verifies the new path properties or their failure without duplicating those model proofs. An absent-actual contingent source defeats all-source path transport while necessary-source transport survives; a reversed cross-world pair defeats necessary-source transport despite coverage and actual WF. All interpretations and scopes are explicit, not objections to premise warrant.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

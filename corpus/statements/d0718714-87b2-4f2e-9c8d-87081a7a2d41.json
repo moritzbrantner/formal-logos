@@ -1,0 +1,13 @@
+{
+  "id": "d0718714-87b2-4f2e-9c8d-87081a7a2d41",
+  "label": "Every NECESSARY_2 concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path",
+  "paraphrase": "OPEN weaker analyst standing-ancestry commitment: the same nonempty actual guarded path requirement only when the concrete source AND target are necessary from the selected world. Contingent off-world sources are unconstrained. No actual necessary-source supply is inferred.",
+  "lean_declaration": "TruthCore.Causality.NecessarySupportPathConnection.NecessarySupportActualPaths",
+  "definition_ids": [
+    "e09302b5-83af-4c1c-b4c6-fad1c29804d8",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "b242943a-34cc-582d-8c38-c1203b9d2c91",
+    "9146789d-5b36-572f-baa1-7eef28967793"
+  ]
+}

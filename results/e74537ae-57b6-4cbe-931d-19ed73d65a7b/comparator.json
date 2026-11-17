@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.NecessarySupportPathConnection.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NecessarySupportPathConnection.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.NecessarySupportPathConnection.unionOfNecessaryPaths"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

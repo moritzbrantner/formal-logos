@@ -1,0 +1,13 @@
+{
+  "id": "c36b509c-3057-40f5-ac0b-60751fb0cf27",
+  "label": "Every concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path",
+  "paraphrase": "OPEN analyst all-source standing-ancestry commitment: any concrete source existing at any admitted world that supports a necessary concrete target there has a NONEMPTY actual guarded grounding path to that SAME target, through concrete intermediaries in the SAME Profile.grounds interpretation. Source necessity is not required. No population, transitivity of grounding or GOD_4 is supplied.",
+  "lean_declaration": "TruthCore.Causality.NecessarySupportPathConnection.ConcreteSupportActualPaths",
+  "definition_ids": [
+    "189efe37-3e78-45f9-83e7-bed94bbfd4b3",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "b242943a-34cc-582d-8c38-c1203b9d2c91",
+    "9146789d-5b36-572f-baa1-7eef28967793"
+  ]
+}

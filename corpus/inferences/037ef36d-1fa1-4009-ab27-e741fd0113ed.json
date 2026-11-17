@@ -1,0 +1,12 @@
+{
+  "id": "037ef36d-1fa1-4009-ab27-e741fd0113ed",
+  "label": "Same-supporter direct presence gives all-source actual paths (inference)",
+  "input_statement_ids": [
+    "1f61f12c-2b5c-5871-bf56-03c65844ae30"
+  ],
+  "output_statement_id": "c36b509c-3057-40f5-ac0b-60751fb0cf27",
+  "rule": "Actual guarded support paths, explicit source scope and existing transitive-closure well-foundedness",
+  "meaning": "Replace each stipulated actual direct support edge by its one-edge nonempty path, on the concrete subtype. This is a representation weakening of the existing stronger presence input, not a defense of standing ancestry. Direct presence constrains even non-concrete candidates; no such extension is inferred in the reverse direction. The shortcut control witnesses failure of direct presence despite all-source paths.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

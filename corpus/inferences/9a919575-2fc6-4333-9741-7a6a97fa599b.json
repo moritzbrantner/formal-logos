@@ -1,0 +1,13 @@
+{
+  "id": "9a919575-2fc6-4333-9741-7a6a97fa599b",
+  "label": "Necessary-support union WF from actual WF and necessary-source path transport (inference)",
+  "input_statement_ids": [
+    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+    "d0718714-87b2-4f2e-9c8d-87081a7a2d41"
+  ],
+  "output_statement_id": "d149d238-2eeb-5c8b-a136-f95d7aa5c721",
+  "rule": "Actual guarded support paths, explicit source scope and existing transitive-closure well-foundedness",
+  "meaning": "Compose the existing presentSupportWF with the library WellFounded.transGen theorem. Each all-world union edge between necessary concrete endpoints maps to a NONEMPTY actual guarded path with those SAME endpoints. Subrelation well-foundedness then yields the existing union-WF premise. No worldwise-to-union inference, frame reflexivity, J1, EM or necessary-source supply is inserted.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
