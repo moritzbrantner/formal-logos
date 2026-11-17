@@ -14,6 +14,10 @@ These are the Rust ports of the retired `corpus.py context` and
 `corpus.py lean-reuse` (#954 R2); the Python `--root STATEMENT` is
 `--frontier-root` in Rust.
 
+The source import view includes every registered result in an imported batch
+module, with each result's own statement-level graph link. Sharing a module does
+not show that a particular theorem is used by the proof.
+
 One call returns a bounded, derived view of one existing argument. It is the
 first step when a brief names an existing argument or result as its target or
 reuse. Open dossiers only for the premises it reports open.

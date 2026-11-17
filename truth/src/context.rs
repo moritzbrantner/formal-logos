@@ -686,11 +686,14 @@ pub fn context_pack(
         .get(argument_id)
         .cloned()
         .unwrap_or_default();
-    let mut module_to_result: HashMap<&str, &Record> = HashMap::new();
+    let mut module_to_results: HashMap<&str, Vec<&Record>> = HashMap::new();
     for result in &all_results {
         for key in ["solution_module", "challenge_module"] {
             if pyfmt::truthy(result.get(key)) {
-                module_to_result.insert(text(result, key), result);
+                module_to_results
+                    .entry(text(result, key))
+                    .or_default()
+                    .push(result);
             }
         }
     }
@@ -725,11 +728,13 @@ pub fn context_pack(
         } else {
             lean_files.closure(solution)
         };
-        let mut reused: Vec<ReusedResult> = closure
-            .iter()
-            .filter_map(|(module, depth)| {
-                let other = module_to_result.get(module.as_str())?;
-                (text(other, "id") != text(result, "id")).then(|| ReusedResult {
+        let mut reused = Vec::new();
+        for (module, depth) in &closure {
+            for other in module_to_results.get(module.as_str()).into_iter().flatten() {
+                if text(other, "id") == text(result, "id") {
+                    continue;
+                }
+                reused.push(ReusedResult {
                     module: json!(module),
                     depth: Some(*depth),
                     result: summary(other),
@@ -738,9 +743,9 @@ pub fn context_pack(
                         .is_some_and(|a| premise_set.contains(text(a, "conclusion_statement_id"))),
                     theorem_used: None,
                     classification: None,
-                })
-            })
-            .collect();
+                });
+            }
+        }
         reused.sort_by(|a, b| (a.depth, &a.result.result_id).cmp(&(b.depth, &b.result.result_id)));
         let proof_use = proof_uses.and_then(|uses| uses.get(theorem));
         if let Some(used) = proof_use {
@@ -829,7 +834,7 @@ pub fn context_pack(
         .iter()
         .flat_map(|entry| &entry.direct_imports)
         .map(String::as_str)
-        .filter(|module| !module_to_result.contains_key(module))
+        .filter(|module| !module_to_results.contains_key(module))
         .collect();
     let own_results: HashSet<&str> = results.iter().map(|r| text(r, "id")).collect();
     let mut lean_neighbours = Vec::new();
@@ -1993,6 +1998,107 @@ mod tests {
         assert_eq!(blocks[0].statement, "theorem t (h : P) :\n    P");
         assert_eq!(blocks[1].name, "u");
         assert_eq!(blocks[1].statement, "@[simp] private lemma u : Q");
+    }
+
+    #[test]
+    fn lean_reuse_preserves_every_result_in_an_imported_batch() {
+        struct Fixture(PathBuf);
+        impl Drop for Fixture {
+            fn drop(&mut self) {
+                let _ = std::fs::remove_dir_all(&self.0);
+            }
+        }
+        let root = Fixture(
+            std::env::temp_dir().join(format!("truth-context-batch-{}", std::process::id())),
+        );
+        let write = |path: &str, source: &str| {
+            let path = root.0.join(path);
+            std::fs::create_dir_all(path.parent().unwrap()).unwrap();
+            std::fs::write(path, source).unwrap();
+        };
+        let argument = |id: &str, premises: &[&str], conclusion: &str| {
+            json!({
+                "id": id, "premise_statement_ids": premises,
+                "conclusion_statement_id": conclusion, "inference_ids": ["INF"],
+                "meaning": "Fixture argument."
+            })
+        };
+        let result = |id: &str, argument: &str, module: &str, theorem: &str| {
+            json!({
+                "id": id, "argument_id": argument, "solution_module": format!("{module}.Solution"),
+                "challenge_module": format!("{module}.Challenge"), "theorem": theorem,
+                "comparator_config": "comparator.json", "status": "solution-present"
+            })
+        };
+        for (kind, records) in [
+            (
+                "arguments",
+                vec![
+                    argument("UP", &["P"], "C"),
+                    argument("BASE", &[], "P"),
+                    argument("OTHER", &[], "Q"),
+                ],
+            ),
+            (
+                "results",
+                vec![
+                    result("UP", "UP", "TruthCore.Up", "Up.main"),
+                    result("BASE", "BASE", "TruthCore.Base", "Base.first"),
+                    result("BASE-SECOND", "OTHER", "TruthCore.Base", "Base.second"),
+                ],
+            ),
+        ] {
+            for record in records {
+                write(
+                    &format!("corpus/{kind}/{}.json", record["id"].as_str().unwrap()),
+                    &record.to_string(),
+                );
+            }
+        }
+        let corpus = Corpus::load(&root.0).unwrap();
+        let report = FrontierView::from_report(&json!({})).unwrap();
+        for module in ["TruthCore.Base.Solution", "TruthCore.Base.Challenge"] {
+            write("TruthCore/Up/Solution.lean", &format!("import {module}\n"));
+            let pack = context_pack(&root.0, &corpus, &report, "UP", &[], None);
+            let reused: Vec<_> = pack.lean[0]
+                .reused_results
+                .iter()
+                .map(|entry| {
+                    (
+                        entry.result.result_id.as_str(),
+                        entry.depth,
+                        entry.graph_linked,
+                    )
+                })
+                .collect();
+            assert_eq!(
+                reused,
+                vec![("BASE", Some(1), true), ("BASE-SECOND", Some(1), false)]
+            );
+            assert!(
+                pack.lean[0]
+                    .reused_results
+                    .iter()
+                    .all(|entry| entry.theorem_used.is_none())
+            );
+            let uses = BTreeMap::from([("Up.main".to_owned(), vec!["Base.first".to_owned()])]);
+            let inspected = context_pack(&root.0, &corpus, &report, "UP", &[], Some(&uses));
+            let classifications: Vec<_> = inspected.lean[0]
+                .reused_results
+                .iter()
+                .map(|entry| (entry.result.result_id.as_str(), entry.theorem_used))
+                .collect();
+            assert_eq!(
+                classifications,
+                vec![("BASE", Some(true)), ("BASE-SECOND", Some(false))]
+            );
+            if module.ends_with(".Solution") {
+                for argument in ["BASE", "OTHER"] {
+                    let base = context_pack(&root.0, &corpus, &report, argument, &[], None);
+                    assert_eq!(base.lean[0].lean_consumers, vec!["UP"]);
+                }
+            }
+        }
     }
 
     #[test]
