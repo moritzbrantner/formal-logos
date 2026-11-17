@@ -469,3 +469,175 @@ mechanical evidence was reused; this is not a new historical-source audit.
 The next assigned test interprets one illumination U/R/L receipt with L as
 endpoint, explicit exercise correspondence and justified contributor/enabler
 roles, before any same-bearer esse application.
+## Interpreting the illumination U/R/L receipt (2026-11-17)
+
+Continuation of the preservation component at
+`b59bc8c8d2a45568244de9b5efb4feb74d8e43b9`; the coordinator reports that its
+independent review found no findings requiring repair. This follow-up's complete
+proposed outcome is below and still requires its own independent review.
+The existing source-cut vocabulary and frozen Challenges are unchanged.
+
+### Receipt content and the selected endpoint
+
+The prior U/R/L brief in `docs/power-existence-scope-boundary.md`, “One positive
+productive-group brief”, already selects the solar influence **arriving on a
+particular region**, its diaphanous receptivity, and that region's illumination.
+It does not select bare sunlight-emitter existence or the air's substantial
+existence. Existing claims `40aefb2e-c9b3-5bb1-8802-96bbc4e2ed83` and
+`da9c82ed-e886-5335-81c3-cebad9b27345` retain their original source boundaries.
+For this follow-up the complete already cached English q104 a1 text was read
+offline, including the body, ad1 and ad4. Its stripped-text SHA256 matches the
+existing passage's `fa09f205616e310f903e8f73d6885a71fae60f148fbed467cbb1cbc0f6010e0f`;
+no acquisition, new extraction, source claim or live/raw-byte check was done.
+The account distinguishes an active solar influence from the air's receptive
+nature and contrasts received illumination with retained heat. It does not
+supply the numeric equations, a calibrated optical theory or a named measured
+episode. Those are not attributed to Aquinas here.
+
+`IlluminationReceipt` supplies an explicit **analyst** forward quantity model:
+
+- Source emission is an independently given natural-number amount. An open
+  path transmits that amount unchanged; a closed path transmits zero. U means
+  **positive arriving input**, regardless of whether the receiver responds.
+- A receptive region responds with the sum of the arriving solar and lamp
+  amounts; a nonreceptive region responds with zero. R is receptivity and L is
+  positive response of this same region. There is no receiver-generated term,
+  storage state, or equation determining the source from the effect.
+- Distinct event constructors represent U, the alternative arrival, R and L.
+  The source bearer of U is the sun; R and L have the same air-region bearer.
+  The same event `.illumination` is retained in every scenario and scope.
+  This formal identity fixes the explanandum; it does not establish actual
+  trans-scenario identity or the existence of these bearers.
+
+This supplies positive interpreted content beyond an opaque contribution tag:
+emission, transmission and receiving response are separately computed and have
+independent inputs. In the bright fixture an amount 3 is transmitted and the
+receiver responds with 3. A blocked path leaves emission 3 but arrival and
+response zero. Nonreceptivity leaves arrival 3 but response zero. Therefore
+neither emitter presence/activity alone nor “whatever makes L succeed” defines
+U. R modifies whether input is received; it contributes no emitted amount in
+this model. This justifies classifying **U as contributor and R as enabler
+within this selected mechanism**. It does not establish that every receiving
+medium is causally passive or that physical receptivity never involves active
+processes. No such generalization is used.
+
+The primitive application commitments are now precise: the emitted amounts
+must correspond to actual activity; the path operation must represent actual
+transmission; this region must have the stipulated receptive response; and
+these equations must cover its relevant inputs without memory/self-emission.
+The directed forward interpretation is supplied with the mechanism, not proved
+from the algebra. The equations alone admit noncausal readings and do not
+certify an actual producing act. In particular Nat tokens are not measured
+energy, the Boolean path neglects attenuation/propagation delay, and the output
+is a receiving-response proxy, not a claim about air's own visible brightness
+or all modern optical phenomena. These deliberately selected abstractions may
+model the prior conditional receipt account; applying them to physical light
+needs an optical/measurement bridge. They are not requirements on the original
+timeless divine action.
+
+### Alternatives, scope and coverage
+
+`JointGroups` is reused exactly. Each record has one arriving contributor and
+R as its enabler, with L as effect. `AvailableRecord`, `SourceCut` and
+`RecordCovered` are the existing declarations. There are two explicit scopes:
+
+| Scope | Admitted records | Allowed scenarios | Checked result |
+|---|---|---|---|
+| Solar-only | `{U,R} → L` | Alternative arriving lamp input is zero | Sun has a cut; every L has its available record. |
+| Expanded | Solar and lamp records for the same L | All supplied input scenarios | Every L still has a record; sun no longer has a cut. |
+
+Excluding the lamp in the first row is independently specified as **zero lamp
+input at the region**, not as “all cases in which sunlight is indispensable”.
+A lamp may be emitted but blocked and still meet that scope; a positive arriving
+lamp input does not. This is a controlled single-input conditional, not a claim
+that the original illumination account refutes all other light sources. The
+expanded row tests the very same response equation and same receiver with an
+additional independently assigned input. No source-relative redefinition of L
+is used to force the cut.
+
+Coverage is proved from the explicit response law. If L occurs, R is true and
+at least one input is positive. That input constructs its admitted available
+record. In solar-only scope the allowed-scenario restriction excludes the lamp
+branch, so U supplies it. This proves coverage **within** the stipulated model;
+actual optical input completeness remains an application premise. The records
+are alternative sufficient sets for **positive illumination**, not complete
+explanations of the exact total response magnitude.
+
+The withdrawn scenario retains receptivity and the fixed air-region label but
+sets emission to zero: response is zero. This models loss of illumination, not
+loss of air. The expanded lamp-lit scenario has U absent, lamp input 5 and the
+same L present. Both sources together give response 8, with respective inputs
+3 and 5. Thus a positive contributor to the response need not be necessary for
+**the occurrence of L**. This concrete source-alternative mechanism challenges
+only an unqualified source-specific cut, and its expanded interpretation
+formally defeats that cut. It does not deny the solar contribution or refute
+conservation of esse. Calling U indispensable while silently switching between
+these two rosters would be an error.
+
+### Exercise correspondence and retained application gap
+
+`model includeLamp actual performed` takes the actual scenario and the exercise
+assignment independently. The checked coherence theorem consumes: the actual
+scenario is allowed, and every performed record is admitted with its own
+arriving input and R active. The response law then supplies L for that record.
+The bright fixture declares the solar record performed and satisfies those
+conditions; the joint fixture declares both records performed. They are
+stipulated examples, not observations of a named actual episode.
+
+Crucially the identical bright inputs and positive response also give a
+coherent dictionary with **no exercised record**. This is a certified control,
+not an objection to real solar activity: it shows that occurrence, coverage,
+source cuts and the forward equations do not determine `performed`. To identify
+a real exercise one needs evidence of the emitted/arriving activity on this
+region and a warranted mechanism linking it to reception; the corpus's
+historical conditional account is motivation, not that particular measurement.
+There is no new predicate named “productive receipt” asserted to settle it.
+
+**Proposed assessment.** The selected U/R/L account can now be represented by a
+positive directed transmission-and-response mechanism with analyzable inputs,
+a source/enabler distinction, exact record coverage and a tested alternative
+source. This is useful conditional receipt content; it is stronger than a bare
+source-cut calculation and weaker than an actual productive-exercise finding.
+No substantive objection to these conditional model results is identified.
+No conclusion about a universal conserver or every physical receiver is drawn.
+The strongest historical-law rival to concurrent **esse** production remains
+unchanged: this no-storage illumination model does not encode or exclude its
+same-substantial-bearer persistence law. A retained-heat or stored-response
+mechanism would have a different state variable and cannot be ruled out merely
+by omitting that variable here; this is a stated model boundary, not evidence
+that the selected received-light account fails.
+
+**Consumer and root comparison.** New consumers are confined to the narrow
+IlluminationReceipt batch, the two preservation definition notes and this
+existing attempt/note. The previous exact consumer table is unchanged; no
+existing sustaining/participation result consumes this component. Neither
+PRESERVATION_1 nor PRESERVATION_2 receives a declaration; no original allowance
+or lexical mapping changes. The root plan still targets
+`732302a1-f7bf-594d-9a8a-cb4bd00687a7` through separately interpreted same-bearer
+positive **esse** receipt, coverage, source distinctness and a local
+receipt-to-CausesIn-at-esse bridge. This model concerns a determination of air;
+it does not provide any of those existential applications by changing x to L.
+The library remains unconnected to a root route and discharges no root premise.
+
+**Next discriminating work and reassessment.** The assigned conditional U/R/L
+interpretation, cut and coverage tests are now concrete and answered. An actual
+receipt certificate next needs a named episode with independently established
+emission, arriving input, receptivity and positive response, together with a
+justified zero-alternative-input scope or a complete alternative roster. A
+calibrated transport/receiver account must warrant the forward law and
+exercise correspondence; another free exercise flag or equivalent table adds
+no such evidence. The more consequential existential continuation requires a
+positive account whose endpoint really is the same substantial bearer's esse,
+then comparison with historical-law sufficiency. Illumination's successful
+calibration cannot stand in for that account. These are substantive evidence
+and interpretation requirements for coordinator reassessment, not requests for
+source authentication or owner selection of a metaphysical winner.
+
+**Self-sweep.** All three new theorem statements retain their exact model/domain
+conditions. The source-cut and exercise conditions have different quantifier
+roles and are not inferred from a numeric assignment. `performed` remains a
+primitive exercise input. Every comparison fixes L as positive response and its
+air bearer; magnitude changes are not treated as substantial replacement.
+Existing sourced definitions, numbered senses, lexicon, old frozen Challenges,
+q44/participation modules and coordinator-owned imports/status remain unchanged
+apart from explanatory additions to the two owned preservation notes.

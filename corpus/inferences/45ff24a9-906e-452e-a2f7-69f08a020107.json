@@ -1,0 +1,10 @@
+{
+  "id": "45ff24a9-906e-452e-a2f7-69f08a020107",
+  "label": "Forward illumination response law by path and receptor cases (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "2f86acf7-82c9-4a87-8e4a-c0fd7fe11530",
+  "rule": "Constructive positive-sum analysis and path/receptor case distinction",
+  "meaning": "Computes incoming positive supply independently of the receiver response and proves the local positive-response criterion. This is an analyzed forward quantity circuit rather than an uninterpreted productive label. Its interpretation as real optical production and the no-storage scope remain application commitments; no esse claim follows.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
