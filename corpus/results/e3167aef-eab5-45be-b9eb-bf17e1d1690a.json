@@ -1,0 +1,11 @@
+{
+  "id": "e3167aef-eab5-45be-b9eb-bf17e1d1690a",
+  "label": "Test strictness and ties in independently supplied inclusive perfection coverage",
+  "argument_id": "89af2457-cca8-42ee-ae56-8735105f3787",
+  "challenge_module": "TruthCore.Results.Causality.FullnessCandidates.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FullnessCandidates.Solution",
+  "theorem": "TruthCore.Results.Causality.FullnessCandidates.contentAudit",
+  "comparator_config": "results/e3167aef-eab5-45be-b9eb-bf17e1d1690a/comparator.json",
+  "status": "solution-present",
+  "description": "The candidate degree is the pure-perfection coverage set from the same inclusive ActFrame; it does not consult limitation or the desired source order. Completeness of c is an explicit internal hypothesis, not inferred from source naming or represented identity. Strict inclusion needs a pure perfection x lacks even inclusively; an equally complete x ties c. Explicit excluded middle extracts a witness from proper inclusion. This neither supplies an actual missing witness nor proves a limited bearer incomplete. Binary repertoire coverage can omit intensity and so is not automatically a faithful esse-fullness measure. The same accepted root route still needs the fd2c8710/9eaa3b6e calibration; no root premise is discharged."
+}

@@ -1,0 +1,17 @@
+{
+  "id": "0db2354d-88b6-4cc7-8c49-2564722c984a",
+  "label": "Test strict actual esse-causal coverage of the same source",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "add8001e-c5b2-4052-9d60-2651f0db1727",
+  "inference_ids": [
+    "bfc46c9a-cfd7-44ff-9063-5dc7ec986e39"
+  ],
+  "meaning": "The exact existing common ancestor and composition are internal hypotheses. Reuse causeOfChain for the same n's actual esse causality. Every actual effect of x is other than n, since n has no incoming actual cause, hence is also an effect of n. The actual x is an effect of n and cannot be its own distinct effect, giving proper inclusion. No comparison of esse degrees occurs. This supplies a positive actual-CIn coverage consequence that a fundamental natural source satisfying the same restrictions also shares. It cannot be transported to fd2c8710 or MoreIn without a warranted interpretation bridge; actual-CIn coverage is not capacity or substantive eminent possession, and a productive application is not supplied by the type. The named root application remains SourceScopedAscent8176a284 to da09703b to c98328f1 GodExists; no new route from this test to that conclusion is asserted.",
+  "definition_ids": [
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "a3630d9f-c477-48dc-aada-77fccd4eba25"
+  ]
+}

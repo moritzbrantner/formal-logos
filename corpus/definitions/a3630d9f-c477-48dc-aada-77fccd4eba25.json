@@ -1,0 +1,9 @@
+{
+  "id": "a3630d9f-c477-48dc-aada-77fccd4eba25",
+  "label": "Actual distinct esse-effect coverage",
+  "term": "actual distinct esse-effect coverage",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.FullnessCandidates.actualEsseEffects",
+  "definition": "actualEsseEffects p c is the set of x such that the existing ActualEsseCause p c x holds: distinct actual source and effect, with CausesIn c x at the same esse. It is constructed from the retained causal dictionary and ordered by ordinary set inclusion. It does not define MoreIn or formal perfection.",
+  "note": "Actual esse-causal coverage is distinct from capacity, possible effects, causal power intensity, formal possession and eminent containment. The source Profile is tenseless and mode-unspecified; no present productive-support, efficient-cause or world correspondence is added. Under the existing common ancestor and composition inputs the selected actual source has strictly greater such coverage than every other actual bearer. This applies equally to any natural or divine candidate satisfying those same inputs. Its calibration as an esse grade remains unbuilt; see docs/notes/causal-perfection-transfer.md, Independent fullness candidates and rival comparison (2026-11-17)."
+}
