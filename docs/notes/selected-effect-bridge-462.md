@@ -276,3 +276,21 @@ necessitation is already covered by
 conditions by `SelectedEffectBridge.fixedConditionsStable`. Re-proving either
 would leave the contested premise untouched. No Scott modal-collapse system is
 adopted. Intended/actual root premise delta: zero; no premise discharged.
+
+
+## Complete-order consumer boundary (#1730)
+
+The [same-source integration](intrinsic-existence-reason-1595.md#same-source-existence-and-complete-order-integration-1730-group-5) fixes n, N(n), E(n), act a and
+complete order C, including contingent specification/exercise in Omega. It
+consumes statement **2757f6a3-2d14-5033-9740-2c36a678ce73** and distinguishes
+actual productive occurrence, purposive guidance and global closure. The
+selected-effect theorem's output is a being; its necessity is not necessity of
+the complete order. A faithful order representation and output correspondence
+remain OPEN. The #462 owner additions on actual production versus probability,
+extrinsic realization, rational alternatives and the Quinn asymmetry are
+preserved there as recorded research, not new primary attribution. Intrinsic
+adequacy **a7bbd2fd-242c-5097-a9a3-581d25835890** still has no God-root consumer;
+onward identification toward **8626f8a5-9531-5da7-9ebd-f901e74b1129** remains
+OPEN. Prior #462 stopping/reopening conditions and #1737 ownership remain.
+This is proposed synthesis pending coordinator semantic challenge; no new
+formal consequence or premise closure.
