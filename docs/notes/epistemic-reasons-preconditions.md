@@ -364,3 +364,275 @@ closure is supplied by this batch. Source attribution remains deferred. The
 remaining research is to discriminate the actual calibrations and their
 admissible preference class, not to wait for the owner to choose a word meaning
 before studying its consequences.
+
+## Authority continuation: evidence, incentives and an indifferent believer (2026-11-17)
+
+**Proposed outcome for the coordinator's independent semantic challenge.** At
+baseline `956c8280973ea7d9ed085de07c6b2b50c4c9cf06`, the next test in
+[epistemic-authority](epistemic-authority.md#connection-plan-unconnected) has a
+positive goal-relative answer: a content-sensitive account can distinguish
+evidence from an incentive without assigning preference-independent force to
+either. This removes an alleged explanatory necessity of the authority bridge;
+it does not refute that bridge. The overall judgment on
+`2ca463c2-bd1f-5a13-a395-0e2c57a5ad8f` remains **underdetermined**. Ordinary
+correction judgments supply prima facie support for authority, but correctness,
+incentive discrimination and actual rational basing do not themselves decide
+between that judgment and its strongest instrumental interpretation. F6 is
+retained throughout. No ontological or root inference is supplied.
+
+### Reconciliation and fixed question
+
+#930's current comment records #1045/#1046/#1068 as merged. The subsequent
+authority comparison already contains the registered
+`EpistemicAuthority.goalRelativeExcludesAuthority` and `controls` results
+(`3f585aa7-636f-4a79-8eab-3f7925367f8d`,
+`2930b66a-b5e3-4f3f-b2d3-758d84c0e54d`). Their frozen types were inspected
+through `context`; no new certification of those unchanged proofs is claimed.
+The target's `related`, `dossier`, `brief` and a novelty search also retrieve
+the prior definition-fork and moral/epistemic-parity investigations. The
+ordinary-role and F6 dossiers were inspected. The target has no registered
+root route; F6 does. This continuation serves the proposed preference-independent
+reason bridge toward #933/#143, rather than claiming that bridge already exists.
+The separate sense-registration repair in #1376 is not undertaken here.
+
+Fix one factual question, its evidence, competence and defeaters. Vary whether
+the subject wants an accurate answer or instead wants a comforting belief.
+Indifference means absence of an accuracy end relevant to this question,
+including an instrumental need for its accuracy; it does not mean lack of
+belief, absence of all motivation or inability to reason about other matters.
+The target is an actual **pro tanto reason for this believer**, not merely a
+correct answer, an obligation to inquire, a full-belief license, motivation or
+access to all the relevant facts. A local result is not automatically the
+target's invariance across *every supplied* preference alternative.
+
+### A positive replacement account of the evidence/incentive distinction
+
+Use a binary fact W, an imperfect report S and a reward offer B. W and B are
+independent fair bits. Conditional on either W, S matches W with probability
+3/4. B offers a fixed benefit for acquiring the belief W=1, regardless of W;
+it is an independent incentive, not payment conditional on an accurate answer.
+The eight worlds (W,S,B) have weight 3/16 when S=W and 1/16 otherwise. The
+weights are positive and sum to one. The distribution and interpretation are
+analyst assumptions, not measured reliability, warranted human priors or a
+psychological account of acquiring beliefs voluntarily.
+
+| Observed report S | Offer B | P(W=1 given S,B) | P(W=1 given B alone) |
+| --- | --- | --- | --- |
+| 0 | 0 | 1/4 | 1/2 |
+| 0 | 1 | 1/4 | 1/2 |
+| 1 | 0 | 3/4 | 1/2 |
+| 1 | 1 | 3/4 | 1/2 |
+
+Here there is a concrete basis for separating the roles: S discriminates the
+world states; B changes the payoff of a belief without discriminating those
+states. On the supplied probabilistic support criterion S favors its matching
+answer, and B alone favors neither answer. A goal-relative account can accept
+that support assessment at *both* preference alternatives while assigning
+epistemic pro tanto force only at the accuracy alternative. At the indifferent
+alternative it grants the report's support relation but denies that this
+supplies the subject a reason to conform. A practical reason to cause a
+comforting belief, if granted, need not be a reason supporting its content.
+No cardinal aggregation of practical and epistemic reasons is assumed.
+
+This account does not label comfort wrong-kind merely because it is comfort.
+If a reward is offered only when a competent observer has found W=1, learning
+of the offer can instead discriminate W. The same event can then have an
+evidential role and an incentive role. It counts on the evidential side because
+of that informative dependence; changing the reward's attractiveness alone
+does not supply it. Conversely, when S is made independent of W, its displayed
+evidential advantage disappears. These explicit changes identify what matters
+to the classification rather than assuming that reports are always evidence
+or rewards never are. Actual warrant for an agent to use the distribution is
+a further question.
+
+The construction answers a structural challenge to instrumentalism: **the
+right-kind/wrong-kind distinction does not require that the support relation
+already have force for every preference.** It supplies a positive explanatory
+mechanism in this finite domain. It is not evidence that actual evidential
+merit lacks normative force, a complete naturalization of personal belief,
+or a metaphysical possibility proof of a wholly accuracy-indifferent person.
+The checked old `goalRelative` frame already separates the latter force field;
+the new calculation gives the support distinction determinate informational
+content instead of another arbitrary favoring flag.
+
+The following exact-rational enumeration reproduces the four rows. It also
+checks both possible supported answers at both aim settings. This is a finite
+Python calculation, **not** a new Lean/Comparator/NanoDa certificate or corpus
+model registration. No threshold-to-full-belief inference is made.
+
+```python
+from fractions import Fraction as F
+from itertools import product
+
+rows = [(w, s, b, F(3 if s == w else 1, 16))
+        for w, s, b in product((0, 1), repeat=3)]
+assert sum(m for _, _, _, m in rows) == 1
+
+def posterior(test):
+    selected = [(w, m) for w, s, b, m in rows if test(w, s, b)]
+    return sum(w*m for w, m in selected) / sum(m for _, m in selected)
+
+assert posterior(lambda w, s, b: True) == F(1, 2)
+for s, b in product((0, 1), repeat=2):
+    q = posterior(lambda w, x, y: x == s and y == b)
+    assert q == F(3 if s else 1, 4)
+    assert posterior(lambda w, x, y: y == b) == F(1, 2)
+    print(s, b, q)
+    for aim, answer in product((False, True), (0, 1)):
+        merit = (answer == s)
+        force = aim and merit  # the rival's explicit normative assumption
+        if not aim:
+            assert not force
+```
+
+The probability identities are calculated; the last force rule is stipulated
+and checked for its consequences, not inferred from the probabilities. A new
+theorem merely replaying that rule would not warrant it. The existing
+`goalRelativeExcludesAuthority` already supplies the relevant conditional
+consequence from `GoalRelativeForce` and `IndifferenceAvailable`.
+
+### What the constitutivist and basing routes add
+
+The issue's constitutivism challenge was read in Côté-Bouchard,
+[*Can the aim of belief ground epistemic normativity?*](https://link.springer.com/article/10.1007/s11098-016-0657-8),
+§§3–5, pp.3187–3195 (2016; DOI 10.1007/s11098-016-0657-8). He separates
+functional, personal-aim and normativist versions. The functional version needs
+a reason to function properly; the personal version cannot simply identify
+belief formation with a desire or intention for truth; correctness under a
+constitutive norm still leaves its reason-giving authority to explain. His
+target is a general necessary-authority grounding strategy, not a refutation
+of our weaker existential. This consulted primary-source lead is retained for
+research; formal historical attribution and passage/claim registration are
+deferred. The constructions and assessment here are ours.
+
+The live consequence is precise. Showing that factual belief has a correctness
+condition identifies its subject matter; showing that the agent necessarily
+has some beliefs identifies participation. Neither shows that this particular
+belief must improve to preserve agency. A general practical need for enough
+accurate beliefs can support selected accuracy-promoting measures, yet leaves
+the harmless, unused tile belief untouched unless its accuracy contributes to
+that need. That is the relevant scope difference, not a generic assertion that
+constitutivism might fail. Defending an irreducibly normative constitutive
+condition is a legitimate positive proposal, but then its reason-giving
+content must be warranted rather than inferred from a purely functional aim.
+
+#1646's [rational-basing findings](epistemic-underminer-boundaries.md#rational-basing-the-particular-transition-must-exercise-the-capacity)
+add personal understanding, actual procedural exercise and effective uptake,
+distinguishing an inference from a matching bypass. They strengthen an account
+of **how** evidence actually governs a belief; they do not say that every
+evidence-responsive performance has preference-independent authority. The rival
+can grant such basing in accuracy-directed inquiry and its absence in a
+wishfully acquired belief. Calling the latter poorly based need not contradict
+its denial of force for an indifferent subject. Conversely, a naturalized
+account could identify objective evidence-responsiveness with reason-giving
+merit and accept authority. Naturalism and goal-relativity are not equivalent
+positions; an account of content/basing is compatible with either force rule.
+
+### Walk the remaining positive argument and its rival
+
+The strongest positive case remains the ordinary correction judgment: a
+competent indication against an already endorsed factual answer counts against
+maintaining that answer even when its bearer would prefer the error. Its
+prima facie support comes from our assessments of this very endorsement as
+mistakenly maintained, and our recognition of contrary evidence as a reason
+despite the absence of a payoff. This can be a basic evaluative recognition;
+it need not first be deduced from a prior proof of every norm. It is stronger
+than observing that S carries information, however, and must not be presented
+as the uniquely possible explanation of that observation.
+
+The rival's positive response now has three articulated components: the
+informational relation explains support direction; the factual-belief role
+explains why this standard evaluates this attitude; the subject's ends explain
+when the standard gives the subject a reason. It can therefore explain the
+preference-invariant *classification* of poorly supported belief and deny the
+preference-invariant *reason for its holder*. This targets the inference from
+the former to the latter, with an actual replacement mechanism rather than a
+merely conceivable error. Its commitment is to withhold that reason in the
+genuinely indifferent case. No contradiction with thin F6 or the checked
+accuracy results has been identified. Calling this commitment a defeat simply
+because it denies the proposed bridge would beg the question.
+
+A further possible defense appeals to the good of successful understanding
+for its bearer. In an understood count, answering the question successfully
+specifies a positive cognitive achievement, not merely a source of pleasure.
+This supplies a candidate bearer-good explaining the correction assessment.
+It still needs the normative premise that this good supplies its bearer a
+pro tanto reason even when unwanted. Merely replacing “correct” by “good as a
+belief” has not supplied that premise: the rival already grants that evaluative
+classification. A bearer-good argument must establish why this good has that
+force, rather than assume all functional success is reason-giving. Nor does a
+common causal origin of the capacity and its good answer that question without
+a causal-to-normative bridge, as #1646 explicitly recognizes.
+
+Thus the attempted inferential routes converge: evidence/incentive separation,
+functional constitution, agency participation, and actual basing all provide
+substantive information, but none of the inspected arguments transfers it into
+force for the indifferent bearer without the same evaluative commitment.
+Retorsion does not break the tie: the rival can reason under its actual aim
+without accepting force at another preference. This is a documented limit of
+these approaches, not proof that authority cannot be basic or otherwise defended.
+
+### Proposed judgment, self-sweep and reassessment
+
+The comparative improvement is a successful response to the earlier demand
+that instrumentalism explain the evidence/incentive distinction. That demand
+alone no longer favors preference-independent authority in the selected finite
+case. The ordinary correction judgment remains positive prima facie support;
+the cumulative evidence does not yet select between its authoritative and
+goal-relative interpretations. This is the worker's **proposed** assessment,
+pending the coordinator's independent challenge, not a replacement proof status
+or a newly reviewed coordinator conclusion.
+
+Rejected approaches: another accuracy-dominance or threshold-policy result
+(both rivals accept the arithmetic); coding `Merit → Force` as a new proof
+(transcription of the disputed premise); treating every believer as wanting
+truth (excludes the question's subject); treating an actual inference as a
+categorical commitment at every counterfactual preference (scope change);
+declaring naturalism either refuted or vindicated by this local model
+(neither follows). No new interpretation fork or reason predicate is introduced.
+
+Claim/type self-sweep: no statement, definition, argument, result, Challenge or
+Solution is changed. The old exclusion uses **both** goal-relative force and
+an indifferent alternative. The new table witnesses informational support and
+its distinction from an independent payoff only under the supplied finite
+distribution; its force rule is an explicit extra assumption. The table proves
+neither actual warrant nor actual indifferent belief. Correctness, force,
+obligation, belief license, rational basing and access remain separate. The
+source reading above is a consultation note, not a new attributed corpus claim.
+
+**Reassessment point.** The structural evidence/incentive question is answered
+within this domain; the authority question remains open at the bearer-good or
+direct evaluative premise. A genuinely different next test is to examine a
+specific account of why successful understanding benefits its bearer and why
+that benefit supplies an unwanted pro tanto reason, using this same harmless
+private belief. It must discriminate reason-giving good from mere functional
+success, allow suspension rather than demand inquiry, and retain the strongest
+goal-relative response. If supported, compare its scope with the registered
+preference class before using it toward #933. Reopen the present informational
+test if a proposed rival cannot handle rewards that are also informative, or
+if its operative evidence standard changes. Repeating the finite support table
+or renaming the authority premise would not supply that next test.
+
+### Verification and exact premise comparison
+
+Live conventions resolved to source revision
+`15f348b072188255da837578eaafc8a98f12fdf0`. The persisted Python block was
+executed with exact rational arithmetic. Corpus validation, offline attribution
+check, documentation/import generator checks and whitespace validation passed.
+No proof input changed; no new build, binding, Comparator or NanoDa acceptance
+is claimed. Coordinator-owned semantic review and final CI remain pending.
+
+Computed with `python3 scripts/worker_env.py -- target/release/truth
+frontier-diff --base 956c8280973ea7d9ed085de07c6b2b50c4c9cf06`:
+
+```text
+open premises reaching the root: 494 (353 bare, 90 supported, 51 stated) -> 494 (353 bare, 90 supported, 51 stated)
+expanded-route diagnostic (lowest cost): Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16) -> Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16)
+distinct verified support alternatives: 494 -> 494
+verified support alternatives added: 0
+no change
+```
+
+Intended and actual formal premise effects: **none**. The contribution is the
+discriminating semantic calculation and the defended scope of the remaining
+authority question, not a formal connection or a closed premise.

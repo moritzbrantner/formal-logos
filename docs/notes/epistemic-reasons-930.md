@@ -194,6 +194,13 @@ still follow conditional inference rules without accepting categorical reasons.â
 This position is coherent. It is not refuted merely because its speaker uses
 reasoning or because belief has a truth condition. Our #929 boundaries remain.
 
+The [2026-11-17 authority continuation](epistemic-reasons-preconditions.md#authority-continuation-evidence-incentives-and-an-indifferent-believer-2026-11-17)
+supplies a positive informational account of this rival's evidence/incentive
+distinction. In the criticism below, distinguish a preference-independent
+classification of poor support (which the rival can accept) from an actual
+reason for the indifferent believer (which it denies). The construction tests
+the former distinction without settling the latter claim.
+
 The cost of this rival is substantive: it withholds preference-independent
 reason-giving force from the very distinction between correction and comforting
 rationalization. It can classify an erroneous assessment but cannot criticize
