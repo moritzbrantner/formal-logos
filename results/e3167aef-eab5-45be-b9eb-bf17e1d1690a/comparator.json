@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.FullnessCandidates.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FullnessCandidates.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.FullnessCandidates.contentAudit"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

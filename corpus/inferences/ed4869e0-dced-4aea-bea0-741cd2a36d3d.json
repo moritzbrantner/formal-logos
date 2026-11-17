@@ -1,0 +1,10 @@
+{
+  "id": "ed4869e0-dced-4aea-bea0-741cd2a36d3d",
+  "label": "Test strictness and ties in independently supplied inclusive perfection coverage (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "9399a822-d590-4f0c-9d58-cdc51e40bd1e",
+  "rule": "Complete coverage gives inclusion; proper inclusion requires an independently supplied missing member",
+  "meaning": "The candidate degree is the pure-perfection coverage set from the same inclusive ActFrame; it does not consult limitation or the desired source order. Completeness of c is an explicit internal hypothesis, not inferred from source naming or represented identity. Strict inclusion needs a pure perfection x lacks even inclusively; an equally complete x ties c. Explicit excluded middle extracts a witness from proper inclusion. This neither supplies an actual missing witness nor proves a limited bearer incomplete. Binary repertoire coverage can omit intensity and so is not automatically a faithful esse-fullness measure. The same accepted root route still needs the fd2c8710/9eaa3b6e calibration; no root premise is discharged.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

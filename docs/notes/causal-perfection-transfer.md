@@ -923,3 +923,248 @@ identity-restricted `b9316115`, with strength relation `497904e4`, uses a differ
 spec records this interface-reuse reason in `strong_version_needed`. Neither the
 proof nor its current premise bundle changes; no broader metaphysical necessity
 is claimed.
+
+## Independent fullness candidates and rival comparison (2026-11-17)
+
+**Proposed judgment.** The positive participation/whole-power rationale remains
+a reason to consider strict source fullness directly. Two independently defined
+comparisons now distinguish what its current support earns: complete inclusive
+perfection coverage gives noninferiority, with strictness exactly when the
+recipient misses a pure perfection; the accepted common source has strictly
+larger **actual esse-effect coverage** than every other actual bearer. Neither
+result identifies its set order with MoreIn esse. The esse-causal result applies
+equally to a fundamental natural source satisfying the same restrictions.
+It therefore supplies positive causal information without deciding divine identity.
+
+**Exact target, reuse and route.** The inputs are
+`fd2c8710-988f-527f-a81a-2566fe10e3f9` (limited esse approaches less) and
+`9eaa3b6e-ad2f-5776-ab26-03cfa9f54ad8` (greater degree is MoreIn), used by
+reception argument `142d2d1d` / result `62bd2829` to support actual identity-source
+ascent `8176a284`. The retained route then runs through common source and
+composition in `0609389b` to fixed-esse causality `da09703b`, and through the
+unchanged twelve-input `c98328f1` / `d8cb586a` to GodExists. Required related,
+dossier, brief, novelty and context retrieval, including both target dossiers,
+preceded these tests. Reuse includes `Round3FourthWay.AsMuchAsItApproaches`,
+`MoreInMatchesDegreeEverywhere`, the degree-fork audit, the earlier capacity/
+eminence assessment in [modal-spine.md](modal-spine.md), and the previous
+source-scoped ascent findings above. No duplicate q11 inquiry is opened.
+
+Coordinator repairs `9fda12bf6` and `1ae1ba3b3` are incorporated locally as
+`312e0669e` and `1ae25ddb3`. The retained own-essence interface explanation and
+the two repaired owning-spec paraphrases are preserved. They change no proof.
+No further old statement prose is changed in this continuation.
+
+**Strongest positive warrant.** The retained whole-power argument `d164b1ff`
+(SCG I.28 reconstruction), with pure-perfections-pertain-to-being `c4fb87a6`,
+gives a substantive account: a received nature determines a contracted way of
+being, whereas what is its own subsistent act does not receive that act within
+a further determining nature. If every positive actuality perfects being,
+unreceived esse lacks no excellence of being. This explains why the source's
+fullness is supposed to exceed a contracted recipient, rather than merely
+postulating a larger number for the source. The argument can be accepted on
+its prima facie explanatory merits; primitives are not worthless without an
+endlessly prior proof. These are retained source reconstructions and warrant
+reasons, not fresh source readings or proof that their actuality dictionaries
+apply. Represented identity, unreceivedness, OwnBeing and whole-power possession
+remain distinct interfaces. In particular the real-determination Has of the
+whole-power theorem is not silently identified with inclusive eminent possession.
+
+Q3's approach order is not a homogeneous physical measure; its source reading
+orders likeness to a primary rather than assigning physical units of being.
+The existing `AsMuchAsItApproaches` and comparative calibration connect supplied
+orders; they do not independently specify what likeness or fullness consists in.
+Invoking them in both directions would not corroborate fd2c8710. A proposed
+value must get its content without defining it as "higher precisely when the
+recipient is limited and the source is not".
+
+**Test 1: independently supplied perfection coverage.** Result `e3167aef` /
+argument `89af2457` uses the existing inclusive ActFrame and independently
+supplied Pure classification. `possessionContent F Pure x` is exactly the set
+of pure perfections formally or virtually possessed by x. It consults neither
+Limited, MoreIn, Godhood nor source/recipient labels. For c with every pure
+perfection in this SAME sense, the checked result proves:
+
+- x's content is included in c's;
+- strict inclusion iff some pure perfection is absent from x **even inclusively**;
+- equality iff x also has every pure perfection inclusively.
+
+The completeness hypothesis is explicit, not inferred from the name source.
+This is positive noninferiority support when a faithful whole-power/possession
+application supplies it. Strictness has an exact further warrant burden. A
+binary repertoire can omit intensity or ways of possession: having the same
+perfection kinds need not record having them to the same degree. Conversely,
+merely lacking a perfection formally does not show it absent virtually. No
+actual complete limited recipient is asserted, and no counterexample to the
+metaphysical fullness thesis follows from that conditional equality case.
+Without source completeness, this ordinary partial order also admits
+incomparable repertoires; mutual coverage failures identify incomparability,
+not a tie. Neither situation is asserted of an actual unreceived source here.
+
+The frame retains formal and virtual fields; the inclusive degree records that
+one mode holds, without ranking the modes. Under power-only virtual possession
+its content measures power-coverage, not independently specified substantive
+containment. Under substantive eminence the interpretation owes what is
+contained and why. The accepted formal/virtual distinction is preserved; no
+new completed eminence sense or constitutive-content identity is claimed.
+A repertoire containing intensity thresholds could be tested, but those
+thresholds and their purity must be justified independently. Adding a
+source-labelled perfection solely to obtain a missing witness would define
+the desired result into the inventory.
+
+**Test 2: actual esse-causal coverage of the same source.** Result `31055b56` /
+argument `0db2354d` uses `actualEsseEffects p c := {x | ActualEsseCause p c x}`.
+From the existing common ancestor `c35b1a5c` and composition `b4987085`, it
+preserves one actual identity source n and proves strict set inclusion of every
+other actual x's effects in n's effects. Chain collapse supplies n's causal
+scope. An effect of x cannot be n, because n has no incoming actual cause;
+hence it is also an effect of n. The actual x is an effect of n and cannot be
+its own **distinct** effect, giving strictness. Unlike the preceding maximality
+application, this test consumes the common source's no-incoming-cause clause.
+
+This degree is independently fixed by the causal dictionary. It is actual CIn
+coverage, not possible effects, capacity, productive intensity or
+formal/eminent perfection. CIn remains mode-unspecified; a productive reading needs its own retained
+application. It says nothing about activity in other worlds or times. It is therefore a specifically insufficient *basis for the
+esse-grade conclusion* without calibration, despite being a genuine positive
+causal consequence. No new bridge identifying this footprint with MoreIn is
+registered. These two tests serve the named root inputs above; they are not
+advertised as new root-reaching support arguments or premise discharges.
+
+**Same explanandum and rival mechanisms.** Fix the same actual target bearers,
+selected source n, esse respect and actual CIn relation. The shared conditional
+task is the obtaining of those bearers' esse through that source, including
+present support if the separately retained productive application is warranted.
+Do not compare that task with mere origination or regularity of already
+existing states. The source Profile itself remains tenseless and mode-unspecified.
+
+The participation account explains recipients through restricted ways of
+actuality deriving from unreceived act; its whole-power account additionally
+motivates substantive perfective containment. The strongest natural-source
+alternative is an actual fundamental reality with intrinsic active powers,
+whose lawlike operation supplies the same recipients through intermediaries.
+Laws describe its operative powers; an abstract law is not substituted for an
+agent. Its candidate must meet the SAME unreceived/identity, selection, causal
+coverage and composition conditions; calling it natural does not prove those
+conditions, and calling it physical does not prove finitude or composition.
+Those application debts also remain for the theistic candidate.
+
+The positive basis for taking this alternative seriously is the retained
+capacity/mechanism account of production and the explicit natural-ground
+comparisons in [physical-ground-468.md](physical-ground-468.md#coverage-on-the-same-explananda).
+They distinguish causal success from formal exemplification and from candidate-
+selected purity criteria. Their tables are interpretations, not actual or
+metaphysical possibility certificates. They do not by themselves establish a
+universal present natural source. The retained immanent-infinite-source reading
+in that note offers a further option accepting source fullness rather than
+denouncing it. Its translation-based historical evidence is reused, not freshly
+read or newly mapped into the current substantial-bearer/CIn dictionary.
+Its separate contingency/agency commitments are not settled by this degree test.
+
+**Comparative verdicts, with their scope.**
+
+| Account or inference | Assessment from the present evidence |
+| --- | --- |
+| Participation plus substantive whole-power possession | Positively motivated; can be retained as a direct primitive/cumulative option. These audits do not establish strict fd2c8710 or its application. |
+| Perfection-kind coverage alone as the strict esse degree | Specifically insufficient without the missing-perfection or independently justified intensity witness. This is a measurement limitation, not an actual defeat of participation. |
+| Fundamental natural source meeting the retained source conditions | Still a live explanatory proposal under these same restrictions and earns the same conditional strict footprint; a full same-background model and actual adequacy are not certified. Power-only eminence is insufficient for substantive containment, not thereby false as a causal account of the SAME recipients. |
+| An immanent unlimited source accepting perfective fullness | Not excluded by this step. Strict fullness alone does not discriminate personal/divine naming or later attributes. Its actual dictionary application remains open. |
+| Formal models as evidence that either complete ontology is true or false | Specifically insufficient; no such inference is made. |
+
+No complete rival is established false or internally undermined here. Nor does
+the inspected evidence warrant ranking the entire natural account less supported
+on the narrowly shared causal task merely because it declines a further
+substantive-containment claim. A proposal that calls its source finite in the
+SAME formal-perfection sense while retaining absolute nonlimitation would
+contradict the retained restriction; naturalism as such entails no such proposal.
+The participation account's extra explanatory content is worth investigating,
+but absence of a derived grade interpretation is not a refutation of its
+primitive warrant. No total or scalar order is required; the selected source/
+recipient comparison itself must be warranted. Conversely, a source's productive success alone supplies no strict
+perfective rank. These judgments do not infer compatibility or rival defeat
+from the absence of a discovered objection.
+
+**Cumulative judgment and retained case.** Retain restricted source ascent
+`8176a284` as a conditional option with its positive participation rationale.
+The two independent audits add useful distinctions and a positive actual-CIn
+consequence; they are not independent corroboration of fd2c8710 merely because
+one can choose a calibration reproducing it. All common-source selection,
+ancestry/no-regress, reception, composition, actuality, existence-to-ground,
+maximum, transfer and naming inputs of the accepted case remain. Neither the
+source's represented identity nor set inclusion names it God. No necessity,
+intellect, will or Catholic identification is inferred, and q11 is not reopened.
+
+**Resolved slice, rejected approaches and next test.** The two specified orders
+are now tested. Rejected: reusing a binary unlimited/limited rank as independent
+fullness warrant; causal depth as if it measured perfective actuality; actual
+causal footprint as capacity or MoreIn; formal absence as inclusive absence;
+and candidate-relative purity or inventory additions chosen to secure the
+conclusion. More examples of those constructions expose the same calibration
+obstacle, rather than answering it.
+
+The remaining consequential test is the existing `d164b1ff` whole-power account
+on the SAME selected n: does its real-determination/OwnBeing interpretation
+warrant substantive eminent possession in the chosen act dictionary, and what
+independently specified perfection or graded range is unavailable to a genuinely
+limited recipient? This is a concrete source of support for the still-open
+fd2c8710/9eaa3b6e calibration, not another arbitrary measure or a duplicate
+common-nature question. Reopen with that warranted mode/intensity account or a
+supported same-background rival denying it; an actual intensity-sensitive
+calibration would materially change this judgment. No independent actual
+missing-perfection witness or such calibration was obtained in the present
+candidate-order slice. Direct primitive warrant remains available without
+pretending the conditional tests discharge it.
+
+**Self-sweep.** Two completed set constructions introduce no new metaphysical
+primitive. Both audit statements have explicit internal hypotheses and assert
+no actual model or rival defeat. The content result uses the existing inclusive
+act sense consistently; its Pure classification and mode semantics remain
+application burdens. The footprint result preserves the same source/target/
+esse/actual CIn dictionary, not an intervening historical cause. No definition
+of MoreIn, source claim, attribution, old Challenge, established status or
+shared generated status/cache/allowlist is changed. The missing root bridge
+from either candidate order to the accepted esse grade is explicitly unbuilt.
+New proof verification and computed comparison follow below; coordinator
+repairs and unchanged proof evidence are retained. Fresh independent semantic
+review of this full proposed outcome precedes publication.
+
+### Verification and exact comparison for the fullness continuation
+
+New focused Solution/Challenge builds, binding (one bound / zero mismatches for
+each result), Comparator and NanoDa passed for `e3167aef-eab5-45be-b9eb-bf17e1d1690a`
+and `31055b56-2213-4867-a448-baa150db977f`. Both use the declared standard
+Mathlib axiom profile: propext, Classical.choice and Quot.sound. No new axiom is
+introduced. Unchanged source-ascent and reception proofs retain their accepted
+evidence. New spec regeneration, offline corpus/attribution checks, bundle audit,
+sense/definition/lexicon ratchets and whitespace check pass. The two removable
+legacy sense entries are left to the coordinator; no shared status/cache or
+allowlist was edited. No source bytes were acquired or certified. Live convention
+resolution confirms unchanged revision `15f348b072188255da837578eaafc8a98f12fdf0`
+and the same previously read file stack.
+
+Reproduce with the prepared setup, serializing heavy commands under
+`/tmp/moenarch/truth-core-heavy.lock`:
+
+```sh
+python3 scripts/worker_env.py -- lake build TruthCore.Results.Causality.FullnessCandidates.Solution TruthCore.Results.Causality.FullnessCandidates.Challenge
+python3 scripts/worker_env.py -- target/release/truth bind-check --result e3167aef-eab5-45be-b9eb-bf17e1d1690a
+python3 scripts/worker_env.py -- scripts/verify-result.sh e3167aef-eab5-45be-b9eb-bf17e1d1690a
+python3 scripts/worker_env.py -- target/release/truth bind-check --result 31055b56-2213-4867-a448-baa150db977f
+python3 scripts/worker_env.py -- scripts/verify-result.sh 31055b56-2213-4867-a448-baa150db977f
+```
+
+Exact computed output from
+`target/release/truth frontier-diff --base 1ae25ddb3b48e84f21cd687dd6a54645b41dc1aa --frontier-root STMT-GOD-EXISTS`:
+
+```text
+premise delta for GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of classical theism [8626f8a5]: 1ae25ddb3b48e84f21cd687dd6a54645b41dc1aa -> working tree
+open premises reaching the root: 404 (283 bare, 76 supported, 45 stated) -> 404 (283 bare, 76 supported, 45 stated)
+expanded-route diagnostic (lowest cost): GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of…, from prima via [ed7c588a] (cost 6) -> GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of…, from prima via [ed7c588a] (cost 6)
+distinct verified support alternatives: 417 -> 417
+verified support alternatives added: 0
+no change
+```
+
+These are diagnostic tests of root-input interpretations, not new root-premise
+support alternatives. No change in closure is claimed, and the unchanged count
+is not a judgment against the philosophical value of the comparison. Fresh
+independent semantic review is pending; no push, PR or watch was performed.

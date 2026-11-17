@@ -1,0 +1,9 @@
+{
+  "id": "4715f744-b8ef-4a82-8cc4-1516a13c5507",
+  "label": "Inclusive pure-perfection coverage",
+  "term": "inclusive pure-perfection coverage",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.FullnessCandidates.possessionContent",
+  "definition": "possessionContent F Pure x is the set of independently classified pure perfections r for which the existing ActFrame says x is formally or virtually in act. Its order is ordinary set inclusion. It consults neither Limited, MoreIn, Godhood nor a source/effect label. It is a coverage candidate, not an asserted definition of esse fullness, a degree of intensity, or identity of formal with eminent possession.",
+  "note": "Pure and both modes of act remain supplied with their existing interpretation burdens. The source frame retains the modes; the inclusive set records coverage in either mode and does not rank a formally possessed perfection against a virtually possessed one. A power-only virtual interpretation measures inclusive power coverage rather than independently specified substantive containment. No new virtual sense is claimed complete. Actual strict esse comparison would need an independently warranted calibration and, for this order, an actual missing-perfection witness. See docs/notes/causal-perfection-transfer.md, Independent fullness candidates and rival comparison (2026-11-17). The theorem holds for every supplied Pure classification; independence and adequacy of its actual selection are warrant conditions, not conclusions of the formal certificate."
+}

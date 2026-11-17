@@ -1,0 +1,11 @@
+{
+  "id": "9399a822-d590-4f0c-9d58-cdc51e40bd1e",
+  "label": "Complete inclusive coverage exceeds a recipient exactly when it misses a pure perfection",
+  "paraphrase": "Closed conditional test of an independently specified coverage order. In one existing inclusive formal-or-virtual ActFrame with a supplied Pure classification, if c covers every pure perfection, every x has content included in c's. With explicit excluded middle, strict set inclusion is equivalent to some pure perfection not inclusively possessed by x; equality is equivalent to complete recipient coverage. It asserts no actual complete source, limited recipient, missing perfection, intensity comparison or MoreIn calibration. It tests the strictness/application burden of a candidate for fd2c8710 and9eaa3b6e, not a metaphysical defeat or a new definition of esse fullness.",
+  "lean_declaration": "TruthCore.Causality.FullnessCandidates.ContentAudit",
+  "definition_ids": [
+    "4715f744-b8ef-4a82-8cc4-1516a13c5507",
+    "115f23e3-2a19-5dcb-bc7f-96408004f110",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780"
+  ]
+}
