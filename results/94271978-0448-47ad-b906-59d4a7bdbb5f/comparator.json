@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.WholePowerClassification.Challenge",
+  "solution_module": "TruthCore.Results.Causality.WholePowerClassification.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.WholePowerClassification.modeAudit"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

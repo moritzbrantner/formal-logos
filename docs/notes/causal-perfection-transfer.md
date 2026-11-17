@@ -1168,3 +1168,270 @@ These are diagnostic tests of root-input interpretations, not new root-premise
 support alternatives. No change in closure is claimed, and the unchanged count
 is not a judgment against the philosophical value of the comparison. Fresh
 independent semantic review is pending; no push, PR or watch was performed.
+
+## Whole-power possession on the same source (2026-11-17)
+
+**Proposed outcome.** The whole-power thesis is a positive account of subsistent
+actuality, not a rule equating successful production with intrinsic possession.
+Its exact encoding yields every **OfBeing** determination of an OwnBeing source;
+it neither chooses the formal/eminent interpretation of Has nor encodes absence
+of defects. New checked consequences make two commitments explicit: the full
+whole-power/strict-purity bundle constrains OfBeing to coincide with Pure, and
+the retained receipt/limitation/infinity readings supply a genuine OwnBeing
+versus non-OwnBeing mode contrast for the same actual source and its effects.
+A conditional infinite-versus-limited esse contrast is obtained under explicit
+q7 readings. It provides prima facie perfective warrant within the act/reception
+account, rather than merely a power difference. A particular mode-aligned pure-
+perfection absence or independent calibration of the q3 approach degree is not
+supplied; strict MoreIn across the required recipient domain is not certified. Direct
+primitive and cumulative warrant remain available; this is not a refutation of
+the participation account or a victory for a power-only source interpretation.
+
+**Target, source and reuse.** The target is
+`d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96`,
+`OwnBeingLacksNoPerfectionOfBeing`. Related/dossier/brief/novelty and parent
+context retrieval were inspected, together with the exact OwnBeing,
+real-determination, pure-perfection, inclusive act and recipient dictionaries.
+The existing whole-power/root-perfection results, Q44 source supply, earlier
+reception and scope controls, and the previous fullness audits are reused.
+The accepted source claim `1c67e58f`, I.28 [2–3], rests on the previously read
+Pegis translation; it is retained evidence, not a fresh source reading or a
+new Latin attribution. The source's whole-power reasoning proceeds from
+excellence according to being and own subsistence, with unreceived whiteness
+as analogy. It does not proceed from an agent's bare power to cause each effect.
+The actual-source application and the generalization from that analogy remain
+metaphysical warrant questions.
+
+The coordinator's label repair `21b696ec1` is carried locally as `884c95404`,
+only for inference `bfc46c9a`; coordinator-owned imports and status generation
+are untouched. Earlier interface and owning-spec repairs remain intact.
+
+**Same-witness application before possession.** Fix the n supplied by common
+source `c35b1a5c` on the SAME Profile, actual target domain and esse respect.
+The existing `Q44SourceSupply.ownBeingOfIdentity` applies to its represented
+identity only under own-essence reception `6dfe01ab`, receiver-to-act potency
+`7fcfcee8`, irreflexivity `14325c83`, and the explicit unreceived-to-OwnBeing
+reading `bc1810e5`. Thus it gives OwnBeing n without defining OwnBeing as map
+identity. The broader own-essence interface remains interface reuse, with its
+accepted `strong_version_needed` explanation and the unbuilt faithful adapter
+to identity-scoped `b9316115`; no extra metaphysical scope is claimed needed.
+Composition `b4987085` supplies n's direct esse scope through the retained
+ancestry. Whole-power then gives Has n d from OfBeing d; `c4fb87a6` gives that
+for every independently classified Pure d. No source switch, God predicate or
+mere source-of-power description performs any of these steps.
+
+**Positive warrant and its scope.** The strongest rationale is that a received
+act is had under a determining nature, while subsistent esse is not an act
+contracted within another receiver. Since positive actualities perfect being,
+own subsistent act is proposed as the unrestricted ground of their excellences.
+This is substantive prima facie warrant for d164b1ff, independently of a
+particular causal-ability table. One need not demand a prior proof of every
+primitive before considering it. What is not thereby supplied is a faithful
+inventory of real determinations, its modal interpretation in each bearer, or
+an intensive order measuring them. The source gloss's perfection and no-defect
+claims must not be used to expand the primitive OwnBeing predicate so that the
+whole-power argument becomes an unfolding of a stronger definition.
+
+**Checked scope cost and the no-defect clause.** Result `77882a3c` / argument
+`02d16349` has two conjuncts. Under d164b1ff, pure-perfections-pertain-to-being,
+own-being-is-no-recipient `7338142d` and nonrecipient-determinations-are-pure
+`32695660`, one OwnBeing witness n entails **OfBeing d iff Pure d**, for every d.
+The forward direction is OfBeing → Has n d → Pure; the converse is the retained
+pertain-to-being premise. This constrains the determination vocabulary; it does
+not say that every being is pure or that finite features cannot exist.
+
+Consequently an independently warranted mixed determination (OfBeing d and
+not Pure d) cannot coexist with all four interfaces and an OwnBeing witness.
+This is a conditional conflict, not evidence that such a determination has
+been found in the intended vocabulary or that the whole metaphysics is false.
+It identifies the cost of combining broad OfBeing, literal real possession and
+strict source purity. A principled pure-positive-core reading, a justified
+formal/eminent account of possession, or revision of the extra purity
+application can avoid that combination. None is automatically licensed merely
+because it saves a preferred candidate. In particular the source's own allowance
+for opposed creaturely forms to preexist eminently bars reading its conclusion
+as possession of every incompatible finite form in the same formal way.
+
+The second conjunct proves **extension stability**: enlarging Has preserves the
+positive whole-power clause. Thus d164b1ff alone does not prohibit adding another
+determination; the omitted no-defect clause is not encoded by positive
+completeness. The extra purity premises separately constrain such additions.
+Nor is “not Pure” simply “a defect”: the existing classifier includes receiving
+and individuating principles and potencies. Receptive potency may be actualized
+and is not the absence of the act received. Strict purity, no defect, and
+perfection within a finite nature are different claims. This audit introduces
+no Defect flag and assumes none of those equivalences.
+
+**A checked actual-mode difference.** Result `94271978` / argument `32ac7e4e`
+starts with that same supplied actual n, OwnBeing n and existing universal esse
+scope. It retains caused-esse reception `da72ae93`, received-esse limitation
+`7de89edb`, OwnBeing-to-infinity `10b2b0ed`, and infinity-to-unlimited-esse
+`965d0e26`. Every other actual x has received limited esse. OwnBeing x would
+make it infinite and hence unlimited, contradicting that limitation. The result
+preserves actual n, OwnBeing n, Infinite n and not Limited n; for each other
+actual bearer it concludes Limited x, not Infinite x and not OwnBeing x. These
+are the existing perfection-of-esse classifications, not physical sizes. No d164b1ff, degree, no-defect clause or intellect input
+is used. The scope of the causal receipt premise, including the existing
+individuation/application condition, is unchanged.
+
+This is a real subsistence/infinity/limitation contrast under the stated
+readings, not merely an actual-effect count or productive capacity. Where the
+q7 classifications faithfully express unlimited versus contracted perfective
+actuality, it positively motivates strict comparison as a primitive bridge;
+no total or quantitative scale is required. It does not itself fix the q3
+approach values or MoreIn, and is not counted as independent corroboration
+merely because those values can be chosen to match it. It is also not yet a real-
+determination or pure-perfection witness: OwnBeing is a bearer predicate, not
+a supplied element of the determination/perfection carrier. Treating a generic
+subsistence mode as a positive perfection is a possible primitive judgment;
+its perfective classification and intensity must be defended rather than
+manufactured by inserting “is this source” into the inventory. The proof does
+not claim a new argument for common nature or independently warrant source
+selection. It also does not infer not-OwnBeing from receipt by reversing
+`bc1810e5`; the additional infinity/limitation readings do the work.
+
+**Exact bridge still owed at the root.** In a faithful common determination/
+respect dictionary, the source needs Has n d → inclusive InAct n d for the
+relevant Pure d. A recipient's lack of real Has is not enough to infer inclusive
+absence: that step needs inclusive InAct x d → Has x d at the selected target.
+These are opposite directions, not a harmless relabelling of one predicate.
+If the carriers differ, a meaning-preserving interpretation is required before
+either direction is even an application. Real Has includes intrinsic
+constituents or real relations, not every true extrinsic denomination; an actual
+CIn footprint does not automatically become such an intrinsic determination.
+Conversely, merely having a power to produce a perfection does not establish
+substantive containment of that perfection. Formal absence also does not exclude
+virtual possession. No global biconditional stronger than these local needs is
+silently demanded, and no such adapter is asserted established here.
+
+Once source completeness is faithfully transported, the accepted content audit
+`e3167aef` gives coverage; strict coverage still needs a particular Pure d absent
+**inclusively** from the actual recipient. Calibrating that coverage or an
+independently specified intensity as an esse degree remains `fd2c8710` /
+`9eaa3b6e`. It would then feed source ascent `8176a284`, fixed-esse causality
+`da09703b`, and the unchanged GodExists consumer `c98328f1`. These are the named
+bridge and blockers, not new root support edges from the present audits.
+
+**Perfection candidates tested, with different verdicts.**
+
+| Candidate | Warranted consequence and present verdict |
+| --- | --- |
+| The recipient lacks esse itself | Incompatible with the SAME actual-target premise InAct x esse. Rejected as a strictness witness; reception is not absence of the received act. |
+| Subsistent rather than received act | The new mode result gives OwnBeing n and not OwnBeing x under explicit readings. A warranted contrast, with its pure-perfective interpretation and MoreIn calibration still open. |
+| Infinite versus limited esse | The same-source q7 reading bundle gives the contrast on the full actual-recipient domain. Positive perfective warrant is available under that interpretation; the q3 approach/MoreIn calibration remains explicit. |
+| Actual power to cause esse | Strict actual CIn coverage is already checked; an intermediate may also cause esse. Specifically insufficient as an intrinsic perfective or intensive comparison without the retained bridges. |
+| A cognitive perfection | If independently Pure/OfBeing and possessed in the chosen substantive sense, d164b1ff commits the OwnBeing source to it. A source denying that possession must reject a named classification, mode bridge or whole-power input. No cognition from termination is inferred. A local noncognitive target would not cover the required arbitrary-maximum domain, and an intellectual recipient may share the perfection kind. |
+| No defect or every determination pure | No-defect is not encoded by d164b1ff. The separately justified purity package has the checked classification cost; it is not obtained for free from positive completeness. |
+
+An argument based on a known absent bodily form must also respect Pure scope:
+the artisan/shape examples in the retained formal-versus-eminent audit explain
+why modes cannot be identified, but do not refute a pure-scoped adapter unless
+the relevant perfection's purity is independently justified. No arbitrary
+source-indexed witness, omitted mode or model valuation repairs that burden.
+
+**Natural and intellectual/divine proposals under identical restrictions.**
+Both proposals must supply the same actual unreceived source, OwnBeing meaning,
+causal scope, composition and reception application. Neither earns those facts
+by its label. The active natural proposal explains the recipients through
+intrinsic operative powers and lawlike activity; the intellectual/divine
+proposal adds a substantive actual-perfection account of that activity.
+Whole-power is a reason to investigate that added content, not a proof that
+lawlike efficacy already is it. The retained immanent infinite-natural account
+may grant positive fullness and thought; “natural” is not equivalent to a
+finite, composite or intrinsically noncognitive source. The existing
+[physical-ground comparison](physical-ground-468.md) supplies these rival
+mechanisms and their boundaries, not an actual-world compatibility certificate.
+
+There are consequential, symmetric commitments. If a natural proposal counts
+an intrinsic limiting determination as real and non-pure, it conflicts with
+the extra OwnBeing/no-recipient purity package; the identified conflict is not
+naturalism's falsity. If an intellectual/divine proposal reads every finite
+perfection as a formally replicated real determination, it faces the same
+scope constraint. If it grants only the power to produce those perfections,
+it has not established its claimed substantive containment. An intellectual
+proposal that independently supplies a required cognitive actuality fits that
+specific commitment better than one explicitly denying it, conditional on the
+same pure classification and possession sense. That is local relative support,
+not an overall divine-versus-natural verdict; an intellectual natural proposal
+is not thereby excluded.
+
+No complete rival is established false or epistemically self-undermining by
+this slice. The incompatible candidate and packages above are identified by
+their exact conditions. No assessment rests on unpopularity, bare possibility,
+or a countermodel treated as an actual rival defeat. The mode contrast and
+scope costs are useful positive and critical results even without worldview
+refutation. The cumulative participation/whole-power rationale remains worth
+retaining directly; a missing formal derivation is not evidence against its
+prima facie merits.
+
+**Stopping/reopening and reallocation.** The tested candidates yield a conditional subsistence and perfection-limit
+contrast for every relevant actual recipient, but not a mode-aligned missing
+pure perfection or an independently specified approach calibration. The precise remaining dependency is a substantive
+mode/intensity interpretation: what real positive excellence is present in the
+SAME OwnBeing source, absent or contracted in the recipient even allowing
+eminence, and why that is MoreIn esse. The current virtual-act dictionary itself
+records no concrete instance for its higher-way interpretation. This is not a
+tooling failure or a requirement to prove every primitive from an earlier one;
+the whole-power and comparative principles may remain explicit provisional
+commitments. More transport lemmas or specially chosen inventories would expose
+the same obligation. Reopen on an independently warranted instance or account
+answering those mode, scope and intensity questions, with the complete rival's
+same-background interpretation stated.
+
+For a different consequential root test, the coordinator can next assess existing
+nominal interface `1ec205ed` on the SAME selected source: what the fully described
+antecedent warrants calling God, and whether an immanent/fundamental natural
+source meeting it is included or excluded for substantive reasons. That would
+use the retained fullness option provisionally, not discharge it or replace it
+by a name. It is a recommendation, not a new naming argument or another q11
+allocation. No historical/Catholic-specific bridge or other family's record
+has been edited.
+
+**Self-sweep.** Two closed audits use only existing dictionaries and explicitly
+listed internal interfaces. They assert no source existence, new perfection
+inventory, no-defect axiom, actual rival model or MoreIn calibration. The actual
+source stays n; maps, recipients, real Has, inclusive possession and their
+carriers are not identified by notation. Existing claims, source attributions,
+old Challenges and established statuses remain unchanged. The source Profile
+is still tenseless/mode-unspecified; present productive support and ordinary-
+cause correspondence remain application burdens. The new mode proof is
+independent of d164b1ff; the classification proof's added purity readings are
+not misreported as part of its positive clause. Final focused verification,
+computed comparison and exact reproduction evidence follow below. This complete
+proposed judgment awaits fresh independent semantic challenge; no push, PR or
+watch was performed.
+
+**Verification and exact premise comparison.** The final classification and
+mode audits build; both bind with zero mismatches and pass Comparator and
+NanoDa. `#print axioms` reports no axioms for either theorem. The classification
+check is reused unchanged after the mode result was strengthened; the final
+mode result was checked again. Reproduce on these inputs with
+`python3 scripts/worker_env.py -- scripts/verify-result.sh RESULT-ID`, for
+`77882a3c-631f-4f49-84db-7750963fc724` and
+`94271978-0448-47ad-b906-59d4a7bdbb5f`, under the heavy-job lock.
+`truth bind-check --result RESULT-ID` checks each binding. The new owning spec
+regenerates unchanged. Offline `truth check`, attribution check against
+`884c95404cba60e805749b49840a8b7e5151686b`, bundle audit, and senses, definitions
+and lexicon ratchets pass; corpus warnings remain explicit legacy/backfill and
+coordinator-owned cache work, not new proof evidence. No source materialization
+was requested. Shared allowlists/imports/status were not edited. The resolved
+convention sourceRevision is `15f348b072188255da837578eaafc8a98f12fdf0`.
+
+Computed with `target/release/truth frontier-diff --base
+884c95404cba60e805749b49840a8b7e5151686b --frontier-root STMT-GOD-EXISTS`:
+
+```text
+premise delta for GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of classical theism [8626f8a5]: 884c95404cba60e805749b49840a8b7e5151686b -> working tree
+open premises reaching the root: 404 (283 bare, 76 supported, 45 stated) -> 404 (283 bare, 76 supported, 45 stated)
+expanded-route diagnostic (lowest cost): GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of…, from prima via [ed7c588a] (cost 6) -> GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of…, from prima via [ed7c588a] (cost 6)
+distinct verified support alternatives: 417 -> 417
+verified support alternatives added: 0
+no change
+```
+
+The new audits are conditional consequences testing existing root inputs, not
+new support routes or discharges. Neither the provisional warrant judgment nor
+the verified mode difference changes closure. The exact delta is the two
+audits and their generated records/spec, plus this existing note and the
+existing round2 attempt; the prior one-file inference-label repair remains its
+own commit. Fresh semantic review should assess this complete proposed outcome.

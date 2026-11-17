@@ -1,0 +1,36 @@
+[batch]
+vocab = "TruthCore.Causality.WholePowerClassification"
+results = "TruthCore.Results.Causality.WholePowerClassification"
+
+[[statement]]
+id = "Whole-power and strict purity make perfections of being coincide with pure perfections"
+label = "Whole-power and strict purity constrain the perfection-of-being vocabulary"
+lean = "ClassificationAudit"
+paraphrase = "Closed conditional consequence on one primitive OwnBeing witness n: whole-power possession, pure-perfections-pertain-to-being, own-being-is-no-recipient and nonrecipient-determinations-are-pure imply OfBeing d iff Pure d for every determination d. All four interfaces and OwnBeing n are explicit internal hypotheses. A second conjunct proves that the positive whole-power clause is preserved by extension of Has; it does not by itself exclude added determinations. These are an extensional scope cost and a positive-clause stability test, not a definition of either classification, a claim that an OwnBeing witness exists, a new no-defect clause, or a refutation of an actual source proposal. It concerns determinations, not a claim that all beings are pure."
+definitions = ["5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "65e38ffa-5a1c-55d0-935c-6538d843b780", "479d8b7c-1690-553b-9ad1-7aefcb82927f"]
+
+[[argument]]
+id = "02d16349-cfc8-4a6f-b2ca-d4fc25e9959e"
+label = "Test whole-power classification with RECIPIENT_4 purity"
+theorem = "classificationAudit"
+premises = []
+conclusion = "Whole-power and strict purity make perfections of being coincide with pure perfections"
+axioms = []
+rule = "Every perfection of being is possessed by the same OwnBeing n and hence pure; the retained pertain-to-being input supplies the converse"
+meaning = "Bounded audit of d164b1ff on the same selected source, using the separately recorded 7338142d and 32695660 purity interfaces and c4fb87a6. The selected source's OwnBeing can be supplied under the accepted explicit identity/reception application; represented equality alone is not substituted. If the supplied vocabulary includes a determination that is OfBeing but not Pure, that classification cannot coexist with all four interfaces and an OwnBeing witness. Restricting OfBeing to positive pure content, distinguishing formal from eminent predication, or revising the additional purity bridge are substantive interpretation choices. The second conjunct proves that extending Has preserves the whole-power clause. Thus its positive possession conclusion does not encode absence of defects; additional purity premises constrain such extensions separately. The source's no-defect clause is not assumed or identified with that purity generalization. The test supplies no substantive-eminent mode adapter, actual missing perfection or MoreIn comparison. The named root destination remains fd2c8710/9eaa3b6e through 8176a284, da09703b and c98328f1 GodExists; no new root support edge is asserted. Full proposal: docs/notes/causal-perfection-transfer.md, Whole-power possession on the same source (2026-11-17)."
+
+[[statement]]
+id = "Actual own-being source differs in subsistence mode from its actual esse effects"
+label = "Actual esse effects of the same OwnBeing source are not OwnBeing"
+lean = "ModeAudit"
+paraphrase = "Closed conditional consequence for one supplied actual source n with primitive OwnBeing and existing universal esse-causal scope. Under caused-esse reception, received-esse limitation, OwnBeing implies infinity, and infinity implies unlimited esse, the same n is actual, OwnBeing, Infinite and not Limited, while every other actual bearer is Limited, not Infinite and not OwnBeing. Infinite and Limited retain the existing perfection-of-esse meanings, not quantitative size. No source existence, represented identity-to-OwnBeing equation, pure-perfection classification of this mode, real-determination possession, eminent containment, degree comparison, God naming or present productive application is supplied."
+definitions = ["5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "211a6432-8b8f-53ed-85e3-75173bb15b24", "4433942e-aaf6-55a9-b777-66e55638103d", "6ced5205-e6a4-585e-950e-3b22e7c9ef01", "1d8890c0-afe2-5cdb-a400-0bbd4b79053d", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+
+[[argument]]
+id = "Test the actual subsistence-mode contrast without a degree premise"
+theorem = "modeAudit"
+premises = []
+conclusion = "Actual own-being source differs in subsistence mode from its actual esse effects"
+axioms = []
+rule = "Distinct actual recipients have limited received esse; OwnBeing would make their esse unlimited"
+meaning = "The same actual source n and its OwnBeing and universal esse scope are explicit internal inputs. In the selected root application, common ancestry plus composition provides that scope; Q44SourceSupply.ownBeingOfIdentity supplies OwnBeing only with the retained explicit reception and unreceived-to-OwnBeing interfaces. A distinct actual effect has received and limited esse. If it were OwnBeing, the separate OwnBeing-to-infinity and infinity-to-unlimited readings would contradict that limitation. The output preserves positive infinity and nonlimitation of the same n, and limitation, noninfinity and non-OwnBeing of each other actual effect. This proves a genuine subsistence/infinity/limitation contrast rather than a difference of bare productive ability. It is not yet a pure-perfection or intensity witness: interpreting OwnBeing as an actual perfective determination and calibrating its mode as more esse remain distinct burdens. The result neither assumes d164b1ff nor adds its unencoded no-defect clause. No actual source, present CIn application or later naming is independently established."
