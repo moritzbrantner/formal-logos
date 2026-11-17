@@ -1,0 +1,17 @@
+{
+  "id": "ee32f7af-d624-4886-9f56-ff253af8db28",
+  "label": "Alternative-episode source-cut and coverage controls",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "61a7261f-19c4-4d0f-bc25-edf09e1eb7a8",
+  "inference_ids": [
+    "d8bb3a9c-8f7f-4784-80c4-815047bad993"
+  ],
+  "meaning": "Checked Boolean record interpretations: alternative episodes may share a required source; an enabling condition is not thereby a contributor; an alternative source defeats the original cut. The uncovered interpretation keeps source cut and actual input population but allows an effect without input, showing record coverage is not supplied by those conditions. This omission result is about these formulas, not evidence that real conservation is false or that an inertial worldview is established.",
+  "definition_ids": [
+    "6534e1fc-9f09-4d10-b91f-2fa6e34fb651",
+    "ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8"
+  ],
+  "term_senses": {
+    "JOINT_CAUSE_VERSUS_MEMBERSHIP_EDGE_EXERCISE": "8f6eeb2d-b057-4de0-8f23-36d8a0507a66"
+  }
+}

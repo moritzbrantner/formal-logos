@@ -301,3 +301,157 @@ reason and preventing corruption retain separate meanings. No premise was
 added to an argument, discharged or removed; root-route open premises are
 unchanged. This reading narrows the rival and the missing bridge, without
 advertising a new proof or an elimination of existential inertia.
+
+## Atemporal source-cut component (2026-11-17)
+
+Prepared outcome for independent semantic challenge under #1659/#1652;
+research baseline `b419198cbadd7c4201292b078ed31f1eab23d6f3`, shared convention
+sourceRevision `15f348b072188255da837578eaafc8a98f12fdf0`.
+This follows the existing preservation attempt `dee1c25e-12ee-5fca-bacf-e7bdcfe286c3`.
+It adds an analyzed dependency component, without claiming either sourced
+PRESERVATION meaning complete or replacing their numbered sense identities.
+
+### Formal content and primitive boundary
+
+`TruthCore.Causality.PreservationMeaning` reuses `JointGroups.Exercise`, its
+contributor/enabler sets, separate event/bearer types, alternatives, occurrence
+and allowed scenarios. It does not introduce another production flag.
+`AvailableRecord m s e` has an explicit body: an admitted record for exactly
+**the same event e**, nonempty contributors, and occurrence of **all** contributors
+and enablers in s. Available inputs do not establish `m.exercised g`, causal
+production, effect occurrence, or the existence of `m.bearer e`.
+
+`SourceCut m e c` requires every admitted record for e to include a contributor
+borne by c. `PopulatedCut` separately requires an available record, excluding
+vacuous universal success. This distinguishes a required source from a required
+episode: different records may use different episodes of one source.
+`SourceInactive` suppresses occurrence of all that source's contributor events;
+it does not remove the source bearer, add a destructive process, or assert
+that such a scenario is metaphysically possible. An enabler alone does not
+qualify as a contributor. The interface does not require contributor/enabler
+disjointness in arbitrary dictionaries; the fixture assigns them separately.
+
+The conditional theorem `cutConsequences` proves:
+
+1. Every available record has an occurring contributor borne by the cut source.
+2. Source inactivity excludes any available record for this effect.
+3. **If** every allowed occurrence of this effect has an available record
+   (`RecordCovered`), inactivity excludes its occurrence in allowed scenarios.
+
+The third step is not a withdrawal criterion for identifying a cause. It is a
+consequence of an independently supplied record interpretation, a source cut
+and explicit coverage. Neither coverage nor causal direction is inferred from
+a truth table. The cut is a sufficient structural test, not necessary for
+metaphysical dependence: an admitted alternative with impossible inputs may
+make the test fail. Restricting admission requires separate justification.
+No acyclicity, transitivity, asymmetry, well-foundedness, first moment, temporal
+sequence, or new production at each instant is used.
+
+The constructive distinction now available is **positive-record membership /
+all-alternative source requirement / occurrence coverage**, each independently
+inspectable. Positive productive interpretation and genuine exercise remain
+the existing explicit primitive application obligations. A primitive is allowed;
+calling an available record an actual receipt would conceal its obligation.
+The event's interpretation as this bearer's esse, with the same numerical
+bearer across the comparison, also remains open. An illumination effect event
+borne by air cannot be substituted for the air's existence.
+
+### Populated controls and justified comparisons
+
+The fixture fixes one effect event, two alternative singleton-contributor
+records and a receptive enabler. Both contributor events have bearer false;
+the effect and enabler have bearer true. The effect occurrence table is
+`(left OR right) AND receptive`. All eight Boolean input scenarios are allowed,
+and the all-on actual scenario has both admitted records exercised.
+Each episode can be absent with the other present and the same effect token
+remaining input-supported. Thus losing one episode does not remove the common
+source cut. Removing the enabler leaves no available record; its bearer still
+fails the source-cut test because it contributes to neither alternative.
+Reassigning the right episode to bearer true defeats the cut for bearer false.
+These are checked facts about stipulated records, not claims about physical
+realization, divine simplicity, or multiple divine acts.
+
+The second dictionary retains all groups, bearer assignments and actual
+all-on inputs, but makes effect occurrence unconditional. It still has a
+populated cut; in the allowed all-off-source/receptive scenario the effect
+occurs while no record is available. `RecordCovered` fails. This is an
+established omission model for the claimed inference from cuts to effect loss;
+it is **not** evidence against conservation or a model of a complete inertial
+worldview. Its mechanism targets precisely coverage, which the first two
+cut consequences do not use.
+
+The strongest justified substantive rival remains the previously read
+Schmid historical/no-destructive-change account of the **same enduring
+bearer**: it replaces concurrent existential production with earlier actuality
+and an existential persistence law. Its positive basis and Feser's restricted
+persistence-power objection are retained in the existing source audit above;
+no texts were newly acquired or authenticated here. The circuit neither
+encodes that temporal law nor defeats it. Application of productive record
+coverage to esse would need to discriminate that account; coverage cannot be
+justified by naming the bearer 'received'. No substantive objection to the
+conditional source-cut theorem was identified. Its finite coverage-omission
+control does not by itself supply an objection to a real conservation premise.
+
+### Exact consumer coverage and proposed disposition
+
+The existing lexical `preservation` entry
+`4e5958f3-f3a5-4c1e-a05d-e760ed8bb031` already points to exactly the two
+original sourced definitions and their disambiguation. It is unchanged. The
+new record component is not appended as a lexical PRESERVATION sense.
+`mere conservation` (`94cddd41-ccdf-460b-b940-468680256524`) selects the separate
+perfection-transfer discussion, not an alias for either preservation sense;
+that mapping is unchanged. No broad family link becomes a lexical sense.
+
+| Existing explicit definition/disambiguation consumers | Coverage by this change |
+|---|---|
+| Claims `40aefb2e-c9b3-5bb1-8802-96bbc4e2ed83`, `da9c82ed-e886-5335-81c3-cebad9b27345` | Existing sourced boundaries retained. No attribution edited or source verification claimed. |
+| Statements `91062e01-6ddb-5764-8400-ce5d2a30778c`, `303d4ae5-a990-55ea-8b61-173b5ba215d3` | Existing becoming/being and timeless conservation content retained; no new declaration binding. |
+| Statement `23e04ae5-98ed-4464-8f9b-dc0dfbad0caa`, `SustainingCausation.CausingBeingIsSustaining` | Concurrence through `SustainsBeing` still lacks productive dependence. The atemporal record component is not automatically its interpretation. |
+| Statement `ce55210c-d3b5-4720-bd83-a3f63c5dc884`, `ConcurrentActualization.CausingAnothersBeingIsSustaining` | Same boundary for the distinct-source restriction; no change to its existing derivation or strength relation. |
+| Arguments `0681f64a-769f-4b99-a9a7-5c86237f7f90`, `ffef89fd-1b58-430b-85d9-54cc8cbbe84b` | Original sustaining/contact/immensity consumers unchanged; no record-to-GivesAt map added. |
+| Arguments `150d634d-b9a0-4260-ac6d-a0971faa7c76`, `2c3e7898-3ad9-41aa-b8d0-e701a0138317`, `366a6ea3-604f-4485-9fdf-2f58a094df84`, `835330d4-3174-4ea8-9a84-96aee10c062b` | Existing weak-sustaining derivations/strength comparison unchanged; none consumes the new cut component. |
+
+This table inventories direct `definition_ids`/`disambiguation_ids` references,
+not every transitive family mention. Existing `ProtectiveProcess.safety` and
+its populated interruption/bypass controls remain the successful bounded
+process option. They need no record source cut for their safety result and
+still allow an empty independent `CausesIn`. An agent can protect and give
+through distinct episodes; these modes are not exclusive agents.
+
+**Root purpose, not an existing bridge.** Target
+`732302a1-f7bf-594d-9a8a-cb4bd00687a7` is still
+`∀ x, Participates x → ∃ c, c ≠ x ∧ CausesIn c x esse`, consumed by
+`Round2Grounding.contingentGroundedViaParticipation`, result
+`b7fbe991-fdff-565b-b708-eae8c4c1c594`. Its other inputs are
+contingency-to-participation and the selected actual-concrete-ground bridge.
+A record cut supplies neither a productive receipt nor c ≠ x nor CausesIn.
+Consequently the new library is presently unconnected to a root route.
+Its named connection plan is to analyze the dependence part of a separately
+interpreted same-bearer receipt before any local receipt-to-CausesIn bridge;
+coverage and positive role interpretation are the blockers. No q44/shared
+participation record was edited and no whole root conclusion is assumed.
+
+**Next discriminating tests.** First, on one explicitly interpreted receipt
+record, check source cut across all relevant alternative contributors, retaining
+all enablers and distinguishing absence of a source's exercise from nonexistence
+of its bearer. For the existing illumination U/R/L candidate the endpoint is L,
+not bare air: this may calibrate the dependency operation but cannot close the
+esse application. For an esse instance, identify a positive contribution to
+this same bearer's being independently of the loss condition; then defend
+`RecordCovered` against the historical-law account. Nothing in this slice
+requires an actual withdrawal world for a necessarily existing source.
+Independently test an action-to-process realization for the existing protective
+candidate; no new cut theorem removes that obligation. These application tests
+need an interpreted record or an existential explanatory argument absent from
+the supplied baseline, not another unconstrained occurrence assignment.
+
+**Self-sweep.** New conclusions quantify over the supplied dictionaries and
+retain all conditions inside their theorem types. Source means event bearer,
+effect means one fixed token, occurrence means scenario occurrence; none means
+substantial existence automatically. Membership/exercise, scenario sufficiency,
+positive production and full explanation are kept separate. No source claim,
+original sense binding/allowance, shared import/status file, frozen existing
+Challenge or participation declaration changes. Independent semantic review of
+this complete proposed outcome belongs to the coordinator. Local proof and
+computed premise evidence are recorded in the existing attempt at handoff;
+final integration CI remains required.
