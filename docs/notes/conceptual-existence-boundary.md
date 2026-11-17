@@ -352,15 +352,53 @@ axiom-free. The two finite controls use `propext` and `Quot.sound`, permitted
 under their Mathlib imports with the standard three-axiom allowance. Direct
 lean4export/NanoDa checking covers the five theorem bodies and their dependency
 closure (255 declarations, zero typechecker errors; one axiom pretty-printer
-diagnostic), not an undeclared whole-library gate. The local `.lake` and CLI were
-absent at startup; normal Comparator execution still requires the coordinator's
-prepared local Lake setup. No result is promoted beyond `solution-present`.
-Coordinator independent semantic challenge and final delivered-head CI remain
-required before publication. Shared imports/status caches were not edited.
+diagnostic), not an undeclared whole-library gate. The initial handoff lacked
+local `.lake` and CLI readiness. The coordinator subsequently supplied an
+independent warm setup; the focused normal-Lake Comparator gates below now
+resolve that verification blocker. Preparation itself was readiness only.
+Result records retain `solution-present`; no philosophical premise is
+established by these gates. Coordinator independent semantic challenge and
+final integration CI remain required before publication. Shared imports/status
+caches were not edited.
+
+#### Focused Comparator completion (2026-11-17)
+
+Checked proof/configuration inputs: commit
+`2bf6b58fe61f01bf4905b3fdd29efc2b173f07ee`. No Lean, frozen Challenge,
+argument, statement, spec or result-configuration input changed during this
+follow-up. Using the coordinator-prepared local Lake setup, each row ran the
+normal result gate under the heavy-job lock:
+
+```bash
+python3 scripts/worker_env.py -- flock /tmp/moenarch/truth-core-heavy.lock bash scripts/verify-result.sh <RESULT-ID>
+```
+
+| Result ID | Theorem | Result gate |
+| --- | --- | --- |
+| `94a58e83-dded-40aa-8815-7045fb32f483` | `necessaryConcrete` | Exit 0 |
+| `f800e874-9680-4b93-b55e-8bb72b0b5fbe` | `sameWitnessUnderived` | Exit 0 |
+| `2cf63040-435e-4f2c-bf5c-bc7e11a5633f` | `groundingConsumer` | Exit 0 |
+| `9a4e34cf-1357-4edf-a2be-2160695a6024` | `populationControls` | Exit 0 |
+| `9fe202a4-c151-420a-b394-523e09aa56c2` | `supportControls` | Exit 0 |
+
+Every gate completed the focused Challenge/Solution Lake targets, Comparator
+export comparison and permitted-axiom check, and configured NanoDa kernel
+check. Each reported `nanoda kernel accepts the solution` and
+`Your solution is okay!`. Challenge `sorry` warnings are the preserved proof
+obligations; the checked Solution passes the configured axiom restrictions.
+Only the new vocabulary, Challenge and Solution required compilation; later
+rows reused those outputs. No whole-library build or repeated preparation
+preflight ran. Prior successful five-result binding, direct axiom audit,
+scoped NanoDa, offline corpus/source/attribution, spec-regeneration and computed
+God-root frontier evidence is reused for its unchanged inputs. The updated
+attempt also passed `python3 scripts/worker_env.py -- target/release/truth check`
+(exit 0). This follow-up changes evidence text only and is ready for fresh
+independent semantic review; its full synthesis and root-premise judgments
+remain provisional.
 
 ### Computed God-root premise comparison
 
-Reproduction after local setup: `target/release/truth frontier-diff --base 766c3c08fa0bbf1486b9ff277f5870ecbaa94c95 --frontier-root 8626f8a5-9531-5da7-9ebd-f901e74b1129`. The following is the actual working-tree output, not a reconstructed premise list. The CLI wording “verified support alternatives” describes its existing graph/status calculation; this run does not supply pending Comparator evidence. Newly reachable inherited lifting inputs remain explicit. Previous support options are retained; route-cost selection does not delete them or rank their philosophical warrant. No premise or GOD_4 is newly established.
+Reproduction after local setup: `target/release/truth frontier-diff --base 766c3c08fa0bbf1486b9ff277f5870ecbaa94c95 --frontier-root 8626f8a5-9531-5da7-9ebd-f901e74b1129`. The following is the actual working-tree output, not a reconstructed premise list. The CLI wording “verified support alternatives” describes its existing graph/status calculation; this frontier run itself supplies no Comparator evidence; the separate focused result gates above now supply that evidence. Newly reachable inherited lifting inputs remain explicit. Previous support options are retained; route-cost selection does not delete them or rank their philosophical warrant. No premise or GOD_4 is newly established.
 
 ```text
 premise delta for GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of classical theism [8626f8a5]: 766c3c08fa0bbf1486b9ff277f5870ecbaa94c95 -> working tree
