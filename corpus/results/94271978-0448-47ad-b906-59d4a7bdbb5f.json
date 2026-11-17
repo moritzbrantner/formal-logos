@@ -1,0 +1,11 @@
+{
+  "id": "94271978-0448-47ad-b906-59d4a7bdbb5f",
+  "label": "Test the actual subsistence-mode contrast without a degree premise",
+  "argument_id": "32ac7e4e-7bef-48b0-9c6e-601662c1fc1a",
+  "challenge_module": "TruthCore.Results.Causality.WholePowerClassification.Challenge",
+  "solution_module": "TruthCore.Results.Causality.WholePowerClassification.Solution",
+  "theorem": "TruthCore.Results.Causality.WholePowerClassification.modeAudit",
+  "comparator_config": "results/94271978-0448-47ad-b906-59d4a7bdbb5f/comparator.json",
+  "status": "solution-present",
+  "description": "The same actual source n and its OwnBeing and universal esse scope are explicit internal inputs. In the selected root application, common ancestry plus composition provides that scope; Q44SourceSupply.ownBeingOfIdentity supplies OwnBeing only with the retained explicit reception and unreceived-to-OwnBeing interfaces. A distinct actual effect has received and limited esse. If it were OwnBeing, the separate OwnBeing-to-infinity and infinity-to-unlimited readings would contradict that limitation. The output preserves positive infinity and nonlimitation of the same n, and limitation, noninfinity and non-OwnBeing of each other actual effect. This proves a genuine subsistence/infinity/limitation contrast rather than a difference of bare productive ability. It is not yet a pure-perfection or intensity witness: interpreting OwnBeing as an actual perfective determination and calibrating its mode as more esse remain distinct burdens. The result neither assumes d164b1ff nor adds its unencoded no-defect clause. No actual source, present CIn application or later naming is independently established."
+}

@@ -1,0 +1,12 @@
+{
+  "id": "a39cbf5f-9d04-4770-8563-5f91bfc37706",
+  "label": "Whole-power and strict purity constrain the perfection-of-being vocabulary",
+  "paraphrase": "Closed conditional consequence on one primitive OwnBeing witness n: whole-power possession, pure-perfections-pertain-to-being, own-being-is-no-recipient and nonrecipient-determinations-are-pure imply OfBeing d iff Pure d for every determination d. All four interfaces and OwnBeing n are explicit internal hypotheses. A second conjunct proves that the positive whole-power clause is preserved by extension of Has; it does not by itself exclude added determinations. These are an extensional scope cost and a positive-clause stability test, not a definition of either classification, a claim that an OwnBeing witness exists, a new no-defect clause, or a refutation of an actual source proposal. It concerns determinations, not a claim that all beings are pure.",
+  "lean_declaration": "TruthCore.Causality.WholePowerClassification.ClassificationAudit",
+  "definition_ids": [
+    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "479d8b7c-1690-553b-9ad1-7aefcb82927f"
+  ]
+}
