@@ -497,3 +497,60 @@ SHA256 prefixes were note `93bbdc96` and attempt `51aab67b`; this addition recor
 review metadata only. Offline corpus and attribution checks passed on that
 head; final delivered-head CI remains required. Source materialization is
 selected research, not a routine verification gate.
+
+
+## Composition application in the connected pure-act case (#1728, 2026-11-17)
+
+The [complete proposed consumer comparison](modal-spine.md#connected-pure-actuality-case-for-1728-2026-11-17)
+reuses the constitution audit above at main
+`41e17ee4e607daf30ac5a4029add1e937068542e`. Its explanatory target is the
+obtaining unity and current esse of the SAME source selected by the accepted
+existence route, not a possible manifestation, another source, or the bare
+fact that a predicate has been assigned. No source material was reacquired
+and no new source reading is attributed by this integration.
+
+Two application questions remain distinct. First, why is intrinsic passive
+receptivity a genuinely distinct real constituent of the actual bearer, as
+d8024a38 requires? The positive rationale identifies receiving and determining
+principles, with ordinary dispositions motivating an actual basis. A state
+variable or an unexercised active power does not establish those principles;
+the step from the basis to real distinction remains the substantive burden.
+Second, why does this constitution require a numerically distinct current
+concrete giver of the bearer's esse in the selected relation? Determinate
+organization and constitutive prerequisites supply restricted positive
+explanatory warrant. They do not alone supply existential production,
+numerical distinction or world-local presence. The immanent whole-first
+account contests this second step by explaining the whole through intrinsic
+constitution, rather than efficiently producing itself. It owes the adequacy
+and direction of that account; denying self-production does not refute it.
+
+The root consumer makes the exact relevance of these questions recoverable.
+[379399d1](../../corpus/arguments/379399d1-d6ac-4d20-8a72-fda7fdc4b5e0.json)
+derives simplicity from ca07cae9 plus cb1cdea9 and actual rootness; then actual
+existence, 0436de86 and d8024a38 yield pure actuality. Firstness is unnecessary
+for that latter step. The first-being consumers
+[1f9a4796](../../corpus/results/1f9a4796-42ab-481c-b86e-147799399363.json) and
+[08a06197](../../corpus/results/08a06197-09d0-4cc2-9542-65287cca37ed.json)
+instead contradict firstness via, respectively, efficient cause/priority or
+distinct-esse-cause priority. Their full bundles are retained in the linked
+comparison. The esse-priority derivation still uses the cause-to-actual-ground
+interface, so it inherits the origin-versus-sustenance and constitution-versus-
+production application questions; it does not solve them by changing names.
+
+The cumulative proposed judgment favors the root's composition route as the
+better articulated conditional support at this actual simple source. It avoids
+the strong same-respect predecessor requirement for idle capacities and reuses
+already supplied simplicity, while retaining the real-constitution and
+present-esse-ground burdens. It neither establishes those premises nor
+independently corroborates them by counting related variants. Direct assumption
+options and the positive immanent rival remain visible. Reopening requires the
+same-source constitutive test specified above, or a changed consumer requiring
+a materially different bridge. Another omission fixture, equivalent lemma or
+source campaign without a new discriminant is not justified.
+
+The complete proposed outcome, exact downstream consumers, retrieval links and
+claim/type self-sweep live in the linked modal-spine section and existing
+attempts 383d23ad, 520ea849, 712ea899 and 356fd6f9. These associations add no
+entailment edges. No formal inputs, source claims or computed closure change;
+unchanged proof evidence is reused. Independent semantic review of this new
+consolidation and final integration CI remain coordinator-owned.
