@@ -893,3 +893,433 @@ Prepared dependencies were supplied by the coordinator; no cold project build
 or worker preflight was run. Fresh independent semantic challenge of this
 complete outcome and required final integration CI remain pending. No push,
 PR, watch, merge or issue-state change was performed.
+
+## Connected actual source and uniqueness reconstruction (#1729, 2026-11-17)
+
+**Complete proposed outcome for fresh semantic review.** At baseline
+`ebaab0aa17356354ea9b90147b4f3a8108421c58`, the delivered results support a
+connected conditional assembly, rather than another foundation theorem.
+Choose the CCR/De ente bundle below: it gives one actual esse source n,
+identifies that same n as the unique actual concrete root at w under the
+explicit root bridges, and makes n necessary under contingent-grounding.
+The existing fixed-esse God consumer can name that same n with its full
+companion bundle. No component of this assembly establishes its open premises.
+The maximum and pure-indiscernibility packages are genuine alternatives for
+root uniqueness, not automatic replacements for De ente identity uniqueness.
+This completes the proposed integration scope subject to independent review;
+#1724 retains the foundation-warrant investigation and its canonical account.
+
+### One dictionary, one populated route, one witness
+
+Fix p, B, represented principle type P, respect type R and p.esse exactly as
+in the [CCR dictionary](#fixed-dictionary-and-exact-reuse). Fix one grounding
+profile m on the **same B**, selected world w, and the same p.InAct,
+p.CausesIn and p.esse at every downstream use. These profiles are not equal
+by definition. Keep MoreIn, PriorSimply, ComponentOf and IsGod fixed when
+invoking the naming consumer. Their applicability is a commitment, not a
+change of witness hidden in a notation change.
+
+1. Supply one actual p-bearer (`78cffb8e`), CCR on `esseCauseGraph p`
+   (`20babef7`), distinct-esse coverage (`457698e4`), identity-bearer
+   uniqueness (`a576300f`) and EM (`ee4ab504`). The existing
+   `TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource.commonSourceOfClosed`
+   ([c6d92415](../../corpus/results/c6d92415-0a65-4f5d-8d1d-147f1fe55592.json))
+   selects n, actual and esse-identical, without an incoming distinct actual
+   esse cause, with a finite nonempty cause path to every other actual bearer.
+   It reaches **c35b1a5c**, not merely a root somewhere. The prior actual
+   population work supplies a starting bearer only through its stated
+   existence/concreteness-to-act dictionary; the synthetic adapter's guards
+   are not evidence that a real bearer exists.
+2. `TruthCore.Results.Aquinas.DeEnte.RootInterface.deEnteFirstSourceIsActualRoot`
+   ([ca5403a6](../../corpus/results/ca5403a6-89d9-4c27-9840-0874cd70d776.json))
+   retains n using existing-in-act `0436de86`, identity-bearer actual
+   concreteness `ad2b3ffc`, ground-to-esse-cause `17350d52` and no self-cause
+   `b62a64ab`. Its endpoint is `ce7edf53`. The ground bridge carries the
+   substantive move from no actual esse cause to no actual concrete ground;
+   absence of a substantive objection to it is not its derivation.
+3. In the same m,w,p, `EsseSource.atMostOneActualRootFromDeEnte`
+   ([c056ad5c](../../corpus/results/c056ad5c-458c-4cc3-8d80-3e24b5e705b6.json))
+   uses `457698e4`, `a576300f`, `0436de86`, cause-to-ground `cb1cdea9` and EM
+   to make every actual root an identity bearer and identify all roots.
+   `RootInterface.uniqueActualRootFromDeEnteSource`
+   ([6e89d528](../../corpus/results/6e89d528-e1aa-4b8c-b0ae-8128c98ed5dc.json))
+   pairs that at-most-one endpoint `49fdec01` with step 2, giving **7ab0ddcb**.
+   It can choose n from step 2; uniqueness equates any other chosen root to n.
+4. `TruthCore.Results.Causality.ActualRootNecessityUpgrade.upgrade`
+   (argument [70adaf7c](../../corpus/arguments/ACTUAL-ROOT-NECESSITY-UPGRADE.json))
+   adds `EveryContingentGroundedAt` (`c71c068c`) and EM to obtain
+   **91b085c4** for the same n. If n were absent at an accessible world it
+   would be an actual contingent root, excluded by that added premise.
+   Nothing about represented esse/essence equality supplies modal necessity.
+
+Thus the flattened root/necessity bundle is CCR, coverage, identity uniqueness,
+one actual p-bearer, EM, existing-in-act, identity-bearer concreteness,
+ground-to-esse-cause, no-self-cause, cause-to-ground, and contingent-grounding.
+Identity uniqueness may be accepted directly or supported by its seven-input
+multiplication argument below. Repeated inputs are shared commitments, not
+independent corroboration. No extra whole-roster premise is needed for this
+root-existence branch. All these links already exist; no adapter or equivalent
+wrapper has been registered by this consolidation.
+
+### Foundation options at the actual-access endpoint
+
+For one fixed profile and world, the exact namespace is
+`TruthCore.Results.Causality.ConcreteRootAccess`. Its
+`rootAccessEquivalence` proves CCR iff universal finite root access under EM;
+`borrowedDecomposition` proves CCR iff `NoWhollyBorrowedCollection` **and**
+`LocalizedBridge` under EM. The latter cannot silently drop its mixed-supplier
+bridge. These equivalences locate a commitment; they add no independent
+reason to accept it. They give multiple local roots, not root uniqueness.
+
+| Option | Exact usable transition | Additional application commitment |
+|---|---|---|
+| CCR directly | `20babef7` on `esseCauseGraph p`, then step 1 | Exhaustive actual esse-supplier scope and the local closed-collection foundation claim |
+| Unrestricted esse WF | `ClosedEsseSource.closedOfWF` (`044974e5`) gives the same CCR | Rules out every infinite descending actual esse-cause path, more than common ancestry requires |
+| Per-se WF | `RootInterface.unrestrictedRegressFromPerSe` uses `ea251340` AND `e74de400`, then the WF option | A caused esse cause causes as caused; PER_SE_5 is not automatically temporal order or efficient PER_SE_1 |
+| Borrowed availability | `borrowedDecomposition`, or `closedRootedOfBorrowed` with actual supplier concreteness | All relevant suppliers covered; a mixed abstract supplier needs the localized bridge, not its deletion |
+| Quantitative attenuation | `TruthCore.Results.Causality.ClosedGroundingRoots.closedRootedOfAttenuation` yields CCR on the selected profile | `AttenuatedEsseReception`: countable actual domain, positive bounded P, nonnegative own supply and weights, summable rows and weighted sums, row sums at most a common q<1, reception inequality, positive weight implies this ground edge, positive own supply implies actual root |
+
+The attenuation option is available on `esseCauseGraph p` only if that full
+bridge is supplied there. Neither a numerical metaphor nor the fixed-duration
+Reaper metric supplies it. The [quantitative note](contractive-borrowed-power-1378.md)
+contains the loss/bound controls. An infinite supply network with no common
+bound, or without uniform loss, does not meet this theorem's hypotheses.
+No independently calibrated amount of esse is claimed here.
+
+Whole-roster nontrapping is a different endpoint: with actual population and
+EM it gives some actual root. It is enough for the alternative
+`RootInterface.uniqueActualRootFromDeEnte` (`ef632140`) when coverage,
+identity uniqueness, existing-in-act and cause-to-ground identify every root.
+It does **not** itself give finite ancestry to each bearer. The isolated-root
+beside rootless-regress control in the CCR section blocks that shortcut.
+
+### Uniqueness packages on the same candidate roots
+
+Use the same m,w and candidate predicate `ActualRoot m w` in every row.
+Only the first row also obtains De ente's identity-source classification;
+the other rows do not imply `AtMostOneEsseIsEssence p` for all actual
+identity bearers without further coverage/root bridges.
+
+| Package | Full joint inputs beyond the displayed root-existence base | Exact endpoint and what may be declined |
+|---|---|---|
+| De ente multiplication | For `a576300f`: multiplication inventory `2495a71d`, shared nature `75b5b027`, no added difference `f13d1cdd`, no matter `38ed105c`, reception in own essence `6dfe01ab`, receptive potency `7fcfcee8`, no self-receptivity `14325c83`. For actual-root at-most-one add coverage, existing-in-act, cause-to-ground and EM as in step 3. | `7ab0ddcb` via the source-root base above, or population + whole-roster + EM via `ef632140`. Does not require grades or pure-indiscernibility. |
+| Fixed-esse grades/maximality | `TruthCore.Results.Causality.ActualRootUniqueness.uniqueRoot`: population, whole-roster and EM as base; fixed-esse maximal causality `da09703b`, existing-in-act `0436de86`, cause-to-ground `cb1cdea9`, fixed-esse grades `e4e6b0cd` | `7ab0ddcb`, then the same `c71c068c` + EM upgrade. De ente shared nature/multiplication can be declined for this root endpoint, but not thereby removed from a separate source-first derivation of `da09703b`. |
+| Pure indiscernibility | `TruthCore.Results.Causality.PureActRoot.uniqueRootFromPureIndiscernibility`: population, whole-roster, contingent-grounding and EM as base; every root has every pure determination `fe67d766`, all its determinations are pure `3b39e0ba`, and purely determined indiscernibles are identical `bd0a956c` | `91b085c4`. Grades/genus and multiplication can be declined if these premises are independently retained. The actual-root re-indexing is not a physical-motion identification. |
+
+The pure-indiscernibility bridge quantifies over beings, not merely roots.
+Its real-thisness sibling is another support option, not an equivalent
+formulation inferred here. Pure actuality alone does not supply every pure
+determination; #1728's accepted [connected pure-act case](modal-spine.md#connected-pure-actuality-case-for-1728-2026-11-17)
+therefore cannot be substituted for all three uniqueness inputs. That case's
+passive-constitution and current-giver bridges remain visible and unchanged.
+The [canonical individuation audit](necessary-simple-plurality.md#independent-individuation-audit-the-unresolved-exhaustive-step)
+and [pure-root audit](necessary-simple-plurality.md#pure-act-premises-at-the-necessary-root-2026-11-07)
+retain the positive arguments, controls and bare-difference boundary.
+
+Shared nature concerns a real multiplication account for identity bearers;
+MoreIn concerns comparative esse; Has/Pure concerns real determinations.
+No dictionary between them is presumed. In particular, shared numerical
+essence values in q11's proper-IsGod domain do not transport to all actual
+De ente candidates. Accepting one package supplies its endpoint, not every
+other package's internal predicates. The alternatives are not claimed
+exhaustive or evidentially independent.
+
+### Carrying n into the God consumer without dropping its companions
+
+The source route already connects to **8626f8a5** through argument
+[f4df2153](../../corpus/arguments/f4df2153-a995-40f7-99d6-3f68ed2b5cbe.json),
+then [c98328f1](../../corpus/arguments/c98328f1-3c05-40ad-983f-1fee15873f12.json).
+The first uses common source **plus** actual esse-cause composition `b4987085`,
+causal ascent `cffad050` and EM to derive `da09703b`. Finite ancestry alone
+does not give direct universal causation; composition supplies that step.
+Causal ascent identifies every maximal bearer with the source; no maximum
+exists just because this universal statement holds. The already delivered
+[0609389b](../../corpus/arguments/0609389b-ae65-46c8-beaa-2246041e35de.json)
+is the weaker sufficient alternative: common source, composition, identity-source
+scoped ascent `8176a284-769b-4ed0-b90b-ff655b7fd864`, and EM give the same
+`da09703b`. It can replace full `cffad050` without changing the source,
+consumer or other inputs. Its positive reception/degree calibration and
+remaining application are retained in the causal-perfection note, rather than
+requiring the unrestricted ascent claim for this assembly.
+
+The naming consumer's twelve inputs are recorded below, with exact canonical
+statement links. This is an AND bundle, not optional background.
+
+| Input | Canonical meaning |
+|---|---|
+| [56f68b40](../../corpus/statements/cogito-inhabited-concrete-world.json) | `InhabitedConcreteAt` |
+| [5c898d24](../../corpus/statements/whole-roster-not-trapped.json) | `WholeRosterNotTrapped` |
+| [ee4ab504](../../corpus/statements/excluded-middle.json) | `ExcludedMiddle` |
+| [86efed1a](../../corpus/statements/simply-prior-is-actual-concrete-ground.json) | `SimplyPriorIsActualConcreteGround` |
+| [da09703b](../../corpus/statements/maximum-in-being-causes-all-beings.json) | `MaximumInBeingCausesAllBeingsReading` |
+| [0436de86](../../corpus/statements/existing-in-act-at.json) | `ExistingInActAt` |
+| [cb1cdea9](../../corpus/statements/esse-cause-is-actual-concrete-ground.json) | `EsseCauseIsActualConcreteGround` |
+| [6c27657f](../../corpus/statements/grades-have-a-maximum.json) | `GradesByApproachToAMaximumReading` |
+| [7067553d](../../corpus/statements/actuality-only-insofar-as-being.json) | `ActualityOnlyInsofarAsBeingReading` |
+| [b26c10a0](../../corpus/statements/universal-cause-transfers-perfections.json) | `UniversalCauseTransfersPerfections` |
+| [09c6d5f0](../../corpus/statements/no-component-is-first-being.json) | `NoComponentIsFirstBeingReading` |
+| [1ec205ed](../../corpus/statements/god-names-the-fully-described-principle.json) | `GodNamesTheFullyDescribedPrinciple` |
+
+`TruthCore.Results.Causality.MaximalFromEsseSource.sameWitnessGodAtBeing`
+retains its chosen root through firstness, maximum identification and naming.
+When supplied this same m,w, uniqueness from step 3 identifies its chosen root
+with n. Thus `IsGod n` and step 4's necessity concern one being. This is a
+transparent composition of existing proofs, not a newly certified stronger
+consumer statement. The registered GodExists consumer itself asserts neither
+necessity nor uniqueness. Its whole-roster/population inputs remain explicit;
+the already available root supports them through its actual presence and
+`WholeRosterRootEquivalence.wholeRosterOfRoot`. That reuse does not supply
+any new foundation warrant. The consumer retains global grades `6c27657f`,
+even though the root-uniqueness alternative uses fixed-esse `e4e6b0cd`.
+No weakening of the registered consumer has been claimed.
+
+The source-first derivation of maximal causality and the naming consumer
+share causal/actuality commitments. In particular a grades uniqueness route
+using `da09703b` *from this source route* still depends on that route's
+identity uniqueness. It is an independent alternative to multiplication
+only when maximal causality has another retained warrant or is accepted
+directly. Counting the round trip as another proof of source uniqueness
+would add no warrant. Intellect, will, eternity, infinity and the full
+classical description remain their separate #1731 bundles; GOD_4 naming is
+not historical or Christian identification.
+
+### Modal support alternative and exact joins that remain OPEN
+
+Groups #1726–28 are consumed as delivered in #1738–40, not reimplemented.
+The [necessary-concrete comparison](conceptual-existence-boundary.md)
+retains atomic and atomicity-free actual-cover producers of `b19ffd92`.
+Their necessary witness need not be the cover, cause, original actual bearer
+or this n. A necessary actual being provides no underivedness for free.
+
+The separate exact namespace
+`TruthCore.Results.Causality.UnderivedCommonSource` offers `from_union`:
+`NecessaryBeing`, `ActualReflexive`, `NoContingentGroundOfNecessary`,
+`WellFoundedUnionNecessarySupport`, EM, weak connectedness and upstream
+confluence of **the same actualSupportGraph m R w**. It preserves the
+necessarily-underived witness supplied by `NecessarilyUnderived.PositiveUnion`;
+that witness may differ from the necessary being used as its starting input.
+`exists_support` starts with `NecessarilyUnderived` instead of those five
+producer premises. `causal_from_union` additionally needs
+`ActualCauseSupportsEsse` and places connectedness/confluence on actualGraph;
+there is no definitional identity of Causes, R and grounds.
+
+`TruthCore.Results.Causality.SourceWitness.rooted_from_source` takes weak
+connectedness, upstream confluence and HasSource on one graph and returns
+unique-source finite access. Its graph paths must be read with that library's
+edge convention, not substituted directly for De ente supplier-first TransGen.
+This generic argument does not require a shared nature; conversely De ente's
+identity uniqueness is not evidence of generic confluence on an unrelated
+relation. The plural-root control below shows why connectedness alone fails.
+
+The scope difference is consequential. `91b085c4` says n exists at every
+accessible world and has no actual **concrete** ground at w. It says neither
+that no abstract ground exists at w nor that no supplier exists at another
+world. `NamedNecessarilyUnderived` excludes existing R-suppliers at every
+world in its definition, as well as retaining necessary existence. Upgrading
+the former to the latter is **OPEN** without same-supplier scope and world
+transport. #1725's [support-path continuation](conceptual-existence-boundary.md#computed-god-root-delta-for-the-support-path-continuation)
+provides standing-support coverage and union-WF only under its explicit
+all-concrete-source or necessary-source transport policies. Necessary-source
+transport alone does not cover every contingent supplier. These results may
+support the union branch when their dictionaries match; they do not remove
+its policy inputs or identify its selected witness with n. A justified
+root/support dictionary and actual-root uniqueness could identify witnesses
+at w; it still would not manufacture all-world underivedness.
+
+**Next test for that join:** inspect an explicitly selected R and ontic
+profile, check every possible supplier's concreteness and actual/world
+transport conditions from #1725, and then apply the existing union theorem.
+Where only necessary suppliers transport, retain the contingent-supplier
+exclusion as an additional assumption. No equivalent transport wrapper is
+needed and no new foundation investigation is assigned here.
+
+### Joint supply, temporal routes and controls that reject false joins
+
+The [joint-group record](joint-causal-groups-733.md#sufficiency-exercise-and-completeness)
+keeps contributors **and enablers**, admitted versus exercised groups, allowed
+scenarios, and event-to-bearer mapping separate. A group index is not a new
+substantial supplier. Its actual graph uses occurrence, not substantial esse.
+To feed an esse/CCR route, an application must justify the bearer map, actual
+exercise, complete contributor/enabler union, direction and same-existential-
+respect supply. Projected membership alone proves none of these. Omitting an
+enabler can destroy joint sufficiency, and individually redundant contributors
+do not justify individual strict but-for dependence. This is why the
+foundation account must be applied to complete supply rather than rewritten
+as “each dependent contributes nothing.”
+
+The [temporal/Reaper comparison](../causal-regress-and-grim-reapers.md)
+and #1722's delivered metric interfaces concern histories, duration, populated
+past and modal arrangement/patchwork conditions. The temporal-branch
+comparison selected in open issue #1736 retains the continuing-dependence
+question for a beginningless history; it is not treated here as a completed
+eternity integration. Neither an infinite past nor a finite past by itself
+settles same-world esse support. A conversion needs explicit time/world and
+bearer maps, same-respect esse supply and any per-se bridge. Thus declining
+temporal beginning does not withdraw this CCR conditional route, and accepting
+a Reaper argument does not supply CCR or underivedness for it.
+
+The existing controls discriminate the proposed joins without new models:
+
+| Existing control | What it checks here | Boundary |
+|---|---|---|
+| `ClosedEsseSource.Control.rootedInfinite` and `rootedCycle`, result `b49b53e7` | CCR, coverage, identity uniqueness and common ancestry coexist with root-backed infinity or dependent cycles | Not a refutation of CCR or evidence for actual metaphysical realization; WF is the extra rejected requirement |
+| `ClosedEsseSource.Control.rosterOnly` | An isolated root does not serve a detached rootless component | Whole-roster existence cannot replace universal access in step 1 |
+| `PluralRootConfluence.Control`, [plural-root attempt](../../corpus/attempts/plural-root-confluence.json) | Same connected support graph has two sources with a common effect; even WF holds, confluence fails | Blocks connectedness + source ⇒ unique common source; does not defeat De ente's different uniqueness premise |
+| Joint fixture `a ∧ (b ∨ c) ∧ enabled` | `{a,b}` without the enabler is not sufficient; alternative complete bundles can coexist | Blocks omitted-enabler/individual-sufficiency projection into esse coverage |
+| `RootInterface` absent-source, noncausal-ground and self-ground controls | The actual-world converse, ground/cause bridge and self-cause exclusion cannot be silently dropped | Formal interpretation boundaries, not independently justified objections to the retained bridges |
+
+### Cumulative provisional assessment and next distinct question
+
+The positive case is a coherent explanatory route: actual being, received-esse
+coverage, a nonborrowed-availability commitment at exhaustive supplier scope,
+and the addition-excluding esse account provide real prima facie warrant.
+CCR improves that route by requiring only finite root access, not a ban on
+every infinite branch. Multiplication, comparative maximality and pure
+indiscernibility provide meaningfully different support options for the
+common root endpoint when their own full packages are retained. This breadth
+is useful conditional support; direct primitive acceptance remains legitimate.
+No premise must acquire an endlessly prior proof to be considered warranted.
+
+For foundation, carry forward the [canonical current assessment](unique-feedback-explanation-311.md#current-foundation-judgment-on-the-existence-only-case-2026-11-17)
+and #1724's [owned comparison](https://github.com/moritzbrantner/formal-logos/issues/1724).
+The modestly favorable nonborrowed-availability rationale applies when the
+relation exhaustively supplies the relevant existence. The serious rival is
+an actually obtaining organized constitutive order whose constituents and
+arrangements jointly account for the same member without a foundation member.
+Its positive mechanism distinguishes constitution from productive activity;
+local causal non-self-production does not refute it. Its remaining burden is
+same-explanandum realization and adequacy, not mere graph consistency. The
+source account likewise owes actual obtaining and supply. This note changes
+neither the canonical assessment nor the live comparison and does not declare
+all infinite or constitutive variants refuted. A fundamental natural whole
+may satisfy foundation; the later identity, universal-scope and naming inputs
+must then be assessed, rather than treating naturalism as rootlessness.
+
+For uniqueness, the [current shared-nature assessment](#current-source-selection-judgment-identity-and-the-nature-being-multiplied-2026-11-17)
+supports addition-excluding unreceived esse as a motivated primitive. Equality
+of represented principles alone does not supply real shared nature. The
+intrinsically differentiated whole-nature proposal targets the extra
+whole-nature/reception inference; its extension to unreceived esse remains
+unwarranted on this record, not a refutation of that stronger account.
+Bare numerical difference targets the multiplication/indiscernibility
+principles; the finite plural controls only locate those inputs. Grades and
+pure-determination bridges have their own application burdens and cannot be
+credited as independent support when derived from the disputed source route.
+
+**Overall provisional judgment:** the assembled case positively supports one
+necessary actual source **conditional on** the complete fixed-dictionary
+packages above and can carry that same source into the existence-only God
+consumer. Formal transport is already available; substantive concentration
+lies in exhaustive existential-supply application, the selected uniqueness
+account, modal contingent-grounding, composition/ascent and divine naming.
+The present assembly does not settle these applications or defeat the standing
+constitutive rival. It also supplies no new adverse evidence merely because
+a premise is open. Repetition of cut, borrowing or chain vocabulary adds no
+corroboration. Revision upward requires warranted same-relation supply and
+uniqueness/identification applications; revision downward requires a concrete
+failure of one retained bridge or a defended competing realization at the
+same explanandum, not a merely conceivable alternative.
+
+The distinct onward question for #1730 is whether THIS selected source's
+intrinsic nature adequately explains its own existence and the actual order,
+including the difference between constitution and productive supply. #1731
+owns the selected source's attributes. #1724 retains exhaustive foundation
+warrant. These allocations do not restart stopped investigations or require
+the owner to choose a metaphysical winner.
+
+### Recovery, self-sweep and issue disposition
+
+The existing attempt `9f771edb` indexes the foundation premise, source,
+actual/necessary root interfaces and God consumer together. Retrieve
+`context c6d92415-0a65-4f5d-8d1d-147f1fe55592`,
+`context f4df2153-a995-40f7-99d6-3f68ed2b5cbe` and
+`context c98328f1-3c05-40ad-983f-1fee15873f12` for their full companion
+bundles; use `dossier` and `brief` on `20babef7`, `c35b1a5c`, `7ab0ddcb`,
+`91b085c4` and `8626f8a5` (full UUIDs in the linked records). The complete
+integration and its boundary are linked from the same attempt, so retrieval
+from either premise or consumer does not restart #1724. The rooted-infinite
+and mixed-supplier boundaries above prevent “regress” from triggering a false
+universal refutation. Related/novelty retrieval is advisory, not a certificate.
+
+Self-sweep: no Lean, frozen Challenge, proposition meaning, source attribution,
+batch spec, shared import or computed status changed. Each conditional arrow
+retains all conjuncts. Root access, common ancestry, unique actual root,
+necessary existence, all-world underivedness and God naming remain distinct.
+Witness equality in this assembly follows from the retained actual-root
+uniqueness, not reuse of a letter across existential eliminations. Pure act
+does not entail complete perfection. Controls certify only their explicit
+interpretations. The existing source and root-interface positive controls
+check their stated sub-bundles; no joint realization certificate for the
+whole flattened source/necessity/naming bundle is asserted here. Its joint
+metaphysical applicability remains unresolved, and separate controls are not
+combined as if they were one model. Foundation findings are consumed at matching scope and
+application obstacles are not presented as defeats. No claim is newly
+attributed and no source bytes are freshly certified.
+
+**Disposition proposed to the coordinator:** #1729's connected reconstruction
+and exact boundaries are delivered for a fresh semantic challenge. After
+acceptance and integration, record the delivered revision in #1729 and #143
+and close this bounded scope; leave the named foundation/adequacy/attribute
+questions with their existing owners. No issue comment, push, PR or closure
+was performed by this worker.
+
+Canonical recovery identities (full UUIDs are intentional retrieval anchors):
+
+| Role | Statement |
+|---|---|
+| CCR premise | `20babef7-6ae7-4b48-b72a-f417e8e63136` |
+| Common esse source | `c35b1a5c-6405-449b-993b-8196b2457e08` |
+| Unique actual root | `7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1` |
+| Unique necessary actual root | `91b085c4-f1c7-5ada-9848-8e7dc753313a` |
+| GodExists consumer endpoint | `8626f8a5-9531-5da7-9ebd-f901e74b1129` |
+
+### Verification and review handoff for #1729
+
+Convention resolution reports unchanged sourceRevision
+`15f348b072188255da837578eaafc8a98f12fdf0`. All corpus commands use the
+coordinator's warm binary at
+`/home/moenarch/moritzbrantner/truth-core/target/release/truth` with explicit
+`--root` selecting this checkout; final checks and recovery use
+`python3 scripts/worker_env.py -- …`. No preflight, preview, cold build or
+source materialization was performed. Existing proof/binding/axiom/Comparator/
+NanoDa evidence is reused: no formal input changed and no new proof is claimed.
+Required integration CI and fresh semantic challenge remain coordinator-owned.
+
+Offline `truth check` passed with advisory corpus/lexicon warnings;
+`source_evidence.py check` passed for 516 passage records and 2058 formalized
+claim bindings, retaining bibliographic/unavailable byte-verification exceptions.
+`truth attribution-check --base ebaab0aa17356354ea9b90147b4f3a8108421c58`
+reports no new or changed stating claims. Local-file links in all three edited
+notes and the new section's local anchors were checked; no missing target was
+found. No batch spec or generated formal record changed. Changed-research-metadata
+validation passes, and `affected_results.py select` on the committed four-file
+manifest selects zero results in zero shards. `git diff --check` passes.
+
+Premise and consumer recovery were exercised with `context`, `dossier` and
+`brief`: CCR result `c6d92415` and God argument `c98328f1`, CCR statement
+`20babef7` and God statement `8626f8a5`, using their full identities above.
+All six recover attempt `9f771edb`. Its current summary leads with the
+same-witness assembly and actual-root/all-world-underivedness boundary, so
+normal truncated retrieval exposes the current finding before historical
+entries. Related/brief/novelty and source/root endpoint dossiers were also
+inspected; novelty returned **partially-recorded**, consistent with reuse.
+No absence of an issue-snapshot hit was treated as novelty evidence.
+
+The actual computed God-root comparison, using
+`truth --root "$PWD" frontier-diff --base ebaab0aa17356354ea9b90147b4f3a8108421c58 --frontier-root 8626f8a5-9531-5da7-9ebd-f901e74b1129`, is:
+
+```text
+premise delta for GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of classical theism [8626f8a5]: ebaab0aa17356354ea9b90147b4f3a8108421c58 -> working tree
+open premises reaching the root: 420 (290 bare, 78 supported, 52 stated) -> 420 (290 bare, 78 supported, 52 stated)
+expanded-route diagnostic (lowest cost): GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of…, from prima via [ed7c588a] (cost 6) -> GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of…, from prima via [ed7c588a] (cost 6)
+distinct verified support alternatives: 436 -> 436
+verified support alternatives added: 0
+no change
+```
+
+This is no formal premise change. The counts describe the graph diagnostic,
+not a ranking of warrant or a weakness of conditional support. The delivered
+manifest is this note, the existing attempt `9f771edb`, and bounded inbound
+links in `direct-grounding-warrant.md` and `necessary-simple-plurality.md`.
+The complete proposed outcome and self-sweep above are the review target;
+no independent review of this new consolidation is claimed.
