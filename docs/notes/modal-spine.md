@@ -903,6 +903,250 @@ routes it has a price: a selected-relation predecessor in act for every
 potency, which no recorded case shows to be false. The live question moves to
 premises 2 and 3 at a first being, with premise 1's warrant also open.
 
+### Same-first-being passive potency application (2026-11-17)
+
+**Proposed judgment.** Act's priority has substantial positive warrant when
+applied to an occurring reduction of a real passive potency: the recipient's
+lack does not by itself supply the acquired actuality. It does not thereby
+warrant, for every idle capacity, an actually present distinct bearer of the
+SAME respect that grounds the recipient's being. The latter is the strong
+commitment made by a4d3261a together with non-overlap and the selected-ground
+bridge. Its primitive acceptance remains a support option; no actual
+counterexample or worldview defeat is established here. A substantive defense
+must identify the dependence, respect and mode of act, rather than derive a
+prior bearer from the mere unreality of a possible state.
+
+For the SAME selected first being n, the existing composition route is the
+better articulated alternative support bundle: actual n has esse; an intrinsic
+passive receptivity may be a real constitutive principle distinct from its
+actuality; real composition then invokes the existing cause/priority account.
+This avoids requiring an actual r-bearer for an idle potency. Its positive
+receptivity rationale is useful, but differing predicates or states do not by
+themselves establish two real principles, and composition's existential causal
+dependence remains substantive. This slice supplies a precise application and
+comparative warrant assessment, not another equivalent premise or proof.
+
+**Reconciliation and reuse.** Target `a4d3261a-3239-5b44-9953-64ab1b0ed762` on
+the existing first being, toward FirstBeingNoPotency / GodIsImmutable and the
+same-witness classical-attribute consumer. Related/dossier/brief/novelty,
+`ActPriorityAtFirst`, attempt `712ea899-f58e-4bfa-a977-ead95a600518`, the
+q4/q5 source attempt and Met.IX.8 rejected priority readings, the Night moving
+residual, and the composition audit/sibling `383d23ad` are reused. Nothing is
+newly attributed to a source. No new act-priority equivalence, idle-motion
+fixture or composition derivation is needed.
+
+The earlier findings stand: Night's idle-potency model can coexist with present
+motion elsewhere; it is a formal scope control, not an actual rival defeat.
+ColdStone separates the strong priority principle from the already checked
+composition/first-being bundle. The weak first-being version `61ad11f3` plus
+non-overlap is equivalent to no potency of a first being and supplies no
+independent warrant by renaming that conclusion. The composition sibling uses
+`d8024a38` in place of that weak premise and non-overlap at its local step; it
+does not restore the strong universal same-respect predecessor requirement.
+
+The later Theta.8 and dependence/esse-priority siblings are also retained,
+not overlooked as missing arguments. Attempt `124ff6a9` and the completed
+incorruptibility reading distinguish substance/esse actuality from accidental
+potencies; they do not justify actualization in every respect. The plenitude
+route adds infinite-past/realizability and change-cause premises and concludes
+only the time-indexed sibling `8caca2bf`. Its corrected binding does not reach
+the untimed attribute conclusion without the recorded temporal application.
+It is therefore not an unexamined route around the present idle-potency gap.
+The later `d812acaa` route and the dependence-priority audit replace the
+efficient-cause detour by the existing esse-only priority input `ee74c678`.
+That is a meaningful alternative support bundle: no priority of arbitrary
+accidental actualizers is needed for the composition step. It still requires
+the same real-composition and esse-dependence application. The efficiency audit
+`c6dfd231` separately records the typed efficient-esse sibling and its OPEN
+`19882fa9` tense bridge / `b0cd6015` priority input. Legacy use of mode-unspecified
+CausesIn with efficient priority is not silently promoted to that typed result
+or to present conserving activity in this assessment.
+
+The recorded sense defect is not repaired by this research prose. a4d3261a
+links adopted POTENCY_1 while its type has a free predicate. Existing generic
+consumers use `IndependentPriority` (`3b2d2d46`, POTENCY_2). The generic
+non-overlap statement also retains its recorded label/link discrepancy. No
+new binding or shared metadata cleanup is asserted. PRIOR_1 is simple priority,
+not temporal, order of discovery, final-causal or merely priority of a form
+over its own potency. Existing temporal/substance bridges remain explicit;
+none is inferred from the source's analogy. Receptive potency that coexists
+with possession and active causal power cannot be substituted for the selected
+unactualized intrinsic passive potency.
+
+**Exact application, before assessing warrant.** Fix m, w, n, esse and the
+actuality/potency/priority dictionary from existence bundle c98328f1 and its
+firstness evidence. No new root or world is selected. Suppose InPotency n r.
+a4d3261a supplies y with InAct y r and PriorSimply y n. Non-overlap makes y
+unequal to n, because otherwise n is both in act and in potency in r. Existing
+firstness makes y equal to n: contradiction. This is the unchanged
+FirstBeingNoPotency proof. Given firstness, the proof does not need to reapply
+the grounding bridge; the latter was part of deriving firstness of this n from
+its actual rootness. It is a shared warrant dependency, not independent support.
+
+If the purported PRIOR_1 edge is instead being used to derive firstness from
+rootness, `86efed1a` says that a distinct prior y is concrete, exists at w and
+stands in m.grounds to n. Combined with the strong priority principle this is
+the existing `ActPriorityAtFirst.Control.Facts` item 4. Thus an absent past
+generator, a future possible actualizer, the existence of a kind of agent, or
+a merely explanatory form is not that concrete current witness. InAct y r
+supplies its selected act mode, but not world presence without this or another
+explicit applicability bridge. A moving process, a capacity and an actual
+prior bearer are different quantified claims.
+
+For the composition alternative, actual n already has InAct n esse through
+ExistingInActAt. Under the existing being-restricted `d8024a38`, its own real
+passive potency in r makes it Composite in SIMPLE_4. The retained uniting-cause,
+perfection-to-efficient-cause and efficient-cause-priority inputs then exclude
+that composition of a first being; alternatively the existing actual-source
+noncomposition route uses its separately warranted presence/correspondence
+interfaces. This is an alternative conditional bundle, not a derivation of
+those causal interfaces. No universal premise that every first being is in
+some act has to be newly inferred when applying the local step to this already
+actual n. No same-r actualizer is supplied or required by this route.
+
+**Four explanatory claims tested.**
+
+| Claim | Positive warrant, exact consequence and application limit |
+| --- | --- |
+| A capacity needs an actual basis | A real disposition differs from a bare logical description: the subject has an actual nature/organization making a response possible under suitable circumstances. This gives positive reason to seek an actual capacity-basis. It need not be distinct from the subject or already possess the unrealized r. Current actuality of wood or a learner is not already the acquired shape or knowledge. |
+| An occurring actualization needs an actual source of its actuality | The recipient's privation does not explain acquisition; actual interaction or activity supplies a positive process account. This supports investigating an actualizer at the actual transition. Non-self-reduction and same-respect formal/virtual possession remain explicit premises; idle capacity alone supplies no transition to which that reason applies. |
+| Every idle capacity has a distinct actual r-bearer | A participation account may say determinate capacity is intelligible only relative to actual r and ultimately its source. This is a substantive primitive ontological commitment, stronger than identifying the actual basis of a conditional response. The step from reference to an actuality to an existent related bearer is not secured by the reduction reason. ColdStone establishes the formal distinction; it is not evidence that the actual commitment is false. |
+| That r-bearer is an actual existential ground of the subject | A per se existential dependence account can support this where the recipient's current being depends on the actualizer's exercise. Causation of one accidental state, conceptual priority or historical generation alone does not establish this dependence. The concrete correspondence must be defended at the same w and for the same relata, not supplied by calling all these relations priority. |
+
+The positive capacity-basis account has an ordinary mechanism: actual subjects
+retain unexercised capacities while manifestation depends on stimulus and
+background conditions. In the familiar learning case, a teacher's activity
+explains acquisition of a specific item of knowledge rather than the learner's
+already existing substantial being. In construction, the actual capacity of
+wood and an agent's skill can explain a later shape without requiring that
+shape already in the wood. These examples distinguish explanatory targets;
+they are not new verified source claims, absence-of-all-r-bearers observations,
+or models of the ultimate source. The independent reason the distinction
+matters is that keeping the recipient in existence and bringing about this
+state answer different questions and can involve different agents/conditions.
+An argument identifying them owes the additional metaphysical dependence
+account. It cannot obtain it solely from the words actualization or priority.
+
+This does not establish that every actualizer is formally r. The retained
+formal/eminent distinctions allow the actualizer to contain r in a higher way;
+ordinary construction therefore does not refute the virtual interpretation.
+But bare power to produce r does not establish substantive eminent containment.
+Changing to virtual or inclusive InAct also requires checking the SAME potency
+interpretation: formal lack of r does not establish lack of r inclusively. One
+cannot retain non-overlap on one meaning while supplying the predecessor on
+another. The same source n's active power to cause others' acts is not evidence
+of its own passive receptivity, nor does it supply another actual prior being.
+
+**Supported rivals and comparative commitments.** The strong universal account
+has a real explanatory advantage if warranted: it locates every passive
+capacity in an actual, ontologically prior order, excluding brute receptivity
+and explaining why a first being is not a recipient. It accepts the strong
+same-respect witness and selected-ground commitments even for idle capacities.
+There is no recorded independently warranted case showing those commitments
+false under a fixed substantive-eminent interpretation. They are not rejected
+because unfamiliar or because no separate proof of every primitive exists.
+
+The intrinsic-disposition account instead explains capacity through the
+bearer's actual nature, with manifestation conditional on interactions. It
+provides a positive alternative to deriving a currently actual r-bearer from
+bare unexercised possibility. It does not yet establish a simple or uncaused
+first bearer with passive potency. Its root-level extension must either deny
+that receptivity is a distinct real principle (d8024a38), accept an uncaused
+composite (the causal composition premise is denied), or defend a more limited
+existential-priority correspondence. Different explanatory roles give a reason
+to investigate these options; an arbitrary first-being valuation supplies no
+actual-world evidence for them.
+
+A feedback proposal makes the priority issue concrete: subordinate agents could
+depend on a source for their esse while affecting an accidental state of that
+source. The asserted dependence respects are opposite and different, not a
+self-production loop in one respect. Ordinary interaction supports the reality
+of respect-specific rather than automatically global dependence; it does not
+prove that an ultimate source can receive feedback. If every such state
+actualizer is required to be PRIOR_1 and hence an existential ground of the
+source, this proposal conflicts with rootness. If it denies that correspondence,
+it preserves existential firstness at the price of allowing accidental
+receptivity or real composition. The conflict is with named metaphysical
+premises, not an independently established contradiction in the rival.
+
+The composition route offers the strongest positive response at this n: real
+passive receptivity is proposed as an intrinsic principle not reducible to the
+actuality that receives further determination; an uncaused first being cannot
+have the resulting composite unity. This is stronger than counting two true
+predicates. Its contested point is whether the recipient's actual constitution
+really has those distinct principles and whether that unity demands a distinct
+cause of its esse. A state-variable account alone neither proves nor refutes
+such real constitution. The existing future-realization audit also remains:
+realizing r would yield subject/accident composition only under its explicit
+bridge, and retaining rootness/causal laws across that realized state needs the
+separate persistence interpretation. No modal or temporal persistence is added.
+
+Natural and divine proposals face identical tests. An immanent source may be
+an immutable actual bearer with active powers and no intrinsic passive capacity;
+then this step does not discriminate it from an immutable divine source. A
+changing first source must defend its intrinsic-state/existential-dependence
+distinction and its account of real constitution. A divine proposal is not
+exempt from those burdens by its name. No cognition, will, necessary act or
+collapse theorem follows from either verdict. The accepted naming and modal
+application judgments, including their reopening conditions, are unchanged.
+
+**Outcome, next test and self-sweep.** The current reduction-based reason does
+not establish the strong idle-capacity application; an actual capacity-basis
+and an actual same-r existential predecessor are precisely different claims.
+The root-facing composition support remains coherent and conditionally useful,
+with its real-principle and causal-unity premises explicit. No actual passive
+potency of n, or counterexample to its absence, has been established. Direct
+act-priority/pure-act commitment and the cumulative composition rationale remain
+available; the formal alternatives are not counted as independent corroboration.
+
+A materially different reopening needs a defended SAME-source constitutive
+account: identify the alleged intrinsic passive receptivity, explain whether
+it is a distinct real principle rather than only a conditional/state predicate,
+and show whether its bearer presently depends for esse on a numerically
+distinct actual cause. Existing d8024a38 and the composition causal interfaces
+are the precise next application targets. The previous uniting-cause
+presence/correspondence audit is not discharged by relabelling the capacity
+basis a prior actualizer. Another idle model, an imported priority theorem or
+a first-being-only equivalence repeats the settled formal boundary.
+
+Self-sweep: target, actual n/w, respect and act mode remain fixed; no POTENCY
+or PRIOR sense bridge is silently inserted or legacy metadata repaired. No
+new source reading, claim, formal record, fixture, frozen Challenge or proof
+is introduced. The positive and rival mechanisms are assessed at their stated
+scope, with no purported empirical counterexample or complete-worldview defeat.
+Firstness, actual existence and all root-facing attribute inputs are preserved.
+This complete proposed judgment awaits independent semantic review. No push,
+PR or watch is performed. Verification and exact comparison follow below.
+
+**Verification and exact delta.** This slice changes only the existing
+act-priority section of this note and its existing attempt `712ea899`. No
+statement, relation, definition, source claim, spec, proof, Challenge or
+computed status is changed. Existing act-priority, Theta.8, composition and
+efficiency proof evidence is reused unchanged; no unchanged Lean, binding,
+Comparator or NanoDa checks were repeated. Offline corpus and attribution
+checks, bundle audit and senses/definitions/lexicon ratchets pass. Whitespace
+check passes. Legacy backfill/cache warnings and two removable sense allowances
+remain coordinator-owned. Convention resolution confirms the previously read
+sourceRevision `15f348b072188255da837578eaafc8a98f12fdf0`. Prepared setup is
+unchanged; no preflight was repeated.
+
+Computed with `target/release/truth frontier-diff --base
+7205cda59ddf9c7ed02a62780a51d88b154ca24d --frontier-root STMT-GOD-EXISTS`:
+
+```text
+premise delta for GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of classical theism [8626f8a5]: 7205cda59ddf9c7ed02a62780a51d88b154ca24d -> working tree
+open premises reaching the root: 404 (283 bare, 76 supported, 45 stated) -> 404 (283 bare, 76 supported, 45 stated)
+expanded-route diagnostic (lowest cost): GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of…, from prima via [ed7c588a] (cost 6) -> GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of…, from prima via [ed7c588a] (cost 6)
+distinct verified support alternatives: 417 -> 417
+verified support alternatives added: 0
+no change
+```
+
+The exact premise change is none. The provisional comparative judgment adds no
+formal establishment, actual-source application certificate or worldview
+refutation. The complete proposed outcome above is ready for independent review
+before coordinator publication.
+
 ## Rival table (run of 2026-11-10)
 
 Every open premise of the spine now has a recorded rival and one Lean-verified
