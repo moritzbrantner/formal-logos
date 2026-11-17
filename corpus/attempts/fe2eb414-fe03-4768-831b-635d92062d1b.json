@@ -1,0 +1,20 @@
+{
+  "id": "fe2eb414-fe03-4768-831b-635d92062d1b",
+  "label": "Actual content-sensitive exercise as a rational-basing account",
+  "statement_ids": [
+    "38eb1610-1b62-4fbe-9d7c-21dc2bf29fa7",
+    "cf57c52c-c519-49c0-9536-d5fa8a9c9bac",
+    "45d46cbf-0d36-5c3c-85bb-8685d895c2f1",
+    "05fb0e59-18f8-519d-bf58-12bdc952367c"
+  ],
+  "date": "2026-11-14",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Developed the rational-basing continuation in docs/notes/epistemic-underminer-boundaries.md against main 561ba7d5c774d15036128928b7293b0ab9ee137a. Proposed sufficient conditions for ordinary reflective inference: independently interpreted content available to the agent, a content-sensitive inferential procedure, actual token exercise producing or sustaining the belief, and personal integration with effective reconsideration. Distinguished possession from exercise, causal ancestry from inference, input sensitivity from faithful uptake, and a redundant active basis from an idle backup. A finite antecedent-matching construction and explicit routing interpretation give a positive deterministic formal-rule implementation; finite enumeration is a diagnostic, not Lean certification or a model of conscious understanding. Reused RevisionUptake screening and inversion/echo controls and the existing eligible-uptake warrant theorem. Basing remains distinct from adequacy, undefeatedness and warrant calibration. Provisional support favors the specified exercise conditions in ordinary cases; reducibility and the application to actual personal content remain unresolved. Consulted Boghossian and McHugh/Way primary texts, with Turri limited to the accessible abstract and publisher notes and the later functional successor limited to its abstract; exact locators, source-access limitations, competing primitive-act account and matched inference/bypass test are preserved in the note. CC100 item 116's personal-explanation-only restriction and the intellectual-operation/divine-willing bridges are not derived. Success records the completed conceptual proposal and discrimination, not establishment of the target premises. No new theorem, definition, attributed claim, formal edge or root premise discharge.",
+  "blocker": "An actual-case application needs evidence that independently interpreted content and the active procedure belong to the person's inferential activity; the finite construction supplies neither understanding nor that causal attribution. The basing proposal also leaves adequacy, undefeatedness and eligibility-to-warrant calibration separate. Lean/Comparator/NanoDa are unavailable for any prospective new certification; the current contribution registers no new formal result. Independent semantic challenge of the complete proposed outcome remains pending.",
+  "evidence": [
+    "1db47fd9-6ab1-4fa1-a9dd-0aa9457d8146",
+    "5ba7dd8f-7f4a-4d83-89b9-ca2cfffa02f0",
+    "d0d6abaa-3a02-4892-9d89-f457fb67a720"
+  ]
+}

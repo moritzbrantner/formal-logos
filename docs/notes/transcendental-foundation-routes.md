@@ -1,5 +1,7 @@
 # Transcendental foundation routes: practice, correctness and normative authority
 
+Current continuation: see [the 2026-11-14 common-ground connection and handoff](#common-ground-connection-and-current-handoff-2026-11-14).
+
 **Investigation status (2026-11-02):** analytic, source-free candidate comparison; two new Lean
 boundary experiments proposed for Comparator certification. No additional
 historical interpretation is attributed to a thinker or to the positions below.
@@ -197,3 +199,178 @@ action. The models each have `Unit` goals and `Bool` actions/worlds; no carrier
 is empty. Epistemic selection may be extensionally ideal but is not an actual
 time-indexed belief formation, and the agency model is actual-success-only,
 not intention. No new source claim or self-evident marking is introduced.
+
+## Common-ground connection and current handoff (2026-11-14)
+
+This continuation starts from main
+`561ba7d5c774d15036128928b7293b0ab9ee137a`. It develops the proposed common-ground
+connection and records the five investigations authorized together. It is an
+analyst argument using existing definitions and results, not a newly certified
+route or an attribution of a new formal proposition to a historical author.
+The normative-convergence work remains with #933 and its existing dependencies;
+this section does not open a parallel umbrella issue.
+
+### Two questions that need different bridges
+
+**Identity of ultimate candidates.** Suppose a causal argument identifies c and
+a normative argument identifies n. The existing
+[`UniqueNecessaryActualRootAt`](../../TruthCore/Causality/NecessaryRootUniqueness.lean)
+already entails c = n **if both satisfy `ActualRoot` in the same profile, world,
+concrete domain and grounding relation**. This is a useful convergence result:
+two properly connected investigations would not need a second uniqueness
+argument. But being an ultimate standard in an ordering of value does not yet
+make n an actual concretum with no incoming actual-concrete ground. Being
+causally first under one relation does not make c first under every relation.
+
+The registered
+[`uniqueRoot`](../../corpus/results/necessary-root-uniqueness.json)
+uses its full nine-premise bundle. Its uniqueness conclusion is not obtained
+merely by naming two candidates "ultimate." Nor does uniqueness by itself
+establish that the root grounds every other actual thing. For that stronger
+coverage, reuse the existing
+[`ActualCommonRootAt`](../../TruthCore/Causality/ActualCommonRoot.lean): one
+actual root directly grounds every other actual concretum in the selected
+relation and world. Its registered
+[`uniqueRoot`](../../corpus/results/ACTUAL-COMMON-ROOT-UNIQUENESS.json)
+already derives uniqueness from that coverage. Neither interface identifies
+an epistemic obligation or moral authority with a concretum automatically.
+
+**Common source of distinct local standards.** A different route begins with
+one causal source and asks how it relates to the actual natures, capacities and
+perfections of many recipients. This does not require an organism's proper
+function, a proposition's truth condition and a moral obligation to be one
+individual or one property. It asks whether their relevant grounds ultimately
+depend on the same source while retaining their different explanatory roles.
+That is the more immediately useful connection to the organism investigation.
+
+### The positive two-level proposal
+
+Aquinas's [*Summa theologiae* I q.6 a.4, corpus](https://www.corpusthomisticum.org/sth1003.html)
+(text [28491]; [English translation](https://www.newadvent.org/summa/1006.htm#article4))
+distinguishes the first exemplary, efficient and final source of goodness from
+the goodness inhering in each recipient, by which it is formally good. This
+supplies a positive precedent for **many local goods with one ultimate
+source**. It is a source-supported conceptual distinction, not a fresh proof
+that its divine-source premise is true. The proposed connection below is our
+development; it does not attribute a modern organizational theory to Aquinas.
+
+Consider an organism with a repair capacity. The organism investigation proposes
+that maintaining and recovering its organization explains why that capacity
+benefits this bearer under a specified range of conditions. Possession of the
+relevant repair capacity is the candidate local perfection here; its loss can
+be a defect despite compensation. Successful exercise is a further perfection
+with its own conditions. The capacity's explanatory role is intelligible
+at the level of the organism. If the organism, its nature and the relevant
+capacities have one ultimate causal source, that source can also explain why
+there are bearers with such perfections. The local account supplies what is
+being perfected; the causal account supplies its origin or dependence.
+
+This yields the following candidate composition, with the bridges visible:
+
+| Step | Positive contribution | What must be preserved in applying it |
+| --- | --- | --- |
+| Actual organization → functioning capacity | Repair and maintenance relations explain a contribution to the bearer's persistence and recovery. | Fix the bearer, environment and operating regime; do not identify every useful output with a proper function. |
+| Capacity and kind → due perfection | A successful capacity can be assessed against the organism's pattern of functioning, including compensated malfunction. | Warrant the kind, regime and standard. Current organizational usefulness and selection history are distinct candidate grounds. |
+| Common source → actual perfections of recipients | One source can account for many actualized perfections without making them one formal property. | Establish the relevant causal scope and perfection-transfer bridge; merely causing existence is not the entire argument. |
+| Local goods → reasons and obligations | Goods of inquiry and of living agents provide determinate subject matter for practical and epistemic evaluation. | State how those goods supply reasons, their force and their scope. Neither a successful mechanism nor a common source alone is the categorical-authority premise. |
+
+The third step already has a substantial formal home. The existing
+[`CausalPerfectionTransfer.goodness`](../../corpus/results/CAUSAL-PERFECTION-TRANSFER-GOODNESS.json)
+combines maximality, the maximum-in-genus causal reading, actuality/being,
+goodness/actuality and the restricted universal-cause transfer premise. For a
+given God-designated being, that bundle yields the registered
+`GodIsSupremelyGood` conclusion. See the current
+[perfection-transfer note](causal-perfection-transfer.md) for the exact
+relations and surviving premise questions. Reuse that work; do not silently
+replace its premises with "whatever causes something causes all its goods."
+Its good-in-esse and actual-perfection conclusion is also not by definition
+the whole moral perfection or authority of a personal source.
+
+The composition offers explanatory work in both directions. The local account
+specifies which perfections the causal argument must cover. The causal account
+can explain a common origin of differently constituted recipients. Neither
+direction makes efficient causation, constitution of a standard and normative
+authority interchangeable relations. A valid composition of them needs an
+argument about those particular relations; transitivity of one relation cannot
+be borrowed for a different one.
+
+### Test the normative extension on the same cases
+
+For inquiry, use the same conflict between an evidentially supported belief and
+a reassuring but unsupported belief. The new content comparison explains how
+factual guidance can differ from reassurance, and the basing comparison explains
+whether the evidence actually governs the resulting belief. These supply
+positive material for an epistemic standard. Whether the agent has a reason or
+obligation with a given force to conform is a further question about that
+practice and agent, not an additional bit returned by the model. Actual
+truth-directed inquiry can supply prima facie warrant for its constitutive
+standards without waiting for a complete metaphysics of their source.
+
+For the moral case, keep fixed an organism's serious impairment and an agent
+indifferent to it. An account of the organism's good clarifies what the agent's
+action damages. It does not yet settle why that agent is bound by a categorical
+prohibition, or whether that authority requires an individual source. Those
+are the same concrete authority questions recorded in #933. A candidate that
+adds a common source must show how its account explains the relevant reason's
+force, while a plural or impersonal account must address that same force. The
+test is explanatory adequacy on the shared case, not compulsory prior elimination
+of every alternative or every primitive.
+
+**Provisional assessment.** The two-level account is a positive, coherent route
+for combining local natural-goodness explanations with a common causal source.
+The organizational proposal and an ultimate-source proposal need not be rivals
+about the same explanatory role. The same-bearer route is also usable when a
+normative candidate really meets the existing actual-root interface. Neither
+route has yet supplied that mapping or the categorical-authority bridge. A
+shared label, shared domain or theorem about uniqueness would not supply it.
+This is progress in what must connect and why, without marking #933 closed.
+
+### Five investigations: findings and next discriminating work
+
+The findings below are research developments. None adds a formal graph edge or
+discharges a root premise in this checkpoint.
+
+| Connection | Development in the existing note | Next test of the substantive proposal |
+| --- | --- | --- |
+| Reasons, content and rational basing | [Basing](epistemic-underminer-boundaries.md#rational-basing-the-particular-transition-must-exercise-the-capacity) now requires actual exercise of an understood procedure and effective personal uptake; a finite antecedent-matching construction discriminates relevant mismatch from mere output agreement. | Compare an active inference with a matching bypass using process evidence, irrelevant presentation changes and removal of one of two active supports. |
+| Organism organization, function and due goods | [Goodness and function](goodness-form-end-definitions.md) develops maintenance, repair and a challenge-relative standard that can distinguish compensated defect from healthy inactivity. | Establish the bearer, regime and retained capacity in an actual biological case; compare organizational and historical accounts on the same defect. |
+| Multiple functions and factual content | [Intentionality](intentionality-943.md#multiple-functions-and-stable-factual-guidance-2026-11-14) gives opposite tasks with one stable factual success condition while reassurance varies independently. | Supply an architecture or history selecting that guidance role and test which environmental distinctions its tasks can actually resolve. |
+| Symmetry, choice and intentional production | [Selection and agency](explanatory-symmetry-742.md#complete-selection-input-agenda-and-agency-2026-11-14) locates agenda order in the complete input and separates deterministic selection, random distributions and motivated exercise. | Compare content that actually governs production with post-hoc rationalization; then assess any divine application without importing temporal learning or deliberation. |
+| Common causal and normative ground | This section distinguishes identity of actual-root candidates from common causal origin of distinct local goods. | Either map the normative candidate into the same actual-root relation or defend the causal/constitutive/normative composition on the inquiry and impairment cases. |
+
+The proposed connections form two useful lines. One runs from organization
+through functional content to the actual use of reasons in belief and action.
+The other runs from local perfections toward their common causal source. Their
+shared question concerns **a bearer's possession of a capacity, its actual
+exercise, and the standard by which each is assessed**. Organization supplies
+the capacity; content identifies what is considered; basing or practical
+adoption supplies its operative role. The goodness inquiry distinguishes the
+perfection of possessing a capacity from a successful exercise, each within its
+stated scope. These contributions can support one another without being
+collapsed into one definition or a completed theorem.
+
+The first line presently offers the more concrete discrimination: matched
+outputs can be separated by their active processes, and continued survival by
+retained capacity under challenge. The second makes the wider metaphysical
+connection explicit, with existing root and perfection-transfer results ready
+for reuse once their application premises are supported. The outstanding
+authority question is preserved as a real investigation, not erased by a
+change of vocabulary.
+
+### Review and verification of this checkpoint
+
+Independent semantic review accepted all five scoped findings and this synthesis
+after one targeted repair pass. The repairs distinguish measured biological
+performance from reversible regulation of a whole capacity, and possession of
+a capacity from its successful exercise. No substantive objection remained
+within the reviewed scope; that judgment does not certify a theorem or establish
+a premise.
+
+The coordinator repeated the finite basing, organism and content calculations.
+Corpus and offline source-evidence validation passed; the attribution check
+found no new or changed stating claims. Import and documentation generators
+produced no changes, and relative file links and attempt references resolved.
+The computed frontier comparison with `561ba7d5` reported no change: 490 open
+premises reaching the root and 489 verified support alternatives on each side.
+No new Lean, Comparator or NanoDa certification is claimed; no Lean or formal
+proposition was changed in this checkpoint.
