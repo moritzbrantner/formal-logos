@@ -412,3 +412,207 @@ and self-evidence uses and edited-field vocabulary gaps remain to reconcile.
 The review found no substantive objection to the preserved conditional inferences.
 Signification-to-PNC and the feature-exact explicability extension remain concrete
 research directions; this checkpoint does not exhaust either investigation.
+## Property and presupposition roles (#1659)
+
+This continuation supersedes the two bare-word lexical mappings proposed in
+`47fadc4cb4922b1a73d517c0b0713193f41472df`. Independent challenge correctly
+identified that neither bare explicability nor every use of presupposes denotes
+the original first-principle family. The coordinator repaired the other narrow
+lemmas on its integration branch; this delta does not repeat those edits.
+The two owned lexicon UUIDs are retained but now denote only **admitted
+explicability** (`947cc270-304d-4710-b15e-b1db01ed52eb`) and **ontic presupposition**
+(`f3ce5d1b-648c-49d2-a732-c5403f2725b0`). Each points to one definition, with no
+forms and no disambiguation links that would admit neighboring meanings.
+
+### The resolved distinction
+
+| Role | Definition and exact interpretation | Evidence and limit |
+| --- | --- | --- |
+| Admitted explicability property | `6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d`; reuses `PSRStrength.Explained A w f := ∃ r, A.explains w r f`. | This is a property of a target relative to an interpretation, not an argument or a particular reason. Existing definition `179d4557-bda1-59c4-938a-b91e9974a27f` already links the same predicate under sufficient-reason vocabulary. No duplicate Lean alias or new explanation relation is introduced. The arena separately supplies factivity; the property alone asserts neither the target's nor the reason's truth. |
+| Local deductive rejection | `a514aecb-59d2-4673-9d47-81ffcc4d6f8b`; `FirstPrincipleRoles.LocalInexplicabilityRejection A w f` has fields `demand : A.holds w f → Explained A w f` and `unexplained : ¬ Explained A w f`. | Unlike the property, this is a two-premise argument pattern. It yields denial of this one target, not universal PSR. The sourced definition `0f37c0a4-9503-5ae5-97bf-faea75cfe7c9` motivates the question but is not replaced or newly bound by the pattern. Its analogical/dialectical extension is not represented by these two fields. |
+| Ontic requirement | `4f7df841-fc53-458e-a4b6-31665aa9e91a`; `OnticRequirements.requires w d p` is a primitive relation from dependent condition to prerequisite condition. | `simple-priority.json` uses presupposes for a requirement of actuality, not premise membership. Its exact statement `a4d3261a-3239-5b44-9953-64ab1b0ed762` is `∀ x r, InPotency x r → ∃ y, InAct y r ∧ PriorSimply y x`. A condition for the existential prerequisite preserves this quantifier; it does not license one fixed being required in all situations. `Requires` does not define or replace `PriorSimply`. |
+| Inferential dependency | `3492ef00-6d09-4008-8ab2-25e2aa03e725`; reuses `RegressDomains.Justification.inferential j p c := ∃ r, j.conclusion r = c ∧ j.premise r p`. | The note in `q44-caused-necessity-dependence.json` says the selected universal-cause argument presupposes earlier subsistent-being/unity results. This is a report of an argument's dependencies, not of what keeps its conclusion's object actual. The existing `GeneratedWarrant` definition `38955650-58d2-5bfc-a6ec-6255f5193090` already distinguishes rule premises from warrant. Restrict `j` to the selected presentation. One edge records immediate premise membership; indirect use needs a chain, not a fabricated direct edge. No q44 proof graph or historical attribution is newly certified. |
+| Performance occurrence | Reuse `322dfd2b-04c6-5113-9ab6-6327e617d0c0` and `Alternatives.Retorsion.PresuppositionLink`: `∀ a p, Performs a p → Occurs (token a p)`. | The existing Eleatic instance `38d41941-fe1c-521b-b594-7cbaee357f47` retains its open interpretation/application link. The generic formula does not say that a performance is a proof premise, nor define a causal or ontic requirement relation. |
+
+The new disambiguations are `48c92c51-7c3c-468d-8fca-71348ef76146`
+(`ADMITTED_EXPLICABILITY_ROLE_1` property, `_2` rejection pattern) and
+`f52e2acc-6250-44bd-abd7-18ea3f574132` (`PRESUPPOSITION_ROLE_1` ontic,
+`_2` inferential, `_3` occurrence). They distinguish roles, not mutually exclusive
+worldviews or exhaustive partitions of linguistic usage. The occurrence definition
+and all earlier sense identities remain intact. Adding its identity under a new
+role index does not create a second occurrence predicate. Narrow lexicon entries
+do not link either entire disambiguation.
+
+### Meaning, examples, exclusions and bridges
+
+**Ontic requirement remains an honest primitive.** The new module supplies
+`obtains : World → Condition → Prop` and
+`requires : World → Condition → Condition → Prop`, rather than pretending that a
+name fixes their applicability. `RequirementsRespectedAt R w` separately states
+`∀ d p, R.requires w d p → R.obtains w d → R.obtains w p`.
+This is a constraint on an interpretation; it is not a definitional equation
+identifying requirement with material implication. Two profiles can agree on
+which conditions obtain, both satisfy that constraint, and disagree on every
+requirement edge. Thus the interface does not conceal the semantic work.
+No asymmetry, transitivity, strictness, temporal ordering, causal production,
+well-foundedness or modal necessity is imposed. An all-world or counterpossible
+reading would need its own semantics and explicit bridge, not merely repeated
+local implication.
+
+The simple-priority clause above and presupposed material in
+`total-cause-of-being.json` provide intended actuality examples. Their corpus
+interpretations remain open; they are not new empirical verifications. An earlier
+proof lemma is excluded because its use does not supply the actuality of an
+object. Conversely a generator's presupposed material need not be a claim in a
+proof. The corpus's reflexive-requirement/strict-dependence investigation
+`a4d430a0-9711-4d04-b4a5-be385f92e757` independently warns against imposing a strict
+order merely from the word requirement. Existing argument
+`2adcc5ff-3c4e-4662-8827-ee32dc48bd4d` reaches the Catholicism root through an explicit
+priority-to-actual-dependence bridge, irreflexivity and distinct-relata grounding
+bridge. Its context was inspected; the new vocabulary supplies none of those
+premises. It serves that root interface by making the possible conflation precise,
+not by adding a support edge.
+
+**A dependency is not an entailment or entitlement.** An edge in the supplied
+rule presentation identifies a premise of one rule. The whole premise bundle,
+rule validity and any claim of epistemic warrant are separate. It neither makes
+that premise necessary to every proof nor says it is itself ontically sustained
+by the conclusion. The q44 note is an existing prose report; its neighboring
+statement `8c3870b7-0d16-5714-8f99-6ea8ef9fb229` has no consuming or concluding
+argument in its dossier. Encoding the article's earlier-result chain requires
+identifying those rules and intermediates, not translating the verb directly
+into a performance predicate.
+
+**An explanatory property is not an explanatory demand.** In the selected arena,
+existence of an admitted explaining fact is distinct from the norm that an
+obtaining fact must have one. The local rejection structure keeps both the demand
+and its alleged failure explicit. Absence of a known explanation is weaker than
+absence of any admitted explanation, and no epistemic-to-ontic bridge is added.
+Possible explainability at another world, discoverability by an agent and genuine
+explanatory adequacy are not equated with the local admitted property. The
+existing `della-rocca-local-explicability-scope.json` and
+`della-rocca-psr-dialectical-warrant.json` preserve the local/global boundary; they
+are not reinterpreted as this analyst structure. No new source was read or attributed.
+
+### Coverage and rejected alternatives
+
+The corpus search found uses outside the proposed three roles: Sellars's
+noninferential observation concerns epistemic standing; moral-objectivity.json
+speaks of the commitments of theories; definition/exercise notes use presupposed
+for an interpretation already assumed. Those are not automatically the selected
+argument's immediate premise edge, an ontic requirement, or an occurrence link.
+Determinate signification and linguistic presupposition also remain outside the
+three-role comparison. This is positive evidence against restoring global
+presupposes/presupposed/presupposing forms on the narrow lexicon entry, not an
+invented hypothetical objection. Bare explicability likewise cannot be mapped to
+an argument simply because the compound explicability argument occurs in the
+corpus. The repaired entries leave those bare words unclaimed rather than adding
+an ordinary fallback.
+
+Rejected alternatives: identifying ontic requirement with material implication
+loses its directed requirement content; defining it as strict priority prejudges
+the existing reflexive/strict dispute; making argument dependency a path to truth
+silently adds soundness and warrant; equating the local rejection pattern with
+Della Rocca's complete case omits the argument for extending the demand. These
+are concrete representation errors, not objections to the underlying metaphysical
+premises. No substantive objection to the scoped distinctions was identified.
+The defeasible explanatory-virtue rival discussed above still addresses universal
+coverage, not the validity of the two-premise local inference.
+
+### Validation and claim/type sweep
+
+`python3 scripts/worker_env.py -- lake build TruthCore.Logic.FirstPrincipleRoles`
+passes under the shared heavy-job lock after coordinator preparation. Direct
+`scripts/DefinitionStatus.lean` inspection with root module
+`TruthCore.Logic.FirstPrincipleRoles` finds `OnticRequirements.requires` as a
+projection, `RequirementsRespectedAt` as a definition, the local rejection as a
+structure, and existing `PSRStrength.Explained` as an existential definition.
+A second inspection rooted at `TruthCore.Logic.RegressDomains` finds
+`Justification.inferential` as an existential definition. This matches the new
+primitive `formal_gap`; no projection is advertised as a completed relation
+definition. Shared root imports and the generated status cache remain
+coordinator-owned, so offline status reports three new entries as not computed
+until integration refreshes them.
+
+The following focused controls were checked with `lake env lean` against those
+built inputs. They are reproducible semantic diagnostics, not registered
+Comparator/NanoDa results, metaphysical counterexamples or root discharges.
+An initial `by decide` version could not synthesize decidability through the
+opaque-to-typeclass-search definitions; the explicit proofs below repair the
+check without changing the definitions.
+
+```lean
+import TruthCore.Logic.FirstPrincipleRoles
+import TruthCore.Logic.RegressDomains
+
+open TruthCore.Logic.FirstPrincipleRoles
+open TruthCore.Explanation.PSRStrength
+open TruthCore.Logic.RegressDomains
+
+example {W B F : Type} {A : Arena W B F} {w : W} {f : F}
+    (h : LocalInexplicabilityRejection A w f) : ¬ A.holds w f :=
+  fun hf => h.unexplained (h.demand hf)
+
+example {W B F : Type} {A : Arena W B F} {w : W} {f : F}
+    (he : Explained A w f) : ¬ LocalInexplicabilityRejection A w f :=
+  fun h => h.unexplained he
+
+example {W B F : Type} {A : Arena W B F} {w : W} {f : F}
+    (ht : A.holds w f) (he : ¬ Explained A w f) :
+    ¬ (A.holds w f → Explained A w f) := fun hd => he (hd ht)
+
+def failedRequirement : OnticRequirements Unit Bool :=
+  ⟨fun _ c => c = true, fun _ d p => d = true ∧ p = false⟩
+example : ¬ RequirementsRespectedAt failedRequirement () := by
+  intro h
+  have bad : false = true := h true false ⟨rfl, rfl⟩ rfl
+  cases bad
+
+def allActual (edge : Bool) : OnticRequirements Unit Bool :=
+  ⟨fun _ _ => True, fun _ _ _ => edge = true⟩
+example : RequirementsRespectedAt (allActual true) () := fun _ _ _ _ => True.intro
+example : RequirementsRespectedAt (allActual false) () := fun _ _ _ _ => True.intro
+example : (allActual true).requires () true false ∧
+    ¬ (allActual false).requires () true false := by
+  constructor
+  · rfl
+  · intro h
+    cases h
+
+def mereRule : Justification Bool where
+  Rule := Unit
+  premise := fun _ p => p = true
+  conclusion := fun _ => false
+  noninferential := fun _ => False
+  justified := fun _ => False
+example : mereRule.inferential true false ∧ ¬ mereRule.justified false :=
+  ⟨⟨(), rfl, rfl⟩, fun h => h⟩
+```
+
+The sweep retains the full local demand, the negated existential explanation
+condition, every rule's premise set, the performance quantifiers and the
+ontic relation's situation/condition parameters. No theorem or result is registered,
+no existing statement or argument is changed, and no attribution or floor marking
+is added. The controls show what the stipulated structures express; they do not
+vindicate the supplied relations. The complete proposed outcome is these four
+scoped definitions, two role distinctions, two corrected compound entries and one
+small vocabulary module. The bounded definition question is resolved at this
+explicit level. Applying the records to existing consumers needs coordinator-allocated
+consumer edits and, where relevant, bridges: the exact q44 rule chain; the
+condition interpretation for priority; and an explanation-adequacy or
+source-interpretation bridge for the rejection pattern. Those are substantive
+next tests, not a missing-build excuse. Independent challenge and final shared
+integration checks remain with the coordinator.
+
+Final offline evidence for this delta: `truth check`, attribution check and the
+sense/definition/lexicon ratchets against `47fadc4cb` pass. The attribution check
+finds no new or changed stating claim. Lexicon warnings remain visible (49
+new/changed-field problems in this checkout, including the new substantive prose);
+no allowlist was enlarged and no missing technical meaning was replaced by an
+ordinary gloss. The computed `frontier-diff --base 47fadc4cb` reports no change:
+490 root-reaching open premises (349 bare, 90 supported, 51 stated), 489 verified
+support alternatives, zero added. `git diff --check` passes. These are worker
+checks, not final integration CI. The prepared Lean toolchain is 4.35.0; shared
+convention sourceRevision remains `15f348b072188255da837578eaafc8a98f12fdf0`.
+The CLI source checkout and binary identity are recorded in the preceding audit;
+no new CLI was built in this worker checkout.

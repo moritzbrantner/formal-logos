@@ -1,0 +1,9 @@
+{
+  "id": "a514aecb-59d2-4673-9d47-81ffcc4d6f8b",
+  "label": "ADMITTED_EXPLICABILITY_ROLE_2: A local demand and no admitted explanation",
+  "term": "local inexplicability rejection",
+  "basis": "stipulative",
+  "definition": "A local deductive rejection pattern consists of two premises about one fact f at one world w: if f obtains, an explanation is admitted for f; and no explanation is admitted for f. These premises license rejection of f. LocalInexplicabilityRejection bundles precisely the local demand and the denial of an admitted explanation. The demand is not universal PSR, and failure to find or know an explanation does not supply the second premise.",
+  "note": "Analyst formulation, attribution deferred. This records a deductive fragment suggested by the existing explicability-argument definition 0f37c0a4-9503-5ae5-97bf-faea75cfe7c9, not a complete formal interpretation of that sourced definition or of its dialectical extension. No theorem/result or source claim is registered here. The two premises may both hold when f does not obtain; a model with f obtaining and no explanation fails the first premise, while an explained f fails the second. Thus the pattern can fail. Warrant for either premise, relation adequacy and extension to other facts remain open. See docs/notes/psr-self-application-756.md#property-and-presupposition-roles-1659.",
+  "lean_declaration": "TruthCore.Logic.FirstPrincipleRoles.LocalInexplicabilityRejection"
+}

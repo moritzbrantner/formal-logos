@@ -1,0 +1,9 @@
+{
+  "id": "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d",
+  "label": "ADMITTED_EXPLICABILITY_ROLE_1: Some explanation is admitted for this fact",
+  "term": "admitted explicability",
+  "basis": "stipulative",
+  "definition": "Relative to a supplied explanation arena, a fact has admitted explicability at a world exactly when some fact is admitted there as explaining it: Explained A w f is the existential proposition that there is r with A.explains w r f. This is a property of an explanandum, not an argument, a reason object, or a rule requiring every obtaining fact to have that property. It does not say anyone knows the reason. In the bare arena neither the truth of the explanandum nor of the reason is included; those follow only under separately supplied factivity conditions.",
+  "note": "The same existing predicate is linked by the bare sufficient-reason definition 179d4557-bda1-59c4-938a-b91e9974a27f; this record names its property role without adding an alias or a new explanation relation. Admitted explicability is deliberately narrower than an unqualified claim of genuine explicability. Ability to receive an explanation at another possible world, epistemic discoverability, explanatory adequacy and the source interpretation of inexplicable are not identified with this predicate. The local explicability scope statement 91668b85-0bc9-5174-bc62-4fc812f80256 motivates separating property from argument but is not newly bound or proved. See docs/notes/psr-self-application-756.md#property-and-presupposition-roles-1659.",
+  "lean_declaration": "TruthCore.Explanation.PSRStrength.Explained"
+}
