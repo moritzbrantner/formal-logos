@@ -420,7 +420,7 @@ fn json_paths(root: &Path, directory: &Path) -> Res<Vec<PathBuf>> {
     };
     let mut paths = Vec::new();
     for entry in entries {
-        let path = entry.map_err(&listing_error)?.path();
+        let path = entry.map_err(listing_error)?.path();
         // Do not prefilter with is_file(): it hides metadata errors and dangling
         // symlinks. read_object reports unreadable JSON entries at their path.
         if path.extension().is_some_and(|ext| ext == "json") {
