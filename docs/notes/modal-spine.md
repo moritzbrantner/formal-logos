@@ -1,5 +1,27 @@
 # Modal spine to "God exists"
 
+## Current reviewed assessment (2026-11-17)
+
+The composition reconstruction is the preferable articulated support option at this actual simple source because of semantic fit and explicit explanatory work. Real receptivity/composition and a distinct concurrent esse-giver remain application burdens; immanent constitution remains a substantive rival. No premise is established or actual pure-act counterexample supplied.
+
+Reviewed scope: Connected pure-actuality comparison, full composition/esse-priority bundles and same-source consumers. Worker `e86ad1c`; independent reviewer `640d8891`
+reported no findings on delivered head `6d0fe149f5dafa4f962a5bfd7cb9410ab8c4016c`.
+[PR #1740](https://github.com/moritzbrantner/formal-logos/pull/1740) is merged;
+final CI passed. Review accepts the qualified synthesis only, with no premise
+establishment or new formal validity claim. The review detail and integration
+disposition remain in that PR body and existing #143.
+
+Next test: Identify passive receptivity on the SAME source, justify whether it is a real constituent, explain its unity, and establish or exclude a numerically distinct current concrete esse-giver in the selected relation.
+
+This current disposition supersedes the **pending review/publication** wording
+for group #1728 below. Those passages are preserved as historical worker
+handoffs, not outstanding integration work. It does not supersede arbitrary
+earlier judgments, unresolved philosophical questions, or deferred owner scopes.
+The canonical attempt's `current_assessment` carries this same bounded scope.
+
+<!-- Historical research and worker handoff evidence follows. -->
+
+
 Owner direction, 2026-11-09: until it closes, the working root is **God exists**
 (`STMT-GOD-EXISTS`, stage 1), not `STMT-CATHOLICISM-TRUE`. The first spine is a
 modal contingency argument. Stages 3 to 6 of the Catholic case are deferred, and
@@ -1417,6 +1439,8 @@ a premise: FirstMoverPureAct and GodIsImmutable import its proof in Lean;
 does not invent an intermediate edge or claim that those consumer interfaces
 have been rewritten.
 
+**Historical worker handoff; publication status superseded by the [current reviewed disposition](#current-reviewed-assessment-2026-11-17).**
+
 Claim/type self-sweep: every local bundle above matches its existing theorem;
 the full root retains all 22 premises and its naming/sufficiency bridge. No
 firstness is imposed on the local simplicity proof. Witness changes upstream,
@@ -1432,6 +1456,8 @@ comparison is prepared, with these application boundaries retained. It does
 not mean that God exists unconditionally or that every premise is established.
 
 #### Offline validation and computed comparison for #1728
+
+**Historical worker handoff; publication status superseded by the [current reviewed disposition](#current-reviewed-assessment-2026-11-17).**
 
 Convention sourceRevision: `15f348b072188255da837578eaafc8a98f12fdf0`.
 Prepared worker setup reused through `worker_env.py` command mode; no preflight,

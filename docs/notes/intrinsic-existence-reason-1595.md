@@ -1,5 +1,27 @@
 # An intrinsic reason for the necessary ground: positive case and proof boundary
 
+## Current reviewed assessment (2026-11-17)
+
+The qualified same-source synthesis is accepted as an informative boundary. Candidate classification, fixed-root identity, selected-output stability and history selection answer different questions; none supplies adequate intrinsic explanation or the missing same-bearer God-root edge. Personal superiority, complete explanatory parity and an exhaustive fork are not established.
+
+Reviewed scope: Same-source E(n)/N(n)/act/complete-order synthesis; candidate classification, actual adequacy and onward God connection distinguished. Worker `b0080a2`; independent reviewer `60f54727`
+reported no findings on delivered head `f9bdbb32f6239430213eb42ec2f42768e5154c0d`.
+[PR #1742](https://github.com/moritzbrantner/formal-logos/pull/1742) is merged;
+final CI passed. Review accepts the qualified synthesis only, with no premise
+establishment or new formal validity claim. The review detail and integration
+disposition remain in that PR body and existing #143.
+
+Next test: Consume a concrete #1621/#462/#750 owner result for independently warranted nature-content, complete exercise/specification or adequacy at fixed n/E(n)/N(n)/a/C/Omega. Candidate certification or another fixed-law/selection lemma does not resolve this adequacy gap.
+
+This current disposition supersedes the **pending review/publication** wording
+for group #1730 below. Those passages are preserved as historical worker
+handoffs, not outstanding integration work. It does not supersede arbitrary
+earlier judgments, unresolved philosophical questions, or deferred owner scopes.
+The canonical attempt's `current_assessment` carries this same bounded scope.
+
+<!-- Historical research and worker handoff evidence follows. -->
+
+
 This is a bounded source-and-warrant investigation of
 `STMT-NECESSARY-GROUND-HAS-INTRINSIC-REASON`
 (`a7bbd2fd-242c-5097-a9a3-581d25835890`), under #319's
@@ -319,6 +341,8 @@ foreign-bearer external control) and stale names were aligned with the Lean.
 
 ## Same-source existence and complete-order integration (#1730, group 5)
 
+**Historical worker handoff; publication status superseded by the [current reviewed disposition](#current-reviewed-assessment-2026-11-17).**
+
 **Proposed outcome for coordinator semantic challenge.** Baseline
 `67da43761d01df2bbabc80632458aacddbd3ec23`; groups #1726–#1729 are
 already delivered. This integrates their preserved meanings, not their
@@ -585,6 +609,8 @@ theorem inputs and the two failed dictionary transports above are the self-sweep
 findings. Prior source readings are reused; issue additions are recorded owner
 evidence, not newly authenticated primary claims. Shared conventions resolved
 to unchanged sourceRevision `15f348b072188255da837578eaafc8a98f12fdf0`.
+
+**Historical worker handoff; publication status superseded by the [current reviewed disposition](#current-reviewed-assessment-2026-11-17).**
 
 Acceptance disposition: **ready for independent coordinator challenge**, not
 accepted/reviewed support. No subagent was started, per this assignment.
