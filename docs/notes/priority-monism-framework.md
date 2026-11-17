@@ -407,3 +407,248 @@ no change
 This records the source/application distinction without changing proof status
 or adding a root-reaching bridge. Shared generation, publication and integrated
 CI remain coordinator-owned.
+
+## One candidate intermediate edge: functional organ integration (§2.1)
+
+This continuation from `f58a4a373c19817bca8f50ae70ee84b9f2cf9e9e`
+selects **one argument**, Schaffer's use of organism/organ functional integration
+in his common-sense case. It does not reopen the settled latitude of the core
+monist definition or treat that latitude as evidence for missing edges.
+The candidate supplies a positive reason for a specific kind of intermediate
+priority, not an edge chosen to complete a model.
+
+### Discovery, exact witness and the argument's positive content
+
+`related 17a94d51-6827-5b2c-9883-81405a036f11`, `brief --question` and
+`novelty` searches for intermediate dependence, organisms and functional
+integration were inspected, together with direct corpus searches and the
+existing priority, life/unity and physical-ground notes. They recovered the
+existing framework/DS-2 boundaries and adjacent composition material, rather
+than an existing recorded Schaffer organ argument. This is a bounded reuse
+finding, not proof that no related philosophical work exists. No offline
+issue snapshot was available; the current #331 issue and comments were already
+read in the preceding accepted continuation. Exact previous dossier/context
+and unchanged DS proof evidence are reused.
+
+The same already pinned Schaffer PDF was consulted at §2.1. Printed pp.47–50
+(physical PDF pages 17–20) are now selected in existing-source passage
+`13cf3256-5d03-4013-9cbd-72cf8e5fc4c4`, in
+`corpus/passages/schaffer-functional-organ-priority.json`.
+The raw PDF SHA256 remains
+`098951909af55f7f2fbd2f2a33c9e79d14410b061363a771e2076eba8025e944`;
+the selected normalized text SHA256 is
+`500776df51131786545aef82f7c7503fa95849a9cdba6d1fbd256d91e9604c2a`.
+The ordinary materialization command passed and the complete selected range
+was read. The preceding p.46 opening was consulted from those same verified
+raw bytes for context. The p.50 start of §2.2 was seen as context; its quantum
+argument is not selected or assessed. No source host, extractor or source
+machinery is introduced; copyright text and PDF bytes are not committed.
+
+On **p.47 and note 24**, Schaffer contrasts heaps with integrated wholes and
+cites an organism with its organs as a whole-first example. The stated positive
+rationale is that organs are defined through their functional integration into
+the organism. His note reports Aristotle's examples and distinguishes
+explanation in formula and the whole's power of existing apart from its parts.
+This is primary evidence for **Schaffer's use** of that example; Aristotle's
+underlying text is not newly read or independently attributed here.
+
+The local reasoning can be reconstructed as follows, retaining its evidential
+qualification:
+
+1. The selected organ is understood as a functioning, integrated part of an
+   organism, not merely as an arbitrarily named quantity of matter.
+2. Its definition and functional organization refer to the containing organism.
+3. This provides a common-sense reason to regard that integrated whole as prior
+   to that organ, unlike a heap whose grains are treated as prior.
+
+Schaffer incorporates this sort of case into his integrated-whole premise on
+p.48. On **p.50**, he explicitly assigns the common-sense case little weight,
+at most the status of a default, and distinguishes it from empirical inquiry.
+The source therefore supplies a **defeasible positive rationale** for an
+intermediate edge; it does not establish that edge as an actual metaphysical
+fact or offer a new biological experiment. The aggregate, circle and percept
+examples in the surrounding text are context, not additional candidate
+investigations in this slice.
+
+Source statement `81e14e0c-4d57-4aec-be3c-a8aaf20748c4` and claim
+`c0f48bdc-d5ac-4e89-8116-cfb38afe8275` record precisely that qualified
+argument and its weak assessment. They add no Lean declaration or primitive
+organ/function flag. Existing source/definition/sense identities are retained.
+
+### Which edge it proposes, and which inference remains open
+
+Fix **one and the same** actual-material-object domain C, dependence relation
+D and cosmos u of the framework. For an actual organism b that is a proper
+part of u and a selected actual organ o that is a proper part of b, the
+candidate is **`D o b`**. In upstream graph notation this is **`edge b o`**.
+The source example gives a reason to consider that edge; it does not make the
+following application assumptions true by naming the nodes:
+
+- the functionally specified o and b must be objects in the very same actual
+  material domain, with `o < b < u` on its parthood relation;
+- functional integration/definition must bear on **D-priority of those objects**,
+  rather than only on a description, role, operation or explanation of a
+  property;
+- the numerical identity and essential-versus-accidental status of the selected
+  functional organ must be specified well enough to justify that transfer.
+
+The strongest affirmative reading treats the organ as essentially organized
+for its role: the containing living organization is constitutive of what this
+organ is, not just an external condition of an otherwise specified lump.
+That is a substantive rationale, and it deserves assessment on its merits.
+The exact open bridge is from this functional/constitutive individuation to
+**the source's entity-priority D on the selected actual objects**. The source's
+p.47 formulation and p.50 assessment do not independently settle that bridge.
+An interpretation merely concerned with definition or function would answer a
+different question; noting that distinction is not evidence that `D o b` is
+false. No independently substantiated counterexample to this organ case has
+been identified in this bounded reading.
+
+The direct/collective distinctions matter here:
+
+- **Direct versus mediated.** D is the framework's transitive dependence, not
+  an immediate-ground relation. `D o b` does not say there is no intermediate
+  relatum or that b is the nearest/full ground. A transitive D-edge to u is
+  likewise not evidence of an immediate causal act by u.
+- **Individual versus collective.** The organism is the selected whole object.
+  Its functional organization may involve many components, but the example
+  specifies no complete set of grounding facts. It does not distribute an
+  alleged collective explanation into one D-edge from each component, or make
+  the organism alone an independently sufficient producer of every organ.
+- **Priority versus productive power.** Functional integration and the cited
+  ability to exist apart are not an exercise of intrinsic productive power in
+  a specified respect. No efficient production, full cause, or adequate
+  explanation of the organ's existence is certified by this source reading.
+
+The passage neither analyzes D into partial/full fact grounding nor identifies
+it with existential covariance. Those stronger interpretations cannot be
+silently substituted to obtain a more powerful consequence.
+
+### Discriminating consequences in that same relation and domain
+
+The conditional test is informative even though the application bridge is open.
+Keep u, b, o in C and keep **the same D** throughout:
+
+| Inputs or commitment | Consequence | Scope limit |
+| --- | --- | --- |
+| Proposed intermediate `D o b` and the monist root clause `D b u`, with transitivity | `D o u`. | This root edge is already available for o under the monist clause. The new discriminating information is `D o b`, not a second argument that only reaches the cosmos. |
+| Proposed `D o b` and `b ≠ u` | The exact star `D x y ↔ y=u ∧ x≠u` fails at this pair. | This tests the exact star, not monism or every whole-first account. The edge is sourced as a candidate rationale, not invented for a finite model. |
+| Proposed `D o b`, with transitivity and irreflexivity (or the existing WF cycle control) | `D b o` cannot also hold; more generally a reverse finite D-path would create a prohibited same-relation cycle. | Observations about reciprocal functioning or production would require an additional bridge before counting as a reverse D-edge. No such bridge is assumed. |
+| Only the displayed u/b/o ancestry | It supplies no global-WF proof for D on all C. | A finite ancestry can coexist with unrelated non-WF structure; no new finite model is reported as a model of the whole theory. |
+| Attempt to extend this organ example to every strict superpart pair on the DS-2 carrier | The existing all-converse-inclusion/WF obstruction applies if that universal bridge is assumed. | Functional integration of one organ/organism is no justification for that universal rule. No dictionary identifying biological objects with regular-open regions is supplied. |
+
+These are elementary consequences of the exact source relation and the existing
+transitivity/irreflexivity and graph controls, not newly registered Lean results
+or a mechanically verified actual organ model. In particular a single proposed
+intermediate edge neither produces an infinite chain by itself nor proves that
+its extension to the complete actual domain is WF. The existing DS-2 proof
+inputs and source-framework evidence are unchanged and reused. The already
+recorded `GroundingWithoutUniqueCauseAllowsRegress` also keeps finite source
+paths distinct from all-edge accessibility; it is a general structural boundary,
+not a countermodel of this organ argument.
+
+The search therefore was **not empty**: it found a positively reasoned,
+source-located candidate that would distinguish the exact star from an account
+with derivative dependencies. Its support is explicitly defeasible, and there
+is no accepted actual-object application in this corpus slice. That is the
+precise remaining result, not a finding that there are no intermediate edges.
+
+### Root connection, assessment and recommended next node
+
+Priority monism remains a positive foundational-whole account, distinct from
+Markosian brute composition and the owner-supplied Raven ineliminability lead.
+This selected functional argument does not merge any of them. It retains the
+following case connections without inserting a missing premise:
+
+- **#310:** `D o b` does not show that b supplies actual original productive
+  power, or that its power is borrowed from u in the same respect.
+- **#319:** function-based priority of an organ does not establish a distinct
+  actual cause of esse for a composite whole. The direction and relation of
+  the composition-to-actual-cause bridge must be justified separately.
+- **#320:** neither the intermediate edge nor its root transitive consequence
+  supplies uniqueness beyond the selected material D-basis, or an all-being
+  individuation/necessary/simple-God conclusion.
+
+**Provisional assessment:** the selected argument improves the affirmative
+account by specifying why one might accept an intermediate dependency—functional
+constitution of an organ—rather than treating derivative order as arbitrary.
+It supports a defeasible research candidate, not an established entity-priority
+premise. Its exact-star discrimination is conditional; its material-object and
+power/being applications are open. The source's stated low evidential weight
+must be preserved, rather than inflated into a proof or treated as absence of
+any reason. No substantive defeated rival or actual-world WF result is claimed.
+
+For progress on the case, recommend the already live #319 composition-to-actual-
+cause interface rather than another arbitrary derivative graph completion.
+The exact target is `ca07cae9-6102-564e-a7fd-efb013744b3d`
+(`STMT-COMPOSITE-HAS-A-UNITING-CAUSE`), together with its existing
+`UnderivedNonComposite.UnitingCausesPresent` and
+`UnitingCausesAreActual` interfaces on the **same witness and cause relation**.
+The existing dossier and exact interface definitions were inspected for this
+recommendation; this slice does not begin that separate investigation or repeat
+its already recorded derivations/omission controls. It is more consequential
+than an uninstantiated star-versus-intermediate graph because it bears directly
+on the live underived-source-to-simplicity route. Its positive argument and the
+whole-first rival's response should be compared at that exact interface.
+
+Reopening this **organ** candidate instead has a precise requirement: a defended
+actual-object individuation/function-to-D bridge, with the relevant primary
+argument. Schaffer's note 24 cites Aristotle 1984b p.1634; reading that underlying
+argument could test what kind of priority is justified. No unverified Bekker
+locator or direct Aristotle attribution is supplied here. Mere reproduction of
+the three-node consequences would not answer that semantic question.
+
+### Source/claim self-sweep and validation of the one-candidate outcome
+
+The source statement/claim report **Schaffer's tentative argument and its
+assessment**, not `∀ organ, D organ organism` as an established proposition.
+The p.47 Aristotle reference is explicitly second-hand here. No immediate,
+full, collective-distributive, productive or actual-existence claim is added to
+it. The selected p.47 rationale and p.50 evidential qualification were both
+checked against the newly materialized text; surrounding arguments are context,
+not additional investigated candidates. The same-domain D-tests assume their
+named edge and transitivity/WF commitments explicitly; they are not source
+attributions or new certified actual models. No independently justified
+counterexample or defeated rival is asserted.
+
+Selected-passage materialization, offline `truth check`, offline
+`truth attribution-check --base f58a4a373c19817bca8f50ae70ee84b9f2cf9e9e`
+and whitespace checks passed. The first materialization attempt was rejected
+because its draft incipit exceeded the existing 80-character bound; only that
+metadata field was shortened, with no hash, extraction or quoted-source change.
+Corpus validation retains warning-only lexicon/backfill and shared-definition
+cache advisories. No Lean file, argument/result bundle, definition, existing raw-source pin,
+extractor or shared imports/status/allowlist file is modified. The new passage
+reuses the existing exact raw-PDF pin, selecting additional pages only. Previous
+DS build/binding/Comparator/NanoDa and unchanged source-framework evidence are
+reused. Fresh independent semantic challenge of this complete outcome remains
+coordinator-owned; no publication or final CI was performed by the worker.
+Live convention `sourceRevision` remains
+`15f348b072188255da837578eaafc8a98f12fdf0`.
+
+Changed paths for this continuation are exactly:
+
+```text
+corpus/attempts/priority-monism-framework.json
+corpus/claims/c0f48bdc-d5ac-4e89-8116-cfb38afe8275.json
+corpus/passages/schaffer-functional-organ-priority.json
+corpus/statements/81e14e0c-4d57-4aec-be3c-a8aaf20748c4.json
+docs/dependence-shapes.md
+docs/notes/priority-monism-framework.md
+```
+
+Intended root-premise effect: none. Exact computed frontier delta from
+`f58a4a373c19817bca8f50ae70ee84b9f2cf9e9e`:
+
+```text
+premise delta for Catholicism is true: the Catholic Church is a teaching authority founded by GOD_4, and every… [53964cbe]: f58a4a373c19817bca8f50ae70ee84b9f2cf9e9e -> working tree
+open premises reaching the root: 494 (353 bare, 90 supported, 51 stated) -> 494 (353 bare, 90 supported, 51 stated)
+expanded-route diagnostic (lowest cost): Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16) -> Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16)
+distinct verified support alternatives: 494 -> 494
+verified support alternatives added: 0
+no change
+```
+
+This is a completed examination of the one candidate, with a qualified positive
+source finding and a precise application gap. The actual D-edge and global
+model remain unestablished; no arbitrary completion is selected.

@@ -190,6 +190,15 @@ for the exact relation direction, the owner-prescribed Schaffer/Raven/power
 separation, #1096/#1097 scope and the remaining actual-power/being/uniqueness
 bridges. No new mathematical model or root premise is established by that reading.
 
+A subsequent [one-candidate test](notes/priority-monism-framework.md#one-candidate-intermediate-edge-functional-organ-integration-21)
+selects Schaffer §2.1's functional organ/organism rationale. If its proposed
+same-domain edge `D organ organism` is warranted, it distinguishes an exact
+star and composes transitively with dependence on the cosmos; it does not
+license all intermediate edges or establish global WF, immediate/full grounding
+or productive power. The source gives this common-sense case only weak/default
+weight. The remaining function-to-entity-priority application and the recommended
+#319 actual-uniting-cause interface are recorded there, without a new model.
+
 ## 3. Unity and counting subdivisions (#318, #329, #330, #328)
 
 [`Supertasks`](../TruthCore/Causality/Supertasks.lean) distinguishes unit-cost
