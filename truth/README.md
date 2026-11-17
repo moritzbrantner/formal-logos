@@ -61,6 +61,10 @@ evidence bindings, is `truth check` (below). Lean and the existing
 verifier retain proof authority. Neither Rust command writes a database or
 cache.
 
+The corpus directory must exist. Missing optional record collections are empty;
+unreadable collections, dangling collection links, and non-file JSON entries
+are errors rather than silently omitted records.
+
 ## Adding a command
 
 Each subcommand is one module under `truth/src/cli/` (`status.rs`,

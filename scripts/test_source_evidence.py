@@ -426,6 +426,63 @@ def web_passage(selector: dict, **extra) -> dict:
     return passage
 
 
+class ClaimBindingIdentityTest(unittest.TestCase):
+    def setUp(self) -> None:
+        directory = tempfile.TemporaryDirectory()
+        self.addCleanup(directory.cleanup)
+        root = Path(directory.name)
+        self.corpus = root / "corpus"
+        for name in ("sources", "passages", "claims"):
+            (self.corpus / name).mkdir(parents=True)
+        for name, value in (("ROOT", root), ("CORPUS", self.corpus), ("PASSAGES", self.corpus / "passages")):
+            patcher = mock.patch.object(se, name, value)
+            patcher.start()
+            self.addCleanup(patcher.stop)
+        self.write_record("sources", "source", {"id": "FIXTURE"})
+        for name, prefix, extra in (
+            ("translated", "ch. 13 ", {"translation": {"translator": "T", "year": 1920, "edition": "E"}}),
+            ("original", "ch. 14 ", {}),
+        ):
+            passage = web_passage(
+                {"from": {"anchor": "13"}},
+                id=name,
+                claim_locator_prefixes=[prefix],
+                **extra,
+            )
+            self.write_record("passages", name, {"snapshot": {}, "passages": [passage]})
+
+    def write_record(self, kind: str, name: str, record: dict) -> None:
+        (self.corpus / kind / f"{name}.json").write_text(json.dumps(record), encoding="utf-8")
+
+    def test_distinct_claims_keep_their_own_translation_binding(self) -> None:
+        translated = {"id": "A", "source_id": "FIXTURE", "locator": "ch. 13 text"}
+        self.write_record("claims", "a", translated)
+        self.write_record("claims", "b", {"id": "B", "source_id": "FIXTURE", "locator": "ch. 14 text"})
+        with self.assertRaisesRegex(se.SourceEvidenceError, "needs basis"):
+            se.validate_bindings()
+        self.write_record("claims", "a", dict(translated, basis="translation"))
+        self.assertEqual(se.validate_bindings(), (2, 2))
+
+    def test_duplicate_claim_id_cannot_replace_translation_binding(self) -> None:
+        # Without unique IDs, the original-language binding overwrites the
+        # translated one and both claims incorrectly pass without a basis.
+        for name, chapter in (("a", 13), ("b", 14)):
+            self.write_record("claims", name, {
+                "id": "DUPLICATE", "source_id": "FIXTURE", "locator": f"ch. {chapter} text",
+            })
+        with self.assertRaisesRegex(se.SourceEvidenceError, "duplicate claim id DUPLICATE"):
+            se.validate_bindings()
+
+    def test_claim_id_must_be_a_string(self) -> None:
+        for record_id in (1, ["A"], {"id": "A"}):
+            with self.subTest(record_id=record_id):
+                self.write_record("claims", "a", {
+                    "id": record_id, "source_id": "FIXTURE", "locator": "ch. 14 text",
+                })
+                with self.assertRaisesRegex(se.SourceEvidenceError, "id must be a string"):
+                    se.validate_bindings()
+
+
 class FakeWeb:
     """Serves fixed bytes per URL and checks hashes like fetch_web_bytes."""
 

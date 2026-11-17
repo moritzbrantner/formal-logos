@@ -644,7 +644,7 @@ def validate_claim_basis(
 def validate_bindings() -> tuple[int, int]:
     sources = index_records(load_json_dir("sources"), "source")
     passages = passage_index()
-    claims = load_json_dir("claims")
+    claims = list(index_records(load_json_dir("claims"), "claim").values())
 
     seen_prefixes: dict[tuple[str, str], str] = {}
     for path, passage in passages.values():

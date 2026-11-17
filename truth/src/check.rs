@@ -383,6 +383,11 @@ fn relative(root: &Path, path: &Path) -> String {
 
 fn read_object(root: &Path, path: &Path) -> Res<Obj> {
     let rel = relative(root, path);
+    let metadata =
+        fs::metadata(path).map_err(|error| format!("{rel}: cannot read JSON: {error}"))?;
+    if !metadata.is_file() {
+        return Err(format!("{rel}: cannot read JSON: expected a regular file"));
+    }
     let text =
         fs::read_to_string(path).map_err(|error| format!("{rel}: cannot read JSON: {error}"))?;
     let value: Value =
@@ -393,20 +398,42 @@ fn read_object(root: &Path, path: &Path) -> Res<Obj> {
     }
 }
 
-fn json_paths(directory: &Path) -> Vec<PathBuf> {
-    let mut paths: Vec<PathBuf> = fs::read_dir(directory)
-        .into_iter()
-        .flatten()
-        .filter_map(|entry| entry.ok().map(|entry| entry.path()))
-        .filter(|path| path.extension().is_some_and(|ext| ext == "json") && path.is_file())
-        .collect();
+fn json_paths(root: &Path, directory: &Path) -> Res<Vec<PathBuf>> {
+    let listing_error = |error| {
+        format!(
+            "{}: cannot list JSON records: {error}",
+            relative(root, directory)
+        )
+    };
+    let entries = match fs::read_dir(directory) {
+        Ok(entries) => entries,
+        // Optional collections may be absent, but other I/O errors must not
+        // silently turn an unreadable collection into an empty one.
+        Err(error) if error.kind() == std::io::ErrorKind::NotFound => {
+            return match fs::symlink_metadata(directory) {
+                Err(missing) if missing.kind() == std::io::ErrorKind::NotFound => Ok(Vec::new()),
+                Err(metadata_error) => Err(listing_error(metadata_error)),
+                Ok(_) => Err(listing_error(error)),
+            };
+        }
+        Err(error) => return Err(listing_error(error)),
+    };
+    let mut paths = Vec::new();
+    for entry in entries {
+        let path = entry.map_err(&listing_error)?.path();
+        // Do not prefilter with is_file(): it hides metadata errors and dangling
+        // symlinks. read_object reports unreadable JSON entries at their path.
+        if path.extension().is_some_and(|ext| ext == "json") {
+            paths.push(path);
+        }
+    }
     paths.sort();
-    paths
+    Ok(paths)
 }
 
 /// Python `load_dir`: every `corpus/<name>/*.json` object, in path order.
 fn load_dir(root: &Path, name: &str) -> Res<Vec<Record>> {
-    json_paths(&root.join("corpus").join(name))
+    json_paths(root, &root.join("corpus").join(name))?
         .into_iter()
         .map(|path| {
             Ok(Record {
@@ -1944,7 +1971,7 @@ fn prefixes(passage: &Obj) -> Vec<&str> {
 
 fn load_passages(root: &Path) -> Res<Vec<Record>> {
     let mut passages = Vec::new();
-    for path in json_paths(&root.join("corpus").join("passages")) {
+    for path in json_paths(root, &root.join("corpus").join("passages"))? {
         let manifest = read_object(root, &path)?;
         let rel = relative(root, &path);
         let snapshot = manifest.get("snapshot").and_then(Value::as_object);
@@ -2564,7 +2591,7 @@ fn validate(
     }
     let mut used_definitions: HashSet<&str> = HashSet::new();
 
-    for path in json_paths(&root.join("corpus").join("sources")) {
+    for path in json_paths(root, &root.join("corpus").join("sources"))? {
         let record = read_object(root, &path)?;
         if let Some(Value::Array(items)) = record.get("edition_urns") {
             let values: Vec<&str> = items.iter().filter_map(Value::as_str).collect();
@@ -3802,6 +3829,8 @@ pub fn registered_models(root: &Path) -> Result<(), String> {
 }
 
 pub fn check(root: &Path) -> Result<Outcome, String> {
+    fs::read_dir(root.join("corpus"))
+        .map_err(|error| format!("corpus: cannot list JSON records: {error}"))?;
     let files = lean_files(root);
     let (loaded, counts) = validate(root, &files)?;
     let warnings = check_warnings(root, &loaded, &files);
@@ -4139,6 +4168,145 @@ fn sense_mixing_warnings(loaded: &Loaded) -> Vec<String> {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    struct TestDirectory(PathBuf);
+
+    impl TestDirectory {
+        fn new() -> Self {
+            use std::sync::atomic::{AtomicU32, Ordering};
+            static NEXT: AtomicU32 = AtomicU32::new(0);
+            let path = std::env::temp_dir().join(format!(
+                "truth-check-{}-{}",
+                std::process::id(),
+                NEXT.fetch_add(1, Ordering::Relaxed)
+            ));
+            fs::create_dir(&path).unwrap();
+            Self(path)
+        }
+    }
+
+    impl Drop for TestDirectory {
+        fn drop(&mut self) {
+            fs::remove_dir_all(&self.0).expect("remove test directory");
+        }
+    }
+
+    #[test]
+    fn corpus_loading_keeps_optional_collections_and_path_order() {
+        let root = TestDirectory::new();
+        fs::create_dir(root.0.join("corpus")).unwrap();
+        assert!(check(&root.0).is_ok());
+        assert!(load_dir(&root.0, "sources").unwrap().is_empty());
+        fs::create_dir_all(root.0.join("corpus/sources")).unwrap();
+        fs::write(root.0.join("corpus/sources/z.json"), r#"{"id":"z"}"#).unwrap();
+        fs::write(root.0.join("corpus/sources/a.json"), r#"{"id":"a"}"#).unwrap();
+        fs::write(root.0.join("corpus/sources/README.md"), "not JSON").unwrap();
+        let records = load_dir(&root.0, "sources").unwrap();
+        let ids: Vec<&str> = records
+            .iter()
+            .map(|record| text(&record.fields, "id"))
+            .collect();
+        assert_eq!(ids, ["a", "z"]);
+    }
+
+    #[test]
+    fn corpus_loading_rejects_a_missing_corpus_root() {
+        let root = TestDirectory::new();
+        let error = check(&root.0).err().expect("missing corpus must fail");
+        assert!(
+            error.starts_with("corpus: cannot list JSON records:"),
+            "{error}"
+        );
+    }
+
+    #[cfg(unix)]
+    #[test]
+    fn corpus_loading_keeps_valid_symlink_behavior() {
+        let root = TestDirectory::new();
+        fs::create_dir_all(root.0.join("corpus/records")).unwrap();
+        fs::write(root.0.join("record.json"), r#"{"id":"source"}"#).unwrap();
+        std::os::unix::fs::symlink(
+            "../../record.json",
+            root.0.join("corpus/records/source.json"),
+        )
+        .unwrap();
+        std::os::unix::fs::symlink("records", root.0.join("corpus/sources")).unwrap();
+        let records = load_dir(&root.0, "sources").unwrap();
+        assert_eq!(records.len(), 1);
+        assert_eq!(text(&records[0].fields, "id"), "source");
+    }
+
+    #[cfg(unix)]
+    #[test]
+    fn corpus_loading_rejects_dangling_collection_symlinks() {
+        let root = TestDirectory::new();
+        fs::create_dir(root.0.join("corpus")).unwrap();
+        std::os::unix::fs::symlink("missing", root.0.join("corpus/sources")).unwrap();
+        let error = check(&root.0).err().expect("dangling collection must fail");
+        assert!(
+            error.starts_with("corpus/sources: cannot list JSON records:"),
+            "{error}"
+        );
+    }
+
+    #[cfg(unix)]
+    #[test]
+    fn corpus_loading_rejects_non_regular_json_records_before_reading() {
+        let root = TestDirectory::new();
+        fs::create_dir_all(root.0.join("corpus/sources")).unwrap();
+        let _socket =
+            std::os::unix::net::UnixListener::bind(root.0.join("corpus/sources/bad.json")).unwrap();
+        let error = check(&root.0).err().expect("non-regular record must fail");
+        assert_eq!(
+            error,
+            "corpus/sources/bad.json: cannot read JSON: expected a regular file"
+        );
+        let structural_error = crate::Corpus::load(&root.0)
+            .err()
+            .expect("structural loader must reject non-regular records");
+        assert_eq!(structural_error.code, "invalid_path");
+        assert_eq!(structural_error.path, "corpus/sources/bad.json");
+        assert_eq!(
+            structural_error.message,
+            "expected a regular corpus record file"
+        );
+    }
+
+    #[test]
+    fn corpus_loading_rejects_non_directory_collections() {
+        let root = TestDirectory::new();
+        fs::create_dir(root.0.join("corpus")).unwrap();
+        fs::write(root.0.join("corpus/sources"), "{}").unwrap();
+        let error = check(&root.0).err().expect("invalid collection must fail");
+        assert!(
+            error.starts_with("corpus/sources: cannot list JSON records:"),
+            "{error}"
+        );
+    }
+
+    #[test]
+    fn corpus_loading_rejects_directories_named_as_json_records() {
+        let root = TestDirectory::new();
+        fs::create_dir_all(root.0.join("corpus/sources/bad.json")).unwrap();
+        let error = check(&root.0).err().expect("invalid record must fail");
+        assert!(
+            error.starts_with("corpus/sources/bad.json: cannot read JSON:"),
+            "{error}"
+        );
+    }
+
+    #[cfg(unix)]
+    #[test]
+    fn corpus_loading_rejects_dangling_json_record_symlinks() {
+        let root = TestDirectory::new();
+        fs::create_dir_all(root.0.join("corpus/sources")).unwrap();
+        std::os::unix::fs::symlink("missing", root.0.join("corpus/sources/bad.json")).unwrap();
+        let error = check(&root.0).err().expect("unreadable record must fail");
+        assert!(
+            error.starts_with("corpus/sources/bad.json: cannot read JSON:"),
+            "{error}"
+        );
+    }
 
     #[test]
     fn prose_ids_follow_python_word_boundaries() {
