@@ -1,0 +1,11 @@
+{
+  "id": "ac416809-f937-4d0d-9546-1ceefb3c3009",
+  "label": "Others are CREATURE_1 from selected q44 ancestor source supply",
+  "argument_id": "7f1704d5-14ab-4706-b19c-29e534cf086f",
+  "challenge_module": "TruthCore.Results.Causality.Q44SourceSupply.Challenge",
+  "solution_module": "TruthCore.Results.Causality.Q44SourceSupply.Solution",
+  "theorem": "TruthCore.Results.Causality.Q44SourceSupply.othersAreCreatures",
+  "comparator_config": "results/ac416809-f937-4d0d-9546-1ceefb3c3009/comparator.json",
+  "status": "solution-present",
+  "description": "Participation coverage and the explicit selected-source conclusion give p as cause of each other being in the esse respect. Consequently p is a universal cause at esse and each other being is CREATURE_1, instantiated at IsCreatureOfUniversalCause. No premise that every essential cause equals p, Fourth-Way universal causation, source naming, efficiency or conservation is used."
+}

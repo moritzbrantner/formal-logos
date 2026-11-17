@@ -1,0 +1,17 @@
+{
+  "id": "b4987085-f7b0-4031-a795-364873d3c216",
+  "label": "Actual esse-cause responsibility composes along actual cause links",
+  "paraphrase": "Analyst formulation, attribution deferred. For any a, b and c in one q3 profile: if a is actual as to esse, a causes the esse of b, and b is an actual distinct cause of the actual c in that same esse respect (ActualEsseCause), then a causes the esse of c. This is an open analyst composition law for causal responsibility, not a definition of causation, intervention dependence or temporal origination. No source existence, participant actuality, OwnBeing or selection follows from it alone.",
+  "lean_declaration": "TruthCore.Causality.Q44SourceSupply.ActualEsseCauseComposes",
+  "definition_ids": [
+    "a0a9e610-979f-476d-834e-7616343d4863",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "54f33165-05df-5205-807a-04154b5fd6ad"
+  ]
+}

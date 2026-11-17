@@ -1,0 +1,18 @@
+{
+  "id": "f2c19c76-0165-4494-828c-83d3b552e9b9",
+  "label": "Q44 essential-source supply from the existing common ancestor and reception (inference)",
+  "input_statement_ids": [
+    "cbb068e8-337d-5772-a3f9-10df457ba9fe",
+    "c35b1a5c-6405-449b-993b-8196b2457e08",
+    "b4987085-f7b0-4031-a795-364873d3c216",
+    "6dfe01ab-e3f2-5a4c-b102-701c161f2cf7",
+    "7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2",
+    "14325c83-1c3f-5afb-b63f-52b0c2b2a326",
+    "bc1810e5-1070-5585-9b0f-e17ca3547ac7"
+  ],
+  "output_statement_id": "de05072a-5db0-4a31-8e24-b18fedf01401",
+  "rule": "Causal-chain induction, explicit reception argument and equality elimination",
+  "meaning": "Sibling retaining CommonEsseIsEssenceSource as a direct support option. A participant is actual and represented-distinct, hence other than the common identity source; its chain is supplied by that premise. The sourceSupply theorem uses the same explicit composition and four reception premises. Common uncausedness and advance numerical unity are not needed for this existential conclusion; per-participant ancestry is the weaker existing sufficient interface. No new causal or OwnBeing content is hidden in the common-source premise.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

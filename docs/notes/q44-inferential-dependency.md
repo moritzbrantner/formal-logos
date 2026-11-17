@@ -479,3 +479,323 @@ causation in the selector. GOD_4, own-being applicability and source supply rema
 separate. Supplied binding and Comparator/NanoDa evidence was reused. Next work
 tests common-ancestor/composition, including participant actuality, represented
 identity-to-OwnBeing and alignment with p; transitivity alone is insufficient.
+## Ancestor-to-source supply
+
+Complete proposed outcome for independent challenge of the source-supply
+assignment following acceptance of `6d33a24a2cbf7ec21de987b7efb825ca162d8049`.
+Target remains `de05072a-5db0-4a31-8e24-b18fedf01401`, feeding the existing
+CREATURE_1 parent `612078bf-5a68-5542-8b7b-f862f816ece0` and the root connection
+already specified above. Formal home: `TruthCore/Causality/Q44SourceSupply.lean`,
+`TruthCore/Results/Causality/Q44SourceSupply/`,
+`specs/q44-source-supply.toml`. Analyst reconstruction; no new source attribution.
+
+The selected ancestor route now supplies de05072a under seven explicit inputs.
+It does **not** follow from transitivity alone. It also yields a selected-source
+consumer that need not identify every possible own-being cause with p. The
+direct participation rationale and the earlier stronger selection route remain
+support options.
+
+### Exactly what is reused
+
+- `cbb068e8-337d-5772-a3f9-10df457ba9fe`,
+  `TermSenseForks.ParticipatedHasDistinctEsse F`, supplies both participant
+  actuality and represented esse/essence distinction in F.profile.
+- `3d01134d-0b03-4469-a81a-a18d6e179fa0`,
+  `DeEnte.EveryDistinctEsseHasEsseIsEssenceSource`, supplies each such actual
+  distinct-esse bearer with an actual identity-bearing ancestor and a nonempty
+  `Relation.TransGen (ActualEsseCause F.profile)` chain. The ancestor can vary
+  with the participant. This is weaker than assuming a global common source.
+- The existing common-source alternative is
+  `c35b1a5c-6405-449b-993b-8196b2457e08`,
+  `DeEnte.CommonEsseIsEssenceSource`: one actual identity bearer, no incoming
+  actual esse cause, chains to every other actual bearer. Only its actuality,
+  identity and paths are needed for source supply; its uncausedness is retained
+  in the premise rather than advertised as newly derived.
+- Four **separate existing premises** carry identity to OwnBeing:
+  `6dfe01ab-e3f2-5a4c-b102-701c161f2cf7` (reception only in own essence),
+  `7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2` (a receiver is in receptive potency
+  to the received esse), `14325c83-1c3f-5afb-b63f-52b0c2b2a326` (no principle
+  is receptively potent to itself), and
+  `bc1810e5-1070-5585-9b0f-e17ca3547ac7` (unreceived esse implies OwnBeing).
+  Their exact definitions are `EsseReceivedOnlyInOwnEssence`,
+  `ReceiverInPotencyToReceivedEsseReading`,
+  `NothingInReceptivePotencyToItself` and `UnreceivedEsseIsOwnBeing`.
+  This reuses the reception argument in `ReceptionLimitation.unlimitedIsOwnBeing`
+  without importing unnecessary composition/priority predicates from its target.
+
+All these fields come from the same profile/reception dictionaries. The frame's
+`CausesOrigin` field is unused; no cause of coming-to-be is converted to a cause
+of esse. `OwnBeing` remains the interpreted primitive discussed above. It is
+not replaced by the equality of two maps.
+
+### One new composition premise, not a replacement for the other inputs
+
+New statement `b4987085-f7b0-4031-a795-364873d3c216`,
+`ActualEsseCauseComposes f`, means:
+
+```text
+For any a,b,c: a is actual as to esse;
+a is causally responsible for b's esse;
+b is an actual distinct cause of the actual c's esse;
+therefore a is causally responsible for c's esse.
+```
+
+Its last hypothesis is exactly `ActualEsseCause f b c`, retaining b≠c,
+actuality of b and c, and the causal edge at this same `esse`. It propagates a
+responsibility edge along an actual esse-cause link. It asserts no temporal
+order, modal dependency, source existence, receptive identity, participant
+classification, or source selection. In particular it is not a definition of
+`CausesIn` as transitive closure. No theorem that some graph is well-founded,
+or that an agent causes "as caused", supplies this property automatically.
+
+The `causeOfChain` lemma proves the exact chain-to-edge passage by induction:
+a one-link chain already contains the required edge; append one actual
+esse-cause link and use composition with the actual initial ancestor. All
+actuality and edge information remains explicit. An edge here is causal
+responsibility, not a claim that secondary/intermediate causes are absent.
+No acyclicity, well-foundedness or asymmetry is used in this induction.
+
+### The identity-to-own-being argument
+
+The separate `ownBeingOfIdentity` lemma does the following. If ancestor n's
+esse were received in r, the reception/own-essence premise gives
+r=essenceOf n. The potency premise gives Potency r (esseOf n). Since
+esseOf n=essenceOf n, that would put one principle in receptive potency to
+itself, contradicting the irreflexive-potency premise. Thus its esse is
+received in no principle. The existing unreceived-to-own-being premise then
+gives OwnBeing n.
+
+This is a substantive explicit conditional argument, not an inverse of the
+previous OwnBeing-to-profile dictionary 6acd44eb. It needs neither that
+previous dictionary nor a stipulation that identity just means OwnBeing.
+The four premises keep their existing scope and warrant burdens, including
+the generalization of reception in one's own essence and the completeness
+of the interpreted reception relation. No conjunction of these premises is
+introduced as an opaque argument input. `Control.ReceptionInputs` only groups
+those same four laws in closed finite test data; no registered argument uses
+it as a premise.
+
+### Complete new inference bundles
+
+Here abbreviations denote the full IDs just listed and the existing
+`a576300f-4b01-45ae-902c-cfe3d0fbf2de` (at most one actual identity bearer),
+`e2bfd1b1-7d5e-4be3-b5d4-f9db988c5745` (selected actual identity witness),
+and `11e24b50-06bc-5e2e-b9b6-a4e4dc421237` (all others participate).
+The namespace prefix for the theorems is
+`TruthCore.Results.Causality.Q44SourceSupply.`.
+
+| Result / theorem | Complete joint premise set | Conclusion |
+| --- | --- | --- |
+| `9bbfe378-02bc-48cc-bc12-c90118707f52` / `sourceSupply` | cbb068e8, 3d01134d, b4987085, 6dfe01ab, 7fcfcee8, 14325c83, bc1810e5 | Existing de05072a |
+| `d31e0887-decb-4c53-82ea-cf88bf2881b3` / `sourceSupplyFromCommon` | cbb068e8, c35b1a5c, b4987085, 6dfe01ab, 7fcfcee8, 14325c83, bc1810e5 | Existing de05072a |
+| `b171d107-6ace-4547-b0b3-0b783d2f96c4` / `selectedSourceSupply` | cbb068e8, 3d01134d, b4987085, 6dfe01ab, 7fcfcee8, 14325c83, bc1810e5, a576300f, e2bfd1b1 | New `8b8bb6df-7b8a-4f08-bfe2-21d52fe9f217` |
+| `ac416809-f937-4d0d-9546-1ceefb3c3009` / `othersAreCreatures` | 11e24b50, 8b8bb6df | Existing 612078bf at CREATURE_1 |
+| `406fbe1a-1613-4af9-afcf-33cea6682eb2` / `controls` | none | Finite certificate `b4ae3ffa-2c19-41a1-bc29-35a768af174e` |
+
+For de05072a, take a participant x. cbb068e8 supplies its actuality and
+distinction; 3d01134d supplies an actual identity ancestor n and a chain.
+The represented distinction excludes n=x. Composition gives CausesIn n x esse;
+the reception argument gives OwnBeing n. Those are **all four** required
+source-supply conjuncts: n≠x, source actuality, OwnBeing, and causing x's esse.
+No globally selected source or uniqueness is needed for that existential
+conclusion. The common-source sibling first obtains this weaker ancestry
+interface from the existing common source and the participant's distinction.
+
+To align with p, the selected actual identity witness and at-most-one give
+n=p for each supplied ancestor. This does not identify n with p merely because
+n exists, because both have a word in common, or because God is unique. New
+8b8bb6df spells out that the **same p** is distinct, actual, OwnBeing and
+causally responsible for each participant. The two-premise consumer then uses
+coverage to make p a cause of every other actual being and each other thing
+CREATURE_1. It does not require `RelevantEssentialSourcesSelected` dcf4bcdd,
+which quantifies over every relevant own-being cause. Selecting one sufficient
+witness per participant suffices. Both support options remain available.
+
+If there are no participants, the source-supply conclusions are vacuous;
+the per-participant ancestry route does not discover a source from an empty
+participant class. The common-source premise itself already asserts one actual
+source, and the selected-witness premise already qualifies p; those contents
+are not exported as new existence discoveries. No GOD_4 binding, efficiency,
+conservation or world-indexed ontic grounding is added.
+
+### Seven discriminating controls
+
+All controls use three named beings (primary, source, effect), an explicit
+profile, received-esse and receptive-potency tables. Their common-ancestor
+properties are proved with explicit one- or two-link `TransGen` witnesses,
+not by equating ancestry with causal responsibility.
+
+1. **Actuality omitted:** effect is classified as participating and has
+   represented-distinct esse, but is not actual. Only primary and source are
+   actual, with primary causing source. The common source covers every actual
+   other being; composition and all four reception inputs hold, but no own-being
+   cause supplies effect. This tests the missing actuality dictionary; it is
+   not evidence that a genuine existent participant could be nonactual.
+2. **Distinction omitted:** primary itself participates in the table and is
+   actual, with identity-bearing esse and no incoming cause. Common ancestry,
+   composition and the four reception inputs hold, but no distinct source
+   causes primary. Thus participant actuality alone is insufficient. This is
+   not a philosophical example of OwnBeing genuinely having participated esse.
+3. **Composition omitted:** primary causes source, and source causes effect;
+   primary does not cause effect in the table. All are actual, only primary
+   has identity/OwnBeing, effect participates, and the common-source and all
+   reception premises hold. The two-link chain exists, but de05072a fails.
+4. **Own-being interpretation omitted:** use the star causal table, with the
+   common ancestor and composition present, but assign OwnBeing to nothing.
+   The first three reception laws hold and unreceived-to-OwnBeing fails.
+   Source supply fails despite actual identity and the relevant causal edge.
+   This diagnoses an interpretation bridge, not an objection to its truth.
+5. **Selected qualification omitted:** with a unique actual identity source,
+   designate the different source-labelled being as p. Every supply premise
+   and at-most-one holds, but the selected identity witness and selected supply
+   fail. The existential ancestor is not an arbitrary designated individual.
+6. **Uniqueness omitted:** primary and source both have represented identity;
+   primary is the common ancestor and causes effect, while source does not
+   cause effect. Designate source as p. The selected witness and supply inputs
+   hold, but at-most-one and selected supply fail. Identity qualification alone
+   does not select the common causal ancestor. The assignments are not asserted
+   to instantiate metaphysically possible multiple subsistent esse bearers.
+7. **Positive composition:** primary→source→effect and primary→effect all hold.
+   Only primary has identity/OwnBeing, both others participate, all reception
+   and selection inputs hold, and each other being is CREATURE_1. Composition
+   is exercised on an actual two-link chain; it is not merely vacuous.
+
+The negative tables are formal non-implications under these exact predicates,
+not independently justified objections to the metaphysical premises. No new
+substantive objection to the interpreted composition or reception principles
+has been established here. In the controls, assigning OwnBeing to identity
+bearers is one chosen finite extension, never the general definition of
+OwnBeing in either the theorems or the corpus.
+
+### Support comparison and provisional warrant
+
+The ancestry input is not an unexplained source-existence flag. Existing
+argument `6503fc58-1be8-4596-9ccc-98e22a513e88`, theorem
+`TruthCore.Results.Aquinas.DeEnte.EsseSource.distinctEsseHasEsseIsEssenceSource`,
+derives 3d01134d from the joint bundle
+`457698e4-eb21-4561-ab32-eccbfb0a992e` (each actual distinct esse has another
+actual cause), `fd12ad3d-6729-4fa0-bb87-0121260df684` (no infinite actual
+esse-cause regress), and `ee4ab504-c8fe-59bc-bc96-7cbeefed6410` (excluded
+middle). The no-regress property's existing per-se alternative requires its
+own per-se bridge; actual existence does not mean causing "as caused".
+The shared/numerical source is not imported from local causes alone.
+
+The stronger common-source input retains its five-premise bundle in argument
+`5ab6cc2b-3997-4206-ab77-3b70e90f7867`: 3d01134d, a576300f, population
+`33f3c4c5-ccd6-4e8e-9cfb-0b231bb0e38f`, fd12ad3d and ee4ab504. That
+provides one common uncaused source, but its extra global content is unnecessary
+for de05072a. The weaker per-participant source-supply result therefore keeps
+that distinction visible without discarding the common-source option. Alignment
+of the resulting ancestors with a selected p is the separate at-most-one step;
+the existing seven-premise numerical-unity support bundle remains as recorded
+in the preceding investigation, including its shared-nature input.
+
+The participation-to-distinct-esse bridge has its ordinary conceptual motivation:
+a participant has being, so is actual, and has it derivatively rather than
+being its own act. Its application to these profile maps is still an explicit
+bridge, not a consequence of an uninterpreted predicate's spelling. The
+reception argument now exhibits exactly what a represented identity needs to
+give OwnBeing. It does not require another argument for each primitive merely
+because it is primitive; it preserves the existing meanings, prima facie
+commitments, conditional support and revision conditions of those premises.
+
+The new composition input is the remaining new causal commitment. Interpreting
+`CausesIn` as mediated causal responsibility for esse gives a reason to consider
+propagation through an actual cause of esse, especially on a derivative-agent
+account. But the fact that a source supplies an agent's being does not by
+itself define its responsibility for every causal exercise. This law explicitly
+requires that propagation at esse; it is neither a proof from mere actuality
+nor a transfer from counterfactual/intervention dependence. The earlier generic
+causal-transitivity discussion and intervention controls concern their own
+relations and are not evidence against this narrower application. No new
+source passage states or independently establishes the law here. Accepting it
+as a primitive or defeasible causal commitment is an available support option;
+the finite chain omission is not a reason to reject it.
+
+The direct q44 participation-to-essential-source rationale is retained alongside
+this ancestry/composition/reception route. It can be investigated on its prima
+facie explanatory merits; it need not be forced through a regress derivation.
+Conversely the ancestor route adds a concrete conditional support option with
+its exact separate obligations. Neither route borrows Fourth-Way universal
+causation as independent support, nor is either judged by leaf-count economy.
+The scoped source-supply application and its selection conditions are resolved
+under the listed inputs. Warrant for composition, the reception application,
+ancestry/no-regress, numerical unity and the selected witness remains revisable;
+no premise is thereby independently established and no rival worldview defeated.
+
+### Claim/type self-sweep
+
+The theorem signatures list participant actuality/distinction, ancestor
+existence, composition, all four reception premises and any selected-witness /
+uniqueness inputs separately. No whole-premise wrapper hides one of them.
+The new composition statement is one explicit conditional propagation law;
+the new selected-source statement is an output with all four supply conjuncts.
+The source-supply conclusion is the exact existing de05072a. The consumer
+concludes existing 612078bf at CREATURE_1, not CREATURE_2. The controls prove
+only their specified finite data properties. No original frozen Challenge,
+other-family file, claim, source witness, allowlist, shared import or generated
+status record is edited. No source retrieval, causal-mode conversion, necessary
+existence, GOD_4 naming or completed primitive formal meaning is claimed.
+
+Reopening tests are specific: investigate whether causal responsibility for
+esse really propagates across the actual cause links used here; compare a
+per-se-restricted propagation rule only with its explicit as-caused bridge;
+or test the reception interpretation on a genuinely different account of esse.
+Those are warrant/interpretation questions left after this completed conditional
+application, not another search for the same missing local cause. Any challenge
+to a premise must offer a supported failure mechanism rather than citing these
+formal omission tables as evidence against its truth.
+
+### Source-supply verification and computed premise comparison
+
+All five new results pass focused Solution/Challenge builds, Comparator and
+NanoDa with `permitted_axioms: []`; no classical or project axiom is introduced.
+The scoped binding check reports **5 bound, 0 pinned, 0 mismatch**; its nonzero
+exit is the already known IsMaximalIn/IsMaximumIn baseline sense alias. That
+alias, shared imports, status caches and final integrated-head CI remain with
+the coordinator. No original frozen Challenge is changed. The prepared worker
+artifacts were used through `worker_env.py --` and the shared heavy-job lock;
+no preflight repeat, cold build, checkout preparation or source download.
+
+`argument_batch.py records --check specs/q44-source-supply.toml` regenerates
+unchanged. Offline `truth check` passes with existing warnings;
+`attribution-check --base 6d33a24a2cbf7ec21de987b7efb825ca162d8049` reports no
+new or changed stating claim. The shared convention sourceRevision remains
+`15f348b072188255da837578eaafc8a98f12fdf0`. Independent semantic challenge of
+this full proposed outcome and final delivered-head CI remain pending.
+
+Actual `frontier-diff --base 6d33a24a2cbf7ec21de987b7efb825ca162d8049` output:
+
+```text
+premise delta for Catholicism is true: the Catholic Church is a teaching authority founded by GOD_4, and every… [53964cbe]: 6d33a24a2cbf7ec21de987b7efb825ca162d8049 -> working tree
+open premises reaching the root: 494 (353 bare, 90 supported, 51 stated) -> 494 (353 bare, 90 supported, 51 stated)
+expanded-route diagnostic (lowest cost): Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16) -> Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16)
+distinct verified support alternatives: 490 -> 494
+verified support alternatives added: 4
+  Everything other than the primary is CREATURE_1 [612078bf] <- Everything other than p has its being by participation [11e24b50], The selected p supplies a distinct actual own-being cause for every participant [8b8bb6df]
+  The selected p supplies a distinct actual own-being cause for every participant [8b8bb6df] <- No principle stands in RECEPTIVE_POTENCY_1 to itself as to its own act [14325c83], Every actual distinct esse descends via actual causes of being from one whose esse is its essence [3d01134d], For every being x and principle r, if the esse of x is received in r, then r is the essence of x [6dfe01ab], For every being x and principle r: if the esse of x is received in r, then r stands in receptive… [7fcfcee8], At most one actual being has its esse identical with its essence [a576300f], Actual esse-cause responsibility composes along actual cause links [b4987085], For every being x, if the esse of x is received in no principle, then x is its own subsistent being [bc1810e5], Whatever has being by participation actually exists with esse distinct from its essence [cbb068e8], Selected p is actual with its represented esse identical to its essence [e2bfd1b1]
+  Each participant has a distinct actual own-being cause of esse [de05072a] <- No principle stands in RECEPTIVE_POTENCY_1 to itself as to its own act [14325c83], Every actual distinct esse descends via actual causes of being from one whose esse is its essence [3d01134d], For every being x and principle r, if the esse of x is received in r, then r is the essence of x [6dfe01ab], For every being x and principle r: if the esse of x is received in r, then r stands in receptive… [7fcfcee8], Actual esse-cause responsibility composes along actual cause links [b4987085], For every being x, if the esse of x is received in no principle, then x is its own subsistent being [bc1810e5], Whatever has being by participation actually exists with esse distinct from its essence [cbb068e8]
+  Each participant has a distinct actual own-being cause of esse [de05072a] <- No principle stands in RECEPTIVE_POTENCY_1 to itself as to its own act [14325c83], For every being x and principle r, if the esse of x is received in r, then r is the essence of x [6dfe01ab], For every being x and principle r: if the esse of x is received in r, then r stands in receptive… [7fcfcee8], Actual esse-cause responsibility composes along actual cause links [b4987085], For every being x, if the esse of x is received in no principle, then x is its own subsistent being [bc1810e5], One being whose esse is its essence is a first cause of being of every other actual being [c35b1a5c], Whatever has being by participation actually exists with esse distinct from its essence [cbb068e8]
+bare premises added: 1 (listed for visibility; not a regression, owner decision 2026-11-07)
+  Actual esse-cause responsibility composes along actual cause links [b4987085]
+added (bare): 1
+  Actual esse-cause responsibility composes along actual cause links [b4987085]
+moved (bare -> closed): 1
+  Each participant has a distinct actual own-being cause of esse [de05072a]
+```
+
+The computed move of de05072a from bare to closed/proved records conditional
+formal support; it is **not establishment** of the stronger source-supply
+principle or of the root. The four added alternatives are positive support
+options with all their obligations visible. The new propagation law is an
+open bare premise, retained alongside the direct participation rationale.
+The unchanged root-reaching total and lowest-cost diagnostic do not measure
+that philosophical progress. No semantic conclusion or premise count has
+been substituted for this computed comparison.
+
+Reproduce each result check with `python3 scripts/worker_env.py -- flock
+/tmp/moenarch/truth-core-heavy.lock scripts/verify-result.sh <result-UUID>` for
+the five result UUIDs in the table. `git diff --check` passes for this delta;
+record generation, offline source/attribution validation and exact premise
+comparison are as reported above. The current outcome is ready for independent
+challenge; no push or publication action was taken by this worker.

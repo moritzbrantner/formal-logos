@@ -1,0 +1,9 @@
+{
+  "id": "43f9403e-27e9-45f4-9976-9105ae76f3c2",
+  "label": "The selected p supplies a distinct actual own-being cause for every participant",
+  "term": "The selected p supplies a distinct actual own-being cause for every participant",
+  "definition": "For each x bearing the existing q44 participation predicate, the selected p is distinct from x, actual as to esse, its own subsistent being (the existing primitive OwnBeing), and a cause of x in the same esse respect. This gives one specified essential cause per participant, not that every possible essential cause is p, and no GOD_4 identification.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.Q44SourceSupply.SelectedEssentialSourceSupply",
+  "note": "Analyst reconstruction, attribution deferred. Reuses the existing interpreted q3 profile and ActualEsseCause (definition 8163859b-95b3-4dd2-8a69-541bd332f32f), participation (14d30c53-51c2-502d-b009-247dac0421e0) and primitive OwnBeing (5dc08b95-ca15-52ab-b8cd-2b558e9a13f7). Quantifier scope and logical content are given by the Lean body; underlying causal and own-being meanings are not completed by these compounds. Reception, identity, causal composition and source selection remain separate interfaces. See docs/notes/q44-inferential-dependency.md#ancestor-to-source-supply for examples, comparison, premise warrant, controls and open application burdens."
+}

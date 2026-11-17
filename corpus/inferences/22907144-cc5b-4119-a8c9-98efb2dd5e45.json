@@ -1,0 +1,20 @@
+{
+  "id": "22907144-cc5b-4119-a8c9-98efb2dd5e45",
+  "label": "Selected q44 source supply by aligning the actual ancestor with p (inference)",
+  "input_statement_ids": [
+    "cbb068e8-337d-5772-a3f9-10df457ba9fe",
+    "3d01134d-0b03-4469-a81a-a18d6e179fa0",
+    "b4987085-f7b0-4031-a795-364873d3c216",
+    "6dfe01ab-e3f2-5a4c-b102-701c161f2cf7",
+    "7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2",
+    "14325c83-1c3f-5afb-b63f-52b0c2b2a326",
+    "bc1810e5-1070-5585-9b0f-e17ca3547ac7",
+    "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+    "e2bfd1b1-7d5e-4be3-b5d4-f9db988c5745"
+  ],
+  "output_statement_id": "8b8bb6df-7b8a-4f08-bfe2-21d52fe9f217",
+  "rule": "Causal-chain induction, explicit reception argument and equality elimination",
+  "meaning": "For each participant the seven ancestry/composition/reception inputs supply a distinct actual identity ancestor and its own-being causal responsibility. Existing at-most-one actual identity and the selected actual identity witness identify that ancestor with the same p. This is selection of the supplied ancestor, not identification of every possible own-being cause with p. No backwards OwnBeing-to-identity dictionary or IsGod uniqueness is used.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
