@@ -181,3 +181,101 @@ snapshot. Rerun it when the ranking rules change, and keep the held-out
 cases unchanged. #962's `context_benchmark.py` measures a different thing:
 recall of the context IDs a PR actually used. Its 0.63 recall at 73 KB
 cannot be compared with these numbers.
+
+
+## Independent offline correctness tier (2026-11-17)
+
+This separate tier supersedes the development measurements for the graph-first
+candidate. The original historical 24-case key and lexical results above remain
+unchanged. In particular, historical E3 accepted `already-recorded` for a
+priority hit that did not certify its temporal reading; the new tier rejects
+that semantic inference.
+
+Run without a GitHub export or network access:
+
+```sh
+python3 scripts/retrieval_benchmark.py --correctness \
+  --baseline /tmp/truth-retrieval-baseline --truth /tmp/truth-retrieval-candidate \
+  --json /tmp/retrieval-independent-comparison.json
+python3 -m unittest discover -s scripts -p 'test_retrieval_correctness_benchmark.py'
+```
+
+The authored oracle, `scripts/testdata/retrieval-correctness-oracle.json`, is
+never copied into the indexed fixture. Semantic judgments were fixed before
+candidate runs. The fixture combines the frozen research golden inputs, five
+propositions, 220 reverse-reference records, 24 cyclic notes with 96 linked
+sections, and a local issue/PR cycle. It exceeds the old 200-record, 16-note and
+80-section limits. Graph recall scores exact node identities; source coverage
+counts source and passage separately. Four edges' endpoints and field/path
+provenance are checked independently. Retrieval of a source reference does not
+certify source fidelity, verification or philosophical warrant.
+
+Semantic recall and precision use the first five **statement** candidates.
+Relevance concerns the same load-bearing subject or inference, not equivalence:
+a converse or negation can be relevant prior work without being the recorded
+proposition. Novelty correctness separately permits `already-recorded` only
+for exact normalized proposition text. Six cases cover identity, converse,
+negation, quantifier strength, account/time priority and timeless/endless
+existence. These small authored samples do not estimate general semantic
+reasoning accuracy or corpus-wide completeness.
+
+Four historical questions use identical copies of `corpus` and `docs/notes`,
+excluding the answer-bearing benchmark note/key; other documentation and issue
+history are outside this measured workload. B2 asks the dependence paraphrase,
+B3 targets the dedicated weak-explanation note, E2 asks an unrecorded converse,
+and E3 asks temporal priority. Relevant prior work and novelty judgments are
+scored separately.
+
+| Measure | Baseline | Measured candidate |
+| --- | --- | --- |
+| Semantic recall at five | 6/6 | 6/6 |
+| Precision among first five statement candidates | 6/12 | 6/12 |
+| Synthetic novelty correctness | 3/6 | 6/6 |
+| Historical novelty correctness | 1/4 | 4/4 |
+| Historical pinned-reference recall | 2/5 | 5/5 |
+| Explicit graph records / note files / sections | unavailable | 222/222; 24/24; 96/96 |
+| Source/passage; issue/PR; exact edge provenance | unavailable | 2/2; 2/2; 4/4 |
+
+The direct evidence graph has 372 unique nodes and 877 provenance-bearing edges,
+even with `--limit 1`; missing baseline graph capability is unavailable evidence,
+not an invented zero recall. Historical B2 improves from 0/2 to 2/2 pinned
+references, B3 and E2 remain 1/1, and E3 improves from 0/1 to 1/1. Perfect recall
+figures apply only to these specified fixtures and pinned questions.
+
+An initial duplicate-graph serialization problem was repaired before this
+measurement. Default human text is compact; requested JSON includes the full
+navigation inventory and can remain large on connected historical components:
+
+| Historical question | Baseline JSON bytes / seconds | Candidate JSON bytes / seconds |
+| --- | --- | --- |
+| B2 dependence paraphrase | 19,306 / 2.91 | 19,531,554 / 5.89 |
+| B3 dedicated explanation note | 19,667 / 1.39 | 3,963,451 / 4.95 |
+| E2 unrecorded converse | 15,999 / 1.40 | 64,234 / 2.87 |
+| E3 temporal priority | 20,027 / 1.46 | 22,431,527 / 7.40 |
+
+On the same fixture and measured artifact, ordinary human text emits 4,224
+bytes for B2 (6.97 seconds) and 4,595 bytes for E3 (7.57 seconds). These single
+shared-machine timing samples are informational, not controlled latency gates.
+The measurements support improved coverage and novelty correctness on the
+sample; they show neither better precision nor better performance. Large JSON
+navigation inventories and graph-construction latency remain limitations.
+
+The compact observations are committed in
+`scripts/testdata/retrieval-correctness-measurement.json`: commands, matched
+identities, separate metrics, environment, output sizes/hashes and timings.
+Unchanged baseline observations were reused after candidate repairs.
+
+Baseline SHA-256 is
+`5231d02d74cb78c87705a2aae9bcc1dd4ef4a92243a513c8a0053e8f77fdde7c`
+(16,329,200 bytes), built from clean
+`f0eb8145916d8c3af4346f959bdc2d63adceb9a9` before edits.
+Measured candidate SHA-256 is
+`6dc4a935785430589b0a5313b1150bb1c8733bafeb2bf9910523d1fca82bd323`
+(16,559,768 bytes). Its 155-file source-context manifest includes sorted tracked
+**and untracked** paths under `truth`, with each file's SHA-256; the digest is
+`479e70f091b49276c63b9dbb1d625dfe0001224cbc6b5c6b4e74784366c48208`.
+A dirty `git diff` hash alone would omit the new graph and CLI files. Subsequent
+Clippy-only refactors preserve semantics; this report identifies the measured
+candidate rather than claiming its artifact hash belongs to the final commit.
+Five harness checks and Python compilation checks pass. No premise, proof
+status or frontier changes.

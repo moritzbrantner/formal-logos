@@ -111,14 +111,19 @@ pub fn normalize_symbols(text: &str) -> String {
     out
 }
 
+// These constrain meaning but cannot independently retrieve substantive evidence.
+const LOGICAL_WORDS: &[&str] = &[
+    "not", "no", "all", "some", "only", "every", "under", "when", "then", "any", "each", "can",
+    "may", "might", "would", "should", "could",
+];
+
 const STOPWORDS: &[&str] = &[
     "the", "and", "for", "with", "that", "this", "from", "into", "are", "was", "were", "has",
-    "have", "had", "not", "but", "its", "his", "her", "their", "our", "your", "any", "all", "some",
-    "can", "may", "might", "would", "should", "could", "does", "did", "who", "what", "which",
-    "when", "where", "why", "how", "than", "then", "there", "here", "about", "between", "under",
-    "over", "only", "also", "very", "more", "most", "such", "each", "every", "other", "whether",
-    "being", "been", "via", "per", "already", "new", "novel", "theorem", "result", "claim",
-    "proof", "prove", "proves", "show", "shows", "does", "issue", "note",
+    "have", "had", "but", "its", "his", "her", "their", "our", "your", "some", "does", "did",
+    "who", "what", "which", "where", "why", "how", "than", "there", "here", "about", "between",
+    "under", "over", "also", "very", "more", "most", "such", "other", "whether", "being", "been",
+    "via", "per", "already", "new", "novel", "theorem", "result", "claim", "proof", "prove",
+    "proves", "show", "shows", "does", "issue", "note",
 ];
 
 /// One item of a query: a word (matched by its stem as a word prefix), a
@@ -213,6 +218,12 @@ impl Query {
                         text: word,
                         kind: "symbol",
                     });
+                } else if LOGICAL_WORDS.contains(&lower.as_str()) {
+                    push(Item {
+                        key: lower,
+                        text: word,
+                        kind: "logical",
+                    });
                 } else if lower == "iff" {
                     push(Item {
                         key: "↔".into(),
@@ -263,7 +274,7 @@ impl Query {
             .items
             .iter()
             .zip(matched)
-            .filter(|(item, _)| item.kind != "operator")
+            .filter(|(item, _)| !matches!(item.kind, "operator" | "logical"))
             .map(|(_, hit)| *hit)
             .collect();
         coverage(&content)
@@ -274,7 +285,7 @@ impl Query {
     pub fn substantial(&self, matched: &[bool]) -> bool {
         let (covered, total) = coverage(matched);
         let (content, content_total) = self.content_coverage(matched);
-        covered > 0 && covered * 2 >= total && content * 2 >= content_total
+        covered > 0 && covered * 2 >= total && content > 0 && content * 2 >= content_total
     }
 
     /// The identifiers of the query.
@@ -329,6 +340,7 @@ impl Query {
             .iter()
             .map(|item| match item.kind {
                 "word" => unit_words.iter().any(|word| word.starts_with(&item.key)),
+                "logical" => unit_words.contains(&item.key),
                 "identifier" => {
                     unit_words.contains(&item.key)
                         || aliases
@@ -1051,11 +1063,11 @@ pub fn qualified_declarations(text: &str) -> Vec<(String, usize)> {
     out
 }
 
-/// The declaration's block: its line and indented continuation, at most 40
-/// lines.
+/// A heuristic declaration block: its line and indented continuation.
+/// This is candidate discovery, not complete Lean parsing.
 fn extract(lines: &[&str], start: usize) -> String {
     let mut block = vec![lines[start]];
-    for line in lines.iter().skip(start + 1).take(39) {
+    for line in lines.iter().skip(start + 1) {
         if !line.is_empty() && !line.starts_with(char::is_whitespace) {
             break;
         }

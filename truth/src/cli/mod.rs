@@ -27,6 +27,7 @@ mod configurations;
 mod context;
 mod definitions;
 mod dossier;
+mod evidence;
 mod frontier;
 mod frontier_diff;
 mod ids;
@@ -67,6 +68,8 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
              [--issues-from FILE]
        truth [--root PATH] [--json] context TARGET [--frontier-json FILE] [--limit N] [--related N]
              [--proof-use | --proof-use-json FILE]
+       truth [--root PATH] [--json] evidence TARGET [--issues-from FILE] [--limit N]
+       Research retrieval commands accept --full-evidence for complete node content and all edges.
        truth [--root PATH] [--json] issues --from FILE [--for ID]
        truth [--root PATH] [--json] brief (TARGET | --question TEXT) [--issues-from FILE] [--limit N]
              [--frontier-json FILE] [--frontier-root STATEMENT]
@@ -144,6 +147,7 @@ pub const COMMANDS: &[Command] = &[
     dossier::COMMAND,
     context::COMMAND,
     issues::COMMAND,
+    evidence::COMMAND,
     brief::BRIEF,
     brief::NOVELTY,
     next::COMMAND,
@@ -224,6 +228,17 @@ pub fn run(args: &[OsString]) -> Output {
                 if args.profile_module.is_some() && command.name != "bridge-experiments" =>
             {
                 Err(usage("--profile-module applies only to bridge-experiments"))
+            }
+            Some(command)
+                if args.full_evidence
+                    && ![
+                        "evidence", "brief", "novelty", "context", "dossier", "related",
+                    ]
+                    .contains(&command.name) =>
+            {
+                Err(usage(
+                    "--full-evidence applies only to research retrieval commands",
+                ))
             }
             Some(command) => (command.run)(&args, operands),
             None => Err(args.shape_error()),

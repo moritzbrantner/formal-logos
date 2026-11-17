@@ -12,6 +12,7 @@ pub mod configurations;
 pub mod context;
 pub mod definition_status;
 pub mod dossier;
+pub mod evidence_graph;
 pub mod finite_models;
 pub mod frontier;
 pub mod identity;

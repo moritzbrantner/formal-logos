@@ -64,6 +64,7 @@
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\"]}"
     },
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -116,6 +117,7 @@
      "input_identity"
     ],
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -379,6 +381,7 @@
    "expect": {
     "code": 0,
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -429,6 +432,7 @@
      "input_identity"
     ],
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -694,6 +698,7 @@
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixBC\"]}"
     },
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -746,6 +751,7 @@
      "input_identity"
     ],
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -987,6 +993,7 @@
    "expect": {
     "code": 0,
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -1037,6 +1044,7 @@
      "input_identity"
     ],
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -1280,6 +1288,7 @@
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\"]}"
     },
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -1332,6 +1341,7 @@
      "input_identity"
     ],
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -1593,6 +1603,7 @@
    "expect": {
     "code": 0,
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -1643,6 +1654,7 @@
      "input_identity"
     ],
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -1906,6 +1918,7 @@
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixBC\"]}"
     },
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -1958,6 +1971,7 @@
      "input_identity"
     ],
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -2197,6 +2211,7 @@
    "expect": {
     "code": 0,
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -2247,6 +2262,7 @@
      "input_identity"
     ],
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -2488,6 +2504,7 @@
      "⟪root⟫/capture-rust/LeanReuse.json": "{\"modules\": [\"TruthCore.Fix.Solution\"], \"theorems\": [\"TruthCore.Fix.fixAB\", \"TruthCore.Fix.fixBC\"], \"inspect\": [\"TruthCore.Fix.fixAB\"]}"
     },
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -2540,6 +2557,7 @@
      "input_identity"
     ],
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -2801,6 +2819,7 @@
    "expect": {
     "code": 0,
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -2851,6 +2870,7 @@
      "input_identity"
     ],
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],

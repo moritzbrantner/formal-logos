@@ -51,6 +51,7 @@
    "expect": {
     "code": 0,
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -81,6 +82,7 @@
      "input_identity"
     ],
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -195,6 +197,7 @@
    "expect": {
     "code": 0,
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -227,6 +230,7 @@
      "input_identity"
     ],
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -267,6 +271,43 @@
        ],
        "statement_id": "a8459a54-228d-545e-9e81-bf462fcca7a6",
        "tier": 0
+      },
+      {
+       "paraphrase": "STMT-C",
+       "path": "corpus/statements/02-STMT-C.json",
+       "reason_count": 2,
+       "reasons": [
+        {
+         "argument_id": "79139f8b-4871-5213-9292-b73e0ee11a7d",
+         "conclusion_statement_id": "b5a9b5d5-55b7-52aa-9e52-ef7d46305fc5",
+         "kind": "consequence_with_full_bundle",
+         "path": "corpus/arguments/01-ARG-BC.json",
+         "premise_statement_ids": [
+          "3be459bf-458d-516d-84b8-483b47465286"
+         ],
+         "qualification": "Recorded argument; all premises are retained. Not newly verified.",
+         "results": [
+          {
+           "id": "42dd2d14-bbc0-51ac-8c6d-84b6c766ce1b",
+           "status": "verified",
+           "theorem": "TruthCore.Fix.fixBC"
+          }
+         ]
+        },
+        {
+         "argument_id": "5a7649a5-1175-5f3e-91a3-ab313fefb536",
+         "conclusion_statement_id": "b5a9b5d5-55b7-52aa-9e52-ef7d46305fc5",
+         "kind": "consequence_with_full_bundle",
+         "path": "corpus/arguments/02-ARG-BC-OLD.json",
+         "premise_statement_ids": [
+          "3be459bf-458d-516d-84b8-483b47465286"
+         ],
+         "qualification": "Recorded argument; all premises are retained. Not newly verified.",
+         "results": []
+        }
+       ],
+       "statement_id": "b5a9b5d5-55b7-52aa-9e52-ef7d46305fc5",
+       "tier": 0
       }
      ],
      "mode": "discovery, not certification",
@@ -304,6 +345,7 @@
    "expect": {
     "code": 0,
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -336,6 +378,7 @@
      "input_identity"
     ],
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -424,6 +467,7 @@
    "expect": {
     "code": 0,
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -458,6 +502,7 @@
      "input_identity"
     ],
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -546,6 +591,7 @@
    "expect": {
     "code": 0,
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -578,6 +624,7 @@
      "input_identity"
     ],
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -728,6 +775,7 @@
    "expect": {
     "code": 0,
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -760,6 +808,7 @@
      "input_identity"
     ],
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -981,6 +1030,7 @@
    "expect": {
     "code": 0,
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -1017,6 +1067,7 @@
      "input_identity"
     ],
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -1221,6 +1272,7 @@
    "expect": {
     "code": 0,
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],
@@ -1253,6 +1305,7 @@
      "input_identity"
     ],
     "normalize": [
+     "evidence_graph",
      "bind_types",
      "note_mentions"
     ],

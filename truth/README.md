@@ -489,7 +489,7 @@ mentioning the target records" text block (`context`: the argument, its
 results and its conclusion). The parity tests drop both. Navigation only:
 nothing here closes a statement, changes a route cost or certifies anything.
 
-- `truth related STATEMENT-ID [--limit N]` (default 10; 1 to 200 shown) ranks
+- `truth related STATEMENT-ID [--limit N]` (default 10 shown; JSON retains all matches) ranks
   over the loaded corpus in memory. Python ranks over its disposable SQLite
   projection `.cache/research-index.sqlite`; Rust needs and writes no cache
   (the separate `truth index`, below, keeps one for search and lookup).
@@ -737,6 +737,31 @@ scripts/source_evidence.py check` (`validate_manifest` and
 them). Only the summary line counting bibliographic and permanently
 unavailable passages is Python's; the separate command is no longer a gate.
 
+## Explicit evidence traversal
+
+`truth evidence TARGET [--issues-from FILE] [--limit N]` follows explicit
+references in both directions without depth or candidate limits. `--json`
+returns complete typed nodes, their record/section content, every reference
+edge and deterministic shortest predecessor paths. Each edge identifies its
+JSON field or note line and resolution method. Cycles are visited once;
+unresolved references and absent offline issue history remain visible.
+
+This graph reuses canonical corpus loading and note resolution. It includes
+nested field and object-key references, senses, attempts, claims, passages,
+sources, all `docs/**/*.md` research text, and optional issue/PR snapshots.
+Relative Markdown links and anchored note links are resolved locally. A
+reference is navigation evidence, never entailment or a synonym assertion.
+Foreign issue URLs are not matched by number alone.
+
+`brief`, `novelty`, `context`, `dossier` and `related` expose the same evidence
+graph. Question discovery keeps explicit references separate from ambiguous
+canonical lexicon mappings. Default JSON keeps every discovered node and its shortest explanation path,
+with explicit counts of omitted alternative edges and content. Add
+`--full-evidence` for every edge and complete node content; the dedicated
+`evidence --json` command always returns that full view. Text prints bounded
+summaries and omitted counts. Semantic equivalence, interpretation
+fidelity and assumption agreement require comparison beyond retrieval.
+
 ## `brief` and `novelty`
 
 `truth brief (TARGET | --question TEXT)` and `truth novelty (TEXT |
@@ -776,14 +801,13 @@ status, judgment or record.
   (`` `D(x,y)` for the existing `DependsForBeing x y` ``) so `D(y,x) ↔
   ¬B(y,x)` matches `DependsForBeing ↔ ¬CanBeWithout`; record prose; and
   snapshot issues/PRs. The classification is `already-recorded` (some unit
-  contains every query item, at least two, or the text names a record
-  exactly), `partially-recorded` (at least half of the items and of its
-  words and identifiers; an operator alone is weak evidence) or
+  has identical normalized proposition text), `partially-recorded` (candidate
+  prior work exists but semantic identity is unknown) or
   `no-match-found`, never
   "novel"; each hit says its evidence kind (an uncertified note, a statement
   whose status is the frontier's, workflow history). `--statement ID` checks a
-  statement's Lean vocabulary and connectives against everything except that
-  statement. Containment is not equivalence: read the hits.
+  statement's original paraphrase against everything except that
+  statement. Text identity does not certify equivalence of interpretations or assumptions.
 
 A listed issue or PR that hands its scope on ("Superseded by #N", "the
 distinct successor #N", "Remaining scope continues in #N") shows `scope
@@ -791,8 +815,8 @@ handed to #N [STATE]`. #1644 benchmarks both commands against the earlier
 lookup workflow (`scripts/retrieval_benchmark.py`,
 `docs/notes/retrieval-benchmark-1644.md`).
 
-Both take `--limit N` (entries per text section, default 6; JSON lists more,
-bounded per group) and `--frontier-json`/`--frontier-root` as `dossier`. Hits
+Both take `--limit N` (entries per text section, default 6; JSON retains complete candidate discovery,
+independent of this presentation limit; `--full-evidence` adds full graph content) and `--frontier-json`/`--frontier-root` as `dossier`. Hits
 are ordered deterministically (coverage, then evidence kind, then path,
 line, number or id). Note and record search reuses `.cache/truth-index.sqlite`
 while its digest matches and rebuilds it otherwise; the JSON `index` field

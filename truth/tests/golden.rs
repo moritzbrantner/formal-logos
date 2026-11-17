@@ -717,6 +717,7 @@ fn normalize(name: &str, stdout: &str) -> String {
     const BIND_TYPES_NOTICE: &str = "  elaborated types: no bind-check cache at ";
     let json_key = match name {
         "note_mentions" => "note_mentions",
+        "evidence_graph" => "evidence_graph",
         "bind_types" => "bind_types",
         "mentioned_by_notes" => "mentioned_by_notes",
         "note_hits" => "",
@@ -741,6 +742,19 @@ fn normalize(name: &str, stdout: &str) -> String {
         };
     }
     match name {
+        "evidence_graph" => {
+            stdout
+                .split("Explicit evidence:")
+                .next()
+                .unwrap_or(stdout)
+                .lines()
+                .filter(|line| !line.ends_with("additional matches available with --json."))
+                .collect::<Vec<_>>()
+                .join("\n")
+                .trim_end()
+                .to_owned()
+                + "\n"
+        }
         "note_mentions" => match stdout.rfind(NOTE_BLOCK) {
             Some(cut) => format!("{}\n", &stdout[..cut]),
             None => stdout.to_owned(),

@@ -235,15 +235,27 @@ def check_key(fixture: dict, snapshot: Path) -> list[str]:
 
 
 def main(argv: list[str] | None = None) -> int:
+    global TRUTH
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    parser.add_argument("--snapshot", type=Path, required=True)
+    parser.add_argument("--snapshot", type=Path)
+    parser.add_argument("--correctness", action="store_true", help="run independent offline tier instead of historical lexical tier")
+    parser.add_argument("--baseline", type=Path, help="baseline binary for --correctness")
     parser.add_argument("--case", action="append", default=[])
     parser.add_argument("--json", type=Path)
     parser.add_argument("--check-key", action="store_true")
     parser.add_argument("--truth", type=Path, help="truth binary (default target/release/truth)")
     args = parser.parse_args(argv)
+    if args.correctness:
+        command = [sys.executable, str(ROOT / "scripts/retrieval_correctness_benchmark.py"),
+                   "--truth", str(args.truth or TRUTH)]
+        if args.baseline:
+            command += ["--baseline", str(args.baseline)]
+        if args.json:
+            command += ["--json", str(args.json)]
+        return subprocess.run(command, cwd=ROOT).returncode
+    if args.snapshot is None:
+        parser.error("--snapshot is required for the historical lexical tier; use --correctness for offline fixtures")
     if args.truth:
-        global TRUTH
         TRUTH = args.truth.resolve()
     fixture = json.loads(FIXTURE.read_text(encoding="utf-8"))
     errors = check_key(fixture, args.snapshot)

@@ -92,7 +92,20 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         ("search", words) if !words.is_empty() => {
             let db = open(&root)?;
             let limit = research.limit.unwrap_or(20);
-            printed(index::search(&db, &words.join(" "), limit).map_err(error)?)
+            let value = index::search(&db, &words.join(" "), i64::MAX).map_err(error)?;
+            let all = value.as_array().expect("search returns an array");
+            let shown = usize::try_from(limit.max(1))
+                .unwrap_or(usize::MAX)
+                .min(all.len());
+            let mut text =
+                serde_json::to_string_pretty(&all[..shown]).map_err(|e| error(e.to_string()))?;
+            if shown < all.len() {
+                text.push_str(&format!(
+                    "\n{} additional hits available with --json.",
+                    all.len() - shown
+                ));
+            }
+            Ok((value, Some(text)))
         }
         ("show", [id]) => printed(index::show(&open(&root)?, id).map_err(error)?),
         ("duplicates", []) => printed(json!(index::duplicates(&open(&root)?).map_err(error)?)),

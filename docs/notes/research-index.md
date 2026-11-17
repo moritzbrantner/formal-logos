@@ -122,7 +122,7 @@ proof, source, dossier and frontier authorities remain unchanged throughout.
 ## Research notes (#952)
 
 Free-form notes are discovery material, not corpus records. `truth index`
-also projects every `docs/notes/**/*.md` file of at most 1 MiB (no other
+also projects every regular `docs/**/*.md` file without a size cutoff (no other
 file type, no generated JSON, no front matter required) into Rust-only
 tables (`notes`, `note_sections`, `note_links`, `note_unresolved`,
 `note_search`). The record tables stay Python's row for row. Note paths

@@ -97,5 +97,8 @@ fn run(args: &Args, operands: &[&str]) -> Output {
     ids.extend(conclusion);
     let shown = usize::try_from(limit).unwrap_or(usize::MAX).max(1);
     with_note_mentions(args, &corpus, &ids, &mut value, &mut text, shown)?;
+    value["evidence_graph"] =
+        super::evidence::expansion(args, &corpus, std::slice::from_ref(&argument))?;
+    text.push_str(&super::evidence::summary(&value["evidence_graph"], 0));
     Ok((value, Some(aliases.humanize(&text))))
 }

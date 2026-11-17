@@ -200,6 +200,7 @@ pub struct BriefArgs {
 /// Every option of every command, parsed in one pass in token order.
 pub struct Args {
     pub machine: bool,
+    pub full_evidence: bool,
     pub root: PathBuf,
     pub positional: Vec<String>,
     pub bridge: BridgeArgs,
@@ -246,6 +247,8 @@ pub struct Accepts {
     pub base: bool,
     /// `--from` and `--for`
     pub issues: bool,
+    /// Offline issue/PR evidence snapshot.
+    pub issues_from: bool,
     /// The [`ConfigurationArgs`] (each command checks which of them apply)
     pub configuration: bool,
 }
@@ -268,6 +271,7 @@ fn integer(value: Option<&str>, flag: &str) -> Result<i64, Failure> {
 pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
     let mut parsed = Args {
         machine: args.iter().any(|arg| arg == "--json"),
+        full_evidence: false,
         root: PathBuf::from("."),
         positional: Vec::new(),
         bridge: BridgeArgs::default(),
@@ -424,6 +428,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                     parsed.index.right.push(value);
                 }
             }
+            "--full-evidence" => parsed.full_evidence = true,
             "--question" | "--statement" => {
                 parsed.brief.flags = true;
                 let value = args
@@ -664,7 +669,7 @@ impl Args {
         if !accepts.issues && self.issues.own() {
             return Err(usage("--from and --for apply only to issues"));
         }
-        if self.issues.issues_from.is_some() {
+        if !accepts.issues_from && self.issues.issues_from.is_some() {
             return Err(usage(
                 "--issues-from applies only to dossier, brief and novelty",
             ));

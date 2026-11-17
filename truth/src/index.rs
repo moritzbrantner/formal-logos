@@ -37,7 +37,7 @@ type Obj = Map<String, Value>;
 pub const SCHEMA: &str = "3";
 /// The projection semantics; bump it when a change must invalidate every
 /// existing index.
-pub const BUILDER: &str = "truth-index-2";
+pub const BUILDER: &str = "truth-index-3";
 /// The database, relative to the checkout. Python's projection lives in
 /// `.cache/research-index.sqlite`; separate files keep the two from
 /// invalidating each other.
@@ -640,11 +640,7 @@ pub fn show_note(db: &Connection, token: &str) -> Result<Value> {
         .optional()
         .map_err(sql)?;
     let Some(title) = title else {
-        return Err(format!(
-            "unknown note: {path} (indexed: {}/**/*.md up to {} bytes)",
-            notes::DIRECTORY,
-            notes::MAX_BYTES
-        ));
+        return Err(format!("unknown note: {path} (indexed: docs/**/*.md)"));
     };
     // `?2` is the section key, or empty for the whole note.
     let section_filter = "s.path=?1 AND (?2='' OR s.key=?2)";
@@ -702,7 +698,7 @@ pub fn search(db: &Connection, query: &str, limit: i64) -> Result<Value> {
         .map(|word| format!("\"{}\"", word.replace('"', "\"\"")))
         .collect::<Vec<_>>()
         .join(" AND ");
-    let limit = limit.clamp(1, 200);
+    let limit = limit.max(1);
     let mut found = rows(
         db,
         "SELECT r.id,r.kind,r.path FROM search JOIN records r ON r.key=search.id WHERE search MATCH ? ORDER BY rank LIMIT ?",
