@@ -1634,3 +1634,252 @@ no change
 Intended and actual premise effects: **none**. The contribution is an exact
 application/coverage audit and checked existing-profile consequences, with a
 specific evidence blocker and a distinct next research route.
+
+## Nonfactive warranted response: coverage without a new authority derivation (2026-11-17)
+
+**Complete outcome for fresh independent challenge.** A properly based response
+can meet its warrant standard without achieving factual understanding. This
+gives the proposed route genuine error coverage and permits an explicit,
+separate suspension interpretation. It does **not** yield a new discriminating
+argument for end-independent force. The most promising positive account values
+the person's responsible use of available evidence rather than success in
+getting the fact right. Its authority still turns on whether that merit counts
+for the indifferent bearer, the isolated relevance commitment already examined.
+The strongest goal-relative account preserves the same basing and warrant
+facts while denying that last transfer without relevant ends/resources.
+
+The route has therefore reached a substantive reassessment point: retain the
+direct prima facie warrant for evidence-responsive correction and all prior
+qualified judgments, but do not advertise the eligibility/warrant apparatus
+as an additional authority proof. There is no materially new test within this
+reconstruction that would settle the remaining transfer. Recommend reallocating
+research to another live root node, subject to the coordinator's ownership
+check, rather than opening another differently named relevance investigation.
+The actual successful-understanding case remains unopened for lack of its
+identified episode evidence.
+
+Baseline: `9bcca33f1f2804aa97cfe282159f9a35a205a053`. The coordinator reports
+independent acceptance without findings of that audit. This continuation does
+not revise publication/check history. Target `related`/`dossier`, question
+`brief`/`novelty`, the two nonfactive premise dossiers and result
+`1db47fd9-6ab1-4fa1-a9dd-0aa9457d8146`'s `context` were inspected. Existing
+#1646 basing and active-treatment findings, ordinary correction warrant and
+the consulted source distinctions are reused; no historical attribution or
+source campaign is added. Live convention source revision remains
+`15f348b072188255da837578eaafc8a98f12fdf0`.
+
+### Fix the response, including suspension's different attitude
+
+The complete preference class is again the two existing values
+`Preference.accuracy` and `Preference.comfort`, with the latter retaining the
+selected absence of a relevant accuracy/understanding end. In **each** case
+below fix one bearer a, consideration r, content p, target attitude t and
+circumstances, including actual truth, evidence, defeaters and active route,
+at both preferences. This is a comparison of force for one response, not an
+experiment that silently changes the response when the preference changes.
+No actual episode or wider psychological coverage is asserted.
+
+Use a generic `Frame` whose `Content` is C and whose `Attitude` is `Sum C C`:
+`believe p = Sum.inl p`, while `Sum.inr p` is suspension **about p**, withholding
+both assent to p and assent to its negation. `about` returns p from either
+constructor. Thus suspension is not disbelief, a false belief, or belief about
+the meta-proposition that the evidence is insufficient. It has the same
+subject matter as belief but is a distinct attitude. The following structural
+mapping elaborated in Lean; it supplies no normative relation or warrant.
+For an actual suspension instance, absence of assent to p and to its interpreted
+negation must also be established in the selected episode. Disjoint token
+constructors alone do not show that an agent lacks another simultaneous
+attitude; the sum type by itself supplies no negation or adoption semantics.
+
+```lean
+import TruthCore.Logic.EpistemicReasonDefinitionFork
+
+def responseAbout {C : Type} : Sum C C → C
+  | .inl p => p
+  | .inr p => p
+
+example {C : Type} (p : C) :
+    responseAbout (Sum.inl p : Sum C C) = p ∧
+    responseAbout (Sum.inr p : Sum C C) = p := ⟨rfl, rfl⟩
+
+example {C : Type} (p q : C) :
+    (Sum.inr p : Sum C C) ≠ Sum.inl q := by
+  intro h
+  cases h
+```
+
+No full `Frame` is manufactured by assigning `force := True` or adding a new
+eligibility flag. The displayed choices specify its attitude/content fields;
+reason attribution, applicable evidence, favoring, actual uptake, warrant and
+force would still need independent interpretation. In a suspension application,
+`CountsAsReason a r (Sum.inr p)` and `EpistemicRole` can express the proposed
+ordinary role. `IndependentInstance` would still require force for that **same**
+suspension at both preferences. `ConsiderationPresentation` links the thin
+`Reason` relation only to `believe p`; it does not derive suspension reasons
+from F6. Neither `SomeEligibleReasonUptake` nor `SomeJustifiedBelief` can be
+repurposed as actual suspension by relabeling its `Believes` predicate.
+
+| Separate application | Fixed response throughout its whole preference comparison | Nonfactive fittingness under the supplied standard | What this does not supply |
+| --- | --- | --- | --- |
+| Warranted error | t = `Sum.inl p`, with p false in these same circumstances at both values | Actual appropriate use of sufficient, undefeated evidence can warrant the belief even though it is false. | Successful factual understanding of p; end-independent force. |
+| Inconclusive evidence | t = `Sum.inr p` at both values | Actual assessment can support withholding both answers when neither has the required support. This is a separately supplied suspension-warrant interpretation. | A belief-uptake witness, full-belief license, or categorical force for suspension. |
+
+Truth and the evidence regime differ **between** these applications, never
+between preference values inside one application. The existence of the second
+cannot repair a missing force instance for the first by switching attitudes.
+Suspension's fittingness must be justified by the actual evidence standard;
+indifference alone does not make it fitting, and the map does not license
+suspending under all decisive evidence.
+
+### The positive nonfactive account and the exact circularity to avoid
+
+The candidate account is personal evidential self-governance: the person
+actually responds through the contents and their evidential relations, with
+adequate premises/rules and no undefeated defeater, rather than allowing a
+comfort cue to determine the answer. This exercises the person's rational
+agency even when innocently misleading evidence prevents true belief. With
+inconclusive evidence, competent withholding can likewise be an active
+assessment, rather than mere failure to form an opinion. The four existing
+basing conditions explain the actual exercise; the active-treatment account
+does not require a further belief that one's evidence supports the response.
+No achieved factual or metaevidential understanding is inserted as a premise.
+
+The positive rationale is that this is an appropriate way for the person to
+manage a factual attitude given their evidence. Ordinary assessment distinguishes
+responsible error from wishful or arbitrary believing; actual truth of the
+answer does not exhaust the merits of how someone responds. This is meaningful
+support for a nonfactive merit claim. The direct correction judgment additionally
+offers prima facie warrant for treating that merit as a reason even when
+unwanted. Neither claim must await an endlessly prior proof of every norm.
+But the second remains an evaluative relevance commitment; the first does not
+deductively supply it.
+
+The Lean declarations expose why the existing warrant result cannot bypass
+that distinction. `SomeEligibleReasonUptake` already assumes a `Reason`, an
+actual `Believes` instance and supplied `Eligible`. The separate calibration
+`EligibleReasonUptakeWarrants` then yields `Warrant`. Its result's only relevant
+direction is from those jointly supplied inputs to warranted actual belief.
+It does not infer `Reason` from warrant, strengthen `Reason` into `force`,
+or make force independent of preference. Interpreting the original `Reason`
+as already possessing that stronger authority and then citing its warranted
+uptake as evidence for that authority would assume what is being sought.
+
+Alternatively, reading `Warrant` as meeting a selected adequacy/permission
+standard allows the goal-relative account to accept the result. Meeting that
+standard is not by itself a reason for its indifferent subject to conform.
+Reading warrant instead as already containing end-independent favoring puts
+the disputed content into its interpretation. Even epistemic permission and
+positive pro tanto favoring must be distinguished; the current conditional
+does not establish their equivalence. These are limits on the proposed use
+of the theorem, not objections to its valid conditional proof.
+
+### Strongest goal-relative explanation; where this route converges
+
+The rival accepts content-sensitive basing, evidence-dependent appropriateness,
+the possibility of warranted error, and the distinctive response of suspension.
+Evidence and its reliability/background relations explain why one response
+meets the epistemic standard; the agent's relevant concerns or sound
+deliberative resources explain when conforming gives the agent a reason.
+It can explain both the propriety of using the available evidence and why a
+person engaged in accuracy-directed inquiry should use it, without granting
+force at the genuinely indifferent profile. The actual process account and
+nonfactive scope are positive parts of that explanation, not an invented
+possibility of error. The richer internalist version and its explanatory
+rationale remain as examined at the granted-benefit checkpoint; a current
+accuracy desire is not its only possible practical resource.
+
+The authority-supporting reply is that appropriate evidential self-governance
+already gives its bearer a reason because it is their rational activity,
+regardless of whether a further end makes it useful. This is an intelligible
+basic evaluative position, with the direct warrant already recorded. It can
+also propose that proper response is a nonfactive constituent good. That
+would be a **different good from achieved factual understanding**; the accepted
+success-benefit grant cannot simply be reused as its certificate. Even granting
+this new good for conditional exploration, the benefit-granting rival can
+still deny its force without a relevant practical resource. The transfer is
+then exactly the prior isolated commitment: a genuine cognitive merit/good
+counts for its bearer even absent a relevant end.
+
+Thus the move from successful understanding to nonfactive proper response
+removes an actual coverage restriction, but does not remove the authority
+dispute. Asking instead why warrant, fittingness, responsibility, capacity
+exercise or rational self-governance is binding returns to that same transfer
+unless a new argument supplies discriminating warrant. Mere renaming supplies
+none. No substantive new defeater of the retained direct correction judgment
+has been found here, and the surviving rival does not make that warrant
+worthless. Equally, the expanded response classification is not a new
+independent defeat of the rival or a derived preference-independent instance.
+
+### Precise stopping point and allocation recommendation
+
+The bounded route is now assessed: nonfactive epistemic merit accommodates
+warranted error; a distinct suspension attitude has an explicit structural
+map; actual basing and warrant remain independently supplied application
+conditions; and the force comparison retains one witness across both values.
+The remaining authority step is the same isolated normative relevance
+commitment, not a missing probability calculation, richer success model or
+unknown historical interpretation. The existing direct warrant remains
+available as a basic ground; no new opaque axiom or registered transcription
+is justified by this continuation.
+
+Rejected approaches: reverse the warrant conditional; smuggle stronger force
+into its `Reason` or `Warrant` input; declare every well-executed procedure a
+bearer-benefit; infer authority from actual use alone; require achieved
+metaevidential understanding for every rational response; or use a suspension
+witness at one preference to replace the belief witness at the other. The
+first two assume or reverse the sought inference; the rest change its target,
+scope or evaluative premise. A further generic omission model would only
+repeat the already checked separation of role and force.
+
+**Blocker/reopening condition:** a new substantive argument must explain why
+the selected nonfactive merit has force for an agent without a relevant end
+or sound-deliberative connection, rather than merely reclassify the merit or
+encode that transfer. It may support or challenge the retained relevance
+judgment, but must add a discriminating premise, independently motivated
+mechanism or consequence under the fixed senses. An actual properly based
+episode alone would strengthen application evidence, not decide this normative
+transfer. The separate actual-success route reopens only on its already
+specified episode evidence.
+
+Recommend **reallocation to another currently unowned live root node** after
+review of this outcome. This is a recommendation for the coordinator, not a
+new issue, ownership claim or claim that #930 is philosophically settled.
+No successor investigation should be opened merely to rename this same
+relevance step. The note's earlier successful and qualified local findings
+retain their status; this branch has delivered coverage clarification and a
+precise exhausted inference, with no new authority derivation or root closure.
+
+Self-sweep: the displayed Lean check verifies only the attitude/content mapping
+and disjoint constructors. No `force`, normative benefit or warrant is assigned
+by it. Warranted error is not called factive understanding; suspension is not
+called belief; eligibility is not called end-independent authority. The
+existing warrant theorem's `Reason` premise remains visible. No new source
+claim, corpus proposition, proof registration or opaque normative predicate is
+introduced. All consequential findings here are proposed for fresh independent
+challenge.
+
+Verification: the displayed structural mapping elaborated without diagnostics
+using `flock /tmp/moenarch/truth-core-heavy.lock python3 scripts/worker_env.py
+-- lake env lean /tmp/epistemic-930-nonfactive-attitudes.lean`. The displayed
+block preserves its substantive contents for reproduction. No library module
+changed; this is not a new registered result or Comparator/NanoDa certificate.
+Corpus validation, offline attribution check (no changed stating claims),
+documentation/import generator checks and whitespace validation passed.
+No previous finite calculation, full proof gate or source acquisition was
+repeated. Fresh independent challenge of this outcome and coordinator-owned
+final CI remain separate from these checks.
+
+Computed with `python3 scripts/worker_env.py -- target/release/truth
+frontier-diff --base 9bcca33f1f2804aa97cfe282159f9a35a205a053`:
+
+```text
+open premises reaching the root: 494 (353 bare, 90 supported, 51 stated) -> 494 (353 bare, 90 supported, 51 stated)
+expanded-route diagnostic (lowest cost): Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16) -> Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16)
+distinct verified support alternatives: 494 -> 494
+verified support alternatives added: 0
+no change
+```
+
+Intended and actual formal premise effects: **none**. The outcome is improved
+response coverage, an explicit attitude map and a precise exhausted authority
+inference, with reallocation recommended rather than another duplicate branch.
