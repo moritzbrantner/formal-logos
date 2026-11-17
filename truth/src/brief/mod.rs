@@ -356,6 +356,97 @@ fn note_evidence(
     Ok((out, assessments))
 }
 
+/// Compact note assessments for a batch of statements. Reads each note once;
+/// uses the same explicit mentions and section extraction as a full brief.
+/// A note mentioning a statement's argument is context, not an endorsement.
+pub fn assessment_batch(
+    root: &Path,
+    corpus: &Corpus,
+    ids: &BTreeSet<String>,
+) -> Result<Value, String> {
+    let lookup = notes::Lookup::of_corpus(corpus);
+    let mut owners: BTreeMap<String, BTreeSet<String>> = BTreeMap::new();
+    let mut out: BTreeMap<String, Vec<Value>> =
+        ids.iter().map(|id| (id.clone(), Vec::new())).collect();
+    for id in ids {
+        if corpus.get("statements", id).is_none() {
+            return Err(format!("unknown statement: {id}"));
+        }
+        owners.entry(id.clone()).or_default().insert(id.clone());
+    }
+    for argument in corpus.entries("arguments") {
+        let conclusion = text(&argument.fields, "conclusion_statement_id");
+        if ids.contains(conclusion) {
+            owners
+                .entry(text(&argument.fields, "id").to_owned())
+                .or_default()
+                .insert(conclusion.to_owned());
+        }
+    }
+    let mut theorem_records = Vec::new();
+    for result in corpus.entries("results") {
+        if let Some(targets) = owners.get(text(&result.fields, "argument_id")).cloned() {
+            if let Some(needle) = theorem_needle(text(&result.fields, "theorem")) {
+                theorem_records.push((needle, text(&result.fields, "id").to_owned()));
+            }
+            owners
+                .entry(text(&result.fields, "id").to_owned())
+                .or_default()
+                .extend(targets);
+        }
+    }
+    for (path, bytes) in notes::read_all(root)? {
+        let raw = String::from_utf8(bytes).map_err(|error| format!("{path}: {error}"))?;
+        let note = notes::parse(&path, &raw);
+        let mut matched: BTreeMap<String, BTreeSet<String>> = BTreeMap::new();
+        for section in &note.sections {
+            for link in lookup.links(section).0 {
+                if let Some(targets) = owners.get(&link.id) {
+                    for target in targets {
+                        matched
+                            .entry(target.clone())
+                            .or_default()
+                            .insert(link.id.clone());
+                    }
+                }
+            }
+        }
+        for (needle, result_id) in &theorem_records {
+            if note
+                .sections
+                .iter()
+                .any(|section| names_lean(&section.body, needle))
+            {
+                for target in &owners[result_id] {
+                    matched
+                        .entry(target.clone())
+                        .or_default()
+                        .insert(result_id.clone());
+                }
+            }
+        }
+        if matched.is_empty() {
+            continue;
+        }
+        let sections = assessment_sections(&note, &raw);
+        for (target, mentions) in matched {
+            for section in &sections {
+                let mut entry = section.clone();
+                entry["path"] = json!(path);
+                entry["matched_record_ids"] = json!(mentions);
+                if let Some(entries) = out.get_mut(&target) {
+                    entries.push(entry);
+                }
+            }
+        }
+    }
+    // Location order deliberately makes no claim about philosophical priority.
+    for entries in out.values_mut() {
+        entries.sort_by(|a, b| a["section"].as_str().cmp(&b["section"].as_str()));
+    }
+    Ok(json!({"boundary": BOUNDARY, "statements": out}))
+}
+
 /// The shortest name a note uses for a result theorem: its last two
 /// components (`OriginExerciseBridge.noSelfOriginFromNoSelfProduction`);
 /// `None` for a name with fewer.

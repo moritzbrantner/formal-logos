@@ -785,6 +785,13 @@ status, judgment or record.
   the snapshot that name it, target it in an acceptance block or are
   referenced from those notes; `truth related` neighbours; and an `absent`
   list of what is not recorded or unknown.
+- `brief --assessments-for ID,ID,...`: compact JSON projection for the current-case
+  page. Reads each note once, retains every assessment/rival excerpt from notes
+  explicitly mentioning a requested statement or its concluding argument/result,
+  and supplies path, line and matched-record provenance. Empty lists mean unknown;
+  note-wide context is not an assessment of every mentioned statement. Reuses the
+  existing brief section extraction, with no full evidence graph, reconciliation,
+  endorsement or strength ranking. IDs/labels/aliases use the normal resolver.
 - `brief --question TEXT`: the notes the `truth index` FTS5 projection ranks
   for any query word (by stem prefix) or identifier, each scored paragraph by
   paragraph and heading by heading (coverage = query items found in one
