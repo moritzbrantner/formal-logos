@@ -53,6 +53,9 @@ jobs:
           cargo fmt --all --check
           cargo clippy --locked -p truth --all-targets -- -D warnings
           cargo test --locked -p truth
+      - uses: astral-sh/setup-uv@37802adc94f370d6bfd71619e3f0bf239e1f3b78 # v7
+      - name: Verify exact support-formula analysis
+        run: uv run scripts/support_formula.py --self-test
       - name: Save Cargo downloads and workspace build output
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && steps.cargo-cache.outputs.cache-hit != 'true'
         uses: actions/cache/save@caa296126883cff596d87d8935842f9db880ef25 # v5
@@ -94,6 +97,29 @@ jobs:
       # the truth-cli job runs its Rust tests and replays the frozen golden snapshots.
       - name: Build the truth CLI
         run: cargo build --locked --release -p truth
+      # Reuse the existing nightly/manual run. Full symbolic counts are research
+      # diagnostics, not a per-PR gate or a score of philosophical strength.
+      - uses: astral-sh/setup-uv@37802adc94f370d6bfd71619e3f0bf239e1f3b78 # v7
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+      - name: Recalculate exact support combinations
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          set -euo pipefail
+          uv run scripts/support_formula.py \
+            --truth target/release/truth \
+            --output target/support-formula/report.json \
+            --graph-output target/support-formula/graph.json \
+            --bdd-output target/support-formula/exact.json \
+            --baseline scripts/testdata/support-formula-2026-11-13.json \
+            | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Upload exact support-formula report
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: support-formula
+          path: target/support-formula/
+          if-no-files-found: error
+          retention-days: 30
       - name: Validate changed batch specs and exploration maps without writing generated files
         env:
           EVENT: ${{ github.event_name }}

@@ -47,6 +47,7 @@ mod sort_lists;
 mod status;
 mod strength;
 mod structure;
+mod support_graph;
 mod territory;
 mod thickness;
 mod tree;
@@ -79,6 +80,7 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] next-steps [--frontier-root STATEMENT]
        truth [--root PATH] [--json] arguments
        truth [--root PATH] [--json] results
+       truth [--root PATH] [--json] support-graph [STATEMENT ...]
        truth [--root PATH] [--json] sort-lists
        truth [--root PATH] [--json] lexicon (show WORD | untraced | coverage | check | bootstrap | allowlist | ratchet --base REV) [--limit N] [--write]
        truth [--root PATH] [--json] definitions (status [--limit N] | refresh [--write] [--lean-json FILE]
@@ -164,6 +166,7 @@ pub const COMMANDS: &[Command] = &[
     bind_check::COMMAND,
     structure::STRUCTURE,
     structure::REPORT,
+    support_graph::COMMAND,
     strength::COMPARISONS,
     strength::REPORT,
     unused_premises::COMMAND,

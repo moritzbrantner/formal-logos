@@ -33,6 +33,7 @@ pub(crate) mod sha256;
 pub mod strength;
 pub mod structure;
 pub mod subprocess;
+pub mod support_graph;
 pub mod territory;
 pub mod thickness;
 mod transcription;
