@@ -1,6 +1,6 @@
 # Divine hiddenness and nonresistant nonbelief
 
-This is the independent objection of [#252](https://github.com/moritzbrantner/truth-core/issues/252), within [#143](https://github.com/moritzbrantner/truth-core/issues/143). It concerns missing access to conscious relationship, even where no suffering is alleged. The logical problem of evil [#150](https://github.com/moritzbrantner/truth-core/issues/150) and evidential/natural evil [#168](https://github.com/moritzbrantner/truth-core/issues/168) therefore remain separate. Neither an answer to evil nor an argument for a first cause automatically answers hiddenness.
+This is the distinct argument of [#252](https://github.com/moritzbrantner/truth-core/issues/252), within [#143](https://github.com/moritzbrantner/truth-core/issues/143). It concerns missing access to conscious relationship, even where no suffering is alleged. That separates its immediate subject matter from the intense-suffering signature used for [Rowe's argument](rowe-evidential-evil.md), not from every broad problem of evil. It can be treated as a special case of deprivation and divine permission if the relational good, its being due, and the permission norm are made explicit. The [2026-11-17 mapping](#hiddenness-as-a-special-case-of-evil-2026-11-17) below states those conditions. Neither a generic answer to evil nor an argument for a first cause automatically supplies them.
 
 ## The strongest argument encoded here
 
@@ -200,3 +200,117 @@ Witness-local validation: six results pass Comparator and NanoDa with no permitt
 axioms; six premise bindings have zero mismatches. Corpus, bundle, attribution
 and generated-output checks pass. The computed positive-root frontier and
 thickness deltas are unchanged. Delivered-head CI and review remain required.
+
+## Hiddenness as a special case of evil (2026-11-17)
+
+**Assessment.** The owner's proposed inclusion is defensible under a broad
+deprivation-and-permission account of evil. A capable person's missing conscious
+relationship can be the relevant loss even if that person is not distressed.
+No intense-suffering premise is then needed. The earlier opening's inference
+from “no suffering alleged” to wholesale separation from evil was too strong;
+it is corrected above. The inclusion is a classification of the challenge,
+not a proof that the required relationship is unconditionally due at every
+capable time, nor a proof that all hiddenness arguments have an evidential
+rather than deductive form.
+
+### Exact conditional mapping
+
+The following is an analyst reconstruction using existing predicates in
+`TruthCore.Hiddenness.Sig`; it adds no new Lean declaration or source claim.
+
+| Broad permission question | Hiddenness instance | Existing anchor and condition |
+| --- | --- | --- |
+| What good is missing, in whom, when? | Immediate opportunity for conscious reciprocal relationship with God, for person `p` at time `t` | `Available actual p t`; it is not salvation, felt presence, implicit orientation or voluntary acceptance. |
+| Is the subject apt for that good? | Capacity for that relationship at that time, with no resistance causally explaining nonbelief | `WitnessLocalHiddenness.Gap`; the empirical statement is `62d4c4c4-9834-5acb-ba7b-260e040c7009`. Aptness alone does not establish an unconditional divine duty to supply it now. |
+| Is the good actually unavailable? | Nonbelief excludes that conscious access | `STMT-HIDDENNESS-ACCESS-NEEDS-BELIEF` (`7a22ab5d-e728-58a0-b6f1-48d944e6e216`) at the same witness; no inference from another person's or another time's belief. |
+| Which perfection of the proposed God forbids unjustified permission? | Perfect love, reached from the target God conception | `STMT-HIDDENNESS-GOD-LOVES` (`0edc0b38-46b0-567a-9f72-64e16b30c77b`); the first-cause-to-personal-love connection is not supplied by the word “God.” |
+| What norm connects that perfection to prevention of the deprivation? | Love provides access for capable nonresisters absent a sufficient reason for delay | `STMT-HIDDENNESS-QUALIFIED-OPEN` (`2835fac8-35cb-56cf-85e4-cbde536a94a2`). The stronger `STMT-HIDDENNESS-ALWAYS-OPEN` (`962a62c9-f72a-54c4-949e-d1c5dad6f8e1`) requires access without that qualification. |
+| What makes the permitted deprivation unjustified? | Absence of a sufficient love-compatible reason for this access gap | `GoodReason actual p t` concerns positive sufficiency, not whether an observer recognizes a reason; `STMT-HIDDENNESS-REASON-FOR-EACH-GAP` (`c3b32d5d-e5a4-5c01-9344-c220430c8b63`) is the positive reply obligation. |
+
+At the actual world abbreviate perfect love by `L`, access by `A(p,t)`, and
+sufficient reason by `R(p,t)`. Retaining the same actual witness throughout,
+the qualified argument has the transparent shape:
+
+1. God implies `L`.
+2. There is a capable, causally nonresistant nonbeliever `(p,t)`.
+3. This nonbelief implies `¬ A(p,t)`.
+4. `L`, capacity, nonresistance and `¬ R(p,t)` imply `A(p,t)`.
+5. This very gap has `¬ R(p,t)`.
+
+Assuming God yields both access and its negation. The deduction does not need
+the person to suffer, does not infer voluntary refusal from nonbelief, and does
+not combine two unrelated existential witnesses. Step 5 is not supplied by
+failing to detect a reason. With the actual empirical witness, the openness and
+belief norms give the same permission structure as a broad evil challenge:
+an actual deficiency, a divine perfection and an allegedly unjustified failure
+to prevent it. This prose deduction has not been registered or freshly verified
+as a result.
+
+The original Schellenberg route uses unconditional openness at step 4 and so
+does not need a separate step 5. That is a stronger normative position, not an
+observed fact about reasons inserted by definition. Conversely, qualified
+openness plus actual nonaccess yields `¬¬ R(p,t)`; deriving the positive reason
+from that alone would use a classical step. The existing reply keeps
+`ReasonForEachGap` as an explicit positive commitment, so this audit does not
+silently strengthen its constructive content or infer an actual sufficient
+reason from the finite delayed model.
+
+This subsumption is presently conceptual. There is no registered identification
+of `Available` with the q.48 `Has` relation or of relationship aptness with its
+`Due` predicate. Nor is `GoodReason` identified with Rowe's `BlockingCost`:
+the latter is a particular necessary-cost vocabulary and does not itself define
+morally sufficient permission. Importing Rowe's exact intense-suffering theorem
+would additionally require an intense-suffering witness, which a hiddenness
+case need not provide. The generalization therefore preserves the useful shared
+structure without asserting a false equality between the existing signatures.
+
+### What the inclusion answers and what it leaves
+
+**The strongest reply** challenges unconditional immediacy rather than pretending
+the relevant good is absent from the objection. A relationship can involve
+formation, freely sustained attention, mediated encounter and appropriate timing;
+the existing Rea reading supplies such candidate reasons for silence. The
+recorded qualified model proves that this proposal can satisfy the encoded
+love/access conditions while containing a gap. It supplies no actual reason.
+
+**The strongest remaining challenge** asks why modest recognizable access would
+frustrate those goods for this person now. The existing
+`HIDDENNESS-BELIEF-WITHOUT-ACCEPTANCE` distinction defeats a simple claim that
+belief compels acceptance. It leaves subtler motivational or developmental
+considerations to be assessed. The critic can grant that God need not produce
+constant vivid presence and still ask why entering reciprocal conscious relation
+is unavailable merely by trying. Citing later salvation, an implicit relationship,
+or some possible benefit of delay does not answer that exact question.
+
+The comparison is now more focused: defend either immediate access as required
+at an aligned actual gap, or a sufficient reason for its delay. A bare necessary
+being or an impersonal source is not directly targeted; application to the
+stage-one `STMT-GOD-EXISTS` still requires the existing
+`ActualRoot.RouteIdentification IsGod s`. Similarly, the evil argument's
+omniscient/omnipotent/wholly-good target and hiddenness's personal-love target
+must be connected before a result about one settles the other.
+
+**Provisional cumulative finding.** Hiddenness can count as a relational species
+of a broadly stated evil/permission challenge. That removes an unnecessary
+taxonomic separation and allows the same actual-versus-apparent reason audit.
+It does not collapse the distinctive love-to-access premise, the person's
+capacity/nonresistance, or the empirical distribution into ordinary suffering.
+If a combined case uses the same deprivation or shared permission judgment
+twice, it cannot count those as independent evidence without an additional
+argument. Distinct evidence about relationship access may still add information.
+
+Next discriminating test: use an already recorded capable/nonresistant case,
+state what modest access would involve at the selected time, and compare the
+best proposed reason for withholding that access with the strongest less costly
+alternative. Keep the actual-gap evidence separate from the duty of immediate
+access and the judgment that no sufficient reason exists. The
+[evil audit](rowe-evidential-evil.md#sense-by-sense-objection-audit-2026-11-17)
+records the shared permission and evidential-sensitivity tests. No new premise
+truth, root defeat, source attribution or certification is claimed by this prose
+mapping; independent semantic review of this final formulation remains required.
+
+**Integration review (2026-11-17):** fresh independent semantic challenge of
+this dated continuation and the coordinator conclusions found no substantive
+defects; no repair round was required. This supersedes the pending-review work
+status above. See the [integration record](notes/unique-feedback-explanation-311.md#reviewed-owner-reply-integration-2026-11-17)
+for verification, source scope and unchanged formal status.

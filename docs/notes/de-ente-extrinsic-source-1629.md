@@ -242,3 +242,153 @@ The step concluded here is consumed by the three-stage reconstruction in
 whose esse is its essence, every distinct esse descending from one, and a
 root-purity sibling that makes `457698e4` reach the root without any
 efficiency claim.
+
+## Intrinsic actuality and the alternative's own commitments (2026-11-17)
+
+**Target.** Causal coverage `d1f3ffcc-04f2-4683-b385-2bfb2baf3f10` and the
+nature-source interpretation `600f91cb-ac5e-4283-b078-26b941fe2211`, as used by
+`8477d8c7` / `42a89226` to reach the mode-unspecified
+other-cause statement `457698e4`. The question is whether an intrinsic principle
+is an adequate alternative account of the **same actual individual's esse**.
+The owner's reply is strongest when it concerns that actuality, rather than
+requiring an external explanation of every difference between essential kinds.
+
+**Reuse and source boundary.** Re-read the exact `ExtrinsicSource` and
+`EsseSource` types, [intrinsic-existence-reason-1595.md](intrinsic-existence-reason-1595.md),
+[necessary-being-five-senses.md](necessary-being-five-senses.md), and the full
+n.6 continuation of [scg-i22-contingent-conjunction.md](scg-i22-contingent-conjunction.md#the-full-n6-belonging-source-location-and-a-co-constitutive-rival-1623-2026-11-14).
+Their essential-existence, explanation, underivedness and essence–esse identity
+distinctions remain in force. Re-read the public Latin *De ente* [69872],
+[69874] and *SCG* I.22 [23715–23718] as orientation alongside the retained
+source records. This continuation creates no attribution or source claim.
+Canonical context for `8477d8c7`, related/dossier/brief for `d1f3ffcc`,
+dossier for `600f91cb`, and a combined novelty search were inspected at baseline
+`c1037682`. Retrieval reconfirmed the existing conditional work; it does not
+certify this judgment. No issue snapshot was supplied, so absent issue hits
+are not treated as evidence of novelty.
+
+### The positive reply, without an efficient-cause shortcut
+
+1. **An essential specification does not actualize its own instance merely by
+   being intrinsic.** A nature can explain what an instance is and what follows
+   if it exists. The same account does not yet explain why this individual is
+   actual. Spinoza's individual-versus-nature test, retained in #1595, already
+   distinguishes these questions. This is a substantive explanatory shortfall,
+   not just a failed implication between unconstrained predicates.
+2. **Actual exercise cannot be obtained by repeating the explanandum.** If the
+   principle explains existence only when it is already realized in this
+   individual, the account still owes that realization, unless it positively
+   explains why this realization needs no further source. Existing
+   `TargetCopyExpansion` supplies the logical warning: copying the target's truth
+   into a reason and then assigning sufficiency supplies no explanatory direction.
+   It does not prove that every intrinsic explanation is such a copy.
+3. **Intrinsic location does not defeat the actual-other-cause conclusion.** If
+   an intrinsic constituent is itself a distinct actual being and causes x's esse
+   in the selected `CausesIn` sense, it already satisfies `457698e4`. The statement
+   requires numerical otherness, not non-constituency. A mere principle in the
+   `Principle` carrier is not automatically such a being, however; nor is a formal
+   explanation automatically the prohibited efficient self-production.
+4. **An actual self-subsistent answer may concede the sought intermediate.** If
+   the proposed whole is already actual and its esse is genuinely unreceived
+   from any distinct source in the relevant order, it grants an underived
+   actual being in that order. This is useful convergence with the foundation
+   route even if the rival calls the bearer natural. If the account instead
+   treats the whole's actuality as a primitive fact, its stopping point is brute
+   actuality; describing its internal constitution has not removed that choice.
+
+The first two steps favor the received-esse account over a merely specifying
+intrinsic principle. The third prevents an artificial dispute over where the
+source is located. The fourth tests what an alternative actually concedes. None
+assumes that all possible explanations are efficient causes, or proves that
+every account must fall into these four descriptions.
+
+There is a real limit to the owner's contrastive question. Different natures
+can account for why one kind has a feature another lacks; demanding a further
+external cause solely because the natures differ would need an additional
+principle. Also, an intrinsic property need not be essential. The relevant
+proposal here specifically selects an **own-nature principle**. Its hard test
+is existential adequacy for its actual bearer, not the mere fact that another
+nature lacks it.
+
+### When the alternative grants necessary existence
+
+The exact reusable inference is
+`BruteFoundationExplanations.necessaryReasonAndNecessitation`: a reason present
+throughout the accessible worlds, together with its sufficient entailment of
+**this same individual's** existence there, yields `NecessaryAt` for that
+individual. The theorem is existing library code; this continuation neither
+registers a new result nor freshly certifies it. For an **actually existing**
+necessary bearer, actuality must also be retained: `NecessaryAt` alone uses an
+arbitrary accessibility frame and does not supply actual presence without a
+suitable frame condition.
+
+| What the intrinsic account supplies | What is conceded |
+| --- | --- |
+| A definition or a predicate called necessary existence | No instance from the name alone. |
+| Existence placed in the bearer's essence (`OwnEssentialExistence`) | The source-indexed essence claim; its existential adequacy and modal realization remain distinct. |
+| An actual bearer plus an independently characterized, necessary reason necessarily sufficient for its existence | That same actual necessary bearer. Calling this a non-theistic alternative does not remove the concession. |
+| An actual bearer whose esse needs no distinct source in the selected order | Underived actuality in that order; modal necessity does not follow just from underivedness. |
+| Both preceding substantive commitments | An actual necessary, underived bearer; uniqueness, universality of sourcehood and the God-description still require their own arguments. |
+
+If reason-presence is defined as the individual's existence, the modal inference
+reduces to assuming its conclusion. If the account starts from a concept without
+an actual witness, it needs a warranted possibility-to-actuality argument and
+the relevant modal assumptions. Thus the owner's ontological reply is correct
+**conditionally**: a genuinely existentially sufficient essential-necessity
+account can supply a necessary-being route. Adding a predicate cannot do so.
+This also avoids treating the a posteriori concession of an already actual
+necessary being as though it were an a priori existence proof.
+
+### The remaining concrete challenge and current judgment
+
+The retained immanent-constitution challenge has more substance than a tag:
+Aristotle H.6 and *De ente* c.1 explain a composite through potential matter
+and actual form without a further constituent tying two already actual objects
+together. It defeats an unrestricted “distinct principles require a third
+uniter” shortcut. It does **not** yet explain a first bearer's esse outside
+its quiddity: the paradigm's matter/form are within the composite essence,
+their roles are asymmetric, and productive causation is allowed. As #1623
+records, applying that mechanism to a pure-act first bearer also encounters
+the separate potency objection of *SCG* I.22 n.7. That objection requires real
+act/receptive-potency interpretation, not inequality of two labels.
+
+**Overall provisional judgment:** the generic “intrinsic principle” reply is
+not an established alternative complete explanation. Its specifying version
+misses the target, its actual-other-source version satisfies the selected
+conclusion, and its adequate necessary/underived version may concede the central
+intermediate. The immanent-constitution mechanism remains a targeted challenge
+to causal coverage's application; its extension to an unreceived first esse is
+not supplied by the inspected evidence. This improves the positive case and
+narrows the live comparison without declaring coverage or efficiency proved.
+Brute actuality remains a substantive stopping-policy dispute. There is no
+independent-proof quota: coverage may be accepted as a primitive for its
+explanatory merits, with these commitments visible.
+
+**Current root connection.** Historical “no root connection” and untyped-
+efficiency blockers above are superseded. #1628's `e6337182` consumes
+`457698e4` on the root-purity route. #1633 aligns `33ad148b` with the same
+mode-unspecified proposition and separately types efficiency; its bridge
+`58e6ec63` remains substantive. Neither change establishes the real application
+of coverage `d1f3ffcc` or its nature-source bridge `600f91cb`; their existing
+derivational statuses are unchanged. The source-first path through common
+source `c35b1a5c`, fixed-esse
+causality `da09703b` and the twelve-input GOD_4 consumer `c98328f1` still needs
+its actual-grounding, priority, grading, causal transfer, component and nominal
+interfaces. A necessary/underived concession alone cannot replace that bundle.
+
+**Next test / stop.** Reuse #1623's same-bearer substantial-belonging test:
+does the proposed intrinsic principle account for actual esse without
+presupposing it, and, if so, is the source its own nonreceived actuality or a
+genuinely distinct principle? Preserve the formal/efficient and
+principle/bearer distinctions. Reopen for a positively specified first-esse
+co-constitution that answers this test, or a general adequacy argument excluding
+it; another arbitrary `fromNature` assignment will not discriminate. No new
+Lean vocabulary is needed for the present explanatory judgment. Statement types,
+proofs, definitions, senses and premise statuses are unchanged; existing formal
+evidence is reused, not certification of this prose.
+
+**Integration review (2026-11-17):** fresh independent semantic challenge of
+this dated continuation and the coordinator conclusions found no substantive
+defects; no repair round was required. This supersedes the pending-review work
+status above. See the [integration record](unique-feedback-explanation-311.md#reviewed-owner-reply-integration-2026-11-17)
+for verification, source scope and unchanged formal status.
