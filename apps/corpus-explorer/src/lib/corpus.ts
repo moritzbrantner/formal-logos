@@ -474,13 +474,87 @@ export function getCorpus(): Corpus {
   return corpus;
 }
 
+/** Keep the first match, as Array.find does even for an invalid duplicate id. */
+function firstById<T extends { id: string }>(records: readonly T[]) {
+  const index = new Map<string, T>();
+  for (const record of records) {
+    if (!index.has(record.id)) index.set(record.id, record);
+  }
+  return index;
+}
+
+/** Each bucket retains collection order, with one entry per matching record. */
+function groupByLinks<T>(records: readonly T[], links: (record: T) => readonly string[]) {
+  const index = new Map<string, T[]>();
+  for (const record of records) {
+    for (const key of new Set(links(record))) {
+      const matches = index.get(key);
+      if (matches) matches.push(record);
+      else index.set(key, [record]);
+    }
+  }
+  return index;
+}
+
+function termUses<T extends TermLinks>(records: readonly T[]) {
+  return {
+    definition_ids: groupByLinks(records, (record) => record.definition_ids ?? []),
+    disambiguation_ids: groupByLinks(records, (record) => record.disambiguation_ids ?? []),
+  };
+}
+
+function buildQueryIndexes(corpus: Corpus) {
+  return {
+    definitions: firstById(corpus.definitions),
+    sources: firstById(corpus.sources),
+    passages: firstById(corpus.passages),
+    statements: firstById(corpus.statements),
+    claims: firstById(corpus.claims),
+    inferences: firstById(corpus.inferences),
+    arguments: firstById(corpus.arguments),
+    results: firstById(corpus.results),
+    candidates: firstById(corpus.candidates),
+    disambiguationsByDefinition: groupByLinks(corpus.disambiguations, (entry) => entry.sense_definition_ids),
+    passagesBySource: groupByLinks(corpus.passages, (entry) => [entry.source_id]),
+    claimsByStatement: groupByLinks(corpus.claims, (entry) => [entry.statement_id]),
+    claimsBySource: groupByLinks(corpus.claims, (entry) => [entry.source_id]),
+    argumentsByUsedStatement: groupByLinks(corpus.arguments, (entry) => [
+      ...entry.premise_statement_ids,
+      ...(entry.commitment_statement_ids ?? []),
+    ]),
+    argumentsByConclusion: groupByLinks(corpus.arguments, (entry) => [entry.conclusion_statement_id]),
+    resultsByArgument: groupByLinks(corpus.results, (entry) => [entry.argument_id]),
+    statementTerms: termUses(corpus.statements),
+    claimTerms: termUses(corpus.claims),
+    argumentTerms: termUses(corpus.arguments),
+  };
+}
+
+// Like recordIndexes below, these indexes belong to an immutable corpus snapshot.
+// getCorpus() supplies a new snapshot outside production; no index crosses it.
+const queryIndexes = new WeakMap<Corpus, ReturnType<typeof buildQueryIndexes>>();
+
+function queries(corpus: Corpus) {
+  let index = queryIndexes.get(corpus);
+  if (!index) {
+    index = buildQueryIndexes(corpus);
+    queryIndexes.set(corpus, index);
+  }
+  return index;
+}
+
+/** Filter helpers have always returned arrays that callers may sort or modify. */
+function matches<T>(index: Map<string, T[]>, id: string): T[] {
+  return index.get(id)?.slice() ?? [];
+}
+
 export function findDefinition(corpus: Corpus, definitionId: string) {
-  return corpus.definitions.find((definition) => definition.id === definitionId);
+  return queries(corpus).definitions.get(definitionId);
 }
 
 /** The disambiguations that list this definition as one of their senses. */
 export function disambiguationsForDefinition(corpus: Corpus, definitionId: string) {
-  return corpus.disambiguations.filter((disambiguation) => disambiguation.sense_definition_ids.includes(definitionId));
+  return matches(queries(corpus).disambiguationsByDefinition, definitionId);
 }
 
 export type Terms = { definitions: CorpusDefinition[]; disambiguations: CorpusDisambiguation[] };
@@ -506,68 +580,64 @@ export function termsFor(corpus: Corpus, records: TermLinks[]): Terms {
 
 /** Statements, claims and arguments that link a definition or disambiguation. */
 export function usesOfTerm(corpus: Corpus, field: keyof TermLinks, id: string) {
-  const links = (record: TermLinks) => record[field]?.includes(id) ?? false;
+  const index = queries(corpus);
   return {
-    statements: corpus.statements.filter(links),
-    claims: corpus.claims.filter(links),
-    arguments: corpus.arguments.filter(links),
+    statements: matches(index.statementTerms[field], id),
+    claims: matches(index.claimTerms[field], id),
+    arguments: matches(index.argumentTerms[field], id),
   };
 }
 
 export function findSource(corpus: Corpus, sourceId: string) {
-  return corpus.sources.find((source) => source.id === sourceId);
+  return queries(corpus).sources.get(sourceId);
 }
 
 export function findPassage(corpus: Corpus, passageId: string) {
-  return corpus.passages.find((passage) => passage.id === passageId);
+  return queries(corpus).passages.get(passageId);
 }
 
 export function findStatement(corpus: Corpus, statementId: string) {
-  return corpus.statements.find((statement) => statement.id === statementId);
+  return queries(corpus).statements.get(statementId);
 }
 
 export function findClaim(corpus: Corpus, claimId: string) {
-  return corpus.claims.find((claim) => claim.id === claimId);
+  return queries(corpus).claims.get(claimId);
 }
 
 export function findInference(corpus: Corpus, inferenceId: string) {
-  return corpus.inferences.find((inference) => inference.id === inferenceId);
+  return queries(corpus).inferences.get(inferenceId);
 }
 
 export function findArgument(corpus: Corpus, argumentId: string) {
-  return corpus.arguments.find((argument) => argument.id === argumentId);
+  return queries(corpus).arguments.get(argumentId);
 }
 
 export function findResult(corpus: Corpus, resultId: string) {
-  return corpus.results.find((result) => result.id === resultId);
+  return queries(corpus).results.get(resultId);
 }
 
 export function findCandidate(corpus: Corpus, candidateId: string) {
-  return corpus.candidates.find((candidate) => candidate.id === candidateId);
+  return queries(corpus).candidates.get(candidateId);
 }
 
 export function passagesForSource(corpus: Corpus, sourceId: string) {
-  return corpus.passages.filter((passage) => passage.source_id === sourceId);
+  return matches(queries(corpus).passagesBySource, sourceId);
 }
 
 export function claimsForStatement(corpus: Corpus, statementId: string) {
-  return corpus.claims.filter((claim) => claim.statement_id === statementId);
+  return matches(queries(corpus).claimsByStatement, statementId);
 }
 
 export function argumentsUsingStatement(corpus: Corpus, statementId: string) {
-  return corpus.arguments.filter(
-    (argument) =>
-      argument.premise_statement_ids.includes(statementId) ||
-      (argument.commitment_statement_ids ?? []).includes(statementId),
-  );
+  return matches(queries(corpus).argumentsByUsedStatement, statementId);
 }
 
 export function argumentsConcludingStatement(corpus: Corpus, statementId: string) {
-  return corpus.arguments.filter((argument) => argument.conclusion_statement_id === statementId);
+  return matches(queries(corpus).argumentsByConclusion, statementId);
 }
 
 export function resultsForArgument(corpus: Corpus, argumentId: string) {
-  return corpus.results.filter((result) => result.argument_id === argumentId);
+  return matches(queries(corpus).resultsByArgument, argumentId);
 }
 
 export function resultsForClaim(corpus: Corpus, claimId: string) {
@@ -582,7 +652,7 @@ export function resultsForClaim(corpus: Corpus, claimId: string) {
 }
 
 export function claimsForSource(corpus: Corpus, sourceId: string) {
-  return corpus.claims.filter((claim) => claim.source_id === sourceId);
+  return matches(queries(corpus).claimsBySource, sourceId);
 }
 
 export function claimsForResult(corpus: Corpus, resultId: string) {

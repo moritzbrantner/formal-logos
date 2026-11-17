@@ -12,6 +12,7 @@ import { TermsSection } from "@/components/terms-section";
 import { claimsForResult, comparatorForResult, findResult, findStatement, getCorpus, idOf, nameOf } from "@/lib/corpus";
 import { forkUses } from "@/lib/fork-use";
 import { theoremInModule } from "@/lib/lean-source";
+import { resultProjectionCorpus } from "@/lib/result-projection";
 import { TRANSCRIPTION_KIND_DESCRIPTIONS, getFrontierReport, resultKind, sourceUrl, statementState } from "@/lib/site-state";
 
 type ResultPageProps = {
@@ -40,29 +41,7 @@ export default async function ResultPage({ params }: ResultPageProps) {
   const argument = result.argument;
   const conclusion = findStatement(corpus, argument.conclusion_statement_id);
   const openPremises = argument.premise_statement_ids.filter((premise) => !report.closed_statements[premise]);
-  // Ship only the arguments this one can expand into (those concluding its
-  // premises, transitively), not the whole corpus, to keep each page small.
-  const reachable = new Map([[argument.id, argument]]);
-  for (const current of reachable.values()) {
-    for (const candidate of corpus.arguments) {
-      if (!reachable.has(candidate.id) && current.premise_statement_ids.includes(candidate.conclusion_statement_id)) {
-        reachable.set(candidate.id, candidate);
-      }
-    }
-  }
-  const projectionArguments = [...reachable.values()];
-  const inferenceIds = new Set(projectionArguments.flatMap((entry) => entry.inference_ids));
-  const projectionInferences = corpus.inferences.filter((inference) => inferenceIds.has(inference.id));
-  const statementIds = new Set([
-    ...projectionArguments.flatMap((entry) => [...entry.premise_statement_ids, entry.conclusion_statement_id]),
-    ...projectionInferences.flatMap((inference) => [...inference.input_statement_ids, inference.output_statement_id]),
-  ]);
-  const projectionCorpus = {
-    statements: corpus.statements.filter((statement) => statementIds.has(statement.id)).map(({ id, paraphrase }) => ({ id, paraphrase })),
-    inferences: projectionInferences,
-    arguments: projectionArguments,
-    verified_argument_ids: corpus.results.map((entry) => entry.argument_id).filter((id) => reachable.has(id)),
-  };
+  const projectionCorpus = resultProjectionCorpus(corpus, argument);
   const appliedForks = forkUses(corpus, result);
   const heuristic = kind.flag && kind.kind === "derivation";
 
