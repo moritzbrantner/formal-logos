@@ -1147,6 +1147,321 @@ formal establishment, actual-source application certificate or worldview
 refutation. The complete proposed outcome above is ready for independent review
 before coordinator publication.
 
+### Connected pure-actuality case for #1728 (2026-11-17)
+
+**Complete proposed outcome for independent semantic review.** Evidence baseline:
+main `41e17ee4e607daf30ac5a4029add1e937068542e`, after #1738/#1739. The
+composition route is the best articulated available support for pure actuality
+of the selected actual simple source: it uses the source's existing simplicity
+and actuality in esse, avoiding an actual same-respect predecessor for every
+idle capacity. This is a comparative warrant judgment under the passive
+constitution and existential-causal assumptions below, not premise establishment.
+The direct no-potency and priority commitments remain defensible support options;
+variants sharing their rationale are not independent corroboration.
+
+#### Fix the source before comparing routes
+
+Carry the [accepted existence-account dictionary](conceptual-existence-boundary.md#full-inherited-god_4-consumer-bundle)
+and [assertion/ancestry reconstruction](cogito-esse-1113.md#existing-complete-root-continuation).
+The occurring episode's bearer, its necessary ancestor and the source selected
+by the population/foundation route need not coincide. In particular, necessary
+existence of that ancestor does not provide all-world underivedness. Use the
+existing complete route to
+[0bdcf366](../../corpus/statements/necessary-concrete-underived-at.json), or
+accept that premise directly with its warrant obligations. Fix its output n
+from here on, on ONE signature carrier, profile m, world w, q3a4 profile p and
+predicate dictionary. Its NECESSARY_2 accessible-world existence and exclusion
+of actual concrete incoming grounds at every carrier world are distinct guards.
+Neither modal necessity nor a name supplies the other guards. #1724 retains
+foundation warrant; this group does not re-investigate it.
+
+`InPotency` is the generic POTENCY_2 predicate, interpreted here as the bearer's
+own real passive receptivity. That interpretation is an OPEN application
+obligation, not imposed by its free Lean type. It excludes an unexercised active
+power, mere logical possibility, and receptive possession compatible with
+already having the actuality. `Composite` is inclusive SIMPLE_4, not only spatial
+parts; the same predicate must cover the composition premise, uniting-cause
+premise and simplicity conclusion. PRIOR_1 is simple priority. Its distinct
+arrows count as actual concrete grounds only through the selected bridge at w;
+priority in time, of explanation or of an accidental state cannot replace it.
+Formal versus eminent actuality must remain the same throughout a use of
+non-overlap; a formal lack cannot be paired with inclusive eminent possession
+as if both concerned one act mode. The recorded legacy sense/link defects in
+the preceding audit are unchanged.
+
+#### Complete consumer comparison
+
+Each row preserves the bearer to which it applies. The first row compares the
+First-Way interface; it does not identify its mover with n. The next three
+rows conclude universal [0cf675c4](../../corpus/statements/first-being-is-in-no-way-in-potency.json),
+which must be instantiated at n with firstness in that SAME PRIOR_1 relation.
+The last row supplies n's pure actuality directly inside the root assembly.
+
+| Existing consumer and endpoint | Complete sufficient interface at this step | What is bypassed and what remains |
+| --- | --- | --- |
+| `PrimaVia.primaVia` followed by `FirstMoverPureAct.firstMoverPureAct` (result [afd52425](../../corpus/results/AQUINAS-ST-I-Q3-A1-FIRST-MOVER-PURE-ACT.json)): every absolute first mover is pure act; existence needs the First-Way witness as well | PrimaVia's seven inputs: some motion, moved-as-potency, movers-in-act, reduction-by-mover, non-overlap, strong second-mover/per-se link, and no infinite per-se series. Its cannot-be-lacking endpoint needs the particular existence-or-not instance to export an existential witness. The pure-act consumer additionally needs first-unmoved-mover→first-being 74eb9113 and act priority a4d3261a; non-overlap is shared. | Relative PrimaVia has the same seven-input pattern with the relevant-respect link substituted. It supplies only relative unmovedness: an additional scope bridge to absolute unmovedness and the first-being bridge are still required to feed this consumer. Neither motion endpoint alone implies pure act. See the [strength-consumer audit](prima-via-strength-consumers.md). |
+| `FirstBeingNoPotency.firstBeingNoPotency`: 0cf675c4 | Universal same-respect act priority a4d3261a and non-overlap c6d6379b; then `IsFirstBeing PriorSimply n` for n's conclusion. Generic independent priority 3b2d2d46 is used by the corresponding root sibling. | No composition hypothesis. Strong priority includes idle potency; reduction during an occurring change does not supply it. The weak first-being version 61ad11f3 also suffices with non-overlap; with non-overlap held fixed it is equivalent to the endpoint and adds no warrant merely by restatement. |
+| `ActPriorityAtFirst.firstBeingNoPotencyOfComposition`, result [1f9a4796](../../corpus/results/1f9a4796-42ab-481c-b86e-147799399363.json): 0cf675c4 | First beings have some act 8288ff1e; act-and-potency implies composition 3d99779b; composite has distinct esse-cause ca07cae9; causing another's perfection is efficient e0088de9; efficient cause is prior e078f07b. Apply the universal conclusion with n's firstness. | Bypasses strong/weak act priority and non-overlap. It does not need a cause already in act in the idle respect r. It retains the act premise, real constitution, distinct esse-cause and the efficient-priority bridge. |
+| `EsseCausePriority.firstBeingNoPotencyOfEssePriority`, result [08a06197](../../corpus/results/08a06197-09d0-4cc2-9542-65287cca37ed.json): 0cf675c4 | The same 8288ff1e, 3d99779b and ca07cae9, with distinct-esse-cause priority ee74c678 in place of BOTH e0088de9 and e078f07b; apply with n's firstness. | Bypasses efficient classification and priority of arbitrary accidental causes. It retains the interpretation of the cause of this bearer's esse and its inclusion in PRIOR_1; the new name does not discharge that burden. |
+| `NecessaryClassicalGodRootByComposition.derive`, argument [379399d1](../../corpus/arguments/379399d1-d6ac-4d20-8a72-fda7fdc4b5e0.json), result [ef2c087e](../../corpus/results/ef2c087e-9c68-4cf2-a2f9-27d8b4b74e4f.json): same-witness da3facd6 | Locally: n exists at w, ExistingInActAt 0436de86, simplicity of n, and the being-restricted composition premise d8024a38. The complete theorem needs every row of the existing [22-input table](conceptual-existence-boundary.md#full-inherited-god_4-consumer-bundle), including the underived source, attribute and naming inputs. | Pure actuality uses NO firstness, act priority, non-overlap, same-r actualizer or efficient detour. Firstness remains part of the full output and has other uses. Simplicity was derived from ca07cae9 and cb1cdea9, not granted by necessity alone. |
+
+The other registered supports for 0cf675c4 do not reopen the settled idle
+fixture question. `ActPriorityThetaEight.firstBeingNoPotencyOfThetaEight`
+(result 98fb8c2e) takes first-being incorruptibility ca55ed3a,
+incorruptible→act-in-esse d017b6b0, restricted composition d8024a38, ca07cae9,
+e0088de9 and e078f07b. `DependenceGroundingPriority.firstBeingNoPotencyOfThetaEightEsse`
+(result 0319cb4e, argument d812acaa) replaces the final two with ee74c678.
+These complete six- and five-input alternatives replace the some-act premise
+by a specific incorruptibility bundle; they still need n's firstness and the
+same constitution/cause application. Actuality in substance/esse does not itself
+exclude accidental passive capacities. Plenitude instead takes infinite past,
+plenitude, potency→possible act, act-then-potency→distinct cause and efficient
+priority; its endpoint is time-indexed 8caca2bf at now. Its untimed application
+remains the previously recorded temporal bridge, not another proof of 0cf675c4.
+
+The existing `FirstMoverPureActFromLambda7.firstMoverPureActFromLambda7` is a
+further motion-facing alternative: some mover in act in esse, unmoved and
+unchangeable in respects of change, the all-respects scope bridge, at-most-one absolute first mover,
+can-fail-to-be→can-be-otherwise, and potency-of-contradiction jointly give pure
+act of every absolute first mover. It bypasses act priority, non-overlap and
+first-mover→first-being, but retains all five premises, especially the universal
+scope extension and the identity supplied by uniqueness. It supplies no
+identification of that mover with the independently selected n. Its existing
+controls and the earlier Theta.8 assessment are reused; they are not additional
+worldly evidence that no idle potency can exist.
+
+The local inference in the final row is short and substantive. If
+`InPotency n r`, existence and 0436de86 give `p.InAct n p.esse`; d8024a38 gives
+`Composite n`, contradicting `IsSimple Composite n`. This is the already checked
+`pureActOfSimpleExistent` helper in the existing Solution, not a new certificate.
+It does not claim the universal 0cf675c4 endpoint: an arbitrary first being
+need not have been supplied as simple and existent. Conversely, the first-being
+theorems need firstness even though this local root step does not.
+
+In the complete root proof, `PerfectRootPositiveIntellectWill.derive` obtains
+simplicity by applying ca07cae9 to alleged composition of this actual root:
+a distinct c causes n's esse; cb1cdea9 makes c an existing concrete selected
+ground of n; rootness excludes that ground. There is no intervening efficient
+cause or PRIOR_1 step in that simplicity subproof. Separately 86efed1a connects
+simple priority to the selected grounding relation for firstness/nonlimitation.
+These are different bridge directions, not converses supplied by a label.
+
+The esse-priority alternative can accept ee74c678 directly. Its existing
+derivation uses cb1cdea9 plus actual-grounding→simple-priority 7a63a3fe to
+obtain the actual-concrete-scoped priority b50fb858. To remove that antecedent
+for the universal first-being theorem, it also uses caused-esse-is-had
+2f2f5bd2, esse-act→existence-at-w 546975ef, and esse-in-re→concreteness 2d9807a5.
+All these are joint inputs to that derivation, not consequences of composition
+alone. An already actual concrete n needs no further inference of its own
+actuality for the scoped use; this observation adds no registered theorem.
+An originator absent at w cannot satisfy cb1cdea9 simply because it once
+produced n. A sustaining reading instead requires ca07cae9 to deliver such a
+present cause, with the existing origin/sustenance application burden retained.
+
+The bypasses above concern the stated subderivations and direct theorem
+interfaces. Expanding a remaining premise such as no-component-is-first
+09c6d5f0 through one of its supports can reintroduce priority or non-overlap;
+this table does not claim their removal from every expanded root support.
+The composition variants share their real-constitution and esse-cause inputs,
+and the grounding-based variants share cb1cdea9. Reusing a common bridge at
+several joins is coherent support, not several independent defenses of it.
+
+#### Why passive constitution is a live positive argument
+
+The strongest available rationale for d8024a38 distinguishes a subject's
+present determinate actuality from its intrinsic receptivity to a further
+determination. A merely described possibility does not explain why THIS bearer
+can receive r; a real disposition calls for a basis in what the bearer is.
+If that basis includes a receptive principle genuinely distinct from the
+actuality determining it, inclusive SIMPLE_4 composition follows. This gives a
+positive constitution account rather than a count of predicates. The critical
+antecedent is real distinction of principles. Being actual in esse and lacking
+r are predications in different respects and do not alone prove such distinction.
+The q3a7 converse already audited cannot establish this direction.
+
+The state/capacity account explains the same subject's possible manifestations
+through its actual nature and interaction conditions. A single subject's
+varying state descriptions do not on their own entail several real principles;
+an idle active power is particularly irrelevant to passive reception. Ordinary
+learning and alteration support the distinction between acquiring a state and
+receiving substantial existence, so the scope challenge has an independently
+motivated mechanism. They do not establish an uncaused simple passive recipient.
+For that extension the account must defend either receptivity without real
+constitution, a composite without a distinct current esse-giver, or a narrower
+priority/ground correspondence. The prior SimplePotentRoot and ColdStone
+controls locate these denials in explicit formal interpretations; neither is
+an actual counterexample, nor evidence by itself that d8024a38 is doubtful.
+
+For a genuinely constituted bearer, the positive further demand is to explain
+why the constituents obtain as THIS unity, not just list them. In generated
+organized cases, constituents severally do not determine the obtaining
+organization; organizing activity and constitutive prerequisites add real
+explanatory content. Passing from that restricted evidence to every passive
+constitution requires the scope argument. Passing from constitutive dependence
+to a distinct concrete producer of present esse additionally requires numerical
+distinction, existence at w and the selected relation correspondence. Those
+are the exact burdens of ca07cae9/cb1cdea9 or its esse-priority support, not
+consequences of saying that actuality and receptivity differ.
+
+Compare the immanent whole-first account at that SAME explanandum: the current
+obtaining and unity of n, including its organization and powers, rather than
+only a past generator or a manifested state. It proposes one intrinsically
+organized whole, whose constituents and local powers depend on that whole;
+constitution explains what the whole is without the whole efficiently producing
+itself. The distinction between constitution and productive activity justifies
+why the efficient self-origination objection does not address this proposal.
+The rival must defend its whole-first explanatory direction and why its
+intrinsic constitution adequately explains its obtaining. Mere necessity or a
+model assignment does not do so. Conversely, the external-giver account must
+defend why this unity requires an external concurrent esse-producer; failure
+to establish the rival's adequacy does not supply that defense. The accepted
+[constitution/esse-ground audit](composition-causal-scope.md#constitution-passive-capacity-and-a-distinct-existence-ground-2026-11-11)
+contains the restricted evidence, rival commitments and source boundaries.
+No full-worldview defeat or metaphysical possibility certificate is asserted.
+
+#### Connected downstream use and cumulative assessment
+
+Start with the fixed output n of 0bdcf366. The existing
+`UnderivedRootPerfection.derive` ([71cc3e91](../../corpus/results/underived-root-perfection.json))
+uses precisely its eight-input bundle to retain n as the unique actual root,
+necessary and maximal in esse, and perfect. Its other inputs are EM, genus at
+being da09703b, existence-to-act 0436de86, esse-ground cb1cdea9,
+grades-to-maximum e4e6b0cd, actuality-only-as-being 7067553d and perfection
+preexistence 64498e7e. It does not require pure actuality. This is the appropriate
+perfection route here; pure act alone would not supply all perfections.
+
+Then `PerfectRootPositiveIntellectWill.derive`
+([fa9d868b](../../corpus/results/perfect-root-positive-intellect-will.json))
+retains the same n through simplicity, identity, firstness, immateriality,
+component exclusion, intellect and will. Its complete thirteen-input bundle is
+perfect-root 7abdee27, EM, da09703b, cb1cdea9, 7067553d, goodness 00e962ae,
+universal perfection transfer b26c10a0, ca07cae9, composition kinds d7741cdc,
+86efed1a, no-component-first 09c6d5f0, immaterial-is-intellectual 180f5ad2 and
+will-follows-intellect 090be689. No intellect is obtained merely from pure act.
+379399d1 composes these two results, adds the local pure-act step and the
+remaining infinity, eternity, naming, God-maximality and attribute-sufficiency
+inputs in the 22-input table. Its result is the full
+[da3facd6](../../corpus/statements/necessary-classical-god-root.json) at THIS n.
+Projection [92ab7c94](../../corpus/arguments/92ab7c94-80b1-4d05-bcaa-e59394ea55b2.json)
+(result [0e932825](../../corpus/results/0e932825-3249-4fa1-b2e7-b66c559b3e17.json))
+then gives GodExists for the same signature IsGod predicate. This last assembly
+discards attributes and necessity; it creates no additional warrant for them.
+Historical and ecclesial stages remain outside this work.
+
+For **immutability**, da3facd6 already contains `IsImmutable InPotency n`,
+whose current body is `PureAct InPotency n`. Reuse that conjunct for this n.
+The separate `StageTwo.GodIsImmutable.godIsImmutable` (ad968080) concludes
+immutability of *every* IsGod g from God-maximality, maximum→first-being,
+universal act priority and non-overlap. It is appropriate for that universal
+interface, but needlessly reintroduces the priority branch when only n's
+already supplied conjunct is needed. Its current definition is no passive
+potency, not a newly proved equivalence with every temporal immutability sense.
+
+For an **intellect/operation consumer**, reuse the positive-root intellect
+conjunct first. `DeiFiliusOperationFromIntellect.intellectualPureActOperatesFromCapacity`
+([c55e2ce2](../../corpus/results/c55e2ce2-c5f2-45fb-8ec2-641b07168cb9.json))
+then applies to a pure act WITH intellect only under all three additional
+premises: intellect→understanding-capacity 9c2a5dfe,
+capacity→exercise-or-potency 4728d5f4 and exercised-understanding→immanent-operation
+021aaa19. Its registered endpoint uses PURE_ACT_5; this is a consumer/interface
+comparison, not an identification of sense records. The shared Lean no-potency
+body permits the stated application only with the same interpreted dictionary;
+the explicit POTENCY_3→POTENCY_2 bridge and the formal/eminent exercise reading
+remain substantive. Absence of passive receptivity is not itself evidence of
+cognition or of every active power's exercise. Later attribute recognition and
+its sense/application warrants remain with the attribute owner (#1731).
+
+**Overall provisional judgment:** the connected composition reconstruction is
+currently preferable as the articulated support option at this actual simple
+source: existence and simplicity are already available on the selected route,
+and the added premise addresses intrinsic receptivity instead of demanding a
+current same-r predecessor for each idle capacity. The improvement is semantic
+fit and explicit explanatory work, not premise count or formal closure. The
+esse-priority sibling usefully narrows an efficient-cause detour, but inherits
+the distinct present esse-ground application. Current evidence positively
+supports actual bases for capacities and restricted constitutive dependence;
+it does not yet decide that every such receptivity is real composition or
+that every intrinsic unity has the required distinct concurrent esse-giver.
+Immanent constitution remains a substantive competing account of that step,
+with its own adequacy burden. Direct primitive commitments remain available
+alongside derivations; no additional prior proof is demanded merely because a
+commitment is primitive. No actual counterexample to this source's pure act is
+established, and no blanket objection to theism or naturalism follows.
+
+The next discriminating evidence is the already specified SAME-source test:
+identify its alleged passive receptivity and argue whether it is a distinct
+real constituent; explain the obtaining unity; then establish or exclude a
+numerically distinct current concrete esse-giver in the selected relation.
+A defended matching case plus a justified scope argument would strengthen the
+composition route. A positive immanent explanation of that same unity without
+such a giver would weaken its causal application. State-only examples, another
+idle-potency fixture, an equivalent first-being lemma or renaming a grounding
+arrow would not decide either issue. An immutable immanent source with only
+active powers is not discriminated from a divine source by this step; its
+further attributes and naming need their retained arguments. No new source
+campaign or adapter is justified by the present comparison.
+
+#### Canonical retrieval, self-sweep and acceptance boundary
+
+Existing attempt [383d23ad](../../corpus/attempts/383d23ad-bec6-442c-9fec-0112df1e1c97.json)
+links this complete reconstruction to the root's full premises, intermediate
+0cf675c4 and downstream endpoints, with the producer and consumer result IDs.
+Use `truth context` on full IDs 1f9a4796, 08a06197 or 379399d1 (expanded in the
+links above), and `truth dossier` / `truth brief` on the linked premise or
+consumer statement IDs. With the supplied external CLI always pass `--root`
+for this checkout. The existing act-priority, esse-priority and union attempts
+also point to the comparison. These are retrieval associations, not new logical
+edges. In particular, context reports no argument directly listing 0cf675c4 as
+a premise: FirstMoverPureAct and GodIsImmutable import its proof in Lean;
+379399d1 separately registers the same-source composition route. This work
+does not invent an intermediate edge or claim that those consumer interfaces
+have been rewritten.
+
+Claim/type self-sweep: every local bundle above matches its existing theorem;
+the full root retains all 22 premises and its naming/sufficiency bridge. No
+firstness is imposed on the local simplicity proof. Witness changes upstream,
+world guards, relation direction, real-principle versus state distinction and
+passive versus active/capacity senses remain explicit. No premise, definition,
+source claim, Challenge, Lean input, generated record or closure rule changes.
+No new countermodel or full-bundle joint satisfiability is claimed. Existing
+proof evidence is reused; no new build, binding, axiom, Comparator or NanoDa
+verification is asserted. The complete synthesis and comparative judgment
+await coordinator-arranged independent semantic review; earlier reviews do not
+cover this new consolidation. Work completion means #1728's usable connected
+comparison is prepared, with these application boundaries retained. It does
+not mean that God exists unconditionally or that every premise is established.
+
+#### Offline validation and computed comparison for #1728
+
+Convention sourceRevision: `15f348b072188255da837578eaafc8a98f12fdf0`.
+Prepared worker setup reused through `worker_env.py` command mode; no preflight,
+preview, dependency acquisition or formal build was run. Offline corpus,
+source-manifest and attribution checks pass; there are no changed stating
+claims. Existing backfill/sense/cache diagnostics are not proof evidence.
+Changed research-metadata validation, docs-index, senses/definitions/lexicon
+ratchets and local reference/whitespace checks pass. The two already removable
+sense allowances remain coordinator-owned.
+The checks do not certify source fidelity, metaphysical application or the new
+judgment's independent semantic acceptance. Coordinator semantic review and
+final integration CI remain pending.
+
+Computed using the supplied CLI with this checkout as `--root`,
+`frontier-diff --base 41e17ee4e607daf30ac5a4029add1e937068542e
+--frontier-root STMT-GOD-EXISTS`:
+
+```text
+premise delta for GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of classical theism [8626f8a5]: 41e17ee4e607daf30ac5a4029add1e937068542e -> working tree
+open premises reaching the root: 420 (290 bare, 78 supported, 52 stated) -> 420 (290 bare, 78 supported, 52 stated)
+expanded-route diagnostic (lowest cost): GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of…, from prima via [ed7c588a] (cost 6) -> GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of…, from prima via [ed7c588a] (cost 6)
+distinct verified support alternatives: 436 -> 436
+verified support alternatives added: 0
+no change
+```
+
+Actual premise change: none. No formal connection was missing for the selected
+root consumer; the delivered change is the connected comparison, cumulative
+assessment and canonical premise/consumer retrieval associations.
+
 ## Rival table (run of 2026-11-10)
 
 Every open premise of the spine now has a recorded rival and one Lean-verified
