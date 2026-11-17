@@ -383,8 +383,12 @@ pub fn assessment_batch(
                 .insert(conclusion.to_owned());
         }
     }
+    let mut theorem_records = Vec::new();
     for result in corpus.entries("results") {
         if let Some(targets) = owners.get(text(&result.fields, "argument_id")).cloned() {
+            if let Some(needle) = theorem_needle(text(&result.fields, "theorem")) {
+                theorem_records.push((needle, text(&result.fields, "id").to_owned()));
+            }
             owners
                 .entry(text(&result.fields, "id").to_owned())
                 .or_default()
@@ -404,6 +408,20 @@ pub fn assessment_batch(
                             .or_default()
                             .insert(link.id.clone());
                     }
+                }
+            }
+        }
+        for (needle, result_id) in &theorem_records {
+            if note
+                .sections
+                .iter()
+                .any(|section| names_lean(&section.body, needle))
+            {
+                for target in &owners[result_id] {
+                    matched
+                        .entry(target.clone())
+                        .or_default()
+                        .insert(result_id.clone());
                 }
             }
         }

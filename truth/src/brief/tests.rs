@@ -906,3 +906,33 @@ fn assessment_batch_keeps_conflicts_provenance_and_absent_targets() {
     );
     let _ = std::fs::remove_dir_all(root);
 }
+
+#[test]
+fn assessment_batch_retains_theorem_only_citations() {
+    let root = fixture("assessment-theorem");
+    write(
+        &root,
+        "docs/notes/theorem-only.md",
+        "# Application\n\n`TruthCore.Results.Fixture.goal`\n\n## Provisional judgment\n\nThe application remains conditional.\n",
+    );
+    write(
+        &root,
+        "docs/notes/theorem-prefix.md",
+        "# Application\n\n`Fixture.goalExtended`\n\n## Provisional judgment\n\nThis is a different theorem.\n",
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    let result =
+        super::assessment_batch(&root, &corpus, &[GOAL.to_owned()].into_iter().collect()).unwrap();
+    let entries = result["statements"][GOAL].as_array().unwrap();
+    let cited = entries
+        .iter()
+        .find(|entry| entry["path"] == "docs/notes/theorem-only.md")
+        .unwrap();
+    assert_eq!(cited["matched_record_ids"], json!([RESULT]));
+    assert!(
+        !entries
+            .iter()
+            .any(|entry| entry["path"] == "docs/notes/theorem-prefix.md")
+    );
+    std::fs::remove_dir_all(root).unwrap();
+}
