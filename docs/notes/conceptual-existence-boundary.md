@@ -1,8 +1,360 @@
 # Conceptual existence boundary
 
+## Connected existence case for #1726 (2026-11-17)
+
+**Complete proposed outcome for coordinator semantic challenge.** Evidence
+baseline: `79f063655a1ca8169aadeef032e0da0383bb9ef9`; issue body and comments
+and #143's current integration handoff were read at dispatch. This section
+completes the requested cross-family comparison; it adds no theorem, source
+attribution or premise closure. The earlier #1723 and #1725 proof evidence
+below is reused unchanged. Their historical “new” and “proposed” labels refer
+to those batches, not to newly implemented adapters in this issue.
+
+**Current conclusion.** There is a connected conditional case, with three
+selected registered producers of actual necessary concreteness and alternative policies
+for reaching underivedness. Rejection of a conceptual-existence feature,
+Kant's necessary-to-most-real identification, or atomicity does not by itself
+remove that case. Each surviving branch still owes its own positive inputs.
+The De ente branch supplies a different actual-source route with explicit
+root and modal bridges. Russell's quantifier analysis is compatible with
+these explanatory projects; neither it nor Scott's God-likeness already gives
+this case's concrete source or GOD_4. Taken together, the results improve the
+case's precision and resilience to particular rejected assumptions. They do
+not yet establish one actual necessary underived divine source. The positive
+warrant, standing alternatives and exact revision conditions are stated below,
+not inferred from the number of routes.
+
+### One dictionary and complete connected bundles
+
+Fix one `Profile m`, selected world `w`, rigid bearer domain, accessibility,
+`ExistsAt`, concrete predicate and `grounds`. In the following composition,
+`Ontic.Causes` remains a distinct relation. Write **B** for `b19ffd92`
+(actual existence plus de re necessary concreteness), **U** for `0bdcf366`
+(an actual necessary concretum without an existing concrete ground at ANY
+carrier world), and **H** for `da3facd6` (the necessary classical GOD_4 root).
+Short UUIDs here identify the full canonical IDs in the attempt and the tables
+below. Quantification over worlds in `NecessaryAt` is accessibility-restricted;
+the universal support clauses in U, J1 and coverage range over all carrier
+worlds, including inaccessible ones. Actual existence is never supplied merely
+by naming a bearer or by a vacuous box.
+
+| Complete producer into B | Meaning and witness retained |
+| --- | --- |
+| Profile route `6a484a32`: `86badf93` + `93804e57` + `84ae3700` | An independently actual concrete profile exemplar, actualist necessary profile population, and numerical uniqueness of the same rigid profile. The actual exemplar itself becomes necessary. No necessity-to-most-real inclusion is used here. |
+| Atomic route `e47d6abd`: `56f68b40` + `83fdeb19` + `63e739b6` + `bacabfb1` + `ee4ab504` + `d8a1fb16` | Concrete population, contingent-only atomic parts, conditional caused-simple cover, cause/effect nonoverlap, explicit excluded middle and selected actual causal coverage, on the SAME actual-concrete subtype/order. `ConcreteAtomisticNecessaryBeing.contingent` returns some actual necessary concretum. |
+| Actual-cover route `e967e818`: `56f68b40` + `d396a866` + `2b20b5af` + `76667657` + `b699ecfb` + `8361dfab` | Concrete population, conditional actual cover of the actual no-necessary-parts family, local reflexivity, causal coverage of actual candidates without necessary parts, actual causal endpoints and cause-nonparthood. `ConcreteActualCoverNecessaryBeing.derive` uses a partial order on concrete CANDIDATES, not only actual nodes; it uses classical contradiction internally. Some actual necessary concretum results, without identification with the cover or its cause. |
+
+Both mereological routes preserve the original frame and existence predicate
+through `concreteOntic`. Their structural assumptions are required on that
+restriction; an unrestricted cause or part policy does not automatically
+restrict correctly. They share actual population but have different cover
+families, causal scopes and logical interfaces. The actual-cover argument
+contains no atomism, uniting-cause or regress premise. This does not make its
+whole bundle a logical weakening of the atomic bundle.
+
+For **each** of these B producers there are already complete continuations:
+
+| Registered continuation B → U | All additional inputs |
+| --- | --- |
+| Union `d45dba04` | Actual reflexivity `2b20b5af`, J1 `dd41c165` (existing concrete supporters of necessary concreta at any world are necessary), union well-foundedness `d149d238`, explicit EM `ee4ab504`. |
+| Coverage `9de79a41` | Actual grounding WF `82cfaf26`, J1 `dd41c165`, actual support coverage `df42581f`, EM `ee4ab504`. |
+| Actual-scope coverage `36c6b111` | Actual grounding WF `82cfaf26`, actual J1 `84751fc2`, coverage `df42581f`, EM `ee4ab504`. |
+
+Thus a full God-existence bundle is any one producer row, any one compatible
+continuation row on that SAME dictionary, and the **entire** remaining
+attribute/naming bundle of `379399d1` in the inherited table below, followed
+by `92ab7c94` projecting H to `8626f8a5`. Repeated shared inputs are one
+commitment, not extra corroboration. These are compositions of registered
+rules, not new certified model conjunctions. No simultaneous realization of
+all producer packages is asserted.
+
+The alternative profile-preserving continuation `78dfeded` instead takes the
+three profile inputs, necessity-to-most-real inclusion `2107b9df`, actual
+support WF `47a97912`, and predecessor lifting `2a9378b4`. Its support must be
+instantiated as `m.grounds` for `213a431b` to project its output to U. It
+preserves the original profile bearer; the union/coverage continuations select
+an existential underived witness, which may differ. The existing populated
+`supportControls` explicitly permits a received necessary profile bearer and
+a distinct underived necessary source when the Kant inclusion is omitted.
+That is a formal witness-boundary test, not evidence that either ontology is
+actual. The price of Kant inclusion plus profile uniqueness is identifying
+ALL necessary candidates on this dictionary, stronger than uniqueness of
+roots; a theory with distinct necessary source and necessary recipient must
+reject that joint identification, not necessary concreteness itself.
+
+#1725 already gives the useful transport substitutions: standing actual paths
+S `c36b509c` yield coverage; actual WF plus necessary-source paths N
+`d0718714` yield union WF. Full J1 plus N yields S, while actual J1 plus S
+yields full J1. Neither N plus actual J1 nor coverage alone supplies S. The
+path and scope controls below are reused, including `rootedPair`, which
+retains coverage but rejects the standing ancestry policy. Immediate channels
+can change without breaking a nonempty actual path; these are delivered
+conditional connections, not missing implementation. The support relation,
+source identity, world range and actual WF remain application commitments.
+
+### What the other existence accounts contribute
+
+Russell's `ExistsPred F := ∃ x, F x` articulates nonemptiness. Applied to the
+actualist predicate `ExistsAt w x ∧ concrete x`, it expresses the population
+input of the mereological routes; it does not populate the extension or
+supply a ground. The existing Russell grounding/projection controls establish
+this separation in the stated signatures. This is a reconciliation of tasks,
+not an unregistered metaphysical adapter or a criticism of ordinary
+quantification. Rejecting existence as an ordinary feature leaves the use of
+quantifiers and the question why actual beings exist intact.
+
+The original conceptual route gives an existing exemplar only from Transfer,
+Anchor and ActualityExists together. Its feature/candidate interpretation is
+not `Profile m`; concreteness, rigid profile calibration and modal population
+remain OPEN. Consequently there is no unconditional conceptual-result → B
+arrow. A defensible proposed feature and an existence-entailing
+exemplification relation would justify reassessing that interface; defining
+them so that they assert an existent perfect object would conceal the burden.
+
+Scott T3, result `13be7bbd`, uses A1a, A1b, A2, A3, A4, A5, symmetry and EM
+on its own possibilist constant-domain embedding. It concludes necessary
+God-like exemplification there. The Scott audit distinguishes essence-based
+NE from this case's `NecessaryAt`; the unrestricted-property world-isolation
+result and filtered-language controls are not alternate proofs of B.
+An actualist existence predicate calibrated to the same frame, concreteness,
+and a justified rigid-witness bridge are still OPEN; a Scott God-like bearer
+is not GOD_4 without an additional justified interpretation. The different
+1970 actualist possibility antecedent remains excluded under its retained
+Ax3/symmetry package. It is not revived as a route, and that exclusion is not
+transferred to Scott. The same full Scott bundle also yields the recorded
+modal-collapse result. A witnessed contingent proposition in that SAME
+property interpretation would conflict with collapse; actual change alone,
+or a contingent being in an uncalibrated dictionary, does not supply that
+contradiction. This is an additional interpretation check, not a refutation
+of God or of every ontological argument.
+
+The existing positive/reverse modal propagation results likewise do not settle
+which possibility has warrant. For a fixed G, Euclideanness and the boxed
+conditional necessity yield necessity from possible G, or impossibility from
+possible non-G. Actuality still requires a suitable accessibility edge; G as
+“some concrete bearer exists” remains de dicto. Fixing G to `ExistsAt v n`
+requires a justified candidate and rigid identity. The positive intrinsic-
+existence proposal has a limited defeasible recombination rationale for
+independently intelligible positive primitives. Its concrete realization and
+received-to-unreceived extrapolation remain unsettled. The reverse premise
+has no equal evidential entitlement just because its propagation is formally
+symmetric; a critic must justify the selected absence possibility. Existing
+assessments identify no demonstrated impossibility of the concrete target.
+See the [possibility-warrant comparison](../kant-cosmological-inference.md#overall-provisional-assessment-and-revision-conditions).
+No stopped property-language or source-warrant campaign is reopened here.
+
+De ente starts instead with actual esse in the world-free q.3 a.4 profile p.
+The [existing source/root reconstruction](de-ente-esse-source-1628.md) provides
+a full alternative: distinct-esse causal coverage `457698e4`, identity-bearer
+uniqueness `a576300f`, CCR `20babef7`, actual population `78cffb8e` and EM give
+common source `c35b1a5c` (result `c6d92415`). The earlier WF option remains.
+The identity-bearer uniqueness premise has its recorded plurification/shared-
+nature support and direct option; the shared-nature application stays open.
+The conceptual distinction between understanding essence and knowing existence
+alone does not establish real distinctness of represented principles.
+
+From `c35b1a5c`, result `ca5403a6` requires existing-in-act `0436de86`, concrete/
+selected-world existence bridge `ad2b3ffc`, ground-to-esse-cause bridge
+`17350d52`, and no self-causation `b62a64ab` for actual-root output `ce7edf53`.
+With at-most-one actual root `49fdec01`, result `6e89d528` gives unique actual
+root `7ab0ddcb`; its De ente derivation uses `457698e4`, `a576300f`,
+`0436de86`, esse-cause-to-ground bridge `cb1cdea9` and EM. Argument `70adaf7c`
+adds `c71c068c` and EM to obtain unique necessary ACTUAL root `91b085c4`.
+Its necessity input is not supplied by “esse is essence.”
+
+That endpoint is not U: it excludes actual incoming grounds and identifies
+actual roots, whereas U excludes existing concrete supporters at every world.
+Nor is root uniqueness uniqueness of every necessary being. The graph
+`esseCauseGraph p` merely interprets actual esse causes with `InAct` guards;
+it is not an identification with an independently selected modal `m.grounds`.
+The already registered projection `9df4ccfb` takes `91b085c4` to B,
+retaining that same actual root and forgetting its uniqueness/rootness. Thus
+the complete De ente package above can also feed either union or coverage
+continuation, then the full H/GodExists consumer, on the SAME modal profile.
+No new adapter is needed for that composition. The additional all-world
+support policies are still required; actual rootness alone cannot replace
+them. The separate world-free `esseCauseGraph p` must not supply those
+policies by silently adopting a trivial modal frame. Its delivered root-purity
+option is another contact with the classical case. Rootness must not be
+strengthened by repeating the word “first.”
+
+### Rejection consequences and the joint-failure test
+
+| Rejected commitment | Consequence and positively specified surviving option |
+| --- | --- |
+| Existence-entailing nuclear feature or Transfer | The conceptual exemplar derivation is unavailable. An actual concrete starting phenomenon plus either complete mereological package still supplies B; an actual esse-source package supplies its own root route. Rejection establishes none of these packages. |
+| Necessary actualist profile population or rigid numerical uniqueness | The profile producer no longer licenses B. Actual atomic or actual-cover production is independent of those profile inputs. Mere kind exemplification across worlds cannot repair rigid identity. |
+| Kant necessity-to-most-real inclusion | The six-input same-profile underivedness inference is unavailable. B may remain and the union/coverage continuations can yield a different underived witness. No inference from “not most real” to “no necessary source” is licensed. |
+| Atomicity | If only unrestricted atomism is rejected, contingent-only atomicity may survive. If contingent atomlessness is allowed, that atomic producer is unavailable; the independently supported actual-cover package still suffices for B. |
+| Standing source ancestry, or union WF | Coverage may preserve received support while sources change. `rootedPair` separates coverage from standing paths; root-backed infinite/cyclic support in the existing CCR controls separates rooted access from WF. The appropriate coverage/CCR package must be retained explicitly; those controls certify neither metaphysical actuality nor one joint model of all branches. |
+| Actual cover or its causal/nonparthood policy | The cover proof loses that input. Atomic or profile production remains conditional on its own whole package; no complement-of-cover argument supplies it. |
+| Scott A5 or a proposed admissible-property language | The corresponding Scott package loses its conclusion; Russell, actual-cover and esse arguments do not acquire or lose their inputs thereby. |
+| Intrinsic explanatory adequacy or GOD_4 naming/attributes | B or U can remain while the particular further explanatory/divine identification is unsupported. Necessity and absence of concrete grounds alone do not answer every explanation question or defeat a necessary natural source. |
+
+The atomless alternative is substantive as a scope question: a part order
+with a proper part below every actual contingent object supplies no minimal
+part for `ContingentAtomicParts`. The existing infinite `OrderDual Nat`
+controls in `ContingentAtomicity` exhibit that failure alongside necessary
+being. They are formal interpretations, not evidence that nature is gunky.
+Atomlessness itself says nothing about whether the actual no-necessary-parts
+family has an actual upper cover or whether productive causes can be parts of
+their effects. The cover reductio assumes no necessary bearer, obtains a
+cover, then an actual cause of it. Under that assumption the cause belongs to
+the covered family, forcing it to be part of its effect, against the separate
+nonparthood policy. This is the exact mechanism by which atomism is bypassed.
+It neither constructs a physical universal cover nor vindicates nonparthood
+for an arbitrary partial cause. #325 owns that applicability; #537 owns the
+necessary-natural source comparison.
+
+Use the [existing support formula](god-existence-support-formula.md) as OR of
+complete sufficient bundles, with AND inside each bundle. This local
+comparison is a selected part of that graph, not a fresh whole-roster count.
+The [joint-failure template](joint-route-settlement.md) demands consequences
+of EVERY failed premise and incompatibility of the two failure consequences
+on one interpretation. Here rejecting atomicity does not imply cover,
+rejecting Kant inclusion does not imply coverage, and rejecting Scott A5 does
+not imply Thomistic esse. No such exhaustive failure map or incompatibility
+has been supplied. Thus this is a warranted conditional response to named
+failures, not an exhaustive prong or a joint settlement. Shared actuality,
+identity, grounding-application and downstream attribute obligations cannot
+be eliminated by an OR of routes that all retain them.
+
+### Cumulative provisional assessment and reopening conditions
+
+The strongest positive starting warrant is actual concrete being, rather than
+existence read out of a description. The mereological arguments add distinct
+conditional information: adequate selected cover/causal policies would exclude
+an entirely nonnecessary actual concrete domain even without a regress
+termination premise. The atomicity-free result shows a real alternative when
+minimal parts are not warranted. Its actual cover and causal exclusion are
+substantive ontological commitments, not observations already certified by
+actual population. No new independent objection to either policy is identified
+merely from their openness or the finite controls.
+
+De ente offers the positive explanatory thought that received esse requires
+an actual source; CCR articulates the demand that a wholly derivative closed
+order have a nonderivative member, while permitting root-backed infinite paths
+and dependent cycles. This avoids overstating WF as the only route. The
+existing global/structural replacement says the whole support arrangement,
+rather than a member's own nature, supplies the account. It must explain the
+obtaining of the same actual order, not merely describe its relational form;
+requiring an internal root against it additionally needs the defended CCR or
+local-to-global standard (see the existing
+[foundation comparison](unique-feedback-explanation-311.md#current-foundation-judgment-on-the-existence-only-case-2026-11-17)).
+The natural-source replacement can accept B or U
+and reject divine attribute/naming steps; it is not defeated by showing U.
+An intrinsic account likewise owes adequacy for the SAME source and existence
+fact, beyond truth of a necessary predicate. These are standing exact joins,
+not automatic objections to every primitive commitment.
+
+**Overall proposed judgment:** actual population and the explanatory demand
+provide positive starting warrant; the assembled alternatives are meaningful
+conditional support for necessary/underived source conclusions, with better
+resilience to specific rejected interpretations. On this record the full
+necessary-concrete, underived and divine identifications remain underdetermined
+in warrant. Neither Scott's property semantics nor conceptual possibility has
+yet supplied an independently warranted actual concrete source; neither the
+cover nor esse package has its applicability discharged by this assembly.
+This is not evidential parity between all rivals: modal symmetry, absence of
+objections and model existence confer no such parity. Direct warranted
+primitive commitments and cumulative support remain available. Shared source,
+modal and explanatory commitments are tracked once; logical equivalence or
+rephrasing adds no fresh evidence.
+
+Revision upward requires an independently specified actual source account
+satisfying one complete producer and one matched support policy, or a defended
+De ente interpretation with its actual-root/modal bridges. For the conceptual
+branch it requires the actualist concrete/witness calibration; for Scott it
+requires a warranted existence/property interpretation without equating
+God-like and GOD_4. Revision downward is specific: a demonstrated failure of
+actual cover, nonparthood, rigid identity, support transport, real shared
+nature or the selected intrinsic adequacy withdraws its affected branch.
+No failure alone establishes the negation of B, U or GodExists.
+
+Handoff to #1727: supply an actual bearer and its concrete interpretation;
+this does not automatically supply modal population or contingency. #1729
+continues actual/common-source and support-policy application; #1730 owns
+intrinsic adequacy; #1734 owns modal/epistemic warrant. Existing stopped
+campaigns are not restarted. #485's truthmaker/empty-world work still needs
+its explicit actual concrete and uniform-witness adapter. The next useful
+allocation is a specified applicability test among these owners,
+not another transport theorem with unchanged premises or an owner choice of
+metaphysical winner.
+
+### Claim/type self-sweep and retrieval links
+
+No changed Lean, frozen Challenge, batch spec, proposition meaning or
+attribution. This is analyst synthesis of existing consequences. All arrows
+above retain their joint inputs. Necessary concreteness includes actual
+existence; the cover witness need not be the necessary witness; a necessary
+witness need not be the selected underived source; an actual De ente root is
+not automatically all-world underived. Scott NE, actualist de dicto population,
+de re necessity, represented esse identity and GOD_4 remain distinct. Model
+controls witness only their stated interpretations. No unsupported conceivable
+alternative is counted as adverse evidence or used to dismiss a premise.
+The inherited GOD_4 table remains the full consumer bundle, not optional
+background to a claimed existence proof.
+
+Attempt `0ddaa334-3444-4487-9280-2508a76fe51b` links the participating
+premises, endpoints and consumer to this section and the existing result
+certificates. `context e47d6abd…`, `context e967e818…`, `context d45dba04…`,
+`context 9de79a41…`, and `context 379399d1…` expose their canonical bundles;
+endpoint and premise `dossier`/`brief` queries recover the same attempt.
+Those links record this comparison, not a newly registered inference or model.
+Independent semantic challenge of this complete proposed outcome, issue/#143
+publication and integration remain coordinator-owned.
+
+### Verification of the #1726 consolidation
+
+Live convention resolution retains sourceRevision
+`15f348b072188255da837578eaafc8a98f12fdf0`. The coordinator supplied a
+compatible warm CLI; every corpus command explicitly selected this checkout
+with `--root` and used
+`worker_env.py` command mode. No setup preflight, cold dependency build,
+preview or source reacquisition was performed.
+
+Retrieval covered necessary-concrete related/brief/novelty, exact producer,
+union/coverage and GOD_4-consumer contexts, and dossiers for the linked
+premises/endpoints. Novelty classified the topic as partially recorded; this
+is assembly and assessment of that evidence, not a claim of a new theorem.
+The updated attempt appears in both producer and downstream consumer context;
+the necessary-concrete brief retrieves the canonical note as well.
+
+Offline `truth check` passed with advisory corpus/lexicon warnings;
+`python3 scripts/source_evidence.py check` passed (516 passage records, 2058
+formalized claim bindings; bibliographic/permanently unavailable witness
+exceptions remain explicitly not byte-verified). `truth attribution-check
+--base 79f063655a1ca8169aadeef032e0da0383bb9ef9` reports no new or changed
+stating claims. Changed-research-metadata validation and `git diff --check`
+pass. No batch spec or generated record was edited. No affected Lean, binding,
+axiom, Comparator or NanoDa rerun is required for this note/attempt-only
+consolidation; this reuses the unchanged recorded checks, not new proof
+verification. Independent semantic review of this section and final delivered-
+head CI remain coordinator-owned.
+
+Computed `truth frontier-diff --base
+79f063655a1ca8169aadeef032e0da0383bb9ef9 --frontier-root
+8626f8a5-9531-5da7-9ebd-f901e74b1129`:
+
+```text
+premise delta for GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of classical theism [8626f8a5]: 79f063655a1ca8169aadeef032e0da0383bb9ef9 -> working tree
+open premises reaching the root: 420 (290 bare, 78 supported, 52 stated) -> 420 (290 bare, 78 supported, 52 stated)
+expanded-route diagnostic (lowest cost): GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of…, from prima via [ed7c588a] (cost 6) -> GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of…, from prima via [ed7c588a] (cost 6)
+distinct verified support alternatives: 436 -> 436
+verified support alternatives added: 0
+no change
+```
+
+The delta describes graph effects only. The contribution here is the connected
+interpretation and warrant comparison with explicit failure boundaries.
+
+## Original conceptual-existence investigation
+
 Target: STMT-GOD-EXISTS (GOD_4), through an explicit predication/existence
 bridge followed by identification of the existing exemplar with GOD_4.
-This batch studies the first bridge; the second remains unencoded and open.
+The original conceptual batch studies the first bridge; its own GOD_4
+identification remains open. The later integration below reuses a separate
+registered attribute/naming consumer without supplying its premises.
 `GodExists IsGod` is `∃ g, IsGod g`, whereas this batch's conclusion explicitly
 requires the independently supplied existence predicate as well as the profile.
 No instantiation equates these declared types.
