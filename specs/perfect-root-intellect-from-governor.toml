@@ -1,0 +1,29 @@
+# Horizontal intellect route: one dictionary for Fifth-Way understanding and
+# HAS_INTELLECT_1. No new source attribution or general equivalence is asserted.
+[batch]
+vocab = "TruthCore.Causality.RootPositiveIntellectWill"
+results = "TruthCore.Results.Causality.PerfectRootIntellectFromGovernor"
+
+[[argument]]
+id = "a56eea3e-c775-4d58-a0a3-41dbf04d158b"
+label = "HAS_INTELLECT_1 and HAS_WILL_1 by governor identity"
+theorem = "derive"
+premises = [
+  "7abdee27-8abc-59d9-9b20-740616a1a8dd",
+  "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+  "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7",
+  "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+  "7067553d-cad9-5d79-b6b2-912e35051530",
+  "00e962ae-f109-55f7-a7fd-f107ce0dea6b",
+  "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+  "ca07cae9-6102-564e-a7fd-efb013744b3d",
+  "d7741cdc-881b-5bda-85ce-d70223162f78",
+  "86efed1a-f353-5b5d-9431-df7fc643ace1",
+  "09c6d5f0-d412-5038-85f9-75fffb935727",
+  "571094b6-28bd-5398-9940-5e76a4573a5f",
+  "090be689-b77f-51a1-9d5d-caf339169e4b",
+]
+conclusion = "017befa2-6ac0-52d2-b49c-d1d10507c2cf"
+axioms = []
+rule = "Identify the intelligent maximum with the supplied actual root by esse causation, then derive the structural and volitional tail on that same witness"
+meaning = "Analyst horizontal support option for the existing positive-root endpoint, attribution deferred. Retains the twelve other inputs of PerfectRootPositiveIntellectWill.derive and replaces the universal immateriality-to-intellect premise with the existing MaximeEnsGovernsNature endpoint, instantiated with ONE HasIntellect predicate for the Fifth-Way Intelligent parameter and HAS_INTELLECT_1. This explicit dictionary application remains a semantic burden: understanding ends must instantiate intellectual cognition, rather than merely sensory response or biological benefit; no equivalence of arbitrary predicates is derived. Unpack the supplied perfect actual root n and intelligent maximum d. If d differs from n, the maximum-in-being causal policy gives d an esse-cause edge to n (which has esse). EsseCauseIsActualConcreteGround turns that edge into a ground of the SAME actual concretum n, contradicting its roothood. Hence d=n and HasIntellect transports to n. The existing uniting-cause, composition-kind, priority, no-component, goodness and transfer policies then give the SAME positive-root tuple, and the existing will principle gives HasWill n. The governor need not first be shown a root, and no all-maxima uniqueness axiom, God-name, universal immateriality bridge, cognitive grade transfer or actual form-acquisition event is assumed. Perfect-root existence and the complete conditional provenance of the intelligent-governor endpoint remain separate obligations. No unconditional existence of God, premise truth, rival defeat or root closure follows. The old universal/direct-assumption route is retained. Exact research comparison, positive teleological rationale, naturalistic organizational/consumer rival and missing application evidence are in docs/immaterial-intellect-reception.md#horizontal-support-same-root-through-an-intelligent-governor-2026-11-17."
