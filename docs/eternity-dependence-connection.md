@@ -1129,3 +1129,8 @@ Computed `truth frontier-diff --base c43e57e8191e1f0840a35069d0830e6321bad5a8
 alternatives 414 → 414, added 0. The new certificate dossier was inspected.
 Fresh challenge of this full case assessment and final integration CI remain
 coordinator-owned. No push, PR, watch or merge.
+
+Foundation continuation: the complete proposed assessment of `5c898d24`, its
+rootless versus fundamental-natural rivals, and the checked comparison with
+maximal-target nonreciprocity is retained in
+[the existing foundation note](notes/unique-feedback-explanation-311.md#current-foundation-judgment-on-the-existence-only-case-2026-11-17).

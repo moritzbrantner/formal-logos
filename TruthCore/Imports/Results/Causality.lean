@@ -187,6 +187,7 @@ public import TruthCore.Results.Causality.LifeBoundaryPotency.Solution
 public import TruthCore.Results.Causality.LocalFramePossibleExternalCause.Solution
 public import TruthCore.Results.Causality.LocalObservationSelectsSolution.Solution
 public import TruthCore.Results.Causality.LogicalNecessityProfiles.Solution
+public import TruthCore.Results.Causality.MaximalFromEsseSource.Solution
 public import TruthCore.Results.Causality.MaximalGroundingAsymmetry.Control.Solution
 public import TruthCore.Results.Causality.MaximalGroundingAsymmetry.GodRoot.Solution
 public import TruthCore.Results.Causality.MaximalGroundingAsymmetry.Strength.Solution
@@ -358,6 +359,7 @@ public import TruthCore.Results.Causality.UniqueRootQuarta.Solution
 public import TruthCore.Results.Causality.WholePowerPerfection.Solution
 public import TruthCore.Results.Causality.WholeRosterFoundation.Solution
 public import TruthCore.Results.Causality.WholeRosterFromMaximumAsymmetry.Solution
+public import TruthCore.Results.Causality.WholeRosterMaximalComparison.Solution
 public import TruthCore.Results.Causality.WholeRosterRootEquivalence.Solution
 public import TruthCore.Results.Causality.WitnessLocalTeleology.Solution
 public import TruthCore.Results.Causality.WorldIndexedSources.Solution

@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.MaximalFromEsseSource.Challenge",
+  "solution_module": "TruthCore.Results.Causality.MaximalFromEsseSource.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.MaximalFromEsseSource.maximalCauses"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

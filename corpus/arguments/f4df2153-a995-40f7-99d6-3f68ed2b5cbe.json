@@ -1,0 +1,32 @@
+{
+  "id": "f4df2153-a995-40f7-99d6-3f68ed2b5cbe",
+  "label": "Maximal esse causality from common ancestry, composition and causal ascent",
+  "premise_statement_ids": [
+    "c35b1a5c-6405-449b-993b-8196b2457e08",
+    "b4987085-f7b0-4031-a795-364873d3c216",
+    "cffad050-e86d-48b8-b04b-be47fcc1352d",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "conclusion_statement_id": "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7",
+  "inference_ids": [
+    "36d3cff4-65e5-4900-b936-fc158061cc15"
+  ],
+  "meaning": "Analyst source-first alternative for the selected-esse genus premise. The existing common ancestor supplies one actual n and a finite nonempty actual esse-cause path to each other actual being. Reuse causeOfChain under the existing composition law to obtain CausesIn n x esse. The existing causal-ascent premise then places n above any distinct maximal m, contradicting m's maximality; explicit excluded middle gives m=n. Thus every merely maximal bearer has n's universal esse-causal scope. No order-to-cause converse, greatest-degree calibration, uniqueness of tied degrees, Fourth-Way genus causality or God naming is assumed. Common-source identity and uncausedness are retained parts of an existing reusable interface but unused by this proof. The source/composition/ascent premises remain open to independent warrant and actual application; the tenseless, mode-unspecified profile is not thereby a present productive support relation. This supports the existing fixed-esse premise, not the stronger all-respects d9fad785 premise. See docs/notes/maximum-definition-fork.md.",
+  "definition_ids": [
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "a2a8de58-42e0-5481-b7fb-848ae8602036",
+    "5766de66-8a37-5b04-aa65-9eec53319f50",
+    "a0a9e610-979f-476d-834e-7616343d4863"
+  ],
+  "disambiguation_ids": [
+    "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "1795a62e-f78b-5f5b-94e7-9e7490824811",
+    "54f33165-05df-5205-807a-04154b5fd6ad"
+  ]
+}

@@ -1,0 +1,13 @@
+import TruthCore.Causality.WholeRosterMaximalComparison
+import TruthCore.Results.Causality.WholeRosterFoundation.Solution
+import TruthCore.Results.Causality.MaximalGroundingAsymmetry.WholeRoster.Solution
+import TruthCore.Causality.DirectEsseRootRoute
+
+namespace TruthCore.Results.Causality.WholeRosterMaximalComparison
+open TruthCore.Causality.WholeRosterMaximalComparison
+open TruthCore.Causality.DirectEsseRootUniquenessAtBeing
+
+theorem comparison : Comparison := by
+  sorry
+
+end TruthCore.Results.Causality.WholeRosterMaximalComparison

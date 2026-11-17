@@ -247,6 +247,7 @@ public import TruthCore.Causality.UniqueRootQuartaControl
 public import TruthCore.Causality.UnmovedAtNoTime
 public import TruthCore.Causality.WholePowerPerfection
 public import TruthCore.Causality.WholeRosterFoundation
+public import TruthCore.Causality.WholeRosterMaximalComparison
 public import TruthCore.Causality.WitnessLocalTeleology
 public import TruthCore.Causality.WorldSourceRegress
 public import TruthCore.Causality.WorldwiseCompositeGround
