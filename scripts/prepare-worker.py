@@ -63,17 +63,38 @@ def local_path(root, relative):
     return path
 
 
+def validate_build_tree(tree):
+    """Allow Cargo's internal hardlinks, but no inode with aliases outside this tree.
+
+    With quiescent writers, the number of directory entries we see must equal each
+    regular file's link count. Counting only this owned output tree prevents a
+    hardlink into another checkout/cache from being accepted as a local artifact.
+    """
+    if tree.resolve() != tree:
+        raise ValueError(f"unsafe build tree: {tree}")
+    inodes = {}
+    for folder, directories, files in os.walk(tree, followlinks=False):
+        for name in directories + files:
+            path = Path(folder) / name
+            if path.is_symlink():
+                raise ValueError(f"aliased mutable build artifact: {path}")
+            if path.is_file():
+                metadata = path.stat()
+                key = (metadata.st_dev, metadata.st_ino)
+                count, _, _ = inodes.get(key, (0, metadata.st_nlink, path))
+                inodes[key] = (count + 1, metadata.st_nlink, path)
+    for count, links, path in inodes.values():
+        if count != links:
+            raise ValueError(f"aliased mutable build artifact outside owned tree: {path}")
+
+
 def validate_outputs(root):
     # Validate before Lake, Cargo or Bun can follow an existing output alias.
     for name in (".lake", ".lake/packages", ".lake/build", "target", "target/release",
                  "target/release/truth"):
         local_path(root, name)
     for name in (".lake/build", "target"):
-        for folder, directories, files in os.walk(root / name, followlinks=False):
-            for entry in directories + files:
-                path = Path(folder) / entry
-                if path.is_symlink() or (path.is_file() and path.stat().st_nlink != 1):
-                    raise ValueError(f"aliased mutable build artifact: {path}")
+        validate_build_tree(root / name)
     install_paths(root)
 
 
@@ -215,8 +236,8 @@ def prepare_verifier(root):
                 "nanoda_lib/target/release/nanoda_bin")]
     for binary in binaries:
         local_path(work, binary.relative_to(work))
-        if binary.exists() and binary.stat().st_nlink != 1:
-            raise ValueError(f"hardlinked verifier output: {binary}")
+    for name in ("rust-target", "lean4export/.lake/build", "bin", "nanoda_lib/target"):
+        validate_build_tree(work / name)
     inputs = digest_files([root / "lean-toolchain", root / "scripts/verifier-pins.env",
                           root / "scripts/bootstrap-verifier.sh", Path(__file__),
                           root / "verifier/Cargo.toml", root / "verifier/Cargo.lock",
@@ -326,8 +347,7 @@ def cli_inputs(root):
 def prepare_cli(root, source=None):
     """Provide a local CLI without sharing mutable Cargo outputs with another checkout."""
     target = local_path(root, "target/release/truth")
-    if target.exists() and target.stat().st_nlink != 1:
-        raise ValueError(f"hardlinked CLI output: {target}")
+    validate_build_tree(root / "target")
     inputs = cli_inputs(root) + run(root, "rustc", "-vV", capture=True)
     inputs += json.dumps({key: os.environ.get(key) for key in (
         "RUSTFLAGS", "CARGO_ENCODED_RUSTFLAGS", "RUSTUP_TOOLCHAIN",

@@ -28,6 +28,19 @@ def fixture_clone(root):
     return root
 
 
+def cargo_binary(tree, name):
+    """Cargo exposes its hashed executable through a second hardlink."""
+    hashed = tree / "release/deps" / (name + "-fixturehash")
+    hashed.parent.mkdir(parents=True, exist_ok=True)
+    hashed.write_bytes(b"executable fixture")
+    hashed.chmod(0o755)
+    binary = tree / "release" / name
+    if binary.exists():
+        binary.unlink()
+    os.link(hashed, binary)
+    return binary
+
+
 class PreparationTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
@@ -76,26 +89,70 @@ class PreparationTests(unittest.TestCase):
         self.assertNotEqual(copied.stat().st_ino, artifact.stat().st_ino)
         self.assertFalse((self.root / ".lake").exists())
 
-    def test_linked_preparation_runs_cache_and_cli_without_project_build(self):
+    def test_linked_preparation_reruns_with_cargo_links_and_private_receipts(self):
+        for name in ("Cargo.toml", "Cargo.lock", "truth/Cargo.toml", "truth/src/main.rs",
+                     "scripts/verifier-pins.env", "verifier/Cargo.toml", "verifier/Cargo.lock"):
+            path = self.root / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("fixture")
+        (self.root / "lean-toolchain").write_text("leanprover/lean4:v4.35.0")
+        (self.root / "lake-manifest.json").write_text(json.dumps({"packagesDir": ".lake/packages", "packages": []}))
         linked = self.linked_worktree()
-        (linked / "lean-toolchain").write_text("leanprover/lean4:v4.35.0")
+        cache = self.root.parent / "verifier-cache"
+        cache.mkdir()
+        for name in ("lean4export", "landrun", "nanoda_lib"):
+            fixture_clone(cache / name)
+        (cache / "lean4export/lean-toolchain").write_text("leanprover/lean4:v4.35.0")
+        comparator = cargo_binary(cache / "rust-target", "truth-core-comparator")
+        cargo_binary(cache / "nanoda_lib/target", "nanoda_bin")
+        for name in ("lean4export/.lake/build/bin/lean4export", "bin/landrun"):
+            binary = cache / name
+            binary.parent.mkdir(parents=True, exist_ok=True)
+            binary.write_bytes(b"fixture")
+            binary.chmod(0o755)
+        self.assertEqual(comparator.stat().st_nlink, 2)
+        worker.reconcile(self.root, "sentinel", "main", lambda: "unchanged", lambda: None)
+        receipt = self.root / ".git/truth-core-preparation.json"
+        before = receipt.read_bytes()
+        config = (self.root / ".git/config").read_bytes()
         calls = []
+        original_run = worker.run
 
         def command(root, *args, **kwargs):
+            if args[0] == "git":
+                return original_run(root, *args, **kwargs)
             calls.append(args)
-            return "Lean (version 4.35.0, fixture)" if args == ("lean", "--version") else ""
+            if args == ("lean", "--version"):
+                return "Lean (version 4.35.0, fixture)"
+            if args[:2] == ("cargo", "build"):
+                cargo_binary(root / "target", "truth")
+            elif args[:1] == ("bun",) and "install" in args:
+                (root / "node_modules").mkdir(exist_ok=True)
+                (root / "node_modules/installed").touch()
+            return "fixture version"
 
+        # Only external acquisition/build commands are doubled. All preparation,
+        # Git boundaries, cache checks and receipt reconciliation run for real.
         with patch.object(worker, "run", side_effect=command), \
                 patch.object(worker.shutil, "which", return_value="tool"), \
-                patch.object(worker, "check_packages") as packages, \
-                patch.object(worker, "prepare_verifier"), \
-                patch.object(worker, "prepare_bun"), \
-                patch.object(worker, "prepare_cli") as cli:
-            worker.prepare(linked)
-        self.assertEqual([call for call in calls if call[0] != "git"],
-                         [("lean", "--version"), ("lake", "exe", "cache", "get")])
-        self.assertEqual(packages.call_count, 2)
-        cli.assert_called_once_with(linked, None)
+                patch.dict(os.environ, {"TRUTH_CORE_VERIFIER_HOME": str(cache)}):
+            worker.prepare(worker.worker_clone(linked))
+            worker.prepare(worker.worker_clone(linked))
+        self.assertEqual(sum(call[:2] == ("cargo", "build") for call in calls), 1)
+        self.assertEqual(calls.count(("scripts/bootstrap-verifier.sh",)), 1)
+        self.assertEqual(calls.count(("lake", "exe", "cache", "get")), 2)
+        self.assertNotIn(("lake", "build"), calls)
+        self.assertEqual((linked / "target/release/truth").stat().st_nlink, 2)
+        self.assertEqual(receipt.read_bytes(), before)
+        self.assertEqual((self.root / ".git/config").read_bytes(), config)
+        private = worker.git_directory(linked) / "truth-core-preparation.json"
+        self.assertEqual(set(json.loads(private.read_text())), {"bun", "verifier", "cli"})
+        self.assertFalse((self.root / "target").exists())
+        # An extra link outside the owned verifier output is still rejected.
+        os.link(comparator, self.root.parent / "external-comparator")
+        with patch.dict(os.environ, {"TRUTH_CORE_VERIFIER_HOME": str(cache)}):
+            with self.assertRaisesRegex(ValueError, "outside owned tree"):
+                worker.prepare_verifier(linked)
 
     def test_output_and_package_escape_rejected_before_acquisition(self):
         outside = self.root.parent / "outside"
@@ -299,14 +356,13 @@ class SeedBuildTests(unittest.TestCase):
                 return "same compiler and host"
             if command[0] == "cargo":
                 builds.append(root)
-                binary = root / "target/release/truth"
-                binary.parent.mkdir(parents=True, exist_ok=True)
-                binary.write_bytes(b"CLI")
-                binary.chmod(0o755)
+                cargo_binary(root / "target", "truth")
                 return None
             return original_run(root, *command, **kwargs)
 
         with patch.object(worker, "run", side_effect=fake):
+            worker.prepare_cli(self.warm)
+            worker.validate_build_tree(self.warm / "target")
             worker.prepare_cli(self.warm)
             worker.prepare_cli(self.root, self.warm)
             self.assertEqual(builds, [self.warm])
@@ -318,6 +374,10 @@ class SeedBuildTests(unittest.TestCase):
             (self.root / "truth/src/main.rs").write_text("changed")
             worker.prepare_cli(self.root, self.warm)
             self.assertEqual(builds, [self.warm, self.root])
+            worker.validate_build_tree(self.root / "target")
+            os.link(copied, self.root.parent / "cross-checkout-cli")
+            with self.assertRaisesRegex(ValueError, "outside owned tree"):
+                worker.prepare_cli(self.root, self.warm)
 
     def test_copies_absent_build_output_without_changing_the_source(self):
         before = worker.build_fingerprint(self.warm / ".lake/build")
