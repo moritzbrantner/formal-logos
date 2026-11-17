@@ -23,6 +23,7 @@ transcription = "instantiation"
 [[argument]]
 id = "Identity-source ascent from absolute reception limitation"
 theorem = "identityAscentFromReception"
+strong_version_needed = {"6dfe01ab-e3f2-5a4c-b102-701c161f2cf7" = "Retained to reuse the existing reception theorem interface. Its only application is to the source after esse–essence identity is obtained, so the additional non-identity scope is unnecessary to this inference. Existing identity-restricted b9316115 (strength relation 497904e4) uses a different Frame interface and cannot be substituted directly without an explicit faithful adapter. This is interface reuse, not a claim that broader metaphysical coverage is needed."}
 premises = ["6dfe01ab-e3f2-5a4c-b102-701c161f2cf7", "7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2", "14325c83-1c3f-5afb-b63f-52b0c2b2a326", "da72ae93-5c8d-4717-8c17-97eeb8037317", "7de89edb-e3a8-59ee-9740-8d0ce7c8ea24", "1304b462-4a10-5dd0-995a-db5feb21d98e", "fd2c8710-988f-527f-a81a-2566fe10e3f9", "9eaa3b6e-ad2f-5776-ab26-03cfa9f54ad8"]
 conclusion = "8176a284-769b-4ed0-b90b-ff655b7fd864"
 axioms = []

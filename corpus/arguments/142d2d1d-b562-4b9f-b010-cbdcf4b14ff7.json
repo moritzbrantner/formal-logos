@@ -37,5 +37,8 @@
     "1aef8986-ed29-564f-9803-d812d2ff63e1",
     "1795a62e-f78b-5f5b-94e7-9e7490824811",
     "8bb31748-e20f-5266-ac39-c442faab6622"
-  ]
+  ],
+  "strong_version_needed": {
+    "6dfe01ab-e3f2-5a4c-b102-701c161f2cf7": "Retained to reuse the existing reception theorem interface. Its only application is to the source after esse–essence identity is obtained, so the additional non-identity scope is unnecessary to this inference. Existing identity-restricted b9316115 (strength relation 497904e4) uses a different Frame interface and cannot be substituted directly without an explicit faithful adapter. This is interface reuse, not a claim that broader metaphysical coverage is needed."
+  }
 }

@@ -912,3 +912,14 @@ under different candidate/interpretation dictionaries, without supplying a new
 independent pre-naming support route. It adds no proof or premise change and
 has not displaced the ascent tests. All findings are proposed for fresh
 independent semantic review. No push, PR or watch was performed.
+
+### Review repair: retained own-essence interface
+
+The reception argument retains `6dfe01ab` for the existing theorem interface,
+but applies it only to the source after obtaining esse–essence identity.
+Its additional non-identity scope is unnecessary to this inference. The existing
+identity-restricted `b9316115`, with strength relation `497904e4`, uses a different
+`Frame` interface; substitution requires an explicit faithful adapter. The owning
+spec records this interface-reuse reason in `strong_version_needed`. Neither the
+proof nor its current premise bundle changes; no broader metaphysical necessity
+is claimed.
