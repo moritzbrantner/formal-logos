@@ -28,8 +28,6 @@ use std::{
 
 /// The note directory, relative to the checkout.
 pub const DIRECTORY: &str = "docs/notes";
-/// Notes larger than this are not indexed (a bound on broad indexing).
-pub const MAX_BYTES: u64 = 1 << 20;
 /// Legacy-ID prefixes that mark a token as an intended record reference, so
 /// an unknown one is reported as unresolved.
 const RESERVED: &[&str] = &[
@@ -247,7 +245,7 @@ fn reference_shaped(token: &str) -> bool {
             .any(|prefix| token.len() > prefix.len() && token.starts_with(prefix))
 }
 
-/// Every `docs/notes/**/*.md` path of at most [`MAX_BYTES`], relative to
+/// Every regular `docs/**/*.md` path, regardless of size, relative to
 /// `root`, sorted part by part. Symlinks are not followed; a missing
 /// directory has no notes.
 pub fn inputs(root: &Path) -> Result<Vec<String>, String> {
@@ -268,24 +266,19 @@ pub fn inputs(root: &Path) -> Result<Vec<String>, String> {
             parts.push(name);
             if kind.is_dir() {
                 walk(&entry.path(), parts, out)?;
-            } else if kind.is_file()
-                && parts.last().is_some_and(|name| name.ends_with(".md"))
-                && entry
-                    .metadata()
-                    .is_ok_and(|metadata| metadata.len() <= MAX_BYTES)
-            {
+            } else if kind.is_file() && parts.last().is_some_and(|name| name.ends_with(".md")) {
                 out.push(parts.clone());
             }
             parts.pop();
         }
         Ok(())
     }
-    let directory = root.join(DIRECTORY);
+    let directory = root.join("docs");
     if !directory.is_dir() {
         return Ok(Vec::new());
     }
     let mut found = Vec::new();
-    let mut parts: Vec<String> = DIRECTORY.split('/').map(str::to_owned).collect();
+    let mut parts: Vec<String> = vec!["docs".to_owned()];
     walk(&directory, &mut parts, &mut found)?;
     found.sort();
     Ok(found.into_iter().map(|parts| parts.join("/")).collect())
@@ -610,6 +603,19 @@ mod tests {
             &record(json!({"id": "RES-X", "label": "S"})),
         );
         lookup
+    }
+
+    #[test]
+    fn large_notes_remain_discoverable() {
+        let root = std::env::temp_dir().join(format!("truth-large-notes-{}", std::process::id()));
+        let directory = root.join("docs");
+        fs::create_dir_all(&directory).unwrap();
+        let body = format!("{}\nSTMT-A\n", "x".repeat((1 << 20) + 1));
+        fs::write(directory.join("large.md"), &body).unwrap();
+        let found = read_all(&root).unwrap();
+        assert_eq!(found.len(), 1);
+        assert_eq!(found[0].1, body.as_bytes());
+        fs::remove_dir_all(root).unwrap();
     }
 
     #[test]

@@ -23,13 +23,26 @@ fn run(args: &Args, operands: &[&str]) -> Output {
     let target = research::resolve_target(&aliases, target, &["statements"])?;
     let target = target.ok_or_else(|| usage(HELP))?;
     let limit = args.research.limit.unwrap_or(related::DEFAULT_LIMIT);
-    let report = related::related(&corpus, &target, limit).map_err(|error| match error {
+    let report = related::related(&corpus, &target, i64::MAX).map_err(|error| match error {
         related::LookupError::Unknown(message) => unknown(&message),
         related::LookupError::Invalid(message) => invalid_target(&message),
     })?;
-    let mut text = related::format_related(&report);
+    let mut displayed = report.clone();
+    displayed
+        .matches
+        .truncate(usize::try_from(limit.max(1)).unwrap_or(usize::MAX));
+    let mut text = related::format_related(&displayed);
+    let omitted = report.matches.len() - displayed.matches.len();
+    if omitted > 0 {
+        text.push_str(&format!(
+            "\n{omitted} additional matches available with --json."
+        ));
+    }
     let mut value = with_identity(&report, &corpus);
     let shown = usize::try_from(limit).unwrap_or(usize::MAX).max(1);
     with_note_mentions(args, &corpus, &[&target], &mut value, &mut text, shown)?;
+    value["evidence_graph"] =
+        super::evidence::expansion(args, &corpus, std::slice::from_ref(&target))?;
+    text.push_str(&super::evidence::summary(&value["evidence_graph"], 0));
     Ok((value, Some(aliases.humanize(&text))))
 }

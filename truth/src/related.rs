@@ -473,7 +473,7 @@ pub fn related(
             .then(score(b_id).total_cmp(&score(a_id)))
             .then(a_id.cmp(b_id))
     });
-    let keep = limit.clamp(1, 200) as usize;
+    let keep = usize::try_from(limit.max(1)).unwrap_or(usize::MAX);
     let matches = ranked
         .into_iter()
         .take(keep)

@@ -1,0 +1,142 @@
+{
+  "method": "Independent authored judgments fixed before candidate runs; oracle never copied into indexed fixture. Relevance means same load-bearing subject and disputed inference, not equivalence. Precision is among first five statement candidates, and novelty correctness tests exactness separately.",
+  "semantic_cases": [
+    {
+      "id": "exact",
+      "query": "Every mover moves only insofar as it is in act.",
+      "relevant_statement_ids": [
+        "90000000-0000-4000-8000-000000000000"
+      ],
+      "identical": true,
+      "reason": "Exact recorded proposition."
+    },
+    {
+      "id": "converse",
+      "query": "Whatever has a cause begins to exist.",
+      "relevant_statement_ids": [
+        "90000000-0000-4000-8000-000000000001"
+      ],
+      "identical": false,
+      "reason": "Reverses the conditional; the corpus states only begins implies caused."
+    },
+    {
+      "id": "negation",
+      "query": "God does not exist outside time.",
+      "relevant_statement_ids": [
+        "90000000-0000-4000-8000-000000000002"
+      ],
+      "identical": false,
+      "reason": "Negates the recorded proposition."
+    },
+    {
+      "id": "temporal-sense",
+      "query": "Act is prior to potency in time.",
+      "relevant_statement_ids": [
+        "90000000-0000-4000-8000-000000000003"
+      ],
+      "identical": false,
+      "reason": "Temporal priority differs from priority in account; this corrects the historical E3 acceptance rule in a separate tier."
+    },
+    {
+      "id": "quantifier",
+      "query": "Every contingent being has an explanation.",
+      "relevant_statement_ids": [
+        "90000000-0000-4000-8000-000000000004"
+      ],
+      "identical": false,
+      "reason": "Universal explanation is stronger than the recorded existential claim."
+    },
+    {
+      "id": "timeless-endless",
+      "query": "God exists throughout all time.",
+      "relevant_statement_ids": [
+        "90000000-0000-4000-8000-000000000002"
+      ],
+      "identical": false,
+      "reason": "Sempiternity is not timelessness; vocabulary overlap cannot certify equivalence."
+    }
+  ],
+  "graph_record_ids": [
+    "a8459a54-228d-545e-9e81-bf462fcca7a6",
+    "b17df86a-c3a1-58b4-a0f7-7a391ef46cd1"
+  ],
+  "source_ids": [
+    "d6c94a12-c779-59ba-90aa-2d42e1bbf47f",
+    "f450808a-6294-510d-ba2c-e5483c261dda"
+  ],
+  "historical_cases": [
+    {
+      "id": "B2-dependence-paraphrase",
+      "query": "depending for its being is equivalent to being unable to be without",
+      "relevant_references": [
+        "priority-independence-logic-support-investigation.md",
+        "000e1f65"
+      ],
+      "allowed_classifications": [
+        "partially-recorded"
+      ],
+      "reason": "Known relevant prior work must be found; a paraphrase alone does not certify normalized text identity."
+    },
+    {
+      "id": "B3-dedicated-note",
+      "query": "weak explanatory coverage adds no ontic constraints",
+      "relevant_references": [
+        "weak-explanation-conservative-expansion.md"
+      ],
+      "allowed_classifications": [
+        "partially-recorded"
+      ],
+      "reason": "Dedicated note records the result; advisory text is prior work rather than certified proposition identity."
+    },
+    {
+      "id": "E2-converse",
+      "query": "CanBeWithout(x,y) \u2192 DependsForBeing(x,y)",
+      "relevant_references": [
+        "priority-independence-logic-support-investigation.md"
+      ],
+      "allowed_classifications": [
+        "partially-recorded",
+        "no-match-found"
+      ],
+      "reason": "Shared symbols do not establish the converse or equivalence."
+    },
+    {
+      "id": "E3-temporal-priority",
+      "query": "act is prior to potency in time",
+      "relevant_references": [
+        "197ac723"
+      ],
+      "allowed_classifications": [
+        "partially-recorded",
+        "no-match-found"
+      ],
+      "reason": "The historical lexical key accepted already-recorded for this hit. A route-relative priority statement does not certify the temporal reading; the new judgment requires semantic uncertainty."
+    }
+  ],
+  "graph_edges": [
+    {
+      "from": "claims:b17df86a-c3a1-58b4-a0f7-7a391ef46cd1",
+      "to": "statements:a8459a54-228d-545e-9e81-bf462fcca7a6",
+      "field": "/statement_id",
+      "path": "corpus/claims/00-CLAIM-A.json"
+    },
+    {
+      "from": "claims:b17df86a-c3a1-58b4-a0f7-7a391ef46cd1",
+      "to": "sources:d6c94a12-c779-59ba-90aa-2d42e1bbf47f",
+      "field": "/source_id",
+      "path": "corpus/claims/00-CLAIM-A.json"
+    },
+    {
+      "from": "issues:7001",
+      "to": "pull_requests:7002",
+      "field": "/body",
+      "path": "offline-snapshot/items/0"
+    },
+    {
+      "from": "pull_requests:7002",
+      "to": "issues:7001",
+      "field": "/body",
+      "path": "offline-snapshot/items/1"
+    }
+  ]
+}

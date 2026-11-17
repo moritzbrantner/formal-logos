@@ -36,18 +36,94 @@ pub type RecordKey = (String, String);
 
 /// Default number of entries per section in the text view.
 pub const DEFAULT_LIMIT: usize = 6;
-/// Candidate note sections and records taken from the index per query.
-const CANDIDATES: i64 = 80;
-/// Notes evaluated paragraph by paragraph per query.
-const NOTES_EVALUATED: usize = 16;
+/// SQLite negative LIMIT returns every candidate; presentation is separate.
+const CANDIDATES: i64 = -1;
 
 /// What every brief says about itself.
 pub const BOUNDARY: &str = "retrieval only: formal status is the frontier's; notes are uncertified research text; \
      issue state is workflow history, not warrant; a verified result with an open premise is a conditional \
      consequence; an absent hit or snapshot is not evidence that no prior work exists";
 
+/// Canonical lexicon mappings are discovery evidence, never synonym equivalence.
+fn semantic_discovery(inputs: &Inputs, text: &str) -> Result<Value, String> {
+    use crate::lexicon::{Lexicon, Senses, Trace};
+    let senses = Senses::new(inputs.corpus);
+    let Some(lexicon) = Lexicon::load(inputs.root, inputs.corpus, &senses)? else {
+        return Ok(json!({"available": false, "mappings": [], "seeds": []}));
+    };
+    let mut seeds = BTreeSet::new();
+    let mappings: Vec<Value> = crate::lexicon::trace_text(&lexicon, &senses, text).into_iter().filter_map(|(token, trace)| {
+        match trace {
+            Trace::Entries(indices) => {
+                let alternatives: Vec<Value> = indices.into_iter().map(|index| {
+                    let entry = &lexicon.entries[index];
+                    for id in &entry.definition_ids { seeds.insert(format!("definitions:{id}")); }
+                    for id in &entry.disambiguation_ids { seeds.insert(format!("disambiguations:{id}")); }
+                    json!({"id": entry.id, "lemma": entry.lemma, "class": entry.class,
+                        "definition_ids": entry.definition_ids, "disambiguation_ids": entry.disambiguation_ids,
+                        "multiple_senses": entry.multi_sense()})
+                }).collect();
+                Some(json!({"token": token, "alternatives": alternatives, "comparison": "unknown"}))
+            },
+            Trace::Tag(ids) => {
+                for id in &ids { seeds.insert(format!("disambiguations:{id}")); }
+                Some(json!({"token": token, "disambiguation_ids": ids, "comparison": "unknown"}))
+            },
+            Trace::Untraced => None,
+        }
+    }).collect();
+    Ok(
+        json!({"available": true, "mappings": mappings, "seeds": seeds,
+        "boundary": "lexicon alternatives are discovery candidates; ambiguity and sense bridges require comparison"}),
+    )
+}
+
+fn graph_discovery(
+    inputs: &Inputs,
+    text: &str,
+    explicit: Option<&str>,
+    semantic: &Value,
+) -> Result<Value, String> {
+    let snapshot = inputs
+        .issues
+        .snapshot()
+        .map(|snapshot| json!(snapshot.issues));
+    let graph =
+        crate::evidence_graph::EvidenceGraph::build(inputs.root, inputs.corpus, snapshot.as_ref())?;
+    let mut seeds: BTreeSet<String> = explicit
+        .into_iter()
+        .flat_map(|id| graph.resolve(id))
+        .collect();
+    seeds.extend(graph.query_references(text));
+    let explicit_seeds: Vec<String> = seeds.into_iter().collect();
+    let semantic_seeds: Vec<String> = semantic["seeds"]
+        .as_array()
+        .into_iter()
+        .flatten()
+        .filter_map(Value::as_str)
+        .map(str::to_owned)
+        .collect();
+    let combined: Vec<String> = explicit_seeds
+        .iter()
+        .chain(&semantic_seeds)
+        .cloned()
+        .collect::<BTreeSet<_>>()
+        .into_iter()
+        .collect();
+    let expansion = graph.expand(&combined);
+    let evidence = if inputs.full_evidence {
+        json!(expansion)
+    } else {
+        expansion.navigation()
+    };
+    Ok(json!({"expansion": evidence, "lanes": {
+        "explicit": {"seeds": explicit_seeds}, "semantic_candidates": {"seeds": semantic_seeds}},
+        "boundary": "one shared expansion; lane seeds retain discovery provenance; graph paths are not equivalence"}))
+}
+
 /// The shared inputs of one brief or novelty run.
 pub struct Inputs<'a> {
+    pub full_evidence: bool,
     pub root: &'a Path,
     pub corpus: &'a Corpus,
     pub aliases: &'a Aliases,
@@ -510,6 +586,7 @@ pub fn statement_brief(
     sid: &str,
     requested: Option<Value>,
 ) -> Result<Value, String> {
+    let graph = graph_discovery(inputs, "", Some(sid), &Value::Null)?;
     let corpus = inputs.corpus;
     let index = DossierIndex::new(corpus);
     let dossier = index
@@ -649,7 +726,7 @@ pub fn statement_brief(
     let (note_sections, assessments) = note_evidence(inputs, &mention_ids, &theorems)?;
     let referenced = note_references(inputs.root, &note_sections);
     let issues = issue_evidence(inputs, Some(sid), &mention_ids, &referenced)?;
-    let related = crate::related::related(corpus, sid, 6)
+    let related = crate::related::related(corpus, sid, i64::MAX)
         .map(|report| {
             report
                 .matches
@@ -733,6 +810,7 @@ pub fn statement_brief(
         Issues::Snapshot(_) => {}
     }
     Ok(json!({
+        "evidence_graph": graph,
         "mode": "statement",
         "boundary": BOUNDARY,
         "requested": requested,
@@ -888,7 +966,7 @@ fn paragraph_json(query: &Query, hit: &ParagraphHit) -> Value {
 }
 
 /// The candidate notes for `query`: the distinct notes of the index's
-/// best-ranked sections, then `extra` notes, at most [`NOTES_EVALUATED`].
+/// ranked sections, then every `extra` note.
 pub fn candidate_notes(
     db: &rusqlite::Connection,
     query: &Query,
@@ -904,7 +982,7 @@ pub fn candidate_notes(
         .map(|hit| hit.path)
         .chain(extra.iter().cloned())
     {
-        if !paths.contains(&path) && paths.len() < NOTES_EVALUATED {
+        if !paths.contains(&path) {
             paths.push(path);
         }
     }
@@ -921,6 +999,8 @@ pub fn question_brief(
     question: &str,
     limit: usize,
 ) -> Result<Value, String> {
+    let semantic = semantic_discovery(inputs, question)?;
+    let graph = graph_discovery(inputs, question, None, &semantic)?;
     let query = Query::parse(question);
     let (paths, record_candidates) = candidate_notes(db, &query, &[])?;
     let scores = score_notes(inputs.root, &query, &paths);
@@ -965,7 +1045,7 @@ pub fn question_brief(
     let mut changed_by: BTreeMap<u64, Vec<String>> = BTreeMap::new();
     let lookup = notes::Lookup::of_corpus(inputs.corpus);
     let mut titled_for: BTreeMap<u64, Vec<String>> = BTreeMap::new();
-    for (best, strong, score) in ranked.iter().take(limit.max(1) * 2) {
+    for (best, strong, score) in &ranked {
         // The issue a matched note is titled for (`… (#1584)`).
         for number in retrieval::issue_references(&score.note.title) {
             let paths = titled_for.entry(number).or_default();
@@ -1025,7 +1105,7 @@ pub fn question_brief(
             "history": history,
             "best_coverage": [best, total],
             "paragraphs_with_half_or_more": strong,
-            "best_paragraphs": hits.iter().take(3).map(|hit| paragraph_json(&query, hit)).collect::<Vec<_>>(),
+            "best_paragraphs": hits.iter().map(|hit| paragraph_json(&query, hit)).collect::<Vec<_>>(),
             "assessments": assessment_sections(&score.note, &score.raw),
             "superseded_markers": superseded(&score.raw, &score.note.path),
         }));
@@ -1042,7 +1122,6 @@ pub fn question_brief(
         .map(|(id, (section, count))| (id, section, count))
         .collect();
     anchor_list.sort_by(|a, b| b.2.cmp(&a.2).then_with(|| a.0.cmp(&b.0)));
-    anchor_list.truncate(limit.max(1) * 2);
     let anchor_json: Vec<Value> = anchor_list
         .iter()
         .map(|(id, section, count)| {
@@ -1056,7 +1135,6 @@ pub fn question_brief(
     let anchor_ids: BTreeSet<&str> = anchor_list.iter().map(|(id, ..)| id.as_str()).collect();
     let note_paths: Vec<String> = note_out
         .iter()
-        .take(limit.max(1))
         .filter_map(|note| note["path"].as_str().map(str::to_owned))
         .collect();
     let (issues, issue_total) = question_issues(
@@ -1088,6 +1166,8 @@ pub fn question_brief(
         Issues::Snapshot(_) => {}
     }
     Ok(json!({
+        "semantic_discovery": semantic,
+        "evidence_graph": graph,
         "mode": "question",
         "boundary": BOUNDARY,
         "question": query,
@@ -1114,7 +1194,7 @@ pub fn record_hits(
     inputs: &Inputs,
     query: &Query,
     candidates: &[(String, String)],
-    limit: usize,
+    _limit: usize,
 ) -> Vec<Value> {
     let none = BTreeMap::new();
     let mut scored: Vec<(usize, &str, &str, Vec<bool>)> = candidates
@@ -1123,7 +1203,12 @@ pub fn record_hits(
             let record = inputs.corpus.get(kind, id)?;
             let matched = query.matched(&retrieval::record_prose(&record.fields), &none);
             let covered = retrieval::coverage(&matched).0;
-            (covered > 0).then_some((covered, kind.as_str(), id.as_str(), matched))
+            (query.content_coverage(&matched).0 > 0).then_some((
+                covered,
+                kind.as_str(),
+                id.as_str(),
+                matched,
+            ))
         })
         .collect();
     scored.sort_by(|a, b| {
@@ -1133,7 +1218,6 @@ pub fn record_hits(
     });
     scored
         .into_iter()
-        .take(limit)
         .map(|(covered, kind, id, matched)| {
             let record = &inputs.corpus.get(kind, id).expect("scored record").fields;
             json!({
@@ -1176,14 +1260,14 @@ struct NoteLinks<'a> {
 /// from a matched note section, named in a matched note's title, or a PR
 /// that changed a matched note (3 each), naming a matched note (2), naming a statement those notes name
 /// (1), and lexical coverage of at least half the query (1). At most
-/// `limit * 5` are returned, with the total.
+/// All matches are returned, with the total.
 fn question_issues(
     inputs: &Inputs,
     query: &Query,
     anchors: &BTreeSet<&str>,
     links: &NoteLinks,
     note_paths: &[String],
-    limit: usize,
+    _limit: usize,
 ) -> (Vec<Value>, usize) {
     let NoteLinks {
         referenced,
@@ -1288,13 +1372,7 @@ fn question_issues(
     }
     out.sort_by(|a, b| b.0.cmp(&a.0).then(b.1.cmp(&a.1)).then(b.2.cmp(&a.2)));
     let matched = out.len();
-    (
-        out.into_iter()
-            .take(limit * 5)
-            .map(|(.., value)| value)
-            .collect(),
-        matched,
-    )
+    (out.into_iter().map(|(.., value)| value).collect(), matched)
 }
 
 fn clip(value: &Value, max: usize) -> String {
@@ -1425,10 +1503,27 @@ fn identity_line(identity: &Value) -> String {
     )
 }
 
+fn graph_lines(lines: &mut Vec<String>, graph: &Value, limit: usize) {
+    let nodes = graph["expansion"]["nodes"].as_array();
+    let edges = graph["expansion"]["edges"].as_array().map_or(0, Vec::len);
+    lines.push(format!("Evidence graph: {} records, {edges} relationships (comparison unknown; explicit {} seeds, semantic {} seeds)",
+        nodes.map_or(0, Vec::len), graph["lanes"]["explicit"]["seeds"].as_array().map_or(0, Vec::len),
+        graph["lanes"]["semantic_candidates"]["seeds"].as_array().map_or(0, Vec::len)));
+    for node in nodes.into_iter().flatten().take(limit) {
+        lines.push(format!(
+            "  {} — {}",
+            node["key"].as_str().unwrap_or_default(),
+            clip(&node["label"], 100)
+        ));
+    }
+    more(lines, nodes.map_or(0, Vec::len), limit);
+}
+
 /// The text view of a brief: every entry with its record, note or issue
 /// reference, at most `limit` per section.
 pub fn format_brief(brief: &Value, aliases: &Aliases, limit: usize) -> String {
     let mut lines = Vec::new();
+    graph_lines(&mut lines, &brief["evidence_graph"], limit);
     let absent = brief["absent"].as_array().cloned().unwrap_or_default();
     if brief["mode"] == "question" {
         lines.push(format!(

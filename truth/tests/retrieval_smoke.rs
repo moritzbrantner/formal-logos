@@ -152,6 +152,44 @@ fn index_brief_novelty_dossier_context() {
     );
     assert_eq!(brief["issues"]["source"]["availability"], "missing");
 
+    // Compact navigation retains every node and valid explanation paths;
+    // requesting raw evidence changes presentation, never discovery.
+    let compact = &brief["evidence_graph"]["expansion"];
+    let full = truth(
+        root,
+        &[
+            "brief",
+            &statement,
+            "--full-evidence",
+            "--frontier-root",
+            "STMT-C",
+        ],
+    );
+    let full = &full["evidence_graph"]["expansion"];
+    assert_eq!(ids(&compact["nodes"], "key"), ids(&full["nodes"], "key"));
+    assert!(compact["nodes"][0].get("content").is_none());
+    assert!(full["nodes"][0].get("content").is_some());
+    let edges = compact["edges"].as_array().unwrap();
+    let predecessors = compact["predecessors"].as_object().unwrap();
+    for node in compact["nodes"].as_array().unwrap() {
+        let mut key = node["key"].as_str().unwrap();
+        let mut steps = 0;
+        while let Some(step) = predecessors.get(key) {
+            let edge = &edges[step["edge"].as_u64().unwrap() as usize];
+            assert!(edge["from"] == key || edge["to"] == key);
+            key = step["predecessor"].as_str().unwrap();
+            steps += 1;
+            assert!(steps <= predecessors.len(), "explanation must be acyclic");
+        }
+        assert!(
+            compact["seeds"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .any(|seed| seed == key)
+        );
+    }
+
     // 3. Novelty of the claim's own words: already recorded, by that
     //    statement; without a snapshot, issue history is reported unknown.
     let novelty = truth(root, &["novelty", PARAPHRASE, "--frontier-root", "STMT-C"]);

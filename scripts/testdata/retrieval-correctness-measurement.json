@@ -1,0 +1,1606 @@
+{
+  "tier": "independent-offline-correctness-v1",
+  "checkout_head": "f0eb8145916d8c3af4346f959bdc2d63adceb9a9",
+  "checkout_diff_sha256": "a72999a626b2f54886d10ec72ddfe8643e096ba8d1896d4eb6517a2cbe9dacd0",
+  "artifact_source_boundary": "Measured candidate predates subsequent semantics-preserving Clippy refactors; hashes identify the measured artifact and its source context, not the final delivered commit.",
+  "oracle_sha256": "09a0dfc65e4a6490a4a8df26afc075092a546a92c6b1ec33bb69c5c8687e2dde",
+  "environment": {
+    "platform": "Linux-7.0.0-43-generic-x86_64-with-glibc2.43",
+    "python": "3.14.4"
+  },
+  "workload": {
+    "stress_records": 220,
+    "linked_note_files": 24,
+    "linked_note_sections": 96
+  },
+  "candidate": {
+    "binary": "/tmp/truth-retrieval-candidate",
+    "sha256": "6dc4a935785430589b0a5313b1150bb1c8733bafeb2bf9910523d1fca82bd323",
+    "binary_bytes": 16559768,
+    "semantic_cases": [
+      {
+        "command": [
+          "/tmp/truth-retrieval-candidate",
+          "--root",
+          "/tmp/truth-retrieval-oracle-u9opwh25/synthetic",
+          "--json",
+          "novelty",
+          "Every mover moves only insofar as it is in act.",
+          "--frontier-root",
+          "STMT-C"
+        ],
+        "exit": 0,
+        "seconds": 0.0216,
+        "bytes": 4459,
+        "stdout_sha256": "1ab536f100c7089286627b7a31ab9f1ab5ee19b03a620bd710f29226854de688",
+        "stderr": "",
+        "case": "exact",
+        "semantic_recall_at_5": {
+          "hits": 1,
+          "total": 1,
+          "ratio": 1.0
+        },
+        "precision_at_5": {
+          "hits": 1,
+          "total": 2,
+          "ratio": 0.5
+        },
+        "novelty_correct": true,
+        "judgment": "Exact recorded proposition.",
+        "classification": "already-recorded",
+        "statement_candidates_at_5": [
+          "90000000-0000-4000-8000-000000000000",
+          "90000000-0000-4000-8000-000000000003"
+        ]
+      },
+      {
+        "command": [
+          "/tmp/truth-retrieval-candidate",
+          "--root",
+          "/tmp/truth-retrieval-oracle-u9opwh25/synthetic",
+          "--json",
+          "novelty",
+          "Whatever has a cause begins to exist.",
+          "--frontier-root",
+          "STMT-C"
+        ],
+        "exit": 0,
+        "seconds": 0.0135,
+        "bytes": 3994,
+        "stdout_sha256": "1e3752c2fdb3f06ad1b9c033ad1e6e2fbfb0fea490ea6f117e5c60b24f14517d",
+        "stderr": "",
+        "case": "converse",
+        "semantic_recall_at_5": {
+          "hits": 1,
+          "total": 1,
+          "ratio": 1.0
+        },
+        "precision_at_5": {
+          "hits": 1,
+          "total": 2,
+          "ratio": 0.5
+        },
+        "novelty_correct": true,
+        "judgment": "Reverses the conditional; the corpus states only begins implies caused.",
+        "classification": "partially-recorded",
+        "statement_candidates_at_5": [
+          "90000000-0000-4000-8000-000000000001",
+          "90000000-0000-4000-8000-000000000002"
+        ]
+      },
+      {
+        "command": [
+          "/tmp/truth-retrieval-candidate",
+          "--root",
+          "/tmp/truth-retrieval-oracle-u9opwh25/synthetic",
+          "--json",
+          "novelty",
+          "God does not exist outside time.",
+          "--frontier-root",
+          "STMT-C"
+        ],
+        "exit": 0,
+        "seconds": 0.0141,
+        "bytes": 4011,
+        "stdout_sha256": "066038af64eddefb69fb5315bf3f6973e60c863e5f09696c12f018b248eafd7f",
+        "stderr": "",
+        "case": "negation",
+        "semantic_recall_at_5": {
+          "hits": 1,
+          "total": 1,
+          "ratio": 1.0
+        },
+        "precision_at_5": {
+          "hits": 1,
+          "total": 2,
+          "ratio": 0.5
+        },
+        "novelty_correct": true,
+        "judgment": "Negates the recorded proposition.",
+        "classification": "partially-recorded",
+        "statement_candidates_at_5": [
+          "90000000-0000-4000-8000-000000000002",
+          "90000000-0000-4000-8000-000000000001"
+        ]
+      },
+      {
+        "command": [
+          "/tmp/truth-retrieval-candidate",
+          "--root",
+          "/tmp/truth-retrieval-oracle-u9opwh25/synthetic",
+          "--json",
+          "novelty",
+          "Act is prior to potency in time.",
+          "--frontier-root",
+          "STMT-C"
+        ],
+        "exit": 0,
+        "seconds": 0.0139,
+        "bytes": 4441,
+        "stdout_sha256": "5cefcd1cec3fdec60d21ef7704913c2d43b4d2bf8c1fcfa98539202151507169",
+        "stderr": "",
+        "case": "temporal-sense",
+        "semantic_recall_at_5": {
+          "hits": 1,
+          "total": 1,
+          "ratio": 1.0
+        },
+        "precision_at_5": {
+          "hits": 1,
+          "total": 3,
+          "ratio": 0.3333333333333333
+        },
+        "novelty_correct": true,
+        "judgment": "Temporal priority differs from priority in account; this corrects the historical E3 acceptance rule in a separate tier.",
+        "classification": "partially-recorded",
+        "statement_candidates_at_5": [
+          "90000000-0000-4000-8000-000000000003",
+          "90000000-0000-4000-8000-000000000000",
+          "90000000-0000-4000-8000-000000000002"
+        ]
+      },
+      {
+        "command": [
+          "/tmp/truth-retrieval-candidate",
+          "--root",
+          "/tmp/truth-retrieval-oracle-u9opwh25/synthetic",
+          "--json",
+          "novelty",
+          "Every contingent being has an explanation.",
+          "--frontier-root",
+          "STMT-C"
+        ],
+        "exit": 0,
+        "seconds": 0.0139,
+        "bytes": 3522,
+        "stdout_sha256": "80c4a0279ea825e35b05741d08d5003c8ffde7f4e81c11ad5ab0d8a2ee4db807",
+        "stderr": "",
+        "case": "quantifier",
+        "semantic_recall_at_5": {
+          "hits": 1,
+          "total": 1,
+          "ratio": 1.0
+        },
+        "precision_at_5": {
+          "hits": 1,
+          "total": 1,
+          "ratio": 1.0
+        },
+        "novelty_correct": true,
+        "judgment": "Universal explanation is stronger than the recorded existential claim.",
+        "classification": "partially-recorded",
+        "statement_candidates_at_5": [
+          "90000000-0000-4000-8000-000000000004"
+        ]
+      },
+      {
+        "command": [
+          "/tmp/truth-retrieval-candidate",
+          "--root",
+          "/tmp/truth-retrieval-oracle-u9opwh25/synthetic",
+          "--json",
+          "novelty",
+          "God exists throughout all time.",
+          "--frontier-root",
+          "STMT-C"
+        ],
+        "exit": 0,
+        "seconds": 0.0137,
+        "bytes": 4006,
+        "stdout_sha256": "c96230bf5dbab98fca4ebd102ec8e13a96eda8b11a97ae40e143ef1eca876fdf",
+        "stderr": "",
+        "case": "timeless-endless",
+        "semantic_recall_at_5": {
+          "hits": 1,
+          "total": 1,
+          "ratio": 1.0
+        },
+        "precision_at_5": {
+          "hits": 1,
+          "total": 2,
+          "ratio": 0.5
+        },
+        "novelty_correct": true,
+        "judgment": "Sempiternity is not timelessness; vocabulary overlap cannot certify equivalence.",
+        "classification": "partially-recorded",
+        "statement_candidates_at_5": [
+          "90000000-0000-4000-8000-000000000002",
+          "90000000-0000-4000-8000-000000000001"
+        ]
+      }
+    ],
+    "graph": {
+      "command": [
+        "/tmp/truth-retrieval-candidate",
+        "--root",
+        "/tmp/truth-retrieval-oracle-u9opwh25/synthetic",
+        "--json",
+        "evidence",
+        "a8459a54-228d-545e-9e81-bf462fcca7a6",
+        "--limit",
+        "1",
+        "--issues-from",
+        "/tmp/truth-retrieval-oracle-u9opwh25/synthetic/issues.json"
+      ],
+      "exit": 0,
+      "seconds": 0.0156,
+      "bytes": 440972,
+      "stdout_sha256": "ec719341d01ed74d4a57f949290a9ec14570d0651fd9b8962a439ee0595f0a4f",
+      "stderr": "",
+      "capability": "available",
+      "metrics": {
+        "edge_provenance_accuracy": {
+          "hits": 4,
+          "total": 4,
+          "ratio": 1.0
+        },
+        "explicit_graph_recall": {
+          "hits": 222,
+          "total": 222,
+          "ratio": 1.0
+        },
+        "note_file_recall": {
+          "hits": 24,
+          "total": 24,
+          "ratio": 1.0
+        },
+        "source_coverage": {
+          "hits": 2,
+          "total": 2,
+          "ratio": 1.0
+        },
+        "unique_node_keys": true,
+        "issue_pr_recall": {
+          "hits": 2,
+          "total": 2,
+          "ratio": 1.0
+        },
+        "node_count": 372,
+        "edge_count": 877,
+        "linked_note_section_recall": {
+          "hits": 96,
+          "total": 96,
+          "ratio": 1.0
+        },
+        "edge_provenance_complete": true
+      }
+    },
+    "summary": {
+      "semantic_recall_at_5": {
+        "hits": 6,
+        "total": 6,
+        "ratio": 1.0
+      },
+      "precision_at_5": {
+        "hits": 6,
+        "total": 12,
+        "ratio": 0.5
+      },
+      "novelty_correctness": {
+        "hits": 6,
+        "total": 6,
+        "ratio": 1.0
+      }
+    },
+    "historical_cases": [
+      {
+        "command": [
+          "/tmp/truth-retrieval-candidate",
+          "--root",
+          "/tmp/truth-retrieval-oracle-u9opwh25/historical",
+          "--json",
+          "novelty",
+          "depending for its being is equivalent to being unable to be without"
+        ],
+        "exit": 0,
+        "seconds": 5.8853,
+        "bytes": 19531554,
+        "stdout_sha256": "ed1f8946ec9efd0d71982d30fe35caf4ae15a2f918c1e332607e89772b1e3534",
+        "stderr": "",
+        "case": "B2-dependence-paraphrase",
+        "judgment": "Known relevant prior work must be found; a paraphrase alone does not certify normalized text identity.",
+        "known_work_recall": {
+          "hits": 2,
+          "total": 2,
+          "ratio": 1.0
+        },
+        "novelty_correct": true,
+        "classification": "partially-recorded",
+        "retrieved_identity_count": 6768,
+        "retrieved_identities_sha256": "c3fa5f707e9ad6bd0352f0967bc0a49738bc052029e8d5d54cdddfa029458333",
+        "retrieved_identity_sample": [
+          "",
+          "000e1f65-6e74-5519-bbf3-300d5f61ada8",
+          "0064f3a8-220a-5373-9111-cfc7558d02c4",
+          "006c6b2b-b328-5c51-a4ad-367d411f3a70",
+          "0071b503-73da-4613-aec0-0d92cb004c3e",
+          "0075b6ed-766b-51af-88f4-b6c4a91ba6a0",
+          "0094aca1-077e-5257-ab96-ecbd302a6a1a",
+          "00a13a91-8b90-5ab0-bf01-8ad5c6866cd2",
+          "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1",
+          "00c88ade-17c0-52b7-ab17-858319d4ab41",
+          "00ca098a-ad5d-501d-aa72-07042e384ac3",
+          "00e2447e-0e47-55f1-b5b2-a31f3e60abda",
+          "01418b85-4ba3-4401-9db4-9085ced81577",
+          "014b2509-7852-5540-80cd-fc0f5fd7dd94",
+          "0160feb0-0ac2-5e26-ac22-f5c8c1ddb57c",
+          "016662fc-3318-5ebf-b9e3-067a80d1aae6",
+          "019073dc-903d-5917-95a8-74d8056e3355",
+          "019890ac-08aa-55a8-929d-364cbb33fbcc",
+          "019a07a5-184f-57b5-aa55-8251ba256cd0",
+          "01df2d22-1524-54d5-b71d-68895b3a376c"
+        ],
+        "matched_reference_identities": {
+          "priority-independence-logic-support-investigation.md": [
+            "docs/notes/priority-independence-logic-support-investigation.md"
+          ],
+          "000e1f65": [
+            "000e1f65-6e74-5519-bbf3-300d5f61ada8"
+          ]
+        }
+      },
+      {
+        "command": [
+          "/tmp/truth-retrieval-candidate",
+          "--root",
+          "/tmp/truth-retrieval-oracle-u9opwh25/historical",
+          "--json",
+          "novelty",
+          "weak explanatory coverage adds no ontic constraints"
+        ],
+        "exit": 0,
+        "seconds": 4.9493,
+        "bytes": 3963451,
+        "stdout_sha256": "efd5a5ff47bfc5e0cad00d7e7ff97597f00e502b9109cc1964505be0c69a982a",
+        "stderr": "",
+        "case": "B3-dedicated-note",
+        "judgment": "Dedicated note records the result; advisory text is prior work rather than certified proposition identity.",
+        "known_work_recall": {
+          "hits": 1,
+          "total": 1,
+          "ratio": 1.0
+        },
+        "novelty_correct": true,
+        "classification": "partially-recorded",
+        "retrieved_identity_count": 8062,
+        "retrieved_identities_sha256": "78e0a9068badc221a40ebd2092f3a9e4a12742ec346ec94a86d9557343723d30",
+        "retrieved_identity_sample": [
+          "",
+          "000637e0-7c0d-5819-b8df-f58a0b826453",
+          "0029f6b5-ea97-5ae3-9c11-44783a7b3eb8",
+          "002f42cb-3015-5644-80b3-d408538394e6",
+          "0042dd05-7788-4d77-884d-32f868f9620f",
+          "004f2f2b-bd91-55bf-920d-db3a10ed7a25",
+          "0064f3a8-220a-5373-9111-cfc7558d02c4",
+          "00805428-bfb8-550b-9809-acaef57d59c5",
+          "008747c9-744a-581c-adad-570e834abb4e",
+          "0090ef34-b18e-5e97-84b2-9b317d9c9864",
+          "0094aca1-077e-5257-ab96-ecbd302a6a1a",
+          "00ab0133-e353-5a2e-a231-b24a5c85107a",
+          "00af6089-7b07-43bf-aed5-c086b000d6c8",
+          "00afca5b-f719-41b6-8ea5-a273d9ec9b6f",
+          "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1",
+          "00ca098a-ad5d-501d-aa72-07042e384ac3",
+          "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+          "010967dd-85e0-599b-b8f2-2d0e532edc5d",
+          "013d5159-73a2-40c8-a2fe-17d1ae7a4e0f",
+          "014197bf-fca3-5ebc-9ca8-9b824685b34e"
+        ],
+        "matched_reference_identities": {
+          "weak-explanation-conservative-expansion.md": [
+            "docs/notes/weak-explanation-conservative-expansion.md"
+          ]
+        }
+      },
+      {
+        "command": [
+          "/tmp/truth-retrieval-candidate",
+          "--root",
+          "/tmp/truth-retrieval-oracle-u9opwh25/historical",
+          "--json",
+          "novelty",
+          "CanBeWithout(x,y) \u2192 DependsForBeing(x,y)"
+        ],
+        "exit": 0,
+        "seconds": 2.8693,
+        "bytes": 64234,
+        "stdout_sha256": "99ee11ba051edaa8d103d6a275b3a532005c796442f1065198dabde2ec6f2289",
+        "stderr": "",
+        "case": "E2-converse",
+        "judgment": "Shared symbols do not establish the converse or equivalence.",
+        "known_work_recall": {
+          "hits": 1,
+          "total": 1,
+          "ratio": 1.0
+        },
+        "novelty_correct": true,
+        "classification": "partially-recorded",
+        "retrieved_identity_count": 69,
+        "retrieved_identities_sha256": "ee195304a72239c1351063df5864369f3b26e161fcf63ade5b758a088116d40f",
+        "retrieved_identity_sample": [
+          "",
+          "09b88101-5ee4-44f1-b9e0-57117ce6f70e",
+          "0f49d71e-09e6-5a9c-b7e7-e0e9b8fe769c",
+          "1ee45a81-47bb-4f37-a64e-685b6221381a",
+          "2068f91c-1eeb-5dbb-a71a-f7b6a12bb495",
+          "315f7a92-178a-40a8-be19-db057722acc1",
+          "3c027c4d-4da2-40be-a04a-ed046cd4050a",
+          "4d69464b-5fa1-42a2-918e-a63e6f10f48d",
+          "56252cd8-955d-40a5-bd81-de4a496d9018",
+          "57f22435-95c6-43ba-8d68-51a9ffdae405",
+          "63e65ca6-c359-43b3-9d2f-5d9d939fc8cd",
+          "69c40b27-10b7-4f23-83ea-55128cd3280e",
+          "780546d0-1b8b-493f-8bfb-3ba8b662431a",
+          "79d878d0-ea17-4e7a-bae5-2090dd576b2e",
+          "875be538-3eef-4282-a142-df544aa1dd4a",
+          "8bb41add-c2e8-492f-9ef9-01afb4895c42",
+          "8dbe2d30-0781-42c7-9cdb-4c55a6a4dd99",
+          "9150bd9c-22b8-49ea-80ab-92fad0b6fb0c",
+          "a4d430a0-9711-4d04-b4a5-be385f92e757",
+          "a739dad6-ef53-49ea-b7dc-6d67c495c563"
+        ],
+        "matched_reference_identities": {
+          "priority-independence-logic-support-investigation.md": [
+            "docs/notes/priority-independence-logic-support-investigation.md"
+          ]
+        }
+      },
+      {
+        "command": [
+          "/tmp/truth-retrieval-candidate",
+          "--root",
+          "/tmp/truth-retrieval-oracle-u9opwh25/historical",
+          "--json",
+          "novelty",
+          "act is prior to potency in time"
+        ],
+        "exit": 0,
+        "seconds": 7.3971,
+        "bytes": 22431527,
+        "stdout_sha256": "ea4b4527fd36c4865d9ff30651122028e67ad7a25eeafcef010c8d139b205057",
+        "stderr": "",
+        "case": "E3-temporal-priority",
+        "judgment": "The historical lexical key accepted already-recorded for this hit. A route-relative priority statement does not certify the temporal reading; the new judgment requires semantic uncertainty.",
+        "known_work_recall": {
+          "hits": 1,
+          "total": 1,
+          "ratio": 1.0
+        },
+        "novelty_correct": true,
+        "classification": "partially-recorded",
+        "retrieved_identity_count": 15613,
+        "retrieved_identities_sha256": "9aa38001f3ae9d5ab8e30f8c2a6960b5f0a2bbc55f15598c57dccb347c54bce2",
+        "retrieved_identity_sample": [
+          "",
+          "000637e0-7c0d-5819-b8df-f58a0b826453",
+          "0011703b-aac5-533b-88ef-a6140dc343f9",
+          "00117b6e-0377-4fe2-bb54-5ef13107f915",
+          "001c1716-c808-4675-a431-b54e2a357ab1",
+          "0029f6b5-ea97-5ae3-9c11-44783a7b3eb8",
+          "002c6b38-ed45-5597-99d5-72a007963418",
+          "002f42cb-3015-5644-80b3-d408538394e6",
+          "0032977e-e4be-4e0f-84b8-84dce7094882",
+          "00350feb-f02b-59de-bae4-821bfb3feee8",
+          "0038563b-c80a-5122-bc4a-90443eb9f059",
+          "00574225-5705-4476-ac32-bb9627feb9f8",
+          "0060bf0a-19c3-5028-83b0-8211a0b465a1",
+          "00619f2f-352a-577d-b2ea-f51827e6ba10",
+          "0064f3a8-220a-5373-9111-cfc7558d02c4",
+          "00679598-9fc7-50bb-abc7-fbe723fd3868",
+          "0077a4e4-abe5-53e9-a445-0e0f7eeafcc0",
+          "007ac010-9145-5fa9-9256-b0fce5de9c24",
+          "008cb21a-256c-5a90-822c-acd4591d699a",
+          "0090ef34-b18e-5e97-84b2-9b317d9c9864"
+        ],
+        "matched_reference_identities": {
+          "197ac723": [
+            "197ac723-487c-5fa2-8800-4b441d322014"
+          ]
+        }
+      }
+    ],
+    "human_text_cases": [
+      {
+        "query": "depending for its being is equivalent to being unable to be without",
+        "command": [
+          "/tmp/truth-retrieval-candidate",
+          "--root",
+          "/tmp/tmps16qoxiv",
+          "novelty",
+          "depending for its being is equivalent to being unable to be without"
+        ],
+        "bytes": 4224,
+        "seconds": 6.9716
+      },
+      {
+        "query": "act is prior to potency in time",
+        "command": [
+          "/tmp/truth-retrieval-candidate",
+          "--root",
+          "/tmp/tmps16qoxiv",
+          "novelty",
+          "act is prior to potency in time"
+        ],
+        "bytes": 4595,
+        "seconds": 7.5692
+      }
+    ]
+  },
+  "truth_source_manifest": {
+    "sha256": "479e70f091b49276c63b9dbb1d625dfe0001224cbc6b5c6b4e74784366c48208",
+    "files": [
+      {
+        "path": "truth/Cargo.toml",
+        "sha256": "95f55558703a98d6bb14aaa4aff88bafe561d24aa371e93ba6ca598c75c797b1"
+      },
+      {
+        "path": "truth/README.md",
+        "sha256": "3aaa4d9b7fd15f351df298f13bd8742f538dbfd31765a1970dcee5f627ac542d"
+      },
+      {
+        "path": "truth/build.rs",
+        "sha256": "d5268317d0425cfd667dec148cbdd0344580a26f5f2f57fcaf95ac0f321bdc72"
+      },
+      {
+        "path": "truth/src/attribution.rs",
+        "sha256": "3114ba869d9304dc6b0d62f80982c7b6bf2315c6c0dbce874dfedf04ab53584f"
+      },
+      {
+        "path": "truth/src/bind_check.rs",
+        "sha256": "55b2a828270d6ab007ef014e1982b0ce27b517f85f3d3f70e06faa0fc2fe9885"
+      },
+      {
+        "path": "truth/src/bind_types.rs",
+        "sha256": "304a62af03567d446be9adf128219f56bab2f588748ad41a4b2c5e5cfff7a96e"
+      },
+      {
+        "path": "truth/src/bind_types/tests.rs",
+        "sha256": "d3cfa3b9b9b9ca5d6fbaf1cd971171b3a7d728bc2ce4a328ddeec685609d20b7"
+      },
+      {
+        "path": "truth/src/bridge_experiments.rs",
+        "sha256": "1aca0615b72f75ec2508e43822c3f30ee62ab2923ad24dbb13d523e43728257e"
+      },
+      {
+        "path": "truth/src/bridges.rs",
+        "sha256": "772c21a14770a8c9bb71a710e3b8f3b1ec93efe1cd92cc0a1ad0f590d752384f"
+      },
+      {
+        "path": "truth/src/brief/mod.rs",
+        "sha256": "a16666e91d00bf3ac5dc05d93066f30c49bc729ad93f81e5964db8c0f39f10be"
+      },
+      {
+        "path": "truth/src/brief/novelty.rs",
+        "sha256": "84b75ce64ad951044332e79de12a8bfd9cee4f00e06c385fae398e2aabd34c51"
+      },
+      {
+        "path": "truth/src/brief/retrieval.rs",
+        "sha256": "59007bf08fc4153258cb83b02cc394da2bd793ddf04e6b1379c6ade3d5431cab"
+      },
+      {
+        "path": "truth/src/brief/tests.rs",
+        "sha256": "6d00bc55d09d941d5be51af8b15d258a09b22b48aff803201efab40ba5fc87ba"
+      },
+      {
+        "path": "truth/src/check.rs",
+        "sha256": "783a2ba61aa0fe76694b2890ee33d29ec3fa6fadc461a54cdea22e4ab09212f5"
+      },
+      {
+        "path": "truth/src/check/manifest.rs",
+        "sha256": "496d1d2a1a1846040c2e2ab538bfb2d7f4eda3ff5557962f2567bdad63fcf8b8"
+      },
+      {
+        "path": "truth/src/cli/args.rs",
+        "sha256": "a8a0686aaa5a74288bed377aa109d4d10a0f13eba514a0e60873b68cd75c5e68"
+      },
+      {
+        "path": "truth/src/cli/attribution_check.rs",
+        "sha256": "54616b523e005a4d0a344359aacc85660e8229e45d1edc634c97be116bce9961"
+      },
+      {
+        "path": "truth/src/cli/bind_check.rs",
+        "sha256": "e8ee4ca4d94f196719d07bda2f70a11da1862f629c1379ac5352a6d5b4600ca5"
+      },
+      {
+        "path": "truth/src/cli/bridge_experiments.rs",
+        "sha256": "e8e1e2d88a2a70033a35770dd9f7bd4e85e65e76d6bddd6f1e55bca909a75da7"
+      },
+      {
+        "path": "truth/src/cli/bridges.rs",
+        "sha256": "37b5b7cdc9610040b580845663d3f1f52bcb2ff28fffd51fadf7eb2901e20b53"
+      },
+      {
+        "path": "truth/src/cli/brief.rs",
+        "sha256": "92fca8124d0653ac2f17c0a0b4f2ac7fabac8dfa0ac026bad595f89eeca9bb8e"
+      },
+      {
+        "path": "truth/src/cli/check.rs",
+        "sha256": "fb14ecae18d00936f272ac5515e4ecbd3d7dcbe34a736f84e1bafe34017a6976"
+      },
+      {
+        "path": "truth/src/cli/configuration_report.rs",
+        "sha256": "d597ebd6db81844752a3982acbc807781df8d5a4024095087f879a66e50211e1"
+      },
+      {
+        "path": "truth/src/cli/configurations.rs",
+        "sha256": "a18d491a240023e90e83d3c604bc561876fce8023015cbc6b64411f0e75ca724"
+      },
+      {
+        "path": "truth/src/cli/context.rs",
+        "sha256": "d2a819b94f9633f09f06b0e23356c27c8215a1866b99ebd3b4a15e7f7a2ceec6"
+      },
+      {
+        "path": "truth/src/cli/definitions.rs",
+        "sha256": "df724b068d4e7b6c05e0db59c722abee03b61f22b0e441c1105a543d9ffddbd0"
+      },
+      {
+        "path": "truth/src/cli/dossier.rs",
+        "sha256": "df76d03c8f66d584eb8c054eee1e1440f4b0b843b41737d903fddcb12fbc9814"
+      },
+      {
+        "path": "truth/src/cli/evidence.rs",
+        "sha256": "89a55f2f7230091e612429fdf6e37a8ae48d3d18228e8af1666ccebc0aae4dc0"
+      },
+      {
+        "path": "truth/src/cli/frontier.rs",
+        "sha256": "dc921e3e9188188ebe4d3e80ac5b5f9a71c740e0dd3cc460170f93e15c9c4d5e"
+      },
+      {
+        "path": "truth/src/cli/frontier_diff.rs",
+        "sha256": "823e81172e022717e63e3a5c948a05eb639ec47104a26180b2c43796dd8ff6fb"
+      },
+      {
+        "path": "truth/src/cli/ids.rs",
+        "sha256": "272636c8983df3d88ad2f1178ac57fb913f0676f935889e2d526c19410d45a66"
+      },
+      {
+        "path": "truth/src/cli/index.rs",
+        "sha256": "e89489f35a1663d61312144707a4059bd03d66b793085b224ddfae1e472364f8"
+      },
+      {
+        "path": "truth/src/cli/inspect.rs",
+        "sha256": "8a6520a32c4e0b38343a22635cbdac1a40e950857c52aa078f68ac38ffc4cf7a"
+      },
+      {
+        "path": "truth/src/cli/issues.rs",
+        "sha256": "e762b8ccf2d513562d084932be923417dbbcb69fecd07c9220d7b26d1701f844"
+      },
+      {
+        "path": "truth/src/cli/lean_reuse.rs",
+        "sha256": "1b94a085edc245eaa90c4e26734410c511e7a25b594334cf515326997e640ed0"
+      },
+      {
+        "path": "truth/src/cli/lexicon.rs",
+        "sha256": "790b2d2d4696c4df9a2b0c9b09aa31be627a5f670ac14f527c29898554d33d7e"
+      },
+      {
+        "path": "truth/src/cli/mod.rs",
+        "sha256": "8a849eb9c7650459ae8fe3f08a6a74df580857354e86f2435da17bf9710789a2"
+      },
+      {
+        "path": "truth/src/cli/models.rs",
+        "sha256": "39853eb2becb249d749a349d143dc5d1e0dc0be2d6d4cb30f7c2655c98be164a"
+      },
+      {
+        "path": "truth/src/cli/next.rs",
+        "sha256": "46701f46c65a74d66a1c07478c66d3a0f851c36b4a2badbbe98c77480be272a8"
+      },
+      {
+        "path": "truth/src/cli/next_steps.rs",
+        "sha256": "4d5a1ddc869555ab366b3426617b1013de90e7f77dad6ba5ea1fbf2bebe6a2da"
+      },
+      {
+        "path": "truth/src/cli/orphans.rs",
+        "sha256": "95639047d21bb7cd871c0ba3f547be54f53dae0ec2d21c7fe6116a36ad159daf"
+      },
+      {
+        "path": "truth/src/cli/related.rs",
+        "sha256": "dfd4ba14496008a9d2218d34ee4f80c8ae8155f5e75848531193315ccb198c6a"
+      },
+      {
+        "path": "truth/src/cli/research.rs",
+        "sha256": "4d745cde7d2ca42edc42f350e31efc6654f6795ff3e6e0ba2d7c435875b00b51"
+      },
+      {
+        "path": "truth/src/cli/senses.rs",
+        "sha256": "c82598ba01fe5c9455fa9fa893f704f622c59369ded8c0f2125da367841d4ffe"
+      },
+      {
+        "path": "truth/src/cli/sort_lists.rs",
+        "sha256": "f9ce0a8cbc68384202610b4acefd2f9eae6328e190171d9133f091615cebb20b"
+      },
+      {
+        "path": "truth/src/cli/status.rs",
+        "sha256": "abbcca9565bd9b799c3e486331912dbbe15b07722f884112f4644a90bed1af1e"
+      },
+      {
+        "path": "truth/src/cli/strength.rs",
+        "sha256": "d7326a0b5fdbe287a740bcecc65b6e72665568b79a6058b3355a8ca4b059032d"
+      },
+      {
+        "path": "truth/src/cli/structure.rs",
+        "sha256": "16228d0ae7be7ce6a5cbb26b9b79d8493012ad0180a96817af34101acdbfef66"
+      },
+      {
+        "path": "truth/src/cli/territory.rs",
+        "sha256": "8183bd43a45ca3232c683c83c152e5ca40823c009c7556c62986014999cd81ac"
+      },
+      {
+        "path": "truth/src/cli/thickness.rs",
+        "sha256": "c02782f7135d5de7d0ea4ea8ac97b32ce1fada3b957090e778df2a8b77ca11cb"
+      },
+      {
+        "path": "truth/src/cli/tree.rs",
+        "sha256": "10b9831c528c3e32dc5759495543486729b945c8753579676b9af7773442929e"
+      },
+      {
+        "path": "truth/src/cli/unused_premises.rs",
+        "sha256": "efb4a824e03466f778aa682a9b8b8844401e88ce690598c12c48eb8e80024cbd"
+      },
+      {
+        "path": "truth/src/configuration_explorer.rs",
+        "sha256": "08eebadc99c27f4f470013dcdf22c49c5ecbe86a7adc3c4a7fb488bff56c434c"
+      },
+      {
+        "path": "truth/src/configuration_live.rs",
+        "sha256": "3a3dbcf4ae657ecfb2944e0a42cc2de83d1419488aba729e9e52378bd982fca3"
+      },
+      {
+        "path": "truth/src/configurations.rs",
+        "sha256": "dda735b7351f9f9518fe196571ce2d8de1cf1fa302fb76a971767993ba0c46a1"
+      },
+      {
+        "path": "truth/src/context.rs",
+        "sha256": "a6768b7d8ae16b7e9f2665cbc20678f3ae736b6a8196b03c94df113ea06d81b1"
+      },
+      {
+        "path": "truth/src/definition_status.rs",
+        "sha256": "1e9c851e53fab056af9a15545c56f30ccfec3afe34a78d45cc4b86a3e0d35c45"
+      },
+      {
+        "path": "truth/src/definition_status/tests.rs",
+        "sha256": "e055119effcb8392476e7c8fd4903b355429089e1a2d5aa7041270bac403ac5c"
+      },
+      {
+        "path": "truth/src/dossier.rs",
+        "sha256": "8e510627d1c2a2b7d6c51fe640575af5ba7cc7cfeeb7f0f8374925cf1c9e8444"
+      },
+      {
+        "path": "truth/src/evidence_graph.rs",
+        "sha256": "57e570f15df755a2f0135717164d5d936a63674a45fcb6f83d1291199ec4aff9"
+      },
+      {
+        "path": "truth/src/finite_models.rs",
+        "sha256": "b20fa1c8a8567f7ae0074298d345bcb06a705dafa501fa81d94f090cc2721dac"
+      },
+      {
+        "path": "truth/src/frontier.rs",
+        "sha256": "720c4f4345a2225a51f4bd29122b1ca90885c9ad9705772767fa0ef1c656bb18"
+      },
+      {
+        "path": "truth/src/identity.rs",
+        "sha256": "9018f91e01e3b0db7e08294e1bcc2108aed591d422db283514db5335453e668f"
+      },
+      {
+        "path": "truth/src/index.rs",
+        "sha256": "1e88459e53d4325b6ee90531e04351ca42f7b13bc0dd1936884c3a2deb43cc3c"
+      },
+      {
+        "path": "truth/src/inversion.rs",
+        "sha256": "85dfce1f3e323d1f710f45745f808da20510fef46ce3cdc4091cc852947ee313"
+      },
+      {
+        "path": "truth/src/issues.rs",
+        "sha256": "b6b6790551d4509ea2d0f26e6c5aed419283654e413304699ef658a89d5639f7"
+      },
+      {
+        "path": "truth/src/kernels.rs",
+        "sha256": "80f80441619c1223fc35025ac39dd0b095ed8b0c56ed538343a5009139b7ac17"
+      },
+      {
+        "path": "truth/src/lean_reuse.rs",
+        "sha256": "633026ee719106509ab9dd7a89593dc5d3cea94b2fbfee39bfabb722d3c54eba"
+      },
+      {
+        "path": "truth/src/lexicon/bootstrap.rs",
+        "sha256": "1f828be0185de8dd925f817b5ac81b842743bf4457b32ba1c2f6de33c795d119"
+      },
+      {
+        "path": "truth/src/lexicon/function_words.txt",
+        "sha256": "052bdf74b700cba085609f1b02e98bf52ec1c978f474ec1b7f0bc517ba61f8bd"
+      },
+      {
+        "path": "truth/src/lexicon/mod.rs",
+        "sha256": "d97fedcf192e65faf52b5a852d1a68b1cad0bfc21d42ed298135b1f9559ec243"
+      },
+      {
+        "path": "truth/src/lexicon/tests.rs",
+        "sha256": "8892c78a0897f1c3e1af2b9223b758fa51974d4ccd44aeb386a08b539520ea57"
+      },
+      {
+        "path": "truth/src/lexicon/tokenize.rs",
+        "sha256": "78d1a9975c9d2da0b40bee0412e7ff52908947c8cd2c4ad2d5c3d80c4380468f"
+      },
+      {
+        "path": "truth/src/lib.rs",
+        "sha256": "0ca83f81ffd598104df7845c16b2553c6a0dc305a9495388e88ecc031ea96e06"
+      },
+      {
+        "path": "truth/src/main.rs",
+        "sha256": "2de9b2d29e7e8d27f5c8fdfea18a0ebd93142cf37844aea5b07dc45bc8830cdf"
+      },
+      {
+        "path": "truth/src/navigation.rs",
+        "sha256": "abd4e428891fe815ef15bb3585c7cbe0369faa4787dcd60c2bc64dea3cd6310e"
+      },
+      {
+        "path": "truth/src/notes.rs",
+        "sha256": "cff330e92e173e9d9d448bb9cdd53c2ce8fd96a922592211ad6057d6917feef0"
+      },
+      {
+        "path": "truth/src/orphans.rs",
+        "sha256": "47e379def069f37170ba0e70a9d9c757e6542335b8ac6c9270e4347631afc971"
+      },
+      {
+        "path": "truth/src/pyfmt.rs",
+        "sha256": "c2494898ffd1f106112b195e41a6aac4abd4497b50fdffdc6c8a94d4fcfb8e16"
+      },
+      {
+        "path": "truth/src/pyjson.rs",
+        "sha256": "d7ed1d5e02eba3ade34c0e15434e73ee1f9fee0090704535fe3da41538517645"
+      },
+      {
+        "path": "truth/src/related.rs",
+        "sha256": "ced5732e44a1239a9a04238dfca3d8ee9f99e8a2433f40f02fdbdb24c0cb998d"
+      },
+      {
+        "path": "truth/src/senses.rs",
+        "sha256": "8a640210ccba562a938def16419cd43d6ccb47adb92a617da9332b6896b94f80"
+      },
+      {
+        "path": "truth/src/sha256.rs",
+        "sha256": "4231749cd1c35b658b502aff5778f0de5058cad9650da27d5caeec4f4b590f0c"
+      },
+      {
+        "path": "truth/src/strength.rs",
+        "sha256": "9dbb1ad513ed80578147cc9a373a80cef8885eb5fd7e423fd885dc56f3e114a5"
+      },
+      {
+        "path": "truth/src/structure.rs",
+        "sha256": "e825a0935a822f515db401ce6b3225921d0b77bf74cdf05bd471d47f1de7d9ab"
+      },
+      {
+        "path": "truth/src/subprocess.rs",
+        "sha256": "8eb5da6b7d75e13b5811e586e3d5d6d4f64e25b98092bc316edc6ecf7696696f"
+      },
+      {
+        "path": "truth/src/territory.rs",
+        "sha256": "08b2901c54ad9a235bd58b553a4edd7080f5566db4a4d8330bdea25bb4afdcf1"
+      },
+      {
+        "path": "truth/src/testdata/definition-status-exporter.json",
+        "sha256": "9a4c700c3461fefac33a5ef06b3fa1f3becc22ce5f2d417289455fae34a22d8a"
+      },
+      {
+        "path": "truth/src/testdata/territory-fixture.json",
+        "sha256": "c38f06bbb72629f455158bf8264a8dab79e33ab84bd226a41012ec999fca53f0"
+      },
+      {
+        "path": "truth/src/thickness.rs",
+        "sha256": "6a9587f1212e2dc7631b2211aec16a83c74e996e05991e6bf2b3ff8989cd18c9"
+      },
+      {
+        "path": "truth/src/transcription.rs",
+        "sha256": "a40534279877257f945f26adf305eae0270c4b061cc9dc60eae1a2914b55e5b9"
+      },
+      {
+        "path": "truth/src/tree.rs",
+        "sha256": "9ba1d294980cb82b67deb770141d9a8101f6b93051a05795fc6f6345c0469d71"
+      },
+      {
+        "path": "truth/src/unused_premises.rs",
+        "sha256": "13044a32560cb74f914f8f487ec6d7cfd42e2eb011ef19bdf6f3ed78b73cb5d9"
+      },
+      {
+        "path": "truth/tests/base_revision.rs",
+        "sha256": "d2ae62488271d2825dc7045c1835bd9c57eeccd3c59ef55d02103868c9545b30"
+      },
+      {
+        "path": "truth/tests/frontier_fixture.rs",
+        "sha256": "746e528ed5744930ab72d3daa0ebdd90dba77207cdae96e8e18d29b64cce4b7c"
+      },
+      {
+        "path": "truth/tests/golden.rs",
+        "sha256": "c9b2f9288b89968f7fcfdeedbe6912ca8ca53afd0cb03b45d6aea5693ab17133"
+      },
+      {
+        "path": "truth/tests/golden/attribution/test_bibliographic_claim.json",
+        "sha256": "88091d16d83c62334805244f203d065143506705696b1d40d89be1c33f88416e"
+      },
+      {
+        "path": "truth/tests/golden/attribution/test_changed_passage_selects_its_claims_and_hides_stale_text.json",
+        "sha256": "d156b85b46110f77258a8a1dc58125f99cda6b97b445b23d24ccf12f25359f8e"
+      },
+      {
+        "path": "truth/tests/golden/attribution/test_clipping.json",
+        "sha256": "bff54462f39518ff5351a0c2040947940f3b8eb73562d655a9e775512f69cce5"
+      },
+      {
+        "path": "truth/tests/golden/attribution/test_errors.json",
+        "sha256": "efd2cfe9bbc5041b0cdabeb8e2af8ad2eff758e49e39a19d6744b41688cad95a"
+      },
+      {
+        "path": "truth/tests/golden/attribution/test_label_only_passage_change_selects_nothing.json",
+        "sha256": "a61615c852a7d61d451de2304ae510be1be6a006121e93ba730441eb5fef2454"
+      },
+      {
+        "path": "truth/tests/golden/attribution/test_materialize.json",
+        "sha256": "6d4d1c6462ba5eb673fd9558254c9e94f706c7ec60bc6606aed2c37023b131bc"
+      },
+      {
+        "path": "truth/tests/golden/attribution/test_missing_attribution_fails_beside_cached_text.json",
+        "sha256": "1428474526ddde002f83d5a67d059fdda81241a6d05f9f0701740a4148735a89"
+      },
+      {
+        "path": "truth/tests/golden/attribution/test_no_changed_claims.json",
+        "sha256": "c655cefcfc842103800fb4c0f428b82354a9522f1cac12a83ccb1eaca8ab09b4"
+      },
+      {
+        "path": "truth/tests/golden/attribution/test_offline_without_cache_is_not_checked.json",
+        "sha256": "94059c88a448e47052f30cd669dab433ed6373bc6f8ef8864ba8e896908b9109"
+      },
+      {
+        "path": "truth/tests/golden/attribution/test_pre_migration_base.json",
+        "sha256": "aa970121dcb69f8ea1b1464bfc061f43c321bc79ba65a561fadb6c7f76e1bdde"
+      },
+      {
+        "path": "truth/tests/golden/attribution/test_recorded_and_malformed_attribution.json",
+        "sha256": "7b98d4ea20b2831cc9c642637fa841351286630f4ba68bb15ea878ce867a6379"
+      },
+      {
+        "path": "truth/tests/golden/attribution/test_renamed_statement_with_new_paraphrase_selects_its_claims.json",
+        "sha256": "fedda6692c9ca74b338c2a4d22f4e7b07169154651650cddfae6fef23e86e62a"
+      },
+      {
+        "path": "truth/tests/golden/attribution/test_selection_by_stable_id.json",
+        "sha256": "770aab3151a9f0e98a2d53d2c16ae19958ec2af90e2e729c4756d80cc1de40bf"
+      },
+      {
+        "path": "truth/tests/golden/bind_check/test_expression_contracts.json",
+        "sha256": "c75e4ba232382a10b7af3bd92125d0f37378a6761081848ffbff3b94e62ad6bc"
+      },
+      {
+        "path": "truth/tests/golden/bind_check/test_fixture_cases.json",
+        "sha256": "bc1b2b142984221a6116922f6ea089e8bd758dee00e3df0b8c7e7c97168ee139"
+      },
+      {
+        "path": "truth/tests/golden/bridge_experiments/test_controls_truncation_and_long_blocker.json",
+        "sha256": "21f9ea7033bc3003456687c82e6395b7c41f9c5b069a0d71f38ebd25a016987c"
+      },
+      {
+        "path": "truth/tests/golden/bridge_experiments/test_direct_import.json",
+        "sha256": "488c476bbf7cfaa307157b3011305507fd08540623904e42ef55ea1ce24fc6a5"
+      },
+      {
+        "path": "truth/tests/golden/bridge_experiments/test_errors.json",
+        "sha256": "2c163700e9f94ea425199d41eb5f0bdf3e551f6df2c141f2ea3cc655fc233656"
+      },
+      {
+        "path": "truth/tests/golden/bridge_experiments/test_exclusions.json",
+        "sha256": "88312566004205f3a58d71b18ae6ac58474a312e0d324295862c6135b45eaece"
+      },
+      {
+        "path": "truth/tests/golden/check/test_conclusion_bridge_and_control_are_accepted.json",
+        "sha256": "10ce56c912995e4c3085b18884c27c3e08ce226bfd6d7c1801292c1a6f11f025"
+      },
+      {
+        "path": "truth/tests/golden/check/test_fixture_failures.json",
+        "sha256": "eda7147b2b71b7cdbef440b9766a8f9fceb9003773b5c1eeb886336b7ba5200e"
+      },
+      {
+        "path": "truth/tests/golden/check/test_fixture_identity_warnings.json",
+        "sha256": "d18eeb295461aac06ab9add5698de6ce2bbe5bf91fef36a38b37b9a7b736d32e"
+      },
+      {
+        "path": "truth/tests/golden/check/test_fixture_opaque_atom_warning.json",
+        "sha256": "77a2160be9e51cbbf9ba3ed67636d2f986b59b33820535552200c0f61923000b"
+      },
+      {
+        "path": "truth/tests/golden/check/test_fixture_passes_with_warnings.json",
+        "sha256": "fa65d9ca1c63cc8f9abf20f91f53c12a876282a1d837d26a9db613f8bf1f88cf"
+      },
+      {
+        "path": "truth/tests/golden/check/test_fixture_reports_passing_label_cleanup_entries.json",
+        "sha256": "af02349a3c4ba6c6997d6d5b168e11334fdb8db9e7cc68b64668922277d1f030"
+      },
+      {
+        "path": "truth/tests/golden/check/test_uuid_identities_are_accepted.json",
+        "sha256": "e29b9a0c27ab630339f6a84f16c7a77435853c848222e572c05a72531c8a7dc5"
+      },
+      {
+        "path": "truth/tests/golden/configuration_report/test_bundle_and_freshness.json",
+        "sha256": "6dad711e67f50a694fadd1f7d14251d5e9a76f219da694f80d0db9eea8add150"
+      },
+      {
+        "path": "truth/tests/golden/configuration_report/test_live_commands_and_failures.json",
+        "sha256": "59505355446f29154a7393bee4cd7707e39f57f297f031bb79dedb708a249f76"
+      },
+      {
+        "path": "truth/tests/golden/configurations/test_fixture.json",
+        "sha256": "af0f978c46c8759b5f1985626340f5742430addffc927699833df69acce3dae4"
+      },
+      {
+        "path": "truth/tests/golden/configurations/test_fixture_registration_errors.json",
+        "sha256": "a9d553aaaf2c4f2d38cbcb32b5fc16eb2a28dccc65d5d9d0ddb49d5aec64db91"
+      },
+      {
+        "path": "truth/tests/golden/frontier/test_fixture.json",
+        "sha256": "0ca885efc32ebfc9a15875cecb8477f65daff2f696fb7d3acf19821fa4823570"
+      },
+      {
+        "path": "truth/tests/golden/frontier/test_fixture_input.json",
+        "sha256": "ec33c3f659deececdc1e0b2255e21bff64ba066dc594372589b7c0263ff0e602"
+      },
+      {
+        "path": "truth/tests/golden/index/test_fixture.json",
+        "sha256": "04e2841e96e076cff82443ee3cd838fe3f3249e78f27a6663645bf4b6ac6f90d"
+      },
+      {
+        "path": "truth/tests/golden/issues/test_dossier_issue_targets_on_the_fixture.json",
+        "sha256": "314fd1ea6eda3eb95279e732d2527bf642942f0af68c63ca9c0a85ea8804d1fa"
+      },
+      {
+        "path": "truth/tests/golden/issues/test_fixture_cases.json",
+        "sha256": "9d1964e253be91b2ffb5f730dc2de82df406ac8e7770bdd2f8ea171d6080e66e"
+      },
+      {
+        "path": "truth/tests/golden/navigation/test_broken_corpus.json",
+        "sha256": "bf60f3b81ec8e4c8e7a22f2ddbe3b458259a34401b09b4690c0f8007cb6190f4"
+      },
+      {
+        "path": "truth/tests/golden/navigation/test_fixture.json",
+        "sha256": "930fd0723db3bfe9e2e8fb9c357e4f5e5ad62c0887862c022a1eaf5d74e4a650"
+      },
+      {
+        "path": "truth/tests/golden/navigation/test_sort_lists.json",
+        "sha256": "0fcc3a03c82507309414a15fdc747e7f9ab19434be9b72f306905bcb8ecfad32"
+      },
+      {
+        "path": "truth/tests/golden/proof_use/test_context_proof_use.json",
+        "sha256": "d541ff8a572478e50ce6911cdcd98b6f837428e8c220213978a8e9d07a0a9a69"
+      },
+      {
+        "path": "truth/tests/golden/proof_use/test_lean_reuse.json",
+        "sha256": "d7f569299df8819899f05e6061787a4508d629febb163da7ae91d7877a2e4735"
+      },
+      {
+        "path": "truth/tests/golden/proof_use/test_unused_premises.json",
+        "sha256": "fc608a8d7256b4da6610119caa8500bfab3213f237c7cba7cf9b0c8bfdc6c321"
+      },
+      {
+        "path": "truth/tests/golden/proof_use/test_unused_premises_from_saved_reports.json",
+        "sha256": "8437dcdabcfe3d69891d5d52baf0af8a46fca5eb2bdb8fe36f9a03a886d34142"
+      },
+      {
+        "path": "truth/tests/golden/proof_use/test_unused_premises_validates_first.json",
+        "sha256": "1694ab92d11da56fed46cab4dbedf0bc16a64b44bd6b425cfbb913eed54278cd"
+      },
+      {
+        "path": "truth/tests/golden/proposition_structure/test_check_input.json",
+        "sha256": "6df4f8f315d23b8df9ae1d339edec3e53af59ff4cd82e54c4ae75f19b52f8c77"
+      },
+      {
+        "path": "truth/tests/golden/proposition_structure/test_errors_and_exit_codes.json",
+        "sha256": "264b39543b50c281ad2295bc480fd18b1a58e52dac2900c1d958a42f27f6c610"
+      },
+      {
+        "path": "truth/tests/golden/proposition_structure/test_producer_provenance.json",
+        "sha256": "f3892ab2c784da2ce1a2f707cc0d85ab8bcc6ab383f8d1d8724aa5ca0a695c16"
+      },
+      {
+        "path": "truth/tests/golden/proposition_structure/test_statement_reports_text_and_json.json",
+        "sha256": "d55d3ac2dc883e86c9028dd69f0f732e9056d0505fceb388d6568c3d48026b3c"
+      },
+      {
+        "path": "truth/tests/golden/research/test_fixture.json",
+        "sha256": "897e5e7719da9a5ab5d2ad0f7f423b0898abca9e14f3dfeb07abe7379d746283"
+      },
+      {
+        "path": "truth/tests/golden/revisions/test_fixture.json",
+        "sha256": "b3b8f97021f0291167216c63bb12620f1df9e1e48fd18fb2adf6c7fad379c6c8"
+      },
+      {
+        "path": "truth/tests/golden/senses/test_allowlist_missing_stale_and_written.json",
+        "sha256": "3c61d9f1cfd61d643468a05f5d41549bc85ba143fa5d0b358f80c52b71544364"
+      },
+      {
+        "path": "truth/tests/golden/senses/test_ratchet.json",
+        "sha256": "74e39d8fbb1f06d6a51b6bc1ecdd42a586a3b118242d32e17d6ef83b24b77d50"
+      },
+      {
+        "path": "truth/tests/golden/senses/test_report.json",
+        "sha256": "10332520f3a477f344e0c02a8bdb64b07d092ed45755df61cf5878443d54b2d9"
+      },
+      {
+        "path": "truth/tests/golden/senses/test_report_write.json",
+        "sha256": "65a395a5f817f16bab4ee6503c497a44b3737b9f86be44801027c0f61200a6dc"
+      },
+      {
+        "path": "truth/tests/golden/strength/test_errors_and_exit_codes.json",
+        "sha256": "363c9b84269e07f102185b642301a103cebad454bbd919c73a54fdf8ebad6180"
+      },
+      {
+        "path": "truth/tests/golden/strength/test_invalid_registrations.json",
+        "sha256": "8eb716966832e137f7b5ca0b0f345425b8917691e1e7391c96566b9402527c53"
+      },
+      {
+        "path": "truth/tests/golden/strength/test_report_and_check_input.json",
+        "sha256": "40b5852cfeb63afba45368634b1ed262534a6e1407c860660f761110d3a87732"
+      },
+      {
+        "path": "truth/tests/golden/strength/test_reports_text_and_json.json",
+        "sha256": "c3677eb3260a3ae22b27a7ac91479e6f5646181c03780f20378d8d8fd3a5382c"
+      },
+      {
+        "path": "truth/tests/golden/thickness/test_fixture.json",
+        "sha256": "d677a6ef46859cd628ce6418e8eb1fa579637a21a087c4099459ef5b16921df8"
+      },
+      {
+        "path": "truth/tests/retrieval_smoke.rs",
+        "sha256": "c8c6eb004a51125f91534dda7aa50e391b8690b026d1f86ac18142cda71cd251"
+      }
+    ]
+  },
+  "baseline": {
+    "binary": "/tmp/truth-retrieval-baseline",
+    "sha256": "5231d02d74cb78c87705a2aae9bcc1dd4ef4a92243a513c8a0053e8f77fdde7c",
+    "binary_bytes": 16329200,
+    "semantic_cases": [
+      {
+        "command": [
+          "/tmp/truth-retrieval-baseline",
+          "--root",
+          "/tmp/truth-retrieval-oracle-of7i7l0n/synthetic",
+          "--json",
+          "novelty",
+          "Every mover moves only insofar as it is in act.",
+          "--frontier-root",
+          "STMT-C"
+        ],
+        "exit": 0,
+        "seconds": 0.0173,
+        "bytes": 2769,
+        "stderr": "",
+        "case": "exact",
+        "semantic_recall_at_5": {
+          "hits": 1,
+          "total": 1,
+          "ratio": 1.0
+        },
+        "precision_at_5": {
+          "hits": 1,
+          "total": 2,
+          "ratio": 0.5
+        },
+        "novelty_correct": true,
+        "judgment": "Exact recorded proposition.",
+        "classification": "already-recorded"
+      },
+      {
+        "command": [
+          "/tmp/truth-retrieval-baseline",
+          "--root",
+          "/tmp/truth-retrieval-oracle-of7i7l0n/synthetic",
+          "--json",
+          "novelty",
+          "Whatever has a cause begins to exist.",
+          "--frontier-root",
+          "STMT-C"
+        ],
+        "exit": 0,
+        "seconds": 0.0089,
+        "bytes": 2749,
+        "stderr": "",
+        "case": "converse",
+        "semantic_recall_at_5": {
+          "hits": 1,
+          "total": 1,
+          "ratio": 1.0
+        },
+        "precision_at_5": {
+          "hits": 1,
+          "total": 2,
+          "ratio": 0.5
+        },
+        "novelty_correct": false,
+        "judgment": "Reverses the conditional; the corpus states only begins implies caused.",
+        "classification": "already-recorded"
+      },
+      {
+        "command": [
+          "/tmp/truth-retrieval-baseline",
+          "--root",
+          "/tmp/truth-retrieval-oracle-of7i7l0n/synthetic",
+          "--json",
+          "novelty",
+          "God does not exist outside time.",
+          "--frontier-root",
+          "STMT-C"
+        ],
+        "exit": 0,
+        "seconds": 0.0089,
+        "bytes": 2734,
+        "stderr": "",
+        "case": "negation",
+        "semantic_recall_at_5": {
+          "hits": 1,
+          "total": 1,
+          "ratio": 1.0
+        },
+        "precision_at_5": {
+          "hits": 1,
+          "total": 2,
+          "ratio": 0.5
+        },
+        "novelty_correct": false,
+        "judgment": "Negates the recorded proposition.",
+        "classification": "already-recorded"
+      },
+      {
+        "command": [
+          "/tmp/truth-retrieval-baseline",
+          "--root",
+          "/tmp/truth-retrieval-oracle-of7i7l0n/synthetic",
+          "--json",
+          "novelty",
+          "Act is prior to potency in time.",
+          "--frontier-root",
+          "STMT-C"
+        ],
+        "exit": 0,
+        "seconds": 0.0086,
+        "bytes": 3094,
+        "stderr": "",
+        "case": "temporal-sense",
+        "semantic_recall_at_5": {
+          "hits": 1,
+          "total": 1,
+          "ratio": 1.0
+        },
+        "precision_at_5": {
+          "hits": 1,
+          "total": 3,
+          "ratio": 0.3333333333333333
+        },
+        "novelty_correct": true,
+        "judgment": "Temporal priority differs from priority in account; this corrects the historical E3 acceptance rule in a separate tier.",
+        "classification": "partially-recorded"
+      },
+      {
+        "command": [
+          "/tmp/truth-retrieval-baseline",
+          "--root",
+          "/tmp/truth-retrieval-oracle-of7i7l0n/synthetic",
+          "--json",
+          "novelty",
+          "Every contingent being has an explanation.",
+          "--frontier-root",
+          "STMT-C"
+        ],
+        "exit": 0,
+        "seconds": 0.0086,
+        "bytes": 2340,
+        "stderr": "",
+        "case": "quantifier",
+        "semantic_recall_at_5": {
+          "hits": 1,
+          "total": 1,
+          "ratio": 1.0
+        },
+        "precision_at_5": {
+          "hits": 1,
+          "total": 1,
+          "ratio": 1.0
+        },
+        "novelty_correct": false,
+        "judgment": "Universal explanation is stronger than the recorded existential claim.",
+        "classification": "already-recorded"
+      },
+      {
+        "command": [
+          "/tmp/truth-retrieval-baseline",
+          "--root",
+          "/tmp/truth-retrieval-oracle-of7i7l0n/synthetic",
+          "--json",
+          "novelty",
+          "God exists throughout all time.",
+          "--frontier-root",
+          "STMT-C"
+        ],
+        "exit": 0,
+        "seconds": 0.0088,
+        "bytes": 2724,
+        "stderr": "",
+        "case": "timeless-endless",
+        "semantic_recall_at_5": {
+          "hits": 1,
+          "total": 1,
+          "ratio": 1.0
+        },
+        "precision_at_5": {
+          "hits": 1,
+          "total": 2,
+          "ratio": 0.5
+        },
+        "novelty_correct": true,
+        "judgment": "Sempiternity is not timelessness; vocabulary overlap cannot certify equivalence.",
+        "classification": "partially-recorded"
+      }
+    ],
+    "graph": {
+      "command": [
+        "/tmp/truth-retrieval-baseline",
+        "--root",
+        "/tmp/truth-retrieval-oracle-of7i7l0n/synthetic",
+        "--json",
+        "evidence",
+        "a8459a54-228d-545e-9e81-bf462fcca7a6",
+        "--limit",
+        "1",
+        "--issues-from",
+        "/tmp/truth-retrieval-oracle-of7i7l0n/synthetic/issues.json"
+      ],
+      "exit": 2,
+      "seconds": 0.0012,
+      "bytes": 0,
+      "stderr": "{\"error\":{\"code\":\"usage\",\"message\":\"--all, --limit, --related and --frontier-json apply only to related, dossier and context\"},\"schema_version\":1}\n",
+      "capability": "unavailable"
+    },
+    "summary": {
+      "semantic_recall_at_5": {
+        "hits": 6,
+        "total": 6,
+        "ratio": 1.0
+      },
+      "precision_at_5": {
+        "hits": 6,
+        "total": 12,
+        "ratio": 0.5
+      },
+      "novelty_correctness": {
+        "hits": 3,
+        "total": 6,
+        "ratio": 0.5
+      }
+    },
+    "historical_cases": [
+      {
+        "command": [
+          "/tmp/truth-retrieval-baseline",
+          "--root",
+          "/tmp/truth-retrieval-oracle-of7i7l0n/historical",
+          "--json",
+          "novelty",
+          "depending for its being is equivalent to being unable to be without"
+        ],
+        "exit": 0,
+        "seconds": 2.907,
+        "bytes": 19306,
+        "stderr": "",
+        "case": "B2-dependence-paraphrase",
+        "judgment": "Known relevant prior work must be found; a paraphrase alone does not certify normalized text identity.",
+        "known_work_recall": {
+          "hits": 0,
+          "total": 2,
+          "ratio": 0.0
+        },
+        "novelty_correct": false,
+        "classification": "already-recorded",
+        "retrieved_identity_count": 48,
+        "retrieved_identities_sha256": "aaf02506c102e95ee0b4d1b863b8dff39fd5617bf458a806c75b34f208e9bb56",
+        "retrieved_identity_sample": [
+          "",
+          "39d861f4-a264-565c-910a-283b1cb3d97e",
+          "3e39295e-5066-57e6-9d01-e87b7f992656",
+          "4a1d04b7-1c9a-5b65-b6f9-1f1dc68982a0",
+          "4d69464b-5fa1-42a2-918e-a63e6f10f48d",
+          "61e540a5-1bc6-5fa7-bc9f-b33db20f7532",
+          "6e974423-7695-4371-9a6e-6bfd901a6b9f",
+          "75f11492-299c-509e-94f2-3a4bdea7f7cd",
+          "7b38fb34-8d77-590d-a142-cfa6c088037a",
+          "93e7a616-a540-534d-ad78-e38d570662fa",
+          "95f41960-baf4-58ad-ba7f-b11b2f439f7c",
+          "9e1229f8-ce4e-4b27-9db8-0914e7224021",
+          "b41835a1-face-5c8d-884a-954867a923fe",
+          "c6e7e2f2-cd9d-57e6-bfc6-27bf2b7053c8",
+          "c8c357e8-33d1-5468-858d-78f8493e353b",
+          "corpus/arguments/4d69464b-5fa1-42a2-918e-a63e6f10f48d.json",
+          "corpus/arguments/6e974423-7695-4371-9a6e-6bfd901a6b9f.json",
+          "corpus/arguments/9e1229f8-ce4e-4b27-9db8-0914e7224021.json",
+          "corpus/arguments/HISTORY-SELECTION-CERTIFICATE.json",
+          "corpus/arguments/SCOTT-NE-WORLD-ISOLATION.json"
+        ],
+        "matched_reference_identities": {
+          "priority-independence-logic-support-investigation.md": [],
+          "000e1f65": []
+        }
+      },
+      {
+        "command": [
+          "/tmp/truth-retrieval-baseline",
+          "--root",
+          "/tmp/truth-retrieval-oracle-of7i7l0n/historical",
+          "--json",
+          "novelty",
+          "weak explanatory coverage adds no ontic constraints"
+        ],
+        "exit": 0,
+        "seconds": 1.3891,
+        "bytes": 19667,
+        "stderr": "",
+        "case": "B3-dedicated-note",
+        "judgment": "Dedicated note records the result; advisory text is prior work rather than certified proposition identity.",
+        "known_work_recall": {
+          "hits": 1,
+          "total": 1,
+          "ratio": 1.0
+        },
+        "novelty_correct": true,
+        "classification": "partially-recorded",
+        "retrieved_identity_count": 48,
+        "retrieved_identities_sha256": "85f6c66ce487274eefbe322ae24cf91a4423fa26119d927ecf2f1fbce008b0a5",
+        "retrieved_identity_sample": [
+          "",
+          "09a5b009-3548-5a02-80b6-9eafc755a10e",
+          "2aeb69be-e127-518b-98b0-7862475f2c12",
+          "344e8b8f-e4ef-561d-ba4b-0259da285c32",
+          "3a978f8e-e923-5ee8-846f-3814481522c1",
+          "423a0701-94d8-53d0-a901-bacd1c4e71b5",
+          "4ce8aafa-b75e-561a-ad92-7eee1f62e77d",
+          "6010e9b6-f156-519f-a727-d80d2768c6da",
+          "64695b08-c37a-57d2-a31a-536026720862",
+          "71e20f7f-8433-573c-a061-b675735df433",
+          "7455e90c-226e-5c4d-a6f2-feedd2e45e0b",
+          "87acee6e-d234-533c-a9d5-e70298d26ea3",
+          "a1b2e330-388f-4120-bc5c-969642317792",
+          "a338fc69-2aea-52d2-b1e2-49ad7d7c3424",
+          "bcacfcc4-5c3d-5bd5-9544-503b811c27a8",
+          "corpus/arguments/WEAK-EXPLANATION-CONSERVATIVE-EXPANSION.json",
+          "corpus/attempts/contingent-atomicity-20261101.json",
+          "corpus/attempts/direct-esse-root-uniqueness-20261031.json",
+          "corpus/attempts/eeec87c5-61fb-4327-89bc-e52dbfdd3ea0.json",
+          "corpus/attempts/ultimate-adequacy-integration-735.json"
+        ],
+        "matched_reference_identities": {
+          "weak-explanation-conservative-expansion.md": [
+            "docs/notes/weak-explanation-conservative-expansion.md"
+          ]
+        }
+      },
+      {
+        "command": [
+          "/tmp/truth-retrieval-baseline",
+          "--root",
+          "/tmp/truth-retrieval-oracle-of7i7l0n/historical",
+          "--json",
+          "novelty",
+          "CanBeWithout(x,y) \u2192 DependsForBeing(x,y)"
+        ],
+        "exit": 0,
+        "seconds": 1.3977,
+        "bytes": 15999,
+        "stderr": "",
+        "case": "E2-converse",
+        "judgment": "Shared symbols do not establish the converse or equivalence.",
+        "known_work_recall": {
+          "hits": 1,
+          "total": 1,
+          "ratio": 1.0
+        },
+        "novelty_correct": false,
+        "classification": "already-recorded",
+        "retrieved_identity_count": 43,
+        "retrieved_identities_sha256": "481fd0645ee03b6f33b3576c4398616feb3fe7a4f009074cca45023f31ff5a43",
+        "retrieved_identity_sample": [
+          "",
+          "315f7a92-178a-40a8-be19-db057722acc1",
+          "3c027c4d-4da2-40be-a04a-ed046cd4050a",
+          "4d69464b-5fa1-42a2-918e-a63e6f10f48d",
+          "57f22435-95c6-43ba-8d68-51a9ffdae405",
+          "63e65ca6-c359-43b3-9d2f-5d9d939fc8cd",
+          "780546d0-1b8b-493f-8bfb-3ba8b662431a",
+          "79d878d0-ea17-4e7a-bae5-2090dd576b2e",
+          "875be538-3eef-4282-a142-df544aa1dd4a",
+          "8bb41add-c2e8-492f-9ef9-01afb4895c42",
+          "8dbe2d30-0781-42c7-9cdb-4c55a6a4dd99",
+          "a4d430a0-9711-4d04-b4a5-be385f92e757",
+          "a739dad6-ef53-49ea-b7dc-6d67c495c563",
+          "aca2d4ad-d3cb-4bc7-adf2-b968218cd40a",
+          "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+          "corpus/arguments/3c027c4d-4da2-40be-a04a-ed046cd4050a.json",
+          "corpus/arguments/4d69464b-5fa1-42a2-918e-a63e6f10f48d.json",
+          "corpus/arguments/57f22435-95c6-43ba-8d68-51a9ffdae405.json",
+          "corpus/arguments/780546d0-1b8b-493f-8bfb-3ba8b662431a.json",
+          "corpus/arguments/aca2d4ad-d3cb-4bc7-adf2-b968218cd40a.json"
+        ],
+        "matched_reference_identities": {
+          "priority-independence-logic-support-investigation.md": [
+            "docs/notes/priority-independence-logic-support-investigation.md"
+          ]
+        }
+      },
+      {
+        "command": [
+          "/tmp/truth-retrieval-baseline",
+          "--root",
+          "/tmp/truth-retrieval-oracle-of7i7l0n/historical",
+          "--json",
+          "novelty",
+          "act is prior to potency in time"
+        ],
+        "exit": 0,
+        "seconds": 1.457,
+        "bytes": 20027,
+        "stderr": "",
+        "case": "E3-temporal-priority",
+        "judgment": "The historical lexical key accepted already-recorded for this wrong-sense hit. New independent judgment requires semantic uncertainty; temporal and account priority differ.",
+        "known_work_recall": {
+          "hits": 0,
+          "total": 1,
+          "ratio": 0.0
+        },
+        "novelty_correct": false,
+        "classification": "already-recorded",
+        "retrieved_identity_count": 48,
+        "retrieved_identities_sha256": "64c60aba727d9394fce4b090146fdcbd00d0b672f8fb3b32105ee1f0f3a2bd56",
+        "retrieved_identity_sample": [
+          "",
+          "124ff6a9-008f-4e40-8af6-6df906f3d7d2",
+          "1ae479bc-06f5-5e83-b947-72e9d94e4799",
+          "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+          "21788f3f-80d3-5eb6-ad91-86a1a5077799",
+          "2212f5d4-450a-58af-ab5e-f01e661eb116",
+          "249257f5-a9ef-46af-939a-293169855e92",
+          "2f615646-8cbe-5714-a384-20018efecf2a",
+          "3efb2e4b-b63b-58f7-ad34-5c7a3722aeff",
+          "5dcbac24-aba3-5657-89fc-68894ff4bb48",
+          "61235ea1-de5c-5f41-bda5-246f1e6314a6",
+          "6d44d7e1-d645-5790-b054-7d1ee4ec4633",
+          "9173954a-ffa3-5435-afc9-f6b769604d5d",
+          "ab0f7e3a-04a7-5feb-ad1d-10928e9f1439",
+          "b11f2b0b-e81d-5727-8621-1ad081da38ba",
+          "c132609d-2c76-55be-af09-15b26d99a9da",
+          "corpus/arguments/249257f5-a9ef-46af-939a-293169855e92.json",
+          "corpus/arguments/GENERATION-FROM-NIGHT-REFUTED.json",
+          "corpus/arguments/act-not-prior-in-time-from-temporally-first-potency.json",
+          "corpus/arguments/no-component-first-from-potency-or-participation.json"
+        ],
+        "matched_reference_identities": {
+          "197ac723": []
+        }
+      }
+    ]
+  },
+  "baseline_reuse": "Original matched baseline observations reused: corpus and fixture inputs unchanged; only oracle wording and additional provenance assertions changed.",
+  "baseline_source_revision": "f0eb8145916d8c3af4346f959bdc2d63adceb9a9"
+}

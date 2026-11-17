@@ -89,6 +89,7 @@ fn run_brief(args: &Args, operands: &[&str]) -> Output {
     let revision = retrieval::Revision::of(&args.root);
     let issues = issues(args, &revision)?;
     let inputs = Inputs {
+        full_evidence: args.full_evidence,
         root: &args.root,
         corpus: &corpus,
         aliases: &aliases,
@@ -148,38 +149,13 @@ fn run_novelty(args: &Args, operands: &[&str]) -> Output {
                 .get("statements", &sid)
                 .expect("resolved statement")
                 .fields;
-            let mut lean = retrieval::LeanSource::new(&args.root);
-            let declaration = record.get("lean_declaration").and_then(Value::as_str);
-            let own = declaration
-                .and_then(|d| d.rsplit('.').next())
-                .unwrap_or_default();
-            let text = match declaration.and_then(|d| lean.block(d)) {
-                // The statement's Lean vocabulary and connectives, without
-                // its own name: what it says, not what it is called.
-                Some((_, _, block)) => {
-                    let query = retrieval::Query::parse(&block);
-                    query
-                        .items
-                        .iter()
-                        .filter(|item| {
-                            (item.kind == "identifier" && item.text != own)
-                                || item.kind == "operator"
-                        })
-                        .map(|item| item.text.clone())
-                        .collect::<Vec<_>>()
-                        .join(" ")
-                }
-                None => String::new(),
-            };
-            let text = if text.split_whitespace().count() >= 2 {
-                text
-            } else {
-                record
-                    .get("paraphrase")
-                    .and_then(Value::as_str)
-                    .unwrap_or_default()
-                    .to_owned()
-            };
+            // Preserve proposition order and scope. A bag of declaration names
+            // cannot distinguish a converse, negation or different assumptions.
+            let text = record
+                .get("paraphrase")
+                .and_then(Value::as_str)
+                .unwrap_or_default()
+                .to_owned();
             (text, Some(sid))
         }
         _ => return Err(usage(HELP)),
@@ -188,6 +164,7 @@ fn run_novelty(args: &Args, operands: &[&str]) -> Output {
     let revision = retrieval::Revision::of(&args.root);
     let issues = issues(args, &revision)?;
     let inputs = Inputs {
+        full_evidence: args.full_evidence,
         root: &args.root,
         corpus: &corpus,
         aliases: &aliases,

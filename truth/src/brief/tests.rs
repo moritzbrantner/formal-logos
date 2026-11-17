@@ -256,6 +256,7 @@ fn missing() -> Issues {
 fn run<T>(loaded: &Loaded, issues: &Issues, body: impl FnOnce(&Inputs) -> T) -> T {
     let aliases = loaded.corpus.aliases();
     let inputs = Inputs {
+        full_evidence: false,
         root: &loaded.root,
         corpus: &loaded.corpus,
         aliases: &aliases,
@@ -367,7 +368,7 @@ fn historical_false_novelty_dependence_biconditional() {
         &snapshot(&root, None),
         "DependsForBeing ↔ ¬CanBeWithout",
     );
-    assert_eq!(report["classification"], "already-recorded");
+    assert_eq!(report["classification"], "partially-recorded");
     let first = &report["hits"][0];
     assert_eq!(first["kind"], "note");
     assert_eq!(
@@ -389,7 +390,7 @@ fn historical_false_novelty_dependence_biconditional() {
         report["reading"]
             .as_str()
             .unwrap()
-            .contains("not a certified entailment")
+            .contains("semantic comparison is unknown")
     );
     // Both formalized directions are found structurally, not as the theorem.
     let structural: Vec<&str> = report["hits"]
@@ -414,12 +415,12 @@ fn historical_false_novelty_dependence_biconditional() {
     assert_eq!(issues, [1589]);
     // The note's own notation alone, with no snapshot, still finds it.
     let symbols = check_novelty(&loaded, &missing(), "D(y,x) ↔ ¬B(y,x)");
-    assert_eq!(symbols["classification"], "already-recorded");
+    assert_eq!(symbols["classification"], "partially-recorded");
     assert_eq!(symbols["hits"][0]["line"], first["line"]);
     let text = run(&loaded, &missing(), |inputs| {
         novelty::format_novelty(&report, inputs.aliases, 4)
     });
-    assert!(text.contains("Classification: already-recorded"));
+    assert!(text.contains("Classification: partially-recorded"));
     assert!(text.contains("#1589 [OPEN]"));
     std::fs::remove_dir_all(&root).unwrap();
 }
@@ -708,5 +709,157 @@ fn benchmark_1644_dedicated_notes_successors_and_theorem_names() {
         ),
         [18, 19]
     );
+    std::fs::remove_dir_all(&root).unwrap();
+}
+
+#[test]
+fn novelty_preserves_direction_scope_time_and_assumptions() {
+    let root = fixture("logical-boundaries");
+    let loaded = load(&root);
+    let original = "If x depends for its being on y, then x cannot be without y";
+    let exact = check_novelty(&loaded, &missing(), original);
+    assert_eq!(exact["comparison"], "normalized-text-identity");
+    assert_eq!(exact["classification"], "already-recorded");
+    for candidate in [
+        "If x cannot be without y, then x depends for its being on y",
+        "If x depends for its being on y, then x can be without y",
+        "Every x depends for its being on some y",
+        "Some x depends for its being on every y",
+        "If x formerly depends for its being on y, then x cannot be without y",
+        "Assuming excluded middle, if x depends for its being on y, then x cannot be without y",
+    ] {
+        let report = check_novelty(&loaded, &missing(), candidate);
+        assert_ne!(report["classification"], "already-recorded", "{candidate}");
+        assert_eq!(report["comparison"], "unknown");
+    }
+    std::fs::remove_dir_all(&root).unwrap();
+}
+
+#[test]
+fn novelty_json_does_not_omit_decoy_overflow() {
+    let root = fixture("overflow");
+    for number in 0..100 {
+        write(
+            &root,
+            &format!("corpus/statements/decoy-{number}.json"),
+            &json!({
+                "id": format!("decoy-{number}"), "label": format!("decoy {number}"),
+                "paraphrase": format!("Dependence candidate {number}")
+            })
+            .to_string(),
+        );
+    }
+    let loaded = load(&root);
+    let report = check_novelty(&loaded, &missing(), "Dependence candidate");
+    assert_eq!(report["omitted_from_json"], 0);
+    assert!(report["hits"].as_array().unwrap().len() >= 100);
+    std::fs::remove_dir_all(&root).unwrap();
+}
+
+#[test]
+fn canonical_lexicon_forms_discover_semantically_linked_records() {
+    let root = fixture("lexicon-paraphrase");
+    let definition = "d0000000-0000-4000-8000-000000000001";
+    let lexeme = "d0000000-0000-4000-8000-000000000002";
+    write(
+        &root,
+        &format!("corpus/definitions/{definition}.json"),
+        &json!({
+            "id": definition, "label": "explanatory basis", "term": "ground",
+            "definition": "That which explains", "basis": "stipulative", "note": "Fixture"
+        })
+        .to_string(),
+    );
+    write(
+        &root,
+        &format!("corpus/lexicon/{lexeme}.json"),
+        &json!({
+            "id": lexeme, "label": "ground vocabulary", "lemma": "ground", "class": "technical",
+            "forms": ["grounding"], "definition_ids": [definition]
+        })
+        .to_string(),
+    );
+    write(&root, &format!("corpus/statements/{OPEN_PREMISE}.json"), &json!({
+        "id": OPEN_PREMISE, "label": "An explanatory basis exists", "paraphrase": "An explanatory basis exists",
+        "definition_ids": [definition]
+    }).to_string());
+    let loaded = load(&root);
+    let report = check_novelty(&loaded, &missing(), "grounding");
+    assert_eq!(report["comparison"], "unknown");
+    assert!(
+        report["evidence_graph"]["expansion"]["nodes"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .any(|node| node["id"] == OPEN_PREMISE)
+    );
+    assert_eq!(
+        report["semantic_discovery"]["mappings"][0]["alternatives"][0]["id"],
+        lexeme
+    );
+    std::fs::remove_dir_all(&root).unwrap();
+}
+
+#[test]
+fn graph_query_references_and_hits_share_one_content_copy() {
+    let root = fixture("graph-reference-sharing");
+    let loaded = load(&root);
+    let report = check_novelty(&loaded, &snapshot(&root, None), "#1589");
+    assert!(
+        !report["evidence_graph"]["lanes"]["explicit"]["seeds"]
+            .as_array()
+            .unwrap()
+            .is_empty()
+    );
+    assert!(
+        !report["evidence_graph"]["expansion"]["nodes"]
+            .as_array()
+            .unwrap()
+            .is_empty()
+    );
+    assert!(report["evidence_graph"].get("explicit").is_none());
+    let mut seen = std::collections::BTreeSet::new();
+    for hit in report["hits"].as_array().unwrap() {
+        assert!(hit["ref"].get("content").is_none());
+        if let Some(id) = hit["ref"]["id"].as_str().or_else(|| hit["id"].as_str()) {
+            assert!(seen.insert(format!("{}:{id}", hit["kind"])));
+        }
+    }
+    std::fs::remove_dir_all(&root).unwrap();
+}
+
+#[test]
+fn logical_words_preserve_scope_without_content_only_candidates() {
+    let root = fixture("operator-candidate");
+    write(&root, &format!("corpus/statements/{OPEN_PREMISE}.json"), &json!({
+        "id": OPEN_PREMISE, "label": "Mover scope", "paraphrase": "Every mover moves only insofar as it is in act."
+    }).to_string());
+    let loaded = load(&root);
+    let report = check_novelty(
+        &loaded,
+        &missing(),
+        "Every contingent being has an explanation.",
+    );
+    assert!(
+        !report["hits"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .any(|hit| hit["id"] == OPEN_PREMISE)
+    );
+    let query = retrieval::Query::parse("Every being is not contingent");
+    assert!(
+        query
+            .items
+            .iter()
+            .any(|item| item.text == "Every" && item.kind == "logical")
+    );
+    assert!(
+        query
+            .items
+            .iter()
+            .any(|item| item.text == "not" && item.kind == "logical")
+    );
+    assert!(!query.fts_expression().unwrap().contains("every"));
     std::fs::remove_dir_all(&root).unwrap();
 }

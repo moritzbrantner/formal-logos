@@ -6,8 +6,8 @@
 //! note paragraphs (with each note's own notation), record prose and, when
 //! supplied, an offline issue/PR snapshot. Each hit says which query items
 //! it contains and what kind of evidence it is. The classification is a
-//! retrieval summary, never a verdict: `already-recorded` means some unit
-//! contains every query item (lexical containment is not equivalence), and
+//! retrieval summary, never a verdict: `already-recorded` requires identical
+//! normalized statement proposition text, and
 //! `no-match-found` never means "novel".
 
 use super::{Inputs, retrieval};
@@ -16,9 +16,17 @@ use retrieval::{Issues, Query};
 use serde_json::{Value, json};
 use std::collections::{BTreeMap, BTreeSet};
 
-pub const CLASSIFICATIONS: &str = "already-recorded: some unit contains every query item (at least two), \
-     or the text names a record exactly; partially-recorded: some unit contains at least half of the items \
-     and half of the words and identifiers (operators alone are weak); no-match-found: neither";
+pub const CLASSIFICATIONS: &str = "already-recorded: identical normalized statement proposition text; partially-recorded: candidate prior work found but semantic comparison unknown; no-match-found: no candidate found, not evidence of novelty";
+
+/// Normalize typography only: never reorder arguments or discard logical content.
+fn normalized_proposition(text: &str) -> String {
+    retrieval::normalize_symbols(text)
+        .trim()
+        .trim_end_matches('.')
+        .split_whitespace()
+        .collect::<Vec<_>>()
+        .join(" ")
+}
 
 pub const NOVELTY_BOUNDARY: &str = "advisory retrieval: a hit shows where the query's words, identifiers and \
      operators occur, not that the texts are equivalent; a note or issue is not a certified entailment; \
@@ -27,8 +35,6 @@ pub const NOVELTY_BOUNDARY: &str = "advisory retrieval: a hit shows where the qu
 /// One hit: its evidence kind, reference, coverage and why it matched.
 struct Hit {
     covered: usize,
-    /// At least half of all items and of the content items (not operators).
-    substantial: bool,
     rank: u8,
     key: String,
     value: Value,
@@ -53,8 +59,10 @@ pub fn novelty(
     index_state: Value,
     text: &str,
     exclude: Option<&str>,
-    limit: usize,
+    _limit: usize,
 ) -> Result<Value, String> {
+    let semantic = super::semantic_discovery(inputs, text)?;
+    let graph = super::graph_discovery(inputs, text, exclude, &semantic)?;
     let query = Query::parse(text);
     let total = query.items.len();
     let none = BTreeMap::new();
@@ -75,7 +83,6 @@ pub fn novelty(
             continue;
         }
         hits.push(Hit {
-            substantial: true,
             covered: usize::MAX,
             rank: 0,
             key: format!("0:{}:{}", link.kind, link.id),
@@ -119,7 +126,7 @@ pub fn novelty(
             let covered = retrieval::coverage(&matched).0;
             structural.push((covered, id.to_owned()));
             hits.push(Hit {
-                substantial: query.substantial(&matched),
+
                 covered,
                 rank: 1,
                 key: format!("1:{id}"),
@@ -138,7 +145,6 @@ pub fn novelty(
         }
     }
     structural.sort_by(|a, b| b.0.cmp(&a.0).then_with(|| a.1.cmp(&b.1)));
-    structural.truncate(8);
     let structural_ids: BTreeSet<&str> = structural.iter().map(|(_, id)| id.as_str()).collect();
     // Arguments and results built on the structurally matched statements.
     for argument in inputs.corpus.entries("arguments") {
@@ -160,7 +166,7 @@ pub fn novelty(
         }
         let id = fields.get("id").and_then(Value::as_str).unwrap_or_default();
         hits.push(Hit {
-            substantial: false,
+
             covered: used.len().min(total),
             rank: 2,
             key: format!("2:{id}"),
@@ -175,7 +181,7 @@ pub fn novelty(
     }
     // 3. Note paragraphs: the index's best notes and the notes naming the
     // structurally matched statements, each read with its own notation.
-    let mention_ids: BTreeSet<&str> = structural_ids.iter().copied().take(4).collect();
+    let mention_ids: BTreeSet<&str> = structural_ids.iter().copied().collect();
     let mut naming_notes: Vec<String> = Vec::new();
     for entry in notes::mentioning(inputs.root, &lookup, &mention_ids)? {
         if let Some(path) = entry["path"].as_str()
@@ -194,7 +200,7 @@ pub fn novelty(
                 .cmp(&(query.substantial(&a.matched), a.covered()))
                 .then(a.line.cmp(&b.line))
         });
-        for hit in paragraphs.into_iter().take(2) {
+        for hit in paragraphs {
             let mut value = super::paragraph_json(&query, hit);
             value["kind"] = json!("note");
             value["evidence"] = json!(evidence_kind("note"));
@@ -204,7 +210,6 @@ pub fn novelty(
                 value["via"] = json!("note names a structurally matched statement");
             }
             hits.push(Hit {
-                substantial: query.substantial(&hit.matched),
                 covered: hit.covered(),
                 rank: 3,
                 key: format!("3:{}:{:08}", hit.path, hit.line),
@@ -213,7 +218,7 @@ pub fn novelty(
         }
     }
     // 4. Records by prose.
-    for record in super::record_hits(inputs, &query, &record_candidates, limit * 3) {
+    for record in super::record_hits(inputs, &query, &record_candidates, usize::MAX) {
         let kind = record["kind"].as_str().unwrap_or_default().to_owned();
         let id = record["id"].as_str().unwrap_or_default().to_owned();
         if Some(id.as_str()) == exclude {
@@ -237,7 +242,6 @@ pub fn novelty(
         value["evidence"] = json!(evidence_kind(&kind));
         value["via"] = json!(via);
         hits.push(Hit {
-            substantial: value["substantial"] == true,
             covered,
             rank: 4,
             key: format!("4:{kind}:{id}"),
@@ -304,7 +308,6 @@ pub fn novelty(
                 u64::MAX / 2 - number
             );
             hits.push(Hit {
-                substantial: query.substantial(&best.3),
                 covered: best.0,
                 rank: 5,
                 key,
@@ -319,6 +322,29 @@ pub fn novelty(
             .then(a.rank.cmp(&b.rank))
             .then_with(|| a.key.cmp(&b.key))
     });
+    let mut unique: Vec<Hit> = Vec::new();
+    let mut positions: BTreeMap<String, usize> = BTreeMap::new();
+    for mut hit in hits {
+        let kind = hit.value["kind"].as_str().unwrap_or_default();
+        let id = hit.value["ref"]["id"]
+            .as_str()
+            .or_else(|| hit.value["id"].as_str());
+        let key = id
+            .map(|id| format!("{kind}:{id}"))
+            .unwrap_or_else(|| hit.key.clone());
+        let reason = json!({"via": hit.value["via"], "coverage": hit.value["coverage"], "location": hit.value["location"]});
+        if let Some(&position) = positions.get(&key) {
+            unique[position].value["match_reasons"]
+                .as_array_mut()
+                .expect("reasons")
+                .push(reason);
+        } else {
+            hit.value["match_reasons"] = json!([reason]);
+            positions.insert(key, unique.len());
+            unique.push(hit);
+        }
+    }
+    let hits = unique;
     let best = hits
         .iter()
         .filter(|hit| hit.rank != 0 && hit.rank != 2)
@@ -326,44 +352,61 @@ pub fn novelty(
         .max()
         .unwrap_or(0);
     let exact = hits.iter().any(|hit| hit.rank == 0);
-    let full = total >= 2 && best == total;
-    let classification = if exact || full {
+    // Text identity preserves argument order, quantifier and operator attachment.
+    // Lexical containment and named references never establish proposition identity.
+    let normalized = normalized_proposition(text);
+    let identical: Vec<String> = inputs
+        .corpus
+        .entries("statements")
+        .into_iter()
+        .filter(|record| {
+            Some(
+                record
+                    .fields
+                    .get("id")
+                    .and_then(Value::as_str)
+                    .unwrap_or_default(),
+            ) != exclude
+        })
+        .filter(|record| {
+            record
+                .fields
+                .get("paraphrase")
+                .and_then(Value::as_str)
+                .is_some_and(|proposition| {
+                    !normalized.is_empty() && normalized_proposition(proposition) == normalized
+                })
+        })
+        .filter_map(|record| {
+            record
+                .fields
+                .get("id")
+                .and_then(Value::as_str)
+                .map(str::to_owned)
+        })
+        .collect();
+    let classification = if !identical.is_empty() {
         "already-recorded"
-    } else if hits
-        .iter()
-        .any(|hit| hit.substantial && hit.rank != 0 && hit.rank != 2)
+    } else if !hits.is_empty()
+        || graph["expansion"]["nodes"]
+            .as_array()
+            .is_some_and(|nodes| !nodes.is_empty())
     {
         "partially-recorded"
     } else {
         "no-match-found"
     };
-    let full_kinds: BTreeSet<String> = hits
-        .iter()
-        .filter(|hit| hit.rank != 0 && total >= 2 && hit.covered == total)
-        .map(|hit| hit.value["kind"].as_str().unwrap_or_default().to_owned())
-        .collect();
-    let mut reading = match classification {
-        "already-recorded" if exact => {
-            "the text names existing records exactly; read them before treating the proposal as new".to_owned()
-        }
-        "already-recorded" => format!(
-            "some unit ({}) contains every query item; read it before claiming novelty — containment is not equivalence",
-            full_kinds.iter().cloned().collect::<Vec<_>>().join(", ")
-        ),
-        "partially-recorded" => {
-            "units contain at least half of the query items: related prior work exists; compare it before claiming novelty".to_owned()
-        }
-        _ => "no unit contains half of the query items (and half of its words and identifiers); \
-              this is not evidence of novelty"
-            .to_owned(),
-    };
-    if !full_kinds.is_empty()
-        && full_kinds
-            .iter()
-            .all(|kind| kind == "note" || kind == "issue" || kind == "pull_request")
+    let reading = if !identical.is_empty() {
+        "an existing statement has the same normalized proposition text; formal status and assumptions must still be checked"
+    } else if !hits.is_empty()
+        || graph["expansion"]["nodes"]
+            .as_array()
+            .is_some_and(|nodes| !nodes.is_empty())
     {
-        reading.push_str("; recorded only in notes or issues, so not a certified entailment");
-    }
+        "candidate prior work exists; semantic comparison is unknown, including direction, negation, quantifiers, time and assumptions"
+    } else {
+        "no candidate found; semantic comparison is unknown and this is not evidence of novelty"
+    };
     let mut searched = vec![
         "exact record IDs, legacy IDs, labels and paths in the text".to_owned(),
         format!(
@@ -394,8 +437,7 @@ pub fn novelty(
     if query.items.is_empty() {
         caveats.push("the text has no searchable words, identifiers or operators".to_owned());
     }
-    // Bounded: at most `limit * 3` hits per evidence group (notes, records,
-    // issues), in rank order; `hit_counts` gives the totals.
+    // JSON retains all candidates; only the text renderer limits presentation.
     let group = |hit: &Hit| match hit.value["kind"].as_str().unwrap_or_default() {
         "note" => "notes",
         "issue" | "pull_request" => "issues",
@@ -406,17 +448,27 @@ pub fn novelty(
     for hit in hits {
         let count = counts.entry(group(&hit)).or_default();
         *count += 1;
-        if *count <= limit * 3 {
-            shown.push(hit.value);
-        }
+        let mut value = hit.value;
+        value["comparison"] = json!("unknown");
+        shown.push(value);
     }
     Ok(json!({
         "boundary": NOVELTY_BOUNDARY,
         "query": query,
         "excluded": exclude,
+        "semantic_discovery": semantic,
+        "evidence_graph": graph,
         "identity": inputs.identity(),
         "index": index_state,
         "classification": classification,
+        "comparison": if identical.is_empty() { "unknown" } else { "normalized-text-identity" },
+        "identical_statement_ids": identical,
+        "semantic_equivalence": "unknown",
+        "assumption_comparison": "not-performed",
+        "structural_scope": "heuristic indented Lean declaration blocks, not complete Lean parsing",
+        "named_reference": exact,
+        "candidate_total": shown.len(),
+        "omitted_from_json": 0,
         "classifications": CLASSIFICATIONS,
         "reading": reading,
         "best_coverage": [if exact { total } else { best }, total],
@@ -541,6 +593,7 @@ pub fn format_novelty(report: &Value, aliases: &crate::identity::Aliases, limit:
             }
         ),
     ];
+    super::graph_lines(&mut lines, &report["evidence_graph"], limit);
     let hits = report["hits"].as_array().cloned().unwrap_or_default();
     type Member = fn(&str) -> bool;
     let groups: [(&str, Member); 3] = [
