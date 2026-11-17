@@ -149,6 +149,19 @@ pub fn current(corpus: &Corpus, ids: &BTreeSet<String>) -> Vec<Value> {
     out
 }
 
+// Targets and review ledgers register work, rather than consuming its warrant.
+// Keep substantive prose (including the selected assessment) in other attempts.
+fn attempt_use(field: &str) -> bool {
+    let mut parts = field.trim_start_matches('/').split('/');
+    match parts.next() {
+        Some("statement_ids" | "revisions") => false,
+        Some("current_assessment") => {
+            matches!(parts.next(), Some("assessment" | "scope" | "next_test"))
+        }
+        _ => true,
+    }
+}
+
 /// Reverse explicit references expose potential uses, not semantic equivalence.
 /// Propagate argument conclusions as well as references so downstream routes are
 /// visible. No result's formal status is changed, even for unresolved uses.
@@ -173,6 +186,19 @@ pub fn impacts(root: &Path, corpus: &Corpus, ids: &BTreeSet<String>) -> Result<V
     // semantic consumers; only Lean proof-use inspection can establish use.
     let lean = crate::context::Lean::new(root);
     let results = corpus.entries("results");
+    let producer_conclusions: BTreeMap<String, String> = results
+        .iter()
+        .filter_map(|r| {
+            let argument = corpus.get("arguments", r.fields["argument_id"].as_str()?)?;
+            Some((
+                format!("results:{}", r.fields["id"].as_str()?),
+                format!(
+                    "statements:{}",
+                    argument.fields["conclusion_statement_id"].as_str()?
+                ),
+            ))
+        })
+        .collect();
     let mut imports = Vec::new();
     for consumer in &results {
         let module = consumer
@@ -217,6 +243,11 @@ pub fn impacts(root: &Path, corpus: &Corpus, ids: &BTreeSet<String>) -> Result<V
             .collect();
         let mut seen = seeds.clone();
         let mut via = BTreeMap::new();
+        let mut import_sources = BTreeMap::new();
+        let declaring_attempt = format!(
+            "attempts:{}",
+            attempt.fields["id"].as_str().unwrap_or_default()
+        );
         loop {
             let mut next = Vec::new();
             for edge in graph.edges() {
@@ -226,14 +257,24 @@ pub fn impacts(root: &Path, corpus: &Corpus, ids: &BTreeSet<String>) -> Result<V
                     // not consumers of the changed upstream premise.
                     && !matches!(edge.provenance.field.as_str(), "/conclusion_statement_id" | "/output_statement_id")
                     && !seen.contains(&edge.from)
-                    && !edge.from.starts_with("attempts:")
+                    && edge.from != declaring_attempt
+                    && (!edge.from.starts_with("attempts:") || attempt_use(&edge.provenance.field))
                 {
-                    next.push((edge.from.clone(), edge.to.clone()));
+                    next.push((edge.from.clone(), edge.to.clone(), None));
                 }
             }
             for (consumer, source) in &imports {
-                if seen.contains(source) && !seen.contains(consumer) {
-                    next.push((consumer.clone(), source.clone()));
+                // A producer is an import-discovery source even when only its
+                // conclusion is reached. It is not thereby an affected consumer.
+                let parent = if seen.contains(source) {
+                    Some(source)
+                } else {
+                    producer_conclusions
+                        .get(source)
+                        .filter(|conclusion| seen.contains(*conclusion))
+                };
+                if let Some(parent) = parent.filter(|_| !seen.contains(consumer)) {
+                    next.push((consumer.clone(), parent.clone(), Some(source.clone())));
                 }
             }
             for key in &seen {
@@ -242,7 +283,7 @@ pub fn impacts(root: &Path, corpus: &Corpus, ids: &BTreeSet<String>) -> Result<V
                 {
                     let target = format!("statements:{id}");
                     if !seen.contains(&target) {
-                        next.push((target, key.clone()));
+                        next.push((target, key.clone(), None));
                     }
                 }
             }
@@ -256,15 +297,18 @@ pub fn impacts(root: &Path, corpus: &Corpus, ids: &BTreeSet<String>) -> Result<V
                 {
                     let target = format!("statements:{id}");
                     if !seen.contains(&target) {
-                        next.push((target, key.clone()));
+                        next.push((target, key.clone(), None));
                     }
                 }
             }
             if next.is_empty() {
                 break;
             }
-            for (key, parent) in next {
+            for (key, parent, import_source) in next {
                 if seen.insert(key.clone()) {
+                    if let Some(source) = import_source {
+                        import_sources.insert(key.clone(), source);
+                    }
                     via.insert(key, parent);
                 }
             }
@@ -290,7 +334,7 @@ pub fn impacts(root: &Path, corpus: &Corpus, ids: &BTreeSet<String>) -> Result<V
         }
         let consumers: Vec<_> = seen.difference(&seeds).map(|key| {
             let disposition = change["reassessments"].as_array().into_iter().flatten().find(|d| d["consumer"].as_str() == Some(key));
-            json!({"consumer":key,"via":via.get(key),"disposition":disposition.map_or("pending", |d| text(d,"disposition")),"reason":disposition.map(|d| &d["reason"])})
+            json!({"consumer":key,"via":via.get(key),"import_source":import_sources.get(key),"disposition":disposition.map_or("pending", |d| text(d,"disposition")),"reason":disposition.map(|d| &d["reason"])})
         }).collect();
         out.push(json!({"attempt_id":attempt.fields["id"],"change":change,"consumers":consumers,"boundary":"potential explicit downstream uses and source-level Lean imports (not proof-use evidence); pending reassessment does not invalidate any formal theorem or accept a judgment"}));
     }

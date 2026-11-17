@@ -164,6 +164,12 @@ reference graph supplies reverse consumers; argument conclusions propagate
 impacts onward; alternative producers of that conclusion are not thereby
 consumers of the changed premise. The existing context import parser adds source-level Lean
 import consumers, including consumers omitted from the declared premise list.
+Other attempts' substantive summaries, evidence and selected judgment prose
+remain potential consumers. The declaring attempt, target-registration fields
+and revision/review bookkeeping do not create self-generated reassessment work.
+Producers of reached statements also supply import-discovery sources without
+becoming affected merely because they conclude those statements. Consumers reached through import discovery
+record their `import_source` result and reached predecessor (`via`).
 Imports and prose references identify **potential uses**, not proof-term use,
 semantic equivalence, a defeat, or an actual change in truth. Each consumer has
 a predecessor (`via`) so the proposed impact can be inspected. Nonregistered
