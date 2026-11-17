@@ -1,0 +1,54 @@
+# #336 structural integration; analyst formulations, attribution deferred.
+# See docs/dependence-shapes.md; no actual-grounding or root premise discharge.
+[batch]
+vocab = "TruthCore.Mereology.DependenceShapes"
+results = "TruthCore.Results.Mereology.DependenceShapes"
+
+[[statement]]
+id = "Dependence shape control"
+lean = "ShapeControl"
+paraphrase = "Every well-founded graph has the existing cycle, infinite-series and source-path controls. A one-node self-loop has no injective infinite sequence, fails well-foundedness and is finitely grounded with every node intrinsic; with no intrinsic nodes its lfp is empty and gfp universal. Strict reverse Nat order is irreflexive and transitive, has a successor chain and is not well-founded. These are structural mathematical controls, with no metaphysical premise discharge."
+definitions = ["7f488c9a-004c-40a3-98b6-53ba4ed989d0", "DEF-REGRESS-SCHEMA-GRAPH"]
+disambiguations = ["DISAMB-REGRESS-DOMAINS"]
+
+[[argument]]
+id = "Dependence shape control checked"
+theorem = "shapeControl"
+premises = []
+conclusion = "Dependence shape control"
+rule = "Structural theorem and explicit countermodel/control"
+meaning = "Reuse the existing controls_of_wellFounded and the existing monotone transmission operator. Unit subsingletonity rules out injective infinite sequences but does not rule out a self-loop. Direct fixed-point inequalities distinguish source-free least and greatest interpretations. Nat successor supplies a strict infinite reverse-order chain. Finite inductive grounding on the cycle has a declared intrinsic base and implies no graph-wide well-foundedness."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[statement]]
+id = "Regular-open priority direction control"
+lean = "PriorityControl"
+paraphrase = "The existing complete Boolean regular-open gunk interpretation has an injective descending proper-part chain from each positive region; neither strict parthood nor its full converse is well-founded. The same downward sequence is not an upward grounding chain. A different designated-greatest-region star on that same carrier is well-founded and has a unique relative source, while omitting some converse-parthood edges. The Boolean region algebra has no Mathlib atoms; Set Bool is both Mathlib atomic and atomistic. No actual gunk, power, being or metaphysical possibility is asserted."
+definitions = ["a56af907-46a5-4cc1-aa3d-6ae166d895f2", "7030c2d9-e059-4dcc-a61f-712381ed7951", "DEF-REGULAR-REAL-REGION-MEREOLOGY", "DEF-REGRESS-SCHEMA-GRAPH"]
+disambiguations = ["DISAMB-GUNK-FUSION-AND-PHYSICAL-COMPOSITION", "DISAMB-REGRESS-DOMAINS"]
+
+[[argument]]
+id = "Regular-open priority direction control checked"
+theorem = "priorityControl"
+premises = []
+conclusion = "Regular-open priority direction control"
+rule = "Structural theorem and explicit countermodel/control"
+meaning = "Reuse gunkModel. Every region has a smaller positive part, so accessibility induction fails at every node; Mathlib extracts an anchored chain and strict antitonicity gives injectivity. On positive regions strictly below top, Boolean complementation maps downward strict edges to upward ones; pulling hypothetical upward WF back contradicts atomlessness. The designated-whole star terminates in at most one link and has one source. Two successive strict parts exhibit an omitted intermediate-whole edge. Mathlib IsAtomic/IsAtomistic supply the set-algebra contrast, without replacing existing mereology machinery."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[statement]]
+id = "Proper-part extensionality and simple plurality control"
+lean = "ExtensionalityControl"
+paraphrase = "Unrestricted proper-part extensionality identifies every pair of minimal objects. Strong supplementation implies composite-restricted proper-part extensionality. The existing full-fusion nonempty-subsets-of-Bool interpretation has two distinct minimal singleton atoms, equal empty proper-part profiles, composite-restricted extensionality and failure of unrestricted extensionality jointly. This distinguishes the identity principles; it asserts no two necessary or metaphysically simple ultimate grounds."
+definitions = ["27ea0669-2438-47db-9b64-cafcd8f0af4a", "f3379a14-41d3-48b6-a91e-4b694d136c0a", "54281cc8-289e-47de-bfdb-bf52a624e572", "fbfd68f0-5ebe-4a35-a047-c08fbf45b308", "DEF-ATOMIC-FUSION-CONTRAST", "DEF-MEREOLOGICAL-SUPPLEMENTATION"]
+disambiguations = ["91d5918a-a193-491d-806f-d32441ee41c5", "DISAMB-GUNK-FUSION-AND-PHYSICAL-COMPOSITION", "DISAMB-EXACT-REMAINDER-AND-SUPPLEMENT"]
+
+[[argument]]
+id = "Proper-part extensionality and simple plurality control checked"
+theorem = "extensionalityControl"
+premises = []
+conclusion = "Proper-part extensionality and simple plurality control"
+rule = "Structural theorem and explicit countermodel/control"
+meaning = "All minimal objects have empty strict lower cones. For composites with the same strict lower cone, strong supplementation of a failure of containment would supply a separating part: if strict it also lies below the other object, and if equal to the whole a shared strict part witnesses overlap. Either case contradicts disjointness, yielding mutual containment and identity. Reuse atomicModel and strongOfComplementation on Body; its two singleton atoms witness failure of unrestricted extensionality. This is a premise-free control showing the two extensionality senses cannot be substituted for one another."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true

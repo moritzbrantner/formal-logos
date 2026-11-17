@@ -1,0 +1,19 @@
+{
+  "id": "cae86e58-7d9f-4e03-a877-930a6d69db11",
+  "label": "Proper-part extensionality and simple plurality control",
+  "paraphrase": "Unrestricted proper-part extensionality identifies every pair of minimal objects. Strong supplementation implies composite-restricted proper-part extensionality. The existing full-fusion nonempty-subsets-of-Bool interpretation has two distinct minimal singleton atoms, equal empty proper-part profiles, composite-restricted extensionality and failure of unrestricted extensionality jointly. This distinguishes the identity principles; it asserts no two necessary or metaphysically simple ultimate grounds.",
+  "lean_declaration": "TruthCore.Mereology.DependenceShapes.ExtensionalityControl",
+  "definition_ids": [
+    "27ea0669-2438-47db-9b64-cafcd8f0af4a",
+    "f3379a14-41d3-48b6-a91e-4b694d136c0a",
+    "54281cc8-289e-47de-bfdb-bf52a624e572",
+    "fbfd68f0-5ebe-4a35-a047-c08fbf45b308",
+    "870ea6ed-87f4-504b-bef4-51bb8c7492c1",
+    "491073fa-38af-5d98-a6b8-77bf9c472525"
+  ],
+  "disambiguation_ids": [
+    "91d5918a-a193-491d-806f-d32441ee41c5",
+    "893a8e17-13a9-5a0d-b5e1-a9bbb9a4167f",
+    "1cf6af1c-c1c6-544d-a6a7-7060d7aebd8f"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "6c4340d5-c7b1-4db2-9a2b-5b2193f6035e",
+  "label": "Dependence shape control checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "4007b528-e298-46f0-9435-0501f8f72c69",
+  "inference_ids": [
+    "abbb2178-90d8-4cbc-9075-6ede9fd6dd7a"
+  ],
+  "meaning": "Reuse the existing controls_of_wellFounded and the existing monotone transmission operator. Unit subsingletonity rules out injective infinite sequences but does not rule out a self-loop. Direct fixed-point inequalities distinguish source-free least and greatest interpretations. Nat successor supplies a strict infinite reverse-order chain. Finite inductive grounding on the cycle has a declared intrinsic base and implies no graph-wide well-foundedness.",
+  "definition_ids": [
+    "7f488c9a-004c-40a3-98b6-53ba4ed989d0",
+    "1dff2d68-1348-5e7e-8ee7-248af63c8c53"
+  ],
+  "disambiguation_ids": [
+    "34ddfede-ff4d-59ad-9882-4bcb490df9bb"
+  ]
+}

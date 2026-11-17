@@ -1,0 +1,9 @@
+{
+  "id": "a56af907-46a5-4cc1-aa3d-6ae166d895f2",
+  "label": "Regular-open priority direction control",
+  "term": "proper-part chains and whole-first grounding control",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Mereology.DependenceShapes.PriorityControl",
+  "definition": "PriorityControl reuses GunkCertificate (definition 416dfd08-eb27-5d9a-b2cd-fc8c7a7c2981): nonzero Heyting-regular real opens with their existing complete Boolean full-fusion profile. Every starting positive region has an injective Nat-indexed descending strict-part chain; strict parthood and its converse are both non-WF. Reversing a chain rejects the same oriented sequence, not every sequence. A designated greatest region supplies a different whole-first star graph on the same carrier, with that region as its unique graph-relative source; this graph is WF but omits some converse-parthood edges. The Boolean region algebra has no Mathlib IsAtom, while Set Bool has both Mathlib IsAtomic and IsAtomistic. These are mathematical order claims, not actual dependence.",
+  "note": "Analyst mathematical formulation for #336; attribution deferred. See docs/dependence-shapes.md for exact scope, examples, rival comparison and OPEN actual-power/being/unity bridges. No new primitive philosophical predicate."
+}

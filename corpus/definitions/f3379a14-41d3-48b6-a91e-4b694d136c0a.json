@@ -1,0 +1,9 @@
+{
+  "id": "f3379a14-41d3-48b6-a91e-4b694d136c0a",
+  "label": "Same strict proper parts",
+  "term": "equality of strict lower cones",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Mereology.DependenceShapes.SameProperParts",
+  "definition": "SameProperParts x y means for every object p, p<x iff p<y, in one fixed Mathlib partial order. Strict part uses the inherited order; no bottom/null object, overlap-profile equivalence or causal meaning is implicit. IsMin is Mathlib minimality: any object below x has x below it; in a partial order this excludes every strict predecessor. Composite is the existing existence of a strict predecessor, definition 9ec56dce-572e-5230-8247-6b3e994cb98a.",
+  "note": "Analyst mathematical formulation for #336; attribution deferred. See docs/dependence-shapes.md for exact scope, examples, rival comparison and OPEN actual-power/being/unity bridges. No new primitive philosophical predicate."
+}

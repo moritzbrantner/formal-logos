@@ -1,0 +1,25 @@
+{
+  "id": "91d5918a-a193-491d-806f-d32441ee41c5",
+  "label": "Proper-part extensionality: unrestricted and composite-restricted",
+  "term": "proper-part extensionality",
+  "term_label": "PROPER_PART_EXTENSIONALITY",
+  "sense_definition_ids": [
+    "54281cc8-289e-47de-bfdb-bf52a624e572",
+    "fbfd68f0-5ebe-4a35-a047-c08fbf45b308"
+  ],
+  "resolution": "Keep the unrestricted and BOTH-composites-restricted principles distinct. DS-3 is a premise-free mixing control: the same full-fusion model satisfies the restricted principle and refutes the unrestricted one, so replacing the former by the latter is invalid. Both predicates are transparent definitions over one supplied partial order, with distinct Lean declarations. IsMin means absence of proper parts here, not the broader metaphysical IsSimple. Neither sense is identified with equality of overlap profiles.",
+  "senses": [
+    {
+      "id": "b80cd420-25ac-4638-96d9-b0ce3e1687de",
+      "label": "PROPER_PART_EXTENSIONALITY_1",
+      "definition_id": "54281cc8-289e-47de-bfdb-bf52a624e572",
+      "lean_declaration": "TruthCore.Mereology.DependenceShapes.ProperExtensionality"
+    },
+    {
+      "id": "f0ecda08-faf2-4b95-8dfd-6508d294d694",
+      "label": "PROPER_PART_EXTENSIONALITY_2",
+      "definition_id": "fbfd68f0-5ebe-4a35-a047-c08fbf45b308",
+      "lean_declaration": "TruthCore.Mereology.DependenceShapes.CompositeExtensionality"
+    }
+  ]
+}

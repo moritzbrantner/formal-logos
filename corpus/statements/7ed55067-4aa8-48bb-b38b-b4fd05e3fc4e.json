@@ -1,0 +1,16 @@
+{
+  "id": "7ed55067-4aa8-48bb-b38b-b4fd05e3fc4e",
+  "label": "Regular-open priority direction control",
+  "paraphrase": "The existing complete Boolean regular-open gunk interpretation has an injective descending proper-part chain from each positive region; neither strict parthood nor its full converse is well-founded. The same downward sequence is not an upward grounding chain. A different designated-greatest-region star on that same carrier is well-founded and has a unique relative source, while omitting some converse-parthood edges. The Boolean region algebra has no Mathlib atoms; Set Bool is both Mathlib atomic and atomistic. No actual gunk, power, being or metaphysical possibility is asserted.",
+  "lean_declaration": "TruthCore.Mereology.DependenceShapes.PriorityControl",
+  "definition_ids": [
+    "a56af907-46a5-4cc1-aa3d-6ae166d895f2",
+    "7030c2d9-e059-4dcc-a61f-712381ed7951",
+    "416dfd08-eb27-5d9a-b2cd-fc8c7a7c2981",
+    "1dff2d68-1348-5e7e-8ee7-248af63c8c53"
+  ],
+  "disambiguation_ids": [
+    "893a8e17-13a9-5a0d-b5e1-a9bbb9a4167f",
+    "34ddfede-ff4d-59ad-9882-4bcb490df9bb"
+  ]
+}

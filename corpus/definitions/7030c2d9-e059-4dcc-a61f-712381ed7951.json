@@ -1,0 +1,9 @@
+{
+  "id": "7030c2d9-e059-4dcc-a61f-712381ed7951",
+  "label": "Whole-first star dependence",
+  "term": "designated-whole star",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Mereology.DependenceShapes.wholeStar",
+  "definition": "For a designated object u, wholeStar u has edge y x iff y=u and x differs from u. A dependent is every object other than u; only the designated whole supplies a link. This is a transparent model relation, not the universal whole-before-every-proper-part principle and not an independently warranted law of grounding. Its edge definition is reducible; the whole is not asserted to be actual or divine.",
+  "note": "Analyst mathematical formulation for #336; attribution deferred. See docs/dependence-shapes.md for exact scope, examples, rival comparison and OPEN actual-power/being/unity bridges. No new primitive philosophical predicate."
+}
