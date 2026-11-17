@@ -1,0 +1,14 @@
+{
+  "id": "f0a23bfe-e103-4166-b75b-3ad9b3d5804b",
+  "label": "Necessary concrete existence from actualist profile population and rigid uniqueness (inference)",
+  "input_statement_ids": [
+    "86badf93-78b1-46c1-90a2-97ed6a99d636",
+    "93804e57-d09d-4d9b-908b-29b0d86eeef7",
+    "84ae3700-f0a9-5d49-9c8c-0ccc9cb40e8a"
+  ],
+  "output_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+  "rule": "Numerical identity substitution preserving the actual concrete witness",
+  "meaning": "Conditional cross-family adapter: at each accessible world choose its existing profile exemplar and use candidate-wide uniqueness of the SAME rigid profile to identify it with the actual concrete exemplar. This derives de re existence rather than exchanging quantifiers without a bridge. The actual, de dicto and uniqueness commitments remain OPEN; no ontological possibility, efficient causation or GOD_4 is supplied. See docs/notes/conceptual-existence-boundary.md.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

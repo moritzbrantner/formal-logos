@@ -1,0 +1,11 @@
+{
+  "id": "f800e874-9680-4b93-b55e-8bb72b0b5fbe",
+  "label": "Same profile witness underived from necessary-support transport and Kant identification",
+  "argument_id": "78dfeded-5bc4-40e3-af5d-7adeb178cc0e",
+  "challenge_module": "TruthCore.Results.Causality.ExistenceAccountIntegration.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ExistenceAccountIntegration.Solution",
+  "theorem": "TruthCore.Results.Causality.ExistenceAccountIntegration.sameWitnessUnderived",
+  "comparator_config": "results/f800e874-9680-4b93-b55e-8bb72b0b5fbe/comparator.json",
+  "status": "solution-present",
+  "description": "Preserve the actual profile exemplar through accessible-world existence. A putative supporter lifts to an actual necessary predecessor; the separately OPEN Kant necessity-to-most-real premise and numerical uniqueness identify it with that same exemplar, contradicting well-founded actual support. No excluded middle or reflexive frame axiom is needed. Support is the supplied relation, not automatically efficient cause or adequate explanation. Rejection of Kant identification withdraws this particular same-witness route, not every cosmological argument. See docs/notes/conceptual-existence-boundary.md."
+}

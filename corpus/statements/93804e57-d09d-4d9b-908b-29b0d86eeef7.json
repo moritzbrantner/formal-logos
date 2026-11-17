@@ -1,0 +1,11 @@
+{
+  "id": "93804e57-d09d-4d9b-908b-29b0d86eeef7",
+  "label": "Actualist necessary exemplification of rigid reality profile",
+  "paraphrase": "At every accessible world some actually existing candidate possesses every feature of the supplied rigid reality profile. This uses the existing DeDicto quantifier; witnesses may differ before numerical uniqueness is supplied. OPEN, not conceivability or Scott NE.",
+  "lean_declaration": "TruthCore.Causality.ExistenceAccountIntegration.NecessaryProfilePopulation",
+  "definition_ids": [
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "b3c45d92-dee0-5a1a-9849-9924d3a1699d",
+    "baddf770-36bf-542f-bb3c-2297342d5452"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "fe980a3c-a3e9-4a93-b8ab-380a0f7e588b",
+  "label": "Same profile witness support adapter joint and omission certificates",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "77c8594c-19ef-4115-a125-ad17eddf3f11",
+  "inference_ids": [
+    "304a07e0-cd64-4091-bd6f-449f341ad16d"
+  ],
+  "meaning": "The nonempty positive case tests the full six-input package. In the second, both candidates exist necessarily, the unique profile bearer false is supported by true, and true is underived. Thus an existential underived output cannot be silently swapped for underivedness of the ontological exemplar. No source attribution or metaphysical possibility is claimed.",
+  "definition_ids": [
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "c7c2f208-9651-5351-afc3-d5f3423ef415",
+    "b3c45d92-dee0-5a1a-9849-9924d3a1699d",
+    "7b0b109c-ad03-59a3-a81c-d0e027e91f95",
+    "5a5b976e-36e1-53f5-a1b1-a723cacd0206",
+    "6af245c0-b443-51b1-a98e-4e8f8fc7bf3e"
+  ],
+  "sense_mixing_control": true,
+  "disambiguation_ids": [
+    "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"
+  ]
+}
