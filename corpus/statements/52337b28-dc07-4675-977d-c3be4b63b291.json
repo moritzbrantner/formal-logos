@@ -1,0 +1,13 @@
+{
+  "id": "52337b28-dc07-4675-977d-c3be4b63b291",
+  "label": "PROPER_PART_EXTENSIONALITY_1: unrestricted identity on a fixed partial order",
+  "paraphrase": "OPEN analyst principle on a supplied Type B with a supplied PartialOrder B: for all x and y in B, equality of their strict proper-part profiles implies x=y, including minimal objects. It asserts no carrier population, actuality, modal status or extra metaphysical simplicity. Strong sibling of the composite-restricted principle on EXACTLY the same B/order; no implicit quantification over different domains or orders.",
+  "lean_declaration": "TruthCore.Mereology.DependenceShapes.ProperExtensionality",
+  "definition_ids": [
+    "54281cc8-289e-47de-bfdb-bf52a624e572",
+    "f3379a14-41d3-48b6-a91e-4b694d136c0a"
+  ],
+  "disambiguation_ids": [
+    "91d5918a-a193-491d-806f-d32441ee41c5"
+  ]
+}

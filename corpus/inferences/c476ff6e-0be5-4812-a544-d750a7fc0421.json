@@ -1,0 +1,12 @@
+{
+  "id": "c476ff6e-0be5-4812-a544-d750a7fc0421",
+  "label": "PROPER_PART_EXTENSIONALITY_1 entails PROPER_PART_EXTENSIONALITY_2 (inference)",
+  "input_statement_ids": [
+    "52337b28-dc07-4675-977d-c3be4b63b291"
+  ],
+  "output_statement_id": "799b9e92-e95e-40c7-a01f-30c1b70b317f",
+  "rule": "Restrict the two universal object quantifiers to composite objects",
+  "meaning": "For the SAME supplied B and PartialOrder B, apply unrestricted extensionality to the given x,y and their equal strict lower cones; the two composite hypotheses need no further use. The unrestricted principle is the SOLE Prop premise. This is the formal strong-to-weak registration, not a new root-support claim. Existing premise-free DS-3 certifies failure of the converse in Body.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

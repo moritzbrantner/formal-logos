@@ -1,0 +1,11 @@
+{
+  "id": "bb3b3505-2876-4a11-acc0-0d9786d30b64",
+  "label": "Exact difference of unrestricted and composite-restricted extensionality",
+  "argument_id": "87e6caf0-3d9c-42cc-8280-7162cd42743e",
+  "challenge_module": "TruthCore.Results.Mereology.DependenceShapesStrength.Challenge",
+  "solution_module": "TruthCore.Results.Mereology.DependenceShapesStrength.Solution",
+  "theorem": "TruthCore.Results.Mereology.DependenceShapesStrength.exactDifference",
+  "comparator_config": "results/bb3b3505-2876-4a11-acc0-0d9786d30b64/comparator.json",
+  "status": "solution-present",
+  "description": "Forward: unrestricted identity implies its composite restriction and identifies minimal objects because both strict lower cones are empty. Reverse: if x has a proper part, equal profiles make y composite too, so restricted identity applies; otherwise both objects are minimal, so minimal uniqueness applies. This certifies the nondegenerate exact delta AtMostOneMinimal on every SAME B/order without background assumptions. No existence or actual-world premise is supplied."
+}

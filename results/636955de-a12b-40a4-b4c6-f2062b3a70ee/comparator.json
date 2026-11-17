@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Mereology.DependenceShapesStrength.Challenge",
+  "solution_module": "TruthCore.Results.Mereology.DependenceShapesStrength.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Mereology.DependenceShapesStrength.restrictedOfUnrestricted"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

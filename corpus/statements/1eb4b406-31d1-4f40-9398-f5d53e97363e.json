@@ -1,0 +1,9 @@
+{
+  "id": "1eb4b406-31d1-4f40-9398-f5d53e97363e",
+  "label": "At most one minimal object on a fixed partial order",
+  "paraphrase": "On a supplied Type B and PartialOrder B, any two Mathlib IsMin objects are equal. It asserts at most one object with no strict proper part, not that any such object exists. This is the additional content of unrestricted proper-part extensionality over its composite restriction; it is not metaphysical simplicity or uniqueness of an ultimate ground.",
+  "lean_declaration": "TruthCore.Mereology.DependenceShapesStrength.AtMostOneMinimal",
+  "definition_ids": [
+    "105f1631-62c6-4f24-aec8-1fd12a760f10"
+  ]
+}

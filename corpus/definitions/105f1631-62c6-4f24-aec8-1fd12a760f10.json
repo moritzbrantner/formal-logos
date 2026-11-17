@@ -1,0 +1,9 @@
+{
+  "id": "105f1631-62c6-4f24-aec8-1fd12a760f10",
+  "label": "At most one minimal object",
+  "term": "uniqueness of minimal objects",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Mereology.DependenceShapesStrength.AtMostOneMinimal",
+  "definition": "For a supplied Type B and PartialOrder B, every two IsMin objects are equal: forall x y, IsMin x implies IsMin y implies x=y. IsMin is Mathlib minimality, equivalent here to no strict proper part. This asserts at most one, not existence; a nonempty atomless carrier can satisfy it vacuously. It is the exact content unrestricted proper-part extensionality adds to the composite-restricted principle, not a restatement of either principle or of their implication.",
+  "note": "Analyst mathematical strength comparison for #336 review repair. Uses the same supplied carrier and PartialOrder; no actuality, necessity, existence of a minimal object or metaphysical simplicity. See docs/dependence-shapes.md, Strength-fork repair."
+}

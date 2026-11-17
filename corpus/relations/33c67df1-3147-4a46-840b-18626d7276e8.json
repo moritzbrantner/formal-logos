@@ -1,0 +1,12 @@
+{
+  "id": "33c67df1-3147-4a46-840b-18626d7276e8",
+  "label": "Unrestricted proper-part identity strengthens composite-restricted identity",
+  "subject_kind": "statement",
+  "subject_id": "52337b28-dc07-4675-977d-c3be4b63b291",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "799b9e92-e95e-40c7-a01f-30c1b70b317f",
+  "verification_result_id": "636955de-a12b-40a4-b4c6-f2062b3a70ee",
+  "strictness_result_id": "21cd4ed5-3ced-46c8-8a61-4bf427845614",
+  "note": "Same supplied B and PartialOrder B; the backing theorem has unrestricted extensionality as its only premise. Existing DS-3 is the premise-free strictness certificate: its SAME Body satisfies CompositeExtensionality and not ProperExtensionality, with two distinct minimal atoms. This is failure of converse entailment, not a refutation of unrestricted identity in every model. The exact added content is minimal-object uniqueness, certified by the matching strength_comparison."
+}

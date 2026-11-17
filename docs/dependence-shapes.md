@@ -437,3 +437,145 @@ no change
 
 These totals describe the unchanged root graph; they are not a judgment of the
 value of the controls or the comparative warrant of any metaphysical account.
+
+## Strength-fork repair after independent review
+
+The independent review of `cf9b2522cd73335493fbd68d6b7d021324fd3136`
+accepted the full proposed outcome's semantic and quantifier boundaries, with
+one required P2 repair: register the two extensionality principles as a strength
+fork. This addition addresses that repair only; it does not start the subsequent
+#331 investigation. The original DS-1–DS-3 definitions, proofs, sense identities,
+DS-3 `sense_mixing_control` and frozen Challenge are unchanged.
+
+The sibling principle statements are:
+
+- `52337b28-dc07-4675-977d-c3be4b63b291`, **PROPER_PART_EXTENSIONALITY_1**:
+  `ProperExtensionality B` for a supplied `B : Type` and `PartialOrder B`.
+- `799b9e92-e95e-40c7-a01f-30c1b70b317f`, **PROPER_PART_EXTENSIONALITY_2**:
+  `CompositeExtensionality B` for that exact same B and partial order.
+
+Neither statement quantifies over a different domain/order, asserts population,
+or assumes actual-world applicability. The new theorem
+`restrictedOfUnrestricted (B : Type) [PartialOrder B]
+(h : ProperExtensionality B) : CompositeExtensionality B`
+restricts the two object quantifiers to composites. Its **sole Prop premise**
+is the strong statement; the two composite conditions are antecedents inside
+the weak conclusion, not additional corpus premises. It uses no axioms.
+The argument is explicitly marked as weakening/instantiation, rather than a
+new non-transcription root-support option.
+
+Relation `33c67df1-3147-4a46-840b-18626d7276e8` registers
+strong → weak using verified result `636955de-a12b-40a4-b4c6-f2062b3a70ee`.
+Its `strictness_result_id` reuses the unchanged verified DS-3 result
+`21cd4ed5-3ced-46c8-8a61-4bf427845614`: that certificate jointly gives
+`CompositeExtensionality Body ∧ ¬ ProperExtensionality Body` along with the
+two distinct minimal atoms. Thus the weak principle does not entail the strong
+one over arbitrary supplied orders. This does not refute the strong principle
+in every interpretation or identify minimality with full metaphysical simplicity.
+No second Body model or second verification of unchanged DS-3 is introduced.
+
+The exact added content is also certified under the existing strength schema:
+
+```text
+∀ (B : Type) [PartialOrder B],
+  ProperExtensionality B ↔
+    CompositeExtensionality B ∧ AtMostOneMinimal B
+```
+
+Here `AtMostOneMinimal B` means `∀ x y : B, IsMin x → IsMin y → x = y`;
+it does **not** require a minimal object to exist. This difference statement is
+`1eb4b406-31d1-4f40-9398-f5d53e97363e`, and exact-factorization statement
+`80bb67f2-29df-4748-9c2d-add1e0e5ff6f` is verified by result
+`bb3b3505-2876-4a11-acc0-0d9786d30b64`. For the reverse direction of the
+factorization, equal strict-part profiles either both have a strict part, when
+the restricted principle applies, or both have none, when minimal uniqueness
+applies. There is no independently assumed supplementation or existence premise.
+The delta states concrete uniqueness content, rather than restating STRONG or
+WEAK → STRONG.
+
+Relation `ac865453-fdde-4724-aa96-b2f2f71809c7` registers the certified
+difference, using `DependenceShapesStrength.comparison`, no background and
+parameter indices `[0, 1]` for all three predicates (B and its same order).
+The new definitions are in
+[`DependenceShapesStrength`](../TruthCore/Mereology/DependenceShapesStrength.lean),
+the two new targets in its separate
+[Solution](../TruthCore/Results/Mereology/DependenceShapesStrength/Solution.lean),
+and all generated registrations in
+[`dependence-shapes-strength.toml`](../specs/dependence-shapes-strength.toml).
+The separate new Challenge was frozen before proof work, SHA256
+`be52b55a1296adba4f75a79a2aa66054b2c43b90a61489a3dbfd484dd437b252`.
+
+**Repair self-sweep:** the implication's parameter order, sole premise and
+conclusion match the two sibling declarations. The exact-factorization result
+quantifies over the same domain/order on both sides and asserts only a comparison.
+The delta asserts uniqueness without existence. The original Body evidence
+witnesses failure of converse entailment, not impossibility or falsity of the
+strong principle in general. The existing sense declarations and labels remain
+stable; explicit conclusion bridges record the proved restriction/factorization.
+No original DS-3 assumption, conclusion or sense-mixing annotation is changed.
+
+Focused build passed without Solution warnings. The selected live strength
+check passed, including both affected result bindings, full certificate-type and
+parameter binding, the nondegenerate-delta guard, Comparator and NanoDa for the
+two new results. It reported `verified: true`, `proved implication`,
+`exact factorization proved` and `delta_degenerate: false`. The selected
+comparison has no separately registered exact-type `Separation` role; its
+`converse_status: unresolved` field does not describe the separate, already
+verified DS-3 strictness evidence linked by `strengthens.strictness_result_id`.
+Reproduce the affected proof and strength checks with the prepared worker setup:
+
+```text
+python3 scripts/worker_env.py -- flock /tmp/moenarch/truth-core-heavy.lock lake build TruthCore.Results.Mereology.DependenceShapesStrength.Solution
+python3 scripts/worker_env.py -- flock /tmp/moenarch/truth-core-heavy.lock target/release/truth strength-comparisons ac865453-fdde-4724-aa96-b2f2f71809c7 --json
+```
+
+Offline corpus validation, both specs' unchanged regeneration, bundle audit and
+module-format checks passed. Original proof/Comparator evidence is reused for
+unchanged inputs. No shared imports, status caches or allowlists were edited;
+coordinator integration and final CI remain pending. The live convention
+sourceRevision remains `15f348b072188255da837578eaafc8a98f12fdf0`.
+
+The exact computed repair-only frontier delta is:
+
+```text
+premise delta for Catholicism is true: the Catholic Church is a teaching authority founded by GOD_4, and every… [53964cbe]: cf9b2522cd73335493fbd68d6b7d021324fd3136 -> working tree
+open premises reaching the root: 494 (353 bare, 90 supported, 51 stated) -> 494 (353 bare, 90 supported, 51 stated)
+expanded-route diagnostic (lowest cost): Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16) -> Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16)
+distinct verified support alternatives: 494 -> 494
+verified support alternatives added: 0
+no change
+```
+
+The repair registers a logical order and its exact difference; it changes no
+root-reaching premise and resolves none of the existing actual-power/being,
+unity or uniqueness application gaps. The next coordinator reassessment remains
+#331's intermediate-whole edges, outside this repair.
+
+Exact repair paths relative to `cf9b2522` (original reviewed files outside
+this list are unchanged):
+
+```text
+TruthCore/Mereology/DependenceShapesStrength.lean
+TruthCore/Results/Mereology/DependenceShapesStrength/Challenge.lean
+TruthCore/Results/Mereology/DependenceShapesStrength/Solution.lean
+corpus/arguments/87e6caf0-3d9c-42cc-8280-7162cd42743e.json
+corpus/arguments/e891585c-2077-42eb-b272-60bfce948957.json
+corpus/attempts/90acb324-1d17-4ddf-9d2a-51616732e5c6.json
+corpus/definitions/105f1631-62c6-4f24-aec8-1fd12a760f10.json
+corpus/definitions/39de6e29-e2e8-4f4f-8463-66a075f59d99.json
+corpus/disambiguations/91d5918a-a193-491d-806f-d32441ee41c5.json
+corpus/inferences/9dfaa487-2f58-4402-8e8b-d87c53ee88ef.json
+corpus/inferences/c476ff6e-0be5-4812-a544-d750a7fc0421.json
+corpus/relations/33c67df1-3147-4a46-840b-18626d7276e8.json
+corpus/relations/ac865453-fdde-4724-aa96-b2f2f71809c7.json
+corpus/results/636955de-a12b-40a4-b4c6-f2062b3a70ee.json
+corpus/results/bb3b3505-2876-4a11-acc0-0d9786d30b64.json
+corpus/statements/1eb4b406-31d1-4f40-9398-f5d53e97363e.json
+corpus/statements/52337b28-dc07-4675-977d-c3be4b63b291.json
+corpus/statements/799b9e92-e95e-40c7-a01f-30c1b70b317f.json
+corpus/statements/80bb67f2-29df-4748-9c2d-add1e0e5ff6f.json
+docs/dependence-shapes.md
+results/636955de-a12b-40a4-b4c6-f2062b3a70ee/comparator.json
+results/bb3b3505-2876-4a11-acc0-0d9786d30b64/comparator.json
+specs/dependence-shapes-strength.toml
+```

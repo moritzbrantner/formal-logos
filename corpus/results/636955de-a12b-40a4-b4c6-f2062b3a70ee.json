@@ -1,0 +1,12 @@
+{
+  "id": "636955de-a12b-40a4-b4c6-f2062b3a70ee",
+  "label": "PROPER_PART_EXTENSIONALITY_1 entails PROPER_PART_EXTENSIONALITY_2",
+  "argument_id": "e891585c-2077-42eb-b272-60bfce948957",
+  "challenge_module": "TruthCore.Results.Mereology.DependenceShapesStrength.Challenge",
+  "solution_module": "TruthCore.Results.Mereology.DependenceShapesStrength.Solution",
+  "theorem": "TruthCore.Results.Mereology.DependenceShapesStrength.restrictedOfUnrestricted",
+  "comparator_config": "results/636955de-a12b-40a4-b4c6-f2062b3a70ee/comparator.json",
+  "status": "solution-present",
+  "description": "For the SAME supplied B and PartialOrder B, apply unrestricted extensionality to the given x,y and their equal strict lower cones; the two composite hypotheses need no further use. The unrestricted principle is the SOLE Prop premise. This is the formal strong-to-weak registration, not a new root-support claim. Existing premise-free DS-3 certifies failure of the converse in Body.",
+  "transcription": "instantiation"
+}
