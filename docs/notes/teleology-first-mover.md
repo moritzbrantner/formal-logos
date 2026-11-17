@@ -266,15 +266,22 @@ identified with the current nine attributes without their existing missing
 moral/cognitive/scope bridges, so they were not composed merely by the God name.
 
 Reopen the warrant judgment on a concrete selected body/end interpretation that
-independently supports or defeats intellectual direction/reduction, or on an
-alternative same-witness identity derivation with a genuinely different warranted
-premise bundle. The next useful test is to apply the local bundle to an existing
-selection/feedback interpretation with the SAME target outcome, and determine
-which exact knowing-director or reduction condition can be independently defended.
-Repeating the stopped intrinsic-final-order recognition or passive-potency
-inquiries under new labels would not provide that evidence. The selected formal
-adapter is delivered; application evidence, not another propositional adapter,
-is the next discriminating dependency.
+supplies a specified new discriminant for intellectual direction or reduction,
+or on an alternative same-witness identity derivation with a genuinely different
+warranted premise bundle. A selection/feedback application is a reopening
+condition, not the selected next investigation: the accepted Rochette work already
+supports local same-end instrumental attribution, while the recognition audit
+isolates intrinsic final ordering to possession of that same end **as known**.
+Regress descent still invokes `hDesign` separately. Fixing another mechanism's
+outcome does not by itself discriminate those remaining alternatives. See the
+accepted application and recognition outcomes in
+[the immaterial-intellect note](../immaterial-intellect-reception.md).
+
+The formal adapter and its positive conditional warrant are retained. Further
+application work requires substantive new evidence addressing that exact gap;
+repeating the stopped recognition or passive-potency inquiries under new labels
+would not provide it. Coordinator allocation should proceed to a distinct
+unresolved connection while these explicit reopening conditions remain unmet.
 
 ### Claim/type sweep and verification boundary
 
