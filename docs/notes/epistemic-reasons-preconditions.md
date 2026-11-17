@@ -636,3 +636,340 @@ no change
 Intended and actual formal premise effects: **none**. The contribution is the
 discriminating semantic calculation and the defended scope of the remaining
 authority question, not a formal connection or a closed premise.
+
+## Successful understanding as a good for its bearer (2026-11-17 continuation)
+
+**Complete proposed outcome for fresh independent challenge.** The specific
+account tested here treats personally grasping a true explanatory relation as
+a small constituent of living well, independently of enjoying or wanting that
+grasp. It gives a more substantive candidate bearer-good than accuracy or
+proper functioning alone: the person actually understands something, rather
+than merely containing a correct output. The local benefit claim has positive
+evaluative warrant and is provisionally supported. The further claim that this
+benefit gives its indifferent bearer an actual pro tanto reason has a direct
+evaluative defense below, but remains disputed by a fully specified
+goal-relative account. Even granting that reason, a reason to sustain cognitive
+activity is not automatically an epistemic reason to believe a particular
+content. The exact preference-independent epistemic-force target remains
+**underdetermined**, with a more informative candidate support path and narrower
+remaining burdens. Neither the accepted evidence/incentive finding nor F6 is
+withdrawn or re-defended.
+
+This starts from worker commit
+`79bb37a45c3a72c61b51eb75b32bcd617ca29c55`. The coordinator reports that its
+bounded outcome passed independent challenge without repair. That review does
+not cover this continuation. Publication/check status belongs to the coordinator;
+the earlier pending-CI text above is a record of its checkpoint, not updated here.
+Current `related`, `context`, target `dossier`/`brief`, question `brief` and
+`novelty` retrieval were inspected. The role/force definitions remain
+`58ca78b4-33a8-5c4f-a3ee-e206d193f52a` and
+`603ba4fa-53ac-5de1-b0de-393209fa8faf`. No new vocabulary or formal sense is
+needed to assess this proposed warrant for their application.
+
+### One account, rather than every success made valuable by definition
+
+The proposal is an analyst account of **personal cognitive achievement as a
+constituent of the bearer's life**. In the private tile case, the competent
+person can grasp why arranging seven tiles into three pairs and one leftover
+supports the odd answer. The relation is true; the count is competently made;
+the person understands pairing and oddness; and this understanding actually
+connects the count to the answer. The #1646 personal-basing criteria distinguish
+that exercise from merely possessing arithmetic skill, producing the right
+word, or supplying an explanation after a comforting answer was installed.
+Those are application conditions, not proof that every actual episode meets
+them. Warrant, actual success and personal exercise remain separate.
+
+The account's evaluative claim is that this actual grasp is a modest good
+**for the person whose activity it is**. It is a constituent good, rather than
+a means to later useful beliefs, pleasure, prestige or a reward. No permanent
+increase in competence is assumed: exercising an existing capacity well can
+be the proposed good even if nothing is learned for future use. It does not
+follow from the bare fact that a capacity is human, biologically normal or
+efficient. Nor does it mean this person's life is better overall than every
+alternative life. Pleasure, distress, time and other goods can matter too.
+
+Selected source checks constrain this reconstruction rather than supply an
+authority theorem:
+
+- The existing pinned `ARIST-EN-I-7` witness
+  (`fa974dc9-ae9b-5b8d-818a-bdbf8bca109b`, Perseus Greek edition
+  `urn:cts:greekLit:tlg0086.tlg010.perseus-grc2`) was materialized and reread.
+  At 1097b2–6 intellect and excellence can be chosen for themselves even without
+  further consequences; 1098a16–20 concerns excellent activity across a complete
+  life. This does not itself establish that every unwanted trivial cognitive
+  exercise benefits its bearer. Reuse the source boundaries in
+  [natural-goodness-function-and-authority](natural-goodness-function-and-authority.md#what-the-positive-argument-actually-supplies).
+- Pritchard, [*Knowledge, Understanding and Epistemic Value*](https://www.pure.ed.ac.uk/ws/files/8457781/PRITCHARD_2009_Knowledge_understanding_and_epistemic_value.pdf),
+  §§4–5, pp.23–25, and §§13–15, pp.37–41 (2009), connects understanding with
+  cognitive achievement and discusses its noninstrumental value. His trivial-
+  achievement discussion permits both small value and a more qualified account;
+  it does not settle the value of this tile episode or its reason-giving force.
+- Hurka, [*Value Theory*](https://thomashurka.com/wp-content/uploads/2014/02/value-theory.pdf),
+  §2, PDF pp.9–11, and §3, pp.11–16, distinguishes actual from informed desire
+  accounts and discusses perfectionist goods independent of desire, including
+  connected knowledge. This is a value proposal, not a deduction of our
+  agent-indexed epistemic reason from cognitive success.
+
+The latter two are consulted primary-author research leads; new historical
+corpus claims and witness registration remain deferred. The specific account,
+tile application and judgments here are ours. It is not attributed wholesale
+to any of these authors. In particular, noninstrumental value, value for a
+bearer and reason-giving authority must not be conflated.
+
+### The actual tests of benefit
+
+Keep the private question harmless and unused. The evidence, basic competence
+and availability of the simple inference are held fixed; nobody else relies
+on the answer. The subject is indifferent to accuracy and has no further end
+served by getting this question right. At the starting point they can be
+drawn toward the comforting even answer; they are not stipulated to know that
+answer false while also believing it. The following are analytic comparisons,
+not reports of psychological experiments or certified possible-world models.
+
+First compare **actual grasp with a lucky correct answer**. Both answers can
+be odd and equally pleasant, while only one results from personally seeing the
+pairing relation. The achievement account ascribes an additional constituent
+good to the first episode. Its rationale is that an intelligible part of the
+world is now grasped in the person's own cognitive activity. The lucky token
+has the same truth value but is not that person's accomplishment of grasping
+why. This tests personal achievement rather than truth alone. The stronger
+claim that the person is better off in this respect is an evaluative judgment,
+not a further arithmetic identity.
+
+Next compare **retaining that grasp with its loss**, while keeping general
+arithmetic skill, pleasure, projects and subsequent practical outcomes fixed.
+The proposed setback is loss of a piece of one's understood relation to the
+world, even when one does not miss it. This makes clear whose good is at issue:
+the loss concerns this person's lived cognitive activity, not merely a less
+accurate machine, a disappointed observer or an impersonal increase in truth.
+It also prevents an appeal to unnoticed future usefulness from doing the work.
+The comparison supports the account to the extent that we recognize that
+local setback even under these controls. It is not an observation establishing
+that recognition universally. The same evaluative recognition contributes to
+ordinary correction judgments; it is not independent corroboration from an
+unrelated source of warrant.
+
+Finally distinguish **a tiny good from a demand to keep accumulating it**.
+The count is trivial and uses an already developed skill. It need not constitute
+a major achievement or a newly enhanced capacity. Those exact features limit
+the strength of an analogy with substantial intellectual discovery. They do
+not by themselves show that its constituent value is zero. Conversely, the
+value of a whole life of understanding cannot simply be divided into positive
+value for every isolated cognitive episode. The proposal assigns a modest
+positive value to this actual, personally grasped relation; its local warrant
+is weaker than a whole-life comparison, and the assignment remains defeasible.
+
+These comparisons provide content on which the account can fail: if a correct
+token counts equally without personal grasp, the account has lost its
+achievement basis; if a bare increase in functional efficiency counts as
+benefit, it has lost its personal basis; if only future payoff or enjoyment
+makes the grasp good for its bearer, it has lost its proposed noninstrumental
+status. No opaque `GoodUnderstanding` flag or formal model is introduced to
+make these assessments automatic.
+
+### Does that good give the unwilling bearer a reason?
+
+The positive argument has three distinguishable commitments:
+
+1. This genuine grasp is a constituent good for its bearer, not just good as
+   an output under a standard. The preceding comparisons defend this premise.
+2. A feasible way to preserve or complete this constituent good counts
+   defeasibly in favor for that bearer, even when it satisfies no relevant
+   desire. This is a normative relevance judgment, not part of the definition
+   of benefit.
+3. Where attending to the already available evidence preserves or completes
+   that grasp, this gives the person a pro tanto reason for that attention or
+   cognitive exercise. Actual feasibility and the connection to the good are
+   required; a merely imagined opportunity supplies neither.
+
+The direct defense of 2 is that a genuine benefit in one's own cognitive life
+is a consideration one can recognize as favoring its preservation without
+first finding an additional payoff or desire it serves. In the loss comparison,
+“it is my understanding that would be lost” identifies a personally relevant
+stake; “I do not care” establishes absence of motivation, not itself absence of
+that stake. Our ordinary correction judgments make this a live evaluative
+recognition, rather than an inference from a neutral performance measure.
+This is legitimate prima facie warrant. It need not await an endlessly prior
+argument for every good-to-reason judgment, and its openness is not evidence
+that it is false. But its normative content is expressly acknowledged: the
+person's having a stake does not logically force the relevance judgment.
+
+The proposed reason can be small, outweighed and unsatisfied without fault.
+There is no demand to open the jar, collect more evidence, maximize cognitive
+achievement or contemplate every available truth. Suspension or disengagement
+remains an available alternative; the account alone establishes neither an
+obligation to enter inquiry nor the epistemic permissibility of every
+suspension in the face of decisive evidence. Retaining arithmetic competence
+while declining this exercise is not a malfunction or loss of agency. This
+prevents a reason concerning one good from turning into a duty to exercise
+every capacity at every opportunity.
+
+### The strongest goal-relative response and what would discriminate
+
+The strongest response grants the personal exercise, the factual explanation
+and the achievement's excellence. It then locates benefit in what contributes
+to the person's informed ends or appreciative engagement. In the stipulated
+case neither requires accuracy or this understanding. It therefore denies a
+benefit in the welfare sense while accepting good performance. This attacks
+premise 1 through a specific account of good-for, not by asserting that error
+is conceivable. Its independent attraction is that it explains why skilled
+but unwanted trivial exercises need not improve a person's life merely by
+being excellent; the subject's own concerns help distinguish benefit from
+perfection imposed by an assessor.
+
+The achievement account's response is that actual personal understanding is
+already a mode of the person's cognitive life, rather than an alien trait
+installed only for an observer. Factual grasp, not a favorable observer rating,
+is what the person has gained. An indifferent or displeased response can
+coexist with that small constituent good and introduce a competing cost. This
+explains how someone can be benefited in one respect without being better off
+overall or consenting to assistance. This is a positive alternative to an
+inference from “unwanted” to “necessarily no benefit”; it does not establish
+that every instance of personal activity is beneficial. The account still owes
+the local evaluative assessment.
+The rival is entitled to deny that assessment; this is a substantive welfare
+disagreement, not a contradiction in its account of evidence.
+
+A still stronger concession grants even the unwanted bearer-good and rejects
+premise 2: goods provide the agent reasons only through relevant ends. It can
+call understanding a good in that person's life without making every such
+good authoritative for the person. This preserves the exact value/force
+distinction under investigation. The positive reply is the direct relevance
+judgment above. Neither a new function claim nor a greater quantity of
+achievement settles that normative disagreement. No conflict with thin F6 has
+been shown: the rival grants reasons in cases where the relevant ends obtain.
+
+There are two genuine discriminators, rather than another accuracy table.
+On the **benefit** question, a loss of genuine personal grasp with pleasure,
+informed concerns and later outcomes fixed is a local setback on the proposed
+account and no welfare loss on the rival's. On the **force** question, someone
+can grant that setback and ask whether it counts even slightly in favor of
+preserving the grasp when no end is served. A zero answer then targets 2,
+rather than erasing what 1 says. These are normative comparisons; no behavioral
+prediction or arithmetic calculation has been shown to decide them. Permission
+to decline a benefit, or rejection of coercion to supply it, is not by itself
+evidence of zero pro tanto force. Nor does calling a loss a setback establish
+such force without the relevance judgment.
+
+### Exact preference scope and the epistemic target
+
+The old finite vocabulary has `Preference.accuracy` and `Preference.comfort`.
+Under the latter the current target includes a genuinely accuracy-indifferent
+profile, rather than merely a person who wants accuracy less strongly. A
+subject who enjoys understanding for its own sake, needs the accurate answer
+for another aim or would endorse it after ordinary correction of factual
+mistakes may already have a reason on the rival's account. Such cases do not
+test the stipulated absence of every relevant accuracy/understanding end.
+Correcting a mistaken means-belief is not by itself a procedure for changing
+that fundamental indifference. An idealization that installs appreciation of
+understanding because it is rationally required adds the contested normative
+assessment; “informed” alone does not establish it.
+
+For the achievement proposal, varying the accuracy desire while leaving the
+actual grasp intact does not remove its personal achievement. Whether its
+benefit and force persist at every compared preference is the evaluative
+proposal, not a consequence of the two labels. Mere indifference and active
+aversion can also differ: aversion may add distress or a cost of exercising
+the capacity. The account permits those competing considerations and has not
+shown that benefit, weight or permissible action is invariant across all such
+profiles. Pro tanto force might persist even when the total verdict reverses;
+that possibility needs its own application judgment. No exhaustive psychology
+or universal preference-class coverage is claimed.
+
+Most importantly, even accepting 1–3 yields a reason concerning **attention,
+preservation or exercise**, not automatically `f.force a r (f.believe p) d`.
+The ordinary-role target concerns a consideration's favorable bearing on the
+answer. An opportunity to achieve understanding is not extra evidence that
+the odd answer is true. The competent count supplies that evidence. Wanting
+or having reason to achieve something valuable does not make an unsupported
+answer fit to believe. The positive route can therefore motivate engaging with
+the evidence independently of a current accuracy desire while still leaving
+open why that evidence itself has epistemic force for the indifferent believer.
+It must not use a practical reason to cause a cognitive state as if it were
+already an epistemic reason supporting its content.
+
+This distinction matters for fallibility and suspension. Successful grasp of
+the actual count is factive in this application; ordinary evidential support
+need not be. With incomplete evidence, correctly grasping why one's evidence
+is inconclusive can be a cognitive success without a categorical belief that
+the jar is odd. The benefit proposal thus neither requires successful factual
+understanding whenever there is an epistemic reason nor licenses believing
+an answer just to obtain the good of understanding it. A further account must
+explain which epistemically fitting responses realize the good under the actual
+warrant conditions. Defining that fit as whatever has categorical force would
+merely restate the target.
+
+### Proposed judgment and substantive reassessment
+
+For this private, competent episode, the personal-achievement account supplies
+a **provisionally supported candidate constituent benefit**, with identified
+content beyond correctness or causal function. The paired personal-grasp and
+loss comparisons, the existing basing analysis and ordinary evaluative
+recognition support it. The small scale and absent appreciative engagement make
+the informed-end rival a serious substantive challenge; no decisive refutation
+of that rival is claimed. The reason-to-preserve proposal has positive direct
+evaluative warrant, but benefit-to-force remains **underdetermined** against
+the rival that grants the benefit and denies its authority without an end.
+No prior proof of every premise is demanded in issuing this assessment.
+
+The target `2ca463c2-bd1f-5a13-a395-0e2c57a5ad8f` also remains underdetermined:
+even the proposed reason would first concern a valuable cognitive activity,
+and has not been shown to be the same consideration's epistemic force across
+every supplied preference. The new route adds a positive support option for
+goal-independent cognitive engagement, not a derived instance of that target.
+No root, God, irreducibility, source-person or obligation conclusion follows.
+
+Rejected approaches: equating personal excellence with welfare by definition;
+using a large life-fulfilment intuition as proof about each trivial episode;
+claiming loss of competence where only an exercise is forgone; assuming an
+indifferent agent must have a latent truth end; assuming factual idealization
+installs that end; treating a reason for attention as evidence for an answer;
+and encoding the proposed evaluative premises as opaque flags. The accepted
+finite evidence/incentive result is unchanged and is not repeated here.
+
+**Reassessment point:** the selected account and its scope are now explicit.
+The next consequential fork is whether the proposed personal benefit is
+accepted while reason-giving relevance is denied, or benefit itself is denied
+without informed engagement. These target different premises. Further work
+should defend or challenge the exact local setback/relevance judgments with
+an account of good-for and reasons, not add another success metric. If the
+coordinator retains the positive engagement route, its further epistemic
+application must explain how reasons for a cognitive activity relate to the
+fitting evidence-based response, including suspension under inconclusive
+evidence. Reopen the local benefit assessment if personal grasp is absent,
+purely imposed excellence is doing the work, or a hidden instrumental payoff
+is discovered. These are substantive conditions, not an arbitrary work cap.
+
+Self-sweep: this is a prose warrant investigation, with no changed statement,
+definition, argument, result or Lean type. Personal exercise and success are
+application assumptions, benefit and normative relevance are defended
+evaluative judgments, and the epistemic-force mapping is explicitly open.
+No certified model, actual-agent observation, new source attribution to a
+corpus proposition or formal establishment is advertised. All proposed new
+judgments require the coordinator's fresh independent challenge before being
+used as reviewed support.
+
+Verification for this continuation: live convention source revision remains
+`15f348b072188255da837578eaafc8a98f12fdf0`. Corpus validation, offline
+attribution check (no changed stating claims), documentation/import generator
+checks and whitespace validation passed. The selected existing Aristotle
+witness was materialized and read; no full-source verification was performed.
+No Lean input changed and no new build, binding, Comparator or NanoDa evidence
+is claimed. The previous finite calculation is unchanged and was not rerun.
+Fresh independent semantic challenge and coordinator-owned final CI cover
+this continuation separately from the accepted previous checkpoint.
+
+Exact computed delta from `python3 scripts/worker_env.py -- target/release/truth
+frontier-diff --base 79bb37a45c3a72c61b51eb75b32bcd617ca29c55`:
+
+```text
+open premises reaching the root: 494 (353 bare, 90 supported, 51 stated) -> 494 (353 bare, 90 supported, 51 stated)
+expanded-route diagnostic (lowest cost): Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16) -> Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16)
+distinct verified support alternatives: 494 -> 494
+verified support alternatives added: 0
+no change
+```
+
+Intended and actual formal premise effects: **none**. The proposed local
+benefit judgment is additional philosophical support for a candidate route,
+not a new formal premise, a certified transfer or a root discharge.
