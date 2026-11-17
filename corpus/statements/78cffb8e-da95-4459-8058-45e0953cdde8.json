@@ -1,0 +1,9 @@
+{
+  "id": "78cffb8e-da95-4459-8058-45e0953cdde8",
+  "label": "At least one actual esse bearer",
+  "paraphrase": "At least one x is in act as to esse in the same q3a4 profile. Weaker than TwoActualBeings; no distinct second bearer, identity of esse and essence, root or modal property is asserted.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.ClosedEsseSource.ActualEssePopulation",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

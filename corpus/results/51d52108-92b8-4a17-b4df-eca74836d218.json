@@ -1,0 +1,11 @@
+{
+  "id": "51d52108-92b8-4a17-b4df-eca74836d218",
+  "label": "Two actual beings give the one-bearer population",
+  "argument_id": "2919d8b7-736a-45f4-b75c-b4323248ddf1",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource.populationOfTwo",
+  "comparator_config": "results/51d52108-92b8-4a17-b4df-eca74836d218/comparator.json",
+  "status": "solution-present",
+  "description": "Sole-premise strength comparison: two different actual esse bearers imply at least one. The common-source transfer uses only the weaker population."
+}

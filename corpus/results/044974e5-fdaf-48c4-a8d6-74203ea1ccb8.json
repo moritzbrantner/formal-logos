@@ -1,0 +1,11 @@
+{
+  "id": "044974e5-fdaf-48c4-a8d6-74203ea1ccb8",
+  "label": "Well-founded actual esse causation implies closed collections",
+  "argument_id": "c4c02339-f465-4fc0-b507-b7ca4d204ff2",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource.closedOfWF",
+  "comparator_config": "results/044974e5-fdaf-48c4-a8d6-74203ea1ccb8/comparator.json",
+  "status": "solution-present",
+  "description": "Sole-premise strength comparison in the exact actual esse-cause dictionary. Unrestricted well-foundedness implies CCR; the rooted infinite control witnesses strictness. This supplies no independent warrant for either premise."
+}

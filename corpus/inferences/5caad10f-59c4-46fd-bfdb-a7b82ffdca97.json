@@ -1,0 +1,14 @@
+{
+  "id": "5caad10f-59c4-46fd-bfdb-a7b82ffdca97",
+  "label": "CCR gives an identity source for each distinct esse (inference)",
+  "input_statement_ids": [
+    "20babef7-6ae7-4b48-b72a-f417e8e63136",
+    "457698e4-eb21-4561-ab32-eccbfb0a992e",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "3d01134d-0b03-4469-a81a-a18d6e179fa0",
+  "rule": "Import finite root access from CCR; coverage excludes a distinct-esse root; remove the zero-edge case at a distinct-esse target",
+  "meaning": "Non-transcription conditional transfer on the same q3a4 profile. Existing accessOfClosed supplies finite directed root access under explicit excluded middle; distinct-esse causal coverage makes the uncaused root an identity bearer. No uniqueness or population is needed for this universal conditional. All cause modes remain unspecified.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

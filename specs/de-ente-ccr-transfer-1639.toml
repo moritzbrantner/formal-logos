@@ -1,0 +1,89 @@
+[batch]
+vocab = "TruthCore.Latin.Aquinas.DeEnte.ClosedEsseSource"
+results = "TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource"
+definitions = []
+
+[[statement]]
+id = "Closed actual esse collections contain an uncaused bearer"
+lean = "ClosedActualEsseCollectionsRooted"
+paraphrase = "OPEN analyst premise, attribution deferred: on one fixed q3a4 profile, no nonempty collection of actual esse bearers closed under all distinct actual causes of its members is rootless. Exactly CCR on esseCauseGraph p; every full cone of finitely reachable causal predecessors is tested, even when the cone has infinitely many members. No efficient, present-sustaining, world-grounding or AsCaused identification is made. Root-backed infinite paths and dependent cycles are allowed; the collective application remains open."
+definitions = ["23ae8d63-1351-4e7c-9ab1-ed85d9695b22", "8163859b-95b3-4dd2-8a69-541bd332f32f", "DEF-ESSE"]
+
+[[statement]]
+id = "At least one actual esse bearer"
+lean = "ActualEssePopulation"
+paraphrase = "At least one x is in act as to esse in the same q3a4 profile. Weaker than TwoActualBeings; no distinct second bearer, identity of esse and essence, root or modal property is asserted."
+definitions = ["DEF-ESSE"]
+
+[[statement]]
+id = "Closed esse-source transfer controls"
+lean = "ClosedEsseControls"
+paraphrase = "Exact interpretations only: a directly rooted infinite chain and a rooted dependent cycle satisfy CCR, distinct-esse coverage, identity-bearer uniqueness, two actual beings and the common-source conclusion. The infinite-chain interpretation violates unrestricted well-foundedness. An isolated identity root beside a rootless chain satisfies coverage, uniqueness, population and whole-roster root existence, but violates CCR and common ancestry. A singleton satisfies one-bearer population without two actual beings. These are logical controls, not metaphysical counterexamples."
+definitions = ["8163859b-95b3-4dd2-8a69-541bd332f32f", "183b48d2-1753-583d-aef9-4199cff86231", "DEF-ESSE", "23ae8d63-1351-4e7c-9ab1-ed85d9695b22"]
+
+[[argument]]
+id = "Two actual beings give the one-bearer population"
+theorem = "populationOfTwo"
+premises = ["33f3c4c5-ccd6-4e8e-9cfb-0b231bb0e38f"]
+conclusion = "At least one actual esse bearer"
+axioms = []
+rule = "Select the first actual bearer"
+meaning = "Sole-premise strength comparison: two different actual esse bearers imply at least one. The common-source transfer uses only the weaker population."
+
+[[argument]]
+id = "CCR gives an identity source for each distinct esse"
+theorem = "distinctSourceOfClosed"
+premises = ["Closed actual esse collections contain an uncaused bearer", "457698e4-eb21-4561-ab32-eccbfb0a992e", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
+conclusion = "3d01134d-0b03-4469-a81a-a18d6e179fa0"
+axioms = []
+rule = "Import finite root access from CCR; coverage excludes a distinct-esse root; remove the zero-edge case at a distinct-esse target"
+meaning = "Non-transcription conditional transfer on the same q3a4 profile. Existing accessOfClosed supplies finite directed root access under explicit excluded middle; distinct-esse causal coverage makes the uncaused root an identity bearer. No uniqueness or population is needed for this universal conditional. All cause modes remain unspecified."
+
+[[argument]]
+id = "CCR gives the common uncaused identity source"
+theorem = "commonSourceOfClosed"
+premises = ["Closed actual esse collections contain an uncaused bearer", "457698e4-eb21-4561-ab32-eccbfb0a992e", "a576300f-4b01-45ae-902c-cfe3d0fbf2de", "At least one actual esse bearer", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
+conclusion = "c35b1a5c-6405-449b-993b-8196b2457e08"
+axioms = []
+rule = "Import root access for each actual bearer; coverage makes every root an identity bearer; uniqueness identifies those roots with the one selected using population"
+meaning = "Non-transcription conditional common-source transfer, same profile, domain, esse respect and essence dictionary. The source is uncaused by its root witness, without well-foundedness or cycle exclusion. Identity-bearer uniqueness aligns every local source. Finite nonzero paths reach every other actual bearer; no uniform bound, direct universal causation, efficiency, conservation, world-grounding, necessity or God identification is supplied. The existing downstream companion bundles remain required."
+
+[[argument]]
+id = "Well-founded actual esse causation implies closed collections"
+theorem = "closedOfWF"
+premises = ["fd12ad3d-6729-4fa0-bb87-0121260df684"]
+conclusion = "Closed actual esse collections contain an uncaused bearer"
+axioms = []
+rule = "Restrict well-foundedness to actual bearers and import closedRootedOfWF"
+meaning = "Sole-premise strength comparison in the exact actual esse-cause dictionary. Unrestricted well-foundedness implies CCR; the rooted infinite control witnesses strictness. This supplies no independent warrant for either premise."
+
+[[argument]]
+id = "Closed esse-source controls checked"
+theorem = "controls"
+premises = []
+conclusion = "Closed esse-source transfer controls"
+axioms = []
+rule = "Explicit interpretations reusing the existing direct-root infinite, rooted-cycle and isolated-root graph relations"
+meaning = "Non-transcription closed control bundle. Exact actual esse dictionaries test unrestricted-WF strictness, rooted cycles, roster-only insufficiency and one-bearer population. No model is asserted to be metaphysically possible."
+
+[[relation]]
+id = "Actual esse well-foundedness strengthens CCR"
+subject_kind = "statement"
+subject_id = "fd12ad3d-6729-4fa0-bb87-0121260df684"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Closed actual esse collections contain an uncaused bearer"
+verification_result_id = "Well-founded actual esse causation implies closed collections"
+strictness_result_id = "Closed esse-source controls checked"
+note = "Sole-premise checked implication; strictness interpretation in ClosedEsseControls. No premise warrant or establishment follows."
+
+[[relation]]
+id = "Two actual esse bearers strengthen one-bearer population"
+subject_kind = "statement"
+subject_id = "33f3c4c5-ccd6-4e8e-9cfb-0b231bb0e38f"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "At least one actual esse bearer"
+verification_result_id = "Two actual beings give the one-bearer population"
+strictness_result_id = "Closed esse-source controls checked"
+note = "Sole-premise checked implication; strictness interpretation in ClosedEsseControls. No premise warrant or establishment follows."
