@@ -358,6 +358,7 @@ public import TruthCore.Results.Causality.UniqueRootQuarta.Solution
 public import TruthCore.Results.Causality.WholePowerPerfection.Solution
 public import TruthCore.Results.Causality.WholeRosterFoundation.Solution
 public import TruthCore.Results.Causality.WholeRosterFromMaximumAsymmetry.Solution
+public import TruthCore.Results.Causality.WholeRosterMaximalComparison.Solution
 public import TruthCore.Results.Causality.WholeRosterRootEquivalence.Solution
 public import TruthCore.Results.Causality.WitnessLocalTeleology.Solution
 public import TruthCore.Results.Causality.WorldIndexedSources.Solution
