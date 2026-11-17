@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Aquinas.SummaTheologiae.DirectorInheritance.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.SummaTheologiae.DirectorInheritance.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Aquinas.SummaTheologiae.DirectorInheritance.weaken"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

@@ -1,0 +1,12 @@
+{
+  "id": "ac4407f0-f0e8-415b-8b7e-1aaca9a3978b",
+  "label": "Same-end mover selection from unrestricted inheritance",
+  "argument_id": "40361d05-466c-427d-ac59-55ee4b0ddb47",
+  "challenge_module": "TruthCore.Results.Aquinas.SummaTheologiae.DirectorInheritance.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.SummaTheologiae.DirectorInheritance.Solution",
+  "theorem": "TruthCore.Results.Aquinas.SummaTheologiae.DirectorInheritance.weaken",
+  "comparator_config": "results/ac4407f0-f0e8-415b-8b7e-1aaca9a3978b/comparator.json",
+  "status": "solution-present",
+  "description": "Sole-premise weakening of the existing every-distinct-mover policy to existence of one direction-preserving distinct actual mover, restricted to natural-body targets. Same MovesIn and Directs dictionaries and exact x/e throughout. This checks a strength relation, not premise warrant; no strictness or minimality claim and no new countermodel. The old direct primitive input remains available.",
+  "transcription": "instantiation"
+}

@@ -4,14 +4,14 @@ Issue #355, intellect only. The target remains
 `STMT-IMMATERIAL-IS-INTELLECTUAL`; this batch does not derive or replace it.
 The will obligation and all root-route signatures remain unchanged.
 
-Current proposed case conclusion (2026-11-17): a checked horizontal route
-identifies an existing intelligent maximum with the **same supplied perfect
-ground**, yielding its intellect and will without the universal immateriality
-bridge. Ground existence and the cognitive-governor premises remain separate
-open obligations. The organizational/consumer account remains a substantive
-competitor for the cognition being explained. See the
-[same-root evidence and provisional judgment](#horizontal-support-same-root-through-an-intelligent-governor-2026-11-17),
-pending independent challenge. Historical evaluation is deferred.
+Current case conclusion (2026-11-17): the accepted same-witness route supplies
+conditional intellectual attributes of a proposed ground, with existence and
+governor premises separate. The accepted matched-case comparison retains local
+understanding without inferring an ultimate mind. New
+[selected same-end descent](#same-end-inheritance-selected-instrumental-descent-2026-11-17)
+verifies that one direction-preserving predecessor suffices; every mover need
+not qualify. Warrant for that predecessor and intellect at the first remain
+open. This new outcome awaits independent challenge; historical evaluation is deferred.
 
 ## Verified reading
 
@@ -632,8 +632,11 @@ source fidelity and the stated assessment boundaries, not premise establishment.
 
 Research baseline: `1dcd4683f3c1196c8eb85042f62e6b8c4093f890`.
 Scope: God's existence and intellectual attributes; historical evidence and
-Catholic-specific transitions are deferred. This is a proposed outcome for the
-coordinator's independent semantic challenge, not a reviewed warrant verdict.
+Catholic-specific transitions are deferred. The coordinator reports independent
+semantic challenge accepted all ten files at `d6114fd38ecad71a48dde7c3881c9cf3ffa0a2b7`
+without findings. Integration head `8a50aad5b` adds the generated import; the two
+owned note/attempt files have no intervening difference. This acceptance covers
+that version, not the new matched-case assessment below or premise truth.
 Live conventions resolved to `15f348b072188255da837578eaafc8a98f12fdf0`.
 
 ### Reuse, ownership and horizontal selection
@@ -918,3 +921,528 @@ the philosophical conclusion above concerns God's existence/attributes and
 does not evaluate the repository's later historical or Catholic transitions.
 The complete exact input substitution is the generated thirteen-premise
 argument and its spec, not a claim that the new input is weaker or proved true.
+
+## Matched understanding case: the bridge-closure inference (2026-11-17)
+
+Continuation from accepted `d6114fd38ecad71a48dde7c3881c9cf3ffa0a2b7`.
+The coordinator reports fresh review accepted this complete comparison at
+`60e2e20eecf4beb29aa1d7d049d121c1e954698a` without findings and with justified
+scoped stopping; it was integrated locally at `20630d050` for batching. The two
+owned files do not differ between that integration and the reviewed version.
+Acceptance does not extend to the new inheritance findings below.
+Question: does a specified exercise of understanding favor the director/reduction
+premises over organizational/history explanation, sufficiently to support
+`571094b6-28bd-5398-9940-5e76a4573a5f` and consumer
+`a56eea3e-c775-4d58-a0a3-41dbf04d158b`? This complete proposed outcome is for
+fresh independent challenge. It adds no theorem or source attribution.
+
+### One case, fixed for both accounts
+
+Mira is choosing how to reach a station during interval T. Bridge B is the
+crossing on route RB. She reads a current notice saying **p: B is impassable
+during T**. From a previously learned map she accepts **p→q: if B is impassable
+during T, RB cannot be traversed during T**. She infers **q**, rejects RB for
+this journey, and considers detour D using separate information about D.
+This inference alone does not establish D's availability, timely arrival or
+that reaching the station is morally required.
+
+This is a specified analyst case, not a reported observation of a named person
+or a new experiment. Both explanations address all of the following, rather
+than comparing a conscious reasoner with an unexplained correct-output device:
+
+- **Content and reference:** p and q concern that bridge, route and interval,
+  not just the notice's appearance or Mira's confidence. The conditional retains
+  the same referents and time. Its truth-preserving application is independently
+  assessable: p and p→q cannot both be true with q false. No claim that the notice
+  or map is actually reliable follows from this validity.
+- **Acquisition:** Mira learned the map and local names through instruction,
+  checked examples and prior navigation. The notice is the current perceptual
+  input, not a new installation of the inferential rule. Earlier teachers may
+  have understood their lessons; the rival is not required to deny ordinary
+  human teachers' intelligence. No present consultation with them is assumed.
+- **Organization:** referent/interval identification, endorsement of p and the
+  conditional, antecedent matching, inference to q, and route selection are
+  distinguishable stages. This episode actually uses them. Mira can reconsider
+  a mistaken identification, withdraw p and revise this contribution. No covert
+  cue bypass is part of the common case. These are the specified functional
+  and personal conditions, not a complete neural description.
+- **Understood end:** Mira aims to arrive by a passable route during T and grasps
+  why q matters to that end. The end of the factual inference is determining
+  whether RB is traversable; its practical use serves arrival. Factual accuracy,
+  successful arrival and psychological reassurance are different standards.
+
+The common personal-understanding premise is retained as a legitimate direct
+application judgment if such an episode is encountered with adequate evidence;
+it need not await a complete theory of cognition. Because this case is specified,
+its description supplies no new empirical confirmation that any particular
+physical architecture realizes all these conditions.
+
+### Competing positive explanations of exactly this case
+
+The **director account** explains Mira's route choice through her apprehension
+of the end and of the premises' relevance. Her grasp selects RB or a detour as
+a means, rather than merely causing a matching movement. It can accept the
+specified learning, bodily processes and active inference as the execution of
+this activity. Its strongest further proposal is that the ordered capacities
+and their actual exercise depend on a source that supplies intelligible
+orientation, with a first director possessing intellect in the appropriate
+non-acquisitive manner. This would unify ultimate causality with final ordering.
+That is the positive rationale for seeking the reduction, not an inference
+already delivered by this local episode.
+
+The **organizational/history account** proposes that Mira's embodied cognitive
+activity realizes the specified referent-sensitive operations. Learning history
+and correction maintain the link from the sign and map tokens to B, RB and T;
+the resulting representation can be false if the notice is outdated or misread.
+The same representation feeds inference and alternative actions, rather than
+being defined by whichever action happens to succeed. Antecedent matching and
+actual uptake explain this particular transition, while the conditional's
+semantic relation explains its truth preservation. Revisable engagement makes
+it Mira's reasoning, not merely a computation somewhere in its causal ancestry.
+
+This rival explains the local **person's** intentional activity; it does not
+replace her with a noncognitive object or infer that every physical occurrence
+lacks intentionality. It proposes ordinary physical realization and learned
+semantic roles as sufficient for the episode, without requiring an additional
+intellectual ultimate source for that explanation. Its remaining burden is
+that those mechanisms and histories really constitute the personal reference,
+understanding and exercise attributed here. The present records do not prove
+a complete naturalization. Admitting local understanding as primitive within
+an embodied account is also a legitimate stopping option; it relinquishes a
+fully reductive explanation, not the phenomenon or the entire account.
+
+The director account owes its own reference/application correspondence: saying
+that a source understands does not show which sign Mira takes to name B or
+that her actual inference uses it. It may likewise take genuine rational
+apprehension as primitive. Neither account is discredited just for doing so.
+Their disagreement concerns what further ontology and source explanation this
+common activity warrants, not whether p, q and the understood end are present.
+The local descriptions need not be rivals: a director account can accept this
+organizational realization. The competing extension is the claim that the
+realization requires an intellectual ultimate source. This case articulates
+the positive explanatory role of an apprehended end over mere lucky arrival;
+it does not make the universal extension to that source an observed fact.
+
+### Discriminating tests followed through
+
+These are predictions and application checks on the specified case, not new
+empirical results or Boolean fixtures. They reuse the existing content,
+acquisition and basing distinctions.
+
+| Test | What it distinguishes; result for the two complete accounts |
+| --- | --- |
+| Change only typography, retaining reference and meaning | Both expect the same inference where Mira still recognizes the notice. A typography-triggered rival fails this content test; an embodied content-sensitive account need not fail it. |
+| Replace B in the notice with another identified bridge, keeping the RB conditional | Both expect this route to withhold q unless the referents are properly reconnected. Returning q regardless would expose a mismatch, not show that physical realization in general lacks understanding. |
+| Trace the actual recommendation-to-judgment route; distinguish an independently agreeing cue | Both require genuine exercise in the common case. Existing basing and uptake work distinguish active mediation from output agreement. Discovering a bypass would revise this episode's attribution for either account, rather than establish an ultimate mind. No bypass is alleged here without evidence. |
+| Withdraw p while an independent observation still supports q | Both can retain q on the other basis while removing this inferential contribution. Final-output indispensability is therefore not the criterion for this token's basing. This reuses the existing active-contribution analysis, not a new causal theorem. |
+| Change the practical goal while retaining the same closure fact | Both can preserve q even when avoiding the station makes it welcome news. This separates factual content from incidental benefit or reassurance. It does not identify either account's metaphysical source. |
+| Retain the learned map and current reasoning while the earlier teacher is absent | Both can explain current use through the acquired capacity. Acquisition ancestry is not by itself a present per-se instrumental dependence to the same end. The teacher's earlier instruction remains part of the history; neither a current director chain nor its absence has been proved. |
+
+This comparison supports actual content-guided exercise over bare response,
+accuracy, causal ancestry or retrospective assent. It supplies no discrimination
+between the two stronger accounts when they both preserve the same reference,
+learning, organization and reflective activity. That result is limited to these
+explanatory tests; it is not a claim that all possible evidence must be identical.
+
+Two further proposed discriminators were examined rather than left as slogans.
+**Truth versus usefulness:** the valid conditional fixes a truth-preserving
+relation independently of reward, but the organizational account can propose
+processes that track that relation. A director's intended output alone also
+does not make an invalid inference valid. Nothing here shows that this semantic
+relation requires an ultimate knower. **Representation versus constitution:**
+understanding B does not make Mira materially be a bridge. Both accounts can
+distinguish the represented object from its vehicle; the physicalist need not
+identify their constitutive natures. The q75 interference premise therefore
+cannot be inferred from this contrast alone. No new argument or refutation is
+claimed for either proposal.
+
+### Exact director/reduction application audit
+
+The target dossiers and the actual `QuintaViaDirectorRegress.directorRegress`
+proof distinguish three additional burdens:
+
+1. **Domain.** `564ce19b-c9df-5031-b20e-3cb1baee124f`,
+   `NonCognitiveTendingNeedsKnowingDirectorReading`, has an antecedent of
+   **lacking cognition**. Mira, as specified, has cognition, so her understood
+   inference is not an instance of that antecedent. Moreover the existing
+   `NaturalBodiesLackCognitionReading` excludes identifying a cognizing person
+   with its NaturalBody parameter on this dictionary. Classifying some material
+   constituents as noncognitive would require their own tendency/end and
+   director application; it would not settle realization of the whole person's
+   understanding. The present comparison supplies no such part-to-person bridge.
+2. **Inheritance to the SAME end.** `251bbfdd-c176-5cea-ae66-ebfa5cad0dc4`
+   passes `Directs f x e` to **every distinct mover of f in any respect**.
+   Content-bearing instruction, illumination that enables reading, and Mira's
+   present inferential contribution play different roles in the specified
+   explanation. Their interpretation as particular MovesIn edges must itself
+   be supplied; the case does not identify every enabling cause with that
+   motion relation. Providing a condition of exercise is not yet an account of
+   directing x to this e. The basing evidence positively identifies content
+   mediation and the person's apprehended end, but does not license attributing
+   that end-ordering to every enabling mover. Conversely, absence of content
+   mediation in a condition does not prove it lacks all derivative final
+   ordering or could not be under providence. Thus this is an application gap
+   for the universal inheritance claim, not a metaphysical counterexample.
+   The concrete generalization to defend is instrumental transmission of the
+   relevant final ordering at each link, rather than bare causal ancestry.
+3. **Recognition at the first.** `acc06edc-0d48-559d-9b21-d58081fcf978`
+   separately infers cognition and understanding from direction plus being moved
+   in no respect. In the existing proof it is applied **after** a first director
+   has been obtained. Well-founded descent does not replace it. Mira's
+   learned, revisable cognition does not exhibit an unmoved director; transporting
+   her temporal acquisition or correction tests to the first would change the
+   subject. The source need not learn her particular p and q to have intellect,
+   but its intellectual power still needs this independently warranted application
+   and the accepted HasIntellect dictionary. Causal precontainment alone supplies
+   no additional recognition result.
+
+These are not newly discovered proof defects. They locate why positive local
+understanding does not supply the two already-open reduction inputs. The
+strongest reply retains genuine intrinsic final ordering, treats enabling
+mechanisms as its execution, and argues that its first source must possess
+rather than merely transmit such ordering. To advance the reply, give a reason
+why the organizational realization of this apprehended end must depend on
+**an intellectual first source**, rather than merely redescribing the person
+as an intentional agent. That necessity is exactly the contested application;
+the local tests above do not independently establish or refute it.
+
+The alternative argument-from-reason record
+`45d46cbf-0d36-5c3c-85bb-8685d895c2f1` names intentionality and mental causation;
+`05fb0e59-18f8-519d-bf58-12bdc952367c` separately restricts their explanations
+to personal explanations. Their dossiers and definition
+`54bd3f5c-02de-55b4-a0dc-1c4f442cbbf5` retain the further personal-to-theistic
+ranking and actuality bridges as open. Neither statement has a Lean declaration
+here. They cannot supply a certified shortcut: Mira's own personal explanation
+is compatible with the rival, while insisting on an intellectual ultimate source
+is the further premise to warrant. No new interpretation of those records or
+new sense is introduced in this audit.
+
+### Complete proposed judgment, stopping point and reopening conditions
+
+**Local warrant:** conditionally on the specified episode, content-sensitive
+personal exercise is a well-motivated attribution, with validity, premise
+accuracy and the active basing route separately assessed. In an actual matching
+case it could have direct/prima facie support; the case description is not a new
+observation. The organizational/history proposal has a positive account of the
+same content, acquisition and current contribution. The intentional account
+correctly preserves apprehended means and end. Neither must supply an endlessly
+prior proof of genuine understanding before it can be considered.
+
+**Case for God's existence/attributes:** retain the independently accepted
+same-witness support option and its direct-assumption alternatives. The new
+comparison clarifies the intended intellectual phenomenon and tests weaker
+explanations, but does not provide new discriminating warrant for existence of a necessary
+perfect ground, the universal director claim, same-end upstream inheritance,
+or cognition at the first. The current governor producer still retains every
+Fifth-Way observation, chance/tending, director, reduction, uniqueness,
+Fourth-Way, God-naming and created-agent-application input. The consumer still
+retains its twelve other premises and uses one HasIntellect dictionary. No
+historical or Catholic-specific inference is assessed.
+
+**Precise obstruction:** if the common understanding and active-content premise
+is held fixed, these tests converge on the same local account. That premise is
+not thereby worthless or automatically unwarranted. What remains unsupported
+by this comparison is the transition from such personal activity to necessary
+intellectual sourcehood. A claim that organization cannot instantiate reference
+would need a substantive failure mechanism preserving this case's reference
+and understanding evidence; a claim that the current stages wholly naturalize
+understanding would need its actual realization/semantic correspondence. Neither
+can be obtained by relabeling the stages. Likewise no presented link warrants
+passing intentional direction through every mover. The existing source-design
+and inheritance obligations therefore remain the next consequential targets.
+
+The bounded comparison is delivered for reassessment. No further distinct test
+available from these records separates the two accounts while retaining the
+specified common episode; repeating input sensitivity, acquisition screening,
+chemistry projections or omission models would retest already-known boundaries.
+Reopen on (a) a concrete account showing why this reference/understanding cannot
+be organizationally realized, with an independently justified failure mechanism;
+(b) process/acquisition evidence that establishes or defeats a proposed actual
+realization of this episode; or (c) a substantive argument for same-end
+instrumental inheritance and intellectual recognition of its first source.
+Changes to actual basing evidence reopen the **local** attribution; a source
+argument reopens the **ultimate** conclusion. Neither substitutes for the other.
+
+Self-sweep and evidence: only this note and existing attempt are changed. No new
+statement, definition, sense, model, frozen Challenge, proof or attribution is
+introduced, and no new formal consequence inherits the old result's acceptance.
+The existing exact evidence is `Intentionality943`'s content/error construction
+(`45ac104c-2729-57bc-9fdd-8e1dbcd9022c`), acquisition/history certificate
+(`429127f4-1e56-54c3-8678-f8c0dcd656cc`), uptake screening
+(`5ba7dd8f-7f4a-4d83-89b9-ca2cfffa02f0`), and the separately conditional warrant
+consumer (`1db47fd9-6ab1-4fa1-a9dd-0aa9457d8146`), alongside the accepted
+same-root result and the existing director-regress result
+`4f6713a1-91f6-576c-84e8-ebb88afb1d88`. The detailed four-part personal basing
+proposal is reused from
+[the existing basing investigation](notes/epistemic-underminer-boundaries.md#proposed-sufficient-account-for-the-selected-scope)
+without editing it or presenting that proposal as a registered certificate.
+The shared setup and successful unchanged proof checks are reused. New scoped
+corpus/reference and computed frontier evidence accompanies this continuation;
+there is no premise or graph change from the accepted baseline.
+
+Continuation validation: `truth check` passes (its nonblocking closure/lexicon
+backfill diagnostics remain), and `git diff --check` passes. The computed
+`truth frontier-diff --base d6114fd38ecad71a48dde7c3881c9cf3ffa0a2b7`
+reports **no change**: no support alternative or root-facing premise is added
+or removed. The accepted proof's build, binding, Comparator and NanoDa evidence
+is reused because its proof, parameters and records are unchanged. No fresh
+proof run or source acquisition is presented as progress. The new warrant
+assessment still requires the coordinator's fresh independent semantic review.
+
+## Same-end inheritance: selected instrumental descent (2026-11-17)
+
+New investigation from accepted `60e2e20eecf4beb29aa1d7d049d121c1e954698a`.
+Target: same-end inheritance `251bbfdd-c176-5cea-ae66-ebfa5cad0dc4`, then
+first-director recognition `acc06edc-0d48-559d-9b21-d58081fcf978` as warranted.
+The live convention revision remains
+`15f348b072188255da837578eaafc8a98f12fdf0`. No foundation/UI file, shared
+import/cache/allowlist or accepted theorem is changed. This is the complete
+proposed outcome for fresh challenge.
+
+### The proof needs selection, not every mover
+
+The existing `QuintaViaDirectorRegress.directorRegress` was inspected at its
+actual induction step. After obtaining a mover of f, it uses the universal
+inheritance premise on that arbitrary mover to preserve `Directs _ x e`.
+That arbitrary choice is stronger than necessary. The new OPEN analyst policy
+`e8ffcdad-0cf5-43ba-a8c3-d51330498205`, defined by
+`DirectorInheritance.SameEndMoverSelection`, says exactly:
+
+```text
+For every f, x, e:
+  NaturalBody x and Directs f x e and
+  (some g, r satisfy MovesIn g f r and g != f)
+imply
+  some g, r satisfy MovesIn g f r and g != f and Directs g x e.
+```
+
+The selected mover and respect may differ from the initial witness. The same
+x and e must remain unchanged at every step. Scope is all natural-body targets
+of the old reduction conclusion, not all possible directed targets. “Actual”
+means the supplied MovesIn edge holds at the existing shared reading, not an
+extra world-indexed existence certificate. This introduces no new causal
+relation or cognition flag; it is a quantified policy on the old dictionaries.
+
+Two new results in
+`TruthCore.Results.Aquinas.SummaTheologiae.DirectorInheritance` are registered
+by `specs/director-inheritance-selection.toml`:
+
+- `weaken`, result `ac4407f0-f0e8-415b-8b7e-1aaca9a3978b`, derives selection
+  from **251bbfdd alone**. The registered `strengthens` relation
+  `a72bd3ec-2a8b-44e0-90c6-01e729b86195` records that exact implication.
+  This is an instantiation/weakening, not independent warrant. No strictness
+  model, converse or globally weakest-input claim is made.
+- `fromSelection`, result `3af0a49e-1e23-45a2-b131-9e4dfcc686e2`, derives
+  the **unchanged** reduction conclusion
+  `11914511-b067-55d3-b8cc-094311021d08`. It uses six explicit inputs:
+  existing moved-by-another `5588083c-55e5-57ce-91ff-67db25fe80fc`, the strong
+  per-se-link policy, well-founded per-se descent, excluded middle, selection,
+  and the unchanged first-director cognition premise acc06edc. At a moved
+  director, moved-by-another supplies a distinct mover; selection supplies
+  one preserving x/e; if it is moved, the per-se premise makes it an induction
+  predecessor. At a terminal director, acc06edc still supplies cognition and
+  intelligence. Neither is obtained from well-foundedness alone.
+
+The first draft replayed the original nine hypotheses. Its proof elaborated,
+but registration exposed the inherited adopted/independent potency sense mix.
+That draft was discarded. The delivered proof instead reuses the existing
+sense-neutral **moved-by-another endpoint**, rather than changing foundation
+metadata or adding a fictitious bridge/allowance. Its producer
+`AQUINAS-MOVED-BY-ANOTHER` (result
+`316ae8b0-fb1e-58bf-82d1-bcb308741f33`) retains reduction and no-self-motion;
+the latter's existing act/potency routes and their interpretation obligations
+remain upstream. Six heads do not mean six independent philosophical inputs.
+The final Challenge was frozen before the replacement Solution, SHA256
+`75a6c7862999c3bc5bee6cce6d9d4ede42c2c276e8a0399976218ccf33f7468d`.
+
+The old unrestricted inheritance/direct-assumption option remains. Selection
+can also be assessed directly as the narrower candidate primitive; it need
+not first be accepted only by deriving it from the stronger policy. The new
+conditional reduction is a further support option, not acceptance of selection.
+Its connection is **11914511 → the existing governor producer 571094b6 → the
+accepted same-root consumer a56eea3e**. All observations, chance/tending,
+director, directing-as-moving, uniqueness, Fourth-Way, naming, created-agent
+application and cognitive dictionary obligations in that chain remain visible.
+Necessary-perfect-ground existence is still separately supplied at a56eea3e.
+No historical/Catholic-specific transition is evaluated.
+
+### Which links have positive instrumental warrant?
+
+The following distinctions describe the application burden of the existing
+relations; they are not four new formal predicates:
+
+| Link or attribution | What positively warrants it; what is not supplied |
+| --- | --- |
+| Moving f in some respect | An actualization identified by MovesIn g f r on the selected dictionary. It may concern something other than f's direction of x; the edge alone carries no x/e index. |
+| Enabling the episode | A condition lets f exercise its capacity. This is not automatically a MovesIn edge, and identifying such an edge still does not show transmission of the relevant final ordering. |
+| Producing the direction as direction | The parent's actual operation configures or governs the child's execution toward the independently specified same x/e: its constraint is used in the directing operation, rather than merely accompanying or enabling it. This is the instrumental rationale for attributing derivative direction through f. Its mechanism and end correspondence must be identified, not inferred from ancestry. |
+| Understanding that end | A subject apprehends the end and relevant means. This is a cognitive attribution in addition to effective direction. It need not be possessed by every intermediate instrument. |
+
+A positive analyst illustration is an archer presently operating an oriented
+guide: the guide directs a projectile toward a specified target, while the
+archer's control of the guide's orientation and release executes that same
+target-directed activity. Target, trajectory constraint and the principal's
+purpose can be specified separately. The principal's contribution is relevant
+because it governs that execution; ambient illumination enabling sight is a
+different contribution. This illustrates instrumental reasoning, not a newly
+observed experiment, a claim that every artefact is a NaturalBody, or a model
+of a globally unmoved source. Earlier training or a stored setting alone also
+must not be substituted for the present per-se dependence in the theorem.
+
+This gives positive warrant for **identified instrumental links**. It does
+not establish that every movement of a director is such a link. Selection
+avoids that universal claim: irrelevant movers can be ignored if an actual
+relevant predecessor exists. But calling a cause “direction-producing” without
+identifying how it governs this execution just renames the required conclusion.
+The new Lean definition does not purport to complete that empirical/metaphysical
+identification. Recognized instrumental activity can have prima facie warrant;
+no endlessly prior proof of every enabling condition is demanded.
+
+The strongest supported rival grants real direction and its transmission
+through organized constraints, while denying that any arbitrary enabling
+cause thereby understands or imparts the same end. The existing
+[teleonomy comparison](teleonomy-comparison.md#shared-answer-map) and
+[content/history/basing work](notes/epistemic-underminer-boundaries.md#why-this-is-a-positive-explanation-rather-than-another-label)
+supply positive resources: structured coupling and learned control can explain
+specific outcomes and active contributions, with error and content distinguished
+from benefit. The explanatory mechanism is the organization that constrains
+execution, not pure chance or an unanalysed “nonmental” flag. These resources
+have bounded application; they establish neither a complete naturalization of
+understanding nor a metaphysically possible unintelligent first ground.
+
+Both sides can accept blind intermediate instruments and the local personal
+principal. They differ over whether all relevant final organization ultimately
+requires an intellectual principal. Merely showing organized transmission does
+not decide that question: a theist can regard it as secondary execution, while
+a rival can propose intrinsic powers/organization as an adequate stopping
+point. The latter's global adequacy remains open; its unfamiliarity or a demand
+for an endlessly earlier reason is not an objection.
+
+### The residual burden: global movement versus directional dependence
+
+Selection still has a consequential requirement. Once f directs this natural
+body to e, **any distinct mover of f suffices to trigger the demand that some
+same-end predecessor exists**. It does not require the triggering movement
+itself to concern f's directing operation. Thus identifying one instrumental
+chain in an ordinary case does not establish selection over every moved director.
+A director moving in an unrelated respect is precisely where the existence
+of an appropriate predecessor still needs warrant. This is an application
+question, not a certified counterexample to selection.
+
+Restricting descent instead to causes of the directing operation is a reasonable
+research proposal, but it changes the endpoint. A root of that restricted
+relation need not be moved in **no respect at all**; it may have unrelated
+movements or other sources of actualization. The old terminal property is
+`∀ r, ¬ MovedIn h r`, not merely “no further relevant directional parent.”
+Applying acc06edc to the latter would silently strengthen its antecedent.
+The new proof avoids that mistake by retaining selection's global trigger,
+ordinary moved-by-another and the old per-se/no-infinite-series inputs.
+No narrower relation, new endpoint or sourcehood bridge is hidden in it.
+
+This locates the next discriminating test: for a specific apparently
+self-directing activity, identify whether the **actual directing operation**
+has an instrumental predecessor whenever its bearer is moved in an unrelated
+respect. Evidence merely that its bearer has an enabling cause does not answer
+this, and absence of an identified predecessor is not evidence of autonomy.
+The account must connect the relevant operation to a predecessor preserving
+the same x/e, or justify why the direction-only root also has global unmovedness.
+That is the new existential burden; a sensitivity fixture would not resolve it.
+
+### Consequence for first-source intellectual recognition
+
+The stronger positive rationale for acc06edc is that a first source of final
+ordering must possess what it supplies intrinsically, rather than borrow its
+orientation as an instrument. This would explain the contrast between a
+principal and its executing instruments. The inheritance analysis supports
+that contrast for an independently recognized intellectual principal; it does
+not show that every intrinsic source of final ordering apprehends an end.
+Organized noncognitive intermediaries already show why effective ordering and
+understanding must be kept distinct. They are not, just by being intermediaries,
+counterexamples to the first-source premise.
+
+The rival's positive proposal is intrinsic end-directed powers or organization
+as the source of the constrained execution, without a further cognitive act
+being required by that explanation. Current records give mechanisms for bounded
+transmission, not a joint model of an ultimate bearer satisfying all the
+classical premises. No such bearer or defeat of acc06edc is claimed. To infer
+intellect, the positive argument must show why freedom from borrowed ordering
+requires **intellectual possession**, rather than merely non-borrowed causal
+capacity. q4's formal-or-eminent precontainment does not supply that recognition;
+returning to q14's immateriality bridge remains a legitimate shared support
+option but would not independently warrant this horizontal bridge.
+
+A further possible reuse of the existing noncognitive-director principle was
+checked. Directing another thing to e does not itself give `TendsTo h e` for
+the director: “the projectile hits the target” and “the principal brings about
+that hit” need an explicit end/application correspondence. The old signature
+also does not by itself transport an arbitrary MovesIn edge to a MovedIn
+judgment on its target. Even if additional correspondences forced cognition
+by contradicting an unmoved first's dependence on a knowing director, the
+existing source text/interface distinguishes cognition from intellectual
+understanding. No missing aptitude, motion-effect or grade bridge is assumed,
+and no derived proof of acc06edc is advertised.
+
+### Complete proposed judgment, self-sweep and reassessment
+
+The investigation has delivered a verified weaker inheritance obligation and
+a conditional route using it, with a reasoned instrumental interpretation.
+Identified production of a direction as direction is stronger explanatory
+evidence than mere movement or enabling; it can support direct local attribution.
+The unrestricted policy is not established or refuted. Its narrower selection
+sibling removes the every-mover demand while retaining the exact remaining
+existential/endpoint burden. This is substantive conditional support-option
+progress; shared motion and source-design premises are not a penalty.
+
+First-source intellect remains a separate candidate primitive or supported
+premise. No substantive objection here establishes it false, and no new
+argument establishes it true. What would advance it is a reason distinguishing
+intrinsic intellectual possession of final ordering from intrinsic noncognitive
+capacity on the **same first-source interpretation**, rather than further
+examples of blind instruments or an opaque intellect assignment. Reopen the
+inheritance application on concrete relevant-predecessor evidence, a justified
+scope bridge from direction-rootness to global unmovedness, or an argument
+that every moved director's operation is instrumentally received. Reopen
+recognition on a substantive account ruling out noncognitive intrinsic ordering
+under the retained first-source premises, or positively identifying their
+intellectual content. No additional distinct test in the present records
+settles either applicability claim; allocation should now target those exact
+bridges instead of repeating this descent proof.
+
+Self-sweep: new records contain one analyst policy/definition, its one-premise
+strength relation and two results; no new attribution or real-possibility claim.
+There is no new relation whose causal properties are concealed in a definition.
+The old motion and direction meanings remain parameters. The proof needs
+well-foundedness and the strong per-se link as advertised, and uses the unchanged
+cognition/design input at its terminal step. No comparison is presented as
+strict or exhaustive; no old statement, sense, Challenge or allowlist changes.
+New scoped verification and computed premise comparison follow below; previous
+accepted proof/review evidence is reused only for unchanged inputs.
+
+Delivered local checks: the new vocabulary/Solution build passes; both new
+results bind (`2 bound, 0 mismatch`), and both Comparator runs with independent
+NanoDa accept the proofs with no permitted axioms. The spec regenerates
+unchanged, corpus checking passes, offline source-manifest/claim-binding
+checking passes, and attribution-check finds no changed stating claim.
+The new definition's generated status is not yet computed; coordinator-owned
+import/status generation and final CI remain integration work. No shared cache
+or generated import was modified to conceal that pending status.
+
+Computed `truth frontier-diff --base
+60e2e20eecf4beb29aa1d7d049d121c1e954698a` reports:
+
+```text
+open premises reaching the root:
+  502 (353 bare, 92 supported, 57 stated)
+  -> 503 (354 bare, 92 supported, 57 stated)
+distinct verified support alternatives: 498 -> 500
+bare premises added: 1
+  Same-end mover selection [e8ffcdad]
+```
+
+The two additional root-reaching support alternatives are the new reduction
+consumer and the **existing** moved-by-another producer exposed by its use.
+The one new open leaf is the explicitly analyst selection policy, not a claim
+that its source warrant is established. The strength certificate is the
+separately checked sole-premise weakening; no strictness is claimed. This
+comparison records the added support option and its obligation without a
+leaf-count penalty or a claim of premise/root establishment.

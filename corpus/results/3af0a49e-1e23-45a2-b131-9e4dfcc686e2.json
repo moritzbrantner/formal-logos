@@ -1,0 +1,11 @@
+{
+  "id": "3af0a49e-1e23-45a2-b131-9e4dfcc686e2",
+  "label": "Intelligent UNMOVED_2 director reduction from same-end mover selection",
+  "argument_id": "b076343a-6b95-4788-b3e8-0b4632b4ec9a",
+  "challenge_module": "TruthCore.Results.Aquinas.SummaTheologiae.DirectorInheritance.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.SummaTheologiae.DirectorInheritance.Solution",
+  "theorem": "TruthCore.Results.Aquinas.SummaTheologiae.DirectorInheritance.fromSelection",
+  "comparator_config": "results/3af0a49e-1e23-45a2-b131-9e4dfcc686e2/comparator.json",
+  "status": "solution-present",
+  "description": "Six-input packaging of the existing director descent: use the existing MovedByAnotherReading intermediate instead of replaying its reduction/non-self-motion producers, and replace every-mover inheritance 251bbfdd by SameEndMoverSelection on natural-body targets. When f is moved, MovedByAnotherReading supplies some distinct actual mover. Its existing producers and their act/potency interpretation obligations remain unchanged upstream. The OPEN selection policy supplies a possibly different mover g and respect r preserving direction to the SAME x and e. If g is moved, the retained strong per-se-link policy makes it an induction predecessor; otherwise it is terminal. The existing no-infinite-per-se-series policy gives a director moved in no respect, and the unchanged UnmovedDirectorKnowsAndUnderstands input supplies cognition and intelligence. No arbitrary mover is presumed to transmit direction; no new relation, content transfer, source existence or cognitive recognition is derived. Selection still requires a relevant predecessor whenever a directing being has ANY distinct mover, even if that movement is not independently shown to actualize its direction. It must not be confused with merely finding a root in a narrower directional relation: such a root need not be globally unmoved. Conditional support to 11914511, then the existing 571094b6 governor producer and a56eea3e same-root consumer, with every other premise and cognitive dictionary retained. Instrumental applicability and the first-source intellectual inference remain open. Full warrant comparison and next tests are in docs/immaterial-intellect-reception.md#same-end-inheritance-selected-instrumental-descent-2026-11-17."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "6c3512d5-1abb-4efd-918e-7b21a8072d20",
+  "label": "Same-end mover selection",
+  "term": "same-end mover selection on natural-body targets",
+  "definition": "For every director f, natural-body target x and end e, if f directs x to e and f has at least one distinct actual mover in some respect, there is a distinct actual mover g of f in some respect that also directs this SAME x to this SAME e. The selected mover/respect can differ from the initially supplied witness. This is a quantified existence/closure policy on the existing MovesIn and Directs relations, not a new relation, an algorithm, a claim that every mover transmits direction, or recognition of cognition.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.DirectorInheritance.SameEndMoverSelection",
+  "note": "Analyst weakening of 251bbfdd-c176-5cea-ae66-ebfa5cad0dc4 on the same dictionaries and natural-body scope. In the reduction proof ordinary motion policies supply a distinct actual mover; this policy selects one preserving final ordering. Instrumental applicability and the existence of a relevant mover whenever a director is moved in any respect remain OPEN. It does not define away the possibility of movement unrelated to direction, equate enabling with direction, or infer that a selected mover understands. See docs/immaterial-intellect-reception.md#same-end-inheritance-selected-instrumental-descent-2026-11-17."
+}

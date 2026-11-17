@@ -1,0 +1,45 @@
+[batch]
+vocab = "TruthCore.Latin.Aquinas.SummaTheologiae.DirectorInheritance"
+results = "TruthCore.Results.Aquinas.SummaTheologiae.DirectorInheritance"
+
+[[statement]]
+id = "Same-end mover selection"
+lean = "SameEndMoverSelection"
+definitions = ["6c3512d5-1abb-4efd-918e-7b21a8072d20", "d9483f11-c76c-5ea9-aac3-0ed77076305b"]
+paraphrase = "OPEN analyst policy: for each direction of a natural body x to end e, if the director has a distinct actual mover in some respect, at least one distinct actual mover preserves direction of this SAME x to this SAME e. It need not be every mover, or the initially supplied mover/respect, and no cognition is inferred."
+
+[[argument]]
+id = "Same-end mover selection from unrestricted inheritance"
+theorem = "weaken"
+premises = ["251bbfdd-c176-5cea-ae66-ebfa5cad0dc4"]
+conclusion = "Same-end mover selection"
+axioms = []
+transcription = "instantiation"
+rule = "Choose a given distinct actual mover and instantiate unrestricted same-end inheritance"
+meaning = "Sole-premise weakening of the existing every-distinct-mover policy to existence of one direction-preserving distinct actual mover, restricted to natural-body targets. Same MovesIn and Directs dictionaries and exact x/e throughout. This checks a strength relation, not premise warrant; no strictness or minimality claim and no new countermodel. The old direct primitive input remains available."
+
+[[argument]]
+id = "Intelligent UNMOVED_2 director reduction from same-end mover selection"
+theorem = "fromSelection"
+premises = [
+  "5588083c-55e5-57ce-91ff-67db25fe80fc",
+  "1e47e6db-da06-5a40-9ccf-fbd1f929c596",
+  "226c38f6-7bf4-552a-9a85-733cfa41d0fa",
+  "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+  "Same-end mover selection",
+  "acc06edc-0d48-559d-9b21-d58081fcf978",
+]
+conclusion = "11914511-b067-55d3-b8cc-094311021d08"
+axioms = []
+rule = "Well-founded director descent with a selected same-end actual mover, then the retained first-director cognition input"
+meaning = "Six-input packaging of the existing director descent: use the existing MovedByAnotherReading intermediate instead of replaying its reduction/non-self-motion producers, and replace every-mover inheritance 251bbfdd by SameEndMoverSelection on natural-body targets. When f is moved, MovedByAnotherReading supplies some distinct actual mover. Its existing producers and their act/potency interpretation obligations remain unchanged upstream. The OPEN selection policy supplies a possibly different mover g and respect r preserving direction to the SAME x and e. If g is moved, the retained strong per-se-link policy makes it an induction predecessor; otherwise it is terminal. The existing no-infinite-per-se-series policy gives a director moved in no respect, and the unchanged UnmovedDirectorKnowsAndUnderstands input supplies cognition and intelligence. No arbitrary mover is presumed to transmit direction; no new relation, content transfer, source existence or cognitive recognition is derived. Selection still requires a relevant predecessor whenever a directing being has ANY distinct mover, even if that movement is not independently shown to actualize its direction. It must not be confused with merely finding a root in a narrower directional relation: such a root need not be globally unmoved. Conditional support to 11914511, then the existing 571094b6 governor producer and a56eea3e same-root consumer, with every other premise and cognitive dictionary retained. Instrumental applicability and the first-source intellectual inference remain open. Full warrant comparison and next tests are in docs/immaterial-intellect-reception.md#same-end-inheritance-selected-instrumental-descent-2026-11-17."
+
+[[relation]]
+id = "Unrestricted direction inheritance strengthens same-end mover selection"
+subject_kind = "statement"
+subject_id = "251bbfdd-c176-5cea-ae66-ebfa5cad0dc4"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Same-end mover selection"
+verification_result_id = "Same-end mover selection from unrestricted inheritance"
+note = "Verified sole-premise implication on the same MovesIn/Directs dictionaries; the weaker policy restricts targets to NaturalBody and replaces every distinct mover by selection of some actual distinct mover. No strictness or global weakest-input claim. No source claim for this analyst restriction; original direct acceptance remains a support option."
