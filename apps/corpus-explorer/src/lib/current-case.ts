@@ -116,3 +116,8 @@ export function currentCase({ corpus, report, dossiers, assessments, revision }:
     state: statementState(report, GOD_EXISTS),
   };
 }
+
+/** Stable static destinations, derived from proposition identity, never a registry. */
+export function casePremiseHref(statementId: string) {
+  return `/case/god-exists/premises/${encodeURIComponent(statementId)}`;
+}

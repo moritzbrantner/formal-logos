@@ -1,9 +1,12 @@
 import { expect, test } from "bun:test";
-import { currentCase, GOD_EXISTS, GOD_SENSE, ATTRIBUTE_IDS, type RecordedAssessment } from "./current-case";
-import type { Corpus, CorpusArgument } from "./corpus";
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
+import { CaseOverview, CasePremiseDetail } from "../app/case/god-exists/content";
+import { currentCase, casePremiseHref, GOD_EXISTS, GOD_SENSE, ATTRIBUTE_IDS, type RecordedAssessment } from "./current-case";
+import { getCorpus, type Corpus, type CorpusArgument } from "./corpus";
 import { truthJson } from "./truth-cli";
 import type { FrontierReport } from "./site-state";
-import { parseAssessmentBatch } from "./current-case-data";
+import { getCurrentCase, parseAssessmentBatch } from "./current-case-data";
 
 const argument = (id: string, premises: string[], conclusion: string): CorpusArgument => ({
   id, premise_statement_ids: premises, conclusion_statement_id: conclusion, inference_ids: [], meaning: id,
@@ -108,3 +111,78 @@ test("shared findings render once without dropping their premise associations", 
   expect(view.premises.find((premise) => premise.statement.id === "shared")?.attempts).toEqual([attempt]);
   expect(view.premises.find((premise) => premise.statement.id === "other")?.attempts).toEqual([attempt]);
 });
+
+
+test("compact overview links every proposition and preserves complete immediate root bundles", () => {
+  const view = project({ assessments: { shared: [assessment("Distinct recorded judgment", "note#judgment")] } });
+  const html = renderToStaticMarkup(createElement(CaseOverview, { view }));
+  expect(html).not.toContain("<details");
+  expect(html).not.toContain("Distinct recorded judgment");
+  for (const premise of view.premises) {
+    expect(html).toContain(`href="${casePremiseHref(premise.statement.id)}"`);
+  }
+  for (const bundle of view.routes) {
+    expect(html).toContain(`id="argument-${bundle.id}"`);
+    for (const id of bundle.premise_statement_ids) {
+      expect(html).toContain(`href="${casePremiseHref(id)}"`);
+    }
+  }
+});
+
+test("proposition pages expose all expanded bundles and provenance with canonical evidence links", () => {
+  const entries = [assessment("Positive warrant", "note#positive"), assessment("Premise disputed", "note#disputed")];
+  const view = project({ assessments: { shared: entries } });
+  for (const premise of view.premises) {
+    const html = renderToStaticMarkup(createElement(CasePremiseDetail, { view, premise }));
+    expect(html).not.toContain("<details");
+    expect(html).toContain(`href="/dossiers/${premise.statement.id}"`);
+    expect(html).toContain(`href="/dossiers/${premise.statement.id}#dossier-rivals"`);
+    for (const bundle of premise.bundles) {
+      expect(html).toContain(`id="argument-${bundle.id}"`);
+      for (const id of bundle.premise_statement_ids) {
+        expect(html).toContain(`href="${casePremiseHref(id)}"`);
+      }
+    }
+    for (const bundle of premise.alternatives) {
+      for (const id of bundle.premise_statement_ids) {
+        expect(html).toContain(`href="${casePremiseHref(id)}"`);
+      }
+      for (const id of bundle.result_ids) {
+        expect(html).toContain(`href="/results/${id}"`);
+      }
+    }
+    for (const entry of premise.assessments) {
+      expect(html).toContain(entry.excerpt);
+      expect(html).toContain(`${entry.path}#L${entry.line}`);
+    }
+  }
+});
+
+
+test("real case preserves destinations for every support and evidence record", () => {
+  const view = getCurrentCase();
+  const corpus = getCorpus();
+  const scope = new Set(view.premises.map((premise) => premise.statement.id));
+  const resultIds = new Set(corpus.results.map((result) => result.id));
+  const argumentIds = new Set(corpus.arguments.map((argument) => argument.id));
+  const statementIds = new Set(corpus.statements.map((statement) => statement.id));
+  for (const premise of view.premises) {
+    expect(statementIds.has(premise.statement.id)).toBe(true);
+    for (const bundle of premise.bundles) {
+      expect(argumentIds.has(bundle.id)).toBe(true);
+      for (const id of bundle.premise_statement_ids) { expect(scope.has(id)).toBe(true); }
+      for (const id of bundle.resultIds) { expect(resultIds.has(id)).toBe(true); }
+      for (const id of bundle.openLeaves ?? []) { expect(scope.has(id)).toBe(true); }
+    }
+    for (const bundle of premise.alternatives) {
+      for (const id of bundle.premise_statement_ids) { expect(scope.has(id)).toBe(true); }
+      for (const id of bundle.argument_ids) { expect(argumentIds.has(id)).toBe(true); }
+      for (const id of bundle.result_ids) { expect(resultIds.has(id)).toBe(true); }
+    }
+    // Every finding keeps a direct link to its canonical attempt page.
+    if (premise.attempts.length) {
+      const html = renderToStaticMarkup(createElement(CasePremiseDetail, { view, premise }));
+      for (const attempt of premise.attempts) { expect(html).toContain(`href="/attempts/${attempt.id}"`); }
+    }
+  }
+}, 120_000);

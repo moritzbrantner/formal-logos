@@ -1,5 +1,8 @@
 import { truthJson } from "./truth-cli";
-import type { AssessmentBatch, RecordedAssessment } from "./current-case";
+import { currentCase, GOD_EXISTS, type AssessmentBatch, type RecordedAssessment } from "./current-case";
+import { getCorpus } from "./corpus";
+import { getDossiers } from "./premise-dossier";
+import { getBuildInfo, getFrontierReport } from "./site-state";
 
 function record(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -28,4 +31,17 @@ export function parseAssessmentBatch(value: unknown): AssessmentBatch {
 /** One bounded batch: no full research brief or evidence graph per premise. */
 export function getCaseAssessments(statementIds: string[]): AssessmentBatch {
   return parseAssessmentBatch(truthJson(["brief", "--assessments-for", statementIds.join(",")]));
+}
+
+let cachedCase: ReturnType<typeof currentCase> | undefined;
+
+/** Share one projection and assessment batch across the static case pages. */
+export function getCurrentCase() {
+  if (!cachedCase) {
+    const report = getFrontierReport(GOD_EXISTS);
+    cachedCase = currentCase({ corpus: getCorpus(), report, dossiers: getDossiers(),
+      assessments: getCaseAssessments([...new Set([GOD_EXISTS, ...report.reaching_root_statements])]),
+      revision: getBuildInfo().commit });
+  }
+  return cachedCase;
 }
