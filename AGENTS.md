@@ -2,6 +2,30 @@
 
 This repository advances substantial arguments through small verified research steps. Keep the complexity in the philosophy, not in repository machinery.
 
+## Current research focus (owner direction, 2026-11-17)
+
+Prioritize the existence of God and the explicit bridges to divine attributes.
+Defer evaluation of historical evidence and specifically Christian or Catholic
+identification until that research phase is selected. The existing Catholicism
+root and closure rules remain unchanged; use its God-existence-stage nodes to
+locate the current work rather than silently changing the root.
+
+Develop coherent end-to-end support routes with fixed meanings, witnesses and
+assumptions. State the strongest available positive warrant and an overall
+provisional assessment of central premises, alongside substantive objections
+and revision conditions. Compare competing explanations of the same phenomenon
+at matching scope. Preserve defensible primitive commitments and direct
+assumption options; conditionality alone does not erase their warrant.
+
+When a vertical approach yields no further discriminating test, seek horizontal
+support from another argument family or reallocate to another central node.
+Different presentations of the same assumption are not additional evidence.
+Keep shared dependencies and exact missing bridges visible. Batch related
+findings into coherent reviewed checkpoints before pushing, and retain a concise
+current conclusion linked to the substantive evidence in existing records/notes.
+A generated current-case view must reuse those records, distinguish recorded
+warrant from formal status, and never rank philosophical strength by leaf count.
+
 ## Source checks stay offline (owner direction, 2026-11-11)
 
 Full-source verification is not a repository standard. CI, scheduled/manual
