@@ -1,0 +1,11 @@
+{
+  "id": "20babef7-6ae7-4b48-b72a-f417e8e63136",
+  "label": "Closed actual esse collections contain an uncaused bearer",
+  "paraphrase": "OPEN analyst premise, attribution deferred: on one fixed q3a4 profile, no nonempty collection of actual esse bearers closed under all distinct actual causes of its members is rootless. Exactly CCR on esseCauseGraph p; every full cone of finitely reachable causal predecessors is tested, even when the cone has infinitely many members. No efficient, present-sustaining, world-grounding or AsCaused identification is made. Root-backed infinite paths and dependent cycles are allowed; the collective application remains open.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.ClosedEsseSource.ClosedActualEsseCollectionsRooted",
+  "definition_ids": [
+    "23ae8d63-1351-4e7c-9ab1-ed85d9695b22",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

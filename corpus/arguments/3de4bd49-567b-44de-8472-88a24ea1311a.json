@@ -1,0 +1,25 @@
+{
+  "id": "3de4bd49-567b-44de-8472-88a24ea1311a",
+  "label": "CCR gives the common uncaused identity source",
+  "premise_statement_ids": [
+    "20babef7-6ae7-4b48-b72a-f417e8e63136",
+    "457698e4-eb21-4561-ab32-eccbfb0a992e",
+    "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+    "78cffb8e-da95-4459-8058-45e0953cdde8",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "conclusion_statement_id": "c35b1a5c-6405-449b-993b-8196b2457e08",
+  "inference_ids": [
+    "9522deb5-cc9e-4e5a-87e6-665482800f6d"
+  ],
+  "meaning": "Non-transcription conditional common-source transfer, same profile, domain, esse respect and essence dictionary. The source is uncaused by its root witness, without well-foundedness or cycle exclusion. Identity-bearer uniqueness aligns every local source. Finite nonzero paths reach every other actual bearer; no uniform bound, direct universal causation, efficiency, conservation, world-grounding, necessity or God identification is supplied. The existing downstream companion bundles remain required.",
+  "definition_ids": [
+    "23ae8d63-1351-4e7c-9ab1-ed85d9695b22",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "0ea9feb8-1f92-5b11-aa74-2f2e567c6106"
+  ]
+}

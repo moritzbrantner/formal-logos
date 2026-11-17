@@ -642,3 +642,254 @@ accepted shared-nature assessment on this recommendation alone. Reopen on a
 newly warranted candidate-domain or real-nature bridge; keep the current
 ascent/degree test as the distinct next input. Director descent/termination
 still supplies no new cognition inference, and no intellect/UI record is edited.
+
+## CCR transfer (issue #1639)
+
+**Complete proposed outcome for fresh semantic challenge (2026-11-17).**
+The fixed actual esse-cause order admits a weaker conditional route to the
+existing `CommonEsseIsEssenceSource` (`c35b1a5c`). It uses closed-collection
+rootedness (new application `20babef7`), distinct-esse causal coverage
+`457698e4`, identity-bearer uniqueness `a576300f`, one actual bearer
+`78cffb8e`, and explicit excluded middle `ee4ab504`. It needs neither
+unrestricted well-foundedness `fd12ad3d` nor global asymmetry. The existing
+well-founded route, direct assumption options and source-scoped ascent route
+remain available. No philosophical premise is established by this transfer.
+Verification results and the computed God-root delta are recorded below;
+independent semantic challenge and integration remain coordinator-owned.
+
+### Fixed dictionary and exact reuse
+
+Baseline: `766c3c08fa0bbf1486b9ff277f5870ecbaa94c95`. The issue and comments
+were reconciled with main: #1635's interfaces are already delivered in
+`RootInterface.lean`, including `ca5403a6` and `6e89d528`; its remaining
+caused-cause/per-se application is explicit. This slice changes none of those
+interfaces, the accepted foundation judgment, or the shared CCR library.
+Required context/dossier/related/brief/novelty retrieval reused the existing
+De ente attempts `9f771edb` and `f41bcb00`, CCR attempts `14fb7669` and
+`4da08bd8`, and the recent `5c898d24` assessment in
+[the foundation note](unique-feedback-explanation-311.md#current-foundation-judgment-on-the-existence-only-case-2026-11-17).
+
+Fix **one** q3a4 profile p, bearer domain, esse respect and represented essence
+and esse functions. Write `r c x := ActualEsseCause p c x`: c differs from x,
+both are in act as to this same esse, and c causes x's esse. This remains the
+tenseless, mode-unspecified cause of being. The adapter `esseCauseGraph p`
+places exactly r in the existing graph's supplier-to-recipient `grounds`
+field; both its existence and concrete guards are exactly `InAct x p.esse`.
+Its single index is bookkeeping. This gives no equality with any independently
+supplied world-grounding profile, present sustaining, efficient cause, or
+constitutive explanation. Structural reuse of the graph API is not warrant
+for such an identification. Definition `23ae8d63` records this application.
+
+The key reusable theorem is
+`TruthCore.Results.Causality.ConcreteRootAccess.accessOfClosed`
+(result `7637c090`), already on main. It derives finite directed root access
+from CCR and explicit EM. Its `RootAccess` retains actual endpoint guards and
+supplier-to-recipient direction; it does not use undirected components.
+`sourceOfAccess` in the new De ente Solution only interprets that existing
+witness in p's esse dictionary. No generic graph, set, component, root-existence
+or ancestry machinery is added.
+
+### Why each local source is the same uncaused source
+
+For any actual x, its **full finite-predecessor cone** is the predicate
+`Sx y := InAct y esse ∧ (y = x ∨ TransGen r y x)`. “Finite” qualifies each
+path, not the cone's cardinality. It contains x. If y belongs and r c y,
+then c is actual and belongs: use the single edge when y = x and prefix
+that edge to the existing finite path otherwise. Thus it is closed under
+**every** actual esse predecessor, not only one chosen chain. CCR and EM
+force an uncaused actual n inside this cone. The imported universal-access
+theorem gives exactly this root-reaching consequence, using the equivalent
+closed predicate of actual bearers without finite root access, rather than
+rebuilding the cone construction here.
+
+If n had distinct represented esse, `457698e4` would give another actual
+cause of its esse, contradicting roothood. EM therefore makes n an identity
+bearer. For distinct-esse x the zero-edge case n = x is impossible; this
+recovers `EveryDistinctEsseHasEsseIsEssenceSource` (`3d01134d`) in result
+`109e22e1`, without uniqueness or population. For the common-source result
+`c6d92415`, select one actual bearer and its root n. Apply the same access
+result to **each** other actual bearer y. Coverage makes its root n' an
+identity bearer, and `a576300f` identifies n' with n. With y different from
+n the resulting path is nonempty. The initial root witness already makes n
+uncaused; the old composition's well-founded cycle-exclusion argument is
+unnecessary. Dependent cycles can remain below n.
+
+Only one actual bearer is needed. Result `51d52108` derives this population
+from the old two-bearer input as its sole premise; a registered strength
+comparison retains both. Result `044974e5` likewise imports
+`ClosedGroundingRoots.closedRootedOfWF` after restriction to actual bearers,
+registering `fd12ad3d` as stronger than the new CCR application. The existing
+`commonEsseIsEssenceSource` and `distinctEsseHasEsseIsEssenceSource` Challenges
+are unchanged. The new route concludes their existing endpoints directly.
+
+### Exact controls and rejected shortcuts
+
+Control result `b49b53e7` reuses the existing `limitGrounder`, `rootedCycle`
+and `mediateFoundation` **relations**, interpreting them in the same q3a4
+form throughout each control: every bearer is actual, only `none` has esse
+identical to essence, and actual cause adds the existing nonidentity guard.
+These are interpretations of the predicates, not metaphysical possibilities.
+
+- A root directly causing every `some n`, alongside the edges
+  `some (n+1) → some n`, satisfies CCR, causal coverage, identity uniqueness,
+  population and the common-source endpoint while unrestricted WF fails.
+  There is a finite path from the root to each bearer despite an infinite
+  backward path that never chooses the root. Source existence prohibits
+  neither every infinite path nor every infinite branch.
+- A root directly causing two mutually causing dependents satisfies the
+  same input bundle and endpoint. CCR permits this dependent cycle. It
+  does not permit a cycle containing the unique identity root under the
+  retained coverage/uniqueness bundle: the selected identity root is uncaused.
+- An **isolated** identity root beside a pure successor regress has a root
+  somewhere, causal coverage, identity uniqueness and two actual bearers,
+  but lacks CCR and common ancestry. The regress's full predecessor cone
+  contains no root. This defeats the shortcut from whole-roster root
+  existence to a common source. It is not a foundation through infinitely
+  many intermediaries: that interpretation needs additional structure.
+- A singleton has one actual bearer without two distinct actual bearers.
+  It witnesses strictness of the population weakening, not a populated
+  nontrivial derivative order.
+
+Rejected: substituting undirected connectivity for directed ancestry;
+assuming the whole roster's root lies in every local cone; reusing the old
+common-source theorem with only its WF premise deleted (its proof uses WF
+a second time to exclude a cycle through the source); excluding every
+infinite path; and adding a per-se or borrowedness flag as though its name
+supplied application warrant. The new proof instead uses the existing exact
+root-access theorem and the root's actual incoming-edge exclusion.
+
+### Applicability and overall provisional judgment
+
+The strongest positive rationale is the existing borrowed-actuality account:
+if each supplier's actual existential contribution is genuinely received,
+merely organizing those contributions does not originate their collective
+availability. This motivates a nonborrowed source, and supports applying the
+same demand to a closed local predecessor collection when **all** relevant
+suppliers of its members are included. It is a defensible direct primitive
+option and need not await an endlessly prior independent proof. CCR avoids
+WF's extra ban on root-backed infinite paths and cycles; the controls show
+why that surplus is unnecessary for this endpoint.
+
+The actual application remains substantive. `457698e4` says distinct esse
+has another actual cause; it does not by itself say that each cause supplies
+its recipient's complete existential actuality, that its exercise is
+borrowed, or that the selected relation lists every relevant supplier. The
+adapter excludes self-causes and nonactual relata exactly as `ActualEsseCause`
+does. Applying a principle over **all** suppliers requires explaining why
+omitted self, non-bearer, nonactual or differently typed explanations do not
+supply the actuality at issue, or how the chosen supplier relation covers
+them. The existing no-self-cause and actual-cause arguments can contribute
+to that defense; no extra exclusion is inferred from the adapter. Within
+this graph the supplier-concreteness side condition of
+`closedRootedOfBorrowed` is automatic from the actual-bearer guards. That
+formal fact does not establish real supplier completeness.
+
+If the borrowed-actuality argument is defended only for **per-se** causes,
+its transfer needs a faithful relation/coverage bridge at that scope.
+#1635's `AsCaused` and `CausedEsseCauseCausesAsCaused` record the distinction:
+a cause's being caused is essential to its causing, rather than accidental.
+They are not assumed here, and neither efficiency nor present sustaining is
+silently imported. A proof only about a restricted per-se subrelation must
+also explain how it yields an uncaused source and coverage in the retained
+full actual esse-cause relation. The existing per-se-WF-plus-bridge route
+remains one explicit option; this CCR result does not independently warrant
+its bridge. The attenuation route is also unchanged: uniform loss and a
+common bound are not independently justified for this mode-unspecified esse
+relation by the present evidence.
+
+The strongest matched rival is the existing complete distributed infinite
+order: actual distinct-esse bearers obtain through a uniform constitutive or
+productive organization, each fully supported in that same existential
+respect, without a finite path to an independent r-source. A global
+obtaining fact is either explained by an independently specified structure
+or retained primitively. Uniform explanation and the existing fixed-point
+controls give a positive reason to investigate this account; mathematical
+consistency or unique determination alone does not realize actual esse.
+Conversely the foundation account owes an obtaining source and an actual
+support account, not merely a root label. The rival's primitive global
+actuality cannot be rejected just for being primitive when the source account
+also retains primitives. Its precise burden is its same-relation realization
+and global explanation, not an assumed contradiction of CCR. An irreducibly
+actual natural whole in the selected roster can itself be a root and satisfy
+this foundation step; whether it satisfies identity-bearer coverage,
+uniqueness and the later divine-naming bundle is a further question. No
+artificial theism/naturalism equivalence or rival defeat follows.
+
+**Proposed judgment:** modestly favorable **conditional** support for CCR in
+a genuinely exhaustive, existentially supplying per-se interpretation,
+reusing the earlier borrowed-actuality assessment. The successful transfer
+removes unnecessary structural demands and improves the available support
+options for `c35b1a5c`. It supplies no independent new corroboration of the
+collective-availability premise, and the broader mode-unspecified tenseless
+application remains OPEN. Neither the complete-order rival nor the positive
+primitive is defeated. Reopen application on an independently specified
+full-support realization at this exact relation/scope, or a positive argument
+for collective non-generation and supplier coverage here. Reopen a per-se
+restriction on a checked restricted-to-full causal bridge. Another equivalent
+cut/source/borrowing presentation alone would not discriminate those options.
+
+### Root connection, claim/type sweep and verification
+
+The new common-source argument retains the existing endpoint and onward
+bundles: `c35b1a5c → f4df2153 → da09703b → c98328f1 → 8626f8a5`.
+Each arrow names an existing argument or endpoint, **with all its companion
+premises**. The source-scoped ascent sibling remains an alternative. No
+transfer from CCR in some unrelated world-grounding profile is asserted.
+Causal ascent, composition, maximum existence/firstness, remoteness and the
+GOD_4 naming bridge retain their own content and warrant burdens. Historical
+Catholic evidence is deferred.
+
+Self-sweep: the new CCR statement expands to the existing closed-collection
+predicate on the exact guarded adapter; the population statement is one
+actual bearer; all five common-source hypotheses bind explicitly. Finite
+access permits zero steps only at the root, and `TransGen` to any distinct
+target is nonempty. Uncausedness excludes exactly distinct actual esse
+causes, not all explanations or self-causation in another relation. The
+identity is represented `esseOf = essenceOf`, with the inherited real-identity
+application; no necessity, efficiency, conservation, direct universal cause
+or divine attribute is smuggled into it. Strength comparisons have one
+premise each. Controls witness exactly their stated interpretations. No
+source, passage or attribution claim is introduced or expanded. Their
+philosophical application and the proposed warrant judgment remain separate
+from formal verification.
+
+Computed comparison (running CLI rules on base data; no hand-reconstructed delta):
+
+```text
+premise delta for GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of classical theism [8626f8a5]: 766c3c08fa0bbf1486b9ff277f5870ecbaa94c95 -> working tree
+open premises reaching the root: 413 (284 bare, 78 supported, 51 stated) -> 414 (285 bare, 78 supported, 51 stated)
+expanded-route diagnostic (lowest cost): GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of…, from prima via [ed7c588a] (cost 6) -> GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of…, from prima via [ed7c588a] (cost 6)
+distinct verified support alternatives: 423 -> 426
+verified support alternatives added: 3
+  Closed actual esse collections contain an uncaused bearer [20babef7] <- There is no infinite descending chain of actual causes of being [fd12ad3d]
+  Every actual distinct esse descends via actual causes of being from one whose esse is its essence [3d01134d] <- Closed actual esse collections contain an uncaused bearer [20babef7], Every actual distinct esse is caused by another being in act, mode of causing unspecified [457698e4], Excluded middle as a general principle: every proposition either holds or does not hold [ee4ab504]
+  One being whose esse is its essence is a first cause of being of every other actual being [c35b1a5c] <- Closed actual esse collections contain an uncaused bearer [20babef7], Every actual distinct esse is caused by another being in act, mode of causing unspecified [457698e4], At least one actual esse bearer [78cffb8e], At most one actual being has its esse identical with its essence [a576300f], Excluded middle as a general principle: every proposition either holds or does not hold [ee4ab504]
+bare premises added: 1 (listed for visibility; not a regression, owner decision 2026-11-07)
+  At least one actual esse bearer [78cffb8e]
+added (bare): 1
+  At least one actual esse bearer [78cffb8e]
+```
+
+This adds conditional support options, with one-bearer population explicitly
+visible. It establishes no premise and changes no root-closure rule.
+
+Focused Solution and new frozen Challenge builds pass under the shared heavy
+lock. Binding reports **5 bound, 0 pinned, 0 mismatch**. Comparator and the
+independent NanoDa kernel accept all five results (`51d52108`, `109e22e1`,
+`c6d92415`, `044974e5`, `b49b53e7`) with **no permitted axioms**. The four
+transfer/strength proofs passed unchanged; the controls initially introduced
+`propext` through simplifier proof terms and were repaired with direct case
+proofs, after which their zero-axiom verification passed. The Solution has no
+`sorry`; only the new Challenge's five expected placeholders remain. No old
+Challenge changed.
+
+Offline corpus/source validation, attribution check (no changed stating
+claims), bundle audit, spec regeneration, module-format and whitespace checks
+pass. The new definition's ungenerated formal-status entry and the existing
+lexical backlog remain warnings; shared imports and formal-status generation
+are coordinator-owned. No source bytes were reacquired. Live convention
+`sourceRevision`: `15f348b072188255da837578eaafc8a98f12fdf0`.
+Prepared dependencies were supplied by the coordinator; no cold project build
+or worker preflight was run. Fresh independent semantic challenge of this
+complete outcome and required final integration CI remain pending. No push,
+PR, watch, merge or issue-state change was performed.

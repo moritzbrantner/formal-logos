@@ -1,0 +1,11 @@
+{
+  "id": "c6d92415-0a65-4f5d-8d1d-147f1fe55592",
+  "label": "CCR gives the common uncaused identity source",
+  "argument_id": "3de4bd49-567b-44de-8472-88a24ea1311a",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource.commonSourceOfClosed",
+  "comparator_config": "results/c6d92415-0a65-4f5d-8d1d-147f1fe55592/comparator.json",
+  "status": "solution-present",
+  "description": "Non-transcription conditional common-source transfer, same profile, domain, esse respect and essence dictionary. The source is uncaused by its root witness, without well-foundedness or cycle exclusion. Identity-bearer uniqueness aligns every local source. Finite nonzero paths reach every other actual bearer; no uniform bound, direct universal causation, efficiency, conservation, world-grounding, necessity or God identification is supplied. The existing downstream companion bundles remain required."
+}

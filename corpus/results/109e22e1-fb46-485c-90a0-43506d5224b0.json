@@ -1,0 +1,11 @@
+{
+  "id": "109e22e1-fb46-485c-90a0-43506d5224b0",
+  "label": "CCR gives an identity source for each distinct esse",
+  "argument_id": "f05db25e-dd2a-4417-9059-ec0c4a6dc5f0",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource.distinctSourceOfClosed",
+  "comparator_config": "results/109e22e1-fb46-485c-90a0-43506d5224b0/comparator.json",
+  "status": "solution-present",
+  "description": "Non-transcription conditional transfer on the same q3a4 profile. Existing accessOfClosed supplies finite directed root access under explicit excluded middle; distinct-esse causal coverage makes the uncaused root an identity bearer. No uniqueness or population is needed for this universal conditional. All cause modes remain unspecified."
+}
