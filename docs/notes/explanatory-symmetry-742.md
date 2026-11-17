@@ -163,3 +163,93 @@ not formalized here. #751 and #746 were open when this was written and are not c
 
 Intended and actual root delta: none. Both results have no premises and neither lies on a root
 route. No configuration changes status.
+
+## Complete selection input, agenda and agency (2026-11-14)
+
+Baseline `561ba7d5c774d15036128928b7293b0ab9ee137a`. This connection develops
+the earlier symmetry proposal by mapping three positive accounts to the exact
+existing selection theorem. It reuses results rather than adding a generic
+symmetry proof. The assessment and interpretation are provisional; no new
+formal result or philosophical defeat is registered.
+
+### Three explananda
+
+Keep distinct: why acting is supported; why a particular option is supported
+over its rival; and how the actual production implements an agent's rationale.
+A consideration can answer the first while supporting both options. A process
+can determine a unique output while remaining unrelated to that consideration.
+Consequently, unique prediction and intentional governance are different
+explanatory achievements. The basing investigation supplies a parallel question
+about content-guided transitions, without identifying belief with divine action.
+
+Clarke's [Fifth Reply](https://www.newtonproject.ox.ac.uk/view/texts/normalized/THEM00235),
+§§1–20, especially printed pp.281–287, gives a positive historical account:
+motives and an agent's active power have different roles, and equally reasonable
+ways of acting can coexist with good reason to act. His application to God is
+part of that defended position, not a theorem certified by this repository.
+The adequacy of its contrastive explanation remains the substantive dispute.
+
+### Exact mapping into the existing theorem
+
+`Results.Science.InductionSelection.noUnique`, included in result
+`6cf4fc73-3265-5712-a0aa-c30a8cb3c299`, takes a complete supplied input `e`,
+an invertible input/output recoding, a deterministic selector, fixed input,
+equivariance, and a selected output moved by the recoding. These are incompatible.
+For exactly two exchanged admissible outputs the moved-output condition follows.
+Swapping just two members of a larger field does not exclude selecting a third
+fixed member. The application must also show that the options are genuinely
+distinct, rather than alternative descriptions of the same outcome.
+
+Apply this to the *entire proposed selection input*. Include any agenda,
+orientation, priority convention or random seed that the proposed selector uses.
+Do not infer symmetry of this complete input from equality of two scalar values
+or from the invariance of a smaller reason list.
+
+| Account | What supplies selection | Exact relation to the symmetry constraint |
+| --- | --- | --- |
+| Ordered agenda | First feasible optimum in a supplied list | Swapping two tied options transports `[a,b]` to `[b,a]`; complete input changes. Determinism is consistent, but the original input is not fixed. |
+| Symmetric chance | A symmetric distribution over the two outcomes | The distribution can be invariant while individual realizations vary. A distribution is a different output type from a uniquely selected realized option. |
+| Reason-guided exercise with tied goods | Actual agency operating for a reason supporting either option | The account does not supply a deterministic function of the fixed prior reason input. The theorem therefore does not refute it; the account still owes the practical explanatory role it claims. |
+
+The first row reuses `WholeSeriesChoicePolicies.Picks` and its list-induction
+certificate `49e1d2c6-9546-492f-a687-8a4fc6c707ce`. The list is independently
+supplied in the existing model; sorting the observed choice first would only
+redescribe that choice. The chance row is an explanatory comparison, not a new
+probabilistic result. No priors or numerical worldview ranking are introduced.
+
+### What has been learned about the agenda
+
+The agenda offers a genuine procedural answer to which tied option is selected.
+Its stability theorem requires two actual selections as well as fixed eligibility
+and the same agenda; it does not show that a selection occurs. The new connection
+locates the discriminating information in the order itself. To explain that
+order, assess a positive rationale such as temporal priority, a practiced policy,
+fair rotation or agent adoption, where the target domain actually admits it.
+Each account has a definite scope; a creaturely habit does not automatically
+explain an atemporal creative act.
+
+The strongest contrastive objection to the Clarke-style account asks why this
+exercise rather than its equally supported counterpart occurred. The account's
+positive reply is that an active agent's doing something for a motive can explain
+it without that motive necessitating the particular output. This disagreement
+concerns explanatory sufficiency, not an algebraic inconsistency exposed by the
+selector theorem. Merely adding a personal flag or an unexplained `Chooses`
+predicate would not supply the proposed reply.
+
+**Provisional assessment.** The ordered account provides the clearest determinate
+procedure when its order is a warranted part of the input. Clarke's account
+remains a live positive explanation of motivated action at a tie; the present
+evidence neither reduces it to chance nor establishes its superiority to chance
+for ultimate explanation. Symmetry is a useful audit of where discrimination
+enters, not a route from underdetermination to personality. Meaningful rationale
+and actual practical governance must be assessed in addition to output selection.
+
+**Next test and connection.** Compare two actual implementations of the same
+stated policy, one whose represented reason governs production and one where a
+separate mechanism fixes the output and the reason is merely reported afterward.
+Then examine tied cases without imposing unique determination as a definition
+of governance. This joins the basing work to
+[practical adoption](divine-love-goodness-bridge.md#practical-adoption-at-fixed-production-proposed-continuation)
+and #1297/#1459. Divine applicability, effect-specific coverage and recipient
+good remain the exact downstream bridges. This note neither resumes unrelated
+creation questions nor registers those proposed connections as existing routes.

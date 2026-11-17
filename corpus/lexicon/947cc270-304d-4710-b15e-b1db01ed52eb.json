@@ -1,0 +1,10 @@
+{
+  "id": "947cc270-304d-4710-b15e-b1db01ed52eb",
+  "label": "admitted explicability (technical)",
+  "lemma": "admitted explicability",
+  "class": "technical",
+  "definition_ids": [
+    "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d"
+  ],
+  "note": "Scoped compound only. The prior bare-word mapping is withdrawn. No verb forms, neighboring role links or family-wide disambiguation are attached; this entry admits only its listed definition."
+}

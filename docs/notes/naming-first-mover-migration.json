@@ -1719,14 +1719,14 @@
       "kind": "definitions",
       "id": "500ba323-cca5-5b35-8b75-947008256c43",
       "path": "corpus/definitions/self-evident-marking.json",
-      "status": "inspected",
-      "classification": "reused_unchanged_audit",
-      "finding": "Reuse unchanged prior audit disposition: Existing interpretation retained: A statement is self-evident in this corpus when its record carries a `self_evident` marking whose justification ids are sourced claims or results: the marking is itself a challengeable, argued claim, not a bare flag. It names a floor basis (retorsion, common_ground or observation) and closes the statement only while that criterion holds on the current records; closure is relative to the listed bases (docs/corpus-model.md, #500). No new structural law, source attribution or independently established premise is introduced.",
+      "status": "repaired",
+      "classification": "intentional_abstraction",
+      "finding": "Reviewed 2026-11-17: the repository marking remains challengeable metadata, distinct from philosophical warrant and Lean proof. The definition now separates ordinary retorsion/common_ground/observation criteria from documented excluded-middle and owner_approval legacy compatibility behavior. No marking, closure algorithm, source attribution or premise changes. Independent semantic challenge of 47fadc4cb supported the corrected legacy-closure description and inspected consumers; evidence and limits: docs/notes/psr-self-application-756.md#five-sense-consumer-reconciliation-1659. This refresh covers that changed definition, not a new audit of unchanged bundle proofs.",
       "before": {
         "sha256": "6df24ee261285e03c405927f858f8bbaa01f95350dc5de847b27983290ac8a45",
         "lean_declaration": null
       },
-      "reviewed_sha256": "4f215907a1a6237e9d1ce5a0498dffed424b5d6955ea40585c3fc2be0c9f5030"
+      "reviewed_sha256": "fe4076e022c75e7dbc63a297b6f03b7afa8ad13441cb8b89733ac45b6ff3e746"
     },
     {
       "kind": "definitions",

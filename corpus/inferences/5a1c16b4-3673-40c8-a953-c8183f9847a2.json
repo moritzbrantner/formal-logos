@@ -1,0 +1,14 @@
+{
+  "id": "5a1c16b4-3673-40c8-a953-c8183f9847a2",
+  "label": "Relevant essential sources are selected through De ente identity uniqueness (inference)",
+  "input_statement_ids": [
+    "6acd44eb-4b3e-480c-a479-6b4ac7a2522e",
+    "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+    "e2bfd1b1-7d5e-4be3-b5d4-f9db988c5745"
+  ],
+  "output_statement_id": "dcf4bcdd-4feb-4d97-a7e2-f6a08cdf4702",
+  "rule": "Universal instantiation, equality elimination and existential construction",
+  "meaning": "For each distinct actual own-being cause of a participant, the dictionary supplies represented identity. The existing at-most-one statement identifies it with the selected actual identity witness. No participation coverage or source supply is required for this restricted selection conclusion, which is vacuous if there are no relevant sources. Each selection input is tested by a nonempty finite control. No source premise is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

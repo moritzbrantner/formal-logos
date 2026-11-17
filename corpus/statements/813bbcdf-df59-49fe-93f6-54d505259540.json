@@ -1,0 +1,14 @@
+{
+  "id": "813bbcdf-df59-49fe-93f6-54d505259540",
+  "label": "Indexed capacity correspondence and information preservation",
+  "paraphrase": "For arbitrary scenario, event, situation, bearer and specified-respect types and explicit index maps, an event capacity profile has an exactly corresponding situation/bearer/respect capacity precisely when it agrees on every pair identified by all three maps; the existential image supplies such a capacity under that condition. An arbitrary event profile is recovered without this condition by retaining the event identity alongside its respect and preserving scenarios and actual bearers. A thin world/bearer profile is recovered from its one-respect embedding. Exact correspondence preserves the existing Borrowed, Retained and PowerRequired formulas. The one-respect round trip preserves the existing Eleatic existence-to-power, intellectual-exercise-to-power and power-to-concreteness formulas, without proving any of those premises. Two Boolean controls reject arbitrary event collapse and arbitrary scenario collapse; retaining different respects permits different powers of one bearer. The existing capOccurs/capAll regress contrast and PowerOmission are reused unchanged. Possession remains primitive; no activation, actual-world applicability, existential support or root discharge follows.",
+  "lean_declaration": "TruthCore.Causality.CapacityInterface.Certificate",
+  "definition_ids": [
+    "8ce4f4d6-a221-5db8-aef5-2f0babdfb416",
+    "df1369a5-8710-57be-97ca-08ccb49f3314",
+    "ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8"
+  ],
+  "disambiguation_ids": [
+    "1da63c28-4572-5787-82a0-51425c0f4b6a"
+  ]
+}

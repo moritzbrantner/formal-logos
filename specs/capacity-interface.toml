@@ -1,0 +1,22 @@
+[batch]
+vocab = "TruthCore.Causality.CapacityInterface"
+results = "TruthCore.Results.Causality.CapacityInterface"
+definitions = ["DEF-POWER-CAPACITY-READING", "DEF-BORROWED-POWER-PROFILE", "DEF-JOINT-CAUSAL-GROUPS"]
+disambiguations = ["DISAMB-POWER-CAPACITY-EXERCISE"]
+
+[[statement]]
+id = "Indexed capacity correspondence and information preservation"
+lean = "Certificate"
+paraphrase = "For arbitrary scenario, event, situation, bearer and specified-respect types and explicit index maps, an event capacity profile has an exactly corresponding situation/bearer/respect capacity precisely when it agrees on every pair identified by all three maps; the existential image supplies such a capacity under that condition. An arbitrary event profile is recovered without this condition by retaining the event identity alongside its respect and preserving scenarios and actual bearers. A thin world/bearer profile is recovered from its one-respect embedding. Exact correspondence preserves the existing Borrowed, Retained and PowerRequired formulas. The one-respect round trip preserves the existing Eleatic existence-to-power, intellectual-exercise-to-power and power-to-concreteness formulas, without proving any of those premises. Two Boolean controls reject arbitrary event collapse and arbitrary scenario collapse; retaining different respects permits different powers of one bearer. The existing capOccurs/capAll regress contrast and PowerOmission are reused unchanged. Possession remains primitive; no activation, actual-world applicability, existential support or root discharge follows."
+definitions = ["DEF-POWER-CAPACITY-READING", "DEF-BORROWED-POWER-PROFILE", "DEF-JOINT-CAUSAL-GROUPS"]
+disambiguations = ["DISAMB-POWER-CAPACITY-EXERCISE"]
+
+[[argument]]
+id = "Capacity correspondence from agreement on identified indices"
+theorem = "certificate"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = []
+conclusion = "Indexed capacity correspondence and information preservation"
+rule = "Existential image and equality transport, with explicit information-loss controls"
+meaning = "Formal certificate in classical logic: exact correspondence implies agreement on identified situation, bearer and respect indices. Conversely agreement lets the existential image recover precisely the original event profile. Retaining event identity gives a lossless adapter for arbitrary profiles. Transport is pointwise equivalence, not a new capacity or activation law. The unchanged root-route formulas are preserved under the thin profile round trip. The finite controls isolate index loss; the reused BorrowedExercise witnesses assert no new philosophical defeat. No external philosophical premises and no root premise change."
+senses = { CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE = "CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE_1" }

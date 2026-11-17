@@ -10,18 +10,20 @@
     "febac82d-1ca3-5773-89ec-0401f1bac7a0",
     "a49e4cf1-ca4f-5519-9724-892af257cedb"
   ],
-  "resolution": "Boundary explicitly requires transmitsPower false source effect, plus lack of intrinsic power at the effect and finite power grounding. Thus the exhibited source is actually connected to an instrumental target in its designated channel. intrinsicPower means intrinsic source-status for this channel, not every capacity of the bearer, and the source's absence of incoming transmission does not exclude all enabling conditions or dependence for its own being. The alternative power-as-unexercised-capacity is not formalized by the Profile, though DEF-BORROWED-POWER-PROFILE separately supplies one for #741 and is not identified with intrinsicPower; PureAct is a separate Thomistic act/potency predicate and not synonymous with current transmission. The selected respect is fixed by the supplied relation, not universally quantified.",
+  "resolution": "CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE_1 is primitive indexed possession in CapacityInterface.Capacity.possesses. Its adapters require explicit correspondence and agreement on identified situation, bearer and respect indices; arbitrary event profiles need not factor through those indices. The old consumers keep their supplied parameters; the adapter certificate preserves their formulas without establishing their premises. CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE_2 is the actual transmission field of #319, with endpoint existence and causation required separately by Coherent. Boundary requires an actual source-to-effect edge, lack of intrinsic power at the effect and finite grounding. CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE_3 adds existence, intrinsic source status and no incoming transmission in the selected channel; it does not exclude enabling conditions or existential support. CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE_4 is inductively finite power grounding, not a definition of every causal dependence. CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE_5 is PureAct, absence of potency in the supplied respects, not present transmission. #741 reuses DEF-BORROWED-POWER-PROFILE: cap records capacity, occurs records event occurrence, and exercised records group exercise at the actual scenario. Retained is not underived; SelfExercising excludes a lender in those records, not every cause. The event and bearer domains, and the group predicate and binary transmission relation, are not interchangeable. These are overlapping distinctions, not a five-way exhaustive or exclusive classification. The exact consumer audit and remaining interpretation maps are in docs/power-existence-scope-boundary.md.",
   "term_label": "CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE",
   "senses": [
     {
       "id": "01a68ccf-87fc-4c0e-82d1-3c794d389374",
       "label": "CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE_1",
-      "definition_id": "8ce4f4d6-a221-5db8-aef5-2f0babdfb416"
+      "definition_id": "8ce4f4d6-a221-5db8-aef5-2f0babdfb416",
+      "lean_declaration": "TruthCore.Causality.CapacityInterface.Capacity.possesses"
     },
     {
       "id": "1dc8b928-44d3-442a-a886-d6148a9e71a4",
       "label": "CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE_2",
-      "definition_id": "5aef0b49-016a-5716-9bd9-423d957b28ab"
+      "definition_id": "5aef0b49-016a-5716-9bd9-423d957b28ab",
+      "lean_declaration": "TruthCore.Causality.PowerExistenceBoundary.Profile.transmitsPower"
     },
     {
       "id": "32b3d298-8cbe-47b5-896c-2e3f3d37bba1",

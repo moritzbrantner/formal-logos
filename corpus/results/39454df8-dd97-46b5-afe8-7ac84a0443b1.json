@@ -1,0 +1,12 @@
+{
+  "id": "39454df8-dd97-46b5-afe8-7ac84a0443b1",
+  "label": "Cogito CONCRETE_6 existence through selected intellectual capacity",
+  "argument_id": "660673ca-0506-42b2-9265-00c96fb52cf4",
+  "challenge_module": "TruthCore.Results.Causality.CogitoCapacityInterface.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CogitoCapacityInterface.Solution",
+  "theorem": "TruthCore.Results.Causality.CogitoCapacityInterface.inhabitedFromSelectedCapacity",
+  "comparator_config": "results/39454df8-dd97-46b5-afe8-7ac84a0443b1/comparator.json",
+  "status": "solution-present",
+  "description": "Sibling instantiation of fe08da3c-27e2-5f0c-b688-400e583d0be3 at CapacityInterface.bearerProfile p intellectualEffect. All six original premise statements and the exact inhabited-concrete-world conclusion are retained. The selected effect is ability for understanding or judging under suitable conditions, not production of a separate inner object. Possession stays primitive and exercise-to-capacity stays an assumption. No claim about all events of a bearer, all existents, sourcehood or independence follows. This is explicit consumer adoption and conditional reuse, not premise discharge. Analyst reconstruction, attribution deferred.",
+  "transcription": "instantiation"
+}

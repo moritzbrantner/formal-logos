@@ -1,0 +1,9 @@
+{
+  "id": "a0a9e610-979f-476d-834e-7616343d4863",
+  "label": "Actual esse-cause responsibility composes along actual cause links",
+  "term": "Actual esse-cause responsibility composes along actual cause links",
+  "definition": "For any a, b and c in one q3 profile: if a is actual as to esse, a causes the esse of b, and b is an actual distinct cause of the actual c in that same esse respect (ActualEsseCause), then a causes the esse of c. This is an open analyst composition law for causal responsibility, not a definition of causation, intervention dependence or temporal origination. No source existence, participant actuality, OwnBeing or selection follows from it alone.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.Q44SourceSupply.ActualEsseCauseComposes",
+  "note": "Analyst reconstruction, attribution deferred. Reuses the existing interpreted q3 profile and ActualEsseCause (definition 8163859b-95b3-4dd2-8a69-541bd332f32f), participation (14d30c53-51c2-502d-b009-247dac0421e0) and primitive OwnBeing (5dc08b95-ca15-52ab-b8cd-2b558e9a13f7). Quantifier scope and logical content are given by the Lean body; underlying causal and own-being meanings are not completed by these compounds. Reception, identity, causal composition and source selection remain separate interfaces. See docs/notes/q44-inferential-dependency.md#ancestor-to-source-supply for examples, comparison, premise warrant, controls and open application burdens."
+}

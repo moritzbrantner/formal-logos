@@ -1,0 +1,11 @@
+{
+  "id": "b171d107-6ace-4547-b0b3-0b783d2f96c4",
+  "label": "Selected q44 source supply by aligning the actual ancestor with p",
+  "argument_id": "12bc6bf0-008f-4836-9602-b86888f9fed6",
+  "challenge_module": "TruthCore.Results.Causality.Q44SourceSupply.Challenge",
+  "solution_module": "TruthCore.Results.Causality.Q44SourceSupply.Solution",
+  "theorem": "TruthCore.Results.Causality.Q44SourceSupply.selectedSourceSupply",
+  "comparator_config": "results/b171d107-6ace-4547-b0b3-0b783d2f96c4/comparator.json",
+  "status": "solution-present",
+  "description": "For each participant the seven ancestry/composition/reception inputs supply a distinct actual identity ancestor and its own-being causal responsibility. Existing at-most-one actual identity and the selected actual identity witness identify that ancestor with the same p. This is selection of the supplied ancestor, not identification of every possible own-being cause with p. No backwards OwnBeing-to-identity dictionary or IsGod uniqueness is used."
+}

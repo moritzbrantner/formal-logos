@@ -1,0 +1,33 @@
+[batch]
+vocab = "TruthCore.Causality.PreservationMeaning"
+results = "TruthCore.Results.Causality.PreservationMeaning"
+definitions = ["Source cuts across admitted input records", "DEF-JOINT-CAUSAL-GROUPS"]
+disambiguations = ["DISAMB-JOINT-CAUSAL-MEMBERSHIP-EXERCISE"]
+
+[[statement]]
+id = "Admitted-record source cuts constrain available inputs"
+lean = "CutConsequences"
+paraphrase = "For every Exercise dictionary, effect event e and source bearer c, IF every admitted alternative for e contains a contributor borne by c, THEN every available record for e has an occurring event of c, and inactivity of all such contributor events prevents any available record. IF additionally every allowed occurrence of e is covered by an available record, that inactivity excludes occurrence of e in allowed scenarios. All conditions are internal hypotheses; no causal exercise, bearer nonexistence, esse interpretation or CausesIn edge is inferred. Analyst formulation; attribution deferred."
+
+[[statement]]
+id = "Alternative episodes separate source cuts from occurrence coverage"
+lean = "Control.Controls"
+paraphrase = "One stipulated Boolean circuit has two alternative contributor episodes borne by the same source, a separate receptive enabler and one effect token. Either episode with the enabler supplies an available record, while omitting the enabler does not. The common source has a populated cut, the enabler bearer does not, and assigning the second episode to a different source defeats the original cut. A second dictionary retains a populated cut at the all-on actual scenario while its effect also occurs with all source inputs absent; occurrence coverage fails. Record semantics only, not actual conservation or a complete inertial worldview."
+
+[[argument]]
+id = "Admitted-record cut consequences by contributor witness"
+theorem = "cutConsequences"
+senses = {JOINT_CAUSE_VERSUS_MEMBERSHIP_EDGE_EXERCISE = "JOINT_CAUSE_VERSUS_MEMBERSHIP_EDGE_EXERCISE_1"}
+premises = []
+conclusion = "Admitted-record source cuts constrain available inputs"
+rule = "Select the cut contributor in an available record; contradict source inactivity; compose explicit record coverage"
+meaning = "Conditional structural derivation over the existing joint-record dictionary. The all-alternative cut selects an occurring contributor of the source, including when the episode differs between records. The occurrence-loss clause consumes a separate record-coverage hypothesis. No predicate is identified with causal receipt or either original preservation sense; no root premise is discharged."
+
+[[argument]]
+id = "Alternative-episode source-cut and coverage controls"
+theorem = "controls"
+senses = {JOINT_CAUSE_VERSUS_MEMBERSHIP_EDGE_EXERCISE = "JOINT_CAUSE_VERSUS_MEMBERSHIP_EDGE_EXERCISE_1"}
+premises = []
+conclusion = "Alternative episodes separate source cuts from occurrence coverage"
+rule = "Explicit witnesses for the two singleton-contributor records and contradiction at the missing enabler or split bearer"
+meaning = "Checked Boolean record interpretations: alternative episodes may share a required source; an enabling condition is not thereby a contributor; an alternative source defeats the original cut. The uncovered interpretation keeps source cut and actual input population but allows an effect without input, showing record coverage is not supplied by those conditions. This omission result is about these formulas, not evidence that real conservation is false or that an inertial worldview is established."

@@ -1,0 +1,10 @@
+{
+  "id": "e1dee4ce-a1b2-4cf3-99e0-2027f23c1509",
+  "label": "Admitted-record cut consequences by contributor witness (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "13eb2e6d-7263-4543-867e-75a304e6fba2",
+  "rule": "Select the cut contributor in an available record; contradict source inactivity; compose explicit record coverage",
+  "meaning": "Conditional structural derivation over the existing joint-record dictionary. The all-alternative cut selects an occurring contributor of the source, including when the episode differs between records. The occurrence-loss clause consumes a separate record-coverage hypothesis. No predicate is identified with causal receipt or either original preservation sense; no root premise is discharged.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

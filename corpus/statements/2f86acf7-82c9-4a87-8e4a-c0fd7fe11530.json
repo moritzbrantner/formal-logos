@@ -1,0 +1,6 @@
+{
+  "id": "2f86acf7-82c9-4a87-8e4a-c0fd7fe11530",
+  "label": "Forward illumination response separates arrival and reception",
+  "paraphrase": "For every scenario of the stipulated quantity circuit, positive receiver response is equivalent to at least one positive arriving input together with receptivity. Zero solar emission or a closed solar path gives zero solar input; positive solar arrival is equivalent to positive emission and an open path. Source amounts, paths and receptivity are independent inputs, and the response is their forward calculation, not the receiver's substantial existence. No real optical calibration or productive causal exercise is inferred. Analyst formulation; attribution deferred.",
+  "lean_declaration": "TruthCore.Causality.IlluminationReceipt.ResponseLaw"
+}

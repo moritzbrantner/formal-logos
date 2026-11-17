@@ -1,0 +1,32 @@
+{
+  "id": "7f1704d5-14ab-4706-b19c-29e534cf086f",
+  "label": "Others are CREATURE_1 from selected q44 ancestor source supply",
+  "premise_statement_ids": [
+    "11e24b50-06bc-5e2e-b9b6-a4e4dc421237",
+    "8b8bb6df-7b8a-4f08-bfe2-21d52fe9f217"
+  ],
+  "conclusion_statement_id": "612078bf-5a68-5542-8b7b-f862f816ece0",
+  "inference_ids": [
+    "5fed4684-5384-42dc-b827-d5cf8ace8789"
+  ],
+  "meaning": "Participation coverage and the explicit selected-source conclusion give p as cause of each other being in the esse respect. Consequently p is a universal cause at esse and each other being is CREATURE_1, instantiated at IsCreatureOfUniversalCause. No premise that every essential cause equals p, Fourth-Way universal causation, source naming, efficiency or conservation is used.",
+  "term_senses": {
+    "CREATURE": "a900760c-6f85-483c-b90e-e67b32387568"
+  },
+  "definition_ids": [
+    "43f9403e-27e9-45f4-9976-9105ae76f3c2",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "afcdd2c5-1167-5a73-97d7-cb99a6ad5817",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "54f33165-05df-5205-807a-04154b5fd6ad",
+    "c49de1e9-c34f-424f-b144-b80c885974ca"
+  ]
+}

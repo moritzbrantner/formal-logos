@@ -1,0 +1,11 @@
+{
+  "id": "58b92cb0-a744-459d-a96d-c1ab7101d515",
+  "label": "Illumination input, source-alternative and empty-exercise controls",
+  "argument_id": "931b4287-ff2c-4560-a7ab-9391b00210e7",
+  "challenge_module": "TruthCore.Results.Causality.IlluminationReceipt.Challenge",
+  "solution_module": "TruthCore.Results.Causality.IlluminationReceipt.Solution",
+  "theorem": "TruthCore.Results.Causality.IlluminationReceipt.controls",
+  "comparator_config": "results/58b92cb0-a744-459d-a96d-c1ab7101d515/comparator.json",
+  "status": "solution-present",
+  "description": "Positive receipt content is represented by transmission of an independently given amount to the same receptive region and its additive response. The lamp comparison preserves the region and illumination endpoint, and confirms that a source may contribute without being required for positive L. The empty-exercise interpretation preserves the equations and shows that mathematical realization does not certify actual productive exercise. No rival worldview is refuted or original preservation sense completed."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "d9cc2eab-a277-487c-ac9a-f0cd80e3114a",
+  "label": "Cogito selected capacity transport with activation and mapping controls (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "e68fba46-8eb7-4d84-b8cb-ebf97eaef4fc",
+  "rule": "Pointwise equivalence transport and explicit finite omission witnesses",
+  "meaning": "Proves local formula transport without asserting its mapping premise universally. Finite controls retain the original four noncapacity premises and the applicable concreteness premise, isolating missing exercise-to-capacity and mismatched profile mapping. No metaphysical defeat or root discharge. thinRecovery consumes the existing CapacityInterface.Certificate/result d26f85e9-262c-426d-888c-2a09fef96a17 and preserves any original thin profile exactly.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

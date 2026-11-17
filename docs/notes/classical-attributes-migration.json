@@ -676,14 +676,14 @@
       "kind": "definitions",
       "id": "500ba323-cca5-5b35-8b75-947008256c43",
       "path": "corpus/definitions/self-evident-marking.json",
-      "status": "inspected",
+      "status": "repaired",
       "classification": "intentional_abstraction",
-      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced. Project schema (#156, #167). It is not yet tied to the classical per se nota of ST I q.2 a.1, which has no pinned passage; STMT-EXCLUDED-MIDDLE is marked on Aristotle's elenctic defence, not on per se nota.",
+      "finding": "Reviewed 2026-11-17: the repository marking remains challengeable metadata, distinct from philosophical warrant and Lean proof. The definition now separates ordinary retorsion/common_ground/observation criteria from documented excluded-middle and owner_approval legacy compatibility behavior. No marking, closure algorithm, source attribution or premise changes. Independent semantic challenge of 47fadc4cb supported the corrected legacy-closure description and inspected consumers; evidence and limits: docs/notes/psr-self-application-756.md#five-sense-consumer-reconciliation-1659. This refresh covers that changed definition, not a new audit of unchanged bundle proofs.",
       "before": {
         "sha256": "6df24ee261285e03c405927f858f8bbaa01f95350dc5de847b27983290ac8a45",
         "lean_declaration": null
       },
-      "reviewed_sha256": "4f215907a1a6237e9d1ce5a0498dffed424b5d6955ea40585c3fc2be0c9f5030"
+      "reviewed_sha256": "fe4076e022c75e7dbc63a297b6f03b7afa8ad13441cb8b89733ac45b6ff3e746"
     },
     {
       "kind": "definitions",

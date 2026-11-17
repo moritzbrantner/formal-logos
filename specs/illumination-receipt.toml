@@ -1,0 +1,49 @@
+[batch]
+vocab = "TruthCore.Causality.IlluminationReceipt"
+results = "TruthCore.Results.Causality.IlluminationReceipt"
+definitions = ["Forward illumination receipt model"]
+
+[[statement]]
+id = "Forward illumination response separates arrival and reception"
+lean = "ResponseLaw"
+paraphrase = "For every scenario of the stipulated quantity circuit, positive receiver response is equivalent to at least one positive arriving input together with receptivity. Zero solar emission or a closed solar path gives zero solar input; positive solar arrival is equivalent to positive emission and an open path. Source amounts, paths and receptivity are independent inputs, and the response is their forward calculation, not the receiver's substantial existence. No real optical calibration or productive causal exercise is inferred. Analyst formulation; attribution deferred."
+
+[[statement]]
+id = "Illumination record coverage and source cuts depend on admitted inputs"
+lean = "RecordAnalysis"
+paraphrase = "For arbitrary actual scenario and exercise assignment, every allowed positive illumination in the stipulated circuit has an admitted nonempty input record, and every admitted record with all its inputs present gives positive illumination. In solar-only scope the sun has a source cut and the air does not; admitting the lamp alternative defeats the sun cut for the same illumination event. In either scope, coherence follows IF the actual scenario is allowed and every declared exercised record is admitted with its incoming source input and receiver receptivity active. This does not derive genuine exercise, physical production, or a cause of the air's esse. Analyst formulation; attribution deferred."
+
+[[statement]]
+id = "Illumination source withdrawal and alternative input controls"
+lean = "Controls"
+paraphrase = "Declared finite scenarios of one receiver have response 3 with solar input, zero when that emission is withdrawn or its path blocked, and zero with nonreceptivity despite input 3. With solar input absent a lamp gives response 5 for the SAME illumination event; this scenario is allowed in expanded scope and excluded in solar-only scope. Both sources together give response 8 with contributions 3 and 5. Declared exercise is coherent when inputs correspond; the same populated bright input record with empty exercise is also coherent. The source/receiver bearers are distinct. These are analyst circuit assignments, not a witnessed actual episode, general optics, or substantial conservation."
+
+[[argument]]
+id = "Forward illumination response law by path and receptor cases"
+theorem = "responseLaw"
+premises = []
+conclusion = "Forward illumination response separates arrival and reception"
+rule = "Constructive positive-sum analysis and path/receptor case distinction"
+meaning = "Computes incoming positive supply independently of the receiver response and proves the local positive-response criterion. This is an analyzed forward quantity circuit rather than an uninterpreted productive label. Its interpretation as real optical production and the no-storage scope remain application commitments; no esse claim follows."
+
+[[argument]]
+id = "Illumination record coverage and source-cut analysis"
+theorem = "recordAnalysis"
+premises = []
+conclusion = "Illumination record coverage and source cuts depend on admitted inputs"
+senses = {JOINT_CAUSE_VERSUS_MEMBERSHIP_EDGE_EXERCISE = "JOINT_CAUSE_VERSUS_MEMBERSHIP_EDGE_EXERCISE_1"}
+definitions = ["Forward illumination receipt model", "Source cuts across admitted input records", "DEF-JOINT-CAUSAL-GROUPS"]
+disambiguations = ["DISAMB-JOINT-CAUSAL-MEMBERSHIP-EXERCISE"]
+rule = "Extract an active input from the forward response, construct its record, and test all admitted source alternatives"
+meaning = "Derives RecordCovered for the stipulated response law and selected scenario scopes; it is not an assumed opaque adequacy flag. The expanded roster permits a different illuminating source at the same target, destroying source-specific necessity. Exercise coherence additionally consumes explicit correspondence between independently declared exercise and its admitted active inputs. Genuine productive exercise is not derived from coherence."
+
+[[argument]]
+id = "Illumination input, source-alternative and empty-exercise controls"
+theorem = "controls"
+premises = []
+conclusion = "Illumination source withdrawal and alternative input controls"
+senses = {JOINT_CAUSE_VERSUS_MEMBERSHIP_EDGE_EXERCISE = "JOINT_CAUSE_VERSUS_MEMBERSHIP_EDGE_EXERCISE_1"}
+definitions = ["Forward illumination receipt model", "Source cuts across admitted input records", "DEF-JOINT-CAUSAL-GROUPS"]
+disambiguations = ["DISAMB-JOINT-CAUSAL-MEMBERSHIP-EXERCISE"]
+rule = "Evaluate distinct emission, path and reception assignments; verify declared exercise and retained empty-exercise interpretation"
+meaning = "Positive receipt content is represented by transmission of an independently given amount to the same receptive region and its additive response. The lamp comparison preserves the region and illumination endpoint, and confirms that a source may contribute without being required for positive L. The empty-exercise interpretation preserves the equations and shows that mathematical realization does not certify actual productive exercise. No rival worldview is refuted or original preservation sense completed."

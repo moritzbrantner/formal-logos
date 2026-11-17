@@ -1,0 +1,11 @@
+{
+  "id": "d31e0887-decb-4c53-82ea-cf88bf2881b3",
+  "label": "Q44 essential-source supply from the existing common ancestor and reception",
+  "argument_id": "6077cce0-7dc3-49e3-9574-8217a180f60f",
+  "challenge_module": "TruthCore.Results.Causality.Q44SourceSupply.Challenge",
+  "solution_module": "TruthCore.Results.Causality.Q44SourceSupply.Solution",
+  "theorem": "TruthCore.Results.Causality.Q44SourceSupply.sourceSupplyFromCommon",
+  "comparator_config": "results/d31e0887-decb-4c53-82ea-cf88bf2881b3/comparator.json",
+  "status": "solution-present",
+  "description": "Sibling retaining CommonEsseIsEssenceSource as a direct support option. A participant is actual and represented-distinct, hence other than the common identity source; its chain is supplied by that premise. The sourceSupply theorem uses the same explicit composition and four reception premises. Common uncausedness and advance numerical unity are not needed for this existential conclusion; per-participant ancestry is the weaker existing sufficient interface. No new causal or OwnBeing content is hidden in the common-source premise."
+}

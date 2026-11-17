@@ -7,5 +7,6 @@
   "basis": "sourced",
   "claim_ids": [
     "d80a3dd8-1b5b-5031-9977-0b270b534d12"
-  ]
+  ],
+  "note": "Formal boundary: FIRST_PRINCIPLE_ENTITLEMENT_AND_PRESUPPOSITION_1 remains prose-only. Its consumer is statement 73a6cf93-1a16-51a5-a208-deb90b3284e9, with no Lean declaration or consuming argument at the audited baseline. An occurring utterance alone is not determinate signification. OPEN: represent what an interlocutor signifies, the same meaning across assertion and denial, and the concession-to-PNC inference without assuming the conclusion. A meaningful concession is the intended example; mere token occurrence is excluded. This is an encoding obligation, not an objection to the recorded reading. See docs/notes/psr-self-application-756.md#five-sense-consumer-reconciliation-1659."
 }

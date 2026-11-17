@@ -1,0 +1,41 @@
+{
+  "id": "12bc6bf0-008f-4836-9602-b86888f9fed6",
+  "label": "Selected q44 source supply by aligning the actual ancestor with p",
+  "premise_statement_ids": [
+    "cbb068e8-337d-5772-a3f9-10df457ba9fe",
+    "3d01134d-0b03-4469-a81a-a18d6e179fa0",
+    "b4987085-f7b0-4031-a795-364873d3c216",
+    "6dfe01ab-e3f2-5a4c-b102-701c161f2cf7",
+    "7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2",
+    "14325c83-1c3f-5afb-b63f-52b0c2b2a326",
+    "bc1810e5-1070-5585-9b0f-e17ca3547ac7",
+    "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+    "e2bfd1b1-7d5e-4be3-b5d4-f9db988c5745"
+  ],
+  "conclusion_statement_id": "8b8bb6df-7b8a-4f08-bfe2-21d52fe9f217",
+  "inference_ids": [
+    "22907144-cc5b-4119-a8c9-98efb2dd5e45"
+  ],
+  "meaning": "For each participant the seven ancestry/composition/reception inputs supply a distinct actual identity ancestor and its own-being causal responsibility. Existing at-most-one actual identity and the selected actual identity witness identify that ancestor with the same p. This is selection of the supplied ancestor, not identification of every possible own-being cause with p. No backwards OwnBeing-to-identity dictionary or IsGod uniqueness is used.",
+  "definition_ids": [
+    "43f9403e-27e9-45f4-9976-9105ae76f3c2",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "8a08ca4c-1fac-4020-b0e9-fac2d70de0d5",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "0ea9feb8-1f92-5b11-aa74-2f2e567c6106",
+    "a67e6214-624d-54d1-81ff-442c09c5ea9d",
+    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7",
+    "a0a9e610-979f-476d-834e-7616343d4863"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "8bb31748-e20f-5266-ac39-c442faab6622",
+    "54f33165-05df-5205-807a-04154b5fd6ad"
+  ]
+}
