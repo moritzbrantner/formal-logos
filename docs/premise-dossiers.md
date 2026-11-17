@@ -11,7 +11,7 @@ A single-statement dossier projects only that statement and skips corpus
 validation (run `truth check`); `--all` still validates. Text output shows at
 most `--limit` entries per section (default 8; the newest attempts) and shortens
 long prose, saying how many entries `--json` adds. `--limit 0` gives the full
-text. `--json` is always complete and unchanged (#958).
+text. `--json` is always complete (#958).
 
 The explorer links `/dossiers/<STMT-ID>/` from every statement page. CLI and
 explorer consume the same Python projection and authoritative frontier rules.
@@ -89,3 +89,98 @@ Configuration cases are linked by exact seed/application statement IDs through
 `configuration_cases`. These links are registrations only; use the live
 [`configurations` command](configurations.md) to certify their cores and witnesses.
 No configuration input changes dossier closure or route contribution.
+
+## Current assessment and publication disposition
+
+An append-only `summary` is historical evidence, not a reliable current-state
+excerpt. An attempt may carry one `current_assessment` object. It is the
+explicitly selected assessment **of its named scope**, not a replacement for all
+judgments mentioning the same statements. Multiple scoped assessments remain
+side by side, including disagreements. The note retains the full argument and
+historical findings; do not delete them when replacing this compact object.
+
+Required fields are `date` (ISO calendar date), `statement_ids` (a nonempty
+subset of this attempt's targets), `scope`, `assessment`, `next_test`, `note`
+(the existing substantive note and anchor), `reviewed_revision` (full commit
+hash of the assessed delivery), `review`, `publication`, `evidence`, and
+`supersedes` (exact earlier wording/scope displaced, or explicitly none).
+`review` is `unreviewed`, `accepted_qualified`, or `changes_requested`;
+`publication` is `unpublished`, `published`, or `merged`. Evidence identifies
+the review/publication record, its exact scope and qualifications. These are
+recorded dispositions, never inferred from PR references, dates, CI or prose.
+An unreviewed entry records the proposed delivery hash; that field alone does
+not assert completed review. Keep an unresolved philosophical `outcome` and
+`blocker` even when its bounded synthesis has been reviewed and merged.
+
+`truth brief TARGET` and single-target `truth dossier TARGET` print these
+assessments, exact revision, disposition and next test before historical
+retrieval. Their JSON exposes `current_assessments`; batch
+`brief --assessments-for ID,...` exposes the same entries. Question briefs
+include them for the statements named in their matched evidence. Legacy attempts
+remain unmarked; absence is unknown currentness, not unfinished integration.
+Historical note sections use only their own heading dates. Note-wide dates and
+later line position never certify currentness or supersession.
+
+For example, `truth brief a7bbd2fd-242c-5097-a9a3-581d25835890` first reports
+the qualified group #1730 synthesis at reviewed head
+`f9bdbb32f6239430213eb42ec2f42768e5154c0d`, merged in PR #1742, and its
+same-bearer/complete-exercise next test. The November 13 intrinsic attempt
+remains `blocked` on philosophical adequacy. Its old pending-review handoff and
+candidate-certification suggestion remain historical evidence; neither is the
+current integration task. No premise is established by this disposition.
+
+## Declared revisions and downstream reassessment
+
+When changing a meaning, premise warrant or influential judgment, declare the
+change in the owning attempt's `revisions` array. Ordinary editorial edits and
+publication bookkeeping do not require a declaration. Each declaration has a
+stable `revision` identifier, `kind` (`meaning`, `premise_warrant`, `judgment`),
+`statement_ids` within the current assessment's scope, `previous` (the exact
+prior evidence locator/revision), and a substantive `reason`. Preserve the
+prior assessment in the existing note before updating its current object.
+A new revision gets its own acknowledgements; an old acknowledgement never
+resolves a new change.
+
+```json
+{
+  "revision": "same-bearer-warrant-v2",
+  "kind": "premise_warrant",
+  "statement_ids": ["<existing statement UUID>"],
+  "previous": "docs/notes/existing-case.md#earlier-assessment",
+  "reason": "New same-bearer evidence changes the application warrant.",
+  "reassessments": [
+    {
+      "consumer": "arguments:<existing argument UUID>",
+      "disposition": "retained",
+      "reason": "The conditional argument retains its original interpretation; its application does not rely on the revised reading."
+    }
+  ]
+}
+```
+
+`brief` and single-target `dossier` expose `revision_impacts` for both the
+changed targets and affected downstream endpoints. The existing explicit
+reference graph supplies reverse consumers; argument conclusions propagate
+impacts onward; alternative producers of that conclusion are not thereby
+consumers of the changed premise. The existing context import parser adds source-level Lean
+import consumers, including consumers omitted from the declared premise list.
+Imports and prose references identify **potential uses**, not proof-term use,
+semantic equivalence, a defeat, or an actual change in truth. Each consumer has
+a predecessor (`via`) so the proposed impact can be inspected. Nonregistered
+uses and implicit semantic dependencies remain outside this analysis.
+
+Every exposed consumer defaults to `pending`. Record `pending`, `retained`,
+`revised`, or `not_applicable`, with a substantive reason, separately for each
+consumer and revision. Retain consequential revised findings in that consumer's
+existing record/note and cite them in the reason. This is a review work item,
+not automatic acceptance; disposition does not establish a claim. Reassessment
+records do not change theorem status, proof validity, closure, premise cost or
+source/binding rules. An unrelated proof remains unaffected. Newly discovered
+consumers remain pending without editing another registry.
+
+`truth check` validates declarations and rejects duplicate or unaffected
+consumer acknowledgements against the current graph. Pending reassessment stays
+visible without failing proof validation. Declarations are deliberate: this
+mechanism does not attempt to infer a philosophical reversal from every prose
+diff, and it cannot detect an undeclared reversal. Inspect `--json` for the full
+consumer list and its reference/import boundary before recording dispositions.

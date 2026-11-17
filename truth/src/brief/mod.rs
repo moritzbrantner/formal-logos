@@ -444,7 +444,9 @@ pub fn assessment_batch(
     for entries in out.values_mut() {
         entries.sort_by(|a, b| a["section"].as_str().cmp(&b["section"].as_str()));
     }
-    Ok(json!({"boundary": BOUNDARY, "statements": out}))
+    Ok(
+        json!({"boundary": BOUNDARY, "statements": out, "current_assessments": crate::lifecycle::current(corpus, ids), "revision_impacts": crate::lifecycle::impacts(root, corpus, ids)?}),
+    )
 }
 
 /// The shortest name a note uses for a result theorem: its last two
@@ -507,8 +509,7 @@ fn superseded(raw: &str, path: &str) -> Vec<Value> {
 
 /// The judgment-headed and rival-headed sections of a note (at most `limit`
 /// of each), each with the paragraph that states what is or is not settled.
-pub fn assessment_sections(note: &notes::Note, raw: &str) -> Vec<Value> {
-    let note_date = retrieval::latest_date(raw);
+pub fn assessment_sections(note: &notes::Note, _raw: &str) -> Vec<Value> {
     let mut out = Vec::new();
     for section in &note.sections {
         if section.level == 0 {
@@ -538,8 +539,8 @@ pub fn assessment_sections(note: &notes::Note, raw: &str) -> Vec<Value> {
             "section": note.key(section),
             "heading": section.heading,
             "line": line,
-            "date": heading_date.clone().or_else(|| note_date.clone()),
-            "dated_by": if heading_date.is_some() { "heading" } else { "latest date written in the note" },
+            "date": heading_date,
+            "dated_by": "heading only; undated historical text has no inferred currentness",
             "excerpt": retrieval::excerpt(paragraph, 360),
         }));
     }
@@ -547,10 +548,10 @@ pub fn assessment_sections(note: &notes::Note, raw: &str) -> Vec<Value> {
     out
 }
 
-/// Newest first by recorded date, then location: several notes' judgments
+/// Newest first by heading date, then file order: several notes' judgments
 /// are listed side by side, never reconciled.
 pub fn sort_assessments(assessments: &mut [Value]) {
-    // Within a date, a later position in the same note is the later text.
+    // Location breaks ties deterministically; it never implies supersession.
     let path = |value: &Value| {
         let section = value["section"].as_str().unwrap_or_default();
         section.split('#').next().unwrap_or(section).to_owned()
@@ -560,7 +561,7 @@ pub fn sort_assessments(assessments: &mut [Value]) {
             .as_str()
             .cmp(&a["date"].as_str())
             .then_with(|| path(a).cmp(&path(b)))
-            .then_with(|| b["line"].as_u64().cmp(&a["line"].as_u64()))
+            .then_with(|| a["line"].as_u64().cmp(&b["line"].as_u64()))
     });
 }
 
@@ -797,7 +798,7 @@ pub fn statement_brief(
             })
         })
         .collect();
-    attempts.reverse(); // newest first (the dossier sorts by date, then id)
+    attempts.reverse(); // historical attempt order; explicit current assessments are separate
     let mut mention_ids: BTreeSet<&str> = BTreeSet::from([sid]);
     for argument in &concluding {
         if let Some(id) = argument["id"].as_str() {
@@ -903,6 +904,8 @@ pub fn statement_brief(
     Ok(json!({
         "evidence_graph": graph,
         "mode": "statement",
+        "current_assessments": crate::lifecycle::current(corpus, &BTreeSet::from([sid.to_owned()])),
+        "revision_impacts": crate::lifecycle::impacts(inputs.root, corpus, &BTreeSet::from([sid.to_owned()]))?,
         "boundary": BOUNDARY,
         "requested": requested,
         "identity": inputs.identity(),
@@ -1260,6 +1263,8 @@ pub fn question_brief(
         "semantic_discovery": semantic,
         "evidence_graph": graph,
         "mode": "question",
+        "current_assessments": crate::lifecycle::current(inputs.corpus, &anchor_list.iter().map(|(id,_,_)| id.clone()).collect()),
+        "revision_impacts": crate::lifecycle::impacts(inputs.root, inputs.corpus, &anchor_list.iter().map(|(id,_,_)| id.clone()).collect())?,
         "boundary": BOUNDARY,
         "question": query,
         "identity": inputs.identity(),
@@ -1614,6 +1619,16 @@ fn graph_lines(lines: &mut Vec<String>, graph: &Value, limit: usize) {
 /// reference, at most `limit` per section.
 pub fn format_brief(brief: &Value, aliases: &Aliases, limit: usize) -> String {
     let mut lines = Vec::new();
+    lines.extend(crate::lifecycle::lines(
+        brief["current_assessments"]
+            .as_array()
+            .map(Vec::as_slice)
+            .unwrap_or_default(),
+        brief["revision_impacts"]
+            .as_array()
+            .map(Vec::as_slice)
+            .unwrap_or_default(),
+    ));
     graph_lines(&mut lines, &brief["evidence_graph"], limit);
     let absent = brief["absent"].as_array().cloned().unwrap_or_default();
     if brief["mode"] == "question" {

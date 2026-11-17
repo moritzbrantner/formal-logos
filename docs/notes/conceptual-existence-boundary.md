@@ -1,5 +1,27 @@
 # Conceptual existence boundary
 
+## Current reviewed assessment (2026-11-17)
+
+Coverage and union well-foundedness remain distinct sufficient support policies. Standing actual ancestry offers a checked, more flexible alternative to direct-edge persistence; the weakest source scope suffices for the union bridge. These conditional routes add no independent warrant to actual population, modal support or the divine naming inputs.
+
+Reviewed scope: Connected existence interpretation and conditional source routes; scope/ancestry continuation retained. Worker `c04f9a5d`; independent reviewer `e75ce8e4`
+reported no findings on delivered head `b5e27f88ec92938f9094112861cd3ddbb0e4ffe5`.
+[PR #1738](https://github.com/moritzbrantner/formal-logos/pull/1738) is merged;
+final CI passed. Review accepts the qualified synthesis only, with no premise
+establishment or new formal validity claim. The review detail and integration
+disposition remain in that PR body and existing #143.
+
+Next test: Test an independently specified necessary-source account at the selected sustaining relation for standing ancestry and J1 scope; retain coverage/union alternatives and all attribute/naming inputs.
+
+This current disposition supersedes the **pending review/publication** wording
+for group #1726 below. Those passages are preserved as historical worker
+handoffs, not outstanding integration work. It does not supersede arbitrary
+earlier judgments, unresolved philosophical questions, or deferred owner scopes.
+The canonical attempt's `current_assessment` carries this same bounded scope.
+
+<!-- Historical research and worker handoff evidence follows. -->
+
+
 ## Connected existence case for #1726 (2026-11-17)
 
 **Complete proposed outcome for coordinator semantic challenge.** Evidence
@@ -1033,6 +1055,8 @@ Reproduction for each result ID in the tables above:
 ```bash
 python3 scripts/worker_env.py -- flock /tmp/moenarch/truth-core-heavy.lock bash scripts/verify-result.sh RESULT_ID
 ```
+
+**Historical worker handoff; publication status superseded by the [current reviewed disposition](#current-reviewed-assessment-2026-11-17).**
 
 Independent semantic review of this new complete outcome and final integration
 CI remain coordinator-owned. Proof gates establish the declared conditional

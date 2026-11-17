@@ -1,5 +1,27 @@
 # De ente c.3: from received esse to one first being whose esse is its essence (#1628)
 
+## Current reviewed assessment (2026-11-17)
+
+The assembled case positively supports one necessary actual source conditional on the complete fixed-dictionary packages, and can carry that same source into the existence-only God consumer. The connected source reconstruction preserves positive constitutive support and the exact conditional source, composition, ascent and naming bundles. Root access, common ancestry, unique actual root and all-world underivedness remain distinct. Joint metaphysical applicability remains unresolved; separate controls do not supply a joint divine model.
+
+Reviewed scope: Connected actual-source and uniqueness reconstruction with full foundation and GOD_4 interfaces. Worker `aa5dbf4`; independent reviewer `ac0ef321`
+reported no findings on delivered head `03ec6bbbb18a8dbcae3e9451d18c6a55179b9e69`.
+[PR #1741](https://github.com/moritzbrantner/formal-logos/pull/1741) is merged;
+final CI passed. Review accepts the qualified synthesis only, with no premise
+establishment or new formal validity claim. The review detail and integration
+disposition remain in that PR body and existing #143.
+
+Next test: Consume a defended same-relation foundation/source-access or uniqueness application from its existing owner, then reassess the complete same-witness attribute/naming route without upgrading actual rootness to all-world underivedness.
+
+This current disposition supersedes the **pending review/publication** wording
+for group #1729 below. Those passages are preserved as historical worker
+handoffs, not outstanding integration work. It does not supersede arbitrary
+earlier judgments, unresolved philosophical questions, or deferred owner scopes.
+The canonical attempt's `current_assessment` carries this same bounded scope.
+
+<!-- Historical research and worker handoff evidence follows. -->
+
+
 **Status:** conditional formal results, one new root connection, and a
 provisional judgment. Sibling of the #1629 note
 [de-ente-extrinsic-source-1629.md](de-ente-extrinsic-source-1629.md), whose
@@ -1255,6 +1277,8 @@ metaphysical applicability remains unresolved, and separate controls are not
 combined as if they were one model. Foundation findings are consumed at matching scope and
 application obstacles are not presented as defeats. No claim is newly
 attributed and no source bytes are freshly certified.
+
+**Historical worker handoff; publication status superseded by the [current reviewed disposition](#current-reviewed-assessment-2026-11-17).**
 
 **Disposition proposed to the coordinator:** #1729's connected reconstruction
 and exact boundaries are delivered for a fresh semantic challenge. After

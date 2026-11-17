@@ -22,6 +22,7 @@ pub mod issues;
 mod kernels;
 pub mod lean_reuse;
 pub mod lexicon;
+pub mod lifecycle;
 pub mod navigation;
 pub mod notes;
 pub mod orphans;
