@@ -156,6 +156,7 @@ public import TruthCore.Causality.NecessarySenseFork
 public import TruthCore.Causality.NecessarySimplePlurality
 public import TruthCore.Causality.NecessarySupportActualScope
 public import TruthCore.Causality.NecessarySupportCoverage
+public import TruthCore.Causality.NecessarySupportPathConnection
 public import TruthCore.Causality.NonlimitingConcreteExistence
 public import TruthCore.Causality.OccurrenceUnderivedEssence
 public import TruthCore.Causality.OriginDeletion
