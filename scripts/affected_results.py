@@ -6,10 +6,11 @@ verification could be affected:
 
 * every result when the change touches the toolchain, Lake files, tooling,
   verifier or workflow, or an input cannot be classified safely;
-* no result when the change touches only the Rust `truth` CLI crate and its
-  parity harness (TOOLING_PATTERNS): Comparator and `verify-all.sh
-  --results-file` never run `truth`, so CI instead runs the CLI on the real
-  corpus (corpus/Lean checks, parity, explorer and report);
+* no result when the change touches only the Rust `truth` CLI crate, its parity
+  harness or the explicitly listed retrieval benchmarks (TOOLING_PATTERNS):
+  Comparator and `verify-all.sh --results-file` never run these inputs, so CI
+  instead runs the CLI on the real corpus (corpus/Lean checks, parity, explorer
+  and report) and the offline Python tests;
 * otherwise each result whose own records (`results/<ID>/**`,
   `corpus/results/<ID>.json`) changed, or whose Challenge or Solution module,
   or any `TruthCore` module either imports transitively, changed.
@@ -72,13 +73,21 @@ FULL_RUN_PATTERNS = (
 
 # The Rust `truth` CLI crate, its tests (Rust unit tests and the frozen golden replay)
 # and README, and the root Cargo workspace (it builds only `truth`; verifier/ is excluded
-# and has its own Cargo.lock), run by the truth-cli job. The Comparator path (verify-all.sh with
-# --results-file, verify-result.sh, the verifier) never runs `truth`, so these select
-# no results but keep every check that runs the CLI on the real corpus (#954).
+# and has its own Cargo.lock), run by the truth-cli job. The exact retrieval harness
+# paths below only exercise CLI output and temporary fixtures; their Python tests run
+# in the corpus job. The Comparator path (verify-all.sh with --results-file,
+# verify-result.sh, the verifier) runs neither `truth` nor these harnesses, so these
+# select no results but keep every check that runs the CLI on the real corpus (#954).
 TOOLING_PATTERNS = (
     "truth/*",
     "Cargo.toml",
     "Cargo.lock",
+    # Keep these exact: new helpers and neighboring fixtures retain the full fallback.
+    "scripts/retrieval_benchmark.py",
+    "scripts/retrieval_correctness_benchmark.py",
+    "scripts/test_retrieval_correctness_benchmark.py",
+    "scripts/testdata/retrieval-correctness-measurement.json",
+    "scripts/testdata/retrieval-correctness-oracle.json",
 )
 
 # What the explorer build and its browser tests run, apart from corpus data: the app, the

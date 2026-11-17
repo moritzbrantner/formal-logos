@@ -300,10 +300,14 @@ class ImpactPlanTest(unittest.TestCase):
         self.assertTrue(self.plan("corpus/statements/S.json", main=True)["checks"]["truth_cli"])
         self.assertTrue(ar.impact_plan(self.root, None)["checks"]["truth_cli"])
 
-    def test_truth_cli_changes_select_no_results_but_run_the_cli_on_the_corpus(self):
+    def test_cli_and_retrieval_harness_changes_keep_cli_checks_without_proof_shards(self):
         for path in ("truth/src/frontier.rs", "truth/tests/golden/frontier/test_fixture.json",
                      "truth/tests/golden.rs", "truth/Cargo.toml", "truth/README.md", "Cargo.toml",
-                     "Cargo.lock"):
+                     "Cargo.lock", "scripts/retrieval_benchmark.py",
+                     "scripts/retrieval_correctness_benchmark.py",
+                     "scripts/test_retrieval_correctness_benchmark.py",
+                     "scripts/testdata/retrieval-correctness-measurement.json",
+                     "scripts/testdata/retrieval-correctness-oracle.json"):
             for main in (False, True):
                 with self.subTest(path=path, main=main):
                     self.assertEqual(ar.input_kind(path), "tooling")
@@ -324,13 +328,45 @@ class ImpactPlanTest(unittest.TestCase):
         self.assertTrue(plan["checks"]["truth_cli"])
         self.assertFalse(plan["checks"]["full"])
 
+    def test_retrieval_harness_mixed_with_formal_changes_keeps_affected_checks(self):
+        retrieval = "scripts/retrieval_correctness_benchmark.py"
+        for path, result in (("TruthCore/Base.lean", "RESULT-A"),
+                             ("results/RESULT-B/comparator.json", "RESULT-B"),
+                             ("corpus/results/RESULT-C.json", "RESULT-C")):
+            with self.subTest(path=path):
+                plan = self.plan(retrieval, path)
+                self.assertEqual((plan["mode"], plan["selected"]), ("subset", [result]))
+                self.assertEqual(ar.shard_count(self.root, plan["selected"]), 1)
+                for key in ("lean", "truth_cli", "explorer_tests", "explorer", "report",
+                            "comparator_library"):
+                    self.assertTrue(plan["checks"][key], key)
+                self.assertEqual(plan["checks"]["library_changed"], path.endswith(".lean"))
+                self.assertEqual(ar.nanoda_scope(self.root, [retrieval, path]),
+                                 ar.nanoda_scope(self.root, [path]))
+                main = self.plan(retrieval, path, main=True)
+                self.assertEqual(main["mode"], "full")
+                self.assertEqual(main["selected"], ["RESULT-A", "RESULT-B", "RESULT-C"])
+
+    def test_unlisted_retrieval_scripts_and_fixtures_keep_full_fallback(self):
+        for path in ("scripts/retrieval_new.py", "scripts/test_retrieval_new.py",
+                     "scripts/retrieval_benchmark.py.bak", "scripts/nested/retrieval_benchmark.py",
+                     "scripts/testdata/retrieval-correctness-new.json",
+                     "scripts/testdata/retrieval-correctness-oracle.json.bak"):
+            with self.subTest(path=path):
+                plan = self.plan("scripts/retrieval_benchmark.py", path)
+                self.assertEqual((plan["mode"], plan["selected"]),
+                                 ("full", ["RESULT-A", "RESULT-B", "RESULT-C"]))
+                self.assertTrue(all(plan["checks"].values()))
+                self.assertEqual(ar.nanoda_scope(self.root, [path]), ("full", []))
+
     def test_selection_and_verifier_inputs_beside_the_cli_still_run_everything(self):
         for path in ("scripts/affected_results.py", "scripts/verify-all.sh", "scripts/verify-result.sh",
-                     "scripts/bootstrap-verifier.sh", "verifier/Cargo.lock", "verifier/src/main.rs",
+                     "scripts/test_affected_results.py", "scripts/bootstrap-verifier.sh",
+                     "verifier/Cargo.lock", "verifier/src/main.rs",
                      ".github/workflows/ci.yml", "lean-toolchain", "lakefile.toml", "scripts/truth_other.py"):
             with self.subTest(path=path):
                 self.assertNotEqual(ar.input_kind(path), "tooling")
-                plan = self.plan("truth/src/frontier.rs", path)
+                plan = self.plan("truth/src/frontier.rs", "scripts/retrieval_benchmark.py", path)
                 self.assertEqual(plan["mode"], "full")
                 self.assertEqual(plan["selected"], ["RESULT-A", "RESULT-B", "RESULT-C"])
                 self.assertTrue(all(plan["checks"].values()))

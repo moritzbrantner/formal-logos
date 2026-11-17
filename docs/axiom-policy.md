@@ -91,11 +91,23 @@ Comparator (check 1) runs on a PR only for the results the diff can affect
 whose Challenge or Solution module, or any `TruthCore` module either imports
 transitively, changed. A change to the toolchain, the Lake files, the verifier
 scripts or pins, `verifier/`, any tooling script or a workflow selects every
-result, as does an unknown input or an unavailable exact diff. A change only to
-the Rust `truth` CLI crate (including its tests and frozen goldens) or the root
-Cargo workspace selects no result,
-since the Comparator path never runs `truth`; the CLI tests, corpus, binding,
-explorer and report checks still run. Every formal/corpus change on `main`, a nightly
+result, as does an unknown input or an unavailable exact diff. The explicit
+`TOOLING_PATTERNS` exceptions cover the Rust `truth` CLI crate (including its
+tests and frozen goldens), the root Cargo workspace, and these retrieval-only
+harness inputs:
+
+- `scripts/retrieval_benchmark.py`
+- `scripts/retrieval_correctness_benchmark.py`
+- `scripts/test_retrieval_correctness_benchmark.py`
+- `scripts/testdata/retrieval-correctness-measurement.json`
+- `scripts/testdata/retrieval-correctness-oracle.json`
+
+A change confined to those inputs selects no result, since the Comparator path
+runs neither `truth` nor the retrieval harnesses. The CLI tests, corpus, binding,
+explorer, report and offline Python tests still run. The script/fixture exemptions
+are exact paths; new or renamed helpers and neighboring fixtures retain the full
+fallback. Mixed changes still select affected proofs and their NanoDa scope.
+Every formal/corpus change on `main`, a nightly
 scheduled run and any manual run verify every result, split across parallel
 shards (`scripts/verify-all.sh --shard INDEX/COUNT`).
 
