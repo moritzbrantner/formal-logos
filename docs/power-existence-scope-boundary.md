@@ -1974,3 +1974,193 @@ contracts, fixed profile, local transport, exact omission bundles, sense bridges
 and instantiation boundary. Actual applicability and premise warrant remain open.
 The next application question concerns one specified judgement and independently
 described suitable conditions; it is not a missing generic transport theorem.
+
+## #319: applying the two uniting-cause interfaces (2026-11-17)
+
+**Complete proposed outcome for independent semantic challenge.** At baseline
+`cd1c362d14100936c602a48b3c54508a4dca33ad`, the bounded question is what warrants
+`STMT-UNITING-CAUSES-PRESENT` (`7ce040a2-7e9c-58e0-8ec1-ce99a60b587b`) and
+`STMT-UNITING-CAUSES-ARE-ACTUAL` (`53a4f189-099c-52ab-bd6c-f53251c9e294`)
+for the **same** alleged uniter and actual target, in the esse respect. The
+answer is restricted: independently warranted effective contribution to this
+target's being gives a positive rationale for presence and causal inclusion;
+composition, functional individuation and a record of generation do not by
+themselves establish that contribution. This sharpens application conditions;
+it supplies no new formal premise discharge or universal conservation proof.
+
+The current issue body/comments, both dossiers, related results, brief and
+novelty retrieval were inspected. Prior work already records the restricted
+productive rationale and historical/structural alternatives. This is a
+consumer-specific clarification of that evidence, not discovery of a new
+conservation argument. `context NECESSARY-UNION-COMMON-NONCOMPOSITE` and the
+seed's brief report **no current enumerated Catholicism-root route through this
+result**. The graph destination is the existing same-witness #319 conclusion
+`740a44f0-b77d-55b2-bd1b-8517ff85d02a`; a further connection into an active root
+route is OPEN and coordinator-owned. The issue's intended role in the classical
+case must not be reported as an already connected root derivation.
+
+### What the actual consumer asks for
+
+`UnderivedNonComposite.from_union` imports #636's `causal_from_union` and keeps
+its witness n. Assuming `Composite n`, the existing q.3 a.7
+`CompositeHasAUnitingCauseReading` supplies one c with `c ≠ n` and `CausesIn c n esse`. Presence supplies
+`m.ExistsAt w c`; correspondence supplies `m.Causes w c n`. Sourcehood of this
+same n excludes that incoming edge. No replacement of n by another source is
+permitted. The target is already present; its presence does not supply c's.
+The declaration is
+`TruthCore.Latin.Aquinas.SummaTheologiae.CompositeHasAUnitingCauseReading`.
+
+Both interface definitions quantify over **all** distinct cause/target pairs
+with the displayed guards at the selected w. An independently defended case
+therefore illustrates their rationale without establishing these quantified
+premises. The proof uses them only at its generated pair c,n, but a proof-local
+use does not weaken the registered premise's scope. No narrower sibling is
+introduced: the missing result is warrant for application, not another lambda
+that packages the same implication.
+
+World locality is also not temporal simultaneity. `Ontic` supplies worlds and
+accessibility, no time index; `CausesIn` has neither. A sustaining application
+must specify which situation its predicates represent. Saying “at w” cannot
+by itself mean “exercising now.” Conversely, sustaining production need not be
+motion, a succession of replacement creations, or a temporally earlier act.
+The existing q.104 discussion permits continuing esse-giving without those
+features. No times-as-worlds substitution is made here.
+
+### Positive warrant and its application boundary
+
+The positive argument starts with a real contribution, not an unexplained
+predicate: if c effectively gives or sustains x's being in the selected
+situation, the productive basis cannot consist solely of an absent candidate
+or our description. There is something actually responsible for the effect.
+This supports cause presence **provided that the responsible bearer is the
+same c**, represented in the chosen existence domain. A past activity, a law
+sentence and a currently existing bearer with unused capacity do not each
+supply that identification. The argument does not require materiality, exclusive
+sufficiency, an independently prior proof of every causal primitive, or a
+separate cause for each temporal instant.
+
+Correspondence then requires that `Ontic.Causes` include this actual kind of
+effective esse-contribution. If it denotes only local changes or originating
+events, a sustaining or primary cause working through secondary agents is not
+included merely by calling the relation ordinary causation. If it already
+includes the independently identified productive contribution, inclusion has a
+positive semantic rationale: the very dependence described by the first
+relation falls within the second's specified scope. That is not an equation
+of the two relations. Its application must preserve c, x, the selected situation
+and the esse effect. Relabeling an organizing principle as an efficient agent
+would assume the disputed step.
+
+`ActualCauseSupportsEsse` is a further interface, not part of either argument
+above: it maps **every** ordinary edge with actual endpoints to R. Ordinary
+event causation need not support the target's esse. The existing
+`UnderivedEssenceEsse.actual_not_not_identity_direct` instead consumes
+`ActualEsseCausesSupportAt` on the actual q.3 esse-cause pair; its existing
+`TypedCorrespondenceControl` retains an event edge while the broader map fails.
+These are already encoded/tested distinctions. No new adapter or replacement
+proof is needed. For the noncomposition consumer, absence of incoming ordinary
+causes is already obtained through #636; retaining that result also retains
+#636's broader mapping premise. This note does not silently remove it.
+
+### Standing alternatives and replies on the same target
+
+The historical account has a specific mechanism: a generator establishes an
+arrangement, after which the materials and their maintained relations account
+for its persistence. The existing house/builder discussion in
+[composition-causal-scope.md](notes/composition-causal-scope.md#source-discrimination-immanent-unity-becoming-and-continued-esse)
+and the recorded retained-heat contrast support distinguishing origin from
+current production. Even a builder who remains alive is not thereby still
+building that house. Thus **actual endpoints alone** do not convert historical
+production into present exercise. This challenges the application of
+correspondence when `CausesIn` is read historically and `Ontic.Causes` as present
+productive dependence. It is not a counterexample to presence of a genuinely
+sustaining cause. A history-inclusive graph could retain the old edge, but then
+its sourcehood would be a different causal question from present support.
+
+The structural account explains the current bearer through actual constitution
+and organization. Its affirmative explanatory role is the dependence of the
+bearer's identity and operations on that constitution, with the replacement
+and priority qualifications already recorded in the composition note. It
+challenges the uniter-to-productive-esse inference: prerequisites of being this
+organized thing do not identify a distinct agent currently giving its bare
+esse. Treating the arrangement as c can additionally change the candidate
+domain from beings to structural facts. This is a concrete mismatch of role
+and domain, not a merely conceivable objection to causation. The account still
+owes its direction of constitution and adequacy for the actual target; no
+universal sufficiency or whole-first priority is inferred here. The settled
+#336/#331 ordering and organ-to-derivative-power audit is not reopened.
+
+The positive external-giver response is stronger than “the parts need a tie”:
+if this bearer's esse is genuinely received, rather than explained solely by
+its constitution or past, its present receipt calls for a real giver in that
+respect. Given that productive application and the specified causal inclusion,
+the two interfaces are well motivated. What remains disputed is the receipt
+and coverage claim for the allegedly composite underived n. Borrowing an
+already identified God's universal conservation to establish that pre-divine
+application would not supply independent warrant for this route.
+
+The historical-law persistence account already preserved in
+[eternity-dependence-connection.md](eternity-dependence-connection.md#existential-inertia-the-live-rival-and-the-remaining-bridge)
+adds earlier existence plus absence of destructive change; it is not merely
+brute persistence. Its strongest recorded challenge concerns whether the past
+and persistence powers suffice to account for current existence. Neither
+response is settled by endpoint presence or the composition label. No new
+historical attribution is made; these references reuse recorded findings,
+not a fresh reading of their external witnesses.
+
+### Disposition, rejected paths and next discriminating test
+
+The interfaces receive a **restricted positive application rationale**, not an
+unconditional verdict. Historical generation and real constitution explain
+why their extension to arbitrary alleged uniters needs the specific productive
+step. No substantive objection to the conditional inference *once that step
+and the causal inclusion are warranted* was identified. None of the standing
+accounts has been refuted, and none is certified adequate merely by surviving
+this comparison. Actual target existence, cause presence, productive activity,
+ordinary causal inclusion and R-support remain separate obligations.
+
+Rejected paths: inferring current giving from two existing endpoints; inferring
+cause actuality from target actuality; reifying an arrangement as a second
+agent; treating non-self-production as proof of external production; extending
+illumination of air to the air's substantial esse; identifying ordinary event
+causation with R; and adding a transport/omission theorem already provided by
+#655 and UnderivedEssenceEsse. Each rejection concerns the named inference or
+application, not an evidential penalty for open primitives or shared premises.
+
+The precise remaining dependency is positive same-bearer **esse receipt** for
+the selected candidate and a scope argument reaching the c,n generated by the
+composition premise. Existing illumination work establishes a state of an
+already existing bearer and explicitly leaves that dependency open. Repeating
+it, the organ audit or generic omission assignments cannot supply the missing
+evidence. Reallocate the next investigation to that receipt/coverage question:
+use the existing receipt-of-esse records to compare the strongest received-being
+argument with historical-law persistence for the same bearer, without assuming
+divine identification. Independently justified productive receipt would favor
+the external-giver application; an adequate constitution/history account of
+that same esse would weaken its asserted necessity. A new actual uniter with
+specified productive role would also reopen application here. These are exact
+research dependencies, not a request for an owner-selected metaphysical winner.
+
+**Claim/type self-sweep.** Only this note and the existing attempt are changed.
+No definition, statement, claim, theorem, frozen contract, sense, source witness
+or computed status changes. The quantifier and world/time limits above are
+those of the unchanged definitions; no proposed universal interface is claimed
+proved. The existing same-witness proof, direct support consumer and omission
+controls are reused, with no new metaphysical possibility claim. Independent
+semantic challenge of this complete proposed outcome remains required before
+its substantive judgment is integrated.
+
+**Worker evidence.** Live convention resolution matched supplied sourceRevision
+`15f348b072188255da837578eaafc8a98f12fdf0`; repository policy and research/reuse
+skills were read. Authorized warm preparation copied pinned packages, checked
+their HEADs/cleanliness and seeded the build through the existing helper under
+the heavy lock; it is readiness evidence only. No worker preflight repeated.
+Through `worker_env.py`, offline `truth check` passes with existing lexical and
+formal-status warnings; `attribution-check --base
+cd1c362d14100936c602a48b3c54508a4dca33ad` reports no new or changed stating
+claim. `git diff --check` passes. Computed `truth frontier-diff --base
+cd1c362d14100936c602a48b3c54508a4dca33ad` reports **no change**: root-reaching
+open premises 494 → 494 (353 bare, 90 supported, 51 stated), lowest expanded
+route cost 16 → 16, verified support alternatives 494 → 494, added 0.
+No Lean or binding inputs changed, so no new proof-verifier result is claimed
+and unchanged proof checks are not repeated. Fresh semantic challenge and final
+integration CI remain coordinator-owned. No PR, push, watch or merge.
