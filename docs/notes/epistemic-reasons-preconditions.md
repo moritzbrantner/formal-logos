@@ -636,3 +636,1250 @@ no change
 Intended and actual formal premise effects: **none**. The contribution is the
 discriminating semantic calculation and the defended scope of the remaining
 authority question, not a formal connection or a closed premise.
+
+## Successful understanding as a good for its bearer (2026-11-17 continuation)
+
+**Complete proposed outcome for fresh independent challenge.** The specific
+account tested here treats personally grasping a true explanatory relation as
+a small constituent of living well, independently of enjoying or wanting that
+grasp. It gives a more substantive candidate bearer-good than accuracy or
+proper functioning alone: the person actually understands something, rather
+than merely containing a correct output. The local benefit claim has positive
+evaluative warrant and is provisionally supported. The further claim that this
+benefit gives its indifferent bearer an actual pro tanto reason has a direct
+evaluative defense below, but remains disputed by a fully specified
+goal-relative account. Even granting that reason, a reason to sustain cognitive
+activity is not automatically an epistemic reason to believe a particular
+content. The exact preference-independent epistemic-force target remains
+**underdetermined**, with a more informative candidate support path and narrower
+remaining burdens. Neither the accepted evidence/incentive finding nor F6 is
+withdrawn or re-defended.
+
+This starts from worker commit
+`79bb37a45c3a72c61b51eb75b32bcd617ca29c55`. The coordinator reports that its
+bounded outcome passed independent challenge without repair. That review does
+not cover this continuation. Publication/check status belongs to the coordinator;
+the earlier pending-CI text above is a record of its checkpoint, not updated here.
+Current `related`, `context`, target `dossier`/`brief`, question `brief` and
+`novelty` retrieval were inspected. The role/force definitions remain
+`58ca78b4-33a8-5c4f-a3ee-e206d193f52a` and
+`603ba4fa-53ac-5de1-b0de-393209fa8faf`. No new vocabulary or formal sense is
+needed to assess this proposed warrant for their application.
+
+### One account, rather than every success made valuable by definition
+
+The proposal is an analyst account of **personal cognitive achievement as a
+constituent of the bearer's life**. In the private tile case, the competent
+person can grasp why arranging seven tiles into three pairs and one leftover
+supports the odd answer. The relation is true; the count is competently made;
+the person understands pairing and oddness; and this understanding actually
+connects the count to the answer. The #1646 personal-basing criteria distinguish
+that exercise from merely possessing arithmetic skill, producing the right
+word, or supplying an explanation after a comforting answer was installed.
+Those are application conditions, not proof that every actual episode meets
+them. Warrant, actual success and personal exercise remain separate.
+
+The account's evaluative claim is that this actual grasp is a modest good
+**for the person whose activity it is**. It is a constituent good, rather than
+a means to later useful beliefs, pleasure, prestige or a reward. No permanent
+increase in competence is assumed: exercising an existing capacity well can
+be the proposed good even if nothing is learned for future use. It does not
+follow from the bare fact that a capacity is human, biologically normal or
+efficient. Nor does it mean this person's life is better overall than every
+alternative life. Pleasure, distress, time and other goods can matter too.
+
+Selected source checks constrain this reconstruction rather than supply an
+authority theorem:
+
+- The existing pinned `ARIST-EN-I-7` witness
+  (`fa974dc9-ae9b-5b8d-818a-bdbf8bca109b`, Perseus Greek edition
+  `urn:cts:greekLit:tlg0086.tlg010.perseus-grc2`) was materialized and reread.
+  At 1097b2–6 intellect and excellence can be chosen for themselves even without
+  further consequences; 1098a16–20 concerns excellent activity across a complete
+  life. This does not itself establish that every unwanted trivial cognitive
+  exercise benefits its bearer. Reuse the source boundaries in
+  [natural-goodness-function-and-authority](natural-goodness-function-and-authority.md#what-the-positive-argument-actually-supplies).
+- Pritchard, [*Knowledge, Understanding and Epistemic Value*](https://www.pure.ed.ac.uk/ws/files/8457781/PRITCHARD_2009_Knowledge_understanding_and_epistemic_value.pdf),
+  §§4–5, pp.23–25, and §§13–15, pp.37–41 (2009), connects understanding with
+  cognitive achievement and discusses its noninstrumental value. His trivial-
+  achievement discussion permits both small value and a more qualified account;
+  it does not settle the value of this tile episode or its reason-giving force.
+- Hurka, [*Value Theory*](https://thomashurka.com/wp-content/uploads/2014/02/value-theory.pdf),
+  §2, PDF pp.9–11, and §3, pp.11–16, distinguishes actual from informed desire
+  accounts and discusses perfectionist goods independent of desire, including
+  connected knowledge. This is a value proposal, not a deduction of our
+  agent-indexed epistemic reason from cognitive success.
+
+The latter two are consulted primary-author research leads; new historical
+corpus claims and witness registration remain deferred. The specific account,
+tile application and judgments here are ours. It is not attributed wholesale
+to any of these authors. In particular, noninstrumental value, value for a
+bearer and reason-giving authority must not be conflated.
+
+### The actual tests of benefit
+
+Keep the private question harmless and unused. The evidence, basic competence
+and availability of the simple inference are held fixed; nobody else relies
+on the answer. The subject is indifferent to accuracy and has no further end
+served by getting this question right. At the starting point they can be
+drawn toward the comforting even answer; they are not stipulated to know that
+answer false while also believing it. The following are analytic comparisons,
+not reports of psychological experiments or certified possible-world models.
+
+First compare **actual grasp with a lucky correct answer**. Both answers can
+be odd and equally pleasant, while only one results from personally seeing the
+pairing relation. The achievement account ascribes an additional constituent
+good to the first episode. Its rationale is that an intelligible part of the
+world is now grasped in the person's own cognitive activity. The lucky token
+has the same truth value but is not that person's accomplishment of grasping
+why. This tests personal achievement rather than truth alone. The stronger
+claim that the person is better off in this respect is an evaluative judgment,
+not a further arithmetic identity.
+
+Next compare **retaining that grasp with its loss**, while keeping general
+arithmetic skill, pleasure, projects and subsequent practical outcomes fixed.
+The proposed setback is loss of a piece of one's understood relation to the
+world, even when one does not miss it. This makes clear whose good is at issue:
+the loss concerns this person's lived cognitive activity, not merely a less
+accurate machine, a disappointed observer or an impersonal increase in truth.
+It also prevents an appeal to unnoticed future usefulness from doing the work.
+The comparison supports the account to the extent that we recognize that
+local setback even under these controls. It is not an observation establishing
+that recognition universally. The same evaluative recognition contributes to
+ordinary correction judgments; it is not independent corroboration from an
+unrelated source of warrant.
+
+Finally distinguish **a tiny good from a demand to keep accumulating it**.
+The count is trivial and uses an already developed skill. It need not constitute
+a major achievement or a newly enhanced capacity. Those exact features limit
+the strength of an analogy with substantial intellectual discovery. They do
+not by themselves show that its constituent value is zero. Conversely, the
+value of a whole life of understanding cannot simply be divided into positive
+value for every isolated cognitive episode. The proposal assigns a modest
+positive value to this actual, personally grasped relation; its local warrant
+is weaker than a whole-life comparison, and the assignment remains defeasible.
+
+These comparisons provide content on which the account can fail: if a correct
+token counts equally without personal grasp, the account has lost its
+achievement basis; if a bare increase in functional efficiency counts as
+benefit, it has lost its personal basis; if only future payoff or enjoyment
+makes the grasp good for its bearer, it has lost its proposed noninstrumental
+status. No opaque `GoodUnderstanding` flag or formal model is introduced to
+make these assessments automatic.
+
+### Does that good give the unwilling bearer a reason?
+
+The positive argument has three distinguishable commitments:
+
+1. This genuine grasp is a constituent good for its bearer, not just good as
+   an output under a standard. The preceding comparisons defend this premise.
+2. A feasible way to preserve or complete this constituent good counts
+   defeasibly in favor for that bearer, even when it satisfies no relevant
+   desire. This is a normative relevance judgment, not part of the definition
+   of benefit.
+3. Where attending to the already available evidence preserves or completes
+   that grasp, this gives the person a pro tanto reason for that attention or
+   cognitive exercise. Actual feasibility and the connection to the good are
+   required; a merely imagined opportunity supplies neither.
+
+The direct defense of 2 is that a genuine benefit in one's own cognitive life
+is a consideration one can recognize as favoring its preservation without
+first finding an additional payoff or desire it serves. In the loss comparison,
+“it is my understanding that would be lost” identifies a personally relevant
+stake; “I do not care” establishes absence of motivation, not itself absence of
+that stake. Our ordinary correction judgments make this a live evaluative
+recognition, rather than an inference from a neutral performance measure.
+This is legitimate prima facie warrant. It need not await an endlessly prior
+argument for every good-to-reason judgment, and its openness is not evidence
+that it is false. But its normative content is expressly acknowledged: the
+person's having a stake does not logically force the relevance judgment.
+
+The proposed reason can be small, outweighed and unsatisfied without fault.
+There is no demand to open the jar, collect more evidence, maximize cognitive
+achievement or contemplate every available truth. Suspension or disengagement
+remains an available alternative; the account alone establishes neither an
+obligation to enter inquiry nor the epistemic permissibility of every
+suspension in the face of decisive evidence. Retaining arithmetic competence
+while declining this exercise is not a malfunction or loss of agency. This
+prevents a reason concerning one good from turning into a duty to exercise
+every capacity at every opportunity.
+
+### The strongest goal-relative response and what would discriminate
+
+The strongest response grants the personal exercise, the factual explanation
+and the achievement's excellence. It then locates benefit in what contributes
+to the person's informed ends or appreciative engagement. In the stipulated
+case neither requires accuracy or this understanding. It therefore denies a
+benefit in the welfare sense while accepting good performance. This attacks
+premise 1 through a specific account of good-for, not by asserting that error
+is conceivable. Its independent attraction is that it explains why skilled
+but unwanted trivial exercises need not improve a person's life merely by
+being excellent; the subject's own concerns help distinguish benefit from
+perfection imposed by an assessor.
+
+The achievement account's response is that actual personal understanding is
+already a mode of the person's cognitive life, rather than an alien trait
+installed only for an observer. Factual grasp, not a favorable observer rating,
+is what the person has gained. An indifferent or displeased response can
+coexist with that small constituent good and introduce a competing cost. This
+explains how someone can be benefited in one respect without being better off
+overall or consenting to assistance. This is a positive alternative to an
+inference from “unwanted” to “necessarily no benefit”; it does not establish
+that every instance of personal activity is beneficial. The account still owes
+the local evaluative assessment.
+The rival is entitled to deny that assessment; this is a substantive welfare
+disagreement, not a contradiction in its account of evidence.
+
+A still stronger concession grants even the unwanted bearer-good and rejects
+premise 2: goods provide the agent reasons only through relevant ends. It can
+call understanding a good in that person's life without making every such
+good authoritative for the person. This preserves the exact value/force
+distinction under investigation. The positive reply is the direct relevance
+judgment above. Neither a new function claim nor a greater quantity of
+achievement settles that normative disagreement. No conflict with thin F6 has
+been shown: the rival grants reasons in cases where the relevant ends obtain.
+
+There are two genuine discriminators, rather than another accuracy table.
+On the **benefit** question, a loss of genuine personal grasp with pleasure,
+informed concerns and later outcomes fixed is a local setback on the proposed
+account and no welfare loss on the rival's. On the **force** question, someone
+can grant that setback and ask whether it counts even slightly in favor of
+preserving the grasp when no end is served. A zero answer then targets 2,
+rather than erasing what 1 says. These are normative comparisons; no behavioral
+prediction or arithmetic calculation has been shown to decide them. Permission
+to decline a benefit, or rejection of coercion to supply it, is not by itself
+evidence of zero pro tanto force. Nor does calling a loss a setback establish
+such force without the relevance judgment.
+
+### Exact preference scope and the epistemic target
+
+The old finite vocabulary has `Preference.accuracy` and `Preference.comfort`.
+Under the latter the current target includes a genuinely accuracy-indifferent
+profile, rather than merely a person who wants accuracy less strongly. A
+subject who enjoys understanding for its own sake, needs the accurate answer
+for another aim or would endorse it after ordinary correction of factual
+mistakes may already have a reason on the rival's account. Such cases do not
+test the stipulated absence of every relevant accuracy/understanding end.
+Correcting a mistaken means-belief is not by itself a procedure for changing
+that fundamental indifference. An idealization that installs appreciation of
+understanding because it is rationally required adds the contested normative
+assessment; “informed” alone does not establish it.
+
+For the achievement proposal, varying the accuracy desire while leaving the
+actual grasp intact does not remove its personal achievement. Whether its
+benefit and force persist at every compared preference is the evaluative
+proposal, not a consequence of the two labels. Mere indifference and active
+aversion can also differ: aversion may add distress or a cost of exercising
+the capacity. The account permits those competing considerations and has not
+shown that benefit, weight or permissible action is invariant across all such
+profiles. Pro tanto force might persist even when the total verdict reverses;
+that possibility needs its own application judgment. No exhaustive psychology
+or universal preference-class coverage is claimed.
+
+Most importantly, even accepting 1–3 yields a reason concerning **attention,
+preservation or exercise**, not automatically `f.force a r (f.believe p) d`.
+The ordinary-role target concerns a consideration's favorable bearing on the
+answer. An opportunity to achieve understanding is not extra evidence that
+the odd answer is true. The competent count supplies that evidence. Wanting
+or having reason to achieve something valuable does not make an unsupported
+answer fit to believe. The positive route can therefore motivate engaging with
+the evidence independently of a current accuracy desire while still leaving
+open why that evidence itself has epistemic force for the indifferent believer.
+It must not use a practical reason to cause a cognitive state as if it were
+already an epistemic reason supporting its content.
+
+This distinction matters for fallibility and suspension. Successful grasp of
+the actual count is factive in this application; ordinary evidential support
+need not be. With incomplete evidence, correctly grasping why one's evidence
+is inconclusive can be a cognitive success without a categorical belief that
+the jar is odd. The benefit proposal thus neither requires successful factual
+understanding whenever there is an epistemic reason nor licenses believing
+an answer just to obtain the good of understanding it. A further account must
+explain which epistemically fitting responses realize the good under the actual
+warrant conditions. Defining that fit as whatever has categorical force would
+merely restate the target.
+
+### Proposed judgment and substantive reassessment
+
+For this private, competent episode, the personal-achievement account supplies
+a **provisionally supported candidate constituent benefit**, with identified
+content beyond correctness or causal function. The paired personal-grasp and
+loss comparisons, the existing basing analysis and ordinary evaluative
+recognition support it. The small scale and absent appreciative engagement make
+the informed-end rival a serious substantive challenge; no decisive refutation
+of that rival is claimed. The reason-to-preserve proposal has positive direct
+evaluative warrant, but benefit-to-force remains **underdetermined** against
+the rival that grants the benefit and denies its authority without an end.
+No prior proof of every premise is demanded in issuing this assessment.
+
+The target `2ca463c2-bd1f-5a13-a395-0e2c57a5ad8f` also remains underdetermined:
+even the proposed reason would first concern a valuable cognitive activity,
+and has not been shown to be the same consideration's epistemic force across
+every supplied preference. The new route adds a positive support option for
+goal-independent cognitive engagement, not a derived instance of that target.
+No root, God, irreducibility, source-person or obligation conclusion follows.
+
+Rejected approaches: equating personal excellence with welfare by definition;
+using a large life-fulfilment intuition as proof about each trivial episode;
+claiming loss of competence where only an exercise is forgone; assuming an
+indifferent agent must have a latent truth end; assuming factual idealization
+installs that end; treating a reason for attention as evidence for an answer;
+and encoding the proposed evaluative premises as opaque flags. The accepted
+finite evidence/incentive result is unchanged and is not repeated here.
+
+**Reassessment point:** the selected account and its scope are now explicit.
+The next consequential fork is whether the proposed personal benefit is
+accepted while reason-giving relevance is denied, or benefit itself is denied
+without informed engagement. These target different premises. Further work
+should defend or challenge the exact local setback/relevance judgments with
+an account of good-for and reasons, not add another success metric. If the
+coordinator retains the positive engagement route, its further epistemic
+application must explain how reasons for a cognitive activity relate to the
+fitting evidence-based response, including suspension under inconclusive
+evidence. Reopen the local benefit assessment if personal grasp is absent,
+purely imposed excellence is doing the work, or a hidden instrumental payoff
+is discovered. These are substantive conditions, not an arbitrary work cap.
+
+Self-sweep: this is a prose warrant investigation, with no changed statement,
+definition, argument, result or Lean type. Personal exercise and success are
+application assumptions, benefit and normative relevance are defended
+evaluative judgments, and the epistemic-force mapping is explicitly open.
+No certified model, actual-agent observation, new source attribution to a
+corpus proposition or formal establishment is advertised. All proposed new
+judgments require the coordinator's fresh independent challenge before being
+used as reviewed support.
+
+Verification for this continuation: live convention source revision remains
+`15f348b072188255da837578eaafc8a98f12fdf0`. Corpus validation, offline
+attribution check (no changed stating claims), documentation/import generator
+checks and whitespace validation passed. The selected existing Aristotle
+witness was materialized and read; no full-source verification was performed.
+No Lean input changed and no new build, binding, Comparator or NanoDa evidence
+is claimed. The previous finite calculation is unchanged and was not rerun.
+Fresh independent semantic challenge and coordinator-owned final CI cover
+this continuation separately from the accepted previous checkpoint.
+
+Exact computed delta from `python3 scripts/worker_env.py -- target/release/truth
+frontier-diff --base 79bb37a45c3a72c61b51eb75b32bcd617ca29c55`:
+
+```text
+open premises reaching the root: 494 (353 bare, 90 supported, 51 stated) -> 494 (353 bare, 90 supported, 51 stated)
+expanded-route diagnostic (lowest cost): Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16) -> Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16)
+distinct verified support alternatives: 494 -> 494
+verified support alternatives added: 0
+no change
+```
+
+Intended and actual formal premise effects: **none**. The proposed local
+benefit judgment is additional philosophical support for a candidate route,
+not a new formal premise, a certified transfer or a root discharge.
+
+## Granted benefit: does preservation favor action without an end? (2026-11-17)
+
+**Complete proposed outcome for fresh challenge.** Grant the exact local
+constituent benefit accepted at the preceding checkpoint. On that grant,
+retain premise 2 as **provisionally supported**: a feasible preservation of
+this person's genuine cognitive good counts pro tanto in favor for that person
+even absent a relevant end. This is a substantive local evaluative judgment,
+not an analytic consequence of calling something beneficial. The strongest
+benefit-granting denial connects reasons to sound deliberation from the
+agent's existing motivational/evaluative resources. Its explanatory rationale
+is serious, but does not by itself establish that those resources exhaust the
+grounds of normative favoring. The direct positive warrant is retained rather
+than suspended merely because that rival survives.
+
+Separately, the retained action reason supports fitting engagement with the
+evidence under explicit process/application conditions. The joint explanation
+below gives a defensible **conditional local support option** for the
+evidence's own force: the good grounds the significance of responding, while
+the count is the actually used consideration specifying the fitting answer.
+This is a proposed normative explanation, not something already proved by
+the action reason. Its transmission and attribution steps and exact
+preference-class application remain visible below.
+There is no new formal target instance or root closure. This qualified local
+assessment advances the granted-benefit branch; it does not declare the
+general reasons-internalism dispute resolved.
+
+Baseline: `681e855ef09e80031c35649e9deae067b5bd7be4`. The coordinator reports
+no repairs from independent challenge of that checkpoint and accepts its
+qualified local benefit assessment. That accepted result, the earlier
+evidence/incentive finding and their source limits are reused. Their publication
+and CI status is not reassessed here. Current target `related`, `dossier`,
+question `brief`/`novelty`, ordinary-role/F6 dossiers and the goal-relative
+exclusion `context` were inspected. No new formal vocabulary is introduced.
+
+### Fix the concession; do not reopen the benefit dispute
+
+The grant is that personally grasping the true count/parity relation is a
+small constituent good **for this bearer**, independently of current enjoyment,
+approval or usefulness to a further project. It is not just competent output,
+an observer's ideal or an unacknowledged means to pleasure. Preserve the same
+private question, competence, evidence and absence of others' reliance.
+Preservation is feasible in the specified episode. The subject has no relevant
+accuracy, understanding or self-improvement end, including an instrumental one.
+Nothing assumes that the person simultaneously knows the comforting answer
+false and believes it, or can change belief by an immediate act of will.
+
+An account denying that such an unwanted good benefits the subject challenges
+the grant and belongs to the preceding branch. It is not the rival tested
+here. The present rival grants the benefit in the same sense, then denies
+that preserving it favors action unless a live practical commitment can make
+it relevant. It cannot support this denial merely by reverting to “only wanted
+things are good for people.” Conversely, granting the benefit does not by
+itself concede our independent favoring judgment.
+
+### Positive warrant for favoring, with its actual scope
+
+The positive consideration is the person's own concrete stake: the available
+choice preserves rather than loses a genuine constituent of that person's
+cognitive life. This is relevant to evaluating the choice **for that person**.
+It is not a demand to create every good, a claim about other people's welfare,
+or a verdict that a better cognitive score wins the whole choice. With the
+benefit granted, the remaining positive judgment is that this preservation
+speaks in favor at all, rather than acquiring its entire significance from
+the separate fact that the person wants it.
+
+There are two grounds for retaining that judgment. First, our ordinary
+recognition of a personal setback supplies direct evaluative warrant: one can
+recognize “that would preserve something genuinely good in my life” as a
+consideration without deriving its significance from another payoff. This is
+the same family of warrant as the already retained correction judgments;
+there is no claim of an independent evidential ancestry. Second, indifference
+changes the person's concerns but leaves the granted beneficiary, good and
+preservation relation intact. For the positive assessment, those three facts
+explain why the consideration bears on this person's choice. A desire can add
+a further consideration or explain motivation without creating this one.
+This second rationale supports a substantive relevance standard; it is not a
+proof that every possible standard must disregard motivational relations.
+
+The reasoning stops at the defensible evaluative recognition of this stake's
+relevance. Demanding a prior proof of every such recognition would discard
+the warrant actually being offered. Equally, saying “benefit” and passing it
+through a new `Benefit → Reason` predicate would add no warrant. Benefit and
+favoring remain distinct commitments even when both are provisionally accepted.
+The scope is **some pro tanto favoring from this granted benefit**. It implies
+neither an overriding recommendation, an obligation, blame for declining,
+permission for others to compel the activity, nor a reason to maximize every
+capacity's exercise. No unobserved pleasure or future need is inserted.
+
+### The benefit-granting internalist mechanism and its justification
+
+The strongest denial is not “no current desire, therefore no reason.” It says
+that a reason must be available through sound deliberation from the person's
+existing motivational/evaluative resources. Deliberation may correct error,
+exercise imagination and form new concerns; it is not confined to calculating
+means to a fixed list of desires. If none of those routes connects the granted
+benefit to action, the rival withholds force while leaving the benefit intact.
+Its positive mechanism joins reason attribution to how a person could act
+**for that consideration**, rather than merely undergo an assessor-preferred
+change. It thereby distinguishes rationally motivated response from conversion
+by manipulation or rhetoric.
+
+Primary-author check: Williams, [*Internal and external reasons*](https://kevinjpatton.com/teaching/phil_3050/readings/Bernard%20Williams%20-%20Moral%20Luck.pdf),
+in *Moral Luck* (1981), pp.101–111, was read, especially pp.104–110. He allows
+evaluative dispositions and new motivations in deliberation, considers
+unwanted needs at pp.105–106, and argues from reasons' possible explanatory
+role to a challenge about rationally acquiring motivation at pp.106–110.
+He distinguishes a reason from an overall verdict. The opening formulation of
+[*Internal reasons and the obscurity of blame*](https://www.cambridge.org/core/books/abs/making-sense-of-humanity/internal-reasons-and-the-obscurity-of-blame/963978B639E1BD60FB5C1F3D1D38BF7F)
+(1995, p.35, publisher's displayed excerpt) was also consulted. No whole-chapter
+reading of the latter is claimed. These are research leads, with new historical
+corpus attribution deferred; the cognitive-good concession and assessment are
+our reconstruction, not positions attributed to Williams.
+
+The independent attraction of the mechanism is explanatory accountability:
+in a genuine response for a reason, the consideration must enter the agent's
+thought and contribute to action. The existing basing findings support taking
+that difference seriously. The rival's further **necessary-condition** claim
+is that rational availability must originate within the existing motivational
+resources; mere recognition of the benefit is insufficient without that route.
+It is a genuine claim about normative reasons, not merely a report that this
+person is unmotivated. The objection therefore cannot be answered just by
+repeating that pro tanto reasons may lose an all-things-considered contest.
+The rival already permits that.
+
+The positive reply grants the explanatory requirement for an actual exercise
+without granting the exclusivity claim. A person could preserve the grasp
+because they recognize both the concrete benefit and its practical relevance;
+that is a content-guided explanation, not mere causal redirection. The
+exclusivity thesis challenges whether such recognition can be rationally
+acquired without a suitable starting concern. The positive account treats
+recognizing a genuine personal stake as a potential basic evaluative insight,
+rather than requiring its authority to come from a further end. This proposes
+a substantive account of rational uptake; it does not demonstrate that any
+motivationally isolated agent must arrive at it through a neutral algorithm.
+
+Nor does the positive reply simply infer a reason from the existence of a
+new motive. A motive acquired by conditioning or persuasion does not establish
+the judgment's warrant. Its offered warrant remains the concrete beneficiary/
+benefit/preservation relation and the direct relevance judgment. Conversely,
+the possibility of explaining action by a desire plus a belief does not show
+that the consideration's **normative ground** is that desire. A subsequent
+desire to preserve the good could express recognition of a reason rather than
+create it. The rival can reject that explanatory order, but causal description
+alone does not select between them.
+
+This isolates the remaining conflict: whether sound practical assessment can
+recognize the granted benefit as relevant without a preexisting connecting
+concern. The rival supplies an intelligible, motivated restriction; the positive
+account supplies a direct evaluative counterproposal. Neither is required to
+deduce its entire theory from nonnormative facts. The rationale for restricting
+motivation's rational origins does not defeat the local relevance recognition
+merely by redescribing it as an external reason. On the granted benefit, I
+therefore retain minimal favoring as **provisionally supported**, rather than
+infer zero force or demand suspension just because a coherent internalist
+alternative remains. This is not a refutation of that alternative, a proof of
+actual motivational access, or a diagnosis that every indifferent person is
+irrational. It is a scoped warrant judgment whose disagreement is explicit.
+
+This strengthens the preceding checkpoint's withholding of a local favoring
+verdict **on the explicit benefit grant**. The basis is a reassessment of the
+existing direct warrant against the now specified internalist restriction,
+not a new observation or another independent proof. The mere survival of a
+rival does not cancel that warrant. The internalist may likewise retain its
+starting constraint; the present verdict records a qualified working assessment,
+not a demonstrated comparative defeat or a change in formal establishment.
+
+### Deliberative resources are not the same as a chosen accuracy end
+
+The internalist's necessary condition is broader than the existing
+`GoalRelativeForce f accuracyAim` control. A disposition to reconsider one's
+evaluations, a commitment to one's own good or an appreciative response to
+newly understood content may supply a route even without an antecedent desire
+for the answer's accuracy. If present, that is an internalist reason in a case
+where the simple accuracy-aim condition could fail. It must not be called a
+defeat of the stronger internalist account merely because that account grants
+a reason to someone indifferent to accuracy.
+
+For a zero-force prediction under the stronger account, absence of a relevant
+end must be supplemented by absence of a suitable sound deliberative route
+from those other resources. The first absence alone does not prove the second.
+Acquiring a new concern later also does not by itself show that the reason
+was present before that acquisition; its earlier presence is the normative
+claim being defended, rather than something inferred from the later action.
+This continuation does not invent a hidden connecting resource in the assigned
+subject. It tests the denial under its strongest no-route supposition, while
+retaining the positive assessment of favoring even on that supposition.
+No claim is made that actual people satisfying it have been identified.
+Likewise, openness to reasoning is not silently defined as already wanting
+accuracy, flourishing or whatever a favored theory calls rational.
+
+### Separately test transmission to an evidence-based response
+
+Retaining premise 2 gives a reason to preserve or exercise the particular
+valuable grasp. It does not prescribe an arbitrary method or answer. The
+positive further proposal is **constitutive transmission** in this local case:
+where an evidence-based response is part of the actual personal grasp whose
+preservation is favored, that reason also counts defeasibly for maintaining
+that response *as part of the grasp*. This is another normative step, defended
+by the fact that the exercise and its properly based response are not two
+unrelated outcomes. The reason's object cannot be secured by keeping an output
+while replacing the very understanding for whose sake it is favored.
+
+This is narrower than “a reason for an end supplies a reason for every means.”
+It requires an actual constitutive connection and an appropriately feasible
+process; merely promising cognitive benefit does not license an attitude.
+It also does not say that every particular calculation, witness or causal
+input is indispensable. Redundant bases and alternative methods remain as in
+#1646. The proposal concerns the fitting response within the selected grasp,
+not a unique implementation or a duty to continue this particular inquiry.
+Its normative transmission content is offered for assessment, not certified
+by a theorem about logical entailment or causal necessity.
+
+There is a substantive reason to favor this limited bridge. Wishful bypass
+cannot preserve the personally understood relation merely by reproducing its
+answer. The response must remain appropriately sensitive to the count's
+content and warrant, because those are what the person grasps. The account
+therefore favors a fitting response through the evidence rather than a
+comforting response or an unsupported belief produced for its benefits.
+This uses the already developed personal-basing criterion and source-aware
+understanding account; it is not another metric or finite comparison table.
+
+However, two considerations still perform different jobs. The bearer-good
+explains why engaging or preserving is favored; the count explains which
+answer is supported. A reason concerning a state can be transmitted to its
+constitutive attitude without thereby proving that the count **itself** has
+the `force` attributed to an ordinary epistemic reason in the existing Frame.
+A complete value-grounded account could make that attribution through a
+joint normative explanation: the count has favorable bearing, and the good of
+personally answering makes that bearing practically authoritative here. Its
+dependence on a value premise would not disqualify it by definition. Neither
+the role definition nor the value of understanding requires irreducible
+epistemic authority or forbids such a grounding account.
+
+The strongest surviving reply at this second step can thus grant the reason
+for valuable engagement, and even the limited transmission, while calling
+the inherited reason practical or achievement-directed. It reserves epistemic
+force for the evidential relation and denies that state-directed favoring
+already establishes that relation's authority. This identifies the exact
+attribution gap, not evidence that the positive grounding account is false.
+The weaker constitutive bridge is provisionally supported. An argument that
+merely changes the word “practical” to “epistemic” would not supply the stronger
+attribution. The following joint explanation addresses that step.
+
+**Joint grounding proposal.** Distinguish the consideration favoring the
+answer from the ground of its reason-giving significance. The count is what
+the person uses to answer the question; preserving the personally understood
+relation is why that appropriately based response matters in the granted
+account. The good is not a second observation about the jar. Nor is the count
+a merely accompanying fact while an independent incentive fixes the answer.
+Its content must actually select and sustain the response as part of the
+grasp, under the sufficient, undefeated warrant assumed for this episode.
+Together with the retained favoring and constitutive transmission, those
+conditions supply the proposed explanation of why **this count**, in this
+context, counts for maintaining its fitting answer even when accuracy is not
+an end.
+
+The discriminating difference from an incentive to hold a predetermined belief
+is substantive. An incentive can still favor causing that belief when the
+evidence undermines it. The granted good of actual understanding cannot be
+realized by severing the evidential relation while retaining a pleasing answer.
+If the person follows a bypass, the proposal loses its personal-grasp ground;
+if the count does not support the answer, it loses its evidential ground.
+Where the evidence warrants a different response, the proposal follows that
+response rather than the comforting content. These are explanation/application
+tests, not another finite table or a deduction of force from covariance alone.
+
+This is a reason to accept the stronger local attribution within the account:
+the count does the answer-selecting work *within a grasp whose
+preservation already counts for the bearer*. The evaluative ground does not
+replace the count as the reason used in the inference. A normative reason
+need not contain, as part of the consideration presented to the subject, the
+whole theory explaining why that consideration has force. Conversely,
+simultaneous presence of a good and a supported belief is insufficient; the
+actual fitting and basing connections just specified do the additional work.
+
+The existing ordinary-role definition permits a project-relative interpretation,
+and the independent-role definition adds preference-independent force, not an
+irreducibility or pure-origin condition. Thus an account grounding evidential
+force in an unwanted cognitive good is not excluded merely because its
+explanation also concerns the bearer's flourishing. It cannot be rejected in
+these selected senses just by calling its ultimate ground practical. Relevant
+challenges include denying the retained normative transmission, showing that
+the count is incidental to this response, or defending a stricter criterion
+of epistemic force and establishing that it is the target's criterion.
+
+I therefore provisionally retain the joint explanation as a **conditional local
+support option** for the count's epistemic force, on the explicit benefit,
+favoring, constitutive-transmission, warrant and actual-basing commitments.
+Those jointly required commitments are not claimed established by an
+entailment theorem or reducible to the action reason alone. The internalist
+denial at premise 2 remains an objection to the whole route. This account
+offers a reasoned way to make the stronger attribution; it does not force
+every coherent theory to make it or establish its application to every
+ordinary believer.
+
+Suspension and fallibility constrain the proposal. In the already successful
+counting episode, preserving the actual grasp may involve maintaining its
+supported answer. Before successful understanding is attained, a reason to
+seek or preserve it is not a warrant to treat the hoped-for answer as true.
+Where the evidence remains inconclusive, grasping its limits may instead
+support suspension or a qualified confidence. This is not an assertion that
+any suspension is fitting under decisive evidence. Ordinary warranted error
+also remains possible; the factivity of successful understanding cannot be
+transferred to every ordinary-role reason. Neither a reason for attention
+nor the proposed transmission supplies direct voluntary control of belief.
+
+### Preference scope, outcome and precise exhausted approach
+
+The retention of premise 2 is conditional on the **same actual local benefit,
+bearer and feasible preservation** at the compared preferences. Within that
+scope, absence of an accuracy or understanding end is not treated as a
+force-removing condition. The judgment does not claim equal weight or equal
+overall choices at `Preference.accuracy` and `Preference.comfort`. An aversion
+may add a competing cost; whether a more demanding profile also changes the
+benefit, feasibility or normative applicability must be checked rather than
+assumed. The two labels do not certify a psychological census. To apply the
+registered universal `∀ d` clause, the joint account would need the benefit,
+application and transmission conditions throughout that exact supplied class,
+then application of the joint explanation to the same ordinary-role
+consideration. This continuation establishes no such formal instance and does not repair #1376.
+
+Compared with the previous checkpoint, the new assessment is **positive local
+favoring on the explicit benefit grant**, with a developed internalist objection
+and response. It is not a renewed dispute over whether the benefit exists.
+The limited activity-to-response bridge also has a positive defense, and the
+joint explanation supplies a conditional local support option for the target's
+consideration-indexed force. Its full preference-class application and actual
+instantiation remain open; thin F6, the accepted local benefit and
+the accepted evidence/incentive finding retain their earlier status. No root
+or God inference follows.
+
+**Precisely exhausted approach:** trying to settle premise 2 by enriching the
+description of cognitive success, future utility or personal benefit is now
+exhausted for this branch, because the strongest rival grants that benefit.
+The explanatory argument was then tested at its actual stronger form, including
+sound deliberation and possible new motivations; it converges on the exact
+dispute about what rational evaluative recognition can supply, not a discovered
+contradiction or an inability to state a reason. A further performance measure,
+claim of latent desire or generic omission model would not discriminate.
+This is not exhaustion of the question or evidence against the retained
+basic relevance judgment.
+
+The next materially different test, if the coordinator retains this proposal,
+is an **application audit of the joint explanation**: establish whether the
+same consideration actually governs the fitting response and whether the
+granted good and feasible process persist at each selected preference. In a
+case of warranted error, distinguish a reason for the evidence-supported
+response from an actual successful grasp that is not present; the factivity
+of the latter cannot do the former's work. The present account has not shown
+coverage there. The private successful episode is a candidate local instance,
+not a claim that every epistemic reason requires achieved understanding.
+If instead the local relevance judgment is challenged, the challenge should
+target its beneficiary/benefit/preservation rationale or defend the internalist
+restriction on rational motivation's origins. Merely observing indifference
+or restating that benefit and force differ does not test the defended step.
+
+Claim/type self-sweep: no corpus statement, definition, argument, result or
+Lean declaration changes. The new positive assessments are explicitly
+provisional, scope-bound and pending fresh independent challenge. The source
+reading is a research consultation, not a new historical claim record. No
+formal model, theorem, actual-agent observation, rival refutation or root
+discharge is claimed. The existing exclusion theorem still requires both its
+goal-relative-force premise and an indifferent preference; its controls do
+not encode this newly assessed benefit or normative transmission. They cannot
+be cited as certification of either assessment.
+
+Verification for this continuation uses the unchanged prepared setup and live
+convention source revision `15f348b072188255da837578eaafc8a98f12fdf0`.
+Corpus validation, offline attribution check (no changed stating claims),
+documentation/import generator checks and whitespace validation passed. No
+Lean input changed; no new build, binding, Comparator or NanoDa certificate is
+claimed. No prior finite calculation was repeated. Coordinator-owned fresh
+semantic challenge and final CI remain separate from these local checks.
+
+Computed with `python3 scripts/worker_env.py -- target/release/truth
+frontier-diff --base 681e855ef09e80031c35649e9deae067b5bd7be4`:
+
+```text
+open premises reaching the root: 494 (353 bare, 90 supported, 51 stated) -> 494 (353 bare, 90 supported, 51 stated)
+expanded-route diagnostic (lowest cost): Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16) -> Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16)
+distinct verified support alternatives: 494 -> 494
+verified support alternatives added: 0
+no change
+```
+
+Intended and actual formal premise effects: **none**. The new assessments
+provide qualified philosophical support for a local engagement route, not a
+certified instance of the preference-independent epistemic-reason target.
+
+## Application audit: one witness, the whole preference class (2026-11-17)
+
+**Outcome for fresh independent challenge.** The successful private episode
+is a conditionally applicable pattern for the accepted joint explanation,
+across the entire explicitly supplied two-preference class, **if the same
+actual grasp, basing and feasible preservation are supplied at both values**.
+The repository currently supplies an analyst case, not a documented actual
+episode meeting those conditions. No actual successful instance is thereby
+established. Two focused Lean checks confirm a concrete reason not to use the
+old finite `independent` profile as that episode: its fixed count/answer has
+force at every supplied preference while its content is false, and every
+attitude in that profile is already a belief image. It certifies neither
+factive understanding nor a distinct suspension attitude.
+
+The original factive-success ground does not cover a warranted false answer.
+Suspension cannot be substituted for belief midway through a fixed-witness
+comparison. A genuine grasp of the evidence's limitations could support a
+different application, but its actual occurrence, target-attitude connection
+and full preference mapping are additional obligations. Earlier benefit,
+favoring and transmission assessments retain their accepted, qualified status;
+failure of this wider application does not defeat the successful pattern.
+
+Baseline is `340b1ee3847ef8bc1668a6df78658bedf060e903`. The coordinator reports
+that its independent challenge required no repairs; this audit is a new
+outcome. Prior publication and CI statements are not updated. Live conventions
+again resolve to `15f348b072188255da837578eaafc8a98f12fdf0`. Current target
+`related`, `dossier`, question `brief`/`novelty` and the eligible-uptake result's
+`context` were inspected, along with the exact declarations below. No new
+source attribution, definition, normative flag or proof registration is added.
+
+### Freeze the witness before evaluating preferences
+
+For the successful analyst case fix the same bearer a, the particular count
+consideration r, the odd content p, the factual-belief attitude t = believe p,
+and the circumstances c, including actual truth, evidence, competence,
+defeaters and the episode's actual inferential route. This is not an
+instantiation of `Content.even`: seven's oddness must not be represented by
+silently changing that constructor's meaning. A generic `Frame` can represent
+the intended content, but no such actual-case binding has been supplied here.
+
+The entire supplied comparison class is exactly
+`{Preference.accuracy, Preference.comfort}`. The second retains the selected
+absence of a relevant accuracy/understanding end; its label does not also
+establish inability, distress, a bypass or loss of the cognitive good. There
+is no third unexamined value in this inductive type, and no claim that it
+enumerates all human preference profiles. Within this comparison the episode
+is held fixed and its force assessed at each preference. Changing its actual
+route, target or background to obtain a better answer at one value would
+change the case, not complete this audit.
+
+`IndependentInstance f a r t` is exactly `OrdinaryInstance f a r t ∧
+∀ d, f.force a r t d`. Thus one fixed witness must work at both values;
+separate existential witnesses, different considerations or a different
+attitude at each preference do not suffice. `actualPreference` ensures an
+actual value is included, not that the other value was actually enacted.
+
+| Application item | Accuracy value | Comfort/indifference value | What establishes it in this audit |
+| --- | --- | --- | --- |
+| Same a, r, p, t and c | Fixed | Identically fixed | Declared comparison, not inference from a preference label. |
+| r's applicable evidential bearing on p | Supplied | The same supplied bearing | `EpistemicRole` has no preference coordinate; actual application remains a semantic/warrant burden. |
+| Actual personal basing of this t on this r | Assumed for the analyst success case | The same route is required | The four #1646 process conditions, not `force`, output agreement or truth alone. No actual episode record supplied. |
+| Factive personal grasp and its bearer-benefit | Conditional on that actual success | The same successful grasp must remain present | Accepted benefit assessment applies to the specified grasp without an end; neither label supplies a grasp. |
+| Feasible preservation of that grasp | Explicit scenario assumption | The same available means must remain feasible | Needs a concrete method and ability; wanting to preserve and being able to preserve are different. No actual method/ability evidence supplied. |
+| Force of this r for this t | Proposed through the accepted joint explanation | The same proposal, without importing an accuracy end | Qualified normative assessment under all preceding conditions, not a field already certified by the finite controls. |
+
+This is a complete audit of the declared class, with separate application
+conditions; it is not an assertion that the unknown conditions passed. If a
+concrete comfort-profile episode instead has a different route, that would
+need its own assessment. No such failure is invented here. Likewise, merely
+imagining a hidden bypass is not evidence against an otherwise well-supported
+basing attribution.
+
+### What the existing declarations actually supply
+
+`Frame` has fields for evidence-role attribution, `Holds`, production, reward
+and preference-indexed force. It has **no actual-belief or episode/basing
+field**. Its evidence-role fields also have no preference coordinate. They
+cannot demonstrate that a real route survives a motivational change; their
+constancy is part of the representation. The four-condition actual-basing
+account in [the #1646 note](epistemic-underminer-boundaries.md#proposed-sufficient-account-for-the-selected-scope)
+is an interpreted application proposal, not an exported Lean definition of
+personal understanding.
+
+The existing `EpistemicUnderminers.SomeEligibleReasonUptake` supplies an
+existential `Reason a p ∧ Believes a p ∧ Eligible a p`.
+`EligibleReasonUptakeWarrants` is the separate pointwise bridge to `Warrant`.
+Its registered result `1db47fd9-6ab1-4fa1-a9dd-0aa9457d8146` consumes **both**
+premises. `Eligible` packages basing, adequacy and undefeatedness without
+analyzing them; `Warrant` is explicitly nonfactive. It neither proves actual
+personal grasp nor supplies the missing preference comparison. An existential
+uptake somewhere cannot be substituted for uptake by our fixed a of p through
+r. With an appropriate pointwise triple and the calibration, one can apply
+`hBridge a p hReason hBelieves hEligible`; no duplicate theorem is needed.
+The relation to this particular r still requires the consideration presentation
+and actual process interpretation.
+
+`RevisionUptake.revise` and its existing screening theorem supply only routing
+facts. Inversion is sensitive too, and an available recommendation need not
+be the active basis of a belief. Those controls must not be promoted to the
+missing personal application evidence.
+
+The following focused consequences of unchanged vocabulary were elaborated
+with Lean. They keep the **same** subject, count and belief in the first check,
+and explicitly exhaust both supplied preferences. The earlier direct `decide`
+draft failed to synthesize decidability for the wrapped profile propositions;
+the constructive proof below checks the same advertised claim without adding
+an axiom or changing a definition. This is a local declaration audit, not a
+new registered result or a new Comparator/NanoDa certificate.
+
+```lean
+import TruthCore.Logic.EpistemicReasonDefinitionFork
+
+open TruthCore.Logic.EpistemicReasonDefinitionFork
+
+example :
+    IndependentInstance independent () Consideration.count
+      (independent.believe Content.even) ∧
+    ¬ independent.Holds (independent.about (independent.believe Content.even)) := by
+  refine ⟨⟨?_, ?_⟩, ?_⟩
+  · exact ⟨⟨rfl, rfl⟩, trivial, trivial, rfl, rfl⟩
+  · intro d
+    cases d <;> exact ⟨rfl, rfl⟩
+  · intro h
+    cases h
+
+example (t : independent.Attitude) :
+    ∃ p : independent.Content, independent.believe p = t := by
+  exact ⟨t, rfl⟩
+```
+
+These are consequences of the existing false-count profile and its identity
+belief constructor, not evidence that an actual person has a warranted error.
+No `Believes`, `Warrant` or full basing witness is present in that profile.
+The general `Frame` need not have this restricted attitude type. A distinct
+suspension attitude can be represented there with an explicit content mapping;
+the old finite profile cannot supply it just by renaming `Content.rain`.
+
+### Exact success, error and suspension coverage
+
+The successful pattern is locally adequate **as a supplied analyst case**:
+given actual personal grasp, the granted benefit and feasible preservation,
+the accepted favoring/transmission/joint explanation can be applied to this
+same r and t at both preferences. None of those assumptions contradicts the
+absence of an accuracy end. This is not a proof of psychological realization
+or an observed actual witness. The finite `independent` profile is expressly
+not its certificate: its supported `.even` answer is false.
+
+For **warranted error**, fix a separate application with p false but the
+subject's belief adequately and undefeatedly based on the available evidence.
+Keep that error case's bearer, r, t and circumstances fixed throughout its
+own full preference comparison. It is not the successful case with truth
+silently changed at the comfort value. On the stipulated false content there
+is no successful factive understanding of p to preserve. The original ground
+therefore does not apply, regardless of whether basing and warrant obtain.
+This does not show there is no epistemic reason, no good cognitive activity,
+or no independent reason at that error case. The ordinary-role definition
+and the Lean check above keep those questions apart.
+
+One concrete alternative is a **true grasp of the evidence's defeasible
+bearing**, despite a false answer about the jar. That could be an instance of
+the same kind of cognitive good with a different understood relation. But it
+must really be present: replacing “understands p” by “understands why e favors
+p” changes the ground, and the latter does not follow from a warranted false
+belief. It can also coexist with withholding p. Its transfer to our particular
+belief attitude would need the actual basing and fitting-response connection,
+not merely the old benefit label. The present audit does not establish that
+mapping or coverage of all warranted errors.
+
+For **suspension under inconclusive evidence**, t = believe p stays the target
+in the original comparison. Switching to suspend p at one preference cannot
+complete its `∀ d` claim. A separate suspension candidate would keep the same
+suspending attitude about p fixed at every preference, and independently
+supply the appropriate evidential-role, basing, benefit and preservation
+conditions. A true grasp of why the evidence is inconclusive offers a candidate
+ground for that separate case; absence of grasp of p's truth need not preclude
+such metaevidential understanding. But an unperformed reflection cannot supply
+it. Neither the existing finite attitude type nor the belief-only
+`SomeEligibleReasonUptake` declaration certifies that application.
+
+Under **decisive evidence**, the availability of suspension or disengagement
+still does not prove that suspension is epistemically fitting. Conversely,
+pro tanto force for a supported belief is not a full-belief obligation or a
+demand to investigate. The route adds no general stance-selection policy.
+Its successful pattern, warranted-error gap and separate suspension candidate
+are therefore different coverage results, not rival preferences filling one
+existential witness.
+
+The strongest substantive alternative for the uncovered error cases assesses
+the agent's **proper response to available evidence**, rather than requiring
+actual truth of the answer or achieved understanding. It has a positive
+mechanism in the existing nonfactive eligibility/warrant account: the evidence
+can be appropriately used even when it misleads. The substantive difference
+from our original ground is actual success, not mere unusualness of the case.
+This warrants retaining that alternative as a scope-relevant route; it does
+not establish its authority for an indifferent agent. A goal-relative version
+can still grant all the evidential and basing facts while restricting force.
+No new objection to the accepted successful instance is inferred from it.
+
+### Actual-case blocker and substantive reassessment
+
+No identified actual bearer/episode was supplied for this analyst jar case.
+The missing evidence is specific: identification of the count token and
+target attitude; grounds for the actual count/truth and the evidence's warrant;
+an actual content-guided inferential contribution to that attitude rather than
+a matching later explanation; personal grasp under the four existing basing
+conditions; and a concrete, available way to preserve it. The alternate
+preference also needs an admissible fixed-case interpretation that preserves
+those conditions. A label, a theorem about some profile or an existential
+uptake at another content supplies none of these identifications.
+
+An ordinary documented episode with well-supported first-person or observed
+reasoning could supply prima facie application evidence. Exhaustive
+neuroscience, an independent proof of every premise and speculative hidden-
+bypass exclusion are not prerequisites. The matched inference/bypass protocol
+already proposed in #1646 is useful if a concrete process question arises;
+it is not a new universal gate. This worker has no such episode evidence to
+assess, and none of the existing source passages reports this particular case.
+
+The application audit is complete at that boundary. Actual successful
+application is **blocked by the missing case evidence**, not refuted. The
+original factive route's noncoverage of a false target is resolved; the
+metaevidential and suspension extensions require distinct mappings, not an
+assumed factive ground. Prior provisional benefit, favoring, transmission and
+joint-explanation judgments remain intact; no full target or root is promoted.
+
+The next genuinely different useful route is to assess authority for the
+**properly based, warranted response without achieved factual understanding**.
+It can reuse the existing nonfactive eligibility/warrant declarations and
+direct correction warrant, then test whether proper responsiveness itself
+supplies a bearer-good or whether a true metaevidential grasp is actually
+needed in the selected instance. The difference matters: the latter is a
+narrower route and cannot become a mandatory higher-order support-belief for
+all rational inference, given the regress/active-treatment distinctions already
+recorded in #1646. Such work addresses the uncovered error/suspension cases;
+another description of the successful count would not. An actual-case version
+of the present successful route should reopen only when the concrete episode
+and full-class application evidence above become available.
+
+Self-sweep: the two Lean examples establish only existing-profile properties.
+No actual belief, warrant, personal basing, benefit or feasible preservation is
+inferred from them. Success and error are separate circumstances; each keeps
+its witness fixed across the entire declared class. Suspension is not swapped
+in for the successful belief. No new source claim, corpus proposition, opaque
+normative predicate, registered theorem or closure change is introduced.
+
+Verification: the persisted Lean block elaborated without diagnostics after
+the decidability repair described above, using
+`flock /tmp/moenarch/truth-core-heavy.lock python3 scripts/worker_env.py --
+lake env lean /tmp/epistemic-930-application-audit.lean`. The file contained
+the displayed imports/examples; the block is retained here for reproduction.
+No library module or proof input was edited. This focused Lean check is not
+Comparator/NanoDa verification or evidence of an actual human application.
+Corpus validation, offline attribution check (no changed stating claims),
+documentation/import generator checks and whitespace validation passed.
+Independent challenge of this full outcome and coordinator-owned final CI
+remain pending; prior accepted assessments are reused.
+
+Computed with `python3 scripts/worker_env.py -- target/release/truth
+frontier-diff --base 340b1ee3847ef8bc1668a6df78658bedf060e903`:
+
+```text
+open premises reaching the root: 494 (353 bare, 90 supported, 51 stated) -> 494 (353 bare, 90 supported, 51 stated)
+expanded-route diagnostic (lowest cost): Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16) -> Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16)
+distinct verified support alternatives: 494 -> 494
+verified support alternatives added: 0
+no change
+```
+
+Intended and actual premise effects: **none**. The contribution is an exact
+application/coverage audit and checked existing-profile consequences, with a
+specific evidence blocker and a distinct next research route.
+
+## Nonfactive warranted response: coverage without a new authority derivation (2026-11-17)
+
+**Complete outcome for fresh independent challenge.** A properly based response
+can meet its warrant standard without achieving factual understanding. This
+gives the proposed route genuine error coverage and permits an explicit,
+separate suspension interpretation. It does **not** yield a new discriminating
+argument for end-independent force. The most promising positive account values
+the person's responsible use of available evidence rather than success in
+getting the fact right. Its authority still turns on whether that merit counts
+for the indifferent bearer, the isolated relevance commitment already examined.
+The strongest goal-relative account preserves the same basing and warrant
+facts while denying that last transfer without relevant ends/resources.
+
+The route has therefore reached a substantive reassessment point: retain the
+direct prima facie warrant for evidence-responsive correction and all prior
+qualified judgments, but do not advertise the eligibility/warrant apparatus
+as an additional authority proof. There is no materially new test within this
+reconstruction that would settle the remaining transfer. Recommend reallocating
+research to another live root node, subject to the coordinator's ownership
+check, rather than opening another differently named relevance investigation.
+The actual successful-understanding case remains unopened for lack of its
+identified episode evidence.
+
+Baseline: `9bcca33f1f2804aa97cfe282159f9a35a205a053`. The coordinator reports
+independent acceptance without findings of that audit. This continuation does
+not revise publication/check history. Target `related`/`dossier`, question
+`brief`/`novelty`, the two nonfactive premise dossiers and result
+`1db47fd9-6ab1-4fa1-a9dd-0aa9457d8146`'s `context` were inspected. Existing
+#1646 basing and active-treatment findings, ordinary correction warrant and
+the consulted source distinctions are reused; no historical attribution or
+source campaign is added. Live convention source revision remains
+`15f348b072188255da837578eaafc8a98f12fdf0`.
+
+### Fix the response, including suspension's different attitude
+
+The complete preference class is again the two existing values
+`Preference.accuracy` and `Preference.comfort`, with the latter retaining the
+selected absence of a relevant accuracy/understanding end. In **each** case
+below fix one bearer a, consideration r, content p, target attitude t and
+circumstances, including actual truth, evidence, defeaters and active route,
+at both preferences. This is a comparison of force for one response, not an
+experiment that silently changes the response when the preference changes.
+No actual episode or wider psychological coverage is asserted.
+
+Use a generic `Frame` whose `Content` is C and whose `Attitude` is `Sum C C`:
+`believe p = Sum.inl p`, while `Sum.inr p` is suspension **about p**, withholding
+both assent to p and assent to its negation. `about` returns p from either
+constructor. Thus suspension is not disbelief, a false belief, or belief about
+the meta-proposition that the evidence is insufficient. It has the same
+subject matter as belief but is a distinct attitude. The following structural
+mapping elaborated in Lean; it supplies no normative relation or warrant.
+For an actual suspension instance, absence of assent to p and to its interpreted
+negation must also be established in the selected episode. Disjoint token
+constructors alone do not show that an agent lacks another simultaneous
+attitude; the sum type by itself supplies no negation or adoption semantics.
+
+```lean
+import TruthCore.Logic.EpistemicReasonDefinitionFork
+
+def responseAbout {C : Type} : Sum C C → C
+  | .inl p => p
+  | .inr p => p
+
+example {C : Type} (p : C) :
+    responseAbout (Sum.inl p : Sum C C) = p ∧
+    responseAbout (Sum.inr p : Sum C C) = p := ⟨rfl, rfl⟩
+
+example {C : Type} (p q : C) :
+    (Sum.inr p : Sum C C) ≠ Sum.inl q := by
+  intro h
+  cases h
+```
+
+No full `Frame` is manufactured by assigning `force := True` or adding a new
+eligibility flag. The displayed choices specify its attitude/content fields;
+reason attribution, applicable evidence, favoring, actual uptake, warrant and
+force would still need independent interpretation. In a suspension application,
+`CountsAsReason a r (Sum.inr p)` and `EpistemicRole` can express the proposed
+ordinary role. `IndependentInstance` would still require force for that **same**
+suspension at both preferences. `ConsiderationPresentation` links the thin
+`Reason` relation only to `believe p`; it does not derive suspension reasons
+from F6. Neither `SomeEligibleReasonUptake` nor `SomeJustifiedBelief` can be
+repurposed as actual suspension by relabeling its `Believes` predicate.
+
+| Separate application | Fixed response throughout its whole preference comparison | Nonfactive fittingness under the supplied standard | What this does not supply |
+| --- | --- | --- | --- |
+| Warranted error | t = `Sum.inl p`, with p false in these same circumstances at both values | Actual appropriate use of sufficient, undefeated evidence can warrant the belief even though it is false. | Successful factual understanding of p; end-independent force. |
+| Inconclusive evidence | t = `Sum.inr p` at both values | Actual assessment can support withholding both answers when neither has the required support. This is a separately supplied suspension-warrant interpretation. | A belief-uptake witness, full-belief license, or categorical force for suspension. |
+
+Truth and the evidence regime differ **between** these applications, never
+between preference values inside one application. The existence of the second
+cannot repair a missing force instance for the first by switching attitudes.
+Suspension's fittingness must be justified by the actual evidence standard;
+indifference alone does not make it fitting, and the map does not license
+suspending under all decisive evidence.
+
+### The positive nonfactive account and the exact circularity to avoid
+
+The candidate account is personal evidential self-governance: the person
+actually responds through the contents and their evidential relations, with
+adequate premises/rules and no undefeated defeater, rather than allowing a
+comfort cue to determine the answer. This exercises the person's rational
+agency even when innocently misleading evidence prevents true belief. With
+inconclusive evidence, competent withholding can likewise be an active
+assessment, rather than mere failure to form an opinion. The four existing
+basing conditions explain the actual exercise; the active-treatment account
+does not require a further belief that one's evidence supports the response.
+No achieved factual or metaevidential understanding is inserted as a premise.
+
+The positive rationale is that this is an appropriate way for the person to
+manage a factual attitude given their evidence. Ordinary assessment distinguishes
+responsible error from wishful or arbitrary believing; actual truth of the
+answer does not exhaust the merits of how someone responds. This is meaningful
+support for a nonfactive merit claim. The direct correction judgment additionally
+offers prima facie warrant for treating that merit as a reason even when
+unwanted. Neither claim must await an endlessly prior proof of every norm.
+But the second remains an evaluative relevance commitment; the first does not
+deductively supply it.
+
+The Lean declarations expose why the existing warrant result cannot bypass
+that distinction. `SomeEligibleReasonUptake` already assumes a `Reason`, an
+actual `Believes` instance and supplied `Eligible`. The separate calibration
+`EligibleReasonUptakeWarrants` then yields `Warrant`. Its result's only relevant
+direction is from those jointly supplied inputs to warranted actual belief.
+It does not infer `Reason` from warrant, strengthen `Reason` into `force`,
+or make force independent of preference. Interpreting the original `Reason`
+as already possessing that stronger authority and then citing its warranted
+uptake as evidence for that authority would assume what is being sought.
+
+Alternatively, reading `Warrant` as meeting a selected adequacy/permission
+standard allows the goal-relative account to accept the result. Meeting that
+standard is not by itself a reason for its indifferent subject to conform.
+Reading warrant instead as already containing end-independent favoring puts
+the disputed content into its interpretation. Even epistemic permission and
+positive pro tanto favoring must be distinguished; the current conditional
+does not establish their equivalence. These are limits on the proposed use
+of the theorem, not objections to its valid conditional proof.
+
+### Strongest goal-relative explanation; where this route converges
+
+The rival accepts content-sensitive basing, evidence-dependent appropriateness,
+the possibility of warranted error, and the distinctive response of suspension.
+Evidence and its reliability/background relations explain why one response
+meets the epistemic standard; the agent's relevant concerns or sound
+deliberative resources explain when conforming gives the agent a reason.
+It can explain both the propriety of using the available evidence and why a
+person engaged in accuracy-directed inquiry should use it, without granting
+force at the genuinely indifferent profile. The actual process account and
+nonfactive scope are positive parts of that explanation, not an invented
+possibility of error. The richer internalist version and its explanatory
+rationale remain as examined at the granted-benefit checkpoint; a current
+accuracy desire is not its only possible practical resource.
+
+The authority-supporting reply is that appropriate evidential self-governance
+already gives its bearer a reason because it is their rational activity,
+regardless of whether a further end makes it useful. This is an intelligible
+basic evaluative position, with the direct warrant already recorded. It can
+also propose that proper response is a nonfactive constituent good. That
+would be a **different good from achieved factual understanding**; the accepted
+success-benefit grant cannot simply be reused as its certificate. Even granting
+this new good for conditional exploration, the benefit-granting rival can
+still deny its force without a relevant practical resource. The transfer is
+then exactly the prior isolated commitment: a genuine cognitive merit/good
+counts for its bearer even absent a relevant end.
+
+Thus the move from successful understanding to nonfactive proper response
+removes an actual coverage restriction, but does not remove the authority
+dispute. Asking instead why warrant, fittingness, responsibility, capacity
+exercise or rational self-governance is binding returns to that same transfer
+unless a new argument supplies discriminating warrant. Mere renaming supplies
+none. No substantive new defeater of the retained direct correction judgment
+has been found here, and the surviving rival does not make that warrant
+worthless. Equally, the expanded response classification is not a new
+independent defeat of the rival or a derived preference-independent instance.
+
+### Precise stopping point and allocation recommendation
+
+The bounded route is now assessed: nonfactive epistemic merit accommodates
+warranted error; a distinct suspension attitude has an explicit structural
+map; actual basing and warrant remain independently supplied application
+conditions; and the force comparison retains one witness across both values.
+The remaining authority step is the same isolated normative relevance
+commitment, not a missing probability calculation, richer success model or
+unknown historical interpretation. The existing direct warrant remains
+available as a basic ground; no new opaque axiom or registered transcription
+is justified by this continuation.
+
+Rejected approaches: reverse the warrant conditional; smuggle stronger force
+into its `Reason` or `Warrant` input; declare every well-executed procedure a
+bearer-benefit; infer authority from actual use alone; require achieved
+metaevidential understanding for every rational response; or use a suspension
+witness at one preference to replace the belief witness at the other. The
+first two assume or reverse the sought inference; the rest change its target,
+scope or evaluative premise. A further generic omission model would only
+repeat the already checked separation of role and force.
+
+**Blocker/reopening condition:** a new substantive argument must explain why
+the selected nonfactive merit has force for an agent without a relevant end
+or sound-deliberative connection, rather than merely reclassify the merit or
+encode that transfer. It may support or challenge the retained relevance
+judgment, but must add a discriminating premise, independently motivated
+mechanism or consequence under the fixed senses. An actual properly based
+episode alone would strengthen application evidence, not decide this normative
+transfer. The separate actual-success route reopens only on its already
+specified episode evidence.
+
+Recommend **reallocation to another currently unowned live root node** after
+review of this outcome. This is a recommendation for the coordinator, not a
+new issue, ownership claim or claim that #930 is philosophically settled.
+No successor investigation should be opened merely to rename this same
+relevance step. The note's earlier successful and qualified local findings
+retain their status; this branch has delivered coverage clarification and a
+precise exhausted inference, with no new authority derivation or root closure.
+
+Self-sweep: the displayed Lean check verifies only the attitude/content mapping
+and disjoint constructors. No `force`, normative benefit or warrant is assigned
+by it. Warranted error is not called factive understanding; suspension is not
+called belief; eligibility is not called end-independent authority. The
+existing warrant theorem's `Reason` premise remains visible. No new source
+claim, corpus proposition, proof registration or opaque normative predicate is
+introduced. All consequential findings here are proposed for fresh independent
+challenge.
+
+Verification: the displayed structural mapping elaborated without diagnostics
+using `flock /tmp/moenarch/truth-core-heavy.lock python3 scripts/worker_env.py
+-- lake env lean /tmp/epistemic-930-nonfactive-attitudes.lean`. The displayed
+block preserves its substantive contents for reproduction. No library module
+changed; this is not a new registered result or Comparator/NanoDa certificate.
+Corpus validation, offline attribution check (no changed stating claims),
+documentation/import generator checks and whitespace validation passed.
+No previous finite calculation, full proof gate or source acquisition was
+repeated. Fresh independent challenge of this outcome and coordinator-owned
+final CI remain separate from these checks.
+
+Computed with `python3 scripts/worker_env.py -- target/release/truth
+frontier-diff --base 9bcca33f1f2804aa97cfe282159f9a35a205a053`:
+
+```text
+open premises reaching the root: 494 (353 bare, 90 supported, 51 stated) -> 494 (353 bare, 90 supported, 51 stated)
+expanded-route diagnostic (lowest cost): Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16) -> Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16)
+distinct verified support alternatives: 494 -> 494
+verified support alternatives added: 0
+no change
+```
+
+Intended and actual formal premise effects: **none**. The outcome is improved
+response coverage, an explicit attitude map and a precise exhausted authority
+inference, with reallocation recommended rather than another duplicate branch.
