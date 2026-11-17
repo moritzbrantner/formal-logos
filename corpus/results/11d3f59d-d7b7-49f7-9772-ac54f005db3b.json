@@ -1,0 +1,11 @@
+{
+  "id": "11d3f59d-d7b7-49f7-9772-ac54f005db3b",
+  "label": "JUSTICE_1 and fitting-assertion bridges give permitted divine assertion",
+  "argument_id": "5fe2f8c9-f85f-4845-ab5f-bb964313340d",
+  "challenge_module": "TruthCore.Results.Causality.DivineJustice1457.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DivineJustice1457.Solution",
+  "theorem": "TruthCore.Results.Causality.DivineJustice1457.permittedFromJustice",
+  "comparator_config": "results/11d3f59d-d7b7-49f7-9772-ac54f005db3b/comparator.json",
+  "status": "solution-present",
+  "description": "A genuine divine assertion is a willed act, JUSTICE_1 makes it Fitting, and the OPEN normative bridge makes it permitted. A new conditional support option for the existing veracity premise, not its discharge."
+}

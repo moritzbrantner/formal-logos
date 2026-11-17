@@ -1,0 +1,11 @@
+{
+  "id": "aa0525f0-2c01-48d1-b4ed-e67cacd51ceb",
+  "label": "JUSTICE_1 from will governed by order-tracking wisdom",
+  "argument_id": "f96adfff-382d-4f41-9149-113301904e3f",
+  "challenge_module": "TruthCore.Results.Causality.DivineJustice1457.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DivineJustice1457.Solution",
+  "theorem": "TruthCore.Results.Causality.DivineJustice1457.justiceFromWisdom",
+  "comparator_config": "results/aa0525f0-2c01-48d1-b4ed-e67cacd51ceb/comparator.json",
+  "status": "solution-present",
+  "description": "For one GOD_4 and act, specialize will-only-approved and then approval-tracks-order. No voluntarist definition of Fitting is used."
+}

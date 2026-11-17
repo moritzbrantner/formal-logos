@@ -1,0 +1,11 @@
+{
+  "id": "f99421c7-5eb3-479a-9d73-d928a389cc69",
+  "label": "Divine justice route structural controls certificate",
+  "argument_id": "46caa295-3206-4312-942b-b4f56128ea55",
+  "challenge_module": "TruthCore.Results.Causality.DivineJustice1457.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DivineJustice1457.Solution",
+  "theorem": "TruthCore.Results.Causality.DivineJustice1457.controls",
+  "comparator_config": "results/f99421c7-5eb3-479a-9d73-d928a389cc69/comparator.json",
+  "status": "solution-present",
+  "description": "Boolean skeleton interpretations only: the joint sample shows the route premises satisfiable together with an actual assertion; each omission sample keeps the other premises of its argument and loses its conclusion; conformity does not give completeness; voluntarist and independent readings of Fitting disagree on one will profile. No modal, theological or moral-applicability claim."
+}

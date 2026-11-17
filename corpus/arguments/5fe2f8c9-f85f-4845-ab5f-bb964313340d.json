@@ -1,0 +1,27 @@
+{
+  "id": "5fe2f8c9-f85f-4845-ab5f-bb964313340d",
+  "label": "JUSTICE_1 and fitting-assertion bridges give permitted divine assertion",
+  "premise_statement_ids": [
+    "e9356743-87b5-47cf-83ef-b6fbcdba4460",
+    "8ea61037-1d7d-40df-9608-ac01bae9caa1",
+    "d87e9ed2-0886-494e-a487-a04ce8974b73"
+  ],
+  "conclusion_statement_id": "9286d83c-dc05-4517-a886-e989629661f0",
+  "inference_ids": [
+    "84964d8f-1918-4788-8ac8-26400c862c45"
+  ],
+  "meaning": "A genuine divine assertion is a willed act, JUSTICE_1 makes it Fitting, and the OPEN normative bridge makes it permitted. A new conditional support option for the existing veracity premise, not its discharge.",
+  "term_senses": {
+    "JUSTICE": "3ba44e1a-76d4-4ea9-bbc9-4e9927a34d28"
+  },
+  "definition_ids": [
+    "187ab5be-de6f-4a8c-b49a-a1993514fa35",
+    "3d69a2b8-58b7-4888-943e-e32ea702fb02",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "f2c09ae8-848d-5a3b-ab79-92c2b01d414c",
+    "a047c2db-fb7f-48f6-bca7-f6fa60be0519"
+  ],
+  "disambiguation_ids": [
+    "530c775b-2665-4e14-a679-2c4a0e6edcc5"
+  ]
+}

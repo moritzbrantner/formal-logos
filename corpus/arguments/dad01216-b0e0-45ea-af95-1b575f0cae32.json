@@ -1,0 +1,23 @@
+{
+  "id": "dad01216-b0e0-45ea-af95-1b575f0cae32",
+  "label": "Voluntarist due order makes JUSTICE_1 hold for every will profile",
+  "premise_statement_ids": [
+    "6d3094ce-0f60-4cc1-85a3-5ebfdb0a67f1"
+  ],
+  "conclusion_statement_id": "e9356743-87b5-47cf-83ef-b6fbcdba4460",
+  "inference_ids": [
+    "88d26104-c75f-43cd-a7a9-a009465e967e"
+  ],
+  "meaning": "If Fitting means willed by some GOD_4, any willed act is Fitting. JUSTICE_1 then constrains no will profile, so the permission route becomes a divine-command account of permission. A diagnostic of the Euthyphro horn, not a refutation of voluntarism.",
+  "term_senses": {
+    "JUSTICE": "3ba44e1a-76d4-4ea9-bbc9-4e9927a34d28"
+  },
+  "definition_ids": [
+    "187ab5be-de6f-4a8c-b49a-a1993514fa35",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "a047c2db-fb7f-48f6-bca7-f6fa60be0519"
+  ],
+  "disambiguation_ids": [
+    "530c775b-2665-4e14-a679-2c4a0e6edcc5"
+  ]
+}

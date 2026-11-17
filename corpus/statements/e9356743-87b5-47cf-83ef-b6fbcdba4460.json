@@ -1,0 +1,14 @@
+{
+  "id": "e9356743-87b5-47cf-83ef-b6fbcdba4460",
+  "label": "A GOD_4 with classical attributes acts with JUSTICE_1: every willed act is fitting",
+  "paraphrase": "Analyst formulation. Every act a GOD_4 with classical attributes wills is Fitting. Silent on whether any act is willed and on whether every due is rendered.",
+  "lean_declaration": "TruthCore.Causality.DivineJustice1457.GodActsJustly",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "a047c2db-fb7f-48f6-bca7-f6fa60be0519",
+    "187ab5be-de6f-4a8c-b49a-a1993514fa35"
+  ],
+  "disambiguation_ids": [
+    "530c775b-2665-4e14-a679-2c4a0e6edcc5"
+  ]
+}

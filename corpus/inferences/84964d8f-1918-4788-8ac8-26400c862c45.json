@@ -1,0 +1,14 @@
+{
+  "id": "84964d8f-1918-4788-8ac8-26400c862c45",
+  "label": "JUSTICE_1 and fitting-assertion bridges give permitted divine assertion (inference)",
+  "input_statement_ids": [
+    "e9356743-87b5-47cf-83ef-b6fbcdba4460",
+    "8ea61037-1d7d-40df-9608-ac01bae9caa1",
+    "d87e9ed2-0886-494e-a487-a04ce8974b73"
+  ],
+  "output_statement_id": "9286d83c-dc05-4517-a886-e989629661f0",
+  "rule": "Universal specialization and implication composition",
+  "meaning": "A genuine divine assertion is a willed act, JUSTICE_1 makes it Fitting, and the OPEN normative bridge makes it permitted. A new conditional support option for the existing veracity premise, not its discharge.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "dbf17786-c58c-42d7-9976-3ddd84e2bfe4",
+  "label": "Divine justice route structural controls certificate (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "99e2b1f4-f4db-451f-a8e5-aa83e0fbf74c",
+  "rule": "Construction of explicit interpretations",
+  "meaning": "Boolean skeleton interpretations only: the joint sample shows the route premises satisfiable together with an actual assertion; each omission sample keeps the other premises of its argument and loses its conclusion; conformity does not give completeness; voluntarist and independent readings of Fitting disagree on one will profile. No modal, theological or moral-applicability claim.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

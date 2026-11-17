@@ -1,0 +1,24 @@
+{
+  "id": "f96adfff-382d-4f41-9149-113301904e3f",
+  "label": "JUSTICE_1 from will governed by order-tracking wisdom",
+  "premise_statement_ids": [
+    "5273dfce-c90f-4efc-b31b-1e53384f074a",
+    "13641370-17ac-4b2e-818d-902ca033f7e5"
+  ],
+  "conclusion_statement_id": "e9356743-87b5-47cf-83ef-b6fbcdba4460",
+  "inference_ids": [
+    "04899302-9d16-4677-960a-e630a19076e0"
+  ],
+  "meaning": "For one GOD_4 and act, specialize will-only-approved and then approval-tracks-order. No voluntarist definition of Fitting is used.",
+  "term_senses": {
+    "JUSTICE": "3ba44e1a-76d4-4ea9-bbc9-4e9927a34d28"
+  },
+  "definition_ids": [
+    "187ab5be-de6f-4a8c-b49a-a1993514fa35",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "a047c2db-fb7f-48f6-bca7-f6fa60be0519"
+  ],
+  "disambiguation_ids": [
+    "530c775b-2665-4e14-a679-2c4a0e6edcc5"
+  ]
+}

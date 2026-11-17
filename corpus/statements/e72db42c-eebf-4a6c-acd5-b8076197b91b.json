@@ -1,0 +1,14 @@
+{
+  "id": "e72db42c-eebf-4a6c-acd5-b8076197b91b",
+  "label": "A GOD_4 with classical attributes has JUSTICE_2: it wills every act due to some being",
+  "paraphrase": "Analyst formulation. Distributive completeness: for every being x and act a due to x, a GOD_4 with classical attributes wills a. Not entailed by JUSTICE_1.",
+  "lean_declaration": "TruthCore.Causality.DivineJustice1457.GodRendersAllDue",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "a047c2db-fb7f-48f6-bca7-f6fa60be0519",
+    "296791b6-2e83-4da2-8fc2-4edb0a677cc7"
+  ],
+  "disambiguation_ids": [
+    "530c775b-2665-4e14-a679-2c4a0e6edcc5"
+  ]
+}

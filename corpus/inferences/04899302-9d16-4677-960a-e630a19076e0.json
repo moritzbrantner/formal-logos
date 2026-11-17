@@ -1,0 +1,13 @@
+{
+  "id": "04899302-9d16-4677-960a-e630a19076e0",
+  "label": "JUSTICE_1 from will governed by order-tracking wisdom (inference)",
+  "input_statement_ids": [
+    "5273dfce-c90f-4efc-b31b-1e53384f074a",
+    "13641370-17ac-4b2e-818d-902ca033f7e5"
+  ],
+  "output_statement_id": "e9356743-87b5-47cf-83ef-b6fbcdba4460",
+  "rule": "Universal specialization and implication composition",
+  "meaning": "For one GOD_4 and act, specialize will-only-approved and then approval-tracks-order. No voluntarist definition of Fitting is used.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

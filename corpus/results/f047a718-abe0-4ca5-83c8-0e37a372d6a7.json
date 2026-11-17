@@ -1,0 +1,11 @@
+{
+  "id": "f047a718-abe0-4ca5-83c8-0e37a372d6a7",
+  "label": "Voluntarist due order makes JUSTICE_1 hold for every will profile",
+  "argument_id": "dad01216-b0e0-45ea-af95-1b575f0cae32",
+  "challenge_module": "TruthCore.Results.Causality.DivineJustice1457.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DivineJustice1457.Solution",
+  "theorem": "TruthCore.Results.Causality.DivineJustice1457.voluntaristTrivializes",
+  "comparator_config": "results/f047a718-abe0-4ca5-83c8-0e37a372d6a7/comparator.json",
+  "status": "solution-present",
+  "description": "If Fitting means willed by some GOD_4, any willed act is Fitting. JUSTICE_1 then constrains no will profile, so the permission route becomes a divine-command account of permission. A diagnostic of the Euthyphro horn, not a refutation of voluntarism."
+}

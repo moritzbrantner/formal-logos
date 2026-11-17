@@ -1,0 +1,10 @@
+{
+  "id": "6d3094ce-0f60-4cc1-85a3-5ebfdb0a67f1",
+  "label": "An act is fitting exactly when some GOD_4 with classical attributes wills it",
+  "paraphrase": "Analyst formulation of the voluntarist reading of due order, as an explicit rival assumption: an act is Fitting if and only if some GOD_4 with classical attributes wills it.",
+  "lean_declaration": "TruthCore.Causality.DivineJustice1457.VoluntaristFitting",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "a047c2db-fb7f-48f6-bca7-f6fa60be0519"
+  ]
+}

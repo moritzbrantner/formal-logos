@@ -1,0 +1,11 @@
+{
+  "id": "8ea61037-1d7d-40df-9608-ac01bae9caa1",
+  "label": "A genuine assertion by a GOD_4 with classical attributes is an act it wills",
+  "paraphrase": "Analyst formulation. OPEN action-theoretic bridge: whenever a GOD_4 with classical attributes genuinely asserts p, it wills its own act of asserting p.",
+  "lean_declaration": "TruthCore.Causality.DivineJustice1457.GodAssertionIsWilled",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "f2c09ae8-848d-5a3b-ab79-92c2b01d414c",
+    "a047c2db-fb7f-48f6-bca7-f6fa60be0519"
+  ]
+}

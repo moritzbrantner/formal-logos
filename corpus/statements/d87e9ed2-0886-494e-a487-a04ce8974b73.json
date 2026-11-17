@@ -1,0 +1,10 @@
+{
+  "id": "d87e9ed2-0886-494e-a487-a04ce8974b73",
+  "label": "A fitting act of assertion is morally permissible for its speaker",
+  "paraphrase": "Analyst formulation. OPEN normative bridge: if g's act of asserting p is Fitting, then genuinely asserting p is morally permissible for g in the fixed context. Due order is claimed to be right-making for assertion.",
+  "lean_declaration": "TruthCore.Causality.DivineJustice1457.FittingAssertionPermitted",
+  "definition_ids": [
+    "a047c2db-fb7f-48f6-bca7-f6fa60be0519",
+    "3d69a2b8-58b7-4888-943e-e32ea702fb02"
+  ]
+}
