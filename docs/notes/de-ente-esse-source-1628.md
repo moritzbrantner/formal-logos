@@ -602,3 +602,43 @@ Final affected checks passed: `target/release/truth check`, offline
 verified alternatives, zero added alternatives, cheapest expanded diagnostic
 cost 6, all unchanged. These counts describe the formal comparison, not the
 merit of the current warrant judgment.
+
+### Q11 allocation reconciliation (2026-11-17)
+
+Read the accepted intellect-lane stopping recommendation at `85159977`
+(`docs/immaterial-intellect-reception.md`) and retrieved related/dossier/brief/
+novelty/context for its suggested `0730d46f-4604-5750-9a64-de664f064b31`.
+The exact existing consumer `Q11NatureUniqueness.godIsOneFromNature`, result
+`841e7c81`, uses numerical common nature, suppositum/nature identity and
+incommunicable individuation jointly. Its at-most-one conclusion supplies no
+existence. The q11 premise has an existing whole-case consumer `d6e5072d`;
+it is not presently a support input to the GodExists route selected here.
+
+This is **overlapping warrant, different propositions**, not a distinct new
+source-selection argument. Q11 says `IsGod g → essenceOf g = deity`; `75b5b027`
+says actual esse–essence identity bearers stand in primitive `SharesNature`.
+Each individual's `esseOf = essenceOf` is neither cross-individual numerical
+nature equality nor suppositum/nature identity. Q11's source reading and
+conditional proof are retained, without treating common predication as one
+numerically real nature or repeating the accepted individuation audit above.
+
+To use q11 for `75b5b027`, one would need to place the same actual identity
+candidates under the proper IsGod predicate, align their essence representations,
+and justify nature-value equality implying the multiplication relation. The
+first step would import the pre-naming source-identification obligation being
+investigated here. Conversely `75b5b027` does not supply q11's one deity value:
+it needs proper-God-to-actual-identity applicability and a bridge from the shared
+multiplication relation to numerical essence equality. Choosing a deity value
+from an already existing candidate would not prove such a candidate exists.
+No logical equivalence or global strength order between the two is inferred.
+
+The intended full God-description could provide additional content for a
+numerical-common-nature defense, but no new discriminatory content or bridge
+was delivered by the intellect stopping recommendation. Its own provisional
+scope is respected. Until such content answers the retained different-whole-
+nature/individuation question, q11 is not independent corroboration of this
+source-selection premise. Do not dispatch a duplicate investigation of the
+accepted shared-nature assessment on this recommendation alone. Reopen on a
+newly warranted candidate-domain or real-nature bridge; keep the current
+ascent/degree test as the distinct next input. Director descent/termination
+still supplies no new cognition inference, and no intellect/UI record is edited.

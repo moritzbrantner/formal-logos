@@ -280,3 +280,12 @@ connection and premise effects; they do not rate the philosophical strength of
 the added option. No frontier establishment is claimed. Fresh independent
 semantic review of this complete proposed outcome remains the coordinator's
 next publication gate; this worker has not pushed or opened a PR.
+
+The next ascent investigation is retained in
+[causal-perfection-transfer.md](causal-perfection-transfer.md#recipient-relative-limitation-and-source-scoped-ascent-2026-11-17).
+New sibling `0609389b` consumes actual identity-source ascent `8176a284` in place
+of full `cffad050`, retaining the other three source-first inputs and this
+note's existing fixed-esse GodExists consumer. Its reception-based support uses
+absolute source nonlimitation; its audit exposes the separate cross-reception
+burden of the old relative-capacity step. Neither result discharges the retained
+source-selection, composition, degree, naming or actual-application commitments.

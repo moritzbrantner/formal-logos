@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.SourceScopedAscent.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SourceScopedAscent.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.SourceScopedAscent.crossReception"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

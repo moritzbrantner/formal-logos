@@ -1,0 +1,12 @@
+{
+  "id": "ede2f264-b9fa-4a1f-89e8-07061c8140d5",
+  "label": "Causal ascent at esse gives its actual identity-source restriction (inference)",
+  "input_statement_ids": [
+    "cffad050-e86d-48b8-b04b-be47fcc1352d"
+  ],
+  "output_statement_id": "8176a284-769b-4ed0-b90b-ff655b7fd864",
+  "rule": "Restrict the existing all-causes esse principle",
+  "meaning": "Strength registration for the same CausesIn, MoreIn and esse dictionary: only actual source/target pairs with source esse-essence identity are retained. No premise warrant or strictness countermodel is asserted.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

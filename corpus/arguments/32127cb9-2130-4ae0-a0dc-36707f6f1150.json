@@ -1,0 +1,28 @@
+{
+  "id": "32127cb9-2130-4ae0-a0dc-36707f6f1150",
+  "label": "Causal ascent at esse gives its actual identity-source restriction",
+  "premise_statement_ids": [
+    "cffad050-e86d-48b8-b04b-be47fcc1352d"
+  ],
+  "conclusion_statement_id": "8176a284-769b-4ed0-b90b-ff655b7fd864",
+  "inference_ids": [
+    "ede2f264-b9fa-4a1f-89e8-07061c8140d5"
+  ],
+  "meaning": "Strength registration for the same CausesIn, MoreIn and esse dictionary: only actual source/target pairs with source esse-essence identity are retained. No premise warrant or strictness countermodel is asserted.",
+  "definition_ids": [
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "5766de66-8a37-5b04-aa65-9eec53319f50",
+    "efce4d54-fd69-4a00-a4d3-6adcb460f518"
+  ],
+  "disambiguation_ids": [
+    "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "1795a62e-f78b-5f5b-94e7-9e7490824811"
+  ],
+  "strong_version_needed": {
+    "cffad050-e86d-48b8-b04b-be47fcc1352d": "The stronger version is the subject of the strength comparison only; the new source route consumes the weaker identity-source version."
+  }
+}

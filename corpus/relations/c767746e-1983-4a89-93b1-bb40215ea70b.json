@@ -1,0 +1,11 @@
+{
+  "id": "c767746e-1983-4a89-93b1-bb40215ea70b",
+  "label": "Causal ascent at esse strengthens its actual identity-source restriction",
+  "subject_kind": "statement",
+  "subject_id": "cffad050-e86d-48b8-b04b-be47fcc1352d",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "8176a284-769b-4ed0-b90b-ff655b7fd864",
+  "verification_result_id": "30c1203b-5067-4fa8-824b-fa11e762e35f",
+  "note": "Same MoreIn and CausesIn at esse; restrict to actual pairs whose source has esse-essence identity. No strictness countermodel is registered."
+}
