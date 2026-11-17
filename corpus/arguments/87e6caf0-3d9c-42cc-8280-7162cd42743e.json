@@ -1,0 +1,28 @@
+{
+  "id": "87e6caf0-3d9c-42cc-8280-7162cd42743e",
+  "label": "Exact difference of unrestricted and composite-restricted extensionality",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "80bb67f2-29df-4748-9c2d-add1e0e5ff6f",
+  "inference_ids": [
+    "9dfaa487-2f58-4402-8e8b-d87c53ee88ef"
+  ],
+  "meaning": "Forward: unrestricted identity implies its composite restriction and identifies minimal objects because both strict lower cones are empty. Reverse: if x has a proper part, equal profiles make y composite too, so restricted identity applies; otherwise both objects are minimal, so minimal uniqueness applies. This certifies the nondegenerate exact delta AtMostOneMinimal on every SAME B/order without background assumptions. No existence or actual-world premise is supplied.",
+  "definition_ids": [
+    "105f1631-62c6-4f24-aec8-1fd12a760f10",
+    "39de6e29-e2e8-4f4f-8463-66a075f59d99",
+    "54281cc8-289e-47de-bfdb-bf52a624e572",
+    "fbfd68f0-5ebe-4a35-a047-c08fbf45b308"
+  ],
+  "disambiguation_ids": [
+    "91d5918a-a193-491d-806f-d32441ee41c5"
+  ],
+  "sense_bridges": [
+    {
+      "term": "PROPER_PART_EXTENSIONALITY",
+      "from": "b80cd420-25ac-4638-96d9-b0ce3e1687de",
+      "to": "f0ecda08-faf2-4b95-8dfd-6508d294d694",
+      "statement_id": "80bb67f2-29df-4748-9c2d-add1e0e5ff6f",
+      "role": "conclusion"
+    }
+  ]
+}

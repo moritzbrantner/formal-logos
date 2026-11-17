@@ -1,0 +1,9 @@
+{
+  "id": "39de6e29-e2e8-4f4f-8463-66a075f59d99",
+  "label": "Exact difference of proper-part extensionality strengths",
+  "term": "proper-part extensionality exact strength difference",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Mereology.DependenceShapesStrength.ExactDifference",
+  "definition": "For every Type B and PartialOrder B, unrestricted proper-part extensionality holds iff composite-restricted proper-part extensionality and AtMostOneMinimal B hold. Both predicates use exactly the same domain/order and SameProperParts. Definition 105f1631-62c6-4f24-aec8-1fd12a760f10 gives the delta; existing definitions 54281cc8-289e-47de-bfdb-bf52a624e572 and fbfd68f0-5ebe-4a35-a047-c08fbf45b308 retain their meanings and sense identities. comparison B is the existing ComparisonSpec with no background, these two principles and that delta.",
+  "note": "Analyst mathematical strength comparison for #336 review repair. Uses the same supplied carrier and PartialOrder; no actuality, necessity, existence of a minimal object or metaphysical simplicity. See docs/dependence-shapes.md, Strength-fork repair."
+}

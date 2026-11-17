@@ -1,0 +1,11 @@
+{
+  "id": "21cd4ed5-3ced-46c8-8a61-4bf427845614",
+  "label": "Proper-part extensionality and simple plurality control checked",
+  "argument_id": "341f8f37-f6ee-460e-9efe-a56536e1b477",
+  "challenge_module": "TruthCore.Results.Mereology.DependenceShapes.Challenge",
+  "solution_module": "TruthCore.Results.Mereology.DependenceShapes.Solution",
+  "theorem": "TruthCore.Results.Mereology.DependenceShapes.extensionalityControl",
+  "comparator_config": "results/21cd4ed5-3ced-46c8-8a61-4bf427845614/comparator.json",
+  "status": "solution-present",
+  "description": "All minimal objects have empty strict lower cones. For composites with the same strict lower cone, strong supplementation of a failure of containment would supply a separating part: if strict it also lies below the other object, and if equal to the whole a shared strict part witnesses overlap. Either case contradicts disjointness, yielding mutual containment and identity. Reuse atomicModel and strongOfComplementation on Body; its two singleton atoms witness failure of unrestricted extensionality. This is a premise-free control showing the two extensionality senses cannot be substituted for one another."
+}

@@ -1,0 +1,82 @@
+# #336 P2 review repair: same-domain extensionality strength fork.
+# Original DS-3, definitions, sense identities and Challenge remain unchanged.
+[batch]
+vocab = "TruthCore.Mereology.DependenceShapesStrength"
+results = "TruthCore.Results.Mereology.DependenceShapesStrength"
+
+[[statement]]
+id = "52337b28-dc07-4675-977d-c3be4b63b291"
+label = "PROPER_PART_EXTENSIONALITY_1: unrestricted identity on a fixed partial order"
+lean = "TruthCore.Mereology.DependenceShapes.ProperExtensionality"
+paraphrase = "OPEN analyst principle on a supplied Type B with a supplied PartialOrder B: for all x and y in B, equality of their strict proper-part profiles implies x=y, including minimal objects. It asserts no carrier population, actuality, modal status or extra metaphysical simplicity. Strong sibling of the composite-restricted principle on EXACTLY the same B/order; no implicit quantification over different domains or orders."
+definitions = ["54281cc8-289e-47de-bfdb-bf52a624e572", "f3379a14-41d3-48b6-a91e-4b694d136c0a"]
+disambiguations = ["91d5918a-a193-491d-806f-d32441ee41c5"]
+
+[[statement]]
+id = "799b9e92-e95e-40c7-a01f-30c1b70b317f"
+label = "PROPER_PART_EXTENSIONALITY_2: composite-restricted identity on a fixed partial order"
+lean = "TruthCore.Mereology.DependenceShapes.CompositeExtensionality"
+paraphrase = "OPEN analyst principle on the SAME supplied Type B with the SAME supplied PartialOrder B: for all x and y in B, if both have a strict proper part and have equal strict proper-part profiles, then x=y. Only the two compared objects are restricted to composites; parts still range over all B. It asserts no composites exist. Weak sibling of unrestricted proper-part extensionality; it neither asserts nor requires the strong sibling."
+definitions = ["fbfd68f0-5ebe-4a35-a047-c08fbf45b308", "f3379a14-41d3-48b6-a91e-4b694d136c0a"]
+disambiguations = ["91d5918a-a193-491d-806f-d32441ee41c5"]
+
+[[statement]]
+id = "At most one minimal object on a fixed partial order"
+lean = "AtMostOneMinimal"
+paraphrase = "On a supplied Type B and PartialOrder B, any two Mathlib IsMin objects are equal. It asserts at most one object with no strict proper part, not that any such object exists. This is the additional content of unrestricted proper-part extensionality over its composite restriction; it is not metaphysical simplicity or uniqueness of an ultimate ground."
+definitions = ["105f1631-62c6-4f24-aec8-1fd12a760f10"]
+
+[[statement]]
+id = "Unrestricted extensionality is composite extensionality plus minimal uniqueness"
+lean = "ExactDifference"
+paraphrase = "For every Type B and PartialOrder B, unrestricted proper-part extensionality is equivalent to the conjunction of composite-restricted proper-part extensionality and at most one minimal object, all on that exact B/order. A premise-free comparison of encodings, not an assertion of either identity principle or of minimal-object existence."
+definitions = ["39de6e29-e2e8-4f4f-8463-66a075f59d99", "105f1631-62c6-4f24-aec8-1fd12a760f10", "54281cc8-289e-47de-bfdb-bf52a624e572", "fbfd68f0-5ebe-4a35-a047-c08fbf45b308"]
+disambiguations = ["91d5918a-a193-491d-806f-d32441ee41c5"]
+
+[[argument]]
+id = "e891585c-2077-42eb-b272-60bfce948957"
+label = "PROPER_PART_EXTENSIONALITY_1 entails PROPER_PART_EXTENSIONALITY_2"
+theorem = "restrictedOfUnrestricted"
+premises = ["52337b28-dc07-4675-977d-c3be4b63b291"]
+conclusion = "799b9e92-e95e-40c7-a01f-30c1b70b317f"
+axioms = []
+weakening = true
+transcription = "instantiation"
+rule = "Restrict the two universal object quantifiers to composite objects"
+meaning = "For the SAME supplied B and PartialOrder B, apply unrestricted extensionality to the given x,y and their equal strict lower cones; the two composite hypotheses need no further use. The unrestricted principle is the SOLE Prop premise. This is the formal strong-to-weak registration, not a new root-support claim. Existing premise-free DS-3 certifies failure of the converse in Body."
+strong_version_needed = {"52337b28-dc07-4675-977d-c3be4b63b291" = "The strong principle is the subject of this strength registration; the weak sibling is its conclusion, not a replacement premise for this comparison."}
+sense_bridges = [{term = "PROPER_PART_EXTENSIONALITY", from = "PROPER_PART_EXTENSIONALITY_1", to = "PROPER_PART_EXTENSIONALITY_2", statement_id = "799b9e92-e95e-40c7-a01f-30c1b70b317f", role = "conclusion"}]
+
+[[argument]]
+id = "Exact difference of unrestricted and composite-restricted extensionality"
+theorem = "exactDifference"
+premises = []
+conclusion = "Unrestricted extensionality is composite extensionality plus minimal uniqueness"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Separate equal proper-part profiles into the composite case and the minimal case"
+meaning = "Forward: unrestricted identity implies its composite restriction and identifies minimal objects because both strict lower cones are empty. Reverse: if x has a proper part, equal profiles make y composite too, so restricted identity applies; otherwise both objects are minimal, so minimal uniqueness applies. This certifies the nondegenerate exact delta AtMostOneMinimal on every SAME B/order without background assumptions. No existence or actual-world premise is supplied."
+sense_bridges = [{term = "PROPER_PART_EXTENSIONALITY", from = "PROPER_PART_EXTENSIONALITY_1", to = "PROPER_PART_EXTENSIONALITY_2", statement_id = "Unrestricted extensionality is composite extensionality plus minimal uniqueness", role = "conclusion"}]
+
+[[relation]]
+id = "Unrestricted proper-part identity strengthens composite-restricted identity"
+subject_kind = "statement"
+subject_id = "52337b28-dc07-4675-977d-c3be4b63b291"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "799b9e92-e95e-40c7-a01f-30c1b70b317f"
+verification_result_id = "636955de-a12b-40a4-b4c6-f2062b3a70ee"
+strictness_result_id = "21cd4ed5-3ced-46c8-8a61-4bf427845614"
+note = "Same supplied B and PartialOrder B; the backing theorem has unrestricted extensionality as its only premise. Existing DS-3 is the premise-free strictness certificate: its SAME Body satisfies CompositeExtensionality and not ProperExtensionality, with two distinct minimal atoms. This is failure of converse entailment, not a refutation of unrestricted identity in every model. The exact added content is minimal-object uniqueness, certified by the matching strength_comparison."
+
+[[relation]]
+id = "Proper-part extensionality strength fork with exact minimal uniqueness delta"
+subject_kind = "statement"
+subject_id = "52337b28-dc07-4675-977d-c3be4b63b291"
+predicate = "strength_comparison"
+object_kind = "statement"
+object_id = "799b9e92-e95e-40c7-a01f-30c1b70b317f"
+comparison_spec = "comparison"
+delta_statement_id = "At most one minimal object on a fixed partial order"
+evidence_result_ids = {implication = "636955de-a12b-40a4-b4c6-f2062b3a70ee", equivalence = "Exact difference of unrestricted and composite-restricted extensionality"}
+statement_parameter_indices = {stronger = [0, 1], weaker = [0, 1], delta = [0, 1]}
+note = "No background: unrestricted identity is exactly composite-restricted identity plus at most one minimal object on the same B/order. The delta is a concrete uniqueness condition, not STRONG or WEAK implies STRONG; no existence condition is added. The original DS-3 result remains the strengthens strictness certificate; its broader certificate is not substituted for the exact-type Separation role of this comparison."

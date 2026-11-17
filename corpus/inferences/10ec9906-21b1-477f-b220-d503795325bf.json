@@ -1,0 +1,10 @@
+{
+  "id": "10ec9906-21b1-477f-b220-d503795325bf",
+  "label": "Regular-open priority direction control checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "7ed55067-4aa8-48bb-b38b-b4fd05e3fc4e",
+  "rule": "Structural theorem and explicit countermodel/control",
+  "meaning": "Reuse gunkModel. Every region has a smaller positive part, so accessibility induction fails at every node; Mathlib extracts an anchored chain and strict antitonicity gives injectivity. On positive regions strictly below top, Boolean complementation maps downward strict edges to upward ones; pulling hypothetical upward WF back contradicts atomlessness. The designated-whole star terminates in at most one link and has one source. Two successive strict parts exhibit an omitted intermediate-whole edge. Mathlib IsAtomic/IsAtomistic supply the set-algebra contrast, without replacing existing mereology machinery.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

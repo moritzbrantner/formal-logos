@@ -1,0 +1,20 @@
+{
+  "id": "570d615c-23b0-44c1-b745-2e37663e271c",
+  "label": "Regular-open priority direction control checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "7ed55067-4aa8-48bb-b38b-b4fd05e3fc4e",
+  "inference_ids": [
+    "10ec9906-21b1-477f-b220-d503795325bf"
+  ],
+  "meaning": "Reuse gunkModel. Every region has a smaller positive part, so accessibility induction fails at every node; Mathlib extracts an anchored chain and strict antitonicity gives injectivity. On positive regions strictly below top, Boolean complementation maps downward strict edges to upward ones; pulling hypothetical upward WF back contradicts atomlessness. The designated-whole star terminates in at most one link and has one source. Two successive strict parts exhibit an omitted intermediate-whole edge. Mathlib IsAtomic/IsAtomistic supply the set-algebra contrast, without replacing existing mereology machinery.",
+  "definition_ids": [
+    "7030c2d9-e059-4dcc-a61f-712381ed7951",
+    "1dff2d68-1348-5e7e-8ee7-248af63c8c53",
+    "416dfd08-eb27-5d9a-b2cd-fc8c7a7c2981",
+    "a56af907-46a5-4cc1-aa3d-6ae166d895f2"
+  ],
+  "disambiguation_ids": [
+    "893a8e17-13a9-5a0d-b5e1-a9bbb9a4167f",
+    "34ddfede-ff4d-59ad-9882-4bcb490df9bb"
+  ]
+}

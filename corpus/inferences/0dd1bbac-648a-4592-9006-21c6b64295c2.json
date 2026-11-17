@@ -1,0 +1,10 @@
+{
+  "id": "0dd1bbac-648a-4592-9006-21c6b64295c2",
+  "label": "Proper-part extensionality and simple plurality control checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "cae86e58-7d9f-4e03-a877-930a6d69db11",
+  "rule": "Structural theorem and explicit countermodel/control",
+  "meaning": "All minimal objects have empty strict lower cones. For composites with the same strict lower cone, strong supplementation of a failure of containment would supply a separating part: if strict it also lies below the other object, and if equal to the whole a shared strict part witnesses overlap. Either case contradicts disjointness, yielding mutual containment and identity. Reuse atomicModel and strongOfComplementation on Body; its two singleton atoms witness failure of unrestricted extensionality. This is a premise-free control showing the two extensionality senses cannot be substituted for one another.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

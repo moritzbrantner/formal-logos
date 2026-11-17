@@ -1,0 +1,9 @@
+{
+  "id": "54281cc8-289e-47de-bfdb-bf52a624e572",
+  "label": "PROPER_PART_EXTENSIONALITY_1: unrestricted strict-part identity",
+  "term": "unrestricted proper-part extensionality",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Mereology.DependenceShapes.ProperExtensionality",
+  "definition": "For any two objects x and y, SameProperParts x y implies x=y. In particular objects with no strict parts have the same empty lower cone. This is a candidate identity principle, not a theorem of PartialOrder or of classical full fusion. Depends on the SameProperParts definition f3379a14-41d3-48b6-a91e-4b694d136c0a.",
+  "note": "Analyst mathematical formulation for #336; attribution deferred. See docs/dependence-shapes.md for exact scope, examples, rival comparison and OPEN actual-power/being/unity bridges. No new primitive philosophical predicate."
+}

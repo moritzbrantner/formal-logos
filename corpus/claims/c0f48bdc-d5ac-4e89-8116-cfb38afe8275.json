@@ -1,0 +1,17 @@
+{
+  "id": "c0f48bdc-d5ac-4e89-8116-cfb38afe8275",
+  "label": "Schaffer on the functional-organ example and its limited evidential force",
+  "statement_id": "81e14e0c-4d57-4aec-be3c-a8aaf20748c4",
+  "source_id": "058b3585-f957-5a4e-a6a8-be4f5c4ae125",
+  "locator": "§2.1, p.47 and note 24, with the assessment on p.50",
+  "interpretation": "Schaffer contrasts aggregates with integrated wholes and cites functional definition/integration for an organism-organ example of whole-first priority, explicitly qualifying its Aristotelian attribution. He uses it within a common-sense rationale and on p.50 treats the resulting intuitive case as at most a weak default rather than empirical establishment. This records a reasoned candidate for an intermediate D-edge in the paper’s dependence discussion, not a source proof that organ function determines the numerical identity or existential dependence of an actual material object. It specifies no immediate/full ground or independently sufficient productive power, and does not license every proper-part edge. Aristotle’s underlying text has not been directly read in this slice.",
+  "attribution": "The passage states that the organism-organ case supports the common-sense priority of integrated wholes, while giving the common-sense argument at most default force, which is the premise.",
+  "status": "formalized",
+  "definition_ids": [
+    "c1ba9ab6-2c8a-5b3a-9e6f-5f4ce598d295",
+    "0c9a04bf-8233-5d2e-b1e3-d24845a9bf1e"
+  ],
+  "disambiguation_ids": [
+    "6f18f12d-7256-539b-9b61-40219cd4af21"
+  ]
+}

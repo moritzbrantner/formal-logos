@@ -1,0 +1,11 @@
+{
+  "id": "fbd52670-af3c-4076-bc3a-7aa7f93203d2",
+  "label": "Dependence shape control checked",
+  "argument_id": "6c4340d5-c7b1-4db2-9a2b-5b2193f6035e",
+  "challenge_module": "TruthCore.Results.Mereology.DependenceShapes.Challenge",
+  "solution_module": "TruthCore.Results.Mereology.DependenceShapes.Solution",
+  "theorem": "TruthCore.Results.Mereology.DependenceShapes.shapeControl",
+  "comparator_config": "results/fbd52670-af3c-4076-bc3a-7aa7f93203d2/comparator.json",
+  "status": "solution-present",
+  "description": "Reuse the existing controls_of_wellFounded and the existing monotone transmission operator. Unit subsingletonity rules out injective infinite sequences but does not rule out a self-loop. Direct fixed-point inequalities distinguish source-free least and greatest interpretations. Nat successor supplies a strict infinite reverse-order chain. Finite inductive grounding on the cycle has a declared intrinsic base and implies no graph-wide well-foundedness."
+}

@@ -1,0 +1,31 @@
+{
+  "id": "ac865453-fdde-4724-aa96-b2f2f71809c7",
+  "label": "Proper-part extensionality strength fork with exact minimal uniqueness delta",
+  "subject_kind": "statement",
+  "subject_id": "52337b28-dc07-4675-977d-c3be4b63b291",
+  "predicate": "strength_comparison",
+  "object_kind": "statement",
+  "object_id": "799b9e92-e95e-40c7-a01f-30c1b70b317f",
+  "comparison_spec": "TruthCore.Mereology.DependenceShapesStrength.comparison",
+  "delta_statement_id": "1eb4b406-31d1-4f40-9398-f5d53e97363e",
+  "background_statement_ids": [],
+  "evidence_result_ids": {
+    "equivalence": "bb3b3505-2876-4a11-acc0-0d9786d30b64",
+    "implication": "636955de-a12b-40a4-b4c6-f2062b3a70ee"
+  },
+  "statement_parameter_indices": {
+    "stronger": [
+      0,
+      1
+    ],
+    "weaker": [
+      0,
+      1
+    ],
+    "delta": [
+      0,
+      1
+    ]
+  },
+  "note": "No background: unrestricted identity is exactly composite-restricted identity plus at most one minimal object on the same B/order. The delta is a concrete uniqueness condition, not STRONG or WEAK implies STRONG; no existence condition is added. The original DS-3 result remains the strengthens strictness certificate; its broader certificate is not substituted for the exact-type Separation role of this comparison."
+}

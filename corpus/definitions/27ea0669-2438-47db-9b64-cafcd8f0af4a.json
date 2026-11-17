@@ -1,0 +1,9 @@
+{
+  "id": "27ea0669-2438-47db-9b64-cafcd8f0af4a",
+  "label": "Proper-part extensionality and simple plurality control",
+  "term": "extensionality control with two minimal atoms",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Mereology.DependenceShapes.ExtensionalityControl",
+  "definition": "ExtensionalityControl proves the unrestricted principle identifies all IsMin objects, strong supplementation implies the composite-restricted principle, and the existing AtomicCertificate Body interpretation jointly satisfies composite extensionality, two distinct IsMin singleton atoms, their equal strict lower cones and failure of unrestricted extensionality. No claim of two necessary divine grounds or the richer Case IsSimple is made. Definitions f3379a14-41d3-48b6-a91e-4b694d136c0a, 54281cc8-289e-47de-bfdb-bf52a624e572, fbfd68f0-5ebe-4a35-a047-c08fbf45b308 fix the new mathematical identity predicates; AtomicCertificate reuses definition 870ea6ed-87f4-504b-bef4-51bb8c7492c1.",
+  "note": "Analyst mathematical formulation for #336; attribution deferred. See docs/dependence-shapes.md for exact scope, examples, rival comparison and OPEN actual-power/being/unity bridges. No new primitive philosophical predicate."
+}

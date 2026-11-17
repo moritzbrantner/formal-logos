@@ -1,0 +1,9 @@
+{
+  "id": "7f488c9a-004c-40a3-98b6-53ba4ed989d0",
+  "label": "Dependence shape control",
+  "term": "cycles, distinct chains and accessibility control",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Mereology.DependenceShapes.ShapeControl",
+  "definition": "ShapeControl packages universal Graph.controls_of_wellFounded with a Unit self-loop, no injective Nat sequence into Unit, non-WF, finite inductive grounding when every node is intrinsic, and source-free lfp=empty/gfp=univ. The strict reverse Nat order has the displayed successor chain, transitivity and irreflexivity but is not well-founded. Reuses Graph, transmission and FinitelyGroundedPower rather than redefining grounding. Graph dependency definition 1dff2d68-1348-5e7e-8ee7-248af63c8c53 supplies direction and relative source; finite inductive grounding reuses definition febac82d-1ca3-5773-89ec-0401f1bac7a0.",
+  "note": "Analyst mathematical formulation for #336; attribution deferred. See docs/dependence-shapes.md for exact scope, examples, rival comparison and OPEN actual-power/being/unity bridges. No new primitive philosophical predicate."
+}

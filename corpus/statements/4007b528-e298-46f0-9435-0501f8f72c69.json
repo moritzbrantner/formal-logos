@@ -1,0 +1,13 @@
+{
+  "id": "4007b528-e298-46f0-9435-0501f8f72c69",
+  "label": "Dependence shape control",
+  "paraphrase": "Every well-founded graph has the existing cycle, infinite-series and source-path controls. A one-node self-loop has no injective infinite sequence, fails well-foundedness and is finitely grounded with every node intrinsic; with no intrinsic nodes its lfp is empty and gfp universal. Strict reverse Nat order is irreflexive and transitive, has a successor chain and is not well-founded. These are structural mathematical controls, with no metaphysical premise discharge.",
+  "lean_declaration": "TruthCore.Mereology.DependenceShapes.ShapeControl",
+  "definition_ids": [
+    "7f488c9a-004c-40a3-98b6-53ba4ed989d0",
+    "1dff2d68-1348-5e7e-8ee7-248af63c8c53"
+  ],
+  "disambiguation_ids": [
+    "34ddfede-ff4d-59ad-9882-4bcb490df9bb"
+  ]
+}

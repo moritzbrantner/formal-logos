@@ -1,0 +1,11 @@
+{
+  "id": "879fff06-016b-4a5e-9b0b-3ba5b7e99633",
+  "label": "Regular-open priority direction control checked",
+  "argument_id": "570d615c-23b0-44c1-b745-2e37663e271c",
+  "challenge_module": "TruthCore.Results.Mereology.DependenceShapes.Challenge",
+  "solution_module": "TruthCore.Results.Mereology.DependenceShapes.Solution",
+  "theorem": "TruthCore.Results.Mereology.DependenceShapes.priorityControl",
+  "comparator_config": "results/879fff06-016b-4a5e-9b0b-3ba5b7e99633/comparator.json",
+  "status": "solution-present",
+  "description": "Reuse gunkModel. Every region has a smaller positive part, so accessibility induction fails at every node; Mathlib extracts an anchored chain and strict antitonicity gives injectivity. On positive regions strictly below top, Boolean complementation maps downward strict edges to upward ones; pulling hypothetical upward WF back contradicts atomlessness. The designated-whole star terminates in at most one link and has one source. Two successive strict parts exhibit an omitted intermediate-whole edge. Mathlib IsAtomic/IsAtomistic supply the set-algebra contrast, without replacing existing mereology machinery."
+}
