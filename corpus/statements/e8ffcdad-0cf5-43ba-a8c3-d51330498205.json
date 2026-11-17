@@ -1,0 +1,10 @@
+{
+  "id": "e8ffcdad-0cf5-43ba-a8c3-d51330498205",
+  "label": "Same-end mover selection",
+  "paraphrase": "OPEN analyst policy: for each direction of a natural body x to end e, if the director has a distinct actual mover in some respect, at least one distinct actual mover preserves direction of this SAME x to this SAME e. It need not be every mover, or the initially supplied mover/respect, and no cognition is inferred.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.DirectorInheritance.SameEndMoverSelection",
+  "definition_ids": [
+    "6c3512d5-1abb-4efd-918e-7b21a8072d20",
+    "d9483f11-c76c-5ea9-aac3-0ed77076305b"
+  ]
+}
