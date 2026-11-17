@@ -1,0 +1,11 @@
+{
+  "id": "c6766d79-b686-487b-8f84-9b1e2f246e7f",
+  "label": "Supplied-duration local coverage gives one locally feasible descent strength order",
+  "subject_kind": "statement",
+  "subject_id": "5c146257-8141-4393-940b-e8c19e26d390",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "fab16501-c05a-455d-b880-1a8a9a0dc90a",
+  "verification_result_id": "ce2779a9-4f3f-4ab0-9693-b6c766ba5c02",
+  "note": "Verified implication with the strong statement as the sole premise. No strictness claimed. The supplied positive duration and all other interpretations are shared."
+}

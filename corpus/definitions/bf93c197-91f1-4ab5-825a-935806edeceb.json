@@ -1,0 +1,9 @@
+{
+  "id": "bf93c197-91f1-4ab5-825a-935806edeceb",
+  "label": "Guarded station port response recipe",
+  "term": "guarded station port recipe",
+  "definition": "guardedStep n input is a total symbolic response: on none it issues and outputs some n; on some j with n<=j it does not issue and forwards some j; on some j with j<n it does not issue and outputs none. The address n is a supplied parameter, not a newly asserted intrinsic property of a hard-coded exact duplicate. Every output satisfies the local numeric range bound, but range membership alone does not assert actual issuance at its named station.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.FixedDurationGrimReaper.guardedStep",
+  "note": "Analyst port construction for #1489, not a physical realization or metaphysical possibility claim. pieceOfGuardedPort maps actual boundary equalities and actual issuance to PieceAt for arbitrary c. guardedOutputAdmissible at n+1 supplies the input range bound if the actual upstream port realizes this same guarded recipe; countable simultaneous realization, faithful location calibration and handoff remain OPEN. See docs/causal-regress-and-grim-reapers.md."
+}

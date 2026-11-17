@@ -1,0 +1,13 @@
+{
+  "id": "8caf44f1-19d9-480a-88e3-fdb6cb630622",
+  "label": "Metric finiteness from supplied-duration local pieces and patchwork (inference)",
+  "input_statement_ids": [
+    "5c146257-8141-4393-940b-e8c19e26d390",
+    "313105b4-d9a9-4498-961f-1702661c7110"
+  ],
+  "output_statement_id": "4365c3c5-d39b-405c-97a9-a4f7e43c628f",
+  "rule": "Compose the supplied-duration local-coverage to selected-descent theorem with metric finiteness from the selected local descent and fixed-duration patchwork.",
+  "meaning": "Uniform fixed-d application route. Retains the original history, accessibility, register, clock and conclusion. Fixed duration aligns the application but neither establishes countable realization nor actual admissibility. The stronger original route stays available; no strictness or stronger philosophical warrant follows merely from weakening.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

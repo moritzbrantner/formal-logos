@@ -1,0 +1,100 @@
+[batch]
+vocab = "TruthCore.Causality.FixedDurationGrimReaper"
+results = "TruthCore.Results.Causality.FixedDurationGrimReaper"
+definitions = ["DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-KANT-MODAL-CONTINGENCY", "008cb21a-256c-5a90-822c-acd4591d699a", "375676b0-a295-4a17-a9e4-3db23319d517", "419d2bf5-8cea-47a4-bf64-3058a1f2489b"]
+
+[[statement]]
+id = "Adjacent Reaper pieces along every supplied-duration populated descent"
+lean = "DurationPiecesPossible"
+paraphrase = "OPEN analyst premise, attribution deferred. DurationPiecesPossible R h Concrete k d w requires that, for every v accessible from w and every descending c with DurationSlots k d c and populated first moment, each adjacent pair of the existing four-interface PieceAt predicates is realized in some world accessible from v. It retains the same h, R, clock and moment-code interpretation. Registers do not imply concrete station existence. All four PieceAt interfaces, including admissibility, concern actual outputs in each witness world. A supplied positive d is fixed, not arbitrarily small; no arbitrary-speed devices or countable concrete realization is asserted."
+definitions = ["DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-KANT-MODAL-CONTINGENCY", "008cb21a-256c-5a90-822c-acd4591d699a", "375676b0-a295-4a17-a9e4-3db23319d517", "419d2bf5-8cea-47a4-bf64-3058a1f2489b", "5f177d3f-c661-49d2-8082-941a46d8b41b", "452b5aa5-0bbe-43a5-b2db-cd32982cd6bf"]
+
+[[statement]]
+id = "Reaper patchwork along every supplied-duration populated descent"
+lean = "DurationPatchwork"
+paraphrase = "OPEN analyst premise, attribution deferred. DurationPatchwork R h Concrete k d w requires that each descending c in v accessible from w, with slots at least the supplied positive d and populated first moment, has all its PieceAt predicates realized in one world accessible from v if all adjacent pairs are co-possible. It supplies no local feasibility, concrete devices, host geometry or actual interface warrant. All four PieceAt interfaces, including admissibility, concern actual outputs in each witness world. A supplied positive d is fixed, not arbitrarily small; no arbitrary-speed devices or countable concrete realization is asserted."
+definitions = ["DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-KANT-MODAL-CONTINGENCY", "008cb21a-256c-5a90-822c-acd4591d699a", "375676b0-a295-4a17-a9e4-3db23319d517", "419d2bf5-8cea-47a4-bf64-3058a1f2489b", "5f177d3f-c661-49d2-8082-941a46d8b41b", "e7efdb71-4992-46df-a5a2-ffb4fad6686e"]
+
+[[statement]]
+id = "One locally feasible supplied-duration descent per infinite populated past"
+lean = "DurationDescentPossible"
+paraphrase = "OPEN analyst premise, attribution deferred. DurationDescentPossible R h Concrete k d w requires that every metrically infinite populated past at t in v accessible from w admits some descending c starting exactly at t, with every slot at least the supplied positive d, and co-possible adjacent PieceAt predicates. It is existential in c per v and t, not local coverage of every descent. The infinite-past antecedent restricts the application question; this is an explicit sequence and register witness requirement, not an opaque finiteness flag. All four PieceAt interfaces, including admissibility, concern actual outputs in each witness world. A supplied positive d is fixed, not arbitrarily small; no arbitrary-speed devices or countable concrete realization is asserted."
+definitions = ["DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-KANT-MODAL-CONTINGENCY", "008cb21a-256c-5a90-822c-acd4591d699a", "375676b0-a295-4a17-a9e4-3db23319d517", "419d2bf5-8cea-47a4-bf64-3058a1f2489b", "5f177d3f-c661-49d2-8082-941a46d8b41b", "a9f95430-3df4-4073-881e-87cc77ac93a1"]
+
+[[argument]]
+id = "Spaced local pieces give supplied-duration local pieces"
+theorem = "durationPiecesOfSpaced"
+premises = ["37d4e072-212b-4b99-a4ff-bf10d94d5a52"]
+conclusion = "Adjacent Reaper pieces along every supplied-duration populated descent"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "A descent whose slots are at least the supplied positive d satisfies SlotsAtLeast."
+meaning = "Implication only, no strictness claim. The stronger original local route remains available."
+
+[[argument]]
+id = "Spaced patchwork gives supplied-duration patchwork"
+theorem = "durationPatchworkOfSpaced"
+premises = ["bb7b476c-4774-4860-a31f-f068aa362f18"]
+conclusion = "Reaper patchwork along every supplied-duration populated descent"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "A descent whose slots are at least the supplied positive d satisfies SlotsAtLeast."
+meaning = "Implication only, no strictness claim. The stronger original patchwork route remains available."
+
+[[argument]]
+id = "Supplied-duration local coverage gives one locally feasible descent"
+theorem = "durationDescentOfPieces"
+premises = ["Adjacent Reaper pieces along every supplied-duration populated descent"]
+conclusion = "One locally feasible supplied-duration descent per infinite populated past"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Reuse unbounded clock descent selection and readingsUnbounded to choose successively earlier readings below the preceding reading minus d, then apply local coverage to that selected descent."
+meaning = "Linear time and one positive d, same clock and starting moment. The selected-descent local premise is weaker in implication order; no strictness claim. Companion checks certify the unbounded-clock selection and a guarded port recipe: its output-range invariant plus faithful connected boundary and issuance equalities gives the actual four-interface PieceAt. These are mathematical conditions, not concrete host or countable realization evidence."
+comparator_theorems = ["durationDescentOfUnbounded", "guardedOutputAdmissible", "pieceOfGuardedPort"]
+definitions = ["bf93c197-91f1-4ab5-825a-935806edeceb", "6e811e85-b983-5988-b20a-f4f3ee83c50e", "97f37f5c-7f82-5077-9bb9-6cfc8673631d", "008cb21a-256c-5a90-822c-acd4591d699a", "375676b0-a295-4a17-a9e4-3db23319d517", "419d2bf5-8cea-47a4-bf64-3058a1f2489b", "5f177d3f-c661-49d2-8082-941a46d8b41b", "452b5aa5-0bbe-43a5-b2db-cd32982cd6bf", "a9f95430-3df4-4073-881e-87cc77ac93a1"]
+
+[[argument]]
+id = "Metric finiteness from one locally feasible supplied-duration descent and patchwork"
+theorem = "metricallyFiniteOfDurationDescent"
+premises = ["One locally feasible supplied-duration descent per infinite populated past", "Reaper patchwork along every supplied-duration populated descent"]
+conclusion = "4365c3c5-d39b-405c-97a9-a4f7e43c628f"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "At an allegedly infinite populated past take the local premise's anchored descent, use fixed-duration patchwork to obtain one accessible arrangement, and reuse GrimReaperPatchwork.arrangementImpossible."
+meaning = "Non-transcription conditional support option reaching the existing metric-finiteness statement with unchanged meaning and companion premises. No arbitrary-speed family is needed. It consumes only one locally feasible qualifying descent per infinite populated past, alongside patchwork for qualifying descents. This is a sufficient weakening within the split coverage formulation, not a claim of an absolute weakest metaphysical premise. No concrete realization or premise warrant is established."
+
+[[argument]]
+id = "Metric finiteness from supplied-duration local pieces and patchwork"
+theorem = "metricallyFiniteOfDurationPieces"
+strong_version_needed = { "Adjacent Reaper pieces along every supplied-duration populated descent" = "Not needed for metric finiteness: the selected-descent sibling suffices. Retained as the uniform fixed-duration application route for a proposed station family." }
+premises = ["Adjacent Reaper pieces along every supplied-duration populated descent", "Reaper patchwork along every supplied-duration populated descent"]
+conclusion = "4365c3c5-d39b-405c-97a9-a4f7e43c628f"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Compose the supplied-duration local-coverage to selected-descent theorem with metric finiteness from the selected local descent and fixed-duration patchwork."
+meaning = "Uniform fixed-d application route. Retains the original history, accessibility, register, clock and conclusion. Fixed duration aligns the application but neither establishes countable realization nor actual admissibility. The stronger original route stays available; no strictness or stronger philosophical warrant follows merely from weakening."
+
+[[relation]]
+id = "Spaced local pieces give supplied-duration local pieces strength order"
+subject_kind = "statement"
+subject_id = "37d4e072-212b-4b99-a4ff-bf10d94d5a52"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Adjacent Reaper pieces along every supplied-duration populated descent"
+verification_result_id = "Spaced local pieces give supplied-duration local pieces"
+note = "Verified implication with the strong statement as the sole premise. No strictness claimed. The supplied positive duration and all other interpretations are shared."
+
+[[relation]]
+id = "Spaced patchwork gives supplied-duration patchwork strength order"
+subject_kind = "statement"
+subject_id = "bb7b476c-4774-4860-a31f-f068aa362f18"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Reaper patchwork along every supplied-duration populated descent"
+verification_result_id = "Spaced patchwork gives supplied-duration patchwork"
+note = "Verified implication with the strong statement as the sole premise. No strictness claimed. The supplied positive duration and all other interpretations are shared."
+
+[[relation]]
+id = "Supplied-duration local coverage gives one locally feasible descent strength order"
+subject_kind = "statement"
+subject_id = "Adjacent Reaper pieces along every supplied-duration populated descent"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "One locally feasible supplied-duration descent per infinite populated past"
+verification_result_id = "Supplied-duration local coverage gives one locally feasible descent"
+note = "Verified implication with the strong statement as the sole premise. No strictness claimed. The supplied positive duration and all other interpretations are shared."

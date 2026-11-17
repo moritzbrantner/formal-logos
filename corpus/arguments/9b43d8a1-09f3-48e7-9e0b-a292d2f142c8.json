@@ -1,0 +1,24 @@
+{
+  "id": "9b43d8a1-09f3-48e7-9e0b-a292d2f142c8",
+  "label": "Spaced patchwork gives supplied-duration patchwork",
+  "premise_statement_ids": [
+    "bb7b476c-4774-4860-a31f-f068aa362f18"
+  ],
+  "conclusion_statement_id": "313105b4-d9a9-4498-961f-1702661c7110",
+  "inference_ids": [
+    "e17dfe52-1652-49de-9887-ea4d6a045817"
+  ],
+  "meaning": "Implication only, no strictness claim. The stronger original patchwork route remains available.",
+  "definition_ids": [
+    "0e65cf83-c42e-4177-ae4c-7c1a12b0fd32",
+    "375676b0-a295-4a17-a9e4-3db23319d517",
+    "419d2bf5-8cea-47a4-bf64-3058a1f2489b",
+    "5c098264-efad-4b83-b4ae-6d525a4721d3",
+    "5f177d3f-c661-49d2-8082-941a46d8b41b",
+    "9b98dc5d-f132-45ac-84e5-719ccff22549",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "e7efdb71-4992-46df-a5a2-ffb4fad6686e"
+  ]
+}
