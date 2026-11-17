@@ -1,0 +1,37 @@
+[batch]
+vocab = "TruthCore.Causality.LocalTeleologyGodIntellect"
+results = "TruthCore.Results.Causality.LocalTeleologyGodIntellect"
+
+[[statement]]
+id = "Local Fifth Way GOD_4 intellect attachment controls"
+lean = "Control.Controls"
+paraphrase = "Fixed two-being formal interpretations: false is a noncognitive natural body, true alone is its intellectual unmoved director/mover. One populated interpretation satisfies local teleology, first-mover/maximum identity, God-to-maximality and GOD_4 intellect. Three omissions respectively lack identity, God-to-maximality and local intellectual direction while retaining the other inputs and failing GOD_4 intellect. In the identity omission, the intellectual first mover and nonintellectual GOD_4 maximum are distinct. No actual-world or metaphysical possibility claim."
+definitions = ["DEF-HAS-INTELLECT", "88f9f6e8-997b-5f7d-afa1-c501954c3807", "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d", "DEF-MAXIME-ENS"]
+
+[[argument]]
+id = "GOD_4 HAS_INTELLECT_1 from local teleology and first-mover maximum identity"
+theorem = "godHasIntellect"
+premises = ["65c409cc-eb7f-4d66-8e2d-60c8e5138ed6", "46326b43-ec14-551a-8eaf-3230f57572c6", "4c79298d-ee09-5e99-9ced-1be92c19b4cc"]
+conclusion = "29818edd-9f5a-5414-baa2-9a7d0c8abf18"
+axioms = []
+rule = "Retain intellect at the witness-local Fifth Way's unmoved director, then transport along the existing first-mover/maximum identity"
+meaning = "Analyst cross-family support option, attribution deferred. Instantiate the existing Fifth Way Intelligent parameter with the SAME HasIntellect predicate as HAS_INTELLECT_1. This application commits the directing intelligence to intellectual cognition, rather than sensory or merely functional success; no equivalence of arbitrary dictionaries is proved. One body/end's complete local bundle gives a knowing intellectual director, reduces its direction to an intellectual unmoved director, and uses directing-as-moving to make that same director a first unmoved mover. For any GOD_4 g, the existing naming-converse premise makes g a maximum; the existing first-mover/maximum identity equates the intelligent first mover to g. Transport intellect to this SAME g. No universal observations, common governor, independent director uniqueness premise, immateriality-to-intellect bridge, modal actuality transfer or God-existence conclusion. The identity premise retains its substantial causal/agent-application provenance. Existing direct and immateriality routes remain available. See docs/notes/teleology-first-mover.md for the complete proposed outcome and revision conditions."
+
+[[argument]]
+id = "GOD_4 HAS_WILL_1 from modular GOD_4 intellect and the will principle"
+theorem = "godHasWill"
+premises = ["29818edd-9f5a-5414-baa2-9a7d0c8abf18", "090be689-b77f-51a1-9d5d-caf339169e4b"]
+conclusion = "STMT-GOD-HAS-WILL"
+axioms = []
+rule = "Apply the existing will-follows-intellect principle at each same GOD_4 witness"
+meaning = "A modular consumer for any support of GodHasIntellect, including the local teleology route. Unlike the older monolithic GodHasWill argument, this does not repeat its immateriality derivation. It retains the exact open will-follows-intellect input. HasWill is capacity-level intellectual appetite, not current exercise, intentional creation, free choice or recipient-directed love. Universal conditionals supply no God-existence witness."
+
+[[argument]]
+id = "Local Fifth Way GOD_4 intellect attachment controls checked"
+theorem = "controls"
+premises = []
+conclusion = "Local Fifth Way GOD_4 intellect attachment controls"
+axioms = []
+sense_mixing_control = true
+rule = "Explicit two-being interpretations with a fixed director and motion dictionary"
+meaning = "Check nonvacuity and each carrying-premise omission at the encoded level. In the identity omission, preserve an intellectual first mover and a GOD_4 maximum at a different nonintellectual being; firstness and maximality cannot silently identify their witnesses. In the naming-converse omission GOD_4 selects the nonmaximum body. In the local-bundle omission no being has intellect. These are formal dependency tests, not evidence against any retained premise's metaphysical warrant."
