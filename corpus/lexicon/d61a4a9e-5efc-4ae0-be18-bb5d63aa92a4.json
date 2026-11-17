@@ -1,0 +1,17 @@
+{
+  "id": "d61a4a9e-5efc-4ae0-be18-bb5d63aa92a4",
+  "label": "first-principle entitlement (technical)",
+  "lemma": "first-principle entitlement",
+  "class": "technical",
+  "definition_ids": [
+    "a5ca9880-39dd-584c-b22e-67c17df257d2",
+    "322dfd2b-04c6-5113-9ab6-6327e617d0c0",
+    "89b927ef-37ac-5400-bb6a-26bc5e5ccca0",
+    "0f37c0a4-9503-5ae5-97bf-faea75cfe7c9",
+    "500ba323-cca5-5b35-8b75-947008256c43"
+  ],
+  "disambiguation_ids": [
+    "e0146b85-26b1-59a8-b407-89fe2c817910"
+  ],
+  "note": "Navigation across the five existing distinctions, not a claim that occurrence, norm satisfaction or a closure marking supplies warrant. Each use must select its intended sense."
+}

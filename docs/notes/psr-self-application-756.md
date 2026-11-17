@@ -270,3 +270,125 @@ because they are fundamental. Independent entitlement, performative exclusion,
 dialectical presumption and checked consequence retain their different scopes.
 No root-premise discharge or metaphysical truth claim is made by this source
 batch. No new Lean inputs or mechanically verified argument are advertised.
+
+## Five-sense consumer reconciliation (#1659)
+
+Audit baseline: `91bcc8dbaef83166c09fbd30e09586764438e191` (merged main,
+not #1700). This is the proposed family outcome for independent semantic
+challenge, not a new source reading or a completed formalization of all five
+senses. UUIDs and numbered labels in disambiguation
+`e0146b85-26b1-59a8-b407-89fe2c817910` are retained.
+
+### Dispositions and checked consumers
+
+The labels below abbreviate
+`FIRST_PRINCIPLE_ENTITLEMENT_AND_PRESUPPOSITION_n`. “Checked” here means
+record and Lean-source inspection, not a fresh kernel or Comparator run.
+
+| Sense | Meaning and disposition | Actual consumer evidence | Unresolved bridge and discriminating next test |
+| --- | --- | --- | --- |
+| 1 | Determinate signification in an elenctic defense; definition `a5ca9880-39dd-584c-b22e-67c17df257d2` stays substantive prose, with no Lean declaration. | Statement `73a6cf93-1a16-51a5-a208-deb90b3284e9` links this definition. Its dossier reports no consuming or concluding argument and no Lean declaration. The historical reading is not the generic performed-denial theorem. | Represent signification, the concession and preservation of the same meaning across denial; test whether the proposed inference obtains PNC without installing PNC in the representation. An utterance occurring is insufficient to encode these conditions. |
+| 2 | Occurrence presupposition; preserve definition `322dfd2b-04c6-5113-9ab6-6327e617d0c0` and `TruthCore.Alternatives.Retorsion.PresuppositionLink`. | Its exact body is `∀ a p, Performs a p → Occurs (token a p)`. Argument `38d41941-fe1c-521b-b594-7cbaee357f47`, result `4f30bed3-fc4e-56a5-8b10-aa938ff28791`, uses `EleaticRetorsionInstance`. `eleatic_link_iff` identifies the link with `OpiningIsBeingMovedReading`; the instance still assumes that link and an opined thesis. | Supply the intended performance, episode and token, then justify the application link. The existing McTaggart escape is a test of the specified bundle, not evidence that every occurrence link is false. No new shared definition is needed. |
+| 3 | Norm satisfaction; preserve definition `89b927ef-37ac-5400-bb6a-26bc5e5ccca0` and `TruthCore.Logic.SelfApplication.Norm.Holds`. | Its exact body is `∀ c, N.scope c → Acceptable c → N.standard c`. Argument `31c884c3-4435-5df4-95df-9ca1c3d43c6f`, result `ba426e32-89f4-58c5-8e2d-94af51122711`, proves `SelfApplicationDilemma`. `Norm.selfApplication` requires `hScope` and `hFail`. `PSRSelfApplication.Honors` explicitly instantiates `Holds` with demands, supporting reasons and acceptance. | Establish scope and failure for the actual formulation before applying the dilemma. Compare an alleged explanation demand with its epistemic-support interpretation; do not replace one with ontic explanation. The existing scope-omission control tests precisely the need for scope, not the credibility of every scope premise. |
+| 4 | Dialectical explicability pressure; definition `0f37c0a4-9503-5ae5-97bf-faea75cfe7c9` stays substantive prose. | Statements `91668b85-0bc9-5174-bc62-4fc812f80256` and `883da101-c728-57f7-a06e-8990fa384b6b` have no Lean declaration or consuming/concluding argument. Adjacent results `22829a6d-116c-5edc-9b4e-16ada04fc7ee` (`stanceMap`) and `1d85f7af-8a60-5c77-8e99-07ef8130211f` (`bridgeLadder`) are explicit conditional and model comparisons, not proofs of those source-reading statements. | Specify the feature that warrants extending local rejection of inexplicability to existence, independently of whether an explanation is already available. Compare that feature with the defeasible explanatory-virtue account already discussed above. |
+| 5 | Repository self-evident marking; definition `500ba323-cca5-5b35-8b75-947008256c43` stays prose describing actual policy, not a nominal Lean wrapper. | `corpus/statements/excluded-middle.json` has the legacy marking. Argument `187646ad-565b-5391-beb1-42ab24f3597f` uses excluded middle plus performed doubt and the negative retorsion result. Its prose explicitly retains the open thought bridge. `truth/src/frontier.rs::floor_reasons` evaluates ordinary criteria or the existing approval compatibility branch; the corpus model also documents the legacy basis. | Keep presence of a marking, satisfaction of its runtime criterion and philosophical warrant separate. A future Lean model of closure would need parity with the actual policy, including legacy behavior, rather than an uninterpreted Boolean certificate. Such implementation work is outside this family. |
+
+Direct `definition_ids` inventory found two arguments for sense 2, eight for
+sense 3, no arguments for senses 1 or 4, and 76 for sense 5. Those counts locate
+uses, not merit or completeness. The inspected generic and PSR consumers do
+not equate the five meanings. This is not a claim to have reverified all 76
+policy-linked arguments. A definition link alone is not a proof premise:
+sense 5 often explains the status of excluded middle used in an argument.
+The concrete defect found in the owned records was narrower: the old sense-5
+definition's “only while that criterion holds” omitted the documented legacy
+behavior. The definition now distinguishes the ordinary rule and its exceptions;
+no algorithm or marking changes.
+
+### Root connection and limits
+
+The three source-reading statements have no argument route to the root at this
+baseline. They serve the first-principle/PNC and explanation-warrant questions;
+this audit does not advertise a newly built root route. The concrete existing
+root interface is the excluded-middle floor and its downstream uses, including
+the two instances described in `docs/corpus-model.md`. To turn the methodological
+readings into additional root support requires a scope-exact application to a
+root premise. Neither the generic occurrence link nor the norm schema provides
+that application by renaming it.
+
+The family lexicon now traces elenctic/elenctically, presupposition and its listed
+verb forms, explicability, first-principle entitlement, and the existing
+presupposition-link, explicability-argument and self-evident entries. Retorsion's
+old ordinary gloss treated self-refutation as one undifferentiated presupposing
+or affirming of a denied thesis; its entry now selects the three existing
+technical distinctions. These are navigation links, not new senses or evidence.
+The bare ordinary lemma `entitlement` also appears outside this family (for
+example the distinct Hume verdict definition
+`d9b1e901-417c-57cd-8eec-65bd81d9e3d9`). It is not silently converted into this
+family's meaning. Reconciling that shared lemma requires coordinating its other
+uses; the family-specific compound is the scoped trace here.
+
+### Warrant, rejected shortcuts and reassessment
+
+No substantive objection to the two generic conditional inferences was identified.
+Their open interpretation/application obligations are not objections. Rejected
+shortcuts were (a) identifying meaningful concession with token occurrence,
+(b) treating `Honors` as unrestricted ontic PSR, and (c) identifying recorded floor
+metadata with either intrinsic intelligibility or a Lean proof. Their concrete
+failure mechanisms are visible in the missing signification data, the distinct
+`Inquiry.supports` and `Arena.explains` relations, and the policy's metadata
+criteria, respectively. None of these observations is a refutation of the
+underlying first-principle thesis.
+
+For unrestricted explicability, the strongest substantive rival already discussed
+in this note is defeasible explanatory virtue. It challenges the inference from
+justified local explanatory choices to universal ontic coverage: explanatory
+power may guide theory choice while other theoretical costs override it. The
+existing source discussion above records the fission/composition comparison and
+its contested assumptions; this pass neither reread that source nor strengthens
+its attribution. Unlike a bare conceivable exception, it offers a positive
+account of the practice under dispute. Its truth-tracking and overriding-cost
+burdens remain open, as does the defender's claim that the practice instead needs
+universal coverage. The next discriminating research step is a feature-exact
+comparison of that override account with the proposed existence-domain extension,
+not another renamed performance schema. No rival defeat is claimed.
+
+The bounded reconciliation has resolved which existing definitions can be reused
+faithfully and which meanings remain prose-only. Completing sense 1 or 4 in Lean
+requires the semantic work specified in the table; naming a fresh predicate would
+not resolve it. The runtime checkout also has no `.lake` directory, prepared
+Lean dependencies or build outputs. That readiness gap prevents fresh local Lean
+verification without coordinator preparation; no cold library build was attempted.
+The read-only CLI is the coordinator checkout's `target/release/truth`, whose
+checkout HEAD is the same `91bcc8dbaef83166c09fbd30e09586764438e191`; this records
+its source checkout revision, not a claim to recover the binary's build revision.
+Shared convention sourceRevision: `15f348b072188255da837578eaafc8a98f12fdf0`.
+
+Claim/type self-sweep: no claim, statement, argument, result, theorem, model,
+source witness or floor marking was changed. The two preserved Lean bodies retain
+all quantifiers and parameters; their example applications retain their hypotheses.
+The prose-only senses are not reported as kernel definitions or proved source
+interpretations. No new model, universal coverage, rival defeat, premise discharge
+or historical attribution is claimed. Required independent semantic challenge
+and final integration CI remain with the coordinator.
+
+Focused validation on the proposed records: offline `truth check` passes;
+`attribution-check --base 91bcc8d` finds no changed stating claims; sense,
+definition and lexicon ratchets pass; `lexicon show elenctic` displays the
+existing two defined senses and three prose-only senses. `git diff --check`
+passes. The CLI executable SHA-256 was
+`7b3c1c1c2196e313eebbe6ec96275bd6c358b6542f6ddd01abee14d17a4910be`.
+The read-only `frontier-diff --base 91bcc8d` reports **no change**: 490 root-reaching
+open premises before and after (349 bare, 90 supported, 51 stated), 489 verified
+support alternatives before and after, zero added. These counts report premise
+effects only, not the value of the semantic clarification.
+
+Lexicon completion remains scoped: the check reports 32 new/changed-field warning
+lines against 19 at baseline, including retained vocabulary gaps in newly edited
+prose and newly exposed technical retorsion uses such as `absolute-truth.json`.
+No ordinary substitutes or allowlist growth hide them. Shared terms such as
+signification still require their own semantic reconciliation; the current
+elenctic definition records the missing interpretation rather than purporting
+to supply a complete dictionary of signification. Coordinator integration may
+shrink the five removable lexicon allowlist fields; this worker did not edit
+shared generated files. This is a family reconciliation with explicit remaining
+work, not completion of the lexicon campaign or of the three missing Lean senses.

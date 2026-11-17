@@ -5,5 +5,9 @@
   "class": "technical",
   "definition_ids": [
     "500ba323-cca5-5b35-8b75-947008256c43"
-  ]
+  ],
+  "disambiguation_ids": [
+    "e0146b85-26b1-59a8-b407-89fe2c817910"
+  ],
+  "note": "See the first-principle family distinction and its consumer audit in docs/notes/psr-self-application-756.md#five-sense-consumer-reconciliation-1659; the linked definition fixes this lemma, while the disambiguation preserves its neighboring senses."
 }

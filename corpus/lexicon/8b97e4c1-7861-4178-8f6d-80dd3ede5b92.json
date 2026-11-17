@@ -1,7 +1,15 @@
 {
   "id": "8b97e4c1-7861-4178-8f6d-80dd3ede5b92",
-  "label": "retorsion (ordinary)",
+  "label": "retorsion (technical)",
   "lemma": "retorsion",
-  "class": "ordinary",
-  "gloss": "An argument showing that denying a thesis presupposes or affirms it (self-refutation)."
+  "class": "technical",
+  "definition_ids": [
+    "a5ca9880-39dd-584c-b22e-67c17df257d2",
+    "322dfd2b-04c6-5113-9ab6-6327e617d0c0",
+    "89b927ef-37ac-5400-bb6a-26bc5e5ccca0"
+  ],
+  "disambiguation_ids": [
+    "e0146b85-26b1-59a8-b407-89fe2c817910"
+  ],
+  "note": "The existing family separates elenctic defense, occurrence-link retorsion and norm self-application. Unlike the former ordinary gloss, these links do not equate every dialectical failure with assertion of the denied thesis."
 }

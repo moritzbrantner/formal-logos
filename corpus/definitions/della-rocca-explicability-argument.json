@@ -7,5 +7,6 @@
   "basis": "sourced",
   "claim_ids": [
     "1aecd9db-f417-5466-aba7-a465f302e745"
-  ]
+  ],
+  "note": "Formal boundary: FIRST_PRINCIPLE_ENTITLEMENT_AND_PRESUPPOSITION_4 remains prose-only. Statements 91668b85-0bc9-5174-bc62-4fc812f80256 and 883da101-c728-57f7-a06e-8990fa384b6b distinguish local acceptance from dialectical warrant for extension. Neither has a Lean declaration or consuming argument at the audited baseline. An inference rejecting a particular state for lack of explanation is the intended pattern; demanding evidence for a belief is not by itself that inference. OPEN: specify which relevant similarities warrant extending rejection of inexplicability to existence, and what makes a restriction principled. The existing stanceMap and bridgeLadder supply conditional tests, not this warrant. See docs/notes/psr-self-application-756.md#five-sense-consumer-reconciliation-1659."
 }

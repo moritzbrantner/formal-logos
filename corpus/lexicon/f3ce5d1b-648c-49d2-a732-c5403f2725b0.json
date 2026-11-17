@@ -1,0 +1,19 @@
+{
+  "id": "f3ce5d1b-648c-49d2-a732-c5403f2725b0",
+  "label": "presupposition (technical)",
+  "lemma": "presupposition",
+  "class": "technical",
+  "definition_ids": [
+    "a5ca9880-39dd-584c-b22e-67c17df257d2",
+    "322dfd2b-04c6-5113-9ab6-6327e617d0c0"
+  ],
+  "disambiguation_ids": [
+    "e0146b85-26b1-59a8-b407-89fe2c817910"
+  ],
+  "note": "The family distinguishes determinate signification in the elenctic method from the explicit occurrence link. This entry does not define every linguistic use of presupposition.",
+  "forms": [
+    "presupposes",
+    "presupposed",
+    "presupposing"
+  ]
+}
