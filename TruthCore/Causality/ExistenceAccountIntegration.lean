@@ -1,0 +1,84 @@
+module
+
+public import TruthCore.Causality.NecessaryConcreteUnderived
+public import TruthCore.Causality.NecessarilyUnderived
+public import TruthCore.Case.Catholicism.StageOne.NecessaryIndividual.Quantifiers
+
+/-! Analyst adapters between actualist profile exemplification and existential
+support. The profile is rigid; numerical uniqueness ranges over candidates,
+not merely the actual inhabitants of each world. No possibility or positivity
+axiom is supplied. These are conditional connections, not God identification. -/
+@[expose] public section
+namespace TruthCore.Causality.ExistenceAccountIntegration
+open TruthCore.German.Kant.CosmologicalInference
+open TruthCore.Causality.BruteFoundationBoundary
+open TruthCore.Causality.NecessarilyUnderived
+open TruthCore.Case.Catholicism.StageOne.NecessaryIndividual (DeDicto)
+
+variable {W B : Type}
+
+/-- A concrete actual exemplar, with no modal or causal conclusion. -/
+def ActualConcreteProfile (m : Profile W B) (p : RealityProfile B) (w : W) : Prop :=
+  ∃ n, m.concrete n ∧ m.ontic.ExistsAt w n ∧ MostReal p n
+
+/-- Actualist necessary exemplification, explicitly using the existing de dicto
+quantifier. This is not conceivability, nor Scott's possibilist NE. -/
+def NecessaryProfilePopulation (m : Profile W B) (p : RealityProfile B) (w : W) : Prop :=
+  DeDicto m.ontic.frame (fun n v => m.ontic.ExistsAt v n ∧ MostReal p n) w
+
+/-- The actual concrete profile bearer itself is necessary and has no existing
+supporter at any world. No intrinsic reason, efficient causation or GOD_4. -/
+def UnderivedConcreteProfile (m : Profile W B) (p : RealityProfile B)
+    (support : W → B → B → Prop) (w : W) : Prop :=
+  ∃ n, m.concrete n ∧ m.ontic.ExistsAt w n ∧ MostReal p n ∧
+    NecessaryAt m.ontic w n ∧ ∀ v, NoExistingSupportAt m.ontic support v n
+
+/-- Explicit finite assignments, not metaphysical possibility claims. -/
+def fixture (present : Bool → Bool → Prop) : Profile Bool Bool :=
+  ⟨⟨TruthCore.Case.Catholicism.StageOne.NecessaryIndividual.alternatingFrame,
+    present, fun _ _ _ => False⟩, fun _ => True, fun _ _ _ => False⟩ -- category-constant: intended (all-concrete finite quantifier control)
+
+def reality (all : Bool) : RealityProfile Bool :=
+  ⟨Unit, fun x _ => all = true ∨ x = false⟩
+
+/-- Joint nonvacuity and omission of numerical uniqueness or necessary
+population while retaining the other two premises of the first adapter. -/
+def PopulationControls : Prop :=
+  (ActualConcreteProfile (fixture (fun _ x => x = false)) (reality false) false ∧
+    NecessaryProfilePopulation (fixture (fun _ x => x = false)) (reality false) false ∧
+    MostRealUnique (reality false) ∧
+    NecessaryConcreteAt (fixture (fun _ x => x = false)) false) ∧
+  (ActualConcreteProfile (fixture (fun w x => x = w)) (reality true) false ∧
+    NecessaryProfilePopulation (fixture (fun w x => x = w)) (reality true) false ∧
+    ¬ MostRealUnique (reality true) ∧
+    ¬ NecessaryConcreteAt (fixture (fun w x => x = w)) false) ∧
+  (ActualConcreteProfile (fixture (fun w x => x = w)) (reality false) false ∧
+    ¬ NecessaryProfilePopulation (fixture (fun w x => x = w)) (reality false) false ∧
+    MostRealUnique (reality false) ∧
+    ¬ NecessaryConcreteAt (fixture (fun w x => x = w)) false)
+
+/-- A distinct actual necessary source supports the unique profile exemplar.
+This tests preservation of the exemplar, not whether some underived source exists. -/
+def otherSupport (_ : Bool) (a b : Bool) : Prop := a = true ∧ b = false
+
+/-- Full-package nonvacuity, and omission of necessity-to-profile identification
+with another underived necessary source surviving in the very same model. -/
+def SupportControls : Prop :=
+  (let m := fixture (fun _ x => x = false)
+   let p := reality false
+   let support : Bool → Bool → Bool → Prop := fun _ _ _ => False
+   ActualConcreteProfile m p false ∧ NecessaryProfilePopulation m p false ∧
+     MostRealUnique p ∧ NecessaryIsMostReal m.ontic p false ∧
+     WellFoundedPresentEsseSupport m.ontic support false ∧
+     NecessaryPredecessorLifting m.ontic support false ∧
+     UnderivedConcreteProfile m p support false) ∧
+  (let m := fixture (fun _ _ => True)
+   let p := reality false
+   ActualConcreteProfile m p false ∧ NecessaryProfilePopulation m p false ∧
+     MostRealUnique p ∧ ¬ NecessaryIsMostReal m.ontic p false ∧
+     WellFoundedPresentEsseSupport m.ontic otherSupport false ∧
+     NecessaryPredecessorLifting m.ontic otherSupport false ∧
+     ¬ UnderivedConcreteProfile m p otherSupport false ∧
+     NecessarilyUnderived m.ontic otherSupport false)
+
+end TruthCore.Causality.ExistenceAccountIntegration

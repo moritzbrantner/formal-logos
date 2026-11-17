@@ -1,0 +1,12 @@
+{
+  "id": "2cf63040-435e-4f2c-bf5c-bc7e11a5633f",
+  "label": "Underived reality-profile witness feeds concrete grounding consumer",
+  "argument_id": "213a431b-1a66-41bc-a6a5-0ceca8aed5a0",
+  "challenge_module": "TruthCore.Results.Causality.ExistenceAccountIntegration.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ExistenceAccountIntegration.Solution",
+  "theorem": "TruthCore.Results.Causality.ExistenceAccountIntegration.groundingConsumer",
+  "comparator_config": "results/2cf63040-435e-4f2c-bf5c-bc7e11a5633f/comparator.json",
+  "status": "solution-present",
+  "description": "Structural projection, not additional philosophical support: instantiate the premise's support parameter at THIS Profile.grounds. Keep the same actual concrete necessary exemplar and restrict exclusion from all existing supporters to existing concrete supporters. This instantiation is explicit in the Lean hypothesis; an arbitrary relation is not identified with grounding or efficient causation. Downstream attribute and GOD_4 bridges remain open.",
+  "transcription": "assembly"
+}

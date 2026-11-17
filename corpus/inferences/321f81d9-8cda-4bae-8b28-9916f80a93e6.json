@@ -1,0 +1,12 @@
+{
+  "id": "321f81d9-8cda-4bae-8b28-9916f80a93e6",
+  "label": "Underived reality-profile witness feeds concrete grounding consumer (inference)",
+  "input_statement_ids": [
+    "ecbea06a-6431-4902-935f-c41bd21614e3"
+  ],
+  "output_statement_id": "0bdcf366-29c7-5d45-b603-5c929dcad976",
+  "rule": "Explicit selected-relation specialization and same-witness restriction",
+  "meaning": "Structural projection, not additional philosophical support: instantiate the premise's support parameter at THIS Profile.grounds. Keep the same actual concrete necessary exemplar and restrict exclusion from all existing supporters to existing concrete supporters. This instantiation is explicit in the Lean hypothesis; an arbitrary relation is not identified with grounding or efficient causation. Downstream attribute and GOD_4 bridges remain open.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

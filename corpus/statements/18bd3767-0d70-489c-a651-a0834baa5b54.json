@@ -1,0 +1,12 @@
+{
+  "id": "18bd3767-0d70-489c-a651-a0834baa5b54",
+  "label": "Rigid profile population adapter finite omission controls",
+  "paraphrase": "Three explicit Bool assignments jointly satisfy the actual exemplar, necessary population and numerical uniqueness commitments, or omit uniqueness, or omit population. Each omission retains the other two inputs and lacks any necessary concrete witness. Mathematical assignments only, not metaphysical impossibility or objections to premise warrant.",
+  "lean_declaration": "TruthCore.Causality.ExistenceAccountIntegration.PopulationControls",
+  "definition_ids": [
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "b3c45d92-dee0-5a1a-9849-9924d3a1699d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "baddf770-36bf-542f-bb3c-2297342d5452"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "77c8594c-19ef-4115-a125-ad17eddf3f11",
+  "label": "Same profile witness support adapter joint and omission controls",
+  "paraphrase": "Explicit finite assignments jointly satisfy all six same-witness adapter inputs and its conclusion, or retain the other five inputs while omitting necessity-to-profile identification. In the latter, the unique actual concrete profile exemplar is supported by a different necessary source; it is not underived, though some different necessary individual is underived. Assignments only, not evidence against the open identification premise.",
+  "lean_declaration": "TruthCore.Causality.ExistenceAccountIntegration.SupportControls",
+  "definition_ids": [
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "b3c45d92-dee0-5a1a-9849-9924d3a1699d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "7b0b109c-ad03-59a3-a81c-d0e027e91f95",
+    "5a5b976e-36e1-53f5-a1b1-a723cacd0206",
+    "6af245c0-b443-51b1-a98e-4e8f8fc7bf3e"
+  ]
+}

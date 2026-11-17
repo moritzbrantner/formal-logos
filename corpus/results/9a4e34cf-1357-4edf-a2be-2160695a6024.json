@@ -1,0 +1,11 @@
+{
+  "id": "9a4e34cf-1357-4edf-a2be-2160695a6024",
+  "label": "Rigid profile actualist population adapter omission certificates",
+  "argument_id": "6fd5e254-0a99-44fa-afd1-e860f3d52010",
+  "challenge_module": "TruthCore.Results.Causality.ExistenceAccountIntegration.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ExistenceAccountIntegration.Solution",
+  "theorem": "TruthCore.Results.Causality.ExistenceAccountIntegration.populationControls",
+  "comparator_config": "results/9a4e34cf-1357-4edf-a2be-2160695a6024/comparator.json",
+  "status": "solution-present",
+  "description": "Joint nonvacuity and two exact omission interpretations using the existing universally accessible alternating-world fixture. They test quantifier transport and candidate-wide uniqueness, not real possibility, explanatory adequacy or GOD_4."
+}
