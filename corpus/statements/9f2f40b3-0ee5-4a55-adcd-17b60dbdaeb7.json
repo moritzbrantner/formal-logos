@@ -1,0 +1,14 @@
+{
+  "id": "9f2f40b3-0ee5-4a55-adcd-17b60dbdaeb7",
+  "label": "Actual path source scopes and coverage separation controls",
+  "paraphrase": "Reuse of two existing populated interpretations at the SAME grounding dictionary: offWorldContingent has necessary-source paths but lacks all-source paths, with J1 at the actual world, coverage, union WF and underived existence holding while full J1 fails; rootedPair has coverage, actual WF, full J1 and underived existence but no necessary-source path transport. No real-possibility or premise-falsity inference.",
+  "lean_declaration": "TruthCore.Causality.NecessarySupportPathConnection.Control.ScopeControls",
+  "definition_ids": [
+    "189efe37-3e78-45f9-83e7-bed94bbfd4b3",
+    "e09302b5-83af-4c1c-b4c6-fad1c29804d8",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "b242943a-34cc-582d-8c38-c1203b9d2c91",
+    "9146789d-5b36-572f-baa1-7eef28967793"
+  ]
+}

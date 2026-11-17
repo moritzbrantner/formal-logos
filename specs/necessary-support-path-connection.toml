@@ -1,0 +1,135 @@
+[batch]
+vocab = "TruthCore.Causality.NecessarySupportPathConnection"
+results = "TruthCore.Results.Causality.NecessarySupportPathConnection"
+
+[[statement]]
+id = "Every concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path"
+lean = "ConcreteSupportActualPaths"
+definitions = ["189efe37-3e78-45f9-83e7-bed94bbfd4b3", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "b242943a-34cc-582d-8c38-c1203b9d2c91", "9146789d-5b36-572f-baa1-7eef28967793"]
+paraphrase = "OPEN analyst all-source standing-ancestry commitment: any concrete source existing at any admitted world that supports a necessary concrete target there has a NONEMPTY actual guarded grounding path to that SAME target, through concrete intermediaries in the SAME Profile.grounds interpretation. Source necessity is not required. No population, transitivity of grounding or GOD_4 is supplied."
+
+[[statement]]
+id = "Every NECESSARY_2 concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path"
+lean = "NecessarySupportActualPaths"
+definitions = ["e09302b5-83af-4c1c-b4c6-fad1c29804d8", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "b242943a-34cc-582d-8c38-c1203b9d2c91", "9146789d-5b36-572f-baa1-7eef28967793"]
+paraphrase = "OPEN weaker analyst standing-ancestry commitment: the same nonempty actual guarded path requirement only when the concrete source AND target are necessary from the selected world. Contingent off-world sources are unconstrained. No actual necessary-source supply is inferred."
+
+[[statement]]
+id = "Changing direct support preserves actual ancestry with a different underived root"
+lean = "Control.ShortcutControl"
+definitions = ["189efe37-3e78-45f9-83e7-bed94bbfd4b3", "e09302b5-83af-4c1c-b4c6-fad1c29804d8", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "b242943a-34cc-582d-8c38-c1203b9d2c91", "9146789d-5b36-572f-baa1-7eef28967793"]
+paraphrase = "Explicit two-world, three-candidate interpretation: all are concrete and exist at both worlds; actual support t0\u2192t1\u2192t2, alternative support t0\u2192t2. Both path scopes, actual WF, both J1 scopes, coverage and union WF hold, but same-supporter direct presence fails. Necessary t2 is actually supported; a different actual necessary t0 has no existing supporter at any admitted world. Model assignment only."
+
+[[statement]]
+id = "Actual path source scopes and coverage separation controls"
+lean = "Control.ScopeControls"
+definitions = ["189efe37-3e78-45f9-83e7-bed94bbfd4b3", "e09302b5-83af-4c1c-b4c6-fad1c29804d8", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "b242943a-34cc-582d-8c38-c1203b9d2c91", "9146789d-5b36-572f-baa1-7eef28967793"]
+paraphrase = "Reuse of two existing populated interpretations at the SAME grounding dictionary: offWorldContingent has necessary-source paths but lacks all-source paths, with J1 at the actual world, coverage, union WF and underived existence holding while full J1 fails; rootedPair has coverage, actual WF, full J1 and underived existence but no necessary-source path transport. No real-possibility or premise-falsity inference."
+
+[[argument]]
+id = "All-source actual paths restrict to necessary-source actual paths"
+theorem = "restrictPaths"
+premises = ["Every concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path"]
+conclusion = "Every NECESSARY_2 concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path"
+rule = "Actual guarded support paths, explicit source scope and existing transitive-closure well-foundedness"
+meaning = "Structural scope weakening on the same Profile and actual world, not additional premise warrant. The stronger property omits the source-necessity antecedent and therefore covers each necessary source. Strictness: the existing offWorldContingent interpretation in scopeControls. See the proposed support comparison in docs/notes/conceptual-existence-boundary.md."
+sense_bridges = [{"term" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY", "from" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_1", "to" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_3", "statement_id" = "Every concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path", "role" = "premise"}]
+
+[[argument]]
+id = "Same-supporter direct presence gives all-source actual paths"
+theorem = "pathsOfPresence"
+premises = ["1f61f12c-2b5c-5871-bf56-03c65844ae30"]
+conclusion = "Every concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path"
+rule = "Actual guarded support paths, explicit source scope and existing transitive-closure well-foundedness"
+meaning = "Replace each stipulated actual direct support edge by its one-edge nonempty path, on the concrete subtype. This is a representation weakening of the existing stronger presence input, not a defense of standing ancestry. Direct presence constrains even non-concrete candidates; no such extension is inferred in the reverse direction. The shortcut control witnesses failure of direct presence despite all-source paths."
+sense_bridges = [{"term" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY", "from" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_1", "to" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_3", "statement_id" = "1f61f12c-2b5c-5871-bf56-03c65844ae30", "role" = "premise"}, {"term" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY", "from" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_3", "to" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_4", "statement_id" = "1f61f12c-2b5c-5871-bf56-03c65844ae30", "role" = "premise"}, {term = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT", from = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1", to = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_2", statement_id = "1f61f12c-2b5c-5871-bf56-03c65844ae30"}]
+
+[[argument]]
+id = "Actual paths give support coverage via their last edge"
+theorem = "coverageOfPaths"
+premises = ["Every concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path"]
+conclusion = "df42581f-5fff-4b5f-8b40-6e16d2b890f2"
+rule = "Actual guarded support paths, explicit source scope and existing transitive-closure well-foundedness"
+meaning = "Eliminate the NONEMPTY actual path: its last edge supplies some concrete existing actual supporter of the SAME target. That supporter may differ from the original off-world source. Zero-length reachability would not suffice. No J1, reflexivity, WF, source population or God identification is assumed."
+sense_bridges = [{"term" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY", "from" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_1", "to" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_3", "statement_id" = "Every concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path", "role" = "premise"}]
+
+[[argument]]
+id = "Necessary-support union WF from actual WF and necessary-source path transport"
+theorem = "unionOfNecessaryPaths"
+premises = ["82cfaf26-fc86-54ab-8328-9a7b2bdbbe21", "Every NECESSARY_2 concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path"]
+conclusion = "d149d238-2eeb-5c8b-a136-f95d7aa5c721"
+rule = "Actual guarded support paths, explicit source scope and existing transitive-closure well-foundedness"
+meaning = "Compose the existing presentSupportWF with the library WellFounded.transGen theorem. Each all-world union edge between necessary concrete endpoints maps to a NONEMPTY actual guarded path with those SAME endpoints. Subrelation well-foundedness then yields the existing union-WF premise. No worldwise-to-union inference, frame reflexivity, J1, EM or necessary-source supply is inserted."
+sense_bridges = [{"term" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY", "from" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_1", "to" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_3", "statement_id" = "d149d238-2eeb-5c8b-a136-f95d7aa5c721", "role" = "conclusion"}, {"term" = "NECESSARY", "from" = "NECESSARY_11", "to" = "NECESSARY_2", "statement_id" = "d149d238-2eeb-5c8b-a136-f95d7aa5c721", "role" = "conclusion"}, {"term" = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT", "from" = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1", "to" = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_2", "statement_id" = "d149d238-2eeb-5c8b-a136-f95d7aa5c721", "role" = "conclusion"}, {"term" = "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION", "from" = "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION_1", "to" = "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION_2", "statement_id" = "d149d238-2eeb-5c8b-a136-f95d7aa5c721", "role" = "conclusion"}, {"term" = "NONNECESSARY_VERSUS_CONTINGENT_ROOT", "from" = "NONNECESSARY_VERSUS_CONTINGENT_ROOT_1", "to" = "NONNECESSARY_VERSUS_CONTINGENT_ROOT_2", "statement_id" = "d149d238-2eeb-5c8b-a136-f95d7aa5c721", "role" = "conclusion"}]
+strong_version_needed = {"82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" = "The existing closed-collection weakening does not suffice for this union-WF output = ClosedGroundingRoots.Control.limitGrounder satisfies it and even direct support presence, hence both path scopes, but has an endless necessary-support chain and fails union WF (existing result 66b54b88-8c2f-4d4b-8efe-ed67ed9b1e8c). Actual WF is used to make the nonempty actual path relation WF; no CCR replacement is claimed."}
+
+[[argument]]
+id = "Full J1 upgrades necessary-source paths to all-source paths"
+theorem = "upgradePaths"
+premises = ["dd41c165-129a-59d3-84ce-bd13c0944901", "Every NECESSARY_2 concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path"]
+conclusion = "Every concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path"
+rule = "Actual guarded support paths, explicit source scope and existing transitive-closure well-foundedness"
+meaning = "For each off-world existing concrete source of a necessary concrete target, full J1 makes that SAME source necessary, so the necessary-source path property applies. This maps the two path scopes under an explicit additional assumption; it does not supply J1 or a source witness."
+sense_bridges = [{"term" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY", "from" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_1", "to" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_3", "statement_id" = "Every concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path", "role" = "conclusion"}]
+
+[[argument]]
+id = "All-source actual paths propagate actual J1 to full J1"
+theorem = "noContingentOfActualPaths"
+premises = ["84751fc2-0179-49ce-b96a-04d95781d8bc", "Every concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path"]
+conclusion = "dd41c165-129a-59d3-84ce-bd13c0944901"
+rule = "Actual guarded support paths, explicit source scope and existing transitive-closure well-foundedness"
+meaning = "Propagate necessity backwards along each actual guarded path using only the selected-world J1 instance at each edge. All-source transport then makes every admitted-world existing supporter of a necessary concretum necessary. This new scope bridge does not hold from necessary-source paths with actual J1 alone: the offWorldContingent scope control retains those while full J1 fails. No reflexivity, source supply, WF or EM is used."
+sense_bridges = [{"term" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY", "from" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_1", "to" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_3", "statement_id" = "Every concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path", "role" = "premise"}]
+
+[[argument]]
+id = "Changing-direct-support actual-path application certificate"
+theorem = "shortcutControl"
+premises = []
+conclusion = "Changing direct support preserves actual ancestry with a different underived root"
+rule = "Actual guarded support paths, explicit source scope and existing transitive-closure well-foundedness"
+meaning = "Populated actual-chain/alternative-shortcut assignment certifies the standing-ancestry input without direct-edge persistence, both structural route inputs, and distinct initial necessary and underived witnesses. The direct edge t0\u2192t2 is absent at the actual world; the nonempty path t0\u2192t1\u2192t2 is present. This is a formal compatibility result, not independent metaphysical warrant."
+sense_mixing_control = true
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[argument]]
+id = "Path-scope strictness and coverage-versus-path separation certificate"
+theorem = "scopeControls"
+premises = []
+conclusion = "Actual path source scopes and coverage separation controls"
+rule = "Actual guarded support paths, explicit source scope and existing transitive-closure well-foundedness"
+meaning = "Reuses the prior offWorldContingent and rootedPair certificates; verifies the new path properties or their failure without duplicating those model proofs. An absent-actual contingent source defeats all-source path transport while necessary-source transport survives; a reversed cross-world pair defeats necessary-source transport despite coverage and actual WF. All interpretations and scopes are explicit, not objections to premise warrant."
+sense_mixing_control = true
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[relation]]
+id = "All-source actual paths strengthen necessary-source actual paths"
+subject_kind = "statement"
+subject_id = "Every concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Every NECESSARY_2 concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path"
+verification_result_id = "All-source actual paths restrict to necessary-source actual paths"
+strictness_result_id = "Path-scope strictness and coverage-versus-path separation certificate"
+note = "Same Profile, actual world and grounding interpretation. The single-premise theorem certifies the implication; the named populated control separates the commitments. No premise is established. For coverage strictness, rootedPair violates even necessary-source paths, hence also all-source paths by restrictPaths."
+
+[[relation]]
+id = "Same-supporter direct presence strengthens all-source actual paths"
+subject_kind = "statement"
+subject_id = "1f61f12c-2b5c-5871-bf56-03c65844ae30"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Every concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path"
+verification_result_id = "Same-supporter direct presence gives all-source actual paths"
+strictness_result_id = "Changing-direct-support actual-path application certificate"
+note = "Same Profile, actual world and grounding interpretation. The single-premise theorem certifies the implication; the named populated control separates the commitments. No premise is established. For coverage strictness, rootedPair violates even necessary-source paths, hence also all-source paths by restrictPaths."
+
+[[relation]]
+id = "All-source actual paths strengthen actual support coverage"
+subject_kind = "statement"
+subject_id = "Every concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "df42581f-5fff-4b5f-8b40-6e16d2b890f2"
+verification_result_id = "Actual paths give support coverage via their last edge"
+strictness_result_id = "Path-scope strictness and coverage-versus-path separation certificate"
+note = "Same Profile, actual world and grounding interpretation. The single-premise theorem certifies the implication; the named populated control separates the commitments. No premise is established. For coverage strictness, rootedPair violates even necessary-source paths, hence also all-source paths by restrictPaths."

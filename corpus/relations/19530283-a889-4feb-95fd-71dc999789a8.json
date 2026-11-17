@@ -1,0 +1,12 @@
+{
+  "id": "19530283-a889-4feb-95fd-71dc999789a8",
+  "label": "All-source actual paths strengthen actual support coverage",
+  "subject_kind": "statement",
+  "subject_id": "c36b509c-3057-40f5-ac0b-60751fb0cf27",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "df42581f-5fff-4b5f-8b40-6e16d2b890f2",
+  "verification_result_id": "a51362dc-8aa4-4136-85af-7711fad39a5a",
+  "strictness_result_id": "9d1d6f89-b0e3-409e-83df-3ec7f310c2f1",
+  "note": "Same Profile, actual world and grounding interpretation. The single-premise theorem certifies the implication; the named populated control separates the commitments. No premise is established. For coverage strictness, rootedPair violates even necessary-source paths, hence also all-source paths by restrictPaths."
+}

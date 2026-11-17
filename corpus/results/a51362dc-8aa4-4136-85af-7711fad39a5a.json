@@ -1,0 +1,11 @@
+{
+  "id": "a51362dc-8aa4-4136-85af-7711fad39a5a",
+  "label": "Actual paths give support coverage via their last edge",
+  "argument_id": "af5ee465-6e05-468e-ba8a-f27bf7c8fffe",
+  "challenge_module": "TruthCore.Results.Causality.NecessarySupportPathConnection.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NecessarySupportPathConnection.Solution",
+  "theorem": "TruthCore.Results.Causality.NecessarySupportPathConnection.coverageOfPaths",
+  "comparator_config": "results/a51362dc-8aa4-4136-85af-7711fad39a5a/comparator.json",
+  "status": "solution-present",
+  "description": "Eliminate the NONEMPTY actual path: its last edge supplies some concrete existing actual supporter of the SAME target. That supporter may differ from the original off-world source. Zero-length reachability would not suffice. No J1, reflexivity, WF, source population or God identification is assumed."
+}

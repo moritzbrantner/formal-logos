@@ -428,3 +428,286 @@ route cost changes:
     + Any two most-real candidates are numerically identical, an analyst’s stronger sufficient identity… [84ae3700], Actual concrete exemplar of rigid reality profile [86badf93], Actualist necessary exemplification of rigid reality profile [93804e57]
     - Every actual contingent concretum depends on some actual concretum for its being [3ef67739], Some actual concretum has joint grounding supply with intrinsic graph sources [e95c2bab]
 ```
+
+## Necessary-source support comparison: proposed outcome (2026-11-17)
+
+Baseline `c75b945994e788ba85bbafc6398b13a1eded1b0b`. The preceding
+existence-account outcome (`2bf6b58fe` plus `c75b94599`) was independently
+accepted without findings. This distinct continuation compares actual coverage
+with cross-world union support at the SAME selected grounding interpretation.
+The following complete proposed outcome awaits its own independent semantic
+challenge. No population question or local-teleology work is reopened.
+
+### Reconciliation and the specified account
+
+The two existing identity-free routes conclude
+`0bdcf366-29c7-5d45-b603-5c929dcad976`, some actual necessary concrete bearer
+with no existing concrete supporter at any admitted world:
+
+| Route | Complete existing bundle |
+| --- | --- |
+| `d45dba04-e78d-52ab-974a-5193959f8e9a`, union | Actual necessary-concrete supply `b19ffd92-01bd-5c0b-9643-e7407137ea5e`; selected-world reflexivity `2b20b5af-d653-56ba-8001-35903fb3d1ea`; all-world J1 `dd41c165-129a-59d3-84ce-bd13c0944901`; necessary-support union WF `d149d238-2eeb-5c8b-a136-f95d7aa5c721`; EM `ee4ab504-c8fe-59bc-bc96-7cbeefed6410`. |
+| `9de79a41-ec67-44a8-9729-de862c1c5f66`, coverage | `b19ffd92`; actual grounding WF `82cfaf26-fc86-54ab-8328-9a7b2bdbbe21`; all-world J1 `dd41c165`; actual coverage `df42581f-5fff-4b5f-8b40-6e16d2b890f2`; EM `ee4ab504`. |
+| Already recorded actual-scope coverage `36c6b111-29bd-4649-beb8-3960900e57f5` | `b19ffd92`, `82cfaf26`, selected-world J1 `84751fc2-0179-49ce-b96a-04d95781d8bc`, `df42581f`, `ee4ab504`. |
+
+The last route and the existing closed-collection variants are prior work,
+not new results here. Attempt `b7e250b6-39f2-4e16-8da4-0a1f7a21d83a` already
+shows that actual J1 cannot replace full J1 on the union route by itself.
+Attempt `14fb7669-48c1-4d38-b702-7ecdce2565b8` already identifies when actual WF
+can be weakened to closed-collection rootedness for an **endpoint**, and why
+that weakening does not supply union WF. We retain both distinctions.
+
+Existing `NecessarySupportCoverage` controls already separate coverage from
+union WF: `rootedPair` has coverage and actual WF but a cross-world union
+cycle; `uncoveredEdge` has union WF but no coverage. `rotatingTriangle` has
+worldwise WF and no reversed pair but still lacks union WF. These old
+certificates are reused, not duplicated or treated as metaphysical defeaters.
+Thus no unconditional implication between the two original bundles is claimed.
+
+The specified additional account is **standing upstream ancestry with changing
+immediate support**. Fix the same `Profile`, `ExistsAt`, rigid individuals,
+selected world and `grounds v a b` throughout: an edge represents this selected
+world-local support of the target's being. A path is a **nonempty**
+`Relation.TransGen` of actual `PresentEsseSupport` edges on the concrete
+subtype. It is not a world transition, a new individual, an efficient-cause
+identity, a sufficiency claim, or an assertion that `grounds` is transitive.
+Every intermediate is concrete and every path edge's source actually exists.
+A target's actual existence is still supplied separately by `b19ffd92` where
+an existential consumer needs it; these transport predicates assert no
+necessary source or concrete population.
+
+Two explicit strength versions fix the account's source scope:
+
+- **S**, `c36b509c-3057-40f5-ac0b-60751fb0cf27`,
+  `ConcreteSupportActualPaths`: any concrete source existing at an admitted
+  world that supports a necessary concrete target there has a nonempty actual
+  path to the SAME target, from that SAME source. The source may be contingent.
+- **N**, `d0718714-87b2-4f2e-9c8d-87081a7a2d41`,
+  `NecessarySupportActualPaths`: that requirement only when the concrete
+  source is also necessary from the selected world. Contingent sources at
+  other worlds are unconstrained. Use this weaker version for union WF.
+
+The definitions are records `189efe37-3e78-45f9-83e7-bed94bbfd4b3` and
+`e09302b5-83af-4c1c-b4c6-fad1c29804d8`. The `strengthens` records explicitly
+register direct presence → S → N, and S → coverage. The strictness controls
+below justify these comparisons on the same dictionary. This is not an
+exhaustive classification of support accounts or a case split.
+
+### New consequences and connections
+
+All six bridge proofs are axiom-free. The following are complete bundles;
+none adds reflexivity, EM, source supply or Kant identification implicitly.
+
+| Argument / result | Inputs → conclusion | Mechanism |
+| --- | --- | --- |
+| `964cadc1-7ff9-49b8-a1ed-8f8e1888c564` / `d14cad49-e5f4-4f4e-9f84-ab34eebd0268`, `restrictPaths` | S → N | Restrict the conditional source scope. |
+| `3e93001a-48c5-4b9c-9e07-b5e8d131ea9e` / `02234edd-f714-4431-ad45-2255748f3491`, `pathsOfPresence` | Existing same-supporter direct presence `1f61f12c-2b5c-5871-bf56-03c65844ae30` → S | An actual direct edge supplies a one-edge path; restrict the existing all-candidate condition to concreta. |
+| `af5ee465-6e05-468e-ba8a-f27bf7c8fffe` / `a51362dc-8aa4-4136-85af-7711fad39a5a`, `coverageOfPaths` | S → existing coverage `df42581f` | The nonempty path's last edge supplies an actual concrete supporter of the target, possibly a different supporter. |
+| `a9992ee7-b536-470a-b721-ccb9a5b68512` / `e74537ae-57b6-4cbe-931d-19ed73d65a7b`, `unionOfNecessaryPaths` | Actual WF `82cfaf26` + N → existing union WF `d149d238` | Reuse `presentSupportWF`, library `WellFounded.transGen`, and subrelation WF: every union edge has a nonempty actual path with the same endpoints. |
+| `f0f95c62-4297-41c5-9fe0-20f2e57955c1` / `eb812faf-bdd6-4364-8cde-4684ea61e0a6`, `upgradePaths` | Full J1 `dd41c165` + N → S | J1 makes the off-world source necessary, bringing it into N's scope. |
+| `0a171771-9916-4184-9687-8e5486b0b080` / `27d16161-d470-4428-8652-ff039f880c0d`, `noContingentOfActualPaths` | Actual J1 `84751fc2` + S → full J1 `dd41c165` | Propagate necessity backwards along each actual path using J1 only at the selected world. |
+
+These yield concrete consumer options, by composition rather than a new copy
+of either existing root theorem:
+
+1. `b19ffd92`, `82cfaf26`, `dd41c165`, N, `ee4ab504` give S by `upgradePaths`,
+   coverage by `coverageOfPaths`, then feed existing `9de79a41` to `0bdcf366`.
+   This does **not** require reflexivity; actual presence is already part of
+   the nonempty actual-path commitment. Adding `2b20b5af` also permits the
+   union bridge followed by existing `d45dba04` with the same dictionaries.
+2. `b19ffd92`, `82cfaf26`, `84751fc2`, S, `ee4ab504` feed the already existing
+   actual-scope coverage route `36c6b111`. The new scope bridge also recovers
+   full J1, so this bundle can feed `9de79a41` instead. Under this specified
+   ancestry policy, actual J1 really can do the work of full J1; actual J1
+   **alone**, or actual J1 plus N alone, still cannot.
+3. At the level of the scope commitments, `(S ∧ actual J1)` and
+   `(N ∧ full J1)` entail one another, composing the six bridges and the
+   existing `actualOfNoContingent` instantiation. This is a conditional bundle
+   comparison, not elimination of an assumption for free. Weakening the J1
+   scope requires strengthening the path scope; neither original bundle is
+   globally ranked stronger or philosophically superior by premise count.
+
+The union bridge retains actual WF because it certifies **union WF**, not
+merely existence of some root. The known one-world limit-grounder has an
+infinite necessary-support chain although a root grounds every member; actual
+edges in that one-world interpretation are their own one-edge paths. Its
+existing closed-collection/root certificate therefore does not make the path
+union well-founded. No claim that actual WF is the weakest possible condition
+under every further assumption is made. Nor is worldwise WF ever promoted to
+union WF without the explicit common-actual-path constraint.
+
+### Controls and the witness boundary
+
+`shortcutControl`, argument `6ca2ca64-33e9-41a5-a030-4cd0af07b071`, result
+`021068fa-6203-4e54-ab4f-1330189d1cd3`, uses two worlds and three rigid,
+actually and necessarily existing concreta. At the selected world support is
+`t0 → t1 → t2`; at the alternative it is the direct shortcut `t0 → t2`.
+The shortcut is absent as a direct actual edge, but its nonempty actual path
+exists. Both S and N, both J1 scopes, actual WF, coverage and union WF hold;
+same-supporter **direct** presence fails. Thus this path account tolerates
+changing immediate mediation and is a strict weakening of direct presence.
+The supplied necessary `t2` has an actual supporter `t1`; the distinct `t0`
+is actual, necessary and unsupported at every admitted world. No uniqueness
+or numerical identification of these witnesses is available or used.
+
+`scopeControls`, argument `31a554e7-97e0-44ff-89ca-85e67ebc07d1`, result
+`9d1d6f89-b0e3-409e-83df-3ec7f310c2f1`, reuses two earlier certificates:
+
+- In existing `offWorldContingent`, actual `t0 → t1` is replaced elsewhere by
+  `t2 → t1`; `t2` is absent actually. N holds, S fails (a nonempty actual path
+  cannot start at the absent source), actual J1 holds, full J1 fails, and
+  coverage, union WF and underived existence still hold. This strictly
+  separates the path scopes and blocks the unjustified actual-J1-plus-N upgrade.
+- In existing `rootedPair`, coverage, actual WF, full J1 and underived existence
+  hold, but N fails: its off-world reversed edge would require an actual path
+  back through the actual chain and hence a union cycle, contrary to the new
+  union bridge. S fails as well by S → N. Coverage can preserve a target's
+  being-supported while changing its upstream source identity or orientation;
+  it need not preserve actual ancestry of each off-world source.
+
+These are formal compatibility/separation results, not empirical evidence for
+necessary concreta or a metaphysical objection to any open premise. The new
+proofs reuse the old model certificates rather than recertifying their entire
+old proposition sets. Both old routes and their newly available compositions
+retain possible witness change. Their common endpoint remains an existential
+underived concrete bearer; it is not the previously selected profile exemplar.
+
+### Positive rationale, standing rival and provisional assessment
+
+The account's positive point is that immediate channels may change without
+changing an upstream dependency: direct-edge persistence is more demanding
+than preservation of a mediated connection. Ordinary mediate sustaining
+systems motivate distinguishing these relations; that is evidence that the
+distinction matters, not a demonstrated instance of an actually necessary
+being or an all-admitted-world law. The stronger S proposal says that every
+particular concrete existential contributor to a necessary target belongs to
+its actual ancestry, even if its immediate channel changes. N makes this
+commitment only about necessary contributors. A proponent who independently
+regards those upstream dependencies as standing has a more discriminating
+account than merely restating "necessary" or "supported". Neither definition
+makes that ontological application true.
+
+Coverage has its own positive rationale: whether a being receives support is
+a standing mode of its existence, although particular supporters may change.
+It deliberately asks for **some** actual supporter, not preservation of every
+source's ancestry. The rooted-pair account is a precise competing replacement:
+a common root remains, while downstream necessary members receive support
+through different world-relative organizations. It preserves coverage and
+underived existence but rejects N's source-specific standing ancestry.
+Ordinary changing organizations give a reason to distinguish channels and
+ancestry; they do not independently justify either pattern for necessary
+existential support. We identify no independently warranted actual necessary-
+concrete realization of either finite interpretation. Accordingly neither
+model is presented as substantive evidence that its rival's premise is false,
+and no artificial evidential parity or worldview defeat is asserted.
+
+The uncovered-edge account separates union WF in the other direction. A
+well-founded union can permit a being to be unsupported actually and supported
+elsewhere. Coverage rejects that optional change in its mode of receiving
+being; union WF alone says nothing about it. Whether the selected relation
+represents a genuine productive contribution to being, rather than an optional
+activity or a redundant condition, is the relevant application question.
+Modal necessity alone does not answer it. No substantive independently
+justified objection to coverage or N is identified merely by these assignments.
+
+**Proposed overall judgment:** the formal comparison is resolved under the
+stated account. Coverage and union WF are distinct sufficient support policies;
+standing actual ancestry provides a nonvacuous, strictly more flexible
+alternative to direct-edge persistence that can connect their consumers.
+The weakest source scope suffices for the new union bridge. The stronger scope
+is exactly what allows the actual J1 instance to recover full J1 in the checked
+scope argument, with the surviving weaker-scope control kept visible. This
+adds useful conditional routes and clarifies their prices; it does not add
+independent warrant to their population or modal-support premises. Cumulative
+support and direct primitive commitments remain available without demanding
+unrelated proof trees.
+
+The remaining application burdens are explicit: an independently actual
+necessary-concrete input; identity of the alleged standing upstream source;
+the chosen sustaining interpretation and its concrete-only scope; whether
+necessity excludes contingent contributors at the selected world or all worlds;
+the justified world range; and actual WF when union WF is the desired output.
+The older closed-collection coverage routes remain available when one has their
+weaker endpoint-specific regress premise instead. All earlier GOD_4 attribute
+and naming obligations of `379399d1` and projection `92ab7c94` remain exactly
+as listed above; neither Kant identification nor an intrinsic-explanation
+adequacy claim is imported.
+
+Reassess upward when an independently specified necessary-source account
+warrants its standing ancestry and J1 scope at this exact grounding
+interpretation, or when a weaker structural condition yields the desired
+consumer input. Reassess the path option downward if that account instead
+requires a concrete off-world supporter absent actually, or reversible upstream
+organization of necessary sources. That would withdraw the corresponding
+transport assumption, not refute all coverage or union routes. The comparison
+is ready for coordinator review; the next application selection belongs to the
+coordinator. No broad ontology/population campaign or source acquisition is
+required to certify these conditional results.
+
+### Self-sweep and verification of this continuation
+
+The selected-world path relation is the library nonempty transitive closure,
+not reflexive reachability; its final actual edge is why coverage follows.
+The concrete subtype and existing source-existence guard are preserved at
+every edge. Targets have accessible-world necessity, while actual target
+existence and actual necessary-source supply remain separate inputs at the
+consumer. As in the existing J1 and coverage interfaces, the off-world
+antecedent guards the source's existence, not the target's existence there.
+Off-world premises range over every carrier world, including inaccessible ones. The weak scope asks for source necessity, the strong scope
+does not; backward propagation of necessity uses only actual J1. Well-founded
+transitive closure and subrelation restriction are library mathematics, not
+causal transitivity or an ontological application theorem. No proof identifies
+its source, target, root or a profile bearer numerically, and no theorem in
+this module mentions `IsGod`. The full inherited onward bundle is unchanged.
+
+Retrieval: exact contexts for `d45dba04`/`9de79a41`; dossiers for all seven
+original inputs; coverage-related discovery, question briefs and two novelty
+queries; prior attempts `14fb7669`/`b7e250b6`; and their exact Lean controls and
+weakened consumer declarations. Retrieval found substantial prior comparison
+work; no absence/newness inference is made. Live conventions remain at
+`15f348b072188255da837578eaafc8a98f12fdf0`.
+
+Focused canonical Lake builds succeeded. The eight result bindings matched
+(8 bound, 0 pinned, 0 mismatch). Axiom audit: the six bridges are axiom-free;
+`shortcutControl` uses `propext`, and `scopeControls` reuses the three permitted
+Mathlib axioms. Every result below passed its normal Comparator export/type
+comparison, permitted-axiom check and configured NanoDa kernel gate (exit 0),
+using `worker_env.py` command mode under the heavy-job lock. The existing
+frozen Challenges and earlier accepted proof inputs were unchanged; no full
+library rebuild, repeated setup preflight or old-result gate sweep was run.
+
+Reproduction for each result ID in the tables above:
+
+```bash
+python3 scripts/worker_env.py -- flock /tmp/moenarch/truth-core-heavy.lock bash scripts/verify-result.sh RESULT_ID
+```
+
+Independent semantic review of this new complete outcome and final integration
+CI remain coordinator-owned. Proof gates establish the declared conditional
+consequences, not premise truth, real possibility or GOD_4.
+
+Offline source manifests, the changed corpus records, module-format check, attribution check (no new stating claims), whitespace check and focused spec regeneration also pass. No source bytes were reacquired. The two new definition-status cache entries and shared imports are left for the coordinator's usual integration refresh; those generated views are not proof gates or new premise judgments. The current J1 dossier explicitly reports `proved; established: false`.
+
+### Computed God-root delta for the support-path continuation
+
+The following is the actual output of `target/release/truth frontier-diff --base c75b945994e788ba85bbafc6398b13a1eded1b0b --frontier-root 8626f8a5-9531-5da7-9ebd-f901e74b1129`. Its graph-status labels, including “closed” and “verified support alternatives”, are not independent philosophical warrant or premise establishment. In particular the new conditional derivation of full J1 retains both the actual-scope J1 and path-policy inputs. The reverse scope translation is not additional evidence for J1, and no proof can bootstrap its own premises through that graph cycle. Direct assumption options and the inherited root obligations remain.
+
+```text
+premise delta for GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of classical theism [8626f8a5]: c75b945994e788ba85bbafc6398b13a1eded1b0b -> working tree
+open premises reaching the root: 419 (289 bare, 78 supported, 52 stated) -> 419 (289 bare, 78 supported, 52 stated)
+expanded-route diagnostic (lowest cost): GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of…, from prima via [ed7c588a] (cost 6) -> GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of…, from prima via [ed7c588a] (cost 6)
+distinct verified support alternatives: 426 -> 430
+verified support alternatives added: 4
+  Every concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path [c36b509c] <- Whatever supports a being necessary from w under the selected relation, at any world where the… [1f61f12c]
+  The existing union of selected world-local existential-support arrows between necessary concrete… [d149d238] <- The profile's selected relation at w, restricted to candidates that are CONCRETE_6 and exist at w… [82cfaf26], Every NECESSARY_2 concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path [d0718714]
+  Existing concrete supporters of NECESSARY_2 concreta at any world are actually NECESSARY_2 [dd41c165] <- Existing concrete supporters at the selected world of NECESSARY_2 concreta are NECESSARY_2 [84751fc2], Every concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path [c36b509c]
+  A NECESSARY_2 concretum supported anywhere is supported by an actual concretum [df42581f] <- Every concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path [c36b509c]
+bare premises added: 1 (listed for visibility; not a regression, owner decision 2026-11-07)
+  Existing concrete supporters at the selected world of NECESSARY_2 concreta are NECESSARY_2 [84751fc2]
+moved (bare -> closed): 1
+  Existing concrete supporters of NECESSARY_2 concreta at any world are actually NECESSARY_2 [dd41c165]
+moved (closed -> bare): 1
+  Existing concrete supporters at the selected world of NECESSARY_2 concreta are NECESSARY_2 [84751fc2]
+route cost changes:
+  GOD_4 exists, projected from the NECESSARY_2 classical GOD_4 root [92ab7c94]: 34 (12 bare, 6 supported, 0 stated, 16 proved-unestablished) -> 34 (11 bare, 6 supported, 0 stated, 17 proved-unestablished)
+```
