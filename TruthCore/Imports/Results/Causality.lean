@@ -25,6 +25,7 @@ public import TruthCore.Results.Causality.BearerRegress.Solution
 public import TruthCore.Results.Causality.BegunComingToBe.Solution
 public import TruthCore.Results.Causality.BoundedPastResource.Solution
 public import TruthCore.Results.Causality.BruteRootDisjunction.Solution
+public import TruthCore.Results.Causality.CapacityInterface.Solution
 public import TruthCore.Results.Causality.CausalConcreteRivals.Controls.Solution
 public import TruthCore.Results.Causality.CausalConcreteRivals.CounterFailure.Solution
 public import TruthCore.Results.Causality.CausalConcreteRivals.CoverageRemainder.Solution
