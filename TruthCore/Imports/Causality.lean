@@ -101,6 +101,7 @@ public import TruthCore.Causality.FiniteBranching
 public import TruthCore.Causality.FiniteNecessaryUnion
 public import TruthCore.Causality.FiniteRestriction
 public import TruthCore.Causality.FullFirstCause
+public import TruthCore.Causality.FullnessCandidates
 public import TruthCore.Causality.GodMaximalCausal
 public import TruthCore.Causality.GradedSupportFoundation
 public import TruthCore.Causality.GreatestDegreeRootRoute

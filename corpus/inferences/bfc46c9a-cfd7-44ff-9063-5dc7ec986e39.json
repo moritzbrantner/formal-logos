@@ -1,6 +1,6 @@
 {
   "id": "bfc46c9a-cfd7-44ff-9063-5dc7ec986e39",
-  "label": "Test strict productive coverage of the same actual common esse source (inference)",
+  "label": "Test strict actual esse-causal coverage of the same actual common esse source (inference)",
   "input_statement_ids": [],
   "output_statement_id": "add8001e-c5b2-4052-9d60-2651f0db1727",
   "rule": "Reuse causeOfChain; the common source covers every actual target, while no other actual bearer causes that source",
