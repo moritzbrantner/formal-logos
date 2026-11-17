@@ -1,5 +1,7 @@
 import { execFileSync } from "node:child_process";
 import path from "node:path";
+import { closeSync, mkdtempSync, openSync, readFileSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
 
 /** The repository root: Next and `bun test` run in apps/corpus-explorer (bundled code has no stable import.meta.url). */
 export const repositoryRoot = path.resolve(process.cwd(), "../..");
@@ -35,14 +37,26 @@ function truthBinary(): string {
  * is written to its stdin (`frontier --fixture -`).
  */
 export function truthJson(args: string[], input?: string): unknown {
-  return JSON.parse(
-    execFileSync(truthBinary(), ["--json", ...args], {
-      cwd: repositoryRoot,
-      input,
-      encoding: "utf8",
-      maxBuffer: 64 * 1024 * 1024,
-    }),
-  );
+  // Complete dossier reports can exceed pipe buffers. Spool stdout without
+  // truncation; stderr retains its bounded diagnostic buffer.
+  const directory = mkdtempSync(path.join(tmpdir(), "truth-json-"));
+  const output = path.join(directory, "stdout.json");
+  try {
+    const descriptor = openSync(output, "w");
+    try {
+      execFileSync(truthBinary(), ["--json", ...args], {
+        cwd: repositoryRoot,
+        input,
+        stdio: ["pipe", descriptor, "pipe"],
+        maxBuffer: 64 * 1024 * 1024,
+      });
+    } finally {
+      closeSync(descriptor);
+    }
+    return JSON.parse(readFileSync(output, "utf8"));
+  } finally {
+    rmSync(directory, { recursive: true, force: true });
+  }
 }
 
 /**
