@@ -1,0 +1,23 @@
+{
+  "id": "ab263487-e580-4369-9e13-8ea2cb7394d3",
+  "label": "Existence-only God bundle with fixed esse maximal causality (inference)",
+  "input_statement_ids": [
+    "56f68b40-9737-59a0-8cac-5610980a1547",
+    "5c898d24-d1f7-5087-b09e-3287a723e787",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "86efed1a-f353-5b5d-9431-df7fc643ace1",
+    "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7",
+    "0436de86-6579-53f2-9ff5-2111ba44ebae",
+    "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+    "6c27657f-a2bf-5c1d-963c-c154b66bfa85",
+    "7067553d-cad9-5d79-b6b2-912e35051530",
+    "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+    "09c6d5f0-d412-5038-85f9-75fffb935727",
+    "1ec205ed-b2a6-5384-bb5f-2565a9d325bf"
+  ],
+  "output_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+  "rule": "Restrict only genus causality to esse within the existing twelve-input same-witness construction",
+  "meaning": "Scoped consumer for the source-first support option. Compared with argument5e8e6054/result973582b8, replace only the all-respects d9fad785 genus premise by the existing fixed-esse da09703b premise and retain the other eleven inputs. The actual root n from whole-roster foundation is first through the priority bridge. Fixed-esse causality identifies each maximum with n; the existing maximum-existence helper and reduced-description naming theorem then name that same n. The helper retains rootness and firstness through naming. This derives GodExists only under the explicit nominal bridge and all other inputs; no modal necessity or later attributes are asserted, and neither this assembly nor the source-first argument independently warrants its premises. The grades premise supplies the existing IsMaximalIn/IsMaximumIn definitional bridge, not a greatest-degree identification; the nominal premise supplies the GOD_1/GOD_4 bridge. Global grades-to-maximum is retained here rather than duplicating the separate grades-at-being scope work.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

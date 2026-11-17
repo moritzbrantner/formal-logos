@@ -1,0 +1,11 @@
+{
+  "id": "d8cb586a-6394-44d1-8df5-fd0da5b1927f",
+  "label": "Existence-only GOD_4 bundle with fixed esse maximal causality",
+  "argument_id": "c98328f1-3c05-40ad-983f-1fee15873f12",
+  "challenge_module": "TruthCore.Results.Causality.MaximalFromEsseSource.Challenge",
+  "solution_module": "TruthCore.Results.Causality.MaximalFromEsseSource.Solution",
+  "theorem": "TruthCore.Results.Causality.MaximalFromEsseSource.godExistsAtBeing",
+  "comparator_config": "results/d8cb586a-6394-44d1-8df5-fd0da5b1927f/comparator.json",
+  "status": "solution-present",
+  "description": "Scoped consumer for the source-first support option. Compared with argument5e8e6054/result973582b8, replace only the all-respects d9fad785 genus premise by the existing fixed-esse da09703b premise and retain the other eleven inputs. The actual root n from whole-roster foundation is first through the priority bridge. Fixed-esse causality identifies each maximum with n; the existing maximum-existence helper and reduced-description naming theorem then name that same n. The helper retains rootness and firstness through naming. This derives GodExists only under the explicit nominal bridge and all other inputs; no modal necessity or later attributes are asserted, and neither this assembly nor the source-first argument independently warrants its premises. The grades premise supplies the existing IsMaximalIn/IsMaximumIn definitional bridge, not a greatest-degree identification; the nominal premise supplies the GOD_1/GOD_4 bridge. Global grades-to-maximum is retained here rather than duplicating the separate grades-at-being scope work."
+}

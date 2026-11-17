@@ -1,0 +1,15 @@
+{
+  "id": "36d3cff4-65e5-4900-b936-fc158061cc15",
+  "label": "Maximal esse causality from common ancestry, composition and causal ascent (inference)",
+  "input_statement_ids": [
+    "c35b1a5c-6405-449b-993b-8196b2457e08",
+    "b4987085-f7b0-4031-a795-364873d3c216",
+    "cffad050-e86d-48b8-b04b-be47fcc1352d",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7",
+  "rule": "Collapse existing actual esse-cause ancestry; causal ascent identifies each maximum with that same source",
+  "meaning": "Analyst source-first alternative for the selected-esse genus premise. The existing common ancestor supplies one actual n and a finite nonempty actual esse-cause path to each other actual being. Reuse causeOfChain under the existing composition law to obtain CausesIn n x esse. The existing causal-ascent premise then places n above any distinct maximal m, contradicting m's maximality; explicit excluded middle gives m=n. Thus every merely maximal bearer has n's universal esse-causal scope. No order-to-cause converse, greatest-degree calibration, uniqueness of tied degrees, Fourth-Way genus causality or God naming is assumed. Common-source identity and uncausedness are retained parts of an existing reusable interface but unused by this proof. The source/composition/ascent premises remain open to independent warrant and actual application; the tenseless, mode-unspecified profile is not thereby a present productive support relation. This supports the existing fixed-esse premise, not the stronger all-respects d9fad785 premise. See docs/notes/maximum-definition-fork.md.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

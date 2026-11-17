@@ -1611,3 +1611,10 @@ lowest expanded route cost 6, 414 verified support alternatives, added 0.
 The new comparison dossier was inspected after registration. Fresh independent
 challenge of this complete proposed warrant judgment and final integration CI
 remain coordinator-owned. No push, PR, watch or merge.
+
+The next genus-causality investigation is retained in
+[maximum-definition-fork.md](maximum-definition-fork.md#current-existence-bundle-judgment-select-the-cause-before-identifying-the-maximum-2026-11-17):
+an existing common esse ancestor plus the existing narrow causal-composition
+and causal-ascent premises yields fixed-esse maximal causality, now explicitly
+consumed by a twelve-input existence-only sibling. This does not change the
+foundation judgment or turn its one-source conclusion into universal scope.
