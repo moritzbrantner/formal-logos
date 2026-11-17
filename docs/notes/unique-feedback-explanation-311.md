@@ -1363,3 +1363,251 @@ validation and attribution-check completed; no new or changed stating claim.
 303 verified support alternatives unchanged, zero added alternatives, and
 “no change.” Whitespace check passes. No proof input changed, so no build,
 binding, Comparator or NanoDa rerun is claimed or needed for this delta.
+
+## Current foundation judgment on the existence-only case (2026-11-17)
+
+**Complete proposed outcome for independent challenge.** Whole-roster
+foundation is a well-motivated candidate primitive about actual existential
+support: derivative contributions do not explain their collective availability
+merely by being redescribed as a network. Its strongest positive rationale is
+an account of genuine contributions and their actual realization, not a ban
+on infinity. The serious rootless rival instead takes a complete distributed
+constitutive or productive order as obtaining, with a uniform account of its
+members and arrangements. That is a substantive alternative; the inspected
+evidence does not demonstrate its adequate realization or defeat it.
+
+The existence-only case has a second, comparative support route through
+maximum-in-esse causality and nonreciprocity at maximal targets. A new checked
+comparison shows that **within the retained existence-bundle prefix**, that
+nonreciprocity policy and whole-roster foundation are equivalent. This locates
+the real choices of warrant: availability/foundation directly, or independently
+supported comparative/causal content plus nonreciprocity. Repackaging either
+policy through the other adds no corroboration. Shared premises do not erase
+the possible warrant of either rationale.
+
+Rootless distributed support challenges foundation. A fundamental natural
+supporter can satisfy foundation and challenge later universal-source or
+naming premises instead. This distinction is essential to the current overall
+case; naturalism is not a general denial of foundation. No theistic winner,
+root establishment or defeated rival is announced.
+
+### Exact target, meaning and existing evidence
+
+Baseline is `5a59f633da2aa983232ae823631e7510d703b1a5`. The current focus in
+AGENTS commit `acd90e93a5cf92b3717cb5f957d55c813bb3acce` was read and applied:
+God-existence first, coherent fixed-meaning routes, cumulative provisional
+warrant, direct primitive options and meaningful horizontal support. No policy
+file is copied or changed in this slice.
+
+Target `5c898d24-d1f7-5087-b09e-3287a723e787` is
+`WholeRosterNotTrapped`. Its consumer is existence-only argument
+`5e8e6054-2f55-52dc-bb46-37816032d2de`, result
+`973582b8-b190-5f29-ab82-2ae387cffc68`, with God-existence conclusion
+`8626f8a5-9531-5da7-9ebd-f901e74b1129`. Related, dossier, brief, novelty and
+consumer context were inspected, as were the maximum-target dossier/context
+and prior foundation, equivalence, quantitative, cyclic and infinitist records.
+The detailed received-being and cessation findings remain in
+[the causal note](../eternity-dependence-connection.md); they are not repeated.
+
+Fix one selected situation w, one actual-concrete domain (own esse in re),
+one esse respect and one **current existential-support** relation R. The
+intended arrows concern the bearer's actual being, not merely past generation,
+a state change, observation or enabling condition. A productive contribution
+need not be individually sufficient. A constitutive explanation counts as
+this R only if it actually supports the whole bearer's existence in the chosen
+sense; a fact-level explanation or arrangement label is not automatically a
+Being-valued supporter. These are application commitments, not properties
+built into `Profile.grounds`. No asymmetry, foundation or sufficient generation
+is inserted into the relation's definition.
+
+The exact graph restricts both endpoints to actual concreta. `recorded` lists
+all incoming neighbours of each nonsource target; it asserts no sufficiency.
+For the **whole** roster, the Trap's second clause is automatically met by
+these nonempty records. Its first clause says that no member is a graph source.
+The existing `WholeRosterRootEquivalence` therefore gives exactly the one-root
+strength under actual population and EM. That theorem is imported unchanged;
+this investigation does not duplicate it or identify it with an owner's verbal
+commitment to adequate explanation.
+
+A source elsewhere in the roster already satisfies this weak foundation test,
+even if another component is rootless. Hence a discovered endless branch or
+reciprocal dependent pair does not refute this premise. Conversely, a source
+unrelated to the observed bearer is not yet its complete explanation. The
+remaining existence-bundle premises must connect the selected root to universal
+causal scope. The earlier isolated-root/intermediary correction in
+[direct-grounding-warrant.md](direct-grounding-warrant.md#correct-scope-of-the-intermediary-control)
+and the source-anchored infinite/cyclic controls remain authoritative.
+
+### Positive warrant and the strongest matched rival
+
+The strongest direct positive argument is that genuinely borrowed actuality
+has an explanatory source character: an instrument exercises an efficacy it
+receives, and further instruments route that efficacy rather than originate
+it simply by being added. This supplies a defeasible reason to seek at least
+one contribution actual independently of that routing. The account may stop
+at a candidate primitive or intrinsically intelligible foundation; it need
+not supply a prior proof of every commitment. Its content and defeaters must
+still be explicit. The selected one-root conclusion is less demanding than
+requiring every branch to terminate or every existent to have a finite supply
+construction.
+
+For the actual roster, this argument still needs a faithful collective
+application. Actual received contribution is not zero contribution. An
+instrument is not nonexistent while dependent. Nor is a plurality of real
+acts automatically one act producing its own bearer. The prior collective
+non-generation audit and #1378 whole-network results already test those
+shortcuts; another attenuation formula or source-backed `Supply` definition
+would not add warrant. The unresolved positive step is why the complete
+organization cannot itself be the obtaining basis of all contributions under
+this particular existential-support interpretation.
+
+The strongest rival supplies **full actual support**, not merely arrows: each
+bearer exists through actual contributors and the relevant arrangements;
+those contributors have further actual grounds of the same kind, with no
+R-source anywhere in the complete actual-concrete inventory. Its uniform
+constitution or production rule explains the local existence facts. Global
+obtaining is either explained by a separately characterized structure or is a
+primitive commitment of the theory. The prior infinitist reading supports
+uniform explanation as a defeasible virtue, not actual infinitism; its
+fact-to-concrete-support mapping remains open. Positive fixed-point and local
+full-group controls show specified consistency or determination, not actual
+existential realization.
+
+At matching explanatory scope, the foundation account also owes an obtaining
+foundation and a faithful account of how it supports the derivatives. Bare
+necessity or the name “source” does not supply that account. The rival's
+primitive global actuality is not disqualified merely for being primitive,
+while a source theory's primitive independent actuality is not disqualified
+merely for lacking an earlier proof. Compare their independently specified
+natures, actual realization, direction, completeness and explanatory economy;
+entity counts and one-versus-many diagrams do not decide those questions.
+
+There are two different global replies. An irreducibly actual natural whole
+with no incoming R-support is a candidate root when it belongs to the chosen
+concrete roster, even if its internal detail is infinite. It **satisfies**
+this foundation step; its necessity, universality, attributes and entitlement
+to the name God remain later questions. An organization of the same entirely
+derivative members, or a global fact outside the concrete domain, does not
+supply such a root merely by being called a whole. It can offer a different
+explanation, but its precise R-profile and realization must be stated. Neither
+classification is a refutation of naturalism.
+
+### Horizontal support and the new discriminating comparison
+
+Existing result `0f141e08-4ff8-5fe5-b8b1-6d5b82913fab` derives the exact
+whole-roster premise from maximal-target nonreciprocity `bcf79e03`, alongside
+population, actuality/cause correspondence and fixed-esse comparative inputs.
+It does not assume all-branch WF or global asymmetry. The existing populated
+control retains reciprocal **nonmaximal** dependents and an actual maximal
+root. These results are reused, not presented as new findings.
+
+New statement `fb1a8d86-b637-466a-b9b6-bdb5ea2a4b3e`, argument `1f14cdee`,
+result `4b5f1d8a-a42c-43cf-a6d1-08998993f724` checks the reverse comparison on
+six already-retained inputs of the twelve-input existence-only bundle:
+population `56f68b40`, existing-to-act `0436de86`, direct esse-to-ground
+`cb1cdea9`, genus causality `d9fad785`, grades-to-maximum `6c27657f` and EM
+`ee4ab504`. Under this exact prefix:
+
+```text
+WholeRosterNotTrapped m w
+  iff AtMaximalTarget m w InAct MoreIn esse
+```
+
+[The proof](../../TruthCore/Results/Causality/WholeRosterMaximalComparison/Solution.lean)
+imports `actualRootExists`: foundation supplies an actual root n. It then
+imports `maximumEqualsRoot` to identify **every** supplied esse maximum with
+that same n. No actual incoming ground at such a target is therefore possible.
+The other implication imports the existing maximal-target whole-roster theorem.
+The six-prefix hypotheses stay inside the universal conditional certificate;
+there is no claim of an unconditional equivalence or a minimal comparison
+prefix. No new root, grade or explanatory relation is introduced.
+
+This makes the horizontal rationale precise without pretending to prove it.
+An independently motivated nonreciprocity claim about actual existential
+priority can support foundation together with the comparative/causal inputs.
+It is not merely the assertion that the roster has a root. But obtaining that
+claim *from foundation* and returning through the existing theorem is no
+corroboration. Defining R as strict priority would likewise leave the application
+of actual existential contributions to that relation to be defended.
+
+A genuinely rootless rival that retains the six-prefix package must reject
+maximal-target nonreciprocity. An acyclic endless account need not reject
+nonreciprocity at all: it can instead contest the maximum/comparative or
+universal-causality application. Those are different mechanisms. It is invalid
+to classify every rootless account as reciprocal, or to answer every such
+account by prohibiting cycles. The old nonmaximal-cycle control also shows why
+nonreciprocity need not be imposed on every dependent pair for this route.
+
+### Cumulative assessment and continuation
+
+The exact foundation premise has genuine positive motivation as a modest
+nonborrowed-availability commitment, and remains a defensible direct primitive
+option. The existing maximum/nonreciprocity route is a second substantive
+conditional support option when its comparative and dependence commitments
+are warranted independently; the new comparison prevents double-counting a
+round trip as further evidence. Neither result proves that the positive
+rival's whole actual realization is impossible.
+
+The present evidence does not warrant a defeat of rootless full support, nor
+an inference from local support coherence alone to foundation. It also does
+not warrant treating a fundamental natural account as a foundation failure.
+For God's existence, retain one coherent fixed-dictionary support bundle:
+foundation produces n, the existing proof gives firstness and identifies
+maxima with n, genus gives universal causal scope, and the remaining transfer,
+remoteness and explicit nominal bridge name that same n God. Those later
+steps are neither assumed into foundation nor supplied by the word “root.”
+Modal necessity, intellect, will and the remaining classical attributes are
+not established by this existence-only result.
+
+The current branch's concrete advance is a verified comparison of the two
+available foundation policies **within that bundle**, plus the matched rival
+classification and warrant judgment above. The availability and realization
+burden is not resolved by another equivalent source/Supply/cut presentation.
+Reopen this premise with an independently specified real full-support account
+of the complete roster, a positive argument excluding its rootless realization,
+or independent warrant for maximal-target nonreciprocity together with the
+retained comparative/causal application. No demand for a disjoint proof tree
+or an independent argument for every primitive is imposed.
+
+The next central discriminating allocation is `d9fad785`, universal
+maximum-to-cause scope, on this same existence-only route. A fundamental
+natural root can already satisfy foundation; ask what independently warrants
+identifying a maximum in esse with the actual cause of **every** other being,
+rather than merely ranking beings or supplying a local source. The existing
+maximum/nonreciprocity approach depends on this same scope premise, so its
+warrant affects both routes. Prior grade/cause and Fourth-Way records should
+be reused before any new formulation. This is a named next question, not an
+assertion that universal causality, naming or God-existence is established.
+
+### Verification and claim/type sweep
+
+The new Comparison's quantifier scope, six internal inputs, selected situation,
+actual-concrete guards, esse dictionary, same-root maximum identification and
+conditional iff were checked against the definition, statement, inference,
+argument, result and generated frozen Challenge. No policy is an external
+conclusion of a premise-free argument: only the universally conditional
+comparison is certified. The theorem reuses the existing whole-roster/root and
+maximum-based results unchanged. No source claim, primitive relation, old
+Challenge, shared import/status or allowlist changes. The causal note receives
+only a cross-reference to this outcome.
+
+Under the unchanged prepared setup and heavy lock, focused Solution and frozen
+Challenge builds pass; binding reports **1 bound, 0 pinned, 0 mismatch**.
+Comparator and independent NanoDa accept result
+`4b5f1d8a-a42c-43cf-a6d1-08998993f724`; explicit axiom inspection reports
+**no axioms**. The Challenge has only its expected `sorry`; the Solution has
+none. A generated inference label initially exceeded the metadata length limit;
+its owned label/spec were corrected before successful corpus/binding checks.
+
+Offline corpus and attribution checks, spec regeneration, bundle audit,
+sense/definition/lexicon ratchets and whitespace check pass. Existing lexical
+and ungenerated formal-status warnings remain; shared generation is left to
+the coordinator. Convention sourceRevision is
+`15f348b072188255da837578eaafc8a98f12fdf0`; no preflight repeated.
+Computed `truth frontier-diff --base
+5a59f633da2aa983232ae823631e7510d703b1a5 --frontier-root STMT-GOD-EXISTS`
+reports **no change**: 404 open premises (283 bare, 76 supported, 45 stated),
+lowest expanded route cost 6, 414 verified support alternatives, added 0.
+The new comparison dossier was inspected after registration. Fresh independent
+challenge of this complete proposed warrant judgment and final integration CI
+remain coordinator-owned. No push, PR, watch or merge.

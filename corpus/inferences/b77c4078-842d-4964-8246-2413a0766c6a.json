@@ -1,0 +1,10 @@
+{
+  "id": "b77c4078-842d-4964-8246-2413a0766c6a",
+  "label": "Compare foundation and maximal-target policies within the existence bundle (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "fb1a8d86-b637-466a-b9b6-bdb5ea2a4b3e",
+  "rule": "Reuse actualRootExists and maximumEqualsRoot for the new reverse implication; import the existing maximal-target wholeRoster theorem for the forward support direction",
+  "meaning": "Exact conditional warrant audit for foundation5c898d24 on the twelve-input God-existence argument5e8e6054/result973582b8. Foundation yields an actual root n; the retained genus/esse bridge identifies every maximum with that same n, so no actual incoming ground of a maximal target is possible. Conversely the existing maximal-target proof supplies the exact whole-roster premise. This is not another proof of the old whole-roster/root equivalence, and not a new source of independent foundation warrant. The retained comparative and causal premises matter: an independent reason for maximal-target nonreciprocity can support foundation through that bundle, but deriving nonreciprocity from foundation and returning does not corroborate it. No all-subsets escape, all-branch well-foundedness, finite-chain bound, transitivity, modal necessity or naming premise is assumed or concluded. Direct acceptance of either substantive policy remains available.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

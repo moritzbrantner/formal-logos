@@ -1,0 +1,11 @@
+{
+  "id": "4b5f1d8a-a42c-43cf-a6d1-08998993f724",
+  "label": "Compare foundation and maximal-target policies within the existence bundle",
+  "argument_id": "1f14cdee-daac-4dca-a1c4-bb0490e37186",
+  "challenge_module": "TruthCore.Results.Causality.WholeRosterMaximalComparison.Challenge",
+  "solution_module": "TruthCore.Results.Causality.WholeRosterMaximalComparison.Solution",
+  "theorem": "TruthCore.Results.Causality.WholeRosterMaximalComparison.comparison",
+  "comparator_config": "results/4b5f1d8a-a42c-43cf-a6d1-08998993f724/comparator.json",
+  "status": "solution-present",
+  "description": "Exact conditional warrant audit for foundation5c898d24 on the twelve-input God-existence argument5e8e6054/result973582b8. Foundation yields an actual root n; the retained genus/esse bridge identifies every maximum with that same n, so no actual incoming ground of a maximal target is possible. Conversely the existing maximal-target proof supplies the exact whole-roster premise. This is not another proof of the old whole-roster/root equivalence, and not a new source of independent foundation warrant. The retained comparative and causal premises matter: an independent reason for maximal-target nonreciprocity can support foundation through that bundle, but deriving nonreciprocity from foundation and returning does not corroborate it. No all-subsets escape, all-branch well-foundedness, finite-chain bound, transitivity, modal necessity or naming premise is assumed or concluded. Direct acceptance of either substantive policy remains available."
+}
