@@ -1,0 +1,25 @@
+{
+  "id": "fa5f8e03-0dfc-4030-b773-baaa346d7a0b",
+  "label": "Divine justice JUSTICE_1 route to permitted divine assertion 1457",
+  "statement_ids": [
+    "5273dfce-c90f-4efc-b31b-1e53384f074a",
+    "13641370-17ac-4b2e-818d-902ca033f7e5",
+    "e9356743-87b5-47cf-83ef-b6fbcdba4460",
+    "e72db42c-eebf-4a6c-acd5-b8076197b91b",
+    "8ea61037-1d7d-40df-9608-ac01bae9caa1",
+    "d87e9ed2-0886-494e-a487-a04ce8974b73",
+    "6d3094ce-0f60-4cc1-85a3-5ebfdb0a67f1",
+    "99e2b1f4-f4db-451f-a8e5-aa83e0fbf74c",
+    "9286d83c-dc05-4517-a886-e989629661f0"
+  ],
+  "date": "2026-11-17",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Analyst reconstruction of ST I q.21 aa.1-2, 4 in docs/notes/divine-justice-1457.md, attribution deferred. Verified zero-axiom routes: will-only-approved plus approval-tracks-order give JUSTICE_1 (every willed act Fitting); JUSTICE_1 plus assertion-is-willed plus fitting-assertion-permitted give the existing veracity premise GodAssertionsPermitted (new conditional support option, not a discharge). Voluntarist reading of Fitting yields JUSTICE_1 for every will profile, so under it the route reduces to divine-command permission and gives the veracity norm no independent support; voluntarism is kept as a standing rival, not refuted. Controls: joint sample with an actual assertion, four omission samples, JUSTICE_1 without JUSTICE_2 (unwilled due act), and voluntarist/independent divergence on one profile. Afflicted-just objection bears on JUSTICE_2, and on JUSTICE_1 only via an unencoded withholding-is-unfitting premise. GodIsSupremelyGood is not used. Open: GodWillsOnlyApproved, GodApprovalTracksOrder, GodAssertionIsWilled, FittingAssertionPermitted. Next tests: Fitting-to-form/end due bridge (DEF-FORM-END-DUE-PERFECTION), mercy as beyond-due compatible with JUSTICE_1, link to q.19 will vocabulary (#1459). No computed premise change expected beyond the new support option.",
+  "evidence": [
+    "aa0525f0-2c01-48d1-b4ed-e67cacd51ceb",
+    "11d3f59d-d7b7-49f7-9772-ac54f005db3b",
+    "f047a718-abe0-4ca5-83c8-0e37a372d6a7",
+    "f99421c7-5eb3-479a-9d73-d928a389cc69"
+  ]
+}
