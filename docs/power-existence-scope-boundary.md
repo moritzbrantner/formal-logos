@@ -1966,3 +1966,11 @@ integrated offline corpus check, bundle audits and spec regeneration pass.
 Result references in the attempt summary were moved to its supported evidence
 field; the exact argument/result mapping remains in this note. No theorem or
 philosophical meaning changed. Independent semantic challenge is still pending.
+
+Independent GPT-6.1 Sol challenge of worker 311134df9374d4107715e7f2fc66614ffa4fd25c
+and coordinator repairs at b059c1ceec604e1fcd2986a1654107be297060c8 found no
+corrections needed. It confirmed the actual original-theorem application, six
+contracts, fixed profile, local transport, exact omission bundles, sense bridges
+and instantiation boundary. Actual applicability and premise warrant remain open.
+The next application question concerns one specified judgement and independently
+described suitable conditions; it is not a missing generic transport theorem.
