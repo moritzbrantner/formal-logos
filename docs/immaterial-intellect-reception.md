@@ -4,14 +4,15 @@ Issue #355, intellect only. The target remains
 `STMT-IMMATERIAL-IS-INTELLECTUAL`; this batch does not derive or replace it.
 The will obligation and all root-route signatures remain unchanged.
 
-Current case conclusion (2026-11-17): the accepted same-witness route supplies
-conditional intellectual attributes of a proposed ground, with existence and
-governor premises separate. The accepted matched-case comparison retains local
-understanding without inferring an ultimate mind. New
-[selected same-end descent](#same-end-inheritance-selected-instrumental-descent-2026-11-17)
-verifies that one direction-preserving predecessor suffices; every mover need
-not qualify. Warrant for that predecessor and intellect at the first remain
-open. This new outcome awaits independent challenge; historical evaluation is deferred.
+Current proposed conclusion (2026-11-17): accepted same-witness, selection and
+local application findings remain intact. The new
+[first-source recognition audit](#first-source-recognition-fixed-premises-and-allocation-boundary-2026-11-17)
+finds positive intellectual rationales, but no new independent discriminator
+from intrinsic noncognitive ordering under the same first-source premises.
+No substantiated refutation is claimed either. Direct/primitive support remains
+available; ground existence and governor provenance stay explicit. Recommend
+redirecting to the distinct q11 common-nature/uniqueness node, pending fresh
+review of this outcome. Historical Catholic-specific evaluation remains deferred.
 
 ## Verified reading
 
@@ -1192,6 +1193,11 @@ assessment still requires the coordinator's fresh independent semantic review.
 ## Same-end inheritance: selected instrumental descent (2026-11-17)
 
 New investigation from accepted `60e2e20eecf4beb29aa1d7d049d121c1e954698a`.
+The coordinator reports independent review accepted all seventeen files at
+`77878157a2ac2cfe13c17960b57c12469e61f61f` without findings; integration
+head `47dc672c7` in #1713 includes that accepted work and the prior comparison.
+Shared build/status refresh/corpus checks passed there, with CI pending at the
+time of the handoff. That acceptance does not cover the new application below.
 Target: same-end inheritance `251bbfdd-c176-5cea-ae66-ebfa5cad0dc4`, then
 first-director recognition `acc06edc-0d48-559d-9b21-d58081fcf978` as warranted.
 The live convention revision remains
@@ -1446,3 +1452,454 @@ that its source warrant is established. The strength certificate is the
 separately checked sole-premise weakening; no strictness is claimed. This
 comparison records the added support option and its obligation without a
 leaf-count penalty or a claim of premise/root establishment.
+
+## Documented application: Rochette coring and unrelated bearer motion (2026-11-17)
+
+Bounded continuation from accepted `77878157a2ac2cfe13c17960b57c12469e61f61f`.
+The coordinator reports fresh review accepted all four files and supplied
+witnesses at `0d011722d13e5f65afedb5feacf792a0405821a0` without findings,
+staged as `bb8545f77` for batching and not pushed at handoff. The owned note
+and attempt have no intervening change. The new recognition audit below is
+not covered by that acceptance.
+Question: what actual evidence supports selecting a same-end predecessor for
+one director while its bearer is moved in a different respect? This is the
+complete proposed outcome for fresh review, not a new Lean model or theorem.
+
+### Episode evidence and its limits
+
+One primary engineering report was selected for this exact question:
+Vandi Verma and colleagues, *First 210 solar days of Mars 2020 Perseverance
+Robotic Operations – Mobility, Robotic Arm, Sampling, and Helicopter*,
+[author/institution-hosted PDF](https://robotics.jpl.nasa.gov/media/documents/ro_final_v1.pdf).
+Two independently downloaded copies had the same bytes. Source
+`8a87e7f3-1a57-44a2-a2a5-8c784c55cdb0` and two passages are recorded:
+
+- `4be77a2d-83c3-4410-a11a-1f35cc42dee4`: printed/physical pp.4–5,
+  sections 4–5 and surrounding context. This describes the arm's motorized
+  actuation, position sensing and closed-loop load application, its corer,
+  and their cooperative sampling arrangement.
+- `5d7a9b29-3071-413a-a1c4-f91e9f41d089`: printed/physical p.14,
+  Table 3 and following arm-use context. It reports successful Rochette core
+  collection over sols 189–195, with confirmation before sealing; a second
+  collection over sols 196–197 used no intervening ground-team loop.
+
+Both passages were materialized and read after byte/text verification. The PDF
+SHA256 is `32ba6ed28a8e682903c32424c53ca7d72e01ace083810cc387ab61fb4755077a`.
+Only metadata, hashes, locators and short incipits are committed. This is a
+hash-pinned live witness with no immutable archive fallback; extraction and
+source fidelity are distinct from warrant for the philosophical application.
+No author is attributed SameEndMoverSelection, no source-derived philosophical
+statement is created, and no new claim is minted just to log the investigation.
+
+This is an actual reported operation, unlike the earlier stipulated archer or
+Mira cases. The inspected evidence is the mission engineers' episode report
+plus their mechanism description. Raw joint-by-joint telemetry and a synchronized
+orbital trajectory for that episode were **not** inspected. A mechanism
+capacity description is not itself a per-episode actuator trace; combining it
+with the reported successful operation is an ordinary engineering inference.
+
+### One candidate application on the current dictionary
+
+Keep the selected rock target and coring end fixed:
+**f** is the corer, **x** the Rochette material at the selected drilling target,
+and **e** extracting a collectable core into its sampling tube. A candidate
+**g** is the robotic arm acting through its motorized positioning/load-control
+arrangement. The arm and corer are distinct cooperating assemblies; g is not
+an abstract command, a substituted rock, or an unnamed ultimate cause.
+
+On the instrumental interpretation of Directs, the corer directs the material
+operation toward e. The arm's governed positioning and loading of that tool
+are a positive reason to attribute the same operation/end to g through f.
+This concerns producing the core, not simply illuminating it, supplying generic
+power, or moving the tool to a camera after coring. Subsequent imaging and
+sealing have their own ends and are not substituted for the coring link.
+The interpretation is that the arm's configured operation participates in this
+particular extraction; a raw motion of its bearer would not suffice.
+
+This supports a **defeasible ordinary instrumental application** given the
+reported operation and engineering description. It does not require a prior
+independent proof of every actuator or a complete philosophy of causation.
+The semantic application is still explicit: x is admitted as nonliving natural
+material, g/f are the particular physical assemblies, the selected operation
+is a MovesIn respect, and Directs is derivative ordering to this e. No certified
+metaphysical identification or exhaustive causal decomposition is supplied.
+In particular, using a rock as a scientific sample does **not** establish that
+e is what is Best for the rock in the Fifth Way's natural-body observation.
+This application of selection alone is not a realization of every governor input.
+
+| Evidence or inference | What it supports in this one application |
+| --- | --- |
+| Recorded successful coring | A real material operation with the stated collection outcome; not merely an imagined successful fixture. |
+| Specified arm/corer mechanism | A reason to identify g's positioned, loaded operation as instrumental in f's coring, rather than infer transmission from bare ancestry. Exact episode-level contributions remain inferred from mechanism and report. |
+| Distinct arm and corer | An ordinary candidate for the predecessor's g≠f clause; no source-uniqueness or all-necessary-being claim. |
+| Mars' rotation and orbital motion | Background for inferring additional motion of a surface-borne tool, distinct from its local coring operation; not mission telemetry identifying the corpus's mover relation. |
+| Successful unattended second sampling | Stored organization can execute sampling without a new ground-team instruction at each stage. It does not erase earlier intelligent planning or prove a noncognitive ultimate source. |
+
+### The unrelated respect is an inference, not a hidden measurement
+
+The physically ordinary additional motion is the surface-borne corer's changing
+position/orientation with Mars, considered relative to an appropriate non-body-
+fixed frame. NASA's live [Mars Facts](https://science.nasa.gov/mars/facts/),
+“Orbit and Rotation,” was consulted as background. No precise orbital phase,
+trajectory, temperature fluctuation or simultaneous joint motion is asserted
+from the coring report. Planetary co-motion is a background physical inference,
+not a new byte-certified passage or a reported per-episode diagnostic.
+
+“Unrelated” is deliberately limited here: that common motion is not identified
+as the command, load control or geometric cutting operation that selects this
+rock and core. It is **not** asserted to have zero physical relevance or no
+possible effect on sampling. Likewise a frame-relative change of position is
+not automatically an independently justified edge `MovesIn Mars f r`. A physical
+motion reading can include carried motion, but the Aristotelian actualization
+relation and its causal bearer still need their stated interpretation. The
+record therefore supports a concrete physical candidate with an ordinary
+co-motion inference; it does not completely verify every antecedent of the
+metaphysical policy under all readings of MovesIn.
+
+Conditional on that physical-motion application, selection can choose the
+arm's task-specific operation instead of the planetary carrier. Its existential
+conclusion does not require the predecessor to supply the unrelated respect.
+This is exactly what the accepted weakening permits. The example gives positive
+local warrant for that choice without declaring Mars incapable of derivative
+final ordering or constructing a countermodel to unrestricted inheritance.
+If a stricter requirement demands an episode-specific measurement of an
+independent, direction-irrelevant motion and its distinct mover, that evidence
+is unavailable in the inspected ranges. The missing evidence must remain named;
+it is not supplied by a story about hypothetical heating or a new predicate.
+
+### Universal scope, termination and the first source
+
+The justified extension is modest but positive: a deliberately organized
+instrumental operation can have an identifiable same-end predecessor despite
+additional bearer motion. This supports applying the selection principle to
+this kind of case. It does not show that **every** natural-body direction with
+any distinct mover has such a predecessor. Designed artefacts expose a concrete
+mechanism for the local attribution; extending it to all immanent natural
+organization needs a reason that the relevant directing operation is received
+from a predecessor in each case. The difference matters because the local
+inference used identifiable arm/tool organization, not merely that f moved.
+No absence of an observed predecessor is presented as evidence against the
+universal principle, which remains a direct candidate primitive as well as
+conditionally supported by the old unrestricted policy.
+
+The co-moving arm is itself no globally unmoved terminus. Finding g says
+nothing by itself about the remaining chain, its well-foundedness or the
+strong per-se link. Nor would a terminal node of a sampling-control hierarchy
+thereby satisfy `∀ r, ¬ MovedIn h r`. On a physical carried-motion reading it
+can still move with its bearer. The accepted descent proof retains its exact
+termination inputs and globally unmoved endpoint; this local application
+neither establishes them nor replaces them with a direction-only root.
+
+A distinct source-recognition test is available: where does understanding of
+the end enter the documented activity? The report supports human selection,
+command planning and confirmation, and stored mechanical/control organization
+that executes those purposes. Ordinary attribution of understanding to the
+planners has prima facie warrant; it can reinforce the existing intellectual-
+exemplar option `5854ef2b-41dd-5617-99d2-f53a850c35fd` without a proof of every
+prior mental capacity. That is an evidential judgment, not a new formal result.
+Neither closed-loop control nor the paper's computational terminology by itself
+recognizes HasIntellect in the arm or corer.
+
+The unattended operation tests a narrower inference: a fresh human decision at
+every executing stage is not part of the reported process. It does not refute
+the actual director premise, which does not require an immediate knower, or
+acc06edc, whose antecedent is a **globally unmoved** director. Earlier intelligent
+planning is evidenced; a present per-se causal edge from an absent planner to
+each act is a separate interpretation, not a consequence of historical ancestry.
+The strong positive view can regard the hardware as executing an intellectual
+plan through secondary causes. The strongest organizational rival can accept
+those same human designers and execution mechanisms while disputing an
+additional necessary intellectual ultimate source. This episode does not
+discriminate those two global claims.
+
+For `acc06edc-0d48-559d-9b21-d58081fcf978`, the meaningful remaining inference
+is consequently still **intrinsic first-source final ordering → intellectual
+possession**. Known intellectual planning makes the inference from a recognized
+principal to its instruments intelligible; it does not license the converse
+from any effective or causally first ordering to an intellect. The actual
+mechanisms support organized execution without recognizing intellect at every
+link; they supply no joint noncognitive-first model or refutation. The new
+episode warrants neither a universal recognition theorem nor elimination of
+the intrinsic-power rival. This is a precise source-recognition obstruction,
+not the claim that primary documentation says nothing useful.
+
+### Complete proposed outcome and reopening
+
+Proposed provisional judgment: there is positive, source-grounded ordinary
+warrant for a task-specific arm/corer same-end attribution. The successful
+operation and known organization improve on the earlier illustration. The
+additional bearer motion is a separately disclosed physical inference; its
+frame/actualization correspondence is not certified by the episode source.
+The universal selection policy and first-source intellect therefore remain
+open. The inherited route **selection → 11914511 → governor 571094b6 → same-root
+a56eea3e** retains all motion, per-se, termination, design/cognition, observation,
+chance/tending, directing-as-moving, uniqueness, Fourth-Way, naming, created-agent
+application and HasIntellect-dictionary inputs. Ground existence stays separate.
+Direct primitive acceptance remains available; no leaf-count penalty applies.
+
+This bounded application is delivered for reassessment. Reopen the episode's
+stronger mechanical attribution on synchronized command/position/load evidence
+or a causal analysis distinguishing active arm contribution from merely being
+available. Reopen the unrelated-respect mapping on a specified motion frame and
+actualization/mover interpretation supported for the same episode. Generalize
+only with an argument covering directions lacking this identified instrument
+organization; repeating another designed machine would not supply that universal
+step. Reopen first-source recognition on a reason distinguishing intrinsic
+intellectual possession from noncognitive intrinsic ordering under the same
+first-source premises. No presently inspected record supplies those additional
+inferences. No sensitivity fixture, hypothetical countermodel or renamed
+objection is introduced.
+
+Self-sweep: two selected primary passages and one source record are added, with
+findings in this existing note/attempt. No source is attributed a metaphysical
+policy, no new philosophical statement/claim is created for activity logging,
+and no predicate, theorem, sense, Challenge or existing proof changes. Reported
+episode, mechanism-based application, physical background inference and global
+warrant remain separate. Only this bounded episode was selected for new source
+reading; no historical/Catholic-evidence campaign is undertaken. Unchanged proof
+and accepted review evidence are reused; new source/corpus/reference and frontier
+checks accompany the returned revision.
+
+Delivered checks: both selected passages materialized successfully and their
+verified text was read; offline source-manifest/claim-binding validation and
+`truth check` pass, with the repository's nonblocking diagnostics. Attribution-
+check finds no new or changed stating claim. `git diff --check` passes. Computed
+`truth frontier-diff --base 77878157a2ac2cfe13c17960b57c12469e61f61f`
+reports **no change** to root-facing premises or support alternatives. No
+unchanged Lean proof, binding, Comparator or NanoDa verification was repeated.
+Fresh semantic review must assess this new evidence/application judgment;
+prior acceptance applies only to the unchanged proofs and earlier findings.
+
+## First-source recognition: fixed premises and allocation boundary (2026-11-17)
+
+Continuation from accepted `0d011722d13e5f65afedb5feacf792a0405821a0`.
+Target `acc06edc-0d48-559d-9b21-d58081fcf978`:
+`UnmovedDirectorKnowsAndUnderstands`. This is a complete proposed warrant
+outcome for fresh semantic review, not another proof or source campaign.
+
+### Hold the source, dictionary, target and end fixed
+
+The actual declaration is universally quantified over h, x and e:
+
+```text
+Directs h x e -> (for every r, not MovedIn h r)
+             -> HasCognition h and Intelligent h.
+```
+
+For the current reduction application x is a NaturalBody. Compare the two
+accounts on **this same h, x, e**, the same real final-ordering interpretation
+of Directs, and the same global unmovedness. Keep the inherited motion,
+selected-predecessor, strong per-se and termination policies in the common
+background, without treating any as a proof of cognition. The recognition
+input applies even to a director of one target/end; its own antecedent does
+not assert universal causation, necessity, simplicity, perfect self-knowledge,
+all possible ends or that h possesses intellect already. “First” here must
+not silently import those additional properties.
+
+The stronger comparison in which **the very same h** is separately identified
+as necessary, simple and universally perfect may also be investigated. Those
+are extra premises, not consequences of being unmoved in the recognition
+signature. In particular one cannot borrow `MaximeEnsGovernsNature`'s already
+intelligent witness as independent warrant for the cognition used to produce
+that governor endpoint. A pointwise case for a selected perfect ground would
+not alone justify acc06edc's broader universal quantifier.
+
+The disputed distinction is precise. Possessing an end **as known** involves
+its intellectual presence as an object apprehended by the subject. An intrinsic
+nature can instead be specified as a determinate causal power whose operation
+is genuinely ordered toward e; that specification does not yet assert an
+object of thought. Both accounts must preserve the admitted real ordering
+toward this e. Substituting a different equilibrium, merely happening to cause
+a useful result, or denying final ordering would change the comparison.
+Likewise global unmovedness excludes being actualized in any respect; it does
+not by itself define intellectual possession or exclude moving others.
+
+### Positive intellectual reasons, with their actual burdens
+
+The following are substantive rationales rather than demands for an endlessly
+prior proof. Each is assessed in its strongest available form.
+
+| Rationale | Positive contribution under its selected meaning | Exact missing discrimination |
+| --- | --- | --- |
+| The end explains the choice of fitting means | An apprehended end can unify alternative means and explain their relevance; deliberate planning and correction have prima facie cognitive warrant. | This supports identified intellectual direction. It does not establish that every genuine first-source final ordering has that form rather than intrinsic natural determination. The argument must justify that extension. |
+| An unrealized end must be present in the cause somehow | Present intellectual possession can explain acting for an end that is not yet attained, without requiring that future effect already to exist materially. | A present intrinsic disposition/organization is another proposed principle of directed activity. Excluding that role at the first requires a reason beyond the end's not yet being actual. The fixed antecedent also does not require e to be future or unactualized. |
+| A first principal cannot merely borrow the ordering it supplies | This distinguishes intrinsic sourcehood from an executing instrument and motivates seeking a source possessing the explanatory resources itself. | Non-borrowed ordering is not yet ordering possessed **as known**. Why intrinsic power must be intellectual is the recognition obligation, not what the word principal establishes. |
+| Cognition is a perfection of which the source cannot be deficient | The actual intellectual exemplar and the pure-perfection rationale give positive support within a perfection/immateriality framework. This is a genuine additional support option, not worthless because its dependencies are shared. | Ordinary global unmovedness is not universal perfection. Even at a separately supplied perfect root, the existing InAct dictionary permits formal **or eminent** possession. Intellectual recognition needs a warranted classification/bridge; defining that respect as HasIntellect would assume it. |
+| Pure simple actuality can know itself and effects without passive acquisition | The accepted q14 interpretation supplies a coherent positive reply to the claim that all cognition requires ignorance, learning or real composition. Self-knowledge of productive power can then support knowing effects. | Removing those alleged obstacles is not yet deriving positive cognition. The existing a.2/a.4 account presupposes intellect; the a.5 argument uses perfect self-knowledge and knowledge of power. Those cannot independently recognize a knower from the fixed antecedent. |
+
+These reasons warrant keeping intellect-first as a serious, positively motivated
+candidate, including direct/prima facie acceptance under an explicit metaphysical
+framework. No independent proof of every primitive is required. They do not
+supply a new universal derivation or a new discriminating observation in this
+investigation. The available personal-understanding evidence supports a local
+intellectual exemplar; multiplying its descriptions does not multiply evidence
+for an ultimate intellect.
+
+### The strongest positive rival, without inventing a first-source witness
+
+The rival explanation uses **determinate natural powers and organized constraints**
+as principles of genuinely end-directed execution. Existing reception/appetite
+work distinguishes natural inclination from apprehension; the teleonomy work
+specifies coupling/feedback that explains constrained outcomes; the accepted
+arm/corer application identifies task-specific organization and active causal
+contribution. Thus the relevant positive mechanism is not a false intellect
+flag: a nature or configuration restricts how an effect is produced, with a
+characteristic completion and determinate operating conditions. The control
+and mechanical stages need not each apprehend the represented objective.
+
+Those resources support a real explanatory role for noncognitive ordering
+**within their demonstrated domains**. They do not establish an instance
+satisfying the common globally unmoved first-source background. The Rochette
+system is designed, acquired and moved; its purpose is not evidence for an
+unborrowed natural first. Feedback systems likewise have their own material
+and dynamical conditions. Their extension to an intrinsic, unactualized-by-
+another first power is a further metaphysical application, not a documented
+fact or a certified joint model. No inspected profile establishes that stronger
+application, and an arbitrary immutable/impersonal flag would not supply it.
+
+The rival's strongest first-source proposal is that the final orientation is
+intrinsic to the source's own active nature, rather than received as a cognitive
+object. It must explain why that nature counts as genuinely directing this
+same x/e and satisfies the retained first-source constraints. The positive
+local mechanisms make the explanatory role of determinate powers intelligible;
+they do not independently settle its ultimate sufficiency. The intellectual
+account's strongest reply is that such powers still need a source of their
+final orientation. A further reply that this orientation could be intrinsic
+is a candidate primitive stopping point, not by itself a proof of sufficiency.
+Conversely requiring a further source for **every** candidate intrinsic nature
+would rule out a primitive source on both sides rather than discriminate them.
+
+No substantive refutation of acc06edc has therefore been obtained. There is
+also no independently warranted **complete** noncognitive first-source model
+on the fixed dictionary in the inspected corpus. This limitation must not be
+recast as either a metaphysical victory for intellect or a fully established
+rival of equal explanatory adequacy. The Plotinian One does not fill that gap:
+the already accepted reading retains qualified awareness and refuses the
+wholly unaware interpretation. Its relation to unchanged HAS_INTELLECT_1
+remains open; no new exegesis or attribution is made here.
+
+### Available consequence tests and why they converge
+
+The exact existing recognition/reception profiles were inspected rather than
+reimplemented:
+
+- **Grade and reception routes.** The grade proof retains an intellectual
+  exemplar, structural-to-grade applicability and upward transfer of intellect.
+  Aptitude, absence of material reception, actual form presentation and knowing
+  are distinct. The new first-source argument cannot use their open recognition
+  calibrations as independent confirmation of the same calibration. Their
+  conditional support remains available; no old argument is removed.
+- **Causal precontainment and pure perfection.** `PhysicalGround.InActUnder`
+  makes formal/eminent classification explicit. Its `IndependentlyPure`
+  criterion consults another noncomposite formal bearer; it is not an independent
+  proof that the relevant cognitive perfection is pure or formally possessed.
+  No table with a chosen classification is new evidence of the right one.
+  The live test is a defensible criterion requiring intellectual possession
+  in the first independently of already recognizing that first as intellectual.
+- **Actual reference and selection.** `FormSelection.ReferenceGround` distinguishes
+  causal-source, productive-plan and constitutive-anchor proposals without
+  claiming the supplied maps already explain aboutness. The accepted #1380
+  assessment also separates capacity, presentation and apprehension, and intrinsic
+  versus extrinsic content-fixing. A productive plan known by h would positively
+  support cognition, but inferring the existence of such a known plan merely
+  from h's production repeats the disputed step. No local sensitivity, new
+  decoder or renamed “intrinsic intentionality” field was added.
+- **From noncognitive tending to a knowing director.** The existing arrow
+  premise would require a defensible application of TendsTo to h itself,
+  correct end correspondence and the relevant direction/motion implications.
+  Directing x to e does not automatically mean h attains e in the same sense.
+  Even a resulting cognition conclusion must retain the distinction from
+  intellectual understanding. Adding “every nonintellectual first is moved
+  as directed by an intellect” would merely state the missing exclusion unless
+  independently defended; it is not a new discriminator.
+- **Specific end versus universal reach.** One apprehended end can establish
+  an intellectual capacity; omniscience is not required by HasIntellect. But
+  universal causation of effects does not itself assert knowledge of every end
+  or the existence of one all-ends representation. Neither direction of that
+  unproved scope change can settle the present recognition input.
+
+The inspected proposals converge on one exact obstacle: **why the final
+ordering licensed by Directs, when not received through another actualizer,
+must be an end present as an object of thought rather than as a source's
+intrinsic directive nature**. This is not merely missing notation, a tooling
+blocker or an instruction to give every premise another proof. The corpus has
+positive partial accounts on both sides but no new independent reason here
+that forces that identification under the common first-source assumptions.
+Assuming already known self-awareness, defining “intrinsic” as intellectual,
+or importing the desired cognitive presence would hide the conclusion.
+
+### Complete proposed assessment and a different next node
+
+Retain the accepted conditional root connection, selected-predecessor option,
+ordinary instrumental applications and direct intellectual-exemplar warrant.
+Intellect-first remains positively motivated; no substantiated refutation is
+claimed. This bounded audit supplies neither an independently established
+recognition bridge nor a fully warranted opposing first-source model. A new
+confidence ranking between such complete accounts would exceed the inspected
+evidence. The present provisional assessment is therefore **recognition remains
+open, with the positive reasons and their exact scope preserved**, not that
+cognitive evidence has no value or that a bare possible rival defeats it.
+
+The hDesign input is still separate from global unmovedness, strong per-se links,
+termination and selection. Its application through reduction 11914511 to governor
+571094b6 and same-root consumer a56eea3e retains all observation, chance/tending,
+director, directing-as-moving, uniqueness, Fourth-Way, God-naming, created-agent
+application and HasIntellect-dictionary dependencies. Existence of a necessary
+perfect ground is separately supplied. No historical/Catholic-specific transition
+is evaluated.
+
+There is no distinct remaining test in the inspected profiles that avoids this
+same identification. Stop this recognition slice for reassessment rather than
+rename that obligation again. Reopen on an independent account of intellectual
+presence/recognition with nonpassive first-source application, a warranted
+pure-perfection classification resolving formal versus eminent cognition, or
+a substantive same-background rival mechanism that supplies the actual first-
+source interpretation rather than only a local analogy. A proposed result
+must state which premise changed and why that evidence discriminates; more
+accurate devices or another sourcehood/intellect flag do not qualify.
+
+**Recommended different root-reaching node:**
+`0730d46f-4604-5750-9a64-de664f064b31`, the q11 common-nature input. Its current
+dossier is open/stated, and its exact existing consumer
+`Q11NatureUniqueness.godIsOneFromNature` (result
+`841e7c81-2137-511c-ba18-29620f7a1b16`) concludes GodIsOne
+`33b18ae7-4578-54bc-a2b5-edce99b21fc2`, with recorded root consumers including
+`CATHOLICISM-Q11-WITNESS-WITHOUT-MOTION`. A bounded next question is whether
+the intended God-description warrants **one numerically shared nature across
+all its instances**, rather than only qualitative agreement or one selected
+maximum, and what independently supports that common-nature assumption in
+combination with suppositum/nature identity and individuation. The existing
+three-input proof and omission controls are delivered and should not be repeated.
+This tests identity/individuation and quantifier scope, not possession of an end
+as known. It is an allocation recommendation only: no new work, ownership or
+historical conclusion in that family is claimed here; coordinator must reconcile
+current owners and current main before dispatch.
+
+Self-sweep: only this existing note and q14 attempt change. No new theorem,
+statement, definition, source claim, source campaign, model, sense or graph edge
+is introduced. Earlier sources are reused at their accepted reading boundaries;
+no further historical assertion or new proof inherits that acceptance. The
+rival's demonstrated mechanisms and its unproved first-source extension are
+kept distinct, and first-source opacity is not counted as a contrary fact.
+Current related/dossier/brief/novelty/context retrieval was used, including the
+actual recognition declaration and the proposed redirect's existing root links.
+Unchanged proof verification is reused. New corpus/reference and computed
+frontier checks accompany the revision; this proposed judgment needs fresh
+independent semantic challenge.
+
+Evidence navigation: the literal recognition and director dictionary are in
+[Government.lean](../TruthCore/Latin/Aquinas/SummaTheologiae/PrimaPars/Question103/Government.lean).
+The source/plan/anchor obligations are in
+[FormSelection.lean](../TruthCore/Logic/FormSelection.lean) and the existing
+[form-selection assessment](notes/form-selection-1380.md); the distinct
+capacity/presentation/apprehension comparison is in
+[foreknowledge discrimination](notes/foreknowledge-discrimination-1380.md).
+Formal/eminent and independent-purity interpretations are in
+[PhysicalGround.lean](../TruthCore/Alternatives/PhysicalGround.lean).
+These are reused evidence, not newly verified recognition results.
+
+Validation for this proposed outcome: `truth check` passes with existing
+nonblocking corpus diagnostics; `truth frontier-diff --base 0d011722` reports
+no premise or support-option change (503 open, 500 verified alternatives).
+UUID references and whitespace checks pass. No proof input changed; accepted
+proof/source checks are reused. Fresh semantic review remains pending.
