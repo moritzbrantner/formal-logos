@@ -1,0 +1,25 @@
+{
+  "id": "530c775b-2665-4e14-a679-2c4a0e6edcc5",
+  "label": "Divine justice: conformity of willed acts versus distributive completeness",
+  "term": "justice (divine)",
+  "term_label": "JUSTICE",
+  "sense_definition_ids": [
+    "187ab5be-de6f-4a8c-b49a-a1993514fa35",
+    "296791b6-2e83-4da2-8fc2-4edb0a677cc7"
+  ],
+  "resolution": "JUSTICE_1 (GodActsJustly) says every act a GOD_4 with classical attributes wills is Fitting; JUSTICE_2 (GodRendersAllDue) says such a GOD_4 wills every act due to some being. The #1457 route to the veracity premise GodAssertionsPermitted uses JUSTICE_1 only. JUSTICE_1 does not entail JUSTICE_2: the structural control ConformityNotCompleteness keeps both premises of JUSTICE_1 and an unwilled due act. No argument passes from one sense to the other; JUSTICE_2 is used only in that control and in the joint sample. Objections from unrelieved suffering of the just bear on JUSTICE_2 directly and on JUSTICE_1 only through a further premise that withholding a due is an unfitting willed act, which is not encoded.",
+  "senses": [
+    {
+      "id": "3ba44e1a-76d4-4ea9-bbc9-4e9927a34d28",
+      "label": "JUSTICE_1",
+      "definition_id": "187ab5be-de6f-4a8c-b49a-a1993514fa35",
+      "lean_declaration": "TruthCore.Causality.DivineJustice1457.GodActsJustly"
+    },
+    {
+      "id": "7b0717fb-7e70-4c06-b141-7b0f634c7b43",
+      "label": "JUSTICE_2",
+      "definition_id": "296791b6-2e83-4da2-8fc2-4edb0a677cc7",
+      "lean_declaration": "TruthCore.Causality.DivineJustice1457.GodRendersAllDue"
+    }
+  ]
+}

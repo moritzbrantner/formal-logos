@@ -1,0 +1,107 @@
+[batch]
+vocab = "TruthCore.Causality.DivineJustice1457"
+results = "TruthCore.Results.Causality.DivineJustice1457"
+
+[[statement]]
+id = "Justice GodWillsOnlyApproved"
+label = "A GOD_4 with classical attributes wills only what its wisdom approves"
+lean = "GodWillsOnlyApproved"
+paraphrase = "Analyst formulation of ST I q.21 a.1 ad 2, attribution deferred. Every act a GOD_4 with classical attributes wills is approved by its practical wisdom; government of will by wisdom, beyond coextension, is not encoded."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "a047c2db-fb7f-48f6-bca7-f6fa60be0519"]
+disambiguations = []
+
+[[statement]]
+id = "Justice GodApprovalTracksOrder"
+label = "What a GOD_4's wisdom approves accords with the order due to things"
+lean = "GodApprovalTracksOrder"
+paraphrase = "Analyst formulation. OPEN wisdom-accuracy premise: every act approved by the practical wisdom of a GOD_4 with classical attributes is Fitting, where Fitting is a standard of due order not defined by any agent's willing."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "a047c2db-fb7f-48f6-bca7-f6fa60be0519"]
+disambiguations = []
+
+[[statement]]
+id = "Justice GodActsJustly"
+label = "A GOD_4 with classical attributes acts with JUSTICE_1: every willed act is fitting"
+lean = "GodActsJustly"
+paraphrase = "Analyst formulation. Every act a GOD_4 with classical attributes wills is Fitting. Silent on whether any act is willed and on whether every due is rendered."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "a047c2db-fb7f-48f6-bca7-f6fa60be0519", "187ab5be-de6f-4a8c-b49a-a1993514fa35"]
+disambiguations = ["530c775b-2665-4e14-a679-2c4a0e6edcc5"]
+
+[[statement]]
+id = "Justice GodRendersAllDue"
+label = "A GOD_4 with classical attributes has JUSTICE_2: it wills every act due to some being"
+lean = "GodRendersAllDue"
+paraphrase = "Analyst formulation. Distributive completeness: for every being x and act a due to x, a GOD_4 with classical attributes wills a. Not entailed by JUSTICE_1."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "a047c2db-fb7f-48f6-bca7-f6fa60be0519", "296791b6-2e83-4da2-8fc2-4edb0a677cc7"]
+disambiguations = ["530c775b-2665-4e14-a679-2c4a0e6edcc5"]
+
+[[statement]]
+id = "Justice GodAssertionIsWilled"
+label = "A genuine assertion by a GOD_4 with classical attributes is an act it wills"
+lean = "GodAssertionIsWilled"
+paraphrase = "Analyst formulation. OPEN action-theoretic bridge: whenever a GOD_4 with classical attributes genuinely asserts p, it wills its own act of asserting p."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "f2c09ae8-848d-5a3b-ab79-92c2b01d414c", "a047c2db-fb7f-48f6-bca7-f6fa60be0519"]
+disambiguations = []
+
+[[statement]]
+id = "Justice FittingAssertionPermitted"
+label = "A fitting act of assertion is morally permissible for its speaker"
+lean = "FittingAssertionPermitted"
+paraphrase = "Analyst formulation. OPEN normative bridge: if g's act of asserting p is Fitting, then genuinely asserting p is morally permissible for g in the fixed context. Due order is claimed to be right-making for assertion."
+definitions = ["a047c2db-fb7f-48f6-bca7-f6fa60be0519", "3d69a2b8-58b7-4888-943e-e32ea702fb02"]
+disambiguations = []
+
+[[statement]]
+id = "Justice VoluntaristFitting"
+label = "An act is fitting exactly when some GOD_4 with classical attributes wills it"
+lean = "VoluntaristFitting"
+paraphrase = "Analyst formulation of the voluntarist reading of due order, as an explicit rival assumption: an act is Fitting if and only if some GOD_4 with classical attributes wills it."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "a047c2db-fb7f-48f6-bca7-f6fa60be0519"]
+disambiguations = []
+
+[[argument]]
+id = "JUSTICE_1 from will governed by order-tracking wisdom"
+theorem = "justiceFromWisdom"
+premises = ["Justice GodWillsOnlyApproved", "Justice GodApprovalTracksOrder"]
+conclusion = "Justice GodActsJustly"
+axioms = []
+rule = "Universal specialization and implication composition"
+meaning = "For one GOD_4 and act, specialize will-only-approved and then approval-tracks-order. No voluntarist definition of Fitting is used."
+senses = {JUSTICE = "JUSTICE_1"}
+
+[[argument]]
+id = "JUSTICE_1 and fitting-assertion bridges give permitted divine assertion"
+theorem = "permittedFromJustice"
+premises = ["Justice GodActsJustly", "Justice GodAssertionIsWilled", "Justice FittingAssertionPermitted"]
+conclusion = "9286d83c-dc05-4517-a886-e989629661f0"
+axioms = []
+rule = "Universal specialization and implication composition"
+meaning = "A genuine divine assertion is a willed act, JUSTICE_1 makes it Fitting, and the OPEN normative bridge makes it permitted. A new conditional support option for the existing veracity premise, not its discharge."
+senses = {JUSTICE = "JUSTICE_1"}
+
+[[argument]]
+id = "Voluntarist due order makes JUSTICE_1 hold for every will profile"
+theorem = "voluntaristTrivializes"
+premises = ["Justice VoluntaristFitting"]
+conclusion = "Justice GodActsJustly"
+axioms = []
+rule = "Universal specialization and biconditional elimination"
+meaning = "If Fitting means willed by some GOD_4, any willed act is Fitting. JUSTICE_1 then constrains no will profile, so the permission route becomes a divine-command account of permission. A diagnostic of the Euthyphro horn, not a refutation of voluntarism."
+senses = {JUSTICE = "JUSTICE_1"}
+
+[[statement]]
+id = "Justice route structural controls"
+label = "Structural controls for the JUSTICE_1 route to permitted divine assertion"
+lean = "Control.Certificate"
+paraphrase = "Structural controls: a joint sample with a classified bearer asserting True; four premise-omission samples; JUSTICE_1 with both premises and an unwilled due act (no JUSTICE_2); and one will profile that satisfies JUSTICE_1 under the voluntarist reading but not under an independent standard. Not a possible-world witness of classical theism."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "a047c2db-fb7f-48f6-bca7-f6fa60be0519", "187ab5be-de6f-4a8c-b49a-a1993514fa35", "296791b6-2e83-4da2-8fc2-4edb0a677cc7", "3d69a2b8-58b7-4888-943e-e32ea702fb02"]
+disambiguations = ["530c775b-2665-4e14-a679-2c4a0e6edcc5"]
+
+[[argument]]
+id = "Divine justice route structural controls certificate"
+theorem = "controls"
+premises = []
+conclusion = "Justice route structural controls"
+axioms = []
+rule = "Construction of explicit interpretations"
+sense_mixing_control = true
+meaning = "Boolean skeleton interpretations only: the joint sample shows the route premises satisfiable together with an actual assertion; each omission sample keeps the other premises of its argument and loses its conclusion; conformity does not give completeness; voluntarist and independent readings of Fitting disagree on one will profile. No modal, theological or moral-applicability claim."

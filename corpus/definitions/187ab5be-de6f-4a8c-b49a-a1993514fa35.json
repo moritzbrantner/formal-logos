@@ -1,0 +1,9 @@
+{
+  "id": "187ab5be-de6f-4a8c-b49a-a1993514fa35",
+  "label": "JUSTICE_1: every act a GOD_4 with classical attributes wills is fitting",
+  "term": "divine justice as conformity of willed acts to due order (JUSTICE_1)",
+  "definition": "GodActsJustly: for every g with IsGod and HasClassicalAttributes and every act a, if g wills a then a is Fitting. It concerns only acts actually willed; it does not say any act is willed or that every due is rendered.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.DivineJustice1457.GodActsJustly",
+  "note": "Analyst sense motivated by ST I q.21 a.2 (justice establishes things in the order conformable to the rule of wisdom) and a.4 co. (whatever God does in creatures is done according to proper order and proportion). Attribution deferred. Under VoluntaristFitting this sense holds for every will profile."
+}

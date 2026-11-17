@@ -1,0 +1,9 @@
+{
+  "id": "296791b6-2e83-4da2-8fc2-4edb0a677cc7",
+  "label": "JUSTICE_2: a GOD_4 with classical attributes wills every act due to some being",
+  "term": "divine justice as distributive completeness (JUSTICE_2)",
+  "definition": "GodRendersAllDue: for every g with IsGod and HasClassicalAttributes, every being x and act a, if a is due to x then g wills a. A completeness reading of giving each what is due; it is not entailed by JUSTICE_1.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.DivineJustice1457.GodRendersAllDue",
+  "note": "Analyst sense of the distributive formula in ST I q.21 a.1 co. (giving each what his rank deserves), read as completeness. Aquinas's own reply to the afflicted-just objection (a.4 ad 3) and the derivation of creaturely debt from wisdom (a.1 ad 3) suggest he does not hold the unrestricted reading; it is recorded because the problem of suffering bears on it."
+}

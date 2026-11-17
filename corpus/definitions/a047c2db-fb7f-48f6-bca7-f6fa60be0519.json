@@ -1,0 +1,9 @@
+{
+  "id": "a047c2db-fb7f-48f6-bca7-f6fa60be0519",
+  "label": "Divine justice order vocabulary: willing, wisdom approval, fitting due order",
+  "term": "willing, wisdom approval, fitting due order (Order: Wills, Approves, Fitting, DueTo, assertion)",
+  "definition": "Order supplies, for a fixed Signature, a type of acts and five primitives. Wills g a: g effectively wills (chooses) act a, not a mere wish. Approves g a: g's practical wisdom judges a to accord with its rule; an intellectual judgement distinct from willing. Fitting a: a accords with the order due to things by their natures and conditions and their ordering to the divine good; a standard, not a causal arrow, and not defined by any agent's willing or approving. DueTo x a: the doing of a is due to being x by its nature or condition. assertion g p: the act of g genuinely asserting p. No field law relates them; each link is a separate open premise. The voluntarist identification of Fitting with being willed by a GOD_4 is a separate explicit assumption, not part of this definition.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.DivineJustice1457.Order",
+  "note": "Analyst vocabulary for #1457 (attribution deferred, owner direction 2026-11-05). ST I q.21 a.1 ad 2-3 and a.2 motivate the split between approval (justice as to the law, in the intellect) and willing (justice as to command, in the will); no claim record is made. Whether Fitting can be identified with the form/end due perfection of DEF-FORM-END-DUE-PERFECTION is an OPEN bridge. See docs/notes/divine-justice-1457.md."
+}
