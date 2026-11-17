@@ -23,6 +23,7 @@ public import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.InfinityReceptio
 public import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.IntellectWill
 public import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.OperationFollowsBeing
 public import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.PerSeHistoricalSeries
+public import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question103.DirectorInheritance
 public import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question103.Government
 public import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question105.Article5
 public import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question11.Article3

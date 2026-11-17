@@ -42,7 +42,9 @@ fn check(args: &Args, command: &str) -> Result<(), Failure> {
             "--statement applies only to novelty; brief takes the statement as TARGET",
         ));
     }
-    if command == "novelty" && args.brief.question.is_some() {
+    if command == "novelty"
+        && (args.brief.question.is_some() || args.brief.assessments_for.is_some())
+    {
         return Err(usage(
             "--question applies only to brief; novelty takes the text as its operand",
         ));
@@ -77,6 +79,22 @@ fn issues(args: &Args, revision: &retrieval::Revision) -> Result<retrieval::Issu
 
 fn run_brief(args: &Args, operands: &[&str]) -> Output {
     check(args, "brief")?;
+    if let Some(tokens) = &args.brief.assessments_for {
+        if !operands.is_empty() || args.brief.question.is_some() {
+            return Err(usage(
+                "--assessments-for takes a comma-separated list of statements, without TARGET or --question",
+            ));
+        }
+        let (corpus, aliases, _) = load(args)?;
+        let mut ids = std::collections::BTreeSet::new();
+        for token in tokens.split(',') {
+            let id = super::resolve(&aliases, token, Some(&["statements"]))?
+                .ok_or_else(|| unknown(&format!("unknown statement: {token}")))?;
+            ids.insert(id);
+        }
+        let value = brief::assessment_batch(&args.root, &corpus, &ids).map_err(error)?;
+        return Ok((with_identity(value, &corpus), None));
+    }
     let question = args.brief.question.as_deref();
     let target = match (operands, question) {
         ([target], None) if !target.is_empty() => Some(*target),

@@ -18,6 +18,7 @@ public import TruthCore.Results.Aquinas.SummaTheologiae.AtMostOneMaximeEns.Solut
 public import TruthCore.Results.Aquinas.SummaTheologiae.CausalPerfectionTransfer.Solution
 public import TruthCore.Results.Aquinas.SummaTheologiae.CompositeUnitingCauseControls.Solution
 public import TruthCore.Results.Aquinas.SummaTheologiae.CompositeUnitingCauseFromUnion.Solution
+public import TruthCore.Results.Aquinas.SummaTheologiae.DirectorInheritance.Solution
 public import TruthCore.Results.Aquinas.SummaTheologiae.EssenceEsseExternalCause.Solution
 public import TruthCore.Results.Aquinas.SummaTheologiae.FirstBeingNoPotency.Solution
 public import TruthCore.Results.Aquinas.SummaTheologiae.FirstMoverHasPerfectionsOfThings.Solution

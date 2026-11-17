@@ -1,0 +1,21 @@
+{
+  "id": "40361d05-466c-427d-ac59-55ee4b0ddb47",
+  "label": "Same-end mover selection from unrestricted inheritance",
+  "premise_statement_ids": [
+    "251bbfdd-c176-5cea-ae66-ebfa5cad0dc4"
+  ],
+  "conclusion_statement_id": "e8ffcdad-0cf5-43ba-a8c3-d51330498205",
+  "inference_ids": [
+    "98ba15f8-620e-489e-b313-e6f0d1980598"
+  ],
+  "meaning": "Sole-premise weakening of the existing every-distinct-mover policy to existence of one direction-preserving distinct actual mover, restricted to natural-body targets. Same MovesIn and Directs dictionaries and exact x/e throughout. This checks a strength relation, not premise warrant; no strictness or minimality claim and no new countermodel. The old direct primitive input remains available.",
+  "definition_ids": [
+    "6c3512d5-1abb-4efd-918e-7b21a8072d20",
+    "d9483f11-c76c-5ea9-aac3-0ed77076305b",
+    "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d",
+    "c53b5fbe-121a-5d59-8e29-0f9f7eea85b1",
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "e765a03a-3017-5c77-acaa-ba33b6cd5279",
+    "c9798301-e990-5ca2-a36e-6b11f76206c1"
+  ]
+}
