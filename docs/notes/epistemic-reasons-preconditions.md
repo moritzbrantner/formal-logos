@@ -1362,3 +1362,275 @@ no change
 Intended and actual formal premise effects: **none**. The new assessments
 provide qualified philosophical support for a local engagement route, not a
 certified instance of the preference-independent epistemic-reason target.
+
+## Application audit: one witness, the whole preference class (2026-11-17)
+
+**Outcome for fresh independent challenge.** The successful private episode
+is a conditionally applicable pattern for the accepted joint explanation,
+across the entire explicitly supplied two-preference class, **if the same
+actual grasp, basing and feasible preservation are supplied at both values**.
+The repository currently supplies an analyst case, not a documented actual
+episode meeting those conditions. No actual successful instance is thereby
+established. Two focused Lean checks confirm a concrete reason not to use the
+old finite `independent` profile as that episode: its fixed count/answer has
+force at every supplied preference while its content is false, and every
+attitude in that profile is already a belief image. It certifies neither
+factive understanding nor a distinct suspension attitude.
+
+The original factive-success ground does not cover a warranted false answer.
+Suspension cannot be substituted for belief midway through a fixed-witness
+comparison. A genuine grasp of the evidence's limitations could support a
+different application, but its actual occurrence, target-attitude connection
+and full preference mapping are additional obligations. Earlier benefit,
+favoring and transmission assessments retain their accepted, qualified status;
+failure of this wider application does not defeat the successful pattern.
+
+Baseline is `340b1ee3847ef8bc1668a6df78658bedf060e903`. The coordinator reports
+that its independent challenge required no repairs; this audit is a new
+outcome. Prior publication and CI statements are not updated. Live conventions
+again resolve to `15f348b072188255da837578eaafc8a98f12fdf0`. Current target
+`related`, `dossier`, question `brief`/`novelty` and the eligible-uptake result's
+`context` were inspected, along with the exact declarations below. No new
+source attribution, definition, normative flag or proof registration is added.
+
+### Freeze the witness before evaluating preferences
+
+For the successful analyst case fix the same bearer a, the particular count
+consideration r, the odd content p, the factual-belief attitude t = believe p,
+and the circumstances c, including actual truth, evidence, competence,
+defeaters and the episode's actual inferential route. This is not an
+instantiation of `Content.even`: seven's oddness must not be represented by
+silently changing that constructor's meaning. A generic `Frame` can represent
+the intended content, but no such actual-case binding has been supplied here.
+
+The entire supplied comparison class is exactly
+`{Preference.accuracy, Preference.comfort}`. The second retains the selected
+absence of a relevant accuracy/understanding end; its label does not also
+establish inability, distress, a bypass or loss of the cognitive good. There
+is no third unexamined value in this inductive type, and no claim that it
+enumerates all human preference profiles. Within this comparison the episode
+is held fixed and its force assessed at each preference. Changing its actual
+route, target or background to obtain a better answer at one value would
+change the case, not complete this audit.
+
+`IndependentInstance f a r t` is exactly `OrdinaryInstance f a r t ∧
+∀ d, f.force a r t d`. Thus one fixed witness must work at both values;
+separate existential witnesses, different considerations or a different
+attitude at each preference do not suffice. `actualPreference` ensures an
+actual value is included, not that the other value was actually enacted.
+
+| Application item | Accuracy value | Comfort/indifference value | What establishes it in this audit |
+| --- | --- | --- | --- |
+| Same a, r, p, t and c | Fixed | Identically fixed | Declared comparison, not inference from a preference label. |
+| r's applicable evidential bearing on p | Supplied | The same supplied bearing | `EpistemicRole` has no preference coordinate; actual application remains a semantic/warrant burden. |
+| Actual personal basing of this t on this r | Assumed for the analyst success case | The same route is required | The four #1646 process conditions, not `force`, output agreement or truth alone. No actual episode record supplied. |
+| Factive personal grasp and its bearer-benefit | Conditional on that actual success | The same successful grasp must remain present | Accepted benefit assessment applies to the specified grasp without an end; neither label supplies a grasp. |
+| Feasible preservation of that grasp | Explicit scenario assumption | The same available means must remain feasible | Needs a concrete method and ability; wanting to preserve and being able to preserve are different. No actual method/ability evidence supplied. |
+| Force of this r for this t | Proposed through the accepted joint explanation | The same proposal, without importing an accuracy end | Qualified normative assessment under all preceding conditions, not a field already certified by the finite controls. |
+
+This is a complete audit of the declared class, with separate application
+conditions; it is not an assertion that the unknown conditions passed. If a
+concrete comfort-profile episode instead has a different route, that would
+need its own assessment. No such failure is invented here. Likewise, merely
+imagining a hidden bypass is not evidence against an otherwise well-supported
+basing attribution.
+
+### What the existing declarations actually supply
+
+`Frame` has fields for evidence-role attribution, `Holds`, production, reward
+and preference-indexed force. It has **no actual-belief or episode/basing
+field**. Its evidence-role fields also have no preference coordinate. They
+cannot demonstrate that a real route survives a motivational change; their
+constancy is part of the representation. The four-condition actual-basing
+account in [the #1646 note](epistemic-underminer-boundaries.md#proposed-sufficient-account-for-the-selected-scope)
+is an interpreted application proposal, not an exported Lean definition of
+personal understanding.
+
+The existing `EpistemicUnderminers.SomeEligibleReasonUptake` supplies an
+existential `Reason a p ∧ Believes a p ∧ Eligible a p`.
+`EligibleReasonUptakeWarrants` is the separate pointwise bridge to `Warrant`.
+Its registered result `1db47fd9-6ab1-4fa1-a9dd-0aa9457d8146` consumes **both**
+premises. `Eligible` packages basing, adequacy and undefeatedness without
+analyzing them; `Warrant` is explicitly nonfactive. It neither proves actual
+personal grasp nor supplies the missing preference comparison. An existential
+uptake somewhere cannot be substituted for uptake by our fixed a of p through
+r. With an appropriate pointwise triple and the calibration, one can apply
+`hBridge a p hReason hBelieves hEligible`; no duplicate theorem is needed.
+The relation to this particular r still requires the consideration presentation
+and actual process interpretation.
+
+`RevisionUptake.revise` and its existing screening theorem supply only routing
+facts. Inversion is sensitive too, and an available recommendation need not
+be the active basis of a belief. Those controls must not be promoted to the
+missing personal application evidence.
+
+The following focused consequences of unchanged vocabulary were elaborated
+with Lean. They keep the **same** subject, count and belief in the first check,
+and explicitly exhaust both supplied preferences. The earlier direct `decide`
+draft failed to synthesize decidability for the wrapped profile propositions;
+the constructive proof below checks the same advertised claim without adding
+an axiom or changing a definition. This is a local declaration audit, not a
+new registered result or a new Comparator/NanoDa certificate.
+
+```lean
+import TruthCore.Logic.EpistemicReasonDefinitionFork
+
+open TruthCore.Logic.EpistemicReasonDefinitionFork
+
+example :
+    IndependentInstance independent () Consideration.count
+      (independent.believe Content.even) ∧
+    ¬ independent.Holds (independent.about (independent.believe Content.even)) := by
+  refine ⟨⟨?_, ?_⟩, ?_⟩
+  · exact ⟨⟨rfl, rfl⟩, trivial, trivial, rfl, rfl⟩
+  · intro d
+    cases d <;> exact ⟨rfl, rfl⟩
+  · intro h
+    cases h
+
+example (t : independent.Attitude) :
+    ∃ p : independent.Content, independent.believe p = t := by
+  exact ⟨t, rfl⟩
+```
+
+These are consequences of the existing false-count profile and its identity
+belief constructor, not evidence that an actual person has a warranted error.
+No `Believes`, `Warrant` or full basing witness is present in that profile.
+The general `Frame` need not have this restricted attitude type. A distinct
+suspension attitude can be represented there with an explicit content mapping;
+the old finite profile cannot supply it just by renaming `Content.rain`.
+
+### Exact success, error and suspension coverage
+
+The successful pattern is locally adequate **as a supplied analyst case**:
+given actual personal grasp, the granted benefit and feasible preservation,
+the accepted favoring/transmission/joint explanation can be applied to this
+same r and t at both preferences. None of those assumptions contradicts the
+absence of an accuracy end. This is not a proof of psychological realization
+or an observed actual witness. The finite `independent` profile is expressly
+not its certificate: its supported `.even` answer is false.
+
+For **warranted error**, fix a separate application with p false but the
+subject's belief adequately and undefeatedly based on the available evidence.
+Keep that error case's bearer, r, t and circumstances fixed throughout its
+own full preference comparison. It is not the successful case with truth
+silently changed at the comfort value. On the stipulated false content there
+is no successful factive understanding of p to preserve. The original ground
+therefore does not apply, regardless of whether basing and warrant obtain.
+This does not show there is no epistemic reason, no good cognitive activity,
+or no independent reason at that error case. The ordinary-role definition
+and the Lean check above keep those questions apart.
+
+One concrete alternative is a **true grasp of the evidence's defeasible
+bearing**, despite a false answer about the jar. That could be an instance of
+the same kind of cognitive good with a different understood relation. But it
+must really be present: replacing “understands p” by “understands why e favors
+p” changes the ground, and the latter does not follow from a warranted false
+belief. It can also coexist with withholding p. Its transfer to our particular
+belief attitude would need the actual basing and fitting-response connection,
+not merely the old benefit label. The present audit does not establish that
+mapping or coverage of all warranted errors.
+
+For **suspension under inconclusive evidence**, t = believe p stays the target
+in the original comparison. Switching to suspend p at one preference cannot
+complete its `∀ d` claim. A separate suspension candidate would keep the same
+suspending attitude about p fixed at every preference, and independently
+supply the appropriate evidential-role, basing, benefit and preservation
+conditions. A true grasp of why the evidence is inconclusive offers a candidate
+ground for that separate case; absence of grasp of p's truth need not preclude
+such metaevidential understanding. But an unperformed reflection cannot supply
+it. Neither the existing finite attitude type nor the belief-only
+`SomeEligibleReasonUptake` declaration certifies that application.
+
+Under **decisive evidence**, the availability of suspension or disengagement
+still does not prove that suspension is epistemically fitting. Conversely,
+pro tanto force for a supported belief is not a full-belief obligation or a
+demand to investigate. The route adds no general stance-selection policy.
+Its successful pattern, warranted-error gap and separate suspension candidate
+are therefore different coverage results, not rival preferences filling one
+existential witness.
+
+The strongest substantive alternative for the uncovered error cases assesses
+the agent's **proper response to available evidence**, rather than requiring
+actual truth of the answer or achieved understanding. It has a positive
+mechanism in the existing nonfactive eligibility/warrant account: the evidence
+can be appropriately used even when it misleads. The substantive difference
+from our original ground is actual success, not mere unusualness of the case.
+This warrants retaining that alternative as a scope-relevant route; it does
+not establish its authority for an indifferent agent. A goal-relative version
+can still grant all the evidential and basing facts while restricting force.
+No new objection to the accepted successful instance is inferred from it.
+
+### Actual-case blocker and substantive reassessment
+
+No identified actual bearer/episode was supplied for this analyst jar case.
+The missing evidence is specific: identification of the count token and
+target attitude; grounds for the actual count/truth and the evidence's warrant;
+an actual content-guided inferential contribution to that attitude rather than
+a matching later explanation; personal grasp under the four existing basing
+conditions; and a concrete, available way to preserve it. The alternate
+preference also needs an admissible fixed-case interpretation that preserves
+those conditions. A label, a theorem about some profile or an existential
+uptake at another content supplies none of these identifications.
+
+An ordinary documented episode with well-supported first-person or observed
+reasoning could supply prima facie application evidence. Exhaustive
+neuroscience, an independent proof of every premise and speculative hidden-
+bypass exclusion are not prerequisites. The matched inference/bypass protocol
+already proposed in #1646 is useful if a concrete process question arises;
+it is not a new universal gate. This worker has no such episode evidence to
+assess, and none of the existing source passages reports this particular case.
+
+The application audit is complete at that boundary. Actual successful
+application is **blocked by the missing case evidence**, not refuted. The
+original factive route's noncoverage of a false target is resolved; the
+metaevidential and suspension extensions require distinct mappings, not an
+assumed factive ground. Prior provisional benefit, favoring, transmission and
+joint-explanation judgments remain intact; no full target or root is promoted.
+
+The next genuinely different useful route is to assess authority for the
+**properly based, warranted response without achieved factual understanding**.
+It can reuse the existing nonfactive eligibility/warrant declarations and
+direct correction warrant, then test whether proper responsiveness itself
+supplies a bearer-good or whether a true metaevidential grasp is actually
+needed in the selected instance. The difference matters: the latter is a
+narrower route and cannot become a mandatory higher-order support-belief for
+all rational inference, given the regress/active-treatment distinctions already
+recorded in #1646. Such work addresses the uncovered error/suspension cases;
+another description of the successful count would not. An actual-case version
+of the present successful route should reopen only when the concrete episode
+and full-class application evidence above become available.
+
+Self-sweep: the two Lean examples establish only existing-profile properties.
+No actual belief, warrant, personal basing, benefit or feasible preservation is
+inferred from them. Success and error are separate circumstances; each keeps
+its witness fixed across the entire declared class. Suspension is not swapped
+in for the successful belief. No new source claim, corpus proposition, opaque
+normative predicate, registered theorem or closure change is introduced.
+
+Verification: the persisted Lean block elaborated without diagnostics after
+the decidability repair described above, using
+`flock /tmp/moenarch/truth-core-heavy.lock python3 scripts/worker_env.py --
+lake env lean /tmp/epistemic-930-application-audit.lean`. The file contained
+the displayed imports/examples; the block is retained here for reproduction.
+No library module or proof input was edited. This focused Lean check is not
+Comparator/NanoDa verification or evidence of an actual human application.
+Corpus validation, offline attribution check (no changed stating claims),
+documentation/import generator checks and whitespace validation passed.
+Independent challenge of this full outcome and coordinator-owned final CI
+remain pending; prior accepted assessments are reused.
+
+Computed with `python3 scripts/worker_env.py -- target/release/truth
+frontier-diff --base 340b1ee3847ef8bc1668a6df78658bedf060e903`:
+
+```text
+open premises reaching the root: 494 (353 bare, 90 supported, 51 stated) -> 494 (353 bare, 90 supported, 51 stated)
+expanded-route diagnostic (lowest cost): Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16) -> Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16)
+distinct verified support alternatives: 494 -> 494
+verified support alternatives added: 0
+no change
+```
+
+Intended and actual premise effects: **none**. The contribution is an exact
+application/coverage audit and checked existing-profile consequences, with a
+specific evidence blocker and a distinct next research route.
