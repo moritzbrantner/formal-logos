@@ -450,3 +450,155 @@ longer reads the controls as possibilities. The reviewer found the Lean
 proofs, the controls, the strength order, the sense-link trimming
 (INTRINSIC_2 only for `5c898d24`) and the removal of the bookkeeping bridges
 correct. Codex review (P2) asked for a definition of `Trap` after `c9d479bb` was dropped: added as `a8172538`.
+
+## Current source-selection judgment: identity and the nature being multiplied (2026-11-17)
+
+**Target and registered route.** `75b5b027-21f1-400a-8b21-775bb6d47983`,
+with the seven companion inputs of argument `07b1fac4` / result `860eae63`,
+supports at-most-one identity bearer `a576300f`, then common ancestor `c35b1a5c`,
+fixed-esse maximal causality `da09703b` (argument `f4df2153`), and GodExists
+(consumer `c98328f1`, result `d8cb586a`). The final connection is retained in
+[maximum-definition-fork.md](maximum-definition-fork.md#current-existence-bundle-judgment-select-the-cause-before-identifying-the-maximum-2026-11-17).
+This continuation changes none of those propositions or proof inputs.
+
+**Reuse.** Required related/dossier/brief/novelty retrieval and context for
+`860eae63` were inspected. Retained De ente/q11 source readings and exact
+individuation, multiplication, reception, q7, pure-thisness and narrower
+indiscernibility findings are in
+[necessary-simple-plurality.md](necessary-simple-plurality.md#independent-individuation-audit-the-unresolved-exhaustive-step)
+and its **Act limitation follow-up**, **Can primitive thisness distinguish two
+pure acts?**, and **Narrower bridge** sections. No historical witness was
+reacquired or freshly attributed. No recorded argument concludes `75b5b027`;
+that is not an objection to accepting a primitive on its merits.
+
+**Exact meaning.** `p.esseOf x = p.essenceOf x` identifies represented principles
+within x; its real-identity application requires faithful maps. It entails no
+cross-individual equality by logical form. `q.SharesNature x y` places both
+candidates under one nature for the real multiplication account. This primitive
+is not defined as essence-value equality, common predication, or x=y. Q11's
+`ProperGodInstancesHaveCommonNatureReading` instead explicitly supplies
+`essenceOf g = deity`; suppositum/nature agreement and an incommunicable
+individuating basis are further inputs. Naming the candidates God cannot supply
+those q11 premises or substitute that dictionary for the De ente relation.
+
+**Strongest positive rationale.** On the substantive addition-excluding reading
+of **esse tantum**, the whole what-it-is is its own subsistent act of being.
+It is not merely a determinate nature that happens to exist. There is no
+further quidditative content determining it to be one kind of existent rather
+than another. Two such candidates therefore have the same what-it-is in the
+relevant respect: subsistent esse itself. Their alleged plurality calls for a
+multiplication account. The subsequent inventory/reception argument still does
+work: shared nature alone does not exclude several instances.
+
+This rationale explains why the account treats received natures differently.
+A determinate essence explains why its actuality has one range rather than
+another; on the act/reception account that essence determines the act it
+receives, whereas esse actualizes it. If the whole essence is esse itself, a
+different determinate kind needs an account of how esse is so determined without
+a recipient or further quidditative content. This gives shared nature a
+substantive prima facie rationale and permits its direct primitive acceptance.
+It need not await an endlessly prior proof of every commitment. Its warrant
+comes from the act/determination account, not the equality symbol.
+
+**Application and provisional judgment.** The rationale favors `75b5b027` when
+these same candidates instantiate addition-excluding unreceived esse. The
+identity maps alone do not encode that whole-nature determination must arise
+from reception or addition. The sourced no-difference reading `f13d1cdd`
+excludes a differentia added to esse; it does not identify every difference of
+whole natures with an added constituent. The existing q7 audit tested the
+missing converse from whole-nature difference to real reception; its
+received-created-form account does not supply it. Thus retain shared nature as
+a positively motivated primitive within this account, without claiming its
+application has been derived from the companion premises. The equality-only
+argument is insufficient. No substantive defeat of the stronger
+addition-excluding account has been established by this continuation.
+
+**Distinct-whole-nature reply.** A proposes an intrinsic act of one kind and B
+an intrinsic act of another, neither receiving a common act in a distinct
+subject. Their intrinsic characters explain different causal powers and the
+recipients they support. This is a distributed-source explanation schema,
+challenging the step from qualitative determination to a further receiver or
+added constituent. It has a specific positive basis against the *generic*
+composition shortcut: the source account itself allows immaterial species whose
+genus and differentia are taken from the whole quiddity, not separate actual
+parts. Whole difference does not automatically exhibit an added real part.
+
+The relevant difference matters: those immaterial natures have esse other than
+essence in the same account. Their mechanism does not independently establish
+intrinsically typed **unreceived** esse. The inspected records supply no such
+application. The rival is therefore a targeted challenge to that inference and
+an unfinished alternative ontology, not evidence of actual distinct identity
+bearers or a metaphysical possibility proof. Its proponent owes a positive
+account of intrinsic determination compatible with esse tantum; the defender
+must justify excluding that account rather than appeal to the absence of a
+worked rival. TwoSourcesControl establishes omission dependence only. The
+older rival table's appeal to coherent primitive individuation is not additional
+evidence for its extension to unreceived esse.
+
+**Bare thisness and natural sources.** A proponent can accept common nature but
+posit two instances without differentia, matter or reception. That challenges
+inventory `2495a71d`, rather than automatically negating `75b5b027`. Denying that
+qualitative sameness places them under a genuinely shared nature challenges
+this premise's application instead. Keep the replies distinct. The predicate
+"is identical with A" supplies no real individuating mechanism. Existing
+pure-thisness/indiscernibility results already test the real-determination and
+bare-difference options; no independently supported bare-thisness counterexample
+to addition-excluding unreceived esse was identified. Its absence is not proof.
+
+Naturalism does not decide this dispute. Several intrinsic basic natures would
+need the differentiated-act account above; one fundamental natural supporter
+could satisfy source selection. Neither a naturalist label nor a finite graph
+establishes the relevant actual ontology. The coherence of a common-nature
+metaphysics is positive comparative evidence, but its conditional consequences
+are not independent corroboration through a proof cycle.
+
+**Preserved dependencies.** Shared nature supplies no existing bearer or causal
+coverage. Keep the multiplication inventory, no-difference/no-matter readings,
+own-essence reception, receiver-to-act potency and no-self-reception inputs.
+Common ancestry retains its source/coverage, numerical-selection, population
+and no-regress inputs. The maximal bridge retains composition, ascent and
+explicit logic. The twelve-input consumer retains all its actuality, grounding,
+priority, grading, transfer, component and nominal interfaces. The profile is
+tenseless and mode-unspecified: present productive support, conservation,
+necessity, intellect, further divine attributes and Catholic identification are
+not supplied by this investigation.
+
+**Resolved scope and reopening.** Equality-only and genus/difference composition
+shortcuts are exhausted by the retained evidence. An implication assuming all
+identity bearers lack different whole natures, a common numerical esse, or
+complete unrestricted perfection would relocate this gap; the corpus already
+retains those frameworks. Another model or equivalence certificate would not
+test their real application, so none is added. Reopen on a positively warranted
+intrinsically differentiated unreceived-act account, or a general argument
+that such determination requires real reception/addition answering the
+whole-quiddity reply. Bare multiplicity accepting common nature belongs to
+`2495a71d` and the existing indiscernibility investigation.
+
+Recommended next allocation: existing causal-ascent input `cffad050`. Its
+reception-limit argument `fa1d11a9` / result `d9958e2c` moves from the cause's
+not being limited **by this recipient** to exceeding the recipient in esse.
+Test that inference when the cause is limited through another recipient, and
+whether the selected respect supplies the comparison. This is a concrete
+warrant question for the source-first identification, distinct from common
+nature; do not infer global unlimitedness from absence of one recipient.
+
+**Self-sweep and evidence.** Proposition, Lean interpretation, definitions,
+senses, proofs and frozen Challenges are unchanged. The statement paraphrase
+now links this positive assessment and distinguishes rival mechanisms from
+controls. No source claim, attribution, status, new primitive or warrant axiom
+is created. Reuse accepted build/binding/Comparator/NanoDa evidence; no unchanged
+proof was reverified. This is non-proof work: exact premise change **none**.
+Affected final checks are offline corpus/attribution validation and the computed
+God-root frontier comparison against `059009b39d2e4665a4d9ab3c898850ba3b89271d`.
+Live convention source revision: `15f348b072188255da837578eaafc8a98f12fdf0`.
+Fresh independent semantic review of the complete proposed judgment precedes
+publication; this worker has not pushed, opened a PR or watched one.
+
+Final affected checks passed: `target/release/truth check`, offline
+`target/release/truth attribution-check --base 059009b39d2e4665a4d9ab3c898850ba3b89271d`
+(no changed stating claims), and `git diff --check`. Computed with
+`target/release/truth frontier-diff --base 059009b39d2e4665a4d9ab3c898850ba3b89271d --frontier-root STMT-GOD-EXISTS`:
+**no change**; 404 open premises (283 bare, 76 supported, 45 stated), 415 distinct
+verified alternatives, zero added alternatives, cheapest expanded diagnostic
+cost 6, all unchanged. These counts describe the formal comparison, not the
+merit of the current warrant judgment.
