@@ -1,0 +1,19 @@
+{
+  "id": "6acd44eb-4b3e-480c-a479-6b4ac7a2522e",
+  "label": "Relevant own-being sources respect the essence-esse identity dictionary",
+  "paraphrase": "Analyst formulation, attribution deferred. For each participant x and each distinct actual OwnBeing c that causes its esse, the represented esseOf c equals essenceOf c in the same q3 profile. This is an open application dictionary restricted to relevant causal sources, not a definition of OwnBeing or a converse from identity to subsistence. Lean does not impose it on arbitrary supplied profile maps.",
+  "lean_declaration": "TruthCore.Causality.Q44EssentialSource.RelevantEssentialSourceHasIdentity",
+  "definition_ids": [
+    "d107b55a-9486-4159-8a42-c90fdf925bb2",
+    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7",
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "54f33165-05df-5205-807a-04154b5fd6ad",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1"
+  ]
+}

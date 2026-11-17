@@ -1,0 +1,9 @@
+{
+  "id": "f5a58c9d-95db-48c1-b09f-99bed22c18be",
+  "label": "Finite controls for q44 essential-source selection",
+  "term": "Finite controls for q44 essential-source selection",
+  "basis": "stipulative",
+  "definition": "Four explicit finite interpretations over three beings. The first three each have a participant and a distinct actual OwnBeing cause of its esse but fail selection: respectively the identity dictionary, at-most-one or selected identity witness fails while the other two selection premises hold. The fourth satisfies all selection premises, participant source supply and participation of all others; every other being is CREATURE_1 and the primary causes the effect. Facts about encoded interpretations only, not their metaphysical possibility or evidence against any premise.",
+  "lean_declaration": "TruthCore.Causality.Q44EssentialSource.Control.Certificate",
+  "note": "Analyst formulation, attribution deferred. Existing primitive OwnBeing (definition 5dc08b95-ca15-52ab-b8cd-2b558e9a13f7) means the bearer is its own subsistent act of being, rather than a subject having a received act. Participated reuses definition 14d30c53-51c2-502d-b009-247dac0421e0. Causation and essence/esse keep the same q3 Profile fields. These compounds constrain those interpreted primitives; they do not complete their formal meanings or certify their real applicability. Full meaning, examples, exclusions, property warrant, comparison and open burdens: docs/notes/q44-inferential-dependency.md#essential-source-application."
+}

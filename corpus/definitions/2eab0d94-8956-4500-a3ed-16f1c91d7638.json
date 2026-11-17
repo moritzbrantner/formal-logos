@@ -1,0 +1,9 @@
+{
+  "id": "2eab0d94-8956-4500-a3ed-16f1c91d7638",
+  "label": "All relevant actual own-being causes are the selected p",
+  "term": "All relevant actual own-being causes are the selected p",
+  "basis": "stipulative",
+  "definition": "For each participant x and distinct actual OwnBeing c causing x in the esse respect, c is numerically identical with the selected p. Unrelated own-being bearers are outside this quantifier. This is the conclusion to be derived from an identity dictionary, at-most-one and a selected witness, not a definition making selection true.",
+  "lean_declaration": "TruthCore.Causality.Q44EssentialSource.RelevantEssentialSourcesSelected",
+  "note": "Analyst formulation, attribution deferred. Existing primitive OwnBeing (definition 5dc08b95-ca15-52ab-b8cd-2b558e9a13f7) means the bearer is its own subsistent act of being, rather than a subject having a received act. Participated reuses definition 14d30c53-51c2-502d-b009-247dac0421e0. Causation and essence/esse keep the same q3 Profile fields. These compounds constrain those interpreted primitives; they do not complete their formal meanings or certify their real applicability. Full meaning, examples, exclusions, property warrant, comparison and open burdens: docs/notes/q44-inferential-dependency.md#essential-source-application."
+}

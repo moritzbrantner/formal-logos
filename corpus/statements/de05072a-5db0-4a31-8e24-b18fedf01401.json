@@ -1,0 +1,19 @@
+{
+  "id": "de05072a-5db0-4a31-8e24-b18fedf01401",
+  "label": "Each participant has a distinct actual own-being cause of esse",
+  "paraphrase": "Analyst formulation, attribution deferred. Each x with the existing q44 Participated predicate has some c distinct from x, in act as to esse, that is its own subsistent being (the existing primitive OwnBeing) and causes x in the esse respect. This adds essential possession at the causal source to the local external-cause conclusion. It does not assert the premise, identify all such sources or make causation efficient, conserving or modal.",
+  "lean_declaration": "TruthCore.Causality.Q44EssentialSource.ParticipatedHasEssentialSource",
+  "definition_ids": [
+    "75822b6c-e714-4061-8460-4e2afc0a8b4c",
+    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7",
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "54f33165-05df-5205-807a-04154b5fd6ad",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1"
+  ]
+}

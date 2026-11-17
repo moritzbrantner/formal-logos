@@ -1,0 +1,9 @@
+{
+  "id": "d107b55a-9486-4159-8a42-c90fdf925bb2",
+  "label": "Relevant own-being sources respect the essence-esse identity dictionary",
+  "term": "Relevant own-being sources respect the essence-esse identity dictionary",
+  "basis": "stipulative",
+  "definition": "For each participant x and each distinct actual OwnBeing c that causes its esse, the represented esseOf c equals essenceOf c in the same q3 profile. This is an open application dictionary restricted to relevant causal sources, not a definition of OwnBeing or a converse from identity to subsistence. Lean does not impose it on arbitrary supplied profile maps.",
+  "lean_declaration": "TruthCore.Causality.Q44EssentialSource.RelevantEssentialSourceHasIdentity",
+  "note": "Analyst formulation, attribution deferred. Existing primitive OwnBeing (definition 5dc08b95-ca15-52ab-b8cd-2b558e9a13f7) means the bearer is its own subsistent act of being, rather than a subject having a received act. Participated reuses definition 14d30c53-51c2-502d-b009-247dac0421e0. Causation and essence/esse keep the same q3 Profile fields. These compounds constrain those interpreted primitives; they do not complete their formal meanings or certify their real applicability. Full meaning, examples, exclusions, property warrant, comparison and open burdens: docs/notes/q44-inferential-dependency.md#essential-source-application."
+}

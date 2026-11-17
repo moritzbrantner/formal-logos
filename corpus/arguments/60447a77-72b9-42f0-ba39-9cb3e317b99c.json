@@ -1,0 +1,33 @@
+{
+  "id": "60447a77-72b9-42f0-ba39-9cb3e317b99c",
+  "label": "Others are CREATURE_1 from q44 selected essential sources",
+  "premise_statement_ids": [
+    "11e24b50-06bc-5e2e-b9b6-a4e4dc421237",
+    "de05072a-5db0-4a31-8e24-b18fedf01401",
+    "dcf4bcdd-4feb-4d97-a7e2-f6a08cdf4702"
+  ],
+  "conclusion_statement_id": "612078bf-5a68-5542-8b7b-f862f816ece0",
+  "inference_ids": [
+    "4f5550a6-b88a-4fc8-853b-548fd408d75e"
+  ],
+  "meaning": "For each x other than the selected p, participation coverage gives Participated x. Its distinct actual own-being cause c is selected as p, so p causes x. Consequently p causes every other actual being, and each other x is CREATURE_1 with that same p as the universal cause. Creature is instantiated at IsCreatureOfUniversalCause, not CREATURE_2. The own-being source law and numerical source selection are explicit premises; no Fourth-Way universal-cause principle, GOD_4 identification, q3 local-to-common-source shortcut, efficiency, conservation or modal conclusion is used.",
+  "term_senses": {
+    "CREATURE": "a900760c-6f85-483c-b90e-e67b32387568"
+  },
+  "definition_ids": [
+    "2eab0d94-8956-4500-a3ed-16f1c91d7638",
+    "75822b6c-e714-4061-8460-4e2afc0a8b4c",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "afcdd2c5-1167-5a73-97d7-cb99a6ad5817",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "54f33165-05df-5205-807a-04154b5fd6ad",
+    "c49de1e9-c34f-424f-b144-b80c885974ca"
+  ]
+}

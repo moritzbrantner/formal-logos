@@ -1,0 +1,19 @@
+{
+  "id": "3b601644-d9c2-43a5-8bb1-d16ddfba0a87",
+  "label": "Finite controls for q44 essential-source selection",
+  "paraphrase": "Analyst formulation, attribution deferred. Four explicit finite interpretations over three beings. The first three each have a participant and a distinct actual OwnBeing cause of its esse but fail selection: respectively the identity dictionary, at-most-one or selected identity witness fails while the other two selection premises hold. The fourth satisfies all selection premises, participant source supply and participation of all others; every other being is CREATURE_1 and the primary causes the effect. Facts about encoded interpretations only, not their metaphysical possibility or evidence against any premise.",
+  "lean_declaration": "TruthCore.Causality.Q44EssentialSource.Control.Certificate",
+  "definition_ids": [
+    "f5a58c9d-95db-48c1-b09f-99bed22c18be",
+    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7",
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "54f33165-05df-5205-807a-04154b5fd6ad",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "75822b6c-e714-4061-8460-4e2afc0a8b4c",
+  "label": "Each participant has a distinct actual own-being cause of esse",
+  "term": "Each participant has a distinct actual own-being cause of esse",
+  "basis": "stipulative",
+  "definition": "Each x with the existing q44 Participated predicate has some c distinct from x, in act as to esse, that is its own subsistent being (the existing primitive OwnBeing) and causes x in the esse respect. This adds essential possession at the causal source to the local external-cause conclusion. It does not assert the premise, identify all such sources or make causation efficient, conserving or modal.",
+  "lean_declaration": "TruthCore.Causality.Q44EssentialSource.ParticipatedHasEssentialSource",
+  "note": "Analyst formulation, attribution deferred. Existing primitive OwnBeing (definition 5dc08b95-ca15-52ab-b8cd-2b558e9a13f7) means the bearer is its own subsistent act of being, rather than a subject having a received act. Participated reuses definition 14d30c53-51c2-502d-b009-247dac0421e0. Causation and essence/esse keep the same q3 Profile fields. These compounds constrain those interpreted primitives; they do not complete their formal meanings or certify their real applicability. Full meaning, examples, exclusions, property warrant, comparison and open burdens: docs/notes/q44-inferential-dependency.md#essential-source-application."
+}

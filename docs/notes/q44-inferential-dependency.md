@@ -193,3 +193,277 @@ This resolves the scoped dependency audit, not premise truth or formal closure.
 Next research interprets essential possession of esse and tests selection of the
 same source p, with GOD_4 identification separately explicit. Existing mechanical
 evidence was reused; no new historical authentication was claimed.
+## Essential-source application
+
+Expanded assignment after independent review of `dab87151d` found no substantive
+findings. This section is the complete proposed outcome for a new independent
+challenge. Formal home: `TruthCore/Causality/Q44EssentialSource.lean`, sibling
+results `TruthCore/Results/Causality/Q44EssentialSource/`, and
+`specs/q44-essential-source.toml`. Earlier historical gaps above remain; this
+is an explicit analyst application, not a recovered historical proof chain.
+
+### Meaning before the bridge
+
+**Having esse essentially** is read here using the existing `OwnBeing`
+primitive of definition `5dc08b95-ca15-52ab-b8cd-2b558e9a13f7`: the bearer is
+its own subsistent act of being, rather than a subject that has an act of being
+received in a principle. This is stronger in meaning than "happens to exist",
+"exists necessarily", "has no recorded cause", or "two arbitrarily chosen
+profile-map values are equal". It is not being efficiently self-caused:
+"own" identifies what the bearer is, not an exercise producing itself.
+An abstract term or predication of being is not itself a subsistent causal
+bearer. A subsistent created form is not, merely by subsisting, its own esse;
+the existing q7 reading distinguishes its received esse. These exclusions reuse
+the recorded q3/q7/SCG readings, without new source claims.
+
+The intended subsistent-esse case is the theological source described in those
+readings. It is an interpreted candidate, not a newly demonstrated concrete
+example. No independently observed case of an essentially-existing causal
+bearer is supplied by this investigation. The existing heated-iron/fire example
+is an analogy for received possession versus source possession; it supplies no
+universal inference from familiar heat to the production of esse. No such
+abstraction bridge is asserted here.
+
+`OwnBeing` and `Participated` remain interpreted primitive parameters. The new
+predicates are transparent quantified compounds over them and the SAME q3
+`Profile.InAct`, `CausesIn`, `essenceOf`, `esseOf` and `esse`. Their Lean bodies
+define their scopes and logical contents; they do not complete the primitive
+formal meanings. In particular neither OwnBeing nor participation is defined
+as the negation of the other, or as a represented identity/inequality. No
+exhaustive dichotomy between the two is assumed. No new sense of modal essence,
+efficiency, conservation or ontic grounding is mixed in.
+
+The new source-supply premise de05072a says: each participant x has a distinct,
+actual OwnBeing c that causes x's esse. It requires an explicit `CausesIn c x
+esse` edge. This is stronger than finding an arbitrary local cause or merely
+an ancestor in a chain. An encoded edge is not a claim that there are no
+intermediate/secondary causes; `CausesIn` already admits causal responsibility
+without defining immediate adjacency. A secondary cause need not itself be
+OwnBeing. Selection quantifies only over distinct actual OwnBeing causes of participants,
+not over every cause or every hypothetical own-being bearer.
+
+### The tested identity bridge and the root consumer
+
+| Statement | Exact content and role |
+| --- | --- |
+| `de05072a-5db0-4a31-8e24-b18fedf01401` | Each participant has a distinct actual OwnBeing cause of esse. Open analyst source-supply premise. |
+| `6acd44eb-4b3e-480c-a479-6b4ac7a2522e` | Every relevant distinct actual OwnBeing cause has `esseOf c = essenceOf c` in this same profile. Open, restricted semantic dictionary. |
+| `e2bfd1b1-7d5e-4be3-b5d4-f9db988c5745` | The selected p is actual and has that represented identity. Open witness premise; it does not assert `OwnBeing p`. |
+| `a576300f-4b01-45ae-902c-cfe3d0fbf2de` | Existing `DeEnte.AtMostOneEsseIsEssence`: any two actual identity bearers are identical. Retained with its existing support options. |
+| `dcf4bcdd-4feb-4d97-a7e2-f6a08cdf4702` | Every relevant distinct actual OwnBeing cause c is numerically p. Derived selection, not an assumed definition of essential source. |
+
+Result `015caba2-d6c1-46a1-abbc-ba3e836ebab6`, theorem
+`TruthCore.Results.Causality.Q44EssentialSource.sourcesSelected`, derives the
+last row jointly from **6acd44eb, a576300f and e2bfd1b1**. The source c is distinct from its participant and actual;
+the dictionary puts it under the existing uniqueness predicate; the selected
+witness is actual with the same identity property; at-most-one yields c=p.
+The corpus detector classifies this selector as a transcription (an application
+of the at-most-one input). Its conclusion therefore stays open under the
+existing closure rules; no classification override is requested.
+This does not confuse "each has esse as its own essence" with "their essences
+are numerically the same": numerical identity comes from a576300f, with its
+substantive shared-nature burden, not from equality inside each individual.
+
+Result `3beb5720-7210-4772-9bb2-ced7756557eb`, theorem
+`TruthCore.Results.Causality.Q44EssentialSource.othersAreCreatures`, derives the
+EXISTING `612078bf-5a68-5542-8b7b-f862f816ece0` from **11e24b50, de05072a
+and dcf4bcdd**. For each x≠p, coverage makes it a participant; its essential
+source is p; so p causes x's esse. Therefore p is a universal cause of every
+other actual being, and x is CREATURE_1 with p as that universal cause.
+The conclusion instantiates `OthersAreCreaturesReading` at the existing
+`CreatureSenses.IsCreatureOfUniversalCause`, not at CREATURE_2.
+The expanded joint bundle is **11e24b50, de05072a, 6acd44eb, a576300f,
+e2bfd1b1**. Existing direct-premise and Fourth-Way support options remain.
+
+No selected OwnBeing premise was hidden: if at least one participant is
+supplied, de05072a gives an OwnBeing source and selection identifies it with p,
+so OwnBeing p follows. Without that population, selection and the consumer can
+be vacuous, and no existence of another being is inferred. The proof does not
+require every domain member to be independently stipulated actual. Its strong
+coverage premise is exactly the existing 11e24b50, and source supply then gives
+causal edges for each other domain member. The universal-cause component of
+CREATURE_1 itself quantifies only over actual others.
+
+### What the three omissions discriminate
+
+Result `7cdc011d-037c-4a23-b748-f4311ebc5cd3`, theorem `controls`, checks
+`3b601644-d9c2-43a5-8bb1-d16ddfba0a87`. All models use three actual beings
+(primary, source, effect). In the first three the effect participates, the
+source is OwnBeing, and the source causes that distinct effect. Selection
+fails because source≠primary:
+
+1. **Dictionary omitted:** only primary has represented essence/esse identity.
+   At-most-one and the selected identity witness hold. This interpretation
+   deliberately fails to represent the intended own-being identity; it shows
+   why arbitrary profile maps do not interpret the primitive automatically.
+   It is not evidence that real own-being could lack its intended identity.
+2. **At-most-one omitted:** both primary and source have represented identity.
+   Dictionary and selected witness hold. Thus even faithful local identity
+   representation does not by itself identify two bearers. The model supplies
+   no philosophical warrant for multiple real subsistent esse bearers.
+3. **Selected witness omitted:** only source has represented identity. Dictionary
+   and at-most-one hold. A unique relevant bearer need not be a previously
+   designated p that lacks its qualifications.
+4. **Positive full route:** only primary has represented identity and OwnBeing;
+   both other beings participate; primary causes both. All selection inputs,
+   source supply and coverage hold, and each other being is CREATURE_1.
+
+These are exact formal non-implications and joint satisfiability checks. They
+do not constitute objections to the metaphysical premises. No acyclicity,
+transitivity, well-foundedness or modal necessity is assumed or inferred by
+the new selection proof; equality substitution needs none of them.
+
+### Comparison of the strongest existing support bundles
+
+**De ente numerical unity.** a576300f is not an unexplained new "essential
+sources are unique" flag. Existing argument
+`07b1fac4-4769-4377-9d07-91ca8e0e2424`, theorem
+`TruthCore.Results.Aquinas.DeEnte.EsseSource.atMostOneEsseIsEssenceFromPlurification`,
+derives it from all seven premises: multiplication inventory
+`2495a71d-81b6-47b7-8394-b37d3308fcda`, shared nature
+`75b5b027-21f1-400a-8b21-775bb6d47983`, no added difference
+`f13d1cdd-6b9f-4d05-9919-312587ad835a`, no matter
+`38ed105c-6103-4969-8246-a6a071cdbb18`, reception only in own essence
+`6dfe01ab-e3f2-5a4c-b102-701c161f2cf7`, receiver-to-act potency
+`7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2`, and no self-receptive potency
+`14325c83-1c3f-5afb-b63f-52b0c2b2a326`. It uses shared nature to apply the
+inventory, excludes reception with the potency premises, and excludes the
+other two modes with the remaining inputs. Shared nature is not derived from
+each bearer having its own identity. The existing two-source control isolates
+that dependency; it is not independent evidence against shared nature.
+Keeping a576300f as a direct prima facie commitment is also available.
+
+**Q3/local participation.** The exact 4876dc46 + d3c6a6f7 chain above supplies
+an actual external cause from cbb068e8 and 33ad148b, preserving the alternative
+supports of the latter. It supplies neither OwnBeing at that cause nor a
+common numerical source. Existing De ente stage (c),
+`distinctEsseHasEsseIsEssenceSource`, instead uses the other-actual-cause
+principle, no infinite actual esse-cause regress, and excluded middle to
+reach an identity-bearing ancestor. Its `commonEsseIsEssenceSource` theorem
+adds at-most-one, two actual beings, the other-cause principle and no-regress
+to obtain one common uncaused identity source and finite causal chains to
+all other actual beings. This is a genuine alternative support bundle,
+not a failed q44 proof. It does not yet replace de05072a: ancestry does not
+by itself supply the requested `CausesIn` edge or primitive OwnBeing. A
+transitivity/application bridge and an own-being interpretation would be
+needed for that use. We import neither silently, nor require a regress
+argument merely to investigate the q44 principle directly.
+
+**Fourth Way.** The exact 87dd8489 + a9cd32b6 + efb88bdf chain above already
+produces the CREATURE bridge from a universal cause without the new own-being
+dictionary. The universal-cause premise is secured there through all five
+Fourth-Way inputs, including d9fad785. That conditional option is retained
+with its warrant burden. It can explain why things caused by secondary causes
+are also caused by a universal cause. It cannot be recounted as an independent
+q44 argument establishing the universal causal principle that it already uses.
+Conversely the new q44 bundle needs essential-source supply and numerical
+unity but does not use grades or the genus principle. Neither bundle is
+preferred merely because it has fewer open premises or a shorter route.
+
+**IsGod uniqueness.** Q11's `godIsOneFromNature` still concerns `IsGod`.
+No new result uses it, identifies GOD_4 with OwnBeing, or concludes 86d02b69.
+The numerical unity route selected here is a576300f over actual identity
+bearers, not an IsGod-to-essential-source substitution. Any later named
+universal-cause conclusion must separately bind its GOD_4 witnesses to p.
+
+### Warrant assessment, self-sweep and next tests
+
+The own-being meaning gives conceptual motivation for the restricted identity
+dictionary: if a source is its own subsistent act, the intended essence/esse
+maps should represent that identity. Its open task is to justify that these
+particular representations preserve real identity; it is not a demand for
+an endlessly prior argument about the mere word "own". The finite mismatch
+control cannot count against that motivation. A576300f has both its prima
+facie reading and the seven-premise conditional support above. The unclosed
+shared-nature application remains visible; no new substantive objection to
+it is established here.
+
+The strongest new substantive causal input is de05072a. The recorded q44
+participation rationale motivates deriving received actuality from what has
+it essentially. The q3 local conditional establishes only external causation
+under its premises, so it cannot independently warrant that stronger source
+character. Deriving an essentially-esse source by a no-regress route is one
+available support option, whose property and abstraction premises remain
+explicit. The present result therefore earns a new conditional common-source
+application, not the truth of universal source supply, a historical dependency
+certification, or defeat of the alternative frameworks.
+
+Claim/type self-sweep: five new statements bind exactly the five new compound
+predicates; three result types bind the exact listed bundles. Source supply
+contains actual sourcehood, numerical nonidentity, primitive own-being and a
+causal edge. The dictionary contains neither source existence nor uniqueness.
+The selected witness contains neither own-being nor universal causation.
+The selection conclusion is restricted to distinct actual own-being causes of
+participants. The consumer is CREATURE_1 and retains participation coverage.
+No premise, source assertion, modal conclusion or ontic requirement is hidden
+in a definition. Existing frozen Challenges, sense aliases, status caches,
+allowlists and shared imports remain untouched. No new source/claim/passage
+records or source retrieval. This section and the existing attempt preserve
+the full proposed outcome before challenge.
+
+The scoped numerical-selection question is resolved conditionally. Next
+materially different tests concern the substantive source-supply input:
+(a) connect the existing common-ancestor result to the causal-responsibility
+edge at esse under a defended composition principle, retaining its no-regress
+burden, or (b) investigate the q44 participation-to-essential-source rationale
+directly without importing Fourth-Way causation. Both require semantic work
+on that particular causal input; repeating q3 external-cause search or IsGod
+uniqueness cannot supply it. GOD_4 naming remains a separate downstream task.
+
+### Validation and computed premise effects for the extension
+
+The coordinator supplied independent copies of pinned packages and the warm
+build into this existing checkout; toolchain/manifest/lakefile matched. New
+module builds then ran through `worker_env.py --` under
+`/tmp/moenarch/truth-core-heavy.lock`. This supersedes the earlier no-.lake
+readiness report for the extension only. No checkout, service, cold build or
+shared writable build links were created.
+
+Focused Solution/Challenge builds pass. Comparator plus NanoDa accepted each of
+015caba2, 3beb5720 and 7cdc011d with `permitted_axioms: []`. The controls use
+constructive enumeration of three constructors, avoiding an incidental
+propositional-extensionality dependency in the first development proof.
+The final narrowed dictionary and selector cover distinct sources only, exactly
+the source-supply instances used by the consumer. All three affected results
+were verified on these final inputs. Scoped binding on the final module
+reports **3 bound, 0 pinned, 0 mismatch**; its nonzero exit is the baseline
+IsMaximalIn/IsMaximumIn sense alias, which the coordinator already retains and
+will reconcile during integration. No alias allowlist was edited. Shared root
+imports/status-cache refresh and delivered-head CI remain coordinator-owned.
+
+`argument_batch.py records --check specs/q44-essential-source.toml` regenerates
+unchanged. Offline `truth check` passes with existing warnings.
+`attribution-check --base dab87151d054e6b1caff719dc0330c81e5c39033` reports no
+new or changed stating claims. `git diff --check` passes. No historical witness
+was fetched. Shared convention sourceRevision remains
+`15f348b072188255da837578eaafc8a98f12fdf0`.
+
+The actual computed `frontier-diff --base dab87151d054e6b1caff719dc0330c81e5c39033`
+output, rather than a hand-reconstructed premise comparison:
+
+```text
+premise delta for Catholicism is true: the Catholic Church is a teaching authority founded by GOD_4, and every… [53964cbe]: dab87151d054e6b1caff719dc0330c81e5c39033 -> working tree
+open premises reaching the root: 490 (349 bare, 90 supported, 51 stated) -> 494 (353 bare, 90 supported, 51 stated)
+expanded-route diagnostic (lowest cost): Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16) -> Catholicism is true: the Catholic Church is a…, from Fork node: the intended reading of… and 7 more [8df2faad] (cost 16)
+distinct verified support alternatives: 489 -> 490
+verified support alternatives added: 1
+  Everything other than the primary is CREATURE_1 [612078bf] <- Everything other than p has its being by participation [11e24b50], All relevant actual own-being causes are the selected p [dcf4bcdd], Each participant has a distinct actual own-being cause of esse [de05072a]
+bare premises added: 4 (listed for visibility; not a regression, owner decision 2026-11-07)
+  Relevant own-being sources respect the essence-esse identity dictionary [6acd44eb]
+  All relevant actual own-being causes are the selected p [dcf4bcdd]
+  Each participant has a distinct actual own-being cause of esse [de05072a]
+  Selected p is actual with its represented esse identical to its essence [e2bfd1b1]
+added (bare): 4
+  Relevant own-being sources respect the essence-esse identity dictionary [6acd44eb]
+  All relevant actual own-being causes are the selected p [dcf4bcdd]
+  Each participant has a distinct actual own-being cause of esse [de05072a]
+  Selected p is actual with its represented esse identical to its essence [e2bfd1b1]
+```
+
+The four listed items include the detector-classified selector conclusion;
+its checked instantiation is not counted as a non-transcription discharge.
+The one new support alternative is the substantive CREATURE_1 consumer.
+Neither the additional open inputs nor the unchanged lowest-cost diagnostic
+measures the philosophical value of that alternative. No source-supply,
+identity-dictionary, unity or GOD_4 premise is declared established. Independent
+semantic challenge of this expanded proposed outcome is still required.
