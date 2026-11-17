@@ -1956,3 +1956,13 @@ Spec regeneration is unchanged; offline `truth check` and `git diff --check`
 pass (existing/backfill lexical and status warnings remain). The generated
 certificate dossier was inspected after recording the attempt. These results
 are focused evidence only and do not change the pending gates above.
+
+### Cogito integration checks (2026-11-17)
+
+The coordinator's prepared checkout verified both new results with Comparator
+and NanoDa. Scoped binding passes with two bound, zero pins and zero mismatches;
+the baseline Maximal/Maximum alias exceptions were retained separately. The
+integrated offline corpus check, bundle audits and spec regeneration pass.
+Result references in the attempt summary were moved to its supported evidence
+field; the exact argument/result mapping remains in this note. No theorem or
+philosophical meaning changed. Independent semantic challenge is still pending.
