@@ -1618,3 +1618,12 @@ consumer already links its relevant exercise meaning. No checker exemption or
 allowlist growth masks the remaining uses. The capacity adapter remains the next
 implementation step, with explicit event/bearer/respect correspondence and
 activation assumptions.
+
+Coordinator integration verification: the incremental `lake build` passed on the
+combined record changes with unchanged Lean sources. A subsequent generated
+`definitions refresh --write` adds only the new transmission projection's status;
+its primitive classification is now computed. The selected boundary result
+`a268b937-edc1-5f68-b996-9f3489809979` passes `bind-check` (one bound, no mismatch).
+Final CI remains required. Prepared artifacts were copied into both research
+worktrees for the continuing interface and vocabulary work; they do not verify
+subsequent edits.
