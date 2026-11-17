@@ -1428,3 +1428,178 @@ necessary target truth, persistence of support and one common WF priority rank.
 It composes the existing necessary-underived union route without defending its
 metaphysical premises; rotating/parity/switching controls preserve the remaining
 escapes and the separate no-contingent-supporter burden.
+
+## Capacity and exercise vocabulary audit (#1659, #1652; 2026-11-17)
+
+This analyst audit uses main `91bcc8dbaef83166c09fbd30e09586764438e191`,
+not pending #1700. It repairs the dictionary for the existing #319 boundary
+and #741 certificate; it neither adds a theorem nor discharges a root premise.
+The two certificate conclusions are not themselves recorded root-route premises.
+Their relevance is the power-to-being boundary and the actual capacity inputs
+of the Eleatic/Cogito routes below. Historical readings in earlier sections
+are not newly attributed or rechecked here.
+
+### Five sense dispositions
+
+The five UUIDs and stable labels in `power-capacity-exercise.json` are preserved.
+The suffixes below all belong to `CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE`.
+
+| Sense | Exact representation and disposition |
+| --- | --- |
+| `_1`, capacity | `8ce4f4d6-a221-5db8-aef5-2f0babdfb416`: expanded primitive prose, still no common named Lean declaration. #741 uses the parameter `cap : S → E → Prop`; the direct capacity consumers use `hasCausalPower : W → B → Prop`. Neither parameter defines capacity. |
+| `_2`, actual transmission | `5aef0b49-016a-5716-9bd9-423d957b28ab`: now points to the existing primitive `PowerExistenceBoundary.Profile.transmitsPower`, with a `formal_gap`. Endpoint existence and causal status follow from `Coherent`, not the field alone. |
+| `_3`, unborrowed power in a respect | Preserve `UnborrowedPowerAt`: existence, intrinsic-power marker and no incoming transmission in this channel. An outgoing edge remains a separate requirement. |
+| `_4`, finite grounding | Preserve `FinitelyGroundedPower`: intrinsic seed or transmission from an already finitely grounded predecessor. This inductive standard is not the definition of every dependence relation. |
+| `_5`, pure act | Preserve `SummaTheologiae.PureAct`: no potency in the supplied respects. No new source assertion, positive exercise condition, exhaustive respect coverage or link to capacity is added. |
+
+The last three existing definitions and declarations are unchanged. Their
+presence in Lean does not settle the interpretation of their predicate inputs.
+Sense `_2` is now traced to a field, not upgraded to a reductive causal account.
+Sense `_1` remains unfinished as a named sense; attaching a nominal wrapper
+or an unrelated declaration would conceal that fact.
+
+### Why the available capacity declarations are not interchangeable
+
+`BorrowedExercise.Borrowed` quantifies over allowed scenarios where a supplied
+capacity holds; `Retained` witnesses such a scenario without a lender.
+`capOccurs` and `capAll` are deliberately different profiles on the same
+exercise, not competing definitions silently interchangeable in every theorem.
+`PowerRequired` only says actual occurrence implies actual capacity; it does
+not define capacity, assert its exercise, or require it at every allowed
+scenario. In particular, `Instrument` and `Secondary` do not themselves include
+`cap m.actual e`; the fork supplies that through `PowerRequired`.
+
+`CausalPowerConcreteness.IntendedProfile.hasCausalPower` is a genuine named
+primitive, but its enclosing structure additionally requires power-implies-
+existence, causal endpoints, exercise-implies-power and power-implies-concrete.
+The generic Eleatic/Cogito formulas take a raw predicate without those fields.
+Naming this projection as the common sense would falsely suggest that those
+consumers reach it and inherit its contract. `NamingVeracityBatch1.Power.CanDo`
+is task-indexed, while `BearerExercise.responseOntic` interprets one activated
+response table; neither is an unrestricted replacement for the supplied profiles.
+These are reuse findings, not reasons to duplicate those frameworks.
+
+For an event/world correspondence one must supply maps from scenarios to worlds
+and events to bearers, fix the effect/respect, and state which event-indexed
+capacity corresponds to which bearer capacity. The existing `Exercise.bearer`
+need not be injective: different exercises of one bearer cannot silently be
+collapsed into one unspecified power. A process interpretation additionally
+needs a time interpretation and explicit activation conditions. A fixed-context
+primitive does not need a universal temporal theory merely to support a
+conditional investigation. This audit therefore specifies the missing maps
+without asserting a universal capacity-to-exercise law.
+
+### Consumer coverage and claim/type self-sweep
+
+The following is the complete direct `definition_ids` coverage of the two
+edited definitions at the audit baseline. Filenames below are under
+`corpus/statements/` or `corpus/arguments/`; each is an existing record, not a
+new registry. All these records and their owning specs remain unchanged.
+
+Capacity statements: `power-existence-simplicity-scope-boundary.json`,
+`intellectual-exerciser-has-power.json`, `every-existent-has-causal-power.json`,
+and `causal-power-requires-concreteness-at.json`.
+Capacity arguments: `POWER-EXISTENCE-SIMPLICITY-SCOPE-BOUNDARY.json`,
+`cogito-inhabited-concrete-from-causal-power.json`,
+`causal-concreteness-commitment-strengthens-power.json`,
+`cogito-inhabited-concrete-from-floor-power.json`,
+`existing-in-act-at-from-eleatic-power.json`,
+`intellectual-exercise-requires-act-from-active-power.json`, and
+`existent-in-act-from-eleatic-power.json`.
+
+Actual-transmission statements: `power-existence-simplicity-scope-boundary.json`,
+`constitutive-nature-omission-controls.json`, `part-free-plurality-joint-control.json`,
+`necessary-simple-plurality-joint-control.json`,
+`root-intellect-will-pure-act-plurality.json`, and
+`plural-root-confluence-control.json`.
+The six corresponding argument filenames are identical except that the boundary
+argument uses `POWER-EXISTENCE-SIMPLICITY-SCOPE-BOUNDARY.json`.
+
+| Consumer | Exact type/prose boundary checked |
+| --- | --- |
+| `powerExistenceBoundary : Boundary` | Two existential model witnesses, each with `Coherent`, an actual source/effect edge and nonintrinsic effect. First: contingent source externally supported in esse. Second: necessary source without external support but with a proper component. No universal metaphysical counterexample is inferred. Capacity is linked as a contrast, not encoded in this model. |
+| `EveryExistentHasCausalPowerAt`, `IntellectualExerciserHasPowerAt`, `PowerRequiresConcreteAt` | Respectively existence → capacity, intellectual attribution → capacity, capacity → concreteness, at a selected world. None defines the supplied capacity predicate or entails outgoing exercise. |
+| `NecessarySimplePlurality.JointControl`, `PartFreePlurality.JointControl` | Their power views use the existing boundary Profile and include its Coherent condition in OntologyControl. The four-being and five-being models remain distinct. |
+| `ConstitutiveNatureUniqueness.Control.Certificate`, `RootIntellectWillPureActPlurality.Control`, `PluralRootConfluence.Control` | Retain PartFreePlurality's JointControl and hence its supplied power view; no capacity activation bridge is added by the dictionary repair. |
+| `BorrowedExercise.certificate : Certificate` | Uses the existing borrowed-power, joint-group and temporal vocabulary, and links this disambiguation rather than either edited DEF directly. Event occurrence (`occurs`) and actual group exercise (`exercised`) are separate fields; neither is the #319 binary transmission relation. |
+
+In the last row, `Lender` requires admission, nonempty contributors and their
+occurrence, plus group exercise at the actual scenario. It does **not** itself
+require every enabler or the effect to occur: `Exercise.coherent` provides those
+conditions for exercised records. It is therefore inaccurate to replace it by
+“a sufficient group” or “an event with a predecessor.” `Retained` gives a
+scenario without a lender and says nothing about acquisition of the power;
+`SelfExercising` excludes a lender in this representation, not all causes or
+existential supporters. `Essential` quantifies capacity over allowed scenarios,
+not the bearer's de re necessary existence. No actual consumer examined here
+licenses any of these substitutions.
+
+The new technical lemma `exercise` includes `exercised`, `exercises` and
+`exercising`. It traces this family's transmission, occurrence/group and staged
+time uses to existing definitions. It is not an ordinary-word exemption and
+does not claim exhaustive coverage of intellectual operation or will. Unlinked
+uses in other families remain review work. `power` and `capacity` now also
+point to the already existing borrowed-power profile; no duplicate profile is
+introduced.
+
+### Assessment, limits and next discriminating step
+
+The precise mismatch repaired is the claim that the transmission field alone
+supplies existing endpoints. Lean's separate `Coherent` condition positively
+justifies that correction. No substantive objection to keeping capacity,
+exercise, intrinsic source status and uncaused esse distinct was identified.
+The strongest standing alternative in the existing #741 investigation is the
+source-free globally organized account: it accepts local lending and occurrence
+but rejects finite `Supply` as a necessary standard of explanation. The existing
+coherent, sufficient regress witnesses show that local conditions do not entail
+that standard. They do not establish real instantiation or count as evidence
+against a metaphysical source premise without independent application warrant.
+This vocabulary audit neither ranks that rival lower nor decides it.
+
+The next discriminating step for `_1` is a narrow, explicitly primitive common
+capacity interface with a checked adapter to the actual `cap` and
+`hasCausalPower` consumers, preserving the existing `capOccurs`/`capAll`
+contrast and `PowerOmission` control. Test whether the proposed event/bearer
+mapping loses distinct powers of one bearer before adopting it. An activation
+claim must be its own assumption, not a definitional identification. Changes to
+those shared consumer modules/specs need coordinator assignment beyond the
+current record ownership.
+
+Readiness also limits verification here: this isolated checkout has neither
+`.lake/packages` nor `.lake/build` (indeed no `.lake` directory), and no preview
+was supplied. The authorized prepared CLI from the coordinator checkout is used
+with `--root` pointing here; both source checkouts were at the baseline above.
+No cold build, new checkout, source fetch, generated status edit or unverified
+Lean module was introduced. A prepared dependency/build seed is needed for any
+new Lean adapter and for the coordinator's status refresh/binding checks. The
+new projection link awaits that generated formal-status refresh; its primitive
+classification is justified by the existing structure declaration, not claimed
+as freshly computed evidence. Independent semantic challenge and final CI remain
+coordinator-owned before publication.
+
+Focused validation of this record-only proposal: `truth check` passed in the
+repository's warn mode, `scripts/bundle_audit.py` passed, the sense, definition
+and lexicon ratchets passed, and `git diff --check` passed. The lexicon display
+confirms the intended trace and exposes `_1` as `no_lean_declaration` and the
+new `_2` link as `not_computed`; other-family exercise uses with no relevant
+link remain visible. New/changed prose still produces lexical backfill warnings;
+no ordinary gloss or allowlist change suppresses them. The sense ratchet identifies
+`1dc8b928-44d3-442a-a886-d6148a9e71a4` as removable from the shared allowlist;
+that cleanup is left to its coordinator owner.
+
+Computed `frontier-diff --base 91bcc8dbaef83166c09fbd30e09586764438e191`
+reported **no change**, with zero verified support alternatives added. This is
+premise-delta evidence, not a judgment about the philosophical premises.
+No statements, claims, arguments, results, specs or Lean sources changed;
+the table above is the claim/type self-sweep for the edited meanings. Formal
+status refresh, affected binding, semantic challenge and required final CI have
+not been run in this unprepared checkout.
+
+Policy sourceRevision: `15f348b072188255da837578eaafc8a98f12fdf0`.
+CLI source checkout: `/home/moenarch/moritzbrantner/truth-core`, observed HEAD
+`91bcc8dbaef83166c09fbd30e09586764438e191`; binary SHA-256
+`7b3c1c1c2196e313eebbe6ec96275bd6c358b6542f6ddd01abee14d17a4910be`.
+The prepared binary does not report an embedded source revision; the observed
+checkout revision is not an independent build-provenance attestation. All CLI
+checks selected this isolated checkout with `--root` through
+`python3 scripts/worker_env.py --`.

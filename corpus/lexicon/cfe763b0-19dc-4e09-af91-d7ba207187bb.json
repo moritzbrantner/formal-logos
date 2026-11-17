@@ -10,6 +10,7 @@
     "6dea072c-97c4-5ee9-9958-a3da6a2a049c",
     "7059cad2-e5b6-5003-8871-a85c8f1924f5",
     "8ce4f4d6-a221-5db8-aef5-2f0babdfb416",
+    "df1369a5-8710-57be-97ca-08ccb49f3314",
     "febac82d-1ca3-5773-89ec-0401f1bac7a0"
   ],
   "disambiguation_ids": [
@@ -17,5 +18,5 @@
     "4bd8469b-0101-5628-b94d-daa4264972d5",
     "508617ab-cf24-5f3b-a387-64b3991359ec"
   ],
-  "note": "Causal power as capacity, as modeled exercise, as original or as inductively grounded power (CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE); ability to be (POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED); governing power in a commission (GOVERNING_POWER_IN_A_COMMISSION)."
+  "note": "Causal power as capacity, as modeled exercise, as original or as inductively grounded power (CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE); ability to be (POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED); governing power in a commission (GOVERNING_POWER_IN_A_COMMISSION). The supplied scenario/event power profile and its borrowed/retained distinction reuse DEF-BORROWED-POWER-PROFILE; no identification with intrinsic source status is made."
 }

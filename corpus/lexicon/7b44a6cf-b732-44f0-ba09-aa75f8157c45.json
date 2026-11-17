@@ -10,12 +10,13 @@
     "00ab0133-e353-5a2e-a231-b24a5c85107a",
     "31eec35f-9321-575a-b961-126cb1fc5b89",
     "8ce4f4d6-a221-5db8-aef5-2f0babdfb416",
-    "c68008d0-5517-5907-9333-ce8a6f1e5f23"
+    "c68008d0-5517-5907-9333-ce8a6f1e5f23",
+    "df1369a5-8710-57be-97ca-08ccb49f3314"
   ],
   "disambiguation_ids": [
     "1da63c28-4572-5787-82a0-51425c0f4b6a",
     "508617ab-cf24-5f3b-a387-64b3991359ec",
     "63162530-ff9f-539a-af19-3458e48e6a9e"
   ],
-  "note": "Ability to be and its Megarian restriction (POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED), causal power as capacity, and intervention-response capacity."
+  "note": "Ability to be and its Megarian restriction (POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED), causal power as capacity, and intervention-response capacity. The supplied scenario/event power profile and its borrowed/retained distinction reuse DEF-BORROWED-POWER-PROFILE; no identification with intrinsic source status is made."
 }
