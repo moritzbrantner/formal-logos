@@ -1,0 +1,11 @@
+{
+  "id": "26a972d6-034a-4311-9e84-768d04225cd9",
+  "label": "Spaced local pieces give supplied-duration local pieces",
+  "argument_id": "0cf63c2f-7c5b-4238-9815-2324b5758111",
+  "challenge_module": "TruthCore.Results.Causality.FixedDurationGrimReaper.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FixedDurationGrimReaper.Solution",
+  "theorem": "TruthCore.Results.Causality.FixedDurationGrimReaper.durationPiecesOfSpaced",
+  "comparator_config": "results/26a972d6-034a-4311-9e84-768d04225cd9/comparator.json",
+  "status": "solution-present",
+  "description": "Implication only, no strictness claim. The stronger original local route remains available."
+}

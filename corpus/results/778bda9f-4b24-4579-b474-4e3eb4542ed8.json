@@ -1,0 +1,11 @@
+{
+  "id": "778bda9f-4b24-4579-b474-4e3eb4542ed8",
+  "label": "Metric finiteness from supplied-duration local pieces and patchwork",
+  "argument_id": "948ab148-a7bb-4572-9cf1-55641bc09f8b",
+  "challenge_module": "TruthCore.Results.Causality.FixedDurationGrimReaper.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FixedDurationGrimReaper.Solution",
+  "theorem": "TruthCore.Results.Causality.FixedDurationGrimReaper.metricallyFiniteOfDurationPieces",
+  "comparator_config": "results/778bda9f-4b24-4579-b474-4e3eb4542ed8/comparator.json",
+  "status": "solution-present",
+  "description": "Uniform fixed-d application route. Retains the original history, accessibility, register, clock and conclusion. Fixed duration aligns the application but neither establishes countable realization nor actual admissibility. The stronger original route stays available; no strictness or stronger philosophical warrant follows merely from weakening."
+}

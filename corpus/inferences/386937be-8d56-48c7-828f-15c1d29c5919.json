@@ -1,0 +1,12 @@
+{
+  "id": "386937be-8d56-48c7-828f-15c1d29c5919",
+  "label": "Supplied-duration local coverage gives one locally feasible descent (inference)",
+  "input_statement_ids": [
+    "5c146257-8141-4393-940b-e8c19e26d390"
+  ],
+  "output_statement_id": "fab16501-c05a-455d-b880-1a8a9a0dc90a",
+  "rule": "Reuse unbounded clock descent selection and readingsUnbounded to choose successively earlier readings below the preceding reading minus d, then apply local coverage to that selected descent.",
+  "meaning": "Linear time and one positive d, same clock and starting moment. The selected-descent local premise is weaker in implication order; no strictness claim. Companion checks certify the unbounded-clock selection and a guarded port recipe: its output-range invariant plus faithful connected boundary and issuance equalities gives the actual four-interface PieceAt. These are mathematical conditions, not concrete host or countable realization evidence.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

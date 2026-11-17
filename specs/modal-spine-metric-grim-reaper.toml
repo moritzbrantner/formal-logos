@@ -30,6 +30,7 @@ definitions = ["Local Reaper pieces co-possible along every spaced populated des
 [[argument]]
 id = "Metrically finite populated pasts from spaced Grim Reaper pieces and patchwork"
 theorem = "populatedPastsMetricallyFiniteOfPatchwork"
+strong_version_needed = { "Along every spaced populated descent, adjacent Grim Reaper pieces are co-possible" = "Not needed for the metric endpoint: fixed-duration coverage, or its selected-descent local sibling with fixed-duration patchwork, suffices. Retained as the original broader support option.", "Co-possible Grim Reaper pieces along a spaced populated descent glue into one world" = "Not needed for the metric endpoint: patchwork restricted to one supplied positive duration suffices. Retained as the original broader support option." }
 premises = ["Along every spaced populated descent, adjacent Grim Reaper pieces are co-possible", "Co-possible Grim Reaper pieces along a spaced populated descent glue into one world"]
 conclusion = "In every possible history, each moment with a contingent thing present has a metrically finite past"
 axioms = ["propext", "Classical.choice", "Quot.sound"]

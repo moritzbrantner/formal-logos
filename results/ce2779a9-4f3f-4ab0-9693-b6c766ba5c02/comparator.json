@@ -1,0 +1,16 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.FixedDurationGrimReaper.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FixedDurationGrimReaper.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.FixedDurationGrimReaper.durationDescentOfPieces",
+    "TruthCore.Results.Causality.FixedDurationGrimReaper.durationDescentOfUnbounded",
+    "TruthCore.Results.Causality.FixedDurationGrimReaper.guardedOutputAdmissible",
+    "TruthCore.Results.Causality.FixedDurationGrimReaper.pieceOfGuardedPort"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

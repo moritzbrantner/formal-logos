@@ -26,5 +26,9 @@
     "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
     "6e811e85-b983-5988-b20a-f4f3ee83c50e",
     "ddcc20b7-6dfc-46aa-aca5-690adb78709a"
-  ]
+  ],
+  "strong_version_needed": {
+    "37d4e072-212b-4b99-a4ff-bf10d94d5a52": "Not needed for the metric endpoint: fixed-duration coverage, or its selected-descent local sibling with fixed-duration patchwork, suffices. Retained as the original broader support option.",
+    "bb7b476c-4774-4860-a31f-f068aa362f18": "Not needed for the metric endpoint: patchwork restricted to one supplied positive duration suffices. Retained as the original broader support option."
+  }
 }

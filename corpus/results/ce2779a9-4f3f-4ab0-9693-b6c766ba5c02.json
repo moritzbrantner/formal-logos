@@ -1,0 +1,11 @@
+{
+  "id": "ce2779a9-4f3f-4ab0-9693-b6c766ba5c02",
+  "label": "Supplied-duration local coverage gives one locally feasible descent",
+  "argument_id": "85f9f543-71cb-4875-8e27-1e11e18c3097",
+  "challenge_module": "TruthCore.Results.Causality.FixedDurationGrimReaper.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FixedDurationGrimReaper.Solution",
+  "theorem": "TruthCore.Results.Causality.FixedDurationGrimReaper.durationDescentOfPieces",
+  "comparator_config": "results/ce2779a9-4f3f-4ab0-9693-b6c766ba5c02/comparator.json",
+  "status": "solution-present",
+  "description": "Linear time and one positive d, same clock and starting moment. The selected-descent local premise is weaker in implication order; no strictness claim. Companion checks certify the unbounded-clock selection and a guarded port recipe: its output-range invariant plus faithful connected boundary and issuance equalities gives the actual four-interface PieceAt. These are mathematical conditions, not concrete host or countable realization evidence."
+}

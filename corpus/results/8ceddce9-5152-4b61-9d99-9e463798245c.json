@@ -1,0 +1,11 @@
+{
+  "id": "8ceddce9-5152-4b61-9d99-9e463798245c",
+  "label": "Metric finiteness from one locally feasible supplied-duration descent and patchwork",
+  "argument_id": "d7254003-b95e-4ebd-a4e8-51c23d87b2d0",
+  "challenge_module": "TruthCore.Results.Causality.FixedDurationGrimReaper.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FixedDurationGrimReaper.Solution",
+  "theorem": "TruthCore.Results.Causality.FixedDurationGrimReaper.metricallyFiniteOfDurationDescent",
+  "comparator_config": "results/8ceddce9-5152-4b61-9d99-9e463798245c/comparator.json",
+  "status": "solution-present",
+  "description": "Non-transcription conditional support option reaching the existing metric-finiteness statement with unchanged meaning and companion premises. No arbitrary-speed family is needed. It consumes only one locally feasible qualifying descent per infinite populated past, alongside patchwork for qualifying descents. This is a sufficient weakening within the split coverage formulation, not a claim of an absolute weakest metaphysical premise. No concrete realization or premise warrant is established."
+}

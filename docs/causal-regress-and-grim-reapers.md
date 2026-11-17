@@ -443,8 +443,9 @@ the #367 audit (a possible isolated Placer, nonoverlapping regions "large enough
 for the mechanism" in the alleged infinite past, infinitary spatiotemporal
 patchwork, intrinsic powers; Koons pp. 9–13 as recorded there), each station is
 a *duplicate* of one possible patch, and a duplicate keeps its intrinsic
-duration, which is proper time. Room for infinitely many duplicates of one patch
-lasting at most `δ` is exactly a descent with slots of at least `δ`. That is
+duration, which is proper time. Slots of at least `δ` provide the temporal duration for patches lasting at
+most `δ`; suitable spatial regions, causal reach and protected interfaces are
+additional room requirements (see the concrete application audit below). That is
 also the reason for CLOCK_1 rather than an arbitrary coordinate.
 
 **Scope of the clock.** A strictly monotone real clock exists only for time
@@ -481,7 +482,8 @@ worlds carry different metrics needs a world-indexed clock, which is not built.
 | Unsatisfiable-pair diagnosis | Unchanged: no mechanism recorded, no evidential weight |
 | One clock, linear time | Scope of the encoding, not an objection: no mechanism is identified by which a world-relative metric or branching time would make the premises true and the conclusion false |
 
-**Plain verdict.** Read with CLOCK_1, the typed premises' scope excludes
+**2026-11-12 verdict (application warrant refined by the #1489 audit below).**
+Read with CLOCK_1, the typed premises' scope excludes
 metrically finite pasts, so the FLRW and Benardete objections have no target in
 them. The warrant is unchanged. Duration-blind recombination, the only warrant
 on file, supports the refuted coinitial and unrestricted instances just as much
@@ -536,6 +538,480 @@ That already gives the possibility of a necessary concrete being
 is on file. See
 [the modal spine](notes/modal-spine.md) and attempt
 [`9d141c6c`](../corpus/attempts/9d141c6c-7979-4d8b-a1b4-7b35ebc9fb21.json).
+
+
+### Concrete metric station assignment and application audit (#1489, 2026-11-17)
+
+This is the complete **proposed outcome for independent semantic review**, at
+baseline `766c3c08fa0bbf1486b9ff277f5870ecbaa94c95`. It concerns temporal station
+recombination only; the accepted CCR findings below are unchanged. Targets are
+local pieces `37d4e072-212b-4b99-a4ff-bf10d94d5a52` and patchwork
+`bb7b476c-4774-4860-a31f-f068aa362f18`, consumed together by argument
+`a8c2ef8c` to metric finiteness `4365c3c5`. No new theorem, definition, source
+claim or closure is proposed.
+
+**Read evidence.** The cached primary ranges
+`KOONS-GRIM-REAPER-KALAM-6-16` and `KOONS-GRIM-REAPER-KALAM-18-22` were read;
+their text, stripping the cache's final newline, matches the existing passage
+text hashes. No source was refetched. Koons's PGR (p.9) quantifies over each
+positive index with one finite duration d; binary patchwork (pp.10–11) requires
+metric/topological embeddings into nonoverlapping regions of a possible host;
+PInfSP (p.11) explicitly generalizes this to countably many regions. HIP
+(pp.12–13) requires regions large enough for Placers, in the appropriate backward
+time cones. Section 5.1 (pp.18–19) defends possession of powers as explanatorily
+prior to manifestations; §5.2 (pp.19–20) supplies the active/passive signal
+version and adjoining half-open regions; §5.3 (pp.20–21) acknowledges causal
+provisos. These are source assertions and philosophical reasons, not independent
+certificates of metaphysical possibility. The following port-device assignment
+is an analyst reconstruction, not an attribution of a new protocol to Koons.
+
+**One uniform assignment.** Fix one accessible history v, a descending c and a
+CLOCK_1 proper-time clock k shared by the frame. Fix d > 0 and require
+`k(c n) - k(c(n+1)) ≥ d` for every n. Assign g(n), for arbitrary n, the same
+finite-duration port mechanism: during the final d units of slot
+`(c(n+1), c n]`, it reads the admitted upstream register, issues iff that input
+is absent, writes its own location if it issues, and otherwise relays the input
+unchanged. The remainder of a longer slot is a protected, lossless holding
+channel. This is ONE assignment of capacities for all n, not a choice of a new
+kind of device after seeing a local trace. Its operation time d is fixed;
+variable waiting channels are additional infrastructure, not exact duplicates
+of the finite-duration device. Both channel preservation and the absence of
+extra relevant inputs are explicit application assumptions.
+
+Here `g(n)` emits `c n` by the uniform instruction “emit this output location's
+name”, rather than by changing a hard-coded numeric inscription in an alleged
+exact duplicate. A local location reference/clock calibration and its faithful
+projection to the mathematical moment `c n` remain **OPEN**. If a device instead
+has a categorical hard-coded numeral n, differently inscribed devices are not
+exact duplicates: one must separately warrant that indexed family (as PGR does),
+or defend the location-relative implementation. Time translation in the abstract
+order supplies neither that reference nor a physical detector of absence.
+
+Temporal room alone is insufficient. This construction assumes a host world
+with the spatial width, topology, causal reach, environmental protection and
+proper-time embeddings for each mechanism and holding channel. Strictly
+monotone real readings do not encode spacetime regions, intermediate instants
+or transmission speeds: even integer time has such readings. On a spacetime
+interpretation the indicated half-open regions can be adjoining and disjoint;
+the type `TimeClock` alone cannot supply them. No new objection to the abstract
+theorem follows from these additional application obligations.
+
+**Same dictionary throughout.** Keep exactly the supplied W, B, T, h, Concrete,
+accessibility, k and register frame R. A concrete witness world u must satisfy
+`access v u`, contain the specified devices/channel events (with their bearers
+existing and present under h), and project their actual outputs at `c n` to
+`R.out u (c n)` and actual issuance to `R.issues u (c n)`. Do not replace h or
+R after obtaining u, add worlds by definition, assume accessibility is universal,
+or infer device existence from `PieceAt`. Accessibility from the original w is
+not enough: the inner witness must be accessible from v. All these requirements
+are stronger than an unindexed assertion that some device is possible.
+
+| Actual `PieceAt` interface | What the uniform mechanism supplies, conditionally | What duplication alone does not supply |
+|---|---|---|
+| Absent upstream output implies issuance | The detector's response in its normal operating environment | Faithful absence detection, normal conditions, and receipt of exactly `R.out u (c(n+1))` after the holding interval |
+| Issuance implies own-code output | The emitter's response using its local location reference | The identification of that reference with `c n`, and successful writing/persistence at the recorded boundary |
+| Every present upstream code is forwarded unchanged | A lossless relay and channel, including through unused slot time | Their joint connection, absence of erasure/recoding/interference, and preservation of these conditions in the assembled world |
+| Every output equals `c j` for some `j ≥ n` | Own issuance has j=n; a forwarded input satisfies it if its code is `c j` with `j ≥ n+1` | Input origin/index admissibility, exclusion of alien codes, and the whole infinite arrangement's satisfaction of those constraints |
+
+The last row cannot be repaired by deleting inadmissible input: forwarding
+quantifies over **every** present upstream code. Nor is “timestamp no later than
+this station” sufficient; in continuous time many earlier timestamps are not
+members of c. A sealed channel has to preserve a code already in the correct
+upstream family. Intrinsic relay power does not entail that boundary fact.
+Admissibility is a restriction on actual outputs relative to the entire selected
+c, not just a possible conditional response. This is the exact unmet protocol
+obligation, not evidence that any particular admissible local device is impossible.
+
+**Uniform local test, all four rules.** For any n, prepare an empty input at
+`c(n+2)` and operate g(n+1), then g(n), with the protected handoff. The resulting
+three boundary values are
+`out(c(n+2))=none`, `out(c(n+1))=some(c(n+1))`,
+`out(c n)=some(c(n+1))`; issuance is true at n+1 and false at n.
+For piece n+1 the trigger and emission are realized, forwarding has a false
+antecedent, and admissibility uses j=n+1. For piece n the trigger and emission
+have false antecedents, forwarding is realized, and admissibility again uses
+j=n+1. Thus one arbitrary-index recipe meets both complete local pieces, not
+merely three response equations. Its empty prepared boundary is not required
+to obey piece n+2. The witness for the next pair uses a different prepared
+boundary and different manifestations of the same capacities. These are
+explicit symbolic boundary data and a conditional device construction; they
+are not a new Lean certificate or a demonstration that the required accessible
+concrete witness exists. The existing pivot control already supplies the
+mathematical local-possibility pattern; no duplicate control is needed.
+
+Countably gluing those boundary data would change the assignment: the pair
+n,n+1 makes n+1 issue, whereas the pair n+1,n+2 makes n+1 forward. Consume the
+settled complete-trace obstruction (`overlapAgreeingWitnessesImpossible`);
+do not infer station possibility from `arrangementImpossible`, or resurrect a
+generic non-generalization objection. Capacity-only duplicates avoid fixing
+those conflicting manifestations, but then countable realization must preserve
+all four actual interfaces, including admissibility, without stipulating one
+of those pair-specific empty seeds at every boundary.
+
+**Positive argument and exact strength.** The strongest available tree is:
+
+1. PGR-like local availability plus protected handoff and faithful location
+   projection support the arbitrary-index two-device realization above.
+   Ordinary recombination makes this a substantive positive case for local
+   availability, rather than an inference from the paradox. Normal-condition
+   sufficiency is stipulated; physical engineering of ideal devices is not proved.
+2. Intrinsic powers explain why duplicates retain the conditional responses:
+   possession need not wait for a particular actual activation. This supports
+   the preservation step, conditional on duplicate existence, and leaves direct
+   primitive acceptance of such capacities available.
+3. A possible host with metrically/topologically suitable regions supplies
+   room. PInfSP then supplies countably many duplicate capacity-bearers **if
+   accepted**. Koons explicitly motivates the infinitary step by generalizing
+   recombination; finite successes do not deduce it.
+4. To reach the typed patchwork instance, the assembled world must additionally
+   remain accessible from v in this h, preserve the dictionary, connect every
+   channel, and satisfy the four actual interfaces for the same R and c.
+   Duplication of intrinsic powers alone does not establish step 4. Combining
+   steps 3–4 is the outstanding countable **realization** commitment, not a
+   consequence of the local test.
+
+There is also a quantifier mismatch with the existing typed local premise.
+`SlotsAtLeast` only asserts *some* positive lower bound δ. A mechanism of fixed
+duration d fits when δ≥d; it need not fit, for example, slots all of length d/2.
+PGR's one fixed d does not warrant arbitrarily fast scaled mechanisms. Even on
+a continuous proper-time interpretation with all other room conditions met,
+the argument above therefore supports only the sufficiently-long-slot instances,
+not yet `SpacedReaperPiecesPossible` over every spaced c. No claim that the
+construction directly discharges `37d4e072` is made.
+
+This mismatch need not defeat the metric reductio. In a metrically unbounded
+past one can choose `c(n+1)` with reading below `k(c n)-d`, just as the existing
+`spacedDescentOfUnbounded` proof chooses a reading below `k(c n)-1`. Alternatively,
+rescale that theorem's auxiliary coordinate to k/d to obtain gaps >d in the
+original proper time; this does not change which clock interprets the final
+claim. This is an inspected proof adaptation, **not a newly certified result**.
+It suggests a weaker fixed-d application route, provided the host-room and
+countable realization commitments hold on that chosen descent. Merely taking
+a subsequence does not transport already chosen registers/devices or prove
+the original every-descent premises. The philosophical room burden survives.
+
+**Comparison and proposed provisional judgment.** The duration-sensitive
+construction improves the positive rationale: intrinsic proper duration, not
+order-isomorphism, explains why shrinking-slot controls are outside this
+application. The earlier duration-blind objection therefore does not by itself
+undercut this fixed-d route. It does not establish the full typed premises;
+local availability has a clearer constructive rationale than the countable
+realization bridge. No independently established acyclic failure of capacity
+recombination in sufficiently long slots has been supplied here. An unspecified
+gluing failure has no evidential weight.
+
+Compatibility-constrained realization offers a different account of the same
+capacities: permit collections whose actual connected boundary responses are
+jointly satisfiable. It preserves intrinsic possession without asserting that
+every possible bearer family coexists. It accounts for the accepted trace
+obstruction, but that obstruction alone does not show a non-accumulating host
+is metaphysically possible. Its remaining price is a justified rule selecting
+admissible histories, without merely naming this paradox as an exception.
+The recombination account's price is justification that its room, power and
+interface assumptions suffice for countable realization. Neither price is an
+independent defeat of its opponent.
+
+The existing principle-L alternative takes populated metrically infinite
+cosmological solutions as possible histories, hence rejects the universal metric
+conclusion. Its independent warrant is law-consistency as a guide to possibility,
+conditional on L; it does not construct these station interfaces in those
+solutions. Conversely, infinite duration in a cosmological solution does not
+by itself prove that the solution has the required capacity-host geometry or
+that station insertion preserves its laws. Compare modal permission for the
+same CLOCK_1 histories, not a law-consistent host against a silently assumed
+law-preserving station insertion. L and the fully applicable universal
+recombination bundle cannot both hold if L supplies a populated infinite past;
+this is the recorded conflict to assess, not a new defeat. FLRW's finite proper
+past remains outside the metric target. The unread Misner lead remains a lead,
+not additional established source evidence against the chosen clock.
+
+Overall proposed assessment: **a substantive positive fixed-duration station
+proposal, with exact local boundary witnesses and unresolved countable
+realization/application warrant**. This strengthens clarity of the support
+option without establishing metric finiteness, causal finitism or necessity.
+The test resolves the requested uniform capacity recipe at the symbolic level;
+a supported application to the full typed premises is not obtained. Reopen
+with an independently warranted realization principle covering these connected
+protected ports and input-origin conditions in the same accessible history,
+or a concrete reason that principle fails in sufficiently long proper slots.
+If pursuing fixed-d premises, first certify that precise weaker variant and its
+host-room bridge; do not add another conditional paradox theorem as if it
+supplied the missing warrant. An independently supported arbitrary-speed
+station family would instead address the every-spaced-descent gap.
+
+**Claim/type self-sweep and root effect.** Actual outputs, conditional powers,
+station existence and accessible witnesses have been separated in every row.
+The symbolic pair has no existential or metaphysical import; neither the pivot
+control nor an inconsistent complete trace is a metaphysical counterexample.
+CLOCK_1 is fixed throughout; no arbitrary-coordinate physical result is claimed.
+No new claim/type binding, frozen Challenge or Lean input changes. The existing
+route remains `a8c2ef8c → 4365c3c5`, `54e332e5 → 951a2235`,
+`ea5a729c → b19ffd92`, `9de79a41 → 0bdcf366`, `379399d1 → da3facd6`,
+`92ab7c94 → 8626f8a5` (God root), with **every companion premise retained**.
+In particular Arrival B's causal-opportunity premise `256b5bab` remains a
+separate decisive necessity burden; improved Reaper warrant does not supply it.
+No premise change is proposed. Coordinator review must cover this entire
+assessment before it is treated as independently reviewed support.
+
+**Initial-audit verification scope (before coordinator cache preparation).**
+Offline corpus, source-manifest and attribution checks
+pass; the corpus check reports existing closure/lexicon warnings. The prepared
+CLI was reused from the warm checkout at this exact baseline, explicitly invoked
+through `worker_env.py`, because this isolated checkout then lacked local `target` and
+`.lake`. No cold build, cache preparation or preview was performed. No proof
+input changes require a new Lean, binding, axiom, Comparator or NanoDa run;
+unchanged evidence is retained and final integration CI remains required. Live
+conventions were resolved at source revision
+`15f348b072188255da837578eaafc8a98f12fdf0`. The coordinator should use the
+computed `frontier-diff --base 766c3c08fa0bbf1486b9ff277f5870ecbaa94c95
+--frontier-root 8626f8a5-9531-5da7-9ebd-f901e74b1129` for the delivered commit;
+no graph or premise input was edited.
+
+
+### Fixed-duration certification and connected-port follow-up (#1489, 2026-11-17)
+
+**Complete new proposed outcome for coordinator review.** This continues the
+accepted construction audit above, including the historical-summary repair
+cherry-picked as `22c45a039`. The new scope is application alignment and the
+port dictionary, not another paradox or a reopening of the settled complete-trace
+obstruction. Batch: `specs/fixed-duration-grim-reaper.toml`; vocabulary and
+Solution: `TruthCore.Causality.FixedDurationGrimReaper` and
+`TruthCore.Results.Causality.FixedDurationGrimReaper.Solution`.
+
+**Exact conditional advance.** Fix `d : {d : ℝ // 0 < d}` once, across indices,
+descents and accessible worlds. `DurationSlots k d c` says every slot is at
+least this supplied d. It does not existentially choose a new positive bound
+per descent. Keep the original h, Concrete, R, k, W and T. CLOCK_2 remains the
+encoded coordinate; the intended application fixes CLOCK_1 proper duration.
+The subtype checks positivity only; it does not certify a physical clock.
+
+| Statement | Exact coverage | Verified result |
+|---|---|---|
+| [5c146257](../corpus/statements/5c146257-8141-4393-940b-e8c19e26d390.json) (`DurationPiecesPossible`) | Every populated descending c with slots ≥d has co-possible adjacent four-interface pieces in worlds accessible from v | `26a972d6`: original spaced local coverage implies this |
+| [313105b4](../corpus/statements/313105b4-d9a9-4498-961f-1702661c7110.json) (`DurationPatchwork`) | For such c, adjacent co-possibility implies one world accessible from v realizing all pieces | `9ee3a4d8`: original spaced patchwork implies this |
+| [fab16501](../corpus/statements/fab16501-c05a-455d-b880-1a8a9a0dc90a.json) (`DurationDescentPossible`) | Each infinite populated past at t in accessible v supplies **one** c starting at t, with slots ≥d and adjacent co-possibility | `ce2779a9`: fixed-duration local coverage implies this |
+| Existing `4365c3c5` (`PopulatedPastsMetricallyFinite`) | Every populated past in the accessible histories is finite on k | `8ceddce9`: selected local descent plus fixed-duration patchwork; `778bda9f`: uniform fixed-duration local coverage plus that patchwork |
+
+The selection helper `durationDescentOfUnbounded` reuses
+`MetricGrimReaper.spacedDescentOfUnbounded` to obtain an unbounded seed sequence
+and `readingsUnbounded` to choose the next seed moment below the preceding
+reading minus d. Recursion starts at the **same t**. Positivity and strict
+monotonicity give descent; the selected gaps exceed d. It changes neither the
+clock nor the register interpretation, and assumes no arbitrary-speed device.
+The endpoint proof applies fixed-duration patchwork to the selected descent
+and reuses `GrimReaperPatchwork.arrangementImpossible` in its witness world.
+No global impossibility theorem is duplicated.
+
+The exact local coverage consumed by this split proof is `fab16501`: one
+qualifying locally feasible descent per alleged infinite populated past.
+Universal local coverage even over all ≥d descents is unnecessary. Patchwork
+is used only at that selected c. The registered three `strengthens` relations
+record original local → fixed-duration local → selected local, and original
+patchwork → fixed-duration patchwork, each with its strong statement as the
+only premise. **No strictness is claimed**, either for an individual implication
+or for the conjunctions. There is no distinct absolute weakest metaphysical
+premise established here: permitting arbitrary combined antecedents would make
+the metric conclusion itself the trivial sufficient assumption. The useful
+weakening retains explicit local feasibility and a separate realization rule;
+combining them into an “a suitable realizable arrangement exists if the past is
+infinite” flag would hide the very burden under investigation. The original
+strong route remains intact, with `strong_version_needed` recording that its
+extra scope is unnecessary for this endpoint. The uniform fixed-d route likewise
+records that the selected-local sibling suffices.
+
+**A tested connected-port recipe for admissibility.** The new computational
+helper `guardedStep n input` is the same algorithm for every finite address n:
+
+- absent input: issue and output address n;
+- present address j≥n: do not issue; forward j unchanged;
+- present address j<n: do not issue; output none.
+
+`guardedOutputAdmissible` proves that every present output of this algorithm
+has address j≥n, for **every** input, including invalid ones. This is a local
+range invariant, not a claim that station j actually issued. Define the actual
+code projection as `some j ↦ some(c j)`, with absent input mapped to none.
+`pieceOfGuardedPort` proves `PieceAt R u c n` from these precise conditions:
+
+1. The actual upstream register `R.out u (c(n+1))` equals that projected input.
+2. The actual current output equals the projection of the guarded algorithm's
+   output, and actual issuance agrees with its issuance flag.
+3. Every present input address j obeys n+1≤j.
+
+If the preceding port actually runs the same guarded recipe at address n+1,
+its proved output-range invariant supplies condition 3. Thus the admissibility
+step need not assume an independent history of actual originating issuance;
+it can follow from local output guards plus a faithful connected-port dictionary.
+The existing signal-provenance proof remains the separate way of deriving
+named issuance from the full actual protocol. No global-origin premise is
+silently introduced here.
+
+The rejecting branch does **not** claim that an alien upstream code is forwarded.
+When both actual adjacent endpoints implement the recipe and handoff, the
+upstream range guard rules that branch out at the receiver. Without that
+boundary invariant, the forwarding interface can fail, and the adapter retains
+its input-bound hypothesis. Nor is this merely a timestamp test: abstract
+addresses are Nat and the projection is c, so outputs name actual members of
+the selected descent. A physical code naming an arbitrary earlier time would
+not meet this dictionary. For a preselected R, numeric labels do not automatically
+decode to the moments of an arbitrary new c: the candidate world must preserve
+the chosen schedule/location interpretation under that same R. A hard-coded
+indexed family is another implementation option (PGR quantifies over n, and
+PInfSP allows a family of patches), but its members are not all exact duplicates
+of one categorically labelled device. Neither implementation gets an actual
+location map merely by defining the analyst projection. The adapter is checked
+for arbitrary input and c;
+it is not a metaphysical witness or a new whole-network realization theorem.
+
+**Positive rationale and what remains missing.** The local positive case is
+more explicit now. A mechanism that can compare its calibrated address with a
+received finite address and either relay, suppress or issue can enforce the
+required range. Lossless storage/relay and normal-condition protection explain
+how one endpoint's output becomes precisely the next endpoint's input rather
+than a newly guessed register value. These are ordinary operations whose finite
+composition supplies a defeasible rationale for local protocols; the formal
+adapter proves their exact consequence. Koons's p.9 PGR and pp.19–20 signal
+reformulation offer the stronger idealized availability/persistence commitments;
+his pp.18–19 explanation-order argument supports preservation of the conditional
+powers in duplicates. These arguments are cumulative warrant for the local
+proposal, not just absence of an objection. The cached source ranges and exact
+locators read in the accepted audit are reused; no new historical attribution
+or source acquisition is needed.
+
+There are precise remaining qualifications to this rationale:
+
+- **Calibration and address capacity.** The device must acquire its own n and
+  faithfully label/projection-map outputs to c n in every relevant world. The
+  algorithm is uniform, but n is a supplied argument; its numeral is not an
+  intrinsic inscription automatically preserved by exact duplication. Each
+  finite label can be represented with finite resources, but their lengths are
+  unbounded over n. The symbolic recipe proves no uniform duration d or fixed
+  footprint for all such comparisons, storage and transmissions. PGR-like
+  ideal capacities may be accepted primitively, but their full universal
+  availability remains an explicit commitment. No physical impossibility is
+  inferred from this missing engineering or modal evidence.
+- **Protected handoff.** A correct isolated response does not guarantee the
+  actual interstage boundary equalities. The room hypothesis must include the
+  ports, their protection against extra relevant inputs, and lossless holding
+  through unused slot time. Variable holding regions in unequal slots are
+  additional patches/infrastructure, not duplicates of the one d-duration
+  device. Koons's adjoining-region suggestion addresses topological contact;
+  it does not alone construct every protected link in this fixed h, R and k.
+- **Same-history realization.** The port equalities, calibrated location map and
+  normal operating conditions must hold together in a world accessible from v,
+  with actual device bearers existing/present under h. Bare h/TimeClock records
+  contain no host geometry or devices. PInfSP permits metric/topological
+  recombination of a countable *family* of possible patches when a suitable host
+  exists; importing it here still needs those protected patch contents and the
+  preservation of this history/accessibility/dictionary. No finite test or
+  intrinsic-power preservation argument derives that countable permission.
+
+The new guard therefore discharges a **conditional mathematical interface gap**:
+how a local port response could entail actual upstream-code admissibility
+without a separate asserted global issuance history. It does not discharge the
+modal existence of those actual guarded ports, and it does not certify that
+one exact finite-duration physical duplicate handles every address. This is
+the concrete missing-evidence obstacle for an unconditional application.
+
+**Comparison and full new provisional judgment.** The positive recombination
+account now has two additional discriminating features: a duration aligned with
+one supplied device runtime, and an output-guard invariant that derives the
+four actual interfaces under a specified dictionary. It need not appeal to
+arbitrary clock reparametrization, arbitrary-speed scaling, or assumed actual
+signal origins. Its support remains conditional on the availability of the
+indexed calibrated capacity family, protected connections and countable
+same-history realization. The certification improves the fit between the
+application and theorem, rather than itself increasing the independent warrant
+of those modal commitments.
+
+Compatibility-constrained realization may accept these local computations and
+intrinsic capacities while restricting their joint actual manifestations. The
+settled complete-trace obstruction remains relevant to the impossible complete
+response assignment; it is not evidence against an independently possible
+non-accumulating host. No independently warranted failure of this guarded
+capacity construction in sufficiently long proper slots has been identified.
+An unspecified gluing restriction has no evidential weight. A compatibility
+account still owes a positive account selecting its admissible histories;
+the recombination account owes a warranted extension from the protected local
+patches to the countable connected realization. This does not assign the two
+accounts equal support or manufacture a rival defeat.
+
+The principle-L infinite-cosmology comparison retains the same interpretation
+and limits recorded above: permission for an infinite proper-time populated
+history competes with universal applicability of the station/realization bundle;
+it supplies neither that host's protected ports nor a law-preserving insertion
+of the devices. FLRW's finite proper past is still outside the metric target.
+Arrival B's causal-opportunity premise `256b5bab` remains separate; this work
+cannot supply it. Direct primitive acceptance of the relevant capacities or
+recombination principle remains available alongside the explicit support route.
+No proof status, floor marking or metaphysical defeat is inferred from this
+proposed provisional assessment.
+
+**Reassessment and reopening.** The fixed-d alignment question has its new exact
+conditional answer. Further progress on actual application requires independent
+support for a calibrated indexed family operating with one positive duration,
+protected boundary realization and an applicable countable same-history
+recombination principle. Reopen on a concrete positive realization argument or
+a substantive failure of those specified conditions. Additional register
+contradictions, finite schedules, or complete-trace duplication tests would
+repeat settled work. This branch is returned for coordinator reassessment with
+the realization commitment explicit, rather than declaring the paradox false
+or the broader God-existence investigation complete.
+
+**Claim/type self-sweep.** Every theorem uses one supplied h/R/k/d dictionary;
+positivity is part of d's subtype, and the main results require linear time.
+Local witnesses have accessibility from v; global patchwork asks for that same
+accessibility. `DurationDescentPossible` preserves the first moment t.
+`guardedOutputAdmissible` witnesses a numeric range property only;
+`pieceOfGuardedPort` requires actual output/issuance equalities and an input
+bound. Neither implies device existence, physical feasibility or metaphysical
+possibility. No no-assignment result is used to infer those possibilities.
+The new strength results are implications, not strictness or establishment.
+The existing metric endpoint and all downstream companion premises are retained,
+including the Arrival B opportunity burden and attribute bridges to the God
+root. No shared CCR, De ente, modal-spine or status/import-cache edit is included.
+Independent review of this complete new outcome remains the coordinator's step.
+
+
+**Focused verification and computed premise effect.** The prepared cache was used
+through `worker_env.py` without a repeated preflight or cold build. The two new
+modules build; all five new results bind with zero mismatches. Comparator and
+result NanoDa pass for `26a972d6`, `9ee3a4d8`, `ce2779a9`, `8ceddce9` and
+`778bda9f`; the `ce2779a9` config additionally checks the selection and both
+port-adapter theorems. A scoped library export includes all 16 declarations of
+the new vocabulary/Solution and their dependency closure: NanoDa checked 7544
+declarations with no typechecker errors. It reported one nonfatal pretty-printer
+diagnostic, “Unable to print axioms”; separate Lean axiom probes for all eight
+named theorems show only subsets of `propext`, `Classical.choice`, `Quot.sound`.
+There is no `sorryAx` or custom axiom in the delivered proofs. The new Challenge
+contains only the ordinary frozen theorem signatures with generated placeholders;
+no previously frozen Challenge was edited.
+
+Offline corpus/source/attribution checks pass (no new or changed stating claim),
+both owning specs regenerate unchanged, and whitespace passes. The corpus check
+retains the existing closure/lexicon warnings and reports the five new definition
+status entries as not yet computed. Shared definition-status/import/docs caches
+are left for coordinator generation and final integration CI, as assigned.
+Live policy source revision remains `15f348b072188255da837578eaafc8a98f12fdf0`.
+The proof checks cover the new modules and results; they do not assert that a
+full integrated build or the new semantic review is complete.
+
+Computed `truth frontier-diff --base 22c45a039 --frontier-root
+8626f8a5-9531-5da7-9ebd-f901e74b1129` on these graph inputs reports:
+
+```text
+open premises reaching the root: 413 (284 bare, 78 supported, 51 stated) -> 413 (284 bare, 78 supported, 51 stated)
+distinct verified support alternatives: 423 -> 426
+verified support alternatives added: 3
+  In every possible history, each moment with a contingent thing present has a metrically finite past [4365c3c5] <- Reaper patchwork along every supplied-duration populated descent [313105b4], Adjacent Reaper pieces along every supplied-duration populated descent [5c146257]
+  In every possible history, each moment with a contingent thing present has a metrically finite past [4365c3c5] <- Reaper patchwork along every supplied-duration populated descent [313105b4], One locally feasible supplied-duration descent per infinite populated past [fab16501]
+  One locally feasible supplied-duration descent per infinite populated past [fab16501] <- Adjacent Reaper pieces along every supplied-duration populated descent [5c146257]
+bare premises added: none
+```
+
+These are computed conditional support options, not premise discharges or a
+ranking of philosophical warrant. The direct-assumption options and original
+strong route remain. All companion premises on the existing Arrival B,
+necessary-concretum and God-root route are unchanged.
 
 
 ## Typed per-se / historical distinction (#1112)
