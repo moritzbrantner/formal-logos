@@ -315,12 +315,11 @@ readings into additional root support requires a scope-exact application to a
 root premise. Neither the generic occurrence link nor the norm schema provides
 that application by renaming it.
 
-The family lexicon now traces elenctic/elenctically, presupposition and its listed
-verb forms, explicability, first-principle entitlement, and the existing
+The family lexicon now traces elenctic/elenctically, first-principle entitlement, and the existing
 presupposition-link, explicability-argument and self-evident entries. Retorsion's
 old ordinary gloss treated self-refutation as one undifferentiated presupposing
 or affirming of a denied thesis; its entry now selects the three existing
-technical distinctions. These are navigation links, not new senses or evidence.
+technical distinctions. Family navigation stays in notes; lexical sense membership is restricted to the directly relevant definitions, except for the family-wide first-principle entitlement entry.
 The bare ordinary lemma `entitlement` also appears outside this family (for
 example the distinct Hume verdict definition
 `d9b1e901-417c-57cd-8eec-65bd81d9e3d9`). It is not silently converted into this
@@ -392,3 +391,24 @@ to supply a complete dictionary of signification. Coordinator integration may
 shrink the five removable lexicon allowlist fields; this worker did not edit
 shared generated files. This is a family reconciliation with explicit remaining
 work, not completion of the lexicon campaign or of the three missing Lean senses.
+
+### Independent semantic challenge and repair (2026-11-17)
+
+The independent review of `47fadc4cb4922b1a73d517c0b0713193f41472df` supported
+the consumer and legacy-closure reconciliation but found two publication defects.
+Bare presupposition (including its verbs) also expresses ontic requirements and
+argument dependencies; explicability is a property, not the argument employing
+it. The unsupported new global entries were removed. Their scoped compounds
+remain; appropriate definitions of the broader uses remain research work.
+
+The lexicon loader expands disambiguation links into every constituent definition.
+Consequently, the family link incorrectly admitted norm satisfaction and closure
+marking as senses of elenctic, and five senses for retorsion instead of three.
+The narrow entries now use only their direct definitions; the family-wide compound
+retains its explicit five-sense selection. No ordinary exemptions or allowlist
+growth replace the removed mappings. The earlier 32-warning count describes the
+reviewed draft, not the corrected integrated revision. Newly exposed retorsion
+and self-evidence uses and edited-field vocabulary gaps remain to reconcile.
+The review found no substantive objection to the preserved conditional inferences.
+Signification-to-PNC and the feature-exact explicability extension remain concrete
+research directions; this checkpoint does not exhaust either investigation.

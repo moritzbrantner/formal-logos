@@ -1603,3 +1603,18 @@ The prepared binary does not report an embedded source revision; the observed
 checkout revision is not an independent build-provenance attestation. All CLI
 checks selected this isolated checkout with `--root` through
 `python3 scripts/worker_env.py --`.
+
+### Independent semantic challenge and repair (2026-11-17)
+
+The review of `38fc9e1f33691eb5735e730f5154eaf98e89c6f9` supported the
+primitive transmission linkage, Coherent boundary and inspected consumers. It
+found that the exercise entry's broad disambiguation links admitted non-exercise
+definitions. In particular, intellectual-exerciser-has-power passed the lexical
+check through its capacity definition despite using IntellectualExercise. Both
+broad navigation links were removed from the entry; only its four directly
+selected definitions now count. Intellectual-operation coverage remains pending.
+Thus the trace described above is a scoped mapping, not certification that every
+consumer already links its relevant exercise meaning. No checker exemption or
+allowlist growth masks the remaining uses. The capacity adapter remains the next
+implementation step, with explicit event/bearer/respect correspondence and
+activation assumptions.
