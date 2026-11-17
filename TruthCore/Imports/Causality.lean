@@ -49,6 +49,7 @@ public import TruthCore.Causality.ConceptualExistenceBoundary
 public import TruthCore.Causality.ConcreteExistentialSupply
 public import TruthCore.Causality.ConcreteRootAccess
 public import TruthCore.Causality.ConcurrentActualization
+public import TruthCore.Causality.ConcurrentCessation
 public import TruthCore.Causality.ConstitutiveConfiguration
 public import TruthCore.Causality.ConstitutiveNatureUniqueness
 public import TruthCore.Causality.ContingentAncestry

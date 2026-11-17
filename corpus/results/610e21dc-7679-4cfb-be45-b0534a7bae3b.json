@@ -1,0 +1,11 @@
+{
+  "id": "610e21dc-7679-4cfb-be45-b0534a7bae3b",
+  "label": "Causal cessation separates historical persistence from current giving",
+  "argument_id": "4f11b24b-db72-459b-bf03-c5cfedf285ef",
+  "challenge_module": "TruthCore.Results.Causality.ConcurrentCessation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ConcurrentCessation.Solution",
+  "theorem": "TruthCore.Results.Causality.ConcurrentCessation.certificate",
+  "comparator_config": "results/610e21dc-7679-4cfb-be45-b0534a7bae3b/comparator.json",
+  "status": "solution-present",
+  "description": "Checks the next test of attempt 05bc2722 at root-reaching concurrent actualization 40a97664, consumed by sustainingOfConcurrentActualization argument366a6ea3. The causal cessation law does not by itself select inertia or giving: it holds in the existing inertial and sustained histories. Adding no-giver/no-continuation does not independently defend continued giving because the two are classically equivalent on the same received, prior-present bearer. Causal coverage then requires a represented terminal process on any resulting loss; identifying withdrawal with that process remains an interpretation obligation, not a theorem about actual causes. Matching temporal presence to process existence permits the exact root premise to imply its continuation restriction. No converse covers time zero, first appearances or dense-time limits. All hypotheses remain internal to the certificate; no new root support option, source claim, physical possibility or metaphysical premise is asserted."
+}
