@@ -885,3 +885,247 @@ added 0: **no change**. No Lean or binding inputs changed; unchanged proof
 verification is reused, not represented as a new build/Comparator/NanoDa run.
 Fresh challenge of this proposal and final integration CI remain with the
 coordinator. No push, PR, watch or merge.
+
+## Concurrent actualization: current case for God-existence research (2026-11-17)
+
+**Complete proposed outcome for fresh challenge.** God’s existence is the
+selected overall question; historical-evidence campaigns and Catholic-specific
+bridges are deferred by owner direction. On the same continued-existence
+phenomenon, conservation remains a substantive, defensible explanatory option:
+if a bearer's actuality is a standing derivative actuality, its dependence is
+not explained away by the mere passage of time. The historical-law account
+nevertheless survives the strongest tested shared causal principle. The new
+checked result shows why: requiring a cause of cessation is compatible with
+both concurrent giving and its absence. It neither proves conservation nor
+establishes existential inertia. The cumulative judgment is therefore positive
+conditional support for conservation, without a warranted inference from
+persistence alone to God. The two accounts’ remaining disagreement concerns
+what sustains actuality, not whether the bearer persisted or whether every
+change needs a cause.
+
+This continues accepted `c43e57e8191e1f0840a35069d0830e6321bad5a8` at existing
+`40a97664-e481-42d7-8458-78374a61aa26`,
+`ConcurrentActualization.ConcurrentlyActualized`. Related/context/dossier/brief/
+novelty and attempt `05bc2722` were inspected. Exact consumer `366a6ea3` keeps
+reception, per-moment giving and original-cause concurrence separate. The new
+comparison is statement `c7cff178-24d5-4383-b219-88586a3cb8fe`, argument
+`4f11b24b-db72-459b-bf03-c5cfedf285ef`, result
+`610e21dc-7679-4cfb-be45-b0534a7bae3b`. Its home is
+[ConcurrentCessation](../TruthCore/Causality/ConcurrentCessation.lean), with
+[the proof](../TruthCore/Results/Causality/ConcurrentCessation/Solution.lean).
+It answers attempt `05bc2722`’s first pending test; it is not another
+illumination calibration or a new definition of received being.
+
+### Positive warrant and complete competing local explanations
+
+Fix one numerical bearer x that is present before and after the selected
+interval. The question is why **that bearer's continued existence** obtains.
+A change of quality, a replacement bearer and a description of its nature
+are not substitutions for this explanandum.
+
+The strongest conservation case treats x's act as standingly derivative:
+actuality belongs to the recipient without belonging to it as self-subsistent
+actuality. Continuing in that same mode calls for actual efficacy, even where
+there is no new motion or newly produced replacement at successive instants.
+An earlier producing act explains an origin; the conservation account adds
+that the present actuality still has this dependent mode. On that account,
+productive support, ordinary secondary activity, the bearer's constitution and
+the laws governing its behavior work together. The explanatory ambition is to
+account for why the bearer is actual now, as well as why its states develop.
+This is a reason to take concurrent actualization seriously as a metaphysical
+primitive or conclusion, not an obligation to find an endlessly prior proof.
+It is strongest when standing productive dependence is independently part of
+the best account of the bearer, rather than inferred solely from the word
+“received.” No substantive objection to a genuinely identified instance of
+such continuing productive dependence was found here.
+
+The rival is a complete **local persistence** account on its own commitments:
+x was actual earlier, cessation requires an inducing factor, and none occurs
+through the relevant interval; x therefore continues. Ordinary processes and
+constitution explain its behavior, while this transition principle explains
+why the same bearer is still there. It does not say that an abstract
+specification efficiently produces x. Nor need it assign an intrinsic
+self-giving power: the causal law and prior actuality do the explanatory work.
+Its positive basis is the causal requirement on change that motivates the
+no-change argument; its application to existential cessation remains a real
+commitment. This is more than a bare possibility or a denial of all explanation.
+
+These local accounts can both acknowledge x's originating cause. They can also
+both leave the origin or total obtaining of the history to a further account.
+A complete *ultimate* conservation case needs an adequate account of its
+foundation; a fundamental physical or historical-law completion needs an
+adequate account of its base and law. Calling either terminus necessary does
+not by itself provide that account. Neither receives an exemption, and failure
+to complete one does not establish the other. For the local phenomenon, the
+rival does not fail a substantive test merely because it explains persistence
+without productive giving. The conservation account has a distinctive proposed
+ontic dependence explanation, but that extra content is an explanatory gain
+only insofar as the standing-dependence account is warranted.
+
+### What the new test changes
+
+[The certificate](../TruthCore/Results/Causality/ConcurrentCessation/Solution.lean)
+proves three discriminations using existing temporal and process dictionaries:
+
+- Causal coverage of sampled cessation plus absence of every represented
+  terminal process gives **double-negated** next presence of the same bearer.
+  Positive presence additionally uses classical stability; giving is unused.
+- A received, prior-present bearer cannot continue without *any* giver
+  (`UngivenContinuationFails`) iff it has some giver whenever it continues
+  (`ContinuedGiving`), classically. Recasting one as the other supplies no
+  independent warrant, though either may be a substantive primitive. This is
+  not an intervention or withdrawal of one original source.
+- Adding that dependence to causal coverage requires a terminal-process
+  witness on any resulting loss. Identifying withdrawal as such a process
+  remains an application obligation, not a definition of negative causation.
+
+The reused `inertia` history satisfies causal coverage and soundness of its
+terminal losses: its dictionary has an actual loss of true at sample 2, while
+recipient false persists from 1 to 2 without later giving. Thus coverage is
+not tested only on a wholly changeless population. The reused `sustained`
+history satisfies the same law and concurrent actualization. These are
+structural assignments, not real-bearer or complete worldview certificates.
+The code and definition `9bd9cc6b` retain the full process/target details.
+
+`consumerRestriction` actually consumes `ConcurrentlyActualized`, preserving
+the same bearer and next time through explicit selected-world process/presence
+correspondence. Its giver may vary or be the recipient. The restriction covers
+Nat-sampled continuation, not time zero, first appearances or dense-time limits;
+no converse to the unrestricted target is claimed. World and time indices stay
+distinct. Existing history proof evidence is imported unchanged.
+
+The comparative consequence sharpens the earlier undercutting assessment.
+The no-change deduction challenges “nothing else can explain persistence”;
+it does not establish that giving is absent or superfluous in the actual
+causal basis. Its no-inducer antecedent must cover all relevant factors,
+including any warranted cessation of existential support, not just observed
+damage. Conversely, asserting that lack of giving induces cessation imports
+standing dependence. The common causal law alone favors neither account,
+and does not refute the positive conservation primitive.
+
+### A fixed-witness God-existence bundle, not an attribute detour
+
+The concrete existence-stage destination is `8626f8a5-9531-5da7-9ebd-f901e74b1129`
+(`GodExists`, G). Select the existing **twelve-input** conditional candidate
+`DIRECT-ESSE-ROOT-GOD-EXISTENCE-ONLY`, argument `5e8e6054`, result
+`973582b8-b190-5f29-ab82-2ae387cffc68`,
+`DirectEsseRootGodExistence.ExistenceOnly.godExists`. Its context, all twelve
+input dossiers, and exact `sameWitnessGod` proof were inspected. The complete
+bundle is actual population `56f68b40`, whole-roster foundation `5c898d24`,
+excluded middle `ee4ab504`, priority-to-ground `86efed1a`, genus-causality
+`d9fad785`, existence-to-act `0436de86`, esse-cause-to-ground `cb1cdea9`,
+grades-to-maximum `6c27657f`, actuality-in-being `7067553d`, universal-source
+perfection transfer `b26c10a0`, no-component-first `09c6d5f0`, and full nominal
+naming `1ec205ed`. All earlier direct-assumption options remain available.
+
+This is one coherent typed **conditional support bundle**, selected for the
+existence investigation; this continuation does not claim that its whole
+metaphysical application is independently warranted. Fix one candidate domain,
+selected situation, esse respect, actual existential-ground relation and
+perfection interpretation throughout. In a proposed temporal application,
+world-level existence must match presence at the selected situation; strict
+`GivesAt` must really supply the same esse-causation used by the selected
+`CausesIn`. Neither coupling is supplied by changing an index name. Current
+conservation research bears on that *productive interpretation*; it does not
+establish the generic bridge over every alleged cause.
+
+The existing proof extracts **one n** from population and whole-roster
+foundation, proves its firstness using the priority correspondence, obtains a
+maximum through grades-to-maximum, and identifies every such maximum with
+**that n** through actual esse-ground correspondence. Genus supplies its
+universal esse-causal scope; transfer, firstness and component remoteness give
+the remaining naming conditions. Only then does the explicit nominal premise
+name that same n God. A giver g of the observed x is not silently identified
+with n. Foundation is substantive: the existing whole-roster/root equivalence
+shows that, with population and classical logic, nontrapping has the strength
+of existence of a root in this very relation. Maximum, common causal scope and
+perfection transfer likewise need their own warrant; no inference from “there
+is a giver” supplies them.
+
+The formal output is actual rootness, firstness and `IsGod n`, hence G. It does
+**not** prove modal necessity of n, the nine classical predicates, intellect,
+will, infinity, eternity, moral omniperfection or omniscience. Adding contingent
+grounding gives the existing stronger necessary-witness route; it is not a
+premise of this existence-only route. The nominal predicate does not confer
+all later attributes by its name. No Catholic historical or authority bridge
+is used here.
+
+Current graph reachability of `40a97664` to G is real but is not an independent
+existence argument: its path through `366a6ea3`, the sustaining/immensity bridge,
+and the full attribute summary already obtains a named God before projecting
+existence. For the existence-first priority, do not count that detour as added
+existence warrant. Nor is `40a97664` a premise of the twelve-input proof. The
+new cessation certificate is linked analytical evidence for its current
+premise question, **not** a new arrow into G. The missing semantic application
+from real giving to this bundle's selected esse-ground relation stays explicit.
+
+### Cumulative judgment and next allocation
+
+The strongest current case is a conservation account with actual population,
+real standing dependence, and a substantive foundation and universal-source
+completion. It has positive explanatory content, can be held provisionally
+without demanding prior proof of every primitive, and is not refuted by the
+historical-law cessation argument. Its competitor is the positive
+historical-law account, potentially completed by fundamental impersonal
+reality. Their shared observed persistence and shared causal requirement on
+cessation do not discriminate them. The inspected evidence therefore does not
+yet warrant selecting the entire God-existence bundle as established or the
+natural completion as defeated. This is a comparative judgment on the whole
+selected case, not a claim of equal credibility or a deduction from open-leaf
+counts. Direct acceptance of the conservation premise remains a live support
+option; its philosophical warrant is separate from formal closure.
+
+The bounded test is now answered: the causal requirement on cessation neither
+entails nor excludes present giving; the added no-giver dependency is the same
+continuation commitment in classical form. Rejected as further advances are
+renaming that dependency, treating no *observed* damage as exhaustive absence
+of causal loss, requiring one/distinct giver, extending sampled proofs to all
+histories, and using an attribute-to-existence projection as independent
+support for God's existence. No repeated illumination, reception-in or
+self-production test was used.
+
+With existence first, the next consequential allocation is **`5c898d24` on
+this exact twelve-input bundle**: assess why the actual existential-support
+roster has a foundation against a positively articulated complete distributed
+or fundamental-natural account of the same current actuality. Keep selected
+support distinct from ordinary state-transition causation. This is a different
+load-bearing existence node, not more work on immensity. An independently
+justified standing productive-dependence account for the present bearer, or a
+reason that the historical no-inducer law requires or excludes that support,
+would reopen the current premise question. Further alleged arguments in the
+unread ACPQ article remain source leads: the targeted publisher request returned
+403; no conclusion about those arguments follows and no historical campaign
+is started. The current source/rival assessment otherwise reuses attempt
+`05bc2722`’s retained readings and precise locators.
+
+### Verification and claim/type sweep
+
+The generated statement/inference/argument/result, definition, frozen Challenge
+and Solution were swept for quantifiers, prior/next presence, double negation,
+some-versus-fixed giver, same process target, selected-world correspondence and
+structural-model limits. The no-external-premise certificate establishes its
+mathematical comparison, not concurrent actualization or God’s existence.
+`DeiFiliusUnifiedRoute.deiFiliusRootUnified` obtains `hGod` before applying
+`hImmenseSense`, confirming the existence-detour assessment. The twelve-input
+proof and `sameWitnessGod` remain unchanged.
+
+Through `worker_env.py` under the heavy lock: focused Solution and generated
+Challenge builds pass; binding is **1 bound, 0 pinned, 0 mismatch**; Comparator
+and independent NanoDa accept result `610e21dc-7679-4cfb-be45-b0534a7bae3b`.
+Only the frozen Challenge has its expected `sorry`. The certificate and
+`consequences` use `[propext, Classical.choice, Quot.sound]`, the permitted
+profile; `consumerRestriction` has no axioms. Existing proofs are reused.
+
+Offline corpus/attribution checks, scoped spec regeneration, bundle audit,
+sense/definition/lexicon ratchets and whitespace check pass. Existing lexical
+warnings remain; the new definition’s shared formal-status entry is not yet
+generated. No shared imports, status, allowlist, old frozen contract or source
+claim was edited. Convention sourceRevision remains
+`15f348b072188255da837578eaafc8a98f12fdf0`; no preflight repeated.
+
+Computed `truth frontier-diff --base c43e57e8191e1f0840a35069d0830e6321bad5a8
+--frontier-root STMT-GOD-EXISTS`: **no change**; open premises 404 → 404
+(283 bare, 76 supported, 45 stated), lowest route cost 6 → 6, verified support
+alternatives 414 → 414, added 0. The new certificate dossier was inspected.
+Fresh challenge of this full case assessment and final integration CI remain
+coordinator-owned. No push, PR, watch or merge.
