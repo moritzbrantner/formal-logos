@@ -4,14 +4,15 @@ Issue #355, intellect only. The target remains
 `STMT-IMMATERIAL-IS-INTELLECTUAL`; this batch does not derive or replace it.
 The will obligation and all root-route signatures remain unchanged.
 
-Current case conclusion (2026-11-17): the accepted same-witness route supplies
-conditional intellectual attributes of a proposed ground, with existence and
-governor premises separate. The accepted matched-case comparison retains local
-understanding without inferring an ultimate mind. New
-[selected same-end descent](#same-end-inheritance-selected-instrumental-descent-2026-11-17)
-verifies that one direction-preserving predecessor suffices; every mover need
-not qualify. Warrant for that predecessor and intellect at the first remain
-open. This new outcome awaits independent challenge; historical evaluation is deferred.
+Current case conclusion (2026-11-17): the accepted same-witness and selected-
+predecessor results retain their conditional force. A new
+[documented coring application](#documented-application-rochette-coring-and-unrelated-bearer-motion-2026-11-17)
+supports ordinary instrumental same-end attribution, with planetary co-motion
+separately inferred rather than measured in the episode report. It does not
+establish universal selection, global unmovedness or intellectual recognition
+at the first. The new application judgment awaits independent challenge;
+ground existence and all governor provenance remain open, and historical
+Catholic-specific evaluation is deferred.
 
 ## Verified reading
 
@@ -1192,6 +1193,11 @@ assessment still requires the coordinator's fresh independent semantic review.
 ## Same-end inheritance: selected instrumental descent (2026-11-17)
 
 New investigation from accepted `60e2e20eecf4beb29aa1d7d049d121c1e954698a`.
+The coordinator reports independent review accepted all seventeen files at
+`77878157a2ac2cfe13c17960b57c12469e61f61f` without findings; integration
+head `47dc672c7` in #1713 includes that accepted work and the prior comparison.
+Shared build/status refresh/corpus checks passed there, with CI pending at the
+time of the handoff. That acceptance does not cover the new application below.
 Target: same-end inheritance `251bbfdd-c176-5cea-ae66-ebfa5cad0dc4`, then
 first-director recognition `acc06edc-0d48-559d-9b21-d58081fcf978` as warranted.
 The live convention revision remains
@@ -1446,3 +1452,215 @@ that its source warrant is established. The strength certificate is the
 separately checked sole-premise weakening; no strictness is claimed. This
 comparison records the added support option and its obligation without a
 leaf-count penalty or a claim of premise/root establishment.
+
+## Documented application: Rochette coring and unrelated bearer motion (2026-11-17)
+
+Bounded continuation from accepted `77878157a2ac2cfe13c17960b57c12469e61f61f`.
+Question: what actual evidence supports selecting a same-end predecessor for
+one director while its bearer is moved in a different respect? This is the
+complete proposed outcome for fresh review, not a new Lean model or theorem.
+
+### Episode evidence and its limits
+
+One primary engineering report was selected for this exact question:
+Vandi Verma and colleagues, *First 210 solar days of Mars 2020 Perseverance
+Robotic Operations – Mobility, Robotic Arm, Sampling, and Helicopter*,
+[author/institution-hosted PDF](https://robotics.jpl.nasa.gov/media/documents/ro_final_v1.pdf).
+Two independently downloaded copies had the same bytes. Source
+`8a87e7f3-1a57-44a2-a2a5-8c784c55cdb0` and two passages are recorded:
+
+- `4be77a2d-83c3-4410-a11a-1f35cc42dee4`: printed/physical pp.4–5,
+  sections 4–5 and surrounding context. This describes the arm's motorized
+  actuation, position sensing and closed-loop load application, its corer,
+  and their cooperative sampling arrangement.
+- `5d7a9b29-3071-413a-a1c4-f91e9f41d089`: printed/physical p.14,
+  Table 3 and following arm-use context. It reports successful Rochette core
+  collection over sols 189–195, with confirmation before sealing; a second
+  collection over sols 196–197 used no intervening ground-team loop.
+
+Both passages were materialized and read after byte/text verification. The PDF
+SHA256 is `32ba6ed28a8e682903c32424c53ca7d72e01ace083810cc387ab61fb4755077a`.
+Only metadata, hashes, locators and short incipits are committed. This is a
+hash-pinned live witness with no immutable archive fallback; extraction and
+source fidelity are distinct from warrant for the philosophical application.
+No author is attributed SameEndMoverSelection, no source-derived philosophical
+statement is created, and no new claim is minted just to log the investigation.
+
+This is an actual reported operation, unlike the earlier stipulated archer or
+Mira cases. The inspected evidence is the mission engineers' episode report
+plus their mechanism description. Raw joint-by-joint telemetry and a synchronized
+orbital trajectory for that episode were **not** inspected. A mechanism
+capacity description is not itself a per-episode actuator trace; combining it
+with the reported successful operation is an ordinary engineering inference.
+
+### One candidate application on the current dictionary
+
+Keep the selected rock target and coring end fixed:
+**f** is the corer, **x** the Rochette material at the selected drilling target,
+and **e** extracting a collectable core into its sampling tube. A candidate
+**g** is the robotic arm acting through its motorized positioning/load-control
+arrangement. The arm and corer are distinct cooperating assemblies; g is not
+an abstract command, a substituted rock, or an unnamed ultimate cause.
+
+On the instrumental interpretation of Directs, the corer directs the material
+operation toward e. The arm's governed positioning and loading of that tool
+are a positive reason to attribute the same operation/end to g through f.
+This concerns producing the core, not simply illuminating it, supplying generic
+power, or moving the tool to a camera after coring. Subsequent imaging and
+sealing have their own ends and are not substituted for the coring link.
+The interpretation is that the arm's configured operation participates in this
+particular extraction; a raw motion of its bearer would not suffice.
+
+This supports a **defeasible ordinary instrumental application** given the
+reported operation and engineering description. It does not require a prior
+independent proof of every actuator or a complete philosophy of causation.
+The semantic application is still explicit: x is admitted as nonliving natural
+material, g/f are the particular physical assemblies, the selected operation
+is a MovesIn respect, and Directs is derivative ordering to this e. No certified
+metaphysical identification or exhaustive causal decomposition is supplied.
+In particular, using a rock as a scientific sample does **not** establish that
+e is what is Best for the rock in the Fifth Way's natural-body observation.
+This application of selection alone is not a realization of every governor input.
+
+| Evidence or inference | What it supports in this one application |
+| --- | --- |
+| Recorded successful coring | A real material operation with the stated collection outcome; not merely an imagined successful fixture. |
+| Specified arm/corer mechanism | A reason to identify g's positioned, loaded operation as instrumental in f's coring, rather than infer transmission from bare ancestry. Exact episode-level contributions remain inferred from mechanism and report. |
+| Distinct arm and corer | An ordinary candidate for the predecessor's g≠f clause; no source-uniqueness or all-necessary-being claim. |
+| Mars' rotation and orbital motion | Background for inferring additional motion of a surface-borne tool, distinct from its local coring operation; not mission telemetry identifying the corpus's mover relation. |
+| Successful unattended second sampling | Stored organization can execute sampling without a new ground-team instruction at each stage. It does not erase earlier intelligent planning or prove a noncognitive ultimate source. |
+
+### The unrelated respect is an inference, not a hidden measurement
+
+The physically ordinary additional motion is the surface-borne corer's changing
+position/orientation with Mars, considered relative to an appropriate non-body-
+fixed frame. NASA's live [Mars Facts](https://science.nasa.gov/mars/facts/),
+“Orbit and Rotation,” was consulted as background. No precise orbital phase,
+trajectory, temperature fluctuation or simultaneous joint motion is asserted
+from the coring report. Planetary co-motion is a background physical inference,
+not a new byte-certified passage or a reported per-episode diagnostic.
+
+“Unrelated” is deliberately limited here: that common motion is not identified
+as the command, load control or geometric cutting operation that selects this
+rock and core. It is **not** asserted to have zero physical relevance or no
+possible effect on sampling. Likewise a frame-relative change of position is
+not automatically an independently justified edge `MovesIn Mars f r`. A physical
+motion reading can include carried motion, but the Aristotelian actualization
+relation and its causal bearer still need their stated interpretation. The
+record therefore supports a concrete physical candidate with an ordinary
+co-motion inference; it does not completely verify every antecedent of the
+metaphysical policy under all readings of MovesIn.
+
+Conditional on that physical-motion application, selection can choose the
+arm's task-specific operation instead of the planetary carrier. Its existential
+conclusion does not require the predecessor to supply the unrelated respect.
+This is exactly what the accepted weakening permits. The example gives positive
+local warrant for that choice without declaring Mars incapable of derivative
+final ordering or constructing a countermodel to unrestricted inheritance.
+If a stricter requirement demands an episode-specific measurement of an
+independent, direction-irrelevant motion and its distinct mover, that evidence
+is unavailable in the inspected ranges. The missing evidence must remain named;
+it is not supplied by a story about hypothetical heating or a new predicate.
+
+### Universal scope, termination and the first source
+
+The justified extension is modest but positive: a deliberately organized
+instrumental operation can have an identifiable same-end predecessor despite
+additional bearer motion. This supports applying the selection principle to
+this kind of case. It does not show that **every** natural-body direction with
+any distinct mover has such a predecessor. Designed artefacts expose a concrete
+mechanism for the local attribution; extending it to all immanent natural
+organization needs a reason that the relevant directing operation is received
+from a predecessor in each case. The difference matters because the local
+inference used identifiable arm/tool organization, not merely that f moved.
+No absence of an observed predecessor is presented as evidence against the
+universal principle, which remains a direct candidate primitive as well as
+conditionally supported by the old unrestricted policy.
+
+The co-moving arm is itself no globally unmoved terminus. Finding g says
+nothing by itself about the remaining chain, its well-foundedness or the
+strong per-se link. Nor would a terminal node of a sampling-control hierarchy
+thereby satisfy `∀ r, ¬ MovedIn h r`. On a physical carried-motion reading it
+can still move with its bearer. The accepted descent proof retains its exact
+termination inputs and globally unmoved endpoint; this local application
+neither establishes them nor replaces them with a direction-only root.
+
+A distinct source-recognition test is available: where does understanding of
+the end enter the documented activity? The report supports human selection,
+command planning and confirmation, and stored mechanical/control organization
+that executes those purposes. Ordinary attribution of understanding to the
+planners has prima facie warrant; it can reinforce the existing intellectual-
+exemplar option `5854ef2b-41dd-5617-99d2-f53a850c35fd` without a proof of every
+prior mental capacity. That is an evidential judgment, not a new formal result.
+Neither closed-loop control nor the paper's computational terminology by itself
+recognizes HasIntellect in the arm or corer.
+
+The unattended operation tests a narrower inference: a fresh human decision at
+every executing stage is not part of the reported process. It does not refute
+the actual director premise, which does not require an immediate knower, or
+acc06edc, whose antecedent is a **globally unmoved** director. Earlier intelligent
+planning is evidenced; a present per-se causal edge from an absent planner to
+each act is a separate interpretation, not a consequence of historical ancestry.
+The strong positive view can regard the hardware as executing an intellectual
+plan through secondary causes. The strongest organizational rival can accept
+those same human designers and execution mechanisms while disputing an
+additional necessary intellectual ultimate source. This episode does not
+discriminate those two global claims.
+
+For `acc06edc-0d48-559d-9b21-d58081fcf978`, the meaningful remaining inference
+is consequently still **intrinsic first-source final ordering → intellectual
+possession**. Known intellectual planning makes the inference from a recognized
+principal to its instruments intelligible; it does not license the converse
+from any effective or causally first ordering to an intellect. The actual
+mechanisms support organized execution without recognizing intellect at every
+link; they supply no joint noncognitive-first model or refutation. The new
+episode warrants neither a universal recognition theorem nor elimination of
+the intrinsic-power rival. This is a precise source-recognition obstruction,
+not the claim that primary documentation says nothing useful.
+
+### Complete proposed outcome and reopening
+
+Proposed provisional judgment: there is positive, source-grounded ordinary
+warrant for a task-specific arm/corer same-end attribution. The successful
+operation and known organization improve on the earlier illustration. The
+additional bearer motion is a separately disclosed physical inference; its
+frame/actualization correspondence is not certified by the episode source.
+The universal selection policy and first-source intellect therefore remain
+open. The inherited route **selection → 11914511 → governor 571094b6 → same-root
+a56eea3e** retains all motion, per-se, termination, design/cognition, observation,
+chance/tending, directing-as-moving, uniqueness, Fourth-Way, naming, created-agent
+application and HasIntellect-dictionary inputs. Ground existence stays separate.
+Direct primitive acceptance remains available; no leaf-count penalty applies.
+
+This bounded application is delivered for reassessment. Reopen the episode's
+stronger mechanical attribution on synchronized command/position/load evidence
+or a causal analysis distinguishing active arm contribution from merely being
+available. Reopen the unrelated-respect mapping on a specified motion frame and
+actualization/mover interpretation supported for the same episode. Generalize
+only with an argument covering directions lacking this identified instrument
+organization; repeating another designed machine would not supply that universal
+step. Reopen first-source recognition on a reason distinguishing intrinsic
+intellectual possession from noncognitive intrinsic ordering under the same
+first-source premises. No presently inspected record supplies those additional
+inferences. No sensitivity fixture, hypothetical countermodel or renamed
+objection is introduced.
+
+Self-sweep: two selected primary passages and one source record are added, with
+findings in this existing note/attempt. No source is attributed a metaphysical
+policy, no new philosophical statement/claim is created for activity logging,
+and no predicate, theorem, sense, Challenge or existing proof changes. Reported
+episode, mechanism-based application, physical background inference and global
+warrant remain separate. Only this bounded episode was selected for new source
+reading; no historical/Catholic-evidence campaign is undertaken. Unchanged proof
+and accepted review evidence are reused; new source/corpus/reference and frontier
+checks accompany the returned revision.
+
+Delivered checks: both selected passages materialized successfully and their
+verified text was read; offline source-manifest/claim-binding validation and
+`truth check` pass, with the repository's nonblocking diagnostics. Attribution-
+check finds no new or changed stating claim. `git diff --check` passes. Computed
+`truth frontier-diff --base 77878157a2ac2cfe13c17960b57c12469e61f61f`
+reports **no change** to root-facing premises or support alternatives. No
+unchanged Lean proof, binding, Comparator or NanoDa verification was repeated.
+Fresh semantic review must assess this new evidence/application judgment;
+prior acceptance applies only to the unchanged proofs and earlier findings.

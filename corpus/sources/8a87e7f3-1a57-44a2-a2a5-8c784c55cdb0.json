@@ -1,0 +1,11 @@
+{
+  "id": "8a87e7f3-1a57-44a2-a2a5-8c784c55cdb0",
+  "label": "Vandi Verma et al., First 210 sols of Perseverance robotic operations",
+  "kind": "primary_text",
+  "author": "Vandi Verma and colleagues",
+  "work": "First 210 solar days of Mars 2020 Perseverance Robotic Operations – Mobility, Robotic Arm, Sampling, and Helicopter",
+  "citation_system": "printed page and section numbers; Table 3",
+  "work_urn": "https://robotics.jpl.nasa.gov/media/documents/ro_final_v1.pdf",
+  "catalog_url": "https://robotics.jpl.nasa.gov/media/documents/ro_final_v1.pdf",
+  "notes": "Author/institution-hosted primary engineering report at JPL Robotics. Selected for the bounded director-inheritance application: arm/corer organization and the recorded Rochette sampling episode. The document bears IEEE 2022 and California Institute of Technology 2021 copyright notices. No redistribution or immutable archive fallback is asserted. No author is attributed the metaphysical SameEndMoverSelection policy. Only metadata/hashes/short incipits are committed; no PDF or extracted text."
+}

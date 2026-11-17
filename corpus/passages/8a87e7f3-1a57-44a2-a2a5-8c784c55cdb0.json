@@ -1,0 +1,42 @@
+{
+  "snapshot": {
+    "kind": "web_snapshot",
+    "source_id": "8a87e7f3-1a57-44a2-a2a5-8c784c55cdb0",
+    "source_url": "https://robotics.jpl.nasa.gov/media/documents/ro_final_v1.pdf",
+    "sha256": "sha256:32ba6ed28a8e682903c32424c53ca7d72e01ace083810cc387ab61fb4755077a",
+    "encoding": "utf-8",
+    "language": "eng",
+    "retrieved_at": "2026-11-17T12:33:56Z",
+    "license": "Copyright IEEE 2022 / California Institute of Technology 2021 as stated in the paper; government sponsorship acknowledged. Institution-hosted scholarly reading; no redistribution license asserted. Only hashes, locators and short incipits committed. Hash-pinned live witness; no immutable archive fallback obtained."
+  },
+  "passages": [
+    {
+      "id": "4be77a2d-83c3-4410-a11a-1f35cc42dee4",
+      "label": "Perseverance arm and sampling mechanisms",
+      "locator": "pp.4–5, sections 4–5 (Robotic Arm; Sampling and Caching); adjacent context included",
+      "pdf_pages": {
+        "first": 4,
+        "last": 5
+      },
+      "text_sha256": "sha256:d8360f819596ad4c6172db8e434a426fe06914c26a793b5d9e8991e201c3848e",
+      "incipit": "FPGA which performs stereo correlation and much of the VO processing so quickly",
+      "claim_locator_prefixes": [
+        "pp.4–5,"
+      ]
+    },
+    {
+      "id": "5d7a9b29-3071-413a-a1c4-f91e9f41d089",
+      "label": "Rochette sampling operations in the first 210 sols",
+      "locator": "p.14, Table 3 rows for sols 189–195 and 196–197; arm-use context below",
+      "pdf_pages": {
+        "first": 14,
+        "last": 14
+      },
+      "text_sha256": "sha256:0c7dd2b3cd336c000e08b92ce8f7ba1f4956fb508241c643766b095495b13bda",
+      "incipit": "26 Corer Functional: Unstowed the Corer from its launch position and exercised",
+      "claim_locator_prefixes": [
+        "p.14,"
+      ]
+    }
+  ]
+}
