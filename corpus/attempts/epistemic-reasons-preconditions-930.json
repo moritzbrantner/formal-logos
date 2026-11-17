@@ -7,11 +7,15 @@
     "bea77d88-037f-5ff1-9798-a99bbbc27206",
     "2ca463c2-bd1f-5a13-a395-0e2c57a5ad8f"
   ],
-  "date": "2026-11-05",
+  "date": "2026-11-17",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Completed the bounded conceptual argument in docs/notes/epistemic-reasons-preconditions.md: accepted F6 plus a defended ordinary epistemic-role interpretation requires actual favorable bearing on correctness or warrant, which mere causal influence or reward does not supply by itself. The bare Lean existential has no such encoded semantics. Distinguished role indispensability from ontological irreducibility; retained naturalist/functional, impersonal, constitutive and goal-relative explanations, and the open preference-independent authority bridge. Rejected decorative existential and Reason-to-Favoring transcription proofs. Registered two distinct OPEN analyst existentials for ordinary-role and preference-independent reasons, with sense definitions and shared disambiguation; neither inherits F6 approval. No new theorem, formal model, source attribution, formal inference or root premise discharge; success describes completion of the argument and comparison, not establishment of F6 or certification of the semantic bridge. PR1045 inspected read-only, not imported or changed.",
+  "summary": "Earlier conceptual and conditional-definition findings are preserved in docs/notes/epistemic-reasons-preconditions.md and PR1046. Authority continuation at baseline 956c8280973ea7d9ed085de07c6b2b50c4c9cf06: eight weighted worlds separate report information from independent reward. Exact rational enumeration passed. The goal-relative account explains the support distinction while conditioning force on the accuracy aim. This answers the previous structural test without establishing or refuting actual authority. Existing authority controls and exclusion are reused; PR1646 basing findings do not add categorical force. Constitutive correctness, agency participation, rational basing and cognitive good still require the normative transfer. Accepted F6 remains. The complete proposed judgment, positive authority argument, strongest rival and response, source reading, rejected approaches, self-sweep and exact computed frontier comparison are preserved in the linked note. No new Lean, source claim, graph edge or premise discharge. Success concerns the structural test, not establishment of the target.",
   "evidence": [
-    "PR-1046"
-  ]
+    "PR-1046",
+    "2930b66a-b5e3-4f3f-b2d3-758d84c0e54d",
+    "3f585aa7-636f-4a79-8eab-3f7925367f8d",
+    "PR-1646"
+  ],
+  "blocker": "The inspected approaches do not establish why cognitive good supplies this subject an actual reason when accuracy is not an aim. Next test: a specific account of successful understanding as a good for its bearer and the normative transfer from that good, in the same private belief case. Distinguish functional success from actual reasons and check the supplied preference class. Independent semantic challenge and final CI remain pending with the coordinator."
 }
