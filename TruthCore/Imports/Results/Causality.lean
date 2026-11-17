@@ -148,6 +148,7 @@ public import TruthCore.Results.Causality.EternityDefinitions.PrimitiveCompositi
 public import TruthCore.Results.Causality.EternityDefinitions.RecognitionStrength.Solution
 public import TruthCore.Results.Causality.EventIdentityProfiles.AccessibleTransport.Solution
 public import TruthCore.Results.Causality.EventIdentityProfiles.Solution
+public import TruthCore.Results.Causality.ExistenceAccountIntegration.Solution
 public import TruthCore.Results.Causality.ExistenceSenseRoute.Solution
 public import TruthCore.Results.Causality.ExistentialSelfActualization.Solution
 public import TruthCore.Results.Causality.ExistsSenseMeaning.Solution
@@ -188,6 +189,7 @@ public import TruthCore.Results.Causality.JointGroups.Solution
 public import TruthCore.Results.Causality.LifeBoundaryPotency.Solution
 public import TruthCore.Results.Causality.LocalFramePossibleExternalCause.Solution
 public import TruthCore.Results.Causality.LocalObservationSelectsSolution.Solution
+public import TruthCore.Results.Causality.LocalTeleologyGodIntellect.Solution
 public import TruthCore.Results.Causality.LogicalNecessityProfiles.Solution
 public import TruthCore.Results.Causality.MaximalFromEsseSource.Solution
 public import TruthCore.Results.Causality.MaximalGroundingAsymmetry.Control.Solution

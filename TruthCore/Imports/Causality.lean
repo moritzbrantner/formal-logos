@@ -93,6 +93,7 @@ public import TruthCore.Causality.EssentialPower
 public import TruthCore.Causality.EternityDefinitionFork
 public import TruthCore.Causality.EventIdentityProfiles
 public import TruthCore.Causality.EventStatePreservation
+public import TruthCore.Causality.ExistenceAccountIntegration
 public import TruthCore.Causality.ExistenceActuality
 public import TruthCore.Causality.ExistenceSenseRoute
 public import TruthCore.Causality.ExistentialSelfActualization
@@ -124,6 +125,7 @@ public import TruthCore.Causality.InterventionTransitivity
 public import TruthCore.Causality.JointGroups
 public import TruthCore.Causality.LifeBoundaryPotency
 public import TruthCore.Causality.LocalFramePossibleExternalCause
+public import TruthCore.Causality.LocalTeleologyGodIntellect
 public import TruthCore.Causality.LocalTransmission
 public import TruthCore.Causality.LogicalNecessityContrast
 public import TruthCore.Causality.LogicalNecessityProfiles
