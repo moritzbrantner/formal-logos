@@ -1,0 +1,14 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.CogitoCapacityInterface.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CogitoCapacityInterface.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.CogitoCapacityInterface.certificate",
+    "TruthCore.Results.Causality.CogitoCapacityInterface.thinRecovery"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

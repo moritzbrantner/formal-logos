@@ -1814,3 +1814,145 @@ import/status generation and delivered-head integration CI remain outstanding.
 ### Adapter and role integration review (2026-11-17)
 
 Independent semantic challenge of f4058906f5c494a86bd6d9b6f426c227a62adad7 by GPT-6.1 Sol found no findings across the 14-file delta. It confirmed exact factorization agreement, scenario collisions, event-retaining fallback, fixed-respect transport, primitive obligations and preserved consumer formulas. Mechanical verification was reused, not repeated. Next is one explicit Cogito consumer adoption with a justified intellectual-effect respect and retained exercise-to-capacity premise.
+
+### Selected intellectual-capacity Cogito consumer (2026-11-17)
+
+**Complete proposed outcome for independent semantic challenge.** The sibling
+`CogitoCapacityInterface.inhabitedFromSelectedCapacity` explicitly applies
+`Round4Revisited.inhabitedFromPower` to `bearerProfile p intellectualEffect`.
+It concludes the **existing** `InhabitedConcreteAt m concrete w`, statement
+`56f68b40-9737-59a0-8cac-5610980a1547`, with precisely the six premise statements
+of argument `fe08da3c-27e2-5f0c-b688-400e583d0be3`, in the same order:
+`e81971f1-601c-57f5-be2d-c4b0624d0cad`,
+`30e6e01c-b7f1-536c-86ae-0a9be35dd160`,
+`8cf54bde-0c97-5428-9179-0d567293675d`,
+`8061edec-5af6-5d25-81b4-e1ccd98207fa`,
+`c821487b-9c5e-5836-bf27-dcb47f210c94`, and
+`61b6e188-39aa-57d9-9e0b-dedc05226995`.
+The sibling argument is `660673ca-0506-42b2-9265-00c96fb52cf4`, result
+`39454df8-dd97-46b5-afe8-7ac84a0443b1`. It is honestly classified as
+`instantiation`: consumer adoption supplies no new independent warrant or
+premise discharge. The original frozen contracts remain untouched.
+
+Here the **selected intellectual effect** is performing an act of understanding
+or judging, under suitable cognitive conditions. It need not be the production
+of an inner word, a separate object or an external change. Possession means
+ability for that operation whether or not exercised. A judgement exercised by
+its bearer is an intended application of the exercise-to-capacity premise;
+mere storage of a sentence, or a capacity for locomotion alone, is not that
+application. These are analyst interpretations with attribution deferred, not
+new empirical or historical findings. The generic respect parameter permits a
+specified operation/content class; the theorem does not warrant substituting
+an arbitrary effect for the intended intellectual effect.
+
+No extra capacity definition is needed: `Capacity.possesses` is the existing
+interpreted primitive, with its open effect, conditions and applicability
+obligations. Naming `intellectualEffect` makes the application explicit but does
+not complete a reductive analysis. Suitable conditions must be specified in an
+application without defining them retrospectively as whatever yields success.
+The structure contains no causal mechanism or activation law. The existing
+`IntellectualExerciserHasPowerAt` premise carries the substantive claim that
+an attributed exercise entails the selected ability. It remains unproved;
+its converse (possession entails actual exercise) is neither used nor asserted.
+The capacity-to-concreteness premise and the selected-world existence bridge
+remain equally explicit. No premise says that every event of a bearer is one
+power, or that every existent possesses the selected intellectual capacity.
+
+**Old/new formulas.** `SelectedMapping power p r w` is exactly
+`∀ b, power w b ↔ p.possesses w b r`. Under this explicit assumption,
+`formula_transport` proves equivalence of each of the old exercise-to-power and
+power-to-concreteness formulas with its fixed-respect version. Agreement at
+other worlds, on other respects, or about event identity is unnecessary for this
+consumer. This is a sufficient local mapping for transport, not a claim that
+equivalence of these two formulas alone forces pointwise agreement.
+`thinRecovery` actually consumes the checked generic
+`CapacityInterface.certificate` (result `d26f85e9-262c-426d-888c-2a09fef96a17`)
+for `bearerProfile (fromBearer power) () = power`. The sibling consumer accepts
+an arbitrary indexed capacity and selected respect, beyond the Unit embedding.
+The new certificate result is `401885b1-4a3a-49c6-8d74-a5eba441d304`, statement
+`e68fba46-8eb7-4d84-b8cb-ebf97eaef4fc`.
+
+**Discriminating models.** One world, bearer and episode are Unit; the episode
+occurs, is borne and is attributed an intellectual exercise; the bearer exists.
+There are two respects, Bool. `otherPower` is possessed only at false, while the
+selected intellectual respect is true. Nothing is concrete.
+`MissingActivation` retains all four noncapacity premises and
+power-to-concreteness (vacuously for the absent selected capacity), while
+exercise-to-selected-capacity and the conclusion fail. Despite its short name,
+this tests the *exercise-to-possession* direction, not possession-to-activation.
+Thus an actual exercise is not identified definitionally with capacity.
+`MissingMapping` instead makes the old thin profile everywhere true: old
+exercise-to-power and selected-profile-to-concreteness hold, but their local
+mapping and the conclusion fail. This is a concrete mixed-profile inference
+failure. The original old-profile concreteness premise would be false here;
+the model is not advertised as satisfying the original complete bundle.
+Neither model supports doubt about actual exercise or real capacity: each
+establishes only the precise logical omission failure it was built to test.
+No substantive objection to the scoped conditional adoption was identified.
+
+**Claim/type self-sweep.** The consumer retains the exact six premise constants,
+world, bearer, episode and concrete predicate, with the identical fixed-respect
+profile in both capacity premises. The independent formula/control certificate
+has no external premises; its universally quantified mapping occurs inside a
+conditional, not as an asserted global correspondence. The derived occurrence
+to population bridge is annotated as the conclusion of the complete bundle;
+the capacity-to-concreteness premise is the explicit bridge to the chosen
+CONCRETE_6 predicate, not an equivalence of causal and esse criteria. No new
+source/claim record, owner commitment, primitive, sense or allowlist is added.
+The raw `concrete` parameter still needs its intended esse interpretation; the
+Lean theorem does not establish that interpretation. No sourcehood, finite
+support, persistence, necessity or root truth is inferred.
+
+**Premise comparison and root connection.** The existing conclusion reaches the
+Catholicism root in the corpus graph; the context command reports no enumerated
+root route specifically touching this argument. We add an explicit sibling at
+that same graph destination, not a newly established route or a discharge.
+The computed `truth frontier-diff --base
+d69634db451aabb99ba0be7f2c231747169a478f` reports **no change**: root-reaching open
+premises 490 → 490 (349 bare, 90 supported, 51 stated), lowest expanded route
+cost 16 → 16, verified support alternatives 489 → 489, added 0. This is expected
+for an instantiation plus a transport/control certificate; no premise is
+removed or replaced. Direct assumption and all previous support options remain.
+
+The bounded semantic question is answered conditionally: this actual Cogito
+consumer can use a specified intellectual-effect profile without global event
+collapse or an existence-to-that-respect principle. Actual applicability still
+requires interpreting the intellectual operation, its suitable conditions,
+exercise attribution and the two metaphysical bridges. Next discriminating
+work is to defend that exercise-to-ability application on a specified judgement
+and conditions, or compare a positively justified rival account of that same
+operation. No unsupported rival is invented. Independent challenge should test
+the selected-effect interpretation, formula correspondence, finite witnesses,
+bridge annotations and the instantiation/closure boundary before substantive
+integration.
+
+**Worker evidence and exact readiness boundary.** Checkout:
+`/home/moenarch/.t3/worktrees/truth-core/t3-fa5a0c4a-037c0c7f5743a85b`,
+baseline `d69634db451aabb99ba0be7f2c231747169a478f`. Shared conventions were
+read from the supplied resolved stack, sourceRevision
+`15f348b072188255da837578eaafc8a98f12fdf0`. No preflight was repeated.
+The worktree initially lacked `.lake`; direct focused Lean compilation used
+read-only warm parent imports with temporary local output modules under
+`/tmp/cogito-capacity-olean`, through worker_env and the heavy-job lock. Vocabulary,
+Solution and generated Challenge compiled; only the expected frozen Challenge
+`sorry` warnings occurred. This is new-module compilation, not a full Lake build.
+The two-result BindTypes export against those modules reports **2 bound, 0
+pinned, 0 mismatch**. The command still exits 1 on a global Maximal/Maximum alias
+report (`4f1d0cf6`); no unrelated alias repair or allowlist change was attempted.
+Comparator starts its own sandboxed `lake build` in this unprepared worktree,
+attempts to fetch mathlib revision `56a005855ea17e0b0958f73ec801ae140b0a1679`,
+and fails `cannot exec 'remote-https': Permission denied`. This is an environment
+readiness failure, not a theorem rejection; no cold build was continued.
+Comparator/NanoDa remain **unverified for this slice**. The coordinator should
+prepare the warm local artifacts, then run scoped binding and
+`scripts/verify-result.sh` for the two new result IDs above, reuse the unchanged
+focused proofs, and retain required final CI. Generated imports, status caches
+and any global alias reconciliation remain coordinator-owned.
+
+Axiom inspection on the compiled final modules reports **none** for
+`inhabitedFromSelectedCapacity` and `certificate`; `thinRecovery` inherits
+`[propext, Classical.choice, Quot.sound]` through the reused generic certificate.
+Spec regeneration is unchanged; offline `truth check` and `git diff --check`
+pass (existing/backfill lexical and status warnings remain). The generated
+certificate dossier was inspected after recording the attempt. These results
+are focused evidence only and do not change the pending gates above.
