@@ -194,6 +194,7 @@ pub struct BriefArgs {
     /// Whether either was given.
     pub flags: bool,
     pub question: Option<String>,
+    pub assessments_for: Option<String>,
     pub statement: Option<String>,
 }
 
@@ -429,7 +430,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                 }
             }
             "--full-evidence" => parsed.full_evidence = true,
-            "--question" | "--statement" => {
+            "--question" | "--statement" | "--assessments-for" => {
                 parsed.brief.flags = true;
                 let value = args
                     .next()
@@ -437,7 +438,9 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                     .filter(|value| !value.trim().is_empty())
                     .ok_or_else(|| usage(format!("{arg} requires a nonempty UTF-8 value")))?
                     .to_owned();
-                if arg == "--question" {
+                if arg == "--assessments-for" {
+                    parsed.brief.assessments_for = Some(value);
+                } else if arg == "--question" {
                     parsed.brief.question = Some(value);
                 } else {
                     parsed.brief.statement = Some(value);

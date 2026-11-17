@@ -223,4 +223,50 @@ fn index_brief_novelty_dossier_context() {
     assert_eq!(ids(&context["premises"], "statement_id"), [STATEMENT_B]);
     assert_eq!(context["lean"][0]["theorem"], "TruthCore.Fix.fixBC");
     assert_eq!(context["lean"][0]["status"], "verified");
+
+    // 6. The current-case batch resolves aliases and returns only compact
+    // assessment excerpts, without constructing a full brief per premise.
+    write(
+        root,
+        "docs/notes/case-assessment.md",
+        &format!(
+            "# Case note\n\n`{STATEMENT_B}`\n\n## Provisional judgment\n\nThe narrower premise has positive warrant.\n"
+        ),
+    );
+    let batch = truth(
+        root,
+        &[
+            "brief",
+            "--assessments-for",
+            &format!("{STATEMENT_B},STMT-C"),
+        ],
+    );
+    let excerpts = batch["statements"][STATEMENT_B].as_array().unwrap();
+    let own: Vec<_> = excerpts
+        .iter()
+        .filter(|entry| entry["path"] == "docs/notes/case-assessment.md")
+        .collect();
+    assert_eq!(own.len(), 1);
+    assert!(
+        own[0]["excerpt"]
+            .as_str()
+            .unwrap()
+            .contains("positive warrant")
+    );
+    assert!(batch.get("arguments").is_none());
+    assert!(!batch["input_identity"].is_null());
+    let invalid = Command::new(BINARY)
+        .arg("--root")
+        .arg(root)
+        .args([
+            "--json",
+            "brief",
+            "--assessments-for",
+            STATEMENT_B,
+            "--question",
+            "mover",
+        ])
+        .output()
+        .unwrap();
+    assert!(!invalid.status.success());
 }
