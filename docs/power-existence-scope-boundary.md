@@ -1627,3 +1627,186 @@ its primitive classification is now computed. The selected boundary result
 Final CI remains required. Prepared artifacts were copied into both research
 worktrees for the continuing interface and vocabulary work; they do not verify
 subsequent edits.
+## Indexed capacity adapter (#1659, #1652; continuation)
+
+This continuation is a delta from `38fc9e1f33691eb5735e730f5154eaf98e89c6f9`.
+The coordinator authorized a narrow adapter and its own result bundle, leaving
+existing consumer modules and frozen Challenges untouched. The earlier audit's
+missing interface is addressed here; its philosophical application burdens
+remain. The coordinator's review correction to the `exercise` entry is also
+applied: remove both broad disambiguation links, preserve all four direct DEF
+links. Capacity or PureAct alone must not license a use of the word exercise.
+Intellectual-operation coverage remains pending in its own family.
+
+### Meaning, representation and exact agreement condition
+
+`TruthCore.Causality.CapacityInterface.Capacity W B R` supplies the primitive
+`possesses w b r`: bearer b has the capacity for the specified effect/respect r
+in situation w, including when not exercised. It provides no causal direction,
+activation law, effect occurrence, source status, existential support,
+concreteness, or cross-world persistence. A disconnected charged battery is an
+illustration of possession distinct from exercise, not a newly sourced claim.
+Situation may represent a world or a time-sensitive context; the adapter imposes
+no interpretation of time or accessibility on it. A respect must distinguish
+powers for different effects when that difference matters to the application.
+
+The adapter is more than a new name for an arbitrary predicate: it exposes and
+tests the exact information loss involved in the proposed reuse. `Indexing`
+supplies three maps: scenario → situation, event → bearer, event → respect.
+`eventProfile` reads possession at those indices. `Corresponds` requires
+pointwise equivalence with the original `cap s e`, for **all** scenario/event
+pairs. This is stronger than agreement only on allowed scenarios; an application
+needing only allowed scenarios should explicitly restrict the index domain.
+
+`FiberAgreement` says that whenever two pairs (s,e), (t,f) map to the same
+situation, bearer and respect, `cap s e ↔ cap t f`. It includes different events
+of one bearer/respect and different scenarios mapped to one situation. No
+injectivity or surjectivity is assumed. The proposed `Factorization` theorem
+states exactly:
+
+```
+FiberAgreement i cap ↔ ∃ p : Capacity W B R, Corresponds i cap p
+```
+
+It also supplies a canonical witness `descend`: possession holds if some
+scenario/event pair maps to those three indices and has capacity. Forward
+recovery uses the agreement assumption; reverse necessity uses equality of the
+three possession arguments. `descend` is false outside the represented image.
+This is a mathematical extension choice, not evidence that unmapped bearers or
+respects lack capacity. Correspondence does not determine values there.
+No claim of global uniqueness of the resulting capacity profile is made.
+
+The finite controls can fail in exactly the intended way. With one scenario,
+two Boolean events, one bearer and one respect, assign capacity only to event
+true. No profile on the collapsed indices can recover both truth values.
+A separate control holds event/bearer/respect fixed while identifying two
+Boolean scenarios with different capacity values. Conversely one bearer can
+have different capacities for the two different Boolean respects without any
+contradiction. These are logical controls on representation, not objections to
+metaphysical capacity or evidence against any existing source premise.
+
+### Lossless fallback and actual consumers
+
+An arbitrary event profile need not meet `FiberAgreement`. `fromEvents` therefore
+retains the original scenario, the **actual** `Exercise.bearer` mapping, and the
+pair `(specified respect, event identity)`. Its possession clause checks that
+the retained event belongs to that bearer and respect and then reads the original
+capacity. `retainedIndex` recovers the original profile exactly. This works when
+multiple events have the same bearer/respect because their identities remain;
+it does not prove that identity can subsequently be forgotten. No new Exercise,
+group, occurrence table or activation claim is invented.
+
+`fromBearer` embeds an existing `hasCausalPower : W → B → Prop` with a Unit
+respect. This represents its already selected or unspecified respect; it does
+not assert that every distinct power has the same truth value. `bearerProfile p r`
+fixes one explicit respect and yields the exact W → B → Prop interface. It does
+not silently existentially aggregate powers over respects. The round trip of a
+thin profile is definitionally equal to that original profile.
+
+The certificate's `BorrowedTransport` instantiates `exerciseIndex` with an
+existing Exercise, a scenario/situation map and an event/respect map. Under
+`Corresponds`, its actual `Borrowed`, `Retained` and `PowerRequired` formulas
+are preserved. Pointwise equivalence gives equality of the profiles, so these
+are the same claims about the same groups, occurrences, allowed scenarios and
+actual scenario, not reinterpreted approximations. `PowerRequired` remains a
+separate premise; the adapter neither proves it nor supplies a converse from
+capacity to exercise.
+
+`RootConsumerTransport` explicitly uses the existing
+`EveryExistentHasCausalPowerAt`, `IntellectualExerciserHasPowerAt` and
+`PowerRequiresConcreteAt` declarations with the recovered thin profile. It
+proves equivalence to their original formulas, not existence-to-power,
+intellect-to-power or concreteness themselves. This is the precise connection
+to the same Eleatic/Cogito root-route inputs audited above. Existing consumers
+are unchanged, so the new primitive is available through an adapter, not
+silently substituted for their supplied parameters. The new certificate is
+not wired as a root premise and claims no root discharge.
+
+`ExistingControls` reuses the original `instrument_regress`, `secondary_regress`
+and `power_omission` theorems of the BorrowedExercise Solution. Their exact
+`capOccurs`/`capAll` assignments and no-power omission are unchanged. The general
+`fromEvents` round trip applies to each original profile, including the all-false
+profile of PowerOmission. No activation axiom is added to rule it out by fiat.
+These are reused evidence, not newly discovered rival defeats. A common-bearer
+factorization of an arbitrary profile would be false; the finite control is
+positive evidence for retaining the agreement condition, rather than a merely
+conceivable objection.
+
+### Proposed outcome, self-sweep and integration boundary
+
+All five sense UUIDs and labels remain stable. `_1` now names
+`CapacityInterface.Capacity.possesses`, with a `formal_gap` describing its
+primitive meaning, examples, exclusions and application obligations. `_2`
+through `_5` remain exactly as in the previous commit. The new interface is an
+explicit primitive plus substantive adapter conditions; it is not a completed
+reductive analysis of causal ability. No source or claim record is added.
+
+The bounded bundle is `specs/capacity-interface.toml`, vocabulary
+`TruthCore/Causality/CapacityInterface.lean`, and new
+`TruthCore/Results/Causality/CapacityInterface/{Solution,Challenge}.lean`.
+Result `d26f85e9-262c-426d-888c-2a09fef96a17` binds
+`TruthCore.Results.Causality.CapacityInterface.certificate` to statement
+`813bbcdf-df59-49fe-93f6-54d505259540` (`CapacityInterface.Certificate`).
+Argument `6acc63b4-5d25-4fcb-a1ee-ddcd2351aa43` has no external premises:
+the universally quantified correspondence and agreement assumptions occur
+inside the explicitly conditional conclusions, not as hidden philosophical
+commitments. The conjunction retains the exact old controls. The self-sweep
+checks all quantifiers, the fixed respect of the thin adapter, actual bearer
+preservation, the possibility of many events per bearer/respect, cross-scenario
+collisions, and the distinction between a represented profile and its real
+applicability. No new historical attribution or source-fidelity claim occurs.
+
+Shared imports, generated formal status, allowlists and existing consumer specs
+remain coordinator-owned. The coordinator must generate imports for the new
+modules on integration; a focused build directly targets the Solution without
+requiring a root-aggregator edit. The generic consumers' raw parameters still
+need an explicit adapter adoption if future sense binding is to reach the new
+constant. That migration is separate from this representation theorem.
+
+The substantive reassessment point is now precise: exact mathematical reuse
+requires agreement on the indices actually forgotten, and the event-retaining
+adapter supplies a lossless alternative when such agreement is unavailable.
+Application to a chosen real power still needs its effect/respect, scenario
+interpretation and activation evidence. No additional philosophical objection
+to this scoped representation was identified. The earlier source-free account
+remains a standing rival about explanatory Supply, untouched by these adapters.
+The next discriminating application is to choose one actual root-route profile
+and justify its index correspondence, rather than assume all events of a bearer
+instantiate one power. Publication still requires independent semantic challenge
+of this new adapter outcome.
+
+### Focused verification of the adapter slice
+
+The coordinator subsequently supplied copied pinned packages and a completed
+warm build, resolving the earlier readiness gap. Under
+`flock /tmp/moenarch/truth-core-heavy.lock`, through `worker_env.py`:
+
+- `lake build TruthCore.Results.Causality.CapacityInterface.Solution` passed.
+- `truth bind-check --result d26f85e9-262c-426d-888c-2a09fef96a17` reported
+  **1 bound, 0 pinned, 0 mismatch**, including the declared capacity sense.
+- `scripts/verify-result.sh d26f85e9-262c-426d-888c-2a09fef96a17` passed
+  Comparator and its independent NanoDa solution check. The generated frozen
+  Challenge contains the expected `sorry`; the Solution contains none.
+- The exact certificate's axiom report is `[propext, Classical.choice,
+  Quot.sound]`. Its spec permits precisely this standard policy set. The first
+  generated zero-axiom config rejected `Quot.sound`; the spec was corrected to
+  the actual extensional/classical dependency set and regenerated. No new axiom
+  or weakened philosophical premise was introduced. This result is not evidence
+  against the intuitionist rival or for excluded middle.
+- The existing `DefinitionStatus.lean` exporter, with the new vocabulary as
+  `root_module` and only `Capacity.possesses` requested, returned `found: true`,
+  `kind: projection`, `proof: false`, `parameter_wrapper: false`. This is focused
+  evidence for the explicit primitive boundary, not a shared-cache refresh.
+
+Offline corpus validation, bundle audit, module-format check, spec regeneration
+check, sense/definition/lexicon ratchets and whitespace check passed. Lexical
+backfill warnings and missing generated status entries remain visible. No global
+allowlist, generated formal-status cache or import aggregator was edited.
+The existing transmission-boundary verification supplied by the coordinator was
+not repeated. The computed frontier delta against
+`38fc9e1f33691eb5735e730f5154eaf98e89c6f9` is **no change**, zero support
+alternatives added on root routes. The local checks cover the unchanged final
+Lean sources and binding; later prose changes record their outcome and do not
+alter the checked theorem. The exact new result ID above is the reproduction
+entry point. Independent review of this new consequential interface, shared
+import/status generation and delivered-head integration CI remain outstanding.
