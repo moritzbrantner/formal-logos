@@ -1,0 +1,19 @@
+{
+  "id": "4cd8b464-deb8-488b-bd71-0926a004fb45",
+  "label": "Identity-source ascent from absolute reception limitation (inference)",
+  "input_statement_ids": [
+    "6dfe01ab-e3f2-5a4c-b102-701c161f2cf7",
+    "7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2",
+    "14325c83-1c3f-5afb-b63f-52b0c2b2a326",
+    "da72ae93-5c8d-4717-8c17-97eeb8037317",
+    "7de89edb-e3a8-59ee-9740-8d0ce7c8ea24",
+    "1304b462-4a10-5dd0-995a-db5feb21d98e",
+    "fd2c8710-988f-527f-a81a-2566fe10e3f9",
+    "9eaa3b6e-ad2f-5776-ab26-03cfa9f54ad8"
+  ],
+  "output_statement_id": "8176a284-769b-4ed0-b90b-ff655b7fd864",
+  "rule": "Exclude all source reception, derive absolute nonlimitation, then compare received limited esse through the existing degree interfaces",
+  "meaning": "An alleged reception of the identity source would place its own esse in receptive potency to itself, excluded by the three explicit reception inputs. The limitation-only-through-reception premise therefore excludes absolute limitation of that source. The existing external-cause-to-reception bridge and received-esse-is-limited premise give limited esse of the distinct effect. The existing limited-esse-approaches-less and degree-to-more bridges yield strict MoreIn at the same esse. The degree premise is instantiated at Unit, so it demands comparison only for esse; no physical measurement or total order is assumed. This replaces recipient-relative freedom by absolute nonlimitation only for the identity-source scope. It does not derive the full cffad050 or 7030af77 principles. All eight premises and identity/receipt applicability retain their warrant burdens. The da72ae93 receipt bridge is a direct support option here; deriving it via the Fourth Way would return to the target and add no independent warrant.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -60,7 +60,7 @@ disambiguations = ["DISAMB-CAUSE"]
 [[statement]]
 id = "STMT-UNLIMITED-POSSESSION-EXCEEDS-LIMITED"
 lean = "UnlimitedPossessionExceedsLimited"
-paraphrase = "OPEN analyst premise: if c has r, x has r limited by x's own capacity, and c's having r is not limited by x, then c is more r than x."
+paraphrase = "OPEN analyst premise: if c has r, x has r limited by x's own capacity, and c's having r is not limited by x, then c is more r than x. Recipient-relative nonlimitation is not absolute nonlimitation: the existing degree derivation adds the substantive premise that not being limited by z places the possessor beyond z's capacity. Under an actual-reception reading, combination with limitation-implies-reception and asymmetric comparison has the checked cross-reception/receiving-essence consequence1de3bff1; no actual counterexample is asserted by that certificate. The existence-only common-source route now also has the weaker actual identity-source ascent8176a284, supported through explicit absolute-reception limitation premises rather than this relative step. Direct primitive acceptance remains available under a warranted capacity/order application. Complete current warrant judgment and retained source/transfer context: docs/notes/causal-perfection-transfer.md, Recipient-relative limitation and source-scoped ascent (2026-11-17)."
 definitions = ["DEF-ACT", "DEF-PERFECTION-LIMITED-BY", "DEF-MORE-IN"]
 disambiguations = ["DISAMB-IN-ACT"]
 

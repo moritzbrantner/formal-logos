@@ -1,0 +1,15 @@
+{
+  "id": "82391771-a2e3-4e20-8455-13117c3cfa1a",
+  "label": "Common esse ancestry yields maximal causality with identity-source ascent only (inference)",
+  "input_statement_ids": [
+    "c35b1a5c-6405-449b-993b-8196b2457e08",
+    "b4987085-f7b0-4031-a795-364873d3c216",
+    "8176a284-769b-4ed0-b90b-ff655b7fd864",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7",
+  "rule": "Retain the selected ancestor identity when identifying every maximum with the same actual source",
+  "meaning": "Sibling of f4df2153 replacing only full causal ascent cffad050 by its actual identity-source restriction. CommonEsseIsEssenceSource supplies the actual n and its represented identity; composition collapses the existing chains into n's esse causality. For a distinct actual maximum m, scoped ascent places n above m, contradiction. Explicit excluded middle identifies every maximum with n. The accepted twelve-input fixed-esse consumer c98328f1 takes the unchanged conclusion da09703b into GodExists. No common-source selection, composition, existence, naming or current productive-support applicability burden is discharged.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

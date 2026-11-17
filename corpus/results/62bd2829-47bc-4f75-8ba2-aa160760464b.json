@@ -1,0 +1,11 @@
+{
+  "id": "62bd2829-47bc-4f75-8ba2-aa160760464b",
+  "label": "Identity-source ascent from absolute reception limitation",
+  "argument_id": "142d2d1d-b562-4b9f-b010-cbdcf4b14ff7",
+  "challenge_module": "TruthCore.Results.Causality.SourceScopedAscent.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SourceScopedAscent.Solution",
+  "theorem": "TruthCore.Results.Causality.SourceScopedAscent.identityAscentFromReception",
+  "comparator_config": "results/62bd2829-47bc-4f75-8ba2-aa160760464b/comparator.json",
+  "status": "solution-present",
+  "description": "An alleged reception of the identity source would place its own esse in receptive potency to itself, excluded by the three explicit reception inputs. The limitation-only-through-reception premise therefore excludes absolute limitation of that source. The existing external-cause-to-reception bridge and received-esse-is-limited premise give limited esse of the distinct effect. The existing limited-esse-approaches-less and degree-to-more bridges yield strict MoreIn at the same esse. The degree premise is instantiated at Unit, so it demands comparison only for esse; no physical measurement or total order is assumed. This replaces recipient-relative freedom by absolute nonlimitation only for the identity-source scope. It does not derive the full cffad050 or 7030af77 principles. All eight premises and identity/receipt applicability retain their warrant burdens. The da72ae93 receipt bridge is a direct support option here; deriving it via the Fourth Way would return to the target and add no independent warrant."
+}

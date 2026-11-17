@@ -317,6 +317,7 @@ public import TruthCore.Results.Causality.SelfOperationLife.Solution
 public import TruthCore.Results.Causality.SourceForest.Solution
 public import TruthCore.Results.Causality.SourceForestInterop.Solution
 public import TruthCore.Results.Causality.SourceFunctionalityWellFounded.Solution
+public import TruthCore.Results.Causality.SourceScopedAscent.Solution
 public import TruthCore.Results.Causality.SourceWitness.Solution
 public import TruthCore.Results.Causality.SpineRivalsAttributes.Solution
 public import TruthCore.Results.Causality.SpineRivalsRootEsse.Solution

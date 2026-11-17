@@ -671,3 +671,255 @@ boundary above is kept. SUBSISTENT-INFINITY-RECEPTION-CONTROLS shows that each
 premise is needed. The two unattributed generalizations, and the question
 whether reception exhausts limitation, remain the open burdens
 (ATTEMPT-SUBSISTENT-INFINITY-FROM-RECEPTION-20261105).
+
+## Recipient-relative limitation and source-scoped ascent (2026-11-17)
+
+**Current conclusion.** The existence-only source-first route can use a weaker,
+better delimited ascent principle: an actual esse–essence identity bearer
+strictly exceeds the actual others whose esse it causes. The new derivation
+establishes absolute nonlimitation of that source through the retained reception
+premises before comparing it with a limited recipient. It does not treat freedom
+from **this** recipient's constraint as freedom from every constraint. The
+remaining absolute-limitation/degree comparison is substantive and explicit.
+The original all-causes ascent and recipient-relative principles remain direct
+support options; neither is established or refuted by the new derivation.
+
+**Target and reuse.** The load-bearing input is `cffad050`, used by argument
+`f4df2153` to turn common esse ancestry and composition into fixed-esse maximal
+causality `da09703b`. Its received-limitation derivation `fa1d11a9` / result
+`d9958e2c` uses `7030af77` (`UnlimitedPossessionExceedsLimited`). The latter's
+existing degree derivation is `Round2PerfectionPrimacy.unlimitedPossessionExceedsLimited`,
+result `8c6d4065`. Related/dossier/brief/novelty/context retrieval and the dossiers
+of all eight new support inputs were inspected. Existing batch/rejected-edge,
+reception-limitation, transfer and possession-only work is reused, especially
+[the modal-spine capacity/order assessment](modal-spine.md) and
+[the same-witness existence route](maximum-definition-fork.md#current-existence-bundle-judgment-select-the-cause-before-identifying-the-maximum-2026-11-17).
+The warning about relative versus absolute nonlimitation is retained evidence,
+not a new discovery. The scope reduction and the two linked consequence tests
+below are this continuation's new formal work. No historical witness was fetched
+or newly attributed.
+
+**What the old step says.** With the existing dictionaries fixed, `7030af77` is
+`InAct c r → LimitedBy x r x → ¬ LimitedBy c r x → MoreIn r c x`.
+No cause hypothesis occurs in it. In `d9958e2c`, actual cause-of-esse supplies
+source actuality; the effect's caused perfection is received and limited in it;
+nonreception of the cause's perfection in that effect plus limitation-implies-
+reception excludes that one limit. The final comparative step is entirely
+`7030af77`. The earlier degree proof makes the extra assumption explicit:
+`UnlimitedHavingExceedsCapacity` says any actual possessor not limited by z
+exceeds z's capacity. Together with the effect's degree being within its own
+capacity and greater-degree-implies-MoreIn, this yields strict superiority.
+It does not derive that extra assumption from relative causal independence.
+
+A capacity bound and an actual receiving role must be distinguished. If
+LimitedBy means a numerical bound, exceeding the bound can support the degree
+inference when comparison is applicable; merely falling within another's
+capacity does not establish actual reception there. If it means the restriction
+actually imposed by a recipient, absence of that role need not remove a limit
+imposed elsewhere. The existing bridges connect these contents; their names do
+not prove that connection. This is a comparison of application accounts for the
+old premises, not a newly completed sense fork or a redefinition of LimitedBy.
+
+**A discriminating consequence, not an imagined counterexample.** New result
+`1de3bff1` / argument `534c19d4` has two checked conjuncts:
+
+- `7030af77`, limitation-implies-reception `39a4c28c`, asymmetric MoreIn and
+  explicit excluded middle force `ReceivedIn a r b ∨ ReceivedIn b r a` for any
+  two actual self-limited possessors. Without either reception, the relative
+  step makes each strictly exceed the other, contradicting asymmetry.
+- Under the explicit esse recipient dictionary
+  `ReceivedIn a () b := Received a (p.essenceOf b)`, the same consequence plus
+  own-essence reception forces `p.essenceOf a = p.essenceOf b` for every two
+  actual self-limited possessors. The one-point respect represents esse only;
+  no nonesse interpretation is imposed.
+
+This identifies an internal application problem for a blanket role-based
+reading. The positive reception account itself allows finite received natures
+of different kinds, with each act received in its own essence. That supplies
+a mechanism and justification for examining non-cross-receiving recipients:
+reception belongs to their distinct own quiddities, rather than to one another.
+The certificate exposes what the relative bundle would require of that account;
+it is not a certificate that a metaphysically possible pair or an actual esse
+cause of equal degree has been found. Its essence equality is conditional on
+the displayed recipient-role interpretation and on both self-limitation facts.
+If that interpretation is declined, its actual application must be replaced,
+not silently inferred from the word capacity. The old omission controls are
+retained as dependency evidence only; no new arbitrary finite fixture is added.
+
+Thus the strongest supported rival mechanism is finite received actualities
+with distinct determining recipients, and law/capacity-mediated efficacy that
+need not itself be a higher formal instance of the produced perfection. The
+source tradition's received finite natures and the earlier capacity/order
+analysis support this mechanism against the **role-to-degree inference**.
+They do not establish an equal-grade contemporary productive cause of esse.
+No substantive counterexample to the narrower unreceived-source ascent was
+identified. Originating human generation cannot refute it merely by having an
+equal-kind offspring; its inclusion in the selected esse-cause dictionary would
+itself need warrant. The current productive-support application remains separate.
+
+**New strength sibling and positive support bundle.** Statement `8176a284`,
+`SourceScopedAscent.IdentityCauseAscent`, transparently restricts `cffad050` to
+actual source and target, with `p.esseOf c = p.essenceOf c`. It introduces no
+new causal or degree relation. Result `30c1203b` / argument `32127cb9` derives
+it from `cffad050` alone; relation `c767746e` registers that strength order.
+This is a scope restriction, not a sense change. No strictness countermodel or
+absolute logical minimality claim is made. Direct primitive acceptance remains
+available alongside the following derived support option.
+
+Result `62bd2829` / argument `142d2d1d` uses exactly eight existing inputs:
+
+- own-essence reception `6dfe01ab`, receiver-to-act potency `7fcfcee8`, and
+  no self-receptive-potency `14325c83`;
+- caused esse is received `da72ae93`, received esse is limited `7de89edb`, and
+  limited esse requires some reception `1304b462`;
+- absolute limited-esse-approaches-less `fd2c8710`, and greater-degree-is-MoreIn
+  `9eaa3b6e`, the latter instantiated at the one-point esse respect.
+
+Any alleged reception of the identity source would put its esse in receptive
+potency to itself. Excluding **all** such reception and applying `1304b462`
+therefore excludes absolute limitation of that source. The distinct effect is
+received and limited through the explicit causal receipt and limitation inputs.
+Only then do the last two interfaces yield strict MoreIn at the SAME esse.
+No generic perfection-to-reception, no anti-reception-in-this-effect premise,
+no relative-capacity-exceeds premise and no transfer-to-every-perfection is
+used. This does not erase the new bundle's application obligations. In
+particular, deriving `da72ae93` through its existing Fourth-Way route would
+return through the target; here its direct receipt rationale is the support
+option. The broad imported module's theological conclusions are not premises.
+
+The positive warrant is participation and derivative efficacy: the recipient
+has a delimited act through another, while the unreceived source's act is not
+contracted by a receiving principle. If MoreIn measures formal fullness of
+esse, strict limitation versus unrestricted fullness motivates a strict
+comparison. This is more informative than nonlimitation by one individual.
+`fd2c8710` and the degree calibration remain the explicit generalization of that
+account, not a definition of the desired order. Degrees range over a supplied
+preorder, not physical quantities; total comparison or a numerical infinity
+is not assumed. Defining a binary degree from the Limited predicate would make
+one interface automatic but transfer the entire warrant burden to degree-to-
+MoreIn. That construction would not be corroboration and is not added.
+
+**Strictness, possession and application.** Mere noninferiority does not identify
+a maximal m with the source n: a tied m can still have no strict superior.
+The new proof needs strict MoreIn only from the actual identity source to a
+distinct actual m, not from every received intermediate cause. Inclusive
+formal-or-eminent InAct is retained. Power to produce a perfection, formal
+exemplification of it, eminent containment and a higher common degree are
+separate claims. Neither a formal temperature comparison nor merely naming a
+power eminent warrants the esse comparison. If eminence is understood as power,
+that can motivate causal possession while leaving strict degree superiority
+substantive. If it means independently specified containment, its application
+requires that content. No new eminence sense is silently installed here.
+
+**Exact consumer and cumulative judgment.** Result `47efe91a` / argument
+`0609389b` replaces only `cffad050` by `8176a284` in the accepted four-input
+source-first argument; common source `c35b1a5c`, composition `b4987085` and
+excluded middle `ee4ab504` are retained. The source's previously unused identity
+is now consumed. Composition gives its esse-causal scope, and scoped ascent
+identifies every actual maximum with that same n. The unchanged fixed-esse
+consumer `c98328f1` / result `d8cb586a` carries `da09703b` into GodExists with
+its other eleven inputs. There is no new God naming or witness substitution.
+Common-nature/source selection, ancestry/no-regress, composition, existence,
+actual-ground correspondence, transfer and nominal-description burdens remain.
+A fundamental natural universal source is not excluded by this stage's name;
+later attributes and identification remain distinct.
+
+Provisional judgment: prefer the **source-scoped absolute-limitation bundle**
+as the available positive rationale for this existence route. It avoids a
+specific overreach of the blanket recipient-relative account while preserving
+participation's substantive explanatory content. The old relative rule may be
+considered directly under an independently defended capacity/order application;
+the new results do not settle that application or disprove full causal ascent.
+The stricter-source conclusion is conditionally supported, not established;
+no new theorem establishes receipt, limitation, grading or real-world productive
+support. The rival above targets an actual inference rather than merely
+asserting another limiter is conceivable, and its relevance stops short of a
+counterexample to the absolute unreceived-source account.
+
+**Rejected approaches and next test.** Rejected: paraphrasing relative freedom
+as absolute unlimitedness; treating the degree decomposition as independent
+warrant for its beyond-capacity input; importing physical degree or formal
+possession into an eminent-esse comparison; substituting no-less for strict
+more; redoing generic omission fixtures; and returning through Fourth-Way
+causation to justify its receipt input. The scoped consequence and its common-
+source application are resolved under the displayed inputs. A distinct next
+warrant test is `fd2c8710` with `9eaa3b6e`: specify the same esse-fullness degree
+independently of the desired source/effect order, and explain what makes a
+limited recipient strictly below the unreceived source on that degree while
+preserving formal/eminent possession. Reopen the broader relative route with
+a justified capacity calibration that answers the cross-reception/receiving-
+essence consequence, or a positively warranted same-esse counterexample. More
+models or a renamed order axiom would not answer these questions.
+
+**Claim/type self-sweep.** New ascent vocabulary is a transparent restriction,
+not an opaque metaphysical flag. Old definitions, claims, Challenges and source
+attributions remain unchanged; no new source claim or established status is
+created. The audit has explicit internal hypotheses and asserts no actual pair
+or premise refutation. All proof inputs use the same respective cause, receiver,
+limitation, comparative and esse dictionaries. Principle-valued reception is
+not silently equated with recipient-being reception: their adapter appears in
+the second audit conjunct only. The source support proof uses the former
+throughout. Its world-free, mode-unspecified CIn does not become present
+productive support through this proof. Final focused verification, computed
+frontier comparison and reproduction evidence follow below; fresh independent
+semantic review of this full proposed outcome precedes publication.
+
+### Focused verification and computed delta for the ascent continuation
+
+Final Solution/Challenge builds, binding (one bound / zero mismatches per result),
+Comparator and NanoDa passed for all four new results. All four theorems have
+zero axioms. Exact result IDs:
+
+```text
+30c1203b-5067-4fa8-824b-fa11e762e35f  restrictAscent
+62bd2829-47bc-4f75-8ba2-aa160760464b  identityAscentFromReception
+47efe91a-7ac9-445b-b99c-91c36acf7903  maximalCausesFromIdentityAscent
+1de3bff1-efaf-4622-a5b6-2aa3e800932d  crossReception (both audit conjuncts)
+```
+
+Reproduce the focused build with
+`python3 scripts/worker_env.py -- lake build TruthCore.Results.Causality.SourceScopedAscent.Solution TruthCore.Results.Causality.SourceScopedAscent.Challenge`.
+For each listed result, run
+`python3 scripts/worker_env.py -- target/release/truth bind-check --result <UUID>`
+and `python3 scripts/worker_env.py -- scripts/verify-result.sh <UUID>`.
+Serialize heavy commands under `/tmp/moenarch/truth-core-heavy.lock`.
+Scoped record regeneration, offline corpus/attribution checks, bundle audit,
+sense/definition/lexicon ratchets and whitespace check pass. Two removable
+legacy sense entries are reported; their coordinator-owned allowlist is unchanged.
+Source bytes were neither reacquired nor certified. Live convention source
+revision is `15f348b072188255da837578eaafc8a98f12fdf0`.
+
+Exact computed output from
+`target/release/truth frontier-diff --base 19d133799880e1db18bd5273674bf2251d8cd9cf --frontier-root STMT-GOD-EXISTS`:
+
+```text
+premise delta for GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of classical theism [8626f8a5]: 19d133799880e1db18bd5273674bf2251d8cd9cf -> working tree
+open premises reaching the root: 404 (283 bare, 76 supported, 45 stated) -> 404 (283 bare, 76 supported, 45 stated)
+expanded-route diagnostic (lowest cost): GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of…, from prima via [ed7c588a] (cost 6) -> GOD_4 exists: there is something that is GOD_4, in the sense of the GOD_4 of…, from prima via [ed7c588a] (cost 6)
+distinct verified support alternatives: 415 -> 417
+verified support alternatives added: 2
+  Ascent at esse restricted to actual identity bearers [8176a284] <- Every bearer of LIMITATION_OF_ESSE_VERSUS_REPRESENTED_LIMITING_1 has esse received in a principle [1304b462], No principle stands in RECEPTIVE_POTENCY_1 to itself as to its own act [14325c83], For every being x and principle r, if the esse of x is received in r, then r is the essence of x [6dfe01ab], Every received esse is limited [7de89edb], For every being x and principle r: if the esse of x is received in r, then r stands in receptive… [7fcfcee8], A greater degree of any perfection implies being more in that perfection [9eaa3b6e], Whatever has its being caused by another has its esse received in some principle [da72ae93], Whatever has LIMITED_ESSE_1 approaches the primary strictly less nearly than whatever has unlimited… [fd2c8710]
+  The genus principle at being only: whatever is maximal in being causes the being of every other… [da09703b] <- Ascent at esse restricted to actual identity bearers [8176a284], Actual esse-cause responsibility composes along actual cause links [b4987085], One being whose esse is its essence is a first cause of being of every other actual being [c35b1a5c], Excluded middle as a general principle: every proposition either holds or does not hold [ee4ab504]
+bare premises added: none
+```
+
+The two support additions are conditional progress; no premise closure or
+philosophical verdict is inferred from the unchanged frontier. The separate q11
+coordination reconciliation is retained once in
+[the existing source-selection note](de-ente-esse-source-1628.md#q11-allocation-reconciliation-2026-11-17):
+its numerical common-nature input overlaps the accepted shared-nature warrant
+under different candidate/interpretation dictionaries, without supplying a new
+independent pre-naming support route. It adds no proof or premise change and
+has not displaced the ascent tests. All findings are proposed for fresh
+independent semantic review. No push, PR or watch was performed.
+
+### Review repair: retained own-essence interface
+
+The reception argument retains `6dfe01ab` for the existing theorem interface,
+but applies it only to the source after obtaining esse–essence identity.
+Its additional non-identity scope is unnecessary to this inference. The existing
+identity-restricted `b9316115`, with strength relation `497904e4`, uses a different
+`Frame` interface; substitution requires an explicit faithful adapter. The owning
+spec records this interface-reuse reason in `strong_version_needed`. Neither the
+proof nor its current premise bundle changes; no broader metaphysical necessity
+is claimed.

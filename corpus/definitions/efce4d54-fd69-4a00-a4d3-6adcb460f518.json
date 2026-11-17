@@ -1,0 +1,9 @@
+{
+  "id": "efce4d54-fd69-4a00-a4d3-6adcb460f518",
+  "label": "Ascent at esse restricted to actual identity bearers",
+  "term": "identity-source ascent at esse",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.SourceScopedAscent.IdentityCauseAscent",
+  "definition": "For one q3 Profile and the existing comparative MoreIn, every actual c whose represented esse equals its represented essence is more in esse than each distinct actual x whose esse c causes. This transparently restricts the existing causal-ascent principle by actuality of both relata and the source identity; it introduces no new causal or comparative relation. It does not assert an identity bearer exists, that identity represents addition-excluding subsistent esse in reality, or that the source causes every other being.",
+  "note": "Existing InAct, CausesIn, MoreIn, esse and represented essence/esse maps keep their meanings and application obligations. This is a sufficient scope for the registered common-ancestor source-first maximality route. Reception-based support uses absolute nonlimitation via explicit own-essence reception and no-self-receptive-potency inputs, not merely freedom from one recipient. The remaining strict limitation-to-degree and degree-to-MoreIn bridges are explicit premises. Full analysis: docs/notes/causal-perfection-transfer.md, Recipient-relative limitation and source-scoped ascent (2026-11-17)."
+}

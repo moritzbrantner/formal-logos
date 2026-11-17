@@ -1,0 +1,12 @@
+{
+  "id": "30c1203b-5067-4fa8-824b-fa11e762e35f",
+  "label": "Causal ascent at esse gives its actual identity-source restriction",
+  "argument_id": "32127cb9-2130-4ae0-a0dc-36707f6f1150",
+  "challenge_module": "TruthCore.Results.Causality.SourceScopedAscent.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SourceScopedAscent.Solution",
+  "theorem": "TruthCore.Results.Causality.SourceScopedAscent.restrictAscent",
+  "comparator_config": "results/30c1203b-5067-4fa8-824b-fa11e762e35f/comparator.json",
+  "status": "solution-present",
+  "description": "Strength registration for the same CausesIn, MoreIn and esse dictionary: only actual source/target pairs with source esse-essence identity are retained. No premise warrant or strictness countermodel is asserted.",
+  "transcription": "instantiation"
+}

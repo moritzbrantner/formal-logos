@@ -1,0 +1,10 @@
+{
+  "id": "801f8baf-175e-4571-8d11-14a8a4283830",
+  "label": "Test the cross-reception consequence of recipient-relative ascent (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "a6a2c1c6-e7b6-4838-9c32-8c5102093841",
+  "rule": "If neither possession were received in the other, the relative step would make each strictly exceed the other",
+  "meaning": "The old relative principle and limitation-to-reception bridge, with asymmetric MoreIn and explicit excluded middle, rule out two actual self-limited possessors neither received in the other. If neither receipt held, each possessor would be free from the other's limit, producing opposite MoreIn comparisons. This theorem is not another arbitrary countermodel and provides no empirical or metaphysical counterexample. It isolates the cross-reception burden of combining role-based reception with the old comparative law. The second conjunct instantiates recipient roles by the recipient essence, and own-essence reception turns the forced cross receipt into equality of receiving essences. This identifies the exact application burden for plural received natures; no new receiver dictionary is silently imposed on the old principle. The source-scoped alternative derives absolute nonlimitation instead and does not require either coverage consequence. All four background principles are explicit internal hypotheses; no root premise is discharged.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

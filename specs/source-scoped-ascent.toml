@@ -1,0 +1,66 @@
+[batch]
+vocab = "TruthCore.Causality.SourceScopedAscent"
+results = "TruthCore.Results.Causality.SourceScopedAscent"
+
+[[statement]]
+id = "8176a284-769b-4ed0-b90b-ff655b7fd864"
+label = "Ascent at esse restricted to actual identity bearers"
+lean = "IdentityCauseAscent"
+paraphrase = "Analyst formulation, attribution deferred. In the same q3 profile, any actual c whose represented esse equals its represented essence is more in esse than every distinct actual x whose esse it causes. The actuality and identity restrictions weaken cffad050; no claim about an arbitrary received intermediate cause is included. No source existence, causal coverage, common nature, present conservation, naming or actual application follows from the restriction itself. Direct primitive warrant and the explicit reception-based support option are both retained."
+definitions = ["efce4d54-fd69-4a00-a4d3-6adcb460f518", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5766de66-8a37-5b04-aa65-9eec53319f50", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "183b48d2-1753-583d-aef9-4199cff86231", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"]
+
+[[argument]]
+id = "Causal ascent at esse gives its actual identity-source restriction"
+theorem = "restrictAscent"
+strong_version_needed = {"cffad050-e86d-48b8-b04b-be47fcc1352d" = "The stronger version is the subject of the strength comparison only; the new source route consumes the weaker identity-source version."}
+premises = ["cffad050-e86d-48b8-b04b-be47fcc1352d"]
+conclusion = "8176a284-769b-4ed0-b90b-ff655b7fd864"
+axioms = []
+rule = "Restrict the existing all-causes esse principle"
+meaning = "Strength registration for the same CausesIn, MoreIn and esse dictionary: only actual source/target pairs with source esse-essence identity are retained. No premise warrant or strictness countermodel is asserted."
+transcription = "instantiation"
+
+[[argument]]
+id = "Identity-source ascent from absolute reception limitation"
+theorem = "identityAscentFromReception"
+strong_version_needed = {"6dfe01ab-e3f2-5a4c-b102-701c161f2cf7" = "Retained to reuse the existing reception theorem interface. Its only application is to the source after esse–essence identity is obtained, so the additional non-identity scope is unnecessary to this inference. Existing identity-restricted b9316115 (strength relation 497904e4) uses a different Frame interface and cannot be substituted directly without an explicit faithful adapter. This is interface reuse, not a claim that broader metaphysical coverage is needed."}
+premises = ["6dfe01ab-e3f2-5a4c-b102-701c161f2cf7", "7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2", "14325c83-1c3f-5afb-b63f-52b0c2b2a326", "da72ae93-5c8d-4717-8c17-97eeb8037317", "7de89edb-e3a8-59ee-9740-8d0ce7c8ea24", "1304b462-4a10-5dd0-995a-db5feb21d98e", "fd2c8710-988f-527f-a81a-2566fe10e3f9", "9eaa3b6e-ad2f-5776-ab26-03cfa9f54ad8"]
+conclusion = "8176a284-769b-4ed0-b90b-ff655b7fd864"
+axioms = []
+rule = "Exclude all source reception, derive absolute nonlimitation, then compare received limited esse through the existing degree interfaces"
+meaning = "An alleged reception of the identity source would place its own esse in receptive potency to itself, excluded by the three explicit reception inputs. The limitation-only-through-reception premise therefore excludes absolute limitation of that source. The existing external-cause-to-reception bridge and received-esse-is-limited premise give limited esse of the distinct effect. The existing limited-esse-approaches-less and degree-to-more bridges yield strict MoreIn at the same esse. The degree premise is instantiated at Unit, so it demands comparison only for esse; no physical measurement or total order is assumed. This replaces recipient-relative freedom by absolute nonlimitation only for the identity-source scope. It does not derive the full cffad050 or 7030af77 principles. All eight premises and identity/receipt applicability retain their warrant burdens. The da72ae93 receipt bridge is a direct support option here; deriving it via the Fourth Way would return to the target and add no independent warrant."
+
+[[argument]]
+id = "Common esse ancestry yields maximal causality with identity-source ascent only"
+theorem = "maximalCausesFromIdentityAscent"
+premises = ["c35b1a5c-6405-449b-993b-8196b2457e08", "b4987085-f7b0-4031-a795-364873d3c216", "8176a284-769b-4ed0-b90b-ff655b7fd864", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
+conclusion = "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7"
+axioms = []
+rule = "Retain the selected ancestor identity when identifying every maximum with the same actual source"
+meaning = "Sibling of f4df2153 replacing only full causal ascent cffad050 by its actual identity-source restriction. CommonEsseIsEssenceSource supplies the actual n and its represented identity; composition collapses the existing chains into n's esse causality. For a distinct actual maximum m, scoped ascent places n above m, contradiction. Explicit excluded middle identifies every maximum with n. The accepted twelve-input fixed-esse consumer c98328f1 takes the unchanged conclusion da09703b into GodExists. No common-source selection, composition, existence, naming or current productive-support applicability burden is discharged."
+
+[[relation]]
+id = "Causal ascent at esse strengthens its actual identity-source restriction"
+subject_kind = "statement"
+subject_id = "cffad050-e86d-48b8-b04b-be47fcc1352d"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "8176a284-769b-4ed0-b90b-ff655b7fd864"
+verification_result_id = "Causal ascent at esse gives its actual identity-source restriction"
+note = "Same MoreIn and CausesIn at esse; restrict to actual pairs whose source has esse-essence identity. No strictness countermodel is registered."
+
+[[statement]]
+id = "Relative limitation ascent forces cross reception of self limited possessors"
+label = "Relative limitation ascent forces reception between self-limited possessors"
+lean = "RelativeStepAudit"
+paraphrase = "Closed conditional audit: for any same actuality, received-in, limited-by and comparative dictionary, the old recipient-relative unlimited-possession principle, limitation-implies-reception bridge, comparison asymmetry and explicit excluded middle force ReceivedIn a r b or ReceivedIn b r a whenever a and b are actual and each self-limited in r. A second conjunct applies the same inference to the explicit esse recipient dictionary ReceivedIn a () b := Received a (essenceOf b), with own-essence reception: every two actual self-limited bearers then have equal represented essences. Neither conjunct asserts those premises or an actual nonreceiving pair, does not refute the premises, and is not a new reception or causal relation. It identifies a concrete coverage consequence to test for the intended role-based reception interpretation."
+definitions = ["245797e9-e5e9-5296-8d34-2138cc6b7ae6", "cf4875cb-6baf-5bf5-8590-84a21777c66c", "5766de66-8a37-5b04-aa65-9eec53319f50", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "183b48d2-1753-583d-aef9-4199cff86231", "4433942e-aaf6-55a9-b777-66e55638103d"]
+
+[[argument]]
+id = "Test the cross-reception consequence of recipient-relative ascent"
+theorem = "crossReception"
+premises = []
+conclusion = "Relative limitation ascent forces cross reception of self limited possessors"
+axioms = []
+rule = "If neither possession were received in the other, the relative step would make each strictly exceed the other"
+meaning = "The old relative principle and limitation-to-reception bridge, with asymmetric MoreIn and explicit excluded middle, rule out two actual self-limited possessors neither received in the other. If neither receipt held, each possessor would be free from the other's limit, producing opposite MoreIn comparisons. This theorem is not another arbitrary countermodel and provides no empirical or metaphysical counterexample. It isolates the cross-reception burden of combining role-based reception with the old comparative law. The second conjunct instantiates recipient roles by the recipient essence, and own-essence reception turns the forced cross receipt into equality of receiving essences. This identifies the exact application burden for plural received natures; no new receiver dictionary is silently imposed on the old principle. The source-scoped alternative derives absolute nonlimitation instead and does not require either coverage consequence. All four background principles are explicit internal hypotheses; no root premise is discharged."
