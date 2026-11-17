@@ -178,6 +178,18 @@ be conflated. Nothing here asserts symmetric metaphysical admissibility of
 gunk and junk, a single uniform priority direction across all possible worlds,
 or a theorem about a first-order fusion schema's set-theoretic completeness.
 
+The selected #331 application has now been checked against Schaffer 2010
+§1.4 p.44: his monist definition explicitly leaves derivative ordering open.
+It requires each proper part to depend on the basic cosmos, **not** priority of
+every intermediate whole over every proper part. Equal-secondary and
+hierarchical derivative orderings are source-permitted alternatives, rather
+than an actual star selected by the source. The full-converse/WF conflict above
+therefore rejects a stronger completion on this carrier, not priority monism
+itself. See [the complete source/application comparison](notes/priority-monism-framework.md#ds-2-application-intermediate-whole-to-part-edges-336--331)
+for the exact relation direction, the owner-prescribed Schaffer/Raven/power
+separation, #1096/#1097 scope and the remaining actual-power/being/uniqueness
+bridges. No new mathematical model or root premise is established by that reading.
+
 ## 3. Unity and counting subdivisions (#318, #329, #330, #328)
 
 [`Supertasks`](../TruthCore/Causality/Supertasks.lean) distinguishes unit-cost
@@ -348,7 +360,7 @@ The seven connections leave the following exact application tasks:
 | Destination | Bridge still required | Next discriminating task |
 | --- | --- | --- |
 | #310 actual power/ground | Same actual beings and respect, actual endpoints, and a defended power/being grounding rule; existential finite-source grounding is not all-edge WF. | Apply the existing grounded-power alternatives to the selected actual-power meaning, including joint contributors if necessary. |
-| #331 whole priority | Actual region/object interpretation and an explanatory account of whole-to-part dependence; choose star versus all-strict-superparts by their meanings, not names. | Test whether the intended account requires intermediate-whole edges; DS-2 then decides the WF compatibility of this carrier. |
+| #331 whole priority | Actual region/object interpretation and an explanatory account of whole-to-part dependence; choose star versus all-strict-superparts by their meanings, not names. | Schaffer §1.4 p.44 does not require all intermediate-whole edges; identify and justify any actual derivative D-edges before selecting a completion. DS-2 excludes universal inclusion on this carrier with WF. |
 | #318 SU-REAL/SU-GROUND | Actual operation/stage mapping and cost/resource conditions; potential subdivision and substantial unity need content. | Reuse the operational organization/turnover vocabulary before proposing a unity-to-act-count bridge. |
 | #311 organism/bootstrap | Material/formal and capacity/exercise/existence edges and an independently justified same-respect anti-cycle rule. | Specify the actual purported loop, then inspect each typed edge. Historical Physics attribution remains a separate selected source task. |
 | #319 BR-POWER-TO-BEING | Original productive power to underived existence on the same witness; relative source versus outside-domain cause. | Consume existing power/existence scope controls, not the order endpoint. |
