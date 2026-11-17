@@ -1435,3 +1435,5 @@ the verified mode difference changes closure. The exact delta is the two
 audits and their generated records/spec, plus this existing note and the
 existing round2 attempt; the prior one-file inference-label repair remains its
 own commit. Fresh semantic review should assess this complete proposed outcome.
+
+The naming continuation is recorded in [the existing naming note](naming-first-mover-migration.md#substantive-god_4-identification-on-the-existence-only-route-2026-11-17): substantial ultimate-source identification warrant, immanent-source comparison, and the remaining substantive GOD_4 bridge. It changes no fullness proof or premise.
