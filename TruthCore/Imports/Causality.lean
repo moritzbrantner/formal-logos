@@ -247,6 +247,7 @@ public import TruthCore.Causality.UnderivedRootRoute
 public import TruthCore.Causality.UniqueFeedback
 public import TruthCore.Causality.UniqueRootQuartaControl
 public import TruthCore.Causality.UnmovedAtNoTime
+public import TruthCore.Causality.WholePowerClassification
 public import TruthCore.Causality.WholePowerPerfection
 public import TruthCore.Causality.WholeRosterFoundation
 public import TruthCore.Causality.WholeRosterMaximalComparison

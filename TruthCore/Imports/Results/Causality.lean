@@ -358,6 +358,7 @@ public import TruthCore.Results.Causality.UnderivedRootRoute.Solution
 public import TruthCore.Results.Causality.UniqueFeedback.Solution
 public import TruthCore.Results.Causality.UniqueRootPerfection.Solution
 public import TruthCore.Results.Causality.UniqueRootQuarta.Solution
+public import TruthCore.Results.Causality.WholePowerClassification.Solution
 public import TruthCore.Results.Causality.WholePowerPerfection.Solution
 public import TruthCore.Results.Causality.WholeRosterFoundation.Solution
 public import TruthCore.Results.Causality.WholeRosterFromMaximumAsymmetry.Solution
