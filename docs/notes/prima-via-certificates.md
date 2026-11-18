@@ -40,9 +40,14 @@ same derivation, but `c6d6379b` carries POTENCY_2 and `4be9a4ac` POTENCY_1.
 No bridge between those senses is registered, so that set is not certified.
 Likewise `402cf70f` links the PresentEsseSupport sense of disambiguation
 `6f1d1395`, while `56f68b40` links the Ontic sense. The self-dependence core
-is therefore certified with `98efaa9e`, and the `402cf70f` version follows by
-composition with the verified strength step `76e07e1a`. Bypass B1 lists
-`f10d5632` as its FINITE_CAUSAL_HISTORY_AND_PER_SE_3 → _4 bridge.
+is therefore certified with `98efaa9e`. The `402cf70f` version follows in
+Lean by composition with the verified strength step `76e07e1a`. This is
+sense-legitimate only if `402cf70f`'s PresentEsseSupport link (`b242943a`,
+sense _3 of `6f1d1395`) is a mis-link. That is an open record question for its
+owner; its Lean type uses `m.grounds` and `ExistsAt`. Bypass B1 lists
+`f10d5632` as its FINITE_CAUSAL_HISTORY_AND_PER_SE_3 → _4 bridge. The bridge is
+legitimate, but the compound disambiguation `bedfab81` lists propositions
+rather than senses of one term (precedent `b58472dd`, allowlisted).
 
 **Minimality and models.** Closed controls witness every single deletion from
 the `CausesIn` core (`causesInControls`) and from the four-member reciprocity
@@ -60,11 +65,16 @@ directly: `c1b68c21` ← `675b71d2` ← `226c38f6` ← `f1ef9206` (`97f5850f`,
 `d85de8e1` and the all-respects `e078f07b` only by expanding the stated
 `97f5850f` through `b58472dd` → `e529c42f` → `1bca81ef` → `42890b45` →
 `e229bb2c`. On the GOD_4 route, `42890b45` is consumed only by that chain.
-The rebinding `4bba0c41` therefore adds no support to `97f5850f`. With B1 and
-`f10d5632`, it shows that under the per se selection `42890b45` and `97f5850f`
-stand or fall together, so `d85de8e1` adds no discriminating warrant to
-spine I. The surviving form of spine I is `97f5850f` on its own q.2 a.3 claims,
-against the infinitist rival recorded by lane B (row 4).
+The rebinding `4bba0c41` therefore adds no support to `97f5850f`. Under the
+per se selection (`f10d5632`, `6c084877`), `42890b45` and `97f5850f` are
+interderivable. So the `e229bb2c` support of `42890b45` bears on `97f5850f`
+exactly as far as `57552dce`, `e078f07b` and `d85de8e1` are warranted. Whether
+`d85de8e1` adds independent warrant is a separate, open warrant question.
+Provisional judgment, not certified here: spine I then rests on `97f5850f` on
+its own q.2 a.3 claims, against the infinitist rival recorded by lane B (row 4).
+Its ground is lane B's finding that `d85de8e1` with all-respects `e078f07b`
+faces a counterexample on either reading of the priority relation. That
+assessment is accepted in review but not yet merged (PR #1769).
 
 **Frontier.** `frontier-diff` against main shows the same open-premise counts
 for both roots. One bare premise is added (`6c084877`), and `98efaa9e` moves
