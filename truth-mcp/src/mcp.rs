@@ -307,8 +307,10 @@ pub fn handle(state: &State, body: &[u8]) -> Option<Value> {
     })
 }
 
-fn tool_result(text: String, is_error: bool, structured: Value) -> Value {
-    json!({ "content": [{ "type": "text", "text": text }], "structuredContent": structured, "isError": is_error })
+/// Text only: clients that receive `structuredContent` may show the model that
+/// instead of the text, so the binding lives in the text header.
+fn tool_result(text: String, is_error: bool) -> Value {
+    json!({ "content": [{ "type": "text", "text": text }], "isError": is_error })
 }
 
 fn call(state: &State, id: &Value, params: &Map<String, Value>) -> Value {
@@ -325,23 +327,16 @@ fn call(state: &State, id: &Value, params: &Map<String, Value>) -> Value {
         .keys()
         .find(|key| !(tool.schema)()["properties"].get(key.as_str()).is_some())
     {
-        return reply(
-            id,
-            tool_result(format!("unknown argument {key:?}"), true, json!({})),
-        );
+        return reply(id, tool_result(format!("unknown argument {key:?}"), true));
     }
     let argv = match (tool.build)(&args, state) {
         Ok(argv) => argv,
-        Err(message) => return reply(id, tool_result(message, true, json!({}))),
+        Err(message) => return reply(id, tool_result(message, true)),
     };
     if !state.take_rate_token() {
         return reply(
             id,
-            tool_result(
-                "rate limit reached; retry in a minute".into(),
-                true,
-                json!({}),
-            ),
+            tool_result("rate limit reached; retry in a minute".into(), true),
         );
     }
     let started = Instant::now();
@@ -385,18 +380,8 @@ fn call(state: &State, id: &Value, params: &Map<String, Value>) -> Value {
         ));
     }
     header.push_str("---\n");
-    let structured = |code: Option<i32>| {
-        json!({
-            "head": binding.head, "head_time": binding.head_time,
-            "issue_snapshot_captured_at": binding.snapshot_captured_at,
-            "refresh_error": binding.refresh_error, "command": command, "exit_code": code,
-        })
-    };
     match outcome {
-        Err(message) => reply(
-            id,
-            tool_result(format!("{header}{message}"), true, structured(None)),
-        ),
+        Err(message) => reply(id, tool_result(format!("{header}{message}"), true)),
         Ok(output) => {
             let failed = output.code != Some(0);
             let mut text = header + &output.stdout;
@@ -413,7 +398,7 @@ fn call(state: &State, id: &Value, params: &Map<String, Value>) -> Value {
                     output.stderr.trim()
                 ));
             }
-            reply(id, tool_result(text, failed, structured(output.code)))
+            reply(id, tool_result(text, failed))
         }
     }
 }

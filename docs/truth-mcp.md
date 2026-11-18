@@ -75,6 +75,15 @@ curl -s https://mcp.moenarch.com/mcp -H 'Content-Type: application/json' \
 ssh hetzner docker logs --tail 20 truth-mcp
 ```
 
-Add it to a client, e.g. `claude mcp add --transport http truth-core https://mcp.moenarch.com/mcp`.
+Add it to a client, e.g. `claude mcp add --transport http truth-core https://mcp.moenarch.com/mcp`,
+or exercise it with the MCP Inspector:
+
+```bash
+bunx @modelcontextprotocol/inspector@0.17.2 --cli https://mcp.moenarch.com/mcp --transport http \
+  --method tools/call --tool-name research_novelty_check --tool-arg 'text=contingent beings depend on a necessary being'
+```
+
+Tool results are text only. Clients that receive `structuredContent` may show
+the model only that, so the binding stays in the text header.
 
 CI runs the adapter's unit tests offline; it never deploys or calls the server.
