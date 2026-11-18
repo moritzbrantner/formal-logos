@@ -46,7 +46,7 @@ conclusion = "No GOD_4 with will causes the esse of a distinct non-rational bein
 axioms = []
 sense_bridges = [{term = "CREATURE_WILLING", from = "CREATURE_WILLING_1", to = "CREATURE_WILLING_2", statement_id = "1dd68893-7e41-4909-9f17-1dbb342a7d95"}]
 rule = "At one recipient-directed willing relation, the bridge's willing contradicts the strong variant's denial"
-meaning = "Analyst formulation. At ONE RecipientGoodWilling W (the bridge instantiated at W.WillsGoodFor): for a distinct, non-rational, actual x whose esse a GOD_4 with will causes, a94c5dfc gives that g wills x's good to x, and the strong variant denies it. Hence such an x cannot exist if both hold. The two statements are therefore jointly incompatible with the creation of any non-rational being; this does not say which to reject. The weak ordered reading has no such conflict."
+meaning = "Analyst formulation. At ONE RecipientGoodWilling W (the bridge instantiated at W.WillsGoodFor): for a distinct, non-rational, actual x whose esse a GOD_4 with will causes, a94c5dfc gives that g wills x's good to x, and the strong variant denies it. Hence such an x cannot exist if both hold. The two statements are therefore jointly incompatible with any GOD_4 with will causing the esse of a distinct non-rational being in act; this does not say which to reject. The weak ordered reading has no such conflict."
 
 [[argument]]
 id = "Weak ordered-love reading is compatible with recipient-directed causal willing"

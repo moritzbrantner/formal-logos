@@ -568,8 +568,9 @@ ordered to rational creatures and to God. It is registered in two strengths
   wills a distinct non-rational effect's esse as ordered to some rational
   being or to God. It neither asserts nor denies recipient-directed willing,
   and it is compatible with a94c5dfc at one willing relation (witness 5d93ac09,
-  result ef387145). It is therefore no rival to the registered route, but it
-  shows ad 3 to be about the order of love, not its exclusion.
+  result ef387145). It is therefore no rival to the registered route. On the
+  weak reading, ad 3 concerns the order of love; the a.2 body supports not
+  reading it as exclusion.
 - **Strong, unattributed analyst variant** 1dd68893 (`OrderedExistenceWilling`):
   the weak reading plus the denial that God wills that good to the effect as
   recipient. Its separate motivation is to read love of desire (willing a
@@ -582,7 +583,8 @@ ordered to rational creatures and to God. It is registered in two strengths
   source-adjacent form of the non-recipient-directed production the
   foreseen-collateral rival needs, restricted to non-rational effects.
 
-No registered love argument uses either sibling. It is not shown incoherent, and the existing
+No registered love argument uses either sibling. The natural-diffusion /
+foreseen-collateral rival is not shown incoherent, and the existing
 `omitCausalWill` control witnesses only the local omission, not this richer
 rival. Overall: a **coherent conditional support option** with a comparatively
 well-supported self-good bridge, a prima facie plausible thin love-meaning
