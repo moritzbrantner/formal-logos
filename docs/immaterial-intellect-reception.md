@@ -1991,11 +1991,13 @@ earlier standing statement, its first standing statement is marked as such.
 - **`acc06edc`**: `∀ h x e, Directs h x e → (∀ r, ¬ MovedIn h r) → HasCognition h
   ∧ Intelligent h`. Its antecedent asserts neither necessity, simplicity,
   universal causation nor perfection (first-source section, 2026-11-17).
-  *Claim/type observation, new here:* the consequent is two predicates of h. It
-  does not mention e, so the Lean type certifies possession-level cognition and
-  intelligence of the director, not that h has this end as known. The earlier
-  rationale is stated in terms of the end as known; that is a stronger reading
-  than the type.
+  *Claim/type observation, new here:* the consequent is two predicates of h and
+  does not mention e. The Lean type therefore does not certify that h has this
+  end as known. `Intelligent` is capacity-level only on the HAS_INTELLECT_1
+  reading that the root consumers apply; whether `HasCognition` is capacity or
+  exercise is not fixed by any record. The earlier rationale is stated in terms
+  of the end as known, which is a stronger reading than the type. The row 9
+  rival denies even the two predicates, so this observation moves no burden.
 - **`3c468121`**: `∀ c x, IsNecessary Possible IsAt x → CausesIn c x esse →
   CausesNecessityOf c x`. `IsNecessary` is `¬ Possible (not being)` with
   `Possible` primitive (NECESSARY_1, `DEF-NECESSARY-BEING`); there is no
@@ -2031,11 +2033,11 @@ record assesses them.
 | --- | --- | --- | --- |
 | `5854ef2b` something has intellect | Ordinary understanding and reasoned correction (2026-11-17 horizontal section); the Rochette planners' understanding of the sampling end "can reinforce the existing intellectual-exemplar option" as an evidential judgment. | A candidate primitive. Dependency: that ordinary human understanding is HAS_INTELLECT_1, which is intellectual cognition and not sense. Both recorded accounts of the matched case grant local understanding. | **Unchanged.** 2026-11-11 called ordinary intellectual activity "a candidate warrant" with the record open; 2026-11-17 said that intellectual activity "retains direct/prima facie warrant from actual understanding and reasoned correction". Both are kept as written. Exercise shows capacity; the converse is not used. Formally open and bare. |
 | `0bdb0436` intellect is closed upward along the grade | Claim `5bfe3093` supports it (relation `6bd5986a`). The relation's gap note stands: the text speaks of degrees of cognition, not of closure of a fixed power, and does not address abstract objects. The full q.14 a.1 argument, as read on 2026-11-11, favours a positive graded explanation over an obstacle-removal paraphrase. | Direct option open. The 2026-11-17 section retains the q.14 positive-grade rationale as "a direct candidate support" for the universal bridge `180f5ad2`, of which this premise is the grade form. Dependencies, all open: the analyst reading of "the mode of knowledge follows the mode of immateriality" as upward closure of the primitive power; the exhaustive-explanation step, that confinement to one's own form is exhaustively explained by material restriction; and a grade relation that is a supplied primitive. Direction checked: the route applies closure from an exemplar y to a target x ranked at least as high, which is the direction the premise states. | **Unchanged** from 2026-11-11: the source supports the interpretation; independent applicability to every pair is not established; the conditional argument is retained and establishment is withheld. |
-| `44000fce` the altogether immaterial is at the highest grade | No claim. The recorded basis is the case's reading of q.14 a.1's highest grade as the two negative conditions together (`DEF-ALTOGETHER-IMMATERIAL` note). | A candidate primitive. Dependencies: that reading choice (open, unassessed); the domain of `Being`. *Analyst observation, new here:* on the fixed meaning, where the grade measures only removal from matter, this premise is close to a meaning postulate and `0bdb0436` carries the load. If the grade were read as positive intentional reach, the load would move here. No record chooses the second reading. | **First standing statement** (2026-11-11 said only that it "binds structural freedom to the proposed grade"): an open bare premise whose warrant is the reading choice above; ungraded. |
+| `44000fce` the altogether immaterial is at the highest grade | No claim. The recorded basis is the case's reading of q.14 a.1's highest grade as the two negative conditions together (`DEF-ALTOGETHER-IMMATERIAL` note). | A candidate primitive. Dependencies: that reading choice (open, unassessed); the domain of `Being`. The open burden recorded for it is structural-to-grade applicability: the `DEF-ALTOGETHER-IMMATERIAL` reading choice together with the 2026-11-09 point that the antecedent has no concreteness or life condition. *Conditional analyst observation, new here, changing no standing:* if the grade is read as measuring only removal from matter, the premise's content comes close to that reading choice; if it is read as positive intentional reach, the premise is substantive in a further way. No record chooses between these, and on neither does the structural-to-grade burden move to `0bdb0436` or close. | **Unchanged; first consolidated standing statement.** Earlier records: 2026-11-11 says it "binds structural freedom to the proposed grade" and that "The absence of concreteness/life conditions in the target remains relevant"; the 2026-11-11 acceptance inventory lists "structural-to-grade applicability" as still open; the 2026-11-17 first-source section repeats that the grade proof retains "structural-to-grade applicability"; `e4879f4c`'s blocker lists it among the bare analyst premises. Consolidated: an open bare analyst premise with structural-to-grade applicability open; ungraded. |
 | `564ce19b` noncognitive tending needs a knowing director | Stated claim `651033cb` (q.2 a.3 co.). The representational rationale of 2026-11-17: an apprehended end can unify alternative means and explain why success differs from mere occurrence. That section adds that extending the rationale "from familiar deliberation to all natural tending is the actual Fifth-Way director premise". | Direct option. Dependencies: the INTENTION_1 reading of tending; an actual noncognitive body that tends in that sense; in root consumers, `Intelligent` read as HAS_INTELLECT_1. The matched understanding case is not an instance: Mira has cognition, so she falls outside the antecedent (2026-11-17 audit, item 1). | **Unchanged** from [the 2026-11-17 local-director assessment](notes/teleology-first-mover.md#premise-comparison-and-provisional-assessment): source-stated, with independent actual-world warrant for the bundle "underdetermined". |
 | `251bbfdd` direction passes to every mover of a director | Claim `8e918dbb` supports it (relation `c1fc8c9f`; translation basis): God governs some things by means of others. The gap note stands: the bridge extends this to every mover of a director. Identified instrumental links have positive warrant (the archer and guide illustration; the Rochette arm and corer). | Direct option retained. Dependencies: instrumental dependence at each link, which is unsourced and open; the reading of an enabling condition as a `MovesIn` edge. `e8ffcdad` suffices for the reduction (`3af0a49e`), so the every-mover strength is not needed there. | **Unchanged** from 2026-11-17: "The unrestricted policy is not established or refuted." |
 | `e8ffcdad` same-end mover selection | Derived from `251bbfdd` alone by `ac4407f0`, whose record calls it a sole-premise weakening that "checks a strength relation, not premise warrant" (relation `a72bd3ec`). Ordinary instrumental warrant in one documented case: the Rochette arm/corer attribution, with the bearer's additional motion as a disclosed physical inference that the episode source does not certify. | A direct candidate primitive, narrower than `251bbfdd`. Dependencies: `251bbfdd` for the derivation (open, see above); for the application, the `MovesIn` reading of carried motion (open). The universal step is not covered: any distinct mover of a director triggers the demand for a same-end predecessor, even where the movement is unrelated to the directing operation. | **Unchanged** from 2026-11-17: local, defeasible instrumental warrant; "The universal selection policy and first-source intellect therefore remain open." |
-| `acc06edc` an unmoved director knows and understands | Claim `b3d1d3b9` supports it (relation `b7d092a3`; translation basis): q.103 a.6 attributes the design of government to God. The gap note stands: it does not infer the design from being an unmoved director. Five rationales are on file with their exact missing discriminations (first-source section, 2026-11-17). | Direct or prima facie acceptance "under an explicit metaphysical framework" is retained. Dependencies: each rationale's missing step is open. The perfection rationale depends on a formal-versus-eminent classification that no record supplies; the q.14 rationale presupposes intellect; the principal rationale shows non-borrowed ordering, not ordering possessed as known. Under the claim/type observation in (a), the type needs only possession-level cognition, which is weaker than the end-as-known reading these rationales address. | **Unchanged:** "recognition remains open, with the positive reasons and their exact scope preserved." No ranking between the complete accounts. |
+| `acc06edc` an unmoved director knows and understands | Claim `b3d1d3b9` supports it (relation `b7d092a3`; translation basis): q.103 a.6 attributes the design of government to God. The gap note stands: it does not infer the design from being an unmoved director. Five rationales are on file with their exact missing discriminations (first-source section, 2026-11-17). | Direct or prima facie acceptance "under an explicit metaphysical framework" is retained. Dependencies: each rationale's missing step is open. The perfection rationale depends on a formal-versus-eminent classification that no record supplies; the q.14 rationale presupposes intellect; the principal rationale shows non-borrowed ordering, not ordering possessed as known. Under the claim/type observation in (a), the type's consequent is two predicates of h with no end, which is weaker than the end-as-known reading these rationales address. | **Unchanged:** "recognition remains open, with the positive reasons and their exact scope preserved." No ranking between the complete accounts. |
 | `3c468121` a cause of a necessary being's being causes its necessity | Its own stated rationale: the necessity of a necessary being is the necessity of its being. Claim `34148710` (SCG I.15 [5], translation basis) supports it, with the gap that the bridge "supplies why". q.44 a.1 ad 2 (claim `bd3767d3`, which has no registered relation to this premise) says that some necessary things have causes of their necessity; attempt `4381d190` records that it does not state the universal map. | A direct option as a dictionary bridge. The two derivations `5da29d43` and `a445f274` are single-application transcriptions by their own records and add no warrant. Their inputs are open and unassessed here: necessity consists in being (`651a68d4`) and causing in that respect causes necessity (`0014afa4`); or transfer `f8ba2429`, necessity as a perfection in act (`d483248e`, recorded as contested) and `3c20c835`. Dependency: the `Possible`/`IsAt` dictionary, with no actuality guard. | **First standing statement:** an open dictionary bridge with a conceptual rationale and partial source support; ungraded. The `4381d190` and `c28c61d8` blockers are retained: the necessity-cause correspondence stays an explicit open application premise. On an actual concrete target the direct interface `cb1cdea9` gives the same edge and "avoids the disputed necessity-causing detour" (power-existence note). |
 | `30a8373c` every creature having the perfection has it caused by the primary | Stated claim `8f4acb99` (q.13 a.5 co.): the order of the creature to God "as to its principle and cause". The claim records its one reading choice, the sense of cause (cause of a perfection, not mover; `DISAMB-CAUSE`). | Direct option. Dependencies: that reading choice (recorded; not assessed here); the creature scope, which on CREATURE_1 already carries a universal cause of being (argument `18fe3293` calls this "a warrant burden on that premise, not a gap in the derivation"); and that the supplied primary p is what the sentence calls God. Attempt `762d5fac` keeps the "uncaused-primary applicability and identity gaps" open. Aristotle's *pros hen* does not give the causal clause (being-not-a-genus). | **First standing statement:** source-stated for God and creatures on the recorded reading; its use for a supplied primary before naming shares the open identity gap; ungraded. The producer on file, `163d02eb`, is an assembly transcription by its own record and adds no warrant. |
 
@@ -2045,19 +2047,30 @@ Shared dependencies stay visible:
   are not independent corroboration of one another, and the reception,
   calibration and grade routes share the disputed aptitude and grade application
   (2026-11-11).
-- `564ce19b`, `251bbfdd`, `e8ffcdad` and `acc06edc` are all inputs of the one
-  reduction to `11914511`, and the governor and local options of #1750 both go
-  through it. Per #1750, the three same-witness options "are not three
-  independent corroborations".
+- `251bbfdd` or `e8ffcdad`, with `acc06edc`, are inputs of the reduction to
+  `11914511` (arguments `6535db07` and `b076343a`). `564ce19b` is not an input of
+  that reduction. It is a co-input alongside `11914511` in the governor producer
+  `117cc323` and in the seven-premise bundle `b2e10b72`. The governor and local
+  options of #1750 both depend on this director and reduction family.
+- Per #1750, the three same-witness options "are not three independent
+  corroborations": all three share the ten structural inputs (among them
+  `ee4ab504`, `da09703b`, `cb1cdea9` and `b26c10a0`), the supplied perfect root
+  `7abdee27` and the will principle `090be689`.
+- The Rochette episode is used twice: as local instrumental warrant for
+  `e8ffcdad` and as reinforcement of the exemplar `5854ef2b`. It is one episode,
+  not two pieces of evidence.
 - **The local route does not bypass `acc06edc`.** #1750 found that the sixth
   clause of the witness-local bundle `65c409cc`, the reduction of every director
   of the body to an intellectual director moved in no respect, "is that
   first-source recognition, now required for one body/end rather than all". The
   existing matched cases warrant only local, task-specific direction.
 - The immateriality option (A) and the teleological options (B, C) belong to
-  different families and share none of each other's inputs. That is recorded in
-  #1750 and is the cluster's main cumulative point: an objection has to meet
-  both.
+  different families and share no intellect-specific inputs: #1750 records that
+  the immateriality option "shares none of the teleological inputs". They do
+  share the structural inputs, root and will principle listed above. The
+  cumulative point is therefore limited: an objection to intellect at the root
+  has to meet the intellect-specific step of each family. It need not meet the
+  shared structural inputs twice.
 - `acc06edc`'s perfection rationale would reuse sub-bundle A or the q.4
   precontainment package. The first-source section already notes that the grade
   routes' open calibrations cannot confirm the same calibration.
@@ -2067,8 +2080,9 @@ Shared dependencies stay visible:
 ### (c) Recorded objections and rivals, classified
 
 One criterion is applied to every row. An objection is **kept** when its
-mechanism has independent justification at the scope over which the target
-premise quantifies. A mechanism justified only in another domain is
+mechanism has independent justification for instances inside the domain the
+target quantifies over, as that domain is fixed by the target's own dictionary.
+A mechanism justified only for instances outside that domain is
 **restated** as a standing hypothesis or comparison: its target and mechanism are
 named and its extension to the target's scope is marked unwitnessed. That
 restates the earlier sections' own boundaries. It adds no weight to a premise
@@ -2080,11 +2094,11 @@ and removes none from a rival.
 | 2 | The Plotinian One (2026-11-11) | **Restated** as a rival account of ultimacy whose noetic classification is unbridged to HAS_INTELLECT_1. It is neither a counterexample to `180f5ad2` nor a proof of intellect: V.4.2 keeps qualified awareness and VI.9.6 denies ignorance. **No substantive objection identified** against any cluster premise. |
 | 3 | Abstract objects (paraphrase of `0bdb0436`; result `5ae23956`; bridge audit 2026-11-09) | **Restated, conditional on a meaning choice.** *Mechanism:* if `Being` ranges over abstract objects that satisfy both negative conditions, the bundle gives them intellect. The records place it on `0bdb0436`. *Analyst observation, new here:* under the fixed meanings `44000fce` ranks such an object at the top and `0bdb0436` then transfers intellect, so the condition reaches the pair. The audit calls this "a statement about the signature, not an assertion that abstract objects exist or satisfy the intended metaphysical interpretation". It carries weight only under a domain choice that no record makes. |
 | 4 | q.14 omission controls (`availabilityOmission`, `intellectualGradeOmission`, `oldTargetOmission`, `9d6490e1`) and the grade controls `omitFollows`, `omitSomeIntellect`, `omitMaximal` in `9b1c8d31` | **Restated** as facts about finite interpretations. `9b1c8d31`'s record: hand-written Unit or Bool models in which the other premises hold and the conclusion fails; "no model is claimed to describe reality". Each shows a premise is needed in one interpretation. None counts against a premise's truth. |
-| 5 | Teleonomy: alternative `03d40e6a` (relation `1ed888a1`), objection `4b498d8e` (q.2 a.3 arg. 2, relation `59318aba`), [teleonomy comparison](teleonomy-comparison.md), against `564ce19b` | **Kept, as an undercutting objection of limited scope.** *Target:* the warrant for `564ce19b`, namely the generalization from the archer to all noncognitive tending. *Mechanism:* differential reproduction and inheritance, local feedback and lawful organization explain specific useful recurrences without a represented end in the mechanism. *Justification:* scoped primary sources in their own domains (adaptation, morphogenesis, abiotic pattern). Those cases are noncognitive things that the Fifth Way itself takes to tend to ends, so the mechanism applies at the scope over which the premise quantifies. The director-rival boundary note adds that selection and coupling alone imply neither an undirected-tending witness nor the negation of broad tending. *What it does not reach:* the premise's content. `564ce19b` asserts some knowing director, not an immediate one, and the comparison note records that "explaining adaptation without an agent in the mechanism is weaker than denying any intelligent director of nature". The rival leaves why there are these laws unexplained. The exact negative `03d40e6a` follows only from an undirected-tending witness (`580667ca`), and the bridge from the naturalistic summary to such a witness is recorded as OPEN: **restated** as a conditional contradiction. `teleonomyModel` and the `65ac635d`/`f9c0f1e4` omissions are **restated** as non-entailment facts. This keeps the 2026-11-17 wording: a "serious standing rival" whose mechanisms "do not establish that no intelligent first director exists". |
+| 5 | Teleonomy: alternative `03d40e6a` (relation `1ed888a1`), objection `4b498d8e` (q.2 a.3 arg. 2, relation `59318aba`), [teleonomy comparison](teleonomy-comparison.md), against `564ce19b` | **Kept, as an undercutting objection of limited scope.** *Target:* the warrant for `564ce19b`, namely the generalization from the archer to all noncognitive tending. *Mechanism:* differential reproduction and inheritance, local feedback and lawful organization explain specific useful recurrences without a represented end in the mechanism. *Justification:* scoped primary sources in their own domains (adaptation, morphogenesis, abiotic pattern). Domain membership: the premise's proponent grants that such organisms and bodies are noncognitive things tending to ends, so these instances lie inside the domain of `564ce19b` on its own dictionary. The director-rival boundary note adds that selection and coupling alone imply neither an undirected-tending witness nor the negation of broad tending. *What it does not reach:* the premise's content. `564ce19b` asserts some knowing director, not an immediate one, and the comparison note records that "explaining adaptation without an agent in the mechanism is weaker than denying any intelligent director of nature". The two caveats are recorded together: the mechanisms "do not establish that no intelligent first director exists", and "saying they presuppose laws does not establish that an intellect directs those laws". On the comparison map the rival leaves the question of why there are these laws unexplained, and that map says an unexplained cell does not count as refutation. The exact negative `03d40e6a` follows only from an undirected-tending witness (`580667ca`), and the bridge from the naturalistic summary to such a witness is recorded as OPEN: **restated** as a conditional contradiction. `teleonomyModel` and the `65ac635d`/`f9c0f1e4` omissions are **restated** as non-entailment facts. This keeps the 2026-11-17 wording: a "serious standing rival" whose mechanisms "do not establish that no intelligent first director exists". |
 | 6 | Organizational and history account of the matched understanding case (2026-11-17) | **Restated** as an explanatory comparison at matching scope. It explains the local person's understanding and denies only that this requires an intellectual ultimate source. It reaches no cluster premise's content: Mira is outside `564ce19b`'s antecedent, and she is not an unmoved director. The earlier finding is retained: the local tests give "no discrimination between the two stronger accounts". Its mechanisms (learning history, controller organization) are recorded as "a combined analyst explanation", not as a complete naturalization. |
-| 7 | Enabling or unrelated movers, against the every-mover scope of `251bbfdd` (2026-11-17 audit item 2; Rochette co-motion) | **Restated** as an open application gap. The earlier wording is retained: "an application gap for the universal inheritance claim, not a metaphysical counterexample". The co-motion example was expressly not offered as a countermodel, and a frame-relative change of position "is not automatically" a `MovesIn` edge. **No substantive objection identified** as evidence of falsity. The gap note on claim `8e918dbb` is an attribution boundary. |
-| 8 | Unrelated-respect trigger, against the universal scope of `e8ffcdad` | **Restated**: "an application question, not a certified counterexample to selection". Absence of an identified predecessor "is not evidence of autonomy". **No substantive objection identified.** |
-| 9 | Intrinsic directive nature without cognition at the first source, against `acc06edc` (2026-11-17) | **Restated.** *Target:* the step from non-received final ordering to cognition and understanding. *Mechanism:* determinate natural powers and organized constraints as principles of end-directed execution. *Justification:* real "within their demonstrated domains"; the section notes that the Rochette system is designed, acquired and moved and that feedback systems have their own material and dynamical conditions. At the target's scope, a director moved in no respect, the extension is "a further metaphysical application, not a documented fact or a certified joint model". It is therefore not kept as evidence against `acc06edc`, and in that sense no substantive objection to its truth is identified; its positive warrant stays open all the same. The earlier balance is retained in both directions: "No substantive refutation of acc06edc has therefore been obtained", and the gap "must not be recast as either a metaphysical victory for intellect or a fully established rival of equal explanatory adequacy". The rationale that a first principal cannot borrow its ordering assumes that the ordering must be possessed as known, which is what this rival denies; it does not discriminate against it. |
+| 7 | Enabling or unrelated movers, against the every-mover scope of `251bbfdd` (2026-11-17 audit item 2; Rochette co-motion) | **Restated** as an open application gap. The earlier wording is retained: "an application gap for the universal inheritance claim, not a metaphysical counterexample". Domain membership is what is missing: no record grants that an enabling condition or the planetary co-motion is a `MovesIn` edge on the premise's dictionary, and a frame-relative change of position "is not automatically" one. The co-motion example was expressly not offered as a countermodel. **No substantive objection identified** as evidence of falsity. The gap note on claim `8e918dbb` is an attribution boundary. |
+| 8 | Unrelated-respect trigger, against the universal scope of `e8ffcdad` | **Restated**: "an application question, not a certified counterexample to selection". As in row 7, no record grants that the unrelated movement is a `MovesIn` edge of a director inside the premise's domain, and absence of an identified predecessor "is not evidence of autonomy". **No substantive objection identified.** |
+| 9 | Intrinsic directive nature without cognition at the first source, against `acc06edc` (2026-11-17) | **Restated.** *Target:* the step from non-received final ordering to cognition and understanding. *Mechanism:* determinate natural powers and organized constraints as principles of end-directed execution. *Justification:* real "within their demonstrated domains"; the section notes that the Rochette system is designed, acquired and moved and that feedback systems have their own material and dynamical conditions. At the target's scope, a director moved in no respect, the extension is "a further metaphysical application, not a documented fact or a certified joint model". It is therefore not kept as evidence against `acc06edc`, and in that sense no substantive objection to its truth is identified; its positive warrant stays open all the same. The earlier balance is retained in both directions: "No substantive refutation of acc06edc has therefore been obtained", and the gap "must not be recast as either a metaphysical victory for intellect or a fully established rival of equal explanatory adequacy". The rationale that a first principal cannot borrow its ordering leaves a step missing: non-borrowed ordering "is not yet ordering possessed **as known**". So it does not discriminate against this rival. The 2026-11-17 symmetry is kept: the rival's intrinsic orientation "is a candidate primitive stopping point, not by itself a proof of sufficiency", parallel to the direct option of `acc06edc`, and requiring a further source for every candidate intrinsic nature would rule out a primitive source on both sides. |
 | 10 | `withoutDesignNoIntelligentDirector` (argument `6535db07`) | **Restated** as a formal fact: a self-directing body moved by nothing, without intellect, satisfies every other premise of the regress. It shows `acc06edc` is needed in that interpretation. It is not a possible unintelligent first source. |
 | 11 | Formal or eminent precontainment (q.4; `PhysicalGround.InActUnder`) | **Restated** as a boundary, not an objection. Causing cognitive effects does not by itself give formal possession of intellect, and possession is not exercise. No cluster premise is challenged by it; it limits what `acc06edc`'s perfection rationale can deliver. |
 | 12 | The #1750 standing rivals: a simple impersonal necessary source with teleonomy, and the organizational denial of an additional unmoved intellectual director | **Restated** from #1750 with their prices unchanged. The first must deny `180f5ad2` and either the director and reduction steps or the identity `46326b43`; the second must deny the reduction clause for the selected episode. They are comparisons at the level of the whole case and add no row beyond 1, 5, 6 and 9. |
@@ -2109,19 +2123,25 @@ Tally:
   weighting is changed.
 
 Old framing replaced: reading the 2026-11-11 heading's "surviving rival" as
-weight against `0bdb0436`; the section itself did not claim that. The
+evidence that `0bdb0436` is false. The section treated the rival as an
+undischarged alternative, not as evidence of falsity. The
 frontier-count and route-cost paragraphs of the earlier sections are
 diagnostics only.
 
 ### (d) Overall provisional judgment, revision conditions and next test
 
 **Judgment.** On the meanings in (a), the case that the first source has
-intellect is positively motivated from two families that share no inputs: the
-q.14 grades of immateriality (A) and the Fifth-Way director with its reduction
-(B, C). Neither family's decisive step has independent warrant on file. In A it
-is the exhaustive-explanation step behind `0bdb0436`. In B and C it is
-first-source recognition `acc06edc`, which the local route also carries in its
-reduction clause. That is the judgment of the 2026-11-11 and 2026-11-17
+intellect is positively motivated from two families that share no
+intellect-specific inputs: the q.14 grades of immateriality (A) and the
+Fifth-Way director with its reduction (B, C). On the same witness they share
+the structural inputs, the supplied root and the will principle, and they are
+not independent corroborations (#1750). Neither family's intellect-specific
+step has independent warrant on file. In A it is the exhaustive-explanation
+step behind `0bdb0436`, with structural-to-grade applicability `44000fce` also
+open. In B and C the step decisive for the local route is first-source
+recognition `acc06edc`, which that route carries in its reduction clause; the
+governor route needs in addition the open universal step of `e8ffcdad` or
+`251bbfdd`. That is the judgment of the 2026-11-11 and 2026-11-17
 sections and of #1750, and it is unchanged.
 
 What the restatement adds is the standing of the objections. Only teleonomy is
@@ -2153,7 +2173,9 @@ retained. Each of the following would revise this judgment:
   intentionally confined, together with an intellectual-grade account. This
   would strengthen `0bdb0436` (2026-11-11). Showing such confinement compatible
   with the accepted metaphysical premises, and not merely assigned in a
-  signature, would make row 1 a kept objection.
+  signature, would weaken the exhaustive-explanation step behind `0bdb0436`
+  (2026-11-11). Row 1 would become a kept objection only with positive
+  justification of its mechanism for an immaterial bearer.
 - An independent result on whether determinate intentional content requires an
   internal articulation excluded by the first's simplicity (the Plotinian test).
 - An independent account of intellectual presence with nonpassive first-source
@@ -2191,6 +2213,10 @@ weak versions of `44000fce` and `0bdb0436` with a `strengthens` relation each
 and let those consumers use them. Row 3 then no longer reaches the routes. If
 some consumer needs the unguarded scope, the domain of `Being` becomes a
 meaning decision that must be recorded. Either outcome fixes what row 3 is. The
+2026-11-09 audit's warning applies: excluding abstract objects alone "would not
+provide life, operations or foreign-form capacity". A concrete-bearer guard
+settles only row 3. The burden of a concrete but nonliving immaterial bearer,
+and with it row 1, remains. The
 same audit shape applies to `3c468121`: check which of its consumers act on an
 actual concrete target and can take `cb1cdea9`.
 
@@ -2211,12 +2237,15 @@ actual concrete target and can take `cb1cdea9`.
 
 **Declared revisions: none.** Compared with every earlier recorded judgment:
 
-- `5854ef2b`, `0bdb0436`, `564ce19b`, `251bbfdd`, `e8ffcdad` and `acc06edc` keep
-  their recorded standing unchanged, as cited in (b).
-- `44000fce`, `3c468121` and `30a8373c` had no earlier standing statement. Theirs
-  are first standing statements. They are ungraded, new, and revise nothing.
+- `5854ef2b`, `0bdb0436`, `44000fce`, `564ce19b`, `251bbfdd`, `e8ffcdad` and
+  `acc06edc` keep their recorded standing unchanged, as cited in (b). For
+  `44000fce` the earlier records are scattered; (b) gives a first consolidated
+  standing statement that keeps structural-to-grade applicability open and
+  moves no burden to `0bdb0436`.
+- `3c468121` and `30a8373c` had no earlier standing statement. Theirs are first
+  standing statements. They are ungraded, new, and revise nothing.
 - The classifications in (c) restate boundaries that the earlier sections drew.
-  Row 5's "kept, undercutting" and the scope criterion at the head of (c) are
+  Row 5's classification as a kept undercutting objection and the scope criterion at the head of (c) are
   stated here for the first time; they change neither the 2026-11-17 weighting of
   teleonomy nor any premise's standing.
 - The 2026-11-11 non-discrimination judgment, the 2026-11-17 recognition
