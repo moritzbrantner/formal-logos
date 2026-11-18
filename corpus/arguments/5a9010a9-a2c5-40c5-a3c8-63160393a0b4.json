@@ -1,0 +1,31 @@
+{
+  "id": "5a9010a9-a2c5-40c5-a3c8-63160393a0b4",
+  "label": "De ente source and underived candidate are one being under unique actual roothood",
+  "premise_statement_ids": [
+    "ce7edf53-afbb-4bca-84d6-b0e36b861148",
+    "0bdcf366-29c7-5d45-b603-5c929dcad976",
+    "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1"
+  ],
+  "conclusion_statement_id": "630843d1-6404-4168-b925-c9bfe2b8c14a",
+  "inference_ids": [
+    "c8566af5-3546-43b6-a635-5c0d913cac99"
+  ],
+  "meaning": "Analyst witness-identity composition, attribution deferred. On ONE carrier, grounding profile m and world w: the De ente source n is an actual concrete root at w (ce7edf53). The underived candidate u has no selected ground from an existing concrete candidate at any world, in particular none at w, so u is an actual root at w. UniqueActualRootAt m w (7ab0ddcb) identifies both with its unique root, so u = n and the two bodies hold of one being. All-world underivedness and necessity come from the underived premise; they are NOT derived from De ente roothood at w. The proof uses neither Ontic.Causes nor any identification of the q3 causal relation with m.grounds; the De ente bridges that make n an actual root are inputs of ce7edf53's own producer. No existence, necessity or divine attribute of any being follows unconditionally. See docs/notes/de-ente-esse-source-1628.md#same-witness-identities-for-1731-2026-11-18.",
+  "definition_ids": [
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "9146789d-5b36-572f-baa1-7eef28967793",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "75c193e1-bab0-5ec2-890b-9ff608b05aa7",
+    "9aa95dab-4e15-56e4-b9cf-8ad8aef87540"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "5d15d8f2-1080-53c9-886f-cee2a4ff23a9",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ]
+}

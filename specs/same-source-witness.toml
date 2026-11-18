@@ -1,0 +1,68 @@
+# #1731 same-source witness identities and the local-teleology join to the
+# positive-root tuple. Analyst formulations, attribution deferred. The two
+# identity conclusions state that ONE being satisfies two existing endpoints on
+# one carrier, grounding profile m, world w and q3 profile p; no endpoint's
+# inputs are proved. The local-teleology argument is a new support option for
+# the existing positive-root endpoint 017befa2.
+
+[batch]
+vocab = "TruthCore.Causality.SameSourceWitness"
+results = "TruthCore.Results.Causality.SameSourceWitness"
+
+[[statement]]
+id = "The De ente first source is the same being as a necessary CONCRETE_6 underived candidate at w"
+lean = "DeEnteSourceIsUnderivedAt"
+paraphrase = "Analyst formulation, unattributed: some ONE being n satisfies, at the same carrier, grounding profile m, world w and q3 profile p, both the body of ce7edf53 (an actual concrete root of the selected grounding at w, in act, with esse equal to essence, no actual cause of its esse, and a finite actual esse-cause path to every other being in act) and the body of 0bdcf366 (concrete, existing at w, existing at every accessible world, with no selected ground from an existing concrete candidate at ANY admitted world). Not asserted: that roothood at w gives all-world underivedness, that n is the only necessary individual, that n has non-concrete support, or any divine attribute."
+definitions = ["c57e2682-08e6-527e-950f-0fa0a7ff11ef", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "8163859b-95b3-4dd2-8a69-541bd332f32f", "183b48d2-1753-583d-aef9-4199cff86231", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "75c193e1-bab0-5ec2-890b-9ff608b05aa7", "9146789d-5b36-572f-baa1-7eef28967793", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1"]
+disambiguations = ["6f1d1395-7c1d-5bd5-a45d-03380857aed6", "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"]
+
+[[statement]]
+id = "The De ente first source is the same being as the GOD_4 classical root at w"
+lean = "DeEnteSourceIsClassicalGodRootAt"
+paraphrase = "Analyst formulation, unattributed: some ONE being n satisfies, at the same carrier sigma.Being, grounding profile m, world w and q3 profile p, both the body of ce7edf53 (the De ente first source as an actual concrete root at w: in act, esse equal to essence, no actual cause of its esse, finite actual esse-cause path to every other being in act) and the body of da3facd6 (the selected perfect actual root with selected-root uniqueness, esse maximum, perfection, firstness, matter/form exclusion, remoteness, the signature IsGod (GOD_4) predicate, the exact nine case predicates and the primitive classical-attribute field). GOD_4 is the nominal case predicate, not a historical or Christian identification. Selected-root uniqueness is among actual concrete roots of the same grounding relation at w, not among all necessary individuals."
+definitions = ["c57e2682-08e6-527e-950f-0fa0a7ff11ef", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "8163859b-95b3-4dd2-8a69-541bd332f32f", "183b48d2-1753-583d-aef9-4199cff86231", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "f1a17ff8-e477-5463-b669-d35a41246c12", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "a2a8de58-42e0-5481-b7fb-848ae8602036", "c2c8b139-fb8a-5ce2-8add-ec55a60d8b0b", "1b8baf77-84fa-5513-a138-7fa14840dd87", "e1ff44df-ed97-5990-8424-1abd720f23ea", "ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8", "1dff2d68-1348-5e7e-8ee7-248af63c8c53", "4f194c7b-c2f8-5701-b5e7-4c23d2d5a1a2", "5766de66-8a37-5b04-aa65-9eec53319f50", "fc6f0e12-470f-5717-8c5b-ece7a450fe59", "9969dfc2-1f2e-50be-b5e6-1f9cd402c7a6", "365e2a20-269f-5f0b-ac67-913e8ff5662a", "5f851204-5991-5e16-87f1-e8b3ed729708", "58e0de99-6199-5851-8e03-381bca0d44f0", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "211a6432-8b8f-53ed-85e3-75173bb15b24", "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1", "c19faf56-0908-5e6e-8c39-ccba40dce5d1", "4c8f0e6b-7ef6-5be5-851c-cdf4f0301546", "78298f24-494d-58ab-8c19-8b9d8412e958", "6eb6b132-923a-5f08-9022-feddaba929b9", "6740d461-9f1e-526f-8c3a-7e5e85b5315f", "0ea9feb8-1f92-5b11-aa74-2f2e567c6106", "a919ce52-6c8b-5e0f-9aaa-5b570bded78b", "85f7f569-ab4d-514b-aa2c-cf75171ad105", "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8", "25e19d5a-5cdf-5916-a888-f6a0ce970f11", "15399dcf-49c1-5054-9e71-4a192dfa3453", "53b02c11-a28b-57c2-8d2e-7e013893db7e", "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4", "7c64b499-6dba-5e03-bdf3-5acea95d8836", "382558ae-a8ad-53b9-b02b-32c48434ec58", "a49e4cf1-ca4f-5519-9724-892af257cedb", "1d8890c0-afe2-5cdb-a400-0bbd4b79053d", "da5c0716-718e-5aaa-abec-95c9e93cac00", "1291944d-a8b2-54eb-899d-66bd5f8b4762", "88f9f6e8-997b-5f7d-afa1-c501954c3807", "16cf8319-84c7-5e24-9d18-5942b99c2e67", "d980bbd2-1a96-564c-bc0d-4065d7786715", "c8f9c2fb-8c17-5fc8-b558-4a6fad659296", "b1415b6b-19b0-5a0e-aa0c-0ab32f350141", "0e3dd988-5ff3-5388-9bbf-5f87d0b0705f"]
+disambiguations = ["83264cf5-01fe-52fc-9a00-eeb024f6496e", "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768", "c529e8d3-43e3-53a8-a82f-3955e9815265", "34ddfede-ff4d-59ad-9882-4bcb490df9bb", "4b02d34a-9226-5009-9ac2-3b52f4222b21", "d16b94fa-886f-54f3-85a3-7fc0c43d2b58", "00e0d443-eb39-56a3-9179-9c8852ca4a2b", "be54be36-3ce8-53f9-8168-50d1114e6c76", "dba7b1de-f3a0-57af-9af9-b2a4da3136fa", "1795a62e-f78b-5f5b-94e7-9e7490824811", "6f1d1395-7c1d-5bd5-a45d-03380857aed6", "3b0d67c5-59e4-5556-a728-26bd567f0fb1", "9880c06b-e689-5294-b349-badb981abbf6", "1aef8986-ed29-564f-9803-d812d2ff63e1", "06fb4f51-ff5f-5c5e-b947-844f20de4174", "205a39c3-915d-5fe4-8076-a9ff91329e08", "587c53cf-c2a8-51f6-b8c1-013e67756dc6", "f561d4e4-ab8f-5d20-9926-d63a74df3b4e", "9b16c72e-e8dc-5d69-88bf-0daf61ab2f9b", "c0fda0ee-3508-5101-94ba-043e3eb28b0e"]
+
+[[argument]]
+id = "De ente source and underived candidate are one being under unique actual roothood"
+theorem = "deEnteSourceIsUnderived"
+premises = ["ce7edf53-afbb-4bca-84d6-b0e36b861148", "0bdcf366-29c7-5d45-b603-5c929dcad976", "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1"]
+conclusion = "The De ente first source is the same being as a necessary CONCRETE_6 underived candidate at w"
+axioms = []
+rule = "Instantiate the underived candidate's all-world no-ground clause at w to make it an actual root, then identify both actual roots by unique actual roothood"
+meaning = "Analyst witness-identity composition, attribution deferred. On ONE carrier, grounding profile m and world w: the De ente source n is an actual concrete root at w (ce7edf53). The underived candidate u has no selected ground from an existing concrete candidate at any world, in particular none at w, so u is an actual root at w. UniqueActualRootAt m w (7ab0ddcb) identifies both with its unique root, so u = n and the two bodies hold of one being. All-world underivedness and necessity come from the underived premise; they are NOT derived from De ente roothood at w. The proof uses neither Ontic.Causes nor any identification of the q3 causal relation with m.grounds; the De ente bridges that make n an actual root are inputs of ce7edf53's own producer. No existence, necessity or divine attribute of any being follows unconditionally. See docs/notes/de-ente-esse-source-1628.md#same-witness-identities-for-1731-2026-11-18."
+
+[[argument]]
+id = "De ente source and GOD_4 classical root are one being by selected-root uniqueness"
+theorem = "deEnteSourceIsClassicalGodRoot"
+premises = ["ce7edf53-afbb-4bca-84d6-b0e36b861148", "da3facd6-008e-5e76-92fa-677350c2dfdb"]
+conclusion = "The De ente first source is the same being as the GOD_4 classical root at w"
+axioms = []
+rule = "Apply the classical root's own PerfectRootAt uniqueness clause to the De ente actual root"
+strong_version_needed = { "da3facd6-008e-5e76-92fa-677350c2dfdb" = "The weak versions (GOD_4 exists, unique classical God exists) are existential projections that forget the witness and its PerfectRootAt clause. The identity uses exactly that clause (every actual root of m at w equals the witness) and the conclusion retains the witness's full body, so no weak version suffices." }
+meaning = "Analyst witness-identity composition, attribution deferred. On ONE carrier sigma.Being, grounding profile m, world w and q3 profile p: the De ente source n is an actual concrete root at w (ce7edf53). The classical God root g (da3facd6) satisfies PerfectRootAt, which itself contains 'every actual root of m at w equals g'. Hence n = g and both bodies hold of one being. De ente root EXISTENCE suffices; no separate root-uniqueness package (multiplication, grades or pure indiscernibility) is an input, because the classical endpoint already carries selected-root uniqueness and that carried commitment is retained, not removed. The bare GodExists projection loses this identity; this conclusion retains it. Neither endpoint's inputs (the De ente actuality/ground bridges; the 22-input classical-root bundle) are proved. GOD_4 is the nominal case predicate, not historical or Christian identification. See docs/notes/de-ente-esse-source-1628.md#same-witness-identities-for-1731-2026-11-18."
+
+[[argument]]
+id = "HAS_INTELLECT_1 and HAS_WILL_1 at the selected actual root from the local Fifth Way"
+theorem = "localTeleologyPerfectRoot"
+premises = [
+  "7abdee27-8abc-59d9-9b20-740616a1a8dd",
+  "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+  "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7",
+  "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+  "7067553d-cad9-5d79-b6b2-912e35051530",
+  "00e962ae-f109-55f7-a7fd-f107ce0dea6b",
+  "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+  "ca07cae9-6102-564e-a7fd-efb013744b3d",
+  "d7741cdc-881b-5bda-85ce-d70223162f78",
+  "86efed1a-f353-5b5d-9431-df7fc643ace1",
+  "09c6d5f0-d412-5038-85f9-75fffb935727",
+  "65c409cc-eb7f-4d66-8e2d-60c8e5138ed6",
+  "46326b43-ec14-551a-8eaf-3230f57572c6",
+  "090be689-b77f-51a1-9d5d-caf339169e4b",
+]
+conclusion = "017befa2-6ac0-52d2-b49c-d1d10507c2cf"
+sense_bridges = [{ term = "CAUSE", from = "bdc6001c-9699-4126-9e35-6fbd1da78100", to = "572f19f2-8833-4133-8bea-b8b5fa4ac24f", statement_id = "46326b43-ec14-551a-8eaf-3230f57572c6" }]
+axioms = []
+rule = "Transport local Fifth-Way intellect to every esse maximum by first-mover/maximum identity, apply it at the supplied perfect root, then reuse the governor tail on that same witness"
+meaning = "Analyst horizontal support option for the existing positive-root endpoint, attribution deferred. Retains the supplied perfect root, excluded middle, nine further structural inputs and the will principle of PerfectRootIntellectFromGovernor.derive and replaces its MaximeEnsGovernsNature input by the witness-local Fifth Way bundle 65c409cc and first-mover/maximum identity 46326b43, on ONE HasIntellect dictionary (Intelligent read as HAS_INTELLECT_1) and the q3 profile's respect carrier for motion. The local bundle gives an intellectual unmoved director that moves the selected body, hence a first unmoved mover f; the existing godHasIntellect consumer, instantiated with the esse-maximum predicate in its GOD_4 slot (so its naming converse holds by definition and no GOD_4 premise enters), gives intellect to every esse maximum. The supplied perfect root n is such a maximum, so HasIntellect n. The existing governor derivation then gives the SAME positive-root tuple; its global clause 'every natural body is directed' is instantiated with an empty natural-body predicate, which shows that derivation uses only an intelligent maximum. No global governor, universal immateriality-to-intellect bridge, GOD_4 naming converse (4c79298d) or God-existence conclusion is used. CAUSE_1 (moving, in the local bundle) and CAUSE_2 (causing a perfection at esse, in the root/genus inputs) stay distinct parameters Moves and p.CausesIn: no moving edge is converted into an esse-cause edge. The only passage from the motion order to the esse order is the declared bridge 46326b43, which identifies a first unmoved mover with an esse maximum. The identity premise keeps its substantial causal and agent-application provenance (producers 790f1b54, 87b6f981) and is shared with other Ways; this is not independent corroboration of them. The application that the local director's direction is intellectual cognition, not sensory response or selection/feedback, remains the open semantic burden. See docs/notes/teleology-first-mover.md#same-witness-intellect-routes-and-the-will-consumer-1731-2026-11-18."

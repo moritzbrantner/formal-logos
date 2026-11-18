@@ -212,6 +212,7 @@ public import TruthCore.Causality.Round3CogitoBase
 public import TruthCore.Causality.Round3FourthWay
 public import TruthCore.Causality.Round4Revisited
 public import TruthCore.Causality.Round5Worklist
+public import TruthCore.Causality.SameSourceWitness
 public import TruthCore.Causality.ScopedActualCausality
 public import TruthCore.Causality.SelectedAncestry
 public import TruthCore.Causality.SelectedAncestryUniqueControl

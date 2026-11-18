@@ -331,3 +331,156 @@ distinct verified support alternatives: 426 -> 426
 verified support alternatives added: 0
 no change
 ```
+
+## Same-witness intellect routes and the will consumer (#1731, 2026-11-18)
+
+**Proposed outcome for review.** First integration slice of #1731: compare the
+three existing intellect support options on ONE witness, connect each to the
+will principle and to a separately supplied God-existence witness, and
+register only the missing link. One link was missing: the local route reached
+the universal GOD_4 predicate `29818edd`, not the witness-carrying root tuple.
+
+### One witness, three intellect options
+
+The witness-carrying endpoint is `017befa2`
+(`NecessaryPositiveRootIntellectWillAt`): ONE selected actual concrete root n,
+necessary at accessible worlds, unique among actual roots, esse maximum,
+perfect, causally supremely good, esse = essence, simple, first, without
+matter/form, remote, with `HasIntellect n` and `HasWill n`. Its three
+producers share ten structural inputs (EM `ee4ab504`, genus at being
+`da09703b`, esse-cause-to-ground `cb1cdea9`, actuality-to-being `7067553d`,
+goodness `00e962ae`, transfer `b26c10a0`, uniting cause `ca07cae9`,
+composition kinds `d7741cdc`, priority-to-ground `86efed1a`, no-component
+`09c6d5f0`), the supplied perfect root `7abdee27` (its witness is n) and the
+will principle `090be689`. They differ in ONE input set:
+
+| Option | Result / argument | Intellect input(s) replacing the others | How intellect reaches n |
+| --- | --- | --- | --- |
+| Immateriality (q.14) | `perfect-root-positive-intellect-will` / `d17a98c3` | `180f5ad2` altogether-immaterial → intellectual | n is shown immaterial and remote, then the reading applies at n |
+| Global governor | `b5bbf266` / `a56eea3e` | `571094b6` an esse maximum is intelligent and directs every natural body | that maximum causes n's esse unless equal; n has no actual concrete ground, so it is n |
+| Local Fifth Way (new) | [`2fbc2c57`](../../corpus/results/2fbc2c57-4d59-493e-b9fb-940bf7bfa5c0.json) / `141eb857` | `65c409cc` one body/end's local bundle and `46326b43` first unmoved mover = esse maximum | the local intellectual first mover equals every esse maximum; n is one |
+
+`TruthCore.Results.Causality.SameSourceWitness.localTeleologyPerfectRoot`
+composes `LocalTeleologyGodIntellect.godHasIntellect`, instantiated with the
+esse-maximum predicate in its GOD_4 slot, with
+`PerfectRootIntellectFromGovernor.derive`, whose natural-body predicate is
+instantiated as empty. This exposes an exact finding about the governor
+consumer: it uses only "some esse maximum has intellect"; its global
+"directs every natural body" clause is idle there. The global governor is
+therefore stronger than this consumer needs, and the local route supplies
+the needed input without universal direction scope. Compared with the
+GOD_4-predicate route `11628966`, the new result does not use the naming
+converse `4c79298d`: the root tuple's own maximum carries the identity.
+CAUSE_1 (moving, in `65c409cc`) and CAUSE_2 (causing a perfection at esse,
+in the structural inputs) remain distinct parameters; the declared sense
+bridge is `46326b43`, the only passage from the motion order to the esse
+order. No moving edge becomes an esse-cause edge.
+
+### Attachment to the God-existence witness and to will
+
+* **Witness-carrying chain.** `017befa2` feeds
+  `ClassicalGodFromPositiveRoot.derive` (`80946eca`) to `da3facd6`
+  (`NecessaryClassicalGodRootAt`), whose nine predicates include
+  `HasIntellect n` and `HasWill n` for the SAME n named GOD_4. The God-existence
+  witness is supplied separately as the perfect root `7abdee27`, for example
+  by `UnderivedRootPerfection.derive` from an underived candidate, and
+  `deEnteSourceIsClassicalGodRoot` (`8e3b89c9`, see the
+  [De ente note](de-ente-esse-source-1628.md#same-witness-identities-for-1731-2026-11-18))
+  identifies that root with the De ente first source on the same `m`, `w`, `p`.
+  Will is part of the tuple in all three options, by the same `090be689`.
+* **Universal GOD_4 predicates.** `29818edd` (`GodHasIntellect`) and
+  `66aecdd7` (`GodHasWill`, modular consumer `dd55f57a`) are universal
+  conditionals over GOD_4. They supply no witness. Applied to a GOD_4
+  existence witness (`8626f8a5`) they give that witness intellect and will,
+  through the naming converse `4c79298d` (local route) or the older
+  immateriality chain. They are distinct from the root tuple's `HasIntellect n`:
+  the latter is proved of the selected root, before naming.
+
+Computed delta: at the GOD_4 root `8626f8a5`, verified support alternatives
+436 → 440 and reaching open premises 420 → 421; the added visible bare premise
+is the existing universal Fifth Way bundle `b5f01676`, now reaching that root
+through the local bundle's existing weakening. At the Catholicism root,
+522 → 523 alternatives, open premises unchanged at 511. These are graph
+diagnostics, not new evidence or a warrant ranking.
+
+### Shared dependencies, independence and premise differences
+
+The three options are not three independent corroborations. All share the
+ten structural inputs, the supplied root and the will principle. The
+governor and local options also share the Fifth-Way director/reduction family
+(`65c409cc` is the witness-local weakening of `b5f01676`). The governor's
+producer and the identity bridge's producers `790f1b54` / `87b6f981` both
+carry God-naming and created-agent application; the identity producers add
+the genus principle, moves-only-as-in-act and actuality-to-being. The local option removes universal direction
+scope and the governor's uniqueness and Fourth-Way inputs; it adds the
+identity bridge, which already identifies every first mover with any
+maximum, so it does not escape uniqueness strength. The immateriality option
+belongs to a different family (q.14 immateriality-to-intellect) and shares
+none of the teleological inputs.
+
+### Causing, possessing and cognizing kept distinct
+
+All three conclude `HasIntellect n` (HAS_INTELLECT_1, a capacity-level
+predicate). The immateriality option derives possession from immateriality;
+the governor and local options derive it by IDENTITY of an intellectual
+director with n. None goes through causing a cognitive perfection
+(`CausalPerfectionTransfer`, `WholePowerPerfection.rootPerfectionFromWholePower`):
+those results concern formal-or-eminent possession of caused perfections and
+remain a separate option, not used here. None concludes current cognizing,
+omniscience (#1737) or exercised choice. `HasWill` is capacity-level
+intellectual appetite. The structured appetite-to-unchanged-`HasWill`
+application (possession-sensitive response, acquired good versus rest in a
+possessed good) remains OPEN and was not touched; no other universal
+intellect → will wrapper was added, since `dd55f57a` and `090be689` already
+serve every option.
+
+### Matched teleological phenomenon
+
+No new matched comparison was run. The existing ones are at the correct
+same-domain level: the bridge-closure understanding case
+([immaterial-intellect-reception.md](../immaterial-intellect-reception.md#matched-understanding-case-the-bridge-closure-inference-2026-11-17))
+and the Rochette coring application
+([same note](../immaterial-intellect-reception.md#documented-application-rochette-coring-and-unrelated-bearer-motion-2026-11-17)).
+They support local intellectual direction for that selected episode and
+locate the open step at same-end inheritance and first-source recognition,
+which the local option bypasses by the identity bridge rather than resolving.
+Ordinary selection/feedback (teleonomy) and the direction of laws remain
+different targets, as recorded above.
+
+### Cumulative provisional assessment, standing rival and revision conditions
+
+**Assessment.** Conditional on a supplied perfect actual root, intellect and
+capacity-level will at that SAME root now have three certified support
+options, with one direct-assumption option (`180f5ad2` or `571094b6` accepted
+on its own merits) retained in each. The strongest cumulative positive case
+combines the q.14 immateriality reading with one warranted case of knowing
+local direction plus the first-mover/maximum identity. Because the two belong
+to different families, an objection must meet both: denying
+immateriality-to-intellect leaves the local route, and a teleonomic account of
+one episode leaves the immateriality route. The provisional judgment is
+modestly positive for intellect at the root on the conditional case; formal
+status is unchanged (no premise closed).
+
+**Standing rival.** A simple impersonal necessary source (the
+`simpleImpersonal` control of
+[physical-ground-468.md](physical-ground-468.md#registered-integration-with-the-current-necessary-being-routes))
+together with a teleonomic explanation of the selected local regularity. Its
+price is explicit: it must deny `180f5ad2` (with a positive account of a simple
+noncognitive first) AND deny either the knowing-director/reduction steps of
+`65c409cc` for every warranted case or the identity `46326b43`. Its positive
+mechanism (selection, feedback, lawful organization) addresses the local
+phenomenon; it does not by itself address immateriality-to-intellect.
+
+**Revision conditions.** Upward: a warranted actual case satisfying the local
+bundle on the HAS_INTELLECT_1 reading, or independent warrant for the identity
+bridge. Downward: a substantive failure mechanism for `180f5ad2` and a
+same-episode realization of the selected direction without intellectual ends,
+or a defeat of `46326b43`'s producers. Re-presenting either route under new
+labels adds no warrant.
+
+**Claim/type sweep.** `localTeleologyPerfectRoot` has exactly fourteen
+hypotheses, bound to the listed premises (bind-check: 1 bound, 0 mismatch);
+it proves the existing existential tuple, whose witness is the supplied root
+(the type does not separately state that; the proof uses `⟨n, hn⟩` from
+`7abdee27`). Motion's respect carrier is the q.3 profile's `R`. Attempt:
+`a1b799fe-f75c-4e3e-994a-f4bb834f3ac7`.
