@@ -1,0 +1,112 @@
+{
+  "id": "9d71e28d-d492-4797-9221-45fa517a6e6b",
+  "label": "Cluster reassessment of dependence, simple-priority and grounding leaves of the prima via (#1751)",
+  "statement_ids": [
+    "c0d99549-799c-5a01-9b59-75fe88550b26",
+    "fea5942a-b50c-4299-a5fe-80a5c2b8c0a9",
+    "42756c07-03cd-4b54-8ed6-ed6c1a5132aa",
+    "000e1f65-6e74-5519-bbf3-300d5f61ada8",
+    "97fa3a0b-eb23-5fb1-9741-c1f09fb72206",
+    "d85de8e1-2f7f-5b2f-ba1e-112a0799994c",
+    "47aff057-35ef-5418-930b-fef72e1104d2",
+    "09b88101-5ee4-44f1-b9e0-57117ce6f70e",
+    "f10d5632-ee55-5c6a-b972-809363b8c50c",
+    "3ef67739-a427-582b-9eaa-af6410b9c3d3",
+    "2e248016-f8bf-5d8a-931e-7f9ebbb13e42",
+    "71454b27-1943-5bb4-a1f4-4a1bb716082a",
+    "d6e558d0-131a-553a-a183-fa73aed91281",
+    "57c5ed67-f9fa-55bb-9b3e-3c00643b21e9",
+    "5dacb0db-edb7-5ac0-985b-de65780fceb6",
+    "402cf70f-66ff-415e-a9e2-2e1f288956d8"
+  ],
+  "date": "2026-11-18",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Issue #1751, walk of the GOD_4 prima via route (root 8626f8a5, argument ed7c588a) until its premises bottom out, lane B. The sixteen open leaves of the cheapest expansion that concern existential dependence, simple priority and grounding were reassessed under current standards at main df4909cb025d2e53fee6071a32defe9cf2721284 (GOD_4 root: 423 open premises, 84 current, 158 legacy-only, 181 none; of the sixteen, nine legacy-only and seven none). Read: sections 1-8 of docs/notes/causal-dependence-support-investigation.md; sections 1-3 of priority-independence-logic-support-investigation.md; distinct-dependence-strict-ground-route.md whole; the heater test and judgment of causal-transitivity-1399.md; the D sense table of god-existence-support-formula.md; the rivals of borrowed-exercise-741.md; the lect. 13 section of docs/power-existence-scope-boundary.md; legacy attempts 0daeaa81, 56ae2547, a739dad6, 1020b663, f798617c, 5cf65146, 63e65ca6, a4d430a0, 040e3b4e, 7b8e8975, finite-ancestry-no-loops-regress, pruss-koons-finite-history-reading, rival-sourcing-papineau-hume-512 and the two rejected-edge attempts; current attempt dd24400b; the Lean definitions of all sixteen and the Challenge types of every consuming argument on the route; dossier, currentness and tree for each. The route enters the sixteen through three spines: the per se regress for c1b68c21 (c0d99549, fea5942a, 42756c07, 000e1f65, 97fa3a0b, d85de8e1, 47aff057, 09b88101, f10d5632, with 8ab3d114), uniqueness via the maximum in being (3ef67739, 2e248016, 71454b27, d6e558d0, 57c5ed67, 47aff057, 402cf70f), and pure act via the first being (47aff057, 5dacb0db). End states: derivable 2 (fea5942a, jointly with 42756c07 equivalent to acyclicity of distinct-step D, one direction verified by e86849cf and the converse proposed; f10d5632, by selecting the studied relation); defended primitive or direct option 5 (97fa3a0b on concrete relata, 71454b27, d6e558d0, 57c5ed67, 5dacb0db); open with a named blocker 9 (c0d99549, 42756c07, 000e1f65, d85de8e1, 47aff057, 09b88101, 3ef67739, 2e248016, 402cf70f). Analyst observations, unregistered and not Lean-checked: D, W and P are Lean parameters and no bridge is a meaning postulate of the records, but irreflexivity of CanBeWithout is one, and the bridges make W the complement of D and P the strict part of D; 97f5850f follows from 42890b45 and f10d5632 by subrelation, which bypasses 09b88101 and finite ancestry; e078f07b has a stating claim (3ed048c0) whose direct use removes six of the sixteen from the expansion; 8ab3d114, irreflexive W, excluded middle, 2e248016 and 402cf70f (or 98efaa9e) are jointly inconsistent with any actual concretum; c0d99549 follows from e078f07b and the forward half of 47aff057; simple priority is used both as priority in causing (e078f07b as claim 3ed048c0 reads it, a4d3261a) and as priority in being (47aff057, 97fa3a0b, 5dacb0db), and the hand and the stick separate the two. Objections: kept 11 (accidental-respect causing against c0d99549, newly as a counterexample; origin dependence, conditional; existential inertia; source-free global structure; Lewis non-transitivity against the bare counterfactual reading of 09b88101; modal co-existence and demonstrative causes of necessity and constitutive dependence and instrumental grounds as scope boundaries; cross-world export against 402cf70f, new; lane A's reciprocity case, checked against the Lean declarations and valid only under the priority-in-causing reading of respect-free PriorSimply); restated 3; boundaries retained 3; one scope condition; one row of non-objections; no substantive objection identified 2. The truth semantics preflight on the thirteen consuming route arguments reports no unbridged mixing, only allowlisted legacy mixings, and treats SIMPLY_PRIOR_1 as one sense, so the respect fork is invisible to the sense rules until registered. Countermodels are restated as facts about single interpretations. One judgment is revised and declared (c0d99549). No theorem, Challenge, claim, statement, definition, relation, closure or formal status changed.",
+  "evidence": [
+    "47957c28-218a-58e4-94e4-5220a0c45795",
+    "972ed7e5-098f-5ca6-9685-98d2cee48db8",
+    "695c2113-50b7-5b6c-ab51-e3cc02526d99",
+    "938bfd7f-27d5-47ed-b69b-11d8d2bf4584",
+    "a4558f9c-3063-5d3b-b8a3-164e26160ed2",
+    "965ce7d5-9d7a-590f-b00d-d062b1bf07e2",
+    "e36e4beb-3fd2-51bc-b03e-97e822ddb811",
+    "7192ae5e-dd6b-59e4-a635-b80109055834",
+    "da2bbf20-d95f-51e8-b78c-3b9a35fae89b",
+    "dede4eaa-67b7-5444-8bd9-480b1a5d54e0",
+    "014b2509-7852-5540-80cd-fc0f5fd7dd94",
+    "ee611be0-a4cb-5b77-a127-f9d84e628932",
+    "27f428c1-1446-4367-a41f-6342267b1d9f",
+    "8155fcf5-8cb3-4bd6-871a-7f2851067c6c",
+    "40b8313e-2a44-442b-a5ad-ab8683f7fb9c",
+    "e86849cf-cfc0-4a26-bdf3-e134da64753e",
+    "9150bd9c-22b8-49ea-80ab-92fad0b6fb0c",
+    "d86e618b-56d8-4e5d-9a30-1b4d20bdc82f",
+    "cc7dd608-8551-4045-8bfb-5a7643a9314a",
+    "0ccf914c-9ba9-47aa-96d3-53fbf5ebfeca",
+    "a79850a6-0a21-4a4d-afe7-df52e8df0a0d",
+    "3ed048c0-4316-5945-afd8-c56d23753364",
+    "95f41960-baf4-58ad-ba7f-b11b2f439f7c",
+    "ab5ec574-cd80-5c16-b391-328245425d21",
+    "3ed36bec-27f4-5c77-93d5-3b6724d65204",
+    "bd3767d3-3d65-5f3e-a1b1-925c29bbf116",
+    "40aefb2e-c9b3-5bb1-8802-96bbc4e2ed83",
+    "da9c82ed-e886-5335-81c3-cebad9b27345",
+    "7cd6850f-219f-5106-ac6d-f2e3422e5176",
+    "573a8ba8-067b-5972-86ec-585e47abd579"
+  ],
+  "blocker": "Open: the originating/sustaining fork of DependsForBeing (#1626) for 000e1f65, 2e248016 and 3ef67739; the diagonal fork of D (reflexive or strict) for 3ef67739, 5dacb0db and the inconsistent package with 8ab3d114; the respect fork in SIMPLY_PRIOR_1 (priority in causing versus priority in being), unregistered, for 47aff057 and c0d99549; well-foundedness of simple priority (d85de8e1) against the source-free infinitist structure; the dependence principle for contingent concreta (3ef67739) against existential inertia; the interpretation of the PLG atoms for 42756c07; the cross-world export of 402cf70f. Next test: register the respect fork for SIMPLY_PRIOR_1, bind spine I to priority in causing and spines II and III to priority in being, and check whether 3e2366b5 still derives or needs a bridge from the first being to priority in causing.",
+  "current_assessment": {
+    "date": "2026-11-18",
+    "statement_ids": [
+      "c0d99549-799c-5a01-9b59-75fe88550b26",
+      "fea5942a-b50c-4299-a5fe-80a5c2b8c0a9",
+      "42756c07-03cd-4b54-8ed6-ed6c1a5132aa",
+      "000e1f65-6e74-5519-bbf3-300d5f61ada8",
+      "97fa3a0b-eb23-5fb1-9741-c1f09fb72206",
+      "d85de8e1-2f7f-5b2f-ba1e-112a0799994c",
+      "47aff057-35ef-5418-930b-fef72e1104d2",
+      "09b88101-5ee4-44f1-b9e0-57117ce6f70e",
+      "f10d5632-ee55-5c6a-b972-809363b8c50c",
+      "3ef67739-a427-582b-9eaa-af6410b9c3d3",
+      "2e248016-f8bf-5d8a-931e-7f9ebbb13e42",
+      "71454b27-1943-5bb4-a1f4-4a1bb716082a",
+      "d6e558d0-131a-553a-a183-fa73aed91281",
+      "57c5ed67-f9fa-55bb-9b3e-3c00643b21e9",
+      "5dacb0db-edb7-5ac0-985b-de65780fceb6",
+      "402cf70f-66ff-415e-a9e2-2e1f288956d8"
+    ],
+    "scope": "Lane B of the #1751 bottom-out walk: the sixteen open leaves of the cheapest expansion of the GOD_4 prima via route (argument ed7c588a) that concern existential dependence, simple priority and grounding, in three spines: the per se regress for c1b68c21, uniqueness via the maximum in being for c27dce66, and pure act via the first being for 6c18d52b. 8ab3d114 is used as assessed in dd24400b and not reassessed. The motion and causal-chain core of lane A (57552dce and others) is named as a shared dependency and not assessed.",
+    "assessment": "Under the fixed meanings (counterfactual D with its diagonal and originating/sustaining forks open; W as real possibility of being without, irreflexive by its own words; P a world-free, respect-free primitive glossed by act and potency; E here-and-now efficient causing in any respect; world-free CausesIn at esse; world-local selected grounds) the sixteen end as follows. Derivable: fea5942a (jointly with 42756c07 equivalent to acyclicity of distinct-step D: one direction verified, e86849cf; the converse proposed) and f10d5632 (true by selecting the studied relation, its content moving to 57552dce of lane A). Defended primitive or direct option: 97fa3a0b on concrete relata (n. 15 criterion, transport to P open), 71454b27 (q.44 a.1 ad 2), d6e558d0 and 57c5ed67 (domain stipulations), 5dacb0db (close to a meaning postulate of D read with its agent-cause clause). Open with a named blocker: c0d99549 (kept counterexample: the hand moving the stick and the heater heating water are efficient causings in a respect without existential dependence), 42756c07 (uninterpreted atoms), 000e1f65 (strong prima facie on the sustaining reading, the living-parent case on the originating one), d85de8e1 (the load-bearer of spine I, whose support for the per se regress premise is not discriminating; infinitist rival kept), 47aff057 (sound on priority in being, but on the route it shares one P with e078f07b's priority in causing), 09b88101 (dispensable on the route), 3ef67739 (trivial on reflexive D, contested by existential inertia on strict sustaining D), 2e248016 (avoidable by a8298fbd except in dd7ee4b9) and 402cf70f (cross-world export; avoidable by 98efaa9e). Analyst observations, unregistered and not Lean-checked: 8ab3d114, irreflexive W, excluded middle, 2e248016 and 402cf70f or 98efaa9e exclude every actual concretum, so this expansion is not jointly tenable as recorded; c0d99549 follows from e078f07b and the forward half of 47aff057; 97f5850f follows from 42890b45 and f10d5632; taking e078f07b on its stating claim 3ed048c0 removes six of the sixteen from the expansion. Overall: a positively motivated conditional structure whose recorded form needs two sense fixes, strict sustaining D and a split of simple priority into priority in causing and priority in being. With them, the bridges 000e1f65, 47aff057, 97fa3a0b and 5dacb0db have strong prima facie support from In V Metaph. lect. 13 nn. 15-18, q.44 a.1 ad 2 and q.104 a.1. The load then rests on d85de8e1 (or the per se regress premise directly), on 3ef67739 against existential inertia, and on transport of priority in being to spine III. Lane A's reciprocity case (two beings causing each other in different respects come out mutually prior) is valid only under the priority-in-causing reading of respect-free PriorSimply (e078f07b, 6ca87431, with 7ad36aca and 32d77f18 or with 47aff057). It has no target on the priority-in-being reading, and it is the same fault as the respect fork. Kept objections 11, restated 3, boundaries retained 3, one scope condition, no substantive objection identified 2. One judgment is revised (c0d99549); nothing is established, defeated or closed.",
+    "next_test": "Register the respect fork for SIMPLY_PRIOR_1 (priority in causing and priority in being as separate senses), bind spine I (e078f07b, e229bb2c, d85de8e1) to the first and spines II and III (47aff057, 97fa3a0b, 5dacb0db, 57c5ed67) to the second, and check whether 3e2366b5 still derives from 74eb9113, a4d3261a and c6d6379b. If it needs a bridge such as that nothing other than the first being is prior to it in causing, that bridge is the crux of the pure-act step. Cheap formal tests for the owner: a Lean certificate of the inconsistent package (8ab3d114, irreflexive CanBeWithout, excluded middle, 2e248016, 98efaa9e, InhabitedAt) with a joint model of the repaired spine-II package and a nonempty strict D; a sibling of b58472dd deriving 97f5850f from 42890b45 and f10d5632; the PLG consistency lemma for acyclic strict-sequent sets.",
+    "note": "docs/notes/causal-dependence-support-investigation.md#current-cluster-assessment-under-the-substantive-objection-standard-2026-11-18",
+    "reviewed_revision": "df4909cb025d2e53fee6071a32defe9cf2721284",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Issue #1751 lane B worker draft on main df4909cb025d2e53fee6071a32defe9cf2721284; reviewed_revision records that drafting baseline until the coordinator's independent semantic challenge sets the reviewed head. Not reviewed or published. The assessment covers the qualified synthesis only, not premise establishment, rival defeat or closure.",
+    "supersedes": "As the current-state summary for these sixteen statements only, it revises one judgment and supersedes the wordings that state it: the standing of c0d99549 as 'poorly supported' (docs/notes/causal-dependence-support-investigation.md, section 6 assessment) and as 'underdetermined' and 'not a refutation of the target' (docs/notes/causal-transitivity-1399.md, complete proposed judgment, 2026-11-11), and attempt 0daeaa81's 'The all-r export is unsupported' where read as its full standing; the replacement is a kept counterexample, declared in revisions. The positive received-esse warrant is retained for the esse sibling 2068f91c. No other earlier weighting is changed: the section 4 standing of 000e1f65, the 2026-11-13 standing of 47aff057 and 97fa3a0b, the 1020b663 standing of 42756c07 and the a4d430a0 standing of 09b88101 are kept, with new classifications added. None of the sixteen had an earlier current_assessment; fea5942a, d85de8e1, 3ef67739, 71454b27, d6e558d0, 57c5ed67, 5dacb0db, 402cf70f and f10d5632 had no earlier grade."
+  },
+  "revisions": [
+    {
+      "revision": "all-respects-efficient-dependence-counterexample-2026-11-18",
+      "kind": "judgment",
+      "statement_ids": [
+        "c0d99549-799c-5a01-9b59-75fe88550b26"
+      ],
+      "previous": "docs/notes/causal-dependence-support-investigation.md#6-p8-received-esse-same-respect-effects-and-export-to-the-bearer",
+      "reason": "Under the fixed meanings, efficient causing of x's being r for a non-esse respect r does not make x's being depend on the cause: the hand here and now moves the stick, and the heater here and now heats the water, while the stick and the water would still be if the hand or the heater were not. These are established cases, not hypothetical ones. They falsify the all-respects universal; the earlier standing called it poorly supported or underdetermined. The esse-restricted sibling 2068f91c keeps its positive warrant.",
+      "reassessments": [
+        {
+          "consumer": "arguments:8c629064-17e2-5722-bf5c-54817f11460a",
+          "disposition": "pending",
+          "reason": "Its conclusion e078f07b keeps its direct option on claim 3ed048c0; whether this conditional support option is withdrawn or replaced by an esse-restricted sibling is for the formal owner."
+        },
+        {
+          "consumer": "arguments:1ffd6090-ea39-5a16-b89a-fd14e22814ab",
+          "disposition": "pending",
+          "reason": "Its conclusion 47b151ca also follows from e078f07b and the second half of 47aff057; the replacement route is for the formal owner."
+        }
+      ]
+    }
+  ]
+}
