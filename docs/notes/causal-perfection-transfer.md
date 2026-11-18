@@ -1520,7 +1520,7 @@ alongside any derivation. Conditionality does not erase that option.
 | `e2bfd1b1` selected identity witness | Supplied by the source-first existence route. | A witness premise. Its warrant is that of the common-source inputs outside the cluster. | Not independently assessed here. |
 | `dcf4bcdd` selection of all relevant sources | Derived from `6acd44eb`, `a576300f` and `e2bfd1b1` by a selector classified as a transcription. The selected route does not need it, because `8b8bb6df` suffices. | Not applicable. | Formal residue only; it needs no independent warrant. |
 | `86d02b69` GOD_4 causes the being of all others | q.44 a.1 co.: whatever is in any way is from God. Supporting claim `9b52e1a5` reads the q.2 a.3 naming conversely. On classical theism, creating and sustaining everything else belongs to the content of GOD_4. | Close to a conceptual component of GOD_4. The GOD_4 definition fixes content only through open premises. It is used after naming. | Strong as a commitment of classical theism. It asserts no existence. |
-| `10cd24ed` nonuniversal transfer | None on file (`3de52780`). A possible support is an instrumental bridge on which a particular cause of esse acts as an instrument of the universal cause (De potentia q.3 a.7 lead, unread). That bridge would attribute the perfections to the universal cause, not to the particular cause. | Bare. It is vacuously true if only a universal cause causes esse (q.45 a.5 lead, unread). | Weak. See kept objection 2 below. |
+| `10cd24ed` nonuniversal transfer | None on file (`3de52780`). A possible support is an instrumental bridge on which a particular cause of esse acts as an instrument of the universal cause (De potentia q.3 a.7 lead, unread). That bridge would attribute the perfections to the universal cause, not to the particular cause. | Bare. It is vacuously true if only a universal cause causes esse (q.45 a.5 lead, unread). | Unsupported: no positive warrant on file, and also no substantive objection identified (row 2 below). It stays an open bare premise. |
 | Neighbour `b26c10a0` universal-scope transfer | Non-transcription derivation `dae70d8a`: a universal cause of being is the total cause, a total cause causes each mode of being, and perfections are modes of being (q.4 a.2). Q.105 a.5 adds that God applies created powers to operation. | Open, with a direct option. Concurrence is a positive commitment added to conservation. | Moderate. |
 
 Shared dependencies stay visible:
@@ -1541,7 +1541,7 @@ corroboration of one another.
 | # | Record | Classification under the substantive standard |
 | --- | --- | --- |
 | 1 | Secondary-only conservationist rival (`b0e72763`, background `66aab41c`; "Shared-background tests" above) | **Kept** against the inference from universal existential causation plus possession to transfer. *Target:* that inference. *Mechanism:* the dependence of a bearer and its powers on a source need not include responsibility for each exercise of those powers (sustaining against producing). *Independent justification:* q.104 a.1's own distinctions between becoming and being and between direct and indirect preservation, and q.105 a.5's separate argument for application to operation. The tradition itself treats concurrence as a thesis added to conservation. **Restated** for the truth of `b26c10a0`: the table is a fact about one formal interpretation and shows only non-entailment from that background. **No substantive objection identified** against `b26c10a0` itself: no record gives independent reason to think a universal source fails to apply secondary agents. The Durandus label stays unwitnessed and is not adopted. Papineau and Hume are silent on this premise. |
-| 2 | Scope of particular causes against `10cd24ed` (evidence already in `3de52780` and in this note) | **Kept, conditional on nonvacuity.** *Target:* `10cd24ed`. *Mechanism:* a nonuniversal cause of esse has a proper effect, the form as such in q.104 a.1. The bearer's later actualities can come from other agents. *Independent justification:* first, the only positive transfer derivation (`dae70d8a`) runs through totality, and a nonuniversal cause is by definition not the total cause of every being. That is the named relevant difference. Second, q.105 a.5 assigns the application of agents to operation to the universal agent. Third, ordinary sustaining conditions are not producers of each operation (the supply example under "Causal meaning" above). *Relevance:* the objection applies only if some nonuniversal cause falls under `CausesIn … esse` (the `c3c01e92` bridge for q.104's heavenly bodies). If only a universal cause causes esse, `10cd24ed` is vacuous and the objection is idle. No actual nonuniversal esse cause is established. The concurrent table's (1,3,skill) case is a formal fact, not such a case. |
+| 2 | Scope of particular causes against `10cd24ed` (`3de52780`; this note) | **No substantive objection identified** (reclassified on review of this PR). The proposed mechanism was that a nonuniversal cause of esse has a limited proper effect, so it need not cause every perfection of what it causes. Nonuniversality, however, means failing to cause the esse of some *being*; it does not mean failing to cause a perfection of a being whose esse it does cause. The cited evidence does not supply that exclusion. `dae70d8a`'s reliance on totality shows only that the universal-transfer derivation does not extend, which is an absence of warrant, not a failure mechanism. Q.104 a.1's form-causation example and q.105 a.5's attribution of application to the universal agent do not state that a particular cause of esse fails to cause any perfection of its effect. The supply example was rejected in `3de52780` because enablement is not `CausesIn … esse`. What remains is the absence of positive warrant recorded in (b), plus two unread leads: q.115 a.4 and q.45 a.5. If only a universal cause causes esse, `10cd24ed` is vacuously true. |
 | 3 | United-soul objection `b85a0a0a` (SCG II.80 n.13; q.76 a.1 ad 5, read) against `6dfe01ab` | **Kept** against the broad all-bearer, all-recipient scope under reading (a) of DISAMB-ESSE-RECEPTION. *Mechanism:* a subsisting form communicates its esse to matter, so the body receives the soul's esse without being its essence. *Relevance:* it does not reach identity-bearer instances, which are the only instances the inspected route applications consume. The two strength projections `46ce053d` and `564f13a8` derive the weaker siblings from it. Exact negation `4b23fd7c` and refutation `8f277485` are **restated** as conditional contradictions under the open premises `aab8ebd6` and `60b32382`, not as an unconditional defeat. |
 | 4 | Fundamental natural source (`physical-ground-468.md`; "Independent fullness candidates" above) | **Restated** as an explanatory comparison at matching scope, not an objection to any premise of this cluster. It accepts the same unreceived-source, selection, coverage and composition conditions and earns the same conditional footprint. It denies none of `fd2c8710`, `d164b1ff` or `b4987085`. Its relevance is the naming stage (`1ec205ed`) and the later attributes. |
 | 5 | Calibration gap for `fd2c8710` and `9eaa3b6e`, including the set-coverage audits `e3167aef` and `31055b56` | **Restated** as an open bridge with an exact missing specification. It is a measurement limitation, not a failure mechanism. **No substantive objection identified.** |
@@ -1570,11 +1570,11 @@ costs are diagnostics only. No evidence was deleted.
 
 Tally:
 
-- **kept** — 4 records (rows 1, 2, 3 and 7). Row 1 is kept against an inference;
+- **kept** — 3 records (rows 1, 3 and 7). Row 1 is kept against an inference;
   row 7 bears on a neighbour, not a cluster premise.
 - **restated** — 7 records (rows 4, 5, 6, 8, 9 and 11, plus row 3's exact-negation
   pair). Row 1's countermodel is also restated.
-- **no substantive objection identified** — rows 5, 8 and 10, and the nine
+- **no substantive objection identified** — rows 2, 5, 8 and 10, and the nine
   premises listed above.
 - **dropped as evidence** — none deleted. Only the old weighting of row 1 against
   `b26c10a0` is dropped.
@@ -1593,8 +1593,9 @@ naming.
 The transfer wing is weaker and asymmetric. Universal-scope transfer `b26c10a0`
 has positive warrant from total causation and concurrence, as a commitment added
 to conservation. Nonuniversal transfer `10cd24ed` has no positive warrant on file
-and faces a kept objection whenever it is nonvacuous. Routes should therefore
-consume `b26c10a0` wherever universal scope suffices, which is already true of
+and no substantive objection identified. It is an open bare premise, vacuous if
+only a universal cause causes esse. Because its warrant is absent rather than
+defeated, routes should consume `b26c10a0` wherever universal scope suffices, which is already true of
 naming, reduced naming and goodness.
 
 The fundamental natural source stays a live alternative at this stage, under
@@ -1609,7 +1610,9 @@ identical restrictions. Nothing here establishes a premise or defeats a rival.
 - An independently justified account of conservation without concurrence at the
   scope of a universal source. This would be an objection to `b26c10a0`.
 - Reading q.45 a.5, or deciding `c3c01e92` for q.104's heavenly bodies. Either
-  would fix whether objection 2 is idle or active.
+  would fix whether `10cd24ed` is vacuous or carries real content that needs positive warrant
+  (q.115 a.4 is a further lead). Positive evidence that a nonuniversal esse cause fails to
+  cause some perfection of its own effect would be a substantive objection.
 - An independently specified degree of esse-fullness that does or does not place
   a limited recipient strictly below the source. This would move `fd2c8710` and
   `9eaa3b6e`.
@@ -1619,7 +1622,8 @@ identical restrictions. Nothing here establishes a premise or defeats a rival.
 For each of the 43 non-cycle consumers of `f8ba2429` (45 at baseline, less the
 cycle members `0bb5f653` and `992770d3`), decide whether it needs
 nonuniversal scope or can consume `b26c10a0`. Then materialize q.45 a.5 and
-decide `c3c01e92`, so that `10cd24ed` is either vacuous or under objection 2.
+decide `c3c01e92`, so that `10cd24ed` is either vacuous or a contentful premise
+whose warrant must then be sought (q.115 a.4).
 
 This is horizontal reallocation. The `fd2c8710` calibration has met the same
 obstacle in three consecutive slices. Reopen it only with a substantive eminent
