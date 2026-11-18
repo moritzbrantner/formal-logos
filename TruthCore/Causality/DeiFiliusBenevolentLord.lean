@@ -23,9 +23,11 @@ it is strictly weaker than the LORD_2 bridge (`Control.Controls` part 2).
 The willing premise `IntellectualRecipientExistenceWilling` is restricted to
 intellectual recipients. It follows from the #1732 result
 `DivineWillsGoodForAllExisting` alone, and from `CausalExistenceWilling` with the
-q.5 a.1 coextension; it is consistent with the q.20 a.2 ad 3 ordered-love sibling
-`OrderedExistenceWilling` on a non-rational effect where `CausalExistenceWilling`
-fails (`Control.Controls` part 5).
+q.5 a.1 coextension; it is consistent with the strong (exclusive) ordered-love
+variant `OrderedExistenceWilling` (1dd68893, an unattributed analyst strengthening
+of q.20 a.2 ad 3) on a non-rational effect where `CausalExistenceWilling` fails
+(`Control.Controls` part 5). That conflict holds for the strong variant only; the
+weak, ad-3-faithful ordered reading is compatible with `CausalExistenceWilling`.
 
 What is NOT typed: that God governs each intellectual being *for* the good willed
 to it (the governance and willing conjuncts are separate, as LORD_2's two
@@ -124,7 +126,7 @@ bridge holds and the LORD_2 bridge fails;
 other being having intellect;
 (5) strictness and compatibility of the restricted willing premise: when only
 `true` has intellect and nothing is willed, the restricted premise, the q.5 a.1
-coextension and the q.20 a.2 ad 3 ordered-love reading (rational = has intellect)
+coextension and the strong (exclusive) ordered-love variant (rational = has intellect)
 hold, while `DivineWillsGoodForAllExisting` and `CausalExistenceWilling` fail. -/
 def Controls : Prop :=
   (IntellectualRecipientExistenceWilling isGod all all everywhere everywhere causes (wills true) () ∧

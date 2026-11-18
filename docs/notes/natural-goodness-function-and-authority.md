@@ -1748,12 +1748,15 @@ those governed. One conjunct of that reply is now typed and composed:
   coextension `00e962ae` (result `12ae7844`), which avoids the self-case
   premise `2a168a36`. Both run through `a94c5dfc`: `c691e3d0`'s only
   derivation (argument `12865cf3`) uses it. The premise itself is consistent
-  with the q.20 a.2 ad 3 ordered-love sibling `1dd68893` (rational read as
-  having intellect) on a non-rational effect where `a94c5dfc` fails (controls
-  part 5). But `a94c5dfc` is incompatible with `1dd68893` on distinct
-  non-rational caused effects (see the love note), so **if ordered love holds
-  and non-rational creatures exist, `47c6da1b` has no verified derivation** and
-  stands only as a direct assumption. Its better placement relative to
+  with the strong (exclusive) ordered-love variant `1dd68893`, an unattributed
+  analyst strengthening of q.20 a.2 ad 3 (rational read as having intellect),
+  on a non-rational effect where `a94c5dfc` fails (controls part 5). But
+  `a94c5dfc` is incompatible with `1dd68893` on distinct non-rational caused
+  effects (see the love note), so **if that strong variant holds and
+  non-rational creatures exist, `47c6da1b` has no verified derivation** and
+  stands only as a direct assumption. The conflict holds for the strong variant
+  only; the weak, ad-3-faithful reading (ordered willing without excluding
+  recipient-directed willing) is compatible with `a94c5dfc`. Its better placement relative to
   `a94c5dfc` holds for that direct option only.
 - **Root route** `deiFiliusRootUnifiedBenevolentLord` (result `483129f2`):
   the unified Dei Filius root `c0f4a346` with its lord conjunct through LORD_3

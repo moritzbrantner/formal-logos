@@ -520,10 +520,10 @@ do **not** yet feed a root route. Named consumers and the exact missing bridge:
   LORD_3 Dei Filius root route; the same premise also follows from
   `CausalExistenceWilling` with the coextension, without the self-case. Both
   supports go through `CausalExistenceWilling` a94c5dfc (c691e3d0's only
-  derivation uses it). The premise is consistent with the ordered-love sibling
-  on non-rational effects, but a94c5dfc is not; so if ordered love holds and
-  non-rational creatures exist, 47c6da1b has no verified derivation and stands
-  only as a direct assumption. See
+  derivation uses it). The premise is consistent with the strong (exclusive) ordered-love variant 1dd68893, an unattributed analyst strengthening of ad 3,
+  on non-rational effects, but a94c5dfc is not; so if that strong variant holds
+  and non-rational creatures exist, 47c6da1b has no verified derivation and
+  stands only as a direct assumption. The conflict with a94c5dfc holds for that strong variant only; the weak, ad-3-faithful reading (ordered willing without the exclusion of recipient-directed willing) is compatible with a94c5dfc. See
   [group 8 integration](natural-goodness-function-and-authority.md#group-8-integration-from-reasons-and-goods-to-moral-authority-and-god-1733-2026-11-18).
   The warrant assessment below is unchanged.
 - Veracity: the assertion route does not consume love; willing good to the
