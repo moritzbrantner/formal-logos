@@ -72,9 +72,10 @@ In `TruthCore.Case.Catholicism.DivineLoveBridge`:
    q.20 a.1 theme, not an inference from the opaque `HasWill` flag alone.
 6. **OPEN `WillingGoodEntailsLove`:** If God wills an actual good *to its
    recipient*, then God loves that recipient in the non-passional sense of
-   willing some good to it in q.20 a.2. Aquinas restricts benevolence properly
-   speaking to rational creatures (ad 3), while irrational creatures are loved
-   in a different, ordered way. This one-way sufficient rule adds neither
+   willing some good to it in q.20 a.2. Ad 3 restricts *friendship* (amicitia)
+   to rational creatures, who can return love; irrational creatures are loved
+   "as it were" with love of desire, as ordered to rational creatures and to
+   God. Ad 3 does not restrict the thin willing-good sense itself. This one-way sufficient rule adds neither
    universal friendship nor affection, equal degree or unqualified desire.
 
 `divineWillsGoodForAllExisting` proves that for each God and each actual `x`,
@@ -482,8 +483,9 @@ existing) and e3d5bece (love of all existing).
 
 Both are zero-axiom. The classical self/other split of the unregistered
 originals is replaced by an explicit `[DecidableEq Being]` instance argument:
-a decision procedure for identity of beings, not a philosophical premise, and
-listed as a parameter, not hidden. The originals and `LoveControls` are
+a decidability-of-identity input (restricted excluded middle) supplied by the
+caller; classically always available, constructively valid only where
+identity of beings is decidable. It is listed as a parameter, not hidden. The originals and `LoveControls` are
 unchanged. This is not a transcription: neither bridge's antecedent is a
 premise; the causal field of supreme goodness supplies causation of each
 distinct actual being, the coextension supplies its good in esse, and the
@@ -535,10 +537,20 @@ willed to it. Its price: it must deny that the divine practical specification
 covers each effect, and so accept effects that the first intellect knows and
 produces without intending; it must also answer q.19 a.4's claim that an
 intellectual first agent determines effects through intellect and will
-rather than nature. It is not shown incoherent, and the existing
+rather than nature. A source-internal version of this rival is the q.20 a.2
+ad 3 **ordered-love reading**: for an irrational x, God wills x's existence as
+ordered to rational creatures and to God, so the willing may not be directed
+to x as recipient. This passage gives a textual mechanism for reading
+`CausalExistenceWilling` a94c5dfc more narrowly. The registered route
+selects the recipient-directed reading (willing x's good to x, even where x
+is also ordered to others). The ordered reading supports the non-recipient-
+directed production that the foreseen-collateral rival needs, restricted to
+irrational effects. A sibling statement for that reading is not yet
+registered. It is not shown incoherent, and the existing
 `omitCausalWill` control witnesses only the local omission, not this richer
-rival. Overall: a **coherent conditional support option** with two
-well-supported thin bridges and one open application bridge, whose warrant is
+rival. Overall: a **coherent conditional support option** with a comparatively
+well-supported self-good bridge, a prima facie plausible thin love-meaning
+bridge (subject to the ad 3 qualification) and one open application bridge, whose warrant is
 underdetermined at universal effect specification and recipient-good
 application. No premise established; no rival defeated.
 

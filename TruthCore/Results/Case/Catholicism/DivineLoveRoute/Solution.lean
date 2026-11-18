@@ -12,9 +12,10 @@ universe u v
 
 /-- Registered zero-axiom form of `DivineLoveBridge.divineWillsGoodForAllExisting`.
 The self/other split on `x = g` uses an explicit `DecidableEq Being` instance
-parameter instead of classical choice; it is a type-level input (a decision
-procedure for identity of beings), not a philosophical premise, and it carries
-no content about goodness, will or causation. The two volitional bridges
+parameter instead of classical choice: a decidability-of-identity input
+(restricted excluded middle) supplied by the caller, classically always
+available and constructively valid only where identity of beings is decidable.
+It carries no content about goodness, will or causation. The two volitional bridges
 `CausalExistenceWilling` and `DivineOwnGoodWilling` remain OPEN premises.
 Supreme goodness supplies the generic causal field for distinct actual effects;
 the coextension of good and actuality supplies the recipient's good in `esse`. -/
