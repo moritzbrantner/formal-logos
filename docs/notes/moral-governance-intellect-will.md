@@ -44,7 +44,16 @@ Aquinas's `ST` I–II q.90 aa.1–4 distinguishes an ordinance of *practical rea
 
 ## Finite structural controls (not Lean certificates)
 
-A finite valuation tested without a repository Lean toolchain used `{n,h,r,g}` as possible beings, the same actual world and rescue case, `ActualRoot(n)`, `NecessaryAt(n)`, `GroundsMoralOrder(n,O)`, the identical obligation, standing and priority in every profile. Human cognition was present. Five omission observations were checked directly as Boolean predicates:
+A finite valuation tested without a repository Lean toolchain used `{n,h,r,g}` as possible beings, the same actual world and rescue case, `ActualRoot(n)`, `NecessaryAt(n)`, `GroundsMoralOrder(n,O)`, the identical obligation, standing and priority in every profile. Human cognition was present. Five omission observations were checked directly as Boolean predicates. The exact source-level assignments are below; all rows keep the fixed actual-root, necessity, weak grounding, obligation, standing and priority predicates true. `G(x)` means that x governs through **its own** practical representation of ends; `O(n)` means intentional source-level ordering. `Recipient(n,r)` means willing some good specifically for r. Other rational beings keep the same intelligibility of the case. A and B intentionally have the same thin formal assignment; their distinct *positive explanations* are not encoded as predicates.
+
+| Profile | Intellect(n) | HasWill(n) | G(n) | G(g) | O(n) | Recipient(n,r) | q.19 bridge holds? |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| A. Necessary norms | false | false | false | false | false | false | true |
+| B. Naturalistic goods | false | false | false | false | false | false | true |
+| C. Actual author | true | true | true | false | true | true | true |
+| D. Second-personal | false | false | false | true | false | false | true |
+| Source cognition, omit q.19 | true | false | true | false | false | false | **false** |
+| Actual ordering, omit recipient intention | true | true | true | false | true | **false** | true |
 
 1. With `HasIntellect(n) = HasWill(n) = false`, every fixed root/grounding/norm fact remains true. Thus the thin source/grounding base does **not** force either attribute in this interpretation.
 2. A secondary rational `g ≠ n` can govern, with `HasIntellect(g)` true and `HasIntellect(n)` false, while `n` still grounds the identical order. Separate governor/root existentials do **not** establish identity.
