@@ -1,0 +1,12 @@
+{
+  "id": "d47c385d-3bc1-459f-bb2f-5240006e9224",
+  "label": "Strong exclusive ordered-love variant entails the ad 3 ordered-love reading (inference)",
+  "input_statement_ids": [
+    "1dd68893-7e41-4909-9f17-1dbb342a7d95"
+  ],
+  "output_statement_id": "7f6a2e91-4924-4488-8173-03d1dabb222b",
+  "rule": "Drop the denial conjunct of the strong variant",
+  "meaning": "Strength order registration, analyst formulation. Same IsGod, HasWill, Rational, InAct, CausesIn, ordered-willing relation and esse: the strong variant's ordered conjunct is exactly the weak reading. The strong premise relates both CREATURE_WILLING senses (it denies recipient-directed willing); the conclusion uses only the ordered sense.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "54a9ccd9-5ea7-444a-98ae-0c85fbb0c80a",
+  "label": "Willing GOOD_4 to all existing at the CREATURE_WILLING_1 carrier",
+  "argument_id": "ba458489-f54a-43d7-a8f3-6025528bfecd",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.willsGoodForAllExistingAtCarrier",
+  "comparator_config": "results/54a9ccd9-5ea7-444a-98ae-0c85fbb0c80a/comparator.json",
+  "status": "solution-present",
+  "description": "Corollary tying the registered parametric result 7209fa2f to the CREATURE_WILLING_1 carrier RecipientGoodWilling.WillsGoodFor: the same five inputs, with the willing relation fixed as W.WillsGoodFor, give willing some good to every existing being. Same OPEN bridges; no new content beyond the instantiation."
+}

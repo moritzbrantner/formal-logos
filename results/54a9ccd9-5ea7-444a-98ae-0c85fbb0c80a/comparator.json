@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.willsGoodForAllExistingAtCarrier"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}
