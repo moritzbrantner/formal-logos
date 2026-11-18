@@ -1134,3 +1134,370 @@ Foundation continuation: the complete proposed assessment of `5c898d24`, its
 rootless versus fundamental-natural rivals, and the checked comparison with
 maximal-target nonreciprocity is retained in
 [the existing foundation note](notes/unique-feedback-explanation-311.md#current-foundation-judgment-on-the-existence-only-case-2026-11-17).
+
+## Current cluster assessment under the substantive objection standard (2026-11-18)
+
+**Scope and boundary.** Issue #1751, model-trial slice 2/3, drafted on main
+`ebd3c2394a40eeae1bfc7fd9b0824d88e3bba887` (PRs #1754 and #1759 merged). On
+that revision `truth currentness --frontier-root 8626f8a5` reports 57 current,
+184 `legacy_only` and 182 `none` among 423 open premises. Nine `legacy_only`
+premises are targets of attempts that cite this note by its literal path
+(`05bc2722`, `76bad0cb`, `dee1c25e`). All nine counted at the slice baseline
+are still `legacy_only`, so the scope is unchanged:
+
+| Sub-route | Premises | Where their substantive evidence lives |
+| --- | --- | --- |
+| A. Sustaining and concurrent actualization | `23e04ae5`, `76d2cc96`, `d7f5a528`, `c4661518`, `140544c4` | This note; attempts `c94eed5b` and `05bc2722`; [modal-spine.md](notes/modal-spine.md), stage-two immensity paragraphs |
+| B. Old Dei Filius bridges | `c7c32f20`, `fa3f08a8` | Attempts `b93ce632`, `76bad0cb`, `d9c2b200`, `0da0dd9e`; the same modal-spine paragraphs. They only link this note, for the Schmid reading. |
+| C. Dependence premises of the necessary-being routes | `732302a1`, `96d25c42` | This note (received-being test); [underived-essence-identity.md](notes/underived-essence-identity.md); [power-existence-scope-boundary.md](power-existence-scope-boundary.md); [god-existence-support-formula.md](notes/god-existence-support-formula.md) |
+
+Sub-route A cannot be assessed without its crux. The assessment therefore also
+names two route nodes that are not open leaves in the currentness view: weak
+concurrent actualization `40a97664` and the weak sustaining reading `ce55210c`.
+Their recorded judgments are restated unchanged.
+
+Other neighbours are discussed but not named as targets and not graded:
+`da72ae93`, `8bf775e9`, `a3913182`, `9469ab62`, `0042dd05`, `18ca6f9d`,
+`bbac932e`, `ff8ff869`, `cb1cdea9`, `dd41c165`, `2b25a78c`, `16828262` and
+`1d4d9b13`. The eternity integration itself (same-source life, succession,
+recognition, and the direct-conservation interpretation into `CausesIn`)
+belongs to #1736 and is not done here.
+
+For each target the dossier and brief were retrieved, the consuming and
+producing arguments were computed from the corpus records, and every attempt
+on it was read together with the note sections it cites. Earlier sections stay
+unchanged under their own dates. This section changes no theorem, Challenge,
+claim, definition, closure or formal status.
+
+### (a) Fixed meanings
+
+These are the meanings fixed by the existing definitions, disambiguations and
+earlier sections. Nothing is redefined.
+
+- **History, presence and time.** `History W B T` assigns `IsAt v x t`
+  independently of `Ontic.ExistsAt` (definition `6e811e85`). Histories are
+  indexed by worlds, moments by `T`; times are not worlds (disambiguation
+  `92df85d7`). "Present at t" has the one inclusive reading adopted in
+  `c94eed5b`: actual in the history and bearing on t, by location at t (a
+  temporal thing) or by co-presence to t (a non-temporal agent). It asserts
+  neither spatial location nor that the agent is in time.
+- **Giving being at a moment.** `GivesAt v c x t` is an explicitly identified
+  primitive (definition `158301bc`) with an effect-side time index. On this
+  route it has the STRICT esse-giving reading. It is not counterfactual
+  dependence, removal of a destroyer or `Ontic.Causes`, and no axiom
+  constrains it.
+- **Originating and sustaining (#1626).** `CausesIn c x esse` is tenseless and
+  mode-unspecified (CAUSING_AN_EFFECT_3). CAUSE_OF_BEING_1, originating, gives
+  being at a first moment of presence and requires such a moment.
+  CAUSE_OF_BEING_2, sustaining, gives being at every moment of presence. It
+  types the concurrence of the activity with the effect, not the dependence
+  clause of per se conservation (definition `56989bd0`). The two overlap and
+  are not exhaustive: preventing corruption and counterfactual dependence are
+  further relations (disambiguation `88a8fba7`). Passage from `CausesIn` to
+  either is an explicit open bridge.
+- **Reception in versus origin from.** `EsseReceivedIn x r` is reception of
+  x's act of being in a principle that stands to it as potency to act
+  (definition `4433942e`). It is not origin from another being
+  (disambiguation `5921354b`). The bridge `da72ae93` is the only statement
+  joining them.
+- **Participation.** ESSE_BY_PARTICIPATION_1 (definition `14d30c53`) is having
+  being derivatively rather than being subsistent esse. `Participates` is a
+  parameter with no body: assigning it to a thing does not establish that the
+  description applies.
+- **Necessity and support.** `NecessaryAt m w₀ x` is existence of one fixed
+  individual at every world accessible from w₀, a de re surrogate (definition
+  `38b92bb6`). `supportsEsse w c x` is a world-indexed direct
+  existential-support parameter. `NoContingentGroundOfNecessary` quantifies
+  over every world w, not only accessible ones, and over every existing
+  supporter. It restricts neither generic efficient causes nor explanatory
+  tokens (definition `659dbc9c`, disambiguation `6f1d1395`).
+- **Creator and beginning (#1496).** `IsCreatorOfAll` is the weakest typed
+  reading: g causes the being of every other thing that is in act as to being,
+  tenselessly. Creation from nothing, freedom and a beginning are not encoded
+  (definition `92c03350`). `BeginsAt` is presence at a moment with no earlier
+  presence. Neither a temporal beginning nor its absence is creation ex
+  nihilo, and no premise of this cluster passes from one to the other. The
+  BEGINS senses of disambiguation `dc40914a` belong to the modal spine and are
+  not used here.
+- **Immense, incomprehensible, infinite.** IMMENSE_1 and INCOMPREHENSIBLE_1
+  are primitives. IMMENSE_2 and INCOMPREHENSIBLE_2 are typed siblings that are
+  not identified with them (disambiguations `3fc3ee02`, `d63d0696`).
+  Incomprehensibility negates comprehension only; it is not unknowability.
+  INFINITE_1 is unreceived subsistent being, not quantity (disambiguation
+  `587c53cf`).
+- **Eternity (#979).** None of the eleven named statements contains `Eternal`.
+  Six notions stay distinct, and none is inferred from another here:
+  1. proper eternity ETERNAL_1, without beginning, end or succession
+     (definition `1291944d`, disambiguation `f561d4e4`), a primitive on the
+     root route;
+  2. the typed Boethian reading over a duration frame (definition `5e77da13`),
+     which reaches the primitive only through an open recognition premise;
+  3. participated or extended uses, such as never ceasing or long duration
+     (sempiternity; definition `a26cce29`);
+  4. aevum, internally all at once with adjunct change (q.10 a.5);
+  5. temporal everlastingness within one world, `EverlastingAt` and ETERNAL_2,
+     which allows succession and, for ETERNAL_2, a beginning;
+  6. the timelessness of the conserving action, "without motion or time"
+     (q.104 a.1 ad 4, claim `da9c82ed`), which is said of an action and is not
+     a duration of its agent.
+
+  "Gives being at every moment at which x is present" places the giver, by the
+  contact premise, at those moments in the inclusive sense. That is none of
+  the six. In particular a sustainer of everlasting things is not thereby
+  eternal, and an eternal being is not thereby a sustainer. The root route's
+  eternity node `0659227c` keeps the assessments that named it (`e64d5241`,
+  `383d23ad`, `0ddaa334`) and is not regraded.
+
+Under these meanings the registered structure is as follows.
+
+- **Sub-route A.** Argument `366a6ea3` (result `5651df1e`, non-transcription)
+  derives `ce55210c` from the reception bridge `da72ae93`, weak concurrent
+  actualization `40a97664` and concurrence `d7f5a528`. With presence-in-act
+  `140544c4` and contact `c4661518` it gives the presence step `9469ab62`
+  (`2c3e7898`, result `0ed3a583`). The older arguments `ffef89fd` and
+  `0681f64a` take the strong reading `23e04ae5` in place of `ce55210c`. The
+  last step to `8bf775e9` through the narrowed bridge `a3913182` is a declared
+  single-application transcription in both (`40826286`, `7ef41722`).
+  Registered strength orders: `76d2cc96` strengthens `40a97664` (`9ef030cf`),
+  and `23e04ae5` strengthens `ce55210c` (`8e76893e`); both are strict in one
+  checked interpretation. `76d2cc96` is used by no derivation except that
+  registration. `c4661518` also feeds both lasting-ground (A2ab) routes
+  `db7bbdbd` and `3e0aa725`.
+- **Sub-route B.** `c7c32f20` strengthens the sense bridge `8bf775e9`
+  (`f80bbd9e`), and `fa3f08a8` strengthens `0042dd05` (`05eaa56a`); both are
+  strict in one checked interpretation. Eight registered Dei Filius arguments
+  consume both old bridges; they record `strong_version_needed` for them.
+- **Sub-route C.** `732302a1` is consumed by `2162ca9d` (result `b7fbe991`,
+  with `ff8ff869` and `cb1cdea9`) and by `5c5b794f` (result `764f43fe`).
+  `96d25c42` is consumed by nine arguments of the necessarily-underived family
+  and is an open leaf on none of the 28 recorded routes to the Catholicism
+  root.
+
+No argument concludes any of the nine targets. Each is therefore assessed on
+its direct option and on the conditional material named below.
+
+### (b) Strongest positive warrant, direct options and shared dependencies
+
+"First grade" marks a grade given here for the first time. Every other
+standing restates an earlier record.
+
+| Premise | Strongest positive warrant | Direct option and dependencies | Provisional standing |
+| --- | --- | --- | --- |
+| Node `40a97664` weak concurrent actualization | The conservation account of the 2026-11-17 section: a bearer's act is standingly derivative, so continuing in that mode calls for actual efficacy now. An earlier producing act explains an origin only. The illumination and held-stone cases are analogies for the time profile; they presuppose the crux, since light is not esse. | A candidate primitive; direct acceptance is retained. It fuses the actualization principle with the contested thesis that continuing in received act is an actualization at each moment. Its rationale assumes what row 1 of (c) denies, so it does not discriminate against row 1. No case is on file of a received-esse thing given being at a later moment, and none of one persisting with no giver. | Unresolved (2026-11-12). Positively motivated and not refuted by the no-change deduction (2026-11-17 proposal, not independently reviewed). Not graded; unchanged. |
+| `76d2cc96` concurrent actualization by another | Entails `40a97664`. Its increment, that the giver is distinct, has one recorded argument: a persistence power depends ontologically on its substance, so the substance cannot depend on that power. `05bc2722` (b5) judges this independently justified against an intrinsic persistence power, as a provisional analyst judgment on the read Feser article. The statement records that it has the form of that reply and that no claim attributes the premise to Feser. | A candidate primitive. It presupposes everything `40a97664` asserts. A relay of givers satisfies it, so it yields no sustaining cause. No derivation uses it. | No standing above `40a97664`, which is unresolved. Given the weak version, the distinctness increment has the recorded circularity argument, a provisional analyst judgment. Not graded. |
+| `d7f5a528` concurrence of causes of being | Its stated rationale only: a per se ordering of the givers of a thing's being, so that a cause of x's being is acting on x whenever any giver is. `05bc2722` records that **no warrant for it is on file**; the q.105 a.5 motivation (the first cause's concurrence in every action) is unread and not relied on. | A candidate primitive. It is the only premise linking tenseless `CausesIn` to `GivesAt`, so it carries the sense passage CAUSING_AN_EFFECT_3 → CAUSING_AN_EFFECT_5 on the route. It constrains only moments at which something gives, so the extrinsic inertia interpretation satisfies it. The immensity route needs it only for a cause of the being of everything else; that restriction is not formalized. | Open, with no recorded positive warrant beyond its rationale. Not graded. The recorded blocker is retained. |
+| Node `ce55210c` weak sustaining reading | Derived by `366a6ea3` from `da72ae93`, `40a97664` and `d7f5a528`. The direct motivation is q.104 a.1 (below). | Shared dependencies: `40a97664` (unresolved), `d7f5a528` (no warrant on file) and `da72ae93`, which is **not assessed here**. `da72ae93` has its own recorded lead (no real essence–esse distinction) and a second derivation that rests on the Fourth Way's universal causation of being. | Conditional on those three. Not graded. |
+| `23e04ae5` sustaining reading | Motivation from q.104 a.1 co. and ad 4 (claims `40aefb2e`, `da9c82ed`, basis translation): causes of becoming differ from causes of being, and conservation continues the giving of esse. The article says this of the creature's dependence on God. That **every** cause of a thing's being gives it being at every moment of its presence is the analyst's generalization, and the statement drops the article's dependence clause. `c94eed5b` calls the comparison motivation, not a derivation. | A candidate primitive bridge. For causes of another's being its warrant reduces to `ce55210c`'s three inputs. Its increment over `ce55210c` is the case c = x; no warrant for that case is recorded, and its two consumers need the strong version by registration only (frozen Challenges). `cb1cdea9` carries the same reading at the selected world (support-formula note, 2026-11-14). | Contested and unresolved, as in `c94eed5b` and `05bc2722`. The #1626 draft's "provisionally favorable to the scoped causal/essendi reading as a clearer formal target, but warrant underdetermined" is retained. Not graded. |
+| `c4661518` contact, time-indexed | Prima facie: exercising causation of x's being at t is a way of bearing on t, and the inclusive reading of presence asks no more of the giver than actuality in the history and bearing on t. A non-temporal agent satisfies it by co-presence. The source lead is q.8 a.1 (an agent is joined to that on which it acts), read in a public translation under `d9c2b200` with no pinned passage and no stating claim. | A candidate primitive. Its content is the exclusion of giving across a temporal gap: definition `158301bc` indexes the moment at which the activity bears on x and leaves the agent's standing at that moment to this premise. Shared by the immensity presence step and both A2ab routes; those uses are one commitment, not corroboration. | Moderate prima facie (first grade). Not strong, because its source is an unpinned lead and because gap-free esse-giving is exactly what it asserts. No substantive objection identified, as in `c94eed5b`. |
+| `140544c4` presence-in-act | Prima facie: under definition `ff1ba8f4`, `InAct x esse` is actually having being, and on the inclusive reading whatever is present at a moment is actual in the history. The premise calibrates one parameter against another. The extrinsic inertia interpretation satisfies it. | A candidate primitive calibration. It is the history-level counterpart of `0436de86`; neither is derived from the other, so neither lends the other warrant. `0436de86` keeps its assessments and is not graded there or here. | Strong prima facie under that reading of `InAct` at esse (first grade). No substantive objection identified, as in `c94eed5b`. |
+| `c7c32f20` creator of all is IMMENSE_1 | Source lead q.8 a.1–2, read in a public translation under `d9c2b200`; no pinned passage and no stating claim. Its positive mechanism there is immediate ongoing causation of esse, which the tenseless `IsCreatorOfAll` does not encode. The typed route splits the bridge: presence from `ce55210c` or `23e04ae5` with `140544c4` and `c4661518`, then the narrowed bridge `a3913182`. | A candidate primitive bridge. It carries, untyped, sustaining as against originating causation, contact, immediacy, place, containment and measure, and presence by power and by knowledge. Its increment over `8bf775e9` is the case of a creator that is not INFINITE_1; on the routes infinity is available, so `76bad0cb` records the strong version as needed by registration only. In a one-being interpretation its antecedent holds vacuously. | Not graded. Its presence component stands exactly as sub-route A does. Its place, measure and other-modes component (`a3913182`) has no recorded warrant assessment and is **unassessed here**. |
+| `fa3f08a8` INFINITE_1 is INCOMPREHENSIBLE_1 | Source lead q.12 a.7, read in a public translation under `0da0dd9e`; no pinned passage and no stating claim. Its reason there: knowability follows actuality, an infinite being is infinitely knowable, and a created intellect receives a finite degree of the light of glory. The typed route splits it into `18ca6f9d`, `bbac932e` and the near-analytic sense bridge `0042dd05`. Given infinity those three jointly entail `fa3f08a8` again, so the split is finer, not weaker in total. | A candidate primitive bridge. `fa3f08a8` entails `0042dd05`; the three finer premises entail `fa3f08a8` only together with infinity. `18ca6f9d` and `bbac932e` are **not assessed here** beyond the audits recorded in `76bad0cb`. The step from infinite esse to infinite knowability is recorded OPEN (`0da0dd9e`). `18ca6f9d` carries the scope condition of definition `80dea550`. | Positively motivated by the source lead; no substantive objection identified (`b93ce632`, `76bad0cb`). Not graded, because the finer premises and the knowability step are unassessed. |
+| `732302a1` participated esse has a distinct cause | Supporting claim `11b0106d` (q.44 a.1 co. and ad 1, pinned Latin witness): being by participation entails being caused by another. The `supports` relation `6094905c` records the gap as the vocabulary choice of `CausesIn`, not the scope. | A candidate primitive under ESSE_BY_PARTICIPATION_1. If "participated" already means given by another, that meaning is an interpretation commitment and cannot also be an independently established conclusion (received-being test, 2026-11-17). The article's own argument runs through unique subsistent esse (`a576300f`, `75b5b027`; standings in `1db2004a` unchanged). Application to contingent concreta is `ff8ff869`, **not assessed here**; the reviewed 2026-11-11 judgment that contingency-to-reception is not independently warranted by the inspected argument is retained. The mode of causing is unspecified: an originating reading satisfies the premise, while its consumer `cb1cdea9` needs the sustaining reading. `2b25a78c` has the same body under a different linked sense; what is said here holds for that body, and its recorded sense-link defect is unchanged. | Strong as a source-internal reading of what q.44 a.1 says of participated being (first grade). Its application to any assigned `Participates` and to a present sustaining cause is not warranted by that reading. The 2026-11-17 outcome is retained: neither established nor refuted, with direct and conditional options open. |
+| `96d25c42` no contingent supporter of a necessary bearer | The restricted argument of 2026-11-11: where a particular supporter is fixed and indispensable to the target's existence or identity, necessity of the target carries to it. The q.2 a.3 claim on causes of necessity presupposes inheritance rather than arguing it, and its types do not match this premise (source-interface section). | A candidate primitive, retained as an explicit OPEN commitment. It needs indispensability of **every** existing incoming supporter at **every** admitted world; no inspected warrant extends the restricted argument that far. The actual necessary-root route (#487) does not use it. `dd41c165` is the same condition on the concrete subtype; no strength relation between the two is registered. | Unchanged from the reviewed 2026-11-11 judgment, issued for `dd41c165` and applied here to the same content: the evidence favors keeping it an independently OPEN commitment and disfavors treating it as a consequence of de re necessity plus local foundation. That is an assessment of the inference, not a claim that the premise is false. Not graded further. |
+
+Shared dependencies stay visible:
+
+- `40a97664` is the single point at which sub-route A, the presence component
+  of `c7c32f20`, and the sustaining reading that `cb1cdea9` carries all meet.
+  Their agreement is one commitment seen from several consumers, not cumulative
+  evidence.
+- `c4661518` and `140544c4` enter every presence derivation together. They are
+  calibrations of `GivesAt`, `IsAt` and `InAct`, and an inertia theorist
+  accepts both.
+- `da72ae93` joins origin from another to reception in a principle. It is
+  unassessed here, and one of its derivations depends on the Fourth Way.
+- The support that the read Feser article gives `40a97664` was audited in
+  `05bc2722` under the same standard as the objections. Its composition
+  argument presupposes concurrent actualization against the extrinsic account.
+  Its conditional that nothing extrinsic otherwise accounts for persistence is
+  the premise the rival contests. Its telescope analogy presupposes the point.
+  Its essence and circularity arguments are independently justified only
+  against intrinsic and necessity versions of inertia. That audit is retained.
+- Sub-route A reaches GOD_4 only through the immensity bridge and the full
+  attribute summary, which obtain a named God before projecting existence.
+  It adds no independent existence warrant (2026-11-17, retained). `40a97664`
+  is not a premise of the twelve-input existence-only bundle.
+
+### (c) Recorded objections and rivals, classified
+
+| # | Record | Classification under the substantive standard |
+| --- | --- | --- |
+| 1 | Extrinsic existential inertia, the no-change account. Recorded against `23e04ae5` and `16828262` (`c94eed5b`), `40a97664` (`05bc2722`), the immensity bridges `8bf775e9` and `c7c32f20` on an originating reading (`76bad0cb`), and as a partial rival to contingent grounding (`b6384b6b`). | **Kept**, with one classification for every target: a substantive undercutting objection and a rival framework, not an established counterexample. *Primary target:* `40a97664`; it reaches `ce55210c`, `23e04ae5` and the presence component of `c7c32f20` through it. *Mechanism:* S existed immediately before m, nothing induced its cessation, and a change occurs only if some factor induces it; so S exists at m with no concurrent giver. *Independent justification:* Schmid 2021 (pinned and read); the causal principle on change is one the conservation side also accepts, and the deduction is valid. *What it shows:* persistence is derivable from facts that include no concurrent giver, which undercuts the explanatory-need warrant. It does not show the premise false. The modal-spine summary's word "defeats" for that warrant is read as this "undercuts". Its own antecedent, that no factor induces cessation, must cover any warranted cessation of existential support, so it assumes the absence of standing dependence and does not discriminate against the conservation primitive either (2026-11-17). On `732302a1` it is conditional on the reading: with originating `CausesIn` it can accept the premise and contests `cb1cdea9` instead. |
+| 2 | Persistence-power existential inertia: a thing gives itself being after its originating cause ceases. Recorded against `d7f5a528`, and against the strong version `76d2cc96`. | **Restated.** *Target and mechanism* are named, and control part 2 gives its typed shape. No independent justification for an intrinsic persistence power is recorded; the read material reports and criticizes the position. The recorded reply is the circularity argument, independently justified against exactly this version (provisional analyst judgment, `05bc2722`). It satisfies `40a97664`, so it is no objection to the crux. Not weighted as evidence against `d7f5a528`; earlier wording unchanged. |
+| 3 | Relay of givers: a room lit by a lamp, then by daylight. Recorded against `d7f5a528`. | **Restated as a lead with no evidential weight for esse**, as recorded. It is an established case for the time profile of illumination only. Whether causes of esse admit replacement is the open difference, and a restriction of concurrence to a universal cause would avoid it. |
+| 4 | A gap-crossing, temporally distant cause of being, against `c4661518`. | **No substantive objection identified**, as in `c94eed5b`: a model possibility with no independent justification on file. |
+| 5 | "Presence requires location, so an immaterial being is present nowhere", against the immensity bridges. | **No substantive objection identified.** It targets a spatial reading of presence that the bridge does not use, and no justification that all presence is spatial is on file (`76bad0cb`). |
+| 6 | "Immaterial, therefore immense" is not Aquinas's argument; q.52 a.1–2 gives an angel a localized presence (`d9c2b200`). | **Boundary retained.** It is a substantive objection to a different inference, from immateriality to IMMENSE_1. It does not bear on `c7c32f20` or `8bf775e9`, which go through causing being. Its source is an unpinned lead. |
+| 7 | A Spinozist God satisfies IMMENSE_2 and plausibly IMMENSE_1. | **Boundary retained.** It bears on the distinctness attribute, already recorded there, not on these bridges. |
+| 8 | q.8 a.4 absolute ubiquity over hypothetical places. | **Boundary retained.** It is a stronger optional sibling reading, not a requirement of IMMENSE_1 and not an objection. |
+| 9 | "Finite minds grasp infinite objects through finite principles", against `bbac932e` and so `fa3f08a8`. | **No substantive objection identified**, as in `76bad0cb`. Its justification concerns quantitative infinity; relevance to INFINITE_1 is not shown. |
+| 10 | The q.7 a.2 caveat: a created intellect has an extensionally infinite reach over universals (`0da0dd9e`). | **Restated as an open reading check**, not an objection. A premise about finite intellectual power must be restricted to received intensity or adequacy. Whether `bbac932e`'s reading of a finite intellect, as one whose being is not INFINITE_1, is adequate to it is unchecked. |
+| 11 | Apophatic tension with the knowability of God. | **No substantive objection identified.** Both senses negate comprehension only (`76bad0cb`). |
+| 12 | The Nicene scope point against `18ca6f9d`. | **Boundary retained** as the recorded scope condition of definition `80dea550`. It is internal to the case and is not an objection to `fa3f08a8`. |
+| 13 | The same necessary whole through replaceable realization, with the switching pattern, against `96d25c42` and `dd41c165`. | **Kept**, unchanged from 2026-11-11, as a targeted challenge to the universal scope. *Mechanism:* necessity of an effect does not make any particular sufficient or realizing supporter necessary; different contingent supporters can serve at different worlds. *Independent justification:* that direction-of-necessitation point is logical, and essential dependence is warranted only where an identity or origin criterion supports it. *Status:* not an established counterexample. The rival still owes numerical identity under substitution, real existential support and necessary coverage of realizations. |
+| 14 | The formal or constitutive account of a bearer's actuality, against the De ente coverage step behind the conditional route to `732302a1`. | **Restated**, as in the received-being test. It targets some-cause coverage `d1f3ffcc`, not `732302a1` directly. It owes an account of its actual obtaining and is not refuted by lacking an agency predicate. |
+| 15 | An esse-cause as mere enabling condition, moved upstream to `ca07cae9` and `732302a1` (support-formula note, 2026-11-14). | **Restated**, unchanged. *Target:* that a participated or composite thing has an effective cause of its being and not only enabling conditions. *Mechanism* and its general justification (enabling without production is familiar and is distinguished in q.104 a.1) are recorded. Its application to participated esse is not shown. It remains priced, not refuted. |
+| 16 | The contingent-root and intrinsic-contingent accounts (2026-11-11). | **Boundary retained.** They target coverage and `ff8ff869`, not `732302a1`. Their recorded debts are unchanged. |
+| 17 | De dicto necessity of some supporter, essential origin, and the q.2 a.3 cause-of-necessity premise, as defenses of `96d25c42`. | **Rejected support routes, retained as rejected** (source-interface section). They are not objections. Each either permits varying contingent supporters, runs in the wrong direction, or needs two unstated interface conversions. |
+| 18 | The lead that there is no real essence–esse distinction (Suárez), against `da72ae93`. | **Restated as an unread lead** with no evidential weight. It would remove the antecedent of `40a97664` for creatures, a different exit from inertia. |
+
+Countermodels and controls are facts about one stated formal interpretation
+each. They show where a premise is needed there, never that it is false or
+doubtful:
+
+- `ConcurrentActualization.controls` (`955ef523`). In part 1 an inertia
+  interpretation satisfies the reception bridge, concurrence, presence-in-act
+  and contact and falsifies `40a97664` and the conclusion. In part 2 a
+  persistence-power interpretation satisfies `40a97664` and falsifies
+  `76d2cc96` and `d7f5a528`. In part 3 a relay satisfies `76d2cc96` and
+  falsifies `d7f5a528`. In part 5 a self-cause that gives nothing separates
+  `23e04ae5` from `ce55210c`. In part 7 all premises hold together
+  nonvacuously.
+- `SustainingCausation.controls` (`b12b253b`). An originating interpretation
+  satisfies contact and presence-in-act while an IMMENSE_2 being is not
+  present to all. Each premise of the presence route is needed in one
+  interpretation.
+- `ConcurrentCessation.certificate` (`610e21dc`). The reused inertial and
+  sustained histories both satisfy causal coverage of cessation. The
+  no-giver/no-continuation condition is classically equivalent to continued
+  giving on the same received, prior-present bearer. The result covers
+  Nat-sampled continuation only.
+- `DeiFiliusImmenseIncomprehensible.controls` (`ccba9330`). A cause of the
+  being of all that is not infinite satisfies `8bf775e9` and falsifies
+  `c7c32f20`. An infinite being comprehended by a caused intellect satisfies
+  `0042dd05` and falsifies `fa3f08a8`.
+- `NecessaryWholeReplacement.checks` (`be32d3af`). One interpretation has a
+  fixed target with contingent support at both worlds, all-world local
+  grounding and cross-world direct-edge asymmetry. Its fixed label is not a
+  genuine whole.
+- The `Round2Grounding` omission controls. With an empty participation
+  predicate the other two inputs of `2162ca9d` hold vacuously.
+- The source-cut, illumination and omission-case material of the earlier
+  sections concerns states of an existing bearer or stipulated records. The
+  parent/child valuation of the #1626 draft was checked by a local truth table,
+  not by Lean. None of it is a model of esse-giving or of a complete inertial
+  worldview.
+
+Tally: **kept** 2 (rows 1 and 13); **restated** 6 (rows 2, 3, 10, 14, 15 and
+18); **boundary retained** 5 (rows 6, 7, 8, 12 and 16); **no substantive
+objection identified** 4 (rows 4, 5, 9 and 11); **rejected support routes
+retained** 1 (row 17). Nothing is dropped as evidence and no earlier weighting
+is changed. For `140544c4` no objection is recorded and none is identified;
+the thin-existence alternative, which contests the bundle containing its
+world-level counterpart `0436de86`, is classified as a formal alternative only
+(`b6384b6b`), and the same classification applies to the same content here.
+
+### (d) Overall provisional judgment, revision conditions and next test
+
+**Judgment.** On the meanings in (a), the conservation reading behind
+sub-route A is a coherent, positively motivated conditional account. Its crux,
+weak concurrent actualization `40a97664`, is unresolved against extrinsic
+existential inertia: each side's recorded rationale assumes what the other
+denies, and the causal requirement on cessation that both accept favors
+neither. The rest of the route is no better supported than that crux together
+with concurrence `d7f5a528`, for which no warrant is on file, and the
+unassessed reception bridge `da72ae93`. This covers `ce55210c`, `23e04ae5`,
+`76d2cc96` and the presence component of `c7c32f20`. The two calibration
+premises carry no substantive objection: `140544c4` is strong prima facie and
+`c4661518` moderate prima facie.
+
+In sub-route B, `c7c32f20` and `fa3f08a8` are positively motivated by source
+leads that are read but unpinned. Both are ungraded, because the finer premises
+that carry their warrant are unassessed.
+
+In sub-route C, `732302a1` is strong as a source-internal reading of q.44 a.1.
+That reading warrants neither its application to contingent concreta nor a
+present sustaining cause. `96d25c42` keeps its reviewed 2026-11-11 standing as
+an independently open commitment, with a kept rival.
+
+The cluster supplies no eternity conclusion and no independent warrant for
+God's existence. Nothing is established or defeated.
+
+**Comparison with earlier judgments.** Each earlier recorded judgment on these
+statements is kept unchanged, and **no revision is declared**:
+
+- `c94eed5b` and `05bc2722` (2026-11-12): inertia is substantive against the
+  sustaining reading; the dispute with the extrinsic version rests at
+  `40a97664`, and with the persistence-power version at `d7f5a528`; overall
+  unresolved.
+- The 2026-11-17 sections of this note: the received-being test's outcome for
+  `732302a1`, and the concurrent-actualization case assessment. The latter two
+  are recorded as complete proposals awaiting challenge. This section does not
+  certify their review; it adopts no wording stronger than theirs.
+- `76bad0cb`, `b93ce632`, `d9c2b200` and `0da0dd9e` (2026-11-12): the
+  classifications of the Dei Filius leads.
+- The reviewed 2026-11-11 judgments in the underived-essence note:
+  contingency-to-reception, and replaceable support.
+- The support-formula note (2026-11-14) and its #1626 research draft.
+- The current assessments `5c7bc356`, `1db2004a`, `e64d5241`, `383d23ad` and
+  `0ddaa334` for the neighbours they name.
+
+The three first grades (`140544c4`, `c4661518`, and `732302a1` as a
+source-internal reading) fill places where no grade existed. They contradict
+no earlier statement: `c94eed5b` identified no substantive objection to the
+first two, and the grade of `732302a1` attaches to the reading, which the
+2026-11-17 outcome did not assess.
+
+**Blockers and boundaries retained.**
+
+- No warrant for concurrence `d7f5a528` is on file; q.105 a.5 is unread.
+- The independent evidence dependency of `05bc2722`: a real
+  standing-dependence application against the historical-law account.
+- `96d6d1cd`: independent justification that every selected incoming
+  existential support is indispensable across the relevant alternatives is
+  missing; the world-quantifier scope boundary stands.
+- `cbfd544b` and `dee1c25e`: independent warrant for contingency-to-productive
+  receipt is absent; a positive same-bearer esse receipt, its coverage, source
+  distinctness and a local receipt-to-`CausesIn` bridge remain separate
+  obligations. Illumination and source-cut results concern a state of an
+  existing bearer.
+- `0da0dd9e` and `d9c2b200`: q.12 a.7, q.7 a.2 and q.8 must be pinned and read
+  before any stating claim; the step from infinite esse to infinite
+  knowability is open; place, immediate causation and containment need their
+  own vocabulary.
+- The pending next tests of `c94eed5b` (2 to 4) and `76bad0cb` (1 to 5) stay
+  recorded leads. The ACPQ article is unread, and no conclusion about its
+  arguments follows.
+- Pointwise giving is not one fixed giver, a giver is not the root witness,
+  times are not worlds, and q.104's timeless action is not a temporal
+  sequence.
+
+**Revision conditions.**
+
+- An independently justified standing productive-dependence account for a
+  present bearer, or a reason why the no-inducer law requires or excludes
+  existential support, would move `40a97664` and everything that rests on it.
+  A case of received esse persisting with no giver, independently supported,
+  would weaken it.
+- A read and assessed warrant for concurrence, or a positively supported case
+  of replaceable or redundant givers of esse, would grade `d7f5a528`.
+- An assessment of `da72ae93`, `18ca6f9d`, `bbac932e` and `a3913182` would
+  allow `ce55210c`, `fa3f08a8` and the non-presence component of `c7c32f20` to
+  be graded.
+- An assessment of `ff8ff869`, or a disambiguation fixing whether
+  participated esse means given by another, would settle how far the
+  source-internal grade of `732302a1` reaches.
+- The 2026-11-11 conditions for `96d25c42` stand: an identity or existence
+  criterion making each supporter indispensable would strengthen it; a
+  non-question-begging identity and complete-ground account of replaceable
+  realization would strengthen the rival.
+- A gap-crossing cause of being with independent justification would weaken
+  `c4661518`.
+
+**Next discriminating test.** Formalize the restriction that `05bc2722`
+recorded and did not formalize: concurrence only for a cause of the being of
+everything else. Then test whether the presence step `9469ab62` still follows
+from it with `da72ae93`, `40a97664`, `140544c4` and `c4661518`, or find the
+exact obstacle. Under the strength rule (#1017) the route should consume the
+weakest version that suffices. A success would register the restricted
+premise as weaker than `d7f5a528` and remove the relay lead (row 3) from the
+route, leaving the persistence-power rival and the unread q.105 a.5 as the
+remaining questions for a much narrower premise. A failure would show that the
+route needs concurrence for arbitrary causes of being. Either outcome reuses
+existing vocabulary and controls. It does not touch the crux: `40a97664` moves
+only on the evidence named in the first revision condition, and under the
+existence-first direction of 2026-11-17 that work stays behind the foundation
+question already continued in
+[the foundation note](notes/unique-feedback-explanation-311.md#current-foundation-judgment-on-the-existence-only-case-2026-11-17).
+For sub-route C the 2026-11-11 next step for `96d25c42` is retained
+unchanged.
