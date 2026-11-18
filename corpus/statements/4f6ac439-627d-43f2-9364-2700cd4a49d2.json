@@ -1,0 +1,12 @@
+{
+  "id": "4f6ac439-627d-43f2-9364-2700cd4a49d2",
+  "label": "Some two distinct beings each move the other while each is being moved",
+  "paraphrase": "OPEN analyst observation premise, attribution deferred, under a physical instantiation of MOTION_1: there are distinct a and b and respects r and s such that a moves b in r, b moves a in s, a is being moved in s and b is being moved in r. Example: a hot iron laid on cooler wood heats the wood while the wood cools the iron. Physics III.2 202a3-7 says that a mover which is itself movable acts by contact and is at the same time acted upon (navigation for the reciprocity, not a claim). With the strong per se premise 1e47e6db-da06-5a40-9ccf-fbd1f929c596 and the regress premise 226c38f6-7bf4-552a-9a85-733cfa41d0fa it is jointly inconsistent: the strong premise makes each a per se link of the other, a two-cycle that well-foundedness excludes (scratch-checked, zero axioms, not registered). It is consistent with the relevant-respect premise 96da1d33-7a73-567e-9557-ba4a9a4bb798 and the regress when neither party's being moved is relevant. Lean binding (not yet registered): exists a b r s, a ≠ b and MovesIn a b r and MovesIn b a s and MovedIn a s and MovedIn b r.",
+  "definition_ids": [
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

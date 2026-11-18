@@ -1,0 +1,16 @@
+{
+  "id": "e3afc8a3-b51b-4f44-a093-ce27cf8e1f0a",
+  "label": "Every caused moved mover of another is moved in some respect relevant to that moving",
+  "paraphrase": "OPEN analyst formulation, attribution deferred: the scope bridge b3573a61-ec8b-5aba-8b5f-f1d03611e7f6 restricted to caused movers. If y, whose being some other thing causes, moves x (distinct from y) in respect r and is being moved in some respect, then it is being moved in some respect relevant to that moving. It is the conclusion of the proposed unified derivation from 631e014f-685d-434c-86b7-4a683a507b4d, d791628f-72c6-572e-ad1e-03f4f22ba646, 0628359b-4a71-5c67-a84b-0fd80104aceb and 7bf380c6-fcdd-4b14-bae5-d5a5acdebd5c (scratch-checked, zero axioms, not registered). With the separate input that a mover nothing else causes is moved in no respect, it gives b3573a61 classically. The commitment C* is decided once here: it has a kept counterexample class on the enabling reading of relevance (retained-state movers, docs/notes/caused-mover-cstar.md). Lean binding (not yet registered): the RelevantRespectCoversEveryMovedMover body with the domain guard (exists c, c ≠ y and CausesIn c y esse).",
+  "definition_ids": [
+    "55a974ea-1ba1-5df4-a03b-1fbaa388dfeb",
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ],
+  "disambiguation_ids": [
+    "c097f626-c39c-57cd-ade4-ebb2dd900a4c",
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}
