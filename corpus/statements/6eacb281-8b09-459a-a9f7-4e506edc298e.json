@@ -1,7 +1,7 @@
 {
   "id": "6eacb281-8b09-459a-a9f7-4e506edc298e",
   "label": "What is PRIOR_4 to a thing is a cause of its being",
-  "paraphrase": "OPEN, PRIOR_4 sibling of 70e98bb5: for all y and x, if y is prior to x in being, then y is a cause of x's being (CausesIn y x esse, DEF-CAUSE-OF-PERFECTION at esse). Derived in this batch from the PRIOR_4 sibling of 47aff057 and 5dacb0db (whatever a thing depends on for its being is a cause of its being), which uses no priority term.",
+  "paraphrase": "OPEN, PRIOR_4 sibling of 70e98bb5: for all y and x, if y is prior to x in being, then y is a cause of x's being (CausesIn y x esse, DEF-CAUSE-OF-PERFECTION at esse). Derived in this batch from the PRIOR_4 sibling of 47aff057 and 5dacb0db (whatever a thing depends on for its being is a cause of its being), which uses no priority term. It inherits the 8ab3d114 failure case recorded for its premise: a necessary y is PRIOR_4 to every contingent x that y can be without, so this statement makes y a cause of the being of every such x.",
   "lean_declaration": "TruthCore.Causality.PriorityInBeing.PriorInBeingIsCauseOfBeing",
   "definition_ids": [
     "f4365b55-da11-4e27-b5b7-71024d9508be",

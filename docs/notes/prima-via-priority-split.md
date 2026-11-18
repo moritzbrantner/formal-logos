@@ -21,8 +21,17 @@ prima via route in two senses:
 **The new sense.** PRIOR_4 is appended to DISAMB-PRIORITY-SIMPLE-OR-IN-TIME as
 sense `11d1b100`, with definition `f4365b55`. Its Lean form is
 `PriorInBeing W y x := W y x ∧ ¬ W x y`, where `W` is the primitive
-`CanBeWithout` (DEF-CAN-BE-WITHOUT). This is the n. 15 criterion, and claim
-`ab5ec574` supports it.
+`CanBeWithout` (DEF-CAN-BE-WITHOUT). It formalizes the **first mode** of
+priority in being, by being-without (n. 15), and claim `ab5ec574` supports it.
+In the pinned passage `184c633c`, read for the review of #1774:
+- n. 15 says priority by nature and substance is said *tripliciter*. The first
+  mode is *ratione communitatis aut dependentiae*.
+- n. 16 gives the second mode: the subject, as substance is prior to accident.
+- n. 17 gives the third mode, by the division of being into act and potency.
+- n. 18 reduces all modes to these, *praecipue ad primum*, and concludes
+  *omnia priora aliquo modo possunt esse sine posterioribus*.
+
+The second and third modes are not formalized as senses.
 
 The definition hides no contested bridge:
 - The step from the criterion to PRIOR_1 (the open step of `97fa3a0b`) does
@@ -53,26 +62,65 @@ premise `ee4ab504`. Comparator and NanoDa accept all six results.
 PRIOR_1 alone. The `truth semantics` preflight of PR #1767, run on it as a
 new argument, reports only its legacy POTENCY_1/POTENCY_2 mixing.
 
-The split changes the standing of its premise `74eb9113`:
+What the split does for its premise `74eb9113`:
 - Its existing support `f8992ef7` passes through `70e98bb5` ← `47aff057` on a
   single relation, which is exactly where the two senses were conflated.
-- A sense-respecting support reaches first-in-being (`c51a07a1`, PRIOR_4) only.
-  Going from there to pure act needs exactly the bridge `954fe018`:
-  a first unmoved mover first in being is first in PRIOR_1.
+- A support that keeps the senses apart reaches only first-in-being
+  (`c51a07a1`, PRIOR_4). From there, `fb8fba1e` reaches pure act through the
+  bridge `954fe018`: a first unmoved mover first in being is first in PRIOR_1.
 - The preflight passes `fb8fba1e` with the bridge listed and fails it without.
 
-The bridge is the weakest one the derivation needs. It is restricted to first
-unmoved movers that are first in being, and it is not a general inclusion of
-PRIOR_1 in PRIOR_4. A general inclusion would fail under reciprocal
-cross-respect moving if PRIOR_1 comes from moving in any respect: see the
-control `27599762` and the slice-1 certificates.
+**What the bridge amounts to.** The bridge is sufficient but not the weakest
+available. A respect-matched weaker variant also suffices: a being in act in a
+respect in which the first mover f is in potency, and PRIOR_1 to f, is f. The
+checked controls are `RespectMatchedFirstInBeingBridge`,
+`respectMatchedBridge_of_bridge` and `pureActOfRespectMatchedBridge` in the
+vocabulary module.
 
-The bridge has one rival on file. The `firstWayDoesNotYieldPureAct` model of
-result `afd52425` has a first unmoved mover in potency to a respect in which
-it moves nothing, and another being, in act in that respect, is PRIOR_1 to it.
-The bridge requires that such a being be identical with the first mover,
-which in effect makes it prior in being. Whether that requirement holds is
-now the crux of the pure-act step.
+Given `c51a07a1`, the bridge is equivalent to the content of `74eb9113`
+(checked control `firstInActBridge_iff_firstBeing`):
+- with an empty `CanBeWithout`, `c51a07a1` holds trivially
+  (`firstInBeing_of_emptyCanBeWithout`);
+- on DEF-CAN-BE-WITHOUT's real-possibility reading, nothing is PRIOR_4 to a
+  necessarily existing f;
+- so for the classical first mover, the bridge just is `74eb9113`.
+
+**The split route therefore gives no new warrant for PRIOR_1-firstness.** Its
+gain is sense hygiene. The equivocation in `47aff057` leaves the support, and
+`c6d6379b` (POTENCY_2) is discharged by adopted POTENCY_1.
+
+The bridge is restricted to first unmoved movers that are first in being. It
+is not a general inclusion of PRIOR_1 in PRIOR_4. That a general inclusion
+fails is an unchecked one-step composition: control `27599762`, `6ca87431` and
+an admitted case of reciprocal cross-respect moving.
+
+**Positive warrant and next test.** The strongest positive warrant for the
+bridge on file is n. 18, *omnia priora aliquo modo possunt esse sine
+posterioribus*. It reduces the act–potency mode of n. 17 to being-without, but
+only *aliquo modo*. The qualifier suggests that one unindexed `CanBeWithout` is
+too coarse to carry that reduction. Next test: a CanBeWithout indexed by mode
+or respect under which the n. 17 to n. 15 reduction can be stated and checked.
+
+**Rival.** One rival is on file: the `firstWayDoesNotYieldPureAct` model of
+result `afd52425`. In it, a first unmoved mover f is in potency to a respect in
+which it moves nothing, and another being, in act in that respect, is PRIOR_1
+to f. In that model the bridge holds only if some other being is PRIOR_4 to f.
+Together with `c51a07a1`, it therefore excludes the model.
+
+**Inherited failure case.** The siblings `c4bb0481` and `6eacb281` inherit the
+failure case recorded for `8ab3d114`: if the second relatum is necessary, the
+first may be independent of it although no world has the first without it.
+- On the real-possibility reading, a necessary y is PRIOR_4 to every contingent
+  x that y can be without, because x cannot be without a necessary y.
+- `c4bb0481` then makes each such x depend for its being on y, and `6eacb281`
+  makes y a cause of its being.
+- The derivation `94dc553f` applies `8ab3d114` as `¬ D x y → W x y`, with
+  y necessary, which is exactly that case.
+
+**Record issue (not repaired here).** DEF-CAN-BE-WITHOUT (`d0b06beb`) names
+`PriorityByBeingWithout` as its `lean_declaration`. That is the declaration of
+a premise statement (`97fa3a0b`), not the primitive W. This is a record
+question for its owner.
 
 **Other records.** The sibling `c51a07a1` lists `777646a5` (CAUSE_1 → CAUSE_2)
 and `101bdd62` (MAXIMAL _6 → _1) as sense bridges. These mixings come from
