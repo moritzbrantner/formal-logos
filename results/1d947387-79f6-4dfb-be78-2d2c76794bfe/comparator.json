@@ -1,0 +1,10 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.PrimaViaCertificates.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PrimaViaCertificates.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.PrimaViaCertificates.reciprocityIncompatible",
+    "TruthCore.Results.Causality.PrimaViaCertificates.reciprocityControls"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

@@ -1,0 +1,36 @@
+{
+  "id": "8915af42-6391-4595-bd5c-bdfacac44173",
+  "label": "Prima via certificates: three verified inconsistent sets, bypass B1 and the per se regress rebinding",
+  "statement_ids": [
+    "6a0b545c-d3bb-52d1-b0b7-c3ea48febb92",
+    "67aa5b5c-694b-50a1-90e5-d843234db924",
+    "6ca87431-3383-58f6-9322-a1f0e8f0396b",
+    "7ad36aca-d55e-5b66-92fa-30749333df4f",
+    "32d77f18-a9c2-5486-b51c-a24f32863af4",
+    "47aff057-35ef-5418-930b-fef72e1104d2",
+    "8d4502a7-1f48-4acf-a849-1ddbb561fca3",
+    "8ab3d114-d6e2-5f6d-805b-ae901f56d39b",
+    "6ad27c23-713a-493d-9a33-78e72eee7c3b",
+    "2e248016-f8bf-5d8a-931e-7f9ebbb13e42",
+    "98efaa9e-1c91-4e52-8c0d-faf03d4f8372",
+    "402cf70f-66ff-415e-a9e2-2e1f288956d8",
+    "97f5850f-62bc-5e43-a0c1-dd1033d08fc9",
+    "42890b45-9325-56d3-8ae4-a6202e8c6ba6",
+    "6c084877-1d6f-4298-8644-d375fecd9e63",
+    "d85de8e1-2f7f-5b2f-ba1e-112a0799994c"
+  ],
+  "date": "2026-11-19",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "#1751 slice 1 certifies the 2026-11-18 lane A (a82b06b6) and lane B (9d71e28d) findings in specs/prima-via-certificates.toml; all proofs are constructive and axiom-free, and each result passes Comparator and NanoDa. (1) Result b4f8b7d3: under adopted POTENCY_1, fbc516c1, 6b9fedc2, 4be9a4ac, 6a0b545c and 67aa5b5c are jointly inconsistent; the CAUSE_1/CAUSE_2 passage is 6a0b545c itself, listed as the sense bridge; c6d6379b is definitional under adoption and is not a member. Closed Bool/Unit controls witness every single deletion, so the core is inclusion-minimal in that vocabulary. The six-member generic-potency version was not certified: c6d6379b carries POTENCY_2 and 4be9a4ac POTENCY_1, and no POTENCY_1/POTENCY_2 bridge is registered. (2) Results 1d947387 and 44826b71: the new open observation premise 8d4502a7 (reciprocal cross-respect moving) with 6ca87431, 7ad36aca and 32d77f18 is inconsistent, and with 6ca87431 and 47aff057 alone also; deletion controls make the four-member core inclusion-minimal. A rejection could target 6ca87431's respect-free consequent, 7ad36aca, 32d77f18 (source-stated, costliest), 47aff057 or the case; none is chosen. (3) Result 4ff8cd35: 8ab3d114, the new meaning-postulate candidate 6ad27c23 (nothing can be without itself), 2e248016, 98efaa9e and 56f68b40 are inconsistent without excluded middle; the 402cf70f version follows by the new strength step 76e07e1a (402cf70f -> 98efaa9e, relation c0e70e30). The 402cf70f version was not certified as one argument because 402cf70f links the PresentEsseSupport sense of 6f1d1395 and 56f68b40 the Ontic sense (preflight mixing); the composition is the evidence. The closed control repairedPackageModel is a two-concretum model of a8298fbd, 8ab3d114, 6ad27c23, 98efaa9e, 402cf70f and 56f68b40 with a nonempty strict D, in which 2e248016 fails. (4) Result b0622871 (bypass B1): 42890b45 + f10d5632 -> 97f5850f, with f10d5632 as the FINITE_CAUSAL_HISTORY_AND_PER_SE_3 -> _4 bridge. (5) Result 4bba0c41 (rebinding): 97f5850f + the new open selection 6c084877 (every studied history edge is a per se link) -> 42890b45, using neither d85de8e1 nor e078f07b. Target analysis: the route's regress step already consumes 97f5850f directly (c1b68c21 <- 675b71d2 <- 226c38f6 <- f1ef9206 <- 97f5850f + c2880fe0), so no new argument for c1b68c21 was needed; d85de8e1 with all-respects e078f07b entered spine I only through the expansion of the stated 97f5850f via b58472dd -> e529c42f -> 1bca81ef -> 42890b45 -> e229bb2c. 42890b45 has no other consumer on the GOD_4 route, so the rebinding adds no new support for 97f5850f; with B1 and f10d5632 it shows that under the per se selection 42890b45 and 97f5850f stand or fall together, so d85de8e1 adds no discriminating warrant there. Frontier: no change in open-premise counts for either root; one bare premise added (6c084877), 98efaa9e moves from bare to proved (rests on open 402cf70f).",
+  "evidence": [
+    "b4f8b7d3-babc-4c33-bebb-a47b135bc258",
+    "1d947387-79f6-4dfb-be78-2d2c76794bfe",
+    "44826b71-cd69-4ac0-9c1c-a62ed17a66b4",
+    "4ff8cd35-2588-4c02-bfe3-b87220c3a9f9",
+    "76e07e1a-3f82-42dd-8765-6c8560bf0e0f",
+    "b0622871-a048-4549-b03b-c8534f1cb992",
+    "4bba0c41-85ce-45d6-8412-a45d7806a580"
+  ],
+  "blocker": "Not done here: the six-member CausesIn set on generic potency needs a POTENCY_1/POTENCY_2 bridge; registering 402cf70f's world-relative sense link (it links PresentEsseSupport while its Lean type uses the Profile relation) is a record question for its owner; the case premise 8d4502a7, the meaning postulate 6ad27c23 and the selection 6c084877 stay open. Next tests: slice 2 (respect fork of SIMPLY_PRIOR_1 into priority in causing and priority in being, re-binding spines and checking whether 3e2366b5 needs a new bridge); a non-factive, in-progress CausesIn reading for 6a0b545c or distinct relations for its two routes; inclusion-minimality of the self-dependence core (not tested)."
+}

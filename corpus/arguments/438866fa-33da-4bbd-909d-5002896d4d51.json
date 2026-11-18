@@ -1,0 +1,30 @@
+{
+  "id": "438866fa-33da-4bbd-909d-5002896d4d51",
+  "label": "No infinite per se efficient-cause series, from well-founded causal predecessors",
+  "premise_statement_ids": [
+    "42890b45-9325-56d3-8ae4-a6202e8c6ba6",
+    "f10d5632-ee55-5c6a-b972-809363b8c50c"
+  ],
+  "conclusion_statement_id": "97f5850f-62bc-5e43-a0c1-dd1033d08fc9",
+  "inference_ids": [
+    "34d7243f-dc1c-4990-9d2e-d35529e9d1de"
+  ],
+  "meaning": "Bypass B1 of lane A and lane B: if the studied causal-predecessor relation is well-founded (42890b45) and every per se efficient-cause edge is an edge of it on the same carrier and orientation (f10d5632, the explicit passage between the history relation and the per se link), then every being is accessible along per se links (97f5850f). This support needs neither finite distinct ancestry (e529c42f) nor the no-loops premise (37e9e7a0), so the finite-branching leaves 68172f57 and b3853b1b and the order-law leaves through 113c01ef leave this support. It adds no warrant beyond 42890b45, whose only registered support (e229bb2c) uses respect-free d85de8e1 with all-respects e078f07b.",
+  "definition_ids": [
+    "8aa89667-4d6f-5aab-9720-455722b4c6ff",
+    "4a101a4c-12de-53c8-80c6-de7a523ea9d9",
+    "6c9be385-8a5b-5aa6-b4e6-53630ec55d04"
+  ],
+  "disambiguation_ids": [
+    "81c233d4-01b4-528c-8bbd-7da228443ffe",
+    "bedfab81-905c-5d1a-b834-e20b8007b3da"
+  ],
+  "sense_bridges": [
+    {
+      "term": "FINITE_CAUSAL_HISTORY_AND_PER_SE",
+      "from": "6c4dd4e0-8db8-4ec5-99ab-a382585d7089",
+      "to": "d49461c3-3e79-474a-9072-2118bf9c2913",
+      "statement_id": "f10d5632-ee55-5c6a-b972-809363b8c50c"
+    }
+  ]
+}

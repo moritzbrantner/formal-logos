@@ -1,0 +1,36 @@
+{
+  "id": "bea86ed3-b16a-4da3-b21c-3cf43f5d1812",
+  "label": "Logical falsity, from the self-dependence package at an actual CONCRETE_6 individual",
+  "premise_statement_ids": [
+    "8ab3d114-d6e2-5f6d-805b-ae901f56d39b",
+    "6ad27c23-713a-493d-9a33-78e72eee7c3b",
+    "2e248016-f8bf-5d8a-931e-7f9ebbb13e42",
+    "98efaa9e-1c91-4e52-8c0d-faf03d4f8372",
+    "56f68b40-9737-59a0-8cac-5610980a1547"
+  ],
+  "conclusion_statement_id": "37f33696-dc47-5bd3-9cd8-edfd5bf00aa5",
+  "inference_ids": [
+    "0a72e2cb-d24e-47da-8822-b256264d3f81"
+  ],
+  "meaning": "Under one interpretation of DependsForBeing (D), CanBeWithout (W), the Profile m and the reading world w (the w₀ of 56f68b40): take an actual concretum x (56f68b40: some CONCRETE_6 candidate exists at w). If D(x,x), the unrestricted dependence-to-grounding bridge 2e248016 makes x ground itself at w, and the actual-world distinct-esse-cause bridge 98efaa9e gives x ≠ x; so ¬D(x,x). Independence allows being-without (8ab3d114) then gives W(x,x), which the meaning postulate 'nothing can be without itself' denies. The five premises cannot all hold; the derivation is constructive (no excluded middle). It certifies lane B's 2026-11-18 package with 98efaa9e; the every-world bridge 402cf70f implies 98efaa9e (separate verified strength step, actualGroundDistinctOfEverywhere), so the package with 402cf70f in its place is inconsistent too, by composing the two results. It does not select a member for rejection. The closed control repairedPackageModel is one Bool/Unit interpretation of a repaired package: the distinct-relata bridge a8298fbd in place of 2e248016, with 8ab3d114, the meaning postulate, 98efaa9e, 402cf70f, an actual concretum and a nonempty strict part of D (true depends on false and not conversely); 2e248016 fails in it. It shows only that this repair is consistent in that interpretation (not a registered model).",
+  "definition_ids": [
+    "32606882-e6e0-43b5-8c81-3b2afd3473e0",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "7eeee571-aad0-5bba-ac81-6bb9604ef678",
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "4b02d34a-9226-5009-9ac2-3b52f4222b21",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6"
+  ],
+  "strong_version_needed": {
+    "2e248016-f8bf-5d8a-931e-7f9ebbb13e42": "The certificate concerns the route member itself: the unrestricted bridge is the one used in dd7ee4b9, eddef85a and 931319ea, and the contradiction runs through its diagonal instance D(x,x). The distinct-relata weak version a8298fbd is silent on the diagonal and is the repair whose consistency the control repairedPackageModel witnesses."
+  }
+}

@@ -1,0 +1,126 @@
+# Prima via certificates (#1751, slice 1). Certifies the inconsistent premise sets
+# found by the 2026-11-18 cluster assessments of the prima via route to GOD_4
+# exists (lane A: docs/notes/prima-via-strength-consumers.md, attempt a82b06b6;
+# lane B: docs/notes/causal-dependence-support-investigation.md, attempt 9d71e28d),
+# the strength step 402cf70f -> 98efaa9e, bypass B1 (the per se regress premise
+# from well-founded causal predecessors) and the converse selection that rebinds
+# well-founded causal predecessors to the per se regress premise. Analyst
+# formulations, attribution deferred. Every proof is constructive and axiom-free.
+# No premise is established; no incompatibility selects a member for rejection.
+# Note: docs/notes/prima-via-certificates.md.
+
+[batch]
+vocab = "TruthCore.Causality.PrimaViaCertificates"
+results = "TruthCore.Results.Causality.PrimaViaCertificates"
+definitions = []
+disambiguations = []
+
+# ---------------------------------------------------------------- statements
+
+[[statement]]
+id = "Nothing can be without itself"
+lean = "NothingCanBeWithoutItself"
+paraphrase = "OPEN meaning-postulate candidate, analyst formulation, attribution deferred: for no x can x be while x is not, that is, CanBeWithout x x fails for every x. CanBeWithout is the primitive of DEF-CAN-BE-WITHOUT ('y can be while x is not', 'possunt' read as real possibility). On that gloss CanBeWithout x x asks for a possible situation in which x both is and is not, so the postulate is the diagonal instance of non-contradiction under the definition's reading; the Lean primitive does not build it in, so it is registered as an explicit statement. It says nothing about dependence for being. With STMT-INDEPENDENCE-ALLOWS-BEING-WITHOUT (8ab3d114) it forces every being to depend for its being on itself (not-not D(x,x), constructively); that consequence is what makes the self-dependence package of #1751 inconsistent."
+definitions = ["d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2"]
+
+[[statement]]
+id = "Two distinct beings each move the other, each mover in act and each moved in POTENCY_1"
+lean = "ReciprocalCrossRespectMoving"
+paraphrase = "OPEN analyst observation premise, unattributed: there are beings y and x with y ≠ x and respects r and r' such that y is in act in r, x is in potency in r and y moves x in r, and x is in act in r', y is in potency in r' and x moves y in r'. Moving is MOTION_1, reduction from potency to act; InAct and InPotency are the prima via's shared predicates. Candidate instances: two people each telling the other something the other did not know; mutual heating or pushing of two bodies in contact, where the mover is acted on in turn (Physics III.2, 202a3-7, cited as orientation only; no claim is recorded). The Lean type does not require r ≠ r' and does not say that either moving is per se ordered. Not established here: the PR registers it so that the reciprocity incompatibility has an explicit member, not a hidden case."
+definitions = ["a7904c82-eef8-58e4-ac7c-0bb93374cb43", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "9f874532-f37e-590b-bec9-a9affb2762ac", "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"]
+disambiguations = ["a59fd0ac-f276-528d-8dc3-c3eddd331ac7", "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"]
+
+[[statement]]
+id = "Every edge of the studied causal history is a per se ordered efficient-cause link"
+lean = "HistoryEdgesArePerSeLinks"
+paraphrase = "OPEN analyst selection, attribution deferred: on the same carrier and with the same upstream orientation, whenever y is a causal predecessor of x in the studied causal-history relation, y causes x as a caused cause (CausesAsCaused, the per se link of DEF 4a101a4c). It is the converse of STMT 'per se links included' (f10d5632) and the per se restriction of the selection 57552dce (every history edge is efficient causing in some respect). Together with f10d5632 it makes the studied relation exactly the per se link. It leaves accidentally ordered series out of the studied relation and says nothing about them."
+definitions = ["8aa89667-4d6f-5aab-9720-455722b4c6ff", "4a101a4c-12de-53c8-80c6-de7a523ea9d9"]
+disambiguations = ["bedfab81-905c-5d1a-b834-e20b8007b3da", "81c233d4-01b4-528c-8bbd-7da228443ffe"]
+
+# ---------------------------------------------------------------- arguments
+
+[[argument]]
+id = "Logical falsity, from the factive CausesIn set under adopted POTENCY_1"
+theorem = "causesInIncompatible"
+strong_version_needed = {"67aa5b5c-694b-50a1-90e5-d843234db924" = "The certificate concerns the route member itself, which reaches the GOD_4 root through 90e85f77 and f632c6e5. The esse-restricted weak version 2f2f5bd2 does not suffice: the moved respect r is arbitrary, not esse."}
+comparator_theorems = ["causesInControls"]
+premises = ["fbc516c1-a6cb-5495-9d31-6e2bb45e8e67", "6b9fedc2-6fea-530b-bc6d-116a5d307a54", "4be9a4ac-699a-5adc-88d4-bbd958fa1576", "6a0b545c-d3bb-52d1-b0b7-c3ea48febb92", "67aa5b5c-694b-50a1-90e5-d843234db924"]
+conclusion = "STMT-CONFIGURATION-FALSE"
+sense_bridges = [
+  { term = "CAUSE", from = "CAUSE_1", to = "CAUSE_2", statement_id = "6a0b545c-d3bb-52d1-b0b7-c3ea48febb92" },
+]
+axioms = []
+rule = "Instantiate the observation, take a mover, apply the two CausesIn premises, and contradict the adopted potency of the moved thing"
+meaning = "Under adopted POTENCY_1 (InPotency x r := CanBe x r ∧ ¬ InAct x r), with one MovedIn, MovesIn, CausesIn and InAct: something x is being moved in some respect r (fbc516c1); some y moves x in r (6b9fedc2, whose in-act clause is not used); y then causes x's being r (6a0b545c, the explicit bridge from moving, CAUSE_1, to causing a perfection, CAUSE_2); so x is in act in r (67aa5b5c); but x, being moved in r, is in POTENCY_1 in r (4be9a4ac), hence not in act in r. The five premises therefore cannot all hold under one interpretation of CausesIn and InAct; the derivation is constructive. It certifies lane A's 2026-11-18 finding: 6a0b545c needs a non-factive, in-progress reading of CausesIn, or the routes through 6a0b545c (892db443) and through 67aa5b5c (90e85f77, f632c6e5) need distinct relations. It does not select which member to reject. Under adopted POTENCY_1 the non-overlap premise c6d6379b is definitional and is not a member. On the generic vocabulary with an independent InPotency, the six-member set with c6d6379b is the same derivation, but c6d6379b carries POTENCY_2 while 4be9a4ac carries POTENCY_1, so one argument over that set would need a registered POTENCY_1/POTENCY_2 sense bridge; none is registered and none is introduced here. The closed controls causesInControls give, for each of the five members, a Bool/Unit interpretation under adopted potency in which the other four hold and that member fails, so the core is inclusion-minimal in this vocabulary (facts about those interpretations only, not registered models)."
+
+[[argument]]
+id = "Logical falsity, from reciprocal cross-respect moving and respect-free simple priority"
+theorem = "reciprocityIncompatible"
+comparator_theorems = ["reciprocityControls"]
+premises = ["6ca87431-3383-58f6-9322-a1f0e8f0396b", "7ad36aca-d55e-5b66-92fa-30749333df4f", "32d77f18-a9c2-5486-b51c-a24f32863af4", "Two distinct beings each move the other, each mover in act and each moved in POTENCY_1"]
+conclusion = "STMT-CONFIGURATION-FALSE"
+axioms = []
+rule = "Apply priority from actual moving to each direction of the case, compose by transitivity, contradict irreflexivity"
+meaning = "With one respect-free PriorSimply: the case gives y ≠ x, y in act in r moving x in potency in r, and x in act in r' moving y in potency in r'. Priority from actual moving (6ca87431) then gives PriorSimply y x and PriorSimply x y; transitivity (7ad36aca) gives PriorSimply y y; irreflexivity (32d77f18) denies it. The four premises cannot all hold. A rejection could target any member: the respect-free consequent of 6ca87431, transitivity 7ad36aca, irreflexivity 32d77f18 (source-stated, so the costliest), or the case premise; nothing here chooses among them. Repair options recorded by lanes A and B, none tested here: respect-indexed priority (the gloss of DEF 1d9aa4d9), restriction to per se links, or a priority-in-causing / priority-in-being split. The closed controls reciprocityControls give, for each member, a two-being two-respect interpretation in which the other three hold and that member fails, so the core is inclusion-minimal in this vocabulary (facts about those interpretations only). The case premise is open; this argument does not establish it."
+
+[[argument]]
+id = "Logical falsity, from reciprocal moving and priority requiring nonmutual dependence"
+theorem = "reciprocityIncompatibleViaDependence"
+premises = ["6ca87431-3383-58f6-9322-a1f0e8f0396b", "47aff057-35ef-5418-930b-fef72e1104d2", "Two distinct beings each move the other, each mover in act and each moved in POTENCY_1"]
+conclusion = "STMT-CONFIGURATION-FALSE"
+axioms = []
+rule = "Apply priority from actual moving to both directions of the case and the dependence bridge to both priorities"
+meaning = "With one respect-free PriorSimply and one DependsForBeing: the case and 6ca87431 give PriorSimply y x and PriorSimply x y; the bridge 47aff057 then gives D x y ∧ ¬ D y x and D y x ∧ ¬ D x y, a contradiction. No transitivity or irreflexivity premise is used. A rejection could target 6ca87431's respect-free consequent, 47aff057, or the case premise; nothing here chooses among them. Lane B's reading: on priority in causing the fault lies with respect-free priority, on priority in being with taking cross-respect moving to yield priority in being."
+
+[[argument]]
+id = "Logical falsity, from the self-dependence package at an actual CONCRETE_6 individual"
+theorem = "selfDependenceIncompatible"
+strong_version_needed = {"2e248016-f8bf-5d8a-931e-7f9ebbb13e42" = "The certificate concerns the route member itself: the unrestricted bridge is the one used in dd7ee4b9, eddef85a and 931319ea, and the contradiction runs through its diagonal instance D(x,x). The distinct-relata weak version a8298fbd is silent on the diagonal and is the repair whose consistency the control repairedPackageModel witnesses."}
+comparator_theorems = ["repairedPackageModel"]
+premises = ["8ab3d114-d6e2-5f6d-805b-ae901f56d39b", "Nothing can be without itself", "2e248016-f8bf-5d8a-931e-7f9ebbb13e42", "98efaa9e-1c91-4e52-8c0d-faf03d4f8372", "56f68b40-9737-59a0-8cac-5610980a1547"]
+conclusion = "STMT-CONFIGURATION-FALSE"
+axioms = []
+rule = "Refute D(x,x) through grounding and distinctness, then derive CanBeWithout x x from independence"
+meaning = "Under one interpretation of DependsForBeing (D), CanBeWithout (W), the Profile m and the reading world w (the w₀ of 56f68b40): take an actual concretum x (56f68b40: some CONCRETE_6 candidate exists at w). If D(x,x), the unrestricted dependence-to-grounding bridge 2e248016 makes x ground itself at w, and the actual-world distinct-esse-cause bridge 98efaa9e gives x ≠ x; so ¬D(x,x). Independence allows being-without (8ab3d114) then gives W(x,x), which the meaning postulate 'nothing can be without itself' denies. The five premises cannot all hold; the derivation is constructive (no excluded middle). It certifies lane B's 2026-11-18 package with 98efaa9e; the every-world bridge 402cf70f implies 98efaa9e (separate verified strength step, actualGroundDistinctOfEverywhere), so the package with 402cf70f in its place is inconsistent too, by composing the two results. It does not select a member for rejection. The closed control repairedPackageModel is one Bool/Unit interpretation of a repaired package: the distinct-relata bridge a8298fbd in place of 2e248016, with 8ab3d114, the meaning postulate, 98efaa9e, 402cf70f, an actual concretum and a nonempty strict part of D (true depends on false and not conversely); 2e248016 fails in it. It shows only that this repair is consistent in that interpretation (not a registered model)."
+
+[[argument]]
+id = "An actual ground is a distinct CAUSE_2 of its esse, from the every-world bridge"
+theorem = "actualGroundDistinctOfEverywhere"
+premises = ["402cf70f-66ff-415e-a9e2-2e1f288956d8"]
+conclusion = "98efaa9e-1c91-4e52-8c0d-faf03d4f8372"
+axioms = []
+rule = "Instantiate the world quantifier at the reading world"
+meaning = "Strength step: if at every admitted world v a concrete candidate existing at v that grounds a concrete candidate at v is distinct from it and a CAUSE_2 of its esse (402cf70f), then at the reading world w an actual concrete ground of an actual concretum is distinct from it and a cause of its esse (98efaa9e). Same Profile, CausesIn and esse. The weak version drops the quantifier over merely possible worlds that lane B's row 14 targets. Strictness is not separately certified."
+
+[[argument]]
+id = "No infinite per se efficient-cause series, from well-founded causal predecessors"
+theorem = "perSeRegressOfWellFoundedHistory"
+premises = ["42890b45-9325-56d3-8ae4-a6202e8c6ba6", "f10d5632-ee55-5c6a-b972-809363b8c50c"]
+conclusion = "97f5850f-62bc-5e43-a0c1-dd1033d08fc9"
+sense_bridges = [
+  { term = "FINITE_CAUSAL_HISTORY_AND_PER_SE", from = "FINITE_CAUSAL_HISTORY_AND_PER_SE_3", to = "FINITE_CAUSAL_HISTORY_AND_PER_SE_4", statement_id = "f10d5632-ee55-5c6a-b972-809363b8c50c" },
+]
+axioms = []
+rule = "Accessibility along a subrelation (Subrelation.accessible)"
+meaning = "Bypass B1 of lane A and lane B: if the studied causal-predecessor relation is well-founded (42890b45) and every per se efficient-cause edge is an edge of it on the same carrier and orientation (f10d5632, the explicit passage between the history relation and the per se link), then every being is accessible along per se links (97f5850f). This support needs neither finite distinct ancestry (e529c42f) nor the no-loops premise (37e9e7a0), so the finite-branching leaves 68172f57 and b3853b1b and the order-law leaves through 113c01ef leave this support. It adds no warrant beyond 42890b45, whose only registered support (e229bb2c) uses respect-free d85de8e1 with all-respects e078f07b."
+
+[[argument]]
+id = "Causal predecessors are well-founded, from the per se regress and a per se history"
+theorem = "wellFoundedHistoryOfPerSeRegress"
+premises = ["97f5850f-62bc-5e43-a0c1-dd1033d08fc9", "Every edge of the studied causal history is a per se ordered efficient-cause link"]
+conclusion = "42890b45-9325-56d3-8ae4-a6202e8c6ba6"
+axioms = []
+rule = "Well-foundedness along a subrelation (Subrelation.accessible)"
+meaning = "Regress rebinding: if no per se ordered series of efficient causes goes on to infinity (97f5850f, stated on its q.2 a.3 claims) and the studied causal history is selected as per se ordered causing (every edge is a CausesAsCaused link), then the studied relation is well-founded (42890b45). Neither simple priority, its well-foundedness d85de8e1, nor the all-respects priority premise e078f07b enters. With bypass B1 and f10d5632 it shows that, under the per se selection, 42890b45 and 97f5850f stand or fall together, so d85de8e1 adds no discriminating warrant to this spine. It gives 97f5850f no new support: 42890b45 is consumed on the GOD_4 route only by the chain 1bca81ef → e529c42f → b58472dd back to 97f5850f, and the route's regress step for c1b68c21 already consumes 97f5850f directly (675b71d2 ← 226c38f6 ← f1ef9206). The selection premise is open."
+
+# ---------------------------------------------------------------- relations
+
+[[relation]]
+id = "The every-world distinct-esse-cause bridge strengthens its actual-world sibling"
+subject_kind = "statement"
+subject_id = "402cf70f-66ff-415e-a9e2-2e1f288956d8"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "98efaa9e-1c91-4e52-8c0d-faf03d4f8372"
+verification_result_id = "An actual ground is a distinct CAUSE_2 of its esse, from the every-world bridge"
+note = "Same Profile, CausesIn and esse; the weak version instantiates the world quantifier at the reading world and restricts both relata to actual concreta there. Strictness is not separately certified."

@@ -1,0 +1,13 @@
+{
+  "id": "aa864b62-3fad-442f-987c-f268e01a6209",
+  "label": "Causal predecessors are well-founded, from the per se regress and a per se history (inference)",
+  "input_statement_ids": [
+    "97f5850f-62bc-5e43-a0c1-dd1033d08fc9",
+    "6c084877-1d6f-4298-8644-d375fecd9e63"
+  ],
+  "output_statement_id": "42890b45-9325-56d3-8ae4-a6202e8c6ba6",
+  "rule": "Well-foundedness along a subrelation (Subrelation.accessible)",
+  "meaning": "Regress rebinding: if no per se ordered series of efficient causes goes on to infinity (97f5850f, stated on its q.2 a.3 claims) and the studied causal history is selected as per se ordered causing (every edge is a CausesAsCaused link), then the studied relation is well-founded (42890b45). Neither simple priority, its well-foundedness d85de8e1, nor the all-respects priority premise e078f07b enters. With bypass B1 and f10d5632 it shows that, under the per se selection, 42890b45 and 97f5850f stand or fall together, so d85de8e1 adds no discriminating warrant to this spine. It gives 97f5850f no new support: 42890b45 is consumed on the GOD_4 route only by the chain 1bca81ef → e529c42f → b58472dd back to 97f5850f, and the route's regress step for c1b68c21 already consumes 97f5850f directly (675b71d2 ← 226c38f6 ← f1ef9206). The selection premise is open.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

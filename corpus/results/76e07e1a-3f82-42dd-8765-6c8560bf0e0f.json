@@ -1,0 +1,11 @@
+{
+  "id": "76e07e1a-3f82-42dd-8765-6c8560bf0e0f",
+  "label": "An actual ground is a distinct CAUSE_2 of its esse, from the every-world bridge",
+  "argument_id": "7861a6e5-e647-49cf-aef4-0115b9788442",
+  "challenge_module": "TruthCore.Results.Causality.PrimaViaCertificates.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PrimaViaCertificates.Solution",
+  "theorem": "TruthCore.Results.Causality.PrimaViaCertificates.actualGroundDistinctOfEverywhere",
+  "comparator_config": "results/76e07e1a-3f82-42dd-8765-6c8560bf0e0f/comparator.json",
+  "status": "solution-present",
+  "description": "Strength step: if at every admitted world v a concrete candidate existing at v that grounds a concrete candidate at v is distinct from it and a CAUSE_2 of its esse (402cf70f), then at the reading world w an actual concrete ground of an actual concretum is distinct from it and a cause of its esse (98efaa9e). Same Profile, CausesIn and esse. The weak version drops the quantifier over merely possible worlds that lane B's row 14 targets. Strictness is not separately certified."
+}
