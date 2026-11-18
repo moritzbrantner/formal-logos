@@ -477,9 +477,12 @@ are unregistered and not Lean-checked. Source items cited by relation are
   `a07c30f9`): s is the one whose operation e is.
 - **Living** `Lives x` (definition `b89f3234`): x operates from itself and not
   as moved by another (q.18 a.3); timeless; example an animal or a thinker,
-  counterexample a stone. A Lean parameter of `bfaf6f92`, not the LIVING_1 /
-  LIVING_2 declarations of disambiguation `1f2d3b9b`, which no record relates
-  to it.
+  counterexample a stone. A Lean parameter of `bfaf6f92`. Definition
+  `f91f5056` (LIVING_1, the timeless primitive `Primitives.Lives` of
+  disambiguation `1f2d3b9b`) states that it has the same content as
+  `b89f3234`; the two Lean declarations are not formally identified. Statement
+  `8d2ac441` ("Whatever HAS_INTELLECT_1 lives") is the LIVING_1 neighbour of
+  `0ce7b6c5` in the Dei Filius vocabulary.
 - **Actual thing; merely existing** (definition `b7c083b2`): `Actual z`;
   merely existing is `Actual z ∧ ¬ Lives z`; it does not decide substance or
   aggregate.
@@ -488,8 +491,9 @@ are unregistered and not Lean-checked. Source items cited by relation are
 - **True** said of things (TRUE_3 of disambiguation `80b5fc49`, definitions
   `b412016a` and `aad0156a`): conformity to the intellect on which the thing
   depends; the comparative is fuller realization of "the intelligible nature or
-  form under consideration", and `aad0156a` explicitly stipulates no
-  comparability across kinds.
+  form under consideration". `aad0156a` stipulates no total comparability
+  across kinds, so a cross-kind verum comparison (thinker and stone) is not
+  supplied by it.
 - **Good** (`bonum`) and **noble** (`nobile`): abstract respects. No
   definition record exists for either in this use (finding (d) 1).
 
@@ -499,10 +503,13 @@ are unregistered and not Lean-checked. Source items cited by relation are
 supports) by `697b7dc4` (`oneFirstMoverViaMaximeEns`), whose premise
 `a9622441` is passed to `QuartaVia.quartaVia`. Its proof destructures the
 grades premise as `obtain ⟨_, hVerum, _⟩ := hGrades`: **only the verum
-conjunct** `∃ x y, MoreIn verum x y` is used. The same holds in
-`QuartaViaMaximumInBeing` (argument `e2a7ffb3`). The degree-fork and
-unbounded-core analyses use the bonum conjunct (`hGrades.1`). Other consumers
-of `a9622441` were not audited conjunct by conjunct.
+conjunct** `∃ x y, MoreIn verum x y` is used. Every argument reaching GOD_4
+that takes `a9622441` directly passes it to `quartaVia` or
+`maximeEnsCausesBeingOfAll` (`QuartaViaMaximumInBeing`, which also uses only
+`hVerum`), so only verum is used: `697b7dc4`, `f8992ef7`, `87dd8489`,
+`beec1dc1`, `661ce61d`, `fd1f7e75`, `0a639ec4`, `117cc323`, `df653f4e`,
+`e2a7ffb3`. Only the degree-fork and unbounded-core analyses use the bonum
+conjunct (`hGrades.1`).
 
 `bfaf6f92` (premises `e81971f1`, `30e6e01c`, `0ce7b6c5`, `e7cbb87f`,
 `1c8383f5`, `e4a7ef4b`) instantiates a thought and its bearer, makes the
@@ -525,12 +532,12 @@ statements directly.
 
 | Premise and Lean content | End state | Strongest positive warrant, or reason | Conditions and shared dependencies |
 | --- | --- | --- | --- |
-| `95c5138f` `∃ a, Performed a ∧ DoubtsThought a` | **Defended primitive: a performative first-person datum.** | Whoever actually questions whether any thought occurs, as the cogito invites, is directly aware of performing that act; asserted in that context the premise is made true by the very act it reports. | Classification: its denial is **not strictly self-refuting** (the omission control `NoPerformedDoubt` is a consistent interpretation); it is **not epistemically self-undermining**; and it is **not an inquiry precondition**, since inquiry does not require doubting thought. The inquiry-precondition standing belongs to the neighbour `e81971f1` (assessing any premise is itself a thought episode), already assessed in `e64d5241`. The datum is indexical and cannot be witnessed by the corpus. Dispensable for `e81971f1` (two other supports). |
+| `95c5138f` `∃ a, Performed a ∧ DoubtsThought a` | **Defended primitive: a performative first-person datum.** | Whoever actually questions whether any thought occurs, as the cogito invites, is directly aware of performing that act; asserted in that context the premise is made true by the very act it reports. | Classification: its denial is **not strictly self-refuting**: asserting that no one performs a doubting of whether thought occurs is not itself such a doubting, so the act does not instantiate what it denies (the control `NoPerformedDoubt` shows only that the denial is consistent). It is **not epistemically self-undermining**, and it is **not an inquiry precondition**, since inquiry does not require doubting thought. That standing plausibly belongs to `e81971f1` (assessing any premise is itself a thought episode). That is an analyst observation; `e64d5241` assesses its performed-episode warrant, not this standing. The datum is indexical and cannot be witnessed by the corpus. Dispensable for `e81971f1`: `f93f2dfd` (actual assertion) avoids it; `187646ad` also uses it. |
 | `1722a80f` `∀ a, Performed a → DoubtsThought a → ∃ e, Occurs e ∧ Realizes a e` | **Defended primitive: a meaning postulate of the selected senses**, conditional on one clarification of `c075da22`. | Under THOUGHT_EPISODE_VERSUS_OPINING_1 doubting is a mode of thought, and a performed doubting is an exercise of it, hence an occurring episode. The separate `Realizes` carrier only makes that step explicit. | `c075da22` does not say that "performed" excludes non-cognitive production (a recording or a parrot "denying" thought). On such a reading the behaviourist row (e) 1 would have a target. Clarifying that DoubtsThought requires the doubter's own questioning removes it. |
 | `17667565` `∀ e, Occurs e → IsOperation e` | **Open, blocked by an unfixed episode-level sense of operation.** | On the Thomist reading (an immanent activity of the bearer, which covers even received understanding) it is strong; claim `03932727` (q.75 a.2) supports it for understanding only (relation `2f554c8c`). | On a voluntary-doing reading, undergone episodes (an intruding memory, a sensation) are happenings, not doings, and the universal fails (row (e) 2). The route only needs active episodes: the doubting that `7d7b89e7` uses is a questioning. But the export `ThoughtOccurs` forgets which episode realizes the doubt (the export limit recorded above, "One episode, one bearer, one selected world"), so a restricted sibling cannot be applied without an adapter. |
 | `d4ea5ebf` `∀ e, IsOperation e → ∃ s, AgentOf s e` | **Defended primitive: a meaning postulate of `IsOperation` as glossed.** | If an operation is "an activity someone does", it has a doer. Claim `f4b1c499` (q.75 a.2: operating belongs to a being in act) supports it (relation `f76aa224`). | The substantive content of the pair `17667565` + `d4ea5ebf` sits in `17667565`. Needs an episode-level definition of `IsOperation` (finding (d) 1). |
-| `c2fa06f2` `∀ s e, AgentOf s e → Bears s e` | **Defended direct option.** | For an immanent operation the activity remains in the agent (q.18 a.3, as read in claim `611be1f0`; relation `946bd61a`); claim `f4b1c499` (q.75 a.2) ascribes the operation to the subsisting thing that has the operative form (relation `a99058be`). | The Episode carrier is thought episodes (definition `c0cbef1c`), which are immanent. On a carrier that includes transient actions, Physics III.3 places the action in the patient (row (e) 4). |
-| `0ce7b6c5` `∀ s e, Occurs e → Bears s e → Lives s` | **Defended direct option on the middle LIVING sense** of finding (d) 2. | Thinking is an operation that remains in its bearer, and living is operating from oneself (q.18 a.3). Specified short derivation, for the formal owner: from `17667565`, `c2fa06f2` and the bridge "whoever bears an occurring immanent operation operates from itself", which is the middle sense of `b89f3234`. | On the strict sense it is false for every creature (row (e) 10). It says nothing about biological life; a functionalist non-biological thinker is no counterexample under the selected sense (row (e) 8). |
+| `c2fa06f2` `∀ s e, AgentOf s e → Bears s e` | **Defended direct option.** | For an immanent operation the activity remains in the agent (q.18 a.3: understanding remains in the agent, the passage that relation `946bd61a` cites for `0ce7b6c5`, not for this premise); claim `f4b1c499` (q.75 a.2) ascribes the operation to the subsisting thing that has the operative form (relation `a99058be`). | The Episode carrier is thought episodes (definition `c0cbef1c`), which are immanent. On a carrier that includes transient actions, Physics III.3 places the action in the patient (row (e) 4). |
+| `0ce7b6c5` `∀ s e, Occurs e → Bears s e → Lives s` | **Defended direct option on the middle LIVING sense** of finding (d) 2. | Thinking is an operation that remains in its bearer, and living is operating from oneself (q.18 a.3; claim `611be1f0` supports the premise, relation `946bd61a`). A derivation would need `17667565`, immanence of every thought episode on the selected carrier, and either the bridge "whoever bears an occurring immanent operation operates from itself", which is the middle sense applied directly and adds little to the direct option, or bearer-uniqueness plus `d4ea5ebf` and `c2fa06f2`, to identify the bearer with the agent (see the export limit "One episode, one bearer"). `c2fa06f2` alone has the wrong direction (agent → bearer): two bearers of one operation, of which only the agent lives, satisfy it. | On the strict reading, which no record adopts, it would be false for every creature (row (e) 10). It says nothing about biological life; a functionalist non-biological thinker is no counterexample under the selected sense (row (e) 8). |
 | `e7cbb87f` `∃ z, Actual z ∧ ¬ Lives z` | **Defended primitive: an observation datum** (a stone). | Ordinary observation: a stone has no operation that remains in it and perfects it. Claim `65ffa99c` (SCG I.28 [4]) presupposes merely existing things without asserting one (relation `9a71a5b7`). | True on the strict and middle senses of LIVING; false on a loose sense on which any active power of one's own is life (a stone's mass attracts), which the definition's own counterexample excludes (row (e) 11). |
 | `1c8383f5` `∀ x z, Lives x → Actual z → ¬ Lives z → MoreIn nobile x z` | **Open, blocked by the undefined NOBLE sense.** | Strong prima facie for the paradigm pair (a thinker against a stone). Claim `65ffa99c` (SCG I.28 [1], [4]) supports it: living things are more perfect than merely existing ones (relation `6f4c6107`; gaps: "perfect", not "noble"; no universal). | The universal over every living and every non-living thing needs either lexical priority of self-operation or eminent containment of lower perfections; neither is on file (row (e) 7). The route needs one pair only. If nobility is degree of being, its natural sibling is "whatever lives is more in being than any actual non-living thing". |
 | `e4a7ef4b` `∀ x y, MoreIn nobile x y → MoreIn bonum x y ∧ MoreIn verum x y` | **Open, blocked by the undefined NOBLE and GOOD senses and a missing comparative goodness bridge.** Its verum half is **reducible** (below). | Convertibility of good and true with being, read for the comparative: claim `191c4ad9` (q.16 a.3) supports it (relation `49f779a7`; gaps: no nobility, no comparative). | Analyst observation: if "more noble" entails "more in being" (a definition of NOBLE as degree of being, not on file), the verum half follows from the right-to-left direction of the second conjunct of `5a948c37` (`AsToBeingSoToTruthReading`: `MoreIn truth x y ↔ MoreIn being x y`, sourced on Metaphysics II.1 993b30-31, claim `b7d959b1`, same TRUE_3 definitions). That route also avoids `aad0156a`'s missing cross-kind comparison. The bonum half needs a comparative "more in being entails more good", which is not on file (q.5 a.1 is formalized as a non-comparative biconditional, `GoodnessIsActualityReading`). Universal over all pairs; the route needs one pair. |
@@ -538,9 +545,9 @@ statements directly.
 Tally: derived 0; defended primitive or direct option 6 (`95c5138f`,
 `1722a80f`, `d4ea5ebf` and `e7cbb87f` as primitives or meaning postulates,
 `c2fa06f2` and `0ce7b6c5` as direct options); open with a named blocker 3
-(`17667565`, `1c8383f5`, `e4a7ef4b`). Of the six, `1722a80f`, `d4ea5ebf` and
-`0ce7b6c5` hold only once the sense records named in (d) 1 and (d) 2 say what
-they need.
+(`17667565`, `1c8383f5`, `e4a7ef4b`). Of the six, `1722a80f` and `d4ea5ebf`
+hold only once the definitions named in (c) and (d) 1 say what they need, and
+`0ce7b6c5` and `e7cbb87f` rely on the qualifier named in (d) 2.
 
 ### (d) Structural findings
 
@@ -561,22 +568,27 @@ they need.
      `17667565`, since the end state depends on it.
    - *TRUE label drift*: the labels of `a9622441` and of definition `b412016a`
      say TRUE_1, while the selected sense is TRUE_3. P2, labels only.
-2. **LIVING is an equivocation-risk site with three readings**, not yet a
-   disambiguation. Only one `Lives` parameter occurs in `bfaf6f92`, so nothing
-   mixes today, but `b89f3234`'s gloss fits three readings:
-   - *strict*: moved by another in no respect. Claim `611be1f0` reads q.18 a.3
-     as graded ("the more perfectly, the higher the life") and gives the highest
-     degree, with nothing determined by another, to God alone. On this reading
-     no creature lives, which contradicts the definition's own examples (an
-     animal, a thinker) and makes `0ce7b6c5` false for created thinkers.
+2. **LIVING has a precision gap.** `b89f3234`'s gloss ("operates from itself
+   and not as moved by another") lacks a qualifier ("as to the principle of the
+   operation"). Its examples (an animal, a thinker; not a stone) and
+   `f91f5056` select the middle reading below. Adding that qualifier to the
+   definition removes the ambiguity. No new sense record is needed. Only one
+   `Lives` parameter occurs in `bfaf6f92`, so nothing mixes. The one weak risk
+   is that the unqualified gloss could be resolved differently for `0ce7b6c5`
+   and for `e7cbb87f`:
+   - *strict*: moved by another in no respect. No record adopts it. Claim
+     `611be1f0` grades life ("the more perfectly, the higher the life") and
+     gives God only its highest degree, so it supports the middle reading (as
+     relation `946bd61a` uses it). The strict reading contradicts the
+     definition's examples.
    - *middle*: having within oneself the principle of an immanent operation,
      even if moved by another in some respects. `0ce7b6c5` and `e7cbb87f` both
      hold on it.
    - *loose*: having some active power of one's own. On it a stone lives and
-     `e7cbb87f` fails.
+     `e7cbb87f` fails; the definition's counterexample excludes it.
    The route needs the middle reading for both `0ce7b6c5` and `e7cbb87f`, and
-   `1c8383f5` must use the same one. No record states it. It is distinct from
-   the time-index fork LIVING_1/LIVING_2 of `1f2d3b9b`.
+   `1c8383f5` must use the same one. This is distinct from the time-index fork
+   LIVING_1/LIVING_2 of `1f2d3b9b`.
 3. **Strength surplus.** `1c8383f5` and `e4a7ef4b` are universals over all
    pairs; `bfaf6f92` instantiates each once, at the witnessed thinker and
    non-living thing. `17667565` is universal over all episodes, while only the
@@ -590,9 +602,7 @@ they need.
    Horn-type universals; the only negation is `¬ Lives z` in `e7cbb87f`. No
    statement on file asserts that every actual thing lives (label search), and
    `Lives` is otherwise unconstrained in Lean. The joint thinker-and-stone
-   model (result `116a0e60`) satisfies all six premises of `bfaf6f92`. The
-   conflict in (d) 2 is interpretive, between the strict reading and the
-   definition's examples, not a Lean contradiction.
+   model (result `116a0e60`) satisfies all six premises of `bfaf6f92`.
 5. **Not a transcription.** `gradesFromCogito` derives the three existentials
    by instantiation; the batch attempt `0b9ad38b` records that the literal
    "one graded pair suffices" was rejected as a transcription and replaced by
@@ -601,10 +611,10 @@ they need.
    stating claim `c558e6bc` (q.2 a.3, an observation premise like *sensu
    constat*). That claim states the conclusion itself and is not counted as
    support for this route. Against it, the cogito route adds independent
-   warrant only for the **existential anchoring** of a graded pair (an actual
-   thinker, from the performative datum and the bearer principle; an actual
-   non-living thing, from observation) and, through `0ce7b6c5`, that the two
-   differ in life. The **evaluative content** of `a9622441`, that things are
+   warrant only for the **existential anchoring** of a graded pair (a living
+   bearer of an occurring thought, from the performative datum, the bearer
+   principle and `0ce7b6c5`; the Lean type does not assert `Actual` of it; and
+   an actual non-living thing, from observation), which differ in life. The **evaluative content** of `a9622441`, that things are
    really more and less good, true and noble, is carried entirely by
    `1c8383f5` and `e4a7ef4b`. They are no better supported than the direct
    observation reading and face the same rival (row (e) 5). Different
@@ -625,21 +635,20 @@ they need.
 | 1 | Behaviourism: a doubt as a disposition with no occurring episode (paraphrase of `1722a80f`) | **Restated.** A disposition is not "performed" in the sense of `c075da22`, so on the selected sense the rival denies `95c5138f`'s application, not `1722a80f`. It would target `1722a80f` only if "performed doubt" covers outward production without cognition, which the definition's example does not select but its text does not exclude ((c), condition on `1722a80f`). |
 | 2 | Descartes's broad *cogitatio* against q.75 a.2's understanding (relation `2f554c8c`) | **Kept as a scope boundary on `17667565`, conditional on the voluntary-doing reading of `IsOperation`.** *Target:* the universal over every occurring episode. *Mechanism:* undergone episodes are happenings, not doings. *Justification:* the ordinary contrast between deciding to calculate and being struck by a memory. On the Thomist immanent-activity reading it has no target. The route's own episode is a questioning, which is active. |
 | 3 | Bundle and event ontologies of the mind (relation `2f554c8c`; the modification route's "denied by bundle theories") | **Restated.** No source for the rival is read in the corpus, and no mechanism beyond the denial is recorded. Its target is the bearer principle `30e6e01c`, already assessed in `e64d5241`; no weight added here. |
-| 4 | Transient action: Physics III.3 places the action in the patient; q.25 a.1 (relation `a99058be`) | **Kept as a scope boundary on `c2fa06f2`**, applicable only if the Episode carrier includes transient actions. Thought episodes are immanent; no target on the selected carrier. |
-| 5 | Value anti-realism: error theory, emotivism, quasi-realism (`docs/alternatives/premises/things-more-and-less-good-true-noble.md`, against `a9622441`) | **Kept against the evaluative reading**, now located at `1c8383f5` and the bonum half of `e4a7ef4b`. *Mechanism:* comparatives of goodness and nobility express or project attitudes and have no worldly truthmaker. Its relevance to this route cannot be settled while NOBLE and GOOD are undefined ((d) 1): on a degree-of-being reading the rival must deny graded actuality, a different thesis. It does not target the verum conjunct under TRUE_3. The recorded Frege-Geach result counts against naive emotivism only; quasi-realism is unanswered. |
+| 4 | Transient action: Physics III.3 places the action in the patient; q.25 a.1 (relation `a99058be`) | **Kept as a scope boundary on `c2fa06f2`** (relation `a99058be` names q.25 a.1; the Physics III.3 point is an analyst observation), applicable only if the Episode carrier includes transient actions. Thought episodes are immanent; no target on the selected carrier. |
+| 5 | Value anti-realism: error theory, emotivism, quasi-realism (`docs/alternatives/premises/things-more-and-less-good-true-noble.md`, against `a9622441`) | **Kept against the evaluative reading**, now located at `1c8383f5` and the bonum half of `e4a7ef4b`. *Mechanism:* comparatives of goodness and nobility express or project attitudes and have no worldly truthmaker. *Independent justification:* the argument from queerness and the explanatory idleness of value comparatives (attribution deferred; not read here). Its relevance to this route cannot be settled while NOBLE and GOOD are undefined ((d) 1): on a degree-of-being reading the rival must deny graded actuality, a different thesis. It does not target the verum conjunct under TRUE_3. This disagrees with the legacy rival file, which says these rivals deny grades of ontological truth as well; value anti-realism as stated concerns evaluative comparatives, and the file gives no mechanism by which it reaches ontological truth (conformity of a thing to an intellect). The recorded Frege-Geach result counts against naive emotivism only; quasi-realism is unanswered. |
 | 6 | "More perfect", not "more noble"; no universal (relation `6f4c6107`) | **Not an objection**: a source gap. `1c8383f5` stays an analyst formulation. |
 | 7 | The universal of `1c8383f5` across all pairs (analyst observation, this section) | **Kept as an undercutter, not a rebutting counterexample.** *Target:* the inclusion warrant for `1c8383f5`'s universal. *Mechanism:* a non-living thing can have perfections a living one lacks (a star's heating and illuminating powers, which a bacterium lacks), so neither includes the other, and the comparison needs lexical priority of self-operation or eminent containment. *Justification:* the comparison of powers itself. For the route's own pair the same point applies unless the cogito bearer is identified with an embodied human, and `ce8ccc1a` makes no such identification. No case is shown in which a non-living thing is more noble. |
 | 8 | Functionalist or AI thinkers that do not live (brief) | **No substantive objection identified under the selected sense.** Multiple realizability supports non-biological thinkers, but `Lives` is self-operation, not biological life. A bearer of a genuinely occurring thought performs an immanent operation and lives in the middle sense. A target exists only under a biological sense, which is not selected and would equivocate. Whether any artificial system bears occurring thought is not decided. |
 | 9 | Biocentric egalitarianism (brief; attribution deferred, unread) | **No substantive objection identified.** It ranks living things equally among themselves and denies a good of their own to non-living things, which agrees with `1c8383f5`. |
-| 10 | Strict LIVING (claim `611be1f0`'s graded reading, this section) | **Kept as a sense constraint, not an objection to the middle sense.** On the strict reading `0ce7b6c5` is false for every created thinker ((d) 2). |
+| 10 | Strict LIVING (moved by another in no respect; this section) | **No substantive objection identified**: no record or source adopts the strict reading. Claim `611be1f0` grades life and supports the middle reading ((d) 2). |
 | 11 | Loose LIVING and panpsychism (brief) | **No substantive objection identified to `e7cbb87f`.** The loose reading is excluded by the definition's counterexample. Constitutive panpsychism gives micro-subjects experience but does not make the stone a subject. |
 | 12 | Eliminativism about doubt (brief, not recorded) | **No substantive objection identified to `95c5138f`.** It targets the folk category; under `c075da22` a questioning whether thought occurs satisfies `DoubtsThought` whatever vocabulary later describes it. |
 | 13 | Formal controls: omission models of result `116a0e60`; `NoPerformedDoubt` and `DoubtWithoutThought` (`Round3CogitoBase`); `omitIsOperation`, `omitHasAgent`, `omitAgentBears` (`Round2ExistenceAct`) | **Restated** as facts about single stated interpretations. Each shows that a premise is needed in that interpretation. None is evidence that a premise is false. |
 
-Standing: kept 5 (rows 2, 4, 5, 7, 10, of which 2, 4 and 10 as scope or sense
-boundaries and 7 as an undercutter); restated 3 (rows 1, 3, 13); not an
-objection 1 (row 6, a source gap); no substantive objection identified 4
-(rows 8, 9, 11, 12).
+Standing: kept 4 (rows 2, 4, 5, 7, of which 2 and 4 as scope boundaries and 7
+as an undercutter); restated 3 (rows 1, 3, 13); not an objection 1 (row 6, a
+source gap); no substantive objection identified 5 (rows 8, 9, 10, 11, 12).
 
 ### (f) Overall provisional judgment
 
@@ -649,12 +658,13 @@ postulates of the selected senses, and the immanence of thought. Its only open
 point is the scope of `17667565`, which the route does not need. It adds no
 evidence for `e81971f1` or `30e6e01c` beyond the population datum already
 assessed in `e64d5241`. It is one presentation among the assertion, retorsion
-and modification routes and the direct inquiry-precondition standing of
-`e81971f1`.
+and modification routes. The inquiry-precondition standing plausibly belongs
+to `e81971f1` (assessing any premise is itself a thought episode). That is an
+analyst observation; `e64d5241` assesses its performed-episode warrant, not
+this standing.
 
-The life half (`0ce7b6c5`, `e7cbb87f`) is strong on the middle LIVING sense
-and weak or false on the other two. Its standing therefore depends on a sense
-record that does not yet exist.
+The life half (`0ce7b6c5`, `e7cbb87f`) is strong on the middle sense, which
+the definition's examples already select. The gloss needs one qualifier.
 
 The nobility half (`1c8383f5`, `e4a7ef4b`) carries all the evaluative content
 of `a9622441`. It has strong prima facie support for the paradigm pair, weak
@@ -666,9 +676,11 @@ contested content of the direct observation reading into `1c8383f5` and
 warrant for the existence of a pair differing in life, and it would add
 partial independent warrant for the verum conjunct, the only conjunct the
 prima via consumer uses, once NOBLE is fixed as degree of being and
-`5a948c37` is applied. Overall: the cluster gives moderate conditional support
-to the verum conjunct and no independent gain for the bonum and nobile
-conjuncts. This is a provisional warrant assessment, separate from proof
+`5a948c37` is applied. Overall: the cluster gives moderate support to the
+verum conjunct, conditional on the unregistered esse sibling of `1c8383f5` (or
+a definition of nobility as degree of being); at present the verum conjunct
+rests on `1c8383f5` and `e4a7ef4b`. It gives no independent gain for the bonum
+and nobile conjuncts. This is a provisional warrant assessment, separate from proof
 validity and from the CLI's computed closure labels.
 
 ### (g) Revision conditions and next tests
@@ -678,8 +690,9 @@ This judgment would change with:
 - a NOBLE definition: as degree of being it strengthens the verum route and
   removes value anti-realism as a rival there; as an evaluative standing it
   leaves `1c8383f5` exposed to row 5;
-- a recorded middle LIVING sense (strengthens `0ce7b6c5` and `e7cbb87f`), or a
-  defended strict reading (defeats `0ce7b6c5` for creatures);
+- the qualifier added to `b89f3234` (fixes the middle reading for `0ce7b6c5`
+  and `e7cbb87f`), or a defended strict reading (would defeat `0ce7b6c5` for
+  creatures; none is on file);
 - an independent argument for lexical priority of self-operation or for
   eminent containment (gives the universal of `1c8383f5` warrant beyond the
   paradigm);
@@ -687,15 +700,15 @@ This judgment would change with:
   half of `e4a7ef4b` reducible like the verum half);
 - a read source for the bundle rival with a mechanism (would reopen row 3).
 
-**Most discriminating next test:** register NOBLE as degree of being and a
-sibling of `1c8383f5` at esse ("whatever lives is more in being than any
-actual thing that does not live"). Then derive `∃ x y, MoreIn verum x y` from
-the thinker inputs, `0ce7b6c5`, `e7cbb87f`, that sibling and the second
-conjunct of `5a948c37`, and test whether `quartaVia`'s consumers accept a
-verum-only grades premise (a sibling of `quartaVia` taking that premise; its
-proof uses only `hVerum`). Success shows that the prima via's use of
-`a9622441` survives without any evaluative premise. Failure locates exactly
-which evaluative input it needs.
+**Most discriminating next test:** derive `e462cf2f` ("Something is more a
+being than something") from the thinker inputs, `0ce7b6c5`, `e7cbb87f` and
+the esse sibling of `1c8383f5` ("whatever lives is more in being than any
+actual thing that does not live"); then `∃ x y, MoreIn verum x y` from the
+right-to-left direction of `5a948c37`'s second conjunct. The verum-only
+sibling of `quartaVia` follows immediately, since its proof uses only
+`hVerum`. The live question is the warrant of the esse sibling, which says
+living things are more in being, against rivals that deny degrees of being.
+That question, not the formal step, decides the outcome.
 
 **Second test:** register an episode-level definition of `IsOperation` and the
 weak sibling of `17667565` restricted to episodes realizing a performed
