@@ -1,0 +1,59 @@
+{
+  "id": "e641ca1d-d06b-461a-8270-c9030fa4fc29",
+  "label": "Group 7 integration: assembled assertion branches and registered q.20 love route (#1732)",
+  "statement_ids": [
+    "5a035a1e-e668-4327-b989-2f0aff4aece2",
+    "f221d6c6-3a49-4a98-bf05-a12450d1fac7",
+    "c5035612-2cfd-4ff4-8f2a-d483c0d3e0aa",
+    "7cddac02-dc16-4f8f-b26d-9e736ca2d811",
+    "8376542e-2337-43ab-87e8-007c07cabc7e",
+    "389c37fd-0637-4a40-8073-705a5bdb2c20",
+    "4da01692-55b0-4e73-b3dd-06564f2aef9f",
+    "a94c5dfc-c722-49fe-a242-dd39409b079d",
+    "2a168a36-bd60-491a-8ad7-ce5b1d2fb560",
+    "16ab027e-52d1-4309-97a6-fc0a45e9f4c5",
+    "c691e3d0-5dd0-404a-a1dd-9a4a278dcd31",
+    "e3d5bece-f216-4877-9fca-8a1eb7d96bcd"
+  ],
+  "date": "2026-11-18",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Issue #1732, baseline 354540f9. Assertion: composed the checked #1414 contentRouteA/contentRouteB with legacyAssertionFromContent at one signature, content semantics, world, content profile and legacy profile (results d18f971b zero-axiom, df21f785 classical) ending at GodAssertsOnlyTruth 5a035a1e, plus joint witness 75e72e5e (selective sample, bearer true, world false, content a, existential erasure): both bundles and representation hold together with an actual legacy assertion. Frontier-diff: support alternatives 524 to 526, open premises 511 unchanged, no bare premise added; these are assemblies of existing support, not new evidence. Representation f221d6c6 stays the shared OPEN input of every branch. Love: registered the PR #1458 DivineLoveBridge composition as zero-axiom results 7209fa2f (willing some good to every existing being) and a2366ca4 (love of every existing being), replacing the classical self/other split by an explicit DecidableEq instance; CausalExistenceWilling a94c5dfc, DivineOwnGoodWilling 2a168a36 and WillingGoodEntailsLove 16ab027e are explicit OPEN premises. Conclusions do not yet feed a root route; consumers named: #1735 (hiddenness perfect/actual love projection), #1733 (recipient goods). Intellect/operation findings classified as weaker inputs (capacity, immanent operation) or requiring new interpretation (cognitive-defect, causal-exemplar). Same-witness consumers of #1750/#1753 use a different world-indexed signature; bearer transport to the Attitudes bearer is an exact missing interface. Rejected: registering the classical originals (zero-axiom policy for non-Mathlib results); a premise-level excluded middle for identity (instance parameter is the honest decidability input); treating the assembled bundles as additional corroboration.",
+  "evidence": [
+    "d18f971b-5fee-43ce-a0cf-33aa197b9cb4",
+    "df21f785-66e7-48a9-9a67-a1cc781359ff",
+    "75e72e5e-942a-42d4-a3ab-519acb18ee25",
+    "7209fa2f-86ab-412d-a919-5af73ecf3d55",
+    "a2366ca4-d8f4-4145-91d0-9b1569bce662",
+    "693522aa-3e98-49f8-bff6-b61390d02dc4",
+    "0f83384c-0661-4134-96da-a1006cd0c7d6",
+    "57e958d8-f603-4cfe-aa18-8655a64a453b"
+  ],
+  "blocker": "Assertion: warrant is underdetermined at the moral bridge (beneficial false assertion survives; owners #1439, #1440, #1737) and at divine-cognitive application (actual operation to asserted contingent content; causal-exemplar/eternal-presence proposal untested on one content). Love: the causal-to-recipient-willing application CausalExistenceWilling is the weakest step; natural diffusion / foreseen collateral production survives at fixed effect and target (owner #1459, stopped by owner instruction 2026-11-12). Downstream: no bridge from GodLovesAllExisting to hiddenness love (#1735) and no bearer transport from the same-witness root to the veracity Attitudes bearer.",
+  "current_assessment": {
+    "date": "2026-11-18",
+    "statement_ids": [
+      "5a035a1e-e668-4327-b989-2f0aff4aece2",
+      "f221d6c6-3a49-4a98-bf05-a12450d1fac7",
+      "c5035612-2cfd-4ff4-8f2a-d483c0d3e0aa",
+      "7cddac02-dc16-4f8f-b26d-9e736ca2d811",
+      "8376542e-2337-43ab-87e8-007c07cabc7e",
+      "389c37fd-0637-4a40-8073-705a5bdb2c20",
+      "4da01692-55b0-4e73-b3dd-06564f2aef9f",
+      "a94c5dfc-c722-49fe-a242-dd39409b079d",
+      "2a168a36-bd60-491a-8ad7-ce5b1d2fb560",
+      "16ab027e-52d1-4309-97a6-fc0a45e9f4c5",
+      "c691e3d0-5dd0-404a-a1dd-9a4a278dcd31",
+      "e3d5bece-f216-4877-9fca-8a1eb7d96bcd"
+    ],
+    "scope": "Group 7 integration: assembled content assertion branches to GodAssertsOnlyTruth and registered recipient-good love route, at the stated bearers.",
+    "assessment": "Both destinations are formally complete conditional routes. The assertion chain is nonvacuous at one bearer, world and content profile, sharing the OPEN representation bridge; neither branch is better warranted overall, and its warrant stays underdetermined at the beneficial-false-assertion and divine-cognitive-application bridges. The love route is a coherent conditional support option with two well-supported thin bridges (self-good willing, q.20 love meaning) and one open application bridge (causal existence to recipient-directed willing), against the surviving natural-diffusion / foreseen-collateral alternative. No premise established, no rival defeated.",
+    "next_test": "Assertion: apply a defended non-overridable assertoric-responsibility principle, or a calibrated operation-to-content bridge for one asserted contingent content, to the same GOD_4. Love: an independently supported account of divine practical specification of each effect compared with whole-order adoption including foreseen collateral effects (requires a new #1459 assignment). Integration: bearer transport from the same-witness root to the veracity bearer; love projection owned by #1735.",
+    "note": "docs/notes/divine-veracity-1410.md#group-7-integration-assembled-assertion-branches-1732-2026-11-18",
+    "reviewed_revision": "cf1c177fc21ca7b097b5c92761bcceb64ccc236e",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Proposed delivery for issue #1732 only; companion note docs/notes/divine-love-goodness-bridge.md#group-7-integration-recipient-good-route-1732-2026-11-18. No independent semantic review yet.",
+    "supersedes": "none"
+  }
+}
