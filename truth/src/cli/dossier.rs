@@ -90,8 +90,22 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         .try_into()
         .ok()
         .filter(|limit: &usize| *limit > 0);
-    let mut text = dossier::format_dossier(&found, &index, limit);
+    let scope = std::collections::BTreeSet::from([id.clone()]);
+    let current = truth::lifecycle::current(&corpus, &scope);
+    let impacts = truth::lifecycle::impacts(&args.root, &corpus, &scope)
+        .map_err(|message| (1, json!({"code":"lifecycle_error","message":message})))?;
+    let mut text = truth::lifecycle::lines(&current, &impacts).join("\n");
+    if !text.is_empty() {
+        text.push('\n');
+    }
+    text.push_str(&dossier::format_dossier(&found, &index, limit));
     let mut value = with_identity(&found, &corpus);
+    if !current.is_empty() {
+        value["current_assessments"] = json!(current);
+    }
+    if !impacts.is_empty() {
+        value["revision_impacts"] = json!(impacts);
+    }
     let shown = limit.unwrap_or(usize::MAX);
     with_note_mentions(args, &corpus, &[&id], &mut value, &mut text, shown)?;
     value["evidence_graph"] = super::evidence::expansion(args, &corpus, std::slice::from_ref(&id))?;

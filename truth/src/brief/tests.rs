@@ -17,7 +17,10 @@ use super::{
 };
 use crate::{Corpus, dossier::FrontierView};
 use serde_json::{Value, json};
-use std::path::{Path, PathBuf};
+use std::{
+    collections::BTreeSet,
+    path::{Path, PathBuf},
+};
 
 const GOAL: &str = "a0000000-0000-4000-8000-000000000001";
 const OPEN_PREMISE: &str = "a0000000-0000-4000-8000-000000000002";
@@ -933,6 +936,369 @@ fn assessment_batch_retains_theorem_only_citations() {
         !entries
             .iter()
             .any(|entry| entry["path"] == "docs/notes/theorem-prefix.md")
+    );
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+#[test]
+fn current_scope_precedes_historical_text_without_promoting_it_to_proof() {
+    let root = fixture("current-scope");
+    let path = root.join("corpus/attempts/current.json");
+    let current = json!({"date":"2026-11-17","statement_ids":[GOAL],
+        "scope":"connected reconstruction only","assessment":"Qualified synthesis accepted; adequacy remains unresolved.",
+        "next_test":"Obtain same-bearer evidence.","note":"docs/notes/current.md#assessment",
+        "reviewed_revision":"1234567890123456789012345678901234567890",
+        "review":"accepted_qualified","publication":"merged","evidence":"PR-42, no findings",
+        "supersedes":"Pending integration descriptions only"});
+    std::fs::write(&path, serde_json::to_vec(&json!({"id":"d0000000-0000-4000-8000-000000000099",
+        "statement_ids":[GOAL, OPEN_PREMISE],"date":"2026-10-01","kind":"derivation","outcome":"blocked",
+        "summary":"Historical source work. ".repeat(50),"blocker":"Adequacy remains unresolved.","evidence":[],"current_assessment":current})).unwrap()).unwrap();
+    let canonical: Value = serde_json::from_slice(&std::fs::read(&path).unwrap()).unwrap();
+    let known = std::collections::HashSet::from([GOAL, OPEN_PREMISE, SERIES]);
+    crate::lifecycle::validate(canonical.as_object().unwrap(), &known).unwrap();
+    let mut invalid = canonical.clone();
+    invalid["current_assessment"]["statement_ids"] = json!([SERIES]);
+    assert!(
+        crate::lifecycle::validate(invalid.as_object().unwrap(), &known)
+            .unwrap_err()
+            .contains("scope")
+    );
+    invalid = canonical.clone();
+    invalid["current_assessment"]["review"] = json!("proved");
+    assert!(
+        crate::lifecycle::validate(invalid.as_object().unwrap(), &known)
+            .unwrap_err()
+            .contains("review")
+    );
+    invalid = canonical.clone();
+    invalid["revisions"] =
+        json!([{"kind":"editorial","revision":"copyedit","reason":"spelling only"}]);
+    assert!(crate::lifecycle::validate(invalid.as_object().unwrap(), &known).is_err());
+    let corpus = Corpus::load(&root).unwrap();
+    let entries = crate::lifecycle::current(&corpus, &BTreeSet::from([GOAL.to_owned()]));
+    assert_eq!(entries.len(), 1);
+    assert!(
+        crate::lifecycle::current(&corpus, &BTreeSet::from([OPEN_PREMISE.to_owned()])).is_empty()
+    );
+    let batch =
+        super::assessment_batch(&root, &corpus, &BTreeSet::from([GOAL.to_owned()])).unwrap();
+    assert_eq!(batch["current_assessments"][0]["publication"], "merged");
+    let loaded = load(&root);
+    let brief = run(&loaded, &missing(), |inputs| {
+        super::statement_brief(inputs, GOAL, None).unwrap()
+    });
+    assert_eq!(brief["current_assessments"], json!(entries));
+    let formatted = super::format_brief(&brief, &corpus.aliases(), 3);
+    assert!(formatted.starts_with("Current recorded assessment [accepted_qualified; merged]"));
+    assert!(formatted.contains("Obtain same-bearer evidence."));
+    assert!(formatted.contains("1234567890123456789012345678901234567890"));
+    assert_eq!(
+        corpus
+            .get("attempts", "d0000000-0000-4000-8000-000000000099")
+            .unwrap()
+            .fields["outcome"],
+        "blocked"
+    );
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+#[test]
+fn a_late_note_date_and_position_do_not_make_an_old_judgment_current() {
+    let raw = "# Case\n\n## Provisional judgment (2026-11-17)\n\nThe new synthesis remains qualified.\n\n## Historical assessment\n\nThe old proposal remains pending.\n\nUpdated bibliography 2026-11-18.\n";
+    let note = crate::notes::parse("docs/notes/case.md", raw);
+    let entries = super::assessment_sections(&note, raw);
+    assert_eq!(entries[0]["date"], "2026-11-17");
+    assert!(entries.iter().any(|e| e["date"].is_null()));
+    assert!(entries.iter().all(|e| e["date"] != "2026-11-18"));
+}
+
+#[test]
+fn declared_revisions_expose_graph_and_import_consumers_with_per_revision_dispositions() {
+    let root = fixture("revision-impact");
+    let before = load(&root);
+    assert!(
+        crate::lifecycle::impacts(
+            &root,
+            &before.corpus,
+            &BTreeSet::from([OPEN_PREMISE.to_owned()])
+        )
+        .unwrap()
+        .is_empty()
+    );
+    let imported_result = "c0000000-0000-4000-8000-000000000002";
+    let unrelated_result = "c0000000-0000-4000-8000-000000000003";
+    let unrelated_argument = "b0000000-0000-4000-8000-000000000003";
+    let unrelated_inference = "f0000000-0000-4000-8000-000000000003";
+    record(
+        &root,
+        "inferences",
+        json!({"id":unrelated_inference,"input_statement_ids":[INDEPENDENCE],"assumption_statement_ids":[],"discharged_statement_ids":[],"output_statement_id":GOAL,"rule":"fixture","meaning":"Independent alternative support for the same conclusion"}),
+    );
+    record(
+        &root,
+        "arguments",
+        json!({"id":unrelated_argument,"meaning":"Independent alternative proof","inference_ids":[unrelated_inference],"premise_statement_ids":[INDEPENDENCE],"conclusion_statement_id":GOAL}),
+    );
+    let imported_argument = "b0000000-0000-4000-8000-000000000002";
+    let independent_inference = "f0000000-0000-4000-8000-000000000002";
+    record(
+        &root,
+        "inferences",
+        json!({"id":independent_inference,"input_statement_ids":[],"assumption_statement_ids":[],"discharged_statement_ids":[],"output_statement_id":DEPENDENCE,"rule":"fixture","meaning":"Independent registered interface"}),
+    );
+    record(
+        &root,
+        "arguments",
+        json!({"id":imported_argument,"meaning":"Existing imported proof", "inference_ids":[independent_inference], "premise_statement_ids":[],"conclusion_statement_id":DEPENDENCE}),
+    );
+    record(
+        &root,
+        "results",
+        json!({"id":imported_result,"argument_id":imported_argument,"challenge_module":"TruthCore.Results.Imported.Challenge","theorem":"TruthCore.Results.Imported.theorem","comparator_config":"imported.json","solution_module":"TruthCore.Results.Imported.Solution","status":"solution-present"}),
+    );
+    record(
+        &root,
+        "results",
+        json!({"id":unrelated_result,"argument_id":unrelated_argument,"challenge_module":"TruthCore.Results.Unrelated.Challenge","theorem":"TruthCore.Results.Unrelated.theorem","comparator_config":"unrelated.json","solution_module":"TruthCore.Results.Unrelated.Solution","status":"solution-present"}),
+    );
+    write(
+        &root,
+        "TruthCore/Results/Imported/Solution.lean",
+        "import TruthCore.Results.Fixture.Solution\n",
+    );
+    write(
+        &root,
+        "TruthCore/Results/Fixture/Solution.lean",
+        "-- existing theorem\n",
+    );
+    write(
+        &root,
+        "TruthCore/Results/Unrelated/Solution.lean",
+        "-- independent theorem\n",
+    );
+    let current = json!({"date":"2026-11-17","statement_ids":[OPEN_PREMISE],"scope":"support interpretation only",
+        "assessment":"The application warrant has changed.","next_test":"Reassess downstream application.",
+        "note":"docs/notes/revision.md#assessment","reviewed_revision":"1234567890123456789012345678901234567890",
+        "review":"unreviewed","publication":"unpublished","supersedes":"named earlier application only","evidence":"local comparison"});
+    let mut attempt = json!({"id":"e0000000-0000-4000-8000-000000000099","statement_ids":[OPEN_PREMISE],"date":"2026-11-17",
+        "kind":"reading","outcome":"succeeded","summary":"A declared consequential change.","evidence":[],"current_assessment":current,
+        "revisions":[{"kind":"meaning","revision":"meaning-v2","previous":"docs/notes/old.md#meaning","reason":"The selected support relation no longer includes optional activity.","statement_ids":[OPEN_PREMISE],
+        "reassessments":[{"consumer":format!("results:{RESULT}"),"disposition":"retained","reason":"The frozen conditional theorem keeps its original interpretation; only metaphysical application needs review."}]},
+        {"kind":"judgment","revision":"warrant-v3","previous":"docs/notes/old.md#judgment","reason":"New evidence changes the application warrant.","statement_ids":[OPEN_PREMISE]}]});
+    let summary_attempt = "e0000000-0000-4000-8000-000000000090";
+    let evidence_attempt = "e0000000-0000-4000-8000-000000000091";
+    let bookkeeping_attempt = "e0000000-0000-4000-8000-000000000092";
+    let judgment_attempt = "e0000000-0000-4000-8000-000000000093";
+    for (id, summary, evidence, selected) in [
+        (
+            summary_attempt,
+            format!("The judgment relies on {OPEN_PREMISE}."),
+            json!([]),
+            None,
+        ),
+        (
+            evidence_attempt,
+            "The judgment uses the cited result.".to_owned(),
+            json!([RESULT]),
+            None,
+        ),
+        (
+            bookkeeping_attempt,
+            "Administrative target registration only.".to_owned(),
+            json!([]),
+            Some("Administrative entry only.".to_owned()),
+        ),
+        (
+            judgment_attempt,
+            "See selected assessment.".to_owned(),
+            json!([]),
+            Some(format!("The selected judgment relies on {OPEN_PREMISE}.")),
+        ),
+    ] {
+        let mut other = json!({"id":id,"statement_ids":[OPEN_PREMISE],"date":"2026-11-17","kind":"reading","outcome":"succeeded","summary":summary,"evidence":evidence});
+        if let Some(assessment) = selected {
+            other["current_assessment"] = attempt["current_assessment"].clone();
+            other["current_assessment"]["assessment"] = json!(assessment);
+            other["current_assessment"]["scope"] = json!("Independent bounded judgment");
+            other["current_assessment"]["evidence"] = json!(OPEN_PREMISE); // review bookkeeping only
+        }
+        record(&root, "attempts", other);
+    }
+    let unchanged_formal_inputs = load(&root);
+    let formal_before = run(&unchanged_formal_inputs, &missing(), |i| {
+        super::statement_brief(i, GOAL, None).unwrap()["formal_status"].clone()
+    });
+    record(&root, "attempts", attempt.clone());
+    let after = load(&root);
+    let impacts = crate::lifecycle::impacts(
+        &root,
+        &after.corpus,
+        &BTreeSet::from([OPEN_PREMISE.to_owned()]),
+    )
+    .unwrap();
+    assert_eq!(impacts.len(), 2);
+    let find = |index: usize, key: String| {
+        impacts[index]["consumers"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|c| c["consumer"] == key)
+            .unwrap()
+    };
+    assert_eq!(
+        find(0, format!("arguments:{ARGUMENT}"))["disposition"],
+        "pending"
+    );
+    assert_eq!(
+        find(0, format!("statements:{GOAL}"))["disposition"],
+        "pending"
+    );
+    assert_eq!(
+        find(0, format!("results:{RESULT}"))["disposition"],
+        "retained"
+    );
+    assert_eq!(
+        find(1, format!("results:{RESULT}"))["disposition"],
+        "pending"
+    );
+    assert_eq!(
+        find(0, format!("results:{imported_result}"))["disposition"],
+        "pending"
+    );
+    assert_eq!(
+        find(0, format!("statements:{DEPENDENCE}"))["disposition"],
+        "pending"
+    );
+    assert!(impacts.iter().all(|i| {
+        i["consumers"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .all(|c| c["consumer"] != format!("results:{unrelated_result}"))
+    }));
+    for id in [summary_attempt, evidence_attempt, judgment_attempt] {
+        assert_eq!(find(0, format!("attempts:{id}"))["disposition"], "pending");
+    }
+    assert!(
+        impacts.iter().all(|i| i["consumers"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .all(
+                |c| c["consumer"] != format!("attempts:{bookkeeping_attempt}")
+                    && c["consumer"] != "attempts:e0000000-0000-4000-8000-000000000099"
+            ))
+    );
+    // Other attempts' judgments can be explicitly reassessed for this revision.
+    let mut acknowledged = attempt.clone();
+    acknowledged["revisions"][0]["reassessments"].as_array_mut().unwrap().push(json!({"consumer":format!("attempts:{summary_attempt}"),"disposition":"retained","reason":"The independent assessment still uses the original qualified interpretation."}));
+    record(&root, "attempts", acknowledged);
+    let acknowledged_corpus = Corpus::load(&root).unwrap();
+    let reassessed = crate::lifecycle::impacts(
+        &root,
+        &acknowledged_corpus,
+        &BTreeSet::from([OPEN_PREMISE.to_owned()]),
+    )
+    .unwrap();
+    assert_eq!(
+        reassessed[0]["consumers"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|c| c["consumer"] == format!("attempts:{summary_attempt}"))
+            .unwrap()["disposition"],
+        "retained"
+    );
+    assert_eq!(
+        reassessed[1]["consumers"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|c| c["consumer"] == format!("attempts:{summary_attempt}"))
+            .unwrap()["disposition"],
+        "pending"
+    );
+    record(&root, "attempts", attempt.clone());
+    // Downstream endpoint retrieval exposes the upstream revision too.
+    assert_eq!(
+        crate::lifecycle::impacts(
+            &root,
+            &after.corpus,
+            &BTreeSet::from([DEPENDENCE.to_owned()])
+        )
+        .unwrap()
+        .len(),
+        2
+    );
+    let formal_after = run(&after, &missing(), |i| {
+        super::statement_brief(i, GOAL, None).unwrap()["formal_status"].clone()
+    });
+    assert_eq!(formal_before, formal_after);
+    assert_eq!(
+        after
+            .corpus
+            .get("results", unrelated_result)
+            .unwrap()
+            .fields["status"],
+        "solution-present"
+    );
+    // Seed the concluded statement itself: R is an import-discovery source,
+    // not an affected alternative producer. T has no declared GOAL premise.
+    let mut goal_revision = attempt.clone();
+    goal_revision["statement_ids"] = json!([GOAL]);
+    goal_revision["current_assessment"]["statement_ids"] = json!([GOAL]);
+    for change in goal_revision["revisions"].as_array_mut().unwrap() {
+        change["statement_ids"] = json!([GOAL]);
+        change["reassessments"] = json!([]);
+    }
+    record(&root, "attempts", goal_revision);
+    let goal_loaded = load(&root);
+    let goal_corpus = &goal_loaded.corpus;
+    let goal_impacts =
+        crate::lifecycle::impacts(&root, goal_corpus, &BTreeSet::from([GOAL.to_owned()])).unwrap();
+    for impact in &goal_impacts {
+        let consumers = impact["consumers"].as_array().unwrap();
+        let imported = consumers
+            .iter()
+            .find(|c| c["consumer"] == format!("results:{imported_result}"))
+            .unwrap();
+        assert_eq!(imported["disposition"], "pending");
+        assert_eq!(imported["via"], format!("statements:{GOAL}"));
+        assert_eq!(imported["import_source"], format!("results:{RESULT}"));
+        assert!(
+            consumers
+                .iter()
+                .all(|c| c["consumer"] != format!("results:{RESULT}")
+                    && c["consumer"] != format!("results:{unrelated_result}")
+                    && c["consumer"] != format!("arguments:{ARGUMENT}")
+                    && c["consumer"] != format!("arguments:{unrelated_argument}"))
+        );
+    }
+    assert_eq!(
+        formal_before,
+        run(&goal_loaded, &missing(), |i| super::statement_brief(
+            i, GOAL, None
+        )
+        .unwrap()["formal_status"]
+            .clone())
+    );
+    assert_eq!(
+        goal_corpus.get("results", RESULT).unwrap().fields["status"],
+        after.corpus.get("results", RESULT).unwrap().fields["status"]
+    );
+    assert_eq!(
+        goal_corpus.get("results", unrelated_result).unwrap().fields["status"],
+        "solution-present"
+    );
+    // A misspelled or unaffected acknowledgement cannot silently close review work.
+    attempt["revisions"][0]["reassessments"][0]["consumer"] =
+        json!(format!("results:{unrelated_result}"));
+    record(&root, "attempts", attempt);
+    let corpus = Corpus::load(&root).unwrap();
+    assert!(
+        crate::lifecycle::impacts(&root, &corpus, &BTreeSet::from([OPEN_PREMISE.to_owned()]))
+            .unwrap_err()
+            .contains("unaffected consumer")
     );
     std::fs::remove_dir_all(root).unwrap();
 }

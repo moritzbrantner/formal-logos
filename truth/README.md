@@ -786,6 +786,13 @@ fidelity and assumption agreement require comparison beyond retrieval.
 
 ## `brief` and `novelty`
 
+Scoped `current_assessment` entries from existing attempts appear first, with
+reviewed revision, publication disposition and next test. Historical heading
+dates do not imply supersession. Declared meaning/warrant/judgment `revisions`
+expose potential downstream uses and unresolved reassessments without changing
+formal validity. See [the canonical record format](../docs/premise-dossiers.md#current-assessment-and-publication-disposition).
+
+
 `truth brief (TARGET | --question TEXT)` and `truth novelty (TEXT |
 --statement STATEMENT)` (#1643, #954 slice B9; `truth::brief`) retrieve the
 cumulative record before a worker judges a premise's maturity or calls a
@@ -812,7 +819,8 @@ status, judgment or record.
   explicitly mentioning a requested statement or its concluding argument/result,
   and supplies path, line and matched-record provenance. Empty lists mean unknown;
   note-wide context is not an assessment of every mentioned statement. Reuses the
-  existing brief section extraction, with no full evidence graph, reconciliation,
+  existing brief section extraction (the reference graph is built only when
+  revision declarations require impact analysis), with no reconciliation,
   endorsement or strength ranking. IDs/labels/aliases use the normal resolver.
 - `brief --question TEXT`: the notes the `truth index` FTS5 projection ranks
   for any query word (by stem prefix) or identifier, each scored paragraph by

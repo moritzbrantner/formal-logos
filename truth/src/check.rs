@@ -1238,6 +1238,12 @@ fn validate_attempt(
     if !string(attempt, "id").is_some_and(identity::is_uuid) {
         return Err("id must be a uuid".into());
     }
+    crate::lifecycle::validate(attempt, statements)?;
+    if let Some(current) = attempt.get("current_assessment")
+        && !current["date"].as_str().is_some_and(iso_date)
+    {
+        return Err("current_assessment.date must be an ISO calendar date".into());
+    }
     let ids = attempt.get("statement_ids").and_then(Value::as_array);
     if !ids.is_some_and(|ids| {
         !ids.is_empty()
@@ -3833,6 +3839,19 @@ pub fn check(root: &Path) -> Result<Outcome, String> {
         .map_err(|error| format!("corpus: cannot list JSON records: {error}"))?;
     let files = lean_files(root);
     let (loaded, counts) = validate(root, &files)?;
+    if loaded
+        .attempts
+        .iter()
+        .any(|a| a.fields.contains_key("revisions"))
+    {
+        let corpus = crate::Corpus::load(root).map_err(|e| format!("{}: {}", e.path, e.message))?;
+        let ids = loaded
+            .statements
+            .iter()
+            .map(|s| text(&s.fields, "id").to_owned())
+            .collect();
+        crate::lifecycle::impacts(root, &corpus, &ids)?;
+    }
     let warnings = check_warnings(root, &loaded, &files);
     Ok(Outcome { counts, warnings })
 }

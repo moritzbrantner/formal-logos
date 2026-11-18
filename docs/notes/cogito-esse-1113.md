@@ -1,5 +1,27 @@
 # Cogito and the adopted esse criterion (#1113)
 
+## Current reviewed assessment (2026-11-17)
+
+The performed episode gives strong local rationale for actual population under its faithful bearer interpretation. Connected descent gives conditional necessary-source support, while local foundation and anti-brute applicability remain unresolved. Neither GodExists nor identity of source and thinker is established; #1556 remains deferred.
+
+Reviewed scope: Connected performed-reasoning account and exact source/export boundaries. Worker `b0946ce`; independent reviewer `80e00e0f`
+reported no findings on delivered head `883eafcfff2b57b13a55d43654992ba2f7a31fa8`.
+[PR #1739](https://github.com/moritzbrantner/formal-logos/pull/1739) is merged;
+final CI passed. Review accepts the qualified synthesis only, with no premise
+establishment or new formal validity claim. The review detail and integration
+disposition remain in that PR body and existing #143.
+
+Next test: Test existential-support coverage for the same minimal n across the complete carrier-world domain before a registered local export; reopen local warrant only on the specified independently justified receipt/no-loss evidence.
+
+This current disposition supersedes the **pending review/publication** wording
+for group #1727 below. Those passages are preserved as historical worker
+handoffs, not outstanding integration work. It does not supersede arbitrary
+earlier judgments, unresolved philosophical questions, or deferred owner scopes.
+The canonical attempt's `current_assessment` carries this same bounded scope.
+
+<!-- Historical research and worker handoff evidence follows. -->
+
+
 The owner [adopted the existence/esse bridge](https://github.com/moritzbrantner/truth-core/issues/1113#issuecomment-6684716741): an individual existing in re is in act of esse, and therefore concrete in the adopted sense. Concreteness adds no further restriction to real existence. This is an intended interpretation, not a theorem about arbitrary predicates in every legacy `Ontic` or grounding `Profile`.
 
 `TruthCore.Logic.CogitoEsse.profile` retains the original ontic signature and grounding edges exactly, fixing only `concrete := HasEsseInRe InAct esse`. The selected-world `ExistingInActAt` contract remains explicit in the theorem types. It is not marked as a new self-evident floor item. It asserts no converse, causation/grounding identification, causal endpoint presence, modal rule, or actual occurrence of thought.
@@ -361,6 +383,8 @@ excludes actual support; the complete God consumer still needs every linked
 input. Separate controls are not combined into a new model, and their formal
 interpretations are not evidence of metaphysical possibility. No new combiner
 is warranted merely to restate these consequences under the same names.
+
+**Historical worker handoff; publication status superseded by the [current reviewed disposition](#current-reviewed-assessment-2026-11-17).**
 
 Issue #1727's reconstruction, rival/positive-warrant comparison, exact open
 joins and bidirectional retrieval are delivered for fresh coordinator-owned
