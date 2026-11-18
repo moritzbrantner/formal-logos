@@ -5,16 +5,29 @@
 The maintained calculator is `scripts/support_formula.py`. It consumes the
 complete graph exported by the Rust `truth support-graph` command; corpus
 loading and statement identities remain owned by that CLI. The optional
-analysis environment declares `dd==0.6.0` (CUDD) and `networkx==3.4.2` in the
+analysis environment declares `dd==0.6.0` and `networkx==3.4.2` in the
 script. It does not change proof, premise or frontier status.
 
-From the repository root:
+The full recalculation is a manual local command, not a CI step. It needs
+`dd` built with its CUDD extension for practical runtime: PyPI `dd` ships
+without CUDD, and the script then falls back to the pure-Python `dd.autoref`
+backend. That fallback gives identical exact results and passes the oracle
+suite, but is too slow for the full corpus (a local terminal-basis run did not
+finish its closure phase within 25 minutes; the same calculation with CUDD
+took about two minutes on 2026-11-18). The report records the backend
+used under `dependencies.dd_backend`. From the repository root:
 
 ```sh
-uv run scripts/support_formula.py \
+DD_FETCH=1 DD_CUDD=1 uv run --no-cache --no-binary-package dd scripts/support_formula.py \
   --baseline scripts/testdata/support-formula-2026-11-13.json \
   --bdd-output target/support-formula/exact.json
 ```
+
+`DD_FETCH=1 DD_CUDD=1` makes the `dd` build download the CUDD 3.0.0 source and
+compile it (gcc and make required), so this is a local opt-in that needs network
+access, never a CI dependency. `--no-cache` is required: the `DD_*` variables are
+not part of uv's cache key, so without it uv reuses a previously built `dd`
+wheel without CUDD. Each run therefore rebuilds `dd`, which takes a few minutes.
 
 The default invocation refreshes the Rust exporter through Cargo. An explicit
 `--truth target/release/truth` selects a prebuilt binary instead. Outputs are
@@ -31,12 +44,11 @@ basis; the default and the historical numerical baseline are terminal-only.
 An input set to false means **not supplied**, not acceptance of its negation.
 This calculation therefore does not invent complementary P/¬P argument forks.
 
-The existing CI workflow runs the small oracle suite with
-`uv run scripts/support_formula.py --self-test` when the Rust tooling checks
-run. Its existing nightly and manual runs calculate the full terminal report
-and upload a `support-formula` artifact containing the graph, report and exact
-diagram. Counts and wall-clock time are descriptive diagnostics, not monotonic
-research scores or performance gates.
+CI runs only the small oracle suite, `uv run scripts/support_formula.py
+--self-test`, with the Rust tooling checks; it passes on either backend. The
+scheduled CI no longer recalculates the full report (owner decision on #1744).
+Counts and wall-clock time are descriptive diagnostics, not monotonic research
+scores or performance gates.
 
 ### Recalculated results
 
