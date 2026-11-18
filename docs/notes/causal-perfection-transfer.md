@@ -1584,8 +1584,10 @@ Tally:
   premise.
 - **restated** — 8 records (rows 1, 4, 5, 6, 8, 9 and 11, plus row 3's
   exact-negation pair).
-- **no substantive objection identified** — rows 2, 5, 8 and 10, and the nine
-  premises listed above.
+- **no substantive objection identified** — rows 2, 5, 8 and 10, row 1's
+  conclusion for `b26c10a0`, and the nine premises listed above. The categories
+  overlap by design: a restated record can also conclude that no substantive
+  objection was identified.
 - **dropped as evidence** — none deleted, and no earlier weighting is changed.
 
 ### (d) Overall provisional judgment, revision conditions and next test
@@ -1611,8 +1613,8 @@ The transfer wing is weaker and asymmetric.
   universal cause causes esse. The q.104 a.1 heavenly-body lead bears against that
   vacuity.
 
-`b26c10a0` has a non-transcription derivation and a direct option, while
-`10cd24ed` has neither. Routes should therefore consume `b26c10a0` wherever
+`b26c10a0` has a non-transcription derivation and a prima facie direct option,
+while `10cd24ed` has no derivation and no positive warrant for its direct option. Routes should therefore consume `b26c10a0` wherever
 universal scope suffices, which is already true of naming, reduced naming and
 goodness.
 
