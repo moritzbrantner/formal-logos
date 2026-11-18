@@ -1347,3 +1347,69 @@ manifest is this note, the existing attempt `9f771edb`, and bounded inbound
 links in `direct-grounding-warrant.md` and `necessary-simple-plurality.md`.
 The complete proposed outcome and self-sweep above are the review target;
 no independent review of this new consolidation is claimed.
+
+## Same-witness identities for #1731 (2026-11-18)
+
+**Proposed outcome for review.** The owner comment on #1731 asked whether the
+witness identity between the classical God root `da3facd6`
+(`NecessaryClassicalGodRootAt`) and the underived candidate is already
+certified. It was not: the #1729
+assembly above calls the source-to-God carrying "a transparent composition of
+existing proofs, not a newly certified stronger consumer statement", and
+`NecessaryClassicalGodRootFromUnderived.derive` says its type does not state
+that its premise and conclusion witnesses coincide. Two zero-axiom results
+in `TruthCore.Results.Causality.SameSourceWitness` now state the identities
+as types. Vocabulary `TruthCore.Causality.SameSourceWitness` gives the
+pointwise bodies of the three existing endpoints; its `…_iff` lemmas check
+by `Iff.rfl` that each body is exactly the existing definition's body.
+
+| Result | Theorem | Premises | Conclusion |
+| --- | --- | --- | --- |
+| [c66eead8](../../corpus/results/c66eead8-8674-4d0c-b04f-423d51c34392.json) | `deEnteSourceIsUnderived` | De ente source root `ce7edf53`, underived candidate `0bdcf366`, unique actual root `7ab0ddcb` | `630843d1`: ONE n is both the De ente source and an underived candidate |
+| [8e3b89c9](../../corpus/results/8e3b89c9-2793-4263-b83c-c974328b3b3f.json) | `deEnteSourceIsClassicalGodRoot` | `ce7edf53`, classical God root `da3facd6` | `654eead1`: ONE n is both the De ente source and the GOD_4 classical root |
+
+Typing: every endpoint is taken on ONE carrier (`σ.Being` for the classical
+root), ONE grounding profile `m` and world `w`, and, for the classical root,
+the SAME q.3 a.4 profile `p` (the De ente `Profile B P R` and the classical
+root's `PrimaPars.Question3.Article4.Profile σ.Being P R` are the same type).
+Neither proof mentions `Ontic.Causes`, an unrelated profile exemplar, or the
+q.3 causal relation; they use only `ActualRoot m w`, i.e. `m.grounds`.
+
+* **u = n.** The underived candidate has no existing concrete ground at ANY
+  world, so none at `w`: it is an actual root. `UniqueActualRootAt m w`
+  identifies it with the De ente root. All-world underivedness and necessity
+  come from `0bdcf366`; they are not derived from roothood at `w` (the #1729
+  boundary above is unchanged).
+* **g = n.** `NecessaryClassicalGodRootAt` contains `PerfectRootAt`, whose
+  own third clause says every actual root of `m` at `w` equals its witness.
+  So De ente root EXISTENCE suffices; no multiplication, grades or
+  pure-indiscernibility uniqueness package is an input. This does not remove
+  uniqueness from the case: it is carried inside the classical endpoint's
+  22-input bundle (its producer `UnderivedRootPerfection.derive` obtains it
+  from the fixed-esse maximum identification). The bare `GodExists`
+  projection forgets this witness; the new conclusion keeps it, which is why
+  the argument records `strong_version_needed`.
+* With both endpoints and the classical root `da3facd6`, the underived
+  candidate is also g (the uniqueness clause inside `da3facd6` covers it), so u = g = n without `UniqueActualRootAt`.
+  That third composition is inline in `NecessaryClassicalGodRootFromUnderived`
+  and was not registered again.
+
+Neither result proves any input: the De ente actuality, concreteness,
+ground-to-esse-cause and no-self-cause bridges, all-world underivedness, the
+classical root's attribute/naming bundle and GOD_4 naming all stay open.
+GOD_4 is the nominal case predicate, not historical or Christian identity.
+Sense-coverage gap (#216): the label of `630843d1` carries the tag
+CONCRETE_6, inherited from `ce7edf53`, but no CONCRETE record has a sense of
+that label. The nearest, CONCRETE_AND_ABSTRACT_6 (`HasEsseInRe`), is not the
+profile's primitive `m.concrete`, so it is not linked. The same gap already
+exists on `ce7edf53`.
+No control was added: the existing plural-root and `RootInterface` controls
+already show that without a uniqueness clause two actual roots can differ.
+The conclusions have no downstream consumer yet; their connection plan is a
+De-ente-retaining God consumer (the existing one consumes the bare GOD_4
+predicate). Computed frontier: the two identity results add no support
+alternative at either root (premise counts unchanged); see the PR job
+summary for the batch's combined delta, which comes from the intellect
+result recorded in
+[teleology-first-mover.md](teleology-first-mover.md#same-witness-intellect-routes-and-the-will-consumer-1731-2026-11-18).
+Attempt: `a1b799fe-f75c-4e3e-994a-f4bb834f3ac7`.
