@@ -1,0 +1,19 @@
+{
+  "id": "b50e08a5-1d89-449c-a260-3585bd7fc1b4",
+  "label": "SCG I.44 instrumental priority and contingent-effect source scope (#1747)",
+  "date": "2026-11-18",
+  "statement_ids": [
+    "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+    "66aecdd7-ea4e-55c6-9377-10db08893854",
+    "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+  ],
+  "kind": "countermodel",
+  "outcome": "succeeded",
+  "summary": "On the same necessary-root n, informed rational mover h, easy-rescue obligation, claimant standing and norm priority from the #1747 comparison, added fixed CausesOrSustains(n,h) and tested four JavaScript Boolean assignments. With InstrumentOf(h,n) false, all fixed base facts and Aquinas SCG I.44 §4's conditional no-intellectual-instrument-under-unintellectual-principal rule hold while HasIntellect(n) is false; mere causal ancestry is therefore insufficient. InstrumentOf(h,n) true with HasIntellect(n) false violates the substantive priority rule. InstrumentOf(h,n) true plus HasIntellect(n) true satisfies it whether or not n actually adopts the selected moral end, isolating actual authorship as distinct. A separate schematic two-world nondeterministic allowed-output relation holds n and the law fixed while outcomes differ, blocking a bare necessity-of-source ⇒ necessity-of-token inference without deterministic completeness; it does not explain the realized token or establish a metaphysically adequate chance source and explicitly reuses #1570/#1730. An independent semantic challenge accepted the conditional inference and located the OPEN purposive-instrumentality warrant. These are finite JS scope/omission controls, not registered Lean, new moral facts, or rival defeats. Primary source: SCG I.44 §4, Latin at corpusthomisticum.org/scg1044.html. Note: docs/notes/moral-governance-intellect-will.md.",
+  "blocker": "No independent support yet that the rational secondary agent's moral judgment is an instrument of n's own understood and legitimately authoritative end, rather than causally enabled by n while recognizing impersonal norms. To reach the exact existing GodHasIntellect/GodHasWill consumers, also verify same-witness IsGod/necessary-root adapters and distinguish capacity from intentional actual promulgation. Full contrastive explanations of contingent tokens remain #1570/#1459's jurisdiction. No new premise status or formal theorem follows. Local repo Lean/Cargo/Truth CLI unavailable; PR GitHub Actions required after branch change.",
+  "evidence": [
+    "11628966-e479-418c-8107-dbe435608472",
+    "dd55f57a-b256-4e73-b57e-6e2cca1c06f7",
+    "6cf4fc73-3265-5712-a0aa-c30a8cb3c299"
+  ]
+}
