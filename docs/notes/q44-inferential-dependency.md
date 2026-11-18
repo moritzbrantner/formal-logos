@@ -811,3 +811,230 @@ and primitive support options. The bounded connection is resolved under its
 inputs, not established as true. Composition's general versus per-se scope is
 the next semantic question. Further research was superseded by the owner's
 retrieval-reliability assignment; committed evidence remains available.
+
+## Current cluster assessment under the substantive objection standard (2026-11-18)
+
+**Scope and boundary.** Issue #1751, slice 3, drafted on main
+`95ed6125265252988b7a88ad14e42fed79e9d8ec` (PR #1754 merged). The coordinator
+counted 11 `legacy_only` GOD_4-route premises whose attempts cite this note: the
+open targets of legacy attempt `74008d2a`, which cites this note and
+[causal-perfection-transfer.md](causal-perfection-transfer.md). At this baseline
+all 11 are already `current` through slice 2's `5c7bc356`. Slice 2 left two
+things open. It deferred the source-selection detail of six of them
+(`11e24b50`, `cbb068e8`, `b4987085`, `6acd44eb`, `e2bfd1b1`, `dcf4bcdd`) to this
+note. It also stated that it supplies "no numerical unity (`a576300f`,
+`75b5b027`)". This note's
+[comparison section](#comparison-of-the-strongest-existing-support-bundles) names
+four further open GOD_4-route inputs of that numerical unity and of the common
+source. Their currentness state is `none`: the multiplication inventory
+`2495a71d`, no added difference `f13d1cdd`, no matter `38ed105c` and the
+population `33f3c4c5`.
+
+The cluster is therefore the q44 participation route as this note fixes it:
+
+- the selected inferential presentation;
+- essential-source selection (`015caba2`, `3beb5720`);
+- ancestor-to-source supply (`9bbfe378`, `d31e0887`, `b171d107`, `ac416809`);
+- the numerical-unity and population inputs that selection and the common source
+  consume.
+
+The scoped assessment names the six deferred premises, the four new ones and the
+route nodes `a576300f`, `de05072a` and `8b8bb6df`, which are not open leaves. The
+other open inputs keep the assessments that actually assessed them, reused
+unchanged: `75b5b027` under `9f771edb` and the
+[de ente source-selection judgment](de-ente-esse-source-1628.md#current-source-selection-judgment-identity-and-the-nature-being-multiplied-2026-11-17),
+and `6dfe01ab`, `7fcfcee8`, `14325c83`, `bc1810e5` and `86d02b69` under
+`5c7bc356`.
+
+Earlier sections stay unchanged under their own dates. This section changes no
+theorem, Challenge, claim, definition, closure or formal status.
+
+### (a) Fixed meanings
+
+These are the meanings fixed in the earlier sections of this note and in the
+De ente note:
+
+- **Profile.** There is one q.3 a.4 profile: `InAct`, `CausesIn` at `esse`,
+  `essenceOf` and `esseOf` in one `Principle` sort. "Esse is its essence" is the
+  represented identity `esseOf x = essenceOf x`. Reading it as real identity
+  requires faithful maps, the restricted dictionary `6acd44eb` for own-being
+  sources.
+- **Causing being.** `CausesIn c x esse` is causal responsibility for x's being.
+  It is mode-unspecified and tenseless, and it is not a claim that no secondary
+  causes intervene.
+- **Own being and participation.** `OwnBeing` (definition `5dc08b95`) and
+  `Participated` (PARTICIPATION_4, q.44's derivative esse) are interpreted
+  primitives. Neither is defined as the negation of the other, and neither is a
+  map equality.
+- **Shared nature and the three modes.** `SharesNature` (definition `2a19c5e4`)
+  is the primitive "one nature, so their being two would be a multiplication of
+  it". It is not essence-value equality, common predication or x=y. The three
+  modes of multiplication are `AddsDifference`, `InMatter` and the reception of
+  esse. At identity bearers, where the nature is esse, "one absolute and another
+  received" is the reception of esse.
+- **Inferential dependence.** It is membership in one selected rule's complete
+  premise set. It transfers no ontic, causal or well-foundedness property (see
+  "Four dependence roles").
+- **Selection.** `p` is a designated individual. `e2bfd1b1` qualifies it as
+  actual with represented identity and does not assert `OwnBeing p`. GOD_4 is
+  never identified with `p` or with an own-being source anywhere in this route.
+
+Under these meanings the cluster has three conditional support bundles for the
+CREATURE_1 parent `612078bf`. None of them is preferred by leaf count.
+
+| Bundle | Complete inputs (expanded) | Status |
+| --- | --- | --- |
+| Legacy parent `38bef29c` | `11e24b50` with either the two direct middle premises `2b25a78c` and `b7d4eede`, or their expansions (`cbb068e8`, `33ad148b`, and the Fourth-Way chain `87dd8489`/`a9cd32b6`/`efb88bdf` with `d9fad785`) | The Fourth-Way branch is not q44 support and not independent warrant for the universal-cause principle it already uses. |
+| Essential-source selection `3beb5720` | `11e24b50`, `de05072a`, and `dcf4bcdd` ← (`6acd44eb`, `a576300f`, `e2bfd1b1`) | The selector `015caba2` is a detector-classified transcription. |
+| Ancestor and source supply `ac416809` | `11e24b50`, and `8b8bb6df` ← (`cbb068e8`, `3d01134d`, `b4987085`, reception four, `a576300f`, `e2bfd1b1`) | Selects one sufficient witness per participant and avoids `dcf4bcdd`. |
+
+Numerical unity `a576300f` enters both of the last two bundles. It is closed
+(proved) by the non-transcription result `860eae63` (argument `07b1fac4`). Its
+seven jointly required inputs are:
+
+- the inventory `2495a71d`;
+- shared nature `75b5b027`;
+- no added difference `f13d1cdd`;
+- no matter `38ed105c`;
+- the reception premises `6dfe01ab`, `7fcfcee8` and `14325c83`.
+
+The existence of a selected witness enters through the common source `c35b1a5c`.
+Its argument `5ab6cc2b` takes `3d01134d`, `a576300f`, the population `33f3c4c5`,
+`fd12ad3d` and excluded middle `ee4ab504`. The CCR argument `3de4bd49` takes the
+weaker population `78cffb8e` instead.
+
+### (b) Strongest positive warrant, direct options and shared dependencies
+
+| Premise | Strongest positive warrant | Direct option and dependencies | Provisional standing |
+| --- | --- | --- | --- |
+| `2495a71d` multiplication inventory | Stated claim `872032e9`, De ente c.3 [69874] (Baur/Koch; Leonine c.4). The passage says a thing is multiplied only by an added difference, by a form received in different matters, or by one instance being absolute and another received. Rationale: two instances of one nature must differ by something, either in the content (a differentia) or in what has the nature (matter, or a recipient). The encoding is restricted to pairs of identity bearers, as the passage applies it. | A candidate primitive of the multiplication account. The inventory's **exhaustiveness** is the passage's assertion and is not derived ([individuation audit](necessary-simple-plurality.md#what-the-primary-arguments-actually-supply)). No identity with the narrower bridge `PurelyDeterminedIndiscerniblesIdentical` is inferred. | Moderate as a sourced principle. Its exhaustiveness is contested (row 1 below), unchanged from the 2026-11-14 De ente judgment. |
+| `f13d1cdd` no added difference | Stated claim `8bca93ec`, same anchor: esse alone that subsists does not receive an added difference, "since then it would not be esse alone but esse and some form besides". | Close to analytic once "esse tantum" is read as a quiddity that is wholly its esse. The claim records two reading choices. It depends on the profile's real-identity reading (`6acd44eb` and the q.3 a.4 profile). This premise supplies the addition-excluding character that bare map equality does not encode. It does not exclude whole-nature differences that are not added constituents (De ente note, 2026-11-17). | Strong, conditional on that reading. It carries no uniqueness load by itself. |
+| `38ed105c` no matter | Stated claim `e2319cd1`, same anchor: "much less" matter, "since then it would be not subsistent but material esse". | Close to analytic under the same reading. Its subsistence clause is read as a consequence of identity (a reading choice recorded in the claim), which ties it to the reception package (`bc1810e5`, `5c7bc356`). | Strong, conditional on that reading. |
+| `33f3c4c5` at least two actual beings | Ordinary experience: perception of distinct things, and the inquirer together with what the inquirer considers. A commonsense datum. | A candidate primitive. Applying `InAct x esse` to ordinary existents is the profile's interpretation of actual existence. It strengthens `78cffb8e`, and the CCR route uses only that weaker version. | Strong prima facie. |
+| `11e24b50` others participate | Unchanged from `5c7bc356`. Supporting claim `11b0106d` gives q.44 a.1 co. and ad 1. Identifying `p` with the essential-esse primary is the analyst's step. | Depends on unique unreceived esse (`a576300f`, `75b5b027`). | Moderate, conditional on that uniqueness. Unchanged. |
+| `cbb068e8` participant has distinct esse | Unchanged: a participant has being derivatively, so it is actual and is not its own act. | Its application to the profile maps is an explicit bridge. | Strong prima facie under PARTICIPATION_4. Unchanged. |
+| `b4987085` actual esse-cause composition | Unchanged: mediated responsibility for esse passes along actual esse-cause links, as in essentially ordered series. | A primitive or defeasible causal commitment; no source states it. Its general-versus-per-se scope is an open meaning question (next test). | Moderate. Unchanged. |
+| `6acd44eb` identity dictionary | Unchanged: the meaning of own being motivates representing identity for the relevant sources. | A restricted application dictionary, shared with the real-identity reading of `f13d1cdd` and `38ed105c`. | Moderate. Unchanged. |
+| `e2bfd1b1` selected identity witness | Some such witness exists if the common source `c35b1a5c` does. The existential claim is derived by `5c904cf6` from `3d01134d` (← `457698e4`, `fd12ad3d`, `ee4ab504`), `a576300f`, `33f3c4c5`, `fd12ad3d` and `ee4ab504`; `e2bfd1b1` designates `p` as that being. | Shared dependencies: the numerical-unity inputs assessed here, plus `457698e4` and `fd12ad3d`, which are **not assessed here**. The De ente judgments of 2026-11-14 treat both as contested (causal coverage and the regress premise); the brute-esse, global-order and per accidens rivals are unpaid, not refuted. | Conditional on that bundle. Not graded, because two of its inputs are unassessed here. This matches `5c7bc356`'s "not independently assessed". |
+| `dcf4bcdd` selection of all relevant sources | Derived by the transcription-classified selector. | Not needed: `ac416809` via `8b8bb6df` suffices. | Formal residue only. Unchanged. |
+| Neighbour `a576300f` at most one identity bearer | Derived from the seven inputs above. It is also stated in the source. A direct prima facie option is retained. | Its uniqueness load rests on the application of `75b5b027` and on the exhaustiveness of `2495a71d`. Both are live (rows 1 and 2). | Provisionally supported to the degree that those two are, which is the 2026-11-14 De ente wording. Not regraded. |
+| Neighbours `de05072a`, `8b8bb6df` | Conditional results: `9bbfe378`/`d31e0887` and `b171d107`. The direct q44 participation-to-essential-source rationale is retained. | They inherit `b4987085`, the reception four, `3d01134d` (or `c35b1a5c`), `a576300f` and `e2bfd1b1`. | Conditional. Not regraded. |
+
+Shared dependencies stay visible:
+
+- The reception premises `6dfe01ab`, `7fcfcee8` and `14325c83` are shared by
+  numerical unity, source supply, infinity and ascent. They are not independent
+  corroboration of one another.
+- `f13d1cdd`, `38ed105c`, `6acd44eb` and `e2bfd1b1` share the profile's
+  real-identity reading of represented principles.
+- `a576300f` is consumed by selection (`b8b21fb3`), selected supply (`12bc6bf0`),
+  the common source (`5ab6cc2b`, `3de4bd49`) and the root-uniqueness routes. A
+  defeat of it would reach all of them.
+- `fd12ad3d` enters twice in `5ab6cc2b`: directly, and through `3d01134d`. It
+  counts once.
+
+### (c) Recorded objections and rivals, classified
+
+| # | Record | Classification under the substantive standard |
+| --- | --- | --- |
+| 1 | Bare numerical difference with common nature: two identity bearers that share one nature and differ by no difference, matter or reception, only by primitive thisness. Source: the De ente note, 2026-11-17 ("challenges inventory `2495a71d`"), and the #320 pure-act thisness and narrower-bridge sections of [necessary-simple-plurality.md](necessary-simple-plurality.md#narrower-bridge-bare-difference-needs-a-non-pure-principle-2026-11-07). | **Kept** as a targeted, unresolved challenge to the exhaustiveness of `2495a71d` at identity-bearer pairs. *Mechanism:* numerical difference without any real differentiator. *Independent justification:* primitive numerical distinctness, motivated by the Adams/Black cases recorded in that note. *Relevant difference:* every such case comes with a non-pure frame (place, matter, a subject), and unreceived esse has none. Whether a frame is required for bare difference or merely present is a general question about numerical difference. The only test cases where the two answers diverge are the pure acts themselves, so no independent case settles it. This is not an established counterexample, and no independently supported bare-thisness case at addition-excluding unreceived esse is recorded. The earlier status, "exhaustiveness contested", is kept unchanged. |
+| 2 | Distinct whole natures, and two first sources (#697), against `75b5b027` | **Restated**, unchanged from the De ente judgment of 2026-11-17. It is a targeted challenge to the step from qualitative determination to an added constituent or receiver, and an unfinished alternative ontology. Its proponent owes an intrinsic-determination account compatible with esse tantum; the defender owes a reason to exclude it. It does not target `f13d1cdd` or `38ed105c`: `f13d1cdd` excludes only an added differentia. It bears on this cluster only through `a576300f`. |
+| 3 | Conceptual-to-real distinction challenge (Wippel lead, unread) | **Restated** as in the De ente note. It is accepted and avoided: the route draws the real distinction from stage (b), not from the intellectus-essentiae argument. That moves the burden to `75b5b027` and targets no premise of this cluster. |
+| 4 | Omission controls: TwoSourcesControl `04212a3f`, the three essential-source omissions `7cdc011d` (`3b601644`) and the seven source-supply controls `406fbe1a` (`b4ae3ffa`) | **Restated.** Each shows that a premise is needed under one stated finite interpretation. None is evidence that two subsistent esse bearers, a nonactual participant or a failure of composition is possible. |
+| 5 | Report of a historical q44 subsistence/unity chain | **Restated** as a semantic gap (2026-11-17 dependency audit, unchanged). The inspected bindings do not support the stronger historical-integration report. This is not an objection to any premise. |
+| 6 | Substituting Q11 `godIsOneFromNature` (`841e7c81`) for numerical unity | **Boundary retained.** It is not an objection. Q11 uniqueness is God-indexed (`IsGod`). Using it here needs the pre-naming identification of the identity candidates with proper God instances, alignment of their essence representations, and a bridge from nature-value equality to `SharesNature`. The De ente Q11 reconciliation calls this overlapping warrant for different propositions, not independent corroboration. |
+| 7 | Fourth-Way universal cause (`d9fad785` chain) | **Restated** as an alternative support bundle at matching scope for `612078bf`. It does not defeat the q44 bundles. It is not independent warrant for the universal-cause principle it already uses. |
+| 8 | Generic causal-transitivity and intervention worries against `b4987085` | **No substantive objection identified**, as in `5c7bc356` row 10. Those controls concern other relations. Whether composition holds generally or only along per se links is a meaning question (next test). |
+
+No objection is recorded, and **no substantive objection is identified**, for
+`f13d1cdd`, `38ed105c`, `33f3c4c5`, `cbb068e8`, `6acd44eb`, `e2bfd1b1` and
+`dcf4bcdd`. A denial of plurality such as existence monism is not recorded in the
+corpus and is not introduced here. A remark that a supported reading generalizes
+something a passage says only of God is an attribution boundary, not an
+objection.
+
+Tally:
+
+- **kept**: 1 (row 1);
+- **restated**: 5 (rows 2, 3, 4, 5 and 7);
+- **boundary retained**: 1 (row 6);
+- **no substantive objection identified**: row 8, plus the seven premises listed
+  above;
+- **dropped as evidence**: none, and no earlier weighting is changed.
+
+### (d) Overall provisional judgment, revision conditions and next test
+
+**Judgment.** On the meanings in (a), the q44 participation route is a coherent,
+positively motivated conditional account. On it, everything other than a
+selected `p` is CREATURE_1 with `p` as universal cause of being. The
+source-supply bundle `ac416809` avoids the transcription selector. The route's
+warrant concentrates in four places:
+
+- participation coverage `11e24b50` (moderate);
+- composition `b4987085` (moderate, with its scope open);
+- the ancestry inputs of `3d01134d`, namely `457698e4` and `fd12ad3d` (not
+  assessed here);
+- numerical unity `a576300f`.
+
+The newly assessed inputs of numerical unity split. The sourced exclusions
+`f13d1cdd` and `38ed105c` are strong under the esse-tantum reading. The
+population `33f3c4c5` is strong prima facie. The uniqueness load rests on two
+live points: the exhaustiveness of the inventory `2495a71d` (moderate, with the
+kept bare-difference challenge) and the application of shared nature `75b5b027`
+(a positively motivated primitive, unchanged).
+
+The route names no GOD_4, supplies no efficiency, conservation or necessity, and
+uses no God-indexed uniqueness. Nothing is established or defeated.
+
+**Revision conditions.** Each of the following would revise this judgment:
+
+- A general account of numerical difference showing that bare difference needs a
+  non-pure frame would remove the row 1 challenge and strengthen `2495a71d`.
+  Conversely, an independently supported case of frameless bare difference would
+  weaken it.
+- A positively warranted, intrinsically differentiated account of unreceived act
+  would weaken `75b5b027`, and through it `a576300f`, `11e24b50` and selection.
+- An assessment of `457698e4` and `fd12ad3d`, or of their per se replacements
+  `ea251340` and `e74de400`, would allow `e2bfd1b1` and the common source to be
+  graded.
+- A reading of "esse tantum" on which represented identity does not exclude added
+  form would reach `f13d1cdd` and `38ed105c`.
+
+**Next discriminating test.** Test the scope of composition `b4987085` against
+the per se split that the De ente note already registered. The supply chains come
+from `3d01134d`. Under the open bridge `e74de400` ("a caused actual cause of
+being causes being as caused"), every link after the first starts from a caused
+cause, so every such link is per se. The test: derive `b4987085` from a per
+se-restricted composition law together with `e74de400`, or find the exact
+obstacle. A success would rest composition on the essentially ordered paradigm.
+Its warrant would then share `e74de400` with the regress route, a shared
+dependency that is not independent evidence. A failure would locate the
+general-scope commitment exactly. This is the question that the source-supply
+challenge (2026-11-17) left next. It reuses existing vocabulary and is distinct
+from the individuation question in row 1, which needs a general account of
+numerical difference rather than another finite model.
+
+**Formal residue, not new campaigns.**
+
+- `dcf4bcdd` has only transcription support. The selected route avoids it.
+- `5ab6cc2b` consumes the strong population `33f3c4c5` and records no
+  `strong_version_needed`. The CCR route `3de4bd49` uses the weaker `78cffb8e`.
+  Whether the weaker version suffices for `5ab6cc2b` is a strength-consumer
+  question (#1598).
+- The broad `6dfe01ab` is consumed by `07b1fac4` and the q44 supply lemma, as
+  slice 2 already recorded (#1598).
+
+**Declared revisions: none.** Each earlier judgment that this section touches is
+compared below and kept:
+
+- The dependency-audit judgment (2026-11-17), the essential-source judgment that
+  `de05072a` is the strongest substantive causal input, and the source-supply
+  judgment that composition is a revisable primitive option are unchanged.
+- Slice 2's standings for the six deferred premises are unchanged. `e2bfd1b1`
+  stays ungraded, as slice 2 left it, now with its dependencies listed.
+- The De ente 2026-11-14 wording "exhaustiveness contested" and "provisionally
+  supported to the degree that they are" for `a576300f`, and the 2026-11-17
+  shared-nature judgment, are unchanged.
+- The God-indexed Q11 boundary and the GOD_4 separation are retained.
+- The first grades for `2495a71d`, `f13d1cdd`, `38ed105c` and `33f3c4c5` are new
+  judgments on statements with no earlier assessment. They revise nothing.
