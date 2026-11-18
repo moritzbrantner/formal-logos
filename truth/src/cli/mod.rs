@@ -25,6 +25,7 @@ mod check;
 mod configuration_report;
 mod configurations;
 mod context;
+mod currentness;
 mod definitions;
 mod dossier;
 mod evidence;
@@ -75,6 +76,7 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
              [--frontier-json FILE] [--frontier-root STATEMENT]
        truth [--root PATH] [--json] novelty (TEXT | --statement STATEMENT) [--issues-from FILE] [--limit N]
              [--frontier-json FILE] [--frontier-root STATEMENT]
+       truth [--root PATH] [--json] currentness [--frontier-root STATEMENT] [--limit N]
        truth [--root PATH] [--json] next
        truth [--root PATH] [--json] next-steps [--frontier-root STATEMENT]
        truth [--root PATH] [--json] arguments
@@ -150,6 +152,7 @@ pub const COMMANDS: &[Command] = &[
     evidence::COMMAND,
     brief::BRIEF,
     brief::NOVELTY,
+    currentness::COMMAND,
     next::COMMAND,
     next_steps::COMMAND,
     ids::ARGUMENTS,
