@@ -100,8 +100,10 @@ public import TruthCore.Results.Causality.CountCauseTimeOpportunity.Solution
 public import TruthCore.Results.Causality.CountTemporalControls.Solution
 public import TruthCore.Results.Causality.CountTemporalNecessity.Solution
 public import TruthCore.Results.Causality.CreatureSenses.Solution
+public import TruthCore.Results.Causality.DeEnteSourceGod.Solution
 public import TruthCore.Results.Causality.DefinitionDictionaryConnections.Solution
 public import TruthCore.Results.Causality.DeiFiliusAttributeField.Solution
+public import TruthCore.Results.Causality.DeiFiliusBenevolentLord.Solution
 public import TruthCore.Results.Causality.DeiFiliusImmenseIncomprehensible.Solution
 public import TruthCore.Results.Causality.DeiFiliusLivingNineScope.Solution
 public import TruthCore.Results.Causality.DeiFiliusLivingSelfOperation.Solution
@@ -124,6 +126,7 @@ public import TruthCore.Results.Causality.DirectEsseRootUniquenessAtBeing.Soluti
 public import TruthCore.Results.Causality.DirectEsseRootUniquenessFromAsymmetry.Solution
 public import TruthCore.Results.Causality.DirectEsseRootUniquenessScopeControls.Solution
 public import TruthCore.Results.Causality.DivineVeracity1410.Solution
+public import TruthCore.Results.Causality.DivineVeracityAssembly1732.Solution
 public import TruthCore.Results.Causality.DivineVeracityContent1410.Solution
 public import TruthCore.Results.Causality.DurationMeasureCandidates.Solution
 public import TruthCore.Results.Causality.EsseCauseEfficiency.Solution
@@ -311,6 +314,7 @@ public import TruthCore.Results.Causality.Round3FourthWay.Solution
 public import TruthCore.Results.Causality.Round4Revisited.Solution
 public import TruthCore.Results.Causality.Round5Worklist.Solution
 public import TruthCore.Results.Causality.SameRespectActualization.Solution
+public import TruthCore.Results.Causality.SameSourceWitness.Solution
 public import TruthCore.Results.Causality.ScenarioNecessaryWitness.Solution
 public import TruthCore.Results.Causality.ScopedActualCausality.Solution
 public import TruthCore.Results.Causality.SelectedAncestry.Solution

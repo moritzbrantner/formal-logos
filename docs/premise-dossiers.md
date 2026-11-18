@@ -129,6 +129,30 @@ remains `blocked` on philosophical adequacy. Its old pending-review handoff and
 candidate-certification suggestion remain historical evidence; neither is the
 current integration task. No premise is established by this disposition.
 
+## Currentness view
+
+`truth currentness [--frontier-root STATEMENT] [--limit N]` (#1751) lists each
+open premise reaching the selected root (default `STMT-CATHOLICISM-TRUE`) with
+its currentness state: `current` (named in some attempt's
+`current_assessment.statement_ids`; the newest such entry's date, review and
+publication disposition are shown), `legacy_only` (attempts exist, none with a
+covering current assessment) or `none` (no attempt). It also counts pending
+consumers from declared `revisions`. Items are grouped by the earliest case
+stage they reach and ordered by route position (length of the recorded path to
+the root), never by leaf count or a strength score; `--json` has stable keys.
+
+Its flags are advisory heuristics that point at records to re-read, not
+verdicts: support is transcription-only; a consuming argument is on the
+sense-index allowlist; recorded alternatives or objections lack a covering
+current assessment; the latest attempt predates the 2026-11-12 substantive
+objection standard; a legacy blocker matches one of the old-policy phrasings
+(rival exhaustion, route cost, owner approval) listed in
+`truth::currentness::OLD_POLICY_PATTERNS` and echoed in the JSON.
+
+This is a discovery view. It writes nothing and establishes, defeats or closes
+nothing. Absence of a current assessment is unknown currentness, not failure or
+unfinished work, and a flag is not evidence against a premise or an attempt.
+
 ## Declared revisions and downstream reassessment
 
 When changing a meaning, premise warrant or influential judgment, declare the

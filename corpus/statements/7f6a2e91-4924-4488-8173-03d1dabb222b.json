@@ -1,0 +1,15 @@
+{
+  "id": "7f6a2e91-4924-4488-8173-03d1dabb222b",
+  "label": "Ordered-love reading (q.20 a.2 ad 3): GOD_4 wills a non-rational effect's esse as ordered to others",
+  "paraphrase": "Analyst formulation of the q.20 a.2 ad 3 ordered-love reading (irrational creatures are loved as it were with love of desire, as ordered to rational creatures and to God); attribution deferred. For every GOD_4 g with will and every distinct, non-rational x in act in esse whose esse g causes, g wills x's being in esse as ordered to some y that is rational or is g. It neither asserts nor denies that g also wills that good to x as recipient, so it is compatible with CausalExistenceWilling a94c5dfc (checked witness). Weak version of the unattributed strong exclusive variant 1dd68893. Rational is a primitive predicate here. OPEN.",
+  "lean_declaration": "TruthCore.Case.Catholicism.DivineLoveSenses.OrderedExistenceWillingWeak",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "1ca75ad2-e6f6-492a-9fcc-19eebfc8d3aa"
+  ],
+  "disambiguation_ids": [
+    "dd7ff973-0e54-4c93-b9c5-b002cac2b256"
+  ]
+}

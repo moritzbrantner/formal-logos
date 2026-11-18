@@ -1,0 +1,10 @@
+{
+  "id": "2b7b8f2d-2635-4821-93f1-14414f0f5cb6",
+  "label": "Joint-satisfiability model of the LORD_3 Dei Filius root route, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "3f4d27ab-9428-4af1-8f9a-c9b693e44dfa",
+  "rule": "Reuse of the checked unified root model; the LORD_3 bridge from its LORD_2 bridge by the strength order; the restricted willing premise on the all-true act dictionary",
+  "meaning": "Given excluded middle, the unified route's root model satisfies its whole bundle and its root has every Dei Filius attribute (DeiFiliusUnifiedRoute controls, which permit the three Mathlib axioms). Its bundle contains 'Whatever is LORD_2 is LORD_1', which entails 'Whatever is LORD_3 is LORD_1'; with a permissive willing relation and its all-true goodness dictionary the restricted willing premise holds; recipient is an intellectual being other than the root. So the LORD_3 route's bundle is jointly satisfiable in this interpretation. Model-witnessed facts only; the permissive willing relation does not discriminate recipient-directed willing.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

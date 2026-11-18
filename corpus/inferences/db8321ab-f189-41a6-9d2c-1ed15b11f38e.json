@@ -1,0 +1,12 @@
+{
+  "id": "db8321ab-f189-41a6-9d2c-1ed15b11f38e",
+  "label": "GOD_4 exists, projected from the De ente source named GOD_4 (inference)",
+  "input_statement_ids": [
+    "7a791743-e315-4fd1-8476-f1c313063096"
+  ],
+  "output_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+  "rule": "Existential projection onto the GOD_4 conjunct",
+  "meaning": "Structural projection: the being that is the De ente source and GOD_4 witnesses GOD_4 existence. It forgets the De ente body; downstream GOD_4 consumers that need only existence use this. No new philosophical inference.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

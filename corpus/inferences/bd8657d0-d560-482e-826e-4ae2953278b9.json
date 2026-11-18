@@ -1,0 +1,12 @@
+{
+  "id": "bd8657d0-d560-482e-826e-4ae2953278b9",
+  "label": "LORD_2 being LORD_1 gives LORD_3 being LORD_1 (inference)",
+  "input_statement_ids": [
+    "eb6611a5-f8a7-44f6-9bf1-2f65eb80b3cb"
+  ],
+  "output_statement_id": "e01dd128-e0a3-4347-879c-64aa452fde59",
+  "rule": "Weakening of the antecedent: LORD_3 contains LORD_2 as a conjunct",
+  "meaning": "Strength order registration: the LORD_2 sense bridge entails the LORD_3 sense bridge, since whatever is LORD_3 is LORD_2. Projection and application only; it establishes neither.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

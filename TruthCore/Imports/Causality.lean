@@ -64,6 +64,7 @@ public import TruthCore.Causality.CountTemporalNecessity
 public import TruthCore.Causality.CreatureSenses
 public import TruthCore.Causality.DefinitionDictionaryConnections
 public import TruthCore.Causality.DeiFiliusAttributeField
+public import TruthCore.Causality.DeiFiliusBenevolentLord
 public import TruthCore.Causality.DeiFiliusImmenseIncomprehensible
 public import TruthCore.Causality.DeiFiliusLivingNineScope
 public import TruthCore.Causality.DeiFiliusLivingSelfOperation
@@ -80,6 +81,7 @@ public import TruthCore.Causality.DirectEsseRootPerfectionGoodness
 public import TruthCore.Causality.DirectEsseRootRoute
 public import TruthCore.Causality.DirectEsseRootUniquenessAtBeing
 public import TruthCore.Causality.DivineVeracity1410
+public import TruthCore.Causality.DivineVeracityAssembly1732
 public import TruthCore.Causality.DivineVeracityContent1410
 public import TruthCore.Causality.DurationMeasureCandidates
 public import TruthCore.Causality.EndlessTemporalDuration
@@ -212,6 +214,7 @@ public import TruthCore.Causality.Round3CogitoBase
 public import TruthCore.Causality.Round3FourthWay
 public import TruthCore.Causality.Round4Revisited
 public import TruthCore.Causality.Round5Worklist
+public import TruthCore.Causality.SameSourceWitness
 public import TruthCore.Causality.ScopedActualCausality
 public import TruthCore.Causality.SelectedAncestry
 public import TruthCore.Causality.SelectedAncestryUniqueControl

@@ -1,0 +1,11 @@
+{
+  "id": "c66eead8-8674-4d0c-b04f-423d51c34392",
+  "label": "De ente source and underived candidate are one being under unique actual roothood",
+  "argument_id": "5a9010a9-a2c5-40c5-a3c8-63160393a0b4",
+  "challenge_module": "TruthCore.Results.Causality.SameSourceWitness.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SameSourceWitness.Solution",
+  "theorem": "TruthCore.Results.Causality.SameSourceWitness.deEnteSourceIsUnderived",
+  "comparator_config": "results/c66eead8-8674-4d0c-b04f-423d51c34392/comparator.json",
+  "status": "solution-present",
+  "description": "Analyst witness-identity composition, attribution deferred. On ONE carrier, grounding profile m and world w: the De ente source n is an actual concrete root at w (ce7edf53). The underived candidate u has no selected ground from an existing concrete candidate at any world, in particular none at w, so u is an actual root at w. UniqueActualRootAt m w (7ab0ddcb) identifies both with its unique root, so u = n and the two bodies hold of one being. All-world underivedness and necessity come from the underived premise; they are NOT derived from De ente roothood at w. The proof uses neither Ontic.Causes nor any identification of the q3 causal relation with m.grounds; the De ente bridges that make n an actual root are inputs of ce7edf53's own producer. No existence, necessity or divine attribute of any being follows unconditionally. See docs/notes/de-ente-esse-source-1628.md#same-witness-identities-for-1731-2026-11-18."
+}

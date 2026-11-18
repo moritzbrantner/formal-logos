@@ -1,0 +1,11 @@
+{
+  "id": "75e72e5e-942a-42d4-a3ab-519acb18ee25",
+  "label": "Assembled veracity routes are jointly nonvacuous at one bearer",
+  "argument_id": "f5846d33-c141-4954-b083-c3bc8383d98a",
+  "challenge_module": "TruthCore.Results.Causality.DivineVeracityAssembly1732.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DivineVeracityAssembly1732.Solution",
+  "theorem": "TruthCore.Results.Causality.DivineVeracityAssembly1732.assembledJointWitness",
+  "comparator_config": "results/75e72e5e-942a-42d4-a3ab-519acb18ee25/comparator.json",
+  "status": "solution-present",
+  "description": "Analyst witness, unattributed. Reuses the checked selective sample of the #1410 controls and the erasure representation theorem: one bearer satisfies both routes' premises and the representation for its induced legacy profile, actually asserts, and the legacy target holds nonvacuously. The kernel proof uses propext and Quot.sound only. No divine applicability, arbitrary legacy representation, moral norm or cognition mechanism follows from the finite sample."
+}

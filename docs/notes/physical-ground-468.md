@@ -256,6 +256,18 @@ remoteness from being a component of another. `willless` still separates
 reading. These models test their encoded commitments, not metaphysical
 possibility, and are not reverified or strengthened by this integration map.
 
+Update (#1731, 2026-11-18): immateriality-to-intellect is no longer the only
+branch into the Positive endpoint. The same consumer has a global-governor
+option (`b5bbf266`) and a witness-local Fifth-Way option
+(`2fbc2c57`, local bundle `65c409cc` with first-mover/maximum identity
+`46326b43`). A `simpleImpersonal` source therefore separates intellect only
+if it also denies the local bundle (including its reduction to an
+intellectual unmoved director) or that identity.
+Premise differences and shared dependencies:
+[teleology-first-mover.md](teleology-first-mover.md#same-witness-intellect-routes-and-the-will-consumer-1731-2026-11-18).
+A necessitarian rival contests the contingency of a selected effect and is
+assessed with #1730/#1570, not by this map.
+
 The primitive `HasIntellect`/`HasWill` dictionaries still need an adequate
 cognitive/appetitive interpretation. Neither the note's tables nor the new
 consumers show that all physically describable sources lack those properties,
