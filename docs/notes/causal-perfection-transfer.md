@@ -1444,10 +1444,12 @@ The naming continuation is recorded in [the existing naming note](naming-first-m
 
 ## Current cluster assessment under the substantive objection standard (2026-11-18)
 
-**Scope and boundary.** Issue #1751, slice 2, on main
-`c49e6d2a65bd8881bcaaffdc6357535d20f21df1`. The cluster is the eighteen open
+**Scope and boundary.** Issue #1751, slice 2, first drafted on main
+`c49e6d2a65bd8881bcaaffdc6357535d20f21df1` and repaired after independent
+semantic challenge on merged main `f85c68e20dc44f6259aaa65060c43a4a4f93fd9f`.
+That merge added `abdc26b0` as a further consumer of `b26c10a0`. The cluster is the eighteen open
 premises on GOD_4 routes whose attempts cite this note and which the
-currentness view listed as `legacy_only`. Three closely governed neighbours are
+currentness view listed as `legacy_only`. Four closely governed neighbours are
 added because this note fixes their meaning: unrestricted transfer `f8ba2429`,
 universal-scope transfer `b26c10a0` and residual `5a4afaa5`, plus identity-source
 ascent `8176a284`. None of the four is an open GOD_4 leaf. Earlier sections stay
@@ -1520,8 +1522,11 @@ alongside any derivation. Conditionality does not erase that option.
 | `e2bfd1b1` selected identity witness | Supplied by the source-first existence route. | A witness premise. Its warrant is that of the common-source inputs outside the cluster. | Not independently assessed here. |
 | `dcf4bcdd` selection of all relevant sources | Derived from `6acd44eb`, `a576300f` and `e2bfd1b1` by a selector classified as a transcription. The selected route does not need it, because `8b8bb6df` suffices. | Not applicable. | Formal residue only; it needs no independent warrant. |
 | `86d02b69` GOD_4 causes the being of all others | q.44 a.1 co.: whatever is in any way is from God. Supporting claim `9b52e1a5` reads the q.2 a.3 naming conversely. On classical theism, creating and sustaining everything else belongs to the content of GOD_4. | Close to a conceptual component of GOD_4. The GOD_4 definition fixes content only through open premises. It is used after naming. | Strong as a commitment of classical theism. It asserts no existence. |
-| `10cd24ed` nonuniversal transfer | None on file (`3de52780`). A possible support is an instrumental bridge on which a particular cause of esse acts as an instrument of the universal cause (De potentia q.3 a.7 lead, unread). That bridge would attribute the perfections to the universal cause, not to the particular cause. | Bare. It is vacuously true if only a universal cause causes esse (q.45 a.5 lead, unread). | Unsupported: no positive warrant on file, and also no substantive objection identified (row 2 below). It stays an open bare premise. |
-| Neighbour `b26c10a0` universal-scope transfer | Non-transcription derivation `dae70d8a`: a universal cause of being is the total cause, a total cause causes each mode of being, and perfections are modes of being (q.4 a.2). Q.105 a.5 adds that God applies created powers to operation. | Open, with a direct option. Concurrence is a positive commitment added to conservation. | Moderate. |
+| `10cd24ed` nonuniversal transfer | None on file (`3de52780`). A possible support is an instrumental bridge on which a particular cause of esse acts as an instrument of the universal cause (De potentia q.3 a.7 lead, unread). That bridge would attribute the perfections to the universal cause, not to the particular cause. | Bare. It would be vacuously true if only a universal cause causes esse (q.45 a.5 lead, unread). The q.104 a.1 sentence on heavenly bodies bears against that vacuity: they cause "a form as such" and so cause being, not only becoming. If `c3c01e92` brings that under `CausesIn … esse`, they are nonuniversal esse causes and `10cd24ed` has content (row 2). | Unsupported: no positive warrant on file, and also no substantive objection identified (row 2 below). It stays an open bare premise. |
+| Neighbour `b26c10a0` universal-scope transfer | Non-transcription derivation `dae70d8a` from three open analyst premises: `5e281daf` (a cause of every other being's being is the total cause of each such being), `2f6b9eff` (a total cause of being causes each mode of being) and `791fa216` (every perfection had in act is a mode of being, a reading of q.4 a.2). None of the three is assessed here; `791fa216` has no attempt. Participation plus concurrence is a prima facie direct option. | Conditional on `5e281daf`, `2f6b9eff` and `791fa216` (open, unassessed), plus a prima facie direct option. The q.105 a.5 concurrence warrant is God-indexed. Applying it before naming needs the open identification of the universal esse source with the subsistent first agent; otherwise it is circular (the OPEN paragraph under "Causal meaning"; the `74008d2a` blocker). That blocker, and the earlier demand for an independent defense of active application, are **retained**. | Not graded beyond that conditional standing. No change from the earlier record. |
+| Neighbour `f8ba2429` unrestricted transfer | Derived by `a3d5fb1a` from `b26c10a0`, `10cd24ed`, `b62a64ab` and excluded middle. The q.4 a.2 and q.6 a.2 support claims concern the universal or subsistent source, which is `b26c10a0`'s scope. | Proved from open premises. A direct option exists but adds no warrant beyond its two transfer parts. | No stronger than its weakest part, `10cd24ed`. |
+| Neighbour `5a4afaa5` residual | Equivalent to `10cd24ed` given `b62a64ab` (unregistered lemma `residualIffNonuniversal`); no warrant of its own. | Not to be registered as supporting `10cd24ed` (cycle warning in `3de52780`). | Same standing as `10cd24ed`. |
+| Neighbour `8176a284` identity-source ascent | Derived by `62bd2829` from the eight reception, limitation and degree inputs of sub-bundles A and C, and from `cffad050` by restriction (`30c1203b`). Positive rationale: participation, under which an unreceived act is not contracted. | Direct primitive option retained. | Conditional on those inputs. It inherits the `fd2c8710`/`9eaa3b6e` calibration gap. |
 
 Shared dependencies stay visible:
 
@@ -1530,6 +1535,9 @@ Shared dependencies stay visible:
 - `bc1810e5` and `1304b462` share the completeness of the reception relation.
 - `11e24b50` and the selection premises share `a576300f` and `75b5b027`.
 - `fd2c8710` and `9eaa3b6e` share the unbuilt calibration.
+- `b26c10a0`, and through it every universal-scope transfer application, depends on
+  the open and unassessed `5e281daf`, `2f6b9eff` and `791fa216`, and, for the
+  concurrence option, on the open source identification.
 - `da72ae93` is shared by the ascent and the mode contrast.
 
 `bc1810e5`, `7338142d`, `32695660`, `10b2b0ed`, `1304b462` and `7de89edb` are
@@ -1540,10 +1548,10 @@ corroboration of one another.
 
 | # | Record | Classification under the substantive standard |
 | --- | --- | --- |
-| 1 | Secondary-only conservationist rival (`b0e72763`, background `66aab41c`; "Shared-background tests" above) | **Kept** against the inference from universal existential causation plus possession to transfer. *Target:* that inference. *Mechanism:* the dependence of a bearer and its powers on a source need not include responsibility for each exercise of those powers (sustaining against producing). *Independent justification:* q.104 a.1's own distinctions between becoming and being and between direct and indirect preservation, and q.105 a.5's separate argument for application to operation. The tradition itself treats concurrence as a thesis added to conservation. **Restated** for the truth of `b26c10a0`: the table is a fact about one formal interpretation and shows only non-entailment from that background. **No substantive objection identified** against `b26c10a0` itself: no record gives independent reason to think a universal source fails to apply secondary agents. The Durandus label stays unwitnessed and is not adopted. Papineau and Hume are silent on this premise. |
-| 2 | Scope of particular causes against `10cd24ed` (`3de52780`; this note) | **No substantive objection identified** (reclassified on review of this PR). The proposed mechanism was that a nonuniversal cause of esse has a limited proper effect, so it need not cause every perfection of what it causes. Nonuniversality, however, means failing to cause the esse of some *being*; it does not mean failing to cause a perfection of a being whose esse it does cause. The cited evidence does not supply that exclusion. `dae70d8a`'s reliance on totality shows only that the universal-transfer derivation does not extend, which is an absence of warrant, not a failure mechanism. Q.104 a.1's form-causation example and q.105 a.5's attribution of application to the universal agent do not state that a particular cause of esse fails to cause any perfection of its effect. The supply example was rejected in `3de52780` because enablement is not `CausesIn … esse`. What remains is the absence of positive warrant recorded in (b), plus two unread leads: q.115 a.4 and q.45 a.5. If only a universal cause causes esse, `10cd24ed` is vacuously true. |
+| 1 | Secondary-only conservationist rival (`b0e72763`, background `66aab41c`; [shared-background tests](#shared-background-tests-and-surviving-rival)) | **Restated.** The earlier section's finding is retained unchanged: the rival "survives" in that the populated table jointly satisfies `TransferModelBackground` while falsifying `b26c10a0`. That is a non-entailment fact about one formal interpretation. The q.104 a.1 and q.105 a.5 distinctions (becoming against being, direct against indirect preservation, application to operation argued separately) show that concurrence is a thesis added to conservation. They do not independently justify that a universal source fails to apply secondary agents, so no objection is kept against `b26c10a0`'s direct option or against `2f6b9eff`/`791fa216`. The earlier requirement of an independent defense of active application stays open, and no rival weight is removed or added here. The Durandus label stays unwitnessed and is not adopted. Papineau and Hume are silent on this premise. |
+| 2 | Scope of particular causes against `10cd24ed` | **No substantive objection identified**, matching `3de52780`'s own objection audit (2026-11-12). That attempt's rival, a particular cause of esse that does not cause a perfection another agent causes, is witnessed only in a model (control part 1). Its unweighted lead (a): if the q.104 a.1 heavenly bodies are nonuniversal causes of the being of what they generate, `10cd24ed` applies to them non-vacuously and requires that they cause every perfection of those effects, intellectual ones included. The lead is pending the `c3c01e92` bridge and a reading of q.115 a.4. Its lead (b), the supply example, is enablement, not `CausesIn … esse`, and carries no weight. A stronger particular-cause mechanism was proposed in this section's first draft (`86bcd73`) and withdrawn on review: nonuniversality excludes causing the esse of some *being*, not causing a perfection of an effect whose esse the cause does cause. If only a universal cause causes esse, `10cd24ed` is vacuously true. |
 | 3 | United-soul objection `b85a0a0a` (SCG II.80 n.13; q.76 a.1 ad 5, read) against `6dfe01ab` | **Kept** against the broad all-bearer, all-recipient scope under reading (a) of DISAMB-ESSE-RECEPTION. *Mechanism:* a subsisting form communicates its esse to matter, so the body receives the soul's esse without being its essence. *Relevance:* it does not reach identity-bearer instances, which are the only instances the inspected route applications consume. The two strength projections `46ce053d` and `564f13a8` derive the weaker siblings from it. Exact negation `4b23fd7c` and refutation `8f277485` are **restated** as conditional contradictions under the open premises `aab8ebd6` and `60b32382`, not as an unconditional defeat. |
-| 4 | Fundamental natural source (`physical-ground-468.md`; "Independent fullness candidates" above) | **Restated** as an explanatory comparison at matching scope, not an objection to any premise of this cluster. It accepts the same unreceived-source, selection, coverage and composition conditions and earns the same conditional footprint. It denies none of `fd2c8710`, `d164b1ff` or `b4987085`. Its relevance is the naming stage (`1ec205ed`) and the later attributes. |
+| 4 | Fundamental natural source (`physical-ground-468.md`; "Independent fullness candidates" above) | **Restated** as an explanatory comparison at matching scope, not an objection to any premise of this cluster. It accepts the same unreceived-source, selection, coverage and composition conditions and earns the same conditional footprint. The earlier verdict table records that it may decline substantive perfective containment; whether it accepts `d164b1ff` or the OwnBeing reading is left open. It denies neither `fd2c8710` nor `b4987085`. Its relevance is the naming stage (`1ec205ed`) and the later attributes. |
 | 5 | Calibration gap for `fd2c8710` and `9eaa3b6e`, including the set-coverage audits `e3167aef` and `31055b56` | **Restated** as an open bridge with an exact missing specification. It is a measurement limitation, not a failure mechanism. **No substantive objection identified.** |
 | 6 | Purity cost `77882a3c` (`a39cbf5f`) | **Restated** as a checked scope cost: `d164b1ff`, `c4fb87a6`, `7338142d` and `32695660` together force OfBeing to coincide with Pure for any OwnBeing witness. It would become an objection to `32695660`'s extension only with an independently warranted mixed determination of being. None is identified. |
 | 7 | Cross-reception audit `1de3bff1` (`a6a2c1c6`) | **Kept** against the blanket recipient-relative reading of neighbour `7030af77`. The relative bundle forces cross-reception between limited possessors, while the reception account allows distinct finite natures, each receiving in its own essence. It is not an objection to any premise of this cluster, and it motivated the source-scoped bundle. |
@@ -1561,7 +1569,9 @@ boundaries, not objections.
 
 Old framing replaced:
 
-- the 2026-10-29 "surviving substantive rival" taken as weight against transfer;
+- the reading of the [shared-background tests](#shared-background-tests-and-surviving-rival)
+  "surviving substantive rival" as evidence of falsity. The section itself did not
+  claim that; its non-entailment finding is retained;
 - "zero philosophical premise discharge" and the route-cost accounting;
 - the `f3722322` blocker's "stating claims leave route cost unchanged".
 
@@ -1570,14 +1580,13 @@ costs are diagnostics only. No evidence was deleted.
 
 Tally:
 
-- **kept** — 3 records (rows 1, 3 and 7). Row 1 is kept against an inference;
-  row 7 bears on a neighbour, not a cluster premise.
-- **restated** — 7 records (rows 4, 5, 6, 8, 9 and 11, plus row 3's exact-negation
-  pair). Row 1's countermodel is also restated.
+- **kept** — 2 records (rows 3 and 7). Row 7 bears on a neighbour, not a cluster
+  premise.
+- **restated** — 8 records (rows 1, 4, 5, 6, 8, 9 and 11, plus row 3's
+  exact-negation pair).
 - **no substantive objection identified** — rows 2, 5, 8 and 10, and the nine
   premises listed above.
-- **dropped as evidence** — none deleted. Only the old weighting of row 1 against
-  `b26c10a0` is dropped.
+- **dropped as evidence** — none deleted, and no earlier weighting is changed.
 
 ### (d) Overall provisional judgment, revision conditions and next test
 
@@ -1590,13 +1599,22 @@ warrant and conditionally reaches fixed-esse maximal causality. It does not
 settle its own primitives, the q3 degree calibration, numerical unity or GOD_4
 naming.
 
-The transfer wing is weaker and asymmetric. Universal-scope transfer `b26c10a0`
-has positive warrant from total causation and concurrence, as a commitment added
-to conservation. Nonuniversal transfer `10cd24ed` has no positive warrant on file
-and no substantive objection identified. It is an open bare premise, vacuous if
-only a universal cause causes esse. Because its warrant is absent rather than
-defeated, routes should consume `b26c10a0` wherever universal scope suffices, which is already true of
-naming, reduced naming and goodness.
+The transfer wing is weaker and asymmetric.
+
+- Universal-scope transfer `b26c10a0` is conditional on three open, unassessed
+  analyst premises (`5e281daf`, `2f6b9eff`, `791fa216`), plus a prima facie
+  participation and concurrence option. That option needs the open
+  source-identification step before naming, on pain of circularity. Its standing
+  is unchanged from the earlier record.
+- Nonuniversal transfer `10cd24ed` has no positive warrant on file and no
+  substantive objection identified. It is an open bare premise, vacuous if only a
+  universal cause causes esse. The q.104 a.1 heavenly-body lead bears against that
+  vacuity.
+
+`b26c10a0` has a non-transcription derivation and a direct option, while
+`10cd24ed` has neither. Routes should therefore consume `b26c10a0` wherever
+universal scope suffices, which is already true of naming, reduced naming and
+goodness.
 
 The fundamental natural source stays a live alternative at this stage, under
 identical restrictions. Nothing here establishes a premise or defeats a rival.
@@ -1609,6 +1627,9 @@ identical restrictions. Nothing here establishes a premise or defeats a rival.
   scope. This would reach the route's use of `6dfe01ab`.
 - An independently justified account of conservation without concurrence at the
   scope of a universal source. This would be an objection to `b26c10a0`.
+- An assessment of `5e281daf`, `2f6b9eff` and `791fa216`, or a non-circular
+  pre-naming identification of the universal esse source with the subsistent first
+  agent. Either would change `b26c10a0`'s conditional standing.
 - Reading q.45 a.5, or deciding `c3c01e92` for q.104's heavenly bodies. Either
   would fix whether `10cd24ed` is vacuous or carries real content that needs positive warrant
   (q.115 a.4 is a further lead). Positive evidence that a nonuniversal esse cause fails to
@@ -1643,10 +1664,21 @@ same background.
 - The OwnBeing antecedent of `10b2b0ed` and the represented-identity antecedent
   of `75a37a91` are linked only in the identity-to-OwnBeing direction.
 
-**Declared revisions: none.** No earlier influential judgment changes:
+**Declared revisions: none.** No earlier influential judgment changes. The first
+draft said that the conservationist rival's weight against `b26c10a0` was dropped
+and that `b26c10a0` had moderate positive warrant. The independent challenge
+identified that as an undeclared revision. Both claims are withdrawn rather than
+declared:
 
-- The objection classifications restate boundaries that the earlier sections
-  already drew.
+- The earlier section's non-entailment finding, the `74008d2a` blocker requiring an
+  independent defense of universal transfer, and the identification and
+  non-circularity blocker are all retained unchanged.
+- `b26c10a0` keeps its earlier conditional, unestablished standing.
+- A trial `judgment` declaration on `b26c10a0` showed 13,625 potential consumers in
+  `truth brief`, reached mostly through definition and statement references. That
+  scale belongs to the revision tooling; it was not the reason for withdrawal.
+- The remaining objection classifications restate boundaries that the earlier
+  sections already drew.
 - For `10cd24ed`, "no warrant on file" was an absence, not a positive judgment.
   Its first provisional standing does not change the conditional validity of
   `a3d5fb1a` or of any consumer.
