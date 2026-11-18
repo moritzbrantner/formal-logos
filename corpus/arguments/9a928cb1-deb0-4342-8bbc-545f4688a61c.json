@@ -1,0 +1,38 @@
+{
+  "id": "9a928cb1-deb0-4342-8bbc-545f4688a61c",
+  "label": "LORD_2 being LORD_1 gives LORD_3 being LORD_1",
+  "premise_statement_ids": [
+    "eb6611a5-f8a7-44f6-9bf1-2f65eb80b3cb"
+  ],
+  "conclusion_statement_id": "e01dd128-e0a3-4347-879c-64aa452fde59",
+  "inference_ids": [
+    "bd8657d0-d560-482e-826e-4ae2953278b9"
+  ],
+  "meaning": "Strength order registration: the LORD_2 sense bridge entails the LORD_3 sense bridge, since whatever is LORD_3 is LORD_2. Projection and application only; it establishes neither.",
+  "definition_ids": [
+    "08b826db-2d9c-48e5-b69c-d4ac54088518",
+    "59350e3b-1b76-45cd-b9fd-548f3f4658b5",
+    "9dcfcb4e-bf60-4322-b687-440df1f2ad29",
+    "c8e458bd-3b8a-4e10-8e2d-43d1c1912c63"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "aa1de96a-e0d2-4739-a34f-9b98f1034a34",
+    "dd7ff973-0e54-4c93-b9c5-b002cac2b256"
+  ],
+  "sense_bridges": [
+    {
+      "term": "LORD",
+      "from": "a364090a-97a1-40fb-adb1-69c0bf14e06f",
+      "to": "169d3077-17ed-4ced-aefc-8c4579db89c2",
+      "statement_id": "e01dd128-e0a3-4347-879c-64aa452fde59",
+      "role": "conclusion"
+    },
+    {
+      "term": "LORD",
+      "from": "ba3b77d5-8a47-4647-8426-240fd4b42c3b",
+      "to": "169d3077-17ed-4ced-aefc-8c4579db89c2",
+      "statement_id": "eb6611a5-f8a7-44f6-9bf1-2f65eb80b3cb"
+    }
+  ]
+}

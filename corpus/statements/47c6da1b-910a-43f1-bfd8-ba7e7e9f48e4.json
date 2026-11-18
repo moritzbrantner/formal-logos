@@ -1,0 +1,18 @@
+{
+  "id": "47c6da1b-910a-43f1-bfd8-ba7e7e9f48e4",
+  "label": "GOD_4 wills some GOOD_4 to every distinct intellectual being whose esse it causes",
+  "paraphrase": "Open application bridge, analyst formulation, unattributed. For every GOD_4 g with will (HAS_WILL_1) and every x distinct from g, in act as to being and having intellect (HAS_INTELLECT_1), whose being g causes: there is a respect r in which x is good and g wills that good to x (recipient-directed willing, CREATURE_WILLING_1). The respect is existential. It says nothing about non-intellectual effects, about the divine self-case, about every good of x, about the degree or mode of willing, or that an act of willing efficiently causes x. It follows from 'Every GOD_4 wills some GOOD_4 to every being in act in esse' (c691e3d0) as sole premise, and from CausalExistenceWilling (a94c5dfc) with the q.5 a.1 coextension (00e962ae), without the self-case premise. Both verified supports go through a94c5dfc: c691e3d0's only derivation (argument 12865cf3) uses it. The premise itself is consistent with the strong (exclusive) ordered-love variant 1dd68893, an unattributed analyst strengthening of ad 3 (with rational read as having intellect), on a non-rational effect where CausalExistenceWilling fails (Control.Controls part 5); but a94c5dfc is incompatible with 1dd68893 on distinct non-rational caused effects, so if that strong variant holds and non-rational creatures exist, this premise has no verified derivation and stands only as a direct assumption. The conflict with a94c5dfc holds for that strong variant only; the weak, ad-3-faithful reading (ordered willing without the exclusion of recipient-directed willing) is compatible with a94c5dfc. The natural-diffusion / foreseen-collateral alternative recorded for a94c5dfc still applies to intellectual effects: this restriction removes the non-rational conflict only.",
+  "lean_declaration": "TruthCore.Causality.DeiFiliusBenevolentLord.IntellectualRecipientExistenceWilling",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "4c8f0e6b-7ef6-5be5-851c-cdf4f0301546",
+    "08b826db-2d9c-48e5-b69c-d4ac54088518"
+  ],
+  "disambiguation_ids": [
+    "dd7ff973-0e54-4c93-b9c5-b002cac2b256",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "c0fda0ee-3508-5101-94ba-043e3eb28b0e"
+  ]
+}

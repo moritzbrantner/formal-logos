@@ -103,6 +103,7 @@ public import TruthCore.Results.Causality.CreatureSenses.Solution
 public import TruthCore.Results.Causality.DeEnteSourceGod.Solution
 public import TruthCore.Results.Causality.DefinitionDictionaryConnections.Solution
 public import TruthCore.Results.Causality.DeiFiliusAttributeField.Solution
+public import TruthCore.Results.Causality.DeiFiliusBenevolentLord.Solution
 public import TruthCore.Results.Causality.DeiFiliusImmenseIncomprehensible.Solution
 public import TruthCore.Results.Causality.DeiFiliusLivingNineScope.Solution
 public import TruthCore.Results.Causality.DeiFiliusLivingSelfOperation.Solution

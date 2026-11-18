@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.DeiFiliusBenevolentLord.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DeiFiliusBenevolentLord.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.DeiFiliusBenevolentLord.intellectualWillingOfCausalWilling"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

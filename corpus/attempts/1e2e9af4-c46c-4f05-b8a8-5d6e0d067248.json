@@ -1,0 +1,57 @@
+{
+  "id": "1e2e9af4-c46c-4f05-b8a8-5d6e0d067248",
+  "label": "Group 8 integration: moral authority route and LORD_3 benevolent governance (#1733)",
+  "statement_ids": [
+    "47c6da1b-910a-43f1-bfd8-ba7e7e9f48e4",
+    "e01dd128-e0a3-4347-879c-64aa452fde59",
+    "eb6611a5-f8a7-44f6-9bf1-2f65eb80b3cb",
+    "c0f4a346-b265-4091-9d38-69c69582ea95",
+    "c691e3d0-5dd0-404a-a1dd-9a4a278dcd31",
+    "a94c5dfc-c722-49fe-a242-dd39409b079d",
+    "f56b2ee7-c69e-5e3b-85b0-e671d907ba58",
+    "2ca463c2-bd1f-5a13-a395-0e2c57a5ad8f",
+    "0aa9811b-2e21-4b8d-9fc6-93d3ebb91070",
+    "ecdbbaba-0902-58ca-a1eb-1e1e3ca25d55",
+    "123d394b-11ce-449a-a8b6-7fda5a254a6d",
+    "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+  ],
+  "date": "2026-11-18",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Issue #1733, baseline c9b9b661. Traced the #1500 matched report case (investigator I, relying recipient R, fixed information and correction target) through five transitions: T1 epistemic reason (F6 f56b2ee7 is closed only as an unwitnessed existential; I's thin reason to believe the result is an additional, separately warranted case assumption with no record connecting F6's witness to I; preference-independent 2ca463c2 also existential, conditional and underdetermined; #930 relevance step exhausted, not reopened), T2 moral reason (no registered instance; invited-reliance rationale in prose), T3 claimant and demander (ecdbbaba, 681f5b58 OPEN), T4 explanatory source (realist, natural-goodness, naturalist and authorial accounts share a categorical T2 verdict and differ on its explanation; the functional moral-only account shares only the instrumental action recommendation and disputes T2's categorical force, a discriminating question), T5 governor (Dei Filius governance chain to the GOD_4 root c0f4a346). Branches: global denial of the same reason relation excluded (b30a1925, d9181e4c); moral-only denial survives as a model (0aa9811b). New formal connection at T5: LORD_3 (definition 9dcfcb4e, third sense of disambiguation aa1de96a) = LORD_2 plus willing some good of their own to every other intellectual being; sense bridge e01dd128 (LORD_3 -> LORD_1) strictly weaker than eb6611a5 (result 3e063b5e, strictness controls 96ce418a part 2); restricted willing premise 47c6da1b with two verified supports, from the #1732 result c691e3d0 as sole premise (strength order, result 0e576e4d; c691e3d0's only derivation 12865cf3 itself uses a94c5dfc) and from a94c5dfc with the q.5 a.1 coextension 00e962ae without the self case (result 12ae7844); the premise is consistent with the strong (exclusive) ordered-love variant 1dd68893, an unattributed analyst strengthening of ad 3, where a94c5dfc fails (controls part 5), but since both supports go through a94c5dfc, which is incompatible with 1dd68893 on distinct non-rational caused effects, under that strong variant with non-rational creatures 47c6da1b has no verified derivation and stands only as a direct assumption (the conflict holds for the strong variant only; the weak, ad-3-faithful reading is compatible with a94c5dfc); unified Dei Filius root re-derived with its lord conjunct through LORD_3 (result 483129f2), bundle jointly satisfiable on the unified root model (result 80920b5c). Frontier-diff: open premises reaching the root 511 -> 513 (a94c5dfc and 2a168a36 now reach the root as bare premises), support alternatives 526 -> 533; the #1732 love result now has a root consumer. Rejected: typing 'governs for the good willed' (no typed end-is-good-of-x relation; would be a definitional relabeling); a moral-instance statement whose only premise transcribes the reliance verdict; treating the shared action recommendation as evidence for any one account's explanation; reading LORD_1 dominion as directed moral jurisdiction.",
+  "evidence": [
+    "0e576e4d-f199-4ced-ac09-e81bbd500b6d",
+    "12ae7844-4c78-4c60-8bb9-fb03728f118b",
+    "3e063b5e-98a8-48ce-8431-a3fc6f7eab01",
+    "483129f2-7753-477c-ade3-92698e003b84",
+    "96ce418a-a2d7-40ac-bf8d-cf698f16f4dc",
+    "80920b5c-eabe-40aa-86c7-b11231531913"
+  ],
+  "blocker": "Unbuilt transitions: U1 a registered moral-reason instance for the report case (owner #1500); U2 moral reason to R's directed claim and an authorized demander (#1508/#1433); U3 identity of the moral order giving I's reason with the order by which the GOD_4 root governs (needs a typed relation between Governs g x and an end that is x's good; #1460 B2/B5, #1747); U4 dominion (LORD_1) to jurisdiction to impose obligations (#1460 B5, #1531). The LORD_3 bridge's remaining burden (benevolent government gives dominion, not only claims to gratitude or reasons to follow sound advice) is unanswered; the natural-diffusion / foreseen-collateral alternative still applies to intellectual effects of the willing premise.",
+  "current_assessment": {
+    "date": "2026-11-18",
+    "statement_ids": [
+      "47c6da1b-910a-43f1-bfd8-ba7e7e9f48e4",
+      "e01dd128-e0a3-4347-879c-64aa452fde59",
+      "eb6611a5-f8a7-44f6-9bf1-2f65eb80b3cb",
+      "c0f4a346-b265-4091-9d38-69c69582ea95",
+      "c691e3d0-5dd0-404a-a1dd-9a4a278dcd31",
+      "a94c5dfc-c722-49fe-a242-dd39409b079d",
+      "f56b2ee7-c69e-5e3b-85b0-e671d907ba58",
+      "2ca463c2-bd1f-5a13-a395-0e2c57a5ad8f",
+      "0aa9811b-2e21-4b8d-9fc6-93d3ebb91070",
+      "ecdbbaba-0902-58ca-a1eb-1e1e3ca25d55",
+      "123d394b-11ce-449a-a8b6-7fda5a254a6d",
+      "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+    ],
+    "scope": "Group 8 integration: the moral route on the fixed report case from F6 to the GOD_4 root, and the LORD_3 benevolent-governance support option for the Dei Filius lord conjunct.",
+    "assessment": "The route is one navigable map from F6 to the GOD_4 root with every unbuilt step named; it is formally disconnected at U1-U3. F6 is closed only as an unwitnessed existential; I's thin reason at T1 is an additional, separately warranted case assumption, and preference-independent force for I is underdetermined. T2 has defeasible positive support for a scoped reliance reason on this case, not a registered instance. T3 and T4 are underdetermined among rights-enriched realism, natural goodness and the authorial account, which share a categorical T2 verdict but differ on its explanation; the functional moral-only account shares only the instrumental action recommendation (conditional on R's aims, which no premise makes binding on I) and disputes T2, so whether the T2 reason is categorical or instrumental is itself a discriminating question. T5: the LORD_3 route is a formally complete, jointly satisfiable conditional support option; its bridge is strictly weaker and prima facie more plausible than the LORD_2 bridge because it excludes a creator and governor indifferent to the good of intellectual creatures; since the good willed may be the creature's own esse, which any intentional creator wills, the Cudworth/Wielenberg objection largely remains, and the passage from benevolent government to dominion and the passage from dominion to directed moral jurisdiction remain open. The moral argument does not yet give independent evidence for God's existence: the God conclusion on these routes comes from the Dei Filius root's metaphysical premises; the moral-authority investigation motivated a refined lord route (LORD_3), whose willing premise comes from the divine-love results, and no moral premise from T1-T4 feeds it (U3 open). Both verified supports of the willing premise 47c6da1b go through a94c5dfc, so under the strong (exclusive) ordered-love variant 1dd68893, an unattributed analyst strengthening of ad 3, with non-rational creatures, it stands only as a direct assumption; the weak, ad-3-faithful reading is compatible with a94c5dfc. Earlier judgments kept unchanged: #1508 (basic directed rights survive as the strongest rival to a required divine authority), #1500 (no discrimination among functional, realist and divine accounts), #1732 love warrant. No premise established, no rival defeated.",
+    "next_test": "U3 on the same case: give Governs a typed end that is the governed being's own good and test whether the GOD_4 root's government of R includes the ordering under which I's reliance reason holds, against the necessary impersonal-norm rival (assign within #1747).",
+    "note": "docs/notes/natural-goodness-function-and-authority.md#group-8-integration-from-reasons-and-goods-to-moral-authority-and-god-1733-2026-11-18",
+    "reviewed_revision": "d52c0e7009847686c942a5cf7abe9e76004acfef",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Proposed delivery for issue #1733 (first integration slice and checklist items 1-3); no independent semantic review yet.",
+    "supersedes": "none"
+  }
+}
