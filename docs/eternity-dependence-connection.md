@@ -1304,7 +1304,8 @@ Shared dependencies stay visible:
   evidence.
 - `c4661518` and `140544c4` enter every presence derivation together. They are
   calibrations of `GivesAt`, `IsAt` and `InAct`, and an inertia theorist
-  accepts both.
+  accepts both. The presence step `9469ab62` (through `0ed3a583`) uses
+  `140544c4` at arbitrary histories, and that scope is unassessed.
 - `da72ae93` joins origin from another to reception in a principle. It is
   unassessed here, and its one registered derivation (`b25dbaad`) depends on
   the Fourth Way.
@@ -1404,8 +1405,9 @@ weak concurrent actualization `40a97664`, is unresolved against extrinsic
 existential inertia: each side's recorded rationale assumes what the other
 denies, and the causal requirement on cessation that both accept favors
 neither. The rest of the route is no better supported than that crux together
-with concurrence `d7f5a528`, for which no warrant is on file, and the
-unassessed reception bridge `da72ae93`. This covers `ce55210c`, `23e04ae5`,
+with concurrence `d7f5a528`, for which no warrant is on file, the
+unassessed reception bridge `da72ae93` and, for the presence step, the
+unassessed all-histories scope of `140544c4`. This covers `ce55210c`, `23e04ae5`,
 `76d2cc96` and the presence component of `c7c32f20`. The two calibration
 premises carry no recorded substantive objection: `c4661518` is moderate prima
 facie, and `140544c4` is strong prima facie for its selected-history instance,
@@ -1452,8 +1454,8 @@ statements is kept unchanged, and **no revision is declared**:
   `0ddaa334` for the neighbours they name.
 
 The three first grades (`140544c4` at the selected history, `c4661518`, and
-`732302a1` as a source-internal reading) fill places where no grade existed. They contradict
-no earlier statement: `c94eed5b` identified no substantive objection to the
+`732302a1` as a source-internal reading) fill places where no grade existed.
+They contradict no earlier statement: `c94eed5b` identified no substantive objection to the
 first two, and the grade of `732302a1` attaches to the reading, which the
 2026-11-17 outcome did not assess.
 
