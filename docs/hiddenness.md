@@ -275,8 +275,9 @@ love/access conditions while containing a gap. It supplies no actual reason.
 
 **The strongest remaining challenge** asks why modest recognizable access would
 frustrate those goods for this person now. The existing
-`HIDDENNESS-BELIEF-WITHOUT-ACCEPTANCE` distinction defeats a simple claim that
-belief compels acceptance. It leaves subtler motivational or developmental
+`HIDDENNESS-BELIEF-WITHOUT-ACCEPTANCE` model shows that belief does not
+formally entail acceptance, which removes a simple 'belief compels acceptance'
+premise from the encoded argument. It leaves subtler motivational or developmental
 considerations to be assessed. The critic can grant that God need not produce
 constant vivid presence and still ask why entering reciprocal conscious relation
 is unavailable merely by trying. Citing later salvation, an implicit relationship,
@@ -307,10 +308,10 @@ access and the judgment that no sufficient reason exists. The
 [evil audit](rowe-evidential-evil.md#sense-by-sense-objection-audit-2026-11-17)
 records the shared permission and evidential-sensitivity tests. No new premise
 truth, root defeat, source attribution or certification is claimed by this prose
-mapping; independent semantic review of this final formulation remains required.
+mapping.
 
 **Integration review (2026-11-17):** fresh independent semantic challenge of
 this dated continuation and the coordinator conclusions found no substantive
-defects; no repair round was required. This supersedes the pending-review work
-status above. See the [integration record](notes/unique-feedback-explanation-311.md#reviewed-owner-reply-integration-2026-11-17)
+defects; no repair round was required. This supersedes the pending-review
+wording of this dated section. See the [integration record](notes/unique-feedback-explanation-311.md#reviewed-owner-reply-integration-2026-11-17)
 for verification, source scope and unchanged formal status.

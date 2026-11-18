@@ -464,11 +464,10 @@ The next tests should discriminate between these surviving accounts:
 Research status: definitions, old result types and existing source interpretations
 were inspected; these assessments are prose deductions and provisional warrant
 judgments. No Lean declaration, formal result, source attribution, statement
-meaning, root premise or evidence-floor status changes in this audit. A fresh
-independent semantic review must challenge the final wording before integration.
+meaning, root premise or evidence-floor status changes in this audit.
 
 **Integration review (2026-11-17):** fresh independent semantic challenge of
 this dated continuation and the coordinator conclusions found no substantive
-defects; no repair round was required. This supersedes the pending-review work
-status above. See the [integration record](notes/unique-feedback-explanation-311.md#reviewed-owner-reply-integration-2026-11-17)
+defects; no repair round was required. This supersedes the pending-review
+wording of this dated section. See the [integration record](notes/unique-feedback-explanation-311.md#reviewed-owner-reply-integration-2026-11-17)
 for verification, source scope and unchanged formal status.

@@ -1739,7 +1739,7 @@ well-foundedness would not decide that comparison.
 The owner-focused batch integrates the relational reply above with the
 [same-source motion reduction](prima-via-strength-consumers.md#2026-11-17-reducing-the-respects-through-the-source-of-esse),
 [intrinsic-actuality reply](de-ente-extrinsic-source-1629.md#intrinsic-actuality-and-the-alternatives-own-commitments-2026-11-17),
-[unreceived-esse uniqueness reply](de-ente-esse-source-1628.md),
+[unreceived-esse uniqueness reply](de-ente-esse-source-1628.md#unreceived-esse-and-the-two-questions-about-plurality-2026-11-17),
 [evil-sense audit](../rowe-evidential-evil.md#sense-by-sense-objection-audit-2026-11-17)
 and [hiddenness inclusion](../hiddenness.md#hiddenness-as-a-special-case-of-evil-2026-11-17).
 The substantive conclusions and continuing tests remain in those six existing

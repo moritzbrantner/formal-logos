@@ -394,6 +394,6 @@ positive global route and the exact local-witness boundary.
 
 **Integration review (2026-11-17):** fresh independent semantic challenge of
 this dated continuation and the coordinator conclusions found no substantive
-defects; no repair round was required. This supersedes the pending-review work
-status above. See the [integration record](unique-feedback-explanation-311.md#reviewed-owner-reply-integration-2026-11-17)
+defects; no repair round was required. This supersedes the pending-review
+wording of this dated section. See the [integration record](unique-feedback-explanation-311.md#reviewed-owner-reply-integration-2026-11-17)
 for verification, source scope and unchanged formal status.

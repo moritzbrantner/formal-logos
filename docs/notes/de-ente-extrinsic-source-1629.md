@@ -372,7 +372,9 @@ mode-unspecified proposition and separately types efficiency; its bridge
 of coverage `d1f3ffcc` or its nature-source bridge `600f91cb`; their existing
 derivational statuses are unchanged. The source-first path through common
 source `c35b1a5c`, fixed-esse
-causality `da09703b` and the twelve-input GOD_4 consumer `c98328f1` still needs
+causality `da09703b` and the twelve-input GOD_4 consumer `c98328f1` (or main's
+witness-retaining `d9ee967a`, which replaces population/whole-roster with the
+De ente source `ce7edf53`) still needs
 its actual-grounding, priority, grading, causal transfer, component and nominal
 interfaces. A necessary/underived concession alone cannot replace that bundle.
 
@@ -389,6 +391,6 @@ evidence is reused, not certification of this prose.
 
 **Integration review (2026-11-17):** fresh independent semantic challenge of
 this dated continuation and the coordinator conclusions found no substantive
-defects; no repair round was required. This supersedes the pending-review work
-status above. See the [integration record](unique-feedback-explanation-311.md#reviewed-owner-reply-integration-2026-11-17)
+defects; no repair round was required. This supersedes the pending-review
+wording of this dated section. See the [integration record](unique-feedback-explanation-311.md#reviewed-owner-reply-integration-2026-11-17)
 for verification, source scope and unchanged formal status.
