@@ -1742,13 +1742,19 @@ those governed. One conjunct of that reply is now typed and composed:
   than `eb6611a5` (strength relation verified by `3e063b5e`; strictness by the
   controls `96ce418a`, part 2).
 - **Willing premise** `47c6da1b`, restricted to distinct intellectual effects
-  whose being GOD_4 causes. Two support options: from the #1732 result
-  `c691e3d0` alone (strength relation, result `0e576e4d`), and from
-  `CausalExistenceWilling` `a94c5dfc` with the q.5 a.1 coextension `00e962ae`
-  (result `12ae7844`), which avoids the self-case premise `2a168a36`. It is
-  consistent with the q.20 a.2 ad 3 ordered-love sibling `1dd68893` (rational
-  read as having intellect) on a non-rational effect where `a94c5dfc` fails
-  (controls part 5).
+  whose being GOD_4 causes. Two verified support options: from the #1732
+  result `c691e3d0` as its only premise (strength relation, result
+  `0e576e4d`), and from `CausalExistenceWilling` `a94c5dfc` with the q.5 a.1
+  coextension `00e962ae` (result `12ae7844`), which avoids the self-case
+  premise `2a168a36`. Both run through `a94c5dfc`: `c691e3d0`'s only
+  derivation (argument `12865cf3`) uses it. The premise itself is consistent
+  with the q.20 a.2 ad 3 ordered-love sibling `1dd68893` (rational read as
+  having intellect) on a non-rational effect where `a94c5dfc` fails (controls
+  part 5). But `a94c5dfc` is incompatible with `1dd68893` on distinct
+  non-rational caused effects (see the love note), so **if ordered love holds
+  and non-rational creatures exist, `47c6da1b` has no verified derivation** and
+  stands only as a direct assumption. Its better placement relative to
+  `a94c5dfc` holds for that direct option only.
 - **Root route** `deiFiliusRootUnifiedBenevolentLord` (result `483129f2`):
   the unified Dei Filius root `c0f4a346` with its lord conjunct through LORD_3
   instead of LORD_2; every other input is that of `deiFiliusRootUnified`.
@@ -1758,14 +1764,29 @@ those governed. One conjunct of that reply is now typed and composed:
 
 What this changes: the #1732 recipient-good result now has a root consumer, and
 the authority bridge on this route no longer has to cover a cause and governor
-indifferent to the good of the rational beings it governs. What it does not
+indifferent to the good of the intellectual beings it governs. The good willed
+need only be some good of the creature's own, and on support `12ae7844` it is
+the creature's esse, which any intentional creator wills in creating it. What it does not
 change: the governance and willing conjuncts are separate (the type does not
 say God governs R *for* the good willed to R); wisdom beyond having intellect,
 justice and the exclusion of harmful directives are untyped; and **LORD_1 is
 dominion over everything else, not a directed moral jurisdiction to impose
 obligations** on I. The objection that a beneficiary of good care owes
 gratitude or has reason to follow sound advice, rather than owing obedience,
-applies to `e01dd128` unchanged.
+applies to `e01dd128` unchanged. Its target is the inference in `e01dd128`
+from benevolent causing and governing to authority to dispose. Its mechanism:
+benefit and good will ground claims to gratitude, and competence grounds
+reasons to defer to advice, without either conferring authority to dispose.
+Its independent justification: ordinary cases in which benevolence and causal
+origin coexist with the absence of dominion. These are the parent of an adult
+recorded as a counterexample in the LORD_1 definition `59350e3b`, a generous
+benefactor whose beneficiary owes gratitude but not obedience, and an expert
+adviser whose correct advice gives reasons to listen but no authority to
+command (the #1508 adviser case above). The theist's candidate relevant
+difference, recorded as the open reply, is total dependence for existence:
+a creator ex nihilo on whom the creature depends for its being at every
+moment, unlike any partial benefactor or parent. Whether total dependence
+makes the difference to authority is not established here.
 
 ### Exact unbuilt transitions
 
@@ -1786,10 +1807,11 @@ applies to `e01dd128` unchanged.
 
 ### Cumulative provisional assessment (proposed)
 
-The route is now one connected structure from F6 to the GOD_4 root, with every
-unbuilt step named. Its formal part (T5) is a conditional support option of the
+The route is now one navigable map from F6 to the GOD_4 root, with every
+unbuilt step named; it is formally disconnected at U1–U3. Its formal part (T5) is a conditional support option of the
 same strength as the other Dei Filius routes plus one weaker authority bridge
-and one restricted, comparatively better-placed willing premise. Its warrant
+and one restricted willing premise, better placed than `a94c5dfc` only as a
+direct assumption (both verified supports go through `a94c5dfc`). Its warrant
 is unequal along the chain. T1 is well supported in its thin form; T2 has
 defeasible positive support for a scoped reliance reason on this case (#1500),
 not a registered instance; T3 and T4 are underdetermined among the realist,
@@ -1797,9 +1819,12 @@ natural-goodness and authorial accounts, which agree on the case's verdict;
 T5's governance premise `123d394b` and the willing premise share #1459's
 intentional-agency dependency, and the natural-diffusion / foreseen-collateral
 alternative still applies to intellectual effects. The LORD_3 bridge is
-prima facie more plausible than the LORD_2 bridge, since it answers the
-bare-power objection, but its remaining burden (why benevolent government gives
-dominion, not only claims to gratitude) is substantive and unanswered here.
+prima facie more plausible than the LORD_2 bridge, because it excludes a
+creator and governor indifferent to the good of intellectual creatures. Since
+the good willed may be the creature's own esse, which any intentional creator
+wills, the Cudworth/Wielenberg objection to authority from intentional
+creation largely remains; its remaining burden (why benevolent government
+gives dominion, not only claims to gratitude) is substantive and unanswered.
 
 Compared with the earlier recorded judgments: the #1508 judgment (basic
 directed rights survive as the strongest rival to a *required* divine
@@ -1810,8 +1835,9 @@ among functional, realist and divine accounts on their full metaphysics) are
 changes, since `c691e3d0` now feeds a root route. The moral argument does not
 yet supply independent evidence for God's existence: the God conclusion on
 these routes comes from the metaphysical premises of the Dei Filius root, and
-the moral route currently contributes an attribute (benevolent governance as a
-ground of dominion), not an existence argument. That would change only with
+the moral-authority investigation motivated a refined lord route (LORD_3),
+whose willing premise comes from the divine-love results; no moral premise from
+T1–T4 feeds it (U3 open). It is not an existence argument. That would change only with
 U1–U3 built and defended.
 
 **Next distinct question:** U3 in typed form, directly on the same case: give

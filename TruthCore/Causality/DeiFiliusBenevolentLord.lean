@@ -68,8 +68,9 @@ def IsBenevolentLordByCauseAndGovernment {Being Respect : Type}
 /-- OPEN application bridge, restricted to intellectual recipients: for every
 GOD_4 g with will and every distinct intellectual x in act as to being whose being
 g causes, g wills x some good of x. Weaker than `DivineWillsGoodForAllExisting`
-(drops the self case, non-intellectual recipients and the HasWill/CausesIn
-antecedents' role) and, with the q.5 a.1 coextension, than `CausalExistenceWilling`. -/
+(it restricts to distinct intellectual recipients and adds the HasWill and
+CausesIn antecedents) and, with the q.5 a.1 coextension, than
+`CausalExistenceWilling`. -/
 def IntellectualRecipientExistenceWilling {Being Respect : Type}
     (IsGod HasWill HasIntellect : Being → Prop) (InAct GoodIn : Being → Respect → Prop)
     (CausesIn : Being → Being → Respect → Prop)
