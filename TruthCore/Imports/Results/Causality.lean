@@ -125,6 +125,7 @@ public import TruthCore.Results.Causality.DirectEsseRootUniquenessAtBeing.Soluti
 public import TruthCore.Results.Causality.DirectEsseRootUniquenessFromAsymmetry.Solution
 public import TruthCore.Results.Causality.DirectEsseRootUniquenessScopeControls.Solution
 public import TruthCore.Results.Causality.DivineVeracity1410.Solution
+public import TruthCore.Results.Causality.DivineVeracityAssembly1732.Solution
 public import TruthCore.Results.Causality.DivineVeracityContent1410.Solution
 public import TruthCore.Results.Causality.DurationMeasureCandidates.Solution
 public import TruthCore.Results.Causality.EsseCauseEfficiency.Solution

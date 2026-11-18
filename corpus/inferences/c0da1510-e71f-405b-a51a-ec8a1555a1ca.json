@@ -1,0 +1,14 @@
+{
+  "id": "c0da1510-e71f-405b-a51a-ec8a1555a1ca",
+  "label": "Assembled content Route B with legacy representation yields GodAssertsOnlyTruth (inference)",
+  "input_statement_ids": [
+    "389c37fd-0637-4a40-8073-705a5bdb2c20",
+    "4da01692-55b0-4e73-b3dd-06564f2aef9f",
+    "f221d6c6-3a49-4a98-bf05-a12450d1fac7"
+  ],
+  "output_statement_id": "5a035a1e-e668-4327-b989-2f0aff4aece2",
+  "rule": "Compose contentRouteB with legacyAssertionFromContent at one signature, semantics, world and content profile",
+  "meaning": "Analyst assembly, attribution deferred. For ONE sigma, S, w, C and V: actual assent to each true interpreted negation of an actual assertion and no assertion of a content whose negation is assented to give content assertion truth classically (checked contentRouteB, no positive sincerity or global omniscience); the OPEN one-way representation of V by the same C at the same S and w then gives GodAssertsOnlyTruth for V. No premise is added or discharged. Selected countercompleteness may itself come from domain completeness, coverage and negation closure (checked counterCompleteFromDomain); that is a separate existing argument.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

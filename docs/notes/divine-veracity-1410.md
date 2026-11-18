@@ -872,3 +872,86 @@ calibration connects the existing n to that operation and content, or if a
 counterexample retains those full conditions while producing false assent.
 No new formal result or premise change is claimed; existing checked evidence
 and its boundaries are reused.
+
+
+## Group 7 integration: assembled assertion branches (#1732, 2026-11-18)
+
+Status: complete proposed integration outcome for independent semantic
+challenge, baseline `354540f92e4139d445355f6e3f49374fdb151b39`. It reuses the
+sections above and adds composition and one joint witness only; no new
+primitive, premise, attribution or source reading. Love/goodness half:
+[divine love note](divine-love-goodness-bridge.md#group-7-integration-recipient-good-route-1732-2026-11-18).
+
+### Assembled branches at one bearer, world and content profile
+
+Batch `specs/divine-veracity-assembly-1732.toml` (module
+`TruthCore.Results.Causality.DivineVeracityAssembly1732`) composes the checked
+#1414 theorems at ONE signature σ, content semantics S, designated world w,
+content-attitude profile C and given legacy profile V. The bearer quantified
+throughout is any g with `σ.IsGod g ∧ σ.HasClassicalAttributes g` of the root
+`Signature` (GOD_4 with the primitive classical field).
+
+| Branch | Theorem / result | Open inputs at that same σ, S, w, C, V | Ends at |
+| --- | --- | --- | --- |
+| A | `assertionTruthRouteA` (zero-axiom) | ContentSincere c5035612, ScopedAccuracy 7cddac02 on D, AssertionsInDomain 8376542e on the same D, AssertionRepresentation f221d6c6 | `GodAssertsOnlyTruth` 5a035a1e |
+| B | `assertionTruthRouteB` (classical) | CounterComplete 389c37fd, NoContraryAssertion 4da01692, AssertionRepresentation f221d6c6 | 5a035a1e |
+| B via domain | existing `counterCompleteFromDomain` then B | DomainComplete, AssertionsInDomain, NegationClosed on one D | CounterComplete, then 5a035a1e |
+| Joint witness | `assembledJointWitness` | none: existing selective sample, bearer `true`, world `false`, content `a`, V = existential erasure of C | both bundles nonvacuous together, actual legacy assertion, 5a035a1e holds |
+
+Corpus IDs: results `d18f971b` (A), `df21f785` (B) and `75e72e5e` (joint
+witness, statement 27f13d98).
+
+The computed frontier delta records the two assembled bundles as verified
+support alternatives for 5a035a1e (524 to 526); no open premise reaching the
+root changes and no bare premise is added. They are **assemblies of existing
+support, not new evidence**: each is exactly the composition of two already
+checked theorems, and statement-level chaining already connected them. What
+the composition adds is the guarantee that the representation premise is
+about the same C, S and w as the content premises, and the joint witness shows
+that the A and B bundles plus representation are satisfiable together with an
+actual assertion (for the induced legacy profile only). Downstream the target
+5a035a1e feeds the checked confirmation step 311a4a65 to c1deb2ee and the
+existing authority route; `ConfirmingIsAsserting` b426b086 stays OPEN there.
+
+Shared premises: AssertionRepresentation f221d6c6 is shared by every branch
+and remains OPEN with no other argument (applicability of the one-way
+content representation to a given legacy V). A and the domain form of B share
+AssertionsInDomain at the same D. The primitive classical-attribute field and
+GOD_4 naming are shared with every other attribute route.
+
+### Which intellect/operation findings supply an input
+
+| Existing finding | Relation to the assembled inputs |
+| --- | --- |
+| `godHasIntellect` / `godHasWill` (66aecdd7), capacity results | Weaker: unary powers; supply no actual assent, content or accuracy. |
+| `intellectualPureActOperatesFromCapacity` (Dei Filius batch), q.14 operation identity above | Weaker: an immanent operation of the same pure-act bearer; no external content, no assent relation of `Attitudes`. |
+| Cognitive-defect argument (section above) | Proposed reason for ScopedAccuracy on a domain of successful operations; needs a new interpretation: actual assent to a content is an exercise of that operation and its falsehood a privation. |
+| Causal-exemplar / eternal-presence proposal (operation-identity section) | Candidate source of DomainComplete for actual contingent contents; needs actual selection, reference and efficacy kept distinct. Not refuted by the unindexed mismatch control. |
+| Act-object and responsibility reasons (act-object section above) | Proposed reasons for ContentSincere and NoContraryAssertion; their exceptionless force for this GOD_4 is open (now with #1737). |
+| Same-witness consumers (#1750 `localTeleologyPerfectRoot`, #1753 `deEnteSourceIsGod` 7a791743) | Different signature: world-indexed profile `m`, `w`, q3 profile. No bridge yet makes their witness a `σ.IsGod ∧ σ.HasClassicalAttributes` bearer of `Attitudes`; that bearer transport is an exact missing interface, not an existing route. |
+
+### Cumulative provisional assessment (proposed)
+
+Positive warrant currently offered: for B, the sign-function and
+responsibility reasons against contrary assertion together with a selected
+countertruth cognition; for A, the act-object sincerity reasons together with
+the cognitive-defect argument for accuracy on asserted domains. These are
+different reasons with distinct failure points, but they share the
+representation bridge, the GOD_4 applicability of the classical field, and
+the q.14 actual-operation extension. B carries the smaller sincerity burden;
+A carries the smaller cognition burden (accuracy only where assertions lie).
+Neither branch is shown better warranted overall. Overall: the conditional
+chain to 5a035a1e is formally complete and nonvacuous at one bearer, world
+and content profile; its warrant remains **underdetermined at the moral
+(beneficial false assertion) and divine-cognitive-application bridges**, as
+the sections above already concluded. The strongest standing rival is the
+beneficial false-assertion account (cognition complete and accurate, the
+assertion intentionally false for the audience's good); its price is
+overriding the audience's epistemic agency and showing that truthful and
+withholding alternatives fail comparatively. Revision: strengthen on a
+defended non-overridable assertoric-responsibility principle applied to the
+same GOD_4, or on a calibrated actual-operation-to-content bridge for one
+asserted contingent content; weaken if a fitting beneficial false assertion
+survives with genuine assertion and reasonable audience agency retained.
+Owners: #1439/#1440 (assertion-premise investigations), #1737 (common
+perfect-agency policy), #1734 (source and cognitive reliability).

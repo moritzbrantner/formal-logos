@@ -1,0 +1,29 @@
+{
+  "id": "12865cf3-d419-41f3-b3cf-4edf735932ba",
+  "label": "Goodness, will and OPEN volitional bridges yield willing GOOD_4 to all existing",
+  "premise_statement_ids": [
+    "e0dae79f-c042-5a08-a148-725d0468df91",
+    "66aecdd7-ea4e-55c6-9377-10db08893854",
+    "00e962ae-f109-55f7-a7fd-f107ce0dea6b",
+    "a94c5dfc-c722-49fe-a242-dd39409b079d",
+    "2a168a36-bd60-491a-8ad7-ce5b1d2fb560"
+  ],
+  "conclusion_statement_id": "c691e3d0-5dd0-404a-a1dd-9a4a278dcd31",
+  "inference_ids": [
+    "5dc7ae77-beb9-451d-986f-ac05cbd856c5"
+  ],
+  "meaning": "Analyst registration of the PR #1458 q.20 a.2 reconstruction, attribution deferred. Fix one GOD_4 g with will and one x in act in esse; the witness respect is esse, x being good there by the coextension of good and actuality (00e962ae). If x is not g, supreme goodness (e0dae79f) gives that g causes x in esse, and the OPEN bridge CausalExistenceWilling turns that causation by a God with will into willing x's existence-good to x. If x is g, supreme goodness gives g's goodness in esse and the OPEN DivineOwnGoodWilling bridge gives g's willing of it to itself. The self/other split uses an explicit DecidableEq instance on the carrier (a decision procedure for identity, not a philosophical premise), so the proof is zero-axiom. Neither bridge follows from causation, having will or supreme goodness; the finite LoveControls in DivineLoveBridge keep goodness, will and coextension fixed and drop each bridge in turn.",
+  "definition_ids": [
+    "08b826db-2d9c-48e5-b69c-d4ac54088518",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "4c8f0e6b-7ef6-5be5-851c-cdf4f0301546",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "58e0de99-6199-5851-8e03-381bca0d44f0"
+  ],
+  "disambiguation_ids": [
+    "9880c06b-e689-5294-b349-badb981abbf6"
+  ]
+}

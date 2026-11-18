@@ -1,0 +1,8 @@
+{
+  "id": "08b826db-2d9c-48e5-b69c-d4ac54088518",
+  "label": "Willing some good to a recipient in a respect (q.20 a.2 velle bonum alicui)",
+  "term": "willing good to a recipient",
+  "definition": "WillsGoodFor g x r: g wills, for x itself, the good x has in respect r (velle bonum alicui, ST I q.20 a.2). The good willed must be a good of the recipient. Excluded: a bare wish that some good exist; merely causing, foreseeing or enabling x's good; instrumental use of x with no good willed to x; and friendship, affection, passion, equal degree or ultimate concern for x. It carries no time index and no claim that the willing efficiently causes x.",
+  "basis": "stipulative",
+  "note": "Analyst interpretation, attribution deferred (docs/notes/divine-love-goodness-bridge.md). In Lean the relation is the primitive parameter WillsGoodFor of TruthCore.Case.Catholicism.DivineLoveBridge; nothing defines it. It is constrained only by the OPEN bridges CausalExistenceWilling (from causation of a distinct actual effect's esse by a God with will) and DivineOwnGoodWilling (self-case), and it feeds the OPEN WillingGoodEntailsLove. No transitivity, asymmetry or well-foundedness is assumed. A pinned witness for ST I q.20 a.2, read in context, would source it."
+}

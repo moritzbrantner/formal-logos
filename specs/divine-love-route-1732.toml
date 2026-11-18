@@ -1,0 +1,63 @@
+# #1732 registration of the existing DivineLoveBridge composition (ST I q.20
+# a.2 reconstruction, PR #1458) as a corpus support option from GOD_4's
+# supreme goodness e0dae79f and will 66aecdd7. Analyst formulations,
+# attribution deferred. The causal-to-recipient-willing application, the
+# self-case and the love meaning stay explicit OPEN premises. The conclusion
+# does not yet feed a root route; its named consumers are owned by #1735.
+
+[batch]
+vocab = "TruthCore.Case.Catholicism.DivineLoveBridge"
+results = "TruthCore.Results.Case.Catholicism.DivineLoveRoute"
+
+[[statement]]
+id = "A GOD_4 with will causing a distinct actual being's esse wills that good for it"
+lean = "CausalExistenceWilling"
+paraphrase = "Analyst formulation, OPEN bridge, attribution deferred (ST I q.19 a.4 / q.20 a.2 theme). For every GOD_4 g with will and every distinct x in act in esse: if g causes x in esse (the generic causal-responsibility relation of the stage-2 goodness premise), then g wills to x the good x has in esse. The intentional, recipient-directed willing is not contained in causation, in having will or in supreme goodness; this is the causal-to-recipient-willing application the natural-diffusion and foreseen-collateral rivals deny."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "7c64b499-6dba-5e03-bdf3-5acea95d8836", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "08b826db-2d9c-48e5-b69c-d4ac54088518"]
+disambiguations = []
+
+[[statement]]
+id = "A GOD_4 with will that is GOOD_4 in esse wills that GOOD_4 for itself"
+lean = "DivineOwnGoodWilling"
+paraphrase = "Analyst formulation, OPEN bridge, attribution deferred (ST I q.19 a.1 / q.20 a.1 theme). For every GOD_4 g with will that is good in esse, g wills that good in esse to itself. Needed because the stage-2 supreme-goodness predicate concerns causation of distinct beings only; the unary HAS_WILL_1 predicate records no object of willing."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "7c64b499-6dba-5e03-bdf3-5acea95d8836", "4c8f0e6b-7ef6-5be5-851c-cdf4f0301546", "08b826db-2d9c-48e5-b69c-d4ac54088518"]
+disambiguations = []
+
+[[statement]]
+id = "Willing an actual GOOD_4 of a recipient to it suffices for non-passional q.20 love"
+lean = "WillingGoodEntailsLove"
+paraphrase = "Analyst formulation, OPEN one-way interpretive bridge, attribution deferred (ST I q.20 a.2: to love is to will good to someone). For all g, x and respects r: if x is good in r and g wills that good to x, then g loves x in the thin non-passional sense. It adds no friendship, affection, equal degree, approval of wrongdoing or perfect relational love."
+definitions = ["4c8f0e6b-7ef6-5be5-851c-cdf4f0301546", "08b826db-2d9c-48e5-b69c-d4ac54088518", "ac87be3d-537d-440e-a38c-cb4839d5bedc"]
+disambiguations = []
+
+[[statement]]
+id = "Every GOD_4 wills some GOOD_4 to every being in act in esse"
+lean = "DivineWillsGoodForAllExisting"
+paraphrase = "Analyst formulation, attribution deferred. For every GOD_4 g and every x in act in esse (God included when God is in act) there is some respect r in which x is good and g wills that good to x. The respect is existential; nothing is asserted about every good, about merely possible beings, about the mode or degree of willing, or that an act of willing efficiently causes x. It does not assert that a GOD_4 exists."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "4c8f0e6b-7ef6-5be5-851c-cdf4f0301546", "08b826db-2d9c-48e5-b69c-d4ac54088518"]
+disambiguations = []
+
+[[statement]]
+id = "Every GOD_4 loves every being in act in esse in the non-passional q.20 sense"
+lean = "GodLovesAllExisting"
+paraphrase = "Analyst formulation, attribution deferred. For every GOD_4 g and every x in act in esse (God included when God is in act), g loves x in the thin q.20 sense of willing some good to it. Nothing is asserted about nonexistent possibles, friendship, degree, affection, temporal love, interpersonal relationship or the perfect love of the hiddenness challenge. It does not assert that a GOD_4 exists."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "ac87be3d-537d-440e-a38c-cb4839d5bedc"]
+disambiguations = []
+
+[[argument]]
+id = "Goodness, will and OPEN volitional bridges yield willing GOOD_4 to all existing"
+theorem = "willsGoodForAllExisting"
+premises = ["e0dae79f-c042-5a08-a148-725d0468df91", "66aecdd7-ea4e-55c6-9377-10db08893854", "00e962ae-f109-55f7-a7fd-f107ce0dea6b", "A GOD_4 with will causing a distinct actual being's esse wills that good for it", "A GOD_4 with will that is GOOD_4 in esse wills that GOOD_4 for itself"]
+conclusion = "Every GOD_4 wills some GOOD_4 to every being in act in esse"
+axioms = []
+rule = "Split on whether the existing being is God itself; for a distinct being apply the causal field of supreme goodness and the causal-to-willing bridge, for God the self-good bridge; supply the good in esse by the goodness-actuality coextension"
+meaning = "Analyst registration of the PR #1458 q.20 a.2 reconstruction, attribution deferred. Fix one GOD_4 g with will and one x in act in esse; the witness respect is esse, x being good there by the coextension of good and actuality (00e962ae). If x is not g, supreme goodness (e0dae79f) gives that g causes x in esse, and the OPEN bridge CausalExistenceWilling turns that causation by a God with will into willing x's existence-good to x. If x is g, supreme goodness gives g's goodness in esse and the OPEN DivineOwnGoodWilling bridge gives g's willing of it to itself. The self/other split uses an explicit DecidableEq instance on the carrier (a decision procedure for identity, not a philosophical premise), so the proof is zero-axiom. Neither bridge follows from causation, having will or supreme goodness; the finite LoveControls in DivineLoveBridge keep goodness, will and coextension fixed and drop each bridge in turn."
+
+[[argument]]
+id = "OPEN q.20 love meaning yields GOD_4's love of every existing being"
+theorem = "lovesAllExisting"
+premises = ["e0dae79f-c042-5a08-a148-725d0468df91", "66aecdd7-ea4e-55c6-9377-10db08893854", "00e962ae-f109-55f7-a7fd-f107ce0dea6b", "A GOD_4 with will causing a distinct actual being's esse wills that good for it", "A GOD_4 with will that is GOOD_4 in esse wills that GOOD_4 for itself", "Willing an actual GOOD_4 of a recipient to it suffices for non-passional q.20 love"]
+conclusion = "Every GOD_4 loves every being in act in esse in the non-passional q.20 sense"
+axioms = []
+rule = "Obtain the willed good from willsGoodForAllExisting and apply the one-way love-meaning bridge"
+meaning = "Analyst registration of the PR #1458 composition, attribution deferred. The recipient-good willing of the previous argument, with its existential respect, feeds the OPEN q.20 a.2 sufficient rule that willing an actual good of x to x is loving x in the thin non-passional sense. All three intentional bridges stay open. The conclusion is not friendship, equal love, affective love, interpersonal relationship or the hiddenness challenge's perfect love; projecting it to those predicates is an OPEN bridge owned by issue 1735. Cognition alone is not used: no intellect premise occurs."

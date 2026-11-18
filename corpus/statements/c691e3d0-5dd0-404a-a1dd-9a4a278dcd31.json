@@ -1,0 +1,11 @@
+{
+  "id": "c691e3d0-5dd0-404a-a1dd-9a4a278dcd31",
+  "label": "Every GOD_4 wills some GOOD_4 to every being in act in esse",
+  "paraphrase": "Analyst formulation, attribution deferred. For every GOD_4 g and every x in act in esse (God included when God is in act) there is some respect r in which x is good and g wills that good to x. The respect is existential; nothing is asserted about every good, about merely possible beings, about the mode or degree of willing, or that an act of willing efficiently causes x. It does not assert that a GOD_4 exists.",
+  "lean_declaration": "TruthCore.Case.Catholicism.DivineLoveBridge.DivineWillsGoodForAllExisting",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "4c8f0e6b-7ef6-5be5-851c-cdf4f0301546",
+    "08b826db-2d9c-48e5-b69c-d4ac54088518"
+  ]
+}

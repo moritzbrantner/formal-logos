@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.DivineVeracityAssembly1732.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DivineVeracityAssembly1732.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.DivineVeracityAssembly1732.assembledJointWitness"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}
