@@ -1724,9 +1724,12 @@ report), but under different reason-types. The functional moral-only account
 does **not** share the T2 verdict: it denies that I has a moral reason and
 recommends correction only as instrumentally useful for R's aims, conditional
 on those aims and on I's having reason to serve them; no premise on file makes
-R's aims binding on I. The four realist, natural-goodness, naturalist and
-authorial accounts share the T2 verdict that I has a categorical (non-
-instrumental) pro tanto reason to correct, and differ on its explanation. So
+R's aims binding on I. Three accounts (rights-enriched realism, natural
+goodness and authorial natural law) share the T2 verdict that I has a
+categorical (non-instrumental) pro tanto reason to correct, and differ on its
+explanation. Naturalistic realism (Railton, Boyd) recommends correction from
+R's natural interests, while categorical force is disputed (`0893ecbc`) and
+the impartial criterion's authority is left open (`1fb30e0b`). So
 the shared action recommendation does not discriminate the accounts, while
 **whether the reason at T2 is categorical or instrumental** is itself a
 discriminating question, alongside T3's standing structure and T4's
@@ -1826,7 +1829,7 @@ unbuilt step named; it is formally disconnected at U1–U3. Its formal part (T5)
 same strength as the other Dei Filius routes plus one weaker authority bridge
 and one restricted willing premise, better placed than `a94c5dfc` only as a
 direct assumption (both verified supports go through `a94c5dfc`). Its warrant
-is unequal along the chain. F6 is closed only as an unwitnessed existential: I's thin reason at T1 is an
+is unequal along the chain. F6 is closed only as an existential whose witness is not identified with I or this content: I's thin reason at T1 is an
 additional, separately warranted case assumption, and preference-independent
 force for I is underdetermined; T2 has
 defeasible positive support for a scoped reliance reason on this case (#1500),
