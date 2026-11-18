@@ -1,0 +1,33 @@
+{
+  "id": "ba458489-f54a-43d7-a8f3-6025528bfecd",
+  "label": "Willing GOOD_4 to all existing at the CREATURE_WILLING_1 carrier",
+  "premise_statement_ids": [
+    "e0dae79f-c042-5a08-a148-725d0468df91",
+    "66aecdd7-ea4e-55c6-9377-10db08893854",
+    "00e962ae-f109-55f7-a7fd-f107ce0dea6b",
+    "a94c5dfc-c722-49fe-a242-dd39409b079d",
+    "2a168a36-bd60-491a-8ad7-ce5b1d2fb560"
+  ],
+  "conclusion_statement_id": "c691e3d0-5dd0-404a-a1dd-9a4a278dcd31",
+  "inference_ids": [
+    "f07cfc3b-42e8-4829-9e26-27ed0d5fc2f5"
+  ],
+  "meaning": "Corollary tying the registered parametric result 7209fa2f to the CREATURE_WILLING_1 carrier RecipientGoodWilling.WillsGoodFor: the same five inputs, with the willing relation fixed as W.WillsGoodFor, give willing some good to every existing being. Same OPEN bridges; no new content beyond the instantiation.",
+  "term_senses": {
+    "CREATURE_WILLING": "0cdd7cc2-704c-4239-8dba-ea6754f9c1bc"
+  },
+  "definition_ids": [
+    "08b826db-2d9c-48e5-b69c-d4ac54088518",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "4c8f0e6b-7ef6-5be5-851c-cdf4f0301546",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "58e0de99-6199-5851-8e03-381bca0d44f0"
+  ],
+  "disambiguation_ids": [
+    "9880c06b-e689-5294-b349-badb981abbf6",
+    "dd7ff973-0e54-4c93-b9c5-b002cac2b256"
+  ]
+}

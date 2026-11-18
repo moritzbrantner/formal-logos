@@ -1,0 +1,11 @@
+{
+  "id": "0e665ad9-9823-49ce-8991-7db692f91edf",
+  "label": "Strong exclusive ordered-love variant entails the ad 3 ordered-love reading",
+  "argument_id": "712c35d2-247c-4011-b979-782e2b119942",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.orderedStrongToWeak",
+  "comparator_config": "results/0e665ad9-9823-49ce-8991-7db692f91edf/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration, analyst formulation. Same IsGod, HasWill, Rational, InAct, CausesIn, ordered-willing relation and esse: the strong variant's ordered conjunct is exactly the weak reading. The strong premise relates both CREATURE_WILLING senses (it denies recipient-directed willing); the conclusion uses only the ordered sense."
+}

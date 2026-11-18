@@ -1724,9 +1724,12 @@ report), but under different reason-types. The functional moral-only account
 does **not** share the T2 verdict: it denies that I has a moral reason and
 recommends correction only as instrumentally useful for R's aims, conditional
 on those aims and on I's having reason to serve them; no premise on file makes
-R's aims binding on I. The four realist, natural-goodness, naturalist and
-authorial accounts share the T2 verdict that I has a categorical (non-
-instrumental) pro tanto reason to correct, and differ on its explanation. So
+R's aims binding on I. Three accounts (rights-enriched realism, natural
+goodness and authorial natural law) share the T2 verdict that I has a
+categorical (non-instrumental) pro tanto reason to correct, and differ on its
+explanation. Naturalistic realism (Railton, Boyd) recommends correction from
+R's natural interests, while categorical force is disputed (`0893ecbc`) and
+the impartial criterion's authority is left open (`1fb30e0b`). So
 the shared action recommendation does not discriminate the accounts, while
 **whether the reason at T2 is categorical or instrumental** is itself a
 discriminating question, alongside T3's standing structure and T4's
@@ -1764,8 +1767,10 @@ those governed. One conjunct of that reply is now typed and composed:
   effects (see the love note), so **if that strong variant holds and
   non-rational creatures exist, `47c6da1b` has no verified derivation** and
   stands only as a direct assumption. The conflict holds for the strong variant
-  only; the weak, ad-3-faithful reading (ordered willing without excluding
-  recipient-directed willing) is compatible with `a94c5dfc`. Its better placement relative to
+  only; the weak, ad-3-faithful reading `7f6a2e91` (ordered willing without
+  excluding recipient-directed willing) is compatible with `a94c5dfc`
+  (checked witness `5d93ac09`), so neither verified derivation of `47c6da1b`
+  is excluded under it; the strong variant strengthens it (result `0e665ad9`). Its better placement relative to
   `a94c5dfc` holds for that direct option only.
 - **Root route** `deiFiliusRootUnifiedBenevolentLord` (result `483129f2`):
   the unified Dei Filius root `c0f4a346` with its lord conjunct through LORD_3
@@ -1824,7 +1829,7 @@ unbuilt step named; it is formally disconnected at U1–U3. Its formal part (T5)
 same strength as the other Dei Filius routes plus one weaker authority bridge
 and one restricted willing premise, better placed than `a94c5dfc` only as a
 direct assumption (both verified supports go through `a94c5dfc`). Its warrant
-is unequal along the chain. F6 is closed only as an unwitnessed existential: I's thin reason at T1 is an
+is unequal along the chain. F6 is closed only as an existential whose witness is not identified with I or this content: I's thin reason at T1 is an
 additional, separately warranted case assumption, and preference-independent
 force for I is underdetermined; T2 has
 defeasible positive support for a scoped reliance reason on this case (#1500),

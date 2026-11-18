@@ -2788,3 +2788,281 @@ Definitions/disambiguations are inherited by the batch generator from the
 reused statements. The new results assert conditional consequence only; no
 finite control, premise warrant, global minimality or new sense definition is
 asserted by them. Corpus check and offline attribution-check pass.
+
+
+## Current cluster assessment under the substantive objection standard (2026-11-18)
+
+**Scope and boundary.** Issue #1751, model-trial slice 1/3, drafted on main
+`19c3d6e17b921431314b310b3d9be4cbc7860943` (PR #1759 merged). The cluster is the
+nine `legacy_only` GOD_4-route premises whose attempts cite this note. All nine
+were verified `legacy_only` at this baseline (`truth currentness`, GOD_4 root:
+54 current, 185 legacy-only, 182 none). They are not one argument. They fall
+into four groups, each with its own consumers:
+
+- **Stage-one frame and time bridges:** the Euclidean frame F2 `62b4a40a` and
+  presence-gives-existence A1 `85497562` (legacy attempts `c2ffef68`,
+  `bc674a0b`).
+- **The uniting-cause bundle** for "every composite has a distinct cause of its
+  being" `ca07cae9`: `6b80cfe4`, `58445bd6`, `27d15954`, `fbee7f15`, and the
+  component premise `b35ce743` (legacy attempt `356fd6f9`; substantive note
+  [composition-causal-scope.md](composition-causal-scope.md)).
+- **The transfer maxim** "nothing gives what it does not have" `376d6a5a`
+  (legacy attempts `a4a689b4`, `c0c90cee`, `1511d8a2`).
+- **Independence allows being-without** `8ab3d114` (legacy attempts `520ea849`,
+  `040e3b4e`, `9c05bc24`, `8ba4d04f`; substantive notes
+  [priority-independence-logic-support-investigation.md](priority-independence-logic-support-investigation.md)
+  and [god-existence-support-formula.md](god-existence-support-formula.md)).
+
+Fifteen further `legacy_only` premises (the Grim Reaper, grounded-beginnings,
+graded-foundation and Arrival B premises) have attempts that name the
+modal-spine specs or this note's topic but cite other notes or none. They are
+outside this slice and remain `legacy_only`. The reviewed 2026-11-17 assessment at the top of this note (attempt
+`383d23ad`) keeps its own scope and is not replaced.
+
+Earlier sections stay unchanged under their own dates. This section changes no
+theorem, Challenge, claim, definition, relation, closure or formal status.
+
+### (a) Fixed meanings
+
+- **Modal profile of stage one.** The carrier is the `Ontic` profile
+  (definition `beb654a7`): a constant candidate domain, one Kripke frame with
+  `access`, and world-relative `ExistsAt`. Individuals are rigid: one Lean value
+  is the same candidate at every world. "Necessary" in this cluster is
+  NECESSARY_2 (`NecessaryAt m w x`: `∀ v, access w v → ExistsAt v x`, existing at
+  every world accessible from `w`; existence at `w` itself follows only with
+  F1). It is not the tertia via's NECESSARY_3 or NECESSARY_4
+  (a being that cannot not-be, per se or from another), not a boxed proposition
+  of the Scott or Gödel embeddings, and not logical necessity
+  (`DISAMB-NECESSARY`). No sense bridge between them is used here.
+- **Frame conditions.** F2 is `Modal.Euclidean`: for all worlds, any two
+  successors of a world access each other. F1 `2b20b5af` is reflexivity at the
+  selected world only. F2′ `1b1462e6` is F2 restricted to the selected world.
+  The profile of the arrivals is "reflexive and Euclidean at `w`". It is not S5:
+  universal access implies it (`localFrameOfUniversal`), and the converse is not
+  assumed. Every comparison below keeps this frame carrier and this profile
+  fixed.
+- **Presence and existence.** `History.IsAt v c t` (presence at a time of
+  history `v`) and `ExistsAt v c` are distinct primitives. A1 is
+  `∀ v c t, IsAt v c t → ExistsAt v c`: the one-way, ever-history reading of
+  existence in a history (definition `d487d4fb`). It asserts no converse, no
+  persistence and no now-slice coherence (`CoherentAtNow` is a separate
+  proposition, definition `6e811e85`). `IsAt` is read inclusively: location at,
+  or co-presence to, the moment (attempt `c94eed5b`).
+- **Composition vocabulary.** `Composite` is the inclusive SIMPLE_4 primitive
+  (definition `85f7f569`). `ComponentOf a x` ranges over quantitative parts,
+  matter and form, essence and esse and the other q.3 a.7 kinds, in the same
+  `Being` domain as the composite; that placement is a recorded modelling
+  choice (definition `98ac7aa1`). Distinctness of components is numerical.
+- **Three causal relations, kept apart** (`DISAMB-UNITING-CAUSE`):
+  - `Unites c a b x` (UNITING_CAUSE_1, definition `f930c63f`) is a primitive.
+    It does not require `c` to be distinct from `x`, outside `x`, a nonpart,
+    earlier or actual at a world. Its temporal extension is unfixed: the
+    primitive has no tense, and the definition's example, the agent who mixes
+    elements into a mixed body, leans toward past composers.
+  - `EfficientlyCausesIn c x r` (EFFICIENT_CAUSING_2, definition `69c0b23e`) is
+    efficient causing here and now.
+  - `CausesIn c x esse` (definition `211a6432`) is causal responsibility for
+    x's being. It is tenseless, mode-unspecified and has no world index.
+- **Transfer.** `376d6a5a` is `∀ c x r, CausesIn c x r → InAct c r`. It
+  includes the case `c = x`. `InAct` is one parameter, read inclusively as
+  IN_ACT_3 (formally or eminently; `DISAMB-IN-ACT`).
+- **Dependence and separability.** `8ab3d114` is
+  `∀ y x, ¬ D(y,x) → B(y,x)`. `D` is the counterfactual
+  DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND_1 (definition `bf26b9b2`), which
+  includes counterfactuals with impossible antecedents and fixes neither
+  reflexivity nor irreflexivity. `B` is `CanBeWithout` (definition `d0b06beb`):
+  y can be while x is not, "can" read as real possibility. Both are Lean
+  parameters with no structural property and no frame. Reading `B` over the
+  stage-one frame is an interpretation, not part of the type.
+
+### (b) Strongest positive warrant, direct options and shared dependencies
+
+| Premise | Strongest positive warrant | Direct option and dependencies | Provisional standing |
+| --- | --- | --- | --- |
+| F2 `62b4a40a` Euclidean frame | The absolute-admissibility reading (`bc674a0b`, 2026-11-14): if metaphysical possibility is admissibility of a complete world-description in one space that does not depend on which description obtains, then `R(w,v)` holds exactly when `v` is admissible, which gives F1 and F2. The entailment is elementary and recorded in prose only; it is not a registered result. | A candidate primitive frame commitment; no source is on file. The reading's two inputs, world-independent admissibility and a cross-world identity policy for rigid individuals, are recorded as not discharged and are **not assessed here**. The rationale assumes world-independent admissibility, which the non-Euclidean rival denies, so it does not discriminate against that rival. Both stage-one arrivals use only the weaker F2′ (`d0831334`); at least one other consumer, `EmptyHistoryCausalAvailability`, uses Euclidean access at a non-selected world. | A positively motivated direct option. Not graded, because its rationale rests on an unassessed reading. This is the 2026-11-14 standing ("parallel burdens", "neither is discharged"), unchanged. |
+| A1 `85497562` presence gives existence | On the fixed ever-history reading, `ExistsAt v c` says that c is among what exists in history `v`, tenselessly. What is present at some time of a history is then among what exists in it. On that reading A1 is close to a meaning postulate. | A candidate primitive interpretation, which definition `d487d4fb` calls an explicit open commitment. Dependencies: the tenseless reading itself, which is the recorded reading choice and which the presentist rival denies, so the rationale does not discriminate against that rival; and the inclusive `IsAt` reading with its open co-presence question (`bc674a0b`). `c2ffef68` records that the temporal arrival depends on reading world-relative existence as existence at some time. Analyst consequence drawn here: the stage-one conclusion is then tenseless too, and present existence of the necessary individual would need a persistence premise. | Strong as a stipulated reading. Whether later stages need present rather than tenseless existence is an unassessed bridge. First grade; nothing earlier is revised. |
+| `6b80cfe4` two distinct components | Stated claim `4b7a9152` (ST I q.11 a.1 co.): the passage speaks of a composite's parts in the plural ("partes eius"). Reading this as "at least two numerically distinct components, of any kind of composition" is the claim's recorded reading. Analyst's prima facie rationale: what is composed is composed of more than one thing. | Close to analytic under definition `98ac7aa1`. Dependency: placing essence and esse or matter and form in the `Being` domain as components is a modelling choice, and a map from principles to beings needs interpretation (composition-causal-scope, 2026-11-11). That choice, and reading "partes" for every kind of composition, are stipulated in definition `98ac7aa1` and claim `4b7a9152`; they are open and **not assessed here**. It implies `b35ce743` classically; that order is not registered (formal residue). | Strong prima facie, conditional on that modelling choice. First grade. |
+| `b35ce743` a component other than itself | Stated claim `2be28497` (ST I q.3 a.7 co., fifth proof): "in every composite there is something that is not itself". | Close to analytic: it excludes only a composite whose sole component is itself. Same modelling dependency, open and not assessed here. Its thirteen consumers pair it with component priority `363a528c`, which is `legacy_only` and **not assessed here**; the philosophical load of those routes sits there. | Strong prima facie, conditional on that modelling choice. First grade. |
+| `58445bd6` distinct components have a uniter | Stated claim `78cc9f45` (ST I q.3 a.7 co., third proof): things diverse in themselves do not come together into one except through a cause uniting them. Analyst rationale (composition-causal-scope, 2026-11-11, "determinate unity"): where constituents admit both the arrangement and its absence, their separate natures do not determine which obtains. | A candidate primitive of the composition account. As typed it is weak: the uniter need not be distinct from `x`, efficient or a cause of being. The analyst rationale is restricted to constituents that admit alternative arrangements; it "does not establish that every composite could have failed to be unified". Universal scope rests on the sourced assertion, so the rationale does not discriminate against row 6 for a whole that could not have failed to be unified. Whether a whole-first or intrinsically unified whole has a uniter in the `Unites` sense is an open applicability question (definition `f930c63f`). | Moderate as a sourced principle with restricted independent support. **First grade**: no earlier note grades this premise. The 2026-11-11 judgment ("positive, restricted support" from real constitution) concerns the bundle's application and is kept unchanged. |
+| `27d15954` a uniter is an efficient cause here and now | No stating source. SCG I.18 n.4 (claim `e017e2d6`) states the time-neutral `f3b79f16`: the composer is an efficient cause of the composite. It supports `27d15954` and does not state it, because the sentence has no temporal qualifier. Two verified derivations exist, both classified transcriptions: from attribution (`f3b79f16` with the calibration `1ad18c70`) and from temporal persistence (`8e44a618` with `db54a1a6`). | Direct option: what presently holds diverse things together acts on them. Dependencies: `1ad18c70`, `8e44a618` and `db54a1a6` have no attempt and are **not assessed here**; `f3b79f16` is `legacy_only`. Only one of the five registered bundles for `ca07cae9` uses this premise (`89531a4c`, UNITING-CAUSE_2). The UNITING-CAUSE_3 bundle `bf06daf1`, the UNITING-CAUSE_1 bundle `7126eeb8` and the temporal sibling `56f4e4b3` do not. | Conditional and ungraded: its derivations are transcriptions from unassessed calibrations. Dispensable for `ca07cae9`. |
+| `fbee7f15` a uniter causes the composite's being | No stating source (`f3722322`: no SCG I–III sentence says that the composer gives the composite its esse). SCG I.18 n.4 supports it (efficient cause of the composite; esse is not named). ST I q.11 a.1 gives union only as a necessary condition of the composite's being. Analyst rationale (2026-11-11, "constitutive dependence"): when losing a constitution would destroy the bearer, retaining it is necessary for the bearer's continuing as this thing, and where the constituents and organization constitute it, that gives a restricted direction of explanation. The 2026-11-11 text does not take the further step from the uniter to the bearer's being. | Direct option retained. It is common to all five registered bundles for `ca07cae9` (with `6b80cfe4` and `58445bd6`), so it is that conclusion's load-bearing step. The rationale is restricted: necessary accompaniment does not fix the direction of explanation, and existential production does not follow from the unity explanandum. The immanent account (row 5) accepts constitutive dependence, so the rationale does not discriminate against it. The typed premise does not itself give distinctness; that comes from a no-self premise (`8b2561cd`, `b62a64ab`, `828fc834`, `d15ded6f` or `bd7c5881`), none assessed here. `CausesIn … esse` is mode-unspecified, so a constituent formal principle counted as a being could satisfy it (the breadth recorded in [esse-cause-efficiency-1633.md](esse-cause-efficiency-1633.md)). | Restricted positive support. The universal passage to "a distinct actual concrete producer of bare esse in the selected existential relation" is not yet warranted. This is the 2026-11-11 judgment and the 2026-11-17 application burden, unchanged. |
+| `376d6a5a` nothing gives what it does not have | An analyst generalization. ST I q.4 a.2 co. (claim `50df1fd8`) says of the effective cause of a thing that whatever perfection is in the effect is found in it, in the same way or more eminently. That is the scoped `64498e7e`, not this premise (`1511d8a2`: the passage constrains causes of a thing's being). No argument concludes `376d6a5a`. | Direct primitive option: the maxim itself. Its force depends on an unregistered fork inside IN_ACT_3 (reconciliation draft, 2026-11-12). Analyst observation, refining that draft: if eminent possession is the power to produce r, the maxim is close to analytic for principal causes, and then it carries no comparative load; that reading does not answer the instrument objection (row 12), which concerns non-principal causes. If eminence is independently specified containment, the maxim is substantive, and no independent warrant is on file. Its only substantive consumer is `924302df`, which keeps it because its Challenge is frozen; the distinct-cause version `2c0b9bd7` suffices there, and the ladder `d0fc96b7` ⇒ `4ccb319f` ⇒ `4a5a43a5` serves the esse routes. | Not graded: standing depends on the unregistered fork. "No independent warrant recorded" (`c0c90cee`, `a4a689b4`) is unchanged. Routes should consume the weaker registered versions. |
+| `8ab3d114` independence allows being-without | Supporting claim `95f41960` (In V Metaph. lect. 13 n. 18): for pairs already ordered as prior and posterior, priors do not depend on posteriors and so "in some way" can be without them. It does not state the unrestricted premise, and it cannot supply the consumer without circularity, since the consumer is trying to establish priority (`8ba4d04f`). Conditional mechanism: realizable separation by requirement closure (`8ba4d04f`). | Direct option retained. The separation mechanism has three open inputs, **not assessed here**: transport from `¬D(y,x)` to no requirement, a background that does not require `x`, and admissibility of the closure state. One registered consumer (`75f11492`, with `000e1f65` and `97fa3a0b`, both `legacy_only` and not assessed here). The G route no longer needs it (`520ea849`, `040e3b4e`); a consumer-local version suffices for `75f11492` (unregistered). | The unrestricted premise is "not currently supported by the cited source alone"; the separation mechanism supports only pairs that satisfy its three open inputs. Avoidable. This is the 2026-11-13 judgment ("keep the original proposition as a direct option"), unchanged. |
+
+Shared dependencies stay visible:
+
+- F1 and F2 (or F2′) enter both stage-one arrivals together. The
+  absolute-admissibility reading supports both at once, so it is one rationale,
+  not two.
+- A1 and the inclusive `IsAt` reading are shared by A1–A3, A2ab and the contact
+  principle `c4661518`. The open co-presence question (`bc674a0b`) belongs to
+  all of them.
+- `6b80cfe4`, `58445bd6` and `fbee7f15` occur in every registered bundle for
+  `ca07cae9`. The five bundles differ only in how they obtain distinctness.
+  They are support options at one node, not five independent confirmations.
+- `ca07cae9` feeds simplicity at the root (`379399d1`) and the steps that
+  depend on it. Its downstream use also needs the esse-cause bridge `cb1cdea9`,
+  which this cluster does not assess.
+- `376d6a5a` strengthens `2c0b9bd7` and `d0fc96b7` (registered). Analyst
+  observation, unregistered and not Lean-checked: with "a caused perfection is
+  had" (`67aa5b5c`) and excluded middle on `c = x`, `2c0b9bd7` gives back
+  `376d6a5a`. If that holds, the unrestricted maxim adds no contested content
+  beyond distinct-cause transfer together with `67aa5b5c` (open, not assessed
+  here).
+- `8ab3d114` with `000e1f65` and excluded middle identifies counterfactual
+  dependence with modal inseparability (`D ↔ ¬B`), although the two definitions
+  deliberately keep them apart (2026-11-13 diagnostic, retained).
+
+### (c) Recorded objections and rivals, classified
+
+| # | Record | Classification under the substantive standard |
+| --- | --- | --- |
+| 1 | Reflexive non-Euclidean access (`9656dfbe`, relation `bf321658`; encoded origin-tolerance interface `f2b3c229`), against F2 and, in its actual-world form, F2′ | **Restated** as a rival semantics at matching scope (same frame carrier). *Mechanism:* possibility is relative, and chains of small variations in a thing's origin or constitution make access non-transitive. *Independent justification on file:* none read; the statement is unattributed, the motivation is named only, and `ca49ceb8`'s survey is unverified. It must still say why an origin outside tolerance is impossible for the same individual, and justify its symmetric access criterion. The 2026-11-14 standing, "parallel burdens" with neither side discharged, is kept unchanged. It is not an established counterexample. |
+| 2 | Frame controls: `SpineRivalsStageOne.controls` (F2 conjunct), `ActualEuclidean.controls`, `ActualOnlyEuclidean.controls`, `OriginToleranceIdentity.faithfulControls`, the deletion controls `70d098fe` | **Restated** as formal facts, each by what its result record certifies. `SpineRivalsStageOne.controls` (`7b545360`): the reflexive non-Euclidean rival is jointly satisfiable with the other premises of `InertEmptiness.necessaryConcrete` while its conclusion fails, so F2 is needed there. `ActualEuclidean.controls` (`f85aa0a3`): F2′ is strictly weaker than F2 on the clustered frame, and the restricted inert-emptiness bundle is jointly satisfiable there with F2 failing; no consumer's conclusion fails in it. `ActualOnlyEuclidean.controls` (`9bfd7ece`): structural surrogates about F2′ and local axiom 4 (a global failure of F2 need not force local transitivity to fail); they encode no rival. `OriginToleranceIdentity.faithfulControls` (`468cbe86`): a five-world countermodel to omitting F2′ from `ActualEuclidean.inertNecessaryConcrete`, faithful only to its four encoded origin commitments. `OriginDeletion.deletionControls` (`70d098fe`): three models showing those four commitments neutral on individual deletion; `withEmpty` is a bare `Ontic`, not a `History`, so A1–A3 are not stated for it. None is evidence that metaphysical accessibility is non-Euclidean. |
+| 3 | Presentist gap (`d743989e`, relation `25ab59ba`), against A1 | **Restated** as a different reading of `ExistsAt` (existence is presence now), not a denial of A1 at the fixed tenseless meaning. No independent justification for presentism is on file. Its recorded consequence is retained (`c2ffef68`): on the presentist reading an earlier non-contingent occupant can have ceased, so the temporal arrival would need a persistence premise. The `SpineRivalsStageOne` model is a fact about one finite history. |
+| 4 | Open co-presence question for a non-temporal agent under inclusive `IsAt` (`bc674a0b`) | **Boundary retained.** It is an open semantic obligation on the reading shared by A1–A3, not an objection: no position on file posits an empty moment followed by a non-temporal agent's first act. |
+| 5 | Immanent constitution: intrinsic potential and actual unity, or nonreductive constitution (composition-causal-scope, 2026-11-11 rival table; this note, 2026-11-17) | **Kept**, against the passage from `fbee7f15` plus a no-self premise to a numerically distinct concurrent concrete giver of esse, that is, the application of `ca07cae9` through `cb1cdea9` (composition-causal-scope, 2026-11-11, "existential production"; this note, 2026-11-17). At the fixed meaning `CausesIn … esse` is mode-unspecified, so a constituent formal principle can satisfy the typed `fbee7f15`; the rival reaches `fbee7f15` itself only on the existential-production (efficient) reading of `CausesIn`, a meaning choice. *Mechanism:* the whole is constituted intrinsically, so its unity and present being are explained without a second subject efficiently producing its esse; denying self-production does not refute this. *Independent justification:* the potential-and-actual unity account of *Metaphysics* H.6 (whole chapter read; [aristotelian-unity-h6.md](aristotelian-unity-h6.md)), on which proximate matter and form are one without a third tie, and the ordinary difference between constitution and efficient production. H.6 itself neither establishes nor excludes a concurrent giver of esse. The nonreductive variant is an analyst comparison, not attributed to an unread author. *Price:* it owes the direction and adequacy of constitution. Earlier status, "a substantive competing account of that step", unchanged. Difference from row 1: this rival has an articulated positive replacement account with its price and a reviewed 2026-11-17 standing as a substantive rival; row 1's mechanism is only named in `9656dfbe`, its survey `ca49ceb8` is unverified, and its interface `f2b3c229` is stipulated. |
+| 6 | Uncaused or whole-first composition: Schaffer's basic whole (claim `9f7e6f01`, read), the necessary composite, brute composition | **Kept as partial**; the status is unchanged from the 2026-11-12 stage-two row, and the target is relocated. That row records it against `ca07cae9` ("partial, against the premise's reason"); here it is located at the reason for `58445bd6` (no prior diverse parts are brought together), one of `ca07cae9`'s inputs. The typed `58445bd6` can be met by the whole as its own uniter, so the rival's denial falls on a no-self premise or on `fbee7f15` (`356fd6f9`: a self-uniting whole "rejects uniter-is-efficient or no-efficient-self-cause"). Open bridge, retained: basic means ungrounded, not without an efficient cause of being. Bare brute composition has no justification on file beyond this. |
+| 7 | Reduction or composition as identity; universal fusion; material nihilism (PRs 656 and 657) | **Restated** as replacement accounts with unpaid burdens. The reduction must be defended. The fusion and nihilist fixtures do not clash with the typed premises until their mappings (bearer, relevant composition, same witness) are defended in one interpretation. No weight against `fbee7f15`; no weight for it either. |
+| 8 | Departed composer: a builder is a cause of the house's becoming, not of its being (ST I q.104 a.1, read in the pinned translation; control `db60a52a`) | **Kept**, as a scope objection to `27d15954`, conditional on a meaning choice. If `Unites` covers past composers, a departed builder unites and is not an efficient cause here and now. If `Unites` is restricted to present uniters, it has no target. The primitive has no tense, so the choice is open. Routes avoid it through `bf06daf1`, `7126eeb8` or `56f4e4b3`. This is the temporal gap already recorded in the statement and in `3e2d1595`; it is classified here for the first time. |
+| 9 | Composition controls: six finite interpretations `7047dfa6`; temporal controls `db60a52a` and `41e0c989` | **Restated** as formal facts. `7047dfa6`: each of the five premises of the union theorem is needed in one stipulated Bool or Unit interpretation, and a sixth interpretation satisfies all five with a composite. `db60a52a`: finite survival, overlap, strictness and remainder interpretations of the temporal calibrations. `41e0c989`: a finite countermodel to replacing all-time no-self by current no-self in the historical route (a past self-producer). They are not evidence of brute, self-united or esse-neutral composition, and establish no causal or temporal proposition. |
+| 10 | Warrant-circularity boundaries (composition-causal-scope, 2026-11-11): q.3 a.7 quarto's assumed divine pure act, component priority defended from simplicity, and q.104's essentially existing God cannot supply the pre-divine bridge | **Boundary retained.** Not an objection. No formal cycle is demonstrated in the union theorem. |
+| 11 | Artisan: a maker causes a shape he has only as art (`c0c90cee`) | **Restated** as a reading constraint. It is a counterexample to the formal reading IN_ACT_1 with makers counted under CAUSE_2. The fixed sense is the inclusive IN_ACT_3, which is also the source's ("or in a more eminent way"). |
+| 12 | Instrument: a chisel causes a shape it has neither formally nor as art (`c0c90cee`; statement `2c0b9bd7`) | **Kept**, conditional, against the unrestricted `376d6a5a` and against `2c0b9bd7`. *Mechanism:* an instrumental cause produces what it does not possess. *Justification:* ordinary instrumental production. *Condition:* CAUSE_2 counts instruments. The principal-power reply (q.62 a.4, De potentia q.3 a.7) is unread and carries no weight. The cause-of-being restriction `d0fc96b7` is not touched. Earlier status ("a substantive objection to the unrestricted scope if CAUSE_2 counts instruments") unchanged. |
+| 13 | Strong emergence (leads: Broad, O'Connor, Chalmers; all unread) | **No substantive objection identified yet**, unchanged from `a4a689b4` and the stage-two row for `64498e7e`. That it occurs is unsupported on file, and its relevance needs an open bridge. |
+| 14 | Capacity or law-mediated production (reconciliation draft, 2026-11-12) | **Restated.** A positive conceptual alternative, not evidence that emergence occurs. On the power reading of eminence it agrees with `376d6a5a`; its target is the substantive-eminence reading and the comparative bridges downstream. The earlier weighting ("the available conditional results do not discriminate") is unchanged. |
+| 15 | The heater (`1511d8a2`) | **Restated** as an attribution boundary: q.4 a.2 does not entail the unrestricted maxim, because not every cause of a perfection is a cause of being. It is not an objection to `376d6a5a`. |
+| 16 | Prime matter as a material cause of the composite's being (`c0c90cee`) | Unread lead; no weight. It would matter only if `CausesIn` counted material causes. |
+| 17 | Necessary-relatum model and contingent co-variation model (`9c05bc24`; god-existence-support-formula, scope audit) | **Restated** as formal facts. In one two-world, universal-access interpretation with `B` read as possible separate existence, a necessary `x` makes `8ab3d114` fail; a second model shows that contingency of `x` alone does not give separability. The Lean omission control certifies the truth tables; the modal reading of them was checked by finite truth-table evaluation, not by a Lean theorem. They show the premise does not follow from the two definitions. They are not evidence that a necessary dependent being exists. `9c05bc24`'s phrase "the refuted bridge" is superseded as a description; the models stand. |
+| 18 | Exact consequences of `8ab3d114` (2026-11-13, "exact constraints, not hypothetical objections") | **Restated**, with one addition. Recorded, with `B` read as possible separate existence: for a necessary `x` the premise gives `¬¬D(y,x)` for every `y`; with `000e1f65` and excluded middle it gives `D ↔ ¬B`. Added here as an analyst observation, unregistered and not Lean-checked: the instance `y = x` reads `¬D(x,x) → B(x,x)`. Under the meaning of `B` nothing can be while it is not, so the premise commits its holder to the non-strict, reflexive reading of `D` (`56252cd8`, classically). The checked incompatibility then applies (result `9150bd9c`, `reflexiveUnrestrictedExcludesActualConcreta`, concluding `cec081d8`): reflexive `D`, `2e248016`, `7a63a3fe` and `47aff057` exclude every actual concretum. This is a constraint on which packages can contain `8ab3d114`, not evidence about dependence in reality. |
+| 19 | n. 18 cannot supply the consumer's local input without circularity (`8ba4d04f`) | **Boundary retained.** |
+
+No objection or rival is recorded, and **no substantive objection is
+identified**, for `6b80cfe4` and `b35ce743`. For `58445bd6` the only recorded
+challenge is row 6. Rows 13 and 16 are leads without weight.
+
+Tally:
+
+- **kept**: 4 (rows 5, 8 and 12; row 6 as partial). Rows 8 and 12 are
+  conditional on a meaning choice. Row 5 is kept against the downstream
+  application; it reaches `fbee7f15` itself only on the efficient reading of
+  `CausesIn`, which is also a meaning choice.
+- **restated**: 10 (rows 1, 2, 3, 7, 9, 11, 14, 15, 17 and 18).
+- **boundary retained**: 3 (rows 4, 10 and 19).
+- **no substantive objection identified**: rows 13 and 16, and the premises
+  `6b80cfe4` and `b35ce743`.
+- **dropped as evidence**: none. No earlier weighting is changed.
+
+### (d) Overall provisional judgment, revision conditions and next test
+
+**Judgment.** On the meanings in (a), the nine premises do not stand or fall
+together.
+
+- The component premises `6b80cfe4` and `b35ce743` are strong prima facie and
+  uncontested on file. A1 is strong as a stipulated tenseless reading; its cost
+  is that the stage-one conclusion is tenseless too.
+- F2 is a positively motivated frame commitment whose only rationale on file
+  shares its burden symmetrically with the non-Euclidean rival. The arrivals
+  need only F2′.
+- In the uniting-cause bundle the load-bearing step is `fbee7f15`. It has
+  restricted positive support and no stating source. Immanent constitution is
+  kept against its application to a distinct concurrent giver of esse, and
+  against `fbee7f15` itself only on the efficient reading of `CausesIn`.
+  `58445bd6` is moderate (first grade). `27d15954` is conditional,
+  ungraded and dispensable.
+- The unrestricted `376d6a5a` and `8ab3d114` have no independent warrant on
+  file. Both are avoidable: weaker registered versions or bypasses serve their
+  consumers.
+
+Nothing is established or defeated. No frontier status, closure or theorem
+changes, and no rival is refuted.
+
+**Revision conditions.**
+
+- *F2.* An independently warranted account of world-independent admissibility
+  and cross-world identity would strengthen it. A read, defended origin-tolerance
+  account that shows out-of-tolerance origins impossible for the same individual
+  would make row 1 a kept objection.
+- *A1.* A downstream step that needs present existence, with no persistence
+  premise, would turn the tenseless reading into a named missing bridge.
+- *`fbee7f15`.* The 2026-11-17 same-source test, unchanged: a defended case in
+  which constitution demands a numerically distinct concurrent giver of esse,
+  with a scope argument, would strengthen it. A positive immanent explanation of
+  the same unity without such a giver would weaken its causal application.
+- *`27d15954`.* A tense for `Unites`, or an assessment of `1ad18c70`,
+  `8e44a618` and `db54a1a6`, would allow it to be graded.
+- *`376d6a5a`.* Registering the power-versus-substantive eminence fork, and
+  reading the instrument reply, would allow it to be graded and row 12 to be
+  settled.
+- *`8ab3d114`.* An actual-domain separation construction with its background
+  retained, or an independently warranted identification of `D` with modal
+  prerequisite, or a justified direct explanatory-priority bridge, would
+  reopen it (the three 2026-11-13 reopening conditions, unchanged).
+
+**Next discriminating test.** Certify the diagonal of `8ab3d114` (row 18):
+register irreflexivity of `B` as an explicit meaning postulate of
+`DEF-CAN-BE-WITHOUT`, derive `¬¬D(x,x)` from it and `8ab3d114`, and compose
+with result `9150bd9c` (premises `56252cd8`, `2e248016`, `7a63a3fe`,
+`47aff057`; conclusion `cec081d8`). The package under test is `8ab3d114`, the
+irreflexivity postulate, excluded middle and the last three of those premises. The outcome discriminates. If the composition is
+verified, every package that keeps `8ab3d114` and the irreflexivity postulate
+together with `2e248016`, `7a63a3fe` and `47aff057` is inconsistent with an
+actual concretum, so those packages must give up one of them, for instance by using the
+distinct-relata bridge `a8298fbd` in place of `2e248016`. If
+it fails, the exact obstacle fixes what `B` means on the diagonal. It reuses
+existing vocabulary and needs no source work.
+
+For the uniting-cause bundle the next test stays the 2026-11-17 same-source test
+recorded at the top of this note. Another omission model would not discriminate
+there.
+
+**Formal residue, not new campaigns.**
+
+- `27d15954` has transcription-only support (`623a85d6`, `7cb451cc`); the
+  routes that avoid it are listed in (b).
+- `6b80cfe4` ⇒ `b35ce743` is stated in the paraphrase and not registered as a
+  strength order (#1598).
+- The observation that `2c0b9bd7` with `67aa5b5c` gives `376d6a5a` is
+  unregistered (#1598, #1519).
+- The consumer-local weakening of `8ab3d114` for `75f11492` is unregistered
+  (2026-11-13).
+- The F1 and F2 entailment from absolute admissibility is prose only.
+- Consumers of seven of the nine premises are on the sense-index allowlist
+  (#1233).
+
+**Declared revisions: none.** New in this section, revising nothing: first
+grades for `6b80cfe4`, `b35ce743`, `58445bd6` and A1, and the first **kept**
+classification of the departed-composer objection (row 8), which earlier
+records state as a temporal gap without classifying it. Each earlier judgment
+that this section touches is compared below and kept:
+
+- F2: the 2026-11-10 provisional assessment (the weakening to F2′ is strict;
+  the encoded origin countermodel survives; warrant open) and the 2026-11-14
+  positive interpretation ("parallel burdens"; "neither is discharged").
+- A1: no earlier weighting existed beyond "survives" in the 2026-11-10 sense
+  (needed in a model). Its first grade is new and revises nothing.
+- Uniting-cause bundle: `356fd6f9`'s rival locations; the 2026-11-11
+  provisional judgment and its reopening conditions; the 2026-11-12 stage-two
+  row ("partial, against the premise's reason"); the 2026-11-17 reviewed
+  assessment (`383d23ad`) and its next test. `6b80cfe4`, `b35ce743` and
+  `58445bd6` had no earlier grade; their first grades are new and revise
+  nothing. Row 6 keeps its "partial" status with its target relocated from
+  `ca07cae9` to the reason for `58445bd6`. Row 8 is new as a classification:
+  the temporal gap is recorded in the statement of `27d15954`, in `f3722322`
+  and in `3e2d1595`, and no earlier record weighs it.
+- `376d6a5a`: `c0c90cee`'s reading findings and conditional instrument
+  objection; `a4a689b4`'s finding that strong emergence does not yet meet the
+  standard; the reconciliation draft's capacity rival and eminence fork.
+- `8ab3d114`: the 2026-11-13 provisional assessment and reopening conditions,
+  and the scope audit's recommendation to keep the old conditional theorem with
+  its input open and not presented as warranted.
+
+Wording superseded as a description of current state, with the findings kept:
+the route-cost sentence of `356fd6f9`'s blocker, which is about `ca07cae9`, and
+its status wording for the five union premises ("three sourced but undefended,
+two … unattributed and bare"), as far as that wording covers the four in scope
+(`6b80cfe4`, `58445bd6`, `27d15954`, `fbee7f15`; the fifth, `8b2561cd`, is out
+of scope, and `b35ce743` is not among them); the route-cost sentence of
+`f3722322`'s blocker; `9c05bc24`'s "refuted
+bridge"; and the bare "all five survive" of `c2ffef68` where it is read as
+weight against F2 or A1.

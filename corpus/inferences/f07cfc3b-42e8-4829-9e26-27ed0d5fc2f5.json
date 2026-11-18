@@ -1,0 +1,16 @@
+{
+  "id": "f07cfc3b-42e8-4829-9e26-27ed0d5fc2f5",
+  "label": "Willing GOOD_4 to all existing at the CREATURE_WILLING_1 carrier (inference)",
+  "input_statement_ids": [
+    "e0dae79f-c042-5a08-a148-725d0468df91",
+    "66aecdd7-ea4e-55c6-9377-10db08893854",
+    "00e962ae-f109-55f7-a7fd-f107ce0dea6b",
+    "a94c5dfc-c722-49fe-a242-dd39409b079d",
+    "2a168a36-bd60-491a-8ad7-ce5b1d2fb560"
+  ],
+  "output_statement_id": "c691e3d0-5dd0-404a-a1dd-9a4a278dcd31",
+  "rule": "Instantiate willsGoodForAllExisting at the sense carrier W.WillsGoodFor",
+  "meaning": "Corollary tying the registered parametric result 7209fa2f to the CREATURE_WILLING_1 carrier RecipientGoodWilling.WillsGoodFor: the same five inputs, with the willing relation fixed as W.WillsGoodFor, give willing some good to every existing being. Same OPEN bridges; no new content beyond the instantiation.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

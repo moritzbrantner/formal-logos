@@ -1,0 +1,12 @@
+{
+  "id": "16fe393e-4983-45c4-9301-6b2421ae3649",
+  "label": "No GOD_4 with will causes the esse of a distinct non-rational being in act",
+  "paraphrase": "Analyst formulation, unattributed. For every GOD_4 g with will and every distinct, non-rational x in act in esse, g does not cause x's esse. Stated only as the joint consequence of the strong exclusive ordered-love variant 1dd68893 and the recipient-directed bridge a94c5dfc at one recipient-directed willing relation; not asserted as true.",
+  "lean_declaration": "TruthCore.Case.Catholicism.DivineLoveSenses.NoNonRationalCausedEffect",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24"
+  ]
+}

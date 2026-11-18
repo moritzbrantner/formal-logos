@@ -1,0 +1,21 @@
+{
+  "id": "83a76f79-ae98-4025-9ca6-0440a3063989",
+  "label": "Weak ordered-love reading is compatible with recipient-directed causal willing",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "5d93ac09-44cf-496f-a90e-84df7256521e",
+  "inference_ids": [
+    "615158f7-b3e0-4a3b-abea-79811056ccff"
+  ],
+  "meaning": "Analyst witness. A premise-free finite sample shows the weak ordered reading and a94c5dfc jointly satisfiable with an actual distinct non-rational caused effect, at one recipient-directed willing relation, and that the strong variant fails there. It shows compatibility in this formal interpretation only.",
+  "definition_ids": [
+    "08b826db-2d9c-48e5-b69c-d4ac54088518",
+    "1ca75ad2-e6f6-492a-9fcc-19eebfc8d3aa",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836"
+  ],
+  "disambiguation_ids": [
+    "dd7ff973-0e54-4c93-b9c5-b002cac2b256"
+  ],
+  "sense_mixing_control": true
+}
