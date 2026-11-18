@@ -35,7 +35,8 @@
     "40aefb2e-c9b3-5bb1-8802-96bbc4e2ed83",
     "da9c82ed-e886-5335-81c3-cebad9b27345",
     "PR-1754",
-    "PR-1759"
+    "PR-1759",
+    "PR-1762"
   ],
   "blocker": "Formalize the restriction recorded and not formalized in 05bc2722: concurrence only for a cause of the being of everything else. Test whether the presence step 9469ab62 still follows from it with da72ae93, 40a97664, 140544c4 and c4661518, or find the exact obstacle. Success registers a premise weaker than d7f5a528 (strength rule #1017) and removes the relay lead from the route; failure shows the route needs concurrence for arbitrary causes of being. It does not touch the crux 40a97664, which moves only on an independently justified standing-dependence account or no-inducer scope evidence. The 2026-11-11 next step for 96d25c42 is retained unchanged.",
   "current_assessment": {
@@ -60,7 +61,7 @@
     "reviewed_revision": "b7257860ccf3fd7fda49f087dfb53dcd222ca424",
     "review": "unreviewed",
     "publication": "unpublished",
-    "evidence": "Issue #1751 model-trial slice 2/3, drafted on main ebd3c2394a40eeae1bfc7fd9b0824d88e3bba887. Proposed delivery: reviewed_revision names the commit that first delivered the note section and this assessment; it asserts no completed review. No independent semantic challenge, Codex review or CI result is recorded yet.",
+    "evidence": "Issue #1751 model-trial slice 2/3, drafted on main ebd3c2394a40eeae1bfc7fd9b0824d88e3bba887, PR-1762. Proposed delivery: reviewed_revision names the commit that first delivered the note section and this assessment; it asserts no completed review. No independent semantic challenge, Codex review or CI result is recorded yet.",
     "supersedes": "As the current-state summary for these eleven statements only, it supersedes handoff wording and no substantive judgment. It supersedes, as statements of current work, the 2026-11-17 wording in this note's sections 'Root-reaching received-being test' and 'Concurrent actualization: current case for God-existence research' ('Complete proposed outcome for fresh semantic challenge', 'Fresh challenge of this proposal and final integration CI remain with the coordinator', 'No push, PR, watch or merge') and the matching handoff sentences in the summaries and blockers of 05bc2722 and dee1c25e; it does not certify that those proposals were reviewed. For 140544c4, c4661518, 76d2cc96, d7f5a528, c7c32f20, fa3f08a8, 23e04ae5, 732302a1, 96d25c42, 40a97664 and ce55210c there was no earlier current_assessment: none. Retained unchanged: the 2026-11-12 objection and warrant audits of c94eed5b, 05bc2722, 76bad0cb, b93ce632, d9c2b200 and 0da0dd9e with their blockers and next tests; the substantive 2026-11-17 outcomes of this note; the reviewed 2026-11-11 contingency-to-reception and replaceable-support judgments and the source-interface boundary in docs/notes/underived-essence-identity.md; the 2026-11-14 rival pricing and #1626 draft in docs/notes/god-existence-support-formula.md; and the current assessments 5c7bc356, 1db2004a, e64d5241, 383d23ad and 0ddaa334."
   }
 }
