@@ -1351,7 +1351,9 @@ no independent review of this new consolidation is claimed.
 ## Same-witness identities for #1731 (2026-11-18)
 
 **Proposed outcome for review.** The owner comment on #1731 asked whether the
-H/underived witness identity is already certified. It was not: the #1729
+witness identity between the classical God root `da3facd6`
+(`NecessaryClassicalGodRootAt`) and the underived candidate is already
+certified. It was not: the #1729
 assembly above calls the source-to-God carrying "a transparent composition of
 existing proofs, not a newly certified stronger consumer statement", and
 `NecessaryClassicalGodRootFromUnderived.derive` says its type does not state
@@ -1387,8 +1389,8 @@ q.3 causal relation; they use only `ActualRoot m w`, i.e. `m.grounds`.
   from the fixed-esse maximum identification). The bare `GodExists`
   projection forgets this witness; the new conclusion keeps it, which is why
   the argument records `strong_version_needed`.
-* With both endpoints and H, the underived candidate is also g (H's own
-  uniqueness clause covers it), so u = g = n without `UniqueActualRootAt`.
+* With both endpoints and the classical root `da3facd6`, the underived
+  candidate is also g (the uniqueness clause inside `da3facd6` covers it), so u = g = n without `UniqueActualRootAt`.
   That third composition is inline in `NecessaryClassicalGodRootFromUnderived`
   and was not registered again.
 
@@ -1396,6 +1398,11 @@ Neither result proves any input: the De ente actuality, concreteness,
 ground-to-esse-cause and no-self-cause bridges, all-world underivedness, the
 classical root's attribute/naming bundle and GOD_4 naming all stay open.
 GOD_4 is the nominal case predicate, not historical or Christian identity.
+Sense-coverage gap (#216): the label of `630843d1` carries the tag
+CONCRETE_6, inherited from `ce7edf53`, but no CONCRETE record has a sense of
+that label. The nearest, CONCRETE_AND_ABSTRACT_6 (`HasEsseInRe`), is not the
+profile's primitive `m.concrete`, so it is not linked. The same gap already
+exists on `ce7edf53`.
 No control was added: the existing plural-root and `RootInterface` controls
 already show that without a uniqueness clause two actual roots can differ.
 The conclusions have no downstream consumer yet; their connection plan is a

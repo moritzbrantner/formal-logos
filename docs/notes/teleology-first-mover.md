@@ -336,7 +336,7 @@ no change
 
 **Proposed outcome for review.** First integration slice of #1731: compare the
 three existing intellect support options on ONE witness, connect each to the
-will principle and to a separately supplied God-existence witness, and
+will principle and to a separately supplied perfect-root witness, and
 register only the missing link. One link was missing: the local route reached
 the universal GOD_4 predicate `29818edd`, not the witness-carrying root tuple.
 
@@ -372,17 +372,26 @@ the needed input without universal direction scope. Compared with the
 GOD_4-predicate route `11628966`, the new result does not use the naming
 converse `4c79298d`: the root tuple's own maximum carries the identity.
 CAUSE_1 (moving, in `65c409cc`) and CAUSE_2 (causing a perfection at esse,
-in the structural inputs) remain distinct parameters; the declared sense
-bridge is `46326b43`, the only passage from the motion order to the esse
-order. No moving edge becomes an esse-cause edge.
+in the genus `da09703b`, esse-ground `cb1cdea9`, transfer `b26c10a0` and
+uniting `ca07cae9` inputs) sit on disjoint parameters `Moves` and
+`p.CausesIn`; no moving edge becomes an esse-cause edge. The declared sense
+bridge is a two-premise chain, and neither member relates the two senses on
+its own: `46326b43` takes the motion order to the esse maximum (MAXIME_ENS_1),
+and the genus premise `da09703b` takes that maximum to esse causation. No
+premise here relates moving and causing at esse directly; for one that does,
+compare the bridge `6a0b545c` of argument `d0c022f8`.
 
-### Attachment to the God-existence witness and to will
+### Attachment to the perfect-root witness, the GOD_4 root and will
 
 * **Witness-carrying chain.** `017befa2` feeds
   `ClassicalGodFromPositiveRoot.derive` (`80946eca`) to `da3facd6`
   (`NecessaryClassicalGodRootAt`), whose nine predicates include
-  `HasIntellect n` and `HasWill n` for the SAME n named GOD_4. The God-existence
-  witness is supplied separately as the perfect root `7abdee27`, for example
+  `HasIntellect n` and `HasWill n` for the SAME n named GOD_4. That step is not
+  free: `80946eca` also takes the God-to-maximality premise `4c79298d`, the
+  naming premise `1ec205ed`, the attribute-sufficiency bridge `818a73cc` and the
+  act/potency, infinity and eternity inputs. So the local route avoids
+  `4c79298d` only up to the root tuple, not on the way to the GOD_4 root. The
+  perfect-root witness is supplied separately as `7abdee27`, for example
   by `UnderivedRootPerfection.derive` from an underived candidate, and
   `deEnteSourceIsClassicalGodRoot` (`8e3b89c9`, see the
   [De ente note](de-ente-esse-source-1628.md#same-witness-identities-for-1731-2026-11-18))
@@ -441,9 +450,13 @@ same-domain level: the bridge-closure understanding case
 ([immaterial-intellect-reception.md](../immaterial-intellect-reception.md#matched-understanding-case-the-bridge-closure-inference-2026-11-17))
 and the Rochette coring application
 ([same note](../immaterial-intellect-reception.md#documented-application-rochette-coring-and-unrelated-bearer-motion-2026-11-17)).
-They support local intellectual direction for that selected episode and
-locate the open step at same-end inheritance and first-source recognition,
-which the local option bypasses by the identity bridge rather than resolving.
+They warrant only local, task-specific intellectual direction for the
+selected episode, and they locate the open step at same-end inheritance and
+first-source recognition. The local option does NOT bypass that step. The
+sixth clause of `65c409cc` (every director of the body toward the end reduces
+to an intellectual director that is moved in no respect) is that
+first-source recognition, now required for one body/end rather than all.
+The identity bridge then only carries the result to the esse maximum.
 Ordinary selection/feedback (teleonomy) and the direction of laws remain
 different targets, as recorded above.
 
@@ -451,15 +464,20 @@ different targets, as recorded above.
 
 **Assessment.** Conditional on a supplied perfect actual root, intellect and
 capacity-level will at that SAME root now have three certified support
-options, with one direct-assumption option (`180f5ad2` or `571094b6` accepted
-on its own merits) retained in each. The strongest cumulative positive case
-combines the q.14 immateriality reading with one warranted case of knowing
-local direction plus the first-mover/maximum identity. Because the two belong
-to different families, an objection must meet both: denying
-immateriality-to-intellect leaves the local route, and a teleonomic account of
-one episode leaves the immateriality route. The provisional judgment is
-modestly positive for intellect at the root on the conditional case; formal
-status is unchanged (no premise closed).
+options. Each keeps its own direct-assumption option: for immateriality,
+accepting `180f5ad2` on its merits; for the governor, accepting `571094b6`;
+for the local route, accepting `65c409cc` and `46326b43`. The strongest
+cumulative positive case combines the q.14 immateriality reading with a
+warranted actual case of the FULL local bundle, including its reduction to
+an intellectual unmoved director, plus the first-mover/maximum identity. The
+two belong to different families, so an objection must meet both. However,
+the existing matched cases do not yet supply a warranted case of the
+reduction clause: they support local, task-specific direction only. The
+local route therefore adds a distinct conditional support option, not new
+warrant for intellect at the root. The provisional judgment is unchanged
+from the immateriality and recognition records: intellect at the root is
+positively motivated on the conditional case, and first-source recognition
+remains open. Formal status is unchanged (no premise closed).
 
 **Standing rival.** A simple impersonal necessary source (the
 `simpleImpersonal` control of
@@ -471,9 +489,20 @@ noncognitive first) AND deny either the knowing-director/reduction steps of
 mechanism (selection, feedback, lawful organization) addresses the local
 phenomenon; it does not by itself address immateriality-to-intellect.
 
-**Revision conditions.** Upward: a warranted actual case satisfying the local
-bundle on the HAS_INTELLECT_1 reading, or independent warrant for the identity
-bridge. Downward: a substantive failure mechanism for `180f5ad2` and a
+A second standing rival targets the local route more precisely: the
+organizational account recorded in
+[immaterial-intellect-reception.md](../immaterial-intellect-reception.md#complete-proposed-judgment-stopping-point-and-reopening-conditions).
+It accepts human or other local intellect as the director of the selected
+episode and denies an ADDITIONAL intellectual unmoved director. Its price is
+the denial of the reduction clause of `65c409cc` for that episode, together
+with a positive account of how the local director's own direction is
+sustained and acquired. It owes same-episode adequacy, not just graph
+consistency. It leaves the immateriality option untouched.
+
+**Revision conditions.** Upward: a warranted actual case of the full local
+bundle on the HAS_INTELLECT_1 reading, INCLUDING its reduction to an
+intellectual unmoved director (the recognition reopening conditions in the
+immaterial-intellect note), or independent warrant for the identity bridge. Downward: a substantive failure mechanism for `180f5ad2` and a
 same-episode realization of the selected direction without intellectual ends,
 or a defeat of `46326b43`'s producers. Re-presenting either route under new
 labels adds no warrant.

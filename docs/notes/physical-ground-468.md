@@ -261,7 +261,8 @@ branch into the Positive endpoint. The same consumer has a global-governor
 option (`b5bbf266`) and a witness-local Fifth-Way option
 (`2fbc2c57`, local bundle `65c409cc` with first-mover/maximum identity
 `46326b43`). A `simpleImpersonal` source therefore separates intellect only
-if it also denies a warranted local intellectual director or that identity.
+if it also denies the local bundle (including its reduction to an
+intellectual unmoved director) or that identity.
 Premise differences and shared dependencies:
 [teleology-first-mover.md](teleology-first-mover.md#same-witness-intellect-routes-and-the-will-consumer-1731-2026-11-18).
 A necessitarian rival contests the contingency of a selected effect and is
