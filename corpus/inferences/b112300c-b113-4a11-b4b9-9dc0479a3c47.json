@@ -1,0 +1,13 @@
+{
+  "id": "b112300c-b113-4a11-b4b9-9dc0479a3c47",
+  "label": "Metric finiteness from one locally feasible supplied-duration descent and patchwork (inference)",
+  "input_statement_ids": [
+    "fab16501-c05a-455d-b880-1a8a9a0dc90a",
+    "313105b4-d9a9-4498-961f-1702661c7110"
+  ],
+  "output_statement_id": "4365c3c5-d39b-405c-97a9-a4f7e43c628f",
+  "rule": "At an allegedly infinite populated past take the local premise's anchored descent, use fixed-duration patchwork to obtain one accessible arrangement, and reuse GrimReaperPatchwork.arrangementImpossible.",
+  "meaning": "Non-transcription conditional support option reaching the existing metric-finiteness statement with unchanged meaning and companion premises. No arbitrary-speed family is needed. It consumes only one locally feasible qualifying descent per infinite populated past, alongside patchwork for qualifying descents. This is a sufficient weakening within the split coverage formulation, not a claim of an absolute weakest metaphysical premise. No concrete realization or premise warrant is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

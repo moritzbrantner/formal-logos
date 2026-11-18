@@ -1,0 +1,17 @@
+{
+  "id": "5430f017-6ca2-477b-bed4-7ff54b10d339",
+  "label": "OPEN q.20 LOVE_1 meaning yields GOD_4's LOVE_1 of every existing being (inference)",
+  "input_statement_ids": [
+    "e0dae79f-c042-5a08-a148-725d0468df91",
+    "66aecdd7-ea4e-55c6-9377-10db08893854",
+    "00e962ae-f109-55f7-a7fd-f107ce0dea6b",
+    "a94c5dfc-c722-49fe-a242-dd39409b079d",
+    "2a168a36-bd60-491a-8ad7-ce5b1d2fb560",
+    "16ab027e-52d1-4309-97a6-fc0a45e9f4c5"
+  ],
+  "output_statement_id": "e3d5bece-f216-4877-9fca-8a1eb7d96bcd",
+  "rule": "Obtain the willed good from willsGoodForAllExisting and apply the one-way love-meaning bridge",
+  "meaning": "Analyst registration of the PR #1458 composition, attribution deferred. The recipient-good willing of the previous argument, with its existential respect, feeds the OPEN q.20 a.2 sufficient rule that willing an actual good of x to x is loving x in the thin non-passional sense. All three intentional bridges stay open. The conclusion is not friendship, equal love, affective love, interpersonal relationship or the hiddenness challenge's perfect love; projecting it to those predicates is an OPEN bridge owned by issue 1735. Cognition alone is not used: no intellect premise occurs.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

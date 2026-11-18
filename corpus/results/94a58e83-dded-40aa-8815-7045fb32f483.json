@@ -1,0 +1,11 @@
+{
+  "id": "94a58e83-dded-40aa-8815-7045fb32f483",
+  "label": "Necessary concrete existence from actualist profile population and rigid uniqueness",
+  "argument_id": "6a484a32-39fb-4347-be61-2a922695a7f1",
+  "challenge_module": "TruthCore.Results.Causality.ExistenceAccountIntegration.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ExistenceAccountIntegration.Solution",
+  "theorem": "TruthCore.Results.Causality.ExistenceAccountIntegration.necessaryConcrete",
+  "comparator_config": "results/94a58e83-dded-40aa-8815-7045fb32f483/comparator.json",
+  "status": "solution-present",
+  "description": "Conditional cross-family adapter: at each accessible world choose its existing profile exemplar and use candidate-wide uniqueness of the SAME rigid profile to identify it with the actual concrete exemplar. This derives de re existence rather than exchanging quantifiers without a bridge. The actual, de dicto and uniqueness commitments remain OPEN; no ontological possibility, efficient causation or GOD_4 is supplied. See docs/notes/conceptual-existence-boundary.md."
+}

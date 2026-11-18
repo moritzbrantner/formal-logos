@@ -1,0 +1,12 @@
+{
+  "id": "416236ad-bb54-4d46-8d06-6576aaffae41",
+  "label": "Actual paths give support coverage via their last edge (inference)",
+  "input_statement_ids": [
+    "c36b509c-3057-40f5-ac0b-60751fb0cf27"
+  ],
+  "output_statement_id": "df42581f-5fff-4b5f-8b40-6e16d2b890f2",
+  "rule": "Actual guarded support paths, explicit source scope and existing transitive-closure well-foundedness",
+  "meaning": "Eliminate the NONEMPTY actual path: its last edge supplies some concrete existing actual supporter of the SAME target. That supporter may differ from the original off-world source. Zero-length reachability would not suffice. No J1, reflexivity, WF, source population or God identification is assumed.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

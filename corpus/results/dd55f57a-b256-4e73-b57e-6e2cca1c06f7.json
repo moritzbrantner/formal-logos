@@ -1,0 +1,11 @@
+{
+  "id": "dd55f57a-b256-4e73-b57e-6e2cca1c06f7",
+  "label": "GOD_4 HAS_WILL_1 from modular GOD_4 intellect and the will principle",
+  "argument_id": "571e36f0-c486-474e-9807-226b4bd4ce7f",
+  "challenge_module": "TruthCore.Results.Causality.LocalTeleologyGodIntellect.Challenge",
+  "solution_module": "TruthCore.Results.Causality.LocalTeleologyGodIntellect.Solution",
+  "theorem": "TruthCore.Results.Causality.LocalTeleologyGodIntellect.godHasWill",
+  "comparator_config": "results/dd55f57a-b256-4e73-b57e-6e2cca1c06f7/comparator.json",
+  "status": "solution-present",
+  "description": "A modular consumer for any support of GodHasIntellect, including the local teleology route. Unlike the older monolithic GodHasWill argument, this does not repeat its immateriality derivation. It retains the exact open will-follows-intellect input. HasWill is capacity-level intellectual appetite, not current exercise, intentional creation, free choice or recipient-directed love. Universal conditionals supply no God-existence witness."
+}

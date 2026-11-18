@@ -1,0 +1,11 @@
+{
+  "id": "ef387145-4954-474f-be1a-f00be2fea2b9",
+  "label": "Weak ordered-love reading is compatible with recipient-directed causal willing",
+  "argument_id": "83a76f79-ae98-4025-9ca6-0440a3063989",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.weakOrderedCompatible",
+  "comparator_config": "results/ef387145-4954-474f-be1a-f00be2fea2b9/comparator.json",
+  "status": "solution-present",
+  "description": "Analyst witness. A premise-free finite sample shows the weak ordered reading and a94c5dfc jointly satisfiable with an actual distinct non-rational caused effect, at one recipient-directed willing relation, and that the strong variant fails there. It shows compatibility in this formal interpretation only."
+}

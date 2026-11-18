@@ -1,0 +1,11 @@
+{
+  "id": "b3bff8ed-b56b-47ee-9d73-a18ebb90ee84",
+  "label": "Spaced patchwork gives supplied-duration patchwork strength order",
+  "subject_kind": "statement",
+  "subject_id": "bb7b476c-4774-4860-a31f-f068aa362f18",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "313105b4-d9a9-4498-961f-1702661c7110",
+  "verification_result_id": "9ee3a4d8-e662-4652-b30f-c1d2bd876937",
+  "note": "Verified implication with the strong statement as the sole premise. No strictness claimed. The supplied positive duration and all other interpretations are shared."
+}

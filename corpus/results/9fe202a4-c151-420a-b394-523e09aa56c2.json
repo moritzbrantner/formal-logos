@@ -1,0 +1,11 @@
+{
+  "id": "9fe202a4-c151-420a-b394-523e09aa56c2",
+  "label": "Same profile witness support adapter joint and omission certificates",
+  "argument_id": "fe980a3c-a3e9-4a93-b8ab-380a0f7e588b",
+  "challenge_module": "TruthCore.Results.Causality.ExistenceAccountIntegration.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ExistenceAccountIntegration.Solution",
+  "theorem": "TruthCore.Results.Causality.ExistenceAccountIntegration.supportControls",
+  "comparator_config": "results/9fe202a4-c151-420a-b394-523e09aa56c2/comparator.json",
+  "status": "solution-present",
+  "description": "The nonempty positive case tests the full six-input package. In the second, both candidates exist necessarily, the unique profile bearer false is supported by true, and true is underived. Thus an existential underived output cannot be silently swapped for underivedness of the ontological exemplar. No source attribution or metaphysical possibility is claimed."
+}

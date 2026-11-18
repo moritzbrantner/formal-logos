@@ -64,6 +64,7 @@ public import TruthCore.Causality.CountTemporalNecessity
 public import TruthCore.Causality.CreatureSenses
 public import TruthCore.Causality.DefinitionDictionaryConnections
 public import TruthCore.Causality.DeiFiliusAttributeField
+public import TruthCore.Causality.DeiFiliusBenevolentLord
 public import TruthCore.Causality.DeiFiliusImmenseIncomprehensible
 public import TruthCore.Causality.DeiFiliusLivingNineScope
 public import TruthCore.Causality.DeiFiliusLivingSelfOperation
@@ -80,6 +81,7 @@ public import TruthCore.Causality.DirectEsseRootPerfectionGoodness
 public import TruthCore.Causality.DirectEsseRootRoute
 public import TruthCore.Causality.DirectEsseRootUniquenessAtBeing
 public import TruthCore.Causality.DivineVeracity1410
+public import TruthCore.Causality.DivineVeracityAssembly1732
 public import TruthCore.Causality.DivineVeracityContent1410
 public import TruthCore.Causality.DurationMeasureCandidates
 public import TruthCore.Causality.EndlessTemporalDuration
@@ -93,6 +95,7 @@ public import TruthCore.Causality.EssentialPower
 public import TruthCore.Causality.EternityDefinitionFork
 public import TruthCore.Causality.EventIdentityProfiles
 public import TruthCore.Causality.EventStatePreservation
+public import TruthCore.Causality.ExistenceAccountIntegration
 public import TruthCore.Causality.ExistenceActuality
 public import TruthCore.Causality.ExistenceSenseRoute
 public import TruthCore.Causality.ExistentialSelfActualization
@@ -100,6 +103,7 @@ public import TruthCore.Causality.ExistsSenseMeaning
 public import TruthCore.Causality.FiniteBranching
 public import TruthCore.Causality.FiniteNecessaryUnion
 public import TruthCore.Causality.FiniteRestriction
+public import TruthCore.Causality.FixedDurationGrimReaper
 public import TruthCore.Causality.FullFirstCause
 public import TruthCore.Causality.FullnessCandidates
 public import TruthCore.Causality.GodMaximalCausal
@@ -123,6 +127,7 @@ public import TruthCore.Causality.InterventionTransitivity
 public import TruthCore.Causality.JointGroups
 public import TruthCore.Causality.LifeBoundaryPotency
 public import TruthCore.Causality.LocalFramePossibleExternalCause
+public import TruthCore.Causality.LocalTeleologyGodIntellect
 public import TruthCore.Causality.LocalTransmission
 public import TruthCore.Causality.LogicalNecessityContrast
 public import TruthCore.Causality.LogicalNecessityProfiles
@@ -153,6 +158,7 @@ public import TruthCore.Causality.NecessarySenseFork
 public import TruthCore.Causality.NecessarySimplePlurality
 public import TruthCore.Causality.NecessarySupportActualScope
 public import TruthCore.Causality.NecessarySupportCoverage
+public import TruthCore.Causality.NecessarySupportPathConnection
 public import TruthCore.Causality.NonlimitingConcreteExistence
 public import TruthCore.Causality.OccurrenceUnderivedEssence
 public import TruthCore.Causality.OriginDeletion
@@ -208,6 +214,7 @@ public import TruthCore.Causality.Round3CogitoBase
 public import TruthCore.Causality.Round3FourthWay
 public import TruthCore.Causality.Round4Revisited
 public import TruthCore.Causality.Round5Worklist
+public import TruthCore.Causality.SameSourceWitness
 public import TruthCore.Causality.ScopedActualCausality
 public import TruthCore.Causality.SelectedAncestry
 public import TruthCore.Causality.SelectedAncestryUniqueControl

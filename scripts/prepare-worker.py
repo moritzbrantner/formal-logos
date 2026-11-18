@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare an explicitly selected standalone worker clone; never verify proofs."""
+"""Prepare an explicitly selected worker checkout; never verify proofs."""
 
 import argparse
 import hashlib
@@ -26,12 +26,83 @@ def run(root, *command, capture=False, env=None):
         print(f"elapsed={time.monotonic() - started:.3f}s", flush=True)
 
 
+def git_directory(root):
+    """Accept ordinary clones and registered linked worktrees, never arbitrary gitdir files."""
+    for key in ("GIT_DIR", "GIT_WORK_TREE", "GIT_COMMON_DIR", "GIT_INDEX_FILE"):
+        if key in os.environ:
+            raise ValueError(f"unset {key} before preparation")
+    marker = root / ".git"
+    if marker.is_symlink() or not marker.exists():
+        raise ValueError("unsafe or missing .git marker")
+    try:
+        directory = Path(run(root, "git", "rev-parse", "--absolute-git-dir", capture=True).strip())
+    except subprocess.CalledProcessError as error:
+        raise ValueError("invalid Git checkout marker") from error
+    if directory != directory.resolve():
+        raise ValueError("unsafe symlinked Git directory")
+    if marker.is_dir():
+        common = Path(run(root, "git", "rev-parse", "--path-format=absolute",
+                          "--git-common-dir", capture=True).strip())
+        if directory != marker or common != marker:
+            raise ValueError("unexpected standalone Git directory")
+    else:
+        common = Path(run(root, "git", "rev-parse", "--path-format=absolute",
+                          "--git-common-dir", capture=True).strip())
+        if (common != common.resolve() or directory.parent != common / "worktrees"
+                or not (directory / "gitdir").is_file()
+                or (directory / "gitdir").is_symlink()
+                or Path((directory / "gitdir").read_text().strip()) != marker):
+            raise ValueError(".git must identify a registered linked worktree")
+    return directory
+
+
+def local_path(root, relative):
+    path = root / relative
+    if not path.is_relative_to(root) or path.resolve() != path:
+        raise ValueError(f"unsafe checkout path: {path}")
+    return path
+
+
+def validate_build_tree(tree):
+    """Allow Cargo's internal hardlinks, but no inode with aliases outside this tree.
+
+    With quiescent writers, the number of directory entries we see must equal each
+    regular file's link count. Counting only this owned output tree prevents a
+    hardlink into another checkout/cache from being accepted as a local artifact.
+    """
+    if tree.resolve() != tree:
+        raise ValueError(f"unsafe build tree: {tree}")
+    inodes = {}
+    for folder, directories, files in os.walk(tree, followlinks=False):
+        for name in directories + files:
+            path = Path(folder) / name
+            if path.is_symlink():
+                raise ValueError(f"aliased mutable build artifact: {path}")
+            if path.is_file():
+                metadata = path.stat()
+                key = (metadata.st_dev, metadata.st_ino)
+                count, _, _ = inodes.get(key, (0, metadata.st_nlink, path))
+                inodes[key] = (count + 1, metadata.st_nlink, path)
+    for count, links, path in inodes.values():
+        if count != links:
+            raise ValueError(f"aliased mutable build artifact outside owned tree: {path}")
+
+
+def validate_outputs(root):
+    # Validate before Lake, Cargo or Bun can follow an existing output alias.
+    for name in (".lake", ".lake/packages", ".lake/build", "target", "target/release",
+                 "target/release/truth"):
+        local_path(root, name)
+    for name in (".lake/build", "target"):
+        validate_build_tree(root / name)
+    install_paths(root)
+
+
 def worker_clone(path):
     root = Path(path).absolute()
     if root != root.resolve() or root == Path.home() or root == Path(root.anchor):
         raise ValueError("--clone must be a real clone path, not a symlink, home or filesystem root")
-    if not (root / ".git").is_dir() or (root / ".git").is_symlink():
-        raise ValueError("--clone must contain its own .git directory (worktrees are unsupported)")
+    git_directory(root)
     top = run(root, "git", "rev-parse", "--show-toplevel", capture=True).strip()
     if Path(top).resolve() != root:
         raise ValueError("--clone must name the repository root")
@@ -39,6 +110,7 @@ def worker_clone(path):
     if not re.fullmatch(r"(?:https://github\.com/|git@github\.com:)moritzbrantner/(?:truth-core|formal-logos)(?:\.git)?", remote):
         raise ValueError("expected the formal-logos (formerly truth-core) origin; local shared-cache clones must set their upstream origin first")
     for required in ("lean-toolchain", "lake-manifest.json", "bun.lock", "scripts/bootstrap-verifier.sh"):
+        local_path(root, required)
         if not (root / required).is_file():
             raise ValueError(f"missing repository input: {required}")
     return root
@@ -86,10 +158,12 @@ def install_digest(paths):
 
 
 def reconcile(root, name, inputs, output, action):
-    # Two dependency readiness entries only; this file records no gate/proof success.
-    path = root / ".git/truth-core-preparation.json"
+    # Dependency/CLI readiness only; this file records no gate/proof success.
+    path = git_directory(root) / "truth-core-preparation.json"
     temporary = path.with_suffix(".tmp")
-    if path.is_symlink() or temporary.is_symlink():
+    if (path.is_symlink() or temporary.is_symlink()
+            or (path.exists() and path.stat().st_nlink != 1)
+            or temporary.exists()):
         raise ValueError("unsafe preparation receipt path")
     state = json.loads(path.read_text()) if path.exists() else {}
     before = {"inputs": inputs, "output": output()}
@@ -124,12 +198,21 @@ def prepare_bun(root):
 
 def check_packages(root, acquiring=False):
     manifest = json.loads((root / "lake-manifest.json").read_text())
+    if manifest["packagesDir"] != ".lake/packages":
+        raise ValueError("unsupported dependency boundary: expected .lake/packages")
     for package in manifest["packages"]:
+        if Path(package["name"]).name != package["name"] or package["name"] in (".", "..", ""):
+            raise ValueError("unsupported dependency boundary: invalid package name")
         path = root / manifest["packagesDir"] / package["name"]
-        if package["type"] != "git" or not path.resolve().is_relative_to(root):
+        if (package["type"] != "git" or path.resolve() != path
+                or not path.resolve().is_relative_to(root) or path == root):
             raise ValueError(f"unsupported dependency boundary: {package['name']}")
         if acquiring and not path.exists():
             continue
+        if not (path / ".git").is_dir() or (path / ".git").is_symlink():
+            raise ValueError(f"dependency must have its own Git directory: {path}")
+        if git_directory(path) != path / ".git":
+            raise ValueError(f"dependency must have private Git metadata: {path}")
         revision = run(path, "git", "rev-parse", "HEAD", capture=True).strip()
         if revision != package["rev"] and not acquiring:
             raise ValueError(f"dependency revision mismatch: {package['name']}")
@@ -139,9 +222,22 @@ def check_packages(root, acquiring=False):
 
 def prepare_verifier(root):
     work = Path(os.environ.get("TRUTH_CORE_VERIFIER_HOME", str(Path.home() / ".cache/truth-core-verifier")))
+    work = work.absolute()
+    if work != work.resolve() or work in (Path.home(), Path(work.anchor)):
+        raise ValueError("unsafe verifier cache path")
+    common = Path(run(root, "git", "rev-parse", "--path-format=absolute",
+                      "--git-common-dir", capture=True).strip())
+    if work.is_relative_to(root) or work.is_relative_to(common.parent):
+        raise ValueError("verifier cache must be outside the checkout and main Git directory")
+    for name in ("rust-target", "lean4export", "landrun", "bin", "nanoda_lib"):
+        local_path(work, name)
     binaries = [work / name for name in ("rust-target/release/truth-core-comparator",
                 "lean4export/.lake/build/bin/lean4export", "bin/landrun",
                 "nanoda_lib/target/release/nanoda_bin")]
+    for binary in binaries:
+        local_path(work, binary.relative_to(work))
+    for name in ("rust-target", "lean4export/.lake/build", "bin", "nanoda_lib/target"):
+        validate_build_tree(work / name)
     inputs = digest_files([root / "lean-toolchain", root / "scripts/verifier-pins.env",
                           root / "scripts/bootstrap-verifier.sh", Path(__file__),
                           root / "verifier/Cargo.toml", root / "verifier/Cargo.lock",
@@ -210,7 +306,9 @@ def seed_build(root, source):
             raise ValueError(f"refusing a symlinked build path in {clone}: {path}")
     if not origin.is_dir():
         raise ValueError(f"--seed-build-from has no real build output: {origin}")
-    if target.exists() or target.is_symlink():
+    if target.is_symlink() or target.resolve() != target:
+        raise ValueError(f"refusing a symlinked build path: {target}")
+    if target.exists():
         print(f"unchanged: existing build output kept at {target}; Lake reconciles it", flush=True)
         return
     staging = root / ".lake/build.seeding"
@@ -233,7 +331,59 @@ def seed_build(root, source):
           "the next lake build rebuilds every module whose inputs differ", flush=True)
 
 
+def cli_inputs(root):
+    paths = [root / "Cargo.toml", root / "Cargo.lock",
+             *sorted(path for path in (root / "truth").rglob("*") if path.is_file()),
+             *[root / name for name in (".cargo/config", ".cargo/config.toml",
+                                       "rust-toolchain", "rust-toolchain.toml") if (root / name).exists()]]
+    digest = hashlib.sha256()
+    for path in paths:
+        local_path(root, path.relative_to(root))
+        digest.update(str(path.relative_to(root)).encode())
+        digest.update(path.read_bytes())
+    return digest.hexdigest()
+
+
+def prepare_cli(root, source=None):
+    """Provide a local CLI without sharing mutable Cargo outputs with another checkout."""
+    target = local_path(root, "target/release/truth")
+    validate_build_tree(root / "target")
+    inputs = cli_inputs(root) + run(root, "rustc", "-vV", capture=True)
+    inputs += json.dumps({key: os.environ.get(key) for key in (
+        "RUSTFLAGS", "CARGO_ENCODED_RUSTFLAGS", "RUSTUP_TOOLCHAIN",
+        "CARGO_BUILD_TARGET", "CARGO_PROFILE_RELEASE_OPT_LEVEL", "RUSTC_WRAPPER")}, sort_keys=True)
+
+    def output():
+        return digest_files([target]) if target.is_file() and os.access(target, os.X_OK) else None
+
+    def acquire():
+        if source is not None:
+            warm = worker_clone(source)
+            binary = local_path(warm, "target/release/truth")
+            receipt = git_directory(warm) / "truth-core-preparation.json"
+            state = json.loads(receipt.read_text()) if receipt.is_file() and not receipt.is_symlink() else {}
+            entry = state.get("cli", {})
+            if (cli_inputs(warm) == cli_inputs(root) and entry.get("inputs") == inputs
+                    and binary.is_file() and os.access(binary, os.X_OK)
+                    and entry.get("output") == digest_files([binary])):
+                target.parent.mkdir(parents=True, exist_ok=True)
+                temporary = local_path(root, "target/release/truth.preparing")
+                if temporary.exists():
+                    raise ValueError(f"leftover CLI staging file: {temporary}")
+                shutil.copy2(binary, temporary)
+                if digest_files([binary]) != entry["output"]:
+                    temporary.unlink()
+                    raise ValueError("CLI seed changed during copy")
+                temporary.replace(target)
+                return
+        run(root, "cargo", "build", "--locked", "--release", "-p", "truth",
+            "--target-dir", str(root / "target"))
+
+    reconcile(root, "cli", inputs, output, acquire)
+
+
 def prepare(root, seed_from=None):
+    validate_outputs(root)
     for tool in ("git", "lean", "lake", "cargo", "rustc", "go", "bun"):
         if shutil.which(tool) is None:
             raise ValueError(f"missing required build tool: {tool}")
@@ -250,14 +400,15 @@ def prepare(root, seed_from=None):
         seed_build(root, seed_from)
     prepare_verifier(root)
     prepare_bun(root)
+    prepare_cli(root, seed_from)
     print("ready: dependencies prepared; source/Lean/Comparator verification still required", flush=True)
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--clone", required=True, help="explicit standalone clone whose install directories are disposable")
+    parser.add_argument("--clone", required=True, help="existing clone or registered linked worktree whose install directories are disposable")
     parser.add_argument("--seed-build-from", metavar="WARM_CLONE",
-                        help="quiescent standalone clone with the same toolchain, manifest and lakefile "
+                        help="quiescent checkout with the same toolchain, manifest and lakefile "
                              "whose TruthCore build output seeds this clone's absent .lake/build")
     args = parser.parse_args()
     started = time.monotonic()

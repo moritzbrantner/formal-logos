@@ -1,0 +1,11 @@
+{
+  "id": "12ae7844-4c78-4c60-8bb9-fb03728f118b",
+  "label": "GOD_4 wills GOOD_4 to each distinct intellectual effect, from causal willing",
+  "argument_id": "0b422d2b-50dc-4e28-81c0-e316620a79e8",
+  "challenge_module": "TruthCore.Results.Causality.DeiFiliusBenevolentLord.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DeiFiliusBenevolentLord.Solution",
+  "theorem": "TruthCore.Results.Causality.DeiFiliusBenevolentLord.intellectualWillingOfCausalWilling",
+  "comparator_config": "results/12ae7844-4c78-4c60-8bb9-fb03728f118b/comparator.json",
+  "status": "solution-present",
+  "description": "Second support option for the restricted premise, without the divine self-case premise DivineOwnGoodWilling. For a GOD_4 g with will and a distinct intellectual x in act as to being whose being g causes, CausalExistenceWilling (a94c5dfc) gives that g wills x its good in esse, and the q.5 a.1 coextension (00e962ae) gives that x is good in esse because it is in act in esse. Conditional consequence; both premises stay open."
+}

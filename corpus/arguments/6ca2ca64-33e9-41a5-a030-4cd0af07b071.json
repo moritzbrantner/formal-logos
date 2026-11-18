@@ -1,0 +1,22 @@
+{
+  "id": "6ca2ca64-33e9-41a5-a030-4cd0af07b071",
+  "label": "Changing-direct-support actual-path application certificate",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "c6cb4d98-e8a1-4d57-8b07-316c46967969",
+  "inference_ids": [
+    "b4fe91d8-2055-4661-aa53-5ac755f2feb7"
+  ],
+  "meaning": "Populated actual-chain/alternative-shortcut assignment certifies the standing-ancestry input without direct-edge persistence, both structural route inputs, and distinct initial necessary and underived witnesses. The direct edge t0→t2 is absent at the actual world; the nonempty path t0→t1→t2 is present. This is a formal compatibility result, not independent metaphysical warrant.",
+  "definition_ids": [
+    "189efe37-3e78-45f9-83e7-bed94bbfd4b3",
+    "9146789d-5b36-572f-baa1-7eef28967793",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "b242943a-34cc-582d-8c38-c1203b9d2c91",
+    "e09302b5-83af-4c1c-b4c6-fad1c29804d8"
+  ],
+  "sense_mixing_control": true,
+  "disambiguation_ids": [
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6"
+  ]
+}

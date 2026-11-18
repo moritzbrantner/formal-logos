@@ -1,0 +1,9 @@
+{
+  "id": "a9f95430-3df4-4073-881e-87cc77ac93a1",
+  "label": "One locally feasible supplied-duration descent per infinite populated past",
+  "term": "selected local descent at a supplied duration",
+  "definition": "DurationDescentPossible R h Concrete k d w requires that every metrically infinite populated past at t in v accessible from w admits some descending c starting exactly at t, with every slot at least the supplied positive d, and co-possible adjacent PieceAt predicates. It is existential in c per v and t, not local coverage of every descent. The infinite-past antecedent restricts the application question; this is an explicit sequence and register witness requirement, not an opaque finiteness flag.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.FixedDurationGrimReaper.DurationDescentPossible",
+  "note": "Analyst formulation for issue #1489; attribution deferred. CLOCK_2 is the encoded real coordinate; CLOCK_1 proper duration is the intended application. Metaphysical applicability remains OPEN. See docs/causal-regress-and-grim-reapers.md, fixed-duration certification and connected-port follow-up."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "a66e4ce3-e1ea-475b-8969-03122276cc51",
+  "label": "LOVE_1 of all existing at the LOVE_1 and CREATURE_WILLING_1 carriers",
+  "argument_id": "aff41a69-29fb-4504-a228-f1511ca2f8e7",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.lovesAllExistingAtCarriers",
+  "comparator_config": "results/a66e4ce3-e1ea-475b-8969-03122276cc51/comparator.json",
+  "status": "solution-present",
+  "description": "Corollary tying the registered parametric result a2366ca4 to the carriers RecipientGoodWilling.WillsGoodFor (CREATURE_WILLING_1) and ThinLove.Loves (LOVE_1): the same six inputs at these relations give LOVE_1 of every existing being. Same OPEN bridges; it proves LOVE_1 only, not hiddenness PerfectLove (LOVE_2)."
+}

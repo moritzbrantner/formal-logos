@@ -1,0 +1,23 @@
+{
+  "id": "1ca75ad2-e6f6-492a-9fcc-19eebfc8d3aa",
+  "label": "Willing a being as ordered to another (q.20 a.2 ad 3 ordered love)",
+  "term": "willing a being as ordered to another",
+  "definition": "WillsAsOrderedTo g x y r: g wills x's being in respect r as ordered to y (a rational creature or God), as with the love of desire by which, on q.20 a.2 ad 3, irrational creatures are loved 'as it were'. It does not by itself will that good to x as recipient.",
+  "basis": "stipulative",
+  "note": "Analyst interpretation, attribution deferred (docs/notes/divine-love-goodness-bridge.md). Sense carrier: the primitive field OrderedWilling.WillsAsOrderedTo of TruthCore.Case.Catholicism.DivineLoveSenses. Used by the weak sibling 7f6a2e91-4924-4488-8173-03d1dabb222b and the strong variant 1dd68893-7e41-4909-9f17-1dbb342a7d95 of the causal-willing step. A pinned witness for ST I q.20 a.2 ad 3, read in context, would source it.",
+  "lean_declaration": "TruthCore.Case.Catholicism.DivineLoveSenses.OrderedWilling.WillsAsOrderedTo",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "WillsAsOrderedTo g x y r: g wills x's being in r for the sake of, or as ordered to, y.",
+    "examples": [
+      "Willing wine's existence as ordered to the person who will drink it (q.20 a.2 ad 3 illustration, attribution deferred)."
+    ],
+    "exclusions": [
+      "Willing that good to x itself as recipient (recipient-directed willing 08b826db-2d9c-48e5-b69c-d4ac54088518)."
+    ],
+    "open_obligations": [
+      "Whether divine willing of irrational effects is ordered in this sense, recipient-directed, or both, is OPEN.",
+      "No relation to recipient-directed willing is asserted beyond the strong variant 1dd68893's explicit negation."
+    ]
+  }
+}

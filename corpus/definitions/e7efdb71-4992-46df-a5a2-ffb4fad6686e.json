@@ -1,0 +1,9 @@
+{
+  "id": "e7efdb71-4992-46df-a5a2-ffb4fad6686e",
+  "label": "Reaper patchwork along every supplied-duration populated descent",
+  "term": "patchwork at a supplied duration",
+  "definition": "DurationPatchwork R h Concrete k d w requires that each descending c in v accessible from w, with slots at least the supplied positive d and populated first moment, has all its PieceAt predicates realized in one world accessible from v if all adjacent pairs are co-possible. It supplies no local feasibility, concrete devices, host geometry or actual interface warrant.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.FixedDurationGrimReaper.DurationPatchwork",
+  "note": "Analyst formulation for issue #1489; attribution deferred. CLOCK_2 is the encoded real coordinate; CLOCK_1 proper duration is the intended application. Metaphysical applicability remains OPEN. See docs/causal-regress-and-grim-reapers.md, fixed-duration certification and connected-port follow-up."
+}

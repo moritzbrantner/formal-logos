@@ -1,0 +1,11 @@
+{
+  "id": "b49b53e7-d458-4f60-b803-31e5132a1b4f",
+  "label": "Closed esse-source controls checked",
+  "argument_id": "b732a37f-b1ee-45c3-97c0-fe5a0b7884f2",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource.controls",
+  "comparator_config": "results/b49b53e7-d458-4f60-b803-31e5132a1b4f/comparator.json",
+  "status": "solution-present",
+  "description": "Non-transcription closed control bundle. Exact actual esse dictionaries test unrestricted-WF strictness, rooted cycles, roster-only insufficiency and one-bearer population. No model is asserted to be metaphysically possible."
+}

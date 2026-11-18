@@ -1,0 +1,12 @@
+{
+  "id": "2a168a36-bd60-491a-8ad7-ce5b1d2fb560",
+  "label": "A GOD_4 with will that is GOOD_4 in esse wills that GOOD_4 for itself",
+  "paraphrase": "Analyst formulation, OPEN bridge, attribution deferred (ST I q.19 a.1 / q.20 a.1 theme). For every GOD_4 g with will that is good in esse, g wills that good in esse to itself. Needed because the stage-2 supreme-goodness predicate concerns causation of distinct beings only; the unary HAS_WILL_1 predicate records no object of willing.",
+  "lean_declaration": "TruthCore.Case.Catholicism.DivineLoveBridge.DivineOwnGoodWilling",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "4c8f0e6b-7ef6-5be5-851c-cdf4f0301546",
+    "08b826db-2d9c-48e5-b69c-d4ac54088518"
+  ]
+}

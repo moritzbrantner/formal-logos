@@ -1,0 +1,13 @@
+{
+  "id": "2548b8c2-d1e7-4191-a6cf-cd7683844c9a",
+  "label": "All-source actual paths propagate actual J1 to full J1 (inference)",
+  "input_statement_ids": [
+    "84751fc2-0179-49ce-b96a-04d95781d8bc",
+    "c36b509c-3057-40f5-ac0b-60751fb0cf27"
+  ],
+  "output_statement_id": "dd41c165-129a-59d3-84ce-bd13c0944901",
+  "rule": "Actual guarded support paths, explicit source scope and existing transitive-closure well-foundedness",
+  "meaning": "Propagate necessity backwards along each actual guarded path using only the selected-world J1 instance at each edge. All-source transport then makes every admitted-world existing supporter of a necessary concretum necessary. This new scope bridge does not hold from necessary-source paths with actual J1 alone: the offWorldContingent scope control retains those while full J1 fails. No reflexivity, source supply, WF or EM is used.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

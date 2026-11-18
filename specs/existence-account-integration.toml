@@ -1,0 +1,84 @@
+[batch]
+vocab = "TruthCore.Causality.ExistenceAccountIntegration"
+results = "TruthCore.Results.Causality.ExistenceAccountIntegration"
+definitions = ["beb654a7-e204-5f4c-a7b4-45e886ba7109", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "c7c2f208-9651-5351-afc3-d5f3423ef415", "b3c45d92-dee0-5a1a-9849-9924d3a1699d"]
+
+[[statement]]
+id = "Actual concrete exemplar of rigid reality profile"
+lean = "ActualConcreteProfile"
+definitions = ["beb654a7-e204-5f4c-a7b4-45e886ba7109", "b3c45d92-dee0-5a1a-9849-9924d3a1699d", "1b8baf77-84fa-5513-a138-7fa14840dd87"]
+paraphrase = "Some SAME candidate is concrete, actually exists at the selected world and possesses every feature of the supplied rigid Kant reality profile. This actualist population input is OPEN: neither a description nor Scott NE supplies it. Analyst reconstruction, attribution deferred."
+
+[[statement]]
+id = "Actualist necessary exemplification of rigid reality profile"
+lean = "NecessaryProfilePopulation"
+definitions = ["beb654a7-e204-5f4c-a7b4-45e886ba7109", "b3c45d92-dee0-5a1a-9849-9924d3a1699d", "baddf770-36bf-542f-bb3c-2297342d5452"]
+paraphrase = "At every accessible world some actually existing candidate possesses every feature of the supplied rigid reality profile. This uses the existing DeDicto quantifier; witnesses may differ before numerical uniqueness is supplied. OPEN, not conceivability or Scott NE."
+
+[[statement]]
+id = "Same actual concrete reality-profile bearer is necessarily underived"
+lean = "UnderivedConcreteProfile"
+definitions = ["beb654a7-e204-5f4c-a7b4-45e886ba7109", "b3c45d92-dee0-5a1a-9849-9924d3a1699d", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "7b0b109c-ad03-59a3-a81c-d0e027e91f95", "1b8baf77-84fa-5513-a138-7fa14840dd87"]
+paraphrase = "One SAME concrete candidate actually exists, possesses the entire supplied rigid reality profile, exists at every accessible world and has no existing direct existential supporter at any admitted world. No intrinsic explanation, cause of esse, divine attributes or GOD_4 identification follows. Analyst formulation."
+
+[[argument]]
+id = "Necessary concrete existence from actualist profile population and rigid uniqueness"
+theorem = "necessaryConcrete"
+sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", role = "conclusion", statement_id = "b19ffd92-01bd-5c0b-9643-e7407137ea5e"}]
+senses = { NECESSARY = "NECESSARY_2" }
+premises = ["Actual concrete exemplar of rigid reality profile", "Actualist necessary exemplification of rigid reality profile", "84ae3700-f0a9-5d49-9c8c-0ccc9cb40e8a"]
+conclusion = "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
+rule = "Numerical identity substitution preserving the actual concrete witness"
+meaning = "Conditional cross-family adapter: at each accessible world choose its existing profile exemplar and use candidate-wide uniqueness of the SAME rigid profile to identify it with the actual concrete exemplar. This derives de re existence rather than exchanging quantifiers without a bridge. The actual, de dicto and uniqueness commitments remain OPEN; no ontological possibility, efficient causation or GOD_4 is supplied. See docs/notes/conceptual-existence-boundary.md."
+
+[[argument]]
+id = "Same profile witness underived from necessary-support transport and Kant identification"
+theorem = "sameWitnessUnderived"
+sense_bridges = [{term = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY", from = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_1", to = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_3", statement_id = "2a9378b4-3dad-591b-a88e-1907a79f1fa5"}, {term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", role = "conclusion", statement_id = "Same actual concrete reality-profile bearer is necessarily underived"}, {term = "DE_RE_NECESSARY_EXISTENCE_ABSENT_EXISTENTIAL", from = "DE_RE_NECESSARY_EXISTENCE_ABSENT_EXISTENTIAL_1", to = "DE_RE_NECESSARY_EXISTENCE_ABSENT_EXISTENTIAL_2", role = "conclusion", statement_id = "Same actual concrete reality-profile bearer is necessarily underived"}]
+senses = { NECESSARY = "NECESSARY_2" }
+premises = ["Actual concrete exemplar of rigid reality profile", "Actualist necessary exemplification of rigid reality profile", "84ae3700-f0a9-5d49-9c8c-0ccc9cb40e8a", "2107b9df-b7bc-5f62-af64-9c23f6819c08", "47a97912-335f-52f7-a715-63592368f0fe", "2a9378b4-3dad-591b-a88e-1907a79f1fa5"]
+conclusion = "Same actual concrete reality-profile bearer is necessarily underived"
+rule = "Rigid profile identity and well-founded support excludes a self predecessor"
+meaning = "Preserve the actual profile exemplar through accessible-world existence. A putative supporter lifts to an actual necessary predecessor; the separately OPEN Kant necessity-to-most-real premise and numerical uniqueness identify it with that same exemplar, contradicting well-founded actual support. No excluded middle or reflexive frame axiom is needed. Support is the supplied relation, not automatically efficient cause or adequate explanation. Rejection of Kant identification withdraws this particular same-witness route, not every cosmological argument. See docs/notes/conceptual-existence-boundary.md."
+
+[[statement]]
+id = "Rigid profile population adapter finite omission controls"
+lean = "PopulationControls"
+definitions = ["beb654a7-e204-5f4c-a7b4-45e886ba7109", "b3c45d92-dee0-5a1a-9849-9924d3a1699d", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "baddf770-36bf-542f-bb3c-2297342d5452"]
+paraphrase = "Three explicit Bool assignments jointly satisfy the actual exemplar, necessary population and numerical uniqueness commitments, or omit uniqueness, or omit population. Each omission retains the other two inputs and lacks any necessary concrete witness. Mathematical assignments only, not metaphysical impossibility or objections to premise warrant."
+
+[[argument]]
+id = "Rigid profile actualist population adapter omission certificates"
+theorem = "populationControls"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = []
+conclusion = "Rigid profile population adapter finite omission controls"
+rule = "Finite assignment evaluation"
+meaning = "Joint nonvacuity and two exact omission interpretations using the existing universally accessible alternating-world fixture. They test quantifier transport and candidate-wide uniqueness, not real possibility, explanatory adequacy or GOD_4."
+sense_mixing_control = true
+
+[[argument]]
+id = "Underived reality-profile witness feeds concrete grounding consumer"
+theorem = "groundingConsumer"
+transcription = "assembly"
+sense_bridges = [{term = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY", from = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_3", to = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_1", role = "conclusion", statement_id = "0bdcf366-29c7-5d45-b603-5c929dcad976"}, {term = "DE_RE_NECESSARY_EXISTENCE_ABSENT_EXISTENTIAL", from = "DE_RE_NECESSARY_EXISTENCE_ABSENT_EXISTENTIAL_2", to = "DE_RE_NECESSARY_EXISTENCE_ABSENT_EXISTENTIAL_1", role = "conclusion", statement_id = "0bdcf366-29c7-5d45-b603-5c929dcad976"}]
+premises = ["Same actual concrete reality-profile bearer is necessarily underived"]
+conclusion = "0bdcf366-29c7-5d45-b603-5c929dcad976"
+rule = "Explicit selected-relation specialization and same-witness restriction"
+meaning = "Structural projection, not additional philosophical support: instantiate the premise's support parameter at THIS Profile.grounds. Keep the same actual concrete necessary exemplar and restrict exclusion from all existing supporters to existing concrete supporters. This instantiation is explicit in the Lean hypothesis; an arbitrary relation is not identified with grounding or efficient causation. Downstream attribute and GOD_4 bridges remain open."
+
+[[statement]]
+id = "Same profile witness support adapter joint and omission controls"
+lean = "SupportControls"
+definitions = ["beb654a7-e204-5f4c-a7b4-45e886ba7109", "b3c45d92-dee0-5a1a-9849-9924d3a1699d", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "7b0b109c-ad03-59a3-a81c-d0e027e91f95", "5a5b976e-36e1-53f5-a1b1-a723cacd0206", "6af245c0-b443-51b1-a98e-4e8f8fc7bf3e"]
+paraphrase = "Explicit finite assignments jointly satisfy all six same-witness adapter inputs and its conclusion, or retain the other five inputs while omitting necessity-to-profile identification. In the latter, the unique actual concrete profile exemplar is supported by a different necessary source; it is not underived, though some different necessary individual is underived. Assignments only, not evidence against the open identification premise."
+
+[[argument]]
+id = "Same profile witness support adapter joint and omission certificates"
+theorem = "supportControls"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = []
+conclusion = "Same profile witness support adapter joint and omission controls"
+rule = "Constructive finite support assignments and well-foundedness"
+meaning = "The nonempty positive case tests the full six-input package. In the second, both candidates exist necessarily, the unique profile bearer false is supported by true, and true is underived. Thus an existential underived output cannot be silently swapped for underivedness of the ontological exemplar. No source attribution or metaphysical possibility is claimed."
+sense_mixing_control = true

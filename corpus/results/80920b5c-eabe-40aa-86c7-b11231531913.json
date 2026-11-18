@@ -1,0 +1,11 @@
+{
+  "id": "80920b5c-eabe-40aa-86c7-b11231531913",
+  "label": "Joint-satisfiability model of the LORD_3 Dei Filius root route, checked",
+  "argument_id": "33b755fd-03e3-4c7d-8bbb-77db1d8474ca",
+  "challenge_module": "TruthCore.Results.Causality.DeiFiliusBenevolentLord.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DeiFiliusBenevolentLord.Solution",
+  "theorem": "TruthCore.Results.Causality.DeiFiliusBenevolentLord.rootModel",
+  "comparator_config": "results/80920b5c-eabe-40aa-86c7-b11231531913/comparator.json",
+  "status": "solution-present",
+  "description": "Given excluded middle, the unified route's root model satisfies its whole bundle and its root has every Dei Filius attribute (DeiFiliusUnifiedRoute controls, which permit the three Mathlib axioms). Its bundle contains 'Whatever is LORD_2 is LORD_1', which entails 'Whatever is LORD_3 is LORD_1'; with a permissive willing relation and its all-true goodness dictionary the restricted willing premise holds; recipient is an intellectual being other than the root. So the LORD_3 route's bundle is jointly satisfiable in this interpretation. Model-witnessed facts only; the permissive willing relation does not discriminate recipient-directed willing."
+}

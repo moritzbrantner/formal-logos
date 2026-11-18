@@ -1,0 +1,9 @@
+{
+  "id": "5f177d3f-c661-49d2-8082-941a46d8b41b",
+  "label": "Slots at least one supplied positive duration",
+  "term": "fixed-duration slots",
+  "definition": "DurationSlots k d c means that every difference reading(c n)-reading(c(n+1)) is at least the supplied d, whose subtype requires d>0. The same d is fixed for every index, descent and world of the application. This bounds temporal duration only, not spatial room, topology or causal reach.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.FixedDurationGrimReaper.DurationSlots",
+  "note": "Analyst formulation for issue #1489; attribution deferred. CLOCK_2 is the encoded real coordinate; CLOCK_1 proper duration is the intended application. Metaphysical applicability remains OPEN. See docs/causal-regress-and-grim-reapers.md, fixed-duration certification and connected-port follow-up."
+}

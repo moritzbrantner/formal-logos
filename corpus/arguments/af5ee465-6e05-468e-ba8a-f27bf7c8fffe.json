@@ -1,0 +1,33 @@
+{
+  "id": "af5ee465-6e05-468e-ba8a-f27bf7c8fffe",
+  "label": "Actual paths give support coverage via their last edge",
+  "premise_statement_ids": [
+    "c36b509c-3057-40f5-ac0b-60751fb0cf27"
+  ],
+  "conclusion_statement_id": "df42581f-5fff-4b5f-8b40-6e16d2b890f2",
+  "inference_ids": [
+    "416236ad-bb54-4d46-8d06-6576aaffae41"
+  ],
+  "meaning": "Eliminate the NONEMPTY actual path: its last edge supplies some concrete existing actual supporter of the SAME target. That supporter may differ from the original off-world source. Zero-length reachability would not suffice. No J1, reflexivity, WF, source population or God identification is assumed.",
+  "definition_ids": [
+    "189efe37-3e78-45f9-83e7-bed94bbfd4b3",
+    "7266f604-f0bc-4aac-89b9-0f4cc7be5f33",
+    "9146789d-5b36-572f-baa1-7eef28967793",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "b242943a-34cc-582d-8c38-c1203b9d2c91"
+  ],
+  "disambiguation_ids": [
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"
+  ],
+  "sense_bridges": [
+    {
+      "term": "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY",
+      "from": "2e064a7b-b29f-4f0b-8978-782674012d86",
+      "to": "57356a7a-ed0a-478f-abfc-2d47dd631135",
+      "statement_id": "c36b509c-3057-40f5-ac0b-60751fb0cf27",
+      "role": "premise"
+    }
+  ]
+}

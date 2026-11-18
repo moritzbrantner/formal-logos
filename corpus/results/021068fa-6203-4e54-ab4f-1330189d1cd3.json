@@ -1,0 +1,11 @@
+{
+  "id": "021068fa-6203-4e54-ab4f-1330189d1cd3",
+  "label": "Changing-direct-support actual-path application certificate",
+  "argument_id": "6ca2ca64-33e9-41a5-a030-4cd0af07b071",
+  "challenge_module": "TruthCore.Results.Causality.NecessarySupportPathConnection.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NecessarySupportPathConnection.Solution",
+  "theorem": "TruthCore.Results.Causality.NecessarySupportPathConnection.shortcutControl",
+  "comparator_config": "results/021068fa-6203-4e54-ab4f-1330189d1cd3/comparator.json",
+  "status": "solution-present",
+  "description": "Populated actual-chain/alternative-shortcut assignment certifies the standing-ancestry input without direct-edge persistence, both structural route inputs, and distinct initial necessary and underived witnesses. The direct edge t0→t2 is absent at the actual world; the nonempty path t0→t1→t2 is present. This is a formal compatibility result, not independent metaphysical warrant."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "2919d8b7-736a-45f4-b75c-b4323248ddf1",
+  "label": "Two actual beings give the one-bearer population",
+  "premise_statement_ids": [
+    "33f3c4c5-ccd6-4e8e-9cfb-0b231bb0e38f"
+  ],
+  "conclusion_statement_id": "78cffb8e-da95-4459-8058-45e0953cdde8",
+  "inference_ids": [
+    "a26f4b5a-1960-4222-9e25-b214414ee7e5"
+  ],
+  "meaning": "Sole-premise strength comparison: two different actual esse bearers imply at least one. The common-source transfer uses only the weaker population.",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

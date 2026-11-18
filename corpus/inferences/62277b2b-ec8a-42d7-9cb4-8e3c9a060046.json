@@ -1,0 +1,12 @@
+{
+  "id": "62277b2b-ec8a-42d7-9cb4-8e3c9a060046",
+  "label": "Spaced local pieces give supplied-duration local pieces (inference)",
+  "input_statement_ids": [
+    "37d4e072-212b-4b99-a4ff-bf10d94d5a52"
+  ],
+  "output_statement_id": "5c146257-8141-4393-940b-e8c19e26d390",
+  "rule": "A descent whose slots are at least the supplied positive d satisfies SlotsAtLeast.",
+  "meaning": "Implication only, no strictness claim. The stronger original local route remains available.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

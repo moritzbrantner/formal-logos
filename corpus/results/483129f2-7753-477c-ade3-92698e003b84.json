@@ -1,0 +1,11 @@
+{
+  "id": "483129f2-7753-477c-ade3-92698e003b84",
+  "label": "The NECESSARY_2 GOD_4 root has the Dei Filius attributes via LORD_3",
+  "argument_id": "625e9993-f850-432a-8fc8-b3b813c7b35f",
+  "challenge_module": "TruthCore.Results.Causality.DeiFiliusBenevolentLord.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DeiFiliusBenevolentLord.Solution",
+  "theorem": "TruthCore.Results.Causality.DeiFiliusBenevolentLord.deiFiliusRootUnifiedBenevolentLord",
+  "comparator_config": "results/483129f2-7753-477c-ade3-92698e003b84/comparator.json",
+  "status": "solution-present",
+  "description": "The registered unified Dei Filius root composition (deiFiliusRootUnified) is applied with every input except 'Whatever is LORD_2 is LORD_1', on the primitives that agree with the given ones except that their lord field is LORD_2; that bridge then holds trivially and nothing about the given lord primitive is used. Its root n is the same witness: n is GOD_4, has will and is LORD_2, so n causes the being of every other being in act as to being. For each such other being that has intellect, the restricted willing premise gives a good of its own that n wills to it. So n is LORD_3, and the LORD_3 sense bridge gives n LORD_1. Every other conjunct is carried over. The senses are not identified: each passage is one listed sense-bridge premise. Joint satisfiability of this whole premise bundle is witnessed by the root model of this batch (on the unified route's root model, with a permissive willing relation). LORD_1 is dominion over everything else; the route makes no claim about a jurisdiction to impose moral obligations. Conditional consequence only; no premise is established."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "eb812faf-bdd6-4364-8cde-4684ea61e0a6",
+  "label": "Full J1 upgrades necessary-source paths to all-source paths",
+  "argument_id": "f0f95c62-4297-41c5-9fe0-20f2e57955c1",
+  "challenge_module": "TruthCore.Results.Causality.NecessarySupportPathConnection.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NecessarySupportPathConnection.Solution",
+  "theorem": "TruthCore.Results.Causality.NecessarySupportPathConnection.upgradePaths",
+  "comparator_config": "results/eb812faf-bdd6-4364-8cde-4684ea61e0a6/comparator.json",
+  "status": "solution-present",
+  "description": "For each off-world existing concrete source of a necessary concrete target, full J1 makes that SAME source necessary, so the necessary-source path property applies. This maps the two path scopes under an explicit additional assumption; it does not supply J1 or a source witness."
+}

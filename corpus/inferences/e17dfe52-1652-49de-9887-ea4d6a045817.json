@@ -1,0 +1,12 @@
+{
+  "id": "e17dfe52-1652-49de-9887-ea4d6a045817",
+  "label": "Spaced patchwork gives supplied-duration patchwork (inference)",
+  "input_statement_ids": [
+    "bb7b476c-4774-4860-a31f-f068aa362f18"
+  ],
+  "output_statement_id": "313105b4-d9a9-4498-961f-1702661c7110",
+  "rule": "A descent whose slots are at least the supplied positive d satisfies SlotsAtLeast.",
+  "meaning": "Implication only, no strictness claim. The stronger original patchwork route remains available.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

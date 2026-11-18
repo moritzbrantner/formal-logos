@@ -1,0 +1,9 @@
+{
+  "id": "452b5aa5-0bbe-43a5-b2db-cd32982cd6bf",
+  "label": "Adjacent Reaper pieces along every supplied-duration populated descent",
+  "term": "local pieces at a supplied duration",
+  "definition": "DurationPiecesPossible R h Concrete k d w requires that, for every v accessible from w and every descending c with DurationSlots k d c and populated first moment, each adjacent pair of the existing four-interface PieceAt predicates is realized in some world accessible from v. It retains the same h, R, clock and moment-code interpretation. Registers do not imply concrete station existence.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.FixedDurationGrimReaper.DurationPiecesPossible",
+  "note": "Analyst formulation for issue #1489; attribution deferred. CLOCK_2 is the encoded real coordinate; CLOCK_1 proper duration is the intended application. Metaphysical applicability remains OPEN. See docs/causal-regress-and-grim-reapers.md, fixed-duration certification and connected-port follow-up."
+}

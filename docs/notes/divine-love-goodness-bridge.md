@@ -72,9 +72,10 @@ In `TruthCore.Case.Catholicism.DivineLoveBridge`:
    q.20 a.1 theme, not an inference from the opaque `HasWill` flag alone.
 6. **OPEN `WillingGoodEntailsLove`:** If God wills an actual good *to its
    recipient*, then God loves that recipient in the non-passional sense of
-   willing some good to it in q.20 a.2. Aquinas restricts benevolence properly
-   speaking to rational creatures (ad 3), while irrational creatures are loved
-   in a different, ordered way. This one-way sufficient rule adds neither
+   willing some good to it in q.20 a.2. Ad 3 restricts *friendship* (amicitia)
+   to rational creatures, who can return love; irrational creatures are loved
+   "as it were" with love of desire, as ordered to rational creatures and to
+   God. Ad 3 does not restrict the thin willing-good sense itself. This one-way sufficient rule adds neither
    universal friendship nor affection, equal degree or unqualified desire.
 
 `divineWillsGoodForAllExisting` proves that for each God and each actual `x`,
@@ -451,3 +452,152 @@ resumption should independently specify effect identity and practical role,
 compare universal effect specification with foreseen collateral production,
 and assess recipient-good application separately. No such continuation is
 authorized by this stopping instruction.
+
+## Group 7 integration: recipient-good route (#1732, 2026-11-18)
+
+Status: complete proposed integration outcome for independent semantic
+challenge, baseline `354540f92e4139d445355f6e3f49374fdb151b39`. This is a
+registration of the existing composition, not a resumption of the #1459
+research stopped by the owner instruction above; it reuses that section's
+findings unchanged and adds no new theorem content, premise or source claim.
+Assertion half: [veracity note](divine-veracity-1410.md#group-7-integration-assembled-assertion-branches-1732-2026-11-18).
+
+### Registered support option
+
+Batch `specs/divine-love-route-1732.toml` (module
+`TruthCore.Results.Case.Catholicism.DivineLoveRoute`) registers the PR #1458
+composition as two corpus results:
+
+1. `willsGoodForAllExisting`: supreme goodness e0dae79f, will 66aecdd7, the
+   goodness/actuality coextension 00e962ae, and the two OPEN volitional
+   bridges (`CausalExistenceWilling`, `DivineOwnGoodWilling`) give
+   `DivineWillsGoodForAllExisting`: every GOD_4 wills some good to every
+   being in act in esse.
+2. `lovesAllExisting`: the same five inputs and the OPEN one-way
+   love-meaning bridge `WillingGoodEntailsLove` give `GodLovesAllExisting`.
+
+Corpus IDs: results `7209fa2f` and `a2366ca4`; statements a94c5dfc
+(`CausalExistenceWilling`, OPEN), 2a168a36 (`DivineOwnGoodWilling`, OPEN),
+16ab027e (`WillingGoodEntailsLove`, OPEN), c691e3d0 (willing some good to all
+existing) and e3d5bece (love of all existing).
+
+Both are zero-axiom. The classical self/other split of the unregistered
+originals is replaced by an explicit `[DecidableEq Being]` instance argument:
+a decidability-of-identity input (restricted excluded middle) supplied by the
+caller; classically always available, constructively valid only where
+identity of beings is decidable. It is listed as a parameter, not hidden. The originals and `LoveControls` are
+unchanged. This is not a transcription: neither bridge's antecedent is a
+premise; the causal field of supreme goodness supplies causation of each
+distinct actual being, the coextension supplies its good in esse, and the
+self-case uses a separate bridge. Each of the three bridges is shown needed
+by the existing omission profiles, with goodness, will and coextension fixed.
+
+New terms: `08b826db` (willing good to a recipient), `1ca75ad2` (willing a
+being as ordered to another) and `ac87be3d` (thin non-passional q.20 love),
+all stipulative. Their sense carriers are primitive structure fields in
+`TruthCore.Case.Catholicism.DivineLoveSenses`. Disambiguation 28c9980e
+(LOVE) separates LOVE_1 thin q.20 love (`ThinLove.Loves`), LOVE_2 hiddenness
+PerfectLove 4b2943ad and LOVE_3 love of a possessed good 9f448669.
+`lovesAllExisting` proves LOVE_1 only; any transfer to LOVE_2 is an OPEN
+sense bridge owned by #1735. The carriers are tied to the parametric
+registered theorems by instantiated corollaries (follow-up, below): results
+54a9ccd9 (`willsGoodForAllExistingAtCarrier`, CREATURE_WILLING_1) and
+a66e4ce3 (`lovesAllExistingAtCarriers`, CREATURE_WILLING_1 and LOVE_1),
+whose `term_senses` are bind-checked against those constants.
+Cognition alone is not used: no intellect premise occurs.
+
+### Connection boundary
+
+The premises reach the root through the stage-2 case nodes; the conclusions
+do **not** yet feed a root route. Named consumers and the exact missing bridge:
+
+- Hiddenness/evil (#1735): `GodLovesAllExisting` is thinner than global
+  perfect love 0edc0b38 and actual love 5e5aa271 (interpersonal relationship
+  with capable creatures). The projection, if any, is an OPEN bridge owned by
+  #1735; causal goodness and willing some recipient-good do not
+  automatically identify those predicates.
+- Recipient goods and authority (#1733): may consume
+  `DivineWillsGoodForAllExisting` directly; no bridge exists yet.
+  *Update 2026-11-18 (#1733):* consumed. `DivineWillsGoodForAllExisting`
+  c691e3d0 entails the restricted premise 47c6da1b (GOD_4 wills some good to
+  every distinct intellectual being whose being it causes), which feeds the
+  LORD_3 Dei Filius root route; the same premise also follows from
+  `CausalExistenceWilling` with the coextension, without the self-case. Both
+  supports go through `CausalExistenceWilling` a94c5dfc (c691e3d0's only
+  derivation uses it). The premise is consistent with the strong (exclusive) ordered-love variant 1dd68893, an unattributed analyst strengthening of ad 3,
+  on non-rational effects, but a94c5dfc is not; so if that strong variant holds
+  and non-rational creatures exist, 47c6da1b has no verified derivation and
+  stands only as a direct assumption. The conflict with a94c5dfc holds for that strong variant only (checked: result 400893a0). The weak, ad-3-faithful reading 7f6a2e91 (ordered willing without the exclusion of recipient-directed willing) is compatible with a94c5dfc (checked witness 5d93ac09, result ef387145), so neither verified derivation of 47c6da1b is excluded under the weak reading. See
+  [group 8 integration](natural-goodness-function-and-authority.md#group-8-integration-from-reasons-and-goods-to-moral-authority-and-god-1733-2026-11-18).
+  The warrant assessment below is unchanged.
+- Veracity: the assertion route does not consume love; willing good to the
+  audience is not itself a norm against beneficial false assertion (see the
+  assertion half and #1737).
+
+### Cumulative provisional assessment (proposed)
+
+Positive warrant: q.19 a.4's three routes (priority of intellectual over
+natural determination, determinate effects from an indeterminate source,
+intellectual preexistence of effects), the practical-adoption sufficient route
+of the continuation above, and q.20 a.2's own love meaning. The
+self-good bridge has comparatively strong direct support from q.19 a.1's
+account of will as possessing and loving the good; the love-meaning bridge is
+a thin interpretive sufficiency rule whose prima facie plausibility is high
+once friendship, affection and degree are excluded. The load-bearing and
+weakest step is `CausalExistenceWilling`: the causal-to-recipient-willing
+application. Shared premises with other routes: supreme goodness e0dae79f
+and will 66aecdd7 (also used by the classical-attribute consumers), and the
+coextension 00e962ae.
+
+Holding the effect (a distinct actual x), the explanatory target (x's
+existence in esse), production, foresight and self-willing fixed, the
+strongest surviving alternative is **natural diffusion / foreseen collateral
+production**: the source's productive nature (or its adoption of a whole order)
+determines x, and x is known but not adopted as an end or means with its good
+willed to it. Its price: it must deny that the divine practical specification
+covers each effect, and so accept effects that the first intellect knows and
+produces without intending; it must also answer q.19 a.4's claim that an
+intellectual first agent determines effects through intellect and will
+rather than nature. The q.20 a.2 ad 3 **ordered-love reading** is relevant
+here: irrational creatures are loved "as it were" with love of desire, as
+ordered to rational creatures and to God. It is registered in two strengths
+(strength fork, #1017), forked from a94c5dfc by the disambiguation dd7ff973
+(CREATURE_WILLING_1 recipient-directed, CREATURE_WILLING_2 ordered):
+
+- **Weak, the ad 3 reading** 7f6a2e91 (`OrderedExistenceWillingWeak`): God
+  wills a distinct non-rational effect's esse as ordered to some rational
+  being or to God. It neither asserts nor denies recipient-directed willing,
+  and it is compatible with a94c5dfc at one willing relation (witness 5d93ac09,
+  result ef387145). It is therefore no rival to the registered route. On the
+  weak reading, ad 3 concerns the order of love; the a.2 body supports not
+  reading it as exclusion.
+- **Strong, unattributed analyst variant** 1dd68893 (`OrderedExistenceWilling`):
+  the weak reading plus the denial that God wills that good to the effect as
+  recipient. Its separate motivation is to read love of desire (willing a
+  thing's good for another) as excluding love of friendship (willing good to
+  the beloved itself) for non-rational things. The q.20 a.2 body ("God loves
+  all existing things") counts against the denial. It strengthens the weak
+  reading (relation; result 0e665ad9, sole premise), and together with
+  a94c5dfc at one recipient-directed willing relation it excludes any
+  distinct non-rational caused actual effect (result 400893a0). It is the
+  source-adjacent form of the non-recipient-directed production the
+  foreseen-collateral rival needs, restricted to non-rational effects.
+
+No registered love argument uses either sibling. The natural-diffusion /
+foreseen-collateral rival is not shown incoherent, and the existing
+`omitCausalWill` control witnesses only the local omission, not this richer
+rival. Overall: a **coherent conditional support option** with a comparatively
+well-supported self-good bridge, a prima facie plausible thin love-meaning
+bridge (subject to the ad 3 qualification) and one open application bridge, whose warrant is
+underdetermined at universal effect specification and recipient-good
+application. No premise established; no rival defeated.
+
+Revision conditions: strengthen on an independently supported account of
+divine practical cognition specifying each effect as produced (effect
+identity and practical role), or on an argument that foreseen collateral
+production is incompatible with the first agent's intellectual determination
+of effects; weaken on a faithful richer model retaining production,
+foresight, self-willing and whole-order adoption while omitting object-specific
+adoption, or on a reason why intending a creature's existence does not count
+as willing that good to it. Per the owner stopping instruction, further #1459
+research requires a new assignment; this integration authorizes none.

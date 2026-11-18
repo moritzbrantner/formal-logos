@@ -1,6 +1,6 @@
 {
   "id": "1c713060-ef58-5396-a09c-df474422e692",
-  "label": "Read materialized SCTA ST I q19 a3\u20135,7\u20138,10 and pinned Elwes Spinoza Ethics I\u2026",
+  "label": "Read materialized SCTA ST I q19 a3–5,7–8,10 and pinned Elwes Spinoza Ethics I…",
   "legacy_id": "ATTEMPT-NECESSARY-ACT-FREE-CREATION-SOURCE-BOUNDARY",
   "date": "2026-10-28",
   "statement_ids": [
@@ -9,10 +9,11 @@
   ],
   "kind": "reading",
   "outcome": "blocked",
-  "summary": "Read materialized SCTA ST I q19 a3\u20135,7\u20138,10 and pinned Elwes Spinoza Ethics I definitions/axioms,16\u201317,29\u201333. Aquinas explicitly proposes self-determination of necessary will toward nonnecessary secondary objects (a3 ad5\u20136), distinguishes a cause of the single act from rational ordering of its objects (a5), and rejects secondary-cause defect as sufficient contingency explanation (a8). Spinoza I33 note II grants will as essence for an internal objection: different complete decrees imply different actual intellect/will and hence essence. His freedom means action from own nature (definition 7), not contingent choice. Rejected self-sufficiency-alone as proof of contingent willing, no-cause as no-object-reasons, temporal immutability as cross-world identity, and varying world-label tables as explanatory free creation. Detailed exact locators, strongest replies, rejected readings and remaining gaps persist in docs/notes/selected-effect-bridge-462.md, source follow-up. No new result, premise establishment or root-premise change.",
+  "summary": "Current linked consolidation disposition (2026-11-17): PR-1742 merged, independent review accepted qualified synthesis only; no premise establishment. See docs/notes/intrinsic-existence-reason-1595.md#current-reviewed-assessment-2026-11-17 for exact reviewed head, scope and next test. Historical attempt evidence follows.\n\nRead materialized SCTA ST I q19 a3–5,7–8,10 and pinned Elwes Spinoza Ethics I definitions/axioms,16–17,29–33. Aquinas explicitly proposes self-determination of necessary will toward nonnecessary secondary objects (a3 ad5–6), distinguishes a cause of the single act from rational ordering of its objects (a5), and rejects secondary-cause defect as sufficient contingency explanation (a8). Spinoza I33 note II grants will as essence for an internal objection: different complete decrees imply different actual intellect/will and hence essence. His freedom means action from own nature (definition 7), not contingent choice. Rejected self-sufficiency-alone as proof of contingent willing, no-cause as no-object-reasons, temporal immutability as cross-world identity, and varying world-label tables as explanatory free creation. Detailed exact locators, strongest replies, rejected readings and remaining gaps persist in docs/notes/selected-effect-bridge-462.md, source follow-up. No new result, premise establishment or root-premise change.\n\nGroup5 #1730 consumes this act/content boundary in docs/notes/intrinsic-existence-reason-1595.md#same-source-existence-and-complete-order-integration-1730-group-5 and the bounded462 crosslink. Fixed n/N(n)/E(n)/a/C/Omega preserves actual exercise as part of the complete contingent explanandum. Records owner462 positive production, purposive control, extrinsic realization and Quinn/self-explanation asymmetry without a new source claim or exhaustive fork. Stable output concerns an individual being, not all facts of its order; same-act performance does not follow from source necessity. No new formal inference, premise closure or1737 implementation. The synthesis awaits coordinator semantic challenge; this attempt's prior source and stopping boundaries remain.",
   "blocker": "Independently defend or refute whether a complete rational intentional specification can vary without an additional contingent intrinsic item, independent external determinant, or necessitation by the necessary act. This is an unproved proposed research fork, not certified coverage; intrinsic identity and intentional relations remain unmodeled.",
   "evidence": [
     "205b0b76-4626-50b9-a1d2-60e80f3b8bc1",
-    "c051288f-18fe-5239-99c7-14f8e789dbfb"
+    "c051288f-18fe-5239-99c7-14f8e789dbfb",
+    "PR-1742"
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "id": "c4c02339-f465-4fc0-b507-b7ca4d204ff2",
+  "label": "Well-founded actual esse causation implies closed collections",
+  "premise_statement_ids": [
+    "fd12ad3d-6729-4fa0-bb87-0121260df684"
+  ],
+  "conclusion_statement_id": "20babef7-6ae7-4b48-b72a-f417e8e63136",
+  "inference_ids": [
+    "577213a4-e7a8-44c1-9f55-b72b17b1624e"
+  ],
+  "meaning": "Sole-premise strength comparison in the exact actual esse-cause dictionary. Unrestricted well-foundedness implies CCR; the rooted infinite control witnesses strictness. This supplies no independent warrant for either premise.",
+  "definition_ids": [
+    "23ae8d63-1351-4e7c-9ab1-ed85d9695b22",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

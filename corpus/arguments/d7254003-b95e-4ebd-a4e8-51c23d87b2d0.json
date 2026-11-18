@@ -1,0 +1,25 @@
+{
+  "id": "d7254003-b95e-4ebd-a4e8-51c23d87b2d0",
+  "label": "Metric finiteness from one locally feasible supplied-duration descent and patchwork",
+  "premise_statement_ids": [
+    "fab16501-c05a-455d-b880-1a8a9a0dc90a",
+    "313105b4-d9a9-4498-961f-1702661c7110"
+  ],
+  "conclusion_statement_id": "4365c3c5-d39b-405c-97a9-a4f7e43c628f",
+  "inference_ids": [
+    "b112300c-b113-4a11-b4b9-9dc0479a3c47"
+  ],
+  "meaning": "Non-transcription conditional support option reaching the existing metric-finiteness statement with unchanged meaning and companion premises. No arbitrary-speed family is needed. It consumes only one locally feasible qualifying descent per infinite populated past, alongside patchwork for qualifying descents. This is a sufficient weakening within the split coverage formulation, not a claim of an absolute weakest metaphysical premise. No concrete realization or premise warrant is established.",
+  "definition_ids": [
+    "375676b0-a295-4a17-a9e4-3db23319d517",
+    "3b803aa6-c863-4edf-9d10-59ede70c8140",
+    "419d2bf5-8cea-47a4-bf64-3058a1f2489b",
+    "5f177d3f-c661-49d2-8082-941a46d8b41b",
+    "7c05f92b-907d-4c9b-b219-fc4054c9912b",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "a9f95430-3df4-4073-881e-87cc77ac93a1",
+    "e7efdb71-4992-46df-a5a2-ffb4fad6686e"
+  ]
+}

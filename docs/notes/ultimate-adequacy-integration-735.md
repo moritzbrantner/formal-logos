@@ -2529,3 +2529,23 @@ self-sweep found no changed bound proposition or theorem; the analyst warrant
 reconstruction, cited source limits and model/application boundaries above are
 the substantive claims accepted by the independent challenge. The computation is unchanged
 by committing these same bytes.
+
+
+## Intrinsic-source and complete-order join (#1730)
+
+The [same-source integration](intrinsic-existence-reason-1595.md#same-source-existence-and-complete-order-integration-1730-group-5) compares a necessary personal,
+necessary impersonal, necessitarian, autonomous-existence and global-structural
+account at the fixed pair E(n), Omega. It reuses adequacy statement
+**96adb4ac-c02a-5427-82fa-e335769f0039** and history-selection statement
+**8cb72b43-74b2-5dad-ad9a-73eadae47602** without identifying their fact/history
+arenas with the entire concrete order. Presence-history equality leaves laws
+and relations unrepresented unless a faithful complete-order projection is
+supplied. The existing whole-coverage warrant judgment remains unchanged:
+nonnecessitating production and purposive guidance do not alone establish
+complete explanation of the exercise that belongs to the contingent whole.
+The #1621 intrinsic target **a7bbd2fd-242c-5097-a9a3-581d25835890** has no
+God-root consumer; the same-bearer/attribute bridge toward
+**8626f8a5-9531-5da7-9ebd-f901e74b1129** remains OPEN. No new parity, rival
+defeat, universal PSR or primitive-disqualification claim is made. The synthesis
+is proposed for coordinator challenge; prior accepted findings and #750's
+independent-standard question are preserved.

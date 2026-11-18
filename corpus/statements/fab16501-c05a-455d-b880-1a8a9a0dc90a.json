@@ -1,0 +1,15 @@
+{
+  "id": "fab16501-c05a-455d-b880-1a8a9a0dc90a",
+  "label": "One locally feasible supplied-duration descent per infinite populated past",
+  "paraphrase": "OPEN analyst premise, attribution deferred. DurationDescentPossible R h Concrete k d w requires that every metrically infinite populated past at t in v accessible from w admits some descending c starting exactly at t, with every slot at least the supplied positive d, and co-possible adjacent PieceAt predicates. It is existential in c per v and t, not local coverage of every descent. The infinite-past antecedent restricts the application question; this is an explicit sequence and register witness requirement, not an opaque finiteness flag. All four PieceAt interfaces, including admissibility, concern actual outputs in each witness world. A supplied positive d is fixed, not arbitrarily small; no arbitrary-speed devices or countable concrete realization is asserted.",
+  "lean_declaration": "TruthCore.Causality.FixedDurationGrimReaper.DurationDescentPossible",
+  "definition_ids": [
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "375676b0-a295-4a17-a9e4-3db23319d517",
+    "419d2bf5-8cea-47a4-bf64-3058a1f2489b",
+    "5f177d3f-c661-49d2-8082-941a46d8b41b",
+    "a9f95430-3df4-4073-881e-87cc77ac93a1"
+  ]
+}

@@ -364,6 +364,11 @@ verified support alternatives added: 0
 no change
 ```
 
+The report case above is the fixed case of the #1733 integration, which traces
+it from F6 to the GOD_4 root and names the unbuilt moral instance, standing,
+source-identity and jurisdiction transitions:
+[group 8 integration](natural-goodness-function-and-authority.md#group-8-integration-from-reasons-and-goods-to-moral-authority-and-god-1733-2026-11-18).
+
 ## Street's dilemma and epistemic reasons (#1585)
 
 **Source.** Street, *A Darwinian Dilemma* (2006), pinned witness

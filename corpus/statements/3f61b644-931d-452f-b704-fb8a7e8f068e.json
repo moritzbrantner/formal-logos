@@ -1,0 +1,17 @@
+{
+  "id": "3f61b644-931d-452f-b704-fb8a7e8f068e",
+  "label": "Controls for the typed LORD_3 reading and the intellectual-recipient premise",
+  "paraphrase": "Closed controls on two two-being interpretations (Bool; true is GOD_4, causes the being of and governs false). With false intellectual: (1) nonvacuity: with willing and true LORD_1, the restricted willing premise and 'Whatever is LORD_3 is LORD_1' hold and true is LORD_3 and LORD_1; (2) strictness: with no willing and nothing LORD_1, 'Whatever is LORD_3 is LORD_1' holds and 'Whatever is LORD_2 is LORD_1' fails; (3) sense mixing: with willing and nothing LORD_1, true is LORD_3 and not LORD_1; (4) necessity of willing: with no willing, true is LORD_2 and not LORD_3. With only true intellectual and no willing: (5) the restricted willing premise, the q.5 a.1 coextension and the strong (exclusive) ordered-love variant 1dd68893, an unattributed analyst strengthening of ad 3 (rational read as having intellect), hold, while 'Every GOD_4 wills some GOOD_4 to every being in act in esse' and CausalExistenceWilling fail. Statements about these interpretations only.",
+  "lean_declaration": "TruthCore.Causality.DeiFiliusBenevolentLord.Control.Controls",
+  "definition_ids": [
+    "9dcfcb4e-bf60-4322-b687-440df1f2ad29",
+    "c8e458bd-3b8a-4e10-8e2d-43d1c1912c63",
+    "59350e3b-1b76-45cd-b9fd-548f3f4658b5",
+    "08b826db-2d9c-48e5-b69c-d4ac54088518",
+    "1ca75ad2-e6f6-492a-9fcc-19eebfc8d3aa"
+  ],
+  "disambiguation_ids": [
+    "aa1de96a-e0d2-4739-a34f-9b98f1034a34",
+    "dd7ff973-0e54-4c93-b9c5-b002cac2b256"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "ac87be3d-537d-440e-a38c-cb4839d5bedc",
+  "label": "LOVE_1: non-passional willing of some good to its object (q.20 aa.1-2)",
+  "term": "love (non-passional, q.20)",
+  "definition": "Loves g x: g loves x in the thin q.20 a.2 sense of a first act of will toward x, not a sensory passion. The one-way OPEN sufficient rule WillingGoodEntailsLove says that willing an actual good of x to x suffices. Excluded: friendship (q.20 a.2 ad 3 restricts friendship, amicitia, to rational creatures, who can return love; irrational creatures are loved as it were with love of desire, as ordered to rational creatures and to God; ad 3 does not restrict this thin sense itself), affection or emotional change, equal degree of love, approval of wrongdoing, and the perfect relational love of the hiddenness challenge (DEF-HIDDENNESS-PERFECT-LOVE, 4b2943ad-3bc5-5492-94bc-f21e9f1a12ab), which seeks personal relationship with capable creatures.",
+  "basis": "stipulative",
+  "note": "Analyst interpretation, attribution deferred (docs/notes/divine-love-goodness-bridge.md). Its sense carrier is the primitive field ThinLove.Loves (DivineLoveSenses); the registered DivineLoveBridge theorems take the same relation as their primitive parameter Loves. Nothing defines it, and it is not an alias of WillsGoodFor. No argument passes from this sense to hiddenness PerfectLove or GodLoves; that projection is an OPEN bridge owned by issue 1735 (LOVE disambiguation 28c9980e-0cf7-4dcc-939a-e5c842ca4f34). A pinned witness for ST I q.20 aa.1-2 would source it.",
+  "lean_declaration": "TruthCore.Case.Catholicism.DivineLoveSenses.ThinLove.Loves",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Loves g x: g loves x in the thin non-passional q.20 sense, a first act of will toward x; a relation between a lover and a beloved.",
+    "examples": [
+      "God's love of an existing creature in q.20 a.2, as Aquinas describes it (source reading, attribution deferred)."
+    ],
+    "exclusions": [
+      "Friendship, which q.20 a.2 ad 3 restricts to rational creatures.",
+      "Affection, passion or equal degree.",
+      "Hiddenness PerfectLove (4b2943ad-3bc5-5492-94bc-f21e9f1a12ab)."
+    ],
+    "open_obligations": [
+      "WillingGoodEntailsLove is the OPEN one-way sufficient rule into it.",
+      "Any projection to hiddenness love is an OPEN sense bridge (#1735)."
+    ]
+  }
+}

@@ -25,6 +25,7 @@ target/debug/truth novelty 'DependsForBeing ↔ ¬CanBeWithout' --issues-from sn
 target/debug/truth next
 target/debug/truth next-steps --frontier-root STMT-CATHOLICISM-TRUE
 target/debug/truth results
+target/debug/truth --json support-graph
 cargo fmt --all --check
 cargo clippy --locked -p truth --all-targets -- -D warnings
 cargo test --locked -p truth
@@ -64,6 +65,27 @@ cache.
 The corpus directory must exist. Missing optional record collections are empty;
 unreadable collections, dangling collection links, and non-file JSON entries
 are errors rather than silently omitted records.
+
+## Registered support graph
+
+`truth --json support-graph [STATEMENT ...]` exports the complete backward
+slice for the requested targets, defaulting to God-existence and the same
+necessary classical God-root. Targets accept UUIDs, legacy IDs or labels.
+The deterministic JSON contains the statement dictionary, one implication
+edge per result-backed argument, every result witness, terminal inputs,
+and immediate conjunctions after literal premise-set absorption. Missing
+references fail instead of silently shortening the graph. `input_identity`
+covers loaded corpus bytes; `graph_sha256` covers the selected graph.
+Optional `source_head` and `worktree_dirty` describe the checkout.
+
+This is the input to symbolic support analysis, not a support-count command.
+It includes conditional transcriptions and strength implications, preserves
+cycles and real zero-premise rules, and imports no frontier/floor status as a
+fact. Analysis must use the least fixed point and disable each current
+target's direct input, even when that target is terminal. Direct-or-derived
+inputs and terminal-only inputs are different bases. An input set to false
+means the premise is not supplied, not that its negation is accepted.
+Graph support does not replace Lean composition, binding or verification.
 
 ## Adding a command
 
@@ -764,6 +786,17 @@ fidelity and assumption agreement require comparison beyond retrieval.
 
 ## `brief` and `novelty`
 
+Scoped `current_assessment` entries from existing attempts appear first, with
+reviewed revision, publication disposition and next test. Historical heading
+dates do not imply supersession. Declared meaning/warrant/judgment `revisions`
+expose potential downstream uses and unresolved reassessments without changing
+formal validity. See [the canonical record format](../docs/premise-dossiers.md#current-assessment-and-publication-disposition).
+`truth currentness [--frontier-root STATEMENT] [--limit N]` (#1751,
+`truth::currentness`) is the read-only per-root view of which open premises
+have a covering current assessment, only legacy attempts, or none, with
+advisory heuristic flags; see [currentness view](../docs/premise-dossiers.md#currentness-view).
+
+
 `truth brief (TARGET | --question TEXT)` and `truth novelty (TEXT |
 --statement STATEMENT)` (#1643, #954 slice B9; `truth::brief`) retrieve the
 cumulative record before a worker judges a premise's maturity or calls a
@@ -790,7 +823,8 @@ status, judgment or record.
   explicitly mentioning a requested statement or its concluding argument/result,
   and supplies path, line and matched-record provenance. Empty lists mean unknown;
   note-wide context is not an assessment of every mentioned statement. Reuses the
-  existing brief section extraction, with no full evidence graph, reconciliation,
+  existing brief section extraction (the reference graph is built only when
+  revision declarations require impact analysis), with no reconciliation,
   endorsement or strength ranking. IDs/labels/aliases use the normal resolver.
 - `brief --question TEXT`: the notes the `truth index` FTS5 projection ranks
   for any query word (by stem prefix) or identifier, each scored paragraph by

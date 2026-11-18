@@ -1,0 +1,11 @@
+{
+  "id": "9ee3a4d8-e662-4652-b30f-c1d2bd876937",
+  "label": "Spaced patchwork gives supplied-duration patchwork",
+  "argument_id": "9b43d8a1-09f3-48e7-9e0b-a292d2f142c8",
+  "challenge_module": "TruthCore.Results.Causality.FixedDurationGrimReaper.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FixedDurationGrimReaper.Solution",
+  "theorem": "TruthCore.Results.Causality.FixedDurationGrimReaper.durationPatchworkOfSpaced",
+  "comparator_config": "results/9ee3a4d8-e662-4652-b30f-c1d2bd876937/comparator.json",
+  "status": "solution-present",
+  "description": "Implication only, no strictness claim. The stronger original patchwork route remains available."
+}

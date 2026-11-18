@@ -1,0 +1,12 @@
+{
+  "id": "8496326e-ded2-40b2-88b1-1d6ec83527b8",
+  "label": "Two actual esse bearers strengthen one-bearer population",
+  "subject_kind": "statement",
+  "subject_id": "33f3c4c5-ccd6-4e8e-9cfb-0b231bb0e38f",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "78cffb8e-da95-4459-8058-45e0953cdde8",
+  "verification_result_id": "51d52108-92b8-4a17-b4df-eca74836d218",
+  "strictness_result_id": "b49b53e7-d458-4f60-b803-31e5132a1b4f",
+  "note": "Sole-premise checked implication; strictness interpretation in ClosedEsseControls. No premise warrant or establishment follows."
+}

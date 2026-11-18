@@ -1,0 +1,16 @@
+{
+  "id": "b732a37f-b1ee-45c3-97c0-fe5a0b7884f2",
+  "label": "Closed esse-source controls checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "05c93712-2d91-4652-baa1-ebfb18b6d337",
+  "inference_ids": [
+    "1a160b1c-5ca9-4fd4-9e14-d2511b6d9642"
+  ],
+  "meaning": "Non-transcription closed control bundle. Exact actual esse dictionaries test unrestricted-WF strictness, rooted cycles, roster-only insufficiency and one-bearer population. No model is asserted to be metaphysically possible.",
+  "definition_ids": [
+    "23ae8d63-1351-4e7c-9ab1-ed85d9695b22",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231"
+  ]
+}

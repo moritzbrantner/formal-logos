@@ -1,0 +1,16 @@
+{
+  "id": "1dd68893-7e41-4909-9f17-1dbb342a7d95",
+  "label": "Strong exclusive ordered-love variant: GOD_4 wills non-rational effects only as ordered to others",
+  "paraphrase": "Strong (exclusive) analyst variant, unattributed; not the q.20 a.2 ad 3 reading. For every GOD_4 g with will and every distinct, non-rational x in act in esse whose esse g causes: g wills x's being in esse as ordered to some y that is rational or is g, AND does not will that good to x as recipient. Ad 3 supports only the ordered conjunct (the weak sibling); the denial is an analyst strengthening motivated by reading love of desire (willing a thing's good for another) as excluding love of friendship (willing good to the beloved itself) for non-rational things. The q.20 a.2 body, that God loves all existing things, counts against the denial. It implies the weak ordered reading (strength order). With CausalExistenceWilling at the same recipient-directed willing it excludes any distinct non-rational caused actual effect. It says nothing about rational creatures. OPEN.",
+  "lean_declaration": "TruthCore.Case.Catholicism.DivineLoveSenses.OrderedExistenceWilling",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "08b826db-2d9c-48e5-b69c-d4ac54088518",
+    "1ca75ad2-e6f6-492a-9fcc-19eebfc8d3aa"
+  ],
+  "disambiguation_ids": [
+    "dd7ff973-0e54-4c93-b9c5-b002cac2b256"
+  ]
+}

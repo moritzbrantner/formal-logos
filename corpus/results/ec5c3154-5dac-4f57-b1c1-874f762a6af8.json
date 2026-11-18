@@ -1,0 +1,11 @@
+{
+  "id": "ec5c3154-5dac-4f57-b1c1-874f762a6af8",
+  "label": "Local Fifth Way GOD_4 intellect attachment controls checked",
+  "argument_id": "c54d916c-a4c2-43df-82a6-e9a6992699b5",
+  "challenge_module": "TruthCore.Results.Causality.LocalTeleologyGodIntellect.Challenge",
+  "solution_module": "TruthCore.Results.Causality.LocalTeleologyGodIntellect.Solution",
+  "theorem": "TruthCore.Results.Causality.LocalTeleologyGodIntellect.controls",
+  "comparator_config": "results/ec5c3154-5dac-4f57-b1c1-874f762a6af8/comparator.json",
+  "status": "solution-present",
+  "description": "Check nonvacuity and each carrying-premise omission at the encoded level. In the identity omission, preserve an intellectual first mover and a GOD_4 maximum at a different nonintellectual being; firstness and maximality cannot silently identify their witnesses. In the naming-converse omission GOD_4 selects the nonmaximum body. In the local-bundle omission no being has intellect. These are formal dependency tests, not evidence against any retained premise's metaphysical warrant."
+}

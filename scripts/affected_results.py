@@ -88,6 +88,10 @@ TOOLING_PATTERNS = (
     "scripts/test_retrieval_correctness_benchmark.py",
     "scripts/testdata/retrieval-correctness-measurement.json",
     "scripts/testdata/retrieval-correctness-oracle.json",
+    # Exact support analysis consumes the exported graph, never Lean/Comparator.
+    "scripts/support_formula.py",
+    "scripts/test_support_formula.py",
+    "scripts/testdata/support-formula-2026-11-13.json",
 )
 
 # What the explorer build and its browser tests run, apart from corpus data: the app, the
