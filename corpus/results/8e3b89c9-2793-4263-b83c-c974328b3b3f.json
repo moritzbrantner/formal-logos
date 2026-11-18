@@ -1,0 +1,11 @@
+{
+  "id": "8e3b89c9-2793-4263-b83c-c974328b3b3f",
+  "label": "De ente source and GOD_4 classical root are one being by selected-root uniqueness",
+  "argument_id": "ee790037-b499-4bce-a445-8a8d3bc12762",
+  "challenge_module": "TruthCore.Results.Causality.SameSourceWitness.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SameSourceWitness.Solution",
+  "theorem": "TruthCore.Results.Causality.SameSourceWitness.deEnteSourceIsClassicalGodRoot",
+  "comparator_config": "results/8e3b89c9-2793-4263-b83c-c974328b3b3f/comparator.json",
+  "status": "solution-present",
+  "description": "Analyst witness-identity composition, attribution deferred. On ONE carrier sigma.Being, grounding profile m, world w and q3 profile p: the De ente source n is an actual concrete root at w (ce7edf53). The classical God root g (da3facd6) satisfies PerfectRootAt, which itself contains 'every actual root of m at w equals g'. Hence n = g and both bodies hold of one being. De ente root EXISTENCE suffices; no separate root-uniqueness package (multiplication, grades or pure indiscernibility) is an input, because the classical endpoint already carries selected-root uniqueness and that carried commitment is retained, not removed. The bare GodExists projection loses this identity; this conclusion retains it. Neither endpoint's inputs (the De ente actuality/ground bridges; the 22-input classical-root bundle) are proved. GOD_4 is the nominal case predicate, not historical or Christian identification. See docs/notes/de-ente-esse-source-1628.md#same-witness-identities-for-1731-2026-11-18."
+}

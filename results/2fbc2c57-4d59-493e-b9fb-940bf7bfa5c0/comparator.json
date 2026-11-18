@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.SameSourceWitness.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SameSourceWitness.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.SameSourceWitness.localTeleologyPerfectRoot"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}
