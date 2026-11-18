@@ -1,0 +1,9 @@
+*
+!Cargo.toml
+!Cargo.lock
+!truth/Cargo.toml
+!truth/src
+!truth/build.rs
+!truth-mcp/Cargo.toml
+!truth-mcp/src
+!deploy/truth-mcp/refresh.sh

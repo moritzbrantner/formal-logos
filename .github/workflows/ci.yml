@@ -53,6 +53,8 @@ jobs:
           cargo fmt --all --check
           cargo clippy --locked -p truth --all-targets -- -D warnings
           cargo test --locked -p truth
+          cargo clippy --locked -p truth-mcp --all-targets -- -D warnings
+          cargo test --locked -p truth-mcp
       - name: Save Cargo downloads and workspace build output
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && steps.cargo-cache.outputs.cache-hit != 'true'
         uses: actions/cache/save@caa296126883cff596d87d8935842f9db880ef25 # v5

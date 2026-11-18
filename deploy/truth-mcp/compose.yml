@@ -1,0 +1,26 @@
+# Installed to /opt/truth-mcp/compose.yml by deploy/truth-mcp/deploy.sh.
+# /opt/truth-mcp/env (mode 600) holds TRUTH_MCP_NO_AUTH=1 or TRUTH_MCP_TOKEN, and optionally GH_TOKEN.
+services:
+  truth-mcp:
+    image: truth-mcp:${TRUTH_MCP_TAG:?}
+    container_name: truth-mcp
+    restart: unless-stopped
+    env_file: /opt/truth-mcp/env
+    volumes:
+      - truth-mcp-data:/data
+    tmpfs:
+      - /tmp
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    # One truth run (up to ~700 MB) at a time; the host has 4 GB shared.
+    mem_limit: 1500m
+    cpus: 1.5
+    networks: [dokploy-network]
+
+networks:
+  dokploy-network:
+    external: true
+
+volumes:
+  truth-mcp-data:

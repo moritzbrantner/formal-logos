@@ -1,0 +1,31 @@
+# Installed to /etc/dokploy/traefik/dynamic/truth-mcp.yml by deploy.sh.
+# The certbot router in websites.yml answers ACME challenges on every host,
+# and the certbot deploy hook truth-mcp-tls copies the certificate here.
+http:
+  routers:
+    truth-mcp:
+      rule: Host(`mcp.moenarch.com`)
+      entryPoints: [websecure]
+      service: truth-mcp
+      middlewares: [truth-mcp-ratelimit]
+      tls: {}
+    truth-mcp-http:
+      rule: Host(`mcp.moenarch.com`)
+      entryPoints: [web]
+      service: truth-mcp
+      middlewares: [https]
+  middlewares:
+    truth-mcp-ratelimit:
+      rateLimit:
+        average: 30
+        period: 1m
+        burst: 30
+  services:
+    truth-mcp:
+      loadBalancer:
+        servers:
+          - url: http://truth-mcp:8765
+tls:
+  certificates:
+    - certFile: /etc/dokploy/traefik/dynamic/website-certs/mcp.moenarch.com-fullchain.pem
+      keyFile: /etc/dokploy/traefik/dynamic/website-certs/mcp.moenarch.com-privkey.pem
