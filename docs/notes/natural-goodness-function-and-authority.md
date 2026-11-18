@@ -1664,3 +1664,203 @@ inputs changed, so unchanged proof checks are reused. The first fresh frontier
 comparison failed with a temporary-directory disk quota; disk-backed retry
 is recorded in the PR. Final CI and parent challenge of the new findings
 remain pending. This is a draft checkpoint, not reviewed substantive publication.
+
+## Group 8 integration: from reasons and goods to moral authority and God (#1733, 2026-11-18)
+
+**Complete proposed outcome; unreviewed.** Baseline `c9b9b661ac7609f8e824da8708dce19716033e59`.
+This section assembles the existing investigations of this note,
+[epistemic preconditions](epistemic-reasons-preconditions.md),
+[epistemic authority](epistemic-authority.md),
+[self-undermining views](self-undermining-views.md#1500-complete-proposed-outcome-authority-and-transfer-discrimination)
+and [divine love](divine-love-goodness-bridge.md#group-7-integration-recipient-good-route-1732-2026-11-18)
+into one navigable moral route, and registers one new formal connection at its
+divine endpoint (`specs/dei-filius-benevolent-lord-1733.toml`). Owners are
+unchanged: #930 (epistemic force), #1500 (moral/epistemic parity), #563/#699
+(goods to reasons), #1508/#1433 (standing), #1505 (making relation), #1460/#371
+(divine authorship and lawgiver), #1459 (intentional creation). Analyst
+reconstructions, attribution deferred; no source claim is added.
+
+### The selected case and its five transitions
+
+The case is the matched report case of the #1500 section: investigator I holds
+a laboratory result indicating that a treatment is unsafe and finds the contrary
+belief comforting; I has undertaken to provide a safety report to recipient R,
+knows R will rely on it when deciding to administer the treatment, and can
+correct the report cheaply. Agent I, patient R, the information and the target
+(correction before R acts) stay fixed through every transition below.
+
+| Transition on the fixed case | What existing records deliver | Status |
+|---|---|---|
+| T1. I has an epistemic reason to believe the result | F6 `f56b2ee7` is closed as a floor item, but it is only the existential `∃ a p, Reason a p`; the preference-independent strengthening `2ca463c2` is also existential and derived only conditionally (argument `e0c99541`, premises `1b74e22c`, `b5f35b0d`). Neither has I or the treatment-safety content as its witness | the case instance (I's thin reason to believe *this* result) is an **additional assumption**, not a consequence of F6; no record connects F6's witness to I. Its separate warrant is the ordinary evidential bearing of the result on the question I is investigating. Preference-independent force for I is **underdetermined** ([epistemic authority](epistemic-authority.md#provisional-judgment-coordinator-grade)); #930's normative-relevance step is exhausted and reallocated, not reopened here |
+| T2. I has a moral reason to correct the report | no registered moral instance. The invited-reliance principle of the #1500 section is analyst prose with a stated rationale (induced dependence, serious avoidable cost) | **OPEN**, positive prose support only; no statement or result |
+| T3. R has a claim against I, and someone may demand correction | `ecdbbaba` (some legitimate claimant can demand abstention, OPEN), `681f5b58` (competent victim's own claim, OPEN), definition `c0d119be`, Darwall reading `f6c46c02` | **OPEN**; #1508's claimant-substitution and guardian/stranger tests separate beneficiary, demander and addressee |
+| T4. The moral reason and claim have an explanatory source | rival packages compared in this note (#1508) and in [naturalistic realism](../naturalistic-moral-realism.md); `0893ecbc` (goodness without universal instrumental reasons), `1fb30e0b` (end-independent reasons for obligations an open bridge) | **OPEN**; no registered explanation of moral force by any account |
+| T5. That source is GOD_4 as rightful governor | Dei Filius governance chain: `123d394b` (directing bridge, OPEN), `4f36f332` (directing is governing), `1063da3d` (the nine are LORD_2), `eb6611a5` (LORD_2 → LORD_1, OPEN), root `c0f4a346` → `STMT-GOD-EXISTS` `8626f8a5`; **new** LORD_3 route below | governance and dominion of the selected GOD_4 root are reached **conditionally**; the link from T2–T4 to that governor is **OPEN** |
+
+Two branches sit at T1/T2 and must not be merged. **Global denial of the same
+reason relation** is excluded by existing proofs: `b30a1925` (global normative
+reason denial fails in the given profile) and `d9181e4c` (thin global epistemic
+nihilism fails), both from an F6 witness in the same profile. **Moral-only
+denial** survives formally: `0aa9811b` (a moral reason denial coexists with an
+epistemic reason to adopt it, closed by a finite model). Its survival is a
+model-witnessed compatibility, not a defeat of T2; its positive replacement is
+Olson-style functional epistemic reasons plus instrumental guidance, and its
+burden is the apparent authority of the reliance judgment, not a contradiction
+with an accepted floor item. A genus of reasons inhabited by F6 does not
+inhabit the moral species; T2 needs its own warrant.
+
+### Alternatives on the same case
+
+| Account | Explains on this case | Disputes | Leaves open |
+|---|---|---|---|
+| Functional epistemic reasons (Olson; moral-only denial) | I's evidence-responsive belief as fulfilling belief's function; correction as instrumentally useful for R's aims | categorical moral reason at T2; R's claim at T3 | the authority of the reliance judgment it explains away |
+| Irreducible favoring, rights-enriched robust realism (Wielenberg-type) | T2 by a basic norm against inducing harmful reliance; T3 by basic directed rights | that T4 needs a personal source; Cudworth-style antecedent-norm challenge to T5 | why these norms fit contingent goods (#1505's selection question) |
+| Natural goodness (Foot-type) | T2 from rational social life and truthful communication; T3 by a justice norm owed to R | a lawgiver at T5 | the other-regarding categorical step for the successful exploiter (#563) |
+| Naturalistic realism (Railton, Boyd) | correctability and the natural basis of R's interests | categorical force (`0893ecbc`); T5 | the impartial criterion's authority (`1fb30e0b`) |
+| Wise-source / authorial natural law (#1460) | T2–T4 in one account: due goods, participation of practical reason in an ordering intelligence, care for the governed | — | its jurisdiction premise (B5), its authorship premise (#1459) and the identification of the governor with the moral source |
+
+All five accounts recommend the same action on this case (correct the
+report), but under different reason-types. The functional moral-only account
+does **not** share the T2 verdict: it denies that I has a moral reason and
+recommends correction only as instrumentally useful for R's aims, conditional
+on those aims and on I's having reason to serve them; no premise on file makes
+R's aims binding on I. The four realist, natural-goodness, naturalist and
+authorial accounts share the T2 verdict that I has a categorical (non-
+instrumental) pro tanto reason to correct, and differ on its explanation. So
+the shared action recommendation does not discriminate the accounts, while
+**whether the reason at T2 is categorical or instrumental** is itself a
+discriminating question, alongside T3's standing structure and T4's
+explanatory fit.
+The positive warrant of the proposed moral instance is the invited-reliance
+rationale, not the survival of any rival or a primitive premise.
+
+### New formal connection at T5: benevolent governance (LORD_3)
+
+The registered authority step `eb6611a5` passes from causing the being of and
+governing everything else (LORD_2) to dominion, authority to dispose (LORD_1).
+The strongest recorded objection to that step at this endpoint is the
+Cudworth/Wielenberg one recorded above: creation or power alone gives no
+rightful authority. The authorial reply ties authority to care for the good of
+those governed. One conjunct of that reply is now typed and composed:
+
+- **LORD_3** (`IsBenevolentLordByCauseAndGovernment`, definition `9dcfcb4e`,
+  third sense of disambiguation `aa1de96a`): LORD_2 and, for every other
+  intellectual being in act as to being, some good of its own that the being
+  wills to it (recipient-directed willing, CREATURE_WILLING_1).
+- **Bridge** `e01dd128` *Whatever is LORD_3 is LORD_1*, OPEN. Strictly weaker
+  than `eb6611a5` (strength relation verified by `3e063b5e`; strictness by the
+  controls `96ce418a`, part 2).
+- **Willing premise** `47c6da1b`, restricted to distinct intellectual effects
+  whose being GOD_4 causes. Two verified support options: from the #1732
+  result `c691e3d0` as its only premise (strength relation, result
+  `0e576e4d`), and from `CausalExistenceWilling` `a94c5dfc` with the q.5 a.1
+  coextension `00e962ae` (result `12ae7844`), which avoids the self-case
+  premise `2a168a36`. Both run through `a94c5dfc`: `c691e3d0`'s only
+  derivation (argument `12865cf3`) uses it. The premise itself is consistent
+  with the strong (exclusive) ordered-love variant `1dd68893`, an unattributed
+  analyst strengthening of q.20 a.2 ad 3 (rational read as having intellect),
+  on a non-rational effect where `a94c5dfc` fails (controls part 5). But
+  `a94c5dfc` is incompatible with `1dd68893` on distinct non-rational caused
+  effects (see the love note), so **if that strong variant holds and
+  non-rational creatures exist, `47c6da1b` has no verified derivation** and
+  stands only as a direct assumption. The conflict holds for the strong variant
+  only; the weak, ad-3-faithful reading (ordered willing without excluding
+  recipient-directed willing) is compatible with `a94c5dfc`. Its better placement relative to
+  `a94c5dfc` holds for that direct option only.
+- **Root route** `deiFiliusRootUnifiedBenevolentLord` (result `483129f2`):
+  the unified Dei Filius root `c0f4a346` with its lord conjunct through LORD_3
+  instead of LORD_2; every other input is that of `deiFiliusRootUnified`.
+  Joint satisfiability of the whole bundle is witnessed on the unified route's
+  root model (`80920b5c`, permissive willing relation, three Mathlib axioms via
+  the reused model).
+
+What this changes: the #1732 recipient-good result now has a root consumer, and
+the authority bridge on this route no longer has to cover a cause and governor
+indifferent to the good of the intellectual beings it governs. The good willed
+need only be some good of the creature's own, and on support `12ae7844` it is
+the creature's esse, which any intentional creator wills in creating it. What it does not
+change: the governance and willing conjuncts are separate (the type does not
+say God governs R *for* the good willed to R); wisdom beyond having intellect,
+justice and the exclusion of harmful directives are untyped; and **LORD_1 is
+dominion over everything else, not a directed moral jurisdiction to impose
+obligations** on I. The objection that a beneficiary of good care owes
+gratitude or has reason to follow sound advice, rather than owing obedience,
+applies to `e01dd128` unchanged. Its target is the inference in `e01dd128`
+from benevolent causing and governing to authority to dispose. Its mechanism:
+benefit and good will ground claims to gratitude, and competence grounds
+reasons to defer to advice, without either conferring authority to dispose.
+Its independent justification: ordinary cases in which benevolence and causal
+origin coexist with the absence of dominion. These are the parent of an adult
+recorded as a counterexample in the LORD_1 definition `59350e3b`, a generous
+benefactor whose beneficiary owes gratitude but not obedience, and an expert
+adviser whose correct advice gives reasons to listen but no authority to
+command (the #1508 adviser case above). The theist's candidate relevant
+difference, recorded as the open reply, is total dependence for existence:
+a creator ex nihilo on whom the creature depends for its being at every
+moment, unlike any partial benefactor or parent. Whether total dependence
+makes the difference to authority is not established here.
+
+### Exact unbuilt transitions
+
+- **U1 (T2 instance).** A registered moral-reason statement for the report case,
+  with the invited-reliance principle as an explicit OPEN premise. Owner #1500.
+- **U2 (T3 standing).** From a moral reason to R's directed claim and an
+  authorized demander. Owners #1508/#1433; `ecdbbaba` is the weaker target.
+- **U3 (T4 → T5 source identity).** That the normative order which gives I the
+  reason at T2 is the order by which the selected GOD_4 root governs, i.e. that
+  the governance relation `Governs` of LORD_2 includes the ordering of rational
+  agents to their due goods (q.91 a.2 participation). No statement exists; it is
+  #1460's B2/B5 and #1747's GroundsMoralOrder/RationallyGovernsEnds. A typed
+  form needs a relation between `Governs g x` and an end that is x's good, which
+  the current vocabulary does not have.
+- **U4 (dominion → jurisdiction).** From LORD_1 (authority to dispose) to the
+  standing to obligate rational creatures by directives within limits. #1460
+  B5; #1531 for selection of an ultimate authority.
+
+### Cumulative provisional assessment (proposed)
+
+The route is now one navigable map from F6 to the GOD_4 root, with every
+unbuilt step named; it is formally disconnected at U1–U3. Its formal part (T5) is a conditional support option of the
+same strength as the other Dei Filius routes plus one weaker authority bridge
+and one restricted willing premise, better placed than `a94c5dfc` only as a
+direct assumption (both verified supports go through `a94c5dfc`). Its warrant
+is unequal along the chain. F6 is closed only as an unwitnessed existential: I's thin reason at T1 is an
+additional, separately warranted case assumption, and preference-independent
+force for I is underdetermined; T2 has
+defeasible positive support for a scoped reliance reason on this case (#1500),
+not a registered instance; T3 and T4 are underdetermined among the realist,
+natural-goodness and authorial accounts, which agree on the categorical T2
+verdict but not its explanation (the functional moral-only account shares only
+the instrumental action recommendation and disputes T2);
+T5's governance premise `123d394b` and the willing premise share #1459's
+intentional-agency dependency, and the natural-diffusion / foreseen-collateral
+alternative still applies to intellectual effects. The LORD_3 bridge is
+prima facie more plausible than the LORD_2 bridge, because it excludes a
+creator and governor indifferent to the good of intellectual creatures. Since
+the good willed may be the creature's own esse, which any intentional creator
+wills, the Cudworth/Wielenberg objection to authority from intentional
+creation largely remains; its remaining burden (why benevolent government
+gives dominion, not only claims to gratitude) is substantive and unanswered.
+
+Compared with the earlier recorded judgments: the #1508 judgment (basic
+directed rights survive as the strongest rival to a *required* divine
+authority; no comparative winner) and the #1500 judgment (no discrimination
+among functional, realist and divine accounts on their full metaphysics) are
+**kept unchanged**; this section adds no evidence that discriminates them. The
+#1732 love assessment is kept unchanged in warrant; its downstream status
+changes, since `c691e3d0` now feeds a root route. The moral argument does not
+yet supply independent evidence for God's existence: the God conclusion on
+these routes comes from the metaphysical premises of the Dei Filius root, and
+the moral-authority investigation motivated a refined lord route (LORD_3),
+whose willing premise comes from the divine-love results; no moral premise from
+T1–T4 feeds it (U3 open). It is not an existence argument. That would change only with
+U1–U3 built and defended.
+
+**Next distinct question:** U3 in typed form, directly on the same case: give
+`Governs` a typed end that is the governed being's good, and test whether the
+selected root's government of R includes the ordering under which I's reason at
+T2 holds, against the rival on which the same norm holds necessarily and
+impersonally. This is #1747's question restricted to one case; it should be
+assigned there rather than reopened here.
+
+Attempt `1e2e9af4-c46c-4f05-b8a8-5d6e0d067248` carries the current assessment.

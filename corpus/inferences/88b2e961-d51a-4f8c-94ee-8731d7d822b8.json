@@ -1,0 +1,13 @@
+{
+  "id": "88b2e961-d51a-4f8c-94ee-8731d7d822b8",
+  "label": "GOD_4 wills GOOD_4 to each distinct intellectual effect, from causal willing (inference)",
+  "input_statement_ids": [
+    "a94c5dfc-c722-49fe-a242-dd39409b079d",
+    "00e962ae-f109-55f7-a7fd-f107ce0dea6b"
+  ],
+  "output_statement_id": "47c6da1b-910a-43f1-bfd8-ba7e7e9f48e4",
+  "rule": "Apply the causal-willing bridge at a distinct intellectual effect; the witness respect is esse, a good of x by the goodness-actuality coextension",
+  "meaning": "Second support option for the restricted premise, without the divine self-case premise DivineOwnGoodWilling. For a GOD_4 g with will and a distinct intellectual x in act as to being whose being g causes, CausalExistenceWilling (a94c5dfc) gives that g wills x its good in esse, and the q.5 a.1 coextension (00e962ae) gives that x is good in esse because it is in act in esse. Conditional consequence; both premises stay open.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

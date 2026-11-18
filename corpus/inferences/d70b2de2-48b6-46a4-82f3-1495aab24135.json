@@ -1,0 +1,12 @@
+{
+  "id": "d70b2de2-48b6-46a4-82f3-1495aab24135",
+  "label": "Every GOD_4 wills some GOOD_4 to all in act, so to every distinct intellectual effect (inference)",
+  "input_statement_ids": [
+    "c691e3d0-5dd0-404a-a1dd-9a4a278dcd31"
+  ],
+  "output_statement_id": "47c6da1b-910a-43f1-bfd8-ba7e7e9f48e4",
+  "rule": "Weakening: restriction of the recipient quantifier and added antecedents",
+  "meaning": "Strength order registration: if every GOD_4 wills some good of its own to every being in act as to being (the #1732 result's conclusion), then in particular to every distinct intellectual such being whose being it causes. Instantiation only; it establishes neither.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

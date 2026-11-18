@@ -1,0 +1,13 @@
+{
+  "id": "3f4d27ab-9428-4af1-8f9a-c9b693e44dfa",
+  "label": "Joint-satisfiability model of the LORD_3 Dei Filius root route",
+  "paraphrase": "On the unified Dei Filius route's root model (four roles; source the selected root, recipient a second intellectual being), given excluded middle: the unified root bundle holds, the restricted willing premise and 'Whatever is LORD_3 is LORD_1' hold with a permissive willing relation, recipient is an intellectual being other than source, and the selected root has every Dei Filius attribute. Hence every premise of the LORD_3 root route holds together in this interpretation. The willing relation is permissive, so the model does not discriminate recipient-directed from other willing. A statement about this interpretation only.",
+  "lean_declaration": "TruthCore.Causality.DeiFiliusBenevolentLord.Control.RootModel",
+  "definition_ids": [
+    "9dcfcb4e-bf60-4322-b687-440df1f2ad29",
+    "08b826db-2d9c-48e5-b69c-d4ac54088518"
+  ],
+  "disambiguation_ids": [
+    "aa1de96a-e0d2-4739-a34f-9b98f1034a34"
+  ]
+}

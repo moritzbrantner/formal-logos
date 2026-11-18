@@ -1,0 +1,12 @@
+{
+  "id": "58d3a100-9b21-46f4-ac89-a5eedeed95e4",
+  "label": "GOOD_4 for all in act strengthens GOOD_4 for every distinct intellectual effect",
+  "subject_kind": "statement",
+  "subject_id": "c691e3d0-5dd0-404a-a1dd-9a4a278dcd31",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "47c6da1b-910a-43f1-bfd8-ba7e7e9f48e4",
+  "verification_result_id": "0e576e4d-f199-4ced-ac09-e81bbd500b6d",
+  "strictness_result_id": "96ce418a-a2d7-40ac-bf8d-cf698f16f4dc",
+  "note": "Same IsGod, InAct, GoodIn, WillsGoodFor and esse. The strong version gives a willed good to every existing being, God included; the weak one only to a distinct intellectual being whose being God causes. Control part 5: with no intellectual being other than God and no willing, the weak version holds and the strong one fails."
+}
