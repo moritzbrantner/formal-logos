@@ -1691,7 +1691,7 @@ correct the report cheaply. Agent I, patient R, the information and the target
 
 | Transition on the fixed case | What existing records deliver | Status |
 |---|---|---|
-| T1. I has an epistemic reason to believe the result | F6 `f56b2ee7` (thin existential, closed as a floor item); the preference-independent strengthening `2ca463c2` is derived only conditionally (argument `e0c99541`, premises `1b74e22c`, `b5f35b0d`) | thin reason closed; preference-independent force **underdetermined** ([epistemic authority](epistemic-authority.md#provisional-judgment-coordinator-grade)); #930's normative-relevance step is exhausted and reallocated, not reopened here |
+| T1. I has an epistemic reason to believe the result | F6 `f56b2ee7` is closed as a floor item, but it is only the existential `∃ a p, Reason a p`; the preference-independent strengthening `2ca463c2` is also existential and derived only conditionally (argument `e0c99541`, premises `1b74e22c`, `b5f35b0d`). Neither has I or the treatment-safety content as its witness | the case instance (I's thin reason to believe *this* result) is an **additional assumption**, not a consequence of F6; no record connects F6's witness to I. Its separate warrant is the ordinary evidential bearing of the result on the question I is investigating. Preference-independent force for I is **underdetermined** ([epistemic authority](epistemic-authority.md#provisional-judgment-coordinator-grade)); #930's normative-relevance step is exhausted and reallocated, not reopened here |
 | T2. I has a moral reason to correct the report | no registered moral instance. The invited-reliance principle of the #1500 section is analyst prose with a stated rationale (induced dependence, serious avoidable cost) | **OPEN**, positive prose support only; no statement or result |
 | T3. R has a claim against I, and someone may demand correction | `ecdbbaba` (some legitimate claimant can demand abstention, OPEN), `681f5b58` (competent victim's own claim, OPEN), definition `c0d119be`, Darwall reading `f6c46c02` | **OPEN**; #1508's claimant-substitution and guardian/stranger tests separate beneficiary, demander and addressee |
 | T4. The moral reason and claim have an explanatory source | rival packages compared in this note (#1508) and in [naturalistic realism](../naturalistic-moral-realism.md); `0893ecbc` (goodness without universal instrumental reasons), `1fb30e0b` (end-independent reasons for obligations an open bridge) | **OPEN**; no registered explanation of moral force by any account |
@@ -1719,9 +1719,18 @@ inhabit the moral species; T2 needs its own warrant.
 | Naturalistic realism (Railton, Boyd) | correctability and the natural basis of R's interests | categorical force (`0893ecbc`); T5 | the impartial criterion's authority (`1fb30e0b`) |
 | Wise-source / authorial natural law (#1460) | T2–T4 in one account: due goods, participation of practical reason in an ordering intelligence, care for the governed | — | its jurisdiction premise (B5), its authorship premise (#1459) and the identification of the governor with the moral source |
 
-All five accounts deliver the same verdict at T2 for this case (correct the
-report). The verdict therefore does not discriminate between them; the
-discriminating questions are T3's standing structure and T4's explanatory fit.
+All five accounts recommend the same action on this case (correct the
+report), but under different reason-types. The functional moral-only account
+does **not** share the T2 verdict: it denies that I has a moral reason and
+recommends correction only as instrumentally useful for R's aims, conditional
+on those aims and on I's having reason to serve them; no premise on file makes
+R's aims binding on I. The four realist, natural-goodness, naturalist and
+authorial accounts share the T2 verdict that I has a categorical (non-
+instrumental) pro tanto reason to correct, and differ on its explanation. So
+the shared action recommendation does not discriminate the accounts, while
+**whether the reason at T2 is categorical or instrumental** is itself a
+discriminating question, alongside T3's standing structure and T4's
+explanatory fit.
 The positive warrant of the proposed moral instance is the invited-reliance
 rationale, not the survival of any rival or a primitive premise.
 
@@ -1815,10 +1824,14 @@ unbuilt step named; it is formally disconnected at U1–U3. Its formal part (T5)
 same strength as the other Dei Filius routes plus one weaker authority bridge
 and one restricted willing premise, better placed than `a94c5dfc` only as a
 direct assumption (both verified supports go through `a94c5dfc`). Its warrant
-is unequal along the chain. T1 is well supported in its thin form; T2 has
+is unequal along the chain. F6 is closed only as an unwitnessed existential: I's thin reason at T1 is an
+additional, separately warranted case assumption, and preference-independent
+force for I is underdetermined; T2 has
 defeasible positive support for a scoped reliance reason on this case (#1500),
 not a registered instance; T3 and T4 are underdetermined among the realist,
-natural-goodness and authorial accounts, which agree on the case's verdict;
+natural-goodness and authorial accounts, which agree on the categorical T2
+verdict but not its explanation (the functional moral-only account shares only
+the instrumental action recommendation and disputes T2);
 T5's governance premise `123d394b` and the willing premise share #1459's
 intentional-agency dependency, and the natural-diffusion / foreseen-collateral
 alternative still applies to intellectual effects. The LORD_3 bridge is
