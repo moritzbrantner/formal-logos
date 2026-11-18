@@ -1,0 +1,12 @@
+{
+  "id": "f4365b55-da11-4e27-b5b7-71024d9508be",
+  "label": "PRIOR_4: PriorInBeing W y x: y is prior to x in being: y can be without x and x cannot be without y",
+  "term": "prior in being (prius secundum naturam et substantiam, by being-without)",
+  "definition": "`PriorInBeing W y x`: y is prior to x in being, that is y can be without x and x cannot be without y, where W is the primitive CanBeWithout of DEF-CAN-BE-WITHOUT ('y can be while x is not', 'possunt' read as real possibility). This is the criterion of priority by nature and substance in Aquinas, In V Metaph. lect. 13 n. 15 ('priora dicuntur, quae possunt esse sine aliis et illa non possunt esse sine eis'; claim ab5ec574), which n. 18 makes the mode to which all others reduce. Example: the sun is prior in being to the light in the air. Non-example: one of two people who each tell the other something new is not thereby prior in being to the other, though each is prior to the other in act in the respect of the news. It is distinct from PRIOR_1 (DEF-SIMPLE-PRIORITY, priority in act in a respect: whatever is in potency in a respect presupposes a being in act in that respect), PRIOR_2 (priority in time) and PRIOR_3 (priority in substance, that is in perfection). It is asymmetric by definition. Its relation to dependence for being (DEF-DEPENDS-FOR-BEING, n. 18 'priora non dependent a posterioribus') is not built in: it passes only through the open bridges 000e1f65 and 8ab3d114 or the PRIOR_4 sibling of 47aff057. Its relation to PRIOR_1 is not built in either: passages are explicit sense-bridge premises.",
+  "basis": "sourced",
+  "claim_ids": [
+    "ab5ec574-cd80-5c16-b391-328245425d21"
+  ],
+  "lean_declaration": "TruthCore.Causality.PriorityInBeing.PriorInBeing",
+  "note": "Added by #1751 slice 2, splitting the prima via route's single PriorSimply into PRIOR_1 (act in a respect) and PRIOR_4 (being), as lane B's 2026-11-18 assessment (item (d) 4) found it used in both. The Lean declaration has a body over the primitive CanBeWithout, so the n. 15 criterion is definitional for this sense; the contested passages to dependence for being and to PRIOR_1 stay explicit open premises."
+}

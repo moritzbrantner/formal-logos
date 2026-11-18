@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.PriorityInBeing.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PriorityInBeing.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.PriorityInBeing.priorInBeingCausesBeing"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

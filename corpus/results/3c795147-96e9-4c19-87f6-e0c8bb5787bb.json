@@ -1,0 +1,11 @@
+{
+  "id": "3c795147-96e9-4c19-87f6-e0c8bb5787bb",
+  "label": "Every first mover moved by none is first in being, from the quarta via with PRIOR_4",
+  "argument_id": "39c30529-1352-46bc-9c37-c9ba1d85b0d9",
+  "challenge_module": "TruthCore.Results.Causality.PriorityInBeing.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PriorityInBeing.Solution",
+  "theorem": "TruthCore.Results.Causality.PriorityInBeing.firstMoverIsFirstInBeing",
+  "comparator_config": "results/3c795147-96e9-4c19-87f6-e0c8bb5787bb/comparator.json",
+  "status": "solution-present",
+  "description": "PRIOR_4 sibling of argument f8992ef7, by its existing theorem firstMoverIsFirstBeing instantiated with PriorInBeing CanBeWithout for its priority parameter. Something m is maximal in being (quarta via); whatever else is PRIOR_4 to m causes its being (the PRIOR_4 sibling of 70e98bb5), so it is more a being than m, which nothing is; every first mover moved by none is m. The premises are those of f8992ef7 with the PRIOR_4 sibling in place of 70e98bb5; all remain open. The CAUSE_1/CAUSE_2 and MAXIMAL_6/MAXIMAL_1 mixings are inherited from f8992ef7, where they are allowlisted legacy; here the premises that relate those senses are listed as bridges: 777646a5 (an agent whose being God causes is moved when it moves, relating causing being and moving) and 101bdd62 (maximally true is maximally a being, which links both maximality senses)."
+}

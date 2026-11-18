@@ -1,0 +1,11 @@
+{
+  "id": "feb950c1-713c-445e-a0dd-8d985b70da34",
+  "label": "Sense-mixing control: mover priority read as PRIOR_4 excludes reciprocal moving",
+  "paraphrase": "Logical control, no premises: for any beings, respects, InAct, InPotency, MovesIn and CanBeWithout, if priority from actual moving (the shape of 6ca87431: whatever, in act in r, moves a distinct thing in potency in r is prior to it) is read with PRIOR_4, then no two distinct beings each move the other in this way. PRIOR_4 is asymmetric by definition, so the conflated reading excludes a case that respect-indexed priority in act admits. A fact about the conflated reading, not a claim about which beings move each other.",
+  "lean_declaration": "TruthCore.Causality.PriorityInBeing.MoverPriorityAsPriorityInBeingExcludesReciprocity",
+  "definition_ids": [
+    "f4365b55-da11-4e27-b5b7-71024d9508be",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43"
+  ]
+}

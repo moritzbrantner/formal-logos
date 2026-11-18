@@ -1,0 +1,11 @@
+{
+  "id": "c4bb0481-60aa-4461-baee-f490a5fc554e",
+  "label": "If y is PRIOR_4 to x, then x depends for its being on y and y does not so depend on x",
+  "paraphrase": "OPEN bridge, PRIOR_4 sibling of 47aff057: for all y and x, if y is prior to x in being (y can be without x and x cannot be without y), then x depends for its being on y and y does not depend for its being on x (DependsForBeing, DEF-DEPENDS-FOR-BEING). With PRIOR_4 defined by being-without, this is a bridge from being-without to dependence for being, supported by In V Metaph. lect. 13 n. 18 ('priora non dependent a posterioribus, sicut e converso'; claim 95f41960 reads that text as dependence running one way), not a definitional truth. It follows from the being-without bridges 000e1f65 and 8ab3d114 with excluded middle (this batch).",
+  "lean_declaration": "TruthCore.Causality.PriorityInBeing.PriorityInBeingRequiresNonmutualDependence",
+  "definition_ids": [
+    "f4365b55-da11-4e27-b5b7-71024d9508be",
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2"
+  ]
+}

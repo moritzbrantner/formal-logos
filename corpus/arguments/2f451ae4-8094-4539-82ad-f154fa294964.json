@@ -1,0 +1,19 @@
+{
+  "id": "2f451ae4-8094-4539-82ad-f154fa294964",
+  "label": "Sense-mixing control for PRIOR_4 as mover priority, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "feb950c1-713c-445e-a0dd-8d985b70da34",
+  "inference_ids": [
+    "0631b416-5347-4555-929d-0f057cc553ec"
+  ],
+  "meaning": "Read with PRIOR_4, priority from actual moving makes each of two reciprocally moving beings prior in being to the other, which the definition of PRIOR_4 excludes. So a respect-free premise like 6ca87431 cannot be read in the being sense where reciprocal cross-respect moving occurs; it is the PRIOR_4 form of the slice-1 reciprocity certificates. A premise-free control showing that mixing fails; it establishes nothing about which beings move each other.",
+  "definition_ids": [
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "f4365b55-da11-4e27-b5b7-71024d9508be"
+  ],
+  "disambiguation_ids": [
+    "be54be36-3ce8-53f9-8168-50d1114e6c76"
+  ],
+  "sense_mixing_control": true
+}

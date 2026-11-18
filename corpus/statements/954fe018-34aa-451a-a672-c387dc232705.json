@@ -1,0 +1,12 @@
+{
+  "id": "954fe018-34aa-451a-a672-c387dc232705",
+  "label": "A first unmoved mover first in being is first in PRIOR_1: none other is PRIOR_1 to it",
+  "paraphrase": "OPEN sense bridge PRIOR_4 to PRIOR_1, analyst formulation, attribution deferred: for every f, if f is a first mover moved by none and nothing other than f is prior to it in being (PRIOR_4), then nothing other than f is prior to it in act in a respect (PRIOR_1, the PriorSimply of DEF-SIMPLE-PRIORITY): every y with PriorSimply y f is f. It is restricted to first unmoved movers that are first in being and is not a general inclusion of PRIOR_1 in PRIOR_4; a general inclusion is excluded by reciprocal cross-respect moving if PRIOR_1 comes from actual moving in any respect (6ca87431). It is the weakest bridge the pure-act derivation of this batch uses. Lane B's 2026-11-18 second test named this crux: 'nothing other than the first being is prior to it in act in any respect'. Rival on file: the firstWayDoesNotYieldPureAct model of the FirstMoverPureAct result, where a first unmoved mover is in potency to a respect in which it moves nothing and another being, in act in that respect, is PRIOR_1 to it; whether such a being is also prior in being is what the bridge settles.",
+  "lean_declaration": "TruthCore.Causality.PriorityInBeing.FirstInBeingMoverIsFirstInActPriority",
+  "definition_ids": [
+    "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d",
+    "25e19d5a-5cdf-5916-a888-f6a0ce970f11",
+    "f4365b55-da11-4e27-b5b7-71024d9508be",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"
+  ]
+}
