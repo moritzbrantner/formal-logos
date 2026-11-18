@@ -1,0 +1,19 @@
+{
+  "id": "37c73f59-5d2c-4faa-9564-1b0168590b8e",
+  "label": "Thomistic charity highest-good and role-indexed hierarchy test (#1747/#1460)",
+  "date": "2026-11-18",
+  "statement_ids": [
+    "e0dae79f-c042-5a08-a148-725d0468df91",
+    "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+    "66aecdd7-ea4e-55c6-9377-10db08893854",
+    "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+  ],
+  "kind": "countermodel",
+  "outcome": "succeeded",
+  "summary": "Tested a differentiated moral hierarchy on a fixed equal-need child/virtuous-stranger help case, expressly conditional on h being the child's parent and (for Aquinas ST II-II q26 aa1,6,7,9) h acting under theological charity. q26 positively distinguishes object-directed goodness and charity's relational intensity/care, with an ultimate Good as final-end reference; it does not provide a universal natural-law action calculator or divine cognition from human order. A JavaScript finite scope check held the two typed strict preference relations separate (each irreflexive, asymmetric, transitive), then found the untyped union non-asymmetric and non-transitive because s>c under the first relation and c>s under the second. Three structural source profiles retained identical rankings and facts while varying HasIntellect(n) and actual end-adoption, illustrating weak-schema non-entailment; this is not a model of full Thomistic charity or a defeat of a strong authored-source premise. Positive Foot/natural-goodness and Wielenberg/robust-norm completions can likewise give relationship-sensitive reasons; their concrete care/duty tie-breakers need content warrant. The Thomistic account has conditional unifying explanatory reach, but the fixed hierarchy alone does not selectively establish same-source intellect, capacity will or actual willing. Novelty is a concrete q26 instantiation of #1460's existing two-axis plan, no new Lean theorem or philosophical rival defeat. Source locator: https://www.newadvent.org/summa/3026.htm; connected assessment: docs/notes/moral-governance-intellect-will.md.",
+  "blocker": "To generalize q26 charity to ordinary natural-law duties, supply a separate charity/natural-law applicability bridge. To prove source intellect/will, identify the highest final Good with the actual necessary root n and justify that n itself understands, institutes and adopts the morally authoritative role-sensitive ends, rather than merely causing agents who reason about them. Distinguish finite control from actual God-model. #1460 owns a full formal priority/ranking argument; no premise/frontier status changes. Local Lean/Truth/Cargo unavailable; branch CI verification required.",
+  "evidence": [
+    "11628966-e479-418c-8107-dbe435608472",
+    "dd55f57a-b256-4e73-b57e-6e2cca1c06f7"
+  ]
+}
