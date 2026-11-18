@@ -325,9 +325,10 @@ The two consumers on this route were inspected in their Solutions. `firstMoverIs
 and its imported `quartaVia` and `firstMoverIsMaximeEns`, and
 `maximeEnsIsGod` with `atMostOneMaximeEns`, apply the genus principle and
 cause-more-such only at `esse`, and grades-have-a-maximum only at `verum`.
-Every leaf above except the `7067553d` pair and the `b26c10a0` triple is
-universally quantified over all perfections. The route therefore consumes it
-at one respect only. Where an objection below reaches only other respects, it
+The leaves are universally quantified over perfections, except `5e281daf`
+(esse only). The route consumes each at one respect only, except the
+`7067553d` pair, which `firstMoverIsMaximeEns` applies at the arbitrary respect
+of motion, and the `b26c10a0` triple. Where an objection below reaches only other respects, it
 bears on the leaf's stated scope and not on the route's instance; each row says
 which.
 
@@ -350,6 +351,8 @@ corroboration of their parent. Their value is the reading they make explicit.
   One direction: `98755509` turns a MoreIn-cycle into a strict degree cycle. The
   other: given `c11369aa` and a strict-order `MoreIn r`, the set-valued degree
   deg r x := {z | MoreIn r x z} under ⊆, with null := ∅, satisfies all three.
+  The merely acyclic case would use the transitive-closure degree; that case is
+  unchecked.
 
 The last construction was checked in a scratch Lean file against the built
 library (`degreeTrioConstructible`). It is not registered as a result.
@@ -390,8 +393,8 @@ direct option, **O** open with a concrete blocker.
 | `98755509` | P | `MoreIn r x y → deg r y < deg r x`. A meaning postulate of representing the comparative by degree. With `ed766869` and `ac72bbfe` its only content beyond `c11369aa` is acyclicity of each `MoreIn r`, which belongs to the meaning of "more". | Representation postulate. The q.3 a.5 ad 2 boundary that 921d2362 records (no proportioned measure) is not a defeater: the set-valued degree needs no common measure. |
 | `ed766869` | P | `null ≤ deg r y`. A meaning postulate of DEF-NULL-DEGREE (lacking altogether is the lowest standing). | Analytic of the stipulated null. |
 | `ac72bbfe` | P | `null < deg r x → InAct x r`. Analytic under the fixed minimum-standard reading ("what has some heat is hot"). | On a relative-standard reading ("hot" means above a contextual threshold) comparatives do not entail positives. That is a different sense, not a failure mechanism under the fixed meaning. A consumer that read InAct as above-threshold would need a bridge. |
-| `f29a6b53` | P | `InAct x r → MoreIn r y x → ∃ c, c ≠ x ∧ CausesIn c x r`. Stating claim AQUINAS-SCG-II-15-LESSER-HAS-IT-FROM-ANOTHER-CAUSE (SCG II.15 n.3). Reading "alia causa" as a cause distinct from the bearer is the claim's interpretive step. An analyst rationale for that step: nothing reduces itself from potency to act in the same respect. | Sourced, moderate to strong. The route consumes only the `verum` instance. No substantive objection identified. |
-| `5cda1946` | O | `∀ r, WellFounded (fun c x => c ≠ x ∧ CausesIn c x r)`. Unattributed strengthening. The secunda via and In Metaph. II lect. 2 n.11 only support it, within one species of cause. | **Blocker: the originating/sustaining reading of CausesIn.** If CausesIn covers originating causes of a perfection such as life in generation, the stated claim AQUINAS-ST-I-Q46-A2-AD7-PER-SE-REGRESS-A (q.46 a.2 ad 7) bears against the full scope. It says an infinite per accidens series of agent causes "non reputatur impossibile"; its statement `f0fd4869` gives human generation as the example. Kept, conditional on that reading. On a sustaining or per se reading the premise has its strongest warrant. The route's `verum` instance is not reached by the generation example unless originating causes of a thing's ontological truth count. |
+| `f29a6b53` | P | `InAct x r → MoreIn r y x → ∃ c, c ≠ x ∧ CausesIn c x r`. Stating claim AQUINAS-SCG-II-15-LESSER-HAS-IT-FROM-ANOTHER-CAUSE (SCG II.15 n.3). Reading "alia causa" as a cause distinct from the bearer is the claim's interpretive step. The passage's own contrast motivates it: what belongs to x less than to others belongs to it not "ex sua natura tantum" but "ex alia causa". | Sourced, moderate to strong. The route consumes only the `verum` instance. No substantive objection identified. |
+| `5cda1946` | O | `∀ r, WellFounded (fun c x => c ≠ x ∧ CausesIn c x r)`. Unattributed strengthening. The secunda via and In Metaph. II lect. 2 n.11 only support it, within one species of cause. | **Blocker: the originating/sustaining reading of CausesIn.** If CausesIn covers originating causes of a perfection such as life in generation, the stated claim AQUINAS-ST-I-Q46-A2-AD7-PER-SE-REGRESS-A (q.46 a.2 ad 7) bears against the full scope. It says an infinite per accidens series of agent causes "non reputatur impossibile"; its statement `f0fd4869` gives human generation as the example. Kept, conditional on that reading. Mechanism: ad 7 denies that philosophy shows a per accidens regress of originating agents to be impossible. It removes the regress-impossibility warrant for the originating reading; it is not an actual counterinstance. On that reading the premise's truth then rests on a finite past, which q.46 a.2 co. says cannot be demonstrated. Because originating a thing's being originates its realization of form (DEF-ONTOLOGICAL-TRUTH-COMPARISON, `5a948c37`), this reaches the route's `verum` instance. On a sustaining or per se reading the premise has its strongest warrant. |
 | `1568610e` | P | `(∀ x, Has x truth ↔ Has x intel) ∧ ∀ x y, MoreIn truth x y ↔ MoreIn intel x y`. Supported reading of q.16 a.1/a.3 (truth adds a relation to intellect). | Moderate. It is a presentation of `5a948c37` (see (a)), not extra evidence. No substantive objection identified. Intelligibility quoad nos is excluded by DEF-INTELLIGIBILITY-OF-THINGS. |
 | `2a0e7f12` | P | The same shape with intel and being. Supported by q.16 a.3, "unumquodque inquantum habet de esse, intantum est cognoscibile", whose proportional form carries the comparative. | Strong as a reading. Not stated: the biconditional form is the analyst's. No substantive objection identified. |
 | `dc619ad6` | O | `∀ r, GreatestDegreeCausesAllInGenusReading InAct CausesIn r (deg r)`. Supported by q.2 a.3 (greatest-degree reading per DISAMB-MAXIME-ENS). | **Missing bridge, unchanged:** the universal causal reach of a greatest bearer (the 2026-10-31 source-defense audit and owner ledger I). Its strongest positive argument is q.44 participation, which needs the four burdens recorded there. Its scope exceeds the route's use, which is `esse` only. The weaker selected-perfection and at-being siblings exist, but no `strengthens` relation is registered from `dc619ad6`. No new substantive objection: the q.2 a.3 fire illustration is not used as physics, and no established counterexample was found at the represented-degree reading. |
@@ -401,9 +404,9 @@ direct option, **O** open with a concrete blocker.
 | `9da93cd4` | P | `ParticipatesIn x r → ReceivedIn x r x`. Near-conceptual under participation as "partem capere". The candidate texts In De Hebd. lect. 2 and q.75 a.5 ad 1 are named in 09f03f51; they are unpinned and were not read here. | With the fixed gloss, a subsistent created form has its form through what it is, so it is not a participant there. The q.7 a.2 case below then does not reach this premise. Moderate to strong. |
 | `cdb79aa6` | P | `ReceivedIn y r z → LimitedBy y r z`. Generalizes q.7 a.1–2: form received in matter is contracted, and the esse of a subsistent created form "est receptum et contractum ad determinatam naturam" (q.7 a.2 co., materialized and read in this slice). | Moderate to strong on either reading of LimitedBy (see (e)). No substantive objection identified. |
 | `39a4c28c` | P | `LimitedBy y r z → ReceivedIn y r z`. Generalizes the q.7 a.1 esse reading. | Near-analytic on the **role** reading of LimitedBy (restriction actually imposed by z as recipient). False on the **measure** reading: falling within z's capacity is not being received in z. See package P1. |
-| `3e890700` | O | `ReceivedIn y r z → DependsForBeing y z`. An analyst bridge (receiving principle intrinsic, as matter to the composite). | **Kept: recorded objection 117344d0.** The stating claim on SCG II.80 n.13 says the united soul's esse, "etsi sit absolutum a corpore non dependens", has the body as "subiectum ipsum recipiens". This bites if subject-reception is ReceivedIn: reading (a) of DISAMB-ESSE-RECEPTION, plus a principle-to-being adapter. Restricting the premise to intrinsic recipients would not obviously cover the route's case, a cause's perfection received in its distinct effect. Shared dependency on the meaning of DependsForBeing, assessed in the dependence lane (B). |
+| `3e890700` | O | `ReceivedIn y r z → DependsForBeing y z`. An analyst bridge (receiving principle intrinsic, as matter to the composite). | **Kept: recorded objection 117344d0.** The stating claim on SCG II.80 n.13 says the united soul's esse, "etsi sit absolutum a corpore non dependens", has the body as "subiectum ipsum recipiens". This bites if subject-reception is ReceivedIn: reading (a) of DISAMB-ESSE-RECEPTION (the reading on which a form's communication of esse to matter is EsseReceivedIn, which DISAMB-ESSE-RECEPTION leaves open), plus a principle-to-being adapter. Restricting the premise to intrinsic recipients would not obviously cover the route's case, a cause's perfection received in its distinct effect. Shared dependency on the meaning of DependsForBeing, assessed in the dependence lane (B). |
 | `a961a13e` | P | `LimitedBy y r z → deg y r ≤ cap z r`. Analytic on the measure reading and plausible on the role reading. | Defended alone. It is a member of package P1. |
-| `f6677834` | O | `InAct y r → ¬ LimitedBy y r z → cap z r < deg y r`. Attempt 09f03f51: q.7 a.1 has no degrees or capacity of a non-recipient. | **Kept: role-to-degree (restates and localizes the 2026-11-17 cross-reception audit).** With `a961a13e` it excludes two actual possessors of r that are each limited by themselves and neither limited by the other (scratch-checked `noMutualNonlimitation`). On the role reading, under which `39a4c28c` is warranted, any two creatures that receive esse each in their own nature are such a pair (q.7 a.2, De ente c.4 as read in slice 2). So the premise is false there. On the measure reading it reduces to comparability of degree with capacity, but then `39a4c28c` fails. At heat, with temperature as the degree, a room-temperature laser heats a fusion target far above its own temperature without being limited by the target. That is an established counterinstance on the role reading with formal temperature as the degree. It reaches the stated scope only; the route consumes `esse`. |
+| `f6677834` | O | `InAct y r → ¬ LimitedBy y r z → cap z r < deg y r`. Attempt 09f03f51: q.7 a.1 has no degrees or capacity of a non-recipient. | **Kept: role-to-degree (restates and localizes the 2026-11-17 cross-reception audit).** With `a961a13e` it excludes two actual possessors of r that are each limited by themselves and neither limited by the other (scratch-checked `noMutualNonlimitation`). On the role reading, under which `39a4c28c` is warranted, any two creatures that receive esse each in their own nature are such a pair (q.7 a.2, De ente c.4 as read in slice 2). So the premise is false there. On the measure reading it reduces to comparability of degree with capacity, but then `39a4c28c` fails. At heat, a room-temperature laser heats a fusion target far above its own temperature without being limited by the target. That is a counterinstance under two stated identifications: the cause is the device, whose body is at room temperature, and the degree is formal body temperature. A battery-driven filament heater shows the same structure. If the energy carrier is the cause, or possession is eminent (DISAMB-IN-ACT), the instance fails. It reaches the stated scope only; the route consumes `esse`. |
 | `ca84f62d` | P | `PerfectIn x p ↔ Has x p`. Stating claims on q.5 a.1 co. and q.4 a.1 co. The route uses only Has → PerfectIn. | Strong as a reading if "perfect according to the mode of its perfection" is read relative to the thing's own measure. On a "lacks nothing of r" reading, the used direction fails for partly actualized respects. That reading choice is unregistered (see (e)). Restated as a boundary, not an objection. |
 | `196e6606` | P | `PerfectIn x r → InAct x esse`. Supported by q.4 a.2 co., "secundum hoc enim aliqua perfecta sunt, quod aliquo modo esse habent". | Strong as a reading. Given `ca84f62d` it is equivalent to its conclusion `7067553d`, so it is a second presentation of that stated content, not independent corroboration. |
 | `5e281daf` | P | If c causes the being of every distinct actual x, then for each such x, `CausesIn c x esse → TotalCauseOfBeing c x`. Near-conceptual under CAUSING_AN_EFFECT_3 (cause of being, not of becoming). A subject presupposed to x's being is itself another being whose being c causes, so nothing in x's being lies outside c's causality. q.44 a.2 and q.45 a.1 are named leads, not read here. | Moderate to strong. No substantive objection identified. |
@@ -439,17 +442,26 @@ no axioms except where stated, and none is a registered result.
   `a9036c3c` is equivalent to `efe134d4` + `9da93cd4`. All three registered
   derivations of `d5a94eb1` and `cffad050` (`a31b3e52`, `924302df`,
   `fa1d11a9`) contain `a9036c3c`, `cdb79aa6`, `39a4c28c` and `7030af77`.
-  Slice 2 already kept the cross-reception audit `1de3bff1` against
-  `7030af77` (which also uses asymmetric MoreIn). P1 shows the same burden
-  inside `7030af77`'s degree support, without `9eaa3b6e` or asymmetry. The
-  failing member is `f6677834` on the role reading and `39a4c28c` on the
-  measure reading.
+  These derivations contain `7030af77`, not `f6677834` or `a961a13e`. The
+  leaf-level failure of `7030af77` is the first conjunct of `1de3bff1`, which
+  slice 2 kept against `7030af77` (with asymmetric MoreIn and excluded middle).
+  P1 localizes the same burden in `7030af77`'s degree support `1fbc8de7`,
+  without `9eaa3b6e` or asymmetry. The failing member there is `f6677834` on
+  the role reading and `39a4c28c` on the measure reading.
 
-  At `esse`, which the route uses, two creatures receiving esse each in their
-  own essence meet the antecedent. So these derivations do not support
-  `d5a94eb1` at `esse` on any single reading of LimitedBy. `d5a94eb1` then
-  rests on its stated direct option (Posterior Analytics I.2) and on whatever
-  that option is worth at `esse`. This is not assessed here.
+  At `esse`, two creatures receiving esse each in their own essence meet the
+  antecedent. So on each single reading of LimitedBy the unrestricted leaves
+  are false at their stated scope: `f6677834` or `7030af77` on the role reading
+  (for `7030af77` via asymmetric MoreIn, result `1de3bff1`), and `39a4c28c` on
+  the measure reading. The derivations consume these leaves only at a cause and
+  its effect (c ≠ x, CausesIn c x r), which the two-creature case does not
+  reach. The consumed instance carries the comparative content of `d5a94eb1`
+  itself. On the measure reading, non-reception in x gives a degree beyond x's
+  capacity; on the role reading, non-limitation by x gives more. A
+  cause-restricted repair therefore escapes P1 but adds little warrant
+  independent of `d5a94eb1`'s direct option, as slice 2 already said of the
+  degree decomposition. `d5a94eb1` at `esse` rests chiefly on that option
+  (Posterior Analytics I.2), which is not assessed here.
 - **P2.** `{dc619ad6, 5cda1946}` excludes two distinct bearers tied at the
   greatest represented degree of any r (`noTiedGreatest`): each would cause r in
   the other, which is a distinct-cause cycle. The same tie exclusion that
@@ -471,21 +483,23 @@ were also run directly. It reports no unbridged mixing. Its findings:
 
 | Finding | Classification |
 | --- | --- |
-| `c70736c4`: GENUS_2/GENUS_3 | **Over-link.** DEF-GREATEST-DEGREE-IN-A-PERFECTION (`9146daed`) is registered both as GENUS_3 and as MAXIMAL_..._4. The respect index is one parameter. |
+| `c70736c4`: GENUS_2/GENUS_3 | **Same genuine passage, tagged twice.** `9146daed` (DEF-GREATEST-DEGREE-IN-A-PERFECTION) is both GENUS_3 and MAXIMAL_4. The passage is derived through `e433b6f5` and `88b2caf5` and should be declared in the same `sense_bridges`. Otherwise drop GENUS_3 from `9146daed` if the genus reading is meant to stay GENUS_2. |
 | `c70736c4`: MAXIMAL_4/5/6 | **Genuine passage, derived, not equivocal.** The proof passes from IsMaximumIn to GreatestDegreeBearer through `e433b6f5` and `88b2caf5`. Those should be declared `sense_bridges` (legacy allowlist). |
 | `29851dcb`: UNITING_CAUSE..._2/_3 | **Genuine passage** through the explicit bridge `e0088de9` (current). It is undeclared as a sense bridge. |
 | `8ba56e15`: PERFECT_1/2 | **Over-link.** PERFECT_2 (`5f851204`) enters only through the argument's own `definition_ids`. No premise or conclusion type uses IsPerfect. |
 | DISAMB-ESSE-LIMITATION on `cdb79aa6`, `39a4c28c`, `a961a13e`, `f6677834` (takes no sense) | **Over-link.** The bodies use neither EsseLimited nor HasLimitingPrinciple. |
 | DISAMB-ESSE-RECEPTION on `9da93cd4`, `cdb79aa6`, `39a4c28c`, `3e890700` (takes no sense) | **Apt link, sense unselected.** Its open reading (a)/(b) fork decides whether 117344d0 bites. |
+| DISAMB-THOMISTIC-ESSE-PARTICIPATION on `9da93cd4` (takes no sense) | **Apt link, sense unselected and esse-only.** PARTICIPATION_4 has no Lean declaration and does not cover the per-perfection effect-participates-cause mode. |
 
-Three load-bearing forks have no record and are invisible to the tool, because
-each runs through one Lean type:
+Three load-bearing forks are unrecorded or incompletely recorded, and are
+invisible to the tool because each runs through one Lean type:
 
 1. **LimitedBy, measure versus role.** This is a real equivocation risk for the
    warrant of `a31b3e52`, `924302df` and `fa1d11a9`, though not for their
    validity. See P1.
 2. **ParticipatesIn, effect-participates-cause versus not through what x is.**
-   This moves the kept objection between `efe134d4` and `9da93cd4`. The
+   Participation is recorded only for esse and without a distinct Lean sense.
+   This fork moves the kept objection between `efe134d4` and `9da93cd4`. The
    q.7 a.2 conditional on subsistent created forms, "non terminantur neque
    contrahuntur per aliquam materiam", reaches `9da93cd4` only on the first
    reading.
@@ -508,7 +522,7 @@ Candidate strength pairs, unregistered:
 | # | Record | Classification |
 | --- | --- | --- |
 | 1 | 117344d0 (SCG II.80 n.13 attacks `3e890700`) | **Kept**, conditional on reading (a) of DISAMB-ESSE-RECEPTION, as in (c). |
-| 2 | Cross-reception audit `1de3bff1` | **Restated and extended.** It was kept against `7030af77` in slice 2. Now it is localized to `f6677834`/`39a4c28c` (P1) and recorded as a kept objection to `f6677834`. |
+| 2 | Cross-reception audit `1de3bff1` | **Kept (extended).** It was kept against `7030af77` in slice 2. Now it is localized to `f6677834`/`39a4c28c` (P1) and recorded as a kept objection to `f6677834`. |
 | 3 | 09f03f51 source search (no stating text for `efe134d4`, `9da93cd4`, `3e890700`, `f6677834`, `2f6b9eff`) | **Restated** as an absence of source statement. It is not an objection. |
 | 4 | e1807bd1 (7), the non-concurrent profile, in which a universal source does not cause a producer's skill | **Restated** as a non-entailment fact about one interpretation. It is the concurrence question of `791fa216`. |
 | 5 | 1511d8a2 (2): the esse instance does not yield generalized reception and limitation | **Restated** as a scope boundary. |
@@ -522,10 +536,15 @@ Candidate strength pairs, unregistered:
 New objections, each meeting the standard (target, mechanism, independent
 justification):
 
-- q.46 a.2 ad 7 against `5cda1946`, conditional on the originating reading.
+- q.46 a.2 ad 7 against `5cda1946`, conditional on the originating reading:
+  an undercutting objection (non-impossibility), not a counterinstance.
 - Caused essential perfections against `efe134d4`'s scope.
-- The laser against `f6677834` at heat, on the role reading with temperature as
-  the degree.
+- The laser against `f6677834` at heat. It is a counterinstance under two stated
+  identifications: the cause is the device, whose body is at room temperature,
+  and the degree is formal body temperature. A battery-driven filament heater
+  shows the same structure. If the energy carrier is the cause, or possession is
+  eminent (DISAMB-IN-ACT), the instance fails. It reaches the stated scope only;
+  the route consumes `esse`.
 
 For `98755509`, `ed766869`, `ac72bbfe`, `f29a6b53`, `1568610e`, `2a0e7f12`,
 `e433b6f5`, `88b2caf5`, `9da93cd4`, `cdb79aa6`, `a961a13e`, `196e6606`,
@@ -535,7 +554,7 @@ Tally:
 
 - **kept** — 5: 117344d0; role-to-degree against `f6677834` (row 2); and
   the three new objections above.
-- **restated** — 9 records (rows 2 to 10).
+- **restated** — 8 records (rows 3 to 10). Row 2 is counted as kept.
 - **no substantive objection identified** — the 14 leaves listed above, plus
   row 11.
 
@@ -567,10 +586,10 @@ parents. It is also given conditional derivations that are either near-analytic
 or of moderate warrant.
 
 The weak point is the reception-and-limitation support for cause-more-such at
-`esse`. By P1 its registered derivations are not acceptable on a single reading
-of LimitedBy once two creatures receive esse each in their own nature. That
-step therefore stands on its direct option. Its derivations add no warrant at
-`esse` until P1 is answered.
+`esse`. That step stands chiefly on its direct option. Its registered
+derivations add little independent warrant at `esse`: P1 falsifies their
+unrestricted members, and the cause-restricted instance they consume restates
+the conclusion's comparative.
 
 Nothing is established or defeated. This judgment is conditional on other lanes:
 
@@ -583,6 +602,8 @@ Nothing is established or defeated. This judgment is conditional on other lanes:
 - A justified capacity calibration on which a creature not limited by another
   creature exceeds that other's capacity, with `39a4c28c` kept on the same
   reading. This would answer P1.
+- A cause-restricted sibling of `7030af77` (c ≠ x, CausesIn c x r) given
+  warrant that does not presuppose `d5a94eb1`.
 - A reading of CausesIn that is sustaining-only and still applies `f29a6b53`.
   This would answer the q.46 ad 7 objection to `5cda1946`.
 - Showing that subject-reception in SCG II.80 is not ReceivedIn. This would
@@ -594,15 +615,22 @@ Nothing is established or defeated. This judgment is conditional on other lanes:
 - An established tie at the top of some perfection. This would make P2 an
   objection to `dc619ad6`'s scope.
 
-**Next discriminating test.** Certify P1 as a registered result: the
-`crossReceptionForced` statement over the existing CausalMapsBatch1 and Round 2
-definitions. Then register LimitedBy's measure and role readings as two Lean
-declarations, and derive under each which of `39a4c28c` and `f6677834` holds
-and which is refuted by two own-essence recipients. The outcome decides whether
-any registered reception derivation of `d5a94eb1` at `esse` survives. A second,
-independent test: register the `verum` instance of `5cda1946` under the
-sustaining sense, so that `c201b61a`'s use is separated from the q.46 ad 7
-scope.
+**Next discriminating test.** Check whether the two `esse` applications of
+cause-more-such on the route can be re-routed through the slice 2
+source-scoped ascent `8176a284`/`62bd2829`:
+
+- `firstMoverIsFirstBeing` applies it to y prior to m;
+- `atMostOneMaximeEns` applies it to m and m'.
+
+A re-route would make the relative reception bundle unnecessary. If it fails,
+register the cause-restricted sibling of `7030af77` with a `strengthens`
+relation and test it for independent warrant.
+
+A second, independent test: register the `verum` instance of `5cda1946` under
+a sustaining sense, so that `c201b61a`'s use is separated from the q.46 ad 7
+scope. CAUSING_AN_EFFECT_5 is `SustainsBeing h G v c x`, indexed to being over
+histories. A `verum` instance therefore also needs a bridge from sustaining
+being to `CausesIn` at `verum`.
 
 **Declared revisions: none.** None of the 22 had an earlier current assessment.
 Retained unchanged:
