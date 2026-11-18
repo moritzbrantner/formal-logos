@@ -1,0 +1,11 @@
+{
+  "id": "a2366ca4-d8f4-4145-91d0-9b1569bce662",
+  "label": "OPEN q.20 LOVE_1 meaning yields GOD_4's LOVE_1 of every existing being",
+  "argument_id": "784f2278-a63d-445c-a079-cee99b099068",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.DivineLoveRoute.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.DivineLoveRoute.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.DivineLoveRoute.lovesAllExisting",
+  "comparator_config": "results/a2366ca4-d8f4-4145-91d0-9b1569bce662/comparator.json",
+  "status": "solution-present",
+  "description": "Analyst registration of the PR #1458 composition, attribution deferred. The recipient-good willing of the previous argument, with its existential respect, feeds the OPEN q.20 a.2 sufficient rule that willing an actual good of x to x is loving x in the thin non-passional sense. All three intentional bridges stay open. The conclusion is not friendship, equal love, affective love, interpersonal relationship or the hiddenness challenge's perfect love; projecting it to those predicates is an OPEN bridge owned by issue 1735. Cognition alone is not used: no intellect premise occurs."
+}
