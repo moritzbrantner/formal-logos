@@ -53,6 +53,8 @@ jobs:
           cargo fmt --all --check
           cargo clippy --locked -p truth --all-targets -- -D warnings
           cargo test --locked -p truth
+          cargo clippy --locked -p truth-mcp --all-targets -- -D warnings
+          cargo test --locked -p truth-mcp
       - uses: astral-sh/setup-uv@37802adc94f370d6bfd71619e3f0bf239e1f3b78 # v7
       - name: Verify exact support-formula analysis
         run: uv run scripts/support_formula.py --self-test
