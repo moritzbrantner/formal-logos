@@ -413,7 +413,7 @@ formal status changes.
 | `ef068f46` | `9355c3db` (result `d7c9cadd`, with `7067553d`) | `4ccb319f`, also concluded by `9126bd28` from `d0fc96b7`; consumed by `42908cf8` (result `8477d8c7`) for `457698e4` |
 | `19882fa9` | `90e120ab` (result `2b0c43c0`, with `e078f07b`) | `b0cd6015`, used only by `8a3a4577` (result `5769b268`), one of four bundles for `09c6d5f0` |
 | `86f10ec3` | `358d8c6e`, `e7b4c683`, `5c5b794f`, `8a3a4577` | `09c6d5f0` (all four registered derivations); `09c6d5f0` is itself source-stated (claim `b3b55883`) |
-| `ca55ed3a` | `983fd86b` (result `c62c4ec3`), `ae809bfd`, `27d7cebb` (plus `6df393c4`, `d812acaa` off the routes) | `8288ff1e` (only derivation `983fd86b`); `61ad11f3` (also `4bcf25b5` from `3b2d2d46`, `15fce38f`, `11b24e97`) |
+| `ca55ed3a` | `983fd86b` (result `c62c4ec3`), `ae809bfd`, `27d7cebb` (plus `6df393c4`, `d812acaa` off the routes) | `8288ff1e` (only derivation `983fd86b`); `61ad11f3` (also `4bcf25b5`, from `3b2d2d46` alone, and `15fce38f`/`11b24e97`, both via `8288ff1e`) |
 | `d017b6b0` | `983fd86b`, `83be8aad` (result `26c9ca8b`), `ae809bfd`, `27d7cebb` | `8288ff1e`; `79281639` (only derivation `83be8aad`); `61ad11f3` |
 | `b8d21cd0` | `83be8aad` | `79281639` |
 | `f3b79f16` | transcriptions `fcb4b871` (result `7cb451cc`, with calibration `1ad18c70`) and `e79971d9` (with `4133bd12`) | `27d15954` and `8e44a618`, both transcriptions; `dd24400b` judged `27d15954` dispensable for `ca07cae9` |
