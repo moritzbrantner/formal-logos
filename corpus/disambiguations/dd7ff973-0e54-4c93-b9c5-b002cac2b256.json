@@ -1,0 +1,25 @@
+{
+  "id": "dd7ff973-0e54-4c93-b9c5-b002cac2b256",
+  "label": "Willing a creature's existence: as a good to that recipient, or as ordered to others",
+  "term": "willing a creature's existence",
+  "sense_definition_ids": [
+    "08b826db-2d9c-48e5-b69c-d4ac54088518",
+    "1ca75ad2-e6f6-492a-9fcc-19eebfc8d3aa"
+  ],
+  "resolution": "Two readings of the q.19 a.4 / q.20 a.2 causal-willing step. CREATURE_WILLING_1 is recipient-directed willing (08b826db-2d9c-48e5-b69c-d4ac54088518). The registered route's CausalExistenceWilling (a94c5dfc-c722-49fe-a242-dd39409b079d) and the love results use only this reading. CREATURE_WILLING_2 is ordered willing (1ca75ad2-e6f6-492a-9fcc-19eebfc8d3aa), the q.20 a.2 ad 3 reading for irrational creatures. The sibling statement OrderedExistenceWilling uses it, together with an explicit denial of recipient-directed willing for distinct non-rational effects. On such an effect the two statements are incompatible. They are not incompatible for rational creatures, about which the sibling says nothing. No argument passes between the readings; the sibling is not used by a registered argument.",
+  "term_label": "CREATURE_WILLING",
+  "senses": [
+    {
+      "id": "0cdd7cc2-704c-4239-8dba-ea6754f9c1bc",
+      "label": "CREATURE_WILLING_1",
+      "definition_id": "08b826db-2d9c-48e5-b69c-d4ac54088518",
+      "lean_declaration": "TruthCore.Case.Catholicism.DivineLoveSenses.RecipientGoodWilling.WillsGoodFor"
+    },
+    {
+      "id": "bf1b1d30-e119-450e-93be-d7a5c42abdb9",
+      "label": "CREATURE_WILLING_2",
+      "definition_id": "1ca75ad2-e6f6-492a-9fcc-19eebfc8d3aa",
+      "lean_declaration": "TruthCore.Case.Catholicism.DivineLoveSenses.OrderedWilling.WillsAsOrderedTo"
+    }
+  ]
+}

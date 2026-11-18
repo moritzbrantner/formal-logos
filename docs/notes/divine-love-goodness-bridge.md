@@ -492,9 +492,14 @@ distinct actual being, the coextension supplies its good in esse, and the
 self-case uses a separate bridge. Each of the three bridges is shown needed
 by the existing omission profiles, with goodness, will and coextension fixed.
 
-New terms: `08b826db` (willing good to a recipient) and `ac87be3d` (thin
-non-passional q.20 love), both stipulative primitive parameters; the latter
-explicitly excludes the hiddenness PerfectLove sense 4b2943ad.
+New terms: `08b826db` (willing good to a recipient), `1ca75ad2` (willing a
+being as ordered to another) and `ac87be3d` (thin non-passional q.20 love),
+all stipulative. Their sense carriers are primitive structure fields in
+`TruthCore.Case.Catholicism.DivineLoveSenses`. Disambiguation 28c9980e
+(LOVE) separates LOVE_1 thin q.20 love (`ThinLove.Loves`), LOVE_2 hiddenness
+PerfectLove 4b2943ad and LOVE_3 love of a possessed good 9f448669.
+`lovesAllExisting` proves LOVE_1 only; any transfer to LOVE_2 is an OPEN
+sense bridge owned by #1735.
 Cognition alone is not used: no intellect premise occurs.
 
 ### Connection boundary
@@ -545,8 +550,11 @@ to x as recipient. This passage gives a textual mechanism for reading
 selects the recipient-directed reading (willing x's good to x, even where x
 is also ordered to others). The ordered reading supports the non-recipient-
 directed production that the foreseen-collateral rival needs, restricted to
-irrational effects. A sibling statement for that reading is not yet
-registered. It is not shown incoherent, and the existing
+irrational effects. That reading is registered as the sibling statement
+1dd68893 (`DivineLoveSenses.OrderedExistenceWilling`), forked from a94c5dfc
+by the disambiguation dd7ff973 (CREATURE_WILLING_1 recipient-directed,
+CREATURE_WILLING_2 ordered). On a distinct non-rational effect the two are
+incompatible; no registered argument uses the sibling. It is not shown incoherent, and the existing
 `omitCausalWill` control witnesses only the local omission, not this richer
 rival. Overall: a **coherent conditional support option** with a comparatively
 well-supported self-good bridge, a prima facie plausible thin love-meaning

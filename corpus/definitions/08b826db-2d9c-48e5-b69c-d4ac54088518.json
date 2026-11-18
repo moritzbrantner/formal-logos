@@ -4,5 +4,22 @@
   "term": "willing good to a recipient",
   "definition": "WillsGoodFor g x r: g wills, for x itself, the good x has in respect r (velle bonum alicui, ST I q.20 a.2). The good willed must be a good of the recipient. Excluded: a bare wish that some good exist; merely causing, foreseeing or enabling x's good; instrumental use of x with no good willed to x; and friendship, affection, passion, equal degree or ultimate concern for x. It carries no time index and no claim that the willing efficiently causes x.",
   "basis": "stipulative",
-  "note": "Analyst interpretation, attribution deferred (docs/notes/divine-love-goodness-bridge.md). In Lean the relation is the primitive parameter WillsGoodFor of TruthCore.Case.Catholicism.DivineLoveBridge; nothing defines it. It is constrained only by the OPEN bridges CausalExistenceWilling (from causation of a distinct actual effect's esse by a God with will) and DivineOwnGoodWilling (self-case), and it feeds the OPEN WillingGoodEntailsLove. No transitivity, asymmetry or well-foundedness is assumed. A pinned witness for ST I q.20 a.2, read in context, would source it."
+  "note": "Analyst interpretation, attribution deferred (docs/notes/divine-love-goodness-bridge.md). Its sense carrier is the primitive field RecipientGoodWilling.WillsGoodFor (DivineLoveSenses); the registered DivineLoveBridge theorems take the same relation as their primitive parameter WillsGoodFor. Nothing defines it. It is constrained only by the OPEN bridges CausalExistenceWilling (from causation of a distinct actual effect's esse by a God with will) and DivineOwnGoodWilling (self-case), and it feeds the OPEN WillingGoodEntailsLove. No transitivity, asymmetry or well-foundedness is assumed. A pinned witness for ST I q.20 a.2, read in context, would source it.",
+  "lean_declaration": "TruthCore.Case.Catholicism.DivineLoveSenses.RecipientGoodWilling.WillsGoodFor",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "WillsGoodFor g x r: g wills to x itself the good x has in respect r; a relation between a willer, a recipient and a respect of the recipient's good.",
+    "examples": [
+      "A builder who chooses a shelter for its occupants wills the shelter's good to them (analyst illustration, not evidence about divine willing)."
+    ],
+    "exclusions": [
+      "Merely causing, foreseeing or enabling x's good.",
+      "Willing x's being only as ordered to another (the ordered-willing sense 1ca75ad2-e6f6-492a-9fcc-19eebfc8d3aa).",
+      "Friendship, affection or equal degree."
+    ],
+    "open_obligations": [
+      "CausalExistenceWilling and DivineOwnGoodWilling are OPEN bridges into it; WillingGoodEntailsLove is an OPEN bridge out of it.",
+      "No transitivity, asymmetry or well-foundedness is assumed."
+    ]
+  }
 }

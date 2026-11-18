@@ -1,0 +1,32 @@
+{
+  "id": "28c9980e-0cf7-4dcc-939a-e5c842ca4f34",
+  "label": "Love: thin q.20 willing-good love, hiddenness perfect love, love of a possessed good",
+  "term": "love",
+  "sense_definition_ids": [
+    "ac87be3d-537d-440e-a38c-cb4839d5bedc",
+    "4b2943ad-3bc5-5492-94bc-f21e9f1a12ab",
+    "9f448669-6387-5244-a2ec-f9f90618c037"
+  ],
+  "resolution": "LOVE_1 is the thin non-passional q.20 a.2 sense (ac87be3d-537d-440e-a38c-cb4839d5bedc): willing some good to the beloved suffices by the OPEN rule WillingGoodEntailsLove. The registered lovesAllExisting result (e3d5bece-f216-4877-9fca-8a1eb7d96bcd) proves LOVE_1 only. LOVE_2 is the hiddenness challenge's perfect love (4b2943ad-3bc5-5492-94bc-f21e9f1a12ab), which seeks personal relationship with capable creatures. LOVE_3 is love as an exercise of will affirming a possessed apprehended good (9f448669-6387-5244-a2ec-f9f90618c037). No argument passes between these senses. Transfer from LOVE_1 to LOVE_2 needs an explicit OPEN sense bridge, owned by #1735. LOVE_1 and LOVE_3 may coincide for God's love of His own good, but no such identification is asserted. Implication, independence and strength order between the senses are untested.",
+  "term_label": "LOVE",
+  "senses": [
+    {
+      "id": "3a5b53aa-acac-4e62-901a-4bd529db9dc7",
+      "label": "LOVE_1",
+      "definition_id": "ac87be3d-537d-440e-a38c-cb4839d5bedc",
+      "lean_declaration": "TruthCore.Case.Catholicism.DivineLoveSenses.ThinLove.Loves"
+    },
+    {
+      "id": "1e203324-8f6b-4337-b451-a084b6ff67ca",
+      "label": "LOVE_2",
+      "definition_id": "4b2943ad-3bc5-5492-94bc-f21e9f1a12ab",
+      "lean_declaration": "TruthCore.Hiddenness.Sig.PerfectLove"
+    },
+    {
+      "id": "7a10568d-8319-4257-ba15-c9382012527d",
+      "label": "LOVE_3",
+      "definition_id": "9f448669-6387-5244-a2ec-f9f90618c037",
+      "lean_declaration": "TruthCore.Causality.AppetitePowerExercise.Interpretation.loves"
+    }
+  ]
+}
