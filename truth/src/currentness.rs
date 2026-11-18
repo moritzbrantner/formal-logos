@@ -151,7 +151,10 @@ pub fn report(
                 json!({"flag": "consumer_on_sense_index_allowlist", "argument_ids": consumers}),
             );
         }
-        let rivals = strings(&item["alternatives"]).len() + strings(&item["objections"]).len();
+        // Alternatives are `{statement_id, refuted}` objects, objections strings:
+        // count entries of either shape.
+        let count = |key: &str| item[key].as_array().map_or(0, Vec::len);
+        let rivals = count("alternatives") + count("objections");
         if rivals > 0 && current.is_empty() {
             flags.push(json!({"flag": "rivals_without_current_assessment",
                 "alternatives": item["alternatives"], "objections": item["objections"]}));
@@ -406,10 +409,10 @@ mod tests {
                  "alternatives": [], "objections": []},
                 {"statement_id": LEGACY, "path_to_root": [LEGACY, "a", "b", "c", "ROOT"],
                  "depth": "stated", "transcription_only": false, "dependent_arguments": [],
-                 "alternatives": ["RIVAL"], "objections": []},
+                 "alternatives": [{"statement_id": "RIVAL", "refuted": false}], "objections": []},
                 {"statement_id": CURRENT, "path_to_root": [CURRENT, "a", "ROOT"],
                  "depth": "supported", "transcription_only": false, "dependent_arguments": [],
-                 "alternatives": ["RIVAL"], "objections": []},
+                 "alternatives": [{"statement_id": "RIVAL", "refuted": false}], "objections": []},
             ]
         });
         let allowlist = json!({"arguments": {"ARG": {"PRIOR": ["s"]}}});
