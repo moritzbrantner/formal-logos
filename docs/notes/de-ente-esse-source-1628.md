@@ -1420,7 +1420,9 @@ Attempt: `a1b799fe-f75c-4e3e-994a-f4bb834f3ac7`.
 `654eead1` had no downstream consumer, and every registered GOD_4
 existence consumer (`c98328f1`, `92ab7c94` and the rest) projects to bare
 `GodExists`, so the De ente witness is lost. Two zero-axiom results in
-`TruthCore.Results.Causality.DeEnteSourceGod` add the missing consumer:
+`TruthCore.Results.Causality.DeEnteSourceGod` add a witness-retaining GOD_4
+consumer of the De ente source `ce7edf53`; the identity conclusions remain
+unconsumed:
 
 | Result | Theorem | Premises → conclusion |
 | --- | --- | --- |
@@ -1429,7 +1431,8 @@ existence consumer (`c98328f1`, `92ab7c94` and the rest) projects to bare
 
 `deEnteSourceIsGod` reruns the naming chain of
 `MaximalFromEsseSource.sameWitnessGodAtBeing` with the De ente root as its
-root. That proof uses its root only through `ActualRoot m w n`, so any actual
+root. (`c98328f1` itself binds `MaximalFromEsseSource.godExistsAtBeing`, the
+projection of that chain.) That proof uses its root only through `ActualRoot m w n`, so any actual
 root works. Premise comparison with the existence-only consumer `c98328f1`:
 
 * **Dropped:** population `56f68b40` and whole-roster nontrapping `5c898d24`.
@@ -1442,8 +1445,9 @@ root works. Premise comparison with the existence-only consumer `c98328f1`:
 The conclusion keeps the source's body: esse = essence, no actual esse
 cause, and finite actual esse-cause paths to every other being in act.
 
-Compared with the De ente → classical-root chain (`05541bd2`, `70adaf7c`,
-`8e61d00e`, `017befa2`, `80946eca`), it needs no at-most-one-root
+Compared with the De ente → classical-root chain (arguments `05541bd2`,
+`70adaf7c`, `8e61d00e`, then statement `017befa2`, then argument
+`80946eca`), it needs no at-most-one-root
 package `49fdec01`, no contingent grounding `c71c068c`, and no intellect or
 classical inputs. It also gives no necessity, uniqueness of necessary
 individuals or classical attribute.
@@ -1465,16 +1469,22 @@ These are graph diagnostics, not a warrant ranking.
 
 **Rejected consumers, with reasons.**
 
-* *Derive God-to-maximality `4c79298d` or God-causes-all-being `86d02b69`
-  from `654eead1`.* `654eead1`'s classical body contains IsTheOneGod, the
-  maximum and the De ente paths. With actual esse-cause composition
-  `b4987085` it would give both. However, every producer of `da3facd6`
-  takes `4c79298d` as a premise, either directly or, for the Dei Filius
-  producer `b288856d`, through every producer of its root input `c0f4a346`.
-  Also, `86d02b69` feeds only `4c79298d`'s producers `482f4ad2`/`4d1efe91`.
-  The derivation would therefore close a proof cycle and add no warrant.
-* *Project `654eead1` or `630843d1` onto `8626f8a5`.* This adds nothing
-  beyond the existing `92ab7c94` from `da3facd6`.
+* *Derive God-to-maximality `4c79298d` from `654eead1`.* `654eead1`'s
+  classical body contains IsTheOneGod and the maximum, so it would give
+  `4c79298d`. However, every producer of `da3facd6` takes `4c79298d` as a
+  premise, either directly or, for the Dei Filius producer `b288856d`,
+  through every producer of its root input `c0f4a346`. The derivation would
+  therefore close a proof cycle and add no warrant.
+* *Derive God-causes-all-being `86d02b69` from `654eead1`* (with actual
+  esse-cause composition `b4987085`). Strictly this is not a cycle:
+  `86d02b69` has no producer, and `4c79298d` also has the producer
+  `2a76d37d`. But `86d02b69` is consumed only by `4c79298d`'s producers
+  `482f4ad2`/`4d1efe91`, and every route through `654eead1` already
+  presupposes `4c79298d`. A derived `86d02b69` therefore adds no root support.
+* *Project `654eead1` onto `8626f8a5`.* This adds nothing beyond the
+  existing `92ab7c94` from `da3facd6`. `630843d1` has no GOD_4 conjunct, so
+  there is nothing to project; its producer `5a9010a9` does not pass through
+  `da3facd6`.
 
 The identity results remain endpoint statements: certified consequences
 that state which being the classical root is. Their content becomes usable
@@ -1488,5 +1498,7 @@ non-circular witness-retaining endpoint for that purpose.
 (`GodHasIntellect`) and `66aecdd7` (`GodHasWill`) apply to the GOD_4
 witness of `7a791743`, so under their premises the De ente source has
 intellect and capacity-level will. This is a two-line instantiation with no
-root consumer, so it was not registered. Its local route uses
-God-to-maximality `4c79298d`. Attempt: `e5a36b24-e0f4-4d9c-8cd4-cef767078a7e`.
+root consumer, so it was not registered. The intellect producers
+`b8394dbb` and `26e368d3`, and the will producer `13338e9c`, use
+God-to-maximality `4c79298d`. The modular will producer `571e36f0` does not
+use it directly, but consumes `29818edd`. Attempt: `e5a36b24-e0f4-4d9c-8cd4-cef767078a7e`.

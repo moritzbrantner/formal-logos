@@ -13,9 +13,9 @@ is that source, with its esse/essence identity, uncaused esse and finite
 actual esse-cause paths retained. Population and whole-roster nontrapping are
 not inputs: the source's own roothood supplies the root.
 
-* `deEnteSourceIsGod`: De ente source root and the eleven naming inputs of the
-  existence-only consumer, minus population and whole-roster, give ONE being
-  that is the source, first, and GOD_4.
+* `deEnteSourceIsGod`: De ente source root and the ten other inputs of the
+  twelve-input existence-only consumer (all but population and whole-roster)
+  give ONE being that is the source, first, and GOD_4.
 * `godExistsOfDeEnteSourceIsGod`: projection to `GodExists`.
 
 Nothing here proves an input or supplies necessity, uniqueness of necessary
