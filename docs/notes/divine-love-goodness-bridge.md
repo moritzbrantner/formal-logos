@@ -527,7 +527,7 @@ do **not** yet feed a root route. Named consumers and the exact missing bridge:
   derivation uses it). The premise is consistent with the strong (exclusive) ordered-love variant 1dd68893, an unattributed analyst strengthening of ad 3,
   on non-rational effects, but a94c5dfc is not; so if that strong variant holds
   and non-rational creatures exist, 47c6da1b has no verified derivation and
-  stands only as a direct assumption. The conflict with a94c5dfc holds for that strong variant only (checked: result 400893a0). The weak, ad-3-faithful reading 7f6a2e91 (ordered willing without the exclusion of recipient-directed willing) is compatible with a94c5dfc (checked witness 5d93ac09, result ef387145), so under the weak reading 47c6da1b keeps both verified derivations. See
+  stands only as a direct assumption. The conflict with a94c5dfc holds for that strong variant only (checked: result 400893a0). The weak, ad-3-faithful reading 7f6a2e91 (ordered willing without the exclusion of recipient-directed willing) is compatible with a94c5dfc (checked witness 5d93ac09, result ef387145), so neither verified derivation of 47c6da1b is excluded under the weak reading. See
   [group 8 integration](natural-goodness-function-and-authority.md#group-8-integration-from-reasons-and-goods-to-moral-authority-and-god-1733-2026-11-18).
   The warrant assessment below is unchanged.
 - Veracity: the assertion route does not consume love; willing good to the

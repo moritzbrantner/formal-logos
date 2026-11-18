@@ -1769,8 +1769,8 @@ those governed. One conjunct of that reply is now typed and composed:
   stands only as a direct assumption. The conflict holds for the strong variant
   only; the weak, ad-3-faithful reading `7f6a2e91` (ordered willing without
   excluding recipient-directed willing) is compatible with `a94c5dfc`
-  (checked witness `5d93ac09`), so under it `47c6da1b` keeps both verified
-  derivations; the strong variant strengthens it (result `0e665ad9`). Its better placement relative to
+  (checked witness `5d93ac09`), so neither verified derivation of `47c6da1b`
+  is excluded under it; the strong variant strengthens it (result `0e665ad9`). Its better placement relative to
   `a94c5dfc` holds for that direct option only.
 - **Root route** `deiFiliusRootUnifiedBenevolentLord` (result `483129f2`):
   the unified Dei Filius root `c0f4a346` with its lord conjunct through LORD_3
