@@ -198,7 +198,8 @@ pub struct BriefArgs {
     pub statement: Option<String>,
 }
 
-/// `semantics --conclusion STATEMENT` and `--bridge STATEMENT[@SENSE,SENSE]`
+/// `semantics --conclusion STATEMENT`, `--bridge STATEMENT[@SENSE,SENSE]` and
+/// `--definition DEF`
 /// (the preflight; `--premise` is shared with `configurations`).
 #[derive(Default)]
 pub struct SemanticsArgs {
@@ -206,6 +207,8 @@ pub struct SemanticsArgs {
     pub flags: bool,
     pub conclusion: Option<String>,
     pub bridges: Vec<String>,
+    /// `--definition DEF`, repeatable: argument-level `definition_ids`.
+    pub definitions: Vec<String>,
 }
 
 /// Every option of every command, parsed in one pass in token order.
@@ -458,7 +461,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                     parsed.brief.statement = Some(value);
                 }
             }
-            "--conclusion" | "--bridge" => {
+            "--conclusion" | "--bridge" | "--definition" => {
                 parsed.semantics.flags = true;
                 let value = args
                     .next()
@@ -468,8 +471,10 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                     .to_owned();
                 if arg == "--conclusion" {
                     parsed.semantics.conclusion = Some(value);
-                } else {
+                } else if arg == "--bridge" {
                     parsed.semantics.bridges.push(value);
+                } else {
+                    parsed.semantics.definitions.push(value);
                 }
             }
             "--profile-module" => {

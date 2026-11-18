@@ -172,11 +172,14 @@ fn unknown_target_exits_3() {
 }
 
 /// Writes the preflight's candidate as a new argument and runs `truth check`.
-fn check_candidate(root: &Path, candidate: &Value) -> Output {
+const INF_AB: &str = "7c31b1f2-a335-53ec-af7d-2bbf38f98528";
+const INF_BC: &str = "3cdaf6ca-b69a-55db-a72e-32a15ab511aa";
+
+fn check_candidate(root: &Path, candidate: &Value, inference: &str) -> Output {
     let mut record = candidate.clone();
     record["id"] = "5e8b1c3a-4c2d-4f1e-9a7b-3c2d1e0f9a8b".into();
     record["label"] = "C, from B (candidate)".into();
-    record["inference_ids"] = serde_json::json!(["3cdaf6ca-b69a-55db-a72e-32a15ab511aa"]);
+    record["inference_ids"] = serde_json::json!([inference]);
     record["meaning"] = "m".into();
     fs::write(
         root.join(CANDIDATE),
@@ -199,7 +202,7 @@ fn preflight_agrees_with_check_for_a_new_argument() {
     assert_eq!(view["unbridged"][0]["term"], "T");
     assert_eq!(view["check"]["passes"], false);
     assert_eq!(view["agrees_with_check"], true);
-    let output = check_candidate(root, &view["candidate"]);
+    let output = check_candidate(root, &view["candidate"], INF_BC);
     assert!(!output.status.success());
     let preflight = view["check"]["message"].as_str().unwrap();
     let suffix = preflight.strip_prefix("candidate argument: ").unwrap();
@@ -218,7 +221,7 @@ fn preflight_agrees_with_check_for_a_new_argument() {
     assert_eq!(view["unbridged"], serde_json::json!([]));
     assert_eq!(view["check"]["passes"], true);
     assert_eq!(view["candidate"]["sense_bridges"][0]["role"], "conclusion");
-    let output = check_candidate(root, &view["candidate"]);
+    let output = check_candidate(root, &view["candidate"], INF_BC);
     assert!(
         output.status.success(),
         "{}",
@@ -230,4 +233,69 @@ fn preflight_agrees_with_check_for_a_new_argument() {
     assert_eq!(view["unbridged"][0]["term"], "T");
     assert_eq!(view["notes"].as_array().unwrap().len(), 1);
     assert_eq!(view["agrees_with_check"], true);
+
+    // D links no sense: it relates nothing and is not added as a premise.
+    let view = json(root, &[&base[..], &["--bridge", "STMT-D"]].concat());
+    assert_eq!(view["added_premises"], serde_json::json!([]));
+    assert_eq!(
+        view["candidate"]["premise_statement_ids"]
+            .as_array()
+            .unwrap()
+            .len(),
+        1
+    );
+    assert_eq!(view["notes"].as_array().unwrap().len(), 1);
+
+    // An unknown sense in STATEMENT@SENSE,SENSE is an unknown id (exit 3).
+    let output = truth(root, &[&base[..], &["--bridge", "STMT-C@T_1,T_9"]].concat());
+    assert_eq!(output.status.code(), Some(3));
+}
+
+/// A batch writes its `definitions` into each argument's `definition_ids`;
+/// `truth check` counts their senses, so the preflight must too.
+#[test]
+fn preflight_counts_argument_level_definitions() {
+    let fixture = fixture("definitions");
+    let root = fixture.0.as_path();
+    // A (no definitions) ⊢ B (T_1): one sense.
+    let base = ["semantics", "--premise", "STMT-A", "--conclusion", "STMT-B"];
+    let view = json(root, &base);
+    assert_eq!(view["check"]["passes"], true);
+    assert_eq!(view["unbridged"], serde_json::json!([]));
+    let output = check_candidate(root, &view["candidate"], INF_AB);
+    assert!(
+        output.status.success(),
+        "{}",
+        String::from_utf8_lossy(&output.stderr)
+    );
+    // The argument-level DEF-Y adds T_2: both reject it, with one message.
+    let view = json(root, &[&base[..], &["--definition", "DEF-Y"]].concat());
+    assert_eq!(
+        view["candidate"]["definition_ids"]
+            .as_array()
+            .unwrap()
+            .len(),
+        1
+    );
+    assert_eq!(view["unbridged"][0]["term"], "T");
+    assert_eq!(view["check"]["passes"], false);
+    assert_eq!(view["agrees_with_check"], true);
+    let carriers = &view["terms"][0]["senses"][1]["carriers"];
+    assert_eq!(carriers[0]["role"], "argument");
+    let output = check_candidate(root, &view["candidate"], INF_AB);
+    assert!(!output.status.success());
+    let suffix = view["check"]["message"]
+        .as_str()
+        .unwrap()
+        .strip_prefix("candidate argument: ")
+        .unwrap()
+        .to_owned();
+    let stderr = String::from_utf8_lossy(&output.stderr);
+    assert!(
+        stderr.contains(&format!("{CANDIDATE}: {suffix}")),
+        "{stderr}"
+    );
+    // An unknown definition is an unknown id.
+    let output = truth(root, &[&base[..], &["--definition", "DEF-NONE"]].concat());
+    assert_eq!(output.status.code(), Some(3));
 }

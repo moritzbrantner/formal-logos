@@ -632,7 +632,8 @@ impl<'a> Semantics<'a> {
         })
     }
 
-    fn resolve_sense(&self, token: &str) -> Result<String, String> {
+    /// The sense a token names: its uuid or its unique label.
+    pub fn resolve_sense(&self, token: &str) -> Result<String, String> {
         if self.index.by_id.contains_key(token) {
             return Ok(token.to_owned());
         }
@@ -653,11 +654,15 @@ impl<'a> Semantics<'a> {
     }
 
     /// Preflight: the candidate argument `premises ⊢ conclusion` with the
-    /// requested bridges, judged as `truth check` judges a new argument.
+    /// argument-level `definitions` (as `argument_batch.py records` writes a
+    /// batch's `definitions` into each argument) and the requested bridges,
+    /// judged as `truth check` judges a new argument. Commitments and
+    /// `term_senses` are not modelled.
     pub fn preflight(
         &self,
         premises: &[String],
         conclusion: &str,
+        definitions: &[String],
         requests: &[BridgeRequest],
     ) -> Result<Value, String> {
         for sid in premises.iter().map(String::as_str).chain([conclusion]) {
@@ -665,12 +670,21 @@ impl<'a> Semantics<'a> {
                 return Err(format!("unknown statement: {sid}"));
             }
         }
-        let mut premises: Vec<String> = premises.iter().fold(Vec::new(), |mut kept, sid| {
-            if !kept.contains(sid) {
-                kept.push(sid.clone());
+        for definition in definitions {
+            if !self.definitions.contains_key(definition.as_str()) {
+                return Err(format!("unknown definition: {definition}"));
             }
-            kept
-        });
+        }
+        let dedup = |items: &[String]| {
+            items.iter().fold(Vec::<String>::new(), |mut kept, item| {
+                if !kept.contains(item) {
+                    kept.push(item.clone());
+                }
+                kept
+            })
+        };
+        let mut premises = dedup(premises);
+        let definitions = dedup(definitions);
         let mut added = Vec::new();
         let mut bridges = Vec::new();
         let mut notes = Vec::new();
@@ -684,17 +698,7 @@ impl<'a> Semantics<'a> {
             } else {
                 "premise"
             };
-            if role == "premise" && !premises.iter().any(|p| p == sid) {
-                premises.push(sid.to_owned());
-                added.push(sid.to_owned());
-            }
-            let mut edge = |term: &str, from: &str, to: &str| {
-                let mut bridge = json!({"term": term, "from": from, "to": to, "statement_id": sid});
-                if role == "conclusion" {
-                    bridge["role"] = json!("conclusion");
-                }
-                bridges.push(bridge);
-            };
+            let mut edges: Vec<(String, String, String)> = Vec::new();
             match &request.senses {
                 Some((from, to)) => {
                     let (from, to) = (self.resolve_sense(from)?, self.resolve_sense(to)?);
@@ -705,26 +709,38 @@ impl<'a> Semantics<'a> {
                             a.label, b.label
                         ));
                     }
-                    edge(&a.term, &from, &to);
+                    edges.push((a.term.clone(), from, to));
                 }
                 None => {
-                    let mut found = false;
                     for (term, senses) in self.senses_of(&list(statement, "definition_ids")) {
                         let mut senses = senses.into_iter();
-                        let (Some(first), rest) = (senses.next(), senses) else {
+                        let Some(first) = senses.next() else {
                             continue;
                         };
-                        for other in rest {
-                            found = true;
-                            edge(&term, &first, &other);
+                        for other in senses {
+                            edges.push((term.clone(), first.clone(), other));
                         }
                     }
-                    if !found {
-                        notes.push(format!(
-                            "bridge {sid} links fewer than two senses of any term, so it relates none; name them as STATEMENT@SENSE,SENSE"
-                        ));
-                    }
                 }
+            }
+            if edges.is_empty() {
+                // Not added as a premise: it would bring its own senses in
+                // without relating any.
+                notes.push(format!(
+                    "bridge {sid} links fewer than two senses of any term, so it relates none and is not added; name them as STATEMENT@SENSE,SENSE"
+                ));
+                continue;
+            }
+            if role == "premise" && !premises.iter().any(|p| p == sid) {
+                premises.push(sid.to_owned());
+                added.push(sid.to_owned());
+            }
+            for (term, from, to) in edges {
+                let mut bridge = json!({"term": term, "from": from, "to": to, "statement_id": sid});
+                if role == "conclusion" {
+                    bridge["role"] = json!("conclusion");
+                }
+                bridges.push(bridge);
             }
         }
         let mut candidate = json!({
@@ -732,13 +748,16 @@ impl<'a> Semantics<'a> {
             "conclusion_statement_id": conclusion,
             "premise_statement_ids": premises,
         });
+        if !definitions.is_empty() {
+            candidate["definition_ids"] = json!(definitions);
+        }
         if !bridges.is_empty() {
             candidate["sense_bridges"] = json!(bridges);
         }
         // The disambiguations `truth check` requires the argument to link.
-        let mut definitions: HashSet<&str> = HashSet::new();
+        let mut used: HashSet<&str> = definitions.iter().map(String::as_str).collect();
         for sid in premises.iter().map(String::as_str).chain([conclusion]) {
-            definitions.extend(list(self.statements[sid], "definition_ids"));
+            used.extend(list(self.statements[sid], "definition_ids"));
         }
         let required: Vec<&str> = self
             .disambiguations
@@ -746,7 +765,7 @@ impl<'a> Semantics<'a> {
             .filter(|d| {
                 list(&d.fields, "sense_definition_ids")
                     .into_iter()
-                    .filter(|definition| definitions.contains(definition))
+                    .filter(|definition| used.contains(definition))
                     .collect::<BTreeSet<_>>()
                     .len()
                     > 1
@@ -817,7 +836,16 @@ pub fn summary(analyses: &[Value], limit: usize) -> Value {
     let mut risks = Vec::new();
     let mut risky_arguments = BTreeSet::new();
     let mut risky_root_route = BTreeSet::new();
-    for analysis in analyses {
+    // An argument both concluding and using the target counts once.
+    let mut seen = HashSet::new();
+    let analyses: Vec<&Value> = analyses
+        .iter()
+        .filter(|analysis| {
+            let id = analysis["id"].as_str().unwrap_or_default();
+            id.is_empty() || seen.insert(id)
+        })
+        .collect();
+    for analysis in &analyses {
         let mut verdicts = BTreeSet::new();
         for term in analysis["terms"].as_array().into_iter().flatten() {
             let Some(verdict) = term["verdict"].as_str().and_then(Verdict::parse) else {
@@ -1241,6 +1269,12 @@ pub fn format(view: &Value) -> String {
                     added.as_str().unwrap_or_default()
                 ));
             }
+            for definition in candidate["definition_ids"].as_array().into_iter().flatten() {
+                lines.push(format!(
+                    "  argument definition: {}",
+                    definition.as_str().unwrap_or_default()
+                ));
+            }
             for note in view["notes"].as_array().into_iter().flatten() {
                 lines.push(format!("  note: {}", note.as_str().unwrap_or_default()));
             }
@@ -1324,8 +1358,11 @@ mod tests {
             analysis("a", &["single_sense", "allowlisted_mixing"]),
             analysis("b", &["allowlisted_mixing", "allowlisted_mixing"]),
             analysis("c", &["bridged"]),
+            // Concludes and uses the target: listed twice, counted once.
+            analysis("b", &["allowlisted_mixing", "allowlisted_mixing"]),
         ];
         let summary = summary(&all, 1);
+        assert_eq!(summary["arguments"], 3);
         assert_eq!(summary["term_uses"]["allowlisted_mixing"], 3);
         assert_eq!(summary["arguments_by_verdict"]["allowlisted_mixing"], 2);
         assert_eq!(summary["risky_arguments"], 2);

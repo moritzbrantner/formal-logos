@@ -167,8 +167,8 @@ Rankings are discovery aids, not equivalence or implication.",
 (statement, argument or result): its definitions with formal status, disambiguations, the senses it \
 uses, and for each connected argument the senses per term with the statements carrying them and a \
 verdict (single sense, bridged, allowlisted legacy mixing, mixing control, unbridged). With `premises` \
-and `conclusion` (and optional `bridges`, each STATEMENT or STATEMENT@SENSE,SENSE): a preflight of the \
-candidate argument judged as `truth check` judges a new argument, naming unbridged sense mixing and the \
+and `conclusion` (optional `definitions`: argument-level definition IDs, as a batch writes them; optional \
+`bridges`, each STATEMENT or STATEMENT@SENSE,SENSE): a preflight of the candidate argument judged as `truth check` judges a new argument, naming unbridged sense mixing and the \
 bridges it would need. Give `target` or `premises` + `conclusion`, not both.",
         schema: || {
             let ids = |what: &str| json!({ "type": "array", "maxItems": MAX_LIST, "items": id_schema(what), "description": what });
@@ -176,6 +176,7 @@ bridges it would need. Give `target` or `premises` + `conclusion`, not both.",
                 "target": id_schema("Statement, argument or result ID or label."),
                 "premises": ids("Premise statement IDs or labels of a candidate argument."),
                 "conclusion": id_schema("Conclusion statement ID or label of a candidate argument."),
+                "definitions": ids("Argument-level definition IDs or labels of a candidate argument."),
                 "bridges": ids("Candidate sense-bridge statements: STATEMENT or STATEMENT@SENSE,SENSE."),
                 "limit": limit_schema() } })
         },
@@ -183,10 +184,13 @@ bridges it would need. Give `target` or `premises` + `conclusion`, not both.",
             let target = text(args, "target", 300)?;
             let premises = texts(args, "premises", 300)?;
             let conclusion = text(args, "conclusion", 300)?;
+            let definitions = texts(args, "definitions", 300)?;
             let bridges = texts(args, "bridges", 300)?;
             let mut argv = vec!["semantics".to_string()];
             match (target, conclusion) {
-                (Some(target), None) if premises.is_empty() && bridges.is_empty() => {
+                (Some(target), None)
+                    if premises.is_empty() && definitions.is_empty() && bridges.is_empty() =>
+                {
                     argv.push(target);
                     argv.extend(limit(args)?);
                 }
@@ -198,6 +202,9 @@ bridges it would need. Give `target` or `premises` + `conclusion`, not both.",
                         argv.extend(["--premise".into(), premise]);
                     }
                     argv.extend(["--conclusion".into(), conclusion]);
+                    for definition in definitions {
+                        argv.extend(["--definition".into(), definition]);
+                    }
                     for bridge in bridges {
                         argv.extend(["--bridge".into(), bridge]);
                     }
@@ -598,7 +605,7 @@ mod tests {
         assert_eq!(
             build(
                 "research_semantics",
-                json!({"premises": ["A", "B"], "conclusion": "C", "bridges": ["B@T_1,T_2"]})
+                json!({"premises": ["A", "B"], "conclusion": "C", "definitions": ["D"], "bridges": ["B@T_1,T_2"]})
             )
             .unwrap(),
             [
@@ -609,6 +616,8 @@ mod tests {
                 "B",
                 "--conclusion",
                 "C",
+                "--definition",
+                "D",
                 "--bridge",
                 "B@T_1,T_2"
             ]
@@ -617,6 +626,11 @@ mod tests {
         assert!(reject(json!({})));
         assert!(reject(json!({"target": "X", "conclusion": "C"})));
         assert!(reject(json!({"target": "X", "premises": ["A"]})));
+        assert!(reject(json!({"target": "X", "definitions": ["D"]})));
+        assert!(reject(json!({"definitions": ["-D"], "conclusion": "C"})));
+        assert!(reject(
+            json!({"definitions": vec!["D"; 13], "conclusion": "C"})
+        ));
         assert!(reject(json!({"premises": ["A"]})));
         assert!(reject(json!({"premises": ["--strict"], "conclusion": "C"})));
         assert!(reject(json!({"premises": "A", "conclusion": "C"})));

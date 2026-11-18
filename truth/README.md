@@ -1037,8 +1037,8 @@ one-shot migration, stays Python.
 
 ```text
 truth [--root PATH] [--json] semantics TARGET [--frontier-root STATEMENT] [--limit N]
-truth [--root PATH] [--json] semantics --premise STATEMENT [--premise STATEMENT]... --conclusion STATEMENT
-      [--bridge STATEMENT[@SENSE,SENSE]]... [--strict]
+truth [--root PATH] [--json] semantics [--premise STATEMENT]... --conclusion STATEMENT
+      [--definition DEF]... [--bridge STATEMENT[@SENSE,SENSE]]... [--strict]
 ```
 
 One read-only view of the semantic dependencies of a proposition or a
@@ -1065,25 +1065,35 @@ and formal status comes from `corpus/definition-status.json`
   `single sense`, `bridged` (naming the `sense_bridges` statement and role),
   `allowlisted mixing — equivocation risk (legacy)`, `mixing control`, or
   `unbridged mixing` (which `truth check` rejects). A summary counts verdicts
-  per term use and per argument over all connected arguments and lists the
-  equivocation risks.
+  per term use and per argument over all connected arguments (an argument in
+  both lists counts once) and lists the equivocation risks.
 - **Argument mode** (TARGET an argument, or a result for its argument): the same
   verdicts for the argument, the compact semantics of its conclusion, premises
   and commitments, and a verdict summary over its support ancestry (every
   argument concluding one of its premises, transitively; not route-aware).
-- **Preflight** (`--premise … --conclusion …`): builds the candidate argument in
-  memory and judges it exactly as `truth check` judges a new argument (the
-  legacy allowlist does not apply): the disambiguations it must link, the
-  senses per term with the statement carrying each, the unbridged mixings with
-  the bridge each needs, the used senses without a distinct Lean declaration,
-  and `check`'s own message. `--bridge STATEMENT@SENSE,SENSE` (uuid or label of
-  each sense) adds that `sense_bridges` entry; a bare `--bridge STATEMENT`
-  bridges the senses of each term the statement itself links (one sense
-  bridges nothing; the output says so). A bridge statement other than the
-  conclusion is added as a premise, as `truth check` requires. Exit 0, or 1
-  with `--strict` while an unbridged mixing remains.
+- **Preflight** (`[--premise …]... --conclusion …`): builds the candidate
+  argument in memory from its premises, conclusion, argument-level
+  `--definition DEF`s (repeatable; `argument_batch.py records` writes a batch's
+  `definitions` into each argument's `definition_ids`, and `truth check` counts
+  their senses) and bridges, and runs `truth check`'s own sense rules
+  (`check::validate_argument_senses`) on it as on a new argument (the legacy
+  allowlist does not apply): the disambiguations it must link, the senses per
+  term with the statement (or argument-level definition) carrying each, the
+  unbridged mixings with the bridge each needs, the used senses without a
+  distinct Lean declaration, and `check`'s own message. The verdict is
+  `truth check`'s for an argument with exactly these fields; it does not model
+  `commitment_statement_ids` or `term_senses`, so a candidate that adds them
+  can be judged differently. `--bridge STATEMENT@SENSE,SENSE` (uuid or label of
+  each sense) adds that `sense_bridges` entry; the suffix is read as senses only
+  when both resolve, otherwise the whole token names the statement (a label may
+  contain `@`). A bare `--bridge STATEMENT` bridges the senses of each term the
+  statement itself links; one that relates no pair is reported and not added.
+  A bridge statement other than the conclusion is added as a premise, as
+  `truth check` requires. Exit 0, or 1 with `--strict` while an unbridged
+  mixing remains; an unknown statement, definition or bridge sense exits 3.
   `truth/tests/semantics.rs` writes the candidate as a new argument file and
-  checks that `truth check` gives the same verdict.
+  checks that `truth check` gives the same verdict, including for a mixing
+  introduced only by an argument-level definition.
 
 A `single sense` verdict says the records link one sense per term, not that
 the prose or the Lean statement is free of equivocation. `--json` gives the

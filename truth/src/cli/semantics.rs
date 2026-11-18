@@ -53,30 +53,49 @@ fn limit(args: &Args) -> Result<usize, Failure> {
     }
 }
 
-/// `STATEMENT` or `STATEMENT@SENSE,SENSE`.
-fn bridge(aliases: &truth::identity::Aliases, token: &str) -> Result<BridgeRequest, Failure> {
-    let (statement, senses) = match token.rsplit_once('@') {
-        Some((statement, senses)) if senses.contains(',') => {
-            let (from, to) = senses.split_once(',').expect("comma");
-            (
-                statement,
-                Some((from.trim().to_owned(), to.trim().to_owned())),
-            )
+/// `STATEMENT` or `STATEMENT@SENSE,SENSE`. The suffix names senses only when
+/// both resolve; otherwise the whole token is the statement (a label may
+/// contain '@'). A known statement with an unknown sense suffix exits 3.
+fn bridge(
+    aliases: &truth::identity::Aliases,
+    loaded: &Semantics,
+    token: &str,
+) -> Result<BridgeRequest, Failure> {
+    let statement = |token: &str| super::resolve(aliases, token, Some(&["statements"]));
+    if let Some((head, suffix)) = token.rsplit_once('@')
+        && let Some((from, to)) = suffix.split_once(',')
+    {
+        let (from, to) = (from.trim(), to.trim());
+        let senses = loaded
+            .resolve_sense(from)
+            .and_then(|_| loaded.resolve_sense(to));
+        match (statement(head)?, senses) {
+            (Some(statement_id), Ok(_)) => {
+                return Ok(BridgeRequest {
+                    statement_id,
+                    senses: Some((from.to_owned(), to.to_owned())),
+                });
+            }
+            (Some(_), Err(message)) if statement(token)?.is_none() => {
+                return Err(unknown(&format!("bridge {token}: {message}")));
+            }
+            _ => {}
         }
-        _ => (token, None),
-    };
-    let statement_id = super::resolve(aliases, statement, Some(&["statements"]))?
-        .ok_or_else(|| unknown(&format!("unknown bridge statement: {statement}")))?;
+    }
+    let statement_id =
+        statement(token)?.ok_or_else(|| unknown(&format!("unknown bridge statement: {token}")))?;
     Ok(BridgeRequest {
         statement_id,
-        senses,
+        senses: None,
     })
 }
 
 fn run(args: &Args, operands: &[&str]) -> Output {
     check(args)?;
     let limit = limit(args)?;
-    let preflight = !args.configuration.premises.is_empty() || args.semantics.conclusion.is_some();
+    let preflight = !args.configuration.premises.is_empty()
+        || args.semantics.conclusion.is_some()
+        || !args.semantics.definitions.is_empty();
     let (corpus, aliases, frontier_root) = load(args)?;
     let statement = |token: &str| -> Result<String, Failure> {
         super::resolve(&aliases, token, Some(&["statements"]))?
@@ -84,7 +103,9 @@ fn run(args: &Args, operands: &[&str]) -> Output {
     };
     if preflight {
         let Some(conclusion) = args.semantics.conclusion.as_deref() else {
-            return Err(usage("semantics --premise needs --conclusion STATEMENT"));
+            return Err(usage(
+                "the semantics preflight (--premise, --definition) needs --conclusion STATEMENT",
+            ));
         };
         if !operands.is_empty() {
             return Err(usage(
@@ -103,15 +124,24 @@ fn run(args: &Args, operands: &[&str]) -> Output {
             .iter()
             .map(|token| statement(token))
             .collect::<Result<Vec<_>, _>>()?;
+        let definitions = args
+            .semantics
+            .definitions
+            .iter()
+            .map(|token| {
+                super::resolve(&aliases, token, Some(&["definitions"]))?
+                    .ok_or_else(|| unknown(&format!("unknown definition: {token}")))
+            })
+            .collect::<Result<Vec<_>, _>>()?;
+        let loaded = Semantics::new(&args.root, &corpus).map_err(error)?;
         let bridges = args
             .semantics
             .bridges
             .iter()
-            .map(|token| bridge(&aliases, token))
+            .map(|token| bridge(&aliases, &loaded, token))
             .collect::<Result<Vec<_>, _>>()?;
-        let view = Semantics::new(&args.root, &corpus)
-            .map_err(error)?
-            .preflight(&premises, &conclusion, &bridges)
+        let view = loaded
+            .preflight(&premises, &conclusion, &definitions, &bridges)
             .map_err(error)?;
         let text = aliases.humanize(&semantics::format(&view));
         let value = super::with_identity(&view, &corpus);
@@ -130,7 +160,7 @@ fn run(args: &Args, operands: &[&str]) -> Output {
     }
     if args.semantics.flags || args.proof.strict {
         return Err(usage(
-            "--bridge and --strict apply only to the semantics preflight (--premise … --conclusion …)",
+            "--bridge and --strict apply only to the semantics preflight (--conclusion …)",
         ));
     }
     let token = match operands {

@@ -46,7 +46,7 @@ resolve its meanings and check sense compatibility:
 
 ```bash
 target/release/truth semantics <STMT-OR-ARGUMENT-ID>
-target/release/truth semantics --premise <P1> --premise <P2> --conclusion <C> [--bridge <S>@SENSE,SENSE]
+target/release/truth semantics --premise <P1> --premise <P2> --conclusion <C> [--definition <DEF>] [--bridge <S>@SENSE,SENSE]
 ```
 
 The first lists the definitions (with formal status), disambiguations and
