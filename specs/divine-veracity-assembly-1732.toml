@@ -1,0 +1,44 @@
+# #1732 assembly of the #1410 individuated-content assertion routes onto the
+# existing legacy target GodAssertsOnlyTruth 5a035a1e. Analyst formulations,
+# attribution deferred. The two route arguments compose already checked
+# theorems at ONE signature, content semantics, world, content profile and
+# legacy attitude profile; they add no new premise or primitive. The joint
+# witness shows the assembled bundles are nonvacuous together at one bearer.
+
+[batch]
+vocab = "TruthCore.Causality.DivineVeracityAssembly1732"
+results = "TruthCore.Results.Causality.DivineVeracityAssembly1732"
+
+[[statement]]
+id = "Individuated veracity assembled routes jointly witnessed at one bearer, world and content"
+lean = "AssembledJointWitness"
+paraphrase = "Analyst formulation, unattributed. In the existing finite selective sample, at ONE bearer (true), ONE designated world (false) and ONE content profile, every premise of both content routes (sincerity, scoped accuracy, assertion coverage; selected countertruth assent, no contrary assertion) holds together with the one-way assertion representation for the legacy attitudes obtained by existential erasure of that same profile; that legacy profile actually asserts the truth condition of content a, and GodAssertsOnlyTruth holds of it. The representation conjunct concerns this induced legacy profile only, not an arbitrary given Veracity. A structural interpretation, not a model of divine cognition, moral permission or historical assertion."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "9fcefb90-0cc3-4c0a-b964-cbf3585bc9c9", "fa09d1dc-e38e-42ec-ac95-c510e8a87716", "8d7cd991-a09c-43ee-8898-d513e46d83ef", "f2c09ae8-848d-5a3b-ab79-92c2b01d414c", "b8539dd9-4b72-52b0-b24d-b8ee0c226bee"]
+disambiguations = []
+
+[[argument]]
+id = "Assembled content Route A with legacy representation yields GodAssertsOnlyTruth"
+theorem = "assertionTruthRouteA"
+premises = ["c5035612-2cfd-4ff4-8f2a-d483c0d3e0aa", "7cddac02-dc16-4f8f-b26d-9e736ca2d811", "8376542e-2337-43ab-87e8-007c07cabc7e", "f221d6c6-3a49-4a98-bf05-a12450d1fac7"]
+conclusion = "5a035a1e-e668-4327-b989-2f0aff4aece2"
+axioms = []
+rule = "Compose contentRouteA with legacyAssertionFromContent at one signature, semantics, world and content profile"
+meaning = "Analyst assembly, attribution deferred. For ONE signature sigma, content semantics S, world w, content-attitude profile C, domain D and legacy attitude profile V: sincerity to the very asserted content, accuracy of assent on D, and coverage of every actual assertion by D give content assertion truth (checked contentRouteA); the OPEN one-way representation of every legacy assertion of V by an asserted content of the same C, disquoting at the same S and w, then gives GodAssertsOnlyTruth for V (checked legacyAssertionFromContent). No premise is added and none is discharged: sincerity, scoped accuracy, coverage and representation stay open. This assembles existing support; it is not additional evidence beyond its two components."
+
+[[argument]]
+id = "Assembled content Route B with legacy representation yields GodAssertsOnlyTruth"
+theorem = "assertionTruthRouteB"
+premises = ["389c37fd-0637-4a40-8073-705a5bdb2c20", "4da01692-55b0-4e73-b3dd-06564f2aef9f", "f221d6c6-3a49-4a98-bf05-a12450d1fac7"]
+conclusion = "5a035a1e-e668-4327-b989-2f0aff4aece2"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Compose contentRouteB with legacyAssertionFromContent at one signature, semantics, world and content profile"
+meaning = "Analyst assembly, attribution deferred. For ONE sigma, S, w, C and V: actual assent to each true interpreted negation of an actual assertion and no assertion of a content whose negation is assented to give content assertion truth classically (checked contentRouteB, no positive sincerity or global omniscience); the OPEN one-way representation of V by the same C at the same S and w then gives GodAssertsOnlyTruth for V. No premise is added or discharged. Selected countercompleteness may itself come from domain completeness, coverage and negation closure (checked counterCompleteFromDomain); that is a separate existing argument."
+
+[[argument]]
+id = "Assembled veracity routes are jointly nonvacuous at one bearer"
+theorem = "assembledJointWitness"
+premises = []
+conclusion = "Individuated veracity assembled routes jointly witnessed at one bearer, world and content"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Evaluate the existing selective sample and its existential erasure"
+meaning = "Analyst witness, unattributed. Reuses the checked selective sample of the #1410 controls and the erasure representation theorem: one bearer satisfies both routes' premises and the representation for its induced legacy profile, actually asserts, and the legacy target holds nonvacuously. The kernel proof uses propext and Quot.sound only. No divine applicability, arbitrary legacy representation, moral norm or cognition mechanism follows from the finite sample."

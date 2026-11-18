@@ -1,0 +1,11 @@
+{
+  "id": "df21f785-66e7-48a9-9a67-a1cc781359ff",
+  "label": "Assembled content Route B with legacy representation yields GodAssertsOnlyTruth",
+  "argument_id": "097f3905-0eac-4bdc-a1cc-96a9ab9f0374",
+  "challenge_module": "TruthCore.Results.Causality.DivineVeracityAssembly1732.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DivineVeracityAssembly1732.Solution",
+  "theorem": "TruthCore.Results.Causality.DivineVeracityAssembly1732.assertionTruthRouteB",
+  "comparator_config": "results/df21f785-66e7-48a9-9a67-a1cc781359ff/comparator.json",
+  "status": "solution-present",
+  "description": "Analyst assembly, attribution deferred. For ONE sigma, S, w, C and V: actual assent to each true interpreted negation of an actual assertion and no assertion of a content whose negation is assented to give content assertion truth classically (checked contentRouteB, no positive sincerity or global omniscience); the OPEN one-way representation of V by the same C at the same S and w then gives GodAssertsOnlyTruth for V. No premise is added or discharged. Selected countercompleteness may itself come from domain completeness, coverage and negation closure (checked counterCompleteFromDomain); that is a separate existing argument."
+}

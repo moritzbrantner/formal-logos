@@ -1,0 +1,10 @@
+{
+  "id": "7cb8463d-0003-42fd-b710-1cdc4af087e9",
+  "label": "Assembled veracity routes are jointly nonvacuous at one bearer (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "27f13d98-cffe-46a0-8f76-2072cdc20767",
+  "rule": "Evaluate the existing selective sample and its existential erasure",
+  "meaning": "Analyst witness, unattributed. Reuses the checked selective sample of the #1410 controls and the erasure representation theorem: one bearer satisfies both routes' premises and the representation for its induced legacy profile, actually asserts, and the legacy target holds nonvacuously. The kernel proof uses propext and Quot.sound only. No divine applicability, arbitrary legacy representation, moral norm or cognition mechanism follows from the finite sample.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

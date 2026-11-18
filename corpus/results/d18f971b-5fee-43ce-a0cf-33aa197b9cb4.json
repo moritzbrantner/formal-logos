@@ -1,0 +1,11 @@
+{
+  "id": "d18f971b-5fee-43ce-a0cf-33aa197b9cb4",
+  "label": "Assembled content Route A with legacy representation yields GodAssertsOnlyTruth",
+  "argument_id": "9cb3d63f-de88-4184-b87d-709e7d89606b",
+  "challenge_module": "TruthCore.Results.Causality.DivineVeracityAssembly1732.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DivineVeracityAssembly1732.Solution",
+  "theorem": "TruthCore.Results.Causality.DivineVeracityAssembly1732.assertionTruthRouteA",
+  "comparator_config": "results/d18f971b-5fee-43ce-a0cf-33aa197b9cb4/comparator.json",
+  "status": "solution-present",
+  "description": "Analyst assembly, attribution deferred. For ONE signature sigma, content semantics S, world w, content-attitude profile C, domain D and legacy attitude profile V: sincerity to the very asserted content, accuracy of assent on D, and coverage of every actual assertion by D give content assertion truth (checked contentRouteA); the OPEN one-way representation of every legacy assertion of V by an asserted content of the same C, disquoting at the same S and w, then gives GodAssertsOnlyTruth for V (checked legacyAssertionFromContent). No premise is added and none is discharged: sincerity, scoped accuracy, coverage and representation stay open. This assembles existing support; it is not additional evidence beyond its two components."
+}
