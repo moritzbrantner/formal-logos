@@ -1,0 +1,11 @@
+{
+  "id": "f3709290-4741-44a6-bf95-5222bfac8da7",
+  "label": "GOD_4 exists, projected from the De ente source named GOD_4",
+  "argument_id": "2bd7ee56-b58b-4af4-a5b6-0231c248f536",
+  "challenge_module": "TruthCore.Results.Causality.DeEnteSourceGod.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DeEnteSourceGod.Solution",
+  "theorem": "TruthCore.Results.Causality.DeEnteSourceGod.godExistsOfDeEnteSourceIsGod",
+  "comparator_config": "results/f3709290-4741-44a6-bf95-5222bfac8da7/comparator.json",
+  "status": "solution-present",
+  "description": "Structural projection: the being that is the De ente source and GOD_4 witnesses GOD_4 existence. It forgets the De ente body; downstream GOD_4 consumers that need only existence use this. No new philosophical inference."
+}

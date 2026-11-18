@@ -1,0 +1,11 @@
+{
+  "id": "d9ee967a-58be-43f9-a86f-72f2ef49abe0",
+  "label": "The De ente first source is GOD_4 by its own roothood and existence-only naming",
+  "argument_id": "abdc26b0-472b-48a1-a1f0-e0c7a1097b17",
+  "challenge_module": "TruthCore.Results.Causality.DeEnteSourceGod.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DeEnteSourceGod.Solution",
+  "theorem": "TruthCore.Results.Causality.DeEnteSourceGod.deEnteSourceIsGod",
+  "comparator_config": "results/d9ee967a-58be-43f9-a86f-72f2ef49abe0/comparator.json",
+  "status": "solution-present",
+  "description": "Analyst witness-retaining composition, attribution deferred. Uses ten of the twelve inputs of the existence-only GOD_4 consumer c98328f1 (MaximalFromEsseSource.sameWitnessGodAtBeing), but its actual root is the De ente first source n of ce7edf53 rather than some root obtained from population 56f68b40 and whole-roster nontrapping 5c898d24, which are not inputs. Priority-to-ground 86efed1a makes n first. Any esse maximum y other than n would, by the genus principle da09703b at being and existing-in-act 0436de86, cause n's esse, which esse-cause-to-ground cb1cdea9 turns into an actual concrete ground of the root n; so every maximum is n. Grades 6c27657f give some maximum, hence n is the maximum. The existing reduced-description chain (actuality-to-being 7067553d, transfer b26c10a0, no-component 09c6d5f0, naming 1ec205ed) names this SAME n GOD_4. The conclusion keeps n's De ente body: esse equal to essence, no actual esse cause, finite actual esse-cause paths to every other being in act. The De ente bridges producing ce7edf53 (existing-in-act, identity-bearer concreteness, ground-to-esse-cause, no self-cause) and every naming input stay open. No necessity, no uniqueness of necessary individuals, no classical attribute, no historical identification. See docs/notes/de-ente-esse-source-1628.md#a-god_4-consumer-that-keeps-the-de-ente-witness-1731-slice-2-2026-11-18."
+}

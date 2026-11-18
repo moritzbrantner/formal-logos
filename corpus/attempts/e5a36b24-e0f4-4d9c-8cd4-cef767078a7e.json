@@ -1,0 +1,26 @@
+{
+  "id": "e5a36b24-e0f4-4d9c-8cd4-cef767078a7e",
+  "label": "De-ente-retaining GOD_4 consumer and appetite application status (#1731 slice 2)",
+  "statement_ids": [
+    "7a791743-e315-4fd1-8476-f1c313063096",
+    "ce7edf53-afbb-4bca-84d6-b0e36b861148",
+    "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "654eead1-6576-403f-8060-cb8af8e3e5f8",
+    "630843d1-6404-4168-b925-c9bfe2b8c14a",
+    "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
+    "86d02b69-87eb-5594-9958-ccaa5fe6b685",
+    "090be689-b77f-51a1-9d5d-caf339169e4b",
+    "66aecdd7-ea4e-55c6-9377-10db08893854"
+  ],
+  "date": "2026-11-18",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "#1731 slice 2. deEnteSourceIsGod (d9ee967a, zero-axiom) keeps the De ente witness: ce7edf53 plus the ten other inputs of existence-only consumer c98328f1 (population 56f68b40 and whole-roster 5c898d24 dropped) give 7a791743, one being that is the De ente source, a first being and GOD_4; projection f3709290 reaches 8626f8a5. Computed: GOD_4 root alternatives 440 -> 441, Catholicism 523 -> 524, open premises unchanged. Uniqueness of actual roots is implied by the genus and esse-ground inputs, not removed. Rejected: deriving 4c79298d or 86d02b69 from 654eead1 (closed proof cycle, every da3facd6 producer needs 4c79298d) and projecting 654eead1/630843d1 to 8626f8a5 (adds nothing beyond 92ab7c94). Notes: docs/notes/de-ente-esse-source-1628.md#a-god_4-consumer-that-keeps-the-de-ente-witness-1731-slice-2-2026-11-18.",
+  "blocker": "Identity conclusions 654eead1/630843d1 still have no root consumer: no root-route premise is stated over a specific source witness. Appetite application stays OPEN: recognition of AppetitePowerExercise.Capacity.Possessed by unchanged HasWill and a nonpassive first-source application lack supported premises; next test is a local response-capacity constraint on represented goods actually used, against the cognitiveOnly and selective controls.",
+  "evidence": [
+    "d9ee967a-58be-43f9-a86f-72f2ef49abe0",
+    "f3709290-4741-44a6-bf95-5222bfac8da7",
+    "PR-1750",
+    "8e3b89c9-2793-4263-b83c-c974328b3b3f"
+  ]
+}
