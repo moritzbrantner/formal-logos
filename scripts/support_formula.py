@@ -26,8 +26,13 @@ import time
 import unittest
 
 import dd
-from dd import cudd
+from dd import autoref
 import networkx as nx
+
+try:  # CUDD is faster; PyPI wheels of dd ship without it, so fall back to pure Python.
+    from dd import cudd
+except ImportError:
+    cudd = None
 
 import truth_cli
 
@@ -100,8 +105,32 @@ def load_graph(args):
     return graph
 
 
+_AUTOREF_MANAGERS = []
+
+
+def new_bdd(memory_mib=None):
+    """A BDD manager with complemented edges: CUDD if built, else `dd.autoref`.
+
+    Both backends return regular-node children from `succ`, signed node
+    references and canonical reduced diagrams, so every exact count, size and
+    minimal family is identical; only node counts under dynamic reordering and
+    speed may differ.
+    """
+    if cudd is None:
+        bdd = autoref.BDD()
+        # dd.bdd asserts on collection while Functions in reference cycles
+        # still point into it; retain managers for the process lifetime.
+        _AUTOREF_MANAGERS.append(bdd)
+        return bdd
+    if memory_mib is None:
+        return cudd.BDD()
+    bdd = cudd.BDD(memory_estimate=memory_mib * 1024**2)
+    bdd.configure(max_memory=memory_mib * 1024**2)
+    return bdd
+
+
 def effective_children(bdd, node):
-    """CUDD exposes regular-node children; complemented edges invert both."""
+    """Both backends expose regular-node children; complemented edges invert both."""
     level, low, high = bdd.succ(node)
     return (level, ~low, ~high) if node.negated else (level, low, high)
 
@@ -282,8 +311,8 @@ def solve_graph(graph, basis="terminal", memory_mib=2048):
                 dependencies.out_degree(s), statements[s].get("legacy_id") or s, s))
             pending.extend(reversed(children))
     variables = {s: f"p{i:04d}" for i, s in enumerate(variable_statements)}
-    bdd = cudd.BDD(memory_estimate=memory_mib * 1024**2)
-    bdd.configure(reordering=True, max_memory=memory_mib * 1024**2)
+    bdd = new_bdd(memory_mib)
+    bdd.configure(reordering=True)
     bdd.declare(*variables.values())
     formulas = {s: bdd.var(v) if basis == "direct-or-derived" or s in terminals else bdd.false
                 for s, v in variables.items()}
@@ -447,7 +476,8 @@ def calculate(graph, *, basis="terminal", memory_mib=2048, histogram_node_limit=
                         "result_count": graph.get("result_count"), "terminal_statement_count": len(terminals)},
               "direct": graph.get("direct", {}),
               "fixed_point": fixed_point, "validation": validation, "targets": {},
-              "dependencies": {"dd": dd.__version__, "networkx": nx.__version__}}
+              "dependencies": {"dd": dd.__version__, "dd_backend": "autoref" if cudd is None else "cudd",
+                               "networkx": nx.__version__}}
     for target in graph["target_statement_ids"]:
         formula = roots[target]
         support = bdd.support(formula)

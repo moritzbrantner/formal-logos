@@ -8,7 +8,7 @@ import tempfile
 import unittest
 
 try:
-    from dd import cudd
+    import dd
     import networkx  # Optional dependencies are installed by the focused uv check.
 except ImportError as error:
     raise unittest.SkipTest("Run uv run scripts/support_formula.py --self-test for the optional symbolic-analysis tier") from error
@@ -99,7 +99,7 @@ class FormulaTests(unittest.TestCase):
         self.assertEqual(brute_minimal(graph, "G", "terminal"), {frozenset()})
 
     def test_complemented_edges_skips_and_constant_roots(self):
-        bdd = cudd.BDD()
+        bdd = support.new_bdd()
         bdd.declare("before", "x", "middle", "y", "after")
         bdd.configure(reordering=False)
         formula = ~bdd.var("x") | bdd.var("y")
@@ -110,7 +110,7 @@ class FormulaTests(unittest.TestCase):
         self.assertEqual(support.minmax_size(bdd, bdd.false), (None, None))
 
     def test_minimal_count_above_javascript_integer_precision(self):
-        bdd = cudd.BDD()
+        bdd = support.new_bdd()
         variables = [f"{i}_{side}" for i in range(54) for side in ("a", "b")] + ["z"]
         bdd.declare(*variables)
         bdd.configure(reordering=False)
