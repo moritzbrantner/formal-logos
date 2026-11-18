@@ -41,6 +41,20 @@ Add `--issues-from FILE` with an offline `gh issue list`/`gh pr list --state all
 --json number,title,body,url,state,comments,updatedAt` snapshot where available. Both are
 advisory: a missing hit or snapshot is not evidence that no prior work exists.
 
+Before proposing a derivation or reusing a proposition in a new argument,
+resolve its meanings and check sense compatibility:
+
+```bash
+target/release/truth semantics <STMT-OR-ARGUMENT-ID>
+target/release/truth semantics --premise <P1> --premise <P2> --conclusion <C> [--bridge <S>@SENSE,SENSE]
+```
+
+The first lists the definitions (with formal status), disambiguations and
+senses used, and a per-term verdict for connected arguments, naming the
+statement carrying each sense. The preflight judges the candidate as
+`truth check` judges a new argument: split an unbridged mixing per sense, or
+bridge it with an explicit `sense_bridges` premise, before formalizing.
+
 Inspect the smallest relevant argument bundles, their exact Lean declarations,
 and prior attempts before proposing another result or new vocabulary. Preserve
 all displayed premises: a consequence requiring a bundle is not an implication

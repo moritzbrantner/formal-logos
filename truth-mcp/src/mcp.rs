@@ -162,6 +162,52 @@ Rankings are discovery aids, not equivalence or implication.",
         },
     },
     Tool {
+        name: "research_semantics",
+        description: "Semantic dependencies and equivocation check (`truth semantics`). With `target` \
+(statement, argument or result): its definitions with formal status, disambiguations, the senses it \
+uses, and for each connected argument the senses per term with the statements carrying them and a \
+verdict (single sense, bridged, allowlisted legacy mixing, mixing control, unbridged). With `premises` \
+and `conclusion` (and optional `bridges`, each STATEMENT or STATEMENT@SENSE,SENSE): a preflight of the \
+candidate argument judged as `truth check` judges a new argument, naming unbridged sense mixing and the \
+bridges it would need. Give `target` or `premises` + `conclusion`, not both.",
+        schema: || {
+            let ids = |what: &str| json!({ "type": "array", "maxItems": MAX_LIST, "items": id_schema(what), "description": what });
+            json!({ "type": "object", "additionalProperties": false, "properties": {
+                "target": id_schema("Statement, argument or result ID or label."),
+                "premises": ids("Premise statement IDs or labels of a candidate argument."),
+                "conclusion": id_schema("Conclusion statement ID or label of a candidate argument."),
+                "bridges": ids("Candidate sense-bridge statements: STATEMENT or STATEMENT@SENSE,SENSE."),
+                "limit": limit_schema() } })
+        },
+        build: |args, _| {
+            let target = text(args, "target", 300)?;
+            let premises = texts(args, "premises", 300)?;
+            let conclusion = text(args, "conclusion", 300)?;
+            let bridges = texts(args, "bridges", 300)?;
+            let mut argv = vec!["semantics".to_string()];
+            match (target, conclusion) {
+                (Some(target), None) if premises.is_empty() && bridges.is_empty() => {
+                    argv.push(target);
+                    argv.extend(limit(args)?);
+                }
+                (None, Some(conclusion)) => {
+                    if !limit(args)?.is_empty() {
+                        return Err("limit applies only to target".into());
+                    }
+                    for premise in premises {
+                        argv.extend(["--premise".into(), premise]);
+                    }
+                    argv.extend(["--conclusion".into(), conclusion]);
+                    for bridge in bridges {
+                        argv.extend(["--bridge".into(), bridge]);
+                    }
+                }
+                _ => return Err("give either target, or premises and conclusion".into()),
+            }
+            Ok(argv)
+        },
+    },
+    Tool {
         name: "research_inspect",
         description: "One corpus record by ID or label (`truth inspect`), with its resolved references.",
         schema: || {
@@ -221,6 +267,28 @@ fn text(args: &Map<String, Value>, key: &str, max_chars: usize) -> Result<Option
         return Err(format!("{key} may not contain control characters"));
     }
     Ok(Some(value.to_string()))
+}
+
+/// The most entries a list argument may hold.
+const MAX_LIST: usize = 12;
+
+/// A list of strings, each validated as [`text`]; empty entries are dropped.
+fn texts(args: &Map<String, Value>, key: &str, max_chars: usize) -> Result<Vec<String>, String> {
+    let items = match args.get(key) {
+        None | Some(Value::Null) => return Ok(Vec::new()),
+        Some(Value::Array(items)) => items,
+        Some(_) => return Err(format!("{key} must be an array of strings")),
+    };
+    if items.len() > MAX_LIST {
+        return Err(format!("{key} has more than {MAX_LIST} entries"));
+    }
+    let mut out = Vec::new();
+    for item in items {
+        let mut one = Map::new();
+        one.insert(key.to_string(), item.clone());
+        out.extend(text(&one, key, max_chars)?);
+    }
+    Ok(out)
 }
 
 fn limit(args: &Map<String, Value>) -> Result<Vec<String>, String> {
@@ -515,6 +583,50 @@ mod tests {
             build("research_inspect", json!({"id": "STMT-X"})).unwrap(),
             ["inspect", "STMT-X"]
         );
+    }
+
+    #[test]
+    fn semantics_maps_target_or_preflight() {
+        assert_eq!(
+            build(
+                "research_semantics",
+                json!({"target": "STMT-X", "limit": 4})
+            )
+            .unwrap(),
+            ["semantics", "STMT-X", "--limit", "4"]
+        );
+        assert_eq!(
+            build(
+                "research_semantics",
+                json!({"premises": ["A", "B"], "conclusion": "C", "bridges": ["B@T_1,T_2"]})
+            )
+            .unwrap(),
+            [
+                "semantics",
+                "--premise",
+                "A",
+                "--premise",
+                "B",
+                "--conclusion",
+                "C",
+                "--bridge",
+                "B@T_1,T_2"
+            ]
+        );
+        let reject = |arguments: Value| build("research_semantics", arguments).is_err();
+        assert!(reject(json!({})));
+        assert!(reject(json!({"target": "X", "conclusion": "C"})));
+        assert!(reject(json!({"target": "X", "premises": ["A"]})));
+        assert!(reject(json!({"premises": ["A"]})));
+        assert!(reject(json!({"premises": ["--strict"], "conclusion": "C"})));
+        assert!(reject(json!({"premises": "A", "conclusion": "C"})));
+        assert!(reject(json!({"premises": [1], "conclusion": "C"})));
+        assert!(reject(
+            json!({"premises": vec!["A"; 13], "conclusion": "C"})
+        ));
+        assert!(reject(
+            json!({"premises": ["A"], "conclusion": "C", "limit": 3})
+        ));
     }
 
     #[test]
