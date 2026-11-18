@@ -425,11 +425,11 @@ formal status changes.
 | --- | --- | --- | --- |
 | `a2800f45` quiddity efficiently causing esse is self-causation | **Defended primitive, source-stated; first grade strong.** | Claim `ce55e563` states the conditional (De ente [69874], "sic aliqua res esset sui ipsius causa"). A quiddity is a principle of x, not a being other than x, so its efficient causing is x's causing. | No substantive objection identified. It needs `b62a64ab` (no self-causation) to do any work. |
 | `75919560` nature or another | **Defended direct option, source-stated; first grade moderate.** | Claim `676bdaeb` states the disjunction. Both of the passage's examples, risibility flowing from human nature and light in the air from the sun, are cases where the source is enough to account for the feature. | Only the instance at actual distinct esse is used (`42a89226`); the all-respects, all-beings version is stronger than any consumer needs, and a weak version is not registered. At the first being, where esse is the nature, `fromNature` must cover identity rather than causing (the docstring of `600f91cb` says so); the weak version avoids that strain. Kept: brute esse at a distinct esse (#312/#746), the stopping-policy dispute this premise shares with `d1f3ffcc`. |
-| `600f91cb` nature source of a distinct esse is efficient | **Open, concrete blocker.** | On the sufficient-account reading of NATURE_SOURCE_1 (finding N below), its support is the 2026-11-17 positive reply in the #1629 note: a specifying nature misses the target, and an adequate necessary or underived version concedes the intermediate. | It is the own-nature instance of the agent-or-identical principle, whose other-being instances `0cc3a136` and `58e6ec63` are open. The two are one commitment, not two pieces of evidence. Kept: the non-efficient intrinsic nature account (target `600f91cb`; mechanism: a nature as a non-agent principle that accounts for its subject's esse; independent justification: the formal-cause gloss recorded as the analyst's in the #1629 note and in the rival table above). Its price is the intrinsic-adequacy question #1621, restricted to distinct esse. |
-| `ef068f46` a cause of being is in act in some respect | **Defended primitive at restricted scope (strong prima facie for non-material causes of being); open at the full CAUSE_2 scope the route uses.** | Agency in act (q.75 a.2 "non enim est operari nisi entis in actu", claim `f4b1c499`, and q.25 a.1, claim `a5d11a9e`, neither attributed this statement). On the analyst's reading, a formal principle counted as a being is itself an act, so the premise also holds for formal causes. | Its own paraphrase reads `CausesIn` at esse "for extrinsic (efficient) causes", while `d1f3ffcc`, `457698e4` and the #1629 records read the same relation as mode-unspecified and allow constituents. Kept, conditional on a meaning choice: if `CausesIn` counts prime matter as a material cause of being and prime matter is in the Being domain, the premise fails for it (the record's own lead). That is the principles-in-the-Being-domain modelling choice left open by `dd24400b`. |
+| `600f91cb` nature source of a distinct esse is efficient | **Open, concrete blocker.** | On the sufficient-account reading of NATURE_SOURCE_1 (finding N below), its support is the 2026-11-17 positive reply in the #1629 note: a specifying nature misses the target, and an adequate necessary or underived version concedes the intermediate. | It is the own-nature instance of the agent-or-identical principle, whose other-being instances `0cc3a136` and `58e6ec63` are open. They share one general warrant (the agent-or-identical principle); neither entails the other, so they are not two independent pieces of evidence. Kept: the non-efficient intrinsic nature account (target `600f91cb`; mechanism: a nature as a non-agent principle that accounts for its subject's esse; independent justification: the formal-cause gloss recorded as the analyst's in the #1629 note and in the rival table above). Its price is the intrinsic-adequacy question #1621, restricted to distinct esse. |
+| `ef068f46` a cause of being is in act in some respect | **Defended primitive, strong for efficient causes of being; open at the full CAUSE_2 scope the route uses.** | Agency in act (q.75 a.2 "non enim est operari nisi entis in actu", claim `f4b1c499`, and q.25 a.1, claim `a5d11a9e`, neither attributed this statement) warrants it for efficient causes. The extension to formal causes (a formal principle counted as a being is itself an act) is the analyst's. | Its own paraphrase reads `CausesIn` at esse "for extrinsic (efficient) causes", while `d1f3ffcc`, `457698e4` and the #1629 records read the same relation as mode-unspecified and allow constituents. Meaning condition, not a kept objection: open at full CAUSE_2 scope pending the meaning choice left open by `dd24400b` (principles in the Being domain). If material causes count, the Thomist thesis that prime matter is pure potency (not on file) would falsify it. |
 | `19882fa9` every efficient cause of esse acts here and now | **Open, concrete blocker; dispensable for `09c6d5f0`.** | The q.104 a.1 distinction between a cause of becoming and a cause of being as such, on whose action the effect's being depends (claim `40aefb2e`, which does not state this bridge; #1616 territory). | Kept: existential inertia and merely originating agents (target `19882fa9`; mechanism: an efficient cause of x's esse that originates x and then ceases; independent justification: the persistence of products after their producers cease, established for causes of coming-to-be (the builder of claim `40aefb2e`), together with the profile's own definition of `EfficientlyCausesEsse`, which admits originating agents). The Thomist reply restricts the relation to causes of esse in the q.104 a.1 sense, which moves the burden to conservation (#1616, #1626). Bypass: `5c5b794f` (result `764f43fe`) concludes `09c6d5f0` without `b0cd6015` or `19882fa9`. It is single-sense, and none of its inputs (`61ad11f3`, `732302a1`, `86f10ec3`, `c6d6379b`, `ee74c678`) derives from `19882fa9`. |
-| `86f10ec3` every component is in potency or participated | **Open, missing bridge.** | Relation `bde98cf1` records only support: q.3 a.8 names matter (in potency) and a component form (participated). It does not say every component is one of these. | Load-bearing in all four registered derivations of `09c6d5f0`. Each uses it only at a component supposed first, which is exactly the case its denial (a pure-act, unparticipated component) asserts. Without a bridge from the structure of composition, the premise there restates what the derivation is meant to show. The named rival (God as form or component of the world, the view q.3 a.8 rejects) has no independent justification on file. It is restated, not evidence against the premise, but that does not supply the missing warrant. The "forma participata" to PARTICIPATION_4 reading is recorded only in `bde98cf1`'s note, and the sense has no Lean declaration, so bind-check cannot catch an equivocation there. |
-| `ca55ed3a` every first being is simply incorruptible | **Derivable by a specified short derivation (next test), conditional on unassessed inputs; no direct warrant on file; dispensable.** | The orientation passage, as the statement's own paraphrase gives it ("the necessary beings are first"), runs in the converse direction (necessary to first). Derivation: if a first f could fail to be, take a necessary e (`2023273e`, the tertia via's conclusion); by `b8d21cd0` e cannot fail to be; by `418f337d` e is prior in substance to f; by `9226c6af` e is simply prior; and e ≠ f, contradicting firstness. | Inputs `9226c6af` and the tertia-via premises behind `2023273e` are not assessed here. The derivation would make this prima via step depend on the tertia via, which is horizontal support, not an independent check. The `truth semantics` preflight fails on an over-link (finding S4). The checked shortcuts through `a4d3261a` or `3b2d2d46` do not type-fit (package P3). Contingent first being (`124ff6a9` rival (a)): restated. It names a mechanism; the only justification on file is a control, a fact about one interpretation, plus unread literature. Dispensable: `8288ff1e` keeps its weaker direct option (the ContingentFirst control shows it does not entail `ca55ed3a`), and `61ad11f3` keeps `4bcf25b5`. |
+| `86f10ec3` every component is in potency or participated | **Open, missing bridge: exhaustiveness of the two component kinds is not warranted on file.** | Relation `bde98cf1` records only support (q.3 a.8 names matter and a participated form), not exhaustiveness. Unread source lead, to materialize from the pinned q.3 witness before any weight is given: ST I q.3 a.7 co., fourth proof (in every composite there are potency and act: either one part is act to another, or all parts are as in potency to the whole). | Load-bearing in all four registered derivations of `09c6d5f0`, each a reductio that applies it to a component supposed first. Its denial there is the rival's thesis, so its warrant must come from the structure of composition. The named rival (God as form or component of the world, the view q.3 a.8 rejects) has no independent justification on file. It is restated, not evidence against the premise, but that does not supply the missing warrant. The "forma participata" to PARTICIPATION_4 reading is recorded only in `bde98cf1`'s note, and the sense has no Lean declaration, so bind-check cannot catch an equivocation there. |
+| `ca55ed3a` every first being is simply incorruptible | **Derivable by a specified short derivation (next test), conditional on unassessed inputs; no direct warrant on file; dispensable.** | The orientation passage, as the statement's own paraphrase gives it ("the necessary beings are first"), runs in the converse direction (necessary to first). Derivation: if a first f could fail to be, take a necessary e (`2023273e`, the tertia via's conclusion); by `b8d21cd0` e cannot fail to be; by `418f337d` e is prior in substance to f; by `9226c6af` e is simply prior; and e ≠ f, contradicting firstness. | Inputs `9226c6af` and the tertia-via premises behind `2023273e` are not assessed here. The derivation would make this prima via step depend on the tertia via, which is horizontal support, not an independent check. The `truth semantics` preflight fails on an over-link (finding S4). The checked shortcuts through `a4d3261a` or `3b2d2d46` do not type-fit (package P3). Contingent first being (`124ff6a9` rival (a)): restated. It names a mechanism; the only justification on file is a control, a fact about one interpretation, plus unread literature. Dispensable: `8288ff1e` keeps its weaker direct option (the ContingentFirst control shows it does not entail `ca55ed3a`), and `61ad11f3` keeps `4bcf25b5` (from `3b2d2d46` alone), and also `15fce38f` and `11b24e97` (both via `8288ff1e`). |
 | `d017b6b0` the simply incorruptible is in act in substance | **Defended primitive, source-stated; first grade strong.** | Claims `3c6af940` (Met. Θ.8 1050b16-18) and `be153747` (In Metaph. IX lect. 9 n. 5-6). The Lean type is the contrapositive of "whatever is not in act as to being can fail to be": the actuality-to-possibility principle for `CanFailToBe`. | Meaning condition, not an objection: `CanFailToBe` must count present non-being as failing to be. Otherwise the premise would carry an unwarranted step from possibility to actuality. No substantive objection identified. It is the only derivation input of `79281639` together with `b8d21cd0`. |
 | `b8d21cd0` what can fail to be in substance possibly is not | **Defended primitive (meaning bridge); first grade strong.** | "Potest non esse secundum substantiam" and "possibile non esse" render the same modal content. Supporting claim `c69afccc` (every potency is of the contradictory). Only the safe direction is assumed. The consumer uses its contrapositive (necessary to incorruptible), which stays valid even if the tertia via's possibility is broader (through a power in another, DISAMB `557d8e44`). | No substantive objection identified. A temporal reading of `Possible` would turn it into the contested "quandoque non est" step; that step is a separate statement and is not used. |
 | `f3b79f16` the composer is an efficient cause (time-neutral) | **Defended direct option, source-stated; first grade strong as time-neutral.** Its route contribution is gated. | Claim `e017e2d6` (SCG I.18 n.4, "componens autem est causa efficiens compositi"). | It reaches the route only through two calibration transcriptions whose calibrations `1ad18c70` and `4133bd12` are unassessed. Immanent constitution: kept only conditionally, with the same mechanism as `dd24400b`'s row: it bites if a component may stand as the uniter in `Unites`. This is a relocation, not new evidence. The legacy blocker in `f3722322`, framed as route cost, is superseded. |
@@ -447,8 +447,10 @@ rejection, with no bridge) fails with "unbridged mixing" of NATURE_SOURCE_1 and
 NATURE_SOURCE_2.
 
 There is a residual sub-ambiguity inside NATURE_SOURCE_1, which no tool can
-see because `fromNature` is an unconstrained primitive. "From its nature" can be
-read three ways:
+see because `fromNature` is an unconstrained primitive. It sharpens the
+specify-versus-accounts fork already drawn in the #1629 rival table (row
+"Non-efficient intrinsic nature account") and next test 3 above. "From its
+nature" can be read three ways:
 
 - (a) the nature *specifies* the actuality x has;
 - (b) the nature *contributes* to x's esse as a formal, partial principle;
@@ -456,11 +458,11 @@ read three ways:
 
 The three premises fare differently under them:
 
-- On (a), `fromNature x esse` holds of every actual distinct-esse x. Then `600f91cb`, `a2800f45` and `b62a64ab` jointly give that no actual distinct-esse being exists (package P1). That contradicts the route's own existence inputs (for example two actual beings `33f3c4c5` with at most one `a576300f`).
-- On (b), the formal-cause gloss recorded in the #1629 note makes `600f91cb` false for material composites.
-- On (c), the reading the passage's examples fit, the package is coherent. `600f91cb` then says exactly that no nature by itself sufficiently and non-efficiently accounts for a distinct esse.
+- On (a), `fromNature x esse` holds of every actual distinct-esse x. Then `600f91cb`, `a2800f45` and `b62a64ab` jointly give that no actual distinct-esse being exists (package P1). That contradicts the existence inputs of the De ente route (`5ab6cc2b`): two actual beings `33f3c4c5` with at most one `a576300f` give an actual distinct-esse being.
+- On (b), the analyst's formal-cause gloss recorded in the #1629 note makes `600f91cb` false wherever a form formally contributes to its composite's esse.
+- On (c), the reading the passage's examples fit, `600f91cb` can hold together with the route's existence inputs. It then says exactly that no nature by itself sufficiently and non-efficiently accounts for a distinct esse.
 
-So the step does not equivocate *between* the two senses. It needs sense 1 fixed to (c) for 75919560's textual warrant and 600f91cb's plausibility to concern one proposition. Given `a2800f45` and `b62a64ab`, `8592601e` and `d1f3ffcc` are interderivable: `44eef980` derives `d1f3ffcc` from `8592601e` and `a2800f45`, and `d1f3ffcc` with `b62a64ab` gives the other-cause horn of `8592601e` at once. The De ente decomposition is therefore not an independent corroboration of causal coverage. Its added warrant is the source disjunction plus the 2026-11-17 reply.
+So the step does not equivocate *between* the two senses. It needs sense 1 fixed to (c) for 75919560's textual warrant and 600f91cb's plausibility to concern one proposition. Given `a2800f45` and `b62a64ab`, `8592601e` and `d1f3ffcc` are interderivable: `44eef980` derives `d1f3ffcc` from `8592601e` and `a2800f45`, and `d1f3ffcc` with `b62a64ab` gives the other-cause horn of `8592601e` at once, so `8592601e` adds no content beyond `d1f3ffcc`. The decomposition's value lies in its premises: it assigns the brute-esse rival to `75919560` and the intrinsic-nature rival to `600f91cb`. At reading (c), `600f91cb` is the denial of the latter, so the decomposition relocates the intrinsic-account dispute rather than independently corroborating coverage. Its positive support there is the source disjunction plus the 2026-11-17 reply.
 
 **S. Other sense findings.**
 
@@ -468,10 +470,13 @@ So the step does not equivocate *between* the two senses. It needs sense 1 fixed
    `86f10ec3`) is a genuine equivocation risk with no bridge, as recorded
    above. Its single-sense siblings `358d8c6e`, `5c5b794f` and `8a3a4577`
    avoid it.
-2. The allowlisted UNITING_CAUSE_1/_2/_4 mixing in `fcb4b871` and `e79971d9`
-   is an over-link, not an equivocation. The passage is carried by the explicit
-   calibration premise. The preflight for `fcb4b871`'s inputs passes once
-   `1ad18c70` is declared as the bridge.
+2. The allowlisted UNITING_CAUSE_1/_2/_4 mixing in `fcb4b871` is a
+   multi-sense passage carried by its premises, not an equivocation:
+   `f3b79f16` carries _1 to the attribution frame and `1ad18c70` carries the
+   frame to here-and-now efficient causing. The preflight passes once
+   `1ad18c70` is declared for both _1→_4 and _2→_4. The _1 tag on `f3b79f16`
+   under-describes its frame. `e79971d9` passes with `4133bd12` declared for
+   _1→_4.
 3. The UNITING_CAUSE_3 to _2 passage in `ae809bfd` and `6df393c4` is correctly
    bridged by `e0088de9`.
 4. `418f337d` links the CORRUPTIBLE_INCORRUPTIBLE_2 definition. Its Lean type
@@ -485,9 +490,11 @@ So the step does not equivocate *between* the two senses. It needs sense 1 fixed
 a few lines, not Lean-checked):
 
 - P1: `600f91cb`, `a2800f45` and `b62a64ab`, under reading (a), entail that no
-  actual distinct-esse being exists.
+  actual distinct-esse being exists, against the existence inputs of the De
+  ente route `5ab6cc2b`.
 - P2: `ef068f46` is inconsistent with a prime-matter Being that causes the
-  composite's esse and is in act in no respect.
+  composite's esse and is in act in no respect (the meaning condition in its
+  row).
 - P3: corruptibility encoded as `InPotency x esse`, with `c6d6379b` and an
   actual corruptible x, is inconsistent. This is why `ca55ed3a` has no short
   derivation from the act/potency premises: the profile has no respect for
@@ -505,22 +512,27 @@ a few lines, not Lean-checked):
 - `600f91cb` shares one principle with `0cc3a136` and `58e6ec63`.
 - Transcription-only support: `d483248e`, `3c20c835` and `f3b79f16`.
 
-**Objection classification.** Kept 5, all conditional or restricted:
+**Objection classification.** Kept 4, all conditional or restricted:
 
 1. brute esse against `75919560` at distinct esse;
 2. the non-efficient intrinsic nature account against `600f91cb`;
-3. prime matter against `ef068f46`, conditional on the modelling choice;
-4. existential inertia and originating-only agents against `19882fa9`;
-5. immanent constitution against `f3b79f16`, conditional on the `Unites`
+3. existential inertia and originating-only agents against `19882fa9`;
+4. immanent constitution against `f3b79f16`, conditional on the `Unites`
    meaning choice.
 
-Restated 4:
+Restated 3:
 
 1. contingent first being against `ca55ed3a`;
 2. God as a component against `86f10ec3`;
-3. the mode-of-being reading against `d483248e`, as an interpretation fork;
-4. the ContingentFirst, HeavenlyFirst, FormalNatureControl and efficient-priority
-   controls, as facts about single interpretations.
+3. the mode-of-being reading against `d483248e`, as an interpretation fork.
+
+Meaning condition (1): prime matter against `ef068f46`, pending the
+`dd24400b` modelling choice.
+
+Facts about single interpretations, listed separately and not counted as
+objections: the ContingentFirst, HeavenlyFirst, FormalNatureControl and
+efficient-priority controls. (The first draft counted them as a fourth
+restated item.)
 
 No substantive objection identified for `a2800f45`, `d017b6b0`, `b8d21cd0` or
 `3c20c835`.
@@ -529,14 +541,15 @@ No substantive objection identified for `a2800f45`, `d017b6b0`, `b8d21cd0` or
 
 The cluster bottoms out unevenly, and its weight sits in two places.
 
-- **Well supported (four):** the necessity-to-act chain `d017b6b0` +
-  `b8d21cd0` → `79281639`, and `a2800f45`, are strong defended primitives.
-  `3c20c835` is a sound meaning postulate conditional on `d483248e`.
+- **Well supported (three) plus one conditional meaning postulate:** the
+  necessity-to-act chain `d017b6b0` + `b8d21cd0` → `79281639`, and
+  `a2800f45`, are strong defended primitives. `3c20c835` is a meaning
+  postulate conditional on `d483248e`.
 - **Source-stated direct options (two):** `75919560` (moderate) and
   `f3b79f16` (strong as time-neutral, but reaching the route only through
   unassessed calibrations).
 - **Conditional on a meaning choice (one):** `ef068f46` is strong for
-  non-material causes of being.
+  efficient causes of being; its extension to formal causes is the analyst's.
 - **Dispensable and open (three):** `ca55ed3a`, `19882fa9` and `d483248e`.
   Each has a non-circular bypass or a weaker direct option, checked above.
   `ca55ed3a` also has a specified horizontal derivation.
@@ -546,8 +559,8 @@ The two load-bearing open leaves are:
 - `600f91cb`, on the De ente decomposition of `d1f3ffcc`. Its strongest rival is
   the non-efficient intrinsic nature account; its blocker is the unregistered
   sufficient-account reading and the own-nature agent-or-identical principle.
-- `86f10ec3`, in every derivation of `09c6d5f0`. Its blocker is the missing
-  bridge from the structure of composition.
+- `86f10ec3`, in every derivation of `09c6d5f0`. Exhaustiveness of the two
+  component kinds is not warranted on file.
 
 Neither is refuted and neither is established. Both have direct routes around
 them: `d1f3ffcc` and `09c6d5f0` keep their own direct options, the latter
@@ -567,20 +580,22 @@ The tertia-via inputs behind `2023273e` and the calibrations `1ad18c70` and
   principle; a derivation of `86f10ec3` from a composition-structure premise
   (every composite is of a receiver and a received, receivers are in potency
   `7fcfcee8`, received acts are participated) that also covers integral
-  parts; a meaning decision that excludes material causes from CAUSE_2 at
+  parts, for which ST I q.3 a.7 co.'s fourth proof (in every composite
+  potency and act: one part act to another, or all parts as in potency to the
+  whole) is the unread source lead to materialize from the pinned q.3 witness;
+  a meaning decision that excludes material causes from CAUSE_2 at
   esse.
 - Downward: a worked case of a nature that sufficiently and non-efficiently
   accounts for a distinct esse; a positive argument for a pure-act,
   unparticipated component.
 
-**Next test (most discriminating).** Register NATURE_SOURCE_1's
-sufficient-account reading (c) as its own sense with a Lean declaration. Rerun
-the attribution check of claim `676bdaeb` against it. Then test whether
-`600f91cb` at that sense follows from the own-nature instance of the
-agent-or-identical principle together with `DistinctEsseAt`. A failure with a
-model of a sufficient non-agent own-nature source isolates #1621's question. A
-success makes the De ente decomposition a genuine support option rather than a
-restatement of `d1f3ffcc`.
+**Next test (most discriminating).** Define NATURE_SOURCE_1(c)
+non-primitively, through an explicit adequacy relation shared with #1621, so
+that a sufficient non-agent model is a substantive constraint test rather than
+an unconstrained one. Rerun the `676bdaeb` attribution check against it. Then
+compare `600f91cb` and `0cc3a136` as instances of one agent-or-identical
+principle, and record whether any warrant attaches to the own-nature instance
+alone.
 
 Further tests:
 
