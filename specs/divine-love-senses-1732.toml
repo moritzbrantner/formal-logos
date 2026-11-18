@@ -1,0 +1,89 @@
+# #1732 follow-up to #1755: strength fork of the ordered-love reading, its
+# incompatibility with the recipient-directed bridge, and corollaries of the
+# registered love results at the LOVE_1 / CREATURE_WILLING_1 sense carriers.
+# Analyst formulations, attribution deferred.
+
+[batch]
+vocab = "TruthCore.Case.Catholicism.DivineLoveSenses"
+results = "TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute"
+
+[[statement]]
+id = "Ordered-love reading (q.20 a.2 ad 3): GOD_4 wills a non-rational effect's esse as ordered to others"
+lean = "OrderedExistenceWillingWeak"
+paraphrase = "Analyst formulation of the q.20 a.2 ad 3 ordered-love reading (irrational creatures are loved as it were with love of desire, as ordered to rational creatures and to God); attribution deferred. For every GOD_4 g with will and every distinct, non-rational x in act in esse whose esse g causes, g wills x's being in esse as ordered to some y that is rational or is g. It neither asserts nor denies that g also wills that good to x as recipient, so it is compatible with CausalExistenceWilling a94c5dfc (checked witness). Weak version of the unattributed strong exclusive variant 1dd68893. Rational is a primitive predicate here. OPEN."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "7c64b499-6dba-5e03-bdf3-5acea95d8836", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "1ca75ad2-e6f6-492a-9fcc-19eebfc8d3aa"]
+disambiguations = ["dd7ff973-0e54-4c93-b9c5-b002cac2b256"]
+
+[[statement]]
+id = "No GOD_4 with will causes the esse of a distinct non-rational being in act"
+lean = "NoNonRationalCausedEffect"
+paraphrase = "Analyst formulation, unattributed. For every GOD_4 g with will and every distinct, non-rational x in act in esse, g does not cause x's esse. Stated only as the joint consequence of the strong exclusive ordered-love variant 1dd68893 and the recipient-directed bridge a94c5dfc at one recipient-directed willing relation; not asserted as true."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "7c64b499-6dba-5e03-bdf3-5acea95d8836", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "211a6432-8b8f-53ed-85e3-75173bb15b24"]
+disambiguations = []
+
+[[statement]]
+id = "Weak ordered reading and recipient willing hold together in a finite sample"
+lean = "WeakOrderedCompatibilityWitness"
+paraphrase = "Analyst witness, unattributed. In a two-being sample (true is the willing GOD_4 and only rational being; false is distinct, non-rational, in act and caused by true), the weak ordered-love reading, CausalExistenceWilling at the same recipient-directed willing relation, and the existence of that caused non-rational effect all hold, while the strong exclusive variant fails. A finite structural interpretation, not a model of divine willing."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "7c64b499-6dba-5e03-bdf3-5acea95d8836", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "08b826db-2d9c-48e5-b69c-d4ac54088518", "1ca75ad2-e6f6-492a-9fcc-19eebfc8d3aa"]
+disambiguations = ["dd7ff973-0e54-4c93-b9c5-b002cac2b256"]
+
+[[argument]]
+id = "Strong exclusive ordered-love variant entails the ad 3 ordered-love reading"
+theorem = "orderedStrongToWeak"
+premises = ["1dd68893-7e41-4909-9f17-1dbb342a7d95"]
+conclusion = "Ordered-love reading (q.20 a.2 ad 3): GOD_4 wills a non-rational effect's esse as ordered to others"
+axioms = []
+sense_bridges = [{term = "CREATURE_WILLING", from = "CREATURE_WILLING_1", to = "CREATURE_WILLING_2", statement_id = "1dd68893-7e41-4909-9f17-1dbb342a7d95"}]
+rule = "Drop the denial conjunct of the strong variant"
+meaning = "Strength order registration, analyst formulation. Same IsGod, HasWill, Rational, InAct, CausesIn, ordered-willing relation and esse: the strong variant's ordered conjunct is exactly the weak reading. The strong premise relates both CREATURE_WILLING senses (it denies recipient-directed willing); the conclusion uses only the ordered sense."
+
+[[argument]]
+id = "Strong ordered variant and recipient willing exclude non-rational caused effects"
+theorem = "orderedStrongExcludesNonRationalEffects"
+premises = ["1dd68893-7e41-4909-9f17-1dbb342a7d95", "a94c5dfc-c722-49fe-a242-dd39409b079d"]
+conclusion = "No GOD_4 with will causes the esse of a distinct non-rational being in act"
+axioms = []
+sense_bridges = [{term = "CREATURE_WILLING", from = "CREATURE_WILLING_1", to = "CREATURE_WILLING_2", statement_id = "1dd68893-7e41-4909-9f17-1dbb342a7d95"}]
+rule = "At one recipient-directed willing relation, the bridge's willing contradicts the strong variant's denial"
+meaning = "Analyst formulation. At ONE RecipientGoodWilling W (the bridge instantiated at W.WillsGoodFor): for a distinct, non-rational, actual x whose esse a GOD_4 with will causes, a94c5dfc gives that g wills x's good to x, and the strong variant denies it. Hence such an x cannot exist if both hold. The two statements are therefore jointly incompatible with the creation of any non-rational being; this does not say which to reject. The weak ordered reading has no such conflict."
+
+[[argument]]
+id = "Weak ordered-love reading is compatible with recipient-directed causal willing"
+theorem = "weakOrderedCompatible"
+premises = []
+conclusion = "Weak ordered reading and recipient willing hold together in a finite sample"
+axioms = []
+sense_mixing_control = true
+rule = "Evaluate a two-being sample"
+meaning = "Analyst witness. A premise-free finite sample shows the weak ordered reading and a94c5dfc jointly satisfiable with an actual distinct non-rational caused effect, at one recipient-directed willing relation, and that the strong variant fails there. It shows compatibility in this formal interpretation only."
+
+[[argument]]
+id = "Willing GOOD_4 to all existing at the CREATURE_WILLING_1 carrier"
+theorem = "willsGoodForAllExistingAtCarrier"
+premises = ["e0dae79f-c042-5a08-a148-725d0468df91", "66aecdd7-ea4e-55c6-9377-10db08893854", "00e962ae-f109-55f7-a7fd-f107ce0dea6b", "a94c5dfc-c722-49fe-a242-dd39409b079d", "2a168a36-bd60-491a-8ad7-ce5b1d2fb560"]
+conclusion = "c691e3d0-5dd0-404a-a1dd-9a4a278dcd31"
+axioms = []
+senses = {CREATURE_WILLING = "CREATURE_WILLING_1"}
+rule = "Instantiate willsGoodForAllExisting at the sense carrier W.WillsGoodFor"
+meaning = "Corollary tying the registered parametric result 7209fa2f to the CREATURE_WILLING_1 carrier RecipientGoodWilling.WillsGoodFor: the same five inputs, with the willing relation fixed as W.WillsGoodFor, give willing some good to every existing being. Same OPEN bridges; no new content beyond the instantiation."
+
+[[argument]]
+id = "LOVE_1 of all existing at the LOVE_1 and CREATURE_WILLING_1 carriers"
+theorem = "lovesAllExistingAtCarriers"
+premises = ["e0dae79f-c042-5a08-a148-725d0468df91", "66aecdd7-ea4e-55c6-9377-10db08893854", "00e962ae-f109-55f7-a7fd-f107ce0dea6b", "a94c5dfc-c722-49fe-a242-dd39409b079d", "2a168a36-bd60-491a-8ad7-ce5b1d2fb560", "16ab027e-52d1-4309-97a6-fc0a45e9f4c5"]
+conclusion = "e3d5bece-f216-4877-9fca-8a1eb7d96bcd"
+axioms = []
+senses = {CREATURE_WILLING = "CREATURE_WILLING_1", LOVE = "LOVE_1"}
+rule = "Instantiate lovesAllExisting at the sense carriers W.WillsGoodFor and T.Loves"
+meaning = "Corollary tying the registered parametric result a2366ca4 to the carriers RecipientGoodWilling.WillsGoodFor (CREATURE_WILLING_1) and ThinLove.Loves (LOVE_1): the same six inputs at these relations give LOVE_1 of every existing being. Same OPEN bridges; it proves LOVE_1 only, not hiddenness PerfectLove (LOVE_2)."
+
+[[relation]]
+id = "Strong exclusive ordered-love variant strengthens the ad 3 ordered-love reading"
+subject_kind = "statement"
+subject_id = "1dd68893-7e41-4909-9f17-1dbb342a7d95"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Ordered-love reading (q.20 a.2 ad 3): GOD_4 wills a non-rational effect's esse as ordered to others"
+verification_result_id = "Strong exclusive ordered-love variant entails the ad 3 ordered-love reading"
+note = "Same IsGod, HasWill, Rational, InAct, CausesIn, ordered willing and esse; the strong version adds the denial of recipient-directed willing. Strict: the compatibility witness satisfies the weak reading and not the strong one."

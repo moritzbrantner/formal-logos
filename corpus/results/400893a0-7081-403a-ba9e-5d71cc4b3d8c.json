@@ -1,0 +1,11 @@
+{
+  "id": "400893a0-7081-403a-ba9e-5d71cc4b3d8c",
+  "label": "Strong ordered variant and recipient willing exclude non-rational caused effects",
+  "argument_id": "0fb88b17-ae20-47ae-963e-73077bf9fd5d",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.orderedStrongExcludesNonRationalEffects",
+  "comparator_config": "results/400893a0-7081-403a-ba9e-5d71cc4b3d8c/comparator.json",
+  "status": "solution-present",
+  "description": "Analyst formulation. At ONE RecipientGoodWilling W (the bridge instantiated at W.WillsGoodFor): for a distinct, non-rational, actual x whose esse a GOD_4 with will causes, a94c5dfc gives that g wills x's good to x, and the strong variant denies it. Hence such an x cannot exist if both hold. The two statements are therefore jointly incompatible with the creation of any non-rational being; this does not say which to reject. The weak ordered reading has no such conflict."
+}

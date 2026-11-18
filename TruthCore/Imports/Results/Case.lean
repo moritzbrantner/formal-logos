@@ -18,6 +18,7 @@ public import TruthCore.Results.Case.Catholicism.CausalFinitism.Solution
 public import TruthCore.Results.Case.Catholicism.CauseOfBeingHasBeing.Solution
 public import TruthCore.Results.Case.Catholicism.ClassicalAttributesJointWitness.Solution
 public import TruthCore.Results.Case.Catholicism.DivineLoveRoute.Solution
+public import TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.Solution
 public import TruthCore.Results.Case.Catholicism.FirstUnmovedMoverExistsOrNotFromEm.Solution
 public import TruthCore.Results.Case.Catholicism.FirstUnmovedMoversIdenticalOrDistinctFromEm.Solution
 public import TruthCore.Results.Case.Catholicism.FoundingIndependence.Solution

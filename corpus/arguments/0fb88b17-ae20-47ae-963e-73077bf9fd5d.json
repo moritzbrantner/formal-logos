@@ -1,0 +1,32 @@
+{
+  "id": "0fb88b17-ae20-47ae-963e-73077bf9fd5d",
+  "label": "Strong ordered variant and recipient willing exclude non-rational caused effects",
+  "premise_statement_ids": [
+    "1dd68893-7e41-4909-9f17-1dbb342a7d95",
+    "a94c5dfc-c722-49fe-a242-dd39409b079d"
+  ],
+  "conclusion_statement_id": "16fe393e-4983-45c4-9301-6b2421ae3649",
+  "inference_ids": [
+    "aa4d53bb-f011-402d-a380-9b6f9339973e"
+  ],
+  "meaning": "Analyst formulation. At ONE RecipientGoodWilling W (the bridge instantiated at W.WillsGoodFor): for a distinct, non-rational, actual x whose esse a GOD_4 with will causes, a94c5dfc gives that g wills x's good to x, and the strong variant denies it. Hence such an x cannot exist if both hold. The two statements are therefore jointly incompatible with the creation of any non-rational being; this does not say which to reject. The weak ordered reading has no such conflict.",
+  "definition_ids": [
+    "08b826db-2d9c-48e5-b69c-d4ac54088518",
+    "1ca75ad2-e6f6-492a-9fcc-19eebfc8d3aa",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836"
+  ],
+  "disambiguation_ids": [
+    "dd7ff973-0e54-4c93-b9c5-b002cac2b256"
+  ],
+  "sense_bridges": [
+    {
+      "term": "CREATURE_WILLING",
+      "from": "0cdd7cc2-704c-4239-8dba-ea6754f9c1bc",
+      "to": "bf1b1d30-e119-450e-93be-d7a5c42abdb9",
+      "statement_id": "1dd68893-7e41-4909-9f17-1dbb342a7d95"
+    }
+  ]
+}

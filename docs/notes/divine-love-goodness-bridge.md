@@ -499,7 +499,11 @@ all stipulative. Their sense carriers are primitive structure fields in
 (LOVE) separates LOVE_1 thin q.20 love (`ThinLove.Loves`), LOVE_2 hiddenness
 PerfectLove 4b2943ad and LOVE_3 love of a possessed good 9f448669.
 `lovesAllExisting` proves LOVE_1 only; any transfer to LOVE_2 is an OPEN
-sense bridge owned by #1735.
+sense bridge owned by #1735. The carriers are tied to the parametric
+registered theorems by instantiated corollaries (follow-up, below): results
+54a9ccd9 (`willsGoodForAllExistingAtCarrier`, CREATURE_WILLING_1) and
+a66e4ce3 (`lovesAllExistingAtCarriers`, CREATURE_WILLING_1 and LOVE_1),
+whose `term_senses` are bind-checked against those constants.
 Cognition alone is not used: no intellect premise occurs.
 
 ### Connection boundary
@@ -523,7 +527,7 @@ do **not** yet feed a root route. Named consumers and the exact missing bridge:
   derivation uses it). The premise is consistent with the strong (exclusive) ordered-love variant 1dd68893, an unattributed analyst strengthening of ad 3,
   on non-rational effects, but a94c5dfc is not; so if that strong variant holds
   and non-rational creatures exist, 47c6da1b has no verified derivation and
-  stands only as a direct assumption. The conflict with a94c5dfc holds for that strong variant only; the weak, ad-3-faithful reading (ordered willing without the exclusion of recipient-directed willing) is compatible with a94c5dfc. See
+  stands only as a direct assumption. The conflict with a94c5dfc holds for that strong variant only (checked: result 400893a0). The weak, ad-3-faithful reading 7f6a2e91 (ordered willing without the exclusion of recipient-directed willing) is compatible with a94c5dfc (checked witness 5d93ac09, result ef387145), so under the weak reading 47c6da1b keeps both verified derivations. See
   [group 8 integration](natural-goodness-function-and-authority.md#group-8-integration-from-reasons-and-goods-to-moral-authority-and-god-1733-2026-11-18).
   The warrant assessment below is unchanged.
 - Veracity: the assertion route does not consume love; willing good to the
@@ -554,19 +558,31 @@ willed to it. Its price: it must deny that the divine practical specification
 covers each effect, and so accept effects that the first intellect knows and
 produces without intending; it must also answer q.19 a.4's claim that an
 intellectual first agent determines effects through intellect and will
-rather than nature. A source-internal version of this rival is the q.20 a.2
-ad 3 **ordered-love reading**: for an irrational x, God wills x's existence as
-ordered to rational creatures and to God, so the willing may not be directed
-to x as recipient. This passage gives a textual mechanism for reading
-`CausalExistenceWilling` a94c5dfc more narrowly. The registered route
-selects the recipient-directed reading (willing x's good to x, even where x
-is also ordered to others). The ordered reading supports the non-recipient-
-directed production that the foreseen-collateral rival needs, restricted to
-irrational effects. That reading is registered as the sibling statement
-1dd68893 (`DivineLoveSenses.OrderedExistenceWilling`), forked from a94c5dfc
-by the disambiguation dd7ff973 (CREATURE_WILLING_1 recipient-directed,
-CREATURE_WILLING_2 ordered). On a distinct non-rational effect the two are
-incompatible; no registered argument uses the sibling. It is not shown incoherent, and the existing
+rather than nature. The q.20 a.2 ad 3 **ordered-love reading** is relevant
+here: irrational creatures are loved "as it were" with love of desire, as
+ordered to rational creatures and to God. It is registered in two strengths
+(strength fork, #1017), forked from a94c5dfc by the disambiguation dd7ff973
+(CREATURE_WILLING_1 recipient-directed, CREATURE_WILLING_2 ordered):
+
+- **Weak, the ad 3 reading** 7f6a2e91 (`OrderedExistenceWillingWeak`): God
+  wills a distinct non-rational effect's esse as ordered to some rational
+  being or to God. It neither asserts nor denies recipient-directed willing,
+  and it is compatible with a94c5dfc at one willing relation (witness 5d93ac09,
+  result ef387145). It is therefore no rival to the registered route, but it
+  shows ad 3 to be about the order of love, not its exclusion.
+- **Strong, unattributed analyst variant** 1dd68893 (`OrderedExistenceWilling`):
+  the weak reading plus the denial that God wills that good to the effect as
+  recipient. Its separate motivation is to read love of desire (willing a
+  thing's good for another) as excluding love of friendship (willing good to
+  the beloved itself) for non-rational things. The q.20 a.2 body ("God loves
+  all existing things") counts against the denial. It strengthens the weak
+  reading (relation; result 0e665ad9, sole premise), and together with
+  a94c5dfc at one recipient-directed willing relation it excludes any
+  distinct non-rational caused actual effect (result 400893a0). It is the
+  source-adjacent form of the non-recipient-directed production the
+  foreseen-collateral rival needs, restricted to non-rational effects.
+
+No registered love argument uses either sibling. It is not shown incoherent, and the existing
 `omitCausalWill` control witnesses only the local omission, not this richer
 rival. Overall: a **coherent conditional support option** with a comparatively
 well-supported self-good bridge, a prima facie plausible thin love-meaning

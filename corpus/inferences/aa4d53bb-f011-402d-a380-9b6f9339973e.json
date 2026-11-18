@@ -1,0 +1,13 @@
+{
+  "id": "aa4d53bb-f011-402d-a380-9b6f9339973e",
+  "label": "Strong ordered variant and recipient willing exclude non-rational caused effects (inference)",
+  "input_statement_ids": [
+    "1dd68893-7e41-4909-9f17-1dbb342a7d95",
+    "a94c5dfc-c722-49fe-a242-dd39409b079d"
+  ],
+  "output_statement_id": "16fe393e-4983-45c4-9301-6b2421ae3649",
+  "rule": "At one recipient-directed willing relation, the bridge's willing contradicts the strong variant's denial",
+  "meaning": "Analyst formulation. At ONE RecipientGoodWilling W (the bridge instantiated at W.WillsGoodFor): for a distinct, non-rational, actual x whose esse a GOD_4 with will causes, a94c5dfc gives that g wills x's good to x, and the strong variant denies it. Hence such an x cannot exist if both hold. The two statements are therefore jointly incompatible with the creation of any non-rational being; this does not say which to reject. The weak ordered reading has no such conflict.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
