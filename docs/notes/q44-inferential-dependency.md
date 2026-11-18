@@ -857,8 +857,13 @@ De ente note:
 - **Profile.** There is one q.3 a.4 profile: `InAct`, `CausesIn` at `esse`,
   `essenceOf` and `esseOf` in one `Principle` sort. "Esse is its essence" is the
   represented identity `esseOf x = essenceOf x`. Reading it as real identity
-  requires faithful maps, the restricted dictionary `6acd44eb` for own-being
-  sources.
+  requires faithful maps. The restricted dictionary `6acd44eb` supplies only the
+  forward direction, from `OwnBeing` to represented identity, at relevant
+  sources; no converse is encoded. The converse reading, on which represented
+  identity is "esse tantum" in the addition-excluding sense, exists only as reading
+  choices inside claims `8bca93ec` and `e2319cd1`. No definition or
+  disambiguation record fixes it (none exists; the definition `b7c083b2`, "merely
+  existing", is unrelated), and it has no assessment.
 - **Causing being.** `CausesIn c x esse` is causal responsibility for x's being.
   It is mode-unspecified and tenseless, and it is not a claim that no secondary
   causes intervene.
@@ -907,26 +912,31 @@ weaker population `78cffb8e` instead.
 
 | Premise | Strongest positive warrant | Direct option and dependencies | Provisional standing |
 | --- | --- | --- | --- |
-| `2495a71d` multiplication inventory | Stated claim `872032e9`, De ente c.3 [69874] (Baur/Koch; Leonine c.4). The passage says a thing is multiplied only by an added difference, by a form received in different matters, or by one instance being absolute and another received. Rationale: two instances of one nature must differ by something, either in the content (a differentia) or in what has the nature (matter, or a recipient). The encoding is restricted to pairs of identity bearers, as the passage applies it. | A candidate primitive of the multiplication account. The inventory's **exhaustiveness** is the passage's assertion and is not derived ([individuation audit](necessary-simple-plurality.md#what-the-primary-arguments-actually-supply)). No identity with the narrower bridge `PurelyDeterminedIndiscerniblesIdentical` is inferred. | Moderate as a sourced principle. Its exhaustiveness is contested (row 1 below), unchanged from the 2026-11-14 De ente judgment. |
-| `f13d1cdd` no added difference | Stated claim `8bca93ec`, same anchor: esse alone that subsists does not receive an added difference, "since then it would not be esse alone but esse and some form besides". | Close to analytic once "esse tantum" is read as a quiddity that is wholly its esse. The claim records two reading choices. It depends on the profile's real-identity reading (`6acd44eb` and the q.3 a.4 profile). This premise supplies the addition-excluding character that bare map equality does not encode. It does not exclude whole-nature differences that are not added constituents (De ente note, 2026-11-17). | Strong, conditional on that reading. It carries no uniqueness load by itself. |
-| `38ed105c` no matter | Stated claim `e2319cd1`, same anchor: "much less" matter, "since then it would be not subsistent but material esse". | Close to analytic under the same reading. Its subsistence clause is read as a consequence of identity (a reading choice recorded in the claim), which ties it to the reception package (`bc1810e5`, `5c7bc356`). | Strong, conditional on that reading. |
+| `2495a71d` multiplication inventory | Stated claim `872032e9`, De ente c.3 [69874] (Baur/Koch; Leonine c.4). The passage says a thing is multiplied only by an added difference, by a form received in different matters, or by one instance being absolute and another received. Analyst's prima facie rationale: two instances of one nature must differ by something, either in the content (a differentia) or in what has the nature (matter, or a recipient). This rationale assumes what row 1 denies, so it does not discriminate against row 1. The encoding is restricted to pairs of identity bearers, as the passage applies it. | A candidate primitive of the multiplication account. The inventory's **exhaustiveness** is the passage's assertion and is not derived ([individuation audit](necessary-simple-plurality.md#what-the-primary-arguments-actually-supply)). No identity with the narrower bridge `PurelyDeterminedIndiscerniblesIdentical` is inferred. | Moderate as a sourced principle. Its exhaustiveness is contested (row 1 below), unchanged from the 2026-11-14 De ente judgment. |
+| `f13d1cdd` no added difference | Stated claim `8bca93ec`, same anchor: esse alone that subsists does not receive an added difference, "since then it would not be esse alone but esse and some form besides". | Close to analytic once "esse tantum" is read as a quiddity that is wholly its esse. The claim records two reading choices. Applied at represented identity bearers, it depends on the converse reading that represented identity is esse tantum in the addition-excluding sense. That reading lives only in the reading choices of `8bca93ec` and `e2319cd1`. `6acd44eb` supplies only the forward direction and is not a dependency here. It does not exclude whole-nature differences that are not added constituents (De ente note, 2026-11-17). | Strong as a source-internal reading. Its application to these profile maps is an unassessed interpretive bridge, shared with `e2bfd1b1`'s significance. It carries no uniqueness load by itself. |
+| `38ed105c` no matter | Stated claim `e2319cd1`, same anchor: "much less" matter, "since then it would be not subsistent but material esse". | Close to analytic under the same reading. Its subsistence clause is read as a consequence of identity (a reading choice recorded in the claim), which ties it to the reception package (`bc1810e5`, `5c7bc356`). Its application at represented identity bearers rests on the same converse reading choice, not on `6acd44eb`. | Strong as a source-internal reading. Its application to these profile maps is an unassessed interpretive bridge, shared with `e2bfd1b1`'s significance. |
 | `33f3c4c5` at least two actual beings | Ordinary experience: perception of distinct things, and the inquirer together with what the inquirer considers. A commonsense datum. | A candidate primitive. Applying `InAct x esse` to ordinary existents is the profile's interpretation of actual existence. It strengthens `78cffb8e`, and the CCR route uses only that weaker version. | Strong prima facie. |
 | `11e24b50` others participate | Unchanged from `5c7bc356`. Supporting claim `11b0106d` gives q.44 a.1 co. and ad 1. Identifying `p` with the essential-esse primary is the analyst's step. | Depends on unique unreceived esse (`a576300f`, `75b5b027`). | Moderate, conditional on that uniqueness. Unchanged. |
 | `cbb068e8` participant has distinct esse | Unchanged: a participant has being derivatively, so it is actual and is not its own act. | Its application to the profile maps is an explicit bridge. | Strong prima facie under PARTICIPATION_4. Unchanged. |
 | `b4987085` actual esse-cause composition | Unchanged: mediated responsibility for esse passes along actual esse-cause links, as in essentially ordered series. | A primitive or defeasible causal commitment; no source states it. Its general-versus-per-se scope is an open meaning question (next test). | Moderate. Unchanged. |
-| `6acd44eb` identity dictionary | Unchanged: the meaning of own being motivates representing identity for the relevant sources. | A restricted application dictionary, shared with the real-identity reading of `f13d1cdd` and `38ed105c`. | Moderate. Unchanged. |
-| `e2bfd1b1` selected identity witness | Some such witness exists if the common source `c35b1a5c` does. The existential claim is derived by `5c904cf6` from `3d01134d` (← `457698e4`, `fd12ad3d`, `ee4ab504`), `a576300f`, `33f3c4c5`, `fd12ad3d` and `ee4ab504`; `e2bfd1b1` designates `p` as that being. | Shared dependencies: the numerical-unity inputs assessed here, plus `457698e4` and `fd12ad3d`, which are **not assessed here**. The De ente judgments of 2026-11-14 treat both as contested (causal coverage and the regress premise); the brute-esse, global-order and per accidens rivals are unpaid, not refuted. | Conditional on that bundle. Not graded, because two of its inputs are unassessed here. This matches `5c7bc356`'s "not independently assessed". |
+| `6acd44eb` identity dictionary | Unchanged: the meaning of own being motivates representing identity for the relevant sources. | A restricted application dictionary, forward direction only (`OwnBeing` to represented identity). It is not the converse reading that `f13d1cdd` and `38ed105c` need. | Moderate. Unchanged. |
+| `e2bfd1b1` selected identity witness | Some such witness exists if the common source `c35b1a5c` does. The existential claim is derived by `5c904cf6` from `3d01134d` (← `457698e4`, `fd12ad3d`, `ee4ab504`), `a576300f`, `33f3c4c5`, `fd12ad3d` and `ee4ab504`; `e2bfd1b1` designates `p` as that being. | Shared dependencies: the numerical-unity inputs assessed here, plus `457698e4` and `fd12ad3d`, which are **not assessed here**. The De ente judgments of 2026-11-14 treat both as contested (causal coverage and the regress premise); the brute-esse and global-order rivals are unpaid, not refuted. The per accidens objection is a scope objection, which #1635 moved to the open bridge `e74de400`. | Conditional on that bundle. Not graded, because two of its inputs are unassessed here. This matches `5c7bc356`'s "not independently assessed". |
 | `dcf4bcdd` selection of all relevant sources | Derived by the transcription-classified selector. | Not needed: `ac416809` via `8b8bb6df` suffices. | Formal residue only. Unchanged. |
 | Neighbour `a576300f` at most one identity bearer | Derived from the seven inputs above. It is also stated in the source. A direct prima facie option is retained. | Its uniqueness load rests on the application of `75b5b027` and on the exhaustiveness of `2495a71d`. Both are live (rows 1 and 2). | Provisionally supported to the degree that those two are, which is the 2026-11-14 De ente wording. Not regraded. |
-| Neighbours `de05072a`, `8b8bb6df` | Conditional results: `9bbfe378`/`d31e0887` and `b171d107`. The direct q44 participation-to-essential-source rationale is retained. | They inherit `b4987085`, the reception four, `3d01134d` (or `c35b1a5c`), `a576300f` and `e2bfd1b1`. | Conditional. Not regraded. |
+| Neighbour `de05072a` | Conditional results `9bbfe378` (argument `d8509a73`) and `d31e0887`. The direct q44 participation-to-essential-source rationale is retained. | Via `9bbfe378`: `cbb068e8`, `3d01134d`, `b4987085` and the reception four; it uses neither `a576300f` nor `e2bfd1b1`. Via `d31e0887`: `c35b1a5c` in place of `3d01134d`, so it uses `a576300f` only through `c35b1a5c`, and not `e2bfd1b1`. | Conditional. Not regraded. |
+| Neighbour `8b8bb6df` | Conditional result `b171d107` (argument `12bc6bf0`). | The `9bbfe378` inputs plus `a576300f` and `e2bfd1b1`. Only this node consumes `e2bfd1b1`. | Conditional. Not regraded. |
 
 Shared dependencies stay visible:
 
 - The reception premises `6dfe01ab`, `7fcfcee8` and `14325c83` are shared by
   numerical unity, source supply, infinity and ascent. They are not independent
   corroboration of one another.
-- `f13d1cdd`, `38ed105c`, `6acd44eb` and `e2bfd1b1` share the profile's
-  real-identity reading of represented principles.
+- The application of `f13d1cdd` and `38ed105c` at represented identity bearers
+  depends on the converse reading choice of claims `8bca93ec` and `e2319cd1`:
+  represented identity is esse tantum in the addition-excluding sense. This
+  interpretive bridge is unassessed and also fixes what `e2bfd1b1`'s represented
+  identity signifies. `6acd44eb` supplies only the forward direction and is not
+  part of this dependency.
 - `a576300f` is consumed by selection (`b8b21fb3`), selected supply (`12bc6bf0`),
   the common source (`5ab6cc2b`, `3de4bd49`) and the root-uniqueness routes. A
   defeat of it would reach all of them.
@@ -949,7 +959,10 @@ Shared dependencies stay visible:
 No objection is recorded, and **no substantive objection is identified**, for
 `f13d1cdd`, `38ed105c`, `33f3c4c5`, `cbb068e8`, `6acd44eb`, `e2bfd1b1` and
 `dcf4bcdd`. A denial of plurality such as existence monism is not recorded in the
-corpus and is not introduced here. A remark that a supported reading generalizes
+corpus and is not introduced here. For `11e24b50`, rows 1 and 2 reach it only
+through `a576300f` and `75b5b027`, as `5c7bc356` recorded ("a plural-source
+objection targets `a576300f` and `75b5b027`"); no other objection to it is
+identified. A remark that a supported reading generalizes
 something a passage says only of God is an attribution boundary, not an
 objection.
 
@@ -977,7 +990,10 @@ warrant concentrates in four places:
 - numerical unity `a576300f`.
 
 The newly assessed inputs of numerical unity split. The sourced exclusions
-`f13d1cdd` and `38ed105c` are strong under the esse-tantum reading. The
+`f13d1cdd` and `38ed105c` are strong as source-internal readings. Their
+application to these profile maps rests on an unassessed interpretive bridge,
+the converse esse-tantum reading choice of claims `8bca93ec` and `e2319cd1`,
+which also fixes what `e2bfd1b1` signifies. The
 population `33f3c4c5` is strong prima facie. The uniqueness load rests on two
 live points: the exhaustiveness of the inventory `2495a71d` (moderate, with the
 kept bare-difference challenge) and the application of shared nature `75b5b027`
@@ -997,8 +1013,11 @@ uses no God-indexed uniqueness. Nothing is established or defeated.
 - An assessment of `457698e4` and `fd12ad3d`, or of their per se replacements
   `ea251340` and `e74de400`, would allow `e2bfd1b1` and the common source to be
   graded.
-- A reading of "esse tantum" on which represented identity does not exclude added
-  form would reach `f13d1cdd` and `38ed105c`.
+- An assessment of the converse esse-tantum reading (represented identity is
+  addition-excluding esse tantum), or a disambiguation record fixing it, would
+  allow the application of `f13d1cdd` and `38ed105c` to be graded. A reading on
+  which represented identity does not exclude added form would weaken that
+  application.
 
 **Next discriminating test.** Test the scope of composition `b4987085` against
 the per se split that the De ente note already registered. The supply chains come
@@ -1036,5 +1055,7 @@ compared below and kept:
   supported to the degree that they are" for `a576300f`, and the 2026-11-17
   shared-nature judgment, are unchanged.
 - The God-indexed Q11 boundary and the GOD_4 separation are retained.
-- The first grades for `2495a71d`, `f13d1cdd`, `38ed105c` and `33f3c4c5` are new
-  judgments on statements with no earlier assessment. They revise nothing.
+- `2495a71d`, `f13d1cdd`, `38ed105c` and `33f3c4c5` had no earlier
+  `current_assessment`. Their first grades are new judgments and revise nothing;
+  the 2026-11-14 qualifier "exhaustiveness contested" is retained for
+  `2495a71d`.
