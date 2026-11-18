@@ -307,7 +307,9 @@ class ImpactPlanTest(unittest.TestCase):
                      "scripts/retrieval_correctness_benchmark.py",
                      "scripts/test_retrieval_correctness_benchmark.py",
                      "scripts/testdata/retrieval-correctness-measurement.json",
-                     "scripts/testdata/retrieval-correctness-oracle.json"):
+                     "scripts/testdata/retrieval-correctness-oracle.json",
+                     "scripts/support_formula.py", "scripts/test_support_formula.py",
+                     "scripts/testdata/support-formula-2026-11-13.json"):
             for main in (False, True):
                 with self.subTest(path=path, main=main):
                     self.assertEqual(ar.input_kind(path), "tooling")
