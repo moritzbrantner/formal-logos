@@ -1618,3 +1618,161 @@ an existing common esse ancestor plus the existing narrow causal-composition
 and causal-ascent premises yields fixed-esse maximal causality, now explicitly
 consumed by a twelve-input existence-only sibling. This does not change the
 foundation judgment or turn its one-source conclusion into universal scope.
+
+## Owner reply: relational organization and actual relata (2026-11-17)
+
+The owner's proposed reply improves the comparison by asking what makes the
+relations themselves actual. The relevant question is not whether relations
+can explain a thing's organization or identity; they often can. It is whether
+relations whose obtaining requires the same actual concrete domain account
+for that domain's existential availability. Keep the actual-concrete roster,
+selected situation, esse respect and current existential-support relation R of
+the preceding assessment fixed. Do not replace existence with arrangement,
+efficient support with fact grounding, or actuality with mathematical
+satisfiability while making this comparison.
+
+### What the reply establishes, and which rival it addresses
+
+| Proposed explanatory item | Positive assessment of the reply | Exact limit |
+| --- | --- | --- |
+| An abstract relation or rule specifying an organization | Specification gives conditions on a realization. Adding more conditions does not by itself supply an actual instance. Thus a pattern alone is not an actual existential supporter. | A separately warranted necessary and necessarily instantiated structure would be a stronger account, not refuted by this observation. |
+| An ordinary real accidental relation among actual things | Its occurrence includes actual relata and, on the inherence reading, depends for its own actuality on an actual subject. It can explain how already actual things stand to one another without being their complete existential source. | Actual relata need not be independently individuated before every kind of relation, and this is not temporal precedence. |
+| Relational activity through which members sustain or change one another | Coordination does not remove the bearer requirement for each real exercise. Under the existing mixed-priority interfaces, an exercise cannot productively originate its own bearer. This gives a substantive answer to productive self-bootstrapping. | It does not turn many exercises into one act, rule out all reciprocal maintenance, or prove that every endless path terminates. |
+| Full constitutive determination at every level | The reply correctly requires actual constituents and all arrangement conditions, rather than relations drawn between merely possible nodes. A mere diagram or unique solution does not meet this burden. | The strongest rival already accepts actual constituents and full conditions. Mere co-entailment of relata and relation does not decide the direction of constitutive explanation or refute infinitism. |
+| An intrinsically actual concrete relational whole | If the whole really is an actual concrete being and has no incoming R-support, it is an actual root under the existing target, whatever its internal organization. This alternative concedes the foundation step. | A global fact is not automatically a concrete bearer; primitive obtaining of a structure does not automatically imply a source in the selected concrete roster. Neither version alone proves necessity, uniqueness or God. |
+
+This is an application comparison, not a claimed exhaustive partition of
+possible ontologies. It identifies two unsuccessful substitutes for a source
+(bare specification and productive self-origin), one potentially conceding
+alternative (underived concrete whole), and the strongest surviving
+constitutive alternative. It therefore narrows the dispute more than the
+undifferentiated phrase "relationships hold everything up" does.
+
+### The constructive foundational argument
+
+On the selected borrowed-actuality reading, the argument proceeds as follows.
+First, the relevant contribution is an actual exercise, not a condition that
+would obtain if a domain existed. Second, the contribution's exercise requires
+its actual bearer; coordination does not change that fact. Third, where the
+members' availability is exhaustively derivative, reorganizing their
+contributions supplies no additional *underived* actuality merely in virtue
+of the organization. These points give a positive reason to distinguish
+routing an actual contribution from accounting for its availability. The
+foundation proposal answers the latter with actuality not received through
+that same routing. This is a substantive explanatory proposal with prima
+facie warrant, not an inference from a shortage of rival diagrams.
+
+The third step supports the comparison without pretending to settle it by
+definition. It does not say derivative contributions are zero, that their
+sum is zero, or that a whole necessarily has every property of its parts.
+The constitutive rival rejects the description of its explanatory work as
+exhaustively routing borrowed efficacy: it proposes that actual constituents
+and arrangements fully constitute further actual things at every level.
+Against it, the discriminating question is whether the complete explanatory
+account supplies intrinsic actuality, merely assumes actual realization, or
+vindicates a different adequate memberwise explanatory aim. The preceding
+Welchance audit supplies an actual positive uniformity/parity argument for
+the last option; it is not a fabricated possibility.
+
+An intrinsic answer can be assessed on its own merits; it need not be
+efficient self-production or an independently proved premise. If it attributes
+nonreceived actuality to a concrete whole, the foundation target is met.
+If it attributes explanatory adequacy to a globally obtaining fact while
+denying every concrete R-source, the fact-to-concrete-support difference
+remains consequential. Calling that fact "a relation" neither answers the
+availability question nor defeats the account. Likewise, the foundationalist
+must specify a genuinely adequate intrinsic basis: an unexplained object
+called necessary earns no advantage over an unexplained relational totality
+merely through the name.
+
+### Reuse and source scope
+
+The productive subargument imports existing result
+`e60831c7-14fd-5225-9471-060dffa50386`,
+`ExistentialSelfActualization.noSelf`, concluding
+`8550ca62-92d1-5ef0-af17-9de5bf272262`. Its bearer and product interfaces
+`d07314a3-ac99-58df-8fa1-e21f0d53db5d` and
+`66b7ac36-56a9-5907-8dc2-3dfb69100c9c`, and irreflexive/transitive mixed
+priority `e9da0216-07df-5c7f-b9e8-475d12671f59` and
+`37ae2e51-468c-5051-81ca-dfc6ae91f7b5`, remain explicit. The theorem does
+not prove that its existence-token labels denote actual bearers. The
+actual-whole classification uses the existing `ActualRoot` definition and
+`WholeRosterRootEquivalenceAt`; it adds no fact-to-being bridge. The
+unique-feedback and endless-chain controls retain their established scope.
+No Lean, graph, definition, source-claim or frontier change is proposed.
+
+A selective primary-text check prevents overextending the relation claim.
+[ST I q.28 a.2 co.](https://www.newadvent.org/summa/1028.htm) distinguishes
+a relation's reference to another from its accidental existence in a subject.
+[ST I q.40 a.2 ad 4](https://www.newadvent.org/summa/1040.htm) expressly
+distinguishes accidental relations presupposing distinct subjects from
+subsistent relations constituting distinction. These consulted passages are
+scope checks, not newly registered source readings or a Trinity premise in
+the existence argument. They preclude attributing to Aquinas the universal
+claim that relations always require antecedently individuated substances.
+They do not establish an actually source-free concrete organization.
+
+### Revised provisional judgment and next discriminating test
+
+The owner's reply strengthens the case against a relational pattern offered
+as a complete substitute for actuality, and clarifies why an intrinsically
+actual concrete whole can concede foundation. Taken with the prior
+bearer/act, received-actuality and intrinsic-reason analyses, foundation
+retains positive explanatory warrant. The serious remaining comparison is
+the full constitutive account's actual realization and explanatory scope,
+not whether unsupported arrows are logically consistent. The present
+research does not certify that rival as adequate or establish its
+impossibility. No zero-change frontier count is treated as a philosophical
+objection to the progress made here.
+
+The next useful test is a concrete proposed full constitutive explanation:
+hold its relata, arrangement conditions and explanandum fixed, and ask
+whether the account explains this actual realization through an intrinsic
+basis or only derives further facts conditional on its obtaining. A
+successful source-free answer would weaken the collective-availability
+warrant; an independently adequate underived answer would strengthen it.
+Repeating the no-self-production theorem or imposing all-branch
+well-foundedness would not decide that comparison.
+
+## Reviewed owner-reply integration (2026-11-17)
+
+The owner-focused batch integrates the relational reply above with the
+[same-source motion reduction](prima-via-strength-consumers.md#2026-11-17-reducing-the-respects-through-the-source-of-esse),
+[intrinsic-actuality reply](de-ente-extrinsic-source-1629.md#intrinsic-actuality-and-the-alternatives-own-commitments-2026-11-17),
+[unreceived-esse uniqueness reply](de-ente-esse-source-1628.md#unreceived-esse-and-the-two-questions-about-plurality-2026-11-17),
+[evil-sense audit](../rowe-evidential-evil.md#sense-by-sense-objection-audit-2026-11-17)
+and [hiddenness inclusion](../hiddenness.md#hiddenness-as-a-special-case-of-evil-2026-11-17).
+The substantive conclusions and continuing tests remain in those six existing
+notes and seven existing attempts; this handoff adds no new research registry.
+
+Two fresh independent semantic challenges reviewed the actual final drafts
+and the coordinator's complete proposed conclusions. One checked foundation,
+evil and hiddenness against the exact signatures, proofs, controls and selected
+primary passages. The other checked motion and intrinsic actuality, with a
+separate targeted uniqueness subcheck. Both found no substantive defects;
+no repair round was required. This supersedes the pending-review wording in
+the dated worker drafts. The review accepts the conditional reasoning and
+qualified judgments, not actual divine reasons, premise establishment or a
+complete adjudication of the theistic case. No fresh Lean certification follows.
+
+Research started at `c1037682`; integration incorporates main `766c3c08`.
+PR #1719's overlapping passive-potency assessment in
+[modal-spine.md](modal-spine.md#same-first-being-passive-potency-application-2026-11-17)
+was inspected: its preference for the composition support and its remaining
+real-principle/esse-cause application question agree with this batch. Shared
+reasoning is not counted as independent corroboration. The owner-specific
+five-question scope used three disjoint research slices before allocating
+fresh challenge of their complete drafts. Shared convention sourceRevision:
+`833179f39f2f3848341f93e7a9acb4950b6803f0`.
+
+Canonical context/related/dossier/brief/novelty retrieval was completed.
+Offline corpus/attribution checks, bundle audit, research-metadata and label
+checks, sense/definition/lexicon ratchets, and whitespace checks pass. All
+187 batch specs regenerate unchanged. The affected-result selector selects
+zero Comparator results. Existing lexical/status warnings and removable
+allowances are unchanged and outside this batch. The local verifier preflight
+found the expected exported-toolchain setup absent; it was not repeated.
+Existing certificates are reused, and normal delivered-head CI remains required
+before merge. No Lean, statement, definition, source claim, result or graph
+change is included. The computed God-existence frontier comparison reports
+no change; its diagnostic counts are not a judgment of philosophical merit.

@@ -476,7 +476,7 @@ correct. Codex review (P2) asked for a definition of `Trap` after `c9d479bb` was
 ## Current source-selection judgment: identity and the nature being multiplied (2026-11-17)
 
 **Target and registered route.** `75b5b027-21f1-400a-8b21-775bb6d47983`,
-with the seven companion inputs of argument `07b1fac4` / result `860eae63`,
+with the six companion inputs of argument `07b1fac4` / result `860eae63`,
 supports at-most-one identity bearer `a576300f`, then common ancestor `c35b1a5c`,
 fixed-esse maximal causality `da09703b` (argument `f4df2153`), and GodExists
 (consumer `c98328f1`, result `d8cb586a`). The final connection is retained in
@@ -664,6 +664,199 @@ accepted shared-nature assessment on this recommendation alone. Reopen on a
 newly warranted candidate-domain or real-nature bridge; keep the current
 ascent/degree test as the distinct next input. Director descent/termination
 still supplies no new cognition inference, and no intellect/UI record is edited.
+
+## Unreceived esse and the two questions about plurality (2026-11-17)
+
+**Target and scope.** Shared nature `75b5b027-21f1-400a-8b21-775bb6d47983`,
+multiplication inventory `2495a71d-81b6-47b7-8394-b37d3308fcda`, and their
+existing uniqueness result `860eae63` to `a576300f`.
+The owner's proposed argument concerns the way a determinate essence receives
+or limits esse. It should be retained as a positive metaphysical argument,
+not dismissed because `esseOf x = essenceOf x` lacks a logical equality rule
+between x and y. Conversely, the claim that essence numerically individuates
+every thing is too broad: the same human nature is shared by several humans
+in Aquinas's account, with designated matter accounting for their numerical
+multiplication. Qualitative determination and numerical multiplication require
+separate treatment.
+
+**Reuse.** Re-read `EsseSource.Plurification` and its uniqueness inputs,
+[necessary-simple-plurality.md](necessary-simple-plurality.md), especially
+its whole-quiddity, q7, pure-thisness, narrow indiscernibility and whole-power
+sections, and the q11 reconciliation immediately above. The existing result
+`860eae63` supplies the De ente conditional; no replacement theorem is needed.
+Public Latin *De ente* [69872], [69874], *SCG* I.17 nn.6–7 and I.24 nn.2–4,
+and *ST* I q.3 a.4 ad 1 / q.11 a.3 were also read as orientation. The added
+I.24 comparison is an analyst reconstruction, not a newly attributed corpus
+claim or newly verified proof.
+Canonical context for `860eae63`, related/dossier/brief for `75b5b027`,
+dossiers for the multiplication and broad reception premises, and a combined
+novelty search were inspected at baseline `c1037682`. This is retrieval and
+reuse, not a new certification. No missing issue-snapshot hit is evidence that
+an investigation is new.
+
+### 1. Could the two candidates have different whole natures?
+
+The strongest version starts from **addition-excluding subsistent esse**:
+the whole what-it-is is its unreceived act of being, not a finite kind with
+the further property of existing. This is the first sense of no-addition in
+*ST* I q.3 a.4 ad 1. It differs from the abstract concept of being, which
+leaves further determinations unspecified. Treating God as an indeterminate
+universal would therefore miss the argument.
+
+On the act/reception account, an essence that makes an act one determinate
+kind supplies the recipient or limit of that act. If this determinant is
+really other than the esse, the candidate does not satisfy the proposed
+identity. If it is just that same unreceived esse, naming it “essence A”
+has supplied no additional differentiating content. The question for “esse
+of kind A” versus “esse of kind B” is what makes either act contracted to
+its kind while preserving the claim that nothing other than unreceived esse
+constitutes it.
+
+*SCG* I.24 [23733–23735] gives supporting reasoning, rather than merely
+restating no difference: an added essential determinant would be required
+for the candidate's actuality; an intrinsic determinant belongs to the whole
+essence or to a part of it. Given esse–essence identity, a **further**
+determinant cannot be the whole essence; as a part it introduces composition.
+The chapter also invokes the already argued absence of dependence and potency.
+This supports the addition-excluding reading under those commitments. It
+does not derive simplicity from the identity equation, and it does not silently
+turn every difference between whole natures into an added part.
+
+That restriction is source-sensitive. *SCG* I.17 nn.6–7 explicitly distinguishes
+diversity of wholes from difference through further differentiae. Likewise,
+the De ente treatment of immaterial species does not require genus and
+differentia to be separate actual parts. These are genuine objections to a
+generic composition shortcut. They are not a worked account of multiple
+unreceived acts: the immaterial species in *De ente* still have received esse
+distinct from their essence. The adequate extension would explain how a whole
+is intrinsically a restricted kind of esse without a recipient, added essence
+or dependence. Neither a two-value essence map nor the word “primitive”
+supplies that explanation.
+
+**Judgment on `75b5b027`:** the owner's proposal supports the strong
+esse-tantum reading already favored above. Its warrant is the general account
+of act, determination and reception; it may be accepted on those merits as a
+primitive. No inspected substantive rival defeats it at the intended domain.
+The current Lean identity by itself still does not express all of that content,
+so no existing premise has silently acquired a stronger definition or a new
+proved status.
+
+### 2. Could there be two numerically distinct instances of that same nature?
+
+Shared nature leaves this second question. The retained De ente argument
+has a complete conditional answer:
+
+1. A multiplication of the relevant nature requires an added difference,
+   distinct matter, or reception (`2495a71d`).
+2. A candidate whose whole nature is subsistent esse admits neither an added
+   difference (`f13d1cdd`) nor matter (`38ed105c`).
+3. On `6dfe01ab`, any recipient of its esse is its own essence. On
+   `7fcfcee8`, that recipient is in receptive potency to the received act.
+4. Essence–esse identity would make such reception potency to itself,
+   excluded by `14325c83`.
+5. The inventory therefore leaves no way to multiply two such candidates;
+   `860eae63` proves that they are one under these same inputs.
+
+**Reception-scope qualification.** The existing theorem retains the broad
+all-bearer own-essence premise `6dfe01ab`. Its dossier includes the specific
+united-soul/body interpretation challenge, not an unconditionally certified
+refutation: see [esse-reception-definition-fork.md](esse-reception-definition-fork.md).
+That investigation already supplies the strictly weaker identity-scoped law
+(`9882d958`) and an infinity consumer. Here the local reasoning also applies
+own-essence reception only to candidates whose esse is their essence. This
+gives a principled scope for the philosophical defense; it does not make the
+broad law true or silently replace it in `860eae63`. A formally checked
+De ente consumer of the scoped law would be a separate narrow follow-up,
+not additional warrant for the law itself. The known soul/body case must be
+answered on its selected reception sense, not arbitrarily excluded by a label.
+
+This shows exactly where the owner's point does work: a genuinely distinct
+receiving/individuating principle is incompatible with the chosen identity,
+and calling that principle “the essence” does not repair the incompatibility.
+The positive reason for the inventory is that duplication of a received act
+has distinct recipients, while qualitative contraction has a determining
+principle. Nothing in an unreceived act supplies either kind of multiplication.
+Rejecting this general account is a substantive option; presenting two
+unconstrained names is not independent evidence for it.
+
+The inventory carries the anti-bare-multiplicity commitment. The existing
+pure-act routes display this explicitly rather than using universal identity
+of indiscernibles unnoticed. `REAL-THISNESS-FIRST-MOVER-UNIQUENESS`
+(`ef204e94`) excludes a **real** individuating determination when strict pure
+actuality makes it pure and unrestricted perfection makes it common to every
+candidate. `PERFECT-BEINGS-FIRST-MOVER-UNIQUENESS` (`890c1ef2`) instead uses
+the scoped SCG I.42 perfect-being identity principle. The narrow
+indiscernibility route allows ordinary cases of located, received things;
+it still needs a general account of why bare multiplicity cannot occur among
+unrestricted acts. These are existing conditional alternatives with explicit
+applicability burdens, not proofs that “different” entails “composite” in
+every ontology. They neither produce a bearer nor automatically discharge
+De ente's different shared-nature premise.
+
+**Relational safeguard.** The target is several subsisting acts of being or
+absolute first substances. It is not the denial of every real distinction
+within one numerical nature. A relational distinction must keep its relata
+and its mode of subsistence explicit; neither a bare extrinsic description nor
+the mere word “relation” establishes two independently subsisting esses.
+The Thomistic treatment of subsistent relations therefore cannot be erased
+by an unrestricted “all real difference is an added absolute part” rule.
+Nor does it by itself furnish plural divine substances. This continuation
+introduces no new such rule and does not change the candidate carrier.
+
+### Overall provisional judgment, route and stopping point
+
+The source-backed essence/reception argument is stronger than the earlier
+question's wording suggested. Under the substantive esse-tantum and
+multiplication account, different essential kinds would require a determination
+incompatible with unreceived esse, and numerical duplication would require a
+recipient or another allowed multiplication basis. The existing proof then
+establishes uniqueness **conditionally**. The controls locate the encoded
+premises it uses; they do not give an equally supported ontology of two pure
+esses. No independently warranted application of bare thisness or intrinsic
+whole-kind diversity to this domain was found in the inspected evidence.
+That absence is not a proof of impossibility, and primitive acceptance of
+the act/reception account does not require a further independent proof of
+every commitment.
+
+The distinction from the intrinsic-necessity reply matters. Essential or modal
+necessary existence is weaker than addition-excluding unreceived esse;
+granting a necessary being alone does not activate this uniqueness argument.
+If an alternative grants the stronger characterization, it should be tested
+against this bundle, not protected by retreating to the weaker description.
+
+Keep the route visible: `75b5b027` with its six companion inputs gives
+`a576300f`; existence and causal coverage with no-regress `fd12ad3d`
+(`5ab6cc2b`) or closed-collection CCR (`3de4bd49`) then give common source
+`c35b1a5c`. Existing composition/ascent with explicit logic gives fixed-esse
+maximal causality `da09703b`, consumed by `c98328f1` / `d8cb586a` on the
+GOD_4 existence route (main also has the witness-retaining consumer
+`d9ee967a`; see [#1731 slice 2](#a-god_4-consumer-that-keeps-the-de-ente-witness-1731-slice-2-2026-11-18)).
+The classical-root identity `8e3b89c9` takes its uniqueness from the
+fixed-esse maximum, not from `860eae63`; see
+[same-witness identities](#same-witness-identities-for-1731-2026-11-18) and
+[uniqueness packages](#uniqueness-packages-on-the-same-candidate-roots). Neither shared nature nor this at-most-one result
+supplies population, universal causal scope, the nominal bridge or later
+divine attributes. Do not derive unrestricted perfection through an already
+unique universal source and then cite it as independent support for selecting
+that source.
+
+**Next test / stop:** any continuation must specify a positive mode of
+intrinsically differentiated unreceived esse, or defend the general
+determination/reception or multiplication account at precisely that domain.
+The two numerical and qualitative questions must remain separate. A further
+equality lemma, a label-only two-source model or repetition of the same source
+sentence will not settle real application. The distinct causal-ascent/degree
+question already allocated above remains the next nonduplicative route input.
+No definitions, interpretations, statements, graph edges, source claims or
+proofs are changed here. Existing proof evidence is retained; the new source
+comparison and provisional judgment are prose, not certification.
+
+**Integration review (2026-11-17):** fresh independent semantic challenge of
+this dated continuation and the coordinator conclusions found no substantive
+defects; no repair round was required. This supersedes the pending-review
+wording of this section only; main's #1729 and #1731 dispositions are
+unaffected. See the [integration record](unique-feedback-explanation-311.md#reviewed-owner-reply-integration-2026-11-17)
+for verification, source scope and unchanged formal status.
 
 ## CCR transfer (issue #1639)
 
