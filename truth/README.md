@@ -769,6 +769,10 @@ reviewed revision, publication disposition and next test. Historical heading
 dates do not imply supersession. Declared meaning/warrant/judgment `revisions`
 expose potential downstream uses and unresolved reassessments without changing
 formal validity. See [the canonical record format](../docs/premise-dossiers.md#current-assessment-and-publication-disposition).
+`truth currentness [--frontier-root STATEMENT] [--limit N]` (#1751,
+`truth::currentness`) is the read-only per-root view of which open premises
+have a covering current assessment, only legacy attempts, or none, with
+advisory heuristic flags; see [currentness view](../docs/premise-dossiers.md#currentness-view).
 
 
 `truth brief (TARGET | --question TEXT)` and `truth novelty (TEXT |
