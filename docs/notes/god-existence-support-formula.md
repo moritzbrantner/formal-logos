@@ -1,4 +1,129 @@
-# Exact support formula for God-existence (2026-11-13)
+# Exact support formula for God-existence
+
+## Repeatable calculation and 2026-11-17 snapshot
+
+The maintained calculator is `scripts/support_formula.py`. It consumes the
+complete graph exported by the Rust `truth support-graph` command; corpus
+loading and statement identities remain owned by that CLI. The optional
+analysis environment declares `dd==0.6.0` and `networkx==3.4.2` in the
+script. It does not change proof, premise or frontier status.
+
+The full recalculation is a manual local command, not a CI step. It needs
+`dd` built with its CUDD extension for practical runtime: PyPI `dd` ships
+without CUDD, and the script then falls back to the pure-Python `dd.autoref`
+backend. That fallback gives identical exact results and passes the oracle
+suite, but is too slow for the full corpus (a local terminal-basis run did not
+finish its closure phase within 25 minutes; the same calculation with CUDD
+took about two minutes on 2026-11-18). The report records the backend
+used under `dependencies.dd_backend`. From the repository root:
+
+```sh
+DD_FETCH=1 DD_CUDD=1 uv run --no-cache --no-binary-package dd scripts/support_formula.py \
+  --baseline scripts/testdata/support-formula-2026-11-13.json \
+  --bdd-output target/support-formula/exact.json
+```
+
+`DD_FETCH=1 DD_CUDD=1` makes the `dd` build download the CUDD 3.0.0 source and
+compile it (gcc and make required), so this is a local opt-in that needs network
+access, never a CI dependency. `--no-cache` is required: the `DD_*` variables are
+not part of uv's cache key, so without it uv reuses a previously built `dd`
+wheel without CUDD. Each run therefore rebuilds `dd`, which takes a few minutes.
+
+The default invocation refreshes the Rust exporter through Cargo. An explicit
+`--truth target/release/truth` selects a prebuilt binary instead. Outputs are
+`target/support-formula/report.json`, its adjacent `report-graph.json`, and the
+optional exact decision diagram. The graph retains the direct-or-derived
+equation system and complete statement/argument/result provenance. The
+decision diagram recovers every minimal conjunction without materializing
+millions of overlapping lists.
+
+`--graph FILE` replays a saved export without reading a corpus. `--baseline`
+accepts a previous report and compares exact counts, package sizes and shared
+inputs. `--basis direct-or-derived` selects the other explicitly named input
+basis; the default and the historical numerical baseline are terminal-only.
+An input set to false means **not supplied**, not acceptance of its negation.
+This calculation therefore does not invent complementary P/¬P argument forks.
+
+CI runs only the small oracle suite, `uv run scripts/support_formula.py
+--self-test`, with the Rust tooling checks; it passes on either backend. The
+scheduled CI no longer recalculates the full report (owner decision on #1744).
+Counts and wall-clock time are descriptive diagnostics, not monotonic research
+scores or performance gates.
+
+### Recalculated results
+
+Corpus snapshot: `67da43761d01df2bbabc80632458aacddbd3ec23`.
+The union of the two backward slices has **678 statements, 524 result-backed
+argument rules and 402 terminal inputs**. The selected graph's SHA-256 is
+`50dd8a7272c4b3df56b95cf8e7d3fd21658944d76ac25dc897736d5d5b5f7d40`.
+
+| Metric | 2026-11-13 | 2026-11-17 |
+| --- | ---: | ---: |
+| Immediate arguments concluding G | 13 | 14 |
+| Immediate G conjunctions after literal absorption | 9 | 10 |
+| Inclusion-minimal terminal G packages | 67,798,928 | **41,029,320** |
+| Smallest terminal G package | 39 | 32 |
+| Largest minimal terminal G package | 149 | 172 |
+| Terminal inputs shared by every G package | 9 | **4** |
+| Inclusion-minimal terminal H packages | 109,971,456 | **178,712,576** |
+| Smallest terminal H package | 100 | 98 |
+| Largest minimal terminal H package | 149 | 182 |
+| Terminal inputs shared by every H package | 75 | 70 |
+
+G and H retain the target meanings below. In particular, H retains the same
+necessary witness and its recorded attribute predicates; this table does not
+silently strengthen those predicates.
+
+All **445 historical argument rules remain with the same premise and conclusion
+IDs**, and 79 argument rules have been added to the slice. Five former terminal
+inputs now have derivations, and 39 new terminal inputs enter the slice. The
+smaller G minimal-family count is therefore not a deletion of those historical
+argument edges. Terminal expansion has changed, and subset absorption removes
+redundant sufficient packages. The direct-or-derived graph keeps direct
+acceptance of intermediate propositions available. Do not attribute the whole
+numerical change to absorption alone or treat the count as independent evidence.
+
+The four shared terminal inputs for G are now:
+
+- `3c0b7bb3-1526-55a9-b71e-0d5fb3148782`: potency is capacity under privation.
+- `47aff057-35ef-5418-930b-fef72e1104d2`: simple priority entails the recorded
+  one-way existential dependence.
+- `7c3da33e-7ead-54f8-aace-ed3cf3a7bb02`: in a capable subject, privation is the
+  absence of the corresponding actuality.
+- `ee4ab504-c8fe-59bc-bc96-7cbeefed6410`: excluded middle.
+
+The former shared input `8ab3d114-d6e2-5f6d-805b-ae901f56d39b`
+(independence allows possible separate existence) remains terminal but is no
+longer shared by all G packages. This records actual alternative support
+without that supplied input. Other removals from the shared list can instead
+reflect newly available derivations; a removed terminal input is not by itself
+proof that the proposition is bypassed everywhere.
+
+The first recorded 32-input representative reaches G through 30 registered
+rules without supplying or deriving that independence premise. Its new
+connection runs through actual esse-cause grounding and the explicit
+grounding-to-priority bridge, then derives the no-component-first condition
+using that priority
+([proofs](../../TruthCore/Results/Causality/EsseCausePriority/Solution.lean)).
+Its final step is the new immediate argument
+[`c98328f1-3c05-40ad-983f-1fee15873f12`](../../corpus/arguments/c98328f1-3c05-40ad-983f-1fee15873f12.json),
+which also restricts the genus-causality premise to being specifically. This
+is conditional alternative support; it does not accept the negation of
+independence or explain the entire numerical change by itself.
+
+The current full calculation took **115.351 seconds** on the execution host,
+including validation and the exact diagram export; timing is informational.
+Both target histograms are complete. The run agrees with forward chaining on
+**1,696 deterministic target/input comparisons**; two different symbolic
+minimal-family algorithms agree, and each displayed representative derives
+its target while every single-member deletion fails. The dedicated oracle
+suite additionally exercises cycles, zero-premise rules, direct acceptance,
+absorption, complemented/skipped BDD edges, and an exact count of `2^54 + 1`.
+Replaying the recovered 600-statement/445-rule historical graph with the
+maintained calculator reproduces both original counts, both minimum/maximum
+sizes and both complete shared-input lists exactly.
+
+## Historical calculation (2026-11-13)
 
 Corpus snapshot: `960fe26728cee3f3467950d3aab67ded6cf2eb39`. This note answers which combinations of the corpus's recorded propositions suffice through its registered argument graph. It is a research reference, not another queue or a change to premise status.
 

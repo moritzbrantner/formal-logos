@@ -25,6 +25,7 @@ target/debug/truth novelty 'DependsForBeing ↔ ¬CanBeWithout' --issues-from sn
 target/debug/truth next
 target/debug/truth next-steps --frontier-root STMT-CATHOLICISM-TRUE
 target/debug/truth results
+target/debug/truth --json support-graph
 cargo fmt --all --check
 cargo clippy --locked -p truth --all-targets -- -D warnings
 cargo test --locked -p truth
@@ -64,6 +65,27 @@ cache.
 The corpus directory must exist. Missing optional record collections are empty;
 unreadable collections, dangling collection links, and non-file JSON entries
 are errors rather than silently omitted records.
+
+## Registered support graph
+
+`truth --json support-graph [STATEMENT ...]` exports the complete backward
+slice for the requested targets, defaulting to God-existence and the same
+necessary classical God-root. Targets accept UUIDs, legacy IDs or labels.
+The deterministic JSON contains the statement dictionary, one implication
+edge per result-backed argument, every result witness, terminal inputs,
+and immediate conjunctions after literal premise-set absorption. Missing
+references fail instead of silently shortening the graph. `input_identity`
+covers loaded corpus bytes; `graph_sha256` covers the selected graph.
+Optional `source_head` and `worktree_dirty` describe the checkout.
+
+This is the input to symbolic support analysis, not a support-count command.
+It includes conditional transcriptions and strength implications, preserves
+cycles and real zero-premise rules, and imports no frontier/floor status as a
+fact. Analysis must use the least fixed point and disable each current
+target's direct input, even when that target is terminal. Direct-or-derived
+inputs and terminal-only inputs are different bases. An input set to false
+means the premise is not supplied, not that its negation is accepted.
+Graph support does not replace Lean composition, binding or verification.
 
 ## Adding a command
 
