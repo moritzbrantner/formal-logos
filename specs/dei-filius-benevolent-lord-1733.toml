@@ -1,0 +1,139 @@
+# #1733 (integration group 8): the moral-authority investigation's divine
+# endpoint. LORD_3 types one ground the natural-law reply gives for authority
+# against the bare-creator objection: the cause and governor of all also wills
+# some good of their own to every other intellectual being. The LORD_3 sense
+# bridge is strictly weaker than the registered LORD_2 bridge; its restricted
+# willing premise follows from the #1732 result DivineWillsGoodForAllExisting
+# (c691e3d0) and from CausalExistenceWilling (a94c5dfc) with the q.5 a.1
+# coextension, and is consistent with the q.20 a.2 ad 3 ordered-love sibling.
+# The unified Dei Filius root is re-derived through it. Analyst formulations,
+# attribution deferred. Dominion (LORD_1) is not directed moral jurisdiction;
+# that transition stays unbuilt (docs/notes/natural-goodness-function-and-authority.md).
+
+[batch]
+vocab = "TruthCore.Causality.DeiFiliusBenevolentLord"
+results = "TruthCore.Results.Causality.DeiFiliusBenevolentLord"
+
+# ---------------------------------------------------------------- statements
+
+[[statement]]
+id = "GOD_4 wills some GOOD_4 to every distinct intellectual being whose esse it causes"
+lean = "IntellectualRecipientExistenceWilling"
+paraphrase = "Open application bridge, analyst formulation, unattributed. For every GOD_4 g with will (HAS_WILL_1) and every x distinct from g, in act as to being and having intellect (HAS_INTELLECT_1), whose being g causes: there is a respect r in which x is good and g wills that good to x (recipient-directed willing, CREATURE_WILLING_1). The respect is existential. It says nothing about non-intellectual effects, about the divine self-case, about every good of x, about the degree or mode of willing, or that an act of willing efficiently causes x. It follows from 'Every GOD_4 wills some GOOD_4 to every being in act in esse' (c691e3d0) alone, and from CausalExistenceWilling (a94c5dfc) with the q.5 a.1 coextension (00e962ae), without the self-case premise; it is consistent with the q.20 a.2 ad 3 ordered-love sibling (1dd68893, with rational read as having intellect) on a non-rational effect where CausalExistenceWilling fails (Control.Controls part 5). The natural-diffusion / foreseen-collateral alternative recorded for a94c5dfc still applies to intellectual effects: this restriction removes the non-rational conflict only."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "7c64b499-6dba-5e03-bdf3-5acea95d8836", "DEF-HAS-INTELLECT", "4c8f0e6b-7ef6-5be5-851c-cdf4f0301546", "08b826db-2d9c-48e5-b69c-d4ac54088518"]
+disambiguations = ["dd7ff973-0e54-4c93-b9c5-b002cac2b256", "DISAMB-IN-ACT", "DISAMB-INTELLECT-AND-SENSE-COGNITION"]
+
+[[statement]]
+id = "Whatever is LORD_3 is LORD_1"
+lean = "BenevolentCauseAndGovernorOfAllIsLord"
+paraphrase = "Open sense bridge, analyst formulation, unattributed. Whatever causes the being of every other being in act as to being, governs every such being and wills some good of its own to every other intellectual being in act as to being (LORD_3) has dominion over everything else (LORD_1, the primitive Primitives.IsLord: authority to dispose of what is subject to it). It carries what LORD_3 leaves untyped: the passage from causal, directive and benevolent volitional relations to authority. Motivation, not attribution: the natural-law reply to the objection that creation or power alone gives no rightful authority, which ties authority to care for the good of those governed. Strictly weaker than 'Whatever is LORD_2 is LORD_1' (eb6611a5; its antecedent adds the willing conjunct; Control.Controls part 2: a cause and governor of all that wills no good to an existing intellectual creature satisfies this bridge vacuously and falsifies the LORD_2 bridge). It does not say that governance is directed to the good willed, that the being is just or wise beyond having intellect, or that dominion includes a jurisdiction to impose moral obligations on rational creatures."
+definitions = ["9dcfcb4e-bf60-4322-b687-440df1f2ad29", "59350e3b-1b76-45cd-b9fd-548f3f4658b5", "08b826db-2d9c-48e5-b69c-d4ac54088518"]
+disambiguations = ["aa1de96a-e0d2-4739-a34f-9b98f1034a34", "DISAMB-IN-ACT", "dd7ff973-0e54-4c93-b9c5-b002cac2b256"]
+
+[[statement]]
+id = "Controls for the typed LORD_3 reading and the intellectual-recipient premise"
+lean = "Control.Controls"
+paraphrase = "Closed controls on two two-being interpretations (Bool; true is GOD_4, causes the being of and governs false). With false intellectual: (1) nonvacuity: with willing and true LORD_1, the restricted willing premise and 'Whatever is LORD_3 is LORD_1' hold and true is LORD_3 and LORD_1; (2) strictness: with no willing and nothing LORD_1, 'Whatever is LORD_3 is LORD_1' holds and 'Whatever is LORD_2 is LORD_1' fails; (3) sense mixing: with willing and nothing LORD_1, true is LORD_3 and not LORD_1; (4) necessity of willing: with no willing, true is LORD_2 and not LORD_3. With only true intellectual and no willing: (5) the restricted willing premise, the q.5 a.1 coextension and the q.20 a.2 ad 3 ordered-love reading (rational read as having intellect) hold, while 'Every GOD_4 wills some GOOD_4 to every being in act in esse' and CausalExistenceWilling fail. Statements about these interpretations only."
+definitions = ["9dcfcb4e-bf60-4322-b687-440df1f2ad29", "c8e458bd-3b8a-4e10-8e2d-43d1c1912c63", "59350e3b-1b76-45cd-b9fd-548f3f4658b5", "08b826db-2d9c-48e5-b69c-d4ac54088518", "1ca75ad2-e6f6-492a-9fcc-19eebfc8d3aa"]
+disambiguations = ["aa1de96a-e0d2-4739-a34f-9b98f1034a34", "dd7ff973-0e54-4c93-b9c5-b002cac2b256"]
+
+[[statement]]
+id = "Joint-satisfiability model of the LORD_3 Dei Filius root route"
+lean = "Control.RootModel"
+paraphrase = "On the unified Dei Filius route's root model (four roles; source the selected root, recipient a second intellectual being), given excluded middle: the unified root bundle holds, the restricted willing premise and 'Whatever is LORD_3 is LORD_1' hold with a permissive willing relation, recipient is an intellectual being other than source, and the selected root has every Dei Filius attribute. Hence every premise of the LORD_3 root route holds together in this interpretation. The willing relation is permissive, so the model does not discriminate recipient-directed from other willing. A statement about this interpretation only."
+definitions = ["9dcfcb4e-bf60-4322-b687-440df1f2ad29", "08b826db-2d9c-48e5-b69c-d4ac54088518"]
+disambiguations = ["aa1de96a-e0d2-4739-a34f-9b98f1034a34"]
+
+# ---------------------------------------------------------------- arguments
+
+[[argument]]
+id = "Every GOD_4 wills some GOOD_4 to all in act, so to every distinct intellectual effect"
+theorem = "intellectualWillingOfWillsGoodForAll"
+premises = ["c691e3d0-5dd0-404a-a1dd-9a4a278dcd31"]
+conclusion = "GOD_4 wills some GOOD_4 to every distinct intellectual being whose esse it causes"
+axioms = []
+rule = "Weakening: restriction of the recipient quantifier and added antecedents"
+meaning = "Strength order registration: if every GOD_4 wills some good of its own to every being in act as to being (the #1732 result's conclusion), then in particular to every distinct intellectual such being whose being it causes. Instantiation only; it establishes neither."
+
+[[argument]]
+id = "GOD_4 wills GOOD_4 to each distinct intellectual effect, from causal willing"
+theorem = "intellectualWillingOfCausalWilling"
+premises = ["a94c5dfc-c722-49fe-a242-dd39409b079d", "00e962ae-f109-55f7-a7fd-f107ce0dea6b"]
+conclusion = "GOD_4 wills some GOOD_4 to every distinct intellectual being whose esse it causes"
+axioms = []
+rule = "Apply the causal-willing bridge at a distinct intellectual effect; the witness respect is esse, a good of x by the goodness-actuality coextension"
+meaning = "Second support option for the restricted premise, without the divine self-case premise DivineOwnGoodWilling. For a GOD_4 g with will and a distinct intellectual x in act as to being whose being g causes, CausalExistenceWilling (a94c5dfc) gives that g wills x its good in esse, and the q.5 a.1 coextension (00e962ae) gives that x is good in esse because it is in act in esse. Conditional consequence; both premises stay open."
+
+[[argument]]
+id = "LORD_2 being LORD_1 gives LORD_3 being LORD_1"
+theorem = "benevolentLordSenseBridgeOfGovernorIsLord"
+premises = ["eb6611a5-f8a7-44f6-9bf1-2f65eb80b3cb"]
+conclusion = "Whatever is LORD_3 is LORD_1"
+sense_bridges = [
+  { term = "LORD", from = "a364090a-97a1-40fb-adb1-69c0bf14e06f", to = "169d3077-17ed-4ced-aefc-8c4579db89c2", statement_id = "Whatever is LORD_3 is LORD_1", role = "conclusion" },
+  { term = "LORD", from = "ba3b77d5-8a47-4647-8426-240fd4b42c3b", to = "169d3077-17ed-4ced-aefc-8c4579db89c2", statement_id = "eb6611a5-f8a7-44f6-9bf1-2f65eb80b3cb" },
+]
+axioms = []
+rule = "Weakening of the antecedent: LORD_3 contains LORD_2 as a conjunct"
+meaning = "Strength order registration: the LORD_2 sense bridge entails the LORD_3 sense bridge, since whatever is LORD_3 is LORD_2. Projection and application only; it establishes neither."
+
+[[argument]]
+id = "The NECESSARY_2 GOD_4 root has the Dei Filius attributes via LORD_3"
+theorem = "deiFiliusRootUnifiedBenevolentLord"
+premises = ["0bdcf366-29c7-5d45-b603-5c929dcad976", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7", "0436de86-6579-53f2-9ff5-2111ba44ebae", "cb1cdea9-eb6c-578c-8008-84e0d4107fd3", "e4e6b0cd-f61a-5605-a302-573c67cf063a", "7067553d-cad9-5d79-b6b2-912e35051530", "64498e7e-7f10-54a0-9ec0-c65e6076de1f", "00e962ae-f109-55f7-a7fd-f107ce0dea6b", "b26c10a0-983d-5a88-aa03-cc601bc1ddc6", "ca07cae9-6102-564e-a7fd-efb013744b3d", "d7741cdc-881b-5bda-85ce-d70223162f78", "86efed1a-f353-5b5d-9431-df7fc643ace1", "09c6d5f0-d412-5038-85f9-75fffb935727", "180f5ad2-a421-541a-85c9-9bca578b4a43", "090be689-b77f-51a1-9d5d-caf339169e4b", "3b2d2d46-baa6-4772-a2db-bb3daeb092fc", "c6d6379b-6a9b-55b5-a701-3df289dfcca4", "75a37a91-732d-510c-9abc-b37c988c5c63", "0659227c-0979-579c-910b-03a1967f49c5", "1ec205ed-b2a6-5384-bb5f-2565a9d325bf", "4c79298d-ee09-5e99-9ced-1be92c19b4cc", "280770e3-a40e-4611-a96d-9d65fec5b945", "ad49ea00-287e-4c7c-8ab6-fe222d16d493", "1063da3d-098d-49b3-9346-74d7edbb6e6c", "GOD_4 wills some GOOD_4 to every distinct intellectual being whose esse it causes", "Whatever is LORD_3 is LORD_1", "8f24379f-c48d-43cf-beae-c0ad89a92cb4", "a23dd1ac-1e5b-4842-bf82-385a36607a77", "15df9d91-5912-4a75-9427-97d4a82e7a27", "8bf775e9-34e0-48e5-bdd8-f48edd1040f7", "de92711c-a871-4d4e-a9a3-64e160632006", "0042dd05-7788-4d77-884d-32f868f9620f", "STMT-INFINITE-ACT-HAS-INFINITE-POWER"]
+sense_bridges = [
+  { term = "GOD", from = "295c9096-50b8-4ccd-960e-f833730a0774", to = "52c2ebac-0a71-4dd4-8a21-804c1dd0847a", statement_id = "1ec205ed-b2a6-5384-bb5f-2565a9d325bf" },
+  { term = "LIVING", from = "8277a0a0-960c-487d-930d-5cd1fa8c3a4b", to = "f6fbb17c-6f36-4284-afed-93f1adc33501", statement_id = "ad49ea00-287e-4c7c-8ab6-fe222d16d493" },
+  { term = "LORD", from = "a364090a-97a1-40fb-adb1-69c0bf14e06f", to = "169d3077-17ed-4ced-aefc-8c4579db89c2", statement_id = "Whatever is LORD_3 is LORD_1" },
+  { term = "LORD", from = "ba3b77d5-8a47-4647-8426-240fd4b42c3b", to = "a364090a-97a1-40fb-adb1-69c0bf14e06f", statement_id = "GOD_4 wills some GOOD_4 to every distinct intellectual being whose esse it causes" },
+  { term = "BLESSED", from = "f9203557-e041-403e-b5e0-f3618b5a3828", to = "2ed78ade-a5c7-4c06-875a-9be127399741", statement_id = "a23dd1ac-1e5b-4842-bf82-385a36607a77" },
+  { term = "IMMENSE", from = "f9a7bc6c-f847-4f4c-9cf8-9f8d1cdcc5bf", to = "1bf8b401-ddd3-459a-bc15-67083eb8d2f1", statement_id = "8bf775e9-34e0-48e5-bdd8-f48edd1040f7" },
+  { term = "INCOMPREHENSIBLE", from = "be092edb-1ed5-41be-b097-d2dbf4be6a7b", to = "cb367167-c649-4645-b2a5-d3f20b6b5d1e", statement_id = "0042dd05-7788-4d77-884d-32f868f9620f" },
+]
+conclusion = "c0f4a346-b265-4091-9d38-69c69582ea95"
+axioms = []
+rule = "Composition of the registered deiFiliusRootUnified without its LORD_2 sense bridge, on primitives whose lord field is LORD_2, then the restricted willing premise and the LORD_3 sense bridge at the same witness"
+meaning = "The registered unified Dei Filius root composition (deiFiliusRootUnified) is applied with every input except 'Whatever is LORD_2 is LORD_1', on the primitives that agree with the given ones except that their lord field is LORD_2; that bridge then holds trivially and nothing about the given lord primitive is used. Its root n is the same witness: n is GOD_4, has will and is LORD_2, so n causes the being of every other being in act as to being. For each such other being that has intellect, the restricted willing premise gives a good of its own that n wills to it. So n is LORD_3, and the LORD_3 sense bridge gives n LORD_1. Every other conjunct is carried over. The senses are not identified: each passage is one listed sense-bridge premise. Joint satisfiability of this whole premise bundle is witnessed by the root model of this batch (on the unified route's root model, with a permissive willing relation). LORD_1 is dominion over everything else; the route makes no claim about a jurisdiction to impose moral obligations. Conditional consequence only; no premise is established."
+
+[[argument]]
+id = "Controls for the typed LORD_3 reading, checked"
+theorem = "controls"
+premises = []
+conclusion = "Controls for the typed LORD_3 reading and the intellectual-recipient premise"
+axioms = []
+sense_mixing_control = true
+rule = "Explicit two-being interpretations, checked by unfolding"
+meaning = "Nonvacuity: the restricted willing premise and the LORD_3 bridge hold and a being is LORD_3 and LORD_1. Strictness: the LORD_3 bridge holds where the LORD_2 bridge fails (a cause and governor of all that wills no good to an existing intellectual creature is not LORD_1); the restricted willing premise holds, with the coextension and the ordered-love reading, where the #1732 willing result's conclusion and CausalExistenceWilling fail. Necessity in these models: without willing, a cause and governor of all is not LORD_3. Sense mixing fails without the sense bridge: a being can be LORD_3 and not LORD_1. Model-witnessed facts about these interpretations only; they show where each premise is needed, not that any premise is false."
+
+[[argument]]
+id = "Joint-satisfiability model of the LORD_3 Dei Filius root route, checked"
+theorem = "rootModel"
+premises = []
+conclusion = "Joint-satisfiability model of the LORD_3 Dei Filius root route"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Reuse of the checked unified root model; the LORD_3 bridge from its LORD_2 bridge by the strength order; the restricted willing premise on the all-true act dictionary"
+meaning = "Given excluded middle, the unified route's root model satisfies its whole bundle and its root has every Dei Filius attribute (DeiFiliusUnifiedRoute controls, which permit the three Mathlib axioms). Its bundle contains 'Whatever is LORD_2 is LORD_1', which entails 'Whatever is LORD_3 is LORD_1'; with a permissive willing relation and its all-true goodness dictionary the restricted willing premise holds; recipient is an intellectual being other than the root. So the LORD_3 route's bundle is jointly satisfiable in this interpretation. Model-witnessed facts only; the permissive willing relation does not discriminate recipient-directed willing."
+
+# ---------------------------------------------------------------- relations
+
+[[relation]]
+id = "GOOD_4 for all in act strengthens GOOD_4 for every distinct intellectual effect"
+subject_kind = "statement"
+subject_id = "c691e3d0-5dd0-404a-a1dd-9a4a278dcd31"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "GOD_4 wills some GOOD_4 to every distinct intellectual being whose esse it causes"
+verification_result_id = "Every GOD_4 wills some GOOD_4 to all in act, so to every distinct intellectual effect"
+strictness_result_id = "Controls for the typed LORD_3 reading, checked"
+note = "Same IsGod, InAct, GoodIn, WillsGoodFor and esse. The strong version gives a willed good to every existing being, God included; the weak one only to a distinct intellectual being whose being God causes. Control part 5: with no intellectual being other than God and no willing, the weak version holds and the strong one fails."
+
+[[relation]]
+id = "LORD_2 being LORD_1 strengthens LORD_3 being LORD_1"
+subject_kind = "statement"
+subject_id = "eb6611a5-f8a7-44f6-9bf1-2f65eb80b3cb"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Whatever is LORD_3 is LORD_1"
+verification_result_id = "LORD_2 being LORD_1 gives LORD_3 being LORD_1"
+strictness_result_id = "Controls for the typed LORD_3 reading, checked"
+note = "Same InAct, CausesIn, esse, Governs and IsLord. The strong version gives LORD_1 to every cause and governor of all; the weak one only to such a being that also wills some good of their own to every other intellectual being. Control part 2: a cause and governor of all that wills no good to an existing intellectual creature satisfies the weak version and falsifies the strong one."

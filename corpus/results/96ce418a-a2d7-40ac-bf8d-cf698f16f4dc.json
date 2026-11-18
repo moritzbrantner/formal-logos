@@ -1,0 +1,11 @@
+{
+  "id": "96ce418a-a2d7-40ac-bf8d-cf698f16f4dc",
+  "label": "Controls for the typed LORD_3 reading, checked",
+  "argument_id": "302367c9-95f7-470e-9554-23a03e72c808",
+  "challenge_module": "TruthCore.Results.Causality.DeiFiliusBenevolentLord.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DeiFiliusBenevolentLord.Solution",
+  "theorem": "TruthCore.Results.Causality.DeiFiliusBenevolentLord.controls",
+  "comparator_config": "results/96ce418a-a2d7-40ac-bf8d-cf698f16f4dc/comparator.json",
+  "status": "solution-present",
+  "description": "Nonvacuity: the restricted willing premise and the LORD_3 bridge hold and a being is LORD_3 and LORD_1. Strictness: the LORD_3 bridge holds where the LORD_2 bridge fails (a cause and governor of all that wills no good to an existing intellectual creature is not LORD_1); the restricted willing premise holds, with the coextension and the ordered-love reading, where the #1732 willing result's conclusion and CausalExistenceWilling fail. Necessity in these models: without willing, a cause and governor of all is not LORD_3. Sense mixing fails without the sense bridge: a being can be LORD_3 and not LORD_1. Model-witnessed facts about these interpretations only; they show where each premise is needed, not that any premise is false."
+}

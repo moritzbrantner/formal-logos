@@ -1,0 +1,11 @@
+{
+  "id": "0e576e4d-f199-4ced-ac09-e81bbd500b6d",
+  "label": "Every GOD_4 wills some GOOD_4 to all in act, so to every distinct intellectual effect",
+  "argument_id": "f9053692-45c5-4796-8f76-edd5b912c500",
+  "challenge_module": "TruthCore.Results.Causality.DeiFiliusBenevolentLord.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DeiFiliusBenevolentLord.Solution",
+  "theorem": "TruthCore.Results.Causality.DeiFiliusBenevolentLord.intellectualWillingOfWillsGoodForAll",
+  "comparator_config": "results/0e576e4d-f199-4ced-ac09-e81bbd500b6d/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration: if every GOD_4 wills some good of its own to every being in act as to being (the #1732 result's conclusion), then in particular to every distinct intellectual such being whose being it causes. Instantiation only; it establishes neither."
+}
