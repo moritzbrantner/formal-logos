@@ -513,3 +513,32 @@ it proves the existing existential tuple, whose witness is the supplied root
 (the type does not separately state that; the proof uses `⟨n, hn⟩` from
 `7abdee27`). Motion's respect carrier is the q.3 profile's `R`. Attempt:
 `a1b799fe-f75c-4e3e-994a-f4bb834f3ac7`.
+
+### Slice 2 update: witness consumer and the appetite application (2026-11-18)
+
+The De ente witness now reaches GOD_4 without projecting it away:
+`deEnteSourceIsGod` (`d9ee967a`, conclusion `7a791743`). See
+[the De ente note](de-ente-esse-source-1628.md#a-god_4-consumer-that-keeps-the-de-ente-witness-1731-slice-2-2026-11-18).
+That note also gives the reasons for not adding a consumer of `654eead1` that
+reaches the root: it would be a proof cycle through `4c79298d`, or a bare
+projection.
+
+The structured appetite → unchanged `HasWill` application stays **OPEN**.
+Its blocker is unchanged from
+[the appetite record](../intellectual-appetite-source.md#declaration-completion-capacity-and-exercise-2026-11-09):
+
+* `AppetitePowerExercise.Capacity.Possessed` gives relational
+  possession-sensitive capacity (seeking needs absence; love and delight need
+  possession).
+* Recognition of that capacity by the unchanged primitive `HasWill` has no
+  premise with positive warrant beyond direct acceptance.
+* The first-source application needs self-knowledge or known-goodness
+  structure, and possessed-good rest without passive reception.
+
+No record in the inspected appetite, will or love notes supplies either the
+appetitive-recognition premise or a nonpassive-source application, so no
+result was registered. Next test: one explicit local response-capacity
+constraint restricted to the represented goods actually used, applied to a
+being that possesses its good. Test it against the existing `cognitiveOnly`
+and `selective` controls before any recognition by `HasWill`. Attempt:
+`e5a36b24-e0f4-4d9c-8cd4-cef767078a7e`.

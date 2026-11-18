@@ -104,4 +104,13 @@ def DeEnteSourceIsClassicalGodRootAt {W P R : Type} (σ : Signature)
     ClassicalGodRootWitnessAt σ m w p GoodIn InPotency MoreIn PriorSimply ComponentOf
       Composite MatterForm Infinite Eternal HasIntellect HasWill n
 
+/-- ONE being is the De ente first source (actual root at `w` of `m`), is a
+first being in the `PriorSimply` order, and is GOD_4 under the supplied
+naming predicate `IsGod`. No necessity, uniqueness of all necessary
+individuals or classical attribute is asserted. -/
+def DeEnteSourceIsGodAt {W B P R : Type} (m : Profile W B) (w : W)
+    (p : PrimaPars.Question3.Article4.Profile B P R)
+    (PriorSimply : B → B → Prop) (IsGod : B → Prop) : Prop :=
+  ∃ n, DeEnteSourceAt m w p n ∧ IsFirstBeing PriorSimply n ∧ IsGod n
+
 end TruthCore.Causality.SameSourceWitness
