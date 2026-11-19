@@ -1,0 +1,17 @@
+{
+  "id": "4b7fbde9-d040-4c7e-84cd-bebbc66bf5b7",
+  "label": "Arbitrarily late deterministic copy-to-toggle law switch",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "1c262955-7c5e-4066-a562-aed00158d52c",
+  "inference_ids": [
+    "a3bb9120-8043-4d23-8b16-a394039ba7e3"
+  ],
+  "meaning": "Rules themselves differ after an arbitrary cutoff, rather than just outputs under one unchanged deterministic rule. Ex-post law coding is a target-dependent description, not a new ultimate ground of the path it encodes.",
+  "definition_ids": [
+    "10d0fb41-49a3-404f-898f-caabd0d0324e",
+    "58d12f26-3402-5f67-b768-3c71f3381894"
+  ],
+  "disambiguation_ids": [
+    "b6e7ec07-9a8e-51c4-a9f8-c9b8e9922ac5"
+  ]
+}

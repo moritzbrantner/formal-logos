@@ -1,0 +1,10 @@
+{
+  "id": "1d290624-53ac-4558-85db-21045ef91438",
+  "label": "Stable, vacuous and ground-status omission controls (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "75853f24-f056-4f48-a71d-730304359e58",
+  "rule": "Explicit positive stable trace, empty evidence cell and independent grounding-scope assignments",
+  "meaning": "Lack of GroundedTotality is not equivalent to law chaos, and law stability is not logically eliminated by an unexplained totality. The scope grounding predicate is weaker than ultimate adequate explanation; actual cross-world possibility and future law change remain separate burdens.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

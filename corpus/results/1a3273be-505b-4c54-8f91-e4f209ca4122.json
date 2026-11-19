@@ -1,0 +1,11 @@
+{
+  "id": "1a3273be-505b-4c54-8f91-e4f209ca4122",
+  "label": "Arbitrarily late deterministic copy-to-toggle law switch",
+  "argument_id": "4b7fbde9-d040-4c7e-84cd-bebbc66bf5b7",
+  "challenge_module": "TruthCore.Results.Explanation.NoFoundationLawChaos.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.NoFoundationLawChaos.Solution",
+  "theorem": "TruthCore.Results.Explanation.NoFoundationLawChaos.lawSwitch",
+  "comparator_config": "results/1a3273be-505b-4c54-8f91-e4f209ca4122/comparator.json",
+  "status": "solution-present",
+  "description": "Rules themselves differ after an arbitrary cutoff, rather than just outputs under one unchanged deterministic rule. Ex-post law coding is a target-dependent description, not a new ultimate ground of the path it encodes."
+}

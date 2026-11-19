@@ -1,0 +1,10 @@
+{
+  "id": "d79c620f-18d8-44e3-a030-cf49299676ad",
+  "label": "Suffix-complete histories forbid universal future-excluding laws",
+  "paraphrase": "For each finite recorded prefix, the openFuture model admits exactly every complete Boolean suffix, with nonempty represented state histories. Every prefix-only exact estimator fails across the class at every later index. Every candidate time-dependent Profile holding on all admitted whole paths must allow all successor pairs after the unobserved boundary. The theorem exactly characterizes all such universal profiles and thus excludes every deterministic or future-excluding global projection. These are analyst alternative histories, not certified metaphysical possibilities, governing efficacy, or fallible epistemic warrant.",
+  "lean_declaration": "TruthCore.Explanation.NoFoundationLawChaos.Certificate",
+  "definition_ids": [
+    "10d0fb41-49a3-404f-898f-caabd0d0324e",
+    "5f8284ad-ca15-536c-a0b2-8bb51186b7ac"
+  ]
+}

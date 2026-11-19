@@ -1,0 +1,164 @@
+module
+
+public import TruthCore.Explanation.LawActuality
+
+/-! Unrestricted future transition alternatives and global law projection.
+
+This is an ontic *conditional* on a supplied set of admissible complete paths,
+not a derivation of that set from the absence of ultimate explanation. The
+observed prefix, the law profile and the represented presence history reuse
+#737/#743. No modal admissibility, physical actuality or grounding relation is
+defined by the Boolean traces. See `docs/notes/no-foundation-law-chaos.md`.
+-/
+
+@[expose] public section
+
+namespace TruthCore.Explanation.NoFoundationLawChaos
+open TruthCore.Modern.Hume.Induction
+open TruthCore.Modern.Hume.Regularity
+open TruthCore.Epistemology.UltimateExplanation
+open TruthCore.Explanation.LawActuality
+open TruthCore.Modal.TemporalHistory
+open TruthCore.Modal.HistoryContrastive
+
+/-- Preserve the entire recorded `true` prefix, while assigning an *arbitrary*
+complete suffix. This permits late flips, repetitions and irregular patterns;
+it is not a probabilistic or causal process. -/
+def splice (n : Nat) (tail : Trace) : Trace :=
+  fun t => if t < n+1 then true else tail t
+
+/-- Every complete Boolean suffix is admitted after the fixed actual record.
+It is the decisive EXTRA ontic-admissibility assumption, not a consequence of
+`¬ GroundedTotality`. An admitted path need not be the actual path. -/
+def SuffixComplete (p : Profile) (n : Nat) : Prop :=
+  ∀ tail : Trace, Cell p on n (splice n tail)
+
+/-- This *one* law profile holds on EVERY admitted whole path, not just the
+actual path or the record. It is an all-alternatives universal projection,
+stronger than a true scientific law interpreted as applying only to actuality. -/
+def UniversalProjection (p q : Profile) (n : Nat) : Prop :=
+  ∀ f, Cell p on n f → Follows q f
+
+/-- Exact, all-admitted-path correctness at a specified future time. #743's
+`UsesRecord` is the independent constraint that an estimator sees no more
+than the common finite observed prefix. No chance or fallible warrant appears. -/
+def UniformForecast (p : Profile) (n k : Nat) (predict : Trace → Bool) : Prop :=
+  ∀ f, Cell p on n f → predict f = f k
+
+/-- A candidate law forbids even one transition at a fully unobserved time.
+Initial-state and past constraints are deliberately not counted. -/
+def FutureExclusion (q : Profile) (n : Nat) : Prop :=
+  ∃ t a b, n+1 ≤ t ∧ ¬ q.step t a b
+
+/-- The very weak law retaining only the observed initial condition: all
+future transitions remain allowed. A nontrivial non-deterministic control. -/
+def unconstrained : Profile := ⟨true, fun _ _ _ => True⟩
+
+/-- Mathematical presence for EVERY complete trace-world: at each time exactly
+one Boolean state is present; `ExistsAt` agrees at now=0. This represents
+states, NOT a persistent concrete bearer or efficient causes. -/
+def realized : History Trace Bool Nat where
+  ontic := { frame := ⟨fun _ _ => True⟩
+             ExistsAt := fun f b => b = f 0
+             Causes := fun _ _ _ => False }
+  IsAt := fun f b t => b = f t
+  now := 0
+
+/-- A *law schedule* chooses the copy transition when false and the toggle
+transition when true. Each fixed complete schedule is an ordinary deterministic
+time-dependent profile; what fixes the schedule is a separate question. -/
+def scheduled (switches : Nat → Bool) : Profile :=
+  ⟨true, fun t a b => b = if switches t then !a else a⟩
+
+/-- The unique trace generated from the initial true state by this schedule. -/
+def generated (switches : Nat → Bool) : Trace :=
+  fun t => Nat.rec true (fun i prior => if switches i then !prior else prior) t
+
+def copySchedule : Nat → Bool := fun _ => false
+def toggleFrom (k : Nat) (t : Nat) : Bool := decide (k ≤ t)
+
+/-- Ex-post transition-code extraction: it is deliberately a function of the
+FULL path, not a grounded law or an observation-based justification. -/
+def scheduleOf (f : Trace) (t : Nat) : Bool := f (t+1) != f t
+
+/-- General law-stability boundary. The iff is an exact characterization:
+unrestricted futures force EVERY later state-pair to be permitted by any
+universal candidate law, independently of its time dependence. An unrestricted
+future cannot retain an all-history deterministic transition rule. -/
+def Certificate : Prop :=
+  (∀ n f, Cell (openFuture n) on n f ↔
+    ∀ i, i < n+1 → f i = true) ∧
+  (∀ n, SuffixComplete (openFuture n) n) ∧
+  (CoherentAtNow realized ∧ ∀ f t, ∃! b, realized.IsAt f b t) ∧
+  (∀ n k, n+1 ≤ k → ∃ f g : Trace,
+    Cell (openFuture n) on n f ∧ Cell (openFuture n) on n g ∧
+    (∀ i, i < n+1 → f i = g i) ∧ f k ≠ g k ∧
+    ¬ SameHistory realized f g) ∧
+  (∀ n k p (predict : Trace → Bool), n+1 ≤ k →
+    SuffixComplete p n → UsesRecord n predict →
+    ¬ UniformForecast p n k predict) ∧
+  (∀ n p q, SuffixComplete p n → UniversalProjection p q n →
+    ∀ t a b, n+1 ≤ t → q.step t a b) ∧
+  (∀ n p q, SuffixComplete p n → FutureExclusion q n →
+    ¬ UniversalProjection p q n) ∧
+  (∀ n p q, SuffixComplete p n → Deterministic q →
+    ¬ UniversalProjection p q n) ∧
+  (∀ n q, UniversalProjection (openFuture n) q n ↔
+    q.initial = true ∧
+    (∀ t, t < n → q.step t true true) ∧
+    (∀ b, q.step n true b) ∧
+    (∀ t a b, n+1 ≤ t → q.step t a b))
+
+/-- Fully deterministic laws themselves can change at any arbitrarily late
+date while sharing the earlier observation record. Every whole path with the
+given initial state has an ex-post deterministic copy/toggle schedule, but
+this coding does not confer causal or explanatory primacy on that schedule. -/
+def LawSwitch : Prop :=
+  (∀ switches, Deterministic (scheduled switches) ∧
+    Follows (scheduled switches) (generated switches) ∧
+    ∀ f, Follows (scheduled switches) f → f = generated switches) ∧
+  (∀ f, f 0 = true → Follows (scheduled (scheduleOf f)) f) ∧
+  (∀ n k, n ≤ k →
+    Cell (openFuture n) on n (generated (toggleFrom k)) ∧
+    Cell (openFuture n) on n (generated copySchedule) ∧
+    (∀ t, t < k → ∀ a b,
+      (scheduled copySchedule).step t a b ↔
+      (scheduled (toggleFrom k)).step t a b) ∧
+    (scheduled copySchedule).step k true true ∧
+    ¬ (scheduled (toggleFrom k)).step k true true ∧
+    generated (toggleFrom k) (k+1) = false ∧
+    generated copySchedule (k+1) = true)
+
+/-- A SINGLE unchanged rival's admissible whole paths: it permits exactly
+those with initial true, equivalently the union of individually deterministic
+copy/toggle-schedule solutions. The arbitrary path itself determines a schedule
+EX POST; nothing establishes that this schedule explains its own actuality.
+This fixes the modal quantifier across every possible observation cutoff. -/
+def OneRival : Prop :=
+  (∀ f, (f 0 = true ↔ ∃ switches, Follows (scheduled switches) f)) ∧
+  (∀ n, SuffixComplete unconstrained n) ∧
+  (∀ n f, Cell unconstrained on n f ↔
+    (∃ switches, Follows (scheduled switches) f) ∧
+    ∀ i, i < n+1 → f i = true) ∧
+  (∀ n q, Deterministic q → ¬ UniversalProjection unconstrained q n)
+
+/-- Nonvacuous/stable and omitted-premise controls: a law can hold on a
+populated stable set; complete suffix freedom does not eliminate the actual
+stable continuation. The empty-cell impostor would make *any* law vacuously
+universal. `brute` has no totality ground yet admits the stable law; `grounded`
+has a totality ground yet may be paired with the open future. Thus missing
+ultimate ground alone does NOT imply suffix freedom in this product model. -/
+def impossible : Profile := ⟨false, stable.step⟩
+
+def Omissions : Prop :=
+  (∀ n, Cell stable on n on ∧ UniversalProjection stable stable n ∧
+    ¬ SuffixComplete stable n) ∧
+  (∀ n, Cell (openFuture n) on n on ∧ Follows stable on ∧
+    UniversalProjection (openFuture n) unconstrained n ∧
+    ¬ Deterministic unconstrained) ∧
+  (∀ n, (¬ ∃ f, Cell impossible on n f) ∧
+    ∀ q, UniversalProjection impossible q n) ∧
+  (∀ n, ¬ GroundedTotality brute ∧ GroundedTotality grounded ∧
+    ¬ SuffixComplete stable n ∧ SuffixComplete (openFuture n) n)
+
+end TruthCore.Explanation.NoFoundationLawChaos

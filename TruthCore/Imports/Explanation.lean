@@ -38,6 +38,7 @@ public import TruthCore.Explanation.MechanismInterventionParity
 public import TruthCore.Explanation.NecessaryFactBoundary
 public import TruthCore.Explanation.NecessaryUltimateSource
 public import TruthCore.Explanation.NoBruteExistence
+public import TruthCore.Explanation.NoFoundationLawChaos
 public import TruthCore.Explanation.OrderingCardinality
 public import TruthCore.Explanation.PSRLaterAxes
 public import TruthCore.Explanation.PSRSelfApplication

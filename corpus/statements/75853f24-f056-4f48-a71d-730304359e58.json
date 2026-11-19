@@ -1,0 +1,10 @@
+{
+  "id": "75853f24-f056-4f48-a71d-730304359e58",
+  "label": "Stable laws and ungrounded totality remain compatible",
+  "paraphrase": "A stable populated law has an exact universal projection on its own admitted cell but does not admit arbitrary suffixes. One stable trace also belongs to the fully open profile. A purely unconstrained non-deterministic law remains universally true. An inconsistent initial record empties the cell and makes every global law vacuously hold. The existing brute ungrounded totality scope can coexist with stability, while a grounded totality scope can coexist with all-suffix openness, since no bridge connects the independent coordinates.",
+  "lean_declaration": "TruthCore.Explanation.NoFoundationLawChaos.Omissions",
+  "definition_ids": [
+    "10d0fb41-49a3-404f-898f-caabd0d0324e",
+    "58d12f26-3402-5f67-b768-3c71f3381894"
+  ]
+}

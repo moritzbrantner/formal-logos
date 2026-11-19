@@ -1,0 +1,10 @@
+{
+  "id": "1c262955-7c5e-4066-a562-aed00158d52c",
+  "label": "Deterministic copying rules can switch arbitrarily late",
+  "paraphrase": "Every stipulated Boolean schedule of copy or toggle rules gives an individually deterministic Profile with a unique complete trace. A schedule that copies before any arbitrarily late k and toggles from k onward shares the earlier prefix with the always-copy law but has the opposite transition at k and opposite state at k+1. Any complete trace initially true can be retrospectively coded by one such deterministic schedule. No causal origin, metaphysical accessibility or prospective availability of that schedule is proved.",
+  "lean_declaration": "TruthCore.Explanation.NoFoundationLawChaos.LawSwitch",
+  "definition_ids": [
+    "10d0fb41-49a3-404f-898f-caabd0d0324e",
+    "58d12f26-3402-5f67-b768-3c71f3381894"
+  ]
+}
