@@ -48,13 +48,6 @@ disambiguations = ["1272a7e5-e3e1-4c91-a1d3-343018262841"]
 [[argument]]
 id = "Literal thinker-only P or not-P yields a necessary thinking concrete root"
 theorem = "necessaryThinkingRootOfThought"
-comparator_theorems = [
-  "noPIsActualRoot",
-  "thinkingRootOfAccessible",
-  "necessaryThinkingRootOfSelected",
-  "selectedNecessaryRootOfThinkingRoot",
-  "existingConcreteRootOfThinkingRoot"
-]
 premises = [
   "e81971f1-601c-57f5-be2d-c4b0624d0cad",
   "30e6e01c-b7f1-536c-86ae-0a9be35dd160",

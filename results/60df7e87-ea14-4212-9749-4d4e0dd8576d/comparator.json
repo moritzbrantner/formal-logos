@@ -2,12 +2,7 @@
   "challenge_module": "TruthCore.Results.Causality.ThinkingRootFork.Challenge",
   "solution_module": "TruthCore.Results.Causality.ThinkingRootFork.Solution",
   "theorem_names": [
-    "TruthCore.Results.Causality.ThinkingRootFork.necessaryThinkingRootOfThought",
-    "TruthCore.Results.Causality.ThinkingRootFork.noPIsActualRoot",
-    "TruthCore.Results.Causality.ThinkingRootFork.thinkingRootOfAccessible",
-    "TruthCore.Results.Causality.ThinkingRootFork.necessaryThinkingRootOfSelected",
-    "TruthCore.Results.Causality.ThinkingRootFork.selectedNecessaryRootOfThinkingRoot",
-    "TruthCore.Results.Causality.ThinkingRootFork.existingConcreteRootOfThinkingRoot"
+    "TruthCore.Results.Causality.ThinkingRootFork.necessaryThinkingRootOfThought"
   ],
   "permitted_axioms": [],
   "enable_nanoda": true

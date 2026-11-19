@@ -43,6 +43,33 @@ theorem ancestorOfPositiveGroundPath (m : Profile W B) (w : W) {c x : B}
     intro selected hAnc
     exact ih (Relation.ReflTransGen.head hEdge hAnc)
 
+/-- The existing full actual-concrete-ground accessibility implies the new
+restricted thinker-accessibility, by Mathlib's accessibility of TransGen.
+The reverse direction is *not* claimed by this proof. -/
+theorem thinkingAccessibleOfConcreteAcc (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop) (b : B)
+    (hAcc : Acc (ActualConcreteGround m w) b) :
+    Acc (ThinkerPredecessor m w Occurs Bears) b := by
+  exact Subrelation.accessible (fun h => h.2.2) hAcc.transGen
+
+/-- Existing Cogito grounding accessibility supplies the new accessibility
+premise with the *same* profile, thought predicates, selected world and bearer. -/
+theorem oldAccessibilitySuppliesThinkingAccessibility (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop)
+    (hOld : ThinkerGroundingAccessible m Occurs Bears w) :
+    ThinkingBearerPredecessorAccessible m w Occurs Bears := by
+  intro b e he hb
+  exact thinkingAccessibleOfConcreteAcc m w Occurs Bears b (hOld b e he hb)
+
+/-- The older all-concrete-ancestor anti-brute premise implies the new
+contingent-*thinker* restriction. The converse needs separate finite controls. -/
+theorem oldGroundingSuppliesThinkingGrounding (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop)
+    (hOld : ThinkerAncestryGrounded m Occurs Bears w) :
+    ThinkingBearerConeContingentGrounded m w Occurs Bears := by
+  intro b e he hb x hCone _ hCont
+  exact hOld b e x he hb hCone.2 hCone.1.1 hCone.1.2 hCont
+
 /-- The **literal negative** horn excludes every actual concrete ground of a
 thinking cone member, but only under the stated no-fresh-thinker premise. -/
 theorem noPIsActualRoot (m : Profile W B) (w : W)
@@ -53,6 +80,20 @@ theorem noPIsActualRoot (m : Profile W B) (w : W)
   refine ⟨hCone.1, ?_⟩
   intro y hy
   exact hNoP (hNoFresh x hCone hThink ⟨y, hy⟩)
+
+/-- A *contingent* selected thinker cannot occupy the negative horn when both
+local grounding premises hold. The literal P/¬P cases remain complementary,
+but they need not each be compatible with additional case assumptions. -/
+theorem contingentBearerHasP (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop) (selected : B)
+    (hActual : ActualConcrete m w selected) (hThink : Thinks Occurs Bears selected)
+    (hNoFresh : NoFreshThinkerInCone m w Occurs Bears selected)
+    (hGrounded : ConeContingentThinkersGrounded m w Occurs Bears selected)
+    (hCont : ContingentAt m.ontic w selected) : P m w Occurs Bears selected := by
+  have hCone : Cone m w selected selected :=
+    ⟨hActual, Relation.ReflTransGen.refl⟩
+  obtain ⟨y, hy⟩ := hGrounded selected hCone hThink hCont
+  exact hNoFresh selected hCone hThink ⟨y, hy⟩
 
 /-- `P` supplies a strictly earlier *thinking* ancestor and `¬P` terminates
 at an actual thinking ground-root. `Acc` is only for the thinker relation:
