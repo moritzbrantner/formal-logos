@@ -5,7 +5,7 @@ results = "TruthCore.Results.Epistemology.NoFoundationPractice"
 [[statement]]
 id = "Every deterministic forecast and high-payoff policy fails on a two-successor evidence cell"
 lean = "UniformBarrier"
-definitions = ["DEF-ULTIMATE-EXPLANATION-EVIDENCE", "DEF-ULTIMATE-EXPLANATION-DECISION"]
+definitions = ["DEF-ULTIMATE-EXPLANATION-EVIDENCE"]
 paraphrase = "For every stance admitting both the constant-true future and the Hume delayed-failure future at every finite horizon, every deterministic forecast based on the shared observed record has a concrete countercontinuation and every three-action policy has a concrete continuation yielding payoff below two. No epistemic entitlement, physical likelihood or impossibility of a safe fallback follows."
 
 [[argument]]
@@ -20,7 +20,7 @@ meaning = "Non-transcription theorem: all deterministic forecast functions and a
 [[statement]]
 id = "A two-successor stance with its own universal guarantee norm cannot endorse an exact projection"
 lean = "InternalDiscipline"
-definitions = ["DEF-ULTIMATE-EXPLANATION-EVIDENCE", "DEF-ULTIMATE-EXPLANATION-DECISION", "DEF-SELF-APPLICATION-NORM"]
+definitions = ["DEF-SELF-APPLICATION-NORM"]
 paraphrase = "For every stance admitting both opposite next outcomes, if it endorses its own strong norm requiring exact cross-future prediction and guaranteed payoff two for entitled claims, it must withhold entitlement from every particular scientific forecast and high-payoff practical projection. Endorsing any one such claim while affirming that norm is internally inconsistent. A stance merely denying an ultimate ground, using a safe action or adopting a fallibilist norm is not refuted."
 
 [[argument]]
@@ -36,7 +36,7 @@ meaning = "Scoped conditional self-undermining, not an unqualified refutation of
 [[statement]]
 id = "Open-future controls preserve safe practice and distinguish strict endorsement"
 lean = "OpenControls"
-definitions = ["DEF-ULTIMATE-EXPLANATION-EVIDENCE", "DEF-ULTIMATE-EXPLANATION-DECISION", "DEF-SELF-APPLICATION-NORM"]
+definitions = ["DEF-ULTIMATE-EXPLANATION-DECISION", "DEF-SELF-APPLICATION-NORM"]
 paraphrase = "A nonempty future cell admits the unchanged and delayed-failure histories. An abstaining stance can consistently maintain the strict norm with no entitled claim. Another stance endorses a safe fallback under a separate weaker action-floor norm, while correctly failing the strict payoff-two norm. The safe policy guarantees payoff one on every admitted trace."
 
 [[argument]]
@@ -51,7 +51,7 @@ meaning = "Nonempty open-future witnesses and explicit positive safe use prevent
 [[statement]]
 id = "Stable future allows positive forecasts and policies under the same strict norm"
 lean = "StableControl"
-definitions = ["DEF-ULTIMATE-EXPLANATION-EVIDENCE", "DEF-ULTIMATE-EXPLANATION-DECISION", "DEF-SELF-APPLICATION-NORM"]
+definitions = ["DEF-ULTIMATE-EXPLANATION-DECISION", "DEF-SELF-APPLICATION-NORM"]
 paraphrase = "When the supplied profile restricts every transition to copying, its populated evidence cell supports exact constant-true forecasts and bet-true policies: a stance endorsing these claims satisfies the identical strict universal guarantee norm. The delayed-failure continuation is excluded. This comparison does not itself warrant assuming the stronger profile in science."
 
 [[argument]]

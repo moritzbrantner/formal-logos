@@ -4,7 +4,6 @@
   "paraphrase": "For every stance admitting both the constant-true future and the Hume delayed-failure future at every finite horizon, every deterministic forecast based on the shared observed record has a concrete countercontinuation and every three-action policy has a concrete continuation yielding payoff below two. No epistemic entitlement, physical likelihood or impossibility of a safe fallback follows.",
   "lean_declaration": "TruthCore.Epistemology.NoFoundationPractice.UniformBarrier",
   "definition_ids": [
-    "4f301d77-0699-5fbb-b931-41b20b839266",
-    "3ecfe3fd-61e4-58a3-adb3-483bf24f7a15"
+    "4f301d77-0699-5fbb-b931-41b20b839266"
   ]
 }
