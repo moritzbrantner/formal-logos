@@ -1,0 +1,12 @@
+{
+  "id": "d2e4867c-b5e3-488a-84ab-502afab843d6",
+  "label": "Concurrent actualization for begun things, from onset and parity",
+  "argument_id": "5915c121-30e9-4231-a701-9506153eb49f",
+  "challenge_module": "TruthCore.Results.Causality.SustainingDependence.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SustainingDependence.Solution",
+  "theorem": "TruthCore.Results.Causality.SustainingDependence.onceBegunOfOnsetParity",
+  "comparator_config": "results/d2e4867c-b5e3-488a-84ab-502afab843d6/comparator.json",
+  "status": "solution-present",
+  "description": "Transcription (single application, invariant 16): given onset, parity is the conclusion restated. Recorded as the typed form of the parity objection to existential inertia, not as progress on the case. Each premise is needed in a checked interpretation: parity (Control part 5, the inertial history, where onset holds) and onset (part 6, no giving, where parity holds vacuously); both hold with the conclusion in part 7. It locates the force of the parity objection in parity, which supplies no warrant independent of 40a97664. All premises stay OPEN. No premise is established.",
+  "transcription": "single_application"
+}

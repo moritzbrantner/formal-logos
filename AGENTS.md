@@ -276,6 +276,13 @@ conditional results, recorded judgments and issues with their references;
 they are advisory and certify nothing, and a missing hit or snapshot is not
 evidence that no prior work exists (truth/README.md, "`brief` and `novelty`").
 
+Before proposing a derivation or reusing a proposition in a new argument, run
+`target/release/truth semantics <ID>` (definitions, senses, and the sense verdicts
+of connected arguments) and the preflight `truth semantics --premise … --conclusion …`.
+Split an unbridged mixing per sense, or bridge it by an explicit `sense_bridges`
+premise, before formalization; `argument_batch.py records`, `truth check` and
+`bind-check` then preserve and enforce it (truth/README.md, "`semantics`").
+
 For every premise touched, inspect `target/release/truth dossier <STMT-ID>`
 (the explorer links the same generated dossier from the statement page). Before
 handoff, update `corpus/attempts/` for failed derivations, rejected readings,

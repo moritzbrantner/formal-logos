@@ -1,0 +1,11 @@
+{
+  "id": "2f538163-c63b-404b-aaf7-592ed91421fd",
+  "label": "Concurrent actualization in every respect from its esse instance",
+  "argument_id": "eda68080-b2c0-4aae-8ce5-a9e17d5fa8fd",
+  "challenge_module": "TruthCore.Results.Causality.HoldingMotion.Challenge",
+  "solution_module": "TruthCore.Results.Causality.HoldingMotion.Solution",
+  "theorem": "TruthCore.Results.Causality.HoldingMotion.lackableActsHeldOfEsse",
+  "comparator_config": "results/2f538163-c63b-404b-aaf7-592ed91421fd/comparator.json",
+  "status": "solution-present",
+  "description": "New non-transcription conditional derivation. Let x be in act in r and able to lack that act. By the lackable-being bridge x is in act as to being and could lack being; by the esse instance something g other than x presently gives x being; by accident-inclusive conservation g presently actualizes x in r. Without accident-inclusive conservation the esse instance does not give C* in the holding sense (Control part 2). All premises stay OPEN. No premise is established."
+}

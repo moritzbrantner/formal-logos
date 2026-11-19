@@ -18,6 +18,7 @@ Deployed at `https://mcp.moenarch.com/mcp` (health: `/healthz`).
 | `research_dossier` | `truth dossier STATEMENT [--issues-from OPEN-ISSUES]` |
 | `research_context` | `truth context TARGET` |
 | `research_related` | `truth related STATEMENT` |
+| `research_semantics` | `truth semantics TARGET` or `truth semantics [--premise P]... --conclusion C [--definition D]... [--bridge B]...` (at most 12 each of premises, definitions and bridges) |
 | `research_inspect` | `truth inspect ID` |
 | `research_history` | `truth issues --from OPEN-ISSUES --for ID` |
 

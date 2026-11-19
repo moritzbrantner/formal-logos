@@ -1,0 +1,11 @@
+{
+  "id": "13c900b6-bf5b-4f90-bce3-692b2d7600b2",
+  "label": "Present-tense reception strengthens onset reception",
+  "subject_kind": "statement",
+  "subject_id": "964928dc-9067-45d4-8de3-c91e27cbe1c6",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "db441b19-a990-47c5-9fde-0de212062837",
+  "verification_result_id": "62947463-802a-4791-8949-6462aab1043d",
+  "note": "Same history, receipt relation and reception predicate; the weak version restricts the moments to a first moment of presence. Strict: Control part 1 (receipt at time 1 only, the thing present from time 1 on)."
+}

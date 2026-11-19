@@ -198,6 +198,19 @@ pub struct BriefArgs {
     pub statement: Option<String>,
 }
 
+/// `semantics --conclusion STATEMENT`, `--bridge STATEMENT[@SENSE,SENSE]` and
+/// `--definition DEF`
+/// (the preflight; `--premise` is shared with `configurations`).
+#[derive(Default)]
+pub struct SemanticsArgs {
+    /// Whether either was given.
+    pub flags: bool,
+    pub conclusion: Option<String>,
+    pub bridges: Vec<String>,
+    /// `--definition DEF`, repeatable: argument-level `definition_ids`.
+    pub definitions: Vec<String>,
+}
+
 /// Every option of every command, parsed in one pass in token order.
 pub struct Args {
     pub machine: bool,
@@ -226,6 +239,7 @@ pub struct Args {
     pub tree: TreeArgs,
     pub index: IndexArgs,
     pub brief: BriefArgs,
+    pub semantics: SemanticsArgs,
     /// `--profile-module MODULE` (`bridge-experiments`)
     pub profile_module: Option<String>,
     pub countermodel: CountermodelArgs,
@@ -346,6 +360,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         tree: TreeArgs::default(),
         index: IndexArgs::default(),
         brief: BriefArgs::default(),
+        semantics: SemanticsArgs::default(),
         profile_module: None,
         countermodel: CountermodelArgs::default(),
         sweep: SweepArgs::default(),
@@ -500,6 +515,22 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                     parsed.brief.question = Some(value);
                 } else {
                     parsed.brief.statement = Some(value);
+                }
+            }
+            "--conclusion" | "--bridge" | "--definition" => {
+                parsed.semantics.flags = true;
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .filter(|value| !value.is_empty())
+                    .ok_or_else(|| usage(format!("{arg} requires a statement ID")))?
+                    .to_owned();
+                if arg == "--conclusion" {
+                    parsed.semantics.conclusion = Some(value);
+                } else if arg == "--bridge" {
+                    parsed.semantics.bridges.push(value);
+                } else {
+                    parsed.semantics.definitions.push(value);
                 }
             }
             "--profile-module" => {

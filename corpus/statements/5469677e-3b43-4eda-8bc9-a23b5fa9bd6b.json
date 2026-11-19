@@ -1,0 +1,10 @@
+{
+  "id": "5469677e-3b43-4eda-8bc9-a23b5fa9bd6b",
+  "label": "Some two distinct beings presently actualize each other in one respect in which both are in act",
+  "paraphrase": "OPEN analyst observation premise, attribution deferred: there are distinct a and b and a respect r with a presently actualizing b in r, b presently actualizing a in r, and both in act in r. Example: two cards leaning on each other, each propped by the other. Each card's propped position is an act it could lack, presently held by the contact force the other card now exerts on it (ordinary statics), so each is MOTION_3 held in the act by which it holds the other. With the holding per se premise and the holding regress it is jointly inconsistent (the argument concluding that no two beings hold each other).",
+  "lean_declaration": "TruthCore.Causality.HoldingMotion.SomeTwoHoldEachOther",
+  "definition_ids": [
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"
+  ]
+}

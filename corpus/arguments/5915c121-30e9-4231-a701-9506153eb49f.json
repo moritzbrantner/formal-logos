@@ -1,0 +1,22 @@
+{
+  "id": "5915c121-30e9-4231-a701-9506153eb49f",
+  "label": "Concurrent actualization for begun things, from onset and parity",
+  "premise_statement_ids": [
+    "fa3e228b-7ed7-4441-aa36-4b120792b148",
+    "5b24ef26-709e-4c67-a03c-cb856a4411eb"
+  ],
+  "conclusion_statement_id": "f4850897-dfe3-4adb-80ab-1b404aab71cf",
+  "inference_ids": [
+    "15ed00ab-3b66-4176-a8d7-b6768a337cd1"
+  ],
+  "meaning": "Transcription (single application, invariant 16): given onset, parity is the conclusion restated. Recorded as the typed form of the parity objection to existential inertia, not as progress on the case. Each premise is needed in a checked interpretation: parity (Control part 5, the inertial history, where onset holds) and onset (part 6, no giving, where parity holds vacuously); both hold with the conclusion in part 7. It locates the force of the parity objection in parity, which supplies no warrant independent of 40a97664. All premises stay OPEN. No premise is established.",
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

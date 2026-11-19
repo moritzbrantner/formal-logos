@@ -1,0 +1,11 @@
+{
+  "id": "94dc553f-d05c-4bbc-bade-5721b5879e9e",
+  "label": "PRIOR_4 requires nonmutual dependence, from the being-without bridges",
+  "argument_id": "2e96d2fa-1fe1-4c74-b31c-60ceed755eb0",
+  "challenge_module": "TruthCore.Results.Causality.PriorityInBeing.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PriorityInBeing.Solution",
+  "theorem": "TruthCore.Results.Causality.PriorityInBeing.priorityInBeingRequiresNonmutualDependence",
+  "comparator_config": "results/94dc553f-d05c-4bbc-bade-5721b5879e9e/comparator.json",
+  "status": "solution-present",
+  "description": "Let y be PRIOR_4 to x: y can be without x and x cannot be without y. If y depended for its being on x, then by 000e1f65 y could not be without x; so y does not depend on x. If x did not depend on y, then by 8ab3d114 x could be without y, which it cannot; so it is not the case that x does not depend on y, and excluded middle (ee4ab504) gives that x depends on y. All three premises remain open; excluded middle is used once, for the one positive dependence. Conditional support option for the PRIOR_4 sibling of 47aff057."
+}

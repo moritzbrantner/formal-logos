@@ -1,0 +1,16 @@
+{
+  "id": "964928dc-9067-45d4-8de3-c91e27cbe1c6",
+  "label": "Whatever has received esse is receiving it at every moment at which it is present",
+  "paraphrase": "OPEN analyst premise, attribution deferred (present-tense reading of reception): in every history of the model, whatever has its esse received in a principle z (EsseReceivedIn x z, DEF-ESSE-RECEIVED-IN, tenseless) is, at every moment t at which it is present, receiving its esse in z at t (Receipt.ReceivesAt v z x t, the primitive present-tense receipt of definition 506ea036): 'x has esse as received, at each t'. Stated over the primitive, which is open between the senses of disambiguation 71d3bdb7; on RECEIVES_ESSE_AT_2 (standing composition) it holds by definition, on RECEIVES_ESSE_AT_1 (passion) it is equivalent to weak concurrent actualization 40a97664. It names no giver; with correlativity it gives 40a97664. Entails the onset reading (registered strength order); strictly stronger (Control part 1: receipt at the first moment only). An existential inertialist who accepts correlativity must deny it, by result 7c62adb5 and the rejection of 40a97664; Control part 1 exhibits that position.",
+  "lean_declaration": "TruthCore.Causality.PresentReceipt.ReceptionIsPresent",
+  "definition_ids": [
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "506ea036-c6bf-4e2d-aee3-7b25bfcdfea6",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "71d3bdb7-92cc-4023-b0ca-1739914628e4"
+  ]
+}

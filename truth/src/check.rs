@@ -2848,36 +2848,11 @@ fn validate(
             &definition_ids,
             &disambiguation_ids,
         )?);
-        // validate_argument_senses
-        let mut senses: HashSet<&str> = strings(fields, "definition_ids").into_iter().collect();
-        for sid in std::iter::once(conclusion)
-            .chain(premises.iter().copied())
-            .chain(commitments.iter().copied())
-        {
-            senses.extend(strings(statement_by_id[sid], "definition_ids"));
-        }
-        let linked = strings(fields, "disambiguation_ids");
-        for disambiguation in &disambiguations {
-            let mut used: Vec<&str> = strings(&disambiguation.fields, "sense_definition_ids")
-                .into_iter()
-                .filter(|sense| senses.contains(sense))
-                .collect::<BTreeSet<_>>()
-                .into_iter()
-                .collect();
-            used.sort();
-            let id = text(&disambiguation.fields, "id");
-            if used.len() > 1 && !linked.contains(&id) {
-                return Err(format!(
-                    "{path}: uses senses {} of '{}' but does not link {id}",
-                    used.join(", "),
-                    py_str(disambiguation.fields.get("term"))
-                ));
-            }
-        }
-        validate_argument_sense_fields(
+        validate_argument_senses(
             path,
             fields,
             &statement_by_id,
+            &disambiguations,
             &senses_index,
             &sense_allowlist,
         )?;
@@ -3969,6 +3944,17 @@ pub(crate) struct Allowlist {
     senses: HashSet<String>,
 }
 
+impl Allowlist {
+    /// Whether the legacy allowlist lets `argument` use every sense in
+    /// `senses` of `term` without a bridge.
+    pub(crate) fn covers(&self, argument: &str, term: &str, senses: &BTreeSet<String>) -> bool {
+        self.arguments
+            .get(argument)
+            .and_then(|terms| terms.get(term))
+            .is_some_and(|ids| senses.iter().all(|id| ids.contains(id)))
+    }
+}
+
 pub(crate) fn load_sense_allowlist(root: &Path) -> Res<Allowlist> {
     let path = root.join(SENSE_ALLOWLIST);
     if !path.exists() {
@@ -4017,6 +4003,52 @@ fn sense_labels(index: &SenseIndex, ids: &BTreeSet<String>) -> String {
         .collect();
     labels.sort();
     labels.join(", ")
+}
+
+/// Python `validate_argument_senses` and `validate_argument_sense_fields`:
+/// the sense rules of one argument whose statement ids are known. An argument
+/// whose statements use two senses of one disambiguation must link it; its
+/// `sense_bridges`, `sense_mixing_control` and `term_senses` must be well
+/// formed; and every term must take one sense unless bridged, a control, or
+/// allowlisted. `truth semantics` preflight runs it with an empty allowlist,
+/// so its verdict is the one `truth check` gives a new argument.
+pub(crate) fn validate_argument_senses<D: std::borrow::Borrow<Record>>(
+    path: &str,
+    fields: &Obj,
+    statement_by_id: &HashMap<&str, &Obj>,
+    disambiguations: &[D],
+    index: &SenseIndex,
+    allowlist: &Allowlist,
+) -> Res<()> {
+    let mut senses: HashSet<&str> = strings(fields, "definition_ids").into_iter().collect();
+    for sid in std::iter::once(text(fields, "conclusion_statement_id"))
+        .chain(strings(fields, "premise_statement_ids"))
+        .chain(strings(fields, "commitment_statement_ids"))
+    {
+        if let Some(statement) = statement_by_id.get(sid) {
+            senses.extend(strings(statement, "definition_ids"));
+        }
+    }
+    let linked = strings(fields, "disambiguation_ids");
+    for disambiguation in disambiguations {
+        let disambiguation: &Record = std::borrow::Borrow::borrow(disambiguation);
+        let mut used: Vec<&str> = strings(&disambiguation.fields, "sense_definition_ids")
+            .into_iter()
+            .filter(|sense| senses.contains(sense))
+            .collect::<BTreeSet<_>>()
+            .into_iter()
+            .collect();
+        used.sort();
+        let id = text(&disambiguation.fields, "id");
+        if used.len() > 1 && !linked.contains(&id) {
+            return Err(format!(
+                "{path}: uses senses {} of '{}' but does not link {id}",
+                used.join(", "),
+                py_str(disambiguation.fields.get("term"))
+            ));
+        }
+    }
+    validate_argument_sense_fields(path, fields, statement_by_id, index, allowlist)
 }
 
 fn validate_argument_sense_fields(
@@ -4122,15 +4154,11 @@ fn validate_argument_sense_fields(
             ));
         }
     }
-    let allowed = allowlist.arguments.get(text(argument, "id"));
     for (term, senses) in &used {
         if senses.len() < 2 || control || bridged(term, senses, bridges) {
             continue;
         }
-        if allowed
-            .and_then(|terms| terms.get(term))
-            .is_some_and(|ids| senses.iter().all(|id| ids.contains(id)))
-        {
+        if allowlist.covers(text(argument, "id"), term, senses) {
             continue;
         }
         return Err(format!(

@@ -33,6 +33,7 @@ pub mod prove_sweep;
 pub mod pyfmt;
 pub mod pyjson;
 pub mod related;
+pub mod semantics;
 pub mod senses;
 pub(crate) mod sha256;
 pub mod strength;

@@ -310,8 +310,8 @@
     "STMT-NOPE"
    ],
    "expect": {
-    "code": 2,
-    "stderr": "corpus error: unknown root statement: STMT-NOPE\n",
+    "code": 3,
+    "stderr": "truth: unknown root statement: STMT-NOPE; pass a uuid, legacy id or label\n",
     "stdout": ""
    },
    "externals": [],
@@ -335,7 +335,7 @@
     "STMT-NOPE"
    ],
    "expect": {
-    "code": 2
+    "code": 3
    },
    "externals": [],
    "name": "",

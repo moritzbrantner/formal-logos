@@ -1,0 +1,8 @@
+{
+  "id": "439f943a-1bf1-4659-8fa4-cf6b83feb708",
+  "label": "Holding per se link: a holder of another that holds it only as itself held",
+  "term": "holding per se link (Lean parameter `AsHeld`)",
+  "definition": "AsHeld y x: y is a link of a holding series below which x stands: y presently actualizes x only as y is itself presently actualized by another in the act by which it holds x, as the stick holds the stone up only while the hand holds the stick. It is the holding counterpart of the per se link MovesAsMoved of the prima via (DEF c9798301-e990-5ca2-a36e-6b11f76206c1), not that relation: MovesAsMoved concerns MOTION_1 movers (reduction from potency to act now), AsHeld concerns MOTION_3 holders (ea1904bc-bdfa-4835-a4a7-8545c5221e2e). It is a parameter of the HoldingMotion definitions, not a constant, so it has no Lean declaration. Two open premises constrain it: HeldInOperativeActIsPerSe gives a sufficient condition for a link, and NoInfiniteHoldingSeries makes it well founded. Nothing says when a link fails.",
+  "basis": "stipulative",
+  "note": "Analyst notion, attribution deferred. Open: whether co-holders count as links. Two cards leaning on each other each hold the other while held by it, so with the sufficient condition both are links of each other, and well-foundedness excludes the pair (docs/notes/caused-mover-cstar.md, section 9.2). The candidate repair, a total-holder link, is formalized separately as AsTotallyHeld (definition 5462ce35-4970-434c-8f2a-0ccc2c1db805; section 10). Would be sourced by a pinned passage stating an essentially ordered series of present holders."
+}

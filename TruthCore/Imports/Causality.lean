@@ -33,6 +33,7 @@ public import TruthCore.Causality.CausalConcreteRivalBoundary
 public import TruthCore.Causality.CausalMapsBatch1
 public import TruthCore.Causality.CausalPowerConcreteness
 public import TruthCore.Causality.CausalPowerConcretenessStrength
+public import TruthCore.Causality.CausedMoverCStar
 public import TruthCore.Causality.ChainInstantiation
 public import TruthCore.Causality.ClassicalGodRevelationBoundary
 public import TruthCore.Causality.ClosedGroundingRoots
@@ -118,6 +119,7 @@ public import TruthCore.Causality.GroundingLimits
 public import TruthCore.Causality.GroundingRegress
 public import TruthCore.Causality.HeadlessCausalAncestry
 public import TruthCore.Causality.HistoricalRemoval
+public import TruthCore.Causality.HoldingMotion
 public import TruthCore.Causality.IlluminationReceipt
 public import TruthCore.Causality.IndexedSignalProvenance
 public import TruthCore.Causality.IndexedSignalReaper
@@ -180,8 +182,11 @@ public import TruthCore.Causality.PossibleCauseOfContingency
 public import TruthCore.Causality.Power1392
 public import TruthCore.Causality.Power1392Exercise
 public import TruthCore.Causality.PowerExistenceBoundary
+public import TruthCore.Causality.PresentReceipt
 public import TruthCore.Causality.PreservationCandidates
 public import TruthCore.Causality.PreservationMeaning
+public import TruthCore.Causality.PrimaViaCertificates
+public import TruthCore.Causality.PriorityInBeing
 public import TruthCore.Causality.ProductiveStore
 public import TruthCore.Causality.ProtectiveProcess
 public import TruthCore.Causality.PureActRoot
@@ -237,6 +242,7 @@ public import TruthCore.Causality.SurveyExternalCause
 public import TruthCore.Causality.SurveyProductiveSource
 public import TruthCore.Causality.SurveySourceEndpointControls
 public import TruthCore.Causality.SustainingCausation
+public import TruthCore.Causality.SustainingDependence
 public import TruthCore.Causality.TeleologyFirstMover
 public import TruthCore.Causality.TemporalActualization
 public import TruthCore.Causality.TemporalCoverageEternity
@@ -247,6 +253,7 @@ public import TruthCore.Causality.TermSenseForks2
 public import TruthCore.Causality.TermSenseForks3
 public import TruthCore.Causality.TermSenseForks4
 public import TruthCore.Causality.ToleranceOriginRival
+public import TruthCore.Causality.TotalHolding
 public import TruthCore.Causality.UnderivedCommonSource
 public import TruthCore.Causality.UnderivedEssenceEsse
 public import TruthCore.Causality.UnderivedNonComposite

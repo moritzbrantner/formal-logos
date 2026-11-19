@@ -1,0 +1,20 @@
+{
+  "id": "781eded8-84fb-4f60-96e1-6546c30ef8f7",
+  "label": "The being-without criterion gives PRIOR_4, by definition",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "ec5ffe6b-faa0-4993-83f5-7563901df329",
+  "inference_ids": [
+    "19e07217-2543-4bac-a828-f195dd8210c3"
+  ],
+  "meaning": "PRIOR_4 is defined as the n. 15 criterion, so the criterion yields PRIOR_4 for every y and x. This is a definitional fact about the sense, not a substantive bridge: the open step of 97fa3a0b, the transport from the criterion to PRIOR_1, does not arise for PRIOR_4.",
+  "term_senses": {
+    "PRIOR": "11d1b100-3b05-4695-9d63-31cb8d09a284"
+  },
+  "definition_ids": [
+    "d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2",
+    "f4365b55-da11-4e27-b5b7-71024d9508be"
+  ],
+  "disambiguation_ids": [
+    "be54be36-3ce8-53f9-8168-50d1114e6c76"
+  ]
+}
