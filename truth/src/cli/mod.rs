@@ -448,7 +448,20 @@ pub fn load(args: &Args) -> Result<(Corpus, Aliases, String), Failure> {
         )
     })?;
     let aliases = corpus.aliases();
-    let frontier_root = resolve_statement(&aliases, &args.frontier_root)?;
+    // An explicit root must name a statement: an unknown one would otherwise
+    // report an empty frontier that reads as "no change" (#1765).
+    let frontier_root = if args.frontier_root_set() {
+        resolve(&aliases, &args.frontier_root, Some(&["statements"]))?.ok_or_else(|| {
+            (
+                3,
+                json!({"code": "unknown_id", "id": args.frontier_root,
+                       "message": format!("unknown root statement: {}; pass a uuid, legacy id or label",
+                                          args.frontier_root)}),
+            )
+        })?
+    } else {
+        resolve_statement(&aliases, &args.frontier_root)?
+    };
     Ok((corpus, aliases, frontier_root))
 }
 
