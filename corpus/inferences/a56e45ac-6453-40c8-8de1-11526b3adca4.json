@@ -1,0 +1,22 @@
+{
+  "id": "a56e45ac-6453-40c8-8de1-11526b3adca4",
+  "label": "Every first mover moved by none is first in being, from the quarta via with PRIOR_4 (inference)",
+  "input_statement_ids": [
+    "a9622441-2db2-5d32-9b02-a9d283bd2949",
+    "6c27657f-a2bf-5c1d-963c-c154b66bfa85",
+    "101bdd62-7cd0-5923-8f03-d9d443f4ba51",
+    "d9fad785-40ab-555a-a1c1-5e39c9d50497",
+    "f296a694-aeea-5fa7-bdbf-0076530f9441",
+    "7067553d-cad9-5d79-b6b2-912e35051530",
+    "957a71fe-ba7e-5633-bef2-f5d287362fc5",
+    "777646a5-3f40-5508-b59a-5e019cf2edce",
+    "6eacb281-8b09-459a-a9f7-4e506edc298e",
+    "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "c51a07a1-4cdb-4b5f-b1ec-ebd8237f834e",
+  "rule": "Apply the existing first-mover-is-first-being theorem at the PRIOR_4 relation",
+  "meaning": "PRIOR_4 sibling of argument f8992ef7, by its existing theorem firstMoverIsFirstBeing instantiated with PriorInBeing CanBeWithout for its priority parameter. Something m is maximal in being (quarta via); whatever else is PRIOR_4 to m causes its being (the PRIOR_4 sibling of 70e98bb5), so it is more a being than m, which nothing is; every first mover moved by none is m. The premises are those of f8992ef7 with the PRIOR_4 sibling in place of 70e98bb5; all remain open. The CAUSE_1/CAUSE_2 and MAXIMAL_6/MAXIMAL_1 mixings are inherited from f8992ef7, where they are allowlisted legacy; here the premises that relate those senses are listed as bridges: 777646a5 (an agent whose being God causes is moved when it moves, relating causing being and moving) and 101bdd62 (maximally true is maximally a being, which links both maximality senses).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

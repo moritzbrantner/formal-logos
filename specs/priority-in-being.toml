@@ -1,0 +1,124 @@
+# Priority in being split from priority in act in a respect (#1751, slice 2).
+# Lane B's 2026-11-18 assessment (PR #1769, item (d) 4) found the one relation
+# PriorSimply (PRIOR_1, DEF-SIMPLE-PRIORITY) used on the prima via route both for
+# priority in act in a respect (a4d3261a, e078f07b, 6ca87431) and for priority in
+# being (47aff057, 97fa3a0b and, through 70e98bb5, 5dacb0db). This batch adds the
+# sense PRIOR_4 (definition f4365b55, PriorityInBeing.PriorInBeing, In V Metaph.
+# lect. 13 n. 15), PRIOR_4 siblings of the being-sense statements, single-sense
+# re-derivations of spine III, one explicit PRIOR_4 -> PRIOR_1 bridge, and a
+# premise-free sense-mixing control. The originals are unchanged. Analyst
+# formulations, attribution deferred. No premise is established.
+# Note: docs/notes/prima-via-priority-split.md.
+
+[batch]
+vocab = "TruthCore.Causality.PriorityInBeing"
+results = "TruthCore.Results.Causality.PriorityInBeing"
+definitions = []
+disambiguations = ["be54be36-3ce8-53f9-8168-50d1114e6c76"]
+
+# ---------------------------------------------------------------- statements
+
+[[statement]]
+id = "If y can be without x and x cannot be without y, then y is PRIOR_4 to x"
+lean = "BeingWithoutCriterionGivesPriorityInBeing"
+paraphrase = "The being-without criterion of priority in being, In V Metaph. lect. 13 n. 15 (claim ab5ec574), read for PRIOR_4: for all y and x, if y can be without x and x cannot be without y (CanBeWithout, DEF-CAN-BE-WITHOUT), then y is prior to x in being. PRIOR_4 sibling of 97fa3a0b, which concludes PRIOR_1 and whose transport to PRIOR_1 is open. Since PRIOR_4 is defined by this criterion (definition f4365b55), the statement is true by definition and carries no transport."
+definitions = ["f4365b55-da11-4e27-b5b7-71024d9508be", "d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2"]
+
+[[statement]]
+id = "If y is PRIOR_4 to x, then x depends for its being on y and y does not so depend on x"
+lean = "PriorityInBeingRequiresNonmutualDependence"
+paraphrase = "OPEN bridge, PRIOR_4 sibling of 47aff057: for all y and x, if y is prior to x in being (y can be without x and x cannot be without y), then x depends for its being on y and y does not depend for its being on x (DependsForBeing, DEF-DEPENDS-FOR-BEING). With PRIOR_4 defined by being-without, this is a bridge from being-without to dependence for being, supported by In V Metaph. lect. 13 n. 18 ('priora non dependent a posterioribus, sicut e converso'; claim 95f41960 reads that text as dependence running one way), not a definitional truth. It follows from the being-without bridges 000e1f65 and 8ab3d114 with excluded middle (this batch). It inherits the failure case recorded for 8ab3d114: if the second relatum is necessary, the first may be independent of it although no world has the first without it. On the real-possibility reading of CanBeWithout, every necessary y is PRIOR_4 to every contingent x that y can be without (x cannot be without a necessary y), so this statement makes each such x depend for its being on y; the derivation applies 8ab3d114 to exactly that case (¬ D x y → W x y with y necessary)."
+definitions = ["f4365b55-da11-4e27-b5b7-71024d9508be", "bf26b9b2-41ed-55b0-9557-dae90ab9b81f", "d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2"]
+
+[[statement]]
+id = "What is PRIOR_4 to a thing is a cause of its being"
+lean = "PriorInBeingIsCauseOfBeing"
+paraphrase = "OPEN, PRIOR_4 sibling of 70e98bb5: for all y and x, if y is prior to x in being, then y is a cause of x's being (CausesIn y x esse, DEF-CAUSE-OF-PERFECTION at esse). Derived in this batch from the PRIOR_4 sibling of 47aff057 and 5dacb0db (whatever a thing depends on for its being is a cause of its being), which uses no priority term. It inherits the 8ab3d114 failure case recorded for its premise: a necessary y is PRIOR_4 to every contingent x that y can be without, so this statement makes y a cause of the being of every such x."
+definitions = ["f4365b55-da11-4e27-b5b7-71024d9508be", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["be54be36-3ce8-53f9-8168-50d1114e6c76", "00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
+
+[[statement]]
+id = "Every first mover moved by none is first in being: none other is PRIOR_4 to it"
+lean = "FirstUnmovedMoverIsFirstInBeing"
+paraphrase = "OPEN, PRIOR_4 sibling of 74eb9113: every first mover moved by none (it moves something and is moved in no respect) is first in being, that is every y prior to it in being is identical with it (IsFirstBeing applied to PRIOR_4). Derived in this batch through the existing quarta via route of 74eb9113 (argument f8992ef7) with the PRIOR_4 sibling of 70e98bb5 in place of 70e98bb5."
+definitions = ["cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d", "25e19d5a-5cdf-5916-a888-f6a0ce970f11", "f4365b55-da11-4e27-b5b7-71024d9508be"]
+
+[[statement]]
+id = "A first unmoved mover first in being is first in PRIOR_1: none other is PRIOR_1 to it"
+lean = "FirstInBeingMoverIsFirstInActPriority"
+paraphrase = "OPEN sense bridge PRIOR_4 to PRIOR_1, analyst formulation, attribution deferred: for every f, if f is a first mover moved by none and nothing other than f is prior to it in being (PRIOR_4), then nothing other than f is prior to it in act in a respect (PRIOR_1, the PriorSimply of DEF-SIMPLE-PRIORITY): every y with PriorSimply y f is f. It is restricted to first unmoved movers that are first in being and is not a general inclusion of PRIOR_1 in PRIOR_4. A general inclusion would be excluded, by an unchecked one-step composition, from the sense-mixing control of this batch, 6ca87431 and an admitted reciprocal cross-respect moving case. It is a sufficient bridge for the pure-act derivation of this batch; a respect-matched weaker variant (only a being in act in a respect in which f is in potency and PRIOR_1 to f must be f) also suffices (checked controls RespectMatchedFirstInBeingBridge and pureActOfRespectMatchedBridge in the vocabulary module). Given the PRIOR_4 sibling c51a07a1 (every first unmoved mover is first in being), the bridge is equivalent to the content of 74eb9113 (checked control firstInActBridge_iff_firstBeing); with an empty CanBeWithout c51a07a1 holds trivially, and on DEF-CAN-BE-WITHOUT's real-possibility reading nothing is PRIOR_4 to a necessarily existing f, so for the classical first mover the bridge just is 74eb9113. The split route therefore gives no new warrant for PRIOR_1-firstness; its gain is sense hygiene. Strongest positive warrant on file: In V Metaph. lect. 13 n. 18, 'omnia priora aliquo modo possunt esse sine posterioribus', which reduces priority by act and potency (n. 17) to being-without 'aliquo modo'; the qualifier suggests that a single unindexed CanBeWithout is too coarse to carry that reduction. Lane B's 2026-11-18 second test named this crux: 'nothing other than the first being is prior to it in act in any respect'. Rival on file: the firstWayDoesNotYieldPureAct model of result afd52425, where a first unmoved mover f is in potency to a respect in which it moves nothing and another being, in act in that respect, is PRIOR_1 to f; there the bridge holds only if some other being is PRIOR_4 to f, so together with c51a07a1 it excludes the model."
+definitions = ["cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d", "25e19d5a-5cdf-5916-a888-f6a0ce970f11", "f4365b55-da11-4e27-b5b7-71024d9508be", "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"]
+
+[[statement]]
+id = "Sense-mixing control: mover priority read as PRIOR_4 excludes reciprocal moving"
+lean = "MoverPriorityAsPriorityInBeingExcludesReciprocity"
+paraphrase = "Logical control, no premises: for any beings, respects, InAct, InPotency, MovesIn and CanBeWithout, if priority from actual moving (the shape of 6ca87431: whatever, in act in r, moves a distinct thing in potency in r is prior to it) is read with PRIOR_4, then no two distinct beings each move the other in this way. PRIOR_4 is asymmetric by definition, so the conflated reading excludes a case that respect-indexed priority in act admits. A fact about the conflated reading, not a claim about which beings move each other."
+definitions = ["f4365b55-da11-4e27-b5b7-71024d9508be", "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8", "a7904c82-eef8-58e4-ac7c-0bb93374cb43"]
+
+# ---------------------------------------------------------------- arguments
+
+[[argument]]
+id = "The being-without criterion gives PRIOR_4, by definition"
+theorem = "beingWithoutCriterion"
+premises = []
+conclusion = "If y can be without x and x cannot be without y, then y is PRIOR_4 to x"
+senses = {PRIOR = "PRIOR_4"}
+axioms = []
+rule = "Unfold the definition of PRIOR_4"
+meaning = "PRIOR_4 is defined as the n. 15 criterion, so the criterion yields PRIOR_4 for every y and x. This is a definitional fact about the sense, not a substantive bridge: the open step of 97fa3a0b, the transport from the criterion to PRIOR_1, does not arise for PRIOR_4."
+
+[[argument]]
+id = "PRIOR_4 requires nonmutual dependence, from the being-without bridges"
+theorem = "priorityInBeingRequiresNonmutualDependence"
+premises = ["000e1f65-6e74-5519-bbf3-300d5f61ada8", "8ab3d114-d6e2-5f6d-805b-ae901f56d39b", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
+conclusion = "If y is PRIOR_4 to x, then x depends for its being on y and y does not so depend on x"
+senses = {PRIOR = "PRIOR_4"}
+axioms = []
+rule = "Contraposition of both bridges, excluded middle for one dependence"
+meaning = "Let y be PRIOR_4 to x: y can be without x and x cannot be without y. If y depended for its being on x, then by 000e1f65 y could not be without x; so y does not depend on x. If x did not depend on y, then by 8ab3d114 x could be without y, which it cannot; so it is not the case that x does not depend on y, and excluded middle (ee4ab504) gives that x depends on y. All three premises remain open; excluded middle is used once, for the one positive dependence. Conditional support option for the PRIOR_4 sibling of 47aff057."
+
+[[argument]]
+id = "What is PRIOR_4 to a thing is a cause of its being, from dependence"
+theorem = "priorInBeingCausesBeing"
+premises = ["If y is PRIOR_4 to x, then x depends for its being on y and y does not so depend on x", "5dacb0db-edb7-5ac0-985b-de65780fceb6"]
+conclusion = "What is PRIOR_4 to a thing is a cause of its being"
+senses = {PRIOR = "PRIOR_4"}
+axioms = []
+rule = "Compose the dependence bridge with dependence-is-caused-being"
+meaning = "PRIOR_4 sibling of argument 1cb656a0: if y is prior in being to x, then x depends for its being on y, and whatever a thing depends on for its being is a cause of its being (5dacb0db, which uses no priority term). Every premise uses one sense of PRIOR, PRIOR_4."
+
+[[argument]]
+id = "Every first mover moved by none is first in being, from the quarta via with PRIOR_4"
+theorem = "firstMoverIsFirstInBeing"
+sense_bridges = [
+  { term = "CAUSE", from = "CAUSE_1", to = "CAUSE_2", statement_id = "777646a5-3f40-5508-b59a-5e019cf2edce" },
+  { term = "MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST", from = "MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST_6", to = "MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST_1", statement_id = "101bdd62-7cd0-5923-8f03-d9d443f4ba51" },
+]
+premises = ["a9622441-2db2-5d32-9b02-a9d283bd2949", "6c27657f-a2bf-5c1d-963c-c154b66bfa85", "101bdd62-7cd0-5923-8f03-d9d443f4ba51", "d9fad785-40ab-555a-a1c1-5e39c9d50497", "f296a694-aeea-5fa7-bdbf-0076530f9441", "7067553d-cad9-5d79-b6b2-912e35051530", "957a71fe-ba7e-5633-bef2-f5d287362fc5", "777646a5-3f40-5508-b59a-5e019cf2edce", "What is PRIOR_4 to a thing is a cause of its being", "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
+conclusion = "Every first mover moved by none is first in being: none other is PRIOR_4 to it"
+senses = {PRIOR = "PRIOR_4"}
+axioms = []
+rule = "Apply the existing first-mover-is-first-being theorem at the PRIOR_4 relation"
+meaning = "PRIOR_4 sibling of argument f8992ef7, by its existing theorem firstMoverIsFirstBeing instantiated with PriorInBeing CanBeWithout for its priority parameter. Something m is maximal in being (quarta via); whatever else is PRIOR_4 to m causes its being (the PRIOR_4 sibling of 70e98bb5), so it is more a being than m, which nothing is; every first mover moved by none is m. The premises are those of f8992ef7 with the PRIOR_4 sibling in place of 70e98bb5; all remain open. The CAUSE_1/CAUSE_2 and MAXIMAL_6/MAXIMAL_1 mixings are inherited from f8992ef7, where they are allowlisted legacy; here the premises that relate those senses are listed as bridges: 777646a5 (an agent whose being God causes is moved when it moves, relating causing being and moving) and 101bdd62 (maximally true is maximally a being, which links both maximality senses)."
+
+[[argument]]
+id = "Every first mover moved by none is PURE_ACT_5, from first in being and a PRIOR_4 bridge"
+theorem = "firstMoverPureActFromFirstInBeing"
+premises = ["Every first mover moved by none is first in being: none other is PRIOR_4 to it", "A first unmoved mover first in being is first in PRIOR_1: none other is PRIOR_1 to it", "a4d3261a-3239-5b44-9953-64ab1b0ed762"]
+conclusion = "6c18d52b-2456-59ae-995f-13440f8c808d"
+sense_bridges = [
+  { term = "PRIOR", from = "PRIOR_4", to = "PRIOR_1", statement_id = "A first unmoved mover first in being is first in PRIOR_1: none other is PRIOR_1 to it" },
+]
+axioms = []
+rule = "Pass from first in being to first in PRIOR_1 by the bridge, then apply the existing pure-act theorem under adopted POTENCY_1"
+meaning = "Under adopted POTENCY_1 (InPotency x r := CanBe x r ∧ ¬ InAct x r): let f be a first mover moved by none. It is first in being (PRIOR_4); the bridge makes it first in PRIOR_1. If f were in POTENCY_1 in some respect r, act's simple priority (a4d3261a) would give a y in act in r that is PRIOR_1 to f, so y = f, and f would be both in act and not in act in r. So f is PURE_ACT_5 (in POTENCY_1 in no respect). It composes the existing theorem firstMoverPureAct (result of argument 3e2366b5) with non-overlap discharged by the adopted sense (AdoptedPotency.nonOverlapByConservativeAnalysis), so c6d6379b, which carries POTENCY_2, is not a premise. The only passage from PRIOR_4 to PRIOR_1 is the listed bridge. Argument 3e2366b5 itself is unchanged and uses PRIOR_1 alone. Given c51a07a1 the bridge is equivalent to the content of 74eb9113, so this route gives no new warrant for PRIOR_1-firstness; its gain is sense hygiene: the 47aff057 equivocation (through 70e98bb5 in f8992ef7) leaves this support, and c6d6379b (POTENCY_2) is discharged by adopted POTENCY_1. The bridge is sufficient, not weakest: a respect-matched weaker variant also suffices (checked control pureActOfRespectMatchedBridge)."
+
+[[argument]]
+id = "Sense-mixing control for PRIOR_4 as mover priority, checked"
+theorem = "moverPriorityAsPriorityInBeingExcludesReciprocity"
+premises = []
+conclusion = "Sense-mixing control: mover priority read as PRIOR_4 excludes reciprocal moving"
+sense_mixing_control = true
+axioms = []
+rule = "Two applications of mover priority contradict the definitional asymmetry of PRIOR_4"
+meaning = "Read with PRIOR_4, priority from actual moving makes each of two reciprocally moving beings prior in being to the other, which the definition of PRIOR_4 excludes. So a respect-free premise like 6ca87431 cannot be read in the being sense where reciprocal cross-respect moving occurs; it is the PRIOR_4 form of the slice-1 reciprocity certificates. A premise-free control showing that mixing fails; it establishes nothing about which beings move each other."

@@ -1,0 +1,26 @@
+{
+  "id": "2e96d2fa-1fe1-4c74-b31c-60ceed755eb0",
+  "label": "PRIOR_4 requires nonmutual dependence, from the being-without bridges",
+  "premise_statement_ids": [
+    "000e1f65-6e74-5519-bbf3-300d5f61ada8",
+    "8ab3d114-d6e2-5f6d-805b-ae901f56d39b",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "conclusion_statement_id": "c4bb0481-60aa-4461-baee-f490a5fc554e",
+  "inference_ids": [
+    "f50c7261-4a5a-4499-87c2-ed47435eb719"
+  ],
+  "meaning": "Let y be PRIOR_4 to x: y can be without x and x cannot be without y. If y depended for its being on x, then by 000e1f65 y could not be without x; so y does not depend on x. If x did not depend on y, then by 8ab3d114 x could be without y, which it cannot; so it is not the case that x does not depend on y, and excluded middle (ee4ab504) gives that x depends on y. All three premises remain open; excluded middle is used once, for the one positive dependence. Conditional support option for the PRIOR_4 sibling of 47aff057.",
+  "term_senses": {
+    "PRIOR": "11d1b100-3b05-4695-9d63-31cb8d09a284"
+  },
+  "definition_ids": [
+    "d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2",
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "f4365b55-da11-4e27-b5b7-71024d9508be"
+  ],
+  "disambiguation_ids": [
+    "be54be36-3ce8-53f9-8168-50d1114e6c76"
+  ]
+}
