@@ -26,6 +26,7 @@ target/debug/truth next
 target/debug/truth next-steps --frontier-root STMT-CATHOLICISM-TRUE
 target/debug/truth results
 target/debug/truth --json support-graph
+target/debug/truth countermodel TruthCore.Results.Causality.SelfOperationLife.pureActLives --all
 cargo fmt --all --check
 cargo clippy --locked -p truth --all-targets -- -D warnings
 cargo test --locked -p truth
@@ -1014,6 +1015,29 @@ frontier is computed in-process. Python's `--root STATEMENT` is
 the frozen goldens `truth/tests/golden/bridge_experiments/` (recorded by the retired `scripts/truth_parity/bridge_experiments.py`) compare both on the cases of
 `test_bridge_experiments.py` and on results the real corpus's attempts cite.
 It ranks what to read first; it proves, refutes and closes nothing.
+
+## `countermodel`
+
+`truth countermodel THEOREM [--omit HYP]... [--all] [--size N] [--module
+MODULE] [--no-check]` (`truth::countermodel`) searches finite omission
+countermodels and renders them as `delta …; decide` certificates, which Lean
+checks unless `--no-check` is given (docs/countermodels.md). It replaces
+`scripts/countermodel.py` and keeps its search order, so the same theorem
+yields the same models: the golden replays in `truth/src/testdata/countermodel/`
+compare recorded `scripts/Countermodel.lean` skeletons of six results against
+the reports the Python finder gave. Exit code 1 when Lean rejects a
+certificate, 2 when the theorem is unavailable or outside the fragment.
+
+## `prove-sweep`
+
+`truth prove-sweep [--theorem NAME]... [--module MODULE]... [--heartbeats N]
+[--batch N]` (`truth::prove_sweep`) tries a fixed tactic portfolio and a
+transcription probe on every frozen Challenge theorem. It runs one `lake env
+lean --json` per batch of Challenges and reports, per target, `closed` (with
+the first closing tactic), `unresolved` or `error`, plus a likely-transcription
+flag (docs/prove-sweep.md). Progress goes to stderr. It is advisory and writes
+nothing; its unit tests cover Challenge parsing, scratch generation and
+message classification without Lean.
 
 ## `senses`
 

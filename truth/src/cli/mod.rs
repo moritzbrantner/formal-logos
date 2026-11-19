@@ -25,6 +25,7 @@ mod check;
 mod configuration_report;
 mod configurations;
 mod context;
+mod countermodel;
 mod currentness;
 mod definitions;
 mod dossier;
@@ -41,6 +42,7 @@ mod models;
 mod next;
 mod next_steps;
 mod orphans;
+mod prove_sweep;
 mod related;
 mod research;
 mod senses;
@@ -111,6 +113,10 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] senses (report [--write] | allowlist [--write] | ratchet --base REV)
        truth [--root PATH] [--json] bridge-experiments RESULT --profile-module MODULE [--limit N]
              [--frontier-root STATEMENT]
+       truth [--root PATH] [--json] countermodel THEOREM [--omit HYP]... [--all] [--size N]
+             [--module MODULE] [--no-check]
+       truth [--root PATH] [--json] prove-sweep [--theorem NAME]... [--module MODULE]... [--heartbeats N]
+             [--batch N]
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
@@ -179,6 +185,8 @@ pub const COMMANDS: &[Command] = &[
     index::COMMAND,
     senses::COMMAND,
     bridge_experiments::COMMAND,
+    countermodel::COMMAND,
+    prove_sweep::COMMAND,
 ];
 
 /// Parses `args` and runs the command it names.
@@ -234,6 +242,20 @@ pub fn run(args: &[OsString]) -> Output {
                 if args.profile_module.is_some() && command.name != "bridge-experiments" =>
             {
                 Err(usage("--profile-module applies only to bridge-experiments"))
+            }
+            Some(command) if args.countermodel.flags && command.name != "countermodel" => Err(
+                usage("--omit, --size and --no-check apply only to countermodel"),
+            ),
+            Some(command) if args.sweep.flags && command.name != "prove-sweep" => Err(usage(
+                "--theorem, --heartbeats and --batch apply only to prove-sweep",
+            )),
+            Some(command)
+                if !args.modules.is_empty()
+                    && !["countermodel", "prove-sweep"].contains(&command.name) =>
+            {
+                Err(usage(
+                    "--module applies only to countermodel and prove-sweep",
+                ))
             }
             Some(command)
                 if args.full_evidence

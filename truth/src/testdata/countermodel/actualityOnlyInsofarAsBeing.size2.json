@@ -1,0 +1,39 @@
+{
+  "theorem": "TruthCore.Results.Causality.PerfectionOfBeing.actualityOnlyInsofarAsBeing",
+  "module": "TruthCore.Results.Causality.PerfectionOfBeing.Solution",
+  "reports": [
+    {
+      "omitted": "hPerfect",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 1,
+        "R": 2
+      },
+      "lean": "namespace Countermodel.actualityOnlyInsofarAsBeing.omit_hPerfect\n/-! Omission model for `hPerfect`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 1\nabbrev R := Fin 2\nabbrev esse : R := 0\nabbrev PerfectIn : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev InAct : B \u2192 R \u2192 Prop := fun x0 x1 => (x0 = 0 \u2227 x1 = 1)\ntheorem certificate :\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.PerfectInsofarAsInActReading PerfectIn InAct) \u2227\n    (TruthCore.Causality.PerfectionOfBeing.PerfectOnlyInsofarAsBeing PerfectIn InAct esse) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.ActualityOnlyInsofarAsBeingReading InAct esse) := by\n  delta TruthCore.Latin.Aquinas.SummaTheologiae.PerfectInsofarAsInActReading TruthCore.Causality.PerfectionOfBeing.PerfectOnlyInsofarAsBeing TruthCore.Latin.Aquinas.SummaTheologiae.ActualityOnlyInsofarAsBeingReading\n  refine \u27e8?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.actualityOnlyInsofarAsBeing.omit_hPerfect"
+    },
+    {
+      "omitted": "hBeing",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 1,
+        "R": 2
+      },
+      "lean": "namespace Countermodel.actualityOnlyInsofarAsBeing.omit_hBeing\n/-! Omission model for `hBeing`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 1\nabbrev R := Fin 2\nabbrev esse : R := 0\nabbrev PerfectIn : B \u2192 R \u2192 Prop := fun x0 x1 => (x0 = 0 \u2227 x1 = 1)\nabbrev InAct : B \u2192 R \u2192 Prop := fun x0 x1 => (x0 = 0 \u2227 x1 = 1)\ntheorem certificate :\n    (TruthCore.Latin.Aquinas.SummaTheologiae.PerfectInsofarAsInActReading PerfectIn InAct) \u2227\n    \u00ac (TruthCore.Causality.PerfectionOfBeing.PerfectOnlyInsofarAsBeing PerfectIn InAct esse) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.ActualityOnlyInsofarAsBeingReading InAct esse) := by\n  delta TruthCore.Latin.Aquinas.SummaTheologiae.PerfectInsofarAsInActReading TruthCore.Causality.PerfectionOfBeing.PerfectOnlyInsofarAsBeing TruthCore.Latin.Aquinas.SummaTheologiae.ActualityOnlyInsofarAsBeingReading\n  refine \u27e8?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.actualityOnlyInsofarAsBeing.omit_hBeing"
+    },
+    {
+      "omitted": null,
+      "kind": "witness",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 1,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.actualityOnlyInsofarAsBeing.witness\n/-! Joint witness: every premise and the conclusion hold. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 1\nabbrev R := Fin 1\nabbrev esse : R := 0\nabbrev PerfectIn : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev InAct : B \u2192 R \u2192 Prop := fun _ _ => False\ntheorem certificate :\n    (TruthCore.Latin.Aquinas.SummaTheologiae.PerfectInsofarAsInActReading PerfectIn InAct) \u2227\n    (TruthCore.Causality.PerfectionOfBeing.PerfectOnlyInsofarAsBeing PerfectIn InAct esse) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.ActualityOnlyInsofarAsBeingReading InAct esse) := by\n  delta TruthCore.Latin.Aquinas.SummaTheologiae.PerfectInsofarAsInActReading TruthCore.Causality.PerfectionOfBeing.PerfectOnlyInsofarAsBeing TruthCore.Latin.Aquinas.SummaTheologiae.ActualityOnlyInsofarAsBeingReading\n  refine \u27e8?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.actualityOnlyInsofarAsBeing.witness"
+    }
+  ]
+}
