@@ -1,0 +1,11 @@
+{
+  "id": "727d5a3f-5af7-4dcc-9e8d-5a9897b23135",
+  "label": "Total-holding controls checked",
+  "argument_id": "5ff73eec-eb0f-4120-9b80-528167833946",
+  "challenge_module": "TruthCore.Results.Causality.TotalHolding.Challenge",
+  "solution_module": "TruthCore.Results.Causality.TotalHolding.Solution",
+  "theorem": "TruthCore.Results.Causality.TotalHolding.controls",
+  "comparator_config": "results/727d5a3f-5af7-4dcc-9e8d-5a9897b23135/comparator.json",
+  "status": "solution-present",
+  "description": "The total-holding per se link and its regress are consistent with two cards leaning on each other on a floor, where the unrestricted holding link and regress are not (cards on a floor); with C* in the holding sense and concurrent actualization they do not give a total holder unheld in its operative act, nor an operative act that cannot be lacked (co-held holder); the whole esse-side bundle with C* gives a holder unheld in every respect that is still in potency in a respect, so the potency clause is needed for pure act (giver); and the potency clause is satisfiable with something in potency (held potency). A finite countermodel shows a premise is needed in that interpretation, not that it is false."
+}

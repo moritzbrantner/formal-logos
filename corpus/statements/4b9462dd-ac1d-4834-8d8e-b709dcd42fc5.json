@@ -1,0 +1,10 @@
+{
+  "id": "4b9462dd-ac1d-4834-8d8e-b709dcd42fc5",
+  "label": "A total holder of another that is not totally held in the act by which it holds cannot be lacking",
+  "paraphrase": "Conclusion, relative first total holder: it is impossible that there be no f, x and r with f totally holding x in r and f not totally held in r. Such an f may still be MOTION_3 held in r by several co-holders, or by a thing it holds back (Control part 2), and may be held in other respects. It is not the conclusion that some total holder is unheld in the act by which it holds.",
+  "lean_declaration": "TruthCore.Causality.TotalHolding.TotalHolderNotTotallyHeldCannotBeLacking",
+  "definition_ids": [
+    "edca52e4-f224-491d-ac45-5816fac1a9fd",
+    "acde39ee-8d60-4ea7-a821-de96c86e5b03"
+  ]
+}

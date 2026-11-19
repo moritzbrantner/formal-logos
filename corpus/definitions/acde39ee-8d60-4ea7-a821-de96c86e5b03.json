@@ -1,0 +1,9 @@
+{
+  "id": "acde39ee-8d60-4ea7-a821-de96c86e5b03",
+  "label": "Totally held: in act in a respect and totally held there by another",
+  "term": "totally held in a respect (Lean `TotallyHeld`)",
+  "definition": "TotallyHeld InAct H x r: x is in act in respect r (InAct, DEF-ACT) and some z totally holds x in r (TotallyHolds, definition edca52e4-f224-491d-ac45-5816fac1a9fd). It strengthens MOTION_3 holding motion (definition ea1904bc-bdfa-4835-a4a7-8545c5221e2e): whatever is totally held is MOTION_3 held (theorem totallyHeld_held), not conversely, since a thing with two co-holders, or held only by a thing it holds back, is held but not totally held. It is not a further sense of 'being moved' in DISAMB-MOTION; it is MOTION_3 with the holder restricted.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.TotalHolding.TotallyHeld",
+  "note": "Analyst notion, attribution deferred (docs/notes/caused-mover-cstar.md, section 10). Ordinary examples: a lamp hanging from a single hook; under the C* support bundle (accident-inclusive conservation), a thing's lackable acts are held by whatever gives it being, so a creaturely holder is then not a total holder of them unless it gives the held thing being (result for TotalHolderOfLackableActGivesBeing)."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "85f1cb63-71fc-40bb-935d-113893479647",
+  "label": "Unheld in being is PURE_ACT_1, from the POTENCY_1 clause and the esse instance",
+  "argument_id": "aa4f2d83-97c8-414c-bbfb-5621e6188ce9",
+  "challenge_module": "TruthCore.Results.Causality.TotalHolding.Challenge",
+  "solution_module": "TruthCore.Results.Causality.TotalHolding.Solution",
+  "theorem": "TruthCore.Results.Causality.TotalHolding.pureActOfUnheldInBeing",
+  "comparator_config": "results/85f1cb63-71fc-40bb-935d-113893479647/comparator.json",
+  "status": "solution-present",
+  "description": "New non-transcription conditional derivation. Let f be in POTENCY_1 in some respect. By the potency clause f is in act as to being and could lack being; by the esse instance of concurrent actualization something other than f presently gives f being, so f is MOTION_3 held as to being. Hence what is not held as to being is in potency in no respect. Unheldness in every respect is more than this needs: unheldness as to being suffices. The esse-side bundle without the potency clause does not give pure act (Control part 3). Compared with the PRIOR_4 route (TruthCore/Causality/PriorityInBeing.lean), where pure act comes from act's simple priority (a4d3261a) with the respect-matched first-in-being bridge, the potency clause here plays the role of act's simple priority and uses no priority relation. Both premises stay OPEN. No premise is established."
+}

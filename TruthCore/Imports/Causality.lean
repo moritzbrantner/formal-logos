@@ -249,6 +249,7 @@ public import TruthCore.Causality.TermSenseForks2
 public import TruthCore.Causality.TermSenseForks3
 public import TruthCore.Causality.TermSenseForks4
 public import TruthCore.Causality.ToleranceOriginRival
+public import TruthCore.Causality.TotalHolding
 public import TruthCore.Causality.UnderivedCommonSource
 public import TruthCore.Causality.UnderivedEssenceEsse
 public import TruthCore.Causality.UnderivedNonComposite

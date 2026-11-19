@@ -1,0 +1,28 @@
+{
+  "id": "aa6643b5-e1f9-4111-9bd5-a7a4a7b4f28c",
+  "label": "A total holder of a lackable act gives being, from the esse-side support of C*-holding",
+  "premise_statement_ids": [
+    "f834ee65-53eb-4aea-b07c-42b06dbd1dfd",
+    "1a99cebe-3c0a-4e32-95bc-e2e458505322",
+    "6e2176cd-eeb6-413c-8fd2-7b2df4a34ad4"
+  ],
+  "conclusion_statement_id": "0e0409d5-a269-4cfe-b194-56b912dcda44",
+  "inference_ids": [
+    "fdb73476-210e-4d37-a03b-ae6c04a8db8b"
+  ],
+  "meaning": "New non-transcription conditional derivation. Let z totally hold x in r, with x in act in r and able to lack that act. By the lackable-being bridge x is in act as to being and could lack being; by the esse instance some g other than x presently gives x being; by accident-inclusive conservation g presently actualizes x in r; since z is the only holder of x in r, g is z. So on the bundle that supports C* in the holding sense (section 9.1), total holding of a lackable act is held only by a giver of being: the total-holding series of lackable acts is a series of givers of being, and the total-holder repair passes the load of the holding route to the esse-root routes' givers of being. All premises stay OPEN. No premise is established.",
+  "term_senses": {
+    "MOTION": "c0e8f9be-36d3-43d5-8340-2e38dcd6b64d"
+  },
+  "definition_ids": [
+    "56b438a0-7fcc-4dd5-916b-1d2e2162310b",
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e",
+    "edca52e4-f224-491d-ac45-5816fac1a9fd"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

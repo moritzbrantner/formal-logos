@@ -1,0 +1,15 @@
+{
+  "id": "f360bb6f-0ea6-41fa-9e8b-b57891ad5803",
+  "label": "Whatever is not MOTION_3 held as to being is PURE_ACT_1",
+  "paraphrase": "Conclusion: whatever is not MOTION_3 held as to being (nothing other than it presently gives it being while it is in act as to being, definition ea1904bc-bdfa-4835-a4a7-8545c5221e2e at the respect esse) is in POTENCY_1 in no respect (PureAct of adopted potency, DEF-PURE-ACT, DEF-POTENCY). A fortiori a holder unheld in every respect is pure act. It is a claim about every being of the domain, not only about holders.",
+  "lean_declaration": "TruthCore.Causality.TotalHolding.UnheldInBeingIsPureAct",
+  "definition_ids": [
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e",
+    "a49e4cf1-ca4f-5519-9724-892af257cedb",
+    "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

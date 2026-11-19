@@ -1,0 +1,13 @@
+{
+  "id": "6fdb45c3-2a30-4d42-9c86-937397d17f85",
+  "label": "A total holder of another that is not MOTION_3 held in the act by which it holds cannot be lacking",
+  "paraphrase": "Conclusion: it is impossible that there be no f, x and r with f totally holding x in r and f not MOTION_3 held in r (definition ea1904bc-bdfa-4835-a4a7-8545c5221e2e). Such an f may be held in other respects; MOTION_3 has no potency clause, so the conclusion is silent on whether f is in potency anywhere. Derived only with the open bridge that a held total holder is totally held; Control part 2 is an interpretation of the total-holding regress in which it fails.",
+  "lean_declaration": "TruthCore.Causality.TotalHolding.UnheldTotalHolderCannotBeLacking",
+  "definition_ids": [
+    "edca52e4-f224-491d-ac45-5816fac1a9fd",
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

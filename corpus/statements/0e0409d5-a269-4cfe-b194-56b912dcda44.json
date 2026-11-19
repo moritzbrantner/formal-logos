@@ -1,0 +1,13 @@
+{
+  "id": "0e0409d5-a269-4cfe-b194-56b912dcda44",
+  "label": "A total holder of an act the held thing could lack presently gives the held thing being",
+  "paraphrase": "Conclusion: if z totally holds x in r (definition edca52e4-f224-491d-ac45-5816fac1a9fd), x is in act in r and x could lack that act (Lackability.CanLack, definition 56b438a0-7fcc-4dd5-916b-1d2e2162310b), then z presently actualizes x as to being (Holding.ActualizesNow z x esse, the holding relation read at esse). So under the C* support bundle a creaturely holder that does not give the held thing being, such as a hook holding a lamp, is not a total holder of the held thing's lackable act: the giver of being co-holds it. It concerns lackable acts only.",
+  "lean_declaration": "TruthCore.Causality.TotalHolding.TotalHolderOfLackableActGivesBeing",
+  "definition_ids": [
+    "edca52e4-f224-491d-ac45-5816fac1a9fd",
+    "56b438a0-7fcc-4dd5-916b-1d2e2162310b",
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"
+  ]
+}

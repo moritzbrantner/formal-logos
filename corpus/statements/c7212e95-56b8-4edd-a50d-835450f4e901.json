@@ -1,0 +1,18 @@
+{
+  "id": "c7212e95-56b8-4edd-a50d-835450f4e901",
+  "label": "Total-holding controls: cards on a floor, co-held holder, unheld giver with a POTENCY_1",
+  "paraphrase": "Closed controls; model statements concern these interpretations only. (1) Cards on a floor: two cards hold each other and are both held by a floor, which also holds a stone and is held by the earth; two beings hold each other, something is totally held, the total-holding per se link holds with a well-founded link relation, and a total holder unheld in its operative act exists (the earth); and every holding per se relation satisfying the unrestricted link 685933c7 there fails to be well founded. So the restricted bundle is consistent with mutual holding. (2) Co-held holder: 1 totally holds 0, while 2 and 3 both hold 1 and hold each other; something is totally held, the total-holding link and regress, the actualizer premise, respect-general concurrent actualization and C* in the holding sense hold, and no total holder is unheld in its operative act; the bridge that a held total holder is totally held fails, and no holder has an operative act it could not lack. (3) Giver: 0 holds 1 as to being and in respect 1, nothing holds 0, and 0 can be in respect 2 without being in act there; the esse instance of concurrent actualization, accident-inclusive conservation, the lackable-being bridge, the actualizer premise, respect-general concurrent actualization and C* in the holding sense hold, and 0 totally holds 1 in an act 1 could lack; yet 0, a holder of another held in no respect, is in POTENCY_1 in respect 2, so the potency clause fails and unheldness in every respect does not give pure act. (4) Held potency: with only 1 able to be in respect 2, the potency clause and the esse instance hold with something in POTENCY_1.",
+  "lean_declaration": "TruthCore.Causality.TotalHolding.Control.Certificate",
+  "definition_ids": [
+    "edca52e4-f224-491d-ac45-5816fac1a9fd",
+    "acde39ee-8d60-4ea7-a821-de96c86e5b03",
+    "5462ce35-4970-434c-8f2a-0ccc2c1db805",
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e",
+    "56b438a0-7fcc-4dd5-916b-1d2e2162310b",
+    "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "a49e4cf1-ca4f-5519-9724-892af257cedb"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}
