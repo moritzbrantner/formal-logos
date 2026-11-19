@@ -1,0 +1,18 @@
+{
+  "id": "6d80fd9f-64a2-4733-863a-cb80064c6a1f",
+  "label": "Stable, vacuous and ground-status omission controls",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "75853f24-f056-4f48-a71d-730304359e58",
+  "inference_ids": [
+    "1d290624-53ac-4558-85db-21045ef91438"
+  ],
+  "meaning": "Lack of GroundedTotality is not equivalent to law chaos, and law stability is not logically eliminated by an unexplained totality. The scope grounding predicate is weaker than ultimate adequate explanation; actual cross-world possibility and future law change remain separate burdens.",
+  "definition_ids": [
+    "10d0fb41-49a3-404f-898f-caabd0d0324e",
+    "5f8284ad-ca15-536c-a0b2-8bb51186b7ac",
+    "58d12f26-3402-5f67-b768-3c71f3381894"
+  ],
+  "disambiguation_ids": [
+    "b6e7ec07-9a8e-51c4-a9f8-c9b8e9922ac5"
+  ]
+}

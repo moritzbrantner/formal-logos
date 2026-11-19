@@ -1,0 +1,10 @@
+{
+  "id": "a3bb9120-8043-4d23-8b16-a394039ba7e3",
+  "label": "Arbitrarily late deterministic copy-to-toggle law switch (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "1c262955-7c5e-4066-a562-aed00158d52c",
+  "rule": "Natural-number recursion for individually unique scheduled paths and an explicit late toggle",
+  "meaning": "Rules themselves differ after an arbitrary cutoff, rather than just outputs under one unchanged deterministic rule. Ex-post law coding is a target-dependent description, not a new ultimate ground of the path it encodes.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

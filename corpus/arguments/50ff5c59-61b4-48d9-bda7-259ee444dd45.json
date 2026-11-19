@@ -1,0 +1,18 @@
+{
+  "id": "50ff5c59-61b4-48d9-bda7-259ee444dd45",
+  "label": "Universal law projection under unrestricted future suffixes",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "d79c620f-18d8-44e3-a030-cf49299676ad",
+  "inference_ids": [
+    "06b25a1e-2f4a-4ab0-b370-f793770bf607"
+  ],
+  "meaning": "All alternatives in a fixed finite-record cell share the prefix but admit every future state pair. Any one law with a forbidden future transition fails to hold of every admitted history; any deterministic such law fails. No inference from no ultimate ground to this ontic alternative range, no actual law choice and no normative scientific entitlement is established.",
+  "definition_ids": [
+    "10d0fb41-49a3-404f-898f-caabd0d0324e",
+    "5f8284ad-ca15-536c-a0b2-8bb51186b7ac",
+    "58d12f26-3402-5f67-b768-3c71f3381894"
+  ],
+  "disambiguation_ids": [
+    "b6e7ec07-9a8e-51c4-a9f8-c9b8e9922ac5"
+  ]
+}

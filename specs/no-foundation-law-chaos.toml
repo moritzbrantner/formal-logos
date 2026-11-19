@@ -1,0 +1,70 @@
+[batch]
+vocab = "TruthCore.Explanation.NoFoundationLawChaos"
+results = "TruthCore.Results.Explanation.NoFoundationLawChaos"
+definitions = [
+  "10d0fb41-49a3-404f-898f-caabd0d0324e",
+  "58d12f26-3402-5f67-b768-3c71f3381894",
+  "5f8284ad-ca15-536c-a0b2-8bb51186b7ac",
+]
+disambiguations = ["b6e7ec07-9a8e-51c4-a9f8-c9b8e9922ac5"]
+
+[[statement]]
+id = "Suffix-complete histories forbid universal future-excluding laws"
+lean = "Certificate"
+definitions = ["10d0fb41-49a3-404f-898f-caabd0d0324e", "58d12f26-3402-5f67-b768-3c71f3381894", "5f8284ad-ca15-536c-a0b2-8bb51186b7ac"]
+disambiguations = ["b6e7ec07-9a8e-51c4-a9f8-c9b8e9922ac5"]
+paraphrase = "For each finite recorded prefix, the openFuture model admits exactly every complete Boolean suffix, with nonempty represented state histories. Every prefix-only exact estimator fails across the class at every later index. Every candidate time-dependent Profile holding on all admitted whole paths must allow all successor pairs after the unobserved boundary. The theorem exactly characterizes all such universal profiles and thus excludes every deterministic or future-excluding global projection. These are analyst alternative histories, not certified metaphysical possibilities, governing efficacy, or fallible epistemic warrant."
+
+[[argument]]
+id = "Universal law projection under unrestricted future suffixes"
+theorem = "certificate"
+premises = []
+conclusion = "Suffix-complete histories forbid universal future-excluding laws"
+axioms = []
+rule = "Arbitrary suffix splice, populated distinct history witnesses and exact Boolean transition characterization"
+meaning = "All alternatives in a fixed finite-record cell share the prefix but admit every future state pair. Any one law with a forbidden future transition fails to hold of every admitted history; any deterministic such law fails. No inference from no ultimate ground to this ontic alternative range, no actual law choice and no normative scientific entitlement is established."
+
+[[statement]]
+id = "Deterministic copying rules can switch arbitrarily late"
+lean = "LawSwitch"
+definitions = ["10d0fb41-49a3-404f-898f-caabd0d0324e", "58d12f26-3402-5f67-b768-3c71f3381894"]
+paraphrase = "Every stipulated Boolean schedule of copy or toggle rules gives an individually deterministic Profile with a unique complete trace. A schedule that copies before any arbitrarily late k and toggles from k onward shares the earlier prefix with the always-copy law but has the opposite transition at k and opposite state at k+1. Any complete trace initially true can be retrospectively coded by one such deterministic schedule. No causal origin, metaphysical accessibility or prospective availability of that schedule is proved."
+
+[[argument]]
+id = "Arbitrarily late deterministic copy-to-toggle law switch"
+theorem = "lawSwitch"
+premises = []
+conclusion = "Deterministic copying rules can switch arbitrarily late"
+axioms = []
+rule = "Natural-number recursion for individually unique scheduled paths and an explicit late toggle"
+meaning = "Rules themselves differ after an arbitrary cutoff, rather than just outputs under one unchanged deterministic rule. Ex-post law coding is a target-dependent description, not a new ultimate ground of the path it encodes."
+
+[[statement]]
+id = "One unrestricted rival admits every deterministic law schedule"
+lean = "OneRival"
+definitions = ["10d0fb41-49a3-404f-898f-caabd0d0324e", "58d12f26-3402-5f67-b768-3c71f3381894"]
+paraphrase = "A single fixed unrestricted Profile works at every observation cutoff: its admitted complete paths are exactly the initial-true paths, equivalently the union of all individually deterministic copy/toggle-schedule solutions. Every finite observed prefix admits all later complete suffixes, and no deterministic Profile projects universally across that same class at any cutoff. This is one formal rival class, not an n-dependent choice of rival metaphysics or an empirically established ontic possibility space."
+
+[[argument]]
+id = "Fixed unrestricted rival equals union of deterministic schedules"
+theorem = "oneRival"
+premises = []
+conclusion = "One unrestricted rival admits every deterministic law schedule"
+axioms = []
+rule = "Exact schedule extraction from each full trace and universal all-prefix suffix admission"
+meaning = "The same fixed admissibility model admits all future changes at every finite cutoff even though each individual path is the unique solution of an ex-post deterministic law schedule. This extra radical admissibility assumption is OPEN as a metaphysical claim and does not follow from no ultimate foundation."
+
+[[statement]]
+id = "Stable laws and ungrounded totality remain compatible"
+lean = "Omissions"
+definitions = ["10d0fb41-49a3-404f-898f-caabd0d0324e", "58d12f26-3402-5f67-b768-3c71f3381894"]
+paraphrase = "A stable populated law has an exact universal projection on its own admitted cell but does not admit arbitrary suffixes. One stable trace also belongs to the fully open profile. A purely unconstrained non-deterministic law remains universally true. An inconsistent initial record empties the cell and makes every global law vacuously hold. The existing brute ungrounded totality scope can coexist with stability, while a grounded totality scope can coexist with all-suffix openness, since no bridge connects the independent coordinates."
+
+[[argument]]
+id = "Stable, vacuous and ground-status omission controls"
+theorem = "omissions"
+premises = []
+conclusion = "Stable laws and ungrounded totality remain compatible"
+axioms = []
+rule = "Explicit positive stable trace, empty evidence cell and independent grounding-scope assignments"
+meaning = "Lack of GroundedTotality is not equivalent to law chaos, and law stability is not logically eliminated by an unexplained totality. The scope grounding predicate is weaker than ultimate adequate explanation; actual cross-world possibility and future law change remain separate burdens."

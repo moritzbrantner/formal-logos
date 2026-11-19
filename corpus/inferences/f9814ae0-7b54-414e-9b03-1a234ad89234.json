@@ -1,0 +1,10 @@
+{
+  "id": "f9814ae0-7b54-414e-9b03-1a234ad89234",
+  "label": "Fixed unrestricted rival equals union of deterministic schedules (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "55113af1-f62c-4c00-89a6-4f0db59ad882",
+  "rule": "Exact schedule extraction from each full trace and universal all-prefix suffix admission",
+  "meaning": "The same fixed admissibility model admits all future changes at every finite cutoff even though each individual path is the unique solution of an ex-post deterministic law schedule. This extra radical admissibility assumption is OPEN as a metaphysical claim and does not follow from no ultimate foundation.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
