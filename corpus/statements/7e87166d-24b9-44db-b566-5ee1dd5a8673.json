@@ -1,7 +1,7 @@
 {
   "id": "7e87166d-24b9-44db-b566-5ee1dd5a8673",
   "label": "On RECEIVES_ESSE_AT_3 with accompaniment correlativity is concurrent actualization",
-  "paraphrase": "Closed result, attribution deferred: for every history, giving relation, origin relation and reception predicate, if whatever has received esse bears the origin relation to something whenever it is present (accompaniment), then correlativity of receiving and giving on RECEIVES_ESSE_AT_3 (relationalReceipt) holds iff weak concurrent actualization 40a97664 holds. So once the relation is granted at every moment of presence, which the inertialist can do, correlativity on the relational sense is 40a97664 restated, as on the standing sense; the relation's term adds nothing to it.",
+  "paraphrase": "Closed result, attribution deferred: for every history, giving relation, origin relation and reception predicate, if whatever has received esse bears the origin relation to something whenever it is present (accompaniment), then correlativity of receiving and giving on RECEIVES_ESSE_AT_3 (relationalReceipt) holds iff weak concurrent actualization 40a97664 holds. So once the relation is granted at every moment of presence, which the inertialist can do, correlativity on the relational sense is equivalent to 40a97664, as on the standing sense. This concerns correlativity (some giver at the moment), not giving by the term (the related term is the giver).",
   "lean_declaration": "TruthCore.Causality.RelationalReceipt.RelationalReadingIsTheCrux",
   "definition_ids": [
     "2a7f7142-70ae-4209-8266-9e0363cf0cb1",

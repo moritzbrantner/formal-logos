@@ -1,7 +1,7 @@
 {
   "id": "ef7ef827-ebae-4b32-ba5a-c02efe40fa58",
   "label": "Whatever bears the origin relation at a moment has received esse and is present then",
-  "paraphrase": "OPEN analyst premise, attribution deferred (foundation of the origin relation on received esse): in every history of the model, whatever bears at moment t a real relation to something as to the principle of its being (OriginRelation.RelatedAt v x g t, the primitive of definition 7b28be97) has its esse received in some principle (DEF-ESSE-RECEIVED-IN) and is present at t. It types the order of subject to accident that ST I q.45 a.3 ad 3 states (the creature is the subject of the relation and prior to it in being; passage fb7bd7bb, read; no claim is recorded). It says nothing about the term of the relation.",
+  "paraphrase": "OPEN analyst premise, attribution deferred (foundation of the origin relation on received esse): in every history of the model, whatever bears at moment t a real relation to something as to the principle of its being (OriginRelation.RelatedAt v x g t, the primitive of definition 7b28be97) has its esse received in some principle (DEF-ESSE-RECEIVED-IN) and is present at t. It is a necessary condition suggested by the order of subject to accident in ST I q.45 a.3 ad 3 (the creature is the subject of the relation and prior to it in being; passage fb7bd7bb, read; no claim is recorded); the priority itself is not typed, nor the priority that ad 3 assigns to the relation on the side of its term. It says nothing about the term of the relation.",
   "lean_declaration": "TruthCore.Causality.RelationalReceipt.FoundedOnReceivedEsse",
   "definition_ids": [
     "7b28be97-9a3c-444f-af46-fe410092c3ee",

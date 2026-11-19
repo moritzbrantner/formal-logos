@@ -42,7 +42,8 @@ open TruthCore.Causality.RelationalReceipt.Control
 theorem controls : TruthCore.Causality.RelationalReceipt.Control.Certificate := by
   sorry
 
-/-- Foundation, accompaniment, coexistence of the term and received onset given
+/-- Foundation, irreflexivity, non-mutuality, accompaniment, coexistence of the
+term and received onset given
 do not entail weak concurrent actualization: `Control` part 1 is a
 counterexample. -/
 theorem coexistentTermDoesNotCarryTheCrux : CoexistentTermDoesNotCarryTheCrux := by

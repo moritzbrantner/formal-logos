@@ -469,16 +469,24 @@ read.
 
 - *co.* Creation produces things without motion. With motion taken away from
   action and passion, only relation remains. So "creatio in creatura non sit
-  nisi relatio quaedam ad Creatorem, ut ad principium sui esse". The analogy
-  is to the passion that comes with motion, which imports a relation to the
-  principle of the motion.
+  nisi relatio quaedam ad Creatorem, ut ad principium sui esse", "sicut in
+  passione quae est cum motu, importatur relatio ad principium motus". The
+  analogue is the relation to the principle of motion that a passion with
+  motion imports, not the passion itself.
 - *ad 1.* The creature's relation to God is real. God's relation to the
   creature is of reason only.
+- *ad 2.* "Creatio passive accepta est in creatura, et est creatura." The
+  relation needs no further relation to refer it.
 - *ad 3.* As a change, creation has the creature as its term. As a relation,
   creation has the creature as its *subject*, and the creature is prior to it
-  in being, as a subject is to an accident. Then: "Neque tamen oportet quod,
-  quandiu creatura sit, dicatur creari: quia creatio importat habitudinem
-  creaturae ad creatorem cum quadam novitate seu incoeptione."
+  in being, as a subject is to an accident. "Sed habet quandam rationem
+  prioritatis ex parte obiecti ad quod dicitur, quod est principium
+  creaturae." Then: "Neque tamen oportet quod, quandiu creatura sit, dicatur
+  creari: quia creatio importat habitudinem creaturae ad creatorem cum quadam
+  novitate seu incoeptione."
+  - This denies the *name* "creari" after onset, not the relation.
+  - It plausibly implies that the habitude remains without the novelty. That
+    is an implicature, not a statement.
 - *obj. 3* holds that when the term of an action exists, action and passion
   cease ("eo existente cessat actio et passio"). Ad 3 does not dispute this
   for creation taken as a change. It moves what remains in the creature to
@@ -487,19 +495,27 @@ read.
 **ST I q.13 a.7.** Passage `12d8ecc5`, newly pinned in the same SCTA file as
 q.13 a.5 and a.8. Read in full.
 
-- *co.* Relations are of three kinds:
-  - of reason on both sides, including every relation between a being and a
-    non-being, "quas format ratio";
-  - real on both sides, including relations "quae consequuntur actionem et
-    passionem, ut motivum et mobile, pater et filius";
-  - real on one side and of reason on the other, as knowledge to the
-    knowable.
+- *co.* Relations come in three classes:
+  1. *Of reason on both sides.* This includes every relation of a thing to
+     itself ("idem eidem idem") and every relation between a being and a
+     non-being, "quas format ratio".
+  2. *Real on both sides*, "secundum aliquid realiter conveniens utrique".
+     This includes relations that follow quantity and relations "quae
+     consequuntur actionem et passionem, ut motivum et mobile, pater et
+     filius".
+  3. *Real in one extreme and of reason in the other*, "quandocumque duo
+     extrema non sunt unius ordinis". The examples are knowledge and sense
+     toward the knowable and the sensible.
 
-  The creature's relation to God is of the third kind.
+  The creature's relation to God is in the third class: "omnes creaturae
+  ordinentur ad ipsum, et non e converso".
 - *ad 6.* Whether two relatives are simultaneous by nature is settled by
-  their significations, not by the order of the things. "Dominus" and
-  "servus" are simultaneous by nature, so God was not Lord before he had a
-  creature subject to him.
+  their significations. "Dominus" and "servus" are simultaneous by nature, so
+  God was not Lord before he had a creature subject to him.
+  - Ad 6 is silent on whether a real relation's term must exist while the
+    relation is borne.
+  - Its example of a knowable that pre-exists knowledge concerns a term
+    without the relation, not a relation without its term.
 
 **ST I q.104 a.1** (re-read). The corpus and ad 2 argue from the
 cause-of-being versus cause-of-becoming distinction and the illumination
@@ -511,8 +527,11 @@ whereby He gives existence". This is the text that states the crux. §2 and
 
 - **Origin relation** `OriginRelation.RelatedAt v x g t` (definition
   `7b28be97`), an explicitly primitive relation. In history `v`, at `t`, `x`
-  bears a real relation to `g` as to the principle of its being. The relation
-  names no action of `g`.
+  bears a real relation to `g` as to the principle of its being. It names no
+  action of `g`.
+- **Irreflexivity** and **non-mutuality** (`Irreflexive`, `NonMutual`). These
+  type the structural part of q.13 a.7: a relation of a thing to itself is of
+  reason, and the creature's relation is real in the creature only.
 - **RECEIVES_ESSE_AT_3**, *relational receipt* (`relationalReceipt`,
   definition `2a7f7142`). It is standing receipt plus "`x` bears the origin
   relation at `t` to something", and it is appended to disambiguation
@@ -520,7 +539,7 @@ whereby He gives existence". This is the text that states the crux. §2 and
 
 | Record | Lean | Content |
 | --- | --- | --- |
-| `ef7ef827` foundation | `FoundedOnReceivedEsse` | bearing the relation at `t` ⇒ received esse and present at `t` (q.45 a.3 ad 3) |
+| `ef7ef827` foundation | `FoundedOnReceivedEsse` | bearing the relation at `t` ⇒ received esse and present at `t` (a necessary condition suggested by q.45 a.3 ad 3; the priority is not typed) |
 | `9fecbef4` accompaniment | `RelationAccompaniesEsse` | received esse and present at `t` ⇒ bears the relation to something at `t` |
 | `264b6b5e` coexistence of the term | `TermCoexists` | term of the relation at `t` is present at `t` |
 | `6da7d94a` giving by the term | `TermGives` | term of the relation at `t` gives the bearer being at `t` |
@@ -528,145 +547,185 @@ whereby He gives existence". This is the text that states the crux. §2 and
 | `42590821` | `relationalPresentIsAccompaniment` | on RECEIVES_ESSE_AT_3: present-tense reading ⇔ accompaniment |
 | `1637b89a` | `relationalReadingIsTheCrux` | on RECEIVES_ESSE_AT_3, given accompaniment: correlativity ⇔ `40a97664` |
 | `b5e9b376` | `someRelationCarriesTheCrux` | (∃ founded, accompanying relation with a giving term) ⇔ `40a97664` |
-| `b9920133` | `coexistentTermDoesNotCarryTheCrux` | foundation + accompaniment + coexistence of the term + received onset given ⊬ `40a97664` |
-| `584bac58` | `controls` | parts 1–4 below |
+| `b9920133` | `coexistentTermDoesNotCarryTheCrux` | foundation + irreflexivity + non-mutuality + accompaniment + coexistence of the term + received onset given ⊬ `40a97664` |
+| `584bac58` | `controls` | parts 1–5 below |
 
 *Controls* (`RelationalReceipt.Control.Certificate`; `false` alone has received
-esse; histories and givings of `SustainingCausation.Control`):
+esse; histories and givings of `SustainingCausation.Control` and
+`ConcurrentActualization.Control`):
 
 1. *A creator present throughout who gives being at onset only*, with the
    relation persisting. The giving is at time 1 and `true` is always present.
-   Foundation, accompaniment, coexistence of the term, received onset given
-   and the relational present-tense reading all hold. Giving by the term,
-   relational correlativity and `40a97664` fail.
-2. *The same, with the relation at onset only*: creation "cum novitate".
-   Giving by the term and relational correlativity hold. Accompaniment and
-   `40a97664` fail.
+   - Hold: foundation, irreflexivity, non-mutuality, accompaniment,
+     coexistence of the term, received onset given, and the relational
+     present-tense reading.
+   - Fail: giving by the term, relational correlativity and `40a97664`.
+2. *The same, with the relation at onset only.* This is an analyst variant.
+   It is not a model of q.45 a.3 ad 3, which denies the name after onset, not
+   the relation.
+   - Hold: giving by the term and relational correlativity.
+   - Fail: accompaniment and `40a97664`.
 3. *Term absent after onset, relation persisting.* Coexistence of the term
-   fails. A relation to a term that has ceased is excluded.
+   fails, so a relation to a term that has ceased is excluded.
 4. *Sustaining with the relation persisting*: everything holds.
+5. *Another giver.* The thing gives itself being from time 1 on, and its
+   relation to `true` persists. `40a97664` holds and giving by the term
+   fails. So for a fixed relation, giving by the term is strictly stronger
+   than `40a97664` requires.
 
 `truth countermodel` does not support structure-typed parameters such as
 `History`, so the controls are hand-built and checked by Lean.
 
 ### Outcome of the test
 
-**Correlativity does gain one piece of independent warrant, but it is not
-enough.** The relational reading splits correlativity into two steps:
+**Correlativity gains independently warranted structure, but not enough.**
+The relational reading types three features of the creature's relation that
+have warrant from q.13 a.7 independent of `40a97664`:
 
-- *Coexistence of the term.* A real relation needs an existing term, because
-  relations between a being and a non-being are of reason only (q.13 a.7 co.).
-  This warrant does not depend on `40a97664`, and q.13 a.7 ad 6
-  (simultaneity by signification) agrees with it.
-- *Giving by the term.* The term is giving now.
+- an existing term (relations to a non-being are of reason);
+- no relation of a thing to itself;
+- real in the creature only.
 
-Coexistence of the term, together with foundation, accompaniment and a given
-onset, does **not** entail `40a97664` (`b9920133`, part 1). What is missing is
-exactly giving by the term. Given accompaniment, relational correlativity is
-equivalent to `40a97664` (`1637b89a`). With the relation left open, giving by
-the term plus accompaniment is equivalent to `40a97664` (`b5e9b376`).
+These features, together with foundation, accompaniment and a given onset,
+do **not** entail `40a97664` (`b9920133`, part 1).
 
-**Each premise of the relational derivation, priced:**
+What would suffice, with accompaniment, is giving by the term
+(`a0b5227d`). It is not shown to be the minimal addition. It is sufficient,
+and for a fixed relation it is strictly stronger than `40a97664`, because it
+also makes the giver the related term (part 5). Two results tie the relational
+reading to the crux:
 
-- *Foundation.* Textual (q.45 a.3 ad 3). Both sides grant it.
-- *Accompaniment.* The inertialist grants it. Part 1 is the theist
-  inertialist who keeps the creature's relation of origin to a creator who
-  exists eternally. It is not stated by q.45 a.3. Ad 3 says that creation in
-  that article's sense imports novelty, so the article's relation, *as
-  creation*, is onset-indexed. That is part 2, and the inertialist grants it
-  too.
-- *Coexistence of the term.* Independent warrant (q.13 a.7). It is cheap for
-  the theist inertialist, whose giver exists throughout. It costs only the
-  variant in which the relation outlives its term (part 3).
-- *Giving by the term.* This is the whole crux. It says that the creature's
-  relation is of the present-action type (mover and moved while the motion
-  lasts), not the completed-action type (father and son).
+- Given accompaniment, relational *correlativity* (some giver at the moment)
+  is equivalent to `40a97664` (`1637b89a`), as on the standing sense.
+- With the relation left open, accompaniment plus giving by the term is
+  equivalent to `40a97664` (`b5e9b376`).
 
-**The strongest rival mechanism** (Substantive Objection Standard):
+**Each premise, priced:**
 
-- *Target:* the step from the q.45 a.3 relation to giving by the term.
-- *Mechanism:* the creature's relation to God is a real relation that follows
-  on a completed action. Like a son's filiation, it persists while its term
-  exists, with no present action of the term.
-- *Independent justification:*
-  - q.13 a.7 co. lists "pater et filius" among the real relations that follow
-    on action and passion. So Aquinas's own classification does not tie a
-    real relation of this kind to an ongoing action.
-  - q.45 a.3 ad 3 grants that creation, under that name, is not said of the
-    creature as long as it exists.
-  - That filiation lasts after the begetting while the father lives is
-    ordinary use. The passage implies it without stating it.
-- *Relevance:* this is the case that `TermGives` must exclude, and part 1
-  realises it.
-- *The dead-father variant does not survive.* A son's real relation to a
-  father who has ceased would be a relation to a non-being, which q.13 a.7
-  makes a relation of reason. That is excluded by `TermCoexists` (part 3).
-  The rival does not need it, because its creator exists throughout.
+- *Foundation.* Suggested by q.45 a.3 ad 3. Both sides grant it.
+- *Accompaniment.* The theist inertialist grants it, keeping the creature's
+  relation to a creator who exists throughout (part 1). The sustaining side
+  grants it too. q.45 a.3 ad 3 gives it some support by implicature.
+- *Coexistence of the term, irreflexivity, non-mutuality.* These have
+  independent warrant from q.13 a.7.
+  - They are cheap for the theist inertialist.
+  - Coexistence costs only the variant in which the relation outlives its
+    term (part 3).
+- *Giving by the term.* This is the sufficient addition. It is stronger than
+  `40a97664` for a fixed relation. Its rejection is part of what the theist
+  inertialist who grants accompaniment must hold, since that inertialist
+  rejects `40a97664`.
 
-**The sustaining reply restates the crux.** The reply is that the
-disanalogy matters: a father causes only the son's becoming, while God causes
-the creature's being (q.104 a.1 co.: "man begets man" is the cause of
-becoming, not of being). That difference bears on the relation's type only
-through the thesis that a relation to a cause of *esse* must be of the
-present-action type. That thesis is the illumination profile of q.104 a.1
-carried to esse, which presupposes `40a97664` (§2, §5). The reply's
-analogy in q.45 a.3 co. ("sicut in passione quae est cum motu") is to the
-passion that comes with motion, and so to the passion sense
-RECEIVES_ESSE_AT_1, on which present receipt is `40a97664` restated
-(`1d52b8f0`).
+**The rival mechanism and the sustaining reply: a standoff** (Substantive
+Objection Standard, applied to both).
 
-**Classification: the crux restated, for a precise reason.** The relation adds
-a term and the term's coexistence, with warrant independent of `40a97664`.
-Coexistence does not reach giving (`b9920133`). Once the relation is granted
-at every moment of presence, which the inertialist does at no cost, relational
-correlativity is `40a97664` (`1637b89a`). The extra content that would close
-the gap is the type of the relation, and choosing the present-action type is
-`40a97664`. No item is added to inertia's price; §4 stands.
+- *Rival:*
+  - *Target:* giving by the term.
+  - *Mechanism:* the creature's relation persists, like filiation, with its
+    term existing and no present action.
+  - *Support:* q.13 a.7 co. lists "pater et filius" among real relations that
+    follow on action and passion. Ordinary use has filiation outlast the
+    begetting while the father lives; this is not stated in the passage.
+  - *Limits:*
+    - That example is a relation of the second class (real on both sides),
+      and q.13 a.7 places the creature's relation in the third.
+    - The father is q.104 a.1's own paradigm of a cause of *becoming* ("man
+      begets man").
+    - So modelling the creature's relation on filiation carries the becoming
+      profile to esse. §5 records that this presupposes the rival.
+  - *Unread material that would strengthen it:* Metaph. Δ15 1021a21–26 and
+    Aquinas, In V Metaph. lect. 17, divide relations by action according to
+    time (having acted, having been acted on). It was not read and carries no
+    weight here.
+- *Sustaining reply:*
+  - *Mechanism:* a relation to a cause of being, as against a cause of
+    becoming, holds only while the cause acts (q.104 a.1).
+  - *Limit:* that is the illumination profile carried to esse, which
+    presupposes `40a97664` (§2, §5).
+  - *Textual pointer:* q.45 a.3 co.'s analogy is the relation to the
+    principle of motion imported in a passion with motion, the mover–moved
+    relation. That points toward the present-action profile. But a textual
+    pointer attributes the crux to Aquinas; it is not independent warrant
+    for it.
+- *Result:* each side carries a causal profile to esse, and each profile
+  presupposes its own side. Neither mechanism has independent justification
+  that the other lacks.
+- *The dead-father variant fails on the text.* A real relation to a father
+  who has ceased would be a relation to a non-being, which q.13 a.7 makes a
+  relation of reason. Coexistence of the term excludes it (part 3). The rival
+  does not need it.
 
-**The vertical approach is exhausted.** Three readings of present receipt
+**Classification.** On the relational sense, given accompaniment,
+correlativity is equivalent to `40a97664` (`1637b89a`). The independently
+warranted structure that the relation adds does not reach giving
+(`b9920133`). So this reading adds no item to inertia's price, and §4
+stands.
+
+**Branch reassessment, not exhaustion.** Three readings of present receipt
 are now typed and characterised:
 
-- passion: the present-tense reading is the crux;
-- standing composition: correlativity is the crux;
-- real relation to the principle of being: giving by the term is the crux,
-  and coexistence of the term, the one independently warranted addition, is
-  too weak.
+- passion: the present-tense reading is equivalent to the crux;
+- standing composition: correlativity is equivalent to the crux;
+- relation with an existing, distinct, non-mutual term: correlativity is
+  equivalent to the crux given accompaniment, and the typed structure is too
+  weak.
 
-Further re-reading of receipt yields no new discriminating test, since any
-receipt implied by standing receipt makes correlativity alone carry the crux
-(§5). A sourced statement that the creature's relation is of the
-present-action type would attribute the crux to Aquinas. It would not be
-independent warrant for it: it would identify that relation with
-RECEIVES_ESSE_AT_1.
+No general result excludes a further reading. The §5 observation, that any
+receipt implied by standing receipt makes correlativity alone carry the crux,
+covers only receipts *weaker* than standing receipt, and every reading with
+added content is stronger. Two vertical readings remain in view, both untyped:
+
+1. *The third-class reading* (ordination, or dependence as measured on
+   measure), which is q.13 a.7's own classification of this relation.
+   - Its exemplar, knowledge toward the knowable, does not involve the
+     knowable acting on the knowledge while the relation is borne.
+   - So on the analogy as it stands it does not point toward giving at the
+     moment.
+   - It is untested whether ordination to a principle *of esse* carries more.
+2. *The priority on the side of the term* (q.45 a.3 ad 3: the relation "habet
+   quandam rationem prioritatis ex parte obiecti"). It is untested whether
+   any typed reading of that priority exceeds coexistence without restating
+   giving.
 
 **Side finding on the co-presence bridge `ffcb81fb`.** Accompaniment and
 coexistence of the term give only this: a received-esse thing present at `t`
-has *some* term present at `t`. The antecedent of `ffcb81fb` needs one
-tenseless cause of esse, present whenever its effect is, in every history.
-That needs the term to be the same at every moment and to be a `CausesIn`
-cause, and neither is typed. No premise moves. This is a lead, not a
-connection.
+has *some* term present at `t`. The antecedent of `ffcb81fb` needs a single
+tenseless cause of esse, distinct from its effect, present whenever its
+effect is, in every history. That needs:
 
-**What would still discriminate** (horizontal; another lane may take it):
+- the same term at every moment;
+- a term that is a `CausesIn` cause;
+- coverage of every history.
+
+Irreflexivity gives distinctness from the effect, but none of the three is
+typed. No premise moves. This is a lead, not a connection.
+
+**What would still discriminate.**
+
+Vertical:
+
+- the two untyped readings above.
+
+Horizontal (another lane may take these):
 
 1. An argument from another family that persistence at `t` needs an
    explanation *at* `t` and not only at onset. Candidates are a PSR variant
    for persistence and the contingency family's explanation of a thing's
    existing now. Each must avoid the illumination analogy and the extended
-   actualization principle, which are already classified as the crux.
+   actualization principle.
 2. An account of esse as received act in the participation family (q.104 a.1
    "every creature has being by participation"; De ente c.4) on which
-   participated act is not a completed terminus. It counts only if the
-   account has warrant that does not already assume `40a97664`.
+   participated act is not a completed terminus. It counts only if its
+   warrant does not already assume `40a97664`.
 3. A comparison at matching scope of inertia's positive commitments, that
    persistence needs no cause and conservation laws, against the sustaining
    account, as explanations of the same persistence data.
 
-**Revision condition.** The judgment changes given a typed, independently
-warranted premise that excludes completed-action relations (the father and
-son type) for relations to a cause of esse, without the illumination or
-actualization premises. Or it changes given one of the horizontal tests
-above.
+**Revision condition.** The judgment changes given a typed,
+independently warranted premise about relations to a cause of esse, from the
+third-class reading, the term-side priority or elsewhere, that entails giving
+at the moment without the illumination or actualization premises. Or it
+changes given one of the horizontal tests above.
 
 ## Self-sweep
 
@@ -682,6 +741,7 @@ Humean-law literature are labelled as leads or sub-version costs.
 §6 adds passages `fb7bd7bb` (ST I q.45 a.3) and `12d8ecc5` (ST I q.13 a.7),
 pinned in the admitted SCTA witness and read, and adds no claim. Its readings
 of them are reported with locators and are not attributed as statements.
-De ente c.4 and the PSR variants are named only as next tests, with no weight.
+De ente c.4, the PSR variants, Metaph. Δ15 and In V Metaph. lect. 17 are
+named only as unread leads or next tests, with no weight.
 That filiation lasts after the begetting is marked as ordinary use, not as
 text.

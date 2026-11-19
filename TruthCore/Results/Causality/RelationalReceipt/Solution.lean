@@ -60,11 +60,15 @@ open TruthCore.Causality.RelationalReceipt.Control
 
 /-- Controls (`Control.Certificate`). -/
 theorem controls : TruthCore.Causality.RelationalReceipt.Control.Certificate := by
-  refine ⟨⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩, ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩, ⟨?_, ?_, ?_⟩,
-    ⟨?_, ?_, ?_, ?_, ?_, ?_⟩⟩
+  refine ⟨⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩, ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩, ⟨?_, ?_, ?_⟩,
+    ⟨?_, ?_, ?_, ?_, ?_, ?_⟩, ⟨?_, ?_⟩⟩
   -- (1) creator present throughout, giving at onset only, persisting relation
   · rintro v x g t ⟨rfl, rfl, ht⟩
     exact ⟨⟨(), rfl⟩, Or.inr ⟨rfl, ht⟩⟩
+  · rintro v x g t ⟨rfl, rfl, _⟩
+    decide
+  · rintro v x g t ⟨rfl, rfl, _⟩ ⟨h, _⟩
+    exact Bool.noConfusion h
   · rintro v x z t rfl hx
     rcases hx with h | ⟨_, ht⟩
     · exact Bool.noConfusion h
@@ -138,14 +142,24 @@ theorem controls : TruthCore.Causality.RelationalReceipt.Control.Certificate := 
     rcases hx with h | ⟨_, ht⟩
     · exact Bool.noConfusion h
     · exact ⟨true, rfl, rfl, ht⟩
+  -- (5) self-giving, persisting relation to `true`
+  · rintro v x t z rfl hx
+    rcases hx with h | ⟨_, ht⟩
+    · exact Bool.noConfusion h
+    · exact ⟨false, rfl, Or.inr ⟨rfl, ht⟩⟩
+  · intro hG
+    rcases (hG () false true 2 ⟨rfl, rfl, by decide⟩).2 with ⟨_, h2⟩ | ⟨h, _⟩
+    · exact absurd h2 (by decide)
+    · exact Bool.noConfusion h
 
-/-- Foundation, accompaniment, coexistence of the term and received onset given
+/-- Foundation, irreflexivity, non-mutuality, accompaniment, coexistence of the
+term and received onset given
 do not entail weak concurrent actualization: `Control` part 1 is a
 counterexample. -/
 theorem coexistentTermDoesNotCarryTheCrux : CoexistentTermDoesNotCarryTheCrux := by
   intro hAll
-  obtain ⟨⟨hF, hA, hT, hO, -, -, -, hNot⟩, -⟩ := controls
+  obtain ⟨⟨hF, hI, hN, hA, hT, hO, -, -, -, hNot⟩, -⟩ := controls
   exact hNot (hAll Unit Bool Nat Unit sustained inertiaGiving persistingOrigin falseReceived
-    hF hA hT hO)
+    hF hI hN hA hT hO)
 
 end TruthCore.Results.Causality.RelationalReceipt
