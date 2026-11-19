@@ -1,0 +1,12 @@
+{
+  "id": "a0b5227d-bca9-44c7-9885-7250be42f9bf",
+  "label": "Concurrent actualization from accompaniment and giving by the term",
+  "argument_id": "1ea8044c-110e-498f-b6e5-bdaf08c16cca",
+  "challenge_module": "TruthCore.Results.Causality.RelationalReceipt.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RelationalReceipt.Solution",
+  "theorem": "TruthCore.Results.Causality.RelationalReceipt.concurrentOfTermGiving",
+  "comparator_config": "results/a0b5227d-bca9-44c7-9885-7250be42f9bf/comparator.json",
+  "status": "solution-present",
+  "description": "Transcription (single application, invariant 16): the last step applies giving by the term, whose consequent is the conclusion's matrix. Let x have its esse received in z and be present at t in history v; by accompaniment x bears the origin relation at t to some g; by giving by the term g gives x being at t. That is weak concurrent actualization 40a97664. Its point is to locate the crux in the relational reading, not to support it: each premise is needed in a checked interpretation (Control part 1, where accompaniment holds and giving by the term fails; part 2, where giving by the term holds and accompaniment fails), and both hold with 40a97664 in part 4. Accompaniment is granted by the inertialist who keeps the creature's relation of origin; giving by the term is the claim that this relation is of the present-action type, and with the relation left open the pair is equivalent to 40a97664 (someRelationCarriesTheCrux). All premises stay OPEN. No premise is established.",
+  "transcription": "single_application"
+}

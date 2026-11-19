@@ -1,0 +1,17 @@
+{
+  "id": "e3b3a8e2-accf-4617-b84e-d7efc1a14ff2",
+  "label": "On RECEIVES_ESSE_AT_3 present-tense reception is accompaniment",
+  "paraphrase": "Closed definitional result, attribution deferred: for every history, origin relation and reception predicate, when present-tense receipt is read relationally (relationalReceipt, RECEIVES_ESSE_AT_3: z receives x's esse at t iff x's esse is received in z, x is present at t, and x bears the origin relation at t to something), the present-tense reading of reception holds iff whatever has received esse bears the origin relation to something whenever it is present (accompaniment).",
+  "lean_declaration": "TruthCore.Causality.RelationalReceipt.RelationalPresentIsAccompaniment",
+  "definition_ids": [
+    "2a7f7142-70ae-4209-8266-9e0363cf0cb1",
+    "7b28be97-9a3c-444f-af46-fe410092c3ee",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "71d3bdb7-92cc-4023-b0ca-1739914628e4",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

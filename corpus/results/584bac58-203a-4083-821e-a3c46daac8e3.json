@@ -1,0 +1,11 @@
+{
+  "id": "584bac58-203a-4083-821e-a3c46daac8e3",
+  "label": "Relational-receipt controls checked",
+  "argument_id": "921e70dd-8d59-4a4f-a08c-e5543f0c5b31",
+  "challenge_module": "TruthCore.Results.Causality.RelationalReceipt.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RelationalReceipt.Solution",
+  "theorem": "TruthCore.Results.Causality.RelationalReceipt.controls",
+  "comparator_config": "results/584bac58-203a-4083-821e-a3c46daac8e3/comparator.json",
+  "status": "solution-present",
+  "description": "With a creator present throughout who gives being at onset only and a persisting relation, foundation, accompaniment, coexistence of the term, received onset given and the relational present-tense reading hold while giving by the term, relational correlativity and 40a97664 fail; with the relation at onset only, giving by the term and relational correlativity hold while accompaniment and 40a97664 fail; with the term absent after onset, coexistence of the term fails; with sustaining giving all hold together. A finite countermodel shows a premise is needed in that interpretation, not that it is false. Model claims concern these interpretations only."
+}
