@@ -92,8 +92,7 @@ private theorem arbitrary_pair (n t : Nat) (a b : Bool) (ht : n+1 ≤ t) :
   · rw [splice_after n tail t ht]
     simp [tail]
   · rw [splice_after n tail (t+1) (by omega)]
-    have hne : t+1 ≠ t := by omega
-    simp [tail, hne]
+    simp [tail]
 
 private theorem future_total (n : Nat) (p q : Profile)
     (hcomplete : SuffixComplete p n) (huniversal : UniversalProjection p q n) :
@@ -160,7 +159,7 @@ private theorem projection_characterization (n : Nat) (q : Profile) :
 /-- Any whole-path invariant above an unrestricted suffix loses all
 substantive future transition exclusions. These are conditional mathematical
 consequences, not an empirical claim that the future really is unrestricted. -/
-theorem certificate : Certificate := by
+theorem certificate : TruthCore.Explanation.NoFoundationLawChaos.Certificate := by
   refine ⟨cell_iff_prefix, ?_, ?_, populated_pair,
     no_uniform_forecast, future_total, no_future_exclusion,
     no_deterministic_projection, projection_characterization⟩
@@ -318,7 +317,7 @@ private theorem impossible_empty (n : Nat) : ¬ ∃ f, Cell impossible on n f :=
 /-- Groundlessness does not, by itself, force anarchy: the brute-grounding
 scope and the stable trace coexist. Conversely an independently supplied
 grounding scope can be paired with open suffixes. Neither is a causal model. -/
-theorem omissions : Omissions := by
+theorem omissions : TruthCore.Explanation.NoFoundationLawChaos.Omissions := by
   refine ⟨?_, ?_, ?_, ?_⟩
   · intro n
     exact ⟨stable_cell n, fun _ hf => hf.1, stable_not_complete n⟩
