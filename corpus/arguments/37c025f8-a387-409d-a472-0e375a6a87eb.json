@@ -1,0 +1,38 @@
+{
+  "id": "37c025f8-a387-409d-a472-0e375a6a87eb",
+  "label": "C* for caused movers from the operation route",
+  "premise_statement_ids": [
+    "631e014f-685d-434c-86b7-4a683a507b4d",
+    "d791628f-72c6-572e-ad1e-03f4f22ba646",
+    "0628359b-4a71-5c67-a84b-0fd80104aceb",
+    "7bf380c6-fcdd-4b14-bae5-d5a5acdebd5c"
+  ],
+  "conclusion_statement_id": "e3afc8a3-b51b-4f44-a093-ce27cf8e1f0a",
+  "inference_ids": [
+    "979fe812-7ec5-4284-967a-20fd0e0d1f0f"
+  ],
+  "meaning": "New non-transcription conditional derivation (the unified derivation of docs/notes/caused-mover-cstar.md, section 2). Let y, whose being another causes, move x in r. By 631e014f the moving is an operation in a respect o in which y is in potency; by d791628f acting actualizes that potency as such; by the Physics III.1 analysis 0628359b y is being moved in o; by 7bf380c6 o is relevant to the moving. The hypothesis that y is moved in some respect is not used. The relevance enters only through 7bf380c6; without it the first three premises give only that y is being moved in some respect (the caused-mover analogue of the God-indexed 777646a5). 631e014f carries the passage from the CAUSE_2 guard to CAUSE_1 moving. Under POTENCY_1, 631e014f fails for steady exercise of a retained power (section 3), so this route does not reach the retained-state movers. All premises stay OPEN. No premise is established.",
+  "definition_ids": [
+    "04cbb76b-147d-5738-9897-0472fa0e0513",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "c195d490-07ab-5cbc-82e9-d0d7c82abd2e",
+    "55a974ea-1ba1-5df4-a03b-1fbaa388dfeb",
+    "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7",
+    "c097f626-c39c-57cd-ade4-ebb2dd900a4c",
+    "508617ab-cf24-5f3b-a387-64b3991359ec"
+  ],
+  "sense_bridges": [
+    {
+      "term": "CAUSE",
+      "from": "572f19f2-8833-4133-8bea-b8b5fa4ac24f",
+      "to": "bdc6001c-9699-4126-9e35-6fbd1da78100",
+      "statement_id": "631e014f-685d-434c-86b7-4a683a507b4d"
+    }
+  ]
+}

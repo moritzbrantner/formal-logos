@@ -33,6 +33,7 @@ public import TruthCore.Causality.CausalConcreteRivalBoundary
 public import TruthCore.Causality.CausalMapsBatch1
 public import TruthCore.Causality.CausalPowerConcreteness
 public import TruthCore.Causality.CausalPowerConcretenessStrength
+public import TruthCore.Causality.CausedMoverCStar
 public import TruthCore.Causality.ChainInstantiation
 public import TruthCore.Causality.ClassicalGodRevelationBoundary
 public import TruthCore.Causality.ClosedGroundingRoots
@@ -118,6 +119,7 @@ public import TruthCore.Causality.GroundingLimits
 public import TruthCore.Causality.GroundingRegress
 public import TruthCore.Causality.HeadlessCausalAncestry
 public import TruthCore.Causality.HistoricalRemoval
+public import TruthCore.Causality.HoldingMotion
 public import TruthCore.Causality.IlluminationReceipt
 public import TruthCore.Causality.IndexedSignalProvenance
 public import TruthCore.Causality.IndexedSignalReaper

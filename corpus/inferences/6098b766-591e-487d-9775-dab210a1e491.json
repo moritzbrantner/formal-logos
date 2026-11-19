@@ -1,0 +1,13 @@
+{
+  "id": "6098b766-591e-487d-9775-dab210a1e491",
+  "label": "The strong second-mover premise and the regress exclude reciprocal moved movers (inference)",
+  "input_statement_ids": [
+    "1e47e6db-da06-5a40-9ccf-fbd1f929c596",
+    "226c38f6-7bf4-552a-9a85-733cfa41d0fa"
+  ],
+  "output_statement_id": "3de4d557-c116-4582-84c9-970bec06eb15",
+  "rule": "Each is a per se link of the other; a two-cycle is not well founded",
+  "meaning": "New non-transcription conditional derivation (control 3 of docs/notes/caused-mover-cstar.md, section 4). If a and b move each other and each is being moved, the strong per se premise 1e47e6db makes each a per se link of the other (it needs only that each is moved in some respect), and the regress 226c38f6 excludes the two-cycle. The conclusion is the negation of the reciprocity observation premise 4f6ac439, so {1e47e6db, 226c38f6, 4f6ac439} is inconsistent and at least one must go. On the relevant-respect premise 96da1d33 with the lending reading the bundle is consistent (scratch control 4, not registered). No premise is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

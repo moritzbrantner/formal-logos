@@ -1,0 +1,28 @@
+{
+  "id": "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+  "label": "Presently actualizing another in a respect: the primitive holding relation",
+  "term": "presently actualizes (holds) in a respect (Lean `Holding.ActualizesNow`)",
+  "definition": "Holding.ActualizesNow z x r: z presently actualizes x in respect r, so that x's present being in act in r is from z's present acting. Explicitly identified PRIMITIVE relation; no axiom constrains it. It is respect-indexed and untimed: all uses are read at one time, as the prima via readings are. At the respect esse it is read as presently giving being, the untimed counterpart of BeingGiving.GivesAt at one moment (definition 158301bc-9585-4145-be60-34f08c9f922c), the passage being the explicit premise PresentMomentHoldingReading. Distinguished from moving in MOTION_1 (MovesIn, reducing from potency to act), from originating causation (an agent no longer acting, such as the forge that heated the iron), from the patient's reaction (the wood cooling the iron does not supply the iron's heat), from counterfactual dependence, and from the tenseless cause of being CausesIn c x esse.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.HoldingMotion.Holding.ActualizesNow",
+  "note": "Analyst primitive, attribution deferred. Would be sourced by a reading that types present actualization, such as the illumination analogy of ST I q.104 a.1 co. (read, claims 40aefb2e and da9c82ed record its time profile only).",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Holding.ActualizesNow z x r says that z is now actualizing x in r: x's being in act in r is at present from z's present acting. The structure only supplies the relation; nothing in Lean says when it holds.",
+    "examples": [
+      "A hand holding a stone aloft holds the stone in its raised position.",
+      "The sun lighting the air holds the air in its illumination (ST I q.104 a.1 co., read; the time profile only).",
+      "Two cards leaning on each other each hold the other in its propped position."
+    ],
+    "exclusions": [
+      "Originating causation by an agent no longer acting: the forge that heated an iron now off the fire.",
+      "The patient's reaction: the wood that cools the iron does not supply the iron's heat.",
+      "Counterfactual dependence alone, and preventing a destroyer."
+    ],
+    "open_obligations": [
+      "No structural property is built in: it is not assumed transitive, asymmetric, irreflexive or functional; several holders of one act are allowed.",
+      "That whatever presently actualizes another in r is in act in r is the open premise ActualizerIsInAct.",
+      "Its identification at esse with giving being at the present moment is the open premise PresentMomentHoldingReading."
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "81523d81-a0e7-47e6-b682-89659e73a50a",
+  "label": "The first holder could not lack the act by which it holds, from C* in the holding sense",
+  "argument_id": "03b26ff9-fe9e-4cba-ad53-07a7c983fc09",
+  "challenge_module": "TruthCore.Results.Causality.HoldingMotion.Challenge",
+  "solution_module": "TruthCore.Results.Causality.HoldingMotion.Solution",
+  "theorem": "TruthCore.Results.Causality.HoldingMotion.unlosableOperativeHolder",
+  "comparator_config": "results/81523d81-a0e7-47e6-b682-89659e73a50a/comparator.json",
+  "status": "solution-present",
+  "description": "New non-transcription conditional derivation. Given a holder f of x, not held in the act r by which it holds: f is in act in r (actualizer premise), and if f could lack that act, C* in the holding sense would make it held in r, so it could not. This is where the holding route uses C*, and through it concurrent actualization. It is not the pure-act conclusion: f may be held in other respects (Control part 6), and MOTION_3 has no potency clause, so nothing here bears on whether f is in potency anywhere. A respect-free holding per se premise would give unheldness in every respect, but it would also cycle on mutual holding in different respects (part 6 has such a pair); that cycle is not registered for MOTION_3. All premises stay OPEN. No premise is established."
+}
