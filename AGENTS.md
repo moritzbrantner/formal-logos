@@ -179,6 +179,13 @@ For a substantial frontier investigation, include enough context to state the th
 
 GitHub research issues follow the [research issue contract](docs/systematic-corpus-loop.md#github-research-issue-contract). They state an answerable question, graph destination, existing dependencies and a live discriminating uncertainty—not a prescribed conclusion or proof count. Before dispatch, reconcile the issue against current `main` and convert its next unresolved slice into the bounded worker brief above. After integration, record delivered evidence and remaining work in the existing issue/handoff; close a completed issue scope without treating the larger philosophical question as settled.
 
+New issues state their requested delivery and acceptance evidence. PRs follow
+the [PR completion contract](docs/systematic-corpus-loop.md#pr-completion-contract):
+show the delivered scope, substantiate claimed graph connections, and reconcile
+affected current assessments and next tests. The GitHub templates prompt for
+this evidence; the same requirements apply to issues and PRs created by CLI or
+API. A partial delivery does not close an unfinished issue scope.
+
 The PR reports the actual premise comparison by linking or pasting the computed delta (`target/release/truth frontier-diff --base <merge-base>`; CI prints it to the job summary of the "Report the premise frontier" step), not a hand-reconstructed list; a new connection is not itself a discharge. A new verified, non-transcription argument is positive **conditional support-option** progress even if it replaces one leaf with several open premises in the expanded-route diagnostic. Record those new obligations separately; neither the new argument nor a lower route cost establishes its conclusion. For non-proof work, use “none” or “no premise change” where applicable.
 
 The coordinator runs `python3 scripts/worker_env.py --check` once for the
