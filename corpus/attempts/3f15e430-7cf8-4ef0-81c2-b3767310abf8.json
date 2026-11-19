@@ -1,0 +1,34 @@
+{
+  "id": "3f15e430-7cf8-4ef0-81c2-b3767310abf8",
+  "label": "Invariant-16 review of the 50 likely transcriptions flagged by the PR 1788 prove-sweep",
+  "date": "2026-11-19",
+  "kind": "derivation",
+  "statement_ids": [
+    "1638e087-e463-598b-805c-1c7b937882b4",
+    "1b1462e6-c285-448c-87e2-3053bc05a341",
+    "0b5da48f-7d2b-43c2-8c28-064b5cf63f7b",
+    "84751fc2-0179-49ce-b96a-04d95781d8bc",
+    "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7",
+    "5e5aa271-d500-41c7-a470-32969b00a5af",
+    "7361a77f-a6fe-4a8a-b6f4-400a0d7c3750",
+    "3b38aa55-ee4f-4dfb-aa9b-f5ab8d0f7121",
+    "8dc79019-29fe-57a6-83a6-e2f7278efcba",
+    "2cc0cc30-8404-5681-94ec-b5cf6e85a93f"
+  ],
+  "outcome": "succeeded",
+  "summary": "Reviewed each of the 50 Challenge theorems that the prove-sweep transcription probe of PR 1788 closed (after intros, assumption or one hypothesis application), against invariant 16 and the corpus-model transcription kinds. Each Solution proof and Challenge type was read. Outcome (a) already correctly declared, 38: the 23 Aristotle Physics results (opaque_atoms: CompressionWithoutVoid, EveryChangingSubjectDivisible, EveryMotionTemporallyDivisible, GenerationNotAlteration, MotionMoreContrary, MultipleProperCauses, NaturalErrorTeleology, NaturalTeleology, NoAlterationIntermediate, NoContinuousThingPartless, NoIndeterminateChange, PhysicalFourCauses, PhysicsKnowsMatterForm, PlaceFromReplacement, PlaceNotBody, PrimaryNowIndivisible, TimeAppearsCircular, TimeBelongsToMotion, TimeIsNotMotion, TimeMagnitudeContinuous, VoidFromMotionArgument, VoidNotNecessaryForMotion, ZenoArrowStationary); instantiation: RawCounterProjection cbe881d3, RevelationRecognition.Actual 89a7debe, ResurrectionPilotGodExists 9226f707, ScgInnovatingCauseTimaeusDistinctCause 534051b3, FirstUnmovedMoverExistsOrNotFromEm dd5f6ff3, ComposerTemporalDefinitions.NoSelfStrength.Bound 8e634495, CreatureSenses e3d2cb7a, GradesAtBeingRoutes 106fce52, CollectivePossibility GlobalStrength f337cebd and RealizationStrength 4e239cdd; single_application: RevelationRecognition.Persistence f140359a, RetainedDuty f19031d0, CosmosCauseA 84eab30e, CosmosCauseB f38987f0; assembly: SourceForestInterop 9e0d2022. Outcome (b) unlabelled transcription, 10, now declared with a transcription description: StrongReadingIntended 92d3129c (single_application: hCharity is a six-antecedent implication whose consequent is the conclusion; no description before); ActualEuclidean.euclideanAtOfEuclidean 7e5f0f8a, LogicalNecessityProfiles.kToFrame abca2584, NecessarySupportActualScope.actualOfNoContingent 79b59ca3, TermSenseForks3.maximumInBeingCausesAllMaximal 646c0764, Hiddenness.ActualRoot loveWeakens 6066c4ef, openWeakens 2c2ee70b, beliefWeakens 313efb85, FitchKnowability.restrictedInstance 2e89386e (instantiation: each conclusion is definitionally the premise's instance at the selected world, frame, respect esse or Moore content; for the last, with the admissibility premise as the one antecedent); RetainedDutyLocal.universalToLocal 13900748 (single_application field added; its prose already said so). Seven of these (4, kToFrame, the three ActualRoot weakenings, restrictedInstance, universalToLocal) were already treated as transcriptions by the single-application heuristic, so declaring them changes no closure. The other three were missed by that heuristic because their proofs are eta-expanded lambdas (fun v z h1 h2 => h w v z h1 h2). Outcome (c) false positive, 0. Two flagged theorems have no result record, so nothing was changed: ComposerTemporalDefinitions.NoSelfStrength.noSelfStrength (an unregistered duplicate of the Bound result 8e634495, proof h f.now) and Logic.CogitoEsse.existingConcrete (a helper lemma inside the CogitoEsse Challenge, self-described as a definitional projection). Judgment on general-law instantiation: each (b) instantiation premise is the universal closure of its conclusion, with no further constrained structure between them, which corpus-model names the instantiation kind; the precedent is GradesAtBeingRoutes 106fce52, the parallel all-respects-to-esse strength registration already declared instantiation. A general law applied to a case whose antecedent must be matched by independently typed premises or further reasoning would not be one; none of the 50 was such a case. Frontier effect (truth frontier-diff --base origin/main at 2f783abda): STMT 1b1462e6 (Euclidean access at the selected world) moves closed -> bare, since its only verified derivation was the instantiation of the open global Euclidean premise 62b4a40a; open premises reaching the root 520 -> 521 (bare 370 -> 371). Verified support alternatives 543 -> 540: 1b1462e6 <- 62b4a40a, 84751fc2 <- dd41c165 and da09703b <- d9fad785 are no longer counted. 84751fc2 and da09703b stay closed by other derivations; da09703b now expands through the MAXIME_3 branch (0e3d0877, 3eb63770) instead of the genus principle d9fad785, so routes 1deb1d29 and 3357fa30 cost one more (51 -> 52, 52 -> 53; expanded-route diagnostic only). The designated route's cost is unchanged (16). The open obligations are substantively unchanged: the global premises remain the sole support of their instances, now shown as open leaves rather than as derivations. Probe calibration: the probe had no false positives in this run; it re-found 38 declared transcriptions and 7 heuristic-detected ones, and its new information was exactly the three eta-expanded instantiations that the truth single-application heuristic misses. Sharpening the heuristic (strip fun binders whose body applies one hypothesis to the bound variables) is the useful follow-up, not a probe change.",
+  "blocker": "Follow-up, not done here (outside the 50 flags): parallel pure instantiations in the same files remain undeclared and still count as non-transcription support, notably LogicalNecessityProfiles.frameToTheory 7761d430, TermSenseForks3 movedOnlyAsCapableFromAdopted, FitchKnowability.relevantFromGlobal (borderline) and the WitnessLocalHiddenness openWeakens/accessWeakens weakenings. The per-se-link disambiguation (bundle-audited, so left unchanged) still says result 92d3129c argues the strong reading under a charity principle without calling it a transcription. Attempt b1fa5613 lists the f4abae1b genus-principle route among da09703b's supports, which the frontier no longer counts.",
+  "evidence": [
+    "92d3129c-2dbe-5d16-8b01-5aed3164368d",
+    "7e5f0f8a-aa2d-496b-87b6-8411f7970732",
+    "abca2584-6f6a-40b8-bdc2-b37e01fe5008",
+    "79b59ca3-3c34-494b-9624-dd1c18814507",
+    "646c0764-1bff-505f-bda4-e86f10d74130",
+    "6066c4ef-f23a-4412-bced-aab12fc49fe5",
+    "2c2ee70b-896e-4b04-8c7e-ec67698e54de",
+    "313efb85-5f23-4e51-8ad5-6a8d953fa29c",
+    "2e89386e-9f39-5f5e-bbbe-8f44e88685a4",
+    "13900748-d471-5d3c-a365-2a08d0380997",
+    "PR-1788"
+  ]
+}
