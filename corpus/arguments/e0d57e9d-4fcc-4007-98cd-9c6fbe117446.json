@@ -1,0 +1,27 @@
+{
+  "id": "e0d57e9d-4fcc-4007-98cd-9c6fbe117446",
+  "label": "What is PRIOR_4 to a thing is a cause of its being, from dependence",
+  "premise_statement_ids": [
+    "c4bb0481-60aa-4461-baee-f490a5fc554e",
+    "5dacb0db-edb7-5ac0-985b-de65780fceb6"
+  ],
+  "conclusion_statement_id": "6eacb281-8b09-459a-a9f7-4e506edc298e",
+  "inference_ids": [
+    "f37b4159-4296-4db4-b29b-0a8a812bd7fb"
+  ],
+  "meaning": "PRIOR_4 sibling of argument 1cb656a0: if y is prior in being to x, then x depends for its being on y, and whatever a thing depends on for its being is a cause of its being (5dacb0db, which uses no priority term). Every premise uses one sense of PRIOR, PRIOR_4.",
+  "term_senses": {
+    "PRIOR": "11d1b100-3b05-4695-9d63-31cb8d09a284"
+  },
+  "definition_ids": [
+    "d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "f4365b55-da11-4e27-b5b7-71024d9508be"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76"
+  ]
+}

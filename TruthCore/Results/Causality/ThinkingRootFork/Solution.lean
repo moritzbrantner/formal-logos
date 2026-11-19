@@ -2,6 +2,8 @@ module
 
 public import TruthCore.Causality.ThinkingRootFork
 public import TruthCore.Results.Logic.CogitoSubject.Solution
+public import TruthCore.Latin.Aquinas.DeEnte.RootInterface
+public import TruthCore.Causality.UnderivedRootRoute
 
 /-! The two literal horns share *one* root witness. Only the positive horn
 descends, and it descends through distinct thinkers rather than every ground.
@@ -80,6 +82,17 @@ theorem noPIsActualRoot (m : Profile W B) (w : W)
   refine ⟨hCone.1, ?_⟩
   intro y hy
   exact hNoP (hNoFresh x hCone hThink ⟨y, hy⟩)
+
+/-- Conversely, any actual G-root is P-free for the **same** mediate G+ sense:
+a nonempty path into it would end with a forbidden incoming G edge. This
+requires neither thinkerhood nor no-fresh-thinker. -/
+theorem noPOfActualRoot (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop) (x : B)
+    (hRoot : ActualRoot m w x) : ¬ P m w Occurs Bears x := by
+  intro hp
+  obtain ⟨c, hc⟩ := hp
+  obtain ⟨y, _, hy⟩ := Relation.TransGen.tail'_iff.mp hc.2.2
+  exact hRoot.2 y hy
 
 /-- A *contingent* selected thinker cannot occupy the negative horn when both
 local grounding premises hold. The literal P/¬P cases remain complementary,
@@ -179,6 +192,53 @@ theorem selectedNecessaryRootOfThinkingRoot (m : Profile W B) (w : W)
     NecessaryRootAncestor m w selected := by
   obtain ⟨n, _, hAnc, hRoot, hNec⟩ := h
   exact ⟨n, ⟨hRoot.1, hAnc⟩, hNec, hRoot.2⟩
+
+/-- Spell out the endpoint requested by the literal fork: one and the same
+actual necessary *thinking* ancestor n satisfies ¬P(n). The existing root
+predicate already contains the stronger selected-relation absence fact. -/
+theorem necessaryThinkingRootHasNoP (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop) (selected : B)
+    (h : NecessaryThinkingRootOf m w Occurs Bears selected) :
+    ∃ n, Thinks Occurs Bears n ∧ GroundAncestor m w n selected ∧
+      ActualRoot m w n ∧ NecessaryAt m.ontic w n ∧ ¬ P m w Occurs Bears n := by
+  obtain ⟨n, hThink, hAnc, hRoot, hNec⟩ := h
+  exact ⟨n, hThink, hAnc, hRoot, hNec, noPOfActualRoot m w Occurs Bears n hRoot⟩
+
+/-- Existing underived-root transport upgrades the *same thinker* from
+selected-G rootness to absence of existing supporters in `m.grounds` at every
+world. This is still not an assertion about every conceivable dependence
+relation; the present-support and concreteness bridges are explicit. -/
+theorem underivedThinkingRootOfSelected (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop) (selected : B)
+    (hThinking : NecessaryThinkingRootOf m w Occurs Bears selected)
+    (hPresent : TruthCore.Causality.UnderivedRootRoute.NecessarySupportIsPresent m w)
+    (hConcrete : TruthCore.Causality.UnderivedRootRoute.ActualSupportersConcrete m w) :
+    ∃ n, Thinks Occurs Bears n ∧ GroundAncestor m w n selected ∧
+      TruthCore.Causality.UnderivedRootRoute.UnderivedRootAt m w n := by
+  obtain ⟨n, hnThink, hnAnc, hnRoot, hnNec⟩ := hThinking
+  exact ⟨n, hnThink, hnAnc,
+    TruthCore.Causality.UnderivedRootRoute.underivedOfNecessaryRoot
+      m w hPresent hConcrete n hnRoot hnNec⟩
+
+/-- Alignment to the already defined De ente root interface requires
+*at-most-one actual root of this very same grounding profile and world*.
+It transfers thinkerhood and de-re necessity to the De ente source; neither
+the De ente interface nor the thinker fork proves root uniqueness on its own. -/
+theorem deEnteFirstSourceThinksOfRootUniqueness {P R : Type}
+    (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop) (selected : B)
+    (p : TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile B P R)
+    (hThinking : NecessaryThinkingRootOf m w Occurs Bears selected)
+    (hSource : TruthCore.Latin.Aquinas.DeEnte.DeEnteFirstSourceIsActualRootAt m w p)
+    (hAtMost : TruthCore.Latin.Aquinas.DeEnte.AtMostOneActualRootAt m w) :
+    ∃ n, Thinks Occurs Bears n ∧ ActualRoot m w n ∧ NecessaryAt m.ontic w n ∧
+      p.InAct n p.esse ∧ p.esseOf n = p.essenceOf n ∧
+      (∀ c, ¬ TruthCore.Latin.Aquinas.DeEnte.ActualEsseCause p c n) := by
+  obtain ⟨n, hnThink, _, hnRoot, hnNec⟩ := hThinking
+  obtain ⟨s, hsRoot, hsAct, hsId, hsUncaused, _⟩ := hSource
+  have hEq : n = s := hAtMost n s hnRoot hsRoot
+  subst s
+  exact ⟨n, hnThink, hnRoot, hnNec, hsAct, hsId, hsUncaused⟩
 
 /-- The new result strengthens, rather than silently replacing, the older
 Cogito concrete-root statement: it retains its b/e/n and adds thinkerhood. -/
