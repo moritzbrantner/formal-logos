@@ -1,0 +1,45 @@
+{
+ "id": "9da52c33-4ac7-4bef-a37d-d85039a80251",
+ "label": "Horizontal support for concurrent actualization: momentary PSR and time symmetry",
+ "date": "2026-11-19",
+ "statement_ids": [
+  "40a97664-e481-42d7-8458-78374a61aa26",
+  "76d2cc96-14a0-48bc-bd0b-a5c0ca853265",
+  "9a14bdd8-65f8-4fe5-97b7-9fbbcde73e5b",
+  "d86c9de9-25be-488b-b3b7-69f5f4eb80b8",
+  "4bc853db-ec33-40ff-857e-6a67f17532fb",
+  "7005560a-4542-4d11-a0c8-1d221e74ecc1",
+  "488263b0-a833-4ec1-9a62-eb79fe755ac8",
+  "eb928359-9871-4964-b274-3a82648b58a1"
+ ],
+ "kind": "derivation",
+ "outcome": "succeeded",
+ "summary": "Note docs/notes/ca-horizontal-support.md; module TruthCore.Causality.TimeSymmetricGiving, spec specs/time-symmetric-giving.toml. Horizontal test of weak concurrent actualization 40a97664 from families other than the Thomist esse/act-potency family. (1) PSR family at matching time-indexed scope: re-read Schmid 2021 (SCHMID-INERTIA-REPLY-3-ARTICLE): the PSR-like principle he accepts is Feser's auxiliary thesis that something must explain an object's continuing to exist; he rejects only the thesis that without a sustaining cause there is no extrinsic explanation. Typed as the momentary PSR 9a14bdd8 (primitive explanation relation, definition 261516e9) and the productive bridge d86c9de9; Schmid's explanation is the defined origin-or-inertia sense (definition 8c20c988). Result psrBridgeCarriesTheCrux (2b8b48d1): for every interpretation, under the momentary PSR the bridge is equivalent to 40a97664; concurrentOfMomentaryPSR (c186cee4) is a transcription. Inertia satisfies the momentary PSR in eternal and begun histories (controls f49ba264 parts 1, 4), so it need not reject a PSR strong enough to explain each moment's existence. Classification (c). (2) Routes to GOD_4: 40a97664 is an open premise of none of the 15 routes; 2068f91c appears in 7 and keeps its direct option; prima via, quarta via and the modal-spine stage-one premises do their work without it, and no recorded rival table lists inertia against them except the sustaining derivation of A2ab, which has an originating alternative. Classification (b): the CA dependency is confined to the immensity presence step, the sustaining readings, one support option of 2068f91c and the holding First Way. (3) Leibnizian contrastive principle: coverage 4bc853db (whatever has received esse has its being caused by another, tenseless), exercise 7005560a (a cause of another's being gives it being at some moment of its presence) and time symmetry 488263b0 (order automorphisms of time preserving presence and the supplied non-giving facts preserve giving) give 40a97664 for homogeneous things eb928359 (result 4f0c026d, not a transcription; one cause gives at every moment). 40a97664 entails eb928359 (76dc5abc, relation 7bb5ce58). Controls: each premise needed (eternal inertia, arbitrary-moment giver, unexercised cause); begun inertia satisfies all three while 40a97664 fails, because an automorphism preserving a begun thing's presence fixes its first moment, so the premises are silent on begun things and are not parity restated. Classification (a), scoped: a general extrinsic inertialist must, for every possible homogeneous beginningless received-esse thing, deny coverage (brute or Hume-Edwards esse for the whole, by analogy with the recorded rivals of d1f3ffcc and b08eee83), time symmetry (Clarke's arbitrary will, 81ec01fe), or exercise (a cause of being exercised at no moment, no account on file). (4) Avicennian preponderance: unread lead; on analyst reconstruction parity re-presented (c); Avicenna's eternal caused world is the homogeneous case. Scotist essential order: no record, unread; (b) for God-relevance, (c) for CA. Grounding and dependence: composites' synchronic dependence is shared and relocates to simples; Feser's constituent argument is 40a97664 restated for composites; DependsForBeing presupposes it (c). Physics: neutral (c), bears only on whether homogeneous beginningless histories are possible. truth countermodel does not support the Preorder/OrderIso binders; the controls are hand-written over integer time and Comparator/NanoDa checked.",
+ "blocker": "The actual-world crux is unchanged: actual persisting things are not in homogeneous histories, so the symmetry result is silent on them, and no discriminating test at matching scope is available there. The scoped price item depends on the possibility of a homogeneous beginningless received-esse thing (leads only: ST I q.46 a.2, Avicenna, stationary cosmologies; none read here) and on coverage's modal scope. The caused-universe connection (CausingWholeCausesParts b08eee83 with temporal parts and an Ontic.Causes-to-GivesAt bridge) is unbuilt. Next test: type the change-only asymmetry as a constraint on which facts may distinguish moments for giving, and test whether a beginningless thing in a changing history can satisfy coverage and exercise with giving at changes only.",
+ "evidence": [
+  "c186cee4-6927-4d27-ba0c-470c64a7492e",
+  "2b8b48d1-2f51-4596-a17f-d4c5a0222ca6",
+  "4f0c026d-e912-442d-aef9-094b5049e680",
+  "76dc5abc-9dea-4a25-a65b-bf693538c38e",
+  "f49ba264-a7b0-4915-82ef-b2ba8bb0f002"
+ ],
+ "current_assessment": {
+  "date": "2026-11-19",
+  "statement_ids": [
+   "40a97664-e481-42d7-8458-78374a61aa26",
+   "4bc853db-ec33-40ff-857e-6a67f17532fb",
+   "7005560a-4542-4d11-a0c8-1d221e74ecc1",
+   "488263b0-a833-4ec1-9a62-eb79fe755ac8",
+   "d86c9de9-25be-488b-b3b7-69f5f4eb80b8"
+  ],
+  "scope": "Horizontal families bearing on weak concurrent actualization 40a97664: the momentary PSR (Schmid's accepted principle and the productive bridge), routes to GOD_4 that avoid 40a97664, the Leibnizian contrastive principle over moments with coverage and exercise, and analyst classifications of Avicennian, Scotist, grounding and physics families. Side by side with, not replacing, the 2026-11-19 assessment of attempt 21883b61 and the 2026-11-18 cluster assessment of attempt 447838c8.",
+  "assessment": "The CA dependency is not unavoidable for God's existence: 40a97664 is an open premise of no route to GOD_4 on this base, and the contingency, modal-spine, motion and grades routes do their work with premises no recorded rival table lists inertia against; the shared dependency is confined to the immensity presence step, the sustaining readings, one support option of 2068f91c and the holding First Way. The PSR family adds nothing at matching scope: the momentary PSR is shared, and under it the productive bridge is 40a97664 (checked for every interpretation). One horizontal support item, scoped: coverage, exercise and time symmetry, whose warrants (tenseless De ente coverage, effect-side exercise, the contrastive PSR over moments) are independent of 40a97664 and which inertia satisfies for begun things, entail 40a97664 for homogeneous received-esse things; so a general extrinsic inertialist pays a disjunctive price in the possible eternal-stationary case (brute or Hume-Edwards esse for the whole, an arbitrary-moment giver, or a cause of being exercised at no moment). The item is conditional on the possibility of such a thing (unassessed) and on coverage's modal scope, and it does not bear on actual persisting things, whose histories are not homogeneous. The actual-world crux is unchanged; 40a97664 moves from 'both stand, one price item each' to 'both stand; the general form of extrinsic inertia carries one further, conditional item'. Avicennian preponderance restates parity; Scotist essential order is unread and either avoids or presupposes the crux; grounding and physics are neutral or presupposing. Nothing is established or defeated.",
+  "next_test": "Extend the symmetry family to beginningless changing histories: type the change-only asymmetry as a constraint on which supplied facts may distinguish moments for giving, and test whether giving at changes only satisfies coverage and exercise without 40a97664. Separately, build the Ontic.Causes-to-GivesAt and temporal-part bridges for CausingWholeCausesParts (b08eee83).",
+  "note": "docs/notes/ca-horizontal-support.md#3-updated-provisional-judgment-on-40a97664-2026-11-19-scoped",
+  "reviewed_revision": "2f783abda4f10be0727c913242ff36b36f80f96f",
+  "review": "unreviewed",
+  "publication": "unpublished",
+  "evidence": "Drafted on origin/main 2f783abda4f10be0727c913242ff36b36f80f96f; independent semantic challenge pending.",
+  "supersedes": "none"
+ }
+}

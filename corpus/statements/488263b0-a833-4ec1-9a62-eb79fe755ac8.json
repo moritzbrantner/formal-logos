@@ -1,0 +1,11 @@
+{
+  "id": "488263b0-a833-4ec1-9a62-eb79fe755ac8",
+  "label": "Time symmetries of a history preserve giving being",
+  "paraphrase": "OPEN analyst premise, attribution deferred (time symmetry of giving; the contrastive principle of sufficient reason applied to moments): in every history v of the model, if an order automorphism sigma of the times preserves every being's presence and every supplied non-giving time-indexed fact (PreservesHistory, definition 6d0f77a2), then for all g, x and t, g gives x being at t iff g gives x being at sigma t (GivesAt, definition 158301bc). Meaning: where nothing in the history distinguishes two moments, nothing distinguishes giving at one from giving at the other. Shape of Leibniz's argument that uniform absolute space leaves no reason for one arrangement over another (7dd2af35); Clarke's reply that a will may choose without an external difference (81ec01fe) is its recorded rival, a free giver at one arbitrary moment (Control part 2). Its warrant is the contrastive PSR, not 40a97664: it holds in every inertial interpretation with no giving (parts 1 and 3) and in begun inertia with giving at onset only (part 4), where an automorphism preserving a begun thing's presence fixes its first moment. It is stated relative to the supplied Facts, which must not encode giving; with an incomplete Facts it is stronger than the contrastive principle.",
+  "lean_declaration": "TruthCore.Causality.TimeSymmetricGiving.GivingRespectsTimeSymmetry",
+  "definition_ids": [
+    "6d0f77a2-0474-4cc0-9aac-71f7fba67b33",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ]
+}

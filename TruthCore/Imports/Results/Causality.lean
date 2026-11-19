@@ -363,6 +363,7 @@ public import TruthCore.Results.Causality.TermSenseForks.Solution
 public import TruthCore.Results.Causality.TermSenseForks2.Solution
 public import TruthCore.Results.Causality.TermSenseForks3.Solution
 public import TruthCore.Results.Causality.TermSenseForks4.Solution
+public import TruthCore.Results.Causality.TimeSymmetricGiving.Solution
 public import TruthCore.Results.Causality.ToleranceOriginRival.Solution
 public import TruthCore.Results.Causality.TotalHolding.Solution
 public import TruthCore.Results.Causality.UnderivedCommonSource.Solution

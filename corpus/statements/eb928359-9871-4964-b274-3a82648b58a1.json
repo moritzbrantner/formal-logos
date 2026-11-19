@@ -1,0 +1,16 @@
+{
+  "id": "eb928359-9871-4964-b274-3a82648b58a1",
+  "label": "Whatever has received esse and is homogeneous is given being whenever it is present",
+  "paraphrase": "Analyst conclusion, attribution deferred (concurrent actualization for homogeneous things): in every history v of the model, whatever has its esse received in some principle (DEF-ESSE-RECEIVED-IN) and is homogeneous in v (any two moments of its presence are related by an order automorphism of the times preserving the history, definition 6d0f77a2) is given being by something (GivesAt, definition 158301bc, STRICT esse-giving reading) at every moment at which it is present. The restriction of weak concurrent actualization 40a97664 to homogeneous things, entailed by it (registered strength order). On integer times a stationary beginningless history makes its things homogeneous, while a begun thing present at more than one moment is not homogeneous (Control part 4), so this is silent where onset fa3e228b and parity 5b24ef26 speak, and speaks where onset is silent. Derived from coverage, exercise and time symmetry; the derivation gives one cause of being at every moment of presence.",
+  "lean_declaration": "TruthCore.Causality.TimeSymmetricGiving.ConcurrentlyActualizedIfHomogeneous",
+  "definition_ids": [
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6d0f77a2-0474-4cc0-9aac-71f7fba67b33",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

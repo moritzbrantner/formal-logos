@@ -1,0 +1,10 @@
+{
+  "id": "53d604aa-4a1b-4837-ba29-185d194b373f",
+  "label": "Under the momentary PSR the productive bridge is concurrent actualization, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "c12e30dd-790e-40d4-9c53-5a995173d998",
+  "rule": "Forward: compose the momentary PSR with the bridge; backward: concurrent actualization gives a giver at each moment of presence whatever the explanation",
+  "meaning": "Closed result with no premises, quantified over every history, giving relation, explanation relation and reception predicate. Given the momentary PSR, the productive bridge entails weak concurrent actualization 40a97664 (by concurrentOfMomentaryPSR), and 40a97664 entails the bridge outright. It shows that the PSR family, at the matching time-indexed scope, adds nothing toward 40a97664: what separates the sides once the PSR is shared is exactly 40a97664. It establishes nothing about reality.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
