@@ -11,7 +11,10 @@ definitions = [
   "51d205db-399e-4524-8e15-e04cf2532e24",
   "6f53f286-b5e8-4b75-997a-8e314e97d6ff"
 ]
-disambiguations = ["1272a7e5-e3e1-4c91-a1d3-343018262841"]
+disambiguations = [
+  "1272a7e5-e3e1-4c91-a1d3-343018262841",
+  "c529e8d3-43e3-53a8-a82f-3955e9815265"
+]
 
 [[statement]]
 id = "Thinking bearers have accessible distinct thinking ground ancestry"

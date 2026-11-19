@@ -1132,6 +1132,26 @@ impl LeanSource {
         self.index = Some(index);
     }
 
+    /// The source block of exactly the fully qualified `declaration`, through
+    /// the repository-wide index only: no last-component fallback, so a
+    /// misspelled namespace is not found. Returns the file, 1-based line and
+    /// text (the first place, in path order, of a name declared twice, such
+    /// as a frozen Challenge and its Solution), or `None` when it is not
+    /// declared.
+    pub fn qualified_block(&mut self, declaration: &str) -> Option<(String, usize, String)> {
+        if self.index.is_none() {
+            self.build_index();
+        }
+        let (path, start) = self.index.as_ref()?.get(declaration)?.first()?.clone();
+        let text = self.file(&path)?;
+        let lines: Vec<&str> = text.lines().collect();
+        Some((
+            path.to_string_lossy().into_owned(),
+            start + 1,
+            extract(&lines, start),
+        ))
+    }
+
     /// The source block of the fully qualified `declaration`: first in the
     /// module its namespace names (the longest existing prefix file), else
     /// through a repository-wide index of qualified declaration names, else

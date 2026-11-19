@@ -7,5 +7,6 @@
   "theorem": "TruthCore.Results.Causality.LogicalNecessityProfiles.kToFrame",
   "comparator_config": "results/abca2584-6f6a-40b8-bdc2-b37e01fe5008/comparator.json",
   "status": "solution-present",
-  "description": "Specialize the all-small-frame universal to the same selected frame and formula. Exact strong-only-premise result."
+  "description": "Transcription by instantiation (AGENTS.md invariant 16): specializes the all-small-frame universal to the same selected frame and formula. Exact strong-only-premise strength result; the proof only instantiates the premise, so it closes its conclusion only when that premise is closed.",
+  "transcription": "instantiation"
 }

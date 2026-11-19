@@ -26,6 +26,7 @@
 
 use crate::check::{Allowlist, load_sense_allowlist, validate_argument_senses};
 use crate::definition_status::{self, State, Status};
+use crate::parameter_tags::ParameterTags;
 use crate::senses::{
     SenseIndex, argument_term_senses, bridged, sense_index, senses_without_distinct_declaration,
 };
@@ -145,6 +146,9 @@ pub struct Semantics<'a> {
     undeclared: HashSet<String>,
     formal: HashMap<String, definition_status::Definition>,
     reaching_root: Option<BTreeSet<String>>,
+    /// Authored parameter-level sense tags (#1784); empty when malformed
+    /// (`truth check` reports that).
+    parameter_tags: ParameterTags,
 }
 
 impl<'a> Semantics<'a> {
@@ -198,6 +202,12 @@ impl<'a> Semantics<'a> {
                 .or_default()
                 .push(text(&argument.fields, "id"));
         }
+        let parameter_tags = ParameterTags::read(
+            disambiguations
+                .iter()
+                .map(|record| (record.path.as_str(), &record.fields)),
+        )
+        .unwrap_or_default();
         Ok(Semantics {
             statements: by_id("statements"),
             argument_by_id: by_id("arguments"),
@@ -211,6 +221,7 @@ impl<'a> Semantics<'a> {
             undeclared,
             formal,
             reaching_root: None,
+            parameter_tags,
         })
     }
 
@@ -390,7 +401,26 @@ impl<'a> Semantics<'a> {
             "definitions": definitions.iter().map(|id| self.definition_view(id)).collect::<Vec<_>>(),
             "disambiguations": self.disambiguation_views(record),
             "senses_used": self.senses_used_view(&self.senses_of(&definitions)),
+            "parameter_tags": self.parameter_tag_view(text(record, "lean_declaration")),
         })
+    }
+
+    /// The authored sense tags on parameters of `declaration` (#1784). A
+    /// parameter not listed is unknown, not senseless.
+    fn parameter_tag_view(&self, declaration: &str) -> Vec<Value> {
+        if declaration.is_empty() {
+            return Vec::new();
+        }
+        self.parameter_tags
+            .in_declaration(declaration)
+            .into_iter()
+            .map(|tag| {
+                json!({"parameter": tag.parameter.parameter,
+                       "arguments": tag.parameter.arguments,
+                       "sense_id": tag.sense_id, "sense_label": tag.sense_label,
+                       "term": tag.term})
+            })
+            .collect()
     }
 
     /// term -> sense -> the statements (by role) or the argument itself that
@@ -1011,6 +1041,28 @@ fn statement_text(view: &Value, compact: bool, lines: &mut Vec<String>) {
         "  lean: {}",
         view["lean_declaration"].as_str().unwrap_or("none")
     ));
+    let tags: Vec<String> = view["parameter_tags"]
+        .as_array()
+        .into_iter()
+        .flatten()
+        .map(|tag| {
+            let mut applied = tag["parameter"].as_str().unwrap_or_default().to_owned();
+            for argument in tag["arguments"].as_array().into_iter().flatten() {
+                applied.push(' ');
+                applied.push_str(argument.as_str().unwrap_or_default());
+            }
+            format!(
+                "{applied} = {}",
+                tag["sense_label"].as_str().unwrap_or_default()
+            )
+        })
+        .collect();
+    if !tags.is_empty() {
+        lines.push(format!(
+            "  parameter senses: {} (other parameters unknown)",
+            tags.join("; ")
+        ));
+    }
     let definitions = view["definitions"].as_array().cloned().unwrap_or_default();
     lines.push(format!("  definitions ({}):", definitions.len()));
     for definition in &definitions {

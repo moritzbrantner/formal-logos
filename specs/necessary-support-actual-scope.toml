@@ -33,6 +33,8 @@ conclusion = "Existing concrete supporters at the selected world of NECESSARY_2 
 axioms = []
 rule = "Instantiation: the support world of J1 is taken to be the selected world"
 meaning = "J1 (every concrete supporter, at any carrier world, of a concretum necessary from w is necessary from w) gives its selected-world instance by taking the support world to be w. Registered as a strength order (J1 strengthens its instance); strictness is witnessed by Control.offWorldContingent. An instantiation, not a new derivation; no premise is established."
+description = "Transcription by instantiation (AGENTS.md invariant 16): J1 (every concrete supporter, at any carrier world, of a concretum necessary from w is necessary from w) gives its selected-world instance by taking the support world to be w. Registered as a strength order (J1 strengthens its instance); strictness is witnessed by Control.offWorldContingent. The proof only instantiates J1, so it closes its conclusion only when J1 is closed; no premise is established."
+transcription = "instantiation"
 
 [[argument]]
 id = "Underived necessary concretum, from necessity, actual no contingent support and coverage"

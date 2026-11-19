@@ -1,0 +1,12 @@
+{
+  "id": "6da7d94a-abc4-4092-96c1-9469af548f87",
+  "label": "The term of the origin relation at a moment gives its bearer being then",
+  "paraphrase": "OPEN analyst premise, attribution deferred (giving by the term): in every history of the model, if x bears at moment t a real relation to g as to the principle of its being (OriginRelation.RelatedAt v x g t, definition 7b28be97), then g gives x being at t (GivesAt v g x t, definition 158301bc, STRICT esse-giving reading). Meaning: the term to which the creature is related as to the principle of its being is acting on it at every moment it is so related. In the analyst's terms, the relation behaves like that of the moved to its mover while the motion lasts, not like that of a son to his father after the begetting. That two-type contrast is the analyst's: ST I q.13 a.7 co. (passage 12d8ecc5, read) gives both mover and moved and father and son as relations real on both sides consequent on action and passion, and places the creature's relation to God in a different class, relations real in one extreme only, as knowledge to the knowable; neither exemplar is the text's classification of this relation. With accompaniment it gives weak concurrent actualization 40a97664 (result concurrentOfTermGiving). For a fixed relation it is stronger than 40a97664 requires, since it also makes the giver the term of the relation (Control part 5: 40a97664 holds through another giver and this premise fails). The existential inertialist must deny it if it grants accompaniment, by that result and its rejection of 40a97664 (Control part 1).",
+  "lean_declaration": "TruthCore.Causality.RelationalReceipt.TermGives",
+  "definition_ids": [
+    "7b28be97-9a3c-444f-af46-fe410092c3ee",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

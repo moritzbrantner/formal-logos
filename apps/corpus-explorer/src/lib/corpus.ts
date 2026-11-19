@@ -205,7 +205,11 @@ export type CorpusDisambiguation = {
   legacy_id?: string;
   term: string;
   sense_definition_ids: string[];
-  senses?: Array<{ id: string; label: string; definition_id: string; lean_declaration?: string }>;
+  senses?: Array<{
+    id: string; label: string; definition_id: string; lean_declaration?: string;
+    /** Authored parameter-level tags (#1784): binders that express this sense. */
+    lean_parameters?: Array<{ declaration: string; parameter: string; arguments?: string[] }>;
+  }>;
   resolution: string;
   coverage_statement_id?: string;
   exclusivity_statement_id?: string;

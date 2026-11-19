@@ -12,7 +12,57 @@
       "id": "c6e310c2-a8c9-41cb-8d7e-18859802484d",
       "label": "DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND_1",
       "definition_id": "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
-      "lean_declaration": "TruthCore.Causality.CausalMapsBatch1.EffectDependsOnEfficientCause"
+      "lean_declaration": "TruthCore.Causality.CausalMapsBatch1.EffectDependsOnEfficientCause",
+      "lean_parameters": [
+        {
+          "declaration": "TruthCore.Causality.Round2Grounding.EsseEffectDependsOnItsCause",
+          "parameter": "DependsForBeing"
+        },
+        {
+          "declaration": "TruthCore.Causality.Round2Grounding.ActualDependenceIsGrounding",
+          "parameter": "DependsForBeing"
+        },
+        {
+          "declaration": "TruthCore.Causality.Round2Grounding.NecessitatedDependsOnItsCause",
+          "parameter": "DependsForBeing"
+        },
+        {
+          "declaration": "TruthCore.Causality.Round2Grounding.ActualContingentDependsOnActualConcretum",
+          "parameter": "DependsForBeing"
+        },
+        {
+          "declaration": "TruthCore.Causality.Round2Grounding.ActualGroundingIsDependence",
+          "parameter": "DependsForBeing"
+        },
+        {
+          "declaration": "TruthCore.Causality.Round2Grounding.DependenceForBeingAsymmetric",
+          "parameter": "DependsForBeing"
+        },
+        {
+          "declaration": "TruthCore.Causality.CausalMapsBatch1.EffectDependsOnEfficientCause",
+          "parameter": "DependsForBeing"
+        },
+        {
+          "declaration": "TruthCore.Causality.CausalMapsBatch1.EfficientCauseNotDependentOnEffect",
+          "parameter": "DependsForBeing"
+        },
+        {
+          "declaration": "TruthCore.Causality.CausalMapsBatch1.NonmutualDependenceSufficesForPriority",
+          "parameter": "DependsForBeing"
+        },
+        {
+          "declaration": "TruthCore.Causality.CausalMapsBatch1.PriorityRequiresNonmutualDependence",
+          "parameter": "DependsForBeing"
+        },
+        {
+          "declaration": "TruthCore.Causality.DependenceGroundingPriority.ActualDistinctDependencePriority",
+          "parameter": "DependsForBeing"
+        },
+        {
+          "declaration": "TruthCore.Causality.DependenceGroundingPriority.ActualNonmutualDependencePriority",
+          "parameter": "DependsForBeing"
+        }
+      ]
     },
     {
       "id": "28212589-ee94-4eb0-b20e-f7cead4438b1",
