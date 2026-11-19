@@ -26,12 +26,14 @@ sustaining cause there is no extrinsic explanation. His explanation of S's
 existence at m (paragraphs beginning "For S to fail" and "Here, we seem to
 have") cites (i) S's existence before m, (ii) that nothing induced S's
 cessation, and (iii) the law that a change occurs only if some factor induces
-it. `MomentaryPSR` types the first thesis over a primitive explanation relation;
-`ExplanationNeedsGiver` types the second, contraposed and at the matching type
-(every explanation of a received-esse thing's presence at `t` comes with
-something giving it being at `t`). `originOrInertia` is Schmid's explanation as
-a defined sense of the primitive. The momentary PSR is shared: both sides accept
-it, and Schmid's explanation satisfies it with no giver after onset.
+it. `MomentaryPSR` types the first thesis over a primitive explanation relation,
+extended from continuing existence to every moment of presence, first moments
+included. `ExplanationNeedsGiver` types the second thesis together with Feser's
+premise that, inertia aside, nothing intrinsic explains persistence: *any*
+explanation of a received-esse thing's presence at `t` comes with something
+giving it being at `t`. `originOrInertia` is Schmid's explanation as a defined
+sense of the primitive. The momentary PSR is shared: Schmid's explanation
+satisfies it with no giver after onset (Control parts 1 and 4).
 
 **Part II: time symmetry (the Leibnizian contrastive principle) for things
 without a beginning.** Onset `fa3e228b` is silent on things with no first
@@ -52,25 +54,31 @@ weight). Three premises:
   it being at some moment at which it is present. The time index of `GivesAt`
   is the effect side, so this says the cause's activity bears on the effect at
   some moment of its presence. For a begun thing the onset moment satisfies it,
-  as an inertialist who grants onset `fa3e228b` accepts.
+  as an inertialist accepts who grants that the originating cause gives being
+  (STRICT reading) at the first moment (onset `fa3e228b`, a conditional grant).
 * *Time symmetry* (`GivingRespectsTimeSymmetry`): if an order automorphism of
   time preserves, in a history, every being's presence and every supplied
   non-giving time-indexed fact (`Facts`), then giving at a moment and giving at
-  its image go together. This is the contrastive principle of sufficient reason
-  applied to moments, in the shape of Leibniz's argument that uniform absolute
-  space leaves no reason for one arrangement over another (statement
-  `7dd2af35`; its application to moments is the analyst's); Clarke's reply that a will
-  may choose without an external difference (`81ec01fe`) is its recorded rival.
-  `Facts` must not encode giving or causing being; with an incomplete `Facts`
-  the premise is stronger than the contrastive principle, since a map that
-  preserves the supplied facts may move unsupplied ones.
+  its image go together. A contrastive principle of sufficient reason applied
+  to moments, in the shape of Leibniz's argument that, were time distinct from
+  things, no reason could be given why things are applied to some instants
+  rather than others (statement `2bd8f0e3`, sourced; uniform space `7dd2af35`);
+  applying it to the schedule of giving is the analyst's. Recorded rivals:
+  Clarke's reply that a will may choose without an external difference
+  (`81ec01fe`), and noncontrastive, intrinsic or probabilistic explanation that
+  leaves alternatives (`e35adb5f`). As typed it is stronger than a contrastive
+  principle in two ways: an incomplete `Facts` lets a map move unsupplied facts,
+  and `History.now` is not required to be preserved. `Facts` must not encode
+  giving or causing being.
 
 They give concurrent actualization for *homogeneous* things
 (`ConcurrentlyActualizedIfHomogeneous`: any two moments of the thing's presence
 are related by such an automorphism), with one cause of being giving at every
-moment. On integer time an automorphism preserving a begun thing's presence
-fixes its first moment, so a begun thing present at more than one moment is not
-homogeneous and the premises are silent on it: Part II is not parity restated.
+moment. In the begun control an automorphism preserving the begun thing's
+presence fixes its first moment (checked there; the general fact for linear
+orders is not formalized), so that thing is not homogeneous and the symmetry
+step is idle on it: Part II is not parity restated. A thing present at one
+moment only is trivially homogeneous.
 
 *Structural properties.* `OrderIso` is Mathlib's order automorphism; on
 integers these are the shifts. `HomogeneousIn` is relative to the supplied

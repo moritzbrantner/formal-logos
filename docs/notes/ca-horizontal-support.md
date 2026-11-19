@@ -62,9 +62,11 @@ times, `false` alone has received esse; `true` is the other individual):
 
 `truth countermodel` does not handle the `Preorder` instance and `OrderIso`
 binders of these theorems ("unsupported parameter inst : Preorder T"). Finite
-linear times have no non-identity order automorphisms, so finite models could
-not witness homogeneity in any case. The controls are therefore written by hand
-over integer time, and Comparator and NanoDa checked them.
+*linear* times have no non-identity order automorphisms, so a finite linear
+model can witness homogeneity only for a thing present at one moment. The
+controls are therefore written by hand over integer time. Comparator and NanoDa
+accepted `4f0c026d` and `f49ba264` locally (`scripts/verify-result.sh`); CI
+checks all five results.
 
 ## 2. Per-family classification
 
@@ -78,10 +80,16 @@ continues to exist". What Schmid rejects is the other thesis: "if there is no
 sustaining cause, then there is no extrinsic explanation". His explanation of
 S's existence at m (paragraph beginning "For S to fail") cites three things:
 S's existence before m, the absence of any factor inducing its cessation, and
-the law that a change occurs only if some factor induces it. `MomentaryPSR` is
-the first thesis, typed. `ExplanationNeedsGiver` is the second, contraposed.
-`originOrInertia` is his explanation, with an originating giver added for a
-first moment.
+the law that a change occurs only if some factor induces it.
+
+- `MomentaryPSR` is the first thesis, typed, and extended from continuing
+  existence to every moment of presence. The extension covers first moments
+  and the moments of a beginningless thing. It is the analyst's, not Schmid's.
+- `ExplanationNeedsGiver` is the second thesis together with Feser's premise
+  that, with inertia denied, nothing intrinsic explains persistence. Any
+  explanation of a received-esse thing's presence then comes with a giver.
+- `originOrInertia` is his explanation, with an originating giver added for a
+  first moment.
 
 **Test of the brief's example.** Is a PSR variant strong enough to explain each
 moment's existence one that inertia must reject? No. The momentary PSR *is*
@@ -93,7 +101,7 @@ nothing toward it. This is checked for every interpretation, not only the
 controls. Feser's argument as Schmid reports it (`c186cee4`) is a
 transcription whose second premise is the crux.
 
-### Contingency, modal necessary-being and other routes to GOD_4: (b) avoid CA
+### Contingency, modal necessary-being and other routes to GOD_4: (b) for six routes
 
 On this base `40a97664` is not an open premise of any of the 15 routes to
 GOD_4 (`truth frontier --routes --frontier-root STMT-GOD-EXISTS --json`).
@@ -101,19 +109,37 @@ GOD_4 (`truth frontier --routes --frontier-root STMT-GOD-EXISTS --json`).
 `3367bf93`, `72391d4d`, `fc46b7f9` and `92ab7c94`, two of them transcription
 projections. On those routes `40a97664` enters only through one *support
 option* of `2068f91c` (via `ce55210c`, contact and `ffcb81fb`). Its direct
-option remains. Eight routes do not contain `2068f91c`:
+option remains.
 
-- the prima via `ed7c588a`: motion, which inertia's own causal law on change
-  covers;
-- the quarta via `5d2b7c6e`, `678ff65f` and `661ce61d`: grades;
-- `fd1f7e75`, `beec1dc1`, `1c154f2f` and `0a639ec4`.
+**But the crux also enters in other vocabulary.** The world-indexed dependence
+premise `3ef67739` ("every actual contingent concretum depends on some actual
+concretum for its being") is an open premise of four routes: `1c154f2f`,
+`72391d4d`, `0a639ec4` and `fc46b7f9`. On its strict sustaining reading,
+existential inertia is recorded as its standing rival
+([causal-dependence-support-investigation.md](causal-dependence-support-investigation.md),
+rival row 3: the premise "owes that present received esse needs a concurrent
+actualizer"). On the originating reading of dependence (the fork of #1626) the
+inertialist need not contest it: the modal spine's rival table records Schmid
+as uncontesting if an earlier existent can be the ground. On that reading the
+origin counterexample (rival row 2) bears on other dependence premises, not on
+inertia. So these four routes share the crux whenever `3ef67739` is read as
+sustaining dependence.
+
+**Six routes contain neither `2068f91c` nor `3ef67739`:**
+
+- the prima via `ed7c588a`, whose subject is motion. Motion is change, which
+  Schmid's own law (iii) says needs an inducer. Whether an inertialist accepts
+  the prima via's further premises is not examined here.
+- the quarta via `5d2b7c6e`, `678ff65f` and `661ce61d`, from grades;
+- `fd1f7e75` and `beec1dc1`.
 
 In stage one of the modal spine ([modal-spine.md](modal-spine.md)) the
 premises that do the work are other ones:
 
 - Arrival B rests on a possible beginning and its cause (B1/B2).
-- A2ab has an originating-cause derivation that uses only causes an
-  inertialist can grant.
+- A2ab has an originating-cause derivation. The table records that it uses
+  only causes an inertialist can grant *on the inclusive reading of `GivesAt`*,
+  and that this is not shown on the strict esse-giving reading used here.
 - The contingency premise "every contingent concrete thing has a ground" is
   recorded as uncontested by Schmid if an earlier existent can be the ground
   (open bridge, rival table).
@@ -123,15 +149,17 @@ moments. The caused-universe family (`NaturalismConsequences`, #1109) reasons
 to a cause of the existence of the spacetime whole and makes no claim about
 moment-by-moment giving.
 
-**Does inertia touch these premises?** None of their recorded rival tables
-lists inertia against them. The stage-one table records inertia only against
-the *sustaining* derivation of A2ab, which has an originating alternative.
-Finding: the God-existence routes on this base **do not share the CA
-dependency**. It is confined to:
+**Finding.** The God-existence routes on this base **do not all share the CA
+dependency**. Six routes reach GOD_4 with no premise that is the crux or is
+recorded as contested by inertia. The dependency, with its reading conditions,
+is confined to:
 
 - the immensity presence step `9469ab62` / `8bf775e9`;
 - the sustaining readings `ce55210c` and `23e04ae5`;
 - one support option of `2068f91c`;
+- `3ef67739` on its sustaining reading (four routes);
+- A2ab's originating route on the strict reading, where it is not shown free
+  of the crux;
 - the holding First Way.
 
 Caveat. The caused-universe family's `CausingWholeCausesParts` (definition
@@ -141,7 +169,7 @@ giving it being at its moment (`Ontic.Causes` to `GivesAt`). Neither bridge is
 built. This is a connection plan, not a route. Its recorded rival is the
 Hume–Edwards view.
 
-### Leibnizian contrastive principle with coverage and exercise: (a), scoped to homogeneous things
+### Leibnizian contrastive principle with coverage and exercise: (a) as an entailment, scoped to homogeneous things; partly horizontal
 
 **Entailment, checked.** Three premises give `40a97664` for every received-esse
 thing that is homogeneous in its history (`homogeneousConcurrentOfSymmetry`):
@@ -150,77 +178,118 @@ three hold together with the conclusion (part 5). The proof carries one moment
 of giving to every other moment by an automorphism, so it yields one cause of
 being that gives at every moment of presence.
 
-**Independence from `40a97664`.** No premise is the crux restated. Each holds
-in an interpretation where `40a97664` fails: exercise and symmetry in part 1,
-coverage in parts 2 and 3. All three hold together in begun inertia (part 4),
-where `40a97664` fails, because they are silent on begun things. Their
-warrants are separate:
+**Logical independence from `40a97664`, checked.** No premise is the crux
+restated. Each holds in an interpretation where `40a97664` fails: exercise and
+symmetry in part 1, coverage in parts 2 and 3. All three hold together in begun
+inertia (part 4), where `40a97664` fails: coverage and exercise are satisfied
+there by the originating cause, and the symmetry step is idle on the begun
+thing.
 
-- *Coverage*: the tenseless De ente c.4 principle that what has esse not from
-  its essence has it from another. The inertialist accepts it for begun things
-  through the originating cause. The sustaining note's §2 already classifies the
-  tenseless reading as independent.
+**Warrant: only time symmetry is horizontal.** Logical independence is not
+warrant independence. Coverage and exercise belong to the Thomist esse family,
+so the shared dependency on that family stays.
+
+- *Time symmetry*: a contrastive PSR over moments, in the shape of Leibniz's
+  temporal-shift argument (`2bd8f0e3`, sourced; uniform space `7dd2af35`). Its
+  warrant has nothing to do with esse. The analyst applies it to the schedule
+  of giving.
 - *Exercise*: a cause of a thing's being bears on it at some moment of its
   presence; the time index of `GivesAt` is on the effect side. An originating
-  cause satisfies it at onset, which the inertialist grants.
-- *Time symmetry*: the contrastive PSR over moments, in the shape of Leibniz's
-  uniform-space argument (`7dd2af35`). Its warrant has nothing to do with
-  esse.
+  cause satisfies it at onset, and the inertialist grants that *if* it grants
+  that the originating cause gives being on the strict reading at the first
+  moment (the conditional grant recorded at `fa3e228b`).
+- *Coverage*: the tenseless De ente c.4 principle that what has esse not from
+  its essence has it from another. Its argument is tenseless and does not
+  distinguish begun from beginningless things, so its warrant does not come
+  through `40a97664`. The inertialist accepts it for begun things through the
+  originating cause, which is why the sustaining note's §2 classed it as
+  independent.
+  - In the beginningless case there is no originator. There coverage says that
+    received esse needs a cause as such, whether or not it began. That is the
+    tenseless core of the Avicennian "need follows possibility, not novelty"
+    (below).
+  - An inertialist who restricts coverage to begun things does so on the same
+    change-only rationale on which it rejects `40a97664`.
+  - So the result **relocates** the dispute in the homogeneous case. It moves
+    from per-moment giving to tenseless coverage for beginningless things. It
+    does not defeat the rival independently. What it adds is that the
+    relocation target is a principle with its own tenseless argument, one the
+    rival otherwise accepts. That argument is not a statement about giving at
+    moments.
 
 **Why it is not parity restated.** Parity `5b24ef26` reaches every begun thing
-from its onset. Time symmetry cannot: on integer time an automorphism that
-preserves a begun thing's presence fixes its first moment (part 4). The new
-premises bite exactly where onset `fa3e228b` is silent, on things with no
-first moment, and only on those whose moments nothing distinguishes. This
-fills the gap named in `strong_version_needed` of argument `366a6ea3`, "things
-with no first moment of presence", for the homogeneous case only.
+from its onset. Time symmetry cannot. In the begun control, an automorphism
+that preserves the begun thing's presence fixes its first moment (part 4). This
+is checked there only; the general fact for linear orders is not formalized.
+The symmetry step is idle exactly where onset `fa3e228b` speaks, except for a
+thing present at a single moment, which is trivially homogeneous. It bites only
+where onset is silent, on beginningless things whose moments nothing
+distinguishes. This fills the gap named in `strong_version_needed` of argument
+`366a6ea3` ("things with no first moment of presence"), for the homogeneous
+case only.
 
 **The rival's price.** Consider an extrinsic inertialist who holds that a
 received-esse thing never needs a giver except at an onset, including in a
-beginningless stationary history (Schmid's explanation covers that case,
-part 1). By the theorem, this inertialist must reject at least one of the
-three premises for every *possible* homogeneous beginningless received-esse
-thing. The three options:
+beginningless stationary history. Schmid's explanation, applied by the analyst
+to that case, covers it (part 1). Take such a thing that is given being at no
+moment. The proof of `homogeneousConcurrentOfSymmetry` runs thing by thing, so
+at least one of the following fails: coverage for that thing, exercise for its
+cause, or symmetry of its history. (The theorem's type is global. This
+per-thing reading is taken from the proof.) The three options:
 
-1. **Reject coverage** (part 1): such a thing has received esse and no cause of
-   its being at all. Each moment is explained by the one before. This is the
-   inertialist's own change-only rationale applied to a history with no change
-   anywhere. It amounts, for the whole, to the brute-esse position that the
-   corpus records as the rival of the world-indexed De ente coverage
-   `d1f3ffcc`, or to the Hume–Edwards view that explaining every member
-   explains the series, the recorded rival of `b08eee83` and one of the whole-series
-   standards retained in PR #1297 (attempt `a5958e25`). The inertialist avoids
-   this for begun things through the originator; here no originator is
-   available. (`d1f3ffcc` is stated over `DistinctEsseAt` at a world, so the
-   identification is by analogy; the bridge is not built.)
-2. **Reject time symmetry** (part 2): a cause gives being at some moments
-   rather than others with nothing in the history to distinguish them.
-   Clarke's reply, a will that chooses without an external difference
-   (`81ec01fe`), is the recorded rival. It is available only to a voluntary
-   giver, so it does not help an inertialist who denies a giver, and it
-   concedes a cause of being acting in time.
-3. **Reject exercise** (part 3): a cause of the thing's being whose activity
-   bears on it at no moment of its presence. No account is on file of what
-   causing a thing's being would then consist in, when its being is its
-   presence at its moments. A timeless cause read on the effect side gives at
-   each moment, which is concurrent actualization. Recorded as an open option
-   with no substantive support either way.
+1. **Reject coverage** (part 1). The thing has received esse and no cause of
+   its being. Each moment is explained by the one before, so its esse is *not
+   brute* moment by moment. What is lost is a cause of its being as a whole.
+   This is the inertialist's change-only rationale applied to a history with no
+   change anywhere. For the whole history it is closest to the Hume–Edwards
+   view that explaining every member explains the series. That view is the
+   recorded rival of `b08eee83` and one of the whole-series standards retained
+   in PR #1297 (attempt `a5958e25`). The analogy is inexact, since the members
+   here are moments of one thing, not members of a series. It also rejects, by
+   analogy, the world-indexed De ente coverage `d1f3ffcc`; that premise is
+   stated over `DistinctEsseAt` and no bridge is built. The inertialist avoids
+   all this for begun things through the originator, but no originator is
+   available here.
+2. **Reject time symmetry** (part 2). A cause gives being at some moments
+   rather than others with nothing in the history's presence pattern or
+   supplied facts to distinguish them. Two rivals are recorded:
+   - Clarke's reply, a will that chooses without an external difference
+     (`81ec01fe`). It is available only to a voluntary giver and concedes a
+     cause of being that acts in time.
+   - Noncontrastive, intrinsic or probabilistic explanation that leaves
+     alternatives (`e35adb5f`). It rejects contrastive PSRs in general.
+
+   The typed premise is also stronger than a contrastive principle in two
+   ways: through an incomplete `Facts`, and because `History.now` need not be
+   preserved.
+3. **Reject exercise** (part 3). A cause of the thing's being whose activity
+   bears on it at no moment of its presence. No account is on file of what that
+   causing would consist in, and none against it. This option is open with no
+   substantive support either way.
 
 The price is conditional on two things:
 
-- **The possibility of a homogeneous beginningless received-esse thing.** For
-  it there are only unread leads, with no weight: Aquinas's grant that an
-  eternal created world is not shown impossible (ST I q.46 a.2); Avicenna's
-  eternal caused world; stationary cosmological models.
+- **The possibility of a homogeneous beginningless received-esse thing.**
+  - For it there are only unread leads, with no weight: Aquinas's grant that an
+    eternal created world is not shown impossible (ST I q.46 a.2); Avicenna's
+    eternal caused world; stationary cosmological models.
+  - Against it, Leibniz draws from the same temporal argument that instants
+    without things are nothing, so that a shifted creation "would not differ
+    from, nor be discernible from" the actual state (`2bd8f0e3`). On a
+    relationalist view of time, distinct indiscernible moments of a
+    stationary history may not exist, and then the case is empty.
+  - Attempt `05c7e8d0` rejected "PSR alone → relationalism", so this point is
+    not decisive. It bears on the condition, not on the entailment.
 - **Modal scope.** Coverage is applied as holding in every possible history,
   as a principle about received esse.
 
 The actual world changes, so the theorem is silent on actual persisting
-things. An inertialist who confines inertia to begun or changing things and
-concedes concurrent giving for homogeneous eternal ones avoids the price. But
-that concession gives up the change-only rationale where it applies most
-cleanly, since the homogeneous thing undergoes no change at all and still
-needs a giver at every moment.
+things. An inertialist can confine inertia to begun or changing things and
+concede concurrent giving for homogeneous eternal ones. That avoids the price.
+But it also concedes that, *given* coverage, exercise and symmetry, a thing
+that undergoes no change at all is given being at every moment. That concedes
+the point against the change-only rationale in the case where the rationale
+applies most cleanly.
 
 ### Avicennian preponderance: (c), restates parity; historical anchor of the symmetry case
 
@@ -230,9 +299,13 @@ was **not read** here: a lead with no weight. On an analyst reconstruction,
 the thesis "need follows possibility, not novelty" yields parity given onset.
 Its decomposition argument (prior non-existence needs no cause, so what is
 caused is existence as such) yields only onset, which the inertialist grants.
-So it is parity re-presented (c). Avicenna's eternal and eternally caused world
-is, though, exactly the homogeneous case of the symmetry family: the case in
-which causation of being cannot be onset-only.
+So its per-moment form is parity re-presented (c). Its tenseless core, that a
+possible needs a cause of its existence whether or not it began, coincides
+with coverage applied to beginningless things, the premise on which the
+symmetry result relocates the dispute (above). That core is not parity: it
+asks for a cause, not for giving at every moment. Avicenna's eternal and
+eternally caused world is exactly the homogeneous case of the symmetry family,
+the case in which causation of being cannot be onset-only.
 
 ### Scotist essential order: (c) for CA; (b) for God-relevance, unread
 
@@ -277,27 +350,48 @@ This is scoped to the horizontal families above. It stands beside the
 2026-11-19 assessment of attempt `21883b61` and the 2026-11-18 cluster
 assessment, and does not replace them.
 
-- **The dependency is not unavoidable for God's existence.** No route to GOD_4
-  has `40a97664` as an open premise. The contingency, modal-spine, motion and
-  grades routes do their work with other premises, none of which inertia is
-  recorded as contesting. The shared dependency is confined to the
-  sustaining/immensity attribute step, one support option of `2068f91c` and
-  the holding First Way.
+- **The dependency is avoidable for God's existence on six routes, not all.**
+  - No route to GOD_4 has `40a97664` as an open premise.
+  - Six routes (prima via, quarta via and two others) contain neither
+    `2068f91c` nor `3ef67739`, and no recorded rival table lists inertia
+    against their premises.
+  - The crux enters four routes through `3ef67739` on its strict sustaining
+    reading, where inertia is the recorded standing rival.
+  - It also enters the sustaining/immensity attribute step, one support option
+    of `2068f91c`, and the holding First Way.
+  - A2ab's originating route is shown free of it only on the inclusive reading
+    of `GivesAt`.
 - **The PSR family adds nothing at matching scope.** The momentary PSR is
-  shared, and under it the remaining bridge is `40a97664` (checked).
-- **One horizontal support item, scoped.** Coverage, exercise and time
-  symmetry entail `40a97664` for homogeneous received-esse things. Their
-  warrants are independent of `40a97664`, and inertia satisfies all three for
-  begun things. So a general existential inertialist pays a disjunctive price
-  in the possible eternal-stationary case: brute or Hume–Edwards esse for the
-  whole, an arbitrary-moment giver, or a cause of being exercised at no
-  moment. This adds a priced item to inertia only at modal scope, and only on
-  the possibility of such a thing (unassessed). It does not decide actual
-  persisting things, whose histories are not homogeneous. The actual-world
-  crux is unchanged: no discriminating test at matching scope. The grade of
-  `40a97664` moves from "both stand, one price item each" to "both stand; the
-  general form of extrinsic inertia carries one further, conditional item".
-  Nothing is established or defeated.
+  shared, in its continuation form, and under it the remaining bridge is
+  `40a97664` (checked for every interpretation).
+- **One partly horizontal item, scoped.** Coverage, exercise and time symmetry
+  entail `40a97664` for homogeneous received-esse things (not a transcription).
+  Each premise is logically independent of `40a97664`, and inertia satisfies
+  all three for begun things.
+  - Only time symmetry is horizontal. Coverage and exercise come from the esse
+    family.
+  - In the homogeneous beginningless case the result **relocates** the dispute.
+    It moves from per-moment giving to tenseless coverage for beginningless
+    things (equivalently, the tenseless Avicennian core). That principle has
+    its own tenseless argument and is accepted by the rival for begun things.
+    The rival restricts it on the same change-only rationale on which it
+    rejects `40a97664`.
+  - So a general extrinsic inertialist must, in the possible eternal-stationary
+    case, give up one of three things:
+    1. a cause of the thing's being as a whole (the Hume–Edwards analogue);
+    2. time symmetry (Clarke, or noncontrastive explanation);
+    3. exercise.
+  - The item holds at modal scope only. It is conditional on the possibility
+    of such a thing, which is unassessed and on which Leibniz's own
+    relationalism presses. It does not bear on actual persisting things, whose
+    histories are not homogeneous.
+  - The actual-world crux is unchanged: no discriminating test at matching
+    scope. The grade of `40a97664` moves from "both stand, one price item each"
+    to "both stand; the general form of extrinsic inertia must, in the
+    eternal-stationary case, restrict a tenseless principle it otherwise
+    accepts, or reject time symmetry or exercise". That is a relocation with a
+    modest cost, not an independent defeat.
+  - Nothing is established or defeated.
 
 **Revision conditions.**
 
@@ -305,10 +399,12 @@ assessment, and does not replace them.
   received-esse thing needs no cause of its being would remove the item.
 - So would an independently justified reason why causes of being need not be
   exercised at any moment of their effect.
-- So would a case against the contrastive PSR over moments beyond Clarke's
-  voluntarist reply.
+- So would an independently supported case for noncontrastive explanation
+  (`e35adb5f`) applied to the schedule of giving, or Clarke's voluntarist reply
+  (`81ec01fe`) extended to a non-voluntary giver.
 - A demonstration that homogeneous beginningless received-esse things are
-  impossible would void the item's condition.
+  impossible would void the item's condition. A relationalist account of time
+  on which a stationary history has no distinct moments would be a candidate.
 - A bridge from `CausingWholeCausesParts` to effect-side `GivesAt` would add
   a second horizontal route.
 
@@ -324,7 +420,10 @@ caused-universe connection (`CausingWholeCausesParts` with temporal parts).
 
 The claim-vs-type table is in the PR body. No source claim is added. Schmid is
 cited only through his pinned and read passage, and no claim attributes a
-typed premise to him or to Feser. Aquinas q.46 a.2, Avicenna, Scotus,
-stationary cosmology and Clarke beyond `81ec01fe` are marked as leads with no
-weight. The objections above name their target premise, their mechanism and
+typed premise to him or to Feser. Leibniz is cited through the sourced
+statements `2bd8f0e3` and `7dd2af35`, and their application to giving is the
+analyst's. Aquinas q.46 a.2, Avicenna, Scotus, stationary cosmology and Clarke
+beyond `81ec01fe` are marked as leads with no weight. An independent semantic
+challenge of the first draft found 4 P1 and 12 P2 findings, which were
+repaired; see the PR. The objections above name their target premise, their mechanism and
 their status. No hypothetical objection is presented as evidence.
