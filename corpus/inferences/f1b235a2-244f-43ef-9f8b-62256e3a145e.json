@@ -1,0 +1,14 @@
+{
+  "id": "f1b235a2-244f-43ef-9f8b-62256e3a145e",
+  "label": "An actual root exists from the selected whole-roster descent (inference)",
+  "input_statement_ids": [
+    "56f68b40-9737-59a0-8cac-5610980a1547",
+    "5c898d24-d1f7-5087-b09e-3287a723e787",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "dc397705-d727-419e-92f9-65d44e1ff15d",
+  "rule": "Reuse WholeRosterFoundation.actualRootExists with unchanged selected profile and world",
+  "meaning": "Existing actual-root existence from inhabited actual concreta, the selected whole-roster nontrapping condition and explicit excluded middle. The proof delegates unchanged to the established roster descent, not a new argument for its premises. No grades, governor, intellect, necessary-being status or God name is asserted; the new statement is a weaker reusable existential consumer.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

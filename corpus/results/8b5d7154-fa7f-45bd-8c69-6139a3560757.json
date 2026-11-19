@@ -1,0 +1,12 @@
+{
+  "id": "8b5d7154-fa7f-45bd-8c69-6139a3560757",
+  "label": "An actual common root supplies an actual root witness",
+  "argument_id": "3dc21391-1633-47e7-ab76-382297c65a77",
+  "challenge_module": "TruthCore.Results.Causality.PerfectRootIntellectFromGovernor.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PerfectRootIntellectFromGovernor.Solution",
+  "theorem": "TruthCore.Results.Causality.PerfectRootIntellectFromGovernor.actualRootExistsOfCommonRoot",
+  "comparator_config": "results/8b5d7154-fa7f-45bd-8c69-6139a3560757/comparator.json",
+  "status": "solution-present",
+  "description": "Explicit stronger-to-weaker same-world projection of the selected common root. Does not create an independent root witness or additional warrant; the source common-root package and its support premises stay visible.",
+  "transcription": "instantiation"
+}

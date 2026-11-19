@@ -1,0 +1,23 @@
+{
+  "id": "ac68f95a-00fd-445e-b7de-d083ee6511b6",
+  "label": "Pointwise governor identity, common-root coverage and GOD_4 naming (#1793)",
+  "statement_ids": [
+    "dc397705-d727-419e-92f9-65d44e1ff15d",
+    "0c27f65a-6a6b-438a-b96c-b2bab9f21ac3",
+    "a6b46d2e-fb76-5123-8fbd-aca4cdc8ebd9",
+    "571094b6-28bd-5398-9940-5e76a4573a5f",
+    "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+  ],
+  "date": "2026-11-19",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "#1793 proposed pointwise extraction from PerfectRootIntellectFromGovernor.derive: with supplied ActualRoot n and InAct n esse, fixed-esse genus causation, esse-cause-to-selected-actual-ground and explicit EM identify any maximal governor with SAME n. The factored helper yields HasIntellect n in HAS_INTELLECT_1 and maximality without necessary/perfect-root, simplicity, immateriality, will or God naming. Adding ExistingInActAt gives direct common-root coverage and uniqueness by ActualCommonRoot.uniqueRoot. Stronger MaximeEnsGovernsNature constructively entails GradesToMaximumAtBeing, so dropping a separate grades premise is consolidation, not an independent maximum warrant. The registered substantive intellectualGodCommonRoot (6eb3fb5c) takes an explicit root-existence input plus ten other OPEN inputs (including EM, fixed-esse genus and governor, causal transfer and God naming), derives a root n with common coverage, IsGod n and HasIntellect n, and projects to the existing GOD_4 existence-stage root (65208963, transcription). Root-existence suppliers 9f7c8201 and 8b5d7154 are reuse/assembly, not new philosophical support. The fixed-esse naming calculation reuses CausalPerfectionTransfer.reducedDescription rather than the stronger all-respects genus and grades requirements of DirectEsseRootGodExistence.godOfRoot. Original derive signature unchanged; four new Challenge theorem signatures frozen after initial Solution draft (sequence deviation recorded, not hidden). All Lean and binding status awaits exact-head CI; full semantic details and rival in docs/notes/teleology-first-mover.md#governor-root-intellect-capacity-and-god_4-stage-1793-2026-11-19.",
+  "blocker": "No locally available pinned lean/lake/cargo toolchain or truth verifier; exact-head CI, binding/axiom/Comparator/NanoDa and fresh semantic challenge must validate the newly authored proof and its source/sense application. Substantive teleological first-source recognition, the move from production of cognitive effects to possessed intellect under an impersonal-source rival, actual thought exercise and possession-sensitive HasWill remain OPEN. Reopen positive warrant only with a matched phenomenon discriminating intellectual representation at the first source, not another presentation of the same governor premise.",
+  "evidence": [
+    "6eb3fb5c-a0db-4909-8138-4ac459620f5f",
+    "65208963-a5b6-495b-ba6b-74ea2375101c",
+    "9f7c8201-467a-48ca-ad11-b00bd65dd41f",
+    "8b5d7154-fa7f-45bd-8c69-6139a3560757",
+    "b5bbf266-c2e2-4a3f-a110-6574ca32248b"
+  ]
+}

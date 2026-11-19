@@ -1,0 +1,12 @@
+{
+  "id": "07421471-5dd2-4ba5-a2f9-5d93efcfae69",
+  "label": "An actual common root supplies an actual root witness (inference)",
+  "input_statement_ids": [
+    "a6b46d2e-fb76-5123-8fbd-aca4cdc8ebd9"
+  ],
+  "output_statement_id": "dc397705-d727-419e-92f9-65d44e1ff15d",
+  "rule": "Project the existing actual root witness from ActualCommonRootAt",
+  "meaning": "Explicit stronger-to-weaker same-world projection of the selected common root. Does not create an independent root witness or additional warrant; the source common-root package and its support premises stay visible.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

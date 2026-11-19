@@ -1,0 +1,22 @@
+{
+  "id": "50e6f58b-baf5-4cb3-8c19-15d76acaa06e",
+  "label": "The governor identifies one actual common GOD_4 root with intellect capacity (inference)",
+  "input_statement_ids": [
+    "dc397705-d727-419e-92f9-65d44e1ff15d",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7",
+    "0436de86-6579-53f2-9ff5-2111ba44ebae",
+    "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+    "86efed1a-f353-5b5d-9431-df7fc643ace1",
+    "7067553d-cad9-5d79-b6b2-912e35051530",
+    "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+    "09c6d5f0-d412-5038-85f9-75fffb935727",
+    "571094b6-28bd-5398-9940-5e76a4573a5f",
+    "1ec205ed-b2a6-5384-bb5f-2565a9d325bf"
+  ],
+  "output_statement_id": "0c27f65a-6a6b-438a-b96c-b2bab9f21ac3",
+  "rule": "Identify a governor-supplied maximal intelligent bearer with one supplied actual root; extend esse causal coverage to every actual concretum; reuse reducedDescription to name the same root",
+  "meaning": "Analyst conditional same-witness bridge, attribution deferred. One root n, an actual concretum at selected w with no incoming selected ground, is supplied independently of the governor (not from a second existential witness in this proof). One governed esse maximum d already has the SAME HasIntellect predicate read as HAS_INTELLECT_1. If d differs from n, fixed-esse genus causation and the existing n-in-esse interface make d cause n in esse; the one-way correspondence makes d an actual concrete ground of n, contradiction. Thus d=n and both maximality and intellectual capacity belong to that exact n. ExistingInActAt then applies genus causing to each other actual concretum x, giving direct ground coverage; ActualCommonRoot.uniqueRoot establishes the uniqueness among actual roots. The existing priority-ground interface makes n first; ActualityOnlyInsofarAsBeing, UniversalCauseTransfersPerfections, no-component-first and the OPEN GodNamesTheFullyDescribedPrinciple name this n by CausalPerfectionTransfer.reducedDescription. The governor also constructively implies GradesToMaximumAtBeing (it supplies a maximum unconditionally), so the absence of grades as a separate input is premise consolidation, not an independent new warrant or evidence hGovernor is weaker; global direction in governor is unused. This theorem needs only genus causality at the chosen esse, not in every respect, and uses no necessary/perfect-root, simplicity, immateriality, will or actual intellectual operation hypothesis. The reality of the cognitive director and its root application, causal transfer, grounding correspondence and God naming all remain open. Full matched scope/rival and revision conditions: docs/notes/teleology-first-mover.md#governor-root-intellect-capacity-and-god_4-stage-1793-2026-11-19.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
