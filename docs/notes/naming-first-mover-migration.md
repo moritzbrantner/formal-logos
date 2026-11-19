@@ -458,9 +458,10 @@ principle `d9fad785` at `esse`) and to uniqueness of the maximum (result
 first unmoved mover with the maximum. The conclusion `GodExists IsGod` is GOD_4.
 It comes only from `a594d8c4` (`UniquePureActFirstMoverIsGod … IsGod`) applied
 to the unique pure-act first mover. **On this route GOD_2 never passes into
-GOD_4.** `God` is an internal predicate, and `semantics beec1dc1` lists GOD_2
-(`e39a4fce`, `777646a5`) and GOD_4 (`a594d8c4`, conclusion) on distinct Lean
-parameters. So neither leaf needs a GOD_2→GOD_4 bridge. The GOD_4 load is
+GOD_4.** `God` is an internal predicate. `semantics beec1dc1` reports GOD_2
+(`e39a4fce`, `777646a5`) and GOD_4 (`a594d8c4`, conclusion) as allowlisted
+legacy mixing. The Lean proof shows no passage between them: `hGod` feeds only
+`AtMostOneFirstUnmovedMover`. So neither leaf needs a GOD_2→GOD_4 bridge. The GOD_4 load is
 carried by `a594d8c4` alone.
 
 Because `God` is universally quantified in the route theorem, `e39a4fce` is
@@ -472,7 +473,10 @@ claim about the unique maximal universal cause. The substantive joint
 commitment on this route is therefore: every other being whose being the
 unique maximum causes is moved whenever it moves. That is `777646a5` at the
 named bearer. The naming leaves fix which bearer that is. They add no further
-claim about it.
+claim about it. This reading needs `777646a5`'s `CausesIn` to be the CAUSE_2
+causation of being that fixes the bearer. The record tags it CAUSE_1 (legacy
+allowlisted mixing, also flagged by #1775's preflight), so this is an open
+sense gap.
 
 ### `57b88730`: end state **derivable** from five existing route premises
 
@@ -488,11 +492,13 @@ perfection `6c27657f`, and most-true-is-most-being `101bdd62` (as in
 
 `a9622441, 6c27657f, 101bdd62, d5a94eb1 (at esse only), ee4ab504 ⊢ 57b88730`.
 
-All five are premises of `beec1dc1` itself. Four are `proved`, and
-`ee4ab504` is self-evident. None of their direct support arguments
-(`bfaf6f92`, `c201b61a`, `1dff22d0`, `8542e377`, `a31b3e52`, `924302df`) uses
-`e39a4fce`, `709ad5d2`, `57b88730` or the fuller naming `1ec205ed`. That rules
-out circularity at that depth. Same-sense fit: `d5a94eb1` is used only at
+All five are premises of `beec1dc1` itself. Four have frontier status
+`proved` (conclusions of verified results, not established), and `ee4ab504` is
+self-evident. Their direct support arguments are `bfaf6f92`, `c201b61a`,
+`1dff22d0`, `8542e377`, `a31b3e52` and `924302df`. The full support closure of
+the five premises (and of `eaa4c679`, `09c6d5f0`, `d9fad785`) contains none of
+`e39a4fce`, `709ad5d2`, `57b88730` or the fuller naming `1ec205ed`; this was
+checked transitively. Same-sense fit: `d5a94eb1` is used only at
 `esse` with the same `MoreIn`, `InAct` and `CausesIn` (CAUSE_2) as `IsMaximumIn`
 and `CausesAllInGenus`. The derivation inherits, and does not add to, the
 legacy MAXIMAL_1/MAXIMAL_6 tag mix that `beec1dc1`'s quarta via step already
@@ -538,9 +544,13 @@ interderivable from `beec1dc1`'s own premises. They pick out the same bearer
 by co-extensive descriptions: *principium omnium* for the operation leaf, and
 *supra omnia existens* plus *principium omnium* for the reduced leaf. Under
 the owner's rule that different presentations of the same assumption are not
-additional evidence, `61ac44a6` is a **re-presentation** of the reduced naming
-commitment. It is not independent support for `e39a4fce`, and `e39a4fce`'s
-warrant does not rise by counting it. Deriving `709ad5d2` from `e39a4fce`
+additional evidence, `61ac44a6` adds no warrant beyond what is already
+recorded for `e39a4fce`. It is not independent support for `e39a4fce`, and
+`e39a4fce`'s warrant does not rise by counting it. The source warrant offered
+for `709ad5d2` (q.13 a.8 co.; `9b52e1a5`) is already linked to `e39a4fce`
+(relations `57a2a495`, `79a42a61`). Together with interderivability under the
+route's premises, counting `61ac44a6` separately would double-count the same
+evidence. Deriving `709ad5d2` from `e39a4fce`
 would be circular as support for `e39a4fce`.
 
 *Strongest positive warrant.* The three items below are distinguished by
@@ -557,10 +567,14 @@ kind.
   `709ad5d2`) names the cause of being, goodness and every perfection. The ad 2
   claim `7a834b05` is linked to `e39a4fce`, not to this leaf.
 - **Analyst inference.** The leaf takes the *id a quo* structure (reference
-  fixed by an operation) and makes two substitutions. It replaces providence
-  with causing the being of all others. It reduces the application condition
-  to that operation plus uniqueness, dropping *supra omnia* and *remotum*. No
-  source states this, and the record correctly marks it as an unattributed
+  fixed by an operation) and takes three analyst steps. It replaces
+  providence with causing the being of all others. It reduces the application
+  condition to that operation plus uniqueness, dropping *supra omnia* and
+  *remotum*. It turns the *id a quo* into a sufficient condition of
+  application. The article distinguishes it from what the name signifies; the
+  stone example shows that in general it is not sufficient. The leaf relies on
+  universality plus uniqueness to close that gap, and the dropped *supra
+  omnia* and *remotum* are where the gap shows. No source states this, and the record correctly marks it as an unattributed
   analyst bridge.
 - **Structural.** As a stipulation for an internal parameter whose content
   comes only from the premises using it, it costs nothing beyond fixing the
@@ -574,7 +588,9 @@ kind.
    being that entered into the composition of the world as its form or part
    would meet the antecedent while lacking what ad 2 says the name signifies.
    Independent justification: ad 2 itself lists *remotum*, and q.3 a.8 treats
-   the world-soul/form-of-the-world position as a held view. Status: this is a
+   the world-soul/form-of-the-world position as a held view (passage record
+   `aquinas-summa-theologiae-q3`; claim
+   `aquinas-st-i-q3-a8-no-component-first-in-being`). Status: this is a
    real fidelity strengthening, and the relation note `7cc5ccee` already
    records it. It is answered conditionally, not refuted. Given `57b88730`
    (now derivable), "maximal in being is the first being" `eaa4c679` and "no
@@ -588,10 +604,11 @@ kind.
    operation" when the operation is changed. Mechanism: q.13 a.8 fixes the
    name by providence, not by causation of being. Independent justification:
    the text read above. Status: this limits the source support. It is not an
-   objection to the leaf's truth at GOD_2, because no case is offered of a
-   unique universal cause of being that the *Summa*'s use would not call God.
-   No substantive objection to the truth of the stipulation at GOD_2 is
-   identified.
+   objection to the leaf's truth at GOD_2. Apart from the world-form case of
+   objection 1, which is answered only conditionally (through `57b88730`,
+   `eaa4c679` and `09c6d5f0`, in the component-remoteness sense of
+   `1ec205ed`), no case is offered of a unique universal cause of being that
+   the *Summa*'s use would not call God.
 3. **GOD_1 tag.** This is a record defect, not an objection. It is covered
    under fixed meanings; the repair is listed under next tests.
 
@@ -606,7 +623,7 @@ elsewhere.
 The two leaves do not lower the route.
 
 - `57b88730` is recoverable from the route's own premises.
-- `709ad5d2` restates `e39a4fce`.
+- `709ad5d2` adds no warrant beyond what is already recorded for `e39a4fce`.
 - `e39a4fce` serves on `beec1dc1` only to let `777646a5` apply to the maximum.
 
 The route's non-naming loads remain decisive:
@@ -618,9 +635,12 @@ The route's non-naming loads remain decisive:
   regress, #1768 grades it moderately supported but bounded by the commitment
   C*. The relative conclusion (result `e05d2976`) is better supported but is
   not what this argument uses. Per accepted-but-unmerged #1775, C* is weak.
-- **`777646a5`.** Per #1768 it is source-stated (q.105 a.5), and its
-  derivation support runs through the C* carriers `f03798ba` and `d791628f`.
-  It enters this route a second time, at the named bearer.
+- **`777646a5`.** Source-stated (q.105 a.5). Its derivation support through
+  `f03798ba` and `d791628f` needs only the some-respect content (sense (i)),
+  not the relevance bridge `7bf380c6` that makes those carriers C* (#1775,
+  refining #1768's table). Separately, #1775 reports that the operation form
+  `f03798ba` fails under adopted POTENCY_1 for steady exercise. So on the
+  current record `c1b68c21` alone carries C* on this route.
 - **The GOD_4 identification `a594d8c4`.** Per #1768 it is a defensible
   provisional identification of moderate strength.
 - **The quarta via core.** Per #1772 and #1777 (unmerged), it is consumed at
@@ -629,10 +649,11 @@ The route's non-naming loads remain decisive:
   `2068f91c`.
 
 Overall, `beec1dc1` is a coherent conditional route. Its support is bounded
-by its C*-dependent inputs, `c1b68c21` (absolute) and `777646a5`. If C* stays
-weak as #1775 reports, the route is weakly supported overall. If C* is
-upgraded (lane A's next test), the route rises to moderate, then bounded by
-`a594d8c4`. The naming leaves are not the binding constraint under either
+by `c1b68c21` (absolute), which carries C*, and by `777646a5`'s POTENCY_1 gap
+(#1775) and `a594d8c4`. If C* stays weak as #1775 reports, the route is weakly
+supported overall. If C* is upgraded (lane A's next test), the route rises to
+moderate, then bounded by `a594d8c4` and by `777646a5`'s POTENCY_1
+steady-exercise gap. The naming leaves are not the binding constraint under either
 condition. These are recorded warrant judgments. No premise is established, no
 rival defeated, and no closure changed.
 
@@ -640,7 +661,9 @@ rival defeated, and no closure changed.
 
 1. Register the `57b88730` derivation as a verified result from `a9622441`,
    `6c27657f`, `101bdd62`, `d5a94eb1` and `ee4ab504`, with the
-   `needsSomeMaximum` omission control. Register the
+   `needsSomeMaximum` omission control. The registered control must be
+   zero-axiom: take `ExcludedMiddle` as a hypothesis instead of using
+   `Classical.em`. Register the
    `operationNamingFromReduced` converse, so that the `709ad5d2`/`e39a4fce`
    equivalence under route premises is a checked record rather than this
    note's scratch.
@@ -649,15 +672,16 @@ rival defeated, and no closure changed.
    `61ac44a6` entry in `corpus/sense-index-allowlist.json`. This is a
    labelling repair and changes no proof.
 3. The discriminating philosophical test is outside these leaves. Can q.105
-   a.5's "God" (the source of `777646a5`) be read referentially as the unique
-   maximal universal cause fixed here? Can it be read so without importing
-   the C* load a second time? A positive answer lets `777646a5` stand at the
-   named bearer on its source claim. A negative answer leaves this route's
-   first-mover identification on C*.
+   a.5's "God" (the source of `777646a5`) be read at the bearer fixed here,
+   the unique maximal universal cause of being, without presupposing the
+   identification `e39a4fce` supplies, and with `777646a5`'s `CausesIn` the
+   same causation of being (CAUSE_2) as `CausesAllInGenus`? Separately, does
+   `777646a5`'s derivation support survive #1775's POTENCY_1 steady-exercise
+   control?
 
 *Reopening conditions.* Reopen `57b88730` if any of its five derivation
-premises loses its route standing. Reopen `709ad5d2` if a case is given of a
-unique universal cause of being that the *Summa*'s use would not call God, or
+premises loses its route standing. Reopen `709ad5d2` if a case *other than the
+world-form case* is given of a unique universal cause of being that the *Summa*'s use would not call God, or
 if the remoteness inputs `eaa4c679` or `09c6d5f0` fall. Either would make the
 dropped *remotum* objection live.
 
