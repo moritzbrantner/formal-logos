@@ -1,0 +1,11 @@
+{
+  "id": "e6d1be09-ecc8-4a57-9788-736b76c6aa56",
+  "label": "Esse dependence strengthens its sustaining sibling",
+  "subject_kind": "statement",
+  "subject_id": "2068f91c-1eeb-5dbb-a71a-f7b6a12bb495",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "149ed837-a590-4919-87fb-505d307a2636",
+  "verification_result_id": "2574412d-9ebc-4320-8624-3a765684373c",
+  "note": "Same cause-of-esse relation and dependence parameter; the weak version adds the antecedent that the cause gives the effect being at every moment at which the effect is present, in every history. Strict: Control part 1 (parent and child, dependence as co-presence)."
+}

@@ -1,0 +1,28 @@
+{
+  "id": "aa4f2d83-97c8-414c-bbfb-5621e6188ce9",
+  "label": "Unheld in being is PURE_ACT_1, from the POTENCY_1 clause and the esse instance",
+  "premise_statement_ids": [
+    "9c7ad646-c69d-4dc8-bd95-e8ba8c49c673",
+    "f834ee65-53eb-4aea-b07c-42b06dbd1dfd"
+  ],
+  "conclusion_statement_id": "f360bb6f-0ea6-41fa-9e8b-b57891ad5803",
+  "inference_ids": [
+    "58369280-46ad-4086-a86b-c77a1f3dbecd"
+  ],
+  "meaning": "New non-transcription conditional derivation. Let f be in POTENCY_1 in some respect. By the potency clause f is in act as to being and could lack being; by the esse instance of concurrent actualization something other than f presently gives f being, so f is MOTION_3 held as to being. Hence what is not held as to being is in potency in no respect (including, trivially, whatever is not in act as to being). Unheldness in every respect is more than this needs: unheldness as to being suffices. The esse-side bundle without the potency clause does not give pure act (Control part 3). Compared with the PRIOR_4 step of the unmerged PR #1774 (pureActOfRespectMatchedBridge, branch agent/prima-via-priority-split), where act's simple priority (a4d3261a) supplies a prior being in act in the very respect of the potency and the respect-matched first-in-being bridge identifies it with the first mover, here the potency clause with the esse instance supplies another being that holds the potential thing, at esse rather than in the respect of the potency, and uses no priority relation; that shift to esse is why unheldness as to being suffices. Both premises stay OPEN. No premise is established.",
+  "term_senses": {
+    "MOTION": "c0e8f9be-36d3-43d5-8340-2e38dcd6b64d"
+  },
+  "definition_ids": [
+    "56b438a0-7fcc-4dd5-916b-1d2e2162310b",
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "a49e4cf1-ca4f-5519-9724-892af257cedb",
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

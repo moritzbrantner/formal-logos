@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.TotalHolding.Challenge",
+  "solution_module": "TruthCore.Results.Causality.TotalHolding.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.TotalHolding.totalHolderNotTotallyHeld"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

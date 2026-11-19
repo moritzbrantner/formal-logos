@@ -1,0 +1,15 @@
+{
+  "id": "166dba9d-d2a3-4b15-b492-eca2c8e9ec74",
+  "label": "Whatever is in act in a respect in which it could lack its act is MOTION_3 held there by another",
+  "paraphrase": "OPEN analyst premise, attribution deferred (respect-general concurrent actualization by another): whatever is in act in a respect r and could lack its act in r (Lackability.CanLack, definition 56b438a0-7fcc-4dd5-916b-1d2e2162310b) is MOTION_3 moved in r: something other than it presently actualizes it in r (HeldMotion, definition ea1904bc-bdfa-4835-a4a7-8545c5221e2e). It generalizes the strong concurrent actualization 76d2cc96-14a0-48bc-bd0b-a5c0ca853265 (received esse is given being by another whenever present) from esse to every respect, and is derived from its untimed esse instance with accident-inclusive conservation and the lackable-being premise. Existential inertia (Schmid 2021, Control part 1 of the concurrent-actualization batch) contests the esse instance; for a retained quality or a state of motion (a hot iron off the fire, a projectile) no physical present holder is known, so the premise requires a non-physical holder there. Its warrant is assessed on branch agent/sustaining-vs-inertia and is not judged here. The distinctness of the holder excludes a thing's own persistence power as its holder.",
+  "lean_declaration": "TruthCore.Causality.HoldingMotion.LackableActsAreHeld",
+  "definition_ids": [
+    "56b438a0-7fcc-4dd5-916b-1d2e2162310b",
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e",
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "52b05849-88b3-4f44-b81b-768850f9ed12",
+  "label": "Whatever is receiving its esse at a moment is given being then by something",
+  "paraphrase": "OPEN analyst premise, attribution deferred (correlativity of receiving and giving): in every history of the model, if a principle z is receiving the esse of x at moment t (Receipt.ReceivesAt v z x t, the primitive of definition 506ea036), then something gives x being at t (GivesAt v g x t for some g, definition 158301bc, STRICT esse-giving reading). The giver need not be distinct from x, unique, or a tenseless cause of x's being. Stated over the primitive, which is open between the senses of disambiguation 71d3bdb7: on RECEIVES_ESSE_AT_1 (passion) it holds by definition; on RECEIVES_ESSE_AT_2 (standing composition) it is equivalent to weak concurrent actualization 40a97664. An existential inertialist who accepts the present-tense reading must deny it, by result 7c62adb5 and the rejection of 40a97664; Control part 2 exhibits that position with standing receipt.",
+  "lean_declaration": "TruthCore.Causality.PresentReceipt.ReceivingIsCorrelativeWithGiving",
+  "definition_ids": [
+    "506ea036-c6bf-4e2d-aee3-7b25bfcdfea6",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "71d3bdb7-92cc-4023-b0ca-1739914628e4"
+  ]
+}

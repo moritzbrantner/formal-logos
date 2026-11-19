@@ -1,0 +1,8 @@
+{
+  "id": "5462ce35-4970-434c-8f2a-0ccc2c1db805",
+  "label": "Total-holding per se link: a total holder that holds another only as itself totally held",
+  "term": "total-holding per se link (Lean parameter `AsTotallyHeld`)",
+  "definition": "AsTotallyHeld y x: y is a link of a total-holding series below which x stands: y totally holds x (TotallyHolds, definition edca52e4-f224-491d-ac45-5816fac1a9fd) only as y is itself totally held in the act by which it holds x, as a hook holds a lamp only while a single beam, which the hook does not prop, holds the hook. The restriction of the holding per se link AsHeld (definition 439f943a-1bf1-4659-8fa4-cf6b83feb708) to total holders, not that relation. It is a parameter of the TotalHolding definitions, not a constant, so it has no Lean declaration. Two open premises constrain it: TotallyHeldTotalHolderIsPerSe gives a sufficient condition for a link, and NoInfiniteTotalHoldingSeries makes it well founded. Nothing says when a link fails.",
+  "basis": "stipulative",
+  "note": "Analyst notion, attribution deferred (docs/notes/caused-mover-cstar.md, section 10). Co-holders and reciprocal holders are not links: two cards leaning on each other are not links of each other, so the series is consistent with them (TotalHolding.Control.Certificate part 1). The cost is that a total holder co-held by several holders ends the series without being unheld (part 2). Would be sourced by a pinned passage stating an essentially ordered series of present whole causes."
+}

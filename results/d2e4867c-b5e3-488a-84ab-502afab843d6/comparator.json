@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.SustainingDependence.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SustainingDependence.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.SustainingDependence.onceBegunOfOnsetParity"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

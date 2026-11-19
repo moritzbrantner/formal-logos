@@ -1,0 +1,21 @@
+{
+  "id": "88463bdb-dc23-4862-84bf-fc102fcf79c3",
+  "label": "Some receipt with correlativity is concurrent actualization, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "b5925e6d-2465-42ae-a863-518715e34c91",
+  "inference_ids": [
+    "f0ea2c05-aeb8-4da7-a2d1-d27c224363fd"
+  ],
+  "meaning": "Closed result with no premises, quantified over every history, giving relation and reception predicate. If some receipt interpretation satisfies the present-tense reading and correlativity, then weak concurrent actualization 40a97664 holds (the derivation 7c62adb5). Conversely, if 40a97664 holds, the standing-composition receipt (RECEIVES_ESSE_AT_2) satisfies the present-tense reading by definition and correlativity by standingReadingIsTheCrux. So the present-receipt pair adds nothing to 40a97664 unless the receipt relation is fixed by a reading that carries further content; the separation in Control part 3 holds only for a fixed interpretation. It establishes nothing about reality.",
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "506ea036-c6bf-4e2d-aee3-7b25bfcdfea6",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ],
+  "disambiguation_ids": [
+    "71d3bdb7-92cc-4023-b0ca-1739914628e4",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

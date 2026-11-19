@@ -1,0 +1,15 @@
+{
+  "id": "f834ee65-53eb-4aea-b07c-42b06dbd1dfd",
+  "label": "Whatever is in act as to being and could lack being is MOTION_3 held in being by another",
+  "paraphrase": "OPEN analyst premise, attribution deferred: the untimed esse instance of the respect-general concurrent actualization. Whatever is in act as to being (InAct x esse) and could lack being (Lackability.CanLack x esse) is presently given being by something other than itself (HeldMotion at esse, the holding relation read at esse as giving being). Derived from the timed strong concurrent actualization 76d2cc96-14a0-48bc-bd0b-a5c0ca853265 under the present-moment reading of its vocabulary (dedc431f-4f04-40e9-b519-3243d1874c18), which is a further open bridge: its clause (b), that whatever could lack being has received esse, is substantive. Existential inertia contests it (concurrent-actualization Control part 1); its warrant is assessed on branch agent/sustaining-vs-inertia and is not judged here.",
+  "lean_declaration": "TruthCore.Causality.HoldingMotion.LackableBeingIsHeld",
+  "definition_ids": [
+    "56b438a0-7fcc-4dd5-916b-1d2e2162310b",
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e",
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

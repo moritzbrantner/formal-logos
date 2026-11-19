@@ -1,0 +1,12 @@
+{
+  "id": "2371b373-3219-404f-be17-80cb4da27e89",
+  "label": "Received onset is given, from onset receipt and correlativity",
+  "argument_id": "4b3db4fa-3541-4542-9b46-44b2cc3421ad",
+  "challenge_module": "TruthCore.Results.Causality.PresentReceipt.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PresentReceipt.Solution",
+  "theorem": "TruthCore.Results.Causality.PresentReceipt.onsetOfOnsetReceipt",
+  "comparator_config": "results/2371b373-3219-404f-be17-80cb4da27e89/comparator.json",
+  "status": "solution-present",
+  "description": "Transcription (single application, invariant 16): the last step applies correlativity. With the onset reading in place of the present-tense reading, correlativity yields only that a received-esse thing is given being at a first moment of its presence (fa3e228b), which the existential inertialist grants (Control part 1). Each premise is needed in a checked interpretation (part 4, no receipt; part 5, standing receipt with no giving). It shows that correlativity is compatible with existential inertia: the difference between the two conclusions is exactly the difference between the present-tense and the onset reading. All premises stay OPEN. No premise is established.",
+  "transcription": "single_application"
+}

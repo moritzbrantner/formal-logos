@@ -404,3 +404,286 @@ Thus actual premise change is none. Provisional identification warrant is
 assessed separately from proof validity and computed establishment. The complete
 proposed outcome above, including the strongest rival and reopening conditions,
 is ready for independent semantic challenge before coordinator publication.
+
+## Current cluster assessment under the substantive objection standard (2026-11-19)
+
+**Scope.** The two open leaves of the maxime-ens Stage 1 route `beec1dc1`
+("GOD_4 exists … via maxime ens") that had no reviewed end state:
+`57b88730` (`UniversalCauseOfBeingIsMaximal`) and `709ad5d2`
+(`NameGodImposedFromOperation`). Both are premises of exactly one argument,
+`61ac44a6` (result `7280ac5f`, `reducedNamingFromOperation`), which is one of
+three support bundles for the route premise `e39a4fce`
+(`GodNamesTheUniqueMaximeEns`); the other two are `2dc44ef4` and `e28fb989`,
+both from the fuller naming `1ec205ed` plus transfer and remoteness premises.
+They sit in this naming note because both leaves concern how the name used on
+the route is tied to the maximum in being; the prima via naming bridge
+`a594d8c4` is assessed elsewhere (see below). Baseline `df4909cb0`. Attempt
+`8477d51d-6439-4c4f-9876-fba83a8f439b` carries the compact assessment.
+
+### Fixed meanings
+
+- `CausesAllInGenus InAct CausesIn esse m`: every *other* being that has
+  being has its being caused by `m` (`∀ x, x ≠ m → InAct x esse → CausesIn m x
+  esse`). It is vacuously true of any `m` when no other being has being.
+- `IsMaximumIn InAct MoreIn esse m` (MAXIME_ENS_1, sense
+  MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST_1): `m` has being and nothing is
+  more a being than `m`. It is the weak non-strict maximum, not a strict
+  greatest.
+- `57b88730`: `∀ m, CausesAllInGenus … esse m → IsMaximumIn … esse m`.
+- `709ad5d2`: `∀ m, CausesAllInGenus … esse m → (∀ m', CausesAllInGenus …
+  esse m' → m' = m) → God m`. Uniqueness is the definite-description condition
+  of application. `God` is a predicate parameter.
+- **Sense of `God` in `709ad5d2`.** The statement record tags it GOD_1
+  (definition `18945900`, Lean `NominalGod`). In its only consumer, `61ac44a6`,
+  the same Lean parameter `God` is the conclusion's GOD_2 (definition
+  `23e73af5`, "the one the *Summa* calls God", whose content comes only from
+  the premises that use it). `truth semantics 61ac44a6` reports this as
+  *allowlisted mixing — equivocation risk (legacy)*. The formal content bound
+  by the proof is the GOD_2 reading; the GOD_1 tag is a record-labelling
+  defect, not a sense passage made by the proof. At GOD_1 the statement would
+  say something different and stronger. It would say that the unique universal
+  cause of being satisfies `NominalGod`, which also requires causing every
+  perfection of others and being remote from all. Nothing in `61ac44a6` or
+  `beec1dc1` supplies that. The assessment below is therefore at GOD_2 only.
+
+### How `beec1dc1` consumes them
+
+`stageOneViaMaximeEns` takes `hName : GodNamesTheUniqueMaximeEns … God`
+(`e39a4fce`). It is used once, inside `maximeEnsIsGod`. There, for each maximum
+in being `m`, it is applied to `m`, to `m`'s universal causation (genus
+principle `d9fad785` at `esse`) and to uniqueness of the maximum (result
+`AtMostOneMaximeEns` from `d9fad785`, `d5a94eb1`, `ee4ab504`). The resulting
+`MaximeEnsIsGod … God` is consumed only by `oneFirstMoverViaMaximeEns`, where
+`777646a5` (`CreatedAgentIsAppliedToActByGodReading … God`) identifies every
+first unmoved mover with the maximum. The conclusion `GodExists IsGod` is GOD_4.
+It comes only from `a594d8c4` (`UniquePureActFirstMoverIsGod … IsGod`) applied
+to the unique pure-act first mover. **On this route GOD_2 never passes into
+GOD_4.** `God` is an internal predicate. `semantics beec1dc1` reports GOD_2
+(`e39a4fce`, `777646a5`) and GOD_4 (`a594d8c4`, conclusion) as allowlisted
+legacy mixing. The Lean proof shows no passage between them: `hGod` feeds only
+`AtMostOneFirstUnmovedMover`. So neither leaf needs a GOD_2→GOD_4 bridge. The GOD_4 load is
+carried by `a594d8c4` alone.
+
+Because `God` is universally quantified in the route theorem, `e39a4fce` is
+satisfiable by instantiating `God` with the reduced description itself. In
+that case it holds by `fun _ h1 h2 h3 => ⟨h1, h2, h3⟩` (scratch-checked, not
+registered). The naming content does not disappear under that instantiation.
+It moves into reading `777646a5`'s source claim (q.105 a.5, about God) as a
+claim about the unique maximal universal cause. The substantive joint
+commitment on this route is therefore: every other being whose being the
+unique maximum causes is moved whenever it moves. That is `777646a5` at the
+named bearer. The naming leaves fix which bearer that is. They add no further
+claim about it. This reading needs `777646a5`'s `CausesIn` to be the CAUSE_2
+causation of being that fixes the bearer. The record tags it CAUSE_1 (legacy
+allowlisted mixing, also flagged by #1775's preflight), so this is an open
+sense gap.
+
+### `57b88730`: end state **derivable** from five existing route premises
+
+*Derivation (scratch replica, Lean v4.35.0, definitions copied verbatim; zero
+axioms; not a registered result).* Let `z` be maximal in being and `m` a
+universal cause of being. If `z ≠ m`, then `z` has being and so `m` causes
+`z`'s being, and `d5a94eb1` at `esse` (`CauseOfQualityInAnotherIsMoreSuchReading`)
+gives `MoreIn esse m z`. That contradicts `z`'s maximality. By excluded middle
+(`ee4ab504`), `z = m`, so `m` is maximal. A maximum `z` exists by the existing
+quarta via steps: grades of truth `a9622441`, a maximum for any graded
+perfection `6c27657f`, and most-true-is-most-being `101bdd62` (as in
+`QuartaVia.quartaVia`, without its genus step). So
+
+`a9622441, 6c27657f, 101bdd62, d5a94eb1 (at esse only), ee4ab504 ⊢ 57b88730`.
+
+All five are premises of `beec1dc1` itself. Four have frontier status
+`proved` (conclusions of verified results, not established), and `ee4ab504` is
+self-evident. Their direct support arguments are `bfaf6f92`, `c201b61a`,
+`1dff22d0`, `8542e377`, `a31b3e52` and `924302df`. The full support closure of
+the five premises (and of `eaa4c679`, `09c6d5f0`, `d9fad785`) contains none of
+`e39a4fce`, `709ad5d2`, `57b88730` or the fuller naming `1ec205ed`; this was
+checked transitively. Same-sense fit: `d5a94eb1` is used only at
+`esse` with the same `MoreIn`, `InAct` and `CausesIn` (CAUSE_2) as `IsMaximumIn`
+and `CausesAllInGenus`. The derivation inherits, and does not add to, the
+legacy MAXIMAL_1/MAXIMAL_6 tag mix that `beec1dc1`'s quarta via step already
+has (`6c27657f` vs `101bdd62`).
+
+It is **not** a meaning postulate. In the one-being, empty-relation
+interpretation (no being has being), `d5a94eb1` and excluded middle hold, `m` is
+a vacuous universal cause, and `m` is not maximal. The scratch
+`needsSomeMaximum` checks this, so some existence input, such as a maximum in
+being, is needed. The genus principle `d9fad785` and the alternative bundle of
+`GodMaximalCausal` (asymmetry `a4814f25`, more-such-has-the-perfection
+`c11369aa`, a further existence bridge) are not needed.
+
+*Reason to stop.* The leaf adds no commitment beyond the route's own inputs,
+so its warrant is theirs. The parallel accepted-but-unmerged findings bear on
+those inputs: #1772 (lane D: the genus principle and cause-more-such are
+consumed only at `esse`) and #1777 (lane F: the existence of a maximum rests
+on a being in act at `esse` plus `e4e6b0cd`). Neither is established here.
+*Substantive objection:* none identified against the inference. Objections to
+the five premises belong to their own assessments.
+
+### `709ad5d2`: end state **defended direct option**
+
+It is a reference-fixing nominal stipulation at GOD_2, and it is not
+independent of `e39a4fce`.
+
+*Content and scope.* The statement says that the name, in the *Summa*'s use
+on this route, applies to whatever is the only cause of the being of every
+other being. It fixes what the GOD_2 parameter picks out. It asserts nothing
+about providence, perfection, remoteness or GOD_4.
+
+*Interderivability with `e39a4fce` under route premises.* Two facts hold:
+
+- `709ad5d2 ∧ 57b88730 ⊢ e39a4fce`. This is the existing result `7280ac5f`.
+  The maximality antecedent of `e39a4fce` is unused.
+- `e39a4fce ∧ 57b88730 ∧ d9fad785 (at esse) ⊢ 709ad5d2` (scratch
+  `operationNamingFromReduced`, zero axioms). A universal cause is maximal.
+  Any maximum is a universal cause, so uniqueness among causes gives
+  uniqueness among maxima.
+
+With `57b88730` derivable as above, the two naming statements are
+interderivable from `beec1dc1`'s own premises. They pick out the same bearer
+by co-extensive descriptions: *principium omnium* for the operation leaf, and
+*supra omnia existens* plus *principium omnium* for the reduced leaf. Under
+the owner's rule that different presentations of the same assumption are not
+additional evidence, `61ac44a6` adds no warrant beyond what is already
+recorded for `e39a4fce`. It is not independent support for `e39a4fce`, and
+`e39a4fce`'s warrant does not rise by counting it. The source warrant offered
+for `709ad5d2` (q.13 a.8 co.; `9b52e1a5`) is already linked to `e39a4fce`
+(relations `57a2a495`, `79a42a61`). Together with interderivability under the
+route's premises, counting `61ac44a6` separately would double-count the same
+evidence. Deriving `709ad5d2` from `e39a4fce`
+would be circular as support for `e39a4fce`.
+
+*Strongest positive warrant.* The three items below are distinguished by
+kind.
+
+- **Source support, not source statement.** The materialized passage
+  `AQUINAS-ST-I-Q13-A8` (`423cc2f7`, read in full for this assessment) says
+  that what a name is imposed *from* (*id a quo*) differs from what it is
+  imposed to signify. *Deus* is imposed from an operation, universal
+  providence (*imponitur … ab universali rerum providentia*), to signify the
+  divine nature. Ad 2 gives the signified *ratio*: *supra omnia existens,
+  quod est principium omnium, et remotum ab omnibus*. The quarta via's *et hoc
+  dicimus Deum* (claim `9b52e1a5`, relation `7cc5ccee` `supports` →
+  `709ad5d2`) names the cause of being, goodness and every perfection. The ad 2
+  claim `7a834b05` is linked to `e39a4fce`, not to this leaf.
+- **Analyst inference.** The leaf takes the *id a quo* structure (reference
+  fixed by an operation) and takes three analyst steps. It replaces
+  providence with causing the being of all others. It reduces the application
+  condition to that operation plus uniqueness, dropping *supra omnia* and
+  *remotum*. It turns the *id a quo* into a sufficient condition of
+  application. The article distinguishes it from what the name signifies; the
+  stone example shows that in general it is not sufficient. The leaf relies on
+  universality plus uniqueness to close that gap, and the dropped *supra
+  omnia* and *remotum* are where the gap shows. No source states this, and the record correctly marks it as an unattributed
+  analyst bridge.
+- **Structural.** As a stipulation for an internal parameter whose content
+  comes only from the premises using it, it costs nothing beyond fixing the
+  bearer. The substantive claims about that bearer are `777646a5`, plus
+  `a594d8c4` for GOD_4.
+
+*Objections under the standard.*
+
+1. **Dropped *remotum ab omnibus*.** Target: whether "only universal cause of
+   being" is sufficient for the name. Mechanism: a unique universal cause of
+   being that entered into the composition of the world as its form or part
+   would meet the antecedent while lacking what ad 2 says the name signifies.
+   Independent justification: ad 2 itself lists *remotum*, and q.3 a.8 treats
+   the world-soul/form-of-the-world position as a held view (passage record
+   `aquinas-summa-theologiae-q3`; claim
+   `aquinas-st-i-q3-a8-no-component-first-in-being`). Status: this is a
+   real fidelity strengthening, and the relation note `7cc5ccee` already
+   records it. It is answered conditionally, not refuted. Given `57b88730`
+   (now derivable), "maximal in being is the first being" `eaa4c679` and "no
+   component of anything is the first being" `09c6d5f0`, the unique universal
+   cause is remote. These are the remoteness inputs the sibling bundles
+   `2dc44ef4`/`e28fb989` already carry. The from-operation bundle absorbs that
+   conditional exclusion into its naming stipulation. That confirms it is no
+   weaker a commitment than the fuller-naming bundles, and so it is no
+   cheaper support for `e39a4fce`.
+2. **Providence versus causing being.** Target: the fidelity of "imposed from
+   operation" when the operation is changed. Mechanism: q.13 a.8 fixes the
+   name by providence, not by causation of being. Independent justification:
+   the text read above. Status: this limits the source support. It is not an
+   objection to the leaf's truth at GOD_2. Apart from the world-form case of
+   objection 1, which is answered only conditionally (through `57b88730`,
+   `eaa4c679` and `09c6d5f0`, in the component-remoteness sense of
+   `1ec205ed`), no case is offered of a unique universal cause of being that
+   the *Summa*'s use would not call God.
+3. **GOD_1 tag.** This is a record defect, not an objection. It is covered
+   under fixed meanings; the repair is listed under next tests.
+
+*Reason to stop.* A reference-fixing stipulation for a parameter defined by
+its use is an appropriate primitive stopping point. Its only non-circular
+further support would be a source that states it, and none does. Its weight on
+the case lies in the claims made about the fixed bearer, which are assessed
+elsewhere.
+
+### Route-level judgment for `beec1dc1` (provisional, conditional)
+
+The two leaves do not lower the route.
+
+- `57b88730` is recoverable from the route's own premises.
+- `709ad5d2` adds no warrant beyond what is already recorded for `e39a4fce`.
+- `e39a4fce` serves on `beec1dc1` only to let `777646a5` apply to the maximum.
+
+The route's non-naming loads remain decisive:
+
+- **The absolute first mover `c1b68c21`**, `strong_version_needed` on this
+  argument. Per accepted-but-unmerged #1768 (lane A,
+  `docs/notes/prima-via-strength-consumers.md` on that branch), the absolute
+  conclusion is conditional on the regress `226c38f6` (lane B). Given that
+  regress, #1768 grades it moderately supported but bounded by the commitment
+  C*. The relative conclusion (result `e05d2976`) is better supported but is
+  not what this argument uses. Per accepted-but-unmerged #1775, C* is weak.
+- **`777646a5`.** Source-stated (q.105 a.5). Its derivation support through
+  `f03798ba` and `d791628f` needs only the some-respect content (sense (i)),
+  not the relevance bridge `7bf380c6` that makes those carriers C* (#1775,
+  refining #1768's table). Separately, #1775 reports that the operation form
+  `f03798ba` fails under adopted POTENCY_1 for steady exercise. So on the
+  current record `c1b68c21` alone carries C* on this route.
+- **The GOD_4 identification `a594d8c4`.** Per #1768 it is a defensible
+  provisional identification of moderate strength.
+- **The quarta via core.** Per #1772 and #1777 (unmerged), it is consumed at
+  `esse` only. The existence of a maximum rests on a being in act at `esse`
+  plus `e4e6b0cd`, and the maximum-to-root binding uses sustaining via
+  `2068f91c`.
+
+Overall, `beec1dc1` is a coherent conditional route. Its support is bounded
+by `c1b68c21` (absolute), which carries C*, and by `777646a5`'s POTENCY_1 gap
+(#1775) and `a594d8c4`. If C* stays weak as #1775 reports, the route is weakly
+supported overall. If C* is upgraded (lane A's next test), the route rises to
+moderate, then bounded by `a594d8c4` and by `777646a5`'s POTENCY_1
+steady-exercise gap. The naming leaves are not the binding constraint under either
+condition. These are recorded warrant judgments. No premise is established, no
+rival defeated, and no closure changed.
+
+### Next tests
+
+1. Register the `57b88730` derivation as a verified result from `a9622441`,
+   `6c27657f`, `101bdd62`, `d5a94eb1` and `ee4ab504`, with the
+   `needsSomeMaximum` omission control. The registered control must be
+   zero-axiom: take `ExcludedMiddle` as a hypothesis instead of using
+   `Classical.em`. Register the
+   `operationNamingFromReduced` converse, so that the `709ad5d2`/`e39a4fce`
+   equivalence under route premises is a checked record rather than this
+   note's scratch.
+2. Repair the sense record. Retag `709ad5d2` to GOD_2: definition
+   `23e73af5` in place of `18945900`, and a GOD_2 label. Then shrink the
+   `61ac44a6` entry in `corpus/sense-index-allowlist.json`. This is a
+   labelling repair and changes no proof.
+3. The discriminating philosophical test is outside these leaves. Can q.105
+   a.5's "God" (the source of `777646a5`) be read at the bearer fixed here,
+   the unique maximal universal cause of being, without presupposing the
+   identification `e39a4fce` supplies, and with `777646a5`'s `CausesIn` the
+   same causation of being (CAUSE_2) as `CausesAllInGenus`? Separately, does
+   `777646a5`'s derivation support survive #1775's POTENCY_1 steady-exercise
+   control?
+
+*Reopening conditions.* Reopen `57b88730` if any of its five derivation
+premises loses its route standing. Reopen `709ad5d2` if a case *other than the
+world-form case* is given of a unique universal cause of being that the *Summa*'s use would not call God, or
+if the remoteness inputs `eaa4c679` or `09c6d5f0` fall. Either would make the
+dropped *remotum* objection live.
+
+*Delta.* No theorem, Challenge, claim, statement, definition, relation or
+formal status changes. Premise change: none.

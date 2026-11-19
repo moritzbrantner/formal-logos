@@ -1,0 +1,12 @@
+{
+  "id": "f8519735-bf0b-41d7-80a8-ba68f388f1c9",
+  "label": "Esse dependence from weak sustaining and the sustaining sibling",
+  "argument_id": "4418bfa1-92ab-4999-8d91-1d72b121e6cf",
+  "challenge_module": "TruthCore.Results.Causality.SustainingDependence.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SustainingDependence.Solution",
+  "theorem": "TruthCore.Results.Causality.SustainingDependence.esseDependenceOfSustaining",
+  "comparator_config": "results/f8519735-bf0b-41d7-80a8-ba68f388f1c9/comparator.json",
+  "status": "solution-present",
+  "description": "Transcription (single application, invariant 16): the sibling's consequent is the conclusion, and the weak sustaining reading ce55210c only supplies the sibling's antecedent. Let c, distinct from x, cause x's esse; by ce55210c, in every history in which x is present at some moment, c gives x being at every moment at which x is present, so the sibling gives that x depends for its being on c. Its point is to connect: together with the transcription of the sibling from contact and the co-presence bridge (whose contact step is typed), 2068f91c rests on ce55210c, contact c4661518 and the bridge. The weak sustaining reading is needed: the parent-child interpretation (Control part 1, an originating cause that gives being at its effect's first moment only, the effect persisting after the cause is gone) satisfies contact, the bridge and the sibling, and falsifies 2068f91c with dependence read as co-presence. On this route the existential-inertia dispute over 2068f91c sits in ce55210c, and through it in weak concurrent actualization 40a97664. 2068f91c stays open until every premise here is closed. No premise is established.",
+  "transcription": "single_application"
+}

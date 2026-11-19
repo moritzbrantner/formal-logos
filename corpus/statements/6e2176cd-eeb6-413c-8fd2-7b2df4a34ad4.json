@@ -1,0 +1,11 @@
+{
+  "id": "6e2176cd-eeb6-413c-8fd2-7b2df4a34ad4",
+  "label": "Whatever has an act it could lack is in act as to being and could lack being",
+  "paraphrase": "OPEN analyst bridge, attribution deferred: if x is in act in a respect r in which it could lack its act, then x is in act as to being and could lack being. It carries contingency from an accident to the bearer's being, so that the holder of x's being (esse instance) is available for x's act in r. A view on which a being that could not lack being has acts it could lack would deny it; the batch does not assess that view.",
+  "lean_declaration": "TruthCore.Causality.HoldingMotion.LackableActBringsLackableBeing",
+  "definition_ids": [
+    "56b438a0-7fcc-4dd5-916b-1d2e2162310b",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"
+  ]
+}

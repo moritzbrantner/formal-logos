@@ -1,0 +1,16 @@
+{
+  "id": "18135887-6017-47d5-9aa3-3bcc88110847",
+  "label": "Holding controls: cards, iron, stick, sense mixing and crossed holders",
+  "paraphrase": "Closed controls; model statements concern these interpretations only, and parts 4 and 5 hold for every interpretation. (1) Two cards, each holding the other in one respect: mutual holding, the actualizer premise, C* in the holding sense and the respect-general concurrent actualization hold together, so the inconsistency of mutual holding lies with the holding per se premise and regress, not with concurrent actualization. (2) Iron: 0 gives the iron 1 and the wood 2 being, the iron holds the wood's heat, nothing holds the iron's heat; the esse instance of concurrent actualization, the actualizer premise and the lackable-being bridge hold, accident-inclusive conservation and C* in the holding sense fail. (3) Stick: 0 holds 1 and 1 holds 2 in motion, nothing holds anything in being; C* in the holding sense holds non-vacuously with the actualizer premise, and both the respect-general concurrent actualization and its esse instance fail. (4) Whenever anything is MOTION_3 held, the MOTION_1 premise 'whatever is moved is in potency in that respect' fails for MOTION_3 under the adopted POTENCY_1. (5) If that premise holds for a MOTION_1 relation, and both senses use the same act predicate, nothing is moved in one respect in both MOTION_1 and MOTION_3. (6) Crossed holders: something is held, the holding per se premise, the holding regress, the actualizer premise, C* in the holding sense and the respect-general concurrent actualization hold, an unlosable operative holder exists, and every holder is held in some respect, so the absolute first-unmoved-mover form fails for MOTION_3. Scope: the model has no esse respect satisfying the lackable-being bridge, so it does not witness the bundle that includes the esse instance, accident-inclusive conservation, the lackable-being bridge, the present-moment reading or 76d2cc96; whether that full bundle forces unheldness in every respect is untested. It shows nothing about potency.",
+  "lean_declaration": "TruthCore.Causality.HoldingMotion.Control.Certificate",
+  "definition_ids": [
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e",
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+    "56b438a0-7fcc-4dd5-916b-1d2e2162310b",
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "9f874532-f37e-590b-bec9-a9affb2762ac"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}
