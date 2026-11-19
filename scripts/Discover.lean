@@ -191,6 +191,19 @@ structure Proved where
   used : Array Nat
   axioms : Array Name
 
+/-- Adds the closed proof as a theorem (synchronously, outside any search
+budget) and returns its axioms; `none` when the kernel rejects it. -/
+def kernelCheck (prover : String) (used : Array Nat) (stmt value : Expr) :
+    TermElabM (Option Proved) := do
+  let check : TermElabM Proved := do
+    let aux ← mkFreshUserName `_discover
+    withOptions (fun o => o.set `Elab.async false |>.set `maxHeartbeats (0 : Nat)) <|
+      withTheReader Core.Context (fun c => { c with maxHeartbeats := 0 }) <|
+        addDecl (.thmDecl { name := aux, levelParams := [], type := stmt, value })
+    let axioms ← collectAxioms aux
+    return { prover, used, axioms := axioms.qsort Name.lt }
+  tryCatchRuntimeEx (some <$> check) (fun _ => pure none)
+
 /-- Tries to prove `concl` from `hyps` (indices into the premise list) in the
 context of `xs`, with the expanded types; returns the prover, the hypotheses the
 kernel-checked proof uses, and its axioms. -/
@@ -230,12 +243,13 @@ def prove (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : Nam
             let value ← mkLambdaFVars xs (← mkLambdaFVars hs proof)
             let stmt ← instantiateMVars stmt
             if stmt.hasMVar then return none
-            let aux ← mkFreshUserName `_discover
-            withOptions (fun o => o.set `Elab.async false) <|
-              addDecl (.thmDecl { name := aux, levelParams := [], type := stmt, value })
-            let axioms ← collectAxioms aux
-            return some { prover := name, used, axioms := axioms.qsort Name.lt : Proved })
+            return some (used, stmt, ← instantiateMVars value))
       (fun _ => pure none)
+    -- The kernel check runs outside the search budget, synchronously, so its
+    -- axioms are those of the finished theorem.
+    let result ← match result with
+      | none => pure none
+      | some (used, stmt, value) => kernelCheck name used stmt value
     saved.restore (restoreInfo := true)
     if let some p := result then return some p
   return none
