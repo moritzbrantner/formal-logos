@@ -45,5 +45,8 @@
       "statement_id": "ce55210c-d3b5-4720-bd83-a3f63c5dc884",
       "role": "conclusion"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "40a97664-e481-42d7-8458-78374a61aa26": "The conclusion covers every moment of presence of every caused thing, including things with no first moment of presence, which the restriction to begun things (f4850897) does not reach. With natural-number times the two coincide."
+  }
 }

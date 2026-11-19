@@ -1,0 +1,15 @@
+{
+  "id": "5b24ef26-709e-4c67-a03c-cb856a4411eb",
+  "label": "A received-esse thing given being at its first moment is given being whenever it is present",
+  "paraphrase": "OPEN analyst premise, attribution deferred (parity of persistence with onset): in every history of the model, if a thing whose esse is received in some principle (DEF-ESSE-RECEIVED-IN) is given being by something at a first moment of its presence (BeginsAt; GivesAt, definition 158301bc, STRICT reading), then at every moment at which it is present something gives it being. Meaning: the thing's being at a later moment is the same kind of fact as its being at its first moment, so whatever kind of explanation the first requires, the later does too. Not independent of weak concurrent actualization 40a97664: given onset it is concurrent actualization for begun things restated. Existential inertia (Schmid 2021, read) rejects it by the counter-asymmetry that only a change needs an inducer and persistence is no change; that asymmetry is equally the crux restated from the other side, since the shared causal law requires inducers for changes and is silent on whether only changes need explanation (Control part 5 is the inertial interpretation). No warrant for parity beyond that for 40a97664 is on file.",
+  "lean_declaration": "TruthCore.Causality.SustainingDependence.PersistenceParity",
+  "definition_ids": [
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}
