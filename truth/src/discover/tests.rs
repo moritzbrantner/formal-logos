@@ -38,6 +38,7 @@ fn graph(arguments: &[(&str, &[&str], &str)]) -> Graph {
                 conclusion: (*conclusion).into(),
             })
             .collect(),
+        rivals: BTreeMap::new(),
     }
 }
 
@@ -475,4 +476,25 @@ fn a_refuted_antecedent_flags_vacuous_truth_without_rejecting() {
     );
     assert_eq!(f.kind, Kind::Discovery);
     assert_eq!(f.filters[0].0, "vacuous_target");
+}
+
+#[test]
+fn an_incompatibility_of_recorded_rivals_is_known() {
+    let mut outcome = closed_outcome();
+    outcome["vacuous"] = json!({"prover": "duper", "used": [0, 2], "axioms": []});
+    outcome["vacuous_core"] = json!([0, 2]);
+    let mut g = Graph::default();
+    g.rivals.insert("R".into(), set(&["P"]));
+    let f = classify(&trial(&["P", "Q", "R"]), &outcome, &g, &SenseCheck::empty());
+    assert_eq!((f.kind, f.filters[0].0.as_str()), (Kind::Filtered, "known"));
+}
+
+#[test]
+fn search_auxiliaries_are_not_axioms() {
+    let axioms = vec![
+        "propext".to_owned(),
+        "_discover._@._stdin._hyg.3".to_owned(),
+        "sorryAx".to_owned(),
+    ];
+    assert_eq!(forbidden_axioms(&axioms), ["sorryAx"]);
 }

@@ -231,7 +231,8 @@ def prove (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : Nam
             let stmt ← instantiateMVars stmt
             if stmt.hasMVar then return none
             let aux ← mkFreshUserName `_discover
-            addDecl (.thmDecl { name := aux, levelParams := [], type := stmt, value })
+            withOptions (fun o => o.set `Elab.async false) <|
+              addDecl (.thmDecl { name := aux, levelParams := [], type := stmt, value })
             let axioms ← collectAxioms aux
             return some { prover := name, used, axioms := axioms.qsort Name.lt : Proved })
       (fun _ => pure none)
@@ -376,7 +377,8 @@ def witness (xs : Array Expr) (goals : Array Expr) (u : NameSet) (heartbeats : N
             let proof ← instantiateMVars mvar
             if !rest.isEmpty || proof.hasMVar || proof.hasSorry || proof.hasFVar then return false
             let aux ← mkFreshUserName `_discoverWitness
-            addDecl (.thmDecl { name := aux, levelParams := [], type := body, value := proof })
+            withOptions (fun o => o.set `Elab.async false) <|
+              addDecl (.thmDecl { name := aux, levelParams := [], type := body, value := proof })
             return true)
       (fun _ => pure false)
     saved.restore (restoreInfo := true)

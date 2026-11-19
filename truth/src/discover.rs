@@ -172,6 +172,8 @@ pub struct Known {
 #[derive(Default)]
 pub struct Graph {
     pub arguments: Vec<Known>,
+    /// Recorded rival pairs (`alternative_to`, `attacks`), both directions.
+    pub rivals: BTreeMap<String, BTreeSet<String>>,
 }
 
 impl Graph {
@@ -206,7 +208,19 @@ impl Graph {
                 conclusion: conclusion.to_owned(),
             });
         }
-        Self { arguments }
+        let mut rivals: BTreeMap<String, BTreeSet<String>> = BTreeMap::new();
+        for relation in corpus.records("relations") {
+            let field = |key| relation.get(key).and_then(Value::as_str);
+            if matches!(field("predicate"), Some("alternative_to" | "attacks"))
+                && field("subject_kind") == Some("statement")
+                && field("object_kind") == Some("statement")
+                && let (Some(a), Some(b)) = (field("subject_id"), field("object_id"))
+            {
+                rivals.entry(a.to_owned()).or_default().insert(b.to_owned());
+                rivals.entry(b.to_owned()).or_default().insert(a.to_owned());
+            }
+        }
+        Self { arguments, rivals }
     }
 
     /// The verified arguments that, composed by forward chaining from
@@ -1024,6 +1038,9 @@ pub fn forbidden_axioms(axioms: &[String]) -> Vec<String> {
     axioms
         .iter()
         .filter(|a| !ALLOWED_AXIOMS.contains(&a.as_str()))
+        // The search's own auxiliary theorems, never axioms of the certified text
+        // (certification re-checks with `#print axioms`).
+        .filter(|a| !a.starts_with("_discover"))
         .cloned()
         .collect()
 }
@@ -1079,6 +1096,21 @@ pub fn classify(trial: &Trial, outcome: &Value, graph: &Graph, senses: &SenseChe
         let core = indices(&outcome["vacuous_core"]);
         if !core.is_empty() {
             finding.premises = ids(&core);
+        }
+        let rival = finding.premises.iter().find_map(|a| {
+            let rivals = graph.rivals.get(a)?;
+            finding
+                .premises
+                .iter()
+                .find(|b| rivals.contains(*b))
+                .map(|b| (a.clone(), b.clone()))
+        });
+        if let Some((a, b)) = rival {
+            finding.kind = Kind::Filtered;
+            finding.filters.push((
+                "known".into(),
+                format!("the inconsistent core contains the recorded rivals {a} and {b}"),
+            ));
         }
         return finding;
     }
@@ -1695,6 +1727,7 @@ pub fn discover(
         .iter()
         .map(|t| classify(t, &outcomes[&t.label], &graph, &sense_check))
         .collect();
+    dedupe_incompatibilities(&mut findings);
     // Weakening: replace one premise of a discovery by a weaker sibling.
     let mut weakened = Vec::new();
     for finding in findings.iter().filter(|f| f.kind == Kind::Discovery) {
@@ -1933,3 +1966,23 @@ pub fn transitive_constants(
 
 #[cfg(test)]
 mod tests;
+
+/// Keeps the first incompatibility of each inconsistent core; later goals
+/// that hit the same core are filtered as duplicates.
+pub fn dedupe_incompatibilities(findings: &mut [Finding]) {
+    let mut seen: BTreeSet<Vec<String>> = BTreeSet::new();
+    for finding in findings
+        .iter_mut()
+        .filter(|f| f.kind == Kind::Incompatibility)
+    {
+        let mut core = finding.premises.clone();
+        core.sort();
+        if !seen.insert(core) {
+            finding.kind = Kind::Filtered;
+            finding.filters.push((
+                "duplicate".into(),
+                "same inconsistent core as an earlier goal".into(),
+            ));
+        }
+    }
+}

@@ -84,6 +84,7 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
 | `known` | the target follows by composing verified arguments from the minimal premises (forward-chaining closure; covers supersets of an existing argument's premises) | reject |
 | `transcription` | one premise application closes the folded goal (the `truth prove-sweep` probe, invariant 16) | reject |
 | vacuity | `False` follows from the minimal premises: reported as an **incompatibility** (the inconsistent core, minimized), never as support | separate kind |
+| `known` (incompatibility), `duplicate` | the inconsistent core contains recorded rivals (`alternative_to`, `attacks`); or an earlier goal already found the same core | reject |
 | `senses` | the argument uses two senses of one term (`argument_term_senses`, the check `truth check` applies) and no premise is a registered bridge between them | reject |
 | `sense_bridge` | a premise is the registered bridge between the senses it mixes | flag |
 | `witness` | no one-point joint model was found; Duper found no contradiction, so consistency is unresolved | flag |
