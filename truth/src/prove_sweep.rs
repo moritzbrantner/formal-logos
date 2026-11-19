@@ -53,7 +53,7 @@ const PORTFOLIO_IMPORTS: &[&str] = &["Mathlib.Tactic.Tauto", "Aesop"];
 /// `prove_sweep_probe` closes the goal by `assumption`, or by applying one
 /// hypothesis and closing every remaining goal by `assumption`, `rfl`,
 /// `True.intro` or one `constructor` split, and logs how.
-const PRELUDE: &str = r#"open Lean Meta Elab Tactic in
+pub const PRELUDE: &str = r#"open Lean Meta Elab Tactic in
 elab "prove_sweep_unfold" : tactic => do
   for _ in [0:8] do
     let env ← getEnv
