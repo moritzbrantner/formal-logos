@@ -204,8 +204,9 @@ fn run(args: &Args, operands: &[&str]) -> Output {
             f.outcome["deletions"]
                 .as_array()
                 .is_some_and(|d| d.iter().any(|e| e["outcome"] == "dropped"))
-                || f.outcome["closed"]["used"].as_array().map(Vec::len)
-                    < Some(f.trial.premises.len())
+                || f.outcome["closed"]["used"]
+                    .as_array()
+                    .is_some_and(|used| used.len() < f.trial.premises.len())
         })
         .count();
     let bridges = discover::rank_bridges(&outcome.findings);
