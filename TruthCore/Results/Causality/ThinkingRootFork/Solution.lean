@@ -21,6 +21,7 @@ open TruthCore.Causality.NecessaryRootFork
 open TruthCore.Causality.SelectedAncestry
 open TruthCore.Causality.ThinkingRootFork
 open TruthCore.Causality.NecessaryConcreteRouteBridge (SimplyPriorIsActualConcreteGround EsseCauseIsActualConcreteGround)
+open TruthCore.Causality.NecessarilyUnderived (PresentEsseSupport)
 open TruthCore.Causality.ExistenceActuality (ExistingInActAt)
 open TruthCore.German.Kant.CosmologicalInference (NecessaryAt ContingentAt)
 open TruthCore.Logic.CogitoSubject
@@ -98,6 +99,21 @@ theorem noPOfActualRoot (m : Profile W B) (w : W)
   obtain ⟨c, hc⟩ := hp
   obtain ⟨y, _, hy⟩ := Relation.TransGen.tail'_iff.mp hc.2.2
   exact hRoot.2 y hy
+
+/-- One *direct* existing thinking supporter in the profile's same `grounds`
+relation is a mediate thinking predecessor. The existing Cogito concreteness
+bridge suffices: `PresentEsseSupport` already supplies the source's actuality,
+so the more general `ActualSupportersConcrete` is unnecessary here. The
+converse is false when a nonthinking intermediate ground lies on the path. -/
+theorem directThinkingSupportImpliesP (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop) (x : B)
+    (hConcrete : EveryBearerIsConcrete Occurs Bears m.concrete)
+    (hDirect : ∃ c, c ≠ x ∧ Thinks Occurs Bears c ∧
+      PresentEsseSupport m.ontic m.grounds w c x) :
+    P m w Occurs Bears x := by
+  obtain ⟨c, hcNe, ⟨e, he, hb⟩, hcSupport⟩ := hDirect
+  exact ⟨c, hcNe, ⟨e, he, hb⟩,
+    Relation.TransGen.single ⟨hConcrete c e he hb, hcSupport.1, hcSupport.2⟩⟩
 
 /-- Exact local root alignment: for an actual thinking member of the selected
 cone, `¬P` is equivalent to actual G-rootness *if* the no-fresh-thinker bridge
