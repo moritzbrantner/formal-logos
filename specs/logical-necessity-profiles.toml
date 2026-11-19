@@ -70,6 +70,8 @@ premises = ["K validity of the selected formula"]
 conclusion = "Full validity of the selected formula on its frame"
 rule = "Universal specialization, explicit semantic consequence and finite models"
 meaning = "Specialize the all-small-frame universal to the same selected frame and formula. Exact strong-only-premise result."
+description = "Transcription by instantiation (AGENTS.md invariant 16): specializes the all-small-frame universal to the same selected frame and formula. Exact strong-only-premise strength result; the proof only instantiates the premise, so it closes its conclusion only when that premise is closed."
+transcription = "instantiation"
 sense_bridges = [{term = "NECESSARY", from = "NECESSARY_14", to = "NECESSARY_13", statement_id = "Full validity of the selected formula on its frame", role = "conclusion"}]
 
 [[argument]]
