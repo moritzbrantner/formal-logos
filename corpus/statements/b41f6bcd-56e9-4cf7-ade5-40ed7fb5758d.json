@@ -1,0 +1,14 @@
+{
+  "id": "b41f6bcd-56e9-4cf7-ade5-40ed7fb5758d",
+  "label": "A total holder of another that is MOTION_3 held in the act by which it holds is totally held in it",
+  "paraphrase": "OPEN analyst bridge, attribution deferred: if f totally holds x in r and f is MOTION_3 held in r (definition ea1904bc-bdfa-4835-a4a7-8545c5221e2e), then f is totally held in r (definition acde39ee-8d60-4ea7-a821-de96c86e5b03). It says that a sole holder is never co-held, nor held only by something it holds back, in the act by which it holds. Substantive objection on the physical-holder reading of the holding relation (target: this bridge; mechanism: co-support; justification: ordinary statics): a beam carried at its two ends by two walls has each wall presently actualizing its position, so each wall is a co-holder and neither is its sole holder, while the beam is the only physical holder of a lamp hung from it and the lamp does not prop it; so on that reading the beam totally holds the lamp, is held, and is not totally held. Scope: statics fixes physical holders only. Under the C* support bundle whatever presently actualizes the lamp as to being co-holds its lackable position (the argument concluding that a total holder of a lackable act gives being), so the beam is not a total holder of it there, the case does not apply, and the bridge is untested on that reading. A reading on which the two walls together are one holder would need a mereological bridge that is not formalized. Control part 2 is a finite interpretation in which the bridge fails.",
+  "lean_declaration": "TruthCore.Causality.TotalHolding.HeldTotalHolderIsTotallyHeld",
+  "definition_ids": [
+    "edca52e4-f224-491d-ac45-5816fac1a9fd",
+    "acde39ee-8d60-4ea7-a821-de96c86e5b03",
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

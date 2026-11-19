@@ -1,0 +1,21 @@
+{
+  "id": "570d36e7-1b47-4c35-b874-d8c3d74db6aa",
+  "label": "Total-holding First Way to a total holder not totally held in its operative act",
+  "premise_statement_ids": [
+    "aa9b2a73-3b30-4849-b617-47751ecfe07f",
+    "38a82161-5d17-4552-be0a-b0562ff0243d",
+    "c4e333da-9ca7-4861-a4ac-947bb4371547"
+  ],
+  "conclusion_statement_id": "4b9462dd-ac1d-4834-8d8e-b709dcd42fc5",
+  "inference_ids": [
+    "6f418f62-8054-48f1-abc1-82e05ac823b2"
+  ],
+  "meaning": "New non-transcription conditional derivation. Some x is totally held in r by some z. Suppose every total holder of another is totally held in the act by which it holds. Then z is totally held in r by some w, so z is a link of x, and the same holds of w; well-founded induction on the total-holding series refutes the supposition. Unlike the unrestricted holding regress (0b40c6e1), this bundle is consistent with two cards leaning on each other (Control part 1). The conclusion is weaker than the unrestricted route's: the first total holder may be MOTION_3 held by co-holders (Control part 2). All premises stay OPEN. No premise is established.",
+  "definition_ids": [
+    "5462ce35-4970-434c-8f2a-0ccc2c1db805",
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "acde39ee-8d60-4ea7-a821-de96c86e5b03",
+    "edca52e4-f224-491d-ac45-5816fac1a9fd"
+  ]
+}
