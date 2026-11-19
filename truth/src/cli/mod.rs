@@ -43,6 +43,7 @@ mod next_steps;
 mod orphans;
 mod related;
 mod research;
+mod semantics;
 mod senses;
 mod sort_lists;
 mod status;
@@ -109,6 +110,9 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
              | parity | export PATH | bundle --case ID [--premise STATEMENT]...
              | compare --case ID [--left STATEMENT]... [--right STATEMENT]...)
        truth [--root PATH] [--json] senses (report [--write] | allowlist [--write] | ratchet --base REV)
+       truth [--root PATH] [--json] semantics TARGET [--frontier-root STATEMENT] [--limit N]
+       truth [--root PATH] [--json] semantics [--premise STATEMENT]... --conclusion STATEMENT
+             [--definition DEF]... [--bridge STATEMENT[@SENSE,SENSE]]... [--strict]
        truth [--root PATH] [--json] bridge-experiments RESULT --profile-module MODULE [--limit N]
              [--frontier-root STATEMENT]
 
@@ -178,6 +182,7 @@ pub const COMMANDS: &[Command] = &[
     tree::COMMAND,
     index::COMMAND,
     senses::COMMAND,
+    semantics::COMMAND,
     bridge_experiments::COMMAND,
 ];
 
@@ -209,11 +214,12 @@ pub fn run(args: &[OsString]) -> Output {
             }
             Some(command)
                 if !args.proof.given().is_empty()
-                    && !["unused-premises", "lean-reuse", "context"].contains(&command.name) =>
+                    && !["unused-premises", "lean-reuse", "context", "semantics"]
+                        .contains(&command.name) =>
             {
                 Err(usage(
                     "--strict, --exemptions, --bind-json, --usage-json, --review, --proof-use and \
-                     --proof-use-json apply only to unused-premises, lean-reuse and context",
+                     --proof-use-json apply only to unused-premises, lean-reuse, context and semantics (--strict)",
                 ))
             }
             Some(command) if args.attribution.flags && command.name != "attribution-check" => Err(
@@ -230,6 +236,9 @@ pub fn run(args: &[OsString]) -> Output {
                     "--question, --assessments-for and --statement apply only to brief and novelty",
                 ))
             }
+            Some(command) if args.semantics.flags && command.name != "semantics" => Err(usage(
+                "--conclusion, --definition and --bridge apply only to semantics",
+            )),
             Some(command)
                 if args.profile_module.is_some() && command.name != "bridge-experiments" =>
             {
