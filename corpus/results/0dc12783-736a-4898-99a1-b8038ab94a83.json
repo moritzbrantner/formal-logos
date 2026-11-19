@@ -1,0 +1,11 @@
+{
+  "id": "0dc12783-736a-4898-99a1-b8038ab94a83",
+  "label": "The strong second-mover premise and the regress exclude reciprocal moved movers",
+  "argument_id": "a3ac709f-3d9a-403c-9ea5-e81531cb8965",
+  "challenge_module": "TruthCore.Results.Causality.CausedMoverCStar.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CausedMoverCStar.Solution",
+  "theorem": "TruthCore.Results.Causality.CausedMoverCStar.strongPerSeExcludesReciprocity",
+  "comparator_config": "results/0dc12783-736a-4898-99a1-b8038ab94a83/comparator.json",
+  "status": "solution-present",
+  "description": "New non-transcription conditional derivation (control 3 of docs/notes/caused-mover-cstar.md, section 4). If a and b move each other and each is being moved, the strong per se premise 1e47e6db makes each a per se link of the other (it needs only that each is moved in some respect), and the regress 226c38f6 excludes the two-cycle. The conclusion is the negation of the reciprocity observation premise 4f6ac439, so {1e47e6db, 226c38f6, 4f6ac439} is inconsistent and at least one must go. On the relevant-respect premise 96da1d33 with the lending reading the bundle is consistent (scratch control 4, not registered). No premise is established."
+}

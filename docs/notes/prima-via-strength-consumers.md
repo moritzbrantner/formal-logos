@@ -397,3 +397,381 @@ this dated continuation and the coordinator conclusions found no substantive
 defects; no repair round was required. This supersedes the pending-review
 wording of this dated section. See the [integration record](unique-feedback-explanation-311.md#reviewed-owner-reply-integration-2026-11-17)
 for verification, source scope and unchanged formal status.
+
+## Current cluster assessment under the substantive objection standard (2026-11-18)
+
+**Scope and placement.** Issue #1751, lane A. Expanding the cost-6 route
+`ed7c588a` to GOD_4 exists (`8626f8a5`) through the cheapest verified support
+of each open premise reaches 24 open leaves in the motion and causal-chain
+core of the prima via and in its God-naming bridge. This section assesses
+those 24 under the current standards (attempt `a82b06b6`). It sits in this
+note because the note already holds the First-Way strength audit and the
+2026-11-17 assessment of the relevance bridge `b3573a61`, and that bridge is
+the cluster's central contested commitment. The 2026-11-13 judgment of
+`3c0b7bb3` and `7c3da33e` in
+[potency-privation-support-investigation.md](potency-privation-support-investigation.md#proposed-overall-provisional-judgment)
+is reused unchanged. The dependence, priority, regress and grounding leaves
+(`c0d99549`, `000e1f65`, `97fa3a0b`, `d85de8e1`, `47aff057`, `09b88101`,
+`f10d5632`, `e078f07b` and their notes) belong to lane B. They are named
+below only as shared dependencies and are not assessed here.
+
+Baseline: main `df4909cb025d2e53fee6071a32defe9cf2721284`. Read: `currentness`
+at the GOD_4 root, the dossier of all 24 leaves, `context ed7c588a`, the 19
+consuming argument and result records, the Lean declarations of every leaf
+and of the closed nodes they support, and the legacy attempts `ab0f7e3a`,
+`f2f06fbe`, `f4bee7d7`, `3efb2e4b`, `c132609d`, `d1d58e1e`, `0b9ad38b`,
+`df5581ce`, `1032961a`, `0626cd3a`, `0b9378da`, `09f03f51`, `1d0d9d70`,
+`096c30cc`, `76b347ef`, `30c343f7`, `4746eaa2`, `a330f2e5` and `75c35dd5`. No
+new source was read; no claim, statement, argument, theorem or status changes.
+
+### Where the leaves sit
+
+| Route node and its own warrant | Verified support used in the expansion | Leaves of this cluster |
+| --- | --- | --- |
+| `c1b68c21` absolute First Way | `675b71d2` (result `d337ab29`) | `6b9fedc2` |
+| `1e47e6db` strong per se premise, stated (q.2 a.3, claim `095dc31a`) | `aa35935b` (`927421e7`): `96da1d33` + bridge | `b3573a61` |
+| `96da1d33` relevant-respect per se premise, stated (`00ca098a`) | `8b58de76` (`99f6f733`) | `962a9ed3`, `7b8b589c` |
+| `c2880fe0` per se mover link is per se cause link, stated (q.46 a.2 ad 7) | `a3e4a247` → `0300cfd9` ← `e3874506` (`8e7b099b`) | `9c252f24`, `a7d2b839`, `8a22ae75` |
+| `97f5850f` no infinite per se efficient series, stated | `b58472dd` (`a4558f9c`), `1bca81ef` (`965ce7d5`), `6122c922` (`0c0f1d24`), `113c01ef` (`7192ae5e`), `e229bb2c` (`e36e4beb`) | `68172f57`, `b3853b1b`, `57552dce` |
+| `f296a694` moves only as in act, stated (q.2 a.3; Met. IX.8) | `d0c022f8` (`fdd09678`); `99470e3f` ← `3b1c78d1` (`857ed537`) | `6a0b545c`, `f1a124b6`, `0181cf7b`, `3209ff59` |
+| `777646a5` created agent moved when it moves, stated (q.105 a.5), inside `74eb9113` ← `f8992ef7` | `ee97900a` (`1e3a1278`); `e2f8ffd6` ← `56175b8f` (`970be12e`) | `f03798ba`, `d791628f` |
+| `0628359b` Physics III.1 analysis, stated; `c85e8ef5` Metaphysics IX.6 analysis, stated | `08333363` (`3ed5f330`); `804d2c83` (`b39f5282`) | `76e0f716`; `3c0b7bb3`, `7c3da33e` |
+| `a4d3261a` act simply prior, stated (q.3 a.1; q.4 a.1 ad 2; SCG I.16) | `6d1672a7` (`a4ce3ab0`); another registered support is `f4f8458e` (`047cc9d8`) | `6ca87431`, `010988b9` |
+| `079b53bf` nothing moves itself in the same respect, stated (q.2 a.3) | one of eight supports: `8035e43e` (`5f007113`) ← `2ed50036` ← `6a3386c7` (`bdb3199b`) | `fe09fcd0` |
+| `27d15954` (modal-spine uniting-cause bundle) | `fcb4b871` (`7cb451cc`, a calibration transcription) | `1ad18c70` |
+| direct premise of `ed7c588a` | none | `a594d8c4` |
+
+Every route node above except `27d15954` and `74eb9113` has its own source
+claim. For premise nodes this is a direct option; for `c1b68c21` the claim
+records Aquinas's conclusion, whose warrant is this argument, so it adds no
+independent option. These nodes are still `proved_unestablished` on the
+GOD_4 frontier: a source claim adds a warrant option; it does not take any
+leaf off the computed route.
+
+### Fixed meanings
+
+Every leaf is read in one fixed context, with no time parameter, and with
+the same predicates throughout:
+
+- moving and being moved: MOTION_1, reduction from potency to act
+  ([DEF a7904c82](../../corpus/definitions/motion-as-reduction.json); DISAMB-MOTION `a59fd0ac`);
+- `InAct`: the generic act parameter (DEF `ff1ba8f4`). DISAMB-IN-ACT
+  (`dba7b1de`) does not choose between formal and virtual act; where this
+  matters the reading is named;
+- POTENCY_1 adopted: `InPotency x r := CanBe x r ∧ ¬ InAct x r`
+  (DEF `9f874532`), with capacity `00ab0133`, privation `f605c9a9` and
+  actualization qua potential `04cbb76b`;
+- per se link: DEF `c9798301`, its efficient-cause form `4a101a4c`, the
+  relevant-respect gloss `55a974ea`; DISAMB-PER-SE-LINK (`c097f626`) selects
+  the strong reading;
+- `ByOwnForm` (DEF `45595dac`), `OperationOf` (DEF `c195d490`);
+- moving (`MovesIn`), causing a perfection (`CausesIn`, DEF `211a6432`) and
+  efficient causing (`EfficientlyCausesIn`, DEF `69c0b23e`) are kept apart
+  by DISAMB-CAUSE (`00e0d443`);
+- simple priority `PriorSimply` (DEF `1d9aa4d9`);
+- self-motion: SELF_MOTION_1 (diagonal, `e13e749b`) and the SELF_MOTION_3
+  reconstruction (`2fccff11`), never identified (DISAMB-SELF-MOTION
+  `aa925dce`); parthood DEF `701c8996`;
+- cause modes `d57222e9`; finite immediate predecessors `f6a031cc`;
+- the composer temporal frame `c20f04bb` (DISAMB-UNITING-CAUSE `57f80020`);
+- GOD_2 (DEF `23e73af5`), GOD_4 (DEF `88f9f6e8`), first unmoved mover
+  (DEF `cfadc1f4`) and PURE_ACT_5 (DEF `a49e4cf1`), kept apart by
+  DISAMB-GOD (`205a39c3`).
+
+### Per-premise end states
+
+The Lean column gives each statement's `lean_declaration` body.
+
+| Leaf | Lean content | End state | Warrant, blocker and shared dependencies |
+| --- | --- | --- | --- |
+| `6b9fedc2` | `∀ x r, MovedIn x r → ∃ y, MovesIn y x r ∧ InAct y r` | Defended primitive (sourced principle) | Stated by claims `067f7730` (q.2 a.3), `bfeb74b4` (q.3 a.1), `41dcdf2b` (Met. IX.8, 1049b24-26) and `baca92f9` (XII.6). It is the conceptual core of the act/potency account: a reduction to r has a reducer that has r, which ordinary agency illustrates. Strong prima facie on the inclusive formal-or-virtual reading of `InAct`. On a formal-only reading, the emergentist objection below is kept. It does not itself say y ≠ x; with `4be9a4ac` and `c6d6379b` that follows. Used by `675b71d2` and `6d1672a7`. |
+| `962a9ed3` | `∀ y x r r', y ≠ x → MovesIn y x r → MovedIn y r' → RelevantTo y x r r' → ¬ ByOwnForm y x` | Open: exact sense gap | Supporting claims `5cf0ce69` (In Phys. VIII lect. 9 n. 1044) and `9f4f9489` (SCG I.13) say it of every moved mover. Gap: DEF `45595dac` does not settle whether a mover that acts by a form it has, while that form is concurrently sustained by another, moves by its own form. Example: a body being heated that heats a third thing. If that counts as principal agency, the premise fails for such movers; `96da1d33` is not affected. Dispensable, since `96da1d33` is stated. |
+| `7b8b589c` | `∀ y x r, MovesIn y x r → ¬ ByOwnForm y x → MovesAsMoved y x` | Defended primitive (conceptual articulation of instrumental causation) | To move by another's power is to move insofar as one is moved by it. Supporting claims `28c29002` (In Phys. VIII lect. 9 n. 1041) and `f4bfc0e0` (SCG I.13). Strong prima facie; no substantive objection identified. It lies in the dispensable instrument bundle. |
+| `b3573a61` | `∀ y x r, y ≠ x → MovesIn y x r → (∃ r', MovedIn y r') → ∃ r', MovedIn y r' ∧ RelevantTo y x r r'` | Open: kept rival | It is exactly the strengthening from `96da1d33` to `1e47e6db`, and one presentation of commitment C* below. The standing-power-agent rival is kept. The direct option is retained, as in the 2026-11-17 section. The source-of-esse route there gives all-respect unmovedness of the selected source without this bridge, but not the local moving edge. |
+| `9c252f24` | `∀ y x, MovesAsMoved y x → y ≠ x ∧ (∃ r, MovesIn y x r) ∧ ∃ z r', MovesIn z y r'` | Defended primitive (meaning postulate) | These are the necessary conditions read off DEF `c9798301`: a per se link is a moving of a distinct thing whose mover is sustained by an upstream mover. Strong; no substantive objection identified. It carries no relevance condition on r'. |
+| `a7d2b839` | `∀ y x r, MovesIn y x r → EfficientlyCausesIn y x r` | Defended primitive (conceptual link) | Under MOTION_1, `MovesIn y x r` already says that y reduces x. DEF `69c0b23e` makes the efficient cause the agent from which x's being r proceeds, and DEF `d57222e9` gives Aristotle's source-of-change mode. Strong prima facie. The occasionalist rival is relocated (below). Shared dependency: composed with lane B's respect-free `e078f07b` and the order statements `7ad36aca` and `32d77f18`, it inherits the reciprocity gap. |
+| `8a22ae75` | `∀ c x r, c ≠ x → EfficientlyCausesIn c x r → (∃ d r', EfficientlyCausesIn d c r') → CausesAsCaused c x` | Open: kept rival (strong scope) | Stated by `cc63cf0f` (secunda via, reading A). The per accidens objection (q.46 a.2 ad 7, reading B) is kept. The weak sibling `446e3f2a` (strength relation `234b49f1`) avoids it, but `e3874506` uses the strong form and records no `strong_version_needed`. It is the secunda-via twin of the strong per se premise `1e47e6db` (= `96da1d33` + `b3573a61`); it carries the C* analogue only as the strengthening over `446e3f2a`. |
+| `6a0b545c` | `∀ y x r, MovesIn y x r → CausesIn y x r` | Open: exact sense gap | Under one reading of `CausesIn` and `InAct`, it is jointly inconsistent with `67aa5b5c` and the core prima via premises (below). It therefore needs an in-progress reading of `CausesIn`, which DEF `211a6432` does not supply (its example is factive). Dispensable, since `f296a694` is stated. |
+| `fe09fcd0` | `∀ y x r, MovesIn y x r → MovedIn x r` | Defended primitive: sourced for MOTION_2 (`849f4443`); a MOTION_1 sibling, still to be registered, would be a meaning postulate | Physics III.3 states it for physical change. Under MOTION_1, if y reduces x in r, x is being reduced in r, so the sibling would be strong. Sense flag: the statement is labelled MOTION_2, and DISAMB-MOTION accepts the III.3 reading only under a physical instantiation, yet its allowlisted consumer `6a3386c7` feeds the broad route. Registering B2 or any MOTION_1 consumer needs that sibling (the preflight fails on MOTION without a bridge). It lies on one of eight supports of `079b53bf`. |
+| `6ca87431` | `∀ y x r, InPotency x r → MovesIn y x r → InAct y r → y ≠ x → PriorSimply y x` | Open: kept objection (new) | Its respect-free consequent, with `7ad36aca` (transitive) and `32d77f18` (irreflexive), is inconsistent with reciprocal cross-respect moving. DEF `1d9aa4d9` glosses priority per respect. The contradictory bundle forces rejecting one of `6ca87431`, `7ad36aca`, `32d77f18` or the reciprocity case, not specifically `6ca87431`; `32d77f18` is source-stated, so rejecting it is the costliest option. Lane B is investigating the same priority split (in-flight, unverified here; link its attempt once on main). The legacy failures to find a stating source are not evidence against it. |
+| `010988b9` | `∀ x r, InPotency x r → ¬ MovedIn x r → ∃ y, InAct y r ∧ PriorSimply y x` | Open: no discriminating warrant on file | It is the idle half of `a4d3261a`. As `d1d58e1e` found, a premise tying every idle potency to a prior actual being restates act's simple priority for that case. It adds no warrant beyond the target, so it begs the question for that half. It inherits the respect-free priority gap. `a4d3261a` keeps its stated claims and the support `f4f8458e`. |
+| `76e0f716` | `∀ x r, MovedIn x r ↔ (CanBe x r ∧ ¬ InAct x r) ∧ ActualizedQuaPotential x r` | Defended primitive (conceptual analysis) | Aristotle's analysis of motion in the adopted sense (supporting claim `0a4a8418`, Phys. III.1). Under adopted POTENCY_1 it is the same proposition as the stated `0628359b`, so `08333363` adds no independent warrant (near-duplicate). Strong, with index discipline: r is the terminal respect. |
+| `3c0b7bb3` | `∀ x r, InPotency x r ↔ CanBe x r ∧ Deprived x r` | Defended primitive (conceptual articulation) | The 2026-11-13 judgment is reused: well supported for the adopted sense and broad apt-subject privation. Constructively equivalent to `7c3da33e` under the adopted sense. Dispensable, since `c85e8ef5` is stated and definitional under adopted potency. |
+| `7c3da33e` | `∀ x r, CanBe x r → (Deprived x r ↔ ¬ InAct x r)` | Defended primitive (conceptual articulation) | As for `3c0b7bb3`; the 2026-11-13 judgment is retained. |
+| `f03798ba` | `∀ g y, God g → y ≠ g → CausesIn g y esse → ∀ x r, MovesIn y x r → ∃ o, OperationOf y x r o ∧ InPotency y o` | Open: sense gap, plus C* | Under adopted POTENCY_1, it says the moving agent lacks o in act while moving. The retained-power sense (first act to second act) is a different sense, already separated in the 2026-11-13 note. That sense carries the Thomist thesis that no creature is its own operation (q.54, recorded unpinned in `09f03f51`; not read here). `God g` only restricts the domain to agents whose esse a God-bearer causes; it imports no identification. Besides the POTENCY gap, its consumer `56175b8f` carries the computed CAUSE_1/CAUSE_2 allowlisted sense risk; the planned non-God-indexed restatement removes it. |
+| `d791628f` | `∀ y x r o, MovesIn y x r → OperationOf y x r o → ActualizedQuaPotential y o` | Open: kept rival | One presentation of C*. The standing-power-agent rival is kept. |
+| `0181cf7b` | `∀ x c, Diagonal Moves x c → WholeParts Part Moves Moved Integrated x c` | Open hedge leaf; no substantive objection | Derivable from `079b53bf` + a MOTION_1 sibling of `fe09fcd0` only by begging `f296a694` (see B2); dispensable through `f296a694`'s stated option (`611e63b7`, `ca78225c`). |
+| `3209ff59` | `∀ x p q c, Part p x → p ≠ x → Part q x → q ≠ x → p ≠ q → Moves p q c → Integrated x p q c → Moves p x c` | Defended direct option (moderate); dispensable | Motivated by Aristotle's analysis of self-movers through a moving part (DEF `701c8996`). No substantive objection identified. The `ComponentMoves` and `AggregateLift` controls are facts about one finite interpretation. Only the diagonal branch uses it; it is dispensable through `f296a694`'s stated option, not through B2. |
+| `f1a124b6` | `∀ p x r, PartOf p x → InAct p r → InAct x r` | Open: kept partial objection; dispensable | Qualified predication: a whole that is so only in a part is not thereby so simply (the paraphrase records the contest). Only the diagonal branch uses it; it is dispensable through `f296a694`'s stated option. In that branch the route's `4be9a4ac` and `c6d6379b` would also deny the whole act in r. |
+| `68172f57` | `∀ cause effect, IsCause cause effect → Material cause effect ∨ Formal cause effect ∨ SourceOfChange cause effect ∨ Final cause effect` | Defended primitive (sourced classification); dispensable | Stated by `58f68015` (Phys. II.3) and `178ded00` (II.7). Moderate. Its consumer is removable by bypass B1. |
+| `b3853b1b` | `∀ x, {y \| Material y x}.Finite ∧ … ∧ {y \| Final y x}.Finite` | Open: unsettled scope; dispensable | The falsifiers named in the paraphrase (infinitely many material parts or concurring agents) are hypothetical; no established actual case is on file, so they carry no evidential weight. No positive warrant on file either. Bypass B1 removes it. |
+| `57552dce` | `∀ y x, cause y x → ∃ r, EfficientlyCausesIn y x r` | Defended primitive (selection stipulation) | It selects the relation whose history is studied, and one may legitimately select it so. Its work in `113c01ef` and `e229bb2c` then rests on lane B's `e078f07b` and `d85de8e1` (shared). A studied relation containing reciprocal efficient edges contains a two-step loop. |
+| `1ad18c70` | `∀ c x r, f.Attributed c x r ↔ Current f c x r` (efficient activity at `f.now`) | Open: unselected calibration | Its only consumer, `fcb4b871`, is a calibration transcription to `27d15954`, which `dd24400b` found conditional, ungraded and dispensable. DISAMB-UNITING-CAUSE records that no source claim selects either calibration and that a checked route reaches the distinct-uniter conclusion with all-time no-self instead. It belongs to the modal-spine uniting-cause family, not the motion core. |
+| `a594d8c4` | `∀ f, IsFirstUnmovedMover f → PureAct f → (∀ g, IsFirstUnmovedMover g → g = f) → IsGod f` | Open: missing bridge (direct option retained, moderate) | Supporting claim `bf22a4a1` (q.2 a.3, *et hoc omnes intelligunt Deum*) is nominal. Positive warrant: the antecedent combines an outgoing moving, no being-moved in any respect, no potency in any respect (`PureAct`, after q.3 a.2 *purus actus*) and uniqueness; pure actuality is a defining classical-theist attribute. GOD_4's content is fixed only by the open premises that use `IsGod` (DEF `88f9f6e8`), including the classical-attributes premises. The identification therefore undertakes those attributes, intellect and will among them. Missing bridge: either same-bearer attribute derivations or a defended reference-fixing account, as in the parallel 2026-11-17 judgment on `1ec205ed` in [naming-first-mover-migration.md](naming-first-mover-migration.md#substantive-god_4-identification-on-the-existence-only-route-2026-11-17). Its antecedent needs the absolute first mover, so on this route it also depends on C* through `c1b68c21`. |
+
+### One contested commitment, three presentations
+
+Call **C\*** the commitment that a mover whose being another causes is itself
+being moved, whenever it moves, in a respect relevant to or constituting that
+moving. The route states it three times:
+
+1. `b3573a61`: some respect in which the moved mover is moved is relevant;
+2. `f03798ba` with `d791628f` and the stated `0628359b`: the caused agent is
+   in potency to its operation-respect o, and that potency is being actualized,
+   so `MovedIn y o`; this yields `777646a5` (result `1e3a1278`);
+3. `8a22ae75` carries its analogue in the efficient-cause vocabulary, only
+   as the strengthening over its weak sibling `446e3f2a` (unrestricted r').
+
+Unregistered analyst observation, not Lean-checked: (2) gives (1) for caused
+movers once an explicit bridge `OperationOf y x r o → RelevantTo y x r o` is
+added, because the operation-respect in which y is being moved is relevant to
+that very moving. The three are therefore one commitment, not three pieces
+of evidence. `0b9ad38b` already named `b3573a61` and `d791628f` as the
+decisive contested premises.
+
+**Kept rival: the standing-power agent.** Target: C*, in all three
+presentations. Mechanism: in transient action, the actuality of moving is
+located in the patient. An agent with a standing, fully actual power (fire
+heating wood it touches) moves without itself undergoing a reduction in a
+respect relevant to that moving. Independent justification: an analyst
+inference from Physics III.3, 202a13-21 (the mover's actuality is the
+moved's actuality). It goes beyond claim `849f4443`, which adds no claim
+about the mover's own motion and is scoped to physical motion. The teacher
+case (202b5-22) supports the same location thesis. Physics III.2, 202a3-7
+(contact movers are reacted on) is a consideration the other way for
+physical agents and has not been assessed. Reading B of q.46 a.2 ad 7
+(claim `2e18db19`) makes relevance (*inquantum*) the criterion of per
+accidens causing. Relevance: C* carries the absolute First-Way
+conclusion (`1e47e6db` → `c1b68c21`) and the first-being bridge `74eb9113`
+(through `777646a5`). The q.105 a.5 reply (God applies the creature to act)
+is God-indexed, and the 2026-11-17 section already declines to use it to
+establish the identification. Conservation alone was rejected in `0b9ad38b`.
+The rival is not refuted, and C* is not defeated: a non-God-indexed account of
+application to operation is the open discriminating question.
+
+### Exact sense gaps found
+
+- **Aspect of `CausesIn` (new; unregistered, not Lean-checked).** The
+  following set is inconsistent under one reading of `CausesIn`, `InAct`
+  and the respect: `fbc516c1`, `6b9fedc2`, `4be9a4ac`, `c6d6379b`,
+  `6a0b545c` and `67aa5b5c`. Proof sketch: some x is moved in r; a mover y
+  with `MovesIn y x r` exists; then `CausesIn y x r`, so `InAct x r`. But x
+  is in potency in r, so it is not in act in r. `67aa5b5c` (caused perfection
+  is had) reaches the GOD_4 root through arguments `90e85f77` and `f632c6e5`.
+  `6a0b545c` therefore needs a non-factive, in-progress reading of
+  `CausesIn`, or the two routes need distinct relations. DEF `211a6432`'s own
+  example ("a cause of the heat of hot things") is factive. Under adopted
+  POTENCY_1, `c6d6379b` is definitional, so five statements suffice; on the
+  legacy labels the six-member set needs the _1/_2 identification.
+- **Respect-free simple priority (new; unregistered, not Lean-checked).**
+  Take two beings that move each other in different respects: y, in act in r,
+  moves x, which is in potency in r; and x, in act in r', moves y, which is in
+  potency in r'. Then `6ca87431` gives `PriorSimply y x` and
+  `PriorSimply x y`, so `7ad36aca` gives `PriorSimply y y`, which `32d77f18`
+  denies. Such reciprocity is ordinary under the case's own MOTION_1: two
+  people each tell the other something the other did not know. Each is
+  reduced from potency to act in knowing by a teller actually knowing it
+  (DEF `a7904c82`), and the corpus already treats knowing as a respect of the
+  shared act/potency vocabulary (DEF `39f50105`). A simultaneous physical
+  case is mutual heating or pushing by contact, where the mover is reacted
+  on (Physics III.2, 202a3-7). The same composition through `a7d2b839` and
+  lane B's `e078f07b` needs no potency or act conditions. The same exclusion
+  follows, through `a7d2b839`, from the registered `0566122f`, which
+  `ede78c78` derives from respect-free dependence (`c0d99549`, `47b151ca`);
+  the gap is respect-free priority *and* respect-free dependence, both
+  shared with lane B, which is investigating the same split (in-flight,
+  unverified here; link its attempt once on main). Repair
+  options, none
+  tested: respect-indexed priority, which DEF `1d9aa4d9`'s gloss suggests;
+  restriction to per se links; or giving up the respect-free consequent. This
+  is a shared dependency with lane B; its records are not edited here.
+- **POTENCY sense in `f03798ba`**: see its row.
+- **MOTION label on `fe09fcd0`**: see its row.
+- **`ByOwnForm` for concurrently sustained forms** (`962a9ed3`): see its row.
+- **Formal versus virtual act** (`6b9fedc2`): DISAMB-IN-ACT leaves the
+  choice open. The grade above is on the inclusive reading.
+
+### Derivable bypasses (unregistered, not Lean-checked)
+
+- **B1.** `97f5850f` (`∀ x, Acc CausesAsCaused x`) follows from `42890b45`
+  (`WellFounded cause`) and `f10d5632` (per se edges are cause edges, same
+  carrier and orientation) by accessibility along a subrelation. That support
+  then needs neither `e529c42f` nor `37e9e7a0`, so `68172f57` and
+  `b3853b1b` leave this route. The regress load rests on `42890b45`'s
+  support `e229bb2c` (`57552dce`, `e078f07b`, `d85de8e1`) and on
+  `f10d5632`: one lane-A selection stipulation and lane B's priority leaves.
+- **B2.** With `Moves := MovesIn`, `fe09fcd0` (in a MOTION_1 sibling still
+  to be registered) and `079b53bf` exclude `MovesIn x x r`, so `0181cf7b`
+  and `99470e3f` hold vacuously. This adds no warrant for `f296a694`: every
+  recorded support of `079b53bf` takes `f296a694` or a sense-variant of it
+  as a premise, or asserts the same in-act content (its stated option is
+  Aquinas's ergo from it, claim `6aac13a9`; `8653b123` uses `d4a26175`), and
+  `892db443` was built to avoid that circularity. The self-motion leaves are
+  dispensable only relative to `f296a694`'s own stated option (`611e63b7`,
+  `ca78225c`), not through B2.
+- **B3.** Under adopted POTENCY_1 (`AdoptedPotency.analysis`), `c85e8ef5`
+  is definitional and `76e0f716` is `0628359b` itself, so `3c0b7bb3` and
+  `7c3da33e` are dispensable for the adopted instantiation.
+
+### Duplicates and near-duplicates
+
+- C*: `b3573a61` and `f03798ba` with `d791628f` are one commitment;
+  `8a22ae75` carries its efficient-cause analogue. `1e47e6db` and `8a22ae75`
+  are twins in two vocabularies, each strengthening a registered weak sibling
+  (`96da1d33`, `446e3f2a`); `b3573a61` is the bridge between `96da1d33` and
+  `1e47e6db`.
+- "The mover is a cause in that respect": `6a0b545c` (`CausesIn`) and
+  `a7d2b839` (`EfficientlyCausesIn`), kept apart by DISAMB-CAUSE; `57552dce`
+  is the history-relation analogue.
+- `76e0f716` and `0628359b` coincide under the adopted sense; `3c0b7bb3` and
+  `7c3da33e` are constructively equivalent under it.
+- `0181cf7b`, `3209ff59` and `f1a124b6` form one hedge branch for the
+  diagonal case, dispensable through `f296a694`'s stated option.
+- `6ca87431` and `010988b9` are the two halves of `6d1672a7`;
+  `68172f57` and `b3853b1b` form one finite-branching bundle.
+
+Sense-index allowlist consumers, as computed by `currentness`: `1c5edad9`,
+`7ce8ad4e`, `846a7b31`, `beec1dc1` and `db31cea1` (for `a594d8c4`);
+`675b71d2` (`6b9fedc2`); `892db443` (`6a0b545c`, `f1a124b6`); `d6243bf3`
+(`6ca87431`); `08333363` (`76e0f716`); `aa35935b` (`b3573a61`); `56175b8f`
+(`f03798ba`, `d791628f`); `fcb4b871` (`1ad18c70`); `804d2c83` (`3c0b7bb3`,
+`7c3da33e`); `a48266d6`, `e3874506` and `fc96d5e9` (`8a22ae75`; the first two
+also for `9c252f24` and `a7d2b839`); and `175a2cc4`, `6a3386c7` and
+`8b7ee918` (`fe09fcd0`). The only transcription-only support is `1ad18c70`'s
+consumer `fcb4b871`. `d0c022f8` also uses the transcription-closed
+`2c0b9bd7`, which is outside this cluster.
+
+### Objection classification
+
+| Objection or rival | Target | Classification |
+| --- | --- | --- |
+| Standing-power agent (Physics III.3, claim `849f4443`) | C*: `b3573a61`, `d791628f`, `f03798ba` | Kept, as above |
+| Per accidens causing in an irrelevant respect (q.46 a.2 ad 7 reading B, `2e18db19`) | `8a22ae75` (strong scope) | Kept; classified for the first time |
+| `0de4cf4f` moved mover moves not as moved | `1e47e6db` | Kept as a fidelity rival to the strong reading (its supporting claim `2e18db19`) |
+| `0de4cf4f`'s digesting-man example | `b3573a61` | Restated: the stick-mover is also moved in a relevant respect (its hand), so the example does not show a mover moved only irrelevantly; the standing-power case does the work |
+| Reciprocal cross-respect moving (new, analyst) | `6ca87431`; the composition `a7d2b839` + `e078f07b` + order | Kept |
+| Emergentist `cd7f0336` | act clause of `6b9fedc2` (and `f296a694`) | Kept against a formal-only reading; answered by the virtual or inclusive reading (`d1d58e1e`) |
+| Qualified predication of wholes | `f1a124b6` | Kept as partial; dispensable through `f296a694`'s stated option |
+| Indeterminist `2d00b16f` | `4a952b96` and the existence clause of `6b9fedc2` | Restated: "no determining cause" is not "no reducer in act"; the recorded mechanism does not reach the existential claim |
+| Occasionalist `153a0d80` | `a7d2b839` (paraphrase) | Restated and relocated: it denies creaturely `MovesIn`, which under MOTION_1 is already agency, not the link. It is theistic and does not bear on GOD_4's existence |
+| Night / potency prior to act `c1acdf6c` | `010988b9`, `a4d3261a` | Restated: the bare contradictory. `ab0f7e3a` itself found that the aporia's grounds constrain ability and act, not `PriorSimply` |
+| Infinitely many material parts or concurring agents | `b3853b1b` | Restated: hypothetical, no established case |
+| No-object practice use, WF-P1 (`59168620`) | `a594d8c4` | Restated: the bare contradictory, supported only under a practice-use instantiation (GOD_3-like), not GOD_4's content sense; [wittgenstein.md](../wittgenstein.md) classifies the related position as a methodological challenge |
+| Inertial uniform motion | `4a952b96`, `6b9fedc2` | Boundary retained: uniform motion is not a MOTION_1 reduction on the state reading (the conditional refutation is on file) |
+| Material or final edges, bare succession | `57552dce` | Boundary: a studied relation with such edges is a different relation |
+| Application to another witness (`76b347ef`) | `a594d8c4` | Boundary retained: outgoing motion and full first-mover coverage are needed for a different n |
+
+No substantive objection was identified for `7b8b589c`, `9c252f24`,
+`76e0f716`, `3c0b7bb3`, `7c3da33e` (the power sense is a different sense),
+`fe09fcd0` on MOTION_1, `3209ff59`, `0181cf7b`, `68172f57` or `1ad18c70`; for
+`1ad18c70` the issue is a sense choice. The countermodels are restated as facts about single
+interpretations:
+
+- the irrelevant-respect model of `aa35935b`;
+- the Aristotelian-agent omission model of `970be12e`;
+- the two-being alternating-respect model `a330f2e5`;
+- the Round3 controls `b9c3f090`;
+- the 48 registered interpretations of `75c35dd5`;
+- the `SelfMotionSeparation` controls.
+
+Each shows only that a premise is needed in that interpretation. None is
+evidence against any premise.
+
+### Overall provisional judgment
+
+Under the fixed meanings, the motion core is a coherent, positively motivated
+conditional route. Its premise nodes also have direct source options, which
+remain; they add warrant options and take no leaf off the computed route.
+
+- **Well supported:** nine leaves, as sourced principles, meaning postulates,
+  conceptual articulations or selection stipulations: `6b9fedc2` (on the
+  inclusive act reading), `7b8b589c`, `9c252f24`, `a7d2b839`, `fe09fcd0`
+  (sourced for MOTION_2; a meaning postulate in the MOTION_1 sibling still to
+  be registered), `76e0f716`, `3c0b7bb3`, `7c3da33e` and `57552dce`.
+- **Moderate direct options:** `68172f57` (sourced classification) and
+  `3209ff59`.
+- **Derivable:** none outright. `0181cf7b` is an open hedge leaf whose
+  vacuous derivation through B2 begs `f296a694`.
+- **Dispensable through stated nodes or bypasses B1 and B3:** `962a9ed3`,
+  `6a0b545c`, `68172f57` and `b3853b1b` (B1), and the B3 pair; the
+  self-motion leaves `0181cf7b`, `3209ff59` and `f1a124b6` through
+  `f296a694`'s stated option only.
+- **The contested load is one commitment, C*.** The absolute First-Way
+  conclusion and the first-being bridge rest on it, and the standing-power
+  rival against it is kept on an analyst reading of Physics III.3 202a13-21 and 202b5-22 (beyond claim `849f4443`), with reading B of q.46 a.2 ad 7. Without C*, the relative
+  conclusion remains available through result `e05d2976`
+  (`PrimaViaRelative`). Beyond its stated premises, that result's contested
+  load is the regress `226c38f6`, a shared dependency on lane B's `d85de8e1`
+  and `f10d5632`.
+- **Two newly exposed sense gaps** affect support options rather than the
+  stated `f296a694` and `a4d3261a`: the aspect of `CausesIn`, and
+  respect-free simple priority under reciprocal moving. The second bears on
+  every route node that uses respect-free `PriorSimply`; that question is
+  shared with lane B.
+- **The naming bridge `a594d8c4`** is a defensible provisional identification
+  commitment of moderate strength. It is not independent evidence for the
+  classical attributes, and its attribute or reference-fixing bridge stays
+  open.
+
+Both grades are conditional on the regress `226c38f6` (lane B, not graded
+here). Given it, the absolute conclusion is moderately supported, bounded by
+C*; the relative conclusion is well supported on its stated premises.
+Nothing is established, defeated or closed.
+
+### Revision conditions
+
+- A non-God-indexed account showing that a steady transient agent undergoes
+  a relevant actualization would upgrade `b3573a61`, `d791628f` and
+  `f03798ba` together. An account on which such action adds no actuality to
+  the agent, together with an actual standing-power mover under MOTION_1,
+  would defeat unrestricted C*. The absolute conclusion would then rest on
+  the source-of-esse route of the 2026-11-17 section, which lacks the local
+  moving edge.
+- If priority were made respect-indexed, `6ca87431` could be retained in
+  that form. The consumers of `a4d3261a` and the firstness statements would
+  then need re-checking.
+- A selected in-progress sense of `CausesIn`, or separate relations, would
+  reopen `6a0b545c`.
+- Same-bearer derivations of intellect and will from pure actuality would
+  strengthen `a594d8c4`.
+
+### Next discriminating test
+
+Fix one caused agent that acts continuously on one patient in one respect
+(one with no reaction in the operative respect, such as a teacher teaching,
+Physics III.3 202b; if a contact agent is used, first show that its reaction
+is or is not `RelevantTo` the moving), under MOTION_1 and adopted POTENCY_1. Ask whether there
+is an operation-respect o with `InPotency y o`, `ActualizedQuaPotential y o`
+and `RelevantTo y x r o`. That is: does a non-God-indexed account of
+application to operation exist? Formally, first register the restricted
+derivation of `b3573a61` for caused movers from a non-God-indexed restatement
+of `f03798ba`, `d791628f`, `0628359b` and the explicit
+`OperationOf → RelevantTo` bridge. That makes C* one certified commitment,
+so the philosophical test decides it once.
+
+Formal follow-ups for the formal owner, each a short derivation from
+existing vocabulary:
+
+1. certify the six-premise `CausesIn` inconsistency;
+2. certify the reciprocity inconsistency for `6ca87431` and for
+   `a7d2b839` + `e078f07b`;
+3. register B1 (with `f10d5632` in `sense_bridges` for
+   FINITE_CAUSAL_HISTORY_AND_PER_SE_3/4); B2 only after the MOTION_1
+   sibling of `fe09fcd0` exists, and only as the vacuity of `0181cf7b`;
+4. record `strong_version_needed` on `e3874506`, or build a weak-version
+   route through `446e3f2a` with a relevance-carrying sibling of `9c252f24`.
+
+**Supersession.** As the current-state summary for these 24 statements only,
+this section supersedes four legacy wordings and no substantive judgment
+(exact text in attempt `a82b06b6`'s `supersedes`):
+
+- the closure-framed blocker of `ab0f7e3a`, as the standing of `6b9fedc2`
+  and `6ca87431`;
+- the failed-source-search sentence of `f2f06fbe`, where read as weight
+  against `6ca87431`;
+- the "no pinned text" blocker of `096c30cc`, as the standing of `a594d8c4`;
+- the omission-model sentence of `0b9ad38b`, where read as evidence against
+  `d791628f`.
+
+The 2026-11-13 potency/privation judgment, the 2026-11-17 assessment above
+and its integration record are retained unchanged. No revision is declared.

@@ -223,6 +223,8 @@ premises = ["STMT-MAXIMUM-IN-GENUS-CAUSES-ALL-IN-GENUS"]
 conclusion = "STMT-MAXIMUM-IN-BEING-CAUSES-ALL-BEINGS"
 rule = "Universal instantiation at esse"
 meaning = "MAXIME_1 branch of the causal principle at the root-route node: the principle that what is MAXIMAL in a genus causes all in that genus, instantiated at being, gives that whatever is MAXIMAL in being causes being in every other being."
+description = "Transcription by instantiation (AGENTS.md invariant 16): MAXIME_1 branch of the causal principle at the root-route node. The principle that what is MAXIMAL in a genus causes all in that genus, instantiated at the respect esse, is the statement that whatever is MAXIMAL in being causes being in every other being. The proof only instantiates the genus principle, so it closes its conclusion only when that principle is closed."
+transcription = "instantiation"
 
 [[argument]]
 id = "MAXIMUM-IN-BEING-CAUSES-ALL-AS-STRICTLY-GREATEST"

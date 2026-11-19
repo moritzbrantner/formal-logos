@@ -1,1 +1,13 @@
-{"id": "92d3129c-2dbe-5d16-8b01-5aed3164368d", "label": "The strong reading of the prima via's per se…, from In ST I q.2 a.3 Aquinas states the… and 6 more", "legacy_id": "AQUINAS-ST-I-Q2-A3-STRONG-READING-INTENDED", "argument_id": "0b9f990e-e934-5675-adca-2517ff862c09", "challenge_module": "TruthCore.Results.Aquinas.SummaTheologiae.StrongReadingIntended.Challenge", "solution_module": "TruthCore.Results.Aquinas.SummaTheologiae.StrongReadingIntended.Solution", "theorem": "TruthCore.Results.Aquinas.SummaTheologiae.StrongReadingIntended.strongReadingIntended", "comparator_config": "results/AQUINAS-ST-I-Q2-A3-STRONG-READING-INTENDED/comparator.json", "status": "solution-present"}
+{
+  "id": "92d3129c-2dbe-5d16-8b01-5aed3164368d",
+  "label": "The strong reading of the prima via's per se…, from In ST I q.2 a.3 Aquinas states the… and 6 more",
+  "legacy_id": "AQUINAS-ST-I-Q2-A3-STRONG-READING-INTENDED",
+  "argument_id": "0b9f990e-e934-5675-adca-2517ff862c09",
+  "challenge_module": "TruthCore.Results.Aquinas.SummaTheologiae.StrongReadingIntended.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.SummaTheologiae.StrongReadingIntended.Solution",
+  "theorem": "TruthCore.Results.Aquinas.SummaTheologiae.StrongReadingIntended.strongReadingIntended",
+  "comparator_config": "results/AQUINAS-ST-I-Q2-A3-STRONG-READING-INTENDED/comparator.json",
+  "status": "solution-present",
+  "description": "Transcription (AGENTS.md invariant 16): the proof is a single application of the stated validity-charity principle (ValidityCharityPrinciple), whose consequent is the conclusion that the strong per se reading is intended, to the six textual and logical premises; the four textual premises and the conclusion relate opaque Prop parameters. It records that the conclusion follows from the charity principle as stated; it gives no reason that Aquinas intended the strong reading beyond that principle and closes its conclusion only when every premise is closed.",
+  "transcription": "single_application"
+}

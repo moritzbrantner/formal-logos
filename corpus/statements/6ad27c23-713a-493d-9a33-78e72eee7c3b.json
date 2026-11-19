@@ -1,0 +1,9 @@
+{
+  "id": "6ad27c23-713a-493d-9a33-78e72eee7c3b",
+  "label": "Nothing can be without itself",
+  "paraphrase": "OPEN meaning-postulate candidate, analyst formulation, attribution deferred: for no x can x be while x is not, that is, CanBeWithout x x fails for every x. CanBeWithout is the primitive of DEF-CAN-BE-WITHOUT ('y can be while x is not', 'possunt' read as real possibility). On that gloss CanBeWithout x x asks for a possible situation in which x both is and is not, so the postulate is the diagonal instance of non-contradiction under the definition's reading; the Lean primitive does not build it in, so it is registered as an explicit statement. It says nothing about dependence for being. With STMT-INDEPENDENCE-ALLOWS-BEING-WITHOUT (8ab3d114) it forces every being to depend for its being on itself (not-not D(x,x), constructively); that consequence is what makes the self-dependence package of #1751 inconsistent.",
+  "lean_declaration": "TruthCore.Causality.PrimaViaCertificates.NothingCanBeWithoutItself",
+  "definition_ids": [
+    "d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2"
+  ]
+}

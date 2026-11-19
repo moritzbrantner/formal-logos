@@ -1,0 +1,16 @@
+{
+  "id": "9f6e7091-d23a-4bcd-b843-3e0b2487cd71",
+  "label": "Foundation, accompaniment and a coexisting term do not give concurrent actualization",
+  "paraphrase": "Closed result, attribution deferred: it is not the case that, for every history over a preordered time, giving relation, origin relation and reception predicate, foundation of the origin relation on received esse, irreflexivity (no thing related to itself), non-mutuality (the term not related back to the bearer), accompaniment, coexistence of the term and received onset being given (fa3e228b) together entail weak concurrent actualization 40a97664. Witness: Control part 1, in which a creator is present at every moment and gives a received-esse thing being at its first moment only, and the thing keeps its relation to the creator afterwards. So the structural features typed from ST I q.13 a.7 (an existing term, no relation of a thing to itself, real in one extreme only), whose warrant is independent of 40a97664, do not reach giving at the moment. Not shown: that giving by the term is the minimal addition that would.",
+  "lean_declaration": "TruthCore.Causality.RelationalReceipt.CoexistentTermDoesNotCarryTheCrux",
+  "definition_ids": [
+    "7b28be97-9a3c-444f-af46-fe410092c3ee",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

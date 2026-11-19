@@ -1,0 +1,14 @@
+{
+  "id": "fdb73476-210e-4d37-a03b-ae6c04a8db8b",
+  "label": "A total holder of a lackable act gives being, from the esse-side support of C*-holding (inference)",
+  "input_statement_ids": [
+    "f834ee65-53eb-4aea-b07c-42b06dbd1dfd",
+    "1a99cebe-3c0a-4e32-95bc-e2e458505322",
+    "6e2176cd-eeb6-413c-8fd2-7b2df4a34ad4"
+  ],
+  "output_statement_id": "0e0409d5-a269-4cfe-b194-56b912dcda44",
+  "rule": "The giver of being holds every lackable act; the total holder is the only holder",
+  "meaning": "New non-transcription conditional derivation. Let z totally hold x in r, with x in act in r and able to lack that act. By the lackable-being bridge x is in act as to being and could lack being; by the esse instance some g other than x presently actualizes x as to being; by accident-inclusive conservation g presently actualizes x in r; since z is the only holder of x in r, g is z. So on the bundle that supports C* in the holding sense (section 9.1), every total holder of a lackable act is a holding-sense giver of being (the holding relation at esse). Identifying it with a giver of being in the timed sense used by the esse-root routes (BeingGiving.GivesAt) would need the converse of clause (c) of the present-moment reading dedc431f, which is not formulated; and the total-holding regress c4e333da remains a separate premise. All premises stay OPEN. No premise is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

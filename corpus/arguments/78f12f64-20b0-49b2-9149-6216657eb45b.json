@@ -1,0 +1,24 @@
+{
+  "id": "78f12f64-20b0-49b2-9149-6216657eb45b",
+  "label": "On RECEIVES_ESSE_AT_1 present receipt is concurrent actualization, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "534b438b-2d24-4277-a44d-cb34bf97b280",
+  "inference_ids": [
+    "e5aaad24-499f-4fba-9532-56c4fd731e75"
+  ],
+  "meaning": "Closed result with no premises, quantified over every history, giving relation and reception predicate. On the passion sense, correlativity is the second conjunct of the definition, and the present-tense reading of reception, after its first conjunct (the reception hypothesis itself), says that at every moment at which a received-esse thing is present something gives it being: weak concurrent actualization 40a97664, in both directions. It shows that on this sense the present-tense reading is 40a97664 under another name. It establishes nothing about reality.",
+  "term_senses": {
+    "RECEIVES_ESSE_AT": "a2905cb6-12a9-4c21-9c24-3bb25e6537a1"
+  },
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "ac8dbcaa-09d9-4f9e-9d19-995b38642f82"
+  ],
+  "disambiguation_ids": [
+    "71d3bdb7-92cc-4023-b0ca-1739914628e4",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

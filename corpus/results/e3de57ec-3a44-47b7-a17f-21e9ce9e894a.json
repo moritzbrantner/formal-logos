@@ -1,0 +1,11 @@
+{
+  "id": "e3de57ec-3a44-47b7-a17f-21e9ce9e894a",
+  "label": "The esse instance of holding from the timed strong concurrent actualization",
+  "argument_id": "6a596870-a409-4507-8e28-a4e9f586c80c",
+  "challenge_module": "TruthCore.Results.Causality.HoldingMotion.Challenge",
+  "solution_module": "TruthCore.Results.Causality.HoldingMotion.Solution",
+  "theorem": "TruthCore.Results.Causality.HoldingMotion.lackableBeingHeldOfTimed",
+  "comparator_config": "results/e3de57ec-3a44-47b7-a17f-21e9ce9e894a/comparator.json",
+  "status": "solution-present",
+  "description": "New non-transcription conditional derivation connecting the holding vocabulary to the concurrent-actualization premise on main. Let x be in act as to being and able to lack being. Under the present-moment reading x is present at t and has received esse in some principle p; by the strong concurrent actualization 76d2cc96 some g other than x gives x being at t; under the reading g presently actualizes x as to being. Composed with the two derivations above, C* in the holding sense rests on 76d2cc96 (the strong version: the holder must be another), the present-moment reading, accident-inclusive conservation, the lackable-being bridge and the actualizer premise, all OPEN. The holding route needs the strong version, which entails (registered strength order) the weak version 40a97664 used by the esse-root routes: it inherits every objection to the weak version, plus the persistence-power interpretation that falsifies only the strong one (concurrent-actualization Control part 2). The shared dependency is the weak premise; the strong premise is this route's own. No premise is established."
+}

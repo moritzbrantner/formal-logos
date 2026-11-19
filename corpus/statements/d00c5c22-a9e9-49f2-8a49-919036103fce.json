@@ -1,0 +1,17 @@
+{
+  "id": "d00c5c22-a9e9-49f2-8a49-919036103fce",
+  "label": "Sustaining-dependence and onset-parity controls: parent and child, omissions and nonvacuity",
+  "paraphrase": "Closed controls on interpretations with one world, natural-number times and two individuals; statements about these interpretations only. (1) Parent and child: true is present at times 0 and 1 and gives false being at time 1 only; false persists from time 1 on; dependence read as co-presence in every history. The contact principle, the co-presence bridge and the sustaining sibling hold; the weak sustaining reading ce55210c and the esse-dependence premise 2068f91c fail. (2) true present always, giving false being from time 1 on, no dependence: the weak sustaining reading and contact hold; the bridge, the sibling and 2068f91c fail. (3) An absent giver giving at every time, dependence as co-presence: the weak sustaining reading and the bridge hold; contact, the sibling and 2068f91c fail. (4) As (2) with dependence as co-presence: every premise, the sibling and 2068f91c hold, and false depends on true. (5) The inertial history of (1), false alone with received esse: onset is given; parity and concurrent actualization for begun things fail. (6) The same history with no giving: parity holds vacuously; onset and concurrent actualization for begun things fail. (7) The history of (2): onset, parity and concurrent actualization for begun things hold.",
+  "lean_declaration": "TruthCore.Causality.SustainingDependence.Control.Certificate",
+  "definition_ids": [
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "ed47a5a7-fa84-43cb-950b-2552b33b99ff",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d"
+  ]
+}

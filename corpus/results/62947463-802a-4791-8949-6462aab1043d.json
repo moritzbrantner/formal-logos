@@ -1,0 +1,11 @@
+{
+  "id": "62947463-802a-4791-8949-6462aab1043d",
+  "label": "Present-tense reception entails onset reception",
+  "argument_id": "d19e723f-c8d5-4d46-976e-004560fa449c",
+  "challenge_module": "TruthCore.Results.Causality.PresentReceipt.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PresentReceipt.Solution",
+  "theorem": "TruthCore.Results.Causality.PresentReceipt.onsetOfPresentReceipt",
+  "comparator_config": "results/62947463-802a-4791-8949-6462aab1043d/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration: the present-tense reading of reception entails the onset reading, since a first moment of presence (BeginsAt) is a moment at which the thing is present. A single application of the premise (invariant 16), registered for the strength order, not as progress; it establishes neither. Strict: Control part 1 (receipt at the first moment only)."
+}

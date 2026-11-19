@@ -1,0 +1,11 @@
+{
+  "id": "739d177c-208a-4f53-a7d6-21396e84ccd8",
+  "label": "C* for caused movers from the operation route",
+  "argument_id": "37c025f8-a387-409d-a472-0e375a6a87eb",
+  "challenge_module": "TruthCore.Results.Causality.CausedMoverCStar.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CausedMoverCStar.Solution",
+  "theorem": "TruthCore.Results.Causality.CausedMoverCStar.cstarOfOperation",
+  "comparator_config": "results/739d177c-208a-4f53-a7d6-21396e84ccd8/comparator.json",
+  "status": "solution-present",
+  "description": "New non-transcription conditional derivation (the unified derivation of docs/notes/caused-mover-cstar.md, section 2). Let y, whose being another causes, move x in r. By 631e014f the moving is an operation in a respect o in which y is in potency; by d791628f acting actualizes that potency as such; by the Physics III.1 analysis 0628359b y is being moved in o; by 7bf380c6 o is relevant to the moving. The hypothesis that y is moved in some respect is not used. The relevance enters only through 7bf380c6; without it the first three premises give only that y is being moved in some respect (the caused-mover analogue of the God-indexed 777646a5). 631e014f carries the passage from the CAUSE_2 guard to CAUSE_1 moving. Under POTENCY_1, 631e014f fails for steady exercise of a retained power (section 3), so this route does not reach the retained-state movers. All premises stay OPEN. No premise is established."
+}

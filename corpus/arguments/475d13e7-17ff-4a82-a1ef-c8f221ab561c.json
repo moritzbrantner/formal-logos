@@ -1,0 +1,21 @@
+{
+  "id": "475d13e7-17ff-4a82-a1ef-c8f221ab561c",
+  "label": "Causal predecessors are well-founded, from the per se regress and a per se history",
+  "premise_statement_ids": [
+    "97f5850f-62bc-5e43-a0c1-dd1033d08fc9",
+    "6c084877-1d6f-4298-8644-d375fecd9e63"
+  ],
+  "conclusion_statement_id": "42890b45-9325-56d3-8ae4-a6202e8c6ba6",
+  "inference_ids": [
+    "aa864b62-3fad-442f-987c-f268e01a6209"
+  ],
+  "meaning": "Regress rebinding: if no per se ordered series of efficient causes goes on to infinity (97f5850f, stated on its q.2 a.3 claims) and the studied causal history is selected as per se ordered causing (every edge is a CausesAsCaused link), then the studied relation is well-founded (42890b45). Neither simple priority, its well-foundedness d85de8e1, nor the all-respects priority premise e078f07b enters. Under the per se selection (f10d5632, 6c084877) 42890b45 and 97f5850f are interderivable (with bypass B1), so the e229bb2c support of 42890b45 bears on 97f5850f exactly as far as 57552dce, e078f07b and d85de8e1 are warranted. Whether d85de8e1 adds independent warrant is a separate, open warrant question. It gives 97f5850f no new support: 42890b45 is consumed on the GOD_4 route only by the chain 1bca81ef → e529c42f → b58472dd back to 97f5850f, and the route's regress step for c1b68c21 already consumes 97f5850f directly (675b71d2 ← 226c38f6 ← f1ef9206). The selection premise is open.",
+  "definition_ids": [
+    "8aa89667-4d6f-5aab-9720-455722b4c6ff",
+    "4a101a4c-12de-53c8-80c6-de7a523ea9d9"
+  ],
+  "disambiguation_ids": [
+    "81c233d4-01b4-528c-8bbd-7da228443ffe",
+    "bedfab81-905c-5d1a-b834-e20b8007b3da"
+  ]
+}

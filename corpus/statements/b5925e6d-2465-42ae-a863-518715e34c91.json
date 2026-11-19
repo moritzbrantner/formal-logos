@@ -1,0 +1,17 @@
+{
+  "id": "b5925e6d-2465-42ae-a863-518715e34c91",
+  "label": "Some receipt gives present-tense reception and correlativity iff concurrent actualization",
+  "paraphrase": "Closed result, attribution deferred: for every history, giving relation and reception predicate, there is a receipt interpretation (a value of the primitive present-tense receipt, definition 506ea036) satisfying both the present-tense reading of reception and correlativity of receiving and giving iff weak concurrent actualization 40a97664 holds. Forward by the derivation from the two premises; backward by the standing-composition sense (RECEIVES_ESSE_AT_2), on which the present-tense reading holds and correlativity is 40a97664. So the pair, with its receipt interpretation left open, says exactly what 40a97664 says; it can carry further content only through a fixed reading of receipt.",
+  "lean_declaration": "TruthCore.Causality.PresentReceipt.SomeReceiptCarriesTheCrux",
+  "definition_ids": [
+    "506ea036-c6bf-4e2d-aee3-7b25bfcdfea6",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "71d3bdb7-92cc-4023-b0ca-1739914628e4",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

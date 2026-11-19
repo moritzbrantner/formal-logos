@@ -1,0 +1,69 @@
+{
+  "id": "39c30529-1352-46bc-9c37-c9ba1d85b0d9",
+  "label": "Every first mover moved by none is first in being, from the quarta via with PRIOR_4",
+  "premise_statement_ids": [
+    "a9622441-2db2-5d32-9b02-a9d283bd2949",
+    "6c27657f-a2bf-5c1d-963c-c154b66bfa85",
+    "101bdd62-7cd0-5923-8f03-d9d443f4ba51",
+    "d9fad785-40ab-555a-a1c1-5e39c9d50497",
+    "f296a694-aeea-5fa7-bdbf-0076530f9441",
+    "7067553d-cad9-5d79-b6b2-912e35051530",
+    "957a71fe-ba7e-5633-bef2-f5d287362fc5",
+    "777646a5-3f40-5508-b59a-5e019cf2edce",
+    "6eacb281-8b09-459a-a9f7-4e506edc298e",
+    "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "conclusion_statement_id": "c51a07a1-4cdb-4b5f-b1ec-ebd8237f834e",
+  "inference_ids": [
+    "a56e45ac-6453-40c8-8de1-11526b3adca4"
+  ],
+  "meaning": "PRIOR_4 sibling of argument f8992ef7, by its existing theorem firstMoverIsFirstBeing instantiated with PriorInBeing CanBeWithout for its priority parameter. Something m is maximal in being (quarta via); whatever else is PRIOR_4 to m causes its being (the PRIOR_4 sibling of 70e98bb5), so it is more a being than m, which nothing is; every first mover moved by none is m. The premises are those of f8992ef7 with the PRIOR_4 sibling in place of 70e98bb5; all remain open. The CAUSE_1/CAUSE_2 and MAXIMAL_6/MAXIMAL_1 mixings are inherited from f8992ef7, where they are allowlisted legacy; here the premises that relate those senses are listed as bridges: 777646a5 (an agent whose being God causes is moved when it moves, relating causing being and moving) and 101bdd62 (maximally true is maximally a being, which links both maximality senses).",
+  "term_senses": {
+    "PRIOR": "11d1b100-3b05-4695-9d63-31cb8d09a284"
+  },
+  "definition_ids": [
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "25e19d5a-5cdf-5916-a888-f6a0ce970f11",
+    "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d",
+    "486bb45e-c4a2-5ba5-8b12-498a24eb1678",
+    "23e73af5-a0df-5838-9689-5899c37fdcda",
+    "a2a8de58-42e0-5481-b7fb-848ae8602036",
+    "ad844320-77ce-5786-96d7-4b02f874269d",
+    "5766de66-8a37-5b04-aa65-9eec53319f50",
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "b412016a-43c1-5c4a-abb0-4e53d343d508",
+    "aad0156a-e1eb-5b6a-bb97-526698065277",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1",
+    "f4365b55-da11-4e27-b5b7-71024d9508be"
+  ],
+  "disambiguation_ids": [
+    "3b0d67c5-59e4-5556-a728-26bd567f0fb1",
+    "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "4822a4f5-a93b-52dc-855a-00b7d57928d5",
+    "205a39c3-915d-5fe4-8076-a9ff91329e08",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "4f1d0cf6-88ba-59e3-814d-01450c2bf282",
+    "1795a62e-f78b-5f5b-94e7-9e7490824811",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "80b5fc49-ed55-5c61-b14b-3621d2aa1520"
+  ],
+  "sense_bridges": [
+    {
+      "term": "CAUSE",
+      "from": "bdc6001c-9699-4126-9e35-6fbd1da78100",
+      "to": "572f19f2-8833-4133-8bea-b8b5fa4ac24f",
+      "statement_id": "777646a5-3f40-5508-b59a-5e019cf2edce"
+    },
+    {
+      "term": "MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST",
+      "from": "a833bcdb-8e99-4079-8cb6-fc1295eb690f",
+      "to": "9bea9a43-3a87-4d62-86de-e5873aea62f8",
+      "statement_id": "101bdd62-7cd0-5923-8f03-d9d443f4ba51"
+    }
+  ]
+}

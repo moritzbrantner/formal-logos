@@ -1,0 +1,20 @@
+{
+  "id": "7ec93cd4-dd8d-4195-980e-54d651d0a444",
+  "label": "Founded origin relation with a giving term iff concurrent actualization, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "d5bbc4ae-1a16-4c67-828f-8853885e7b9e",
+  "inference_ids": [
+    "d40c412d-32ae-485f-b6cb-99d4796afe8f"
+  ],
+  "meaning": "Closed result with no premises, quantified over every history, giving relation and reception predicate. If some founded origin relation accompanies received esse and its term gives at each moment it is borne, then 40a97664 holds (concurrentOfTermGiving). Conversely, if 40a97664 holds, the relation of a received-esse thing present at t to whatever gives it being at t is founded, accompanies received esse and has a giving term. So the relational premises add nothing to 40a97664 unless the relation is fixed by a reading with further content, and the further content typed here (coexistence of the term, irreflexivity, non-mutuality) does not carry 40a97664 (coexistentTermDoesNotCarryTheCrux). It establishes nothing about reality.",
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "7b28be97-9a3c-444f-af46-fe410092c3ee",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

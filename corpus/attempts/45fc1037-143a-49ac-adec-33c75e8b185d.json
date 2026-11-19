@@ -1,0 +1,30 @@
+{
+  "id": "45fc1037-143a-49ac-adec-33c75e8b185d",
+  "label": "Priority split: PRIOR_4 (priority in being) and a single-sense pure-act route needing one bridge",
+  "statement_ids": [
+    "47aff057-35ef-5418-930b-fef72e1104d2",
+    "97fa3a0b-eb23-5fb1-9741-c1f09fb72206",
+    "70e98bb5-a96d-5d69-870d-e6bd0df2b813",
+    "74eb9113-552b-5ec6-8e09-68374305dd58",
+    "6c18d52b-2456-59ae-995f-13440f8c808d",
+    "c4bb0481-60aa-4461-baee-f490a5fc554e",
+    "ec5ffe6b-faa0-4993-83f5-7563901df329",
+    "6eacb281-8b09-459a-a9f7-4e506edc298e",
+    "c51a07a1-4cdb-4b5f-b1ec-ebd8237f834e",
+    "954fe018-34aa-451a-a672-c387dc232705",
+    "feb950c1-713c-445e-a0dd-8d985b70da34"
+  ],
+  "date": "2026-11-19",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "#1751 slice 2 (specs/priority-in-being.toml) registers lane B's respect fork of simple priority (PR #1769, item (d) 4). New sense PRIOR_4 of DISAMB-PRIORITY-SIMPLE-OR-IN-TIME (sense 11d1b100, definition f4365b55, Lean PriorityInBeing.PriorInBeing W y x := W y x ∧ ¬ W x y, the first of the three modes of priority in being, by being-without, In V Metaph. lect. 13 n. 15, over the primitive CanBeWithout; sourced by claim ab5ec574; n. 16 and n. 17, the second and third modes, are not formalized). PRIOR_1 to PRIOR_3 are unchanged; the originals 47aff057, 97fa3a0b, 70e98bb5 and 74eb9113 are unchanged. The PRIOR_4 siblings are ec5ffe6b (the n. 15 criterion, definitional: result b00b452a, no premises), c4bb0481 (sibling of 47aff057, derived from 000e1f65, 8ab3d114 and excluded middle: result 94dc553f), 6eacb281 (sibling of 70e98bb5, from c4bb0481 and 5dacb0db: result af233664) and c51a07a1 (sibling of 74eb9113, from the premises of f8992ef7 with 6eacb281 in place of 70e98bb5, by the existing theorem firstMoverIsFirstBeing: result 3c795147). 5dacb0db has no priority term and needs no sibling. Bridge 954fe018 (open): a first unmoved mover first in PRIOR_4 is first in PRIOR_1. It is sufficient, not weakest: a respect-matched weaker variant also suffices (checked controls RespectMatchedFirstInBeingBridge, pureActOfRespectMatchedBridge in the vocabulary module). Given c51a07a1 it is equivalent to the content of 74eb9113 (checked control firstInActBridge_iff_firstBeing; with an empty CanBeWithout c51a07a1 is trivial, and on the real-possibility reading nothing is PRIOR_4 to a necessarily existing f), so the split route gives no new warrant for PRIOR_1-firstness; its gain is sense hygiene (the 47aff057 equivocation leaves the support; c6d6379b, POTENCY_2, is discharged by adopted POTENCY_1). Result fb8fba1e derives 6c18d52b (pure act) from c51a07a1, 954fe018 and a4d3261a under adopted POTENCY_1, composing firstMoverPureAct with non-overlap discharged by the adopted sense; its only passage from PRIOR_4 to PRIOR_1 is that bridge, and the semantics preflight (truth semantics from the semantics-preflight branch, PR #1767) fails the same argument without the bridge. Argument 3e2366b5 is unchanged and single-sense in PRIOR (PRIOR_1); its legacy POTENCY_1/POTENCY_2 mixing is unrelated. Its first-being premise 74eb9113 keeps its support f8992ef7, which runs through 47aff057 on one relation via 70e98bb5. The premise-free sense-mixing control 27599762 shows that PRIOR_4 is asymmetric by definition, so priority from actual moving (the shape of 6ca87431) read as PRIOR_4 excludes every reciprocal cross-respect moving case. All six results use no axioms (excluded middle is an explicit premise of 94dc553f and 3c795147) and pass Comparator and NanoDa. The new sibling c51a07a1 lists 777646a5 (CAUSE_1 to CAUSE_2) and 101bdd62 (MAXIMAL _6 to _1) as sense bridges; these mixings come from f8992ef7, where they are allowlisted legacy. c4bb0481 and 6eacb281 inherit the failure case recorded for 8ab3d114 (a necessary second relatum): a necessary y is PRIOR_4 to every contingent x that y can be without, so c4bb0481 makes x depend for its being on y and 6eacb281 makes y a cause of its being. Record issue for its owner: DEF-CAN-BE-WITHOUT (d0b06beb) names the premise declaration PriorityByBeingWithout as its lean_declaration, not the primitive W. Frontier: one bare premise is added on both roots (954fe018), and four support alternatives are added.",
+  "evidence": [
+    "b00b452a-23b2-4d3b-8982-abbf75c5b3ec",
+    "94dc553f-d05c-4bbc-bade-5721b5879e9e",
+    "af233664-eb54-4e03-b828-4773fe75e881",
+    "3c795147-96e9-4c19-87f6-e0c8bb5787bb",
+    "fb8fba1e-a8ea-4323-a0ab-e17b7fdff7bc",
+    "27599762-5de1-4a3e-96d2-ffe77346e6d2"
+  ],
+  "blocker": "Not done:\n- The respect-sense uses e078f07b, 6ca87431 and a4d3261a keep PRIOR_1. A respect-indexed relation (priority in act in respect r) is not introduced. The respect-free PRIOR_1 still meets the slice-1 reciprocity certificates.\n- The bridge 954fe018 is open; given c51a07a1 it is the content of 74eb9113, so the pure-act crux is unchanged in content. Its strongest positive warrant on file is n. 18, omnia priora aliquo modo possunt esse sine posterioribus; aliquo modo suggests a single unindexed CanBeWithout is too coarse.\n- An alternative bridge was not formalized: a PRIOR_4 reading of act's priority ('whatever is in POTENCY_1 in r has something in act in r prior to it in being'). It would make the bridge unnecessary, but it faces reciprocal cross-respect moving.\n- Spine II's 931319ea (47aff057 with PRIOR_1) and the order statements 7ad36aca and 32d77f18 have no PRIOR_4 siblings yet.\nNext tests:\n- Test the n. 18 reduction with a CanBeWithout indexed by mode or respect. In the firstWayDoesNotYieldPureAct model of afd52425 the bridge holds only if some other being is PRIOR_4 to the first mover; with c51a07a1 it excludes the model.\n- Re-bind spine II to PRIOR_4."
+}

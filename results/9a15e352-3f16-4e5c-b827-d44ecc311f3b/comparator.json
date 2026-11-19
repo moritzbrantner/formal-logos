@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.CausedMoverCStar.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CausedMoverCStar.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.CausedMoverCStar.relevantRespectOfCaused"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

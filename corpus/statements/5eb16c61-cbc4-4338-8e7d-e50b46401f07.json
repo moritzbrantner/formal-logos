@@ -1,0 +1,11 @@
+{
+  "id": "5eb16c61-cbc4-4338-8e7d-e50b46401f07",
+  "label": "A holder of another that could not lack the act by which it holds cannot be lacking",
+  "paraphrase": "Conclusion: it is impossible that there be no f, x and r with f distinct from x, f presently actualizing x in r, f in act in r, and f unable to lack its act in r. It says nothing of f's other respects: f may be held in another respect (Control part 6), and nothing here bears on whether f is in potency anywhere, so it is not the pure-act conclusion.",
+  "lean_declaration": "TruthCore.Causality.HoldingMotion.UnlosableOperativeHolderCannotBeLacking",
+  "definition_ids": [
+    "56b438a0-7fcc-4dd5-916b-1d2e2162310b",
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"
+  ]
+}

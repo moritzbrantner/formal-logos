@@ -1,0 +1,12 @@
+{
+  "id": "25cdd95b-69fc-4ca0-ac76-953c90aebdd9",
+  "label": "Esse dependence entails its sustaining sibling (inference)",
+  "input_statement_ids": [
+    "2068f91c-1eeb-5dbb-a71a-f7b6a12bb495"
+  ],
+  "output_statement_id": "149ed837-a590-4919-87fb-505d307a2636",
+  "rule": "Instantiate 2068f91c; the giving antecedent is unused",
+  "meaning": "Strength order registration: 2068f91c (every distinct cause of x's esse is one x depends on for its being) entails its restriction to causes that give x being at every moment at which x is present, in every history. Application only; it establishes neither. Strictness is witnessed by Control part 1.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

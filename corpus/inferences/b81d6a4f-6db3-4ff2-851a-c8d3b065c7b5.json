@@ -1,0 +1,15 @@
+{
+  "id": "b81d6a4f-6db3-4ff2-851a-c8d3b065c7b5",
+  "label": "Logical falsity, from reciprocal cross-respect moving and respect-free simple priority (inference)",
+  "input_statement_ids": [
+    "6ca87431-3383-58f6-9322-a1f0e8f0396b",
+    "7ad36aca-d55e-5b66-92fa-30749333df4f",
+    "32d77f18-a9c2-5486-b51c-a24f32863af4",
+    "8d4502a7-1f48-4acf-a849-1ddbb561fca3"
+  ],
+  "output_statement_id": "37f33696-dc47-5bd3-9cd8-edfd5bf00aa5",
+  "rule": "Apply priority from actual moving to each direction of the case, compose by transitivity, contradict irreflexivity",
+  "meaning": "With one respect-free PriorSimply: the case gives y ≠ x, y in act in r moving x in potency in r, and x in act in r' moving y in potency in r'. Priority from actual moving (6ca87431) then gives PriorSimply y x and PriorSimply x y; transitivity (7ad36aca) gives PriorSimply y y; irreflexivity (32d77f18) denies it. The four premises cannot all hold. A rejection could target any member: the respect-free consequent of 6ca87431, transitivity 7ad36aca, irreflexivity 32d77f18 (source-stated, so the costliest), or the case premise; nothing here chooses among them. Repair options recorded by lanes A and B, none tested here: respect-indexed priority (the gloss of DEF 1d9aa4d9), restriction to per se links, or a priority-in-causing / priority-in-being split. The closed controls reciprocityControls give, for each member, a two-being two-respect interpretation in which the other three hold and that member fails, so the core is inclusion-minimal in this vocabulary (facts about those interpretations only). The case premise is open; this argument does not establish it.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,13 @@
+{
+  "id": "0299101a-e29b-46ad-9055-8b622709c7b4",
+  "label": "Something is MOTION_3 held: in act in a respect and presently actualized there by another",
+  "paraphrase": "OPEN analyst observation premise, attribution deferred: some being is MOTION_3 moved in some respect: it is in act there and something other than it presently actualizes it there (HeldMotion). Examples: a stone held aloft by a hand, air lit by the sun, a stick moved by a hand. The holding counterpart of 'something in this world is being moved', not that premise.",
+  "lean_declaration": "TruthCore.Causality.HoldingMotion.SomethingIsHeld",
+  "definition_ids": [
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e",
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}
