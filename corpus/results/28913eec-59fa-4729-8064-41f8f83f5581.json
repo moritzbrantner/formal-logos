@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Causality.TotalHolding.unheldTotalHolder",
   "comparator_config": "results/28913eec-59fa-4729-8064-41f8f83f5581/comparator.json",
   "status": "solution-present",
-  "description": "New conditional derivation, a single application of the bridge at the relative first total holder. A total holder f not totally held in r is not MOTION_3 held in r, since by the bridge being held there would make it totally held. The bridge carries the load; the beam carried by two walls is an ordinary statics case against it, and Control part 2 shows the total-holding regress does not give the conclusion without it. Both premises stay OPEN. No premise is established."
+  "description": "New conditional derivation, a single application of the bridge at the relative first total holder. A total holder f not totally held in r is not MOTION_3 held in r, since by the bridge being held there would make it totally held. The bridge carries the load; on the physical-holder reading a beam carried by two walls is an ordinary statics case against it (under the C* support bundle that case does not apply and the bridge is untested), and Control part 2 shows the total-holding regress does not give the conclusion without it. Both premises stay OPEN. No premise is established."
 }

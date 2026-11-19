@@ -7,7 +7,7 @@
   ],
   "output_statement_id": "6fdb45c3-2a30-4d42-9c86-937397d17f85",
   "rule": "At the relative first total holder, the bridge turns being held into being totally held",
-  "meaning": "New conditional derivation, a single application of the bridge at the relative first total holder. A total holder f not totally held in r is not MOTION_3 held in r, since by the bridge being held there would make it totally held. The bridge carries the load; the beam carried by two walls is an ordinary statics case against it, and Control part 2 shows the total-holding regress does not give the conclusion without it. Both premises stay OPEN. No premise is established.",
+  "meaning": "New conditional derivation, a single application of the bridge at the relative first total holder. A total holder f not totally held in r is not MOTION_3 held in r, since by the bridge being held there would make it totally held. The bridge carries the load; on the physical-holder reading a beam carried by two walls is an ordinary statics case against it (under the C* support bundle that case does not apply and the bridge is untested), and Control part 2 shows the total-holding regress does not give the conclusion without it. Both premises stay OPEN. No premise is established.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

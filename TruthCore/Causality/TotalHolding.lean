@@ -6,15 +6,15 @@ public import TruthCore.Causality.HoldingMotion
 # Total holding: the repair of the holding per se link against mutual holding
 
 Analyst formulation, attribution deferred. It continues `HoldingMotion`
-(MOTION_3, `HeldMotion`; `docs/notes/caused-mover-cstar.md`, section 10). There
+(MOTION_3, `HeldMotion`). In `docs/notes/caused-mover-cstar.md`, section 9.2,
 the holding per se link (`HeldInOperativeActIsPerSe`) and the holding regress
 exclude mutual holding in one respect, and two cards leaning on each other are
 an ordinary statics case of it, so that bundle is inconsistent.
 
 The named repair restricts the per se link to a **total holder**
 (`TotallyHolds`): `z` holds `x` in `r`, `z` is the only thing that holds `x` in
-`r` (no co-holder, so `x`'s act in `r` is wholly from `z`), and `x` does not
-hold `z` in `r` (no reciprocal contribution to `z`'s act in `r`). The link then
+`r` (no other present actualizer of `x` in `r`), and `x` does not hold `z` in
+`r` (no reciprocal present actualization). The link then
 reads: a total holder that is itself totally held in the respect by which it
 holds is a link of a total-holding series (`TotallyHeldTotalHolderIsPerSe`).
 
@@ -27,10 +27,11 @@ What this module states and the batch checks:
   there (part 2); the bridge `HeldTotalHolderIsTotallyHeld` would close that
   gap;
 * under the esse-side support bundle of C\* in the holding sense, a total
-  holder of an act the held thing could lack gives it being
-  (`TotalHolderOfLackableActGivesBeing`);
+  holder of an act the held thing could lack presently actualizes it as to
+  being (`TotalHolderOfLackableActGivesBeing`; the holding relation at esse,
+  not the timed giving of the esse-root routes);
 * unheldness in every respect does not give pure act even with the whole
-  esse-side bundle (part 3); a potency clause does
+  esse-side bundle (part 3); a potency clause is a sufficient extra premise
   (`PotencyBringsLackableBeing`, giving `UnheldInBeingIsPureAct`).
 
 Applicability of every premise below to reality remains OPEN.
@@ -45,9 +46,9 @@ open TruthCore.Latin.Aquinas.SummaTheologiae
 
 /-- Total holding: `z` totally holds `x` in respect `r` when `z` is other than
 `x`, presently actualizes `x` in `r`, is the only being that presently actualizes
-`x` in `r` (no co-holder: `x`'s act in `r` is wholly from `z`), and `x` does not
-presently actualize `z` in `r` (no reciprocal contribution: `x` contributes
-nothing, in `r`, to `z`'s act). Defined from the primitive holding relation. -/
+`x` in `r` (no other present actualizer of `x` in `r`), and `x` does not
+presently actualize `z` in `r` (no reciprocal present actualization in `r`).
+Defined from the primitive holding relation. -/
 def TotallyHolds {B R : Type} (H : Holding B R) (z x : B) (r : R) : Prop :=
   z ≠ x ∧ H.ActualizesNow z x r ∧ (∀ w, H.ActualizesNow w x r → w = z) ∧
     ¬ H.ActualizesNow x z r
@@ -101,8 +102,8 @@ def UnheldTotalHolderCannotBeLacking {B R : Type} (InAct : B → R → Prop) (H 
     Prop :=
   ¬ ¬ ∃ f x r, TotallyHolds H f x r ∧ ¬ HeldMotion InAct H f r
 
-/-- A total holder of an act that the held thing could lack presently gives the
-held thing being. -/
+/-- A total holder of an act that the held thing could lack presently actualizes
+the held thing as to being (the holding relation at `esse`). -/
 def TotalHolderOfLackableActGivesBeing {B R : Type} (InAct : B → R → Prop)
     (L : Lackability B R) (H : Holding B R) (esse : R) : Prop :=
   ∀ z x r, TotallyHolds H z x r → InAct x r → L.CanLack x r → H.ActualizesNow z x esse
@@ -114,7 +115,8 @@ def PotencyBringsLackableBeing {B R : Type} (InAct CanBe : B → R → Prop)
   ∀ x r, AdoptedPotency.InPotency InAct CanBe x r → InAct x esse ∧ L.CanLack x esse
 
 /-- Whatever is not MOTION_3 held as to being is pure act: in potency (adopted
-POTENCY_1) in no respect. -/
+POTENCY_1) in no respect. The antecedent also holds of an item not in act as to
+being. -/
 def UnheldInBeingIsPureAct {B R : Type} (InAct CanBe : B → R → Prop) (H : Holding B R)
     (esse : R) : Prop :=
   ∀ f, ¬ HeldMotion InAct H f esse → PureAct (AdoptedPotency.InPotency InAct CanBe) f

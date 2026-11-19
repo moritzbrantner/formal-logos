@@ -647,11 +647,13 @@ of (a), tests what it still derives, and asks which premise takes unheldness to
 pure act. Analyst formulations, attribution deferred.
 
 Module `TruthCore/Causality/TotalHolding.lean`, spec `specs/total-holding.toml`.
-All derivations are zero-axiom; the controls use `propext` and `Quot.sound`.
+All derivations are zero-axiom. The controls use `propext` and `Quot.sound`;
+their Comparator config permits the policy's set (`propext`,
+`Classical.choice`, `Quot.sound`).
 
 **Fixed meaning.** `TotallyHolds H z x r` (DEF `edca52e4`): z, other than x,
-presently actualizes x in r, nothing else does (sole holder: no co-holder), and
-x does not presently actualize z in r (non-reciprocal). It is defined from the
+presently actualizes x in r, nothing else does (sole holder: no other present
+actualizer), and x does not presently actualize z in r (non-reciprocal). It is defined from the
 primitive `Holding.ActualizesNow`; nothing new is primitive. `TotallyHeld`
 (DEF `acde39ee`) is MOTION_3 with its holder so restricted; it is not a new
 sense of motion. The total-holding per se link `AsTotallyHeld` (DEF `5462ce35`)
@@ -673,16 +675,20 @@ well-founded link relation (floor above stone), and the earth is a total holder
 unheld in its operative act. In the same model every relation satisfying the
 unrestricted link `685933c7` fails to be well founded (by `0b40c6e1`). So the
 inconsistency of section 9.2 is removed by the restriction. Only direct
-reciprocity is excluded by the definition: a cycle of three total holders in one
-respect is still excluded by the restricted link and regress. No established
-case of such a cycle is known, so no objection is recorded.
+reciprocity is excluded by the definition. A cycle of three total holders in one
+respect, each in act there, would be excluded by the restricted link and regress
+(each would be a link of the next; not checked in Lean). No established case of
+such a cycle is known, so no objection is recorded.
 
 ### 10.2 What the restricted bundle still derives
 
 - `dd2ac370`: something totally held (`aa9b2a73`), the restricted link and its
   regress give `4b9462dd`: a total holder that is **not totally held** in the
   act by which it holds cannot be lacking. Non-transcription; well-founded
-  induction as in `7263cb1a`.
+  induction as in `7263cb1a`. "Not totally held" covers three cases: several
+  co-holders, holders that it holds back, or not being in act in that respect.
+  The actualizer premise `40fc38ad`, which is not a premise here, excludes the
+  last.
 - **Not derivable: a total holder unheld in its operative act.** Control part 2
   (co-held holder): 1 totally holds 0, while 2 and 3 both hold 1 and hold each
   other. Something is totally held; the restricted link, the regress, the
@@ -692,52 +698,67 @@ case of such a cycle is known, so no objection is recorded.
   the total series without making it unheld.
 - `28913eec`: the bridge `b41f6bcd` (a total holder that is held in its operative
   act is totally held there) closes that gap and gives `6fdb45c3`. **Substantive
-  objection to the bridge** (target `b41f6bcd`; mechanism: co-support;
-  justification: ordinary statics): a beam carried at its two ends by two walls
-  totally holds a lamp hung from it, and is held by both walls and by neither
-  alone, so it is held and not totally held. That statics fixes physical holders
-  only. A reading on which two co-supporting walls count as one holder would
+  objection to the bridge, on the physical-holder reading of the holding
+  relation** (target `b41f6bcd`; mechanism: co-support; justification: ordinary
+  statics): a beam carried at its two ends by two walls is the only physical
+  holder of a lamp hung from it, and the lamp does not prop it. Each wall
+  presently actualizes the beam's position, so each is a co-holder and neither is
+  its sole holder. On that reading the beam totally holds the lamp, is held, and
+  is not totally held. Scope: statics fixes physical holders only. Under the
+  C\* support bundle the lamp's lackable position is co-held by whatever
+  presently actualizes the lamp as to being (10.3), so the beam is not its total
+  holder there, the case does not apply, and the bridge is untested on that
+  reading. A reading on which two co-supporting walls count as one holder would
   need a mereological bridge, and that bridge would have to say when an
   aggregate's parts stop counting as holders. It is not formalized.
-- The C\* step of `81523d81` is lost. There, C\*-holding contradicted
-  unheldness at the operative respect. Here the first total holder is only not
-  totally held, which C\*-holding does not contradict. Control part 2 has no
-  holder with an operative act it could not lack.
+- **Without `b41f6bcd` the C\* step of `81523d81` is lost.** There, C\*-holding
+  contradicted unheldness at the operative respect. Here the first total holder
+  is only not totally held, which C\*-holding does not contradict. Control part 2
+  has no holder with an operative act it could not lack. With `b41f6bcd`, the
+  actualizer premise `40fc38ad` and C\*-holding, `6fdb45c3` would give a total
+  holder whose operative act it could not lack, as in `81523d81`. That
+  composition is not checked.
 
 So the repair trades the inconsistency for a weaker conclusion. A first total
 holder not totally held is reached. A first holder unheld in its operative act
-is reached only through the open bridge `b41f6bcd`, which ordinary co-support
-contests.
+is reached only through the open bridge `b41f6bcd`, which co-support contests on
+the physical-holder reading.
 
 ### 10.3 Total holding under the C\* support bundle
 
 `1dcb54f5`: the esse instance `f834ee65`, accident-inclusive conservation
 `1a99cebe` and the lackable-being bridge `6e2176cd` (the bundle on which
 C\*-holding rests, section 9.1) give `0e0409d5`: a total holder of an act the
-held thing could lack gives the held thing being. Under that bundle the giver of
-the lamp's being also holds the lamp's lackable position, so the hook is not its
-total holder, and since the hook holds it too, nothing totally holds the lamp's
-position. Total holding of a lackable act then occurs only where the giver of
-being is its sole holder (Control part 3 witnesses this nonvacuously). Two
-consequences:
+held thing could lack presently actualizes the held thing as to being (the
+holding relation at esse; call it a holding-sense giver of being). Under that
+bundle whatever presently actualizes the lamp as to being also holds the lamp's
+lackable position. So the hook is not its total holder, and since the hook holds
+it too, nothing totally holds the lamp's position. Total holding of a lackable
+act then occurs only where a holding-sense giver of being is its sole holder
+(Control part 3 witnesses this nonvacuously). Two consequences:
 
 - The observation premise `aa9b2a73` is warranted by physical cases (the hook)
   only if no non-physical co-holder exists. That is exactly what the C\*
   support bundle denies for lackable acts. Under that bundle, the premise holds
-  of a lackable act only through a sole giver of being.
-- Under that bundle a total-holding series of lackable acts is a series of
-  givers of being. The total-holder repair therefore does not give the holding
-  route a regress independent of the esse-root routes. It passes the load to
-  their givers of being, while C\*-holding already passed it to concurrent
-  actualization (section 9.1).
+  of a lackable act only through a sole holding-sense giver of being.
+- Under that bundle, every total holder of a lackable act that the restricted
+  link makes a link is a holding-sense giver of being. That is a fact about the
+  links the sufficient condition `38a82161` produces; `AsTotallyHeld` is not
+  otherwise constrained. Whether these givers are the esse-root routes' givers
+  of being (timed `BeingGiving.GivesAt`, weak `40a97664`) is **not** shown. That
+  would need the converse of clause (c) of the present-moment reading
+  `dedc431f`, which runs only from `GivesAt` to the holding relation and is not
+  formulated. The total-holding regress `c4e333da` also stays a premise of its
+  own. So the repair moves the holding route toward the esse-root routes' subject
+  matter, giving being, but no identification with those routes is established.
 
 ### 10.4 From unheldness to pure act (b)
 
 MOTION_3 has no potency clause, so no holding premise touches potency.
 
 - **C\* generalized over respects does not suffice.** C\*-holding with its
-  restriction to the operative acts of movers dropped is the respect-general
-  concurrent actualization `166dba9d`.
+  restriction to the operative acts of movers dropped is essentially the
+  respect-general concurrent actualization `166dba9d`.
   Contraposed, it gives only that an unheld thing cannot lack the acts it has.
   It says nothing of respects in which the thing is not in act. Control part 3
   (giver): the esse instance, accident-inclusive conservation, lackable being,
@@ -748,25 +769,31 @@ MOTION_3 has no potency clause, so no holding premise touches potency.
   (whatever is in POTENCY_1 in some respect is in act as to being and could lack
   being) and the esse instance `f834ee65` give `f360bb6f`: whatever is not
   MOTION_3 held as to being is PURE_ACT_1. This is non-transcription. It needs
-  unheldness **as to being** only, not in every respect. Control part 4 shows the
-  clause is satisfiable with something in potency. Part 3 shows the esse-side
-  bundle does not give it.
-- **Comparison with the PRIOR_4 step** (`TruthCore/Causality/PriorityInBeing.lean`,
-  PR #1774, `pureActOfRespectMatchedBridge`). There pure act comes from act's
-  simple priority `a4d3261a`, read with PRIOR_1, together with first-in-being and
-  the respect-matched first-in-being bridge. The potency clause plays the role
-  of act's simple priority, but it uses no priority relation. It ties potency to
-  lackable being, and through the esse instance to being held. Its nearest
-  existing material is `d8024a38` (in act as to being and in potency in some
-  respect implies composite, for the free POTENCY_2). The steps from composite to
-  "could lack being" and from POTENCY_2 to POTENCY_1 are not formalized. Named
-  rival: a necessary being with unrealized potencies, as in dipolar theism
-  (Hartshorne's necessary existence with contingent actuality; not read,
-  navigation only). It denies `9c7ad646`, and its price is the composition
-  thesis. Not assessed here.
+  unheldness **as to being** only, not in every respect. "Not held as to being"
+  also holds of an item not in act as to being, so the conclusion covers such
+  items too. Control part 4 shows the clause is satisfiable with something in
+  potency. Part 3 shows the esse-side bundle does not give it.
+- **Comparison with the PRIOR_4 step** (`pureActOfRespectMatchedBridge` in
+  `TruthCore/Causality/PriorityInBeing.lean`, unmerged PR #1774, branch
+  `agent/prima-via-priority-split`). There, act's simple priority `a4d3261a`,
+  read with PRIOR_1, supplies a prior being in act in the very respect of the
+  potency. First-in-being and the respect-matched first-in-being bridge then
+  identify that being with the first mover. Here the potency clause **with** the
+  esse instance supplies another being that holds the potential thing. It does
+  so at esse rather than in the respect of the potency, and uses no priority
+  relation. That shift to esse is why unheldness as to being suffices. The
+  clause's nearest existing material is `d8024a38` (in act as to being and in
+  potency in some respect implies composite, for the free POTENCY_2). The steps
+  from composite to "could lack being" and from POTENCY_2 to POTENCY_1 are not
+  formalized. A named rival, unassessed, is recorded without a justification of
+  its mechanism: a necessary being with unrealized potencies, as in dipolar
+  theism (Hartshorne's necessary existence with contingent actuality; not read,
+  navigation only). It would deny `9c7ad646`, most naturally at the step from
+  composite to "could lack being". No substantive objection is recorded.
 
-So the extra premise is a **potency clause**, not C\* generalized. Through the
-esse instance, its shared dependency is `f834ee65` and with it `76d2cc96`,
+So a **potency clause** is a sufficient extra premise; C\* generalized is not.
+Necessity or uniqueness of the clause is not claimed. Through the esse
+instance, the step's shared dependency is `f834ee65` and with it `76d2cc96`,
 `dedc431f` and the weak `40a97664`.
 
 ### 10.5 Outcome and remaining blocker
@@ -777,31 +804,35 @@ total holder not totally held in its operative respect (`4b9462dd`). Two
 passages are missing:
 
 1. from "not totally held" to "unheld" in the operative respect: bridge
-   `b41f6bcd`, contested by co-support;
+   `b41f6bcd`, contested by co-support on the physical-holder reading and
+   untested under the C\* bundle;
 2. from the operative respect to esse: no bridge is formulated.
 
-Under the C\* bundle, total holders of lackable acts are givers of being
-(`0e0409d5`). Whether the first such giver is unheld as to being is the
-esse-root routes' question, not a holding one. (c) the MOTION_3 naming bridge
-to GOD_4 was **not investigated**: (a) and (b) give no route to a conclusion
-that a naming bridge would consume. It remains the third blocker.
+Under the C\* bundle, total holders of lackable acts are holding-sense givers of
+being (`0e0409d5`). Whether the first such holder is unheld as to being is not
+settled by any holding premise on file. Connecting it to the esse-root routes'
+first giver would need the converse of `dedc431f`(c) as well. (c) the MOTION_3
+naming bridge to GOD_4 was **not investigated**: (a) and (b) give no route to a
+conclusion that a naming bridge would consume. It remains the third blocker.
 
 **Provisional judgment.** The total-holder repair succeeds as a consistency
 repair. It is verified and consistent with the leaning cards. As a route it is
 **weak**: it reaches only a relative first total holder, and its passage to
-unheldness rests on a bridge contested by ordinary co-support. Under the bundle
-that supports C\*-holding, its total-holding series of lackable acts collapses
-into a series of givers of being, so the holding sibling adds no regress
-independent of the esse-root routes. The pure-act step in the holding sense
-needs a potency clause, which is open, unassessed and contested by dipolar
-theism. Unheldness as to being suffices for it.
+unheldness rests on an open bridge. That bridge is contested by co-support on the
+physical-holder reading and untested under the C\* bundle. Under the bundle that
+supports C\*-holding, the total holders of lackable acts that the restricted
+link makes links are holding-sense givers of being. Their identification with
+the esse-root routes' givers is not established. The pure-act step in the
+holding sense has a sufficient premise in a potency clause, which is open and
+unassessed. Unheldness as to being suffices for it.
 
 **Connection plan.** Target `c1b68c21`, as in 9.4. Missing: (1') bridge
 `b41f6bcd` or a mereological replacement; (2') a passage from the operative
 respect to esse; (3) the MOTION_3 naming bridge to GOD_4. Blocker: (2') is
-unformulated, and under the C\* bundle it coincides with the esse-root routes'
-first-giver question. The more economical next test is therefore on those
-routes, not here.
+unformulated. Under the C\* bundle it concerns holding-sense givers of being,
+which `dedc431f`(c) connects to the esse-root routes' timed givers in one
+direction only. A next test is to formulate that converse, or to ask directly
+whether a first holding-sense giver of being is unheld as to being.
 
 **Revision conditions.** A defended aggregation principle that makes
 co-supporters one total holder, without restoring the cycle with the leaning

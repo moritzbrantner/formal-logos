@@ -1,12 +1,15 @@
 {
   "id": "9c7ad646-c69d-4dc8-bd95-e8ba8c49c673",
   "label": "Whatever is in POTENCY_1 in some respect is in act as to being and could lack being",
-  "paraphrase": "OPEN analyst bridge, attribution deferred (potency clause): if x is in potency in some respect r in the adopted sense POTENCY_1 (it can be so in r and is not in act in r, DEF-POTENCY), then x is in act as to being and could lack being (Lackability.CanLack x esse, definition 56b438a0-7fcc-4dd5-916b-1d2e2162310b). It is the potency counterpart of the lackable-being bridge 6e2176cd-eeb6-413c-8fd2-7b2df4a34ad4 (which starts from an act x could lack). Nearest existing material: d8024a38-5d93-4c1d-8c21-fdbfa87a5cde (in act as to being and in potency in some respect implies composite, for the free POTENCY_2 parameter); passing from composite to 'could lack being' and from POTENCY_2 to POTENCY_1 is not formalized. It is about the beings in the domain: it also makes whatever is in potency in act as to being. Rival: a necessary being with unrealized potencies, as in dipolar theism (Hartshorne's distinction of necessary existence from contingent actuality; not read, navigation only), denies it; its price is the composition thesis. Not assessed here.",
+  "paraphrase": "OPEN analyst bridge, attribution deferred (potency clause): if x is in potency in some respect r in the adopted sense POTENCY_1 (it can be so in r and is not in act in r, DEF-POTENCY), then x is in act as to being and could lack being (Lackability.CanLack x esse, definition 56b438a0-7fcc-4dd5-916b-1d2e2162310b). It is the potency counterpart of the lackable-being bridge 6e2176cd-eeb6-413c-8fd2-7b2df4a34ad4 (which starts from an act x could lack). Nearest existing material: d8024a38-5d93-4c1d-8c21-fdbfa87a5cde (in act as to being and in potency in some respect implies composite, for the free POTENCY_2 parameter); passing from composite to 'could lack being' and from POTENCY_2 to POTENCY_1 is not formalized. It is about the beings in the domain: it also makes whatever is in potency in act as to being. Named rival, unassessed and recorded without a justification of its mechanism: a necessary being with unrealized potencies, as in dipolar theism (Hartshorne's distinction of necessary existence from contingent actuality; not read, navigation only), would deny it, most naturally at the unformalized step from composite to 'could lack being' rather than at composition. No substantive objection is recorded here.",
   "lean_declaration": "TruthCore.Causality.TotalHolding.PotencyBringsLackableBeing",
   "definition_ids": [
     "9f874532-f37e-590b-bec9-a9affb2762ac",
     "56b438a0-7fcc-4dd5-916b-1d2e2162310b",
     "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
     "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"
+  ],
+  "disambiguation_ids": [
+    "508617ab-cf24-5f3b-a387-64b3991359ec"
   ]
 }
