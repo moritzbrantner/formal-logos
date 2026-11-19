@@ -545,8 +545,8 @@ and `selective` controls before any recognition by `HasWill`. Attempt:
 
 ## Governor-root intellect capacity and GOD_4 stage (#1793, 2026-11-19)
 
-**Proposed formal outcome, awaiting independent semantic challenge and final
-CI.** The identity argument in
+**Proposed formal outcome: CI Lean compilation and independent semantic
+challenge passed; corpus and Comparator checks pending.** The identity argument in
 `PerfectRootIntellectFromGovernor.derive` has a smaller, same-witness core:
 `maximumEqualsActualRootAtBeing` proves that any `IsMaximumIn InAct MoreIn
 esse` bearer equals a *supplied* `ActualRoot m w n` if `InAct n esse`, fixed-esse
@@ -578,10 +578,13 @@ act and nothing more such), not greatestness or uniqueness by order alone.
 
 The registered package in
 `specs/perfect-root-intellect-from-governor.toml` separates the open
-`ActualRootExistsAt` input from its two existing producers:
+`ActualRootExistsAt` input from one registered producer,
 `WholeRosterFoundation.actualRootExists` (population, roster nontrapping,
-excluded middle) and the projection from `ActualCommonRootAt` (both recorded
-as reuse/assembly, not fresh warrant). Its substantive
+excluded middle), recorded as reuse/assembly rather than fresh warrant.
+A separate Lean-only projection from `ActualCommonRootAt` is valid but not
+registered as a corpus argument: the source's inherited metadata mixes
+unsupported intrinsic-contribution and source-backed causal readings, and
+adding an artificial sense bridge would overstate provenance. Its substantive
 `intellectualGodCommonRoot` conclusion says:
 
 > **At this same selected actual world and ground relation, there exists one

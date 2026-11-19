@@ -1,9 +1,0 @@
-{
-  "challenge_module": "TruthCore.Results.Causality.PerfectRootIntellectFromGovernor.Challenge",
-  "solution_module": "TruthCore.Results.Causality.PerfectRootIntellectFromGovernor.Solution",
-  "theorem_names": [
-    "TruthCore.Results.Causality.PerfectRootIntellectFromGovernor.actualRootExistsOfCommonRoot"
-  ],
-  "permitted_axioms": [],
-  "enable_nanoda": true
-}

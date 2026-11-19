@@ -55,38 +55,6 @@ rule = "Reuse WholeRosterFoundation.actualRootExists with unchanged selected pro
 meaning = "Existing actual-root existence from inhabited actual concreta, the selected whole-roster nontrapping condition and explicit excluded middle. The proof delegates unchanged to the established roster descent, not a new argument for its premises. No grades, governor, intellect, necessary-being status or God name is asserted; the new statement is a weaker reusable existential consumer."
 
 [[argument]]
-id = "An actual common root supplies an actual root witness"
-theorem = "actualRootExistsOfCommonRoot"
-premises = ["a6b46d2e-fb76-5123-8fbd-aca4cdc8ebd9"]
-conclusion = "An actual concrete root exists at the selected world"
-axioms = []
-transcription = "instantiation"
-# This inherited common-root package contains both IsMaximumIn and IsMaximalIn
-# definitions. Pin the existing MAXIME disambiguation instead of identifying
-# weak maximality with greatestness; retain the inherited metadata on rebuild.
-disambiguations = [
-  "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
-  "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
-  "4b02d34a-9226-5009-9ac2-3b52f4222b21",
-  "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
-  "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
-  "9403807f-f7d4-5ce8-a8ba-ca53ed932959",
-  "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
-  "79644a0a-db5b-5497-bb47-9f96d14cdae7",
-  "83264cf5-01fe-52fc-9a00-eeb024f6496e",
-  "7507d645-874d-5434-add8-2f49c2801d36",
-  "b9adce48-6b86-5f58-b2ea-b25f51c70cbd",
-  "1795a62e-f78b-5f5b-94e7-9e7490824811",
-  "002f42cb-3015-5644-80b3-d408538394e6",
-  "be54be36-3ce8-53f9-8168-50d1114e6c76",
-  "34ddfede-ff4d-59ad-9882-4bcb490df9bb",
-  "c529e8d3-43e3-53a8-a82f-3955e9815265",
-  "4f1d0cf6-88ba-59e3-814d-01450c2bf282",
-]
-rule = "Project the existing actual root witness from ActualCommonRootAt"
-meaning = "Explicit stronger-to-weaker same-world projection of the selected common root. Does not create an independent root witness or additional warrant; the source common-root package and its support premises stay visible."
-
-[[argument]]
 id = "The governor identifies one actual common GOD_4 root with intellect capacity"
 theorem = "intellectualGodCommonRoot"
 premises = [
@@ -104,6 +72,7 @@ premises = [
 ]
 conclusion = "One actual common GOD_4 root has HAS_INTELLECT_1 capacity"
 axioms = []
+sense_bridges = [{term = "GOD", from = "GOD_1", to = "GOD_4", statement_id = "1ec205ed-b2a6-5384-bb5f-2565a9d325bf"}]
 rule = "Identify a governor-supplied maximal intelligent bearer with one supplied actual root; extend esse causal coverage to every actual concretum; reuse reducedDescription to name the same root"
 meaning = "Analyst conditional same-witness bridge, attribution deferred. One root n, an actual concretum at selected w with no incoming selected ground, is supplied independently of the governor (not from a second existential witness in this proof). One governed esse maximum d already has the SAME HasIntellect predicate read as HAS_INTELLECT_1. If d differs from n, fixed-esse genus causation and the existing n-in-esse interface make d cause n in esse; the one-way correspondence makes d an actual concrete ground of n, contradiction. Thus d=n and both maximality and intellectual capacity belong to that exact n. ExistingInActAt then applies genus causing to each other actual concretum x, giving direct ground coverage; ActualCommonRoot.uniqueRoot establishes the uniqueness among actual roots. The existing priority-ground interface makes n first; ActualityOnlyInsofarAsBeing, UniversalCauseTransfersPerfections, no-component-first and the OPEN GodNamesTheFullyDescribedPrinciple name this n by CausalPerfectionTransfer.reducedDescription. The governor also constructively implies GradesToMaximumAtBeing (it supplies a maximum unconditionally), so the absence of grades as a separate input is premise consolidation, not an independent new warrant or evidence hGovernor is weaker; global direction in governor is unused. This theorem needs only genus causality at the chosen esse, not in every respect, and uses no necessary/perfect-root, simplicity, immateriality, will or actual intellectual operation hypothesis. The reality of the cognitive director and its root application, causal transfer, grounding correspondence and God naming all remain open. Full matched scope/rival and revision conditions: docs/notes/teleology-first-mover.md#governor-root-intellect-capacity-and-god_4-stage-1793-2026-11-19."
 

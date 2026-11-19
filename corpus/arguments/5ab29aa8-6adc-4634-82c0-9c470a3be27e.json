@@ -69,5 +69,13 @@
     "34ddfede-ff4d-59ad-9882-4bcb490df9bb",
     "92df85d7-aae7-57ac-b84e-3780ade842f1",
     "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ],
+  "sense_bridges": [
+    {
+      "term": "GOD",
+      "from": "295c9096-50b8-4ccd-960e-f833730a0774",
+      "to": "52c2ebac-0a71-4dd4-8a21-804c1dd0847a",
+      "statement_id": "1ec205ed-b2a6-5384-bb5f-2565a9d325bf"
+    }
   ]
 }
