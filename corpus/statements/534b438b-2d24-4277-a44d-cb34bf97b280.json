@@ -1,0 +1,17 @@
+{
+  "id": "534b438b-2d24-4277-a44d-cb34bf97b280",
+  "label": "On RECEIVES_ESSE_AT_1 receiving entails giving and present receipt is concurrent actualization",
+  "paraphrase": "Closed definitional result, attribution deferred: for every history, giving relation and reception predicate, when present-tense receipt is read as passion (passionReceipt, RECEIVES_ESSE_AT_1: z receives x's esse at t iff x's esse is received in z and something gives x being at t), correlativity of receiving and giving holds, and the present-tense reading of reception is equivalent to weak concurrent actualization 40a97664. So on this sense the present-tense reading is 40a97664 restated, not a further premise; it adds no warrant beyond whatever warrant 40a97664 has.",
+  "lean_declaration": "TruthCore.Causality.PresentReceipt.PassionReadingIsTheCrux",
+  "definition_ids": [
+    "ac8dbcaa-09d9-4f9e-9d19-995b38642f82",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "71d3bdb7-92cc-4023-b0ca-1739914628e4",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

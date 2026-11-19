@@ -266,7 +266,166 @@ as receiving potency to received act" a present-tense receipt or a historical
 one? A present-tense receipt, with the correlativity of receiving and giving,
 would make `40a97664` close to analytic and move the whole dispute to
 `da72ae93`. Typing `ReceivesAt v z x t` and a correlativity premise would show
-exactly where the dispute then sits. It needs no new source.
+exactly where the dispute then sits. It needs no new source. (Run in §5: the
+prediction fails in a precise way.)
+
+## 5. Present-tense receipt and correlativity (the §4 next test, done)
+
+Module `TruthCore.Causality.PresentReceipt`, spec `specs/present-receipt.toml`,
+attempt `50e08b09`. Analyst formulations, attribution deferred.
+
+### Vocabulary
+
+- **Present-tense receipt** `Receipt.ReceivesAt v z x t` (definition
+  `506ea036`), an explicitly primitive relation: in history `v`, at `t`, the
+  principle `z` is receiving `x`'s act of being. It is the time-indexed
+  counterpart of the tenseless `EsseReceivedIn x z`. It names only the
+  receiver side and contains no giver. No axiom ties it to `GivesAt`, so it
+  is not `40a97664` under another name: Control part 3 has `40a97664` true
+  and the present-tense reading false.
+- **Two defined senses** (disambiguation `71d3bdb7`, term `RECEIVES_ESSE_AT`):
+  - RECEIVES_ESSE_AT_1, *passion* (`passionReceipt`, definition `ac8dbcaa`):
+    `z` receives `x`'s esse at `t` iff the esse is received in `z` and
+    something gives `x` being at `t`. This is the patient's side of an
+    occurrent giving, as the air is illumined while the sun illumines.
+  - RECEIVES_ESSE_AT_2, *standing composition* (`standingReceipt`, definition
+    `181bb18f`): `z` receives `x`'s esse at `t` iff the esse is received in `z`
+    and `x` is present at `t`, as a vessel holds what was poured into it.
+
+| Record | Lean | Content |
+| --- | --- | --- |
+| `964928dc` present-tense reading | `ReceptionIsPresent` | received in `z` and present at `t` ⇒ `z` receiving `x`'s esse at `t` |
+| `db441b19` onset reading | `ReceptionAtOnset` | received in `z` ⇒ `z` receiving `x`'s esse at a first moment of presence |
+| `52b05849` correlativity | `ReceivingIsCorrelativeWithGiving` | receiving `x`'s esse at `t` ⇒ something gives `x` being at `t` |
+| `7c62adb5` | `concurrentOfPresentReceipt` | present-tense + correlativity ⊢ `40a97664` (transcription) |
+| `2371b373` | `onsetOfOnsetReceipt` | onset + correlativity ⊢ received onset is given `fa3e228b` (transcription) |
+| `62947463` | `onsetOfPresentReceipt` | present-tense ⊢ onset (strength order, relation `13c900b6`) |
+| `1d52b8f0` | `passionReadingIsTheCrux` | on RECEIVES_ESSE_AT_1: correlativity holds, and present-tense ⇔ `40a97664` |
+| `1d91d067` | `standingReadingIsTheCrux` | on RECEIVES_ESSE_AT_2: present-tense holds, and correlativity ⇔ `40a97664` |
+| `45b3c73b` | `controls` | parts 1–6 below |
+
+The two `…IsTheCrux` results are closed theorems over every history, giving
+relation and reception predicate. The two derivations are transcriptions in
+the sense of invariant 16 (the last step applies correlativity). The work
+that is not a transcription is in the controls and the two closed results.
+
+*Controls* (`PresentReceipt.Control.Certificate`; `false` alone has received
+esse; the histories are those of `SustainingCausation.Control`):
+
+1. Inertia with past-tense receipt (receipt at time 1 only): onset reading,
+   correlativity and received onset hold; the present-tense reading and
+   `40a97664` fail.
+2. Inertia with standing receipt: the present-tense and onset readings hold;
+   correlativity and `40a97664` fail.
+3. Sustaining with no receipt: `40a97664` and correlativity hold; the
+   present-tense and onset readings fail.
+4. and 5. Each premise of the onset derivation is needed.
+6. Everything holds together.
+
+### Outcome of the test
+
+**The derivation holds**: present-tense reading + correlativity ⊢ `40a97664`,
+and each premise is needed (parts 1 and 2). Over the primitive the pair is
+strictly stronger than `40a97664` (part 3).
+
+**But the dispute does not move to the tense of `da72ae93`.** Three checked
+facts locate it instead:
+
+1. **Correlativity alone does not decide between the sides.** With the onset
+   reading in place of the present-tense reading, correlativity yields only
+   `fa3e228b`, which the inertialist grants. Part 1 is the inertialist's
+   profile with correlativity true. The whole difference between the two
+   conclusions is the difference between the present-tense and the onset
+   reading.
+2. **On the passion sense** correlativity is true by definition and the
+   present-tense reading is equivalent to `40a97664` (`1d52b8f0`).
+3. **On the standing sense** the present-tense reading is true by definition
+   and correlativity is equivalent to `40a97664` (`1d91d067`). Part 2 is an
+   inertialist who grants present-tense standing receipt and denies
+   correlativity.
+
+So on each defined sense exactly one of the two premises is `40a97664`
+restated, and the other is trivial. The reception bridge `da72ae93`
+(`CausedEsseIsReceived`) is tenseless and occurs in neither premise, so its
+tense is not at issue. The tense that matters is that of `EsseReceivedIn`
+read through `ReceivesAt`, and on the defined senses it is not an independent
+question: it is the crux.
+
+### Tense assessment
+
+*Present tense, standing sense: "x has esse as received, at each t".*
+
+- **Strongest positive warrant.** DEF-ESSE-RECEIVED-IN defines the relation as
+  a principle that "stands to it as receiving potency to received act". That
+  is a structural relation of the composite, not an event. If a thing's
+  essence/esse composition is real at all, it obtains whenever the thing
+  does: a received-esse thing does not stop being composite after its first
+  moment. This is good warrant, and it is independent of `40a97664`.
+- **It is no item in inertia's price.** The inertialist can grant it, and
+  part 2 does. On this sense the crux sits wholly in correlativity, which
+  then says that a standing receptive composition needs a present giver. That
+  is the synchronic reading of the union principle (§2, row 2), already
+  classified as the crux re-presented.
+
+*Present tense, passion sense: "x is being given esse, at each t".*
+
+- **Strongest positive warrant.** Three candidates, none of which reaches
+  `40a97664` on independent warrant:
+  - The illumination profile (q.104 a.1, read; claims `40aefb2e`, `da9c82ed`).
+    Carrying it from light to esse presupposes the crux, as recorded at
+    `40a97664`.
+  - The actualization principle extended to non-changes: continuing in a
+    received act is a potency being actualized at each moment. That is the
+    second thesis bundled in `40a97664` (ConcurrentActualization module
+    doc), which the rival denies.
+  - The thesis that creation taken passively is a relation in the creature to
+    the creator as principle of its being (ST I q.45 a.3). It is **not read
+    here**, so it is recorded as a lead with no weight. On a relational
+    reading it would at most give that the term of the relation is present,
+    not that it gives. That would bear on the co-presence bridge `ffcb81fb`,
+    not on `40a97664`.
+- On this sense the present-tense reading *is* `40a97664` (`1d52b8f0`), so it
+  has no warrant beyond that of `40a97664`.
+
+*Past tense: "x received esse at onset".*
+
+- **Strongest positive warrant.**
+  - Ordinary use of "received". A gift or a form once received is had after
+    the giving ends. q.104 a.1 itself grants this profile for causes of
+    becoming: the house stands after the builder leaves.
+  - The source principles on file (De ente c.4 "recipit ab alio", q.7 a.2,
+    `da72ae93`) are tenseless. An onset receipt satisfies them (§2, rows 2–3).
+  - The onset reading together with correlativity gives exactly the onset
+    fact both sides grant (`2371b373`, part 1).
+- **Its limit.** The onset reading is weaker than the present-tense reading
+  and is entailed by it, so it is not a rival premise. The past-tense reading
+  *proper*, that receipt in the passion sense stops after onset, is the
+  denial of `40a97664` on that sense, and it gains no warrant beyond the
+  rival's.
+
+**What the inertia rival must deny.** On the primitive it must deny either
+the present-tense reading (part 1) or correlativity (part 2). Which one
+depends on the sense of receipt: on the passion sense it denies the
+present-tense reading, on the standing sense correlativity. On each sense
+that is `40a97664` itself (`1d52b8f0`, `1d91d067`). So the price is **one
+item, unchanged**. The present-tense reading is recorded as **the crux
+restated, not a new price item**. It has independent warrant only in the
+standing sense, where the inertialist accepts it at no cost.
+
+**Judgment.** This confirms the §4 judgment, and §4 is not revised. The test
+removes one candidate source of a second price item: the reception premise,
+read in either defined tense-sense, does not entail `40a97664` without a
+premise that is `40a97664` restated.
+
+**Revision condition.** The judgment would change given a third reading of
+present receipt, defined and typed, on which both of the following have
+warrant independent of `40a97664`:
+
+- the present-tense reading is not trivial, as it is for standing composition;
+- correlativity is not definitional, as it is for passion.
+
+The relational reading suggested by q.45 a.3 is the one candidate in view,
+and it is unread.
 
 ## Self-sweep
 

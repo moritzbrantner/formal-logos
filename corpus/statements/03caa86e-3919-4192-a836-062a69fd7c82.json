@@ -1,0 +1,17 @@
+{
+  "id": "03caa86e-3919-4192-a836-062a69fd7c82",
+  "label": "Present-receipt controls: past-tense and standing receipt under inertia, nonvacuity",
+  "paraphrase": "Closed controls on interpretations with one world, natural-number times and two individuals, false alone with received esse; statements about these interpretations only. (1) Inertia (true gives false being at time 1 only; false persists from time 1), receipt at time 1 only: the onset reading and correlativity hold; the present-tense reading and 40a97664 fail; received onset is given. (2) Inertia, standing receipt (RECEIVES_ESSE_AT_2): the present-tense and onset readings hold; correlativity and 40a97664 fail. (3) Sustaining (true gives false being from time 1 on), no receipt: 40a97664 and correlativity hold; the present-tense and onset readings fail, so 40a97664 does not entail the present-tense reading over the primitive. (4) Inertia with no giving and no receipt: correlativity holds; the onset reading and received onset fail. (5) Inertia with no giving, standing receipt: the onset reading holds; correlativity and received onset fail. (6) Sustaining, standing receipt: the present-tense reading, the onset reading, correlativity and 40a97664 all hold.",
+  "lean_declaration": "TruthCore.Causality.PresentReceipt.Control.Certificate",
+  "definition_ids": [
+    "506ea036-c6bf-4e2d-aee3-7b25bfcdfea6",
+    "181bb18f-72a4-4cb1-b5c0-9a70f5af2bb5",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ],
+  "disambiguation_ids": [
+    "71d3bdb7-92cc-4023-b0ca-1739914628e4",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "ecfc29bc-1fa6-4d66-80dc-577609f09775",
+  "label": "On RECEIVES_ESSE_AT_2 correlativity is concurrent actualization, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "77b82831-e265-49f4-8c2f-d84e7957f285",
+  "rule": "Unfold standingReceipt: receipt is reception plus presence, so the present-tense reading is immediate and correlativity becomes 40a97664 with its arguments reordered",
+  "meaning": "Closed result with no premises, quantified over every history, giving relation and reception predicate. On the standing-composition sense the present-tense reading of reception holds by definition, and correlativity (whatever is receiving at t is given being at t) says that whatever has received esse and is present at t is given being at t: weak concurrent actualization 40a97664, in both directions. It shows that on this sense correlativity is 40a97664 under another name. It establishes nothing about reality.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

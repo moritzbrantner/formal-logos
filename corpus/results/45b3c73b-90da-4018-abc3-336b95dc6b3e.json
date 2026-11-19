@@ -1,0 +1,11 @@
+{
+  "id": "45b3c73b-90da-4018-abc3-336b95dc6b3e",
+  "label": "Present-receipt controls checked",
+  "argument_id": "b94422b5-53f6-4ef6-abe2-287b546e733a",
+  "challenge_module": "TruthCore.Results.Causality.PresentReceipt.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PresentReceipt.Solution",
+  "theorem": "TruthCore.Results.Causality.PresentReceipt.controls",
+  "comparator_config": "results/45b3c73b-90da-4018-abc3-336b95dc6b3e/comparator.json",
+  "status": "solution-present",
+  "description": "The inertial history with past-tense receipt satisfies the onset reading and correlativity and falsifies the present-tense reading and 40a97664; with standing receipt it satisfies the present-tense and onset readings and falsifies correlativity and 40a97664; the sustaining history with no receipt satisfies 40a97664 and falsifies the present-tense reading; each premise of the onset derivation is needed in one interpretation; all premises and 40a97664 hold together in one interpretation. A finite countermodel shows a premise is needed in that interpretation, not that it is false. Model claims concern these interpretations only."
+}

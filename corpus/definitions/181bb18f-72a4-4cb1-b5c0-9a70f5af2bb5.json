@@ -1,0 +1,9 @@
+{
+  "id": "181bb18f-72a4-4cb1-b5c0-9a70f5af2bb5",
+  "label": "RECEIVES_ESSE_AT_2: receipt as standing composition, esse in a receiving principle while present",
+  "term": "receives esse at a moment, as standing composition (Lean `standingReceipt`)",
+  "definition": "standingReceipt h E: z receives x's esse at t in history v iff x's esse is received in z (E x z, DEF-ESSE-RECEIVED-IN) and x is present at t (h.IsAt v x t). Receiving is read as the standing potency-act composition of receiver and received esse, which obtains whenever the composite is present, as a vessel holds what was poured into it. A defined interpretation of the primitive present-tense receipt (definition 506ea036), not a further primitive. On this sense the present-tense reading of reception holds by definition, and correlativity of receiving and giving is equivalent to weak concurrent actualization 40a97664 (result standingReadingIsTheCrux).",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.PresentReceipt.standingReceipt",
+  "note": "Analyst reading, attribution deferred. It is the natural temporal reading of the tenseless DEF-ESSE-RECEIVED-IN ('stands to it as receiving potency to received act') for a composition that lasts as long as its bearer. Distinguished from RECEIVES_ESSE_AT_1 (passion), which requires a giver at the moment. It takes no side on whether a standing composition needs a present giver; that is the correlativity premise. Would be sourced by a passage that states the composition of essence and esse as obtaining at each moment of the creature's existence."
+}

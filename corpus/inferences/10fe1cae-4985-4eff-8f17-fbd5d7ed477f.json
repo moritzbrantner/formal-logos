@@ -1,0 +1,12 @@
+{
+  "id": "10fe1cae-4985-4eff-8f17-fbd5d7ed477f",
+  "label": "Present-tense reception entails onset reception (inference)",
+  "input_statement_ids": [
+    "964928dc-9067-45d4-8de3-c91e27cbe1c6"
+  ],
+  "output_statement_id": "db441b19-a990-47c5-9fde-0de212062837",
+  "rule": "A first moment of presence is a moment of presence",
+  "meaning": "Strength order registration: the present-tense reading of reception entails the onset reading, since a first moment of presence (BeginsAt) is a moment at which the thing is present. Application only; it establishes neither. Strict: Control part 1 (receipt at the first moment only).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

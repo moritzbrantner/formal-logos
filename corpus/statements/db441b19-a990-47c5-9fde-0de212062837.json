@@ -1,0 +1,16 @@
+{
+  "id": "db441b19-a990-47c5-9fde-0de212062837",
+  "label": "Whatever has received esse is receiving it at a first moment of its presence",
+  "paraphrase": "OPEN analyst premise, attribution deferred (onset reading of reception): in every history of the model, whatever has its esse received in a principle z (DEF-ESSE-RECEIVED-IN) is receiving its esse in z (Receipt.ReceivesAt, definition 506ea036) at a first moment of its presence (BeginsAt: present then and at no strictly earlier moment): 'x received esse at onset'. Silent on later moments and on things with no first moment of presence. It is the part of the past-tense reading that both sides grant: the past-tense reading proper is this premise together with denying receipt at later moments, which is not a statement here. Entailed by the present-tense reading (registered strength order). With correlativity it gives only that received onset is given (fa3e228b), which the inertialist grants.",
+  "lean_declaration": "TruthCore.Causality.PresentReceipt.ReceptionAtOnset",
+  "definition_ids": [
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "506ea036-c6bf-4e2d-aee3-7b25bfcdfea6",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "71d3bdb7-92cc-4023-b0ca-1739914628e4"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "7c62adb5-04b4-4866-b7ed-4d1bbe4ffca6",
+  "label": "Concurrent actualization from present-tense receipt and correlativity",
+  "argument_id": "a565ce35-4d63-47f7-afc7-3a9c45b32942",
+  "challenge_module": "TruthCore.Results.Causality.PresentReceipt.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PresentReceipt.Solution",
+  "theorem": "TruthCore.Results.Causality.PresentReceipt.concurrentOfPresentReceipt",
+  "comparator_config": "results/7c62adb5-04b4-4866-b7ed-4d1bbe4ffca6/comparator.json",
+  "status": "solution-present",
+  "description": "Transcription (single application, invariant 16): the last step applies correlativity, whose consequent is the conclusion's matrix. Let x have its esse received in z and be present at t in history v; by the present-tense reading z is receiving x's esse at t; by correlativity something gives x being at t. That is weak concurrent actualization 40a97664. Its point is to locate the crux, not to support it: each premise is needed in a checked interpretation (Control part 1, past-tense receipt under inertia, where correlativity holds; part 2, standing receipt under inertia, where the present-tense reading holds), and both hold with 40a97664 in part 6. The pair is strictly stronger than 40a97664 over the primitive (part 3). On each defined sense one premise is 40a97664 restated (passionReadingIsTheCrux, standingReadingIsTheCrux), so the derivation supplies no warrant for 40a97664 beyond that of 40a97664 itself unless a third reading of receipt gives both premises independent warrant. All premises stay OPEN. No premise is established.",
+  "transcription": "single_application"
+}

@@ -180,6 +180,7 @@ public import TruthCore.Causality.PossibleCauseOfContingency
 public import TruthCore.Causality.Power1392
 public import TruthCore.Causality.Power1392Exercise
 public import TruthCore.Causality.PowerExistenceBoundary
+public import TruthCore.Causality.PresentReceipt
 public import TruthCore.Causality.PreservationCandidates
 public import TruthCore.Causality.PreservationMeaning
 public import TruthCore.Causality.ProductiveStore
