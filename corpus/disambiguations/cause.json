@@ -25,6 +25,10 @@
         {
           "declaration": "TruthCore.Causality.CausalMapsBatch1.SelfMoverMovesByADistinctPart",
           "parameter": "MovesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.Frame.CausalityFrame",
+          "parameter": "MovesIn"
         }
       ]
     },
@@ -112,6 +116,10 @@
         },
         {
           "declaration": "TruthCore.Causality.CausalMapsBatch1.MoverCausesWhatItMovesTo",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.Frame.CausalityFrame",
           "parameter": "CausesIn"
         }
       ]
