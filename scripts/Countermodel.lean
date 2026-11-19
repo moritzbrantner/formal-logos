@@ -1,7 +1,7 @@
 import Lean
 /-!
 First-order skeleton of a theorem for the omission-countermodel finder
-(`scripts/countermodel.py`, docs/countermodels.md).
+(`truth countermodel`, `truth/src/countermodel.rs`, docs/countermodels.md).
 
 Usage, after `lake build <module>`:
 
