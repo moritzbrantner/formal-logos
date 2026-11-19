@@ -506,3 +506,258 @@ q.75 principle has exactly the mode of existence needed by q.90, followed by
 the separate q.45 restriction on secondary creators. Reuse the existing
 content/basing and bodily-interference comparisons; do not substitute another
 conditional proof for those substantive tests.
+
+## Rational participation: completed purpose comparison (2026-11-19)
+
+The owner selected Route A. This continuation starts from
+`ef99cc09989997f8ed2e985b059723792018ac19` and completes its bounded comparison:
+does one fixed good of finite rational agency distinguish a purposive source
+from developed impersonal accounts? The result is positive explanatory
+unification with a limited comparative consideration, not an overall victory
+for a personal source. The earlier Route B and thinking-ancestor assessments
+are unchanged. This is a qualitative warrant assessment, with no new formal
+result or change to the registered propositions.
+
+### Fix the purpose before accommodating the outcome
+
+**P:** distinct finite subjects participate in goods through their own
+understanding, response to reasons, effective action and relationships.
+
+P values understanding itself, rather than only the useful conduct it can
+produce. Its prima facie rationale is available in ordinary comparisons:
+learning why an answer follows is an achievement beyond receiving it, and
+informed participation adds something to being efficiently managed. This is
+not a condition of human worth or a claim that people with greater cognitive
+abilities matter more. Accepting that good requires neither a prior proof of
+theism nor the conclusion that every possible instance must be created.
+
+P gives a source that understands and adopts it related reasons for accessible
+evidence, sufficiently stable action–outcome relations, effective powers and
+other participants. These are coordinated means to one end, not separate
+preferences invented for each observation. Necessity as an enabling condition
+is conditional: sufficiently reliable order is needed *if* this kind of
+embodied agency is to be sustained. It neither produces agents by itself nor
+establishes that a source would create them.
+
+[Aquinas, ST I q.19 aa.2–3](https://www.newadvent.org/summa/1019.htm)
+offers communication of goodness as a rationale while denying that divine
+goodness necessitates creation. Those passages presuppose divine intellect and
+will; here they articulate P, not prove its attribution to the root.
+[Swinburne 2011, manuscript pp.9–10](https://users.ox.ac.uk/~orie0087/pdf_files/Papers%20from%20Philosophical%20Journals/Swinburne_2011-explanation.pdf)
+connects efficacious finite choice with an orderly environment. Reuse only that
+means–end argument, with the earlier restrictions on his wider theology.
+
+### What the purpose actually discriminates
+
+Consider two analyst descriptions with the same immediately useful outcomes:
+subjects reach them through understood reasons, or reach them through cueing
+that bypasses their apparent reasoning. P provides a reason to prefer the
+first, other relevant goods and costs equal. Likewise, P favors accessible
+correction over an otherwise comparable arrangement that systematically blocks
+subjects from identifying their errors. These are limited comparisons, not
+certified possible worlds holding every physical condition fixed, and not
+proofs of a unique best creation.
+
+The comparisons give P content: merely installing correct behavior does not
+fulfil the stated purpose. They discriminate against a criterion restricted
+to the fixed useful outputs. They do **not** yet discriminate against a
+naturalistic account of actual understanding. The existing
+[basing analysis](epistemic-underminer-boundaries.md#rational-basing-the-particular-transition-must-exercise-the-capacity)
+already separates an exercised content-sensitive capacity from a bypass; its
+physical realization remains available. We reuse that result rather than
+counting the contrast as a new anti-physicalist argument.
+
+P also imposes constraints on explanations of failure. Finitude entails
+limited knowledge, not false belief: one could know fewer truths without
+believing falsehoods. Learning need not consist in correcting error. Effective
+agency gives a reason for consequential action, not an automatic reason for
+extreme suffering, entrenched deception or the destruction of agency. Such
+conditions are adverse to this particular end, although an overall judgment
+must consider other goods, feasibility and costs. Invoking those considerations
+without showing their connection supplies permission at most, not an
+explanation of the actual distribution.
+
+[Q.47 aa.1–2](https://www.newadvent.org/summa/1047.htm)
+motivates diversity among creatures; it does not directly justify arbitrary
+inequalities in human opportunities. The
+[optimal-creation comparison](optimal-creation-choice.md#verified-source-readings),
+using q.25 a.6, already blocks the assumption that perfect making requires a
+globally maximal product. That qualification does not erase P's local
+preference for understanding and corrigibility.
+
+### The developmental comparator explains a specific mixed profile
+
+Use the positive producer/consumer account in
+[the intentionality note](intentionality-943.md#multiple-functions-and-stable-factual-guidance-2026-11-14):
+tracking a fact can guide opposed goals, so selection for successful action
+need not select only comforting or immediately rewarded belief. Add constrained
+reuse and cultural correction rather than an unexplained unlimited learner.
+
+[Dehaene and Cohen (2007), pp.384–385](https://www.unicog.org/publications/DehaeneCohen_CulturalRecyclingCorticalMaps_Neuron2007.pdf)
+propose that cultural abilities recruit older cortical resources and inherit
+their constraints. This supplies a developmental proposal for abilities beyond
+their precursors' original uses, not a proof that neural activity exhausts
+understanding. [Trouche, Sander and Mercier (2014), Experiments 1–4](https://moodle2.units.it/pluginfile.php/745149/mod_resource/content/0/Trouche%2C%20Sanders%20%20Mercier%202014.pdf)
+found that argument quality could support correction without confidence cues,
+and that many participants transferred understanding after group discussion.
+Experiment 3 included a modified transfer problem whose correct answer
+differed from the original. That makes mere repetition an inadequate account
+of successful transfer in those tasks. It does not establish universal rational
+reliability, a complete evolutionary history, or the metaphysics of reasoning.
+
+This comparator positively connects reusable factual guidance, learning,
+dependence on presentation and training, individual error, and correction
+through others. At that explanatory level it is more informative than the bare
+statement that rational agency is good. A purposive source can use precisely
+those processes; it then shares their explanatory success rather than gaining
+another independent confirmation from it.
+
+Three proposed discriminators consequently fail to identify the ultimate
+source here: transfer beyond the initial task, changed answers when the
+relevant reasons change, and correction through criticism. All can express the
+flexible cognition the developmental account proposes. Nor does mathematical
+thought's distance from immediate survival alone discriminate: reuse and
+cumulative learning offer an actual alternative to direct selection for each
+later accomplishment. This does not show that all theoretical understanding
+has been explained. It shows why the inspected successes cannot simply be
+assigned to one ultimate-source hypothesis.
+
+Some stability and cognitive success are also prerequisites for observers like
+us. Observer selection does not produce a universe or explain its laws, but
+the comparison must condition observations appropriately. Do not count the
+mutually dependent prerequisites of inquiry as three independent surprises.
+
+### Compare explanations of the order at the same scope
+
+The developmental proposal can be combined with different ultimate accounts.
+The relevant comparison holds those local mechanisms fixed and asks what,
+if anything, explains the order that supports them.
+
+| Account of the order | Positive explanation | Distinctive application burden |
+| --- | --- | --- |
+| Source understands and adopts P | One valuable end makes the coordinated conditions intelligible as means. | Why attribute productive understanding and actual adoption to this source, given both successes and frustrated agency? |
+| Impersonal intrinsic powers and laws | The order's determinate powers support development without an additional source-level intention. | Whether those powers adequately explain the order as a whole, or remain a defensible primitive; local developmental evidence alone does not decide. |
+| Impersonal value-directed teleology | One valuable outcome restricts which developmental histories are favored. | Whether the proposed directed law is sufficiently determinate and warranted beyond fitting its intended result. |
+| Direct creative value | The worth of an order explains its realization without a prior subject adopting it. | Why evaluative requiredness has productive efficacy, beyond its normative significance. |
+
+[Nagel, *Mind and Cosmos*, ch.4, pp.91–93](https://studylib.net/doc/18288842/mind-and-cosmos---ch.-4)
+provides the third account's actual structure: teleological principles favor
+physically admissible paths toward valuable higher organization, consciousness
+and reason. It is an additional directed law, not arbitrary nonintentional
+bias. The proposal has an explanatory form but no calibrated law in this
+passage. Applying it to P's exact package, or to our same necessary root, is
+our reconstruction rather than a claim that Nagel established either.
+
+[Leslie's own interview answers](https://closertotruth.com/news/an-interview-with-john-leslie/),
+under the axiarchism question, supply the fourth account: ethical requiredness
+itself produces existence unless overridden by a stronger requirement. His
+ultimate explanation is impersonal even though his proposed reality contains
+infinite minds. This is a substantive alternative, not a wholly mindless
+cosmology. Its productive-value principle is an additional commitment; moral
+realism alone does not entail it.
+
+[Swinburne 2011, manuscript pp.18–19](https://users.ox.ac.uk/~orie0087/pdf_files/Papers%20from%20Philosophical%20Journals/Swinburne_2011-explanation.pdf)
+does consider an impersonal source disposed to produce good. His simplicity
+comparison construes it as a physical substance with location and specified
+powers. That reasoning does not automatically dispose of nonphysical
+impersonal grounds or Leslie's nonobjectual Good. The reusable positive point
+is that understood reasons can motivate production.
+
+### Test whether value-sensitive production requires representation
+
+Distinguish an accidentally valuable output, a disposition directed toward
+value, and an agent acting because it understands a good. The first does not
+explain value-directed variation. The latter two offer different explanations
+of such variation.
+
+Try varying the reason-relevant circumstances or feasible alternatives while
+holding evaluative standards fixed. Appropriate changes in what is produced
+would challenge a fixed-output explanation. They would not by themselves
+identify an understanding producer: Nagel's proposed end-directed law and
+Leslie's stronger-requirement condition both allow responsiveness to changed
+value-relevant circumstances without a representing source. Neither source
+supplies a completed model of every such variation, but neither is the
+fixed-output foil. Requiring that the change occur *because the producer
+apprehends the reason* would import the personal explanation into the test.
+
+The completed test therefore rejects this shortcut: normative reasons are not
+automatically efficient causes, **therefore** only a mind can connect them to
+production. The premise correctly separates normative support from productive
+efficacy; the exclusive conclusion does not follow. Impersonal teleology
+attributes directed powers to the order, not necessarily efficient pushing by
+an abstract proposition. This is an assessment of that inference, not a
+certified countermodel or a demonstration that the rival is true.
+
+There is a further limit on a familiar diagnostic. With human agents, mistaken
+belief can redirect conduct while the actual reasons remain unchanged; that
+helps distinguish represented value from actual value. If the candidate
+source is essentially omniscient, those variables cannot be separated through
+an ordinary possible error by that source. A hypothetical divine mistake
+would then be a counterpossible, not new evidence of representation. This
+conditional point neither assumes omniscience for every purposive source nor
+establishes it for the root.
+
+Personal explanation nevertheless has a positive comparative consideration:
+understanding and acting for goods already make some human production
+intelligible. Direct creative value adds a productive relation not supplied
+by the fact that something is worth realizing. I give the former a limited
+prima facie advantage on this explanatory consideration. It is qualified by
+the fact that our familiar agents are embodied and dependent, whereas an
+ultimate source need not be. Extending practical explanation to that source
+is substantive, not a free extrapolation. Intrinsic powers also have familiar
+applications; Nagel adds their direction toward value. Familiarity alone
+does not settle which extension is better overall.
+
+### Overall judgment and consequence for the case
+
+The fixed purpose passes the positive-unification test and excludes
+unrestricted accommodation: understanding and access to correction are goods
+within it, and their frustration counts against fulfilment of that end. It
+provides an intelligible motive for a personal source and the limited
+comparative consideration just stated. **This comparison does not establish
+that the coordinated cognitive order favors a personal source overall over
+the strongest impersonal completions.** That is a scoped judgment, not a
+declaration that the rivals have equal plausibility or that primitive
+commitments have no warrant.
+
+The completed tests tell us where explanatory credit belongs. Actual basing
+supports personal reasoning; transfer and criticism support flexible cognitive
+development; P supplies a source-level rationale; a successful comparison of
+ultimate accounts would be needed to attribute that purpose to the root.
+These are different contributions of the same evidence, not independent
+votes for God. The observed cognitive corrections do not establish that last
+attribution, and adding a generic counterfactual-sensitivity condition does
+not repair it.
+
+This bears on the existing
+[theistic-explanation bridge](../../corpus/statements/cc100-116-theistic-best-explanation-bridge.json),
+but does not accept its
+[only-personal antecedent](../../corpus/statements/cc100-116-personal-explanation-restriction.json).
+The candidate abductive route can instead compare purposes without first
+excluding every impersonal account; no replacement formal edge is registered
+by this note. For the
+[same-root target](../../corpus/statements/root-intellect-will.json),
+necessity must come from the same independently warranted root. This comparison
+does not derive necessity from intelligence, or choose a new mental source
+and silently identify it with the existing root. Recognition, practical
+adoption and production retain the distinct applications in the
+[divine-love note](divine-love-goodness-bridge.md#practical-adoption-at-fixed-production-proposed-continuation)
+and [moral-governance note](moral-governance-intellect-will.md).
+
+The bounded question now has an answer; repeating broad comparisons of order,
+truth and usefulness will not improve it. A stronger ranking would require a
+source-specific consequence that survives the shared developmental explanation,
+or additional warrant about the same root's productive nature from the existing
+attribute work. The inspected empirical sources supply no such discriminating
+ultimate-source consequence, and the present P does not determine the full
+distribution of successful and frustrated agency. These are the concrete
+limits of this test, not demands for a further proof of every premise.
+
+Reopen this assessment if a defended source account constrains that distribution
+more successfully, if an independently motivated teleological law explains it,
+or if same-root recognition/adoption receives substantive support. Preserve P's
+content when testing adverse cases; do not add disconnected purposes after each
+failure. This completion contributes a motivated, constrained theistic support
+option and rejects two tempting shortcuts. It supplies no new necessary-intellect
+conclusion and no specifically Catholic identification; the historical-stage
+boundaries stated above remain unchanged.

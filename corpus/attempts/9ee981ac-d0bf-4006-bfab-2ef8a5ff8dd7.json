@@ -1,0 +1,33 @@
+{
+  "id": "9ee981ac-d0bf-4006-bfab-2ef8a5ff8dd7",
+  "label": "Test rational participation as a purpose against developed impersonal accounts",
+  "date": "2026-11-19",
+  "statement_ids": [
+    "45d46cbf-0d36-5c3c-85bb-8685d895c2f1",
+    "05fb0e59-18f8-519d-bf58-12bdc952367c",
+    "339f2eb8-d089-5100-82ea-acc3107d0f68",
+    "beede613-2c17-5fe1-829e-16829d781cfd"
+  ],
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Completed the selected Route A purpose comparison. A fixed good of finite subjects participating through their own understanding, effective action and relationships unifies accessible evidence, stable action-outcome relations and agency. It favors understanding over merely useful cued behavior and corrigibility over otherwise comparable blocked inquiry, without requiring global maximization or treating finitude as an explanation of false belief. The positive developmental comparator combines factual guidance, constrained reuse and cultural correction; empirical argument and transfer results support that comparator at its own level, not a particular ultimate source. Nagel supplies an actual value-directed developmental law proposal; Leslie supplies direct creative ethical requiredness, with impersonal ultimacy despite mental effects. Counterfactual response to changed value-relevant circumstances does not by itself identify source-level representation. The inference from normative reasons not being efficient causes to only minds connecting value and production is unsupported. Familiar action for understood goods gives personal explanation a limited prima facie comparative consideration over direct creative value, qualified by the embodied-to-ultimate extrapolation; no overall personal-source advantage over the strongest impersonal completions is established by this test. Necessity, same-root identity, actual recognition/adoption, and Catholic identification remain distinct. Detailed positive reasons, primary locators, actual rival accounts, adverse evidence and reopening conditions are in docs/notes/mind-physicalism-fork-419.md#rational-participation-completed-purpose-comparison-2026-11-19. Reading outcome succeeded means the bounded comparison was completed, not that theistic-best-explanation or the necessary-intellect target was established. No new theorem, canonical source claim, premise closure or formal root edge is claimed.",
+  "evidence": [],
+  "current_assessment": {
+    "date": "2026-11-19",
+    "statement_ids": [
+      "45d46cbf-0d36-5c3c-85bb-8685d895c2f1",
+      "05fb0e59-18f8-519d-bf58-12bdc952367c",
+      "339f2eb8-d089-5100-82ea-acc3107d0f68",
+      "beede613-2c17-5fe1-829e-16829d781cfd"
+    ],
+    "scope": "Completed Route A comparison of the fixed good of rational participation with developmental, immanent-teleological and direct-creative-value accounts; not an overall ranking of every theistic argument.",
+    "assessment": "The fixed purpose unifies conditions for genuine understanding, effective agency and corrigibility and constrains accommodation of adverse cases. Familiar action for understood goods supplies a limited prima facie comparative consideration over direct creative value, qualified by extrapolation from embodied agents to an ultimate source. The developed naturalistic comparator explains local learning, error and correction; inspected transfer and counterfactual-response tests do not identify its ultimate source. Nagel and Leslie offer substantive value-directed alternatives. This evidence does not establish an overall personal-source advantage over the strongest impersonal completions or license the only-personal-explanation premise. Necessity, same-root identity and actual recognition/adoption remain separate applications. No new formal edge or Catholic identification follows.",
+    "next_test": "Reopen for a defended source-specific consequence concerning successful and frustrated rational agency that survives the shared developmental account, an independently motivated value-directed law, or substantive same-root recognition/adoption warrant from the existing attribute work. Repeating transfer, generic order or counterfactual sensitivity without such a contrast does not improve this completed comparison.",
+    "note": "docs/notes/mind-physicalism-fork-419.md#rational-participation-completed-purpose-comparison-2026-11-19",
+    "reviewed_revision": "76392f3f5ade3ec3c99ef663f693255994f947c3",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Proposed substantive comparison at local commit 76392f3f5ade3ec3c99ef663f693255994f947c3. Independent semantic challenge of the complete note, this projection and final synthesis is pending. Prior reviews of PR #1804 do not cover this extension. Source readings and existing corpus targets are linked in the note; no local Lean or corpus-binary verification is claimed.",
+    "supersedes": "Completes the Route A next test in attempt 4eb61695-aaff-4417-8c2e-151cc00ea5fb: compare one fixed purpose with impersonal accounts including error and impaired agency. Replaces only that pending-test status with the completed scoped comparison. The earlier research-priority rationale, Route B, thinking-ancestor assessment and all formal results are unchanged."
+  }
+}
