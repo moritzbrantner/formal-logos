@@ -1,0 +1,31 @@
+{
+  "id": "2f24e4c3-e987-4e4d-8752-1ae3522b2c3d",
+  "label": "Compare cognitive-source warrant with physical realization and intrinsic nature",
+  "date": "2026-11-19",
+  "statement_ids": [
+    "30e6e01c-b7f1-536c-86ae-0a9be35dd160",
+    "4b48eac2-2420-5cb5-a846-d7fba58879ed",
+    "beede613-2c17-5fe1-829e-16829d781cfd"
+  ],
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Completed a source-based warrant comparison for #1792, with #1791/#1787/#1731 as the explicit unbuilt source-to-root/intellect continuation. Locke Essay IV.x provides a direct eternal-cogitative-source argument; II.i.9-10 separates finite capacity from continuous exercise, and IV.iii.6 permits endowed thinking matter. Hume Treatise 1.4.5.29-33 directly challenges the mechanical-description-to-causal-impossibility inference. Strawson's Realistic Monism argues against brute experiential emergence but acknowledges the further phenomenal-continuity intuition; Chalmers gives a motivated schematic nonphenomenal/nonstructural alternative, and Broad gives stable irreducible trans-ordinal laws. Physical identity/realization does not by itself establish wholly nonexperiential intrinsic nature. The matched unity test compares Goff's whole-to-aspect subsumption, Chalmers's phenomenal bonding and identity/nonidentity cosmic accounts, and Miller's subject-indexed boundedness repair. Whole-to-aspect dependence has a familiar phenomenal model, a limited positive advantage over bare addition; distinct subjective ownership and its G-ancestry remain unestablished. Nonidentity cosmopsychism explicitly proposes subject-existence grounding; the warrant and selected G translation remain open. Identity cosmopsychism owes restricted access rather than absence of experience. The proposed root endpoint permits n=b, so the distinct-source assessment does not defeat a self-root option. The sources do not yet favor a distinct episode-bearing existential-ground ancestor over the specified alternatives. Capacity, episode, intellectual cognition, historical origin, constitution, existential grounding, eternity and de re necessity are kept separate. No new proof, canonical source attribution, premise closure or root-edge is claimed. Primary locators, positive reasons, scope, rejected shortcuts and revision conditions are preserved in docs/notes/mind-physicalism-fork-419.md#thinking-source-warrant-2026-11-19. The scoped reading succeeded; the mental-source warrant question remains open.",
+  "evidence": [],
+  "current_assessment": {
+    "date": "2026-11-19",
+    "statement_ids": [
+      "30e6e01c-b7f1-536c-86ae-0a9be35dd160",
+      "4b48eac2-2420-5cb5-a846-d7fba58879ed",
+      "beede613-2c17-5fe1-829e-16829d781cfd"
+    ],
+    "scope": "Interpretation and warrant of #1792's thinking-source proposal, its connection to proposed #1791, and the matched R/T/X subjective-unity comparison; not a reassessment of all support for the named targets.",
+    "assessment": "Actual cognition supplies a direct starting point for Locke's cogitative-source argument without a prior immaterial-soul proof. Whole-to-aspect explanation has a limited positive advantage over bare aggregation, not an established advantage over developed bonding accounts. The comparison does not currently warrant preferring a distinct episode-bearing existential ancestor to the specified alternatives or establish a necessary rational source. Nonidentity cosmopsychism explicitly proposes subject-existence grounding, with its warrant and precise G translation open. The possible self-root endpoint n=b is separate. Capacity is a candidate support option, not a source-warranted replacement for the occurrence predicate.",
+    "next_test": "For the same R/T/X case, characterize bonding or subject-subsumption beyond naming its desired output, and explain distinct subjective ownership and existence; an identity account instead owes its access restriction and personal-identity claim. Test whether the defended relation is the selected actual-concrete G ancestry. Preserve the same witness for any subsequent root, necessity and intellect join.",
+    "note": "docs/notes/mind-physicalism-fork-419.md#thinking-source-warrant-2026-11-19",
+    "reviewed_revision": "b5f16355062b8a353c8fcade09903457496e9891",
+    "review": "changes_requested",
+    "publication": "unpublished",
+    "evidence": "Independent semantic challenge of the complete initial delivery b5f16355062b8a353c8fcade09903457496e9891 checked sources, local definitions, proposed #1791 and the final synthesis. It requested three scope clarifications: finite capacity does not defeat occurrence-based T; identity cosmopsychism concerns inaccessible experience; and the root endpoint permits n=b. These are repaired in this delivery and await targeted recheck. No formal result or premise closure is claimed.",
+    "supersedes": "None. This is a new scoped source comparison. The original #419 assessment and the broader necessary-intellect conclusion are unchanged."
+  }
+}
