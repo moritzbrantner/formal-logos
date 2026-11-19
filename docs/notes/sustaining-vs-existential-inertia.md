@@ -266,8 +266,9 @@ as receiving potency to received act" a present-tense receipt or a historical
 one? A present-tense receipt, with the correlativity of receiving and giving,
 would make `40a97664` close to analytic and move the whole dispute to
 `da72ae93`. Typing `ReceivesAt v z x t` and a correlativity premise would show
-exactly where the dispute then sits. It needs no new source. (Run in §5: the
-prediction fails in a precise way.)
+exactly where the dispute then sits. It needs no new source. (Run in §5. Half
+the prediction holds: the derivation goes through. The other half fails: no
+price moves onto `da72ae93`, and the tense question resolves into the crux.)
 
 ## 5. Present-tense receipt and correlativity (the §4 next test, done)
 
@@ -280,14 +281,20 @@ attempt `50e08b09`. Analyst formulations, attribution deferred.
   `506ea036`), an explicitly primitive relation: in history `v`, at `t`, the
   principle `z` is receiving `x`'s act of being. It is the time-indexed
   counterpart of the tenseless `EsseReceivedIn x z`. It names only the
-  receiver side and contains no giver. No axiom ties it to `GivesAt`, so it
-  is not `40a97664` under another name: Control part 3 has `40a97664` true
-  and the present-tense reading false.
+  receiver side and contains no giver. No axiom ties it to `GivesAt`, so the
+  unconstrained primitive is not definitionally `40a97664`: for a fixed
+  interpretation (Control part 3, no receipt) `40a97664` is true and the
+  present-tense reading false. That shows only that the primitive is an
+  unconstrained parameter. With the interpretation quantified existentially,
+  the present-tense reading plus correlativity is *equivalent* to `40a97664`
+  (`someReceiptCarriesTheCrux` below).
 - **Two defined senses** (disambiguation `71d3bdb7`, term `RECEIVES_ESSE_AT`):
   - RECEIVES_ESSE_AT_1, *passion* (`passionReceipt`, definition `ac8dbcaa`):
     `z` receives `x`'s esse at `t` iff the esse is received in `z` and
-    something gives `x` being at `t`. This is the patient's side of an
-    occurrent giving, as the air is illumined while the sun illumines.
+    something gives `x` being at `t`. In Lean this is a bare conjunction, and
+    nothing ties the giving to `z`. The intended reading, which is not typed,
+    is the patient's side of an occurrent giving, as the air is illumined
+    while the sun illumines.
   - RECEIVES_ESSE_AT_2, *standing composition* (`standingReceipt`, definition
     `181bb18f`): `z` receives `x`'s esse at `t` iff the esse is received in `z`
     and `x` is present at `t`, as a vessel holds what was poured into it.
@@ -299,15 +306,17 @@ attempt `50e08b09`. Analyst formulations, attribution deferred.
 | `52b05849` correlativity | `ReceivingIsCorrelativeWithGiving` | receiving `x`'s esse at `t` ⇒ something gives `x` being at `t` |
 | `7c62adb5` | `concurrentOfPresentReceipt` | present-tense + correlativity ⊢ `40a97664` (transcription) |
 | `2371b373` | `onsetOfOnsetReceipt` | onset + correlativity ⊢ received onset is given `fa3e228b` (transcription) |
-| `62947463` | `onsetOfPresentReceipt` | present-tense ⊢ onset (strength order, relation `13c900b6`) |
+| `62947463` | `onsetOfPresentReceipt` | present-tense ⊢ onset (strength order, relation `13c900b6`; single application) |
 | `1d52b8f0` | `passionReadingIsTheCrux` | on RECEIVES_ESSE_AT_1: correlativity holds, and present-tense ⇔ `40a97664` |
 | `1d91d067` | `standingReadingIsTheCrux` | on RECEIVES_ESSE_AT_2: present-tense holds, and correlativity ⇔ `40a97664` |
+| `624967d8` | `someReceiptCarriesTheCrux` | (∃ receipt, present-tense ∧ correlativity) ⇔ `40a97664` |
 | `45b3c73b` | `controls` | parts 1–6 below |
 
-The two `…IsTheCrux` results are closed theorems over every history, giving
-relation and reception predicate. The two derivations are transcriptions in
-the sense of invariant 16 (the last step applies correlativity). The work
-that is not a transcription is in the controls and the two closed results.
+The three closed results quantify over every history, giving relation and
+reception predicate. The two derivations are transcriptions in the sense of
+invariant 16 (the last step applies correlativity), and the strength-order
+registration is a single application. The work that is not a transcription is
+in the controls and the three closed results.
 
 *Controls* (`PresentReceipt.Control.Certificate`; `false` alone has received
 esse; the histories are those of `SustainingCausation.Control`):
@@ -325,11 +334,19 @@ esse; the histories are those of `SustainingCausation.Control`):
 ### Outcome of the test
 
 **The derivation holds**: present-tense reading + correlativity ⊢ `40a97664`,
-and each premise is needed (parts 1 and 2). Over the primitive the pair is
-strictly stronger than `40a97664` (part 3).
+and each premise is needed (parts 1 and 2). For a fixed receipt
+interpretation the pair is strictly stronger than `40a97664` (part 3). With
+the interpretation left open it is equivalent to `40a97664`
+(`someReceiptCarriesTheCrux`): the pair can say more than the crux only
+through a fixed reading of receipt.
 
-**But the dispute does not move to the tense of `da72ae93`.** Three checked
-facts locate it instead:
+**But no price moves onto `da72ae93`.** In parts 1 and 2 `EsseReceivedIn`
+holds of `false` while `40a97664` fails. So the inertialist keeps reception and
+need not reject `da72ae93`'s consequent. (These controls type no `CausesIn`;
+the bridge itself holds on the inertial history in `ConcurrentActualization`
+Control part 1.) The tense question that `da72ae93`'s sources raise (§2, row 3)
+is not dissolved. It is carried by the present-tense reading, and three
+checked facts show that on each defined sense it resolves into the crux:
 
 1. **Correlativity alone does not decide between the sides.** With the onset
    reading in place of the present-tense reading, correlativity yields only
@@ -345,11 +362,9 @@ facts locate it instead:
    correlativity.
 
 So on each defined sense exactly one of the two premises is `40a97664`
-restated, and the other is trivial. The reception bridge `da72ae93`
-(`CausedEsseIsReceived`) is tenseless and occurs in neither premise, so its
-tense is not at issue. The tense that matters is that of `EsseReceivedIn`
-read through `ReceivesAt`, and on the defined senses it is not an independent
-question: it is the crux.
+restated, and the other is trivial. The tense that matters is that of
+`EsseReceivedIn` read through `ReceivesAt`. On the defined senses it is not an
+independent question: it is the crux.
 
 ### Tense assessment
 
@@ -391,10 +406,17 @@ question: it is the crux.
 
 - **Strongest positive warrant.**
   - Ordinary use of "received". A gift or a form once received is had after
-    the giving ends. q.104 a.1 itself grants this profile for causes of
-    becoming: the house stands after the builder leaves.
-  - The source principles on file (De ente c.4 "recipit ab alio", q.7 a.2,
-    `da72ae93`) are tenseless. An onset receipt satisfies them (§2, rows 2–3).
+    the giving ends. q.104 a.1 grants this profile for causes of becoming:
+    the house stands after the builder leaves. But carrying the becoming
+    profile to esse presupposes the rival, just as carrying the illumination
+    profile presupposes the crux, and q.104 a.1 itself uses the house to
+    contrast causes of becoming with causes of being.
+  - `da72ae93` as typed is tenseless. Its sources (De ente c.4 "recipit ab
+    alio", q.7 a.2) admit a tenseless reading, which an onset receipt
+    satisfies, and a synchronic reading, which is `40a97664` restated (§2,
+    rows 2–3; "recipit" is grammatically present). The tenseless reading is a
+    reading choice, not a fact about the texts, and the De ente material was
+    not re-read for this question.
   - The onset reading together with correlativity gives exactly the onset
     fact both sides grant (`2371b373`, part 1).
 - **Its limit.** The onset reading is weaker than the present-tense reading
@@ -404,7 +426,8 @@ question: it is the crux.
   rival's.
 
 **What the inertia rival must deny.** On the primitive it must deny either
-the present-tense reading (part 1) or correlativity (part 2). Which one
+the present-tense reading or correlativity, by `7c62adb5` and its rejection
+of `40a97664`; parts 1 and 2 exhibit the two positions. Which one
 depends on the sense of receipt: on the passion sense it denies the
 present-tense reading, on the standing sense correlativity. On each sense
 that is `40a97664` itself (`1d52b8f0`, `1d91d067`). So the price is **one
@@ -417,12 +440,14 @@ removes one candidate source of a second price item: the reception premise,
 read in either defined tense-sense, does not entail `40a97664` without a
 premise that is `40a97664` restated.
 
-**Revision condition.** The judgment would change given a third reading of
-present receipt, defined and typed, on which both of the following have
-warrant independent of `40a97664`:
+**Revision condition.** The judgment would change given a further reading of
+present receipt, defined and typed, that meets both conditions:
 
-- the present-tense reading is not trivial, as it is for standing composition;
-- correlativity is not definitional, as it is for passion.
+- receipt carries content beyond reception plus presence. For any receipt
+  implied by standing receipt the present-tense reading is trivial, and
+  correlativity alone then entails `40a97664`.
+- On that reading, correlativity has warrant independent of `40a97664`, and
+  is not definitional as it is for passion.
 
 The relational reading suggested by q.45 a.3 is the one candidate in view,
 and it is unread.
@@ -431,7 +456,9 @@ and it is unread.
 
 The claim-vs-type table for every new record is in the PR body. No source
 claim is added. Schmid, Feser and q.104/q.3 are cited only through records
-already read and pinned or recorded in the corpus. No objection above is
+already read and pinned or recorded in the corpus; §5 cites ST I q.45 a.3 and
+Physics III.3 (in definition `ac8dbcaa`) as unread leads with no weight. No
+objection above is
 presented as evidence unless its target, mechanism and independent
 justification are named. The diachronic persistence-power account and the
 Humean-law literature are labelled as leads or sub-version costs.

@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Causality.PresentReceipt.onsetOfPresentReceipt",
   "comparator_config": "results/62947463-802a-4791-8949-6462aab1043d/comparator.json",
   "status": "solution-present",
-  "description": "Strength order registration: the present-tense reading of reception entails the onset reading, since a first moment of presence (BeginsAt) is a moment at which the thing is present. Application only; it establishes neither. Strict: Control part 1 (receipt at the first moment only)."
+  "description": "Strength order registration: the present-tense reading of reception entails the onset reading, since a first moment of presence (BeginsAt) is a moment at which the thing is present. A single application of the premise (invariant 16), registered for the strength order, not as progress; it establishes neither. Strict: Control part 1 (receipt at the first moment only)."
 }

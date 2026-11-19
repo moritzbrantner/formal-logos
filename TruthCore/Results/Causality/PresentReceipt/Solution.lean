@@ -56,6 +56,15 @@ theorem standingReadingIsTheCrux : StandingReadingIsTheCrux := by
   · intro hA v z x t hr
     exact hA v x t z hr.1 hr.2
 
+/-- Some receipt interpretation satisfies the present-tense reading and
+correlativity iff weak concurrent actualization holds: forward by
+`concurrentOfPresentReceipt`, backward with the standing sense. -/
+theorem someReceiptCarriesTheCrux : SomeReceiptCarriesTheCrux := by
+  intro W B T P h G E
+  refine ⟨fun ⟨R, hP, hC⟩ => concurrentOfPresentReceipt h G R E hP hC, fun hA => ?_⟩
+  exact ⟨standingReceipt h E, (standingReadingIsTheCrux W B T P h G E).1,
+    (standingReadingIsTheCrux W B T P h G E).2.2 hA⟩
+
 open TruthCore.Causality.SustainingCausation.Control
 open TruthCore.Causality.ConcurrentActualization.Control
 open TruthCore.Causality.PresentReceipt.Control

@@ -43,11 +43,16 @@ whatever is receiving its esse at `t` is given being at `t` by something
 
 Results: present-tense reading + correlativity ⊢ `40a97664`; onset reading +
 correlativity ⊢ received onset is given `fa3e228b`, which the inertialist
-grants. The two senses: on `passionReceipt` (receiving = being given esse)
-correlativity holds by definition and the present-tense reading *is*
-`40a97664`; on `standingReceipt` (receiving = having esse in a receiving
-principle while present) the present-tense reading holds by definition and
-correlativity *is* `40a97664`.
+grants. The two senses: on `passionReceipt` (the tenseless reception
+conjoined with some giving of being to `x` at `t`; that the giving is the
+agent side of the receiving in `z` is the intended reading, not typed)
+correlativity holds by definition and the present-tense reading is equivalent
+to `40a97664`; on `standingReceipt` (the tenseless reception conjoined with
+presence at `t`) the present-tense reading holds by definition and
+correlativity is equivalent to `40a97664`. With the receipt interpretation
+quantified existentially, the pair is equivalent to `40a97664`
+(`SomeReceiptCarriesTheCrux`); the strict separation in `Control` part 3 holds
+only for a fixed interpretation.
 
 Applicability of every premise below to reality remains OPEN.
 -/
@@ -85,7 +90,8 @@ def ReceivingIsCorrelativeWithGiving {W B T P : Type} (G : BeingGiving W B T)
   ∀ v z x t, R.ReceivesAt v z x t → ∃ g, G.GivesAt v g x t
 
 /-- RECEIVES_ESSE_AT_1, receipt as passion: `z` receives `x`'s esse at `t` iff
-`x`'s esse is received in `z` and something gives `x` being at `t`. -/
+`x`'s esse is received in `z` and something gives `x` being at `t`. A bare
+conjunction: nothing ties the giving to `z`. -/
 def passionReceipt {W B T P : Type} (G : BeingGiving W B T)
     (EsseReceivedIn : B → P → Prop) : Receipt W B T P :=
   ⟨fun v z x t => EsseReceivedIn x z ∧ ∃ g, G.GivesAt v g x t⟩
@@ -115,6 +121,16 @@ def StandingReadingIsTheCrux : Prop :=
     ReceptionIsPresent h (standingReceipt h EsseReceivedIn) EsseReceivedIn ∧
     (ReceivingIsCorrelativeWithGiving G (standingReceipt h EsseReceivedIn) ↔
       ConcurrentlyActualized h G EsseReceivedIn)
+
+/-- Some receipt interpretation satisfies the present-tense reading and
+correlativity iff weak concurrent actualization holds, for every history,
+giving relation and reception predicate. -/
+def SomeReceiptCarriesTheCrux : Prop :=
+  ∀ (W B T P : Type) (h : History W B T) (G : BeingGiving W B T)
+    (EsseReceivedIn : B → P → Prop),
+    (∃ R : Receipt W B T P, ReceptionIsPresent h R EsseReceivedIn ∧
+      ReceivingIsCorrelativeWithGiving G R) ↔
+    ConcurrentlyActualized h G EsseReceivedIn
 
 namespace Control
 

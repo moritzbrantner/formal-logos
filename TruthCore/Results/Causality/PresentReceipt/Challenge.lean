@@ -44,6 +44,12 @@ correlativity is weak concurrent actualization. -/
 theorem standingReadingIsTheCrux : StandingReadingIsTheCrux := by
   sorry
 
+/-- Some receipt interpretation satisfies the present-tense reading and
+correlativity iff weak concurrent actualization holds: forward by
+`concurrentOfPresentReceipt`, backward with the standing sense. -/
+theorem someReceiptCarriesTheCrux : SomeReceiptCarriesTheCrux := by
+  sorry
+
 open TruthCore.Causality.SustainingCausation.Control
 open TruthCore.Causality.ConcurrentActualization.Control
 open TruthCore.Causality.PresentReceipt.Control
