@@ -71,7 +71,7 @@ or formal status.
 - **Dependence for being** `DependsForBeing x c` (DEF-DEPENDS-FOR-BEING): x
   would not be if c were not, in the sense of q.44 a.1 ad 2. Its
   originating/sustaining fork is open (#1626).
-- **Concrete** (CONCRETE_6, DEF-CONCRETE-ESSE-IN-RE): having esse in re. In the
+- **Concrete** (CONCRETE_AND_ABSTRACT_6, DEF-CONCRETE-ESSE-IN-RE): having esse in re. In the
   Lean of `82eeeb3c` it is the profile field `m.concrete`; see (e) for the gloss
   mismatch.
 - **Opining** `Opines x p` (DEF-OPINING, OPINING_2): judging *or having it
@@ -105,7 +105,7 @@ The route theorems were read for the esse-root routes (`godOfRootAtBeing`,
 | Route | Entry of family F | Leaves reached |
 | --- | --- | --- |
 | `3367bf93`, `fc46b7f9` | `56f68b40`, `0436de86`, `cb1cdea9` and `e4e6b0cd` (through `8eab5889`) | all except `fad8af3e` |
-| `c98328f1` | the same, with `da09703b` (through `18fe3293`) as direct entry in place of `e4e6b0cd`, which it reaches only through `5c898d24` | all except `fad8af3e` |
+| `c98328f1` | the same, with `da09703b` in place of `d9fad785` and `6c27657f` in place of `e4e6b0cd`; it reaches `e4e6b0cd` only through `5c898d24` (`2247dfc4`, `dbf76ba6`) | all except `fad8af3e` |
 | `5d2b7c6e`, `678ff65f` | `0881e859` (through `8c0cce46` or `4487819b`) and `eaa4c679` (through `3fdc8ab7`) | all fourteen |
 | `661ce61d` | `eaa4c679` through `3fdc8ab7` and `2247dfc4` | all except `fad8af3e` |
 
@@ -134,15 +134,25 @@ through `da72ae93`. The only derivation of `da72ae93`, `b25dbaad`, uses
   `5584b295` from `6c27657f`; `f52deeb7` from `7dfa068a`, `c11369aa` and
   excluded middle) and by `da09703b` (alternative: `f4abae1b` from `d9fad785`).
   `0609389b` also has a sibling `f4df2153` through `cffad050`. So each route
-  can avoid them, at the price of `6c27657f`, `d9fad785` or `cffad050` (lane D,
-  #1772).
+  can avoid them. The existence of a maximum rests on a being in act at esse
+  together with `e4e6b0cd`. Outside family F, `e4e6b0cd` has two options:
+  `6c27657f` (through `5584b295`), or `7dfa068a` with `c11369aa` and excluded
+  middle (through `f52deeb7`). Otherwise it rests on the supplied primary.
+  Universal causal reach (`da09703b`) rests separately on `d9fad785`
+  (`f4abae1b`), `cffad050` (`f4df2153`), `3eb63770` with `3e2fc282`
+  (`5106f118`), or `2336e5b4` with `6f4824c9` (`f35f4105`) (lane D, #1772).
 - `e462cf2f`: as for the approach triple.
 - `fad8af3e`: `0881e859` has seven other derivations.
-- **`2068f91c`: no bypass.** All four registered derivations of `cb1cdea9`
-  (`57f22435`, `88f13485`, `f501bad3`, `915ad35a`) contain it. `cb1cdea9` is a
-  direct premise of `3367bf93`, `fc46b7f9` and `c98328f1`, and a premise of
-  `4487819b` and `2247dfc4`. Of the fourteen, `2068f91c` is the only leaf that
-  every expansion of the esse-root routes uses.
+- **`2068f91c`: no bypass among registered derivations; `cb1cdea9`'s direct
+  option (an analyst bridge) remains.** All four registered derivations of
+  `cb1cdea9` (`57f22435`, `88f13485`, `f501bad3`, `915ad35a`) contain it.
+  `cb1cdea9` is a direct premise of `3367bf93`, `fc46b7f9` and `c98328f1`, and a
+  premise of `4487819b`, `2247dfc4`, `dbf76ba6` and the three derivations of
+  `7abdee27` (`8e61d00e`, `9253999d`, `7ae73896`). Of the fourteen, `2068f91c`
+  is the only leaf that every expansion of the esse-root routes uses.
+- Non-trapping `5c898d24` shares this dependency: `2247dfc4` and `dbf76ba6` run
+  through `cb1cdea9` and so through `2068f91c`; only `9f2b1c6c` (`e27ea8e3`)
+  avoids it.
 
 ### (c) End state of each premise
 
@@ -151,20 +161,20 @@ defended primitive or direct option; **O** open with a concrete blocker.
 
 | Leaf (Lean content) | End state | Strongest positive warrant | Reason to stop, or blocker |
 | --- | --- | --- | --- |
-| `29e71e43` `∀ x, Creature x → ∃ z, EsseReceivedIn x z` | **P**, moderate to strong | Read in this slice from the pinned q.7 a.2 (`AQUINAS-ST-I-Q7-A2`). The corpus says that a created subsistent form "habet esse, et non est suum esse", so "ipsum eius esse sit receptum et contractum". Ad 1 says "contra rationem facti [est], quod essentia rei sit ipsum esse eius". Analyst observation: together they give reception for every made thing, not only for subsistent created forms. Relation `904404f7` (supports) cites only a.2 co.; no relation records ad 1. CREATURE_1 (caused in being by a universal cause) falls under "factum". | Stop: a source reading whose generalization rests on two sentences of one article. It cannot be derived from `da72ae93` without a cycle: the only derivation of `da72ae93` (`b25dbaad`) uses `ea2c4745`, which is obtained from `29e71e43`. No substantive objection identified (rows 9 and 12 of (f)). |
+| `29e71e43` `∀ x, Creature x → ∃ z, EsseReceivedIn x z` | **P**, moderate to strong | Read in this slice from the pinned q.7 a.2 (`AQUINAS-ST-I-Q7-A2`). The corpus says that a created subsistent form "habet esse, et non est suum esse", so "ipsum eius esse sit receptum et contractum". Ad 1 says "contra rationem facti [est], quod essentia rei sit ipsum esse eius". Analyst observation: together they give reception for every made thing, not only for subsistent created forms. Relation `904404f7` (supports) cites only a.2 co.; no relation records ad 1. CREATURE_1 (caused in being by a universal cause) falls under "factum". | Stop: a source reading whose generalization rests on two sentences of one article. Derivable from `da72ae93` on its direct option without circularity. Through `b25dbaad` it would be a closed cycle (`b25dbaad` uses `ea2c4745`, obtained from `29e71e43`). `da72ae93` has no recorded warrant beyond the same q.7 a.2 generalization (and De ente c.4, unread here), so the derivation adds no independent warrant; the end state stays P. No substantive objection identified (rows 9 and 12 of (f)). |
 | `7de89edb` `∀ x r, EsseReceivedIn x r → EsseLimited x` | **P**, moderate to strong | q.7 a.2 co. joins reception and contraction ("receptum et contractum ad determinatam naturam. Unde non potest esse infinitum simpliciter"), and q.7 a.1 co. gives the parallel for form received in matter ("fit forma determinate huius rei"). Both were read in this slice. Relation `869031e3` (supports). | On the **role** reading of limitation (contraction by a receiver) it is near-analytic. On the **measure** reading (finite in formal perfection) it is q.7 a.2's generalization from created subsistent forms to every received esse, which is the analyst's. No substantive objection identified (rows 9 and 10). |
-| `1304b462` `∀ x, EsseLimited x → ∃ r, EsseReceivedIn x r` | **P**, strong as a reading | Stating claim `b69b9bb1` reads it as the warrant that q.7 a.1 co. needs: "Cum igitur esse divinum non sit esse receptum in aliquo … manifestum est quod ipse Deus sit infinitus". The sentence states only the application to God. Ad 3 repeats it: infinite "ex hoc ipso quod esse Dei est per se subsistens non receptum in aliquo". Substantive warrant: esse is "maxime formale omnium", so it has no internal principle of determination. | On the measure reading this is the substantive claim that only reception limits esse; on the role reading it is analytic. Per DEF-ESSE-LIMITED's own note, it partly fixes the meaning of `EsseLimited` until an account of limitation independent of reception is registered. No substantive objection identified (row 11). |
-| `e2462fa8` `∀ z, ¬ EsseReceivedIn p z` for the supplied primary p | **O** | Relation `e8e23c3b`: q.7 a.1 co. says it of God ("esse divinum non sit esse receptum in aliquo"). | **Blocker: question-begging application.** The passage is about God. Applying it to the supplied approach primary p presupposes p is God or subsistent being; on a GOD_4 route that is what is to be shown. No derivation is on file. Analyst observation: the route uses it only with `1304b462` to get `¬ EsseLimited p`, so the weakest sufficient input is "the primary's esse is not limited" ((d) 1). Next test in (g). |
+| `1304b462` `∀ x, EsseLimited x → ∃ r, EsseReceivedIn x r` | **P**, strong as a reading | Stating claim `b69b9bb1` reads it as the warrant that q.7 a.1 co. needs: "Cum igitur esse divinum non sit esse receptum in aliquo, sed ipse sit suum esse subsistens, … manifestum est quod ipse Deus sit infinitus". The sentence states only the application to God. Ad 3 repeats it: infinite "ex hoc ipso quod esse Dei est per se subsistens non receptum in aliquo". Substantive warrant: esse is "maxime formale omnium", so it has no internal principle of determination. | On the measure reading this is the substantive claim that only reception limits esse; on the role reading it is analytic. Per DEF-ESSE-LIMITED's own note, it partly fixes the meaning of `EsseLimited` until an account of limitation independent of reception is registered. No substantive objection identified (row 11). |
+| `e2462fa8` `∀ z, ¬ EsseReceivedIn p z` for the supplied primary p | **O** | Relation `e8e23c3b`: q.7 a.1 co. says it of God ("esse divinum non sit esse receptum in aliquo, sed ipse sit suum esse subsistens"). | **Blocker: missing identity-bearer bridge at p.** The passage grounds non-reception in God's esse being subsistent, so the warrant transfers to p only if p's essence is its esse, and no route supplies that. Supplying it directly would assume a central part of what the GOD_4 routes are to show. No derivation is on file. Analyst observation: the route uses it only with `1304b462` to get `¬ EsseLimited p`, so the weakest sufficient input is "the primary's esse is not limited" ((d) 1). Next test in (g). |
 | `331f4751` `∀ x y, value x ≤ value y ↔ near x ≤ near y` | **P**, a representation postulate | Relation `394a49a5`: q.3 a.5 ad 2, "dicitur tamen mensura omnium, ex eo quod unumquodque tantum habet de esse, quantum ei appropinquat". Read in this slice; the antecedent of "ei" is God. | `value` occurs only in this leaf and `38cf20d9`. With `value := near` it is trivial ((d) 4, scratch-checked), so it adds no content beyond the order-by-approach clause. Because the source speaks of God, it adds no non-question-begging warrant for the existence of a primary. No substantive objection identified (row 13). |
 | `38cf20d9` `∀ x y, MoreIn r x y ↔ value y < value x` | **P**, a representation postulate | A global calibration (bearers and non-bearers) at the respect `esse` that the route uses. Its only content beyond the bearer-restricted calibrations of lane D is globality. | With `value := near` it is exactly the order clause of `ApproachToPrimaryReading` ((d) 4). Candidate strength pair → `70508140` (bearer-restricted), unregistered. No substantive objection identified. |
 | `e462cf2f` `∃ x y, MoreIn esse x y` | **D** | Specified derivation, scratch-checked (`gradesInBeingFromVerum`): the verum conjunct of `a9622441` (stating claim `c558e6bc`, q.2 a.3) with the left-to-right direction of the comparative conjunct of `5a948c37` (stating claim `b7d959b1`, Metaphysics II.1), taking `being := esse`. Not circular: neither premise depends on `e462cf2f`. | Same-sense condition: the `being` respect of `5a948c37` is the `esse` of DEF-ESSE, and TRUE_3 is used on both sides (as lane C checked for `5a948c37`). Lane C's next test runs the converse direction (being to verum). Using both directions would be a closed cycle and adds nothing; each is a separate support option. Kept, sense-relative rival on the direct option: row 14. |
 | `fad8af3e` `∃ m, IsMaximalIn InAct MoreIn esse m` | **D** | Two specified derivations. (i) From `e462cf2f` and `e4e6b0cd` by modus ponens (scratch-checked `someMaximalFromGradesAndGradesToMaximum`; `IsMaximalIn` unfolds to `IsMaximumIn`). (ii) From one being in act as to esse, `e4e6b0cd` and excluded middle, as `actualFork`/`actualCore` already prove inside `maximumExistsOfExistingRoot`. None of the three derivations of `e4e6b0cd` uses `fad8af3e`. | On (ii) a flat world with no grades makes every being in act maximal, so the degree deniers of row 14 do not reach it. The weakness of MAXIME_1 moves the load to the genus principle `da09703b`, which then speaks of every maximal being (lane D's tie point P2). |
 | `ae68972c` `∀ x, ExistsAt w x → hasCausalPower w x` | **D** (unregistered converse reading) | Specified derivation: `adf07168` (every existent is in act in some respect) with the act-to-active-principle direction of q.25 a.1 co., "unumquodque, secundum quod est actu et perfectum, secundum hoc est principium activum alicuius". The article itself uses that direction: God is pure act, "unde sibi maxime competit esse principium activum". Ad 1 adds "unumquodque agit secundum quod est actu". All three were read in this slice. Relation `3b9a2215` says that the passage does not state this direction; the article's own inference to God uses it, so it is supported, though not stated. `adf07168` is supported by q.7 a.2 ad 3 (read): prime matter does not exist by itself "cum non sit ens in actu". | Circularity condition: `adf07168` must stand on its direct option, not on `9fb695f9`, which derives it from this leaf. With `0a7896e7` it is conservative over `adf07168` inside `9fb695f9` ((d) 3). It is dispensable on every route. Rows 1–3 restated or no objection. |
 | `0a7896e7` `∀ x, hasCausalPower w x → ∃ r, InAct x r` | **P**, strong | Stating claim `a5d11a9e` (q.25 a.1 co.); ad 1, "potentia activa … fundatur in [actu]". Near-conceptual: an ability to act on another is founded on what the bearer actually is. | No substantive objection identified (row 3). It is existential in the respect and holds on each IN_ACT sense. |
-| `54b0131b` `∀ b e, IntellectualExercise b e → ∃ y, Causes w b y` | **O** | The inner word or concept as product of understanding (the statement's paraphrase). Source search `09f03f51` found no supporting passage. | **Blocker: immanent action and the effect slot.** Kept objection (row 4). In addition, `Ontic.Causes w b y` requires y in the candidate domain of individuals, and a concept is not such a candidate in the intended esse profile. The capacity sibling `8061edec` with the capacity clause (`660673ca`, `7bd58160`) avoids it. |
+| `54b0131b` `∀ b e, IntellectualExercise b e → ∃ y, Causes w b y` | **O** | The inner word or concept as product of understanding (the statement's paraphrase). Source search `09f03f51` found no supporting passage. | **Blocker: immanent action and the effect slot.** Kept objection (row 4). In addition, `Ontic.Causes w b y` requires y in the candidate domain of individuals, and a concept is not such a candidate in the intended esse profile. The Lean does not require y ≠ b. The blocker is whether `Causes` admits the agent's own perfection (y := b). The paraphrase's "of another" is not in the Lean type (prose/Lean gap). Further consumer: `4fbd7594`. The capacity sibling `8061edec` with the capacity clause (`660673ca`, `7bd58160`) avoids it. |
 | `c8394eaf` `∀ b e, Bears b e → Opines b (content e) → IntellectualExercise b e` | **O** (route instance strong) | Judging is an act of intellect. | **Blocker: DEF-OPINING includes "having it appear that p"** (phantasia). Kept scope objection (row 5): imaginings are thought episodes under lane C's broad carrier, but not intellectual exercises on a faculty psychology that places imagination in sense. The route's episode is a performed doubt, a questioning, for which the premise holds. The `ThoughtOccurs` export forgets which episode it is (lane C), so a restricted sibling needs that adapter. |
-| `82eeeb3c` `∀ c x, CausesIn c x esse → m.concrete c` | **D** (with an unregistered dictionary) | At CONCRETE_6, from `4ccb319f` ("whatever causes the being of anything is itself in act as to being"; derived from `ef068f46` and `7067553d` by `9355c3db`) with the profile dictionary `InAct x esse → m.concrete x`. That dictionary is the owner's adopted sense (#1103, #1113), but no statement registers it for `m.concrete`. Lane E grades `ef068f46` strong for efficient causes of being (#1773). | Not circular: neither derivation of `4ccb319f` uses `82eeeb3c`. On the causal-capacity gloss its paraphrase gives, it is analytic. The sense mismatch is recorded in (e). No substantive objection identified (row 6). |
-| `2068f91c` `∀ c x, c ≠ x → CausesIn c x esse → DependsForBeing x c` | **O**, strong on the aligned sustaining reading | q.44 a.1 ad 2, read in this slice: an agent cause is required "quia effectus non esset, si causa non esset", the conditional holding for impossible antecedents too (relation `7d001102`, supports; claim `3ed36bec`). The received-esse argument of [causal-dependence-support-investigation.md](causal-dependence-support-investigation.md#6-p8-received-esse-same-respect-effects-and-export-to-the-bearer) (merged 2026-11-13) gives it substantive warrant. | **Blocker: mode alignment.** `CausesIn` at esse is tenseless and mode-unspecified; `D`'s originating/sustaining fork is open (#1626). With an originating cause and sustaining `D` it fails (row 7). With both originating it holds, but its partner `a8298fbd` then meets lane B's kept origin counterexample (#1769). The pair is jointly warranted only on the sustaining reading, which the registered bridge `ce55210c` supplies for `CausesIn` (open). |
+| `82eeeb3c` `∀ c x, CausesIn c x esse → m.concrete c` | **D** (with an unregistered dictionary) | At CONCRETE_AND_ABSTRACT_6, from `4ccb319f` ("whatever causes the being of anything is itself in act as to being"; derived from `ef068f46` and `7067553d` by `9355c3db`) with the profile dictionary `InAct x esse → m.concrete x`. That dictionary is the owner's adopted sense (#1103, #1113), but no statement registers it for `m.concrete`. Lane E grades `ef068f46` strong for efficient causes of being (#1773). | Not circular: neither derivation of `4ccb319f` uses `82eeeb3c`. On the causal-capacity gloss its paraphrase gives, it is analytic. The sense mismatch is recorded in (e). No substantive objection identified (row 6). |
+| `2068f91c` `∀ c x, c ≠ x → CausesIn c x esse → DependsForBeing x c` | **O**, strong on the aligned sustaining reading | q.44 a.1 ad 2, read in this slice: an agent cause is required "quia effectus non esset, si causa non esset", the conditional holding for impossible antecedents too (relation `7d001102`, supports; claim `3ed36bec`). The received-esse argument of [causal-dependence-support-investigation.md](causal-dependence-support-investigation.md#6-p8-received-esse-same-respect-effects-and-export-to-the-bearer) (merged 2026-11-13) gives it substantive warrant. | **Blocker: mode alignment.** `CausesIn` at esse is tenseless and mode-unspecified; `D`'s originating/sustaining fork is open (#1626). With an originating cause and sustaining `D` it fails (row 7). With both originating it holds, but its partner `a8298fbd` then meets lane B's kept origin counterexample (#1769), and so does its stronger, non-distinct sibling `2e248016`. The pair is jointly warranted only on the sustaining reading, of the originating/sustaining pair considered, which the registered bridge `ce55210c` supplies for `CausesIn` (open). |
 
 Tally: D 4 (`e462cf2f`, `fad8af3e`, `ae68972c`, `82eeeb3c`; the last two need
 a registered reading or dictionary); P 6 (`29e71e43`, `7de89edb`, `1304b462`,
@@ -241,7 +251,7 @@ beyond those of the imported modules. None is a registered result.
      `StrictlyGreatestIn InAct MoreIn esse p` (MAXIME_3). That is strictly
      stronger than what `8eab5889` concludes (a MAXIME_1 maximum when grades
      exist).
-   - So this support option for `e4e6b0cd`, and `18fe3293` for `da09703b`, add
+   - So this support option for `e4e6b0cd` adds
      no independent warrant for the *existence* of a maximum. The existential
      load sits in the supply of p, which no leaf of family F argues for. What
      they add is structure: if there is a primary, it is strictly greatest and
@@ -281,17 +291,17 @@ other findings:
 | `563414ac`: A_THOUGHT_OCCURS_VERSUS_SOMETHING_CONCRETE_1/_2 | **Not an equivocation.** The two senses are different propositions (premise and conclusion), and the argument derives the second from the first through explicit premises. CONCRETE_AND_ABSTRACT_3/_6 are reported bridged. |
 | `915ad35a` (a derivation of `cb1cdea9`): WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1/_2 | **Over-link.** Sense 1 enters only through the argument's own `definition_ids`; sense 2 through `2e248016`. |
 | Off-route consumers `0a26eff0` (RECEPTION_OF_ESSE_1/_3), `95c04a6d` (HAVING_EVERY_PERFECTION_1/_2), `fd940c01` (MAXIMAL_4/5/6, MORE_AND_LESS_IN_BEING_2/3), `bf5f323d` (CONCRETE_AND_ABSTRACT_3/_6) | Not on these six routes; not classified here. |
-| `bcc00761`, `8eab5889`, `18fe3293`: BEING_4 "no distinct Lean declaration" | A sense label without a distinct type (P2). |
+| `bcc00761`, `8eab5889`, `18fe3293`: BEING_4 (label says BEING_2) "no distinct Lean declaration" | A sense label without a distinct type (P2). |
 
 Findings the tool cannot see, because each runs through one Lean type or one
 link:
 
 1. **`82eeeb3c` gloss mismatch (P1 for the record).** Its `definition_ids` link
-   CONCRETE_6 (esse in re). Its paraphrase and the Lean doc comment of
+   CONCRETE_AND_ABSTRACT_6 (esse in re). Its paraphrase and the Lean doc comment of
    `EsseCausesAreConcrete` read concreteness "as causal capacity" (the CC100
-   #11 gloss, CONCRETE_5 of DISAMB-CONCRETE-ABSTRACT-CRITERIA), and its only
-   support relation `81e519b7` supports that gloss alone. On CONCRETE_5 the
-   premise is analytic; on CONCRETE_6 it says that causes of esse have esse in
+   #11 gloss, CONCRETE_AND_ABSTRACT_5 of DISAMB-CONCRETE-ABSTRACT-CRITERIA), and its only
+   support relation `81e519b7` supports that gloss alone. On CONCRETE_AND_ABSTRACT_5 the
+   premise is analytic; on CONCRETE_AND_ABSTRACT_6 it says that causes of esse have esse in
    re. The record should state which reading is formalized.
 2. **The monadic limitation fork** ((d) 2). DISAMB-ESSE-LIMITATION separates
    `EsseLimited` from `HasLimitingPrinciple`, but not the role reading from the
@@ -317,7 +327,7 @@ link:
 | 3 | Humean powers-free ontology (brief, this section) against `ae68972c` and `0a7896e7` | **No substantive objection identified under the selected sense.** DEF-POWER-CAPACITY-READING is an ability under conditions, which a Humean analyses counterfactually instead of denying. It reaches only a realist reading of powers, which is not selected. |
 | 4 | Immanent action against `54b0131b` (its paraphrase) | **Kept.** *Target:* the universal over intellectual exercises. *Mechanism:* understanding is an operation that remains in the agent and produces no effect in another candidate individual. *Justification:* relation `946bd61a` records that the pinned q.18 a.3 co. "classes understanding as an action that remains in the agent", and the typing of `Ontic.Causes` puts a candidate individual in the effect slot. *Relevance:* the premise's only warrant is the inner word, which is not such an individual. |
 | 5 | Imagination placed in sense against `c8394eaf` (its paraphrase) | **Kept, as a scope objection.** *Target:* the universal over episodes opined in the "appear" sense of DEF-OPINING. *Mechanism:* an imagining is a thought episode on the broad carrier and an opining on DEF-OPINING, but it is an exercise of a sensitive power. *Justification:* the definition itself separates judging from appearing and includes phantasia (Physics VIII.3, claim `c528a52f`); the faculty placement of imagination is the paraphrase's stated condition, not read here. *Relevance:* it does not reach the route's episode, a questioning. |
-| 6 | "An abstract cause of esse would falsify" `82eeeb3c` (paraphrase) | **No substantive objection identified.** No abstract cause of esse is established or argued on file. A rival positing Forms as causes of being must either grant them esse in re, which makes them CONCRETE_6 by the owner's stipulation, or explain how what has no esse in re gives esse; no record does the latter. |
+| 6 | "An abstract cause of esse would falsify" `82eeeb3c` (paraphrase) | **No substantive objection identified.** No abstract cause of esse is established or argued on file. A rival positing Forms as causes of being must either grant them esse in re, which makes them CONCRETE_AND_ABSTRACT_6 by the owner's stipulation, or explain how what has no esse in re gives esse; no record does the latter. |
 | 7 | Origin without sustaining dependence (new for `2068f91c`; extends lane B's row 2 against `a8298fbd`, #1769) | **Kept, conditional.** *Target:* `2068f91c` when `CausesIn` at esse covers originating causes and `D` is read sustaining. *Mechanism:* a parent originates a child's being, and the child can be while the parent is not. *Justification:* ordinary generation; q.104 a.1's contrast of a cause of becoming with a cause of being (claim `40aefb2e`, not re-read here). *Relevance:* DEF-CAUSE-OF-PERFECTION leaves the mode open, and the route's edge comes from the genus principle, whose mode is also open. On the narrower sense that claim `40aefb2e` records, a cause of becoming is not a cause of being as such; there the parent is no `CausesIn` cause of the child's esse, and the objection has no target. |
 | 8 | Redundant (overdetermining) causes against the bare counterfactual gloss of `D` (brief) | **No substantive objection identified.** Redundant causation is established for qualities and events, not for the esse of one bearer. No case is on file, and the route's instance concerns a root with no other ground. |
 | 9 | Real-distinction deniers (Scotus, Ockham, Suárez; unread lead in `da72ae93` and [modal-spine.md](modal-spine.md)) against `29e71e43` and `7de89edb` | **Restated.** An unread lead with no evidential weight. It has a target only if the receiving principle must be really distinct, which DEF-ESSE-RECEIVED-IN leaves open. |
@@ -331,8 +341,8 @@ link:
 
 Tally: kept 4 (rows 4, 5, 7, 14; rows 5 and 7 conditional, row 14
 sense-relative); restated 6 (rows 1, 2, 9, 10, 15, 16); no substantive
-objection identified 6 (rows 3, 6, 8, 11, 12, 13). Leaves with no objection on
-file and none identified: `0a7896e7`, `1304b462`, `7de89edb`, `29e71e43`,
+objection identified 6 (rows 3, 6, 8, 11, 12, 13). Leaves with no kept
+objection: `0a7896e7`, `1304b462`, `7de89edb`, `29e71e43`,
 `331f4751`, `38cf20d9`, `fad8af3e`, `82eeeb3c`. `e2462fa8`'s blocker is not an
 objection to its truth; it concerns the warrant of applying the source.
 
@@ -344,7 +354,7 @@ objection to its truth; it concerns the warrant of applying the source.
   - `e462cf2f` and `fad8af3e` follow from stated quarta-via premises
     (`a9622441`, `5a948c37`) and from the route's own `e4e6b0cd`.
   - `ae68972c` and `82eeeb3c` are near-analytic once one supported reading
-    (q.25 a.1 act → active principle) or one profile dictionary (CONCRETE_6
+    (q.25 a.1 act → active principle) or one profile dictionary (CONCRETE_AND_ABSTRACT_6
     for `m.concrete`) is registered.
 - **Defended (six).**
   - Three q.7 reception readings, moderate to strong: `29e71e43`,
@@ -353,7 +363,7 @@ objection to its truth; it concerns the warrant of applying the source.
   - Two representation postulates, `331f4751` and `38cf20d9`, which add no
     content beyond the approach order.
 - **Open (four).**
-  - `e2462fa8`: a question-begging application of a passage about God to the
+  - `e2462fa8`: a missing identity-bearer bridge for applying a passage about God to the
     supplied primary.
   - `54b0131b`: immanent action.
   - `c8394eaf`: imagination; the route's instance survives.
@@ -363,9 +373,14 @@ Thirteen of the fourteen are dispensable on all six routes. The reception and
 approach leaves add no independent warrant for the existence of a maximum: for
 the primary they are applied to, they entail that it is strictly greatest
 ((d) 5). The existence claim of the quarta-via routes therefore does not gain
-from family F. On these routes it rests on `6c27657f`, `d9fad785` or
-`cffad050`, or on the supply of the primary. The cluster's real contributions
-are:
+from family F. The existence of a maximum rests on a being in act at esse
+together with `e4e6b0cd`. Outside family F, `e4e6b0cd` has two options:
+`6c27657f` (through `5584b295`), or `7dfa068a` with `c11369aa` and excluded
+middle (through `f52deeb7`). Otherwise it rests on the supplied primary.
+Universal causal reach (`da09703b`) rests separately on `d9fad785`
+(`f4abae1b`), `cffad050` (`f4df2153`), `3eb63770` with `3e2fc282`
+(`5106f118`), or `2336e5b4` with `6f4824c9` (`f35f4105`). The cluster's real
+contributions are:
 
 - the q.7 reception theory, as a coherent account of why caused things are
   limited and an unreceived esse is not;
@@ -381,15 +396,20 @@ compositions. Their inputs fall into three groups.
 1. **An actual, ungrounded root.** The population input `56f68b40` has strong
    local warrant ([cogito-esse-1113.md](cogito-esse-1113.md), reviewed
    2026-11-17). Non-trapping `5c898d24` and the priority bridge `86efed1a` are
-   not assessed here; lane B's priority findings (#1769) bear on the latter. `fc46b7f9` adds `c71c068c`, against which lane B keeps existential
+   not assessed here; lane B's priority findings (#1769) bear on the latter.
+   Non-trapping `5c898d24` shares the group-2 dependency: `2247dfc4` and
+   `dbf76ba6` run through `cb1cdea9` and so through `2068f91c`; only
+   `9f2b1c6c` (`e27ea8e3`) avoids it. `fc46b7f9` adds `c71c068c`, against which lane B keeps existential
    inertia as the standing rival (#1769).
 2. **Identification of the maximum with the root.** This runs through the
    genus principle `d9fad785`/`da09703b` and `cb1cdea9`. Lane D (#1772) finds
    that the universal causal reach of a greatest bearer is a missing bridge,
    with `d9fad785` supported only. `cb1cdea9` rests on `2068f91c`, the one leaf
-   of this family with no bypass, and on `a8298fbd`. The two are jointly
-   warranted only when the `CausesIn y n esse` edge and `D` are both
-   sustaining. The genus principle must then say that the maximum *sustains*
+   of this family with no bypass among registered derivations, and on
+   `a8298fbd` or its stronger, non-distinct sibling `2e248016`, which meets the
+   same origin counterexample. They are jointly warranted only when the
+   `CausesIn y n esse` edge and `D` are both sustaining (only on the sustaining
+   reading, of the originating/sustaining pair considered). The genus principle must then say that the maximum *sustains*
    the being of every other being, which adds a mode condition to lane D's open
    bridge.
 3. **Naming.** `b26c10a0` (lane D: concurrence for operations open), `09c6d5f0`
@@ -399,8 +419,9 @@ Provisional judgment: the esse-root routes give **moderate** support for an
 actual ungrounded root, conditional on the non-trapping and priority inputs
 not assessed here, and **weak to moderate** support for GOD_4. The binding
 constraint is group 2: the universal sustaining reach of the maximum together
-with the sustaining alignment of `2068f91c`. Family F's other leaves do not
-change this.
+with the sustaining alignment of `2068f91c`. Through `5c898d24` the same
+dependency also reaches group 1, unless non-trapping is taken through
+`9f2b1c6c`. Family F's other leaves do not change this.
 
 This judgment is conditional on the other lanes as they stand in the cited PRs:
 
@@ -431,7 +452,7 @@ sustaining form.
   D, conditional on an identity-bearer input.
 - A justified reading of `ExistsAt` that includes abstracta. This would give row
   1 a target.
-- Fixing `82eeeb3c`'s sense (CONCRETE_5 or CONCRETE_6). This would decide
+- Fixing `82eeeb3c`'s sense (CONCRETE_AND_ABSTRACT_5 or CONCRETE_AND_ABSTRACT_6). This would decide
   whether it is analytic or derivable.
 - An established non-quantifier account of degrees of existence, or a
   successful defence of univocity against graded actuality. Either would move
@@ -455,8 +476,12 @@ The test can fail in two ways.
 - If it succeeds, the step costs exactly `ce55210c`'s warrant. Its two
   derivations are `366a6ea3` (`da72ae93`, `40a97664` and concurrence
   `d7f5a528`; `da72ae93` brings in `29e71e43` through `ea2c4745`) and
-  `835330d4` (`23e04ae5`). That warrant can then be compared directly with
-  existential inertia (lane B's row 3).
+  `835330d4` (`23e04ae5`).
+
+The primary discriminating comparison is then `ce55210c` (sustaining causation
+of being, stated in the temporal-history framework of CAUSE_OF_BEING_2) against
+existential inertia (lane B's row 3). The first step likely needs a law from
+`SustainsBeing` to the counterfactual `D`, since `D` is not time-indexed.
 
 Second test: register `e2462fa8`'s identity-bearer derivation. If the primary's
 essence is its esse, `6dfe01ab`, `7fcfcee8` and `14325c83` exclude any
@@ -475,6 +500,8 @@ assessment, and these are first grades. Retained unchanged:
   real-distinction lead;
 - every other family's classification cited above.
 
-One weighting is disputed, not revised: relation `3b9a2215`'s note that q.25
-a.1 does not support the act-to-power direction. The article's own inference to
-God uses that direction; the relation record is left unchanged.
+Relation `3b9a2215` records that q.25 a.1 does not state the act-to-power
+direction. This note agrees, and adds that the general sentence "unumquodque,
+secundum quod est actu…, secundum hoc est principium activum" and the inference
+"unde sibi maxime competit" use it. A sibling claim reading that sentence in the
+act → power direction is defensible (invariant 5).
