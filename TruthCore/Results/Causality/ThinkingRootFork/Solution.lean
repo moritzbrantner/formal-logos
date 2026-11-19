@@ -4,6 +4,7 @@ public import TruthCore.Causality.ThinkingRootFork
 public import TruthCore.Results.Logic.CogitoSubject.Solution
 public import TruthCore.Latin.Aquinas.DeEnte.RootInterface
 public import TruthCore.Causality.UnderivedRootRoute
+public import TruthCore.Results.Causality.DirectEsseRootGodExistence.Solution
 
 /-! The two literal horns share *one* root witness. Only the positive horn
 descends, and it descends through distinct thinkers rather than every ground.
@@ -19,10 +20,14 @@ open TruthCore.Causality.CogitoNecessaryConcrete
 open TruthCore.Causality.NecessaryRootFork
 open TruthCore.Causality.SelectedAncestry
 open TruthCore.Causality.ThinkingRootFork
+open TruthCore.Causality.NecessaryConcreteRouteBridge (SimplyPriorIsActualConcreteGround EsseCauseIsActualConcreteGround)
+open TruthCore.Causality.ExistenceActuality (ExistingInActAt)
 open TruthCore.German.Kant.CosmologicalInference (NecessaryAt ContingentAt)
 open TruthCore.Logic.CogitoSubject
 open TruthCore.Logic.CogitoConcrete
 open TruthCore.Logic (ExcludedMiddle)
+open TruthCore.Latin.Aquinas.SummaTheologiae
+open TruthCore.Case.Catholicism
 
 variable {W B Episode : Type}
 
@@ -93,6 +98,18 @@ theorem noPOfActualRoot (m : Profile W B) (w : W)
   obtain ⟨c, hc⟩ := hp
   obtain ⟨y, _, hy⟩ := Relation.TransGen.tail'_iff.mp hc.2.2
   exact hRoot.2 y hy
+
+/-- Exact local root alignment: for an actual thinking member of the selected
+cone, `¬P` is equivalent to actual G-rootness *if* the no-fresh-thinker bridge
+holds. Outside this scope, only `ActualRoot → ¬P` is unconditional. -/
+theorem thinkingConeRootIffNoP (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop) (selected x : B)
+    (hCone : Cone m w selected x) (hThink : Thinks Occurs Bears x)
+    (hNoFresh : NoFreshThinkerInCone m w Occurs Bears selected) :
+    ActualRoot m w x ↔ ¬ P m w Occurs Bears x := by
+  constructor
+  · exact noPOfActualRoot m w Occurs Bears x
+  · exact noPIsActualRoot m w Occurs Bears selected x hCone hThink hNoFresh
 
 /-- A *contingent* selected thinker cannot occupy the negative horn when both
 local grounding premises hold. The literal P/¬P cases remain complementary,
@@ -239,6 +256,44 @@ theorem deEnteFirstSourceThinksOfRootUniqueness {P R : Type}
   have hEq : n = s := hAtMost n s hnRoot hsRoot
   subst s
   exact ⟨n, hnThink, hnRoot, hnNec, hsAct, hsId, hsUncaused⟩
+
+/-- The *same* necessary thinking G-root can feed the existing direct-esse
+`godOfRoot` consumer. The extra simply-prior bridge converts G-rootness to
+first-being status; the causal/perfection and nominal God bridges stay explicit.
+No whole-roster foundation or uniqueness hypothesis is imported here, and
+none of these downstream premises is proved by the P/¬P fork itself. -/
+theorem directEsseGodOfNecessaryThinkingRoot {Respect : Type}
+    (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop) (selected : B)
+    (InAct : B → Respect → Prop) (MoreIn : Respect → B → B → Prop)
+    (CausesIn : B → B → Respect → Prop) (esse : Respect)
+    (PriorSimply ComponentOf : B → B → Prop) (IsGod : B → Prop)
+    (hThinking : NecessaryThinkingRootOf m w Occurs Bears selected)
+    (hPrior : SimplyPriorIsActualConcreteGround m w PriorSimply)
+    (hEM : ExcludedMiddle)
+    (hGenus : MaximumInGenusCausesAllInGenusReading InAct MoreIn CausesIn)
+    (hExisting : ExistingInActAt m.ontic InAct esse w)
+    (hEsse : EsseCauseIsActualConcreteGround m w CausesIn esse)
+    (hApproach : GradesByApproachToAMaximumReading InAct MoreIn)
+    (hBeing : ActualityOnlyInsofarAsBeingReading InAct esse)
+    (hTransfer : UniversalCauseTransfersPerfections InAct CausesIn esse)
+    (hNoComponent : NoComponentIsFirstBeingReading ComponentOf PriorSimply)
+    (hFull : GodNamesTheFullyDescribedPrinciple InAct MoreIn CausesIn esse ComponentOf IsGod) :
+    ∃ n, Thinks Occurs Bears n ∧ GroundAncestor m w n selected ∧
+      ActualRoot m w n ∧ NecessaryAt m.ontic w n ∧
+      IsFirstBeing PriorSimply n ∧ IsGod n := by
+  obtain ⟨n, hnThink, hnAnc, hnRoot, hnNec⟩ := hThinking
+  have hnFirst : IsFirstBeing PriorSimply n := by
+    intro y hy
+    rcases hEM (y = n) with hEq | hNe
+    · exact hEq
+    · exact False.elim (hnRoot.2 y (hPrior y n hNe hy))
+  have hnGod :=
+    TruthCore.Results.Causality.DirectEsseRootGodExistence.godOfRoot
+      m w InAct MoreIn CausesIn esse PriorSimply ComponentOf IsGod
+      n hnRoot hnFirst hEM hGenus hExisting hEsse hApproach
+      hBeing hTransfer hNoComponent hFull
+  exact ⟨n, hnThink, hnAnc, hnRoot, hnNec, hnFirst, hnGod⟩
 
 /-- The new result strengthens, rather than silently replacing, the older
 Cogito concrete-root statement: it retains its b/e/n and adds thinkerhood. -/
