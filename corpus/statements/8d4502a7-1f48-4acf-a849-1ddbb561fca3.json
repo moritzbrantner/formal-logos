@@ -1,0 +1,16 @@
+{
+  "id": "8d4502a7-1f48-4acf-a849-1ddbb561fca3",
+  "label": "Two distinct beings each move the other, each mover in act and each moved in POTENCY_1",
+  "paraphrase": "OPEN analyst observation premise, unattributed: there are beings y and x with y ≠ x and respects r and r' such that y is in act in r, x is in potency in r and y moves x in r, and x is in act in r', y is in potency in r' and x moves y in r'. Moving is MOTION_1, reduction from potency to act; InAct and InPotency are the prima via's shared predicates. Candidate instances: two people each telling the other something the other did not know; mutual heating or pushing of two bodies in contact, where the mover is acted on in turn (Physics III.2, 202a3-7, cited as orientation only; no claim is recorded). The Lean type does not require r ≠ r' and does not say that either moving is per se ordered. Not established here: the PR registers it so that the reciprocity incompatibility has an explicit member, not a hidden case.",
+  "lean_declaration": "TruthCore.Causality.PrimaViaCertificates.ReciprocalCrossRespectMoving",
+  "definition_ids": [
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
+  ]
+}

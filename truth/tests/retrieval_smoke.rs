@@ -269,4 +269,23 @@ fn index_brief_novelty_dossier_context() {
         .output()
         .unwrap();
     assert!(!invalid.status.success());
+
+    // An explicit root that names no statement, including a bare uuid
+    // prefix, is an error rather than an empty "no change" frontier (#1765).
+    for root_token in ["NoSuchRoot", &STATEMENT_B[..8]] {
+        for command in [&["frontier"][..], &["thickness"], &["brief", STATEMENT_B]] {
+            let output = Command::new(BINARY)
+                .arg("--root")
+                .arg(root)
+                .arg("--json")
+                .args(command)
+                .args(["--frontier-root", root_token])
+                .output()
+                .unwrap();
+            assert_eq!(output.status.code(), Some(3), "{command:?} {root_token}");
+            assert!(String::from_utf8_lossy(&output.stderr).contains("unknown root statement"));
+        }
+    }
+    let known = truth(root, &["frontier", "--frontier-root", "STMT-C"]);
+    assert!(known.is_object());
 }

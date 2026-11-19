@@ -1,0 +1,11 @@
+{
+  "id": "4ff8cd35-2588-4c02-bfe3-b87220c3a9f9",
+  "label": "Logical falsity, from the self-dependence package at an actual CONCRETE_6 individual",
+  "argument_id": "bea86ed3-b16a-4da3-b21c-3cf43f5d1812",
+  "challenge_module": "TruthCore.Results.Causality.PrimaViaCertificates.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PrimaViaCertificates.Solution",
+  "theorem": "TruthCore.Results.Causality.PrimaViaCertificates.selfDependenceIncompatible",
+  "comparator_config": "results/4ff8cd35-2588-4c02-bfe3-b87220c3a9f9/comparator.json",
+  "status": "solution-present",
+  "description": "Under one interpretation of DependsForBeing (D), CanBeWithout (W), the Profile m and the reading world w (the w₀ of 56f68b40): take an actual concretum x (56f68b40: some CONCRETE_6 candidate exists at w). If D(x,x), the unrestricted dependence-to-grounding bridge 2e248016 makes x ground itself at w, and the actual-world distinct-esse-cause bridge 98efaa9e gives x ≠ x; so ¬D(x,x). Independence allows being-without (8ab3d114) then gives W(x,x), which the meaning postulate 'nothing can be without itself' denies. The five premises cannot all hold; the derivation is constructive (no excluded middle). It certifies lane B's 2026-11-18 package with 98efaa9e; the every-world bridge 402cf70f implies 98efaa9e (separate verified strength step, actualGroundDistinctOfEverywhere), so the package with 402cf70f in its place is inconsistent too, in Lean by composing the two results; this composition is sense-legitimate only if 402cf70f's PresentEsseSupport link (b242943a, sense _3 of 6f1d1395) is a mis-link, an open record question for its owner (its Lean type uses m.grounds and ExistsAt). It does not select a member for rejection. The closed control repairedPackageModel is one Bool/Unit interpretation of a repaired package: the distinct-relata bridge a8298fbd in place of 2e248016, with 8ab3d114, the meaning postulate, 98efaa9e, 402cf70f, an actual concretum and a nonempty strict part of D (true depends on false and not conversely); 2e248016 fails in it. It shows only that this repair is consistent in that interpretation (not a registered model)."
+}

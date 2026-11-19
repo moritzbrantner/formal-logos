@@ -182,6 +182,7 @@ public import TruthCore.Causality.Power1392Exercise
 public import TruthCore.Causality.PowerExistenceBoundary
 public import TruthCore.Causality.PreservationCandidates
 public import TruthCore.Causality.PreservationMeaning
+public import TruthCore.Causality.PrimaViaCertificates
 public import TruthCore.Causality.PriorityInBeing
 public import TruthCore.Causality.ProductiveStore
 public import TruthCore.Causality.ProtectiveProcess
