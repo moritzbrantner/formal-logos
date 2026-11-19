@@ -1,7 +1,7 @@
 {
   "id": "f4850897-dfe3-4adb-80ab-1b404aab71cf",
   "label": "Whatever has received esse and began is given being by something whenever it is present",
-  "paraphrase": "Concurrent actualization for begun things, attribution deferred: in every history of the model, whatever has its esse received in some principle (DEF-ESSE-RECEIVED-IN) and has a first moment of presence (BeginsAt) is given being by something (GivesAt, definition 158301bc, STRICT reading) at every moment at which it is present. The restriction of weak concurrent actualization 40a97664 to things with a first moment, entailed by it (registered strength order). In a model whose times are the natural numbers every thing present at some moment has a first moment, so there the two coincide; with times without a least element they can differ. Derived from onset and parity.",
+  "paraphrase": "Concurrent actualization for begun things, attribution deferred: in every history of the model, whatever has its esse received in some principle (DEF-ESSE-RECEIVED-IN) and has a first moment of presence (BeginsAt) is given being by something (GivesAt, definition 158301bc, STRICT reading) at every moment at which it is present. The restriction of weak concurrent actualization 40a97664 to things with a first moment, entailed by it (registered strength order). In a model whose times are the natural numbers every thing present at some moment has a first moment, so there the two coincide; with times without a least element they can differ. Obtained from onset and parity by a transcription.",
   "lean_declaration": "TruthCore.Causality.SustainingDependence.ConcurrentlyActualizedOnceBegun",
   "definition_ids": [
     "4433942e-aaf6-55a9-b777-66e55638103d",

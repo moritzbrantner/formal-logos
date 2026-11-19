@@ -21,41 +21,55 @@ with an originating cause, a parent and a child, the child can be while the
 parent is not.
 
 **Sustaining sibling** (`SustainingEsseCauseIsDependedOn`, open). The same
-premise restricted to causes of esse that sustain their effect in every history
-in which the effect is present (CAUSE_OF_BEING_2, `SustainsBeing`). Entailed by
-`2068f91c` (the added antecedent is unused).
+premise restricted to causes of esse that give their effect being at every
+moment at which it is present, in every history. That is the time profile of
+CAUSE_OF_BEING_2 (`SustainsBeing`) without its presence clause; it is stated
+with `GivesAt` directly, so that it uses one sense of causing (the tenseless
+`CausesIn`) and the giving profile as a separate condition, with no passage
+between them. Entailed by `2068f91c` (the added antecedent is unused).
 
 **Co-presence bridge** (`CoPresentEsseCauseIsDependedOn`, open). If `c`,
 distinct from `x`, causes `x`'s esse and, in every history of the model, `c` is
 present at every moment at which `x` is, then `x` depends for its being on `c`.
 *Meaning:* a strict conditional over the model's histories ("no history has `x`
-at a moment without `c` then") yields the counterfactual of DEF-DEPENDS-FOR-BEING.
-*Warrant:* in the standard counterfactual logics (Lewis, Stalnaker) a strict
-conditional entails the corresponding counterfactual, vacuously so when the
-antecedent is impossible, which matches DEF-DEPENDS-FOR-BEING's explicit
-inclusion of impossible antecedents. The application needs the model's histories
-to represent the alternatives relevant to the counterfactual (history
-coverage); on a one-history model the bridge would be a much stronger
-co-presence-plus-causation principle. The `CausesIn` antecedent blocks the
-modal account's familiar overgeneration (everything "depending" on whatever is
-present at every moment of every history, such as a necessary co-existent with
-no causal role). The antecedent is pointwise and over all histories, so it
-suffices for both readings of "would not be": would never have been, and would
-not be at that moment.
+at a moment without `c` then") is read as yielding the counterfactual of
+DEF-DEPENDS-FOR-BEING. *Warrant:* in the standard counterfactual logics (Lewis,
+Stalnaker) a strict conditional over the relevant worlds entails the
+counterfactual, vacuously when the antecedent is impossible, which matches
+DEF-DEPENDS-FOR-BEING's inclusion of impossible antecedents. Two conditions are
+not typed. (i) History coverage: the model's histories must represent the
+alternatives relevant to the counterfactual. Without it the bridge fails in an
+ordinary case: on a one-history model a parent that only originates its child
+and happens to outlive it is a cause of the child's esse present whenever the
+child is, yet the child would be without the parent. Coverage is a dependency
+shared by every premise of the route stated over the same model. (ii) The
+identification of DEF-DEPENDS-FOR-BEING's agent-cause counterfactual with the
+counterfactual a strict conditional yields; that definition lists Lewis-style
+dependence as an account to test against. The `CausesIn` antecedent blocks
+dependence on co-existents with no causal role; it does not block vacuous
+dependence on a cause of esse present at every moment of every history, whatever
+its mode. The antecedent is pointwise and over all histories, so it suffices
+for both readings of "would not be": would never have been, and would not be at
+that moment.
 
 Composed with the contact principle `c4661518` the bridge gives the sibling,
 and the sibling with the weak sustaining reading `ce55210c` gives `2068f91c`.
-So on this route `2068f91c` costs exactly `ce55210c` plus contact plus the
-co-presence bridge, and the parent-child interpretation (`Control` part 1)
-satisfies every input except `ce55210c`.
+Both steps are transcriptions in the sense of invariant 16 (each last applies a
+premise whose consequent is the conclusion; the contact step from giving to
+presence is the only typed work), so they record a connection and close
+nothing while a premise is open. On this route `2068f91c` costs exactly
+`ce55210c` plus contact plus the co-presence bridge, and the parent-child
+interpretation (`Control` part 1) satisfies every input except `ce55210c`.
 
 ## 2. Onset and parity
 
 **Received onset is given** (`ReceivedOnsetIsGiven`, open). In every history,
 whatever has received esse is given being by something at a first moment of its
-presence (`BeginsAt`). The existential-inertia rival accepts it: Schmid's causal
-requirement on change covers coming to be, and in `Control` part 5 the inertial
-history satisfies it.
+presence (`BeginsAt`). An inertialist who grants that the originating cause
+gives being at the effect's first moment accepts it, and in `Control` part 5 the
+inertial history satisfies it. Schmid's causal requirement on change does not by
+itself fix that timing: an inducer acting just before the first moment would
+also satisfy it.
 
 **Parity of persistence with onset** (`PersistenceParity`, open). In every
 history, if a received-esse thing is given being at a first moment of its
@@ -64,11 +78,13 @@ at a later moment is the same kind of fact as its being at its first moment.
 
 Together they give concurrent actualization for things with a first moment of
 presence (`ConcurrentlyActualizedOnceBegun`), which the weak concurrent
-actualization `40a97664` entails. Parity is not independent of that crux: given
-onset, it is concurrent actualization for begun things restated, and the
-inertialist rejects it on the ground already recorded against `40a97664`
-(onset is a change, persistence is not). The result shows where the parity
-objection's force lies; it adds no item to the rival's price.
+actualization `40a97664` entails. The derivation is a transcription in the
+sense of invariant 16: given onset, parity is concurrent actualization for
+begun things restated. The inertialist's counter-asymmetry (only a change needs
+an inducer, and persistence is no change) is likewise the crux restated from
+the other side; the shared causal law requires inducers for changes and is
+silent on whether only changes need explanation. The result shows where the
+parity objection's force lies; it adds no item to the rival's price.
 
 Applicability of every premise below to reality remains OPEN.
 -/
@@ -82,13 +98,13 @@ open TruthCore.Causality.SustainingCausation
 open TruthCore.Causality.ConcurrentActualization
 
 /-- Sustaining sibling of `2068f91c`: in the given model, if `c`, distinct from
-`x`, causes `x`'s esse and sustains `x` (CAUSE_OF_BEING_2) in every history in
-which `x` is present, then `x` depends for its being on `c`. -/
+`x`, causes `x`'s esse and gives `x` being at every moment at which `x` is
+present, in every history, then `x` depends for its being on `c`. -/
 def SustainingEsseCauseIsDependedOn {W B T Respect : Type} (h : History W B T)
     (G : BeingGiving W B T) (CausesIn : B → B → Respect → Prop) (esse : Respect)
     (DependsForBeing : B → B → Prop) : Prop :=
   ∀ c x, c ≠ x → CausesIn c x esse →
-    (∀ v, (∃ t, h.IsAt v x t) → SustainsBeing h G v c x) → DependsForBeing x c
+    (∀ v t, h.IsAt v x t → G.GivesAt v c x t) → DependsForBeing x c
 
 /-- Co-presence bridge: in the given model, if `c`, distinct from `x`, causes
 `x`'s esse and is present at every moment at which `x` is, in every history,

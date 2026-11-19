@@ -7,5 +7,5 @@
   "object_kind": "statement",
   "object_id": "149ed837-a590-4919-87fb-505d307a2636",
   "verification_result_id": "2574412d-9ebc-4320-8624-3a765684373c",
-  "note": "Same cause-of-esse relation and dependence parameter; the weak version adds the antecedent that the cause sustains the effect in every history in which the effect is present. Strict: Control part 1 (parent and child, dependence as co-presence)."
+  "note": "Same cause-of-esse relation and dependence parameter; the weak version adds the antecedent that the cause gives the effect being at every moment at which the effect is present, in every history. Strict: Control part 1 (parent and child, dependence as co-presence)."
 }

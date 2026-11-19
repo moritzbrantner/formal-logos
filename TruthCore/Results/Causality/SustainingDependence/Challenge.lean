@@ -9,9 +9,9 @@ open TruthCore.Causality.Round2Grounding (EsseEffectDependsOnItsCause)
 open TruthCore.Modal.TemporalHistory (History BeginsAt)
 
 /-- The sustaining sibling from contact and the co-presence bridge. If `c`,
-distinct from `x`, causes `x`'s esse and sustains `x` in every history in which
-`x` is present, then at each moment at which `x` is present `c` gives `x` being,
-so by contact `c` is present then; the co-presence bridge gives dependence. -/
+distinct from `x`, causes `x`'s esse and gives `x` being at every moment at
+which `x` is present, in every history, then by contact `c` is present at each
+such moment; the co-presence bridge gives dependence. -/
 theorem sustainingSiblingOfCoPresence {W B T Respect : Type} (h : History W B T)
     (G : BeingGiving W B T) (CausesIn : B → B → Respect → Prop) (esse : Respect)
     (DependsForBeing : B → B → Prop)

@@ -13,18 +13,17 @@ open TruthCore.Causality.Round2Grounding (EsseEffectDependsOnItsCause)
 open TruthCore.Modal.TemporalHistory (History BeginsAt)
 
 /-- The sustaining sibling from contact and the co-presence bridge. If `c`,
-distinct from `x`, causes `x`'s esse and sustains `x` in every history in which
-`x` is present, then at each moment at which `x` is present `c` gives `x` being,
-so by contact `c` is present then; the co-presence bridge gives dependence. -/
+distinct from `x`, causes `x`'s esse and gives `x` being at every moment at
+which `x` is present, in every history, then by contact `c` is present at each
+such moment; the co-presence bridge gives dependence. -/
 theorem sustainingSiblingOfCoPresence {W B T Respect : Type} (h : History W B T)
     (G : BeingGiving W B T) (CausesIn : B → B → Respect → Prop) (esse : Respect)
     (DependsForBeing : B → B → Prop)
     (hContact : GiverPresentWhenGiving h G)
     (hBridge : CoPresentEsseCauseIsDependedOn h CausesIn esse DependsForBeing) :
     SustainingEsseCauseIsDependedOn h G CausesIn esse DependsForBeing := by
-  intro c x hcx hC hSust
-  refine hBridge c x hcx hC fun v t hxt => ?_
-  exact hContact v c x t ((hSust v ⟨t, hxt⟩).2 t hxt)
+  intro c x hcx hC hGives
+  exact hBridge c x hcx hC fun v t hxt => hContact v c x t (hGives v t hxt)
 
 /-- The esse-dependence premise `2068f91c` from the weak sustaining reading
 `ce55210c` and the sustaining sibling: a distinct cause of `x`'s esse sustains
@@ -35,7 +34,8 @@ theorem esseDependenceOfSustaining {W B T Respect : Type} (h : History W B T)
     (hSustaining : CausingAnothersBeingIsSustaining h G CausesIn esse)
     (hSibling : SustainingEsseCauseIsDependedOn h G CausesIn esse DependsForBeing) :
     EsseEffectDependsOnItsCause CausesIn esse DependsForBeing :=
-  fun c x hcx hC => hSibling c x hcx hC fun v hx => hSustaining v c x hcx hC hx
+  fun c x hcx hC => hSibling c x hcx hC fun v t hxt =>
+    (hSustaining v c x hcx hC ⟨t, hxt⟩).2 t hxt
 
 /-- Strength order: `2068f91c` entails its sustaining sibling. -/
 theorem sustainingSiblingOfEsseDependence {W B T Respect : Type} (h : History W B T)
@@ -74,8 +74,8 @@ theorem controls : TruthCore.Causality.SustainingDependence.Control.Certificate 
   · rintro v c x t ⟨rfl, rfl, rfl⟩
     exact Or.inl ⟨rfl, le_refl 1⟩
   · intro c x _ _ hCo; exact hCo
-  · rintro c x _ ⟨rfl, rfl⟩ hSust
-    have := (hSust () ⟨1, Or.inr ⟨rfl, le_refl 1⟩⟩).2 2 (Or.inr ⟨rfl, by decide⟩)
+  · rintro c x _ ⟨rfl, rfl⟩ hGives
+    have := hGives () 2 (Or.inr ⟨rfl, by decide⟩)
     exact absurd this.2.2 (by decide)
   · intro hS
     have := (hS () true false (by decide) ⟨rfl, rfl⟩ ⟨1, Or.inr ⟨rfl, le_refl 1⟩⟩).2 2
@@ -97,7 +97,7 @@ theorem controls : TruthCore.Causality.SustainingDependence.Control.Certificate 
   · intro hB
     exact hB true false (by decide) ⟨rfl, rfl⟩ fun _ _ _ => Or.inl rfl
   · intro hS
-    refine hS true false (by decide) ⟨rfl, rfl⟩ fun v hx => ⟨hx, fun t ht => ?_⟩
+    refine hS true false (by decide) ⟨rfl, rfl⟩ fun v t ht => ?_
     rcases ht with h | ⟨_, ht⟩
     · exact Bool.noConfusion h
     · exact ⟨rfl, rfl, ht⟩
@@ -110,7 +110,7 @@ theorem controls : TruthCore.Causality.SustainingDependence.Control.Certificate 
     have := hC () true false 0 ⟨rfl, rfl⟩
     exact Bool.noConfusion this.1
   · intro hS
-    have := hS true false (by decide) ⟨rfl, rfl⟩ (fun v hx => ⟨hx, fun _ _ => ⟨rfl, rfl⟩⟩)
+    have := hS true false (by decide) ⟨rfl, rfl⟩ (fun _ _ _ => ⟨rfl, rfl⟩)
       () 1 ⟨rfl, le_refl 1⟩
     exact Bool.noConfusion this.1
   · intro hD

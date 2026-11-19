@@ -1,7 +1,7 @@
 {
   "id": "fa3e228b-7ed7-4441-aa36-4b120792b148",
   "label": "Whatever has received esse is given being by something at its first moment",
-  "paraphrase": "OPEN analyst premise, attribution deferred (onset is given): in every history of the model, whatever has its esse received in some principle (DEF-ESSE-RECEIVED-IN) is given being by something (GivesAt, definition 158301bc, STRICT reading) at a first moment of its presence (BeginsAt: present then and at no strictly earlier moment). The existential-inertia rival accepts it: its causal requirement on change (Schmid 2021, read) covers coming to be, and the inertial interpretation satisfies it (Control part 5). Silent on things with no first moment of presence.",
+  "paraphrase": "OPEN analyst premise, attribution deferred (onset is given): in every history of the model, whatever has its esse received in some principle (DEF-ESSE-RECEIVED-IN) is given being by something (GivesAt, definition 158301bc, STRICT reading) at a first moment of its presence (BeginsAt: present then and at no strictly earlier moment). An existential inertialist who grants that the originating cause gives being at the effect's first moment accepts it, and the inertial interpretation satisfies it (Control part 5); Schmid's causal requirement on change (Schmid 2021, read) does not by itself fix that timing, since an inducer acting just before the first moment would also satisfy it. Silent on things with no first moment of presence.",
   "lean_declaration": "TruthCore.Causality.SustainingDependence.ReceivedOnsetIsGiven",
   "definition_ids": [
     "4433942e-aaf6-55a9-b777-66e55638103d",
