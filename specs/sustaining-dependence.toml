@@ -1,0 +1,150 @@
+# Sustaining causes of esse and dependence for being; onset and parity.
+# Formal next tests of the sustaining-versus-existential-inertia comparison
+# (docs/notes/sustaining-vs-existential-inertia.md). (1) The sustaining sibling
+# of 2068f91c: the esse-dependence premise restricted to CAUSE_OF_BEING_2
+# sustaining causes, derived from the contact principle c4661518 and a
+# co-presence bridge, and composed with the weak sustaining reading ce55210c
+# into 2068f91c. (2) The onset/parity objection to existential inertia typed:
+# onset and parity give concurrent actualization for begun things; the inertial
+# history satisfies onset and fails parity. Analyst formulations, attribution
+# deferred.
+
+[batch]
+vocab = "TruthCore.Causality.SustainingDependence"
+results = "TruthCore.Results.Causality.SustainingDependence"
+
+# ---------------------------------------------------------------- statements
+
+[[statement]]
+id = "A distinct CAUSE_OF_BEING_2 sustaining cause of a thing's esse is one it depends on for its being"
+lean = "SustainingEsseCauseIsDependedOn"
+paraphrase = "OPEN analyst premise, attribution deferred (sustaining sibling of 2068f91c): in the given model, if c, distinct from x, causes x's esse (CausesIn c x esse, DEF-CAUSE-OF-PERFECTION at esse) and, in every history in which x is present at some moment, c gives x being at every moment at which x is present (CAUSE_OF_BEING_2, SustainsBeing; GivesAt on the STRICT esse-giving reading of definition 158301bc), then x depends for its being on c (DependsForBeing x c, DEF-DEPENDS-FOR-BEING: x would not be if c were not; a primitive parameter, not time-indexed). It is 2068f91c with the added sustaining antecedent, so 2068f91c entails it (registered strength order); strictly weaker (Control part 1: in a parent-child interpretation the originating parent sustains nothing, so the sibling holds vacuously while 2068f91c fails with dependence read as co-presence). Derived from the contact principle c4661518 and the co-presence bridge; with the weak sustaining reading ce55210c it gives 2068f91c back. It removes the origin-without-sustaining counterexample (a parent and a child) from the dependence step: that case does not satisfy its antecedent."
+definitions = ["DEF-DEPENDS-FOR-BEING", "DEF-CAUSE-OF-PERFECTION", "DEF-ESSE", "ed47a5a7-fa84-43cb-950b-2552b33b99ff", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-TEMPORAL-HISTORY-NOW-SLICE"]
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b", "88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d"]
+
+[[statement]]
+id = "A distinct esse cause present whenever its effect is, in every history, is depended on for being"
+lean = "CoPresentEsseCauseIsDependedOn"
+paraphrase = "OPEN analyst bridge, attribution deferred (co-presence to dependence): in the given model, if c, distinct from x, causes x's esse (CausesIn c x esse) and, in every history of the model, c is present at every moment at which x is present (History.IsAt), then x depends for its being on c (DependsForBeing x c, DEF-DEPENDS-FOR-BEING: x would not be if c were not, including impossible antecedents). Meaning: a strict conditional over the model's histories (no history has x at a moment without c then) yields the counterfactual. Warrant: in the standard counterfactual logics (Lewis, Stalnaker) a strict conditional entails the counterfactual, vacuously when the antecedent is impossible; the application needs the model's histories to represent the alternatives relevant to the counterfactual (history coverage), and on a one-history model it would be a much stronger co-presence-plus-causation principle, open to a case of redundant givers of esse (none on file). The CausesIn antecedent blocks the overgeneration of purely modal dependence (dependence on whatever is present at every moment of every history without a causal role). Its antecedent is pointwise and over all histories, so it suffices for both readings of 'would not be' (would never have been; would not be at that moment). Not a definition of DependsForBeing and not an equivalence: only this direction is asserted."
+definitions = ["DEF-DEPENDS-FOR-BEING", "DEF-CAUSE-OF-PERFECTION", "DEF-ESSE", "DEF-TEMPORAL-HISTORY-NOW-SLICE"]
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
+
+[[statement]]
+id = "Whatever has received esse is given being by something at its first moment"
+lean = "ReceivedOnsetIsGiven"
+paraphrase = "OPEN analyst premise, attribution deferred (onset is given): in every history of the model, whatever has its esse received in some principle (DEF-ESSE-RECEIVED-IN) is given being by something (GivesAt, definition 158301bc, STRICT reading) at a first moment of its presence (BeginsAt: present then and at no strictly earlier moment). The existential-inertia rival accepts it: its causal requirement on change (Schmid 2021, read) covers coming to be, and the inertial interpretation satisfies it (Control part 5). Silent on things with no first moment of presence."
+definitions = ["DEF-ESSE-RECEIVED-IN", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE"]
+disambiguations = ["DISAMB-ESSE-RECEPTION"]
+
+[[statement]]
+id = "A received-esse thing given being at its first moment is given being whenever it is present"
+lean = "PersistenceParity"
+paraphrase = "OPEN analyst premise, attribution deferred (parity of persistence with onset): in every history of the model, if a thing whose esse is received in some principle (DEF-ESSE-RECEIVED-IN) is given being by something at a first moment of its presence (BeginsAt; GivesAt, definition 158301bc, STRICT reading), then at every moment at which it is present something gives it being. Meaning: the thing's being at a later moment is the same kind of fact as its being at its first moment, so whatever kind of explanation the first requires, the later does too. Not independent of weak concurrent actualization 40a97664: given onset it is concurrent actualization for begun things restated, and existential inertia (Schmid 2021, read) rejects it on the ground recorded against 40a97664, that onset is a change and persistence is not (Control part 5). No independent warrant for it beyond that of 40a97664 is on file."
+definitions = ["DEF-ESSE-RECEIVED-IN", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE"]
+disambiguations = ["DISAMB-ESSE-RECEPTION"]
+
+[[statement]]
+id = "Whatever has received esse and began is given being by something whenever it is present"
+lean = "ConcurrentlyActualizedOnceBegun"
+paraphrase = "Concurrent actualization for begun things, attribution deferred: in every history of the model, whatever has its esse received in some principle (DEF-ESSE-RECEIVED-IN) and has a first moment of presence (BeginsAt) is given being by something (GivesAt, definition 158301bc, STRICT reading) at every moment at which it is present. The restriction of weak concurrent actualization 40a97664 to things with a first moment, entailed by it (registered strength order). In a model whose times are the natural numbers every thing present at some moment has a first moment, so there the two coincide; with times without a least element they can differ. Derived from onset and parity."
+definitions = ["DEF-ESSE-RECEIVED-IN", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE"]
+disambiguations = ["DISAMB-ESSE-RECEPTION"]
+
+[[statement]]
+id = "Sustaining-dependence and onset-parity controls: parent and child, omissions and nonvacuity"
+lean = "Control.Certificate"
+paraphrase = "Closed controls on interpretations with one world, natural-number times and two individuals; statements about these interpretations only. (1) Parent and child: true is present at times 0 and 1 and gives false being at time 1 only; false persists from time 1 on; dependence read as co-presence in every history. The contact principle, the co-presence bridge and the sustaining sibling hold; the weak sustaining reading ce55210c and the esse-dependence premise 2068f91c fail. (2) true present always, giving false being from time 1 on, no dependence: the weak sustaining reading and contact hold; the bridge, the sibling and 2068f91c fail. (3) An absent giver giving at every time, dependence as co-presence: the weak sustaining reading and the bridge hold; contact, the sibling and 2068f91c fail. (4) As (2) with dependence as co-presence: every premise, the sibling and 2068f91c hold, and false depends on true. (5) The inertial history of (1), false alone with received esse: onset is given; parity and concurrent actualization for begun things fail. (6) The same history with no giving: parity holds vacuously; onset and concurrent actualization for begun things fail. (7) The history of (2): onset, parity and concurrent actualization for begun things hold."
+definitions = ["DEF-DEPENDS-FOR-BEING", "DEF-ESSE-RECEIVED-IN", "158301bc-9585-4145-be60-34f08c9f922c", "ed47a5a7-fa84-43cb-950b-2552b33b99ff", "DEF-TEMPORAL-HISTORY-NOW-SLICE"]
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b", "88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d"]
+
+# ---------------------------------------------------------------- arguments
+
+[[argument]]
+id = "The sustaining sibling of esse dependence, from contact and co-presence"
+theorem = "sustainingSiblingOfCoPresence"
+premises = ["c4661518-33cc-4a53-ae55-cb986be9c2b5", "A distinct esse cause present whenever its effect is, in every history, is depended on for being"]
+conclusion = "A distinct CAUSE_OF_BEING_2 sustaining cause of a thing's esse is one it depends on for its being"
+senses = {CAUSE_OF_BEING = "CAUSE_OF_BEING_2", CAUSING_AN_EFFECT = "CAUSING_AN_EFFECT_5"}
+sense_bridges = [
+  { term = "CAUSING_AN_EFFECT", from = "CAUSING_AN_EFFECT_3", to = "CAUSING_AN_EFFECT_5", statement_id = "A distinct CAUSE_OF_BEING_2 sustaining cause of a thing's esse is one it depends on for its being", role = "conclusion" },
+]
+axioms = []
+rule = "Sustaining gives giving at each moment of presence; contact gives presence of the giver then; the co-presence bridge gives dependence"
+meaning = "New non-transcription conditional derivation. Let c, distinct from x, cause x's esse and sustain x in every history in which x is present. For any history v and moment t with x present, c gives x being at t (SustainsBeing), so c is present at t (contact c4661518). Hence c is present whenever x is, in every history, and the co-presence bridge gives that x depends for its being on c. Each premise is needed in a checked interpretation: the bridge (Control part 2, dependence empty) and contact (part 3, an absent giver); both hold with the conclusion nonvacuously (part 4). Both premises stay OPEN. No premise is established."
+
+[[argument]]
+id = "Esse dependence from weak sustaining and the sustaining sibling"
+theorem = "esseDependenceOfSustaining"
+premises = ["ce55210c-d3b5-4720-bd83-a3f63c5dc884", "A distinct CAUSE_OF_BEING_2 sustaining cause of a thing's esse is one it depends on for its being"]
+conclusion = "2068f91c-1eeb-5dbb-a71a-f7b6a12bb495"
+senses = {CAUSE_OF_BEING = "CAUSE_OF_BEING_2", CAUSING_AN_EFFECT = "CAUSING_AN_EFFECT_5"}
+sense_bridges = [
+  { term = "CAUSING_AN_EFFECT", from = "CAUSING_AN_EFFECT_3", to = "CAUSING_AN_EFFECT_5", statement_id = "ce55210c-d3b5-4720-bd83-a3f63c5dc884" },
+  { term = "CAUSING_AN_EFFECT", from = "CAUSING_AN_EFFECT_3", to = "CAUSING_AN_EFFECT_5", statement_id = "A distinct CAUSE_OF_BEING_2 sustaining cause of a thing's esse is one it depends on for its being" },
+]
+axioms = []
+rule = "The weak sustaining reading supplies the sustaining antecedent of the sibling in every history"
+meaning = "New non-transcription conditional derivation of the esse-dependence premise 2068f91c. Let c, distinct from x, cause x's esse. By the weak sustaining reading ce55210c, in every history in which x is present at some moment, c sustains x (CAUSE_OF_BEING_2). So the sustaining sibling applies and x depends for its being on c. Composed with the derivation of the sibling, 2068f91c rests on ce55210c, the contact principle c4661518 and the co-presence bridge. The weak sustaining reading is needed: the parent-child interpretation (Control part 1, an originating cause that gives being at its effect's first moment only, the effect persisting after the cause is gone) satisfies contact, the bridge and the sibling, and falsifies 2068f91c with dependence read as co-presence. So on this route the existential-inertia dispute over 2068f91c sits in ce55210c, and through it in weak concurrent actualization 40a97664. All premises stay OPEN. No premise is established."
+
+[[argument]]
+id = "Esse dependence entails its sustaining sibling"
+theorem = "sustainingSiblingOfEsseDependence"
+premises = ["2068f91c-1eeb-5dbb-a71a-f7b6a12bb495"]
+conclusion = "A distinct CAUSE_OF_BEING_2 sustaining cause of a thing's esse is one it depends on for its being"
+senses = {CAUSE_OF_BEING = "CAUSE_OF_BEING_2", CAUSING_AN_EFFECT = "CAUSING_AN_EFFECT_5"}
+sense_bridges = [
+  { term = "CAUSING_AN_EFFECT", from = "CAUSING_AN_EFFECT_3", to = "CAUSING_AN_EFFECT_5", statement_id = "A distinct CAUSE_OF_BEING_2 sustaining cause of a thing's esse is one it depends on for its being", role = "conclusion" },
+]
+axioms = []
+rule = "Instantiate 2068f91c; the sustaining antecedent is unused"
+meaning = "Strength order registration: 2068f91c (every distinct cause of x's esse is one x depends on for its being) entails its restriction to causes that sustain x in every history in which x is present. Application only; it establishes neither. Strictness is witnessed by Control part 1."
+
+[[argument]]
+id = "Concurrent actualization for begun things, from onset and parity"
+theorem = "onceBegunOfOnsetParity"
+premises = ["Whatever has received esse is given being by something at its first moment", "A received-esse thing given being at its first moment is given being whenever it is present"]
+conclusion = "Whatever has received esse and began is given being by something whenever it is present"
+axioms = []
+rule = "Onset supplies a giver at the first moment; parity carries giving to every moment of presence"
+meaning = "Conditional derivation typing the parity objection to existential inertia. Let x have received esse and a first moment b of presence in history v. By onset something gives x being at b; by parity something gives x being at every moment at which x is present. Each premise is needed: parity (Control part 5, the inertial history, where onset holds) and onset (part 6, no giving, where parity holds vacuously); both hold with the conclusion in part 7. The derivation is short because parity carries the content: given onset, it is concurrent actualization for begun things restated, so the result locates the force of the parity objection and supplies no warrant independent of 40a97664. All premises stay OPEN. No premise is established."
+
+[[argument]]
+id = "Concurrent actualization entails it for begun things"
+theorem = "onceBegunOfConcurrentlyActualized"
+premises = ["40a97664-e481-42d7-8458-78374a61aa26"]
+conclusion = "Whatever has received esse and began is given being by something whenever it is present"
+axioms = []
+rule = "Instantiate weak concurrent actualization; the first-moment hypothesis is unused"
+meaning = "Strength order registration: weak concurrent actualization 40a97664 entails its restriction to received-esse things with a first moment of presence. Application only; it establishes neither. No strictness countermodel is registered: with natural-number times the two coincide for things present at some moment."
+
+[[argument]]
+id = "Sustaining-dependence and onset-parity controls checked"
+theorem = "controls"
+premises = []
+conclusion = "Sustaining-dependence and onset-parity controls: parent and child, omissions and nonvacuity"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+rule = "Explicit one-world interpretations over natural-number times with two individuals, checked by case analysis and linear arithmetic"
+meaning = "The parent-child interpretation satisfies contact, the co-presence bridge and the sustaining sibling and falsifies the weak sustaining reading and 2068f91c; each premise of the sibling derivation is needed in one interpretation; all hold with 2068f91c in one interpretation; the inertial history satisfies onset and falsifies parity and concurrent actualization for begun things; onset is needed in one interpretation; onset, parity and the conclusion hold together in one interpretation. A finite countermodel shows a premise is needed in that interpretation, not that it is false. Model claims concern these interpretations only."
+
+# ---------------------------------------------------------------- relations
+
+[[relation]]
+id = "Esse dependence strengthens its sustaining sibling"
+subject_kind = "statement"
+subject_id = "2068f91c-1eeb-5dbb-a71a-f7b6a12bb495"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "A distinct CAUSE_OF_BEING_2 sustaining cause of a thing's esse is one it depends on for its being"
+verification_result_id = "Esse dependence entails its sustaining sibling"
+note = "Same cause-of-esse relation and dependence parameter; the weak version adds the antecedent that the cause sustains the effect in every history in which the effect is present. Strict: Control part 1 (parent and child, dependence as co-presence)."
+
+[[relation]]
+id = "Concurrent actualization strengthens it for begun things"
+subject_kind = "statement"
+subject_id = "40a97664-e481-42d7-8458-78374a61aa26"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Whatever has received esse and began is given being by something whenever it is present"
+verification_result_id = "Concurrent actualization entails it for begun things"
+note = "Same history, giving relation and reception predicate; the weak version adds a first moment of presence. No strictness countermodel registered."

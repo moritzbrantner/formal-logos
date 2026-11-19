@@ -1,0 +1,11 @@
+{
+  "id": "d2e4867c-b5e3-488a-84ab-502afab843d6",
+  "label": "Concurrent actualization for begun things, from onset and parity",
+  "argument_id": "5915c121-30e9-4231-a701-9506153eb49f",
+  "challenge_module": "TruthCore.Results.Causality.SustainingDependence.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SustainingDependence.Solution",
+  "theorem": "TruthCore.Results.Causality.SustainingDependence.onceBegunOfOnsetParity",
+  "comparator_config": "results/d2e4867c-b5e3-488a-84ab-502afab843d6/comparator.json",
+  "status": "solution-present",
+  "description": "Conditional derivation typing the parity objection to existential inertia. Let x have received esse and a first moment b of presence in history v. By onset something gives x being at b; by parity something gives x being at every moment at which x is present. Each premise is needed: parity (Control part 5, the inertial history, where onset holds) and onset (part 6, no giving, where parity holds vacuously); both hold with the conclusion in part 7. The derivation is short because parity carries the content: given onset, it is concurrent actualization for begun things restated, so the result locates the force of the parity objection and supplies no warrant independent of 40a97664. All premises stay OPEN. No premise is established."
+}

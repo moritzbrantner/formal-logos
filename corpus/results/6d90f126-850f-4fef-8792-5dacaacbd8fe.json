@@ -1,0 +1,11 @@
+{
+  "id": "6d90f126-850f-4fef-8792-5dacaacbd8fe",
+  "label": "Concurrent actualization entails it for begun things",
+  "argument_id": "5f8035c8-87d6-4df6-96f0-63d5b51eb7ed",
+  "challenge_module": "TruthCore.Results.Causality.SustainingDependence.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SustainingDependence.Solution",
+  "theorem": "TruthCore.Results.Causality.SustainingDependence.onceBegunOfConcurrentlyActualized",
+  "comparator_config": "results/6d90f126-850f-4fef-8792-5dacaacbd8fe/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration: weak concurrent actualization 40a97664 entails its restriction to received-esse things with a first moment of presence. Application only; it establishes neither. No strictness countermodel is registered: with natural-number times the two coincide for things present at some moment."
+}

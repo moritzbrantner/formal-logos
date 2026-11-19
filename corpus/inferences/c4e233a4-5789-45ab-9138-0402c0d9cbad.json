@@ -1,0 +1,10 @@
+{
+  "id": "c4e233a4-5789-45ab-9138-0402c0d9cbad",
+  "label": "Sustaining-dependence and onset-parity controls checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "d00c5c22-a9e9-49f2-8a49-919036103fce",
+  "rule": "Explicit one-world interpretations over natural-number times with two individuals, checked by case analysis and linear arithmetic",
+  "meaning": "The parent-child interpretation satisfies contact, the co-presence bridge and the sustaining sibling and falsifies the weak sustaining reading and 2068f91c; each premise of the sibling derivation is needed in one interpretation; all hold with 2068f91c in one interpretation; the inertial history satisfies onset and falsifies parity and concurrent actualization for begun things; onset is needed in one interpretation; onset, parity and the conclusion hold together in one interpretation. A finite countermodel shows a premise is needed in that interpretation, not that it is false. Model claims concern these interpretations only.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

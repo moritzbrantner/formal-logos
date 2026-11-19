@@ -1,0 +1,51 @@
+{
+  "id": "21883b61-1dec-454f-821e-e1c2fb0e37c4",
+  "label": "Sustaining versus existential inertia: esse-dependence sibling and the rival price",
+  "date": "2026-11-19",
+  "statement_ids": [
+    "40a97664-e481-42d7-8458-78374a61aa26",
+    "ce55210c-d3b5-4720-bd83-a3f63c5dc884",
+    "2068f91c-1eeb-5dbb-a71a-f7b6a12bb495",
+    "149ed837-a590-4919-87fb-505d307a2636",
+    "ffcb81fb-882b-460e-a6b1-651528dbb83d",
+    "fa3e228b-7ed7-4441-aa36-4b120792b148",
+    "5b24ef26-709e-4c67-a03c-cb856a4411eb",
+    "f4850897-dfe3-4adb-80ab-1b404aab71cf",
+    "c4661518-33cc-4a53-ae55-cb986be9c2b5",
+    "58445bd6-264b-53cf-8951-d052022f8e47"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Note docs/notes/sustaining-vs-existential-inertia.md; module TruthCore.Causality.SustainingDependence, spec specs/sustaining-dependence.toml. (1) Sustaining sibling of 2068f91c, the formal next test of the lane F esse-root assessment: 149ed837 (2068f91c restricted to causes of esse that sustain the effect in every history in which it is present) is derived from contact c4661518 and a new open co-presence bridge ffcb81fb (a distinct cause of x's esse present whenever x is, in every history, is one x depends on for its being; warrant: a strict conditional entails the counterfactual in Lewis/Stalnaker logics, given that the model's histories cover the relevant alternatives), result 1f2ae3c4; with ce55210c it gives 2068f91c, result f8519735; 2068f91c entails it, result 2574412d, relation e6d1be09. Controls 886615a9: the parent-child interpretation (originating cause absent after its effect's first moment) satisfies contact, the bridge and the sibling and falsifies ce55210c and 2068f91c; the bridge and contact are each needed; all hold together. So on this route the dispute over 2068f91c sits wholly in ce55210c and through 366a6ea3 in 40a97664; the origin-without-sustaining counterexample no longer targets the dependence step. (2) Owner-directed price map by direction of entailment. Onset fa3e228b and parity 5b24ef26 give concurrent actualization for begun things f4850897 (result d2e4867c), which 40a97664 entails (result 6d90f126, relation 413800c5); the inertial history satisfies onset and falsifies parity (controls part 5), and given onset parity is f4850897 restated, so it adds no price. The essence/esse union principle (q.3 a.7, statement 58445bd6) entails the crux only on a synchronic reading, which is 40a97664 renamed; its tenseless reading is satisfied by an originating cause. C* in the holding sense does not entail the crux (that branch's own control). The respect-general holding principle would entail more but the rival can reject it on independent physical grounds (inertial motion). Presentist actualist explanation forces a present explainer, not a giver. Finding: no independently warranted, non-re-presenting proposition entailing 40a97664 was found; extrinsic inertia's price at the crux is one item, plus its own primitive of diachronic sufficiency for existence; the routes resting on the crux (ce55210c, 23e04ae5, 9469ab62, 8bf775e9, the new support of 2068f91c, any C* reduction) are single points of failure, not price items. (3) Other tests: inertia's PSR variant is stable at local scope; physics is neutral at the esse scope and tells against a respect-general continuation principle only; explanatory depth favours conservation only conditionally on the crux; local parsimony mildly favours inertia. Judgment: no discriminating test available at matching scope; both stand with prices; no revision of the 2026-11-18 cluster judgment. Also recorded strong_version_needed on 366a6ea3 (it needs 40a97664, not its begun-things restriction).",
+  "blocker": "The crux 40a97664 is unresolved against extrinsic existential inertia: every candidate test either presupposes one side's reading (parity, synchronic union), is neutral at matching scope (physics conservation laws, the cessation law), or bears only on a sub-version (Humean-law inertia, a respect-general continuation principle, a simultaneous persistence power). The co-presence bridge ffcb81fb is unassessed for history coverage. Next test: type present-tense receipt (ReceivesAt v z x t) and a receiving-giving correlativity premise to test whether DEF-ESSE-RECEIVED-IN's present-tense reading makes 40a97664 near-analytic and moves the dispute to the reception bridge da72ae93.",
+  "evidence": [
+    "1f2ae3c4-a564-4054-8b00-648663616f34",
+    "f8519735-bf0b-41d7-80a8-ba68f388f1c9",
+    "2574412d-9ebc-4320-8624-3a765684373c",
+    "d2e4867c-b5e3-488a-84ab-502afab843d6",
+    "6d90f126-850f-4fef-8792-5dacaacbd8fe",
+    "886615a9-9c8d-4b74-a52f-723e046108a1",
+    "955ef523-695d-4920-b88d-bf6e737e71e0",
+    "610e21dc-7679-4cfb-be45-b0534a7bae3b",
+    "78cc9f45-d26d-5482-bca1-e92a6de85376"
+  ],
+  "current_assessment": {
+    "date": "2026-11-19",
+    "statement_ids": [
+      "40a97664-e481-42d7-8458-78374a61aa26",
+      "ce55210c-d3b5-4720-bd83-a3f63c5dc884",
+      "2068f91c-1eeb-5dbb-a71a-f7b6a12bb495",
+      "ffcb81fb-882b-460e-a6b1-651528dbb83d",
+      "5b24ef26-709e-4c67-a03c-cb856a4411eb"
+    ],
+    "scope": "Sustaining causation of being against existential inertia (extrinsic and persistence-power forms) at matching scope, with the rival's itemised price by direction of entailment; the sustaining sibling of 2068f91c and its co-presence bridge; the onset/parity typing. Side by side with, not replacing, the 2026-11-18 eternity-dependence cluster assessment (attempt 447838c8).",
+    "assessment": "No discriminating test is available at matching scope; sustaining (40a97664, ce55210c) and extrinsic existential inertia both stand. Sustaining's strongest warrant is a coherent standing-dependence account that unifies origin and persistence under giving and explains present actuality; its price is 40a97664 as a primitive, concurrence d7f5a528 (no warrant on file) and reception da72ae93. Inertia's strongest warrant is that the shared causal law on change with prior actuality yields persistence, PSR-compatibly and with one primitive fewer locally; its price at the crux is one item (reject 40a97664: parity given onset and the synchronic union principle are re-presentations, not further items), plus diachronic sufficiency for existence; the Humean-law sub-version also carries the explanatory-circularity objection. No independently warranted, non-re-presenting proposition entailing 40a97664 was found. 2068f91c keeps its direct option and gains a verified conditional support through ce55210c, contact c4661518 and the co-presence bridge ffcb81fb, on which it is no better than ce55210c; ffcb81fb is strong prima facie given history coverage, which is unassessed. Parity 5b24ef26 has no warrant beyond that of 40a97664. Nothing is established or defeated.",
+    "next_test": "Type present-tense receipt (ReceivesAt v z x t) and a receiving-giving correlativity premise; test whether the present-tense reading of DEF-ESSE-RECEIVED-IN with correlativity derives 40a97664, and whether the inertial interpretation satisfies correlativity while rejecting present-tense receipt. Success relocates the dispute to the reception bridge da72ae93's tense.",
+    "note": "docs/notes/sustaining-vs-existential-inertia.md#4-overall-provisional-judgment-2026-11-19",
+    "reviewed_revision": "0000000000000000000000000000000000000000",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Drafted on origin/main df4909cb025d2e53fee6071a32defe9cf2721284; independent semantic challenge pending.",
+    "supersedes": "none"
+  }
+}

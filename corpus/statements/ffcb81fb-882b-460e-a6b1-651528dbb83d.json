@@ -1,0 +1,15 @@
+{
+  "id": "ffcb81fb-882b-460e-a6b1-651528dbb83d",
+  "label": "A distinct esse cause present whenever its effect is, in every history, is depended on for being",
+  "paraphrase": "OPEN analyst bridge, attribution deferred (co-presence to dependence): in the given model, if c, distinct from x, causes x's esse (CausesIn c x esse) and, in every history of the model, c is present at every moment at which x is present (History.IsAt), then x depends for its being on c (DependsForBeing x c, DEF-DEPENDS-FOR-BEING: x would not be if c were not, including impossible antecedents). Meaning: a strict conditional over the model's histories (no history has x at a moment without c then) yields the counterfactual. Warrant: in the standard counterfactual logics (Lewis, Stalnaker) a strict conditional entails the counterfactual, vacuously when the antecedent is impossible; the application needs the model's histories to represent the alternatives relevant to the counterfactual (history coverage), and on a one-history model it would be a much stronger co-presence-plus-causation principle, open to a case of redundant givers of esse (none on file). The CausesIn antecedent blocks the overgeneration of purely modal dependence (dependence on whatever is present at every moment of every history without a causal role). Its antecedent is pointwise and over all histories, so it suffices for both readings of 'would not be' (would never have been; would not be at that moment). Not a definition of DependsForBeing and not an equivalence: only this direction is asserted.",
+  "lean_declaration": "TruthCore.Causality.SustainingDependence.CoPresentEsseCauseIsDependedOn",
+  "definition_ids": [
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}

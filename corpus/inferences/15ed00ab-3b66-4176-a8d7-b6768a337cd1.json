@@ -1,0 +1,13 @@
+{
+  "id": "15ed00ab-3b66-4176-a8d7-b6768a337cd1",
+  "label": "Concurrent actualization for begun things, from onset and parity (inference)",
+  "input_statement_ids": [
+    "fa3e228b-7ed7-4441-aa36-4b120792b148",
+    "5b24ef26-709e-4c67-a03c-cb856a4411eb"
+  ],
+  "output_statement_id": "f4850897-dfe3-4adb-80ab-1b404aab71cf",
+  "rule": "Onset supplies a giver at the first moment; parity carries giving to every moment of presence",
+  "meaning": "Conditional derivation typing the parity objection to existential inertia. Let x have received esse and a first moment b of presence in history v. By onset something gives x being at b; by parity something gives x being at every moment at which x is present. Each premise is needed: parity (Control part 5, the inertial history, where onset holds) and onset (part 6, no giving, where parity holds vacuously); both hold with the conclusion in part 7. The derivation is short because parity carries the content: given onset, it is concurrent actualization for begun things restated, so the result locates the force of the parity objection and supplies no warrant independent of 40a97664. All premises stay OPEN. No premise is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "413800c5-2497-4e0f-9d32-64bce4e550d0",
+  "label": "Concurrent actualization strengthens it for begun things",
+  "subject_kind": "statement",
+  "subject_id": "40a97664-e481-42d7-8458-78374a61aa26",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "f4850897-dfe3-4adb-80ab-1b404aab71cf",
+  "verification_result_id": "6d90f126-850f-4fef-8792-5dacaacbd8fe",
+  "note": "Same history, giving relation and reception predicate; the weak version adds a first moment of presence. No strictness countermodel registered."
+}

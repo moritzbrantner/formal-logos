@@ -1,0 +1,13 @@
+{
+  "id": "8a7d856a-5a72-465d-b179-10519a16c442",
+  "label": "Esse dependence from weak sustaining and the sustaining sibling (inference)",
+  "input_statement_ids": [
+    "ce55210c-d3b5-4720-bd83-a3f63c5dc884",
+    "149ed837-a590-4919-87fb-505d307a2636"
+  ],
+  "output_statement_id": "2068f91c-1eeb-5dbb-a71a-f7b6a12bb495",
+  "rule": "The weak sustaining reading supplies the sustaining antecedent of the sibling in every history",
+  "meaning": "New non-transcription conditional derivation of the esse-dependence premise 2068f91c. Let c, distinct from x, cause x's esse. By the weak sustaining reading ce55210c, in every history in which x is present at some moment, c sustains x (CAUSE_OF_BEING_2). So the sustaining sibling applies and x depends for its being on c. Composed with the derivation of the sibling, 2068f91c rests on ce55210c, the contact principle c4661518 and the co-presence bridge. The weak sustaining reading is needed: the parent-child interpretation (Control part 1, an originating cause that gives being at its effect's first moment only, the effect persisting after the cause is gone) satisfies contact, the bridge and the sibling, and falsifies 2068f91c with dependence read as co-presence. So on this route the existential-inertia dispute over 2068f91c sits in ce55210c, and through it in weak concurrent actualization 40a97664. All premises stay OPEN. No premise is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

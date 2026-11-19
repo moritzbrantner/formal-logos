@@ -1,0 +1,11 @@
+{
+  "id": "2574412d-9ebc-4320-8624-3a765684373c",
+  "label": "Esse dependence entails its sustaining sibling",
+  "argument_id": "88e68380-fa70-4e6c-b763-f5bda91b5489",
+  "challenge_module": "TruthCore.Results.Causality.SustainingDependence.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SustainingDependence.Solution",
+  "theorem": "TruthCore.Results.Causality.SustainingDependence.sustainingSiblingOfEsseDependence",
+  "comparator_config": "results/2574412d-9ebc-4320-8624-3a765684373c/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration: 2068f91c (every distinct cause of x's esse is one x depends on for its being) entails its restriction to causes that sustain x in every history in which x is present. Application only; it establishes neither. Strictness is witnessed by Control part 1."
+}

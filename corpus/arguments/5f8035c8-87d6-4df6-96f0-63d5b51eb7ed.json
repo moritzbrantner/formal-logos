@@ -1,0 +1,21 @@
+{
+  "id": "5f8035c8-87d6-4df6-96f0-63d5b51eb7ed",
+  "label": "Concurrent actualization entails it for begun things",
+  "premise_statement_ids": [
+    "40a97664-e481-42d7-8458-78374a61aa26"
+  ],
+  "conclusion_statement_id": "f4850897-dfe3-4adb-80ab-1b404aab71cf",
+  "inference_ids": [
+    "fe196ae1-7fc5-4fe0-a2bc-1c76af2caceb"
+  ],
+  "meaning": "Strength order registration: weak concurrent actualization 40a97664 entails its restriction to received-esse things with a first moment of presence. Application only; it establishes neither. No strictness countermodel is registered: with natural-number times the two coincide for things present at some moment.",
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

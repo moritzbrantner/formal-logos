@@ -1,0 +1,39 @@
+{
+  "id": "908228ea-d999-4297-a482-933c099fd037",
+  "label": "The sustaining sibling of esse dependence, from contact and co-presence",
+  "premise_statement_ids": [
+    "c4661518-33cc-4a53-ae55-cb986be9c2b5",
+    "ffcb81fb-882b-460e-a6b1-651528dbb83d"
+  ],
+  "conclusion_statement_id": "149ed837-a590-4919-87fb-505d307a2636",
+  "inference_ids": [
+    "3db3f3f2-4f6c-4cbd-ae18-c27e8f020001"
+  ],
+  "meaning": "New non-transcription conditional derivation. Let c, distinct from x, cause x's esse and sustain x in every history in which x is present. For any history v and moment t with x present, c gives x being at t (SustainsBeing), so c is present at t (contact c4661518). Hence c is present whenever x is, in every history, and the co-presence bridge gives that x depends for its being on c. Each premise is needed in a checked interpretation: the bridge (Control part 2, dependence empty) and contact (part 3, an absent giver); both hold with the conclusion nonvacuously (part 4). Both premises stay OPEN. No premise is established.",
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "ed47a5a7-fa84-43cb-950b-2552b33b99ff"
+  ],
+  "disambiguation_ids": [
+    "88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "c3c01e92-520e-5358-a58f-0cc7e9c9e6fa"
+  ],
+  "term_senses": {
+    "CAUSE_OF_BEING": "5acddd28-aca0-410d-96d2-ef9386b8dc27",
+    "CAUSING_AN_EFFECT": "871078ad-b041-4030-bb85-7ec2eed5d079"
+  },
+  "sense_bridges": [
+    {
+      "term": "CAUSING_AN_EFFECT",
+      "from": "39f64183-5038-4348-ad9f-5b64674f65f8",
+      "to": "871078ad-b041-4030-bb85-7ec2eed5d079",
+      "statement_id": "149ed837-a590-4919-87fb-505d307a2636",
+      "role": "conclusion"
+    }
+  ]
+}
