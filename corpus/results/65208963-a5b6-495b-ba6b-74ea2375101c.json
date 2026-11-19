@@ -1,0 +1,12 @@
+{
+  "id": "65208963-a5b6-495b-ba6b-74ea2375101c",
+  "label": "Same intellectual GOD_4 common root supplies GOD_4 existence",
+  "argument_id": "acd6ada2-7f1c-4a4b-9adc-d536c7e94372",
+  "challenge_module": "TruthCore.Results.Causality.PerfectRootIntellectFromGovernor.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PerfectRootIntellectFromGovernor.Solution",
+  "theorem": "TruthCore.Results.Causality.PerfectRootIntellectFromGovernor.godExistsOfIntellectualRoot",
+  "comparator_config": "results/65208963-a5b6-495b-ba6b-74ea2375101c/comparator.json",
+  "status": "solution-present",
+  "description": "The new package contains one n with IsGod n and HasIntellect n, plus actual-root and direct-coverage structure. Project GodExists IsGod, preserving the same witness in the proof and not asserting that arbitrary GOD_4 bearers have intellect. This is a transcription; no new warrant or distinct proof of the naming premise follows from the projection.",
+  "transcription": "instantiation"
+}
