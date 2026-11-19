@@ -186,6 +186,7 @@ public import TruthCore.Causality.PresentReceipt
 public import TruthCore.Causality.PreservationCandidates
 public import TruthCore.Causality.PreservationMeaning
 public import TruthCore.Causality.PrimaViaCertificates
+public import TruthCore.Causality.PriorityInBeing
 public import TruthCore.Causality.ProductiveStore
 public import TruthCore.Causality.ProtectiveProcess
 public import TruthCore.Causality.PureActRoot

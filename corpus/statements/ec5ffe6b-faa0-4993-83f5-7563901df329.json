@@ -1,0 +1,10 @@
+{
+  "id": "ec5ffe6b-faa0-4993-83f5-7563901df329",
+  "label": "If y can be without x and x cannot be without y, then y is PRIOR_4 to x",
+  "paraphrase": "The being-without criterion of priority in being, In V Metaph. lect. 13 n. 15 (claim ab5ec574), read for PRIOR_4: for all y and x, if y can be without x and x cannot be without y (CanBeWithout, DEF-CAN-BE-WITHOUT), then y is prior to x in being. PRIOR_4 sibling of 97fa3a0b, which concludes PRIOR_1 and whose transport to PRIOR_1 is open. Since PRIOR_4 is defined by this criterion (definition f4365b55), the statement is true by definition and carries no transport.",
+  "lean_declaration": "TruthCore.Causality.PriorityInBeing.BeingWithoutCriterionGivesPriorityInBeing",
+  "definition_ids": [
+    "f4365b55-da11-4e27-b5b7-71024d9508be",
+    "d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2"
+  ]
+}

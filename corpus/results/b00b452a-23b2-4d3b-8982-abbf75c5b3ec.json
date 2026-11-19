@@ -1,0 +1,11 @@
+{
+  "id": "b00b452a-23b2-4d3b-8982-abbf75c5b3ec",
+  "label": "The being-without criterion gives PRIOR_4, by definition",
+  "argument_id": "781eded8-84fb-4f60-96e1-6546c30ef8f7",
+  "challenge_module": "TruthCore.Results.Causality.PriorityInBeing.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PriorityInBeing.Solution",
+  "theorem": "TruthCore.Results.Causality.PriorityInBeing.beingWithoutCriterion",
+  "comparator_config": "results/b00b452a-23b2-4d3b-8982-abbf75c5b3ec/comparator.json",
+  "status": "solution-present",
+  "description": "PRIOR_4 is defined as the n. 15 criterion, so the criterion yields PRIOR_4 for every y and x. This is a definitional fact about the sense, not a substantive bridge: the open step of 97fa3a0b, the transport from the criterion to PRIOR_1, does not arise for PRIOR_4."
+}

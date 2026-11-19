@@ -1,0 +1,11 @@
+{
+  "id": "c51a07a1-4cdb-4b5f-b1ec-ebd8237f834e",
+  "label": "Every first mover moved by none is first in being: none other is PRIOR_4 to it",
+  "paraphrase": "OPEN, PRIOR_4 sibling of 74eb9113: every first mover moved by none (it moves something and is moved in no respect) is first in being, that is every y prior to it in being is identical with it (IsFirstBeing applied to PRIOR_4). Derived in this batch through the existing quarta via route of 74eb9113 (argument f8992ef7) with the PRIOR_4 sibling of 70e98bb5 in place of 70e98bb5.",
+  "lean_declaration": "TruthCore.Causality.PriorityInBeing.FirstUnmovedMoverIsFirstInBeing",
+  "definition_ids": [
+    "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d",
+    "25e19d5a-5cdf-5916-a888-f6a0ce970f11",
+    "f4365b55-da11-4e27-b5b7-71024d9508be"
+  ]
+}
