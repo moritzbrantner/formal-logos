@@ -61,6 +61,28 @@ premises = ["a6b46d2e-fb76-5123-8fbd-aca4cdc8ebd9"]
 conclusion = "An actual concrete root exists at the selected world"
 axioms = []
 transcription = "instantiation"
+# This inherited common-root package contains both IsMaximumIn and IsMaximalIn
+# definitions. Pin the existing MAXIME disambiguation instead of identifying
+# weak maximality with greatestness; retain the inherited metadata on rebuild.
+disambiguations = [
+  "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+  "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
+  "4b02d34a-9226-5009-9ac2-3b52f4222b21",
+  "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+  "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+  "9403807f-f7d4-5ce8-a8ba-ca53ed932959",
+  "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+  "79644a0a-db5b-5497-bb47-9f96d14cdae7",
+  "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+  "7507d645-874d-5434-add8-2f49c2801d36",
+  "b9adce48-6b86-5f58-b2ea-b25f51c70cbd",
+  "1795a62e-f78b-5f5b-94e7-9e7490824811",
+  "002f42cb-3015-5644-80b3-d408538394e6",
+  "be54be36-3ce8-53f9-8168-50d1114e6c76",
+  "34ddfede-ff4d-59ad-9882-4bcb490df9bb",
+  "c529e8d3-43e3-53a8-a82f-3955e9815265",
+  "4f1d0cf6-88ba-59e3-814d-01450c2bf282",
+]
 rule = "Project the existing actual root witness from ActualCommonRootAt"
 meaning = "Explicit stronger-to-weaker same-world projection of the selected common root. Does not create an independent root witness or additional warrant; the source common-root package and its support premises stay visible."
 
