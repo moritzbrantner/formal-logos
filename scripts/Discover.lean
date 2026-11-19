@@ -547,6 +547,17 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
     for e in ps do
       unless ← isProp e do
         return Json.mkObj [("error", Json.str s!"not a Prop-valued family: {← ppExpr (← inferType e)}")]
+    -- Universe-polymorphic statements are taken at the lowest universe that
+    -- keeps a carrier a type: a level `u` with a binder `B : Sort u` becomes 1,
+    -- any other level 0 (a specialization; the theorem stays valid).
+    for x in xs do
+      if let .sort (.mvar m) := (← instantiateMVars (← inferType x)) then
+        unless ← isLevelMVarAssigned m do assignLevelMVar m Level.one
+    let mut levels : Array LMVarId := #[]
+    for e in (← xs.mapM fun x => inferType x) ++ ps do
+      levels := levels ++ (collectLevelMVars {} (← instantiateMVars e)).result
+    for m in levels do
+      unless ← isLevelMVarAssigned m do assignLevelMVar m Level.zero
     let xsTypes ← xs.mapM fun x => do instantiateMVars (← inferType x)
     if xsTypes.any (·.hasMVar) || (← instantiateMVars concl).hasLevelMVar then
       return Json.mkObj [("error", Json.str "universe or type metavariables remain after binding")]
@@ -589,6 +600,19 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
         (fun _ => pure false)
     let minNames := minimal.map fun i => premises[i]!
     let u' ← unfoldSet (minNames.push target)
+    -- Vacuous truth: do the premises refute the target's own antecedents?
+    -- (`∀ x, A x → B x` holds because nothing is `A`.) A valid derivation that a
+    -- reviewer must see as such.
+    let antecedentRefuted ← if vacuous.isSome then pure false else do
+      let ec ← expand u' concl
+      let refuted ← forallTelescope ec fun ys _ => do
+        let mut props := false
+        for y in ys do
+          if ← isProp (← inferType y) then props := true
+        if !props then return none
+        let noB ← mkForallFVars ys (Lean.mkConst ``False)
+        prove xs minHyps noB u' (max 2000 (heartbeats / 4)) "" (duperOnly := true)
+      pure refuted.isSome
     -- Joint witness (premises and conclusion) and one-point omission models.
     let (joint, omissions) ← if vacuous.isSome then pure (none, #[]) else do
       let joint ← witness xs ((minHyps.map (·.2)).push concl) u (max 2000 (heartbeats / 4))
@@ -601,6 +625,7 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
       pure (joint, omissions)
     return Json.mkObj [
       ("witness", (joint.map Json.str).getD Json.null),
+      ("antecedent_refuted", Json.bool antecedentRefuted),
       ("omissions", Json.arr omissions),
       ("binders", toJson added),
       ("alone", Json.null),

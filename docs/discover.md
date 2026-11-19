@@ -49,7 +49,9 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
    name *declared in the same module*, or tagged with the *same sense*.
    Nothing is identified by name similarity across modules; every other
    parameter becomes a new outer binder, so the theorem stays universally
-   quantified, as a result theorem's binders are.
+   quantified, as a result theorem's binders are. A universe-polymorphic
+   statement is taken at the lowest universe that keeps each carrier a type
+   (a specialization, so the theorem stays valid).
 5. **Search.** The hypotheses and the conclusion are delta-expanded through
    every project definition whose type ends in `Prop` (not projections or
    instances), and `duper [*]` runs under `--heartbeats` (thousands, default
@@ -85,6 +87,7 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
 | `senses` | the argument uses two senses of one term (`argument_term_senses`, the check `truth check` applies) and no premise is a registered bridge between them | reject |
 | `sense_bridge` | a premise is the registered bridge between the senses it mixes | flag |
 | `witness` | no one-point joint model was found; Duper found no contradiction, so consistency is unresolved | flag |
+| `vacuous_target` | the premises refute the target's own antecedents (`∀ x, A x → B x` holds because nothing is `A`): valid, but true vacuously | flag |
 | `axioms`, `certification`, `reconstruction` | an axiom outside the three; the theorem text fails; Duper did not reprove an ATP-found goal | reject |
 
 The joint witness interprets every carrier as `Unit`, every predicate (and

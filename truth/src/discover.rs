@@ -36,6 +36,8 @@ pub const CONSTANTS_LEAN: &str = "scripts/StatementConstants.lean";
 /// The only axioms a discovered proof may use (docs/axiom-policy.md).
 pub const ALLOWED_AXIOMS: [&str; 3] = ["propext", "Classical.choice", "Quot.sound"];
 const MARKER: &str = "DISCOVER-JSON ";
+/// Filters that flag a discovery without rejecting it.
+pub const INFORMATIONAL: [&str; 3] = ["witness", "sense_bridge", "vacuous_target"];
 
 /// Which statements may serve as premises.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -1104,6 +1106,12 @@ pub fn classify(trial: &Trial, outcome: &Value, graph: &Graph, senses: &SenseChe
             "one premise application closes the goal (prove-sweep probe)".into(),
         ));
     }
+    if outcome["antecedent_refuted"].as_bool() == Some(true) {
+        finding.filters.push((
+            "vacuous_target".into(),
+            "the premises refute the target's own antecedent, so the target holds vacuously".into(),
+        ));
+    }
     if outcome["witness"].is_null() {
         finding.filters.push((
             "witness".into(),
@@ -1134,7 +1142,7 @@ pub fn classify(trial: &Trial, outcome: &Value, graph: &Graph, senses: &SenseChe
     if finding
         .filters
         .iter()
-        .any(|(f, _)| f != "witness" && f != "sense_bridge")
+        .any(|(f, _)| !INFORMATIONAL.contains(&f.as_str()))
     {
         finding.kind = Kind::Filtered;
     }

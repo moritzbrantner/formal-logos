@@ -462,3 +462,12 @@ fn spec_draft_lists_each_discovery_with_unique_labels() {
     assert!(spec.contains("results = \"TruthCore.Results.Discover.Run\""));
     assert!(spec.contains("axioms = [\"propext\", \"Classical.choice\", \"Quot.sound\"]"));
 }
+
+#[test]
+fn a_refuted_antecedent_flags_vacuous_truth_without_rejecting() {
+    let mut outcome = closed_outcome();
+    outcome["antecedent_refuted"] = json!(true);
+    let f = classify(&trial(&["P", "Q", "R"]), &outcome, &Graph::default(), &SenseCheck::empty());
+    assert_eq!(f.kind, Kind::Discovery);
+    assert_eq!(f.filters[0].0, "vacuous_target");
+}
