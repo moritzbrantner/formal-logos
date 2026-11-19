@@ -24,7 +24,8 @@ definitions = ["DEF-ULTIMATE-EXPLANATION-EVIDENCE", "DEF-ULTIMATE-EXPLANATION-DE
 paraphrase = "For every stance admitting both opposite next outcomes, if it endorses its own strong norm requiring exact cross-future prediction and guaranteed payoff two for entitled claims, it must withhold entitlement from every particular scientific forecast and high-payoff practical projection. Endorsing any one such claim while affirming that norm is internally inconsistent. A stance merely denying an ultimate ground, using a safe action or adopting a fallibilist norm is not refuted."
 
 [[argument]]
-id = "A guarantee norm applied to own scientific and practical entitlement claims defeats their endorsement"
+id = "394faa75-70cd-4883-9847-3227fd84d53f"
+label = "Self-endorsed guarantee norm defeats confident scientific and practical claims"
 theorem = "internalDiscipline"
 premises = []
 conclusion = "A two-successor stance with its own universal guarantee norm cannot endorse an exact projection"

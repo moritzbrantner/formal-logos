@@ -1,6 +1,6 @@
 {
   "id": "118e1f28-254e-44b8-94ce-04fb476387c8",
-  "label": "A guarantee norm applied to own scientific and practical entitlement claims defeats their endorsement (inference)",
+  "label": "Self-endorsed guarantee norm defeats confident scientific and practical claims (inference)",
   "input_statement_ids": [],
   "output_statement_id": "e1f3fa83-363f-4bf5-b880-44b762c9e691",
   "rule": "Invoke existing self-application norm against each explicit countercontinuation",
