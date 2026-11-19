@@ -7,7 +7,7 @@
   ],
   "output_statement_id": "f401994a-55a8-44ce-9ff8-9e17a3f591fa",
   "rule": "Each holder is a per se link of the other; a two-cycle is not well founded",
-  "meaning": "New non-transcription conditional derivation. If a and b hold each other in r and both are in act in r, each is MOTION_3 held in r by the other, so each is a link of the other, a two-cycle that well-foundedness excludes. With the leaning-cards observation premise the three statements are inconsistent, so the holding route must restrict its per se link (for instance to a total holder of the act, or to one series for one effect) or give up the regress as stated; this repair is not formalized. Unlike the MOTION_1 reciprocity of the hot iron and the wood, where the reaction lends nothing, mutual holding is genuine lending in the holding sense. All premises stay OPEN. No premise is established.",
+  "meaning": "New non-transcription conditional derivation. If a and b hold each other in r and both are in act in r, each is MOTION_3 held in r by the other, so each is a link of the other, a two-cycle that well-foundedness excludes. With the leaning-cards observation premise the three statements are inconsistent, so at least one goes: the holding route must restrict its per se link (for instance to a total holder of the act, or to one series for one effect), give up the regress as stated, or reject the leaning-cards premise; the first repair is not formalized. Unlike the MOTION_1 reciprocity of the hot iron and the wood, where the reaction lends nothing, mutual holding is genuine lending in the holding sense. All premises stay OPEN. No premise is established.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

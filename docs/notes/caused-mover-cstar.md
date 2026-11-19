@@ -458,12 +458,16 @@ lack an act" is the primitive `Lackability.CanLack` (DEF `56b438a0`). The owner'
 words "comes from being caused in some way" also admit an *originating* reading
 (the forge heated the iron). That is sense (iii) of section 1 and does not carry
 the regress; passing from it to present actualization is exactly the bridge
-tested below, so it is not built into the sense. MOTION_3 is not MOTION_1. Under
-the adopted POTENCY_1 a held thing is in act in r, hence not in potency to r. So
-no being is moved in one respect in both senses, and the prima via premise
-"whatever is moved is in potency" fails for MOTION_3 whenever anything is held
-(`Control.Certificate` parts 4 and 5, for every interpretation). The holding
-route therefore cannot reuse `primaVia`; it is proved directly.
+tested below, so it is not built into the sense. "Potential" is read only as
+"actualized by another": `HeldMotion` has no potency or lackability clause, so
+an act held by another that its bearer could not lack also counts. MOTION_3 is
+not MOTION_1. Under the adopted POTENCY_1 a held thing is in act in r, hence not
+in potency to r. So the prima via premise "whatever is moved is in potency" fails
+for MOTION_3 whenever anything is held (`Control.Certificate` part 4, every
+interpretation). Where that premise holds of a MOTION_1 relation, with one act
+predicate shared by both senses, no being is moved in one respect in both senses
+(part 5). The holding route therefore cannot reuse `primaVia`; it is proved
+directly.
 
 Module `TruthCore/Causality/HoldingMotion.lean`, spec `specs/holding-motion.toml`.
 All results are zero-axiom except the controls.
@@ -493,10 +497,14 @@ So C\* in the holding sense rests on `76d2cc96`, `dedc431f`, `1a99cebe`,
 `6e2176cd` and `40fc38ad`. **The hypothesis is confirmed with a correction.**
 The needed bridge is "an actuality a thing could lack is presently held from a
 present actualizer", in its respect-general form. That form reaches the esse
-premise on main only through two further bridges, accident-inclusive
-conservation and lackable being. The strong ("by another") version is needed,
-not the weak one (`40a97664`) that the esse-root derivation of `ce55210c` uses,
-because MOTION_3 builds the distinct holder into the sense.
+premise on main only through the present-moment reading `dedc431f` and two
+further bridges, accident-inclusive conservation and lackable being. The strong
+("by another") version `76d2cc96` is needed, because MOTION_3 builds the distinct
+holder into the sense. The esse-root derivation of `ce55210c` uses only the weak
+version `40a97664`, which the strong one entails. So the shared dependency is
+the weak premise. The holding route inherits every objection to it, and is also
+exposed to the persistence-power interpretation, which falsifies only the strong
+version (concurrent-actualization Control part 2).
 
 **Shape of the entailment (owner direction, 2026-11-19).** It runs **one way:
 concurrent actualization → C\*-holding.** Control part 3 (stick) satisfies C\*
@@ -512,13 +520,14 @@ accident-inclusive conservation.
 Consequences for the cost to the rival:
 
 - Contrapositively, a rival who denies C\*-holding for the hot iron or the
-  projectile must deny respect-general concurrent actualization. Given the
-  bridges, that means denying the esse instance `76d2cc96` (existential
-  inertia), accident-inclusive conservation `1a99cebe`, lackable being
-  `6e2176cd` or the actualizer premise. **Existential inertia is not forced.**
-  It suffices to hold that what sustains a thing's being does not presently
-  hold its retained qualities and states of motion; that is qualitative or
-  physical inertia.
+  projectile must deny respect-general concurrent actualization `166dba9d` or
+  the actualizer premise `40fc38ad`. Given the bridges, denying `166dba9d`
+  means denying one of: the esse instance `f834ee65` (through `76d2cc96`, by
+  existential or persistence-power inertia, or through the present-moment
+  reading `dedc431f`), accident-inclusive conservation `1a99cebe`, or lackable
+  being `6e2176cd`. **Existential inertia is not forced.** It suffices to hold
+  that what sustains a thing's being does not presently hold its retained
+  qualities and states of motion; that is qualitative or physical inertia.
 - **Independent warrant of C\*-holding beyond concurrent actualization.**
   Ordinary experience of things acting through received powers is real
   evidence, but only for the restricted class: instruments and driven movers
@@ -532,14 +541,20 @@ Consequences for the cost to the rival:
   conservation. **No independent warrant for universal C\*-holding was
   found.** The case-by-case evidence supports exactly the restricted C\* that
   section 5 already graded well supported and insufficient.
-- **Verdict on the shape:** C\* on the holding route is a single point of
-  failure on concurrent actualization (respect-general, by another). It adds no
-  separate cost to the existential-inertia rival. It does make the dependency
-  explicit and shared: the First Way's holding sibling and the esse-root
-  routes both rest on `76d2cc96`'s family. The holding sibling adds
-  accident-inclusive conservation, which the esse-root routes do not need. The
-  warrant of concurrent actualization against existential inertia is assessed
-  on branch `agent/sustaining-vs-inertia` and is not judged here.
+- **Verdict on the shape:** for the retained-state class, C\* on the holding
+  route has **one recorded line of support**: concurrent actualization
+  (respect-general, by another), and through it `76d2cc96`, `dedc431f`,
+  `1a99cebe`, `6e2176cd` and `40fc38ad`. No independent warrant was found. It
+  is a single point of failure in the sense of support. Rejecting concurrent
+  actualization removes C\*'s only recorded warrant for those movers; it does not
+  make C\* false (Control part 3). So C\* adds no separate cost to the
+  existential-inertia rival. The dependency is explicit. The holding sibling and
+  the esse-root routes share the weak premise `40a97664`. The holding sibling
+  additionally needs the strong `76d2cc96`, the present-moment reading,
+  accident-inclusive conservation and lackable being, none of which the
+  esse-root routes need. The warrant of concurrent actualization against
+  existential inertia is assessed on branch `agent/sustaining-vs-inertia` and is
+  not judged here.
 
 ### 9.2 The rest of the First Way in the holding sense
 
@@ -549,8 +564,8 @@ Consequences for the cost to the rival:
 | Moved only as in potency | **Fails** whenever anything is held (POTENCY_1) | Control part 4 |
 | No self-motion in the same respect | Not used: the distinct holder is part of MOTION_3. A thing that sustains its own act (a persistence power) is simply not held by that. Aquinas's will moving itself to the means by willing the end (ST I-II q.9 a.3, not read; navigation only) is self-actualization in a different respect and is consistent with the sense. Whether the will is also held by another is the concurrent-actualization question again. | Proof of `7263cb1a` uses no such premise |
 | Per se regress | `685933c7` (a holder held in its operative act is a link) and `6f924bb0` (holding series well founded) give the relative first holder `cf7940a7` (result `7263cb1a`) | Verified |
-| Reciprocity | **Yes, mutual holding is cyclic.** `0b40c6e1`: those two premises ⊢ `f401994a`, no two beings presently hold each other in one respect in which both are in act. Two cards leaning on each other are an established statics case of exactly that (`5469677e`). Each card's propped position is an act it could lack, held now by the other's contact; remove either and the other falls. So {`685933c7`, `6f924bb0`, `5469677e`} is inconsistent. Unlike the iron and the wood under MOTION_1 (reaction lends nothing, section 4), mutual holding *is* lending in this sense, so the R2 escape is unavailable. The cards satisfy concurrent actualization and C\*-holding (Control part 1), so the inconsistency lies with the per se link and the regress, not with concurrent actualization. | Verified; the cards case is ordinary statics |
-| Pure act | **Not reached.** With C\*-holding, the first holder could not lack the act by which it holds (`81523d81` ⊢ `5eb16c61`). It may still be held, or in potency, in other respects (Control part 6, crossed holders: every premise, C\* and concurrent actualization hold, and the absolute "moved by none" form fails). All-respect unheldness would need a respect-free per se link, and that also cycles on mutual holding (section 4's control 3, same proof). | Verified |
+| Reciprocity | **Yes, mutual holding is cyclic.** `0b40c6e1`: those two premises ⊢ `f401994a`, no two beings presently hold each other in one respect in which both are in act. Two cards leaning on each other are an established statics case of exactly that (`5469677e`). Each card's propped position is an act it could lack, held now by the contact force the other card presently exerts on it. So {`685933c7`, `6f924bb0`, `5469677e`} is inconsistent; at least one goes (the per se link, the regress, or the cards premise). Unlike the iron and the wood under MOTION_1 (reaction lends nothing, section 4), mutual holding *is* lending in this sense, so the R2 escape is unavailable. The cards satisfy concurrent actualization and C\*-holding (Control part 1), so the inconsistency lies with the per se link and the regress, not with concurrent actualization. | Verified; the cards case is ordinary statics |
+| Unheld in every respect; pure act | **Not reached.** With C\*-holding, the first holder could not lack the act by which it holds (`81523d81` ⊢ `5eb16c61`). It may still be held in other respects. Control part 6 (crossed holders) shows this: something held, the per se link, the regress, the actualizer premise, C\* and respect-general concurrent actualization hold, and the absolute "moved by none" form fails. That model has no esse respect satisfying the lackable-being bridge. So whether the full esse-side bundle forces unheldness in every respect is untested. A respect-free holding per se link would give unheldness in every respect, but it cycles on mutual holding in different respects, which part 6 contains (same proof as section 4's control 3; not registered for MOTION_3). Pure act is a further question that this route does not address. MOTION_3 has no potency clause, so nothing here bears on whether the first holder is in potency in any respect. | Verified for the relative conclusion; the rest is untested |
 
 **Repair named, not formalized.** Restrict the holding per se link to a *total*
 holder (z holds x in r without x contributing to z's act) or to one series for
@@ -567,9 +582,12 @@ Module `TruthCore/Causality/CausedMoverCStar.lean`, spec
   `7bf380c6` ⊢ `e3afc8a3`. The CAUSE_1/CAUSE_2 preflight failure is resolved by
   declaring `631e014f`, the premise that passes from the caused (CAUSE_2) guard to
   moving, as the sense bridge. `truth semantics` with `--bridge` passes.
-- `9a15e352`: `e3afc8a3` and the new open `a1df8f1a` (whatever is moved has its
-  being caused by another, the constructive contrapositive of "an uncaused
-  being is moved in no respect") ⊢ `b3573a61`, zero axioms.
+- `9a15e352`: `e3afc8a3` and the new open `a1df8f1a` ⊢ `b3573a61`, zero
+  axioms. `a1df8f1a` says that a moved mover of another has its being caused
+  by another. Classically it is the contrapositive of "a mover whose being
+  nothing else causes is moved in no respect". The positive form is
+  constructively stronger, so getting it from that negative form, which the
+  esse-composition reasoning is proposed to supply, needs excluded middle.
 - `0dc12783`: control 3 certified. `1e47e6db`, `226c38f6` ⊢ `3de4d557`, the
   negation of `4f6ac439` (now bound to `SomeTwoMoveEachOtherWhileMoved`).
 
@@ -579,17 +597,18 @@ secunda-via analogue remain unregistered.
 ### 9.4 Provisional judgment and connection plan
 
 - **C\* on the holding route:** a verified conditional consequence of
-  respect-general concurrent actualization by another. Its standing is that
-  premise's standing, with nothing added. The retained-state counterexample
-  class of section 3 is answered only by a non-physical present holder of the
-  iron's heat and the stone's motion. That needs the esse premise `76d2cc96`
-  plus accident-inclusive conservation. Grade: **dependent; no better than
-  concurrent actualization ∧ accident-inclusive conservation.** It does not
-  improve on section 7's "weak" for MOTION_1; it relocates the load.
+  respect-general concurrent actualization by another. The retained-state
+  counterexample class of section 3 is answered only by a non-physical present
+  holder of the iron's heat and the stone's motion. On file, that holder is
+  supported only by `76d2cc96`, `dedc431f`, `1a99cebe`, `6e2176cd` and
+  `40fc38ad`. Grade for that class: **dependent; its only recorded support is
+  that bundle, and no independent warrant was found.** It does not improve on
+  section 7's "weak" for MOTION_1; it relocates the load onto concurrent
+  actualization and accident-inclusive conservation.
 - **The holding sibling of the absolute First Way:** blocked at two exact
-  points: the per se link must be repaired against mutual holding, and the
-  relative first holder falls short of all-respect unheldness and pure act.
-  Overall: **weak**, with a named repair.
+  points. The per se link must be repaired against mutual holding. The relative
+  first holder is not shown to be unheld in every respect, and pure act is not
+  addressed. Overall: **weak**, with a named repair.
 - **Connection plan.** The holding results do not reach the root. Target:
   `c1b68c21` (the absolute First-Way conclusion consumed by `ed7c588a`,
   `beec1dc1`, `fd1f7e75`), via a MOTION_3 sibling. Missing bridges: (1) a
@@ -602,7 +621,7 @@ secunda-via analogue remain unregistered.
 
 Revision conditions: a defended argument that retained qualities and states of
 motion are presently held by what sustains the bearer's being (warrant for
-`1a99cebe`) would make C\*-holding exactly as strong as the esse premise. A
+`1a99cebe`) would give C\*-holding the support of the esse premise and the other bridges. A
 defended total-holder per se link would unblock the holding regress. An
 argument from received-power experience that reaches retained-state movers
 without concurrent actualization would give C\*-holding independent warrant and
@@ -611,7 +630,8 @@ change the shape to mutual support.
 Records: statements `0299101a`, `166dba9d`, `18135887`, `1a99cebe`,
 `1dd5be70`, `3de4d557`, `40fc38ad`, `5469677e`, `5eb16c61`, `685933c7`,
 `6e2176cd`, `6f924bb0`, `a1df8f1a`, `cf7940a7`, `dedc431f`, `f401994a`,
-`f834ee65`. Bindings were added to `631e014f`, `7bf380c6`, `e3afc8a3` and
+`f834ee65`; definitions `ea1904bc`, `6ab9a832`, `56b438a0` and `439f943a`
+(the holding per se link). Bindings were added to `631e014f`, `7bf380c6`, `e3afc8a3` and
 `4f6ac439`. Results `6cc2aa7c`, `2f538163`, `e3de57ec`, `7263cb1a`, `81523d81`,
 `0b40c6e1`, `8eeebe1a` (holding) and `739d177c`, `9a15e352`, `0dc12783`
 (C\*). Attempt `b7e7af8c` is updated.

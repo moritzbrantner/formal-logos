@@ -1,9 +1,10 @@
 {
   "id": "685933c7-f557-4cf4-80e2-cea2f2e88e2b",
   "label": "A holder of another that is MOTION_3 held in the act by which it holds is a link of a holding series",
-  "paraphrase": "OPEN analyst premise, attribution deferred (holding per se link): if y, distinct from x, presently actualizes x in r and is itself MOTION_3 held in r, then y is a link AsHeld y x of a holding series: it holds x only as held. AsHeld is a primitive parameter, the holding counterpart of the per se link MovesAsMoved of the prima via, not that relation. Respect-indexed: being held in another respect does not make y a link. With the holding regress it excludes mutual holding in one respect (two cards leaning on each other), a case of ordinary statics; see the argument concluding that no two beings hold each other.",
+  "paraphrase": "OPEN analyst premise, attribution deferred (holding per se link): if y, distinct from x, presently actualizes x in r and is itself MOTION_3 held in r, then y is a link AsHeld y x of a holding series: it holds x only as held. AsHeld is a parameter (definition 439f943a-1bf1-4659-8fa4-cf6b83feb708), the holding counterpart of the per se link MovesAsMoved of the prima via, not that relation. Respect-indexed: being held in another respect does not make y a link. With the holding regress it excludes mutual holding in one respect (two cards leaning on each other), a case of ordinary statics; see the argument concluding that no two beings hold each other.",
   "lean_declaration": "TruthCore.Causality.HoldingMotion.HeldInOperativeActIsPerSe",
   "definition_ids": [
+    "439f943a-1bf1-4659-8fa4-cf6b83feb708",
     "ea1904bc-bdfa-4835-a4a7-8545c5221e2e",
     "6ab9a832-6b0f-47ac-9f08-144444bf1cb1"
   ],

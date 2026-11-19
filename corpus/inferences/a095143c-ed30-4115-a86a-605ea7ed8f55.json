@@ -7,7 +7,7 @@
   ],
   "output_statement_id": "b3573a61-ec8b-5aba-8b5f-f1d03611e7f6",
   "rule": "The moved mover is caused, so C* for caused movers applies",
-  "meaning": "New non-transcription conditional derivation of the scope bridge b3573a61 (C* for every moved mover). A mover of another that is being moved in some respect has its being caused by another, so C* for caused movers applies to it. Constructive: no case split is needed. Both premises stay OPEN; the second is proposed to follow from the 2026-11-17 esse-composition reasoning, not registered. No premise is established.",
+  "meaning": "New non-transcription conditional derivation of the scope bridge b3573a61 (C* for every moved mover). A mover of another that is being moved in some respect has its being caused by another, so C* for caused movers applies to it. Constructive: no case split is needed. Both premises stay OPEN; the second is proposed to follow classically from the 2026-11-17 esse-composition reasoning, which is not registered. No premise is established.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

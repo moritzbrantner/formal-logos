@@ -2,5 +2,8 @@
   "id": "6f924bb0-beb4-4a7c-845e-ceb9b7aeb3c1",
   "label": "A holding series cannot go on to infinity",
   "paraphrase": "OPEN analyst premise, attribution deferred: the holding per se relation AsHeld is well founded (every being is accessible under it), so no infinite ascending chain of holders held in the act by which they hold exists. The holding counterpart of the per se regress 226c38f6-7bf4-552a-9a85-733cfa41d0fa, stated for AsHeld. Its warrant is the instrumental one: a link that holds only as held needs a present holder, so the holding cannot run on with no first holder; in the holding sense every link is lending, so that warrant applies to every link, not only to instruments.",
-  "lean_declaration": "TruthCore.Causality.HoldingMotion.NoInfiniteHoldingSeries"
+  "lean_declaration": "TruthCore.Causality.HoldingMotion.NoInfiniteHoldingSeries",
+  "definition_ids": [
+    "439f943a-1bf1-4659-8fa4-cf6b83feb708"
+  ]
 }

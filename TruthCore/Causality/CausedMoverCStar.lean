@@ -51,13 +51,14 @@ def CausedMoverMovedInRelevantRespect {Being : Sort u} {Respect : Sort v}
   ∀ y x r, (∃ c, c ≠ y ∧ CausesIn c y esse) → y ≠ x → MovesIn y x r →
     (∃ r', MovedIn y r') → ∃ r', MovedIn y r' ∧ RelevantTo y x r r'
 
-/-- Whatever is being moved in some respect has its being caused by something
-other than itself (contrapositive of: a being whose being nothing else causes
-is moved in no respect). -/
-def MovedIsCaused {Being : Sort u} {Respect : Sort v}
-    (MovedIn : Being → Respect → Prop) (CausesIn : Being → Being → Respect → Prop)
-    (esse : Respect) : Prop :=
-  ∀ y r, MovedIn y r → ∃ c, c ≠ y ∧ CausesIn c y esse
+/-- A mover of another that is being moved in some respect has its being caused
+by something other than itself. Classically this is the contrapositive of "a
+mover of another whose being nothing else causes is moved in no respect"; the
+positive form is constructively stronger. -/
+def MovedMoverIsCaused {Being : Sort u} {Respect : Sort v}
+    (MovedIn : Being → Respect → Prop) (MovesIn : Being → Being → Respect → Prop)
+    (CausesIn : Being → Being → Respect → Prop) (esse : Respect) : Prop :=
+  ∀ y x r r', y ≠ x → MovesIn y x r → MovedIn y r' → ∃ c, c ≠ y ∧ CausesIn c y esse
 
 /-- Reciprocal moved movers (`4f6ac439`): two distinct beings each move the
 other while each is being moved in the respect in which the other moves it. -/

@@ -24,12 +24,12 @@ theorem cstarOfOperation {B R : Type} (MovedIn : B → R → Prop) (MovesIn : B 
   sorry
 
 /-- The scope bridge `b3573a61` from C\* for caused movers and the premise that
-whatever is moved has its being caused by another. -/
+a moved mover of another has its being caused by another. -/
 theorem relevantRespectOfCaused {B R : Type} (MovedIn : B → R → Prop)
     (MovesIn : B → B → R → Prop) (CausesIn : B → B → R → Prop) (esse : R)
     (RelevantTo : B → B → R → R → Prop)
     (hCaused : CausedMoverMovedInRelevantRespect MovedIn MovesIn CausesIn esse RelevantTo)
-    (hMovedCaused : MovedIsCaused MovedIn CausesIn esse) :
+    (hMovedCaused : MovedMoverIsCaused MovedIn MovesIn CausesIn esse) :
     RelevantRespectCoversEveryMovedMover MovedIn MovesIn RelevantTo := by
   sorry
 

@@ -36,9 +36,10 @@ definitions = ["55a974ea-1ba1-5df4-a03b-1fbaa388dfeb", "a7904c82-eef8-58e4-ac7c-
 disambiguations = ["c097f626-c39c-57cd-ade4-ebb2dd900a4c", "a59fd0ac-f276-528d-8dc3-c3eddd331ac7", "00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
 
 [[statement]]
-id = "Whatever is MOTION_1 moved in some respect has its being caused by another"
-lean = "MovedIsCaused"
-paraphrase = "OPEN analyst premise, attribution deferred: if y is being moved (MOTION_1) in some respect r, then something c distinct from y causes y's being (CausesIn c y esse, CAUSE_2). Classically it is the contrapositive of 'a being whose being nothing else causes is moved in no respect'; the positive form keeps the extension constructive. It is the complement that extends C* for caused movers (e3afc8a3-b51b-4f44-a093-ce27cf8e1f0a) to every moved mover (b3573a61-ec8b-5aba-8b5f-f1d03611e7f6). The 2026-11-17 esse-composition reasoning in docs/notes/prima-via-strength-consumers.md is proposed to supply its contrapositive from 4be9a4ac, d8024a38 and ca07cae9; that derivation is not registered. It is the premise that passes from the CAUSE_2 guard to MOTION_1 being moved, declared as the sense bridge of the extension."
+id = "a1df8f1a-cfef-42fd-8f4c-f35ca4d32b57"
+label = "A MOTION_1 moved mover of another has its being caused by another"
+lean = "MovedMoverIsCaused"
+paraphrase = "OPEN analyst premise, attribution deferred: if y moves x (distinct from y) in some respect r (MovesIn, CAUSE_1) and y is being moved (MOTION_1) in some respect r', then something c distinct from y causes y's being (CausesIn c y esse, CAUSE_2). Scope: movers of another only, the scope in which the extension uses it. Classically it is the contrapositive of 'a mover of another whose being nothing else causes is moved in no respect'; the positive form is constructively stronger, so obtaining it from that negative form needs excluded middle. It is the complement that extends C* for caused movers (e3afc8a3-b51b-4f44-a093-ce27cf8e1f0a) to every moved mover of another (b3573a61-ec8b-5aba-8b5f-f1d03611e7f6). The 2026-11-17 esse-composition reasoning in docs/notes/prima-via-strength-consumers.md is proposed to supply the negative form from 4be9a4ac, d8024a38 and ca07cae9; that derivation is not registered. It contains both the CAUSE_1 moving and the CAUSE_2 guard and is declared as a sense bridge of the extension."
 definitions = ["211a6432-8b8f-53ed-85e3-75173bb15b24", "a7904c82-eef8-58e4-ac7c-0bb93374cb43"]
 disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b", "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
 
@@ -68,20 +69,20 @@ sense_bridges = [
 ]
 axioms = []
 rule = "Operation potency, actualized by acting, is being moved (Physics III.1); the operation respect is relevant"
-meaning = "New non-transcription conditional derivation (the unified derivation of docs/notes/caused-mover-cstar.md, section 2). Let y, whose being another causes, move x in r. By 631e014f the moving is an operation in a respect o in which y is in potency; by d791628f acting actualizes that potency as such; by the Physics III.1 analysis 0628359b y is being moved in o; by 7bf380c6 o is relevant to the moving. The hypothesis that y is moved in some respect is not used. The relevance enters only through 7bf380c6; without it the first three premises give only that y is being moved in some respect (the content of 777646a5). 631e014f carries the passage from the CAUSE_2 guard to CAUSE_1 moving. Under POTENCY_1, 631e014f fails for steady exercise of a retained power (section 3), so this route does not reach the retained-state movers. All premises stay OPEN. No premise is established."
+meaning = "New non-transcription conditional derivation (the unified derivation of docs/notes/caused-mover-cstar.md, section 2). Let y, whose being another causes, move x in r. By 631e014f the moving is an operation in a respect o in which y is in potency; by d791628f acting actualizes that potency as such; by the Physics III.1 analysis 0628359b y is being moved in o; by 7bf380c6 o is relevant to the moving. The hypothesis that y is moved in some respect is not used. The relevance enters only through 7bf380c6; without it the first three premises give only that y is being moved in some respect (the caused-mover analogue of the God-indexed 777646a5). 631e014f carries the passage from the CAUSE_2 guard to CAUSE_1 moving. Under POTENCY_1, 631e014f fails for steady exercise of a retained power (section 3), so this route does not reach the retained-state movers. All premises stay OPEN. No premise is established."
 
 [[argument]]
 id = "The relevant-respect scope bridge from C* for caused movers"
 theorem = "relevantRespectOfCaused"
-premises = ["e3afc8a3-b51b-4f44-a093-ce27cf8e1f0a", "Whatever is MOTION_1 moved in some respect has its being caused by another"]
+premises = ["e3afc8a3-b51b-4f44-a093-ce27cf8e1f0a", "a1df8f1a-cfef-42fd-8f4c-f35ca4d32b57"]
 conclusion = "b3573a61-ec8b-5aba-8b5f-f1d03611e7f6"
 sense_bridges = [
-  { term = "CAUSE", from = "CAUSE_2", to = "CAUSE_1", statement_id = "Whatever is MOTION_1 moved in some respect has its being caused by another" },
+  { term = "CAUSE", from = "CAUSE_2", to = "CAUSE_1", statement_id = "a1df8f1a-cfef-42fd-8f4c-f35ca4d32b57" },
   { term = "CAUSE", from = "CAUSE_2", to = "CAUSE_1", statement_id = "e3afc8a3-b51b-4f44-a093-ce27cf8e1f0a" },
 ]
 axioms = []
 rule = "The moved mover is caused, so C* for caused movers applies"
-meaning = "New non-transcription conditional derivation of the scope bridge b3573a61 (C* for every moved mover). A mover of another that is being moved in some respect has its being caused by another, so C* for caused movers applies to it. Constructive: no case split is needed. Both premises stay OPEN; the second is proposed to follow from the 2026-11-17 esse-composition reasoning, not registered. No premise is established."
+meaning = "New non-transcription conditional derivation of the scope bridge b3573a61 (C* for every moved mover). A mover of another that is being moved in some respect has its being caused by another, so C* for caused movers applies to it. Constructive: no case split is needed. Both premises stay OPEN; the second is proposed to follow classically from the 2026-11-17 esse-composition reasoning, which is not registered. No premise is established."
 
 [[argument]]
 id = "The strong second-mover premise and the regress exclude reciprocal moved movers"

@@ -30,16 +30,16 @@ theorem cstarOfOperation {B R : Type} (MovedIn : B → R → Prop) (MovesIn : B 
   exact ⟨o, (hMotion y o).2 ⟨hPot, hActing y x r o hMoves hOp⟩, hRelevant y x r o hMoves hOp⟩
 
 /-- The scope bridge `b3573a61` from C\* for caused movers and the premise that
-whatever is moved has its being caused by another. -/
+a moved mover of another has its being caused by another. -/
 theorem relevantRespectOfCaused {B R : Type} (MovedIn : B → R → Prop)
     (MovesIn : B → B → R → Prop) (CausesIn : B → B → R → Prop) (esse : R)
     (RelevantTo : B → B → R → R → Prop)
     (hCaused : CausedMoverMovedInRelevantRespect MovedIn MovesIn CausesIn esse RelevantTo)
-    (hMovedCaused : MovedIsCaused MovedIn CausesIn esse) :
+    (hMovedCaused : MovedMoverIsCaused MovedIn MovesIn CausesIn esse) :
     RelevantRespectCoversEveryMovedMover MovedIn MovesIn RelevantTo := by
   intro y x r hne hMoves hMoved
   obtain ⟨r', h⟩ := hMoved
-  exact hCaused y x r (hMovedCaused y r' h) hne hMoves ⟨r', h⟩
+  exact hCaused y x r (hMovedCaused y x r r' hne hMoves h) hne hMoves ⟨r', h⟩
 
 /-- The strong per se premise (`1e47e6db`) and the per se regress (`226c38f6`)
 exclude reciprocal moved movers: each would be a per se link of the other, a

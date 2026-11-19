@@ -22,7 +22,10 @@ The sense is MOTION_3 of DISAMB-MOTION (`HeldMotion`). It is not MOTION_1
 adopted POTENCY_1, what is held in `r` is in act in `r` and so not in potency to
 it. `Control.Certificate` (parts 4 and 5) checks that a MOTION_1 premise of the
 prima via (`MovedOnlyAsInPotencyReading`) fails for MOTION_3 whenever anything
-is held, and that no being is moved in the same respect in both senses.
+is held, and that, where that premise holds of a MOTION_1 relation with one act
+predicate shared by both senses, no being is moved in the same respect in both
+senses. "Potential" in the proposal is read only as "actualized by another":
+`HeldMotion` has no potency or lackability clause.
 
 Primitives (explicitly identified):
 * `Holding.ActualizesNow z x r`: `z` presently actualizes `x` in `r`. `x`'s
