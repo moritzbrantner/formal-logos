@@ -9,8 +9,7 @@
   "meaning": "All alternatives in a fixed finite-record cell share the prefix but admit every future state pair. Any one law with a forbidden future transition fails to hold of every admitted history; any deterministic such law fails. No inference from no ultimate ground to this ontic alternative range, no actual law choice and no normative scientific entitlement is established.",
   "definition_ids": [
     "10d0fb41-49a3-404f-898f-caabd0d0324e",
-    "5f8284ad-ca15-536c-a0b2-8bb51186b7ac",
-    "58d12f26-3402-5f67-b768-3c71f3381894"
+    "5f8284ad-ca15-536c-a0b2-8bb51186b7ac"
   ],
   "disambiguation_ids": [
     "b6e7ec07-9a8e-51c4-a9f8-c9b8e9922ac5"
