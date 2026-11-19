@@ -330,6 +330,63 @@ pub fn signature_binders(block: &str) -> Vec<String> {
     binders
 }
 
+/// The field names of a `structure` or `class` block: the names before `:`
+/// on each line after `where`, outside comments. Fields are the parameters
+/// of the structure's constructor, so a frame field can be tagged as a
+/// parameter of the structure. Empty for any other declaration.
+pub fn structure_fields(block: &str) -> Vec<String> {
+    let head = block.trim_start();
+    let head = head
+        .strip_prefix("@[")
+        .and_then(|rest| rest.split_once(']'))
+        .map_or(head, |(_, rest)| rest.trim_start());
+    let keyword = head
+        .split_whitespace()
+        .find(|word| !matches!(*word, "private" | "protected" | "public" | "noncomputable"));
+    if !matches!(keyword, Some("structure" | "class")) {
+        return Vec::new();
+    }
+    let Some(start) = block
+        .match_indices("where")
+        .find(|(index, _)| {
+            let before = block[..*index].chars().next_back();
+            let after = block[index + 5..].chars().next();
+            before.is_none_or(char::is_whitespace) && after.is_none_or(char::is_whitespace)
+        })
+        .map(|(index, _)| index + 5)
+    else {
+        return Vec::new();
+    };
+    let mut fields = Vec::new();
+    let mut comment = 0usize;
+    for line in block[start..].lines() {
+        let mut code = String::new();
+        let mut chars = line.chars().peekable();
+        while let Some(c) = chars.next() {
+            match (c, chars.peek()) {
+                ('/', Some('-')) => {
+                    chars.next();
+                    comment += 1;
+                }
+                ('-', Some('/')) if comment > 0 => {
+                    chars.next();
+                    comment -= 1;
+                }
+                ('-', Some('-')) if comment == 0 => break,
+                _ if comment == 0 => code.push(c),
+                _ => {}
+            }
+        }
+        if let Some((names, _)) = code.trim().split_once(':')
+            && !names.is_empty()
+            && names.split_whitespace().all(is_ident)
+        {
+            fields.extend(names.split_whitespace().map(str::to_owned));
+        }
+    }
+    fields
+}
+
 /// `x y : T` → (`x y`, `T`), at the group's top level.
 fn split_binder(group: &str) -> Option<(&str, &str)> {
     let mut depth = 0usize;
@@ -381,7 +438,11 @@ pub fn validate<'a>(
             .entry(parameter.declaration.clone())
             .or_insert_with(|| {
                 lean.qualified_block(&parameter.declaration)
-                    .map(|(_, _, block)| signature_binders(&block))
+                    .map(|(_, _, block)| {
+                        let mut found = signature_binders(&block);
+                        found.extend(structure_fields(&block));
+                        found
+                    })
             });
         let Some(found) = found else {
             return Err(format!(
@@ -428,6 +489,16 @@ mod tests {
         assert_eq!(signature_binders(block), ["B"]);
         let block = "inductive BroadMotion {B R : Type} (moved : B → R → Prop) (x : B) (r : R) : Prop\n  | intro : moved x r → BroadMotion moved x r";
         assert_eq!(signature_binders(block), ["B", "R", "moved", "x", "r"]);
+    }
+
+    #[test]
+    fn structure_fields_are_constructor_parameters() {
+        let block = "structure CausalityFrame (W B T R : Type) where\n  /-- `CausesIn c x r`: c causes\n  x's being r. -/\n  CausesIn : B → B → R → Prop\n  -- a : comment\n  esse : R\n  PriorSimply DependsForBeing : B → B → Prop";
+        assert_eq!(
+            structure_fields(block),
+            ["CausesIn", "esse", "PriorSimply", "DependsForBeing"]
+        );
+        assert!(structure_fields("def where_ (x : Nat) : Prop := True").is_empty());
     }
 
     fn disambiguation(id: &str, term: &str, senses: Value) -> Obj {

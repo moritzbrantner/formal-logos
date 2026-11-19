@@ -68,6 +68,10 @@
         {
           "declaration": "TruthCore.Causality.ActPriorityThetaEight.FirstBeingIsInNoWayInPotencyAt",
           "parameter": "PriorSimply"
+        },
+        {
+          "declaration": "TruthCore.Causality.Frame.CausalityFrame",
+          "parameter": "PriorSimply"
         }
       ]
     },
