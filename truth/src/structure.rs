@@ -377,6 +377,38 @@ impl Sources {
     /// Python `module_for`: the source module of the longest declared name
     /// that is `declaration` or a prefix of it; Lean still resolves it.
     pub fn module_for(&self, declaration: &str) -> Result<String, String> {
+        let Some(paths) = self.best_paths(declaration) else {
+            return Err(format!("cannot locate project module for {declaration}"));
+        };
+        if paths.len() != 1 {
+            let shown: Vec<String> = paths.iter().map(|p| pyfmt::repr_str(p)).collect();
+            return Err(format!(
+                "ambiguous source module for {declaration}: [{}]",
+                shown.join(", ")
+            ));
+        }
+        let path = PathBuf::from(paths.into_iter().next().expect("one path"));
+        Ok(self.module_of(&path))
+    }
+
+    /// Every module [`Sources::module_for`] chooses among: one when the
+    /// location is unambiguous, several when it is ambiguous (a Challenge
+    /// and its Solution), none when nothing declares it.
+    pub fn modules_for(&self, declaration: &str) -> Vec<String> {
+        self.best_paths(declaration)
+            .unwrap_or_default()
+            .into_iter()
+            .map(|path| self.module_of(Path::new(&path)))
+            .collect()
+    }
+
+    fn module_of(&self, path: &Path) -> String {
+        relative(&self.root, &path.with_extension("")).replace('/', ".")
+    }
+
+    /// The files declaring the longest name that is `declaration` or a
+    /// prefix of it.
+    fn best_paths(&self, declaration: &str) -> Option<BTreeSet<String>> {
         let mut candidates: Vec<(usize, &PathBuf)> = Vec::new();
         for (path, names) in &self.files {
             for name in names {
@@ -389,24 +421,14 @@ impl Sources {
                 }
             }
         }
-        let Some(best) = candidates.iter().map(|(length, _)| *length).max() else {
-            return Err(format!("cannot locate project module for {declaration}"));
-        };
-        let paths: BTreeSet<String> = candidates
-            .iter()
-            .filter(|(length, _)| *length == best)
-            .map(|(_, path)| path.display().to_string())
-            .collect();
-        if paths.len() != 1 {
-            let shown: Vec<String> = paths.iter().map(|p| pyfmt::repr_str(p)).collect();
-            return Err(format!(
-                "ambiguous source module for {declaration}: [{}]",
-                shown.join(", ")
-            ));
-        }
-        let path = PathBuf::from(paths.into_iter().next().expect("one path"));
-        let module = relative(&self.root, &path.with_extension(""));
-        Ok(module.replace('/', "."))
+        let best = candidates.iter().map(|(length, _)| *length).max()?;
+        Some(
+            candidates
+                .iter()
+                .filter(|(length, _)| *length == best)
+                .map(|(_, path)| path.display().to_string())
+                .collect(),
+        )
     }
 }
 

@@ -1,0 +1,79 @@
+{
+  "theorem": "TruthCore.Results.Causality.CausalMapsBatch1.nothingMovesExceptInAct",
+  "module": "TruthCore.Results.Causality.CausalMapsBatch1.Solution",
+  "reports": [
+    {
+      "omitted": "hEM",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "unresolved",
+      "note": "no model with carriers of size \u2264 2; this does not show the premise is needed (the premise itself holds in every model within these bounds)"
+    },
+    {
+      "omitted": "hCause",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 2,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.nothingMovesExceptInAct.omit_hCause\n/-! Omission model for `hCause`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 2\nabbrev R := Fin 1\nabbrev MovesIn : B \u2192 B \u2192 R \u2192 Prop := fun x0 x1 x2 => (x0 = 0 \u2227 x1 = 1 \u2227 x2 = 0)\nabbrev CausesIn : B \u2192 B \u2192 R \u2192 Prop := fun _ _ _ => False\nabbrev InAct : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev MoreIn : R \u2192 B \u2192 B \u2192 Prop := fun _ _ _ => False\nabbrev PartOf : B \u2192 B \u2192 Prop := fun _ _ => False\ntheorem certificate :\n    (TruthCore.Logic.ExcludedMiddle) \u2227\n    \u00ac (TruthCore.Causality.CausalMapsBatch1.MoverCausesWhatItMovesTo MovesIn CausesIn) \u2227\n    (TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading CausesIn MoreIn) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.MoreSuchHasThePerfectionReading InAct MoreIn) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.SelfMoverMovesByADistinctPart MovesIn PartOf) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.WholeInActThroughItsPart PartOf InAct) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.MovesOnlyAsInActReading MovesIn InAct) := by\n  delta TruthCore.Logic.ExcludedMiddle TruthCore.Causality.CausalMapsBatch1.MoverCausesWhatItMovesTo TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading TruthCore.Latin.Aquinas.SummaTheologiae.MoreSuchHasThePerfectionReading TruthCore.Causality.CausalMapsBatch1.SelfMoverMovesByADistinctPart TruthCore.Causality.CausalMapsBatch1.WholeInActThroughItsPart TruthCore.Latin.Aquinas.SummaTheologiae.MovesOnlyAsInActReading\n  refine \u27e8?_, ?_, ?_, ?_, ?_, ?_, ?_\u27e9 <;> first | decide | exact Classical.em\nend Countermodel.nothingMovesExceptInAct.omit_hCause"
+    },
+    {
+      "omitted": "hMore",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 2,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.nothingMovesExceptInAct.omit_hMore\n/-! Omission model for `hMore`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 2\nabbrev R := Fin 1\nabbrev MovesIn : B \u2192 B \u2192 R \u2192 Prop := fun x0 x1 x2 => (x0 = 1 \u2227 x1 = 0 \u2227 x2 = 0)\nabbrev CausesIn : B \u2192 B \u2192 R \u2192 Prop := fun x0 x1 x2 => (x0 = 1 \u2227 x1 = 0 \u2227 x2 = 0)\nabbrev InAct : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev MoreIn : R \u2192 B \u2192 B \u2192 Prop := fun _ _ _ => False\nabbrev PartOf : B \u2192 B \u2192 Prop := fun _ _ => False\ntheorem certificate :\n    (TruthCore.Logic.ExcludedMiddle) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.MoverCausesWhatItMovesTo MovesIn CausesIn) \u2227\n    \u00ac (TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading CausesIn MoreIn) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.MoreSuchHasThePerfectionReading InAct MoreIn) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.SelfMoverMovesByADistinctPart MovesIn PartOf) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.WholeInActThroughItsPart PartOf InAct) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.MovesOnlyAsInActReading MovesIn InAct) := by\n  delta TruthCore.Logic.ExcludedMiddle TruthCore.Causality.CausalMapsBatch1.MoverCausesWhatItMovesTo TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading TruthCore.Latin.Aquinas.SummaTheologiae.MoreSuchHasThePerfectionReading TruthCore.Causality.CausalMapsBatch1.SelfMoverMovesByADistinctPart TruthCore.Causality.CausalMapsBatch1.WholeInActThroughItsPart TruthCore.Latin.Aquinas.SummaTheologiae.MovesOnlyAsInActReading\n  refine \u27e8?_, ?_, ?_, ?_, ?_, ?_, ?_\u27e9 <;> first | decide | exact Classical.em\nend Countermodel.nothingMovesExceptInAct.omit_hMore"
+    },
+    {
+      "omitted": "hHas",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 2,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.nothingMovesExceptInAct.omit_hHas\n/-! Omission model for `hHas`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 2\nabbrev R := Fin 1\nabbrev MovesIn : B \u2192 B \u2192 R \u2192 Prop := fun x0 x1 x2 => (x0 = 1 \u2227 x1 = 0 \u2227 x2 = 0)\nabbrev CausesIn : B \u2192 B \u2192 R \u2192 Prop := fun x0 x1 x2 => (x0 = 1 \u2227 x1 = 0 \u2227 x2 = 0)\nabbrev InAct : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev MoreIn : R \u2192 B \u2192 B \u2192 Prop := fun x0 x1 x2 => (x0 = 0 \u2227 x1 = 1 \u2227 x2 = 0)\nabbrev PartOf : B \u2192 B \u2192 Prop := fun _ _ => False\ntheorem certificate :\n    (TruthCore.Logic.ExcludedMiddle) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.MoverCausesWhatItMovesTo MovesIn CausesIn) \u2227\n    (TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading CausesIn MoreIn) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.MoreSuchHasThePerfectionReading InAct MoreIn) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.SelfMoverMovesByADistinctPart MovesIn PartOf) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.WholeInActThroughItsPart PartOf InAct) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.MovesOnlyAsInActReading MovesIn InAct) := by\n  delta TruthCore.Logic.ExcludedMiddle TruthCore.Causality.CausalMapsBatch1.MoverCausesWhatItMovesTo TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading TruthCore.Latin.Aquinas.SummaTheologiae.MoreSuchHasThePerfectionReading TruthCore.Causality.CausalMapsBatch1.SelfMoverMovesByADistinctPart TruthCore.Causality.CausalMapsBatch1.WholeInActThroughItsPart TruthCore.Latin.Aquinas.SummaTheologiae.MovesOnlyAsInActReading\n  refine \u27e8?_, ?_, ?_, ?_, ?_, ?_, ?_\u27e9 <;> first | decide | exact Classical.em\nend Countermodel.nothingMovesExceptInAct.omit_hHas"
+    },
+    {
+      "omitted": "hSelf",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 1,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.nothingMovesExceptInAct.omit_hSelf\n/-! Omission model for `hSelf`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 1\nabbrev R := Fin 1\nabbrev MovesIn : B \u2192 B \u2192 R \u2192 Prop := fun _ _ _ => True\nabbrev CausesIn : B \u2192 B \u2192 R \u2192 Prop := fun _ _ _ => True\nabbrev InAct : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev MoreIn : R \u2192 B \u2192 B \u2192 Prop := fun _ _ _ => False\nabbrev PartOf : B \u2192 B \u2192 Prop := fun _ _ => False\ntheorem certificate :\n    (TruthCore.Logic.ExcludedMiddle) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.MoverCausesWhatItMovesTo MovesIn CausesIn) \u2227\n    (TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading CausesIn MoreIn) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.MoreSuchHasThePerfectionReading InAct MoreIn) \u2227\n    \u00ac (TruthCore.Causality.CausalMapsBatch1.SelfMoverMovesByADistinctPart MovesIn PartOf) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.WholeInActThroughItsPart PartOf InAct) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.MovesOnlyAsInActReading MovesIn InAct) := by\n  delta TruthCore.Logic.ExcludedMiddle TruthCore.Causality.CausalMapsBatch1.MoverCausesWhatItMovesTo TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading TruthCore.Latin.Aquinas.SummaTheologiae.MoreSuchHasThePerfectionReading TruthCore.Causality.CausalMapsBatch1.SelfMoverMovesByADistinctPart TruthCore.Causality.CausalMapsBatch1.WholeInActThroughItsPart TruthCore.Latin.Aquinas.SummaTheologiae.MovesOnlyAsInActReading\n  refine \u27e8?_, ?_, ?_, ?_, ?_, ?_, ?_\u27e9 <;> first | decide | exact Classical.em\nend Countermodel.nothingMovesExceptInAct.omit_hSelf"
+    },
+    {
+      "omitted": "hWhole",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 2,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.nothingMovesExceptInAct.omit_hWhole\n/-! Omission model for `hWhole`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 2\nabbrev R := Fin 1\nabbrev MovesIn : B \u2192 B \u2192 R \u2192 Prop := fun x0 x1 x2 =>\n  (x0 = 0 \u2227 x1 = 1 \u2227 x2 = 0) \u2228\n  (x0 = 1 \u2227 x1 = 1 \u2227 x2 = 0)\nabbrev CausesIn : B \u2192 B \u2192 R \u2192 Prop := fun x0 x1 x2 =>\n  (x0 = 0 \u2227 x1 = 1 \u2227 x2 = 0) \u2228\n  (x0 = 1 \u2227 x1 = 1 \u2227 x2 = 0)\nabbrev InAct : B \u2192 R \u2192 Prop := fun x0 x1 => (x0 = 0 \u2227 x1 = 0)\nabbrev MoreIn : R \u2192 B \u2192 B \u2192 Prop := fun x0 x1 x2 => (x0 = 0 \u2227 x1 = 0 \u2227 x2 = 1)\nabbrev PartOf : B \u2192 B \u2192 Prop := fun x0 x1 => (x0 = 0 \u2227 x1 = 1)\ntheorem certificate :\n    (TruthCore.Logic.ExcludedMiddle) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.MoverCausesWhatItMovesTo MovesIn CausesIn) \u2227\n    (TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading CausesIn MoreIn) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.MoreSuchHasThePerfectionReading InAct MoreIn) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.SelfMoverMovesByADistinctPart MovesIn PartOf) \u2227\n    \u00ac (TruthCore.Causality.CausalMapsBatch1.WholeInActThroughItsPart PartOf InAct) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.MovesOnlyAsInActReading MovesIn InAct) := by\n  delta TruthCore.Logic.ExcludedMiddle TruthCore.Causality.CausalMapsBatch1.MoverCausesWhatItMovesTo TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading TruthCore.Latin.Aquinas.SummaTheologiae.MoreSuchHasThePerfectionReading TruthCore.Causality.CausalMapsBatch1.SelfMoverMovesByADistinctPart TruthCore.Causality.CausalMapsBatch1.WholeInActThroughItsPart TruthCore.Latin.Aquinas.SummaTheologiae.MovesOnlyAsInActReading\n  refine \u27e8?_, ?_, ?_, ?_, ?_, ?_, ?_\u27e9 <;> first | decide | exact Classical.em\nend Countermodel.nothingMovesExceptInAct.omit_hWhole"
+    },
+    {
+      "omitted": null,
+      "kind": "witness",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 1,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.nothingMovesExceptInAct.witness\n/-! Joint witness: every premise and the conclusion hold. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 1\nabbrev R := Fin 1\nabbrev MovesIn : B \u2192 B \u2192 R \u2192 Prop := fun _ _ _ => False\nabbrev CausesIn : B \u2192 B \u2192 R \u2192 Prop := fun _ _ _ => False\nabbrev InAct : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev MoreIn : R \u2192 B \u2192 B \u2192 Prop := fun _ _ _ => False\nabbrev PartOf : B \u2192 B \u2192 Prop := fun _ _ => False\ntheorem certificate :\n    (TruthCore.Logic.ExcludedMiddle) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.MoverCausesWhatItMovesTo MovesIn CausesIn) \u2227\n    (TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading CausesIn MoreIn) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.MoreSuchHasThePerfectionReading InAct MoreIn) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.SelfMoverMovesByADistinctPart MovesIn PartOf) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.WholeInActThroughItsPart PartOf InAct) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.MovesOnlyAsInActReading MovesIn InAct) := by\n  delta TruthCore.Logic.ExcludedMiddle TruthCore.Causality.CausalMapsBatch1.MoverCausesWhatItMovesTo TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading TruthCore.Latin.Aquinas.SummaTheologiae.MoreSuchHasThePerfectionReading TruthCore.Causality.CausalMapsBatch1.SelfMoverMovesByADistinctPart TruthCore.Causality.CausalMapsBatch1.WholeInActThroughItsPart TruthCore.Latin.Aquinas.SummaTheologiae.MovesOnlyAsInActReading\n  refine \u27e8?_, ?_, ?_, ?_, ?_, ?_, ?_\u27e9 <;> first | decide | exact Classical.em\nend Countermodel.nothingMovesExceptInAct.witness"
+    }
+  ]
+}

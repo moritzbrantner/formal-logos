@@ -159,6 +159,22 @@ jobs:
       - name: Check that result proofs use every listed premise
         if: needs.comparator-plan.outputs.lean == 'true'
         run: target/release/truth unused-premises --strict
+      # `truth countermodel` (docs/countermodels.md) rediscovers the hand-written
+      # omission certificates of four results and Lean accepts every one; the solver
+      # and its golden replays run offline in the truth-cli job.
+      - name: Rediscover omission countermodels with Lean
+        if: needs.comparator-plan.outputs.lean == 'true'
+        run: |
+          set -euo pipefail
+          for theorem in \
+            SelfOperationLife.pureActLives \
+            PerfectionOfBeing.actualityOnlyInsofarAsBeing \
+            NecessaryBeingInAct.necessaryBeingInAct \
+            ComponentFirstness.noComponentFirst; do
+            target/release/truth --json countermodel --all "TruthCore.Results.Causality.$theorem" \
+              | jq -e '.reports | length > 1 and all(.status == "lean-checked")' >/dev/null \
+              || { echo "countermodel rediscovery failed for $theorem"; exit 1; }
+          done
       - name: Test corpus tooling and media-span and web-snapshot evidence offline
         env:
           TRUTH_CORE_LEAN_TESTS: ${{ needs.comparator-plan.outputs.lean }}

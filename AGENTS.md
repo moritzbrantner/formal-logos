@@ -276,6 +276,13 @@ conditional results, recorded judgments and issues with their references;
 they are advisory and certify nothing, and a missing hit or snapshot is not
 evidence that no prior work exists (truth/README.md, "`brief` and `novelty`").
 
+Before proposing a derivation or reusing a proposition in a new argument, run
+`target/release/truth semantics <ID>` (definitions, senses, and the sense verdicts
+of connected arguments) and the preflight `truth semantics --premise … --conclusion …`.
+Split an unbridged mixing per sense, or bridge it by an explicit `sense_bridges`
+premise, before formalization; `argument_batch.py records`, `truth check` and
+`bind-check` then preserve and enforce it (truth/README.md, "`semantics`").
+
 For every premise touched, inspect `target/release/truth dossier <STMT-ID>`
 (the explorer links the same generated dossier from the statement page). Before
 handoff, update `corpus/attempts/` for failed derivations, rejected readings,
@@ -527,7 +534,7 @@ See `docs/corpus-model.md` and `docs/source-evidence.md` for the entity and veri
 
 When configuration comparison is the selected method, follow [the configuration elimination loop](docs/configuration-elimination-loop.md): reuse certified results and finite models, seek verified contradictory premise sets and investigate minimality where useful, compose proven implications, persist attempts and countermodels, and compare exact root-frontier premises before/after. Configuration labels are relative to their explicit formal semantics; absence of a model or proof is unresolved, not an impossibility claim. This is one method within the systematic loop and does not change frontier closure rules (#477).
 
-Find omission countermodels with `python3 scripts/countermodel.py THEOREM [--omit HYP] [--all] [--size K]` instead of writing them by hand. It proposes finite models and has Lean check a `decide` certificate; "unresolved" is not proof that a premise is needed ([countermodels](docs/countermodels.md)).
+Find omission countermodels with `target/release/truth countermodel THEOREM [--omit HYP] [--all] [--size K]` instead of writing them by hand. It proposes finite models and has Lean check a `decide` certificate; "unresolved" is not proof that a premise is needed ([countermodels](docs/countermodels.md)). Before writing a Solution by hand, `target/release/truth prove-sweep` tries a fixed tactic portfolio on the frozen Challenges and flags likely transcriptions; it is advisory and writes nothing ([prove sweep](docs/prove-sweep.md)).
 
 ## Argument-first investigation
 

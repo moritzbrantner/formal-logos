@@ -198,6 +198,19 @@ pub struct BriefArgs {
     pub statement: Option<String>,
 }
 
+/// `semantics --conclusion STATEMENT`, `--bridge STATEMENT[@SENSE,SENSE]` and
+/// `--definition DEF`
+/// (the preflight; `--premise` is shared with `configurations`).
+#[derive(Default)]
+pub struct SemanticsArgs {
+    /// Whether either was given.
+    pub flags: bool,
+    pub conclusion: Option<String>,
+    pub bridges: Vec<String>,
+    /// `--definition DEF`, repeatable: argument-level `definition_ids`.
+    pub definitions: Vec<String>,
+}
+
 /// Every option of every command, parsed in one pass in token order.
 pub struct Args {
     pub machine: bool,
@@ -226,8 +239,40 @@ pub struct Args {
     pub tree: TreeArgs,
     pub index: IndexArgs,
     pub brief: BriefArgs,
+    pub semantics: SemanticsArgs,
     /// `--profile-module MODULE` (`bridge-experiments`)
     pub profile_module: Option<String>,
+    pub countermodel: CountermodelArgs,
+    pub sweep: SweepArgs,
+    /// `--module MODULE`, repeatable (`countermodel` takes one, `prove-sweep`
+    /// any number).
+    pub modules: Vec<String>,
+}
+
+/// The `countermodel` options (`--all` is the shared research flag).
+#[derive(Default)]
+pub struct CountermodelArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    /// `--omit HYP`, repeatable: a binder name or 1-based position.
+    pub omit: Vec<String>,
+    /// `--size N`: the largest carrier size tried.
+    pub size: Option<usize>,
+    /// `--no-check`: do not have Lean check the candidates.
+    pub no_check: bool,
+}
+
+/// The `prove-sweep` options.
+#[derive(Default)]
+pub struct SweepArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    /// `--theorem NAME`, repeatable.
+    pub theorems: Vec<String>,
+    /// `--heartbeats N`: the `maxHeartbeats` of each attempt.
+    pub heartbeats: Option<usize>,
+    /// `--batch N`: Challenges per Lean run.
+    pub batch: Option<usize>,
 }
 
 /// The shared options a command accepts besides `--root` and `--json`;
@@ -294,7 +339,11 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         tree: TreeArgs::default(),
         index: IndexArgs::default(),
         brief: BriefArgs::default(),
+        semantics: SemanticsArgs::default(),
         profile_module: None,
+        countermodel: CountermodelArgs::default(),
+        sweep: SweepArgs::default(),
+        modules: Vec::new(),
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -446,6 +495,22 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                     parsed.brief.statement = Some(value);
                 }
             }
+            "--conclusion" | "--bridge" | "--definition" => {
+                parsed.semantics.flags = true;
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .filter(|value| !value.is_empty())
+                    .ok_or_else(|| usage(format!("{arg} requires a statement ID")))?
+                    .to_owned();
+                if arg == "--conclusion" {
+                    parsed.semantics.conclusion = Some(value);
+                } else if arg == "--bridge" {
+                    parsed.semantics.bridges.push(value);
+                } else {
+                    parsed.semantics.definitions.push(value);
+                }
+            }
             "--profile-module" => {
                 parsed.profile_module = Some(
                     args.next()
@@ -453,6 +518,43 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                         .ok_or_else(|| usage("--profile-module requires a Lean module"))?
                         .to_owned(),
                 );
+            }
+            "--no-check" => {
+                parsed.countermodel.flags = true;
+                parsed.countermodel.no_check = true;
+            }
+            "--size" => {
+                parsed.countermodel.flags = true;
+                parsed.countermodel.size =
+                    Some(number(args.next().and_then(|value| value.to_str()), arg)?);
+            }
+            "--heartbeats" | "--batch" => {
+                parsed.sweep.flags = true;
+                let value = Some(number(args.next().and_then(|value| value.to_str()), arg)?);
+                if arg == "--heartbeats" {
+                    parsed.sweep.heartbeats = value;
+                } else {
+                    parsed.sweep.batch = value;
+                }
+            }
+            "--omit" | "--module" | "--theorem" => {
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .filter(|value| !value.is_empty())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                    .to_owned();
+                match arg {
+                    "--omit" => {
+                        parsed.countermodel.flags = true;
+                        parsed.countermodel.omit.push(value);
+                    }
+                    "--theorem" => {
+                        parsed.sweep.flags = true;
+                        parsed.sweep.theorems.push(value);
+                    }
+                    _ => parsed.modules.push(value),
+                }
             }
             "--strict" => parsed.proof.strict = true,
             "--review" => parsed.proof.review = true,
