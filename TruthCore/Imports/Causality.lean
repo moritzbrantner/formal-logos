@@ -105,6 +105,8 @@ public import TruthCore.Causality.FiniteBranching
 public import TruthCore.Causality.FiniteNecessaryUnion
 public import TruthCore.Causality.FiniteRestriction
 public import TruthCore.Causality.FixedDurationGrimReaper
+public import TruthCore.Causality.Frame
+public import TruthCore.Causality.FrameAdapters
 public import TruthCore.Causality.FullFirstCause
 public import TruthCore.Causality.FullnessCandidates
 public import TruthCore.Causality.GodMaximalCausal

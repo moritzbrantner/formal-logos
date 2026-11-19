@@ -166,6 +166,15 @@
             "_",
             "esse"
           ]
+        },
+        {
+          "declaration": "TruthCore.Causality.Frame.CausalityFrame",
+          "parameter": "CausesIn",
+          "arguments": [
+            "_",
+            "_",
+            "esse"
+          ]
         }
       ]
     },
