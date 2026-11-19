@@ -16,7 +16,8 @@ independent warrant; (b) does it reach a God-relevant conclusion while avoiding
 materialized and re-read for this note, for the exact form of the PSR-like
 principle he accepts. The q.45 a.3 re-reading belongs to a parallel lane and is
 not used. Every vertical test so far (parity/onset, essence–esse union,
-present-tense receipt, the holding reading of C\*) restated the crux.
+present-tense receipt, the holding reading of C\*, and the relational receipt
+after q.45 a.3 merged in PR #1798) restated the crux.
 
 ## 1. Formal work
 
@@ -201,8 +202,10 @@ so the shared dependency on that family stays.
 - *Coverage*: the tenseless De ente c.4 principle that what has esse not from
   its essence has it from another. Its argument is tenseless and does not
   distinguish begun from beginningless things, so its warrant does not come
-  through `40a97664`. The inertialist accepts it for begun things through the
-  originating cause, which is why the sustaining note's §2 classed it as
+  through `40a97664`. An inertialist accepts it for begun things through the
+  originating cause if it counts the originator as a cause of the thing's
+  *being*, not only of its becoming (the same conditional grant as for
+  exercise), which is why the sustaining note's §2 classed it as
   independent.
   - In the beginningless case there is no originator. There coverage says that
     received esse needs a cause as such, whether or not it began. That is the
@@ -214,7 +217,7 @@ so the shared dependency on that family stays.
     from per-moment giving to tenseless coverage for beginningless things. It
     does not defeat the rival independently. What it adds is that the
     relocation target is a principle with its own tenseless argument, one the
-    rival otherwise accepts. That argument is not a statement about giving at
+    rival accepts for begun things on that condition. That argument is not a statement about giving at
     moments.
 
 **Why it is not parity restated.** Parity `5b24ef26` reaches every begun thing
@@ -354,7 +357,11 @@ assessment, and does not replace them.
   - No route to GOD_4 has `40a97664` as an open premise.
   - Six routes (prima via, quarta via and two others) contain neither
     `2068f91c` nor `3ef67739`, and no recorded rival table lists inertia
-    against their premises.
+    against their premises. One support of their premise `09c6d5f0`,
+    `19882fa9`, has inertia as a kept rival
+    ([esse-cause-efficiency-1633.md](esse-cause-efficiency-1633.md)); the
+    recorded bypass `5c5b794f` avoids it, so it is a support option with an
+    inertia rival, like that of `2068f91c`, not a route premise.
   - The crux enters four routes through `3ef67739` on its strict sustaining
     reading, where inertia is the recorded standing rival.
   - It also enters the sustaining/immensity attribute step, one support option
@@ -373,7 +380,8 @@ assessment, and does not replace them.
   - In the homogeneous beginningless case the result **relocates** the dispute.
     It moves from per-moment giving to tenseless coverage for beginningless
     things (equivalently, the tenseless Avicennian core). That principle has
-    its own tenseless argument and is accepted by the rival for begun things.
+    its own tenseless argument and is accepted by the rival for begun things if it counts the
+    originator as a cause of being.
     The rival restricts it on the same change-only rationale on which it
     rejects `40a97664`.
   - So a general extrinsic inertialist must, in the possible eternal-stationary
