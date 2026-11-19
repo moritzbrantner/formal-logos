@@ -28,7 +28,8 @@
     "8eeebe1a-ec1f-4c81-a406-a75d887b02d4",
     "739d177c-208a-4f53-a7d6-21396e84ccd8",
     "9a15e352-3f16-4e5c-b827-d44ecc311f3b",
-    "0dc12783-736a-4898-99a1-b8038ab94a83"
+    "0dc12783-736a-4898-99a1-b8038ab94a83",
+    "PR-1781"
   ],
   "current_assessment": {
     "date": "2026-11-19",
@@ -41,10 +42,10 @@
     "assessment": "Shape: concurrent actualization entails C*-holding, not conversely (Control parts 2 and 3). C*-holding is a verified conditional consequence with no warrant of its own for the retained-state class; its only recorded support for that class is 76d2cc96 with the present-moment reading dedc431f, accident-inclusive conservation 1a99cebe, lackable being 6e2176cd and the actualizer premise 40fc38ad: dependent, a single line of support; rejecting concurrent actualization removes that support without falsifying C*, so it adds no separate cost to the existential-inertia rival. The holding sibling of the absolute First Way is weak: its per se link and regress are inconsistent with mutual holding, and it reaches only a relative first holder with an unlosable operative act, not unheldness in every respect; pure act is not addressed. The warrant of concurrent actualization against existential inertia is open and assessed on agent/sustaining-vs-inertia, not here.",
     "next_test": "Formulate a total-holder (or one-series) holding per se link and test it against the leaning cards; test whether the 2026-11-17 esse-composition route carries a first holder with an unlosable operative act to all-respect unheldness; assess accident-inclusive conservation 1a99cebe (whether sustaining a bearer's being presently holds its retained qualities and states of motion) as the C*-specific bridge.",
     "note": "docs/notes/caused-mover-cstar.md#9-2026-11-19-the-holding-actualization-reading-of-being-moved",
-    "reviewed_revision": "2edaf510f4b2c2eb9bc613b5b18725c64ad011b1",
-    "review": "unreviewed",
-    "publication": "unpublished",
-    "evidence": "Results 6cc2aa7c, 2f538163, e3de57ec, 7263cb1a, 81523d81, 0b40c6e1 and 8eeebe1a on branch agent/cstar-actualization; independent semantic challenge pending.",
+    "reviewed_revision": "d283bd5e611e846437d5f816a13f3825d2015b21",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "PR-1781. Independent semantic challenge of 2edaf510f: 2 P1, 8 P2, 5 P3 (shared-dependency overstatement, unwitnessed pure-act claim, crossed-model scope, support-only single point of failure, conditional sense mixing, missing holding per se definition, a1df8f1a scope); repaired in d283bd5e611e846437d5f816a13f3825d2015b21 and re-checked: accepted, with one optional wording nit. Results 6cc2aa7c, 2f538163, e3de57ec, 7263cb1a, 81523d81, 0b40c6e1, 8eeebe1a.",
     "supersedes": "None. It adds a sibling-sense assessment next to attempt b7e7af8c, whose MOTION_1 assessment stands."
   }
 }
