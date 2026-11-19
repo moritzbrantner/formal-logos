@@ -1,0 +1,11 @@
+{
+  "id": "01188cb4-dee1-40be-8e7b-aef481381319",
+  "label": "Self-endorsed guarantee norm defeats confident scientific and practical claims",
+  "argument_id": "394faa75-70cd-4883-9847-3227fd84d53f",
+  "challenge_module": "TruthCore.Results.Epistemology.NoFoundationPractice.Challenge",
+  "solution_module": "TruthCore.Results.Epistemology.NoFoundationPractice.Solution",
+  "theorem": "TruthCore.Results.Epistemology.NoFoundationPractice.internalDiscipline",
+  "comparator_config": "results/01188cb4-dee1-40be-8e7b-aef481381319/comparator.json",
+  "status": "solution-present",
+  "description": "Scoped conditional self-undermining, not an unqualified refutation of Hume, science or naturalism: the strong normative requirement is the rival's explicit commitment and is not defined as objective epistemic warrant. The theorem proves no commitment from denial of an ultimate explanation by itself. Its projection claims include arbitrary methods and policies on a fixed three-action ordinal task."
+}
