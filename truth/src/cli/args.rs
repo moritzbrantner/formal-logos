@@ -242,6 +242,22 @@ pub struct Args {
     pub semantics: SemanticsArgs,
     /// `--profile-module MODULE` (`bridge-experiments`)
     pub profile_module: Option<String>,
+    pub countermodel: CountermodelArgs,
+}
+
+/// The `countermodel` options (`--all` is the shared research flag).
+#[derive(Default)]
+pub struct CountermodelArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    /// `--omit HYP`, repeatable: a binder name or 1-based position.
+    pub omit: Vec<String>,
+    /// `--size N`: the largest carrier size tried.
+    pub size: Option<usize>,
+    /// `--module MODULE`: the module declaring the theorem.
+    pub module: Option<String>,
+    /// `--no-check`: do not have Lean check the candidates.
+    pub no_check: bool,
 }
 
 /// The shared options a command accepts besides `--root` and `--json`;
@@ -310,6 +326,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         brief: BriefArgs::default(),
         semantics: SemanticsArgs::default(),
         profile_module: None,
+        countermodel: CountermodelArgs::default(),
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -484,6 +501,29 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                         .ok_or_else(|| usage("--profile-module requires a Lean module"))?
                         .to_owned(),
                 );
+            }
+            "--no-check" => {
+                parsed.countermodel.flags = true;
+                parsed.countermodel.no_check = true;
+            }
+            "--omit" | "--size" | "--module" => {
+                parsed.countermodel.flags = true;
+                let value = args.next().and_then(|value| value.to_str());
+                let countermodel = &mut parsed.countermodel;
+                match arg {
+                    "--size" => countermodel.size = Some(number(value, arg)?),
+                    _ => {
+                        let value = value
+                            .filter(|value| !value.is_empty())
+                            .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                            .to_owned();
+                        if arg == "--omit" {
+                            countermodel.omit.push(value);
+                        } else {
+                            countermodel.module = Some(value);
+                        }
+                    }
+                }
             }
             "--strict" => parsed.proof.strict = true,
             "--review" => parsed.proof.review = true,

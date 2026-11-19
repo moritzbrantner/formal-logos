@@ -5,13 +5,14 @@ An omission countermodel for premise k of a theorem
 interpretation in which every Pᵢ with i ≠ k holds and C fails. It shows that the
 remaining premises do not entail C under the encoded vocabulary. Workers used to
 write these models and their `Control.Certificate` proofs by hand.
-`scripts/countermodel.py` searches for them.
+`truth countermodel` (the Rust CLI, `truth/README.md`) searches for them.
 
 ```bash
-python3 scripts/countermodel.py TruthCore.Results.Causality.SelfOperationLife.pureActLives
-python3 scripts/countermodel.py THEOREM --omit hLife      # by binder name or 1-based position
-python3 scripts/countermodel.py THEOREM --all --size 3    # every premise plus a joint witness
-python3 scripts/countermodel.py THEOREM --json --no-check
+target/release/truth countermodel TruthCore.Results.Causality.SelfOperationLife.pureActLives
+target/release/truth countermodel THEOREM --omit hLife      # by binder name or 1-based position
+target/release/truth countermodel THEOREM --all --size 3    # every premise plus a joint witness
+target/release/truth --json countermodel THEOREM --no-check
+target/release/truth countermodel THEOREM --module TruthCore.X.Solution   # skip locating the module
 ```
 
 ## How it works
@@ -65,6 +66,12 @@ model: the certificate's Lean check is the evidence, not the solver.
 
 ## Rediscovered examples
 
-`scripts/test_countermodel.py` rediscovers and Lean-checks the omission models
-of `SelfOperationLife`, `PerfectionOfBeing`, `NecessaryBeingInAct` and
-`ComponentFirstness` (`TruthCore/Results/Causality/*/Solution.lean`).
+CI (the `corpus-and-lean` job, after `lake build`) has `truth countermodel
+--all` rediscover and Lean-check the omission models and joint witnesses of
+`SelfOperationLife`, `PerfectionOfBeing`, `NecessaryBeingInAct` and
+`ComponentFirstness` (`TruthCore/Results/Causality/*/Solution.lean`). The
+solver's unit tests and golden replays (`truth/src/countermodel/tests.rs`,
+recorded skeletons in `truth/src/testdata/countermodel/`) run offline in the
+`truth-cli` job. The search order is the one the retired
+`scripts/countermodel.py` used, so models it found and that Lean files cite
+are found again.

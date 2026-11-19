@@ -1,0 +1,42 @@
+{
+  "theorem": "TruthCore.Results.Causality.NecessaryBeingInAct.necessaryBeingInAct",
+  "module": "TruthCore.Results.Causality.NecessaryBeingInAct.Solution",
+  "reports": [
+    {
+      "omitted": "hBridge",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 1,
+        "T": 1,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.necessaryBeingInAct.omit_hBridge\n/-! Omission model for `hBridge`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 1\nabbrev T := Fin 1\nabbrev R := Fin 1\nabbrev esse : R := 0\nabbrev Possible : (T \u2192 Prop) \u2192 Prop := fun _ => False\nabbrev IsAt : B \u2192 T \u2192 Prop := fun _ _ => False\nabbrev InAct : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev CanFailToBe : B \u2192 R \u2192 Prop := fun _ _ => True\ntheorem certificate :\n    \u00ac (TruthCore.Causality.NecessaryBeingInAct.CanFailToBeIsPossiblyNot Possible IsAt CanFailToBe esse) \u2227\n    (TruthCore.Latin.Aquinas.InMetaphysicam.IncorruptibleIsInActReading InAct CanFailToBe esse) \u2227\n    \u00ac (TruthCore.Case.Catholicism.NecessaryBeingHasBeing Possible IsAt InAct esse) := by\n  delta TruthCore.Causality.NecessaryBeingInAct.CanFailToBeIsPossiblyNot TruthCore.Latin.Aquinas.SummaTheologiae.PossibleNotToBe TruthCore.Latin.Aquinas.InMetaphysicam.IncorruptibleIsInActReading TruthCore.Latin.Aquinas.InMetaphysicam.IncorruptibleSimply TruthCore.Case.Catholicism.NecessaryBeingHasBeing TruthCore.Latin.Aquinas.SummaTheologiae.IsNecessary\n  refine \u27e8?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.necessaryBeingInAct.omit_hBridge"
+    },
+    {
+      "omitted": "hIncorruptible",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 1,
+        "T": 1,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.necessaryBeingInAct.omit_hIncorruptible\n/-! Omission model for `hIncorruptible`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 1\nabbrev T := Fin 1\nabbrev R := Fin 1\nabbrev esse : R := 0\nabbrev Possible : (T \u2192 Prop) \u2192 Prop := fun _ => False\nabbrev IsAt : B \u2192 T \u2192 Prop := fun _ _ => False\nabbrev InAct : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev CanFailToBe : B \u2192 R \u2192 Prop := fun _ _ => False\ntheorem certificate :\n    (TruthCore.Causality.NecessaryBeingInAct.CanFailToBeIsPossiblyNot Possible IsAt CanFailToBe esse) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.InMetaphysicam.IncorruptibleIsInActReading InAct CanFailToBe esse) \u2227\n    \u00ac (TruthCore.Case.Catholicism.NecessaryBeingHasBeing Possible IsAt InAct esse) := by\n  delta TruthCore.Causality.NecessaryBeingInAct.CanFailToBeIsPossiblyNot TruthCore.Latin.Aquinas.SummaTheologiae.PossibleNotToBe TruthCore.Latin.Aquinas.InMetaphysicam.IncorruptibleIsInActReading TruthCore.Latin.Aquinas.InMetaphysicam.IncorruptibleSimply TruthCore.Case.Catholicism.NecessaryBeingHasBeing TruthCore.Latin.Aquinas.SummaTheologiae.IsNecessary\n  refine \u27e8?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.necessaryBeingInAct.omit_hIncorruptible"
+    },
+    {
+      "omitted": null,
+      "kind": "witness",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 1,
+        "T": 1,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.necessaryBeingInAct.witness\n/-! Joint witness: every premise and the conclusion hold. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 1\nabbrev T := Fin 1\nabbrev R := Fin 1\nabbrev esse : R := 0\nabbrev Possible : (T \u2192 Prop) \u2192 Prop := fun _ => False\nabbrev IsAt : B \u2192 T \u2192 Prop := fun _ _ => False\nabbrev InAct : B \u2192 R \u2192 Prop := fun _ _ => True\nabbrev CanFailToBe : B \u2192 R \u2192 Prop := fun _ _ => False\ntheorem certificate :\n    (TruthCore.Causality.NecessaryBeingInAct.CanFailToBeIsPossiblyNot Possible IsAt CanFailToBe esse) \u2227\n    (TruthCore.Latin.Aquinas.InMetaphysicam.IncorruptibleIsInActReading InAct CanFailToBe esse) \u2227\n    (TruthCore.Case.Catholicism.NecessaryBeingHasBeing Possible IsAt InAct esse) := by\n  delta TruthCore.Causality.NecessaryBeingInAct.CanFailToBeIsPossiblyNot TruthCore.Latin.Aquinas.SummaTheologiae.PossibleNotToBe TruthCore.Latin.Aquinas.InMetaphysicam.IncorruptibleIsInActReading TruthCore.Latin.Aquinas.InMetaphysicam.IncorruptibleSimply TruthCore.Case.Catholicism.NecessaryBeingHasBeing TruthCore.Latin.Aquinas.SummaTheologiae.IsNecessary\n  refine \u27e8?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.necessaryBeingInAct.witness"
+    }
+  ]
+}
