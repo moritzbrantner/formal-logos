@@ -129,9 +129,7 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         targets.push(resolve_statement(&aliases, token)?);
     }
     for selector in &given.selectors {
-        targets.extend(
-            discover::selected_targets(&report, selector).map_err(|message| usage(message))?,
-        );
+        targets.extend(discover::selected_targets(&report, selector).map_err(usage)?);
     }
     let mut seen = BTreeSet::new();
     targets.retain(|id| seen.insert(id.clone()));

@@ -576,7 +576,11 @@ impl Checker<'_> {
             if !seen.insert(current.clone()) {
                 continue;
             }
-            if current == "Mathlib" || current.starts_with("Mathlib.") {
+            // Mathlib and Duper (owner decision 2026-11-19) carry the classical three.
+            if ["Mathlib", "Duper"]
+                .iter()
+                .any(|root| current == *root || current.starts_with(&format!("{root}.")))
+            {
                 return true;
             }
             let path = module_path(self.root, &current);
@@ -616,7 +620,7 @@ impl Checker<'_> {
         }
         if !self.imports_mathlib(text(config, "solution_module")) {
             return Some(format!(
-                "only a Solution that imports Mathlib may permit {}; results without Mathlib stay zero-axiom",
+                "only a Solution that imports Mathlib or Duper may permit {}; results without them stay zero-axiom",
                 str_list_repr(MATHLIB_PERMITTED_AXIOMS)
             ));
         }

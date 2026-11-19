@@ -30,6 +30,7 @@ class AxiomPolicyTest(unittest.TestCase):
         (root / "TruthCore" / "Plain.lean").write_text("namespace X\nend X\n")
         (root / "TruthCore" / "R" / "Uses.lean").write_text("import TruthCore.Vocab\n")
         (root / "TruthCore" / "R" / "Core.lean").write_text("import TruthCore.Plain\n")
+        (root / "TruthCore" / "R" / "Proved.lean").write_text("import TruthCore.Plain\nimport Duper\n")
         patcher = mock.patch.object(corpus, "ROOT", root)
         patcher.start()
         self.addCleanup(patcher.stop)
@@ -47,6 +48,10 @@ class AxiomPolicyTest(unittest.TestCase):
     def test_mathlib_solution_may_permit_exactly_the_three(self) -> None:
         self.assertIsNone(self.error("TruthCore.R.Uses", MATHLIB_AXIOMS))
         self.assertIsNone(self.error("TruthCore.R.Uses", list(reversed(MATHLIB_AXIOMS))))
+
+    def test_duper_solution_may_permit_exactly_the_three(self) -> None:
+        self.assertIsNone(self.error("TruthCore.R.Proved", MATHLIB_AXIOMS))
+        self.assertIn("must be []", self.error("TruthCore.R.Proved", MATHLIB_AXIOMS + ["Lean.ofReduceBool"]))
 
     def test_core_solution_stays_zero_axiom(self) -> None:
         self.assertIn("zero-axiom", self.error("TruthCore.R.Core", MATHLIB_AXIOMS))

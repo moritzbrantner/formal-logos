@@ -175,6 +175,21 @@ jobs:
               | jq -e '.reports | length > 1 and all(.status == "lean-checked")' >/dev/null \
               || { echo "countermodel rediscovery failed for $theorem"; exit 1; }
           done
+      # Duper (owner decision 2026-11-19, docs/axiom-policy.md): its reconstructed proofs
+      # stay within the three classical axioms, and `truth discover` (docs/discover.md)
+      # finds, minimizes and certifies one known derivation end to end (a fixed target,
+      # not an open search: discovery runs stay local, docs/discover.md).
+      - name: Audit Duper axioms and smoke-test truth discover
+        if: needs.comparator-plan.outputs.lean == 'true'
+        run: |
+          set -euo pipefail
+          lake build Duper
+          lake env lean scripts/DuperAxiomAudit.lean
+          target/release/truth --json discover --target c7de7537-3178-4c01-9f7e-65767f76f307 \
+            --premise-pool all --module TruthCore.Causality.SustainingCausation \
+            --candidates 4 --heartbeats 40000 --jobs 1 \
+            | jq -e '.summary.proved >= 1 and .summary.errors == 0' >/dev/null \
+            || { echo "truth discover smoke test failed"; exit 1; }
       - name: Test corpus tooling and media-span and web-snapshot evidence offline
         env:
           TRUTH_CORE_LEAN_TESTS: ${{ needs.comparator-plan.outputs.lean }}

@@ -808,6 +808,7 @@ pub fn search(
 }
 
 /// Runs `search` over `trials` in batches, `options.jobs` Lean processes at a time.
+#[allow(clippy::too_many_arguments)]
 pub fn search_all(
     root: &Path,
     discover: &str,
@@ -911,9 +912,18 @@ pub struct SenseCheck<'a> {
 }
 
 impl<'a> SenseCheck<'a> {
+    /// No disambiguations: nothing mixes (tests, fixtures).
+    pub fn empty() -> Self {
+        Self {
+            index: senses::SenseIndex::default(),
+            statements: HashMap::new(),
+            bridges: Vec::new(),
+        }
+    }
+
     pub fn new(corpus: &'a Corpus) -> Result<Self, String> {
         let disambiguations = corpus.entries("disambiguations");
-        let index = senses::sense_index(disambiguations.into_iter())?;
+        let index = senses::sense_index(disambiguations)?;
         let statements = corpus
             .records_by_id("statements")
             .map(|(id, r)| (id, &r.fields))
@@ -1537,6 +1547,13 @@ pub fn export_vocabulary(
     parse_vocabulary(&value)
 }
 
+/// A run, with the statements and vocabulary it used.
+pub type Discovered = (
+    Run,
+    BTreeMap<String, Statement>,
+    BTreeMap<String, Vocabulary>,
+);
+
 /// Everything a run produced.
 pub struct Run {
     pub findings: Vec<Finding>,
@@ -1548,7 +1565,6 @@ pub struct Run {
 
 /// The whole engine on `targets`: retrieval, search, classification, the
 /// weakening round and certification.
-#[allow(clippy::too_many_arguments)]
 pub fn discover(
     root: &Path,
     corpus: &Corpus,
@@ -1556,14 +1572,7 @@ pub fn discover(
     targets: &[String],
     options: &Options,
     progress: &(dyn Fn(&str) + Sync),
-) -> Result<
-    (
-        Run,
-        BTreeMap<String, Statement>,
-        BTreeMap<String, Vocabulary>,
-    ),
-    String,
-> {
+) -> Result<Discovered, String> {
     let started = Instant::now();
     let statements = statements(corpus);
     let in_scope = |declaration: &str| {
@@ -1913,3 +1922,6 @@ pub fn transitive_constants(
         })
         .collect()
 }
+
+#[cfg(test)]
+mod tests;

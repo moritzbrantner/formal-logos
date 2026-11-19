@@ -57,8 +57,8 @@ def module_path(module: str) -> Path:
 
 
 def imports_mathlib(module: str) -> bool:
-    """Whether a TruthCore module imports Mathlib, directly or through other
-    TruthCore modules."""
+    """Whether a TruthCore module imports Mathlib or Duper, directly or through
+    other TruthCore modules."""
     seen: set[str] = set()
     pending = [module]
     while pending:
@@ -66,7 +66,8 @@ def imports_mathlib(module: str) -> bool:
         if current in seen:
             continue
         seen.add(current)
-        if current == "Mathlib" or current.startswith("Mathlib."):
+        # Mathlib and Duper (owner decision 2026-11-19) carry the classical three.
+        if current in ("Mathlib", "Duper") or current.startswith(("Mathlib.", "Duper.")):
             return True
         path = module_path(current)
         if not current.startswith("TruthCore") or not path.is_file():
@@ -88,7 +89,7 @@ def permitted_axioms_error(config: dict[str, Any]) -> str | None:
         )
     if not imports_mathlib(config.get("solution_module", "")):
         return (
-            "only a Solution that imports Mathlib may permit "
-            f"{list(MATHLIB_PERMITTED_AXIOMS)}; results without Mathlib stay zero-axiom"
+            "only a Solution that imports Mathlib or Duper may permit "
+            f"{list(MATHLIB_PERMITTED_AXIOMS)}; results without them stay zero-axiom"
         )
     return None
