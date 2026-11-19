@@ -299,3 +299,24 @@ fn preflight_counts_argument_level_definitions() {
     let output = truth(root, &[&base[..], &["--definition", "DEF-NONE"]].concat());
     assert_eq!(output.status.code(), Some(3));
 }
+
+#[test]
+fn statement_view_shows_parameter_tags() {
+    let fixture = fixture("parameter-tags");
+    let path = fixture.0.join("corpus/disambiguations/00-DISAMB-T.json");
+    let mut record: Value = serde_json::from_str(&fs::read_to_string(&path).unwrap()).unwrap();
+    record["senses"][1]["lean_parameters"] = serde_json::json!([
+        {"declaration": "TruthCore.Fix.fixC", "parameter": "R", "arguments": ["_", "e"]}
+    ]);
+    fs::write(&path, serde_json::to_string_pretty(&record).unwrap()).unwrap();
+    let view = json(&fixture.0, &["semantics", "STMT-C"]);
+    let tags = &view["statement"]["parameter_tags"];
+    assert_eq!(tags[0]["parameter"], "R");
+    assert_eq!(tags[0]["arguments"], serde_json::json!(["_", "e"]));
+    assert_eq!(tags[0]["sense_label"], "T_2");
+    let text = String::from_utf8(truth(&fixture.0, &["semantics", "STMT-C"]).stdout).unwrap();
+    assert!(
+        text.contains("parameter senses: R _ e = T_2 (other parameters unknown)"),
+        "{text}"
+    );
+}
