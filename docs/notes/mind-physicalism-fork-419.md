@@ -307,3 +307,202 @@ Reopen the stronger ancestry judgment when such a connection is defended, or a
 concrete failure of the selected alternative is demonstrated there. Another
 opaque no-emergence premise or another proof of the existing conditional would
 not answer it.
+
+## Further contribution to theism and Catholicism (2026-11-19)
+
+The owner's continuation asks how philosophy of mind can positively advance
+the God/Catholicism case. This follows the reviewed #1804 unity comparison,
+with baseline `a317b00dd638feb7c4c477f2e565720aeacf9ae6`. The proposal below is
+a comparative research judgment and two candidate connections, not a new
+registered derivation. The earlier distinct-thinking-ancestor assessment is
+unchanged. Source passages are inspected readings; no new canonical attribution
+or verified root edge is claimed.
+
+### Use rational understanding as a positive starting point
+
+The strongest immediate starting point is a person actually understanding and
+using reasons. A short reflective inference has determinate contents, a
+relation of support, and the person's actual uptake of that relation. These
+are separable from a correct output or a subsequent story about how it arose.
+The existing [rational-basing assessment](epistemic-underminer-boundaries.md#rational-basing-the-particular-transition-must-exercise-the-capacity)
+already favors an actual content-sensitive exercise over bare reliability,
+ancestry or retrospective endorsement. This can provide prima facie warrant
+without first completing a metaphysics of mind.
+
+[Boghossian, “What Is Inference?” (2014), pp.4–5, 15–18](https://paulboghossian.com/pb/files/WhatIsInference.pdf)
+argues that personal reasoning operates through understood contents and allows
+primitive rule-following to stop a regress of further inferences. This is a
+positive account of an intellectual performance, not a proof that its bearer
+cannot be physical. Nor need an abstract validity relation itself be an
+efficient cause: the proposed activity is the person's reasoning with contents.
+
+Reuse the [intentionality comparison](intentionality-943.md): its producer/consumer
+account already distinguishes factual guidance from incidental benefit and
+permits error. The [agency comparison](reason-response-history.md) already
+separates responsiveness, uptake and ownership. Neither a physical vehicle nor
+deterministic implementation by itself excludes the relevant personal activity.
+The new contribution is their possible connection to an ultimate explanation,
+not rediscovery of these distinctions.
+
+The [reason/intentionality/mental-causation target](../../corpus/statements/cc100-116-reason-intentionality-mental-causation.json)
+is therefore a useful starting node. Its separate
+[only-personal-explanation premise](../../corpus/statements/cc100-116-personal-explanation-restriction.json)
+is not established by showing that persons reason. Personal-level explanation
+of an inference does not entail a further person who produces the thinker.
+A regress of interpreted symbols is also not a regress of existing subjects.
+
+### Route A: a purposive explanation of rational embodied agents
+
+This analyst proposal can grant physical realization of human thought. It asks
+why an order exists with understanding agents, reliable-enough access to an
+intelligible environment, and powers to act in it. A successful account of neural
+implementation or evolutionary development need not be a competing answer to
+that ultimate question. Equally, its incompleteness would not establish theism.
+
+The proposed positive explanation is that finite beings capable of knowing,
+choosing and sharing goods are worth creating. A source that understands that
+good and wills its realization has a reason to produce coordinated conditions
+for cognition and effective agency. The claim that these capacities are good
+has prima facie support in the contrast between understanding and error,
+effective participation and helplessness; the stronger claim about the ultimate
+source's nature and purposes still needs comparative warrant.
+
+[Swinburne, “God as the Simplest Explanation of the Universe” (2011), manuscript
+pp.9–10, 18–20](https://users.ox.ac.uk/~orie0087/pdf_files/Papers%20from%20Philosophical%20Journals/Swinburne_2011-explanation.pdf)
+provides the relevant local argument: valuable embodied agents need an orderly
+environment for efficacious choice. He compares personal explanation with a
+good-producing impersonal disposition. His motive and simplicity arguments are
+substantive proposals, not an uncontested ranking. The paper's restrictions on
+foreknowledge and rejection of classical timelessness are not imported here,
+nor is its probabilistic machinery. The present route is an analyst qualitative
+comparison, not a claim to have established his whole hypothesis.
+
+This connects intellect with will: understanding a good supplies an intentional
+content; aiming to realize it supplies a further explanatory commitment.
+[Aquinas, ST I q.14 a.8 co.](https://www.newadvent.org/summa/1014.htm#article8)
+likewise distinguishes an intelligible form merely being known from its
+inclination toward a determinate effect through will. That passage supplies a
+model of intellectual causation, not a proof that an unspecified first cause
+has those powers. Source-level recognition and adoption of ends remain the
+connection identified in the [moral-governance note](moral-governance-intellect-will.md).
+
+| Compared account | Positive explanation | What would discriminate it here |
+| --- | --- | --- |
+| Purposive source | Understanding the good of finite agents motivates coordinated conditions for their knowing and action. | Does the same defended purpose explain the package, including its limitations, without separate adjustments for each datum? |
+| Impersonal mind-inclusive order | Intrinsic powers, stable laws, learning and selection produce and sustain cognitive agents. | How much of the package follows from the specified powers and processes, and what remains an additional primitive? |
+| Impersonal teleology | A tendency toward cognition or value organizes the order. | Is the tendency specified beyond its desired outcome, and does personal evaluative understanding add explanatory value? |
+
+Assess the same package on each side: actual understanding and error,
+correctable and entrenched mistakes, effective and impaired agency, embodied
+dependence, and the relation between intellectual achievement and flourishing.
+Selection and learning can explain useful truth-tracking; mere adaptive utility
+does not settle every question about abstract understanding. Neither fact alone
+selects a metaphysics. No new clinical or evolutionary study is reported here.
+
+The proposed advantage is unification by an intelligible purpose. It is not a
+count of unexplained labels, a numerical likelihood or an elimination of all
+impersonal accounts. The same cognitive/world-order facts must not be counted
+again as independent evidence simply because they also enter the moral or
+intelligibility routes. This supplies a concrete research program for the
+[theistic-best-explanation bridge](../../corpus/statements/cc100-116-theistic-best-explanation-bridge.json),
+not an acceptance of its only-personal antecedent or a verified new consequence.
+
+### Route B: the origination of an intellective principle
+
+The other lead is a direct production argument. It must first say which being
+understands. [ST I q.76 a.1 co.](https://www.newadvent.org/summa/1076.htm)
+argues that the same embodied individual senses and understands. Merely having
+Socrates's images represented in another intellect would make them understood;
+it would not make Socrates the understander. Aquinas proposes the intellectual
+principle as the substantial form of this human being. This is a positive
+ownership candidate, already present in the q.75/q.76 reception work, now applied
+to the source question. It does not automatically defeat physical constitution
+or every account of subjects as aspects.
+
+The candidate connection has four different commitments:
+
+1. Some actual intellectual operation warrants an incorporeal, subsistent
+   intellectual principle of this individual.
+2. That principle has a cause of its existence and cannot be produced through
+   transformation of a pre-existing substrate.
+3. Its production is therefore creation in the sense of giving existence
+   without transforming a presupposed subject.
+4. Such production belongs to the first universal cause of being, rather than
+   a secondary agent exercising an acquired or restricted power.
+
+[ST I q.90 aa.2–3](https://www.newadvent.org/summa/1090.htm)
+argues from mode of existence to mode of production: subsistent forms themselves
+have being, unlike forms that arise only with their composites. It excludes
+production of the rational soul from prior corporeal or spiritual matter and
+assigns its creation immediately to God.
+[Q.118 a.2](https://www.newadvent.org/summa/1118.htm)
+repeats the operation–subsistence–creation connection. This use does not adopt
+the article's embryology.
+
+[Q.45 a.5 co./ad 1–3](https://www.newadvent.org/summa/1045.htm)
+provides a further argument for the creator restriction: being absolutely is
+the effect of the universal first cause, whereas instrumental production works
+by disposing something already existing. Its own objections ask why an
+immaterial secondary being could not produce its likeness, or why a finite
+effect needs more than finite power. The article relies on earlier causal
+metaphysics and divine-attribute arguments. A standalone reconstruction must
+expose those dependencies rather than assume God in the creator premise and
+then claim to infer God's existence.
+
+The actual main vulnerability is already recorded in the
+[human-intellect rival assessment](../human-intellect-rival-assessment.md):
+a mechanism's own determinate constitution does not by itself limit its
+representational range. An abstract object of thought is not automatically
+evidence of a nonphysical vehicle. The [weak-subsistence result](../../corpus/statements/q75-intellect-weak-subsistence.json)
+only excludes specified kinds of inherence. It does not already supply the
+full incorporeality, causal origination, substrate exclusion or creator
+restriction required above. These are interpretation/warrant obligations, not
+new opaque premises asserted to settle them.
+
+This is worth pursuing because it concerns a subject's intellectual principle
+and its existence directly. It does not require a global premise that every
+thinking effect has a prior episode-bearing thinker. Creation here does not
+imply that the universe has a first temporal instant. No identity with the
+selected `ActualConcreteGround` relation is inferred merely from the word
+"cause". Any creator/root/intellect connection must retain the same witness.
+
+### Catholic contribution and overall judgment
+
+[CCC 362–368](https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_6_man.html)
+affirms one human nature in the unity of body and spiritual soul, and separately
+teaches immediate creation and immortality. This makes the ownership and
+origination questions directly relevant to Catholic anthropology. The doctrinal
+text identifies the proposed worldview's commitments; it is not philosophical
+proof of them. Weak subsistence, natural incorruptibility, personal survival and
+bodily resurrection remain different conclusions. Q.75 a.6 adds an
+incorruptibility argument; it does not make the soul independent of its creator.
+
+An intentional foundation and rational receivers would also make purposive
+revelation an intelligible kind of interaction. Actual revelation, a particular
+resurrection and Church identity still require the distinct evidence in the
+[Catholic-case stages](../catholic-case.md#root-and-structure). This work selects
+neither the Trinity nor Catholicism over other theisms, and does not recast
+human subjects as parts of God.
+
+My provisional research priority is Route A: the coordinated reality of
+understanding, intelligibility and agency is a more informative target for
+intellect-and-will identification than phenomenal occurrence alone. This is a
+judgment about expected explanatory value, not a demonstrated ranking of the
+complete metaphysical systems. Route B is a specific complementary connection
+to investigate where the stronger intellectual-subsistence premises can be
+defended. Their conjunction is not required to explore either route.
+
+The [same-root intellect/will target](../../corpus/statements/root-intellect-will.json)
+remains the graph destination. If other work warrants a necessary root, Route A
+can ask whether that same root is purposive; it must not silently replace it
+with a different mental source. Route B can ask whether an intellective
+principle's production requires that first source. Neither investigation has
+yet changed the root conclusion's establishment or supplied a new formal edge.
+
+The next bounded tests are (A) whether one independently articulated good of
+finite rational agency explains the compared cognitive/world-order package
+better than the specified impersonal accounts, and (B) whether the defended
+q.75 principle has exactly the mode of existence needed by q.90, followed by
+the separate q.45 restriction on secondary creators. Reuse the existing
+content/basing and bodily-interference comparisons; do not substitute another
+conditional proof for those substantive tests.
