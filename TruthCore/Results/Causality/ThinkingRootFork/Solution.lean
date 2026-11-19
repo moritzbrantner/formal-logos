@@ -1,0 +1,136 @@
+module
+
+public import TruthCore.Causality.ThinkingRootFork
+public import TruthCore.Results.Logic.CogitoSubject.Solution
+
+/-! The two literal horns share *one* root witness. Only the positive horn
+descends, and it descends through distinct thinkers rather than every ground.
+The modal upgrade applies to that same endpoint. All metaphysical bridges
+remain hypotheses; in particular no God-existence theorem is used. -/
+
+@[expose] public section
+
+namespace TruthCore.Results.Causality.ThinkingRootFork
+
+open TruthCore.Causality.BruteFoundationBoundary
+open TruthCore.Causality.CogitoNecessaryConcrete
+open TruthCore.Causality.NecessaryRootFork
+open TruthCore.Causality.SelectedAncestry
+open TruthCore.Causality.ThinkingRootFork
+open TruthCore.German.Kant.CosmologicalInference (NecessaryAt ContingentAt)
+open TruthCore.Logic.CogitoSubject
+open TruthCore.Logic.CogitoConcrete
+open TruthCore.Logic (ExcludedMiddle)
+
+variable {W B Episode : Type}
+
+/-- An actual concrete ground path starts at an actual concrete source. -/
+theorem actualOfPositiveGroundPath (m : Profile W B) (w : W) {c x : B}
+    (hPath : Relation.TransGen (ActualConcreteGround m w) c x) :
+    ActualConcrete m w c := by
+  obtain ⟨_, hFirst, _⟩ := Relation.TransGen.head'_iff.mp hPath
+  exact ⟨hFirst.1, hFirst.2.1⟩
+
+/-- Compose a strict ground path with the selected ancestor cone. -/
+theorem ancestorOfPositiveGroundPath (m : Profile W B) (w : W) {c x : B}
+    (hPath : Relation.TransGen (ActualConcreteGround m w) c x) :
+    ∀ {selected}, GroundAncestor m w x selected → GroundAncestor m w c selected := by
+  induction hPath with
+  | single hEdge =>
+    intro selected hAnc
+    exact Relation.ReflTransGen.head hEdge hAnc
+  | tail _ hEdge ih =>
+    intro selected hAnc
+    exact ih (Relation.ReflTransGen.head hEdge hAnc)
+
+/-- The **literal negative** horn excludes every actual concrete ground of a
+thinking cone member, but only under the stated no-fresh-thinker premise. -/
+theorem noPIsActualRoot (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop) (selected x : B)
+    (hCone : Cone m w selected x) (hThink : Thinks Occurs Bears x)
+    (hNoFresh : NoFreshThinkerInCone m w Occurs Bears selected)
+    (hNoP : ¬ P m w Occurs Bears x) : ActualRoot m w x := by
+  refine ⟨hCone.1, ?_⟩
+  intro y hy
+  exact hNoP (hNoFresh x hCone hThink ⟨y, hy⟩)
+
+/-- `P` supplies a strictly earlier *thinking* ancestor and `¬P` terminates
+at an actual thinking ground-root. `Acc` is only for the thinker relation:
+nonthinking ancestors may form cycles. The same endpoint is retained along
+the finite concrete ancestry chain. -/
+theorem thinkingRootOfAccessible (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop) (selected : B)
+    (hActual : ActualConcrete m w selected) (hThink : Thinks Occurs Bears selected)
+    (hAcc : Acc (ThinkerPredecessor m w Occurs Bears) selected)
+    (hNoFresh : NoFreshThinkerInCone m w Occurs Bears selected)
+    (hEM : ExcludedMiddle) :
+    ∃ n, Thinks Occurs Bears n ∧ GroundAncestor m w n selected ∧
+      ActualRoot m w n := by
+  have walk : ∀ x, Acc (ThinkerPredecessor m w Occurs Bears) x →
+      Cone m w selected x → Thinks Occurs Bears x →
+      ∃ n, Thinks Occurs Bears n ∧ GroundAncestor m w n selected ∧
+        ActualRoot m w n := by
+    intro x hx
+    induction hx with
+    | intro x _ ih =>
+      intro hCone hThinks
+      rcases hEM (P m w Occurs Bears x) with hP | hNoP
+      · obtain ⟨c, hc⟩ := hP
+        exact ih c hc
+          ⟨actualOfPositiveGroundPath m w hc.2.2,
+            ancestorOfPositiveGroundPath m w hc.2.2 hCone.2⟩ hc.2.1
+      · exact ⟨x, hThinks, hCone.2,
+          noPIsActualRoot m w Occurs Bears selected x hCone hThinks hNoFresh hNoP⟩
+  exact walk selected hAcc ⟨hActual, Relation.ReflTransGen.refl⟩ hThink
+
+/-- The **same** terminal thinker is necessary if contingent thinking members
+of this selected cone always have an actual concrete ground. Without that
+anti-brute assumption the root could remain contingent. -/
+theorem necessaryThinkingRootOfSelected (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop) (selected : B)
+    (hActual : ActualConcrete m w selected) (hThink : Thinks Occurs Bears selected)
+    (hAcc : Acc (ThinkerPredecessor m w Occurs Bears) selected)
+    (hNoFresh : NoFreshThinkerInCone m w Occurs Bears selected)
+    (hGrounded : ConeContingentThinkersGrounded m w Occurs Bears selected)
+    (hEM : ExcludedMiddle) :
+    NecessaryThinkingRootOf m w Occurs Bears selected := by
+  obtain ⟨n, hnThink, hnAnc, hnRoot⟩ :=
+    thinkingRootOfAccessible m w Occurs Bears selected hActual hThink hAcc hNoFresh hEM
+  have hnCont : ¬ ContingentAt m.ontic w n := by
+    intro hCont
+    obtain ⟨y, hy⟩ := hGrounded n ⟨hnRoot.1, hnAnc⟩ hnThink hCont
+    exact hnRoot.2 y hy
+  have hnNec : NecessaryAt m.ontic w n := by
+    intro v hv
+    rcases hEM (m.ontic.ExistsAt v n) with he | hne
+    · exact he
+    · exact (hnCont ⟨hnRoot.1.2, v, hv, hne⟩).elim
+  exact ⟨n, hnThink, hnAnc, hnRoot, hnNec⟩
+
+/-- Existing Cogito subjecthood and its separate actuality/concreteness
+bridges supply the starting thinker. The ancestry premises are scoped to the
+selected occurring-thought bearer, not to arbitrary beings in the carrier. -/
+theorem necessaryThinkingRootOfThought (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop)
+    (hOccurs : ThoughtOccurs Occurs)
+    (hBearer : EveryThoughtHasSubject Occurs Bears)
+    (hConcrete : EveryBearerIsConcrete Occurs Bears m.concrete)
+    (hExists : EveryBearerExistsAt m.ontic Occurs Bears w)
+    (hAcc : ∀ b e, Occurs e → Bears b e →
+      Acc (ThinkerPredecessor m w Occurs Bears) b)
+    (hNoFresh : ∀ b e, Occurs e → Bears b e →
+      NoFreshThinkerInCone m w Occurs Bears b)
+    (hGrounded : ∀ b e, Occurs e → Bears b e →
+      ConeContingentThinkersGrounded m w Occurs Bears b)
+    (hEM : ExcludedMiddle) :
+    NecessaryThinkingRootOfThought m w Occurs Bears := by
+  obtain ⟨b, e, he, hb⟩ :=
+    TruthCore.Results.Logic.CogitoSubject.thinkingSubjectOfThought
+      Occurs Bears hOccurs hBearer
+  exact ⟨b, e, he, hb,
+    necessaryThinkingRootOfSelected m w Occurs Bears b
+      ⟨hConcrete b e he hb, hExists b e he hb⟩
+      ⟨e, he, hb⟩ (hAcc b e he hb) (hNoFresh b e he hb)
+      (hGrounded b e he hb) hEM⟩
+
+end TruthCore.Results.Causality.ThinkingRootFork
