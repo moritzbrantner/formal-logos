@@ -745,3 +745,222 @@ De ente c.4, the PSR variants, Metaph. Δ15 and In V Metaph. lect. 17 are
 named only as unread leads or next tests, with no weight.
 That filiation lasts after the begetting is marked as ordinary use, not as
 text.
+
+## 7. Why an entire populated history obtains: the replaceable-anchor test (#1801, 2026-11-19)
+
+**Target and connection.** This is a separate *ultimate-explanatory-scope* test
+of the law-based alternative to `40a97664`, the weak per-moment `GivesAt`
+premise. Its consumer `366a6ea3` supports `ce55210c`, in turn used in the
+esse-dependence route to `2068f91c` and ultimately the God-existence stage of
+#143. The test concerns the actuality of a complete temporal existence
+profile, not a proof of a present giver or an inference from God's name to
+existence. The previously recorded **local standoff** in §4 is unchanged.
+
+### Exact existential question and a positive local success
+
+Let `x` be one rigidly designated possible substantial bearer, `b ≠ x` an
+independently populated background bearer, and times the integers. Write
+`Eₓ(t)` for *x exists at t* (not merely has a state at t), `N(s,t)` for no
+destructive inducer against x between s and t, and stipulate:
+
+* `P`: for all s < t, `Eₓ(s) ∧ N(s,t) → Eₓ(t)` (one-way existential
+  persistence). This is the inertialist's proposed positive local inference,
+  **without** its further independence-from-giver claim.
+* `H₊`: b exists at all dates, x exists at all dates, no destructive inducer.
+* `H₀`: b exists at all dates, x never exists, no destructive inducer.
+
+Both populated histories satisfy `P`. They differ in the positive actuality
+fact `Aₓ := ∃t Eₓ(t)`. **They do not agree on an earlier actuality of x.** In
+`H₊`, `Eₓ(s)` really does license `Eₓ(t)` for later t by `P` and `N`; `H₀` is
+no counterexample to that valid conditional because it lacks its antecedent.
+This witnesses only non-entailment of `Aₓ` by `P` and these stipulated
+background conditions, **not** metaphysical accessibility of `H₀`, a law for
+real received esse, or absence of an actual giver. The two-populated-history
+comparison was already reported in #1801; its novelty is **not** a second
+history-selection theorem.
+
+For the sharper new test, strengthen `P` expressly to a reversible,
+date-independent law `R`: `Eₓ(t) ↔ Eₓ(t+1)` for every integer t. This is **not**
+part of existential inertia: its backward direction excludes *any* transition
+from nonexistence to existence, whether caused or not, and is a stronger
+whole-history restriction. Encode E as a
+Bool-valued existence trace `f : Int → Bool`; `R` says
+`f (t+1) = f t`. The already verified
+`TruthCore.Results.Explanation.PathRelocation.constant_of_stationary`
+proves `∀t, f t = f 0`. Consequently, under `R`:
+
+1. `Aₓ` is logically equivalent to `∀t Eₓ(t)`; the single *existential*
+   actuality input selects the globally populated x-profile.
+2. For **any** date s, `Eₓ(s)` plus `R` determines the complete x-profile;
+   one might use any such anchor instead of another. No date is ontically
+   privileged by this proof. By itself `R` still admits both constant-true
+   and constant-false x-profiles, each together with the ever-present b.
+3. Conversely the absence of `Aₓ` yields the never-present x-profile. No
+   particular `Eₓ(s)` is *uniquely required as the chosen proof premise*:
+   any actual stage substitutes for it. This does **not** show that an actual
+   stage is counterfactually dispensable while the same reversible law and
+   populated outcome are held fixed—those conditions entail every stage.
+
+The simple proof is finite forward/backward iteration from any s, or the
+reused `constant_of_stationary` specialization. It does not require a first
+time, a step performed infinitely often, a well-founded grounding graph,
+an extra aggregate object, or an inference from temporal precedence to
+metaphysical priority. Its positive content is the **quantifier distinction**:
+replacing every *particular* anchor still leaves the common positive premise
+`∃t Eₓ(t)`; the local law does not supply that premise. This result is an
+**analyst application of a previously certified theorem**, not a new Lean
+certificate, a proof of real-world lawhood, or a refutation of the wider
+inertialist package. #736 already establishes the stronger whole-vector
+**entailing** discriminator; #753 already certifies unprivileged dated pins.
+Neither result asserts a metaphysical ground for the actual profile.
+
+Finite histories show the same scope difference with an explicit first
+condition: `P + Eₓ(first)` explains subsequent non-cessation given `N`, but
+does not thereby explain the actuality of the first condition. With no first
+moment there is no first-condition debt; instead the analogous explanandum
+is `Aₓ`—*why is there an instantiated x at any date?* If temporal order is
+eternalist, all dates' existence facts may be equally real while causal
+dependence is asymmetric; equal reality alone proves neither production nor
+ontological independence. For a **one-way** `P` an anchor determines only
+later survival, not x's whole earlier profile. Do not silently use the
+reversible control as a theorem about `P`.
+
+The ordinary distinction between “why did this house remain standing?”
+(no demolition, given its prior existence) and “why was there a house at all?”
+(some positive building or other existence account) motivates asking `Aₓ`
+independently of persistence. It does **not** demonstrate that every such
+question must have a metaphysical answer or that the house's physically
+historical origin generalizes to a beginningless received-esse substance.
+
+### A potential non-question-begging completeness demand, and its limit
+
+One additional **conditional** standard has positive explanatory motivation:
+
+> **No unaccounted indispensable actuality input.** If an account claims to
+> *completely and non-circularly explain why Aₓ obtains*, and its explanation
+> essentially uses some positive existential condition that already implies
+> Aₓ, then it must explain that condition within the claimed scope (or
+> defend an independently intelligible holistic/non-well-founded explanatory
+> role for the whole package). Otherwise its advertised completeness exceeds
+> what its explanation supplies.
+
+This is weaker than demanding a necessitating explanation of every fact, an
+external efficient cause, a well-founded grounding order, a first moment, or
+the necessity of God. It is motivated by an ordinary causal-scope example:
+friction explains a match's ignition, and ignition explains a later flame.
+The ignition can legitimately be necessary to the explanation of the flame
+even though ignition is one part of the larger episode. A full account of
+*both* can explain ignition by friction as well; stopping at “ignition
+explains flame” would instead leave ignition unaccounted for at that larger
+scope. The example supports an explanatory bookkeeping norm, **not** its
+universal metaphysical application. It would be too strong to ban *every*
+constituent of a complex explanandum from every intermediate causal
+explanans; in the match case that would reject an ordinary, non-circular
+multi-step explanation. A proposed stronger `causa sine qua non` condition
+requires scrutiny of exactly what is necessary *for the full account* and
+whether the ingredient itself receives an explanation. Rota (2007) and the
+Pruss (2009) boundary-value discussion are leads for a separately pinned
+source inquiry, **not claims newly attributed or treated as verified here**.
+
+The local law can be a **complete explanation of each later occurrence
+conditional on earlier actuality** while failing this proposed standard for
+the actuality `Aₓ` if the law plus a selected anchor is offered as the whole
+ultimate answer. But accepting that `Aₓ` demands a further ultimate answer
+is a separate and contested premise. A memberwise or explanatory-holist rival
+may treat the complete non-well-founded network, with no ontically preferred
+member, as explanatory *without* a further question. It then owes an account
+of its explanatory role, but has not been shown inconsistent or self-causing:
+the graph of integer predecessor edges is irreflexive and acyclic even though
+it is not well-founded. This is **not** a deduction that every satisfactory
+explanation must have an externally sourced ingredient. In particular, an
+entailing selector is not required for a real probabilistic, intentional or
+other nonnecessitating explanation of `Aₓ`; #736's positive-weight control
+already records that formal limit.
+
+### Three distinct law explanations and a matched sustaining comparison
+
+| Actuality proposal | What is positively explained | What is still owed for a *complete* answer to `Aₓ` |
+| --- | --- | --- |
+| **Humean history-summary law.** Lawhood obtains in virtue of patterns in the actual mosaic. | Scientific unification/prediction; with earlier x it may explain later x on a scientific level. | If one and the **same fact D** (e.g. the exact H fact) grounds the lawhood fact L *and* L is offered as metaphysically grounding **D itself** in the same asymmetric grounding relation, a forbidden ground-cycle follows. `Aₓ` grounding L while L grounds a larger H is **not** that cycle without a further bridge back from H to `Aₓ`. The law's dependence on that **identical** target fact must be demonstrated. Part-to-whole membership, Humean supervenience, and scientific explanatory usefulness alone do not show it. If L depends only on other facts, or explanation is scientific rather than grounding, the strict cycle is not established. |
+| **Governing law / independent constraint.** A primitive restriction can govern complete possibilities, even without temporal production; it may be paired with actual basic matter. | Which histories comply and, if it independently requires some instantiation, why `Aₓ` is secured or favored. | A merely conditional persistence rule like `P` or `R` does not instantiate x. A richer constraint might necessitate or nonnecessitatingly support `Aₓ`; test its actual ontic meaning, independently motivated constraint content and application to *received esse*. A primitive actual matter + laws package may instead openly take `Aₓ` as a primitive. Its primitiveness is not a refutation. |
+| **Real bearer powers/natures.** Actual x has dispositions which secure continuation under appropriate conditions. | Conditional behavior of already actual x; if immanent causation is defended, genuine diachronic activity rather than a Humean summary. | A token disposition whose being presupposes actual x cannot by that fact alone independently account for x's initial or beginningless instantiation; a nature/essence with independently warranted intrinsic existential sufficiency could be different. Do not assume powers' existence is metaphysically grounded in x's existence just from co-instantiation, or treat every immanent cause as efficient self-creation. |
+
+The strongest live competitor is therefore the **governing-law-plus-ontology**
+package described in the #1801 Chen–Goldstein research comment, along with
+the holist's memberwise completeness reply. These supply positive replacement
+answers, not mere denial. Equally, a proposed necessary or nonnecessitating
+productive **source** of x's complete history could explain `Aₓ`, but cannot
+be credited just for the name “God”. It needs an independently characterized
+actual source, a genuinely productive same-bearer/esse bridge, and (if its
+decree, power or explanatory action depends on this very H) a reply to the
+**same** no-unaccounted-input test. On the currently selected weak premise,
+`GivesAt` permits intrinsic or varying givers; eliminating an **external**
+sustainer would not refute `40a97664`. A timeless source is not automatically
+one actual concurrent giver at every t, and an ontological ground is not yet
+strict esse-giving. #1800 retains the separate temporal-content bridge.
+
+### Finding, assessment, rejected paths and revision conditions
+
+**Checked status.** The reusable `constant_of_stationary` and #736/#753
+certificates are verified at their existing formal types. The specialization
+to x's *substantial existence* and the completeness norm are **analyst
+interpretations** without a new Lean, source, or corpus claim. The two
+Bool-presence histories are structural surrogates, not complete metaphysical
+worlds or a concrete independent test of existential inertia. The actual
+supplement to #736 is the explicit distinction between a **replaceable dated
+anchor** and the shared existential precondition `Aₓ`, combined with a
+non-entailing, same-fact explanatory adequacy audit.
+
+**Overall provisional judgment (2026-11-19, base `ed7558145`).** A local
+earlier-existence/no-destruction explanation is a coherent positive success;
+beginninglessness and eternalism do not erase it. The isolated persistence
+rule does not **entail** the complete populated x-profile's actuality, because
+`Aₓ` is not its consequence; neither that failure of entailment nor an
+unanswered further question proves that the rule supplies *no* nonnecessitating
+or holistic explanation. This supplies a *specific conditional pressure* on a
+claim of **non-circular ultimate ontological completeness**, not an independent
+victory for sustaining causation. The strength of the global
+pressure depends on warrant for the completeness norm and the rival's exact
+global package. A genuinely independent primitive-law/ontology or holistic
+account still stands; neither side has shown why its own fundamental actuality
+obtains under a criterion agreed by both. No new independent price item on
+inertia at `40a97664`, no `2068f91c` discharge, no new necessary-being or
+God-existence support, and no change to §4's local relative judgment.
+
+**Rejected as unsupported lifts:** (i) local explanation therefore excludes
+a concurrent giver; (ii) a beginningless series necessarily lacks an
+explanation; (iii) the absence of a first time entails the absence or presence
+of an ontic foundation; (iv) temporal earlier-than entails metaphysical
+grounding; (v) any law with multiple models fails to explain; (vi) every
+Humean law circularly grounds each of its token outcomes; (vii) an ultimate
+answer must entail one history; (viii) a strict ban on subfacts being needed
+in *any* explanation of a complex fact; (ix) a necessary source automatically
+produces temporal content or strictly gives it esse. None follows from the
+certificates, and the positive rivals above block any elimination by labeling.
+
+**Next discriminating test / reopening condition.** Pin and read the
+Rota/Pruss source pair before any new attribution; test the strongest
+non-question-begging subfact/sine-qua-non criterion against the match-style
+mixed internal/external account and a genuine non-well-founded holistic
+explanation *of the same positive `Aₓ`*. Independently specify a primitive
+governing constraint with actual existential scope, and ask whether it
+accounts for `Aₓ` without just copying `Aₓ` into a “law”; hold the sustaining
+proposal to the identical test on the actual source and source-to-esse
+bridge. If a supported norm forces non-circular existential coverage and a
+live rival demonstrably violates it, the comparative judgment could change.
+If a non-WF, primitive-law or probabilistic account meets that norm at the
+same scope, the claimed ultimate gap would narrow. None of these tests is a
+requisite source campaign for already established local laws.
+
+**§7 claim/type self-sweep.** `P` and `R` are distinct stipulations; only
+`R` inherits `constant_of_stationary`. Boolean presence of one rigid x is a
+structural surrogate, not `ConcurrentActualization.GivesAt`, a world-level
+`SameHistory`, an actual concrete bearer, or a genuine candidate-world
+accessibility proof. `Aₓ` is existential quantification over that same x's
+times, not an extra aggregate existent. The strict circle uses the *identical*
+grounding relation and identical fact D in both directions; the optional
+completeness norm is a normative premise, not a Lean theorem. Historical
+source claims and passage records added: **none**; the Rota/Pruss leads are
+not newly attributed. Existing proof records and root premises remain
+unchanged. The added attempt is the record of this analyst test, not a new
+supporting inference or a claim to historical fidelity.
