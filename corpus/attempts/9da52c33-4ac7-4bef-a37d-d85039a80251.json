@@ -38,8 +38,8 @@
   "note": "docs/notes/ca-horizontal-support.md#3-updated-provisional-judgment-on-40a97664-2026-11-19-scoped",
   "reviewed_revision": "dd14322fc4d8dd900d38bd7c5aabc07868e41350",
   "review": "accepted_qualified",
-  "publication": "unpublished",
-  "evidence": "Drafted on origin/main 2f783abda4f10be0727c913242ff36b36f80f96f. Independent semantic challenge of 05a50e749: 4 P1 and 12 P2 findings, repaired in dd14322fc; re-check of dd14322fc found every finding resolved and two further P2 (conditional coverage grant; 09c6d5f0 support rival), fixed in the following commit.",
+  "publication": "published",
+  "evidence": "Drafted on origin/main 2f783abda4f10be0727c913242ff36b36f80f96f. Independent semantic challenge of 05a50e749: 4 P1 and 12 P2 findings, repaired in dd14322fc; re-check of dd14322fc found every finding resolved and two further P2 (conditional coverage grant; 09c6d5f0 support rival), fixed in 8db40105b. Published as PR-1803. Acceptance covers the qualified synthesis only, not premise establishment, rival defeat or closure.",
   "supersedes": "none"
  }
 }
