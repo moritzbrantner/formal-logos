@@ -399,7 +399,7 @@ independent question: it is the crux.
     reading it would at most give that the term of the relation is present,
     not that it gives. That would bear on the co-presence bridge `ffcb81fb`,
     not on `40a97664`.
-- On this sense the present-tense reading *is* `40a97664` (`1d52b8f0`), so it
+- On this sense the present-tense reading is equivalent to `40a97664` (`1d52b8f0`), so it
   has no warrant beyond that of `40a97664`.
 
 *Past tense: "x received esse at onset".*
@@ -418,7 +418,7 @@ independent question: it is the crux.
     reading choice, not a fact about the texts, and the De ente material was
     not re-read for this question.
   - The onset reading together with correlativity gives exactly the onset
-    fact both sides grant (`2371b373`, part 1).
+    fact an inertialist can grant (`2371b373`, part 1).
 - **Its limit.** The onset reading is weaker than the present-tense reading
   and is entailed by it, so it is not a rival premise. The past-tense reading
   *proper*, that receipt in the passion sense stops after onset, is the
