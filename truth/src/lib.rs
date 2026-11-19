@@ -28,6 +28,7 @@ pub mod lifecycle;
 pub mod navigation;
 pub mod notes;
 pub mod orphans;
+pub mod parameter_tags;
 pub mod prove_sweep;
 pub mod pyfmt;
 pub mod pyjson;

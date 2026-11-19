@@ -1,0 +1,17 @@
+{
+  "id": "9fecbef4-0094-4e99-ab9d-98b9c1b916f1",
+  "label": "Whatever has received esse bears the origin relation to something whenever it is present",
+  "paraphrase": "OPEN analyst premise, attribution deferred (accompaniment): in every history of the model, whatever has its esse received in a principle z (DEF-ESSE-RECEIVED-IN) bears, at every moment t at which it is present, a real relation to something as to the principle of its being (OriginRelation.RelatedAt, definition 7b28be97). The term may differ from moment to moment and need not be acting or present. On RECEIVES_ESSE_AT_3 (relationalReceipt) it is equivalent to the present-tense reading of reception 964928dc (result relationalPresentIsAccompaniment). The existential inertialist who holds that a creature keeps its relation of origin to its maker, as a son keeps his to his father, grants it (Control part 1). ST I q.45 a.3 ad 3 (passage fb7bd7bb, read) says that the creature need not be said to be created (creari) as long as it exists, because creation imports its relation to the creator with a certain novelty. That denies the name, not the relation, and plausibly implies that the relation remains without the novelty: some textual support for this premise, by implicature; the article does not state it.",
+  "lean_declaration": "TruthCore.Causality.RelationalReceipt.RelationAccompaniesEsse",
+  "definition_ids": [
+    "7b28be97-9a3c-444f-af46-fe410092c3ee",
+    "2a7f7142-70ae-4209-8266-9e0363cf0cb1",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "71d3bdb7-92cc-4023-b0ca-1739914628e4",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

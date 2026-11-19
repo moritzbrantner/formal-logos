@@ -52,6 +52,8 @@ premises = ["STMT-HIDDENNESS-GOD-LOVES"]
 conclusion = "Actual-world God-to-love norm"
 rule = "Universal instantiation, existential elimination and negation introduction; reuse existing omission models"
 meaning = "Analyst actual-world scope fork. The global premise specializes at s.actual; strictness is witnessed by the control."
+description = "Transcription by instantiation (AGENTS.md invariant 16): analyst actual-world scope fork. The global premise is instantiated at s.actual, so the result closes its conclusion only when that premise is closed; strictness is witnessed by the control."
+transcription = "instantiation"
 
 [[argument]]
 id = "Global-to-actual openness projection"
@@ -61,6 +63,8 @@ premises = ["STMT-HIDDENNESS-ALWAYS-OPEN"]
 conclusion = "Actual-world immediate openness norm"
 rule = "Universal instantiation, existential elimination and negation introduction; reuse existing omission models"
 meaning = "Analyst actual-world scope fork. The global premise specializes at s.actual; strictness is witnessed by the control."
+description = "Transcription by instantiation (AGENTS.md invariant 16): analyst actual-world scope fork. The global premise is instantiated at s.actual, so the result closes its conclusion only when that premise is closed; strictness is witnessed by the control."
+transcription = "instantiation"
 sense_bridges = [{term = "LOVE_ACCESS", from = "LOVE_ACCESS_1", to = "LOVE_ACCESS_2", statement_id = "STMT-HIDDENNESS-ALWAYS-OPEN"}]
 
 [[argument]]
@@ -71,6 +75,8 @@ premises = ["STMT-HIDDENNESS-ACCESS-NEEDS-BELIEF"]
 conclusion = "Actual-world belief requirement for access"
 rule = "Universal instantiation, existential elimination and negation introduction; reuse existing omission models"
 meaning = "Analyst actual-world scope fork. The global premise specializes at s.actual; strictness is witnessed by the control."
+description = "Transcription by instantiation (AGENTS.md invariant 16): analyst actual-world scope fork. The global premise is instantiated at s.actual, so the result closes its conclusion only when that premise is closed; strictness is witnessed by the control."
+transcription = "instantiation"
 
 [[argument]]
 id = "Actual hiddenness excludes its personal ultimate"

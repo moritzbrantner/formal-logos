@@ -1,4 +1,4 @@
-//! `truth senses (report | allowlist | ratchet --base REV) [--write]`: Python
+//! `truth senses (report | allowlist | ratchet --base REV | parameters) [--write]`: Python
 //! `scripts/sense_index.py report|allowlist|ratchet` (#954 B6).
 //!
 //! - `report [--write]` — the arguments that mix senses of one term without a
@@ -8,11 +8,14 @@
 //! - `allowlist [--write]` — regenerate `corpus/sense-index-allowlist.json`,
 //!   or fail when it is stale;
 //! - `ratchet --base REV` — fail when the allowlist gained an entry since REV
-//!   (#1233); list entries that no longer fail and can be removed.
+//!   (#1233); list entries that no longer fail and can be removed;
+//! - `parameters` — the authored parameter-level sense tags (#1784,
+//!   `truth::parameter_tags`), by sense; `--json` lists every tag.
 
 use super::{Accepts, Args, Command, Output, corpus_error, load, raw, raw_with_stderr, usage};
 use serde_json::{Value, json};
 use std::fs;
+use truth::parameter_tags::ParameterTags;
 use truth::senses::{self, ALLOWLIST, NOTE};
 
 pub const COMMAND: Command = Command {
@@ -20,8 +23,7 @@ pub const COMMAND: Command = Command {
     run,
 };
 
-const USAGE: &str =
-    "usage: truth senses (report [--write] | allowlist [--write] | ratchet --base REV)";
+const USAGE: &str = "usage: truth senses (report [--write] | allowlist [--write] | ratchet --base REV | parameters)";
 
 fn failure(message: impl Into<String>) -> super::Failure {
     (
@@ -32,6 +34,36 @@ fn failure(message: impl Into<String>) -> super::Failure {
 
 fn entries_text(entries: &[Vec<String>]) -> Vec<String> {
     entries.iter().map(|entry| entry.join(" / ")).collect()
+}
+
+/// `senses parameters`: the authored parameter-level sense tags (#1784),
+/// grouped by sense. An untagged parameter is unknown, not "no sense".
+fn parameters(args: &Args, corpus: &truth::Corpus) -> Output {
+    if args.write {
+        return Err(usage("--write does not apply to senses parameters"));
+    }
+    let tags = ParameterTags::from_corpus(corpus).map_err(failure)?;
+    if args.machine {
+        return Ok((json!({"schema_version": 1, "tags": tags.all()}), None));
+    }
+    let mut text = String::new();
+    let mut current = "";
+    for tag in tags.all() {
+        if tag.sense_id != current {
+            current = &tag.sense_id;
+            text.push_str(&format!(
+                "{} [{}]\n",
+                tag.sense_label,
+                &tag.sense_id[..8.min(tag.sense_id.len())]
+            ));
+        }
+        text.push_str(&format!("  {}\n", tag.parameter.display()));
+    }
+    text.push_str(&format!(
+        "{} parameter tag(s); untagged parameters are unknown\n",
+        tags.all().len()
+    ));
+    Err(raw(0, text))
 }
 
 fn run(args: &Args, operands: &[&str]) -> Output {
@@ -53,6 +85,9 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         ));
     }
     let (corpus, _, _) = load(args)?;
+    if operands[0] == "parameters" {
+        return parameters(args, &corpus);
+    }
     let report = senses::report(&corpus).map_err(corpus_error)?;
     match operands[0] {
         "report" => {

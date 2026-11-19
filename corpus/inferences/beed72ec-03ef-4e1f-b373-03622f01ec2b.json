@@ -1,0 +1,10 @@
+{
+  "id": "beed72ec-03ef-4e1f-b373-03622f01ec2b",
+  "label": "RECEIVES_ESSE_AT_3 correlativity is concurrent actualization, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "7e87166d-24b9-44db-b566-5ee1dd5a8673",
+  "rule": "Forward: accompaniment makes every received-esse thing present at t a relational receiver at t, so correlativity gives a giver then; backward: a relational receiver at t has received esse and is present at t, so 40a97664 gives a giver then",
+  "meaning": "Closed result with no premises, quantified over every history, giving relation, origin relation and reception predicate; accompaniment is a hypothesis inside the stated proposition, not a premise of the argument. Given accompaniment, correlativity of receiving and giving on the relational sense is equivalent to weak concurrent actualization 40a97664. So the relation adds content to receipt, but none that correlativity can use once the relation is borne at every moment of presence: correlativity on this sense is 40a97664 restated, as on the standing sense. It establishes nothing about reality.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

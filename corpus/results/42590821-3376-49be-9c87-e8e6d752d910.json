@@ -1,0 +1,11 @@
+{
+  "id": "42590821-3376-49be-9c87-e8e6d752d910",
+  "label": "On RECEIVES_ESSE_AT_3 present-tense reception is accompaniment, checked",
+  "argument_id": "8d8cdb0e-697c-4086-bca7-594eca809974",
+  "challenge_module": "TruthCore.Results.Causality.RelationalReceipt.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RelationalReceipt.Solution",
+  "theorem": "TruthCore.Results.Causality.RelationalReceipt.relationalPresentIsAccompaniment",
+  "comparator_config": "results/42590821-3376-49be-9c87-e8e6d752d910/comparator.json",
+  "status": "solution-present",
+  "description": "Closed result with no premises, quantified over every history, origin relation and reception predicate. On the relational sense the present-tense reading of reception says that a received-esse thing present at t bears the origin relation at t to something, which is accompaniment, in both directions. It establishes nothing about reality."
+}
