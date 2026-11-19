@@ -1,0 +1,11 @@
+{
+  "id": "506707fb-adc0-4671-8726-c5cd97d2f466",
+  "label": "Stable-law positive entitlement and excluded-future control",
+  "argument_id": "e8d037ee-a862-470c-a700-39b567b93209",
+  "challenge_module": "TruthCore.Results.Epistemology.NoFoundationPractice.Challenge",
+  "solution_module": "TruthCore.Results.Epistemology.NoFoundationPractice.Solution",
+  "theorem": "TruthCore.Results.Epistemology.NoFoundationPractice.stableControl",
+  "comparator_config": "results/506707fb-adc0-4671-8726-c5cd97d2f466/comparator.json",
+  "status": "solution-present",
+  "description": "Strong guarantees are not contradictory norms by themselves; their conflict with positive projection depends on the two admitted alternative futures. The smaller stable cell yields positive examples without transferring its lawhood or epistemic access to reality."
+}

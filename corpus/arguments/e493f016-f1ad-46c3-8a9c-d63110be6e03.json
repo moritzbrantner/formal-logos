@@ -1,0 +1,15 @@
+{
+  "id": "e493f016-f1ad-46c3-8a9c-d63110be6e03",
+  "label": "Open-future positive fallback and norm-omission controls",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "4ae7b275-2bd7-4da9-a833-fd949bc99bf9",
+  "inference_ids": [
+    "b142bd53-fe7f-4274-b3a2-e071a9ff1c47"
+  ],
+  "meaning": "Nonempty open-future witnesses and explicit positive safe use prevent the no-projection theorem being misread as all practical action impossible. The vacuous entitlement case is intentionally paired with a positive weaker-norm safe case; neither assigns real-world rationality by stipulated scores.",
+  "definition_ids": [
+    "89b927ef-37ac-5400-bb6a-26bc5e5ccca0",
+    "3ecfe3fd-61e4-58a3-adb3-483bf24f7a15",
+    "4f301d77-0699-5fbb-b931-41b20b839266"
+  ]
+}

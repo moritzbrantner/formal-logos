@@ -1,0 +1,11 @@
+{
+  "id": "7496e183-8924-42e3-8a30-bf6e1c59c7c6",
+  "label": "Stable future allows positive forecasts and policies under the same strict norm",
+  "paraphrase": "When the supplied profile restricts every transition to copying, its populated evidence cell supports exact constant-true forecasts and bet-true policies: a stance endorsing these claims satisfies the identical strict universal guarantee norm. The delayed-failure continuation is excluded. This comparison does not itself warrant assuming the stronger profile in science.",
+  "lean_declaration": "TruthCore.Epistemology.NoFoundationPractice.StableControl",
+  "definition_ids": [
+    "4f301d77-0699-5fbb-b931-41b20b839266",
+    "3ecfe3fd-61e4-58a3-adb3-483bf24f7a15",
+    "89b927ef-37ac-5400-bb6a-26bc5e5ccca0"
+  ]
+}

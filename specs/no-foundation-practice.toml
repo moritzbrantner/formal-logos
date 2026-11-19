@@ -1,0 +1,63 @@
+[batch]
+vocab = "TruthCore.Epistemology.NoFoundationPractice"
+results = "TruthCore.Results.Epistemology.NoFoundationPractice"
+
+[[statement]]
+id = "Every deterministic forecast and high-payoff policy fails on a two-successor evidence cell"
+lean = "UniformBarrier"
+definitions = ["DEF-ULTIMATE-EXPLANATION-EVIDENCE", "DEF-ULTIMATE-EXPLANATION-DECISION"]
+paraphrase = "For every stance admitting both the constant-true future and the Hume delayed-failure future at every finite horizon, every deterministic forecast based on the shared observed record has a concrete countercontinuation and every three-action policy has a concrete continuation yielding payoff below two. No epistemic entitlement, physical likelihood or impossibility of a safe fallback follows."
+
+[[argument]]
+id = "Arbitrary forecasts and policies have explicit opposite-future countercontinuations"
+theorem = "uniformBarrier"
+premises = []
+conclusion = "Every deterministic forecast and high-payoff policy fails on a two-successor evidence cell"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Branch on method output and action with fixed opposite-next traces"
+meaning = "Non-transcription theorem: all deterministic forecast functions and all action-selection functions meet a worst-case countercontinuation when the stance admits both specified next outcomes. The futures share their observational record. No probability weights or actual physical law-reversal thesis are inferred. #737's openFuture profile supplies explicit instances; the relevance to an actual no-ultimate-explanation worldview remains an OPEN interpretation bridge."
+
+[[statement]]
+id = "A two-successor stance with its own universal guarantee norm cannot endorse an exact projection"
+lean = "InternalDiscipline"
+definitions = ["DEF-ULTIMATE-EXPLANATION-EVIDENCE", "DEF-ULTIMATE-EXPLANATION-DECISION", "DEF-SELF-APPLICATION-NORM"]
+paraphrase = "For every stance admitting both opposite next outcomes, if it endorses its own strong norm requiring exact cross-future prediction and guaranteed payoff two for entitled claims, it must withhold entitlement from every particular scientific forecast and high-payoff practical projection. Endorsing any one such claim while affirming that norm is internally inconsistent. A stance merely denying an ultimate ground, using a safe action or adopting a fallibilist norm is not refuted."
+
+[[argument]]
+id = "A guarantee norm applied to own scientific and practical entitlement claims defeats their endorsement"
+theorem = "internalDiscipline"
+premises = []
+conclusion = "A two-successor stance with its own universal guarantee norm cannot endorse an exact projection"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Invoke existing self-application norm against each explicit countercontinuation"
+meaning = "Scoped conditional self-undermining, not an unqualified refutation of Hume, science or naturalism: the strong normative requirement is the rival's explicit commitment and is not defined as objective epistemic warrant. The theorem proves no commitment from denial of an ultimate explanation by itself. Its projection claims include arbitrary methods and policies on a fixed three-action ordinal task."
+
+[[statement]]
+id = "Open-future controls preserve safe practice and distinguish strict endorsement"
+lean = "OpenControls"
+definitions = ["DEF-ULTIMATE-EXPLANATION-EVIDENCE", "DEF-ULTIMATE-EXPLANATION-DECISION", "DEF-SELF-APPLICATION-NORM"]
+paraphrase = "A nonempty future cell admits the unchanged and delayed-failure histories. An abstaining stance can consistently maintain the strict norm with no entitled claim. Another stance endorses a safe fallback under a separate weaker action-floor norm, while correctly failing the strict payoff-two norm. The safe policy guarantees payoff one on every admitted trace."
+
+[[argument]]
+id = "Open-future positive fallback and norm-omission controls"
+theorem = "openControls"
+premises = []
+conclusion = "Open-future controls preserve safe practice and distinguish strict endorsement"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Reuse #737 populated cells and evaluate task payoffs in distinct stated norms"
+meaning = "Nonempty open-future witnesses and explicit positive safe use prevent the no-projection theorem being misread as all practical action impossible. The vacuous entitlement case is intentionally paired with a positive weaker-norm safe case; neither assigns real-world rationality by stipulated scores."
+
+[[statement]]
+id = "Stable future allows positive forecasts and policies under the same strict norm"
+lean = "StableControl"
+definitions = ["DEF-ULTIMATE-EXPLANATION-EVIDENCE", "DEF-ULTIMATE-EXPLANATION-DECISION", "DEF-SELF-APPLICATION-NORM"]
+paraphrase = "When the supplied profile restricts every transition to copying, its populated evidence cell supports exact constant-true forecasts and bet-true policies: a stance endorsing these claims satisfies the identical strict universal guarantee norm. The delayed-failure continuation is excluded. This comparison does not itself warrant assuming the stronger profile in science."
+
+[[argument]]
+id = "Stable-law positive entitlement and excluded-future control"
+theorem = "stableControl"
+premises = []
+conclusion = "Stable future allows positive forecasts and policies under the same strict norm"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Induction from stable initial state and deterministic copy transitions"
+meaning = "Strong guarantees are not contradictory norms by themselves; their conflict with positive projection depends on the two admitted alternative futures. The smaller stable cell yields positive examples without transferring its lawhood or epistemic access to reality."

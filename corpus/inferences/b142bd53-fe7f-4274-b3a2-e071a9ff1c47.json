@@ -1,0 +1,10 @@
+{
+  "id": "b142bd53-fe7f-4274-b3a2-e071a9ff1c47",
+  "label": "Open-future positive fallback and norm-omission controls (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "4ae7b275-2bd7-4da9-a833-fd949bc99bf9",
+  "rule": "Reuse #737 populated cells and evaluate task payoffs in distinct stated norms",
+  "meaning": "Nonempty open-future witnesses and explicit positive safe use prevent the no-projection theorem being misread as all practical action impossible. The vacuous entitlement case is intentionally paired with a positive weaker-norm safe case; neither assigns real-world rationality by stipulated scores.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
