@@ -1033,6 +1033,13 @@ stderr and exit codes are Python's byte for byte
 also compared the real corpus against several bases); `sense_index.py migrate`, a
 one-shot migration, stays Python.
 
+`truth senses parameters [--json]` lists the authored parameter-level sense
+tags (`senses[].lean_parameters`, #1784; rules in `docs/corpus-model.md`,
+"Sense-indexed terms") by sense. `truth::parameter_tags::ParameterTags` is the
+reader other commands reuse (sense → tagged parameters, parameter → senses,
+declaration → tags); `truth check` runs `parameter_tags::validate`. An
+untagged parameter is unknown.
+
 ## `configurations`, `configuration-report`, `models`, `territory`
 
 These port `corpus.py configurations`, `configuration-report`, `models` and

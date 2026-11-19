@@ -16,13 +16,105 @@
       "id": "bdc6001c-9699-4126-9e35-6fbd1da78100",
       "label": "CAUSE_1",
       "definition_id": "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
-      "lean_declaration": "TruthCore.Causality.TermSenseForks.CauseFrame.MovesIn"
+      "lean_declaration": "TruthCore.Causality.TermSenseForks.CauseFrame.MovesIn",
+      "lean_parameters": [
+        {
+          "declaration": "TruthCore.Causality.CausalMapsBatch1.MoverCausesWhatItMovesTo",
+          "parameter": "MovesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.CausalMapsBatch1.SelfMoverMovesByADistinctPart",
+          "parameter": "MovesIn"
+        }
+      ]
     },
     {
       "id": "572f19f2-8833-4133-8bea-b8b5fa4ac24f",
       "label": "CAUSE_2",
       "definition_id": "211a6432-8b8f-53ed-85e3-75173bb15b24",
-      "lean_declaration": "TruthCore.Causality.TermSenseForks.CauseFrame.CausesIn"
+      "lean_declaration": "TruthCore.Causality.TermSenseForks.CauseFrame.CausesIn",
+      "lean_parameters": [
+        {
+          "declaration": "TruthCore.Causality.SustainingCausation.CausingBeingIsSustaining",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.SustainingCausation.CausingBeingIsOriginating",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.SustainingCausation.Immense2PresentToAll",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.SustainingCausation.PresentInfiniteCauseOfAllIsImmense",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.ConcurrentActualization.CausesOfBeingConcur",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.ConcurrentActualization.CausingAnothersBeingIsSustaining",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.Round2Grounding.EsseCausesExistAt",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.Round2Grounding.EsseCausesAreConcrete",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.Round2Grounding.EsseEffectDependsOnItsCause",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.Round2Grounding.NecessityCauseCausesEsse",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.Round2Grounding.ParticipatedEsseHasDistinctCause",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.CausalMapsBatch1.CauseOfBeingHasWhatItGives",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.EsseCausePriority.ActualEsseCausePriority",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.EsseCausePriority.DistinctEsseCausePriority",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.NecessaryConcreteRouteBridge.EsseCauseIsActualConcreteGround",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.CausalMapsBatch1.CauseHasWhatItGives",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.CausalMapsBatch1.CausedPerfectionIsHad",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.CausalMapsBatch1.CausedPerfectionIsReceivedInEffect",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.CausalMapsBatch1.CauseHasPerfectionNotAsReceivedInEffect",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.CausalMapsBatch1.MoverCausesWhatItMovesTo",
+          "parameter": "CausesIn"
+        }
+      ]
     },
     {
       "id": "d9202ef9-39e8-401e-aadd-ba82b72f6711",
