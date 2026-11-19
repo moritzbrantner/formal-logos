@@ -28,7 +28,6 @@
     "fd4d20b9-e6a1-5890-a2f5-f10d6c7441de",
     "008cb21a-256c-5a90-822c-acd4591d699a",
     "d8e2ed12-8089-5202-ae51-e807cf611c76",
-    "1b8baf77-84fa-5513-a138-7fa14840dd87",
     "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
     "beb654a7-e204-5f4c-a7b4-45e886ba7109",
     "9c6e4314-2e35-52ff-951e-db752a3c8ce2",
@@ -41,5 +40,21 @@
     "623ddbf6-9683-5361-bae4-e348a00ec680",
     "16ea77ae-4ec7-59e4-8474-10f04efb5ddf",
     "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ],
+  "sense_bridges": [
+    {
+      "term": "A_THOUGHT_OCCURS_VERSUS_SOMETHING_CONCRETE",
+      "from": "1c99ce91-24fc-4896-b1cc-ec13e1797d40",
+      "to": "16318101-d4c4-4ea8-a28e-406fc06ca152",
+      "statement_id": "b401eca0-7fb9-48a7-a89c-3872f9912eea",
+      "role": "conclusion"
+    },
+    {
+      "term": "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT",
+      "from": "9232f675-db0a-474c-9f00-d8e5aba69ef7",
+      "to": "1e18ccd2-b582-4d6e-9c55-324d19151ce8",
+      "statement_id": "b401eca0-7fb9-48a7-a89c-3872f9912eea",
+      "role": "conclusion"
+    }
   ]
 }
