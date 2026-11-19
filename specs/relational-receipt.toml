@@ -1,0 +1,134 @@
+# Receipt of esse as a real relation to the principle of being (after ST I
+# q.45 a.3, read in passage fb7bd7bb). The named next test of attempt 50e08b09
+# (docs/notes/sustaining-vs-existential-inertia.md, section 6): does a
+# relational reading of present receipt, with content beyond reception plus
+# presence, give correlativity of receiving and giving warrant independent of
+# weak concurrent actualization 40a97664? Analyst formulations, attribution
+# deferred.
+
+[batch]
+vocab = "TruthCore.Causality.RelationalReceipt"
+results = "TruthCore.Results.Causality.RelationalReceipt"
+
+# ---------------------------------------------------------------- statements
+
+[[statement]]
+id = "Whatever bears the origin relation at a moment has received esse and is present then"
+lean = "FoundedOnReceivedEsse"
+paraphrase = "OPEN analyst premise, attribution deferred (foundation of the origin relation on received esse): in every history of the model, whatever bears at moment t a real relation to something as to the principle of its being (OriginRelation.RelatedAt v x g t, the primitive of definition 7b28be97) has its esse received in some principle (DEF-ESSE-RECEIVED-IN) and is present at t. It is a necessary condition suggested by the order of subject to accident in ST I q.45 a.3 ad 3 (the creature is the subject of the relation and prior to it in being; passage fb7bd7bb, read; no claim is recorded); the priority itself is not typed, nor the priority that ad 3 assigns to the relation on the side of its term. It says nothing about the term of the relation."
+definitions = ["7b28be97-9a3c-444f-af46-fe410092c3ee", "DEF-ESSE-RECEIVED-IN", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE"]
+disambiguations = ["DISAMB-ESSE-RECEPTION"]
+
+[[statement]]
+id = "Whatever has received esse bears the origin relation to something whenever it is present"
+lean = "RelationAccompaniesEsse"
+paraphrase = "OPEN analyst premise, attribution deferred (accompaniment): in every history of the model, whatever has its esse received in a principle z (DEF-ESSE-RECEIVED-IN) bears, at every moment t at which it is present, a real relation to something as to the principle of its being (OriginRelation.RelatedAt, definition 7b28be97). The term may differ from moment to moment and need not be acting or present. On RECEIVES_ESSE_AT_3 (relationalReceipt) it is equivalent to the present-tense reading of reception 964928dc (result relationalPresentIsAccompaniment). The existential inertialist who holds that a creature keeps its relation of origin to its maker, as a son keeps his to his father, grants it (Control part 1). ST I q.45 a.3 ad 3 (passage fb7bd7bb, read) says that the creature need not be said to be created (creari) as long as it exists, because creation imports its relation to the creator with a certain novelty. That denies the name, not the relation, and plausibly implies that the relation remains without the novelty: some textual support for this premise, by implicature; the article does not state it."
+definitions = ["7b28be97-9a3c-444f-af46-fe410092c3ee", "2a7f7142-70ae-4209-8266-9e0363cf0cb1", "DEF-ESSE-RECEIVED-IN", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE"]
+disambiguations = ["71d3bdb7-92cc-4023-b0ca-1739914628e4", "DISAMB-ESSE-RECEPTION"]
+
+[[statement]]
+id = "The term of the origin relation at a moment is present then"
+lean = "TermCoexists"
+paraphrase = "OPEN analyst premise, attribution deferred (coexistence of the term): in every history of the model, if x bears at moment t a real relation to g as to the principle of its being (OriginRelation.RelatedAt v x g t, definition 7b28be97), then g is present at t. Meaning: a real relation needs an existing term; a relation to what is not is a relation of reason. Warrant independent of 40a97664: ST I q.13 a.7 co. (passage 12d8ecc5, read; no claim is recorded) places relations between a being and a non-being among relations of reason only. Presence at a moment of the model is the analyst's temporal reading of 'existing'; a non-temporal term is represented as present at every moment. It does not say that the term acts. With foundation and accompaniment it does not entail 40a97664 (result coexistentTermDoesNotCarryTheCrux, Control part 1: a creator present throughout who gives being at onset only). It excludes the persisting relation to a term that has ceased (Control part 3)."
+definitions = ["7b28be97-9a3c-444f-af46-fe410092c3ee", "DEF-TEMPORAL-HISTORY-NOW-SLICE"]
+
+[[statement]]
+id = "The term of the origin relation at a moment gives its bearer being then"
+lean = "TermGives"
+paraphrase = "OPEN analyst premise, attribution deferred (giving by the term): in every history of the model, if x bears at moment t a real relation to g as to the principle of its being (OriginRelation.RelatedAt v x g t, definition 7b28be97), then g gives x being at t (GivesAt v g x t, definition 158301bc, STRICT esse-giving reading). Meaning: the term to which the creature is related as to the principle of its being is acting on it at every moment it is so related. In the analyst's terms, the relation behaves like that of the moved to its mover while the motion lasts, not like that of a son to his father after the begetting. That two-type contrast is the analyst's: ST I q.13 a.7 co. (passage 12d8ecc5, read) gives both mover and moved and father and son as relations real on both sides consequent on action and passion, and places the creature's relation to God in a different class, relations real in one extreme only, as knowledge to the knowable; neither exemplar is the text's classification of this relation. With accompaniment it gives weak concurrent actualization 40a97664 (result concurrentOfTermGiving). For a fixed relation it is stronger than 40a97664 requires, since it also makes the giver the term of the relation (Control part 5: 40a97664 holds through another giver and this premise fails). The existential inertialist must deny it if it grants accompaniment, by that result and its rejection of 40a97664 (Control part 1)."
+definitions = ["7b28be97-9a3c-444f-af46-fe410092c3ee", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE"]
+
+[[statement]]
+id = "On RECEIVES_ESSE_AT_3 present-tense reception is accompaniment"
+lean = "RelationalPresentIsAccompaniment"
+paraphrase = "Closed definitional result, attribution deferred: for every history, origin relation and reception predicate, when present-tense receipt is read relationally (relationalReceipt, RECEIVES_ESSE_AT_3: z receives x's esse at t iff x's esse is received in z, x is present at t, and x bears the origin relation at t to something), the present-tense reading of reception holds iff whatever has received esse bears the origin relation to something whenever it is present (accompaniment)."
+definitions = ["2a7f7142-70ae-4209-8266-9e0363cf0cb1", "7b28be97-9a3c-444f-af46-fe410092c3ee", "DEF-ESSE-RECEIVED-IN", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE"]
+disambiguations = ["71d3bdb7-92cc-4023-b0ca-1739914628e4", "DISAMB-ESSE-RECEPTION"]
+
+[[statement]]
+id = "On RECEIVES_ESSE_AT_3 with accompaniment correlativity is concurrent actualization"
+lean = "RelationalReadingIsTheCrux"
+paraphrase = "Closed result, attribution deferred: for every history, giving relation, origin relation and reception predicate, if whatever has received esse bears the origin relation to something whenever it is present (accompaniment), then correlativity of receiving and giving on RECEIVES_ESSE_AT_3 (relationalReceipt) holds iff weak concurrent actualization 40a97664 holds. So once the relation is granted at every moment of presence, which the inertialist can do, correlativity on the relational sense is equivalent to 40a97664, as on the standing sense. This concerns correlativity (some giver at the moment), not giving by the term (the related term is the giver)."
+definitions = ["2a7f7142-70ae-4209-8266-9e0363cf0cb1", "7b28be97-9a3c-444f-af46-fe410092c3ee", "DEF-ESSE-RECEIVED-IN", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE"]
+disambiguations = ["71d3bdb7-92cc-4023-b0ca-1739914628e4", "DISAMB-ESSE-RECEPTION"]
+
+[[statement]]
+id = "Some founded accompanying relation with a giving term iff concurrent actualization"
+lean = "SomeRelationCarriesTheCrux"
+paraphrase = "Closed result, attribution deferred: for every history, giving relation and reception predicate, there is an origin relation (a value of the primitive of definition 7b28be97) that is founded on received esse, accompanies received esse at every moment of presence, and whose term gives its bearer being at each moment it is borne, iff weak concurrent actualization 40a97664 holds. Forward by concurrentOfTermGiving; backward by taking the relation of a received-esse thing present at t to whatever gives it being at t. So with the relation left open (existentially quantified), accompaniment and giving by the term say exactly what 40a97664 says. For a fixed relation they say more: giving by the term also makes the giver the related term (Control part 5)."
+definitions = ["7b28be97-9a3c-444f-af46-fe410092c3ee", "DEF-ESSE-RECEIVED-IN", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE"]
+disambiguations = ["DISAMB-ESSE-RECEPTION"]
+
+[[statement]]
+id = "Foundation, accompaniment and a coexisting term do not give concurrent actualization"
+lean = "CoexistentTermDoesNotCarryTheCrux"
+paraphrase = "Closed result, attribution deferred: it is not the case that, for every history over a preordered time, giving relation, origin relation and reception predicate, foundation of the origin relation on received esse, irreflexivity (no thing related to itself), non-mutuality (the term not related back to the bearer), accompaniment, coexistence of the term and received onset being given (fa3e228b) together entail weak concurrent actualization 40a97664. Witness: Control part 1, in which a creator is present at every moment and gives a received-esse thing being at its first moment only, and the thing keeps its relation to the creator afterwards. So the structural features typed from ST I q.13 a.7 (an existing term, no relation of a thing to itself, real in one extreme only), whose warrant is independent of 40a97664, do not reach giving at the moment. Not shown: that giving by the term is the minimal addition that would."
+definitions = ["7b28be97-9a3c-444f-af46-fe410092c3ee", "DEF-ESSE-RECEIVED-IN", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE"]
+disambiguations = ["DISAMB-ESSE-RECEPTION"]
+
+[[statement]]
+id = "Relational-receipt controls: coexisting idle term, onset relation, absent term"
+lean = "Control.Certificate"
+paraphrase = "Closed controls on interpretations with one world, natural-number times and two individuals, false alone with received esse; statements about these interpretations only. (1) true present at every moment, gives false being at time 1 only, false present from time 1 and related to true from time 1 on: foundation, irreflexivity, non-mutuality, accompaniment, coexistence of the term, received onset given and the present-tense reading on RECEIVES_ESSE_AT_3 hold; giving by the term, correlativity on RECEIVES_ESSE_AT_3 and 40a97664 fail. (2) Same history and giving, false related to true at time 1 only (an analyst variant; not a model of ST I q.45 a.3 ad 3, which denies the name creation after onset, not the relation): foundation, coexistence of the term, giving by the term and correlativity on RECEIVES_ESSE_AT_3 hold; accompaniment, the present-tense reading on RECEIVES_ESSE_AT_3 and 40a97664 fail. (3) true present up to time 1 only, false related to true from time 1 on: foundation and accompaniment hold; coexistence of the term fails. (4) true present at every moment and giving false being from time 1 on, persisting relation: foundation, accompaniment, coexistence of the term, giving by the term, correlativity on RECEIVES_ESSE_AT_3 and 40a97664 all hold. (5) true present at every moment, false giving itself being from time 1 on (and true giving it being at time 1), persisting relation to true: 40a97664 holds and giving by the term fails, so for a fixed relation 40a97664 does not entail giving by the term."
+definitions = ["2a7f7142-70ae-4209-8266-9e0363cf0cb1", "7b28be97-9a3c-444f-af46-fe410092c3ee", "DEF-ESSE-RECEIVED-IN", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-TEMPORAL-HISTORY-NOW-SLICE"]
+disambiguations = ["71d3bdb7-92cc-4023-b0ca-1739914628e4", "DISAMB-ESSE-RECEPTION"]
+
+# ---------------------------------------------------------------- arguments
+
+[[argument]]
+id = "Concurrent actualization from accompaniment and giving by the term"
+theorem = "concurrentOfTermGiving"
+premises = ["Whatever has received esse bears the origin relation to something whenever it is present", "The term of the origin relation at a moment gives its bearer being then"]
+conclusion = "40a97664-e481-42d7-8458-78374a61aa26"
+transcription = "single_application"
+axioms = []
+rule = "Accompaniment supplies a term of the origin relation at each moment of presence; giving by the term makes that term a giver then"
+meaning = "Transcription (single application, invariant 16): the last step applies giving by the term, whose consequent is the conclusion's matrix. Let x have its esse received in z and be present at t in history v; by accompaniment x bears the origin relation at t to some g; by giving by the term g gives x being at t. That is weak concurrent actualization 40a97664. Its point is to locate the crux in the relational reading, not to support it: each premise is needed in a checked interpretation (Control part 1, where accompaniment holds and giving by the term fails; part 2, where giving by the term holds and accompaniment fails), and both hold with 40a97664 in part 4. Accompaniment is granted by the inertialist who keeps the creature's relation of origin; giving by the term says the related term acts at every moment the relation is borne. With the relation left open the pair is equivalent to 40a97664 (someRelationCarriesTheCrux); for a fixed relation it is strictly stronger (Control part 5). All premises stay OPEN. No premise is established."
+
+[[argument]]
+id = "On RECEIVES_ESSE_AT_3 present-tense reception is accompaniment, checked"
+theorem = "relationalPresentIsAccompaniment"
+premises = []
+conclusion = "On RECEIVES_ESSE_AT_3 present-tense reception is accompaniment"
+axioms = []
+senses = {RECEIVES_ESSE_AT = "RECEIVES_ESSE_AT_3"}
+rule = "Unfold relationalReceipt: its first two conjuncts are the hypotheses of the present-tense reading, its third is accompaniment's consequent"
+meaning = "Closed result with no premises, quantified over every history, origin relation and reception predicate. On the relational sense the present-tense reading of reception says that a received-esse thing present at t bears the origin relation at t to something, which is accompaniment, in both directions. It establishes nothing about reality."
+
+[[argument]]
+id = "RECEIVES_ESSE_AT_3 correlativity is concurrent actualization, checked"
+theorem = "relationalReadingIsTheCrux"
+premises = []
+conclusion = "On RECEIVES_ESSE_AT_3 with accompaniment correlativity is concurrent actualization"
+axioms = []
+senses = {RECEIVES_ESSE_AT = "RECEIVES_ESSE_AT_3"}
+rule = "Forward: accompaniment makes every received-esse thing present at t a relational receiver at t, so correlativity gives a giver then; backward: a relational receiver at t has received esse and is present at t, so 40a97664 gives a giver then"
+meaning = "Closed result with no premises, quantified over every history, giving relation, origin relation and reception predicate; accompaniment is a hypothesis inside the stated proposition, not a premise of the argument. Given accompaniment, correlativity of receiving and giving on the relational sense is equivalent to weak concurrent actualization 40a97664. So the relation adds content to receipt, but none that correlativity can use once the relation is borne at every moment of presence: correlativity on this sense is 40a97664 restated, as on the standing sense. It establishes nothing about reality."
+
+[[argument]]
+id = "Founded origin relation with a giving term iff concurrent actualization, checked"
+theorem = "someRelationCarriesTheCrux"
+premises = []
+conclusion = "Some founded accompanying relation with a giving term iff concurrent actualization"
+axioms = []
+rule = "Forward: compose accompaniment with giving by the term; backward: take the relation of a received-esse thing present at t to whatever gives it being at t"
+meaning = "Closed result with no premises, quantified over every history, giving relation and reception predicate. If some founded origin relation accompanies received esse and its term gives at each moment it is borne, then 40a97664 holds (concurrentOfTermGiving). Conversely, if 40a97664 holds, the relation of a received-esse thing present at t to whatever gives it being at t is founded, accompanies received esse and has a giving term. So the relational premises add nothing to 40a97664 unless the relation is fixed by a reading with further content, and the further content typed here (coexistence of the term, irreflexivity, non-mutuality) does not carry 40a97664 (coexistentTermDoesNotCarryTheCrux). It establishes nothing about reality."
+
+[[argument]]
+id = "Coexisting term does not entail concurrent actualization, checked"
+theorem = "coexistentTermDoesNotCarryTheCrux"
+premises = []
+conclusion = "Foundation, accompaniment and a coexisting term do not give concurrent actualization"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Instantiate the universal claim at Control part 1 and contradict its failure of 40a97664"
+meaning = "Closed result with no premises: the universally quantified entailment from foundation, irreflexivity, non-mutuality, accompaniment, coexistence of the term and received onset being given to 40a97664 fails, at the interpretation of Control part 1 (a creator present at every moment who gives being at onset only, with the creature related to it afterwards). A countermodel shows non-entailment for the stated formal interpretation, not that any premise is false. It shows that the structural features typed from ST I q.13 a.7 (an existing term, irreflexivity, non-mutuality) do not reach giving at the moment. Giving by the term, with accompaniment, would suffice; that it is the minimal sufficient addition is not shown."
+
+[[argument]]
+id = "Relational-receipt controls checked"
+theorem = "controls"
+premises = []
+conclusion = "Relational-receipt controls: coexisting idle term, onset relation, absent term"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+senses = {RECEIVES_ESSE_AT = "RECEIVES_ESSE_AT_3"}
+rule = "Explicit one-world interpretations over natural-number times with two individuals, checked by case analysis and linear arithmetic"
+meaning = "With a creator present throughout who gives being at onset only and a persisting relation, foundation, irreflexivity, non-mutuality, accompaniment, coexistence of the term, received onset given and the relational present-tense reading hold while giving by the term, relational correlativity and 40a97664 fail; with the relation at onset only (an analyst variant), giving by the term and relational correlativity hold while accompaniment and 40a97664 fail; with the term absent after onset, coexistence of the term fails; with sustaining giving all hold together; with another giver (the thing itself) 40a97664 holds while giving by the term fails. A finite countermodel shows a premise is needed in that interpretation, not that it is false. Model claims concern these interpretations only."

@@ -199,6 +199,7 @@ public import TruthCore.Causality.ReceptionLimitation
 public import TruthCore.Causality.ReflexiveDependenceScope
 public import TruthCore.Causality.RegressReadings
 public import TruthCore.Causality.RegressRivalCoverage
+public import TruthCore.Causality.RelationalReceipt
 public import TruthCore.Causality.RivalRefutationsRound2
 public import TruthCore.Causality.RootEssenceIdentity
 public import TruthCore.Causality.RootIntellectWill

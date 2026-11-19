@@ -1,0 +1,10 @@
+{
+  "id": "51a52906-b841-4147-8698-3d869e5bca79",
+  "label": "On RECEIVES_ESSE_AT_3 present-tense reception is accompaniment, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "e3b3a8e2-accf-4617-b84e-d7efc1a14ff2",
+  "rule": "Unfold relationalReceipt: its first two conjuncts are the hypotheses of the present-tense reading, its third is accompaniment's consequent",
+  "meaning": "Closed result with no premises, quantified over every history, origin relation and reception predicate. On the relational sense the present-tense reading of reception says that a received-esse thing present at t bears the origin relation at t to something, which is accompaniment, in both directions. It establishes nothing about reality.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
