@@ -38,9 +38,16 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         return Err(usage(super::HELP));
     }
     args.check_options(Accepts::default())?;
+    if args.modules.len() > 1 {
+        return Err(usage("countermodel takes one --module"));
+    }
     let options = &args.countermodel;
-    let skeleton = countermodel::extract(&args.root, theorem, options.module.as_deref())
-        .map_err(unavailable)?;
+    let skeleton = countermodel::extract(
+        &args.root,
+        theorem,
+        args.modules.first().map(String::as_str),
+    )
+    .map_err(unavailable)?;
     let omit = if options.omit.is_empty() {
         None
     } else {
