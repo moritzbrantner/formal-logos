@@ -1,0 +1,13 @@
+{
+  "id": "926d495b-4254-429e-9917-7201937c0cb5",
+  "label": "C* in the MOTION_3 holding sense from respect-general concurrent actualization (inference)",
+  "input_statement_ids": [
+    "40fc38ad-2cfe-4da6-8632-137fc5ff9188",
+    "166dba9d-d2a3-4b15-b492-eca2c8e9ec74"
+  ],
+  "output_statement_id": "1dd5be70-dcfa-40e8-9db6-6457ba70fd2f",
+  "rule": "Actualizer premise at the operative respect, then concurrent actualization",
+  "meaning": "New non-transcription conditional derivation. Let y, distinct from x, presently actualize x in r and be able to lack its act in r. By the actualizer premise y is in act in r; by the respect-general concurrent actualization something other than y presently actualizes y in r. So C* in the holding sense follows from concurrent actualization; it is that premise restricted to the operative acts of movers of another. The converse fails (Control part 3): C* in the holding sense entails neither the respect-general premise nor its esse instance. Both premises stay OPEN. No premise is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

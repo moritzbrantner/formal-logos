@@ -1,0 +1,14 @@
+{
+  "id": "7384987c-c440-4119-b74e-b3aec51ce564",
+  "label": "Concurrent actualization in every respect from its esse instance (inference)",
+  "input_statement_ids": [
+    "f834ee65-53eb-4aea-b07c-42b06dbd1dfd",
+    "1a99cebe-3c0a-4e32-95bc-e2e458505322",
+    "6e2176cd-eeb6-413c-8fd2-7b2df4a34ad4"
+  ],
+  "output_statement_id": "166dba9d-d2a3-4b15-b492-eca2c8e9ec74",
+  "rule": "Lackable act to lackable being; esse instance; accident-inclusive conservation",
+  "meaning": "New non-transcription conditional derivation. Let x be in act in r and able to lack that act. By the lackable-being bridge x is in act as to being and could lack being; by the esse instance something g other than x presently gives x being; by accident-inclusive conservation g presently actualizes x in r. Without accident-inclusive conservation the esse instance does not give C* in the holding sense (Control part 2). All premises stay OPEN. No premise is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

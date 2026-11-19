@@ -1,0 +1,14 @@
+{
+  "id": "dedc431f-4f04-40e9-b519-3243d1874c18",
+  "label": "At one moment, presence, received esse and giving being read the holding vocabulary at esse",
+  "paraphrase": "OPEN analyst interpretation bridge, attribution deferred: at moment t of history v of the timed concurrent-actualization vocabulary, (a) whatever is in act as to being is present at t (h.IsAt v x t); (b) whatever could lack being has its esse received in some principle (DEF-ESSE-RECEIVED-IN); (c) whatever gives x being at t (BeingGiving.GivesAt v z x t, definition 158301bc-9585-4145-be60-34f08c9f922c, STRICT reading) presently actualizes x as to being (Holding.ActualizesNow z x esse). It reads the untimed holding vocabulary as the present slice of the timed one; (b) is the one substantive clause, identifying 'could lack being' with 'not its own being' in the received-esse sense.",
+  "lean_declaration": "TruthCore.Causality.HoldingMotion.PresentMomentHoldingReading",
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+    "56b438a0-7fcc-4dd5-916b-1d2e2162310b",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

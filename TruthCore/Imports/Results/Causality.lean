@@ -45,6 +45,7 @@ public import TruthCore.Results.Causality.CausalConcreteRivals.WorldTransfer.Sol
 public import TruthCore.Results.Causality.CausalHarvest.Solution
 public import TruthCore.Results.Causality.CausalMapsBatch1.Solution
 public import TruthCore.Results.Causality.CausalPowerConcretenessStrongToWeak.Solution
+public import TruthCore.Results.Causality.CausedMoverCStar.Solution
 public import TruthCore.Results.Causality.ChainInstantiation.Solution
 public import TruthCore.Results.Causality.ClassicalGodAssembly.Solution
 public import TruthCore.Results.Causality.ClassicalGodFromPositiveRoot.Solution
@@ -181,6 +182,7 @@ public import TruthCore.Results.Causality.GroundingIdentityProfile.Solution
 public import TruthCore.Results.Causality.GroundingYieldsRegress.Solution
 public import TruthCore.Results.Causality.HeadlessCausalAncestry.Solution
 public import TruthCore.Results.Causality.HistoricalRemoval.Solution
+public import TruthCore.Results.Causality.HoldingMotion.Solution
 public import TruthCore.Results.Causality.IlluminationReceipt.Solution
 public import TruthCore.Results.Causality.IndexedSignalProvenance.Solution
 public import TruthCore.Results.Causality.IndexedSignalReaper.Solution

@@ -1,0 +1,11 @@
+{
+  "id": "7263cb1a-12bd-426b-89e7-751c52280fd4",
+  "label": "The holding First Way to a holder not MOTION_3 held in the act by which it holds",
+  "argument_id": "0845c692-f962-4346-b9e0-0b1a776445e2",
+  "challenge_module": "TruthCore.Results.Causality.HoldingMotion.Challenge",
+  "solution_module": "TruthCore.Results.Causality.HoldingMotion.Solution",
+  "theorem": "TruthCore.Results.Causality.HoldingMotion.unheldOperativeHolder",
+  "comparator_config": "results/7263cb1a-12bd-426b-89e7-751c52280fd4/comparator.json",
+  "status": "solution-present",
+  "description": "New non-transcription conditional derivation, the First Way in the holding sense. Some x is held in r by some z other than x. Suppose no holder of another is unheld in the act by which it holds. Then z is held in r by some w other than z, so z is a link of x, and the same holds of w; well-founded induction on the holding series refutes the supposition. No no-self-motion premise is used: the distinctness of the holder is part of MOTION_3. The conclusion is relative: the first holder may be held in another respect, or sustain its own act (Control part 6). The bundle of the per se premise and the regress is inconsistent with mutual holding in one respect (two leaning cards). All premises stay OPEN. No premise is established."
+}

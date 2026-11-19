@@ -1,0 +1,14 @@
+{
+  "id": "1dd5be70-dcfa-40e8-9db6-6457ba70fd2f",
+  "label": "A mover that could lack the act by which it holds another is MOTION_3 held in it by another",
+  "paraphrase": "OPEN analyst formulation, attribution deferred: C* in the holding sense. If y, distinct from x, presently actualizes x in respect r (Holding.ActualizesNow) and could lack its own act in r (Lackability.CanLack), then y is MOTION_3 moved in r: something other than y presently actualizes y in r (HeldMotion). Relevance is fixed by the respect: y is held in the very act by which it holds x, which is lending in the holding sense (the hand lends the stick its motion while it holds it). Its scope is movers whose operative act is one they could lack; it says nothing of a mover whose operative act it could not lack. On the hot iron and the projectile it requires a present holder of the iron's heat and of the stone's motion; no physical one is known, so it holds of them only through a non-physical holder. Derived from the respect-general concurrent actualization with the actualizer premise; it entails neither that premise nor its esse instance (Control part 3), so the entailment runs one way.",
+  "lean_declaration": "TruthCore.Causality.HoldingMotion.HeldMoverIsHeldInItsOperativeAct",
+  "definition_ids": [
+    "56b438a0-7fcc-4dd5-916b-1d2e2162310b",
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e",
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "092c7439-9de3-4cf5-8123-a3d394ea275a",
+  "label": "C* in the holding (actualization) sense of being moved: reduction to concurrent actualization",
+  "date": "2026-11-19",
+  "kind": "derivation",
+  "statement_ids": [
+    "1dd5be70-dcfa-40e8-9db6-6457ba70fd2f",
+    "166dba9d-d2a3-4b15-b492-eca2c8e9ec74",
+    "f834ee65-53eb-4aea-b07c-42b06dbd1dfd",
+    "76d2cc96-14a0-48bc-bd0b-a5c0ca853265",
+    "1a99cebe-3c0a-4e32-95bc-e2e458505322",
+    "685933c7-f557-4cf4-80e2-cea2f2e88e2b",
+    "6f924bb0-beb4-4a7c-845e-ceb9b7aeb3c1",
+    "5469677e-3b43-4eda-8bc9-a23b5fa9bd6b",
+    "cf7940a7-659d-47c1-9ab8-54b18e5bc9d4",
+    "b3573a61-ec8b-5aba-8b5f-f1d03611e7f6"
+  ],
+  "outcome": "blocked",
+  "summary": "Tested the owner proposal that being moved is having a potential actualized from being caused, as MOTION_3 holding (HeldMotion: in act in a respect while another presently actualizes it there; DEF ea1904bc), an analyst sibling of the First Way (Feser existential reading, attribution deferred), not a reading of ST I q.2 a.3. Verified: respect-general concurrent actualization by another (166dba9d) with the actualizer premise (40fc38ad) gives C* in the holding sense (1dd5be70, result 6cc2aa7c); the respect-general premise follows from its esse instance (f834ee65), accident-inclusive conservation (1a99cebe) and lackable being (6e2176cd) (result 2f538163); the esse instance follows from 76d2cc96 under the present-moment reading dedc431f (result e3de57ec). Direction: one way only. Control part 3 (stick) has C*-holding without either concurrent-actualization premise; part 2 (iron) has the esse instance without accident-inclusive conservation or C*-holding. So C*-holding is a single point of failure on concurrent actualization and adds no cost to the existential-inertia rival; a denier of C*-holding for retained-state movers must deny the respect-general premise, for which existential inertia or accident-exclusive conservation suffices. Independent warrant: experience of received powers supports only the restricted class (instruments, held stones), where a physical present holder is observed; for the hot iron and the projectile no physical present holder is known, so no independent warrant for universal C*-holding was found. Rest of the First Way: the MOTION_1 potency premise fails for MOTION_3 (Control part 4); no-self-motion is not used; the holding regress gives a relative first holder (result 7263cb1a) and, with C*-holding, one whose operative act is unlosable (81523d81); mutual holding is cyclic (result 0b40c6e1: the per se link and the regress exclude it) and two leaning cards are an established statics case (5469677e), so that bundle is inconsistent; pure act and all-respect unheldness are not reached (Control part 6). Also registered the section 8 formal tests: unified derivation 739d177c (CAUSE_2 to CAUSE_1 bridge by 631e014f), extension 9a15e352 to b3573a61 with a1df8f1a, and reciprocity exclusion 0dc12783.",
+  "blocker": "The holding route is blocked at the holding per se link, which with the regress is inconsistent with mutual holding (two leaning cards); a total-holder or one-series per se link is unformulated. Its relative first holder falls short of all-respect unheldness and pure act. C* in the holding sense has no warrant independent of respect-general concurrent actualization by another for retained-state movers.",
+  "evidence": [
+    "6cc2aa7c-f427-4088-9b6e-370c144b25e3",
+    "2f538163-c63b-404b-aaf7-592ed91421fd",
+    "e3de57ec-3a44-47b7-a17f-21e9ce9e894a",
+    "7263cb1a-12bd-426b-89e7-751c52280fd4",
+    "81523d81-a0e7-47e6-b682-89659e73a50a",
+    "0b40c6e1-7e7a-4e34-97b9-0a1bd1bfec44",
+    "8eeebe1a-ec1f-4c81-a406-a75d887b02d4",
+    "739d177c-208a-4f53-a7d6-21396e84ccd8",
+    "9a15e352-3f16-4e5c-b827-d44ecc311f3b",
+    "0dc12783-736a-4898-99a1-b8038ab94a83"
+  ],
+  "current_assessment": {
+    "date": "2026-11-19",
+    "statement_ids": [
+      "1dd5be70-dcfa-40e8-9db6-6457ba70fd2f",
+      "166dba9d-d2a3-4b15-b492-eca2c8e9ec74",
+      "685933c7-f557-4cf4-80e2-cea2f2e88e2b"
+    ],
+    "scope": "C* in the MOTION_3 holding sense (1dd5be70), its derivation from respect-general concurrent actualization by another (166dba9d), and the holding First Way sibling (685933c7 and 6f924bb0 to cf7940a7).",
+    "assessment": "Shape: concurrent actualization entails C*-holding, not conversely (Control parts 2 and 3). C*-holding is a verified conditional consequence with no warrant of its own for the retained-state class; its standing is that of 76d2cc96 plus accident-inclusive conservation 1a99cebe: dependent, a single point of failure on concurrent actualization, adding no separate cost to the existential-inertia rival. The holding sibling of the absolute First Way is weak: its per se link and regress are inconsistent with mutual holding, and it reaches only a relative first holder with an unlosable operative act, not pure act. The warrant of concurrent actualization against existential inertia is open and assessed on agent/sustaining-vs-inertia, not here.",
+    "next_test": "Formulate a total-holder (or one-series) holding per se link and test it against the leaning cards; test whether the 2026-11-17 esse-composition route carries a first holder with an unlosable operative act to all-respect unheldness; assess accident-inclusive conservation 1a99cebe (whether sustaining a bearer's being presently holds its retained qualities and states of motion) as the C*-specific bridge.",
+    "note": "docs/notes/caused-mover-cstar.md#9-2026-11-19-the-holding-actualization-reading-of-being-moved",
+    "reviewed_revision": "9be64972cbf18b51c4ba734c3680e850ae2e2243",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Results 6cc2aa7c, 2f538163, e3de57ec, 7263cb1a, 81523d81, 0b40c6e1 and 8eeebe1a on branch agent/cstar-actualization; independent semantic challenge pending.",
+    "supersedes": "None. It adds a sibling-sense assessment next to attempt b7e7af8c, whose MOTION_1 assessment stands."
+  }
+}

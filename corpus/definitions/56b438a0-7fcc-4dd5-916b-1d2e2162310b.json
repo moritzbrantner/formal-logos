@@ -1,0 +1,25 @@
+{
+  "id": "56b438a0-7fcc-4dd5-916b-1d2e2162310b",
+  "label": "Could lack an act: a contingent possession of an act in a respect",
+  "term": "could lack its act in a respect (Lean `Lackability.CanLack`)",
+  "definition": "Lackability.CanLack x r: x could be without its act in respect r. Explicitly identified PRIMITIVE predicate. Ordinary meaning: an iron could be cold, a stone could be at rest, so a hot iron and a moving stone have acts they could lack. At esse it is read as having received esse (the middle conjunct of PresentMomentHoldingReading), not as logical contingency in general. Distinguished from adopted potency POTENCY_1 (9f874532-f37e-590b-bec9-a9affb2762ac), which excludes act in the same respect: a thing in act in r can satisfy CanLack x r but not InPotency x r. Distinguished from capacity (DEF-CAPACITY-TO-BE), which concerns being able to be so, not being able to be otherwise.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.HoldingMotion.Lackability.CanLack",
+  "note": "Analyst primitive, attribution deferred. It carries the antecedent 'an actuality a thing could lack' of the respect-general concurrent-actualization premise.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Lackability.CanLack x r says that x could be without its act in r. The structure only supplies the predicate; nothing in Lean says when it holds, and it is not tied to a modal frame.",
+    "examples": [
+      "A hot iron could be cold: it could lack its heat.",
+      "A thrown stone could be at rest: it could lack its motion."
+    ],
+    "exclusions": [
+      "Being in potency in the adopted sense (able to be so and not actually so).",
+      "An act that its bearer could not be without, such as a necessary being's being, if there is one."
+    ],
+    "open_obligations": [
+      "Its relation to a modal-logic contingency operator is not formalized.",
+      "That a thing with an act it could lack could lack being is the open premise LackableActBringsLackableBeing."
+    ]
+  }
+}

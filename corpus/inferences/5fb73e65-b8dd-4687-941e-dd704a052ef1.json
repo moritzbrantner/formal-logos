@@ -1,0 +1,13 @@
+{
+  "id": "5fb73e65-b8dd-4687-941e-dd704a052ef1",
+  "label": "The esse instance of holding from the timed strong concurrent actualization (inference)",
+  "input_statement_ids": [
+    "76d2cc96-14a0-48bc-bd0b-a5c0ca853265",
+    "dedc431f-4f04-40e9-b519-3243d1874c18"
+  ],
+  "output_statement_id": "f834ee65-53eb-4aea-b07c-42b06dbd1dfd",
+  "rule": "Read the timed premise at one moment of one history",
+  "meaning": "New non-transcription conditional derivation connecting the holding vocabulary to the concurrent-actualization premise on main. Let x be in act as to being and able to lack being. Under the present-moment reading x is present at t and has received esse in some principle p; by the strong concurrent actualization 76d2cc96 some g other than x gives x being at t; under the reading g presently actualizes x as to being. Composed with the two derivations above, C* in the holding sense rests on 76d2cc96 (the strong version: the holder must be another), the present-moment reading, accident-inclusive conservation, the lackable-being bridge and the actualizer premise, all OPEN. So the strong concurrent actualization is a shared dependency of this First Way sibling and of the esse-root routes, which use its weak version (40a97664). No premise is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

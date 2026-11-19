@@ -1,0 +1,10 @@
+{
+  "id": "f401994a-55a8-44ce-9ff8-9e17a3f591fa",
+  "label": "No two distinct beings presently actualize each other in one respect in which both are in act",
+  "paraphrase": "Conclusion: there are no distinct a and b and respect r with each presently actualizing the other in r and both in act in r. Derived from the holding per se premise and the holding regress; it contradicts the leaning-cards observation premise, so that bundle of three is inconsistent and at least one member must go.",
+  "lean_declaration": "TruthCore.Causality.HoldingMotion.NoTwoHoldEachOther",
+  "definition_ids": [
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"
+  ]
+}

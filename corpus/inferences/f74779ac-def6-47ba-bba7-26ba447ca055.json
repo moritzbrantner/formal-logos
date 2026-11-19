@@ -1,0 +1,10 @@
+{
+  "id": "f74779ac-def6-47ba-bba7-26ba447ca055",
+  "label": "Holding controls checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "18135887-6017-47d5-9aa3-3bcc88110847",
+  "rule": "Explicit finite interpretations checked by case analysis; two facts over all interpretations",
+  "meaning": "C* in the holding sense entails neither the respect-general concurrent actualization nor its esse instance (stick); the esse instance with the actualizer premise and the lackable-being bridge does not give C* without accident-inclusive conservation (iron); mutual holding is consistent with concurrent actualization and C* (cards); MOTION_1's potency premise fails for MOTION_3 and no being is moved in one respect in both senses (all interpretations); the holding First Way's premises with C* and concurrent actualization hold while the absolute first-unmoved-mover form fails (crossed). A finite countermodel shows a premise is needed in that interpretation, not that it is false.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

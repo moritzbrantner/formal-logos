@@ -1,0 +1,93 @@
+# C* for caused movers on the absolute First Way: registration of the
+# formal next tests of docs/notes/caused-mover-cstar.md, section 8. The unified
+# operation derivation of C* for caused movers (631e014f, d791628f, 0628359b,
+# 7bf380c6 |- e3afc8a3), its classical extension to the scope bridge b3573a61,
+# and the reciprocity exclusion of the strong per se premise with the regress
+# (control 3 of section 4). The CAUSE_1/CAUSE_2 preflight failure of the domain
+# guard is resolved by declaring 631e014f, the premise that passes from a
+# caused (CAUSE_2) being to its moving (CAUSE_1), as the sense bridge.
+# Analyst formulations, attribution deferred.
+
+[batch]
+vocab = "TruthCore.Causality.CausedMoverCStar"
+results = "TruthCore.Results.Causality.CausedMoverCStar"
+
+# ---------------------------------------------------------------- statements
+
+[[statement]]
+id = "631e014f-685d-434c-86b7-4a683a507b4d"
+lean = "CausedMoverInPotencyToItsOperation"
+paraphrase = "OPEN analyst formulation, attribution deferred: whenever a being y, whose being some other thing causes (some c distinct from y with CausesIn c y esse, CAUSE_2), moves x in respect r (MovesIn, CAUSE_1 and MOTION_1), that moving is an operation of y in a respect o of its own in which y is in potency (OperationOf y x r o and InPotency y o). The non-God-indexed restatement of f03798ba-e9d8-5594-b354-81fb9e9048c0: its domain is every caused mover, so it implies that statement for each God-bearer that causes y's being. InPotency is the abstract parameter of the MotionMapsBatch1 vocabulary; under the adopted POTENCY_1 (able to be so and not actually so) it commits that the agent is not in act in o while it moves. It fits successive operations (a mover still acquiring o, such as a driven stick still moving through place) and is false of any caused mover that is already in act in every operation respect of its moving (steady exercise of a retained power), if there is one. It is the premise that passes from the CAUSE_2 domain guard to CAUSE_1 moving, declared as the sense bridge of the unified derivation. See docs/notes/caused-mover-cstar.md."
+definitions = ["c195d490-07ab-5cbc-82e9-d0d7c82abd2e", "9f874532-f37e-590b-bec9-a9affb2762ac", "211a6432-8b8f-53ed-85e3-75173bb15b24", "a7904c82-eef8-58e4-ac7c-0bb93374cb43"]
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b", "508617ab-cf24-5f3b-a387-64b3991359ec"]
+
+[[statement]]
+id = "7bf380c6-fcdd-4b14-bae5-d5a5acdebd5c"
+lean = "OperationRespectIsRelevant"
+paraphrase = "OPEN analyst bridge, attribution deferred: whenever y moves x in respect r and that moving is y's operation in y's own respect o, y's being moved in o (if it is) is relevant to its moving x in r (RelevantTo y x r o). On the lending (instrumental) reading of relevance the route needs (docs/notes/caused-mover-cstar.md), it says that y, being moved in o by some other thing, moves x in r by a power it has through that present being moved, as an instrument of its mover. Reaction from the patient x is not lending. It adds the relevance clause that lets the operation route (631e014f-685d-434c-86b7-4a683a507b4d or f03798ba-e9d8-5594-b354-81fb9e9048c0 with d791628f-72c6-572e-ad1e-03f4f22ba646 and 0628359b-4a71-5c67-a84b-0fd80104aceb) yield C* for caused movers."
+definitions = ["c195d490-07ab-5cbc-82e9-d0d7c82abd2e", "55a974ea-1ba1-5df4-a03b-1fbaa388dfeb", "a7904c82-eef8-58e4-ac7c-0bb93374cb43"]
+disambiguations = ["c097f626-c39c-57cd-ade4-ebb2dd900a4c", "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
+
+[[statement]]
+id = "e3afc8a3-b51b-4f44-a093-ce27cf8e1f0a"
+lean = "CausedMoverMovedInRelevantRespect"
+paraphrase = "OPEN analyst formulation, attribution deferred: the scope bridge b3573a61-ec8b-5aba-8b5f-f1d03611e7f6 restricted to caused movers. If y, whose being some other thing causes (CAUSE_2), moves x (distinct from y) in respect r and is being moved (MOTION_1) in some respect, then it is being moved in some respect relevant to that moving. Derived from 631e014f-685d-434c-86b7-4a683a507b4d, d791628f-72c6-572e-ad1e-03f4f22ba646, 0628359b-4a71-5c67-a84b-0fd80104aceb and 7bf380c6-fcdd-4b14-bae5-d5a5acdebd5c (registered, zero axioms); with the premise that whatever is moved has its being caused by another it gives b3573a61 (registered, zero axioms). It has a kept counterexample class on the lending (instrumental) reading of relevance (retained-state movers, docs/notes/caused-mover-cstar.md, section 3), which falsifies 631e014f under POTENCY_1 for steady exercise."
+definitions = ["55a974ea-1ba1-5df4-a03b-1fbaa388dfeb", "a7904c82-eef8-58e4-ac7c-0bb93374cb43", "211a6432-8b8f-53ed-85e3-75173bb15b24", "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"]
+disambiguations = ["c097f626-c39c-57cd-ade4-ebb2dd900a4c", "a59fd0ac-f276-528d-8dc3-c3eddd331ac7", "00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
+
+[[statement]]
+id = "Whatever is MOTION_1 moved in some respect has its being caused by another"
+lean = "MovedIsCaused"
+paraphrase = "OPEN analyst premise, attribution deferred: if y is being moved (MOTION_1) in some respect r, then something c distinct from y causes y's being (CausesIn c y esse, CAUSE_2). Classically it is the contrapositive of 'a being whose being nothing else causes is moved in no respect'; the positive form keeps the extension constructive. It is the complement that extends C* for caused movers (e3afc8a3-b51b-4f44-a093-ce27cf8e1f0a) to every moved mover (b3573a61-ec8b-5aba-8b5f-f1d03611e7f6). The 2026-11-17 esse-composition reasoning in docs/notes/prima-via-strength-consumers.md is proposed to supply its contrapositive from 4be9a4ac, d8024a38 and ca07cae9; that derivation is not registered. It is the premise that passes from the CAUSE_2 guard to MOTION_1 being moved, declared as the sense bridge of the extension."
+definitions = ["211a6432-8b8f-53ed-85e3-75173bb15b24", "a7904c82-eef8-58e4-ac7c-0bb93374cb43"]
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b", "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
+
+[[statement]]
+id = "4f6ac439-627d-43f2-9364-2700cd4a49d2"
+lean = "SomeTwoMoveEachOtherWhileMoved"
+paraphrase = "OPEN analyst observation premise, attribution deferred, under a physical instantiation of MOTION_1: there are distinct a and b and respects r and s such that a moves b in r, b moves a in s, a is being moved in s and b is being moved in r. Example: a hot iron laid on cooler wood heats the wood while the wood cools the iron. Physics III.2 202a3-7 says that a mover which is itself movable acts by contact and is at the same time acted upon (navigation for the reciprocity, not a claim). With the strong per se premise 1e47e6db-da06-5a40-9ccf-fbd1f929c596 and the regress premise 226c38f6-7bf4-552a-9a85-733cfa41d0fa it is jointly inconsistent: the registered derivation from those two premises concludes its negation. It is consistent with the relevant-respect premise 96da1d33-7a73-567e-9557-ba4a9a4bb798 and the regress when neither party's being moved is relevant, as on the lending reading, where reaction from the patient is not lending (scratch control 4 of the note, not registered)."
+definitions = ["a7904c82-eef8-58e4-ac7c-0bb93374cb43", "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"]
+disambiguations = ["a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
+
+[[statement]]
+id = "No two distinct beings each MOTION_1 move the other while each is being moved"
+lean = "NoTwoMoveEachOtherWhileMoved"
+paraphrase = "Conclusion: there are no distinct a and b and respects r and s with a moving b in r, b moving a in s, a being moved in s and b being moved in r (MOTION_1). Derived from the strong per se premise 1e47e6db-da06-5a40-9ccf-fbd1f929c596 and the regress 226c38f6-7bf4-552a-9a85-733cfa41d0fa; it is the negation of 4f6ac439-627d-43f2-9364-2700cd4a49d2, so the bundle of those three statements is inconsistent and at least one member must go, not a preferred one."
+definitions = ["a7904c82-eef8-58e4-ac7c-0bb93374cb43", "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"]
+disambiguations = ["a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
+
+# ---------------------------------------------------------------- arguments
+
+[[argument]]
+id = "C* for caused movers from the operation route"
+theorem = "cstarOfOperation"
+premises = ["631e014f-685d-434c-86b7-4a683a507b4d", "d791628f-72c6-572e-ad1e-03f4f22ba646", "0628359b-4a71-5c67-a84b-0fd80104aceb", "7bf380c6-fcdd-4b14-bae5-d5a5acdebd5c"]
+conclusion = "e3afc8a3-b51b-4f44-a093-ce27cf8e1f0a"
+sense_bridges = [
+  { term = "CAUSE", from = "CAUSE_2", to = "CAUSE_1", statement_id = "631e014f-685d-434c-86b7-4a683a507b4d" },
+]
+axioms = []
+rule = "Operation potency, actualized by acting, is being moved (Physics III.1); the operation respect is relevant"
+meaning = "New non-transcription conditional derivation (the unified derivation of docs/notes/caused-mover-cstar.md, section 2). Let y, whose being another causes, move x in r. By 631e014f the moving is an operation in a respect o in which y is in potency; by d791628f acting actualizes that potency as such; by the Physics III.1 analysis 0628359b y is being moved in o; by 7bf380c6 o is relevant to the moving. The hypothesis that y is moved in some respect is not used. The relevance enters only through 7bf380c6; without it the first three premises give only that y is being moved in some respect (the content of 777646a5). 631e014f carries the passage from the CAUSE_2 guard to CAUSE_1 moving. Under POTENCY_1, 631e014f fails for steady exercise of a retained power (section 3), so this route does not reach the retained-state movers. All premises stay OPEN. No premise is established."
+
+[[argument]]
+id = "The relevant-respect scope bridge from C* for caused movers"
+theorem = "relevantRespectOfCaused"
+premises = ["e3afc8a3-b51b-4f44-a093-ce27cf8e1f0a", "Whatever is MOTION_1 moved in some respect has its being caused by another"]
+conclusion = "b3573a61-ec8b-5aba-8b5f-f1d03611e7f6"
+sense_bridges = [
+  { term = "CAUSE", from = "CAUSE_2", to = "CAUSE_1", statement_id = "Whatever is MOTION_1 moved in some respect has its being caused by another" },
+  { term = "CAUSE", from = "CAUSE_2", to = "CAUSE_1", statement_id = "e3afc8a3-b51b-4f44-a093-ce27cf8e1f0a" },
+]
+axioms = []
+rule = "The moved mover is caused, so C* for caused movers applies"
+meaning = "New non-transcription conditional derivation of the scope bridge b3573a61 (C* for every moved mover). A mover of another that is being moved in some respect has its being caused by another, so C* for caused movers applies to it. Constructive: no case split is needed. Both premises stay OPEN; the second is proposed to follow from the 2026-11-17 esse-composition reasoning, not registered. No premise is established."
+
+[[argument]]
+id = "The strong second-mover premise and the regress exclude reciprocal moved movers"
+theorem = "strongPerSeExcludesReciprocity"
+premises = ["1e47e6db-da06-5a40-9ccf-fbd1f929c596", "226c38f6-7bf4-552a-9a85-733cfa41d0fa"]
+conclusion = "No two distinct beings each MOTION_1 move the other while each is being moved"
+axioms = []
+rule = "Each is a per se link of the other; a two-cycle is not well founded"
+meaning = "New non-transcription conditional derivation (control 3 of docs/notes/caused-mover-cstar.md, section 4). If a and b move each other and each is being moved, the strong per se premise 1e47e6db makes each a per se link of the other (it needs only that each is moved in some respect), and the regress 226c38f6 excludes the two-cycle. The conclusion is the negation of the reciprocity observation premise 4f6ac439, so {1e47e6db, 226c38f6, 4f6ac439} is inconsistent and at least one must go. On the relevant-respect premise 96da1d33 with the lending reading the bundle is consistent (scratch control 4, not registered). No premise is established."

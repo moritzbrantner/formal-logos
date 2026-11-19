@@ -1,0 +1,13 @@
+{
+  "id": "3de4d557-c116-4582-84c9-970bec06eb15",
+  "label": "No two distinct beings each MOTION_1 move the other while each is being moved",
+  "paraphrase": "Conclusion: there are no distinct a and b and respects r and s with a moving b in r, b moving a in s, a being moved in s and b being moved in r (MOTION_1). Derived from the strong per se premise 1e47e6db-da06-5a40-9ccf-fbd1f929c596 and the regress 226c38f6-7bf4-552a-9a85-733cfa41d0fa; it is the negation of 4f6ac439-627d-43f2-9364-2700cd4a49d2, so the bundle of those three statements is inconsistent and at least one member must go, not a preferred one.",
+  "lean_declaration": "TruthCore.Causality.CausedMoverCStar.NoTwoMoveEachOtherWhileMoved",
+  "definition_ids": [
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

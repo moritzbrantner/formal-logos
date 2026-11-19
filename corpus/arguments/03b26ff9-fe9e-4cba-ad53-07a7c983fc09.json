@@ -1,0 +1,26 @@
+{
+  "id": "03b26ff9-fe9e-4cba-ad53-07a7c983fc09",
+  "label": "The first holder could not lack the act by which it holds, from C* in the holding sense",
+  "premise_statement_ids": [
+    "cf7940a7-659d-47c1-9ab8-54b18e5bc9d4",
+    "40fc38ad-2cfe-4da6-8632-137fc5ff9188",
+    "1dd5be70-dcfa-40e8-9db6-6457ba70fd2f"
+  ],
+  "conclusion_statement_id": "5eb16c61-cbc4-4338-8e7d-e50b46401f07",
+  "inference_ids": [
+    "322bbbd0-7689-4b10-870b-93e8ecc110de"
+  ],
+  "meaning": "New non-transcription conditional derivation. Given a holder f of x, not held in the act r by which it holds: f is in act in r (actualizer premise), and if f could lack that act, C* in the holding sense would make it held in r, so it could not. This is where the holding route uses C*, and through it concurrent actualization. It is not the pure-act conclusion: f may be in potency or held in other respects (Control part 6), and reaching all-respect unheldness would need a respect-free per se premise, which mutual holding in different respects (part 6) or in one respect (two leaning cards) puts in question. All premises stay OPEN. No premise is established.",
+  "term_senses": {
+    "MOTION": "c0e8f9be-36d3-43d5-8340-2e38dcd6b64d"
+  },
+  "definition_ids": [
+    "56b438a0-7fcc-4dd5-916b-1d2e2162310b",
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

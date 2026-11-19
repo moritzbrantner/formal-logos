@@ -1,0 +1,13 @@
+{
+  "id": "cf7940a7-659d-47c1-9ab8-54b18e5bc9d4",
+  "label": "A holder of another that is not MOTION_3 held in the act by which it holds cannot be lacking",
+  "paraphrase": "Conclusion, relative first holder in the holding sense: it is impossible that there be no f, x and r with f distinct from x, f presently actualizing x in r, and f not MOTION_3 held in r. Such an f may be held in other respects, and may sustain its own act in r (a persistence power), so it is neither all-respect unheld nor pure act (Control part 6).",
+  "lean_declaration": "TruthCore.Causality.HoldingMotion.UnheldOperativeHolderCannotBeLacking",
+  "definition_ids": [
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e",
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

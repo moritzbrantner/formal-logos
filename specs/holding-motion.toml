@@ -1,0 +1,186 @@
+# Holding motion (MOTION_3): the actualization reading of "being moved" tested
+# against C* on the absolute First Way (docs/notes/caused-mover-cstar.md,
+# section 9). Being moved is read as being in act in a respect while another
+# presently actualizes it there. The batch derives C* in this sense from the
+# respect-general concurrent-actualization premise, derives that premise from
+# its esse instance with two explicit bridges, connects the esse instance to
+# the timed strong concurrent actualization 76d2cc96, runs the First Way in the
+# holding sense to a relative first holder, and checks the separations: C* in
+# the holding sense entails neither concurrent-actualization premise, and the
+# esse instance alone does not give C*. Analyst formulations, attribution
+# deferred (the existential reading of the First Way is the known contemporary
+# version); not a reading of ST I q.2 a.3.
+
+[batch]
+vocab = "TruthCore.Causality.HoldingMotion"
+results = "TruthCore.Results.Causality.HoldingMotion"
+
+# ---------------------------------------------------------------- statements
+
+[[statement]]
+id = "Whatever presently actualizes another in a respect is in act in that respect"
+lean = "ActualizerIsInAct"
+paraphrase = "OPEN analyst premise, attribution deferred: whenever z presently actualizes x in respect r (Holding.ActualizesNow, the primitive holding relation of definition 6ab9a832-6b0f-47ac-9f08-144444bf1cb1), z is itself in act in r (InAct, DEF-ACT), formally or virtually: InAct is abstract and the premise does not decide which. It is the holding counterpart of the prima via's 'a thing moves only insofar as it is in act' (MovesOnlyAsInActReading), stated for the holding relation, not for MOTION_1 moving. Examples: the sun lighting the air is luminous; the hand holding the stone aloft is raised. A virtual reading is needed where the holder does not have the respect formally."
+definitions = ["6ab9a832-6b0f-47ac-9f08-144444bf1cb1", "DEF-ACT"]
+
+[[statement]]
+id = "Whatever is in act in a respect in which it could lack its act is MOTION_3 held there by another"
+lean = "LackableActsAreHeld"
+paraphrase = "OPEN analyst premise, attribution deferred (respect-general concurrent actualization by another): whatever is in act in a respect r and could lack its act in r (Lackability.CanLack, definition 56b438a0-7fcc-4dd5-916b-1d2e2162310b) is MOTION_3 moved in r: something other than it presently actualizes it in r (HeldMotion, definition ea1904bc-bdfa-4835-a4a7-8545c5221e2e). It generalizes the strong concurrent actualization 76d2cc96-14a0-48bc-bd0b-a5c0ca853265 (received esse is given being by another whenever present) from esse to every respect, and is derived from its untimed esse instance with accident-inclusive conservation and the lackable-being premise. Existential inertia (Schmid 2021, Control part 1 of the concurrent-actualization batch) contests the esse instance; for a retained quality or a state of motion (a hot iron off the fire, a projectile) no physical present holder is known, so the premise requires a non-physical holder there. Its warrant is assessed on branch agent/sustaining-vs-inertia and is not judged here. The distinctness of the holder excludes a thing's own persistence power as its holder."
+definitions = ["56b438a0-7fcc-4dd5-916b-1d2e2162310b", "ea1904bc-bdfa-4835-a4a7-8545c5221e2e", "6ab9a832-6b0f-47ac-9f08-144444bf1cb1", "DEF-ACT"]
+disambiguations = ["a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
+
+[[statement]]
+id = "A mover that could lack the act by which it holds another is MOTION_3 held in it by another"
+lean = "HeldMoverIsHeldInItsOperativeAct"
+paraphrase = "OPEN analyst formulation, attribution deferred: C* in the holding sense. If y, distinct from x, presently actualizes x in respect r (Holding.ActualizesNow) and could lack its own act in r (Lackability.CanLack), then y is MOTION_3 moved in r: something other than y presently actualizes y in r (HeldMotion). Relevance is fixed by the respect: y is held in the very act by which it holds x, which is lending in the holding sense (the hand lends the stick its motion while it holds it). Its scope is movers whose operative act is one they could lack; it says nothing of a mover whose operative act it could not lack. On the hot iron and the projectile it requires a present holder of the iron's heat and of the stone's motion; no physical one is known, so it holds of them only through a non-physical holder. Derived from the respect-general concurrent actualization with the actualizer premise; it entails neither that premise nor its esse instance (Control part 3), so the entailment runs one way."
+definitions = ["56b438a0-7fcc-4dd5-916b-1d2e2162310b", "ea1904bc-bdfa-4835-a4a7-8545c5221e2e", "6ab9a832-6b0f-47ac-9f08-144444bf1cb1"]
+disambiguations = ["a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
+
+[[statement]]
+id = "Whatever is in act as to being and could lack being is MOTION_3 held in being by another"
+lean = "LackableBeingIsHeld"
+paraphrase = "OPEN analyst premise, attribution deferred: the untimed esse instance of the respect-general concurrent actualization. Whatever is in act as to being (InAct x esse) and could lack being (Lackability.CanLack x esse) is presently given being by something other than itself (HeldMotion at esse, the holding relation read at esse as giving being). Derived from the timed strong concurrent actualization 76d2cc96-14a0-48bc-bd0b-a5c0ca853265 under the present-moment reading of its vocabulary; it is that premise at one moment, not a further commitment. Existential inertia contests it (concurrent-actualization Control part 1); its warrant is assessed on branch agent/sustaining-vs-inertia and is not judged here."
+definitions = ["56b438a0-7fcc-4dd5-916b-1d2e2162310b", "ea1904bc-bdfa-4835-a4a7-8545c5221e2e", "6ab9a832-6b0f-47ac-9f08-144444bf1cb1", "DEF-ESSE"]
+disambiguations = ["a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
+
+[[statement]]
+id = "Whatever presently gives another being presently actualizes it in every act it could lack"
+lean = "GivingBeingHoldsLackableActs"
+paraphrase = "OPEN analyst bridge, attribution deferred (accident-inclusive conservation): if g, distinct from x, presently actualizes x as to being (Holding.ActualizesNow g x esse) and x is in act in a respect r in which it could lack its act, then g presently actualizes x in r. It says that giving a thing being gives it being as it is, with its contingent acts (the iron's heat, the stone's motion), not bare existence. It is the bridge by which the esse instance of concurrent actualization reaches C* in the holding sense; without it the esse instance does not give C* (Control part 2: the iron's being is given, its heat is held by nothing). Not assessed here. Rival on record only as a lead: Molinist simultaneous concurrence (unread, navigation only) places the first cause's concurrence on the effect, not on the agent's power."
+definitions = ["6ab9a832-6b0f-47ac-9f08-144444bf1cb1", "56b438a0-7fcc-4dd5-916b-1d2e2162310b", "DEF-ESSE", "DEF-ACT"]
+
+[[statement]]
+id = "Whatever has an act it could lack is in act as to being and could lack being"
+lean = "LackableActBringsLackableBeing"
+paraphrase = "OPEN analyst bridge, attribution deferred: if x is in act in a respect r in which it could lack its act, then x is in act as to being and could lack being. It carries contingency from an accident to the bearer's being, so that the holder of x's being (esse instance) is available for x's act in r. A view on which a being that could not lack being has acts it could lack would deny it; the batch does not assess that view."
+definitions = ["56b438a0-7fcc-4dd5-916b-1d2e2162310b", "DEF-ESSE", "DEF-ACT"]
+
+[[statement]]
+id = "At one moment, presence, received esse and giving being read the holding vocabulary at esse"
+lean = "PresentMomentHoldingReading"
+paraphrase = "OPEN analyst interpretation bridge, attribution deferred: at moment t of history v of the timed concurrent-actualization vocabulary, (a) whatever is in act as to being is present at t (h.IsAt v x t); (b) whatever could lack being has its esse received in some principle (DEF-ESSE-RECEIVED-IN); (c) whatever gives x being at t (BeingGiving.GivesAt v z x t, definition 158301bc-9585-4145-be60-34f08c9f922c, STRICT reading) presently actualizes x as to being (Holding.ActualizesNow z x esse). It reads the untimed holding vocabulary as the present slice of the timed one; (b) is the one substantive clause, identifying 'could lack being' with 'not its own being' in the received-esse sense."
+definitions = ["158301bc-9585-4145-be60-34f08c9f922c", "DEF-ESSE-RECEIVED-IN", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "6ab9a832-6b0f-47ac-9f08-144444bf1cb1", "56b438a0-7fcc-4dd5-916b-1d2e2162310b", "DEF-ESSE"]
+
+[[statement]]
+id = "Something is MOTION_3 held: in act in a respect and presently actualized there by another"
+lean = "SomethingIsHeld"
+paraphrase = "OPEN analyst observation premise, attribution deferred: some being is MOTION_3 moved in some respect: it is in act there and something other than it presently actualizes it there (HeldMotion). Examples: a stone held aloft by a hand, air lit by the sun, a stick moved by a hand. The holding counterpart of 'something in this world is being moved', not that premise."
+definitions = ["ea1904bc-bdfa-4835-a4a7-8545c5221e2e", "6ab9a832-6b0f-47ac-9f08-144444bf1cb1"]
+disambiguations = ["a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
+
+[[statement]]
+id = "A holder of another that is MOTION_3 held in the act by which it holds is a link of a holding series"
+lean = "HeldInOperativeActIsPerSe"
+paraphrase = "OPEN analyst premise, attribution deferred (holding per se link): if y, distinct from x, presently actualizes x in r and is itself MOTION_3 held in r, then y is a link AsHeld y x of a holding series: it holds x only as held. AsHeld is a primitive parameter, the holding counterpart of the per se link MovesAsMoved of the prima via, not that relation. Respect-indexed: being held in another respect does not make y a link. With the holding regress it excludes mutual holding in one respect (two cards leaning on each other), a case of ordinary statics; see the argument concluding that no two beings hold each other."
+definitions = ["ea1904bc-bdfa-4835-a4a7-8545c5221e2e", "6ab9a832-6b0f-47ac-9f08-144444bf1cb1"]
+disambiguations = ["a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
+
+[[statement]]
+id = "A holding series cannot go on to infinity"
+lean = "NoInfiniteHoldingSeries"
+paraphrase = "OPEN analyst premise, attribution deferred: the holding per se relation AsHeld is well founded (every being is accessible under it), so no infinite ascending chain of holders held in the act by which they hold exists. The holding counterpart of the per se regress 226c38f6-7bf4-552a-9a85-733cfa41d0fa, stated for AsHeld. Its warrant is the instrumental one: a link that holds only as held needs a present holder, so the holding cannot run on with no first holder; in the holding sense every link is lending, so that warrant applies to every link, not only to instruments."
+
+[[statement]]
+id = "A holder of another that is not MOTION_3 held in the act by which it holds cannot be lacking"
+lean = "UnheldOperativeHolderCannotBeLacking"
+paraphrase = "Conclusion, relative first holder in the holding sense: it is impossible that there be no f, x and r with f distinct from x, f presently actualizing x in r, and f not MOTION_3 held in r. Such an f may be held in other respects, and may sustain its own act in r (a persistence power), so it is neither all-respect unheld nor pure act (Control part 6)."
+definitions = ["ea1904bc-bdfa-4835-a4a7-8545c5221e2e", "6ab9a832-6b0f-47ac-9f08-144444bf1cb1"]
+disambiguations = ["a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
+
+[[statement]]
+id = "A holder of another that could not lack the act by which it holds cannot be lacking"
+lean = "UnlosableOperativeHolderCannotBeLacking"
+paraphrase = "Conclusion: it is impossible that there be no f, x and r with f distinct from x, f presently actualizing x in r, f in act in r, and f unable to lack its act in r. It says nothing of f's other respects: f may be in potency, or held, in another respect (Control part 6), so it is not the pure-act conclusion."
+definitions = ["56b438a0-7fcc-4dd5-916b-1d2e2162310b", "6ab9a832-6b0f-47ac-9f08-144444bf1cb1", "DEF-ACT"]
+
+[[statement]]
+id = "Some two distinct beings presently actualize each other in one respect in which both are in act"
+lean = "SomeTwoHoldEachOther"
+paraphrase = "OPEN analyst observation premise, attribution deferred: there are distinct a and b and a respect r with a presently actualizing b in r, b presently actualizing a in r, and both in act in r. Example: two cards leaning on each other, each propped by the other; remove either and the other falls. Each card's propped position is an act it could lack, presently held by the other's contact, so each is MOTION_3 held in the act by which it holds the other. With the holding per se premise and the holding regress it is jointly inconsistent (the argument concluding that no two beings hold each other)."
+definitions = ["6ab9a832-6b0f-47ac-9f08-144444bf1cb1", "DEF-ACT"]
+
+[[statement]]
+id = "No two distinct beings presently actualize each other in one respect in which both are in act"
+lean = "NoTwoHoldEachOther"
+paraphrase = "Conclusion: there are no distinct a and b and respect r with each presently actualizing the other in r and both in act in r. Derived from the holding per se premise and the holding regress; it contradicts the leaning-cards observation premise, so that bundle of three is inconsistent and at least one member must go."
+definitions = ["6ab9a832-6b0f-47ac-9f08-144444bf1cb1", "DEF-ACT"]
+
+[[statement]]
+id = "Holding controls: cards, iron, stick, sense mixing and crossed holders"
+lean = "Control.Certificate"
+paraphrase = "Closed controls; model statements concern these interpretations only, and parts 4 and 5 hold for every interpretation. (1) Two cards, each holding the other in one respect: mutual holding, the actualizer premise, C* in the holding sense and the respect-general concurrent actualization hold together, so the inconsistency of mutual holding lies with the holding per se premise and regress, not with concurrent actualization. (2) Iron: 0 gives the iron 1 and the wood 2 being, the iron holds the wood's heat, nothing holds the iron's heat; the esse instance of concurrent actualization, the actualizer premise and the lackable-being bridge hold, accident-inclusive conservation and C* in the holding sense fail. (3) Stick: 0 holds 1 and 1 holds 2 in motion, nothing holds anything in being; C* in the holding sense holds non-vacuously with the actualizer premise, and both the respect-general concurrent actualization and its esse instance fail. (4) Whenever anything is MOTION_3 held, the MOTION_1 premise 'whatever is moved is in potency in that respect' fails for MOTION_3 under the adopted POTENCY_1. (5) If that premise holds for a MOTION_1 relation, nothing is moved in one respect in both MOTION_1 and MOTION_3. (6) Crossed holders: something is held, the holding per se premise, the holding regress, the actualizer premise, C* in the holding sense and the respect-general concurrent actualization hold, an unlosable operative holder exists, and every holder is held in some respect, so the absolute first-unmoved-mover form fails for MOTION_3."
+definitions = ["ea1904bc-bdfa-4835-a4a7-8545c5221e2e", "6ab9a832-6b0f-47ac-9f08-144444bf1cb1", "56b438a0-7fcc-4dd5-916b-1d2e2162310b", "a7904c82-eef8-58e4-ac7c-0bb93374cb43", "9f874532-f37e-590b-bec9-a9affb2762ac"]
+disambiguations = ["a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
+
+# ---------------------------------------------------------------- arguments
+
+[[argument]]
+id = "C* in the MOTION_3 holding sense from respect-general concurrent actualization"
+theorem = "cstarHoldingOfConcurrentActualization"
+premises = ["Whatever presently actualizes another in a respect is in act in that respect", "Whatever is in act in a respect in which it could lack its act is MOTION_3 held there by another"]
+conclusion = "A mover that could lack the act by which it holds another is MOTION_3 held in it by another"
+senses = {MOTION = "MOTION_3"}
+axioms = []
+rule = "Actualizer premise at the operative respect, then concurrent actualization"
+meaning = "New non-transcription conditional derivation. Let y, distinct from x, presently actualize x in r and be able to lack its act in r. By the actualizer premise y is in act in r; by the respect-general concurrent actualization something other than y presently actualizes y in r. So C* in the holding sense follows from concurrent actualization; it is that premise restricted to the operative acts of movers of another. The converse fails (Control part 3): C* in the holding sense entails neither the respect-general premise nor its esse instance. Both premises stay OPEN. No premise is established."
+
+[[argument]]
+id = "Concurrent actualization in every respect from its esse instance"
+theorem = "lackableActsHeldOfEsse"
+premises = ["Whatever is in act as to being and could lack being is MOTION_3 held in being by another", "Whatever presently gives another being presently actualizes it in every act it could lack", "Whatever has an act it could lack is in act as to being and could lack being"]
+conclusion = "Whatever is in act in a respect in which it could lack its act is MOTION_3 held there by another"
+senses = {MOTION = "MOTION_3"}
+axioms = []
+rule = "Lackable act to lackable being; esse instance; accident-inclusive conservation"
+meaning = "New non-transcription conditional derivation. Let x be in act in r and able to lack that act. By the lackable-being bridge x is in act as to being and could lack being; by the esse instance something g other than x presently gives x being; by accident-inclusive conservation g presently actualizes x in r. Without accident-inclusive conservation the esse instance does not give C* in the holding sense (Control part 2). All premises stay OPEN. No premise is established."
+
+[[argument]]
+id = "The esse instance of holding from the timed strong concurrent actualization"
+theorem = "lackableBeingHeldOfTimed"
+premises = ["76d2cc96-14a0-48bc-bd0b-a5c0ca853265", "At one moment, presence, received esse and giving being read the holding vocabulary at esse"]
+conclusion = "Whatever is in act as to being and could lack being is MOTION_3 held in being by another"
+senses = {MOTION = "MOTION_3"}
+axioms = []
+rule = "Read the timed premise at one moment of one history"
+meaning = "New non-transcription conditional derivation connecting the holding vocabulary to the concurrent-actualization premise on main. Let x be in act as to being and able to lack being. Under the present-moment reading x is present at t and has received esse in some principle p; by the strong concurrent actualization 76d2cc96 some g other than x gives x being at t; under the reading g presently actualizes x as to being. Composed with the two derivations above, C* in the holding sense rests on 76d2cc96 (the strong version: the holder must be another), the present-moment reading, accident-inclusive conservation, the lackable-being bridge and the actualizer premise, all OPEN. So the strong concurrent actualization is a shared dependency of this First Way sibling and of the esse-root routes, which use its weak version (40a97664). No premise is established."
+
+[[argument]]
+id = "The holding First Way to a holder not MOTION_3 held in the act by which it holds"
+theorem = "unheldOperativeHolder"
+premises = ["Something is MOTION_3 held: in act in a respect and presently actualized there by another", "A holder of another that is MOTION_3 held in the act by which it holds is a link of a holding series", "A holding series cannot go on to infinity"]
+conclusion = "A holder of another that is not MOTION_3 held in the act by which it holds cannot be lacking"
+senses = {MOTION = "MOTION_3"}
+axioms = []
+rule = "Well-founded induction on the holding series"
+meaning = "New non-transcription conditional derivation, the First Way in the holding sense. Some x is held in r by some z other than x. Suppose no holder of another is unheld in the act by which it holds. Then z is held in r by some w other than z, so z is a link of x, and the same holds of w; well-founded induction on the holding series refutes the supposition. No no-self-motion premise is used: the distinctness of the holder is part of MOTION_3. The conclusion is relative: the first holder may be held in another respect, or sustain its own act (Control part 6). The bundle of the per se premise and the regress is inconsistent with mutual holding in one respect (two leaning cards). All premises stay OPEN. No premise is established."
+
+[[argument]]
+id = "The first holder could not lack the act by which it holds, from C* in the holding sense"
+theorem = "unlosableOperativeHolder"
+premises = ["A holder of another that is not MOTION_3 held in the act by which it holds cannot be lacking", "Whatever presently actualizes another in a respect is in act in that respect", "A mover that could lack the act by which it holds another is MOTION_3 held in it by another"]
+conclusion = "A holder of another that could not lack the act by which it holds cannot be lacking"
+senses = {MOTION = "MOTION_3"}
+axioms = []
+rule = "Contrapose C* in the holding sense at the first holder"
+meaning = "New non-transcription conditional derivation. Given a holder f of x, not held in the act r by which it holds: f is in act in r (actualizer premise), and if f could lack that act, C* in the holding sense would make it held in r, so it could not. This is where the holding route uses C*, and through it concurrent actualization. It is not the pure-act conclusion: f may be in potency or held in other respects (Control part 6), and reaching all-respect unheldness would need a respect-free per se premise, which mutual holding in different respects (part 6) or in one respect (two leaning cards) puts in question. All premises stay OPEN. No premise is established."
+
+[[argument]]
+id = "The holding per se premise and the holding regress exclude mutual holding"
+theorem = "noMutualHolding"
+premises = ["A holder of another that is MOTION_3 held in the act by which it holds is a link of a holding series", "A holding series cannot go on to infinity"]
+conclusion = "No two distinct beings presently actualize each other in one respect in which both are in act"
+senses = {MOTION = "MOTION_3"}
+axioms = []
+rule = "Each holder is a per se link of the other; a two-cycle is not well founded"
+meaning = "New non-transcription conditional derivation. If a and b hold each other in r and both are in act in r, each is MOTION_3 held in r by the other, so each is a link of the other, a two-cycle that well-foundedness excludes. With the leaning-cards observation premise the three statements are inconsistent, so the holding route must restrict its per se link (for instance to a total holder of the act, or to one series for one effect) or give up the regress as stated; this repair is not formalized. Unlike the MOTION_1 reciprocity of the hot iron and the wood, where the reaction lends nothing, mutual holding is genuine lending in the holding sense. All premises stay OPEN. No premise is established."
+
+[[argument]]
+id = "Holding controls checked"
+theorem = "controls"
+premises = []
+conclusion = "Holding controls: cards, iron, stick, sense mixing and crossed holders"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+rule = "Explicit finite interpretations checked by case analysis; two facts over all interpretations"
+meaning = "C* in the holding sense entails neither the respect-general concurrent actualization nor its esse instance (stick); the esse instance with the actualizer premise and the lackable-being bridge does not give C* without accident-inclusive conservation (iron); mutual holding is consistent with concurrent actualization and C* (cards); MOTION_1's potency premise fails for MOTION_3 and no being is moved in one respect in both senses (all interpretations); the holding First Way's premises with C* and concurrent actualization hold while the absolute first-unmoved-mover form fails (crossed). A finite countermodel shows a premise is needed in that interpretation, not that it is false."

@@ -1,0 +1,10 @@
+{
+  "id": "40fc38ad-2cfe-4da6-8632-137fc5ff9188",
+  "label": "Whatever presently actualizes another in a respect is in act in that respect",
+  "paraphrase": "OPEN analyst premise, attribution deferred: whenever z presently actualizes x in respect r (Holding.ActualizesNow, the primitive holding relation of definition 6ab9a832-6b0f-47ac-9f08-144444bf1cb1), z is itself in act in r (InAct, DEF-ACT), formally or virtually: InAct is abstract and the premise does not decide which. It is the holding counterpart of the prima via's 'a thing moves only insofar as it is in act' (MovesOnlyAsInActReading), stated for the holding relation, not for MOTION_1 moving. Examples: the sun lighting the air is luminous; the hand holding the stone aloft is raised. A virtual reading is needed where the holder does not have the respect formally.",
+  "lean_declaration": "TruthCore.Causality.HoldingMotion.ActualizerIsInAct",
+  "definition_ids": [
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"
+  ]
+}

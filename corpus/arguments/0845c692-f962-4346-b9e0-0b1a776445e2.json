@@ -1,0 +1,24 @@
+{
+  "id": "0845c692-f962-4346-b9e0-0b1a776445e2",
+  "label": "The holding First Way to a holder not MOTION_3 held in the act by which it holds",
+  "premise_statement_ids": [
+    "0299101a-e29b-46ad-9055-8b622709c7b4",
+    "685933c7-f557-4cf4-80e2-cea2f2e88e2b",
+    "6f924bb0-beb4-4a7c-845e-ceb9b7aeb3c1"
+  ],
+  "conclusion_statement_id": "cf7940a7-659d-47c1-9ab8-54b18e5bc9d4",
+  "inference_ids": [
+    "1a0f01b0-c38e-41f4-96be-84832dda6fab"
+  ],
+  "meaning": "New non-transcription conditional derivation, the First Way in the holding sense. Some x is held in r by some z other than x. Suppose no holder of another is unheld in the act by which it holds. Then z is held in r by some w other than z, so z is a link of x, and the same holds of w; well-founded induction on the holding series refutes the supposition. No no-self-motion premise is used: the distinctness of the holder is part of MOTION_3. The conclusion is relative: the first holder may be held in another respect, or sustain its own act (Control part 6). The bundle of the per se premise and the regress is inconsistent with mutual holding in one respect (two leaning cards). All premises stay OPEN. No premise is established.",
+  "term_senses": {
+    "MOTION": "c0e8f9be-36d3-43d5-8340-2e38dcd6b64d"
+  },
+  "definition_ids": [
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}
