@@ -342,7 +342,7 @@ link:
 Tally: kept 4 (rows 4, 5, 7, 14; rows 5 and 7 conditional, row 14
 sense-relative); restated 6 (rows 1, 2, 9, 10, 15, 16); no substantive
 objection identified 6 (rows 3, 6, 8, 11, 12, 13). Leaves with no kept
-objection: `0a7896e7`, `1304b462`, `7de89edb`, `29e71e43`,
+objection: `ae68972c`, `0a7896e7`, `1304b462`, `7de89edb`, `29e71e43`,
 `331f4751`, `38cf20d9`, `fad8af3e`, `82eeeb3c`. `e2462fa8`'s blocker is not an
 objection to its truth; it concerns the warrant of applying the source.
 
