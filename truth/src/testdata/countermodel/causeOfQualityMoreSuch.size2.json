@@ -1,0 +1,83 @@
+{
+  "theorem": "TruthCore.Results.Causality.CausalMapsBatch1.causeOfQualityMoreSuch",
+  "module": "TruthCore.Results.Causality.CausalMapsBatch1.Solution",
+  "reports": [
+    {
+      "omitted": "hHas",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 2,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.causeOfQualityMoreSuch.omit_hHas\n/-! Omission model for `hHas`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 2\nabbrev R := Fin 1\nabbrev CausesIn : B \u2192 B \u2192 R \u2192 Prop := fun x0 x1 x2 => (x0 = 0 \u2227 x1 = 1 \u2227 x2 = 0)\nabbrev InAct : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev ReceivedIn : B \u2192 R \u2192 B \u2192 Prop := fun x0 x1 x2 => (x0 = 1 \u2227 x1 = 0 \u2227 x2 = 1)\nabbrev LimitedBy : B \u2192 R \u2192 B \u2192 Prop := fun x0 x1 x2 => (x0 = 1 \u2227 x1 = 0 \u2227 x2 = 1)\nabbrev MoreIn : R \u2192 B \u2192 B \u2192 Prop := fun _ _ _ => False\ntheorem certificate :\n    \u00ac (TruthCore.Causality.CausalMapsBatch1.CauseHasWhatItGives CausesIn InAct) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.CausedPerfectionIsReceivedInEffect CausesIn ReceivedIn) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.ReceivedPerfectionIsLimitedByRecipient ReceivedIn LimitedBy) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.PerfectionLimitedOnlyThroughReception ReceivedIn LimitedBy) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.CauseHasPerfectionNotAsReceivedInEffect CausesIn ReceivedIn) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.UnlimitedPossessionExceedsLimited InAct LimitedBy MoreIn) \u2227\n    \u00ac (TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading CausesIn MoreIn) := by\n  delta TruthCore.Causality.CausalMapsBatch1.CauseHasWhatItGives TruthCore.Causality.CausalMapsBatch1.CausedPerfectionIsReceivedInEffect TruthCore.Causality.CausalMapsBatch1.ReceivedPerfectionIsLimitedByRecipient TruthCore.Causality.CausalMapsBatch1.PerfectionLimitedOnlyThroughReception TruthCore.Causality.CausalMapsBatch1.CauseHasPerfectionNotAsReceivedInEffect TruthCore.Causality.CausalMapsBatch1.UnlimitedPossessionExceedsLimited TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading\n  refine \u27e8?_, ?_, ?_, ?_, ?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.causeOfQualityMoreSuch.omit_hHas"
+    },
+    {
+      "omitted": "hRecv",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 2,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.causeOfQualityMoreSuch.omit_hRecv\n/-! Omission model for `hRecv`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 2\nabbrev R := Fin 1\nabbrev CausesIn : B \u2192 B \u2192 R \u2192 Prop := fun x0 x1 x2 => (x0 = 1 \u2227 x1 = 0 \u2227 x2 = 0)\nabbrev InAct : B \u2192 R \u2192 Prop := fun x0 x1 => (x0 = 1 \u2227 x1 = 0)\nabbrev ReceivedIn : B \u2192 R \u2192 B \u2192 Prop := fun _ _ _ => False\nabbrev LimitedBy : B \u2192 R \u2192 B \u2192 Prop := fun _ _ _ => False\nabbrev MoreIn : R \u2192 B \u2192 B \u2192 Prop := fun _ _ _ => False\ntheorem certificate :\n    (TruthCore.Causality.CausalMapsBatch1.CauseHasWhatItGives CausesIn InAct) \u2227\n    \u00ac (TruthCore.Causality.CausalMapsBatch1.CausedPerfectionIsReceivedInEffect CausesIn ReceivedIn) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.ReceivedPerfectionIsLimitedByRecipient ReceivedIn LimitedBy) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.PerfectionLimitedOnlyThroughReception ReceivedIn LimitedBy) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.CauseHasPerfectionNotAsReceivedInEffect CausesIn ReceivedIn) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.UnlimitedPossessionExceedsLimited InAct LimitedBy MoreIn) \u2227\n    \u00ac (TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading CausesIn MoreIn) := by\n  delta TruthCore.Causality.CausalMapsBatch1.CauseHasWhatItGives TruthCore.Causality.CausalMapsBatch1.CausedPerfectionIsReceivedInEffect TruthCore.Causality.CausalMapsBatch1.ReceivedPerfectionIsLimitedByRecipient TruthCore.Causality.CausalMapsBatch1.PerfectionLimitedOnlyThroughReception TruthCore.Causality.CausalMapsBatch1.CauseHasPerfectionNotAsReceivedInEffect TruthCore.Causality.CausalMapsBatch1.UnlimitedPossessionExceedsLimited TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading\n  refine \u27e8?_, ?_, ?_, ?_, ?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.causeOfQualityMoreSuch.omit_hRecv"
+    },
+    {
+      "omitted": "hLim",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 2,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.causeOfQualityMoreSuch.omit_hLim\n/-! Omission model for `hLim`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 2\nabbrev R := Fin 1\nabbrev CausesIn : B \u2192 B \u2192 R \u2192 Prop := fun x0 x1 x2 => (x0 = 1 \u2227 x1 = 0 \u2227 x2 = 0)\nabbrev InAct : B \u2192 R \u2192 Prop := fun x0 x1 => (x0 = 1 \u2227 x1 = 0)\nabbrev ReceivedIn : B \u2192 R \u2192 B \u2192 Prop := fun x0 x1 x2 => (x0 = 0 \u2227 x1 = 0 \u2227 x2 = 0)\nabbrev LimitedBy : B \u2192 R \u2192 B \u2192 Prop := fun _ _ _ => False\nabbrev MoreIn : R \u2192 B \u2192 B \u2192 Prop := fun _ _ _ => False\ntheorem certificate :\n    (TruthCore.Causality.CausalMapsBatch1.CauseHasWhatItGives CausesIn InAct) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.CausedPerfectionIsReceivedInEffect CausesIn ReceivedIn) \u2227\n    \u00ac (TruthCore.Causality.CausalMapsBatch1.ReceivedPerfectionIsLimitedByRecipient ReceivedIn LimitedBy) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.PerfectionLimitedOnlyThroughReception ReceivedIn LimitedBy) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.CauseHasPerfectionNotAsReceivedInEffect CausesIn ReceivedIn) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.UnlimitedPossessionExceedsLimited InAct LimitedBy MoreIn) \u2227\n    \u00ac (TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading CausesIn MoreIn) := by\n  delta TruthCore.Causality.CausalMapsBatch1.CauseHasWhatItGives TruthCore.Causality.CausalMapsBatch1.CausedPerfectionIsReceivedInEffect TruthCore.Causality.CausalMapsBatch1.ReceivedPerfectionIsLimitedByRecipient TruthCore.Causality.CausalMapsBatch1.PerfectionLimitedOnlyThroughReception TruthCore.Causality.CausalMapsBatch1.CauseHasPerfectionNotAsReceivedInEffect TruthCore.Causality.CausalMapsBatch1.UnlimitedPossessionExceedsLimited TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading\n  refine \u27e8?_, ?_, ?_, ?_, ?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.causeOfQualityMoreSuch.omit_hLim"
+    },
+    {
+      "omitted": "hOnly",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 2,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.causeOfQualityMoreSuch.omit_hOnly\n/-! Omission model for `hOnly`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 2\nabbrev R := Fin 1\nabbrev CausesIn : B \u2192 B \u2192 R \u2192 Prop := fun x0 x1 x2 => (x0 = 1 \u2227 x1 = 0 \u2227 x2 = 0)\nabbrev InAct : B \u2192 R \u2192 Prop := fun x0 x1 => (x0 = 1 \u2227 x1 = 0)\nabbrev ReceivedIn : B \u2192 R \u2192 B \u2192 Prop := fun x0 x1 x2 => (x0 = 0 \u2227 x1 = 0 \u2227 x2 = 0)\nabbrev LimitedBy : B \u2192 R \u2192 B \u2192 Prop := fun x0 x1 x2 =>\n  (x0 = 0 \u2227 x1 = 0 \u2227 x2 = 0) \u2228\n  (x0 = 1 \u2227 x1 = 0 \u2227 x2 = 0)\nabbrev MoreIn : R \u2192 B \u2192 B \u2192 Prop := fun _ _ _ => False\ntheorem certificate :\n    (TruthCore.Causality.CausalMapsBatch1.CauseHasWhatItGives CausesIn InAct) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.CausedPerfectionIsReceivedInEffect CausesIn ReceivedIn) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.ReceivedPerfectionIsLimitedByRecipient ReceivedIn LimitedBy) \u2227\n    \u00ac (TruthCore.Causality.CausalMapsBatch1.PerfectionLimitedOnlyThroughReception ReceivedIn LimitedBy) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.CauseHasPerfectionNotAsReceivedInEffect CausesIn ReceivedIn) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.UnlimitedPossessionExceedsLimited InAct LimitedBy MoreIn) \u2227\n    \u00ac (TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading CausesIn MoreIn) := by\n  delta TruthCore.Causality.CausalMapsBatch1.CauseHasWhatItGives TruthCore.Causality.CausalMapsBatch1.CausedPerfectionIsReceivedInEffect TruthCore.Causality.CausalMapsBatch1.ReceivedPerfectionIsLimitedByRecipient TruthCore.Causality.CausalMapsBatch1.PerfectionLimitedOnlyThroughReception TruthCore.Causality.CausalMapsBatch1.CauseHasPerfectionNotAsReceivedInEffect TruthCore.Causality.CausalMapsBatch1.UnlimitedPossessionExceedsLimited TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading\n  refine \u27e8?_, ?_, ?_, ?_, ?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.causeOfQualityMoreSuch.omit_hOnly"
+    },
+    {
+      "omitted": "hNot",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 2,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.causeOfQualityMoreSuch.omit_hNot\n/-! Omission model for `hNot`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 2\nabbrev R := Fin 1\nabbrev CausesIn : B \u2192 B \u2192 R \u2192 Prop := fun x0 x1 x2 => (x0 = 1 \u2227 x1 = 0 \u2227 x2 = 0)\nabbrev InAct : B \u2192 R \u2192 Prop := fun x0 x1 => (x0 = 1 \u2227 x1 = 0)\nabbrev ReceivedIn : B \u2192 R \u2192 B \u2192 Prop := fun x0 x1 x2 =>\n  (x0 = 0 \u2227 x1 = 0 \u2227 x2 = 0) \u2228\n  (x0 = 1 \u2227 x1 = 0 \u2227 x2 = 0)\nabbrev LimitedBy : B \u2192 R \u2192 B \u2192 Prop := fun x0 x1 x2 =>\n  (x0 = 0 \u2227 x1 = 0 \u2227 x2 = 0) \u2228\n  (x0 = 1 \u2227 x1 = 0 \u2227 x2 = 0)\nabbrev MoreIn : R \u2192 B \u2192 B \u2192 Prop := fun _ _ _ => False\ntheorem certificate :\n    (TruthCore.Causality.CausalMapsBatch1.CauseHasWhatItGives CausesIn InAct) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.CausedPerfectionIsReceivedInEffect CausesIn ReceivedIn) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.ReceivedPerfectionIsLimitedByRecipient ReceivedIn LimitedBy) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.PerfectionLimitedOnlyThroughReception ReceivedIn LimitedBy) \u2227\n    \u00ac (TruthCore.Causality.CausalMapsBatch1.CauseHasPerfectionNotAsReceivedInEffect CausesIn ReceivedIn) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.UnlimitedPossessionExceedsLimited InAct LimitedBy MoreIn) \u2227\n    \u00ac (TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading CausesIn MoreIn) := by\n  delta TruthCore.Causality.CausalMapsBatch1.CauseHasWhatItGives TruthCore.Causality.CausalMapsBatch1.CausedPerfectionIsReceivedInEffect TruthCore.Causality.CausalMapsBatch1.ReceivedPerfectionIsLimitedByRecipient TruthCore.Causality.CausalMapsBatch1.PerfectionLimitedOnlyThroughReception TruthCore.Causality.CausalMapsBatch1.CauseHasPerfectionNotAsReceivedInEffect TruthCore.Causality.CausalMapsBatch1.UnlimitedPossessionExceedsLimited TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading\n  refine \u27e8?_, ?_, ?_, ?_, ?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.causeOfQualityMoreSuch.omit_hNot"
+    },
+    {
+      "omitted": "hExceed",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 2,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.causeOfQualityMoreSuch.omit_hExceed\n/-! Omission model for `hExceed`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 2\nabbrev R := Fin 1\nabbrev CausesIn : B \u2192 B \u2192 R \u2192 Prop := fun x0 x1 x2 => (x0 = 1 \u2227 x1 = 0 \u2227 x2 = 0)\nabbrev InAct : B \u2192 R \u2192 Prop := fun x0 x1 => (x0 = 1 \u2227 x1 = 0)\nabbrev ReceivedIn : B \u2192 R \u2192 B \u2192 Prop := fun x0 x1 x2 => (x0 = 0 \u2227 x1 = 0 \u2227 x2 = 0)\nabbrev LimitedBy : B \u2192 R \u2192 B \u2192 Prop := fun x0 x1 x2 => (x0 = 0 \u2227 x1 = 0 \u2227 x2 = 0)\nabbrev MoreIn : R \u2192 B \u2192 B \u2192 Prop := fun _ _ _ => False\ntheorem certificate :\n    (TruthCore.Causality.CausalMapsBatch1.CauseHasWhatItGives CausesIn InAct) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.CausedPerfectionIsReceivedInEffect CausesIn ReceivedIn) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.ReceivedPerfectionIsLimitedByRecipient ReceivedIn LimitedBy) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.PerfectionLimitedOnlyThroughReception ReceivedIn LimitedBy) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.CauseHasPerfectionNotAsReceivedInEffect CausesIn ReceivedIn) \u2227\n    \u00ac (TruthCore.Causality.CausalMapsBatch1.UnlimitedPossessionExceedsLimited InAct LimitedBy MoreIn) \u2227\n    \u00ac (TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading CausesIn MoreIn) := by\n  delta TruthCore.Causality.CausalMapsBatch1.CauseHasWhatItGives TruthCore.Causality.CausalMapsBatch1.CausedPerfectionIsReceivedInEffect TruthCore.Causality.CausalMapsBatch1.ReceivedPerfectionIsLimitedByRecipient TruthCore.Causality.CausalMapsBatch1.PerfectionLimitedOnlyThroughReception TruthCore.Causality.CausalMapsBatch1.CauseHasPerfectionNotAsReceivedInEffect TruthCore.Causality.CausalMapsBatch1.UnlimitedPossessionExceedsLimited TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading\n  refine \u27e8?_, ?_, ?_, ?_, ?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.causeOfQualityMoreSuch.omit_hExceed"
+    },
+    {
+      "omitted": null,
+      "kind": "witness",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 1,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.causeOfQualityMoreSuch.witness\n/-! Joint witness: every premise and the conclusion hold. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 1\nabbrev R := Fin 1\nabbrev CausesIn : B \u2192 B \u2192 R \u2192 Prop := fun _ _ _ => False\nabbrev InAct : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev ReceivedIn : B \u2192 R \u2192 B \u2192 Prop := fun _ _ _ => False\nabbrev LimitedBy : B \u2192 R \u2192 B \u2192 Prop := fun _ _ _ => False\nabbrev MoreIn : R \u2192 B \u2192 B \u2192 Prop := fun _ _ _ => False\ntheorem certificate :\n    (TruthCore.Causality.CausalMapsBatch1.CauseHasWhatItGives CausesIn InAct) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.CausedPerfectionIsReceivedInEffect CausesIn ReceivedIn) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.ReceivedPerfectionIsLimitedByRecipient ReceivedIn LimitedBy) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.PerfectionLimitedOnlyThroughReception ReceivedIn LimitedBy) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.CauseHasPerfectionNotAsReceivedInEffect CausesIn ReceivedIn) \u2227\n    (TruthCore.Causality.CausalMapsBatch1.UnlimitedPossessionExceedsLimited InAct LimitedBy MoreIn) \u2227\n    (TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading CausesIn MoreIn) := by\n  delta TruthCore.Causality.CausalMapsBatch1.CauseHasWhatItGives TruthCore.Causality.CausalMapsBatch1.CausedPerfectionIsReceivedInEffect TruthCore.Causality.CausalMapsBatch1.ReceivedPerfectionIsLimitedByRecipient TruthCore.Causality.CausalMapsBatch1.PerfectionLimitedOnlyThroughReception TruthCore.Causality.CausalMapsBatch1.CauseHasPerfectionNotAsReceivedInEffect TruthCore.Causality.CausalMapsBatch1.UnlimitedPossessionExceedsLimited TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading\n  refine \u27e8?_, ?_, ?_, ?_, ?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.causeOfQualityMoreSuch.witness"
+    }
+  ]
+}

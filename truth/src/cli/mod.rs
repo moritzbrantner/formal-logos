@@ -25,6 +25,7 @@ mod check;
 mod configuration_report;
 mod configurations;
 mod context;
+mod countermodel;
 mod currentness;
 mod definitions;
 mod dossier;
@@ -111,6 +112,8 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] senses (report [--write] | allowlist [--write] | ratchet --base REV)
        truth [--root PATH] [--json] bridge-experiments RESULT --profile-module MODULE [--limit N]
              [--frontier-root STATEMENT]
+       truth [--root PATH] [--json] countermodel THEOREM [--omit HYP]... [--all] [--size N]
+             [--module MODULE] [--no-check]
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
@@ -179,6 +182,7 @@ pub const COMMANDS: &[Command] = &[
     index::COMMAND,
     senses::COMMAND,
     bridge_experiments::COMMAND,
+    countermodel::COMMAND,
 ];
 
 /// Parses `args` and runs the command it names.
@@ -235,6 +239,9 @@ pub fn run(args: &[OsString]) -> Output {
             {
                 Err(usage("--profile-module applies only to bridge-experiments"))
             }
+            Some(command) if args.countermodel.flags && command.name != "countermodel" => Err(
+                usage("--omit, --size, --module and --no-check apply only to countermodel"),
+            ),
             Some(command)
                 if args.full_evidence
                     && ![
