@@ -1,0 +1,14 @@
+{
+  "id": "6c084877-1d6f-4298-8644-d375fecd9e63",
+  "label": "Every edge of the studied causal history is a per se ordered efficient-cause link",
+  "paraphrase": "OPEN analyst selection, attribution deferred: on the same carrier and with the same upstream orientation, whenever y is a causal predecessor of x in the studied causal-history relation, y causes x as a caused cause (CausesAsCaused, the per se link of DEF 4a101a4c). It is the converse of STMT 'per se links included' (f10d5632) and the per se restriction of the selection 57552dce (every history edge is efficient causing in some respect). Together with f10d5632 it makes the studied relation exactly the per se link. It leaves accidentally ordered series out of the studied relation and says nothing about them.",
+  "lean_declaration": "TruthCore.Causality.PrimaViaCertificates.HistoryEdgesArePerSeLinks",
+  "definition_ids": [
+    "8aa89667-4d6f-5aab-9720-455722b4c6ff",
+    "4a101a4c-12de-53c8-80c6-de7a523ea9d9"
+  ],
+  "disambiguation_ids": [
+    "bedfab81-905c-5d1a-b834-e20b8007b3da",
+    "81c233d4-01b4-528c-8bbd-7da228443ffe"
+  ]
+}
