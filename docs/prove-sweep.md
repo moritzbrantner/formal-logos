@@ -62,6 +62,11 @@ counts per tactic.
 - Challenge text is parsed lexically (comments and strings masked). A
   theorem whose proof is not exactly `sorry`, an attribute on its own line, or
   an `open … in` prefix is skipped or reported as an `error`.
+- The portfolio imports can change name resolution: a Challenge whose bare
+  name (for example `Certificate`) resolves to a declaration from those
+  imports is reported as an `error`, not as unresolved.
+- `TRUTH_PROVE_SWEEP_KEEP=1` keeps the generated scratch files and prints
+  their paths, for debugging.
 - The registered next-test statements are not swept yet; only Challenges are.
 - Run it under the heavy-job lock (docs/worker-startup.md). A whole-library
   run imports most of the library and elaborates every Challenge about ten

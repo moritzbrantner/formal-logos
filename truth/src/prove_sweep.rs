@@ -729,11 +729,18 @@ fn run_lean(root: &Path, scratch: &Scratch) -> Result<Vec<Message>, String> {
             "env".into(),
             "lean".into(),
             "--json".into(),
+            // every failed attempt is an error; Lean stops after `maxErrors` (100)
+            "-DmaxErrors=1000000".into(),
             path.display().to_string(),
         ],
         timeout,
     );
-    let _ = fs::remove_dir_all(&directory);
+    // `TRUTH_PROVE_SWEEP_KEEP` keeps the scratch file for debugging.
+    if std::env::var_os("TRUTH_PROVE_SWEEP_KEEP").is_some() {
+        eprintln!("prove-sweep: kept {}", path.display());
+    } else {
+        let _ = fs::remove_dir_all(&directory);
+    }
     match done? {
         None => Err(format!("Lean timed out after {}s", timeout.as_secs())),
         Some(done) => {
