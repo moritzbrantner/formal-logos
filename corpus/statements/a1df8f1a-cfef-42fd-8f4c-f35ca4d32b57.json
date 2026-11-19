@@ -1,0 +1,14 @@
+{
+  "id": "a1df8f1a-cfef-42fd-8f4c-f35ca4d32b57",
+  "label": "A MOTION_1 moved mover of another has its being caused by another",
+  "paraphrase": "OPEN analyst premise, attribution deferred: if y moves x (distinct from y) in some respect r (MovesIn, CAUSE_1) and y is being moved (MOTION_1) in some respect r', then something c distinct from y causes y's being (CausesIn c y esse, CAUSE_2). Scope: movers of another only, the scope in which the extension uses it. Classically it is the contrapositive of 'a mover of another whose being nothing else causes is moved in no respect'; the positive form is constructively stronger, so obtaining it from that negative form needs excluded middle. It is the complement that extends C* for caused movers (e3afc8a3-b51b-4f44-a093-ce27cf8e1f0a) to every moved mover of another (b3573a61-ec8b-5aba-8b5f-f1d03611e7f6). The 2026-11-17 esse-composition reasoning in docs/notes/prima-via-strength-consumers.md is proposed to supply the negative form from 4be9a4ac, d8024a38 and ca07cae9; that derivation is not registered. It contains both the CAUSE_1 moving and the CAUSE_2 guard and is declared as a sense bridge of the extension.",
+  "lean_declaration": "TruthCore.Causality.CausedMoverCStar.MovedMoverIsCaused",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

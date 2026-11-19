@@ -116,12 +116,9 @@ theorem necessaryThinkingRootOfThought (m : Profile W B) (w : W)
     (hBearer : EveryThoughtHasSubject Occurs Bears)
     (hConcrete : EveryBearerIsConcrete Occurs Bears m.concrete)
     (hExists : EveryBearerExistsAt m.ontic Occurs Bears w)
-    (hAcc : ∀ b e, Occurs e → Bears b e →
-      Acc (ThinkerPredecessor m w Occurs Bears) b)
-    (hNoFresh : ∀ b e, Occurs e → Bears b e →
-      NoFreshThinkerInCone m w Occurs Bears b)
-    (hGrounded : ∀ b e, Occurs e → Bears b e →
-      ConeContingentThinkersGrounded m w Occurs Bears b)
+    (hAcc : ThinkingBearerPredecessorAccessible m w Occurs Bears)
+    (hNoFresh : ThinkingBearerConeNoFresh m w Occurs Bears)
+    (hGrounded : ThinkingBearerConeContingentGrounded m w Occurs Bears)
     (hEM : ExcludedMiddle) :
     NecessaryThinkingRootOfThought m w Occurs Bears := by
   obtain ⟨b, e, he, hb⟩ :=
@@ -132,5 +129,23 @@ theorem necessaryThinkingRootOfThought (m : Profile W B) (w : W)
       ⟨hConcrete b e he hb, hExists b e he hb⟩
       ⟨e, he, hb⟩ (hAcc b e he hb) (hNoFresh b e he hb)
       (hGrounded b e he hb) hEM⟩
+
+/-- A selected thinker-root remains the *same witness* of the older complete
+actual-cone result. This is a projection, not a second ancestry argument. -/
+theorem selectedNecessaryRootOfThinkingRoot (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop) (selected : B)
+    (h : NecessaryThinkingRootOf m w Occurs Bears selected) :
+    NecessaryRootAncestor m w selected := by
+  obtain ⟨n, _, hAnc, hRoot, hNec⟩ := h
+  exact ⟨n, ⟨hRoot.1, hAnc⟩, hNec, hRoot.2⟩
+
+/-- The new result strengthens, rather than silently replacing, the older
+Cogito concrete-root statement: it retains its b/e/n and adds thinkerhood. -/
+theorem existingConcreteRootOfThinkingRoot (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop)
+    (h : NecessaryThinkingRootOfThought m w Occurs Bears) :
+    NecessaryConcreteRootAncestorOfThinker m Occurs Bears w := by
+  obtain ⟨b, e, he, hb, n, _, hAnc, hRoot, hNec⟩ := h
+  exact ⟨b, e, n, he, hb, hAnc, hRoot.1.1, hRoot.1.2, hNec, hRoot.2⟩
 
 end TruthCore.Results.Causality.ThinkingRootFork

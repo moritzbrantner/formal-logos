@@ -1,0 +1,28 @@
+{
+  "id": "808c4d4f-9078-4902-a74f-dd804bdc3e90",
+  "label": "Logical falsity, from reciprocal moving and priority requiring nonmutual dependence",
+  "premise_statement_ids": [
+    "6ca87431-3383-58f6-9322-a1f0e8f0396b",
+    "47aff057-35ef-5418-930b-fef72e1104d2",
+    "8d4502a7-1f48-4acf-a849-1ddbb561fca3"
+  ],
+  "conclusion_statement_id": "37f33696-dc47-5bd3-9cd8-edfd5bf00aa5",
+  "inference_ids": [
+    "16aada69-d47e-4040-aaf6-e515328b1f9e"
+  ],
+  "meaning": "With one respect-free PriorSimply and one DependsForBeing: the case and 6ca87431 give PriorSimply y x and PriorSimply x y; the bridge 47aff057 then gives D x y ∧ ¬ D y x and D y x ∧ ¬ D x y, a contradiction. No transitivity or irreflexivity premise is used. A rejection could target 6ca87431's respect-free consequent, 47aff057, or the case premise; nothing here chooses among them. Lane B's reading: on priority in causing the fault lies with respect-free priority, on priority in being with taking cross-respect moving to yield priority in being.",
+  "definition_ids": [
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "7eeee571-aad0-5bba-ac81-6bb9604ef678",
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

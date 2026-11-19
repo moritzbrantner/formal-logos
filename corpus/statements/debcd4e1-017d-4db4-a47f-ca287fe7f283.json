@@ -1,0 +1,13 @@
+{
+  "id": "debcd4e1-017d-4db4-a47f-ca287fe7f283",
+  "label": "Thinking bearers have accessible distinct thinking ground ancestry",
+  "paraphrase": "Analyst formulation: every bearer of an occurring thought is Acc-accessible under the selected relation consisting of distinct thinking mediate actual-concrete-ground predecessors. No descent condition is imposed on nonthinking grounds, which may cycle. No well-foundedness of the full concrete cone, and no claim that direct existential support equals this mediate relation.",
+  "lean_declaration": "TruthCore.Causality.ThinkingRootFork.ThinkingBearerPredecessorAccessible",
+  "definition_ids": [
+    "12c3b24c-f278-499a-b127-db56a407af4c",
+    "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce"
+  ],
+  "disambiguation_ids": [
+    "1272a7e5-e3e1-4c91-a1d3-343018262841"
+  ]
+}

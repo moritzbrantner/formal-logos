@@ -1,0 +1,54 @@
+{
+  "theorem": "TruthCore.Results.Causality.SelfOperationLife.pureActLives",
+  "module": "TruthCore.Results.Causality.SelfOperationLife.Solution",
+  "reports": [
+    {
+      "omitted": "hOperates",
+      "kind": "omission",
+      "max_size": 3,
+      "status": "candidate",
+      "sizes": {
+        "B": 1,
+        "R": 1,
+        "T": 1
+      },
+      "lean": "namespace Countermodel.pureActLives.omit_hOperates\n/-! Omission model for `hOperates`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 1\nabbrev R := Fin 1\nabbrev T := Fin 1\nabbrev InPotency : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev MovedIn : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev Operates : B \u2192 Prop := fun _ => False\nabbrev LivesAt : B \u2192 T \u2192 Prop := fun _ _ => False\ntheorem certificate :\n    \u00ac (TruthCore.Causality.SelfOperationLife.PureActOperates InPotency Operates) \u2227\n    (TruthCore.Causality.SelfOperationLife.SelfOperatingUnmovedLives Operates MovedIn LivesAt) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.MovedOnlyAsInPotencyReading MovedIn InPotency) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.PureActLivesReading InPotency LivesAt) := by\n  delta TruthCore.Causality.SelfOperationLife.PureActOperates TruthCore.Latin.Aquinas.SummaTheologiae.PureAct TruthCore.Causality.SelfOperationLife.SelfOperatingUnmovedLives TruthCore.Latin.Aquinas.SummaTheologiae.MovedOnlyAsInPotencyReading TruthCore.Latin.Aquinas.SummaTheologiae.PureActLivesReading\n  refine \u27e8?_, ?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.pureActLives.omit_hOperates"
+    },
+    {
+      "omitted": "hLife",
+      "kind": "omission",
+      "max_size": 3,
+      "status": "candidate",
+      "sizes": {
+        "B": 1,
+        "R": 1,
+        "T": 1
+      },
+      "lean": "namespace Countermodel.pureActLives.omit_hLife\n/-! Omission model for `hLife`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 1\nabbrev R := Fin 1\nabbrev T := Fin 1\nabbrev InPotency : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev MovedIn : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev Operates : B \u2192 Prop := fun _ => True\nabbrev LivesAt : B \u2192 T \u2192 Prop := fun _ _ => False\ntheorem certificate :\n    (TruthCore.Causality.SelfOperationLife.PureActOperates InPotency Operates) \u2227\n    \u00ac (TruthCore.Causality.SelfOperationLife.SelfOperatingUnmovedLives Operates MovedIn LivesAt) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.MovedOnlyAsInPotencyReading MovedIn InPotency) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.PureActLivesReading InPotency LivesAt) := by\n  delta TruthCore.Causality.SelfOperationLife.PureActOperates TruthCore.Latin.Aquinas.SummaTheologiae.PureAct TruthCore.Causality.SelfOperationLife.SelfOperatingUnmovedLives TruthCore.Latin.Aquinas.SummaTheologiae.MovedOnlyAsInPotencyReading TruthCore.Latin.Aquinas.SummaTheologiae.PureActLivesReading\n  refine \u27e8?_, ?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.pureActLives.omit_hLife"
+    },
+    {
+      "omitted": "hMoved",
+      "kind": "omission",
+      "max_size": 3,
+      "status": "candidate",
+      "sizes": {
+        "B": 1,
+        "R": 1,
+        "T": 1
+      },
+      "lean": "namespace Countermodel.pureActLives.omit_hMoved\n/-! Omission model for `hMoved`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 1\nabbrev R := Fin 1\nabbrev T := Fin 1\nabbrev InPotency : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev MovedIn : B \u2192 R \u2192 Prop := fun _ _ => True\nabbrev Operates : B \u2192 Prop := fun _ => True\nabbrev LivesAt : B \u2192 T \u2192 Prop := fun _ _ => False\ntheorem certificate :\n    (TruthCore.Causality.SelfOperationLife.PureActOperates InPotency Operates) \u2227\n    (TruthCore.Causality.SelfOperationLife.SelfOperatingUnmovedLives Operates MovedIn LivesAt) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.MovedOnlyAsInPotencyReading MovedIn InPotency) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.PureActLivesReading InPotency LivesAt) := by\n  delta TruthCore.Causality.SelfOperationLife.PureActOperates TruthCore.Latin.Aquinas.SummaTheologiae.PureAct TruthCore.Causality.SelfOperationLife.SelfOperatingUnmovedLives TruthCore.Latin.Aquinas.SummaTheologiae.MovedOnlyAsInPotencyReading TruthCore.Latin.Aquinas.SummaTheologiae.PureActLivesReading\n  refine \u27e8?_, ?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.pureActLives.omit_hMoved"
+    },
+    {
+      "omitted": null,
+      "kind": "witness",
+      "max_size": 3,
+      "status": "candidate",
+      "sizes": {
+        "B": 1,
+        "R": 1,
+        "T": 1
+      },
+      "lean": "namespace Countermodel.pureActLives.witness\n/-! Joint witness: every premise and the conclusion hold. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 1\nabbrev R := Fin 1\nabbrev T := Fin 1\nabbrev InPotency : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev MovedIn : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev Operates : B \u2192 Prop := fun _ => True\nabbrev LivesAt : B \u2192 T \u2192 Prop := fun _ _ => True\ntheorem certificate :\n    (TruthCore.Causality.SelfOperationLife.PureActOperates InPotency Operates) \u2227\n    (TruthCore.Causality.SelfOperationLife.SelfOperatingUnmovedLives Operates MovedIn LivesAt) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.MovedOnlyAsInPotencyReading MovedIn InPotency) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.PureActLivesReading InPotency LivesAt) := by\n  delta TruthCore.Causality.SelfOperationLife.PureActOperates TruthCore.Latin.Aquinas.SummaTheologiae.PureAct TruthCore.Causality.SelfOperationLife.SelfOperatingUnmovedLives TruthCore.Latin.Aquinas.SummaTheologiae.MovedOnlyAsInPotencyReading TruthCore.Latin.Aquinas.SummaTheologiae.PureActLivesReading\n  refine \u27e8?_, ?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.pureActLives.witness"
+    }
+  ]
+}

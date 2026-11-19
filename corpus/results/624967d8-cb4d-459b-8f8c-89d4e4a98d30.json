@@ -1,0 +1,11 @@
+{
+  "id": "624967d8-cb4d-459b-8f8c-89d4e4a98d30",
+  "label": "Some receipt with correlativity is concurrent actualization, checked",
+  "argument_id": "88463bdb-dc23-4862-84bf-fc102fcf79c3",
+  "challenge_module": "TruthCore.Results.Causality.PresentReceipt.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PresentReceipt.Solution",
+  "theorem": "TruthCore.Results.Causality.PresentReceipt.someReceiptCarriesTheCrux",
+  "comparator_config": "results/624967d8-cb4d-459b-8f8c-89d4e4a98d30/comparator.json",
+  "status": "solution-present",
+  "description": "Closed result with no premises, quantified over every history, giving relation and reception predicate. If some receipt interpretation satisfies the present-tense reading and correlativity, then weak concurrent actualization 40a97664 holds (the derivation 7c62adb5). Conversely, if 40a97664 holds, the standing-composition receipt (RECEIVES_ESSE_AT_2) satisfies the present-tense reading by definition and correlativity by standingReadingIsTheCrux. So the present-receipt pair adds nothing to 40a97664 unless the receipt relation is fixed by a reading that carries further content; the separation in Control part 3 holds only for a fixed interpretation. It establishes nothing about reality."
+}

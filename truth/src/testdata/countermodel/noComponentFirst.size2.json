@@ -1,0 +1,72 @@
+{
+  "theorem": "TruthCore.Results.Causality.ComponentFirstness.noComponentFirst",
+  "module": "TruthCore.Results.Causality.ComponentFirstness.Solution",
+  "reports": [
+    {
+      "omitted": "hKinds",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 1,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.noComponentFirst.omit_hKinds\n/-! Omission model for `hKinds`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 1\nabbrev R := Fin 1\nabbrev esse : R := 0\nabbrev ComponentOf : B \u2192 B \u2192 Prop := fun _ _ => True\nabbrev PriorSimply : B \u2192 B \u2192 Prop := fun _ _ => False\nabbrev InAct : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev InPotency : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev Participated : B \u2192 Prop := fun _ => False\nabbrev CausesIn : B \u2192 B \u2192 R \u2192 Prop := fun _ _ _ => False\ntheorem certificate :\n    \u00ac (TruthCore.Causality.ComponentFirstness.ComponentIsPotentialOrParticipated ComponentOf InPotency Participated) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.ActSimplyPriorToPotencyReading InAct InPotency PriorSimply) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.NotActAndPotencyInSameRespectReading InAct InPotency) \u2227\n    (TruthCore.Causality.ComponentFirstness.ParticipatedHasOtherCause Participated CausesIn esse) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.EfficientCauseIsPriorToEffectReading CausesIn PriorSimply) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.NoComponentIsFirstBeingReading ComponentOf PriorSimply) := by\n  delta TruthCore.Causality.ComponentFirstness.ComponentIsPotentialOrParticipated TruthCore.Latin.Aquinas.SummaTheologiae.ActSimplyPriorToPotencyReading TruthCore.Latin.Aquinas.SummaTheologiae.NotActAndPotencyInSameRespectReading TruthCore.Causality.ComponentFirstness.ParticipatedHasOtherCause TruthCore.Latin.Aquinas.SummaTheologiae.EfficientCauseIsPriorToEffectReading TruthCore.Latin.Aquinas.SummaTheologiae.NoComponentIsFirstBeingReading TruthCore.Latin.Aquinas.SummaTheologiae.IsFirstBeing\n  refine \u27e8?_, ?_, ?_, ?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.noComponentFirst.omit_hKinds"
+    },
+    {
+      "omitted": "hActPrior",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 1,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.noComponentFirst.omit_hActPrior\n/-! Omission model for `hActPrior`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 1\nabbrev R := Fin 1\nabbrev esse : R := 0\nabbrev ComponentOf : B \u2192 B \u2192 Prop := fun _ _ => True\nabbrev PriorSimply : B \u2192 B \u2192 Prop := fun _ _ => False\nabbrev InAct : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev InPotency : B \u2192 R \u2192 Prop := fun _ _ => True\nabbrev Participated : B \u2192 Prop := fun _ => False\nabbrev CausesIn : B \u2192 B \u2192 R \u2192 Prop := fun _ _ _ => False\ntheorem certificate :\n    (TruthCore.Causality.ComponentFirstness.ComponentIsPotentialOrParticipated ComponentOf InPotency Participated) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.ActSimplyPriorToPotencyReading InAct InPotency PriorSimply) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.NotActAndPotencyInSameRespectReading InAct InPotency) \u2227\n    (TruthCore.Causality.ComponentFirstness.ParticipatedHasOtherCause Participated CausesIn esse) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.EfficientCauseIsPriorToEffectReading CausesIn PriorSimply) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.NoComponentIsFirstBeingReading ComponentOf PriorSimply) := by\n  delta TruthCore.Causality.ComponentFirstness.ComponentIsPotentialOrParticipated TruthCore.Latin.Aquinas.SummaTheologiae.ActSimplyPriorToPotencyReading TruthCore.Latin.Aquinas.SummaTheologiae.NotActAndPotencyInSameRespectReading TruthCore.Causality.ComponentFirstness.ParticipatedHasOtherCause TruthCore.Latin.Aquinas.SummaTheologiae.EfficientCauseIsPriorToEffectReading TruthCore.Latin.Aquinas.SummaTheologiae.NoComponentIsFirstBeingReading TruthCore.Latin.Aquinas.SummaTheologiae.IsFirstBeing\n  refine \u27e8?_, ?_, ?_, ?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.noComponentFirst.omit_hActPrior"
+    },
+    {
+      "omitted": "hNotBoth",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 1,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.noComponentFirst.omit_hNotBoth\n/-! Omission model for `hNotBoth`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 1\nabbrev R := Fin 1\nabbrev esse : R := 0\nabbrev ComponentOf : B \u2192 B \u2192 Prop := fun _ _ => True\nabbrev PriorSimply : B \u2192 B \u2192 Prop := fun _ _ => True\nabbrev InAct : B \u2192 R \u2192 Prop := fun _ _ => True\nabbrev InPotency : B \u2192 R \u2192 Prop := fun _ _ => True\nabbrev Participated : B \u2192 Prop := fun _ => False\nabbrev CausesIn : B \u2192 B \u2192 R \u2192 Prop := fun _ _ _ => False\ntheorem certificate :\n    (TruthCore.Causality.ComponentFirstness.ComponentIsPotentialOrParticipated ComponentOf InPotency Participated) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.ActSimplyPriorToPotencyReading InAct InPotency PriorSimply) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.NotActAndPotencyInSameRespectReading InAct InPotency) \u2227\n    (TruthCore.Causality.ComponentFirstness.ParticipatedHasOtherCause Participated CausesIn esse) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.EfficientCauseIsPriorToEffectReading CausesIn PriorSimply) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.NoComponentIsFirstBeingReading ComponentOf PriorSimply) := by\n  delta TruthCore.Causality.ComponentFirstness.ComponentIsPotentialOrParticipated TruthCore.Latin.Aquinas.SummaTheologiae.ActSimplyPriorToPotencyReading TruthCore.Latin.Aquinas.SummaTheologiae.NotActAndPotencyInSameRespectReading TruthCore.Causality.ComponentFirstness.ParticipatedHasOtherCause TruthCore.Latin.Aquinas.SummaTheologiae.EfficientCauseIsPriorToEffectReading TruthCore.Latin.Aquinas.SummaTheologiae.NoComponentIsFirstBeingReading TruthCore.Latin.Aquinas.SummaTheologiae.IsFirstBeing\n  refine \u27e8?_, ?_, ?_, ?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.noComponentFirst.omit_hNotBoth"
+    },
+    {
+      "omitted": "hParticipated",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 1,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.noComponentFirst.omit_hParticipated\n/-! Omission model for `hParticipated`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 1\nabbrev R := Fin 1\nabbrev esse : R := 0\nabbrev ComponentOf : B \u2192 B \u2192 Prop := fun _ _ => True\nabbrev PriorSimply : B \u2192 B \u2192 Prop := fun _ _ => False\nabbrev InAct : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev InPotency : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev Participated : B \u2192 Prop := fun _ => True\nabbrev CausesIn : B \u2192 B \u2192 R \u2192 Prop := fun _ _ _ => False\ntheorem certificate :\n    (TruthCore.Causality.ComponentFirstness.ComponentIsPotentialOrParticipated ComponentOf InPotency Participated) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.ActSimplyPriorToPotencyReading InAct InPotency PriorSimply) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.NotActAndPotencyInSameRespectReading InAct InPotency) \u2227\n    \u00ac (TruthCore.Causality.ComponentFirstness.ParticipatedHasOtherCause Participated CausesIn esse) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.EfficientCauseIsPriorToEffectReading CausesIn PriorSimply) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.NoComponentIsFirstBeingReading ComponentOf PriorSimply) := by\n  delta TruthCore.Causality.ComponentFirstness.ComponentIsPotentialOrParticipated TruthCore.Latin.Aquinas.SummaTheologiae.ActSimplyPriorToPotencyReading TruthCore.Latin.Aquinas.SummaTheologiae.NotActAndPotencyInSameRespectReading TruthCore.Causality.ComponentFirstness.ParticipatedHasOtherCause TruthCore.Latin.Aquinas.SummaTheologiae.EfficientCauseIsPriorToEffectReading TruthCore.Latin.Aquinas.SummaTheologiae.NoComponentIsFirstBeingReading TruthCore.Latin.Aquinas.SummaTheologiae.IsFirstBeing\n  refine \u27e8?_, ?_, ?_, ?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.noComponentFirst.omit_hParticipated"
+    },
+    {
+      "omitted": "hEfficient",
+      "kind": "omission",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 2,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.noComponentFirst.omit_hEfficient\n/-! Omission model for `hEfficient`: the other premises hold and the conclusion fails. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 2\nabbrev R := Fin 1\nabbrev esse : R := 0\nabbrev ComponentOf : B \u2192 B \u2192 Prop := fun x0 x1 => (x0 = 1 \u2227 x1 = 1)\nabbrev PriorSimply : B \u2192 B \u2192 Prop := fun _ _ => False\nabbrev InAct : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev InPotency : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev Participated : B \u2192 Prop := fun x0 => (x0 = 1)\nabbrev CausesIn : B \u2192 B \u2192 R \u2192 Prop := fun x0 x1 x2 => (x0 = 0 \u2227 x1 = 1 \u2227 x2 = 0)\ntheorem certificate :\n    (TruthCore.Causality.ComponentFirstness.ComponentIsPotentialOrParticipated ComponentOf InPotency Participated) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.ActSimplyPriorToPotencyReading InAct InPotency PriorSimply) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.NotActAndPotencyInSameRespectReading InAct InPotency) \u2227\n    (TruthCore.Causality.ComponentFirstness.ParticipatedHasOtherCause Participated CausesIn esse) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.EfficientCauseIsPriorToEffectReading CausesIn PriorSimply) \u2227\n    \u00ac (TruthCore.Latin.Aquinas.SummaTheologiae.NoComponentIsFirstBeingReading ComponentOf PriorSimply) := by\n  delta TruthCore.Causality.ComponentFirstness.ComponentIsPotentialOrParticipated TruthCore.Latin.Aquinas.SummaTheologiae.ActSimplyPriorToPotencyReading TruthCore.Latin.Aquinas.SummaTheologiae.NotActAndPotencyInSameRespectReading TruthCore.Causality.ComponentFirstness.ParticipatedHasOtherCause TruthCore.Latin.Aquinas.SummaTheologiae.EfficientCauseIsPriorToEffectReading TruthCore.Latin.Aquinas.SummaTheologiae.NoComponentIsFirstBeingReading TruthCore.Latin.Aquinas.SummaTheologiae.IsFirstBeing\n  refine \u27e8?_, ?_, ?_, ?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.noComponentFirst.omit_hEfficient"
+    },
+    {
+      "omitted": null,
+      "kind": "witness",
+      "max_size": 2,
+      "status": "candidate",
+      "sizes": {
+        "B": 1,
+        "R": 1
+      },
+      "lean": "namespace Countermodel.noComponentFirst.witness\n/-! Joint witness: every premise and the conclusion hold. Candidate from `truth countermodel`; checked by `decide`. -/\nabbrev B := Fin 1\nabbrev R := Fin 1\nabbrev esse : R := 0\nabbrev ComponentOf : B \u2192 B \u2192 Prop := fun _ _ => False\nabbrev PriorSimply : B \u2192 B \u2192 Prop := fun _ _ => False\nabbrev InAct : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev InPotency : B \u2192 R \u2192 Prop := fun _ _ => False\nabbrev Participated : B \u2192 Prop := fun _ => False\nabbrev CausesIn : B \u2192 B \u2192 R \u2192 Prop := fun _ _ _ => False\ntheorem certificate :\n    (TruthCore.Causality.ComponentFirstness.ComponentIsPotentialOrParticipated ComponentOf InPotency Participated) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.ActSimplyPriorToPotencyReading InAct InPotency PriorSimply) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.NotActAndPotencyInSameRespectReading InAct InPotency) \u2227\n    (TruthCore.Causality.ComponentFirstness.ParticipatedHasOtherCause Participated CausesIn esse) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.EfficientCauseIsPriorToEffectReading CausesIn PriorSimply) \u2227\n    (TruthCore.Latin.Aquinas.SummaTheologiae.NoComponentIsFirstBeingReading ComponentOf PriorSimply) := by\n  delta TruthCore.Causality.ComponentFirstness.ComponentIsPotentialOrParticipated TruthCore.Latin.Aquinas.SummaTheologiae.ActSimplyPriorToPotencyReading TruthCore.Latin.Aquinas.SummaTheologiae.NotActAndPotencyInSameRespectReading TruthCore.Causality.ComponentFirstness.ParticipatedHasOtherCause TruthCore.Latin.Aquinas.SummaTheologiae.EfficientCauseIsPriorToEffectReading TruthCore.Latin.Aquinas.SummaTheologiae.NoComponentIsFirstBeingReading TruthCore.Latin.Aquinas.SummaTheologiae.IsFirstBeing\n  refine \u27e8?_, ?_, ?_, ?_, ?_, ?_\u27e9 <;> decide\nend Countermodel.noComponentFirst.witness"
+    }
+  ]
+}

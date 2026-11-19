@@ -1,0 +1,12 @@
+{
+  "id": "1f2ae3c4-a564-4054-8b00-648663616f34",
+  "label": "The sustaining sibling of esse dependence, from contact and co-presence",
+  "argument_id": "908228ea-d999-4297-a482-933c099fd037",
+  "challenge_module": "TruthCore.Results.Causality.SustainingDependence.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SustainingDependence.Solution",
+  "theorem": "TruthCore.Results.Causality.SustainingDependence.sustainingSiblingOfCoPresence",
+  "comparator_config": "results/1f2ae3c4-a564-4054-8b00-648663616f34/comparator.json",
+  "status": "solution-present",
+  "description": "Transcription (single application, invariant 16): the last step applies the co-presence bridge, whose consequent is the conclusion; the only typed work is the contact step from giving to presence. Let c, distinct from x, cause x's esse and give x being at every moment at which x is present, in every history. For any history v and moment t with x present, c gives x being at t, so c is present at t (contact c4661518): the typed step from giving to presence is the work done here. Hence c is present whenever x is, in every history, and the co-presence bridge gives that x depends for its being on c. Each premise is needed in a checked interpretation: the bridge (Control part 2, dependence empty) and contact (part 3, an absent giver); both hold with the conclusion nonvacuously (part 4). Both premises stay OPEN; the bridge carries the untyped history-coverage condition. No premise is established.",
+  "transcription": "single_application"
+}

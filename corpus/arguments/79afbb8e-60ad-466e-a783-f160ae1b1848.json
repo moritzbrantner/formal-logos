@@ -1,0 +1,22 @@
+{
+  "id": "79afbb8e-60ad-466e-a783-f160ae1b1848",
+  "label": "Sustaining-dependence and onset-parity controls checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "d00c5c22-a9e9-49f2-8a49-919036103fce",
+  "inference_ids": [
+    "c4e233a4-5789-45ab-9138-0402c0d9cbad"
+  ],
+  "meaning": "The parent-child interpretation satisfies contact, the co-presence bridge and the sustaining sibling and falsifies the weak sustaining reading and 2068f91c; each premise of the sibling derivation is needed in one interpretation; all hold with 2068f91c in one interpretation; the inertial history satisfies onset and falsifies parity and concurrent actualization for begun things; onset is needed in one interpretation; onset, parity and the conclusion hold together in one interpretation. A finite countermodel shows a premise is needed in that interpretation, not that it is false. Model claims concern these interpretations only.",
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "ed47a5a7-fa84-43cb-950b-2552b33b99ff"
+  ],
+  "disambiguation_ids": [
+    "88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ],
+  "sense_mixing_control": true
+}

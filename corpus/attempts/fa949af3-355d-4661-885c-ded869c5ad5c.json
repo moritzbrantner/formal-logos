@@ -1,0 +1,30 @@
+{
+  "id": "fa949af3-355d-4661-885c-ded869c5ad5c",
+  "label": "Total-holder repair of the MOTION_3 holding per se link and the holding route's pure-act step",
+  "date": "2026-11-19",
+  "kind": "derivation",
+  "statement_ids": [
+    "38a82161-5d17-4552-be0a-b0562ff0243d",
+    "c4e333da-9ca7-4861-a4ac-947bb4371547",
+    "aa9b2a73-3b30-4849-b617-47751ecfe07f",
+    "4b9462dd-ac1d-4834-8d8e-b709dcd42fc5",
+    "b41f6bcd-56e9-4cf7-ade5-40ed7fb5758d",
+    "6fdb45c3-2a30-4d42-9c86-937397d17f85",
+    "0e0409d5-a269-4cfe-b194-56b912dcda44",
+    "9c7ad646-c69d-4dc8-bd95-e8ba8c49c673",
+    "f360bb6f-0ea6-41fa-9e8b-b57891ad5803",
+    "685933c7-f557-4cf4-80e2-cea2f2e88e2b",
+    "f834ee65-53eb-4aea-b07c-42b06dbd1dfd"
+  ],
+  "outcome": "blocked",
+  "summary": "Formalized the repair named in attempt 092c7439: a total holder (TotallyHolds, DEF edca52e4: sole and non-reciprocal present actualizer of another in a respect; TotallyHeld, DEF acde39ee; total-holding per se link AsTotallyHeld, DEF 5462ce35). (a) The restricted link 38a82161 and regress c4e333da are consistent with two leaning cards on a floor, where every relation satisfying the unrestricted link 685933c7 fails to be well founded (result 727d5a3f part 1). With something totally held (aa9b2a73) they derive a relative first total holder not totally held in its operative act (4b9462dd, result dd2ac370). They do not derive one unheld in its operative act, even with the actualizer premise, respect-general concurrent actualization and C*-holding (part 2, co-held holder); the bridge b41f6bcd (a held total holder is totally held) gives it (6fdb45c3, result 28913eec); on the physical-holder reading a beam carried by two walls is an ordinary statics case against that bridge, while under the C* support bundle that case does not apply and the bridge is untested. Without b41f6bcd the C* step to an unlosable operative act is lost, since not being totally held does not contradict C*-holding; with it, the actualizer premise and C*-holding it would be restored (not checked). Under the esse-side support bundle of C*-holding (f834ee65, 1a99cebe, 6e2176cd), a total holder of a lackable act presently actualizes the held thing as to being (0e0409d5, result 1dcb54f5): a hook is then not a total holder of a lamp's lackable position, and the links the restricted link produces for lackable acts are holding-sense givers of being. Identifying them with the esse-root routes' timed givers (GivesAt) would need the unformulated converse of clause (c) of dedc431f, and the total-holding regress c4e333da stays a separate premise. (b) Unheldness in every respect with the whole esse-side bundle, the actualizer premise, respect-general concurrent actualization and C*-holding does not give PURE_ACT_1 (part 3); the potency clause 9c7ad646 (whatever is in POTENCY_1 in some respect is in act as to being and could lack being) with the esse instance f834ee65 gives that whatever is not held as to being is PURE_ACT_1 (f360bb6f, result 85f1cb63), so the potency clause is a sufficient extra premise and unheldness as to being suffices. With the esse instance it plays the role that act's simple priority a4d3261a plays in the PRIOR_4 step of unmerged PR #1774, at esse rather than in the respect of the potency and without a priority relation; nearest existing material d8024a38; a named rival (dipolar theism, necessary existence with contingent actuality) is recorded unassessed, without a mechanism justification. (c) The MOTION_3 naming bridge to GOD_4 was not investigated, since (a) and (b) give no route.",
+  "blocker": "The total-holder regress reaches only a total holder not totally held in its operative respect. Reaching a holder unheld as to being, which the pure-act step needs, requires the bridge b41f6bcd (contested by co-support on the physical-holder reading, untested under the C* bundle) and a passage from the operative respect to esse that is unformulated. Under the C* support bundle that passage concerns holding-sense givers of being, which the present-moment reading dedc431f connects to the esse-root routes' timed givers in one direction only. The potency clause 9c7ad646 is open and unassessed. The MOTION_3 naming bridge to GOD_4 is untouched.",
+  "evidence": [
+    "dd2ac370-c3a7-4353-abfe-102d5f472a49",
+    "28913eec-59fa-4729-8064-41f8f83f5581",
+    "1dcb54f5-2c4a-4e5a-ab1b-19b80f896062",
+    "85f1cb63-71fc-40bb-935d-113893479647",
+    "727d5a3f-5af7-4dcc-9e8d-5a9897b23135",
+    "PR-1786"
+  ]
+}

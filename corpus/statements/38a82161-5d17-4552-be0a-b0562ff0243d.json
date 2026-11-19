@@ -1,0 +1,11 @@
+{
+  "id": "38a82161-5d17-4552-be0a-b0562ff0243d",
+  "label": "A total holder totally held in the act by which it holds is a link of a total-holding series",
+  "paraphrase": "OPEN analyst premise, attribution deferred (total-holding per se link): if y totally holds x in r (definition edca52e4-f224-491d-ac45-5816fac1a9fd) and y is itself totally held in r (definition acde39ee-8d60-4ea7-a821-de96c86e5b03), then y is a link AsTotallyHeld y x of a total-holding series (definition 5462ce35-4970-434c-8f2a-0ccc2c1db805). It restricts the holding per se link 685933c7-f557-4cf4-80e2-cea2f2e88e2b on both sides: the lower holder must be a total holder and its own holding must be total. Co-holders and reciprocal holders are not links, so two cards leaning on each other on a floor satisfy it together with the regress (Control part 1). Respect-indexed: being totally held in another respect does not make y a link. Its warrant is the instrumental one of 685933c7, restricted: a sole holder that holds only as itself wholly held needs a present whole holder.",
+  "lean_declaration": "TruthCore.Causality.TotalHolding.TotallyHeldTotalHolderIsPerSe",
+  "definition_ids": [
+    "5462ce35-4970-434c-8f2a-0ccc2c1db805",
+    "edca52e4-f224-491d-ac45-5816fac1a9fd",
+    "acde39ee-8d60-4ea7-a821-de96c86e5b03"
+  ]
+}

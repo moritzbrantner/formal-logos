@@ -1,0 +1,13 @@
+{
+  "id": "a095143c-ed30-4115-a86a-605ea7ed8f55",
+  "label": "The relevant-respect scope bridge from C* for caused movers (inference)",
+  "input_statement_ids": [
+    "e3afc8a3-b51b-4f44-a093-ce27cf8e1f0a",
+    "a1df8f1a-cfef-42fd-8f4c-f35ca4d32b57"
+  ],
+  "output_statement_id": "b3573a61-ec8b-5aba-8b5f-f1d03611e7f6",
+  "rule": "The moved mover is caused, so C* for caused movers applies",
+  "meaning": "New non-transcription conditional derivation of the scope bridge b3573a61 (C* for every moved mover). A mover of another that is being moved in some respect has its being caused by another, so C* for caused movers applies to it. Constructive: no case split is needed. Both premises stay OPEN; the second is proposed to follow classically from the 2026-11-17 esse-composition reasoning, which is not registered. No premise is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

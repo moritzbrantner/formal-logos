@@ -1,0 +1,21 @@
+{
+  "id": "7861a6e5-e647-49cf-aef4-0115b9788442",
+  "label": "An actual ground is a distinct CAUSE_2 of its esse, from the every-world bridge",
+  "premise_statement_ids": [
+    "402cf70f-66ff-415e-a9e2-2e1f288956d8"
+  ],
+  "conclusion_statement_id": "98efaa9e-1c91-4e52-8c0d-faf03d4f8372",
+  "inference_ids": [
+    "a43d6675-892b-4974-802a-0030852f7446"
+  ],
+  "meaning": "Strength step: if at every admitted world v a concrete candidate existing at v that grounds a concrete candidate at v is distinct from it and a CAUSE_2 of its esse (402cf70f), then at the reading world w an actual concrete ground of an actual concretum is distinct from it and a cause of its esse (98efaa9e). Same Profile, CausesIn and esse. The weak version drops the quantifier over merely possible worlds that lane B's row 14 targets. Strictness is not separately certified.",
+  "definition_ids": [
+    "32606882-e6e0-43b5-8c81-3b2afd3473e0",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "b242943a-34cc-582d-8c38-c1203b9d2c91"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6"
+  ]
+}

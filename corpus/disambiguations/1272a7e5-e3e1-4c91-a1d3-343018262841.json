@@ -1,0 +1,25 @@
+{
+  "id": "1272a7e5-e3e1-4c91-a1d3-343018262841",
+  "label": "Direct existential support versus a mediate thinking ground-ancestor",
+  "term": "source of a thinker's existence under the selected dependence relation",
+  "sense_definition_ids": [
+    "b242943a-34cc-582d-8c38-c1203b9d2c91",
+    "12c3b24c-f278-499a-b127-db56a407af4c"
+  ],
+  "resolution": "PresentEsseSupport is an actual direct edge of a separate primitive existential-support relation and does not itself impose distinctness or thinkerhood. ThinkerPredecessor in the #1791 selected reading is a distinct bearer of an occurring thought at the start of a nonempty finite path through ActualConcreteGround. This latter G+ ancestry relation is neither by definition nor by theorem a direct support relation; the P/¬P coverage statement is valid at a fixed selected reading only. The original idealist sustaining interpretation requires a separate semantic translation if it uses another direct or non-grounding relation. Neither silence about a support edge nor omission of an independence premise proves the negative horn.",
+  "term_label": "THINKER_SUSTENANCE_DEPENDENCE",
+  "senses": [
+    {
+      "id": "6e62ae33-0b14-48a1-927c-7775e90f4e61",
+      "label": "THINKER_SUSTENANCE_DEPENDENCE_1",
+      "definition_id": "b242943a-34cc-582d-8c38-c1203b9d2c91",
+      "lean_declaration": "TruthCore.Causality.NecessarilyUnderived.PresentEsseSupport"
+    },
+    {
+      "id": "c81ed95e-21fe-4d03-a3d1-bf769501e589",
+      "label": "THINKER_SUSTENANCE_DEPENDENCE_2",
+      "definition_id": "12c3b24c-f278-499a-b127-db56a407af4c",
+      "lean_declaration": "TruthCore.Causality.ThinkingRootFork.ThinkerPredecessor"
+    }
+  ]
+}

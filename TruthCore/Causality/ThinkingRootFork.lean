@@ -62,6 +62,24 @@ def ConeContingentThinkersGrounded (m : Profile W B) (w : W)
   ∀ x, Cone m w selected x → Thinks Occurs Bears x →
     ContingentAt m.ontic w x → ∃ y, ActualConcreteGround m w y x
 
+/-- For each possible Cogito bearer, thinker-only mediate ancestry is
+accessible. This is not `Acc` of the full concrete grounding relation. -/
+def ThinkingBearerPredecessorAccessible (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop) : Prop :=
+  ∀ b e, Occurs e → Bears b e →
+    Acc (ThinkerPredecessor m w Occurs Bears) b
+
+/-- Scoped no-emergence for the occurring-thought bearer chosen by Cogito. -/
+def ThinkingBearerConeNoFresh (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop) : Prop :=
+  ∀ b e, Occurs e → Bears b e → NoFreshThinkerInCone m w Occurs Bears b
+
+/-- Scoped modal anti-brute condition for actual *thinking* cone members. -/
+def ThinkingBearerConeContingentGrounded (m : Profile W B) (w : W)
+    (Occurs : Episode → Prop) (Bears : B → Episode → Prop) : Prop :=
+  ∀ b e, Occurs e → Bears b e →
+    ConeContingentThinkersGrounded m w Occurs Bears b
+
 /-- An actual thinking ground-root of the selected being, necessary *de re*
 relative to the supplied world's accessibility relation. The witness `n`
 does not change when the proof upgrades rootness to necessity. -/

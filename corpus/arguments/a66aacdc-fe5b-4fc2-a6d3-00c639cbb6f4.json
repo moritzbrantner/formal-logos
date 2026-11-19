@@ -1,0 +1,44 @@
+{
+  "id": "a66aacdc-fe5b-4fc2-a6d3-00c639cbb6f4",
+  "label": "Literal thinker-only P or not-P yields a necessary thinking concrete root",
+  "premise_statement_ids": [
+    "e81971f1-601c-57f5-be2d-c4b0624d0cad",
+    "30e6e01c-b7f1-536c-86ae-0a9be35dd160",
+    "a7040bf1-b15a-5ffb-b096-6b60411a066e",
+    "c821487b-9c5e-5836-bf27-dcb47f210c94",
+    "debcd4e1-017d-4db4-a47f-ca287fe7f283",
+    "dc7e315d-a364-48f2-9e61-d2aaec966e80",
+    "db72222b-cf8d-4eca-8b80-56b418d488a6",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "conclusion_statement_id": "b401eca0-7fb9-48a7-a89c-3872f9912eea",
+  "inference_ids": [
+    "aeeeea3f-f32f-4261-ba82-362b0072063f"
+  ],
+  "meaning": "Select one actual concrete bearer via the existing Cogito result and the two separate actuality bridges. At every thinking ancestor x, excluded middle covers exactly P(x) or ¬P(x) under the *same* mediate G+ sense. Under P(x), a distinct earlier thinking G-ancestor c exists and accessibility of this restricted relation allows recursion while preserving the original bearer's finite ancestry. Under ¬P(x), no-fresh-thinker forces absence of any actual concrete G predecessor, so x is a thinking actual root. The separate contingent-thinker anti-brute premise excludes contingency of this SAME terminal witness, yielding accessibility-relative de re NecessityAt. The proof uses no all-ground accessibility, no grounding of nonthinking contingent ancestors, no necessary→underived principle and no uniqueness/esse/God naming. The original direct existential-sustenance reading requires a separate philosophical translation; no independence premise or its negation is silently imported. Analyst reconstruction; attribution deferred. #1743/#1791; named downstream bridge #1787, not connected yet.",
+  "term_senses": {
+    "THINKER_SUSTENANCE_DEPENDENCE": "c81ed95e-21fe-4d03-a3d1-bf769501e589"
+  },
+  "definition_ids": [
+    "12c3b24c-f278-499a-b127-db56a407af4c",
+    "51d205db-399e-4524-8e15-e04cf2532e24",
+    "6f53f286-b5e8-4b75-997a-8e314e97d6ff",
+    "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "fd4d20b9-e6a1-5890-a2f5-f10d6c7441de",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "9c6e4314-2e35-52ff-951e-db752a3c8ce2",
+    "ce8ccc1a-4f9a-5904-a10c-548778d79b66",
+    "c0cbef1c-060a-54d4-bb49-8d59da40caf3",
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ],
+  "disambiguation_ids": [
+    "1272a7e5-e3e1-4c91-a1d3-343018262841",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "16ea77ae-4ec7-59e4-8474-10f04efb5ddf"
+  ]
+}

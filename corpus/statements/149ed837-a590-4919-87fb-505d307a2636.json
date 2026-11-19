@@ -1,0 +1,16 @@
+{
+  "id": "149ed837-a590-4919-87fb-505d307a2636",
+  "label": "A distinct cause of a thing's esse giving it being whenever it is present is depended on for being",
+  "paraphrase": "OPEN analyst premise, attribution deferred (sustaining sibling of 2068f91c): in the given model, if c, distinct from x, causes x's esse (CausesIn c x esse, DEF-CAUSE-OF-PERFECTION at esse, tenseless) and, in every history of the model, gives x being at every moment at which x is present (GivesAt on the STRICT esse-giving reading of definition 158301bc; the time profile of the sustaining cause of being without its presence clause), then x depends for its being on c (DependsForBeing x c, DEF-DEPENDS-FOR-BEING: x would not be if c were not; a primitive parameter, not time-indexed). The tenseless causing and the giving profile are two separate conditions; nothing here passes from one to the other. It is 2068f91c with an added antecedent, so 2068f91c entails it (registered strength order); strictly weaker (Control part 1: in a parent-child interpretation the originating parent gives being at its child's first moment only, so the antecedent fails and the sibling holds vacuously while 2068f91c fails with dependence read as co-presence). Derived from the contact principle c4661518 and the co-presence bridge; with the weak sustaining reading ce55210c it gives 2068f91c back. A cause that only originates its effect does not satisfy its antecedent when the effect is present after its first moment, so the origin-without-sustaining counterexample does not target it; the antecedent holds trivially for an effect present only at its first moment or in no history.",
+  "lean_declaration": "TruthCore.Causality.SustainingDependence.SustainingEsseCauseIsDependedOn",
+  "definition_ids": [
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}

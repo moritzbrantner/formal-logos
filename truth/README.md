@@ -26,6 +26,7 @@ target/debug/truth next
 target/debug/truth next-steps --frontier-root STMT-CATHOLICISM-TRUE
 target/debug/truth results
 target/debug/truth --json support-graph
+target/debug/truth countermodel TruthCore.Results.Causality.SelfOperationLife.pureActLives --all
 cargo fmt --all --check
 cargo clippy --locked -p truth --all-targets -- -D warnings
 cargo test --locked -p truth
@@ -1015,6 +1016,29 @@ the frozen goldens `truth/tests/golden/bridge_experiments/` (recorded by the ret
 `test_bridge_experiments.py` and on results the real corpus's attempts cite.
 It ranks what to read first; it proves, refutes and closes nothing.
 
+## `countermodel`
+
+`truth countermodel THEOREM [--omit HYP]... [--all] [--size N] [--module
+MODULE] [--no-check]` (`truth::countermodel`) searches finite omission
+countermodels and renders them as `delta …; decide` certificates, which Lean
+checks unless `--no-check` is given (docs/countermodels.md). It replaces
+`scripts/countermodel.py` and keeps its search order, so the same theorem
+yields the same models: the golden replays in `truth/src/testdata/countermodel/`
+compare recorded `scripts/Countermodel.lean` skeletons of six results against
+the reports the Python finder gave. Exit code 1 when Lean rejects a
+certificate, 2 when the theorem is unavailable or outside the fragment.
+
+## `prove-sweep`
+
+`truth prove-sweep [--theorem NAME]... [--module MODULE]... [--heartbeats N]
+[--batch N]` (`truth::prove_sweep`) tries a fixed tactic portfolio and a
+transcription probe on every frozen Challenge theorem. It runs one `lake env
+lean --json` per batch of Challenges and reports, per target, `closed` (with
+the first closing tactic), `unresolved` or `error`, plus a likely-transcription
+flag (docs/prove-sweep.md). Progress goes to stderr. It is advisory and writes
+nothing; its unit tests cover Challenge parsing, scratch generation and
+message classification without Lean.
+
 ## `senses`
 
 `truth senses (report [--write] | allowlist [--write] | ratchet --base REV)`
@@ -1032,6 +1056,73 @@ stderr and exit codes are Python's byte for byte
 (frozen in `truth/tests/golden/senses/`; the retired `scripts/truth_parity/senses.py`
 also compared the real corpus against several bases); `sense_index.py migrate`, a
 one-shot migration, stays Python.
+
+## `semantics`
+
+```text
+truth [--root PATH] [--json] semantics TARGET [--frontier-root STATEMENT] [--limit N]
+truth [--root PATH] [--json] semantics [--premise STATEMENT]... --conclusion STATEMENT
+      [--definition DEF]... [--bridge STATEMENT[@SENSE,SENSE]]... [--strict]
+```
+
+One read-only view of the semantic dependencies of a proposition or a
+derivation (`truth::semantics`), so an agent resolves meanings and checks
+sense compatibility before proposing a new argument. It adds no sense engine:
+the term-sense computation, bridge connectivity and legacy allowlist are the
+ones `truth check` uses (`truth::senses`, `check::validate_argument_senses`),
+and formal status comes from `corpus/definition-status.json`
+(`truth definitions status`).
+
+- **Statement mode** (TARGET a statement): the proposition (label, paraphrase,
+  `lean_declaration`); each linked definition with the sense label(s) it
+  realizes, its Lean declaration, formal status (settled by Lean, primitive,
+  constraint, unresolved, no Lean declaration, or not computed) with its
+  `formal_gap` kind, and basis (sourced or stipulative); the disambiguations it
+  links or reaches through a linked definition, with the sense it takes and a
+  `resolution` excerpt; the senses it uses per term, flagging each sense
+  without a distinct `lean_declaration` (`bind-check` cannot catch equivocation
+  on it); then the arguments concluding it and those using it as a premise or
+  commitment (each list bounded by `--limit`, default 10; arguments whose
+  conclusion reaches the frontier root first, marked `[root route]`, then file
+  order). For each argument and term: the senses, the premise, conclusion,
+  commitment or argument-level `definition_ids` carrying each, and a verdict:
+  `single sense`, `bridged` (naming the `sense_bridges` statement and role),
+  `allowlisted mixing — equivocation risk (legacy)`, `mixing control`, or
+  `unbridged mixing` (which `truth check` rejects). A summary counts verdicts
+  per term use and per argument over all connected arguments (an argument in
+  both lists counts once) and lists the equivocation risks.
+- **Argument mode** (TARGET an argument, or a result for its argument): the same
+  verdicts for the argument, the compact semantics of its conclusion, premises
+  and commitments, and a verdict summary over its support ancestry (every
+  argument concluding one of its premises, transitively; not route-aware).
+- **Preflight** (`[--premise …]... --conclusion …`): builds the candidate
+  argument in memory from its premises, conclusion, argument-level
+  `--definition DEF`s (repeatable; `argument_batch.py records` writes a batch's
+  `definitions` into each argument's `definition_ids`, and `truth check` counts
+  their senses) and bridges, and runs `truth check`'s own sense rules
+  (`check::validate_argument_senses`) on it as on a new argument (the legacy
+  allowlist does not apply): the disambiguations it must link, the senses per
+  term with the statement (or argument-level definition) carrying each, the
+  unbridged mixings with the bridge each needs, the used senses without a
+  distinct Lean declaration, and `check`'s own message. The verdict is
+  `truth check`'s for an argument with exactly these fields; it does not model
+  `commitment_statement_ids` or `term_senses`, so a candidate that adds them
+  can be judged differently. `--bridge STATEMENT@SENSE,SENSE` (uuid or label of
+  each sense) adds that `sense_bridges` entry; the suffix is read as senses only
+  when both resolve, otherwise the whole token names the statement (a label may
+  contain `@`). A bare `--bridge STATEMENT` bridges the senses of each term the
+  statement itself links; one that relates no pair is reported and not added.
+  A bridge statement other than the conclusion is added as a premise, as
+  `truth check` requires. Exit 0, or 1 with `--strict` while an unbridged
+  mixing remains; an unknown statement, definition or bridge sense exits 3.
+  `truth/tests/semantics.rs` writes the candidate as a new argument file and
+  checks that `truth check` gives the same verdict, including for a mixing
+  introduced only by an argument-level definition.
+
+A `single sense` verdict says the records link one sense per term, not that
+the prose or the Lean statement is free of equivocation. `--json` gives the
+same content with `input_identity`; the text names each record as
+`label [uuid8]`. An unknown TARGET or statement exits 3.
 
 ## `configurations`, `configuration-report`, `models`, `territory`
 
