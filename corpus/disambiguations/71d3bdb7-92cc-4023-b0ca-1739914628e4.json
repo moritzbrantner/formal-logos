@@ -1,0 +1,25 @@
+{
+  "id": "71d3bdb7-92cc-4023-b0ca-1739914628e4",
+  "label": "Receiving esse at a moment: passion versus standing composition",
+  "term": "receives esse at a moment",
+  "term_label": "RECEIVES_ESSE_AT",
+  "sense_definition_ids": [
+    "ac8dbcaa-09d9-4f9e-9d19-995b38642f82",
+    "181bb18f-72a4-4cb1-b5c0-9a70f5af2bb5"
+  ],
+  "resolution": "The primitive present-tense receipt (definition 506ea036, Receipt.ReceivesAt) is left open between two defined senses. RECEIVES_ESSE_AT_1 (passionReceipt) reads receiving as the passive correlate of an occurrent giving at the moment (typed only as the conjunction of reception in z and some giving of being to x at the moment); RECEIVES_ESSE_AT_2 (standingReceipt) reads it as the standing composition of receiver and received esse while the composite is present. They overlap (in a history where something gives a received-esse thing being whenever it is present they coincide on its moments of presence) and are not exhaustive. The derivations of the present-receipt module (concurrentOfPresentReceipt, onsetOfOnsetReceipt, onsetOfPresentReceipt) are stated over the primitive and use neither sense; they hold on every interpretation. Each sense has one characterising closed result: on RECEIVES_ESSE_AT_1 correlativity holds by definition and the present-tense reading is equivalent to weak concurrent actualization 40a97664 (passionReadingIsTheCrux); on RECEIVES_ESSE_AT_2 the present-tense reading holds by definition and correlativity is equivalent to 40a97664 (standingReadingIsTheCrux). RECEIVES_ESSE_AT_2 is also used in the proof (not the statement) of someReceiptCarriesTheCrux, as the witness receipt for the converse direction, and occurs in the controls; RECEIVES_ESSE_AT_1 is used in neither. No argument passes from one sense to the other. The senses are distinct Lean constants, both values of the one primitive type Receipt: they are interpretations of a single primitive parameter, so a separate type per sense would only wrap the same field. Equivocation is caught by the constant-occurrence rule of bind-check (each argument that declares a sense reaches only that sense's constant), not by a type error. The tenseless EsseReceivedIn (DEF-ESSE-RECEIVED-IN, disambiguation DISAMB-ESSE-RECEPTION) occurs in both senses as a conjunct and is not itself a sense of this term.",
+  "senses": [
+    {
+      "id": "a2905cb6-12a9-4c21-9c24-3bb25e6537a1",
+      "label": "RECEIVES_ESSE_AT_1",
+      "definition_id": "ac8dbcaa-09d9-4f9e-9d19-995b38642f82",
+      "lean_declaration": "TruthCore.Causality.PresentReceipt.passionReceipt"
+    },
+    {
+      "id": "5cbcd91f-285b-4c5c-bc2f-72106e483e43",
+      "label": "RECEIVES_ESSE_AT_2",
+      "definition_id": "181bb18f-72a4-4cb1-b5c0-9a70f5af2bb5",
+      "lean_declaration": "TruthCore.Causality.PresentReceipt.standingReceipt"
+    }
+  ]
+}

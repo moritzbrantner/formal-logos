@@ -1,0 +1,9 @@
+{
+  "id": "ac8dbcaa-09d9-4f9e-9d19-995b38642f82",
+  "label": "RECEIVES_ESSE_AT_1: receipt as passion, esse received in a principle and being given at a moment",
+  "term": "receives esse at a moment, as passion (Lean `passionReceipt`)",
+  "definition": "passionReceipt G E: z receives x's esse at t in history v iff x's esse is received in z (E x z, DEF-ESSE-RECEIVED-IN) and something gives x being at t (exists g, G.GivesAt v g x t, definition 158301bc). In Lean this is a bare conjunction: nothing ties the giving to z or to the reception in z. The intended reading, not typed, is that receiving is the passive correlate of an occurrent giving, the patient's side of one exercise of causation, as the air is illumined while the sun illumines. A defined interpretation of the primitive present-tense receipt (definition 506ea036), not a further primitive. On this sense correlativity of receiving and giving holds by definition, and the present-tense reading of reception is equivalent to weak concurrent actualization 40a97664 (result passionReadingIsTheCrux).",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.PresentReceipt.passionReceipt",
+  "note": "Analyst reading, attribution deferred. The model is the Aristotelian thesis that action and passion are one actuality, in the patient (Physics III.3); that thesis is not read or pinned here and is cited only for the shape of the reading. Distinguished from RECEIVES_ESSE_AT_2 (standing composition), which requires no giving. Would be sourced by a passage that calls the creature's continuing reception of esse a passion or being-acted-on at each moment."
+}

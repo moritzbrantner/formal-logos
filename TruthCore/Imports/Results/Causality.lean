@@ -275,6 +275,7 @@ public import TruthCore.Results.Causality.PossibleCauseBruteSurvival.Solution
 public import TruthCore.Results.Causality.Power1392.Solution
 public import TruthCore.Results.Causality.Power1392Exercise.Solution
 public import TruthCore.Results.Causality.PowerExistenceBoundary.Solution
+public import TruthCore.Results.Causality.PresentReceipt.Solution
 public import TruthCore.Results.Causality.PreservationMeaning.Solution
 public import TruthCore.Results.Causality.PrimaViaCertificates.Solution
 public import TruthCore.Results.Causality.ProductiveStore.Solution

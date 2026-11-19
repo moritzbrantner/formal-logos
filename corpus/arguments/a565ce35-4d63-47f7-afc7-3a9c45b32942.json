@@ -1,0 +1,24 @@
+{
+  "id": "a565ce35-4d63-47f7-afc7-3a9c45b32942",
+  "label": "Concurrent actualization from present-tense receipt and correlativity",
+  "premise_statement_ids": [
+    "964928dc-9067-45d4-8de3-c91e27cbe1c6",
+    "52b05849-88b3-4f44-b81b-768850f9ed12"
+  ],
+  "conclusion_statement_id": "40a97664-e481-42d7-8458-78374a61aa26",
+  "inference_ids": [
+    "24b8141e-d87a-4796-bf19-bc3b8e3b1690"
+  ],
+  "meaning": "Transcription (single application, invariant 16): the last step applies correlativity, whose consequent is the conclusion's matrix. Let x have its esse received in z and be present at t in history v; by the present-tense reading z is receiving x's esse at t; by correlativity something gives x being at t. That is weak concurrent actualization 40a97664. Its point is to locate the crux, not to support it: each premise is needed in a checked interpretation (Control part 1, past-tense receipt under inertia, where correlativity holds; part 2, standing receipt under inertia, where the present-tense reading holds), and both hold with 40a97664 in part 6. For a fixed receipt interpretation the pair is strictly stronger than 40a97664 (part 3); with the interpretation quantified existentially it is equivalent to 40a97664 (someReceiptCarriesTheCrux). On each defined sense one premise is 40a97664 restated (passionReadingIsTheCrux, standingReadingIsTheCrux), so the derivation supplies no warrant for 40a97664 beyond that of 40a97664 itself unless a reading of receipt with content beyond reception plus presence gives correlativity warrant independent of 40a97664. All premises stay OPEN. No premise is established.",
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "506ea036-c6bf-4e2d-aee3-7b25bfcdfea6",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ],
+  "disambiguation_ids": [
+    "71d3bdb7-92cc-4023-b0ca-1739914628e4",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}
