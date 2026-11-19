@@ -243,6 +243,10 @@ pub struct Args {
     /// `--profile-module MODULE` (`bridge-experiments`)
     pub profile_module: Option<String>,
     pub countermodel: CountermodelArgs,
+    pub sweep: SweepArgs,
+    /// `--module MODULE`, repeatable (`countermodel` takes one, `prove-sweep`
+    /// any number).
+    pub modules: Vec<String>,
 }
 
 /// The `countermodel` options (`--all` is the shared research flag).
@@ -254,10 +258,21 @@ pub struct CountermodelArgs {
     pub omit: Vec<String>,
     /// `--size N`: the largest carrier size tried.
     pub size: Option<usize>,
-    /// `--module MODULE`: the module declaring the theorem.
-    pub module: Option<String>,
     /// `--no-check`: do not have Lean check the candidates.
     pub no_check: bool,
+}
+
+/// The `prove-sweep` options.
+#[derive(Default)]
+pub struct SweepArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    /// `--theorem NAME`, repeatable.
+    pub theorems: Vec<String>,
+    /// `--heartbeats N`: the `maxHeartbeats` of each attempt.
+    pub heartbeats: Option<usize>,
+    /// `--batch N`: Challenges per Lean run.
+    pub batch: Option<usize>,
 }
 
 /// The shared options a command accepts besides `--root` and `--json`;
@@ -327,6 +342,8 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         semantics: SemanticsArgs::default(),
         profile_module: None,
         countermodel: CountermodelArgs::default(),
+        sweep: SweepArgs::default(),
+        modules: Vec::new(),
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -506,23 +523,37 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                 parsed.countermodel.flags = true;
                 parsed.countermodel.no_check = true;
             }
-            "--omit" | "--size" | "--module" => {
+            "--size" => {
                 parsed.countermodel.flags = true;
-                let value = args.next().and_then(|value| value.to_str());
-                let countermodel = &mut parsed.countermodel;
+                parsed.countermodel.size =
+                    Some(number(args.next().and_then(|value| value.to_str()), arg)?);
+            }
+            "--heartbeats" | "--batch" => {
+                parsed.sweep.flags = true;
+                let value = Some(number(args.next().and_then(|value| value.to_str()), arg)?);
+                if arg == "--heartbeats" {
+                    parsed.sweep.heartbeats = value;
+                } else {
+                    parsed.sweep.batch = value;
+                }
+            }
+            "--omit" | "--module" | "--theorem" => {
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .filter(|value| !value.is_empty())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                    .to_owned();
                 match arg {
-                    "--size" => countermodel.size = Some(number(value, arg)?),
-                    _ => {
-                        let value = value
-                            .filter(|value| !value.is_empty())
-                            .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
-                            .to_owned();
-                        if arg == "--omit" {
-                            countermodel.omit.push(value);
-                        } else {
-                            countermodel.module = Some(value);
-                        }
+                    "--omit" => {
+                        parsed.countermodel.flags = true;
+                        parsed.countermodel.omit.push(value);
                     }
+                    "--theorem" => {
+                        parsed.sweep.flags = true;
+                        parsed.sweep.theorems.push(value);
+                    }
+                    _ => parsed.modules.push(value),
                 }
             }
             "--strict" => parsed.proof.strict = true,

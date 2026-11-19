@@ -533,7 +533,7 @@ See `docs/corpus-model.md` and `docs/source-evidence.md` for the entity and veri
 
 When configuration comparison is the selected method, follow [the configuration elimination loop](docs/configuration-elimination-loop.md): reuse certified results and finite models, seek verified contradictory premise sets and investigate minimality where useful, compose proven implications, persist attempts and countermodels, and compare exact root-frontier premises before/after. Configuration labels are relative to their explicit formal semantics; absence of a model or proof is unresolved, not an impossibility claim. This is one method within the systematic loop and does not change frontier closure rules (#477).
 
-Find omission countermodels with `target/release/truth countermodel THEOREM [--omit HYP] [--all] [--size K]` instead of writing them by hand. It proposes finite models and has Lean check a `decide` certificate; "unresolved" is not proof that a premise is needed ([countermodels](docs/countermodels.md)).
+Find omission countermodels with `target/release/truth countermodel THEOREM [--omit HYP] [--all] [--size K]` instead of writing them by hand. It proposes finite models and has Lean check a `decide` certificate; "unresolved" is not proof that a premise is needed ([countermodels](docs/countermodels.md)). Before writing a Solution by hand, `target/release/truth prove-sweep` tries a fixed tactic portfolio on the frozen Challenges and flags likely transcriptions; it is advisory and writes nothing ([prove sweep](docs/prove-sweep.md)).
 
 ## Argument-first investigation
 

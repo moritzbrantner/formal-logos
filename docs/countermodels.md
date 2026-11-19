@@ -43,6 +43,10 @@ A checked certificate can be pasted into a `Control` namespace, renamed and
 cited from the result's `controls` theorem. Copy the statement, not just the
 model: the certificate's Lean check is the evidence, not the solver.
 
+The companion `truth prove-sweep` ([prove sweep](prove-sweep.md)) runs a fixed
+tactic portfolio on the frozen Challenge theorems: it searches for proofs where
+this tool searches for countermodels.
+
 ## Boundaries
 
 - The solver proposes; Lean decides. An unchecked candidate is not evidence.

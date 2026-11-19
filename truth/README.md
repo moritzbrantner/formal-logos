@@ -1028,6 +1028,17 @@ compare recorded `scripts/Countermodel.lean` skeletons of six results against
 the reports the Python finder gave. Exit code 1 when Lean rejects a
 certificate, 2 when the theorem is unavailable or outside the fragment.
 
+## `prove-sweep`
+
+`truth prove-sweep [--theorem NAME]... [--module MODULE]... [--heartbeats N]
+[--batch N]` (`truth::prove_sweep`) tries a fixed tactic portfolio and a
+transcription probe on every frozen Challenge theorem. It runs one `lake env
+lean --json` per batch of Challenges and reports, per target, `closed` (with
+the first closing tactic), `unresolved` or `error`, plus a likely-transcription
+flag (docs/prove-sweep.md). Progress goes to stderr. It is advisory and writes
+nothing; its unit tests cover Challenge parsing, scratch generation and
+message classification without Lean.
+
 ## `senses`
 
 `truth senses (report [--write] | allowlist [--write] | ratchet --base REV)`
