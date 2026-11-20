@@ -634,10 +634,20 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
     let u ← unfoldSet (premises.push target)
     let added ← (xs.zip origins).mapM fun (x, o) => return Json.mkObj [("name", Json.str (← x.fvarId!.getUserName).toString),
       ("from", Json.str s!"{o.decl}.{o.binder}"), ("sense", (o.sense.map Json.str).getD Json.null)]
-    let alone ← prove xs #[] concl u heartbeats zip
+    -- Premise-free check over the target's own binders only: a binder that a
+    -- candidate premise introduced (an element `x : B`, an instance) is erased
+    -- from the context, so it can neither be used nor quantified, and a
+    -- vocabulary theorem never rests on a nonemptiness assumption the target
+    -- does not make. The target is bound first, so no target binder depends on
+    -- an erased one.
+    let targetXs := (xs.zip origins).filterMap fun (x, o) => if o.decl == target then some x else none
+    let extra := (xs.zip origins).filterMap fun (x, o) => if o.decl == target then none else some x.fvarId!
+    let aloneLCtx := extra.foldl (·.erase ·) (← getLCtx)
+    let aloneInsts := (← getLocalInstances).filter fun i => !extra.contains i.fvar.fvarId!
+    let alone ← withLCtx aloneLCtx aloneInsts <| prove targetXs #[] concl u heartbeats zip
     if alone.isSome then
       return Json.mkObj [("binders", toJson added), ("alone", proved alone),
-        ("signature", Json.str (← signature xs #[] concl)),
+        ("signature", Json.str (← withLCtx aloneLCtx aloneInsts <| signature targetXs #[] concl)),
         ("unfold", jsonNames ((← unfoldSet #[target]).toArray.qsort Name.lt))]
     let full ← prove xs hyps concl u heartbeats zip
     let some full := full

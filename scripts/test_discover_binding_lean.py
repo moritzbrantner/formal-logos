@@ -63,6 +63,33 @@ def scratch(commands: list[str]) -> str:
     )
 
 
+def run(commands: list[str]) -> dict:
+    with tempfile.TemporaryDirectory() as tmp:
+        module_dir = Path(tmp) / "TruthCore"
+        module_dir.mkdir()
+        compile_steps = []
+        for module in MODULES:
+            shutil.copy(FIXTURES / f"{module}.lean", module_dir / f"{module}.lean")
+            compile_steps.append(
+                f'lean --root="$1" -o "$1/TruthCore/{module}.olean" "$1/TruthCore/{module}.lean"'
+            )
+        path = Path(tmp) / "Scratch.lean"
+        path.write_text(scratch(commands))
+        script = " && ".join(compile_steps) + ' && LEAN_PATH="$1:$LEAN_PATH" lean "$2"'
+        completed = subprocess.run(
+            ["lake", "env", "sh", "-c", script, "sh", tmp, str(path)],
+            cwd=ROOT, capture_output=True, text=True, check=False,
+        )
+    if completed.returncode != 0:
+        raise AssertionError(completed.stderr or completed.stdout)
+    outcomes: dict = {}
+    for line in completed.stdout.splitlines():
+        if "DISCOVER-JSON " in line:
+            value = json.loads(line.split("DISCOVER-JSON ", 1)[1])
+            outcomes[value["label"]] = value
+    return outcomes
+
+
 @unittest.skipIf(skip_reason() is not None, skip_reason() or "")
 class DiscoverBindingTest(unittest.TestCase):
     def test_partial_application_tags_never_identify_whole_binders(self):
@@ -71,28 +98,7 @@ class DiscoverBindingTest(unittest.TestCase):
             f"{TARGET} from {PREMISE}"
             for label, key in (("whole", "cause"), ("partial", "cause|_ _ 0"))
         ]
-        with tempfile.TemporaryDirectory() as tmp:
-            module_dir = Path(tmp) / "TruthCore"
-            module_dir.mkdir()
-            compile_steps = []
-            for module in MODULES:
-                shutil.copy(FIXTURES / f"{module}.lean", module_dir / f"{module}.lean")
-                compile_steps.append(
-                    f'lean --root="$1" -o "$1/TruthCore/{module}.olean" "$1/TruthCore/{module}.lean"'
-                )
-            path = Path(tmp) / "Scratch.lean"
-            path.write_text(scratch(commands))
-            script = " && ".join(compile_steps) + ' && LEAN_PATH="$1:$LEAN_PATH" lean "$2"'
-            completed = subprocess.run(
-                ["lake", "env", "sh", "-c", script, "sh", tmp, str(path)],
-                cwd=ROOT, capture_output=True, text=True, check=False,
-            )
-        self.assertEqual(completed.returncode, 0, completed.stderr or completed.stdout)
-        outcomes = {}
-        for line in completed.stdout.splitlines():
-            if "DISCOVER-JSON " in line:
-                value = json.loads(line.split("DISCOVER-JSON ", 1)[1])
-                outcomes[value["label"]] = value
+        outcomes = run(commands)
 
         def froms(label: str) -> list[str]:
             return sorted(b["from"] for b in outcomes[label]["binders"])
@@ -110,6 +116,16 @@ class DiscoverBindingTest(unittest.TestCase):
         )
         self.assertIsNone(outcomes["partial"]["closed"])
         self.assertEqual(outcomes["partial"]["domain_identified_by_name"], [])
+
+    def test_premise_free_check_ignores_premise_only_binders(self):
+        target = "TruthCore.DiscoverFixtureTarget.Inhabited'"
+        premise = "TruthCore.DiscoverFixturePremise.HasElement"
+        config = lean_string(json.dumps({"tags": [[premise, "B", "carrier"], [target, "B", "carrier"]]}))
+        outcome = run([f'#discover "nonempty" 20000 "" {config} {target} from {premise}'])["nonempty"]
+        # `x : B` comes only from the premise: the target is no theorem of its
+        # vocabulary, though the goal with the premise (which binds `x`) closes.
+        self.assertIsNone(outcome["alone"])
+        self.assertIsNotNone(outcome["closed"])
 
 
 if __name__ == "__main__":

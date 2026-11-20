@@ -7,3 +7,11 @@ namespace TruthCore.DiscoverFixtureTarget
 def Target (B : Type) (CausesIn : B → B → Nat → Prop) (a : B) : Prop := CausesIn a a 1
 
 end TruthCore.DiscoverFixtureTarget
+
+namespace TruthCore.DiscoverFixtureTarget
+
+/-- A target that holds only for a nonempty carrier: not a theorem of its
+vocabulary (Codex P1 on #1796, premise-free check). -/
+def Inhabited' (B : Type) : Prop := ∃ y : B, y = y
+
+end TruthCore.DiscoverFixtureTarget
