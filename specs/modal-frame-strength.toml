@@ -114,3 +114,147 @@ object_id = "STMT-ONTIC-FRAME-KT"
 verification_result_id = "KTB route frame entails KT route frame"
 strictness_result_id = "Frame-class strictness controls, checked"
 note = "Same route Profile and frame. KTB adds symmetry to KT; the two-world order frame is KT and not KTB."
+
+# Follow-up to the discover run (#1784, #1598): certified differences of the
+# four frame registrations above, and finding t16 (the KTB and S4 frame
+# premises jointly give the S5 frame premise). Mathematical comparisons on the
+# same route frame; no frame premise is asserted or established.
+
+[[statement]]
+id = "The route's modal frame is symmetric (route frame premise delta)"
+lean = "OnticFrameSymmetric"
+paraphrase = "Difference statement: the accessibility relation of the route's modal frame m.ontic.frame is symmetric (if w accesses v, then v accesses w; frame condition B). A condition on the frame only; it is not asserted of the route."
+definitions = ["DEF-MODAL-FIXTURE-FRAME"]
+
+[[statement]]
+id = "The route's modal frame is transitive (route frame premise delta)"
+lean = "OnticFrameTransitive"
+paraphrase = "Difference statement: the accessibility relation of the route's modal frame m.ontic.frame is transitive (if w accesses v and v accesses u, then w accesses u; frame condition 4). A condition on the frame only; it is not asserted of the route."
+definitions = ["DEF-MODAL-FIXTURE-FRAME"]
+
+[[statement]]
+id = "The route frame is S5 exactly when it is S4 and symmetric"
+lean = "FrameS5OverS4Exact"
+paraphrase = "For every world type, individual type and profile m: the route's modal frame is reflexive and Euclidean (S5) if and only if it is reflexive and transitive (S4) and symmetric. A premise-free comparison of frame conditions; it asserts none of them of the route."
+definitions = ["DEF-MODAL-FIXTURE-FRAME"]
+disambiguations = ["DISAMB-NECESSARY"]
+
+[[statement]]
+id = "The route frame is S5 exactly when it is KTB and transitive"
+lean = "FrameS5OverKTBExact"
+paraphrase = "For every world type, individual type and profile m: the route's modal frame is reflexive and Euclidean (S5) if and only if it is reflexive and symmetric (KTB) and transitive. A premise-free comparison of frame conditions; it asserts none of them of the route."
+definitions = ["DEF-MODAL-FIXTURE-FRAME"]
+disambiguations = ["DISAMB-NECESSARY"]
+
+[[statement]]
+id = "The route frame is S4 exactly when it is KT and transitive"
+lean = "FrameS4OverKTExact"
+paraphrase = "For every world type, individual type and profile m: the route's modal frame is reflexive and transitive (S4) if and only if it is reflexive (KT) and transitive. A premise-free comparison of frame conditions; it asserts none of them of the route."
+definitions = ["DEF-MODAL-FIXTURE-FRAME"]
+disambiguations = ["DISAMB-NECESSARY"]
+
+[[statement]]
+id = "The route frame is KTB exactly when it is KT and symmetric"
+lean = "FrameKTBOverKTExact"
+paraphrase = "For every world type, individual type and profile m: the route's modal frame is reflexive and symmetric (KTB) if and only if it is reflexive (KT) and symmetric. A premise-free comparison of frame conditions; it asserts none of them of the route."
+definitions = ["DEF-MODAL-FIXTURE-FRAME"]
+disambiguations = ["DISAMB-NECESSARY"]
+
+[[argument]]
+id = "KTB and S4 route frames together entail the S5 route frame"
+theorem = "frameS5OfKTBAndS4"
+premises = ["STMT-ONTIC-FRAME-KTB", "STMT-ONTIC-FRAME-S4"]
+conclusion = "STMT-ONTIC-FRAME-S5"
+strong_version_needed = { "STMT-ONTIC-FRAME-KTB" = "The Euclidean condition needs symmetry, which only the KTB premise supplies; its registered weak version (KT frame) gives reflexivity alone, and reflexivity with transitivity does not give the Euclidean condition (frameStrictness: an S4 frame that is not S5, the two-world order frame).", "STMT-ONTIC-FRAME-S4" = "The Euclidean condition needs transitivity, which only the S4 premise supplies; its registered weak version (KT frame) gives reflexivity alone, and reflexivity with symmetry does not give the Euclidean condition (frameStrictness: a KTB frame that is not S5, the reflexive symmetric non-transitive path)." }
+axioms = []
+rule = "Frame-condition algebra symmetric_transitive_implies_euclidean of the modal library (a symmetric transitive relation is Euclidean)"
+meaning = "If the route's modal frame is reflexive and symmetric (KTB) and also reflexive and transitive (S4), it is reflexive and Euclidean (S5): reflexivity from the KTB premise, the Euclidean condition from symmetry and transitivity by the modal-library theorem TruthCore.Modal.symmetric_transitive_implies_euclidean. With the registrations S5 strengthens KTB and S5 strengthens S4, the S5 frame premise says exactly what the KTB and S4 frame premises say jointly. Establishes no frame premise."
+description = "If the route's modal frame is reflexive and symmetric (KTB) and also reflexive and transitive (S4), it is reflexive and Euclidean (S5). Not a transcription (invariant 16): the conclusion's Euclidean conjunct appears in neither premise and is derived by the proved modal-library lemma TruthCore.Modal.symmetric_transitive_implies_euclidean (from w R l and w R r, symmetry gives l R w and transitivity gives l R r); the conclusion can fail for a frame lacking either condition (frameStrictness: a KTB frame that is not S5, and an S4 frame that is not S5). Establishes no frame premise."
+
+[[argument]]
+id = "S5 route frame is the S4 route frame plus symmetry"
+theorem = "frameS5OverS4Exact"
+premises = []
+conclusion = "The route frame is S5 exactly when it is S4 and symmetric"
+axioms = []
+rule = "Frame-condition algebra: a reflexive Euclidean relation is transitive and symmetric; a symmetric transitive relation is Euclidean"
+meaning = "Certified difference (#1598) of the registration S5 route frame strengthens S4 route frame: for every profile, the route frame is S5 iff it is S4 and symmetric. Premise-free; it compares the frame conditions and asserts none of them of the route."
+
+[[argument]]
+id = "S5 route frame is the KTB route frame plus transitivity"
+theorem = "frameS5OverKTBExact"
+premises = []
+conclusion = "The route frame is S5 exactly when it is KTB and transitive"
+axioms = []
+rule = "Frame-condition algebra: a reflexive Euclidean relation is symmetric and transitive; a symmetric transitive relation is Euclidean"
+meaning = "Certified difference (#1598) of the registration S5 route frame strengthens KTB route frame: for every profile, the route frame is S5 iff it is KTB and transitive. Premise-free; it compares the frame conditions and asserts none of them of the route."
+
+[[argument]]
+id = "S4 route frame is the KT route frame plus transitivity"
+theorem = "frameS4OverKTExact"
+premises = []
+conclusion = "The route frame is S4 exactly when it is KT and transitive"
+axioms = []
+rule = "Conjunction regrouping: frame class S4 is reflexivity together with transitivity"
+meaning = "Certified difference (#1598) of the registration S4 route frame strengthens KT route frame: for every profile, the route frame is S4 iff it is KT and transitive. The factorization holds by the definition of frame class S4; premise-free, it asserts no frame condition of the route."
+
+[[argument]]
+id = "KTB route frame is the KT route frame plus symmetry"
+theorem = "frameKTBOverKTExact"
+premises = []
+conclusion = "The route frame is KTB exactly when it is KT and symmetric"
+axioms = []
+rule = "Conjunction regrouping: frame class KTB is reflexivity together with symmetry"
+meaning = "Certified difference (#1598) of the registration KTB route frame strengthens KT route frame: for every profile, the route frame is KTB iff it is KT and symmetric. The factorization holds by the definition of frame class KTB; premise-free, it asserts no frame condition of the route."
+
+[[relation]]
+id = "S5 over S4 route frame: certified difference"
+subject_kind = "statement"
+subject_id = "STMT-ONTIC-FRAME-S5"
+predicate = "strength_comparison"
+object_kind = "statement"
+object_id = "STMT-ONTIC-FRAME-S4"
+comparison_spec = "frameS5OverS4"
+delta_statement_id = "The route's modal frame is symmetric (route frame premise delta)"
+evidence_result_ids = { implication = "S5 route frame entails S4 route frame", equivalence = "S5 route frame is the S4 route frame plus symmetry" }
+statement_parameter_indices = { stronger = [0, 1, 2], weaker = [0, 1, 2], delta = [0, 1, 2] }
+note = "Difference of the S5 and S4 route frame premises: S5 adds to S4 exactly that the route's frame is symmetric (axiom B). Same frame m.ontic.frame. Strictness is recorded on the strengthens registration (two-world order frame); no separator setting is recorded here."
+
+[[relation]]
+id = "S5 over KTB route frame: certified difference"
+subject_kind = "statement"
+subject_id = "STMT-ONTIC-FRAME-S5"
+predicate = "strength_comparison"
+object_kind = "statement"
+object_id = "STMT-ONTIC-FRAME-KTB"
+comparison_spec = "frameS5OverKTB"
+delta_statement_id = "The route's modal frame is transitive (route frame premise delta)"
+evidence_result_ids = { implication = "S5 route frame entails KTB route frame", equivalence = "S5 route frame is the KTB route frame plus transitivity" }
+statement_parameter_indices = { stronger = [0, 1, 2], weaker = [0, 1, 2], delta = [0, 1, 2] }
+note = "Difference of the S5 and KTB route frame premises: S5 adds to KTB exactly that the route's frame is transitive (axiom 4). Same frame m.ontic.frame. Strictness is recorded on the strengthens registration (reflexive symmetric non-transitive path); no separator setting is recorded here."
+
+[[relation]]
+id = "S4 over KT route frame: certified difference"
+subject_kind = "statement"
+subject_id = "STMT-ONTIC-FRAME-S4"
+predicate = "strength_comparison"
+object_kind = "statement"
+object_id = "STMT-ONTIC-FRAME-KT"
+comparison_spec = "frameS4OverKT"
+delta_statement_id = "The route's modal frame is transitive (route frame premise delta)"
+evidence_result_ids = { implication = "S4 route frame entails KT route frame", equivalence = "S4 route frame is the KT route frame plus transitivity" }
+statement_parameter_indices = { stronger = [0, 1, 2], weaker = [0, 1, 2], delta = [0, 1, 2] }
+note = "Difference of the S4 and KT route frame premises: S4 adds to KT exactly that the route's frame is transitive (axiom 4). Same frame m.ontic.frame. Strictness is recorded on the strengthens registration (reflexive non-transitive chain); no separator setting is recorded here."
+
+[[relation]]
+id = "KTB over KT route frame: certified difference"
+subject_kind = "statement"
+subject_id = "STMT-ONTIC-FRAME-KTB"
+predicate = "strength_comparison"
+object_kind = "statement"
+object_id = "STMT-ONTIC-FRAME-KT"
+comparison_spec = "frameKTBOverKT"
+delta_statement_id = "The route's modal frame is symmetric (route frame premise delta)"
+evidence_result_ids = { implication = "KTB route frame entails KT route frame", equivalence = "KTB route frame is the KT route frame plus symmetry" }
+statement_parameter_indices = { stronger = [0, 1, 2], weaker = [0, 1, 2], delta = [0, 1, 2] }
+note = "Difference of the KTB and KT route frame premises: KTB adds to KT exactly that the route's frame is symmetric (axiom B). Same frame m.ontic.frame. Strictness is recorded on the strengthens registration (two-world order frame); no separator setting is recorded here."

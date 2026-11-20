@@ -1,0 +1,11 @@
+{
+  "id": "6041a2b6-32c0-4832-8553-43bd7cd5e97a",
+  "label": "S5 route frame is the KTB route frame plus transitivity",
+  "argument_id": "644bfe42-0f79-4939-a913-f48085a023e3",
+  "challenge_module": "TruthCore.Results.Causality.ModalFrameStrength.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ModalFrameStrength.Solution",
+  "theorem": "TruthCore.Results.Causality.ModalFrameStrength.frameS5OverKTBExact",
+  "comparator_config": "results/6041a2b6-32c0-4832-8553-43bd7cd5e97a/comparator.json",
+  "status": "solution-present",
+  "description": "Certified difference (#1598) of the registration S5 route frame strengthens KTB route frame: for every profile, the route frame is S5 iff it is KTB and transitive. Premise-free; it compares the frame conditions and asserts none of them of the route."
+}

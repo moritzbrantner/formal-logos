@@ -1,0 +1,34 @@
+{
+  "id": "b5ec13d0-fbee-4c2f-b7f6-c88d67cb0969",
+  "label": "KTB over KT route frame: certified difference",
+  "subject_kind": "statement",
+  "subject_id": "60795e6e-1fe1-5c55-9718-bc2a22867244",
+  "predicate": "strength_comparison",
+  "object_kind": "statement",
+  "object_id": "806c3f89-171a-5ccf-9ddf-5924c39695ed",
+  "comparison_spec": "TruthCore.Causality.ModalSenseSupport.frameKTBOverKT",
+  "delta_statement_id": "9a02972e-df16-413c-baa4-5dfaf9b3f8f4",
+  "background_statement_ids": [],
+  "evidence_result_ids": {
+    "equivalence": "3e0e4f55-093f-4e26-ab80-2928ece4e2af",
+    "implication": "5901029e-9160-4d43-bcd4-747fceab9aa7"
+  },
+  "statement_parameter_indices": {
+    "stronger": [
+      0,
+      1,
+      2
+    ],
+    "weaker": [
+      0,
+      1,
+      2
+    ],
+    "delta": [
+      0,
+      1,
+      2
+    ]
+  },
+  "note": "Difference of the KTB and KT route frame premises: KTB adds to KT exactly that the route's frame is symmetric (axiom B). Same frame m.ontic.frame. Strictness is recorded on the strengthens registration (two-world order frame); no separator setting is recorded here."
+}

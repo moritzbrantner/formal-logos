@@ -1,0 +1,16 @@
+{
+  "id": "26a383c6-a09d-4ffa-8d66-e674a991a378",
+  "label": "KTB route frame is the KT route frame plus symmetry",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "437b3fb0-6158-4e33-8b03-cd01535f4683",
+  "inference_ids": [
+    "47826bdc-0aee-4267-9558-e9dc3f128214"
+  ],
+  "meaning": "Certified difference (#1598) of the registration KTB route frame strengthens KT route frame: for every profile, the route frame is KTB iff it is KT and symmetric. The factorization holds by the definition of frame class KTB; premise-free, it asserts no frame condition of the route.",
+  "definition_ids": [
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ]
+}

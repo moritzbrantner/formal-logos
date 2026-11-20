@@ -5,6 +5,7 @@ public import TruthCore.Modal.StandardCorrespondenceCertificate
 public import TruthCore.Modal.ConvergenceCertificate
 public import TruthCore.Modal.NecessaryPotentialCausers
 public import TruthCore.Modal.SimplicityCollapse
+public import TruthCore.Logic.StrengthComparison
 
 /-!
 # Modal-logic support for the frame-class senses of "necessary"
@@ -98,6 +99,68 @@ def IntendedIsBoxB (Intended : Sense → Prop) : Prop := ∀ s, Intended s ↔ s
 
 /-- OPEN reading premise: the intended reading is exactly box-existence in S5. -/
 def IntendedIsBoxS5 (Intended : Sense → Prop) : Prop := ∀ s, Intended s ↔ s = .boxS5
+
+/-! ## Certified differences of the frame-premise strength orders (#1598)
+
+The four registrations among the route's frame premises (S5 over S4, S5 over
+KTB, S4 over KT, KTB over KT) each differ by one frame condition on the same
+route frame `m.ontic.frame`: S5 adds symmetry to S4 and transitivity to KTB;
+S4 adds transitivity to KT; KTB adds symmetry to KT. Each delta is a named frame
+condition, not the strong premise, `WEAK → STRONG`, the weak premise or `True`.
+Mathematical comparisons only; no frame condition is asserted of the route. -/
+
+open TruthCore.Logic.StrengthComparison
+open TruthCore.Causality.BruteFoundationBoundary (Profile)
+
+/-- Delta: the route's accessibility relation is symmetric (frame condition B). -/
+def OnticFrameSymmetric (m : Profile W B) : Prop := Symmetric m.ontic.frame
+
+/-- Delta: the route's accessibility relation is transitive (frame condition 4). -/
+def OnticFrameTransitive (m : Profile W B) : Prop := Transitive m.ontic.frame
+
+/-- S5 route frame over S4 route frame; difference: the frame is symmetric. -/
+def frameS5OverS4 (m : Profile W B) : ComparisonSpec where
+  stronger := OnticFrameS5 m
+  weaker := OnticFrameS4 m
+  delta := OnticFrameSymmetric m
+
+/-- S5 route frame over KTB route frame; difference: the frame is transitive. -/
+def frameS5OverKTB (m : Profile W B) : ComparisonSpec where
+  stronger := OnticFrameS5 m
+  weaker := OnticFrameKTB m
+  delta := OnticFrameTransitive m
+
+/-- S4 route frame over KT route frame; difference: the frame is transitive. -/
+def frameS4OverKT (m : Profile W B) : ComparisonSpec where
+  stronger := OnticFrameS4 m
+  weaker := OnticFrameKT m
+  delta := OnticFrameTransitive m
+
+/-- KTB route frame over KT route frame; difference: the frame is symmetric. -/
+def frameKTBOverKT (m : Profile W B) : ComparisonSpec where
+  stronger := OnticFrameKTB m
+  weaker := OnticFrameKT m
+  delta := OnticFrameSymmetric m
+
+/-- Exact factorization: the route frame is S5 iff it is S4 and symmetric. -/
+def FrameS5OverS4Exact : Prop :=
+  ∀ {W B : Type} (m : Profile W B),
+    OnticFrameS5 m ↔ OnticFrameS4 m ∧ OnticFrameSymmetric m
+
+/-- Exact factorization: the route frame is S5 iff it is KTB and transitive. -/
+def FrameS5OverKTBExact : Prop :=
+  ∀ {W B : Type} (m : Profile W B),
+    OnticFrameS5 m ↔ OnticFrameKTB m ∧ OnticFrameTransitive m
+
+/-- Exact factorization: the route frame is S4 iff it is KT and transitive. -/
+def FrameS4OverKTExact : Prop :=
+  ∀ {W B : Type} (m : Profile W B),
+    OnticFrameS4 m ↔ OnticFrameKT m ∧ OnticFrameTransitive m
+
+/-- Exact factorization: the route frame is KTB iff it is KT and symmetric. -/
+def FrameKTBOverKTExact : Prop :=
+  ∀ {W B : Type} (m : Profile W B),
+    OnticFrameKTB m ↔ OnticFrameKT m ∧ OnticFrameSymmetric m
 
 /-! ## A recorded rival -/
 

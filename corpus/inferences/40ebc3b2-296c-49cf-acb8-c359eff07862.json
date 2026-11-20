@@ -1,0 +1,10 @@
+{
+  "id": "40ebc3b2-296c-49cf-acb8-c359eff07862",
+  "label": "S5 route frame is the KTB route frame plus transitivity (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "788b7a1d-4da5-4253-b4e9-46f416eaa366",
+  "rule": "Frame-condition algebra: a reflexive Euclidean relation is symmetric and transitive; a symmetric transitive relation is Euclidean",
+  "meaning": "Certified difference (#1598) of the registration S5 route frame strengthens KTB route frame: for every profile, the route frame is S5 iff it is KTB and transitive. Premise-free; it compares the frame conditions and asserts none of them of the route.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

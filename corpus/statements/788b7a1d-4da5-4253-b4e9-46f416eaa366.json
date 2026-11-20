@@ -1,0 +1,12 @@
+{
+  "id": "788b7a1d-4da5-4253-b4e9-46f416eaa366",
+  "label": "The route frame is S5 exactly when it is KTB and transitive",
+  "paraphrase": "For every world type, individual type and profile m: the route's modal frame is reflexive and Euclidean (S5) if and only if it is reflexive and symmetric (KTB) and transitive. A premise-free comparison of frame conditions; it asserts none of them of the route.",
+  "lean_declaration": "TruthCore.Causality.ModalSenseSupport.FrameS5OverKTBExact",
+  "definition_ids": [
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ]
+}

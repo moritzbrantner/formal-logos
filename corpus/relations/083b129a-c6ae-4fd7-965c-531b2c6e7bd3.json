@@ -1,0 +1,34 @@
+{
+  "id": "083b129a-c6ae-4fd7-965c-531b2c6e7bd3",
+  "label": "S4 over KT route frame: certified difference",
+  "subject_kind": "statement",
+  "subject_id": "d8d91023-300e-50f4-9cc5-e62f44a1aa04",
+  "predicate": "strength_comparison",
+  "object_kind": "statement",
+  "object_id": "806c3f89-171a-5ccf-9ddf-5924c39695ed",
+  "comparison_spec": "TruthCore.Causality.ModalSenseSupport.frameS4OverKT",
+  "delta_statement_id": "9a6ce384-5213-43bd-a65e-90dddc8574f3",
+  "background_statement_ids": [],
+  "evidence_result_ids": {
+    "equivalence": "6ab159fc-250c-49b1-9d47-970798e2ce92",
+    "implication": "45dea922-9fd2-464b-afb3-3199b53219b1"
+  },
+  "statement_parameter_indices": {
+    "stronger": [
+      0,
+      1,
+      2
+    ],
+    "weaker": [
+      0,
+      1,
+      2
+    ],
+    "delta": [
+      0,
+      1,
+      2
+    ]
+  },
+  "note": "Difference of the S4 and KT route frame premises: S4 adds to KT exactly that the route's frame is transitive (axiom 4). Same frame m.ontic.frame. Strictness is recorded on the strengthens registration (reflexive non-transitive chain); no separator setting is recorded here."
+}
