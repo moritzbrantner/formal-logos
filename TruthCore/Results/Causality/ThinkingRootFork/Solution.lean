@@ -9,7 +9,11 @@ public import TruthCore.Results.Causality.DirectEsseRootGodExistence.Solution
 /-! The two literal horns share *one* root witness. Only the positive horn
 descends, and it descends through distinct thinkers rather than every ground.
 The modal upgrade applies to that same endpoint. All metaphysical bridges
-remain hypotheses; in particular no God-existence theorem is used. -/
+remain hypotheses. The registered theorem `necessaryThinkingRootOfThought`
+uses no God-existence theorem; only the ordinary helper
+`directEsseGodOfNecessaryThinkingRoot` below invokes
+`DirectEsseRootGodExistence.godOfRoot`, under that consumer's explicit
+premises, and it is not a registered result. -/
 
 @[expose] public section
 
@@ -104,7 +108,9 @@ theorem noPOfActualRoot (m : Profile W B) (w : W)
 relation is a mediate thinking predecessor. The existing Cogito concreteness
 bridge suffices: `PresentEsseSupport` already supplies the source's actuality,
 so the more general `ActualSupportersConcrete` is unnecessary here. The
-converse is false when a nonthinking intermediate ground lies on the path. -/
+converse can fail when a nonthinking intermediate ground lies on the path,
+unless another direct thinking supporter coexists; no checked model of that
+failure is supplied here. -/
 theorem directThinkingSupportImpliesP (m : Profile W B) (w : W)
     (Occurs : Episode → Prop) (Bears : B → Episode → Prop) (x : B)
     (hConcrete : EveryBearerIsConcrete Occurs Bears m.concrete)

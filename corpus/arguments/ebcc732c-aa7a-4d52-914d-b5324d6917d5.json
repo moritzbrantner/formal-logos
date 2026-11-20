@@ -1,0 +1,31 @@
+{
+  "id": "ebcc732c-aa7a-4d52-914d-b5324d6917d5",
+  "label": "Full thinker grounding accessibility entails thinking predecessor accessibility",
+  "premise_statement_ids": [
+    "3a2bb5f9-70c1-5f3f-9798-ac250deffa90"
+  ],
+  "conclusion_statement_id": "debcd4e1-017d-4db4-a47f-ca287fe7f283",
+  "inference_ids": [
+    "51e135e5-e02f-4607-94d3-f57b265d1fff"
+  ],
+  "meaning": "Strength order registration: Acc for actual concrete grounding at every occurring-thought bearer gives Acc for its transitive closure, hence for the subrelation of distinct thinking G+ predecessors. Application only; it establishes neither statement. Strictness unverified (#1791).",
+  "definition_ids": [
+    "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce",
+    "12c3b24c-f278-499a-b127-db56a407af4c",
+    "8181eef7-4f03-42c3-bc1b-f440acc4556d"
+  ],
+  "disambiguation_ids": [
+    "1272a7e5-e3e1-4c91-a1d3-343018262841",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ],
+  "weakening": true,
+  "sense_bridges": [
+    {
+      "term": "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT",
+      "from": "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
+      "to": "9232f675-db0a-474c-9f00-d8e5aba69ef7",
+      "statement_id": "debcd4e1-017d-4db4-a47f-ca287fe7f283",
+      "role": "conclusion"
+    }
+  ]
+}

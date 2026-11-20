@@ -1,0 +1,68 @@
+# Strength-order registrations for the #1791 thinker-only P/not-P fork (#1017).
+# The two older Cogito ancestry premises entail the two narrower premises of
+# result 60df7e87 at the same profile, world and thought predicates. Strictness
+# controls (weak does not entail strong) are not supplied yet (#1791).
+# Analyst formulations, attribution deferred. No premise is established.
+
+[batch]
+vocab = "TruthCore.Causality.ThinkingRootFork"
+results = "TruthCore.Results.Causality.ThinkingRootForkStrength"
+
+[[argument]]
+id = "Full thinker grounding accessibility entails thinking predecessor accessibility"
+theorem = "thinkingAccessibilityOfGroundingAccessibility"
+premises = ["STMT-COGITO-THINKER-GROUNDING-ACCESSIBLE"]
+conclusion = "debcd4e1-017d-4db4-a47f-ca287fe7f283"
+weakening = true
+# Explicit definitions: do not inherit the ActualRoot sense from the older
+# premise's records; this step uses only GroundAncestor-sense accessibility.
+definitions = ["c86cc1d1-c09f-5296-8ab9-2e5ddf217dce", "12c3b24c-f278-499a-b127-db56a407af4c", "8181eef7-4f03-42c3-bc1b-f440acc4556d"]
+# The older premise's record also links the ActualRoot sense (_2) although its
+# Lean type (Acc of ActualConcreteGround at each bearer) does not mention it;
+# the derived conclusion, stated in the GroundAncestor sense (_1), bridges it.
+sense_bridges = [
+  { term = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT", from = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_2", to = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1", statement_id = "debcd4e1-017d-4db4-a47f-ca287fe7f283", role = "conclusion" }
+]
+axioms = []
+rule = "Restrict accessibility to a subrelation of the transitive closure"
+meaning = "Strength order registration: Acc for actual concrete grounding at every occurring-thought bearer gives Acc for its transitive closure, hence for the subrelation of distinct thinking G+ predecessors. Application only; it establishes neither statement. Strictness unverified (#1791)."
+
+[[argument]]
+id = "Contingent ancestry grounding entails contingent thinking cone grounding"
+theorem = "thinkingGroundingOfAncestryGrounded"
+premises = ["STMT-COGITO-THINKER-ANCESTRY-GROUNDED"]
+conclusion = "db72222b-cf8d-4eca-8b80-56b418d488a6"
+weakening = true
+definitions = ["c86cc1d1-c09f-5296-8ab9-2e5ddf217dce", "9c6e4314-2e35-52ff-951e-db752a3c8ce2", "6f53f286-b5e8-4b75-997a-8e314e97d6ff", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "8181eef7-4f03-42c3-bc1b-f440acc4556d"]
+# Cone m w b x unfolds to ActualConcrete m w x and GroundAncestor m w x b; the
+# proof passes from the GroundAncestor premise to the Cone conclusion by that
+# unfolding only, so the bridge is the derived conclusion itself. The older
+# premise's record also links the ActualRoot sense (_2) although its Lean type
+# does not mention ActualRoot; the same derived conclusion bridges that link.
+sense_bridges = [
+  { term = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT", from = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_2", to = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_3", statement_id = "db72222b-cf8d-4eca-8b80-56b418d488a6", role = "conclusion" },
+  { term = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT", from = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1", to = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_3", statement_id = "db72222b-cf8d-4eca-8b80-56b418d488a6", role = "conclusion" }
+]
+axioms = []
+rule = "Restrict the anti-brute condition to thinking cone members"
+meaning = "Strength order registration: grounding of every contingent actual concrete cone member of an occurring-thought bearer gives grounding of its contingent thinking cone members. Application only; it establishes neither statement. Strictness unverified (#1791)."
+
+[[relation]]
+id = "Full thinker grounding accessibility strengthens thinking predecessor accessibility"
+subject_kind = "statement"
+subject_id = "STMT-COGITO-THINKER-GROUNDING-ACCESSIBLE"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "debcd4e1-017d-4db4-a47f-ca287fe7f283"
+verification_result_id = "Full thinker grounding accessibility entails thinking predecessor accessibility"
+note = "Same Profile, world, Occurs and Bears; the weak version constrains only descent through distinct thinking G+ predecessors, so nonthinking grounds may cycle. Strictness not yet checked (#1791)."
+
+[[relation]]
+id = "Contingent ancestry grounding strengthens contingent thinking cone grounding"
+subject_kind = "statement"
+subject_id = "STMT-COGITO-THINKER-ANCESTRY-GROUNDED"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "db72222b-cf8d-4eca-8b80-56b418d488a6"
+verification_result_id = "Contingent ancestry grounding entails contingent thinking cone grounding"
+note = "Same Profile, world, Occurs and Bears; the weak version grounds only contingent cone members that bear an occurring thought. Strictness not yet checked (#1791)."

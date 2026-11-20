@@ -1,0 +1,12 @@
+{
+  "id": "51e135e5-e02f-4607-94d3-f57b265d1fff",
+  "label": "Full thinker grounding accessibility entails thinking predecessor accessibility (inference)",
+  "input_statement_ids": [
+    "3a2bb5f9-70c1-5f3f-9798-ac250deffa90"
+  ],
+  "output_statement_id": "debcd4e1-017d-4db4-a47f-ca287fe7f283",
+  "rule": "Restrict accessibility to a subrelation of the transitive closure",
+  "meaning": "Strength order registration: Acc for actual concrete grounding at every occurring-thought bearer gives Acc for its transitive closure, hence for the subrelation of distinct thinking G+ predecessors. Application only; it establishes neither statement. Strictness unverified (#1791).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

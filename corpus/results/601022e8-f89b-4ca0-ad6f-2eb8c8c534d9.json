@@ -1,0 +1,11 @@
+{
+  "id": "601022e8-f89b-4ca0-ad6f-2eb8c8c534d9",
+  "label": "Contingent ancestry grounding entails contingent thinking cone grounding",
+  "argument_id": "6903f415-7027-45b9-949b-01bdb5276b05",
+  "challenge_module": "TruthCore.Results.Causality.ThinkingRootForkStrength.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ThinkingRootForkStrength.Solution",
+  "theorem": "TruthCore.Results.Causality.ThinkingRootForkStrength.thinkingGroundingOfAncestryGrounded",
+  "comparator_config": "results/601022e8-f89b-4ca0-ad6f-2eb8c8c534d9/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration: grounding of every contingent actual concrete cone member of an occurring-thought bearer gives grounding of its contingent thinking cone members. Application only; it establishes neither statement. Strictness unverified (#1791)."
+}

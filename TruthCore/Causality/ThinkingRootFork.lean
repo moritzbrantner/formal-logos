@@ -46,9 +46,10 @@ def P (m : Profile W B) (w : W) (Occurs : Episode → Prop)
     (Bears : B → Episode → Prop) (x : B) : Prop :=
   ∃ c, ThinkerPredecessor m w Occurs Bears c x
 
-/-- No wholly nonthinking immediate origin for a *grounded thinking* member
-of the selected actual cone: some distinct earlier ancestor also thinks.
-This does **not** require every intermediate concrete ground to think. -/
+/-- Every *grounded thinking* member of the selected actual cone (one with at
+least one incoming actual concrete `G` edge) has `P`: some distinct thinker
+precedes it along a nonempty finite `G` path. Its immediate parents need not
+think, and no intermediate concrete ground is required to think. -/
 def NoFreshThinkerInCone (m : Profile W B) (w : W) (Occurs : Episode → Prop)
     (Bears : B → Episode → Prop) (selected : B) : Prop :=
   ∀ x, Cone m w selected x → Thinks Occurs Bears x →

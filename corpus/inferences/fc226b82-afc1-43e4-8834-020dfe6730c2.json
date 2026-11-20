@@ -1,0 +1,12 @@
+{
+  "id": "fc226b82-afc1-43e4-8834-020dfe6730c2",
+  "label": "Contingent ancestry grounding entails contingent thinking cone grounding (inference)",
+  "input_statement_ids": [
+    "f8dafcc7-c5ea-5c62-885a-6a24cbb351ae"
+  ],
+  "output_statement_id": "db72222b-cf8d-4eca-8b80-56b418d488a6",
+  "rule": "Restrict the anti-brute condition to thinking cone members",
+  "meaning": "Strength order registration: grounding of every contingent actual concrete cone member of an occurring-thought bearer gives grounding of its contingent thinking cone members. Application only; it establishes neither statement. Strictness unverified (#1791).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

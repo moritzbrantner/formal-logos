@@ -1,0 +1,9 @@
+{
+  "id": "8181eef7-4f03-42c3-bc1b-f440acc4556d",
+  "label": "Bearer of some occurring thought episode",
+  "term": "bearer of an occurring thought (thinker) in the #1791 fork",
+  "definition": "Thinks Occurs Bears x holds exactly when some episode e satisfies Occurs e and Bears x e: x bears at least one occurring thought episode. Occurs is not world-indexed, so Thinks x by itself does not say that x exists at, or is concrete at, the selected world, and NecessaryAt of a thinker does not say that it thinks at every accessible world. No unity, persistence or personal identity of the bearer is implied.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.ThinkingRootFork.Thinks",
+  "note": "Analyst reconstruction for #1743/#1791, reusing the Cogito primitives Occurs (DEF c0cbef1c, occurrence of a thought episode) and Bears (DEF ce8ccc1a, subject of a thought episode). Example: an episode e with Occurs e and Bears b e makes b a thinker; a being that bears only non-occurring episodes is not one. Actuality comes only from the separate EveryBearerExistsAt and EveryBearerIsConcrete bridges."
+}

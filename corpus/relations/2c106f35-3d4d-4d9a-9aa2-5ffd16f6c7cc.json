@@ -1,0 +1,11 @@
+{
+  "id": "2c106f35-3d4d-4d9a-9aa2-5ffd16f6c7cc",
+  "label": "Full thinker grounding accessibility strengthens thinking predecessor accessibility",
+  "subject_kind": "statement",
+  "subject_id": "3a2bb5f9-70c1-5f3f-9798-ac250deffa90",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "debcd4e1-017d-4db4-a47f-ca287fe7f283",
+  "verification_result_id": "9e38fb0b-2c1a-4e39-b44f-f1fe7adaa111",
+  "note": "Same Profile, world, Occurs and Bears; the weak version constrains only descent through distinct thinking G+ predecessors, so nonthinking grounds may cycle. Strictness not yet checked (#1791)."
+}

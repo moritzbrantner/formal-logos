@@ -1,0 +1,11 @@
+{
+  "id": "9e38fb0b-2c1a-4e39-b44f-f1fe7adaa111",
+  "label": "Full thinker grounding accessibility entails thinking predecessor accessibility",
+  "argument_id": "ebcc732c-aa7a-4d52-914d-b5324d6917d5",
+  "challenge_module": "TruthCore.Results.Causality.ThinkingRootForkStrength.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ThinkingRootForkStrength.Solution",
+  "theorem": "TruthCore.Results.Causality.ThinkingRootForkStrength.thinkingAccessibilityOfGroundingAccessibility",
+  "comparator_config": "results/9e38fb0b-2c1a-4e39-b44f-f1fe7adaa111/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration: Acc for actual concrete grounding at every occurring-thought bearer gives Acc for its transitive closure, hence for the subrelation of distinct thinking G+ predecessors. Application only; it establishes neither statement. Strictness unverified (#1791)."
+}

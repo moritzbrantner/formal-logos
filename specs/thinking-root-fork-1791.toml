@@ -3,6 +3,7 @@ vocab = "TruthCore.Causality.ThinkingRootFork"
 results = "TruthCore.Results.Causality.ThinkingRootFork"
 definitions = [
   "a1b2e330-388f-4120-bc5c-969642317792",
+  "8181eef7-4f03-42c3-bc1b-f440acc4556d",
   "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce",
   "9c6e4314-2e35-52ff-951e-db752a3c8ce2",
   "52352824-6be9-53c6-83d4-82fed9a08cbb",
@@ -20,21 +21,21 @@ disambiguations = [
 id = "Thinking bearers have accessible distinct thinking ground ancestry"
 lean = "ThinkingBearerPredecessorAccessible"
 paraphrase = "Analyst formulation: every bearer of an occurring thought is Acc-accessible under the selected relation consisting of distinct thinking mediate actual-concrete-ground predecessors. No descent condition is imposed on nonthinking grounds, which may cycle. No well-foundedness of the full concrete cone, and no claim that direct existential support equals this mediate relation."
-definitions = ["12c3b24c-f278-499a-b127-db56a407af4c", "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce"]
+definitions = ["12c3b24c-f278-499a-b127-db56a407af4c", "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce", "8181eef7-4f03-42c3-bc1b-f440acc4556d"]
 disambiguations = ["1272a7e5-e3e1-4c91-a1d3-343018262841"]
 
 [[statement]]
 id = "Grounded thinking cone members have an earlier distinct thinking ancestor"
 lean = "ThinkingBearerConeNoFresh"
 paraphrase = "Analyst formulation: for each bearer b of an occurring thought, each member x of b's actual concrete ground cone (b itself or an actual concrete finite ground ancestor of b) that bears an occurring thought and has at least one incoming actual concrete ground has a distinct earlier thinking ancestor c along a nonempty finite ground path. Its immediate ground need not be a thinker, and x need not be contingent. No logical or idealist theory by itself supplies this bridge."
-definitions = ["51d205db-399e-4524-8e15-e04cf2532e24", "12c3b24c-f278-499a-b127-db56a407af4c", "9c6e4314-2e35-52ff-951e-db752a3c8ce2"]
+definitions = ["51d205db-399e-4524-8e15-e04cf2532e24", "12c3b24c-f278-499a-b127-db56a407af4c", "9c6e4314-2e35-52ff-951e-db752a3c8ce2", "8181eef7-4f03-42c3-bc1b-f440acc4556d"]
 disambiguations = ["1272a7e5-e3e1-4c91-a1d3-343018262841"]
 
 [[statement]]
 id = "Contingent thinking cone members of a thought bearer have actual concrete grounds"
 lean = "ThinkingBearerConeContingentGrounded"
 paraphrase = "Analyst formulation: for every occurring-thought bearer b, contingent members x of b's actual concrete ground cone (b itself included) that bear an occurring thought have an actual concrete predecessor. Contingent nonthinking ancestors are not covered; this is weaker in scope than contingent grounding for every member of the full actual cone, but no unconditional truth is asserted."
-definitions = ["6f53f286-b5e8-4b75-997a-8e314e97d6ff", "9c6e4314-2e35-52ff-951e-db752a3c8ce2", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1"]
+definitions = ["6f53f286-b5e8-4b75-997a-8e314e97d6ff", "9c6e4314-2e35-52ff-951e-db752a3c8ce2", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "8181eef7-4f03-42c3-bc1b-f440acc4556d"]
 
 [[statement]]
 id = "An occurring thought has a necessary actual thinking ground root"
@@ -44,7 +45,8 @@ definitions = [
   "12c3b24c-f278-499a-b127-db56a407af4c",
   "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce",
   "52352824-6be9-53c6-83d4-82fed9a08cbb",
-  "38b92bb6-33ae-5817-85c6-b5a1afa63bd1"
+  "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+  "8181eef7-4f03-42c3-bc1b-f440acc4556d"
 ]
 disambiguations = ["1272a7e5-e3e1-4c91-a1d3-343018262841"]
 
@@ -80,7 +82,8 @@ definitions = [
   "9c6e4314-2e35-52ff-951e-db752a3c8ce2",
   "ce8ccc1a-4f9a-5904-a10c-548778d79b66",
   "c0cbef1c-060a-54d4-bb49-8d59da40caf3",
-  "a1b2e330-388f-4120-bc5c-969642317792"
+  "a1b2e330-388f-4120-bc5c-969642317792",
+  "8181eef7-4f03-42c3-bc1b-f440acc4556d"
 ]
 # These are conclusion-level transports of the *full* proof bundle, not
 # equivalences between senses or claims that either bearer bridge suffices
@@ -91,7 +94,7 @@ sense_bridges = [
   { term = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT", from = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1", to = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_3", statement_id = "An occurring thought has a necessary actual thinking ground root", role = "conclusion" }
 ]
 rule = "Literal excluded-middle fork and accessible induction over the restricted thinking ancestor relation"
-meaning = "Select one actual concrete bearer via the existing Cogito result and the two separate actuality bridges. At every thinking ancestor x, excluded middle covers exactly P(x) or ¬P(x) under the *same* mediate G+ sense. Under P(x), a distinct earlier thinking G-ancestor c exists and accessibility of this restricted relation allows recursion while preserving the original bearer's finite ancestry. Under ¬P(x), no-fresh-thinker forces absence of any actual concrete G predecessor, so x is a thinking actual root. The separate contingent-thinker anti-brute premise excludes contingency of this SAME terminal witness, yielding accessibility-relative de re NecessityAt. The proof uses no all-ground accessibility, no grounding of nonthinking contingent ancestors, no necessary→underived principle and no uniqueness/esse/God naming. The original direct existential-sustenance reading requires a separate philosophical translation; no independence premise or its negation is silently imported. Analyst reconstruction; attribution deferred. #1743/#1791; named downstream bridge #1787, not connected yet."
+meaning = "Select one actual concrete bearer via the existing Cogito result and the two separate actuality bridges. At every thinking ancestor x, excluded middle covers exactly P(x) or ¬P(x) under the *same* mediate G+ sense. Under P(x), a distinct earlier thinking G-ancestor c exists and accessibility of this restricted relation allows recursion while preserving the original bearer's finite ancestry. Under ¬P(x), no-fresh-thinker forces absence of any actual concrete G predecessor, so x is a thinking actual root. The separate contingent-thinker anti-brute premise excludes contingency of this SAME terminal witness, yielding accessibility-relative de re NecessaryAt. The proof uses no all-ground accessibility, no grounding of nonthinking contingent ancestors, no necessary→underived principle and no uniqueness/esse/God naming. The original direct existential-sustenance reading requires a separate philosophical translation; no independence premise or its negation is silently imported. Analyst reconstruction; attribution deferred. #1743/#1791; named downstream bridge #1787, not connected yet."
 # The selected sense is the ThinkerPredecessor definition in the argument and
 # the premise's declared Lean type. The conclusion is an existential *root*,
 # so assigning that predecessor sense to the result's theorem head would fail
