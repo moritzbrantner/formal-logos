@@ -1,0 +1,25 @@
+{
+  "id": "eafd5d52-a404-4fe7-ae0f-c06ecedb208b",
+  "label": "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_5: the respect of being, a frame field",
+  "term": "esse, the respect of being in the perfection frame",
+  "definition": "`CausalityFrame.esse`: the distinguished respect of being. `InAct x esse` says that x has being; maximal in being and cause of being are said with respect to it (DEF-ESSE). It is a respect, an element of the respect carrier, not a predicate of world-relative existence (`Ontic.ExistsAt`, WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_1), not external support and not a root predicate: the passages from InAct x esse to existence at a world are explicit bridge premises.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.Frame.CausalityFrame.esse",
+  "note": "Stipulative frame-field record, attribution deferred; its content is DEF-ESSE (sourced, ST I q.4 a.1 ad 3). It is a separate record because DEF-ESSE is linked by about 400 arguments, many of which also link DEF-KANT-ONTOLOGICAL-MODEL and pass between the two through explicit bridges; making DEF-ESSE itself a sense would turn those into unbridged mixing. The existence fork that DISAMB-EXISTENCE-ESSE-SUPPORT asks for (DEF-KANT-ONTOLOGICAL-MODEL against DEF-ESSE) remains a follow-up. Introduced with the grades frame module (TruthCore/Causality/GradesFrame.lean) after the truth discover diagnosis of 2026-11-20.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "CausalityFrame.esse is one element of the respect carrier R, the respect in which a thing is said to have being. A frame supplies it; nothing in the type distinguishes it from other respects or relates it to the history's world-relative existence.",
+    "examples": [
+      "InAct x esse for a fire that exists, as against InAct x hot for its heat.",
+      "CausesIn c x esse: c causes x's being, not merely its coming to be (DEF-CAUSE-OF-PERFECTION)."
+    ],
+    "exclusions": [
+      "World-relative existence (history.ontic ExistsAt): related to InAct x esse only by explicit bridges such as the act-of-esse premises.",
+      "A perfection other than being, such as goodness or truth: identifying esse with another respect is a substantive premise (for example the convertibility readings)."
+    ],
+    "open_obligations": [
+      "That nothing has actuality except insofar as it is (ActualityOnlyInsofarAsBeingReading) is an open source premise, not part of the field.",
+      "Whether being admits of more and less across categories (MoreIn esse) is carried by the grades premises, not by this field (DISAMB-BEING)."
+    ]
+  }
+}

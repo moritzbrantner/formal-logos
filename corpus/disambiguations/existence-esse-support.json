@@ -7,9 +7,10 @@
     "beb654a7-e204-5f4c-a7b4-45e886ba7109",
     "70772f58-1f91-5bcb-9147-44e91863e154",
     "b242943a-34cc-582d-8c38-c1203b9d2c91",
-    "eb435c88-4b7f-57dc-9ff9-fd6c0f8ad22f"
+    "eb435c88-4b7f-57dc-9ff9-fd6c0f8ad22f",
+    "eafd5d52-a404-4fe7-ae0f-c06ecedb208b"
   ],
-  "resolution": "The indexed senses distinguish world-relative candidate existence (DEF-KANT-ONTOLOGICAL-MODEL), external support by distinct actual individuals (DEF-EXISTENTIAL-SUPPORT-MODEL), and the new actual present-source relation without a built-in distinctness restriction (DEF-PRESENT-ESSE-SUPPORT). Boundary's ExistsAt does not analyze the act of being (DEF-ESSE) or explain why an existence fact obtains. Neither supportsEsse relation is automatically Aquinas' efficient cause/conservation of esse (DEF-EXTERNAL-CAUSE-OF-ESSE), an adequate PSR explanation, or a necessary condition of the target's existence. NecessaryAt does not entail an intrinsic reason, identity of essence and esse (DEF-ESSENCE-THOMISTIC-NATURE), or necessary-per-se status (DEF-NECESSARY-PER-SE). These wider source meanings remain separate. UNDERIVED-ROUTE-EXIT, NECESSARILY-UNDERIVED-FROM-ACTUAL-GROUNDED and UNDERIVED-ROUTE-CONTROLS instantiate the supportsEsse parameter at a Profile's selected relation grounds (DEF-UNDERIVED-ROOT-ROUTE). This is a choice of parameter, with no identification of grounds with efficient causation, Aquinas' cause of esse or explanation. In the owner-adopted cogito specialization (#1113), DEF-COGITO-ESSE-PROFILE fixes concrete to HasEsseInRe and explicitly requires ExistingInActAt at the selected world. Real existence then entails concreteness, so the concrete restriction adds nothing further for existing grounds. This is a specialization with a declared contract, not a theorem equating the unrelated predicates of every legacy Profile. Not forked (batch 4 of #1233): its senses are different framework interfaces with different Lean types (the Ontic structure, ExternallySupportedAt, PresentEsseSupport, UnderivedRootAt), not rival readings of one use. Only DEF-KANT-ONTOLOGICAL-MODEL reaches the root; the root-path statements that link this record (STMT-ACT-OF-ESSE-SUFFICES-FOR-EXISTENCE-AT, STMT-EXISTING-IN-ACT-AT, STMT-ESSE-CAUSE-IS-ACTUAL-CONCRETE-GROUND) pass between world-relative existence and esse only through those explicit bridge premises. The term that does carry two senses on the root route is 'existence' (ExistsAt at the selected world versus InAct · esse), a candidate fork whose bridges already exist (needs: a disambiguation listing DEF-KANT-ONTOLOGICAL-MODEL and DEF-ESSE as senses of one use).",
+  "resolution": "The indexed senses distinguish world-relative candidate existence (DEF-KANT-ONTOLOGICAL-MODEL), external support by distinct actual individuals (DEF-EXISTENTIAL-SUPPORT-MODEL), and the new actual present-source relation without a built-in distinctness restriction (DEF-PRESENT-ESSE-SUPPORT). Boundary's ExistsAt does not analyze the act of being (DEF-ESSE) or explain why an existence fact obtains. Neither supportsEsse relation is automatically Aquinas' efficient cause/conservation of esse (DEF-EXTERNAL-CAUSE-OF-ESSE), an adequate PSR explanation, or a necessary condition of the target's existence. NecessaryAt does not entail an intrinsic reason, identity of essence and esse (DEF-ESSENCE-THOMISTIC-NATURE), or necessary-per-se status (DEF-NECESSARY-PER-SE). These wider source meanings remain separate. UNDERIVED-ROUTE-EXIT, NECESSARILY-UNDERIVED-FROM-ACTUAL-GROUNDED and UNDERIVED-ROUTE-CONTROLS instantiate the supportsEsse parameter at a Profile's selected relation grounds (DEF-UNDERIVED-ROOT-ROUTE). This is a choice of parameter, with no identification of grounds with efficient causation, Aquinas' cause of esse or explanation. In the owner-adopted cogito specialization (#1113), DEF-COGITO-ESSE-PROFILE fixes concrete to HasEsseInRe and explicitly requires ExistingInActAt at the selected world. Real existence then entails concreteness, so the concrete restriction adds nothing further for existing grounds. This is a specialization with a declared contract, not a theorem equating the unrelated predicates of every legacy Profile. Not forked (batch 4 of #1233): its senses are different framework interfaces with different Lean types (the Ontic structure, ExternallySupportedAt, PresentEsseSupport, UnderivedRootAt), not rival readings of one use. Only DEF-KANT-ONTOLOGICAL-MODEL reaches the root; the root-path statements that link this record (STMT-ACT-OF-ESSE-SUFFICES-FOR-EXISTENCE-AT, STMT-EXISTING-IN-ACT-AT, STMT-ESSE-CAUSE-IS-ACTUAL-CONCRETE-GROUND) pass between world-relative existence and esse only through those explicit bridge premises. The term that does carry two senses on the root route is 'existence' (ExistsAt at the selected world versus InAct · esse), a candidate fork whose bridges already exist (needs: a disambiguation listing DEF-KANT-ONTOLOGICAL-MODEL and DEF-ESSE as senses of one use). WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_5 is the respect of being itself (CausalityFrame.esse, content DEF-ESSE): InAct x esse says that x has being. Its whole-binder tags name the quarta via, q.4 and Stage-one declarations whose esse is that respect. It is not identified with world-relative existence or with either support relation; the passages between them stay the explicit bridges listed above.",
   "term_label": "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY",
   "senses": [
     {
@@ -35,6 +36,130 @@
       "label": "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_4",
       "definition_id": "eb435c88-4b7f-57dc-9ff9-fd6c0f8ad22f",
       "lean_declaration": "TruthCore.Causality.UnderivedRootRoute.UnderivedRootAt"
+    },
+    {
+      "id": "c67810a2-1fd2-4cba-82b7-49413d108e61",
+      "label": "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_5",
+      "definition_id": "eafd5d52-a404-4fe7-ae0f-c06ecedb208b",
+      "lean_declaration": "TruthCore.Causality.Frame.CausalityFrame.esse",
+      "lean_parameters": [
+        {
+          "declaration": "TruthCore.Causality.Frame.CausalityFrame",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Alternatives.NameApplicationTransfer.ReducedDescriptorExists",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Alternatives.NameApplicationTransfer.ReducedNominalNamingFails",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.AtMostOneMaximeEns",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.CauseOfBeingCausesEveryPerfection",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.CauseOfBeingHasBeing.CauseOfABeingHasBeing",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.GodIsMaximalInBeing",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.GodNamesTheUniqueMaximeEns",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.MaximalCauseWithNoDistinctEsseCause",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.MaximeEnsIsGod",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.MaximumHasNoDistinctEsseCause",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.MaximumInBeingIsFirstBeing",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.ResidualPerfectionTransfer",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.UniversalCauseTransfersPerfections",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Causality.DirectEsseRootUniquenessAtBeing.GradesToMaximumAtBeing",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Causality.PerfectionTransferGrounding.NonuniversalPerfectionTransfer",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Causality.SpineRivalsAttributes.EmergentPerfectionReading",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Causality.TermSenseForks.MaximalInBeingIsStrictlyGreatest",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Causality.TermSenseForks.MoreInBeingConnected",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Causality.TermSenseForks.SomeBeingMaximalInBeing",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Causality.TermSenseForks.StrictlyGreatestInBeingIsMaximal",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.ActualityOnlyInsofarAsBeingReading",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MaximeEnsCausesBeingOfAllReading",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MaximumInBeingCausesAllBeingsReading",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MostTrueIsMostBeingReading",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.PerfectionsOfEffectPreexistInCauseReading",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.QuartaViaDegreeFork",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.QuartaViaStrictCausalTop",
+          "parameter": "esse"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.QuartaViaUnboundedDegrees",
+          "parameter": "esse"
+        }
+      ]
     }
   ]
 }

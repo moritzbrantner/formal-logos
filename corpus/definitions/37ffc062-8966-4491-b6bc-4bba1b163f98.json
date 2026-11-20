@@ -1,0 +1,9 @@
+{
+  "id": "37ffc062-8966-4491-b6bc-4bba1b163f98",
+  "label": "MORE_2: comparative by represented degree, the degree of x in r strictly exceeds that of y",
+  "term": "more and less in a perfection, by represented degree",
+  "definition": "`DegreeComparative deg r x y`: deg r y < deg r x, for a represented degree assignment deg : R → B → D in a Mathlib Preorder D (DEF-PER-RESPECT-DEGREE-FAMILY). It is the strict preimage order of deg r, and so irreflexive and transitive in every respect. It is a sibling definition of the comparative, not the meaning of the primitive MoreIn (MORE_1): on the primitive no order law is imposed, and the calibrations between the two are explicit open premises.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.Grades.DegreeComparative",
+  "note": "Stipulative analyst definition, attribution deferred. It is the univocal, scale-based reading of magis et minus that DISAMB-BEING-UNIVOCITY and DISAMB-ORDER-OF-BEING (MORE_AND_LESS_IN_BEING_1, the homogeneous scale) model; Aquinas reads being analogically (ST I q.2 a.3, magis et minus dicuntur ... secundum quod appropinquant diversimode ad aliquid quod maxime est), so the definition is not attributed to him. Its relation to MoreIn is carried by STMT-MORE-IN-EXCEEDS-REPRESENTED-DEGREE and STMT-DEGREE-EXCESS-AMONG-BEARERS-IS-MORE-IN, both open. Introduced with the grades frame module (TruthCore/Causality/GradesFrame.lean) after the truth discover diagnosis of 2026-11-20."
+}

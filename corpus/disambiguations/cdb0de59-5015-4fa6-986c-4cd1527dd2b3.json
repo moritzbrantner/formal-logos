@@ -1,0 +1,139 @@
+{
+  "id": "cdb0de59-5015-4fa6-986c-4cd1527dd2b3",
+  "label": "More and less in a perfection: primitive comparative versus represented-degree comparative",
+  "term": "more and less (magis et minus) in a perfection",
+  "sense_definition_ids": [
+    "5766de66-8a37-5b04-aa65-9eec53319f50",
+    "37ffc062-8966-4491-b6bc-4bba1b163f98"
+  ],
+  "resolution": "MORE_1 is the primitive comparative of the quarta via, MoreIn r x y (DEF-MORE-IN): x is more r than y, with no order law, measure or comparability imposed; it is the comparative every grades, maximum and cause-of-perfection premise of the case uses, and its whole-binder tags name the declarations that state those premises over it. MORE_2 (DegreeComparative) defines the comparative from a represented degree in a Mathlib preorder; it is a strict order in every respect, while MORE_1 is not constrained to be one (Grades.primitive_not_degreeComparative). No argument passes from one sense to the other: the calibrations MoreInExceedsDegree and DegreeExcessAmongBearersIsMoreIn (Round3FourthWay) relate MoreIn to a degree only as explicit open premises, and defining MoreIn as MORE_2 would conceal them and would build the univocal scale reading into the word. The analogical reading Aquinas states (approach to what is maximally such) is recorded as an order model at esse in DISAMB-ORDER-OF-BEING (MORE_AND_LESS_IN_BEING_2), not as a definition of the comparative; DISAMB-BEING-UNIVOCITY records which premises survive on which model. The recorded senses are not claimed to be exhaustive or exclusive.",
+  "term_label": "MORE",
+  "senses": [
+    {
+      "id": "28ab77fd-332e-44ff-94bd-344da83dfcc1",
+      "label": "MORE_1",
+      "definition_id": "5766de66-8a37-5b04-aa65-9eec53319f50",
+      "lean_declaration": "TruthCore.Causality.Grades.GradesFrame.MoreIn",
+      "lean_parameters": [
+        {
+          "declaration": "TruthCore.Causality.Grades.GradesFrame",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Alternatives.NameApplicationTransfer.ReducedDescriptorExists",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Alternatives.NameApplicationTransfer.ReducedNominalNamingFails",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.AtMostOneMaximeEns",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.ClassicalAttributesLocalLogic.MaximumCausesAll",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.GodIsMaximalInBeing",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.GodNamesTheUniqueMaximeEns",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.MaximalCauseWithNoDistinctEsseCause",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.MaximeEnsIsGod",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.MaximumHasNoDistinctEsseCause",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.MaximumInBeingIsFirstBeing",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.DirectEsseRootUniquenessAtBeing.GradesToMaximumAtBeing",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.MotionMapsBatch1.LivingMoreNobleThanMerelyExisting",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.MotionMapsBatch1.NobilityGradeConvertible",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.TermSenseForks.MaximalInBeingIsStrictlyGreatest",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.TermSenseForks.MoreInBeingConnected",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.TermSenseForks.SomeBeingMaximalInBeing",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.TermSenseForks.StrictlyGreatestInBeingIsMaximal",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.GradesByApproachToAMaximumReading",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.GradesFoundInThingsReading",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MaximeEnsCausesBeingOfAllReading",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MaximumInBeingCausesAllBeingsReading",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MaximumInGenusCausesAllInGenusReading",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MoreSuchHasThePerfectionReading",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MostTrueIsMostBeingReading",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.QuartaViaDegreeFork",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.QuartaViaStrictCausalTop",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.QuartaViaUnboundedDegrees",
+          "parameter": "MoreIn"
+        }
+      ]
+    },
+    {
+      "id": "8adb2bdb-d163-42f4-8f99-b827f21983b5",
+      "label": "MORE_2",
+      "definition_id": "37ffc062-8966-4491-b6bc-4bba1b163f98",
+      "lean_declaration": "TruthCore.Causality.Grades.DegreeComparative"
+    }
+  ]
+}
