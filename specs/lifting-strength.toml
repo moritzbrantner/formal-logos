@@ -131,7 +131,7 @@ object_kind = "statement"
 object_id = "STMT-NO-NOVEL-NECESSARY-SUPPORT"
 verification_result_id = "Necessary-predecessor lifting entails no novel necessary support"
 strictness_result_id = "Contingent-source control separates lifting from no novel necessary support"
-note = "Same model, support relation and actual world. Lifting adds that every possible supporter of a necessary individual is necessary and actual (certified difference). The converse needs no contingent ground and actual reflexivity together (lifting_of_two_bridges). Strict: the contingent-source model."
+note = "Same model, support relation and actual world. Lifting adds that every possible supporter of a necessary individual is necessary and actual (certified difference). The converse is supplied, for example, by no contingent ground with actual reflexivity (lifting_of_two_bridges). Strict: the contingent-source model."
 
 [[relation]]
 id = "Necessary-predecessor lifting strengthens no contingent ground of the necessary"
@@ -170,4 +170,4 @@ delta_statement_id = "Every possible support edge into a necessary individual re
 evidence_result_ids = { implication = "Necessary-predecessor lifting entails no contingent ground of the necessary", equivalence = "Lifting is no contingent ground plus actual recurrence of support edges" }
 separator = { setting = "nonActualEdgeSetting", result_id = "Non-actual-edge control separates lifting from no contingent ground" }
 statement_parameter_indices = { stronger = [0, 1, 2, 3, 4], weaker = [0, 1, 2, 3, 4], delta = [0, 1, 2, 3, 4] }
-note = "Difference of lifting and no contingent ground: lifting adds exactly that possible support edges into necessary individuals recur as present edges at the actual world. No background is needed. The other bridge, no novel necessary support, is not this delta: it would need the source's actual existence, which only ActualReflexive supplies (lifting_of_two_bridges). The separator is a finite interpretation."
+note = "Difference of lifting and no contingent ground: lifting adds exactly that possible support edges into necessary individuals recur as present edges at the actual world. No background is needed. The other bridge, no novel necessary support, is not this delta: it would need the source's actual existence, which ActualReflexive supplies in lifting_of_two_bridges. The separator is a finite interpretation."
