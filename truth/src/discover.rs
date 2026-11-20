@@ -1399,13 +1399,14 @@ pub fn render_spec(
     let mut labels = BTreeSet::new();
     for (n, finding) in findings.iter().enumerate() {
         let target = &statements[&finding.trial.target];
-        let mut label = short(&format!("{} (discovered derivation)", target.label), 100);
+        // At most 88 characters: the generator labels the inference
+        // "<label> (inference)", and labels are at most 100.
+        let mut label = format!("{} (discovered derivation)", short(&target.label, 60));
         let mut k = 2;
         while !labels.insert(label.clone()) {
-            label = short(
-                &format!("{} (discovered derivation {k})", target.label),
-                100,
-            );
+            // At most 88 characters: the generator labels the inference
+            // "<label> (inference)", and labels are at most 100.
+            label = format!("{} (discovered derivation {k})", short(&target.label, 60));
             k += 1;
         }
         let premise_labels: Vec<&str> = finding
@@ -1415,7 +1416,7 @@ pub fn render_spec(
             .collect();
         let meaning = format!(
             "Discovered by truth discover: {} follows from {}. Duper proof over the delta-expanded \
-             statement definitions, kernel-checked; parameters are identified by name and type.",
+             statement definitions, kernel-checked; parameters are identified by name within one module or by sense tag.",
             target.label,
             premise_labels.join("; ")
         );
@@ -1486,8 +1487,16 @@ pub fn render_solution(
     let _ = writeln!(text, "namespace {batch}\n");
     for (n, f) in findings.iter().enumerate() {
         let target = &statements[&f.trial.target];
-        let _ = writeln!(text, "/-- {} -/", target.label.replace("-/", "- /"));
-        text.push_str(&theorem_text(&theorem_name(n), &f.outcome, heartbeats));
+        // `set_option … in` goes before the doc comment, which belongs to the
+        // theorem command.
+        let theorem = theorem_text(&theorem_name(n), &f.outcome, heartbeats);
+        let (option, rest) = theorem.split_once('\n').unwrap_or(("", &theorem));
+        let _ = writeln!(
+            text,
+            "{option}\n/-- {} -/",
+            target.label.replace("-/", "- /")
+        );
+        text.push_str(rest);
         text.push('\n');
     }
     let _ = writeln!(text, "end {batch}");

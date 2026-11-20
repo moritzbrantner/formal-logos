@@ -122,7 +122,7 @@ def isStructureType (d : Expr) : MetaM Bool := do
   | _ => return false
 
 partial def bind (tags : Array (Name × Name × String)) (strict : Bool)
-    (byName : IO.Ref (Array String)) (decl : Name) (module : Name)
+    (byName : IO.Ref (Array (Name × Name × Name × String))) (decl : Name) (module : Name)
     (xs : Array Expr) (origins : Array Origin) (e : Expr)
     (k : Array Expr → Array Origin → Expr → TermElabM α) : TermElabM α := do
   let ty ← instantiateMVars (← inferType e)
@@ -140,7 +140,7 @@ partial def bind (tags : Array (Name × Name × String)) (strict : Bool)
       if allowed then
         if ← isDefEq (← inferType x) d then
           if fallback && !bi.isInstImplicit then
-            byName.modify (·.push s!"{decl}.{n} = {o.decl}.{o.binder}")
+            byName.modify (·.push (decl, o.decl, o.binder, s!"{decl}.{n} = {o.decl}.{o.binder}"))
           return ← bind tags strict byName decl module xs origins (mkApp e x) k
     if bi.isInstImplicit then
       if let some inst ← (try synthInstance? d catch _ => pure none) then
@@ -153,7 +153,7 @@ partial def bind (tags : Array (Name × Name × String)) (strict : Bool)
 
 /-- `bind` for every name in turn: the target first, then the premises. -/
 partial def bindAll (tags : Array (Name × Name × String)) (strict : Bool)
-    (byName : IO.Ref (Array String))
+    (byName : IO.Ref (Array (Name × Name × Name × String)))
     (xs : Array Expr) (origins : Array Origin) (names : List Name) (acc : Array Expr)
     (k : Array Expr → Array Origin → Array Expr → TermElabM α) : TermElabM α := do
   match names with
@@ -575,9 +575,20 @@ def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
       break
   return out
 
+/-- The name identifications that matter for the declarations `kept`: between
+two kept declarations, or of two kept declarations with the same binder of a
+dropped one. -/
+def keptIdentifications (all : Array (Name × Name × Name × String)) (kept : Array Name) :
+    Array String :=
+  all.filterMap fun (d, od, ob, text) =>
+    if !kept.contains d then none
+    else if kept.contains od then some text
+    else if all.any (fun (d2, od2, ob2, _) => d2 != d && kept.contains d2 && od2 == od && ob2 == ob)
+      then some text else none
+
 def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : String)
     (tags : Array (Name × Name × String)) (bridges : Bool) (strict : Bool)
-    (byName : IO.Ref (Array String)) :
+    (byName : IO.Ref (Array (Name × Name × Name × String))) :
     TermElabM Json := do
   let env ← getEnv
   for n in premises.push target do
@@ -641,6 +652,7 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
           return rest.isEmpty)
         (fun _ => pure false)
     let minNames := minimal.map fun i => premises[i]!
+    let identified ← byName.get
     let u' ← unfoldSet (minNames.push target)
     -- Vacuous truth: do the premises refute the target's own antecedents?
     -- (`∀ x, A x → B x` holds because nothing is `A`.) A valid derivation that a
@@ -675,6 +687,7 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
       ("minimal", toJson minimal),
       ("deletions", Json.arr log),
       ("proof", proved (some best)),
+      ("domain_identified_by_name", toJson (keptIdentifications identified (minNames.push target))),
       ("vacuous", proved vacuous),
       ("vacuous_core", vacuousCore),
       ("probe", Json.bool probe),
@@ -693,7 +706,7 @@ syntax (name := discoverTry) "#discover " str num str str ident " from " ident* 
       if t.size == 3 then some (t[0]!.toName, t[1]!.toName, t[2]!) else none
   let bridges := (config.getObjValAs? Bool "bridges").toOption.getD false
   let strict := (config.getObjValAs? Bool "strict_domains").toOption.getD false
-  let byName ← IO.mkRef (#[] : Array String)
+  let byName ← IO.mkRef (#[] : Array (Name × Name × Name × String))
   let target := stx[5].getId
   let premises := stx[7].getArgs.map (·.getId)
   let started ← IO.monoMsNow
@@ -701,7 +714,9 @@ syntax (name := discoverTry) "#discover " str num str str ident " from " ident* 
     try trial target premises heartbeats zip tags bridges strict byName
     catch e => return Json.mkObj [("error", Json.str (← e.toMessageData.toString))]
   let result := result.setObjVal! "label" (Json.str label)
-  let result := result.setObjVal! "domain_identified_by_name" (toJson (← byName.get))
+  let all := (← byName.get).map (·.2.2.2)
+  let result := if (result.getObjVal? "domain_identified_by_name").isOk then result else
+    result.setObjVal! "domain_identified_by_name" (toJson all)
   let result := result.setObjVal! "ms" (toJson ((← IO.monoMsNow) - started))
   -- `truth discover` reads this log, so finished targets survive a timed-out run.
   if let some path ← IO.getEnv "TRUTH_DISCOVER_LOG" then

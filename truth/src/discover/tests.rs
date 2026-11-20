@@ -555,3 +555,27 @@ fn same_module_bindings_pass_and_cross_module_name_identifications_are_rejected(
         (Kind::Filtered, "domain_by_name")
     );
 }
+
+#[test]
+fn solution_draft_puts_the_option_before_the_doc_comment() {
+    let mut statements = BTreeMap::new();
+    statements.insert("T".to_owned(), statement("T", "TruthCore.M.Target", &[]));
+    statements.insert("P".to_owned(), statement("P", "TruthCore.M.P", &[]));
+    let mut f = classify(
+        &trial(&["P", "Q", "R"]),
+        &closed_outcome(),
+        &Graph::default(),
+        &SenseCheck::empty(),
+    );
+    f.premises = vec!["P".into()];
+    let text = render_solution(
+        "TruthCore.Results.Discover.Run",
+        &[&f],
+        &statements,
+        &BTreeMap::new(),
+        5000,
+    );
+    assert!(
+        text.contains("set_option maxHeartbeats 5000 in\n/-- label of T -/\ntheorem discovered1 ")
+    );
+}
