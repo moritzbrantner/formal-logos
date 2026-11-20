@@ -2,7 +2,7 @@ module
 
 public import Mathlib.Order.Basic
 public import TruthCore.Causality.Frame
-public import TruthCore.Case.Catholicism.CausalPerfectionTransfer
+public import TruthCore.Results.Aquinas.SummaTheologiae.CausalPerfectionTransfer.Solution
 public import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question4.Article1
 
 /-!
@@ -163,20 +163,17 @@ def UniversalCauseTransfersPerfections : Prop :=
 def ResidualPerfectionTransfer : Prop :=
   TruthCore.Case.Catholicism.ResidualPerfectionTransfer F.InAct F.CausesIn F.esse
 
-/-- Composition through the shared symbols: over one frame, the universal and
+/-- Composition through the shared symbols: over one frame the verified result
+`CausalPerfectionTransfer.reconstruction` applies directly, so the universal and
 the residual transfer premises give the cause-of-being transfer. Over separate
-binders (the situation `truth discover` met before the parameter tags) the
-same composition cannot even be stated. This is a check of the adapters, not a
-new corpus result; the premises remain OPEN. -/
+binders (what `truth discover` met before the parameter tags) the same
+composition cannot be stated. This reuses that theorem; it is not a new corpus
+result, and its premises remain OPEN. -/
 theorem causeOfBeingCausesEveryPerfection_of_transfers
+    [DecidableEq B] [DecidablePred (CausesAllInGenus F.InAct F.CausesIn F.esse)]
     (hU : UniversalCauseTransfersPerfections F) (hR : ResidualPerfectionTransfer F) :
-    CauseOfBeingCausesEveryPerfection F := by
-  intro c x r hc hx
-  by_cases hall : CausesAllInGenus F.InAct F.CausesIn F.esse c
-  · by_cases hxc : x = c
-    · subst hxc
-      exact hR.2 x r hc hx
-    · exact hU c hall x r hxc hc hx
-  · exact hR.1 c hall x r hc hx
+    CauseOfBeingCausesEveryPerfection F :=
+  TruthCore.Results.Aquinas.SummaTheologiae.CausalPerfectionTransfer.reconstruction
+    F.InAct F.CausesIn F.esse hU hR
 
 end TruthCore.Causality.Grades
