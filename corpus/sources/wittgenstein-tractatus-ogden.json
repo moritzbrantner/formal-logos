@@ -8,5 +8,5 @@
   "citation_system": "proposition number (e.g. 6.54)",
   "work_urn": "https://www.gutenberg.org/ebooks/5740",
   "catalog_url": "https://www.gutenberg.org/ebooks/5740",
-  "notes": "English translation published 1922: public domain in the US. Project Gutenberg's typeset PDF; the German facing text is on later pages."
+  "notes": "English translation published 1922: public domain in the US. Project Gutenberg's typeset PDF; the German facing text is on later pages. Distinct witness, not a duplicate (#1660): it shares work_urn and catalog_url (Project Gutenberg ebook #5740) with WITTGENSTEIN-TRACTATUS because both are files of the same Gutenberg ebook, but this record pins a different file, the typeset PDF (5740-pdf.pdf), by its own hash, with the page-located passage WITTGENSTEIN-TLP-6-52-7 (PDF p. 92) read in Ogden's English for the 6.53 and 6.54 claims. WITTGENSTEIN-TRACTATUS pins the LaTeX source (5740-t.tex) as a whole-text passage whose claims read the German. Different bytes, pins, locator schemes and reading language: the two records and their claims are kept apart, not merged."
 }

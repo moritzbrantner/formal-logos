@@ -502,6 +502,7 @@ pub fn scan(root: &Path) -> (Vec<String>, Vec<String>) {
     let records = entries(root);
     let mut seen: HashMap<&str, &str> = HashMap::new();
     let mut legacy: HashMap<(&str, &str), &str> = HashMap::new();
+    let mut merged: Vec<(&str, &str, &str)> = Vec::new();
     let mut labels: HashMap<(&str, String), &str> = HashMap::new();
     let mut definitions: HashMap<String, &Obj> = HashMap::new();
     let mut disambiguations: Vec<(String, &Obj)> = Vec::new();
@@ -552,6 +553,31 @@ pub fn scan(root: &Path) -> (Vec<String>, Vec<String>) {
                 )),
             },
         }
+        match record.get("merged_legacy_ids") {
+            None => {}
+            Some(Value::Array(items)) if !items.is_empty() => {
+                for item in items {
+                    match item.as_str().filter(|alias| !alias.is_empty()) {
+                        Some(alias)
+                            if record.get("legacy_id").and_then(Value::as_str) == Some(alias) =>
+                        {
+                            errors.push(format!(
+                                "{where_}: merged legacy id {alias} is the record's own legacy_id"
+                            ));
+                        }
+                        Some(alias) => merged.push((kind, alias, where_)),
+                        None => errors.push(format!(
+                            "{where_}: merged_legacy_ids entry {} is not a non-empty string",
+                            value_repr(Some(item))
+                        )),
+                    }
+                }
+            }
+            Some(other) => errors.push(format!(
+                "{where_}: merged_legacy_ids {} is not a non-empty list of legacy ids",
+                value_repr(Some(other))
+            )),
+        }
         let Some(label) = record
             .get("label")
             .and_then(Value::as_str)
@@ -583,6 +609,29 @@ pub fn scan(root: &Path) -> (Vec<String>, Vec<String>) {
             None => {
                 labels.insert((kind, fold(label)), where_);
             }
+        }
+    }
+    // A merged legacy id (#1660) names a record that was consolidated into
+    // this one: it must no longer be any record's own alias or id, and only
+    // one record may absorb it, so the old handle resolves to exactly one
+    // surviving record.
+    let mut absorbed: HashMap<(&str, &str), &str> = HashMap::new();
+    for (kind, alias, where_) in merged {
+        if let Some(owner) = legacy.get(&(kind, alias)) {
+            errors.push(format!(
+                "{where_}: merged legacy id {alias} is still the legacy_id of {owner}"
+            ));
+        }
+        let old_id = legacy_uuid(kind, alias);
+        if let Some(owner) = seen.get(old_id.as_str()) {
+            errors.push(format!(
+                "{where_}: merged legacy id {alias} still names the record {old_id} in {owner}"
+            ));
+        }
+        if let Some(first) = absorbed.insert((kind, alias), where_) {
+            errors.push(format!(
+                "{where_}: merged legacy id {alias} is also merged into {first}"
+            ));
         }
     }
     let senses = SenseIndex::new(&definitions, &disambiguations, &records);
@@ -724,6 +773,8 @@ pub struct Aliases {
     by_legacy: HashMap<String, Vec<(String, String)>>,
     by_label: HashMap<String, Vec<(String, String)>>,
     by_folded_label: HashMap<String, Vec<(String, String)>>,
+    /// Ids of records consolidated into another one (#1660) -> survivors.
+    by_merged_id: HashMap<String, Vec<(String, String)>>,
 }
 
 /// A lookup that names no record, or more than one.
@@ -751,6 +802,31 @@ impl Aliases {
             self.legacy_of.insert(id.to_owned(), legacy.to_owned());
             self.by_legacy
                 .entry(legacy.to_owned())
+                .or_default()
+                .push(pair.clone());
+        }
+        // Legacy ids of records consolidated into this one (#1660) keep
+        // resolving to it.
+        for merged in record
+            .get("merged_legacy_ids")
+            .and_then(Value::as_array)
+            .into_iter()
+            .flatten()
+            .filter_map(Value::as_str)
+            .filter(|s| !s.is_empty())
+        {
+            self.by_legacy
+                .entry(merged.to_owned())
+                .or_default()
+                .push(pair.clone());
+            // The retired record's id was derived from its legacy id, so it
+            // redirects to the survivor too.
+            let singular = KIND_DIRS
+                .iter()
+                .find(|(directory, name)| *directory == kind || *name == kind)
+                .map_or(kind, |(_, name)| name);
+            self.by_merged_id
+                .entry(legacy_uuid(singular, merged))
                 .or_default()
                 .push(pair.clone());
         }
@@ -788,6 +864,7 @@ impl Aliases {
             }
         }
         for found in [
+            self.by_merged_id.get(token),
             self.by_legacy.get(token),
             self.by_label.get(token),
             self.by_folded_label.get(&fold(token)),
@@ -951,5 +1028,77 @@ mod tests {
         );
         let long = format!("{a} {} {a}", "x".repeat(2_000_000));
         assert_eq!(aliases.humanize(&long).matches("Alpha [").count(), 2);
+    }
+
+    /// A record consolidated into another (#1660) keeps its legacy handle:
+    /// the merged alias resolves to the survivor, and `scan` rejects an
+    /// alias whose record still exists or that two survivors absorb.
+    #[test]
+    fn merged_legacy_ids_resolve_and_are_validated() {
+        let keep = legacy_uuid("inference", "INF-KEEP");
+        let other = legacy_uuid("inference", "INF-OTHER");
+        let survivor = serde_json::json!({
+            "id": keep, "legacy_id": "INF-KEEP", "label": "Kept step",
+            "merged_legacy_ids": ["INF-GONE"],
+        });
+        let mut aliases = Aliases::default();
+        aliases.add("inferences", survivor.as_object().unwrap());
+        assert_eq!(aliases.resolve("INF-GONE", None).unwrap(), keep);
+        let gone_id = legacy_uuid("inference", "INF-GONE");
+        assert_eq!(aliases.resolve(&gone_id, None).unwrap(), keep);
+        assert_eq!(
+            aliases.resolve(&gone_id, Some(&["inferences"])).unwrap(),
+            keep
+        );
+        assert_eq!(aliases.resolve("INF-KEEP", None).unwrap(), keep);
+        assert_eq!(aliases.legacy(&keep), "INF-KEEP");
+
+        let root =
+            std::env::temp_dir().join(format!("truth-identity-merged-{}", std::process::id()));
+        let directory = root.join("corpus").join("inferences");
+        let _ = fs::remove_dir_all(&root);
+        fs::create_dir_all(&directory).unwrap();
+        let write = |name: &str, value: &Value| {
+            fs::write(directory.join(name), value.to_string()).unwrap();
+        };
+        write("keep.json", &survivor);
+        let (errors, _) = scan(&root);
+        assert!(errors.is_empty(), "{errors:?}");
+
+        // The merged record still exists: its handle would name two records.
+        let gone = legacy_uuid("inference", "INF-GONE");
+        write(
+            "gone.json",
+            &serde_json::json!({"id": gone, "legacy_id": "INF-GONE", "label": "Gone step"}),
+        );
+        let (errors, _) = scan(&root);
+        assert!(
+            errors
+                .iter()
+                .any(|e| e.contains("is still the legacy_id of")),
+            "{errors:?}"
+        );
+        fs::remove_file(directory.join("gone.json")).unwrap();
+
+        // Two survivors absorb the same alias, and a malformed list.
+        write(
+            "other.json",
+            &serde_json::json!({
+                "id": other, "legacy_id": "INF-OTHER", "label": "Other step",
+                "merged_legacy_ids": ["INF-GONE", ""],
+            }),
+        );
+        let (errors, _) = scan(&root);
+        assert!(
+            errors.iter().any(|e| e.contains("is also merged into")),
+            "{errors:?}"
+        );
+        assert!(
+            errors
+                .iter()
+                .any(|e| e.contains("is not a non-empty string")),
+            "{errors:?}"
+        );
+        let _ = fs::remove_dir_all(&root);
     }
 }
