@@ -1,0 +1,11 @@
+{
+  "id": "77c6dbea-751c-4f65-b10b-e73876491ee5",
+  "label": "Every maximum in being being GOD_2 entails the reduced nominal description of GOD_2",
+  "argument_id": "7fa0684f-f704-4b75-890c-b212815c1794",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.MaximeEnsIsGodStrength.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.MaximeEnsIsGodStrength.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.MaximeEnsIsGodStrength.godNamesTheUniqueMaximeEnsOfMaximeEnsIsGod",
+  "comparator_config": "results/77c6dbea-751c-4f65-b10b-e73876491ee5/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration: if every being maximal in being (MAXIME_ENS_1) is GOD_2, then a being that is maximal in being, causes the being of every other being and is the only maximum in being is GOD_2, for every cause relation CausesIn. Same InAct, MoreIn, esse and GOD_2 throughout. Application only; it establishes neither statement. Strictness unverified."
+}

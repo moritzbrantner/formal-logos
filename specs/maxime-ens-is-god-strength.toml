@@ -1,0 +1,32 @@
+# Strength-order registration found by `truth discover` (#1784, finding t20):
+# MaximeEnsIsGod (every maximum in being is GOD_2) entails
+# GodNamesTheUniqueMaximeEns (the unique maximum in being that causes the
+# being of every other being is GOD_2), same senses GOD_2 and MAXIME_ENS_1.
+# Strictness (weak does not entail strong) is not supplied. No premise is
+# established.
+
+[batch]
+vocab = "TruthCore.Case.Catholicism"
+results = "TruthCore.Results.Case.Catholicism.MaximeEnsIsGodStrength"
+
+[[argument]]
+id = "Every maximum in being being GOD_2 entails the reduced nominal description of GOD_2"
+theorem = "godNamesTheUniqueMaximeEnsOfMaximeEnsIsGod"
+premises = ["957a71fe-ba7e-5633-bef2-f5d287362fc5"]
+conclusion = "e39a4fce-ccaf-5862-836e-9317923842f3"
+weakening = true
+definitions = ["23e73af5-a0df-5838-9689-5899c37fdcda", "a2a8de58-42e0-5481-b7fb-848ae8602036", "211a6432-8b8f-53ed-85e3-75173bb15b24", "16cf8319-84c7-5e24-9d18-5942b99c2e67"]
+disambiguations = ["205a39c3-915d-5fe4-8076-a9ff91329e08", "4f1d0cf6-88ba-59e3-814d-01450c2bf282"]
+axioms = []
+rule = "Drop antecedent conditions of a universal conditional"
+meaning = "Strength order registration: if every being maximal in being (MAXIME_ENS_1) is GOD_2, then a being that is maximal in being, causes the being of every other being and is the only maximum in being is GOD_2, for every cause relation CausesIn. Same InAct, MoreIn, esse and GOD_2 throughout. Application only; it establishes neither statement. Strictness unverified."
+
+[[relation]]
+id = "Every maximum in being being GOD_2 strengthens the reduced nominal description of GOD_2"
+subject_kind = "statement"
+subject_id = "957a71fe-ba7e-5633-bef2-f5d287362fc5"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "e39a4fce-ccaf-5862-836e-9317923842f3"
+verification_result_id = "Every maximum in being being GOD_2 entails the reduced nominal description of GOD_2"
+note = "Same InAct, MoreIn, esse and GOD_2 (MAXIME_ENS_1 sense of maximal in being). The weak version requires two further conditions of the maximum before the name applies: that it causes the being of every other being (CausesAllInGenus at esse, for an arbitrary CausesIn) and that it is the only maximum in being. Found by truth discover (#1784). The strong version is itself derived from the weak one plus further premises (result AQUINAS-ST-I-Q2-A3-MAXIME-ENS-IS-GOD), so the pair lies on a support cycle; frontier's set-aside rule for registrations on support cycles governs whether this registration closes the weak version. Strictness not yet checked."
