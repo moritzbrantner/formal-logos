@@ -131,6 +131,33 @@ theorem godExistsFromMaximeEnsCausingAllByUniversalTransfer {Being Respect : Typ
 
 /-- Strictness on the same populated finite vocabulary and complete joint
 nonlogical assumptions, computed by bounded decision. -/
+private instance finThreeForallDecidable (p : Fin 3 → Prop) [DecidablePred p] :
+    Decidable (∀ x : Fin 3, p x) :=
+  decidable_of_iff (p 0 ∧ p 1 ∧ p 2) (by
+    constructor
+    · rintro ⟨h0, h1, h2⟩ x
+      fin_cases x
+      · exact h0
+      · exact h1
+      · exact h2
+    · intro h
+      exact ⟨h 0, h 1, h 2⟩)
+
+private instance finThreeExistsDecidable (p : Fin 3 → Prop) [DecidablePred p] :
+    Decidable (∃ x : Fin 3, p x) :=
+  decidable_of_iff (p 0 ∨ p 1 ∨ p 2) (by
+    constructor
+    · intro h
+      rcases h with h0 | h1 | h2
+      · exact ⟨0, h0⟩
+      · exact ⟨1, h1⟩
+      · exact ⟨2, h2⟩
+    · rintro ⟨x, hx⟩
+      fin_cases x
+      · exact Or.inl hx
+      · exact Or.inr (Or.inl hx)
+      · exact Or.inr (Or.inr hx))
+
 theorem universalTransferGodExists_strictness :
     Control.universalTransferGodExists.Strictness := by
   dsimp only [Control.universalTransferGodExists.Strictness,
