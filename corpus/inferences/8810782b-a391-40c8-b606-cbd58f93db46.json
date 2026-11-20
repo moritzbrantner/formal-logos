@@ -1,0 +1,10 @@
+{
+  "id": "8810782b-a391-40c8-b606-cbd58f93db46",
+  "label": "S5 route frame is the S4 route frame plus symmetry (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "41338b22-a12e-414f-9484-47db33f9a471",
+  "rule": "Frame-condition algebra: a reflexive Euclidean relation is transitive and symmetric; a symmetric transitive relation is Euclidean",
+  "meaning": "Certified difference (#1598) of the registration S5 route frame strengthens S4 route frame: for every profile, the route frame is S5 iff it is S4 and symmetric. Premise-free; it compares the frame conditions and asserts none of them of the route.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

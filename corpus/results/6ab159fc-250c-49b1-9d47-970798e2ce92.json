@@ -1,0 +1,11 @@
+{
+  "id": "6ab159fc-250c-49b1-9d47-970798e2ce92",
+  "label": "S4 route frame is the KT route frame plus transitivity",
+  "argument_id": "5da0b315-4c9f-4dd4-bfe2-0448fa2ecb7f",
+  "challenge_module": "TruthCore.Results.Causality.ModalFrameStrength.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ModalFrameStrength.Solution",
+  "theorem": "TruthCore.Results.Causality.ModalFrameStrength.frameS4OverKTExact",
+  "comparator_config": "results/6ab159fc-250c-49b1-9d47-970798e2ce92/comparator.json",
+  "status": "solution-present",
+  "description": "Certified difference (#1598) of the registration S4 route frame strengthens KT route frame: for every profile, the route frame is S4 iff it is KT and transitive. The factorization holds by the definition of frame class S4; premise-free, it asserts no frame condition of the route."
+}

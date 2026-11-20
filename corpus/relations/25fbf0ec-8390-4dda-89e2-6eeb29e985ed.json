@@ -1,0 +1,34 @@
+{
+  "id": "25fbf0ec-8390-4dda-89e2-6eeb29e985ed",
+  "label": "S5 over S4 route frame: certified difference",
+  "subject_kind": "statement",
+  "subject_id": "873d057f-e58e-53cc-a054-093f7c5a4238",
+  "predicate": "strength_comparison",
+  "object_kind": "statement",
+  "object_id": "d8d91023-300e-50f4-9cc5-e62f44a1aa04",
+  "comparison_spec": "TruthCore.Causality.ModalSenseSupport.frameS5OverS4",
+  "delta_statement_id": "9a02972e-df16-413c-baa4-5dfaf9b3f8f4",
+  "background_statement_ids": [],
+  "evidence_result_ids": {
+    "equivalence": "e2575d88-098f-461a-9326-02b2903ec78d",
+    "implication": "43f9db19-4939-4948-b887-0704faa02e33"
+  },
+  "statement_parameter_indices": {
+    "stronger": [
+      0,
+      1,
+      2
+    ],
+    "weaker": [
+      0,
+      1,
+      2
+    ],
+    "delta": [
+      0,
+      1,
+      2
+    ]
+  },
+  "note": "Difference of the S5 and S4 route frame premises: S5 adds to S4 exactly that the route's frame is symmetric (axiom B). Same frame m.ontic.frame. Strictness is recorded on the strengthens registration (two-world order frame); no separator setting is recorded here."
+}

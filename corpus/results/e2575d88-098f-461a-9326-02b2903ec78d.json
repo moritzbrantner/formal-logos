@@ -1,0 +1,11 @@
+{
+  "id": "e2575d88-098f-461a-9326-02b2903ec78d",
+  "label": "S5 route frame is the S4 route frame plus symmetry",
+  "argument_id": "cfa47c93-51db-4d1e-91cc-fe58262aaf60",
+  "challenge_module": "TruthCore.Results.Causality.ModalFrameStrength.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ModalFrameStrength.Solution",
+  "theorem": "TruthCore.Results.Causality.ModalFrameStrength.frameS5OverS4Exact",
+  "comparator_config": "results/e2575d88-098f-461a-9326-02b2903ec78d/comparator.json",
+  "status": "solution-present",
+  "description": "Certified difference (#1598) of the registration S5 route frame strengthens S4 route frame: for every profile, the route frame is S5 iff it is S4 and symmetric. Premise-free; it compares the frame conditions and asserts none of them of the route."
+}
