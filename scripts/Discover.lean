@@ -406,14 +406,15 @@ def witness (xs : Array Expr) (goals : Array Expr) (u : NameSet) (heartbeats : N
   return none
 
 /-- The name identifications that matter for the declarations `kept`: between
-two kept declarations, or of two kept declarations with the same binder of a
-dropped one. -/
-def keptIdentifications (all : Array (Name × Name × Name × String)) (kept : Array Name) :
-    Array String :=
+two kept declarations, or of two kept declarations in different modules (`modOf`)
+with the same binder of a dropped one. -/
+def keptIdentifications (all : Array (Name × Name × Name × String)) (kept : Array Name)
+    (modOf : Name → Name) : Array String :=
   all.filterMap fun (d, od, ob, text) =>
     if !kept.contains d then none
     else if kept.contains od then some text
-    else if all.any (fun (d2, od2, ob2, _) => d2 != d && kept.contains d2 && od2 == od && ob2 == ob)
+    else if all.any (fun (d2, od2, ob2, _) => d2 != d && kept.contains d2 && od2 == od && ob2 == ob
+        && modOf d2 != modOf d)
       then some text else none
 
 /-! ### Missing bridges
@@ -596,6 +597,8 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
   for n in premises.push target do
     unless env.contains n do
       return Json.mkObj [("error", Json.str s!"unknown declaration {n}")]
+  let mods ← (premises.push target).mapM fun n => return (n, ← moduleOf n)
+  let modOf (n : Name) : Name := ((mods.find? (·.1 == n)).map (·.2)).getD n
   bindAll tags strict byName #[] #[] (target :: premises.toList) #[] fun xs origins ps => do
     let concl := ps[0]!
     let hyps := (ps.extract 1 ps.size).zipIdx.map fun (h, i) => (i, h)
@@ -629,7 +632,7 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
       | do
         let identified ← byName.get
         let domains (used : Array Nat) : Array String :=
-          keptIdentifications identified ((used.filterMap fun i => premises[i]?).push target)
+          keptIdentifications identified ((used.filterMap fun i => premises[i]?).push target) modOf
         let found ← if bridges then missingBridges xs origins target hyps concl u heartbeats domains
           else pure #[]
         return Json.mkObj [("binders", toJson added), ("alone", Json.null), ("closed", Json.null),
@@ -643,11 +646,11 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
     let (minimal, log, best) ← minimize xs hyps concl u heartbeats start
     let minHyps := hyps.filter fun (i, _) => minimal.contains i
     let vacuous ← prove xs minHyps (Lean.mkConst ``False) u heartbeats "" (duperOnly := true)
-    let vacuousCore ← match vacuous with
+    let (vacuousCore, coreNames) ← match vacuous with
       | some v => do
         let (core, _, _) ← minimize xs minHyps (Lean.mkConst ``False) u heartbeats v
-        pure (toJson core)
-      | none => pure Json.null
+        pure (toJson core, core.filterMap fun i => premises[i]?)
+      | none => pure (Json.null, #[])
     -- Transcription probe on the folded goal (the prove-sweep heuristic).
     let folded ← mkForallFVars xs (← minHyps.foldrM (fun (_, h) acc => mkArrow h acc) concl)
     let probe ← withoutModifyingState do
@@ -692,7 +695,9 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
       ("minimal", toJson minimal),
       ("deletions", Json.arr log),
       ("proof", proved (some best)),
-      ("domain_identified_by_name", toJson (keptIdentifications identified (minNames.push target))),
+      -- An incompatibility concerns its core only; an implication, its premises and target.
+      ("domain_identified_by_name", toJson (keptIdentifications identified
+        (if vacuous.isSome then coreNames else minNames.push target) modOf)),
       ("vacuous", proved vacuous),
       ("vacuous_core", vacuousCore),
       ("probe", Json.bool probe),
