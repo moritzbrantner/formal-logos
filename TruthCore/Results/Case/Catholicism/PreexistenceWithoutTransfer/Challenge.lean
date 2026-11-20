@@ -1,4 +1,5 @@
 import TruthCore.Case.Catholicism.PreexistenceWithoutTransfer
+import TruthCore.Case.Catholicism.CausalPerfectionTransfer
 
 namespace TruthCore.Results.Case.Catholicism.PreexistenceWithoutTransfer
 
@@ -69,6 +70,32 @@ theorem godExistsFromMaximeEnsCausingAllByBeing {Being Respect : Type}
     (hFirstBeing : MaximumInBeingIsFirstBeing InAct MoreIn esse PriorSimply)
     (hFull : GodNamesTheFullyDescribedPrinciple InAct MoreIn CausesIn esse ComponentOf IsGod) :
     GodExists IsGod := by
+  sorry
+
+
+/-- The maximal cause of every other being's esse is the unique maximum.
+Its universal causal reach suffices for restricted perfection transfer and
+the existing full-description GOD_4 naming bridge. No sustaining cause or
+concurrent-giving premise is used directly. -/
+theorem godExistsFromMaximeEnsCausingAllByUniversalTransfer {Being Respect : Type}
+    (InAct : Being → Respect → Prop) (MoreIn : Respect → Being → Being → Prop)
+    (CausesIn : Being → Being → Respect → Prop) (esse : Respect)
+    (ComponentOf PriorSimply : Being → Being → Prop) (IsGod : Being → Prop)
+    (hMaxime : MaximeEnsCausesBeingOfAllReading InAct MoreIn CausesIn esse)
+    (hBeing : ActualityOnlyInsofarAsBeingReading InAct esse)
+    (hCauseMore : CauseOfBeingIsMoreInBeing CausesIn MoreIn esse)
+    (hEM : ExcludedMiddle)
+    (hTransfer : TruthCore.Case.Catholicism.UniversalCauseTransfersPerfections InAct CausesIn esse)
+    (hNoComponent : NoComponentIsFirstBeingReading ComponentOf PriorSimply)
+    (hFirstBeing : MaximumInBeingIsFirstBeing InAct MoreIn esse PriorSimply)
+    (hFull : GodNamesTheFullyDescribedPrinciple InAct MoreIn CausesIn esse ComponentOf IsGod) :
+    GodExists IsGod := by
+  sorry
+
+/-- A populated finite interpretation separates the scope-restricted theorem
+from unrestricted perfection transfer with all other premises held fixed. -/
+theorem universalTransferGodExists_strictness :
+    Control.universalTransferGodExists.Strictness := by
   sorry
 
 /-- Q.4 a.2 preexistence from transfer and the cause-of-being restriction: a

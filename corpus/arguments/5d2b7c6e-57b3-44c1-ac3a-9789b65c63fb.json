@@ -48,5 +48,8 @@
       "to": "52c2ebac-0a71-4dd4-8a21-804c1dd0847a",
       "statement_id": "1ec205ed-b2a6-5384-bb5f-2565a9d325bf"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "f8ba2429-b4f1-5712-a4d3-798213963d34": "Not needed for this GOD_4 endpoint. The certified sibling 0e8e37dc-4037-450f-8172-a26eff2d7113 replaces unrestricted transfer by the existing universal-source-only b26c10a0 premise; the new theorem uses the already verified reducedDescription consumer on the MAXIME_1 universal esse-cause witness. All other seven premises and the nominal GOD_1-to-GOD_4 bridge stay explicit. The three-bearer model certificate e3471dfd shows strictness under their joint nonlogical assumptions. This does not establish universal-source existence or the remaining premises."
+  }
 }

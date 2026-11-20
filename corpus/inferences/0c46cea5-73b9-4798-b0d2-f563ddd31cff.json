@@ -1,0 +1,10 @@
+{
+  "id": "0c46cea5-73b9-4798-b0d2-f563ddd31cff",
+  "label": "Matched three-bearer control for universal-only transfer to GOD_4 (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "e3471dfd-c005-4be4-a454-ab01a88e4b0d",
+  "rule": "Finite bounded decision for the full nonlogical premise bundle and restricted-transfer strictness",
+  "meaning": "Finite structural interpretation over Fin 3 and Bool. Every nonlogical premise of the new GOD_4 bundle and its consequent hold, and unrestricted f8ba2429 fails: the secondary cause gives the recipient esse but not its additional perfection. Classical excluded middle is available separately. Thus universal-scope transfer is strictly weaker than unrestricted transfer under the other bundle assumptions, without showing either is true of reality.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": "52a8b4eb-df07-400d-8708-072a55a00baa",
+  "label": "Universal-only perfection-transfer GOD_4 consumer and matched strictness control",
+  "statement_ids": [
+    "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+    "f8ba2429-b4f1-5712-a4d3-798213963d34",
+    "0881e859-c4c3-53ff-9bec-b61294e12d51"
+  ],
+  "date": "2026-11-20",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Focused #143 / PR #1803 continuation on the eight-input route 5d2b7c6e. The original proof uses f8ba2429 only for the universal cause of esse supplied by 0881e859. Reusing the already verified CausalPerfectionTransfer.reducedDescription and the original cffad050 maximum-uniqueness argument, the sibling 0e8e37dc proves GOD_4 under b26c10a0 instead of f8ba2429 and keeps the other seven exact inputs and the GOD_1/GOD_4 bridge. The populated Fin 3 x Bool control e3471dfd witnesses all nonlogical sibling premises jointly while falsifying f8ba2429 at the secondary supporter / recipient / additional-perfection instance. This is a conditional strengthening of the root graph, not a new warrant for the common source or a defeat of existential inertia; any recursive supports of b26c10a0 carry their own open premises. Source attribution unchanged; current judgment of the transfer account unchanged. The next discriminating task is warrant for universal esse-source coverage and noncircular pre-naming application. See the dated section in docs/notes/causal-perfection-transfer.md. Lean proof validation is tracked in the PR checks.",
+  "evidence": [
+    "fd3330d0-dab7-4d44-9f51-790f196f8049",
+    "fcc91ba5-c1ce-4a8e-b405-22d8912f9032",
+    "c160e427-80a7-4cd6-adbc-a2c7c9829736",
+    "dae70d8a-75ad-5b67-82cd-c1f7be320e93"
+  ]
+}

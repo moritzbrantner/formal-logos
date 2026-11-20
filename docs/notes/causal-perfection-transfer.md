@@ -1685,3 +1685,62 @@ declared:
   Its first provisional standing does not change the conditional validity of
   `a3d5fb1a` or of any consumer.
 - `truth brief` reported no pending revision consumers at baseline.
+
+## GOD_4 maximal-cause route: universal-transfer sibling (2026-11-20)
+
+**Scope and reuse.** Owner-selected follow-up to PR #1803 and epic #143.
+Baseline main 65b79aed546ab0a1ec3b4905e484671179b494c7. The frozen argument 5d2b7c6e (result c160e427) has
+eight jointly required inputs, including unrestricted cause-of-being-to-every-
+perfection transfer f8ba2429. Its existing proof uses transfer only for the
+MAXIME_1 witness obtained from 0881e859, which also causes the esse of every
+other actual bearer. The already certified reducedDescription theorem in
+TruthCore.Results.Aquinas.SummaTheologiae.CausalPerfectionTransfer.Solution
+consumes precisely the weaker existing b26c10a0 universal-source transfer,
+together with the same actuality-to-being, firstness, component-exclusion and
+full GOD_4 naming premises. No new causal or transfer vocabulary is needed.
+
+**Registered joint bundle.** New argument 0e8e37dc-4037-450f-8172-a26eff2d7113, result fd3330d0-dab7-4d44-9f51-790f196f8049,
+proves the same existing conclusion 8626f8a5 from the original seven inputs
+0881e859, 7067553d, cffad050, ee4ab504, 09c6d5f0, eaa4c679,
+1ec205ed plus b26c10a0 instead of f8ba2429. Maximum uniqueness is retained
+verbatim: if another maximum m' differs, m causes m' at esse and cffad050
+makes m greater at esse, contrary to maximality. The same m is then passed
+to reducedDescription; GOD_1 -> GOD_4 still depends on 1ec205ed. It is a
+non-transcription conditional result. The original interface and its direct
+assumption option remain unchanged.
+
+**Strictness at fixed background.** Control statement e3471dfd-c005-4be4-a454-ab01a88e4b0d and
+result fcc91ba5-c1ce-4a8e-b405-22d8912f9032 use exactly three bearers (source 0, supporter 1,
+recipient 2) and respects (esse=false, further perfection=true). All have
+esse, only the recipient has the further perfection; 0 causes the esse of
+both others and the recipient's further perfection; 1 causes the recipient's
+esse only. MoreIn esse is the strict ranking 0 > 1 > 2. PriorSimply and
+ComponentOf are empty. IsGod holds exactly for 0. The seven remaining
+nonlogical inputs, weakened transfer, and GodExists jointly hold, while
+f8ba2429 fails at (supporter, recipient, further perfection). Classical
+excluded middle is available separately. This finite interpretation is a
+structural scope witness, not a non-theistic ontology or an objection to the
+real-world truth of unrestricted transfer. It neither sets IsGod by
+deduction nor supplies the source's existence independently of 0881e859.
+
+**Warrant and boundaries.** b26c10a0 retains the direct participation/
+concurrence rationale and the conditional total-causation derivation dae70d8a
+(with open premises 5e281daf, 2f6b9eff and 791fa216). Pre-naming source
+identification remains an explicit warrant challenge, not a discharged
+bridge. Universal-source existence and coverage 0881e859, causal ascent
+cffad050, maximal-to-first eaa4c679 and the nominal GOD_4 application
+1ec205ed remain substantive. Direct use of 40a97664, C*, 2068f91c and
+3ef67739 is absent in this bundle; recursively selected supports can still
+involve the sustaining-dependence controversy. The existing analyses in this
+note, maximum-definition-fork.md and esse-root-leaves.md retain their
+current provisional assessments. The strictness test changes the conditional
+sufficiency of the route, not their philosophical assessment.
+
+**Status and next discriminating question.** This is a route-level scope
+reduction, not evidence that b26c10a0 or the universal source is true. Review
+the source-first warrant for universal esse-causal coverage and its
+non-circular application before GOD_4 naming. Reopen the scope reduction if
+the theorem proof fails at the same dictionary, or if a further route consumer
+actually needs transfer by a nonuniversal cause. Do not count this sibling as
+a second independent source of existential evidence. The formal result
+status must be taken from exact-head verification, not this note.

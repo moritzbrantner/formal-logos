@@ -1,6 +1,7 @@
 module
 
 public import TruthCore.Case.Catholicism.CauseOfBeingHasBeing
+public import TruthCore.Case.Catholicism.CausalPerfectionTransfer
 public import TruthCore.Case.Catholicism.StageOneQuartaVia
 public import TruthCore.Case.Catholicism.Root
 public import TruthCore.Causality.CausalMapsBatch1
@@ -904,6 +905,52 @@ def Controls : Prop :=
   preexistOfTransferAndRestriction.omit_hTransfer.Holds ∧
   preexistOfTransferAndRestriction.omit_hGives.Holds ∧
   preexistOfTransferAndRestriction.witness.Holds
+
+/-! ### Matched populated control for the restricted GOD_4 consumer
+
+Three bearers (0 universal source, 1 secondary supporter, 2 recipient), two
+respects (false esse, true a further perfection). The secondary supporter causes
+only the recipient's esse; the universal source causes both. All are in act at
+esse, only the recipient has the additional perfection. This is a structural
+control, not a metaphysical account of secondary causation. -/
+namespace universalTransferGodExists
+
+abbrev Being := Fin 3
+abbrev Respect := Bool
+abbrev esse : Respect := false
+
+def inAct (x : Being) (r : Respect) : Prop :=
+  r = false ∨ (x.val = 2 ∧ r = true)
+
+def moreIn (r : Respect) (c x : Being) : Prop :=
+  r = false ∧ c.val < x.val
+
+def causesIn (c x : Being) (r : Respect) : Prop :=
+  (c.val = 0 ∧ x.val ≠ 0) ∨
+  (c.val = 1 ∧ x.val = 2 ∧ r = false)
+
+def componentOf : Being → Being → Prop := fun _ _ => False
+def priorSimply : Being → Being → Prop := fun _ _ => False
+def isGod (x : Being) : Prop := x.val = 0
+
+open TruthCore.Latin.Aquinas.SummaTheologiae
+open TruthCore.Case.Catholicism
+
+/-- All nonlogical hypotheses of the new existence route are jointly true,
+the unrestricted transfer premise is false, and the named God witness exists.
+Excluded middle is omitted because it is available as classical logic. -/
+def Strictness : Prop :=
+  MaximeEnsCausesBeingOfAllReading inAct moreIn causesIn esse ∧
+  ActualityOnlyInsofarAsBeingReading inAct esse ∧
+  CauseOfBeingIsMoreInBeing causesIn moreIn esse ∧
+  UniversalCauseTransfersPerfections inAct causesIn esse ∧
+  NoComponentIsFirstBeingReading componentOf priorSimply ∧
+  MaximumInBeingIsFirstBeing inAct moreIn esse priorSimply ∧
+  GodNamesTheFullyDescribedPrinciple inAct moreIn causesIn esse componentOf isGod ∧
+  ¬ CauseOfBeingCausesEveryPerfection inAct causesIn esse ∧
+  GodExists isGod
+
+end universalTransferGodExists
 
 end Control
 
