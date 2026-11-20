@@ -74,8 +74,8 @@ theorem godExistsFromMaximeEnsCausingAllByBeing {Being Respect : Type}
 
 
 /-- The maximal cause of every other being's esse is the unique maximum.
-Its universal causal reach suffices for restricted perfection transfer and
-the existing full-description GOD_4 naming bridge. No sustaining cause or
+Its universal causal reach meets the antecedent of the restricted transfer
+premise and the existing full-description GOD_4 naming bridge. No sustaining cause or
 concurrent-giving premise is used directly. -/
 theorem godExistsFromMaximeEnsCausingAllByUniversalTransfer {Being Respect : Type}
     (InAct : Being → Respect → Prop) (MoreIn : Respect → Being → Being → Prop)

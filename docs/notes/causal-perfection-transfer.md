@@ -1712,11 +1712,11 @@ assumption option remain unchanged.
 **Strictness at fixed background.** Control statement e3471dfd-c005-4be4-a454-ab01a88e4b0d and
 result fcc91ba5-c1ce-4a8e-b405-22d8912f9032 use exactly three bearers (source 0, supporter 1,
 recipient 2) and respects (esse=false, further perfection=true). All have
-esse, only the recipient has the further perfection; 0 causes the esse of
-both others and the recipient's further perfection; 1 causes the recipient's
+esse, only the recipient has the further perfection; 0 causes every respect
+of both others; 1 causes the recipient's
 esse only. MoreIn esse is the strict ranking 0 > 1 > 2. PriorSimply and
-ComponentOf are empty. IsGod holds exactly for 0. The seven remaining
-nonlogical inputs, weakened transfer, and GodExists jointly hold, while
+ComponentOf are empty. IsGod holds exactly for 0. The six nonlogical inputs
+shared with the original route (all but excluded middle ee4ab504), weakened transfer, and GodExists jointly hold, while
 f8ba2429 fails at (supporter, recipient, further perfection). Classical
 excluded middle is available separately. This finite interpretation is a
 structural scope witness, not a non-theistic ontology or an objection to the

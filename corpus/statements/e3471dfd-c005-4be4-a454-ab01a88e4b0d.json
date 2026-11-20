@@ -1,7 +1,7 @@
 {
   "id": "e3471dfd-c005-4be4-a454-ab01a88e4b0d",
   "label": "Finite strictness control: universal-only GOD_4 transfer does not need unrestricted transfer",
-  "paraphrase": "In a populated three-bearer, two-respect interpretation, all seven nonlogical premises shared with the original MAXIME_1-to-GOD_4 route and universal-only perfection transfer (b26c10a0) hold jointly, GOD_4 existence holds under the stated nominal predicate, but unrestricted perfection transfer (f8ba2429) fails for a secondary cause. Excluded middle is logical background. This is a structural separation of assumption scopes, not proof of their philosophical warrant or of an actual divine bearer.",
+  "paraphrase": "In a populated three-bearer, two-respect interpretation, the six nonlogical premises shared with the original MAXIME_1-to-GOD_4 route (all but excluded middle ee4ab504), together with universal-only perfection transfer b26c10a0, hold jointly, GOD_4 existence holds under the stated nominal predicate, but unrestricted perfection transfer (f8ba2429) fails for a secondary cause. Excluded middle is logical background. This is a structural separation of assumption scopes, not proof of their philosophical warrant or of an actual divine bearer.",
   "lean_declaration": "TruthCore.Case.Catholicism.PreexistenceWithoutTransfer.Control.universalTransferGodExists.Strictness",
   "definition_ids": [
     "211a6432-8b8f-53ed-85e3-75173bb15b24",
