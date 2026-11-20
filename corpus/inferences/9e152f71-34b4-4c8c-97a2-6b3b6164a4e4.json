@@ -1,0 +1,12 @@
+{
+  "id": "9e152f71-34b4-4c8c-97a2-6b3b6164a4e4",
+  "label": "KTB route frame entails the B schema of the route's NECESSARY_2 box (inference)",
+  "input_statement_ids": [
+    "60795e6e-1fe1-5c55-9718-bc2a22867244"
+  ],
+  "output_statement_id": "98bede5a-c5ff-5c26-9af0-10d526d422e2",
+  "rule": "Soundness of axiom B on symmetric frames (axiomB_valid of the modal library), from the symmetry conjunct of KTB",
+  "meaning": "Strength order registration: if the route's modal frame is reflexive and symmetric (KTB), the B schema (convergence formula 0 0 1 1: an atom that holds at a world is possible at every world accessible from it) of the route's box is valid on it. Applies the existing modal-library theorem TruthCore.Modal.axiomB_valid to the frame's symmetry. Establishes neither premise.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

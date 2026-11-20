@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.NecessarySenseBridges.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NecessarySenseBridges.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.NecessarySenseBridges.schemaStrictness"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

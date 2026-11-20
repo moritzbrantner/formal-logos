@@ -245,6 +245,7 @@ public import TruthCore.Results.Causality.NecessaryRootGodExistence.Reduced.Solu
 public import TruthCore.Results.Causality.NecessaryRootGodExistence.Solution
 public import TruthCore.Results.Causality.NecessaryRootGodUniqueness.Solution
 public import TruthCore.Results.Causality.NecessaryRootUniqueness.Solution
+public import TruthCore.Results.Causality.NecessarySenseBridges.Solution
 public import TruthCore.Results.Causality.NecessarySenseFork.Solution
 public import TruthCore.Results.Causality.NecessarySimplePlurality.Solution
 public import TruthCore.Results.Causality.NecessarySupportActualScope.Solution

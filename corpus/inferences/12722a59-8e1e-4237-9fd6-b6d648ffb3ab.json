@@ -1,0 +1,12 @@
+{
+  "id": "12722a59-8e1e-4237-9fd6-b6d648ffb3ab",
+  "label": "S5 route frame entails the 5 schema of the route's NECESSARY_2 box (inference)",
+  "input_statement_ids": [
+    "873d057f-e58e-53cc-a054-093f7c5a4238"
+  ],
+  "output_statement_id": "6f474aba-fda0-57fa-8330-6246de589f63",
+  "rule": "Soundness of axiom 5 on Euclidean frames (axiom5_valid of the modal library), from the Euclidean conjunct of S5",
+  "meaning": "Strength order registration: if the route's modal frame is reflexive and Euclidean (S5), the 5 schema 'whatever is possible is necessarily possible' (convergence formula 1 0 1 1) of the route's box is valid on it. Applies the existing modal-library theorem TruthCore.Modal.axiom5_valid to the frame's Euclidean condition. Establishes neither premise.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
