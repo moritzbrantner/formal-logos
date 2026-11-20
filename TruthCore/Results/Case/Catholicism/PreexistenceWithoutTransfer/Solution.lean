@@ -133,8 +133,24 @@ theorem godExistsFromMaximeEnsCausingAllByUniversalTransfer {Being Respect : Typ
 nonlogical assumptions, computed by bounded decision. -/
 theorem universalTransferGodExists_strictness :
     Control.universalTransferGodExists.Strictness := by
-  unfold Control.universalTransferGodExists.Strictness
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;> decide
+  dsimp only [Control.universalTransferGodExists.Strictness,
+    MaximeEnsCausesBeingOfAllReading,
+    TruthCore.Latin.Aquinas.SummaTheologiae.CausesAllInGenus,
+    IsMaximumIn, ActualityOnlyInsofarAsBeingReading,
+    CauseOfBeingIsMoreInBeing,
+    TruthCore.Case.Catholicism.UniversalCauseTransfersPerfections,
+    NoComponentIsFirstBeingReading, MaximumInBeingIsFirstBeing,
+    GodNamesTheFullyDescribedPrinciple, CausesEveryPerfectionOfOthers,
+    RemoteFromAll, CauseOfBeingCausesEveryPerfection, GodExists,
+    TruthCore.Latin.Aquinas.SummaTheologiae.IsFirstBeing,
+    Control.universalTransferGodExists.inAct,
+    Control.universalTransferGodExists.moreIn,
+    Control.universalTransferGodExists.causesIn,
+    Control.universalTransferGodExists.componentOf,
+    Control.universalTransferGodExists.priorSimply,
+    Control.universalTransferGodExists.isGod,
+    Control.universalTransferGodExists.esse]
+  decide
 
 /-- Q.4 a.2 preexistence from transfer and the cause-of-being restriction: a
 cause of `x`'s being causes each perfection `x` has, and a cause of a thing's
