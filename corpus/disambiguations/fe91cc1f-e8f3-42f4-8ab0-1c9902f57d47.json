@@ -15,11 +15,35 @@
       "lean_declaration": "TruthCore.Case.Catholicism.Signature",
       "lean_parameters": [
         {
+          "declaration": "TruthCore.Alternatives.ReligiousExperienceRecognition.Calibrated",
+          "parameter": "σ"
+        },
+        {
           "declaration": "TruthCore.Alternatives.ReligiousExperienceRecognition.CapacityBridge",
           "parameter": "σ"
         },
         {
+          "declaration": "TruthCore.Alternatives.ReligiousExperienceRecognition.CoversGods",
+          "parameter": "σ"
+        },
+        {
+          "declaration": "TruthCore.Alternatives.ReligiousExperienceRecognition.Identified",
+          "parameter": "σ"
+        },
+        {
+          "declaration": "TruthCore.Alternatives.ReligiousExperienceRecognition.Occurrence",
+          "parameter": "σ"
+        },
+        {
+          "declaration": "TruthCore.Alternatives.ReligiousExperienceRecognition.Permission",
+          "parameter": "σ"
+        },
+        {
           "declaration": "TruthCore.Alternatives.ReligiousExperienceRecognition.RecognizedGod",
+          "parameter": "σ"
+        },
+        {
+          "declaration": "TruthCore.Alternatives.ReligiousExperienceRecognition.WarrantedToken",
           "parameter": "σ"
         },
         {
@@ -204,14 +228,10 @@
         },
         {
           "declaration": "TruthCore.Case.Catholicism.StageThree.CommissionAttestation.MessageRivalExcludedGivenFounding",
-          "parameter": "σ"
+          "parameter": "A"
         },
         {
           "declaration": "TruthCore.Case.Catholicism.StageThree.CommissionAttestation.MessageRivalExcludedGivenFounding",
-          "parameter": "A"
-        },
-        {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.CommissionDefinitions.InstitutionLinkFor",
           "parameter": "σ"
         },
         {
@@ -219,7 +239,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.CommissionDefinitions.NarrowInstitutionCalibration",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.CommissionDefinitions.InstitutionLinkFor",
           "parameter": "σ"
         },
         {
@@ -227,7 +247,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.CommissionDefinitions.TeachingInclusiveInstitutionLink",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.CommissionDefinitions.NarrowInstitutionCalibration",
           "parameter": "σ"
         },
         {
@@ -235,7 +255,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.Commissions.ChurchFoundedInCommissionedApostles",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.CommissionDefinitions.TeachingInclusiveInstitutionLink",
           "parameter": "σ"
         },
         {
@@ -243,7 +263,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.DivineFounding.EnvoyFoundingIsPrincipalsFounding",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.Commissions.ChurchFoundedInCommissionedApostles",
           "parameter": "σ"
         },
         {
@@ -251,7 +271,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.DivineFounding.GodConfirmsOnlyTruth",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.DivineFounding.EnvoyFoundingIsPrincipalsFounding",
           "parameter": "σ"
         },
         {
@@ -259,7 +279,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.DivineFounding.MandatedFoundingWithTeaching",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.DivineFounding.GodConfirmsOnlyTruth",
           "parameter": "σ"
         },
         {
@@ -267,7 +287,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.DivineFounding.ResurrectionConfirmsMandate",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.DivineFounding.MandatedFoundingWithTeaching",
           "parameter": "σ"
         },
         {
@@ -275,7 +295,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.AdditionalFoundingReading",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.DivineFounding.ResurrectionConfirmsMandate",
           "parameter": "σ"
         },
         {
@@ -283,7 +303,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.DirectExcludesJesusEnvoy",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.AdditionalFoundingReading",
           "parameter": "σ"
         },
         {
@@ -291,7 +311,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.EnvoyBridgeFails",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.DirectExcludesJesusEnvoy",
           "parameter": "σ"
         },
         {
@@ -299,7 +319,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.EnvoyEventExists",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.EnvoyBridgeFails",
           "parameter": "σ"
         },
         {
@@ -307,7 +327,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.EnvoyInclusiveReading",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.EnvoyEventExists",
           "parameter": "σ"
         },
         {
@@ -315,7 +335,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.ExclusiveImmediateReading",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.EnvoyInclusiveReading",
           "parameter": "σ"
         },
         {
@@ -323,7 +343,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.ImmediateAdmitsEnvoy",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.ExclusiveImmediateReading",
           "parameter": "σ"
         },
         {
@@ -331,12 +351,16 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.ImmediateEnvoyCalibration",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.ImmediateAdmitsEnvoy",
           "parameter": "σ"
         },
         {
           "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.ImmediateEnvoyCalibration",
           "parameter": "A"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.ImmediateEnvoyCalibration",
+          "parameter": "σ"
         },
         {
           "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.ImmediateOnlyReading",
@@ -344,14 +368,10 @@
         },
         {
           "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.ImmediateReadingFails",
-          "parameter": "σ"
+          "parameter": "A"
         },
         {
           "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.ImmediateReadingFails",
-          "parameter": "A"
-        },
-        {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.NamedReadingCoverage",
           "parameter": "σ"
         },
         {
@@ -359,7 +379,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.ReadingCoverageWithRemainder",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.NamedReadingCoverage",
           "parameter": "σ"
         },
         {
@@ -367,7 +387,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingScope.MandateCoversOnlyMessage",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.ReadingCoverageWithRemainder",
           "parameter": "σ"
         },
         {
@@ -375,7 +395,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingScope.MandatedFoundingOfCatholicChurch",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingScope.MandateCoversOnlyMessage",
           "parameter": "σ"
         },
         {
@@ -383,7 +403,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.MessageReportBoundary.ActualMandatedCatholicFounding",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.FoundingScope.MandatedFoundingOfCatholicChurch",
           "parameter": "σ"
         },
         {
@@ -391,7 +411,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.MessageReportBoundary.CatholicMandateScopeRejected",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.MessageReportBoundary.ActualMandatedCatholicFounding",
           "parameter": "σ"
         },
         {
@@ -399,7 +419,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.MessageReportBoundary.GoverningEventInstitutionLink",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.MessageReportBoundary.CatholicMandateScopeRejected",
           "parameter": "σ"
         },
         {
@@ -407,7 +427,7 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.MessageReportBoundary.InstitutionalTransferCases",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.MessageReportBoundary.GoverningEventInstitutionLink",
           "parameter": "σ"
         },
         {
@@ -415,12 +435,16 @@
           "parameter": "A"
         },
         {
-          "declaration": "TruthCore.Case.Catholicism.StageThree.MessageReportBoundary.InstitutionalTransferCountercase",
+          "declaration": "TruthCore.Case.Catholicism.StageThree.MessageReportBoundary.InstitutionalTransferCases",
           "parameter": "σ"
         },
         {
           "declaration": "TruthCore.Case.Catholicism.StageThree.MessageReportBoundary.InstitutionalTransferCountercase",
           "parameter": "A"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.StageThree.MessageReportBoundary.InstitutionalTransferCountercase",
+          "parameter": "σ"
         },
         {
           "declaration": "TruthCore.Case.Catholicism.StageThree.Round3ChristChurch.C381TaughtEachArticleAsRevealed",
@@ -452,11 +476,11 @@
         },
         {
           "declaration": "TruthCore.Case.Catholicism.StageThree.Round3ChristChurch.RaisingAClaimantConfirmsHisMandate",
-          "parameter": "σ"
+          "parameter": "A"
         },
         {
           "declaration": "TruthCore.Case.Catholicism.StageThree.Round3ChristChurch.RaisingAClaimantConfirmsHisMandate",
-          "parameter": "A"
+          "parameter": "σ"
         },
         {
           "declaration": "TruthCore.Case.Catholicism.StageThree.Round3ChristChurch.SelfAscribedForgivenessAuthorityIsDivineAuthorityClaim",
@@ -468,11 +492,11 @@
         },
         {
           "declaration": "TruthCore.Case.Catholicism.StageThree.Round6DefinitionForks.GodFoundedSomeJesusEnvoySociety",
-          "parameter": "σ"
+          "parameter": "A"
         },
         {
           "declaration": "TruthCore.Case.Catholicism.StageThree.Round6DefinitionForks.GodFoundedSomeJesusEnvoySociety",
-          "parameter": "A"
+          "parameter": "σ"
         },
         {
           "declaration": "TruthCore.Case.Catholicism.StageThree.Round6DefinitionForks.SelectedChurchIsSpiritual",
@@ -488,11 +512,11 @@
         },
         {
           "declaration": "TruthCore.Case.Catholicism.StageThree.Round6DefinitionForks.TeachingGrantFoundsInMandate",
-          "parameter": "σ"
+          "parameter": "A"
         },
         {
           "declaration": "TruthCore.Case.Catholicism.StageThree.Round6DefinitionForks.TeachingGrantFoundsInMandate",
-          "parameter": "A"
+          "parameter": "σ"
         },
         {
           "declaration": "TruthCore.Case.Catholicism.StageThree.Round6DefinitionForks.VisibleSocietyIsSpiritual",
@@ -628,11 +652,11 @@
         },
         {
           "declaration": "TruthCore.Causality.NamingVeracityBatch1.AssistedDefinitiveProposalIsConfirmed",
-          "parameter": "σ"
+          "parameter": "A"
         },
         {
           "declaration": "TruthCore.Causality.NamingVeracityBatch1.AssistedDefinitiveProposalIsConfirmed",
-          "parameter": "A"
+          "parameter": "σ"
         },
         {
           "declaration": "TruthCore.Causality.NamingVeracityBatch1.ClassicalAttributesIncludePerfectIntellectAndGoodWill",
@@ -640,11 +664,11 @@
         },
         {
           "declaration": "TruthCore.Causality.NamingVeracityBatch1.ConfirmingIsAsserting",
-          "parameter": "σ"
+          "parameter": "A"
         },
         {
           "declaration": "TruthCore.Causality.NamingVeracityBatch1.ConfirmingIsAsserting",
-          "parameter": "A"
+          "parameter": "σ"
         },
         {
           "declaration": "TruthCore.Causality.NamingVeracityBatch1.ConsistentTaskRequiresOnlyPossiblePerfections",
@@ -652,11 +676,11 @@
         },
         {
           "declaration": "TruthCore.Causality.NamingVeracityBatch1.DefinitiveProposalIsGodConfirmed",
-          "parameter": "σ"
+          "parameter": "A"
         },
         {
           "declaration": "TruthCore.Causality.NamingVeracityBatch1.DefinitiveProposalIsGodConfirmed",
-          "parameter": "A"
+          "parameter": "σ"
         },
         {
           "declaration": "TruthCore.Causality.NamingVeracityBatch1.FounderGuaranteesFoundedAuthority",
@@ -795,5 +819,5 @@
       "lean_declaration": "TruthCore.Case.Catholicism.StageThree.DivineFounding.modelSig"
     }
   ],
-  "resolution": "A proposition of the case takes the root vocabulary as a parameter σ : Signature (and, in stage three, A : Agency σ). Sense 1 is the binder read as the intended interpretation of that vocabulary: every tagged σ, and every tagged A, denotes the same interpretation, wherever its declaration lives, so truth discover may identify them across modules (docs/discover.md, 'Parameter-level sense tags'). Sense 2 is a constructed schema model used in a satisfiability, omission or independence theorem; its facts are about the model only. The tags were authored after reading each module: every tagged declaration is a statement's lean_declaration whose σ binder has type Signature and whose A binder has type Agency σ, and each uses σ only through the Signature fields with their recorded senses (GOD_4 for Signature.IsGod, CHURCH_VISIBLE_SOCIETY_AND_SPIRITUAL_COMMUNITY_1 for Signature.VisibleWithAuthority, DEF-SKELETON-OPEN-PREDICATES for the stage predicates). Rivals and negations of case propositions (Alternatives.RevelationRecognition.RevelationCapabilityRejected, the Inversions module) are about the same intended σ, so they carry the same tag. The identification fixes only which interpretation a binder denotes: it adds no premise, proves no bridge between the meanings of the fields, and leaves every other binder of these declarations (Speech, Raising, Holding, Veracity, Assistance, Power, RecognitionProfile, Profile, worlds, respects) untagged and unknown. The Lean type does not separate the two senses; a reviewer who finds a model signature in a theorem must read it as sense 2."
+  "resolution": "A proposition of the case takes the root vocabulary as a parameter σ : Signature (and, in stage three, A : Agency σ). Sense 1 is the binder read as the intended interpretation of that vocabulary: every tagged σ, and every tagged A, denotes the same interpretation, wherever its declaration lives, so truth discover may identify them across modules (docs/discover.md, 'Parameter-level sense tags'). Sense 2 is a constructed schema model used in a satisfiability, omission or independence theorem; its facts are about the model only. The tags were authored after reading each module: every tagged declaration is a statement's lean_declaration whose σ binder (explicit, or implicit {σ : Signature} as in ReligiousExperienceRecognition) has type Signature and whose A binder has type Agency σ, and each uses σ only through the Signature fields with their recorded senses (GOD_4 for Signature.IsGod, CHURCH_VISIBLE_SOCIETY_AND_SPIRITUAL_COMMUNITY_1 for Signature.VisibleWithAuthority, DEF-SKELETON-OPEN-PREDICATES for the stage predicates). Rivals and negations of case propositions (Alternatives.RevelationRecognition.RevelationCapabilityRejected, the Inversions module) are about the same intended σ, so they carry the same tag. The identification fixes only which interpretation a binder denotes: it adds no premise, proves no bridge between the meanings of the fields, and leaves every other binder of these declarations (Speech, Raising, Holding, Veracity, Assistance, Power, RecognitionProfile, Profile, worlds, respects) untagged and unknown. The Lean type does not separate the two senses; a reviewer who finds a model signature in a theorem must read it as sense 2."
 }
