@@ -1,6 +1,7 @@
 module
 
 public import TruthCore.Case.Catholicism.PreexistenceWithoutTransfer
+public import TruthCore.Results.Aquinas.SummaTheologiae.CausalPerfectionTransfer.Solution
 
 @[expose] public section
 
@@ -96,6 +97,107 @@ theorem godExistsFromMaximeEnsCausingAllByBeing {Being Respect : Type}
   have hRemote : RemoteFromAll ComponentOf m :=
     fun x hComponent => hNoComponent m x hComponent (hFirstBeing m hMax)
   exact ⟨m, hFull m hMax hCauses hEvery hRemote hUnique⟩
+
+
+/-- The existing reduced-description theorem uses transfer only at the
+universal source; it does not require transfer for secondary esse causes.
+The maximum's uniqueness is proved with the same causal-ascent argument
+as the frozen unrestricted-transfer consumer. -/
+theorem godExistsFromMaximeEnsCausingAllByUniversalTransfer {Being Respect : Type}
+    (InAct : Being → Respect → Prop) (MoreIn : Respect → Being → Being → Prop)
+    (CausesIn : Being → Being → Respect → Prop) (esse : Respect)
+    (ComponentOf PriorSimply : Being → Being → Prop) (IsGod : Being → Prop)
+    (hMaxime : MaximeEnsCausesBeingOfAllReading InAct MoreIn CausesIn esse)
+    (hBeing : ActualityOnlyInsofarAsBeingReading InAct esse)
+    (hCauseMore : CauseOfBeingIsMoreInBeing CausesIn MoreIn esse)
+    (hEM : ExcludedMiddle)
+    (hTransfer : TruthCore.Case.Catholicism.UniversalCauseTransfersPerfections InAct CausesIn esse)
+    (hNoComponent : NoComponentIsFirstBeingReading ComponentOf PriorSimply)
+    (hFirstBeing : MaximumInBeingIsFirstBeing InAct MoreIn esse PriorSimply)
+    (hFull : GodNamesTheFullyDescribedPrinciple InAct MoreIn CausesIn esse ComponentOf IsGod) :
+    GodExists IsGod := by
+  obtain ⟨m, hMax, hCauses⟩ := hMaxime
+  have hUnique : ∀ m', IsMaximumIn InAct MoreIn esse m' → m' = m := by
+    intro m' hMax'
+    rcases hEM (m' = m) with h | hne
+    · exact h
+    · exact absurd (hCauseMore m m' (fun h => hne h.symm)
+        (hCauses m' hne hMax'.1)) (hMax'.2 m)
+  have hNames :=
+    TruthCore.Results.Aquinas.SummaTheologiae.CausalPerfectionTransfer.reducedDescription
+      InAct MoreIn CausesIn esse ComponentOf PriorSimply IsGod
+      hBeing hTransfer hNoComponent hFirstBeing hFull
+  exact ⟨m, hNames m hMax hCauses hUnique⟩
+
+/-- Strictness on the same populated finite vocabulary and complete joint
+nonlogical assumptions, computed by bounded decision. -/
+private instance finThreeForallDecidable (p : Fin 3 → Prop) [DecidablePred p] :
+    Decidable (∀ x : Fin 3, p x) :=
+  decidable_of_iff (p 0 ∧ p 1 ∧ p 2) (by
+    constructor
+    · rintro ⟨h0, h1, h2⟩ x
+      fin_cases x
+      · exact h0
+      · exact h1
+      · exact h2
+    · intro h
+      exact ⟨h 0, h 1, h 2⟩)
+
+private instance finThreeExistsDecidable (p : Fin 3 → Prop) [DecidablePred p] :
+    Decidable (∃ x : Fin 3, p x) :=
+  decidable_of_iff (p 0 ∨ p 1 ∨ p 2) (by
+    constructor
+    · intro h
+      rcases h with h0 | h1 | h2
+      · exact ⟨0, h0⟩
+      · exact ⟨1, h1⟩
+      · exact ⟨2, h2⟩
+    · rintro ⟨x, hx⟩
+      fin_cases x
+      · exact Or.inl hx
+      · exact Or.inr (Or.inl hx)
+      · exact Or.inr (Or.inr hx))
+
+theorem universalTransferGodExists_strictness :
+    Control.universalTransferGodExists.Strictness := by
+  dsimp only [Control.universalTransferGodExists.Strictness,
+    MaximeEnsCausesBeingOfAllReading,
+    TruthCore.Latin.Aquinas.SummaTheologiae.CausesAllInGenus,
+    IsMaximumIn, ActualityOnlyInsofarAsBeingReading,
+    CauseOfBeingIsMoreInBeing,
+    TruthCore.Case.Catholicism.UniversalCauseTransfersPerfections,
+    NoComponentIsFirstBeingReading, MaximumInBeingIsFirstBeing,
+    GodNamesTheFullyDescribedPrinciple, CausesEveryPerfectionOfOthers,
+    RemoteFromAll, CauseOfBeingCausesEveryPerfection, GodExists,
+    TruthCore.Latin.Aquinas.SummaTheologiae.IsFirstBeing,
+    Control.universalTransferGodExists.inAct,
+    Control.universalTransferGodExists.moreIn,
+    Control.universalTransferGodExists.causesIn,
+    Control.universalTransferGodExists.componentOf,
+    Control.universalTransferGodExists.priorSimply,
+    Control.universalTransferGodExists.isGod,
+    Control.universalTransferGodExists.esse]
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  · decide
+  · decide
+  · decide
+  · intro c hall x r hDifferent hEsse hAct
+    fin_cases c
+    · fin_cases x <;> cases r <;> simp_all
+    · have hbad := hall (0 : Fin 3) (by decide) (by decide)
+      simp at hbad
+    · have hbad := hall (0 : Fin 3) (by decide) (by decide)
+      simp at hbad
+  · decide
+  · decide
+  · intro m hm _ _ _ _
+    rcases hm with ⟨_, hNoHigher⟩
+    fin_cases m
+    · decide
+    · exact False.elim (hNoHigher 0 ⟨rfl, by decide⟩)
+    · exact False.elim (hNoHigher 0 ⟨rfl, by decide⟩)
+  · decide
+  · decide
 
 /-- Q.4 a.2 preexistence from transfer and the cause-of-being restriction: a
 cause of `x`'s being causes each perfection `x` has, and a cause of a thing's
