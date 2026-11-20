@@ -1,0 +1,35 @@
+{
+  "id": "4eb61695-aaff-4417-8c2e-151cc00ea5fb",
+  "label": "Connect rational agency and intellectual origination to the God and Catholicism case",
+  "date": "2026-11-19",
+  "statement_ids": [
+    "45d46cbf-0d36-5c3c-85bb-8685d895c2f1",
+    "05fb0e59-18f8-519d-bf58-12bdc952367c",
+    "339f2eb8-d089-5100-82ea-acc3107d0f68",
+    "f2488429-6615-5d23-b01b-cc0d12fda92a",
+    "beede613-2c17-5fe1-829e-16829d781cfd"
+  ],
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Completed a source-based comparison of two candidate contributions from philosophy of mind. Route A proposes a purposive explanation of the coordinated existence of rational embodied agents, intelligible order and effective agency; it can grant physical realization and requires an actual comparison with impersonal mind-inclusive and teleological accounts. Existing content, basing and agency results are reused, not treated as proofs that only a personal source is possible. Swinburne supplies a local motive-based comparison, with his wider divine-attribute and probabilistic commitments excluded. Route B applies Aquinas q76 ownership to q75 intellectual subsistence, q90/q118 origination, and the distinct q45 restriction on secondary creators. Weak non-inherence does not supply that full premise bundle; the existing bodily-interference rival remains decisive. The analysis favors Route A as a research priority for identifying intellect and will, with Route B complementary. It establishes no necessary intellect or Catholic conclusion. Catholic embodiment, soul creation and immortality identify relevant doctrinal targets; revelation, resurrection and Church identity retain separate evidential obligations. Full positive arguments, sources, rivals, exact bridges and next tests are in docs/notes/mind-physicalism-fork-419.md#further-contribution-to-theism-and-catholicism-2026-11-19. No theorem, registered source claim, changed statement meaning, premise closure or verified new root edge is claimed.",
+  "evidence": [],
+  "current_assessment": {
+    "date": "2026-11-19",
+    "statement_ids": [
+      "45d46cbf-0d36-5c3c-85bb-8685d895c2f1",
+      "05fb0e59-18f8-519d-bf58-12bdc952367c",
+      "339f2eb8-d089-5100-82ea-acc3107d0f68",
+      "f2488429-6615-5d23-b01b-cc0d12fda92a",
+      "beede613-2c17-5fe1-829e-16829d781cfd"
+    ],
+    "scope": "Candidate routes from rational agency and intellectual origination to the same-root intellect/will and Catholic anthropology targets; not an overall reassessment of every God or Catholicism argument.",
+    "assessment": "Prioritize a purposive explanation of rational agents, intelligible order and effective agency that can allow physical realization. Its positive rationale is the good of finite rational participation; comparative superiority and ultimate source-level purpose remain open. Separately investigate q75/q76 to q90/q45 intellectual origination, retaining the actual bodily-interference challenge and the stronger existence/production premises beyond weak subsistence. This supplies motivated connections, no new formal edge or established necessary-intellect/Catholic conclusion.",
+    "next_test": "Compare one purpose specified before fitting the cognitive/world-order package with the positive impersonal accounts, including error and impaired agency. For the origination route test whether the exact defended q75 principle satisfies q90 production premises, then assess q45 secondary-creator restriction. Retain same-witness necessity/intellect/will and separate Catholic historical evidence.",
+    "note": "docs/notes/mind-physicalism-fork-419.md#further-contribution-to-theism-and-catholicism-2026-11-19",
+    "reviewed_revision": "1366ffe245a65ab0f84c8f6a5c940c71664eeacd",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "Continuation in draft PR #1804 (https://github.com/moritzbrantner/formal-logos/pull/1804). Fresh independent semantic review accepted the complete substantive delivery at local commit 4c9d820628dd0d9e909e961d76bfdfeecb280ee5 with no required corrections, including this current-assessment projection and final-synthesis scope. Published review snapshot 1366ffe245a65ab0f84c8f6a5c940c71664eeacd has the identical full repository tree bdd77f92f5ccfc8a9a787d7a3278ba995b4d85db. Review covers the source readings, positive mechanisms, strong rivals, q75/q90/q45 dependencies, same-witness scope and Catholic limits. It does not confer formal verification, premise closure, rival refutation or a final metaphysical ranking. The subsequent main merge adds shared causality frames without changing these findings. Local metadata, label, JSON/reference, note-link, generated-index/import and diff checks passed; full corpus/Lean validation is left to PR CI.",
+    "supersedes": "None. This adds two scoped connections and a research-priority judgment; the earlier distinct-thinking-ancestor assessment and all existing formal results remain unchanged."
+  }
+}
