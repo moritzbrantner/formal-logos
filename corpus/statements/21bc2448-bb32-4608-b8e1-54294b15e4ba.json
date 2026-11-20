@@ -1,7 +1,7 @@
 {
   "id": "21bc2448-bb32-4608-b8e1-54294b15e4ba",
   "label": "A two-maxima interpretation separates 'every maximum in being is GOD_2' from reduced naming",
-  "paraphrase": "Closed mathematical control: on two beings, both in act as to being, with nothing more a being than anything, no causing and nothing GOD_2, both beings are maximal in being, so no maximum is unique; the reduced nominal description holds vacuously and 'every maximum in being is GOD_2' fails. A statement about this finite interpretation only, not a claim that there are two maxima in being.",
+  "paraphrase": "Closed mathematical control: on two beings, both in act as to being, with nothing more a being than anything, no causing and nothing GOD_2, both beings are maximal in being, so no maximum is unique (the causing condition also fails); the reduced nominal description holds vacuously and 'every maximum in being is GOD_2' fails. A statement about this finite interpretation only, not a claim that there are two maxima in being.",
   "lean_declaration": "TruthCore.Case.Catholicism.TwoMaximaSeparate",
   "definition_ids": [
     "23e73af5-a0df-5838-9689-5899c37fdcda",

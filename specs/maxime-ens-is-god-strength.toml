@@ -26,7 +26,7 @@ disambiguations = ["205a39c3-915d-5fe4-8076-a9ff91329e08", "4f1d0cf6-88ba-59e3-8
 [[statement]]
 id = "A two-maxima interpretation separates 'every maximum in being is GOD_2' from reduced naming"
 lean = "TwoMaximaSeparate"
-paraphrase = "Closed mathematical control: on two beings, both in act as to being, with nothing more a being than anything, no causing and nothing GOD_2, both beings are maximal in being, so no maximum is unique; the reduced nominal description holds vacuously and 'every maximum in being is GOD_2' fails. A statement about this finite interpretation only, not a claim that there are two maxima in being."
+paraphrase = "Closed mathematical control: on two beings, both in act as to being, with nothing more a being than anything, no causing and nothing GOD_2, both beings are maximal in being, so no maximum is unique (the causing condition also fails); the reduced nominal description holds vacuously and 'every maximum in being is GOD_2' fails. A statement about this finite interpretation only, not a claim that there are two maxima in being."
 definitions = ["23e73af5-a0df-5838-9689-5899c37fdcda", "a2a8de58-42e0-5481-b7fb-848ae8602036"]
 disambiguations = ["205a39c3-915d-5fe4-8076-a9ff91329e08", "4f1d0cf6-88ba-59e3-814d-01450c2bf282"]
 
@@ -58,7 +58,7 @@ premises = []
 conclusion = "A two-maxima interpretation separates 'every maximum in being is GOD_2' from reduced naming"
 axioms = []
 rule = "Finite case analysis on Bool"
-meaning = "Strictness control: on Bool with everything in act, nothing more a being, no causing and no GOD_2, uniqueness of a maximum fails, so the reduced naming holds vacuously, while true is maximal and not GOD_2. A finite interpretation only; it shows the reduced naming does not entail that every maximum in being is GOD_2, not that two maxima in being exist."
+meaning = "Strictness control: on Bool with everything in act, nothing more a being, no causing and no GOD_2, uniqueness of a maximum fails (the causing condition also fails), so the reduced naming holds vacuously, while true is maximal and not GOD_2. A finite interpretation only; it shows the reduced naming does not entail that every maximum in being is GOD_2, not that two maxima in being exist."
 
 [[relation]]
 id = "Every maximum in being being GOD_2 strengthens the reduced nominal description of GOD_2"
@@ -69,7 +69,7 @@ object_kind = "statement"
 object_id = "e39a4fce-ccaf-5862-836e-9317923842f3"
 verification_result_id = "Every maximum in being being GOD_2 entails the reduced nominal description of GOD_2"
 strictness_result_id = "Two-maxima control separates 'every maximum in being is GOD_2' from reduced naming"
-note = "Same InAct, MoreIn, esse and GOD_2 (MAXIME_ENS_1 sense of maximal in being). The weak version requires two further conditions of the maximum before the name applies: that it causes the being of every other being (CausesAllInGenus at esse, for an arbitrary CausesIn) and that it is the only maximum in being. Found by truth discover (#1784). The strong version is itself derived from the weak one plus further premises (result AQUINAS-ST-I-Q2-A3-MAXIME-ENS-IS-GOD), so the pair lies on a support cycle; frontier's set-aside rule for registrations on support cycles governs whether this registration closes the weak version. Strict: the two-maxima control. The difference is certified by the matching strength_comparison."
+note = "Same InAct, MoreIn, esse and GOD_2 (MAXIME_ENS_1 sense of maximal in being). The weak version requires two further conditions of the maximum before the name applies: that it causes the being of every other being (CausesAllInGenus at esse, for an arbitrary CausesIn) and that it is the only maximum in being. Found by truth discover (#1784). The strong version is itself derived from the weak one plus further premises (result AQUINAS-ST-I-Q2-A3-MAXIME-ENS-IS-GOD), so the pair lies on a support cycle. 957a71fe also has verified routes not using e39a4fce (AQUINAS-ST-I-Q2-A3-MAXIME-ENS-IS-GOD-VIA-FULL-DESCRIPTION-IDENTITY, CAUSAL-PERFECTION-TRANSFER-NAMING), through which this registration gives e39a4fce a non-circular conditional support option; frontier's set-aside rule for registrations on support cycles governs whether this registration closes the weak version. Strict: the two-maxima control. The difference is certified by the matching strength_comparison."
 
 [[relation]]
 id = "Every maximum in being is GOD_2 over the reduced naming: certified difference"
