@@ -1,0 +1,12 @@
+{
+  "id": "beec127d-18ae-4794-84c6-ace49f2c6ab9",
+  "label": "The route frame is S4 exactly when it is KT and transitive",
+  "paraphrase": "For every world type, individual type and profile m: the route's modal frame is reflexive and transitive (S4) if and only if it is reflexive (KT) and transitive. A premise-free comparison of frame conditions; it asserts none of them of the route.",
+  "lean_declaration": "TruthCore.Causality.ModalSenseSupport.FrameS4OverKTExact",
+  "definition_ids": [
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ]
+}

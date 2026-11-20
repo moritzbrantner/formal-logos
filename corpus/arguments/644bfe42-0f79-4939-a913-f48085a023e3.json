@@ -1,0 +1,16 @@
+{
+  "id": "644bfe42-0f79-4939-a913-f48085a023e3",
+  "label": "S5 route frame is the KTB route frame plus transitivity",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "788b7a1d-4da5-4253-b4e9-46f416eaa366",
+  "inference_ids": [
+    "40ebc3b2-296c-49cf-acb8-c359eff07862"
+  ],
+  "meaning": "Certified difference (#1598) of the registration S5 route frame strengthens KTB route frame: for every profile, the route frame is S5 iff it is KTB and transitive. Premise-free; it compares the frame conditions and asserts none of them of the route.",
+  "definition_ids": [
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ]
+}

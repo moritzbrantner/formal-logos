@@ -1,0 +1,9 @@
+{
+  "id": "9a02972e-df16-413c-baa4-5dfaf9b3f8f4",
+  "label": "The route's modal frame is symmetric (route frame premise delta)",
+  "paraphrase": "Difference statement: the accessibility relation of the route's modal frame m.ontic.frame is symmetric (if w accesses v, then v accesses w; frame condition B). A condition on the frame only; it is not asserted of the route.",
+  "lean_declaration": "TruthCore.Causality.ModalSenseSupport.OnticFrameSymmetric",
+  "definition_ids": [
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2"
+  ]
+}

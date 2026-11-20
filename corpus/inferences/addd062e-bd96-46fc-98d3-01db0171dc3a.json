@@ -1,0 +1,13 @@
+{
+  "id": "addd062e-bd96-46fc-98d3-01db0171dc3a",
+  "label": "KTB and S4 route frames together entail the S5 route frame (inference)",
+  "input_statement_ids": [
+    "60795e6e-1fe1-5c55-9718-bc2a22867244",
+    "d8d91023-300e-50f4-9cc5-e62f44a1aa04"
+  ],
+  "output_statement_id": "873d057f-e58e-53cc-a054-093f7c5a4238",
+  "rule": "Frame-condition algebra symmetric_transitive_implies_euclidean of the modal library (a symmetric transitive relation is Euclidean)",
+  "meaning": "If the route's modal frame is reflexive and symmetric (KTB) and also reflexive and transitive (S4), it is reflexive and Euclidean (S5): reflexivity from the KTB premise, the Euclidean condition from symmetry and transitivity by the modal-library theorem TruthCore.Modal.symmetric_transitive_implies_euclidean. With the registrations S5 strengthens KTB and S5 strengthens S4, the S5 frame premise says exactly what the KTB and S4 frame premises say jointly. Establishes no frame premise.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

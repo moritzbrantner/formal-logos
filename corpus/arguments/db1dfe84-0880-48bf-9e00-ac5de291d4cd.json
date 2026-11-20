@@ -1,0 +1,23 @@
+{
+  "id": "db1dfe84-0880-48bf-9e00-ac5de291d4cd",
+  "label": "KTB and S4 route frames together entail the S5 route frame",
+  "premise_statement_ids": [
+    "60795e6e-1fe1-5c55-9718-bc2a22867244",
+    "d8d91023-300e-50f4-9cc5-e62f44a1aa04"
+  ],
+  "conclusion_statement_id": "873d057f-e58e-53cc-a054-093f7c5a4238",
+  "inference_ids": [
+    "addd062e-bd96-46fc-98d3-01db0171dc3a"
+  ],
+  "meaning": "If the route's modal frame is reflexive and symmetric (KTB) and also reflexive and transitive (S4), it is reflexive and Euclidean (S5): reflexivity from the KTB premise, the Euclidean condition from symmetry and transitivity by the modal-library theorem TruthCore.Modal.symmetric_transitive_implies_euclidean. With the registrations S5 strengthens KTB and S5 strengthens S4, the S5 frame premise says exactly what the KTB and S4 frame premises say jointly. Establishes no frame premise.",
+  "definition_ids": [
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ],
+  "strong_version_needed": {
+    "60795e6e-1fe1-5c55-9718-bc2a22867244": "The Euclidean condition needs symmetry, which only the KTB premise supplies; its registered weak version (KT frame) gives reflexivity alone, and reflexivity with transitivity does not give the Euclidean condition (frameStrictness: an S4 frame that is not S5, the two-world order frame).",
+    "d8d91023-300e-50f4-9cc5-e62f44a1aa04": "The Euclidean condition needs transitivity, which only the S4 premise supplies; its registered weak version (KT frame) gives reflexivity alone, and reflexivity with symmetry does not give the Euclidean condition (frameStrictness: a KTB frame that is not S5, the reflexive symmetric non-transitive path)."
+  }
+}
