@@ -1,0 +1,12 @@
+{
+  "id": "5901029e-9160-4d43-bcd4-747fceab9aa7",
+  "label": "KTB route frame entails KT route frame",
+  "argument_id": "2bfa0652-1579-4e30-b1b8-a234c7f326d0",
+  "challenge_module": "TruthCore.Results.Causality.ModalFrameStrength.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ModalFrameStrength.Solution",
+  "theorem": "TruthCore.Results.Causality.ModalFrameStrength.frameKTBToKT",
+  "comparator_config": "results/5901029e-9160-4d43-bcd4-747fceab9aa7/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration: if the route's modal frame is reflexive and symmetric (KTB), it is reflexive (KT). A conjunct projection; establishes neither frame premise.",
+  "transcription": "assembly"
+}

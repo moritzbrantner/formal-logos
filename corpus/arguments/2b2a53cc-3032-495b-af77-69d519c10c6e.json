@@ -1,0 +1,19 @@
+{
+  "id": "2b2a53cc-3032-495b-af77-69d519c10c6e",
+  "label": "S5 route frame entails KTB route frame",
+  "premise_statement_ids": [
+    "873d057f-e58e-53cc-a054-093f7c5a4238"
+  ],
+  "conclusion_statement_id": "60795e6e-1fe1-5c55-9718-bc2a22867244",
+  "inference_ids": [
+    "8e184859-3769-4416-a725-374d6f0bc01d"
+  ],
+  "meaning": "Strength order registration: if the route's modal frame is reflexive and Euclidean (S5), it is reflexive and symmetric (KTB). Applies the existing modal-library theorem TruthCore.Modal.s5_implies_ktb to the route frame. Establishes neither frame premise.",
+  "definition_ids": [
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ],
+  "weakening": true
+}

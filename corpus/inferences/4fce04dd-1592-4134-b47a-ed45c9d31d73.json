@@ -1,0 +1,10 @@
+{
+  "id": "4fce04dd-1592-4134-b47a-ed45c9d31d73",
+  "label": "Frame-class strictness controls, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "82834aa9-0097-49fa-8da4-d5d06ec55348",
+  "rule": "Explicit frames checked by case analysis",
+  "meaning": "Strictness of the four frame strength orders: on the reflexive non-transitive chain the route frame is KT and not S4; on the two-world order frame it is KT and not KTB, and S4 and not S5; on the reflexive symmetric non-transitive path it is KTB and not S5. So no weak frame premise entails its registered strong version. Model-witnessed only.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

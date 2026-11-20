@@ -20,6 +20,7 @@
     "83264cf5-01fe-52fc-9a00-eeb024f6496e"
   ],
   "strong_version_needed": {
-    "cdf897a8-5490-561a-b9d2-507486a3f192": "The frame-class readings are box-existence of the same individual n. The de dicto node does not name n, and the tertia via node gives the box only with excluded middle, so neither weak version yields the frame-class node."
+    "cdf897a8-5490-561a-b9d2-507486a3f192": "The frame-class readings are box-existence of the same individual n. The de dicto node does not name n, and the tertia via node gives the box only with excluded middle, so neither weak version yields the frame-class node.",
+    "60795e6e-1fe1-5c55-9718-bc2a22867244": "The KTB node contains the KTB frame condition itself; the registered weak version (KT frame) lacks symmetry, so it does not yield the KTB node (strictness: the two-world order frame)."
   }
 }

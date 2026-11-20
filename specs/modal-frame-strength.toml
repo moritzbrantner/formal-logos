@@ -1,0 +1,116 @@
+# Frame-class strength orders among the necessary-being route's open frame
+# premises (#1017), found by a `truth discover` run over the modal sense-fork
+# nodes (report 20261120T134013Z, main e61946aa1; attempt "Discover run over
+# the modal sense-fork nodes"). The proofs apply the modal library's frame
+# theorems (TruthCore.Modal.Cube), connecting that
+# library to the root route's frame premises. Analyst formulations,
+# attribution deferred. No frame premise is asserted or established.
+
+[batch]
+vocab = "TruthCore.Causality.ModalSenseSupport"
+results = "TruthCore.Results.Causality.ModalFrameStrength"
+disambiguations = ["DISAMB-NECESSARY"]
+
+[[statement]]
+id = "Frame-class strictness controls for the route's frame premises"
+lean = "Control.FrameStrictness"
+paraphrase = "Formal controls on explicit route frames (one candidate individual present at every world): (1) on the reflexive non-transitive chain over the naturals (n accesses n and n+1) the route frame is KT but not S4; (2) on the two-world order frame (both worlds access themselves, the first accesses the second, not conversely) it is KT but not KTB (not symmetric) and (3) S4 but not S5 (not Euclidean); (4) on the reflexive symmetric non-transitive path over the naturals (n accesses n and n+1, and n-1 when n > 0) it is KTB but not S5. Statements about these interpretations only; no frame is claimed to be the frame of the route."
+definitions = ["DEF-MODAL-FIXTURE-FRAME"]
+disambiguations = ["DISAMB-NECESSARY"]
+
+[[argument]]
+id = "S5 route frame entails S4 route frame"
+theorem = "frameS5ToS4"
+premises = ["STMT-ONTIC-FRAME-S5"]
+conclusion = "STMT-ONTIC-FRAME-S4"
+weakening = true
+axioms = []
+rule = "Frame inclusion s5_implies_s4 of the modal library (a reflexive Euclidean relation is transitive)"
+meaning = "Strength order registration: if the route's modal frame is reflexive and Euclidean (S5), it is reflexive and transitive (S4). Applies the existing modal-library theorem TruthCore.Modal.s5_implies_s4 to the route frame. Establishes neither frame premise."
+description = "Strength order registration: if the route's modal frame is reflexive and Euclidean (S5), it is reflexive and transitive (S4). Applies the existing modal-library theorem TruthCore.Modal.s5_implies_s4 to the route frame. Establishes neither frame premise. No instantiation transcription is declared: the proof applies a proved library theorem of TruthCore.Modal.Cube with real content, not an open bridge, as in the node-level result boxS5ToBoxS4."
+
+[[argument]]
+id = "S5 route frame entails KTB route frame"
+theorem = "frameS5ToKTB"
+premises = ["STMT-ONTIC-FRAME-S5"]
+conclusion = "STMT-ONTIC-FRAME-KTB"
+weakening = true
+axioms = []
+rule = "Frame inclusion s5_implies_ktb of the modal library (a reflexive Euclidean relation is symmetric)"
+meaning = "Strength order registration: if the route's modal frame is reflexive and Euclidean (S5), it is reflexive and symmetric (KTB). Applies the existing modal-library theorem TruthCore.Modal.s5_implies_ktb to the route frame. Establishes neither frame premise."
+description = "Strength order registration: if the route's modal frame is reflexive and Euclidean (S5), it is reflexive and symmetric (KTB). Applies the existing modal-library theorem TruthCore.Modal.s5_implies_ktb to the route frame. Establishes neither frame premise. No instantiation transcription is declared: the proof applies a proved library theorem of TruthCore.Modal.Cube with real content, not an open bridge, as in the node-level result boxS5ToBoxS4."
+
+[[argument]]
+id = "S4 route frame entails KT route frame"
+theorem = "frameS4ToKT"
+premises = ["STMT-ONTIC-FRAME-S4"]
+conclusion = "STMT-ONTIC-FRAME-KT"
+weakening = true
+transcription = "assembly"
+axioms = []
+rule = "Conjunct projection: frame class S4 is reflexivity together with transitivity"
+meaning = "Strength order registration: if the route's modal frame is reflexive and transitive (S4), it is reflexive (KT). A conjunct projection; establishes neither frame premise."
+
+[[argument]]
+id = "KTB route frame entails KT route frame"
+theorem = "frameKTBToKT"
+premises = ["STMT-ONTIC-FRAME-KTB"]
+conclusion = "STMT-ONTIC-FRAME-KT"
+weakening = true
+transcription = "assembly"
+axioms = []
+rule = "Conjunct projection: frame class KTB is reflexivity together with symmetry"
+meaning = "Strength order registration: if the route's modal frame is reflexive and symmetric (KTB), it is reflexive (KT). A conjunct projection; establishes neither frame premise."
+
+[[argument]]
+id = "Frame-class strictness controls, checked"
+theorem = "frameStrictness"
+premises = []
+conclusion = "Frame-class strictness controls for the route's frame premises"
+axioms = []
+rule = "Explicit frames checked by case analysis"
+meaning = "Strictness of the four frame strength orders: on the reflexive non-transitive chain the route frame is KT and not S4; on the two-world order frame it is KT and not KTB, and S4 and not S5; on the reflexive symmetric non-transitive path it is KTB and not S5. So no weak frame premise entails its registered strong version. Model-witnessed only."
+
+[[relation]]
+id = "S5 route frame strengthens S4 route frame"
+subject_kind = "statement"
+subject_id = "STMT-ONTIC-FRAME-S5"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "STMT-ONTIC-FRAME-S4"
+verification_result_id = "S5 route frame entails S4 route frame"
+strictness_result_id = "Frame-class strictness controls, checked"
+note = "Same route Profile and frame. S5 adds symmetry (equivalently the Euclidean condition) to S4; the two-world order frame is S4 and not S5. The node-level counterpart is the registration S5 node strengthens S4 node, whose certified difference is the symmetric-frame delta."
+
+[[relation]]
+id = "S5 route frame strengthens KTB route frame"
+subject_kind = "statement"
+subject_id = "STMT-ONTIC-FRAME-S5"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "STMT-ONTIC-FRAME-KTB"
+verification_result_id = "S5 route frame entails KTB route frame"
+strictness_result_id = "Frame-class strictness controls, checked"
+note = "Same route Profile and frame. S5 adds transitivity to KTB; the reflexive symmetric non-transitive path is KTB and not S5."
+
+[[relation]]
+id = "S4 route frame strengthens KT route frame"
+subject_kind = "statement"
+subject_id = "STMT-ONTIC-FRAME-S4"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "STMT-ONTIC-FRAME-KT"
+verification_result_id = "S4 route frame entails KT route frame"
+strictness_result_id = "Frame-class strictness controls, checked"
+note = "Same route Profile and frame. S4 adds transitivity to KT; the reflexive non-transitive chain is KT and not S4."
+
+[[relation]]
+id = "KTB route frame strengthens KT route frame"
+subject_kind = "statement"
+subject_id = "STMT-ONTIC-FRAME-KTB"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "STMT-ONTIC-FRAME-KT"
+verification_result_id = "KTB route frame entails KT route frame"
+strictness_result_id = "Frame-class strictness controls, checked"
+note = "Same route Profile and frame. KTB adds symmetry to KT; the two-world order frame is KT and not KTB."

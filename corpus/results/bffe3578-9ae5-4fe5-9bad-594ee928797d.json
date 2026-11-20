@@ -1,0 +1,11 @@
+{
+  "id": "bffe3578-9ae5-4fe5-9bad-594ee928797d",
+  "label": "Frame-class strictness controls, checked",
+  "argument_id": "9d02f889-fd7d-406d-855a-7c6882843605",
+  "challenge_module": "TruthCore.Results.Causality.ModalFrameStrength.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ModalFrameStrength.Solution",
+  "theorem": "TruthCore.Results.Causality.ModalFrameStrength.frameStrictness",
+  "comparator_config": "results/bffe3578-9ae5-4fe5-9bad-594ee928797d/comparator.json",
+  "status": "solution-present",
+  "description": "Strictness of the four frame strength orders: on the reflexive non-transitive chain the route frame is KT and not S4; on the two-world order frame it is KT and not KTB, and S4 and not S5; on the reflexive symmetric non-transitive path it is KTB and not S5. So no weak frame premise entails its registered strong version. Model-witnessed only."
+}

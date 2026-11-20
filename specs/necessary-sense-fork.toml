@@ -247,7 +247,7 @@ premises = ["STMT-NECESSARY-ROOT-BOX-K", "STMT-ONTIC-FRAME-S4"]
 conclusion = "STMT-NECESSARY-ROOT-BOX-S4"
 rule = "Conjunction introduction"
 meaning = "The S4 branch of the sense fork: the route's K node plus the OPEN premise of the S4 frame condition on the route's frame. Without that premise the branch fails (controls: non-reflexive and non-transitive frames). Frame-class consequences (actual existence, necessary necessity, E -> box-diamond-E, possibly necessary -> necessary) are the Kripke axiom theorems in the controls."
-strong_version_needed = { "STMT-NECESSARY-ROOT-BOX-K" = "The frame-class readings are box-existence of the same individual n. The de dicto node does not name n, and the tertia via node gives the box only with excluded middle, so neither weak version yields the frame-class node." }
+strong_version_needed = { "STMT-NECESSARY-ROOT-BOX-K" = "The frame-class readings are box-existence of the same individual n. The de dicto node does not name n, and the tertia via node gives the box only with excluded middle, so neither weak version yields the frame-class node.", "STMT-ONTIC-FRAME-S4" = "The S4 node contains the S4 frame condition itself; the registered weak version (KT frame) lacks transitivity, so it does not yield the S4 node (strictness: the reflexive non-transitive chain)." }
 
 [[argument]]
 id = "NECESSARY-ROOT-BOX-B-FROM-FRAME"
@@ -257,7 +257,7 @@ premises = ["STMT-NECESSARY-ROOT-BOX-K", "STMT-ONTIC-FRAME-KTB"]
 conclusion = "STMT-NECESSARY-ROOT-BOX-B"
 rule = "Conjunction introduction"
 meaning = "The B branch of the sense fork: the route's K node plus the OPEN premise of the KTB frame condition on the route's frame. Without that premise the branch fails (controls: non-reflexive and non-transitive frames). Frame-class consequences (actual existence, necessary necessity, E -> box-diamond-E, possibly necessary -> necessary) are the Kripke axiom theorems in the controls."
-strong_version_needed = { "STMT-NECESSARY-ROOT-BOX-K" = "The frame-class readings are box-existence of the same individual n. The de dicto node does not name n, and the tertia via node gives the box only with excluded middle, so neither weak version yields the frame-class node." }
+strong_version_needed = { "STMT-NECESSARY-ROOT-BOX-K" = "The frame-class readings are box-existence of the same individual n. The de dicto node does not name n, and the tertia via node gives the box only with excluded middle, so neither weak version yields the frame-class node.", "STMT-ONTIC-FRAME-KTB" = "The KTB node contains the KTB frame condition itself; the registered weak version (KT frame) lacks symmetry, so it does not yield the KTB node (strictness: the two-world order frame)." }
 
 [[argument]]
 id = "NECESSARY-ROOT-BOX-S5-FROM-FRAME"
@@ -267,7 +267,7 @@ premises = ["STMT-NECESSARY-ROOT-BOX-K", "STMT-ONTIC-FRAME-S5"]
 conclusion = "STMT-NECESSARY-ROOT-BOX-S5"
 rule = "Conjunction introduction"
 meaning = "The S5 branch of the sense fork: the route's K node plus the OPEN premise of the S5 frame condition on the route's frame. Without that premise the branch fails (controls: non-reflexive and non-transitive frames). Frame-class consequences (actual existence, necessary necessity, E -> box-diamond-E, possibly necessary -> necessary) are the Kripke axiom theorems in the controls."
-strong_version_needed = { "STMT-NECESSARY-ROOT-BOX-K" = "The frame-class readings are box-existence of the same individual n. The de dicto node does not name n, and the tertia via node gives the box only with excluded middle, so neither weak version yields the frame-class node." }
+strong_version_needed = { "STMT-NECESSARY-ROOT-BOX-K" = "The frame-class readings are box-existence of the same individual n. The de dicto node does not name n, and the tertia via node gives the box only with excluded middle, so neither weak version yields the frame-class node.", "STMT-ONTIC-FRAME-S5" = "The S5 node contains the S5 frame condition itself; neither registered weak version (KTB frame, S4 frame) alone yields it (strictness: the reflexive symmetric non-transitive path; the two-world order frame)." }
 
 [[argument]]
 id = "NECESSARY-ROOT-PER-SE-FROM-GROUNDING"
