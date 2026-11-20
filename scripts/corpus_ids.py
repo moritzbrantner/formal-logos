@@ -306,6 +306,11 @@ class Aliases:
         if isinstance(legacy, str) and legacy:
             self.legacy_of[record_id] = legacy
             self.by_legacy.setdefault(legacy, []).append((kind, record_id))
+        # Legacy ids of records consolidated into this one (#1660) keep resolving to it.
+        merged = record.get("merged_legacy_ids")
+        for alias in merged if isinstance(merged, list) else []:
+            if isinstance(alias, str) and alias:
+                self.by_legacy.setdefault(alias, []).append((kind, record_id))
         if isinstance(label, str) and label:
             self.label_of[record_id] = label
             self.by_label.setdefault(label, []).append((kind, record_id))

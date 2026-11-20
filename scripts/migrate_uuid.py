@@ -142,6 +142,12 @@ class Migration:
                     if isinstance(legacy, str) and legacy:
                         uid = record_id if is_uuid(record_id) else legacy_uuid(kind, legacy)
                         self.legacy.setdefault(legacy, {})[kind] = uid
+                    merged = record.get("merged_legacy_ids") if is_uuid(record_id) else None
+                    for alias in merged if isinstance(merged, list) else []:
+                        # A record consolidated into this one (#1660): its old handle
+                        # converts to the survivor.
+                        if isinstance(alias, str) and alias:
+                            self.legacy.setdefault(alias, {})[kind] = record_id
 
     def lookup(self, value: str, kinds: tuple[str, ...]) -> str | None:
         if is_uuid(value):
