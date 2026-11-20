@@ -1,0 +1,23 @@
+{
+  "id": "7fa0684f-f704-4b75-890c-b212815c1794",
+  "label": "Every maximum in being being GOD_2 entails the reduced nominal description of GOD_2",
+  "premise_statement_ids": [
+    "957a71fe-ba7e-5633-bef2-f5d287362fc5"
+  ],
+  "conclusion_statement_id": "e39a4fce-ccaf-5862-836e-9317923842f3",
+  "inference_ids": [
+    "87c3d8ee-3a64-49b0-a9e6-cdf22248a8a9"
+  ],
+  "meaning": "Strength order registration: if every being maximal in being (MAXIME_ENS_1) is GOD_2, then a being that is maximal in being, causes the being of every other being and is the only maximum in being is GOD_2, for every cause relation CausesIn. Same InAct, MoreIn, esse and GOD_2 throughout. Application only; it establishes neither statement. Strictness: the two-maxima control.",
+  "definition_ids": [
+    "23e73af5-a0df-5838-9689-5899c37fdcda",
+    "a2a8de58-42e0-5481-b7fb-848ae8602036",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "16cf8319-84c7-5e24-9d18-5942b99c2e67"
+  ],
+  "disambiguation_ids": [
+    "205a39c3-915d-5fe4-8076-a9ff91329e08",
+    "4f1d0cf6-88ba-59e3-814d-01450c2bf282"
+  ],
+  "weakening": true
+}

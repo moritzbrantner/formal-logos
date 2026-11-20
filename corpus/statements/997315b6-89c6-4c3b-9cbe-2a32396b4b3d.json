@@ -1,0 +1,15 @@
+{
+  "id": "997315b6-89c6-4c3b-9cbe-2a32396b4b3d",
+  "label": "Every maximum in being is GOD_2 iff the reduced naming holds and every maximum outside it is",
+  "paraphrase": "For every interpretation of InAct, MoreIn, esse, GOD_2 and every CausesIn: every being maximal in being is GOD_2 if and only if the reduced nominal description suffices for GOD_2 and every maximum in being outside that description is GOD_2. A premise-free comparison of encodings; it asserts none of the three statements.",
+  "lean_declaration": "TruthCore.Case.Catholicism.MaximeEnsOverReducedNamingExact",
+  "definition_ids": [
+    "23e73af5-a0df-5838-9689-5899c37fdcda",
+    "a2a8de58-42e0-5481-b7fb-848ae8602036",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24"
+  ],
+  "disambiguation_ids": [
+    "205a39c3-915d-5fe4-8076-a9ff91329e08",
+    "4f1d0cf6-88ba-59e3-814d-01450c2bf282"
+  ]
+}

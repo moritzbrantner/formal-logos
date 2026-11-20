@@ -1,0 +1,12 @@
+{
+  "id": "87c3d8ee-3a64-49b0-a9e6-cdf22248a8a9",
+  "label": "Every maximum in being being GOD_2 entails the reduced nominal description of GOD_2 (inference)",
+  "input_statement_ids": [
+    "957a71fe-ba7e-5633-bef2-f5d287362fc5"
+  ],
+  "output_statement_id": "e39a4fce-ccaf-5862-836e-9317923842f3",
+  "rule": "Drop antecedent conditions of a universal conditional",
+  "meaning": "Strength order registration: if every being maximal in being (MAXIME_ENS_1) is GOD_2, then a being that is maximal in being, causes the being of every other being and is the only maximum in being is GOD_2, for every cause relation CausesIn. Same InAct, MoreIn, esse and GOD_2 throughout. Application only; it establishes neither statement. Strictness: the two-maxima control.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

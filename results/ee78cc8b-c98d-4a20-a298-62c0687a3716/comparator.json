@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Case.Catholicism.MaximeEnsIsGodStrength.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.MaximeEnsIsGodStrength.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Case.Catholicism.MaximeEnsIsGodStrength.twoMaximaSeparate"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

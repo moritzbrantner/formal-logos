@@ -1,0 +1,15 @@
+{
+  "id": "8570ba58-69b1-4a47-9391-db209e3147cb",
+  "label": "Every maximum in being outside the reduced nominal description is GOD_2",
+  "paraphrase": "Difference statement, analyst formulation: every being maximal in being (MAXIME_ENS_1) either meets the reduced nominal description (it causes the being of every other being, CausesAllInGenus at esse, and is the only maximum in being) or is GOD_2. Stated as a disjunction so that no decidability is assumed; classically, every maximum in being outside the reduced description is GOD_2. It says nothing about maxima that meet the description. Open; not attributed to a source.",
+  "lean_declaration": "TruthCore.Case.Catholicism.MaximeEnsOutsideReducedDescriptionIsGod",
+  "definition_ids": [
+    "23e73af5-a0df-5838-9689-5899c37fdcda",
+    "a2a8de58-42e0-5481-b7fb-848ae8602036",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24"
+  ],
+  "disambiguation_ids": [
+    "205a39c3-915d-5fe4-8076-a9ff91329e08",
+    "4f1d0cf6-88ba-59e3-814d-01450c2bf282"
+  ]
+}
