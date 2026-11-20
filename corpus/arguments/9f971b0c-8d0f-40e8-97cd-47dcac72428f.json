@@ -1,0 +1,18 @@
+{
+  "id": "9f971b0c-8d0f-40e8-97cd-47dcac72428f",
+  "label": "Two-maxima control separates 'every maximum in being is GOD_2' from reduced naming",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "21bc2448-bb32-4608-b8e1-54294b15e4ba",
+  "inference_ids": [
+    "56c198ee-6450-4150-8c6e-fe8eff141f70"
+  ],
+  "meaning": "Strictness control: on Bool with everything in act, nothing more a being, no causing and no GOD_2, uniqueness of a maximum fails, so the reduced naming holds vacuously, while true is maximal and not GOD_2. A finite interpretation only; it shows the reduced naming does not entail that every maximum in being is GOD_2, not that two maxima in being exist.",
+  "definition_ids": [
+    "23e73af5-a0df-5838-9689-5899c37fdcda",
+    "a2a8de58-42e0-5481-b7fb-848ae8602036"
+  ],
+  "disambiguation_ids": [
+    "205a39c3-915d-5fe4-8076-a9ff91329e08",
+    "4f1d0cf6-88ba-59e3-814d-01450c2bf282"
+  ]
+}

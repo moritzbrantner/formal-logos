@@ -6,7 +6,7 @@
   ],
   "output_statement_id": "e39a4fce-ccaf-5862-836e-9317923842f3",
   "rule": "Drop antecedent conditions of a universal conditional",
-  "meaning": "Strength order registration: if every being maximal in being (MAXIME_ENS_1) is GOD_2, then a being that is maximal in being, causes the being of every other being and is the only maximum in being is GOD_2, for every cause relation CausesIn. Same InAct, MoreIn, esse and GOD_2 throughout. Application only; it establishes neither statement. Strictness unverified.",
+  "meaning": "Strength order registration: if every being maximal in being (MAXIME_ENS_1) is GOD_2, then a being that is maximal in being, causes the being of every other being and is the only maximum in being is GOD_2, for every cause relation CausesIn. Same InAct, MoreIn, esse and GOD_2 throughout. Application only; it establishes neither statement. Strictness: the two-maxima control.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

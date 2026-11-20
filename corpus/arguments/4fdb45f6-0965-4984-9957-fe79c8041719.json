@@ -1,0 +1,19 @@
+{
+  "id": "4fdb45f6-0965-4984-9957-fe79c8041719",
+  "label": "Every maximum in being is GOD_2 factors as reduced naming plus the clause outside it",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "997315b6-89c6-4c3b-9cbe-2a32396b4b3d",
+  "inference_ids": [
+    "9b75dd73-6465-4609-8f19-ddc0b48b603d"
+  ],
+  "meaning": "Certified difference (#1598): forward, every maximum is GOD_2, so the reduced naming holds and the delta holds by its right disjunct; backward, a maximum meeting the reduced description is GOD_2 by the reduced naming, otherwise the delta gives GOD_2. Premise-free and constructive; it asserts none of the statements compared.",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "23e73af5-a0df-5838-9689-5899c37fdcda",
+    "a2a8de58-42e0-5481-b7fb-848ae8602036"
+  ],
+  "disambiguation_ids": [
+    "205a39c3-915d-5fe4-8076-a9ff91329e08",
+    "4f1d0cf6-88ba-59e3-814d-01450c2bf282"
+  ]
+}

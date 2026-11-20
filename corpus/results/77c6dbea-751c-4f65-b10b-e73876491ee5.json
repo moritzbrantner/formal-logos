@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Case.Catholicism.MaximeEnsIsGodStrength.godNamesTheUniqueMaximeEnsOfMaximeEnsIsGod",
   "comparator_config": "results/77c6dbea-751c-4f65-b10b-e73876491ee5/comparator.json",
   "status": "solution-present",
-  "description": "Strength order registration: if every being maximal in being (MAXIME_ENS_1) is GOD_2, then a being that is maximal in being, causes the being of every other being and is the only maximum in being is GOD_2, for every cause relation CausesIn. Same InAct, MoreIn, esse and GOD_2 throughout. Application only; it establishes neither statement. Strictness unverified."
+  "description": "Strength order registration: if every being maximal in being (MAXIME_ENS_1) is GOD_2, then a being that is maximal in being, causes the being of every other being and is the only maximum in being is GOD_2, for every cause relation CausesIn. Same InAct, MoreIn, esse and GOD_2 throughout. Application only; it establishes neither statement. Strictness: the two-maxima control."
 }

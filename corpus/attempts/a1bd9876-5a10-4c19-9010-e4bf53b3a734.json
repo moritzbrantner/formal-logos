@@ -1,0 +1,18 @@
+{
+  "id": "a1bd9876-5a10-4c19-9010-e4bf53b3a734",
+  "label": "Discovered strength order: every maximum in being is GOD_2 over the reduced naming",
+  "date": "2026-11-20",
+  "statement_ids": [
+    "957a71fe-ba7e-5633-bef2-f5d287362fc5",
+    "e39a4fce-ccaf-5862-836e-9317923842f3"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "The first truth discover run (#1784; local report .cache/discover/20261120T125406Z-YRT8KawP/report.json, finding t20; Duper, certified with propext, Classical.choice and Quot.sound) found that MaximeEnsIsGod alone entails GodNamesTheUniqueMaximeEns at the same InAct, MoreIn, esse and GOD_2, for every CausesIn; no strengthens relation registered the pair. Registered as a strength order (strong 957a71fe to weak e39a4fce) with a hand-written zero-axiom proof that drops the two extra antecedent conditions, a constructive certified difference (the strong version adds that every maximum in being outside the reduced description is GOD_2) and a two-maxima strictness control on Bool. Same senses GOD_2 and MAXIME_ENS_1 throughout; the semantics preflight reported no mixing. The strong version's result AQUINAS-ST-I-Q2-A3-MAXIME-ENS-IS-GOD uses the weak version as a premise, so the pair lies on a support cycle; the registration closes and establishes neither statement.",
+  "evidence": [
+    "77c6dbea-751c-4f65-b10b-e73876491ee5",
+    "16501a16-dbcd-46ba-8b03-fa88701e1ae9",
+    "ee78cc8b-c98d-4a20-a298-62c0687a3716",
+    "PR-1820"
+  ]
+}

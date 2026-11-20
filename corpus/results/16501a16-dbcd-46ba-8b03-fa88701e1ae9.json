@@ -1,0 +1,11 @@
+{
+  "id": "16501a16-dbcd-46ba-8b03-fa88701e1ae9",
+  "label": "Every maximum in being is GOD_2 factors as reduced naming plus the clause outside it",
+  "argument_id": "4fdb45f6-0965-4984-9957-fe79c8041719",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.MaximeEnsIsGodStrength.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.MaximeEnsIsGodStrength.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.MaximeEnsIsGodStrength.maximeEnsOverReducedNamingExact",
+  "comparator_config": "results/16501a16-dbcd-46ba-8b03-fa88701e1ae9/comparator.json",
+  "status": "solution-present",
+  "description": "Certified difference (#1598): forward, every maximum is GOD_2, so the reduced naming holds and the delta holds by its right disjunct; backward, a maximum meeting the reduced description is GOD_2 by the reduced naming, otherwise the delta gives GOD_2. Premise-free and constructive; it asserts none of the statements compared."
+}

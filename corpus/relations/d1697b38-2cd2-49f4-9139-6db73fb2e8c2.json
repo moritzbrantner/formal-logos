@@ -1,0 +1,49 @@
+{
+  "id": "d1697b38-2cd2-49f4-9139-6db73fb2e8c2",
+  "label": "Every maximum in being is GOD_2 over the reduced naming: certified difference",
+  "subject_kind": "statement",
+  "subject_id": "957a71fe-ba7e-5633-bef2-f5d287362fc5",
+  "predicate": "strength_comparison",
+  "object_kind": "statement",
+  "object_id": "e39a4fce-ccaf-5862-836e-9317923842f3",
+  "comparison_spec": "TruthCore.Case.Catholicism.maximeEnsOverReducedNaming",
+  "delta_statement_id": "8570ba58-69b1-4a47-9391-db209e3147cb",
+  "background_statement_ids": [],
+  "evidence_result_ids": {
+    "equivalence": "16501a16-dbcd-46ba-8b03-fa88701e1ae9",
+    "implication": "77c6dbea-751c-4f65-b10b-e73876491ee5"
+  },
+  "separator": {
+    "setting": "TruthCore.Case.Catholicism.twoMaximaSetting",
+    "result_id": "ee78cc8b-c98d-4a20-a298-62c0687a3716"
+  },
+  "statement_parameter_indices": {
+    "stronger": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6
+    ],
+    "weaker": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "delta": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "note": "Difference of 'every maximum in being is GOD_2' and the reduced nominal description: the strong version adds exactly that every maximum in being that does not both cause the being of every other being and be the only maximum is GOD_2. The delta concerns only maxima outside the reduced description, including the case of several maxima, which the at-most-one-maximum result addresses separately. The two-maxima separator is a finite interpretation, not a claim that several maxima in being exist."
+}
