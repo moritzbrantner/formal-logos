@@ -1,0 +1,11 @@
+{
+  "id": "f49ba264-a7b0-4915-82ef-b2ba8bb0f002",
+  "label": "Time-symmetry and momentary-PSR controls checked",
+  "argument_id": "4e923f57-f14b-4552-a5a2-2d9321037ce1",
+  "challenge_module": "TruthCore.Results.Causality.TimeSymmetricGiving.Challenge",
+  "solution_module": "TruthCore.Results.Causality.TimeSymmetricGiving.Solution",
+  "theorem": "TruthCore.Results.Causality.TimeSymmetricGiving.controls",
+  "comparator_config": "results/f49ba264-a7b0-4915-82ef-b2ba8bb0f002/comparator.json",
+  "status": "solution-present",
+  "description": "Eternal inertia satisfies the momentary PSR on Schmid's origin-or-inertia explanation, the cessation law, exercise and time symmetry, makes its received-esse thing homogeneous, and falsifies the productive bridge, coverage, 40a97664 and the homogeneous conclusion; a giver at one moment only falsifies time symmetry; a cause never exercised falsifies exercise; begun inertia satisfies coverage, exercise, time symmetry, the momentary PSR and received onset is given while 40a97664 fails and its thing is not homogeneous; eternal sustaining satisfies everything; with no explanations the bridge holds and the PSR fails. A countermodel shows a premise is needed in that interpretation, not that it is false. Model claims concern these interpretations only."
+}

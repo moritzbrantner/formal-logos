@@ -1,0 +1,10 @@
+{
+  "id": "237d1920-ddbe-4db1-93af-64efbc61ed99",
+  "label": "Time-symmetry and momentary-PSR controls checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "ae450cd0-9ce6-49ea-9f87-8df87aaf761f",
+  "rule": "Explicit one-world interpretations over integer times with two individuals, checked by case analysis, Mathlib order isomorphisms and linear arithmetic",
+  "meaning": "Eternal inertia satisfies the momentary PSR on Schmid's origin-or-inertia explanation, the cessation law, exercise and time symmetry, makes its received-esse thing homogeneous, and falsifies the productive bridge, coverage, 40a97664 and the homogeneous conclusion; a giver at one moment only falsifies time symmetry; a cause never exercised falsifies exercise; begun inertia satisfies coverage, exercise, time symmetry, the momentary PSR and received onset is given while 40a97664 fails and its thing is not homogeneous; eternal sustaining satisfies everything; with no explanations the bridge holds and the PSR fails. A countermodel shows a premise is needed in that interpretation, not that it is false. Model claims concern these interpretations only.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
