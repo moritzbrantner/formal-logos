@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Causality.ModalFrameStrength.frameS5ToS4",
   "comparator_config": "results/43f9db19-4939-4948-b887-0704faa02e33/comparator.json",
   "status": "solution-present",
-  "description": "Strength order registration: if the route's modal frame is reflexive and Euclidean (S5), it is reflexive and transitive (S4). Applies the existing modal-library theorem TruthCore.Modal.s5_implies_s4 to the route frame. Establishes neither frame premise."
+  "description": "Strength order registration: if the route's modal frame is reflexive and Euclidean (S5), it is reflexive and transitive (S4). Applies the existing modal-library theorem TruthCore.Modal.s5_implies_s4 to the route frame. Establishes neither frame premise. No instantiation transcription is declared: the proof applies a proved library theorem of TruthCore.Modal.Cube with real content, not an open bridge, as in the node-level result boxS5ToBoxS4."
 }

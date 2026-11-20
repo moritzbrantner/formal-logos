@@ -2,7 +2,7 @@
 # premises (#1017), found by a `truth discover` run over the modal sense-fork
 # nodes (report 20261120T134013Z, main e61946aa1; attempt "Discover run over
 # the modal sense-fork nodes"). The proofs apply the modal library's frame
-# theorems (TruthCore.Modal.Cube, TruthCore.Modal.Kripke), connecting that
+# theorems (TruthCore.Modal.Cube), connecting that
 # library to the root route's frame premises. Analyst formulations,
 # attribution deferred. No frame premise is asserted or established.
 
@@ -14,7 +14,7 @@ disambiguations = ["DISAMB-NECESSARY"]
 [[statement]]
 id = "Frame-class strictness controls for the route's frame premises"
 lean = "Control.FrameStrictness"
-paraphrase = "Formal controls on explicit route frames (one candidate individual present at every world): (1) on the reflexive non-transitive chain over the naturals (n accesses n and n+1) the route frame is KT but not S4; (2) on the two-world order frame (both worlds access themselves, the first accesses the second, not conversely) it is KT but not KTB (not symmetric) and (3) S4 but not S5 (not Euclidean); (4) on the reflexive symmetric non-transitive path over the naturals (n accesses n-1, n and n+1) it is KTB but not S5. Statements about these interpretations only; no frame is claimed to be the frame of the route."
+paraphrase = "Formal controls on explicit route frames (one candidate individual present at every world): (1) on the reflexive non-transitive chain over the naturals (n accesses n and n+1) the route frame is KT but not S4; (2) on the two-world order frame (both worlds access themselves, the first accesses the second, not conversely) it is KT but not KTB (not symmetric) and (3) S4 but not S5 (not Euclidean); (4) on the reflexive symmetric non-transitive path over the naturals (n accesses n and n+1, and n-1 when n > 0) it is KTB but not S5. Statements about these interpretations only; no frame is claimed to be the frame of the route."
 definitions = ["DEF-MODAL-FIXTURE-FRAME"]
 disambiguations = ["DISAMB-NECESSARY"]
 
@@ -27,6 +27,7 @@ weakening = true
 axioms = []
 rule = "Frame inclusion s5_implies_s4 of the modal library (a reflexive Euclidean relation is transitive)"
 meaning = "Strength order registration: if the route's modal frame is reflexive and Euclidean (S5), it is reflexive and transitive (S4). Applies the existing modal-library theorem TruthCore.Modal.s5_implies_s4 to the route frame. Establishes neither frame premise."
+description = "Strength order registration: if the route's modal frame is reflexive and Euclidean (S5), it is reflexive and transitive (S4). Applies the existing modal-library theorem TruthCore.Modal.s5_implies_s4 to the route frame. Establishes neither frame premise. No instantiation transcription is declared: the proof applies a proved library theorem of TruthCore.Modal.Cube with real content, not an open bridge, as in the node-level result boxS5ToBoxS4."
 
 [[argument]]
 id = "S5 route frame entails KTB route frame"
@@ -37,6 +38,7 @@ weakening = true
 axioms = []
 rule = "Frame inclusion s5_implies_ktb of the modal library (a reflexive Euclidean relation is symmetric)"
 meaning = "Strength order registration: if the route's modal frame is reflexive and Euclidean (S5), it is reflexive and symmetric (KTB). Applies the existing modal-library theorem TruthCore.Modal.s5_implies_ktb to the route frame. Establishes neither frame premise."
+description = "Strength order registration: if the route's modal frame is reflexive and Euclidean (S5), it is reflexive and symmetric (KTB). Applies the existing modal-library theorem TruthCore.Modal.s5_implies_ktb to the route frame. Establishes neither frame premise. No instantiation transcription is declared: the proof applies a proved library theorem of TruthCore.Modal.Cube with real content, not an open bridge, as in the node-level result boxS5ToBoxS4."
 
 [[argument]]
 id = "S4 route frame entails KT route frame"
