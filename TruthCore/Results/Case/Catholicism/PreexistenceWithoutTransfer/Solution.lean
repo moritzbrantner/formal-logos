@@ -177,7 +177,27 @@ theorem universalTransferGodExists_strictness :
     Control.universalTransferGodExists.priorSimply,
     Control.universalTransferGodExists.isGod,
     Control.universalTransferGodExists.esse]
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;> decide
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  · decide
+  · decide
+  · decide
+  · intro c hall x r hDifferent hEsse hAct
+    fin_cases c
+    · fin_cases x <;> cases r <;> simp_all
+    · have hbad := hall (0 : Fin 3) (by decide) (by decide)
+      simp at hbad
+    · have hbad := hall (0 : Fin 3) (by decide) (by decide)
+      simp at hbad
+  · decide
+  · decide
+  · intro m hm _ _ _ _
+    rcases hm with ⟨_, hNoHigher⟩
+    fin_cases m
+    · decide
+    · exact False.elim (hNoHigher 0 ⟨rfl, by decide⟩)
+    · exact False.elim (hNoHigher 0 ⟨rfl, by decide⟩)
+  · decide
+  · decide
 
 /-- Q.4 a.2 preexistence from transfer and the cause-of-being restriction: a
 cause of `x`'s being causes each perfection `x` has, and a cause of a thing's
