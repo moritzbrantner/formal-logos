@@ -33,6 +33,21 @@ class MergedLegacyIds(unittest.TestCase):
         aliases = Aliases.load(ROOT)
         for merged, survivor in MERGED.items():
             self.assertEqual(aliases.resolve(merged, ["inference"]), legacy_uuid("inference", survivor))
+            # The retired uuid, derived from the merged legacy id, redirects too.
+            retired = legacy_uuid("inference", merged)
+            self.assertEqual(aliases.resolve(retired, ["inference"]), legacy_uuid("inference", survivor))
+
+    def test_migration_redirects_merged_handles(self) -> None:
+        from migrate_uuid import Migration
+
+        migration = Migration(ROOT)
+        migration.load()
+        for merged, survivor in MERGED.items():
+            expected = legacy_uuid("inference", survivor)
+            self.assertEqual(migration.lookup(merged, ("inference",)), expected)
+            self.assertEqual(migration.lookup(legacy_uuid("inference", merged), ("inference",)), expected)
+        # An ordinary uuid is left alone.
+        self.assertIsNone(migration.lookup(legacy_uuid("inference", "INF-CATHOLIC-EVIL-EXISTS"), ("inference",)))
 
     def test_no_argument_names_a_retired_inference(self) -> None:
         retired = {legacy_uuid("inference", merged) for merged in MERGED}

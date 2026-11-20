@@ -289,6 +289,7 @@ class Aliases:
         self.legacy_of: dict[str, str] = {}
         self.by_legacy: dict[str, list[tuple[str, str]]] = {}
         self.by_label: dict[str, list[tuple[str, str]]] = {}
+        self.by_merged_id: dict[str, list[tuple[str, str]]] = {}
         for kind, record in records:
             self.add(kind, record)
 
@@ -311,6 +312,9 @@ class Aliases:
         for alias in merged if isinstance(merged, list) else []:
             if isinstance(alias, str) and alias:
                 self.by_legacy.setdefault(alias, []).append((kind, record_id))
+                # The retired record's id was derived from its legacy id; it redirects too.
+                singular = KIND_DIRS.get(kind, kind)
+                self.by_merged_id.setdefault(legacy_uuid(singular, alias), []).append((kind, record_id))
         if isinstance(label, str) and label:
             self.label_of[record_id] = label
             self.by_label.setdefault(label, []).append((kind, record_id))
@@ -328,7 +332,7 @@ class Aliases:
             found = keep((kind, token) for kind in self.kind_of[token])
             if found:
                 return found
-        for table in (self.by_legacy, self.by_label):
+        for table in (self.by_merged_id, self.by_legacy, self.by_label):
             found = keep(table.get(token, []))
             if found:
                 return found

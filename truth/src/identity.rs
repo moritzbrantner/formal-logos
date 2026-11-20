@@ -773,6 +773,8 @@ pub struct Aliases {
     by_legacy: HashMap<String, Vec<(String, String)>>,
     by_label: HashMap<String, Vec<(String, String)>>,
     by_folded_label: HashMap<String, Vec<(String, String)>>,
+    /// Ids of records consolidated into another one (#1660) -> survivors.
+    by_merged_id: HashMap<String, Vec<(String, String)>>,
 }
 
 /// A lookup that names no record, or more than one.
@@ -817,6 +819,16 @@ impl Aliases {
                 .entry(merged.to_owned())
                 .or_default()
                 .push(pair.clone());
+            // The retired record's id was derived from its legacy id, so it
+            // redirects to the survivor too.
+            let singular = KIND_DIRS
+                .iter()
+                .find(|(directory, name)| *directory == kind || *name == kind)
+                .map_or(kind, |(_, name)| name);
+            self.by_merged_id
+                .entry(legacy_uuid(singular, merged))
+                .or_default()
+                .push(pair.clone());
         }
         if let Some(label) = record
             .get("label")
@@ -852,6 +864,7 @@ impl Aliases {
             }
         }
         for found in [
+            self.by_merged_id.get(token),
             self.by_legacy.get(token),
             self.by_label.get(token),
             self.by_folded_label.get(&fold(token)),
@@ -1031,6 +1044,12 @@ mod tests {
         let mut aliases = Aliases::default();
         aliases.add("inferences", survivor.as_object().unwrap());
         assert_eq!(aliases.resolve("INF-GONE", None).unwrap(), keep);
+        let gone_id = legacy_uuid("inference", "INF-GONE");
+        assert_eq!(aliases.resolve(&gone_id, None).unwrap(), keep);
+        assert_eq!(
+            aliases.resolve(&gone_id, Some(&["inferences"])).unwrap(),
+            keep
+        );
         assert_eq!(aliases.resolve("INF-KEEP", None).unwrap(), keep);
         assert_eq!(aliases.legacy(&keep), "INF-KEEP");
 

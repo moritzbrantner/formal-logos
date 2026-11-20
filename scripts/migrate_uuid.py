@@ -116,6 +116,7 @@ class Migration:
         self.root = root
         # legacy id -> kind -> uuid, from records already converted or about to be.
         self.legacy: dict[str, dict[str, str]] = {}
+        self.merged_ids: dict[str, dict[str, str]] = {}
         self.files: dict[Path, tuple[str, Any]] = {}  # path -> (original text, data)
         self.counts: dict[str, int] = {}
         self.references = 0
@@ -148,11 +149,12 @@ class Migration:
                         # converts to the survivor.
                         if isinstance(alias, str) and alias:
                             self.legacy.setdefault(alias, {})[kind] = record_id
+                            self.merged_ids.setdefault(legacy_uuid(kind, alias), {})[kind] = record_id
 
     def lookup(self, value: str, kinds: tuple[str, ...]) -> str | None:
-        if is_uuid(value):
-            return None
-        table = self.legacy.get(value, {})
+        # An already-migrated reference to a record consolidated into another
+        # one (#1660) is redirected to the survivor; other uuids stay.
+        table = self.merged_ids.get(value, {}) if is_uuid(value) else self.legacy.get(value, {})
         for kind in kinds:
             if kind in table:
                 return table[kind]
