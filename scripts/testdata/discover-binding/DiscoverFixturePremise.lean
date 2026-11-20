@@ -30,3 +30,22 @@ def AllP (B : Type) (P : B → Prop) : Prop := ∀ y, P y
 def Marker (B : Type) (x : B) : Prop := True
 
 end TruthCore.DiscoverFixturePremise
+
+namespace TruthCore.DiscoverFixturePremise
+
+/-- An unused candidate that introduces the carrier `C` (Codex P1 on #1796,
+domain provenance through same-module aliases). -/
+def DomMarker (C : Type) : Prop := True
+
+/-- Shares `C` with `DomMarker` by the same-module convention. -/
+def DomRule (C : Type) (P : C → Prop) (Q : Prop) : Prop := (∃ c, P c) → Q
+
+end TruthCore.DiscoverFixturePremise
+
+namespace TruthCore.DiscoverFixturePremise
+
+/-- A tautology whose only role is to put an element `x : B` next to `P`; its
+carriers match the target's by name only (bridge domain provenance). -/
+def BMark (B D : Type) (P : B → D → Prop) (x : B) : Prop := ∀ d, P x d ∨ ¬ P x d
+
+end TruthCore.DiscoverFixturePremise

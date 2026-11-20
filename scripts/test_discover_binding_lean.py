@@ -172,6 +172,37 @@ class DiscoverBindingTest(unittest.TestCase):
         self.assertLessEqual(set(outcome["proof"]["axioms"]), {"propext", "Classical.choice", "Quot.sound"})
         self.assertIsNone(outcome["witness"])
 
+    def test_name_identification_survives_dropping_its_origin(self):
+        marker = "TruthCore.DiscoverFixturePremise.DomMarker"
+        rule = "TruthCore.DiscoverFixturePremise.DomRule"
+        goal = "TruthCore.DiscoverFixtureTarget.DomGoal"
+        witness = "TruthCore.DiscoverFixtureTarget.DomWitness"
+        rows = [[goal, "Q", "q"], [rule, "Q", "q"], [rule, "P", "p"], [witness, "P", "p"]]
+        config = lean_string(json.dumps({"tags": rows}))
+        outcome = run([f'#discover "alias" 20000 "" {config} {goal} from {marker} {rule} {witness}'])["alias"]
+        # `DomMarker` introduces `C`; `DomRule` (same module) shares it by the
+        # module convention, `DomWitness` (other module) by name only. Dropping
+        # the unused `DomMarker` leaves the two retained premises sharing `C`
+        # across modules by name alone: the flag must stay.
+        self.assertIsNotNone(outcome["closed"])
+        self.assertEqual(outcome["minimal"], [1, 2])
+        self.assertEqual(outcome["domain_identified_by_name"], [f"{witness}.C = {rule}.C"])
+
+    def test_bridge_domains_include_the_declarations_of_bridge_only_binders(self):
+        target = "TruthCore.DiscoverFixtureTarget.BTarget"
+        every = "TruthCore.DiscoverFixtureTarget.BAll"
+        mark = "TruthCore.DiscoverFixturePremise.BMark"
+        config = lean_string(json.dumps({"tags": [[every, "P", "p"], [mark, "P", "p"]], "bridges": True}))
+        outcome = run([f'#discover "fixed" 20000 "" {config} {target} from {every} {mark}'])["fixed"]
+        # The fixed bridge `∀ d, P x d → Q x d` uses `BMark`'s element `x`, which
+        # neither the used premise nor the target mentions: it is an assumed
+        # binder, and `BMark`'s carrier `B` joined the target's by name only, so
+        # the bridge carries that identification although `BMark` is unused.
+        fixed = [b for b in outcome["bridges"] if b["fixed"] == ["x"]]
+        self.assertTrue(fixed, outcome)
+        self.assertEqual(fixed[0]["assumed_binders"], ["x"])
+        self.assertIn(f"{mark}.B = {target}.B", fixed[0]["domain_identified_by_name"])
+
 
 if __name__ == "__main__":
     unittest.main()

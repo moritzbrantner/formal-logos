@@ -1917,6 +1917,34 @@ pub struct Bridge {
     /// Some unlocked goal identified a carrier or structure across modules by
     /// name: the bridge then also needs a tag or bridge for that domain.
     pub domain_identified_by_name: bool,
+    /// Those identifications (`A.B = C.B`).
+    pub domain_identifications: BTreeSet<String>,
+}
+
+/// The qualifications of a ranked bridge, for the text report: the elements it
+/// assumes and the domains its goals identified by name only. Empty for an
+/// unqualified bridge.
+pub fn bridge_qualifications(bridge: &Bridge) -> Vec<String> {
+    let mut out = Vec::new();
+    if !bridge.assumed_binders.is_empty() {
+        let names: Vec<&str> = bridge.assumed_binders.iter().map(String::as_str).collect();
+        out.push(format!(
+            "assumes an element no used statement introduces: {}",
+            names.join(", ")
+        ));
+    }
+    if bridge.domain_identified_by_name {
+        let names: Vec<&str> = bridge
+            .domain_identifications
+            .iter()
+            .map(String::as_str)
+            .collect();
+        out.push(format!(
+            "identified across modules by name only (needs a sense tag or a bridge): {}",
+            names.join("; ")
+        ));
+    }
+    out
 }
 
 /// The missing bridges of failed goals, ranked by the number of targets they
@@ -1945,10 +1973,19 @@ pub fn rank_bridges(findings: &[Finding]) -> Vec<Bridge> {
                     premises: BTreeSet::new(),
                     assumed_binders: BTreeSet::new(),
                     domain_identified_by_name: false,
+                    domain_identifications: BTreeSet::new(),
                 });
             entry.targets.insert(finding.trial.target.clone());
             entry.goals.push(finding.trial.label.clone());
             entry.domain_identified_by_name |= domain_flag(b).is_some();
+            entry.domain_identifications.extend(
+                b["domain_identified_by_name"]
+                    .as_array()
+                    .into_iter()
+                    .flatten()
+                    .filter_map(Value::as_str)
+                    .map(str::to_owned),
+            );
             entry.assumed_binders.extend(
                 b["assumed_binders"]
                     .as_array()
@@ -1983,6 +2020,7 @@ pub fn bridge_json(bridge: &Bridge) -> Value {
         "with_premises": bridge.premises,
         "assumed_binders": bridge.assumed_binders,
         "domain_identified_by_name": bridge.domain_identified_by_name,
+        "domain_identifications": bridge.domain_identifications,
         "status": "candidate proposition: a research question, not a premise of any record",
     })
 }

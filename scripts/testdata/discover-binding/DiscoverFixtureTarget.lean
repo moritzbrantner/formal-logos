@@ -48,3 +48,23 @@ def NeedsHard (B : Type) (R : B → Prop) : Prop := Hard ∧ ∀ y, R y → R y
 def GivesHard (B : Type) (R : B → Prop) : Prop := Hard
 
 end TruthCore.DiscoverFixtureTarget
+
+namespace TruthCore.DiscoverFixtureTarget
+
+/-- The goal of the domain-provenance fixture. -/
+def DomGoal (Q : Prop) : Prop := Q
+
+/-- Shares `C` with the premise module's `DomMarker` only by name. -/
+def DomWitness (C : Type) (P : C → Prop) : Prop := ∃ c, P c
+
+end TruthCore.DiscoverFixtureTarget
+
+namespace TruthCore.DiscoverFixtureTarget
+
+/-- Some `y` has `Q y d` for every `d`. -/
+def BTarget (B D : Type) (Q : B → D → Prop) : Prop := ∃ y, ∀ d, Q y d
+
+/-- Everything has `P`. -/
+def BAll (B D : Type) (P : B → D → Prop) : Prop := ∀ y d, P y d
+
+end TruthCore.DiscoverFixtureTarget

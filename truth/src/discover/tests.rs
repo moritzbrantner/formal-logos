@@ -399,7 +399,7 @@ fn certification_reads_errors_and_axioms_per_theorem() {
 
 #[test]
 fn missing_bridges_rank_by_targets_unlocked() {
-    let bridge = |from: &str| json!({"from": from, "to": "M.T.q", "fixed": ["esse"], "text": format!("∀ x, {from} x → q x"), "used": [0], "domain_identified_by_name": if from == "M.P.a" { json!(["X.B = M.T.B"]) } else { json!([]) }});
+    let bridge = |from: &str| json!({"from": from, "to": "M.T.q", "fixed": ["esse"], "text": format!("∀ x, {from} x → q x"), "used": [0], "assumed_binders": if from == "M.P.a" { json!(["esse"]) } else { json!([]) }, "domain_identified_by_name": if from == "M.P.a" { json!(["X.B = M.T.B"]) } else { json!([]) }});
     let finding = |label: &str, target: &str, bridges: Vec<Value>| Finding {
         trial: Trial {
             label: label.into(),
@@ -431,6 +431,16 @@ fn missing_bridges_rank_by_targets_unlocked() {
         bridge_json(&rows[0])["domain_identified_by_name"],
         json!(false)
     );
+    // The text report shows both qualifications of a qualified bridge, and
+    // none for an unqualified one.
+    assert_eq!(
+        bridge_qualifications(&rows[1]),
+        [
+            "assumes an element no used statement introduces: esse",
+            "identified across modules by name only (needs a sense tag or a bridge): X.B = M.T.B",
+        ]
+    );
+    assert!(bridge_qualifications(&rows[0]).is_empty());
 }
 
 #[test]

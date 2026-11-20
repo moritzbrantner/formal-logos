@@ -268,6 +268,9 @@ fn text(
                 b.targets.len(),
                 names(&targets, statements)
             ));
+            for qualification in discover::bridge_qualifications(b) {
+                lines.push(format!("     only if: {qualification}"));
+            }
         }
     }
     for kind in [

@@ -114,6 +114,23 @@ structure Origin where
   sense : Option String
   deriving Inhabited
 
+/-- How one declaration's binder joined an outer binder: the declaration, its
+binder name and module, the outer binder's origin, and whether the match was
+the cross-module name fallback. A binder a declaration introduces is its own
+member (`byName := false`). Every non-instance match is recorded, so a name
+identification can be recomputed among any subset of declarations. -/
+structure Membership where
+  decl : Name
+  binder : Name
+  module : Name
+  originDecl : Name
+  originBinder : Name
+  byName : Bool
+  deriving Inhabited
+
+def Membership.text (m : Membership) (decl binder : Name) : String :=
+  s!"{m.decl}.{m.binder} = {decl}.{binder}"
+
 def moduleOf (n : Name) : MetaM Name := do
   let env ← getEnv
   match env.getModuleIdxFor? n with
@@ -134,7 +151,7 @@ def isStructureType (d : Expr) : MetaM Bool := do
   | _ => return false
 
 partial def bind (tags : Array (Name × Name × String)) (strict : Bool)
-    (byName : IO.Ref (Array (Name × Name × Name × String))) (decl : Name) (module : Name)
+    (byName : IO.Ref (Array Membership)) (decl : Name) (module : Name)
     (xs : Array Expr) (origins : Array Origin) (e : Expr)
     (k : Array Expr → Array Origin → Expr → TermElabM α) : TermElabM α := do
   let ty ← instantiateMVars (← inferType e)
@@ -151,13 +168,18 @@ partial def bind (tags : Array (Name × Name × String)) (strict : Bool)
       let allowed := if bi.isInstImplicit then xbi.isInstImplicit else authored || fallback
       if allowed then
         if ← isDefEq (← inferType x) d then
-          if fallback && !bi.isInstImplicit then
-            byName.modify (·.push (decl, o.decl, o.binder, s!"{decl}.{n} = {o.decl}.{o.binder}"))
+          unless bi.isInstImplicit do
+            -- decl, binder, module, origin declaration and binder, by name
+            let m : Membership := ⟨decl, n, module, o.decl, o.binder, fallback⟩
+            byName.modify (·.push m)
           return ← bind tags strict byName decl module xs origins (mkApp e x) k
     if bi.isInstImplicit then
       if let some inst ← (try synthInstance? d catch _ => pure none) then
         return ← bind tags strict byName decl module xs origins (mkApp e inst) k
     let n' ← freshUserName xs n
+    unless bi.isInstImplicit do
+      let m : Membership := ⟨decl, n, module, decl, n, false⟩
+      byName.modify (·.push m)
     withLocalDecl n' bi (← instantiateMVars d) fun y =>
       bind tags strict byName decl module (xs.push y) (origins.push { decl, binder := n, module, sense })
         (mkApp e y) k
@@ -165,7 +187,7 @@ partial def bind (tags : Array (Name × Name × String)) (strict : Bool)
 
 /-- `bind` for every name in turn: the target first, then the premises. -/
 partial def bindAll (tags : Array (Name × Name × String)) (strict : Bool)
-    (byName : IO.Ref (Array (Name × Name × Name × String)))
+    (byName : IO.Ref (Array Membership))
     (xs : Array Expr) (origins : Array Origin) (names : List Name) (acc : Array Expr)
     (k : Array Expr → Array Origin → Array Expr → TermElabM α) : TermElabM α := do
   match names with
@@ -453,17 +475,23 @@ def witness (xs : Array Expr) (goals : Array Expr) (u : NameSet) (heartbeats : N
     if ok then return some label
   return none
 
-/-- The name identifications that matter for the declarations `kept`: between
-two kept declarations, or of two kept declarations in different modules (`modOf`)
-with the same binder of a dropped one. -/
-def keptIdentifications (all : Array (Name × Name × Name × String)) (kept : Array Name)
-    (modOf : Name → Name) : Array String :=
-  all.filterMap fun (d, od, ob, text) =>
-    if !kept.contains d then none
-    else if kept.contains od then some text
-    else if all.any (fun (d2, od2, ob2, _) => d2 != d && kept.contains d2 && od2 == od && ob2 == ob
-        && modOf d2 != modOf d)
-      then some text else none
+/-- The name identifications among the declarations `kept`, recomputed from
+the binder memberships: a kept declaration whose binder joined an outer binder
+by the cross-module name fallback, while another kept declaration of a
+different module shares that outer binder (by any rule: its origin, the
+same-module convention, a sense tag or the fallback). The originating
+declaration need not be kept: two retained declarations that share a binder
+only through a dropped one still share it by name. -/
+def keptIdentifications (all : Array Membership) (kept : Array Name) : Array String := Id.run do
+  let mut out : Array String := #[]
+  for m in all do
+    unless m.byName && kept.contains m.decl do continue
+    let partner := all.find? fun p => kept.contains p.decl && p.module != m.module &&
+      p.originDecl == m.originDecl && p.originBinder == m.originBinder
+    if let some p := partner then
+      let t := m.text p.decl p.binder
+      unless out.contains t do out := out.push t
+  return out
 
 /-! ### Missing bridges
 
@@ -574,7 +602,7 @@ def bridgeFor (p q : Expr) (pElems qElems : Array (String × Expr)) (fix : Bool)
 
 def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
     (hyps : Array (Nat × Expr)) (concl : Expr) (u : NameSet) (heartbeats : Nat)
-    (domains : Array Nat → Array String) :
+    (domains : Array Nat → Array Name → Array String) :
     TermElabM (Array Json) := do
   -- The vocabulary the premises use and the vocabulary the conclusion uses,
   -- after delta-expansion: relations (binders, or Prop-valued fields of
@@ -634,8 +662,13 @@ def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
           prove ownXs usedHyps concl u budget "" (duperOnly := true) | continue
       unless proof.used.contains 1000 do continue
       unless proof.axioms.all allowedAxioms.contains do continue
-      let assumed ← (ownXs.filter (!baseXs.contains ·)).mapM fun x => do
+      let bridgeOnly := ownXs.filter (!baseXs.contains ·)
+      let assumed ← bridgeOnly.mapM fun x => do
         return (← x.fvarId!.getUserName).eraseMacroScopes.toString
+      -- The declarations that introduced a bridge-only binder count as kept for
+      -- the name identifications its domain rests on.
+      let assumedDecls := (xs.zip origins).filterMap fun (x, o) =>
+        if bridgeOnly.contains x then some o.decl else none
       -- A bridge that proves the target on its own merely restates it.
       if (← prove xs #[(1000, bridge)] concl u (max 2000 (heartbeats / 10)) ""
           (duperOnly := true)).isSome then continue
@@ -647,20 +680,18 @@ def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
       out := out.push (Json.mkObj [("from", Json.str pn), ("to", Json.str qn),
         ("fixed", toJson fixed), ("text", Json.str text), ("assumed_binders", toJson assumed),
         ("used", toJson (proof.used.filter (· != 1000))),
-        ("domain_identified_by_name", toJson (domains (proof.used.filter (· != 1000))))])
+        ("domain_identified_by_name", toJson (domains (proof.used.filter (· != 1000)) assumedDecls))])
       break
   return out
 
 def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : String)
     (tags : Array (Name × Name × String)) (bridges : Bool) (strict : Bool)
-    (byName : IO.Ref (Array (Name × Name × Name × String))) :
+    (byName : IO.Ref (Array Membership)) :
     TermElabM Json := do
   let env ← getEnv
   for n in premises.push target do
     unless env.contains n do
       return Json.mkObj [("error", Json.str s!"unknown declaration {n}")]
-  let mods ← (premises.push target).mapM fun n => return (n, ← moduleOf n)
-  let modOf (n : Name) : Name := ((mods.find? (·.1 == n)).map (·.2)).getD n
   bindAll tags strict byName #[] #[] (target :: premises.toList) #[] fun xs origins ps => do
     let concl := ps[0]!
     let hyps := (ps.extract 1 ps.size).zipIdx.map fun (h, i) => (i, h)
@@ -703,8 +734,8 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
     let some full := full
       | do
         let identified ← byName.get
-        let domains (used : Array Nat) : Array String :=
-          keptIdentifications identified ((used.filterMap fun i => premises[i]?).push target) modOf
+        let domains (used : Array Nat) (extra : Array Name) : Array String :=
+          keptIdentifications identified ((used.filterMap fun i => premises[i]?).push target ++ extra)
         let found ← if bridges then missingBridges xs origins target hyps concl u heartbeats domains
           else pure #[]
         return Json.mkObj [("binders", toJson added), ("alone", Json.null), ("closed", Json.null),
@@ -770,7 +801,7 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
       ("proof", proved (some best)),
       -- An incompatibility concerns its core only; an implication, its premises and target.
       ("domain_identified_by_name", toJson (keptIdentifications identified
-        (if vacuous.isSome then coreNames else minNames.push target) modOf)),
+        (if vacuous.isSome then coreNames else minNames.push target))),
       ("vacuous", proved vacuous),
       ("vacuous_core", vacuousCore),
       ("vacuous_core_proof", proved coreProof),
@@ -790,7 +821,7 @@ syntax (name := discoverTry) "#discover " str num str str ident " from " ident* 
       if t.size == 3 then some (t[0]!.toName, t[1]!.toName, t[2]!) else none
   let bridges := (config.getObjValAs? Bool "bridges").toOption.getD false
   let strict := (config.getObjValAs? Bool "strict_domains").toOption.getD false
-  let byName ← IO.mkRef (#[] : Array (Name × Name × Name × String))
+  let byName ← IO.mkRef (#[] : Array Membership)
   let target := stx[5].getId
   let premises := stx[7].getArgs.map (·.getId)
   let started ← IO.monoMsNow
@@ -798,7 +829,8 @@ syntax (name := discoverTry) "#discover " str num str str ident " from " ident* 
     try trial target premises heartbeats zip tags bridges strict byName
     catch e => return Json.mkObj [("error", Json.str (← e.toMessageData.toString))]
   let result := result.setObjVal! "label" (Json.str label)
-  let all := (← byName.get).map (·.2.2.2)
+  let all := (← byName.get).filterMap fun m =>
+    if m.byName then some (m.text m.originDecl m.originBinder) else none
   let result := if (result.getObjVal? "domain_identified_by_name").isOk then result else
     result.setObjVal! "domain_identified_by_name" (toJson all)
   let result := result.setObjVal! "ms" (toJson ((← IO.monoMsNow) - started))

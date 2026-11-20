@@ -52,7 +52,13 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
    `domain_identified_by_name`, because no cross-module goal could otherwise be
    stated until carriers are tagged. Such a goal is filtered
    (`domain_by_name`), kept out of `--write-spec` drafts and listed as needing a
-   sense tag or a bridge; its missing bridges carry the same flag. Every other
+   sense tag or a bridge; its missing bridges carry the same flag. The flag is
+   recomputed among the retained declarations (the minimal premises and the
+   target, or a bridge's used premises, the target and the declarations of
+   its assumed elements): two retained declarations of different modules that
+   share a binder only through a dropped declaration still share it by name.
+   The text report prints these qualifications, and a bridge's assumed
+   elements, under each ranked bridge. Every other
    parameter becomes a new outer binder, so the theorem stays universally
    quantified, as a result theorem's binders are. A universe-polymorphic
    statement is taken at the lowest universe that keeps each carrier a type
