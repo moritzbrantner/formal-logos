@@ -1,0 +1,127 @@
+# Horizontal tests of weak concurrent actualization 40a97664: the momentary
+# principle of sufficient reason (Schmid's accepted PSR-like principle and
+# Feser's productive bridge) and time symmetry for things without a beginning
+# (coverage, exercise and the Leibnizian contrastive principle over moments).
+# docs/notes/ca-horizontal-support.md. Analyst formulations, attribution deferred.
+
+[batch]
+vocab = "TruthCore.Causality.TimeSymmetricGiving"
+results = "TruthCore.Results.Causality.TimeSymmetricGiving"
+
+# ---------------------------------------------------------------- statements
+
+[[statement]]
+id = "Whatever has received esse has an explanation of its presence at each moment of it"
+lean = "MomentaryPSR"
+paraphrase = "OPEN analyst premise, attribution deferred (momentary principle of sufficient reason): in every history of the model, whatever has its esse received in some principle (DEF-ESSE-RECEIVED-IN) has, at every moment t at which it is present, some reason r that explains its being present at t (PresenceExplanation.Explains v r x t, the primitive of definition 261516e9; causal or not). Analyst formulation of the 'PSR or PSR-like explanatory principle' that Schmid 2021 (read; paragraph beginning 'And this discovery especially helps') says he accepts from Feser's argument, namely that something must explain the fact that an object continues to exist; restricted here to received-esse things to match the scope of 40a97664, and extended from continuing existence to every moment of presence, first moments and the moments of a beginningless thing included. No claim attributes this typed premise, or that extension, to him. Shared: Schmid's origin-or-inertia explanation (definition 8c20c988) satisfies it with no giver after onset (Control parts 1 and 4), and the sustaining interpretation satisfies it (part 5). It is not the world-indexed existence PSR of the contingency routes (TruthCore.Explanation.ExistencePSR), which has no moments."
+definitions = ["DEF-ESSE-RECEIVED-IN", "261516e9-9e57-4750-a6ba-f0ea64ff09bf", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE"]
+disambiguations = ["DISAMB-ESSE-RECEPTION"]
+
+[[statement]]
+id = "Any explanation of a received-esse thing's presence at a moment comes with a giver of its being then"
+lean = "ExplanationNeedsGiver"
+paraphrase = "OPEN analyst premise, attribution deferred (productive bridge): in every history of the model, if a received-esse thing (DEF-ESSE-RECEIVED-IN) is present at t and some reason explains its presence at t (definition 261516e9), then something gives it being at t (GivesAt, definition 158301bc, STRICT esse-giving reading). The typed counterpart, contraposed, of the auxiliary thesis Schmid 2021 (read; paragraph beginning 'Feser: \"Now, if EIT is false') attributes to Feser and rejects: if there is no sustaining cause, the explanation of an object's existence at t is not something extrinsic to it (with EIT false, nothing intrinsic either). No claim attributes this typed premise to either author. Under the shared momentary PSR it is equivalent to weak concurrent actualization 40a97664 (result psrBridgeCarriesTheCrux), so it is the crux restated, not a further price item. Schmid's origin-or-inertia explanation falsifies it (Control part 1)."
+definitions = ["DEF-ESSE-RECEIVED-IN", "261516e9-9e57-4750-a6ba-f0ea64ff09bf", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE"]
+disambiguations = ["DISAMB-ESSE-RECEPTION"]
+
+[[statement]]
+id = "Under the momentary PSR the productive bridge is concurrent actualization"
+lean = "PSRBridgeCarriesTheCrux"
+paraphrase = "Closed result, attribution deferred: for every history, giving relation, explanation relation and reception predicate, if the momentary principle of sufficient reason holds (every received-esse thing has, at each moment of its presence, some explanation of its presence then), then the productive bridge (every such explanation comes with a giver of being at that moment) holds iff weak concurrent actualization 40a97664 holds. Forward by the derivation concurrentOfMomentaryPSR; backward because 40a97664 supplies a giver at every moment of presence whatever the explanation. So once the momentary PSR is granted (Schmid accepts its continuation form; the typed extension to every moment is the analyst's), the productive bridge says exactly what 40a97664 says; the PSR adds nothing toward 40a97664."
+definitions = ["261516e9-9e57-4750-a6ba-f0ea64ff09bf", "DEF-ESSE-RECEIVED-IN", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE"]
+disambiguations = ["DISAMB-ESSE-RECEPTION"]
+
+[[statement]]
+id = "Whatever has received esse has its being caused by another"
+lean = "ReceivedEsseHasCauseOfBeing"
+paraphrase = "OPEN analyst premise, attribution deferred (coverage): for every x and principle z, if x's esse is received in z (DEF-ESSE-RECEIVED-IN), then some c distinct from x causes x's being (CausesIn c x esse, the tenseless CAUSING_AN_EFFECT_3 of DEF-CAUSE-OF-PERFECTION, mode not fixed by the type). The converse direction of the reception bridge da72ae93. After the tenseless De ente c.4 principle (what has esse not from its essence has it from another; the corpus's world-indexed version is 457698e4 over DistinctEsseAt, and no bridge between DistinctEsseAt and EsseReceivedIn is built here); the reading over EsseReceivedIn is the analyst's. Timeless and untensed: it says nothing about when the cause acts. An inertialist accepts it for begun things through the originating cause if it counts the originator as a cause of the thing's being, not only of its becoming (Control part 4). For a beginningless homogeneous received-esse thing that the inertialist holds is given being at no moment, an inertialist who also accepts exercise and time symmetry must reject it for that thing: the proof of homogeneousConcurrentOfSymmetry runs thing by thing, so coverage for that thing, exercise for its cause and symmetry of its history give it a giver at every moment of its presence; Control part 1 exhibits that position. Warrant: the De ente argument is tenseless and does not distinguish begun from beginningless things, so its warrant does not come through 40a97664; but an inertialist who restricts it to begun things does so on the same change-only rationale on which it rejects 40a97664, so applying it to beginningless things is where the dispute relocates, not an independent defeat."
+definitions = ["DEF-ESSE-RECEIVED-IN", "DEF-CAUSE-OF-PERFECTION", "DEF-ESSE"]
+disambiguations = ["DISAMB-ESSE-RECEPTION", "DISAMB-BECOMING-BEING-CAUSE"]
+
+[[statement]]
+id = "A cause of another's being gives it being at some moment at which it is present"
+lean = "CausesOfBeingAreExercised"
+paraphrase = "OPEN analyst premise, attribution deferred (exercise): in every history of the model, if c, distinct from x, causes x's being (CausesIn c x esse, tenseless CAUSING_AN_EFFECT_3) and x is present at some moment, then c gives x being (GivesAt, definition 158301bc, STRICT esse-giving reading, time index on the effect side) at some moment at which x is present. It asks for one moment only, not every moment, and is satisfied by an originating cause at a first moment of presence, as an inertialist accepts who grants that the originating cause gives being (STRICT reading) at the first moment (onset fa3e228b, a conditional grant; Control part 4). It is the only premise here that links the tenseless CausesIn to time-indexed giving. It differs from concurrence d7f5a528 (which requires the cause at every moment at which anything gives): concurrence holds vacuously where nothing gives, as in Control part 3, where exercise fails, so concurrence does not entail it; no strength order is claimed. Its rival for a beginningless thing is a cause of its being whose activity bears on it at no moment of its presence (Control part 3); no account on file says what such causing of a thing's being, whose being is its presence at its moments, would consist in, and none is recorded as a substantive objection."
+definitions = ["DEF-CAUSE-OF-PERFECTION", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE"]
+disambiguations = ["DISAMB-BECOMING-BEING-CAUSE", "88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d"]
+
+[[statement]]
+id = "Time symmetries of a history preserve giving being"
+lean = "GivingRespectsTimeSymmetry"
+paraphrase = "OPEN analyst premise, attribution deferred (time symmetry of giving; the contrastive principle of sufficient reason applied to moments): in every history v of the model, if an order automorphism sigma of the times preserves every being's presence and every supplied non-giving time-indexed fact (PreservesHistory, definition 6d0f77a2), then for all g, x and t, g gives x being at t iff g gives x being at sigma t (GivesAt, definition 158301bc). Meaning: where nothing in the history's presence pattern and supplied facts distinguishes two moments, nothing distinguishes giving at one from giving at the other. Shape of Leibniz's argument that, were time distinct from things, no reason could be given why things are applied to some instants rather than others (2bd8f0e3, sourced; uniform space 7dd2af35); applying it to the schedule of giving is the analyst's. Recorded rivals: Clarke's reply that a will may choose without an external difference (81ec01fe), a free giver at one arbitrary moment (Control part 2), and noncontrastive, intrinsic or probabilistic explanation that leaves alternatives (e35adb5f). Leibniz himself draws from the temporal argument that instants without things are nothing, which presses against the possibility of distinct indiscernible moments that the price analysis in docs/notes/ca-horizontal-support.md assumes. Its warrant is a contrastive PSR, not 40a97664: it holds in every inertial interpretation with no giving (parts 1 and 3) and in begun inertia with giving at onset only (part 4), where an automorphism preserving the begun thing's presence fixes its first moment (checked for that control). As typed it is stronger than a contrastive principle in two ways: it is relative to the supplied Facts, which must not encode giving, so an incomplete Facts lets a map move unsupplied facts; and it does not require the history's designated present moment (History.now) to be preserved."
+definitions = ["6d0f77a2-0474-4cc0-9aac-71f7fba67b33", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-TEMPORAL-HISTORY-NOW-SLICE"]
+disambiguations = []
+
+[[statement]]
+id = "Whatever has received esse and is homogeneous is given being whenever it is present"
+lean = "ConcurrentlyActualizedIfHomogeneous"
+paraphrase = "Analyst conclusion, attribution deferred (concurrent actualization for homogeneous things): in every history v of the model, whatever has its esse received in some principle (DEF-ESSE-RECEIVED-IN) and is homogeneous in v (any two moments of its presence are related by an order automorphism of the times preserving the history, definition 6d0f77a2) is given being by something (GivesAt, definition 158301bc, STRICT esse-giving reading) at every moment at which it is present. The restriction of weak concurrent actualization 40a97664 to homogeneous things, entailed by it (registered strength order). On integer times a stationary beginningless history makes its things homogeneous, while the begun thing of Control part 4, present at more than one moment, is not homogeneous, so this is silent on such things, where onset fa3e228b and parity 5b24ef26 speak, and speaks where onset is silent; a thing present at one moment only is trivially homogeneous, and there it says what onset says. Derived from coverage, exercise and time symmetry; the derivation gives one cause of being at every moment of presence."
+definitions = ["DEF-ESSE-RECEIVED-IN", "6d0f77a2-0474-4cc0-9aac-71f7fba67b33", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE"]
+disambiguations = ["DISAMB-ESSE-RECEPTION"]
+
+[[statement]]
+id = "Time-symmetry and momentary-PSR controls: eternal and begun inertia, nonvacuity"
+lean = "Control.Certificate"
+paraphrase = "Closed controls on interpretations with one world, integer times and two individuals, false alone with received esse; statements about these interpretations only. (1) Eternal inertia (both individuals present at every moment, no giving, no cause of being): Schmid's origin-or-inertia explanation satisfies the momentary PSR and the cessation law; the productive bridge and 40a97664 fail; false is homogeneous; coverage fails while exercise and time symmetry hold; concurrent actualization for homogeneous things fails. (2) Eternal, true causes false's being and gives at moment 0 only: coverage and exercise hold; time symmetry and the homogeneous conclusion fail. (3) Eternal, true causes false's being and never gives: coverage and time symmetry hold; exercise and the homogeneous conclusion fail. (4) Begun inertia (false present from moment 0 on, given being at moment 0 only): coverage, exercise, time symmetry, the momentary PSR on Schmid's explanation, the cessation law and received onset is given (fa3e228b) hold; 40a97664 fails while concurrent actualization for homogeneous things holds, since false is not homogeneous. (5) Eternal sustaining (true gives false being at every moment): every premise of both derivations, 40a97664 and the homogeneous conclusion hold. (6) No explanations: the productive bridge holds vacuously; the momentary PSR and 40a97664 fail."
+definitions = ["261516e9-9e57-4750-a6ba-f0ea64ff09bf", "8c20c988-31fd-4b59-acf2-db230a6ea32e", "6d0f77a2-0474-4cc0-9aac-71f7fba67b33", "DEF-ESSE-RECEIVED-IN", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-TEMPORAL-HISTORY-NOW-SLICE"]
+disambiguations = ["DISAMB-ESSE-RECEPTION"]
+
+# ---------------------------------------------------------------- arguments
+
+[[argument]]
+id = "Concurrent actualization from the momentary PSR and the productive bridge"
+theorem = "concurrentOfMomentaryPSR"
+premises = ["Whatever has received esse has an explanation of its presence at each moment of it", "Any explanation of a received-esse thing's presence at a moment comes with a giver of its being then"]
+conclusion = "40a97664-e481-42d7-8458-78374a61aa26"
+transcription = "single_application"
+axioms = []
+rule = "The momentary PSR supplies an explanation at each moment of presence; the productive bridge supplies a giver at that moment"
+meaning = "Transcription (single application, invariant 16): the last step applies the productive bridge, whose consequent is the conclusion's matrix. Let x have its esse received and be present at t; by the momentary PSR some reason explains its presence at t; by the bridge something gives it being at t. That is weak concurrent actualization 40a97664. It types the shape of Feser's argument as Schmid 2021 reports it (a PSR-like principle plus the thesis that without a sustaining cause there is no extrinsic explanation, with no intrinsic one either; the typed PSR also extends the continuation form to every moment of presence); no claim attributes it. Its point is to locate the crux: each premise is needed (Control part 1, Schmid's explanation, where the PSR holds and the bridge fails; part 6, no explanations, where the bridge holds and the PSR fails), and under the PSR the bridge is equivalent to 40a97664 (psrBridgeCarriesTheCrux). So the derivation supplies no warrant for 40a97664 beyond the bridge's, which is 40a97664's. All premises stay OPEN. No premise is established."
+
+[[argument]]
+id = "Under the momentary PSR the productive bridge is concurrent actualization, checked"
+theorem = "psrBridgeCarriesTheCrux"
+premises = []
+conclusion = "Under the momentary PSR the productive bridge is concurrent actualization"
+axioms = []
+rule = "Forward: compose the momentary PSR with the bridge; backward: concurrent actualization gives a giver at each moment of presence whatever the explanation"
+meaning = "Closed result with no premises, quantified over every history, giving relation, explanation relation and reception predicate. Given the momentary PSR, the productive bridge entails weak concurrent actualization 40a97664 (by concurrentOfMomentaryPSR), and 40a97664 entails the bridge outright. It shows that the PSR family, at the matching time-indexed scope, adds nothing toward 40a97664: what separates the sides once the PSR is shared is exactly 40a97664. It establishes nothing about reality."
+
+[[argument]]
+id = "Concurrent actualization for homogeneous things, from coverage, exercise and symmetry"
+theorem = "homogeneousConcurrentOfSymmetry"
+premises = ["Whatever has received esse has its being caused by another", "A cause of another's being gives it being at some moment at which it is present", "Time symmetries of a history preserve giving being"]
+conclusion = "Whatever has received esse and is homogeneous is given being whenever it is present"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Coverage gives a cause of being; exercise gives a moment at which it gives; homogeneity gives a history-preserving automorphism carrying that moment to any other; time symmetry carries the giving along"
+meaning = "Non-transcription derivation: no premise has the conclusion's matrix as its consequent, and the universal over moments comes from combining time symmetry with homogeneity. Let x have its esse received in z, be homogeneous in history v, and be present at t. By coverage some c distinct from x causes x's being; by exercise c gives x being at some moment s at which x is present; by homogeneity some order automorphism sigma of the times preserving the history sends s to t; by time symmetry c gives x being at sigma s = t. So the same cause of being gives x being at every moment of its presence. Each premise is needed (Control parts 1 to 3); all hold with the conclusion in part 5. The premises hold in begun inertia (part 4), where 40a97664 fails, so they do not give parity for begun things. The premises are OPEN; the proof uses only Quot.sound, through Mathlib's OrderIso, and the Comparator config permits the standard Mathlib axiom set. No premise is established."
+
+[[argument]]
+id = "Concurrent actualization entails it for homogeneous things"
+theorem = "homogeneousOfConcurrent"
+premises = ["40a97664-e481-42d7-8458-78374a61aa26"]
+conclusion = "Whatever has received esse and is homogeneous is given being whenever it is present"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Drop the homogeneity hypothesis"
+meaning = "Strength order registration: weak concurrent actualization 40a97664 entails its restriction to homogeneous things, for any supplied facts. A single application of the premise (invariant 16), registered for the strength order, not as progress; it establishes neither. The proof uses only Quot.sound, through Mathlib's OrderIso in the statement; the Comparator config permits the standard Mathlib axiom set."
+
+[[argument]]
+id = "Time-symmetry and momentary-PSR controls checked"
+theorem = "controls"
+premises = []
+conclusion = "Time-symmetry and momentary-PSR controls: eternal and begun inertia, nonvacuity"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Explicit one-world interpretations over integer times with two individuals, checked by case analysis, Mathlib order isomorphisms and linear arithmetic"
+meaning = "Eternal inertia satisfies the momentary PSR on Schmid's origin-or-inertia explanation, the cessation law, exercise and time symmetry, makes its received-esse thing homogeneous, and falsifies the productive bridge, coverage, 40a97664 and the homogeneous conclusion; a giver at one moment only falsifies time symmetry; a cause never exercised falsifies exercise; begun inertia satisfies coverage, exercise, time symmetry, the momentary PSR and received onset is given while 40a97664 fails and its thing is not homogeneous; eternal sustaining satisfies everything; with no explanations the bridge holds and the PSR fails. A countermodel shows a premise is needed in that interpretation, not that it is false. Model claims concern these interpretations only."
+
+# ---------------------------------------------------------------- relations
+
+[[relation]]
+id = "Concurrent actualization strengthens it for homogeneous things"
+subject_kind = "statement"
+subject_id = "40a97664-e481-42d7-8458-78374a61aa26"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Whatever has received esse and is homogeneous is given being whenever it is present"
+verification_result_id = "Concurrent actualization entails it for homogeneous things"
+note = "Same history, giving relation and reception predicate; the weak version restricts its subjects to things homogeneous in the history relative to the supplied facts. Strict: Control part 4 (begun inertia), where the homogeneous version holds because the begun thing is not homogeneous, and 40a97664 fails."

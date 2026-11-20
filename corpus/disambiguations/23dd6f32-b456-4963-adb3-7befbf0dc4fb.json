@@ -61,6 +61,10 @@
         {
           "declaration": "TruthCore.Causality.DependenceGroundingPriority.ActualNonmutualDependencePriority",
           "parameter": "DependsForBeing"
+        },
+        {
+          "declaration": "TruthCore.Causality.Frame.CausalityFrame",
+          "parameter": "DependsForBeing"
         }
       ]
     },

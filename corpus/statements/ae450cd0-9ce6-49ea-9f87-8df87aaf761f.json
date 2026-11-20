@@ -1,0 +1,17 @@
+{
+  "id": "ae450cd0-9ce6-49ea-9f87-8df87aaf761f",
+  "label": "Time-symmetry and momentary-PSR controls: eternal and begun inertia, nonvacuity",
+  "paraphrase": "Closed controls on interpretations with one world, integer times and two individuals, false alone with received esse; statements about these interpretations only. (1) Eternal inertia (both individuals present at every moment, no giving, no cause of being): Schmid's origin-or-inertia explanation satisfies the momentary PSR and the cessation law; the productive bridge and 40a97664 fail; false is homogeneous; coverage fails while exercise and time symmetry hold; concurrent actualization for homogeneous things fails. (2) Eternal, true causes false's being and gives at moment 0 only: coverage and exercise hold; time symmetry and the homogeneous conclusion fail. (3) Eternal, true causes false's being and never gives: coverage and time symmetry hold; exercise and the homogeneous conclusion fail. (4) Begun inertia (false present from moment 0 on, given being at moment 0 only): coverage, exercise, time symmetry, the momentary PSR on Schmid's explanation, the cessation law and received onset is given (fa3e228b) hold; 40a97664 fails while concurrent actualization for homogeneous things holds, since false is not homogeneous. (5) Eternal sustaining (true gives false being at every moment): every premise of both derivations, 40a97664 and the homogeneous conclusion hold. (6) No explanations: the productive bridge holds vacuously; the momentary PSR and 40a97664 fail.",
+  "lean_declaration": "TruthCore.Causality.TimeSymmetricGiving.Control.Certificate",
+  "definition_ids": [
+    "261516e9-9e57-4750-a6ba-f0ea64ff09bf",
+    "8c20c988-31fd-4b59-acf2-db230a6ea32e",
+    "6d0f77a2-0474-4cc0-9aac-71f7fba67b33",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

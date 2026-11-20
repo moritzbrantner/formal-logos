@@ -1,0 +1,11 @@
+{
+  "id": "9d9c1993-6809-494d-99ce-866614f6037a",
+  "label": "Stable, vacuous and ground-status omission controls",
+  "argument_id": "6d80fd9f-64a2-4733-863a-cb80064c6a1f",
+  "challenge_module": "TruthCore.Results.Explanation.NoFoundationLawChaos.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.NoFoundationLawChaos.Solution",
+  "theorem": "TruthCore.Results.Explanation.NoFoundationLawChaos.omissions",
+  "comparator_config": "results/9d9c1993-6809-494d-99ce-866614f6037a/comparator.json",
+  "status": "solution-present",
+  "description": "Lack of GroundedTotality is not equivalent to law chaos, and law stability is not logically eliminated by an unexplained totality. The scope grounding predicate is weaker than ultimate adequate explanation; actual cross-world possibility and future law change remain separate burdens."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "75a7d512-9463-435f-b6c6-a917ce15509a",
+  "label": "Stable-law positive entitlement and excluded-future control (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "7496e183-8924-42e3-8a30-bf6e1c59c7c6",
+  "rule": "Induction from stable initial state and deterministic copy transitions",
+  "meaning": "Strong guarantees are not contradictory norms by themselves; their conflict with positive projection depends on the two admitted alternative futures. The smaller stable cell yields positive examples without transferring its lawhood or epistemic access to reality.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

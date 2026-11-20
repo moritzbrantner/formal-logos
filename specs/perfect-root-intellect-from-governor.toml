@@ -27,3 +27,61 @@ conclusion = "017befa2-6ac0-52d2-b49c-d1d10507c2cf"
 axioms = []
 rule = "Identify the intelligent maximum with the supplied actual root by esse causation, then derive the structural and volitional tail on that same witness"
 meaning = "Analyst horizontal support option for the existing positive-root endpoint, attribution deferred. Retains the twelve other inputs of PerfectRootPositiveIntellectWill.derive and replaces the universal immateriality-to-intellect premise with the existing MaximeEnsGovernsNature endpoint, instantiated with ONE HasIntellect predicate for the Fifth-Way Intelligent parameter and HAS_INTELLECT_1. This explicit dictionary application remains a semantic burden: understanding ends must instantiate intellectual cognition, rather than merely sensory response or biological benefit; no equivalence of arbitrary predicates is derived. Unpack the supplied perfect actual root n and intelligent maximum d. If d differs from n, the maximum-in-being causal policy gives d an esse-cause edge to n (which has esse). EsseCauseIsActualConcreteGround turns that edge into a ground of the SAME actual concretum n, contradicting its roothood. Hence d=n and HasIntellect transports to n. The existing uniting-cause, composition-kind, priority, no-component, goodness and transfer policies then give the SAME positive-root tuple, and the existing will principle gives HasWill n. The governor need not first be shown a root, and no all-maxima uniqueness axiom, God-name, universal immateriality bridge, cognitive grade transfer or actual form-acquisition event is assumed. Perfect-root existence and the complete conditional provenance of the intelligent-governor endpoint remain separate obligations. No unconditional existence of God, premise truth, rival defeat or root closure follows. The old universal/direct-assumption route is retained. Exact research comparison, positive teleological rationale, naturalistic organizational/consumer rival and missing application evidence are in docs/immaterial-intellect-reception.md#horizontal-support-same-root-through-an-intelligent-governor-2026-11-17."
+
+# #1793: exactly one supplied actual root, fixed-esse governor and the existing
+# GOD_4 naming. These definitions do not identify capacity with thought exercise.
+[[statement]]
+id = "An actual concrete root exists at the selected world"
+lean = "ActualRootExistsAt"
+paraphrase = "Analyst structural input, attribution deferred: Some being n is an actual concretum at the selected world w and has no incoming selected actual-concrete ground. No common coverage, global well-foundedness, modal necessity, intellectual capacity or God naming follows from root existence alone. Equivalent to the actual-concrete supply application in ConcreteExistentialSupply only under its explicitly recorded graph interpretation; the occurrence of a cognitive episode is not this root-existence premise."
+definitions = ["c57e2682-08e6-527e-950f-0fa0a7ff11ef", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+disambiguations = ["6e92c6e3-edf0-5d7e-b2b3-788b24b8b768", "c529e8d3-43e3-53a8-a82f-3955e9815265", "6f1d1395-7c1d-5bd5-a45d-03380857aed6"]
+
+[[statement]]
+id = "One actual common GOD_4 root has HAS_INTELLECT_1 capacity"
+lean = "IntellectualGodCommonRootAt"
+paraphrase = "Analyst fixed-world same-witness endpoint: ONE n is an actual concrete root in the selected ground relation at world w, directly grounds every other actual concretum in that same world and relation, is named GOD_4 under the retained naming premise, and possesses HAS_INTELLECT_1 (intellectual capacity). Identity, direct coverage, name and capacity all refer to n. No necessity at other worlds, complete metaphysical explanation, current thought occurrence, omniscience, exercised will or true God identification follows without further premises and warranted applications."
+definitions = ["1620ba7e-edb9-56c4-bd02-3ece55903b1c", "c57e2682-08e6-527e-950f-0fa0a7ff11ef", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "88f9f6e8-997b-5f7d-afa1-c501954c3807", "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4"]
+disambiguations = ["6e92c6e3-edf0-5d7e-b2b3-788b24b8b768", "c529e8d3-43e3-53a8-a82f-3955e9815265", "6f1d1395-7c1d-5bd5-a45d-03380857aed6", "205a39c3-915d-5fe4-8076-a9ff91329e08"]
+
+[[argument]]
+id = "An actual root exists from the selected whole-roster descent"
+theorem = "actualRootExistsOfWholeRoster"
+premises = ["56f68b40-9737-59a0-8cac-5610980a1547", "5c898d24-d1f7-5087-b09e-3287a723e787", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
+conclusion = "An actual concrete root exists at the selected world"
+axioms = []
+transcription = "assembly"
+rule = "Reuse WholeRosterFoundation.actualRootExists with unchanged selected profile and world"
+meaning = "Existing actual-root existence from inhabited actual concreta, the selected whole-roster nontrapping condition and explicit excluded middle. The proof delegates unchanged to the established roster descent, not a new argument for its premises. No grades, governor, intellect, necessary-being status or God name is asserted; the new statement is a weaker reusable existential consumer."
+
+[[argument]]
+id = "The governor identifies one actual common GOD_4 root with intellect capacity"
+theorem = "intellectualGodCommonRoot"
+premises = [
+  "An actual concrete root exists at the selected world",
+  "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+  "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7",
+  "0436de86-6579-53f2-9ff5-2111ba44ebae",
+  "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+  "86efed1a-f353-5b5d-9431-df7fc643ace1",
+  "7067553d-cad9-5d79-b6b2-912e35051530",
+  "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+  "09c6d5f0-d412-5038-85f9-75fffb935727",
+  "571094b6-28bd-5398-9940-5e76a4573a5f",
+  "1ec205ed-b2a6-5384-bb5f-2565a9d325bf",
+]
+conclusion = "One actual common GOD_4 root has HAS_INTELLECT_1 capacity"
+axioms = []
+sense_bridges = [{term = "GOD", from = "GOD_1", to = "GOD_4", statement_id = "1ec205ed-b2a6-5384-bb5f-2565a9d325bf"}]
+rule = "Identify a governor-supplied maximal intelligent bearer with one supplied actual root; extend esse causal coverage to every actual concretum; reuse reducedDescription to name the same root"
+meaning = "Analyst conditional same-witness bridge, attribution deferred. One root n, an actual concretum at selected w with no incoming selected ground, is supplied independently of the governor (not from a second existential witness in this proof). One governed esse maximum d already has the SAME HasIntellect predicate read as HAS_INTELLECT_1. If d differs from n, fixed-esse genus causation and the existing n-in-esse interface make d cause n in esse; the one-way correspondence makes d an actual concrete ground of n, contradiction. Thus d=n and both maximality and intellectual capacity belong to that exact n. ExistingInActAt then applies genus causing to each other actual concretum x, giving direct ground coverage; ActualCommonRoot.uniqueRoot establishes the uniqueness among actual roots. The existing priority-ground interface makes n first; ActualityOnlyInsofarAsBeing, UniversalCauseTransfersPerfections, no-component-first and the OPEN GodNamesTheFullyDescribedPrinciple name this n by CausalPerfectionTransfer.reducedDescription. The governor also constructively implies GradesToMaximumAtBeing (it supplies a maximum unconditionally), so the absence of grades as a separate input is premise consolidation, not an independent new warrant or evidence hGovernor is weaker; global direction in governor is unused. This theorem needs only genus causality at the chosen esse, not in every respect, and uses no necessary/perfect-root, simplicity, immateriality, will or actual intellectual operation hypothesis. The reality of the cognitive director and its root application, causal transfer, grounding correspondence and God naming all remain open. Full matched scope/rival and revision conditions: docs/notes/teleology-first-mover.md#governor-root-intellect-capacity-and-god_4-stage-1793-2026-11-19."
+
+[[argument]]
+id = "Same intellectual GOD_4 common root supplies GOD_4 existence"
+theorem = "godExistsOfIntellectualRoot"
+premises = ["One actual common GOD_4 root has HAS_INTELLECT_1 capacity"]
+conclusion = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+axioms = []
+transcription = "instantiation"
+rule = "Project the existing GOD_4 existential from the same intellectual common-root witness"
+meaning = "The new package contains one n with IsGod n and HasIntellect n, plus actual-root and direct-coverage structure. Project GodExists IsGod, preserving the same witness in the proof and not asserting that arbitrary GOD_4 bearers have intellect. This is a transcription; no new warrant or distinct proof of the naming premise follows from the projection."

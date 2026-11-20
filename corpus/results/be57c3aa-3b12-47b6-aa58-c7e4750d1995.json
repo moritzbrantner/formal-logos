@@ -1,0 +1,11 @@
+{
+  "id": "be57c3aa-3b12-47b6-aa58-c7e4750d1995",
+  "label": "Fixed unrestricted rival equals union of deterministic schedules",
+  "argument_id": "0c489d01-2cd8-4bfc-bc89-a897149941bd",
+  "challenge_module": "TruthCore.Results.Explanation.NoFoundationLawChaos.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.NoFoundationLawChaos.Solution",
+  "theorem": "TruthCore.Results.Explanation.NoFoundationLawChaos.oneRival",
+  "comparator_config": "results/be57c3aa-3b12-47b6-aa58-c7e4750d1995/comparator.json",
+  "status": "solution-present",
+  "description": "The same fixed admissibility model admits all future changes at every finite cutoff even though each individual path is the unique solution of an ex-post deterministic law schedule. This extra radical admissibility assumption is OPEN as a metaphysical claim and does not follow from no ultimate foundation."
+}

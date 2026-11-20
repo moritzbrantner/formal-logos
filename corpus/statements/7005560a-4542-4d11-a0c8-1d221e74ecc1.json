@@ -1,0 +1,16 @@
+{
+  "id": "7005560a-4542-4d11-a0c8-1d221e74ecc1",
+  "label": "A cause of another's being gives it being at some moment at which it is present",
+  "paraphrase": "OPEN analyst premise, attribution deferred (exercise): in every history of the model, if c, distinct from x, causes x's being (CausesIn c x esse, tenseless CAUSING_AN_EFFECT_3) and x is present at some moment, then c gives x being (GivesAt, definition 158301bc, STRICT esse-giving reading, time index on the effect side) at some moment at which x is present. It asks for one moment only, not every moment, and is satisfied by an originating cause at a first moment of presence, as an inertialist accepts who grants that the originating cause gives being (STRICT reading) at the first moment (onset fa3e228b, a conditional grant; Control part 4). It is the only premise here that links the tenseless CausesIn to time-indexed giving. It differs from concurrence d7f5a528 (which requires the cause at every moment at which anything gives): concurrence holds vacuously where nothing gives, as in Control part 3, where exercise fails, so concurrence does not entail it; no strength order is claimed. Its rival for a beginningless thing is a cause of its being whose activity bears on it at no moment of its presence (Control part 3); no account on file says what such causing of a thing's being, whose being is its presence at its moments, would consist in, and none is recorded as a substantive objection.",
+  "lean_declaration": "TruthCore.Causality.TimeSymmetricGiving.CausesOfBeingAreExercised",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "c3c01e92-520e-5358-a58f-0cc7e9c9e6fa",
+    "88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d"
+  ]
+}

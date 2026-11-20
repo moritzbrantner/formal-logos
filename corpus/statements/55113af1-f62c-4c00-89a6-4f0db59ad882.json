@@ -1,0 +1,10 @@
+{
+  "id": "55113af1-f62c-4c00-89a6-4f0db59ad882",
+  "label": "One unrestricted rival admits every deterministic law schedule",
+  "paraphrase": "A single fixed unrestricted Profile works at every observation cutoff: its admitted complete paths are exactly the initial-true paths, equivalently the union of all individually deterministic copy/toggle-schedule solutions. Every finite observed prefix admits all later complete suffixes, and no deterministic Profile projects universally across that same class at any cutoff. This is one formal rival class, not an n-dependent choice of rival metaphysics or an empirically established ontic possibility space.",
+  "lean_declaration": "TruthCore.Explanation.NoFoundationLawChaos.OneRival",
+  "definition_ids": [
+    "10d0fb41-49a3-404f-898f-caabd0d0324e",
+    "58d12f26-3402-5f67-b768-3c71f3381894"
+  ]
+}

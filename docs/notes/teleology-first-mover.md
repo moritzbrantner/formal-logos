@@ -542,3 +542,172 @@ constraint restricted to the represented goods actually used, applied to a
 being that possesses its good. Test it against the existing `cognitiveOnly`
 and `selective` controls before any recognition by `HasWill`. Attempt:
 `e5a36b24-e0f4-4d9c-8cd4-cef767078a7e`.
+
+## Governor-root intellect capacity and GOD_4 stage (#1793, 2026-11-19)
+
+**Proposed formal outcome: CI Lean compilation and independent semantic
+challenge passed; corpus and Comparator checks pending.** The identity argument in
+`PerfectRootIntellectFromGovernor.derive` has a smaller, same-witness core:
+`maximumEqualsActualRootAtBeing` proves that any `IsMaximumIn InAct MoreIn
+esse` bearer equals a *supplied* `ActualRoot m w n` if `InAct n esse`, fixed-esse
+genus causation, the esse-cause-to-actual-ground correspondence and explicit
+excluded middle hold. `intellectAtActualRoot` applies this to the existing
+`MaximeEnsGovernsNature` witness, giving **both** maximality and `HasIntellect
+n` without changing n. The original `derive` now consumes that helper instead
+of repeating its equality proof. Thus neither its perfect/necessary-root
+package nor goodness, simplicity, matter, will, firstness or God naming was
+needed for the *intellect identity*; the original theorem and input bundle
+remain unchanged.
+
+At the same `m,w,esse`, `intellectCommonRootAtActualRoot` adds the existing
+`ExistingInActAt` and obtains for every actual concretum x either `x = n` or
+`ActualConcreteGround m w n x`. Every distinct x receives its **esse** from
+the maximal n by the fixed-esse genus premise and therefore an actual selected
+ground by the one-way correspondence. It forms `ActualCommonRootAt` with that
+same n; `ActualCommonRoot.uniqueRoot` gives selected actual-root uniqueness.
+The argument uses no maximum-existence premise beyond what the governor
+already asserts. In fact `governorImpliesGradesAtBeing` constructively
+projects `GradesToMaximumAtBeing` from `MaximeEnsGovernsNature`: the former
+is merely `(∃ x y, MoreIn esse x y) → ∃ d, IsMaximumIn ... esse d`, while the
+latter unconditionally provides an intelligent maximal d with the global
+direction clause. Therefore the new route **substitutes a stronger governor
+assumption for a separately listed grades assumption** when governor warrant
+is already part of the question; it neither weakens nor independently supports
+maximum existence. `IsMaximumIn` here is the selected *weak maximality* (in
+act and nothing more such), not greatestness or uniqueness by order alone.
+
+The registered package in
+`specs/perfect-root-intellect-from-governor.toml` separates the open
+`ActualRootExistsAt` input from one registered producer,
+`WholeRosterFoundation.actualRootExists` (population, roster nontrapping,
+excluded middle), recorded as reuse/assembly rather than fresh warrant.
+A separate Lean-only projection from `ActualCommonRootAt` is valid but not
+registered as a corpus argument: the source's inherited metadata mixes
+unsupported intrinsic-contribution and source-backed causal readings, and
+adding an artificial sense bridge would overstate provenance. Its substantive
+`intellectualGodCommonRoot` conclusion says:
+
+> **At this same selected actual world and ground relation, there exists one
+> actual common root n that is named GOD_4 and has HAS_INTELLECT_1 capacity.**
+
+It uses the supplied actual-root witness, excluded middle, fixed-esse genus
+causation, existent-to-esse actuality, esse-cause-to-ground correspondence,
+simple-priority-to-ground correspondence, actuality insofar as being,
+universal causal-perfection transfer, the no-component-first-being premise,
+`MaximeEnsGovernsNature` interpreted with the **same** `HasIntellect`
+predicate, and `GodNamesTheFullyDescribedPrinciple`. After deriving that n
+is first and unique among esse maxima, the proof reuses
+`CausalPerfectionTransfer.reducedDescription`: universal causal scope,
+transferred perfection, noncomponent remoteness and the OPEN **nominal naming
+premise** identify **this n** as GOD_4. The existing
+`DirectEsseRootGodExistence.godOfRoot` has a stronger all-respects genus and
+grades interface; this fixed-esse route reuses its underlying naming lemma
+without importing those unnecessary stronger inputs. Neither proof treats
+God naming or causal-perfection transfer as true by definition. The final
+`godExistsOfIntellectualRoot` is an explicitly classified transcription
+projecting the existing GOD_4-existence-stage conclusion; it supplies no
+second witness or new independent evidential support. It also does not give
+the *universal* `GodHasIntellect IsGod HasIntellect` conditional, which would
+require a premise linking **every** God bearer to this named root.
+
+### Capacity is not an occurrence, and causal source is not possession
+
+The selected conclusion is `HasIntellect n` in HAS_INTELLECT_1: possession of
+intellectual **capacity**. It is not `T n := ∃ e, Occurs e ∧ Bears n e` (an
+actually occurring thought by that bearer). A *necessary thinking root* is
+stronger in two different directions: de re `NecessaryAt m.ontic w n` and
+the actual event/bearer bridge into `T n`; neither follows from roothood or
+this governor theorem. The future #1791 thinker-origin branch must first
+prove the corresponding `ActualRoot m w n` for **the same n** before consuming
+these pointwise helpers; a thought occurrence in someone else cannot be
+transferred by changing the existential witness. The new package proves
+neither God of every world, current exercise, omniscience (#1737), intellectual
+will/choice nor the received/formal-or-eminent identification of cognitive
+perfections. `DeiFiliusOperationFromIntellect` needs the additional capacity
+to immanent-operation assumptions to reach operating; it is not an event
+constructor. The existing `HasWill` bridge and possession-sensitive appetite
+application remain as described above, untouched.
+
+Nor does producing an intellectual effect automatically make its first cause
+an actual thinker. `CausalPerfectionTransfer` and
+`WholePowerPerfection.rootPerfectionFromWholePower` have distinct formal-or-
+eminent perfection and source-capacity interpretations, whereas the present
+result obtains intellect by **identity with a governor already described as
+intelligent**. That makes the route a concrete premise-weakening, same-witness
+composition and direct God-stage support **option**, not new positive warrant
+that a maximal governor is genuinely intellectual. No universal
+source-of-cognitive-effects → literal `HasIntellect` premise was introduced
+or smuggled into the naming lemma.
+
+### Same-phenomenon support, serious rival and next discriminator
+
+The strongest available positive case remains the existing local
+understanding/means–end examples: the Rochette coring and bridge-closure
+examples documented at
+[the matched-recognition audit](../immaterial-intellect-reception.md#matched-understanding-case-the-bridge-closure-inference-2026-11-17)
+give warrant for a director's represented end in those particular tasks.
+They are a real reason to retain the intellectual-director premise in the
+*local* case, not a derivation of the **universal** `MaximeEnsGovernsNature`
+or of a reduction from a finite director to an intellectual first source.
+The positive rationale of a coherent causal/intellectual explanation at the
+same source can be considered alongside the q.14 immateriality line; it is
+not an additional case of first-source recognition just because it has a new
+formal presentation. The direct-assumption option for `571094b6` remains.
+
+The standing explanatory rival on this same phenomenon is ordinary
+teleonomy plus local cognitive agency: learning, selection, feedback and
+environmental constraints can organize successful means–end behavior; an
+actual human or artificial controller may represent the goal in the
+particular coring/bridge-closure task, while impersonal underlying law and
+physical conditions support that controller. This model gives a positive
+account of *the local success and of the generation of cognitive capacities*
+without attributing a represented end to an additional maximal first
+governor. It targets the **application/warrant** for `MaximeEnsGovernsNature`
+and the extra first-source reduction, not the checked implication under that
+premise. By itself it does not explain whether all actual esse is grounded in
+one source; that distinct question is carried by `hGenus`, `hEsse` and the
+root input, and a mere finite causal graph is not a rival metaphysical proof.
+Conversely, ordinary rule-governed selection/feedback is not by itself an
+account of intentional representation in a genuinely intellectual director;
+the local examples can involve such representation without establishing that
+the source of the whole process represents it.
+
+This leaves the previously recorded `simpleImpersonal` rival alive: a single,
+simple necessary cause can underwrite laws and locally generated capacities
+while lacking `HasIntellect`, if the immateriality-to-intellect and
+governor/recognition premises are false. Its causal and possession claims
+need their own positive warrant; existing physical-ground controls show
+formal compatibility at selected assignments, not real-world likelihood.
+No new independent source reading, model-certified omission, or metaphysical
+defeat is claimed here. Upward revision would require a matched episode plus
+an independently justified attribution of the **first** ungrounded source's
+own intellectual representation, or an independently warranted bridge from
+underived capacity-production to *possessed intellectual power* that survives
+the impersonal-production account. Downward revision would require a
+same-episode positive alternative explaining the *represented intellectual
+end* without any intellectual agent, or a substantive defeat of the q.14
+interpretation, fixed-esse causation, or God-naming application. Separate
+scope: a true occurrence `T(n)` must still be shown to be borne by the SAME
+root, not inferred from possession of a capacity. The current provisional
+judgment remains **conditionally motivated but first-source recognition and
+literal thought exercise open**, with no self-evident or established premise
+declared and no claim of actual root closure.
+
+**Proof/sense self-sweep (provisional until CI):** new live interfaces reuse
+`ActualRoot`, actual-concrete ground, the existing weak `IsMaximumIn` at
+fixed esse, `MaximumInBeingCausesAllBeingsReading`, `HasIntellect` in one
+dictionary, and the existing GOD_4-naming bridge. No CAUSE_1/CAUSE_2 mixing:
+`Directs` is used only in the supplied governor predicate and never becomes
+`CausesIn`. The root/nonroot contrast is on the same `m.ontic`, `m.concrete`,
+`m.grounds`, world `w`, and respect `esse`; the output is a joint existential
+of **one n**. New argument `intellectualGodCommonRoot` has exactly eleven
+logical premise binders and no hidden modal, idealist, event or God-existence
+input. The 2 root-supply results and 1 projection are classified
+transcriptions; they do not claim extra warrant. The original frozen
+`derive` signature is unchanged. Focused Lean, binding, zero-axiom,
+Comparator/NanoDa, semantic challenge and computed `frontier-diff` remain
+pending until exact-head CI and coordinator review; there is no local cached
+Lean/Cargo toolchain to certify this draft. New target IDs and exact results
+are generated from the linked spec; failed/rejected paths and reopening
+conditions are recorded here and in the matched older attempts rather than
+as a new historical attribution.

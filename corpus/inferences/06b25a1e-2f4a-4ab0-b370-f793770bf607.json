@@ -1,0 +1,10 @@
+{
+  "id": "06b25a1e-2f4a-4ab0-b370-f793770bf607",
+  "label": "Universal law projection under unrestricted future suffixes (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "d79c620f-18d8-44e3-a030-cf49299676ad",
+  "rule": "Arbitrary suffix splice, populated distinct history witnesses and exact Boolean transition characterization",
+  "meaning": "All alternatives in a fixed finite-record cell share the prefix but admit every future state pair. Any one law with a forbidden future transition fails to hold of every admitted history; any deterministic such law fails. No inference from no ultimate ground to this ontic alternative range, no actual law choice and no normative scientific entitlement is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

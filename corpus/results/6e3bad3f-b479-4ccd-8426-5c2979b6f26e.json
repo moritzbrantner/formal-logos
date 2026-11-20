@@ -1,0 +1,11 @@
+{
+  "id": "6e3bad3f-b479-4ccd-8426-5c2979b6f26e",
+  "label": "Universal law projection under unrestricted future suffixes",
+  "argument_id": "50ff5c59-61b4-48d9-bda7-259ee444dd45",
+  "challenge_module": "TruthCore.Results.Explanation.NoFoundationLawChaos.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.NoFoundationLawChaos.Solution",
+  "theorem": "TruthCore.Results.Explanation.NoFoundationLawChaos.certificate",
+  "comparator_config": "results/6e3bad3f-b479-4ccd-8426-5c2979b6f26e/comparator.json",
+  "status": "solution-present",
+  "description": "All alternatives in a fixed finite-record cell share the prefix but admit every future state pair. Any one law with a forbidden future transition fails to hold of every admitted history; any deterministic such law fails. No inference from no ultimate ground to this ontic alternative range, no actual law choice and no normative scientific entitlement is established."
+}
