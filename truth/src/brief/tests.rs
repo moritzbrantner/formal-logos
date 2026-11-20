@@ -1176,9 +1176,19 @@ fn declared_revisions_expose_graph_and_import_consumers_with_per_revision_dispos
             .iter()
             .all(|c| c["consumer"] != format!("results:{unrelated_result}"))
     }));
-    for id in [summary_attempt, evidence_attempt, judgment_attempt] {
+    for id in [summary_attempt, judgment_attempt] {
         assert_eq!(find(0, format!("attempts:{id}"))["disposition"], "pending");
+        assert_eq!(find(0, format!("attempts:{id}"))["tier"], "prose");
     }
+    // Evidence citing only the result retained as unchanged is screened by it
+    // for that revision and stays pending for the other one.
+    let evidence = find(0, format!("attempts:{evidence_attempt}"));
+    assert_eq!(evidence["disposition"], "screened");
+    assert_eq!(evidence["screened_by"], format!("results:{RESULT}"));
+    assert_eq!(
+        find(1, format!("attempts:{evidence_attempt}"))["disposition"],
+        "pending"
+    );
     assert!(
         impacts.iter().all(|i| i["consumers"]
             .as_array()
@@ -1299,6 +1309,261 @@ fn declared_revisions_expose_graph_and_import_consumers_with_per_revision_dispos
         crate::lifecycle::impacts(&root, &corpus, &BTreeSet::from([OPEN_PREMISE.to_owned()]))
             .unwrap_err()
             .contains("unaffected consumer")
+    );
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+/// Consumer tiers (#1757): registered premise use and conclusion propagation stay
+/// individually addressed; import discovery and mentions may share one group
+/// disposition; a consumer individually reassessed as unchanged screens what lies
+/// downstream only through it, and a consumer still live past that screen only
+/// through import discovery is reported in the import tier.
+#[test]
+fn revision_consumers_are_tiered_grouped_and_screened_soundly() {
+    let root = fixture("revision-tiers");
+    // GOAL --premise--> A2 => SERIES, verified by R2.
+    let (a2, i2, r2) = (
+        "b0000000-0000-4000-8000-000000000012",
+        "f0000000-0000-4000-8000-000000000012",
+        "c0000000-0000-4000-8000-000000000012",
+    );
+    // A producer of the revised premise, whose module R2 imports.
+    let (pa, pi, pr) = (
+        "b0000000-0000-4000-8000-000000000013",
+        "f0000000-0000-4000-8000-000000000013",
+        "c0000000-0000-4000-8000-000000000013",
+    );
+    // A result whose module imports the fixture result: import discovery only.
+    let (ia, ii, ir) = (
+        "b0000000-0000-4000-8000-000000000014",
+        "f0000000-0000-4000-8000-000000000014",
+        "c0000000-0000-4000-8000-000000000014",
+    );
+    for (argument, inference, result, premises, conclusion, module) in [
+        (a2, i2, r2, vec![GOAL], SERIES, "Second"),
+        (pa, pi, pr, vec![], OPEN_PREMISE, "Producer"),
+        (ia, ii, ir, vec![], DEPENDENCE, "Imported"),
+    ] {
+        record(
+            &root,
+            "inferences",
+            json!({"id":inference,"input_statement_ids":premises,"assumption_statement_ids":[],"discharged_statement_ids":[],"output_statement_id":conclusion,"rule":"fixture","meaning":"Fixture step"}),
+        );
+        record(
+            &root,
+            "arguments",
+            json!({"id":argument,"meaning":"Fixture argument","inference_ids":[inference],"premise_statement_ids":premises,"conclusion_statement_id":conclusion}),
+        );
+        record(
+            &root,
+            "results",
+            json!({"id":result,"argument_id":argument,"challenge_module":format!("TruthCore.Results.{module}.Challenge"),"theorem":format!("TruthCore.Results.{module}.theorem"),"comparator_config":"x.json","solution_module":format!("TruthCore.Results.{module}.Solution"),"status":"solution-present"}),
+        );
+    }
+    // A3 registers DEPENDENCE (reached only through import discovery) as a premise.
+    let a3 = "b0000000-0000-4000-8000-000000000015";
+    record(
+        &root,
+        "arguments",
+        json!({"id":a3,"meaning":"Downstream of an import","inference_ids":["f0000000-0000-4000-8000-000000000014"],"premise_statement_ids":[DEPENDENCE],"conclusion_statement_id":RIVAL}),
+    );
+    write(
+        &root,
+        "TruthCore/Results/Fixture/Solution.lean",
+        "-- fixture\n",
+    );
+    write(
+        &root,
+        "TruthCore/Results/Producer/Solution.lean",
+        "-- producer\n",
+    );
+    write(
+        &root,
+        "TruthCore/Results/Second/Solution.lean",
+        "import TruthCore.Results.Producer.Solution\n",
+    );
+    write(
+        &root,
+        "TruthCore/Results/Imported/Solution.lean",
+        "import TruthCore.Results.Fixture.Solution\n",
+    );
+    write(
+        &root,
+        "docs/notes/tier-mention.md",
+        "# Mentions\n\n## Use\n\nThe goal STMT-FIX-GOAL is discussed here.\n",
+    );
+    let current = json!({"date":"2026-11-20","statement_ids":[OPEN_PREMISE],"scope":"bridge warrant only",
+        "assessment":"The bridge warrant changed.","next_test":"Reassess consumers.",
+        "note":"docs/notes/revision.md#assessment","reviewed_revision":"1234567890123456789012345678901234567890",
+        "review":"unreviewed","publication":"unpublished","supersedes":"earlier warrant","evidence":"local"});
+    let declare = |reassessments: Value| {
+        record(
+            &root,
+            "attempts",
+            json!({"id":"e0000000-0000-4000-8000-000000000098","statement_ids":[OPEN_PREMISE],"date":"2026-11-20",
+            "kind":"reading","outcome":"succeeded","summary":"A declared change.","evidence":[],"current_assessment":current,
+            "revisions":[{"kind":"premise_warrant","revision":"tiers-v1","previous":"docs/notes/old.md#warrant","reason":"New warrant.","statement_ids":[OPEN_PREMISE],"reassessments":reassessments}]}),
+        );
+        let corpus = Corpus::load(&root).unwrap();
+        crate::lifecycle::impacts(&root, &corpus, &BTreeSet::from([OPEN_PREMISE.to_owned()]))
+    };
+    let consumer = |impact: &Value, key: String| -> Value {
+        impact["consumers"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|c| c["consumer"] == key)
+            .cloned()
+            .unwrap_or_else(|| panic!("{key} not listed"))
+    };
+
+    // Unscreened: every registered premise-use chain is premise_use, imports and
+    // whatever they reach are import, mentions are reference/prose.
+    let impact = declare(json!([])).unwrap().remove(0);
+    for key in [
+        format!("arguments:{ARGUMENT}"),
+        format!("inferences:{INFERENCE}"),
+        format!("results:{RESULT}"),
+        format!("statements:{GOAL}"),
+        format!("arguments:{a2}"),
+        format!("results:{r2}"),
+        format!("statements:{SERIES}"),
+    ] {
+        assert_eq!(
+            consumer(&impact, key.clone())["tier"],
+            "premise_use",
+            "{key}"
+        );
+    }
+    for key in [
+        format!("results:{ir}"),
+        format!("statements:{DEPENDENCE}"),
+        format!("arguments:{a3}"),
+        format!("statements:{RIVAL}"),
+    ] {
+        assert_eq!(consumer(&impact, key.clone())["tier"], "import", "{key}");
+    }
+    assert_eq!(
+        consumer(&impact, format!("results:{ir}"))["import_source"],
+        format!("results:{RESULT}")
+    );
+    assert_eq!(
+        consumer(
+            &impact,
+            "relations:d0000000-0000-4000-8000-000000000002".into()
+        )["tier"],
+        "reference"
+    );
+    assert_eq!(
+        consumer(&impact, "notes:docs/notes/tier-mention.md#use".into())["tier"],
+        "prose"
+    );
+    // Alternative producers of the revised premise are not its consumers.
+    assert!(
+        impact["consumers"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .all(|c| c["consumer"] != format!("results:{pr}"))
+    );
+    assert_eq!(impact["tiers"]["premise_use"]["consumers"], 8);
+    assert_eq!(impact["tiers"]["premise_use"]["pending"], 8);
+
+    // Groups cover only mention and import tiers; premise use stays pending.
+    let grouped = declare(json!([
+        {"group":"tier:import","disposition":"retained","reason":"Imports reach only the unchanged interface."},
+        {"group":"path:docs/notes/tier-mention.md","disposition":"not_applicable","reason":"Historical note."}
+    ])).unwrap().remove(0);
+    assert_eq!(grouped["tiers"]["import"]["pending"], 0);
+    assert_eq!(grouped["tiers"]["premise_use"]["pending"], 8);
+    assert_eq!(
+        consumer(&grouped, "notes:docs/notes/tier-mention.md#use".into())["disposition_by"],
+        "path:docs/notes/tier-mention.md"
+    );
+    assert_eq!(
+        consumer(&grouped, "notes:docs/notes/tier-mention.md#use".into())["disposition"],
+        "not_applicable"
+    );
+    assert_eq!(
+        consumer(
+            &grouped,
+            "relations:d0000000-0000-4000-8000-000000000002".into()
+        )["disposition"],
+        "pending"
+    );
+    // No group addressing for registered premise use, and no empty groups.
+    let mut attempt = json!({"current_assessment":current,"statement_ids":[OPEN_PREMISE],"revisions":[{"kind":"judgment","revision":"x","previous":"p","reason":"r","statement_ids":[OPEN_PREMISE],
+        "reassessments":[{"group":"tier:premise_use","disposition":"retained","reason":"blanket"}]}]});
+    let known = std::collections::HashSet::from([OPEN_PREMISE]);
+    assert!(crate::lifecycle::validate(attempt.as_object().unwrap(), &known).is_err());
+    attempt["revisions"][0]["reassessments"] = json!([{"group":"tier:import","consumer":format!("arguments:{ARGUMENT}"),"disposition":"retained","reason":"both"}]);
+    assert!(crate::lifecycle::validate(attempt.as_object().unwrap(), &known).is_err());
+    assert!(
+        declare(
+            json!([{"group":"path:docs/notes/absent.md","disposition":"retained","reason":"none"}])
+        )
+        .unwrap_err()
+        .contains("unaffected group")
+    );
+    assert!(declare(json!([{"group":"tier:import","disposition":"retained","reason":"a"},{"group":"tier:import","disposition":"revised","reason":"b"}])).unwrap_err().contains("duplicate"));
+
+    // Retaining the direct consumer screens the chain only through it. Its
+    // inference and result inherit the disposition; R2 and SERIES stay live
+    // through import discovery from the premise's producer, now as import tier.
+    let screened = declare(json!([{"consumer":format!("arguments:{ARGUMENT}"),"disposition":"retained","reason":"Conditional use unchanged."}])).unwrap().remove(0);
+    assert_eq!(
+        consumer(&screened, format!("inferences:{INFERENCE}"))["disposition_by"],
+        format!("arguments:{ARGUMENT}")
+    );
+    assert_eq!(
+        consumer(&screened, format!("results:{RESULT}"))["disposition"],
+        "retained"
+    );
+    for key in [
+        format!("statements:{GOAL}"),
+        format!("arguments:{a2}"),
+        format!("results:{ir}"),
+        format!("arguments:{a3}"),
+    ] {
+        let c = consumer(&screened, key.clone());
+        assert_eq!(c["disposition"], "screened", "{key}");
+        assert!(c["screened_by"].is_string(), "{key}");
+    }
+    for key in [format!("results:{r2}"), format!("statements:{SERIES}")] {
+        let c = consumer(&screened, key.clone());
+        assert_eq!(
+            (c["tier"].as_str(), c["disposition"].as_str()),
+            (Some("import"), Some("pending")),
+            "{key}"
+        );
+    }
+    assert_eq!(
+        consumer(&screened, format!("results:{r2}"))["import_source"],
+        format!("results:{pr}")
+    );
+    assert_eq!(screened["tiers"]["premise_use"]["pending"], 0);
+    let text = crate::lifecycle::lines(&[], std::slice::from_ref(&screened)).join("\n");
+    assert!(text.contains("tiers (consumers/pending/screened): premise_use "));
+    assert!(text.contains(&format!("[premise_use] statements:{GOAL}: screened")));
+    assert!(text.contains(&format!(
+        "[premise_use] arguments:{ARGUMENT}: retained — Conditional use unchanged."
+    )));
+    // Groupable tiers are summarized; --json lists them in full.
+    assert!(!text.contains(&format!("results:{r2}")));
+
+    // A revised consumer screens nothing: its conclusion needs its own disposition.
+    let revised = declare(json!([{"consumer":format!("arguments:{ARGUMENT}"),"disposition":"revised","reason":"Application changes."}])).unwrap().remove(0);
+    assert_eq!(
+        consumer(&revised, format!("statements:{GOAL}"))["disposition"],
+        "pending"
+    );
+    assert_eq!(
+        consumer(&revised, format!("statements:{GOAL}"))["tier"],
+        "premise_use"
+    );
+    assert_eq!(
+        consumer(&revised, format!("results:{RESULT}"))["disposition"],
+        "revised"
     );
     std::fs::remove_dir_all(root).unwrap();
 }

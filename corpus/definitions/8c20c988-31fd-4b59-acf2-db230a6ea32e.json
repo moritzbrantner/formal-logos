@@ -1,0 +1,9 @@
+{
+ "id": "8c20c988-31fd-4b59-acf2-db230a6ea32e",
+ "label": "Origin-or-inertia explanation: a giver then, or earlier presence with no inducer of cessation",
+ "term": "origin-or-inertia explanation of presence (Lean `originOrInertia`)",
+ "definition": "originOrInertia h G D: the explanation relation (a defined sense of the primitive of definition 261516e9) whose reasons are of two kinds. A giver g (inl g) explains x's presence at t iff g gives x being at t (GivesAt, definition 158301bc). An earlier moment s (inr s) explains it iff s < t, x is present at s, and no inducer of x's cessation (D v x u, a primitive parameter) occurs at any moment u with s < u <= t. With the causal law on cessation (CessationNeedsInducer: a thing present at s and absent at a later t has an inducer of its cessation in (s, t]) the second kind rules out x's absence at t; that x is then present needs, in Lean's constructive logic, excluded middle for presence.",
+ "basis": "stipulative",
+ "lean_declaration": "TruthCore.Causality.TimeSymmetricGiving.originOrInertia",
+ "note": "Analyst reading, attribution deferred. It types the explanation Schmid 2021 offers (read; passage SCHMID-INERTIA-REPLY-3-ARTICLE, paragraphs beginning 'For S to fail' and 'Here, we seem to have': S existed before m, nothing causally induced its cessation, and a change occurs only if some factor causally induces it), with an originating giver added for a first moment, which Schmid's deduction does not cover. It does not type the further inertialist explanations he names (laws of nature, transtemporal relations, propositional necessity). No claim states it."
+}

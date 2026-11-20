@@ -11180,16 +11180,6 @@
  },
  {
   "kind": "attempt",
-  "id": "e64d5241-d1b1-58ad-925f-71d8f9ac7d74",
-  "legacy_id": "ATTEMPT-COGITO-ESSE-1113",
-  "label": "Owner #1113 adopts existing-in-re -> act of esse -> concrete, but not arbitrary legacy Ontic…",
-  "flags": [
-   "ids-replaced",
-   "truncated"
-  ]
- },
- {
-  "kind": "attempt",
   "id": "5073ac12-065f-59e7-aa48-fdff1a894475",
   "legacy_id": "ATTEMPT-OBJECTIVE-TRUTH-DEFINITION-FORK-AUDIT",
   "label": "Owner competing-definition audit: the old objective-truth record was a gloss on a free predicate…",
@@ -12269,15 +12259,6 @@
   "id": "aa0547d5-93c8-5f5c-8afb-784d44944f00",
   "legacy_id": "ATTEMPT-EPISTEMIC-REASON-DEFINITION-FORKS-AUDIT",
   "label": "The prior note left two consequential analyst role propositions without Lean declarations because…",
-  "flags": [
-   "truncated"
-  ]
- },
- {
-  "kind": "attempt",
-  "id": "1032961a-ce94-555e-b615-722dcd16dd78",
-  "legacy_id": "ATTEMPT-PRIMA-VIA-FULL-BUNDLE-WEAKENING-OPEN-1021",
-  "label": "The relative conclusion does not type-match the absolute first-mover naming interfaces in the…",
   "flags": [
    "truncated"
   ]
@@ -32270,24 +32251,6 @@
  },
  {
   "kind": "definition",
-  "id": "5aef0b49-016a-5716-9bd9-423d957b28ab",
-  "legacy_id": "DEF-ACTUAL-POWER-TRANSMISSION-READING",
-  "label": "Causal power as actual modeled…: In the #319 Profile, m.transmitsPower w y x records a power…",
-  "flags": [
-   "truncated"
-  ]
- },
- {
-  "kind": "definition",
-  "id": "8ce4f4d6-a221-5db8-aef5-2f0babdfb416",
-  "legacy_id": "DEF-POWER-CAPACITY-READING",
-  "label": "Causal power as capacity or disposition: A bearer can bring about an effect under suitable…",
-  "flags": [
-   "truncated"
-  ]
- },
- {
-  "kind": "definition",
   "id": "d3b970fa-abdd-553e-baa9-0a337fa24c26",
   "legacy_id": "DEF-SELECTED-EFFECT-REALIZED-OUTPUT",
   "label": "Causal realization of outputs: At every v, if a is performed there and x is its output, then the…",
@@ -34098,15 +34061,6 @@
   "id": "e6d66357-8f22-5a2c-bd96-6ccc68ce0063",
   "legacy_id": "DEF-NB-SURVEY-EXTERNAL-CAUSE",
   "label": "External cause outside the caused…: A1c2 invokes 'external' so that an external cause of C is…",
-  "flags": [
-   "truncated"
-  ]
- },
- {
-  "kind": "definition",
-  "id": "196be87e-b944-5924-b791-87406fbe48f6",
-  "legacy_id": "DEF-EXTERNAL-CAUSE-OF-ESSE",
-  "label": "External efficient cause of esse: Another being by which the thing's act of being is caused…",
   "flags": [
    "truncated"
   ]
@@ -50044,15 +49998,6 @@
   "id": "59b2b5fc-cf3e-5967-9b32-e26d60e2498e",
   "legacy_id": "INF-NOT-ACT-AND-POTENCY-FROM-SCOTIST-REFUTATION",
   "label": "Nothing is simultaneously in act and in POTENCY_1 in the same…, by Constructive quantifier…",
-  "flags": [
-   "truncated"
-  ]
- },
- {
-  "kind": "inference",
-  "id": "851575ae-eb1a-59b5-b696-7db685db42c8",
-  "legacy_id": "INF-NO-SELF-CAUSE-FROM-PRIORITY",
-  "label": "Nothing is the efficient cause of itself, in any respect, by A self-cause would be prior…",
   "flags": [
    "truncated"
   ]

@@ -1,0 +1,11 @@
+{
+  "id": "7bb5ce58-3c8e-45f7-b0e7-bcd2dc85582d",
+  "label": "Concurrent actualization strengthens it for homogeneous things",
+  "subject_kind": "statement",
+  "subject_id": "40a97664-e481-42d7-8458-78374a61aa26",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "eb928359-9871-4964-b274-3a82648b58a1",
+  "verification_result_id": "76dc5abc-9dea-4a25-a65b-bf693538c38e",
+  "note": "Same history, giving relation and reception predicate; the weak version restricts its subjects to things homogeneous in the history relative to the supplied facts. Strict: Control part 4 (begun inertia), where the homogeneous version holds because the begun thing is not homogeneous, and 40a97664 fails."
+}

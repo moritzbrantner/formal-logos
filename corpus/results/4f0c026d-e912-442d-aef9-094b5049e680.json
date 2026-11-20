@@ -1,0 +1,11 @@
+{
+  "id": "4f0c026d-e912-442d-aef9-094b5049e680",
+  "label": "Concurrent actualization for homogeneous things, from coverage, exercise and symmetry",
+  "argument_id": "e1c74c55-0486-4a5c-a462-d0de108a7533",
+  "challenge_module": "TruthCore.Results.Causality.TimeSymmetricGiving.Challenge",
+  "solution_module": "TruthCore.Results.Causality.TimeSymmetricGiving.Solution",
+  "theorem": "TruthCore.Results.Causality.TimeSymmetricGiving.homogeneousConcurrentOfSymmetry",
+  "comparator_config": "results/4f0c026d-e912-442d-aef9-094b5049e680/comparator.json",
+  "status": "solution-present",
+  "description": "Non-transcription derivation: no premise has the conclusion's matrix as its consequent, and the universal over moments comes from combining time symmetry with homogeneity. Let x have its esse received in z, be homogeneous in history v, and be present at t. By coverage some c distinct from x causes x's being; by exercise c gives x being at some moment s at which x is present; by homogeneity some order automorphism sigma of the times preserving the history sends s to t; by time symmetry c gives x being at sigma s = t. So the same cause of being gives x being at every moment of its presence. Each premise is needed (Control parts 1 to 3); all hold with the conclusion in part 5. The premises hold in begun inertia (part 4), where 40a97664 fails, so they do not give parity for begun things. The premises are OPEN; the proof uses only Quot.sound, through Mathlib's OrderIso, and the Comparator config permits the standard Mathlib axiom set. No premise is established."
+}

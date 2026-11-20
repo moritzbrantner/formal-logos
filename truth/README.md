@@ -791,7 +791,11 @@ Scoped `current_assessment` entries from existing attempts appear first, with
 reviewed revision, publication disposition and next test. Historical heading
 dates do not imply supersession. Declared meaning/warrant/judgment `revisions`
 expose potential downstream uses and unresolved reassessments without changing
-formal validity. See [the canonical record format](../docs/premise-dossiers.md#current-assessment-and-publication-disposition).
+formal validity, in consumer tiers (`premise_use`, `import`, `reference`,
+`prose`; #1757): registered premise use is always listed and addressed per
+consumer, the other tiers may share a `group` disposition, and a consumer
+reassessed as unchanged screens what lies downstream only through it. See [the canonical record format](../docs/premise-dossiers.md#current-assessment-and-publication-disposition)
+and [declared revisions](../docs/premise-dossiers.md#declared-revisions-and-downstream-reassessment).
 `truth currentness [--frontier-root STATEMENT] [--limit N]` (#1751,
 `truth::currentness`) is the read-only per-root view of which open premises
 have a covering current assessment, only legacy attempts, or none, with
