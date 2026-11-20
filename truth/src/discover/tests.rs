@@ -429,7 +429,8 @@ fn parameter_tags_are_read_tolerantly_and_give_bridge_statements() {
     ];
     let tags = tags_of(&disambiguations, &arguments);
     assert_eq!(tags.tags.len(), 3);
-    // A partial application is identified only with the same partial application.
+    // A partial application keeps its fixed arguments in the key; Discover.lean
+    // never identifies binders by such a key (see the binding fixture test).
     assert_eq!(
         tags.for_declarations(&["TruthCore.M.A", "TruthCore.N.B"]),
         vec![
@@ -586,4 +587,64 @@ fn solution_draft_puts_the_option_before_the_doc_comment() {
     assert!(
         text.contains("set_option maxHeartbeats 5000 in\n/-- label of T -/\ntheorem discovered1 ")
     );
+}
+
+#[test]
+fn an_original_is_suppressed_only_by_a_certified_weakening() {
+    let finding = |label: &str, of: Option<&str>, kind: Kind| Finding {
+        trial: Trial {
+            label: label.into(),
+            weakening: of.map(|o| ("P".to_owned(), "W".to_owned(), o.to_owned())),
+            ..trial(&["P"])
+        },
+        kind,
+        premises: vec!["P".into()],
+        filters: Vec::new(),
+        outcome: closed_outcome(),
+        certified: Some(Ok(vec!["propext".into()])),
+    };
+    // A weakening whose certification was forced to fail.
+    let mut rejected = finding("t2w1", Some("t2"), Kind::Filtered);
+    rejected.certified = Some(Err("unknown identifier".into()));
+    rejected.filters.push((
+        "certification".into(),
+        "theorem text rejected: unknown identifier".into(),
+    ));
+    let mut findings = vec![
+        finding("t1", None, Kind::Discovery),
+        finding("t1w1", Some("t1"), Kind::Discovery),
+        finding("t2", None, Kind::Discovery),
+        rejected,
+    ];
+    suppress_weakened(&mut findings);
+    assert_eq!(findings[0].kind, Kind::Filtered);
+    assert_eq!(findings[0].filters[0].0, "weakened");
+    assert_eq!(findings[1].kind, Kind::Discovery);
+    // The weakening failed certification: its certified original stays a
+    // discovery, records why, and reaches the spec draft.
+    assert_eq!(findings[2].kind, Kind::Discovery);
+    assert_eq!(findings[2].filters[0].0, "weakening_rejected");
+    assert!(findings[2].filters[0].1.contains("unknown identifier"));
+    let mut statements = BTreeMap::new();
+    statements.insert("T".to_owned(), statement("T", "M.Target", &[]));
+    statements.insert("P".to_owned(), statement("P", "M.P", &[]));
+    let chosen: Vec<&Finding> = findings
+        .iter()
+        .filter(|f| f.kind == Kind::Discovery)
+        .collect();
+    assert_eq!(
+        chosen
+            .iter()
+            .map(|f| f.trial.label.as_str())
+            .collect::<Vec<_>>(),
+        ["t1w1", "t2"]
+    );
+    let spec = render_spec(
+        "TruthCore.Results.Discover.Run",
+        &chosen,
+        &statements,
+        &SenseCheck::empty(),
+        "2026-11-20",
+    );
+    assert_eq!(spec.matches("\n[[argument]]\n").count(), 2);
 }

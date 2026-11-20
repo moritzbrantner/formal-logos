@@ -74,8 +74,11 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
    needed when one exists.
 7. **Weakening.** For each premise of a discovery with a weaker strength
    sibling (`strengthens`), the goal is searched again with the weaker version.
-   A success supersedes the stronger bundle, which is then reported as filtered
-   (`weakened`).
+   Originals and weakenings are both certified (step 8). Only a weaker
+   discovery that passes certification and the axiom check supersedes the
+   stronger bundle, which is then reported as filtered (`weakened`); when the
+   weaker one fails, the original stays a discovery, flagged with the reason
+   (`weakening_rejected`).
 8. **Certification.** Each discovery is rendered as plain theorem text
    (binders with full names, hypotheses, conclusion, `delta …; duper [*]`)
    and elaborated in a separate Lean run with `#print axioms`. A discovery
@@ -148,8 +151,12 @@ uses the corpus reader `truth::parameter_tags` (#1794); an untagged parameter is
 unknown. Two binders tagged with the same sense id are identified across
 modules; different senses of one term bring in the registered bridge
 statements (`sense_bridges` of existing arguments) as optional premises. A tag
-with fixed arguments names a partial application: it identifies a binder only
-with one tagged as the same partial application (same sense, same arguments).
+with fixed arguments names a partial application (`CausesIn _ _ esse`): it
+describes only that application, not the binder at every argument, so it never
+identifies two binders. Such binders stay separate outer binders (unless the
+same-module name convention identifies them); relating their tagged slices
+needs an explicit bridge premise, never a silent identification of the full
+relations.
 
 ## Output
 

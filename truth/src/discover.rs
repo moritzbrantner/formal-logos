@@ -415,9 +415,10 @@ pub struct SenseTags {
 }
 
 /// The identification key of a tag: its sense, and its fixed arguments when
-/// any (`CausesIn _ _ esse`). Two binders are identified only when their keys
-/// agree, so a binder tagged as a partial application is identified only with
-/// one tagged as the same partial application.
+/// any (`CausesIn _ _ esse`, key `sense|_ _ esse`). `scripts/Discover.lean`
+/// identifies two binders by tag only when their keys agree *and* name whole
+/// binders: a partial-application key (containing `|`) describes only that
+/// application, so identifying the full relations would go beyond the tag.
 fn tag_key(tag: &parameter_tags::ParameterTag) -> String {
     let fixed = tag.parameter.arguments.iter().any(|a| a != "_");
     if fixed {
@@ -1354,6 +1355,59 @@ pub fn certify(
     Ok(())
 }
 
+/// Settles each weakening after certification (text re-elaboration and the
+/// axiom check), which runs on originals and weakenings alike: a certified
+/// weaker discovery supersedes its original, which is then filtered; a
+/// weakening that failed certification leaves its original eligible, flagged
+/// with the reason (`weakening_rejected`).
+pub fn suppress_weakened(findings: &mut [Finding]) {
+    // (original label, weaker label, Ok(()) when certified, else the reason)
+    let settled: Vec<(String, String, Result<(), String>)> = findings
+        .iter()
+        .filter_map(|f| {
+            let original = f.trial.weakening.as_ref()?.2.clone();
+            let verdict = match (&f.kind, &f.certified) {
+                (Kind::Discovery, _) => Ok(()),
+                (_, Some(_)) => Err(f
+                    .filters
+                    .last()
+                    .map(|(filter, detail)| format!("{filter}: {detail}"))
+                    .unwrap_or_else(|| "not certified".into())),
+                // Never reached certification: no weaker discovery to settle.
+                _ => return None,
+            };
+            Some((original, f.trial.label.clone(), verdict))
+        })
+        .collect();
+    let superseded: BTreeSet<&String> = settled
+        .iter()
+        .filter(|(_, _, v)| v.is_ok())
+        .map(|(o, _, _)| o)
+        .collect();
+    for (original, weaker, verdict) in &settled {
+        let Some(f) = findings
+            .iter_mut()
+            .find(|f| &f.trial.label == original && f.kind == Kind::Discovery)
+        else {
+            continue;
+        };
+        match verdict {
+            Ok(()) => {
+                f.filters.push((
+                    "weakened".into(),
+                    format!("superseded by the weaker bundle {weaker}"),
+                ));
+                f.kind = Kind::Filtered;
+            }
+            Err(reason) if !superseded.contains(original) => f.filters.push((
+                "weakening_rejected".into(),
+                format!("the weaker bundle {weaker} failed certification ({reason}); kept"),
+            )),
+            Err(_) => {}
+        }
+    }
+}
+
 // --- Spec draft --------------------------------------------------------------------
 
 fn toml_string(text: &str) -> String {
@@ -1791,18 +1845,9 @@ pub fn discover(
         );
         for t in &weakened {
             let mut finding = classify(t, &outcomes[&t.label], &graph, &sense_check);
-            if finding.kind == Kind::Discovery {
-                if let Some(original) = findings
-                    .iter_mut()
-                    .find(|f| Some(&f.trial.label) == t.weakening.as_ref().map(|w| &w.2))
-                {
-                    original.filters.push((
-                        "weakened".into(),
-                        format!("superseded by the weaker bundle {}", t.label),
-                    ));
-                    original.kind = Kind::Filtered;
-                }
-            } else if finding.kind != Kind::Incompatibility {
+            // The original stays eligible until its weakening is certified
+            // (`suppress_weakened`, after `certify`).
+            if finding.kind != Kind::Discovery && finding.kind != Kind::Incompatibility {
                 finding.kind = if finding.kind == Kind::Error {
                     Kind::Error
                 } else {
@@ -1820,6 +1865,7 @@ pub fn discover(
         &vocabulary,
         options.heartbeats,
     )?;
+    suppress_weakened(&mut findings);
     let trials_count = findings.len();
     Ok((
         Run {

@@ -88,7 +88,15 @@ definitionally equal type when
 * otherwise (a carrier `B : Type`, a structure bundle such as
   `History W B T`, a predicate, relation, function or element): same name
   *and* both declared in the same module (that module's authored convention),
-  or both tagged with the same sense id.
+  or both tagged with the same sense id *as whole binders*.
+
+A tag with fixed arguments (`CausesIn _ _ esse`, key `sense|_ _ esse`, see
+`tag_key` in `truth/src/discover.rs`) describes only that partial application,
+not the binder at every argument: two such binders are never identified by
+their tags, since that would equate the full relations outside the tagged
+slice, an identification no record states. They stay separate outer binders
+(still identified by the same-module name convention when that applies); a
+connection between their tagged slices needs an explicit bridge premise.
 
 Nothing is identified by name across modules as such. One fallback, which the
 configuration can switch off (`"strict_domains": true`): a carrier or
@@ -115,6 +123,10 @@ def moduleOf (n : Name) : MetaM Name := do
 def senseOf (tags : Array (Name × Name × String)) (decl binder : Name) : Option String :=
   (tags.find? fun (d, b, _) => d == decl && b == binder.eraseMacroScopes).map (·.2.2)
 
+/-- Whether a tag key names the whole binder (no fixed arguments). A
+partial-application key contains `|` (`tag_key` in `truth/src/discover.rs`). -/
+def wholeBinderTag (key : String) : Bool := !key.contains '|'
+
 def isStructureType (d : Expr) : MetaM Bool := do
   let d ← whnfR d
   match d.getAppFn with
@@ -134,7 +146,7 @@ partial def bind (tags : Array (Name × Name × String)) (strict : Bool)
     for (x, o) in xs.zip origins do
       let xbi ← x.fvarId!.getBinderInfo
       let sameName := (← x.fvarId!.getUserName).eraseMacroScopes == n.eraseMacroScopes
-      let authored := (sameName && o.module == module) || (sense.isSome && o.sense == sense)
+      let authored := (sameName && o.module == module) || (sense.any wholeBinderTag && o.sense == sense)
       let fallback := !strict && (carrier || bundle) && sameName && !authored
       let allowed := if bi.isInstImplicit then xbi.isInstImplicit else authored || fallback
       if allowed then
