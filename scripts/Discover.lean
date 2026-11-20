@@ -405,6 +405,17 @@ def witness (xs : Array Expr) (goals : Array Expr) (u : NameSet) (heartbeats : N
     if ok then return some label
   return none
 
+/-- The name identifications that matter for the declarations `kept`: between
+two kept declarations, or of two kept declarations with the same binder of a
+dropped one. -/
+def keptIdentifications (all : Array (Name × Name × Name × String)) (kept : Array Name) :
+    Array String :=
+  all.filterMap fun (d, od, ob, text) =>
+    if !kept.contains d then none
+    else if kept.contains od then some text
+    else if all.any (fun (d2, od2, ob2, _) => d2 != d && kept.contains d2 && od2 == od && ob2 == ob)
+      then some text else none
+
 /-! ### Missing bridges
 
 When the premises do not prove the target, the gap may be that two
@@ -513,7 +524,8 @@ def bridgeFor (p q : Expr) (pElems qElems : Array (String × Expr)) (fix : Bool)
     return some (bridge, fixed)
 
 def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
-    (hyps : Array (Nat × Expr)) (concl : Expr) (u : NameSet) (heartbeats : Nat) :
+    (hyps : Array (Nat × Expr)) (concl : Expr) (u : NameSet) (heartbeats : Nat)
+    (domains : Array Nat → Array String) :
     TermElabM (Array Json) := do
   -- The vocabulary the premises use and the vocabulary the conclusion uses,
   -- after delta-expansion: relations (binders, or Prop-valued fields of
@@ -571,20 +583,10 @@ def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
         return toString (← ppExpr bridge)
       out := out.push (Json.mkObj [("from", Json.str pn), ("to", Json.str qn),
         ("fixed", toJson fixed), ("text", Json.str text),
-        ("used", toJson (proof.used.filter (· != 1000)))])
+        ("used", toJson (proof.used.filter (· != 1000))),
+        ("domain_identified_by_name", toJson (domains (proof.used.filter (· != 1000))))])
       break
   return out
-
-/-- The name identifications that matter for the declarations `kept`: between
-two kept declarations, or of two kept declarations with the same binder of a
-dropped one. -/
-def keptIdentifications (all : Array (Name × Name × Name × String)) (kept : Array Name) :
-    Array String :=
-  all.filterMap fun (d, od, ob, text) =>
-    if !kept.contains d then none
-    else if kept.contains od then some text
-    else if all.any (fun (d2, od2, ob2, _) => d2 != d && kept.contains d2 && od2 == od && ob2 == ob)
-      then some text else none
 
 def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : String)
     (tags : Array (Name × Name × String)) (bridges : Bool) (strict : Bool)
@@ -625,7 +627,10 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
     let full ← prove xs hyps concl u heartbeats zip
     let some full := full
       | do
-        let found ← if bridges then missingBridges xs origins target hyps concl u heartbeats
+        let identified ← byName.get
+        let domains (used : Array Nat) : Array String :=
+          keptIdentifications identified ((used.filterMap fun i => premises[i]?).push target)
+        let found ← if bridges then missingBridges xs origins target hyps concl u heartbeats domains
           else pure #[]
         return Json.mkObj [("binders", toJson added), ("alone", Json.null), ("closed", Json.null),
           ("bridges", Json.arr found)]

@@ -378,7 +378,7 @@ fn certification_reads_errors_and_axioms_per_theorem() {
 
 #[test]
 fn missing_bridges_rank_by_targets_unlocked() {
-    let bridge = |from: &str| json!({"from": from, "to": "M.T.q", "fixed": ["esse"], "text": format!("∀ x, {from} x → q x"), "used": [0]});
+    let bridge = |from: &str| json!({"from": from, "to": "M.T.q", "fixed": ["esse"], "text": format!("∀ x, {from} x → q x"), "used": [0], "domain_identified_by_name": if from == "M.P.a" { json!(["X.B = M.T.B"]) } else { json!([]) }});
     let finding = |label: &str, target: &str, bridges: Vec<Value>| Finding {
         trial: Trial {
             label: label.into(),
@@ -402,6 +402,14 @@ fn missing_bridges_rank_by_targets_unlocked() {
     assert_eq!(rows[0].goals, ["t1", "t2", "t3"]);
     assert_eq!(rows[0].premises, set(&["P"]));
     assert_eq!(bridge_json(&rows[1])["unlocks_targets"], json!(["T1"]));
+    assert_eq!(
+        bridge_json(&rows[1])["domain_identified_by_name"],
+        json!(true)
+    );
+    assert_eq!(
+        bridge_json(&rows[0])["domain_identified_by_name"],
+        json!(false)
+    );
 }
 
 #[test]

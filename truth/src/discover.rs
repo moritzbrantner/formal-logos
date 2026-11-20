@@ -1885,7 +1885,7 @@ pub fn rank_bridges(findings: &[Finding]) -> Vec<Bridge> {
                 });
             entry.targets.insert(finding.trial.target.clone());
             entry.goals.push(finding.trial.label.clone());
-            entry.domain_identified_by_name |= domain_flag(&finding.outcome).is_some();
+            entry.domain_identified_by_name |= domain_flag(b).is_some();
             for i in indices(&b["used"]) {
                 if let Some(p) = finding.trial.premises.get(i) {
                     entry.premises.insert(p.clone());
