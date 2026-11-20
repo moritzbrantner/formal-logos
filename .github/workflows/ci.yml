@@ -188,7 +188,7 @@ jobs:
           target/release/truth --json discover --target c7de7537-3178-4c01-9f7e-65767f76f307 \
             --premise-pool all --module TruthCore.Causality.SustainingCausation \
             --candidates 4 --heartbeats 40000 --jobs 1 \
-            | jq -e '.summary.proved >= 1 and .summary.errors == 0' >/dev/null \
+            | jq -e '.summary.proved >= 1 and .summary.errors == 0 and all(.findings[]; (.lean.domain_identified_by_name | length) == 0)' >/dev/null \
             || { echo "truth discover smoke test failed"; exit 1; }
       - name: Test corpus tooling and media-span and web-snapshot evidence offline
         env:
