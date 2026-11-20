@@ -272,10 +272,37 @@ def prove (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : Nam
     if let some p := result then return some p
   return none
 
+/-- The binders among `xs` that `es` mention, with their dependencies, and
+the local context without the others (their local instances dropped too). -/
+def ownContext (xs : Array Expr) (es : Array Expr) :
+    MetaM (Array Expr × LocalContext × LocalInstances) := do
+  let mut keep : FVarIdSet := {}
+  for e in es do
+    for f in (collectFVars {} (← instantiateMVars e)).fvarIds do keep := keep.insert f
+  for x in xs.reverse do
+    if keep.contains x.fvarId! then
+      for f in (collectFVars {} (← instantiateMVars (← inferType x))).fvarIds do
+        keep := keep.insert f
+  let drop := (xs.filter (!keep.contains ·.fvarId!)).map (·.fvarId!)
+  let lctx := drop.foldl (·.erase ·) (← getLCtx)
+  let insts := (← getLocalInstances).filter fun i => !drop.contains i.fvar.fvarId!
+  return (xs.filter (keep.contains ·.fvarId!), lctx, insts)
+
+/-- `prove` over the binders that the hypotheses and the conclusion mention
+only. A contradiction (`False`) must not borrow an element or instance that
+only another statement (the target, a dropped premise) introduces: `∀ y : B,
+R y ∧ ¬ R y` is refuted only given some `x : B`, and is satisfiable over an
+empty `B`. -/
+def proveOwn (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : NameSet)
+    (heartbeats : Nat) : TermElabM (Option Proved) := do
+  let (xs', lctx, insts) ← ownContext xs ((hyps.map (·.2)).push concl)
+  withLCtx lctx insts <| prove xs' hyps concl u heartbeats "" (duperOnly := true)
+
 /-- Deletion minimization: drop each remaining premise in turn and keep it
 dropped when Duper still proves the goal. -/
 def minimize (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : NameSet)
-    (heartbeats : Nat) (start : Proved) : TermElabM (Array Nat × Array Json × Proved) := do
+    (heartbeats : Nat) (start : Proved) (own : Bool := false) :
+    TermElabM (Array Nat × Array Json × Proved) := do
   let mut current := start.used
   let mut best := start
   let mut log : Array Json := #[]
@@ -283,7 +310,9 @@ def minimize (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : 
     unless current.contains i do continue
     let without := current.filter (· != i)
     let sub := hyps.filter fun (j, _) => without.contains j
-    match ← prove xs sub concl u heartbeats "" (duperOnly := true) with
+    let attempt ← if own then proveOwn xs sub concl u heartbeats
+      else prove xs sub concl u heartbeats "" (duperOnly := true)
+    match attempt with
     | some p =>
       log := log.push (Json.mkObj [("premise", toJson i), ("outcome", "dropped")])
       current := p.used
@@ -667,12 +696,13 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
           ("reconstruction", "Duper did not reprove the premise core the external prover selected")]
     let (minimal, log, best) ← minimize xs hyps concl u heartbeats start
     let minHyps := hyps.filter fun (i, _) => minimal.contains i
-    let vacuous ← prove xs minHyps (Lean.mkConst ``False) u heartbeats "" (duperOnly := true)
-    let (vacuousCore, coreNames) ← match vacuous with
+    -- An incompatibility is checked over the premises' own binders only (`proveOwn`).
+    let vacuous ← proveOwn xs minHyps (Lean.mkConst ``False) u heartbeats
+    let (vacuousCore, coreNames, coreProof) ← match vacuous with
       | some v => do
-        let (core, _, _) ← minimize xs minHyps (Lean.mkConst ``False) u heartbeats v
-        pure (toJson core, core.filterMap fun i => premises[i]?)
-      | none => pure (Json.null, #[])
+        let (core, _, best) ← minimize xs minHyps (Lean.mkConst ``False) u heartbeats v (own := true)
+        pure (toJson core, core.filterMap fun i => premises[i]?, some best)
+      | none => pure (Json.null, #[], none)
     -- Transcription probe on the folded goal (the prove-sweep heuristic).
     let folded ← mkForallFVars xs (← minHyps.foldrM (fun (_, h) acc => mkArrow h acc) concl)
     let probe ← withoutModifyingState do
@@ -722,6 +752,7 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
         (if vacuous.isSome then coreNames else minNames.push target) modOf)),
       ("vacuous", proved vacuous),
       ("vacuous_core", vacuousCore),
+      ("vacuous_core_proof", proved coreProof),
       ("probe", Json.bool probe),
       ("signature", Json.str (← signature xs minHyps concl)),
       ("unfold", jsonNames (u'.toArray.qsort Name.lt))]

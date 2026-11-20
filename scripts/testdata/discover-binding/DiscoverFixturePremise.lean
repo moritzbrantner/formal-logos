@@ -13,3 +13,10 @@ namespace TruthCore.DiscoverFixturePremise
 def HasElement (B : Type) (x : B) : Prop := x = x
 
 end TruthCore.DiscoverFixturePremise
+
+namespace TruthCore.DiscoverFixturePremise
+
+/-- Refutable only given an element of `B`: satisfiable over an empty `B`. -/
+def EverywhereBoth (B : Type) (R : B → Prop) : Prop := ∀ y, R y ∧ ¬ R y
+
+end TruthCore.DiscoverFixturePremise

@@ -15,3 +15,10 @@ vocabulary (Codex P1 on #1796, premise-free check). -/
 def Inhabited' (B : Type) : Prop := ∃ y : B, y = y
 
 end TruthCore.DiscoverFixtureTarget
+
+namespace TruthCore.DiscoverFixtureTarget
+
+/-- A target that introduces an element `x : B` its premise lacks. -/
+def HoldsAt (B : Type) (R : B → Prop) (x : B) : Prop := R x
+
+end TruthCore.DiscoverFixtureTarget

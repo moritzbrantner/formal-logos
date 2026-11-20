@@ -292,6 +292,27 @@ fn an_inconsistent_core_is_an_incompatibility_never_support() {
 }
 
 #[test]
+fn an_incompatibility_with_a_forbidden_axiom_is_filtered() {
+    let mut outcome = closed_outcome();
+    outcome["vacuous"] = json!({"prover": "duper", "used": [0], "axioms": ["propext"]});
+    outcome["vacuous_core"] = json!([0]);
+    outcome["vacuous_core_proof"] =
+        json!({"prover": "duper", "used": [0], "axioms": ["propext", "sorryAx"]});
+    let f = classify(
+        &trial(&["P"]),
+        &outcome,
+        &Graph::default(),
+        &SenseCheck::empty(),
+    );
+    assert_eq!(f.kind, Kind::Filtered);
+    assert!(
+        f.filters
+            .iter()
+            .any(|(k, d)| k == "axioms" && d.contains("sorryAx"))
+    );
+}
+
+#[test]
 fn unresolved_errors_and_vocabulary_theorems() {
     let senses = SenseCheck::empty();
     let t = trial(&["P"]);

@@ -127,6 +127,17 @@ class DiscoverBindingTest(unittest.TestCase):
         self.assertIsNone(outcome["alone"])
         self.assertIsNotNone(outcome["closed"])
 
+    def test_contradiction_uses_the_premises_own_binders(self):
+        target = "TruthCore.DiscoverFixtureTarget.HoldsAt"
+        premise = "TruthCore.DiscoverFixturePremise.EverywhereBoth"
+        rows = [[d, b, b] for d in (target, premise) for b in ("B", "R")]
+        config = lean_string(json.dumps({"tags": rows}))
+        outcome = run([f'#discover "incompatible" 20000 "" {config} {target} from {premise}'])["incompatible"]
+        # The premise is refuted only with the target's `x : B`; over an empty
+        # `B` it holds, so it is no incompatibility (the derivation still closes).
+        self.assertIsNotNone(outcome["closed"])
+        self.assertIsNone(outcome["vacuous"])
+
 
 if __name__ == "__main__":
     unittest.main()

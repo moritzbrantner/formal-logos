@@ -1098,6 +1098,20 @@ pub fn classify(trial: &Trial, outcome: &Value, graph: &Graph, senses: &SenseChe
             finding.kind = Kind::Filtered;
             finding.filters.push(("domain_by_name".into(), detail));
         }
+        // Incompatibilities skip text certification: their contradiction
+        // proofs (the first and the core's) must stay within the allowed axioms.
+        let mut used = axioms(&outcome["vacuous"]);
+        used.extend(axioms(&outcome["vacuous_core_proof"]));
+        used.sort();
+        used.dedup();
+        let forbidden = forbidden_axioms(&used);
+        if !forbidden.is_empty() {
+            finding.kind = Kind::Filtered;
+            finding.filters.push((
+                "axioms".into(),
+                format!("the contradiction proof uses {}", forbidden.join(", ")),
+            ));
+        }
         return finding;
     }
     finding.kind = Kind::Discovery;

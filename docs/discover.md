@@ -91,7 +91,7 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
 | --- | --- | --- |
 | `known` | the target follows by composing verified arguments from the minimal premises (forward-chaining closure; covers supersets of an existing argument's premises) | reject |
 | `transcription` | one premise application closes the folded goal (the `truth prove-sweep` probe, invariant 16) | reject |
-| vacuity | `False` follows from the minimal premises: reported as an **incompatibility** (the inconsistent core, minimized), never as support | separate kind |
+| vacuity | `False` follows from the minimal premises over their own binders only (no element or instance borrowed from the target or a dropped premise): reported as an **incompatibility** (the inconsistent core, minimized), never as support; filtered (`axioms`) when a contradiction proof uses an axiom outside the three allowed | separate kind |
 | `known` (incompatibility), `duplicate` | the inconsistent core contains recorded rivals (`alternative_to`, `attacks`); or an earlier goal already found the same core | reject |
 | `senses` | the argument uses two senses of one term (`argument_term_senses`, the check `truth check` applies) and no premise is a registered bridge between them | reject |
 | `domain_by_name` | a carrier or structure bundle was identified with one of another module by name only | reject (listed as needing a tag or bridge) |
