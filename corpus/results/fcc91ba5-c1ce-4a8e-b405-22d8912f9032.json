@@ -1,0 +1,11 @@
+{
+  "id": "fcc91ba5-c1ce-4a8e-b405-22d8912f9032",
+  "label": "Matched three-bearer control for universal-only transfer to GOD_4",
+  "argument_id": "e9a920e2-e33f-4325-b88b-d77cf8622713",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.PreexistenceWithoutTransfer.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.PreexistenceWithoutTransfer.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.PreexistenceWithoutTransfer.universalTransferGodExists_strictness",
+  "comparator_config": "results/fcc91ba5-c1ce-4a8e-b405-22d8912f9032/comparator.json",
+  "status": "solution-present",
+  "description": "Finite structural interpretation over Fin 3 and Bool. Every nonlogical premise of the new GOD_4 bundle and its consequent hold, and unrestricted f8ba2429 fails: the secondary cause gives the recipient esse but not its additional perfection. Classical excluded middle is available separately. Thus universal-scope transfer is strictly weaker than unrestricted transfer under the other bundle assumptions, without showing either is true of reality."
+}
