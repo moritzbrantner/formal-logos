@@ -26,20 +26,20 @@ disambiguations = ["1272a7e5-e3e1-4c91-a1d3-343018262841"]
 [[statement]]
 id = "Grounded thinking cone members have an earlier distinct thinking ancestor"
 lean = "ThinkingBearerConeNoFresh"
-paraphrase = "Analyst formulation: for each bearer b of an occurring thought, each actual concrete ancestor x of b that bears an occurring thought and has at least one incoming actual concrete ground has a distinct earlier thinking ancestor c along a nonempty finite ground path. Its immediate ground need not be a thinker, and x need not be contingent. No logical or idealist theory by itself supplies this bridge."
+paraphrase = "Analyst formulation: for each bearer b of an occurring thought, each member x of b's actual concrete ground cone (b itself or an actual concrete finite ground ancestor of b) that bears an occurring thought and has at least one incoming actual concrete ground has a distinct earlier thinking ancestor c along a nonempty finite ground path. Its immediate ground need not be a thinker, and x need not be contingent. No logical or idealist theory by itself supplies this bridge."
 definitions = ["51d205db-399e-4524-8e15-e04cf2532e24", "12c3b24c-f278-499a-b127-db56a407af4c", "9c6e4314-2e35-52ff-951e-db752a3c8ce2"]
 disambiguations = ["1272a7e5-e3e1-4c91-a1d3-343018262841"]
 
 [[statement]]
 id = "Contingent thinking cone members of a thought bearer have actual concrete grounds"
 lean = "ThinkingBearerConeContingentGrounded"
-paraphrase = "Analyst formulation: for every occurring-thought bearer b, contingent actual concrete ancestors x that themselves bear an occurring thought have an actual concrete predecessor. Contingent nonthinking ancestors are not covered; this is weaker in scope than contingent grounding for every member of the full actual cone, but no unconditional truth is asserted."
+paraphrase = "Analyst formulation: for every occurring-thought bearer b, contingent members x of b's actual concrete ground cone (b itself included) that bear an occurring thought have an actual concrete predecessor. Contingent nonthinking ancestors are not covered; this is weaker in scope than contingent grounding for every member of the full actual cone, but no unconditional truth is asserted."
 definitions = ["6f53f286-b5e8-4b75-997a-8e314e97d6ff", "9c6e4314-2e35-52ff-951e-db752a3c8ce2", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1"]
 
 [[statement]]
 id = "An occurring thought has a necessary actual thinking ground root"
 lean = "NecessaryThinkingRootOfThought"
-paraphrase = "Some bearer b of an occurring thought has one finite actual concrete ground ancestor n that bears an occurring thought, is concrete and exists at the selected world, has no incoming actual concrete ground at that world, and exists at every world accessible from it. The same n satisfies thinking, ancestry, selected-relation rootness and de re modal necessity. It is not asserted to think in all accessible worlds, to be underived under other relations, unique or God."
+paraphrase = "Some bearer b of an occurring thought has one actual concrete ground ancestor n (b itself or reached by a finite ground path) that bears an occurring thought, is concrete and exists at the selected world, has no incoming actual concrete ground at that world, and exists at every world accessible from it. The same n satisfies thinking, ancestry, selected-relation rootness and de re modal necessity. It is not asserted to think in all accessible worlds, to be underived under other relations, unique or God."
 definitions = [
   "12c3b24c-f278-499a-b127-db56a407af4c",
   "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce",
