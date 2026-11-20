@@ -402,9 +402,10 @@ def witness (xs : Array Expr) (goals : Array Expr) (u : NameSet) (heartbeats : N
 /-! ### Missing bridges
 
 When the premises do not prove the target, the gap may be that two
-vocabularies are unconnected: a premise speaks of a relation `p` (a binder or
-a field of a structure binder that did not come from the target declaration)
-and the target of a relation `q`. For each such pair the command forms the
+vocabularies are unconnected: the premises speak of a relation `p` (a binder or
+a Prop-valued field of a structure binder, after delta-expansion) and the
+conclusion of a relation `q`. Both directions are tried, pairs where each is
+used on its side only first. For each such pair the command forms the
 bridge
 
     ∀ a₁ … aₘ, p a₁ … aₘ → ∃ (unmatched bⱼ), q b₁ … bₙ
@@ -505,35 +506,50 @@ def bridgeFor (p q : Expr) (pElems qElems : Array (String × Expr)) (fix : Bool)
     let (bridge, _) := (nameBinders bridge).run 0
     return some (bridge, fixed)
 
-def missingBridges (xs : Array Expr) (origins : Array Origin) (target : Name)
+def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
     (hyps : Array (Nat × Expr)) (concl : Expr) (u : NameSet) (heartbeats : Nat) :
     TermElabM (Array Json) := do
-  -- Relations and elements on the target's side and on the premises' side.
-  let mut tRel : Array (String × Expr) := #[]
-  let mut pRel : Array (String × Expr) := #[]
-  let mut tEl : Array (String × Expr) := #[]
-  let mut pEl : Array (String × Expr) := #[]
+  -- The vocabulary the premises use and the vocabulary the conclusion uses,
+  -- after delta-expansion: relations (binders, or Prop-valued fields of
+  -- structure binders) and element binders (for fixed arguments).
+  let hs ← hyps.mapM fun (_, h) => expand u h
+  let c ← expand u concl
+  let inH (e : Expr) : Bool := hs.any (e.occurs ·)
+  let inC (e : Expr) : Bool := e.occurs c
+  let mut rel : Array (String × Expr) := #[]
+  let mut elems : Array (String × Expr) := #[]
   for (x, o) in xs.zip origins do
-    let side := o.decl == target
     let atoms := (← predicateAtoms x).map fun (n, e) => (s!"{o.decl}.{n}", e)
-    if side then tRel := tRel ++ atoms else pRel := pRel ++ atoms
+    rel := rel ++ atoms
     let ty ← whnfR (← inferType x)
     if atoms.isEmpty && !ty.isSort && !ty.isForall && !(← isStructureType ty) &&
         !(← x.fvarId!.getBinderInfo).isInstImplicit && !(← isProp ty) then
-      let el := ((← x.fvarId!.getUserName).eraseMacroScopes.toString, x)
-      if side then tEl := tEl.push el else pEl := pEl.push el
+      elems := elems.push ((← x.fvarId!.getUserName).eraseMacroScopes.toString, x)
+  -- The elements that occur together with a relation (in one hypothesis or the
+  -- conclusion) are its candidates for a fixed argument.
+  let exprs := hs.push c
+  let near (r : Expr) : Array (String × Expr) :=
+    elems.filter fun (_, x) => exprs.any fun e => r.occurs e && x.occurs e
+  -- Pairs of a premise relation and a conclusion relation; first those where
+  -- each is used on its side only (the two vocabularies are unconnected).
+  let mut first := #[]
+  let mut later := #[]
+  for (pn, p) in rel do
+    unless inH p do continue
+    for (qn, q) in rel do
+      if pn == qn || !inC q then continue
+      -- Both directions: the conclusion's antecedents may need the premises'
+      -- vocabulary as much as the premises' consequents need the conclusion's.
+      if !inC p && !inH q then
+        first := first.push ((pn, p), (qn, q), near p, near q) |>.push ((qn, q), (pn, p), near q, near p)
+      else
+        later := later.push ((pn, p), (qn, q), near p, near q) |>.push ((qn, q), (pn, p), near q, near p)
   let budget := max 2000 (heartbeats / 4)
   let mut out : Array Json := #[]
   let mut tried := 0
-  -- Both directions: premise vocabulary to target vocabulary, and back.
-  let mut pairs : Array ((String × Expr) × (String × Expr) × Array (String × Expr) × Array (String × Expr)) := #[]
-  for pr in pRel do
-    for tr in tRel do
-      pairs := pairs.push (pr, tr, pEl, tEl)
-      pairs := pairs.push (tr, pr, tEl, pEl)
-  for ((pn, p), (qn, q), pe, qe) in pairs do
+  for ((pn, p), (qn, q), pe, qe) in first ++ later do
     for fix in [true, false] do
-      if tried ≥ 32 then return out
+      if tried ≥ 48 then return out
       let some (bridge, fixed) ← bridgeFor p q pe qe fix | continue
       tried := tried + 1
       let withBridge := hyps.push (1000, bridge)

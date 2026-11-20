@@ -1638,7 +1638,11 @@ pub fn discover(
         let mut bridges = Vec::new();
         for id in premises.clone() {
             for b in tags.bridge_statements(&target.declaration, &statements[&id].declaration) {
-                if statements.contains_key(&b) && !premises.contains(&b) && !bridges.contains(&b) {
+                if b != target.id
+                    && statements.contains_key(&b)
+                    && !premises.contains(&b)
+                    && !bridges.contains(&b)
+                {
                     bridges.push(b);
                 }
             }
