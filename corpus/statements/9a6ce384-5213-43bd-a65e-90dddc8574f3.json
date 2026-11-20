@@ -1,0 +1,9 @@
+{
+  "id": "9a6ce384-5213-43bd-a65e-90dddc8574f3",
+  "label": "The route's modal frame is transitive (route frame premise delta)",
+  "paraphrase": "Difference statement: the accessibility relation of the route's modal frame m.ontic.frame is transitive (if w accesses v and v accesses u, then w accesses u; frame condition 4). A condition on the frame only; it is not asserted of the route.",
+  "lean_declaration": "TruthCore.Causality.ModalSenseSupport.OnticFrameTransitive",
+  "definition_ids": [
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2"
+  ]
+}
