@@ -43,11 +43,16 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
 4. **Goal.** `scripts/Discover.lean` builds
    `∀ params, P₁ → … → Pₙ → T` from the declarations themselves. Each
    premise parameter is identified with an outer one of definitionally equal
-   type when it is a carrier (`B : Type`) or a structure bundle
-   (`h : History W B T`) with the same name, an instance (by type or
-   synthesis), or a predicate, relation, function or element with the same
-   name *declared in the same module*, or tagged with the *same sense*.
-   Nothing is identified by name similarity across modules; every other
+   type when it is an instance (by type or synthesis), or when it has the same
+   name *and is declared in the same module*, or is tagged with the *same
+   sense*. Nothing is identified by name across modules: a carrier
+   (`B : Type`) may range over beings in one module and sentences in another.
+   One reported fallback: a carrier or structure bundle (`h : History W B T`)
+   of the same name and type in another module is identified and listed in
+   `domain_identified_by_name`, because no cross-module goal could otherwise be
+   stated until carriers are tagged. Such a goal is filtered
+   (`domain_by_name`), kept out of `--write-spec` drafts and listed as needing a
+   sense tag or a bridge; its missing bridges carry the same flag. Every other
    parameter becomes a new outer binder, so the theorem stays universally
    quantified, as a result theorem's binders are. A universe-polymorphic
    statement is taken at the lowest universe that keeps each carrier a type
@@ -86,6 +91,7 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
 | vacuity | `False` follows from the minimal premises: reported as an **incompatibility** (the inconsistent core, minimized), never as support | separate kind |
 | `known` (incompatibility), `duplicate` | the inconsistent core contains recorded rivals (`alternative_to`, `attacks`); or an earlier goal already found the same core | reject |
 | `senses` | the argument uses two senses of one term (`argument_term_senses`, the check `truth check` applies) and no premise is a registered bridge between them | reject |
+| `domain_by_name` | a carrier or structure bundle was identified with one of another module by name only | reject (listed as needing a tag or bridge) |
 | `sense_bridge` | a premise is the registered bridge between the senses it mixes | flag |
 | `witness` | no one-point joint model was found; Duper found no contradiction, so consistency is unresolved | flag |
 | `vacuous_target` | the premises refute the target's own antecedents (`∀ x, A x → B x` holds because nothing is `A`): valid, but true vacuously | flag |
@@ -108,9 +114,10 @@ parameters were identified.
 ## Missing bridges
 
 When a goal fails, the engine looks for the exact missing link between the
-target's vocabulary and a premise's. For a relation `p` on one side (a
-parameter, or a Prop-valued field of a structure parameter) and `q` on the
-other, in both directions, it forms
+vocabulary the premises use and the vocabulary the conclusion uses, after
+delta-expansion. For a relation `p` used by a premise (a parameter, or a
+Prop-valued field of a structure parameter such as `G.GivesAt`) and a relation
+`q` used by the conclusion, in both directions, it forms
 
 ```text
 ∀ a₁ … aₘ, p a₁ … aₘ → ∃ (unmatched bⱼ), q b₁ … bₙ
@@ -118,11 +125,14 @@ other, in both directions, it forms
 
 matching each argument of `q` to an unused argument of `p` of the same type.
 The `fixed` variant, tried first because it is weaker, fixes an argument
-whose type has exactly one element parameter on its side
+whose type has exactly one element parameter occurring together with that
+relation (in one hypothesis, or in the conclusion)
 (`∀ c x, CausesIn c x esse → CausesIn_2 c x esse_2`). A bridge is reported when
-the premises with it prove the target and do not prove `False`. The report
+the premises with it prove the target, do not prove `False`, and the bridge
+alone does not prove the target (it would merely restate it). The report
 ranks bridges by the number of targets they unlock, then goals, and lists the
-premises the unlocked proofs used. A bridge is a **candidate proposition**: a
+premises the unlocked proofs used. Pairs where each relation is used on one
+side only come first; at most 48 bridge candidates are tried per goal. A bridge is a **candidate proposition**: a
 research question to state, interpret and warrant, never a premise of any
 record until it is. A bridge between two parameters of the same name and
 type in different modules often asks whether the two declarations use one

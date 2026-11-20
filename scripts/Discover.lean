@@ -84,17 +84,20 @@ from, that declaration's module, and the sense its parameter is tagged with
 discover`). A premise binder is identified with an outer binder of
 definitionally equal type when
 
-* it is a carrier (`B : Type`): same name (a domain of discourse; identifying
-  domains only specializes a universally quantified theorem);
 * it is an instance: by type, or by synthesis;
-* its type is a structure (a vocabulary bundle such as `History W B T`): same
-  name;
-* otherwise (a predicate, relation, function or element: what carries a
-  sense): same name *and* both declared in the same module (that module's
-  authored convention), or both tagged with the same sense id.
+* otherwise (a carrier `B : Type`, a structure bundle such as
+  `History W B T`, a predicate, relation, function or element): same name
+  *and* both declared in the same module (that module's authored convention),
+  or both tagged with the same sense id.
 
-Nothing is identified by name similarity across modules. Every other binder
-becomes a new outer binder, so the goal stays universally quantified. -/
+Nothing is identified by name across modules as such. One fallback, which the
+configuration can switch off (`"strict_domains": true`): a carrier or
+structure bundle with the same name and type in another module is identified
+and reported in `domain_identified_by_name`, because without it no
+cross-module goal can be stated until carriers are tagged. `truth discover`
+keeps such goals out of spec drafts and lists them as needing a tag or a
+bridge. Every other binder becomes a new outer binder, so the goal stays
+universally quantified. -/
 
 structure Origin where
   decl : Name
@@ -118,7 +121,8 @@ def isStructureType (d : Expr) : MetaM Bool := do
   | .const c _ => return isStructure (← getEnv) c
   | _ => return false
 
-partial def bind (tags : Array (Name × Name × String)) (decl : Name) (module : Name)
+partial def bind (tags : Array (Name × Name × String)) (strict : Bool)
+    (byName : IO.Ref (Array String)) (decl : Name) (module : Name)
     (xs : Array Expr) (origins : Array Origin) (e : Expr)
     (k : Array Expr → Array Origin → Expr → TermElabM α) : TermElabM α := do
   let ty ← instantiateMVars (← inferType e)
@@ -130,32 +134,34 @@ partial def bind (tags : Array (Name × Name × String)) (decl : Name) (module :
     for (x, o) in xs.zip origins do
       let xbi ← x.fvarId!.getBinderInfo
       let sameName := (← x.fvarId!.getUserName).eraseMacroScopes == n.eraseMacroScopes
-      let allowed :=
-        if bi.isInstImplicit then xbi.isInstImplicit
-        else if carrier || bundle then sameName
-        else (sameName && o.module == module) || (sense.isSome && o.sense == sense)
+      let authored := (sameName && o.module == module) || (sense.isSome && o.sense == sense)
+      let fallback := !strict && (carrier || bundle) && sameName && !authored
+      let allowed := if bi.isInstImplicit then xbi.isInstImplicit else authored || fallback
       if allowed then
         if ← isDefEq (← inferType x) d then
-          return ← bind tags decl module xs origins (mkApp e x) k
+          if fallback && !bi.isInstImplicit then
+            byName.modify (·.push s!"{decl}.{n} = {o.decl}.{o.binder}")
+          return ← bind tags strict byName decl module xs origins (mkApp e x) k
     if bi.isInstImplicit then
       if let some inst ← (try synthInstance? d catch _ => pure none) then
-        return ← bind tags decl module xs origins (mkApp e inst) k
+        return ← bind tags strict byName decl module xs origins (mkApp e inst) k
     let n' ← freshUserName xs n
     withLocalDecl n' bi (← instantiateMVars d) fun y =>
-      bind tags decl module (xs.push y) (origins.push { decl, binder := n, module, sense })
+      bind tags strict byName decl module (xs.push y) (origins.push { decl, binder := n, module, sense })
         (mkApp e y) k
   | _ => k xs origins e
 
 /-- `bind` for every name in turn: the target first, then the premises. -/
-partial def bindAll (tags : Array (Name × Name × String))
+partial def bindAll (tags : Array (Name × Name × String)) (strict : Bool)
+    (byName : IO.Ref (Array String))
     (xs : Array Expr) (origins : Array Origin) (names : List Name) (acc : Array Expr)
     (k : Array Expr → Array Origin → Array Expr → TermElabM α) : TermElabM α := do
   match names with
   | [] => k xs origins acc
   | n :: rest =>
     let e ← mkConstWithFreshMVarLevels n
-    bind tags n (← moduleOf n) xs origins e fun xs' os p =>
-      bindAll tags xs' os rest (acc.push p) k
+    bind tags strict byName n (← moduleOf n) xs origins e fun xs' os p =>
+      bindAll tags strict byName xs' os rest (acc.push p) k
 
 /-- Project definitions to delta-expand: `TruthCore.` definitions with a value
 whose type ends in `Prop`, not projections, instances or recursive helpers,
@@ -555,6 +561,9 @@ def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
       let withBridge := hyps.push (1000, bridge)
       let some proof ← prove xs withBridge concl u budget "" (duperOnly := true) | continue
       unless proof.used.contains 1000 do continue
+      -- A bridge that proves the target on its own merely restates it.
+      if (← prove xs #[(1000, bridge)] concl u (max 2000 (heartbeats / 10)) ""
+          (duperOnly := true)).isSome then continue
       if (← prove xs withBridge (Lean.mkConst ``False) u (max 2000 (heartbeats / 10)) ""
           (duperOnly := true)).isSome then continue
       let text ← withOptions (fun o => o |>.set `pp.fullNames true |>.set `pp.fieldNotation false
@@ -567,13 +576,14 @@ def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
   return out
 
 def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : String)
-    (tags : Array (Name × Name × String)) (bridges : Bool) :
+    (tags : Array (Name × Name × String)) (bridges : Bool) (strict : Bool)
+    (byName : IO.Ref (Array String)) :
     TermElabM Json := do
   let env ← getEnv
   for n in premises.push target do
     unless env.contains n do
       return Json.mkObj [("error", Json.str s!"unknown declaration {n}")]
-  bindAll tags #[] #[] (target :: premises.toList) #[] fun xs origins ps => do
+  bindAll tags strict byName #[] #[] (target :: premises.toList) #[] fun xs origins ps => do
     let concl := ps[0]!
     let hyps := (ps.extract 1 ps.size).zipIdx.map fun (h, i) => (i, h)
     for e in ps do
@@ -682,13 +692,16 @@ syntax (name := discoverTry) "#discover " str num str str ident " from " ident* 
     ((config.getObjValAs? (Array (Array String)) "tags").toOption.getD #[]).filterMap fun t =>
       if t.size == 3 then some (t[0]!.toName, t[1]!.toName, t[2]!) else none
   let bridges := (config.getObjValAs? Bool "bridges").toOption.getD false
+  let strict := (config.getObjValAs? Bool "strict_domains").toOption.getD false
+  let byName ← IO.mkRef (#[] : Array String)
   let target := stx[5].getId
   let premises := stx[7].getArgs.map (·.getId)
   let started ← IO.monoMsNow
   let result ← liftTermElabM do
-    try trial target premises heartbeats zip tags bridges
+    try trial target premises heartbeats zip tags bridges strict byName
     catch e => return Json.mkObj [("error", Json.str (← e.toMessageData.toString))]
   let result := result.setObjVal! "label" (Json.str label)
+  let result := result.setObjVal! "domain_identified_by_name" (toJson (← byName.get))
   let result := result.setObjVal! "ms" (toJson ((← IO.monoMsNow) - started))
   -- `truth discover` reads this log, so finished targets survive a timed-out run.
   if let some path ← IO.getEnv "TRUTH_DISCOVER_LOG" then

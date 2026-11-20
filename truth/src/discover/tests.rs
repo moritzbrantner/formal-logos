@@ -525,3 +525,33 @@ fn tags_of(disambiguations: &[Value], arguments: &[Value]) -> SenseTags {
     .unwrap();
     SenseTags::from_parts(&tags, arguments.iter().map(|v| v.as_object().unwrap()))
 }
+
+#[test]
+fn same_module_bindings_pass_and_cross_module_name_identifications_are_rejected() {
+    let senses = SenseCheck::empty();
+    let mut same = closed_outcome();
+    same["domain_identified_by_name"] = json!([]);
+    let f = classify(&trial(&["P", "Q", "R"]), &same, &Graph::default(), &senses);
+    assert_eq!(f.kind, Kind::Discovery);
+    assert!(f.filters.is_empty());
+
+    let mut cross = closed_outcome();
+    cross["domain_identified_by_name"] = json!(["N.B.B = M.T.B"]);
+    let f = classify(&trial(&["P", "Q", "R"]), &cross, &Graph::default(), &senses);
+    assert_eq!(f.kind, Kind::Filtered);
+    assert_eq!(f.filters[0].0, "domain_by_name");
+    assert!(f.filters[0].1.contains("N.B.B = M.T.B"));
+
+    let mut inconsistent = cross.clone();
+    inconsistent["vacuous"] = json!({"prover": "duper", "used": [0], "axioms": []});
+    let f = classify(
+        &trial(&["P", "Q", "R"]),
+        &inconsistent,
+        &Graph::default(),
+        &senses,
+    );
+    assert_eq!(
+        (f.kind, f.filters[0].0.as_str()),
+        (Kind::Filtered, "domain_by_name")
+    );
+}

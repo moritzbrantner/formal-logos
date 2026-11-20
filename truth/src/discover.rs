@@ -1009,6 +1009,23 @@ pub fn forbidden_axioms(axioms: &[String]) -> Vec<String> {
         .collect()
 }
 
+/// The carrier and structure identifications the goal made by name across
+/// modules (`scripts/Discover.lean`, binding policy): such a goal needs a sense
+/// tag or a bridge before it can be a discovery, and stays out of spec drafts.
+pub fn domain_flag(outcome: &Value) -> Option<String> {
+    let names: Vec<&str> = outcome["domain_identified_by_name"]
+        .as_array()?
+        .iter()
+        .filter_map(Value::as_str)
+        .collect();
+    (!names.is_empty()).then(|| {
+        format!(
+            "identified across modules by name only (needs a sense tag or a bridge): {}",
+            names.join("; ")
+        )
+    })
+}
+
 /// Applies the filters of #1784 to one Lean outcome.
 pub fn classify(trial: &Trial, outcome: &Value, graph: &Graph, senses: &SenseCheck) -> Finding {
     let mut finding = Finding {
@@ -1076,9 +1093,16 @@ pub fn classify(trial: &Trial, outcome: &Value, graph: &Graph, senses: &SenseChe
                 format!("the inconsistent core contains the recorded rivals {a} and {b}"),
             ));
         }
+        if let Some(detail) = domain_flag(outcome) {
+            finding.kind = Kind::Filtered;
+            finding.filters.push(("domain_by_name".into(), detail));
+        }
         return finding;
     }
     finding.kind = Kind::Discovery;
+    if let Some(detail) = domain_flag(outcome) {
+        finding.filters.push(("domain_by_name".into(), detail));
+    }
     let forbidden = forbidden_axioms(&axioms(&outcome["proof"]));
     if !forbidden.is_empty() {
         finding
@@ -1819,6 +1843,9 @@ pub struct Bridge {
     pub goals: Vec<String>,
     /// Premises the unlocked proofs used besides the bridge.
     pub premises: BTreeSet<String>,
+    /// Some unlocked goal identified a carrier or structure across modules by
+    /// name: the bridge then also needs a tag or bridge for that domain.
+    pub domain_identified_by_name: bool,
 }
 
 /// The missing bridges of failed goals, ranked by the number of targets they
@@ -1845,9 +1872,11 @@ pub fn rank_bridges(findings: &[Finding]) -> Vec<Bridge> {
                     targets: BTreeSet::new(),
                     goals: Vec::new(),
                     premises: BTreeSet::new(),
+                    domain_identified_by_name: false,
                 });
             entry.targets.insert(finding.trial.target.clone());
             entry.goals.push(finding.trial.label.clone());
+            entry.domain_identified_by_name |= domain_flag(&finding.outcome).is_some();
             for i in indices(&b["used"]) {
                 if let Some(p) = finding.trial.premises.get(i) {
                     entry.premises.insert(p.clone());
@@ -1872,6 +1901,7 @@ pub fn bridge_json(bridge: &Bridge) -> Value {
         "proposition": bridge.text,
         "unlocks_targets": bridge.targets, "goals": bridge.goals,
         "with_premises": bridge.premises,
+        "domain_identified_by_name": bridge.domain_identified_by_name,
         "status": "candidate proposition: a research question, not a premise of any record",
     })
 }
