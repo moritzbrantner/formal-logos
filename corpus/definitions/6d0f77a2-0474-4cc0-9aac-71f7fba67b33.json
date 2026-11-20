@@ -1,0 +1,9 @@
+{
+ "id": "6d0f77a2-0474-4cc0-9aac-71f7fba67b33",
+ "label": "Homogeneous in a history: moments of presence related by history-preserving time automorphisms",
+ "term": "homogeneous in a history (Lean `HomogeneousIn`, with `PreservesHistory`)",
+ "definition": "PreservesHistory h Facts v σ: the order automorphism σ of the times (Mathlib OrderIso T ≃o T) preserves history v, that is, every being is present at t iff at σ t (History.IsAt) and every supplied time-indexed fact holds at t iff at σ t (Facts v y t). HomogeneousIn h Facts v x: for any two moments s, t at which x is present in v there is such a σ with σ s = t. So no moment of x's presence is distinguished from another by the order of time, by anything's presence or by the supplied facts. On integer times the order automorphisms are the shifts; a stationary beginningless history makes every thing in it homogeneous, while a thing with a first moment that is present at more than one moment is not homogeneous (an automorphism preserving its presence fixes its first moment).",
+ "basis": "stipulative",
+ "lean_declaration": "TruthCore.Causality.TimeSymmetricGiving.HomogeneousIn",
+ "note": "Analyst definition, attribution deferred. Facts is a parameter: it must list the non-giving time-indexed facts of the interpretation and must not encode giving or causing being. With an incomplete Facts, homogeneity and the time-symmetry premise are stronger than intended, since a map preserving the supplied facts may move unsupplied ones. Mathlib's OrderIso is reused, not hand-rolled. Distinguished from indiscernibility of individuals (PII), from stationarity of a physical state alone (it requires every supplied fact preserved), and from modal homogeneity across worlds (one history only)."
+}

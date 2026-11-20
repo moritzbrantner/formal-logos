@@ -25,7 +25,7 @@ flowchart TD
 3. **Decompose only where useful.** Follow disputed premises and load-bearing terms as deeply as the current question requires. Split records for consequential inference, substantive warrant, rival discrimination or reuse. Identify honest primitives and open bridges; neither a new predicate name nor a definition settles its applicability. Reuse shared [definition dependencies](corpus-model.md#definition-dependencies-and-formal-meaning). Do not expand ordinary vocabulary just for a larger count; useful coverage of distinct questions and rival views is welcome.
 4. **Report substantive reassessment points.** Report when the question is resolved, unavailable evidence/capabilities or an owner decision blocks progress, repeated approaches expose the same obstacle without a materially different next test, or a more consequential question warrants a scope change. Persist changed uncertainty, exact evidence and assumptions, standing rivals and their prices, failed approaches, provisional assessment and next tests. A useful result, open premise or surviving countermodel alone is not a stopping condition: descend into relevant subarguments and reconnect findings to the parent. Continue other available work within the assignment. Failed search does not exhaust a question.
 5. **Draft, challenge and repair.** The coordinator prepares the complete proposed outcome: record/graph changes, overall judgments, diagrams and handoff. Apply the [final outcome review](#final-outcome-review-and-repair) before relying on new consequential assertions as reviewed support. A review of worker outputs does not cover a stronger coordinator summary.
-6. **Integrate and requeue.** Integrate the reviewed version, connect findings to their parent questions, update priorities and assign the next fresh worker. Requeue unfinished work with a specific next step or reopening condition, not an instruction to repeat the same unsuccessful search. Continue across PR checkpoints. Stop only when the requested scope is substantively resolved, every remaining branch has a concrete blocker preventing useful work, or the owner stops the loop. Preserve resumable handoffs for runtime interruptions.
+6. **Integrate and requeue.** Integrate the reviewed version under the [PR completion contract](#pr-completion-contract), connect findings to their parent questions, update priorities and assign the next fresh worker. Requeue unfinished work with a specific next step or reopening condition, not an instruction to repeat the same unsuccessful search. Continue across PR checkpoints. Stop only when the requested scope is substantively resolved, every remaining branch has a concrete blocker preventing useful work, or the owner stops the loop. Preserve resumable handoffs for runtime interruptions.
 
 Keep the readable case, judgments and rivals in the existing issue or linked case note; keep proofs, sources, countermodels and substantive attempts in their canonical records/dossiers. The current handoff links them. This policy adds no tracker, schema, truth-status field or numerical confidence score. Attempt outcomes describe work, not truth; their `evidence` field retains its existing result/claim/PR reference rules ([attempt format](premise-dossiers.md)).
 
@@ -182,6 +182,25 @@ copying them into the issue:
    resolution. Close an issue only when **its stated scope** is delivered;
    requeue genuine remaining research through the current handoff or a
    distinct, linked issue, never a duplicate activity tracker.
+
+**Requested delivery and acceptance.** At creation and dispatch, state which
+contribution the issue requests and what evidence will demonstrate completion.
+For a mixed issue, distinguish its promises; keep each independently reviewable.
+These are descriptions of scope, not new corpus fields or compulsory labels:
+
+| Requested contribution | Evidence of completion |
+|---|---|
+| Research or comparison | A reviewed finding in the existing records/note, its effect on the named question, retained assumptions and a next distinct test or reopening condition. A precise negative result or blocker can complete this scope; neither a proof nor a new consumer is compulsory. |
+| Argument integration | The promised connection implemented through canonical argument/result records and an actual consumer toward the named target, preserving the complete premise bundle and intended meanings/witnesses. An existing consumer suffices; a conclusion that is itself the selected target needs no additional edge. |
+| Tooling, documentation or maintenance | The requested observable behavior or policy change and relevant validation. Explain its research use when relevant; formal result IDs and a philosophical consumer are not required for such work. |
+
+An integration issue may produce useful partial research, but a connection plan
+does not satisfy its promised implemented connection. Report the partial result
+and retain the missing acceptance work; do not silently redefine the issue as a
+research-only task or manufacture a redundant or circular edge to close it.
+If current `main` already delivers part of the request, link that evidence and
+dispatch only the unresolved delta. Scope completion does not require a decrease
+in open-premise counts or independent proofs of all retained assumptions.
 
 **Deferred-research issue retirement (owner direction, 2026-11-15).**
 GitHub is the **active execution queue**, not a permanent catalogue of every
@@ -411,6 +430,65 @@ work after the tenth observation too.
 ## PR boundary
 
 Ship one coherent verified argument cluster, a complete candidate range, or a reviewable part of it (about 5–10 claims at most, not a quota). Report premise effects and remaining gaps; persist substantive failed attempts before handoff. A PR boundary does not end the investigation.
+
+### PR completion contract
+
+Every PR gives a concise account of the following, linking existing evidence
+rather than duplicating it. Use the [PR template](../.github/pull_request_template.md)
+and the [issue template](../.github/ISSUE_TEMPLATE/research.md) as prompts; CLI/API
+submissions follow the same contract. Mark an inapplicable item with its reason.
+This is a scoped author/reviewer requirement, not a new automatic proof gate.
+
+1. **Requested versus delivered scope.** Link the issue or owner request and
+   identify the acceptance items delivered, partly delivered or still open.
+   Distinguish canonical changes from issue-comment research and proposed work.
+   A partial PR may merge, but references rather than automatically closes an
+   unfinished issue. Close only the scope actually delivered on `main`.
+2. **Evidence for claimed connections.** For each claimed new or revised formal
+   connection, identify its source and destination statement IDs, argument/result
+   and bound theorem, the complete jointly required premise bundle, and the
+   actual downstream consumer toward the selected target. Link canonical bundles
+   rather than copying their entire contents into the PR. Preserve the selected
+   senses, domain, frame and particular witness, using shared vocabulary/frames
+   and explicit bridges under the existing rules. Distinguish a registered
+   connection from an ordinary Lean helper or a proposed adapter. If the new
+   conclusion is itself the selected target, say so; no artificial extra consumer
+   is required. Research-only findings may instead change an assessment or expose
+   a missing connection. Keep any unbuilt integration plan and blocker explicit.
+3. **Retained obligations and actual effect.** State the useful change and its
+   limits: support option, weaker sufficient assumptions, clarified meaning,
+   tested incompatibility, assessment revision or tooling behavior. Retain open
+   premises, shared dependencies and conditional scope; label transcriptions.
+   Include the existing claim/type comparison and computed `truth frontier-diff`
+   evidence where applicable. For non-proof work state the intended absence of
+   premise change and link the CI delta when available. Neither graph connectivity,
+   proof counts nor frontier totals substitute for philosophical warrant.
+4. **Reconcile affected current assessments.** When work answers a recorded next
+   test or changes a current assessment, update the relevant existing attempt's
+   scoped `current_assessment`, or publish a successor assessment with explicit
+   `supersedes` wording, under the [existing format](premise-dossiers.md#current-assessment-and-publication-disposition).
+   Give the next unresolved test or reopening condition; a still-active dispatch
+   must not ask for the completed test again. Reconcile the linked subject note,
+   issue's visible current status and designated handoff. Preserve historical
+   findings, valid earlier proofs and assessments of other scopes, including
+   disagreements. A later note or GitHub comment alone does not replace this
+   scoped reconciliation. Declare `revisions` and assess affected downstream
+   uses only for actual changes of meaning, warrant or influential judgment;
+   ordinary completion/publication bookkeeping does not require them.
+5. **Validation and landing disposition.** Link relevant check evidence and the
+   existing final semantic review, with its checked revision and qualifications;
+   distinguish passed, pending, failed and unavailable checks. Reuse unchanged
+   evidence and apply the existing final-head integration gates. Before merge,
+   refresh `main`, recheck affected acceptance items and reconcile overlapping
+   work. After landing, the coordinator records the merged PR/revision, updates
+   applicable publication dispositions to `merged`, and reconciles issue closure
+   and the handoff. Never mark a proposed delivery as merged in advance.
+
+Review the affected scope, not a repository-wide historical backlog. If a
+required connection or reconciliation is missing, report that acceptance item
+as incomplete and retain the useful partial result. Do not require a fresh proof
+for each primitive, a new edge for each local lemma, or a new tracker to satisfy
+this contract. Research-only completion remains valid under its declared scope.
 
 ## Parallel lanes
 

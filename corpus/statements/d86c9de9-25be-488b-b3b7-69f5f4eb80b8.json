@@ -1,0 +1,16 @@
+{
+  "id": "d86c9de9-25be-488b-b3b7-69f5f4eb80b8",
+  "label": "Any explanation of a received-esse thing's presence at a moment comes with a giver of its being then",
+  "paraphrase": "OPEN analyst premise, attribution deferred (productive bridge): in every history of the model, if a received-esse thing (DEF-ESSE-RECEIVED-IN) is present at t and some reason explains its presence at t (definition 261516e9), then something gives it being at t (GivesAt, definition 158301bc, STRICT esse-giving reading). The typed counterpart, contraposed, of the auxiliary thesis Schmid 2021 (read; paragraph beginning 'Feser: \"Now, if EIT is false') attributes to Feser and rejects: if there is no sustaining cause, the explanation of an object's existence at t is not something extrinsic to it (with EIT false, nothing intrinsic either). No claim attributes this typed premise to either author. Under the shared momentary PSR it is equivalent to weak concurrent actualization 40a97664 (result psrBridgeCarriesTheCrux), so it is the crux restated, not a further price item. Schmid's origin-or-inertia explanation falsifies it (Control part 1).",
+  "lean_declaration": "TruthCore.Causality.TimeSymmetricGiving.ExplanationNeedsGiver",
+  "definition_ids": [
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "261516e9-9e57-4750-a6ba-f0ea64ff09bf",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

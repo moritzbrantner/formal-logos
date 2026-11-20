@@ -1,0 +1,12 @@
+{
+  "id": "b1be3fb1-4c18-4b1d-bf48-2ab82421e3cd",
+  "label": "Concurrent actualization entails it for homogeneous things (inference)",
+  "input_statement_ids": [
+    "40a97664-e481-42d7-8458-78374a61aa26"
+  ],
+  "output_statement_id": "eb928359-9871-4964-b274-3a82648b58a1",
+  "rule": "Drop the homogeneity hypothesis",
+  "meaning": "Strength order registration: weak concurrent actualization 40a97664 entails its restriction to homogeneous things, for any supplied facts. A single application of the premise (invariant 16), registered for the strength order, not as progress; it establishes neither. The proof uses only Quot.sound, through Mathlib's OrderIso in the statement; the Comparator config permits the standard Mathlib axiom set.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

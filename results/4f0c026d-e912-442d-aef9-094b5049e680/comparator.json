@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.TimeSymmetricGiving.Challenge",
+  "solution_module": "TruthCore.Results.Causality.TimeSymmetricGiving.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.TimeSymmetricGiving.homogeneousConcurrentOfSymmetry"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}
