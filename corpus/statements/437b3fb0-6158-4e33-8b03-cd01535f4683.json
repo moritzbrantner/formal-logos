@@ -1,7 +1,7 @@
 {
   "id": "437b3fb0-6158-4e33-8b03-cd01535f4683",
   "label": "The route frame is KTB exactly when it is KT and symmetric",
-  "paraphrase": "For every world type, being type and profile m: the route's modal frame is reflexive and symmetric (KTB) if and only if it is reflexive (KT) and symmetric. A premise-free comparison of frame conditions; it asserts none of them of the route.",
+  "paraphrase": "For every world type, individual type and profile m: the route's modal frame is reflexive and symmetric (KTB) if and only if it is reflexive (KT) and symmetric. A premise-free comparison of frame conditions; it asserts none of them of the route.",
   "lean_declaration": "TruthCore.Causality.ModalSenseSupport.FrameKTBOverKTExact",
   "definition_ids": [
     "f8948e28-b13a-5244-95f1-41a05cd4fff2"

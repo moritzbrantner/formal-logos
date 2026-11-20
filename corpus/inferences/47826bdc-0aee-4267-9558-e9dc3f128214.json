@@ -4,7 +4,7 @@
   "input_statement_ids": [],
   "output_statement_id": "437b3fb0-6158-4e33-8b03-cd01535f4683",
   "rule": "Conjunction regrouping: frame class KTB is reflexivity together with symmetry",
-  "meaning": "Certified difference (#1598) of the registration KTB route frame strengthens KT route frame: for every profile, the route frame is KTB iff it is KT and symmetric. The factorization holds by unfolding frame class KTB; premise-free, it asserts no frame condition of the route.",
+  "meaning": "Certified difference (#1598) of the registration KTB route frame strengthens KT route frame: for every profile, the route frame is KTB iff it is KT and symmetric. The factorization holds by the definition of frame class KTB; premise-free, it asserts no frame condition of the route.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

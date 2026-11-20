@@ -15,5 +15,9 @@
   ],
   "disambiguation_ids": [
     "83264cf5-01fe-52fc-9a00-eeb024f6496e"
-  ]
+  ],
+  "strong_version_needed": {
+    "60795e6e-1fe1-5c55-9718-bc2a22867244": "The Euclidean condition needs symmetry, which only the KTB premise supplies; its registered weak version (KT frame) gives reflexivity alone, and reflexivity with transitivity does not give the Euclidean condition (frameStrictness: an S4 frame that is not S5, the two-world order frame).",
+    "d8d91023-300e-50f4-9cc5-e62f44a1aa04": "The Euclidean condition needs transitivity, which only the S4 premise supplies; its registered weak version (KT frame) gives reflexivity alone, and reflexivity with symmetry does not give the Euclidean condition (frameStrictness: a KTB frame that is not S5, the reflexive symmetric non-transitive path)."
+  }
 }

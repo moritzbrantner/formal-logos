@@ -135,28 +135,28 @@ definitions = ["DEF-MODAL-FIXTURE-FRAME"]
 [[statement]]
 id = "The route frame is S5 exactly when it is S4 and symmetric"
 lean = "FrameS5OverS4Exact"
-paraphrase = "For every world type, being type and profile m: the route's modal frame is reflexive and Euclidean (S5) if and only if it is reflexive and transitive (S4) and symmetric. A premise-free comparison of frame conditions; it asserts none of them of the route."
+paraphrase = "For every world type, individual type and profile m: the route's modal frame is reflexive and Euclidean (S5) if and only if it is reflexive and transitive (S4) and symmetric. A premise-free comparison of frame conditions; it asserts none of them of the route."
 definitions = ["DEF-MODAL-FIXTURE-FRAME"]
 disambiguations = ["DISAMB-NECESSARY"]
 
 [[statement]]
 id = "The route frame is S5 exactly when it is KTB and transitive"
 lean = "FrameS5OverKTBExact"
-paraphrase = "For every world type, being type and profile m: the route's modal frame is reflexive and Euclidean (S5) if and only if it is reflexive and symmetric (KTB) and transitive. A premise-free comparison of frame conditions; it asserts none of them of the route."
+paraphrase = "For every world type, individual type and profile m: the route's modal frame is reflexive and Euclidean (S5) if and only if it is reflexive and symmetric (KTB) and transitive. A premise-free comparison of frame conditions; it asserts none of them of the route."
 definitions = ["DEF-MODAL-FIXTURE-FRAME"]
 disambiguations = ["DISAMB-NECESSARY"]
 
 [[statement]]
 id = "The route frame is S4 exactly when it is KT and transitive"
 lean = "FrameS4OverKTExact"
-paraphrase = "For every world type, being type and profile m: the route's modal frame is reflexive and transitive (S4) if and only if it is reflexive (KT) and transitive. A premise-free comparison of frame conditions; it asserts none of them of the route."
+paraphrase = "For every world type, individual type and profile m: the route's modal frame is reflexive and transitive (S4) if and only if it is reflexive (KT) and transitive. A premise-free comparison of frame conditions; it asserts none of them of the route."
 definitions = ["DEF-MODAL-FIXTURE-FRAME"]
 disambiguations = ["DISAMB-NECESSARY"]
 
 [[statement]]
 id = "The route frame is KTB exactly when it is KT and symmetric"
 lean = "FrameKTBOverKTExact"
-paraphrase = "For every world type, being type and profile m: the route's modal frame is reflexive and symmetric (KTB) if and only if it is reflexive (KT) and symmetric. A premise-free comparison of frame conditions; it asserts none of them of the route."
+paraphrase = "For every world type, individual type and profile m: the route's modal frame is reflexive and symmetric (KTB) if and only if it is reflexive (KT) and symmetric. A premise-free comparison of frame conditions; it asserts none of them of the route."
 definitions = ["DEF-MODAL-FIXTURE-FRAME"]
 disambiguations = ["DISAMB-NECESSARY"]
 
@@ -165,10 +165,11 @@ id = "KTB and S4 route frames together entail the S5 route frame"
 theorem = "frameS5OfKTBAndS4"
 premises = ["STMT-ONTIC-FRAME-KTB", "STMT-ONTIC-FRAME-S4"]
 conclusion = "STMT-ONTIC-FRAME-S5"
+strong_version_needed = { "STMT-ONTIC-FRAME-KTB" = "The Euclidean condition needs symmetry, which only the KTB premise supplies; its registered weak version (KT frame) gives reflexivity alone, and reflexivity with transitivity does not give the Euclidean condition (frameStrictness: an S4 frame that is not S5, the two-world order frame).", "STMT-ONTIC-FRAME-S4" = "The Euclidean condition needs transitivity, which only the S4 premise supplies; its registered weak version (KT frame) gives reflexivity alone, and reflexivity with symmetry does not give the Euclidean condition (frameStrictness: a KTB frame that is not S5, the reflexive symmetric non-transitive path)." }
 axioms = []
 rule = "Frame-condition algebra symmetric_transitive_implies_euclidean of the modal library (a symmetric transitive relation is Euclidean)"
 meaning = "If the route's modal frame is reflexive and symmetric (KTB) and also reflexive and transitive (S4), it is reflexive and Euclidean (S5): reflexivity from the KTB premise, the Euclidean condition from symmetry and transitivity by the modal-library theorem TruthCore.Modal.symmetric_transitive_implies_euclidean. With the registrations S5 strengthens KTB and S5 strengthens S4, the S5 frame premise says exactly what the KTB and S4 frame premises say jointly. Establishes no frame premise."
-description = "If the route's modal frame is reflexive and symmetric (KTB) and also reflexive and transitive (S4), it is reflexive and Euclidean (S5). Not a transcription (invariant 16): the conclusion's Euclidean conjunct appears in neither premise and is derived by the proved modal-library lemma TruthCore.Modal.symmetric_transitive_implies_euclidean (from w R l and w R r, symmetry gives l R w and transitivity gives l R r), which could fail for a frame lacking either condition. Establishes no frame premise."
+description = "If the route's modal frame is reflexive and symmetric (KTB) and also reflexive and transitive (S4), it is reflexive and Euclidean (S5). Not a transcription (invariant 16): the conclusion's Euclidean conjunct appears in neither premise and is derived by the proved modal-library lemma TruthCore.Modal.symmetric_transitive_implies_euclidean (from w R l and w R r, symmetry gives l R w and transitivity gives l R r); the conclusion can fail for a frame lacking either condition (frameStrictness: a KTB frame that is not S5, and an S4 frame that is not S5). Establishes no frame premise."
 
 [[argument]]
 id = "S5 route frame is the S4 route frame plus symmetry"
@@ -195,7 +196,7 @@ premises = []
 conclusion = "The route frame is S4 exactly when it is KT and transitive"
 axioms = []
 rule = "Conjunction regrouping: frame class S4 is reflexivity together with transitivity"
-meaning = "Certified difference (#1598) of the registration S4 route frame strengthens KT route frame: for every profile, the route frame is S4 iff it is KT and transitive. The factorization holds by unfolding frame class S4; premise-free, it asserts no frame condition of the route."
+meaning = "Certified difference (#1598) of the registration S4 route frame strengthens KT route frame: for every profile, the route frame is S4 iff it is KT and transitive. The factorization holds by the definition of frame class S4; premise-free, it asserts no frame condition of the route."
 
 [[argument]]
 id = "KTB route frame is the KT route frame plus symmetry"
@@ -204,7 +205,7 @@ premises = []
 conclusion = "The route frame is KTB exactly when it is KT and symmetric"
 axioms = []
 rule = "Conjunction regrouping: frame class KTB is reflexivity together with symmetry"
-meaning = "Certified difference (#1598) of the registration KTB route frame strengthens KT route frame: for every profile, the route frame is KTB iff it is KT and symmetric. The factorization holds by unfolding frame class KTB; premise-free, it asserts no frame condition of the route."
+meaning = "Certified difference (#1598) of the registration KTB route frame strengthens KT route frame: for every profile, the route frame is KTB iff it is KT and symmetric. The factorization holds by the definition of frame class KTB; premise-free, it asserts no frame condition of the route."
 
 [[relation]]
 id = "S5 over S4 route frame: certified difference"

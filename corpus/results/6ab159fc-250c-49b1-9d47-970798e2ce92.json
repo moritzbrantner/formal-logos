@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Causality.ModalFrameStrength.frameS4OverKTExact",
   "comparator_config": "results/6ab159fc-250c-49b1-9d47-970798e2ce92/comparator.json",
   "status": "solution-present",
-  "description": "Certified difference (#1598) of the registration S4 route frame strengthens KT route frame: for every profile, the route frame is S4 iff it is KT and transitive. The factorization holds by unfolding frame class S4; premise-free, it asserts no frame condition of the route."
+  "description": "Certified difference (#1598) of the registration S4 route frame strengthens KT route frame: for every profile, the route frame is S4 iff it is KT and transitive. The factorization holds by the definition of frame class S4; premise-free, it asserts no frame condition of the route."
 }

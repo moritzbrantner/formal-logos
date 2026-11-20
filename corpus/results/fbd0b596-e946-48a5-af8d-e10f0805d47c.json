@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Causality.ModalFrameStrength.frameS5OfKTBAndS4",
   "comparator_config": "results/fbd0b596-e946-48a5-af8d-e10f0805d47c/comparator.json",
   "status": "solution-present",
-  "description": "If the route's modal frame is reflexive and symmetric (KTB) and also reflexive and transitive (S4), it is reflexive and Euclidean (S5). Not a transcription (invariant 16): the conclusion's Euclidean conjunct appears in neither premise and is derived by the proved modal-library lemma TruthCore.Modal.symmetric_transitive_implies_euclidean (from w R l and w R r, symmetry gives l R w and transitivity gives l R r), which could fail for a frame lacking either condition. Establishes no frame premise."
+  "description": "If the route's modal frame is reflexive and symmetric (KTB) and also reflexive and transitive (S4), it is reflexive and Euclidean (S5). Not a transcription (invariant 16): the conclusion's Euclidean conjunct appears in neither premise and is derived by the proved modal-library lemma TruthCore.Modal.symmetric_transitive_implies_euclidean (from w R l and w R r, symmetry gives l R w and transitivity gives l R r); the conclusion can fail for a frame lacking either condition (frameStrictness: a KTB frame that is not S5, and an S4 frame that is not S5). Establishes no frame premise."
 }

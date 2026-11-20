@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Causality.ModalFrameStrength.frameKTBOverKTExact",
   "comparator_config": "results/3e0e4f55-093f-4e26-ab80-2928ece4e2af/comparator.json",
   "status": "solution-present",
-  "description": "Certified difference (#1598) of the registration KTB route frame strengthens KT route frame: for every profile, the route frame is KTB iff it is KT and symmetric. The factorization holds by unfolding frame class KTB; premise-free, it asserts no frame condition of the route."
+  "description": "Certified difference (#1598) of the registration KTB route frame strengthens KT route frame: for every profile, the route frame is KTB iff it is KT and symmetric. The factorization holds by the definition of frame class KTB; premise-free, it asserts no frame condition of the route."
 }
