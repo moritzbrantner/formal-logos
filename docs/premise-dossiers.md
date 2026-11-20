@@ -177,39 +177,95 @@ resolves a new change.
       "consumer": "arguments:<existing argument UUID>",
       "disposition": "retained",
       "reason": "The conditional argument retains its original interpretation; its application does not rely on the revised reading."
+    },
+    {
+      "group": "path:docs/notes/existing-case.md",
+      "disposition": "revised",
+      "reason": "The note's sections now cite the revised assessment (docs/notes/existing-case.md#revised-assessment)."
     }
   ]
 }
 ```
 
 `brief` and single-target `dossier` expose `revision_impacts` for both the
-changed targets and affected downstream endpoints. The existing explicit
-reference graph supplies reverse consumers; argument conclusions propagate
-impacts onward; alternative producers of that conclusion are not thereby
-consumers of the changed premise. The existing context import parser adds source-level Lean
-import consumers, including consumers omitted from the declared premise list.
-Other attempts' substantive summaries, evidence and selected judgment prose
-remain potential consumers. The declaring attempt, target-registration fields
-and revision/review bookkeeping do not create self-generated reassessment work.
-Producers of reached statements also supply import-discovery sources without
-becoming affected merely because they conclude those statements. Consumers reached through import discovery
-record their `import_source` result and reached predecessor (`via`).
-Imports and prose references identify **potential uses**, not proof-term use,
-semantic equivalence, a defeat, or an actual change in truth. Each consumer has
-a predecessor (`via`) so the proposed impact can be inspected. Nonregistered
-uses and implicit semantic dependencies remain outside this analysis.
+changed targets and affected downstream endpoints. Producers of a reached
+statement are alternative support, not consumers of the changed premise; they
+still supply import-discovery sources. The declaring attempt,
+target-registration fields and revision/review bookkeeping do not create
+self-generated reassessment work. Each consumer records its `tier`, its reached
+predecessor (`via`), the registering `field` and, for import discovery, its
+`import_source` result. Consumers fall into four tiers, strongest first (#1757):
+
+- **`premise_use`**: registered premise, commitment and inference-input fields,
+  the result that verifies a reached argument, and argument/result conclusion
+  propagation, followed to a fixed point. This is the declared formal channel.
+- **`import`**: consumers reached once source-level Lean import discovery
+  enters the chain (the existing context import parser), including registered
+  premise use and conclusions downstream of an import. Imports expose potential
+  uses, including uses omitted from a declared premise list; they are not
+  proof-term use.
+- **`reference`**: records whose structured fields cite the changed target or a
+  `premise_use`/`import` consumer by id (one hop).
+- **`prose`**: note sections and record prose that mention them (one hop).
+  Other attempts' substantive summaries, evidence and selected judgment prose
+  are reference or prose consumers.
+
+Records reached only through a chain of two or more reference/prose mentions,
+and the conclusions or imports beyond such a chain, are counted per record kind
+in `transitive_mentions` but not listed: a mention of a mention is not a use of
+the change. A previously acknowledged consumer from such a chain stays listed
+as `transitive_mention`. Imports and mentions identify **potential uses**, not
+proof-term use, semantic equivalence, a defeat, or an actual change in truth.
+Nonregistered uses and implicit semantic dependencies remain outside this
+analysis.
 
 Every exposed consumer defaults to `pending`. Record `pending`, `retained`,
 `revised`, or `not_applicable`, with a substantive reason, separately for each
-consumer and revision. Retain consequential revised findings in that consumer's
-existing record/note and cite them in the reason. This is a review work item,
-not automatic acceptance; disposition does not establish a claim. Reassessment
-records do not change theorem status, proof validity, closure, premise cost or
-source/binding rules. An unrelated proof remains unaffected. Newly discovered
-consumers remain pending without editing another registry.
+revision, addressed in one of two ways:
+
+- `"consumer": "<kind>:<id>"` for one consumer. This is the only way to resolve
+  a `premise_use` consumer. An inference shares the disposition on which all of
+  its reached containing arguments agree, and a result shares its argument's
+  disposition, unless they have their own (`disposition_by` names the source).
+- `"group": "tier:import"`, `"tier:reference"` or `"tier:prose"`, or
+  `"group": "path:<repository path>"` (for example one note file), for every
+  consumer of the groupable tiers in that tier or file. A path group takes
+  precedence over a tier group; an individual disposition over both. A group
+  never covers a `premise_use` consumer, and a group that covers nothing is
+  rejected.
+
+A consumer individually reassessed as `retained` or `not_applicable` in the
+`premise_use` or `import` tier is reached but not expanded. Consumers downstream
+**only** through such consumers stay listed with disposition `screened` and
+`screened_by`; they need no disposition of their own for that revision. A
+consumer still reachable another way stays live and is reported by its live
+route, so a chain that now reaches it only through import discovery moves it
+into the `import` tier. A `revised` consumer screens nothing: its conclusion
+and its own consumers keep needing dispositions. Group dispositions never
+screen. The text view summarizes each tier as consumers/pending/screened and
+lists `premise_use` consumers and individual dispositions; `--json` lists every
+consumer.
+
+For the trial `judgment` revision on universal perfection transfer `b26c10a0`
+(measured on main at 65b79aed5 and then withdrawn), the former flat
+propagation listed 14,118 pending consumers. Tiered, it lists 4,478: 1,124
+`premise_use`, 1,785 `import`, 743 `reference` and 826 `prose`, with 9,640
+transitive mentions counted but not listed. Retaining the 37 arguments that
+register `b26c10a0` as a premise, plus one group per groupable tier, leaves no
+consumer pending; the remaining formal consumers stay live through import
+discovery from the producers of `b26c10a0` and are reported in the `import`
+tier.
+
+Retain consequential revised findings in that consumer's existing record/note
+and cite them in the reason. This is a review work item, not automatic
+acceptance; disposition does not establish a claim. Reassessment records do not
+change theorem status, proof validity, closure, premise cost or source/binding
+rules. An unrelated proof remains unaffected. Newly discovered consumers remain
+pending without editing another registry.
 
 `truth check` validates declarations and rejects duplicate or unaffected
-consumer acknowledgements against the current graph. Pending reassessment stays
+consumer or group acknowledgements against the current graph, and rejects a
+group addressed to `premise_use` or an entry naming both a consumer and a group. Pending reassessment stays
 visible without failing proof validation. Declarations are deliberate: this
 mechanism does not attempt to infer a philosophical reversal from every prose
 diff, and it cannot detect an undeclared reversal. Inspect `--json` for the full

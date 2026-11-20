@@ -1,6 +1,9 @@
 //! Explicit, scoped research currentness and revision reassessment. These are
 //! recorded judgments and work dispositions, never proof or acceptance gates.
-use crate::{Corpus, evidence_graph::EvidenceGraph};
+use crate::{
+    Corpus,
+    evidence_graph::{Edge, EvidenceGraph},
+};
 use serde_json::{Value, json};
 use std::{
     collections::{BTreeMap, BTreeSet, HashSet},
@@ -108,15 +111,7 @@ pub fn validate(
                     .as_array()
                     .ok_or("reassessments must be an array")?
                 {
-                    if text(d, "consumer").is_empty()
-                        || text(d, "reason").trim().is_empty()
-                        || !["pending", "retained", "revised", "not_applicable"]
-                            .contains(&text(d, "disposition"))
-                    {
-                        return Err(
-                            "reassessment needs consumer, explicit disposition and reason".into(),
-                        );
-                    }
+                    validate_reassessment(d)?;
                 }
             }
         }
@@ -162,9 +157,106 @@ fn attempt_use(field: &str) -> bool {
     }
 }
 
+/// Consumer tiers, strongest first. `premise_use` and `import` are the formal
+/// channel and propagate transitively; `reference` and `prose` are one-hop
+/// mentions of the changed target or of a formal-channel consumer.
+pub const TIERS: [&str; 4] = ["premise_use", "import", "reference", "prose"];
+/// Tiers that a single `group` disposition may cover. A registered premise
+/// consumer or argument-conclusion propagation always needs its own disposition.
+const GROUPABLE: [&str; 3] = ["import", "reference", "prose"];
+/// Acknowledged consumers beyond the scoped set (legacy per-consumer entries
+/// for a transitive mention chain) remain listed under this label.
+const TRANSITIVE: &str = "transitive_mention";
+
+/// Registered premise, commitment, inference and result-of-argument fields.
+/// These are the declared formal channel, not proof-term use evidence.
+fn formal_field(kind: &str, field: &str) -> bool {
+    let first = field.trim_start_matches('/').split('/').next();
+    match kind {
+        "arguments" => matches!(
+            first,
+            Some("premise_statement_ids" | "commitment_statement_ids" | "inference_ids")
+        ),
+        "inferences" => matches!(
+            first,
+            Some("input_statement_ids" | "assumption_statement_ids" | "discharged_statement_ids")
+        ),
+        "results" => field == "/argument_id",
+        _ => false,
+    }
+}
+
+/// How a consumer was reached; `via` is its reached predecessor.
+#[derive(Clone)]
+struct Reach {
+    tier: &'static str,
+    via: String,
+    field: String,
+    how: String,
+    import_source: Option<String>,
+}
+impl Reach {
+    fn new(tier: &'static str, via: &str, field: &str, how: &str) -> Self {
+        Self {
+            tier,
+            via: via.into(),
+            field: field.into(),
+            how: how.into(),
+            import_source: None,
+        }
+    }
+}
+
+/// Whether `key` explicitly mentions a node still carrying the change.
+fn mentions_live(
+    key: &str,
+    forward: &BTreeMap<&str, Vec<&Edge>>,
+    expanding: &BTreeSet<&String>,
+    admissible: &dyn Fn(&Edge) -> bool,
+) -> bool {
+    forward
+        .get(key)
+        .into_iter()
+        .flatten()
+        .any(|e| expanding.contains(&e.to) && admissible(e))
+}
+
+fn group_of(d: &Value) -> Option<&str> {
+    d.get("group").and_then(Value::as_str)
+}
+
+/// Validate a reassessment entry's addressing: exactly one of `consumer` or
+/// `group` (`tier:<import|reference|prose>` or `path:<repository path>`).
+fn validate_reassessment(d: &Value) -> Result<(), String> {
+    let consumer = d.get("consumer").and_then(Value::as_str);
+    let group = group_of(d);
+    let addressed = match (consumer, group) {
+        (Some(c), None) => !c.is_empty(),
+        (None, Some(g)) => match g.split_once(':') {
+            Some(("tier", tier)) => GROUPABLE.contains(&tier),
+            Some(("path", path)) => !path.trim().is_empty(),
+            _ => false,
+        },
+        _ => false,
+    };
+    if !addressed
+        || text(d, "reason").trim().is_empty()
+        || !["pending", "retained", "revised", "not_applicable"].contains(&text(d, "disposition"))
+    {
+        return Err(
+            "reassessment needs one consumer or group (tier:import|reference|prose or path:<path>), explicit disposition and reason"
+                .into(),
+        );
+    }
+    Ok(())
+}
+
 /// Reverse explicit references expose potential uses, not semantic equivalence.
-/// Propagate argument conclusions as well as references so downstream routes are
-/// visible. No result's formal status is changed, even for unresolved uses.
+/// The formal channel (registered premise use, argument/result conclusion
+/// propagation and Lean import discovery) is followed transitively. Structured
+/// references and prose mentions are reported one hop from the changed target
+/// or a formal-channel consumer; longer mention chains are counted, not listed.
+/// No result's formal status is changed, even for unresolved uses.
 pub fn impacts(root: &Path, corpus: &Corpus, ids: &BTreeSet<String>) -> Result<Vec<Value>, String> {
     let changes: Vec<_> = corpus
         .entries("attempts")
@@ -182,6 +274,19 @@ pub fn impacts(root: &Path, corpus: &Corpus, ids: &BTreeSet<String>) -> Result<V
         return Ok(Vec::new());
     }
     let graph = EvidenceGraph::build(root, corpus, None)?;
+    let mut reverse: BTreeMap<&str, Vec<&Edge>> = BTreeMap::new();
+    let mut forward: BTreeMap<&str, Vec<&Edge>> = BTreeMap::new();
+    for edge in graph.edges() {
+        // Producers of a reached conclusion are alternative support, not
+        // consumers of the changed upstream premise.
+        if !matches!(
+            edge.provenance.field.as_str(),
+            "/conclusion_statement_id" | "/output_statement_id"
+        ) {
+            reverse.entry(edge.to.as_str()).or_default().push(edge);
+            forward.entry(edge.from.as_str()).or_default().push(edge);
+        }
+    }
     // Reuse context's source-level import parser. Imports expose possible
     // semantic consumers; only Lean proof-use inspection can establish use.
     let lean = crate::context::Lean::new(root);
@@ -231,6 +336,84 @@ pub fn impacts(root: &Path, corpus: &Corpus, ids: &BTreeSet<String>) -> Result<V
             }
         }
     }
+    let conclusion_of = |key: &str| -> Option<String> {
+        let node = graph.nodes().get(key)?;
+        let id = match node.kind.as_str() {
+            "arguments" => node.content["conclusion_statement_id"].as_str()?,
+            "results" => corpus
+                .get("arguments", node.content["argument_id"].as_str()?)?
+                .fields["conclusion_statement_id"]
+                .as_str()?,
+            _ => return None,
+        };
+        Some(format!("statements:{id}"))
+    };
+
+    // Formal channel: registered premise use and conclusion propagation first,
+    // then import discovery onward, each to a fixed point. Nodes in `stop`
+    // (consumers individually reassessed as unchanged) are reached, not expanded.
+    let formal_closure = |seeds: &BTreeSet<String>,
+                          admissible: &dyn Fn(&Edge) -> bool,
+                          stop: &BTreeSet<String>|
+     -> BTreeMap<String, Reach> {
+        let mut seen = seeds.clone();
+        let mut reached = BTreeMap::new();
+        for (tier, with_imports) in [("premise_use", false), ("import", true)] {
+            let mut frontier: Vec<String> = seen
+                .iter()
+                .filter(|k| !stop.contains(*k))
+                .cloned()
+                .collect();
+            while !frontier.is_empty() {
+                let mut next = Vec::new();
+                for key in &frontier {
+                    for edge in reverse.get(key.as_str()).into_iter().flatten() {
+                        let kind = edge.from.split(':').next().unwrap_or_default();
+                        if formal_field(kind, &edge.provenance.field) && admissible(edge) {
+                            next.push((
+                                edge.from.clone(),
+                                Reach::new(tier, key, &edge.provenance.field, "registered"),
+                            ));
+                        }
+                    }
+                    if let Some(target) = conclusion_of(key) {
+                        next.push((
+                            target,
+                            Reach::new(tier, key, "/conclusion_statement_id", "conclusion"),
+                        ));
+                    }
+                }
+                if with_imports {
+                    let live = |k: &String| seen.contains(k) && !stop.contains(k);
+                    for (consumer, source) in &imports {
+                        // A producer is an import-discovery source even when only
+                        // its conclusion is reached; it is not thereby affected.
+                        let parent = if live(source) {
+                            Some(source)
+                        } else {
+                            producer_conclusions.get(source).filter(|c| live(c))
+                        };
+                        if let Some(parent) = parent {
+                            let mut reach =
+                                Reach::new(tier, parent, "/solution_module", "lean_import");
+                            reach.import_source = Some(source.clone());
+                            next.push((consumer.clone(), reach));
+                        }
+                    }
+                }
+                frontier.clear();
+                for (key, reach) in next {
+                    if seen.insert(key.clone()) {
+                        if !stop.contains(&key) {
+                            frontier.push(key.clone());
+                        }
+                        reached.insert(key, reach);
+                    }
+                }
+            }
+        }
+        reached
+    };
 
     let mut out = Vec::new();
     for (attempt, change) in changes {
@@ -241,75 +424,75 @@ pub fn impacts(root: &Path, corpus: &Corpus, ids: &BTreeSet<String>) -> Result<V
             .filter_map(Value::as_str)
             .map(|id| format!("statements:{id}"))
             .collect();
-        let mut seen = seeds.clone();
-        let mut via = BTreeMap::new();
-        let mut import_sources = BTreeMap::new();
         let declaring_attempt = format!(
             "attempts:{}",
             attempt.fields["id"].as_str().unwrap_or_default()
         );
-        loop {
-            let mut next = Vec::new();
-            for edge in graph.edges() {
-                // Lifecycle metadata is an assessment record, not its own consumer.
-                if seen.contains(&edge.to)
-                    // Producers of a reached conclusion are alternative support,
-                    // not consumers of the changed upstream premise.
-                    && !matches!(edge.provenance.field.as_str(), "/conclusion_statement_id" | "/output_statement_id")
-                    && !seen.contains(&edge.from)
-                    && edge.from != declaring_attempt
-                    && (!edge.from.starts_with("attempts:") || attempt_use(&edge.provenance.field))
+        // Lifecycle metadata is an assessment record, not its own consumer.
+        let admissible = |edge: &Edge| {
+            edge.from != declaring_attempt
+                && (!edge.from.starts_with("attempts:") || attempt_use(&edge.provenance.field))
+        };
+        let mut reached = formal_closure(&seeds, &admissible, &BTreeSet::new());
+        let mut seen: BTreeSet<String> = seeds.iter().chain(reached.keys()).cloned().collect();
+        // One-hop mentions of the target or of a formal-channel consumer. A
+        // structured id reference outranks a prose mention of the same record.
+        let mut mentions: BTreeMap<String, Reach> = BTreeMap::new();
+        for key in &seen {
+            for edge in reverse.get(key.as_str()).into_iter().flatten() {
+                if seen.contains(&edge.from) || !admissible(edge) {
+                    continue;
+                }
+                let tier = if edge.provenance.how == "exact" && !edge.from.starts_with("notes:") {
+                    "reference"
+                } else {
+                    "prose"
+                };
+                if !mentions
+                    .get(&edge.from)
+                    .is_some_and(|old| old.tier == "reference" || tier == "prose")
                 {
-                    next.push((edge.from.clone(), edge.to.clone(), None));
+                    mentions.insert(
+                        edge.from.clone(),
+                        Reach::new(tier, key, &edge.provenance.field, &edge.provenance.how),
+                    );
+                }
+            }
+        }
+        for (key, reach) in mentions {
+            seen.insert(key.clone());
+            reached.insert(key, reach);
+        }
+        // Longer reference chains (and the conclusions/imports they would
+        // reach) are not uses of the change; count them so nothing silently vanishes.
+        let mut transitive: BTreeMap<String, String> = BTreeMap::new();
+        let mut frontier: Vec<String> = seen.iter().cloned().collect();
+        while !frontier.is_empty() {
+            let mut next = Vec::new();
+            for key in &frontier {
+                for edge in reverse.get(key.as_str()).into_iter().flatten() {
+                    if admissible(edge) {
+                        next.push((edge.from.clone(), key.clone()));
+                    }
+                }
+                if let Some(target) = conclusion_of(key) {
+                    next.push((target, key.clone()));
                 }
             }
             for (consumer, source) in &imports {
-                // A producer is an import-discovery source even when only its
-                // conclusion is reached. It is not thereby an affected consumer.
-                let parent = if seen.contains(source) {
-                    Some(source)
-                } else {
-                    producer_conclusions
+                if transitive.contains_key(source)
+                    || producer_conclusions
                         .get(source)
-                        .filter(|conclusion| seen.contains(*conclusion))
-                };
-                if let Some(parent) = parent.filter(|_| !seen.contains(consumer)) {
-                    next.push((consumer.clone(), parent.clone(), Some(source.clone())));
-                }
-            }
-            for key in &seen {
-                if let Some(node) = graph.nodes().get(key).filter(|n| n.kind == "arguments")
-                    && let Some(id) = node.content["conclusion_statement_id"].as_str()
+                        .is_some_and(|c| transitive.contains_key(c))
                 {
-                    let target = format!("statements:{id}");
-                    if !seen.contains(&target) {
-                        next.push((target, key.clone(), None));
-                    }
+                    next.push((consumer.clone(), source.clone()));
                 }
             }
-            // Imported results can bypass an argument's declared premise list.
-            for key in &seen {
-                if let Some(node) = graph.nodes().get(key).filter(|n| n.kind == "results")
-                    && let Some(argument) = node.content["argument_id"]
-                        .as_str()
-                        .and_then(|id| corpus.get("arguments", id))
-                    && let Some(id) = argument.fields["conclusion_statement_id"].as_str()
-                {
-                    let target = format!("statements:{id}");
-                    if !seen.contains(&target) {
-                        next.push((target, key.clone(), None));
-                    }
-                }
-            }
-            if next.is_empty() {
-                break;
-            }
-            for (key, parent, import_source) in next {
-                if seen.insert(key.clone()) {
-                    if let Some(source) = import_source {
-                        import_sources.insert(key.clone(), source);
-                    }
-                    via.insert(key, parent);
+            frontier.clear();
+            for (key, via) in next {
+                if !seen.contains(&key) && !transitive.contains_key(&key) {
+                    transitive.insert(key.clone(), via);
+                    frontier.push(key);
                 }
             }
         }
@@ -320,23 +503,188 @@ pub fn impacts(root: &Path, corpus: &Corpus, ids: &BTreeSet<String>) -> Result<V
         {
             continue;
         }
-        let mut dispositions = BTreeSet::new();
+        let path_of = |key: &str| graph.nodes().get(key).map(|n| n.path.clone());
+        let mut individual = BTreeMap::new();
+        let mut groups = BTreeMap::new();
         for d in change["reassessments"].as_array().into_iter().flatten() {
+            if let Some(group) = group_of(d) {
+                if groups.insert(group.to_owned(), d).is_some() {
+                    return Err(format!(
+                        "revision reassessment names duplicate or unaffected group: {group}"
+                    ));
+                }
+                continue;
+            }
             let consumer = text(d, "consumer");
-            if !seen.contains(consumer)
-                || seeds.contains(consumer)
-                || !dispositions.insert(consumer)
+            if !(reached.contains_key(consumer) || transitive.contains_key(consumer))
+                || individual.insert(consumer.to_owned(), d).is_some()
             {
                 return Err(format!(
                     "revision reassessment names duplicate or unaffected consumer: {consumer}"
                 ));
             }
+            if let Some(via) = transitive.get(consumer) {
+                reached.insert(
+                    consumer.to_owned(),
+                    Reach::new(TRANSITIVE, via, "", "mention_chain"),
+                );
+            }
         }
-        let consumers: Vec<_> = seen.difference(&seeds).map(|key| {
-            let disposition = change["reassessments"].as_array().into_iter().flatten().find(|d| d["consumer"].as_str() == Some(key));
-            json!({"consumer":key,"via":via.get(key),"import_source":import_sources.get(key),"disposition":disposition.map_or("pending", |d| text(d,"disposition")),"reason":disposition.map(|d| &d["reason"])})
-        }).collect();
-        out.push(json!({"attempt_id":attempt.fields["id"],"change":change,"consumers":consumers,"boundary":"potential explicit downstream uses and source-level Lean imports (not proof-use evidence); pending reassessment does not invalidate any formal theorem or accept a judgment"}));
+        // A formal consumer individually reassessed as unchanged screens what
+        // lies downstream only through it; screened consumers stay listed.
+        let stop: BTreeSet<String> = individual
+            .iter()
+            .filter(|(k, d)| {
+                reached
+                    .get(*k)
+                    .is_some_and(|r| matches!(r.tier, "premise_use" | "import"))
+                    && ["retained", "not_applicable"].contains(&text(d, "disposition"))
+            })
+            .map(|(k, _)| k.clone())
+            .collect();
+        let live: BTreeSet<String> = if stop.is_empty() {
+            reached.keys().cloned().collect()
+        } else {
+            let formal_live = formal_closure(&seeds, &admissible, &stop);
+            // A consumer still live past the screen is reported by its live
+            // route: when that route now runs through import discovery, it is
+            // an import-tier consumer rather than a registered premise use.
+            for (key, reach) in &formal_live {
+                reached.insert(key.clone(), reach.clone());
+            }
+            let expanding: BTreeSet<&String> = seeds
+                .iter()
+                .chain(formal_live.keys())
+                .filter(|k| !stop.contains(*k))
+                .collect();
+            let mut live: BTreeSet<String> = formal_live.keys().cloned().collect();
+            for (key, reach) in &reached {
+                if matches!(reach.tier, "reference" | "prose")
+                    && mentions_live(key, &forward, &expanding, &admissible)
+                {
+                    live.insert(key.clone());
+                }
+            }
+            live
+        };
+        // A group must cover at least one consumer of its tier or path.
+        for group in groups.keys() {
+            let covers = reached.iter().any(|(key, reach)| {
+                GROUPABLE.contains(&reach.tier)
+                    && match group.split_once(':') {
+                        Some(("tier", t)) => t == reach.tier,
+                        Some(("path", p)) => path_of(key).as_deref() == Some(p),
+                        _ => false,
+                    }
+            });
+            if !covers {
+                return Err(format!(
+                    "revision reassessment names duplicate or unaffected group: {group}"
+                ));
+            }
+        }
+        let screened_by = |key: &str| -> Option<String> {
+            let mut cursor = reached.get(key)?.via.clone();
+            loop {
+                if stop.contains(&cursor) {
+                    return Some(cursor);
+                }
+                cursor = reached.get(&cursor)?.via.clone();
+            }
+        };
+        // An inference shares the disposition its containing arguments agree on;
+        // a result shares the disposition of the argument it verifies.
+        let mut containing: BTreeMap<String, Vec<String>> = BTreeMap::new();
+        for key in reached.keys() {
+            let Some(node) = graph.nodes().get(key) else {
+                continue;
+            };
+            match node.kind.as_str() {
+                "arguments" => {
+                    for id in node.content["inference_ids"]
+                        .as_array()
+                        .into_iter()
+                        .flatten()
+                        .filter_map(Value::as_str)
+                    {
+                        containing
+                            .entry(format!("inferences:{id}"))
+                            .or_default()
+                            .push(key.clone());
+                    }
+                }
+                "results" => {
+                    if let Some(id) = node.content["argument_id"].as_str() {
+                        let argument = format!("arguments:{id}");
+                        if reached.contains_key(&argument) {
+                            containing.entry(key.clone()).or_default().push(argument);
+                        }
+                    }
+                }
+                _ => {}
+            }
+        }
+        let mut tiers = serde_json::Map::new();
+        for tier in TIERS.iter().chain([&TRANSITIVE]) {
+            tiers.insert(
+                (*tier).into(),
+                json!({"consumers":0,"pending":0,"screened":0}),
+            );
+        }
+        let mut consumers = Vec::new();
+        for (key, reach) in &reached {
+            let path = path_of(key);
+            let inherited = containing.get(key).and_then(|args| {
+                let ds: Vec<_> = args.iter().map(|a| individual.get(a)).collect();
+                (ds.iter().all(Option::is_some)
+                    && ds.windows(2).all(|w| {
+                        text(w[0].unwrap(), "disposition") == text(w[1].unwrap(), "disposition")
+                    }))
+                .then(|| (ds[0].unwrap(), args[0].clone()))
+            });
+            let (disposition, by): (Option<&Value>, Value) = if let Some(d) = individual.get(key) {
+                (Some(*d), json!("consumer"))
+            } else if let Some((d, argument)) = inherited {
+                (Some(d), json!(argument))
+            } else if !GROUPABLE.contains(&reach.tier) {
+                (None, Value::Null)
+            } else if let Some((g, d)) = path
+                .as_deref()
+                .and_then(|p| groups.get_key_value(&format!("path:{p}")))
+            {
+                (Some(*d), json!(g))
+            } else if let Some((g, d)) = groups.get_key_value(&format!("tier:{}", reach.tier)) {
+                (Some(*d), json!(g))
+            } else {
+                (None, Value::Null)
+            };
+            let screen = (disposition.is_none() && !live.contains(key))
+                .then(|| screened_by(key))
+                .flatten();
+            let disposition_text = match (disposition, &screen) {
+                (Some(d), _) => text(d, "disposition"),
+                (None, Some(_)) => "screened",
+                (None, None) => "pending",
+            };
+            let count = &mut tiers[reach.tier];
+            count["consumers"] = json!(count["consumers"].as_u64().unwrap_or(0) + 1);
+            if matches!(disposition_text, "pending" | "screened") {
+                count[disposition_text] = json!(count[disposition_text].as_u64().unwrap_or(0) + 1);
+            }
+            consumers.push(json!({"consumer":key,"tier":reach.tier,"via":reach.via,"field":reach.field,"how":reach.how,"path":path,
+                "import_source":reach.import_source,"disposition":disposition_text,"disposition_by":by,"screened_by":screen,
+                "reason":disposition.map(|d| &d["reason"])}));
+        }
+        let mut beyond = BTreeMap::<String, usize>::new();
+        for key in transitive.keys().filter(|k| !reached.contains_key(*k)) {
+            *beyond
+                .entry(key.split(':').next().unwrap_or_default().to_owned())
+                .or_default() += 1;
+        }
+        let beyond_total: usize = beyond.values().sum();
+        out.push(json!({"attempt_id":attempt.fields["id"],"change":change,"tiers":tiers,"consumers":consumers,
+            "transitive_mentions":{"count":beyond_total,"by_kind":beyond,"boundary":"records reached only through a chain of two or more reference/prose mentions (and conclusions or imports beyond them); counted, not listed, and not consumers of the change"},
+            "boundary":"premise_use: registered argument/inference premise fields and conclusion propagation; import: source-level Lean import discovery (potential, not proof-term use); reference/prose: one-hop explicit mentions (potential uses); screened: downstream only through a consumer reassessed as unchanged. Pending reassessment does not invalidate any formal theorem or accept a judgment"}));
     }
     Ok(out)
 }
@@ -374,9 +722,32 @@ pub fn lines(current: &[Value], impacts: &[Value]) -> Vec<String> {
             text(&impact["change"], "reason"),
             text(&impact["change"], "previous")
         ));
+        let tiers = &impact["tiers"];
+        lines.push(format!(
+            "  tiers (consumers/pending/screened): {}; transitive mentions not listed: {}",
+            TIERS
+                .iter()
+                .chain([&TRANSITIVE])
+                .filter(|t| tiers[**t]["consumers"].as_u64().unwrap_or(0) > 0)
+                .map(|t| format!(
+                    "{t} {}/{}/{}",
+                    tiers[*t]["consumers"].as_u64().unwrap_or(0),
+                    tiers[*t]["pending"].as_u64().unwrap_or(0),
+                    tiers[*t]["screened"].as_u64().unwrap_or(0)
+                ))
+                .collect::<Vec<_>>()
+                .join(", "),
+            impact["transitive_mentions"]["count"].as_u64().unwrap_or(0)
+        ));
+        // List registered premise use and individually reassessed consumers;
+        // the groupable tiers are summarized here and listed in full in --json.
         for consumer in impact["consumers"].as_array().into_iter().flatten() {
+            let tier = text(consumer, "tier");
+            if tier != "premise_use" && consumer["disposition_by"] != "consumer" {
+                continue;
+            }
             lines.push(format!(
-                "  {}: {}{}",
+                "  [{tier}] {}: {}{}",
                 text(consumer, "consumer"),
                 text(consumer, "disposition"),
                 consumer["reason"]
