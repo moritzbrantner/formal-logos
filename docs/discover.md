@@ -131,14 +131,15 @@ sense: tagging both parameters with that sense (below) answers it formally.
 ## Parameter-level sense tags
 
 A disambiguation sense may list `lean_parameters`:
-`[{"declaration": "…", "parameter": "<binder>", "arguments": ["…"]}]`, meaning
-that the binder of that declaration, applied to the fixed arguments if given,
-expresses the sense. The engine reads the field tolerantly (absent means no
-tags). Two binders tagged with the same sense id are identified across
+`[{"declaration": "…", "parameter": "<binder>", "arguments": ["_", "_", "esse"]}]`,
+meaning that the binder of that declaration, applied to the positional fixed
+arguments if given (`_` leaves a place open), expresses the sense. The engine
+uses the corpus reader `truth::parameter_tags` (#1794); an untagged parameter is
+unknown. Two binders tagged with the same sense id are identified across
 modules; different senses of one term bring in the registered bridge
 statements (`sense_bridges` of existing arguments) as optional premises. A tag
-with fixed arguments names a partial application, so it does not identify
-binders.
+with fixed arguments names a partial application: it identifies a binder only
+with one tagged as the same partial application (same sense, same arguments).
 
 ## Output
 

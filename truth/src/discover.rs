@@ -18,7 +18,7 @@
 //! `--write-spec` writes an `argument_batch.py` spec draft and a Solution draft
 //! and nothing else. A target without a proof is unresolved, never refuted.
 
-use crate::{Corpus, prove_sweep, senses, subprocess};
+use crate::{Corpus, parameter_tags, prove_sweep, senses, subprocess};
 use serde_json::{Value, json};
 use std::{
     collections::{BTreeMap, BTreeSet, HashMap},
@@ -405,100 +405,64 @@ pub fn selected_targets(report: &Value, selector: &str) -> Result<Vec<String>, S
 
 // --- Parameter-level sense tags -------------------------------------------------------
 
-/// One `senses[].lean_parameters` entry of a disambiguation: in
-/// `declaration`, binder `parameter` (applied to `arguments`, if any)
-/// expresses sense `sense` of `term`.
-#[derive(Clone, Debug, PartialEq)]
-pub struct ParameterTag {
-    pub declaration: String,
-    pub parameter: String,
-    pub arguments: Vec<String>,
-    pub sense: String,
-    pub term: String,
-}
-
-/// The parameter-level sense tags of the corpus (read tolerantly: the field
-/// is optional, and absent records give no tags), and the registered sense
+/// The parameter-level sense tags the binding policy uses (read by
+/// [`crate::parameter_tags::ParameterTags`], #1794), and the registered sense
 /// bridges (`sense_bridges` entries of arguments).
 #[derive(Default)]
 pub struct SenseTags {
-    pub tags: Vec<ParameterTag>,
+    pub tags: Vec<parameter_tags::ParameterTag>,
     pub bridges: Vec<Value>,
 }
 
+/// The identification key of a tag: its sense, and its fixed arguments when
+/// any (`CausesIn _ _ esse`). Two binders are identified only when their keys
+/// agree, so a binder tagged as a partial application is identified only with
+/// one tagged as the same partial application.
+fn tag_key(tag: &parameter_tags::ParameterTag) -> String {
+    let fixed = tag.parameter.arguments.iter().any(|a| a != "_");
+    if fixed {
+        format!("{}|{}", tag.sense_id, tag.parameter.arguments.join(" "))
+    } else {
+        tag.sense_id.clone()
+    }
+}
+
 impl SenseTags {
-    pub fn from_records<'a>(
-        disambiguations: impl IntoIterator<Item = &'a serde_json::Map<String, Value>>,
-        arguments: impl IntoIterator<Item = &'a serde_json::Map<String, Value>>,
+    pub fn from_parts(
+        tags: &parameter_tags::ParameterTags,
+        arguments: impl IntoIterator<
+            Item = impl std::ops::Deref<Target = serde_json::Map<String, Value>>,
+        >,
     ) -> Self {
-        let mut tags = Vec::new();
-        for record in disambiguations {
-            let term = record
-                .get("term_label")
-                .and_then(Value::as_str)
-                .unwrap_or_default();
-            for sense in record
-                .get("senses")
-                .and_then(Value::as_array)
-                .into_iter()
-                .flatten()
-            {
-                let Some(id) = sense.get("id").and_then(Value::as_str) else {
-                    continue;
-                };
-                for entry in sense
-                    .get("lean_parameters")
-                    .and_then(Value::as_array)
-                    .into_iter()
-                    .flatten()
-                {
-                    let (Some(declaration), Some(parameter)) = (
-                        entry.get("declaration").and_then(Value::as_str),
-                        entry.get("parameter").and_then(Value::as_str),
-                    ) else {
-                        continue;
-                    };
-                    tags.push(ParameterTag {
-                        declaration: declaration.to_owned(),
-                        parameter: parameter.to_owned(),
-                        arguments: entry
-                            .get("arguments")
-                            .and_then(Value::as_array)
-                            .into_iter()
-                            .flatten()
-                            .filter_map(Value::as_str)
-                            .map(str::to_owned)
-                            .collect(),
-                        sense: id.to_owned(),
-                        term: term.to_owned(),
-                    });
-                }
-            }
-        }
         let bridges = arguments
             .into_iter()
-            .filter_map(|a| a.get("sense_bridges").and_then(Value::as_array))
+            .filter_map(|a| a.get("sense_bridges").and_then(Value::as_array).cloned())
             .flatten()
-            .cloned()
             .collect();
-        Self { tags, bridges }
+        Self {
+            tags: tags.all().to_vec(),
+            bridges,
+        }
     }
 
-    pub fn new(corpus: &Corpus) -> Self {
-        Self::from_records(
-            corpus.records("disambiguations"),
-            corpus.records("arguments"),
-        )
+    pub fn new(corpus: &Corpus) -> Result<Self, String> {
+        let tags = parameter_tags::ParameterTags::from_corpus(corpus)?;
+        Ok(Self::from_parts(&tags, corpus.records("arguments")))
     }
 
-    /// `[declaration, binder, sense]` for the binding policy of
-    /// `scripts/Discover.lean`. A tag with fixed arguments names a partial
-    /// application, not the binder itself, so it does not identify binders.
+    /// `[declaration, binder, key]` for the binding policy of
+    /// `scripts/Discover.lean` (see [`tag_key`]).
     pub fn for_declarations(&self, declarations: &[&str]) -> Vec<[String; 3]> {
         self.tags
             .iter()
-            .filter(|t| t.arguments.is_empty() && declarations.contains(&t.declaration.as_str()))
-            .map(|t| [t.declaration.clone(), t.parameter.clone(), t.sense.clone()])
+            .filter(|t| declarations.contains(&t.parameter.declaration.as_str()))
+            .map(|t| {
+                [
+                    t.parameter.declaration.clone(),
+                    t.parameter.parameter.clone(),
+                    tag_key(t),
+                ]
+            })
             .collect()
     }
 
@@ -506,8 +470,8 @@ impl SenseTags {
     pub fn senses_of(&self, declaration: &str) -> BTreeSet<(String, String)> {
         self.tags
             .iter()
-            .filter(|t| t.declaration == declaration)
-            .map(|t| (t.term.clone(), t.sense.clone()))
+            .filter(|t| t.parameter.declaration == declaration)
+            .map(|t| (t.term.clone(), t.sense_id.clone()))
             .collect()
     }
 
@@ -1650,7 +1614,7 @@ pub fn discover(
     let mut vocabulary = export_vocabulary(root, &declarations)?;
     close_vocabulary(root, &mut vocabulary)?;
     let weaker = weaker_siblings(corpus);
-    let tags = SenseTags::new(corpus);
+    let tags = SenseTags::new(corpus)?;
     let mut trials = Vec::new();
     for target in &chosen {
         if !vocabulary.contains_key(&target.declaration) {

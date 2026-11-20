@@ -74,17 +74,13 @@ fn transitive_constants_follow_mentioned_definitions() {
 fn command_line_names_declarations_and_quotes_the_configuration() {
     let mut statements = BTreeMap::new();
     statements.insert("T".to_owned(), statement("T", "M.Target", &[]));
-    statements.insert("P".to_owned(), statement("P", "M.Premise", &[]));
-    let tags = SenseTags {
-        tags: vec![ParameterTag {
-            declaration: "M.Premise".into(),
-            parameter: "CausesIn".into(),
-            arguments: Vec::new(),
-            sense: "s1".into(),
-            term: "CAUSE".into(),
-        }],
-        bridges: Vec::new(),
-    };
+    statements.insert("P".to_owned(), statement("P", "TruthCore.M.Premise", &[]));
+    let tags = tags_of(
+        &[json!({"term_label": "CAUSE", "senses": [
+            {"id": "s1", "label": "CAUSE_1", "lean_parameters": [{"declaration": "TruthCore.M.Premise", "parameter": "CausesIn"}]}
+        ]})],
+        &[],
+    );
     let line = command_line(
         &trial(&["P"]),
         &statements,
@@ -95,7 +91,7 @@ fn command_line_names_declarations_and_quotes_the_configuration() {
     );
     assert_eq!(
         line,
-        r#"#discover "t1" 5000 "/bin/zip" "{\"bridges\":true,\"tags\":[[\"M.Premise\",\"CausesIn\",\"s1\"]]}" M.Target from M.Premise"#
+        r#"#discover "t1" 5000 "/bin/zip" "{\"bridges\":true,\"tags\":[[\"TruthCore.M.Premise\",\"CausesIn\",\"s1\"]]}" M.Target from TruthCore.M.Premise"#
     );
 }
 
@@ -412,27 +408,48 @@ fn missing_bridges_rank_by_targets_unlocked() {
 fn parameter_tags_are_read_tolerantly_and_give_bridge_statements() {
     let disambiguations = [
         json!({"term_label": "CAUSE", "senses": [
-            {"id": "s1", "lean_parameters": [{"declaration": "M.A", "parameter": "CausesIn"}]},
-            {"id": "s2", "lean_parameters": [{"declaration": "N.B", "parameter": "Causes", "arguments": ["esse"]}]},
-            {"id": "s3"}
+            {"id": "s1", "label": "CAUSE_1", "lean_parameters": [{"declaration": "TruthCore.M.A", "parameter": "CausesIn"}]},
+            {"id": "s2", "label": "CAUSE_2", "lean_parameters": [
+                {"declaration": "TruthCore.N.B", "parameter": "Causes", "arguments": ["_", "_", "esse"]},
+                {"declaration": "TruthCore.N.B", "parameter": "Grounds"}]},
+            {"id": "s3", "label": "CAUSE_3"}
         ]}),
         json!({"term_label": "OTHER"}),
     ];
     let arguments = [
         json!({"sense_bridges": [{"term": "CAUSE", "from": "s2", "to": "s1", "statement_id": "BRIDGE"}]}),
     ];
-    let tags = SenseTags::from_records(
-        disambiguations.iter().map(|v| v.as_object().unwrap()),
-        arguments.iter().map(|v| v.as_object().unwrap()),
-    );
-    assert_eq!(tags.tags.len(), 2);
-    // A tag with fixed arguments names a partial application: never a binder identification.
+    let tags = tags_of(&disambiguations, &arguments);
+    assert_eq!(tags.tags.len(), 3);
+    // A partial application is identified only with the same partial application.
     assert_eq!(
-        tags.for_declarations(&["M.A", "N.B"]),
-        vec![["M.A".to_owned(), "CausesIn".to_owned(), "s1".to_owned()]]
+        tags.for_declarations(&["TruthCore.M.A", "TruthCore.N.B"]),
+        vec![
+            [
+                "TruthCore.M.A".to_owned(),
+                "CausesIn".to_owned(),
+                "s1".to_owned()
+            ],
+            [
+                "TruthCore.N.B".to_owned(),
+                "Causes".to_owned(),
+                "s2|_ _ esse".to_owned()
+            ],
+            [
+                "TruthCore.N.B".to_owned(),
+                "Grounds".to_owned(),
+                "s2".to_owned()
+            ],
+        ]
     );
-    assert_eq!(tags.bridge_statements("M.A", "N.B"), ["BRIDGE"]);
-    assert!(tags.bridge_statements("M.A", "M.A").is_empty());
+    assert_eq!(
+        tags.bridge_statements("TruthCore.M.A", "TruthCore.N.B"),
+        ["BRIDGE"]
+    );
+    assert!(
+        tags.bridge_statements("TruthCore.M.A", "TruthCore.M.A")
+            .is_empty()
+    );
 }
 
 #[test]
@@ -497,4 +514,14 @@ fn search_auxiliaries_are_not_axioms() {
         "sorryAx".to_owned(),
     ];
     assert_eq!(forbidden_axioms(&axioms), ["sorryAx"]);
+}
+
+fn tags_of(disambiguations: &[Value], arguments: &[Value]) -> SenseTags {
+    let tags = parameter_tags::ParameterTags::read(
+        disambiguations
+            .iter()
+            .map(|v| ("fixture.json", v.as_object().unwrap())),
+    )
+    .unwrap();
+    SenseTags::from_parts(&tags, arguments.iter().map(|v| v.as_object().unwrap()))
 }
