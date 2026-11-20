@@ -21,5 +21,8 @@
   "disambiguation_ids": [
     "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
     "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"
-  ]
+  ],
+  "strong_version_needed": {
+    "2a9378b4-3dad-591b-a88e-1907a79f1fa5": "The proof uses both parts of lifting: the supporter's necessity and its present support edge at the actual world. Neither registered weak version suffices: no novel necessary support does not give the supporter's necessity (strictness: the contingent-source model), and no contingent ground of the necessary does not give the actual edge (strictness: the non-actual-edge model). The two weak versions jointly give lifting only with actual reflexivity (lifting_of_two_bridges), which this argument does not assume."
+  }
 }

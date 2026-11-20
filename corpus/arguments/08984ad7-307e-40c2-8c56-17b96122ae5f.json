@@ -1,0 +1,21 @@
+{
+  "id": "08984ad7-307e-40c2-8c56-17b96122ae5f",
+  "label": "Lifting is no contingent ground plus actual recurrence of support edges",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "bdd28f30-fae0-43b7-aa1d-083f697980fc",
+  "inference_ids": [
+    "656a975d-cf5a-4ac9-a3d6-8e30b0a17b71"
+  ],
+  "meaning": "Certified difference (#1598) of the registration lifting strengthens no contingent ground of the necessary, with no background: lifting holds iff no contingent ground holds and every possible support edge into a necessary individual is also a present edge at the actual world. Premise-free; it asserts none of the statements compared.",
+  "definition_ids": [
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "5a5b976e-36e1-53f5-a1b1-a723cacd0206",
+    "a0763d0d-cd6b-5c08-a33a-f53ab8edd941",
+    "659dbc9c-63d8-5e4e-a48f-79d0d18d1e67",
+    "b242943a-34cc-582d-8c38-c1203b9d2c91"
+  ],
+  "disambiguation_ids": [
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"
+  ]
+}

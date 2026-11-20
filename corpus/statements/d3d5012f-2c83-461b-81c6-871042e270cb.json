@@ -1,0 +1,15 @@
+{
+  "id": "d3d5012f-2c83-461b-81c6-871042e270cb",
+  "label": "A contingent-source model separates lifting from no novel necessary support",
+  "paraphrase": "Closed mathematical control: two worlds and two individuals, universal frame, actual world false; individual true exists at every world, individual false only at world true, and false supports true at world true only. No novel necessary support holds vacuously (the only source with an edge is contingent) and lifting fails (that contingent source supports a necessary individual). A statement about this finite interpretation only.",
+  "lean_declaration": "TruthCore.Causality.NecessarilyUnderived.ContingentSourceSeparates",
+  "definition_ids": [
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "5a5b976e-36e1-53f5-a1b1-a723cacd0206",
+    "a0763d0d-cd6b-5c08-a33a-f53ab8edd941"
+  ],
+  "disambiguation_ids": [
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"
+  ]
+}

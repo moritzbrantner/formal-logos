@@ -1,0 +1,12 @@
+{
+  "id": "229ba9a5-2718-427b-b158-f5fd5c9bb1f0",
+  "label": "Necessary-predecessor lifting entails no contingent ground of the necessary (inference)",
+  "input_statement_ids": [
+    "2a9378b4-3dad-591b-a88e-1907a79f1fa5"
+  ],
+  "output_statement_id": "96d25c42-71aa-5fa0-841d-9aa62d91e1be",
+  "rule": "Conjunct projection: the source's necessity is the first conjunct of lifting",
+  "meaning": "Strength order registration: if every possible supporter of a necessary individual lifts to a necessary, actually present supporter of it, then every possible supporter of a necessary individual is necessary. Same model, support relation and actual world. Establishes neither statement. Strictness: the non-actual-edge model.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,173 @@
+# Strength orders of the lifting premise found by a `truth discover` run over
+# the modal sense-fork nodes (findings t3 and t6, #1784; attempt "Discover run
+# over modal sense-fork nodes"): NecessaryPredecessorLifting strengthens
+# NoNovelNecessarySupport and NoContingentGroundOfNecessary, with certified
+# differences (#1598) and strictness controls that double as separators.
+# Analyst formulations, attribution deferred. No premise is established.
+
+[batch]
+vocab = "TruthCore.Causality.NecessarilyUnderived"
+results = "TruthCore.Results.Causality.LiftingStrength"
+disambiguations = ["DISAMB-EXISTENCE-ESSE-SUPPORT", "DISAMB-NECESSARY-EXISTENCE-VS-UNDERIVED"]
+
+[[statement]]
+id = "Every possible supporter of a necessary individual is necessary and actual"
+lean = "SupportersOfNecessaryNecessaryAndActual"
+paraphrase = "Difference statement: whenever a source exists at an admitted world w and directly supports the existence of an individual that is necessary from the actual world w0 (supportsEsse at w), the source is itself necessary from w0 and exists at w0. It says nothing about whether the support edge holds at w0. Open; not asserted."
+definitions = ["DEF-KANT-MODAL-NECESSITY", "DEF-NO-CONTINGENT-GROUND-OF-NECESSARY"]
+disambiguations = ["DISAMB-EXISTENCE-ESSE-SUPPORT", "DISAMB-NECESSARY-EXISTENCE-VS-UNDERIVED"]
+
+[[statement]]
+id = "Every possible support edge into a necessary individual recurs at the actual world"
+lean = "SupportOfNecessaryRecursActually"
+paraphrase = "Difference statement: whenever a source exists at an admitted world w and directly supports the existence of an individual that is necessary from the actual world w0, the source exists at w0 and supports the same individual there (PresentEsseSupport at w0). It says nothing about the source's necessity. Open; not asserted."
+definitions = ["DEF-KANT-MODAL-NECESSITY", "DEF-PRESENT-ESSE-SUPPORT"]
+disambiguations = ["DISAMB-EXISTENCE-ESSE-SUPPORT", "DISAMB-NECESSARY-EXISTENCE-VS-UNDERIVED"]
+
+[[statement]]
+id = "Lifting holds exactly when no novel necessary support holds and supporters are necessary and actual"
+lean = "LiftingOverNoNovelExact"
+paraphrase = "For every world type, individual type, model, support relation and actual world w0: necessary-predecessor lifting holds if and only if no novel necessary support holds and every possible supporter of a necessary individual is necessary and exists at w0. A premise-free comparison; it asserts none of the three statements."
+definitions = ["DEF-NECESSARY-PREDECESSOR-LIFTING", "DEF-NO-NOVEL-NECESSARY-SUPPORT", "DEF-KANT-MODAL-NECESSITY"]
+disambiguations = ["DISAMB-EXISTENCE-ESSE-SUPPORT", "DISAMB-NECESSARY-EXISTENCE-VS-UNDERIVED"]
+
+[[statement]]
+id = "Lifting iff no contingent ground and support edges into necessary individuals recur actually"
+lean = "LiftingOverNoContingentExact"
+paraphrase = "For every world type, individual type, model, support relation and actual world w0: necessary-predecessor lifting holds if and only if no contingent ground of the necessary holds and every possible support edge into a necessary individual recurs as a present support edge at w0. A premise-free comparison; it asserts none of the three statements."
+definitions = ["DEF-NECESSARY-PREDECESSOR-LIFTING", "DEF-NO-CONTINGENT-GROUND-OF-NECESSARY", "DEF-PRESENT-ESSE-SUPPORT"]
+disambiguations = ["DISAMB-EXISTENCE-ESSE-SUPPORT", "DISAMB-NECESSARY-EXISTENCE-VS-UNDERIVED"]
+
+[[statement]]
+id = "A contingent-source model separates lifting from no novel necessary support"
+lean = "ContingentSourceSeparates"
+paraphrase = "Closed mathematical control: two worlds and two individuals, universal frame, actual world false; individual true exists at every world, individual false only at world true, and false supports true at world true only. No novel necessary support holds vacuously (the only source with an edge is contingent) and lifting fails (that contingent source supports a necessary individual). A statement about this finite interpretation only."
+definitions = ["DEF-KANT-MODAL-NECESSITY", "DEF-NECESSARY-PREDECESSOR-LIFTING", "DEF-NO-NOVEL-NECESSARY-SUPPORT"]
+disambiguations = ["DISAMB-EXISTENCE-ESSE-SUPPORT", "DISAMB-NECESSARY-EXISTENCE-VS-UNDERIVED"]
+
+[[statement]]
+id = "A non-actual-edge model separates lifting from no contingent ground of the necessary"
+lean = "NonActualEdgeSeparates"
+paraphrase = "Closed mathematical control: two worlds and two individuals, universal frame, actual world false; both individuals exist at every world, and false supports true at world true only. No contingent ground of the necessary holds (every individual is necessary) and lifting fails (the support edge is absent at the actual world). A statement about this finite interpretation only."
+definitions = ["DEF-KANT-MODAL-NECESSITY", "DEF-NECESSARY-PREDECESSOR-LIFTING", "DEF-NO-CONTINGENT-GROUND-OF-NECESSARY"]
+disambiguations = ["DISAMB-EXISTENCE-ESSE-SUPPORT", "DISAMB-NECESSARY-EXISTENCE-VS-UNDERIVED"]
+
+[[argument]]
+id = "Necessary-predecessor lifting entails no novel necessary support"
+theorem = "noNovelOfLifting"
+premises = ["STMT-NECESSARY-PREDECESSOR-LIFTING"]
+conclusion = "STMT-NO-NOVEL-NECESSARY-SUPPORT"
+weakening = true
+transcription = "assembly"
+axioms = []
+definitions = ["DEF-KANT-MODAL-NECESSITY", "DEF-NECESSARY-PREDECESSOR-LIFTING", "DEF-NO-NOVEL-NECESSARY-SUPPORT", "DEF-NO-CONTINGENT-GROUND-OF-NECESSARY", "DEF-PRESENT-ESSE-SUPPORT"]
+disambiguations = ["DISAMB-EXISTENCE-ESSE-SUPPORT", "DISAMB-NECESSARY-EXISTENCE-VS-UNDERIVED"]
+rule = "Conjunct projection: the actual support edge is the last conjunct of lifting; the weak version's extra hypothesis that the source is necessary is unused"
+meaning = "Strength order registration: if every possible supporter of a necessary individual lifts to a necessary, actually present supporter of it, then every possible support edge between necessary individuals already holds at the actual world. Same model, support relation and actual world. Establishes neither statement. Strictness: the contingent-source model."
+
+[[argument]]
+id = "Necessary-predecessor lifting entails no contingent ground of the necessary"
+theorem = "noContingentOfLifting"
+premises = ["STMT-NECESSARY-PREDECESSOR-LIFTING"]
+conclusion = "STMT-NO-CONTINGENT-GROUND-OF-NECESSARY"
+weakening = true
+transcription = "assembly"
+axioms = []
+definitions = ["DEF-KANT-MODAL-NECESSITY", "DEF-NECESSARY-PREDECESSOR-LIFTING", "DEF-NO-NOVEL-NECESSARY-SUPPORT", "DEF-NO-CONTINGENT-GROUND-OF-NECESSARY", "DEF-PRESENT-ESSE-SUPPORT"]
+disambiguations = ["DISAMB-EXISTENCE-ESSE-SUPPORT", "DISAMB-NECESSARY-EXISTENCE-VS-UNDERIVED"]
+rule = "Conjunct projection: the source's necessity is the first conjunct of lifting"
+meaning = "Strength order registration: if every possible supporter of a necessary individual lifts to a necessary, actually present supporter of it, then every possible supporter of a necessary individual is necessary. Same model, support relation and actual world. Establishes neither statement. Strictness: the non-actual-edge model."
+
+[[argument]]
+id = "Lifting is no novel necessary support plus necessary and actual supporters"
+theorem = "liftingOverNoNovelExact"
+premises = []
+conclusion = "Lifting holds exactly when no novel necessary support holds and supporters are necessary and actual"
+axioms = []
+definitions = ["DEF-KANT-MODAL-NECESSITY", "DEF-NECESSARY-PREDECESSOR-LIFTING", "DEF-NO-NOVEL-NECESSARY-SUPPORT", "DEF-NO-CONTINGENT-GROUND-OF-NECESSARY", "DEF-PRESENT-ESSE-SUPPORT"]
+disambiguations = ["DISAMB-EXISTENCE-ESSE-SUPPORT", "DISAMB-NECESSARY-EXISTENCE-VS-UNDERIVED"]
+rule = "Forward by projection; backward, the delta gives the source's necessity, which no novel support needs to yield the actual edge"
+meaning = "Certified difference (#1598) of the registration lifting strengthens no novel necessary support, with no background: lifting holds iff no novel necessary support holds and every possible supporter of a necessary individual is necessary and actual. Premise-free; it asserts none of the statements compared."
+
+[[argument]]
+id = "Lifting is no contingent ground plus actual recurrence of support edges"
+theorem = "liftingOverNoContingentExact"
+premises = []
+conclusion = "Lifting iff no contingent ground and support edges into necessary individuals recur actually"
+axioms = []
+definitions = ["DEF-KANT-MODAL-NECESSITY", "DEF-NECESSARY-PREDECESSOR-LIFTING", "DEF-NO-NOVEL-NECESSARY-SUPPORT", "DEF-NO-CONTINGENT-GROUND-OF-NECESSARY", "DEF-PRESENT-ESSE-SUPPORT"]
+disambiguations = ["DISAMB-EXISTENCE-ESSE-SUPPORT", "DISAMB-NECESSARY-EXISTENCE-VS-UNDERIVED"]
+rule = "Conjunction regrouping under the shared hypotheses: lifting's first conjunct is no contingent ground, its remaining conjuncts the actual recurrence"
+meaning = "Certified difference (#1598) of the registration lifting strengthens no contingent ground of the necessary, with no background: lifting holds iff no contingent ground holds and every possible support edge into a necessary individual is also a present edge at the actual world. Premise-free; it asserts none of the statements compared."
+
+[[argument]]
+id = "Contingent-source control separates lifting from no novel necessary support"
+theorem = "contingentSourceSeparates"
+premises = []
+conclusion = "A contingent-source model separates lifting from no novel necessary support"
+axioms = []
+definitions = ["DEF-KANT-MODAL-NECESSITY", "DEF-NECESSARY-PREDECESSOR-LIFTING", "DEF-NO-NOVEL-NECESSARY-SUPPORT", "DEF-NO-CONTINGENT-GROUND-OF-NECESSARY", "DEF-PRESENT-ESSE-SUPPORT"]
+disambiguations = ["DISAMB-EXISTENCE-ESSE-SUPPORT", "DISAMB-NECESSARY-EXISTENCE-VS-UNDERIVED"]
+rule = "Finite case analysis on Bool"
+meaning = "Strictness control: in the contingent-source model no novel necessary support holds and lifting fails, so no novel necessary support does not entail lifting. A finite interpretation only."
+
+[[argument]]
+id = "Non-actual-edge control separates lifting from no contingent ground"
+theorem = "nonActualEdgeSeparates"
+premises = []
+conclusion = "A non-actual-edge model separates lifting from no contingent ground of the necessary"
+axioms = []
+definitions = ["DEF-KANT-MODAL-NECESSITY", "DEF-NECESSARY-PREDECESSOR-LIFTING", "DEF-NO-NOVEL-NECESSARY-SUPPORT", "DEF-NO-CONTINGENT-GROUND-OF-NECESSARY", "DEF-PRESENT-ESSE-SUPPORT"]
+disambiguations = ["DISAMB-EXISTENCE-ESSE-SUPPORT", "DISAMB-NECESSARY-EXISTENCE-VS-UNDERIVED"]
+rule = "Finite case analysis on Bool"
+meaning = "Strictness control: in the non-actual-edge model no contingent ground of the necessary holds and lifting fails, so no contingent ground does not entail lifting. A finite interpretation only."
+
+[[relation]]
+id = "Necessary-predecessor lifting strengthens no novel necessary support"
+subject_kind = "statement"
+subject_id = "STMT-NECESSARY-PREDECESSOR-LIFTING"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "STMT-NO-NOVEL-NECESSARY-SUPPORT"
+verification_result_id = "Necessary-predecessor lifting entails no novel necessary support"
+strictness_result_id = "Contingent-source control separates lifting from no novel necessary support"
+note = "Same model, support relation and actual world. Lifting adds that every possible supporter of a necessary individual is necessary and actual (certified difference). The converse needs no contingent ground and actual reflexivity together (lifting_of_two_bridges). Strict: the contingent-source model."
+
+[[relation]]
+id = "Necessary-predecessor lifting strengthens no contingent ground of the necessary"
+subject_kind = "statement"
+subject_id = "STMT-NECESSARY-PREDECESSOR-LIFTING"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "STMT-NO-CONTINGENT-GROUND-OF-NECESSARY"
+verification_result_id = "Necessary-predecessor lifting entails no contingent ground of the necessary"
+strictness_result_id = "Non-actual-edge control separates lifting from no contingent ground"
+note = "Same model, support relation and actual world. Lifting adds that every possible support edge into a necessary individual recurs at the actual world (certified difference). Strict: the non-actual-edge model."
+
+[[relation]]
+id = "Lifting over no novel necessary support: certified difference"
+subject_kind = "statement"
+subject_id = "STMT-NECESSARY-PREDECESSOR-LIFTING"
+predicate = "strength_comparison"
+object_kind = "statement"
+object_id = "STMT-NO-NOVEL-NECESSARY-SUPPORT"
+comparison_spec = "liftingOverNoNovel"
+delta_statement_id = "Every possible supporter of a necessary individual is necessary and actual"
+evidence_result_ids = { implication = "Necessary-predecessor lifting entails no novel necessary support", equivalence = "Lifting is no novel necessary support plus necessary and actual supporters" }
+separator = { setting = "contingentSourceSetting", result_id = "Contingent-source control separates lifting from no novel necessary support" }
+statement_parameter_indices = { stronger = [0, 1, 2, 3, 4], weaker = [0, 1, 2, 3, 4], delta = [0, 1, 2, 3, 4] }
+note = "Difference of lifting and no novel necessary support: lifting adds exactly that possible supporters of necessary individuals are necessary and actual. No background: the actual existence of the supporter is part of the delta, so ActualReflexive (which lifting_of_two_bridges needs) is not used. The separator is a finite interpretation."
+
+[[relation]]
+id = "Lifting over no contingent ground of the necessary: certified difference"
+subject_kind = "statement"
+subject_id = "STMT-NECESSARY-PREDECESSOR-LIFTING"
+predicate = "strength_comparison"
+object_kind = "statement"
+object_id = "STMT-NO-CONTINGENT-GROUND-OF-NECESSARY"
+comparison_spec = "liftingOverNoContingent"
+delta_statement_id = "Every possible support edge into a necessary individual recurs at the actual world"
+evidence_result_ids = { implication = "Necessary-predecessor lifting entails no contingent ground of the necessary", equivalence = "Lifting is no contingent ground plus actual recurrence of support edges" }
+separator = { setting = "nonActualEdgeSetting", result_id = "Non-actual-edge control separates lifting from no contingent ground" }
+statement_parameter_indices = { stronger = [0, 1, 2, 3, 4], weaker = [0, 1, 2, 3, 4], delta = [0, 1, 2, 3, 4] }
+note = "Difference of lifting and no contingent ground: lifting adds exactly that possible support edges into necessary individuals recur as present edges at the actual world. No background is needed. The other bridge, no novel necessary support, is not this delta: it would need the source's actual existence, which only ActualReflexive supplies (lifting_of_two_bridges). The separator is a finite interpretation."
