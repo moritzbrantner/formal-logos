@@ -1,0 +1,16 @@
+{
+  "id": "b401eca0-7fb9-48a7-a89c-3872f9912eea",
+  "label": "An occurring thought has a necessary actual thinking ground root",
+  "paraphrase": "Some bearer b of an occurring thought has one actual concrete ground ancestor n (b itself or reached by a finite ground path) that bears an occurring thought, is concrete and exists at the selected world, has no incoming actual concrete ground at that world, and exists at every world accessible from it. The same n satisfies thinking, ancestry, selected-relation rootness and de re modal necessity. It is not asserted to think in all accessible worlds, to be underived under other relations, unique or God.",
+  "lean_declaration": "TruthCore.Causality.ThinkingRootFork.NecessaryThinkingRootOfThought",
+  "definition_ids": [
+    "12c3b24c-f278-499a-b127-db56a407af4c",
+    "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "8181eef7-4f03-42c3-bc1b-f440acc4556d"
+  ],
+  "disambiguation_ids": [
+    "1272a7e5-e3e1-4c91-a1d3-343018262841"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "60df7e87-ea14-4212-9749-4d4e0dd8576d",
+  "label": "Literal thinker-only P or not-P yields a necessary thinking actual root",
+  "argument_id": "a66aacdc-fe5b-4fc2-a6d3-00c639cbb6f4",
+  "challenge_module": "TruthCore.Results.Causality.ThinkingRootFork.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ThinkingRootFork.Solution",
+  "theorem": "TruthCore.Results.Causality.ThinkingRootFork.necessaryThinkingRootOfThought",
+  "comparator_config": "results/60df7e87-ea14-4212-9749-4d4e0dd8576d/comparator.json",
+  "status": "solution-present",
+  "description": "Select one actual concrete bearer via the existing Cogito result and the two separate actuality bridges. At every thinking ancestor x, excluded middle covers exactly P(x) or ¬P(x) under the *same* mediate G+ sense. Under P(x), a distinct earlier thinking G-ancestor c exists and accessibility of this restricted relation allows recursion while preserving the original bearer's finite ancestry. Under ¬P(x), no-fresh-thinker forces absence of any actual concrete G predecessor, so x is a thinking actual root. The separate contingent-thinker anti-brute premise excludes contingency of this SAME terminal witness, yielding accessibility-relative de re NecessaryAt. The proof uses no all-ground accessibility, no grounding of nonthinking contingent ancestors, no necessary→underived principle and no uniqueness/esse/God naming. The original direct existential-sustenance reading requires a separate philosophical translation; no independence premise or its negation is silently imported. Analyst reconstruction; attribution deferred. #1743/#1791; named downstream bridge #1787, not connected yet."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "141c8b42-f98a-4bab-9620-ebfab2bf4e35",
+  "label": "Contingent ancestry grounding strengthens contingent thinking cone grounding",
+  "subject_kind": "statement",
+  "subject_id": "f8dafcc7-c5ea-5c62-885a-6a24cbb351ae",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "db72222b-cf8d-4eca-8b80-56b418d488a6",
+  "verification_result_id": "601022e8-f89b-4ca0-ad6f-2eb8c8c534d9",
+  "note": "Same Profile, world, Occurs and Bears; the weak version grounds only contingent cone members that bear an occurring thought. Strictness not yet checked (#1791)."
+}

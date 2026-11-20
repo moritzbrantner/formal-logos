@@ -1,0 +1,9 @@
+{
+  "id": "51d205db-399e-4524-8e15-e04cf2532e24",
+  "label": "Grounded thinking cone member has a distinct earlier thinking ancestor",
+  "term": "no-fresh-thinker condition in one actual cone",
+  "definition": "NoFreshThinkerInCone m w Occurs Bears b says: for every x in the complete actual concrete ground cone of b, if x bears an occurring thought and at least one actual concrete G edge enters x, then P(x) is true in the mediate strict-thinking-ancestor sense. It does not say that every immediate G-parent thinks, nor that a thinker cannot have nonthinking contributors, nor that any G edge itself is productive existential support.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.ThinkingRootFork.NoFreshThinkerInCone",
+  "note": "Open analyst hypothesis in #1791, not a consequence of idealism or of the Cogito. An informal counter-interpretation (not yet a checked finite model; #1791) in which q is b's only actual concrete ground, q is nonthinking and q itself has no ground satisfies ¬P(b) while b has a G-parent, so the no-fresh premise excludes that mechanism when b is in the selected cone. This is a conditional mathematical separation, not independent evidence against physicalist or emergence accounts. Positive warrant and matched-scope rivals belong to #1792."
+}

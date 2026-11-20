@@ -1,0 +1,9 @@
+{
+  "id": "12c3b24c-f278-499a-b127-db56a407af4c",
+  "label": "Distinct thinking predecessor by a finite actual concrete ground path",
+  "term": "mediate grounding predecessor that bears an occurring thought",
+  "definition": "At one supplied world w and profile m, ThinkerPredecessor m w Occurs Bears c x holds exactly when c ≠ x, c bears at least one episode e with Occurs e, and a nonempty finite path of ActualConcreteGround edges leads from c to x. Every such c is concrete and exists at w by the first edge. P(x) means that some c satisfies this relation. Thinks c by itself does not imply actuality. TransGen allows nonthinking intermediates; no path or supporter at a different world is asserted.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.ThinkingRootFork.ThinkerPredecessor",
+  "note": "Analyst reconstruction of #1743/#1791 for the explicit mediate S=G+ sense. It reuses the existing ActualConcreteGround edge and GroundAncestor definitions. A concrete example is a thinker z grounding another thinker b directly; a nonthinking q grounding b alone is not a P predecessor, although it remains a G predecessor. The distinct requirement excludes counting b's own positive grounding cycle as P(b). A grounding path is not thereby direct existential sustenance, efficient causation, or an underived source. The application bridge from this selected G-path to the original intended S remains open (#1792)."
+}

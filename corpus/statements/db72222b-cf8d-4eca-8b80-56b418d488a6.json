@@ -1,0 +1,12 @@
+{
+  "id": "db72222b-cf8d-4eca-8b80-56b418d488a6",
+  "label": "Contingent thinking cone members of a thought bearer have actual concrete grounds",
+  "paraphrase": "Analyst formulation: for every occurring-thought bearer b, contingent members x of b's actual concrete ground cone (b itself included) that bear an occurring thought have an actual concrete predecessor. Contingent nonthinking ancestors are not covered; this is weaker in scope than contingent grounding for every member of the full actual cone, but no unconditional truth is asserted.",
+  "lean_declaration": "TruthCore.Causality.ThinkingRootFork.ThinkingBearerConeContingentGrounded",
+  "definition_ids": [
+    "6f53f286-b5e8-4b75-997a-8e314e97d6ff",
+    "9c6e4314-2e35-52ff-951e-db752a3c8ce2",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "8181eef7-4f03-42c3-bc1b-f440acc4556d"
+  ]
+}

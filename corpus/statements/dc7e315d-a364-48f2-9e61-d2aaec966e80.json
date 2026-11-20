@@ -1,0 +1,15 @@
+{
+  "id": "dc7e315d-a364-48f2-9e61-d2aaec966e80",
+  "label": "Grounded thinking cone members have an earlier distinct thinking ancestor",
+  "paraphrase": "Analyst formulation: for each bearer b of an occurring thought, each member x of b's actual concrete ground cone (b itself or an actual concrete finite ground ancestor of b) that bears an occurring thought and has at least one incoming actual concrete ground has a distinct earlier thinking ancestor c along a nonempty finite ground path. Its immediate ground need not be a thinker, and x need not be contingent. No logical or idealist theory by itself supplies this bridge.",
+  "lean_declaration": "TruthCore.Causality.ThinkingRootFork.ThinkingBearerConeNoFresh",
+  "definition_ids": [
+    "51d205db-399e-4524-8e15-e04cf2532e24",
+    "12c3b24c-f278-499a-b127-db56a407af4c",
+    "9c6e4314-2e35-52ff-951e-db752a3c8ce2",
+    "8181eef7-4f03-42c3-bc1b-f440acc4556d"
+  ],
+  "disambiguation_ids": [
+    "1272a7e5-e3e1-4c91-a1d3-343018262841"
+  ]
+}
