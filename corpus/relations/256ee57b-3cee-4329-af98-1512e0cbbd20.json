@@ -1,0 +1,12 @@
+{
+  "id": "256ee57b-3cee-4329-af98-1512e0cbbd20",
+  "label": "S4 route frame strengthens KT route frame",
+  "subject_kind": "statement",
+  "subject_id": "d8d91023-300e-50f4-9cc5-e62f44a1aa04",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "806c3f89-171a-5ccf-9ddf-5924c39695ed",
+  "verification_result_id": "45dea922-9fd2-464b-afb3-3199b53219b1",
+  "strictness_result_id": "bffe3578-9ae5-4fe5-9bad-594ee928797d",
+  "note": "Same route Profile and frame. S4 adds transitivity to KT; the reflexive non-transitive chain is KT and not S4."
+}

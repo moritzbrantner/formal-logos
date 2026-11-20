@@ -1,0 +1,12 @@
+{
+  "id": "82834aa9-0097-49fa-8da4-d5d06ec55348",
+  "label": "Frame-class strictness controls for the route's frame premises",
+  "paraphrase": "Formal controls on explicit route frames (one candidate individual present at every world): (1) on the reflexive non-transitive chain over the naturals (n accesses n and n+1) the route frame is KT but not S4; (2) on the two-world order frame (both worlds access themselves, the first accesses the second, not conversely) it is KT but not KTB (not symmetric) and (3) S4 but not S5 (not Euclidean); (4) on the reflexive symmetric non-transitive path over the naturals (n accesses n-1, n and n+1) it is KTB but not S5. Statements about these interpretations only; no frame is claimed to be the frame of the route.",
+  "lean_declaration": "TruthCore.Causality.ModalSenseSupport.Control.FrameStrictness",
+  "definition_ids": [
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ]
+}

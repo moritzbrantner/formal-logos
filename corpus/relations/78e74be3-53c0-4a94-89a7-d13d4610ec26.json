@@ -1,0 +1,12 @@
+{
+  "id": "78e74be3-53c0-4a94-89a7-d13d4610ec26",
+  "label": "S5 route frame strengthens S4 route frame",
+  "subject_kind": "statement",
+  "subject_id": "873d057f-e58e-53cc-a054-093f7c5a4238",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "d8d91023-300e-50f4-9cc5-e62f44a1aa04",
+  "verification_result_id": "43f9db19-4939-4948-b887-0704faa02e33",
+  "strictness_result_id": "bffe3578-9ae5-4fe5-9bad-594ee928797d",
+  "note": "Same route Profile and frame. S5 adds symmetry (equivalently the Euclidean condition) to S4; the two-world order frame is S4 and not S5. The node-level counterpart is the registration S5 node strengthens S4 node, whose certified difference is the symmetric-frame delta."
+}

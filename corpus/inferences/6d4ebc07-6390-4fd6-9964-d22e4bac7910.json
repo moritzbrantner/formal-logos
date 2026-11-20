@@ -1,0 +1,12 @@
+{
+  "id": "6d4ebc07-6390-4fd6-9964-d22e4bac7910",
+  "label": "S4 route frame entails KT route frame (inference)",
+  "input_statement_ids": [
+    "d8d91023-300e-50f4-9cc5-e62f44a1aa04"
+  ],
+  "output_statement_id": "806c3f89-171a-5ccf-9ddf-5924c39695ed",
+  "rule": "Conjunct projection: frame class S4 is reflexivity together with transitivity",
+  "meaning": "Strength order registration: if the route's modal frame is reflexive and transitive (S4), it is reflexive (KT). A conjunct projection; establishes neither frame premise.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

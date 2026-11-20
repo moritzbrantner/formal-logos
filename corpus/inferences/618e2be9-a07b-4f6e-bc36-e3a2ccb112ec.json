@@ -1,0 +1,12 @@
+{
+  "id": "618e2be9-a07b-4f6e-bc36-e3a2ccb112ec",
+  "label": "KTB route frame entails KT route frame (inference)",
+  "input_statement_ids": [
+    "60795e6e-1fe1-5c55-9718-bc2a22867244"
+  ],
+  "output_statement_id": "806c3f89-171a-5ccf-9ddf-5924c39695ed",
+  "rule": "Conjunct projection: frame class KTB is reflexivity together with symmetry",
+  "meaning": "Strength order registration: if the route's modal frame is reflexive and symmetric (KTB), it is reflexive (KT). A conjunct projection; establishes neither frame premise.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

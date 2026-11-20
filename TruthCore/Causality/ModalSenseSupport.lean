@@ -213,4 +213,24 @@ def RivalNegations : Prop :=
 /-- The batch controls. -/
 def Controls : Prop := Nonvacuity ∧ Omissions ∧ RivalNegations
 
+/-- Worlds are naturals; each world accesses itself and its two neighbours:
+reflexive and symmetric, not transitive (`0 → 1 → 2` without `0 → 2`). -/
+def pathFrame : Frame Nat := ⟨fun a b => a = b ∨ a + 1 = b ∨ b + 1 = a⟩
+
+/-- Strictness of the four frame-class strength orders among the route's frame
+premises (`OnticFrameKT`, `OnticFrameS4`, `OnticFrameKTB`, `OnticFrameS5`): in
+each pair the weaker frame condition holds on a frame on which the stronger
+one fails.
+1. reflexive non-transitive chain: KT holds, S4 fails;
+2. `false ≤ true`: KT holds, KTB fails (not symmetric);
+3. `false ≤ true`: S4 holds, S5 fails (not Euclidean);
+4. reflexive symmetric non-transitive path: KTB holds, S5 fails.
+Statements about these interpretations only. -/
+def FrameStrictness : Prop :=
+  (OnticFrameKT (everywhere NecessarySenseFork.Control.chainFrame) ∧
+    ¬ OnticFrameS4 (everywhere NecessarySenseFork.Control.chainFrame)) ∧
+  (OnticFrameKT (everywhere leFrame) ∧ ¬ OnticFrameKTB (everywhere leFrame)) ∧
+  (OnticFrameS4 (everywhere leFrame) ∧ ¬ OnticFrameS5 (everywhere leFrame)) ∧
+  (OnticFrameKTB (everywhere pathFrame) ∧ ¬ OnticFrameS5 (everywhere pathFrame))
+
 end TruthCore.Causality.ModalSenseSupport.Control

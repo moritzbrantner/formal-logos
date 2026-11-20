@@ -211,6 +211,7 @@ public import TruthCore.Results.Causality.MaximumDefinitions.NamedElimination.So
 public import TruthCore.Results.Causality.MeinongianActuality.Solution
 public import TruthCore.Results.Causality.MetricBeginningArrival.Solution
 public import TruthCore.Results.Causality.MetricGrimReaper.Solution
+public import TruthCore.Results.Causality.ModalFrameStrength.Solution
 public import TruthCore.Results.Causality.ModalNecessaryBeingActuality.Solution
 public import TruthCore.Results.Causality.ModalSenseSupport.Solution
 public import TruthCore.Results.Causality.MotionMapsBatch1.Solution
