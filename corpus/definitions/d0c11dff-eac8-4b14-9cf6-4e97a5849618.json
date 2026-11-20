@@ -1,0 +1,9 @@
+{
+  "id": "d0c11dff-eac8-4b14-9cf6-4e97a5849618",
+  "label": "Schema model of the Catholicism case signature",
+  "term": "schema model of the Catholicism case signature",
+  "definition": "A particular Signature value constructed in Lean to witness satisfiability, an omission or the independence of a premise (for example TruthCore.Case.Catholicism.StageThree.DivineFounding.modelSig, Round3ChristChurch.jσ and nσ, or a signature introduced by an existential ∃ σ : Signature in a model theorem). What holds in such a model is a fact about the formal schema at that value, not about the intended interpretation of the case vocabulary.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Case.Catholicism.StageThree.DivineFounding.modelSig",
+  "note": "Recorded as the contrasting sense to the intended interpretation so that a model witness is never read as a claim about the case's intended σ (AGENTS.md, 'existence of a witness versus properties of the particular witness'). No binder is tagged with this sense: model signatures are constructed values or existentially bound, not parameters of case propositions."
+}

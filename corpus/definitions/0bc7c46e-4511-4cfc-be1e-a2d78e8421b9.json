@@ -1,0 +1,9 @@
+{
+  "id": "0bc7c46e-4511-4cfc-be1e-a2d78e8421b9",
+  "label": "Intended interpretation of the Catholicism case signature",
+  "term": "intended interpretation of the Catholicism case signature",
+  "definition": "The one interpretation of the case's primitive vocabulary that the case's propositions are about: a value σ of TruthCore.Case.Catholicism.Signature (its carriers Being and Society, the designated jesus and catholicChurch, and its primitive predicates and Creed articles, each with the meaning fixed by its own definition record, e.g. Signature.IsGod as GOD_4) and, where a stage-three proposition extends the vocabulary, the Agency σ bundle over that same σ. A proposition with the parameter σ (or A : Agency σ) says something about this intended interpretation; two such propositions, wherever they are declared, are about the same σ and the same A.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Case.Catholicism.Signature",
+  "note": "Stipulative scope record for the binder of the root's vocabulary signature, so that the parameter-level sense tags (senses[].lean_parameters, #1784, #1794) can identify σ and A across modules without the name-only fallback of truth discover. It fixes which interpretation the parameter σ denotes, not the meaning or truth of any field: each field keeps its own definition record (DEF-SKELETON-OPEN-PREDICATES, DEF-GOD-OF-CLASSICAL-THEISM and the others), and no field premise, bridge or closure follows from this record. The Lean type cannot distinguish the intended interpretation from a schema model; the tag records the reading of a binder, and the schema-model sense is kept apart in the linked disambiguation."
+}
