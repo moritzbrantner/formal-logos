@@ -1,0 +1,10 @@
+{
+  "id": "e7f53539-1284-4e79-ad5c-5933acaea34b",
+  "label": "Lifting is no novel necessary support plus necessary and actual supporters (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "9d818709-ab99-4f20-a1c6-8eab58f8caab",
+  "rule": "Forward by projection; backward, the delta gives the source's necessity, which no novel support needs to yield the actual edge",
+  "meaning": "Certified difference (#1598) of the registration lifting strengthens no novel necessary support, with no background: lifting holds iff no novel necessary support holds and every possible supporter of a necessary individual is necessary and actual. Premise-free; it asserts none of the statements compared.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

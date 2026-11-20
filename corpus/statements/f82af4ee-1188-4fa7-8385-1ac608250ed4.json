@@ -1,0 +1,14 @@
+{
+  "id": "f82af4ee-1188-4fa7-8385-1ac608250ed4",
+  "label": "Every possible supporter of a necessary individual is necessary and actual",
+  "paraphrase": "Difference statement: whenever a source exists at an admitted world w and directly supports the existence of an individual that is necessary from the actual world w0 (supportsEsse at w), the source is itself necessary from w0 and exists at w0. It says nothing about whether the support edge holds at w0. Open; not asserted.",
+  "lean_declaration": "TruthCore.Causality.NecessarilyUnderived.SupportersOfNecessaryNecessaryAndActual",
+  "definition_ids": [
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "659dbc9c-63d8-5e4e-a48f-79d0d18d1e67"
+  ],
+  "disambiguation_ids": [
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"
+  ]
+}

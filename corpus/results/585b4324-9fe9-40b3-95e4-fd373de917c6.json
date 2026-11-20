@@ -1,0 +1,11 @@
+{
+  "id": "585b4324-9fe9-40b3-95e4-fd373de917c6",
+  "label": "Non-actual-edge control separates lifting from no contingent ground",
+  "argument_id": "16c2703d-6486-46e9-b868-3aa2cde67475",
+  "challenge_module": "TruthCore.Results.Causality.LiftingStrength.Challenge",
+  "solution_module": "TruthCore.Results.Causality.LiftingStrength.Solution",
+  "theorem": "TruthCore.Results.Causality.LiftingStrength.nonActualEdgeSeparates",
+  "comparator_config": "results/585b4324-9fe9-40b3-95e4-fd373de917c6/comparator.json",
+  "status": "solution-present",
+  "description": "Strictness control: in the non-actual-edge model no contingent ground of the necessary holds and lifting fails, so no contingent ground does not entail lifting. A finite interpretation only."
+}

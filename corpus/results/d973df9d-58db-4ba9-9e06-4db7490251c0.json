@@ -1,0 +1,12 @@
+{
+  "id": "d973df9d-58db-4ba9-9e06-4db7490251c0",
+  "label": "Necessary-predecessor lifting entails no novel necessary support",
+  "argument_id": "205b94d3-f4e9-4feb-afc8-f7dbb40c2e30",
+  "challenge_module": "TruthCore.Results.Causality.LiftingStrength.Challenge",
+  "solution_module": "TruthCore.Results.Causality.LiftingStrength.Solution",
+  "theorem": "TruthCore.Results.Causality.LiftingStrength.noNovelOfLifting",
+  "comparator_config": "results/d973df9d-58db-4ba9-9e06-4db7490251c0/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration: if every possible supporter of a necessary individual lifts to a necessary, actually present supporter of it, then every possible support edge between necessary individuals already holds at the actual world. Same model, support relation and actual world. Establishes neither statement. Strictness: the contingent-source model.",
+  "transcription": "assembly"
+}
