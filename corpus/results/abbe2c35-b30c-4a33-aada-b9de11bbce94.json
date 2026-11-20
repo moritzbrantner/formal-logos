@@ -1,0 +1,11 @@
+{
+  "id": "abbe2c35-b30c-4a33-aada-b9de11bbce94",
+  "label": "Arbitrary forecasts and policies have explicit opposite-future countercontinuations",
+  "argument_id": "432b6e05-1082-4ded-a595-06b8bdf163b6",
+  "challenge_module": "TruthCore.Results.Epistemology.NoFoundationPractice.Challenge",
+  "solution_module": "TruthCore.Results.Epistemology.NoFoundationPractice.Solution",
+  "theorem": "TruthCore.Results.Epistemology.NoFoundationPractice.uniformBarrier",
+  "comparator_config": "results/abbe2c35-b30c-4a33-aada-b9de11bbce94/comparator.json",
+  "status": "solution-present",
+  "description": "Non-transcription theorem: all deterministic forecast functions and all action-selection functions meet a worst-case countercontinuation when the stance admits both specified next outcomes. The futures share their observational record. No probability weights or actual physical law-reversal thesis are inferred. #737's openFuture profile supplies explicit instances; the relevance to an actual no-ultimate-explanation worldview remains an OPEN interpretation bridge."
+}

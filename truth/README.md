@@ -1072,6 +1072,13 @@ stderr and exit codes are Python's byte for byte
 also compared the real corpus against several bases); `sense_index.py migrate`, a
 one-shot migration, stays Python.
 
+`truth senses parameters [--json]` lists the authored parameter-level sense
+tags (`senses[].lean_parameters`, #1784; rules in `docs/corpus-model.md`,
+"Sense-indexed terms") by sense. `truth::parameter_tags::ParameterTags` is the
+reader other commands reuse (sense → tagged parameters, parameter → senses,
+declaration → tags); `truth check` runs `parameter_tags::validate`. An
+untagged parameter is unknown.
+
 ## `semantics`
 
 ```text
@@ -1133,6 +1140,11 @@ and formal status comes from `corpus/definition-status.json`
   `truth/tests/semantics.rs` writes the candidate as a new argument file and
   checks that `truth check` gives the same verdict, including for a mixing
   introduced only by an argument-level definition.
+
+Each statement view also lists the authored parameter-level sense tags on its
+Lean declaration (`parameter_tags`; text "parameter senses: CausesIn _ _ esse =
+CAUSING_AN_EFFECT_3; …"), from `truth::parameter_tags` (#1784). A parameter
+not listed is unknown.
 
 A `single sense` verdict says the records link one sense per term, not that
 the prose or the Lean statement is free of equivocation. `--json` gives the

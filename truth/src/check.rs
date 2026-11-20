@@ -2713,6 +2713,12 @@ fn validate(
     let senses_index = sense_index(&disambiguations)?;
     let sense_allowlist = load_sense_allowlist(root)?;
     validate_sense_declarations(&disambiguations, &sense_allowlist)?;
+    crate::parameter_tags::validate(
+        root,
+        disambiguations
+            .iter()
+            .map(|record| (record.path.as_str(), &record.fields)),
+    )?;
 
     for claim in &claims {
         let (path, fields) = (claim.path.as_str(), &claim.fields);
@@ -3884,12 +3890,24 @@ fn validate_disambiguation_senses(path: &str, fields: &Obj, lean: &LeanText) -> 
     let senses = fields.get("senses").and_then(Value::as_array);
     let Some(senses) = senses.filter(|senses| {
         senses.iter().all(|sense| {
-            has_exact_keys(sense, &["id", "label", "definition_id"])
-                || has_exact_keys(sense, &["id", "label", "definition_id", "lean_declaration"])
+            sense.as_object().is_some_and(|object| {
+                ["id", "label", "definition_id"]
+                    .iter()
+                    .all(|key| object.contains_key(*key))
+                    && object.keys().all(|key| {
+                        matches!(
+                            key.as_str(),
+                            "id" | "label"
+                                | "definition_id"
+                                | "lean_declaration"
+                                | "lean_parameters"
+                        )
+                    })
+            })
         })
     }) else {
         return Err(format!(
-            "{path}: senses must be a list of {{id, label, definition_id[, lean_declaration]}} objects"
+            "{path}: senses must be a list of {{id, label, definition_id[, lean_declaration][, lean_parameters]}} objects"
         ));
     };
     for sense in senses {

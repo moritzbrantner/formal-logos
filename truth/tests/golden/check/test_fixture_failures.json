@@ -1300,7 +1300,7 @@
    ],
    "expect": {
     "code": 1,
-    "stderr": "corpus error: corpus/disambiguations/00-DISAMB-T.json: senses must be a list of {id, label, definition_id[, lean_declaration]} objects\n",
+    "stderr": "corpus error: corpus/disambiguations/00-DISAMB-T.json: senses must be a list of {id, label, definition_id[, lean_declaration][, lean_parameters]} objects\n",
     "stdout": ""
    },
    "externals": [],
@@ -1873,7 +1873,7 @@
    ],
    "expect": {
     "code": 1,
-    "stderr": "corpus error: corpus/disambiguations/00-DISAMB-T.json: senses must be a list of {id, label, definition_id[, lean_declaration]} objects\n",
+    "stderr": "corpus error: corpus/disambiguations/00-DISAMB-T.json: senses must be a list of {id, label, definition_id[, lean_declaration][, lean_parameters]} objects\n",
     "stdout": ""
    },
    "externals": [],

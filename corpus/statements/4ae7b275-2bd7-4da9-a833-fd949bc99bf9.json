@@ -1,0 +1,10 @@
+{
+  "id": "4ae7b275-2bd7-4da9-a833-fd949bc99bf9",
+  "label": "Open-future controls preserve safe practice and distinguish strict endorsement",
+  "paraphrase": "A nonempty future cell admits the unchanged and delayed-failure histories. An abstaining stance can consistently maintain the strict norm with no entitled claim. Another stance endorses a safe fallback under a separate weaker action-floor norm, while correctly failing the strict payoff-two norm. The safe policy guarantees payoff one on every admitted trace.",
+  "lean_declaration": "TruthCore.Epistemology.NoFoundationPractice.OpenControls",
+  "definition_ids": [
+    "3ecfe3fd-61e4-58a3-adb3-483bf24f7a15",
+    "89b927ef-37ac-5400-bb6a-26bc5e5ccca0"
+  ]
+}

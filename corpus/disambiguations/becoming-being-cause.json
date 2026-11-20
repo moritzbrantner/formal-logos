@@ -30,7 +30,153 @@
       "id": "39f64183-5038-4348-ad9f-5b64674f65f8",
       "label": "CAUSING_AN_EFFECT_3",
       "definition_id": "211a6432-8b8f-53ed-85e3-75173bb15b24",
-      "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.CausesAllInGenus"
+      "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.CausesAllInGenus",
+      "lean_parameters": [
+        {
+          "declaration": "TruthCore.Causality.SustainingCausation.CausingBeingIsSustaining",
+          "parameter": "CausesIn",
+          "arguments": [
+            "_",
+            "_",
+            "esse"
+          ]
+        },
+        {
+          "declaration": "TruthCore.Causality.SustainingCausation.CausingBeingIsOriginating",
+          "parameter": "CausesIn",
+          "arguments": [
+            "_",
+            "_",
+            "esse"
+          ]
+        },
+        {
+          "declaration": "TruthCore.Causality.SustainingCausation.Immense2PresentToAll",
+          "parameter": "CausesIn",
+          "arguments": [
+            "_",
+            "_",
+            "esse"
+          ]
+        },
+        {
+          "declaration": "TruthCore.Causality.SustainingCausation.PresentInfiniteCauseOfAllIsImmense",
+          "parameter": "CausesIn",
+          "arguments": [
+            "_",
+            "_",
+            "esse"
+          ]
+        },
+        {
+          "declaration": "TruthCore.Causality.ConcurrentActualization.CausesOfBeingConcur",
+          "parameter": "CausesIn",
+          "arguments": [
+            "_",
+            "_",
+            "esse"
+          ]
+        },
+        {
+          "declaration": "TruthCore.Causality.ConcurrentActualization.CausingAnothersBeingIsSustaining",
+          "parameter": "CausesIn",
+          "arguments": [
+            "_",
+            "_",
+            "esse"
+          ]
+        },
+        {
+          "declaration": "TruthCore.Causality.Round2Grounding.EsseCausesExistAt",
+          "parameter": "CausesIn",
+          "arguments": [
+            "_",
+            "_",
+            "esse"
+          ]
+        },
+        {
+          "declaration": "TruthCore.Causality.Round2Grounding.EsseCausesAreConcrete",
+          "parameter": "CausesIn",
+          "arguments": [
+            "_",
+            "_",
+            "esse"
+          ]
+        },
+        {
+          "declaration": "TruthCore.Causality.Round2Grounding.EsseEffectDependsOnItsCause",
+          "parameter": "CausesIn",
+          "arguments": [
+            "_",
+            "_",
+            "esse"
+          ]
+        },
+        {
+          "declaration": "TruthCore.Causality.Round2Grounding.NecessityCauseCausesEsse",
+          "parameter": "CausesIn",
+          "arguments": [
+            "_",
+            "_",
+            "esse"
+          ]
+        },
+        {
+          "declaration": "TruthCore.Causality.Round2Grounding.ParticipatedEsseHasDistinctCause",
+          "parameter": "CausesIn",
+          "arguments": [
+            "_",
+            "_",
+            "esse"
+          ]
+        },
+        {
+          "declaration": "TruthCore.Causality.CausalMapsBatch1.CauseOfBeingHasWhatItGives",
+          "parameter": "CausesIn",
+          "arguments": [
+            "_",
+            "_",
+            "esse"
+          ]
+        },
+        {
+          "declaration": "TruthCore.Causality.EsseCausePriority.ActualEsseCausePriority",
+          "parameter": "CausesIn",
+          "arguments": [
+            "_",
+            "_",
+            "esse"
+          ]
+        },
+        {
+          "declaration": "TruthCore.Causality.EsseCausePriority.DistinctEsseCausePriority",
+          "parameter": "CausesIn",
+          "arguments": [
+            "_",
+            "_",
+            "esse"
+          ]
+        },
+        {
+          "declaration": "TruthCore.Causality.NecessaryConcreteRouteBridge.EsseCauseIsActualConcreteGround",
+          "parameter": "CausesIn",
+          "arguments": [
+            "_",
+            "_",
+            "esse"
+          ]
+        },
+        {
+          "declaration": "TruthCore.Causality.Frame.CausalityFrame",
+          "parameter": "CausesIn",
+          "arguments": [
+            "_",
+            "_",
+            "esse"
+          ]
+        }
+      ]
     },
     {
       "id": "ba797c7f-285e-4378-b97a-23baf30bcc64",

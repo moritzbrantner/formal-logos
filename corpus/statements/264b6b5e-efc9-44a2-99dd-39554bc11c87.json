@@ -1,0 +1,10 @@
+{
+  "id": "264b6b5e-efc9-44a2-99dd-39554bc11c87",
+  "label": "The term of the origin relation at a moment is present then",
+  "paraphrase": "OPEN analyst premise, attribution deferred (coexistence of the term): in every history of the model, if x bears at moment t a real relation to g as to the principle of its being (OriginRelation.RelatedAt v x g t, definition 7b28be97), then g is present at t. Meaning: a real relation needs an existing term; a relation to what is not is a relation of reason. Warrant independent of 40a97664: ST I q.13 a.7 co. (passage 12d8ecc5, read; no claim is recorded) places relations between a being and a non-being among relations of reason only. Presence at a moment of the model is the analyst's temporal reading of 'existing'; a non-temporal term is represented as present at every moment. It does not say that the term acts. With foundation and accompaniment it does not entail 40a97664 (result coexistentTermDoesNotCarryTheCrux, Control part 1: a creator present throughout who gives being at onset only). It excludes the persisting relation to a term that has ceased (Control part 3).",
+  "lean_declaration": "TruthCore.Causality.RelationalReceipt.TermCoexists",
+  "definition_ids": [
+    "7b28be97-9a3c-444f-af46-fe410092c3ee",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ]
+}

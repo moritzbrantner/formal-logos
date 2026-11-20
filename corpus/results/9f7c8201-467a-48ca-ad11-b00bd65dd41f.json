@@ -1,0 +1,12 @@
+{
+  "id": "9f7c8201-467a-48ca-ad11-b00bd65dd41f",
+  "label": "An actual root exists from the selected whole-roster descent",
+  "argument_id": "6560ccfa-8fab-47e8-964f-32be54ba802a",
+  "challenge_module": "TruthCore.Results.Causality.PerfectRootIntellectFromGovernor.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PerfectRootIntellectFromGovernor.Solution",
+  "theorem": "TruthCore.Results.Causality.PerfectRootIntellectFromGovernor.actualRootExistsOfWholeRoster",
+  "comparator_config": "results/9f7c8201-467a-48ca-ad11-b00bd65dd41f/comparator.json",
+  "status": "solution-present",
+  "description": "Existing actual-root existence from inhabited actual concreta, the selected whole-roster nontrapping condition and explicit excluded middle. The proof delegates unchanged to the established roster descent, not a new argument for its premises. No grades, governor, intellect, necessary-being status or God name is asserted; the new statement is a weaker reusable existential consumer.",
+  "transcription": "assembly"
+}

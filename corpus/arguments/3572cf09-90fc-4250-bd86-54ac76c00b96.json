@@ -1,0 +1,20 @@
+{
+  "id": "3572cf09-90fc-4250-bd86-54ac76c00b96",
+  "label": "Coexisting term does not entail concurrent actualization, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "9f6e7091-d23a-4bcd-b843-3e0b2487cd71",
+  "inference_ids": [
+    "693d91bb-212b-4bcb-8867-e0e110381568"
+  ],
+  "meaning": "Closed result with no premises: the universally quantified entailment from foundation, irreflexivity, non-mutuality, accompaniment, coexistence of the term and received onset being given to 40a97664 fails, at the interpretation of Control part 1 (a creator present at every moment who gives being at onset only, with the creature related to it afterwards). A countermodel shows non-entailment for the stated formal interpretation, not that any premise is false. It shows that the structural features typed from ST I q.13 a.7 (an existing term, irreflexivity, non-mutuality) do not reach giving at the moment. Giving by the term, with accompaniment, would suffice; that it is the minimal sufficient addition is not shown.",
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "7b28be97-9a3c-444f-af46-fe410092c3ee",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

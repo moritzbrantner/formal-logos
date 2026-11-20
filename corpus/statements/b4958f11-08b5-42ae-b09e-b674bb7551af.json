@@ -1,0 +1,9 @@
+{
+  "id": "b4958f11-08b5-42ae-b09e-b674bb7551af",
+  "label": "Every deterministic forecast and high-payoff policy fails on a two-successor evidence cell",
+  "paraphrase": "For every stance admitting both the constant-true future and the Hume delayed-failure future at every finite horizon, every deterministic forecast based on the shared observed record has a concrete countercontinuation and every three-action policy has a concrete continuation yielding payoff below two. No epistemic entitlement, physical likelihood or impossibility of a safe fallback follows.",
+  "lean_declaration": "TruthCore.Epistemology.NoFoundationPractice.UniformBarrier",
+  "definition_ids": [
+    "4f301d77-0699-5fbb-b931-41b20b839266"
+  ]
+}

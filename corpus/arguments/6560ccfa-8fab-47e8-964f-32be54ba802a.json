@@ -1,0 +1,34 @@
+{
+  "id": "6560ccfa-8fab-47e8-964f-32be54ba802a",
+  "label": "An actual root exists from the selected whole-roster descent",
+  "premise_statement_ids": [
+    "56f68b40-9737-59a0-8cac-5610980a1547",
+    "5c898d24-d1f7-5087-b09e-3287a723e787",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "conclusion_statement_id": "dc397705-d727-419e-92f9-65d44e1ff15d",
+  "inference_ids": [
+    "f1b235a2-244f-43ef-9f8b-62256e3a145e"
+  ],
+  "meaning": "Existing actual-root existence from inhabited actual concreta, the selected whole-roster nontrapping condition and explicit excluded middle. The proof delegates unchanged to the established roster descent, not a new argument for its premises. No grades, governor, intellect, necessary-being status or God name is asserted; the new statement is a weaker reusable existential consumer.",
+  "definition_ids": [
+    "f825624c-78af-5df8-ba76-c9ef691eb9af",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "1dff2d68-1348-5e7e-8ee7-248af63c8c53",
+    "c2c8b139-fb8a-5ce2-8add-ec55a60d8b0b",
+    "a8172538-204c-45f5-9ee0-9e9d7b437660"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "9403807f-f7d4-5ce8-a8ba-ca53ed932959",
+    "34ddfede-ff4d-59ad-9882-4bcb490df9bb",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ]
+}

@@ -8,5 +8,6 @@
   "theorem": "TruthCore.Results.Logic.FitchKnowability.restrictedInstance",
   "comparator_config": "results/FITCH-RESTRICTED-INSTANCE/comparator.json",
   "status": "solution-present",
-  "description": "Instantiate actual restricted knowability at the Moore content using its separately declared admissibility. This is schema specialization, not an independent defense of either assumption."
+  "description": "Transcription by instantiation (AGENTS.md invariant 16): instantiates actual restricted knowability at the Moore content using its separately declared admissibility. Schema specialization, not an independent defense of either assumption; it closes its conclusion only when both premises are closed.",
+  "transcription": "instantiation"
 }

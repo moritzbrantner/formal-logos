@@ -1,0 +1,15 @@
+{
+  "id": "dc397705-d727-419e-92f9-65d44e1ff15d",
+  "label": "An actual concrete root exists at the selected world",
+  "paraphrase": "Analyst structural input, attribution deferred: Some being n is an actual concretum at the selected world w and has no incoming selected actual-concrete ground. No common coverage, global well-foundedness, modal necessity, intellectual capacity or God naming follows from root existence alone. Equivalent to the actual-concrete supply application in ConcreteExistentialSupply only under its explicitly recorded graph interpretation; the occurrence of a cognitive episode is not this root-existence premise.",
+  "lean_declaration": "TruthCore.Causality.RootPositiveIntellectWill.ActualRootExistsAt",
+  "definition_ids": [
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6"
+  ]
+}

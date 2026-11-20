@@ -7,5 +7,6 @@
   "theorem": "TruthCore.Results.Causality.ActualEuclidean.euclideanAtOfEuclidean",
   "comparator_config": "results/7e5f0f8a-aa2d-496b-87b6-8411f7970732/comparator.json",
   "status": "solution-present",
-  "description": "Strength registration (not a route step): global Euclidean access, instantiated at the selected world w, gives Euclidean access at w on the same frame. The converse fails in Control.clustered."
+  "description": "Transcription by instantiation (AGENTS.md invariant 16), registered as a strength order (not a route step): global Euclidean access, instantiated at the selected world w, is Euclidean access at w on the same frame. The proof only instantiates the premise, so it closes its conclusion only when that premise is closed. The converse fails in Control.clustered.",
+  "transcription": "instantiation"
 }

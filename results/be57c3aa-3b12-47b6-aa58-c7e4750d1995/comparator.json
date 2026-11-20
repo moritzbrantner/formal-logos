@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Explanation.NoFoundationLawChaos.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.NoFoundationLawChaos.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Explanation.NoFoundationLawChaos.oneRival"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}
