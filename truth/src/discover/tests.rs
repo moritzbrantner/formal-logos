@@ -537,13 +537,25 @@ fn an_incompatibility_of_recorded_rivals_is_known() {
 }
 
 #[test]
-fn search_auxiliaries_are_not_axioms() {
+fn no_axiom_is_exempt_by_name() {
+    // An axiom named like a search auxiliary is still outside the allowance
+    // (Codex P2 on #1796): only propext, Classical.choice and Quot.sound pass.
     let axioms = vec![
         "propext".to_owned(),
+        "Classical.choice".to_owned(),
+        "Quot.sound".to_owned(),
+        "_discoverAssumption".to_owned(),
         "_discover._@._stdin._hyg.3".to_owned(),
         "sorryAx".to_owned(),
     ];
-    assert_eq!(forbidden_axioms(&axioms), ["sorryAx"]);
+    assert_eq!(
+        forbidden_axioms(&axioms),
+        [
+            "_discoverAssumption",
+            "_discover._@._stdin._hyg.3",
+            "sorryAx"
+        ]
+    );
 }
 
 fn tags_of(disambiguations: &[Value], arguments: &[Value]) -> SenseTags {

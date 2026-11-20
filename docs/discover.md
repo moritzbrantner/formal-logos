@@ -103,7 +103,9 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
 The joint witness interprets every carrier as `Unit`, every predicate (and
 predicate-valued structure field) as a constant `True` or `False`, structure
 binders by their constructor and other values by `default`, and closes the
-instantiated premises and conclusion by `simp`/`decide`, kernel-checked. It
+instantiated premises and conclusion by `simp`/`decide`, kernel-checked; a
+model whose proof uses an axiom other than the three allowed (say, through an
+imported `sorry`-dependent simp lemma) is not reported. It
 tries all-`False`, all-`True` and each single flip. Such a model may be
 trivial (every antecedent empty); it shows only that the formal premises are
 jointly satisfiable. `truth countermodel` does not yet read structure-bundled
@@ -132,7 +134,11 @@ whose type has exactly one element parameter occurring together with that
 relation (in one hypothesis, or in the conclusion)
 (`∀ c x, CausesIn c x esse → CausesIn_2 c x esse_2`). A bridge is reported when
 the premises with it prove the target, do not prove `False`, and the bridge
-alone does not prove the target (it would merely restate it). The report
+alone does not prove the target (it would merely restate it). The proof is
+rechecked over the binders the used premises, the bridge and the target
+mention only, so it never borrows an element that an unused candidate
+introduced (which would hide a nonemptiness assumption); an element that only
+the bridge mentions (a fixed argument) is listed as `assumed_binders`. The report
 ranks bridges by the number of targets they unlock, then goals, and lists the
 premises the unlocked proofs used. Pairs where each relation is used on one
 side only come first; at most 48 bridge candidates are tried per goal. A bridge is a **candidate proposition**: a

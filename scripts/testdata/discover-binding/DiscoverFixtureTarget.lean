@@ -22,3 +22,29 @@ namespace TruthCore.DiscoverFixtureTarget
 def HoldsAt (B : Type) (R : B → Prop) (x : B) : Prop := R x
 
 end TruthCore.DiscoverFixtureTarget
+
+namespace TruthCore.DiscoverFixtureTarget
+
+/-- Some element has `Q`: needs a nonempty `B`, which `AllP` does not give
+(Codex P1 on #1796, bridge search). -/
+def SomeQ (B : Type) (Q : B → Prop) : Prop := ∃ y, Q y
+
+/-- `SomeQ` with the target's own element `x : B` (the control). -/
+def SomeQAt (B : Type) (Q : B → Prop) (x : B) : Prop := ∃ y, Q y
+
+end TruthCore.DiscoverFixtureTarget
+
+namespace TruthCore.DiscoverFixtureTarget
+
+/-- An opaque proposition whose only proof is an axiom outside the allowance
+(standing in for an imported `sorry`-dependent simp lemma; Codex P2 on #1796,
+witness axioms). -/
+opaque Hard : Prop
+
+@[simp] axiom hard_holds : Hard
+
+def NeedsHard (B : Type) (R : B → Prop) : Prop := Hard ∧ ∀ y, R y → R y
+
+def GivesHard (B : Type) (R : B → Prop) : Prop := Hard
+
+end TruthCore.DiscoverFixtureTarget

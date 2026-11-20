@@ -138,6 +138,40 @@ class DiscoverBindingTest(unittest.TestCase):
         self.assertIsNotNone(outcome["closed"])
         self.assertIsNone(outcome["vacuous"])
 
+    def test_bridges_never_borrow_an_unused_candidates_element(self):
+        allp = "TruthCore.DiscoverFixturePremise.AllP"
+        marker = "TruthCore.DiscoverFixturePremise.Marker"
+        some_q = "TruthCore.DiscoverFixtureTarget.SomeQ"
+        some_q_at = "TruthCore.DiscoverFixtureTarget.SomeQAt"
+        rows = [[d, "B", "carrier"] for d in (allp, marker, some_q, some_q_at)]
+        config = lean_string(json.dumps({"tags": rows, "bridges": True}))
+        outcomes = run([
+            f'#discover "borrowed" 20000 "" {config} {some_q} from {allp} {marker}',
+            f'#discover "own" 20000 "" {config} {some_q_at} from {allp}',
+        ])
+        # `∀ y, P y → Q y` with `∀ y, P y` proves `∃ y, Q y` only given an
+        # element; the one `Marker` introduces is not the report's (Marker is
+        # unused), so over an empty `B` the reported bridge would fail.
+        self.assertIsNone(outcomes["borrowed"]["closed"])
+        self.assertEqual(outcomes["borrowed"]["bridges"], [])
+        # Control: with the target's own `x : B` the same bridge is reported.
+        own = outcomes["own"]["bridges"]
+        self.assertTrue(own, outcomes["own"])
+        self.assertEqual((own[0]["from"], own[0]["to"]), (f"{allp}.P", f"{some_q_at}.Q"))
+        self.assertEqual(own[0]["used"], [0])
+        self.assertEqual(own[0]["assumed_binders"], [])
+
+    def test_models_rest_only_on_allowed_axioms(self):
+        target = "TruthCore.DiscoverFixtureTarget.NeedsHard"
+        premise = "TruthCore.DiscoverFixtureTarget.GivesHard"
+        outcome = run([f'#discover "axiom" 20000 "" "{{}}" {target} from {premise}'])["axiom"]
+        # The derivation closes without the axiom (the premise gives `Hard`), but
+        # every one-point model needs `Hard`, which only `simp` with the
+        # disallowed axiom `hard_holds` closes: no model is reported.
+        self.assertIsNotNone(outcome["closed"])
+        self.assertLessEqual(set(outcome["proof"]["axioms"]), {"propext", "Classical.choice", "Quot.sound"})
+        self.assertIsNone(outcome["witness"])
+
 
 if __name__ == "__main__":
     unittest.main()

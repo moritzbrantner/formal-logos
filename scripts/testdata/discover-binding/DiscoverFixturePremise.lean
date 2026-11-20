@@ -20,3 +20,13 @@ namespace TruthCore.DiscoverFixturePremise
 def EverywhereBoth (B : Type) (R : B → Prop) : Prop := ∀ y, R y ∧ ¬ R y
 
 end TruthCore.DiscoverFixturePremise
+
+namespace TruthCore.DiscoverFixturePremise
+
+/-- Every element has `P`: holds vacuously over an empty `B`. -/
+def AllP (B : Type) (P : B → Prop) : Prop := ∀ y, P y
+
+/-- A content-free candidate that only introduces an element `x : B`. -/
+def Marker (B : Type) (x : B) : Prop := True
+
+end TruthCore.DiscoverFixturePremise

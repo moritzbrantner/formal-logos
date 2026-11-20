@@ -998,14 +998,13 @@ fn axioms(value: &Value) -> Vec<String> {
         .collect()
 }
 
-/// The axioms outside the allowance.
+/// The axioms outside the allowance. No name is exempt: the search's auxiliary
+/// declarations are theorems (`addDecl` of a `thmDecl`), so they never appear
+/// among collected axioms, and an axiom named like one is still an axiom.
 pub fn forbidden_axioms(axioms: &[String]) -> Vec<String> {
     axioms
         .iter()
         .filter(|a| !ALLOWED_AXIOMS.contains(&a.as_str()))
-        // The search's own auxiliary theorems, never axioms of the certified text
-        // (certification re-checks with `#print axioms`).
-        .filter(|a| !a.starts_with("_discover"))
         .cloned()
         .collect()
 }
@@ -1912,6 +1911,9 @@ pub struct Bridge {
     pub goals: Vec<String>,
     /// Premises the unlocked proofs used besides the bridge.
     pub premises: BTreeSet<String>,
+    /// Binders only the bridge mentions (a fixed argument from a statement the
+    /// proof does not use): the bridge then also assumes such an element.
+    pub assumed_binders: BTreeSet<String>,
     /// Some unlocked goal identified a carrier or structure across modules by
     /// name: the bridge then also needs a tag or bridge for that domain.
     pub domain_identified_by_name: bool,
@@ -1941,11 +1943,20 @@ pub fn rank_bridges(findings: &[Finding]) -> Vec<Bridge> {
                     targets: BTreeSet::new(),
                     goals: Vec::new(),
                     premises: BTreeSet::new(),
+                    assumed_binders: BTreeSet::new(),
                     domain_identified_by_name: false,
                 });
             entry.targets.insert(finding.trial.target.clone());
             entry.goals.push(finding.trial.label.clone());
             entry.domain_identified_by_name |= domain_flag(b).is_some();
+            entry.assumed_binders.extend(
+                b["assumed_binders"]
+                    .as_array()
+                    .into_iter()
+                    .flatten()
+                    .filter_map(Value::as_str)
+                    .map(str::to_owned),
+            );
             for i in indices(&b["used"]) {
                 if let Some(p) = finding.trial.premises.get(i) {
                     entry.premises.insert(p.clone());
@@ -1970,6 +1981,7 @@ pub fn bridge_json(bridge: &Bridge) -> Value {
         "proposition": bridge.text,
         "unlocks_targets": bridge.targets, "goals": bridge.goals,
         "with_premises": bridge.premises,
+        "assumed_binders": bridge.assumed_binders,
         "domain_identified_by_name": bridge.domain_identified_by_name,
         "status": "candidate proposition: a research question, not a premise of any record",
     })

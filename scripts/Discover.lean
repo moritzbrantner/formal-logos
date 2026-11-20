@@ -415,6 +415,10 @@ def instantiateBinders (xs : Array Expr) (pattern : Nat → Bool) : MetaM (Array
       vals := vals.push v
   return (vals, slots)
 
+/-- The axioms a reported proof or model may rest on (`ALLOWED_AXIOMS` in
+`truth/src/discover.rs`, docs/axiom-policy.md). -/
+def allowedAxioms : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+
 /-- A one-point model of `goals` (conjoined) over the binders `xs`: the slot
 pattern that closes it, if any. -/
 def witness (xs : Array Expr) (goals : Array Expr) (u : NameSet) (heartbeats : Nat) :
@@ -440,7 +444,10 @@ def witness (xs : Array Expr) (goals : Array Expr) (u : NameSet) (heartbeats : N
             let aux ← mkFreshUserName `_discoverWitness
             withOptions (fun o => o.set `Elab.async false) <|
               addDecl (.thmDecl { name := aux, levelParams := [], type := body, value := proof })
-            return true)
+            -- `simp` may close the goal by an imported lemma resting on `sorryAx`
+            -- or another axiom: the model counts only within the allowance.
+            let axioms ← collectAxioms aux
+            return axioms.all allowedAxioms.contains)
       (fun _ => pure false)
     saved.restore (restoreInfo := true)
     if ok then return some label
@@ -613,8 +620,22 @@ def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
       let some (bridge, fixed) ← bridgeFor p q pe qe fix | continue
       tried := tried + 1
       let withBridge := hyps.push (1000, bridge)
-      let some proof ← prove xs withBridge concl u budget "" (duperOnly := true) | continue
+      let some found ← prove xs withBridge concl u budget "" (duperOnly := true) | continue
+      unless found.used.contains 1000 do continue
+      -- Recheck over the reported statements' own binders: the search context
+      -- also holds binders that unused candidates introduced (an element
+      -- `x : B` of `Marker B x`), and a proof that borrows one would rest on a
+      -- nonemptiness the report does not show. A binder that only the bridge
+      -- mentions (a fixed argument) is kept and reported as `assumed_binders`.
+      let usedHyps := withBridge.filter fun (i, _) => found.used.contains i
+      let (ownXs, lctx, insts) ← ownContext xs ((usedHyps.map (·.2)).push concl)
+      let (baseXs, _, _) ← ownContext xs (((usedHyps.filter (·.1 != 1000)).map (·.2)).push concl)
+      let some proof ← withLCtx lctx insts <|
+          prove ownXs usedHyps concl u budget "" (duperOnly := true) | continue
       unless proof.used.contains 1000 do continue
+      unless proof.axioms.all allowedAxioms.contains do continue
+      let assumed ← (ownXs.filter (!baseXs.contains ·)).mapM fun x => do
+        return (← x.fvarId!.getUserName).eraseMacroScopes.toString
       -- A bridge that proves the target on its own merely restates it.
       if (← prove xs #[(1000, bridge)] concl u (max 2000 (heartbeats / 10)) ""
           (duperOnly := true)).isSome then continue
@@ -624,7 +645,7 @@ def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
           |>.set `format.width (100000 : Nat)) do
         return toString (← ppExpr bridge)
       out := out.push (Json.mkObj [("from", Json.str pn), ("to", Json.str qn),
-        ("fixed", toJson fixed), ("text", Json.str text),
+        ("fixed", toJson fixed), ("text", Json.str text), ("assumed_binders", toJson assumed),
         ("used", toJson (proof.used.filter (· != 1000))),
         ("domain_identified_by_name", toJson (domains (proof.used.filter (· != 1000))))])
       break
