@@ -1,0 +1,15 @@
+{
+  "id": "9a14bdd8-65f8-4fe5-97b7-9fbbcde73e5b",
+  "label": "Whatever has received esse has an explanation of its presence at each moment of it",
+  "paraphrase": "OPEN analyst premise, attribution deferred (momentary principle of sufficient reason): in every history of the model, whatever has its esse received in some principle (DEF-ESSE-RECEIVED-IN) has, at every moment t at which it is present, some reason r that explains its being present at t (PresenceExplanation.Explains v r x t, the primitive of definition 261516e9; causal or not). Analyst formulation of the 'PSR or PSR-like explanatory principle' that Schmid 2021 (read; paragraph beginning 'And this discovery especially helps') says he accepts from Feser's argument, namely that something must explain the fact that an object continues to exist; restricted here to received-esse things to match the scope of 40a97664, and extended from continuing existence to every moment of presence, first moments and the moments of a beginningless thing included. No claim attributes this typed premise, or that extension, to him. Shared: Schmid's origin-or-inertia explanation (definition 8c20c988) satisfies it with no giver after onset (Control parts 1 and 4), and the sustaining interpretation satisfies it (part 5). It is not the world-indexed existence PSR of the contingency routes (TruthCore.Explanation.ExistencePSR), which has no moments.",
+  "lean_declaration": "TruthCore.Causality.TimeSymmetricGiving.MomentaryPSR",
+  "definition_ids": [
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "261516e9-9e57-4750-a6ba-f0ea64ff09bf",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

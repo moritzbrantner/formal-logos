@@ -1,0 +1,11 @@
+{
+  "id": "76dc5abc-9dea-4a25-a65b-bf693538c38e",
+  "label": "Concurrent actualization entails it for homogeneous things",
+  "argument_id": "0d78d100-9278-40a1-ac75-c355a9809e44",
+  "challenge_module": "TruthCore.Results.Causality.TimeSymmetricGiving.Challenge",
+  "solution_module": "TruthCore.Results.Causality.TimeSymmetricGiving.Solution",
+  "theorem": "TruthCore.Results.Causality.TimeSymmetricGiving.homogeneousOfConcurrent",
+  "comparator_config": "results/76dc5abc-9dea-4a25-a65b-bf693538c38e/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration: weak concurrent actualization 40a97664 entails its restriction to homogeneous things, for any supplied facts. A single application of the premise (invariant 16), registered for the strength order, not as progress; it establishes neither. The proof uses only Quot.sound, through Mathlib's OrderIso in the statement; the Comparator config permits the standard Mathlib axiom set."
+}

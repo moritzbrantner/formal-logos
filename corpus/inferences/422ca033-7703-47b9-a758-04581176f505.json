@@ -1,0 +1,13 @@
+{
+  "id": "422ca033-7703-47b9-a758-04581176f505",
+  "label": "Concurrent actualization from the momentary PSR and the productive bridge (inference)",
+  "input_statement_ids": [
+    "9a14bdd8-65f8-4fe5-97b7-9fbbcde73e5b",
+    "d86c9de9-25be-488b-b3b7-69f5f4eb80b8"
+  ],
+  "output_statement_id": "40a97664-e481-42d7-8458-78374a61aa26",
+  "rule": "The momentary PSR supplies an explanation at each moment of presence; the productive bridge supplies a giver at that moment",
+  "meaning": "Transcription (single application, invariant 16): the last step applies the productive bridge, whose consequent is the conclusion's matrix. Let x have its esse received and be present at t; by the momentary PSR some reason explains its presence at t; by the bridge something gives it being at t. That is weak concurrent actualization 40a97664. It types the shape of Feser's argument as Schmid 2021 reports it (a PSR-like principle plus the thesis that without a sustaining cause there is no extrinsic explanation, with no intrinsic one either; the typed PSR also extends the continuation form to every moment of presence); no claim attributes it. Its point is to locate the crux: each premise is needed (Control part 1, Schmid's explanation, where the PSR holds and the bridge fails; part 6, no explanations, where the bridge holds and the PSR fails), and under the PSR the bridge is equivalent to 40a97664 (psrBridgeCarriesTheCrux). So the derivation supplies no warrant for 40a97664 beyond the bridge's, which is 40a97664's. All premises stay OPEN. No premise is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
