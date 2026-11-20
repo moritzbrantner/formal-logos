@@ -1,0 +1,27 @@
+{
+  "id": "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",
+  "label": "IN_ACT_4, mode of possession left open: the grades frame field GradesFrame.InAct",
+  "term": "in act, mode of possession left open",
+  "definition": "`GradesFrame.InAct x r`: x actually has the perfection r, as fire is actually hot, with the mode of possession (formal, virtual or eminent) left open. It is the primitive of DEF-ACT taken as one shared relation: DISAMB-IN-ACT records that every act premise of the case uses the one parameter `InAct`, so that within a result every premise is read in the same sense and the formal or virtual determination is a question of premise truth, not of validity. IN_ACT_1 (formal), IN_ACT_2 (virtual) and IN_ACT_3 (formal or virtual) are candidate determinations of it; no statement relates them to it.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.Grades.GradesFrame.InAct",
+  "note": "Stipulative frame-field record, attribution deferred; its content is DEF-ACT (sourced through the motion and q.4 a.1 claims). It is a separate record so that tagging binders with IN_ACT_4 does not retroactively assign a sense to the arguments whose statements link DEF-ACT: several of them already pass between IN_ACT_1, IN_ACT_2 and IN_ACT_3 through explicit sense controls, and DEF-ACT as a sense would turn those passages into unbridged mixing. Merging this record into DEF-ACT is a follow-up that needs those arguments reviewed for sense_bridges. Introduced with the grades frame module (TruthCore/Causality/GradesFrame.lean) after the truth discover diagnosis of 2026-11-20.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "GradesFrame.InAct x r says that the being x actually has the perfection r. A model supplies the relation; Lean fixes only its type. It does not say whether x has r in its own kind (formally) or as a cause able to produce it (virtually, eminently).",
+    "examples": [
+      "A fire is in act as to heat (r being hot).",
+      "Read at esse, InAct x esse says that x has being (DEF-ESSE)."
+    ],
+    "exclusions": [
+      "Being in potency to r (InPotency): a thing in potency to heat is not thereby in act as to heat; their non-simultaneity in one respect is an explicit premise, not part of this field.",
+      "Moving or causing (MovesIn, CausesIn): having a perfection is not producing it in another.",
+      "A definite mode of possession: formal act (IN_ACT_1), virtual act (IN_ACT_2) and their disjunction (IN_ACT_3) are separate senses."
+    ],
+    "open_obligations": [
+      "No law relating InAct to InPotency, MoreIn or CausesIn follows from the field; each is an explicit premise where used.",
+      "A defence of the act premises must fix one determination and defend all of them in it (DISAMB-IN-ACT).",
+      "No formalization candidate from more basic vocabulary: InAct is a basic relation of the family."
+    ]
+  }
+}

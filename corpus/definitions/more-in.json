@@ -1,6 +1,6 @@
 {
   "id": "5766de66-8a37-5b04-aa65-9eec53319f50",
-  "label": "More and less, the grades of a…: MoreIn r x y: x is more r than y",
+  "label": "MORE_1, the primitive comparative of grades: MoreIn r x y: x is more r than y",
   "legacy_id": "DEF-MORE-IN",
   "term": "more and less (magis et minus), the grades of a perfection",
   "definition": "`MoreIn r x y`: x is more r than y (more good, more true, more noble, more hot). Only the comparative is primitive: nothing makes it a total order, a measure, or comparable across all things.",
