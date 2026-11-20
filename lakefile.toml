@@ -13,3 +13,10 @@ name = "mathlib"
 scope = "leanprover-community"
 git = "https://github.com/leanprover-community/mathlib4"
 rev = "v4.35.0"
+
+# Proof search for `truth discover` (owner decision 2026-11-19, invariant 14;
+# docs/decisions/2026-11-19-*-duper-lean-auto.md). Duper brings lean-auto.
+[[require]]
+name = "Duper"
+git = "https://github.com/leanprover-community/duper"
+rev = "v4.35.0"

@@ -484,6 +484,7 @@ See `docs/decisions/2026-11-07-02-connect-libraries-to-the-case.md`.
 - Use Curry–Howard as the default mental model for formal work: propositions correspond to types and proofs to terms/programs; implication is a function type, conjunction a product, disjunction a sum, and quantified propositions may require dependent function or pair types.
 - When claiming `P1, ..., Pn ⊢ C`, make the premises, definitions, and inference rules explicit and reduce the claim to a mechanically checkable artifact, using Lean by default in this repository.
 - Keep source interpretation, proposition extraction, formalization, proof search, and proof verification distinct. Lean's kernel verifies accepted proof terms; tactics, solvers, and LLMs are search helpers, not authorities.
+- `truth discover` (Duper, with Zipperposition only for premise selection) is such a search helper: the kernel, re-checking each reconstructed proof and its axioms, is the authority, and a discovery is a conditional support option for review, never a record by itself ([discover](docs/discover.md)).
 - Machine-checkable does not mean automatically discoverable. Failure to find a proof is not a refutation, and formal verification establishes consequence only inside the encoded system—not premise truth, source fidelity, empirical truth, or completeness of the chosen logic.
 
 ## Conditional framework exploration (owner direction, 2026-10-31)

@@ -244,6 +244,7 @@ pub struct Args {
     pub profile_module: Option<String>,
     pub countermodel: CountermodelArgs,
     pub sweep: SweepArgs,
+    pub discover: DiscoverArgs,
     /// `--module MODULE`, repeatable (`countermodel` takes one, `prove-sweep`
     /// any number).
     pub modules: Vec<String>,
@@ -260,6 +261,26 @@ pub struct CountermodelArgs {
     pub size: Option<usize>,
     /// `--no-check`: do not have Lean check the candidates.
     pub no_check: bool,
+}
+
+/// The `discover` options (it also reads `--target`, `--module`, `--heartbeats`,
+/// `--batch` and `--limit`).
+#[derive(Default)]
+pub struct DiscoverArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    /// `--targets open-root|next-tests`, repeatable.
+    pub selectors: Vec<String>,
+    /// `--premise-pool closed|proved|all`.
+    pub pool: Option<String>,
+    /// `--candidates N`: candidate premises per target.
+    pub candidates: Option<usize>,
+    /// `--zipperposition PATH`.
+    pub zipperposition: Option<String>,
+    /// `--jobs N`: parallel Lean processes.
+    pub jobs: Option<usize>,
+    /// `--write-spec PATH`.
+    pub write_spec: Option<String>,
 }
 
 /// The `prove-sweep` options.
@@ -343,6 +364,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         profile_module: None,
         countermodel: CountermodelArgs::default(),
         sweep: SweepArgs::default(),
+        discover: DiscoverArgs::default(),
         modules: Vec::new(),
     };
     let mut args = args.iter();
@@ -671,6 +693,43 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                     "--from" => issues.from = Some(value),
                     "--for" => issues.for_id = Some(value),
                     _ => issues.issues_from = Some(value),
+                }
+            }
+            "--targets"
+                if args
+                    .clone()
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .is_some_and(|value| value.parse::<usize>().is_err()) =>
+            {
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .unwrap_or_default();
+                parsed.discover.flags = true;
+                parsed.discover.selectors.push(value.to_owned());
+            }
+            "--premise-pool" | "--zipperposition" | "--write-spec" => {
+                let value = args
+                    .next()
+                    .and_then(|value| value.to_str())
+                    .filter(|value| !value.is_empty())
+                    .ok_or_else(|| usage(format!("{arg} requires a UTF-8 value")))?
+                    .to_owned();
+                parsed.discover.flags = true;
+                match arg {
+                    "--premise-pool" => parsed.discover.pool = Some(value),
+                    "--zipperposition" => parsed.discover.zipperposition = Some(value),
+                    _ => parsed.discover.write_spec = Some(value),
+                }
+            }
+            "--candidates" | "--jobs" => {
+                parsed.discover.flags = true;
+                let value = Some(number(args.next().and_then(|value| value.to_str()), arg)?);
+                if arg == "--candidates" {
+                    parsed.discover.candidates = value;
+                } else {
+                    parsed.discover.jobs = value;
                 }
             }
             "--constants" | "--queue-file" | "--target" | "--targets" | "--top" | "--pool" => {

@@ -1043,6 +1043,21 @@ flag (docs/prove-sweep.md). Progress goes to stderr. It is advisory and writes
 nothing; its unit tests cover Challenge parsing, scratch generation and
 message classification without Lean.
 
+## `discover`
+
+`truth discover (--target STATEMENT | --targets open-root|next-tests)...
+[--module PREFIX]... [--premise-pool closed|proved|all] [--candidates N]
+[--limit N] [--heartbeats N] [--batch N] [--jobs N] [--zipperposition PATH]
+[--write-spec PATH]` (`truth::discover`) searches for new implications between
+corpus propositions with Duper (#1784, docs/discover.md): candidate retrieval,
+goal generation over the statements' own Lean declarations
+(`scripts/Discover.lean`), minimization, the vacuity, transcription,
+known-composition, sense and axiom filters, a certification run of the
+rendered theorem text, and a ranked list of missing bridges. `--write-spec`
+writes an `argument_batch.py` spec draft and a Solution draft, never corpus
+records. Unit tests cover goal generation, the filters and report parsing
+without Lean; CI runs one fixed known derivation end to end.
+
 ## `senses`
 
 `truth senses (report [--write] | allowlist [--write] | ratchet --base REV)`

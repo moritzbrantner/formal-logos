@@ -13,6 +13,7 @@ pub mod context;
 pub mod countermodel;
 pub mod currentness;
 pub mod definition_status;
+pub mod discover;
 pub mod dossier;
 pub mod evidence_graph;
 pub mod finite_models;

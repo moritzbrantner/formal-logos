@@ -12,6 +12,7 @@ together with the revision of AGENTS.md invariant 14 that adopts Mathlib.
 | --- | --- |
 | Its Solution does not import Mathlib, directly or through `TruthCore` modules | `[]`: the result stays zero-axiom |
 | Its Solution imports Mathlib | `[]`, or exactly `["propext", "Classical.choice", "Quot.sound"]` |
+| Its Solution imports Duper (owner decision 2026-11-19) | `[]`, or exactly `["propext", "Classical.choice", "Quot.sound"]` |
 
 No other axiom is ever permitted: no `sorryAx`, no `Lean.ofReduceBool` or
 `Lean.trustCompiler`, and no axiom declared in this repository. A result that
@@ -40,6 +41,26 @@ intuitionist rival (`STMT-EXCLUDED-MIDDLE-WITHHELD-INTUITIONISM`) stay on
 zero-axiom results. NanoDa's library check (`scripts/verify-library.sh`)
 already permitted these three because they reach the library through Lean's
 own core; per-result configs now permit them only for Mathlib results.
+
+## Duper and lean-auto
+
+Duper and lean-auto are approved dependencies for proof search (owner
+decision 2026-11-19, `docs/decisions/2026-11-19-01-duper-lean-auto.md`).
+Duper reconstructs a proof term that the kernel checks; its proofs use
+`propext`, `Classical.choice` and `Quot.sound` (checked with `#print axioms`
+on sample proofs, and by CI on `scripts/DuperAxiomAudit.lean`). So a
+Solution that imports Duper, directly or through `TruthCore` modules, may
+permit the three, as a Mathlib Solution may, and is a theorem of classical
+logic with the same caveat about excluded middle.
+
+lean-auto can also close goals without a checked proof: `auto.tptp.trust`
+(the axiom `autoTPTPSorry`), SMT results without reconstruction, and native
+evaluation (an `ofReduceBool`-style axiom from `Lean.Meta.nativeEqTrue`).
+None of these is a proof here, and no such axiom may be permitted. An external
+prover (Zipperposition) may only select premises or give hints; Duper must
+reconstruct the proof. `truth discover` (`docs/discover.md`) collects every
+proof's axioms, refuses any outside the three, and re-elaborates each
+discovered theorem from its text before reporting it.
 
 ## What CI checks, and where the trust boundary lies
 

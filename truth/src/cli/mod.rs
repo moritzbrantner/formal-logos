@@ -28,6 +28,7 @@ mod context;
 mod countermodel;
 mod currentness;
 mod definitions;
+mod discover;
 mod dossier;
 mod evidence;
 mod frontier;
@@ -121,6 +122,9 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
              [--module MODULE] [--no-check]
        truth [--root PATH] [--json] prove-sweep [--theorem NAME]... [--module MODULE]... [--heartbeats N]
              [--batch N]
+       truth [--root PATH] [--json] discover (--target STATEMENT | --targets open-root|next-tests)...
+             [--module PREFIX]... [--premise-pool closed|proved|all] [--candidates N] [--limit N]
+             [--heartbeats N] [--batch N] [--jobs N] [--zipperposition PATH] [--write-spec PATH]
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
@@ -192,6 +196,7 @@ pub const COMMANDS: &[Command] = &[
     bridge_experiments::COMMAND,
     countermodel::COMMAND,
     prove_sweep::COMMAND,
+    discover::COMMAND,
 ];
 
 /// Parses `args` and runs the command it names.
@@ -255,15 +260,24 @@ pub fn run(args: &[OsString]) -> Output {
             Some(command) if args.countermodel.flags && command.name != "countermodel" => Err(
                 usage("--omit, --size and --no-check apply only to countermodel"),
             ),
-            Some(command) if args.sweep.flags && command.name != "prove-sweep" => Err(usage(
-                "--theorem, --heartbeats and --batch apply only to prove-sweep",
+            Some(command) if args.discover.flags && command.name != "discover" => Err(usage(
+                "--targets SELECTOR, --premise-pool, --candidates, --zipperposition, --jobs and --write-spec apply only to discover",
             )),
             Some(command)
-                if !args.modules.is_empty()
-                    && !["countermodel", "prove-sweep"].contains(&command.name) =>
+                if args.sweep.flags
+                    && !(command.name == "prove-sweep"
+                        || (command.name == "discover" && args.sweep.theorems.is_empty())) =>
             {
                 Err(usage(
-                    "--module applies only to countermodel and prove-sweep",
+                    "--theorem applies only to prove-sweep; --heartbeats and --batch only to prove-sweep and discover",
+                ))
+            }
+            Some(command)
+                if !args.modules.is_empty()
+                    && !["countermodel", "prove-sweep", "discover"].contains(&command.name) =>
+            {
+                Err(usage(
+                    "--module applies only to countermodel, prove-sweep and discover",
                 ))
             }
             Some(command)
