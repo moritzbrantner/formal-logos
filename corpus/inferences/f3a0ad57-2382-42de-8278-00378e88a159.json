@@ -1,0 +1,10 @@
+{
+  "id": "f3a0ad57-2382-42de-8278-00378e88a159",
+  "label": "GOD_4 incorruptibility controls, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "68347358-634c-4853-937c-465ecb9972d1",
+  "rule": "Explicit one- and two-being interpretations checked by case analysis, decide on concrete Booleans and explicit terms (no axioms)",
+  "meaning": "Controls for the GOD_4 incorruptibility composition: a nonvacuity witness with a GOD_4 instance; for each of the three premises an interpretation in which the other two hold and some GOD_4 being can fail to be (so each premise is needed); and an interpretation in which the three premises hold and GOD_4 is simply incorruptible but not necessary in the sense of DEF-NECESSARY-BEING (it is possible that it is not). Model-witnessed facts about these interpretations only; no interpretation is claimed metaphysically possible.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
