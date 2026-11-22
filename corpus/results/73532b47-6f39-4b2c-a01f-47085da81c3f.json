@@ -1,0 +1,11 @@
+{
+  "id": "73532b47-6f39-4b2c-a01f-47085da81c3f",
+  "label": "Containment in every cause entails that nothing gives being it does not have",
+  "argument_id": "18e24c29-6dd8-4e48-8228-b3ae79d722e1",
+  "challenge_module": "TruthCore.Results.Causality.CartesianAdequacy.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CartesianAdequacy.Solution",
+  "theorem": "TruthCore.Results.Causality.CartesianAdequacy.causeOfABeingHasBeingOfContainment",
+  "comparator_config": "results/73532b47-6f39-4b2c-a01f-47085da81c3f/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration: containment in every cause, at r = esse, says that whatever causes the being of a thing in act as to being is itself in act as to being (4a5a43a5). Same InAct, CausesIn and esse. It establishes neither statement."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "5ca92406-4fe0-4bcc-af5d-fb0fa7ac3f66",
+  "label": "Strengthened Kantian thesis is the rival of the EXISTENCE_8 real-predicate premise",
+  "subject_kind": "statement",
+  "subject_id": "905d7522-652f-44c9-9a0d-34e30e404270",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "cdc7a58f-0c17-41d9-8d9d-18b6ad5c6cc6",
+  "note": "Target: the EXISTENCE_8 premise of Meditation V, a profile feature coextensive with existence at the selected world (an extensional surrogate of 'existence is a real predicate', satisfiable by accidental coextension). The faithful, intensional Kant thesis (existence is no determination contained in a concept; hundred possible and hundred actual thalers have the same content; existence is positing, EXISTENCE_1) targets the warrant of that premise: without a concept that contains existence, nothing makes a profile feature coextensive with existence except accident. The rival statement is an analyst strengthening and the exact Lean negation of the premise (contradictories, which is why Duper reports the pair as an inconsistent core); it also denies accidental coextension, which Kant's thesis does not. Neither statement is derived here. Kant's real-predicate thesis does not touch the existence premises of the a posteriori root routes. The route through argument 500c6e18 uses NecessaryIsMostReal (2107b9df) and MostRealUnique (84ae3700), which Kant's separate ontological-dependence objection targets; that objection to the warrant of 2107b9df stays open there and is substantive only if that warrant is that the most-real concept suffices for necessary existence; the route's witness comes from 86badf93, not from the conversion. Kant's scope objection to the causal premises is recorded in docs/kant-cosmological-inference.md."
+}

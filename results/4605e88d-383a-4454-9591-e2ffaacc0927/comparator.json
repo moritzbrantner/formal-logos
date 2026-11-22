@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Ontology.EncodingAndRealPredicates.Challenge",
+  "solution_module": "TruthCore.Results.Ontology.EncodingAndRealPredicates.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Ontology.EncodingAndRealPredicates.encodingControl"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

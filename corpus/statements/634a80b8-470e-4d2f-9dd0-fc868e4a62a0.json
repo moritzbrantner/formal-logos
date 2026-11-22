@@ -1,0 +1,16 @@
+{
+  "id": "634a80b8-470e-4d2f-9dd0-fc868e4a62a0",
+  "label": "Whatever causes a thing's being r contains r, partial causes included (uniform IN_ACT_4)",
+  "paraphrase": "Analyst strengthening of the Cartesian containment clause, not attributed: for every cause c of x's being r (CAUSE_2, partial causes included) where x is in act in r, c is itself in act in r. Uniform IN_ACT_4 reading: one InAct, mode of possession left open, on both sides; the mode-asymmetric Cartesian reading (formal in the effect, formal or eminent in the cause) is a distinct, unformalized sibling needing a sense bridge. Respect-wise: it constrains only the perfection caused, not every perfection of the effect. Open.",
+  "lean_declaration": "TruthCore.Causality.CartesianAdequacy.ContainmentInEveryCause",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}

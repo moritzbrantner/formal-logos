@@ -1,0 +1,10 @@
+{
+  "id": "e6f9ef18-7f6a-4858-a173-61382111f08c",
+  "label": "MORE_1 control: strict comparative holds, no-effect-exceeds-total-cause fails (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "d3bf5e53-3822-4d3d-a9a6-d4489a609c3b",
+  "rule": "Finite case analysis on Bool",
+  "meaning": "MORE_1 side of the comparison: on two beings that totally cause each other, with the primitive comparative true of every ordered pair, the strict comparative and more-such-has-the-perfection hold while 'no effect is more r than its total cause' fails. So the Cartesian 'at least as much', read on the primitive comparative, does not follow from the Aristotelian strict comparative without a further premise such as the calibration or asymmetry (with irreflexivity) of MoreIn. A finite interpretation only; it does not say MoreIn is symmetric.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

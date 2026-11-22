@@ -1,0 +1,18 @@
+{
+  "id": "51d9033b-0aec-4bc2-89a5-b02de40d5f4d",
+  "label": "Real-predicate control, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "b5271348-2594-4087-ae35-c4e21f7d1e9c",
+  "inference_ids": [
+    "b050e85d-dad3-4091-8220-80e7f2683ee3"
+  ],
+  "meaning": "Premise-free and zero-axiom. (a) EXISTENCE_8 suffices: a most-real candidate has every feature, including one coextensive with existence at the world, so it exists there. (b) One candidate, one feature had by it, universal access, nothing existing: no feature is coextensive with existence, the identification premise holds vacuously (nothing is necessary), uniqueness holds, the candidate is most real, and nothing most real exists; so the identification and uniqueness premises do not yield existence. EXISTENCE_8 is sufficient, not shown necessary. Targets, under the substantive-objection standard: Kant's real-predicate thesis targets the warrant of the real-predicate premise of the ontological argument; it does not touch the existence premises of the a posteriori routes. Separately, the root route through argument 500c6e18 uses NecessaryIsMostReal (2107b9df) and MostRealUnique (84ae3700), which Kant's ontological-dependence objection targets: that objection to the warrant of 2107b9df applies there and stays open, and it is substantive only if that warrant is that the most-real concept suffices for necessary existence. That route takes its existing witness from 86badf93, not from the conversion that KANT-CONVERSION-NEEDS-EXISTENCE isolates. Kant's scope objection to the causal premises is a separate matter (docs/kant-cosmological-inference.md).",
+  "definition_ids": [
+    "0857c20c-d609-4b3e-a685-b07ed52ead88",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "b3c45d92-dee0-5a1a-9849-9924d3a1699d"
+  ],
+  "disambiguation_ids": [
+    "031a741a-57b4-5a20-b9f3-170876e69a02"
+  ]
+}

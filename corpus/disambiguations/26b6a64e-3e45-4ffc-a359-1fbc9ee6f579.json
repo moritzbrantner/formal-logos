@@ -1,0 +1,25 @@
+{
+  "id": "26b6a64e-3e45-4ffc-a359-1fbc9ee6f579",
+  "label": "Scope of the Cartesian containment clause: respect-wise versus whole-effect",
+  "term": "containment clause (whatever is in the effect is in its total cause)",
+  "sense_definition_ids": [
+    "2ea0fd93-e13a-4411-bc03-5b9d2ce40fdb",
+    "859d4d67-1527-4783-95cd-498f9056dfe3"
+  ],
+  "resolution": "The clause is kept as two sibling statements, one per scope. CONTAINMENT_SCOPE_1 (respect-wise) constrains the total cause of each perfection; CONTAINMENT_SCOPE_2 (whole-effect) constrains the total cause of a thing's being in every perfection of the thing. q.4 a.2 preexistence entails the whole-effect reading (a strength order); on the respect-wise reading, preexistence and containment are independent (two finite controls). No argument passes between the two scopes; an argument using both would need an explicit bridge such as the cause-of-being transfer f8ba2429-b4f1-5712-a4d3-798213963d34. Both readings use one uniform InAct (IN_ACT_4) on both sides; the mode-asymmetric reading (formal in the effect, formal or eminent in the cause) is a further, unformalized sibling.",
+  "term_label": "CONTAINMENT_SCOPE",
+  "senses": [
+    {
+      "id": "ad7a5342-6905-455e-a077-217edfae3bca",
+      "label": "CONTAINMENT_SCOPE_1",
+      "definition_id": "2ea0fd93-e13a-4411-bc03-5b9d2ce40fdb",
+      "lean_declaration": "TruthCore.Causality.CartesianAdequacy.ContainmentInTotalCause"
+    },
+    {
+      "id": "49e7a965-2210-4430-9fd4-8eea9f5a4958",
+      "label": "CONTAINMENT_SCOPE_2",
+      "definition_id": "859d4d67-1527-4783-95cd-498f9056dfe3",
+      "lean_declaration": "TruthCore.Causality.CartesianAdequacy.WholeEffectContainmentInTotalCause"
+    }
+  ]
+}

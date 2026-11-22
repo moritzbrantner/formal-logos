@@ -1,0 +1,14 @@
+{
+  "id": "cdc7a58f-0c17-41d9-8d9d-18b6ad5c6cc6",
+  "label": "Some reality feature is EXISTENCE_8 at the selected world (extensional real-predicate surrogate)",
+  "paraphrase": "Open premise, analyst formulation (Descartes' 'existence is a perfection' in Meditation V is navigation, attribution deferred): EXISTENCE_8 holds at the selected world, i.e. some feature of the reality profile is had by exactly the candidates that exist there. This is (an extensional surrogate of 'existence is a real predicate', satisfiable by accidental coextension): it does not say that any concept contains existence, and a feature that merely happens to be had by exactly the existing candidates makes it true.",
+  "lean_declaration": "TruthCore.Ontology.EncodingAndRealPredicates.ExistenceIsRealPredicate",
+  "definition_ids": [
+    "0857c20c-d609-4b3e-a685-b07ed52ead88",
+    "b3c45d92-dee0-5a1a-9849-9924d3a1699d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "031a741a-57b4-5a20-b9f3-170876e69a02"
+  ]
+}
