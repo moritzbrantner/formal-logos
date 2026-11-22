@@ -1,0 +1,9 @@
+{
+  "id": "9d37eba3-360b-4098-a6fc-bd07edb1594f",
+  "label": "TRUE_7: truth said of things, the respect in which a thing is TRUE_7",
+  "term": "true (verum), said of things: the respect",
+  "definition": "The respect of being true said of a thing rather than of a sentence or a judgment: that in which a thing is said to be true, and more or less true, as gold is true gold or a principle is most true (Metaphysics II.1, 993b26-31, as read by AsToBeingSoToTruthReading; the quarta via's verum, ST I q.2 a.3). A binder tagged TRUE_7 is an element of the respects (RESPECT_1) in this role. The record fixes only which respect is meant, not an account of what the truth of things consists in.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.Grades.MostTrueIsMostBeing",
+  "note": "Stipulative respect record, attribution deferred, after the pattern of the esse respect record eafd5d52: a thin sense for parameter-level tags, so that the tags do not assign a full theory of truth to every tagged binder. Introduced in the #1832 follow-up (attempt b979db99, PR #1848) after review found that tagging Aristotle's truth with TRUE_3 (DEF-ONTOLOGICAL-TRUTH) attributed Aquinas's conformity analysis to Metaphysics II.1. The Lean locator is the grades-frame adapter MostTrueIsMostBeing, whose verum is a supplied respect with no further content; it is a usage locator, not a definition of the respect. Existing statement links to DEF-ONTOLOGICAL-TRUTH are unchanged by this record."
+}

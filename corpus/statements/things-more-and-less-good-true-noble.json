@@ -1,6 +1,6 @@
 {
   "id": "a9622441-2db2-5d32-9b02-a9d283bd2949",
-  "label": "Grades are found in things: some things are more and others less good, TRUE_1 and noble",
+  "label": "Grades are found in things: some things are more and others less good, TRUE_3 and noble",
   "legacy_id": "STMT-THINGS-MORE-AND-LESS-GOOD-TRUE-NOBLE",
   "paraphrase": "Grades are found in things: some things are more and others less good, true and noble.",
   "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.GradesFoundInThingsReading",
