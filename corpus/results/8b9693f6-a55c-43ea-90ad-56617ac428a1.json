@@ -1,0 +1,11 @@
+{
+  "id": "8b9693f6-a55c-43ea-90ad-56617ac428a1",
+  "label": "Actual necessary source with possible causal exercise from BEGINS_2 opportunity",
+  "argument_id": "7649d8aa-31c2-4bdf-9b52-5b874366c21a",
+  "challenge_module": "TruthCore.Results.Causality.MetricBeginningArrival.Challenge",
+  "solution_module": "TruthCore.Results.Causality.MetricBeginningArrival.Solution",
+  "theorem": "TruthCore.Results.Causality.MetricBeginningArrival.necessaryActualWithPossibleConcurrentGiving",
+  "comparator_config": "results/8b9693f6-a55c-43ea-90ad-56617ac428a1/comparator.json",
+  "status": "solution-present",
+  "description": "The stronger causal B2 is applied to a possible BEGINS_2 populated history, yielding one source c with actual memberwise GivesAt exercise in a witness history v. Externality of that same c among contingent concreta implies its de re necessity in v, and Euclidean-at-w plus actual reflexivity transport its necessary existence to w without changing c or projecting the causal exercise to w. This is a non-transcription conditional theorem retaining real causal content in a possible world, not a proof of B2's warrant."
+}

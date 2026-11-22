@@ -43,7 +43,12 @@ constituunt et componunt ipsum compositum*).
 Read from q.11 a.1 co.: a composite has parts that can be divided from one
 another and that compose it, so it has two distinct components. This is stronger
 than the q.3 a.7 fifth-proof reading `CompositeHasComponentOtherThanItselfReading`,
-which gives only one component other than the composite.
+which gives only one component other than the composite. This statement is a
+weak numerical-diversity consequence of the cited division of parts: it does
+not require either component to be distinct from the whole (proper). The
+nondegenerate control in Article7UnitingControl tests two proper components
+explicitly; the original source's stronger part-language must not be inferred
+from this Lean type alone.
 
 Source: Thomas Aquinas, *Summa theologiae* I q.11 a.1 co.
 -/

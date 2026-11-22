@@ -1,0 +1,15 @@
+{
+  "id": "6bcae117-6b94-4d0f-aa20-d8dcb4d1f799",
+  "label": "Actual necessary source with possible causal exercise from BEGINS_2 opportunity (inference)",
+  "input_statement_ids": [
+    "1b1462e6-c285-448c-87e2-3053bc05a341",
+    "2b20b5af-d653-56ba-8001-35903fb3d1ea",
+    "951a2235-14e5-432e-8365-0efce1b8659d",
+    "e4a3b917-7c61-49e3-a8fa-dc02155bbf80"
+  ],
+  "output_statement_id": "34b957cd-73e6-4a10-8fa1-958a4679e346",
+  "rule": "Reconstruct the external causal opportunity witness; retain actual GivesAt on the same c in v; transport rigid necessity to w using Euclidean-at-w and actual reflexivity",
+  "meaning": "The stronger causal B2 is applied to a possible BEGINS_2 populated history, yielding one source c with actual memberwise GivesAt exercise in a witness history v. Externality of that same c among contingent concreta implies its de re necessity in v, and Euclidean-at-w plus actual reflexivity transport its necessary existence to w without changing c or projecting the causal exercise to w. This is a non-transcription conditional theorem retaining real causal content in a possible world, not a proof of B2's warrant.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

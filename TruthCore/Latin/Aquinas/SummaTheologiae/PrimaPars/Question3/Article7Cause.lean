@@ -26,6 +26,13 @@ a composite is, as this one thing, only by being united. That is the interpretiv
 step of this reading. Aquinas concludes that God, who has no cause since he is
 the first efficient cause, is not composite.
 
+The Lean *conclusion* below records only a numerically distinct cause of
+the composite's esse. It does not retain `Unites c a b x` as a property
+of that witness; that same-uniter identification belongs to the separate
+conditional union derivation and its open uniter-to-esse bridge.
+Nor does this unindexed type assert a present actual cause, a nonpart
+or an ongoing sustaining cause of esse.
+
 Source: Thomas Aquinas, *Summa theologiae* I q.3 a.7 co., third proof.
 -/
 def CompositeHasAUnitingCauseReading {Being : Sort u} {Respect : Sort v}

@@ -1,0 +1,9 @@
+{
+  "id": "dc0aa760-8cbe-414f-9bd0-9cc67ead87c9",
+  "label": "Finite-prefix possibility of actual causally connected Reaper operations",
+  "term": "finite causal station compatibility",
+  "lean_declaration": "TruthCore.Causality.FixedDurationGrimReaper.FiniteStationPrefixCompatibility",
+  "definition": "FiniteStationPrefixCompatibility R h stations v c says that for every natural finite prefix endpoint N some history u accessible from v realizes the actual StationOperationAt conditions for every station index n up to N. The same station mapping and descent are held fixed across the witnesses, but u may depend on N, including different actual signal outputs. This is stronger than each isolated station being intrinsically capable and stronger than co-possible adjacent register pieces; it does not assert a single complete world.",
+  "note": "Distinct from finite satisfiability of merely syntactic station instructions and from countable joint realization. The existing overlap-disagreement result forbids the value-agreeing global choice, not the separate local-power laws.",
+  "basis": "stipulative"
+}
