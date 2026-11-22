@@ -2,8 +2,8 @@
   "challenge_module": "TruthCore.Results.Causality.ConcurrentGivingPriorityBridge.Challenge",
   "solution_module": "TruthCore.Results.Causality.ConcurrentGivingPriorityBridge.Solution",
   "theorem_names": [
-    "TruthCore.Results.Causality.ConcurrentGivingPriorityBridge.noSelfGivingFromEfficientPriority",
-    "TruthCore.Results.Causality.ConcurrentGivingPriorityBridge.controls"
+    "TruthCore.Results.Causality.ConcurrentGivingPriorityBridge.noSelfGivingFromIndexedNoSelfCause",
+    "TruthCore.Results.Causality.ConcurrentGivingPriorityBridge.indexedControls"
   ],
   "permitted_axioms": [
     "propext",

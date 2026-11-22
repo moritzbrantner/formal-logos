@@ -1,0 +1,11 @@
+{
+  "id": "9ed661bd-e8c7-4de3-9c2b-5e916d82589e",
+  "label": "Indexed no efficient self-causation from indexed cause priority",
+  "argument_id": "9c974b88-13e7-4160-b894-ab06ed00fc04",
+  "challenge_module": "TruthCore.Results.Causality.ConcurrentGivingPriorityBridge.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ConcurrentGivingPriorityBridge.Solution",
+  "theorem": "TruthCore.Results.Causality.ConcurrentGivingPriorityBridge.indexedNoSelfCauseFromPriority",
+  "comparator_config": "results/9ed661bd-e8c7-4de3-9c2b-5e916d82589e/comparator.json",
+  "status": "solution-present",
+  "description": "Second Way support, history by history and moment by moment, for the indexed no-self-efficient-cause premise 4f1e13dd. In each accessible history v at each moment t, the OPEN indexed cause-priority premise 06a9ad24 makes every efficient cause then and there simply prior (PRIOR_1, the single frame field PriorSimply) to its effect, and nothing is simply prior to itself (32d77f18), so by the verified SelfCausationPriority.noSelfCauseFromPriority nothing is then and there its own efficient cause. 06a9ad24 is an analyst statement with attribution deferred: the Aquinas claim on the selected-time e078f07b does not extend to it. 32d77f18 concerns only the unindexed PriorSimply and is used as registered. No temporal priority is inferred. No premise is established."
+}

@@ -546,70 +546,38 @@ particular, may not satisfy an independently justified account of temporal
 concreteness. Neither omission is inserted into the new bridge unannounced.
 Their proof and Comparator certificates remain pending.
 
-**Cross-family causal-priority support for B2 (2026-11-22; stacked draft).
-** The already verified Second Way result
-`SelfCausationPriority.noSelfCauseFromPriority` consumes the OPEN principles
-that efficient causes are SIMPLY_PRIOR_1 to their effects and nothing is
-simply prior to itself. New `ConcurrentGivingPriorityBridge` reuses that
-proof with exactly the same efficient-cause relation and the shared
-`CausalityFrame.PriorSimply`. The one *new* open bridge is
-`SelfGivingIsEfficientSelfCause`: if `GivesAt v c c t` were a genuine
-self-directed giving of c's being, it would count as
-`EfficientlyCausesIn c c esse`. The efficient relation is a separate
-supplied sense, NOT `F.CausesIn` (perfection cause), and no
-temporally-prior assumption is imported.
+**Second Way support for no-self-giving (2026-11-22, #1863; attempt
+[`33fd084a`](../../corpus/attempts/33fd084a-e59c-4855-918e-d69ac33bdc3c.json)).**
+Spec `specs/concurrent-giving-priority-bridge.toml`. Efficient causation is a
+supplied relation `EfficientlyCausesAt v t c x r` indexed by history and moment
+(definition `1d8c68c3`): for each fixed `v` and `t` it is the here-and-now
+efficient causing of EFFICIENT_CAUSING_2 (`69c0b23e`) read in that history at
+that moment. The one cross-sense premise is the OPEN self-edge bridge
+`ca5d4eaa` (`SelfGivingIsEfficientSelfCauseAt`): in every accessible `v` at
+every `t`, `GivesAt v c c t` implies `EfficientlyCausesAt v t c c esse`. Both
+indices are kept, so nothing is moved between histories or moments. It is NOT
+`F.CausesIn` (cause of a perfection), and it is separate from the efficient-esse
+bridge `DistinctActualEsseCauseIsEfficient` (`8934912c`), which covers only
+causes distinct from their effect. With the OPEN indexed no-self premise
+`872ff8b6` (in no accessible history at no moment is anything its own efficient
+cause) it gives `0e473dc4` (result `a59169d5`). `872ff8b6` itself follows from
+the OPEN indexed cause-priority premise `b402ca7b` and nothing-prior-to-itself
+`32d77f18`, by the verified `SelfCausationPriority.noSelfCauseFromPriority`
+applied in each history at each moment with the single unindexed `PriorSimply`
+(result `9ed661bd`). `872ff8b6` and `b402ca7b` are analyst statements, stronger
+than the selected-time Aquinas statements `8b2561cd` and `e078f07b`, whose
+claims do not extend to them; the *nec est possibile* of q.2 a.3 is an unchecked
+candidate basis for `872ff8b6`. The indexed omission control keeps both Second
+Way premises while the bridge and no-self-giving fail.
 
-The certified candidate `noSelfGivingFromEfficientPriority` then supports
-the strong no-self-giving premise `0e473dc4` of the new
-`externalOpportunityOfMemberwiseGiving` route, which supports the causal
-B2 `e4a3b917` and the existing modal necessary-concrete graph.
-This is a real horizontal support option rather than reasserting the
-no-self conclusion. The `selfGivingFrame` omission control keeps both
-priority premises true with no efficient self-edge, while allowing actual
-self-`GivesAt`: without the new cross-sense bridge they do not rule it out.
-No proof of an actual external giver, the priority premises' truth, or
-countable Reaper realization is obtained. No new historical source claim:
-the reuse is of the already attributed and verified Aquinas route.
-The new result and proposed graph effect require child-PR CI and independent
-semantic review, after its parent #1856.
-
-
-**Reused direct no-self-cause node (2026-11-22).** The corpus already
-contains `8b2561cd` (no efficient self-causation), with both a direct
-claim option and a certified derivation from efficient-cause priority plus
-no self-priority. The new `noSelfGivingFromNoSelfCause` route consumes that
-**existing** statement together with the self-edge semantic bridge
-`0e961fde` to support `NoSelfGivingOnAccessible` (`0e473dc4`).
-This avoids requiring the two priority premises in every use while preserving
-their registered derivation as an alternative. The same efficient relation is
-used on both sides of the self-edge, but the tenseless `F.CausesIn` and
-time-indexed `F.GivesAt` are still not generally identified. The
-`noSelfGivingFromEfficientPriority` proof now composes the old result with
-this new adapter. This is a genuine graph-connection alternative, not
-disjoint independent warrant, and its new bridge remains open.
-
-**Index collapse and modal reading (repair after the semantic challenge on
-#1863).** `SelfGivingIsEfficientSelfCause` maps `GivesAt v c c t`, indexed to
-any history `v` of the frame and a moment `t`, to `EfficientlyCausesIn c c
-esse`, which has neither index. On the here-and-now gloss of
-EFFICIENT_CAUSING_2 (definition `69c0b23e`) that would turn self-giving in a
-merely possible history into an actual, present efficient self-cause. Both
-routes therefore read `EfficientlyCausesIn` world- and time-neutrally (in some
-history at some moment), and use the reused premises under that modal reading:
-`8b2561cd` as "nothing is, in any history, its own efficient cause" and
-`e078f07b` as "whatever is in some history an efficient cause of x is simply
-prior to x" (`32d77f18` concerns only the unindexed `PriorSimply`). This is
-stronger than their actual-world gloss. The source's *nec est possibile* is a
-candidate basis for the modal reading of `8b2561cd`; that attribution is
-deferred, not checked. Restricting the bridge to accessible histories was
-considered and not done: it would edit the frozen Challenge's theorem types
-and would not remove the need for the modal reading, since the consequent
-stays index-free. A world-indexed efficient relation with a modal sibling of
-`8b2561cd` is the structural alternative, not built here. The passage from the
-being-giving family (`158301bc`, `88a8fba7`, `c3c01e92`) to efficient causing
-is made only by `0e961fde`; the existing efficient-esse bridge
-`DistinctActualEsseCauseIsEfficient` (`8934912c`) covers only causes distinct
-from their effect and cannot cover the self-edge.
+A first version used an index-free bridge (`SelfGivingIsEfficientSelfCause`)
+with the existing `8b2561cd` or `e078f07b`. Because its consequent dropped the
+history and moment, it needed those selected-time statements under a modal
+reading the corpus registers as strictly stronger (relation `3a61a9fb`, result
+`8e634495`, disambiguation `57f80020`). Its records were withdrawn before merge;
+the Lean declarations remain in the frozen Challenge, marked superseded.
+Given the equivalence above, supporting `0e473dc4` does not discriminate against
+a rival who denies that a necessary concretum is possible.
 
 **What "begins" means in B1** (spec
 `specs/modal-spine-metric-beginning-arrival.toml`, attempt

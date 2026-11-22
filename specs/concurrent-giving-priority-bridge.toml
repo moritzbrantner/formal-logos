@@ -4,34 +4,47 @@ results = "TruthCore.Results.Causality.ConcurrentGivingPriorityBridge"
 definitions = ["1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"]
 
 [[statement]]
-id = "0e961fde-eb15-4911-8620-d4ca234f8a31"
-label = "Self-giving must instantiate efficient self-causation in respect esse"
-lean = "SelfGivingIsEfficientSelfCause"
-paraphrase = "OPEN analyst cross-sense causal bridge: if in history v the same bearer c exercises strict time-indexed GivesAt v c c t toward its OWN being at t, this qualifies as efficient self-causation of c in the selected esse respect under the separately supplied EfficientlyCausesIn relation. This bridge connects two different causal senses only on the self-edge. INDEX COLLAPSE: the antecedent is indexed to a history v (any history of the frame, not only accessible ones) and a moment t, while EfficientlyCausesIn has neither index; so EfficientlyCausesIn is read here world- and time-neutrally (c is, in some history at some moment, an efficient cause of x's being r), not on the here-and-now gloss of definition 69c0b23e, under which self-giving in a merely possible history would become an actual present efficient self-cause. It does not identify the frame's CausesIn perfection-causation relation with efficient causes, require a physical temporal interval, or claim any real self-giving is possible. It is separate from the existing efficient-esse bridge DistinctActualEsseCauseIsEfficient (definition 8934912c), which passes from CausesIn to the tenseless EfficientlyCausesEsse only for causes distinct from their effect and so cannot cover the self-edge."
-definitions = ["647b3d0a-5951-4f0d-b6ed-3bb0daf990e1", "158301bc-9585-4145-be60-34f08c9f922c", "69c0b23e-54c7-57a1-871f-839c6e5514c6", "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"]
+id = "ca5d4eaa-29a2-4771-81fa-107bdc85556c"
+label = "Self-giving in an accessible history at a moment is efficient self-causation there and then"
+lean = "SelfGivingIsEfficientSelfCauseAt"
+paraphrase = "OPEN analyst cross-sense causal bridge, attribution deferred: in every history v accessible from the selected world and at every moment t, if c exercises strict GivesAt v c c t toward its OWN being, then in v at t c is an efficient cause of its own being (EfficientlyCausesAt v t c c esse). EfficientlyCausesAt v t is the here-and-now efficient causing of EFFICIENT_CAUSING_2 read in history v at moment t; both indices are kept, so nothing is moved between histories or moments. The bridge concerns only the self-edge. It does not identify the frame's CausesIn perfection-causation relation with efficient causes, require a physical temporal interval, or claim any real self-giving is possible. It is separate from the existing efficient-esse bridge DistinctActualEsseCauseIsEfficient (definition 8934912c), which passes from CausesIn to the tenseless EfficientlyCausesEsse only for causes distinct from their effect and so cannot cover the self-edge."
+definitions = ["1d8c68c3-a256-4ba1-8d84-224a4583b803", "158301bc-9585-4145-be60-34f08c9f922c", "69c0b23e-54c7-57a1-871f-839c6e5514c6"]
 disambiguations = ["88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d", "c3c01e92-520e-5358-a58f-0cc7e9c9e6fa"]
 
-[[argument]]
-id = "ae6a8763-fb85-4a3e-a2dc-fc8094e763e8"
-label = "Strict no-self-giving from efficient priority and a causal-sense bridge"
-theorem = "noSelfGivingFromEfficientPriority"
-premises = ["0e961fde-eb15-4911-8620-d4ca234f8a31", "e078f07b-a4b8-595e-a3ee-02dd83474450", "32d77f18-a9c2-5486-b51c-a24f32863af4"]
-conclusion = "0e473dc4-77c5-4d5d-899f-93e29907b198"
-axioms = ["propext", "Classical.choice", "Quot.sound"]
-rule = "Reuse SelfCausationPriority.noSelfCauseFromPriority on exactly the supplied EfficientlyCausesIn and F.PriorSimply; any possible self-GivesAt would cross the explicit bridge to the forbidden efficient self-cause"
-meaning = "Non-transcription cross-family conditional support for the new no-self-giving prerequisite of the BEGINS_2 causal Arrival B route. The same F.PriorSimply used by the supplied efficient-cause-priority and no-self-priority principles excludes any EfficientlyCausesIn c c r via the existing checked SelfCausationPriority.noSelfCauseFromPriority theorem. The open cross-sense bridge says any hypothetical strict GivesAt v c c t would instantiate that forbidden efficient self-edge at F.esse. Therefore strict time-indexed self-giving is absent throughout the accessible histories. READING: the bridge drops the history and moment indices, so EfficientlyCausesIn is read world- and time-neutrally, and the reused premise e078f07b is used under that reading (whatever is in some history an efficient cause of x is simply prior to x, with the unindexed PriorSimply); this is stronger than the here-and-now gloss of definition 69c0b23e. 32d77f18 concerns only PriorSimply and is unaffected. Passing from the being-giving family (GivesAt, definition 158301bc; CAUSE_OF_BEING, disambiguation 88a8fba7; CAUSING_AN_EFFECT, c3c01e92) to efficient causing is done only by the explicit premise 0e961fde on the self-edge; the existing efficient-esse bridge DistinctActualEsseCauseIsEfficient (8934912c) covers only causes distinct from their effect. No efficient-cause/perfection-cause identification, temporal-priority inference, independent argument for the old priority premises, proof of an actual giver or direct God-existence inference is asserted. A structural control shows why the bridge cannot be silently omitted."
-definitions = ["647b3d0a-5951-4f0d-b6ed-3bb0daf990e1", "158301bc-9585-4145-be60-34f08c9f922c", "69c0b23e-54c7-57a1-871f-839c6e5514c6", "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8", "9e1d45f4-7cee-44b5-a911-803c95b3fa07", "c0d65b45-33bb-47a2-b16b-48a493a762cb"]
-disambiguations = ["88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d", "c3c01e92-520e-5358-a58f-0cc7e9c9e6fa"]
-comparator_theorems = ["controls"]
+[[statement]]
+id = "872ff8b6-cc9d-4656-8691-b1ae7aa6304e"
+label = "In no accessible history at any moment is anything its own efficient cause"
+lean = "NoEfficientSelfCauseOnAccessible"
+paraphrase = "OPEN analyst premise, attribution deferred: in every history accessible from the selected world and at every moment, nothing is then and there its own efficient cause, in any respect. It is the all-histories, all-moments version of the selected-time no-self-efficient-cause premise 8b2561cd, and stronger than it (also stronger than the all-admitted-times single-world d15ded6f). The Aquinas claim on 8b2561cd does not extend to it; the 'nec est possibile' of ST I q.2 a.3 is an unchecked candidate basis."
+definitions = ["1d8c68c3-a256-4ba1-8d84-224a4583b803", "69c0b23e-54c7-57a1-871f-839c6e5514c6"]
+
+[[statement]]
+id = "b402ca7b-964c-4eeb-bef7-2751d1bcba2a"
+label = "In every accessible history at every moment, an efficient cause is PRIOR_1 to its effect"
+lean = "EfficientCauseIsPriorOnAccessible"
+paraphrase = "OPEN analyst premise, attribution deferred: in every history accessible from the selected world and at every moment, whatever is then and there an efficient cause of x in some respect is simply prior to x (the single unindexed frame relation PriorSimply). It is the all-histories, all-moments version of e078f07b; the Aquinas claim on e078f07b does not extend to it."
+definitions = ["1d8c68c3-a256-4ba1-8d84-224a4583b803", "69c0b23e-54c7-57a1-871f-839c6e5514c6", "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"]
 
 [[argument]]
-id = "3b57de88-0944-4f3f-9f81-378b3be5d8af"
-label = "Nonreflexive giving from a self-edge bridge and an existing exclusion"
-theorem = "noSelfGivingFromNoSelfCause"
-premises = ["0e961fde-eb15-4911-8620-d4ca234f8a31", "8b2561cd-3743-536d-a110-3352fdb0c6b9"]
+id = "265cc74a-4966-471b-813f-473e60c20a3f"
+label = "No self-giving of being from the indexed self-edge bridge"
+theorem = "noSelfGivingFromIndexedNoSelfCause"
+premises = ["ca5d4eaa-29a2-4771-81fa-107bdc85556c", "872ff8b6-cc9d-4656-8691-b1ae7aa6304e"]
 conclusion = "0e473dc4-77c5-4d5d-899f-93e29907b198"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
-rule = "Apply the existing no-efficient-self-causation reading to the self-edge produced by SelfGivingIsEfficientSelfCause for an arbitrary accessible history and moment"
-meaning = "A new conditional support alternative for strict non-self-GivesAt using the existing sourced no-efficient-self-cause node (8b2561cd) and one OPEN cross-sense self-edge bridge. The original Second Way noSelfCauseFromPriority theorem independently supplies that existing exclusion under its already recorded priority premises. The same efficient relation and F.esse appear in the two antecedents; no blanket equivalence with F.CausesIn or time priority is assumed. The new route preserves the direct-assumption option for no-efficient-self-cause as well as its priority derivation. Nothing proves the application truth of the cross-sense bridge, a causal source's possibility, or actual God-existence. The original priority-premise route in this module remains an alternative and now reuses this helper. READING: the bridge drops the history and moment indices, so 8b2561cd is used here under a world- and time-neutral, modal reading (nothing is, in any history, its own efficient cause in any respect), stronger than the here-and-now gloss of its definition 69c0b23e. The source's 'nec est possibile' is a candidate basis for that reading; the attribution of the modal reading is deferred and not checked here. Passing from the being-giving family (158301bc, 88a8fba7, c3c01e92) to efficient causing is done only by the explicit premise 0e961fde on the self-edge; the existing efficient-esse bridge DistinctActualEsseCauseIsEfficient (8934912c) covers only distinct causes."
-definitions = ["647b3d0a-5951-4f0d-b6ed-3bb0daf990e1", "158301bc-9585-4145-be60-34f08c9f922c", "69c0b23e-54c7-57a1-871f-839c6e5514c6", "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8", "9e1d45f4-7cee-44b5-a911-803c95b3fa07", "c0d65b45-33bb-47a2-b16b-48a493a762cb"]
-disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b", "88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d", "c3c01e92-520e-5358-a58f-0cc7e9c9e6fa"]
+rule = "Send a supposed GivesAt v c c t across the indexed bridge to EfficientlyCausesAt v t c c esse in the same history and moment, which indexed no efficient self-causation excludes"
+meaning = "Conditional support for the strict no-self-giving premise 0e473dc4 of the causal Arrival B route (#1856). In any accessible history v at any moment t, a self-giving GivesAt v c c t would by the OPEN self-edge bridge b801eac6 be efficient self-causation of c's being in v at t, which the OPEN all-histories, all-moments no-self premise 4f1e13dd excludes. Both indices are kept throughout; nothing is moved from a possible history to the selected world. The passage from the being-giving family (GivesAt, 158301bc; CAUSE_OF_BEING 88a8fba7; CAUSING_AN_EFFECT c3c01e92) to efficient causing is made only by b801eac6. Both premises are analyst statements with attribution deferred; neither is the selected-time Aquinas statement 8b2561cd. Given #1856's equivalence (under 0e473dc4 and d3184c66 the nonexternal premise 2a4d99d8 is equivalent to e4a3b917), this support does not discriminate against a rival who denies that a necessary concretum is possible. No premise is established."
+definitions = ["1d8c68c3-a256-4ba1-8d84-224a4583b803", "158301bc-9585-4145-be60-34f08c9f922c", "69c0b23e-54c7-57a1-871f-839c6e5514c6", "9e1d45f4-7cee-44b5-a911-803c95b3fa07", "c0d65b45-33bb-47a2-b16b-48a493a762cb"]
+disambiguations = ["88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d", "c3c01e92-520e-5358-a58f-0cc7e9c9e6fa"]
+comparator_theorems = ["indexedControls"]
+
+[[argument]]
+id = "9c974b88-13e7-4160-b894-ab06ed00fc04"
+label = "Indexed no efficient self-causation from indexed cause priority"
+theorem = "indexedNoSelfCauseFromPriority"
+premises = ["b402ca7b-964c-4eeb-bef7-2751d1bcba2a", "32d77f18-a9c2-5486-b51c-a24f32863af4"]
+conclusion = "872ff8b6-cc9d-4656-8691-b1ae7aa6304e"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Apply SelfCausationPriority.noSelfCauseFromPriority in each accessible history at each moment, with the same unindexed PriorSimply"
+meaning = "Second Way support, history by history and moment by moment, for the indexed no-self-efficient-cause premise 4f1e13dd. In each accessible history v at each moment t, the OPEN indexed cause-priority premise 06a9ad24 makes every efficient cause then and there simply prior (PRIOR_1, the single frame field PriorSimply) to its effect, and nothing is simply prior to itself (32d77f18), so by the verified SelfCausationPriority.noSelfCauseFromPriority nothing is then and there its own efficient cause. 06a9ad24 is an analyst statement with attribution deferred: the Aquinas claim on the selected-time e078f07b does not extend to it. 32d77f18 concerns only the unindexed PriorSimply and is used as registered. No temporal priority is inferred. No premise is established."
+definitions = ["1d8c68c3-a256-4ba1-8d84-224a4583b803", "69c0b23e-54c7-57a1-871f-839c6e5514c6", "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"]

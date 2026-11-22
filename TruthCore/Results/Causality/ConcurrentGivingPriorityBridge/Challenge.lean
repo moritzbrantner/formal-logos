@@ -25,11 +25,30 @@ theorem noSelfGivingFromEfficientPriority {W B T R : Type}
     NoSelfGivingOnAccessible F w := by
   sorry
 
+theorem noSelfGivingFromIndexedNoSelfCause {W B T R : Type}
+    (F : CausalityFrame W B T R)
+    (EfficientlyCausesAt : W → T → B → B → R → Prop) (w : W)
+    (hBridge : SelfGivingIsEfficientSelfCauseAt F EfficientlyCausesAt w)
+    (hNoSelfCause : NoEfficientSelfCauseOnAccessible F EfficientlyCausesAt w) :
+    NoSelfGivingOnAccessible F w := by
+  sorry
+
+theorem indexedNoSelfCauseFromPriority {W B T R : Type}
+    (F : CausalityFrame W B T R)
+    (EfficientlyCausesAt : W → T → B → B → R → Prop) (w : W)
+    (hPrior : EfficientCauseIsPriorOnAccessible F EfficientlyCausesAt w)
+    (hNoPrior : NothingPriorToItselfReading F.PriorSimply) :
+    NoEfficientSelfCauseOnAccessible F EfficientlyCausesAt w := by
+  sorry
+
 open TruthCore.Causality.ConcurrentGivingPriorityBridge.Control
 open TruthCore.Causality.MetricBeginningArrival.Control (selfGivingFrame)
 open TruthCore.Causality.MetricGrimReaper.Control (PosReal)
 
 theorem controls : Certificate := by
+  sorry
+
+theorem indexedControls : IndexedCertificate := by
   sorry
 
 end TruthCore.Results.Causality.ConcurrentGivingPriorityBridge
