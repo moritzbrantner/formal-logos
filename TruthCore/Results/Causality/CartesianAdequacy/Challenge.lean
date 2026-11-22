@@ -29,10 +29,9 @@ open TruthCore.Causality.CartesianAdequacy
 open TruthCore.Causality.Round3FourthWay (MoreInExceedsDegree)
 open TruthCore.Latin.Aquinas.SummaTheologiae
   (PerfectionsOfEffectPreexistInCauseReading MoreSuchHasThePerfectionReading
-  MaximumInGenusCausesAllInGenusReading ActualityOnlyInsofarAsBeingReading)
+  MaximumInBeingCausesAllBeingsReading ActualityOnlyInsofarAsBeingReading)
 open TruthCore.Greek.Aristotle.Metaphysics (CauseOfQualityInAnotherIsMoreSuchReading)
 open TruthCore.Case.Catholicism
-open TruthCore.Logic (ExcludedMiddle)
 open TruthCore.Logic (ExcludedMiddle)
 
 /-- Containment in every cause and the cause-of-being transfer give PEPC: a
@@ -118,13 +117,16 @@ theorem asymmetricFromUniform {W B T R : Type} (F : GradesFrame W B T R)
 distinct from g: if g = x, it already has that perfection formally; otherwise
 g causes the exemplar's esse and hence contains its cognitive respect formally
 or eminently. This uses explicit excluded middle and holds at the SAME g.
+Genus causality is needed only at being (`MaximumInBeingCausesAllBeingsReading`,
+the `r = esse` instance), so no maximum's causation of any particular perfection,
+including the intellectual respect, is assumed.
 No intrinsic intellect or actual exercise is concluded. -/
 theorem godContainsFromIntellectualExemplar {W B T R : Type}
     (F : GradesFrame W B T R) (A : ActFrame B R)
     (IsGod HasIntellect : B → Prop) (intellectual : R)
     (hMaximal : GodIsMaximalInBeing IsGod F.InAct F.MoreIn F.esse)
-    (hGenus : MaximumInGenusCausesAllInGenusReading
-      F.InAct F.MoreIn F.CausesIn)
+    (hGenus : MaximumInBeingCausesAllBeingsReading
+      F.InAct F.MoreIn F.CausesIn F.esse)
     (hBeing : ActualityOnlyInsofarAsBeingReading F.InAct F.esse)
     (hSome : ∃ x, HasIntellect x)
     (hEM : ExcludedMiddle)
@@ -153,21 +155,29 @@ theorem firstMoverContainsIntellect {W B T R : Type}
   sorry
 
 /-- Explicit remaining API bridge to HAS_INTELLECT_1: the formal and virtual
-branches require DIFFERENT recognition obligations. In particular an
-effective power to cause intellectual beings is not by definition an intrinsic
-capacity for intentional understanding. This is an adapter, not a discharge
-of either recognition premise or a new will route. -/
+branches require DIFFERENT recognition obligations, each needed only at the
+GOD_4 bearers (not at every being, so neither is asserted of secondary
+producers of cognitive beings). The theorem is neutral between the two readings
+of `InActVirtually` that DEF-IN-ACT-VIRTUALLY currently merges, productive power
+to produce the perfection and possession of it "in a higher way"; the warrant of
+the eminent-recognition premise differs between them and remains OPEN. This is
+an adapter, not a discharge of either recognition premise or a new will route. -/
 theorem intrinsicIntellectOfContainment {B R : Type}
     (A : ActFrame B R) (IsGod HasIntellect : B → Prop) (intellectual : R)
     (hContains : GodContainsIntellectualPerfection A IsGod intellectual)
-    (hFormalRecognition : ∀ b, A.InActFormally b intellectual → HasIntellect b)
-    (hEminentRecognition : ∀ b, A.InActVirtually b intellectual → HasIntellect b) :
+    (hFormalRecognition : ∀ g, IsGod g →
+      A.InActFormally g intellectual → HasIntellect g)
+    (hEminentRecognition : ∀ g, IsGod g →
+      A.InActVirtually g intellectual → HasIntellect g) :
     GodHasIntellect IsGod HasIntellect := by
   sorry
 
-/-- Populated finite separation of formally cognitive effect, inclusive causal
-containment, intrinsic source intellect and actual exercise; with a second
-model witnessing cognitive production without containment. -/
+/-- Populated finite structural surrogates: a joint nonvacuity witness of the
+non-logical inputs of `godContainsFromIntellectualExemplar` in which the
+GOD_4-restricted eminent-recognition premise fails, and a second model with
+cognitive production but no formal-or-eminent containment. The primitives are
+independent there, so this certifies non-entailment in that profile only, not
+a difference of meaning. -/
 theorem formalEminentControls : FormalEminentControl.Controls := by
   sorry
 

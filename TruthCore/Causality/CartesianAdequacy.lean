@@ -4,6 +4,7 @@ public import TruthCore.Causality.GradesFrame
 public import TruthCore.Causality.Round3FourthWay
 public import TruthCore.Causality.TermSenseForks2
 public import TruthCore.Case.Catholicism.StageTwo
+public import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question2.Article3QuartaViaOrder
 public import TruthCore.Case.Catholicism.CauseOfBeingHasBeing
 
 /-!
@@ -176,7 +177,8 @@ perfection already constitutes the intrinsic power HAS_INTELLECT_1.
 
 open TruthCore.Causality.TermSenseForks (ActFrame)
 open TruthCore.Latin.Aquinas.SummaTheologiae
-  (PerfectionsOfEffectPreexistInCauseReading MaximumInGenusCausesAllInGenusReading)
+  (PerfectionsOfEffectPreexistInCauseReading MaximumInBeingCausesAllBeingsReading
+  ActualityOnlyInsofarAsBeingReading)
 open TruthCore.Case.Catholicism (GodIsMaximalInBeing)
 
 /-- A formally possessed effect-perfection preexists formally or eminently in
@@ -198,23 +200,34 @@ def GradesActIsInclusive (F : GradesFrame W B T R)
     (A : ActFrame B R) : Prop :=
   ∀ x r, F.InAct x r → A.InActFormallyOrVirtually x r
 
-/-- One supplied GOD_4 bearer contains the specified intellectual respect in
+/-- Every supplied GOD_4 bearer contains the specified intellectual respect in
 formal or eminent act. This is NOT the primitive `GodHasIntellect`, which
 denotes intrinsic cognitive capacity, still less its current exercise. -/
 def GodContainsIntellectualPerfection (A : ActFrame B R)
     (IsGod : B → Prop) (intellectual : R) : Prop :=
   ∀ g, IsGod g → A.InActFormallyOrVirtually g intellectual
 
-/-! ## Populated finite semantic controls
+/-! ## Populated finite semantic controls (structural surrogates)
 
 There are exactly two beings: false is an intellectual effect; true is the
-universal source for both the being and cognitive respects. The source contains
-the cognitive respect *virtually* but not formally. Neither intrinsic intellect
-nor exercised understanding is assigned to it. A second reading removes the
-virtual perfection at the source without changing its causing of the effect.
-Both retain the two directed calibrations; this tests adequacy rather than an
-arbitrary dictionary mismatch. The models do not certify the real-world truth
-or falsity of the q.4 premise or a complete GOD_4 root bundle.
+universal source for both the being and cognitive respects. The source is
+assigned the cognitive respect *virtually* but not formally, and the primitive
+`intellect` (the stand-in for `HasIntellect`) is not assigned to it. A second
+reading removes the virtual perfection at the source without changing its
+causing of the effect. Both retain the two directed calibrations.
+
+These tables are STRUCTURAL SURROGATES. `InActVirtually` and `intellect` are
+independent primitives here, assigned by stipulation. The first table
+certifies only that, in this primitive profile, the listed input bundle of
+`godContainsFromIntellectualExemplar` does not entail the eminent-recognition
+premise (virtual intellectual possession at the GOD_4 bearer gives
+`HasIntellect`). It is NOT evidence of a difference in meaning between eminent
+intellectual containment and intrinsic intellect: whether eminent containment
+in DEF-IN-ACT-VIRTUALLY's "higher way" sense includes intrinsic intellect is
+OPEN, and on that substantive-eminence reading the table is not an admissible
+model. The models do not certify the real-world truth or falsity of the q.4
+premise or a complete GOD_4 root bundle. No capacity/exercise relation is
+formalized here.
 -/
 namespace FormalEminentControl
 
@@ -255,38 +268,45 @@ def formalOnlyAct : ActFrame Bool Bool where
 
 def source (b : Bool) : Prop := b = true
 def intellect (b : Bool) : Prop := b = false
-def allHaveCapacity (_ : Bool) : Prop := True
-def understandsNow (_ : Bool) : Prop := False
 
-/-- The all-input reading witnesses a real formal cognitive effect and its
-eminent cause, maximality and genus at the same source, but NOT source-level
-intrinsic intellect or present understanding. An all-capacity alternative at
-the very same structural dictionary also has no present exercise. The
-omission reading retains cognitive production and both calibrations but denies
-formal-or-eminent containment. -/
+/-- First table: every non-logical hypothesis of
+`godContainsFromIntellectualExemplar` holds (GOD_4 maximality, being-only genus
+causality, actuality-to-being, an intellectual exemplar and its formal
+calibration, the effect-side calibration and asymmetric preexistence; excluded
+middle is a logical principle, not a model clause), together with the
+cause-side calibration, uniform q.4 preexistence and the formal-recognition
+premise, even in universal form. So the table is a joint nonvacuity witness of
+that bundle, while the GOD_4-restricted eminent-recognition premise fails.
+Within this primitive profile that pins which recognition premise the bundle
+leaves open; it says nothing about the substantive-eminence reading (see the
+section comment). Second table: cognitive production, maximality, being-only
+genus causality and both calibrations hold, while asymmetric
+formal-or-eminent preexistence fails. -/
 def Controls : Prop :=
   (∃ x, intellect x ∧ grades.CausesIn true x grades.esse ∧
     act.InActFormally x true) ∧
+  (∀ x, intellect x → act.InActFormally x true) ∧
   FormalActEntersGrades grades act ∧
   GradesActIsInclusive grades act ∧
   PerfectionsOfEffectPreexistInCauseReading
     grades.InAct grades.CausesIn grades.esse ∧
   FormalEffectPreexistsInclusively grades act ∧
   GodIsMaximalInBeing source grades.InAct grades.MoreIn grades.esse ∧
-  MaximumInGenusCausesAllInGenusReading
-    grades.InAct grades.MoreIn grades.CausesIn ∧
+  MaximumInBeingCausesAllBeingsReading
+    grades.InAct grades.MoreIn grades.CausesIn grades.esse ∧
+  ActualityOnlyInsofarAsBeingReading grades.InAct grades.esse ∧
   GodContainsIntellectualPerfection act source true ∧
-  ¬ (∀ g, source g → intellect g) ∧
-  (∀ g, source g → allHaveCapacity g) ∧
-  ¬ (∀ g, source g → understandsNow g) ∧
+  (∀ b, act.InActFormally b true → intellect b) ∧
+  ¬ (∀ g, source g → act.InActVirtually g true → intellect g) ∧
   FormalActEntersGrades formalOnlyGrades formalOnlyAct ∧
   GradesActIsInclusive formalOnlyGrades formalOnlyAct ∧
   (∃ x, intellect x ∧ formalOnlyGrades.CausesIn true x formalOnlyGrades.esse ∧
     formalOnlyAct.InActFormally x true) ∧
   GodIsMaximalInBeing source formalOnlyGrades.InAct formalOnlyGrades.MoreIn
     formalOnlyGrades.esse ∧
-  MaximumInGenusCausesAllInGenusReading
-    formalOnlyGrades.InAct formalOnlyGrades.MoreIn formalOnlyGrades.CausesIn ∧
+  MaximumInBeingCausesAllBeingsReading
+    formalOnlyGrades.InAct formalOnlyGrades.MoreIn formalOnlyGrades.CausesIn
+    formalOnlyGrades.esse ∧
   ¬ FormalEffectPreexistsInclusively formalOnlyGrades formalOnlyAct
 
 end FormalEminentControl

@@ -441,15 +441,19 @@ now makes this *separate* option precise without counting it as another
 certified intellect route: `CartesianAdequacy.asymmetricFromUniform` uses
 formal effect IN_ACT_1, formal/virtual cause IN_ACT_3 and two directional
 bridges to the original IN_ACT_4. `godContainsFromIntellectualExemplar`
-takes an existing GOD_4 maximum g, one intellectual exemplar x, a formal
-cognitive exemplar calibration and q.4 preexistence, and concludes inclusive
-possession at that SAME g. The explicit excluded-middle branch handles x = g
-by formal possession; when x ≠ g the source causes x's esse before transfer. It does **not** conclude
-`HasIntellect g`; explicit formal/eminent-to-intrinsic recognitions are still
-needed, as the finite control with an intellectual effect and eminently
-intellectual but intrinsically noncognitive source witnesses. These controls
-are statements about the selected semantic profile, not defeaters of the
-metaphysical premise. The cognitive-perfection branch does not replace the
+takes an existing GOD_4 maximum g, being-only genus causality, one
+intellectual exemplar x, a formal cognitive exemplar calibration and q.4
+preexistence, and concludes inclusive possession at that SAME g. The explicit
+excluded-middle branch handles x = g by formal possession; when x ≠ g the
+source causes x's esse before transfer. It does **not** conclude
+`HasIntellect g`; explicit formal/eminent-to-intrinsic recognitions at the
+GOD_4 bearers are still needed. The finite control shows only that, in a
+primitive profile where `InActVirtually` and `HasIntellect` are independent,
+the listed bundle does not entail the eminent-recognition premise. It is a
+structural surrogate: whether eminent containment in DEF-IN-ACT-VIRTUALLY's
+"higher way" sense includes intrinsic intellect remains OPEN, and on that
+reading the table is not an admissible model. These controls are not defeaters
+of the metaphysical premise. The cognitive-perfection branch does not replace the
 three already registered intrinsic-intellect routes or the `090be689`
 intellect-to-will input. None concludes current cognizing,
 omniscience (#1737) or exercised choice. `HasWill` is capacity-level

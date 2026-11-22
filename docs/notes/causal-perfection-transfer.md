@@ -1773,7 +1773,9 @@ that every effect-perfection is formally possessed.
 `godContainsFromIntellectualExemplar` says that every already supplied GOD_4
 bearer `g` contains a chosen intellectual perfection formally or eminently.
 Its complete additional inputs, beyond the asymmetric q.4 result, are: GOD_4
-`g` is an esse maximum; a maximum causes every other actual being's esse;
+`g` is an esse maximum; genus causality **at being only**
+(`MaximumInBeingCausesAllBeingsReading`, the `r = esse` instance: every
+maximum in being causes every other actual being's esse);
 actuality implies actuality of esse; **one intellectual exemplar** `x` exists;
 `HasIntellect x` is calibrated to *formal* possession of the chosen intellectual
 respect; formal-to-IN_ACT_4 calibration; and excluded middle for the identity
@@ -1782,7 +1784,14 @@ When `x ≠ g`, the proof uses `CausesIn g x esse` and the very SAME `g`
 as the conclusion, not a second maximum or an unaligned cause. The theorem
 does not require an intellectual exemplar distinct from every GOD_4 bearer,
 nor the stronger `UniversalCauseTransfersPerfections` that would claim
-causal responsibility for each particular cognitive perfection. The existing q.4 first-mover theorem supplies a second
+causal responsibility for each particular cognitive perfection. (Until the
+challenge repair below, the theorem took the all-respect
+`MaximumInGenusCausesAllInGenusReading`, which also asserts that any maximum in
+the intellectual respect causes every other being's intellectual respect, a
+particular-perfection causation commitment this route claims to avoid. The
+proof used only the esse instance, so the hypothesis was weakened. The existing
+GOD_4 routes that reach `hMaximal` still consume the all-respect genus premise,
+which remains a shared dependency of the whole route, not of this step.) The existing q.4 first-mover theorem supplies a second
 pointwise connection, `firstMoverContainsIntellect`, from one formally
 intellectual exemplar and both calibrations; the mover relation is **exactly**
 `F.MovesIn` from the supplied grades frame (only the `MovedIn` predicate is
@@ -1798,26 +1807,40 @@ GodHasIntellect and GodHasWill conclusions are not being redefined.
 | --- | --- |
 | A first source causes a being with intellect | Conditional on the existing same-source/maximum, causal-genus and a formally intellectual exemplar. If that exemplar is the source itself, no new causal production is inferred; otherwise the maximum causes its **esse**, not necessarily its particular intellectual capacity or episodes |
 | That source formally or eminently contains the cognitive perfection | Follows conditionally from the asymmetric q.4 principle, exemplar classification and explicit calibrations; the result uses the original first source, not an arbitrary intellectual producer |
-| That source intrinsically **has intellect** (HAS_INTELLECT_1) | **OPEN.** `intrinsicIntellectOfContainment` explicitly requires separate formal-possession-to-intellect and eminent-possession-to-intellect recognition premises; it proves only the modular logical handoff, not their warrant |
+| That source intrinsically **has intellect** (HAS_INTELLECT_1) | **OPEN.** `intrinsicIntellectOfContainment` explicitly requires separate formal-possession-to-intellect and eminent-possession-to-intellect recognition premises, each only at the GOD_4 bearers (so neither is asserted of secondary producers of cognitive beings); it proves only the modular logical handoff, not their warrant |
 | That source is **actually understanding now** | **Not derived.** Even intrinsic capacity is not an occurrence; no exercise, intentional object, knowledge content or divine timeless actuality is inferred |
 | That source **has will** (HAS_WILL_1) | Requires HAS_INTELLECT_1 plus existing `WillFollowsIntellectReading`; reuse `LocalTeleologyGodIntellect.godHasWill`, never identify eminent production, willing capacity and actual choice |
 
-**Finite discriminators and rival.** `FormalEminentControl.Controls`
+**Finite structural surrogates and rival.** `FormalEminentControl.Controls`
 uses two beings (source `true`, cognitive effect `false`) and two respects
-(esse `false`, intellect `true`). In its positive table the effect
-formally possesses intellect, the source possesses it virtually but **not**
-formally; the source is the maximum, causes the effect's esse, and satisfies
-the genus, both sense calibrations, q.4 uniform preexistence and asymmetric
-preexistence. Nonetheless the primitive `HasIntellect` holds only of the
-effect. Even a separate assignment of intrinsic capacity to the source
-(`allHaveCapacity`) has no current understanding
-(`understandsNow = False`). In the second table the same source actually
-causes the formally intellectual effect but has neither formal nor virtual
-cognitive possession: both calibrations and maximum/genus hold while the
-asymmetric preexistence premise fails. Thus *production* alone is not
-*containment*, and containment need not be *intrinsic cognition*; the
-controls are structural finite semantics, **not** a refutation of the
-metaphysical causal-adequacy premise or a model of all God-existence premises.
+(esse `false`, intellect `true`). In its first table the effect is assigned
+formal intellectual possession and the source virtual but **not** formal
+possession; the source is the maximum and causes the effect's esse. Every
+non-logical hypothesis of `godContainsFromIntellectualExemplar` holds jointly
+(maximality, being-only genus, actuality-to-being, the exemplar and its formal
+calibration, the effect-side calibration, asymmetric preexistence; excluded
+middle is a logical principle), as do the cause-side calibration, uniform q.4
+preexistence and the formal-recognition premise even in universal form, while
+the GOD_4-restricted eminent-recognition premise fails: the primitive
+`HasIntellect` stand-in holds only of the effect. In the second table the same
+source causes the formally intellectual effect but is assigned neither formal
+nor virtual cognitive possession: both calibrations, maximality and being-only
+genus hold while asymmetric preexistence fails.
+
+What this certifies, exactly: *in this primitive profile*, production with the
+calibrations does not entail containment, and the listed bundle does not entail
+the eminent-recognition premise. It is a **structural surrogate**:
+`InActVirtually` and `HasIntellect` are independent primitives assigned by
+stipulation. It is **not** evidence that eminent containment and intrinsic
+intellect differ in meaning. Whether eminent containment in
+DEF-IN-ACT-VIRTUALLY's sourced "has it in a higher way" sense includes
+intrinsic intellect is **OPEN**; on that substantive-eminence reading the first
+table is not an admissible model, and the table must not be used as evidence
+on that reading. No capacity/exercise relation is formalized (an earlier
+`allHaveCapacity`/`understandsNow` pair was unconnected to `HasIntellect` and
+reduced to "a source exists"; it was removed in the challenge repair). The
+controls are **not** a refutation of the metaphysical causal-adequacy premise
+or a model of all God-existence premises.
 
 The serious surviving positive rival interprets eminence as *productive
 power*: an intellectually nonrepresenting first source sustains/grounds the
@@ -1864,10 +1887,111 @@ teleology's first-source recognition; none is silently defeated.
 **Delivery boundaries.** Existing statement IDs, source readings, direct
 premise options, registered argument graph, and will modular consumer are
 unchanged. The added Lean declarations are conditional helper theorems and
-finite-model certificates pending independent semantic challenge and
-verification. Claim/type self-sweep: no new or retyped claim, source
+finite structural-surrogate certificates; the independent semantic challenge
+and its repair are recorded below. Claim/type self-sweep: no new or retyped claim, source
 attribution, corpus argument, result or selected-root consumer. Expected
 `truth frontier-diff`: no premise change; the actual computed CI result is
 the authority, not that expectation. Review of this added interpretation
 must distinguish the theorem's exact antecedents, positive-model scope,
 and intrinsic-recognition gap from a new full-root route.
+
+### Independent semantic challenge repair (2026-11-22)
+
+The independent semantic challenge of PR #1855 (reviewed head `ae52cc8e29`)
+accepted the validity of all four theorems and the same-witness claim, and
+raised two P1 findings, both repaired in the PR:
+
+- **Surrogate overclaim.** The finite control had been described as showing
+  that causation, inclusive possession and intrinsic intellect are
+  "nonidentical meanings" and that the source is "eminently intellectual but
+  intrinsically noncognitive". Because `InActVirtually` and `HasIntellect` are
+  unconstrained primitives there, it shows only non-entailment in that profile.
+  The note, attempt, `teleology-first-mover.md` and Lean doc comments now call
+  it a structural surrogate (see "Finite structural surrogates" above).
+- **Genus scope.** `godContainsFromIntellectualExemplar` now takes the
+  being-only `MaximumInBeingCausesAllBeingsReading` instead of the all-respect
+  genus reading. This weakens a hypothesis of an unregistered, unmerged
+  Challenge theorem (the theorem becomes stronger); no registered result,
+  argument or comparator configuration binds it.
+
+P2 repairs: the two recognition premises of `intrinsicIntellectOfContainment`
+are now restricted to GOD_4 bearers (the proof uses them only there; the
+universal form would also give intellect to every noncognitive secondary
+producer of cognitive beings and so begged the productive-power rival); the
+degenerate capacity/exercise clauses were removed from the control, which now
+also certifies actuality-to-being, the exemplar calibration and the
+recognition pair, making the first table a joint nonvacuity witness of the
+theorem's non-logical inputs; doc-comment wording was corrected.
+
+**Recorded gap: the virtual/eminent sub-fork.** DEF-IN-ACT-VIRTUALLY's
+sourced definition joins two readings: "a power to produce" the perfection
+(productive-power eminence) and "has it in a higher way" (substantive
+eminence). Lean has one primitive, `ActFrame.InActVirtually`, and no separate
+declaration for either reading, so no sense record can yet be added with a
+distinct Lean type. The fork is recorded here rather than in
+DEF-IN-ACT-VIRTUALLY's `open_obligations`, because that record and
+DISAMB-IN-ACT are hash-pinned by the reviewed classical-attributes bundle
+audits (`scripts/bundle_audit.py`); adding it to the record needs that
+audit's re-review. The warrant of the eminent-recognition premise differs
+completely between the readings (weak on productive power, the live question
+on substantive eminence); `intrinsicIntellectOfContainment` is neutral
+between them. The fork must be split into distinct senses before any
+registered connection to `29818edd` consumes the eminent-recognition premise.
+
+### Coordinator follow-up on the second q.4 a.2 route (2026-11-22; UNREVIEWED)
+
+The following findings come from a coordinator follow-up comment on PR #1855.
+They have **not** had an independent semantic challenge. They are recorded as
+provisional research leads, not as reviewed judgments, and nothing below
+changes a recorded formal status.
+
+- **Second q.4 a.2 route.** Besides efficient-cause preexistence, ST I q.4
+  a.2 argues from subsistent esse that the first source has the whole
+  perfection of being, including life and wisdom (ad 3). The corpus already
+  represents this through `WholePowerPerfection.OwnBeingLacksNoPerfectionOfBeing`,
+  `PurePerfectionsPertainToBeing` and
+  `Results.Causality.WholePowerPerfection.rootPerfectionFromWholePower`, on each
+  supplied actual root: `OwnBeing g`, `Pure wisdom` and the two universal
+  inputs give `Has g wisdom`, bypassing any premise that the same cause
+  produces each particular cognitive perfection. But `Has : B → D → Prop` is
+  generic and separate from both `ActFrame.InActFormallyOrVirtually` and
+  HAS_INTELLECT_1: a bare `d : D` named wisdom plus `Pure d` does not establish
+  that `Has g d` is intrinsic truth-directed cognition. Extending this route to
+  HAS_INTELLECT_1 needs an argument that the positive content of understanding
+  is preserved in the source's analogical possession. A finite joint
+  assignment (enumerated in Python, not Lean-certified) keeps causal
+  preexistence and whole-being possession of `wisdom` while `HasIntellect`
+  fails at the source; like the Lean control above, it is a structural
+  surrogate and is not admissible if `Has g wisdom` by meaning constitutes
+  intrinsic wisdom.
+- **Caveat on result `c55e2ce2`.**
+  `DeiFiliusOperationFromIntellect.intellectualPureActOperatesFromCapacity`
+  derives a unary `Operates` from intrinsic intellect, pure act and three
+  capacity/exercise premises, but the shared `InAct` in its exercise premise is
+  inclusive formal-or-virtual. As interpreted, merely virtual cognitive
+  possession could count as exercise. Neither `Operates g` nor inclusive
+  `InAct g understanding` entails intentional representation or actual
+  self-understanding. Do not clone that result or read it as an occurrence
+  proof. For actual divine understanding, mode of possession
+  (formal/eminent) and status of intentional operation (exercised or not,
+  timeless exercise allowed) are two separate axes.
+- **Matched-scope rival.** A single nonrepresenting first source sustains
+  lawful secondary architectures with naturalized representation and rational
+  capacities (reuse the producer/consumer, sensor/replay and thinking-source
+  comparisons of `intentionality-943.md`, `form-selection-1380.md` and
+  `mind-physicalism-fork-419.md`). It can grant productive eminence and must
+  deny either that wisdom is a pure perfection of subsistent being or that
+  analogical `Has` preserves wisdom's immanent truth-directed content.
+- **Next test (A)/(B).** On the existing same-source GOD_4 / ActualRoot
+  witnesses, hold causal sources and effects fixed and compare (A) generic
+  virtual productive possession with (B) subsistent-being wisdom with
+  intrinsic intentional content; state the weakest nontranscription bridge
+  from `Has g wisdom` to source-borne cognitive understanding; separately test
+  the pure-act capacity/exercise route of `c55e2ce2` against its virtual-acting
+  reading. No GodHasIntellect argument should be registered until that bridge
+  has semantic warrant and a checked result.
+- **Unreviewed provisional ranking.** The comment judges the
+  subsistent-being/whole-perfection route a "materially stronger positive
+  support candidate for intrinsic wisdom" than bare causal production. This is
+  an influential judgment that has not had its own challenge; it is recorded
+  here and must not be relied on until reviewed.
