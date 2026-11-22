@@ -125,16 +125,27 @@ Both `ActualConcreteWholeAt` and `ContingentWholeAt` are independently open.
 No modal possibility of a physical translation, global simultaneity, or real
 cosmological beginning is assumed. The conclusion is only
 `SPATIOTEMPORAL_2` non-occupation, not absence of spatiotemporal relation,
-parthood, presence by power, or divine eternity.
+parthood, presence by power, or divine eternity. It is non-occupation of a
+region of the one supplied frame `F` (the spacetime whose whole is named in the
+premises); `Located` is not world-indexed, and nothing is said about other
+frames.
+
+Throughout this section "existential grounding" and "grounds" mean only the
+selected world-indexed `Profile.grounds` relation of the necessary-underived
+route. Per the `existence-esse-support` disambiguation, that relation is not
+the act of being (DEF-ESSE), Aquinas' cause of esse or efficient causation;
+an answer to a Thomistic question about the occupant's esse would not by
+itself transfer to the Lean premise.
 
 ### Ontological comparison
 
 | Interpretation | How the spacetime whole is interpreted | Exact unresolved issue |
 | --- | --- | --- |
-| Independent spacetime substance | Candidate `F.whole` may be numerically distinct and concrete | Why it is contingent and why location makes the **occupant's esse** depend on the whole, rather than merely allowing motion or physical occupation |
+| Independent spacetime substance | Candidate `F.whole` may be numerically distinct and concrete | Why it is contingent and why location makes the **occupant's existence depend on the whole in the selected `Profile.grounds` relation**, rather than merely allowing motion or physical occupation |
 | Relational structure | Locations and metric/event relations belong to a system of relations, with no extra existing spacetime individual required | An existing whole cannot be inferred from relational data or an orbit quotient. A different supported truthmaker or ontic-constitution bridge would be needed |
 | Physically fundamental spacetime | Basic to the admitted physical model or laws | Physical fundamentality is not modal necessity, metaphysical priority or underivedness: neither contingency nor the direction of existential dependence follows |
 | Derivative/grounded structure | Spacetime may depend on underlying fields, objects or relations | A whole-to-occupant grounding edge may point in the **opposite direction**; an explicit same-domain relation and source must replace the positive premise |
+| Unrestricted whole priority (priority monism, supersubstantival whole-priority) | The whole grounds **every** other actual concretum, located or not | Checked control `unrestrictedInconsistent`: without the `Located F x` antecedent the bridge (`UnrestrictedWholePriorityAt`) contradicts the other three premises by the proof of `selectedUnlocated`, since the whole would ground the distinct underived root. The located restriction therefore carries the positive work, and warrant for the bridge cannot simply be borrowed from unrestricted whole-priority views; the restriction to occupants needs its own justification |
 
 ### Exact mathematical and ontological distinctions
 
@@ -143,7 +154,8 @@ displacements and pair distances; its no-selector theorem depends on a
 deterministic, covariant absolute-position selector. The identity criteria prove
 equivalence of relational, orbit and represented identity only with additional
 data-preservation, orbit-completeness and triviality assumptions. Neither result
-supplies `ExistsAt`, `ContingentAt`, numerical identity or grounding of esse.
+supplies `ExistsAt`, `ContingentAt`, numerical identity or a `Profile.grounds`
+edge (still less esse in the DEF-ESSE sense).
 
 The Lorentz boost certifies invariant interval and `GeometricBefore` order
 while changing remote simultaneity for a spacelike pair. A coordinate event,
@@ -160,8 +172,17 @@ ontological bridges.
 
 ### Nonvacuity, omission and root integration
 
-The same `NecessaryConcreteUnderived.witnessProfile` supplies a populated
-finite control. At world `false`, the actual concrete spacetime whole `true`
+**Joint model.** `jointModel` (a companion Comparator theorem of the same
+result) checks that the four premises of `derive` are jointly satisfiable
+with a located occupant distinct from the whole. In `jointProfile`/`jointFrame`
+the root exists at both worlds, is ungrounded and occupies no region; the
+whole and the occupant exist only at the selected world `false`, both occupy
+the one region, and the only grounding edge is whole-to-occupant at `false`.
+Like the omission control it is a structural surrogate (`related` and
+`partOf` empty), not a claimed actual or physically possible spacetime.
+
+**Omission.** The same `NecessaryConcreteUnderived.witnessProfile` supplies a
+populated finite control. At world `false`, the actual concrete spacetime whole `true`
 is contingent, while the existing root `false` is necessary and underived.
 The root actually grounds the whole, `grounds false false true`, and every
 candidate occupies the one region. There is **no** ground from the whole
@@ -175,23 +196,34 @@ Its output is an additional **conditional attribute option**, not a new
 proof of `STMT-GOD-EXISTS` or discharge of any root premise. The existing
 `NecessaryClassicalGodRootFromUnderived.derive` carries one root witness
 through stage-two attributes, but the public existential result does not
-identify the newly unlocated witness with the classical `GOD_4` bearer.
-A future consumer must thread the *same* `x`, `m`, `w`, and `F`
-through that result; conjoining two different existential conclusions is
-invalid. The extra openness and same-witness scope are deliberate.
+identify the newly unlocated witness with the classical `GOD_4` bearer, and
+conjoining two different existential conclusions is invalid. The gap is
+narrower than rethreading `derive`: `selectedUnlocated` is pointwise and is
+the reusable entry point. A `GOD_4` consumer needs only that its own bearer
+`n` satisfies `UnderivedConcreteAt m w n` in the same `m` and `w`, together
+with the whole, contingency and bridge premises for the same `F`; then `n`
+itself is unlocated in `F`.
 
 **Exact remaining philosophical question:** Does the actual spacetime whole
 exist as a contingent *concrete* individual, and does dimensive occupation by
-a distinct concrete being imply that the selected whole existentially grounds
-that being's own esse, rather than merely furnishing geometric or physical
-conditions? Give the grounding direction and a same-relation applicability
+a distinct concrete being imply that the selected whole grounds that being's
+existence in the selected `Profile.grounds` relation, rather than merely
+furnishing geometric or physical conditions? (This is not the question whether
+spacetime causes the occupant's act of being, DEF-ESSE.) Any answer must also
+justify the restriction to located occupants, since the unrestricted form is
+inconsistent with the other premises. Give the grounding direction and a same-relation applicability
 argument, or reject this conditional route and retain the relational or
 derivative alternative. Neither translation symmetry nor relativity can
 resolve it. Proper divine eternity remains on the independently open
 Boethian-recognition route.
 
-The new Challenge was frozen before writing Solution. The registered result
-requires final Lean, binding, Comparator and NanoDa verification; its
-philosophical interpretation additionally requires an independent semantic
-challenge. Formal validity, metaphysical applicability and identification with
+The new Challenge was frozen before writing Solution. The independent semantic
+challenge on PR #1857 (head `cd50b381`) accepted the consequence and found one
+wording P1 (esse versus the selected `Profile.grounds` relation) and four P2s
+(frame-relative nonlocation, no joint model, the located restriction, the
+consumer gap); they are repaired above. Its two companion controls,
+`jointModel` and `unrestrictedInconsistent`, were appended to the Challenge as
+new declarations before their proofs, leaving the three original Challenge
+theorems unchanged. The registered result requires final Lean, binding,
+Comparator and NanoDa verification. Formal validity, metaphysical applicability and identification with
 the root's GOD_4 witness must be assessed separately.

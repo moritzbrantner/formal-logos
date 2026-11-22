@@ -4,7 +4,9 @@
   "theorem_names": [
     "TruthCore.Results.Ontology.SpacetimeGroundingBridge.derive",
     "TruthCore.Results.Ontology.SpacetimeGroundingBridge.selectedUnlocated",
-    "TruthCore.Results.Ontology.SpacetimeGroundingBridge.omission"
+    "TruthCore.Results.Ontology.SpacetimeGroundingBridge.omission",
+    "TruthCore.Results.Ontology.SpacetimeGroundingBridge.jointModel",
+    "TruthCore.Results.Ontology.SpacetimeGroundingBridge.unrestrictedInconsistent"
   ],
   "permitted_axioms": [
     "propext",

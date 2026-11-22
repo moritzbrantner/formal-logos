@@ -35,4 +35,21 @@ occupation and contingent spacetime do not entail the bridge. -/
 theorem omission : OmissionControl := by
   sorry
 
+/-- Companion control, added in the semantic-challenge repair (the three
+theorems above are unchanged): the four premises of `derive` have a joint
+model with a located occupant distinct from the whole. -/
+theorem jointModel : JointModel := by
+  sorry
+
+/-- Companion control: dropping the `Located F x` antecedent of the bridge
+makes it inconsistent with the other three premises of `derive`. -/
+theorem unrestrictedInconsistent {W B : Type} (m : Profile W B) (w : W)
+    (F : Frame B)
+    (hUnderived : NecessaryConcreteUnderivedAt m w)
+    (hWhole : ActualConcreteWholeAt m w F)
+    (hCont : ContingentWholeAt m w F)
+    (hPrior : UnrestrictedWholePriorityAt m w F) :
+    False := by
+  sorry
+
 end TruthCore.Results.Ontology.SpacetimeGroundingBridge
