@@ -243,8 +243,19 @@ class PlannerTests(unittest.TestCase):
         cm = next(a for a in actions if a["action"] == "countermodel")
         self.assertTrue(any("attempt cap" in r for r in cm["refused"]))
 
+    def test_separate_binders_support_misidentification(self):
+        trace = bp.Trace(None)
+        f = finding("t", ["ptor"])
+        trace.add({"key": "k1", "goal_label": bp.goal_label(f), "action": "known-bundle",
+                   "goal": {"command": "discover"}, "outcome": {"status": "unresolved"},
+                   "binders": [{"name": "R", "from": f"{A}.PtoR.R", "sense": None},
+                               {"name": "CausesIn_2", "from": "M.P.CausesIn", "sense": "s|_ _ esse"}]})
+        diag = {d["code"]: d for d in bp.classify(f, self.corpus, OPTIONS, [], trace.entries)}
+        self.assertEqual(diag["c"]["status"], "supported")
+        self.assertIn("M.P.CausesIn (partial-application tag)", diag["c"]["evidence"][-1])
+
     def test_known_modulo_logic(self):
-        corpus = make_corpus(self.root, [("k", ["ptor", "em"], "t")])
+        corpus = make_corpus(self.root, [("k", ["ptor", "em"], "t"), ("free", [], "rtoq")])
         self.assertEqual(corpus.known(["ptor"], "t"), {"arguments": ["k"], "modulo_logic": True})
         self.assertEqual(corpus.known(["ptor", "em"], "t")["modulo_logic"], False)
         self.assertIsNone(corpus.known(["rtoq"], "t"))

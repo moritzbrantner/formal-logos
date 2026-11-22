@@ -455,14 +455,30 @@ class Corpus:
 
     def known(self, premises, target: str) -> dict | None:
         """Whether the target composes from verified arguments over the
-        premises; `modulo_logic` when only with the logic statements added."""
-        have, fired = self.closure(premises, logic=False)
-        if target in have:
-            return {"arguments": fired, "modulo_logic": False}
-        have, fired = self.closure(premises, logic=True)
-        if target in have:
-            return {"arguments": fired, "modulo_logic": True}
+        premises; `modulo_logic` when only with the logic statements added.
+        `arguments` is the chain of fired arguments the target rests on."""
+        for logic in (False, True):
+            have, fired = self.closure(premises, logic=logic)
+            if target in have:
+                return {"arguments": self.chain(fired, target, set(premises)),
+                        "modulo_logic": logic}
         return None
+
+    def chain(self, fired: list[str], target: str, given: set) -> list[str]:
+        by_id = {a["id"]: a for a in self.verified}
+        concluding = {}
+        for aid in fired:
+            concluding.setdefault(by_id[aid]["conclusion_statement_id"], aid)
+        out, todo, seen = [], [target], set()
+        while todo:
+            s = todo.pop()
+            if s in seen or s in given or s not in concluding:
+                continue
+            seen.add(s)
+            aid = concluding[s]
+            out.append(aid)
+            todo.extend(by_id[aid].get("premise_statement_ids", []))
+        return list(reversed(out))
 
     def only_through(self, statement: str, target: str) -> bool:
         """True when `statement` has verified derivations and every one of them
@@ -512,11 +528,25 @@ class Corpus:
         return sorted(rows)
 
 
+SOLVER_INPUTS = ("corpus", "TruthCore", "scripts/Discover.lean", "scripts/DiscoverRepair.lean")
+
+
 def revision(root: Path) -> str:
+    """The source revision of the solver inputs: the Git objects of the corpus,
+    the library and the two Lean scripts (not of this tool), so that a change
+    of the repair tool alone does not make an old solver input look new; and
+    the commit it was read at."""
+    import hashlib
     head = git(root, "rev-parse", "HEAD", check=False).strip() or "unknown"
-    dirty = git(root, "status", "--porcelain", "--", "corpus", "TruthCore", "scripts",
-                check=False).strip()
-    return head + ("+dirty" if dirty else "")
+    objects = git(root, "rev-parse", *[f"HEAD:{p}" for p in SOLVER_INPUTS], check=False)
+    dirty = git(root, "status", "--porcelain", "--", *SOLVER_INPUTS, check=False).strip()
+    inputs = hashlib.sha256(objects.encode()).hexdigest()[:12]
+    return f"inputs {inputs}{'+dirty' if dirty else ''} at {head[:12]}"
+
+
+def input_revision(rev: str) -> str:
+    """The part of a revision string that identifies solver inputs."""
+    return rev.split(" at ")[0]
 
 
 def solver_key(goal: dict, corpus: Corpus) -> str:
@@ -524,7 +554,7 @@ def solver_key(goal: dict, corpus: Corpus) -> str:
     domain policy and the tags the goal's declarations carry."""
     import hashlib
     decls = [corpus.declaration(goal["target"])] + [corpus.declaration(p) for p in goal["premises"]]
-    payload = {"command": goal["command"], "revision": goal.get("revision", ""),
+    payload = {"command": goal["command"], "revision": input_revision(goal.get("revision", "")),
                "target": decls[0], "premises": sorted(decls[1:]),
                "heartbeats": goal["heartbeats"], "strict": goal.get("strict_domains", False),
                "tags": corpus.lean_tags(decls)}
@@ -632,6 +662,20 @@ def reusable_lemmas(corpus: Corpus, bundle: list[str], target: str,
     return out
 
 
+def fresh_binders(binders: list[dict]) -> list[str]:
+    """Outer binders renamed (`X_2`, `X_3` …): a premise binder of the same
+    name as an earlier one that nothing identified with it (`freshUserName`
+    in `scripts/Discover.lean`), with the tag it carries, if any."""
+    out = []
+    for b in binders:
+        if b.get("name") and b["name"] != b.get("from", "").rsplit(".", 1)[-1]:
+            tag = b.get("sense") or "untagged"
+            kind = "partial-application tag" if "|" in tag else (
+                "whole-binder tag" if tag != "untagged" else "untagged")
+            out.append(f"{b.get('from')} ({kind})")
+    return out
+
+
 def classify(finding: dict, corpus: Corpus, options: dict, rows: list[dict],
              attempts: list[dict]) -> list[dict]:
     """The six alternative diagnoses with their status and evidence."""
@@ -712,6 +756,11 @@ def classify(finding: dict, corpus: Corpus, options: dict, rows: list[dict],
             mark("b", "supported", f"{tag}: closes once the lemma is in the goal")
         if out.get("status") == "closed-known" and at["action"] == "known-bundle":
             mark("b", "supported", f"{tag}: the known argument's premises close it (retrieval gap)")
+        if out.get("status") == "unresolved" and at.get("goal", {}).get("command") == "discover":
+            split = fresh_binders(at.get("binders", []))
+            if split:
+                mark("c", "supported", f"{tag}: binders left separate (no whole-binder tag or "
+                                       f"same-module name joins them): {', '.join(split[:4])}")
         if out.get("status") == "unresolved" and at["action"] == "strict-domains":
             mark("c", "supported", f"{tag}: without the by-name carrier fallback the goal does not close")
         if out.get("status") == "unresolved" and at["action"] == "budget":
@@ -918,16 +967,15 @@ def run_lean(corpus: Corpus, labelled: list[tuple[str, dict]], *, lock: str | No
                     extra_lean_path, str(path)]
         else:
             argv = [*launcher, "env", "lean", str(path)]
+        # The time limit bounds Lean, not the wait for the heavy-job lock.
+        argv = ["timeout", "--kill-after=30", str(timeout), *argv]
         if lock:
             Path(lock).parent.mkdir(parents=True, exist_ok=True)
             argv = ["flock", lock, *argv]
         env = {**os.environ, "TRUTH_DISCOVER_LOG": str(log)}
-        try:
-            done = subprocess.run(argv, cwd=TOOL_ROOT, env=env, capture_output=True,
-                                  text=True, timeout=timeout)
-            output, failure = done.stdout + done.stderr, None
-        except subprocess.TimeoutExpired:
-            output, failure = "", f"Lean timed out after {timeout}s"
+        done = subprocess.run(argv, cwd=TOOL_ROOT, env=env, capture_output=True, text=True)
+        output = done.stdout + done.stderr
+        failure = f"Lean timed out after {timeout}s" if done.returncode in (124, 137) else None
         logged = log.read_text() if log.exists() else ""
     outcomes: dict[str, dict] = {}
     for line in (logged + "\n" + output).splitlines():
