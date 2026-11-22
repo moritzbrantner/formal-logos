@@ -1,0 +1,26 @@
+{
+  "id": "59336904-26c1-4562-a276-d7c4252ffb23",
+  "label": "Cartesian causal adequacy compared with q.4 a.2 preexistence and the cause-of-perfection premises",
+  "date": "2026-11-22",
+  "statement_ids": [
+    "64498e7e-7f10-54a0-9ec0-c65e6076de1f",
+    "f8ba2429-b4f1-5712-a4d3-798213963d34",
+    "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+    "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d",
+    "634a80b8-470e-4d2f-9dd0-fc868e4a62a0",
+    "90c0d77f-4c87-407d-8e7d-c8f01c44b115",
+    "87f41688-c06f-4fe9-994b-0682a4be3038"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Analyst formulations over the shared GradesFrame, attribution deferred (navigation: Descartes, Meditation III; no source records). Verdicts. (1) Respect-wise containment in every cause (634a80b8: whatever causes x's being r, with x in act in r, is in act in r, mode open, IN_ACT_4) is an ALLY and hinge of q.4 a.2 preexistence (PEPC, 64498e7e): with the cause-of-being transfer f8ba2429 it gives PEPC (result 77485e04), and it follows from the strict Aristotelian comparative d5a94eb1, more-such-has-the-perfection c11369aa and excluded middle (result 877bcd00). Together these factor the existing four-premise derivation PERFECTION-PREEXISTENCE-FROM-CAUSAL-TRANSFER through one hinge. The 2026-11-20 discover diagnosis (attempt 9869069b) had reported 'CausesIn c x r gives InAct c r' as the missing bridge for PEPC; 634a80b8 is that bridge, stated over one frame. It is an analyst strengthening of the Cartesian clause, not attributed. (2) The faithful total-cause reading (90c0d77f, efficient and total cause, definition 33ebf451) is a STRENGTH-ORDERED VARIANT: 634a80b8 strengthens it (result cd313585, relation 93dd9b29; strictness not registered). (3) Total-cause containment and PEPC are DISTINCT STATEMENTS, neither entailing the other (two finite grades frames, result b704a38d): PEPC is about every perfection of an effect whose being a cause, possibly partial, causes; total-cause containment is about the perfection a total cause causes. The gap from the Cartesian clause to PEPC is exactly the transfer f8ba2429 plus containment for partial causes. (4) The transfer statements f8ba2429, b26c10a0 and the CausalPerfectionTransfer reconstruction are ALLIES of a different kind: they say which perfections a cause of being causes, not what a cause has; they compose with containment (through the existing reconstruction b26c10a0 with the residual 5a4afaa5 gives f8ba2429) and are not rivals or strength variants of it. (5) 'At least as much reality' is a comparative. On MORE_2's degree side (represented degree in a preorder, DEF-PER-RESPECT-DEGREE-FAMILY), the strict comparative d5a94eb1 with the open calibration MoreInExceedsDegree (98755509) and excluded middle gives the non-strict deg r x ≤ deg r c for total causes (87f41688, result 69ead222). On bare MORE_1 it does not: a two-being control where MoreIn holds both ways satisfies the strict comparative and more-such-has while 'no effect is more r than its total cause' fails (result bc769e84). So the Cartesian non-strict comparative is a weakening of the Aristotelian strict one only through the calibration or an asymmetry premise for MoreIn. Rivals: the recorded strong-emergence rival 3143560d targets PEPC; with f8ba2429 it equally targets containment in every cause (by result 77485e04). No further substantive objection identified to the containment hinge itself; the Cartesian-circle objection has no target here (no clear-and-distinct-perception premise). Nothing is established; every new statement is open.",
+  "evidence": [
+    "77485e04-a7f5-4ed4-88c4-758cb32d55b0",
+    "877bcd00-0ed5-4617-9bca-b265c7bc64d1",
+    "cd313585-6bce-43fc-83d0-0d67ebe49113",
+    "b704a38d-f87d-45ff-83e7-6a280c0ca53f",
+    "69ead222-999b-48fb-94d8-3f255fe1ec08",
+    "bc769e84-ca67-403e-b14a-527e4a9c8a3b"
+  ],
+  "blocker": "Strictness of the strength order and a certified strength_comparison (#1598) are not registered. The objective-reality version of adequacy and the Meditation III argument are recorded in attempt 7e8fcf16."
+}

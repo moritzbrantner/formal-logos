@@ -1,0 +1,26 @@
+{
+  "id": "33ebf451-eb02-48f5-b420-24a34da9b865",
+  "label": "Efficient and total cause of a thing's being r: a CAUSE_2 cause whose causing needs no co-cause",
+  "term": "efficient and total cause",
+  "definition": "`TotalCauseIn F Total c x r` holds exactly when F.CausesIn c x r (c is a cause of x's being r, CAUSE_2 of the grades frame) and Total c x r: c's causing of x's being r is total, it needs no co-cause alongside c. The contrast is a partial cause (concausa), one that produces the effect only together with others. Total is a primitive binder; TotalCauseIn conjoins it with the frame's cause relation, so that every total cause is a cause by definition and nothing else about Total is assumed.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.CartesianAdequacy.TotalCauseIn",
+  "note": "Analyst stipulation, attribution deferred (navigation: Descartes, Meditation III, 'the efficient and total cause'; the Second Replies axiom speaks of the 'first and adequate' cause, which is not formalized here). Example: a fire that alone heats water is a total cause of its heat; a spark that ignites a fuel whose stored energy produces the explosion is a partial cause of the explosion's energy. Exclusions: total is not sole (two total causes of one effect are not excluded), not first (a total cause may itself be caused) and not modal sufficiency. Open obligation: no law relates Total to CausesIn, InAct or MoreIn beyond the conjunction; the frame lacks a co-cause relation from which Total could be defined.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Total c x r says that c's causing of x's being r needs no co-cause alongside c. Lean fixes only its type B → B → R → Prop; a model supplies the relation.",
+    "examples": [
+      "A fire that alone heats water is a total cause of the water's heat.",
+      "A spark igniting a fuel is a partial, not a total, cause of the explosion's energy."
+    ],
+    "exclusions": [
+      "Sole cause: two total causes of one effect are not excluded.",
+      "First cause: a total cause may itself be caused.",
+      "Modal sufficiency: no world-indexed necessitation is expressed."
+    ],
+    "open_obligations": [
+      "No law relates Total to CausesIn, InAct or MoreIn; TotalCauseIn only conjoins Total with CausesIn.",
+      "A definition of Total from a co-cause relation would need a frame field the shared frames do not have."
+    ]
+  }
+}

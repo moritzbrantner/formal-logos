@@ -1,0 +1,24 @@
+{
+  "id": "81e0fc32-9065-4f6d-a5d0-845d3644545e",
+  "label": "Containment in every cause entails containment in total causes",
+  "premise_statement_ids": [
+    "634a80b8-470e-4d2f-9dd0-fc868e4a62a0"
+  ],
+  "conclusion_statement_id": "90c0d77f-4c87-407d-8e7d-c8f01c44b115",
+  "inference_ids": [
+    "ae4380b7-0b16-47c8-b883-ec7e5f20ba7a"
+  ],
+  "meaning": "Strength order registration: if every cause of x's being r contains r, then so does every efficient and total cause, for every totality relation. Same InAct, CausesIn and respects. It establishes neither statement; strictness is not registered here (a model with no total causes and a lacking partial cause would witness it).",
+  "definition_ids": [
+    "33ebf451-eb02-48f5-b420-24a34da9b865",
+    "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
+  ],
+  "weakening": true
+}

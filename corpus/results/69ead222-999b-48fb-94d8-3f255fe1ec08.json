@@ -1,0 +1,11 @@
+{
+  "id": "69ead222-999b-48fb-94d8-3f255fe1ec08",
+  "label": "At least as much degree in a total cause, from the strict comparative and calibration",
+  "argument_id": "c974d1f0-df19-4091-9b6e-377cf78336e2",
+  "challenge_module": "TruthCore.Results.Causality.CartesianAdequacy.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CartesianAdequacy.Solution",
+  "theorem": "TruthCore.Results.Causality.CartesianAdequacy.degreeAdequacyOfStrictComparative",
+  "comparator_config": "results/69ead222-999b-48fb-94d8-3f255fe1ec08/comparator.json",
+  "status": "solution-present",
+  "description": "MORE_2 side of the comparison. If the total cause c is x itself, deg r x ≤ deg r x. If not, the strict comparative makes c more r than x (MORE_1), and the open calibration STMT MoreInExceedsDegree (98755509) turns that into deg r x < deg r c, hence ≤. So the Aristotelian strict comparative, which applies to every distinct cause, strengthens to the Cartesian non-strict comparative for total causes only through the explicit MORE_1-to-degree calibration. Premises other than excluded middle stay open."
+}

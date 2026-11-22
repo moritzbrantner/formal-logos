@@ -1,0 +1,11 @@
+{
+  "id": "cd313585-6bce-43fc-83d0-0d67ebe49113",
+  "label": "Containment in every cause entails containment in total causes",
+  "argument_id": "81e0fc32-9065-4f6d-a5d0-845d3644545e",
+  "challenge_module": "TruthCore.Results.Causality.CartesianAdequacy.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CartesianAdequacy.Solution",
+  "theorem": "TruthCore.Results.Causality.CartesianAdequacy.totalContainmentOfContainment",
+  "comparator_config": "results/cd313585-6bce-43fc-83d0-0d67ebe49113/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration: if every cause of x's being r contains r, then so does every efficient and total cause, for every totality relation. Same InAct, CausesIn and respects. It establishes neither statement; strictness is not registered here (a model with no total causes and a lacking partial cause would witness it)."
+}

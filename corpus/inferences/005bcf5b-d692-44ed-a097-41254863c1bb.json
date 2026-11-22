@@ -1,0 +1,14 @@
+{
+  "id": "005bcf5b-d692-44ed-a097-41254863c1bb",
+  "label": "At least as much degree in a total cause, from the strict comparative and calibration (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d",
+    "98755509-18d3-5282-bd66-47202d916266"
+  ],
+  "output_statement_id": "87f41688-c06f-4fe9-994b-0682a4be3038",
+  "rule": "Excluded middle on c = x; strict comparative, calibration, strict-to-weak order",
+  "meaning": "MORE_2 side of the comparison. If the total cause c is x itself, deg r x ≤ deg r x. If not, the strict comparative makes c more r than x (MORE_1), and the open calibration STMT MoreInExceedsDegree (98755509) turns that into deg r x < deg r c, hence ≤. So the Aristotelian strict comparative, which applies to every distinct cause, strengthens to the Cartesian non-strict comparative for total causes only through the explicit MORE_1-to-degree calibration. Premises other than excluded middle stay open.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

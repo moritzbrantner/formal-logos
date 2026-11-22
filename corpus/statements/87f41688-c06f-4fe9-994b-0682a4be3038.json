@@ -1,0 +1,15 @@
+{
+  "id": "87f41688-c06f-4fe9-994b-0682a4be3038",
+  "label": "A total cause of a thing's being r has at least as high a represented degree of r as the thing",
+  "paraphrase": "Analyst formulation of 'at least as much reality in the efficient and total cause as in its effect' on a represented degree (navigation: Descartes, Meditation III; attribution deferred): for a degree assignment deg : R → B → D in a preorder, whenever c is the efficient and total cause of x's being r, deg r x ≤ deg r c. It uses the represented degree family (DEF-PER-RESPECT-DEGREE-FAMILY), not the MORE_2 comparative itself: it is the non-strict counterpart of MORE_2, and '≤' is 'at least as much', not merely 'not exceeded'. Open.",
+  "lean_declaration": "TruthCore.Causality.CartesianAdequacy.AtLeastAsMuchDegreeInTotalCause",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1",
+    "8323604a-2e7a-554c-9b32-d82e5201271d",
+    "33ebf451-eb02-48f5-b420-24a34da9b865"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}
