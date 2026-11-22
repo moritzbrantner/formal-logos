@@ -87,6 +87,7 @@ public import TruthCore.Results.Causality.ConcreteExistentialSupply.Solution
 public import TruthCore.Results.Causality.ConcreteRootAccess.Solution
 public import TruthCore.Results.Causality.ConcurrentActualization.Solution
 public import TruthCore.Results.Causality.ConcurrentCessation.Solution
+public import TruthCore.Results.Causality.ConcurrentGivingPriorityBridge.Solution
 public import TruthCore.Results.Causality.ConstitutiveConfiguration.Solution
 public import TruthCore.Results.Causality.ConstitutiveNatureUniqueness.Solution
 public import TruthCore.Results.Causality.ContingentAncestry.Solution

@@ -574,6 +574,42 @@ particular, may not satisfy an independently justified account of temporal
 concreteness. Neither omission is inserted into the new bridge unannounced.
 Their proof and Comparator certificates remain pending.
 
+**Second Way support for no-self-giving (2026-11-22, #1863; attempt
+[`33fd084a`](../../corpus/attempts/33fd084a-e59c-4855-918e-d69ac33bdc3c.json)).**
+Spec `specs/concurrent-giving-priority-bridge.toml`. Efficient causation is a
+supplied relation `EfficientlyCausesAt v t c x r` indexed by history and moment
+(definition `1d8c68c3`): for each fixed `v` and `t` it is the here-and-now
+efficient causing of EFFICIENT_CAUSING_2 (`69c0b23e`) read in that history at
+that moment. The one cross-sense premise is the OPEN self-edge bridge
+`ca5d4eaa` (`SelfGivingIsEfficientSelfCauseAt`): in every accessible `v` at
+every `t`, `GivesAt v c c t` implies `EfficientlyCausesAt v t c c esse`. Both
+indices are kept, so nothing is moved between histories or moments. It is NOT
+`F.CausesIn` (cause of a perfection), and it is separate from the efficient-esse
+bridge `DistinctActualEsseCauseIsEfficient` (`8934912c`), which covers only
+causes distinct from their effect. With the OPEN indexed no-self premise
+`872ff8b6` (in no accessible history at no moment is anything its own efficient
+cause) it gives `0e473dc4` (result `a59169d5`). `872ff8b6` itself follows from
+the OPEN indexed cause-priority premise `b402ca7b` and nothing-prior-to-itself
+`32d77f18`, by the verified `SelfCausationPriority.noSelfCauseFromPriority`
+applied in each history at each moment with the single unindexed `PriorSimply`
+(result `9ed661bd`). `872ff8b6` and `b402ca7b` are analyst statements. They are
+stronger than the selected-time Aquinas statements `8b2561cd` and `e078f07b`
+only given that the selected world is accessible from itself (accessibility is
+not reflexive by construction) and that the old unindexed relation is read as
+the indexed one at the selected world and a selected moment. The Aquinas claims
+do not extend to them; the *nec est possibile* of q.2 a.3 is an unchecked
+candidate basis for `872ff8b6`. The indexed omission control keeps both Second
+Way premises while the bridge and no-self-giving fail.
+
+A first version used an index-free bridge (`SelfGivingIsEfficientSelfCause`)
+with the existing `8b2561cd` or `e078f07b`. Because its consequent dropped the
+history and moment, it needed those selected-time statements under a modal
+reading the corpus registers as strictly stronger (relation `3a61a9fb`, result
+`8e634495`, disambiguation `57f80020`). Its records were withdrawn before merge;
+the Lean declarations remain in the frozen Challenge, marked superseded.
+Given the equivalence above, supporting `0e473dc4` does not discriminate against
+a rival who denies that a necessary concretum is possible.
+
 **What "begins" means in B1** (spec
 `specs/modal-spine-metric-beginning-arrival.toml`, attempt
 [`9d141c6c`](../../corpus/attempts/9d141c6c-7979-4d8b-a1b4-7b35ebc9fb21.json)).

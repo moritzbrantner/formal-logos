@@ -1,0 +1,15 @@
+{
+  "id": "ca5d4eaa-29a2-4771-81fa-107bdc85556c",
+  "label": "Self-giving in an accessible history at a moment is efficient self-causation there and then",
+  "paraphrase": "OPEN analyst cross-sense causal bridge, attribution deferred: in every history v accessible from the selected world and at every moment t, if c exercises strict GivesAt v c c t toward its OWN being, then in v at t c is an efficient cause of its own being (EfficientlyCausesAt v t c c esse). EfficientlyCausesAt v t is the here-and-now efficient causing of EFFICIENT_CAUSING_2 read in history v at moment t; both indices are kept, so nothing is moved between histories or moments. The bridge concerns only the self-edge. It does not identify the frame's CausesIn perfection-causation relation with efficient causes, require a physical temporal interval, or claim any real self-giving is possible. It is separate from the existing efficient-esse bridge DistinctActualEsseCauseIsEfficient (definition 8934912c), which passes from CausesIn to the tenseless EfficientlyCausesEsse only for causes distinct from their effect and so cannot cover the self-edge.",
+  "lean_declaration": "TruthCore.Causality.ConcurrentGivingPriorityBridge.SelfGivingIsEfficientSelfCauseAt",
+  "definition_ids": [
+    "1d8c68c3-a256-4ba1-8d84-224a4583b803",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6"
+  ],
+  "disambiguation_ids": [
+    "88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d",
+    "c3c01e92-520e-5358-a58f-0cc7e9c9e6fa"
+  ]
+}

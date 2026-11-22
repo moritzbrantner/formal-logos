@@ -1,0 +1,11 @@
+{
+  "id": "b402ca7b-964c-4eeb-bef7-2751d1bcba2a",
+  "label": "In every accessible history at every moment, an efficient cause is PRIOR_1 to its effect",
+  "paraphrase": "OPEN analyst premise, attribution deferred: in every history accessible from the selected world and at every moment, whatever is then and there an efficient cause of x in some respect is simply prior to x (the single unindexed frame relation PriorSimply). It is the all-histories, all-moments version of e078f07b; the Aquinas claim on e078f07b does not extend to it.",
+  "lean_declaration": "TruthCore.Causality.ConcurrentGivingPriorityBridge.EfficientCauseIsPriorOnAccessible",
+  "definition_ids": [
+    "1d8c68c3-a256-4ba1-8d84-224a4583b803",
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"
+  ]
+}
