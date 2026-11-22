@@ -1,0 +1,38 @@
+{
+  "id": "5b2b6d82-fe27-4c9b-90c6-ae719a329c9d",
+  "label": "Proper-part omission audit of the uniter-to-esse bridge",
+  "date": "2026-11-22",
+  "statement_ids": [
+    "6b80cfe4-82e1-53d3-9c7c-6564e52a25de",
+    "fbee7f15-f54b-5a67-9773-3c09ca7015f4",
+    "ca07cae9-6102-564e-a7fd-efb013744b3d",
+    "65602595-151d-5e39-9429-32f1fca0dd66"
+  ],
+  "kind": "countermodel",
+  "outcome": "succeeded",
+  "summary": "Scoped follow-up to #1751/#1810 and the qualified 2026-11-18 union-bundle reassessment. The original Bool omission of fbee7f15 allowed the composite itself as one of its numerically distinct ComponentOf components. That proof was logically valid but did not discriminate the stronger q.11 a.1 proper-part reading. The expanded Article7Uniting.Control.Certificate adds a nondegenerate Fin 4 interpretation: the inhabited whole 3 has two components 0 and 1, each demonstrably distinct from whole 3; a third individual 2 is a non-self efficient uniter in Unit respect and actual Unites tuples exist. The other four union inputs hold, while CausesIn at esse is empty and ca07cae9 fails. This is a strengthened formal independence control, not an assertion that any ontology actually has this relation. Reused the existing Certificate/Challenge/solution and all unchanged Five-Way union consequences; no new premise, intermediate graph leaf, witness switch or proof of fbee7f15. Repaired prose in statements ca07cae9 and 6b80cfe4 to match Lean exactly: the former demands a numerically distinct cause of esse but does not assert the selected witness is a uniter, presently actual or nonpart; the latter merely requires two different components, not both proper. Re-read existing pinned q.3 a.7/q.11 a.1 scope records and SCG I.18 n.4 support relation; they do not state the uniter-to-esse claim. The same-bearer productive-source interpretation is a positive path to warrant but is not a theorem or direct source attribution. Prior qualified pro-composition assessment and strong immanent rival preserved. Kernel/Comparator/CI certification is pending at creation of this record; only after those pass does the extended certificate become verified. No substantive status grade or root frontier change is proposed.",
+  "evidence": [
+    "7047dfa6-c015-518e-889f-9f4717faaba0",
+    "531a2fe8-13a6-56b8-8572-9771269b6263",
+    "e017e2d6-30fd-5344-9b59-76a34712dc09"
+  ],
+  "blocker": "Still OPEN: for a genuinely existing same composite x, why does an efficient cause of its constituent union also produce or sustain x’s positive esse, rather than merely its form, arrangement or generative event? The current-world actuality/correspondence interfaces and the whole-first restriction/reception bridge remain independent. Next substantive comparison: #1810 with #1811 on that same x and same existential causal relation; repeating the old Bool omission fixture alone does not answer it.",
+  "current_assessment": {
+    "date": "2026-11-22",
+    "statement_ids": [
+      "6b80cfe4-82e1-53d3-9c7c-6564e52a25de",
+      "fbee7f15-f54b-5a67-9773-3c09ca7015f4",
+      "ca07cae9-6102-564e-a7fd-efb013744b3d",
+      "65602595-151d-5e39-9429-32f1fca0dd66"
+    ],
+    "scope": "Source-faithfulness and formal independence for the third-proof union-to-esse package when the two components are proper and the nonself uniter is efficient. This refines the existing #1751 11/18 and #1728 11/17 assessments, without replacing their substantive warrant grades.",
+    "assessment": "The earlier six Bool fixtures showed conditional independence only for the weaker numerical-diversity encoding (which permitted one component identical to the whole). The new Fin 4 model makes both constituents proper, ensures a third distinct efficient uniter and a witnessed union, yet no cause of the composite's esse. The logical need for fbee7f15 therefore survives the faithful proper-part test. The OPEN existential-production bridge remains the same shared assumption in all five ca07cae9 support bundles. A positive Thomistic causal-production or participation explanation remains a plausible conditional option; a positive immanent/whole-first constitutional rival is not thereby defeated, and must answer the same positive-existence question. The root also needs actual-world presence and causal correspondence. Earlier 2026-11-18 restricted positive warrant, direct primitive support and qualified positive preference for the composition route are retained without grading change. Neither premise nor root is closed; the seventh control is a formal non-entailment test, not a metaphysical counterexample.",
+    "next_test": "For an actual composition-bearing x, distinguish the efficient producer of the union, the immanent formal cause of its substantial unity, and a distinct current producer of that very x’s esse. Identify and assess the specific productive-existence bridge (or a weaker local sufficient sibling) and carry the same c,x to the selected-world presence/correspondence interface. Compare with the positive necessary whole-first/reception account under #1810/#1811. Only a substantive difference from this proper-part model warrants reopening the omission test.",
+    "note": "docs/notes/composition-causal-scope.md#proper-part-and-union-to-esse-audit-2026-11-22-independent-review-pending",
+    "reviewed_revision": "5873b28ac70dd538a3ba0843e41a36fd33b036dc",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Proposed additive certificate at 5873b28ac70dd538a3ba0843e41a36fd33b036dc; independent semantic challenge and delivered-head CI pending. Reused reviewed assessment dd24400b on main; neither its acceptance nor proof verification is imputed to this addendum.",
+    "supersedes": "Only the sufficiency of the old six Bool interpretation controls as a test of genuine proper-part union, if previously read that way. Their formal independence claims remain valid. The qualified 2026-11-18 premise-warrant assessment and 2026-11-17 connected pure-actuality assessment are explicitly not superseded."
+  }
+}
