@@ -237,6 +237,7 @@ theorem formalEminentControls : FormalEminentControl.Controls := by
     FormalEminentControl.intellect, FormalEminentControl.allHaveCapacity,
     FormalEminentControl.understandsNow,
     TruthCore.Causality.TermSenseForks.ActFrame.InActFormallyOrVirtually]
-  decide
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  all_goals decide
 
 end TruthCore.Results.Causality.CartesianAdequacy
