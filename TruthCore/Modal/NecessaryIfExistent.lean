@@ -14,7 +14,7 @@ remain open. One-world conclusions concern successors of that world only. -/
 
 namespace TruthCore.Modal.NecessaryIfExistent
 open TruthCore.Isabelle.AFP.GoedelGod (MProp Box Dia)
-universe u
+universe u v
 variable {W : Type u}
 
 /-- The boxed conditional □(G → □G), at the named standpoint. It differs from
@@ -85,4 +85,21 @@ def Controls : Prop :=
   (NecessaryIf universal (fun _ => False) false ∧
     Dia universal (fun _ => ¬ False) false ∧
     ¬ Dia universal (fun _ => False) false)
+
+/-- A fixed candidate's world-relative existence and excellence, asserted at the
+witness world and throughout its accessible component. This is an analyst's
+*maximal-profile interface*, NOT a definition of GOD_4, an attributed reading
+of Plantinga, or evidence that the profile is jointly realizable. The same
+individual x occurs inside every accessible-world conjunct. -/
+def MaximalProfile {B : Type v} (F : Frame W)
+    (existsAt excellent : W → B → Prop) (x : B) (w : W) : Prop :=
+  existsAt w x ∧
+    ∀ next, F.access w next → existsAt next x ∧ excellent next x
+
+/-- An accessible world instantiates the complete fixed profile for one bearer.
+It is stronger than mere possible de dicto population of each attribute. -/
+def PossibleMaximalProfile {B : Type v} (F : Frame W)
+    (existsAt excellent : W → B → Prop) (w : W) : Prop :=
+  Dia F (fun next => ∃ x, MaximalProfile F existsAt excellent x next) w
+
 end TruthCore.Modal.NecessaryIfExistent
