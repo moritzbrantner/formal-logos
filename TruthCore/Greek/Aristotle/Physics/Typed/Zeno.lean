@@ -144,7 +144,7 @@ theorem infiniteCuts_withoutPerformedOperations (schedule : ConvergentZenoSchedu
   refine ⟨∅, mathematicalBisectionCuts_infinite schedule, ?_⟩
   intro h
   have h0 : bisectionCut 0 ∈ (∅ : Set ℝ) := h 0
-  exact Set.not_mem_empty _ h0
+  simpa using h0
 
 /-- Dichotomy: a continuous position x(t)=t encounters every checkpoint
 strictly before the endpoint and still reaches position 1 at time 1.
