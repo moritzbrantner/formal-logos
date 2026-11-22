@@ -347,6 +347,7 @@ public import TruthCore.Results.Causality.SpineRivalsStageOne.Solution
 public import TruthCore.Results.Causality.StrictPriorityPureAct.Solution
 public import TruthCore.Results.Causality.StrictPriorityPureActControls.Solution
 public import TruthCore.Results.Causality.SubjectFocalRoles.Solution
+public import TruthCore.Results.Causality.SubtractionArgument.Solution
 public import TruthCore.Results.Causality.SuccessionPotency.Solution
 public import TruthCore.Results.Causality.SupertaskFiniteObservation.Solution
 public import TruthCore.Results.Causality.SupertaskFinitePrefixShift.Solution

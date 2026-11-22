@@ -1,0 +1,11 @@
+{
+  "id": "6aba0bb4-6e43-43cc-832e-e60bff340452",
+  "label": "Possibly no concrete object, by subtraction",
+  "argument_id": "b47f4a11-e380-4392-9e42-d23351b78e7d",
+  "challenge_module": "TruthCore.Results.Causality.SubtractionArgument.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SubtractionArgument.Solution",
+  "theorem": "TruthCore.Results.Causality.SubtractionArgument.subtraction",
+  "comparator_config": "results/6aba0bb4-6e43-43cc-832e-e60bff340452/comparator.json",
+  "status": "solution-present",
+  "description": "The subtraction argument, analyst formulation: possibly no concrete object from S1, S2 and S3 throughout the accessible worlds, transitivity of the route frame and excluded middle. Not a transcription (invariant 16): the conclusion is reached by induction on the list, with a subtraction step per element; no premise mentions an empty world. Establishes no premise; S2 applied to a necessary being is the denial of the stage-one node (controls)."
+}
