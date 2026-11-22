@@ -505,16 +505,29 @@ class Corpus:
         routes = [a for a in self.verified if a.get("conclusion_statement_id") == statement]
         return bool(routes) and through(statement, frozenset())
 
+    def order_sensitive(self, declarations) -> list[str]:
+        """Binders carrying both a whole-binder and a partial-application tag:
+        whether `#discover` identifies them depends on which tag comes first."""
+        kinds: dict[tuple[str, str], set] = {}
+        for decl, binder, key in self.lean_tags(declarations):
+            kinds.setdefault((decl, binder), set()).add("|" in key)
+        return [f"{d}.{b}" for (d, b), k in kinds.items() if len(k) == 2]
+
     def lean_tags(self, declarations) -> list[list[str]]:
         """`[declaration, binder, key]` for the goal's declarations, keyed as
         `tag_key` in `truth/src/discover.rs` does (a partial application's key
-        carries `|`, so it never identifies binders)."""
+        carries `|`, so it never identifies binders), and in the engine's order:
+        disambiguation records by id, then senses and entries as listed. The
+        order matters: `senseOf` in `scripts/Discover.lean` takes a binder's
+        first tag, so a binder with a whole-binder and a partial-application
+        tag is identified or not by which comes first."""
         wanted = set(declarations)
         rows = []
         if not hasattr(self, "_disambiguations"):
-            self._disambiguations = [
-                json.loads(path.read_text())
-                for path in sorted((self.root / "corpus" / "disambiguations").glob("*.json"))]
+            self._disambiguations = sorted(
+                (json.loads(path.read_text())
+                 for path in (self.root / "corpus" / "disambiguations").glob("*.json")),
+                key=lambda record: record.get("id", ""))
         for record in self._disambiguations:
             for sense in record.get("senses", []):
                 for entry in sense.get("lean_parameters") or []:
@@ -524,8 +537,10 @@ class Corpus:
                     key = sense["id"]
                     if any(a != "_" for a in args):
                         key = f"{key}|{' '.join(args)}"
-                    rows.append([entry["declaration"], entry["parameter"], key])
-        return sorted(rows)
+                    row = [entry["declaration"], entry["parameter"], key]
+                    if row not in rows:
+                        rows.append(row)
+        return rows
 
 
 SOLVER_INPUTS = ("corpus", "TruthCore", "scripts/Discover.lean", "scripts/DiscoverRepair.lean")
@@ -713,6 +728,11 @@ def classify(finding: dict, corpus: Corpus, options: dict, rows: list[dict],
         if r["unidentified"]:
             mark("c", "supported", f"known argument {r['argument'][:8]} needs identifications "
                                    f"no tag records: {', '.join(r['unidentified'][:6])}")
+    decls = [corpus.declaration(finding["target"]["statement_id"])] + [
+        corpus.declaration(p) for p in finding.get("candidates", [])]
+    for binder in corpus.order_sensitive(decls):
+        mark("c", "possible", f"{binder} has a whole-binder and a partial-application tag; "
+                              "its identification depends on tag order")
     unresolved = not s["closed"] and not s["error"]
     if unresolved:
         mark("a", "possible", "Duper returned no proof; the engine does not record whether the "

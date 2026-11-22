@@ -254,6 +254,20 @@ class PlannerTests(unittest.TestCase):
         self.assertEqual(diag["c"]["status"], "supported")
         self.assertIn("M.P.CausesIn (partial-application tag)", diag["c"]["evidence"][-1])
 
+    def test_tags_follow_the_engine_order(self):
+        d = self.root / "corpus" / "disambiguations"
+        write(d / "a.json", {"id": "zz", "senses": [
+            {"id": "partial", "lean_parameters": [{"declaration": STATEMENTS["ptor"], "parameter": "R",
+                                                   "arguments": ["_", "x"]}]}]})
+        write(d / "b.json", {"id": "aa", "senses": [
+            {"id": "whole", "lean_parameters": [{"declaration": STATEMENTS["ptor"], "parameter": "R"}]}]})
+        corpus = bp.Corpus(self.root)
+        self.assertEqual([k for *_, k in corpus.lean_tags([STATEMENTS["ptor"]])],
+                         ["whole", "partial|_ x"])
+        self.assertEqual(corpus.order_sensitive([STATEMENTS["ptor"]]), [f"{STATEMENTS['ptor']}.R"])
+        diag = {d["code"]: d for d in bp.classify(finding("t", ["ptor"]), corpus, OPTIONS, [], [])}
+        self.assertIn("depends on tag order", diag["c"]["evidence"][0])
+
     def test_known_modulo_logic(self):
         corpus = make_corpus(self.root, [("k", ["ptor", "em"], "t"), ("free", [], "rtoq")])
         self.assertEqual(corpus.known(["ptor"], "t"), {"arguments": ["k"], "modulo_logic": True})
