@@ -1,0 +1,187 @@
+# The subtraction argument for metaphysical nihilism (possibly no concrete
+# object exists) and free recombination (Hume's dictum) as its support,
+# compared with the necessary-being nodes of the root route (the stage-one
+# node STMT-NECESSARY-CONCRETE-AT and the box K node STMT-NECESSARY-ROOT-BOX-K).
+# Analyst formulations; Baldwin 1996, Rodriguez-Pereyra 1997/2002, Efird and
+# Stoneham 2005, Lowe 1998/2002, Lewis 1986 and Armstrong 1989 are navigation
+# only, attribution deferred, no source claim. Refs #1784.
+
+[batch]
+vocab = "TruthCore.Causality.SubtractionArgument"
+results = "TruthCore.Results.Causality.SubtractionArgument"
+
+[[statement]]
+id = "Some world accessible from w has only finitely many concrete objects"
+lean = "PossiblyFinitelyManyConcrete"
+paraphrase = "Subtraction premise A1, analyst formulation, attribution deferred: on the route's profile m, some world accessible from w in m.ontic.frame has only finitely many concrete objects, read as: one finite list contains every candidate that is concrete and exists there. It bounds one world, not every accessible world (weaker than the population cover STMT-FINITE-POPULATION-COVER), and it says nothing about which objects they are."
+definitions = ["cdbbae1a-5cce-4367-b6b4-d135135a2ecd", "1b8baf77-84fa-5513-a138-7fa14840dd87", "f8948e28-b13a-5244-95f1-41a05cd4fff2", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+
+[[statement]]
+id = "At every world accessible from w, each concrete object there could fail to exist"
+lean = "EachConcreteCouldFailThroughout"
+paraphrase = "Subtraction premise A2, analyst formulation, attribution deferred: for every world v accessible from w in the route's frame, every candidate that is concrete and exists at v is absent at some world accessible from v. Universal over every concrete object, including any candidate necessary being; this scope is what the necessary-being nodes deny."
+definitions = ["cdbbae1a-5cce-4367-b6b4-d135135a2ecd", "1b8baf77-84fa-5513-a138-7fa14840dd87", "f8948e28-b13a-5244-95f1-41a05cd4fff2", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+
+[[statement]]
+id = "At every world accessible from w, a concrete object that could fail could fail with no newcomer"
+lean = "SubtractableThroughout"
+paraphrase = "Subtraction premise A3, conditional form, analyst formulation, attribution deferred: for every world v accessible from w and every concrete object x existing at v, if x is absent at some world accessible from v, then at some world accessible from v x is absent and every concrete object existing there exists at v (no newcomer). It realizes the absence jointly, at one world, not pairwise. The literal 'the non-existence of x does not necessitate the existence of any other concrete object' is this together with A2 (controls)."
+definitions = ["cdbbae1a-5cce-4367-b6b4-d135135a2ecd", "1b8baf77-84fa-5513-a138-7fa14840dd87", "f8948e28-b13a-5244-95f1-41a05cd4fff2", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+
+[[statement]]
+id = "Possibly no concrete object exists: some world accessible from w has no concrete object"
+lean = "PossiblyNoConcrete"
+paraphrase = "Conclusion of the subtraction argument (metaphysical nihilism about concreta), analyst formulation: some world accessible from w in the route's frame has no candidate that is concrete and exists there. It is the existing stage-one JointAbsence for the concrete-presence predicate. It does not say that nothing at all exists there: non-concrete candidates may exist."
+definitions = ["cdbbae1a-5cce-4367-b6b4-d135135a2ecd", "baddf770-36bf-542f-bb3c-2297342d5452", "1b8baf77-84fa-5513-a138-7fa14840dd87", "f8948e28-b13a-5244-95f1-41a05cd4fff2", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+
+[[statement]]
+id = "Not every concrete object existing at w could fail to exist"
+lean = "NotEachConcreteCouldFailAt"
+paraphrase = "Denial of subtraction premise A2 at the world w itself: it is not the case that every candidate that is concrete and exists at w is absent at some world accessible from w. It names no particular object and says nothing about uniqueness, God or any attribute."
+definitions = ["cdbbae1a-5cce-4367-b6b4-d135135a2ecd", "1b8baf77-84fa-5513-a138-7fa14840dd87", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+
+[[statement]]
+id = "Each concrete object existing at w could fail to exist"
+lean = "EachConcreteCouldFailAt"
+paraphrase = "Subtraction premise A2 at the world w itself, analyst formulation, attribution deferred: every candidate that is concrete and exists at w is absent at some world accessible from w. With excluded middle it is equivalent to the denial of STMT-NECESSARY-CONCRETE-AT at w (controls)."
+definitions = ["cdbbae1a-5cce-4367-b6b4-d135135a2ecd", "1b8baf77-84fa-5513-a138-7fa14840dd87", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+
+[[statement]]
+id = "Unrestricted free absence among distinct concrete candidates at w"
+lean = "UnrestrictedRecombinationAt"
+paraphrase = "Recombination, absence half of Hume's dictum, unrestricted, analyst formulation, attribution deferred: for any two distinct concrete candidates x and y, if x exists at some world accessible from w, then x exists without y at some world accessible from w. Pairwise only: it realizes no combination of more than two candidates at once. Applies to every concrete candidate, whatever its modal status."
+definitions = ["13c0abe7-25f7-4921-b52e-9f732edd6f2c", "1b8baf77-84fa-5513-a138-7fa14840dd87", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+
+[[statement]]
+id = "Free absence among distinct concrete candidates at w, for candidates that could be absent"
+lean = "ContingentRecombinationAt"
+paraphrase = "Recombination restricted to candidates that could be absent, analyst formulation: for any two distinct concrete candidates x and y, if x exists at some world accessible from w and y is absent at some world accessible from w, then x exists without y at some world accessible from w. Says nothing about a candidate that exists at every accessible world."
+definitions = ["13c0abe7-25f7-4921-b52e-9f732edd6f2c", "1b8baf77-84fa-5513-a138-7fa14840dd87", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+
+[[statement]]
+id = "Every concrete candidate with a distinct possible concrete companion could be absent at w"
+lean = "CompanionedConcretaPossiblyAbsentAt"
+paraphrase = "Difference statement: every concrete candidate y for which some distinct concrete candidate exists at some world accessible from w is itself absent at some world accessible from w. With companions it denies that any concrete candidate exists at every accessible world."
+definitions = ["13c0abe7-25f7-4921-b52e-9f732edd6f2c", "1b8baf77-84fa-5513-a138-7fa14840dd87", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+
+[[statement]]
+id = "Every concrete candidate has a distinct concrete candidate that could exist at w"
+lean = "ConcreteCompanionsAt"
+paraphrase = "Plurality premise, analyst formulation: for every concrete candidate y there is a distinct concrete candidate x that exists at some world accessible from w. No concrete candidate is the only possible concrete thing. It does not say that either exists actually."
+definitions = ["13c0abe7-25f7-4921-b52e-9f732edd6f2c", "1b8baf77-84fa-5513-a138-7fa14840dd87", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+
+[[statement]]
+id = "Unrestricted free absence is exactly contingent free absence plus companioned possible absence"
+lean = "RecombinationFactorsExact"
+paraphrase = "For every profile and world: unrestricted free absence among distinct concrete candidates holds iff free absence restricted to candidates that could be absent holds and every concrete candidate with a distinct possible concrete companion could be absent. A premise-free comparison; it asserts none of the three."
+definitions = ["13c0abe7-25f7-4921-b52e-9f732edd6f2c", "1b8baf77-84fa-5513-a138-7fa14840dd87", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+
+[[statement]]
+id = "Subtraction argument: laws, omission models and the theist model"
+lean = "Model.Controls"
+paraphrase = "Premise-free comparison. Laws, for all types: the stage-one node STMT-NECESSARY-CONCRETE-AT and the box K node each exclude 'possibly no concrete object' at their world with no frame condition; the literal non-necessitation premise is A2 plus conditional subtraction; elementary existence of all candidates gives 'possibly no concrete object'; unrestricted free absence with companions at every accessible world gives A2 throughout; Lowe's reply (a non-concrete candidate existing at every accessible world, whose existence requires some concrete object at every accessible world) excludes 'possibly no concrete object', and with A1, A2 throughout, transitivity and excluded middle it excludes A3 throughout; with excluded middle, A2 at w is equivalent to the denial of the stage-one node at w. Models: all subtraction premises and the conclusion together (nonvacuity); four omission models, one per premise A1, A3, transitivity, A2, each keeping the others and falsifying the conclusion; in the A3 model unrestricted free absence, companions and Lowe's two premises also hold and no concrete candidate is necessary; the A2 model is a theist model on an S5 frame in which the box K and S5 necessary-being nodes, the stage-one node, A1, A3, free absence for candidates that could be absent and companions hold, while A2 at w and throughout, unrestricted free absence and the conclusion fail. The two-being signature's divine fields are stipulated, not evidence."
+definitions = ["cdbbae1a-5cce-4367-b6b4-d135135a2ecd", "13c0abe7-25f7-4921-b52e-9f732edd6f2c", "baddf770-36bf-542f-bb3c-2297342d5452", "1b8baf77-84fa-5513-a138-7fa14840dd87", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "DEF-NECESSARY-IN-SENSE", "DEF-ACTUAL-ROOT", "DEF-GOD-OF-CLASSICAL-THEISM", "DEF-ONE-GOD", "DEF-CLASSICAL-ATTRIBUTES-BUNDLE", "547cac5c-7089-4bce-b5e7-bb8b6c8d12b9"]
+
+[[argument]]
+id = "Possibly no concrete object, by subtraction"
+theorem = "subtraction"
+premises = ["STMT-EXCLUDED-MIDDLE", "9a6ce384-5213-43bd-a65e-90dddc8574f3", "Some world accessible from w has only finitely many concrete objects", "At every world accessible from w, each concrete object there could fail to exist", "At every world accessible from w, a concrete object that could fail could fail with no newcomer"]
+conclusion = "Possibly no concrete object exists: some world accessible from w has no concrete object"
+rule = "Induction on the finite list, one subtraction per step, transitivity of access"
+meaning = "Start at a world accessible from w whose concrete objects lie in a finite list. For the next listed object, excluded middle decides whether it is present. If it is, A2 gives a world where it is absent and A3 a world accessible from the current one where it is absent with no newcomer; transitivity makes that world accessible from w and its concrete objects lie in the rest of the list. If it is not, the rest of the list already covers the current world. When the list is exhausted the current world has no concrete object. Every non-logical premise is needed: each omission model keeps the others and falsifies the conclusion (controls)."
+description = "The subtraction argument, analyst formulation: possibly no concrete object from A1, A2 and A3 throughout the accessible worlds, transitivity of the route frame and excluded middle. Not a transcription (invariant 16): the conclusion is reached by induction on the list, with a subtraction step per element; no premise mentions an empty world. Establishes no premise; A2 applied to a necessary being is the denial of the stage-one node (controls)."
+
+[[argument]]
+id = "The box K node excludes the subtraction contingency premise at its world"
+theorem = "boxKExcludesContingencyPremise"
+premises = ["STMT-NECESSARY-ROOT-BOX-K"]
+strong_version_needed = { "STMT-NECESSARY-ROOT-BOX-K" = "Logically the weaker stage-one node STMT-NECESSARY-CONCRETE-AT (some concrete individual exists at w and at every accessible world) already excludes A2 at w, and with excluded middle A2 at w is exactly its denial (controls, laws 1 and 8). That node links the NECESSARY_11 frame-carrier definition beside NECESSARY_2 (legacy carrier classification recorded in DISAMB-NECESSARY), so an argument from it would mix senses without a registered bridge; the box K node uses NECESSARY_2 alone. The incompatibility is recorded at the node the route's cheapest path concludes, as for result 065a9092." }
+conclusion = "Not every concrete object existing at w could fail to exist"
+rule = "Box elimination at the world witnessing possible absence"
+meaning = "If the box K necessary-being node holds at w (some actual concrete root n, God with the classical attributes, exists at every world accessible from w), then not every concrete object existing at w is absent at some accessible world: n exists at w and would be absent at an accessible world where it exists. A checked incompatibility between the node and subtraction premise A2 at the node's world. With excluded middle, A2 at w is exactly the denial of the stage-one node STMT-NECESSARY-CONCRETE-AT (controls), so the theist route rejects A2 for the necessary being and no other subtraction premise (theist model)."
+description = "Checked incompatibility: STMT-NECESSARY-ROOT-BOX-K excludes subtraction premise A2 at its world. Not a transcription: the conclusion quantifies over every concrete object at w and its possible absence, which the premise does not mention; it fails without the node (nonvacuity and A1 omission models). Establishes no premise; the node stays open as it was."
+
+[[argument.research_comparisons]]
+target_statement_id = "STMT-NECESSARY-ROOT-BOX-K"
+rival_statement_id = "Each concrete object existing at w could fail to exist"
+sense_definition_id = "38b92bb6-33ae-5817-85c6-b5a1afa63bd1"
+outcome = "excluded"
+conditions = "boxKExcludesContingencyPremise: the node at (sigma, m, w, CN) alone; no frame condition, no excluded middle. For the weaker stage-one node, with excluded middle, the converse holds too (controls, law 8): A2 at w is exactly its denial."
+scope = "Same route profile m, world w, frame m.ontic.frame and rigid candidates; NECESSARY_2 box-existence at w; concreteness is the profile's predicate."
+coverage = "Not a sense fork: one sense of necessity (NECESSARY_2, NecessaryAt) on both sides."
+exclusivity = "Not used."
+next_step = "Whether A2 at the candidate necessary being has support independent of the node's denial: the conceivability-to-possibility bridge (#248 laws) at this node."
+
+[[argument]]
+id = "Unrestricted free absence with companions gives A2 at w"
+theorem = "recombinationGivesContingency"
+premises = ["Unrestricted free absence among distinct concrete candidates at w", "Every concrete candidate has a distinct concrete candidate that could exist at w"]
+conclusion = "Each concrete object existing at w could fail to exist"
+rule = "Witness selection: x without y is possible, so y's absence is"
+meaning = "For a concrete object y existing at w, take a distinct concrete candidate x that could exist (companions); unrestricted free absence gives a world accessible from w where x exists and y does not, so y could fail to exist. Recombination supports A2 only in its unrestricted form: the restricted form says nothing about a candidate that exists at every accessible world, and the difference between the two is exactly the possible absence of every companioned concrete candidate (certified difference)."
+description = "Support for subtraction premise A2 at w from unrestricted free absence (Hume's dictum, absence half) and companions. Not a transcription: the conclusion's possible absence is extracted from a recombination witness for a chosen companion. Establishes neither premise."
+
+[[argument]]
+id = "Unrestricted free absence strengthens free absence for candidates that could be absent"
+theorem = "unrestrictedToContingentRecombination"
+premises = ["Unrestricted free absence among distinct concrete candidates at w"]
+conclusion = "Free absence among distinct concrete candidates at w, for candidates that could be absent"
+rule = "Weakening by an added antecedent"
+meaning = "Unrestricted free absence gives free absence for candidates that could be absent: the restricted principle adds an antecedent. Strict: in the theist model the restricted principle holds and the unrestricted one fails (controls)."
+description = "Exact strong-only-premise strength result: unrestricted free absence strictly strengthens free absence for candidates that could be absent. The proof is a weakening by an added antecedent, which the frontier lists as a single-application transcription; it carries the strength order only and closes nothing. Establishes neither."
+
+[[argument]]
+id = "Unrestricted free absence factors into contingent free absence and companioned absence"
+theorem = "recombinationFactorsExact"
+premises = []
+conclusion = "Unrestricted free absence is exactly contingent free absence plus companioned possible absence"
+sense_mixing_control = true
+rule = "Both directions by witness selection"
+meaning = "Certified difference (#1598): forward, the restricted principle by weakening, and a companion's recombination witness makes each companioned candidate possibly absent; backward, the possible absence of the companioned candidate y supplies the restricted principle's extra antecedent. Premise-free and constructive."
+description = "Premise-free certified difference of unrestricted over contingent free absence: exactly the possible absence of every companioned concrete candidate. With companions, that difference denies a necessary concretum. Establishes no premise."
+
+[[argument]]
+id = "Subtraction argument controls checked"
+theorem = "controls"
+sense_mixing_control = true
+premises = []
+conclusion = "Subtraction argument: laws, omission models and the theist model"
+rule = "General laws, explicit finite and one infinite model"
+meaning = "Premise-free laws relating the subtraction conclusion to the stage-one and box K nodes, the literal non-necessitation premise, elementary existence, recombination, Lowe's reply and the exact status of A2 at w; then nonvacuity, one omission model for each of A1, A3, transitivity and A2, the pairwise-recombination and Lowe model, and the theist model. Model-witnessed separations and compatibilities; no premise is established and no reality claim is made."
+description = "Premise-free laws and models for the subtraction batch. Sense-mixing control; establishes no premise and no root obligation."
+
+[[argument.research_comparisons]]
+target_statement_id = "STMT-NECESSARY-ROOT-BOX-K"
+rival_statement_id = "Free absence among distinct concrete candidates at w, for candidates that could be absent"
+sense_definition_id = "38b92bb6-33ae-5817-85c6-b5a1afa63bd1"
+outcome = "model-witnessed"
+conditions = "Models, item 5: no hypotheses; the theist profile at world true."
+scope = "One profile and world: universal two-world frame (S5), God existing at both worlds and one creature at one, the two-being signature's stipulated divine fields."
+coverage = "Not a sense fork: one sense of necessity (NECESSARY_2) and one restricted recombination principle."
+exclusivity = "Not used."
+witness = "theistProfile with pairSignature at world true: the box K, S5 and stage-one nodes, A1, A3 throughout, contingent free absence and companions hold; A2 at w, unrestricted free absence and 'possibly no concrete object' fail."
+next_step = "Assess whether any independent warrant extends free absence from candidates that could be absent to every concrete candidate."
+
+[[relation]]
+id = "Unrestricted free absence strengthens contingent free absence"
+subject_kind = "statement"
+subject_id = "Unrestricted free absence among distinct concrete candidates at w"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Free absence among distinct concrete candidates at w, for candidates that could be absent"
+verification_result_id = "Unrestricted free absence strengthens free absence for candidates that could be absent"
+strictness_result_id = "Subtraction argument controls checked"
+note = "Same profile and world. Strict: in the theist model (God at both worlds, one creature at one world, universal access) free absence for candidates that could be absent holds and unrestricted free absence fails, at x the creature and y God (controls)."
+
+[[relation]]
+id = "Unrestricted over contingent free absence: certified difference"
+subject_kind = "statement"
+subject_id = "Unrestricted free absence among distinct concrete candidates at w"
+predicate = "strength_comparison"
+object_kind = "statement"
+object_id = "Free absence among distinct concrete candidates at w, for candidates that could be absent"
+comparison_spec = "unrestrictedOverContingent"
+delta_statement_id = "Every concrete candidate with a distinct possible concrete companion could be absent at w"
+evidence_result_ids = { implication = "Unrestricted free absence strengthens free absence for candidates that could be absent", equivalence = "Unrestricted free absence factors into contingent free absence and companioned absence" }
+statement_parameter_indices = { stronger = [0, 1, 2, 3], weaker = [0, 1, 2, 3], delta = [0, 1, 2, 3] }
+note = "Difference of unrestricted and contingent free absence on the same profile and world: the strong version adds exactly that every concrete candidate with a distinct possible concrete companion could be absent. With companions this is the denial that any concrete candidate exists at every accessible world, so recombination supports A2 for a candidate necessary being only through this difference. Strictness is witnessed by the theist model."

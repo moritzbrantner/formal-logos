@@ -1,0 +1,12 @@
+{
+  "id": "4d51a1a1-90ea-4169-8599-6fb9160fe92e",
+  "label": "Free absence among distinct concrete candidates at w, for candidates that could be absent",
+  "paraphrase": "Recombination restricted to candidates that could be absent, analyst formulation: for any two distinct concrete candidates x and y, if x exists at some world accessible from w and y is absent at some world accessible from w, then x exists without y at some world accessible from w. Says nothing about a candidate that exists at every accessible world.",
+  "lean_declaration": "TruthCore.Causality.SubtractionArgument.ContingentRecombinationAt",
+  "definition_ids": [
+    "13c0abe7-25f7-4921-b52e-9f732edd6f2c",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ]
+}

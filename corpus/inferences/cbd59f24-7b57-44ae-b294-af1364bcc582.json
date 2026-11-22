@@ -1,0 +1,12 @@
+{
+  "id": "cbd59f24-7b57-44ae-b294-af1364bcc582",
+  "label": "The box K node excludes the subtraction contingency premise at its world (inference)",
+  "input_statement_ids": [
+    "cdf897a8-5490-561a-b9d2-507486a3f192"
+  ],
+  "output_statement_id": "adb73cf1-dc4d-4a75-ab8a-cdd771e2b54a",
+  "rule": "Box elimination at the world witnessing possible absence",
+  "meaning": "If the box K necessary-being node holds at w (some actual concrete root n, God with the classical attributes, exists at every world accessible from w), then not every concrete object existing at w is absent at some accessible world: n exists at w and would be absent at an accessible world where it exists. A checked incompatibility between the node and subtraction premise A2 at the node's world. With excluded middle, A2 at w is exactly the denial of the stage-one node STMT-NECESSARY-CONCRETE-AT (controls), so the theist route rejects A2 for the necessary being and no other subtraction premise (theist model).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

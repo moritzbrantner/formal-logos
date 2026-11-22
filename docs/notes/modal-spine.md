@@ -513,6 +513,23 @@ Objection and warrant audit (Substantive Objection Standard):
   something exists" does not give "something exists necessarily"
   (`NecessaryIndividual.Alternating`, `SharedRootBridge`).
 - If a world with nothing concrete is possible, the conclusion is false under F1 and F2.
+- The subtraction argument for an empty world (2026-11-22, attempt
+  `03e1f49f`, batch `specs/subtraction-argument.toml`, analyst formulation).
+  The argument is valid on the route's profile (A1 finitely many concreta,
+  A2 each could fail to exist, A3 subtraction with no newcomer, transitivity,
+  excluded middle; A1, A2, A3 and transitivity each needed by omission
+  models), and its conclusion contradicts this node. It reaches the node only
+  through A2 at the candidate necessary being: with excluded middle, A2 at
+  the actual world is exactly the denial of `STMT-NECESSARY-CONCRETE-AT`, and
+  in an S5 theist model every other premise holds together with the box K
+  node. Pairwise recombination with companions gives A2 but not A3;
+  unrestricted recombination is exactly recombination for candidates that
+  could be absent plus the possible absence of every companioned concretum
+  (certified difference), so as support for A2 it begs the question at the
+  necessary being. Lowe's reply denies A3, not A2, and gives only "necessarily
+  some concretum". No substantive objection beyond A2 is identified; the
+  conceivability bridge is the rival's remaining independent support, not yet
+  assessed at this node.
 
 ## Stage two: that being is God
 

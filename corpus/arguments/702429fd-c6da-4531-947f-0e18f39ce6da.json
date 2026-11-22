@@ -1,0 +1,25 @@
+{
+  "id": "702429fd-c6da-4531-947f-0e18f39ce6da",
+  "label": "The box K node excludes the subtraction contingency premise at its world",
+  "premise_statement_ids": [
+    "cdf897a8-5490-561a-b9d2-507486a3f192"
+  ],
+  "conclusion_statement_id": "adb73cf1-dc4d-4a75-ab8a-cdd771e2b54a",
+  "inference_ids": [
+    "cbd59f24-7b57-44ae-b294-af1364bcc582"
+  ],
+  "meaning": "If the box K necessary-being node holds at w (some actual concrete root n, God with the classical attributes, exists at every world accessible from w), then not every concrete object existing at w is absent at some accessible world: n exists at w and would be absent at an accessible world where it exists. A checked incompatibility between the node and subtraction premise A2 at the node's world. With excluded middle, A2 at w is exactly the denial of the stage-one node STMT-NECESSARY-CONCRETE-AT (controls), so the theist route rejects A2 for the necessary being and no other subtraction premise (theist model).",
+  "definition_ids": [
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f830795a-b5d8-5f9f-800d-2f3d1f443a0a",
+    "cdbbae1a-5cce-4367-b6b4-d135135a2ecd"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ],
+  "strong_version_needed": {
+    "cdf897a8-5490-561a-b9d2-507486a3f192": "Logically the weaker stage-one node STMT-NECESSARY-CONCRETE-AT (some concrete individual exists at w and at every accessible world) already excludes A2 at w, and with excluded middle A2 at w is exactly its denial (controls, laws 1 and 8). That node links the NECESSARY_11 frame-carrier definition beside NECESSARY_2 (legacy carrier classification recorded in DISAMB-NECESSARY), so an argument from it would mix senses without a registered bridge; the box K node uses NECESSARY_2 alone. The incompatibility is recorded at the node the route's cheapest path concludes, as for result 065a9092."
+  }
+}

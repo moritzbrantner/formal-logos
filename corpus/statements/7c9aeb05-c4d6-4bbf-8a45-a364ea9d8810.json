@@ -1,0 +1,12 @@
+{
+  "id": "7c9aeb05-c4d6-4bbf-8a45-a364ea9d8810",
+  "label": "Unrestricted free absence is exactly contingent free absence plus companioned possible absence",
+  "paraphrase": "For every profile and world: unrestricted free absence among distinct concrete candidates holds iff free absence restricted to candidates that could be absent holds and every concrete candidate with a distinct possible concrete companion could be absent. A premise-free comparison; it asserts none of the three.",
+  "lean_declaration": "TruthCore.Causality.SubtractionArgument.RecombinationFactorsExact",
+  "definition_ids": [
+    "13c0abe7-25f7-4921-b52e-9f732edd6f2c",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ]
+}

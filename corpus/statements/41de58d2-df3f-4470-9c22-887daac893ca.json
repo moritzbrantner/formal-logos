@@ -1,0 +1,20 @@
+{
+  "id": "41de58d2-df3f-4470-9c22-887daac893ca",
+  "label": "Subtraction argument: laws, omission models and the theist model",
+  "paraphrase": "Premise-free comparison. Laws, for all types: the stage-one node STMT-NECESSARY-CONCRETE-AT and the box K node each exclude 'possibly no concrete object' at their world with no frame condition; the literal non-necessitation premise is A2 plus conditional subtraction; elementary existence of all candidates gives 'possibly no concrete object'; unrestricted free absence with companions at every accessible world gives A2 throughout; Lowe's reply (a non-concrete candidate existing at every accessible world, whose existence requires some concrete object at every accessible world) excludes 'possibly no concrete object', and with A1, A2 throughout, transitivity and excluded middle it excludes A3 throughout; with excluded middle, A2 at w is equivalent to the denial of the stage-one node at w. Models: all subtraction premises and the conclusion together (nonvacuity); four omission models, one per premise A1, A3, transitivity, A2, each keeping the others and falsifying the conclusion; in the A3 model unrestricted free absence, companions and Lowe's two premises also hold and no concrete candidate is necessary; the A2 model is a theist model on an S5 frame in which the box K and S5 necessary-being nodes, the stage-one node, A1, A3, free absence for candidates that could be absent and companions hold, while A2 at w and throughout, unrestricted free absence and the conclusion fail. The two-being signature's divine fields are stipulated, not evidence.",
+  "lean_declaration": "TruthCore.Causality.SubtractionArgument.Model.Controls",
+  "definition_ids": [
+    "cdbbae1a-5cce-4367-b6b4-d135135a2ecd",
+    "13c0abe7-25f7-4921-b52e-9f732edd6f2c",
+    "baddf770-36bf-542f-bb3c-2297342d5452",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "f830795a-b5d8-5f9f-800d-2f3d1f443a0a",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "d980bbd2-1a96-564c-bc0d-4065d7786715",
+    "c8f9c2fb-8c17-5fc8-b558-4a6fad659296",
+    "547cac5c-7089-4bce-b5e7-bb8b6c8d12b9"
+  ]
+}

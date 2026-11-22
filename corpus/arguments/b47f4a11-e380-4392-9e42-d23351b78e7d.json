@@ -1,0 +1,24 @@
+{
+  "id": "b47f4a11-e380-4392-9e42-d23351b78e7d",
+  "label": "Possibly no concrete object, by subtraction",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "9a6ce384-5213-43bd-a65e-90dddc8574f3",
+    "b174140a-6cbb-4a7c-970c-fa1abf233e46",
+    "8f2a60ae-8b5a-487f-9880-0672dc986af6",
+    "230240d4-5c6c-4a4d-8cd0-b2e3665ac310"
+  ],
+  "conclusion_statement_id": "80b3e9bf-b349-4f91-9667-3aa275531ccc",
+  "inference_ids": [
+    "95149643-078e-4f4a-9cd1-5891ca4e43f7"
+  ],
+  "meaning": "Start at a world accessible from w whose concrete objects lie in a finite list. For the next listed object, excluded middle decides whether it is present. If it is, A2 gives a world where it is absent and A3 a world accessible from the current one where it is absent with no newcomer; transitivity makes that world accessible from w and its concrete objects lie in the rest of the list. If it is not, the rest of the list already covers the current world. When the list is exhausted the current world has no concrete object. Every non-logical premise is needed: each omission model keeps the others and falsifies the conclusion (controls).",
+  "definition_ids": [
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "baddf770-36bf-542f-bb3c-2297342d5452",
+    "cdbbae1a-5cce-4367-b6b4-d135135a2ecd"
+  ]
+}

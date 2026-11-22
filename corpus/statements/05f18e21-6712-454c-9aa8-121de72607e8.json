@@ -1,0 +1,12 @@
+{
+  "id": "05f18e21-6712-454c-9aa8-121de72607e8",
+  "label": "Each concrete object existing at w could fail to exist",
+  "paraphrase": "Subtraction premise A2 at the world w itself, analyst formulation, attribution deferred: every candidate that is concrete and exists at w is absent at some world accessible from w. With excluded middle it is equivalent to the denial of STMT-NECESSARY-CONCRETE-AT at w (controls).",
+  "lean_declaration": "TruthCore.Causality.SubtractionArgument.EachConcreteCouldFailAt",
+  "definition_ids": [
+    "cdbbae1a-5cce-4367-b6b4-d135135a2ecd",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ]
+}
