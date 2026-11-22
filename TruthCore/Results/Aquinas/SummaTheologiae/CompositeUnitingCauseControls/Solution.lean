@@ -11,7 +11,7 @@ open TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article7Uniting
 `CompositeHasAUnitingCauseReading`, and the five are jointly satisfiable with a
 composite present. -/
 theorem checks : Control.Certificate := by
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_⟩
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
   · -- `true` is composite with the single component `false`; nothing causes.
     refine ⟨Bool, Unit, fun x => x = true, fun a x => a = false ∧ x = true,
       fun _ _ _ _ => False, fun _ _ _ => False, fun _ _ _ => False, (), ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
@@ -114,5 +114,37 @@ theorem checks : Control.Certificate := by
       exact h
     · intro x _ h
       exact Bool.noConfusion (h.1.symm.trans h.2)
+
+  · -- A stronger omission: a genuine composite 3, two proper parts 0 and 1,
+    -- and a third, distinct efficient uniter 2. Their union is nonvacuous
+    -- but none of the efficient activity causes the composite's esse.
+    refine ⟨⟨3, rfl⟩, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+    · intro a x hPart
+      rcases hPart with ⟨hx, hPart⟩
+      rcases hPart with ha | ha
+      · subst a
+        subst x
+        decide
+      · subst a
+        subst x
+        decide
+    · intro x hx
+      change x = (3 : Fin 4) at hx
+      subst x
+      exact ⟨0, 1, by decide, by decide, by decide⟩
+    · intro x a b ha hb hab
+      exact ⟨2, rfl, ha, hb, hab⟩
+    · intro c a b x hu
+      obtain ⟨hc, ha, _, _⟩ := hu
+      exact ⟨(), hc, ha.1⟩
+    · intro x _ hx
+      obtain ⟨hc, hw⟩ := hx
+      exact (by decide : (2 : Fin 4) ≠ 3) (hc.symm.trans hw)
+    · exact ⟨2, 0, 1, 3, by decide⟩
+    · intro h
+      exact h 2 0 1 3 (by decide)
+    · intro h
+      obtain ⟨c, _, hc⟩ := h 3 (by decide)
+      exact hc
 
 end TruthCore.Results.Aquinas.SummaTheologiae.CompositeUnitingCauseControls
