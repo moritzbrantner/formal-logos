@@ -1,0 +1,13 @@
+{
+  "id": "6e6c5d8d-84d9-4b79-a524-21e34c4c8146",
+  "label": "Whatever moves something is CONCRETE_6",
+  "paraphrase": "OPEN interface (B0'), analyst formulation, attribution deferred: whatever moves something in some respect (MovesIn, CAUSE_1) satisfies the concreteness predicate of the selected-grounding profile. Used only by the grounding route; the causal, potency and essence-esse routes do not need it.",
+  "lean_declaration": "TruthCore.Causality.FirstMoverNecessity.MoversConcrete",
+  "definition_ids": [
+    "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d",
+    "008cb21a-256c-5a90-822c-acd4591d699a"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

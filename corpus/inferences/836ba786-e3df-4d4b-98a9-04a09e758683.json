@@ -1,0 +1,16 @@
+{
+  "id": "836ba786-e3df-4d4b-98a9-04a09e758683",
+  "label": "First Way mover is necessary, from PURE_ACT_5 and POTENCY_1 for possible nonexistence (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "7bce7007-ad29-5f5b-b4b3-e7b02bf98312",
+    "bd0a4f81-29ba-4349-aa7d-b1fdcf6fd8e2",
+    "6c18d52b-2456-59ae-995f-13440f8c808d",
+    "753269b3-ff68-4d7a-97bc-01ab4e7c3a26"
+  ],
+  "output_statement_id": "f9208664-e57b-4912-b6e7-edfcd23a4f89",
+  "rule": "Reductio on contingency against pure act, then excluded middle",
+  "meaning": "Route B of the lead. The first mover f exists at w (B0) and is pure act. Were it absent at some accessible world, B4 would put it in POTENCY_1 in some respect, against pure act. So it is present at every accessible world. This is the only route on which pure act alone, with one bridge, yields necessity; the bridge B4 carries the whole modal weight, and on the adopted POTENCY_1 it denies possible non-being through another's power without potency in the subject.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

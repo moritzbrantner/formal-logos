@@ -1,0 +1,10 @@
+{
+  "id": "bd0a4f81-29ba-4349-aa7d-b1fdcf6fd8e2",
+  "label": "Whatever moves something exists at the reading world w",
+  "paraphrase": "OPEN interface (B0), analyst formulation, attribution deferred: on the shared causality frame, whatever moves something in some respect (MovesIn, CAUSE_1, read at the reading world w, since the case's motion vocabulary is not world-indexed) exists at w. A mover exercising its moving there exists there. Nothing is said about any other world, about concreteness or about necessity.",
+  "lean_declaration": "TruthCore.Causality.FirstMoverNecessity.MoversExistAt",
+  "definition_ids": [
+    "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "f9208664-e57b-4912-b6e7-edfcd23a4f89",
+  "label": "Some first mover moved by none is PURE_ACT_5, exists at w and at every accessible world",
+  "paraphrase": "Same-witness endpoint: one and the same first mover moved by none (moves something, moved in no respect, read at w) is in POTENCY_1 in no respect, exists at w and exists at every world accessible from w (NECESSARY_2 box-existence on the frame). No firstness, uniqueness, root status, own-nature necessity or God is asserted.",
+  "lean_declaration": "TruthCore.Causality.FirstMoverNecessity.FirstMoverNecessaryPureActAt",
+  "definition_ids": [
+    "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d",
+    "a49e4cf1-ca4f-5519-9724-892af257cedb",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "b1640e51-d7d4-5a80-9992-29fa1ded8048",
+    "215fdc0a-7005-510d-91da-84fcbc77a9dc"
+  ]
+}
