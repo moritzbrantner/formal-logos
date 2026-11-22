@@ -14,7 +14,7 @@
   "inference_ids": [
     "9e4a49c5-53b1-4fa6-933a-356e871edffc"
   ],
-  "meaning": "Weaker sibling of the same-witness argument: the same five other inputs, with no contingent ground of the necessary and no novel necessary support in place of necessary-predecessor lifting. A putative supporter of the actual exemplar at an admitted world is necessary (no contingent ground), hence most real and the exemplar itself (Kant identification and numerical uniqueness); the exemplar exists actually, so no novel necessary support moves its self-support edge to the actual world, contradicting well-founded actual support. No actual reflexivity, excluded middle or frame axiom is used. Support is the supplied relation, not automatically efficient cause. Establishes no premise.",
+  "meaning": "Weaker sibling of the same-witness argument: the same five other inputs, with no contingent ground of the necessary and no novel necessary support in place of necessary-predecessor lifting. A putative supporter of the actual exemplar at an admitted world is necessary (no contingent ground), hence most real and the exemplar itself (Kant identification and numerical uniqueness); the exemplar exists actually, so no novel necessary support moves its self-support edge to the actual world, contradicting well-founded actual support. No actual reflexivity, excluded middle or frame axiom is used. bd983df2 carries the edge transport for the _1→_3 passage; the source's actual existence in PresentEsseSupport comes from 86badf93 through the identification (84ae3700, 2107b9df, 96d25c42). Support is the supplied relation, not automatically efficient cause. Establishes no premise.",
   "term_senses": {
     "NECESSARY": "7af298fb-a2c4-4239-919b-7685f2e1f67a"
   },
