@@ -118,6 +118,17 @@ theorem checks : Control.Certificate := by
   · -- A stronger omission: a genuine composite 3, two proper parts 0 and 1,
     -- and a third, distinct efficient uniter 2. Their union is nonvacuous
     -- but none of the efficient activity causes the composite's esse.
+    have hPart0 : Control.properFixtureComponent 0 3 := by
+      change (3 : Fin 4) = 3 ∧ ((0 : Fin 4) = 0 ∨ 0 = 1)
+      exact ⟨rfl, Or.inl rfl⟩
+    have hPart1 : Control.properFixtureComponent 1 3 := by
+      change (3 : Fin 4) = 3 ∧ ((1 : Fin 4) = 0 ∨ 1 = 1)
+      exact ⟨rfl, Or.inr rfl⟩
+    have hUnion : Control.properFixtureUnites 2 0 1 3 := by
+      change (2 : Fin 4) = 2 ∧
+        Control.properFixtureComponent 0 3 ∧
+        Control.properFixtureComponent 1 3 ∧ (0 : Fin 4) ≠ 1
+      exact ⟨rfl, hPart0, hPart1, by decide⟩
     refine ⟨⟨3, rfl⟩, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
     · intro a x hPart
       rcases hPart with ⟨hx, hPart⟩
@@ -131,7 +142,7 @@ theorem checks : Control.Certificate := by
     · intro x hx
       change x = (3 : Fin 4) at hx
       subst x
-      exact ⟨0, 1, by decide, by decide, by decide⟩
+      exact ⟨0, 1, hPart0, hPart1, by decide⟩
     · intro x a b ha hb hab
       exact ⟨2, rfl, ha, hb, hab⟩
     · intro c a b x hu
@@ -140,11 +151,11 @@ theorem checks : Control.Certificate := by
     · intro x _ hx
       obtain ⟨hc, hw⟩ := hx
       exact (by decide : (2 : Fin 4) ≠ 3) (hc.symm.trans hw)
-    · exact ⟨2, 0, 1, 3, by decide⟩
+    · exact ⟨2, 0, 1, 3, hUnion⟩
     · intro h
-      exact h 2 0 1 3 (by decide)
+      exact h 2 0 1 3 hUnion
     · intro h
-      obtain ⟨c, _, hc⟩ := h 3 (by decide)
+      obtain ⟨c, _, hc⟩ := h 3 (by rfl)
       exact hc
 
 end TruthCore.Results.Aquinas.SummaTheologiae.CompositeUnitingCauseControls
