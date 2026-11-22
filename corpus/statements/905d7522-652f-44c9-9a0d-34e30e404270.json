@@ -1,0 +1,14 @@
+{
+  "id": "905d7522-652f-44c9-9a0d-34e30e404270",
+  "label": "Strengthened Kantian thesis: no reality feature is EXISTENCE_8 at the selected world",
+  "paraphrase": "Rival, an analyst strengthening of Kant's thesis that being is not a real predicate (A598/B626, navigation; attribution deferred): no feature of the reality profile is had by exactly the candidates that exist at the selected world. It is the exact Lean negation of the EXISTENCE_8 premise, so it also denies accidental coextension, which Kant's intensional thesis (existence is no determination contained in a concept) does not deny. On Kant's positive account existence is the positing of a thing with its determinations, the instantiation sense EXISTENCE_1.",
+  "lean_declaration": "TruthCore.Ontology.EncodingAndRealPredicates.ExistenceNotRealPredicate",
+  "definition_ids": [
+    "0857c20c-d609-4b3e-a685-b07ed52ead88",
+    "b3c45d92-dee0-5a1a-9849-9924d3a1699d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "031a741a-57b4-5a20-b9f3-170876e69a02"
+  ]
+}

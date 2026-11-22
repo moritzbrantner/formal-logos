@@ -1,0 +1,19 @@
+{
+  "id": "5030ea97-8b07-4275-a0cd-0bc53ba8a04c",
+  "label": "Encoding control, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "95745f91-755a-403a-b121-9eafea7e0a1d",
+  "inference_ids": [
+    "2ed8b36e-99cc-4eb0-a20e-587cc485defb"
+  ],
+  "meaning": "Premise-free control. (a) Takes the abstract object comprehended from {g, o, E!}. (b) The naming premise with being read as exemplifying E! and God as encoding g gives that the unique maximum encodes g, while it exemplifies E! and so, being ordinary, encodes nothing. (c) The model has one ordinary object exemplifying only E! and one abstract object per set of the properties E!, god and benevolent, exemplifying nothing; the object encoding {god, benevolent, E!} is the unique maximum when being is read as encoding E! and 'more in being' ranks it first. Finding: the route's existential import sits in the maximum-existence premise (in act at esse) with the carrier; read as exemplifying E!, it excludes the encoded reading of God; read as encoding E!, it delivers a god that does not exemplify existence. Encoding blocks the definitional argument; it does not mean that object theory blocks ontological arguments: an Anselmian argument is valid inside object theory with a greatness premise (Oppenheimer and Zalta 1991, navigation), the encoding analogue of Meditation V's premise. A model of one formal interpretation, not evidence that abstract object theory is true.",
+  "definition_ids": [
+    "243ac306-054f-4df2-965a-76cdc2164c36",
+    "77f81696-1dde-467b-9a12-9ec6919db4ea",
+    "fd3ec6b3-2e89-44da-9937-6eb9287fcc12"
+  ],
+  "disambiguation_ids": [
+    "031a741a-57b4-5a20-b9f3-170876e69a02"
+  ],
+  "sense_mixing_control": true
+}
