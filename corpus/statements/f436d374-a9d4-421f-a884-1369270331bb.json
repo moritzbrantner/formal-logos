@@ -1,7 +1,7 @@
 {
   "id": "f436d374-a9d4-421f-a884-1369270331bb",
-  "label": "Total-cause containment and q.4 a.2 preexistence are independent on finite grades frames",
-  "paraphrase": "Closed mathematical control over two finite grades frames (two beings, two respects, false the respect of being). In the first, a cause of a perfection other than being lacks that perfection and nothing causes anything's being: q.4 a.2 preexistence holds vacuously and total-cause containment fails. In the second, a cause of a thing's being, total only in being and partial in the other perfection, lacks that other perfection: total-cause containment holds and preexistence fails. Statements about these interpretations only, not that such causes exist.",
+  "label": "Respect-wise total-cause containment and q.4 a.2 preexistence are independent on finite frames",
+  "paraphrase": "Closed mathematical control, under the respect-wise reading of total-cause containment, over two finite grades frames (two beings, two respects, false the respect of being). In the first, a cause of a perfection other than being lacks that perfection and nothing causes anything's being: q.4 a.2 preexistence holds vacuously and total-cause containment fails. In the second, a cause of a thing's being, total only in being and partial in the other perfection, lacks that other perfection: total-cause containment holds and preexistence fails. Statements about these interpretations only, not that such causes exist.",
   "lean_declaration": "TruthCore.Causality.CartesianAdequacy.ContainmentAndPreexistenceIndependent",
   "definition_ids": [
     "211a6432-8b8f-53ed-85e3-75173bb15b24",

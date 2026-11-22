@@ -6,7 +6,7 @@
   "inference_ids": [
     "abba613a-f04f-4361-b162-45e4a01b871a"
   ],
-  "meaning": "Distinct-statement verdict: neither total-cause containment nor STMT-PERFECTIONS-OF-EFFECT-PREEXIST-IN-CAUSE entails the other. Preexistence is about every perfection of an effect whose being a cause causes, partial causes included; total-cause containment is about the perfection a total cause causes. The gap from containment to preexistence is exactly the cause-of-being transfer (f8ba2429) together with containment for partial causes. Finite interpretations only.",
+  "meaning": "Distinct-statement verdict under the respect-wise reading: neither respect-wise total-cause containment nor STMT-PERFECTIONS-OF-EFFECT-PREEXIST-IN-CAUSE entails the other. Preexistence is about every perfection of an effect whose being a cause causes, partial causes included; total-cause containment is about the perfection a total cause causes. The gap from containment to preexistence is closed by the cause-of-being transfer (f8ba2429) together with containment for partial causes (result preexistenceOfContainment). The whole-effect reading, by contrast, is entailed by preexistence. Finite interpretations only.",
   "definition_ids": [
     "33ebf451-eb02-48f5-b420-24a34da9b865",
     "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",

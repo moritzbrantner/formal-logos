@@ -2,6 +2,7 @@ module
 
 public import TruthCore.Causality.GradesFrame
 public import TruthCore.Causality.Round3FourthWay
+public import TruthCore.Case.Catholicism.CauseOfBeingHasBeing
 
 /-!
 # Cartesian causal adequacy over the grades frame
@@ -14,10 +15,21 @@ total cause as in its effect", together with the clause that whatever is in an
 effect is in its cause formally or eminently.
 
 Everything is stated over the shared `GradesFrame` (#1784): `F.InAct` is the
-frame's act primitive with the mode of possession left open (IN_ACT_4), so
-"formally or eminently" is not a further disjunction here but the open mode of
-that one primitive; `F.CausesIn` is CAUSE_2 (cause of a thing's being `r`, as
-fire of heat); `F.MoreIn` is the primitive comparative (MORE_1).
+frame's act primitive with the mode of possession left open (IN_ACT_4);
+`F.CausesIn` is CAUSE_2 (cause of a thing's being `r`, as fire of heat);
+`F.MoreIn` is the primitive comparative (MORE_1). The containment statements
+use one `InAct` on both sides: a **uniform IN_ACT_4 reading**. The
+mode-asymmetric Cartesian reading (formal in the effect, formal or eminent in
+the cause) is a distinct sibling, not formalized here; no uniform determination
+(IN_ACT_1, IN_ACT_2 or IN_ACT_3) equals it, so passing to it needs a sense
+bridge.
+
+Two scope readings of the containment clause are kept as siblings
+(disambiguation "Scope of the Cartesian containment clause"): respect-wise
+(`ContainmentInTotalCause`, a total cause of `x`'s being `r` has `r`) and
+whole-effect (`WholeEffectContainmentInTotalCause`, a total cause of `x`'s
+being has every perfection of `x`, as with the stone that cannot begin to exist
+unless produced by something containing everything in the stone).
 
 One primitive is added as an explicit binder, because the frame has no field
 for it:
@@ -51,23 +63,33 @@ def TotalCauseIn (F : GradesFrame W B T R) (Total : B → B → R → Prop)
 
 /-- Respect-wise containment, every cause (analyst strengthening, not
 attributed): whatever causes `x`'s being `r`, where `x` is in act in `r`, is
-itself in act in `r` (formally or eminently, the open mode of IN_ACT_4).
-Partial causes are included. -/
+itself in act in `r`, uniform IN_ACT_4 reading on both sides. Partial causes
+are included. -/
 def ContainmentInEveryCause (F : GradesFrame W B T R) : Prop :=
   ∀ c x r, F.CausesIn c x r → F.InAct x r → F.InAct c r
 
 /-- Respect-wise containment, total causes only: whatever is the efficient and
 total cause of `x`'s being `r`, where `x` is in act in `r`, is itself in act in
-`r`, formally or eminently. The faithful analyst reading of the Cartesian
-containment clause. -/
+`r`. Analyst reading of the Cartesian containment clause on its respect-wise
+scope, with a uniform IN_ACT_4 reading of act on both sides (the
+mode-asymmetric reading is an unformalized sibling). -/
 def ContainmentInTotalCause (F : GradesFrame W B T R)
     (Total : B → B → R → Prop) : Prop :=
   ∀ c x r, TotalCauseIn F Total c x r → F.InAct x r → F.InAct c r
 
+/-- Whole-effect containment, total causes of being only: whatever is the
+efficient and total cause of `x`'s being has every perfection `x` is in act in
+(uniform IN_ACT_4 reading). The whole-effect sibling of
+`ContainmentInTotalCause`; PEPC entails it. -/
+def WholeEffectContainmentInTotalCause (F : GradesFrame W B T R)
+    (Total : B → B → R → Prop) : Prop :=
+  ∀ c x r, TotalCauseIn F Total c x F.esse → F.InAct x r → F.InAct c r
+
 /-- "At least as much reality in the total cause as in its effect", read on a
 represented degree (the non-strict counterpart of MORE_2,
 `Grades.DegreeComparative`): the effect's degree of `r` is at most the total
-cause's. `≤` in a preorder is "at least as much", not merely "not exceeded". -/
+cause's. `≤` in a preorder is "at least as much", not merely "not exceeded".
+Per respect: an analyst generalization of a single overall degree of reality. -/
 def AtLeastAsMuchDegreeInTotalCause {D : Type} [Preorder D]
     (F : GradesFrame W B T R) (Total : B → B → R → Prop) (deg : R → B → D) :
     Prop :=

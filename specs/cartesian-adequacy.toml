@@ -12,56 +12,66 @@ definitions = []
 disambiguations = []
 
 [[statement]]
-id = "Whatever causes a thing's being r contains r, formally or eminently, partial causes included"
+id = "634a80b8-470e-4d2f-9dd0-fc868e4a62a0"
+label = "Whatever causes a thing's being r contains r, partial causes included (uniform IN_ACT_4)"
 lean = "ContainmentInEveryCause"
-paraphrase = "Analyst strengthening of the Cartesian containment clause, not attributed: for every cause c of x's being r (CAUSE_2, partial causes included) where x is in act in r, c is itself in act in r, with the mode of possession, formal or eminent, left open (IN_ACT_4). Respect-wise: it constrains only the perfection caused, not every perfection of the effect. Open."
+paraphrase = "Analyst strengthening of the Cartesian containment clause, not attributed: for every cause c of x's being r (CAUSE_2, partial causes included) where x is in act in r, c is itself in act in r. Uniform IN_ACT_4 reading: one InAct, mode of possession left open, on both sides; the mode-asymmetric Cartesian reading (formal in the effect, formal or eminent in the cause) is a distinct, unformalized sibling needing a sense bridge. Respect-wise: it constrains only the perfection caused, not every perfection of the effect. Open."
 definitions = ["211a6432-8b8f-53ed-85e3-75173bb15b24", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "5cbd5a0a-9055-4b69-af39-bd0bff1279fd", "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"]
 disambiguations = ["dba7b1de-f3a0-57af-9af9-b2a4da3136fa", "00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
 
 [[statement]]
-id = "The efficient and total cause of a thing's being r contains r, formally or eminently"
+id = "90c0d77f-4c87-407d-8e7d-c8f01c44b115"
+label = "The efficient and total cause of a thing's being r contains r (respect-wise, uniform IN_ACT_4)"
 lean = "ContainmentInTotalCause"
-paraphrase = "Analyst formulation of the Cartesian containment clause (navigation: Descartes, Meditation III, 'efficient and total cause'; attribution deferred): whatever is the efficient and total cause of x's being r (a CAUSE_2 cause whose causing needs no co-cause), where x is in act in r, is itself in act in r, formally or eminently (the open mode of IN_ACT_4). Partial causes are not constrained. Open."
-definitions = ["211a6432-8b8f-53ed-85e3-75173bb15b24", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "5cbd5a0a-9055-4b69-af39-bd0bff1279fd", "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1", "33ebf451-eb02-48f5-b420-24a34da9b865"]
-disambiguations = ["dba7b1de-f3a0-57af-9af9-b2a4da3136fa", "00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
+paraphrase = "Analyst formulation of the Cartesian containment clause on its respect-wise scope (CONTAINMENT_SCOPE_1; navigation: Descartes, Meditation III, 'efficient and total cause'; attribution deferred): whatever is the efficient and total cause of x's being r (a CAUSE_2 cause whose causing needs no co-cause), where x is in act in r, is itself in act in r. Uniform IN_ACT_4 reading on both sides; the mode-asymmetric Cartesian reading (formal in the effect, formal or eminent in the cause) is a distinct, unformalized sibling needing a sense bridge. Partial causes are not constrained. The whole-effect sibling is WholeEffectContainmentInTotalCause (CONTAINMENT_SCOPE_2). Open."
+definitions = ["211a6432-8b8f-53ed-85e3-75173bb15b24", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "5cbd5a0a-9055-4b69-af39-bd0bff1279fd", "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1", "33ebf451-eb02-48f5-b420-24a34da9b865", "2ea0fd93-e13a-4411-bc03-5b9d2ce40fdb"]
+disambiguations = ["dba7b1de-f3a0-57af-9af9-b2a4da3136fa", "00e0d443-eb39-56a3-9179-9c8852ca4a2b", "26b6a64e-3e45-4ffc-a359-1fbc9ee6f579"]
 
 [[statement]]
 id = "A total cause of a thing's being r has at least as high a represented degree of r as the thing"
 lean = "AtLeastAsMuchDegreeInTotalCause"
-paraphrase = "Analyst formulation of 'at least as much reality in the efficient and total cause as in its effect' on a represented degree (navigation: Descartes, Meditation III; attribution deferred): for a degree assignment deg : R → B → D in a preorder, whenever c is the efficient and total cause of x's being r, deg r x ≤ deg r c. It uses the represented degree family (DEF-PER-RESPECT-DEGREE-FAMILY), not the MORE_2 comparative itself: it is the non-strict counterpart of MORE_2, and '≤' is 'at least as much', not merely 'not exceeded'. Open."
+paraphrase = "Analyst formulation of 'at least as much reality in the efficient and total cause as in its effect' on a represented degree (navigation: Descartes, Meditation III; attribution deferred): for a degree assignment deg : R → B → D in a preorder, whenever c is the efficient and total cause of x's being r, deg r x ≤ deg r c. Stated per respect: an analyst generalization of Descartes's single overall degree of reality, of which the instance at esse is the closest reading. It uses the represented degree family (DEF-PER-RESPECT-DEGREE-FAMILY), not the MORE_2 comparative itself: it is the non-strict counterpart of MORE_2, and '≤' is 'at least as much', not merely 'not exceeded'. Open."
 definitions = ["211a6432-8b8f-53ed-85e3-75173bb15b24", "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1", "8323604a-2e7a-554c-9b32-d82e5201271d", "33ebf451-eb02-48f5-b420-24a34da9b865"]
 disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
 
 [[statement]]
-id = "Total-cause containment and q.4 a.2 preexistence are independent on finite grades frames"
+id = "f436d374-a9d4-421f-a884-1369270331bb"
+label = "Respect-wise total-cause containment and q.4 a.2 preexistence are independent on finite frames"
 lean = "ContainmentAndPreexistenceIndependent"
-paraphrase = "Closed mathematical control over two finite grades frames (two beings, two respects, false the respect of being). In the first, a cause of a perfection other than being lacks that perfection and nothing causes anything's being: q.4 a.2 preexistence holds vacuously and total-cause containment fails. In the second, a cause of a thing's being, total only in being and partial in the other perfection, lacks that other perfection: total-cause containment holds and preexistence fails. Statements about these interpretations only, not that such causes exist."
+paraphrase = "Closed mathematical control, under the respect-wise reading of total-cause containment, over two finite grades frames (two beings, two respects, false the respect of being). In the first, a cause of a perfection other than being lacks that perfection and nothing causes anything's being: q.4 a.2 preexistence holds vacuously and total-cause containment fails. In the second, a cause of a thing's being, total only in being and partial in the other perfection, lacks that other perfection: total-cause containment holds and preexistence fails. Statements about these interpretations only, not that such causes exist."
 definitions = ["211a6432-8b8f-53ed-85e3-75173bb15b24", "5cbd5a0a-9055-4b69-af39-bd0bff1279fd", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "33ebf451-eb02-48f5-b420-24a34da9b865"]
 disambiguations = ["dba7b1de-f3a0-57af-9af9-b2a4da3136fa", "00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
 
 [[statement]]
 id = "On bare MORE_1 the strict comparative does not give 'no effect exceeds its total cause'"
 lean = "StrictComparativeWithoutNonStrictAdequacy"
-paraphrase = "Closed mathematical control over a two-being, one-respect grades frame in which each being totally causes the other, both are in act, and the primitive comparative MORE_1 holds of every pair in both directions: the strict comparative (a distinct cause of a quality is more such) and 'more such has the perfection' hold, while the MORE_1 reading of 'at least as much reality in the total cause' (no effect is more r than its total cause) fails. A statement about this interpretation only: without an asymmetry or calibration premise, MORE_1's strict comparative does not yield the non-strict one."
+paraphrase = "Closed mathematical control over a two-being, one-respect grades frame in which each being totally causes the other, both are in act, and the primitive comparative MORE_1 holds of every pair in both directions: the strict comparative (a distinct cause of a quality is more such) and 'more such has the perfection' hold, while the MORE_1 reading of 'at least as much reality in the total cause' (no effect is more r than its total cause) fails. A statement about this interpretation only: MORE_1's strict comparative does not yield the non-strict one without a further premise such as the calibration or asymmetry (with irreflexivity) of MoreIn."
 definitions = ["211a6432-8b8f-53ed-85e3-75173bb15b24", "5cbd5a0a-9055-4b69-af39-bd0bff1279fd", "5766de66-8a37-5b04-aa65-9eec53319f50", "33ebf451-eb02-48f5-b420-24a34da9b865"]
 disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b", "cdb0de59-5015-4fa6-986c-4cd1527dd2b3"]
+
+[[statement]]
+id = "Whole-effect: a total cause of a thing's being has every perfection of the thing"
+lean = "WholeEffectContainmentInTotalCause"
+paraphrase = "Analyst formulation of the Cartesian containment clause on its whole-effect scope (CONTAINMENT_SCOPE_2; navigation: Descartes, Meditation III, the stone that cannot begin to exist unless produced by something containing everything in the stone; attribution deferred): whatever is the efficient and total cause of x's being (CausesIn c x esse and Total c x esse) is in act in every perfection r in which x is in act. Uniform IN_ACT_4 reading on both sides; the mode-asymmetric reading is an unformalized sibling. Sibling of the respect-wise reading 90c0d77f. Open."
+definitions = ["211a6432-8b8f-53ed-85e3-75173bb15b24", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "5cbd5a0a-9055-4b69-af39-bd0bff1279fd", "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "33ebf451-eb02-48f5-b420-24a34da9b865", "859d4d67-1527-4783-95cd-498f9056dfe3"]
+disambiguations = ["dba7b1de-f3a0-57af-9af9-b2a4da3136fa", "00e0d443-eb39-56a3-9179-9c8852ca4a2b", "26b6a64e-3e45-4ffc-a359-1fbc9ee6f579"]
 
 [[argument]]
 id = "Q.4 a.2 preexistence from containment in every cause and cause-of-being transfer"
 theorem = "preexistenceOfContainment"
-strong_version_needed = { "f8ba2429-b4f1-5712-a4d3-798213963d34" = "q.4 a.2 preexistence constrains every cause of a thing's being; the weak versions restrict the cause (residual transfer 5a4afaa5 excludes universal causes, universal-cause transfer b26c10a0 covers only causes of every other being).", "Whatever causes a thing's being r contains r, formally or eminently, partial causes included" = "q.4 a.2 preexistence covers partial causes of being; containment in total causes only (the weak version) does not constrain them, as the independence control shows." }
-premises = ["f8ba2429-b4f1-5712-a4d3-798213963d34", "Whatever causes a thing's being r contains r, formally or eminently, partial causes included"]
+strong_version_needed = { "f8ba2429-b4f1-5712-a4d3-798213963d34" = "q.4 a.2 preexistence constrains every cause of a thing's being; the weak versions restrict the cause (residual transfer 5a4afaa5 excludes universal causes, universal-cause transfer b26c10a0 covers only causes of every other being).", "634a80b8-470e-4d2f-9dd0-fc868e4a62a0" = "q.4 a.2 preexistence covers partial causes of being; containment in total causes only (the weak version) does not constrain them, as the independence control shows." }
+premises = ["f8ba2429-b4f1-5712-a4d3-798213963d34", "634a80b8-470e-4d2f-9dd0-fc868e4a62a0"]
 conclusion = "64498e7e-7f10-54a0-9ec0-c65e6076de1f"
 axioms = []
 rule = "Chain of two universal conditionals at the same cause, effect and perfection"
-meaning = "If c causes x's being and x is in act in r, the cause-of-being transfer (f8ba2429) gives that c causes x's being r; containment in every cause then gives that c is in act in r. So every perfection of a thing whose being c causes is in c (STMT-PERFECTIONS-OF-EFFECT-PREEXIST-IN-CAUSE). One GradesFrame: the same InAct (IN_ACT_4), CausesIn (CAUSE_2) and esse throughout. A new support option for that root-route node through the respect-wise containment hinge; both premises stay open, and the analyst containment premise is stronger than the Cartesian total-cause clause."
+meaning = "If c causes x's being and x is in act in r, the cause-of-being transfer (f8ba2429) gives that c causes x's being r; containment in every cause then gives that c is in act in r. So every perfection of a thing whose being c causes is in c (STMT-PERFECTIONS-OF-EFFECT-PREEXIST-IN-CAUSE). One GradesFrame: the same InAct (IN_ACT_4), CausesIn (CAUSE_2) and esse throughout. A new support option for that root-route node through the respect-wise containment hinge; both premises stay open, and the analyst containment premise is stronger than the Cartesian total-cause clause. Uniform IN_ACT_4 reading of act throughout."
 
 [[argument]]
 id = "Containment in every cause from the strict comparative and more-such-has-the-perfection"
 theorem = "containmentOfStrictComparative"
 strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The case split is on the equality of an arbitrary cause with its effect; the weak version (classical-attributes local logic, ca432e24) decides equality only against a GOD_4 candidate.", "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d" = "Needed for every perfection r, not only being: the weak version (cffad050) constrains only distinct causes of being." }
 premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d", "c11369aa-7c3d-5dea-8421-535d5b4b3104"]
-conclusion = "Whatever causes a thing's being r contains r, formally or eminently, partial causes included"
+conclusion = "634a80b8-470e-4d2f-9dd0-fc868e4a62a0"
 axioms = []
 rule = "Excluded middle on c = x; strict comparative then more-such-has-the-perfection"
 meaning = "Excluded middle decides whether the cause c is x itself. If it is, x's being in act in r is c's. If not, the strict comparative (STMT-CAUSE-OF-QUALITY-IN-ANOTHER-IS-MORE-SUCH) makes c more r than x (MORE_1), and STMT-MORE-SUCH-HAS-THE-PERFECTION gives that c is in act in r. Together with the previous argument this factors the existing four-premise derivation PERFECTION-PREEXISTENCE-FROM-CAUSAL-TRANSFER through respect-wise containment: the containment premise is the hinge between the Aristotelian comparative pair and q.4 a.2. All premises except excluded middle stay open."
@@ -69,8 +79,8 @@ meaning = "Excluded middle decides whether the cause c is x itself. If it is, x'
 [[argument]]
 id = "Containment in every cause entails containment in total causes"
 theorem = "totalContainmentOfContainment"
-premises = ["Whatever causes a thing's being r contains r, formally or eminently, partial causes included"]
-conclusion = "The efficient and total cause of a thing's being r contains r, formally or eminently"
+premises = ["634a80b8-470e-4d2f-9dd0-fc868e4a62a0"]
+conclusion = "90c0d77f-4c87-407d-8e7d-c8f01c44b115"
 weakening = true
 axioms = []
 rule = "Drop an antecedent conjunct of a universal conditional"
@@ -80,10 +90,10 @@ meaning = "Strength order registration: if every cause of x's being r contains r
 id = "Finite grades frames separate total-cause containment from q.4 a.2 preexistence"
 theorem = "containmentAndPreexistenceIndependent"
 premises = []
-conclusion = "Total-cause containment and q.4 a.2 preexistence are independent on finite grades frames"
+conclusion = "f436d374-a9d4-421f-a884-1369270331bb"
 axioms = []
 rule = "Finite case analysis on Bool"
-meaning = "Distinct-statement verdict: neither total-cause containment nor STMT-PERFECTIONS-OF-EFFECT-PREEXIST-IN-CAUSE entails the other. Preexistence is about every perfection of an effect whose being a cause causes, partial causes included; total-cause containment is about the perfection a total cause causes. The gap from containment to preexistence is exactly the cause-of-being transfer (f8ba2429) together with containment for partial causes. Finite interpretations only."
+meaning = "Distinct-statement verdict under the respect-wise reading: neither respect-wise total-cause containment nor STMT-PERFECTIONS-OF-EFFECT-PREEXIST-IN-CAUSE entails the other. Preexistence is about every perfection of an effect whose being a cause causes, partial causes included; total-cause containment is about the perfection a total cause causes. The gap from containment to preexistence is closed by the cause-of-being transfer (f8ba2429) together with containment for partial causes (result preexistenceOfContainment). The whole-effect reading, by contrast, is entailed by preexistence. Finite interpretations only."
 
 [[argument]]
 id = "At least as much degree in a total cause, from the strict comparative and calibration"
@@ -93,7 +103,7 @@ premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "d5a94eb1-72d2-53e0-9a52-978
 conclusion = "A total cause of a thing's being r has at least as high a represented degree of r as the thing"
 axioms = []
 rule = "Excluded middle on c = x; strict comparative, calibration, strict-to-weak order"
-meaning = "MORE_2 side of the comparison. If the total cause c is x itself, deg r x ≤ deg r x. If not, the strict comparative makes c more r than x (MORE_1), and the open calibration STMT MoreInExceedsDegree (98755509) turns that into deg r x < deg r c, hence ≤. So the Aristotelian strict comparative, which applies to every distinct cause, strengthens to the Cartesian non-strict comparative for total causes only through the explicit MORE_1-to-degree calibration. Premises other than excluded middle stay open."
+meaning = "MORE_2 side of the comparison. If the total cause c is x itself, deg r x ≤ deg r x. If not, the strict comparative makes c more r than x (MORE_1), and the open calibration STMT MoreInExceedsDegree (98755509) turns that into deg r x < deg r c, hence ≤. So the Aristotelian strict comparative yields, with the calibration, the weaker Cartesian non-strict comparative; it does not without a further premise such as the calibration or asymmetry (with irreflexivity) of MoreIn. Total is never used, so the same holds for every cause. The calibration 98755509 is the MORE_1-to-degree passage named in DISAMB cdb0de59-5015-4fa6-986c-4cd1527dd2b3; this argument uses it as that bridge, and its conclusion uses the degree family, not the MORE_2 comparative. Premises other than excluded middle stay open."
 
 [[argument]]
 id = "MORE_1 control: strict comparative holds, no-effect-exceeds-total-cause fails"
@@ -102,14 +112,54 @@ premises = []
 conclusion = "On bare MORE_1 the strict comparative does not give 'no effect exceeds its total cause'"
 axioms = []
 rule = "Finite case analysis on Bool"
-meaning = "MORE_1 side of the comparison: on two beings that totally cause each other, with the primitive comparative true of every ordered pair, the strict comparative and more-such-has-the-perfection hold while 'no effect is more r than its total cause' fails. So the Cartesian 'at least as much', read on the primitive comparative, is not a weakening of the Aristotelian strict comparative without an asymmetry premise for MoreIn. A finite interpretation only; it does not say MoreIn is symmetric."
+meaning = "MORE_1 side of the comparison: on two beings that totally cause each other, with the primitive comparative true of every ordered pair, the strict comparative and more-such-has-the-perfection hold while 'no effect is more r than its total cause' fails. So the Cartesian 'at least as much', read on the primitive comparative, does not follow from the Aristotelian strict comparative without a further premise such as the calibration or asymmetry (with irreflexivity) of MoreIn. A finite interpretation only; it does not say MoreIn is symmetric."
 
 [[relation]]
 id = "Containment in every cause strengthens containment in total causes"
 subject_kind = "statement"
-subject_id = "Whatever causes a thing's being r contains r, formally or eminently, partial causes included"
+subject_id = "634a80b8-470e-4d2f-9dd0-fc868e4a62a0"
 predicate = "strengthens"
 object_kind = "statement"
-object_id = "The efficient and total cause of a thing's being r contains r, formally or eminently"
+object_id = "90c0d77f-4c87-407d-8e7d-c8f01c44b115"
 verification_result_id = "Containment in every cause entails containment in total causes"
-note = "Same GradesFrame (InAct IN_ACT_4, CausesIn CAUSE_2); the weak version constrains only total causes (TotalCauseIn = CausesIn and Total). The strong version is an analyst strengthening and lies on a root route through q.4 a.2 preexistence; the weak version is the faithful analyst reading of the Cartesian clause. No strictness result is registered."
+note = "Same GradesFrame (InAct IN_ACT_4, CausesIn CAUSE_2); the weak version constrains only total causes (TotalCauseIn = CausesIn and Total). The strong version is an analyst strengthening and lies on a root route through q.4 a.2 preexistence; the weak version is the analyst reading of the Cartesian clause on its respect-wise scope, with a uniform IN_ACT_4 reading (the mode-asymmetric reading is an unformalized sibling). No strictness result is registered."
+
+[[argument]]
+id = "Q.4 a.2 preexistence entails whole-effect containment in total causes"
+theorem = "wholeEffectContainmentOfPreexistence"
+premises = ["64498e7e-7f10-54a0-9ec0-c65e6076de1f"]
+conclusion = "Whole-effect: a total cause of a thing's being has every perfection of the thing"
+weakening = true
+axioms = []
+rule = "Drop an antecedent conjunct of a universal conditional"
+meaning = "Strength order registration: if every perfection of a thing whose being a cause causes is in that cause (q.4 a.2 preexistence), then so is every perfection of a thing whose being a total cause causes, for every totality relation. Same InAct, CausesIn and esse. It establishes neither statement."
+
+[[argument]]
+id = "Containment in every cause entails that nothing gives being it does not have"
+theorem = "causeOfABeingHasBeingOfContainment"
+premises = ["634a80b8-470e-4d2f-9dd0-fc868e4a62a0"]
+conclusion = "4a5a43a5-bb4d-4a87-828a-d913a1f0422e"
+weakening = true
+axioms = []
+rule = "Instantiate a universal at the respect esse"
+meaning = "Strength order registration: containment in every cause, at r = esse, says that whatever causes the being of a thing in act as to being is itself in act as to being (4a5a43a5). Same InAct, CausesIn and esse. It establishes neither statement."
+
+[[relation]]
+id = "Q.4 a.2 preexistence strengthens whole-effect containment in total causes"
+subject_kind = "statement"
+subject_id = "64498e7e-7f10-54a0-9ec0-c65e6076de1f"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Whole-effect: a total cause of a thing's being has every perfection of the thing"
+verification_result_id = "Q.4 a.2 preexistence entails whole-effect containment in total causes"
+note = "Same GradesFrame (InAct IN_ACT_4, CausesIn CAUSE_2, esse). The weak version constrains only total causes of being (TotalCauseIn at esse). No strictness result is registered."
+
+[[relation]]
+id = "Containment in every cause strengthens 'nothing gives being it does not have'"
+subject_kind = "statement"
+subject_id = "634a80b8-470e-4d2f-9dd0-fc868e4a62a0"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "4a5a43a5-bb4d-4a87-828a-d913a1f0422e"
+verification_result_id = "Containment in every cause entails that nothing gives being it does not have"
+note = "The weak version is the esse instance of the strong one, over the same InAct, CausesIn and esse. 4a5a43a5 is also the esse instance of q.4 a.2 preexistence. No strictness result is registered."

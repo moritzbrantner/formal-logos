@@ -13,11 +13,13 @@ premises (analyst formulations, attribution deferred).
   derivation `PERFECTION-PREEXISTENCE-FROM-CAUSAL-TRANSFER` through one hinge.
 * `totalContainmentOfContainment`: strength order, containment in every cause
   entails containment in total causes.
-* `containmentAndPreexistenceIndependent`: total-cause containment and PEPC are
-  independent (two finite interpretations).
-* `degreeAdequacyOfStrictComparative`: under the MORE_1-to-degree calibration
-  the strict comparative gives "at least as much" represented degree in every
-  total cause (non-strict, MORE_2 side).
+* `wholeEffectContainmentOfPreexistence`, `causeOfABeingHasBeingOfContainment`:
+  strength orders to the whole-effect sibling and to the esse instance.
+* `containmentAndPreexistenceIndependent`: respect-wise total-cause containment
+  and PEPC are independent (two finite interpretations).
+* `degreeAdequacyOfStrictComparative`: with the MORE_1-to-degree calibration
+  the strict comparative yields the weaker non-strict "at least as much"
+  represented degree; the proof never uses `Total`, so it holds for every cause.
 * `strictComparativeWithoutNonStrictAdequacy`: on bare MORE_1 it does not. -/
 
 @[expose] public section
@@ -65,7 +67,26 @@ theorem totalContainmentOfContainment {W B T R : Type} (F : GradesFrame W B T R)
   intro c x r hc hx
   exact hContain c x r hc.1 hx
 
-/-- Total-cause containment and PEPC are independent on finite grades frames. -/
+/-- Strength order: PEPC entails whole-effect containment in total causes of
+being, for every `Total`. -/
+theorem wholeEffectContainmentOfPreexistence {W B T R : Type} (F : GradesFrame W B T R)
+    (Total : B → B → R → Prop)
+    (hPre : PerfectionsOfEffectPreexistInCauseReading F.InAct F.CausesIn F.esse) :
+    WholeEffectContainmentInTotalCause F Total := by
+  intro c x r hc hx
+  exact hPre c x r hc.1 hx
+
+/-- Strength order: containment in every cause gives its instance at being,
+nothing gives being that it does not have. -/
+theorem causeOfABeingHasBeingOfContainment {W B T R : Type} (F : GradesFrame W B T R)
+    (hContain : ContainmentInEveryCause F) :
+    TruthCore.Case.Catholicism.CauseOfBeingHasBeing.CauseOfABeingHasBeing
+      F.InAct F.CausesIn F.esse := by
+  intro c x hc hx
+  exact hContain c x F.esse hc hx
+
+/-- Respect-wise total-cause containment and PEPC are independent on finite
+grades frames. -/
 theorem containmentAndPreexistenceIndependent : ContainmentAndPreexistenceIndependent := by
   refine ⟨⟨gradesOf (fun x _ => x = false) (fun _ _ _ => False)
       (fun c x r => c = true ∧ x = false ∧ r = true) false,
@@ -85,9 +106,11 @@ theorem containmentAndPreexistenceIndependent : ContainmentAndPreexistenceIndepe
     rcases (show true = false ∨ true = false from this) with h1 | h1 <;>
       exact Bool.noConfusion h1
 
-/-- Under the calibration from MORE_1 to a represented degree, the strict
-comparative gives at least as much represented degree in every total cause:
-strictly more for a distinct cause, the same for the effect itself. -/
+/-- With the calibration from MORE_1 to a represented degree, the strict
+comparative yields the weaker non-strict comparative: at least as much
+represented degree in every total cause (strictly more for a distinct cause,
+the same for the effect itself). `Total` is never used, so the same proof
+covers every cause. -/
 theorem degreeAdequacyOfStrictComparative {W B T R D : Type} [Preorder D]
     (F : GradesFrame W B T R) (Total : B → B → R → Prop) (deg : R → B → D)
     (hEM : ExcludedMiddle)

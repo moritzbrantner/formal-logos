@@ -1,0 +1,20 @@
+{
+  "id": "4643a655-a5eb-4574-92db-477aa32dfa92",
+  "label": "Whole-effect: a total cause of a thing's being has every perfection of the thing",
+  "paraphrase": "Analyst formulation of the Cartesian containment clause on its whole-effect scope (CONTAINMENT_SCOPE_2; navigation: Descartes, Meditation III, the stone that cannot begin to exist unless produced by something containing everything in the stone; attribution deferred): whatever is the efficient and total cause of x's being (CausesIn c x esse and Total c x esse) is in act in every perfection r in which x is in act. Uniform IN_ACT_4 reading on both sides; the mode-asymmetric reading is an unformalized sibling. Sibling of the respect-wise reading 90c0d77f. Open.",
+  "lean_declaration": "TruthCore.Causality.CartesianAdequacy.WholeEffectContainmentInTotalCause",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "33ebf451-eb02-48f5-b420-24a34da9b865",
+    "859d4d67-1527-4783-95cd-498f9056dfe3"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "26b6a64e-3e45-4ffc-a359-1fbc9ee6f579"
+  ]
+}

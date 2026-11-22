@@ -8,7 +8,7 @@
   ],
   "output_statement_id": "87f41688-c06f-4fe9-994b-0682a4be3038",
   "rule": "Excluded middle on c = x; strict comparative, calibration, strict-to-weak order",
-  "meaning": "MORE_2 side of the comparison. If the total cause c is x itself, deg r x ≤ deg r x. If not, the strict comparative makes c more r than x (MORE_1), and the open calibration STMT MoreInExceedsDegree (98755509) turns that into deg r x < deg r c, hence ≤. So the Aristotelian strict comparative, which applies to every distinct cause, strengthens to the Cartesian non-strict comparative for total causes only through the explicit MORE_1-to-degree calibration. Premises other than excluded middle stay open.",
+  "meaning": "MORE_2 side of the comparison. If the total cause c is x itself, deg r x ≤ deg r x. If not, the strict comparative makes c more r than x (MORE_1), and the open calibration STMT MoreInExceedsDegree (98755509) turns that into deg r x < deg r c, hence ≤. So the Aristotelian strict comparative yields, with the calibration, the weaker Cartesian non-strict comparative; it does not without a further premise such as the calibration or asymmetry (with irreflexivity) of MoreIn. Total is never used, so the same holds for every cause. The calibration 98755509 is the MORE_1-to-degree passage named in DISAMB cdb0de59-5015-4fa6-986c-4cd1527dd2b3; this argument uses it as that bridge, and its conclusion uses the degree family, not the MORE_2 comparative. Premises other than excluded middle stay open.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

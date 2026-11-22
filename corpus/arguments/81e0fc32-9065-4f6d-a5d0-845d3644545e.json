@@ -10,6 +10,7 @@
   ],
   "meaning": "Strength order registration: if every cause of x's being r contains r, then so does every efficient and total cause, for every totality relation. Same InAct, CausesIn and respects. It establishes neither statement; strictness is not registered here (a model with no total causes and a lacking partial cause would witness it).",
   "definition_ids": [
+    "2ea0fd93-e13a-4411-bc03-5b9d2ce40fdb",
     "33ebf451-eb02-48f5-b420-24a34da9b865",
     "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",
     "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",

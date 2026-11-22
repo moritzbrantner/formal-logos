@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Causality.CartesianAdequacy.strictComparativeWithoutNonStrictAdequacy",
   "comparator_config": "results/bc769e84-ca67-403e-b14a-527e4a9c8a3b/comparator.json",
   "status": "solution-present",
-  "description": "MORE_1 side of the comparison: on two beings that totally cause each other, with the primitive comparative true of every ordered pair, the strict comparative and more-such-has-the-perfection hold while 'no effect is more r than its total cause' fails. So the Cartesian 'at least as much', read on the primitive comparative, is not a weakening of the Aristotelian strict comparative without an asymmetry premise for MoreIn. A finite interpretation only; it does not say MoreIn is symmetric."
+  "description": "MORE_1 side of the comparison: on two beings that totally cause each other, with the primitive comparative true of every ordered pair, the strict comparative and more-such-has-the-perfection hold while 'no effect is more r than its total cause' fails. So the Cartesian 'at least as much', read on the primitive comparative, does not follow from the Aristotelian strict comparative without a further premise such as the calibration or asymmetry (with irreflexivity) of MoreIn. A finite interpretation only; it does not say MoreIn is symmetric."
 }
