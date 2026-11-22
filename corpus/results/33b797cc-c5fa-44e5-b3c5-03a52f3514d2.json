@@ -1,0 +1,11 @@
+{
+  "id": "33b797cc-c5fa-44e5-b3c5-03a52f3514d2",
+  "label": "Concrete finite station prefixes imply a locally feasible Reaper descent",
+  "argument_id": "ea68d581-bd74-4414-81bd-e1eb7973ff8e",
+  "challenge_module": "TruthCore.Results.Causality.FixedDurationGrimReaper.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FixedDurationGrimReaper.Solution",
+  "theorem": "TruthCore.Results.Causality.FixedDurationGrimReaper.durationDescentOfStationPrefixes",
+  "comparator_config": "results/33b797cc-c5fa-44e5-b3c5-03a52f3514d2/comparator.json",
+  "status": "solution-present",
+  "description": "Selected finite-prefix compatibility of actually concrete, existing, temporally present and causally linked station bearers suffices for the previously registered selected-descent local Reaper premise. For each n, one prefix world witnesses two adjacent pieces. The witness, clock, schedule and station identities are held fixed in each application. This is a conditional strength order, not a source-warrant or metaphysical possibility result."
+}

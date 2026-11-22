@@ -1,0 +1,12 @@
+{
+  "id": "a42b1ee4-dc3a-4c24-bf7e-44f3431d53a7",
+  "label": "Concrete finite station prefixes imply a locally feasible Reaper descent (inference)",
+  "input_statement_ids": [
+    "7d1b132f-e82c-486e-85c9-1217bfdf642c"
+  ],
+  "output_statement_id": "fab16501-c05a-455d-b880-1a8a9a0dc90a",
+  "rule": "A finite-prefix witness covering n+1 supplies both actual PieceAt interfaces on the same schedule; project the station/causal requirements while retaining the anchored descent.",
+  "meaning": "Selected finite-prefix compatibility of actually concrete, existing, temporally present and causally linked station bearers suffices for the previously registered selected-descent local Reaper premise. For each n, one prefix world witnesses two adjacent pieces. The witness, clock, schedule and station identities are held fixed in each application. This is a conditional strength order, not a source-warrant or metaphysical possibility result.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
