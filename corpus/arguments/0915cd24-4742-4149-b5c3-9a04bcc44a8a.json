@@ -1,0 +1,27 @@
+{
+  "id": "0915cd24-4742-4149-b5c3-9a04bcc44a8a",
+  "label": "GOD_4 is CORRUPTIBLE_INCORRUPTIBLE_1, from maximality, firstness and Theta.8",
+  "premise_statement_ids": [
+    "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
+    "eaa4c679-98a3-5e82-95ff-18bd1177ce74",
+    "ca55ed3a-8f7d-4e7c-8799-c61fdb4cce60"
+  ],
+  "conclusion_statement_id": "5d6beff2-4c92-4f01-901e-5ebace3caf56",
+  "inference_ids": [
+    "f6d9260b-5d4f-49c9-8bca-db1d79106192"
+  ],
+  "meaning": "Whatever is GOD_4 is maximal in being (open stage-2 link, 4c79298d); whatever is maximal in being is the first being, nothing else SIMPLY_PRIOR_1 to it (eaa4c679); every first being cannot fail to be in being (open Theta.8 analyst premise ca55ed3a, whose denial is a contingent first being); so whatever is GOD_4 cannot fail to be in being. The quarta via side and the Theta.8 side share only the PRIOR_1 relation (tagged on both declarations); the Theta.8 respect carrier and its esse stay separate from the quarta via's, and the conclusion uses the Theta.8 ones. Each premise is needed and the bundle is not vacuous (Control.Certificate). The bundle does not give the tertia via's NECESSARY_1 (Control.NotTertiaViaNecessary): passing to it needs the OPEN bridge 'what cannot fail to be is not possibly at no time'. Found by the target-free conjecture pilot of #1834 (candidate C10); a short composition whose value is the new explicit link between GOD_4 and CORRUPTIBLE_INCORRUPTIBLE_1, not logical depth. Conditional consequence only; no premise is established.",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "25e19d5a-5cdf-5916-a888-f6a0ce970f11",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "051fe0e7-e842-5581-870a-e3bc00aeaf9c",
+    "a2a8de58-42e0-5481-b7fb-848ae8602036",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"
+  ],
+  "disambiguation_ids": [
+    "ed4f1f3f-d0c2-57b7-8ce7-52245db29d79",
+    "1795a62e-f78b-5f5b-94e7-9e7490824811"
+  ]
+}

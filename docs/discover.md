@@ -312,3 +312,42 @@ agent's proposal stays untrusted until Lean checks it.
 - The run is local and recurring by choice; CI runs only one fixed known
   derivation as a smoke test, and `scripts/DuperAxiomAudit.lean`.
 - `TRUTH_DISCOVER_KEEP=1` keeps the scratch files for debugging.
+
+## Target-free conjecture pilot
+
+`truth discover` starts from a target statement. The pilot of #1834 starts from
+two argument families instead and asks which *new* conclusions or
+relationships between them hold, without a preselected target.
+`scripts/discover_conjecture.py` certifies a fixed list of candidates written
+in a configuration (`explorations/conjectures/*.toml`); the list may come from
+an agent, the checks do not.
+
+```bash
+python3 scripts/discover_conjecture.py run explorations/conjectures/actualization-grades-1834.toml \
+  --out-dir .cache/conjectures/run    # under the heavy-job lock
+python3 scripts/discover_conjecture.py classify CONFIG --binders B.jsonl --lean-output OUT.txt --map FILE.lean.map.json
+```
+
+Each candidate states its outer binders with their types, its premises
+(existing statements, every declaration parameter mapped to an outer binder:
+nothing is identified by unification), its conclusion (an existing statement
+or a new proposition over the outer binders), and optionally decide-checked
+models and an explicit OPEN bridge. The rendered Lean file checks, each as
+its own declaration under `#print axioms`, the goal (`duper` after
+delta-unfolding the project definitions, as `truth prove-sweep` does), the
+premises against `False`, every single-premise deletion, the conclusion from
+no premise, the prove-sweep transcription probe, literal negation between
+premises, the models, and the bridge with and without the premises.
+
+`classify` gives each candidate one outcome: `verified_conditional_implication`,
+`incompatibility` (an inconsistent bundle; never support), `certified_non_implication`
+(only in the stated model), `open_bridge` (valid only with an explicit bridge or an
+unlicensed identification), `rejected` (with the filter: `known` by a registered
+argument or by forward-chaining closure, `transcription`, `tautology`,
+`literal_negation`, `senses`, `name_only_identification`, `single_family`, `axioms`)
+or `unresolved`. Identification follows the engine's rule: two declarations share a
+binder only within one Lean module or through one whole-binder sense tag, and a
+carrier is shared only when such an identification of a relation over it forces it.
+The tests (`scripts/test_discover_conjecture.py`) cover the acceptance fixtures of
+#1834 offline. The pilot's candidates, outcomes and comparison with `truth discover`
+and `truth bridge-experiments` are recorded in the attempt it cites.

@@ -1,0 +1,31 @@
+{
+ "id": "fca228f3-56e2-4575-acda-226786b44365",
+ "label": "Target-free cross-family conjecture pilot (#1834): prima via and act/potency against the quarta via",
+ "date": "2026-11-22",
+ "statement_ids": [
+  "46326b43-ec14-551a-8eaf-3230f57572c6",
+  "eaa4c679-98a3-5e82-95ff-18bd1177ce74",
+  "74eb9113-552b-5ec6-8e09-68374305dd58",
+  "0881e859-c4c3-53ff-9bec-b61294e12d51",
+  "7bce7007-ad29-5f5b-b4b3-e7b02bf98312",
+  "5a594b1e-09b6-592c-862d-473874a6c49c",
+  "c27dce66-864a-5a73-af62-0eeb4016514f",
+  "957a71fe-ba7e-5633-bef2-f5d287362fc5",
+  "a594d8c4-8d2e-5de3-b719-f1a8ee3b7b96",
+  "8288ff1e-d534-4516-ac2d-8d010cb863ac",
+  "ca55ed3a-8f7d-4e7c-8799-c61fdb4cce60",
+  "0cf675c4-4099-5df9-b294-05f2cfef057d",
+  "61ad11f3-476f-411d-9720-d9f05cbc22fc",
+  "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
+  "5d6beff2-4c92-4f01-901e-5ebace3caf56",
+  "2f9fb010-8ead-47fb-82d6-b5c36847193a",
+  "c1acdf6c-5e9a-5ce9-b70b-b805061d317a"
+ ],
+ "kind": "derivation",
+ "outcome": "succeeded",
+ "summary": "Target-free conjecture pilot (#1834) at cf7a567a5, families: actualization (prima via first mover 7bce7007/c27dce66/74eb9113/a594d8c4 and act/potency at a first being ca55ed3a/61ad11f3/8288ff1e/0cf675c4, rival c1acdf6c) and grades (quarta via maximum eaa4c679/0881e859/957a71fe/5a594b1e, stage-2 link 4c79298d, rival 2f9fb010); registered bridge 46326b43 not counted as a family. Fifteen candidates from four templates (T1 transport along 46326b43, T2 first-being properties at the maximum via eaa4c679, T3 on to GOD_4 via 4c79298d, T4 rival incompatibility), fixed before search in explorations/conjectures/actualization-grades-1834.toml and certified by scripts/discover_conjecture.py (Duper after delta-unfolding, single deletions, vacuity, prove-sweep transcription probe, literal negation, decide-checked models). Outcomes. Verified conditional implications (minimal bundles, joint witness, omission models for every premise): C07 eaa4c679+ca55ed3a give 'every maximum in being cannot fail to be'; C09 eaa4c679+61ad11f3 give act priority (POTENCY_2) at the maximum; C10 4c79298d+eaa4c679+ca55ed3a give 'whatever is GOD_4 is CORRUPTIBLE_INCORRUPTIBLE_1', persisted as 5d6beff2 (result 75ec568c, controls 32c078f4). Each joins the two families only through PRIOR_1, tagged on both declarations; the Theta.8 respect carrier is kept apart. Certified non-implications: C01 (46326b43+eaa4c679 do not give 74eb9113 without a maximum: the identity bridge is vacuous without the witness); C05b (God GOD_2 and IsGod GOD_4 apart: no derivation of a594d8c4; with the OPEN bridge 'every GOD_2 is GOD_4' it follows); C11 (C10's bundle does not give the tertia via's NECESSARY_1; OPEN bridge 'what cannot fail to be is not possibly at no time'); C14 (the potency-first rival c1acdf6c is jointly satisfiable with 61ad11f3, eaa4c679 and 0881e859 in a three-being model: act priority at first beings does not reach a non-first being in potency). OPEN by identification (valid in Lean only under binder identifications that no module convention or whole-binder sense tag licenses; not theorems about the statements): C02 (46326b43+eaa4c679+0881e859 give 74eb9113), C03 (46326b43+7bce7007 give 5a594b1e), C04 (46326b43+0881e859 give c27dce66), C05 (the word 'God' identifying GOD_2 with GOD_4: name-only control), C08 (eaa4c679+0cf675c4: PriorSimply of the q.3 a.1 reading untagged), C12 (2f9fb010+0881e859+46326b43+7bce7007 inconsistent: would refute the rival from the prima via), C13 (single-family version with 5a594b1e). The exact obligations: MovedIn and MovesIn of StageOne (7bce7007, c27dce66, a594d8c4), StageOneBridges (74eb9113) and StageOneQuartaVia (46326b43) carry no whole-binder sense tag; PriorSimply of 74eb9113 and 0cf675c4 is untagged (PRIOR_1 on eaa4c679); SpineRivalsRootEsse's 2f9fb010 binders are untagged. Rejected: C06 (tautology: IsMaximumIn already contains act in esse). Contradictory bundles (C12, C13) are recorded as incompatibilities under the named identifications, never as support. Baseline at the same revision: truth discover on 74eb9113, 5a594b1e, c27dce66 and a594d8c4 (premise pool all, 10 candidates) found 0 discoveries: three unresolved (its retrieval did not bring 46326b43 with eaa4c679 or 957a71fe into the goals), one proof of 5a594b1e filtered domain_by_name, and one missing bridge 'PureAct x gives MovedIn x r' that would make c27dce66 hold vacuously. truth bridge-experiments over the 18 results concluding the family targets under three profile modules surfaced only the #320 thisness question, within one family. The pilot added three verified cross-family implications, four certified non-implications and the identification obligations above; one survivor reaches the corpus. Limits: C10 is a short composition; its interest is the explicit GOD_4 to CORRUPTIBLE_INCORRUPTIBLE_1 link and the visible dependence on ca55ed3a (no direct warrant on file; rival: a contingent first being), not depth. Duper proofs are classical. No premise changes (frontier-diff: no change); 5d6beff2 reaches no root route yet. Next tests: (1) review whole-binder sense tags for MovedIn/MovesIn across the stage-1 prima via declarations and PRIOR_1 for 74eb9113's PriorSimply, then rerun C02-C04 and C12; (2) assess the OPEN bridge from CORRUPTIBLE_INCORRUPTIBLE_1 to NECESSARY_1 (C11), the connection plan for 5d6beff2 toward the tertia via necessary-root node 32a2f51c; (3) tag 2f9fb010's binders to test whether C12 refutes that rival.",
+ "evidence": [
+  "75ec568c-0e68-4d0f-afb5-85c7f4b74ddf",
+  "32c078f4-e548-4b5e-8c70-d2c385d11a78"
+ ]
+}
