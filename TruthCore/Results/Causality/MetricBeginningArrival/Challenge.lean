@@ -143,4 +143,21 @@ theorem externalOpportunityOfMemberwiseGiving {W B T S : Type} [Preorder T]
   sorry
 
 
+theorem selfGivingSeparatesNoSelf :
+    NonexternalConcurrentGivingOpportunity selfGivingFrame all posClock true ∧
+    ContingentConcretaTemporallyPresent selfGivingFrame all true ∧
+    ¬ NoSelfGivingOnAccessible selfGivingFrame true ∧
+    ¬ ConcurrentFiniteDurationCausalOpportunity selfGivingFrame all posClock true := by
+  sorry
+
+
+theorem unmanifestSourceSeparatesTemporal :
+    NonexternalConcurrentGivingOpportunity unmanifestSourceFrame all posClock true ∧
+    NoSelfGivingOnAccessible unmanifestSourceFrame true ∧
+    ¬ ContingentConcretaTemporallyPresent unmanifestSourceFrame all true ∧
+    ¬ ConcurrentFiniteDurationCausalOpportunity
+      unmanifestSourceFrame all posClock true := by
+  sorry
+
+
 end TruthCore.Results.Causality.MetricBeginningArrival

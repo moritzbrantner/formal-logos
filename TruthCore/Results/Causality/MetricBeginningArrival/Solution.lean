@@ -380,4 +380,91 @@ theorem mixedPossibleGivingWithoutActualGiving :
   · intro c t hg
     exact (by decide : (true : Bool) ≠ false) hg.1
 
+
+/-- On the same open-below finite-duration populated history, every candidate
+is concrete, contingent and temporally present. A self-giving universal source
+satisfies non-external causal opportunity, but the strong external opportunity
+fails because there is no necessary candidate. This omits no-self-giving while
+retaining the new temporal-presence bridge. Pure structural model. -/
+theorem selfGivingSeparatesNoSelf :
+    NonexternalConcurrentGivingOpportunity selfGivingFrame all posClock true ∧
+    ContingentConcretaTemporallyPresent selfGivingFrame all true ∧
+    ¬ NoSelfGivingOnAccessible selfGivingFrame true ∧
+    ¬ ConcurrentFiniteDurationCausalOpportunity selfGivingFrame all posClock true := by
+  have hPop : PopulatedAt openBelow all true (⟨1, one_pos⟩ : PosReal) :=
+    ⟨0, trivial, openBelowContingent 0, rfl⟩
+  have hBegin : FiniteDurationBeginningAt openBelow all posClock true :=
+    ⟨⟨_, hPop⟩, fun t _ => posFinite t⟩
+  refine ⟨?_, ?_, ?_, ?_⟩
+  · intro _
+    refine ⟨true, trivial, ⟨hBegin, 0, trivial, openBelowContingent 0⟩,
+      0, trivial, rfl, ?_⟩
+    constructor
+    · exact ⟨0, (⟨1, one_pos⟩ : PosReal), trivial,
+        openBelowContingent 0, rfl, rfl⟩
+    · intro _ _ _ _ _
+      rfl
+  · intro v _ x _ hCont
+    exact ⟨(⟨1, one_pos⟩ : PosReal), hCont.1⟩
+  · intro hNoSelf
+    exact hNoSelf true trivial 0 (⟨1, one_pos⟩ : PosReal) rfl
+  · intro hStrong
+    have hB : PossiblyBeginsFiniteDuration openBelow all posClock true :=
+      ⟨true, trivial, hBegin⟩
+    obtain ⟨v, _, _, c, _, he, _, hOutside⟩ :=
+      hStrong (possiblyBeginsAtOfFiniteDuration openBelow all posClock
+        (ConcurrentTotalityGivingAt selfGivingFrame all) true hB)
+    have hv : v = true := he
+    subst v
+    exact hOutside c trivial (openBelowContingent c) rfl
+
+theorem unmanifestSourceContingent (x : Bool) :
+    ContingentAt unmanifestSourceHistory.ontic true x :=
+  ⟨rfl, false, trivial, Bool.false_ne_true⟩
+
+/-- In a Boolean-roster model, strict no-self-giving can hold and an
+unmanifested contingent source can give being to every actually present
+contingent effect. Without the temporal-presence condition, the stronger
+external-source B2 fails. This is a structural reading separation, not evidence
+that contingent timeless concreta are metaphysically available. -/
+theorem unmanifestSourceSeparatesTemporal :
+    NonexternalConcurrentGivingOpportunity unmanifestSourceFrame all posClock true ∧
+    NoSelfGivingOnAccessible unmanifestSourceFrame true ∧
+    ¬ ContingentConcretaTemporallyPresent unmanifestSourceFrame all true ∧
+    ¬ ConcurrentFiniteDurationCausalOpportunity
+      unmanifestSourceFrame all posClock true := by
+  have hPop : PopulatedAt unmanifestSourceHistory all true
+      (⟨1, one_pos⟩ : PosReal) :=
+    ⟨true, trivial, unmanifestSourceContingent true, ⟨rfl, rfl⟩⟩
+  have hBegin : FiniteDurationBeginningAt unmanifestSourceHistory all posClock true :=
+    ⟨⟨_, hPop⟩, fun t _ => posFinite t⟩
+  have hGiving : ConcurrentTotalityGivingAt unmanifestSourceFrame all true false := by
+    constructor
+    · exact ⟨true, (⟨1, one_pos⟩ : PosReal), trivial,
+        unmanifestSourceContingent true, ⟨rfl, rfl⟩,
+        ⟨rfl, rfl, rfl⟩⟩
+    · intro x _ _ _ hAt
+      exact ⟨hAt.1, rfl, hAt.2⟩
+  refine ⟨?_, ?_, ?_, ?_⟩
+  · intro _
+    exact ⟨true, trivial, ⟨hBegin, true, trivial, unmanifestSourceContingent true⟩,
+      false, trivial, rfl, hGiving⟩
+  · intro v _ c t hSelf
+    have h : v = true ∧ c = false ∧ c = true := hSelf
+    exact Bool.false_ne_true (h.2.1.symm.trans h.2.2)
+  · intro hTemporal
+    obtain ⟨t, hAt⟩ :=
+      hTemporal true trivial false trivial (unmanifestSourceContingent false)
+    exact Bool.false_ne_true hAt.2
+  · intro hStrong
+    have hB : PossiblyBeginsFiniteDuration unmanifestSourceHistory all posClock true :=
+      ⟨true, trivial, hBegin⟩
+    obtain ⟨v, _, _, c, _, he, _, hOutside⟩ :=
+      hStrong (possiblyBeginsAtOfFiniteDuration unmanifestSourceHistory all posClock
+        (ConcurrentTotalityGivingAt unmanifestSourceFrame all) true hB)
+    have hv : v = true := he
+    subst v
+    exact hOutside c trivial (unmanifestSourceContingent c) rfl
+
+
 end TruthCore.Results.Causality.MetricBeginningArrival

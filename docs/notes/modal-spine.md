@@ -517,6 +517,21 @@ excluded by the temporal-presence premise, not by logic alone.
 The original memberwise B2 and all downstream God/root consumers stay
 available. Corpus binding, model challenge and CI pending.
 
+
+**Independent omission controls (new).** On an open-below finite-duration
+two-world model, a self-giving source can be modally contingent and still
+produce every temporally present contingent member: all the temporal
+requirements hold but strict `NoSelfGivingOnAccessible` fails, and there is
+no necessary external bearer. A second Boolean-roster model preserves
+strict no-self-giving and actual memberwise production while a contingent
+source exists in its world without ever being `IsAt` any time; the
+`ContingentConcretaTemporallyPresent` bridge fails and the externality
+conclusion does not hold. The models isolate two genuine LOGICAL premises of
+the new derivation, not metaphysical counterexamples: the second model, in
+particular, may not satisfy an independently justified account of temporal
+concreteness. Neither omission is inserted into the new bridge unannounced.
+Their proof and Comparator certificates remain pending.
+
 **What "begins" means in B1** (spec
 `specs/modal-spine-metric-beginning-arrival.toml`, attempt
 [`9d141c6c`](../../corpus/attempts/9d141c6c-7979-4d8b-a1b4-7b35ebc9fb21.json)).

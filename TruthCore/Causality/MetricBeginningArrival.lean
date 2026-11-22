@@ -284,6 +284,45 @@ def mixedGivingFrame :
   PriorSimply := fun _ _ => False
   esse := ()
 
+
+/-- A two-world, Bool-entity independent-control history. Both concrete
+candidates exist only in world true; only candidate true has any temporal
+presence. Candidate false is modally contingent but never present at a time.
+This isolates the ontic-existence-to-temporal-manifestation bridge. -/
+def unmanifestSourceHistory : History Bool Bool PosReal where
+  ontic := { frame := TruthCore.Causality.InertEmptiness.Control.universal,
+             ExistsAt := fun v _ => v = true,
+             Causes := fun _ _ _ => False }
+  IsAt := fun v x _ => v = true ∧ x = true
+  now := ⟨1, one_pos⟩
+
+/-- The contingent unmanifested source false actually gives being to the
+temporally present contingent true. It does not give being to itself; this
+is consistent because false is outside the scope of temporal recipients. -/
+def unmanifestSourceFrame :
+    TruthCore.Causality.Frame.CausalityFrame Bool Bool PosReal Unit where
+  history := unmanifestSourceHistory
+  GivesAt := fun v c x _ => v = true ∧ c = false ∧ x = true
+  CausesIn := fun _ _ _ => False
+  MovesIn := fun _ _ _ => False
+  DependsForBeing := fun _ _ => False
+  PriorSimply := fun _ _ => False
+  esse := ()
+
+/-- Every individual has temporal presence and contingency at true; the
+candidate 0 may act as a self-giver. Without a no-self-giving restriction,
+a universal memberwise producer can be contingent and the externality
+conclusion fails even when all contingent beings occur in time. -/
+def selfGivingFrame :
+    TruthCore.Causality.Frame.CausalityFrame Bool Int PosReal Unit where
+  history := openBelow
+  GivesAt := fun v _ _ _ => v = true
+  CausesIn := fun _ _ _ => False
+  MovesIn := fun _ _ _ => False
+  DependsForBeing := fun _ _ => False
+  PriorSimply := fun _ _ => False
+  esse := ()
+
 /-- Every individual counts as concrete:
 (1) in the beginningless integer history `pivot` (identity clock) contingent
 concrete things are possibly present, and no accessible history begins in
