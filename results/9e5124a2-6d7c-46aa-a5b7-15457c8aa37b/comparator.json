@@ -5,7 +5,10 @@
     "TruthCore.Results.Causality.MetricBeginningArrival.externalOpportunityOfMemberwiseGiving",
     "TruthCore.Results.Causality.MetricBeginningArrival.necessaryOfUniversalMemberwiseGiving",
     "TruthCore.Results.Causality.MetricBeginningArrival.selfGivingSeparatesNoSelf",
-    "TruthCore.Results.Causality.MetricBeginningArrival.unmanifestSourceSeparatesTemporal"
+    "TruthCore.Results.Causality.MetricBeginningArrival.unmanifestSourceSeparatesTemporal",
+    "TruthCore.Results.Causality.MetricBeginningArrival.nonexternalOpportunityOfExternal",
+    "TruthCore.Results.Causality.MetricBeginningArrival.nonexternalIffExternalOpportunity",
+    "TruthCore.Results.Causality.MetricBeginningArrival.concurrentTotalityGiving_iff_sustains"
   ],
   "permitted_axioms": [
     "propext",

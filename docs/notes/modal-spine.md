@@ -461,11 +461,11 @@ exists in both histories.
 **Cumulative consequence.** The registered root route remains:
 fixed-d Reaper assumptions → `4365c3c5`, plus possible population →
 BEGINS_2 `951a2235`, plus B2, the frame conditions →
-`b19ffd92` → existing further God/attribute consumers. No new
-argument/inference IDs or frontier closure are claimed here: the
-stronger causal result is a verified-by-target Lean companion under a
-distinct OPEN interpretive premise, not a graph substitution for
-`256b5bab`. This scope does not infer first temporal moments,
+`b19ffd92` → existing further God/attribute consumers. The causal
+reading is registered as additional arguments (`7649d8aa`,
+`f468780f`, `abbbce81`; see the two paragraphs below), alongside the
+existing route through `256b5bab`, which they do not replace. No frontier
+closure is claimed: every new premise is OPEN. This scope does not infer first temporal moments,
 physical infinity's impossibility, a first per-se source, actual
 sustaining causation at w, divine simplicity or uniqueness. The
 positive warrant question now has a precise test: justify a jointly
@@ -509,11 +509,25 @@ effect-domain and the memberwise causal law would entail `GivesAt v c c t`,
 contradicting no-self-giving. The source is then necessary at v under the
 *existing* rigid-candidate modal semantics. Therefore
 `externalOpportunityOfMemberwiseGiving` derives the exteriority clause
-rather than including it in the possibility premise. This is a substantive
+from the universal scope of the giving clause over a possibly contingent
+source, rather than stating it in the possibility premise. The commitment to
+a possibly necessary concretum is relocated, not removed: the converse holds
+by dropping the exteriority conjunct (`nonexternalOpportunityOfExternal`), so
+under no-self-giving and temporal presence the two premises are equivalent
+(`nonexternalIffExternalOpportunity`). A rival who denies that a necessary
+concretum is possible, and keeps both principles, rejects the nonexternal
+premise exactly as the external one. What the reformulation gains is an
+explicit statement of that rival's cost: no concrete thing could give being to
+every contingent concretum of a possible BEGINS_2 history. `GivesAt` is read
+strictly (definition `158301bc`), and the universal clause is CAUSE_OF_BEING_2
+(`SustainsBeing`, disambiguation `88a8fba7`) restricted to temporally present
+contingent concreta (`concurrentTotalityGiving_iff_sustains`). This is a substantive
 conditional **support option for B2**, not proof that such a source can be
 causally realized or that giving to every individual is equivalent to
 causing their totality holistically. A timeless *contingent* supplier is
-excluded by the temporal-presence premise, not by logic alone.
+excluded by the temporal-presence premise, not by logic alone: that premise
+denies contingent atemporal concreta, while necessary concreta may be
+timeless.
 The original memberwise B2 and all downstream God/root consumers stay
 available. Corpus binding, model challenge and CI pending.
 
@@ -679,6 +693,32 @@ Objection and warrant audit (Substantive Objection Standard):
   something exists" does not give "something exists necessarily"
   (`NecessaryIndividual.Alternating`, `SharedRootBridge`).
 - If a world with nothing concrete is possible, the conclusion is false under F1 and F2.
+- The subtraction argument for an empty world (2026-11-22, attempt
+  `03e1f49f`, batch `specs/subtraction-argument.toml`, analyst formulation;
+  its premises are labelled S1–S3 to keep them apart from this stage's A2 and
+  A3). The argument is valid on the route's profile (S1 finitely many
+  concreta, S2 each could fail to exist, S3 subtraction with no newcomer,
+  transitivity, excluded middle; S1, S2, S3 and transitivity each needed by
+  omission models), and its conclusion contradicts this node. It reaches the
+  node only through S2 at the candidate necessary being: the node excludes S2
+  at its world (result `6b12525b`), with excluded middle S2 there is exactly
+  the node's denial, and in an S5 theist model every other premise holds
+  together with this node and the box K node, so rejecting the rival requires
+  rejecting only S2. Pairwise recombination with companions gives S2 but not
+  S3; unrestricted recombination is exactly recombination for candidates that
+  could be absent plus the possible absence of every companioned concretum
+  (certified difference). Recombination therefore adds no warrant for S2 at
+  the necessary being beyond its own Humean source, separability in
+  conception, that is the conceivability bridge, which is not yet assessed at
+  this node. The analyst formulation of Lowe's reply (a necessary abstractum
+  co-existing with some concretum) excludes the conclusion and, with S1,
+  transitivity and excluded middle, S2 and S3 together, without choosing
+  which; it does not by itself give a necessary concrete individual (pair
+  model). An explanatory-dependence extension of the kind Lowe's 2013 modal
+  argument uses (roughly: contingent beings cannot explain the existence of
+  necessary abstracta; navigation only, attribution deferred, not checked
+  against the text and not formalized) is an unassessed further support
+  option for this node and a next test.
 
 ## Stage two: that being is God
 

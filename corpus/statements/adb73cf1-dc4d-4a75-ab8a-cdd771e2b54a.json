@@ -1,0 +1,15 @@
+{
+  "id": "adb73cf1-dc4d-4a75-ab8a-cdd771e2b54a",
+  "label": "Not every concrete object existing at w could fail to exist",
+  "paraphrase": "Denial of subtraction premise S2 at the world w itself: it is not the case that every candidate that is concrete and exists at w is absent at some world accessible from w. It names no particular object and says nothing about uniqueness, God or any attribute.",
+  "lean_declaration": "TruthCore.Causality.SubtractionArgument.NotEachConcreteCouldFailAt",
+  "definition_ids": [
+    "cdbbae1a-5cce-4367-b6b4-d135135a2ecd",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "7c5984f9-2424-428e-b1d7-539b490d8eba",
+  "label": "Subtraction argument controls checked",
+  "argument_id": "6a5ab42c-8f5e-4ae2-9fab-4127dfa419a5",
+  "challenge_module": "TruthCore.Results.Causality.SubtractionArgument.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SubtractionArgument.Solution",
+  "theorem": "TruthCore.Results.Causality.SubtractionArgument.controls",
+  "comparator_config": "results/7c5984f9-2424-428e-b1d7-539b490d8eba/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free laws and models for the subtraction batch. Sense-mixing control: the laws relate the NECESSARY_2 nodes to possibility over the frame (NECESSARY_11 carrier) without a bridge premise. Establishes no premise and no root obligation.",
+  "research_comparisons": [
+    {
+      "target_statement_id": "cdf897a8-5490-561a-b9d2-507486a3f192",
+      "rival_statement_id": "4d51a1a1-90ea-4169-8599-6fb9160fe92e",
+      "sense_definition_id": "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+      "outcome": "model-witnessed",
+      "conditions": "Models, item 5: no hypotheses; the theist profile at world true.",
+      "scope": "One profile and world: universal two-world frame (S5), God existing at both worlds and one creature at one, the two-being signature's stipulated divine fields.",
+      "coverage": "Not a sense fork: one sense of necessity (NECESSARY_2) and one restricted recombination principle.",
+      "exclusivity": "Not used.",
+      "witness": "theistProfile with pairSignature at world true: the box K, S5 and stage-one nodes, S1, S3 throughout, contingent free absence and companions hold; S2 at w, unrestricted free absence and 'possibly no concrete object' fail.",
+      "next_step": "Assess whether any independent warrant extends free absence from candidates that could be absent to every concrete candidate."
+    }
+  ]
+}
