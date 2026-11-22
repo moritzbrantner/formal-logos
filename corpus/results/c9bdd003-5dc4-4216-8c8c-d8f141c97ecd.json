@@ -1,0 +1,11 @@
+{
+  "id": "c9bdd003-5dc4-4216-8c8c-d8f141c97ecd",
+  "label": "Maximal in being is first being, from prior causes of being and no distinct cause",
+  "argument_id": "d27dd642-81bb-4cb0-bbaf-fd3d3ec97ab8",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.MaximumFirstByPriorCause.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.MaximumFirstByPriorCause.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.MaximumFirstByPriorCause.maximumInBeingIsFirstBeingOfPriorCause",
+  "comparator_config": "results/c9bdd003-5dc4-4216-8c8c-d8f141c97ecd/comparator.json",
+  "status": "solution-present",
+  "description": "Analyst composition, attribution deferred: if whatever is SIMPLY_PRIOR_1 to a thing causes its being (CausesIn at esse, CAUSE_2), and no being maximal in being has a cause of its being distinct from itself in the same CausesIn, then whatever is maximal in being is the first being: anything simply prior to it is identical with it. Same InAct, MoreIn, CausesIn, esse and PriorSimply throughout. Excluded middle is used only to split on whether the prior being is the maximum. Establishes no premise; the controls show that each non-logical premise is needed and that they are jointly satisfiable with a maximum and a priority edge."
+}

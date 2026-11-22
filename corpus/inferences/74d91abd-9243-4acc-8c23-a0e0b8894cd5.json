@@ -1,0 +1,14 @@
+{
+  "id": "74d91abd-9243-4acc-8c23-a0e0b8894cd5",
+  "label": "Maximal in being is first being, from prior causes of being and no distinct cause (inference)",
+  "input_statement_ids": [
+    "70e98bb5-a96d-5d69-870d-e6bd0df2b813",
+    "18561596-1269-53ff-8505-c56e4348e335",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "eaa4c679-98a3-5e82-95ff-18bd1177ce74",
+  "rule": "Instantiate the priority premise at the maximum, then exclude a distinct cause of its being; case split on identity by excluded middle",
+  "meaning": "Analyst composition, attribution deferred: if whatever is SIMPLY_PRIOR_1 to a thing causes its being (CausesIn at esse, CAUSE_2), and no being maximal in being has a cause of its being distinct from itself in the same CausesIn, then whatever is maximal in being is the first being: anything simply prior to it is identical with it. Same InAct, MoreIn, CausesIn, esse and PriorSimply throughout. Excluded middle is used only to split on whether the prior being is the maximum. Establishes no premise; the controls show that each non-logical premise is needed and that they are jointly satisfiable with a maximum and a priority edge.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
