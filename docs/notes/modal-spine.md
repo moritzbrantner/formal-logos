@@ -795,7 +795,7 @@ B7. That endpoint does not itself reach the root in the current frontier.
 Two further projections give this stage's node STMT-NECESSARY-CONCRETE-AT
 (`b19ffd92`), which does, a support option through the First Way's witness: from the
 grounding endpoint (result `b6d7c434`) and from the pure-act endpoint with
-B0' (result `402e5643`). `frontier-diff` against the merge base `9195afe7`:
+B0' (result `402e5643`). `frontier-diff` against the merge base `08d5aa22`:
 10 verified support alternatives added, 6 bare premises added (B0, B0',
 irreflexivity, B4, B2 ∨ B4, B6), route cost unchanged, nothing closed.
 Results: A ∨ B `563d596e`, A `8cc169e3`, B `52df4a80`, C `e874589f`,
