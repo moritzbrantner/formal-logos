@@ -7,5 +7,6 @@
   "object_kind": "statement",
   "object_id": "d912723b-b4c7-4c05-9cda-2105e7b80659",
   "verification_result_id": "d3e73dbe-d4dd-4876-8303-62a0d6c70219",
-  "note": "Same formula parameter. Strict: the K axiom is NECESSARY_14 K-valid but not in the truth-functional fragment (controls). On the fragment the two coincide (controls, laws)."
+  "strictness_result_id": "8366ef48-9ff4-48db-be62-3d97f9803c1a",
+  "note": "Same formula parameter. Strict: the K axiom instance with q := p is NECESSARY_14 K-valid but not in the truth-functional fragment (controls). It is a substitution instance of a propositional tautology, so strictness comes only from the fragment restriction; every K-valid formula containing box is an equal witness. On the fragment the two coincide (controls, laws)."
 }

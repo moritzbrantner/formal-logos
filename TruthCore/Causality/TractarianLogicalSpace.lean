@@ -209,8 +209,11 @@ def Laws : Prop :=
    is not elementary;
 4. the identity tautology is an exact existence dictionary for each object,
    an atom is not, and no boxed formula is a tautology;
-5. strictness: the K axiom is NECESSARY_14 K-valid but not a NECESSARY_16
-   tautology (it is not truth-functional);
+5. strictness: the K axiom instance `□(p→p) → (□p → □p)` is NECESSARY_14
+   K-valid but not a NECESSARY_16 tautology. It is a substitution instance of
+   a propositional tautology; strictness comes only from the restriction to
+   the truth-functional fragment, so every K-valid formula containing box is
+   a witness equally;
 6. in the contrast ontology where existence is elementary, no candidate is
    box-existent at any world. -/
 def TractarianModel : Prop :=

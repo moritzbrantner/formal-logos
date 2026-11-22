@@ -31,7 +31,7 @@ formulations with attribution DEFERRED, not additional verified readings.
 | Forms of life, modest analyst formulation | `STMT-PRACTICAL-BACKGROUND-OF-LINGUISTIC-COMPETENCE`; attribution DEFERRED | neutral to occurrence; conditional epistemic-basis challenge | candidate F5 occurrence unchanged; only verbal-interpretation-alone competence proposal challenged | OPEN; no truth-by-agreement or global insulation conclusion |
 | Tractatus, traditional reading | 4.003, 4.11, 6.42, 6.432, 6.522, 7 (German, `WITTGENSTEIN-TRACTATUS`); `SEP-WITTGENSTEIN` §2.4 | rival to the arguability of natural theology | `STMT-NATURAL-THEOLOGY-ARGUABLE` (presupposed by every route, stated by none; not a route leaf) | recorded as an unattributed reconstruction (`STMT-TLP-GOD-SENTENCES-NONSENSICAL`); not refuted |
 | Tractatus, resolute reading | `SEP-WITTGENSTEIN` §2.4 | neutral: the book points at no ineffable truths (a claim about the book) | none | recorded; the self-application (6.53-6.54) belongs to #1008 |
-| Tractatus: only logical necessity, logical space | 4.46ff., 6.1ff., 6.37, 2.027, 4.1272 as navigation; analyst formulations, attribution deferred | neutral to the necessary-being node: compatible with it in a joint S5 model; the conflicting variant (elementary existence) has no Tractarian support | NECESSARY_2 conjunct of `STMT-NECESSARY-ROOT-BOX-K`, only under elementary existence | NECESSARY_16 tautology sense, logical-space law and checked incompatibility verified (`specs/tractarian-logical-space.toml`); no objection recorded |
+| Tractatus: only logical necessity, logical space | 4.46ff., 6.1ff., 6.37, 2.027, 4.1272 as navigation; analyst formulations, attribution deferred | neutral to the necessary-being node: compatible with it in a joint S5 model; the conflicting variant (elementary existence) has no Tractarian support | NECESSARY_2 conjunct of `STMT-NECESSARY-ROOT-BOX-K`, only under elementary existence | NECESSARY_16 tautology sense, logical-space law and checked incompatibility verified (`specs/tractarian-logical-space.toml`); no objection to a route premise recorded; concerns truth, not assertibility: it neither answers nor strengthens the meaning-level rival `STMT-TLP-GOD-SENTENCES-NONSENSICAL` (row above), whose formal core for existence claims is the dictionary law |
 | Lecture on Ethics | absolute value is no fact; wonder at existence is nonsense; religious terms are similes (`WITTGENSTEIN-LECTURE-ON-ETHICS`) | rival in spirit to realist God-talk as simile; an objection to the statementhood of "the world exists" is only an unattributed reconstruction (needs an imaginability-to-sense bridge) | candidate F2 (reconstruction only); off-route | recorded |
 | Lectures on religious belief (1938, student notes) | religious beliefs not hypotheses, `SEP-RELIGIOUS-LANGUAGE` §4.2 | rival in spirit to recognizability by signs; not attached to a leaf | none (the notes are not Wittgenstein's text; no claim attributes WF-N to him) | recorded as a reported reading |
 
@@ -837,7 +837,12 @@ locators navigation only (4.46ff., 6.1ff., 6.37, 2.027, 4.1272, 4.211).
 
 - **NECESSARY_16, tautology** (`Tautology`): a box-free formula true under every
   truth-value assignment. Verified: it strictly strengthens NECESSARY_14 K
-  validity (strength order; K axiom as strictness witness); on the
+  validity (strength order). The strictness witness, the K axiom instance
+  `□(p→p) → (□p → □p)`, is a substitution instance of a propositional
+  tautology: strictness comes only from the restriction to the
+  truth-functional fragment, and every K-valid box formula is an equal
+  witness. NECESSARY_16 excludes tautologous substitution instances such as
+  `□p → □p`; that wider notion would be a distinct intermediate sense. On the
   truth-functional fragment it coincides with NECESSARY_14 and, on an inhabited
   frame, with NECESSARY_13; it is the classical truth-functional instance of
   NECESSARY_5 (contradictory denial; the converse with excluded middle as an
@@ -852,7 +857,9 @@ locators navigation only (4.46ff., 6.1ff., 6.37, 2.027, 4.1272, 4.211).
   NECESSARY_2 (S5) box-existent, two distinct ones at once, and their existence
   is not elementary. Any box-free exact existence dictionary for a box-existent
   bearer is a tautology: "this object exists", if expressible in the
-  truth-functional language at all, is expressible only by a tautology.
+  truth-functional language at all, is expressible only by a tautology. This
+  law is the formal core of the senselessness point (4.461, 4.1272, 6.432,
+  navigation).
 - **"A necessary being exists"** is, on this reading, neither a contradiction
   nor a contingent truth-functional proposition. With box it is not a formula of
   the truth-functional language (no boxed formula is a tautology); its
@@ -861,7 +868,8 @@ locators navigation only (4.46ff., 6.1ff., 6.37, 2.027, 4.1272, 4.211).
 - **Bearing on the route.** The joint route model has, on one S5 frame over all
   assignments, the route's S5 frame premise and the S5 necessary-being node for
   the one-point root together with logical space and only logical necessity for
-  the states of affairs. So "only logical necessity", read as a thesis about what
+  the states of affairs. The one-point signature's divine fields are stipulated,
+  not evidence. So "only logical necessity", read as a thesis about what
   can be said truth-functionally, falsifies no route premise. The conflict needs
   the further thesis that the candidates' existence facts are themselves free
   coordinates of logical space (`ElementaryExistenceAt`). The box K node
@@ -870,9 +878,16 @@ locators navigation only (4.46ff., 6.1ff., 6.37, 2.027, 4.1272, 4.211).
   persisting and "there are objects" as a pseudo-proposition (2.027, 4.1272,
   navigation), the opposite of elementary existence. Under the
   substantive-objection standard no objection to a route premise is recorded.
-  Tractarian necessity of objects supports necessary existence of many simples
-  in the NECESSARY_2 sense, compatible with the node, and supports neither
+  The model of persisting objects (2.022-2.027, navigation) realizes
+  NECESSARY_2 box-existence of many simples; the Tractatus itself treats this
+  as unsayable (4.1272). It is compatible with the node and supports neither
   uniqueness nor any root fact.
+- **Relation to the meaning-level rival.** The compatibility result concerns
+  truth in a model, not assertibility. It neither answers nor strengthens the
+  existing rival `STMT-TLP-GOD-SENTENCES-NONSENSICAL` (sentences about God are
+  nonsensical, against `STMT-NATURAL-THEOLOGY-ARGUABLE`); the
+  existence-dictionary law only makes precise where that senselessness point
+  would bite for existence claims.
 
 ## Lecture on Ethics (1929)
 

@@ -27,5 +27,5 @@
       1
     ]
   },
-  "note": "Difference of tautology and K validity of the same formula: the strong version adds exactly that the formula is truth-functional (no box or diamond). Strictness is witnessed in the controls by the K axiom, which is K-valid and not truth-functional."
+  "note": "Difference of tautology and K validity of the same formula: the strong version adds exactly that the formula is truth-functional (no box or diamond). Strictness is witnessed in the controls by the K axiom instance with q := p, which is K-valid and not truth-functional; it is a substitution instance of a propositional tautology, so strictness comes only from the fragment restriction and every K-valid box formula is an equal witness."
 }
