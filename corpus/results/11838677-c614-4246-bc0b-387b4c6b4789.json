@@ -1,0 +1,11 @@
+{
+  "id": "11838677-c614-4246-bc0b-387b4c6b4789",
+  "label": "KT route frame entails the T schema of the route's NECESSARY_2 box",
+  "argument_id": "6799f3f0-d11c-40ee-9432-c8c259c8e448",
+  "challenge_module": "TruthCore.Results.Causality.NecessarySenseBridges.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NecessarySenseBridges.Solution",
+  "theorem": "TruthCore.Results.Causality.NecessarySenseBridges.frameKTToTSchema",
+  "comparator_config": "results/11838677-c614-4246-bc0b-387b4c6b4789/comparator.json",
+  "status": "solution-present",
+  "description": "If the route's modal frame is reflexive (KT), the T schema of the route's box is valid on it. Applies the existing modal-library theorem TruthCore.Modal.axiomT_valid to the route frame. Establishes neither premise. No transcription is declared: the proof applies a proved library theorem with real content, not an open bridge, as in frameS5ToS4."
+}

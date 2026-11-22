@@ -1,0 +1,12 @@
+{
+  "id": "422fb261-896c-4759-9922-ea6a941ad68a",
+  "label": "KT route frame entails the T schema of the route's NECESSARY_2 box (inference)",
+  "input_statement_ids": [
+    "806c3f89-171a-5ccf-9ddf-5924c39695ed"
+  ],
+  "output_statement_id": "cb456382-efd6-554b-8ee4-c8fc193f876a",
+  "rule": "Soundness of axiom T on reflexive frames (axiomT_valid of the modal library)",
+  "meaning": "If the route's modal frame is reflexive (KT), the T schema 'necessarily p implies p' of the route's box is valid on it, for every valuation of its atom and every world. Applies the existing modal-library theorem TruthCore.Modal.axiomT_valid to the route frame. Establishes neither premise; with the converse result it shows that the KT frame premise and the T schema premise are equivalent.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

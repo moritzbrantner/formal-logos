@@ -296,4 +296,17 @@ def FrameStrictness : Prop :=
   (OnticFrameS4 (everywhere leFrame) ∧ ¬ OnticFrameS5 (everywhere leFrame)) ∧
   (OnticFrameKTB (everywhere pathFrame) ∧ ¬ OnticFrameS5 (everywhere pathFrame))
 
+/-- One world with no accessibility edge: symmetric, transitive and Euclidean
+(vacuously), not reflexive. -/
+def deadFrame : Frame Unit := ⟨fun _ _ => False⟩
+
+/-- Strictness of two frame-to-schema orders (KTB route frame over the B
+schema, S5 route frame over the 5 schema): on the one-world frame with no edge
+the B and 5 schemas are valid on the route frame, while the route frame is
+neither KTB nor S5 (it is not reflexive). Statements about this interpretation
+only. -/
+def SchemaStrictness : Prop :=
+  (OnticBSchemaValid (everywhere deadFrame).ontic ∧ ¬ OnticFrameKTB (everywhere deadFrame)) ∧
+  (Ontic5SchemaValid (everywhere deadFrame).ontic ∧ ¬ OnticFrameS5 (everywhere deadFrame))
+
 end TruthCore.Causality.ModalSenseSupport.Control

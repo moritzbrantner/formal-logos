@@ -1,0 +1,11 @@
+{
+  "id": "db2ebb76-a423-40ef-a80a-63d21ec16e75",
+  "label": "S5 route frame entails the 5 schema of the route's NECESSARY_2 box",
+  "argument_id": "2cba5b42-51be-4391-a9c6-a06d22ba9194",
+  "challenge_module": "TruthCore.Results.Causality.NecessarySenseBridges.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NecessarySenseBridges.Solution",
+  "theorem": "TruthCore.Results.Causality.NecessarySenseBridges.frameS5To5Schema",
+  "comparator_config": "results/db2ebb76-a423-40ef-a80a-63d21ec16e75/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration: if the route's modal frame is reflexive and Euclidean (S5), the 5 schema of the route's box is valid on it. Applies the existing modal-library theorem TruthCore.Modal.axiom5_valid to the frame's Euclidean condition. Establishes neither premise. No transcription is declared: the proof applies a proved library theorem with real content."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "b5684973-7715-487e-9e5e-ab4aaee31342",
+  "label": "The T schema of the route's NECESSARY_2 box entails a KT route frame",
+  "argument_id": "caabb2b7-d529-43b2-9b17-0ced7f504b20",
+  "challenge_module": "TruthCore.Results.Causality.NecessarySenseBridges.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NecessarySenseBridges.Solution",
+  "theorem": "TruthCore.Results.Causality.NecessarySenseBridges.tSchemaToFrameKT",
+  "comparator_config": "results/b5684973-7715-487e-9e5e-ab4aaee31342/comparator.json",
+  "status": "solution-present",
+  "description": "If the T schema of the route's box is valid on the route's modal frame, the frame is reflexive (KT). Applies the verified premise-free theorem TruthCore.Results.Modal.StandardCorrespondenceCertificate.certificate (the T correspondence) to the route frame. Establishes neither premise. No transcription is declared: the proof applies a proved correspondence theorem, not an open bridge."
+}

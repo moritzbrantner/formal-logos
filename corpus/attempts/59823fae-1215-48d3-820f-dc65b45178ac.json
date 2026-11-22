@@ -1,0 +1,24 @@
+{
+  "id": "59823fae-1215-48d3-820f-dc65b45178ac",
+  "label": "Audit of the senses of NECESSARY and the frame-to-schema bridges of the route box",
+  "statement_ids": [
+    "806c3f89-171a-5ccf-9ddf-5924c39695ed",
+    "cb456382-efd6-554b-8ee4-c8fc193f876a",
+    "60795e6e-1fe1-5c55-9718-bc2a22867244",
+    "98bede5a-c5ff-5c26-9af0-10d526d422e2",
+    "873d057f-e58e-53cc-a054-093f7c5a4238",
+    "6f474aba-fda0-57fa-8330-6246de589f63"
+  ],
+  "date": "2026-11-20",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Audit of all fourteen senses of DISAMB-NECESSARY (table in its resolution, 'Sense audit'): every sense with a Lean declaration is a Lean definition with a body or a structure (NECESSARY_11, Modal.Frame); NECESSARY_3 and NECESSARY_4 are defined relative to supplied primitives (the possibility operator and the cause-of-necessity relation); NECESSARY_8 and NECESSARY_10 share the one raw Box operator and differ only in framework premises; NECESSARY_5 (logical necessity, denial contradictory) stays without a declaration by design, since the generic sense does not select a logic, language or interpretation domain, and its bounded instances are NECESSARY_13 to NECESSARY_15 and LogicalNecessityContrast.DenialContradictory. Proved (batch specs/necessary-sense-bridges.toml): the KT route frame premise is logically equivalent to the T schema premise (axiomT_valid forward; the verified StandardCorrespondenceCertificate backward); the KTB frame premise strengthens the B schema premise (axiomB_valid) and the S5 frame premise strengthens the 5 schema premise (axiom5_valid), each strict on the one-world frame without edges. Frontier: the B and 5 schemas stop being open leaves because they are derived from the frame premises; they are not established. Discover rerun with the same 24 targets, premise pool all, 10 candidates (report 20261120T155508Z on the branch; baseline 20261120T134013Z): targets 24, proved 12 -> 12, discoveries 7 -> 3, incompatibilities 2 -> 2, unresolved 12 -> 12, filtered 3 -> 7 (t15 is now known, composed from the new T-to-KT result). The schema targets t18 to t20 remain unresolved for the engine although they are now proved: their declarations bind o : Ontic, the frame premises bind m : Profile, and the engine does not identify o with m.ontic, so its goal quantifies over unrelated o and m and is false.",
+  "blocker": "Next tests: (1) teach the discovery goal builder, or a carrier tag, that ModalSenseSupport schema statements over o : Ontic are applied at m.ontic, or restate the schema premises over Profile, then rerun t18 to t20; (2) certified differences for the two new strengthens registrations (delta: the KT frame premise; certificate STRONG iff WEAK and KT, needs the B and 5 correspondences of ConvergenceCertificate); (3) the S4 frame to 4 schema order (axiom4_valid) and the frame-to-schema converses for B and 5 combined with T; (4) t7 to t11 (LogicalNecessityProfiles), t13 (NecessaryRootBoxS5), t1, t5 and t2 are untouched. No frame premise or schema is asserted.",
+  "evidence": [
+    "11838677-c614-4246-bc0b-387b4c6b4789",
+    "b22dcc44-f87f-4449-9f95-20e5d821b31c",
+    "b5684973-7715-487e-9e5e-ab4aaee31342",
+    "db2ebb76-a423-40ef-a80a-63d21ec16e75",
+    "ee7281ec-bb0c-4ee0-9161-f127f6a9ad31"
+  ]
+}
