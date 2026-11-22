@@ -13,6 +13,34 @@ The same-root simplicity consumer `379399d1` also uses a separate interface
 defended before taking a non-world-indexed `CausesIn` edge to prohibit a
 selected-world underived source from being composite.
 
+### A missing witness-preserving formal consequence
+
+The original five-premise proof picked a uniter `c` and proved both
+`c ≠ x` and `CausesIn c x esse`, but the registered conclusion
+`ca07cae9` existentially quantified only the latter facts: its
+`Unites c a b x` evidence was forgotten. That is **not a logical
+witness-switch inside the derivation**; it is information erased by a
+weaker result type. The new Lean theorem
+`CompositeUnitingCauseFromUnion.compositeHasSameUnitingEsseCause`
+makes the strictly more informative consequence available under the
+same five named hypotheses:
+
+```text
+∀ x, Composite x →
+  ∃ a b c, ComponentOf a x ∧ ComponentOf b x ∧ a ≠ b ∧
+    Unites c a b x ∧ c ≠ x ∧ CausesIn c x esse
+```
+
+The prior `compositeHasAUnitingCause` is now a **projection** of that
+witness-preserving proof. This is useful when linking a particular
+composition/uniter to actual-world causal interfaces; it prevents
+future users from silently assuming that an arbitrary `CausesIn`
+witness is the uniter. It does *not* grant that the same `c` exists
+now, efficiently causes in the same respect as `esse`, or corresponds
+to `Ontic.Causes` at the root's world. Those remain distinct OPEN
+interpretation obligations. The formal strengthening introduces
+no new leaf or attributed source claim.
+
 ### What was incomplete in the earlier certificate
 
 The old five omission models and one nonvacuity model were all over
