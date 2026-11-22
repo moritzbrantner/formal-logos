@@ -1,6 +1,6 @@
 {
   "id": "3750704c-24ea-49d0-b080-e4bb82c8ec93",
-  "label": "Contingent spacetime and same-relation occupant grounding imply an unlocated necessary underived root",
+  "label": "Contingent spacetime grounding implies an unlocated underived root",
   "argument_id": "b6ec7983-6e7a-405c-9984-5e25ef45f221",
   "challenge_module": "TruthCore.Results.Ontology.SpacetimeGroundingBridge.Challenge",
   "solution_module": "TruthCore.Results.Ontology.SpacetimeGroundingBridge.Solution",
