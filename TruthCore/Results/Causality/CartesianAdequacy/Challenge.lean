@@ -28,7 +28,8 @@ open TruthCore.Causality.TermSenseForks (ActFrame)
 open TruthCore.Causality.CartesianAdequacy
 open TruthCore.Causality.Round3FourthWay (MoreInExceedsDegree)
 open TruthCore.Latin.Aquinas.SummaTheologiae
-  (PerfectionsOfEffectPreexistInCauseReading MoreSuchHasThePerfectionReading)
+  (PerfectionsOfEffectPreexistInCauseReading MoreSuchHasThePerfectionReading
+  MaximumInGenusCausesAllInGenusReading ActualityOnlyInsofarAsBeingReading)
 open TruthCore.Greek.Aristotle.Metaphysics (CauseOfQualityInAnotherIsMoreSuchReading)
 open TruthCore.Case.Catholicism
 open TruthCore.Logic (ExcludedMiddle)
