@@ -1065,11 +1065,57 @@ world in which *all* these actual conditions hold. The solution's
 the existing graph premise `fab16501`. The additional conditional theorem
 `metricallyFiniteOfCountableStationRecombination` reaches existing metric
 conclusion `4365c3c5`, reusing the established contradiction. The
-`finitePrefixNotCountable` Nat model discriminates finite from countable
-assembly *logically only*; it is no metaphysical counterexample.
+certified separation is `causalFinitePrefixControls`: in the structural
+surrogate `causalPivot`, `FiniteStationPrefixCompatibility` holds at
+`(v = 1, t = 0)` with no single realizing world, so the *inner* implication
+of `CountableStationRecombination` is not a consequence of finite
+compatibility. A statement-level non-entailment from `7d1b132f` would need a
+model of all of `7d1b132f` and is not certified. `finitePrefixNotCountable` is
+only the Nat quantifier-order illustration (`∀N ∃bound` versus
+`∃bound ∀n`). Neither is a metaphysical counterexample.
+
+**Dependency audit of `9cb8c0ee` (repair after the semantic challenge).**
+Because `arrangementImpossible` excludes the consequent of
+`CountableStationRecombination` for every descent, the premise holds for a
+frame exactly when no populated fixed-d descent with a station map has
+finite-prefix-compatible station operations (`countableStationRecombinationIff`).
+Two Lean companions of result `7fe26ec1` follow. The conclusion `4365c3c5`
+implies `9cb8c0ee` (`countableStationRecombinationOfMetricallyFinite`, via
+`unboundedOfSpaced`), so given `7d1b132f` the countable premise is equivalent
+to the conclusion it supports. The existing fixed-duration patchwork
+`313105b4` implies `9cb8c0ee` (`countableStationRecombinationOfDurationPatchwork`,
+via `finiteStationPrefixesGiveAdjacent` and `arrangementImpossible`). Relative
+to the `fab16501 + 313105b4` route, the new route therefore uses a stronger
+local premise and a weaker gluing premise, in implication order only (no
+strictness is claimed). As for the spaced sibling (definition `0e65cf83`),
+the premise's warrant must come from the countable recombination principle it
+instantiates, not from this instance.
+
+**Strongest positive rationale for `9cb8c0ee`.** The read #367 study records
+Koons's infinitary spatiotemporal patchwork PInfSP (p. 11, a countable
+generalization presented as plausible) and Causal Power Network Patchwork
+CPNPP (pp. 14–15, one possible world realizing all replacement patches with
+the specified causal-power graph) as the source's positive countable
+recombination principles. They are the strongest available rationale for a
+principle of this shape. The exact differences: CPNPP's edges are powers to
+influence events, and PInfSP recombines duplicates with intrinsic powers, not
+actual `Ontic.Causes` exercises, so a power-to-exercise bridge is needed.
+CPNPP's per-node antecedent is a neighbourhood condition (each patch possible
+with duplicates of its predecessor and successor patches), which is weaker
+than finite-prefix compatibility, but CPNPP also presupposes the causal-power
+graph already realized in one possible world. Neither principle fixes a
+positive duration d; that restriction is the analyst's. Granted the
+power-to-exercise bridge and CPNPP's graph-realization condition, CPNPP-type
+warrant would bear on this principle. No new source claim is made.
 
 **Causal interpretation.** The new efficient-cause edges are actual facts
 stipulated in each possible history, not inferred from the label "station".
+`StationOperationAt` conjoins the bearer chain with the register protocol
+without binding them: `R.out` and `R.issues` are indexed by moment, and nothing
+relates `stations n` to them, so the `Causes` edge is not modelled signal
+transmission. The bearer, presence and `Causes` conjuncts are idle in both
+new theorems; their only formal effect is to strengthen `7d1b132f` and weaken
+`9cb8c0ee` relative to register-only versions.
 They are deliberately distinct from `CausalityFrame.GivesAt` (concurrent
 giving of being), the abstract totality-cause predicate in Arrival B, and
 causation of an essentially ordered series. Station identity is fixed across
@@ -1081,10 +1127,10 @@ The positive support for locally operating devices is defeasible and
 substantive, not a kernel establishment of their metaphysical possibility.
 Proper-time duration must be privileged as CLOCK_1, not arbitrarily rescaled.
 
-**Provisional cumulative assessment.** This replaces a purely
-register-compatible interpretation with a more demanding possible network of
-actual concrete station causes and shows exactly which new modal premise
-would yield the same metric conclusion. It does not establish the key
+**Provisional cumulative assessment.** This adds a stronger local premise
+that conjoins concrete, present bearers and stipulated `Ontic.Causes` edges to
+the register protocol (without binding them to it), and shows exactly which
+new modal premise would yield the same metric conclusion. It does not establish the key
 countable recombination commitment. Koons supplies a serious positive
 intrinsic-power and recombination rationale; the jump from finite compatible
 operations to their complete jointly realized trace is an additional
@@ -1097,45 +1143,50 @@ non-God stages remain: `4365c3c5` + possible population
 `faa1ff28` -> BEGINS_2 `951a2235`; Arrival B then still requires
 `256b5bab` (external causal opportunity), Euclidean access and actual
 reflexivity to reach necessary concrete being `b19ffd92`, followed by the
-existing God-existence consumers. The new proof helpers are not a new
-registered graph alternative or a discharge of any premise. The actual
-graph's fixed-d support options and direct assumptions remain unchanged.
+existing God-existence consumers. Two new *conditional* support
+alternatives are registered: `7d1b132f → fab16501` (argument `ea68d581`,
+result `33b797cc`) and `7d1b132f ∧ 9cb8c0ee → 4365c3c5` (argument `713dd892`,
+result `7fe26ec1`). No premise is discharged; the direct-assumption options
+and the original `fab16501 + 313105b4` route remain.
 
 **Verification/review boundary.** The new declarations require Lean and
 existing batch checks on the proposed PR head. No frozen Challenge, prior
 result, source attribution, computed closure or current first-/second-way
-interpretation is altered. Independent semantic review must check whether
-`ontic.Causes` here really models the proposed upstream actual causal
-transmission, rather than mere correlation; the typed theorem holds either
-way, but metaphysical application does not. Reopen on a defended fixed
+interpretation is altered. The independent semantic challenge on PR #1854
+answered the question whether `ontic.Causes` here models upstream causal
+transmission: it does not; it is an independent conjunct (see above). The
+typed theorems hold either way, but metaphysical application needs a
+bearer-register binding. Reopen on such a binding, a defended fixed
 runtime/address encoding, a rigorous feasible connected-host construction,
 or an independently motivated law/constraint that precisely discriminates
 countable from finite compatible operation in a non-accumulating proper past.
 
 
 
-**Verification candidates, 2026-11-22.** Proposed argument records from concrete finite-prefix station possibility `7d1b132f` to the existing local selected-descent node `fab16501` (theorem `durationDescentOfStationPrefixes`) and from that stronger local premise plus separate countable operation recombination `9cb8c0ee` directly to the existing metric-finiteness node `4365c3c5` (theorem `metricallyFiniteOfCountableStationRecombination`). An actual station operation now requires each bearer to be `Concrete` as well as existing, present and related by `Ontic.Causes`; the interpretation of that relation as genuine signal-level causal influence, rather than a mere additional relation between bearers, still needs a source/event bridge. The proofs are conditional; the same positive duration, family and schedule are held fixed. The countable modal realization principle remains OPEN. Draft verification and semantic review pending.
+**Verification candidates, 2026-11-22.** Proposed argument records from concrete finite-prefix station possibility `7d1b132f` to the existing local selected-descent node `fab16501` (theorem `durationDescentOfStationPrefixes`) and from that stronger local premise plus separate countable operation recombination `9cb8c0ee` directly to the existing metric-finiteness node `4365c3c5` (theorem `metricallyFiniteOfCountableStationRecombination`). An actual station operation now requires each bearer to be `Concrete` as well as existing, present and related by `Ontic.Causes`; the interpretation of that relation as genuine signal-level causal influence, rather than a mere additional relation between bearers, still needs a source/event bridge. The proofs are conditional; the same positive duration, family and schedule are held fixed. The countable modal realization principle remains OPEN. Independent semantic challenge findings on PR #1854 are repaired in this section.
 
 
 **Actual finite-prefix positive model (2026-11-22).** The stronger
-`FiniteStationPrefixCompatibility` premise now has a structured Boolean-like
-integer-world control, rather than only a register protocol:
+`FiniteStationPrefixCompatibility` premise now has an integer-world
+structural surrogate, rather than only a register protocol:
 `causalPivot` retains the existing beginningless integer time/existence
-profile but makes the earlier station bearer actually cause the later one;
-station `n` is the concrete, existing, temporally present bearer at moment
+profile and stipulates world-independent integer succession
+(`Causes := fun _ y x => y + 1 = x`) between successive bearers, with every
+integer `Concrete`;
+station `n` is the existing, temporally present bearer at moment
 `-(n:Int)`. One unit of the existing integer clock bounds each slot.
 For every N the world cut off at station N+1 witnesses *all* operations
 0..N simultaneously; the four guarded register interfaces are derived from
-the earlier `pivotFrame`, and the actual causal edge holds on the selected
+the earlier `pivotFrame`, and the stipulated edge holds on the selected
 station pair. The full countable world is impossible by the **imported**
 `arrangementImpossible` theorem. The formal certificate therefore separates
-finite joint compatibility from global realization even with concrete
-bearers, actual station causation and temporal presence; it does **not**
+finite joint compatibility from global realization for the inner implication,
+with the bearer and edge conjuncts included; it does **not**
 give metaphysical/physical possibility to the registered patchwork premise
 or show that bearer-to-bearer `Ontic.Causes` is actual signal-event
-causation. This is positive mathematical evidence of local coherence,
-not evidence against countable metaphysical recombination.
-Proof and Comparator certification pending on the updated head.
+causation. It witnesses formal satisfiability under a stipulated relation,
+not causal coherence of stations, and is not evidence against countable
+metaphysical recombination.
 
 ## Typed per-se / historical distinction (#1112)
 

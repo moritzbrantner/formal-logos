@@ -6,7 +6,8 @@
     "TruthCore.Results.Causality.FixedDurationGrimReaper.finiteStationPrefixesGiveAdjacent",
     "TruthCore.Results.Causality.FixedDurationGrimReaper.pivotFinitePrefixPiece",
     "TruthCore.Results.Causality.FixedDurationGrimReaper.causalFinitePrefixCompatibility",
-    "TruthCore.Results.Causality.FixedDurationGrimReaper.causalFinitePrefixControls"
+    "TruthCore.Results.Causality.FixedDurationGrimReaper.causalFinitePrefixControls",
+    "TruthCore.Results.Causality.FixedDurationGrimReaper.finitePrefixNotCountable"
   ],
   "permitted_axioms": [
     "propext",

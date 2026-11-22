@@ -4,6 +4,6 @@
   "term": "selected finite station compatibility",
   "lean_declaration": "TruthCore.Causality.FixedDurationGrimReaper.SelectedFiniteStationCompatibility",
   "definition": "SelectedFiniteStationCompatibility R h Concrete k d w quantifies over populated moments of histories v accessible from w with an unbounded-below clock past and demands one descent c anchored at that moment, one station bearer assignment indexed by Nat, slots all at least one fixed positive d, and finite-prefix accessibility of actual causal operation of these stations. It is existential in the chosen descent/family per candidate past, not uniform for every descent; source and target identity are rigid within the selected family.",
-  "note": "The source rationale is fixed-duration Placer and intrinsic causal-power recombination (Koons PGR/HIP/CPNPP), subject to the still OPEN bridges from dispositions to exercised causation, protected finite hardware runtime, calibration at arbitrarily large finite indices, host spacetime room, and faithful register projection.",
+  "note": "Positive rationale: an analyst adaptation of Koons's possible isolated Placer and intrinsic causal-power recombination (PGR/HIP/CPNPP, as recorded in docs/notes/causal-finitism-367.md); the fixed-duration restriction is the analyst's, not Koons's. It remains subject to the still OPEN bridges from dispositions to exercised causation, protected finite hardware runtime, calibration at arbitrarily large finite indices, host spacetime room, and faithful register projection.",
   "basis": "stipulative"
 }

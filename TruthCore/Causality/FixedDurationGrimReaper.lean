@@ -8,7 +8,9 @@ public import TruthCore.Causality.MetricGrimReaper
 Analyst application alignment for #1489. One positive duration is supplied for
 all descents and worlds; it does not assert arbitrary-speed devices. All four
 register interfaces, history, accessibility and clock are inherited unchanged.
-No concrete station, host geometry or metaphysical realization is encoded.
+Station bearers and Ontic.Causes edges are conjoined to the register protocol
+without binding them to it; host geometry and metaphysical realization are
+not encoded.
 -/
 
 @[expose] public section
@@ -65,7 +67,10 @@ piece. Both neighboring bearers exist and are temporally present; the earlier
 bearer causes the later one in that history; and the existing four signal
 interfaces hold. Ontic.Causes is an individual-efficient-cause reading here,
 NOT existential grounding or causation of the contingent totality. Nothing
-in the type guarantees physically realizable devices or intrinsic powers. -/
+in the type guarantees physically realizable devices or intrinsic powers.
+The bearer conjuncts and PieceAt are conjoined with no bearer-register
+binding: R.out and R.issues are indexed by moment, and nothing relates
+stations n to them, so the Causes edge is not modelled signal transmission. -/
 def StationOperationAt {W B T : Type} (R : ReaperFrame W T)
     (h : History W B T) (Concrete : B → Prop)
     (stations : Nat → B) (u : W) (c : Nat → T) (n : Nat) :
@@ -106,7 +111,10 @@ identities, causal edges, port dictionary and signal rules as its locally
 possible finite prefixes. This is strictly more content than preservation of
 intrinsic abilities under duplication, and is not a theorem of finite
 compatibility. Fixed duration is only a room condition; the physical source
-of such host space, protection and calibration remains an open bridge. -/
+of such host space, protection and calibration remains an open bridge.
+Because arrangementImpossible excludes its consequent, it holds exactly when
+no qualifying descent has finite-prefix-compatible station operations
+(countableStationRecombinationIff in the results module). -/
 def CountableStationRecombination {W B T : Type} [Preorder T]
     (R : ReaperFrame W T) (h : History W B T) (Concrete : B → Prop)
     (k : TimeClock T) (d : {d : ℝ // 0 < d}) (w : W) : Prop :=
@@ -119,10 +127,11 @@ def CountableStationRecombination {W B T : Type} [Preorder T]
 
 /-! ## Concrete finite-prefix control
 
-Unlike bare adjacent PieceAt compatibility, this assigns one concrete bearer
-to each station, makes the earlier station actually cause the next, and
-requires world-relative station existence and temporal presence. It is a
-STRUCTURAL possible-world model. No claim that arbitrary actual physics or
+Unlike bare adjacent PieceAt compatibility, this assigns one bearer to each
+station, stipulates a world-independent integer-succession relation as
+Ontic.Causes between successive bearers, and requires world-relative station
+existence and temporal presence. It is a STRUCTURAL SURROGATE: it witnesses
+formal satisfiability under a stipulated relation, not causal coherence. No claim that arbitrary actual physics or
 metaphysics realizes the entire network, or that bearer-to-bearer causation is
 signal transmission, follows from this certificate. -/
 

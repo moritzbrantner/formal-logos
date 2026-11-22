@@ -187,10 +187,70 @@ theorem metricallyFiniteOfCountableStationRecombination {W B T : Type}
   exact TruthCore.Results.Causality.GrimReaperPatchwork.arrangementImpossible
     R u c hDesc hPieces
 
-/-- A structural separation: every finite prefix of an unbounded sequence can
-be contained in some finite bound, but there is no bound containing all n.
-This witnesses the distinct LOGICAL content of finite vs countable assembly,
-not a metaphysically possible Reaper network or an objection to recombination. -/
+/-- Dependency audit of the countable premise. Because no world realizes every
+PieceAt along a descent (arrangementImpossible), CountableStationRecombination
+holds exactly when no populated fixed-d descent with a station map has
+finite-prefix-compatible actual station operations. Its warrant must therefore
+come from the recombination principle it instantiates, not from this instance. -/
+theorem countableStationRecombinationIff {W B T : Type} [Preorder T]
+    (R : ReaperFrame W T) (h : History W B T) (Concrete : B → Prop)
+    (k : TimeClock T) (d : {d : ℝ // 0 < d}) (w : W) :
+    CountableStationRecombination R h Concrete k d w ↔
+      ∀ v, h.ontic.frame.access w v → ∀ (c : Nat → T) (stations : Nat → B),
+        Descent c → DurationSlots k d c → PopulatedAt h Concrete v (c 0) →
+        ¬ FiniteStationPrefixCompatibility R h Concrete stations v c := by
+  constructor
+  · intro hGlue v hv c stations hDesc hSlots hPop hFinite
+    obtain ⟨u, _, hOps⟩ := hGlue v hv c stations hDesc hSlots hPop hFinite
+    have hPieces : ∀ n, PieceAt R u c n := by
+      intro n
+      obtain ⟨_, _, _, _, _, _, _, hPiece⟩ := hOps n
+      exact hPiece
+    exact TruthCore.Results.Causality.GrimReaperPatchwork.arrangementImpossible
+      R u c hDesc hPieces
+  · intro hNo v hv c stations hDesc hSlots hPop hFinite
+    exact (hNo v hv c stations hDesc hSlots hPop hFinite).elim
+
+/-- The metric-finiteness conclusion implies the countable premise: a
+populated first moment of a d-slotted descent has a metrically infinite past
+(unboundedOfSpaced), so the antecedent of CountableStationRecombination never
+holds. Together with metricallyFiniteOfCountableStationRecombination, given
+SelectedFiniteStationCompatibility the countable premise is equivalent to the
+conclusion it supports. -/
+theorem countableStationRecombinationOfMetricallyFinite {W B T : Type}
+    [Preorder T]
+    (R : ReaperFrame W T) (h : History W B T) (Concrete : B → Prop)
+    (k : TimeClock T) (d : {d : ℝ // 0 < d}) (w : W)
+    (hFin : PopulatedPastsMetricallyFinite h Concrete k w) :
+    CountableStationRecombination R h Concrete k d w := by
+  intro v hv c stations hDesc hSlots hPop _
+  obtain ⟨x, hx, hCont, hAt⟩ := hPop
+  exact (unboundedOfSpaced k c hDesc ⟨d.1, d.property, hSlots⟩
+    (hFin v hv x (c 0) hx hCont hAt)).elim
+
+/-- The existing fixed-duration patchwork premise implies the countable
+station premise (finite prefixes give adjacent pieces, patchwork glues them,
+arrangementImpossible excludes the glued world). Relative to the route
+through fixed-duration patchwork, the countable route therefore uses a
+stronger local premise and a weaker gluing premise. No strictness claimed. -/
+theorem countableStationRecombinationOfDurationPatchwork {W B T : Type}
+    [Preorder T]
+    (R : ReaperFrame W T) (h : History W B T) (Concrete : B → Prop)
+    (k : TimeClock T) (d : {d : ℝ // 0 < d}) (w : W)
+    (hPatch : DurationPatchwork R h Concrete k d w) :
+    CountableStationRecombination R h Concrete k d w := by
+  intro v hv c stations hDesc hSlots hPop hFinite
+  obtain ⟨u, _, hAll⟩ := hPatch v hv c hDesc hSlots hPop
+    (finiteStationPrefixesGiveAdjacent R h Concrete stations v c hFinite)
+  exact (TruthCore.Results.Causality.GrimReaperPatchwork.arrangementImpossible
+    R u c hDesc hAll).elim
+
+/-- A bare quantifier-order illustration on Nat: every finite prefix fits under
+some bound, but no bound contains all n. It mentions no station, world or
+PieceAt. The certified separation of finite-prefix station compatibility from
+a single realizing world is causalFinitePrefixControls, which shows only that
+the inner implication of CountableStationRecombination fails in causalPivot.
+Not a metaphysically possible Reaper network or an objection to recombination. -/
 theorem finitePrefixNotCountable :
     (∀ N : Nat, ∃ bound : Nat, ∀ n, n ≤ N → n < bound) ∧
     ¬ (∃ bound : Nat, ∀ n, n < bound) := by

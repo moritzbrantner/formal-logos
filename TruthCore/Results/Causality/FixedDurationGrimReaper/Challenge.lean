@@ -95,6 +95,36 @@ theorem finiteStationPrefixesGiveAdjacent {W B T : Type}
     AdjacentPiecesCoPossible R h v c := by
   sorry
 
+theorem countableStationRecombinationIff {W B T : Type} [Preorder T]
+    (R : ReaperFrame W T) (h : History W B T) (Concrete : B → Prop)
+    (k : TimeClock T) (d : {d : ℝ // 0 < d}) (w : W) :
+    CountableStationRecombination R h Concrete k d w ↔
+      ∀ v, h.ontic.frame.access w v → ∀ (c : Nat → T) (stations : Nat → B),
+        Descent c → DurationSlots k d c → PopulatedAt h Concrete v (c 0) →
+        ¬ FiniteStationPrefixCompatibility R h Concrete stations v c := by
+  sorry
+
+theorem countableStationRecombinationOfMetricallyFinite {W B T : Type}
+    [Preorder T]
+    (R : ReaperFrame W T) (h : History W B T) (Concrete : B → Prop)
+    (k : TimeClock T) (d : {d : ℝ // 0 < d}) (w : W)
+    (hFin : PopulatedPastsMetricallyFinite h Concrete k w) :
+    CountableStationRecombination R h Concrete k d w := by
+  sorry
+
+theorem countableStationRecombinationOfDurationPatchwork {W B T : Type}
+    [Preorder T]
+    (R : ReaperFrame W T) (h : History W B T) (Concrete : B → Prop)
+    (k : TimeClock T) (d : {d : ℝ // 0 < d}) (w : W)
+    (hPatch : DurationPatchwork R h Concrete k d w) :
+    CountableStationRecombination R h Concrete k d w := by
+  sorry
+
+theorem finitePrefixNotCountable :
+    (∀ N : Nat, ∃ bound : Nat, ∀ n, n ≤ N → n < bound) ∧
+    ¬ (∃ bound : Nat, ∀ n, n < bound) := by
+  sorry
+
 
 open TruthCore.Causality.FixedDurationGrimReaper.Control
 open TruthCore.Causality.GrimReaperPatchwork.Control (pivotFrame)
