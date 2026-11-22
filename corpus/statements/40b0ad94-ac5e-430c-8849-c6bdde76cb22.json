@@ -1,0 +1,9 @@
+{
+  "id": "40b0ad94-ac5e-430c-8849-c6bdde76cb22",
+  "label": "Only the actual GOD_4 could meet the divine description at an accessible world",
+  "paraphrase": "Open bridge on the selected profile and world w: for every world v accessible from w and every candidate y, if y satisfies the God-description GodAt at v and exists at v, then y is actually GOD_4 (sigma.IsGod y). The God-description cannot be satisfied, at an accessible world, by a being other than the actual God. It does not say that the actual God exists at v or satisfies the description there.",
+  "lean_declaration": "TruthCore.Causality.GodNamingSenses.NoOtherPossibleGod",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807"
+  ]
+}

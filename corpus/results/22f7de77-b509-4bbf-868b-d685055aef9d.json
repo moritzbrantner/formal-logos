@@ -1,0 +1,11 @@
+{
+  "id": "22f7de77-b509-4bbf-868b-d685055aef9d",
+  "label": "Box K node from the GOD_NAMING_2 node through rigid designation",
+  "argument_id": "0fedc6e7-8cba-4186-b1fe-c1eed671bfe0",
+  "challenge_module": "TruthCore.Results.Causality.GodNamingSenses.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GodNamingSenses.Solution",
+  "theorem": "TruthCore.Results.Causality.GodNamingSenses.rigidToBoxK",
+  "comparator_config": "results/22f7de77-b509-4bbf-868b-d685055aef9d/comparator.json",
+  "status": "solution-present",
+  "description": "Box K necessary-being node from its GOD_NAMING_2 (rigid-name) reading. The proof applies TruthCore.Results.Modal.RigidDesignation.laws to the reference-fixed name, which is rigid because the root facts make n the unique existing GOD_4 at w. Not an identity transcription (invariant 16): it needs the rigidity and uniqueness of the name, and the analogous step from the GOD_NAMING_1 node fails (Separation, migrating-description model). Premise and conclusion are logically equivalent (registered relation), so this is a sense bridge, not new support; it establishes neither."
+}

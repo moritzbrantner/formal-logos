@@ -1,0 +1,27 @@
+{
+  "id": "0fedc6e7-8cba-4186-b1fe-c1eed671bfe0",
+  "label": "Box K node from the GOD_NAMING_2 node through rigid designation",
+  "premise_statement_ids": [
+    "483ab488-9ef2-435b-9047-6d5abd090c9b"
+  ],
+  "conclusion_statement_id": "cdf897a8-5490-561a-b9d2-507486a3f192",
+  "inference_ids": [
+    "b214ce56-9754-4d01-a2c2-735970565302"
+  ],
+  "meaning": "If some actual root n is GOD_4, the one GOD_4, with the classical attributes, and the name 'God', whose bearer is fixed at w as the unique existing GOD_4, designates something at every accessible world, then n exists at every accessible world. The name is rigid for n (it designates n exactly where n exists), so by the rigid-designation library its strict necessary co-designation is equivalent to n's necessary existence. The premise is logically equivalent to the conclusion (rigidIffBoxK): this argument identifies the box K node as the rigid-name reading of 'God exists necessarily' and adds no independent warrant for it.",
+  "term_senses": {
+    "GOD_NAMING": "087426e9-04c8-4df1-ad42-c071e25fcc5a"
+  },
+  "definition_ids": [
+    "2c822ed5-1235-4c3d-aba8-7893c5da2b26",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "f830795a-b5d8-5f9f-800d-2f3d1f443a0a",
+    "d980bbd2-1a96-564c-bc0d-4065d7786715",
+    "6bf06590-f2ca-5dfa-9fb6-2e799c4c9916"
+  ],
+  "disambiguation_ids": [
+    "1bfab283-1878-4e59-b975-7cf669ea434c",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "20aadb82-fb79-549d-bae9-5b7d566db513"
+  ]
+}

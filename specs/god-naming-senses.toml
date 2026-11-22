@@ -1,0 +1,96 @@
+# Two senses of naming "God" inside a modal context (descriptive versus
+# reference-fixed), at the necessary-being node of the root route. Connects the
+# rigid-designation library (TruthCore.Modal.RigidDesignation, result
+# MODAL-RIGID-DESIGNATION) to STMT-NECESSARY-ROOT-BOX-K. Analyst formulations,
+# attribution deferred; no source claim. Refs #1784.
+
+[batch]
+vocab = "TruthCore.Causality.GodNamingSenses"
+results = "TruthCore.Results.Causality.GodNamingSenses"
+disambiguations = ["DISAMB-NECESSARY"]
+
+[[statement]]
+id = "Necessary-being node, GOD_NAMING_2 reading: the reference-fixed divine name designates necessarily"
+lean = "NecessaryRootRigidName"
+paraphrase = "Necessary-being node under the reference-fixed (rigid) reading of the name 'God': some actual root n (concrete, existing at w, with no actual concrete ground) is GOD_4, the one GOD_4, with the classical attributes, and at every world accessible from w the name 'God', whose bearer is fixed at w as the unique existing GOD_4, designates something (strict co-designation of the name with itself). The name designates n at a world exactly when n exists there, whether or not n satisfies any description there. Logically equivalent to STMT-NECESSARY-ROOT-BOX-K (rigidIffBoxK)."
+definitions = ["2c822ed5-1235-4c3d-aba8-7893c5da2b26", "DEF-STRICT-NAME-COREFERENCE", "DEF-KANT-MODAL-NECESSITY", "DEF-ONE-GOD"]
+disambiguations = ["1bfab283-1878-4e59-b975-7cf669ea434c", "DISAMB-RIGID-IDENTITY-EXISTENCE"]
+
+[[statement]]
+id = "Necessary-being node, GOD_NAMING_1 reading: necessarily one existent meets the divine description"
+lean = "NecessaryRootDescriptiveName"
+paraphrase = "Necessary-being node under the descriptive reading of the name 'God': some actual root n (concrete, existing at w, with no actual concrete ground) is GOD_4, the one GOD_4, with the classical attributes, and at every world v accessible from w something existing at v uniquely (among what exists at v) satisfies the God-description GodAt at v. GodAt v x is a primitive parameter: x satisfies at v the conditions the name's descriptive content requires. The being that satisfies it at v need not be n, and nothing relates GodAt at other worlds to GOD_4."
+definitions = ["8c3bb0b3-facb-48b5-8674-f0f2ab87ad0c", "DEF-STRICT-NAME-COREFERENCE", "DEF-KANT-MODAL-NECESSITY", "DEF-ONE-GOD"]
+disambiguations = ["1bfab283-1878-4e59-b975-7cf669ea434c"]
+
+[[statement]]
+id = "Only the actual GOD_4 could meet the divine description at an accessible world"
+lean = "NoOtherPossibleGod"
+paraphrase = "Open bridge on the selected profile and world w: for every world v accessible from w and every candidate y, if y satisfies the God-description GodAt at v and exists at v, then y is actually GOD_4 (sigma.IsGod y). The God-description cannot be satisfied, at an accessible world, by a being other than the actual God. It does not say that the actual God exists at v or satisfies the description there."
+definitions = ["DEF-GOD-OF-CLASSICAL-THEISM"]
+
+[[statement]]
+id = "Meeting the divine description is essential to the actual GOD_4 wherever it exists accessibly"
+lean = "GodhoodEssentialToGod"
+paraphrase = "Open bridge on the selected profile and world w: whatever is actually GOD_4 satisfies the God-description GodAt at every world v accessible from w at which it exists. It does not say that it exists at v."
+definitions = ["DEF-GOD-OF-CLASSICAL-THEISM"]
+
+[[statement]]
+id = "GOD_NAMING senses: reference-fixed names are rigid, rigid node is the box node, readings separate"
+lean = "Control.Checks"
+paraphrase = "Premise-free comparison of the two naming senses. (1) For every model with worlds, existence and accessibility, descriptions D and D', reference world w0 and bearer x: a name reference-fixed at w0 by D is rigid (RigidAt) at every origin for the being x that alone, among the beings existing at w0, satisfies D at w0; at w0 the descriptive and the reference-fixed name designate the same bearers; and if x alone satisfies both D and D' at w0 among the beings existing there, the two reference-fixed names co-designate at every world accessible from w0 where x exists, and they co-designate at every accessible world iff x exists at every accessible world (necessity of identity, not necessary existence). (2) For every signature, profile and world, the GOD_NAMING_2 reading of the necessary-being node holds iff the box K node holds. (3) On explicit two-world models: the GOD_NAMING_1 node holds while the box K node and the no-other-possible-God bridge fail; the box K node and that bridge hold while the GOD_NAMING_1 node and the essential Godhood bridge fail; at a non-reference world the descriptive name designates a being and the reference-fixed name designates nothing; two descriptive names co-designate at the reference world and not at another world where their actual bearer exists, while the reference-fixed names co-designate there. (4) A model where both nodes and both bridges hold together."
+definitions = ["8c3bb0b3-facb-48b5-8674-f0f2ab87ad0c", "2c822ed5-1235-4c3d-aba8-7893c5da2b26", "DEF-PARTIAL-RIGID-DESIGNATION", "DEF-STRICT-NAME-COREFERENCE", "DEF-KANT-MODAL-NECESSITY", "DEF-NECESSARY-IN-SENSE"]
+disambiguations = ["1bfab283-1878-4e59-b975-7cf669ea434c", "DISAMB-RIGID-IDENTITY-EXISTENCE", "DISAMB-NECESSARY"]
+
+[[argument]]
+id = "Box K node from the GOD_NAMING_2 node through rigid designation"
+theorem = "rigidToBoxK"
+premises = ["Necessary-being node, GOD_NAMING_2 reading: the reference-fixed divine name designates necessarily"]
+conclusion = "STMT-NECESSARY-ROOT-BOX-K"
+senses = {GOD_NAMING = "GOD_NAMING_2"}
+axioms = []
+rule = "Rigid-designation library law: for rigid names with an actual common bearer, strict necessary co-designation iff necessary existence of the bearer"
+meaning = "If some actual root n is GOD_4, the one GOD_4, with the classical attributes, and the name 'God', whose bearer is fixed at w as the unique existing GOD_4, designates something at every accessible world, then n exists at every accessible world. The name is rigid for n (it designates n exactly where n exists), so by the rigid-designation library its strict necessary co-designation is equivalent to n's necessary existence. The premise is logically equivalent to the conclusion (rigidIffBoxK): this argument identifies the box K node as the rigid-name reading of 'God exists necessarily' and adds no independent warrant for it."
+description = "Box K necessary-being node from its GOD_NAMING_2 (rigid-name) reading. The proof applies TruthCore.Results.Modal.RigidDesignation.laws to the reference-fixed name, which is rigid because the root facts make n the unique existing GOD_4 at w. Not an identity transcription (invariant 16): it needs the rigidity and uniqueness of the name, and the analogous step from the GOD_NAMING_1 node fails (Separation, migrating-description model). Premise and conclusion are logically equivalent (registered relation), so this is a sense bridge, not new support; it establishes neither."
+
+[[argument]]
+id = "Box K node from the GOD_NAMING_1 node and only actual GOD_4 meeting the description"
+theorem = "descToBoxK"
+premises = ["Necessary-being node, GOD_NAMING_1 reading: necessarily one existent meets the divine description", "Only the actual GOD_4 could meet the divine description at an accessible world"]
+conclusion = "STMT-NECESSARY-ROOT-BOX-K"
+senses = {GOD_NAMING = "GOD_NAMING_1"}
+axioms = []
+rule = "Box elimination at each accessible world, bridge application, uniqueness of GOD_4"
+meaning = "If some actual root n is GOD_4, the one GOD_4, with the classical attributes, and at every accessible world something existing there uniquely satisfies the God-description there (the descriptive reading of 'God exists necessarily'), and nothing could satisfy the God-description at an accessible world while existing there without actually being GOD_4, then n exists at every accessible world: what satisfies the description at each world is GOD_4, hence n. A conditional support option for the box K node from a de dicto descriptive premise plus an explicit bridge across worlds; neither premise is established."
+description = "Box K necessary-being node from the GOD_NAMING_1 node and the open bridge NoOtherPossibleGod. Not a transcription (invariant 16): the conclusion's de re necessity of n appears in no premise; it is derived from the boxed existential through the bridge and the uniqueness clause of the root facts, and it fails without the bridge (Separation, migrating-description model). Establishes neither premise."
+
+[[argument]]
+id = "GOD_NAMING_1 node from the box K node and the two transworld description bridges"
+theorem = "boxKToDesc"
+premises = ["STMT-NECESSARY-ROOT-BOX-K", "Meeting the divine description is essential to the actual GOD_4 wherever it exists accessibly", "Only the actual GOD_4 could meet the divine description at an accessible world"]
+conclusion = "Necessary-being node, GOD_NAMING_1 reading: necessarily one existent meets the divine description"
+senses = {GOD_NAMING = "GOD_NAMING_1"}
+axioms = []
+rule = "Box elimination, bridge application, uniqueness of GOD_4, box introduction"
+meaning = "If the box K node holds (some actual root n that is GOD_4, the one GOD_4, with the classical attributes, exists at every accessible world), whatever is GOD_4 satisfies the God-description at every accessible world where it exists, and nothing else existing there satisfies it without being GOD_4, then at every accessible world n alone, among the beings existing there, satisfies the God-description: the descriptive reading of 'God exists necessarily'. Shows what the descriptive reading adds to the route's de re node; establishes no premise."
+description = "GOD_NAMING_1 necessary-being node from the box K node and the open bridges GodhoodEssentialToGod and NoOtherPossibleGod. Not a transcription (invariant 16): the conclusion's world-relative unique satisfaction appears in no premise, and it fails without the essential Godhood bridge (Separation, lapsing-description model). Establishes no premise."
+
+[[argument]]
+id = "GOD_NAMING senses: laws, rigid equivalence, separations and joint model, checked"
+theorem = "checks"
+premises = []
+conclusion = "GOD_NAMING senses: reference-fixed names are rigid, rigid node is the box node, readings separate"
+sense_mixing_control = true
+axioms = []
+rule = "Reuse of the rigid-designation library laws; explicit two-world models checked by case analysis"
+meaning = "Premise-free comparison of the descriptive (GOD_NAMING_1) and reference-fixed (GOD_NAMING_2) senses of the name 'God' under a box. Reference-fixed names are rigid, and by the rigid-designation library their actual co-designation persists wherever the bearer exists, while strict necessary co-designation is equivalent to necessary existence (necessity of identity in Kripke's sense, which gives no necessary existence). The rigid reading of the necessary-being node is equivalent to the box K node. The descriptive reading and the box K node do not entail each other: explicit models fail each direction exactly when the corresponding bridge fails, and a joint model satisfies both nodes and both bridges. Model-witnessed separations; no premise is established."
+description = "Premise-free comparison of the two GOD_NAMING senses. The rigid-designation library (TruthCore.Results.Modal.RigidDesignation.laws) is used for necessity of identity and for the equivalence of the GOD_NAMING_2 node with STMT-NECESSARY-ROOT-BOX-K; four explicit two-world separations and a joint nonvacuity model. Sense-mixing control; establishes no premise and no root obligation."
+
+[[relation]]
+id = "The GOD_NAMING_2 necessary-being node is logically equivalent to the box K node"
+subject_kind = "statement"
+subject_id = "Necessary-being node, GOD_NAMING_2 reading: the reference-fixed divine name designates necessarily"
+predicate = "logically_equivalent_to"
+object_kind = "statement"
+object_id = "STMT-NECESSARY-ROOT-BOX-K"
+note = "Same signature, profile and world. Verified as rigidIffBoxK, a Comparator-checked conjunct of the GOD_NAMING controls result (theorem checks): for the root n, strict co-designation of the reference-fixed name 'God' at every accessible world is equivalent to n's existence at every accessible world, by the rigid-designation library laws. The direction to the box K node is also registered as the argument Box K node from the GOD_NAMING_2 node through rigid designation, a sense bridge that adds no independent warrant. The equivalence shows that the box K node already is the rigid-name reading of 'God exists necessarily', not that it is established."

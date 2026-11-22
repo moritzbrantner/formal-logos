@@ -1,0 +1,11 @@
+{
+  "id": "02ee05f7-400d-4f74-bf66-8b7005dc4add",
+  "label": "GOD_NAMING_1 node from the box K node and the two transworld description bridges",
+  "argument_id": "eceaaacc-eb34-4cb6-916d-c7ab6acf2611",
+  "challenge_module": "TruthCore.Results.Causality.GodNamingSenses.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GodNamingSenses.Solution",
+  "theorem": "TruthCore.Results.Causality.GodNamingSenses.boxKToDesc",
+  "comparator_config": "results/02ee05f7-400d-4f74-bf66-8b7005dc4add/comparator.json",
+  "status": "solution-present",
+  "description": "GOD_NAMING_1 necessary-being node from the box K node and the open bridges GodhoodEssentialToGod and NoOtherPossibleGod. Not a transcription (invariant 16): the conclusion's world-relative unique satisfaction appears in no premise, and it fails without the essential Godhood bridge (Separation, lapsing-description model). Establishes no premise."
+}

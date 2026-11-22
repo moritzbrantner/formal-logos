@@ -1,0 +1,9 @@
+{
+  "id": "8c3bb0b3-facb-48b5-8674-f0f2ab87ad0c",
+  "label": "GOD_NAMING_1: at each world the name designates the one existing being satisfying it there",
+  "term": "descriptive naming",
+  "definition": "DescriptiveName o D is a partial name (TruthCore.Modal.RigidDesignation.Name) over the worlds of an Ontic model o. At each world v it designates x exactly when x alone, among the beings existing at v, satisfies the world-indexed description D at v (UniqueExistentAt: D v x, x exists at v, and every being that satisfies D and exists at v is x). The name is the description: at different worlds it may designate different bearers, or nothing. On the necessary-being node the description is a primitive parameter GodAt, where GodAt v x means that x satisfies at v the conditions the name's descriptive content requires (the content of GOD_4 as it would hold at v). This is the attributive, Russell-style reading; a name whose sense is the description, evaluated at each world (narrow scope), has the same world-intension.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.GodNamingSenses.DescriptiveName",
+  "note": "Analyst formulation, attribution deferred: not a sourced reading of Russell, Frege, Kripke or Aquinas. Uniqueness is actualist (candidates absent from v do not compete). GodAt is primitive: nothing relates it at other worlds to the world-invariant GOD_4 predicate sigma.IsGod; the open bridges NoOtherPossibleGod and GodhoodEssentialToGod state such relations. A source reading would need the semantics of divine names in a modal setting (for example ST I q.13) and is deferred."
+}
