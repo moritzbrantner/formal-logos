@@ -166,23 +166,24 @@ theorem intrinsicSelfKnowledgeFromWisdom {B D C R : Type}
       hGrounding g content hOwn hAbout hCorrect hApprehension⟩
   · exact False.elim (hPureAct understanding hPotency)
 
-/-- Actual-root specialization. The unchanged ROOT-WITHOUT-LIMITING-PRINCIPLE
-and UnlimitedIsOwnBeing premises supply subsistent esse for this *same* root.
-The separate PureAct input must refer to the same InPotency dictionary. -/
+/-- Actual-root specialization consuming the UNCHANGED,
+already supported `ActualRootHasEveryPureDetermination` interface, e.g. its
+`rootPerfectionFromWholePower` producer. The root-without-limitation and
+UnlimitedIsOwnBeing premises supply subsistent esse for this *same* root.
+No actuality-to-being, root existence or pure act is manufactured here. -/
 theorem actualRootSelfKnowledgeFromWisdom {W B P D C R : Type}
     (m : Profile W B) (w : W)
     (Composite : B → Prop) (PriorSimply : B → B → Prop)
     (essenceOf esseOf : B → P)
     (OwnBeing : B → Prop) (Has : B → D → Prop)
-    (Pure OfBeing : D → Prop) (wisdom : D)
+    (Pure : D → Prop) (wisdom : D)
     (About Correct : C → B → Prop)
     (CanApprehend Apprehends CognitivelyGrounded : B → C → Prop)
     (InPotency : B → R → Prop) (understanding : R)
     (hNoLimits : TruthCore.Causality.RootPurity.ActualRootsWithoutLimitingPrinciple
       m w Composite PriorSimply essenceOf esseOf)
     (hOwn : UnlimitedIsOwnBeing Composite PriorSimply essenceOf esseOf OwnBeing)
-    (hWhole : OwnBeingLacksNoPerfectionOfBeing OwnBeing Has OfBeing)
-    (hPertain : PurePerfectionsPertainToBeing Pure OfBeing)
+    (hEvery : ActualRootHasEveryPureDetermination m w Has Pure)
     (hPureWisdom : Pure wisdom)
     (hSelfCapacity : WisdomSelfCapacity OwnBeing Has wisdom About Correct CanApprehend)
     (hExercise : SelfCapacityExercisedOrPotent OwnBeing About CanApprehend Apprehends
@@ -192,10 +193,13 @@ theorem actualRootSelfKnowledgeFromWisdom {W B P D C R : Type}
     (hPureAct : PureAct InPotency g) :
     IntrinsicSelfKnowledge About Correct Apprehends CognitivelyGrounded g := by
   have hOwnG : OwnBeing g := hOwn g (hNoLimits g hRoot)
-  exact intrinsicSelfKnowledgeFromWisdom OwnBeing Has Pure OfBeing wisdom
-    About Correct CanApprehend Apprehends CognitivelyGrounded InPotency understanding
-    hWhole hPertain hPureWisdom hSelfCapacity hExercise hGrounding g hOwnG hPureAct
-
+  have hWisdom : Has g wisdom := hEvery g hRoot wisdom hPureWisdom
+  obtain ⟨content, hAbout, hCorrect, hCan⟩ :=
+    hSelfCapacity g hOwnG hWisdom
+  rcases hExercise g content hOwnG hAbout hCan with hApprehension | hPotency
+  · exact ⟨content, hAbout, hCorrect, hApprehension,
+      hGrounding g content hOwnG hAbout hCorrect hApprehension⟩
+  · exact False.elim (hPureAct understanding hPotency)
 
 /-- Weaker endpoint for HAS_INTELLECT_1 *as capacity*: whole-being perfection
 and its substantive wisdom→self-directed-power bridge suffice if that power
@@ -254,7 +258,19 @@ controls and one successful joint assignment. This is a kernel-checkable
 structural interpretation, not a metaphysical rival's proven possibility. -/
 theorem wisdomSelfUnderstandingControls :
     WisdomSelfUnderstanding.Control.Controls := by
-  decide
+  simp [WisdomSelfUnderstanding.Control.Controls,
+    WisdomSelfUnderstanding.Control.Background,
+    WisdomSelfCapacity, SelfCapacityExercisedOrPotent,
+    TrueSelfApprehensionGrounded, IntrinsicSelfKnowledge,
+    OwnBeingLacksNoPerfectionOfBeing, PurePerfectionsPertainToBeing,
+    PureAct, WisdomSelfUnderstanding.Control.own, WisdomSelfUnderstanding.Control.has,
+    WisdomSelfUnderstanding.Control.pure, WisdomSelfUnderstanding.Control.ofBeing,
+    WisdomSelfUnderstanding.Control.about, WisdomSelfUnderstanding.Control.correct,
+    WisdomSelfUnderstanding.Control.canApprehend, WisdomSelfUnderstanding.Control.apprehends,
+    WisdomSelfUnderstanding.Control.cognitivelyGrounded,
+    WisdomSelfUnderstanding.Control.none, WisdomSelfUnderstanding.Control.noPotency,
+    WisdomSelfUnderstanding.Control.causesIn, WisdomSelfUnderstanding.Control.hasIntellect,
+    Bool.forall_bool, Bool.exists_bool]
 
 section Controls
 open TruthCore.Causality.WholePowerPerfection.Control
