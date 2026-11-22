@@ -227,6 +227,7 @@ theorem formalEminentControls : FormalEminentControl.Controls := by
   dsimp [FormalEminentControl.Controls, FormalEffectPreexistsInclusively,
     FormalActEntersGrades, GradesActIsInclusive, GodContainsIntellectualPerfection,
     GodIsMaximalInBeing, MaximumInGenusCausesAllInGenusReading,
+    TruthCore.Latin.Aquinas.SummaTheologiae.CausesAllInGenus,
     PerfectionsOfEffectPreexistInCauseReading,
     TruthCore.Latin.Aquinas.SummaTheologiae.IsMaximumIn,
     FormalEminentControl.grades, FormalEminentControl.formalOnlyGrades,
