@@ -40,12 +40,17 @@ D"). It has no distinct world-intension, so it is not a separate Lean sense here
 the difference it marks (what is knowable a priori from the name) is not a
 modal-semantic difference (attempt record).
 
-The God-description at other worlds is a primitive parameter `GodAt : W → B →
-Prop`: `GodAt v x` means that `x` satisfies, at world `v`, the conditions the
-name's descriptive content requires (GOD_4's content as it would hold at `v`).
-Nothing relates `GodAt` at other worlds to `σ.IsGod`; the two bridges
+The God-description is a primitive parameter `GodAt : W → B → Prop`: `GodAt v x`
+means that `x` satisfies, at world `v`, a description that may vary by world.
+It is deliberately not identified with `σ.IsGod`; the two bridges
 `NoOtherPossibleGod` and `GodhoodEssentialToGod` state such relations as open
-premises.
+premises. The route itself models GOD_4 (`σ.IsGod`) and the classical
+attributes as world-independent predicates, an implicit modelling commitment
+that divinity and the attributes are essential to the root. With the route's
+own world-independent description (`GodAt := fun _ => σ.IsGod`) both bridges
+hold trivially and both readings are equivalent to the box node
+(`DescConstIffBoxK`, `RigidIffBoxK`); the senses separate only for a
+world-varying `GodAt`.
 -/
 
 @[expose] public section
@@ -216,6 +221,14 @@ def RigidIffBoxK : Prop :=
     (CN : σ.Being → σ.Being → Prop),
     NecessaryRootRigidName σ m w ↔ NecessaryRootBoxK σ m w CN
 
+/-- With the route's own world-independent description (`GodAt := fun _ =>
+σ.IsGod`) the descriptive reading of the necessary-being node is also exactly
+the box node: both bridges hold trivially for that description. -/
+def DescConstIffBoxK : Prop :=
+  ∀ (W : Type) (σ : Signature) (m : Profile W σ.Being) (w : W)
+    (CN : σ.Being → σ.Being → Prop),
+    NecessaryRootDescriptiveName σ m w (fun _ => σ.IsGod) ↔ NecessaryRootBoxK σ m w CN
+
 /-- Separating controls on explicit two-world models (reference world `false`):
 1. migrating description (`swapProfile`, `migratingGodAt`): the descriptive
    node holds, the box node fails, and `NoOtherPossibleGod` fails (the
@@ -258,7 +271,7 @@ def Nonvacuity : Prop :=
   GodhoodEssentialToGod boolSignature fullProfile false stableGodAt
 
 /-- The premise-free certificate of this module. -/
-def Checks : Prop := Laws ∧ RigidIffBoxK ∧ Separation ∧ Nonvacuity
+def Checks : Prop := Laws ∧ RigidIffBoxK ∧ DescConstIffBoxK ∧ Separation ∧ Nonvacuity
 
 end Control
 

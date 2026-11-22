@@ -119,6 +119,15 @@ theorem boxKToDesc {W : Type} (σ : Signature) (m : Profile W σ.Being) (w : W)
       fun y hy hey => hRoot.2.2.1 y (hNoOther v hv y hy hey)⟩
   exact ⟨n, hName, hName⟩
 
+theorem descConstIffBoxK : Control.DescConstIffBoxK := by
+  intro W σ m w CN
+  constructor
+  · intro h
+    exact descToBoxK σ m w (fun _ => σ.IsGod) h (fun _ _ _ hy _ => hy) CN
+  · intro h
+    exact boxKToDesc σ m w (fun _ => σ.IsGod) CN h (fun _ hg _ _ _ => hg)
+      (fun _ _ _ hy _ => hy)
+
 theorem separation : Control.Separation := by
   refine ⟨⟨?_, ?_, ?_⟩, ⟨?_, ?_, ?_, ?_⟩, ⟨?_, ?_⟩, ⟨?_, ?_, ?_, ?_⟩⟩
   · -- the descriptive node in the migrating model, with root `false`
@@ -169,6 +178,6 @@ theorem nonvacuity : Control.Nonvacuity := by
     exact hg
 
 theorem checks : Control.Checks :=
-  ⟨laws, rigidIffBoxK, separation, nonvacuity⟩
+  ⟨laws, rigidIffBoxK, descConstIffBoxK, separation, nonvacuity⟩
 
 end TruthCore.Results.Causality.GodNamingSenses

@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Causality.GodNamingSenses.checks",
   "comparator_config": "results/8f27827f-3724-442c-9159-cbd3fd00a4be/comparator.json",
   "status": "solution-present",
-  "description": "Premise-free comparison of the two GOD_NAMING senses. The rigid-designation library (TruthCore.Results.Modal.RigidDesignation.laws) is used for necessity of identity and for the equivalence of the GOD_NAMING_2 node with STMT-NECESSARY-ROOT-BOX-K; four explicit two-world separations and a joint nonvacuity model. Sense-mixing control; establishes no premise and no root obligation."
+  "description": "Premise-free comparison of the two GOD_NAMING senses. The rigid-designation library (TruthCore.Results.Modal.RigidDesignation.laws) is used for necessity of identity and for the equivalence of the GOD_NAMING_2 node with STMT-NECESSARY-ROOT-BOX-K; the GOD_NAMING_1 node with the world-independent GOD_4 description is also equivalent to it (DescConstIffBoxK); four explicit two-world separations and a joint nonvacuity model. Sense-mixing control; establishes no premise and no root obligation."
 }
