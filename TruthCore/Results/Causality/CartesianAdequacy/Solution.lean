@@ -1,6 +1,7 @@
 module
 
 public import TruthCore.Causality.CartesianAdequacy
+public import TruthCore.Case.Catholicism.StageOneBridges
 
 /-! Cartesian causal adequacy compared with the case's cause-of-perfection
 premises (analyst formulations, attribution deferred).
@@ -27,12 +28,13 @@ premises (analyst formulations, attribution deferred).
 namespace TruthCore.Results.Causality.CartesianAdequacy
 
 open TruthCore.Causality.Grades (GradesFrame)
+open TruthCore.Causality.TermSenseForks (ActFrame)
 open TruthCore.Causality.CartesianAdequacy
 open TruthCore.Causality.Round3FourthWay (MoreInExceedsDegree)
 open TruthCore.Latin.Aquinas.SummaTheologiae
   (PerfectionsOfEffectPreexistInCauseReading MoreSuchHasThePerfectionReading)
 open TruthCore.Greek.Aristotle.Metaphysics (CauseOfQualityInAnotherIsMoreSuchReading)
-open TruthCore.Case.Catholicism (CauseOfBeingCausesEveryPerfection)
+open TruthCore.Case.Catholicism
 open TruthCore.Logic (ExcludedMiddle)
 
 /-- Containment in every cause and the cause-of-being transfer give PEPC: a
@@ -134,5 +136,89 @@ theorem strictComparativeWithoutNonStrictAdequacy :
     trivial
   · intro h
     exact h true false () ⟨(by decide : true ≠ false), trivial⟩ trivial
+
+
+/-! ## Asymmetric q.4 → source-level intellect containment -/
+
+/-- The exact two sense bridges needed to read the legacy uniform q.4
+preexistence as formal effect / formally-or-eminently possessed cause.
+Neither bridge follows merely from the word "in act". -/
+theorem asymmetricFromUniform {W B T R : Type} (F : GradesFrame W B T R)
+    (A : ActFrame B R)
+    (hPre : PerfectionsOfEffectPreexistInCauseReading F.InAct F.CausesIn F.esse)
+    (hFormal : FormalActEntersGrades F A)
+    (hInclusive : GradesActIsInclusive F A) :
+    FormalEffectPreexistsInclusively F A := by
+  intro c x r hCause hEff
+  exact hInclusive c r (hPre c x r hCause (hFormal x r hEff))
+
+/-- At EVERY supplied GOD_4 maximal being g, one DISTINCT cognitive effect
+is enough: g causes that effect's esse and hence contains its formally
+instantiated cognitive respect, formally or virtually. This proof relies on
+the actual same g throughout. The effect's existence distinct from g is
+an explicit premise, not manufactured by maximality. No intrinsic intellect
+or actual exercise is concluded. -/
+theorem godContainsFromIntellectualEffects {W B T R : Type}
+    (F : GradesFrame W B T R) (A : ActFrame B R)
+    (IsGod HasIntellect : B → Prop) (intellectual : R)
+    (hMaximal : GodIsMaximalInBeing IsGod F.InAct F.MoreIn F.esse)
+    (hGenus : MaximumInGenusCausesAllInGenusReading
+      F.InAct F.MoreIn F.CausesIn)
+    (hBeing : ActualityOnlyInsofarAsBeingReading F.InAct F.esse)
+    (hEffect : ∀ g, IsGod g → ∃ x, x ≠ g ∧ HasIntellect x)
+    (hFormal : ∀ x, HasIntellect x → A.InActFormally x intellectual)
+    (hFormalCalibration : FormalActEntersGrades F A)
+    (hAsymmetric : FormalEffectPreexistsInclusively F A) :
+    GodContainsIntellectualPerfection A IsGod intellectual := by
+  intro g hg
+  obtain ⟨x, hOther, hx⟩ := hEffect g hg
+  have hFormalX := hFormal x hx
+  have hActualX := hFormalCalibration x intellectual hFormalX
+  have hEsseX := hBeing x intellectual hActualX
+  have hCause := hGenus F.esse g (hMaximal g hg) x hOther hEsseX
+  exact hAsymmetric g x intellectual hCause hFormalX
+
+/-- Direct q.4 first-mover consumer: reuses its verified "every perfection
+found in things" result at the SAME first mover, and merely specializes the
+intellectual respect. A cognitive exemplar is needed; a mere name for the
+respect cannot produce one. The q.4 theorem carries its own causal/identity
+premises; this does not supply those premises independently. -/
+theorem firstMoverContainsIntellect {W B T R : Type}
+    (F : GradesFrame W B T R) (A : ActFrame B R)
+    (MovedIn : B → R → Prop) (MovesIn : B → B → R → Prop)
+    (HasIntellect : B → Prop) (intellectual : R)
+    (hQ4 : FirstUnmovedMoverHasEveryPerfectionOfThings MovedIn MovesIn F.InAct)
+    (hSome : ∃ x, HasIntellect x)
+    (hForm : ∀ x, HasIntellect x → A.InActFormally x intellectual)
+    (hFormalCalibration : FormalActEntersGrades F A)
+    (hInclusive : GradesActIsInclusive F A) :
+    ∀ f, IsFirstUnmovedMover MovedIn MovesIn f →
+      A.InActFormallyOrVirtually f intellectual := by
+  obtain ⟨x, hx⟩ := hSome
+  intro f hf
+  exact hInclusive f intellectual (hQ4 f hf x intellectual
+    (hFormalCalibration x intellectual (hForm x hx)))
+
+/-- Explicit remaining API bridge to HAS_INTELLECT_1: the formal and virtual
+branches require DIFFERENT recognition obligations. In particular an
+effective power to cause intellectual beings is not by definition an intrinsic
+capacity for intentional understanding. This is an adapter, not a discharge
+of either recognition premise or a new will route. -/
+theorem intrinsicIntellectOfContainment {B R : Type}
+    (A : ActFrame B R) (IsGod HasIntellect : B → Prop) (intellectual : R)
+    (hContains : GodContainsIntellectualPerfection A IsGod intellectual)
+    (hFormalRecognition : ∀ b, A.InActFormally b intellectual → HasIntellect b)
+    (hEminentRecognition : ∀ b, A.InActVirtually b intellectual → HasIntellect b) :
+    GodHasIntellect IsGod HasIntellect := by
+  intro g hg
+  rcases hContains g hg with hFormal | hVirtual
+  · exact hFormalRecognition g hFormal
+  · exact hEminentRecognition g hVirtual
+
+/-- Populated finite separation of formally cognitive effect, inclusive causal
+containment, intrinsic source intellect and actual exercise; with a second
+model witnessing cognitive production without containment. -/
+theorem formalEminentControls : FormalEminentControl.Controls := by
+  decide
 
 end TruthCore.Results.Causality.CartesianAdequacy
