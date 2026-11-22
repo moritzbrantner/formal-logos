@@ -81,4 +81,59 @@ def SupportControls : Prop :=
      ¬ UnderivedConcreteProfile m p otherSupport false ∧
      NecessarilyUnderived m.ontic otherSupport false)
 
+/-! ## Controls for the sibling from the two weaker bridges
+
+The same-witness conclusion also follows from `NoContingentGroundOfNecessary`
+and `NoNovelNecessarySupport` instead of `NecessaryPredecessorLifting`, without
+actual reflexivity. These finite assignments keep every other input of that
+sibling and omit one bridge at a time; they are interpretations only. -/
+
+/-- One individual that exists at both worlds of a universal two-world frame
+and is concrete and most real. -/
+def soleProfile : Profile Bool Unit :=
+  ⟨⟨⟨fun _ _ => True⟩, fun _ _ => True, fun _ _ _ => False⟩,
+    fun _ => True, fun _ _ _ => False⟩ -- category-constant: intended (single concrete individual control)
+
+/-- Every individual has the single profile feature. -/
+def soleReality : RealityProfile Unit := ⟨Unit, fun _ _ => True⟩
+
+/-- The individual supports itself at world `true` only. -/
+def selfSupportElsewhere (w : Bool) (_ _ : Unit) : Prop := w = true
+
+/-- Individual `false` exists at both worlds of a universal frame; individual
+`true` exists only at world `true`. Both are concrete. -/
+def contingentHelperProfile : Profile Bool Bool :=
+  ⟨⟨⟨fun _ _ => True⟩, fun w x => x = false ∨ w = true, fun _ _ _ => False⟩,
+    fun _ => True, fun _ _ _ => False⟩ -- category-constant: intended (all-concrete finite control)
+
+/-- Only individual `false` is most real. -/
+def falseReality : RealityProfile Bool := ⟨Unit, fun x _ => x = false⟩
+
+/-- Individual `true` supports individual `false` at world `true` only. -/
+def contingentHelperSupport (w s t : Bool) : Prop := w = true ∧ s = true ∧ t = false
+
+/-- Omission controls for the weak sibling, actual world `false`:
+1. no novel necessary support omitted: all other inputs hold (no contingent
+   ground holds, no support edge at the actual world), and the unique exemplar
+   supports itself at the other world, so it is not underived;
+2. no contingent ground omitted: all other inputs hold (no novel necessary
+   support holds vacuously), and a contingent individual supports the exemplar
+   at the other world, so it is not underived. -/
+def WeakSiblingOmissions : Prop :=
+  (ActualConcreteProfile soleProfile soleReality false ∧
+    NecessaryProfilePopulation soleProfile soleReality false ∧
+    MostRealUnique soleReality ∧ NecessaryIsMostReal soleProfile.ontic soleReality false ∧
+    WellFoundedPresentEsseSupport soleProfile.ontic selfSupportElsewhere false ∧
+    NoContingentGroundOfNecessary soleProfile.ontic selfSupportElsewhere false ∧
+    ¬ NoNovelNecessarySupport soleProfile.ontic selfSupportElsewhere false ∧
+    ¬ UnderivedConcreteProfile soleProfile soleReality selfSupportElsewhere false) ∧
+  (ActualConcreteProfile contingentHelperProfile falseReality false ∧
+    NecessaryProfilePopulation contingentHelperProfile falseReality false ∧
+    MostRealUnique falseReality ∧
+    NecessaryIsMostReal contingentHelperProfile.ontic falseReality false ∧
+    WellFoundedPresentEsseSupport contingentHelperProfile.ontic contingentHelperSupport false ∧
+    NoNovelNecessarySupport contingentHelperProfile.ontic contingentHelperSupport false ∧
+    ¬ NoContingentGroundOfNecessary contingentHelperProfile.ontic contingentHelperSupport false ∧
+    ¬ UnderivedConcreteProfile contingentHelperProfile falseReality contingentHelperSupport false)
+
 end TruthCore.Causality.ExistenceAccountIntegration

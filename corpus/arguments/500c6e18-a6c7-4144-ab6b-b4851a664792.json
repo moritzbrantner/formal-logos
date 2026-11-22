@@ -1,0 +1,61 @@
+{
+  "id": "500c6e18-a6c7-4144-ab6b-b4851a664792",
+  "label": "Same profile witness underived from the two support bridges and Kant identification",
+  "premise_statement_ids": [
+    "86badf93-78b1-46c1-90a2-97ed6a99d636",
+    "93804e57-d09d-4d9b-908b-29b0d86eeef7",
+    "84ae3700-f0a9-5d49-9c8c-0ccc9cb40e8a",
+    "2107b9df-b7bc-5f62-af64-9c23f6819c08",
+    "47a97912-335f-52f7-a715-63592368f0fe",
+    "96d25c42-71aa-5fa0-841d-9aa62d91e1be",
+    "bd983df2-058a-5503-89a1-bbebe87f958b"
+  ],
+  "conclusion_statement_id": "ecbea06a-6431-4902-935f-c41bd21614e3",
+  "inference_ids": [
+    "9e4a49c5-53b1-4fa6-933a-356e871edffc"
+  ],
+  "meaning": "Weaker sibling of the same-witness argument: the same five other inputs, with no contingent ground of the necessary and no novel necessary support in place of necessary-predecessor lifting. A putative supporter of the actual exemplar at an admitted world is necessary (no contingent ground), hence most real and the exemplar itself (Kant identification and numerical uniqueness); the exemplar exists actually, so no novel necessary support moves its self-support edge to the actual world, contradicting well-founded actual support. No actual reflexivity, excluded middle or frame axiom is used. Support is the supplied relation, not automatically efficient cause. Establishes no premise.",
+  "term_senses": {
+    "NECESSARY": "7af298fb-a2c4-4239-919b-7685f2e1f67a"
+  },
+  "definition_ids": [
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "c7c2f208-9651-5351-afc3-d5f3423ef415",
+    "b3c45d92-dee0-5a1a-9849-9924d3a1699d",
+    "7b0b109c-ad03-59a3-a81c-d0e027e91f95",
+    "baddf770-36bf-542f-bb3c-2297342d5452",
+    "659dbc9c-63d8-5e4e-a48f-79d0d18d1e67",
+    "a0763d0d-cd6b-5c08-a33a-f53ab8edd941",
+    "b242943a-34cc-582d-8c38-c1203b9d2c91",
+    "6af245c0-b443-51b1-a98e-4e8f8fc7bf3e"
+  ],
+  "disambiguation_ids": [
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "29947523-056c-5415-a9e7-c6968fb926e1",
+    "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"
+  ],
+  "sense_bridges": [
+    {
+      "term": "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY",
+      "from": "2e064a7b-b29f-4f0b-8978-782674012d86",
+      "to": "57356a7a-ed0a-478f-abfc-2d47dd631135",
+      "statement_id": "bd983df2-058a-5503-89a1-bbebe87f958b"
+    },
+    {
+      "term": "NECESSARY",
+      "from": "8c881fa6-2b9f-44be-a32a-c8ef29c13643",
+      "to": "7af298fb-a2c4-4239-919b-7685f2e1f67a",
+      "role": "conclusion",
+      "statement_id": "ecbea06a-6431-4902-935f-c41bd21614e3"
+    },
+    {
+      "term": "DE_RE_NECESSARY_EXISTENCE_ABSENT_EXISTENTIAL",
+      "from": "2bba28ee-ea32-4fd0-b582-7500ea114b2f",
+      "to": "6d0fde78-c9fd-40b9-9802-1d096b77f375",
+      "role": "conclusion",
+      "statement_id": "ecbea06a-6431-4902-935f-c41bd21614e3"
+    }
+  ]
+}

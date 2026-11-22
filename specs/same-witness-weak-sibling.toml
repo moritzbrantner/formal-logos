@@ -1,0 +1,39 @@
+# Weaker sibling of the same-witness underived argument (78dfeded): the two
+# bridges NoContingentGroundOfNecessary and NoNovelNecessarySupport replace
+# NecessaryPredecessorLifting, with no actual reflexivity (review finding on
+# #1825; attempt c39e3991). The original keeps its direct-assumption option.
+# Analyst formulations, attribution deferred. No premise is established.
+
+[batch]
+vocab = "TruthCore.Causality.ExistenceAccountIntegration"
+results = "TruthCore.Results.Causality.SameWitnessWeak"
+definitions = ["beb654a7-e204-5f4c-a7b4-45e886ba7109", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "c7c2f208-9651-5351-afc3-d5f3423ef415", "b3c45d92-dee0-5a1a-9849-9924d3a1699d"]
+
+[[statement]]
+id = "Same profile witness weak-bridge sibling omission controls"
+lean = "WeakSiblingOmissions"
+definitions = ["beb654a7-e204-5f4c-a7b4-45e886ba7109", "b3c45d92-dee0-5a1a-9849-9924d3a1699d", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "DEF-NO-CONTINGENT-GROUND-OF-NECESSARY", "DEF-NO-NOVEL-NECESSARY-SUPPORT"]
+disambiguations = ["DISAMB-EXISTENCE-ESSE-SUPPORT", "DISAMB-NECESSARY-EXISTENCE-VS-UNDERIVED"]
+paraphrase = "Closed mathematical controls, actual world false, universal two-world frame: (1) one concrete most-real individual existing at both worlds that supports itself only at the other world satisfies every input of the weak-bridge sibling except no novel necessary support, and its exemplar is not underived; (2) a necessary concrete most-real individual supported at the other world by a contingent individual satisfies every input except no contingent ground of the necessary (no novel necessary support holds vacuously), and its exemplar is not underived. Assignments only, not evidence against either bridge."
+
+[[argument]]
+id = "Same profile witness underived from the two support bridges and Kant identification"
+theorem = "sameWitnessUnderivedFromBridges"
+sense_bridges = [{term = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY", from = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_1", to = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_3", statement_id = "bd983df2-058a-5503-89a1-bbebe87f958b"}, {term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", role = "conclusion", statement_id = "ecbea06a-6431-4902-935f-c41bd21614e3"}, {term = "DE_RE_NECESSARY_EXISTENCE_ABSENT_EXISTENTIAL", from = "DE_RE_NECESSARY_EXISTENCE_ABSENT_EXISTENTIAL_1", to = "DE_RE_NECESSARY_EXISTENCE_ABSENT_EXISTENTIAL_2", role = "conclusion", statement_id = "ecbea06a-6431-4902-935f-c41bd21614e3"}]
+senses = { NECESSARY = "NECESSARY_2" }
+premises = ["86badf93-78b1-46c1-90a2-97ed6a99d636", "93804e57-d09d-4d9b-908b-29b0d86eeef7", "84ae3700-f0a9-5d49-9c8c-0ccc9cb40e8a", "2107b9df-b7bc-5f62-af64-9c23f6819c08", "47a97912-335f-52f7-a715-63592368f0fe", "96d25c42-71aa-5fa0-841d-9aa62d91e1be", "bd983df2-058a-5503-89a1-bbebe87f958b"]
+conclusion = "ecbea06a-6431-4902-935f-c41bd21614e3"
+definitions = ["1b8baf77-84fa-5513-a138-7fa14840dd87", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "c7c2f208-9651-5351-afc3-d5f3423ef415", "b3c45d92-dee0-5a1a-9849-9924d3a1699d", "7b0b109c-ad03-59a3-a81c-d0e027e91f95", "baddf770-36bf-542f-bb3c-2297342d5452", "DEF-NO-CONTINGENT-GROUND-OF-NECESSARY", "DEF-NO-NOVEL-NECESSARY-SUPPORT", "b242943a-34cc-582d-8c38-c1203b9d2c91", "6af245c0-b443-51b1-a98e-4e8f8fc7bf3e"]
+disambiguations = ["6f1d1395-7c1d-5bd5-a45d-03380857aed6", "29947523-056c-5415-a9e7-c6968fb926e1", "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"]
+axioms = []
+rule = "Rigid profile identity, the two support bridges and well-founded support exclude a self predecessor"
+meaning = "Weaker sibling of the same-witness argument: the same five other inputs, with no contingent ground of the necessary and no novel necessary support in place of necessary-predecessor lifting. A putative supporter of the actual exemplar at an admitted world is necessary (no contingent ground), hence most real and the exemplar itself (Kant identification and numerical uniqueness); the exemplar exists actually, so no novel necessary support moves its self-support edge to the actual world, contradicting well-founded actual support. No actual reflexivity, excluded middle or frame axiom is used. Support is the supplied relation, not automatically efficient cause. Establishes no premise."
+
+[[argument]]
+id = "Same profile witness weak-bridge sibling omission certificates"
+theorem = "weakSiblingOmissions"
+premises = []
+conclusion = "Same profile witness weak-bridge sibling omission controls"
+axioms = []
+rule = "Finite case analysis on explicit assignments"
+meaning = "Omission controls for the weak-bridge sibling: in each assignment every other input holds, one bridge fails and the exemplar is not underived, so neither bridge can be dropped from this argument. Assignments only; they are not evidence against either bridge."
