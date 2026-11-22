@@ -1,0 +1,9 @@
+{
+  "id": "2c822ed5-1235-4c3d-aba8-7893c5da2b26",
+  "label": "GOD_NAMING_2: one bearer fixed by a description at a reference world, designated where it exists",
+  "term": "reference-fixed naming",
+  "definition": "ReferenceFixedName o D w0 is a partial name over the worlds of an Ontic model o. The description D evaluated at the reference world w0 selects the bearer: at each world v the name designates x exactly when x alone, among the beings existing at w0, satisfies D at w0, and x exists at v. Whether x satisfies D at v is irrelevant. Such a name is rigid in the existence-sensitive sense of TruthCore.Modal.RigidDesignation.RigidAt (theorem referenceFixed_rigid): at every accessible world it designates the selected bearer exactly when that bearer exists. A name whose sense is the description evaluated at the reference world (wide scope, 'the actual D') has the same world-intension. On the necessary-being node the fixing description is GOD_4 (sigma.IsGod) at the selected world w.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.GodNamingSenses.ReferenceFixedName",
+  "note": "Analyst formulation, attribution deferred: modelled on the reference-fixing idea associated with Kripke's Naming and Necessity, which is not read or cited as a source here (the existing source-search attempt for that work is blocked). Reference fixing does not make the description necessary of the bearer: 'God, if God exists, satisfies the description' holds at w0 and may fail elsewhere. Rigidity gives necessity of identity, never necessary existence (DEF-PARTIAL-RIGID-DESIGNATION)."
+}

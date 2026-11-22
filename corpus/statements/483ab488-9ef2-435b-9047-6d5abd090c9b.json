@@ -1,0 +1,16 @@
+{
+  "id": "483ab488-9ef2-435b-9047-6d5abd090c9b",
+  "label": "Necessary-being node, GOD_NAMING_2 reading: the reference-fixed divine name designates necessarily",
+  "paraphrase": "Necessary-being node under the reference-fixed (rigid) reading of the name 'God': some actual root n (concrete, existing at w, with no actual concrete ground) is GOD_4, the one GOD_4, with the classical attributes, and at every world accessible from w the name 'God', whose bearer is fixed at w as the unique existing GOD_4, designates something (strict co-designation of the name with itself). The name designates n at a world exactly when n exists there, whether or not n satisfies any description there. Logically equivalent to STMT-NECESSARY-ROOT-BOX-K (rigidIffBoxK); that node is equally equivalent to its GOD_NAMING_1 reading with the route's own world-independent description GOD_4 (DescConstIffBoxK). The two readings separate only for a description that varies by world.",
+  "lean_declaration": "TruthCore.Causality.GodNamingSenses.NecessaryRootRigidName",
+  "definition_ids": [
+    "2c822ed5-1235-4c3d-aba8-7893c5da2b26",
+    "6bf06590-f2ca-5dfa-9fb6-2e799c4c9916",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "d980bbd2-1a96-564c-bc0d-4065d7786715"
+  ],
+  "disambiguation_ids": [
+    "1bfab283-1878-4e59-b975-7cf669ea434c",
+    "20aadb82-fb79-549d-bae9-5b7d566db513"
+  ]
+}

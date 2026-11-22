@@ -1,0 +1,10 @@
+{
+  "id": "859650bd-7199-41b6-9ada-347adfea4f3d",
+  "label": "GOD_NAMING senses: laws, rigid equivalence, separations and joint model, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "8fe6bb53-d57b-46b5-93b5-4b55735dd3d6",
+  "rule": "Reuse of the rigid-designation library laws; explicit two-world models checked by case analysis",
+  "meaning": "Premise-free comparison of the descriptive (GOD_NAMING_1) and reference-fixed (GOD_NAMING_2) senses of the name 'God' under a box. Reference-fixed names are rigid, and by the rigid-designation library their actual co-designation persists wherever the bearer exists, while strict necessary co-designation is equivalent to necessary existence (necessity of identity in Kripke's sense, which gives no necessary existence). The rigid reading of the necessary-being node is equivalent to the box K node, and so is the descriptive reading with the route's own world-independent description. For a description that varies by world, the descriptive reading and the box K node do not entail each other in general: in explicit models where the corresponding bridge fails, that direction fails; a joint model satisfies both nodes and both bridges. Model-witnessed separations; no premise is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

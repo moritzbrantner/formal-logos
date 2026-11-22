@@ -1,0 +1,11 @@
+{
+  "id": "5bfb48db-f968-48bb-996f-8d3eb129669e",
+  "label": "Box K node from the GOD_NAMING_1 node and only actual GOD_4 meeting the description",
+  "argument_id": "25135d6e-0cff-4c96-a4a4-901835b76c5e",
+  "challenge_module": "TruthCore.Results.Causality.GodNamingSenses.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GodNamingSenses.Solution",
+  "theorem": "TruthCore.Results.Causality.GodNamingSenses.descToBoxK",
+  "comparator_config": "results/5bfb48db-f968-48bb-996f-8d3eb129669e/comparator.json",
+  "status": "solution-present",
+  "description": "Box K necessary-being node from the GOD_NAMING_1 node and the open bridge NoOtherPossibleGod. Not a transcription (invariant 16): the conclusion's de re necessity of n appears in no premise; it is derived from the boxed existential through the bridge and the uniqueness clause of the root facts, and it fails without the bridge (Separation, migrating-description model). Establishes neither premise."
+}

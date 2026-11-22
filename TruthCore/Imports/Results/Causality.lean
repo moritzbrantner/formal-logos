@@ -170,6 +170,7 @@ public import TruthCore.Results.Causality.FixedDurationGrimReaper.Solution
 public import TruthCore.Results.Causality.FullFirstCause.Solution
 public import TruthCore.Results.Causality.FullnessCandidates.Solution
 public import TruthCore.Results.Causality.GodMaximalCausal.Solution
+public import TruthCore.Results.Causality.GodNamingSenses.Solution
 public import TruthCore.Results.Causality.GradedSupportFoundation.Solution
 public import TruthCore.Results.Causality.GradesAtBeingRoutes.Solution
 public import TruthCore.Results.Causality.GreatestDegreeRootRoute.Solution

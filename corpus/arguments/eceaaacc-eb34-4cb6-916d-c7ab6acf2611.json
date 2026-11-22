@@ -1,0 +1,29 @@
+{
+  "id": "eceaaacc-eb34-4cb6-916d-c7ab6acf2611",
+  "label": "GOD_NAMING_1 node from the box K node and the two transworld description bridges",
+  "premise_statement_ids": [
+    "cdf897a8-5490-561a-b9d2-507486a3f192",
+    "b47f18cf-c287-4e47-8f07-c8016c9d37bd",
+    "40b0ad94-ac5e-430c-8849-c6bdde76cb22"
+  ],
+  "conclusion_statement_id": "8540b456-5c9e-443b-ae70-8b1d72948e5f",
+  "inference_ids": [
+    "3c1ed941-d7a4-4b67-8706-72b8b9c6ad9e"
+  ],
+  "meaning": "If the box K node holds (some actual root n that is GOD_4, the one GOD_4, with the classical attributes, exists at every accessible world), whatever is GOD_4 satisfies the God-description at every accessible world where it exists, and nothing else existing there satisfies it without being GOD_4, then at every accessible world n alone, among the beings existing there, satisfies the God-description: the descriptive reading of 'God exists necessarily'. Shows what the descriptive reading adds to the route's de re node; establishes no premise.",
+  "term_senses": {
+    "GOD_NAMING": "0ade5350-258a-4578-9a90-31b0ac1788a6"
+  },
+  "definition_ids": [
+    "8c3bb0b3-facb-48b5-8674-f0f2ab87ad0c",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "f830795a-b5d8-5f9f-800d-2f3d1f443a0a",
+    "d980bbd2-1a96-564c-bc0d-4065d7786715",
+    "6bf06590-f2ca-5dfa-9fb6-2e799c4c9916"
+  ],
+  "disambiguation_ids": [
+    "1bfab283-1878-4e59-b975-7cf669ea434c",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ]
+}
