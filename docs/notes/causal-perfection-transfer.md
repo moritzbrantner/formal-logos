@@ -1770,18 +1770,19 @@ is an analyst selection for a human intellectual capacity. Nothing here asserts
 that every effect-perfection is formally possessed.
 
 **New direct conditional connection, retaining its witness.**
-`godContainsFromIntellectualEffects` says that every already supplied GOD_4
+`godContainsFromIntellectualExemplar` says that every already supplied GOD_4
 bearer `g` contains a chosen intellectual perfection formally or eminently.
-Its complete additional inputs, beyond the two-place consequence, are: GOD_4
+Its complete additional inputs, beyond the asymmetric q.4 result, are: GOD_4
 `g` is an esse maximum; a maximum causes every other actual being's esse;
-actuality implies actuality of esse; every such `g` has at least one DISTINCT
-intellectual effect `x`; `HasIntellect x` is calibrated to *formal* possession
-of the chosen intellectual respect; formal-to-IN_ACT_4 calibration; and
-asymmetric preexistence. The proof uses `CausesIn g x esse` and the very
-same `g` as the conclusion, not a second maximum or an unaligned cause.
-It does **not** need the stronger `UniversalCauseTransfersPerfections`
-that would additionally claim the source causes *each particular cognitive
-perfection*. The existing q.4 first-mover theorem supplies a second
+actuality implies actuality of esse; **one intellectual exemplar** `x` exists;
+`HasIntellect x` is calibrated to *formal* possession of the chosen intellectual
+respect; formal-to-IN_ACT_4 calibration; and excluded middle for the identity
+of `x` and `g`. When `x = g` the formal possession directly settles the case.
+When `x ≠ g`, the proof uses `CausesIn g x esse` and the very SAME `g`
+as the conclusion, not a second maximum or an unaligned cause. The theorem
+does not require an intellectual exemplar distinct from every GOD_4 bearer,
+nor the stronger `UniversalCauseTransfersPerfections` that would claim
+causal responsibility for each particular cognitive perfection. The existing q.4 first-mover theorem supplies a second
 pointwise connection, `firstMoverContainsIntellect`, from one formally
 intellectual exemplar and both calibrations; the already registered
 first-mover/maximum identity remains needed to identify that mover with a
@@ -1793,7 +1794,7 @@ GodHasIntellect and GodHasWill conclusions are not being redefined.
 
 | Claim | What the new work actually supplies |
 | --- | --- |
-| A first source causes a being with intellect | Conditional on the existing same-source/maximum, causal-genus and distinct-exemplar inputs; causing **esse** of an intellectual being is not claiming to produce each cognitive episode or its particular intellectual capacity |
+| A first source causes a being with intellect | Conditional on the existing same-source/maximum, causal-genus and a formally intellectual exemplar. If that exemplar is the source itself, no new causal production is inferred; otherwise the maximum causes its **esse**, not necessarily its particular intellectual capacity or episodes |
 | That source formally or eminently contains the cognitive perfection | Follows conditionally from the asymmetric q.4 principle, exemplar classification and explicit calibrations; the result uses the original first source, not an arbitrary intellectual producer |
 | That source intrinsically **has intellect** (HAS_INTELLECT_1) | **OPEN.** `intrinsicIntellectOfContainment` explicitly requires separate formal-possession-to-intellect and eminent-possession-to-intellect recognition premises; it proves only the modular logical handoff, not their warrant |
 | That source is **actually understanding now** | **Not derived.** Even intrinsic capacity is not an occurrence; no exercise, intentional object, knowledge content or divine timeless actuality is inferred |
