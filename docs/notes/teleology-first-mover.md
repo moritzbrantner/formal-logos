@@ -440,10 +440,11 @@ analysis](causal-perfection-transfer.md#formal-effect-eminent-cause-and-the-cogn
 now makes this *separate* option precise without counting it as another
 certified intellect route: `CartesianAdequacy.asymmetricFromUniform` uses
 formal effect IN_ACT_1, formal/virtual cause IN_ACT_3 and two directional
-bridges to the original IN_ACT_4. `godContainsFromIntellectualEffects`
-takes an existing GOD_4 maximum g, its own distinct intellectual effect x,
-a formal cognitive exemplar calibration and q.4 preexistence, and concludes
-inclusive possession at that SAME g. It does **not** conclude
+bridges to the original IN_ACT_4. `godContainsFromIntellectualExemplar`
+takes an existing GOD_4 maximum g, one intellectual exemplar x, a formal
+cognitive exemplar calibration and q.4 preexistence, and concludes inclusive
+possession at that SAME g. The explicit excluded-middle branch handles x = g
+by formal possession; when x ≠ g the source causes x's esse before transfer. It does **not** conclude
 `HasIntellect g`; explicit formal/eminent-to-intrinsic recognitions are still
 needed, as the finite control with an intellectual effect and eminently
 intellectual but intrinsically noncognitive source witnesses. These controls
