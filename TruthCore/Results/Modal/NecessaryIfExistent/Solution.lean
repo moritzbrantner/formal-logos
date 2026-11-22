@@ -123,7 +123,7 @@ theorem possible_maximal_profile_same_bearer {W B : Type} (F : Frame W)
     reflexive_euclidean_implies_symmetric F hs.1 hs.2
   have hvw : F.access v w := hSym w v hwv
   have hActual : existsAt w x ∧ excellent w x := hAcross w hvw
-  refine ⟨x, hActual.2, hActual.1, ?_⟩
+  refine ⟨x, hActual.2, ⟨hActual.1, hActual.2, ?_⟩⟩
   intro u hwu
   exact hAcross u (hs.2 w v u hwv hwu)
 
