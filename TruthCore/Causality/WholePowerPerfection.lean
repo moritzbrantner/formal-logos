@@ -101,7 +101,7 @@ def WisdomSelfCapacity {B D C : Type}
     ∃ content, About content g ∧ Correct content g ∧ CanApprehend g content
 
 /-- OPEN bridge scoped to the actual source and its *self-directed* capacity:
-either it apprehends to that content or the specified understanding respect
+either it apprehends that content or the specified understanding respect
 remains in potency. This is stronger than an idle productive power, and
 cannot be obtained merely by defining InAct to include virtual possession. -/
 def SelfCapacityExercisedOrPotent {B C R : Type}
@@ -112,8 +112,9 @@ def SelfCapacityExercisedOrPotent {B C R : Type}
     Apprehends g content ∨ InPotency g understanding
 
 /-- OPEN intellectual-norm bridge: true apprehension by the specified subsistent
-source to content *about itself* is genuinely supported by reasons rather
-than just a successful register reading or a lawlike output. This needs
+source to content *about itself* is intrinsically grounded in the intelligible
+object rather than just a successful register reading or a lawlike output.
+This need not be discursive reasoning or a temporal acquisition. This needs
 semantic warrant, not a primitive rename of Apprehends. -/
 def TrueSelfApprehensionGrounded {B C : Type}
     (OwnBeing : B → Prop) (About Correct : C → B → Prop)
@@ -132,8 +133,8 @@ def pure (_ : Unit) : Prop := True
 def ofBeing (_ : Unit) : Prop := True
 def about (content g : Bool) : Prop := content = g
 def correct (content g : Bool) : Prop := content = g
-def canApprehension (g content : Bool) : Prop := g = true ∧ content = true
-def apprehension (g content : Bool) : Prop := g = true ∧ content = true
+def canApprehend (g content : Bool) : Prop := g = true ∧ content = true
+def apprehends (g content : Bool) : Prop := g = true ∧ content = true
 def cognitivelyGrounded (g content : Bool) : Prop := g = true ∧ content = true
 def none (_ _ : Bool) : Prop := False
 def noPotency (_ : Bool) (_ : Unit) : Prop := False
@@ -152,7 +153,7 @@ def Background : Prop :=
 
 /-- Populated omission witnesses for three independent bridges:
 (1) no source cognitive capacity, (2) unexercised source capacity despite
-no passive potency, (3) actual correct apprehension without the specified
+no passive potency, (3) actual correct apprehends without the specified
 cognitive grounding. The fourth conjunct instantiates all three and yields
 actual self-knowledge. Even that does not set the separate old HasIntellect
 predicate unless an explicit recognition bridge is supplied. -/
@@ -162,18 +163,18 @@ def Controls : Prop :=
     SelfCapacityExercisedOrPotent own about none none noPotency () ∧
     TrueSelfApprehensionGrounded own about correct none none ∧
     ¬ IntrinsicSelfKnowledge about correct none none true) ∧
-  (WisdomSelfCapacity own has () about correct canApprehension ∧
-    ¬ SelfCapacityExercisedOrPotent own about canApprehension none noPotency () ∧
+  (WisdomSelfCapacity own has () about correct canApprehend ∧
+    ¬ SelfCapacityExercisedOrPotent own about canApprehend none noPotency () ∧
     TrueSelfApprehensionGrounded own about correct none none ∧
     ¬ IntrinsicSelfKnowledge about correct none none true) ∧
-  (WisdomSelfCapacity own has () about correct canApprehension ∧
-    SelfCapacityExercisedOrPotent own about canApprehension apprehension noPotency () ∧
-    ¬ TrueSelfApprehensionGrounded own about correct apprehension none ∧
-    ¬ IntrinsicSelfKnowledge about correct apprehension none true) ∧
-  (WisdomSelfCapacity own has () about correct canApprehension ∧
-    SelfCapacityExercisedOrPotent own about canApprehension apprehension noPotency () ∧
-    TrueSelfApprehensionGrounded own about correct apprehension cognitivelyGrounded ∧
-    IntrinsicSelfKnowledge about correct apprehension cognitivelyGrounded true)
+  (WisdomSelfCapacity own has () about correct canApprehend ∧
+    SelfCapacityExercisedOrPotent own about canApprehend apprehends noPotency () ∧
+    ¬ TrueSelfApprehensionGrounded own about correct apprehends none ∧
+    ¬ IntrinsicSelfKnowledge about correct apprehends none true) ∧
+  (WisdomSelfCapacity own has () about correct canApprehend ∧
+    SelfCapacityExercisedOrPotent own about canApprehend apprehends noPotency () ∧
+    TrueSelfApprehensionGrounded own about correct apprehends cognitivelyGrounded ∧
+    IntrinsicSelfKnowledge about correct apprehends cognitivelyGrounded true)
 
 end Control
 end WisdomSelfUnderstanding
