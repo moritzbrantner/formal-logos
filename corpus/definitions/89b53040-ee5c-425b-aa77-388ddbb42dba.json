@@ -5,5 +5,23 @@
   "definition": "`IdeaFrame.Represents e r` holds when the episode e presents the perfection r as its content: e is an idea of r, and r is the idea's objective reality (what the idea is of), as an idea of heat presents heat. Representing r is not having r (the idea of heat is not hot, so Represents e r does not give InAct e r), not being caused to have r, and not representing truly: Represents e r does not say that anything has r. It is a primitive field of the idea frame; nothing relates it to Occurs, Bears, ObjCause or to any field of the grades frame.",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Causality.CartesianIdeaOfInfinite.IdeaFrame.Represents",
-  "note": "Analyst stipulation, attribution deferred (navigation: Descartes, Meditation III, 'objective reality' of an idea as against its formal reality as a mode of thought). Example: a thought of the sun represents the sun's heat and size whether or not the sun exists. Counterexample: an occurring episode of pain represents nothing on the narrow reading; this record does not decide whether every episode represents something. Distinguished from the frame's InAct (having a perfection) and from CogitoSubject.Bears (bearing an episode). Open obligations: no law fixes which perfections an episode can represent, whether representation of r requires any grasp of r, or whether an idea of the infinite can be formed by negating a limit (the objection recorded in attempt 7e8fcf16, which targets the adequacy premise, not this primitive)."
+  "note": "Analyst stipulation, attribution deferred (navigation: Descartes, Meditation III, 'objective reality' of an idea as against its formal reality as a mode of thought). Example: a thought of the sun represents the sun's heat and size whether or not the sun exists. Counterexample: an occurring episode of pain represents nothing on the narrow reading; this record does not decide whether every episode represents something. Distinguished from the frame's InAct (having a perfection) and from CogitoSubject.Bears (bearing an episode). Open obligations: no law fixes which perfections an episode can represent, whether representation of r requires any grasp of r, or whether an idea of the infinite can be formed by negating a limit (the objection recorded in attempt 7e8fcf16, which targets the adequacy premise, not this primitive).",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "IdeaFrame.Represents e r says that the episode e presents the perfection r as its content, the idea's objective reality. A model supplies the relation; Lean fixes only its type.",
+    "examples": [
+      "A thought of the sun represents the sun's heat whether or not the sun exists.",
+      "The meditator's idea of the infinite represents INFINITE_3 (premise P1, d3fcdeeb)."
+    ],
+    "exclusions": [
+      "Having r (InAct e r): the idea of heat is not hot.",
+      "Bearing an episode (Bears): bearing is a relation of a being to an episode, representing one of an episode to a perfection.",
+      "Truth of the representation: nothing need have r."
+    ],
+    "open_obligations": [
+      "No law fixes which perfections an episode can represent or whether representing r requires any grasp of r.",
+      "Whether a negation-formed idea represents INFINITE_3 or only unboundedness is open (attempt 7e8fcf16).",
+      "No formalization candidate from more basic shared vocabulary: the frames have no content relation."
+    ]
+  }
 }

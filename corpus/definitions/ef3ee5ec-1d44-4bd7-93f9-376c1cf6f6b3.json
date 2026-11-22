@@ -5,5 +5,20 @@
   "definition": "`IdeaFrame.inf` is a designated respect of the grades frame's carrier: the perfection of being infinite substance, that is, having perfection without limit. F.InAct c inf says that c is in act in that perfection, formally or eminently (IN_ACT_4, mode of possession left open). It is a respect, not a predicate of beings like INFINITE_1, and not a quantity like INFINITE_2. Nothing relates inf to esse, to MoreIn or to any other respect: in particular 'in act in inf' does not by definition give maximality in being or every perfection; those are explicit open bridges.",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Causality.CartesianIdeaOfInfinite.IdeaFrame.inf",
-  "note": "Analyst stipulation, attribution deferred (navigation: Descartes, Meditation III, the idea of 'a substance that is infinite, independent, supremely intelligent, supremely powerful'). Example: on the intended reading the infinite substance is in act in inf and a finite thinker is not. Relation to INFINITE_1 (DEF-INFINITE, ST I q.7): b0132989 runs from GOD_4 to INFINITE_1; no statement relates InAct c inf to Infinite c in either direction. Open obligations: the bridge from inf to maximality in being (statement 'Whatever is in act in the infinite is maximal in being') is open; the stronger reading 'infinite in every perfection' (in act and unsurpassed in every respect) would entail it by instantiation and is not registered."
+  "note": "Analyst stipulation, attribution deferred (navigation: Descartes, Meditation III, the idea of 'a substance that is infinite, independent, supremely intelligent, supremely powerful'). Example: on the intended reading the infinite substance is in act in inf and a finite thinker is not. Relation to INFINITE_1 (DEF-INFINITE, ST I q.7): b0132989 runs from GOD_4 to INFINITE_1; no statement relates InAct c inf to Infinite c in either direction. Open obligations: the bridge from inf to maximality in being (statement 'Whatever is in act in the infinite is maximal in being') is open; the stronger reading 'infinite in every perfection' (in act and unsurpassed in every respect) would entail it by instantiation and is not registered.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "IdeaFrame.inf is a designated respect of the carrier: the perfection of infinite substance, perfection without limit. Lean fixes only that it is a respect.",
+    "examples": [
+      "On the intended reading the infinite substance is in act in inf and a finite thinker is not (P4)."
+    ],
+    "exclusions": [
+      "INFINITE_1 (a predicate of beings, DEF-INFINITE) and INFINITE_2 (quantitative infinity).",
+      "Being (esse) or maximality in being: in act in inf does not by definition give either."
+    ],
+    "open_obligations": [
+      "The bridge to maximality in being (1a289b83) is an explicit open premise.",
+      "No statement relates inf to INFINITE_1 or INFINITE_2."
+    ]
+  }
 }
