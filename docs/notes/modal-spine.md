@@ -1,5 +1,24 @@
 # Modal spine to "God exists"
 
+## Composition-to-esse audit addendum (2026-11-22; unreviewed)
+
+The [proper-part and union-to-esse audit](composition-causal-scope.md#proper-part-and-union-to-esse-audit-2026-11-22-independent-review-pending)
+tightens the existing omission certificate for `fbee7f15`: the earlier
+Bool model could count its whole as one of its components, while the new
+Fin 4 control has **two genuine proper components** and a **third,
+distinct efficient uniter**, yet still no causal relation to the whole's
+esse. This supports the *formal independence* of the uniter-to-esse
+bridge even on the intended proper-part test. It does not make the
+immanent rival true, invalidate the conditional argument, or establish
+the bridge: direct and cumulative warrant remain legitimate routes.
+All five `ca07cae9` support bundles still require `fbee7f15`, and the
+underived-source consumers additionally require current presence and
+causal correspondence. The 2026-11-18 accepted-qualified assessment
+and the 2026-11-17 reviewed pure-actuality result remain unchanged.
+Next substantive inquiry is a same-bearer, same-esse productive versus
+immanent account, not another rephrased finite omission model.
+
+
 ## Current reviewed assessment (2026-11-17)
 
 The composition reconstruction is the preferable articulated support option at this actual simple source because of semantic fit and explicit explanatory work. Real receptivity/composition and a distinct concurrent esse-giver remain application burdens; immanent constitution remains a substantive rival. No premise is established or actual pure-act counterexample supplied.
