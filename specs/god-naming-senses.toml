@@ -43,17 +43,6 @@ definitions = ["8c3bb0b3-facb-48b5-8674-f0f2ab87ad0c", "2c822ed5-1235-4c3d-aba8-
 disambiguations = ["1bfab283-1878-4e59-b975-7cf669ea434c", "DISAMB-RIGID-IDENTITY-EXISTENCE", "DISAMB-NECESSARY"]
 
 [[argument]]
-id = "Box K node from the GOD_NAMING_2 node through rigid designation"
-theorem = "rigidToBoxK"
-premises = ["Necessary-being node, GOD_NAMING_2 reading: the reference-fixed divine name designates necessarily"]
-conclusion = "STMT-NECESSARY-ROOT-BOX-K"
-senses = {GOD_NAMING = "GOD_NAMING_2"}
-axioms = []
-rule = "Rigid-designation library law: for rigid names with an actual common bearer, strict necessary co-designation iff necessary existence of the bearer"
-meaning = "If some actual root n is GOD_4, the one GOD_4, with the classical attributes, and the name 'God', whose bearer is fixed at w as the unique existing GOD_4, designates something at every accessible world, then n exists at every accessible world. The name is rigid for n (it designates n exactly where n exists), so by the rigid-designation library its strict necessary co-designation is equivalent to n's necessary existence. The premise is logically equivalent to the conclusion (rigidIffBoxK): this argument identifies the box K node as the rigid-name reading of 'God exists necessarily' and adds no independent warrant for it."
-description = "Box K necessary-being node from its GOD_NAMING_2 (rigid-name) reading. The proof applies TruthCore.Results.Modal.RigidDesignation.laws to the reference-fixed name, which is rigid because the root facts make n the unique existing GOD_4 at w. Not an identity transcription (invariant 16): it needs the rigidity and uniqueness of the name, and the analogous step from the GOD_NAMING_1 node fails (Separation, migrating-description model). Premise and conclusion are logically equivalent (registered relation), so this is a sense bridge, not new support; it establishes neither."
-
-[[argument]]
 id = "Box K node from the GOD_NAMING_1 node and only actual GOD_4 meeting the description"
 theorem = "descToBoxK"
 premises = ["Necessary-being node, GOD_NAMING_1 reading: necessarily one existent meets the divine description", "Only the actual GOD_4 could meet the divine description at an accessible world"]
@@ -93,4 +82,4 @@ subject_id = "Necessary-being node, GOD_NAMING_2 reading: the reference-fixed di
 predicate = "logically_equivalent_to"
 object_kind = "statement"
 object_id = "STMT-NECESSARY-ROOT-BOX-K"
-note = "Same signature, profile and world. Verified as rigidIffBoxK, a Comparator-checked conjunct of the GOD_NAMING controls result (theorem checks): for the root n, strict co-designation of the reference-fixed name 'God' at every accessible world is equivalent to n's existence at every accessible world, by the rigid-designation library laws. The direction to the box K node is also registered as the argument Box K node from the GOD_NAMING_2 node through rigid designation, a sense bridge that adds no independent warrant. The equivalence shows that the box K node already is the rigid-name reading of 'God exists necessarily', not that it is established."
+note = "Same signature, profile and world. Verified as rigidIffBoxK, a Comparator-checked conjunct of the GOD_NAMING controls result (theorem checks): for the root n, strict co-designation of the reference-fixed name 'God' at every accessible world is equivalent to n's existence at every accessible world, by the rigid-designation library laws. No argument is registered in either direction: an argument from the GOD_NAMING_2 node would add a route leaf that merely restates the box K node in other words (it lowered the expanded-route diagnostic from 16 to 13 without new warrant, so it was withdrawn). The equivalence shows that the box K node already is the rigid-name reading of 'God exists necessarily', not that it is established."

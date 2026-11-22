@@ -12,12 +12,6 @@ open TruthCore.Causality.BruteFoundationBoundary (Profile)
 open TruthCore.Causality.NecessarySenseFork (RootFacts NecessaryRootBoxK necessaryAt_iff_boxExistsAt)
 open TruthCore.Case.Catholicism (Signature IsTheOneGod)
 
-/-- Rigid-name reading gives the route's box K node. -/
-theorem rigidToBoxK {W : Type} (σ : Signature) (m : Profile W σ.Being) (w : W)
-    (h : NecessaryRootRigidName σ m w) (CN : σ.Being → σ.Being → Prop) :
-    NecessaryRootBoxK σ m w CN := by
-  sorry
-
 /-- Descriptive reading plus the no-other-possible-God bridge gives the box K
 node: at each accessible world the existing unique God-satisfier is actually
 GOD_4, hence the one GOD_4, the root. -/
