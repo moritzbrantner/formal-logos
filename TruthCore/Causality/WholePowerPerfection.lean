@@ -71,24 +71,24 @@ relation with intellect, self-representation, or actual understanding.
 The following OPEN bridges separate:
 1. wisdom's positive self-directed cognitive capacity (not merely a power to
    produce a cognitive effect);
-2. actual assent versus an unexercised *immanent* capacity at the designated
+2. actual apprehension versus an unexercised *immanent* capacity at the designated
    self-understanding respect;
-3. properly based assent versus a correct but non-cognitive signal.
+3. properly based apprehension versus a correct but non-cognitive signal.
 
 "About" fixes the SAME being as object; "Correct" is an extensional truth
-condition, not the explanation of its epistemic authority. "ReasonBased"
-denotes content-sensitive rational basing, not simple causal correlation.
+condition, not the explanation of its epistemic authority. "CognitivelyGrounded"
+denotes content-sensitive cognitive grounding, not simple causal correlation.
 No premise makes generic productive powers into intellectual powers. -/
 namespace WisdomSelfUnderstanding
 
-/-- Source-borne, true and reason-based actual assent about that very source.
+/-- Source-borne, true and cognitively grounded actual apprehension about that very source.
 This is a selected, stronger knowledge-like specification, not the existing
 unary HAS_INTELLECT_1, omniscience, or an externally produced signal. -/
 def IntrinsicSelfKnowledge {B C : Type}
     (About Correct : C → B → Prop)
-    (Assents ReasonBased : B → C → Prop) (g : B) : Prop :=
+    (Apprehends CognitivelyGrounded : B → C → Prop) (g : B) : Prop :=
   ∃ content, About content g ∧ Correct content g ∧
-    Assents g content ∧ ReasonBased g content
+    Apprehends g content ∧ CognitivelyGrounded g content
 
 /-- OPEN recognition/interpretation premise: at a subsistent source, possessing
 wisdom as a pure perfection supplies a *capacity* for true self-directed
@@ -96,30 +96,30 @@ content. The truth/capacity conjunction is not an exercise, and generic
 productive virtual possession does not imply it. -/
 def WisdomSelfCapacity {B D C : Type}
     (OwnBeing : B → Prop) (Has : B → D → Prop) (wisdom : D)
-    (About Correct : C → B → Prop) (CanAssent : B → C → Prop) : Prop :=
+    (About Correct : C → B → Prop) (CanApprehend : B → C → Prop) : Prop :=
   ∀ g, OwnBeing g → Has g wisdom →
-    ∃ content, About content g ∧ Correct content g ∧ CanAssent g content
+    ∃ content, About content g ∧ Correct content g ∧ CanApprehend g content
 
 /-- OPEN bridge scoped to the actual source and its *self-directed* capacity:
-either it assents to that content or the specified understanding respect
+either it apprehends to that content or the specified understanding respect
 remains in potency. This is stronger than an idle productive power, and
 cannot be obtained merely by defining InAct to include virtual possession. -/
 def SelfCapacityExercisedOrPotent {B C R : Type}
     (OwnBeing : B → Prop) (About : C → B → Prop)
-    (CanAssent Assents : B → C → Prop)
+    (CanApprehend Apprehends : B → C → Prop)
     (InPotency : B → R → Prop) (understanding : R) : Prop :=
-  ∀ g content, OwnBeing g → About content g → CanAssent g content →
-    Assents g content ∨ InPotency g understanding
+  ∀ g content, OwnBeing g → About content g → CanApprehend g content →
+    Apprehends g content ∨ InPotency g understanding
 
-/-- OPEN intellectual-norm bridge: true assent by the specified subsistent
+/-- OPEN intellectual-norm bridge: true apprehension by the specified subsistent
 source to content *about itself* is genuinely supported by reasons rather
 than just a successful register reading or a lawlike output. This needs
-semantic warrant, not a primitive rename of Assents. -/
-def TrueSelfAssentReasonBased {B C : Type}
+semantic warrant, not a primitive rename of Apprehends. -/
+def TrueSelfApprehensionGrounded {B C : Type}
     (OwnBeing : B → Prop) (About Correct : C → B → Prop)
-    (Assents ReasonBased : B → C → Prop) : Prop :=
+    (Apprehends CognitivelyGrounded : B → C → Prop) : Prop :=
   ∀ g content, OwnBeing g → About content g → Correct content g →
-    Assents g content → ReasonBased g content
+    Apprehends g content → CognitivelyGrounded g content
 
 namespace Control
 
@@ -132,9 +132,9 @@ def pure (_ : Unit) : Prop := True
 def ofBeing (_ : Unit) : Prop := True
 def about (content g : Bool) : Prop := content = g
 def correct (content g : Bool) : Prop := content = g
-def canAssent (g content : Bool) : Prop := g = true ∧ content = true
-def assent (g content : Bool) : Prop := g = true ∧ content = true
-def reasonBased (g content : Bool) : Prop := g = true ∧ content = true
+def canApprehension (g content : Bool) : Prop := g = true ∧ content = true
+def apprehension (g content : Bool) : Prop := g = true ∧ content = true
+def cognitivelyGrounded (g content : Bool) : Prop := g = true ∧ content = true
 def none (_ _ : Bool) : Prop := False
 def noPotency (_ : Bool) (_ : Unit) : Prop := False
 def causesIn (c x : Bool) (_ : Unit) : Prop := c = true ∧ x = false
@@ -152,28 +152,28 @@ def Background : Prop :=
 
 /-- Populated omission witnesses for three independent bridges:
 (1) no source cognitive capacity, (2) unexercised source capacity despite
-no passive potency, (3) actual correct assent without the specified
-rational basing. The fourth conjunct instantiates all three and yields
+no passive potency, (3) actual correct apprehension without the specified
+cognitive grounding. The fourth conjunct instantiates all three and yields
 actual self-knowledge. Even that does not set the separate old HasIntellect
 predicate unless an explicit recognition bridge is supplied. -/
 def Controls : Prop :=
   Background ∧
   (¬ WisdomSelfCapacity own has () about correct none ∧
     SelfCapacityExercisedOrPotent own about none none noPotency () ∧
-    TrueSelfAssentReasonBased own about correct none none ∧
+    TrueSelfApprehensionGrounded own about correct none none ∧
     ¬ IntrinsicSelfKnowledge about correct none none true) ∧
-  (WisdomSelfCapacity own has () about correct canAssent ∧
-    ¬ SelfCapacityExercisedOrPotent own about canAssent none noPotency () ∧
-    TrueSelfAssentReasonBased own about correct none none ∧
+  (WisdomSelfCapacity own has () about correct canApprehension ∧
+    ¬ SelfCapacityExercisedOrPotent own about canApprehension none noPotency () ∧
+    TrueSelfApprehensionGrounded own about correct none none ∧
     ¬ IntrinsicSelfKnowledge about correct none none true) ∧
-  (WisdomSelfCapacity own has () about correct canAssent ∧
-    SelfCapacityExercisedOrPotent own about canAssent assent noPotency () ∧
-    ¬ TrueSelfAssentReasonBased own about correct assent none ∧
-    ¬ IntrinsicSelfKnowledge about correct assent none true) ∧
-  (WisdomSelfCapacity own has () about correct canAssent ∧
-    SelfCapacityExercisedOrPotent own about canAssent assent noPotency () ∧
-    TrueSelfAssentReasonBased own about correct assent reasonBased ∧
-    IntrinsicSelfKnowledge about correct assent reasonBased true)
+  (WisdomSelfCapacity own has () about correct canApprehension ∧
+    SelfCapacityExercisedOrPotent own about canApprehension apprehension noPotency () ∧
+    ¬ TrueSelfApprehensionGrounded own about correct apprehension none ∧
+    ¬ IntrinsicSelfKnowledge about correct apprehension none true) ∧
+  (WisdomSelfCapacity own has () about correct canApprehension ∧
+    SelfCapacityExercisedOrPotent own about canApprehension apprehension noPotency () ∧
+    TrueSelfApprehensionGrounded own about correct apprehension cognitivelyGrounded ∧
+    IntrinsicSelfKnowledge about correct apprehension cognitivelyGrounded true)
 
 end Control
 end WisdomSelfUnderstanding
