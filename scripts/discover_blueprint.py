@@ -52,6 +52,38 @@ oracle    Run `scripts/run-discovery.sh` with a TEMPORARY overlay of whole-binde
           conditional on the overlay's identifications: they are the
           obligations a reviewed sense tag or a bridge premise must discharge
           before any finding can be recorded.
+
+repair    (#1833) Classify each goal of a report that did not yield an admissible
+          discovery into the alternative diagnoses
+            a  tactic, selection or budget;
+            b  malformed goal or missing lemma;
+            c  carrier or sense misidentification;
+            d  inconsistent or vacuous bundle;
+            e  a missing substantive premise;
+            f  unknown;
+          each `supported`, `possible`, `excluded` (for the exact bundle tested)
+          or `not indicated`, with the signals behind it. A failed search
+          proves none of them. Then list the evidence-based retry actions in
+          priority order: reuse a verified lemma, try the premises of a
+          verified argument that retrieval missed, split through an existing
+          intermediate statement, retry without the by-name carrier fallback,
+          test an exact one-point countermodel, raise the budget once, or
+          report an OPEN bridge or a blocker. Every premise is an existing
+          corpus statement; nothing is weakened, strengthened, tagged or
+          identified by name. Guards refuse a support cycle, a repeated solver
+          input and attempts beyond the cap.
+
+retry     Execute one planned action (`--action ID`), or the next admissible
+          ones (`--auto N`), on the exact bundle: `#discover` or the
+          countermodel probe `scripts/DiscoverRepair.lean` over the same
+          binding as `truth discover`, run once per solver input under the
+          heavy-job lock. Each run is appended to a bounded attempt trace
+          (exact goal, premise ids, revision, diagnoses, why the action was
+          chosen, the change against the original goal, the outcome). A
+          closed goal is assessed offline (P/¬P, incompatibility, by-name
+          domain, transcription probe, known composition, `truth semantics`
+          preflight, necessity) and stays a raw candidate: only `truth
+          discover` certification and the spec path can record it.
 """
 
 from __future__ import annotations
@@ -154,6 +186,53 @@ def known_derivations(target: str, arguments: dict, results: dict) -> list[dict]
             if a.get("conclusion_statement_id") == target and a["id"] in verified]
 
 
+def known_rows(finding: dict, statements: dict, arguments: dict, results: dict,
+               binders: dict, tags: dict) -> list[dict]:
+    """The verified arguments concluding the finding's target, with the
+    premises the run did not retrieve and the binder identifications that no
+    tag records."""
+    target = finding["target"]["statement_id"]
+    decl = statements[target].get("lean_declaration", "")
+    target_names = {b[0] for b in binders.get(decl, {}).get("binders", [])}
+    candidates = set(finding.get("candidates", []))
+    rows = []
+    for argument in known_derivations(target, arguments, results):
+        premises = argument.get("premise_statement_ids", [])
+        missing = [p for p in premises if p not in candidates]
+        decls = [decl] + [statements.get(p, {}).get("lean_declaration", "") for p in premises]
+        binding = simulate(decls, binders, tags) if binders else []
+        # A fresh binder whose name the target also binds is an
+        # identification the search refused (e.g. B vs Being, Has vs InAct
+        # need a mapping; CausesIn in another module needs a tag).
+        obligations = [f"{entry['declaration']}.{name}"
+                       for entry in binding for name in entry.get("blocked", [])]
+        rows.append({
+            "argument": argument["id"], "label": argument.get("label", ""),
+            "premises": premises, "not_retrieved": missing,
+            "binding": binding, "unidentified": obligations,
+            "target_binders": sorted(target_names)})
+    return rows
+
+
+def known_verdict(finding: dict, rows: list[dict]) -> str:
+    if finding["kind"] in ("discovery", "incompatibility") or (
+            finding.get("lean") or {}).get("closed"):
+        return "found"
+    if not rows:
+        return "no-known"
+    gaps = set()
+    for r in rows:
+        if r["not_retrieved"]:
+            gaps.add("retrieval")
+        if r["unidentified"]:
+            gaps.add("identification")
+    # A known derivation free of both gaps that was not composed is a
+    # proof-search gap.
+    if any(not r["not_retrieved"] and not r["unidentified"] for r in rows):
+        return "search"
+    return "+".join(sorted(gaps))
+
+
 def diagnose(args: argparse.Namespace) -> int:
     root = Path(args.root)
     report = json.loads(Path(args.report).read_text())
@@ -169,44 +248,9 @@ def diagnose(args: argparse.Namespace) -> int:
         if wanted and not any(target.startswith(w) for w in wanted):
             continue
         decl = statements[target].get("lean_declaration", "")
-        target_names = {b[0] for b in binders.get(decl, {}).get("binders", [])}
-        candidates = set(finding.get("candidates", []))
-        rows = []
-        for argument in known_derivations(target, arguments, results):
-            premises = argument.get("premise_statement_ids", [])
-            missing = [p for p in premises if p not in candidates]
-            decls = [decl] + [statements[p].get("lean_declaration", "") for p in premises]
-            binding = simulate(decls, binders, tags) if binders else []
-            # A fresh binder whose name the target also binds is an
-            # identification the search refused (e.g. B vs Being, Has vs InAct
-            # need a mapping; CausesIn in another module needs a tag).
-            obligations = [f"{entry['declaration']}.{name}"
-                           for entry in binding for name in entry.get("blocked", [])]
-            rows.append({
-                "argument": argument["id"], "label": argument.get("label", ""),
-                "premises": premises, "not_retrieved": missing,
-                "binding": binding, "unidentified": obligations,
-                "target_binders": sorted(target_names)})
-        if finding["kind"] in ("discovery", "incompatibility") or (
-                finding.get("lean") or {}).get("closed"):
-            verdict = "found"
-        elif not rows:
-            verdict = "no-known"
-        else:
-            gaps = set()
-            for r in rows:
-                if r["not_retrieved"]:
-                    gaps.add("retrieval")
-                if r["unidentified"]:
-                    gaps.add("identification")
-            # A known derivation free of both gaps that was not composed is a
-            # proof-search gap.
-            if any(not r["not_retrieved"] and not r["unidentified"] for r in rows):
-                verdict = "search"
-            else:
-                verdict = "+".join(sorted(gaps))
+        rows = known_rows(finding, statements, arguments, results, binders, tags)
         out.append({"target": target, "declaration": decl, "kind": finding["kind"],
-                    "verdict": verdict, "known": rows})
+                    "verdict": known_verdict(finding, rows), "known": rows})
     if args.json:
         print(json.dumps(out, indent=2))
         return 0
@@ -329,6 +373,814 @@ def oracle(args: argparse.Namespace) -> int:
         git(root, "worktree", "prune", check=False)
 
 
+# ---------------------------------------------------------------------------
+# Adaptive repair (#1833): diagnoses, evidence-based retry actions, exact
+# solver runs and a bounded attempt trace.
+
+TOOL_ROOT = Path(__file__).resolve().parents[1]
+
+DIAGNOSES = {
+    "a": "tactic, selection or budget",
+    "b": "malformed goal or missing lemma",
+    "c": "carrier or sense misidentification",
+    "d": "inconsistent or vacuous bundle",
+    "e": "missing substantive premise",
+    "f": "unknown",
+}
+
+# Declarations whose statements Duper's classical logic already supplies: a
+# proof that uses Classical.choice in place of the explicit premise is known
+# modulo logic, not new (attempt on PR #1848, retrieval miss iii).
+LOGIC_DECLARATIONS = {"TruthCore.Logic.ExcludedMiddle"}
+
+MAX_ATTEMPTS_PER_GOAL = 8
+# An action whose earlier run had one of these outcomes is not repeated with
+# another bundle of the same kind: its diagnosis is already settled.
+SETTLING = {"known-bundle": ("closed-known", "closed-candidate"),
+            "reuse-lemma": ("closed-known", "closed-candidate"),
+            "countermodel": ("countermodel",)}
+MAX_TRACE_ENTRIES = 64
+BUDGET_FACTOR = 4
+COUNTERMODEL_BOUNDS = (
+    "One-point interpretation: every carrier is Unit and every predicate a "
+    "constant (the slot pattern names which). It shows only that this formal "
+    "implication, over exactly these declarations bound as listed, fails at one "
+    "instantiation of its outer binders. It does not refute any premise, a "
+    "stronger or differently bound formulation, a sense identification or a "
+    "bundle with further premises.")
+
+
+class Corpus:
+    """The statements, verified arguments and sense tags the repair reads."""
+
+    def __init__(self, root: Path):
+        self.root = root
+        self.statements = load_records(root, "statements")
+        self.arguments = load_records(root, "arguments")
+        self.results = load_records(root, "results")
+        verified = {r.get("argument_id") for r in self.results.values()}
+        self.verified = [a for a in self.arguments.values() if a["id"] in verified]
+        self.logic = {sid for sid, s in self.statements.items()
+                      if s.get("lean_declaration") in LOGIC_DECLARATIONS}
+        self.whole_tags = whole_tags(root)
+
+    def declaration(self, sid: str) -> str:
+        return self.statements.get(sid, {}).get("lean_declaration", "")
+
+    def resolve(self, token: str) -> str:
+        if token in self.statements:
+            return token
+        hits = [sid for sid in self.statements if sid.startswith(token)]
+        if len(hits) != 1:
+            raise SystemExit(f"statement {token!r}: {len(hits)} matches")
+        return hits[0]
+
+    def closure(self, premises, logic: bool) -> tuple[set, list[str]]:
+        """Forward chaining over verified arguments: the statements that follow
+        and the arguments that fired, in order."""
+        have = set(premises) | (self.logic if logic else set())
+        fired: list[str] = []
+        changed = True
+        while changed:
+            changed = False
+            for a in self.verified:
+                c = a.get("conclusion_statement_id")
+                if c in have or a["id"] in fired:
+                    continue
+                if set(a.get("premise_statement_ids", [])) <= have:
+                    have.add(c)
+                    fired.append(a["id"])
+                    changed = True
+        return have, fired
+
+    def known(self, premises, target: str) -> dict | None:
+        """Whether the target composes from verified arguments over the
+        premises; `modulo_logic` when only with the logic statements added."""
+        have, fired = self.closure(premises, logic=False)
+        if target in have:
+            return {"arguments": fired, "modulo_logic": False}
+        have, fired = self.closure(premises, logic=True)
+        if target in have:
+            return {"arguments": fired, "modulo_logic": True}
+        return None
+
+    def only_through(self, statement: str, target: str) -> bool:
+        """True when `statement` has verified derivations and every one of them
+        uses `target`, directly or through premises of the same kind: using it
+        to derive the target would be a support cycle."""
+        memo: dict[str, bool] = {}
+
+        def through(s: str, stack: frozenset) -> bool:
+            if s == target:
+                return True
+            if s in stack:
+                return True
+            if s in memo:
+                return memo[s]
+            routes = [a for a in self.verified if a.get("conclusion_statement_id") == s]
+            if not routes:
+                memo[s] = False
+                return False
+            result = all(any(through(p, stack | {s}) for p in a.get("premise_statement_ids", []))
+                         for a in routes)
+            memo[s] = result
+            return result
+
+        routes = [a for a in self.verified if a.get("conclusion_statement_id") == statement]
+        return bool(routes) and through(statement, frozenset())
+
+    def lean_tags(self, declarations) -> list[list[str]]:
+        """`[declaration, binder, key]` for the goal's declarations, keyed as
+        `tag_key` in `truth/src/discover.rs` does (a partial application's key
+        carries `|`, so it never identifies binders)."""
+        wanted = set(declarations)
+        rows = []
+        if not hasattr(self, "_disambiguations"):
+            self._disambiguations = [
+                json.loads(path.read_text())
+                for path in sorted((self.root / "corpus" / "disambiguations").glob("*.json"))]
+        for record in self._disambiguations:
+            for sense in record.get("senses", []):
+                for entry in sense.get("lean_parameters") or []:
+                    if entry.get("declaration") not in wanted:
+                        continue
+                    args = entry.get("arguments") or []
+                    key = sense["id"]
+                    if any(a != "_" for a in args):
+                        key = f"{key}|{' '.join(args)}"
+                    rows.append([entry["declaration"], entry["parameter"], key])
+        return sorted(rows)
+
+
+def revision(root: Path) -> str:
+    head = git(root, "rev-parse", "HEAD", check=False).strip() or "unknown"
+    dirty = git(root, "status", "--porcelain", "--", "corpus", "TruthCore", "scripts",
+                check=False).strip()
+    return head + ("+dirty" if dirty else "")
+
+
+def solver_key(goal: dict, corpus: Corpus) -> str:
+    """Identity of one solver input: command, revision, declarations, budget,
+    domain policy and the tags the goal's declarations carry."""
+    import hashlib
+    decls = [corpus.declaration(goal["target"])] + [corpus.declaration(p) for p in goal["premises"]]
+    payload = {"command": goal["command"], "revision": goal.get("revision", ""),
+               "target": decls[0], "premises": sorted(decls[1:]),
+               "heartbeats": goal["heartbeats"], "strict": goal.get("strict_domains", False),
+               "tags": corpus.lean_tags(decls)}
+    return hashlib.sha256(json.dumps(payload, sort_keys=True).encode()).hexdigest()[:16]
+
+
+class Trace:
+    """The bounded attempt trace: one JSON file, one entry per solver input."""
+
+    def __init__(self, path: Path | None):
+        self.path = path
+        self.entries: list[dict] = []
+        if path and path.exists():
+            self.entries = json.loads(path.read_text()).get("entries", [])
+
+    def keys(self) -> dict[str, int]:
+        return {e["key"]: i for i, e in enumerate(self.entries) if e.get("key")}
+
+    def for_goal(self, label: str) -> list[dict]:
+        return [e for e in self.entries if e.get("goal_label") == label]
+
+    def add(self, entry: dict) -> None:
+        if entry.get("key") and entry["key"] in self.keys():
+            raise ValueError(f"duplicate solver input {entry['key']}")
+        if len(self.entries) >= MAX_TRACE_ENTRIES:
+            raise ValueError("trace is full")
+        self.entries.append(entry)
+
+    def save(self) -> None:
+        if self.path:
+            self.path.parent.mkdir(parents=True, exist_ok=True)
+            self.path.write_text(json.dumps({"entries": self.entries}, indent=2) + "\n")
+
+
+def goal_label(finding: dict) -> str:
+    return f"{finding['target']['statement_id'][:8]}:{finding.get('label', '')}"
+
+
+def original_goal(finding: dict, options: dict, rev: str) -> dict:
+    return {"command": "discover", "target": finding["target"]["statement_id"],
+            "premises": list(finding.get("candidates", [])),
+            "heartbeats": options.get("heartbeats", 100000), "strict_domains": False,
+            "revision": rev}
+
+
+def seed_trace(trace: Trace, finding: dict, options: dict, rev: str, corpus: Corpus,
+               report_path: str) -> None:
+    """Register the engine's own goal, so an identical retry is refused."""
+    goal = original_goal(finding, options, rev)
+    key = solver_key(goal, corpus)
+    if key in trace.keys():
+        return
+    trace.add({"key": key, "goal_label": goal_label(finding), "action": "engine",
+               "goal": goal, "why": f"the engine's goal in {report_path}",
+               "outcome": {"status": finding["kind"]}})
+
+
+def signals(finding: dict, options: dict) -> dict:
+    lean = finding.get("lean") or {}
+    filters = [f.get("filter") for f in finding.get("filters", [])]
+    error = lean.get("error") or ""
+    return {
+        "lean": lean, "filters": filters, "error": error,
+        "timed_out": "timed out" in error,
+        "closed": bool(lean.get("closed")) or bool(lean.get("alone")),
+        "vacuous": lean.get("vacuous"), "literal": lean.get("literal_negation"),
+        "by_name": lean.get("domain_identified_by_name") or [],
+        "bridges": lean.get("bridges") or [],
+        "truncated": len(finding.get("candidates", [])) >= options.get("candidates", 8),
+    }
+
+
+def bridge_same_name(bridge: dict) -> bool:
+    """A bridge between two relations of one name declared in different
+    declarations: often an identification question, not new philosophy."""
+    a, b = bridge.get("from", ""), bridge.get("to", "")
+    return a.rsplit(".", 1)[-1].split("_")[0] == b.rsplit(".", 1)[-1].split("_")[0] and \
+        a.rsplit(".", 1)[0] != b.rsplit(".", 1)[0]
+
+
+def reusable_lemmas(corpus: Corpus, bundle: list[str], target: str,
+                    rows: list[dict]) -> list[dict]:
+    """Verified arguments whose premises the bundle (with logic) already
+    contains and whose conclusion is not in it: their conclusions are checked
+    lemmas the search could not reach by itself (Duper does not compose
+    through other theorems). Ranked: conclusions that a known derivation of the
+    target uses first."""
+    have = set(bundle) | corpus.logic
+    wanted = {p for r in rows for p in r["premises"]}
+    target_defs = set(corpus.statements.get(target, {}).get("definition_ids", []))
+    out = []
+    for a in corpus.verified:
+        c = a.get("conclusion_statement_id")
+        premises = set(a.get("premise_statement_ids", []))
+        if c in have or c == target or not corpus.declaration(c):
+            continue
+        # A lemma must use the bundle (not only logic) and bear on the target:
+        # a premise of a known derivation, or a shared definition.
+        if not premises <= have or not (premises & set(bundle)):
+            continue
+        shared = target_defs & set(corpus.statements.get(c, {}).get("definition_ids", []))
+        if c in wanted or shared:
+            out.append({"lemma": c, "argument": a["id"], "known_premise": c in wanted})
+    out.sort(key=lambda x: (not x["known_premise"], x["lemma"]))
+    return out
+
+
+def classify(finding: dict, corpus: Corpus, options: dict, rows: list[dict],
+             attempts: list[dict]) -> list[dict]:
+    """The six alternative diagnoses with their status and evidence."""
+    s = signals(finding, options)
+    ev = {k: [] for k in DIAGNOSES}
+    status = {k: "not indicated" for k in DIAGNOSES}
+
+    def mark(code, level, text):
+        order = ["not indicated", "possible", "supported"]
+        if status[code] != "excluded" and order.index(level) > order.index(status[code]):
+            status[code] = level
+        ev[code].append(text)
+
+    if s["error"]:
+        if s["timed_out"]:
+            mark("a", "supported", f"the Lean process hit its time limit: {s['error'][:160]}")
+        else:
+            mark("b", "supported", f"Lean could not state the goal: {s['error'][:160]}")
+    if s["literal"]:
+        mark("d", "supported", f"the inconsistent core {s['literal']} is a premise and its literal "
+                               "negation (P/¬P): true by construction, not support")
+    elif s["vacuous"]:
+        mark("d", "supported", f"the premises prove False (core {s['lean'].get('vacuous_core')}): "
+                               "an incompatibility, never support")
+    if s["lean"].get("antecedent_refuted"):
+        mark("d", "supported", "the premises refute the target's antecedents (vacuous target)")
+    if "witness" in s["filters"]:
+        mark("d", "possible", "no one-point joint model found; consistency unresolved")
+    if s["by_name"] or "domain_by_name" in s["filters"]:
+        mark("c", "supported", "carriers identified across modules by name only: "
+                               + "; ".join(s["by_name"][:4]))
+    if "senses" in s["filters"]:
+        mark("c", "supported", "the bundle mixes senses of one term without a registered bridge")
+    for r in rows:
+        if r["unidentified"]:
+            mark("c", "supported", f"known argument {r['argument'][:8]} needs identifications "
+                                   f"no tag records: {', '.join(r['unidentified'][:6])}")
+    unresolved = not s["closed"] and not s["error"]
+    if unresolved:
+        mark("a", "possible", "Duper returned no proof; the engine does not record whether the "
+                              "heartbeat budget expired or the search saturated")
+        if s["truncated"]:
+            mark("a", "possible", f"the candidate list is at its cap ({options.get('candidates', 8)}): "
+                                  "selection may have cut a needed premise")
+        for r in rows:
+            if r["not_retrieved"]:
+                mark("b", "supported", f"known argument {r['argument'][:8]}: premises not in the goal "
+                                       f"{', '.join(p[:8] for p in r['not_retrieved'])}")
+            elif not r["unidentified"]:
+                mark("a", "supported", f"known argument {r['argument'][:8]} was retrieved and is "
+                                       "identifiable but was not composed (search gap)")
+        lemmas = reusable_lemmas(corpus, finding.get("candidates", []),
+                                 finding["target"]["statement_id"], rows)
+        if lemmas:
+            mark("b", "possible", f"{len(lemmas)} verified lemma(s) follow from the bundle but are "
+                                  "not in it: " + ", ".join(l["lemma"][:8] for l in lemmas[:4]))
+        for br in {b.get("text", ""): b for b in s["bridges"]}.values():
+            if bridge_same_name(br):
+                mark("c", "possible", f"missing bridge between same-named relations: {br.get('text', '')[:120]}")
+            else:
+                mark("e", "possible", f"candidate bridge (OPEN): {br.get('text', '')[:120]}")
+    for at in attempts:
+        out = at.get("outcome", {})
+        tag = f"trace {(at.get('key') or at.get('report_key') or '')[:8]} ({at['action']})"
+        if out.get("status") == "countermodel":
+            status["a"] = "excluded"
+            ev["a"].append(f"{tag}: exact one-point countermodel; no budget proves this bundle")
+            if status["c"] == "supported" or rows:
+                mark("e", "possible", f"{tag}: the bundle lacks a premise, lemma or identification")
+            else:
+                mark("e", "supported", f"{tag}: the bundle lacks a premise or bridge (formal, under "
+                                       "the stated binding); substantive or not is a warrant question")
+        if out.get("premises_model"):
+            if status["d"] != "supported":
+                status["d"] = "excluded"
+            ev["d"].append(f"{tag}: one-point model of the premises ({out['premises_model']})")
+        if out.get("status") == "closed-candidate" and at["action"] in ("reuse-lemma", "split"):
+            mark("b", "supported", f"{tag}: closes once the lemma is in the goal")
+        if out.get("status") == "closed-known" and at["action"] == "known-bundle":
+            mark("b", "supported", f"{tag}: the known argument's premises close it (retrieval gap)")
+        if out.get("status") == "unresolved" and at["action"] == "strict-domains":
+            mark("c", "supported", f"{tag}: without the by-name carrier fallback the goal does not close")
+        if out.get("status") == "unresolved" and at["action"] == "budget":
+            mark("a", "possible", f"{tag}: still unresolved at {at['goal']['heartbeats']} heartbeats; "
+                                  "not a refutation")
+    if not any(v == "supported" for v in status.values()):
+        mark("f", "possible", "no signal supports any diagnosis yet")
+    return [{"code": k, "diagnosis": DIAGNOSES[k], "status": status[k], "evidence": ev[k]}
+            for k in DIAGNOSES]
+
+
+def plan(finding: dict, corpus: Corpus, options: dict, rows: list[dict], trace: Trace,
+         rev: str) -> list[dict]:
+    """The retry actions, in priority order, with their guards checked."""
+    s = signals(finding, options)
+    target = finding["target"]["statement_id"]
+    candidates = list(finding.get("candidates", []))
+    minimal = [p["statement_id"] for p in finding.get("premises", [])]
+    hb = options.get("heartbeats", 100000)
+    label = goal_label(finding)
+    done = trace.for_goal(label)
+    keys = trace.keys()
+    actions: list[dict] = []
+
+    def goal(premises, command="discover", heartbeats=hb, strict=False):
+        return {"command": command, "target": target, "premises": list(dict.fromkeys(premises)),
+                "heartbeats": heartbeats, "strict_domains": strict, "revision": rev}
+
+    def add(action, code, why, goals=(), added=(), report=None):
+        refused = []
+        for g in goals:
+            for p in g["premises"]:
+                if p not in corpus.statements or not corpus.declaration(p):
+                    refused.append(f"{p[:8]} is not a corpus statement with a Lean declaration")
+            if g["target"] in g["premises"]:
+                refused.append("the target is among its own premises")
+            k = solver_key(g, corpus)
+            g["key"] = k
+            if k in keys:
+                refused.append(f"duplicate solver input (trace {k[:8]})")
+        for p in added:
+            if corpus.only_through(p, target):
+                refused.append(f"support cycle: every verified derivation of {p[:8]} uses the target")
+        solver_runs = sum(1 for e in done if e.get("action") != "engine" and e.get("key"))
+        if goals and solver_runs >= MAX_ATTEMPTS_PER_GOAL:
+            refused.append(f"attempt cap {MAX_ATTEMPTS_PER_GOAL} reached for this goal")
+        if report and any(e.get("report_key") == report.get("key") for e in done):
+            refused.append("already reported")
+        settled = [e for e in done if e.get("action") == action
+                   and e.get("outcome", {}).get("status") in SETTLING.get(action, ())]
+        if goals and settled:
+            refused.append(f"diagnosis already settled by trace {settled[0]['key'][:8]} "
+                           f"({settled[0]['outcome']['status']})")
+        actions.append({"id": f"{target[:8]}-{len(actions) + 1}", "action": action,
+                        "diagnosis": code, "why": why, "goals": list(goals),
+                        "added": list(added), "report": report, "refused": refused})
+
+    if s["error"] and not s["timed_out"]:
+        add("blocker", "b", "the goal could not be stated; fix the declaration or its binding "
+                            "first (no solver input would differ)",
+            report={"key": f"error:{target}", "text": s["error"][:300]})
+    if s["literal"]:
+        add("reject", "d", "a literal P/¬P core: inconsistent by construction, never support; "
+                           "no retry can turn it into a relationship",
+            report={"key": f"literal:{target}", "text": f"core {s['literal']}"})
+    elif s["vacuous"]:
+        add("record-incompatibility", "d", "an inconsistent core is an incompatibility, not "
+                                           "support; record it as such, do not retry for support",
+            report={"key": f"vacuous:{target}", "text": f"core {s['lean'].get('vacuous_core')}"})
+    if s["closed"] and (s["by_name"] or "domain_by_name" in s["filters"]):
+        bundle = minimal or candidates
+        add("strict-domains", "c", "the proof rests on a by-name carrier identification; retry the "
+                                   "same bundle without that fallback to see whether it is load-bearing "
+                                   "(the repair never merges carriers or writes tags)",
+            goals=[goal(bundle, strict=True)])
+    unresolved = not s["closed"] and not s["literal"] and not s["vacuous"] and \
+        (not s["error"] or s["timed_out"])
+    if unresolved:
+        for lem in reusable_lemmas(corpus, candidates, target, rows)[:3]:
+            add("reuse-lemma", "b", f"verified argument {lem['argument'][:8]} derives "
+                                    f"{lem['lemma'][:8]} from premises already in the goal; Duper "
+                                    "does not compose through theorems, so add the checked lemma",
+                goals=[goal(candidates + [lem["lemma"]])], added=[lem["lemma"]])
+        for r in rows:
+            if r["not_retrieved"]:
+                add("known-bundle", "b", f"retrieval missed premises of verified argument "
+                                         f"{r['argument'][:8]}; the exact bundle tests whether the "
+                                         "failure was retrieval (expected: filtered as known)",
+                    goals=[goal(r["premises"])], added=r["not_retrieved"])
+        add("countermodel", "a", "an exact one-point countermodel of premises and ¬target would "
+                                 "exclude a budget or tactic failure for this bundle",
+            goals=[goal(candidates, command="countermodel")])
+        for r in rows:
+            missing = [p for p in r["not_retrieved"] if p not in corpus.logic]
+            if len(missing) == 1:
+                m = missing[0]
+                add("split", "b", f"one premise {m[:8]} of verified argument {r['argument'][:8]} is "
+                                  "missing: search it from the goal's bundle, and the target from "
+                                  "the bundle with it, as two goals",
+                    goals=[dict(goal(candidates), target=m),
+                           goal(candidates + [m])], added=[m])
+        cm = [e for e in done if e.get("action") == "countermodel"]
+        if cm and all(e["outcome"].get("status") != "countermodel" for e in cm):
+            add("budget", "a", f"no countermodel was found, so a budget failure stays possible; "
+                               f"retry once at {BUDGET_FACTOR}x heartbeats",
+                goals=[goal(candidates, heartbeats=hb * BUDGET_FACTOR)])
+        for br in {b.get("text", ""): b for b in s["bridges"]}.values():
+            add("open-bridge", "e" if not bridge_same_name(br) else "c",
+                "the engine's missing bridge is a candidate proposition: OPEN for warrant "
+                "research (or a sense-tag review when both relations share a name), never "
+                "added to a goal",
+                report={"key": f"bridge:{target}:{br.get('text', '')}", "status": "OPEN",
+                        "text": br.get("text", ""), "from": br.get("from"), "to": br.get("to"),
+                        "with_premises": br.get("used", [])})
+    for r in rows:
+        if r["unidentified"]:
+            add("blocker", "c", f"known argument {r['argument'][:8]} needs binder identifications "
+                                "that only a reviewed sense tag or an explicit bridge premise can "
+                                "supply; the repair does not identify them",
+                report={"key": f"ident:{r['argument']}", "text": ", ".join(r["unidentified"])})
+    return actions
+
+
+# --- Lean runs -------------------------------------------------------------
+
+def prelude() -> str:
+    """The transcription probe tactics of `truth prove-sweep` (`PRELUDE` in
+    `truth/src/prove_sweep.rs`), which `scripts/Discover.lean` uses."""
+    import re
+    text = (TOOL_ROOT / "truth" / "src" / "prove_sweep.rs").read_text()
+    found = re.search(r'pub const PRELUDE: &str = r#"(.*?)"#;', text, re.S)
+    if not found:
+        raise SystemExit("cannot read PRELUDE from truth/src/prove_sweep.rs")
+    return found.group(1)
+
+
+def module_of(root: Path, declaration: str, modules: dict | None = None) -> str:
+    if modules and declaration in modules:
+        return modules[declaration]
+    parts = declaration.split(".")
+    for n in range(len(parts) - 1, 0, -1):
+        if (root / Path(*parts[:n])).with_suffix(".lean").is_file():
+            return ".".join(parts[:n])
+    raise SystemExit(f"no module found for {declaration}")
+
+
+def lean_string(text: str) -> str:
+    return '"' + text.replace("\\", "\\\\").replace('"', '\\"') + '"'
+
+
+def command_line(label: str, goal: dict, corpus: Corpus) -> str:
+    target = corpus.declaration(goal["target"])
+    premises = [corpus.declaration(p) for p in goal["premises"]]
+    config = json.dumps({"tags": corpus.lean_tags([target, *premises]), "bridges": False,
+                         "strict_domains": goal.get("strict_domains", False)})
+    if goal["command"] == "countermodel":
+        return (f"#discover_countermodel {lean_string(label)} {goal['heartbeats']} "
+                f"{lean_string(config)} {target} from {' '.join(premises)}")
+    return (f"#discover {lean_string(label)} {goal['heartbeats']} \"\" {lean_string(config)} "
+            f"{target} from {' '.join(premises)}")
+
+
+def scratch_text(modules: list[str], commands: list[str], probe_stub: bool = False) -> str:
+    discover = (TOOL_ROOT / "scripts" / "Discover.lean").read_text()
+    repair = (TOOL_ROOT / "scripts" / "DiscoverRepair.lean").read_text()
+    imports, bodies = set(), []
+    for text in (discover, repair):
+        lines = []
+        for line in text.splitlines():
+            if line.startswith("import "):
+                imports.add(line[len("import "):].strip())
+            else:
+                lines.append(line)
+        bodies.append("\n".join(lines))
+    imports |= set(modules)
+    probe = ('macro "prove_sweep_probe" : tactic => `(tactic| fail "stub")\n'
+             if probe_stub else prelude())
+    return ("".join(f"import {m}\n" for m in sorted(imports)) + "\n" + probe + "\n"
+            + bodies[0] + "\n" + bodies[1] + "\nset_option maxHeartbeats 0\n\n"
+            + "\n".join(commands) + "\n")
+
+
+def run_lean(corpus: Corpus, labelled: list[tuple[str, dict]], *, lock: str | None,
+             launcher: list[str] | None = None, modules: dict | None = None,
+             extra_lean_path: str | None = None, probe_stub: bool = False,
+             timeout: int | None = None) -> dict[str, dict]:
+    """Runs the goals in one Lean process; the raw outcomes by label."""
+    decls = {corpus.declaration(g["target"]) for _, g in labelled}
+    decls |= {corpus.declaration(p) for _, g in labelled for p in g["premises"]}
+    mods = sorted({module_of(corpus.root, d, modules) for d in decls})
+    commands = [command_line(label, g, corpus) for label, g in labelled]
+    if launcher is None:
+        launcher = [sys.executable, str(TOOL_ROOT / "scripts" / "worker_env.py"), "--", "lake"]
+    if timeout is None:
+        timeout = 300 + sum(60 + g["heartbeats"] // 1000 * 3 for _, g in labelled)
+    with tempfile.TemporaryDirectory(prefix="discover-repair-") as tmp:
+        path = Path(tmp) / "Repair.lean"
+        log = Path(tmp) / "repair.log"
+        path.write_text(scratch_text(mods, commands, probe_stub))
+        if extra_lean_path:
+            argv = [*launcher, "env", "sh", "-c", 'LEAN_PATH="$1:$LEAN_PATH" lean "$2"', "sh",
+                    extra_lean_path, str(path)]
+        else:
+            argv = [*launcher, "env", "lean", str(path)]
+        if lock:
+            Path(lock).parent.mkdir(parents=True, exist_ok=True)
+            argv = ["flock", lock, *argv]
+        env = {**os.environ, "TRUTH_DISCOVER_LOG": str(log)}
+        try:
+            done = subprocess.run(argv, cwd=TOOL_ROOT, env=env, capture_output=True,
+                                  text=True, timeout=timeout)
+            output, failure = done.stdout + done.stderr, None
+        except subprocess.TimeoutExpired:
+            output, failure = "", f"Lean timed out after {timeout}s"
+        logged = log.read_text() if log.exists() else ""
+    outcomes: dict[str, dict] = {}
+    for line in (logged + "\n" + output).splitlines():
+        for marker in ("DISCOVER-REPAIR-JSON ", "DISCOVER-JSON "):
+            at = line.find(marker)
+            if at >= 0:
+                try:
+                    value = json.loads(line[at + len(marker):])
+                except ValueError:
+                    continue
+                outcomes.setdefault(value.get("label", ""), value)
+                break
+    errors = [l for l in output.splitlines() if ": error" in l][:3]
+    for label, _ in labelled:
+        outcomes.setdefault(label, {"label": label,
+                                    "error": failure or "\n".join(errors) or "no output"})
+    return outcomes
+
+
+def semantics_preflight(corpus: Corpus, premises: list[str], target: str) -> dict:
+    truth = corpus.root / "target" / "release" / "truth"
+    if not truth.exists():
+        return {"checked": False, "note": "truth CLI not built; senses not checked"}
+    argv = [str(truth), "--root", str(corpus.root), "--json", "semantics"]
+    for p in premises:
+        argv += ["--premise", p]
+    argv += ["--conclusion", target]
+    done = subprocess.run(argv, capture_output=True, text=True)
+    try:
+        check = json.loads(done.stdout)["check"]
+    except (ValueError, KeyError):
+        return {"checked": False, "note": (done.stderr or done.stdout)[:200]}
+    return {"checked": True, "passes": check.get("passes"), "message": check.get("message", "")}
+
+
+def assess(raw: dict, goal: dict, corpus: Corpus, senses: bool = True) -> dict:
+    """The outcome of one solver run, with the engine's filters applied
+    offline where the raw outcome allows."""
+    if raw.get("error"):
+        kind = "unresolved" if "timed out" in raw["error"] else "error"
+        return {"status": kind, "notes": [raw["error"][:300]]}
+    if goal["command"] == "countermodel":
+        binders = raw.get("binders", [])
+        out = {"premises_model": raw.get("premises_model"),
+               "by_name": raw.get("domain_identified_by_name", [])}
+        if raw.get("countermodel"):
+            out.update(status="countermodel", model={
+                "statement": "∀ binders, premises → target fails at",
+                "binders": binders, "interpretation": raw["countermodel"],
+                "bounds": COUNTERMODEL_BOUNDS,
+                "conditional_on_identifications": raw.get("domain_identified_by_name", [])})
+        else:
+            out.update(status="no-countermodel",
+                       notes=["no one-point countermodel; the implication may hold or need a larger model"])
+        return out
+    if raw.get("alone"):
+        return {"status": "vocabulary-theorem", "notes": ["the target follows from no premise"]}
+    closed = raw.get("closed")
+    if not closed:
+        return {"status": "unresolved",
+                "notes": ["no proof within the budget; unresolved, not refuted"]}
+    premises = goal["premises"]
+    minimal = [premises[i] for i in raw.get("minimal", []) if i < len(premises)]
+    if raw.get("literal_negation"):
+        return {"status": "rejected-literal-negation", "minimal": minimal,
+                "notes": ["P/¬P core: not support, not an incompatibility"]}
+    if raw.get("vacuous"):
+        core = [premises[i] for i in raw.get("vacuous_core") or [] if i < len(premises)]
+        return {"status": "incompatibility", "core": core,
+                "notes": ["the premises prove False: an incompatibility, never support"]}
+    out: dict = {"minimal": minimal, "prover": closed.get("prover"),
+                 "axioms": closed.get("axioms", []), "notes": []}
+    necessity = []
+    omissions = {o.get("premise"): o.get("model") for o in raw.get("omissions") or []}
+    for d in raw.get("deletions") or []:
+        i = d.get("premise")
+        sid = premises[i] if i is not None and i < len(premises) else str(i)
+        if d.get("outcome") == "dropped":
+            necessity.append({"premise": sid, "status": "dropped"})
+        elif omissions.get(i):
+            necessity.append({"premise": sid, "status": "needed (one-point omission model)",
+                              "model": omissions[i]})
+        else:
+            necessity.append({"premise": sid, "status": "kept within budget; necessity unresolved"})
+    out["necessity"] = necessity
+    if raw.get("domain_identified_by_name"):
+        out["status"] = "rejected-domain-by-name"
+        out["by_name"] = raw["domain_identified_by_name"]
+        return out
+    if raw.get("probe"):
+        out["status"] = "rejected-transcription"
+        return out
+    if raw.get("antecedent_refuted"):
+        out["notes"].append("vacuous target: the premises refute the target's antecedents")
+    if raw.get("witness") is None:
+        out["notes"].append("no one-point joint model; consistency unresolved")
+    known = corpus.known(minimal, goal["target"])
+    if known:
+        out["status"] = "closed-known"
+        out["known"] = known
+        return out
+    out["status"] = "closed-candidate"
+    out["senses"] = semantics_preflight(corpus, minimal, goal["target"]) if senses else {
+        "checked": False}
+    out["notes"].append("raw candidate: certify with `truth discover` and record only through "
+                        "the spec path and semantic review")
+    return out
+
+
+def change_against(goal: dict, original: dict, corpus: Corpus) -> dict:
+    return {"target": corpus.declaration(goal["target"]) if goal["target"] != original["target"]
+            else "unchanged",
+            "added": [p for p in goal["premises"] if p not in original["premises"]],
+            "removed": [p for p in original["premises"] if p not in goal["premises"]],
+            "heartbeats": goal["heartbeats"], "strict_domains": goal.get("strict_domains", False),
+            "command": goal["command"]}
+
+
+def load_context(args):
+    root = Path(args.root)
+    corpus = Corpus(root)
+    report_path = Path(args.report)
+    report = json.loads(report_path.read_text())
+    binders = load_binders(Path(args.binders)) if args.binders else {}
+    wanted = set(args.target or [])
+    findings = [f for f in report["findings"]
+                if f["kind"] != "discovery" and
+                (not wanted or any(f["target"]["statement_id"].startswith(w) for w in wanted))]
+    trace_path = Path(args.trace) if args.trace else report_path.with_name("repair-trace.json")
+    trace = Trace(trace_path)
+    rev = args.revision or revision(root)
+    return corpus, report, binders, findings, trace, rev
+
+
+def plan_all(corpus, report, binders, findings, trace, rev, report_path):
+    options = report.get("options", {})
+    out = []
+    for finding in findings:
+        seed_trace(trace, finding, options, rev, corpus, report_path)
+        rows = known_rows(finding, corpus.statements, corpus.arguments, corpus.results,
+                          binders, corpus.whole_tags)
+        attempts = trace.for_goal(goal_label(finding))
+        out.append({"goal": goal_label(finding), "target": finding["target"]["statement_id"],
+                    "declaration": finding["target"].get("lean_declaration", ""),
+                    "kind": finding["kind"],
+                    "filters": [f.get("filter") for f in finding.get("filters", [])],
+                    "diagnoses": classify(finding, corpus, options, rows, attempts),
+                    "actions": plan(finding, corpus, options, rows, trace, rev),
+                    "finding": finding})
+    return out
+
+
+def print_plan(items: list[dict]) -> None:
+    for item in items:
+        print(f"{item['goal']} {item['declaration'].split('.')[-1]}: {item['kind']}"
+              f"{' ' + ','.join(item['filters']) if item['filters'] else ''}")
+        for d in item["diagnoses"]:
+            if d["status"] != "not indicated":
+                print(f"  ({d['code']}) {d['diagnosis']}: {d['status']}")
+                for e in d["evidence"][:3]:
+                    print(f"      - {e}")
+        for a in item["actions"]:
+            state = "REFUSED: " + "; ".join(a["refused"]) if a["refused"] else "admissible"
+            print(f"  [{a['id']}] {a['action']} ({a['diagnosis']}) {state}")
+            print(f"      why: {a['why']}")
+
+
+def repair(args: argparse.Namespace) -> int:
+    corpus, report, binders, findings, trace, rev = load_context(args)
+    items = plan_all(corpus, report, binders, findings, trace, rev, args.report)
+    trace.save()
+    if args.json:
+        for item in items:
+            item.pop("finding")
+        print(json.dumps(items, indent=2, ensure_ascii=False))
+    else:
+        print_plan(items)
+    return 0
+
+
+def execute(action: dict, item: dict, corpus: Corpus, trace: Trace, rev: str,
+            runner, senses: bool = True) -> list[dict]:
+    """Runs an admissible action and appends its trace entries."""
+    if action["refused"]:
+        raise SystemExit(f"action {action['id']} refused: {'; '.join(action['refused'])}")
+    finding = item["finding"]
+    label = item["goal"]
+    original = next((e["goal"] for e in trace.for_goal(label) if e["action"] == "engine"), None)
+    diagnoses = {d["code"]: d["status"] for d in item["diagnoses"]}
+    entries = []
+    if not action["goals"]:
+        entry = {"key": None, "report_key": action["report"]["key"], "goal_label": label,
+                 "revision": rev, "action": action["action"], "diagnosis": action["diagnosis"],
+                 "diagnoses": diagnoses, "why": action["why"], "report": action["report"],
+                 "outcome": {"status": action["report"].get("status", "reported")}}
+        trace.add(entry)
+        return [entry]
+    labelled = [(f"{action['id']}.{i}", g) for i, g in enumerate(action["goals"])]
+    raws = runner(corpus, labelled)
+    for (lab, g), _ in zip(labelled, action["goals"]):
+        raw = raws.get(lab, {"error": "no output"})
+        outcome = assess(raw, g, corpus, senses=senses)
+        entry = {"key": g["key"], "goal_label": label, "revision": rev,
+                 "action": action["action"], "diagnosis": action["diagnosis"],
+                 "diagnoses": diagnoses, "why": action["why"],
+                 "goal": {k: v for k, v in g.items() if k != "key"},
+                 "declarations": [corpus.declaration(g["target"])]
+                 + [corpus.declaration(p) for p in g["premises"]],
+                 "modified": change_against(g, original or g, corpus),
+                 "outcome": outcome, "ms": raw.get("ms"),
+                 "binders": raw.get("binders", [])}
+        trace.add(entry)
+        entries.append(entry)
+    return entries
+
+
+def retry(args: argparse.Namespace) -> int:
+    corpus, report, binders, findings, trace, rev = load_context(args)
+    lock = None if args.no_lock else os.environ.get("TRUTH_DISCOVER_LOCK",
+                                                    "/tmp/moenarch/truth-core-heavy.lock")
+
+    def runner(c, labelled):
+        return run_lean(c, labelled, lock=lock)
+
+    budget = args.auto if args.auto else 1
+    ran = []
+    while budget > 0:
+        items = plan_all(corpus, report, binders, findings, trace, rev, args.report)
+        chosen = None
+        for item in items:
+            for a in item["actions"]:
+                if args.action and a["id"] != args.action:
+                    continue
+                if args.action or (not a["refused"] and
+                                   (a["goals"] or args.include_reports)):
+                    chosen = (a, item)
+                    break
+            if chosen:
+                break
+        if not chosen:
+            break
+        entries = execute(chosen[0], chosen[1], corpus, trace, rev, runner)
+        trace.save()
+        ran.extend(entries)
+        for e in entries:
+            print(f"{e['goal_label']} {e['action']}: {e['outcome']['status']}")
+        if args.action:
+            break
+        budget -= 1
+    trace.save()
+    if not ran:
+        print("no admissible action")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     parser.add_argument("--root", default=str(ROOT))
@@ -343,7 +1195,28 @@ def main() -> int:
     o.add_argument("--scratch", help="parent directory of the temporary worktree "
                                      "(default: the repository's parent directory)")
     o.add_argument("rest", nargs=argparse.REMAINDER, help="-- then run-discovery.sh arguments")
+    for name in ("repair", "retry"):
+        r = sub.add_parser(name)
+        r.add_argument("report")
+        r.add_argument("--binders", help="JSON lines from scripts/DiscoverBinders.lean")
+        r.add_argument("--target", action="append", help="statement id prefix (repeatable)")
+        r.add_argument("--trace", help="attempt trace (default: repair-trace.json beside the report)")
+        r.add_argument("--revision", help="source revision to record (default: git HEAD)")
+        if name == "repair":
+            r.add_argument("--json", action="store_true")
+        else:
+            r.add_argument("--action", help="the planned action id to run")
+            r.add_argument("--auto", type=int, default=0,
+                           help="run up to N admissible actions, replanning after each")
+            r.add_argument("--include-reports", action="store_true",
+                           help="also record report-only actions (OPEN bridges, blockers)")
+            r.add_argument("--no-lock", action="store_true",
+                           help="do not take the heavy-job lock (tests only)")
     args = parser.parse_args()
+    if args.command == "repair":
+        return repair(args)
+    if args.command == "retry":
+        return retry(args)
     if args.command == "oracle":
         if args.rest and args.rest[0] == "--":
             args.rest = args.rest[1:]
