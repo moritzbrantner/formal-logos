@@ -34,7 +34,7 @@ disambiguations = ["1ea8b036-7a66-540a-be38-301a8db9077c", "6f1d1395-7c1d-5bd5-a
 
 [[argument]]
 id = "b6ec7983-6e7a-405c-9984-5e25ef45f221"
-label = "Contingent spacetime and same-relation occupant grounding imply an unlocated necessary underived root"
+label = "Contingent spacetime grounding implies an unlocated underived root"
 theorem = "derive"
 premises = ["0bdcf366-29c7-5d45-b603-5c929dcad976", "1dd2b809-a1d3-43ca-8dfc-b7c1c4fbfd58", "144a61c5-0abd-4759-bdcd-8ad59ed8be72", "8bfeb070-436d-4503-8282-4b7df72a4d93"]
 conclusion = "bc2ee163-0ca6-48b2-84b2-0da27326cfcb"
