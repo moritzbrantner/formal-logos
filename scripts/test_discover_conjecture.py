@@ -151,6 +151,20 @@ class Acceptance(unittest.TestCase):
         r = run(config(CHAIN), corpus(), proved={"main", "drop0", "drop1"})
         self.assertEqual(r["minimal_premises"], ["S-A", "S-B"])
         self.assertTrue(any("not minimized" in f for f in r["flags"]))
+        self.assertTrue(all(v.startswith("kept: several single deletions") for v in r["premise_status"].values()))
+
+    def test_error_inside_the_goal_still_classifies_models(self):
+        cand = dict(CHAIN, countermodel=[{"assign": {"B": "Bool", "P": "fun _ => True", "Q": "fun _ => True", "S": "fun _ => False"}}])
+        cfg = config(cand)
+        _, spans = dc.render(cfg, corpus(), BINDERS)
+        main = next(n for n, s in spans.items() if s["check"] == "main")
+        out = lean_output(spans, {"cm0"}) + f"\nConjectures.lean:{spans[main]['lines'][0] + 1}:2: error: (deterministic) timeout"
+        r = dc.classify(cfg, corpus(), BINDERS, dc.parse_lean(out, spans), spans)[0]
+        self.assertEqual(r["outcome"], "certified_non_implication")
+        # no declaration at all: an error
+        out = "\n".join(l for l in lean_output(spans, {"cm0"}).splitlines() if not l.startswith(f"'{main}'"))
+        r = dc.classify(cfg, corpus(), BINDERS, dc.parse_lean(out, spans), spans)[0]
+        self.assertEqual(r["outcome"], "error")
 
     def test_needed_only_with_a_certified_omission_model(self):
         cand = dict(CHAIN, countermodel=[{"omit": ["S-B"], "assign": {"B": "Bool", "P": "fun _ => True", "Q": "fun _ => True", "S": "fun _ => False"}}])

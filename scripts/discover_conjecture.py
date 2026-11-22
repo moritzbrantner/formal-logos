@@ -148,7 +148,8 @@ class Corpus:
                 for p in sense.get("lean_parameters", []) or []:
                     if p.get("arguments"):
                         continue  # a partial application never identifies a binder
-                    self.tags[(p["declaration"], p["parameter"])] = key
+                    # the first tag wins, as in the engine's reader
+                    self.tags.setdefault((p["declaration"], p["parameter"]), key)
 
     @classmethod
     def load(cls, root: Path):
@@ -536,7 +537,10 @@ def classify(config: dict, corpus: Corpus, binders: dict, status: dict, spans: d
                           for a in status.get(n, {}).get("outside_axioms", [])})
         if outside:
             report["flags"].append(f"axioms outside the allowed three in some check ({', '.join(outside)}): those checks count as unproved")
-        if main["elaboration_error"] or main["axioms"] is None:
+        # "error" only when the goal produced no declaration; an error inside a
+        # produced goal (say a heartbeat timeout escaping `first`) leaves it
+        # unproved, and models and bridges are still classified.
+        if main["axioms"] is None:
             report["outcome"], report["reason"] = "error", "the goal did not elaborate"
             reports.append(report)
             continue
@@ -555,6 +559,7 @@ def classify(config: dict, corpus: Corpus, binders: dict, status: dict, spans: d
         report["premise_status"] = {
             prem[i].sid: ("needed (omission model certified)" if i in omitted_certified
                           else "dropped (deletion re-proved)" if i not in needed
+                          else "kept: several single deletions succeeded; joint deletion untested" if i in droppable
                           else "not dropped (unresolved: deletion failed within the budget)")
             for i in range(len(prem))}
         report["axioms"] = main["axioms"]
