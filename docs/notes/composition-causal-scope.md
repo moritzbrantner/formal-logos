@@ -77,8 +77,9 @@ In the existing pinned source records, q.11 a.1 co. treats union as a
 that being. SCG I.18 n.4 calls the composer the efficient cause of the
 composite, but neither names `esse` nor establishes that the efficiency
 obtains *now*. `De ente` §§77–81 offers the distinct-esse external-source
-case, while §§101–102 explicitly describe substantial esse as resulting
-from matter/form conjunction; these claims are not interchangeable.
+case, while the existing De ente distinct-esse route requires a real essence/esse
+distinction and its own causal-exhaustiveness premise; neither follows from
+the q.11 unity condition.
 The source assertions and the open philosophical bridge remain
 separately recorded, without a new attribution here.
 
