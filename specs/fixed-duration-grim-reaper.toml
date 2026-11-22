@@ -123,7 +123,7 @@ conclusion = "fab16501-c05a-455d-b880-1a8a9a0dc90a"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "A finite-prefix witness covering n+1 supplies both actual PieceAt interfaces on the same schedule; project the station/causal requirements while retaining the anchored descent."
 meaning = "Selected finite-prefix compatibility of actually concrete, existing, temporally present and causally linked station bearers suffices for the previously registered selected-descent local Reaper premise. For each n, one prefix world witnesses two adjacent pieces. The witness, clock, schedule and station identities are held fixed in each application. This is a conditional strength order, not a source-warrant or metaphysical possibility result."
-comparator_theorems = ["finiteStationPrefixesGiveAdjacent"]
+comparator_theorems = ["finiteStationPrefixesGiveAdjacent", "pivotFinitePrefixPiece", "causalFinitePrefixCompatibility", "causalFinitePrefixControls"]
 definitions = ["008cb21a-256c-5a90-822c-acd4591d699a", "375676b0-a295-4a17-a9e4-3db23319d517", "419d2bf5-8cea-47a4-bf64-3058a1f2489b", "1cafe011-a462-479a-9cfe-471fe7a9b530", "dc0aa760-8cbe-414f-9bd0-9cc67ead87c9", "b6f8b044-a489-4462-b379-25908923c19e", "5f177d3f-c661-49d2-8082-941a46d8b41b", "6e811e85-b983-5988-b20a-f4f3ee83c50e", "97f37f5c-7f82-5077-9bb9-6cfc8673631d", "a9f95430-3df4-4073-881e-87cc77ac93a1"]
 
 [[argument]]

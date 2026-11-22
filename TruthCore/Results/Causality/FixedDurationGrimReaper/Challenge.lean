@@ -96,4 +96,19 @@ theorem finiteStationPrefixesGiveAdjacent {W B T : Type}
   sorry
 
 
+theorem pivotFinitePrefixPiece (N n : Nat) (hn : n ≤ N) :
+    PieceAt pivotFrame (stationMoments (N + 1)) stationMoments n := by
+  sorry
+
+
+theorem causalFinitePrefixCompatibility :
+    FiniteStationPrefixCompatibility pivotFrame causalPivot all stationMoments
+      1 stationMoments := by
+  sorry
+
+
+theorem causalFinitePrefixControls : CausalFinitePrefixCertificate := by
+  sorry
+
+
 end TruthCore.Results.Causality.FixedDurationGrimReaper

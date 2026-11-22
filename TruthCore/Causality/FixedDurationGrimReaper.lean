@@ -116,4 +116,48 @@ def CountableStationRecombination {W B T : Type} [Preorder T]
     ∃ u, h.ontic.frame.access v u ∧
       ∀ n, StationOperationAt R h Concrete stations u c n
 
+
+/-! ## Concrete finite-prefix control
+
+Unlike bare adjacent PieceAt compatibility, this assigns one concrete bearer
+to each station, makes the earlier station actually cause the next, and
+requires world-relative station existence and temporal presence. It is a
+STRUCTURAL possible-world model. No claim that arbitrary actual physics or
+metaphysics realizes the entire network, or that bearer-to-bearer causation is
+signal transmission, follows from this certificate. -/
+
+namespace Control
+open TruthCore.Causality.GrimReaperPatchwork.Control (pivot pivotFrame)
+open TruthCore.Causality.InertEmptiness.Control (all)
+open TruthCore.Causality.MetricGrimReaper.Control (intClock)
+
+/-- Same integer history as pivot, with directed actual causes between
+successive integer-addressed stations. No new time shape or existence
+profile; the cause relation is intentionally distinct from esse grounding. -/
+def causalPivot : History Int Int Int where
+  ontic := { frame := pivot.ontic.frame,
+             ExistsAt := pivot.ontic.ExistsAt,
+             Causes := fun _ y x => y + 1 = x }
+  IsAt := pivot.IsAt
+  now := pivot.now
+
+def stationMoments (n : Nat) : Int := -(n : Int)
+def oneDuration : {d : ℝ // 0 < d} := ⟨1, one_pos⟩
+
+/-- The concrete integer-world finite-prefix model will have stations
+operating in every finite initial segment, yet no accessible history
+realizing all operations. The latter follows from the previous global
+Reaper impossibility theorem; it is not a new contradiction proof. -/
+def CausalFinitePrefixCertificate : Prop :=
+  PopulatedAt causalPivot all 1 0 ∧
+  ¬ MetricallyFinitePast intClock 0 ∧
+  DurationSlots intClock oneDuration stationMoments ∧
+  FiniteStationPrefixCompatibility pivotFrame causalPivot all stationMoments
+    1 stationMoments ∧
+  ¬ (∃ u, causalPivot.ontic.frame.access 1 u ∧
+        ∀ n, StationOperationAt pivotFrame causalPivot all stationMoments
+          u stationMoments n)
+
+end Control
+
 end TruthCore.Causality.FixedDurationGrimReaper

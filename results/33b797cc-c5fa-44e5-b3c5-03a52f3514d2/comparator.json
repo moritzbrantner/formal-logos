@@ -3,7 +3,10 @@
   "solution_module": "TruthCore.Results.Causality.FixedDurationGrimReaper.Solution",
   "theorem_names": [
     "TruthCore.Results.Causality.FixedDurationGrimReaper.durationDescentOfStationPrefixes",
-    "TruthCore.Results.Causality.FixedDurationGrimReaper.finiteStationPrefixesGiveAdjacent"
+    "TruthCore.Results.Causality.FixedDurationGrimReaper.finiteStationPrefixesGiveAdjacent",
+    "TruthCore.Results.Causality.FixedDurationGrimReaper.pivotFinitePrefixPiece",
+    "TruthCore.Results.Causality.FixedDurationGrimReaper.causalFinitePrefixCompatibility",
+    "TruthCore.Results.Causality.FixedDurationGrimReaper.causalFinitePrefixControls"
   ],
   "permitted_axioms": [
     "propext",

@@ -200,4 +200,96 @@ theorem finitePrefixNotCountable :
   · rintro ⟨bound, hb⟩
     exact Nat.lt_irrefl bound (hb bound)
 
+
+open TruthCore.Causality.FixedDurationGrimReaper.Control
+open TruthCore.Causality.GrimReaperPatchwork.Control (pivotFrame)
+open TruthCore.Causality.InertEmptiness.Control (all)
+open TruthCore.Causality.MetricGrimReaper.Control (intClock)
+open TruthCore.Results.Causality.GrimReaperPatchwork (pivotDescent pivotPopulated)
+
+/-- If n≤N, the pivot is at station N+1, so every output at 0..N
+forwards the same upstream-origin code c(N+1). Admissibility chooses
+that index; no current station issues its own code. -/
+theorem pivotFinitePrefixPiece (N n : Nat) (hn : n ≤ N) :
+    PieceAt pivotFrame (stationMoments (N + 1)) stationMoments n := by
+  have hnOut : pivotFrame.out (stationMoments (N + 1)) (stationMoments n) =
+      some (stationMoments (N + 1)) := by
+    have hLe : stationMoments (N + 1) ≤ stationMoments n := by
+      unfold stationMoments; omega
+    simp [pivotFrame, not_lt.mpr hLe]
+  have hUpOut : pivotFrame.out (stationMoments (N + 1))
+      (stationMoments (n + 1)) = some (stationMoments (N + 1)) := by
+    have hLe : stationMoments (N + 1) ≤ stationMoments (n + 1) := by
+      unfold stationMoments; omega
+    simp [pivotFrame, not_lt.mpr hLe]
+  have hNotIssues :
+      ¬ pivotFrame.issues (stationMoments (N + 1)) (stationMoments n) := by
+    intro hi
+    have heq : stationMoments n = stationMoments (N + 1) := hi
+    unfold stationMoments at heq
+    omega
+  refine ⟨?_, ?_, ?_, ?_⟩
+  · intro he
+    rw [hUpOut] at he
+    cases he
+  · intro hi
+    exact (hNotIssues hi).elim
+  · intro r hr
+    rw [hUpOut] at hr
+    cases hr
+    exact hnOut
+  · intro r hr
+    rw [hnOut] at hr
+    cases hr
+    exact ⟨N + 1, Nat.le_succ_of_le hn, rfl⟩
+
+/-- Every finite prefix can be jointly realized with concrete, existing,
+temporally present, causally connected stations in the SAME possible
+history chosen for that prefix. The different prefixes use different
+worlds (pivot cutoffs), as the preexisting overlap obstruction requires. -/
+theorem causalFinitePrefixCompatibility :
+    FiniteStationPrefixCompatibility pivotFrame causalPivot all stationMoments
+      1 stationMoments := by
+  intro N
+  let u := stationMoments (N + 1)
+  have hu : u ≠ 0 := by
+    dsimp [u, stationMoments]
+    omega
+  refine ⟨u, trivial, ?_⟩
+  intro n hn
+  have hCause : causalPivot.ontic.Causes u
+      (stationMoments (n + 1)) (stationMoments n) := by
+    change stationMoments (n + 1) + 1 = stationMoments n
+    unfold stationMoments
+    omega
+  exact ⟨trivial, trivial, hu, hu,
+    ⟨hu, le_refl _⟩, ⟨hu, le_refl _⟩,
+    hCause, pivotFinitePrefixPiece N n hn⟩
+
+/-- A model of an infinite-duration populated past in the fixed integer clock
+with ONE positive station duration: every finite prefix is possible with
+actual causal edges and temporal bearers; no full causal-station world is.
+The impossibility is imported from arrangementImpossible. This separates
+finite from countable metaphysical permission as a formal consequence only. -/
+theorem causalFinitePrefixControls : CausalFinitePrefixCertificate := by
+  have hDesc : Descent stationMoments := pivotDescent
+  have hSlots : DurationSlots intClock oneDuration stationMoments := by
+    intro n
+    change (1 : ℝ) ≤ ((-(n : Int) : Int) : ℝ) -
+      ((-((n + 1 : Nat) : Int) : Int) : ℝ)
+    push_cast
+    linarith
+  have hInf : ¬ MetricallyFinitePast intClock 0 := by
+    exact unboundedOfSpaced intClock stationMoments hDesc
+      ⟨1, one_pos, hSlots⟩
+  refine ⟨pivotPopulated, hInf, hSlots, causalFinitePrefixCompatibility, ?_⟩
+  rintro ⟨u, _, hOps⟩
+  have hp : ∀ n, PieceAt pivotFrame u stationMoments n := by
+    intro n
+    obtain ⟨_, _, _, _, _, _, _, hPiece⟩ := hOps n
+    exact hPiece
+  exact TruthCore.Results.Causality.GrimReaperPatchwork.arrangementImpossible
+    pivotFrame u stationMoments hDesc hp
+
+
 end TruthCore.Results.Causality.FixedDurationGrimReaper

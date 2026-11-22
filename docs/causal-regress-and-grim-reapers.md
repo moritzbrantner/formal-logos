@@ -1116,6 +1116,27 @@ countable from finite compatible operation in a non-accumulating proper past.
 
 **Verification candidates, 2026-11-22.** Proposed argument records from concrete finite-prefix station possibility `7d1b132f` to the existing local selected-descent node `fab16501` (theorem `durationDescentOfStationPrefixes`) and from that stronger local premise plus separate countable operation recombination `9cb8c0ee` directly to the existing metric-finiteness node `4365c3c5` (theorem `metricallyFiniteOfCountableStationRecombination`). An actual station operation now requires each bearer to be `Concrete` as well as existing, present and related by `Ontic.Causes`; the interpretation of that relation as genuine signal-level causal influence, rather than a mere additional relation between bearers, still needs a source/event bridge. The proofs are conditional; the same positive duration, family and schedule are held fixed. The countable modal realization principle remains OPEN. Draft verification and semantic review pending.
 
+
+**Actual finite-prefix positive model (2026-11-22).** The stronger
+`FiniteStationPrefixCompatibility` premise now has a structured Boolean-like
+integer-world control, rather than only a register protocol:
+`causalPivot` retains the existing beginningless integer time/existence
+profile but makes the earlier station bearer actually cause the later one;
+station `n` is the concrete, existing, temporally present bearer at moment
+`-(n:Int)`. One unit of the existing integer clock bounds each slot.
+For every N the world cut off at station N+1 witnesses *all* operations
+0..N simultaneously; the four guarded register interfaces are derived from
+the earlier `pivotFrame`, and the actual causal edge holds on the selected
+station pair. The full countable world is impossible by the **imported**
+`arrangementImpossible` theorem. The formal certificate therefore separates
+finite joint compatibility from global realization even with concrete
+bearers, actual station causation and temporal presence; it does **not**
+give metaphysical/physical possibility to the registered patchwork premise
+or show that bearer-to-bearer `Ontic.Causes` is actual signal-event
+causation. This is positive mathematical evidence of local coherence,
+not evidence against countable metaphysical recombination.
+Proof and Comparator certification pending on the updated head.
+
 ## Typed per-se / historical distinction (#1112)
 
 `STMT-INFINITE-REGRESS-IMPOSSIBLE-ONLY-IN-PER-SE-SERIES` keeps its original
