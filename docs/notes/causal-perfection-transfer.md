@@ -1784,9 +1784,11 @@ does not require an intellectual exemplar distinct from every GOD_4 bearer,
 nor the stronger `UniversalCauseTransfersPerfections` that would claim
 causal responsibility for each particular cognitive perfection. The existing q.4 first-mover theorem supplies a second
 pointwise connection, `firstMoverContainsIntellect`, from one formally
-intellectual exemplar and both calibrations; the already registered
-first-mover/maximum identity remains needed to identify that mover with a
-separately supplied GOD_4 or actual root. These are code-level conditional
+intellectual exemplar and both calibrations; the mover relation is **exactly**
+`F.MovesIn` from the supplied grades frame (only the `MovedIn` predicate is
+external). The already registered first-mover/maximum identity remains needed
+to identify that mover with a separately supplied GOD_4 or actual root; it must
+use this very `F.MovesIn` relation, not an unrelated motion dictionary. These are code-level conditional
 adapters, **not new registered argument edges**; the corpus's existing
 GodHasIntellect and GodHasWill conclusions are not being redefined.
 
