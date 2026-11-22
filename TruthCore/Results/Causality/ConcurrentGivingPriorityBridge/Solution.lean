@@ -11,10 +11,13 @@ open TruthCore.Causality.Frame (CausalityFrame)
 open TruthCore.Causality.MetricBeginningArrival (NoSelfGivingOnAccessible)
 open TruthCore.Latin.Aquinas.SummaTheologiae
 
-/-- A more directly reused node in the existing graph already says that no
-being is its own efficient cause in any respect. With only the explicit
-self-edge sense bridge, this prohibits strict concurrent self-giving of being
-throughout accessible worlds. The no-self-efficient-cause node retains its
+/-- A more directly reused node in the existing graph says that no being is
+its own efficient cause in any respect. Read world- and time-neutrally (in no
+history at no moment), as the index-free bridge requires (see
+`SelfGivingIsEfficientSelfCause`), and with only that explicit self-edge
+bridge, it prohibits strict concurrent self-giving of being throughout the
+accessible histories. The modal reading is stronger than the here-and-now gloss
+of definition 69c0b23e. The no-self-efficient-cause node retains its
 direct-assumption option and its existing priority-based support route. -/
 theorem noSelfGivingFromNoSelfCause {W B T R : Type}
     (F : CausalityFrame W B T R)
@@ -27,7 +30,9 @@ theorem noSelfGivingFromNoSelfCause {W B T R : Type}
 
 /-- Explicit causal-sense bridge + the Second Way's two OPEN priority premises
 give the strict no-self-GivesAt premise needed by the causal Arrival B route.
-This reuses noSelfCauseFromPriority; it does not recreate its proof. -/
+This reuses noSelfCauseFromPriority; it does not recreate its proof. The
+efficient-cause priority premise is used under the same world- and
+time-neutral reading of `EfficientlyCausesIn` as the bridge. -/
 theorem noSelfGivingFromEfficientPriority {W B T R : Type}
     (F : CausalityFrame W B T R)
     (EfficientlyCausesIn : B → B → R → Prop) (w : W)

@@ -588,6 +588,29 @@ time-indexed `F.GivesAt` are still not generally identified. The
 this new adapter. This is a genuine graph-connection alternative, not
 disjoint independent warrant, and its new bridge remains open.
 
+**Index collapse and modal reading (repair after the semantic challenge on
+#1863).** `SelfGivingIsEfficientSelfCause` maps `GivesAt v c c t`, indexed to
+any history `v` of the frame and a moment `t`, to `EfficientlyCausesIn c c
+esse`, which has neither index. On the here-and-now gloss of
+EFFICIENT_CAUSING_2 (definition `69c0b23e`) that would turn self-giving in a
+merely possible history into an actual, present efficient self-cause. Both
+routes therefore read `EfficientlyCausesIn` world- and time-neutrally (in some
+history at some moment), and use the reused premises under that modal reading:
+`8b2561cd` as "nothing is, in any history, its own efficient cause" and
+`e078f07b` as "whatever is in some history an efficient cause of x is simply
+prior to x" (`32d77f18` concerns only the unindexed `PriorSimply`). This is
+stronger than their actual-world gloss. The source's *nec est possibile* is a
+candidate basis for the modal reading of `8b2561cd`; that attribution is
+deferred, not checked. Restricting the bridge to accessible histories was
+considered and not done: it would edit the frozen Challenge's theorem types
+and would not remove the need for the modal reading, since the consequent
+stays index-free. A world-indexed efficient relation with a modal sibling of
+`8b2561cd` is the structural alternative, not built here. The passage from the
+being-giving family (`158301bc`, `88a8fba7`, `c3c01e92`) to efficient causing
+is made only by `0e961fde`; the existing efficient-esse bridge
+`DistinctActualEsseCauseIsEfficient` (`8934912c`) covers only causes distinct
+from their effect and cannot cover the self-edge.
+
 **What "begins" means in B1** (spec
 `specs/modal-spine-metric-beginning-arrival.toml`, attempt
 [`9d141c6c`](../../corpus/attempts/9d141c6c-7979-4d8b-a1b4-7b35ebc9fb21.json)).
