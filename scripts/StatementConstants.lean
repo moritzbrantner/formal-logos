@@ -110,8 +110,10 @@ partial def occurrences (env : Environment) (x : Expr) (e : Expr) :
 /-- For each binder of the declaration's type: when the binder occurs in the
 statement only as the structure argument of field projections, the type heads
 of those fields (`OnticFrameKT (m : Profile W B) := FrameSatisfies .KT
-m.ontic.frame` uses `m` only through `ontic : Ontic W B`); otherwise (it occurs
-bare, in a later binder's type, or not at all) empty. A premise that speaks of
+m.ontic.frame` uses `m` only through `ontic : Ontic W B`; occurrences in later
+binders' types count alike); otherwise empty: it occurs bare somewhere (passed
+whole, also within a later binder's type), through a field whose type has no
+local head, or not at all. A premise that speaks of
 its structure binder only through one field is a statement about that field's
 value (#1845). The binders of a definition are read from its value's leading
 lambdas, else from the type's `∀` binders. -/

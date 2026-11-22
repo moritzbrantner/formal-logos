@@ -1062,6 +1062,25 @@ fn excluded_middle_matching_does_not_hide_a_new_discovery() {
 }
 
 #[test]
+fn a_classical_proof_of_excluded_middle_itself_is_known_without_an_empty_path() {
+    let mut t = trial(&["P", "Q", "R"]);
+    t.target = EM.into();
+    let f = classify(
+        &t,
+        &closed_outcome(),
+        &Graph::default(),
+        &SenseCheck::empty(),
+    );
+    assert_eq!(f.filters[0].0, "known");
+    assert!(
+        f.filters[0].1.starts_with("the target is ee4ab504"),
+        "{}",
+        f.filters[0].1
+    );
+    assert!(!f.filters[0].1.contains("arguments ,"));
+}
+
+#[test]
 fn background_derivation_reports_the_granted_statements() {
     let g = graph(&[("a1", &["A", EM], "B"), ("a2", &["B"], "C")]);
     let em = set(&[EM]);
@@ -1156,6 +1175,22 @@ fn a_shared_authored_sense_admits_a_candidate_without_shared_constants() {
             &vocabulary,
             &BTreeMap::new(),
             &partial,
+            10
+        )
+        .is_empty()
+    );
+    // The same on the target side: a partial tag on the target's binder.
+    let target_partial = tagged(vec![
+        tag("M.Target", "MoreIn", &["_", "esse"], "more1"),
+        tag("N.Aristotle", "Rel", &[], "more1"),
+    ]);
+    assert!(
+        rank(
+            &target,
+            &[&aristotle],
+            &vocabulary,
+            &BTreeMap::new(),
+            &target_partial,
             10
         )
         .is_empty()
@@ -1366,10 +1401,18 @@ fn a_conclusion_that_is_a_registered_bridge_bridges_its_senses() {
     // Another conclusion that mixes the same senses is not bridged by it.
     let other = conclusion.mixing(&["P".to_owned()], "X");
     assert!(other[0].2.is_empty());
-    // A premise-role registration of `T` does not bridge an argument that
-    // concludes `T` without having it as a premise.
+    // The registered role does not restrict the use, as in `truth check`: a
+    // premise-role registration of `T` bridges an argument that concludes `T`
+    // (listed with role conclusion) ...
     let premise = check(vec![bridge(None)]);
-    assert!(premise.mixing(&["P".to_owned()], "T")[0].2.is_empty());
+    let derived = premise.mixing(&["P".to_owned()], "T");
+    assert_eq!(derived[0].2.len(), 1, "{derived:?}");
+    assert_eq!(derived[0].2[0]["role"], "conclusion");
+    // ... and a conclusion-role registration of `T` bridges an argument that
+    // has `T` as a premise (listed without a role, i.e. as a premise bridge).
+    let used = conclusion.mixing(&["P".to_owned(), "T".to_owned()], "X");
+    assert_eq!(used[0].2.len(), 1, "{used:?}");
+    assert!(used[0].2[0].get("role").is_none());
     // The spec draft keeps the role, so `argument_batch.py` records it.
     let mut statements = BTreeMap::new();
     statements.insert(

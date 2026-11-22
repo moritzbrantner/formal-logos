@@ -251,11 +251,12 @@ def identsOf (ns : NameSet) : Array Ident :=
 def simpArgs (ns : NameSet) : MetaM (Array (TSyntax ``Lean.Parser.Tactic.simpLemma)) :=
   (identsOf ns).mapM fun i => `(Lean.Parser.Tactic.simpLemma| $i:ident)
 
-/-- The prover tactic over the delta-expanded goal: `duper [*]`, preceded,
-when the goal reaches definitions of values (`Unfolding.eqns`), by `simp only`
-with their equations. Delta-expansion leaves `convergenceFormula 1 0 1 1` a
-closed but unevaluated term that no prover reads; its equations evaluate it.
-The certification text runs the same steps (`proof_text` in
+/-- The fallback prover tactic over the delta-expanded goal, tried after the
+plain prover fails when the goal reaches definitions of values
+(`Unfolding.eqns`): `simp only` with their equations, then the prover.
+Delta-expansion leaves `convergenceFormula 1 0 1 1` a closed but unevaluated
+term that no prover reads; its equations evaluate it. The certification text
+runs the same steps when this variant closed the goal (`proof_text` in
 `truth/src/discover.rs`). -/
 def proverTactic (u : Unfolding) (prover : TSyntax `tactic) : TermElabM (TSyntax `tactic) := do
   if u.eqns.isEmpty then return prover
@@ -287,15 +288,25 @@ def prove (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : Unf
     (heartbeats : Nat) (zip : String) (duperOnly : Bool := false) : TermElabM (Option Proved) := do
   let concl' ← expand u concl
   let hypTys ← hyps.mapM fun (i, h) => return (i, ← expand u h)
-  let mut provers : Array (String × Syntax) := #[("duper", ← proverTactic u (← `(tactic| duper [*])))]
+  -- Each prover runs plain first; the variant that evaluates value
+  -- definitions by their equations (`proverTactic`) is only a fallback, so a
+  -- proof that treats such a definition as an opaque symbol is kept, and the
+  -- name records which variant closed the goal (`+equations`).
+  let duper ← `(tactic| duper [*])
+  let mut provers : Array (String × Syntax) := #[("duper", duper)]
+  if !u.eqns.isEmpty then
+    provers := provers.push ("duper+equations", ← proverTactic u duper)
   if !duperOnly && !zip.isEmpty then
-    provers := provers.push ("auto+zipperposition", ← proverTactic u (← `(tactic| auto)))
+    let auto ← `(tactic| auto)
+    provers := provers.push ("auto+zipperposition", auto)
+    if !u.eqns.isEmpty then
+      provers := provers.push ("auto+zipperposition+equations", ← proverTactic u auto)
   for (name, tac) in provers do
     let saved ← saveState
     let result ← tryCatchRuntimeEx (do
         let opts := (← getOptions)
           |>.set `maxHeartbeats heartbeats
-          |>.set `auto.tptp (name != "duper")
+          |>.set `auto.tptp (!name.startsWith "duper")
           |>.set `auto.tptp.premiseSelection true
           |>.set `auto.tptp.trust false
           |>.set `auto.native true
@@ -517,7 +528,7 @@ def witness (xs : Array Expr) (goals : Array Expr) (u : Unfolding) (heartbeats :
             let mvar ← mkFreshExprMVar body
             -- Computed definitions evaluate by their equations (`Unfolding.eqns`).
             let eqs ← simpArgs u.eqns
-            let tac ← `(tactic| first | (simp [$eqs,*]; done) | decide | trivial | (simp_all [$eqs,*]; done))
+            let tac ← `(tactic| first | (simp; done) | (simp [$eqs,*]; done) | decide | trivial | (simp_all; done) | (simp_all [$eqs,*]; done))
             let rest ← Tactic.run mvar.mvarId! (Tactic.evalTactic tac)
             let proof ← instantiateMVars mvar
             if !rest.isEmpty || proof.hasMVar || proof.hasSorry || proof.hasFVar then return false
@@ -943,7 +954,7 @@ def finish (target : Name) (premises : Array Name) (heartbeats : Nat)
     (structureBinder : Option Expr := none) (alternatives : Array (Nat × String) := #[]) :
     TermElabM Json := do
     -- Duper is the authority for the Solution: re-prove an ATP-found goal on its core.
-    let start ← if full.prover == "duper" then pure (some full) else
+    let start ← if full.prover.startsWith "duper" then pure (some full) else
       prove xs (hyps.filter fun (i, _) => full.used.contains i) concl u heartbeats "" (duperOnly := true)
     let some start := start
       | return Json.mkObj [("binders", toJson added), ("alone", Json.null), ("closed", proved (some full)),
@@ -1008,11 +1019,14 @@ def finish (target : Name) (premises : Array Name) (heartbeats : Nat)
       let added := added.map fun b =>
         if (b.getObjValAs? String "bound_to").toOption == some old then
           b.setObjVal! "bound_to" (Json.str bound) else b
-      let alternatives := ((projection.getObjValAs? (Array String) "alternatives").toOption.getD #[]).map
-        fun a => if a == old then bound else a
-      return (projection |>.setObjVal! "structure_binder" (Json.str s!"{m.decl}.{m.binder}")
+      let rename (key : String) : Json :=
+        toJson (((projection.getObjValAs? (Array String) key).toOption.getD #[]).map
+          fun a => if a == old then bound else a)
+      let projection := projection |>.setObjVal! "structure_binder" (Json.str s!"{m.decl}.{m.binder}")
         |>.setObjVal! "bound_to" (Json.str bound)
-        |>.setObjVal! "alternatives" (toJson alternatives), added)
+      let projection := if (projection.getObjVal? "dropped_alternatives").isOk then
+          projection.setObjVal! "dropped_alternatives" (rename "dropped_alternatives") else projection
+      return (projection.setObjVal! "alternatives" (rename "alternatives"), added)
     let u' ← unfoldSet (minNames.push target)
     -- Vacuous truth: do the premises refute the target's own antecedents?
     -- (`∀ x, A x → B x` holds because nothing is `A`.) A valid derivation that a
@@ -1061,7 +1075,9 @@ def finish (target : Name) (premises : Array Name) (heartbeats : Nat)
       ("probe", Json.bool probe),
       ("signature", Json.str (← signature xs minHyps concl)),
       ("unfold", jsonNames (u'.delta.toArray.qsort Name.lt)),
-      ("equations", jsonNames (u'.eqns.toArray.qsort Name.lt))]
+      -- Only when the closing proof needed them (the `+equations` fallback).
+      ("equations", jsonNames (if best.prover.endsWith "+equations" then
+        u'.eqns.toArray.qsort Name.lt else #[]))]
 
 def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : String)
     (tags : Array (Name × Name × String)) (bridges : Bool) (strict : Bool)
@@ -1110,7 +1126,8 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
       return Json.mkObj [("binders", toJson added), ("alone", proved alone),
         ("signature", Json.str (← withLCtx aloneLCtx aloneInsts <| signature targetXs #[] concl)),
         ("unfold", jsonNames (uAlone.delta.toArray.qsort Name.lt)),
-        ("equations", jsonNames (uAlone.eqns.toArray.qsort Name.lt))]
+        ("equations", jsonNames (if (alone.map (·.prover.endsWith "+equations")).getD false then
+          uAlone.eqns.toArray.qsort Name.lt else #[]))]
     if let some full ← prove xs hyps concl u heartbeats zip then
       return ← finish target premises heartbeats byName xs hyps concl u added full Json.null
     -- Projection binding choices (explicit and reported, never silent). A

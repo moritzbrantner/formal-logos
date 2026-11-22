@@ -386,11 +386,20 @@ class DiscoverBindingTest(unittest.TestCase):
         outcomes = run([
             f'#discover "five" 100000 "" "{{}}" {ns}.FiveValid from {ns}.EuclFrame',
             f'#discover "refl" 20000 "" "{{}}" {ns}.FiveValid from {ns}.ReflFrame',
+            f'#discover "copy" 20000 "" "{{}}" {ns}.FiveValidCopy from {ns}.FiveValid',
         ])
         # `conv 1 0 1 1` is evaluated by its equations (#1845): the
         # Euclidean frame validates the 5 schema.
         five = outcomes["five"]
         self.assertIsNotNone(five["closed"], five)
+        # The plain prover runs first; the equations are its fallback.
+        self.assertEqual(five["proof"]["prover"], "duper+equations")
+        # A goal the plain prover closes, treating the computed term as an
+        # opaque symbol, keeps the plain proof and lists no equations.
+        copy = outcomes["copy"]
+        self.assertIsNotNone(copy["closed"], copy)
+        self.assertEqual(copy["proof"]["prover"], "duper")
+        self.assertEqual(copy["equations"], [])
         for name in ("conv", "iterB", "iterD"):
             self.assertIn(f"{ns}.{name}", five["equations"])
         # Propositions are delta-expanded as before (`Sat` included).
@@ -407,9 +416,13 @@ class DiscoverBindingTest(unittest.TestCase):
             f"by\n  delta {' '.join(five['unfold'])} at *\n"
             f"  try simp only [{', '.join(five['equations'])}] at *\n  all_goals duper [*]"
         )
-        text = f"theorem discovered1 {five['signature']} :=\n  {proof.replace(chr(10), chr(10) + '  ')}\n"
+        text = (
+            f"set_option maxHeartbeats 100000 in\ntheorem discovered1 {five['signature']} :=\n"
+            f"  {proof.replace(chr(10), chr(10) + '  ')}\n"
+        )
         check(text)
-        # Control: the former script (delta-expansion only) leaves the
+        # Control, at the same heartbeat budget: the plain script
+        # (delta-expansion only), which the search tries first, leaves the
         # computed formula unevaluated, and Duper does not close it.
         plain = f"by\n    delta {' '.join(five['unfold'])} at *\n    duper [*]"
         with self.assertRaises(AssertionError):

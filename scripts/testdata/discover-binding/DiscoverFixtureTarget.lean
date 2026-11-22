@@ -198,6 +198,10 @@ def FiveValid (W : Type) (F : Fr W) : Prop := Val F (conv 1 0 1 1)
 /-- `F` is Euclidean: the frame condition that validates the 5 schema. -/
 def EuclFrame (W : Type) (F : Fr W) : Prop := ∀ w a b, F.acc w a → F.acc w b → F.acc a b
 
+/-- The same schema validity under another name: proved from `FiveValid`
+treating `conv 1 0 1 1` as an opaque term (the plain prover suffices). -/
+def FiveValidCopy (W : Type) (F : Fr W) : Prop := Val F (conv 1 0 1 1)
+
 /-- `F` is reflexive: it does not validate the 5 schema (negative control). -/
 def ReflFrame (W : Type) (F : Fr W) : Prop := ∀ w, F.acc w w
 

@@ -44,7 +44,8 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
    `MoreIn : B → B → R → Prop` mentions no constant, and its authored sense
    says which concept it expresses, as a constant would (#1845). Tags are
    read, never inferred: an untagged binder contributes nothing, and a
-   partial-application tag (`CausesIn _ _ esse`) neither admits nor fits. A candidate parameter that shares no name with the target's but is
+   partial-application tag (`CausesIn _ _ esse`) neither admits nor fits.
+   A candidate parameter that shares no name with the target's but is
    a structure with a field of a target parameter's type (`m : Profile W B`,
    whose `m.ontic : Ontic W B`, against `o : Ontic W B`) counts toward the type
    fit, adds the same bonus as a strength order (the structure's other fields
@@ -117,17 +118,21 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
 5. **Search.** The hypotheses and the conclusion are delta-expanded through
    every project definition whose type ends in `Prop` (not projections or
    instances), and `duper [*]` runs under `--heartbeats` (thousands, default
-   100000, shared by Duper's portfolio). A definition of a value reached on
-   the way (its type ends in a value type such as `Formula Unit`, not in
-   `Prop` or a `Sort`: `convergenceFormula`, `Formula.iterBox`) is then
-   rewritten by its defining equations (`simp only [...] at *`) before Duper
-   runs: delta-expansion left a closed computed term such as
+   100000, shared by Duper's portfolio). When that fails and the goal
+   reaches a definition of a value (its type ends in a value type such as
+   `Formula Unit`, not in `Prop` or a `Sort`: `convergenceFormula`,
+   `Formula.iterBox`), Duper is tried once more after rewriting those
+   definitions by their defining equations (`simp only [...] at *`, prover
+   `duper+equations`): delta-expansion leaves a closed computed term such as
    `convergenceFormula 1 0 1 1`, built by recursion, unevaluated, and no
    prover reads it; its equations evaluate it to constructor form, and fire
    on a recursive definition only where its argument is a constructor
-   (#1845). The outcome lists the delta-expanded definitions as `unfold` and
-   the rewritten ones as `equations`; a goal that reaches no definition of a
-   value runs exactly as before. With `--zipperposition PATH` (or
+   (#1845). The plain attempt comes first, so a proof that treats such a
+   definition as an opaque symbol is kept; the fallback costs at most one
+   more search per attempt, and a definition by well-founded recursion whose
+   equations keep rewriting only exhausts that attempt's heartbeats. The
+   outcome lists the delta-expanded definitions as `unfold` and, when the
+   closing proof needed them, the rewritten ones as `equations`. With `--zipperposition PATH` (or
    `TRUTH_ZIPPERPOSITION`) lean-auto is tried next, with Zipperposition as
    premise selector and Duper as its native prover; Duper then re-proves the
    goal on the selected core, so the Solution never needs the external prover.
@@ -148,7 +153,7 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
    (`weakening_rejected`).
 8. **Certification.** Each discovery is rendered as plain theorem text
    (binders with full names, hypotheses, conclusion, `delta …; duper [*]`;
-   with `equations`, `delta …`, `try simp only […] at *`,
+   when the fallback closed the goal, `delta …`, `try simp only […] at *`,
    `all_goals duper [*]`; the statement itself unchanged)
    and elaborated in a separate Lean run with `#print axioms`. A discovery
    whose text fails or whose proof uses an axiom other than `propext`,
@@ -164,7 +169,7 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
 | vacuity | `False` follows from the minimal premises over their own binders only (no element or instance borrowed from the target or a dropped premise): reported as an **incompatibility** (the inconsistent core, minimized), never as support; filtered (`axioms`) when a contradiction proof uses an axiom outside the three allowed | separate kind |
 | `literal_negation` | the inconsistent core is a premise and its literal negation: one member's declaration unfolds definitionally (delta, default transparency) to `¬` the other's, as `ActNotPriorInTime F := ¬ ActPriorInTime F` does, recorded rivals included. Such a core is inconsistent by construction, neither an incompatibility nor support, and its goal is not counted as proved. A contradictory pair that takes logic to recognize (`∀ y, S y` against `∃ y, ¬ S y`) is not literal and stays an incompatibility | reject |
 | `known` (incompatibility), `duplicate` | the inconsistent core contains recorded rivals (`alternative_to`, `attacks`); or an earlier goal already found the same core | reject |
-| `senses` | the argument uses two senses of one term (`argument_term_senses`, the check `truth check` applies) and neither a premise nor, for a bridge registered with `role: "conclusion"`, the conclusion is a registered bridge between them (an argument that concludes a registered bridge derives it, as `truth check` accepts; #1845) | reject |
+| `senses` | the argument uses two senses of one term (`argument_term_senses`, the check `truth check` applies) and neither a premise nor the conclusion is a registered bridge between them. Whatever role a bridge was registered with, it bridges as a premise when it is one, and as the conclusion when the argument concludes it (it then derives the bridge, `role: "conclusion"`), as `truth check` accepts (#1845) | reject |
 | `domain_by_name` | a carrier or structure bundle was identified with one of another module by name only | reject (listed as needing a tag or bridge) |
 | `sense_bridge` | a premise is the registered bridge between the senses it mixes | flag |
 | `projection_binding` | the goal closed only with a target binder bound to a premise structure's field (step 4) | flag |
@@ -272,7 +277,8 @@ definitions alone prove it.
 
 `--write-spec PATH` writes an `argument_batch.py` spec draft with one argument
 per discovery (premises, conclusion, the three axioms, `sense_bridges` where a
-premise bridges senses, or `role = "conclusion"` where the conclusion does) and a Solution draft `PATH` with the extension
+premise bridges senses, or `role = "conclusion"` where the conclusion does)
+and a Solution draft `PATH` with the extension
 `.Solution.lean`, in the results module named after the spec
 (`specs/discover-causality.toml` → `TruthCore.Results.Discover.DiscoverCausality`).
 Move the Solution into place, generate the Challenge and records with the

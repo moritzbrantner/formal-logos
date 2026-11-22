@@ -482,16 +482,16 @@ pub struct SenseTags {
     pub bridges: Vec<Value>,
 }
 
-/// The identification key of a tag: its sense, and its fixed arguments when
-/// any (`CausesIn _ _ esse`, key `sense|_ _ esse`). `scripts/Discover.lean`
-/// identifies two binders by tag only when their keys agree *and* name whole
-/// binders: a partial-application key (containing `|`) describes only that
-/// application, so identifying the full relations would go beyond the tag.
 /// Whether a tag names its whole binder (no fixed argument).
 fn whole_binder(tag: &parameter_tags::ParameterTag) -> bool {
     tag.parameter.arguments.iter().all(|a| a == "_")
 }
 
+/// The identification key of a tag: its sense, and its fixed arguments when
+/// any (`CausesIn _ _ esse`, key `sense|_ _ esse`). `scripts/Discover.lean`
+/// identifies two binders by tag only when their keys agree *and* name whole
+/// binders: a partial-application key (containing `|`) describes only that
+/// application, so identifying the full relations would go beyond the tag.
 fn tag_key(tag: &parameter_tags::ParameterTag) -> String {
     if whole_binder(tag) {
         tag.sense_id.clone()
@@ -1105,11 +1105,11 @@ impl<'a> SenseCheck<'a> {
     }
 
     /// Terms whose senses the argument mixes, as `(term, labels, bridges)`:
-    /// the bridges are the `sense_bridges` entries whose statement is one of
-    /// the premises, and those registered with `role: "conclusion"` whose
-    /// statement is the conclusion (an argument that derives the bridge, as
-    /// `truth check` accepts, #1845); a term without enough of them is
-    /// unbridged.
+    /// the bridges are the registered `sense_bridges` entries (of any role)
+    /// whose statement is one of the premises, as premise bridges, or is the
+    /// conclusion, with `role: "conclusion"` (an argument that derives the
+    /// bridge, which `truth check` accepts, #1845); a term without enough of
+    /// them is unbridged.
     pub fn mixing(
         &self,
         premises: &[String],
@@ -1129,28 +1129,33 @@ impl<'a> SenseCheck<'a> {
             if ids.len() < 2 {
                 continue;
             }
-            let available: Vec<Value> = self
-                .bridges
-                .iter()
-                .filter(|b| {
-                    let statement = b["statement_id"].as_str();
-                    b["term"].as_str() == Some(term.as_str())
-                        && if b["role"].as_str() == Some("conclusion") {
-                            statement == Some(conclusion)
-                        } else {
-                            statement.is_some_and(|s| premises.iter().any(|p| p == s))
-                        }
-                })
-                .map(|b| {
-                    let mut b = b.clone();
-                    if let Some(map) = b.as_object_mut()
-                        && map.get("role").and_then(Value::as_str) != Some("conclusion")
-                    {
-                        map.remove("role");
-                    }
-                    b
-                })
-                .collect();
+            // A registration's role is where its own argument used the
+            // statement; here only this argument's use counts: a registered
+            // bridge statement among the premises is a premise bridge, and
+            // one that is the conclusion is derived (role conclusion).
+            let mut available: Vec<Value> = Vec::new();
+            for b in &self.bridges {
+                if b["term"].as_str() != Some(term.as_str()) {
+                    continue;
+                }
+                let Some(statement) = b["statement_id"].as_str() else {
+                    continue;
+                };
+                let mut b = b.clone();
+                let Some(map) = b.as_object_mut() else {
+                    continue;
+                };
+                if premises.iter().any(|p| p == statement) {
+                    map.remove("role");
+                } else if statement == conclusion {
+                    map.insert("role".into(), json!("conclusion"));
+                } else {
+                    continue;
+                }
+                if !available.contains(&b) {
+                    available.push(b);
+                }
+            }
             let bridged = senses::bridged(&term, &ids, &available);
             let labels = ids
                 .iter()
@@ -1446,6 +1451,11 @@ pub fn classify(trial: &Trial, outcome: &Value, graph: &Graph, senses: &SenseChe
             "known".into(),
             if path.is_empty() && granted.is_empty() {
                 "the target is among the premises".into()
+            } else if path.is_empty() {
+                format!(
+                    "the target is {} (excluded middle), which the classical proof supplies implicitly",
+                    granted.join(", ")
+                )
             } else {
                 format!(
                     "composes from verified arguments {}{modulo}",
