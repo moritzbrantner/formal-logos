@@ -1,0 +1,24 @@
+{
+  "id": "265cc74a-4966-471b-813f-473e60c20a3f",
+  "label": "No self-giving of being from the indexed self-edge bridge",
+  "premise_statement_ids": [
+    "ca5d4eaa-29a2-4771-81fa-107bdc85556c",
+    "872ff8b6-cc9d-4656-8691-b1ae7aa6304e"
+  ],
+  "conclusion_statement_id": "0e473dc4-77c5-4d5d-899f-93e29907b198",
+  "inference_ids": [
+    "46464730-1b0b-4b89-80a6-97023a9f2057"
+  ],
+  "meaning": "Conditional support for the strict no-self-giving premise 0e473dc4 of the causal Arrival B route (#1856). In any accessible history v at any moment t, a self-giving GivesAt v c c t would by the OPEN self-edge bridge ca5d4eaa be efficient self-causation of c's being in v at t, which the OPEN all-histories, all-moments no-self premise 872ff8b6 excludes. Both indices are kept throughout; nothing is moved from a possible history to the selected world. The passage from the being-giving family (GivesAt, 158301bc; CAUSE_OF_BEING 88a8fba7; CAUSING_AN_EFFECT c3c01e92) to efficient causing is made only by ca5d4eaa. Both premises are analyst statements with attribution deferred; neither is the selected-time Aquinas statement 8b2561cd. Given #1856's equivalence (under 0e473dc4 and d3184c66 the nonexternal premise 2a4d99d8 is equivalent to e4a3b917), this support does not discriminate against a rival who denies that a necessary concretum is possible. No premise is established.",
+  "definition_ids": [
+    "1d8c68c3-a256-4ba1-8d84-224a4583b803",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "9e1d45f4-7cee-44b5-a911-803c95b3fa07",
+    "c0d65b45-33bb-47a2-b16b-48a493a762cb"
+  ],
+  "disambiguation_ids": [
+    "88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d",
+    "c3c01e92-520e-5358-a58f-0cc7e9c9e6fa"
+  ]
+}
