@@ -1,0 +1,24 @@
+{
+  "id": "18e24c29-6dd8-4e48-8228-b3ae79d722e1",
+  "label": "Containment in every cause entails that nothing gives being it does not have",
+  "premise_statement_ids": [
+    "634a80b8-470e-4d2f-9dd0-fc868e4a62a0"
+  ],
+  "conclusion_statement_id": "4a5a43a5-bb4d-4a87-828a-d913a1f0422e",
+  "inference_ids": [
+    "c65129d9-b8dd-4c45-b7e0-a924a0048c03"
+  ],
+  "meaning": "Strength order registration: containment in every cause, at r = esse, says that whatever causes the being of a thing in act as to being is itself in act as to being (4a5a43a5). Same InAct, CausesIn and esse. It establishes neither statement.",
+  "definition_ids": [
+    "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
+  ],
+  "weakening": true
+}

@@ -1,0 +1,12 @@
+{
+  "id": "ae4380b7-0b16-47c8-b883-ec7e5f20ba7a",
+  "label": "Containment in every cause entails containment in total causes (inference)",
+  "input_statement_ids": [
+    "634a80b8-470e-4d2f-9dd0-fc868e4a62a0"
+  ],
+  "output_statement_id": "90c0d77f-4c87-407d-8e7d-c8f01c44b115",
+  "rule": "Drop an antecedent conjunct of a universal conditional",
+  "meaning": "Strength order registration: if every cause of x's being r contains r, then so does every efficient and total cause, for every totality relation. Same InAct, CausesIn and respects. It establishes neither statement; strictness is not registered here (a model with no total causes and a lacking partial cause would witness it).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

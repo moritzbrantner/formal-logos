@@ -1,0 +1,11 @@
+{
+  "id": "877bcd00-0ed5-4617-9bca-b265c7bc64d1",
+  "label": "Containment in every cause from the strict comparative and more-such-has-the-perfection",
+  "argument_id": "62dae664-0d0c-4a19-8337-b5d88fa31dab",
+  "challenge_module": "TruthCore.Results.Causality.CartesianAdequacy.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CartesianAdequacy.Solution",
+  "theorem": "TruthCore.Results.Causality.CartesianAdequacy.containmentOfStrictComparative",
+  "comparator_config": "results/877bcd00-0ed5-4617-9bca-b265c7bc64d1/comparator.json",
+  "status": "solution-present",
+  "description": "Excluded middle decides whether the cause c is x itself. If it is, x's being in act in r is c's. If not, the strict comparative (STMT-CAUSE-OF-QUALITY-IN-ANOTHER-IS-MORE-SUCH) makes c more r than x (MORE_1), and STMT-MORE-SUCH-HAS-THE-PERFECTION gives that c is in act in r. Together with the previous argument this factors the existing four-premise derivation PERFECTION-PREEXISTENCE-FROM-CAUSAL-TRANSFER through respect-wise containment: the containment premise is the hinge between the Aristotelian comparative pair and q.4 a.2. All premises except excluded middle stay open."
+}

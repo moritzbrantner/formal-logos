@@ -1,0 +1,13 @@
+{
+  "id": "3dbbe7e9-019f-4d50-9dab-70715ec0e702",
+  "label": "Q.4 a.2 preexistence from containment in every cause and cause-of-being transfer (inference)",
+  "input_statement_ids": [
+    "f8ba2429-b4f1-5712-a4d3-798213963d34",
+    "634a80b8-470e-4d2f-9dd0-fc868e4a62a0"
+  ],
+  "output_statement_id": "64498e7e-7f10-54a0-9ec0-c65e6076de1f",
+  "rule": "Chain of two universal conditionals at the same cause, effect and perfection",
+  "meaning": "If c causes x's being and x is in act in r, the cause-of-being transfer (f8ba2429) gives that c causes x's being r; containment in every cause then gives that c is in act in r. So every perfection of a thing whose being c causes is in c (STMT-PERFECTIONS-OF-EFFECT-PREEXIST-IN-CAUSE). One GradesFrame: the same InAct (IN_ACT_4), CausesIn (CAUSE_2) and esse throughout. A new support option for that root-route node through the respect-wise containment hinge; both premises stay open, and the analyst containment premise is stronger than the Cartesian total-cause clause. Uniform IN_ACT_4 reading of act throughout.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

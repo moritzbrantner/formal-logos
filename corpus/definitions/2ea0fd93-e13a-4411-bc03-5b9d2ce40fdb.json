@@ -1,0 +1,9 @@
+{
+  "id": "2ea0fd93-e13a-4411-bc03-5b9d2ce40fdb",
+  "label": "CONTAINMENT_SCOPE_1, respect-wise: a total cause of a thing's being r has r",
+  "term": "containment clause, respect-wise scope",
+  "definition": "`ContainmentInTotalCause F Total`: whatever is the efficient and total cause of x's being r (TotalCauseIn at the respect r), where x is in act in r, is itself in act in r. Each perfection is constrained only in the cause that totally causes that very perfection. Act is read uniformly as IN_ACT_4 on both sides.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.CartesianAdequacy.ContainmentInTotalCause",
+  "note": "Analyst reading, attribution deferred (navigation: Descartes, Meditation III, the heat example: heat is produced only by something of at least equal order of perfection). Sibling of the whole-effect reading CONTAINMENT_SCOPE_2; neither entails the other in general."
+}
