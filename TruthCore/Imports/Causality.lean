@@ -263,6 +263,7 @@ public import TruthCore.Causality.ThinkingRootFork
 public import TruthCore.Causality.TimeSymmetricGiving
 public import TruthCore.Causality.ToleranceOriginRival
 public import TruthCore.Causality.TotalHolding
+public import TruthCore.Causality.TractarianLogicalSpace
 public import TruthCore.Causality.UnderivedCommonSource
 public import TruthCore.Causality.UnderivedEssenceEsse
 public import TruthCore.Causality.UnderivedNonComposite

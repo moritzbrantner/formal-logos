@@ -1,0 +1,9 @@
+{
+  "id": "0cca2282-07c5-40b8-a36b-8b017a2a29a9",
+  "label": "The selected formula is truth-functional (box-free)",
+  "paraphrase": "Difference statement: the selected formula belongs to the truth-functional fragment of Modal.Formula, built from atoms, falsum and implication, with no box or diamond. Says nothing about its truth.",
+  "lean_declaration": "TruthCore.Causality.TractarianLogicalSpace.BoxFree",
+  "definition_ids": [
+    "6e8bf9ff-8e89-4247-9ffa-63ecf2d7d70d"
+  ]
+}

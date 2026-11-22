@@ -1,0 +1,10 @@
+{
+  "id": "c4405ccb-24db-4064-8858-9cee813d51ee",
+  "label": "Tautology factors as K validity plus truth-functionality (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "d3fb0cb8-249c-4e11-9927-d2040b30c2d7",
+  "rule": "Structural induction on the truth-functional fragment, both directions",
+  "meaning": "Certified difference (#1598): forward, a tautology is K-valid (tautologyToAllFrameK) and box-free by definition; backward, a K-valid box-free formula is true under every assignment, by evaluating it on the one-world frame with the constant valuation of that assignment. Premise-free and constructive.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

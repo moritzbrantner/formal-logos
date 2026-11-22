@@ -1,0 +1,29 @@
+{
+  "id": "c2f199e7-4a6a-4af5-904d-89516574ffa5",
+  "label": "Logical space gives only logical necessity",
+  "premise_statement_ids": [
+    "18ce14e6-b4cb-4367-a089-86f1737c3e7a"
+  ],
+  "conclusion_statement_id": "410a31fe-f003-4ff7-9685-da25b1b51718",
+  "inference_ids": [
+    "108f5cb3-186d-44b9-b5ed-c90ab47f3c62"
+  ],
+  "meaning": "If every truth-value assignment to the atoms is realized at a world accessible from w, then a box-free formula boxed at w holds at the world realizing any given assignment, hence truth-functionally under that assignment: it is a tautology. The converse (tautologies are boxed) holds on every frame (controls). Derives the formal 'only logical necessity' thesis from combinatorial logical space, for the box of the selected frame and valuation; it says nothing about formulas with box or about existence unless a valuation expresses it.",
+  "definition_ids": [
+    "547cac5c-7089-4bce-b5e7-bb8b6c8d12b9",
+    "6e8bf9ff-8e89-4247-9ffa-63ecf2d7d70d",
+    "153fcebf-66f6-53de-bad7-82a30a359c9c"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ],
+  "sense_bridges": [
+    {
+      "term": "NECESSARY",
+      "from": "d38b63c6-0435-4bd7-a179-531a7de093bc",
+      "to": "92fa3d80-12cd-47bc-b30f-e16ec6e43915",
+      "statement_id": "410a31fe-f003-4ff7-9685-da25b1b51718",
+      "role": "conclusion"
+    }
+  ]
+}

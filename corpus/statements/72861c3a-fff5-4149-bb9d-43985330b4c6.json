@@ -1,0 +1,9 @@
+{
+  "id": "72861c3a-fff5-4149-bb9d-43985330b4c6",
+  "label": "The selected formula is a NECESSARY_16 tautology",
+  "paraphrase": "NECESSARY_16: the selected formula belongs to the truth-functional fragment of Modal.Formula (no box or diamond) and is true under every assignment of truth values to its atoms (all of A -> Prop). Said of a formula, not of a being.",
+  "lean_declaration": "TruthCore.Causality.TractarianLogicalSpace.Tautology",
+  "definition_ids": [
+    "6e8bf9ff-8e89-4247-9ffa-63ecf2d7d70d"
+  ]
+}

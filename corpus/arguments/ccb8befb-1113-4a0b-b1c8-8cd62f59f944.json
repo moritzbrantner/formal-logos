@@ -1,0 +1,23 @@
+{
+  "id": "ccb8befb-1113-4a0b-b1c8-8cd62f59f944",
+  "label": "The box K node excludes elementary existence at its world",
+  "premise_statement_ids": [
+    "cdf897a8-5490-561a-b9d2-507486a3f192"
+  ],
+  "conclusion_statement_id": "f220c0b5-5cb4-406c-bf1c-1a23b94ca983",
+  "inference_ids": [
+    "65bafdec-d942-404c-8d09-27ea12627df8"
+  ],
+  "meaning": "If the box K necessary-being node holds at w (some actual root n with the root facts exists at every world accessible from w), then not every combination of the candidates' existence is realized at an accessible world: the combination in which nothing exists would be realized at an accessible world, where n would have to exist. A checked incompatibility between the node and the thesis that existence facts are elementary in logical space. It records a further commitment of the route, not a defeat of either side; the controls show the conclusion fails in an ontology whose existence is elementary.",
+  "definition_ids": [
+    "547cac5c-7089-4bce-b5e7-bb8b6c8d12b9",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "f830795a-b5d8-5f9f-800d-2f3d1f443a0a"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ],
+  "strong_version_needed": {
+    "cdf897a8-5490-561a-b9d2-507486a3f192": "Logically the weaker de dicto K node (necessarily something exists) and tertia via node (no accessible world lacks the root) also exclude elementary existence (not formalized), since elementary existence realizes the combination in which nothing exists. Both weak nodes link the NECESSARY_11 frame-carrier definition beside their own sense (legacy carrier classification recorded in DISAMB-NECESSARY), so an argument from them would mix senses without a registered bridge; the box K node uses NECESSARY_2 alone. The incompatibility is recorded at the node the route's cheapest path concludes."
+  }
+}
