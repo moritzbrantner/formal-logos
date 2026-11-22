@@ -136,14 +136,14 @@ theorem metricallyFiniteOfDurationPieces {W B T : Type} [LinearOrder T]
 co-possible Reaper interfaces. No causal relation is discarded when defining
 the stronger StationOperationAt; this projection only uses its register field. -/
 theorem finiteStationPrefixesGiveAdjacent {W B T : Type}
-    (R : ReaperFrame W T) (h : History W B T) (stations : Nat → B)
-    (v : W) (c : Nat → T)
-    (hFinite : FiniteStationPrefixCompatibility R h stations v c) :
+    (R : ReaperFrame W T) (h : History W B T) (Concrete : B → Prop)
+    (stations : Nat → B) (v : W) (c : Nat → T)
+    (hFinite : FiniteStationPrefixCompatibility R h Concrete stations v c) :
     AdjacentPiecesCoPossible R h v c := by
   intro n
   obtain ⟨u, huv, hOps⟩ := hFinite (n + 1)
-  obtain ⟨_, _, _, _, _, hn⟩ := hOps n (Nat.le_succ n)
-  obtain ⟨_, _, _, _, _, hn1⟩ := hOps (n + 1) (Nat.le_refl _)
+  obtain ⟨_, _, _, _, _, _, _, hn⟩ := hOps n (Nat.le_succ n)
+  obtain ⟨_, _, _, _, _, _, _, hn1⟩ := hOps (n + 1) (Nat.le_refl _)
   exact ⟨u, huv, hn, hn1⟩
 
 /-- Concrete finite-prefix compatibility yields the existing weaker
@@ -157,7 +157,7 @@ theorem durationDescentOfStationPrefixes {W B T : Type} [LinearOrder T]
   obtain ⟨c, stations, hc, hDesc, hSlots, hFinite⟩ :=
     hLocal v hv t hPop hInf
   exact ⟨c, hc, hDesc, hSlots,
-    finiteStationPrefixesGiveAdjacent R h stations v c hFinite⟩
+    finiteStationPrefixesGiveAdjacent R h Concrete stations v c hFinite⟩
 
 /-- Stronger, genuinely causal interpretation of fixed-duration patchwork:
 if every infinite populated past admits one finite-prefix compatible family of
@@ -182,7 +182,7 @@ theorem metricallyFiniteOfCountableStationRecombination {W B T : Type}
     hGlue v hv c stations hDesc hSlots hPopC hFinite
   have hPieces : ∀ n, PieceAt R u c n := by
     intro n
-    obtain ⟨_, _, _, _, _, hPiece⟩ := hOps n
+    obtain ⟨_, _, _, _, _, _, _, hPiece⟩ := hOps n
     exact hPiece
   exact TruthCore.Results.Causality.GrimReaperPatchwork.arrangementImpossible
     R u c hDesc hPieces

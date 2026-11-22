@@ -1113,6 +1113,9 @@ or an independently motivated law/constraint that precisely discriminates
 countable from finite compatible operation in a non-accumulating proper past.
 
 
+
+**Verification candidates, 2026-11-22.** Proposed argument records from concrete finite-prefix station possibility `7d1b132f` to the existing local selected-descent node `fab16501` (theorem `durationDescentOfStationPrefixes`) and from that stronger local premise plus separate countable operation recombination `9cb8c0ee` directly to the existing metric-finiteness node `4365c3c5` (theorem `metricallyFiniteOfCountableStationRecombination`). An actual station operation now requires each bearer to be `Concrete` as well as existing, present and related by `Ontic.Causes`; the interpretation of that relation as genuine signal-level causal influence, rather than a mere additional relation between bearers, still needs a source/event bridge. The proofs are conditional; the same positive duration, family and schedule are held fixed. The countable modal realization principle remains OPEN. Draft verification and semantic review pending.
+
 ## Typed per-se / historical distinction (#1112)
 
 `STMT-INFINITE-REGRESS-IMPOSSIBLE-ONLY-IN-PER-SE-SERIES` keeps its original

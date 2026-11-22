@@ -72,4 +72,20 @@ theorem metricallyFiniteOfDurationPieces {W B T : Type} [LinearOrder T]
     PopulatedPastsMetricallyFinite h Concrete k w := by
   sorry
 
+theorem durationDescentOfStationPrefixes {W B T : Type} [LinearOrder T]
+    (R : ReaperFrame W T) (h : History W B T) (Concrete : B → Prop)
+    (k : TimeClock T) (d : {d : ℝ // 0 < d}) (w : W)
+    (hLocal : SelectedFiniteStationCompatibility R h Concrete k d w) :
+    DurationDescentPossible R h Concrete k d w := by
+  sorry
+
+theorem metricallyFiniteOfCountableStationRecombination {W B T : Type}
+    [LinearOrder T]
+    (R : ReaperFrame W T) (h : History W B T) (Concrete : B → Prop)
+    (k : TimeClock T) (d : {d : ℝ // 0 < d}) (w : W)
+    (hLocal : SelectedFiniteStationCompatibility R h Concrete k d w)
+    (hGlue : CountableStationRecombination R h Concrete k d w) :
+    PopulatedPastsMetricallyFinite h Concrete k w := by
+  sorry
+
 end TruthCore.Results.Causality.FixedDurationGrimReaper

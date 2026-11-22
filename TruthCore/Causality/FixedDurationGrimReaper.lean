@@ -67,8 +67,11 @@ interfaces hold. Ontic.Causes is an individual-efficient-cause reading here,
 NOT existential grounding or causation of the contingent totality. Nothing
 in the type guarantees physically realizable devices or intrinsic powers. -/
 def StationOperationAt {W B T : Type} (R : ReaperFrame W T)
-    (h : History W B T) (stations : Nat → B) (u : W) (c : Nat → T) (n : Nat) :
+    (h : History W B T) (Concrete : B → Prop)
+    (stations : Nat → B) (u : W) (c : Nat → T) (n : Nat) :
     Prop :=
+  Concrete (stations n) ∧
+  Concrete (stations (n + 1)) ∧
   h.ontic.ExistsAt u (stations n) ∧
   h.ontic.ExistsAt u (stations (n + 1)) ∧
   h.IsAt u (stations n) (c n) ∧
@@ -80,9 +83,10 @@ def StationOperationAt {W B T : Type} (R : ReaperFrame W T)
 The witnesses may differ with N. Crucially this does NOT assert one world with
 all operations, nor that register contents agree between finite witnesses. -/
 def FiniteStationPrefixCompatibility {W B T : Type} (R : ReaperFrame W T)
-    (h : History W B T) (stations : Nat → B) (v : W) (c : Nat → T) : Prop :=
+    (h : History W B T) (Concrete : B → Prop)
+    (stations : Nat → B) (v : W) (c : Nat → T) : Prop :=
   ∀ N, ∃ u, h.ontic.frame.access v u ∧
-    ∀ n, n ≤ N → StationOperationAt R h stations u c n
+    ∀ n, n ≤ N → StationOperationAt R h Concrete stations u c n
 
 /-- Only one d-separated schedule and concrete station family is required per
 metrically infinite populated past. They may depend on the history and moment,
@@ -94,7 +98,7 @@ def SelectedFiniteStationCompatibility {W B T : Type} [Preorder T]
     ¬ MetricallyFinitePast k t →
     ∃ (c : Nat → T) (stations : Nat → B),
       c 0 = t ∧ Descent c ∧ DurationSlots k d c ∧
-      FiniteStationPrefixCompatibility R h stations v c
+      FiniteStationPrefixCompatibility R h Concrete stations v c
 
 /-- Explicit OPEN countable recombination principle. A single history
 accessible from v must realize all ACTUAL operations, with the same station
@@ -108,8 +112,8 @@ def CountableStationRecombination {W B T : Type} [Preorder T]
     (k : TimeClock T) (d : {d : ℝ // 0 < d}) (w : W) : Prop :=
   ∀ v, h.ontic.frame.access w v → ∀ (c : Nat → T) (stations : Nat → B),
     Descent c → DurationSlots k d c → PopulatedAt h Concrete v (c 0) →
-    FiniteStationPrefixCompatibility R h stations v c →
+    FiniteStationPrefixCompatibility R h Concrete stations v c →
     ∃ u, h.ontic.frame.access v u ∧
-      ∀ n, StationOperationAt R h stations u c n
+      ∀ n, StationOperationAt R h Concrete stations u c n
 
 end TruthCore.Causality.FixedDurationGrimReaper
