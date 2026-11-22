@@ -1,0 +1,9 @@
+{
+  "id": "ef3ee5ec-1d44-4bd7-93f9-376c1cf6f6b3",
+  "label": "INFINITE_3: inf, the perfection of INFINITE_3 substance, the respect an idea of INFINITE_3 presents",
+  "term": "infinite (perfection of infinite substance; idea-frame respect `inf`)",
+  "definition": "`IdeaFrame.inf` is a designated respect of the grades frame's carrier: the perfection of being infinite substance, that is, having perfection without limit. F.InAct c inf says that c is in act in that perfection, formally or eminently (IN_ACT_4, mode of possession left open). It is a respect, not a predicate of beings like INFINITE_1, and not a quantity like INFINITE_2. Nothing relates inf to esse, to MoreIn or to any other respect: in particular 'in act in inf' does not by definition give maximality in being or every perfection; those are explicit open bridges.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.CartesianIdeaOfInfinite.IdeaFrame.inf",
+  "note": "Analyst stipulation, attribution deferred (navigation: Descartes, Meditation III, the idea of 'a substance that is infinite, independent, supremely intelligent, supremely powerful'). Example: on the intended reading the infinite substance is in act in inf and a finite thinker is not. Relation to INFINITE_1 (DEF-INFINITE, ST I q.7): b0132989 runs from GOD_4 to INFINITE_1; no statement relates InAct c inf to Infinite c in either direction. Open obligations: the bridge from inf to maximality in being (statement 'Whatever is in act in the infinite is maximal in being') is open; the stronger reading 'infinite in every perfection' (in act and unsurpassed in every respect) would entail it by instantiation and is not registered."
+}

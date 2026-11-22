@@ -1,0 +1,9 @@
+{
+  "id": "d8e82792-9d80-4a6f-8181-b2fccc3f06af",
+  "label": "ObjCause c e r: c is a cause of the idea e's representing r, of its objective reality",
+  "term": "cause of an idea's objective reality",
+  "definition": "`IdeaFrame.ObjCause c e r` holds when the being c is a cause of the episode e's representing the perfection r: c accounts for e's having r as its content. It is not a cause of e's being, of e's occurring or of any perfection e has, and it is not the grades frame's CausesIn (CAUSE_2, c causing a being x's being in act in r). Partial causes are not excluded and nothing is said of uniqueness. A primitive field of the idea frame; nothing relates it to CausesIn, InAct, Occurs or Bears.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.CartesianIdeaOfInfinite.IdeaFrame.ObjCause",
+  "note": "Analyst stipulation, attribution deferred (navigation: Descartes, Meditation III: the objective reality of an idea needs a cause, distinct from the cause of the idea as a mode of thought). Example: whoever drew a detailed machine design is a cause of the design's representing the machine's ingenuity. Distinguished from CAUSE_2: the meditator may be the CAUSE_2 cause of its own being in act in the feature of representing r (the separation control in TruthCore.Causality.CartesianIdeaOfInfinite) while not being in act in r itself. Not added as a sense of the 'Cause' disambiguation: it relates a being to an episode's content, and no argument of this batch passes between it and CausesIn. Open obligations: whether ObjCause is a species of efficient causation, and whether a cause of an idea's content can be a set of partial causes (limit-negation plus a finite perfection) are not fixed."
+}

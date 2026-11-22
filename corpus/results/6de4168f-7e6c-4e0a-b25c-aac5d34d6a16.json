@@ -1,0 +1,11 @@
+{
+  "id": "6de4168f-7e6c-4e0a-b25c-aac5d34d6a16",
+  "label": "Something maximal in being causes all being, from the cause of the idea of INFINITE_3",
+  "argument_id": "7aafbc69-3e5b-4f27-a734-84eeb88eedc7",
+  "challenge_module": "TruthCore.Results.Causality.CartesianIdeaOfInfinite.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CartesianIdeaOfInfinite.Solution",
+  "theorem": "TruthCore.Results.Causality.CartesianIdeaOfInfinite.maximeEnsOfIdeaOfInfinite",
+  "comparator_config": "results/6de4168f-7e6c-4e0a-b25c-aac5d34d6a16/comparator.json",
+  "status": "solution-present",
+  "description": "Bridge from the idea-of-the-infinite argument to the quarta via's conclusion STMT-MAXIME-ENS-CAUSES-BEING-OF-ALL, over one grades frame. The cause c of the meditator's idea of the infinite is in act in the infinite (INFINITE_3). The open bridge 'whatever is in act in the infinite is maximal in being' makes c maximal in being (MAXIME_ENS_1), and the genus principle at being (da09703b) makes c the cause of the being of every other being that has being. So something maximal in being causes being in every other being. This replaces the quarta via's grades, approach-to-a-maximum and truth-to-being premises by the idea-of-the-infinite premises and one open naming bridge. Only the infinite-to-maximality bridge connects the two families; it is not a definitional equality. The objective-reality cause relation (ObjCause) occurs only in the first premise and is not passed into the cause-of-being relation (CAUSE_2). Every premise stays open."
+}

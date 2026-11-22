@@ -1,0 +1,30 @@
+{
+  "id": "cb85d0bf-7325-4cc5-b2d8-eba3e031bd97",
+  "label": "Something other than the meditator is IN_ACT_4 in INFINITE_3, from the idea of it",
+  "premise_statement_ids": [
+    "d3fcdeeb-32cc-481d-bb34-21445f3c4c47",
+    "0747e4f3-5296-4353-af67-2dd86c740a5e",
+    "3845020d-f64b-4a4f-8734-e8069a80e36a",
+    "4a9ede84-d1a2-4d5a-8d5b-eded62114cc4"
+  ],
+  "conclusion_statement_id": "4c815f13-6b1a-42d7-b1a4-c3713eb2d3bc",
+  "inference_ids": [
+    "e6e0a5a2-e2bf-4002-8fdc-c8ed98c3f4d6"
+  ],
+  "meaning": "The idea-of-the-infinite argument over one grades frame and one idea frame (analyst reconstruction; navigation: Descartes, Meditation III). P1 gives an occurring idea e of the infinite borne by the meditator. P2 gives a cause c of e's representing the infinite. Objective adequacy puts c in act in the infinite (IN_ACT_4, formally or eminently). The meditator is not in act in the infinite (P4), so c is not the meditator. The comparator also checks a finite interpretation on which all four premises hold together. All premises stay open. Objective adequacy is a separate premise, not an instance of formal containment (see the separation control). The conclusion says nothing of maximality, uniqueness or GOD_4.",
+  "definition_ids": [
+    "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",
+    "89b53040-ee5c-425b-aa77-388ddbb42dba",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1",
+    "ce8ccc1a-4f9a-5904-a10c-548778d79b66",
+    "c0cbef1c-060a-54d4-bb49-8d59da40caf3",
+    "d8e82792-9d80-4a6f-8181-b2fccc3f06af",
+    "ef3ee5ec-1d44-4bd7-93f9-376c1cf6f6b3",
+    "f356048e-c066-4e25-9dcc-4b6911c2e0b7"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "587c53cf-c2a8-51f6-b8c1-013e67756dc6"
+  ]
+}

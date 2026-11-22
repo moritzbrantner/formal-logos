@@ -1,0 +1,14 @@
+{
+  "id": "1575a83a-2326-4901-a6c5-898034286743",
+  "label": "Something maximal in being causes all being, from the cause of the idea of INFINITE_3 (inference)",
+  "input_statement_ids": [
+    "4c815f13-6b1a-42d7-b1a4-c3713eb2d3bc",
+    "1a289b83-4729-4250-b35a-d579f1b4831a",
+    "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7"
+  ],
+  "output_statement_id": "0881e859-c4c3-53ff-9bec-b61294e12d51",
+  "rule": "Existential instantiation and two universal instantiations at the same witness",
+  "meaning": "Bridge from the idea-of-the-infinite argument to the quarta via's conclusion STMT-MAXIME-ENS-CAUSES-BEING-OF-ALL, over one grades frame. The cause c of the meditator's idea of the infinite is in act in the infinite (INFINITE_3). The open bridge 'whatever is in act in the infinite is maximal in being' makes c maximal in being (MAXIME_ENS_1), and the genus principle at being (da09703b) makes c the cause of the being of every other being that has being. So something maximal in being causes being in every other being. This replaces the quarta via's grades, approach-to-a-maximum and truth-to-being premises by the idea-of-the-infinite premises and one open naming bridge. Only the infinite-to-maximality bridge connects the two families; it is not a definitional equality. The objective-reality cause relation (ObjCause) occurs only in the first premise and is not passed into the cause-of-being relation (CAUSE_2). Every premise stays open.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

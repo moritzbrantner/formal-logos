@@ -1,0 +1,12 @@
+{
+  "id": "0747e4f3-5296-4353-af67-2dd86c740a5e",
+  "label": "The objective reality of every occurring idea has a cause",
+  "paraphrase": "P2 of the idea-of-the-infinite argument, analyst formulation (navigation: Descartes, Meditation III; attribution deferred): for every occurring episode e and perfection r, if e represents r then some being c is a cause of e's representing r (ObjCause, the cause of an idea's objective reality, not of the idea's being). Nothing is said of uniqueness or totality of that cause. Open.",
+  "lean_declaration": "TruthCore.Causality.CartesianIdeaOfInfinite.ObjectiveRealityIsCaused",
+  "definition_ids": [
+    "c0cbef1c-060a-54d4-bb49-8d59da40caf3",
+    "89b53040-ee5c-425b-aa77-388ddbb42dba",
+    "d8e82792-9d80-4a6f-8181-b2fccc3f06af",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ]
+}

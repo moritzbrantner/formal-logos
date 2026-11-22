@@ -1,0 +1,20 @@
+{
+  "id": "90991d99-5c87-44e1-ac6e-e1a684538337",
+  "label": "Formal containment does not give objective adequacy on a finite frame",
+  "paraphrase": "Closed mathematical control over one finite grades frame with one being (the meditator), three respects (being, the infinite, representing the infinite) and one episode: the meditator is in act in being and in representing the infinite, not in the infinite, causes its own being in act in each respect, bears an occurring idea that represents only the infinite and is the cause of that idea's objective reality. There, respect-wise containment in every cause (634a80b8) and q.4 a.2 preexistence (64498e7e) hold, P1, P2 and P4 hold, while objective adequacy fails and nothing is in act in the infinite. A statement about this interpretation only: on it, the formal clause does not yield objective adequacy or the conclusion.",
+  "lean_declaration": "TruthCore.Causality.CartesianIdeaOfInfinite.ObjectiveAdequacySeparationControl",
+  "definition_ids": [
+    "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "89b53040-ee5c-425b-aa77-388ddbb42dba",
+    "d8e82792-9d80-4a6f-8181-b2fccc3f06af",
+    "ef3ee5ec-1d44-4bd7-93f9-376c1cf6f6b3",
+    "f356048e-c066-4e25-9dcc-4b6911c2e0b7"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "587c53cf-c2a8-51f6-b8c1-013e67756dc6"
+  ]
+}
