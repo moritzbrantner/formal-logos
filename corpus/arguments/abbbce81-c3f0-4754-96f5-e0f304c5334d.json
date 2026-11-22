@@ -1,0 +1,29 @@
+{
+  "id": "abbbce81-c3f0-4754-96f5-e0f304c5334d",
+  "label": "Derive external causal opportunity from a nonexternal giver and no self-causation",
+  "premise_statement_ids": [
+    "2a4d99d8-cb0c-429a-89e9-2a3b02f0526e",
+    "0e473dc4-77c5-4d5d-899f-93e29907b198",
+    "d3184c66-0392-4b0a-bbb7-3ad9a805d629"
+  ],
+  "conclusion_statement_id": "e4a3b917-7c61-49e3-a8fa-dc02155bbf80",
+  "inference_ids": [
+    "eec942a1-d050-4b9d-a413-1c28f7d2340f"
+  ],
+  "meaning": "A stronger non-transcription conditional support option for the previously open causal B2. A possibly existing concrete memberwise source is NOT assumed external. If every contingent concrete existing source occurs at some moment and strict giving of being is irreflexive, the source cannot be contingent (otherwise the all-member causal law forces it to give its own being at its moment). By modal contingency's definition, a concrete existent that cannot be contingent is necessary at that possible history and distinct from all contingent concreta there. Therefore the original memberwise B2 with externality follows. The memberwise and temporally instantiated premises are explicit and remain OPEN; the theorem does not establish the metaphysical possibility of the universal giver, actual-world causal exercise, or a holistic totality cause.",
+  "definition_ids": [
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "375676b0-a295-4a17-a9e4-3db23319d517",
+    "d0757d5d-5f68-4e2e-9bd8-4ed8f57dc5ee",
+    "c0d65b45-33bb-47a2-b16b-48a493a762cb",
+    "028c1066-481d-4eb4-a96e-01ad62f85a2c",
+    "9e1d45f4-7cee-44b5-a911-803c95b3fa07",
+    "67a624ba-11f6-4535-8154-8295b2d62765",
+    "77254d4d-c318-40a3-b2a1-5c922632f011"
+  ],
+  "disambiguation_ids": [
+    "dc40914a-48c9-48a2-941e-40b96d847a71"
+  ]
+}
