@@ -88,4 +88,37 @@ theorem necessaryConcreteOfPossibleConcurrentGiver {W B T S : Type}
       ⟨f.history.ontic, Concrete, G⟩ w := by
   sorry
 
+theorem possiblyNecessaryConcurrentGiver {W B T S : Type} [Preorder T]
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (k : TimeClock T) (w : W)
+    (hBegins : PossiblyBeginsFiniteDuration f.history Concrete k w)
+    (hOpportunity : ConcurrentFiniteDurationCausalOpportunity f Concrete k w) :
+    ∃ v c, f.history.ontic.frame.access w v ∧ Concrete c ∧
+      f.history.ontic.ExistsAt v c ∧ NecessaryAt f.history.ontic v c ∧
+      ConcurrentTotalityGivingAt f Concrete v c := by
+  sorry
+
+
+theorem inertGivingSeparatesOpportunity :
+    FiniteDurationCausalOpportunity openBelowSource all posClock
+      (fun v c => v = true ∧ c = none) true ∧
+    ¬ ConcurrentFiniteDurationCausalOpportunity inertGivingFrame all posClock true := by
+  sorry
+
+
+theorem functioningConcurrentOpportunity :
+    ConcurrentFiniteDurationCausalOpportunity functioningGivingFrame all posClock true := by
+  sorry
+
+
+theorem mixedPossibleGivingWithoutActualGiving :
+    PossiblyBeginsFiniteDuration mixedTemporal all posClock true ∧
+    ConcurrentFiniteDurationCausalOpportunity mixedGivingFrame all posClock true ∧
+    EuclideanAt mixedTemporal.ontic.frame true ∧
+    ActualReflexive mixedTemporal.ontic true ∧
+    PopulatedAt mixedTemporal all true (⟨1, one_pos⟩ : PosReal) ∧
+    (∀ c t, ¬ mixedGivingFrame.GivesAt true c (some true) t) := by
+  sorry
+
+
 end TruthCore.Results.Causality.MetricBeginningArrival
