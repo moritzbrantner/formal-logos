@@ -1,0 +1,11 @@
+{
+  "id": "93dd9b29-f549-4216-b879-dda10706727f",
+  "label": "Containment in every cause strengthens containment in total causes",
+  "subject_kind": "statement",
+  "subject_id": "634a80b8-470e-4d2f-9dd0-fc868e4a62a0",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "90c0d77f-4c87-407d-8e7d-c8f01c44b115",
+  "verification_result_id": "cd313585-6bce-43fc-83d0-0d67ebe49113",
+  "note": "Same GradesFrame (InAct IN_ACT_4, CausesIn CAUSE_2); the weak version constrains only total causes (TotalCauseIn = CausesIn and Total). The strong version is an analyst strengthening and lies on a root route through q.4 a.2 preexistence; the weak version is the analyst reading of the Cartesian clause on its respect-wise scope, with a uniform IN_ACT_4 reading (the mode-asymmetric reading is an unformalized sibling). No strictness result is registered."
+}

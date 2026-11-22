@@ -1,0 +1,32 @@
+{
+  "id": "62dae664-0d0c-4a19-8337-b5d88fa31dab",
+  "label": "Containment in every cause from the strict comparative and more-such-has-the-perfection",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d",
+    "c11369aa-7c3d-5dea-8421-535d5b4b3104"
+  ],
+  "conclusion_statement_id": "634a80b8-470e-4d2f-9dd0-fc868e4a62a0",
+  "inference_ids": [
+    "74a75de3-c9d7-4475-8b16-2a0aa1c09f60"
+  ],
+  "meaning": "Excluded middle decides whether the cause c is x itself. If it is, x's being in act in r is c's. If not, the strict comparative (STMT-CAUSE-OF-QUALITY-IN-ANOTHER-IS-MORE-SUCH) makes c more r than x (MORE_1), and STMT-MORE-SUCH-HAS-THE-PERFECTION gives that c is in act in r. Together with the previous argument this factors the existing four-premise derivation PERFECTION-PREEXISTENCE-FROM-CAUSAL-TRANSFER through respect-wise containment: the containment premise is the hinge between the Aristotelian comparative pair and q.4 a.2. All premises except excluded middle stay open.",
+  "definition_ids": [
+    "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "5766de66-8a37-5b04-aa65-9eec53319f50",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ],
+  "disambiguation_ids": [
+    "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "1795a62e-f78b-5f5b-94e7-9e7490824811"
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The case split is on the equality of an arbitrary cause with its effect; the weak version (classical-attributes local logic, ca432e24) decides equality only against a GOD_4 candidate.",
+    "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d": "Needed for every perfection r, not only being: the weak version (cffad050) constrains only distinct causes of being."
+  }
+}

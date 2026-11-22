@@ -1,0 +1,12 @@
+{
+  "id": "c65129d9-b8dd-4c45-b7e0-a924a0048c03",
+  "label": "Containment in every cause entails that nothing gives being it does not have (inference)",
+  "input_statement_ids": [
+    "634a80b8-470e-4d2f-9dd0-fc868e4a62a0"
+  ],
+  "output_statement_id": "4a5a43a5-bb4d-4a87-828a-d913a1f0422e",
+  "rule": "Instantiate a universal at the respect esse",
+  "meaning": "Strength order registration: containment in every cause, at r = esse, says that whatever causes the being of a thing in act as to being is itself in act as to being (4a5a43a5). Same InAct, CausesIn and esse. It establishes neither statement.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

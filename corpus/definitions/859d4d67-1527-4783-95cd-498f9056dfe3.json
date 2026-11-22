@@ -1,0 +1,9 @@
+{
+  "id": "859d4d67-1527-4783-95cd-498f9056dfe3",
+  "label": "CONTAINMENT_SCOPE_2, whole-effect: a total cause of a thing's being has every perfection of it",
+  "term": "containment clause, whole-effect scope",
+  "definition": "`WholeEffectContainmentInTotalCause F Total`: whatever is the efficient and total cause of x's being (TotalCauseIn at esse) is in act in every perfection r in which x is in act. The cause of the whole effect is constrained for every perfection of the effect. Act is read uniformly as IN_ACT_4 on both sides.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.CartesianAdequacy.WholeEffectContainmentInTotalCause",
+  "note": "Analyst reading, attribution deferred (navigation: Descartes, Meditation III, the stone example: a stone that did not exist cannot begin to exist unless produced by something containing, formally or eminently, everything in the stone). It is the total-cause restriction of q.4 a.2 preexistence (STMT-PERFECTIONS-OF-EFFECT-PREEXIST-IN-CAUSE), which entails it."
+}

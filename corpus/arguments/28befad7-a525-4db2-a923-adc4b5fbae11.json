@@ -1,0 +1,27 @@
+{
+  "id": "28befad7-a525-4db2-a923-adc4b5fbae11",
+  "label": "Q.4 a.2 preexistence entails whole-effect containment in total causes",
+  "premise_statement_ids": [
+    "64498e7e-7f10-54a0-9ec0-c65e6076de1f"
+  ],
+  "conclusion_statement_id": "4643a655-a5eb-4574-92db-477aa32dfa92",
+  "inference_ids": [
+    "f0101e7b-c5e4-4543-861f-37f787e511ce"
+  ],
+  "meaning": "Strength order registration: if every perfection of a thing whose being a cause causes is in that cause (q.4 a.2 preexistence), then so is every perfection of a thing whose being a total cause causes, for every totality relation. Same InAct, CausesIn and esse. It establishes neither statement.",
+  "definition_ids": [
+    "33ebf451-eb02-48f5-b420-24a34da9b865",
+    "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",
+    "859d4d67-1527-4783-95cd-498f9056dfe3",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ],
+  "disambiguation_ids": [
+    "26b6a64e-3e45-4ffc-a359-1fbc9ee6f579",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
+  ],
+  "weakening": true
+}

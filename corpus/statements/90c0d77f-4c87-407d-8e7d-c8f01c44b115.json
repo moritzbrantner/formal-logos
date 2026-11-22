@@ -1,0 +1,19 @@
+{
+  "id": "90c0d77f-4c87-407d-8e7d-c8f01c44b115",
+  "label": "The efficient and total cause of a thing's being r contains r (respect-wise, uniform IN_ACT_4)",
+  "paraphrase": "Analyst formulation of the Cartesian containment clause on its respect-wise scope (CONTAINMENT_SCOPE_1; navigation: Descartes, Meditation III, 'efficient and total cause'; attribution deferred): whatever is the efficient and total cause of x's being r (a CAUSE_2 cause whose causing needs no co-cause), where x is in act in r, is itself in act in r. Uniform IN_ACT_4 reading on both sides; the mode-asymmetric Cartesian reading (formal in the effect, formal or eminent in the cause) is a distinct, unformalized sibling needing a sense bridge. Partial causes are not constrained. The whole-effect sibling is WholeEffectContainmentInTotalCause (CONTAINMENT_SCOPE_2). Open.",
+  "lean_declaration": "TruthCore.Causality.CartesianAdequacy.ContainmentInTotalCause",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1",
+    "33ebf451-eb02-48f5-b420-24a34da9b865",
+    "2ea0fd93-e13a-4411-bc03-5b9d2ce40fdb"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "26b6a64e-3e45-4ffc-a359-1fbc9ee6f579"
+  ]
+}

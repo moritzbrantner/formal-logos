@@ -1,0 +1,31 @@
+{
+  "id": "c974d1f0-df19-4091-9b6e-377cf78336e2",
+  "label": "At least as much degree in a total cause, from the strict comparative and calibration",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d",
+    "98755509-18d3-5282-bd66-47202d916266"
+  ],
+  "conclusion_statement_id": "87f41688-c06f-4fe9-994b-0682a4be3038",
+  "inference_ids": [
+    "005bcf5b-d692-44ed-a097-41254863c1bb"
+  ],
+  "meaning": "MORE_2 side of the comparison. If the total cause c is x itself, deg r x ≤ deg r x. If not, the strict comparative makes c more r than x (MORE_1), and the open calibration STMT MoreInExceedsDegree (98755509) turns that into deg r x < deg r c, hence ≤. So the Aristotelian strict comparative yields, with the calibration, the weaker Cartesian non-strict comparative; it does not without a further premise such as the calibration or asymmetry (with irreflexivity) of MoreIn. Total is never used, so the same holds for every cause. The calibration 98755509 is the MORE_1-to-degree passage named in DISAMB cdb0de59-5015-4fa6-986c-4cd1527dd2b3; this argument uses it as that bridge, and its conclusion uses the degree family, not the MORE_2 comparative. Premises other than excluded middle stay open.",
+  "definition_ids": [
+    "33ebf451-eb02-48f5-b420-24a34da9b865",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "5766de66-8a37-5b04-aa65-9eec53319f50",
+    "8323604a-2e7a-554c-9b32-d82e5201271d",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ],
+  "disambiguation_ids": [
+    "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "1795a62e-f78b-5f5b-94e7-9e7490824811"
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The case split is on the equality of an arbitrary cause with its effect; the weak version (classical-attributes local logic, ca432e24) decides equality only against a GOD_4 candidate.",
+    "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d": "Needed for every perfection r, not only being: the weak version (cffad050) constrains only distinct causes of being."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.CartesianAdequacy.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CartesianAdequacy.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.CartesianAdequacy.degreeAdequacyOfStrictComparative"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}
