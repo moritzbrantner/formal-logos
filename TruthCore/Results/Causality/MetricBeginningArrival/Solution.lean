@@ -320,6 +320,6 @@ theorem mixedPossibleGivingWithoutActualGiving :
     trivial
   · trivial
   · intro c t hg
-    exact Bool.true_ne_false hg.1
+    exact (by decide : (true : Bool) ≠ false) hg.1
 
 end TruthCore.Results.Causality.MetricBeginningArrival
