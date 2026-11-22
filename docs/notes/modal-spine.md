@@ -3092,3 +3092,16 @@ of scope, and `b35ce743` is not among them); the route-cost sentence of
 `f3722322`'s blocker; `9c05bc24`'s "refuted
 bridge"; and the bare "all five survive" of `c2ffef68` where it is read as
 weight against F2 or A1.
+
+## Conditional nonlocation branch from the modal root (2026-11-22)
+
+The new [spacetime-root bridge](spatial-translation-and-reason.md#cross-family-result-contingent-spacetime-and-underived-nonlocation-2026-11-22)
+takes `STMT-NECESSARY-CONCRETE-UNDERIVED-AT` as an existing premise
+and adds an actual contingent concrete spacetime whole and the
+**same-relation** whole-to-occupant existential-grounding premise. It
+concludes that the **original necessary underived witness** is unlocated
+in the dimensive sense (`SPATIOTEMPORAL_2`). It does **not** claim
+that the underived witness has already been carried into the `GOD_4`
+conclusion as the same individual; that consumer and the physical-ontology
+bridge remain open. This does not revise the previously reviewed
+modal-spine assessment.
