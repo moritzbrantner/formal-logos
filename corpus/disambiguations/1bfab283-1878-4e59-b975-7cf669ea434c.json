@@ -1,0 +1,25 @@
+{
+  "id": "1bfab283-1878-4e59-b975-7cf669ea434c",
+  "label": "Naming God inside a modal context: descriptive versus reference-fixed",
+  "term": "naming God inside a modal context",
+  "term_label": "GOD_NAMING",
+  "sense_definition_ids": [
+    "8c3bb0b3-facb-48b5-8674-f0f2ab87ad0c",
+    "2c822ed5-1235-4c3d-aba8-7893c5da2b26"
+  ],
+  "resolution": "The stage-one naming premises (STMT-GOD-NAMES-THE-UNIQUE-MAXIME-ENS, STMT-GOD-NAMES-THE-FULLY-DESCRIBED-PRINCIPLE, STMT-MAXIME-ENS-IS-GOD) evaluate the name in one model with no worlds; at the reference world the two senses designate the same bearers (GodNamingSenses Laws, clause 2), so those premises are neutral between them. The senses diverge only when 'God' occurs under a box, as in the necessary-being node STMT-NECESSARY-ROOT-BOX-K, where the world-invariant GOD_4 predicate is applied to one fixed root n and n's existence is boxed. That node is logically equivalent to its GOD_NAMING_2 reading (NecessaryRootRigidName, theorem rigidIffBoxK), and equally to its GOD_NAMING_1 reading with the route's own world-independent description GOD_4 (NecessaryRootDescriptiveName with GodAt := fun _ => sigma.IsGod, theorem DescConstIffBoxK), for which both bridges hold trivially. The route models GOD_4 and the classical attributes as world-independent predicates: an implicit modelling commitment that divinity and the attributes are essential to the root. The primitive GodAt, a description that may vary by world and is deliberately not identified with sigma.IsGod, is introduced to test that commitment. The senses separate only for such a world-varying GodAt: then neither node entails the other in general (Separation controls); the descriptive reading gives the box node with the open bridge NoOtherPossibleGod, and the box node gives the descriptive reading with GodhoodEssentialToGod and NoOtherPossibleGod. Together the two bridges say that at accessible worlds an existing y meets GodAt exactly when it is GOD_4: they are the explicit form, for the descriptive reading, of the route's implicit essentialist commitment. The descriptive node is close to the deDictoK sense of NecessarySenseFork and strictly stronger than its box clause, since it requires a unique existing satisfier of the description, not merely that something exists. A third reading, a name whose sense is the description, has the world-intension of GOD_NAMING_1 under narrow scope and of GOD_NAMING_2 under wide scope; it is not a separate sense here. Each argument uses one sense; the premise-free controls comparing both are marked as sense-mixing controls.",
+  "senses": [
+    {
+      "id": "0ade5350-258a-4578-9a90-31b0ac1788a6",
+      "label": "GOD_NAMING_1",
+      "definition_id": "8c3bb0b3-facb-48b5-8674-f0f2ab87ad0c",
+      "lean_declaration": "TruthCore.Causality.GodNamingSenses.DescriptiveName"
+    },
+    {
+      "id": "087426e9-04c8-4df1-ad42-c071e25fcc5a",
+      "label": "GOD_NAMING_2",
+      "definition_id": "2c822ed5-1235-4c3d-aba8-7893c5da2b26",
+      "lean_declaration": "TruthCore.Causality.GodNamingSenses.ReferenceFixedName"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "45566c76-0f4e-446e-9da3-806cbeb59fc9",
+  "label": "Unrestricted characterization strengthens whatever-is-defined-is-true",
+  "argument_id": "5c361bb9-c557-4ac0-9738-7e1b31f9fbbb",
+  "challenge_module": "TruthCore.Results.Ontology.ExistencePredicate.Challenge",
+  "solution_module": "TruthCore.Results.Ontology.ExistencePredicate.Solution",
+  "theorem": "TruthCore.Results.Ontology.ExistencePredicate.unrestrictedGivesDefinitionsTrue",
+  "comparator_config": "results/45566c76-0f4e-446e-9da3-806cbeb59fc9/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration: if every description of the frame's objects is satisfied, every defined description is satisfied, in the same frame. Establishes neither premise. The converse fails in any frame where nothing is defined and some description is unsatisfiable; no strictness result is registered."
+}

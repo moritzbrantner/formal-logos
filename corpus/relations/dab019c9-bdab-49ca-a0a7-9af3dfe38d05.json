@@ -1,0 +1,10 @@
+{
+  "id": "dab019c9-bdab-49ca-a0a7-9af3dfe38d05",
+  "label": "The definitional retorsion refutes unrestricted characterization",
+  "subject_kind": "argument",
+  "subject_id": "432d9046-902c-4bc8-b7af-7ae327fe2f3d",
+  "predicate": "refutes",
+  "object_kind": "statement",
+  "object_id": "f0391cf0-3b56-4c31-8b0c-1460054c5151",
+  "note": "Premise-free, zero-axiom refutation in every definitional frame: the principle is logically false, since its single instance at an unsatisfiable description fails. This refutes the unrestricted principle, not the weak 'whatever has been defined is true', which is jointly consistent with P1 (retorsion part (d))."
+}

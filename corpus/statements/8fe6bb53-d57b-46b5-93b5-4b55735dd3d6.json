@@ -1,0 +1,19 @@
+{
+  "id": "8fe6bb53-d57b-46b5-93b5-4b55735dd3d6",
+  "label": "GOD_NAMING senses: reference-fixed names are rigid, rigid node is the box node, readings separate",
+  "paraphrase": "Premise-free comparison of the two naming senses. (1) For every model with worlds, existence and accessibility, descriptions D and D', reference world w0 and bearer x: a name reference-fixed at w0 by D is rigid (RigidAt) at every origin for the being x that alone, among the beings existing at w0, satisfies D at w0; at w0 the descriptive and the reference-fixed name designate the same bearers; and if x alone satisfies both D and D' at w0 among the beings existing there, the two reference-fixed names co-designate at every world accessible from w0 where x exists, and they co-designate at every accessible world iff x exists at every accessible world (necessity of identity, not necessary existence). (2) For every signature, profile and world, the GOD_NAMING_2 reading of the necessary-being node holds iff the box K node holds, and so does the GOD_NAMING_1 reading whose description is the route's world-independent GOD_4 predicate (both bridges hold trivially for it). (3) On explicit two-world models: the GOD_NAMING_1 node holds while the box K node and the no-other-possible-God bridge fail; the box K node and that bridge hold while the GOD_NAMING_1 node and the essential Godhood bridge fail; at a non-reference world the descriptive name designates a being and the reference-fixed name designates nothing; two descriptive names co-designate at the reference world and not at another world where their actual bearer exists, while the reference-fixed names co-designate there. (4) A model where both nodes and both bridges hold together.",
+  "lean_declaration": "TruthCore.Causality.GodNamingSenses.Control.Checks",
+  "definition_ids": [
+    "8c3bb0b3-facb-48b5-8674-f0f2ab87ad0c",
+    "2c822ed5-1235-4c3d-aba8-7893c5da2b26",
+    "bff04678-e0a0-5b9b-a182-484afb5506df",
+    "6bf06590-f2ca-5dfa-9fb6-2e799c4c9916",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "f830795a-b5d8-5f9f-800d-2f3d1f443a0a"
+  ],
+  "disambiguation_ids": [
+    "1bfab283-1878-4e59-b975-7cf669ea434c",
+    "20aadb82-fb79-549d-bae9-5b7d566db513",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ]
+}

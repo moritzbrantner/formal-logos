@@ -1,0 +1,10 @@
+{
+  "id": "3d5ece3c-f549-441a-b012-5ee0e56f9577",
+  "label": "The GOD_NAMING_2 necessary-being node is logically equivalent to the box K node",
+  "subject_kind": "statement",
+  "subject_id": "483ab488-9ef2-435b-9047-6d5abd090c9b",
+  "predicate": "logically_equivalent_to",
+  "object_kind": "statement",
+  "object_id": "cdf897a8-5490-561a-b9d2-507486a3f192",
+  "note": "Same signature, profile and world. Verified as rigidIffBoxK, a Comparator-checked conjunct of the GOD_NAMING controls result (theorem checks): for the root n, strict co-designation of the reference-fixed name 'God' at every accessible world is equivalent to n's existence at every accessible world, by the rigid-designation library laws. The box K node is equally equivalent to the GOD_NAMING_1 reading whose description is the route's own world-independent GOD_4 predicate (DescConstIffBoxK, same controls result): the route's GOD_4 does not vary by world, so both descriptive bridges hold trivially. The two senses separate only for a world-varying description. No argument is registered in either direction: an argument from the GOD_NAMING_2 node would add a route leaf that merely restates the box K node (it lowered the expanded-route diagnostic from 16 to 13 without new warrant, so it was withdrawn). The equivalence shows how the box K node reads under each naming sense, not that it is established."
+}

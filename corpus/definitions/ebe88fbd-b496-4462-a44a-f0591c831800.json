@@ -1,0 +1,25 @@
+{
+  "id": "ebe88fbd-b496-4462-a44a-f0591c831800",
+  "label": "Extranuclear EXISTENCE_4 of an object in a nuclear-property object theory",
+  "term": "existence",
+  "definition": "ExistsExtranuclear x: object x exists, with existence read as an extranuclear property of objects (Parsons-style reconstruction of Meinong's Sein). Objects that lack it (the golden mountain, the round square) are still objects with nuclear properties (Aussersein, independence of Sosein from Sein). It is not a nuclear property, so no characterization can confer it. When a nuclear-property theory is used as a definitional frame, its existent objects are the beings.",
+  "basis": "stipulative",
+  "note": "Analyst reconstruction, attribution deferred (Parsons 1980 and Meinong 1904/1907 are navigation, not pinned witnesses). Distinct from EXISTENCE_1 (Russell's nonempty propositional function), EXISTENCE_3 (world-relative actuality ActualAt) and EXISTENCE_5 (the watered-down nuclear existent).",
+  "lean_declaration": "TruthCore.Ontology.ExistencePredicate.ParsonsFrame.ExistsExtranuclear",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "ExistsExtranuclear x: x is among what exists; a property of objects outside the nuclear class, so not part of any object's characterizing set.",
+    "examples": [
+      "On the reconstruction, Mont Blanc has it; the golden mountain and the round square lack it while having their nuclear properties."
+    ],
+    "exclusions": [
+      "Having the nuclear property 'existent' (EXISTENCE_5).",
+      "Being an object at all: nonexistent objects are objects.",
+      "Nonemptiness of a propositional function (EXISTENCE_1)."
+    ],
+    "open_obligations": [
+      "Whether extranuclear existence entails nuclear existence is not assumed (it holds in the recorded model, by construction).",
+      "Its identification with the quarta via's being in act at esse or with the root's domain of beings is an explicit reading, not a theorem."
+    ]
+  }
+}

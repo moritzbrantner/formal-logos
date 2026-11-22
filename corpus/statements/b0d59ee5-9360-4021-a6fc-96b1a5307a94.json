@@ -1,0 +1,9 @@
+{
+  "id": "b0d59ee5-9360-4021-a6fc-96b1a5307a94",
+  "label": "P2 of the definitional argument (weak): whatever has been defined is true",
+  "paraphrase": "Analyst formulation of the owner-specified premise 'whatever is defined is true' in its weak version (attribution deferred): every description that has been introduced by a definitional act in the frame is satisfied by some object. It is restricted to descriptions actually defined; it does not say which descriptions may be defined. Its unrestricted version is the unrestricted characterization principle.",
+  "lean_declaration": "TruthCore.Ontology.ExistencePredicate.DefinitionsAreTrue",
+  "definition_ids": [
+    "75d7aa56-615c-46a0-8c05-67f1624f6b36"
+  ]
+}

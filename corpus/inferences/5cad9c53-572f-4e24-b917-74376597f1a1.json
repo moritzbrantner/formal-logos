@@ -1,0 +1,13 @@
+{
+  "id": "5cad9c53-572f-4e24-b917-74376597f1a1",
+  "label": "Box K node from the GOD_NAMING_1 node and only actual GOD_4 meeting the description (inference)",
+  "input_statement_ids": [
+    "8540b456-5c9e-443b-ae70-8b1d72948e5f",
+    "40b0ad94-ac5e-430c-8849-c6bdde76cb22"
+  ],
+  "output_statement_id": "cdf897a8-5490-561a-b9d2-507486a3f192",
+  "rule": "Box elimination at each accessible world, bridge application, uniqueness of GOD_4",
+  "meaning": "If some actual root n is GOD_4, the one GOD_4, with the classical attributes, and at every accessible world something existing there uniquely satisfies the God-description there (the descriptive reading of 'God exists necessarily'), and nothing could satisfy the God-description at an accessible world while existing there without actually being GOD_4, then n exists at every accessible world: what satisfies the description at each world is GOD_4, hence n. A conditional support option for the box K node from a de dicto descriptive premise plus an explicit bridge across worlds; neither premise is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "3966ff24-a53f-4f3b-a456-4860d43794a4",
+  "label": "Analytic-reading countermodel to the definitional argument, checked",
+  "argument_id": "24a83cad-6927-43bb-93d6-2fd217c4c9b9",
+  "challenge_module": "TruthCore.Results.Ontology.ExistencePredicate.Challenge",
+  "solution_module": "TruthCore.Results.Ontology.ExistencePredicate.Solution",
+  "theorem": "TruthCore.Results.Ontology.ExistencePredicate.analyticReadingCountermodel",
+  "comparator_config": "results/3966ff24-a53f-4f3b-a456-4860d43794a4/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free, zero-axiom omission countermodel: the frame has one object that does not exist and every description defined. P1 holds, the analytic P2 holds (trivially), and GodExists over the frame's beings fails because there are none. The definitional argument is therefore invalid under the analytic reading; only the existential reading of P2, whose retorsion is recorded in this batch, makes it valid."
+}
