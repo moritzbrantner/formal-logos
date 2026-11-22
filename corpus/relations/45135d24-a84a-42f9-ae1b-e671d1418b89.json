@@ -1,0 +1,12 @@
+{
+  "id": "45135d24-a84a-42f9-ae1b-e671d1418b89",
+  "label": "Necessary-predecessor lifting strengthens no novel necessary support",
+  "subject_kind": "statement",
+  "subject_id": "2a9378b4-3dad-591b-a88e-1907a79f1fa5",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "bd983df2-058a-5503-89a1-bbebe87f958b",
+  "verification_result_id": "d973df9d-58db-4ba9-9e06-4db7490251c0",
+  "strictness_result_id": "ebf458e9-a57c-4461-bed4-0eae6ed33c6f",
+  "note": "Same model, support relation and actual world. Lifting adds that every possible supporter of a necessary individual is necessary and actual (certified difference). The converse is supplied, for example, by no contingent ground with actual reflexivity (lifting_of_two_bridges). Strict: the contingent-source model."
+}

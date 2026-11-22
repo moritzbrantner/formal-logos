@@ -1,0 +1,15 @@
+{
+  "id": "bdd28f30-fae0-43b7-aa1d-083f697980fc",
+  "label": "Lifting iff no contingent ground and support edges into necessary individuals recur actually",
+  "paraphrase": "For every world type, individual type, model, support relation and actual world w0: necessary-predecessor lifting holds if and only if no contingent ground of the necessary holds and every possible support edge into a necessary individual recurs as a present support edge at w0. A premise-free comparison; it asserts none of the three statements.",
+  "lean_declaration": "TruthCore.Causality.NecessarilyUnderived.LiftingOverNoContingentExact",
+  "definition_ids": [
+    "5a5b976e-36e1-53f5-a1b1-a723cacd0206",
+    "659dbc9c-63d8-5e4e-a48f-79d0d18d1e67",
+    "b242943a-34cc-582d-8c38-c1203b9d2c91"
+  ],
+  "disambiguation_ids": [
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"
+  ]
+}

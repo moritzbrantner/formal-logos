@@ -1,0 +1,11 @@
+{
+  "id": "ebf458e9-a57c-4461-bed4-0eae6ed33c6f",
+  "label": "Contingent-source control separates lifting from no novel necessary support",
+  "argument_id": "e9d87af1-1062-46e4-b6d5-3282f1f9a316",
+  "challenge_module": "TruthCore.Results.Causality.LiftingStrength.Challenge",
+  "solution_module": "TruthCore.Results.Causality.LiftingStrength.Solution",
+  "theorem": "TruthCore.Results.Causality.LiftingStrength.contingentSourceSeparates",
+  "comparator_config": "results/ebf458e9-a57c-4461-bed4-0eae6ed33c6f/comparator.json",
+  "status": "solution-present",
+  "description": "Strictness control: in the contingent-source model no novel necessary support holds and lifting fails, so no novel necessary support does not entail lifting. A finite interpretation only."
+}

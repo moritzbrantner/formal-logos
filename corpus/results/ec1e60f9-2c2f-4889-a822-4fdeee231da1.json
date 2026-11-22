@@ -1,0 +1,11 @@
+{
+  "id": "ec1e60f9-2c2f-4889-a822-4fdeee231da1",
+  "label": "Lifting is no contingent ground plus actual recurrence of support edges",
+  "argument_id": "08984ad7-307e-40c2-8c56-17b96122ae5f",
+  "challenge_module": "TruthCore.Results.Causality.LiftingStrength.Challenge",
+  "solution_module": "TruthCore.Results.Causality.LiftingStrength.Solution",
+  "theorem": "TruthCore.Results.Causality.LiftingStrength.liftingOverNoContingentExact",
+  "comparator_config": "results/ec1e60f9-2c2f-4889-a822-4fdeee231da1/comparator.json",
+  "status": "solution-present",
+  "description": "Certified difference (#1598) of the registration lifting strengthens no contingent ground of the necessary, with no background: lifting holds iff no contingent ground holds and every possible support edge into a necessary individual is also a present edge at the actual world. Premise-free; it asserts none of the statements compared."
+}

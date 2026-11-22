@@ -1,0 +1,24 @@
+{
+  "id": "205b94d3-f4e9-4feb-afc8-f7dbb40c2e30",
+  "label": "Necessary-predecessor lifting entails no novel necessary support",
+  "premise_statement_ids": [
+    "2a9378b4-3dad-591b-a88e-1907a79f1fa5"
+  ],
+  "conclusion_statement_id": "bd983df2-058a-5503-89a1-bbebe87f958b",
+  "inference_ids": [
+    "a3128c8e-7e07-40e2-8c0c-0828df9ec4f8"
+  ],
+  "meaning": "Strength order registration: if every possible supporter of a necessary individual lifts to a necessary, actually present supporter of it, then every possible support edge between necessary individuals already holds at the actual world. Same model, support relation and actual world. Establishes neither statement. Strictness: the contingent-source model.",
+  "definition_ids": [
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "5a5b976e-36e1-53f5-a1b1-a723cacd0206",
+    "a0763d0d-cd6b-5c08-a33a-f53ab8edd941",
+    "659dbc9c-63d8-5e4e-a48f-79d0d18d1e67",
+    "b242943a-34cc-582d-8c38-c1203b9d2c91"
+  ],
+  "disambiguation_ids": [
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"
+  ],
+  "weakening": true
+}

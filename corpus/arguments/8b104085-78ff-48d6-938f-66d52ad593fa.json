@@ -1,0 +1,24 @@
+{
+  "id": "8b104085-78ff-48d6-938f-66d52ad593fa",
+  "label": "Necessary-predecessor lifting entails no contingent ground of the necessary",
+  "premise_statement_ids": [
+    "2a9378b4-3dad-591b-a88e-1907a79f1fa5"
+  ],
+  "conclusion_statement_id": "96d25c42-71aa-5fa0-841d-9aa62d91e1be",
+  "inference_ids": [
+    "229ba9a5-2718-427b-b158-f5fd5c9bb1f0"
+  ],
+  "meaning": "Strength order registration: if every possible supporter of a necessary individual lifts to a necessary, actually present supporter of it, then every possible supporter of a necessary individual is necessary. Same model, support relation and actual world. Establishes neither statement. Strictness: the non-actual-edge model.",
+  "definition_ids": [
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "5a5b976e-36e1-53f5-a1b1-a723cacd0206",
+    "a0763d0d-cd6b-5c08-a33a-f53ab8edd941",
+    "659dbc9c-63d8-5e4e-a48f-79d0d18d1e67",
+    "b242943a-34cc-582d-8c38-c1203b9d2c91"
+  ],
+  "disambiguation_ids": [
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"
+  ],
+  "weakening": true
+}

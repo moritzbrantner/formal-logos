@@ -1,0 +1,15 @@
+{
+  "id": "641fd42f-3d0e-4723-9d0f-9d7683cfbfc7",
+  "label": "A non-actual-edge model separates lifting from no contingent ground of the necessary",
+  "paraphrase": "Closed mathematical control: two worlds and two individuals, universal frame, actual world false; both individuals exist at every world, and false supports true at world true only. No contingent ground of the necessary holds (every individual is necessary) and lifting fails (the support edge is absent at the actual world). A statement about this finite interpretation only.",
+  "lean_declaration": "TruthCore.Causality.NecessarilyUnderived.NonActualEdgeSeparates",
+  "definition_ids": [
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "5a5b976e-36e1-53f5-a1b1-a723cacd0206",
+    "659dbc9c-63d8-5e4e-a48f-79d0d18d1e67"
+  ],
+  "disambiguation_ids": [
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"
+  ]
+}
