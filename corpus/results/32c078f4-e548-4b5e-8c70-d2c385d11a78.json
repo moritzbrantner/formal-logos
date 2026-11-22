@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Case.Catholicism.GodIncorruptibility.controls",
   "comparator_config": "results/32c078f4-e548-4b5e-8c70-d2c385d11a78/comparator.json",
   "status": "solution-present",
-  "description": "Controls for the GOD_4 incorruptibility composition: a nonvacuity witness with a GOD_4 instance; for each of the three premises an interpretation in which the other two hold and some GOD_4 being can fail to be (so each premise is needed); and an interpretation in which GOD_4 is simply incorruptible but not NECESSARY_1 in the tertia via's sense. Model-witnessed facts about these interpretations only; no interpretation is claimed metaphysically possible."
+  "description": "Controls for the GOD_4 incorruptibility composition: a nonvacuity witness with a GOD_4 instance; for each of the three premises an interpretation in which the other two hold and some GOD_4 being can fail to be (so each premise is needed); and an interpretation in which the three premises hold and GOD_4 is simply incorruptible but not necessary in the sense of DEF-NECESSARY-BEING (it is possible that it is not). Model-witnessed facts about these interpretations only; no interpretation is claimed metaphysically possible."
 }

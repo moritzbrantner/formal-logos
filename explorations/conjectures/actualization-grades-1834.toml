@@ -21,7 +21,7 @@
 #   T4 incompatibility of a recorded rival with a cross-family bundle.
 # Controls: name-only identification of the two God predicates (GOD_2, GOD_4),
 # a tautology, a single-family incompatibility and the tertia via's
-# "necessary" (NECESSARY_1) against Theta.8 incorruptibility.
+# "necessary being" (DEF-NECESSARY-BEING: cannot not-be) against Theta.8 incorruptibility.
 #
 # Certification is deterministic: Duper over delta-unfolded project definitions,
 # single-deletion minimization, vacuity, the prove-sweep transcription probe,
@@ -113,7 +113,7 @@ premise = [
   { statement = "STMT-MAXIME-ENS-CAUSES-BEING-OF-ALL", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", CausesIn = "CausesIn", esse = "esse" } },
 ]
 conclusion = { statement = "STMT-FIRST-UNMOVED-MOVER-IS-FIRST-BEING", args = { Being = "Being", Respect = "Respect", MovedIn = "MovedIn", MovesIn = "MovesIn", PriorSimply = "PriorSimply" } }
-witness = { assign = { Being = "Unit", Respect = "Unit", MovedIn = "fun _ _ => False", MovesIn = "fun _ _ _ => True", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", CausesIn = "fun _ _ _ => True", esse = "()", PriorSimply = "fun _ _ => True" } }
+witness = { assign = { Being = "Unit", Respect = "Unit", MovedIn = "fun _ _ => False", MovesIn = "fun _ _ _ => True", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", CausesIn = "fun _ _ _ => True", esse = "()", PriorSimply = "fun _ _ => True" }, instance = "∃ f, IsFirstUnmovedMover MovedIn MovesIn f" }
 
 [[candidate]]
 id = "C03"
@@ -174,7 +174,7 @@ id = "C05b"
 template = "T1 control: the two God predicates kept apart, with the exact bridge"
 meaning = "C05 with God (GOD_2) and IsGod (GOD_4) as separate binders, plus the explicit bridge that whatever is God in the Summa's sense is God in the classical sense."
 scope = "As C05."
-matters = "Names the exact missing bridge for STMT-UNIQUE-PURE-ACT-FIRST-MOVER-IS-GOD along the quarta via."
+matters = "Names one sufficient bridge (not shown to be weakest) for STMT-UNIQUE-PURE-ACT-FIRST-MOVER-IS-GOD along the quarta via, valid only together with the C02-C04 MovedIn/MovesIn and carrier identifications. Its non-implication is immediate (IsGod is fresh to the premises): it names a missing link, not substantive independence."
 binders = [["Being", "Type"], ["Respect", "Type"],
   ["MovedIn", "Being → Respect → Prop"], ["MovesIn", "Being → Being → Respect → Prop"],
   ["InAct", "Being → Respect → Prop"], ["MoreIn", "Respect → Being → Being → Prop"],
@@ -223,7 +223,7 @@ premise = [
   { statement = "ca55ed3a-8f7d-4e7c-8799-c61fdb4cce60", args = { B = "Being", R = "R", CanFailToBe = "CanFailToBe", esse = "esse2", PriorSimply = "PriorSimply" } },
 ]
 conclusion = { lean = "∀ m, IsMaximumIn InAct MoreIn esse m → IncorruptibleSimply CanFailToBe esse2 m" }
-witness = { assign = { Being = "Unit", Respect = "Unit", R = "Unit", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", esse = "()", PriorSimply = "fun _ _ => True", CanFailToBe = "fun _ _ => False", esse2 = "()" } }
+witness = { assign = { Being = "Unit", Respect = "Unit", R = "Unit", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", esse = "()", PriorSimply = "fun _ _ => True", CanFailToBe = "fun _ _ => False", esse2 = "()" }, instance = "∃ m, IsMaximumIn InAct MoreIn esse m" }
 [[candidate.countermodel]]
 note = "Omit max-is-first: the maximum is not first, nothing is first, it can fail to be."
 omit = ["STMT-MAXIMUM-IN-BEING-IS-FIRST-BEING"]
@@ -264,7 +264,7 @@ premise = [
   { statement = "61ad11f3-476f-411d-9720-d9f05cbc22fc", args = { B = "Being", R = "R", InAct = "InAct2", InPotency = "InPotency", PriorSimply = "PriorSimply" } },
 ]
 conclusion = { lean = "∀ m, IsMaximumIn InAct MoreIn esse m → ∀ r, InPotency m r → InAct2 m r" }
-witness = { assign = { Being = "Unit", Respect = "Unit", R = "Unit", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", esse = "()", PriorSimply = "fun _ _ => True", InAct2 = "fun _ _ => True", InPotency = "fun _ _ => True" } }
+witness = { assign = { Being = "Unit", Respect = "Unit", R = "Unit", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", esse = "()", PriorSimply = "fun _ _ => True", InAct2 = "fun _ _ => True", InPotency = "fun _ _ => True" }, instance = "∃ m, IsMaximumIn InAct MoreIn esse m" }
 [[candidate.countermodel]]
 note = "Omit first-being act priority: the only being is maximal, first, in potency and not in act."
 omit = ["61ad11f3-476f-411d-9720-d9f05cbc22fc"]
@@ -289,7 +289,7 @@ premise = [
   { statement = "ca55ed3a-8f7d-4e7c-8799-c61fdb4cce60", args = { B = "Being", R = "R", CanFailToBe = "CanFailToBe", esse = "esse2", PriorSimply = "PriorSimply" } },
 ]
 conclusion = { lean = "∀ g, IsGod g → IncorruptibleSimply CanFailToBe esse2 g" }
-witness = { assign = { Being = "Unit", Respect = "Unit", R = "Unit", IsGod = "fun _ => True", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", esse = "()", PriorSimply = "fun _ _ => True", CanFailToBe = "fun _ _ => False", esse2 = "()" } }
+witness = { assign = { Being = "Unit", Respect = "Unit", R = "Unit", IsGod = "fun _ => True", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", esse = "()", PriorSimply = "fun _ _ => True", CanFailToBe = "fun _ _ => False", esse2 = "()" }, instance = "∃ g, IsGod g" }
 [[candidate.countermodel]]
 note = "Omit GOD_4 is maximal: the God is not maximal (nothing is in act), nothing is first, and it can fail to be."
 omit = ["STMT-GOD-IS-MAXIMAL-IN-BEING"]
@@ -306,9 +306,9 @@ assign = { Being = "Unit", Respect = "Unit", R = "Unit", IsGod = "fun _ => True"
 [[candidate]]
 id = "C11"
 template = "T3 control: the tertia via's necessity from the same bundle"
-meaning = "C10's bundle concludes that GOD_4 is NECESSARY_1 in the tertia via's sense (it is not possible that it is at no time)."
+meaning = "C10's bundle concludes that GOD_4 is necessary in the tertia via's sense of DEF-NECESSARY-BEING (it cannot not-be: it is not possible that it is not)."
 scope = "The tertia via's Time, Possible and IsAt are fresh binders: nothing in the bundle mentions them."
-matters = "Prose calls both 'necessary being'; the control checks that CORRUPTIBLE_INCORRUPTIBLE_1 does not silently yield NECESSARY_1 (contingency family, a76215f2)."
+matters = "Prose calls both 'necessary being'; the control checks that CORRUPTIBLE_INCORRUPTIBLE_1 does not silently yield the necessary being of DEF-NECESSARY-BEING (contingency family, a76215f2). Its non-implication is immediate (Possible, IsAt and Time are fresh to the premises): it names a missing link, not substantive independence."
 binders = [["Being", "Type"], ["Respect", "Type"], ["R", "Type"], ["Time", "Type"],
   ["IsGod", "Being → Prop"],
   ["InAct", "Being → Respect → Prop"], ["MoreIn", "Respect → Being → Being → Prop"],
@@ -321,9 +321,9 @@ premise = [
   { statement = "ca55ed3a-8f7d-4e7c-8799-c61fdb4cce60", args = { B = "Being", R = "R", CanFailToBe = "CanFailToBe", esse = "esse2", PriorSimply = "PriorSimply" } },
 ]
 conclusion = { lean = "∀ g, IsGod g → IsNecessary Possible IsAt g" }
-bridge = { lean = "∀ x, IncorruptibleSimply CanFailToBe esse2 x → IsNecessary Possible IsAt x", meaning = "OPEN: what cannot fail to be in being (CORRUPTIBLE_INCORRUPTIBLE_1) is not possibly at no time (the tertia via's NECESSARY_1)." }
+bridge = { lean = "∀ x, IncorruptibleSimply CanFailToBe esse2 x → IsNecessary Possible IsAt x", meaning = "One sufficient OPEN bridge (not shown to be weakest): what cannot fail to be in being (CORRUPTIBLE_INCORRUPTIBLE_1) cannot not-be (DEF-NECESSARY-BEING). With the registered converse b8d21cd0 it would make the two senses coextensive." }
 [[candidate.countermodel]]
-note = "The only being is God, maximal, first and incorruptible, but possibly at no time."
+note = "The only being is God, maximal, first and incorruptible, but it is possible that it is not (Possible holds of every condition; it is at no time)."
 assign = { Being = "Unit", Respect = "Unit", R = "Unit", Time = "Unit", IsGod = "fun _ => True", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", esse = "()", PriorSimply = "fun _ _ => True", CanFailToBe = "fun _ _ => False", esse2 = "()", Possible = "fun _ => True", IsAt = "fun _ _ => False" }
 
 # --------------------------------------------- T4 incompatibilities with recorded rivals
@@ -384,5 +384,5 @@ premise = [
 ]
 conclusion = { lean = "False" }
 [[candidate.countermodel]]
-note = "Joint model: 0 is the maximum and the only first being, in act and in potency in nothing else; 1 is in potency with only 2 prior to it, and 2 is not in act; 1 and 2 are prior to each other, so neither is first."
+note = "Joint model: 0 is the maximum and the only first being, in act and in potency in nothing else; 1 is in potency with only 2 prior to it, and 2 is not in act; 1 and 2 are prior to each other, so neither is first. Mutual simple priority is admissible here because no premise of the bundle states that simple priority is asymmetric."
 assign = { Being = "Fin 3", Respect = "Unit", R = "Unit", InAct = "fun x _ => x = 0", MoreIn = "fun _ _ _ => False", CausesIn = "fun _ _ _ => True", esse = "()", PriorSimply = "fun y x => (y = 2 ∧ x = 1) ∨ (y = 1 ∧ x = 2)", InAct2 = "fun x _ => x = 0", InPotency = "fun x _ => x = 1" }

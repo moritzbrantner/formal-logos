@@ -25,7 +25,9 @@ theorem godIsIncorruptibleSimply {Being Respect R : Type}
   sorry
 
 /-- The controls of `Control.Certificate`: a nonvacuity witness, the three
-omission models (each premise is needed) and the *tertia via* control. -/
+omission models (each premise is needed) and the *tertia via* control. The
+proof uses no axiom: every step is case analysis on `Bool`/`Unit`, `decide`
+on concrete Booleans, or an explicit term. -/
 theorem controls : TruthCore.Case.Catholicism.GodIncorruptibility.Control.Certificate := by
   sorry
 

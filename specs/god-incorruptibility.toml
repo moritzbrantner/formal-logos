@@ -1,12 +1,14 @@
 # GOD_4 cannot fail to be in being (CORRUPTIBLE_INCORRUPTIBLE_1): the reviewed
 # survivor of the target-free cross-family conjecture pilot of #1834 (candidate
 # C10 of explorations/conjectures/actualization-grades-1834.toml; the full
-# candidate list, outcomes and filters are in the pilot's attempt record).
-# It joins the quarta via (GOD_4 is maximal in being; the maximum in being is
-# the first being) and the act/potency family (Metaphysics Theta.8: every first
-# being is simply incorruptible) through the one PRIOR_1 relation tagged on both
-# sides. Controls: a nonvacuity witness, one omission model per premise, and the
-# tertia via control (the bundle does not give NECESSARY_1).
+# candidate list, outcomes and filters are in the pilot's attempt record
+# fca228f3). It joins the quarta via (GOD_4 is maximal in being; the maximum in
+# being is the first being) and the act/potency family (Metaphysics Theta.8:
+# every first being is simply incorruptible) through the one PRIOR_1 relation
+# tagged on both sides. Controls: a nonvacuity witness, one omission model per
+# premise, and the tertia via control (the three premises hold and the
+# conclusion holds, yet GOD_4 is not necessary in the sense of
+# DEF-NECESSARY-BEING).
 #
 #   python3 scripts/argument_batch.py challenge \
 #     TruthCore/Results/Case/Catholicism/GodIncorruptibility/Solution.lean \
@@ -22,16 +24,16 @@ results = "TruthCore.Results.Case.Catholicism.GodIncorruptibility"
 [[statement]]
 id = "Whatever is GOD_4 is CORRUPTIBLE_INCORRUPTIBLE_1: it cannot fail to be in being"
 lean = "GodIsIncorruptibleSimply"
-paraphrase = "Whatever is GOD_4 (the God of classical theism) is simply incorruptible: it cannot fail to be in the respect of being (esse), in the sense of DEF-INCORRUPTIBLE-SIMPLY. It says nothing about failing to be in a place, quantity or quality, and it is not the tertia via's temporal-modal necessity NECESSARY_1 (not possibly at no time) nor the modal NECESSARY_2 box: neither is identified with it. The respect of being here is the one of the Theta.8 vocabulary (CanFailToBe, esse); no identification with the quarta via's esse is made."
+paraphrase = "Whatever is GOD_4 (the God of classical theism) is simply incorruptible: it cannot fail to be in the respect of being (esse), in the sense of DEF-INCORRUPTIBLE-SIMPLY. It says nothing about failing to be in a place, quantity or quality. It is not the tertia via's necessary being of DEF-NECESSARY-BEING (NECESSARY_3 in DISAMB-NECESSARY: x cannot not-be, that is, it is not possible that x is not) nor the modal NECESSARY_2 box: neither is identified with it. The respect of being here is the one of the Theta.8 vocabulary (CanFailToBe, esse); no identification with the quarta via's esse is made (DISAMB-EXISTENCE-ESSE-SUPPORT)."
 definitions = ["DEF-GOD-OF-CLASSICAL-THEISM", "DEF-INCORRUPTIBLE-SIMPLY", "DEF-RESPECT"]
-disambiguations = ["DISAMB-CORRUPTIBLE-SIMPLY-OR-IN-A-RESPECT"]
+disambiguations = ["DISAMB-CORRUPTIBLE-SIMPLY-OR-IN-A-RESPECT", "DISAMB-EXISTENCE-ESSE-SUPPORT"]
 
 [[statement]]
 id = "GOD_4 incorruptibility controls: witness, omissions and the tertia via"
 lean = "Control.Certificate"
-paraphrase = "Closed controls for the GOD_4 incorruptibility composition. (1) Witness: over one being that is GOD_4, all three premises hold, so the result is not vacuous in its antecedent. (2) Omitting 'whatever is GOD_4 is maximal in being': over two beings, one GOD_4, nothing in act, each simply prior to the other, everything able to fail to be; the other two premises hold and GOD_4 can fail to be. (3) Omitting 'the maximum in being is the first being': the GOD_4 being is maximal but the other being is simply prior to it. (4) Omitting 'every first being is simply incorruptible' (the contingent-first-being rival): the only being is GOD_4, maximal and first, and can fail to be. (5) Tertia via control: in a one-being, one-time interpretation GOD_4 is simply incorruptible but possibly at no time, so not NECESSARY_1. Statements about these interpretations only."
-definitions = ["DEF-GOD-OF-CLASSICAL-THEISM", "DEF-INCORRUPTIBLE-SIMPLY", "DEF-FIRST-BEING", "DEF-SIMPLE-PRIORITY"]
-disambiguations = ["DISAMB-CORRUPTIBLE-SIMPLY-OR-IN-A-RESPECT"]
+paraphrase = "Closed controls for the GOD_4 incorruptibility composition. (1) Witness: over one being that is GOD_4, all three premises hold, so the result is not vacuous in its antecedent. (2) Omitting 'whatever is GOD_4 is maximal in being': over two beings, one GOD_4, nothing in act, each simply prior to the other, everything able to fail to be; the other two premises hold and GOD_4 can fail to be. (3) Omitting 'the maximum in being is the first being': the GOD_4 being is maximal but the other being is simply prior to it. (4) Omitting 'every first being is simply incorruptible' (the contingent-first-being rival): the only being is GOD_4, maximal and first, and can fail to be. (5) Tertia via control: over one being and one time, the three premises hold and GOD_4 is simply incorruptible, but it is possible that GOD_4 is not, so it is not necessary in the sense of DEF-NECESSARY-BEING (it cannot not-be). Statements about these interpretations only."
+definitions = ["DEF-GOD-OF-CLASSICAL-THEISM", "DEF-INCORRUPTIBLE-SIMPLY", "DEF-FIRST-BEING", "DEF-SIMPLE-PRIORITY", "DEF-NECESSARY-BEING"]
+disambiguations = ["DISAMB-CORRUPTIBLE-SIMPLY-OR-IN-A-RESPECT", "DISAMB-NECESSARY"]
 
 # ---------------------------------------------------------------- arguments
 
@@ -41,14 +43,18 @@ theorem = "godIsIncorruptibleSimply"
 premises = ["STMT-GOD-IS-MAXIMAL-IN-BEING", "STMT-MAXIMUM-IN-BEING-IS-FIRST-BEING", "ca55ed3a-8f7d-4e7c-8799-c61fdb4cce60"]
 conclusion = "Whatever is GOD_4 is CORRUPTIBLE_INCORRUPTIBLE_1: it cannot fail to be in being"
 axioms = []
+definitions = ["5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "DEF-FIRST-BEING", "DEF-GOD-OF-CLASSICAL-THEISM", "DEF-INCORRUPTIBLE-SIMPLY", "a2a8de58-42e0-5481-b7fb-848ae8602036", "DEF-RESPECT", "DEF-SIMPLE-PRIORITY"]
+disambiguations = ["DISAMB-CORRUPTIBLE-SIMPLY-OR-IN-A-RESPECT", "1795a62e-f78b-5f5b-94e7-9e7490824811", "DISAMB-PRIORITY-SIMPLE-OR-IN-TIME", "DISAMB-EXISTENCE-ESSE-SUPPORT"]
 rule = "Universal instantiation at a GOD_4 being and two modus ponens steps through maximality and firstness"
-meaning = "Whatever is GOD_4 is maximal in being (open stage-2 link, 4c79298d); whatever is maximal in being is the first being, nothing else SIMPLY_PRIOR_1 to it (eaa4c679); every first being cannot fail to be in being (open Theta.8 analyst premise ca55ed3a, whose denial is a contingent first being); so whatever is GOD_4 cannot fail to be in being. The quarta via side and the Theta.8 side share only the PRIOR_1 relation (tagged on both declarations); the Theta.8 respect carrier and its esse stay separate from the quarta via's, and the conclusion uses the Theta.8 ones. Each premise is needed and the bundle is not vacuous (Control.Certificate). The bundle does not give the tertia via's NECESSARY_1 (Control.NotTertiaViaNecessary): passing to it needs the OPEN bridge 'what cannot fail to be is not possibly at no time'. Found by the target-free conjecture pilot of #1834 (candidate C10); a short composition whose value is the new explicit link between GOD_4 and CORRUPTIBLE_INCORRUPTIBLE_1, not logical depth. Conditional consequence only; no premise is established."
+meaning = "Whatever is GOD_4 is maximal in being (open stage-2 link, 4c79298d); whatever is maximal in being is the first being, nothing else SIMPLY_PRIOR_1 to it (eaa4c679); every first being cannot fail to be in being (open Theta.8 analyst premise ca55ed3a, whose denial is a contingent first being; a horizontal derivation of it from the tertia via is specified in docs/notes/esse-cause-efficiency-1633.md); so whatever is GOD_4 cannot fail to be in being. The quarta via side and the Theta.8 side share only the PRIOR_1 relation (tagged on both declarations); the Theta.8 respect carrier and its esse stay separate from the quarta via's (DISAMB-EXISTENCE-ESSE-SUPPORT), and the conclusion uses the Theta.8 ones. Each premise is needed and the bundle is not vacuous (Control.Certificate). The three premises together with the conclusion do not give the tertia via's necessary being (DEF-NECESSARY-BEING: x cannot not-be; Control.NotTertiaViaNecessary); one sufficient OPEN bridge (not shown to be weakest) is 'whatever cannot fail to be in being cannot not-be'. Found by the target-free conjecture pilot of #1834 (candidate C10); a short composition whose value is the new explicit link between GOD_4 and CORRUPTIBLE_INCORRUPTIBLE_1, not logical depth. Conditional consequence only; no premise is established."
 
 [[argument]]
 id = "GOD_4 incorruptibility controls, checked"
 theorem = "controls"
 premises = []
 conclusion = "GOD_4 incorruptibility controls: witness, omissions and the tertia via"
-axioms = ["propext", "Classical.choice", "Quot.sound"]
-rule = "Explicit one- and two-being interpretations checked by case analysis and simp"
-meaning = "Controls for the GOD_4 incorruptibility composition: a nonvacuity witness with a GOD_4 instance; for each of the three premises an interpretation in which the other two hold and some GOD_4 being can fail to be (so each premise is needed); and an interpretation in which GOD_4 is simply incorruptible but not NECESSARY_1 in the tertia via's sense. Model-witnessed facts about these interpretations only; no interpretation is claimed metaphysically possible."
+axioms = []
+definitions = ["DEF-GOD-OF-CLASSICAL-THEISM", "DEF-INCORRUPTIBLE-SIMPLY", "DEF-FIRST-BEING", "DEF-SIMPLE-PRIORITY", "DEF-NECESSARY-BEING"]
+disambiguations = ["DISAMB-CORRUPTIBLE-SIMPLY-OR-IN-A-RESPECT", "DISAMB-NECESSARY"]
+rule = "Explicit one- and two-being interpretations checked by case analysis, decide on concrete Booleans and explicit terms (no axioms)"
+meaning = "Controls for the GOD_4 incorruptibility composition: a nonvacuity witness with a GOD_4 instance; for each of the three premises an interpretation in which the other two hold and some GOD_4 being can fail to be (so each premise is needed); and an interpretation in which the three premises hold and GOD_4 is simply incorruptible but not necessary in the sense of DEF-NECESSARY-BEING (it is possible that it is not). Model-witnessed facts about these interpretations only; no interpretation is claimed metaphysically possible."

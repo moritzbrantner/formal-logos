@@ -84,6 +84,8 @@ CHAIN = {
         {"statement": "S-B", "args": {"B": "B", "Q": "Q", "S": "S"}},
     ],
     "conclusion": {"lean": "∀ x, P x → S x"},
+    "witness": {"assign": {"B": "Unit", "P": "fun _ => True", "Q": "fun _ => True", "S": "fun _ => True"},
+                "instance": "∃ x, P x"},
 }
 
 
@@ -117,11 +119,20 @@ class Render(unittest.TestCase):
 
 class Acceptance(unittest.TestCase):
     def test_true_multi_premise_consequence_survives_with_all_assumptions(self):
-        r = run(config(CHAIN), corpus(), proved={"main"})
+        r = run(config(CHAIN), corpus(), proved={"main", "wit"})
         self.assertEqual(r["outcome"], "verified_conditional_implication")
         self.assertEqual(r["minimal_premises"], ["S-A", "S-B"])
         self.assertEqual(r["dropped_premises"], [])
         self.assertTrue(r["support"])
+        self.assertTrue(all(v.startswith("not dropped") for v in r["premise_status"].values()))
+
+    def test_support_needs_a_certified_witness(self):
+        r = run(config(CHAIN), corpus(), proved={"main"})
+        self.assertEqual(r["outcome"], "verified_conditional_implication")
+        self.assertFalse(r["support"])
+        self.assertTrue(any("not support" in f for f in r["flags"]))
+        text, _ = dc.render(config(CHAIN), corpus(), BINDERS)
+        self.assertIn("∧ (∃ x, P x)) (Unit)", text)
 
     def test_single_family_consequence_is_not_cross_family(self):
         # both premises in one family and a new conclusion: not cross-family
@@ -135,6 +146,17 @@ class Acceptance(unittest.TestCase):
         r = run(config(CHAIN), corpus(), proved={"main", "drop1"})
         self.assertEqual(r["minimal_premises"], ["S-A"])
         self.assertEqual(r["dropped_premises"], ["S-B"])
+
+    def test_two_independent_deletions_do_not_drop_both(self):
+        r = run(config(CHAIN), corpus(), proved={"main", "drop0", "drop1"})
+        self.assertEqual(r["minimal_premises"], ["S-A", "S-B"])
+        self.assertTrue(any("not minimized" in f for f in r["flags"]))
+
+    def test_needed_only_with_a_certified_omission_model(self):
+        cand = dict(CHAIN, countermodel=[{"omit": ["S-B"], "assign": {"B": "Bool", "P": "fun _ => True", "Q": "fun _ => True", "S": "fun _ => False"}}])
+        r = run(config(cand), corpus(), proved={"main", "cm0"})
+        self.assertEqual(r["premise_status"]["S-B"], "needed (omission model certified)")
+        self.assertTrue(r["premise_status"]["S-A"].startswith("not dropped (unresolved"))
 
     def test_known_implication_is_rejected_as_old(self):
         cand = {"id": "K2", "binders": BINDS[:4],
@@ -170,6 +192,27 @@ class Acceptance(unittest.TestCase):
         self.assertEqual(r["inconsistent_core"], ["S-A", "S-NOT-A"])
         self.assertFalse(r["support"])
 
+    def test_same_module_needs_the_same_parameter_name(self):
+        # A.P (Mod1) and B.S (Mod1) on one binder: same module, different names
+        cand = {"id": "K5", "binders": [["B", "Type"], ["P", "B → Prop"], ["Q", "B → Prop"]],
+                "premise": [{"statement": "S-A", "args": {"B": "B", "P": "P", "Q": "Q"}},
+                            {"statement": "S-B", "args": {"B": "B", "Q": "Q", "S": "P"}}],
+                "conclusion": {"lean": "∀ x, P x → P x"}}
+        r = run(config(cand), corpus(), proved={"main"})
+        self.assertEqual(r["outcome"], "open_bridge")
+        self.assertIn("P", {ob["binder"] for ob in r["identification"]["obligations"]})
+
+    def test_two_parameters_of_one_occurrence_are_an_obligation(self):
+        cand = {"id": "K6", "binders": [["B", "Type"], ["P", "B → Prop"], ["S", "B → Prop"]],
+                "premise": [{"statement": "S-A", "args": {"B": "B", "P": "P", "Q": "P"}},
+                            {"statement": "S-B", "args": {"B": "B", "Q": "P", "S": "S"}}],
+                "conclusion": {"lean": "∀ x, P x → S x"}}
+        r = run(config(cand), corpus(), proved={"main"})
+        obs = {ob["binder"]: ob for ob in r["identification"]["obligations"]}
+        self.assertIn("P", obs)
+        self.assertEqual(obs["P"]["same_declaration"], ["M1.A"])
+        self.assertFalse(r["support"])
+
     def test_name_only_cross_domain_match_is_rejected(self):
         # C (Mod2) and E (Mod3) share T by name only: no module, no tag
         cand = {"id": "K4", "binders": [["B", "Type"], ["S", "B → Prop"], ["T", "B → Prop"]],
@@ -190,6 +233,7 @@ class Acceptance(unittest.TestCase):
         # with every relation tagged alike the identification is admissible
         tags = {("M2.D", "S"): "S_1", ("M3.E", "S"): "S_1", ("M2.D", "T"): "T_1", ("M3.E", "T"): "T_1"}
         r = run(cfg, corpus(tags=tags), proved={"main"})
+        self.assertEqual(r["identification"]["obligations"], [])
         self.assertEqual(r["outcome"], "verified_conditional_implication")
         # different senses of one term: rejected as a sense mismatch
         tags[("M3.E", "T")] = "T_2"
@@ -214,6 +258,25 @@ class Acceptance(unittest.TestCase):
         self.assertEqual(r["omission_models"][0]["omit"], ["S-B"])
 
 
+class RealConfiguration(unittest.TestCase):
+    def test_pilot_candidates_resolve(self):
+        path = Path(__file__).resolve().parent.parent / "explorations" / "conjectures" / "actualization-grades-1834.toml"
+        cfg = dc.load_config(path)
+        crp = dc.Corpus.load(dc.ROOT)
+        owner = dc.family_of(cfg, crp)
+        self.assertEqual(len(cfg["candidate"]), 15)
+        for cand in cfg["candidate"]:
+            items = list(cand.get("premise", [])) + ([cand["conclusion"]] if "statement" in cand["conclusion"] else [])
+            for item in items:
+                sid = crp.resolve(item["statement"])
+                self.assertTrue(crp.declaration(sid))
+                self.assertTrue(sid in owner or crp.resolve("STMT-FIRST-UNMOVED-MOVER-IS-MAXIME-ENS") == sid, cand["id"])
+            names = {n for n, _ in cand["binders"]}
+            for model in cand.get("countermodel", []) + ([cand["witness"]] if "witness" in cand else []):
+                self.assertEqual(set(model["assign"]), names, cand["id"])
+        self.assertTrue(dc.declarations(cfg, crp))
+
+
 class Filters(unittest.TestCase):
     def test_transcription_and_tautology(self):
         r = run(config(CHAIN), corpus(), proved={"main", "probe"})
@@ -224,6 +287,24 @@ class Filters(unittest.TestCase):
     def test_axioms_outside_the_three_are_rejected(self):
         r = run(config(CHAIN), corpus(), proved={"main"}, axioms=("propext", "Lean.ofReduceBool"))
         self.assertIn("axioms", r["filters"])
+
+    def test_axioms_apply_to_every_check(self):
+        cand = {"id": "K7", "binders": BINDS[:3],
+                "premise": [{"statement": "S-A", "args": {"B": "B", "P": "P", "Q": "Q"}},
+                            {"statement": "S-NOT-A", "args": {"B": "B", "P": "P", "Q": "Q"}}],
+                "conclusion": {"lean": "∀ x, P x"}}
+        r = run(config(cand), corpus(), proved={"vac"}, axioms=("Lean.ofReduceBool",))
+        self.assertNotEqual(r["outcome"], "incompatibility")
+        self.assertTrue(any("outside the allowed" in f for f in r["flags"]))
+
+    def test_open_bridge_wording_under_obligations(self):
+        cand = {"id": "K8", "binders": [["B", "Type"], ["S", "B → Prop"], ["T", "B → Prop"]],
+                "premise": [{"statement": "S-D", "args": {"B": "B", "S": "S", "T": "T"}},
+                            {"statement": "S-E", "args": {"B": "B", "S": "S", "T": "T"}}],
+                "conclusion": {"lean": "∀ x, S x → T x"}, "bridge": {"lean": "∀ x, S x → T x"}}
+        r = run(config(cand), corpus(), proved={"bridge"})
+        self.assertIn("under the listed identifications", r["bridge"]["verified"])
+        self.assertIn("not shown to be weakest", r["bridge"]["verified"])
 
     def test_open_bridge_needs_bridge_without_restating(self):
         cand = dict(CHAIN, bridge={"lean": "∀ x, Q x → S x"})

@@ -30,26 +30,35 @@ theorem godIsIncorruptibleSimply {Being Respect R : Type}
   exact hIncorruptible g (hFirstBeing g (hMaximal g hg))
 
 /-- The controls of `Control.Certificate`: a nonvacuity witness, the three
-omission models (each premise is needed) and the *tertia via* control. -/
+omission models (each premise is needed) and the *tertia via* control. The
+proof uses no axiom: every step is case analysis on `Bool`/`Unit`, `decide`
+on concrete Booleans, or an explicit term. -/
 theorem controls : TruthCore.Case.Catholicism.GodIncorruptibility.Control.Certificate := by
-  refine ⟨⟨?_, ?_, ?_, ⟨(), trivial⟩⟩, ⟨?_, ?_, ?_⟩, ⟨?_, ?_, ?_⟩, ⟨?_, ?_, ?_⟩, ?_, ?_⟩
+  -- no first being when each of two beings is simply prior to the other
+  have noFirst : ∀ f : Bool, (∀ y : Bool, y ≠ f → y = f) → False := by
+    intro f hf
+    have h := hf (!f) (by cases f <;> decide)
+    cases f
+    · exact absurd h (by decide)
+    · exact absurd h (by decide)
+  refine ⟨⟨?_, ?_, ?_, ⟨(), trivial⟩⟩, ⟨?_, ?_, ?_⟩, ⟨?_, ?_, ?_⟩, ⟨?_, ?_, ?_⟩,
+    ⟨?_, ?_, ?_, ?_, ?_⟩⟩
   · intro _ _; exact ⟨trivial, fun _ h => h⟩
   · intro _ _ _ _; rfl
   · intro _ _ h; exact h
   · intro m hm; exact absurd hm.1 id
-  · intro f hf hc
-    have := hf (!f) (by cases f <;> decide)
-    cases f <;> simp at this
+  · intro f hf _; exact noFirst f hf
   · intro h; exact h true rfl trivial
-  · intro g hg; subst hg; exact ⟨trivial, fun _ h => h⟩
-  · intro f hf hc
-    have := hf (!f) (by cases f <;> decide)
-    cases f <;> simp at this
+  · intro g hg; cases hg; exact ⟨trivial, fun _ h => h⟩
+  · intro f hf _; exact noFirst f hf
   · intro h; exact h true rfl trivial
   · intro _ _; exact ⟨trivial, fun _ h => h⟩
   · intro _ _ _ _; rfl
   · intro h; exact h () trivial trivial
+  · intro _ _; exact ⟨trivial, fun _ h => h⟩
+  · intro _ _ _ _; rfl
   · intro _ _ h; exact h
-  · intro h; exact h () trivial (by simp [PossibleNotToBe])
+  · intro _ _ h; exact h
+  · intro h; exact h () trivial trivial
 
 end TruthCore.Results.Case.Catholicism.GodIncorruptibility

@@ -331,23 +331,35 @@ python3 scripts/discover_conjecture.py classify CONFIG --binders B.jsonl --lean-
 Each candidate states its outer binders with their types, its premises
 (existing statements, every declaration parameter mapped to an outer binder:
 nothing is identified by unification), its conclusion (an existing statement
-or a new proposition over the outer binders), and optionally decide-checked
-models and an explicit OPEN bridge. The rendered Lean file checks, each as
-its own declaration under `#print axioms`, the goal (`duper` after
-delta-unfolding the project definitions, as `truth prove-sweep` does), the
-premises against `False`, every single-premise deletion, the conclusion from
-no premise, the prove-sweep transcription probe, literal negation between
-premises, the models, and the bridge with and without the premises.
+or a new proposition over the outer binders), and optionally models (checked
+by `decide` or `simp`), a witness model with an optional antecedent instance,
+and an explicit OPEN bridge. The rendered Lean file checks, each as its own
+declaration under `#print axioms`, the goal (`duper` after delta-unfolding the
+project definitions, as `truth prove-sweep` does), the premises against
+`False`, every single-premise deletion, the conclusion from no premise, the
+prove-sweep transcription probe, literal negation between premises, the
+models, and the bridge with and without the premises. Every check counts as
+proved only within `propext`, `Classical.choice` and `Quot.sound`.
 
-`classify` gives each candidate one outcome: `verified_conditional_implication`,
-`incompatibility` (an inconsistent bundle; never support), `certified_non_implication`
-(only in the stated model), `open_bridge` (valid only with an explicit bridge or an
-unlicensed identification), `rejected` (with the filter: `known` by a registered
+`classify` gives each candidate one outcome: `verified_conditional_implication`
+(support only with a certified joint witness; otherwise consistency is
+unresolved), `incompatibility` (an inconsistent bundle; never support),
+`certified_non_implication` (only in the stated model), `open_bridge` (valid only
+with an explicit bridge, or only under an identification that no module or tag
+licenses: filter `name_only_identification`, or `senses` for an inconsistent
+bundle joining two senses), `rejected` (with the filter: `known` by a registered
 argument or by forward-chaining closure, `transcription`, `tautology`,
-`literal_negation`, `senses`, `name_only_identification`, `single_family`, `axioms`)
-or `unresolved`. Identification follows the engine's rule: two declarations share a
-binder only within one Lean module or through one whole-binder sense tag, and a
-carrier is shared only when such an identification of a relation over it forces it.
-The tests (`scripts/test_discover_conjecture.py`) cover the acceptance fixtures of
-#1834 offline. The pilot's candidates, outcomes and comparison with `truth discover`
+`literal_negation`, `senses`, `single_family`, `axioms`) or `unresolved`.
+Identification follows the engine's rule: two parameters share a binder only when
+they have the same name in one Lean module or carry one whole-binder sense tag (by
+sense id); a carrier is shared also when such an identification of a relation over
+it forces it; two parameters of one declaration mapped to one binder are an
+obligation. Single deletions are independent checks: when more than one
+succeeds the full bundle is kept and flagged, and a premise counts as needed only
+with a certified omission model. A bridge is reported as one sufficient bridge,
+not as the weakest one. When a candidate's conclusion uses binders that no premise
+mentions (pilot C05b, C11), its non-implication is immediate: the model names the
+missing link, it does not show substantive independence. The tests
+(`scripts/test_discover_conjecture.py`) cover the acceptance fixtures of #1834
+offline. The pilot's candidates, outcomes and comparison with `truth discover`
 and `truth bridge-experiments` are recorded in the attempt it cites.

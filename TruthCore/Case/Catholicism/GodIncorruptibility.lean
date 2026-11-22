@@ -20,9 +20,10 @@ the *quarta via*'s `Respect` and `esse`: the conclusion uses the Θ.8 ones, and
 no identification of the two respects of being is assumed.
 
 `IncorruptibleSimply` is CORRUPTIBLE_INCORRUPTIBLE_1 (cannot fail to be in the
-respect of being). It is not the *tertia via*'s NECESSARY_1 (`IsNecessary`: not
-possibly at no time): pilot control C11 certifies a model of the same bundle
-in which GOD_4 is incorruptible in this sense and not NECESSARY_1.
+respect of being). It is not the *tertia via*'s necessary being
+(`IsNecessary`, DEF-NECESSARY-BEING: x cannot not-be, it is not possible that x
+is not): pilot control C11 certifies a model in which the three premises hold
+and GOD_4 is incorruptible in this sense but not necessary in that one.
 -/
 
 @[expose] public section
@@ -87,10 +88,19 @@ def OmitFirstIncorruptible : Prop :=
     ¬ GodIsIncorruptibleSimply (Being := Unit) (R := Unit) (fun _ => True)
       (fun _ _ => True) ()
 
-/-- The *tertia via* control (pilot C11): the bundle holds and GOD_4 is simply
-incorruptible, but GOD_4 is possibly at no time, so not NECESSARY_1. -/
+/-- The *tertia via* control (pilot C11): over one being that is GOD_4, the three
+premises hold (with the values of `Witness`) and GOD_4 is simply incorruptible,
+but it is possible that GOD_4 is not (`IsNecessary`, DEF-NECESSARY-BEING, fails:
+the possibility predicate holds of every condition and the being is at no time).
+So the bundle does not give the *tertia via*'s necessary being. -/
 def NotTertiaViaNecessary : Prop :=
-  GodIsIncorruptibleSimply (Being := Unit) (R := Unit) (fun _ => True) (fun _ _ => False) () ∧
+  GodIsMaximalInBeing (Being := Unit) (Respect := Unit) (fun _ => True) (fun _ _ => True)
+      (fun _ _ _ => False) () ∧
+    MaximumInBeingIsFirstBeing (Being := Unit) (Respect := Unit) (fun _ _ => True)
+      (fun _ _ _ => False) () (fun _ _ => True) ∧
+    FirstBeingIsIncorruptibleSimply (B := Unit) (R := Unit) (fun _ _ => False) ()
+      (fun _ _ => True) ∧
+    GodIsIncorruptibleSimply (Being := Unit) (R := Unit) (fun _ => True) (fun _ _ => False) () ∧
     ¬ ∀ g : Unit, (fun _ => True) g →
       IsNecessary (Time := Unit) (fun _ => True) (fun _ _ => False) g
 

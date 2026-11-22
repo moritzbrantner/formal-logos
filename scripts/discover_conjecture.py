@@ -31,7 +31,8 @@ Per candidate the rendered Lean file checks, each as its own declaration with
 * `none`: the conclusion from no premise (a vocabulary theorem/tautology);
 * `probe`: the folded transcription probe of `truth prove-sweep`;
 * `litneg_i_j`: whether premise i unfolds definitionally to the negation of j;
-* `cm_k`/`wit`: decide-certified models (premises true, conclusion false);
+* `cm_k`/`wit`: models checked by `decide` or `simp` (premises true,
+  conclusion false; or premises and an optional antecedent instance true);
 * `bridge`, `bridge_alone`, `bridge_vac`: an explicit OPEN bridge.
 
 `classify` then applies the filters (known composition, transcription,
@@ -40,9 +41,15 @@ only, single family) and assigns each candidate one outcome: a verified
 conditional implication, an incompatibility under the exact bundle, a
 certified non-implication in a stated model, an OPEN bridge, rejected (with
 the filter) or unresolved. A failed proof is unresolved unless a model is
-certified; identification is admissible only within one Lean module, through
-one whole-binder sense tag shared by both declarations, or as forced by such
-an identification of a relation whose type mentions the carrier.
+certified. Identification is admissible only between parameters of the same
+name in one Lean module, through one whole-binder sense tag shared by both
+parameters, or as forced by such an identification of a relation whose type
+mentions the carrier; two parameters of one declaration mapped to one binder
+are an obligation. Single deletions are independent checks, so when more than
+one succeeds the full bundle is kept and flagged; a premise counts as needed
+only with a certified omission model. A verified implication is support only
+with a certified joint witness, and every check is counted as proved only
+within the three allowed axioms.
 """
 
 from __future__ import annotations
@@ -132,13 +139,16 @@ class Corpus:
         self.arguments = [a for a in arguments if a["id"] in verified]
         self.strengthens = {(r["subject_id"], r["object_id"]) for r in relations
                             if r.get("predicate") == "strengthens"}
-        self.tags = {}
+        self.tags = {}  # (declaration, parameter) -> sense id (labels are not unique)
+        self.sense_labels = {}
         for d in disambiguations:
             for sense in d.get("senses", []):
+                key = sense.get("id") or f"{d.get('id')}:{sense['label']}"
+                self.sense_labels[key] = sense["label"]
                 for p in sense.get("lean_parameters", []) or []:
                     if p.get("arguments"):
                         continue  # a partial application never identifies a binder
-                    self.tags[(p["declaration"], p["parameter"])] = sense["label"]
+                    self.tags[(p["declaration"], p["parameter"])] = key
 
     @classmethod
     def load(cls, root: Path):
@@ -290,14 +300,6 @@ def model_claim(binders: list, body: str, assign: dict) -> str:
     return f"(fun {lam} => {body}) {vals}"
 
 
-def instantiate(text: str, assign: dict) -> str:
-    """Substitute an assignment for the outer binder names in a Lean text."""
-    if not assign:
-        return text
-    pattern = re.compile(r"(?<![\w.'])(" + "|".join(map(re.escape, sorted(assign, key=len, reverse=True))) + r")(?![\w'])")
-    return pattern.sub(lambda m: f"({assign[m.group(1)]})", text)
-
-
 def render(config: dict, corpus: Corpus, binders: dict) -> tuple[str, dict]:
     """The certification file and a map from declaration name to its candidate,
     check and line range."""
@@ -327,19 +329,12 @@ def render(config: dict, corpus: Corpus, binders: dict) -> tuple[str, dict]:
         quant = " ".join(f"({n} : {t})" for n, t in cand["binders"])
         concl = cand["conclusion"]
 
-        def texts(assign=None):
-            """Premise and conclusion texts, under an assignment of the outer
-            binders (a model) when given."""
-            def value(b):
-                return f"({assign[b]})" if assign else b
-            hs = [applied(o.decl, {p: value(b) for p, b in o.args.items()}) for o in occs if o.role == "premise"]
-            if "statement" in concl:
-                c = next(o for o in occs if o.role == "conclusion")
-                g = applied(c.decl, {p: value(b) for p, b in c.args.items()})
-            else:
-                g = f"({instantiate(concl['lean'], assign or {})})"
-            return hs, g
-        hyps, goal = texts()
+        hyps = [applied(o.decl, o.args) for o in occs if o.role == "premise"]
+        if "statement" in concl:
+            c = next(o for o in occs if o.role == "conclusion")
+            goal = applied(c.decl, c.args)
+        else:
+            goal = f"({concl['lean']})"
 
         def stmt(hs, target):
             body = " → ".join(hs + [target])
@@ -372,7 +367,8 @@ def render(config: dict, corpus: Corpus, binders: dict) -> tuple[str, dict]:
             assign = cand["witness"]["assign"]
             if set(assign) != set(names):
                 raise ConfigError(f"{cand['id']}: the witness must assign every outer binder")
-            body = model_claim(cand["binders"], " ∧ ".join(hyps or ["True"]), assign)
+            parts = hyps + ([f"({cand['witness']['instance']})"] if cand["witness"].get("instance") else [])
+            body = model_claim(cand["binders"], " ∧ ".join(parts or ["True"]), assign)
             add(f"{cid}_wit", cand["id"], "witness", body, MODEL)
         if "bridge" in cand:
             bridge = f"({cand['bridge']['lean']})"
@@ -404,8 +400,11 @@ def parse_lean(output: str, spans: dict) -> dict:
         lo, hi = span["lines"]
         err = any(lo <= line <= hi for line in errors)
         ax = axioms.get(name)
-        proved = ax is not None and "sorryAx" not in ax and not err
-        status[name] = {"proved": proved, "axioms": ax, "error": err or ax is None}
+        closed = ax is not None and "sorryAx" not in ax and not err
+        outside = sorted(set(ax or []) - ALLOWED_AXIOMS - {"sorryAx"})
+        # every check, not only the goal, counts as proved only within the allowed axioms
+        status[name] = {"proved": closed and not outside, "closed": closed, "outside_axioms": outside,
+                        "axioms": ax, "error": err or ax is None, "elaboration_error": err}
     return status
 
 
@@ -413,15 +412,18 @@ def parse_lean(output: str, spans: dict) -> dict:
 
 
 def identification(cand: dict, occs: list[Occurrence], corpus: Corpus) -> dict:
-    """Admissibility of every binder shared by two declarations.
+    """Admissibility of every outer binder that fills two parameters.
 
-    Two occurrences of one outer binder are linked when their declarations are
-    in the same Lean module, or both parameters carry the same whole-binder
-    sense tag; a carrier occurrence is linked when such a link joins two
-    occurrences of a relation whose declared type mentions the carrier. A
-    shared binder whose occurrences are not all connected is an
-    identification obligation; differently tagged occurrences are a sense
-    mismatch."""
+    The engine's rule (docs/discover.md, Goal): two parameter occurrences of
+    one outer binder are linked when they have the same parameter name and
+    their declarations are in the same Lean module, or when both parameters
+    carry the same whole-binder sense tag. A carrier occurrence is also linked
+    when such a link joins two occurrences of a relation whose declared type
+    mentions the carrier (typing then forces the carriers equal). Two
+    parameters of one occurrence mapped to one binder identify two different
+    parameters of one declaration: that is never linked by the module rule.
+    A binder whose occurrences are not all connected is an identification
+    obligation; differently tagged occurrences are a sense mismatch."""
     types = dict((n, t) for n, t in cand["binders"])
     carriers = {n for n, t in cand["binders"] if t.strip() in ("Type", "Prop") or t.strip().startswith(("Sort", "Type "))}
     by_binder = {}
@@ -434,49 +436,45 @@ def identification(cand: dict, occs: list[Occurrence], corpus: Corpus) -> dict:
     def tag(k, p):
         return corpus.tags.get((occs[k].decl, p))
 
-    for b, uses in by_binder.items():
-        if b in carriers:
-            continue
+    def label(t):
+        return corpus.sense_labels.get(t, t)
+
+    def direct(b, uses):
         for x in range(len(uses)):
             for y in range(x + 1, len(uses)):
                 (k1, p1), (k2, p2) = uses[x], uses[y]
-                if occs[k1].decl == occs[k2].decl:
-                    edges[b].add((x, y))
-                    continue
                 t1, t2 = tag(k1, p1), tag(k2, p2)
-                if occs[k1].module == occs[k2].module:
+                if k1 != k2 and p1 == p2 and occs[k1].module == occs[k2].module:
                     edges[b].add((x, y))
-                    admissions.append((b, "same module", occs[k1].decl, occs[k2].decl))
+                    admissions.append((b, "same name and module", occs[k1].decl, occs[k2].decl))
                 elif t1 and t1 == t2:
                     edges[b].add((x, y))
-                    admissions.append((b, f"shared sense {t1}", occs[k1].decl, occs[k2].decl))
+                    admissions.append((b, f"shared sense {label(t1)}", occs[k1].decl, occs[k2].decl))
                 if t1 and t2 and t1 != t2:
-                    mismatches.append({"binder": b, "senses": [t1, t2],
-                                       "declarations": [occs[k1].decl, occs[k2].decl]})
-    # carriers forced by an admissible identification of a relation over them
+                    mismatches.append({"binder": b, "senses": [label(t1), label(t2)],
+                                       "declarations": [f"{occs[k1].decl}.{p1}", f"{occs[k2].decl}.{p2}"]})
+
+    for b, uses in by_binder.items():
+        if b not in carriers:
+            direct(b, uses)
     for b, uses in by_binder.items():
         if b not in carriers:
             continue
-        index = {k: x for x, (k, _) in enumerate(uses)}
+        direct(b, uses)
+        # carriers forced by an admissible identification of a relation over them
+        first = {}
+        for x, (k, _) in enumerate(uses):
+            first.setdefault(k, x)
         for r, ruses in by_binder.items():
             if r in carriers or not re.search(rf"(?<![\w.']){re.escape(b)}(?![\w'])", types.get(r, "")):
                 continue
             for (x, y) in edges[r]:
                 k1, k2 = ruses[x][0], ruses[y][0]
-                if k1 in index and k2 in index and index[k1] != index[k2]:
-                    edges[b].add((index[k1], index[k2]))
-        for x in range(len(uses)):
-            for y in range(x + 1, len(uses)):
-                k1, k2 = uses[x][0], uses[y][0]
-                if occs[k1].module == occs[k2].module:
-                    edges[b].add((x, y))
-                t1, t2 = tag(k1, uses[x][1]), tag(k2, uses[y][1])
-                if t1 and t1 == t2:
-                    edges[b].add((x, y))
+                if k1 in first and k2 in first and k1 != k2:
+                    edges[b].add((first[k1], first[k2]))
     obligations = []
     for b, uses in by_binder.items():
-        decls = {occs[k].decl for k, _ in uses}
-        if len(decls) < 2:
+        if len(uses) < 2:
             continue
         parent = list(range(len(uses)))
 
@@ -491,7 +489,11 @@ def identification(cand: dict, occs: list[Occurrence], corpus: Corpus) -> dict:
         for x, (k, p) in enumerate(uses):
             groups.setdefault(find(x), []).append(f"{occs[k].decl}.{p}")
         if len(groups) > 1:
-            obligations.append({"binder": b, "unlinked_groups": sorted(sorted(g) for g in groups.values())})
+            within = sorted({occs[k].decl for k, _ in uses if sum(1 for kk, _ in uses if kk == k) > 1})
+            ob = {"binder": b, "unlinked_groups": sorted(sorted(g) for g in groups.values())}
+            if within:
+                ob["same_declaration"] = within
+            obligations.append(ob)
     return {"obligations": obligations, "mismatches": mismatches,
             "admitted": [{"binder": b, "by": why, "declarations": [d1, d2]} for b, why, d1, d2 in admissions]}
 
@@ -507,7 +509,8 @@ def classify(config: dict, corpus: Corpus, binders: dict, status: dict, spans: d
         cid = re.sub(r"\W", "_", cand["id"])
 
         def check(name):
-            return status.get(f"{namespace}.{cid}_{name}", {"proved": False, "axioms": None, "error": True})
+            return status.get(f"{namespace}.{cid}_{name}", {"proved": False, "closed": False, "outside_axioms": [],
+                                                              "axioms": None, "error": True, "elaboration_error": False})
         occs = occurrences(cand, corpus, binders)
         prem = [o for o in occs if o.role == "premise"]
         concl_sid = corpus.resolve(cand["conclusion"]["statement"]) if "statement" in cand["conclusion"] else None
@@ -523,13 +526,37 @@ def classify(config: dict, corpus: Corpus, binders: dict, status: dict, spans: d
         omissions = [{"omit": [prem[i].sid for i in s["omit"]], "model": s["model"]} for s in certified if s["omit"]]
         if omissions:
             report["omission_models"] = omissions
-        if main["error"] and main["axioms"] is None:
+        # an error inside a model, witness or bridge text is a configuration error, not a failed proof
+        config_errors = sorted({s["check"] + (str(s["model"]) if "model" in s else "") for n, s in spans.items()
+                                if s["candidate"] == cand["id"] and s["check"] in ("countermodel", "witness", "bridge", "bridge_alone", "bridge_vac")
+                                and status.get(n, {}).get("elaboration_error")})
+        if config_errors:
+            report["config_errors"] = config_errors
+        outside = sorted({a for n, s in spans.items() if s["candidate"] == cand["id"]
+                          for a in status.get(n, {}).get("outside_axioms", [])})
+        if outside:
+            report["flags"].append(f"axioms outside the allowed three in some check ({', '.join(outside)}): those checks count as unproved")
+        if main["elaboration_error"] or main["axioms"] is None:
             report["outcome"], report["reason"] = "error", "the goal did not elaborate"
             reports.append(report)
             continue
         ident = identification(cand, occs, corpus)
         report["identification"] = ident
-        needed = [i for i in range(len(prem)) if not check(f"drop{i}")["proved"]]
+        # Single deletions are independent checks: two redundant premises may each
+        # be droppable alone but not together. Only one succeeding deletion is
+        # taken; with several, the full bundle is kept and flagged.
+        droppable = [i for i in range(len(prem)) if check(f"drop{i}")["proved"]]
+        if len(droppable) > 1:
+            needed = list(range(len(prem)))
+            report["flags"].append("several single deletions succeed; their joint deletion is untested, so the full bundle is kept (not minimized)")
+        else:
+            needed = [i for i in range(len(prem)) if i not in droppable]
+        omitted_certified = {o for s in certified if len(s["omit"]) == 1 for o in s["omit"]}
+        report["premise_status"] = {
+            prem[i].sid: ("needed (omission model certified)" if i in omitted_certified
+                          else "dropped (deletion re-proved)" if i not in needed
+                          else "not dropped (unresolved: deletion failed within the budget)")
+            for i in range(len(prem))}
         report["axioms"] = main["axioms"]
         if vac["proved"]:
             core = [i for i in range(len(prem)) if not check(f"vacdrop{i}")["proved"]]
@@ -551,8 +578,8 @@ def classify(config: dict, corpus: Corpus, binders: dict, status: dict, spans: d
             report["support"] = False
             reports.append(report)
             continue
-        if main["proved"]:
-            if set(main["axioms"] or []) - ALLOWED_AXIOMS:
+        if main["closed"]:
+            if main["outside_axioms"]:
                 report["outcome"], report["reason"] = "rejected", "axioms outside propext, Classical.choice, Quot.sound"
                 report["filters"].append("axioms")
             elif none["proved"]:
@@ -579,14 +606,16 @@ def classify(config: dict, corpus: Corpus, binders: dict, status: dict, spans: d
                 report["reason"] = "kernel-checked from the minimal premises; establishes nothing about their truth"
             report["minimal_premises"] = [prem[i].sid for i in needed]
             report["dropped_premises"] = [prem[i].sid for i in range(len(prem)) if i not in needed]
-            if "witness" in cand:
-                if check("wit")["proved"]:
-                    report["flags"].append("witness: premises jointly satisfied in the stated model")
-                else:
-                    report["flags"].append("witness: stated model not certified")
+            witnessed = "witness" in cand and check("wit")["proved"]
+            if witnessed:
+                report["flags"].append("witness: premises jointly satisfied in the stated model"
+                                       + (", with an instance of the antecedent" if cand["witness"].get("instance") else
+                                          "; antecedent instance not checked"))
+            elif "witness" in cand:
+                report["flags"].append("witness: stated model not certified; consistency unresolved; not support")
             else:
-                report["flags"].append("witness: none supplied; Duper found no contradiction (consistency unresolved)")
-            report["support"] = report["outcome"] == "verified_conditional_implication"
+                report["flags"].append("witness: none supplied; consistency unresolved; not support")
+            report["support"] = report["outcome"] == "verified_conditional_implication" and witnessed
             reports.append(report)
             continue
         full = [s for s in certified if not s["omit"]]
@@ -594,7 +623,10 @@ def classify(config: dict, corpus: Corpus, binders: dict, status: dict, spans: d
         bridged = "bridge" in cand and check("bridge")["proved"] and not check("bridge_alone")["proved"] \
             and not check("bridge_vac")["proved"]
         if bridged:
-            report["bridge"] = dict(cand["bridge"], verified="the premises with the bridge prove the conclusion; the bridge alone does not; no contradiction")
+            under = " under the listed identifications" if ident["obligations"] or ident["mismatches"] else ""
+            report["bridge"] = dict(cand["bridge"], verified=(
+                f"one sufficient OPEN bridge{under} (not shown to be weakest): the premises with it prove the "
+                "conclusion; it alone does not; no contradiction was found"))
         if full:
             report["outcome"] = "certified_non_implication"
             report["reason"] = f"model {full[0]['model']} makes every premise true and the conclusion false"
