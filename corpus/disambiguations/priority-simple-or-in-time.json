@@ -73,6 +73,18 @@
         {
           "declaration": "TruthCore.Causality.Frame.CausalityFrame",
           "parameter": "PriorSimply"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.MaximumInBeingIsFirstBeing",
+          "parameter": "PriorSimply"
+        },
+        {
+          "declaration": "TruthCore.Causality.SpineRivalsAttributes.FirstBeingIsAComponentReading",
+          "parameter": "PriorSimply"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.NoComponentIsFirstBeingReading",
+          "parameter": "PriorSimply"
         }
       ]
     },

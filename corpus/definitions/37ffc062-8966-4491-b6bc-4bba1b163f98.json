@@ -1,0 +1,9 @@
+{
+  "id": "37ffc062-8966-4491-b6bc-4bba1b163f98",
+  "label": "MORE_2: comparative by represented degree, the degree of x in r strictly exceeds that of y",
+  "term": "more and less in a perfection, by represented degree",
+  "definition": "`DegreeComparative deg r x y`: deg r y < deg r x, for a represented degree assignment deg : R → B → D in a Mathlib Preorder D (DEF-PER-RESPECT-DEGREE-FAMILY): the comparative represented by a preorder-valued degree. It is the strict preimage order of deg r, and so irreflexive and transitive in every respect. Both order readings of DISAMB-ORDER-OF-BEING are instances of it at a fixed respect r: the homogeneous-scale reading (HomogeneousScaleReading, MoreIn r x y ↔ y < x in a preorder on the beings) is DegreeComparative (fun _ b => b) r, the degree being the order on beings itself, and the approach-to-primary reading (ApproachToPrimaryReading, MoreIn r x y ↔ near y < near x) is DegreeComparative (fun _ => near) r. It is therefore neutral between the univocal and the analogical reading. It is a sibling definition of the comparative, not the meaning of the primitive MoreIn (MORE_1): on the primitive no order law is imposed, and the calibrations between the two are explicit open premises.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.Grades.DegreeComparative",
+  "note": "Stipulative analyst definition, attribution deferred; not attributed to Aquinas. Its relation to MoreIn is carried by STMT-MORE-IN-EXCEEDS-REPRESENTED-DEGREE and STMT-DEGREE-EXCESS-AMONG-BEARERS-IS-MORE-IN (Round3FourthWay.MoreInExceedsDegree and DegreeExcessAmongBearersIsMoreIn), both open. Introduced with the grades frame module (TruthCore/Causality/GradesFrame.lean) after the truth discover diagnosis of 2026-11-20."
+}
