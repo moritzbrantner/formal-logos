@@ -1,0 +1,9 @@
+{
+  "id": "f7339c08-e291-482b-af00-a0b74a1f3273",
+  "label": "Locally finite indexed operations are finite within each compact real-time interval",
+  "paraphrase": "For every type of distinct operation occurrences and every assignment of real times to them, if the indexed singleton time sets are locally finite on the ambient real clock, then only finitely many operation indices have timestamps in any fixed closed bounded interval. The theorem says neither that physical operations satisfy this condition nor that an infinite causal regress is impossible.",
+  "lean_declaration": "TruthCore.Causality.OperationLocalFiniteness.CompactOperationCountCertificate",
+  "definition_ids": [
+    "2d94381e-1133-4e5b-9841-0dee609aca01"
+  ]
+}
