@@ -408,6 +408,72 @@ things" is equivalent to "a necessary concrete thing": the causal relation in B2
 does no logical work, so B2 already contains the possibility of the conclusion.
 Arrival A was built to avoid that. It does not discharge B2.
 
+
+**Actual causal reading of Arrival B (2026-11-22; proposed semantic
+continuation).** The existing proof of `b19ffd92` from BEGINS_2 B1
+`951a2235` and B2 `256b5bab` remains valid, but the original B2 has a
+schematic `W → B → Prop` totality-cause relation. Its necessity inference
+uses externality, not that relation. The stronger sibling
+`ConcurrentFiniteDurationCausalOpportunity` now instantiates this
+predicate with `ConcurrentTotalityGivingAt` over the **shared**
+`CausalityFrame.GivesAt` primitive: the same existing external concrete
+source actually gives the being of every contingent concrete individual at
+every moment of that individual's presence, with at least one real
+source/effect exercise in the accessible history. It is a deliberately strong
+memberwise concurrent-esse reading, distinct from a holistic cause of the
+contingent totality, ordinary earlier efficient causation or a formal label
+unconnected to actual beings. The intrinsic causal interpretation of
+`GivesAt` remains a primitive whose applicability is OPEN.
+
+The new conditional `possiblyNecessaryConcurrentGiver` proves a
+**possible necessarily existing source with actual giving of being there**.
+`necessaryActualWithPossibleConcurrentGiving` combines this with
+Euclidean accessibility at the selected world and reflexivity to keep the
+**same rigid source** necessary at the selected world, while preserving
+actual causal giving in its witness history. The corollary
+`necessaryConcreteOfConcurrentGiving` reaches the same existing
+necessary-concrete endpoint. Thus replacing the abstract causal relation
+with a meaningful causal premise does *not* invalidate the conditional
+arrival; the extra causal content now does work in a stronger conclusion.
+However, under the repository's rigid-world classical semantics, the
+externality conjunct still directly implies possible de re necessity:
+actual causal giving **does not establish** that this stronger B2 is itself
+possible. This remains the decisive open modal opportunity principle,
+not a discharged objection or a premise whose primitive status is
+unacceptable.
+
+The models discriminate the relevant changes. In the prior
+`openBelowSource` control, original B2 holds with a named cause but no
+`GivesAt` action; the new `inertGivingSeparatesOpportunity` checks the
+failure of the stronger interpretation. Conversely
+`functioningConcurrentOpportunity` gives a populated positive-time
+structural control with real typed giving of being, and demonstrates
+joint formal satisfiability without metaphysical permission. The
+`mixedPossibleGivingWithoutActualGiving` control has contingent
+population at the designated world, Euclidean/reflexive access, B1 and
+the stronger B2, yet the source's giving is exercised **only** in the
+alternative history. Therefore a further **actual-world causal bridge**
+would be required to infer that a necessary concrete being actually
+explains the currently present contingent beings. Possible causal
+efficacy is not actual efficacy, even when the rigid necessary source
+exists in both histories.
+
+**Cumulative consequence.** The registered root route remains:
+fixed-d Reaper assumptions → `4365c3c5`, plus possible population →
+BEGINS_2 `951a2235`, plus B2, the frame conditions →
+`b19ffd92` → existing further God/attribute consumers. No new
+argument/inference IDs or frontier closure are claimed here: the
+stronger causal result is a verified-by-target Lean companion under a
+distinct OPEN interpretive premise, not a graph substitution for
+`256b5bab`. This scope does not infer first temporal moments,
+physical infinity's impossibility, a first per-se source, actual
+sustaining causation at w, divine simplicity or uniqueness. The
+positive warrant question now has a precise test: justify a jointly
+possible **actual exercise** of `GivesAt` by an existing exterior
+source of all contingent members in one history without merely
+postulating the conclusion. Source/semantic review and head CI
+verification are still required for this proposed account.
+
 **What "begins" means in B1** (spec
 `specs/modal-spine-metric-beginning-arrival.toml`, attempt
 [`9d141c6c`](../../corpus/attempts/9d141c6c-7979-4d8b-a1b4-7b35ebc9fb21.json)).

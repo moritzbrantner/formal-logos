@@ -4,6 +4,7 @@ public import TruthCore.Causality.MetricGrimReaper
 public import TruthCore.Causality.PossibleCauseOfContingency
 public import TruthCore.Causality.ActualEuclidean
 public import TruthCore.Causality.ComingToBeHorns
+public import TruthCore.Causality.Frame
 
 /-!
 # Two senses of "contingent concrete reality begins", and Arrival B in the metric one
@@ -127,6 +128,44 @@ def FiniteDurationCausalOpportunity {W B T : Type} [Preorder T] (h : History W B
     (Concrete : B → Prop) (k : TimeClock T) (causes : W → B → Prop) (w : W) : Prop :=
   CausalOpportunityAt (finiteDurationScenario h Concrete k causes) w
 
+
+/-- An explicitly causal, strong reading of "a source of the totality":
+the same concrete candidate actually exercises the shared CausalityFrame.GivesAt
+relation for the being of every contingent concrete individual at every moment
+of its presence in v. At least one exercise on a populated effect is required,
+so the relation cannot be vacuous. GivesAt is the existing primitive of
+concurrent being-giving, not a synonym for logical implication, temporally
+prior efficient causation, Ontic.Causes, or a bare totality label.
+
+This reading is sufficient for treating the source as an actual provider of
+the contingent members' being. It is STRONGER than causation of the contingent
+whole taken collectively: a cause of a totality need not directly cause every
+member. Source existence and externality are separate conditions imposed by
+the causal opportunity premise below; this definition does not prove them. -/
+def ConcurrentTotalityGivingAt {W B T S : Type}
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (v : W) (c : B) : Prop :=
+  (∃ x t, Concrete x ∧ ContingentAt f.history.ontic v x ∧
+    f.history.IsAt v x t ∧ f.GivesAt v c x t) ∧
+  (∀ x t, Concrete x → ContingentAt f.history.ontic v x →
+    f.history.IsAt v x t → f.GivesAt v c x t)
+
+/-- B2 in BEGINS_2 under the strong concurrent-being-giving interpretation:
+if a finite-duration populated history is possible, then there is an accessible
+finite-duration populated history with an EXISTING concrete source outside all
+contingent concrete individuals that actually gives being to all its
+contingent concrete members whenever they are present.
+
+This B2 is still an OPEN substantive modal causal-availability premise. It
+contains the possibility of a necessary external bearer via externality;
+the causal content is additional rather than a proof of that availability. -/
+def ConcurrentFiniteDurationCausalOpportunity {W B T S : Type} [Preorder T]
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (k : TimeClock T) (w : W) : Prop :=
+  FiniteDurationCausalOpportunity f.history Concrete k
+    (ConcurrentTotalityGivingAt f Concrete) w
+
+
 namespace Control
 
 open TruthCore.Causality.MetricGrimReaper.Control (PosReal posClock intClock openBelow)
@@ -146,6 +185,49 @@ def openBelowSource : History Bool (Option Int) PosReal where
     | none => False
     | some _ => w = true
   now := ⟨1, one_pos⟩
+
+
+/-- A source outside the contingent inventory can exist without exercising
+any causal giving-of-being relation. This extends the already verified
+openBelowSource model with the family's shared causal primitives. -/
+def inertGivingFrame :
+    TruthCore.Causality.Frame.CausalityFrame Bool (Option Int) PosReal Unit where
+  history := openBelowSource
+  GivesAt := fun _ _ _ _ => False
+  CausesIn := fun _ _ _ => False
+  MovesIn := fun _ _ _ => False
+  DependsForBeing := fun _ _ => False
+  PriorSimply := fun _ _ => False
+  esse := ()
+
+/-- The same ontic/temporal history with actual concurrent being-giving at the
+populated world. Source none exists necessarily but need not occupy a moment;
+every contingent some n is temporally present and receives its being from it.
+This is a STRUCTURAL satisfaction test, not a metaphysical existence witness. -/
+def functioningGivingFrame :
+    TruthCore.Causality.Frame.CausalityFrame Bool (Option Int) PosReal Unit :=
+  { inertGivingFrame with
+    GivesAt := fun v c x _ => v = true ∧ c = none ∧ ∃ n : Int, x = some n }
+
+/-- Both worlds have contingent concrete individuals, but the same rigid none
+candidate gives being only in world false. A real possibility of totality
+giving at false does not make it exercised at the designated world true. -/
+def mixedTemporal : History Bool (Option Bool) PosReal where
+  ontic := TruthCore.Causality.PossibleCauseOfContingency.mixed.ontic
+  IsAt := fun v x _ => match x with
+    | none => False
+    | some b => v = b
+  now := ⟨1, one_pos⟩
+
+def mixedGivingFrame :
+    TruthCore.Causality.Frame.CausalityFrame Bool (Option Bool) PosReal Unit where
+  history := mixedTemporal
+  GivesAt := fun v c x _ => v = false ∧ c = none ∧ x = some false
+  CausesIn := fun _ _ _ => False
+  MovesIn := fun _ _ _ => False
+  DependsForBeing := fun _ _ => False
+  PriorSimply := fun _ _ => False
+  esse := ()
 
 /-- Every individual counts as concrete:
 (1) in the beginningless integer history `pivot` (identity clock) contingent

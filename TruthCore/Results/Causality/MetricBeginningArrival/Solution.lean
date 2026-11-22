@@ -157,4 +157,169 @@ theorem controls : Certificate := by
   · intro G
     exact ⟨none, trivial, trivial, fun _ _ => trivial⟩
 
+
+/-- The stronger causal B2 really can yield a necessary concrete being that
+ACTUALLY gives being to all contingent concreta in its accessible history.
+The causal conjunct contributes to this stronger conclusion, while the
+necessity of the bearer still follows from externality and modal semantics. -/
+theorem possiblyNecessaryConcurrentGiver {W B T S : Type} [Preorder T]
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (k : TimeClock T) (w : W)
+    (hBegins : PossiblyBeginsFiniteDuration f.history Concrete k w)
+    (hOpportunity : ConcurrentFiniteDurationCausalOpportunity f Concrete k w) :
+    ∃ v c, f.history.ontic.frame.access w v ∧ Concrete c ∧
+      f.history.ontic.ExistsAt v c ∧ NecessaryAt f.history.ontic v c ∧
+      ConcurrentTotalityGivingAt f Concrete v c := by
+  obtain ⟨v, hv, _, c, hc, he, hGiving, hOutside⟩ :=
+    hOpportunity
+      (possiblyBeginsAtOfFiniteDuration f.history Concrete k
+        (ConcurrentTotalityGivingAt f Concrete) w hBegins)
+  have hNec : NecessaryAt f.history.ontic v c :=
+    TruthCore.Causality.LocalFramePossibleExternalCause.necessaryOfExternalCandidate
+      (finiteDurationScenario f.history Concrete k
+        (ConcurrentTotalityGivingAt f Concrete)) v c hc he hOutside
+  exact ⟨v, c, hv, hc, he, hNec, hGiving⟩
+
+/-- With Euclidean accessibility and actual reflexivity, the SAME rigid source
+is necessary at w and actually exercises its being-giving causal power in
+a world possible from w. No giving of being at w is inferred. -/
+theorem necessaryActualWithPossibleConcurrentGiving {W B T S : Type} [Preorder T]
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (k : TimeClock T) (w : W)
+    (hEuclidean : EuclideanAt f.history.ontic.frame w)
+    (hReflexive : ActualReflexive f.history.ontic w)
+    (hBegins : PossiblyBeginsFiniteDuration f.history Concrete k w)
+    (hOpportunity : ConcurrentFiniteDurationCausalOpportunity f Concrete k w) :
+    ∃ c, Concrete c ∧ f.history.ontic.ExistsAt w c ∧
+      NecessaryAt f.history.ontic w c ∧
+      ∃ v, f.history.ontic.frame.access w v ∧
+        ConcurrentTotalityGivingAt f Concrete v c := by
+  obtain ⟨v, c, hv, hc, _, hNec, hGiving⟩ :=
+    possiblyNecessaryConcurrentGiver f Concrete k w hBegins hOpportunity
+  obtain ⟨heW, hNecW⟩ :=
+    TruthCore.Causality.ActualEuclidean.necessaryAtOrigin
+      f.history.ontic w v c hEuclidean hReflexive hv hNec
+  exact ⟨c, hc, heW, hNecW, v, hv, hGiving⟩
+
+/-- The existing metric Arrival B endpoint remains valid with the genuinely
+causal B2, for any separate grounding relation G. This is a corollary of
+the stronger conclusion, not a new proof from the empty totality label. -/
+theorem necessaryConcreteOfConcurrentGiving {W B T S : Type} [Preorder T]
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (k : TimeClock T)
+    (G : W → B → B → Prop) (w : W)
+    (hEuclidean : EuclideanAt f.history.ontic.frame w)
+    (hReflexive : ActualReflexive f.history.ontic w)
+    (hBegins : PossiblyBeginsFiniteDuration f.history Concrete k w)
+    (hOpportunity : ConcurrentFiniteDurationCausalOpportunity f Concrete k w) :
+    TruthCore.Causality.BruteFoundationBoundary.NecessaryConcreteAt
+      ⟨f.history.ontic, Concrete, G⟩ w := by
+  obtain ⟨c, hc, he, hn, _, _, _⟩ :=
+    necessaryActualWithPossibleConcurrentGiving
+      f Concrete k w hEuclidean hReflexive hBegins hOpportunity
+  exact ⟨c, hc, he, hn⟩
+
+/-- Existing externally labelled B2 can hold although the shared actual
+being-giving relation is everywhere empty. The old source example has no
+causation of being, even though its schematic cause predicate names none. -/
+theorem inertGivingSeparatesOpportunity :
+    FiniteDurationCausalOpportunity openBelowSource all posClock
+      (fun v c => v = true ∧ c = none) true ∧
+    ¬ ConcurrentFiniteDurationCausalOpportunity inertGivingFrame all posClock true := by
+  constructor
+  · exact controls.2.2.2.1
+  · intro hStrong
+    have hBegins : PossiblyBeginsFiniteDuration openBelowSource all posClock true :=
+      controls.2.2.1
+    obtain ⟨v, _, _, c, _, _, hGiving, _⟩ :=
+      hStrong (possiblyBeginsAtOfFiniteDuration openBelowSource all posClock
+        (ConcurrentTotalityGivingAt inertGivingFrame all) true hBegins)
+    obtain ⟨x, t, _, _, _, hg⟩ := hGiving.1
+    exact hg
+
+/-- The original positive openBelowSource history can also support the
+stronger concurrent reading when its causal field is genuinely populated. -/
+theorem functioningGivingAtTrue :
+    ConcurrentTotalityGivingAt functioningGivingFrame all true none := by
+  constructor
+  · exact ⟨some 0, (⟨1, one_pos⟩ : PosReal), trivial,
+      openBelowSourceContingent 0, rfl, ⟨rfl, rfl, 0, rfl⟩⟩
+  · intro x _ _ hCont _
+    cases x with
+    | none =>
+      obtain ⟨_, v, _, hAbsent⟩ := hCont
+      exact (hAbsent trivial).elim
+    | some n =>
+      exact ⟨rfl, rfl, n, rfl⟩
+
+theorem functioningConcurrentOpportunity :
+    ConcurrentFiniteDurationCausalOpportunity functioningGivingFrame all posClock true := by
+  intro _
+  have hPop : PopulatedAt openBelowSource all true (⟨1, one_pos⟩ : PosReal) :=
+    ⟨some 0, trivial, openBelowSourceContingent 0, rfl⟩
+  have hBegin : FiniteDurationBeginningAt openBelowSource all posClock true :=
+    ⟨⟨_, hPop⟩, fun t _ => posFinite t⟩
+  refine ⟨true, trivial,
+    ⟨hBegin, some 0, trivial, openBelowSourceContingent 0⟩,
+    none, trivial, trivial, functioningGivingAtTrue, ?_⟩
+  intro x _ hCont hEq
+  subst x
+  obtain ⟨_, _, _, hAbsent⟩ := hCont
+  exact hAbsent trivial
+
+/-- A model with actual contingent population at true and complete concurrent
+being-giving at the alternative world false. The strong B2 is satisfied at
+true, but no being-giving at all is exercised at true. This is a semantic
+countermodel to transferring possible causal efficacy to actual causal
+efficacy, not a metaphysical counterexample to the B2 principle itself. -/
+theorem mixedGivingAtFalse :
+    ConcurrentTotalityGivingAt mixedGivingFrame all false none := by
+  constructor
+  · exact ⟨some false, (⟨1, one_pos⟩ : PosReal), trivial,
+      TruthCore.Causality.PossibleCauseOfContingency.mixedContingentAtFalse,
+      rfl, ⟨rfl, rfl, rfl⟩⟩
+  · intro x _ _ _ hAt
+    cases x with
+    | none =>
+      exact hAt.elim
+    | some b =>
+      cases b with
+      | false => exact ⟨rfl, rfl, rfl⟩
+      | true => exact (Bool.false_ne_true hAt).elim
+
+theorem mixedConcurrentOpportunity :
+    ConcurrentFiniteDurationCausalOpportunity mixedGivingFrame all posClock true := by
+  intro _
+  have hPop : PopulatedAt mixedTemporal all false (⟨1, one_pos⟩ : PosReal) :=
+    ⟨some false, trivial,
+      TruthCore.Causality.PossibleCauseOfContingency.mixedContingentAtFalse, rfl⟩
+  have hBegin : FiniteDurationBeginningAt mixedTemporal all posClock false :=
+    ⟨⟨_, hPop⟩, fun t _ => posFinite t⟩
+  refine ⟨false, trivial,
+    ⟨hBegin, some false, trivial,
+      TruthCore.Causality.PossibleCauseOfContingency.mixedContingentAtFalse⟩,
+    none, trivial, trivial, mixedGivingAtFalse, ?_⟩
+  intro x _ hCont hEq
+  subst x
+  obtain ⟨_, _, _, hAbsent⟩ := hCont
+  exact hAbsent trivial
+
+theorem mixedPossibleGivingWithoutActualGiving :
+    PossiblyBeginsFiniteDuration mixedTemporal all posClock true ∧
+    ConcurrentFiniteDurationCausalOpportunity mixedGivingFrame all posClock true ∧
+    EuclideanAt mixedTemporal.ontic.frame true ∧
+    ActualReflexive mixedTemporal.ontic true ∧
+    PopulatedAt mixedTemporal all true (⟨1, one_pos⟩ : PosReal) ∧
+    (∀ c t, ¬ mixedGivingFrame.GivesAt true c (some true) t) := by
+  have hPop : PopulatedAt mixedTemporal all true (⟨1, one_pos⟩ : PosReal) :=
+    ⟨some true, trivial,
+      TruthCore.Causality.PossibleCauseOfContingency.mixedContingentAtTrue, rfl⟩
+  refine ⟨?_, mixedConcurrentOpportunity, ?_, ?_, hPop, ?_⟩
+  · exact ⟨true, trivial, ⟨⟨_, hPop⟩, fun t _ => posFinite t⟩⟩
+  · intro v z _ _
+    trivial
+  · trivial
+  · intro c t hg
+    exact Bool.true_ne_false hg.1
+
 end TruthCore.Results.Causality.MetricBeginningArrival
