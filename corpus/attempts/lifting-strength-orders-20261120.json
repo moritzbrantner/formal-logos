@@ -1,0 +1,22 @@
+{
+  "id": "c39e3991-677e-4089-8657-ddb05721ded0",
+  "label": "Lifting strength orders over the two bridges registered with certified differences",
+  "statement_ids": [
+    "2a9378b4-3dad-591b-a88e-1907a79f1fa5",
+    "bd983df2-058a-5503-89a1-bbebe87f958b",
+    "96d25c42-71aa-5fa0-841d-9aa62d91e1be"
+  ],
+  "date": "2026-11-20",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Findings t3 and t6 of the discover run over the modal sense-fork nodes (attempt 79049691, deferred there for the PR file limit) are registered: NecessaryPredecessorLifting strengthens NoNovelNecessarySupport (third conjunct; the weak version's necessity hypothesis on the source is unused) and strengthens NoContingentGroundOfNecessary (first conjunct), both conjunct projections declared as assembly transcriptions. Strictness controls, checked with zero axioms and serving as separators: (a) contingent-source model (worlds and individuals Bool, universal frame, actual world false, true exists everywhere, false only at world true, false supports true only at world true): no novel necessary support holds vacuously and lifting fails; (b) non-actual-edge model (both individuals exist everywhere, same edge): no contingent ground holds and lifting fails. Certified differences with no background: lifting iff no novel support and every possible supporter of a necessary individual is necessary and actual (SupportersOfNecessaryNecessaryAndActual); lifting iff no contingent ground and every possible support edge into a necessary individual recurs as a present edge at the actual world (SupportOfNecessaryRecursActually). The other bridge is not a background-free delta for either pair: the supporter's actual existence is supplied by ActualReflexive in lifting_of_two_bridges, so the deltas carry that existence themselves. strong_version_needed is recorded on the three arguments that use lifting (NECESSARY-UNDERIVED-POSITIVE-LIFT, NECESSARY-UNDERIVED-NONREFUTATION-LIFT, the same-witness underived argument 78dfeded); the two models show strictness of the registered pairs only, not argument-level countermodels. Review of #1825 found that 78dfeded (sameWitnessUnderived) does not need lifting: NoContingentGroundOfNecessary and NoNovelNecessarySupport together suffice without ActualReflexive, since the necessary supporter is identified with the actual exemplar (NecessaryIsMostReal, MostRealUnique), whose actual existence ActualConcreteProfile gives, and NoNovel then gives a self support edge at the actual world, contradicting well-foundedness (zero-axiom proof sketch by the reviewer, not committed). Lifting is kept there only because the frozen Challenge uses it.",
+  "blocker": "Next test: add a sibling argument of the same-witness underived conclusion from NoContingentGroundOfNecessary and NoNovelNecessarySupport instead of lifting, without ActualReflexive (reviewer's proof of #1825), as its own slice; it gives that conclusion a support option through the two weaker bridges. For the two NecessarilyUnderived lifting arguments, whether the bridges suffice without actual reflexivity is open: their well-founded induction uses the supporter's actual existence. Lifting and both bridges stay open premises.",
+  "evidence": [
+    "d973df9d-58db-4ba9-9e06-4db7490251c0",
+    "d8e37c21-5681-4113-b0aa-40520d1a5936",
+    "477d7396-687a-4699-819b-7e7b3fa01771",
+    "ec1e60f9-2c2f-4889-a822-4fdeee231da1",
+    "ebf458e9-a57c-4461-bed4-0eae6ed33c6f",
+    "585b4324-9fe9-40b3-95e4-fd373de917c6"
+  ]
+}

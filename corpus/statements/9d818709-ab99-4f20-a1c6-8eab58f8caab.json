@@ -1,0 +1,15 @@
+{
+  "id": "9d818709-ab99-4f20-a1c6-8eab58f8caab",
+  "label": "Lifting holds exactly when no novel necessary support holds and supporters are necessary and actual",
+  "paraphrase": "For every world type, individual type, model, support relation and actual world w0: necessary-predecessor lifting holds if and only if no novel necessary support holds and every possible supporter of a necessary individual is necessary and exists at w0. A premise-free comparison; it asserts none of the three statements.",
+  "lean_declaration": "TruthCore.Causality.NecessarilyUnderived.LiftingOverNoNovelExact",
+  "definition_ids": [
+    "5a5b976e-36e1-53f5-a1b1-a723cacd0206",
+    "a0763d0d-cd6b-5c08-a33a-f53ab8edd941",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1"
+  ],
+  "disambiguation_ids": [
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"
+  ]
+}
