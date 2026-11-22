@@ -435,7 +435,22 @@ the governor and local options derive it by IDENTITY of an intellectual
 director with n. None goes through causing a cognitive perfection
 (`CausalPerfectionTransfer`, `WholePowerPerfection.rootPerfectionFromWholePower`):
 those results concern formal-or-eminent possession of caused perfections and
-remain a separate option, not used here. None concludes current cognizing,
+remain a separate option, not used here. The [2026-11-22 causal-perfection
+analysis](causal-perfection-transfer.md#formal-effect-eminent-cause-and-the-cognitive-first-source-2026-11-22)
+now makes this *separate* option precise without counting it as another
+certified intellect route: `CartesianAdequacy.asymmetricFromUniform` uses
+formal effect IN_ACT_1, formal/virtual cause IN_ACT_3 and two directional
+bridges to the original IN_ACT_4. `godContainsFromIntellectualEffects`
+takes an existing GOD_4 maximum g, its own distinct intellectual effect x,
+a formal cognitive exemplar calibration and q.4 preexistence, and concludes
+inclusive possession at that SAME g. It does **not** conclude
+`HasIntellect g`; explicit formal/eminent-to-intrinsic recognitions are still
+needed, as the finite control with an intellectual effect and eminently
+intellectual but intrinsically noncognitive source witnesses. These controls
+are statements about the selected semantic profile, not defeaters of the
+metaphysical premise. The cognitive-perfection branch does not replace the
+three already registered intrinsic-intellect routes or the `090be689`
+intellect-to-will input. None concludes current cognizing,
 omniscience (#1737) or exercised choice. `HasWill` is capacity-level
 intellectual appetite. The structured appetite-to-unchanged-`HasWill`
 application (possession-sensitive response, acquired good versus rest in a
