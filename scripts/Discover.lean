@@ -320,6 +320,26 @@ def proveOwn (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : 
   let (xs', lctx, insts) ← ownContext xs ((hyps.map (·.2)).push concl)
   withLCtx lctx insts <| prove xs' hyps concl u heartbeats "" (duperOnly := true)
 
+/-- A literal negation in an inconsistent core: indices `(i, j)` of two core
+members where hypothesis `j` is definitionally (delta, default transparency)
+the negation of hypothesis `i`, as `RevelationCapabilityRejected σ :=
+¬ RevelationPossibleAndRecognizable σ` is of its rival. Such a core is a P/¬P
+pair, true by construction, not a discovered incompatibility (#1819). Only
+definitional unfolding counts: a contradictory pair that takes logic to
+recognize (`∀ x, F x → G x` against `∃ x, F x ∧ ¬ G x`) is not literal. -/
+def literalNegation (hyps : Array (Nat × Expr)) (core : Array Nat) (heartbeats : Nat) :
+    TermElabM (Option (Nat × Nat)) := do
+  let members := hyps.filter fun (i, _) => core.contains i
+  for (i, hi) in members do
+    for (j, hj) in members do
+      if i == j then continue
+      let same ← tryCatchRuntimeEx (withoutModifyingState <|
+          withTheReader Core.Context (fun c => { c with maxHeartbeats := heartbeats * 1000 }) <|
+            withCurrHeartbeats <| withTransparency .default <| isDefEq hj (mkNot hi))
+        (fun _ => pure false)
+      if same then return some (i, j)
+  return none
+
 /-- Deletion minimization: drop each remaining premise in turn and keep it
 dropped when Duper still proves the goal. -/
 def minimize (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : NameSet)
@@ -600,6 +620,126 @@ def bridgeFor (p q : Expr) (pElems qElems : Array (String × Expr)) (fix : Bool)
     let (bridge, _) := (nameBinders bridge).run 0
     return some (bridge, fixed)
 
+/-- Whether `a` is `p` applied to further arguments (`p` a relation binder, or
+a structure field applied to its binder). -/
+def headedBy (p a : Expr) : Bool :=
+  let pa := p.getAppArgs
+  let aa := a.getAppArgs
+  a.getAppFn == p.getAppFn && pa.size < aa.size &&
+    (pa.zip (aa.extract 0 pa.size)).all fun (x, y) => x == y
+
+/-- The conjuncts of `e` (`A ∧ B ∧ C` gives `A`, `B`, `C`). -/
+partial def conjuncts (e : Expr) : Array Expr :=
+  if e.isAppOfArity ``And 2 then conjuncts e.appFn!.appArg! ++ conjuncts e.appArg! else #[e]
+
+/-! A target whose antecedent is a conjunction (`∀ g, Simple g → Perfect g → …
+→ Q g`, or one hypothesis `A g ∧ B g`) invites bridges `∀ g, Simple g → R g`
+that make one conjunct sufficient for what the whole conjunction is asked to
+give. Such a bridge is formally a candidate but philosophically uninformative,
+and each is stronger than the conjunctive bridge
+`∀ g, Simple g → … → HasWill g → R g` over the same element. The conjunctive
+builder matches each argument of `R` to the first unused antecedent element of
+its type, so for an antecedent with several elements of one type it may not be
+the weakening of a given single bridge, and it need not unlock every target a
+single bridge does. The search therefore tries the conjunctive version first,
+once per consequent relation (#1819); only when one passes are the
+single-conjunct bridges dropped. Otherwise they are tried after the others and
+reported as `single_conjunct` (demoted in the ranking). -/
+
+/-- The relations heading the conjuncts of the expanded conclusion's antecedent
+(at least two, else none), and the conjunctive bridges
+`∀ elements, antecedents → ∃ unmatched, q args` for each premise relation `q`
+outside the antecedent. -/
+def conjunctiveBridges (c : Expr) (rel : Array (String × Expr)) (inH : Expr → Bool) :
+    MetaM (Array String × Array (String × Expr)) :=
+  forallTelescope c fun ys _ => do
+    let mut props : Array Expr := #[]
+    let mut elemYs : Array Expr := #[]
+    for y in ys do
+      if ← isProp (← inferType y) then props := props.push y else elemYs := elemYs.push y
+    let mut atoms : Array Expr := #[]
+    for y in props do
+      atoms := atoms ++ conjuncts (← instantiateMVars (← inferType y))
+    let ante := rel.filter fun (_, p) => atoms.any (headedBy p ·)
+    if ante.size < 2 then return (#[], #[])
+    let anteNames := ante.map (·.1)
+    let mut out : Array (String × Expr) := #[]
+    for (qn, q) in rel do
+      if anteNames.contains qn || !inH q then continue
+      let some bridge ← forallTelescopeReducing (← inferType q) fun bs _ => do
+          let mut used := Array.replicate elemYs.size false
+          let mut args : Array Expr := #[]
+          let mut missing : Array Expr := #[]
+          let mut linked := 0
+          for b in bs do
+            let bt ← inferType b
+            let mut found : Option Nat := none
+            for k in [0:elemYs.size] do
+              if !used[k]! && found.isNone then
+                if ← isDefEq (← inferType elemYs[k]!) bt then found := some k
+            match found with
+            | some k =>
+              used := used.set! k true
+              args := args.push elemYs[k]!
+              linked := linked + 1
+            | none =>
+              args := args.push b
+              missing := missing.push b
+          if linked == 0 then return none
+          let mut body := mkAppN q args
+          for b in missing.reverse do
+            body ← mkAppM ``Exists #[← mkLambdaFVars #[b] body]
+          let bridge ← mkForallFVars ys body
+          if bridge.hasLooseBVars then return none
+          return some ((nameBinders bridge).run 0).1
+        | continue
+      out := out.push (qn, bridge)
+    return (anteNames, out)
+
+/-- The checks a candidate bridge must pass before it is reported (see
+`missingBridges`); the report fields, or `none`. -/
+def checkBridge (xs : Array Expr) (origins : Array Origin) (hyps : Array (Nat × Expr))
+    (concl : Expr) (u : NameSet) (heartbeats : Nat)
+    (domains : Array Nat → Array Name → Array String) (bridge : Expr) (budget : Nat) :
+    TermElabM (Option (List (String × Json))) := do
+  let withBridge := hyps.push (1000, bridge)
+  let some found ← prove xs withBridge concl u budget "" (duperOnly := true) | return none
+  unless found.used.contains 1000 do return none
+  -- Recheck over the reported statements' own binders: the search context
+  -- also holds binders that unused candidates introduced (an element
+  -- `x : B` of `Marker B x`), and a proof that borrows one would rest on a
+  -- nonemptiness the report does not show. A binder that only the bridge
+  -- mentions (a fixed argument) is kept and reported as `assumed_binders`.
+  let usedHyps := withBridge.filter fun (i, _) => found.used.contains i
+  let (ownXs, lctx, insts) ← ownContext xs ((usedHyps.map (·.2)).push concl)
+  let (baseXs, _, _) ← ownContext xs (((usedHyps.filter (·.1 != 1000)).map (·.2)).push concl)
+  let some proof ← withLCtx lctx insts <|
+      prove ownXs usedHyps concl u budget "" (duperOnly := true) | return none
+  unless proof.used.contains 1000 do return none
+  unless proof.axioms.all allowedAxioms.contains do return none
+  let bridgeOnly := ownXs.filter (!baseXs.contains ·)
+  let assumed ← bridgeOnly.mapM fun x => do
+    return (← x.fvarId!.getUserName).eraseMacroScopes.toString
+  -- The declarations that introduced a bridge-only binder count as kept for
+  -- the name identifications its domain rests on.
+  let assumedDecls := (xs.zip origins).filterMap fun (x, o) =>
+    if bridgeOnly.contains x then some o.decl else none
+  -- A bridge that proves the target on its own merely restates it.
+  if (← prove xs #[(1000, bridge)] concl u (max 2000 (heartbeats / 10)) ""
+      (duperOnly := true)).isSome then return none
+  if (← prove xs withBridge (Lean.mkConst ``False) u (max 2000 (heartbeats / 10)) ""
+      (duperOnly := true)).isSome then return none
+  let text ← withOptions (fun o => o |>.set `pp.fullNames true |>.set `pp.fieldNotation false
+      |>.set `format.width (100000 : Nat)) do
+    return toString (← ppExpr bridge)
+  return some [("text", Json.str text), ("assumed_binders", toJson assumed),
+    ("used", toJson (proof.used.filter (· != 1000))),
+    ("domain_identified_by_name", toJson (domains (proof.used.filter (· != 1000)) assumedDecls))]
+
+/-- At most this many conjunctive bridges are checked per goal, besides the
+48 ordinary bridge candidates. -/
+def maxConjunctive : Nat := 8
+
 def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
     (hyps : Array (Nat × Expr)) (concl : Expr) (u : NameSet) (heartbeats : Nat)
     (domains : Array Nat → Array Name → Array String) :
@@ -625,6 +765,9 @@ def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
   let exprs := hs.push c
   let near (r : Expr) : Array (String × Expr) :=
     elems.filter fun (_, x) => exprs.any fun e => r.occurs e && x.occurs e
+  -- A conjunctive antecedent: its single-conjunct bridges are skipped, the
+  -- conjunctive version is tried first.
+  let (ante, conjunctive) ← conjunctiveBridges c rel inH
   -- Pairs of a premise relation and a conclusion relation; first those where
   -- each is used on its side only (the two vocabularies are unconnected).
   let mut first := #[]
@@ -635,54 +778,216 @@ def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
       if pn == qn || !inC q then continue
       -- Both directions: the conclusion's antecedents may need the premises'
       -- vocabulary as much as the premises' consequents need the conclusion's.
-      if !inC p && !inH q then
-        first := first.push ((pn, p), (qn, q), near p, near q) |>.push ((qn, q), (pn, p), near q, near p)
-      else
-        later := later.push ((pn, p), (qn, q), near p, near q) |>.push ((qn, q), (pn, p), near q, near p)
-  let budget := max 2000 (heartbeats / 4)
+      let pairs := #[((pn, p), (qn, q), near p, near q), ((qn, q), (pn, p), near q, near p)]
+      if !inC p && !inH q then first := first ++ pairs else later := later ++ pairs
+  -- One conjunct of a conjunctive antecedent alone, made sufficient.
+  let single (a b : String) : Bool := ante.contains a && !ante.contains b
   let mut out : Array Json := #[]
+  -- Conjunctive bridges have their own cap (`maxConjunctive`) and the full
+  -- budget: one stands for many single ones, and its long antecedent makes the
+  -- search heavier.
+  let mut conjunctiveFound := false
+  for (qn, bridge) in conjunctive.extract 0 maxConjunctive do
+    let some fields ← checkBridge xs origins hyps concl u heartbeats domains bridge heartbeats
+      | continue
+    conjunctiveFound := true
+    out := out.push (Json.mkObj ([("from", Json.str (" ∧ ".intercalate ante.toList)), ("to", Json.str qn),
+      ("fixed", toJson (#[] : Array String)), ("conjunctive", Json.bool true),
+      ("replaces_single_conjuncts", toJson ante)] ++ fields))
+  -- Single-conjunct bridges are dropped when a conjunctive bridge passed;
+  -- otherwise they are tried last and reported demoted (`single_conjunct`).
+  let ordered := (first ++ later).filter (fun ((a, _), (b, _), _, _) => !single a b) ++
+    (if conjunctiveFound then #[] else (first ++ later).filter fun ((a, _), (b, _), _, _) => single a b)
   let mut tried := 0
-  for ((pn, p), (qn, q), pe, qe) in first ++ later do
+  for ((pn, p), (qn, q), pe, qe) in ordered do
     for fix in [true, false] do
       if tried ≥ 48 then return out
       let some (bridge, fixed) ← bridgeFor p q pe qe fix | continue
       tried := tried + 1
-      let withBridge := hyps.push (1000, bridge)
-      let some found ← prove xs withBridge concl u budget "" (duperOnly := true) | continue
-      unless found.used.contains 1000 do continue
-      -- Recheck over the reported statements' own binders: the search context
-      -- also holds binders that unused candidates introduced (an element
-      -- `x : B` of `Marker B x`), and a proof that borrows one would rest on a
-      -- nonemptiness the report does not show. A binder that only the bridge
-      -- mentions (a fixed argument) is kept and reported as `assumed_binders`.
-      let usedHyps := withBridge.filter fun (i, _) => found.used.contains i
-      let (ownXs, lctx, insts) ← ownContext xs ((usedHyps.map (·.2)).push concl)
-      let (baseXs, _, _) ← ownContext xs (((usedHyps.filter (·.1 != 1000)).map (·.2)).push concl)
-      let some proof ← withLCtx lctx insts <|
-          prove ownXs usedHyps concl u budget "" (duperOnly := true) | continue
-      unless proof.used.contains 1000 do continue
-      unless proof.axioms.all allowedAxioms.contains do continue
-      let bridgeOnly := ownXs.filter (!baseXs.contains ·)
-      let assumed ← bridgeOnly.mapM fun x => do
-        return (← x.fvarId!.getUserName).eraseMacroScopes.toString
-      -- The declarations that introduced a bridge-only binder count as kept for
-      -- the name identifications its domain rests on.
-      let assumedDecls := (xs.zip origins).filterMap fun (x, o) =>
-        if bridgeOnly.contains x then some o.decl else none
-      -- A bridge that proves the target on its own merely restates it.
-      if (← prove xs #[(1000, bridge)] concl u (max 2000 (heartbeats / 10)) ""
-          (duperOnly := true)).isSome then continue
-      if (← prove xs withBridge (Lean.mkConst ``False) u (max 2000 (heartbeats / 10)) ""
-          (duperOnly := true)).isSome then continue
-      let text ← withOptions (fun o => o |>.set `pp.fullNames true |>.set `pp.fieldNotation false
-          |>.set `format.width (100000 : Nat)) do
-        return toString (← ppExpr bridge)
-      out := out.push (Json.mkObj [("from", Json.str pn), ("to", Json.str qn),
-        ("fixed", toJson fixed), ("text", Json.str text), ("assumed_binders", toJson assumed),
-        ("used", toJson (proof.used.filter (· != 1000))),
-        ("domain_identified_by_name", toJson (domains (proof.used.filter (· != 1000)) assumedDecls))])
+      let some fields ← checkBridge xs origins hyps concl u heartbeats domains bridge
+          (max 2000 (heartbeats / 4)) | continue
+      out := out.push (Json.mkObj ([("from", Json.str pn), ("to", Json.str qn),
+        ("fixed", toJson fixed), ("single_conjunct", Json.bool (single pn qn))] ++ fields))
       break
   return out
+
+/-! ### Projection binding
+
+A target may bind a value that a premise reaches only as a field of a
+structure binder: `OnticTSchemaValid (o : Ontic W B)` against
+`OnticFrameKT (m : Profile W B)`, whose `m.ontic : Ontic W B`. Binding by name,
+type or tag never identifies `o` with `m.ontic`, so the goal over separate `o`
+and `m` is false although `∀ m, OnticFrameKT m → OnticTSchemaValid m.ontic`
+may hold. When the goal fails, each such projection (a target binder that is
+a value, never an instance, carrier, predicate or function, even through a
+definitional alias; a non-instance premise structure binder with a field of
+definitionally equal type) is tried in turn as an explicit binding choice: the
+target binder is replaced by the projection everywhere and the goal searched
+again. A choice that closes the goal is reported (`projection`, and `bound_to`
+on the binder); none is ever made silently. A goal closed under it is a
+specialization of the target statement to the projection, not the statement
+over an arbitrary binder. A target binder with several candidate projections
+is `ambiguous` (identification by type alone), and a choice whose structure
+premise minimization drops is `projection_unused`: `truth discover` rejects
+both. -/
+
+/-- At most this many projection choices are searched per goal. -/
+def maxProjections : Nat := 4
+
+/-- The projection choices: `(i, j, field, value)` where target binder `xs[i]`
+has the type of field `field` of the premise structure binder `xs[j]`, and
+`value` is that projection applied to `xs[j]`. -/
+def projectionCandidates (target : Name) (xs : Array Expr) (origins : Array Origin) :
+    MetaM (Array (Nat × Nat × Name × Expr)) := do
+  let env ← getEnv
+  let mut out : Array (Nat × Nat × Name × Expr) := #[]
+  for i in [0:xs.size] do
+    let x := xs[i]!
+    unless origins[i]!.decl == target do continue
+    if (← x.fvarId!.getBinderInfo).isInstImplicit then continue
+    let xt ← instantiateMVars (← inferType x)
+    -- Values only (an element, a structure such as `o : Ontic W B`): a
+    -- predicate or function binder is never bound to a field of matching type,
+    -- which would equate unrelated relations (`Simple := D.Lives`).
+    -- `forallTelescopeReducing` unfolds at default transparency, so an alias
+    -- such as `def Pred B := B → Prop` (or Mathlib's `Set B`) counts as a
+    -- predicate too.
+    if xt.isSort || (← isProp xt) then continue
+    if ← forallTelescopeReducing xt fun ys _ => pure !ys.isEmpty then continue
+    for j in [0:xs.size] do
+      let y := xs[j]!
+      if origins[j]!.decl == target then continue
+      if (← y.fvarId!.getBinderInfo).isInstImplicit then continue
+      let yt ← whnfR (← instantiateMVars (← inferType y))
+      let .const s _ := yt.getAppFn | continue
+      unless isStructure env s do continue
+      for f in getStructureFields env s do
+        let some proj := getProjFnForField? env s f | continue
+        let some t ← (try some <$> mkAppM proj #[y] catch _ => pure none) | continue
+        if ← withoutModifyingState (isDefEq (← inferType t) xt) then
+          out := out.push (i, j, f, ← instantiateMVars t)
+  return out
+
+/-- The goal with binder `xs[i]` replaced by `value`, reopened over the other
+binders (the original binders erased from the context, so nothing can borrow
+them): `k` receives the binders, the hypotheses and the conclusion. `none` when
+another binder's type mentions `xs[i]`. -/
+def withProjection (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (i : Nat)
+    (value : Expr) (k : Array Expr → Array (Nat × Expr) → Expr → TermElabM (Option α)) :
+    TermElabM (Option α) := do
+  let x := xs[i]!
+  let rest := xs.filter (· != x)
+  for y in rest do
+    if (← instantiateMVars (← inferType y)).containsFVar x.fvarId! then return none
+  if value.containsFVar x.fvarId! then return none
+  let body ← hyps.foldrM (fun (_, h) acc => mkArrow h acc) concl
+  let body := (← instantiateMVars body).replaceFVar x value
+  let goal ← mkForallFVars rest body
+  let erased := xs.map (·.fvarId!)
+  let lctx := erased.foldl (·.erase ·) (← getLCtx)
+  let insts := (← getLocalInstances).filter fun inst => !erased.contains inst.fvar.fvarId!
+  withLCtx lctx insts <| forallBoundedTelescope goal (some rest.size) fun ys b => do
+    let mut b := b
+    let mut hs : Array (Nat × Expr) := #[]
+    for (idx, _) in hyps do
+      let .forallE _ d body _ := b | return none
+      hs := hs.push (idx, d)
+      b := body
+    k ys hs b
+
+/-- Everything after the goal closed: minimization, the incompatibility core
+and its literal-negation check, the transcription probe, vacuous truth,
+witnesses and the theorem signature. -/
+def finish (target : Name) (premises : Array Name) (heartbeats : Nat)
+    (byName : IO.Ref (Array Membership)) (xs : Array Expr) (hyps : Array (Nat × Expr))
+    (concl : Expr) (u : NameSet) (added : Array Json) (full : Proved) (projection : Json)
+    (structureBinder : Option Expr := none) :
+    TermElabM Json := do
+    -- Duper is the authority for the Solution: re-prove an ATP-found goal on its core.
+    let start ← if full.prover == "duper" then pure (some full) else
+      prove xs (hyps.filter fun (i, _) => full.used.contains i) concl u heartbeats "" (duperOnly := true)
+    let some start := start
+      | return Json.mkObj [("binders", toJson added), ("alone", Json.null), ("closed", proved (some full)),
+          ("projection", projection),
+          ("reconstruction", "Duper did not reprove the premise core the external prover selected")]
+    let (minimal, log, best) ← minimize xs hyps concl u heartbeats start
+    let minHyps := hyps.filter fun (i, _) => minimal.contains i
+    -- Under a projection binding, a minimal premise must still speak of the
+    -- structure binder: otherwise the premise that introduced it was dropped
+    -- and the "derivation" is about the structure alone (`projection_unused`).
+    let projectionUnused := match structureBinder with
+      | some y => !minHyps.any fun (_, h) => h.containsFVar y.fvarId!
+      | none => false
+    -- An incompatibility is checked over the premises' own binders only (`proveOwn`).
+    let vacuous ← proveOwn xs minHyps (Lean.mkConst ``False) u heartbeats
+    let (vacuousCore, core, coreNames, coreProof) ← match vacuous with
+      | some v => do
+        let (core, _, best) ← minimize xs minHyps (Lean.mkConst ``False) u heartbeats v (own := true)
+        pure (toJson core, core, core.filterMap fun i => premises[i]?, some best)
+      | none => pure (Json.null, #[], #[], none)
+    -- A core that is a premise and its literal negation (`truth discover`
+    -- reports it as filtered `literal_negation`, never as an incompatibility).
+    let literal ← if vacuous.isSome then
+        literalNegation minHyps core (max 2000 (heartbeats / 10))
+      else pure none
+    -- Transcription probe on the folded goal (the prove-sweep heuristic).
+    let folded ← mkForallFVars xs (← minHyps.foldrM (fun (_, h) acc => mkArrow h acc) concl)
+    let probe ← withoutModifyingState do
+      let mvar ← mkFreshExprMVar folded
+      tryCatchRuntimeEx (do
+          let rest ← Tactic.run mvar.mvarId! (Tactic.evalTactic (← `(tactic| prove_sweep_probe)))
+          return rest.isEmpty)
+        (fun _ => pure false)
+    let minNames := minimal.map fun i => premises[i]!
+    let identified ← byName.get
+    let u' ← unfoldSet (minNames.push target)
+    -- Vacuous truth: do the premises refute the target's own antecedents?
+    -- (`∀ x, A x → B x` holds because nothing is `A`.) A valid derivation that a
+    -- reviewer must see as such.
+    let antecedentRefuted ← if vacuous.isSome then pure false else do
+      let ec ← expand u' concl
+      let refuted ← forallTelescope ec fun ys _ => do
+        let mut props := false
+        for y in ys do
+          if ← isProp (← inferType y) then props := true
+        if !props then return none
+        let noB ← mkForallFVars ys (Lean.mkConst ``False)
+        prove xs minHyps noB u' (max 2000 (heartbeats / 4)) "" (duperOnly := true)
+      pure refuted.isSome
+    -- Joint witness (premises and conclusion) and one-point omission models.
+    let (joint, omissions) ← if vacuous.isSome then pure (none, #[]) else do
+      let joint ← witness xs ((minHyps.map (·.2)).push concl) u (max 2000 (heartbeats / 4))
+      let mut omissions : Array Json := #[]
+      for (i, _) in minHyps do
+        let others := minHyps.filter (·.1 != i) |>.map (·.2)
+        let m ← witness xs (others.push (mkNot concl)) u (max 2000 (heartbeats / 10))
+        omissions := omissions.push (Json.mkObj [("premise", toJson i),
+          ("model", (m.map Json.str).getD Json.null)])
+      pure (joint, omissions)
+    return Json.mkObj [
+      ("witness", (joint.map Json.str).getD Json.null),
+      ("antecedent_refuted", Json.bool antecedentRefuted),
+      ("omissions", Json.arr omissions),
+      ("binders", toJson added),
+      ("projection", projection),
+      ("projection_unused", Json.bool projectionUnused),
+      ("alone", Json.null),
+      ("closed", proved (some full)),
+      ("minimal", toJson minimal),
+      ("deletions", Json.arr log),
+      ("proof", proved (some best)),
+      -- An incompatibility concerns its core only; an implication, its premises and target.
+      ("domain_identified_by_name", toJson (keptIdentifications identified
+        (if vacuous.isSome then coreNames else minNames.push target))),
+      ("vacuous", proved vacuous),
+      ("vacuous_core", vacuousCore),
+      ("vacuous_core_proof", proved coreProof),
+      ("literal_negation", match literal with
+        | some (i, j) => toJson #[i, j]
+        | none => Json.null),
+      ("probe", Json.bool probe),
+      ("signature", Json.str (← signature xs minHyps concl)),
+      ("unfold", jsonNames (u'.toArray.qsort Name.lt))]
 
 def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : String)
     (tags : Array (Name × Name × String)) (bridges : Bool) (strict : Bool)
@@ -730,84 +1035,48 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
       return Json.mkObj [("binders", toJson added), ("alone", proved alone),
         ("signature", Json.str (← withLCtx aloneLCtx aloneInsts <| signature targetXs #[] concl)),
         ("unfold", jsonNames ((← unfoldSet #[target]).toArray.qsort Name.lt))]
-    let full ← prove xs hyps concl u heartbeats zip
-    let some full := full
-      | do
-        let identified ← byName.get
-        let domains (used : Array Nat) (extra : Array Name) : Array String :=
-          keptIdentifications identified ((used.filterMap fun i => premises[i]?).push target ++ extra)
-        let found ← if bridges then missingBridges xs origins target hyps concl u heartbeats domains
-          else pure #[]
-        return Json.mkObj [("binders", toJson added), ("alone", Json.null), ("closed", Json.null),
-          ("bridges", Json.arr found)]
-    -- Duper is the authority for the Solution: re-prove an ATP-found goal on its core.
-    let start ← if full.prover == "duper" then pure (some full) else
-      prove xs (hyps.filter fun (i, _) => full.used.contains i) concl u heartbeats "" (duperOnly := true)
-    let some start := start
-      | return Json.mkObj [("binders", toJson added), ("alone", Json.null), ("closed", proved (some full)),
-          ("reconstruction", "Duper did not reprove the premise core the external prover selected")]
-    let (minimal, log, best) ← minimize xs hyps concl u heartbeats start
-    let minHyps := hyps.filter fun (i, _) => minimal.contains i
-    -- An incompatibility is checked over the premises' own binders only (`proveOwn`).
-    let vacuous ← proveOwn xs minHyps (Lean.mkConst ``False) u heartbeats
-    let (vacuousCore, coreNames, coreProof) ← match vacuous with
-      | some v => do
-        let (core, _, best) ← minimize xs minHyps (Lean.mkConst ``False) u heartbeats v (own := true)
-        pure (toJson core, core.filterMap fun i => premises[i]?, some best)
-      | none => pure (Json.null, #[], none)
-    -- Transcription probe on the folded goal (the prove-sweep heuristic).
-    let folded ← mkForallFVars xs (← minHyps.foldrM (fun (_, h) acc => mkArrow h acc) concl)
-    let probe ← withoutModifyingState do
-      let mvar ← mkFreshExprMVar folded
-      tryCatchRuntimeEx (do
-          let rest ← Tactic.run mvar.mvarId! (Tactic.evalTactic (← `(tactic| prove_sweep_probe)))
-          return rest.isEmpty)
-        (fun _ => pure false)
-    let minNames := minimal.map fun i => premises[i]!
+    if let some full ← prove xs hyps concl u heartbeats zip then
+      return ← finish target premises heartbeats byName xs hyps concl u added full Json.null
+    -- Projection binding choices (explicit and reported, never silent). A
+    -- target binder with more than one candidate projection (two fields, or
+    -- two structure binders, of its type) is identified by type alone: the
+    -- choice is reported `ambiguous` and `truth discover` rejects it
+    -- (`projection_ambiguous`).
+    let candidates ← projectionCandidates target xs origins
+    let label (j : Nat) (field : Name) : String :=
+      s!"{origins[j]!.decl}.{origins[j]!.binder}.{field}"
+    let mut tried : Array Json := #[]
+    let mut unused : Option Json := none
+    for (i, j, field, value) in candidates.extract 0 maxProjections do
+      let o := origins[i]!
+      let p := origins[j]!
+      let alternatives := (candidates.filter (·.1 == i)).map fun (_, j', f', _) => Json.str (label j' f')
+      let choice := Json.mkObj [("binder", Json.str s!"{o.decl}.{o.binder}"),
+        ("bound_to", Json.str (label j field)),
+        ("structure_binder", Json.str s!"{p.decl}.{p.binder}"), ("field", Json.str field.toString),
+        ("ambiguous", Json.bool (alternatives.size > 1)), ("alternatives", Json.arr alternatives)]
+      tried := tried.push choice
+      let added' := added.mapIdx fun k b =>
+        if k == i then b.setObjVal! "bound_to" (Json.str (label j field)) else b
+      -- The structure binder's position once `xs[i]` is removed.
+      let j' := if j > i then j - 1 else j
+      let result ← withProjection xs hyps concl i value fun ys hs c => do
+        let some full ← prove ys hs c u heartbeats zip | return none
+        some <$> finish target premises heartbeats byName ys hs c u added' full choice ys[j']?
+      if let some json := result then
+        -- A choice whose structure premise minimization dropped is kept only
+        -- as the report of last resort; another choice may use its premise.
+        if (json.getObjValAs? Bool "projection_unused").toOption == some true then
+          if unused.isNone then unused := some json
+        else return json
+    if let some json := unused then return json
     let identified ← byName.get
-    let u' ← unfoldSet (minNames.push target)
-    -- Vacuous truth: do the premises refute the target's own antecedents?
-    -- (`∀ x, A x → B x` holds because nothing is `A`.) A valid derivation that a
-    -- reviewer must see as such.
-    let antecedentRefuted ← if vacuous.isSome then pure false else do
-      let ec ← expand u' concl
-      let refuted ← forallTelescope ec fun ys _ => do
-        let mut props := false
-        for y in ys do
-          if ← isProp (← inferType y) then props := true
-        if !props then return none
-        let noB ← mkForallFVars ys (Lean.mkConst ``False)
-        prove xs minHyps noB u' (max 2000 (heartbeats / 4)) "" (duperOnly := true)
-      pure refuted.isSome
-    -- Joint witness (premises and conclusion) and one-point omission models.
-    let (joint, omissions) ← if vacuous.isSome then pure (none, #[]) else do
-      let joint ← witness xs ((minHyps.map (·.2)).push concl) u (max 2000 (heartbeats / 4))
-      let mut omissions : Array Json := #[]
-      for (i, _) in minHyps do
-        let others := minHyps.filter (·.1 != i) |>.map (·.2)
-        let m ← witness xs (others.push (mkNot concl)) u (max 2000 (heartbeats / 10))
-        omissions := omissions.push (Json.mkObj [("premise", toJson i),
-          ("model", (m.map Json.str).getD Json.null)])
-      pure (joint, omissions)
-    return Json.mkObj [
-      ("witness", (joint.map Json.str).getD Json.null),
-      ("antecedent_refuted", Json.bool antecedentRefuted),
-      ("omissions", Json.arr omissions),
-      ("binders", toJson added),
-      ("alone", Json.null),
-      ("closed", proved (some full)),
-      ("minimal", toJson minimal),
-      ("deletions", Json.arr log),
-      ("proof", proved (some best)),
-      -- An incompatibility concerns its core only; an implication, its premises and target.
-      ("domain_identified_by_name", toJson (keptIdentifications identified
-        (if vacuous.isSome then coreNames else minNames.push target))),
-      ("vacuous", proved vacuous),
-      ("vacuous_core", vacuousCore),
-      ("vacuous_core_proof", proved coreProof),
-      ("probe", Json.bool probe),
-      ("signature", Json.str (← signature xs minHyps concl)),
-      ("unfold", jsonNames (u'.toArray.qsort Name.lt))]
+    let domains (used : Array Nat) (extra : Array Name) : Array String :=
+      keptIdentifications identified ((used.filterMap fun i => premises[i]?).push target ++ extra)
+    let found ← if bridges then missingBridges xs origins target hyps concl u heartbeats domains
+      else pure #[]
+    return Json.mkObj [("binders", toJson added), ("alone", Json.null), ("closed", Json.null),
+      ("projections_tried", Json.arr tried), ("bridges", Json.arr found)]
 
 syntax (name := discoverTry) "#discover " str num str str ident " from " ident* : command
 

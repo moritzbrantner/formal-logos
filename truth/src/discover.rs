@@ -37,7 +37,12 @@ pub const CONSTANTS_LEAN: &str = "scripts/StatementConstants.lean";
 pub const ALLOWED_AXIOMS: [&str; 3] = ["propext", "Classical.choice", "Quot.sound"];
 const MARKER: &str = "DISCOVER-JSON ";
 /// Filters that flag a discovery without rejecting it.
-pub const INFORMATIONAL: [&str; 3] = ["witness", "sense_bridge", "vacuous_target"];
+pub const INFORMATIONAL: [&str; 4] = [
+    "witness",
+    "sense_bridge",
+    "vacuous_target",
+    "projection_binding",
+];
 
 /// Which statements may serve as premises.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -112,6 +117,12 @@ pub struct Vocabulary {
     pub binders: Vec<String>,
     /// TruthCore constants in its type and body, itself excluded.
     pub constants: BTreeSet<String>,
+    /// The head constant of each binder's type (`""` when none or not a
+    /// TruthCore constant), aligned with `binders`.
+    pub binder_types: Vec<String>,
+    /// For each binder whose type is a TruthCore structure, the head constants
+    /// of its fields' types, aligned with `binders` (projection fit, #1819).
+    pub binder_fields: Vec<BTreeSet<String>>,
 }
 
 /// Parses the `StatementConstants.lean` export.
@@ -144,6 +155,21 @@ pub fn parse_vocabulary(value: &Value) -> Result<BTreeMap<String, Vocabulary>, S
                 constants: strings("constants")
                     .into_iter()
                     .filter(|c| c != declaration)
+                    .collect(),
+                binder_types: strings("binder_types"),
+                binder_fields: row["binder_fields"]
+                    .as_array()
+                    .into_iter()
+                    .flatten()
+                    .map(|fields| {
+                        fields
+                            .as_array()
+                            .into_iter()
+                            .flatten()
+                            .filter_map(Value::as_str)
+                            .map(str::to_owned)
+                            .collect()
+                    })
                     .collect(),
             },
         );
@@ -514,11 +540,14 @@ pub struct Candidate {
 
 /// Ranks pool statements as premises for `target`. A candidate must share
 /// project vocabulary or a definition with the target, and at least one
-/// parameter name, so that its binders can be identified with the target's.
+/// parameter name, so that its binders can be identified with the target's,
+/// or a structure parameter with a field of a target parameter's type (the
+/// projection binding `scripts/Discover.lean` may try, #1819).
 /// Score: the share of the candidate's parameters that the target also has
-/// (type fit), the share of its TruthCore constants the target uses
+/// or projects to (type fit), the share of its TruthCore constants the target uses
 /// (precision) and of the target's constants it uses (recall), plus shared
-/// definitions, the same module and a strength order with the target. A ranking only: Lean decides whether the types compose.
+/// definitions, the same module, a strength order with the target and a
+/// projection fit. A ranking only: Lean decides whether the types compose.
 pub fn rank(
     target: &Statement,
     pool: &[&Statement],
@@ -530,6 +559,12 @@ pub fn rank(
         return Vec::new();
     };
     let goal_binders: BTreeSet<&String> = goal.binders.iter().collect();
+    let goal_types: BTreeSet<&str> = goal
+        .binder_types
+        .iter()
+        .map(String::as_str)
+        .filter(|t| !t.is_empty())
+        .collect();
     let strength = |a: &str, b: &str| {
         weaker.get(a).is_some_and(|w| w.contains(b)) || weaker.get(b).is_some_and(|w| w.contains(a))
     };
@@ -542,11 +577,25 @@ pub fn rank(
                 + usize::from(goal.constants.contains(&s.declaration))
                 + usize::from(v.constants.contains(&target.declaration));
             let definitions = s.definitions.intersection(&target.definitions).count();
-            let binders = v
+            let named = v
                 .binders
                 .iter()
                 .filter(|b| goal_binders.contains(b))
                 .count();
+            // A binder not shared by name whose structure has a field of a
+            // target binder's type (`m : Profile` with `m.ontic : Ontic`).
+            let projecting = v
+                .binders
+                .iter()
+                .enumerate()
+                .filter(|(i, b)| {
+                    !goal_binders.contains(b)
+                        && v.binder_fields
+                            .get(*i)
+                            .is_some_and(|f| f.iter().any(|h| goal_types.contains(h.as_str())))
+                })
+                .count();
+            let binders = named + projecting;
             if (shared == 0 && definitions == 0) || binders == 0 {
                 return None;
             }
@@ -561,6 +610,12 @@ pub fn rank(
                 score += 0.1;
             }
             if strength(&s.id, &target.id) {
+                score += 0.3;
+            }
+            // A projection fit is a type-level signal the constant overlap
+            // understates: the structure brings its other fields' vocabulary
+            // (`Profile` beyond `ontic`), which lowers precision and recall.
+            if projecting > 0 {
                 score += 0.3;
             }
             Some(Candidate {
@@ -1026,6 +1081,89 @@ pub fn domain_flag(outcome: &Value) -> Option<String> {
     })
 }
 
+/// The projection binding choice the goal was closed under, if any
+/// (`scripts/Discover.lean`, projection binding, #1819): the target binder was
+/// replaced by a field of a premise's structure binder. Always reported.
+pub fn projection_flag(outcome: &Value) -> Option<String> {
+    let choice = outcome["projection"].as_object()?;
+    let field = |k: &str| choice.get(k).and_then(Value::as_str).unwrap_or_default();
+    Some(format!(
+        "binding choice: the target binder {} is bound to the projection {} (field {} of {}); \
+         the theorem is a specialization of the target to the projection, not the target over \
+         an arbitrary binder",
+        field("binder"),
+        field("bound_to"),
+        field("field"),
+        field("structure_binder")
+    ))
+}
+
+/// The projection filters of one outcome (#1819): `projection_ambiguous` when
+/// the target binder had another candidate projection (identification by type
+/// alone, rejected), `projection_unused` when minimization dropped the premise
+/// that introduced the structure (rejected), else the informational
+/// `projection_binding`.
+pub fn projection_filters(outcome: &Value) -> Vec<(String, String)> {
+    let Some(detail) = projection_flag(outcome) else {
+        return Vec::new();
+    };
+    let mut out = Vec::new();
+    let choice = &outcome["projection"];
+    if choice["ambiguous"].as_bool() == Some(true) {
+        let alternatives: Vec<&str> = choice["alternatives"]
+            .as_array()
+            .into_iter()
+            .flatten()
+            .filter_map(Value::as_str)
+            .collect();
+        out.push((
+            "projection_ambiguous".to_owned(),
+            format!(
+                "the target binder {} has several candidate projections ({}): binding one is identification by type alone",
+                choice["binder"].as_str().unwrap_or_default(),
+                alternatives.join(", ")
+            ),
+        ));
+    }
+    if outcome["projection_unused"].as_bool() == Some(true) {
+        out.push((
+            "projection_unused".to_owned(),
+            format!(
+                "minimization dropped the premise that introduced {}: the derivation does not use the structure it projects",
+                choice["structure_binder"].as_str().unwrap_or_default()
+            ),
+        ));
+    }
+    if out.is_empty() {
+        out.push(("projection_binding".to_owned(), detail));
+    }
+    out
+}
+
+/// The goals counted as proved: closed, or a vocabulary theorem, except those
+/// closed only by a literal P/¬P core, which proves anything (#1819).
+pub fn proved_count(findings: &[Finding]) -> usize {
+    findings
+        .iter()
+        .filter(|f| !f.outcome["closed"].is_null() || !f.outcome["alone"].is_null())
+        .filter(|f| !f.filters.iter().any(|(n, _)| n == "literal_negation"))
+        .count()
+}
+
+/// The `(premise, negating premise)` pair of an inconsistent core in which
+/// one member's declaration unfolds to the negation of the other's
+/// (`literal_negation` of the Lean outcome, #1819).
+pub fn literal_negation(trial: &Trial, outcome: &Value) -> Option<(String, String)> {
+    let pair = indices(&outcome["literal_negation"]);
+    match pair[..] {
+        [a, b] => Some((
+            trial.premises.get(a)?.clone(),
+            trial.premises.get(b)?.clone(),
+        )),
+        _ => None,
+    }
+}
+
 /// Applies the filters of #1784 to one Lean outcome.
 pub fn classify(trial: &Trial, outcome: &Value, graph: &Graph, senses: &SenseCheck) -> Finding {
     let mut finding = Finding {
@@ -1078,6 +1216,25 @@ pub fn classify(trial: &Trial, outcome: &Value, graph: &Graph, senses: &SenseChe
         if !core.is_empty() {
             finding.premises = ids(&core);
         }
+        // P and its literal negation: inconsistent by construction. Neither an
+        // incompatibility nor support for the target, whatever else it proves.
+        if let Some((a, b)) = literal_negation(trial, outcome) {
+            finding.kind = Kind::Filtered;
+            finding.filters.push((
+                "literal_negation".into(),
+                format!(
+                    "{b} unfolds to the negation of {a}: a P/¬P pair by construction, \
+                     not a discovered incompatibility; the goal's proof rests on it and supports nothing"
+                ),
+            ));
+            return finding;
+        }
+        for (filter, detail) in projection_filters(outcome) {
+            if filter != "projection_binding" {
+                finding.kind = Kind::Filtered;
+            }
+            finding.filters.push((filter, detail));
+        }
         let rival = finding.premises.iter().find_map(|a| {
             let rivals = graph.rivals.get(a)?;
             finding
@@ -1117,6 +1274,7 @@ pub fn classify(trial: &Trial, outcome: &Value, graph: &Graph, senses: &SenseChe
     if let Some(detail) = domain_flag(outcome) {
         finding.filters.push(("domain_by_name".into(), detail));
     }
+    finding.filters.extend(projection_filters(outcome));
     let forbidden = forbidden_axioms(&axioms(&outcome["proof"]));
     if !forbidden.is_empty() {
         finding
@@ -1481,12 +1639,15 @@ pub fn render_spec(
             .iter()
             .map(|id| statements[id].label.as_str())
             .collect();
-        let meaning = format!(
+        let mut meaning = format!(
             "Discovered by truth discover: {} follows from {}. Duper proof over the delta-expanded \
              statement definitions, kernel-checked; parameters are identified by name within one module or by sense tag.",
             target.label,
             premise_labels.join("; ")
         );
+        if let Some(choice) = projection_flag(&finding.outcome) {
+            let _ = write!(meaning, " Explicit {choice}.");
+        }
         let _ = write!(
             text,
             "\n[[argument]]\nid = {}\nlabel = {}\ntheorem = {}\npremises = [{}]\nconclusion = {}\n\
@@ -1919,11 +2080,43 @@ pub struct Bridge {
     pub domain_identified_by_name: bool,
     /// Those identifications (`A.B = C.B`).
     pub domain_identifications: BTreeSet<String>,
+    /// The antecedent is the target's whole conjunctive antecedent
+    /// (`∀ g, A g → B g → … → q g`), tried in place of the single-conjunct
+    /// bridges `∀ g, A g → q g` (#1819).
+    pub conjunctive: bool,
+    /// The conjunct relations whose single-conjunct bridges it replaces.
+    pub replaces_single_conjuncts: BTreeSet<String>,
+    /// One conjunct of a conjunctive antecedent made sufficient, reported
+    /// only because no conjunctive bridge passed; ranked after the others.
+    pub single_conjunct: bool,
+}
+
+/// Notes on a ranked bridge's form, for the text report: a conjunctive
+/// antecedent and the single-conjunct bridges it stands for.
+pub fn bridge_notes(bridge: &Bridge) -> Vec<String> {
+    if bridge.single_conjunct {
+        return vec![
+            "one conjunct of a conjunctive antecedent made sufficient; reported (demoted) because no conjunctive bridge passed"
+                .to_owned(),
+        ];
+    }
+    if !bridge.conjunctive {
+        return Vec::new();
+    }
+    let names: Vec<&str> = bridge
+        .replaces_single_conjuncts
+        .iter()
+        .map(String::as_str)
+        .collect();
+    vec![format!(
+        "conjunctive antecedent; single-conjunct bridges from {} were not tried (each is stronger and uninformative)",
+        names.join(", ")
+    )]
 }
 
 /// The qualifications of a ranked bridge, for the text report: the elements it
 /// assumes and the domains its goals identified by name only. Empty for an
-/// unqualified bridge.
+/// unqualified bridge. (A bridge's form is noted by [`bridge_notes`].)
 pub fn bridge_qualifications(bridge: &Bridge) -> Vec<String> {
     let mut out = Vec::new();
     if !bridge.assumed_binders.is_empty() {
@@ -1948,7 +2141,7 @@ pub fn bridge_qualifications(bridge: &Bridge) -> Vec<String> {
 }
 
 /// The missing bridges of failed goals, ranked by the number of targets they
-/// unlock, then goals, then name.
+/// unlock, then goals, then name; single-conjunct bridges last.
 pub fn rank_bridges(findings: &[Finding]) -> Vec<Bridge> {
     let mut by_key: BTreeMap<(String, String, Vec<String>), Bridge> = BTreeMap::new();
     for finding in findings {
@@ -1974,6 +2167,15 @@ pub fn rank_bridges(findings: &[Finding]) -> Vec<Bridge> {
                     assumed_binders: BTreeSet::new(),
                     domain_identified_by_name: false,
                     domain_identifications: BTreeSet::new(),
+                    conjunctive: b["conjunctive"].as_bool() == Some(true),
+                    replaces_single_conjuncts: b["replaces_single_conjuncts"]
+                        .as_array()
+                        .into_iter()
+                        .flatten()
+                        .filter_map(Value::as_str)
+                        .map(str::to_owned)
+                        .collect(),
+                    single_conjunct: b["single_conjunct"].as_bool() == Some(true),
                 });
             entry.targets.insert(finding.trial.target.clone());
             entry.goals.push(finding.trial.label.clone());
@@ -2003,9 +2205,9 @@ pub fn rank_bridges(findings: &[Finding]) -> Vec<Bridge> {
     }
     let mut rows: Vec<Bridge> = by_key.into_values().collect();
     rows.sort_by(|a, b| {
-        b.targets
-            .len()
-            .cmp(&a.targets.len())
+        a.single_conjunct
+            .cmp(&b.single_conjunct)
+            .then(b.targets.len().cmp(&a.targets.len()))
             .then(b.goals.len().cmp(&a.goals.len()))
             .then_with(|| (&a.from, &a.to).cmp(&(&b.from, &b.to)))
     });
@@ -2021,6 +2223,9 @@ pub fn bridge_json(bridge: &Bridge) -> Value {
         "assumed_binders": bridge.assumed_binders,
         "domain_identified_by_name": bridge.domain_identified_by_name,
         "domain_identifications": bridge.domain_identifications,
+        "conjunctive": bridge.conjunctive,
+        "replaces_single_conjuncts": bridge.replaces_single_conjuncts,
+        "single_conjunct": bridge.single_conjunct,
         "status": "candidate proposition: a research question, not a premise of any record",
     })
 }

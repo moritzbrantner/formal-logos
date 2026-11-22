@@ -1,0 +1,10 @@
+{
+  "id": "4b08e545-ac04-4958-b373-1969a83d6761",
+  "label": "Maximum-first from prior causes: finite controls, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "eb52fc84-78f2-4696-acf8-47d106d57f34",
+  "rule": "Explicit finite interpretations on Bool and Unit",
+  "meaning": "Nonvacuity and omission controls: on two beings and one respect, (1) both premises hold with true maximal in being and simply prior to false, and the conclusion holds; (2) with no comparisons and true prior to and causing the being of false, the priority premise holds and the conclusion fails at the maximum false; (3) with no causing and true prior to false, the no-distinct-cause premise holds and the conclusion fails. Finite interpretations only.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

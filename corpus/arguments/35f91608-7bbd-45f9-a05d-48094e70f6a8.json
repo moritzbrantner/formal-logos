@@ -1,0 +1,22 @@
+{
+  "id": "35f91608-7bbd-45f9-a05d-48094e70f6a8",
+  "label": "Maximum-first from prior causes: finite controls, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "eb52fc84-78f2-4696-acf8-47d106d57f34",
+  "inference_ids": [
+    "4b08e545-ac04-4958-b373-1969a83d6761"
+  ],
+  "meaning": "Nonvacuity and omission controls: on two beings and one respect, (1) both premises hold with true maximal in being and simply prior to false, and the conclusion holds; (2) with no comparisons and true prior to and causing the being of false, the priority premise holds and the conclusion fails at the maximum false; (3) with no causing and true prior to false, the no-distinct-cause premise holds and the conclusion fails. Finite interpretations only.",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "25e19d5a-5cdf-5916-a888-f6a0ce970f11",
+    "a2a8de58-42e0-5481-b7fb-848ae8602036",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "4f1d0cf6-88ba-59e3-814d-01450c2bf282",
+    "1795a62e-f78b-5f5b-94e7-9e7490824811"
+  ]
+}
