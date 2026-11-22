@@ -1,0 +1,11 @@
+{
+  "id": "b65fb333-92cb-4f0d-aec8-137a9f41907a",
+  "label": "Station prefix feasibility strengthens the selected Reaper premise",
+  "subject_kind": "statement",
+  "subject_id": "7d1b132f-e82c-486e-85c9-1217bfdf642c",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "fab16501-c05a-455d-b880-1a8a9a0dc90a",
+  "verification_result_id": "33b797cc-c5fa-44e5-b3c5-03a52f3514d2",
+  "note": "The full actual concrete/causal prefix premise logically entails selected register feasibility in the identical history, clock, descent and accessibility setting. No strictness is claimed."
+}

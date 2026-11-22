@@ -336,6 +336,121 @@ agent's proposal stays untrusted until Lean checks it.
    with controls, and persist every candidate, rejected or not, with its reason
    in one attempt record.
 
+## Adaptive repair
+
+For a goal a run left unresolved or filtered, `discover_blueprint.py repair`
+reads the report and the corpus and lists the alternative diagnoses (#1833),
+each `supported`, `possible`, `excluded` for the exact bundle tested, or `not
+indicated`, with the signals behind it. A failed search proves none of them.
+
+| Diagnosis | Signals |
+| --- | --- |
+| (a) tactic, selection or budget | no proof (the engine does not record whether the heartbeat budget expired or Duper saturated, so this stays possible); the candidate list at its cap; a known derivation retrieved and identifiable but not composed (identifiable only when a binder export is given); a known bundle with no same-named binder left separate that does not close; a Lean process timeout. *Excluded* for a bundle only by a one-point countermodel under the plain binding when no projection binding applies; with an untested projection binding it stays possible |
+| (b) malformed goal or missing lemma | a Lean error stating the goal; known-derivation premises not retrieved; a verified lemma that follows from the bundle but is not in it |
+| (c) carrier or sense misidentification | `domain_identified_by_name`, the `domain_by_name` and `senses` filters, known-derivation binders no tag identifies, a missing bridge between same-named relations of different declarations |
+| (d) inconsistent or vacuous bundle | `vacuous`, `literal_negation`, `antecedent_refuted`, the `witness` flag. A one-point model of the premises shows they are not an inconsistent core; it does not exclude a vacuous target, so it excludes neither half of (d) as a whole |
+| (e) missing substantive premise | at most *possible*: an engine bridge (a candidate proposition, OPEN), or a countermodel, which shows that the bundle as bound lacks *something* (premise, lemma, identification or bridge), never which, nor that it is substantive |
+| (f) unknown | nothing supports another diagnosis |
+
+```bash
+python3 scripts/discover_blueprint.py repair REPORT.json --binders binders.jsonl [--target ID]
+python3 scripts/discover_blueprint.py retry REPORT.json --binders binders.jsonl --target ID --auto 4
+python3 scripts/discover_blueprint.py retry REPORT.json --action 4c79298d-countermodel-1a2b3c
+```
+
+The retry actions, in priority order: **reuse-lemma** (add the conclusion of a
+verified argument whose premises the goal already has and that bears on the
+target: a premise of a known derivation, or a shared definition; Duper does
+not compose through other theorems); **known-bundle** (the premises of a
+verified argument concluding the target that retrieval missed; expected to be
+filtered as known, which confirms a retrieval gap); **countermodel**
+(`scripts/DiscoverRepair.lean`, below); **split** (when exactly one known
+premise is missing: search it from the bundle, and the target from the bundle
+with it); **budget** (once, at four times the heartbeats, only after a
+countermodel search completed without finding one); **strict-domains** (a goal closed through a by-name
+carrier: the same bundle without that fallback); and the reports
+**open-bridge**, **blocker**, **reject** and **record-incompatibility**, which
+run no solver. Every premise is an existing corpus statement: an action never
+weakens or strengthens a statement, writes a sense tag or identifies two
+binders, and an engine bridge is never added to a goal. Guards refuse a
+support cycle (a premise every verified derivation of which uses the target),
+a solver input already in the trace, a second action of a kind whose diagnosis
+an earlier run settled, any action whose goals would take the goal past eight
+solver runs (a split counts two), and an input whose run failed twice for
+infrastructure reasons. The run cap counts per goal label *and* solver-input
+revision: after the corpus, library, Discover scripts or Lean pins change,
+the same goal gets eight fresh runs (`--trace` with a new file also starts
+afresh). An action's id is derived from its content (kind, solver keys and,
+for a known bundle or split, the verified argument it comes from), so it does
+not change when another action is inserted. `repair`
+only plans and leaves the trace file unchanged.
+
+`retry` runs the exact goal through the same binding as `truth discover`: a
+scratch file of `scripts/Discover.lean` and `scripts/DiscoverRepair.lean`, one
+`#discover` or `#discover_countermodel` command per goal, under the heavy-job
+lock (the time limit bounds Lean only), in the `--root` repository (or this
+tool's own when `--root` is no Lake project with those scripts), whose
+Discover scripts and prove-sweep probe it reads, with the corpus's sense tags in the engine's order (`senseOf` takes a
+binder's first tag, so a binder with both a whole-binder and a
+partial-application tag is identified or not by that order; the repair flags
+such binders). Retrieval is bypassed, not changed. Each
+run appends an entry to the attempt trace (`repair-trace.json` beside the
+report, or `--trace`): the solver key (a hash of the command, the solver-input
+revision, the declarations, budget, domain policy, tags and the prove-sweep
+probe), the exact goal and premise ids,
+the declarations, the diagnoses when it was chosen, why it was chosen, the
+change against the engine's goal and the outcome. The engine's own goal is the
+trace's first entry, so an identical retry is refused, and a rerun of `retry
+--auto` on a finished trace runs nothing. The solver-input revision hashes the
+Git objects of `corpus/`, `TruthCore/`, the two Discover scripts,
+`lake-manifest.json` and `lean-toolchain`, and their uncommitted changes by
+content; the repair tool itself is not an input. A run that produced no
+outcome (no output, Lean timed out or killed: exit 137 is reported as out of
+memory or the kill after a timeout) is recorded unkeyed as `failed`, not as a
+solver result, so it can be rerun.
+
+A closed goal is assessed offline with what the raw result carries, reading
+the minimized proof's axioms as the engine does: a proof on an axiom other
+than `propext`, `Classical.choice` and `Quot.sound` is rejected (`axioms`); a literal
+P/¬P core is rejected and never support; an inconsistent core is an
+incompatibility; a by-name carrier or the transcription probe rejects it;
+the engine's projection filters reject `projection_unused` and an ambiguous
+projection, and a unique projection is noted as a specialization;
+composition from verified arguments makes it `closed-known` (`modulo_logic`
+when only with excluded middle, granted, as by the engine's `known` filter,
+only to a proof whose axioms include `Classical.choice`); the
+`truth semantics` preflight checks its senses, for known closures too. What survives is a raw
+`closed-candidate`: certify it with `truth discover` and record it only through
+the spec path and the semantic challenge. Per premise, a deletion that fails
+is "kept within budget; necessity unresolved" unless an omission model shows
+it needed. A goal with no proof is `unresolved`, never refuted.
+
+The countermodel probe binds the target and premises as `#discover` binds the
+plain goal and searches the one-point models of `Discover.witness`, of the
+premises alone and of the premises with the negated target. It does not try
+the projection bindings `#discover` tries next (a target binder bound to a
+premise structure's field); it lists them as `projections_untested`, and while
+one exists a countermodel leaves (a) possible: a countermodel to
+`∀ o m, H m → T o` does not refute `∀ m, H m → T m.ontic`. A countermodel is
+reported with every outer binder (name, originating declaration and binder,
+sense tag, type), the slot pattern and the map from slots to binders, and the
+by-name identifications it is conditional on. The repair tool adds its bounds:
+it shows only that this formal implication, over these declarations under the
+plain binding, fails at one instantiation of its binders. It refutes no
+premise, no stronger or differently bound formulation, no sense identification
+and no larger bundle.
+
+Engine changes this layer does not make: an exact `--premise` bundle for
+`truth discover`, so that its own filters and certification run on a repair
+goal; a reported distinction between a heartbeat timeout and a saturated
+search; countermodels for unresolved goals in the engine itself; a binding
+rule that does not depend on tag order when a binder carries both a
+whole-binder and a partial-application tag; and one shared
+universe-specialization helper (`scripts/DiscoverRepair.lean` copies the block
+of `Discover.trial`). Two earlier follow-ups are in the engine since #1850:
+the `known` filter grants excluded middle to a classical proof, and retrieval
+admits and ranks premises by whole-binder sense tags.
+
 ## Boundaries
 
 - Proof validity is not premise warrant. A discovery from open premises is a
