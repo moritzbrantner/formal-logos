@@ -1,0 +1,17 @@
+{
+  "id": "68347358-634c-4853-937c-465ecb9972d1",
+  "label": "GOD_4 incorruptibility controls: witness, omissions and the tertia via",
+  "paraphrase": "Closed controls for the GOD_4 incorruptibility composition. (1) Witness: over one being that is GOD_4, all three premises hold, so the result is not vacuous in its antecedent. (2) Omitting 'whatever is GOD_4 is maximal in being': over two beings, one GOD_4, nothing in act, each simply prior to the other, everything able to fail to be; the other two premises hold and GOD_4 can fail to be. (3) Omitting 'the maximum in being is the first being': the GOD_4 being is maximal but the other being is simply prior to it. (4) Omitting 'every first being is simply incorruptible' (the contingent-first-being rival): the only being is GOD_4, maximal and first, and can fail to be. (5) Tertia via control: over one being and one time, the three premises hold and GOD_4 is simply incorruptible, but it is possible that GOD_4 is not, so it is not necessary in the sense of DEF-NECESSARY-BEING (it cannot not-be). Statements about these interpretations only.",
+  "lean_declaration": "TruthCore.Case.Catholicism.GodIncorruptibility.Control.Certificate",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "051fe0e7-e842-5581-870a-e3bc00aeaf9c",
+    "25e19d5a-5cdf-5916-a888-f6a0ce970f11",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "d77ab971-b9cb-5b31-85f7-7bf7f39fb237"
+  ],
+  "disambiguation_ids": [
+    "ed4f1f3f-d0c2-57b7-8ce7-52245db29d79",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ]
+}

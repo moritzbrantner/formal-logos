@@ -1,0 +1,388 @@
+# Target-free cross-family conjecture pilot (#1834; scripts/discover_conjecture.py,
+# docs/discover.md "Target-free conjecture pilot").
+#
+# Families. `actualization`: the prima via's first mover moved by none and the
+# act/potency results about a first being (ST I q.2 a.3 first way, q.3 a.1,
+# Metaphysics Theta.8 reconstructions). `grades`: the quarta via's maximum in
+# being (IsMaximumIn InAct MoreIn esse) and its stage-2 link to GOD_4. `bridge`:
+# the one registered cross-family identity, STMT-FIRST-UNMOVED-MOVER-IS-MAXIME-ENS;
+# it does not count as a family of its own. `contingency`: the tertia via's
+# necessary being, used only as a sense control.
+#
+# Candidates were proposed by an agent from four templates applied to the
+# families' typed declarations, before any proof search, and are fixed here so
+# that the run is reproducible:
+#   T1 transport along the registered identity bridge (with and without the
+#      existence premise that fixes the witness);
+#   T2 transport of a first-being property to the quarta via's maximum through
+#      STMT-MAXIMUM-IN-BEING-IS-FIRST-BEING (PRIOR_1 tagged on both sides);
+#   T3 the same transport one step further, to GOD_4 through
+#      STMT-GOD-IS-MAXIMAL-IN-BEING (a divine-attribute bridge);
+#   T4 incompatibility of a recorded rival with a cross-family bundle.
+# Controls: name-only identification of the two God predicates (GOD_2, GOD_4),
+# a tautology, a single-family incompatibility and the tertia via's
+# "necessary being" (DEF-NECESSARY-BEING: cannot not-be) against Theta.8 incorruptibility.
+#
+# Certification is deterministic: Duper over delta-unfolded project definitions,
+# single-deletion minimization, vacuity, the prove-sweep transcription probe,
+# literal negation, and decide-checked models. The candidate text is never
+# evidence; only the Lean checks and the corpus filters are.
+
+[run]
+issue = 1834
+imports = ["TruthCore", "Duper"]
+namespace = "TruthCore.ConjecturePilot1834"
+heartbeats = 200000
+opens = [
+  "TruthCore.Case.Catholicism",
+  "TruthCore.Latin.Aquinas.SummaTheologiae",
+  "TruthCore.Latin.Aquinas.InMetaphysicam",
+]
+
+[families.actualization]
+label = "prima via and act/potency at a first being"
+statements = [
+  "STMT-THERE-IS-A-FIRST-UNMOVED-MOVER",
+  "STMT-AT-MOST-ONE-FIRST-UNMOVED-MOVER",
+  "STMT-FIRST-UNMOVED-MOVER-IS-FIRST-BEING",
+  "STMT-FIRST-UNMOVED-MOVER-IS-PURE-ACT",
+  "STMT-UNIQUE-PURE-ACT-FIRST-MOVER-IS-GOD",
+  "ca55ed3a-8f7d-4e7c-8799-c61fdb4cce60",
+  "STMT-FIRST-BEING-IS-IN-NO-WAY-IN-POTENCY",
+  "61ad11f3-476f-411d-9720-d9f05cbc22fc",
+  "8288ff1e-d534-4516-ac2d-8d010cb863ac",
+  "STMT-NOTHING-IN-ACT-AND-POTENCY-IN-SAME-RESPECT",
+  "c1acdf6c",
+]
+
+[families.grades]
+label = "quarta via maximum in being and its stage-2 link"
+statements = [
+  "STMT-MAXIMUM-IN-BEING-IS-FIRST-BEING",
+  "STMT-MAXIME-ENS-CAUSES-BEING-OF-ALL",
+  "STMT-MAXIME-ENS-IS-GOD",
+  "STMT-AT-MOST-ONE-MAXIMUM-IN-BEING",
+  "STMT-GOD-IS-MAXIMAL-IN-BEING",
+  "2f9fb010",
+]
+
+[families.bridge]
+label = "registered identity of the first mover with the maximum (not counted as a family)"
+cross_family = false
+statements = ["STMT-FIRST-UNMOVED-MOVER-IS-MAXIME-ENS"]
+
+[families.contingency]
+label = "tertia via necessary being (sense control)"
+statements = ["STMT-NECESSARY-PER-SE-IS-MAXIME-ENS"]
+
+# ----------------------------------------------------------------- T1 transport
+
+[[candidate]]
+id = "C01"
+template = "T1 transport along the identity bridge, no existence premise"
+meaning = "Every first mover moved by none is the first being, because it is identical with every maximum in being and every maximum is the first being."
+scope = "Over one Being and Respect carrier; no maximum is assumed to exist."
+matters = "STMT-FIRST-UNMOVED-MOVER-IS-FIRST-BEING feeds STMT-FIRST-UNMOVED-MOVER-IS-PURE-ACT on the prima via root routes (db31cea1, 1c5edad9)."
+binders = [["Being", "Type"], ["Respect", "Type"],
+  ["MovedIn", "Being → Respect → Prop"], ["MovesIn", "Being → Being → Respect → Prop"],
+  ["InAct", "Being → Respect → Prop"], ["MoreIn", "Respect → Being → Being → Prop"],
+  ["esse", "Respect"], ["PriorSimply", "Being → Being → Prop"]]
+premise = [
+  { statement = "STMT-FIRST-UNMOVED-MOVER-IS-MAXIME-ENS", args = { Being = "Being", Respect = "Respect", MovedIn = "MovedIn", MovesIn = "MovesIn", InAct = "InAct", MoreIn = "MoreIn", esse = "esse" } },
+  { statement = "STMT-MAXIMUM-IN-BEING-IS-FIRST-BEING", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", esse = "esse", PriorSimply = "PriorSimply" } },
+]
+conclusion = { statement = "STMT-FIRST-UNMOVED-MOVER-IS-FIRST-BEING", args = { Being = "Being", Respect = "Respect", MovedIn = "MovedIn", MovesIn = "MovesIn", PriorSimply = "PriorSimply" } }
+[[candidate.countermodel]]
+note = "No maximum in being: the identity bridge and max-is-first hold vacuously; true moves false and is moved in nothing, but false is simply prior to it."
+assign = { Being = "Bool", Respect = "Unit", MovedIn = "fun _ _ => False", MovesIn = "fun x y _ => x = true ∧ y = false", InAct = "fun _ _ => False", MoreIn = "fun _ _ _ => False", esse = "()", PriorSimply = "fun y x => y = false ∧ x = true" }
+
+[[candidate]]
+id = "C02"
+template = "T1 transport along the identity bridge, with the quarta via's existence premise"
+meaning = "C01 with a maximum in being supplied by the quarta via conclusion: the first mover is that maximum, hence first."
+scope = "As C01, plus some maximum in being that causes the being of all others (only its existence is used)."
+matters = "An alternative support bundle for STMT-FIRST-UNMOVED-MOVER-IS-FIRST-BEING (currently one 11-premise derivation), feeding the prima via root routes."
+binders = [["Being", "Type"], ["Respect", "Type"],
+  ["MovedIn", "Being → Respect → Prop"], ["MovesIn", "Being → Being → Respect → Prop"],
+  ["InAct", "Being → Respect → Prop"], ["MoreIn", "Respect → Being → Being → Prop"],
+  ["CausesIn", "Being → Being → Respect → Prop"], ["esse", "Respect"],
+  ["PriorSimply", "Being → Being → Prop"]]
+premise = [
+  { statement = "STMT-FIRST-UNMOVED-MOVER-IS-MAXIME-ENS", args = { Being = "Being", Respect = "Respect", MovedIn = "MovedIn", MovesIn = "MovesIn", InAct = "InAct", MoreIn = "MoreIn", esse = "esse" } },
+  { statement = "STMT-MAXIMUM-IN-BEING-IS-FIRST-BEING", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", esse = "esse", PriorSimply = "PriorSimply" } },
+  { statement = "STMT-MAXIME-ENS-CAUSES-BEING-OF-ALL", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", CausesIn = "CausesIn", esse = "esse" } },
+]
+conclusion = { statement = "STMT-FIRST-UNMOVED-MOVER-IS-FIRST-BEING", args = { Being = "Being", Respect = "Respect", MovedIn = "MovedIn", MovesIn = "MovesIn", PriorSimply = "PriorSimply" } }
+witness = { assign = { Being = "Unit", Respect = "Unit", MovedIn = "fun _ _ => False", MovesIn = "fun _ _ _ => True", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", CausesIn = "fun _ _ _ => True", esse = "()", PriorSimply = "fun _ _ => True" }, instance = "∃ f, IsFirstUnmovedMover MovedIn MovesIn f" }
+
+[[candidate]]
+id = "C03"
+template = "T1 the prima via's existence premise gives the quarta via's uniqueness"
+meaning = "If there is a first mover moved by none and it is identical with every maximum in being, there is at most one maximum in being."
+scope = "One Being and Respect carrier; the first mover is the witness that fixes both maxima."
+matters = "An alternative support bundle for STMT-AT-MOST-ONE-MAXIMUM-IN-BEING (derived today only from the genus principle and the attribution route)."
+binders = [["Being", "Type"], ["Respect", "Type"],
+  ["MovedIn", "Being → Respect → Prop"], ["MovesIn", "Being → Being → Respect → Prop"],
+  ["InAct", "Being → Respect → Prop"], ["MoreIn", "Respect → Being → Being → Prop"],
+  ["esse", "Respect"]]
+premise = [
+  { statement = "STMT-FIRST-UNMOVED-MOVER-IS-MAXIME-ENS", args = { Being = "Being", Respect = "Respect", MovedIn = "MovedIn", MovesIn = "MovesIn", InAct = "InAct", MoreIn = "MoreIn", esse = "esse" } },
+  { statement = "STMT-THERE-IS-A-FIRST-UNMOVED-MOVER", args = { Being = "Being", Respect = "Respect", MovedIn = "MovedIn", MovesIn = "MovesIn" } },
+]
+conclusion = { statement = "STMT-AT-MOST-ONE-MAXIMUM-IN-BEING", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", esse = "esse" } }
+[[candidate.countermodel]]
+note = "Omission of the first mover: two maxima, nothing moves."
+omit = ["STMT-THERE-IS-A-FIRST-UNMOVED-MOVER"]
+assign = { Being = "Bool", Respect = "Unit", MovedIn = "fun _ _ => False", MovesIn = "fun _ _ _ => False", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", esse = "()" }
+
+[[candidate]]
+id = "C04"
+template = "T1 the quarta via's existence premise gives the prima via's uniqueness"
+meaning = "If some maximum in being exists and every first mover moved by none is identical with every maximum, there is at most one first mover moved by none."
+scope = "One Being and Respect carrier."
+matters = "STMT-AT-MOST-ONE-FIRST-UNMOVED-MOVER is a premise of the prima via stage-1 route (db31cea1, 1c5edad9)."
+binders = [["Being", "Type"], ["Respect", "Type"],
+  ["MovedIn", "Being → Respect → Prop"], ["MovesIn", "Being → Being → Respect → Prop"],
+  ["InAct", "Being → Respect → Prop"], ["MoreIn", "Respect → Being → Being → Prop"],
+  ["CausesIn", "Being → Being → Respect → Prop"], ["esse", "Respect"]]
+premise = [
+  { statement = "STMT-FIRST-UNMOVED-MOVER-IS-MAXIME-ENS", args = { Being = "Being", Respect = "Respect", MovedIn = "MovedIn", MovesIn = "MovesIn", InAct = "InAct", MoreIn = "MoreIn", esse = "esse" } },
+  { statement = "STMT-MAXIME-ENS-CAUSES-BEING-OF-ALL", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", CausesIn = "CausesIn", esse = "esse" } },
+]
+conclusion = { statement = "STMT-AT-MOST-ONE-FIRST-UNMOVED-MOVER", args = { Being = "Being", Respect = "Respect", MovedIn = "MovedIn", MovesIn = "MovesIn" } }
+
+[[candidate]]
+id = "C05"
+template = "T1 control: identify the two God predicates by the word alone"
+meaning = "With MaximeEnsIsGod's God (GOD_2, the Summa's name-bearer) and the stage-1 IsGod (GOD_4) taken as one binder, the unique pure-act first mover is God."
+scope = "As C02; the single binder God fills both God parameters."
+matters = "Would derive the open identification STMT-UNIQUE-PURE-ACT-FIRST-MOVER-IS-GOD (0 derivations; 6 root-route consumers). DISAMB-GOD forbids the silent identification."
+binders = [["Being", "Type"], ["Respect", "Type"],
+  ["MovedIn", "Being → Respect → Prop"], ["MovesIn", "Being → Being → Respect → Prop"],
+  ["InAct", "Being → Respect → Prop"], ["MoreIn", "Respect → Being → Being → Prop"],
+  ["CausesIn", "Being → Being → Respect → Prop"], ["esse", "Respect"],
+  ["PureAct", "Being → Prop"], ["God", "Being → Prop"]]
+premise = [
+  { statement = "STMT-FIRST-UNMOVED-MOVER-IS-MAXIME-ENS", args = { Being = "Being", Respect = "Respect", MovedIn = "MovedIn", MovesIn = "MovesIn", InAct = "InAct", MoreIn = "MoreIn", esse = "esse" } },
+  { statement = "STMT-MAXIME-ENS-IS-GOD", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", esse = "esse", God = "God" } },
+  { statement = "STMT-MAXIME-ENS-CAUSES-BEING-OF-ALL", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", CausesIn = "CausesIn", esse = "esse" } },
+]
+conclusion = { statement = "STMT-UNIQUE-PURE-ACT-FIRST-MOVER-IS-GOD", args = { Being = "Being", Respect = "Respect", MovedIn = "MovedIn", MovesIn = "MovesIn", PureAct = "PureAct", IsGod = "God" } }
+
+[[candidate]]
+id = "C05b"
+template = "T1 control: the two God predicates kept apart, with the exact bridge"
+meaning = "C05 with God (GOD_2) and IsGod (GOD_4) as separate binders, plus the explicit bridge that whatever is God in the Summa's sense is God in the classical sense."
+scope = "As C05."
+matters = "Names one sufficient bridge (not shown to be weakest) for STMT-UNIQUE-PURE-ACT-FIRST-MOVER-IS-GOD along the quarta via, valid only together with the C02-C04 MovedIn/MovesIn and carrier identifications. Its non-implication is immediate (IsGod is fresh to the premises): it names a missing link, not substantive independence."
+binders = [["Being", "Type"], ["Respect", "Type"],
+  ["MovedIn", "Being → Respect → Prop"], ["MovesIn", "Being → Being → Respect → Prop"],
+  ["InAct", "Being → Respect → Prop"], ["MoreIn", "Respect → Being → Being → Prop"],
+  ["CausesIn", "Being → Being → Respect → Prop"], ["esse", "Respect"],
+  ["PureAct", "Being → Prop"], ["God", "Being → Prop"], ["IsGod", "Being → Prop"]]
+premise = [
+  { statement = "STMT-FIRST-UNMOVED-MOVER-IS-MAXIME-ENS", args = { Being = "Being", Respect = "Respect", MovedIn = "MovedIn", MovesIn = "MovesIn", InAct = "InAct", MoreIn = "MoreIn", esse = "esse" } },
+  { statement = "STMT-MAXIME-ENS-IS-GOD", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", esse = "esse", God = "God" } },
+  { statement = "STMT-MAXIME-ENS-CAUSES-BEING-OF-ALL", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", CausesIn = "CausesIn", esse = "esse" } },
+]
+conclusion = { statement = "STMT-UNIQUE-PURE-ACT-FIRST-MOVER-IS-GOD", args = { Being = "Being", Respect = "Respect", MovedIn = "MovedIn", MovesIn = "MovesIn", PureAct = "PureAct", IsGod = "IsGod" } }
+bridge = { lean = "∀ g, God g → IsGod g", meaning = "OPEN: whatever the Summa calls God (GOD_2) is God in the classical sense (GOD_4)." }
+[[candidate.countermodel]]
+note = "God and IsGod apart: the maximum is God but not IsGod."
+assign = { Being = "Unit", Respect = "Unit", MovedIn = "fun _ _ => False", MovesIn = "fun _ _ _ => True", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", CausesIn = "fun _ _ _ => True", esse = "()", PureAct = "fun _ => True", God = "fun _ => True", IsGod = "fun _ => False" }
+
+# --------------------------------------------- T2 first-being properties at the maximum
+
+[[candidate]]
+id = "C06"
+template = "T2 control: a property the maximum already has by definition"
+meaning = "Every maximum in being is in act in some respect, through the first being."
+scope = "The act predicate of the maximum and of the first-being premise taken as one binder."
+matters = "Control for the tautology filter: IsMaximumIn already contains act in esse."
+binders = [["Being", "Type"], ["Respect", "Type"],
+  ["InAct", "Being → Respect → Prop"], ["MoreIn", "Respect → Being → Being → Prop"],
+  ["esse", "Respect"], ["PriorSimply", "Being → Being → Prop"]]
+premise = [
+  { statement = "STMT-MAXIMUM-IN-BEING-IS-FIRST-BEING", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", esse = "esse", PriorSimply = "PriorSimply" } },
+  { statement = "8288ff1e-d534-4516-ac2d-8d010cb863ac", args = { B = "Being", R = "Respect", InAct = "InAct", PriorSimply = "PriorSimply" } },
+]
+conclusion = { lean = "∀ m, IsMaximumIn InAct MoreIn esse m → ∃ s, InAct m s" }
+
+[[candidate]]
+id = "C07"
+template = "T2 Theta.8 incorruptibility transported to the quarta via's maximum"
+meaning = "Whatever is maximal in being (quarta via) cannot fail to be in the Theta.8 respect of being: it is simply incorruptible."
+scope = "PriorSimply is one PRIOR_1 relation; the Theta.8 respect carrier R and its esse2 stay separate from the quarta via's Respect and esse."
+matters = "Connects the quarta via's maximum to CORRUPTIBLE_INCORRUPTIBLE_1; rival: a contingent maximum or contingent first being (the denial of ca55ed3a)."
+binders = [["Being", "Type"], ["Respect", "Type"], ["R", "Type"],
+  ["InAct", "Being → Respect → Prop"], ["MoreIn", "Respect → Being → Being → Prop"],
+  ["esse", "Respect"], ["PriorSimply", "Being → Being → Prop"],
+  ["CanFailToBe", "Being → R → Prop"], ["esse2", "R"]]
+premise = [
+  { statement = "STMT-MAXIMUM-IN-BEING-IS-FIRST-BEING", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", esse = "esse", PriorSimply = "PriorSimply" } },
+  { statement = "ca55ed3a-8f7d-4e7c-8799-c61fdb4cce60", args = { B = "Being", R = "R", CanFailToBe = "CanFailToBe", esse = "esse2", PriorSimply = "PriorSimply" } },
+]
+conclusion = { lean = "∀ m, IsMaximumIn InAct MoreIn esse m → IncorruptibleSimply CanFailToBe esse2 m" }
+witness = { assign = { Being = "Unit", Respect = "Unit", R = "Unit", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", esse = "()", PriorSimply = "fun _ _ => True", CanFailToBe = "fun _ _ => False", esse2 = "()" }, instance = "∃ m, IsMaximumIn InAct MoreIn esse m" }
+[[candidate.countermodel]]
+note = "Omit max-is-first: the maximum is not first, nothing is first, it can fail to be."
+omit = ["STMT-MAXIMUM-IN-BEING-IS-FIRST-BEING"]
+assign = { Being = "Bool", Respect = "Unit", R = "Unit", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", esse = "()", PriorSimply = "fun y x => y ≠ x", CanFailToBe = "fun _ _ => True", esse2 = "()" }
+[[candidate.countermodel]]
+note = "Omit first-being incorruptibility: the only being is maximal and first and can fail to be."
+omit = ["ca55ed3a-8f7d-4e7c-8799-c61fdb4cce60"]
+assign = { Being = "Unit", Respect = "Unit", R = "Unit", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", esse = "()", PriorSimply = "fun _ _ => True", CanFailToBe = "fun _ _ => True", esse2 = "()" }
+
+[[candidate]]
+id = "C08"
+template = "T2 q.3 a.1 pure act transported to the maximum"
+meaning = "Whatever is maximal in being is in potency in no respect, through the q.3 a.1 first-being reading."
+scope = "PriorSimply of the q.3 a.1 reading identified with the PRIOR_1 relation of max-is-first."
+matters = "The maximum's pure act feeds the stage-2 immutability attribute (38244f91)."
+binders = [["Being", "Type"], ["Respect", "Type"],
+  ["InAct", "Being → Respect → Prop"], ["MoreIn", "Respect → Being → Being → Prop"],
+  ["esse", "Respect"], ["PriorSimply", "Being → Being → Prop"],
+  ["InPotency", "Being → Respect → Prop"]]
+premise = [
+  { statement = "STMT-MAXIMUM-IN-BEING-IS-FIRST-BEING", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", esse = "esse", PriorSimply = "PriorSimply" } },
+  { statement = "STMT-FIRST-BEING-IS-IN-NO-WAY-IN-POTENCY", args = { Being = "Being", Respect = "Respect", InPotency = "InPotency", PriorSimply = "PriorSimply" } },
+]
+conclusion = { lean = "∀ m, IsMaximumIn InAct MoreIn esse m → PureAct InPotency m" }
+
+[[candidate]]
+id = "C09"
+template = "T2 first-being act priority (Theta.8, POTENCY_2) transported to the maximum"
+meaning = "Whatever is maximal in being is, in every respect in which it is in POTENCY_2, also in act: act priority holds at the quarta via's maximum."
+scope = "PriorSimply is one PRIOR_1 relation; the act-priority vocabulary (InAct2, InPotency over R) stays separate from the quarta via's InAct over Respect."
+matters = "A weaker act-priority input (act priority at first beings only, 5 derivations from Theta.8) for the maximum's actuality; rival: a maximal being with unactualized potency (potency-first readings, c1acdf6c)."
+binders = [["Being", "Type"], ["Respect", "Type"], ["R", "Type"],
+  ["InAct", "Being → Respect → Prop"], ["MoreIn", "Respect → Being → Being → Prop"],
+  ["esse", "Respect"], ["PriorSimply", "Being → Being → Prop"],
+  ["InAct2", "Being → R → Prop"], ["InPotency", "Being → R → Prop"]]
+premise = [
+  { statement = "STMT-MAXIMUM-IN-BEING-IS-FIRST-BEING", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", esse = "esse", PriorSimply = "PriorSimply" } },
+  { statement = "61ad11f3-476f-411d-9720-d9f05cbc22fc", args = { B = "Being", R = "R", InAct = "InAct2", InPotency = "InPotency", PriorSimply = "PriorSimply" } },
+]
+conclusion = { lean = "∀ m, IsMaximumIn InAct MoreIn esse m → ∀ r, InPotency m r → InAct2 m r" }
+witness = { assign = { Being = "Unit", Respect = "Unit", R = "Unit", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", esse = "()", PriorSimply = "fun _ _ => True", InAct2 = "fun _ _ => True", InPotency = "fun _ _ => True" }, instance = "∃ m, IsMaximumIn InAct MoreIn esse m" }
+[[candidate.countermodel]]
+note = "Omit first-being act priority: the only being is maximal, first, in potency and not in act."
+omit = ["61ad11f3-476f-411d-9720-d9f05cbc22fc"]
+assign = { Being = "Unit", Respect = "Unit", R = "Unit", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", esse = "()", PriorSimply = "fun _ _ => True", InAct2 = "fun _ _ => False", InPotency = "fun _ _ => True" }
+
+# --------------------------------------------- T3 to GOD_4 (divine-attribute bridges)
+
+[[candidate]]
+id = "C10"
+template = "T3 Theta.8 incorruptibility transported to GOD_4"
+meaning = "Whatever is GOD_4 cannot fail to be in the Theta.8 respect of being: GOD_4 is maximal in being (stage 2), the maximum is the first being (quarta via, PRIOR_1), and every first being is simply incorruptible (Theta.8 reconstruction)."
+scope = "IsGod, InAct, MoreIn, esse shared by the two stage-1/2 declarations under their GOD_4, IN_ACT_4, MORE_1 and esse sense tags; PriorSimply under PRIOR_1; the Theta.8 respect carrier R and esse2 stay separate."
+matters = "A new explicit bridge from GOD_4 to CORRUPTIBLE_INCORRUPTIBLE_1, a divine attribute no registered statement states; it makes the dependence on first-being incorruptibility (ca55ed3a, whose denial is the contingent-first-being rival) visible on the attribute side."
+binders = [["Being", "Type"], ["Respect", "Type"], ["R", "Type"],
+  ["IsGod", "Being → Prop"],
+  ["InAct", "Being → Respect → Prop"], ["MoreIn", "Respect → Being → Being → Prop"],
+  ["esse", "Respect"], ["PriorSimply", "Being → Being → Prop"],
+  ["CanFailToBe", "Being → R → Prop"], ["esse2", "R"]]
+premise = [
+  { statement = "STMT-GOD-IS-MAXIMAL-IN-BEING", args = { Being = "Being", Respect = "Respect", IsGod = "IsGod", InAct = "InAct", MoreIn = "MoreIn", esse = "esse" } },
+  { statement = "STMT-MAXIMUM-IN-BEING-IS-FIRST-BEING", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", esse = "esse", PriorSimply = "PriorSimply" } },
+  { statement = "ca55ed3a-8f7d-4e7c-8799-c61fdb4cce60", args = { B = "Being", R = "R", CanFailToBe = "CanFailToBe", esse = "esse2", PriorSimply = "PriorSimply" } },
+]
+conclusion = { lean = "∀ g, IsGod g → IncorruptibleSimply CanFailToBe esse2 g" }
+witness = { assign = { Being = "Unit", Respect = "Unit", R = "Unit", IsGod = "fun _ => True", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", esse = "()", PriorSimply = "fun _ _ => True", CanFailToBe = "fun _ _ => False", esse2 = "()" }, instance = "∃ g, IsGod g" }
+[[candidate.countermodel]]
+note = "Omit GOD_4 is maximal: the God is not maximal (nothing is in act), nothing is first, and it can fail to be."
+omit = ["STMT-GOD-IS-MAXIMAL-IN-BEING"]
+assign = { Being = "Bool", Respect = "Unit", R = "Unit", IsGod = "fun g => g = true", InAct = "fun _ _ => False", MoreIn = "fun _ _ _ => False", esse = "()", PriorSimply = "fun y x => y ≠ x", CanFailToBe = "fun _ _ => True", esse2 = "()" }
+[[candidate.countermodel]]
+note = "Omit max-is-first: the God is maximal but not first, and can fail to be."
+omit = ["STMT-MAXIMUM-IN-BEING-IS-FIRST-BEING"]
+assign = { Being = "Bool", Respect = "Unit", R = "Unit", IsGod = "fun g => g = true", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", esse = "()", PriorSimply = "fun y x => y ≠ x", CanFailToBe = "fun _ _ => True", esse2 = "()" }
+[[candidate.countermodel]]
+note = "Omit first-being incorruptibility: the only being is God, maximal and first, and can fail to be."
+omit = ["ca55ed3a-8f7d-4e7c-8799-c61fdb4cce60"]
+assign = { Being = "Unit", Respect = "Unit", R = "Unit", IsGod = "fun _ => True", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", esse = "()", PriorSimply = "fun _ _ => True", CanFailToBe = "fun _ _ => True", esse2 = "()" }
+
+[[candidate]]
+id = "C11"
+template = "T3 control: the tertia via's necessity from the same bundle"
+meaning = "C10's bundle concludes that GOD_4 is necessary in the tertia via's sense of DEF-NECESSARY-BEING (it cannot not-be: it is not possible that it is not)."
+scope = "The tertia via's Time, Possible and IsAt are fresh binders: nothing in the bundle mentions them."
+matters = "Prose calls both 'necessary being'; the control checks that CORRUPTIBLE_INCORRUPTIBLE_1 does not silently yield the necessary being of DEF-NECESSARY-BEING (contingency family, a76215f2). Its non-implication is immediate (Possible, IsAt and Time are fresh to the premises): it names a missing link, not substantive independence."
+binders = [["Being", "Type"], ["Respect", "Type"], ["R", "Type"], ["Time", "Type"],
+  ["IsGod", "Being → Prop"],
+  ["InAct", "Being → Respect → Prop"], ["MoreIn", "Respect → Being → Being → Prop"],
+  ["esse", "Respect"], ["PriorSimply", "Being → Being → Prop"],
+  ["CanFailToBe", "Being → R → Prop"], ["esse2", "R"],
+  ["Possible", "(Time → Prop) → Prop"], ["IsAt", "Being → Time → Prop"]]
+premise = [
+  { statement = "STMT-GOD-IS-MAXIMAL-IN-BEING", args = { Being = "Being", Respect = "Respect", IsGod = "IsGod", InAct = "InAct", MoreIn = "MoreIn", esse = "esse" } },
+  { statement = "STMT-MAXIMUM-IN-BEING-IS-FIRST-BEING", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", esse = "esse", PriorSimply = "PriorSimply" } },
+  { statement = "ca55ed3a-8f7d-4e7c-8799-c61fdb4cce60", args = { B = "Being", R = "R", CanFailToBe = "CanFailToBe", esse = "esse2", PriorSimply = "PriorSimply" } },
+]
+conclusion = { lean = "∀ g, IsGod g → IsNecessary Possible IsAt g" }
+bridge = { lean = "∀ x, IncorruptibleSimply CanFailToBe esse2 x → IsNecessary Possible IsAt x", meaning = "One sufficient OPEN bridge (not shown to be weakest): what cannot fail to be in being (CORRUPTIBLE_INCORRUPTIBLE_1) cannot not-be (DEF-NECESSARY-BEING). With the registered converse b8d21cd0 it would make the two senses coextensive." }
+[[candidate.countermodel]]
+note = "The only being is God, maximal, first and incorruptible, but it is possible that it is not (Possible holds of every condition; it is at no time)."
+assign = { Being = "Unit", Respect = "Unit", R = "Unit", Time = "Unit", IsGod = "fun _ => True", InAct = "fun _ _ => True", MoreIn = "fun _ _ _ => False", esse = "()", PriorSimply = "fun _ _ => True", CanFailToBe = "fun _ _ => False", esse2 = "()", Possible = "fun _ => True", IsAt = "fun _ _ => False" }
+
+# --------------------------------------------- T4 incompatibilities with recorded rivals
+
+[[candidate]]
+id = "C12"
+template = "T4 rival 'some maximum leaves being to another' against the prima via plus the quarta via"
+meaning = "There is a first mover moved by none, it is every maximum in being, and some maximum causes the being of all others; then no maximum leaves another's being to a third cause."
+scope = "One Being and Respect carrier; the rival's InAct, MoreIn, CausesIn and esse identified with the quarta via's."
+matters = "Would refute the recorded rival 2f9fb010 (alternative to STMT-MAXIMUM-IN-BEING-CAUSES-ALL-BEINGS) from a cross-family bundle."
+kind = "incompatibility"
+binders = [["Being", "Type"], ["Respect", "Type"],
+  ["MovedIn", "Being → Respect → Prop"], ["MovesIn", "Being → Being → Respect → Prop"],
+  ["InAct", "Being → Respect → Prop"], ["MoreIn", "Respect → Being → Being → Prop"],
+  ["CausesIn", "Being → Being → Respect → Prop"], ["esse", "Respect"]]
+premise = [
+  { statement = "2f9fb010", args = { B = "Being", R = "Respect", InAct = "InAct", MoreIn = "MoreIn", CausesIn = "CausesIn", esse = "esse" } },
+  { statement = "STMT-MAXIME-ENS-CAUSES-BEING-OF-ALL", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", CausesIn = "CausesIn", esse = "esse" } },
+  { statement = "STMT-FIRST-UNMOVED-MOVER-IS-MAXIME-ENS", args = { Being = "Being", Respect = "Respect", MovedIn = "MovedIn", MovesIn = "MovesIn", InAct = "InAct", MoreIn = "MoreIn", esse = "esse" } },
+  { statement = "STMT-THERE-IS-A-FIRST-UNMOVED-MOVER", args = { Being = "Being", Respect = "Respect", MovedIn = "MovedIn", MovesIn = "MovesIn" } },
+]
+conclusion = { lean = "False" }
+
+[[candidate]]
+id = "C13"
+template = "T4 single-family control of C12"
+meaning = "The rival 'some maximum leaves being to another' against the quarta via's causal maximum and the uniqueness of the maximum."
+scope = "As C12, without the prima via."
+matters = "Control: an inconsistent bundle is an incompatibility, never support, and here lies inside one family."
+kind = "incompatibility"
+binders = [["Being", "Type"], ["Respect", "Type"],
+  ["InAct", "Being → Respect → Prop"], ["MoreIn", "Respect → Being → Being → Prop"],
+  ["CausesIn", "Being → Being → Respect → Prop"], ["esse", "Respect"]]
+premise = [
+  { statement = "2f9fb010", args = { B = "Being", R = "Respect", InAct = "InAct", MoreIn = "MoreIn", CausesIn = "CausesIn", esse = "esse" } },
+  { statement = "STMT-MAXIME-ENS-CAUSES-BEING-OF-ALL", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", CausesIn = "CausesIn", esse = "esse" } },
+  { statement = "STMT-AT-MOST-ONE-MAXIMUM-IN-BEING", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", esse = "esse" } },
+]
+conclusion = { lean = "False" }
+
+[[candidate]]
+id = "C14"
+template = "T4 potency-first rival against act priority at a first maximum"
+meaning = "The potency-first rival (some being in potency in a respect with nothing in act in it prior) against first-being act priority, max-is-first and a causal maximum."
+scope = "The rival's and the act-priority premise's InAct, InPotency over R identified; PriorSimply one relation."
+matters = "Tests whether the cross-family bundle refutes the recorded rival c1acdf6c of STMT-ACT-SIMPLY-PRIOR-TO-POTENCY."
+kind = "incompatibility"
+binders = [["Being", "Type"], ["Respect", "Type"], ["R", "Type"],
+  ["InAct", "Being → Respect → Prop"], ["MoreIn", "Respect → Being → Being → Prop"],
+  ["CausesIn", "Being → Being → Respect → Prop"], ["esse", "Respect"],
+  ["PriorSimply", "Being → Being → Prop"],
+  ["InAct2", "Being → R → Prop"], ["InPotency", "Being → R → Prop"]]
+premise = [
+  { statement = "c1acdf6c", args = { Being = "Being", Respect = "R", InAct = "InAct2", InPotency = "InPotency", PriorSimply = "PriorSimply" } },
+  { statement = "61ad11f3-476f-411d-9720-d9f05cbc22fc", args = { B = "Being", R = "R", InAct = "InAct2", InPotency = "InPotency", PriorSimply = "PriorSimply" } },
+  { statement = "STMT-MAXIMUM-IN-BEING-IS-FIRST-BEING", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", esse = "esse", PriorSimply = "PriorSimply" } },
+  { statement = "STMT-MAXIME-ENS-CAUSES-BEING-OF-ALL", args = { Being = "Being", Respect = "Respect", InAct = "InAct", MoreIn = "MoreIn", CausesIn = "CausesIn", esse = "esse" } },
+]
+conclusion = { lean = "False" }
+[[candidate.countermodel]]
+note = "Joint model: 0 is the maximum and the only first being, in act and in potency in nothing else; 1 is in potency with only 2 prior to it, and 2 is not in act; 1 and 2 are prior to each other, so neither is first. Mutual simple priority is admissible here because no premise of the bundle states that simple priority is asymmetric."
+assign = { Being = "Fin 3", Respect = "Unit", R = "Unit", InAct = "fun x _ => x = 0", MoreIn = "fun _ _ _ => False", CausesIn = "fun _ _ _ => True", esse = "()", PriorSimply = "fun y x => (y = 2 ∧ x = 1) ∨ (y = 1 ∧ x = 2)", InAct2 = "fun x _ => x = 0", InPotency = "fun x _ => x = 1" }
