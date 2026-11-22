@@ -1,5 +1,141 @@
 # Which compositions require an actual uniting cause?
 
+## Proper-part and union-to-esse audit (2026-11-22; independent review pending)
+
+**Selected node and downstream consequence.** The third proof of ST I q.3 a.7
+supports the root-facing conditional `ca07cae9`: for each `Composite x`,
+there is some `c ≠ x` with `CausesIn c x esse`. The existing union theorem
+`compositeHasAUnitingCause` is valid *conditionally* on its five declared
+premises; it does not derive the causal premise from the meaning of composition.
+The same-root simplicity consumer `379399d1` also uses a separate interface
+`cb1cdea9` from cause-in-esse to actual grounding. The existing
+`UnitingCausesPresent` and `UnitingCausesAreActual` restrictions must be
+defended before taking a non-world-indexed `CausesIn` edge to prohibit a
+selected-world underived source from being composite.
+
+### What was incomplete in the earlier certificate
+
+The old five omission models and one nonvacuity model were all over
+`Bool`. In the model omitting the union-to-being bridge, the sole
+composite was `true` and both `false` **and `true`** were its
+`ComponentOf` components. Consequently the earlier certificate showed
+independence of the encoded numerical-diversity condition, but **did not
+establish that independence survives a genuine proper-part interpretation**.
+The recorded q.11 a.1 argument discusses separated *parts*, so that
+weakness matters to its philosophical applicability. It was an incomplete
+test, not an invalid proof.
+
+The new seventh `ProperPartBridgeControl` uses four distinct individuals:
+`3` is the composite; `0` and `1` are its two proper components;
+`2` is a third, numerically distinct uniter, efficiently causing
+`3` in the single respect. The uniting relation has a witnessed tuple,
+and every component is distinct from the whole. It jointly satisfies
+the other four original union-premises and exhibits a populated composite,
+but `CausesIn _ _ esse` is empty. Thus neither actual **union in the
+supplied relation**, genuinely distinct proper constituents, nor an
+efficient uniter *in some respect* logically supplies a cause of the
+same composite's esse. This does **not** construct a philosophically
+adequate world, demonstrate the falsity of the extra premise, or prove
+an actual-source counterexample. In particular the finite frame has no
+`ExistsAt` relation or independent explanation of the reality of its unity.
+
+The original `CompositeHasTwoDistinctComponentsReading` requires only
+`a ≠ b`, not `a ≠ x` and `b ≠ x`. This remains a defensible **weak
+formal consequence** of the source rather than a full definition of
+proper-part composition. We did not strengthen or silently reinterpret it
+in existing proofs. The new countermodel expressly tests the stronger
+scope. Nor should the conclusion `ca07cae9` be paraphrased as asserting
+the *same* causal witness is a uniter, an efficient producer, a nonpart,
+or a presently actual being: none of those is in its Lean type.
+
+### Positive warrant versus the strongest same-bearer alternative
+
+The source-side positive reasoning is not simply the tautology that
+a caused composite has a cause:
+
+1. **Numerical or constitutional plurality** is a real distinction in
+   what makes up one substantial bearer; the two-component principle
+   `6b80cfe4` supplies a weak formal consequence of this.
+2. **Unity of diverse principles** is not identity by juxtaposition;
+   q.3 a.7's `58445bd6` demands an explanation of how these constitute
+   this one substance. In an ordinary case the activity that composes
+   matter into an artifact can plausibly be efficient activity.
+3. **Existential production of that very composite** is a *further*
+   assertion. The open `fbee7f15` makes every such uniter a giver of
+   the target's esse. All five registered support bundles for
+   `ca07cae9` share it. The first two steps do not imply the third,
+   even with proper components; the seventh control proves this
+   last logical distinction.
+4. **Current actual source** is yet another claim: the productive
+   maker, the formal unity and the continuing ground of existence may
+   be distinct causes, relations or times. The current root needs
+   the same actual source and a corresponding actual existential
+   relation, not merely a past maker or an intrinsic formal principle.
+
+In the existing pinned source records, q.11 a.1 co. treats union as a
+**condition** of substantial being; it does not say the uniter *produces*
+that being. SCG I.18 n.4 calls the composer the efficient cause of the
+composite, but neither names `esse` nor establishes that the efficiency
+obtains *now*. `De ente` §§77–81 offers the distinct-esse external-source
+case, while §§101–102 explicitly describe substantial esse as resulting
+from matter/form conjunction; these claims are not interchangeable.
+The source assertions and the open philosophical bridge remain
+separately recorded, without a new attribution here.
+
+A positive **immanent/whole-first reply** says that proximate matter and
+form constitute one substantial actuality, or that the prior whole
+grounds its derivative, essential differences. In either case its
+explanation of *this* unified bearer need not be a second efficient
+production of an already actual whole. It owes a substantive account
+of why its positive actuality obtains, especially when being is
+claimed to be received; yet merely refusing self-production is no
+refutation of constitutive explanation. A specifically **productive**
+Thomistic account instead holds that substantial composition effects
+a new substance's actuality, not merely the arrangement of actual
+materials. That offers a positive rationale for `fbee7f15` in
+suitable cases, but a universal passage from every q.3 composition
+kind to productive existential causation is still an additional
+metaphysical commitment, not an equality of Lean predicates.
+
+The strongest live question is therefore not whether a finite empty
+`CausesIn` relation is *formally* possible—it is—but whether,
+for an **actual composite x under a specified composition sense**,
+immanent constitution is an adequate account of the obtaining of
+`E(x)`, or whether its positive actuality requires an external,
+numerically distinct *current* giver in the same causal relation. The
+whole-first necessary composite in #1811 and the formal-versus-efficient
+comparison in #1810 are concrete same-bearer tests; #1638 owns the
+distinct-esse causal coverage premise. These questions were **not
+exhausted** by an earlier Bool omission certificate or by the existing
+conditional simplicty proof.
+
+**Scoped cumulative assessment.** The accepted-qualified 2026-11-18
+assessment in attempt `dd24400b` remains in force: direct/primitive
+support and a restricted positive constitution argument are available,
+with `fbee7f15` the genuine shared open bridge. The new stronger
+certificate repairs an earlier evidential weakness and rules out the
+*formal* explanation that the bridge only looked independent because
+the whole was counted as its own part. It neither refutes the positive
+immanent rival nor establishes `fbee7f15`; no root premise,
+claim/source attribution, registered argument input, or root route
+is discharged or rerouted. The previously verified source and temporal
+countermodels retain their scopes. The proposed assessment has not yet
+received independent semantic review; the existing reviewed judgment
+is not replaced by this unreviewed continuation.
+
+**Next discriminating step / stopping boundary.** Compare **one actual
+same-bearer example** of substantial generation against a positive
+immanent-reception account, distinguishing constituent unity,
+becoming, present existing and the ontic cause of esse. State the
+principle that licenses `Unites c a b x → CausesIn c x esse` (or a
+genuinely weaker sufficient restricted variant) without treating
+union's necessary condition as its productive explanation. Test the
+world-local `UnitingCausesPresent`/`UnitingCausesAreActual` passage
+for that same witness. Without this substantive warrant, new
+equivalent omission models add no philosophical leverage. No
+independent demonstration of each primitive is required.
+
+
 This comparison concerns #319 and #325. It reuses the existing q.3 reading,
 PowerExistenceBoundary and Vitalism, and inspects the proposed connections in
 PRs [655](https://github.com/moritzbrantner/truth-core/pull/655),
