@@ -131,4 +131,73 @@ theorem metricallyFiniteOfDurationPieces {W B T : Type} [LinearOrder T]
   exact metricallyFiniteOfDurationDescent R h Concrete k d w
     (durationDescentOfPieces R h Concrete k d w hPieces) hPatch
 
+
+/-- Actual finite-prefix station witnesses imply the existing locally
+co-possible Reaper interfaces. No causal relation is discarded when defining
+the stronger StationOperationAt; this projection only uses its register field. -/
+theorem finiteStationPrefixesGiveAdjacent {W B T : Type}
+    (R : ReaperFrame W T) (h : History W B T) (stations : Nat → B)
+    (v : W) (c : Nat → T)
+    (hFinite : FiniteStationPrefixCompatibility R h stations v c) :
+    AdjacentPiecesCoPossible R h v c := by
+  intro n
+  obtain ⟨u, huv, hOps⟩ := hFinite (n + 1)
+  obtain ⟨_, _, _, _, _, hn⟩ := hOps n (Nat.le_succ n)
+  obtain ⟨_, _, _, _, _, hn1⟩ := hOps (n + 1) (Nat.le_refl _)
+  exact ⟨u, huv, hn, hn1⟩
+
+/-- Concrete finite-prefix compatibility yields the existing weaker
+selected-descent local premise, reusing its own history and clock. -/
+theorem durationDescentOfStationPrefixes {W B T : Type} [LinearOrder T]
+    (R : ReaperFrame W T) (h : History W B T) (Concrete : B → Prop)
+    (k : TimeClock T) (d : {d : ℝ // 0 < d}) (w : W)
+    (hLocal : SelectedFiniteStationCompatibility R h Concrete k d w) :
+    DurationDescentPossible R h Concrete k d w := by
+  intro v hv t hPop hInf
+  obtain ⟨c, stations, hc, hDesc, hSlots, hFinite⟩ :=
+    hLocal v hv t hPop hInf
+  exact ⟨c, hc, hDesc, hSlots,
+    finiteStationPrefixesGiveAdjacent R h stations v c hFinite⟩
+
+/-- Stronger, genuinely causal interpretation of fixed-duration patchwork:
+if every infinite populated past admits one finite-prefix compatible family of
+actual station operations, and countable recombination preserves their
+existence, temporal presence, causal edges and signal behavior in one world,
+then that past has finite metric duration. The original Reaper contradiction
+is imported, not reproduced. The two modal commitments remain OPEN. -/
+theorem metricallyFiniteOfCountableStationRecombination {W B T : Type}
+    [LinearOrder T]
+    (R : ReaperFrame W T) (h : History W B T) (Concrete : B → Prop)
+    (k : TimeClock T) (d : {d : ℝ // 0 < d}) (w : W)
+    (hLocal : SelectedFiniteStationCompatibility R h Concrete k d w)
+    (hGlue : CountableStationRecombination R h Concrete k d w) :
+    PopulatedPastsMetricallyFinite h Concrete k w := by
+  intro v hv x t hx hCont hAt
+  by_contra hInfinite
+  have hPop : PopulatedAt h Concrete v t := ⟨x, hx, hCont, hAt⟩
+  obtain ⟨c, stations, hc, hDesc, hSlots, hFinite⟩ :=
+    hLocal v hv t hPop hInfinite
+  have hPopC : PopulatedAt h Concrete v (c 0) := hc.symm ▸ hPop
+  obtain ⟨u, _, hOps⟩ :=
+    hGlue v hv c stations hDesc hSlots hPopC hFinite
+  have hPieces : ∀ n, PieceAt R u c n := by
+    intro n
+    obtain ⟨_, _, _, _, _, hPiece⟩ := hOps n
+    exact hPiece
+  exact TruthCore.Results.Causality.GrimReaperPatchwork.arrangementImpossible
+    R u c hDesc hPieces
+
+/-- A structural separation: every finite prefix of an unbounded sequence can
+be contained in some finite bound, but there is no bound containing all n.
+This witnesses the distinct LOGICAL content of finite vs countable assembly,
+not a metaphysically possible Reaper network or an objection to recombination. -/
+theorem finitePrefixNotCountable :
+    (∀ N : Nat, ∃ bound : Nat, ∀ n, n ≤ N → n < bound) ∧
+    ¬ (∃ bound : Nat, ∀ n, n < bound) := by
+  constructor
+  · intro N
+    exact ⟨N + 1, fun _ hn => Nat.lt_succ_of_le hn⟩
+  · rintro ⟨bound, hb⟩
+    exact Nat.lt_irrefl bound (hb bound)
+
 end TruthCore.Results.Causality.FixedDurationGrimReaper

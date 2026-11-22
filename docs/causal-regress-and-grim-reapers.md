@@ -1014,6 +1014,105 @@ strong route remain. All companion premises on the existing Arrival B,
 necessary-concretum and God-root route are unchanged.
 
 
+
+### Finite-prefix causal station recombination (2026-11-22, proposed)
+
+**Positive construction, with the exact modal prices.** Continue #1489 and
+#367 without repeating the already verified signal contradiction or #1722's
+guarded-port adapter. The positive basis remains Koons's *Grim Reaper Kalam*
+(pp. 9–13: locally possible Placer and non-overlapping host regions; pp. 14–16:
+causal network replacement retaining predecessor/successor interfaces; pp.
+18–21: intrinsic powers, signaling, persistence and causal qualifications).
+The existing pinned and previously read source study is
+[`causal-finitism-367.md`](notes/causal-finitism-367.md). Pruss's book-level
+causal-finitism formulation remains a bibliographic/source gap, not a new
+attribution. The strongest proposed inference is:
+
+1. A **station law** is a causally usable intrinsic conditional power with a
+   local guarded input/output protocol. Possession of that power is distinct
+   from its actual exercise. For the fixed positive proper duration d, posit
+   a suitable separately calibratable station for each finite address n.
+2. **Finite causal compatibility** permits one accessible history for *each*
+   finite prefix of a selected d-spaced descent in which the SAME indexed
+   bearers exist, are present at their assigned moments, the earlier bearer
+   actually causes the later station, and the four `PieceAt` interfaces run.
+   These worlds can have different register contents: the proven overlap
+   disagreement forbids a single shared trace, not intrinsically identical
+   operating laws.
+3. **Countable causal recombination** is a distinct, substantive modal
+   commitment: from all those finite witnesses, one accessible history
+   preserves the same station mapping, actual causal edges, temporal presence,
+   protected ports and signal protocol for *every* n. Merely copying intrinsic
+   powers, binary recombination, finite satisfiability, or a countable set of
+   idealized instructions does not entail that commitment.
+4. One such locally possible family per infinite populated past suffices.
+   The already verified `arrangementImpossible` makes its countable
+   realization impossible. Therefore the selected clock's populated pasts
+   have bounded-below readings, **conditional on** the positive local
+   compatibility and global recombination principles. This is not a
+   first-moment theorem and not a per-se causal-ancestry theorem.
+
+**New typed tests.** In `FixedDurationGrimReaper`,
+`StationOperationAt` requires the two station bearers' world-relative
+existence and presence, an actual `ontic.Causes` edge, and `PieceAt`.
+`FiniteStationPrefixCompatibility` quantifies over each finite initial
+segment with its own accessible witness. `SelectedFiniteStationCompatibility`
+selects one d-spaced schedule and a rigidly indexed station family for each
+alleged infinite populated past. `CountableStationRecombination` demands one
+world in which *all* these actual conditions hold. The solution's
+`finiteStationPrefixesGiveAdjacent` and
+`durationDescentOfStationPrefixes` connect finite causal witnesses to
+the existing graph premise `fab16501`. The additional conditional theorem
+`metricallyFiniteOfCountableStationRecombination` reaches existing metric
+conclusion `4365c3c5`, reusing the established contradiction. The
+`finitePrefixNotCountable` Nat model discriminates finite from countable
+assembly *logically only*; it is no metaphysical counterexample.
+
+**Causal interpretation.** The new efficient-cause edges are actual facts
+stipulated in each possible history, not inferred from the label "station".
+They are deliberately distinct from `CausalityFrame.GivesAt` (concurrent
+giving of being), the abstract totality-cause predicate in Arrival B, and
+causation of an essentially ordered series. Station identity is fixed across
+the selected schedule's finite witnesses; the selected schedule itself and
+the family can vary with the alleged past. Current `History` has no host
+geometry, intrinsic-power type, physical information bounds, or proof that
+the same calibrated finite-runtime device can serve arbitrarily large n.
+The positive support for locally operating devices is defeasible and
+substantive, not a kernel establishment of their metaphysical possibility.
+Proper-time duration must be privileged as CLOCK_1, not arbitrarily rescaled.
+
+**Provisional cumulative assessment.** This replaces a purely
+register-compatible interpretation with a more demanding possible network of
+actual concrete station causes and shows exactly which new modal premise
+would yield the same metric conclusion. It does not establish the key
+countable recombination commitment. Koons supplies a serious positive
+intrinsic-power and recombination rationale; the jump from finite compatible
+operations to their complete jointly realized trace is an additional
+countable principle, not a mathematical consequence. An unmotivated
+"gluing could fail" is not treated as contrary evidence. The fixed-duration
+capacity, protected handoffs and countable actual realization remain precise
+unmet positive obligations; principle L applied to infinite-past cosmologies
+remains a separately conditional competing modal permission. The exact
+non-God stages remain: `4365c3c5` + possible population
+`faa1ff28` -> BEGINS_2 `951a2235`; Arrival B then still requires
+`256b5bab` (external causal opportunity), Euclidean access and actual
+reflexivity to reach necessary concrete being `b19ffd92`, followed by the
+existing God-existence consumers. The new proof helpers are not a new
+registered graph alternative or a discharge of any premise. The actual
+graph's fixed-d support options and direct assumptions remain unchanged.
+
+**Verification/review boundary.** The new declarations require Lean and
+existing batch checks on the proposed PR head. No frozen Challenge, prior
+result, source attribution, computed closure or current first-/second-way
+interpretation is altered. Independent semantic review must check whether
+`ontic.Causes` here really models the proposed upstream actual causal
+transmission, rather than mere correlation; the typed theorem holds either
+way, but metaphysical application does not. Reopen on a defended fixed
+runtime/address encoding, a rigorous feasible connected-host construction,
+or an independently motivated law/constraint that precisely discriminates
+countable from finite compatible operation in a non-accumulating proper past.
+
+
 ## Typed per-se / historical distinction (#1112)
 
 `STMT-INFINITE-REGRESS-IMPOSSIBLE-ONLY-IN-PER-SE-SERIES` keeps its original
