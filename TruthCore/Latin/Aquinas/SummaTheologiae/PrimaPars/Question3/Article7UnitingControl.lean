@@ -25,6 +25,14 @@ uniter efficiently acts on 3 in the (only) respect, but never causes its esse.
 The relations are primitive interpretations, not a model of any historical
 philosopher's positive account of constitution.
 -/
+
+/-- Public so that the `Fin 4` literals of the fixture below (and of its
+certificate proof) elaborate with it. Core's fallback `NeZero (3 + 1)` uses
+`propext`, which would break this zero-axiom result (as in
+`Greek.Plato.ParticipationGrounding`; see docs/notes/lean-module-system.md). -/
+instance : NeZero 4 where
+  out h := Nat.noConfusion h
+
 def properFixtureComposite (x : Fin 4) : Prop := x = 3
 def properFixtureComponent (a x : Fin 4) : Prop :=
   x = 3 ∧ (a = 0 ∨ a = 1)
