@@ -1,0 +1,9 @@
+{
+  "id": "f220c0b5-5cb4-406c-bf1c-1a23b94ca983",
+  "label": "Not every combination of the candidates' existence is realized at an accessible world",
+  "paraphrase": "On the route's profile m and world w: it is not the case that every combination of existence and non-existence of the candidates is realized at some world accessible from w in m.ontic.frame. The candidates' existence facts are not jointly free coordinates of logical space at w. It does not say which combination is missing or that any candidate is necessary.",
+  "lean_declaration": "TruthCore.Causality.TractarianLogicalSpace.NotElementaryExistenceAt",
+  "definition_ids": [
+    "547cac5c-7089-4bce-b5e7-bb8b6c8d12b9"
+  ]
+}

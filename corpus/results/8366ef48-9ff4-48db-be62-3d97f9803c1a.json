@@ -1,0 +1,11 @@
+{
+  "id": "8366ef48-9ff4-48db-be62-3d97f9803c1a",
+  "label": "Tractarian logical space controls checked",
+  "argument_id": "e61cdb5a-b608-4ed7-b12d-8830a46d6c1a",
+  "challenge_module": "TruthCore.Results.Causality.TractarianLogicalSpace.Challenge",
+  "solution_module": "TruthCore.Results.Causality.TractarianLogicalSpace.Solution",
+  "theorem": "TruthCore.Results.Causality.TractarianLogicalSpace.controls",
+  "comparator_config": "results/8366ef48-9ff4-48db-be62-3d97f9803c1a/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free laws and finite models for the Tractarian logical-space batch. Sense-mixing control; establishes no premise and no root obligation."
+}

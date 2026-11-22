@@ -1,0 +1,9 @@
+{
+  "id": "18ce14e6-b4cb-4367-a089-86f1737c3e7a",
+  "label": "Combinatorial logical space at the selected world",
+  "paraphrase": "Analyst thesis, attribution deferred: for the selected frame F, valuation V and world w, every assignment of truth values to the atoms is the atomic profile of some world accessible from w. The atoms vary jointly and freely over the accessible worlds. Which atoms are elementary in reality is not asserted.",
+  "lean_declaration": "TruthCore.Causality.TractarianLogicalSpace.LogicalSpaceAt",
+  "definition_ids": [
+    "547cac5c-7089-4bce-b5e7-bb8b6c8d12b9"
+  ]
+}

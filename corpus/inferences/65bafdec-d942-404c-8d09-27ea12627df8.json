@@ -1,0 +1,12 @@
+{
+  "id": "65bafdec-d942-404c-8d09-27ea12627df8",
+  "label": "The box K node excludes elementary existence at its world (inference)",
+  "input_statement_ids": [
+    "cdf897a8-5490-561a-b9d2-507486a3f192"
+  ],
+  "output_statement_id": "f220c0b5-5cb4-406c-bf1c-1a23b94ca983",
+  "rule": "Box elimination at the world realizing universal non-existence",
+  "meaning": "If the box K necessary-being node holds at w (some actual root n with the root facts exists at every world accessible from w), then not every combination of the candidates' existence is realized at an accessible world: the combination in which nothing exists would be realized at an accessible world, where n would have to exist. A checked incompatibility between the node and the thesis that existence facts are elementary in logical space. It records a further commitment of the route, not a defeat of either side; the controls show the conclusion fails in an ontology whose existence is elementary.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
