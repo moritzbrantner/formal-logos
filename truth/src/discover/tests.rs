@@ -150,7 +150,14 @@ fn ranking_requires_shared_parameters_and_prefers_a_fitting_candidate() {
     );
     vocabulary.insert("N.C".into(), vocab("N", &["Q"], &["M.H"]));
     let pool = [&fitting, &loose, &foreign, &same];
-    let ranked = rank(&target, &pool, &vocabulary, &BTreeMap::new(), 10);
+    let ranked = rank(
+        &target,
+        &pool,
+        &vocabulary,
+        &BTreeMap::new(),
+        &SenseTags::default(),
+        10,
+    );
     let ids: Vec<&str> = ranked.iter().map(|c| c.id.as_str()).collect();
     assert_eq!(
         ids,
@@ -158,7 +165,15 @@ fn ranking_requires_shared_parameters_and_prefers_a_fitting_candidate() {
         "no shared parameter (C) and the target's own declaration (S) are excluded"
     );
     assert_eq!(
-        rank(&target, &pool, &vocabulary, &BTreeMap::new(), 1).len(),
+        rank(
+            &target,
+            &pool,
+            &vocabulary,
+            &BTreeMap::new(),
+            &SenseTags::default(),
+            1
+        )
+        .len(),
         1
     );
 }
@@ -174,7 +189,14 @@ fn strength_siblings_rank_first() {
     vocabulary.insert("M.B".into(), vocab("M", &["B"], &["M.H"]));
     let mut weaker = BTreeMap::new();
     weaker.insert("B".to_owned(), set(&["T"]));
-    let ranked = rank(&target, &[&a, &b], &vocabulary, &weaker, 2);
+    let ranked = rank(
+        &target,
+        &[&a, &b],
+        &vocabulary,
+        &weaker,
+        &SenseTags::default(),
+        2,
+    );
     assert_eq!(ranked[0].id, "B");
 }
 
@@ -734,6 +756,7 @@ fn a_structure_parameter_projecting_to_a_target_parameter_fits() {
         &[&unrelated, &frame],
         &vocabulary,
         &BTreeMap::new(),
+        &SenseTags::default(),
         10,
     );
     assert_eq!(ranked[0].id, "F");
@@ -745,7 +768,15 @@ fn a_structure_parameter_projecting_to_a_target_parameter_fits() {
     vocabulary.insert("N.Lone".into(), lone);
     let lonely = statement("L", "N.Lone", &[]);
     assert_eq!(
-        rank(&target, &[&lonely], &vocabulary, &BTreeMap::new(), 10).len(),
+        rank(
+            &target,
+            &[&lonely],
+            &vocabulary,
+            &BTreeMap::new(),
+            &SenseTags::default(),
+            10
+        )
+        .len(),
         1
     );
 }
@@ -967,4 +998,440 @@ fn single_conjunct_bridges_rank_last_and_are_noted() {
     assert!(rows[1].single_conjunct);
     assert_eq!(bridge_json(&rows[1])["single_conjunct"], json!(true));
     assert!(bridge_notes(&rows[1])[0].contains("no conjunctive bridge passed"));
+}
+
+// --- excluded middle as implicit classical logic (#1845) ---------------------------
+
+const EM: &str = "ee4ab504-c8fe-59bc-bc96-7cbeefed6410";
+
+#[test]
+fn a_classical_proof_matches_a_known_argument_that_lists_excluded_middle() {
+    let senses = SenseCheck::empty();
+    // The verified argument lists excluded middle explicitly; Duper's classical
+    // proof (`Classical.choice`) used the same premises without it.
+    let known = graph(&[("k", &["P", "R", EM], "T")]);
+    let f = classify(&trial(&["P", "Q", "R"]), &closed_outcome(), &known, &senses);
+    assert_eq!(f.kind, Kind::Filtered);
+    assert_eq!(f.filters[0].0, "known");
+    assert!(
+        f.filters[0]
+            .1
+            .contains("composes from verified arguments k")
+    );
+    assert!(f.filters[0].1.contains(EM), "{}", f.filters[0].1);
+    let flag = f
+        .filters
+        .iter()
+        .find(|(n, _)| n == "implicit_excluded_middle")
+        .expect("the report says the classical proof used excluded middle");
+    assert!(flag.1.contains("Classical.choice"));
+    // Through a composition too: excluded middle at an inner step.
+    let chained = graph(&[("k1", &["P", EM], "M"), ("k2", &["M", "R"], "T")]);
+    let f = classify(
+        &trial(&["P", "Q", "R"]),
+        &closed_outcome(),
+        &chained,
+        &senses,
+    );
+    assert_eq!(f.filters[0].0, "known");
+    assert!(f.filters[0].1.contains("k1, k2"), "{}", f.filters[0].1);
+}
+
+#[test]
+fn excluded_middle_matching_does_not_hide_a_new_discovery() {
+    let senses = SenseCheck::empty();
+    // The known argument needs `S` besides excluded middle; the proof has only
+    // `P` and `R`: a genuinely new bundle stays a discovery.
+    let known = graph(&[("k", &["P", "S", EM], "T")]);
+    let f = classify(&trial(&["P", "Q", "R"]), &closed_outcome(), &known, &senses);
+    assert_eq!(f.kind, Kind::Discovery);
+    assert!(f.filters.is_empty(), "{:?}", f.filters);
+    // A constructive proof (no `Classical.choice`) does not have excluded
+    // middle: the argument that lists it does not match, the proof is new.
+    let mut constructive = closed_outcome();
+    constructive["proof"]["axioms"] = json!(["propext"]);
+    let known = graph(&[("k", &["P", "R", EM], "T")]);
+    let f = classify(&trial(&["P", "Q", "R"]), &constructive, &known, &senses);
+    assert_eq!(f.kind, Kind::Discovery);
+    assert!(f.filters.is_empty(), "{:?}", f.filters);
+    // An argument without excluded middle matches as before, unflagged.
+    let plain = graph(&[("k", &["P", "R"], "T")]);
+    let f = classify(&trial(&["P", "Q", "R"]), &closed_outcome(), &plain, &senses);
+    assert_eq!(f.filters.len(), 1);
+    assert_eq!(f.filters[0].0, "known");
+}
+
+#[test]
+fn a_classical_proof_of_excluded_middle_itself_is_known_without_an_empty_path() {
+    let mut t = trial(&["P", "Q", "R"]);
+    t.target = EM.into();
+    let f = classify(
+        &t,
+        &closed_outcome(),
+        &Graph::default(),
+        &SenseCheck::empty(),
+    );
+    assert_eq!(f.filters[0].0, "known");
+    assert!(
+        f.filters[0].1.starts_with("the target is ee4ab504"),
+        "{}",
+        f.filters[0].1
+    );
+    assert!(!f.filters[0].1.contains("arguments ,"));
+}
+
+#[test]
+fn background_derivation_reports_the_granted_statements() {
+    let g = graph(&[("a1", &["A", EM], "B"), ("a2", &["B"], "C")]);
+    let em = set(&[EM]);
+    assert_eq!(g.derivation(&set(&["A"]), "C"), None);
+    assert_eq!(
+        g.derivation_with(&set(&["A"]), &em, "C"),
+        Some((vec!["a1".into(), "a2".into()], set(&[EM])))
+    );
+    // Listed among the found premises, excluded middle is not "granted".
+    assert_eq!(
+        g.derivation_with(&set(&["A", EM]), &em, "C"),
+        Some((vec!["a1".into(), "a2".into()], BTreeSet::new()))
+    );
+}
+
+// --- retrieval by authored sense tags and projection-only binders (#1845) ----------
+
+fn tag(
+    declaration: &str,
+    parameter: &str,
+    arguments: &[&str],
+    sense: &str,
+) -> parameter_tags::ParameterTag {
+    parameter_tags::ParameterTag {
+        sense_id: sense.into(),
+        sense_label: sense.to_uppercase(),
+        term: "TERM".into(),
+        definition_id: format!("def-{sense}"),
+        disambiguation_id: "disamb".into(),
+        parameter: parameter_tags::TaggedParameter {
+            declaration: declaration.into(),
+            parameter: parameter.into(),
+            arguments: arguments.iter().map(|a| (*a).to_owned()).collect(),
+        },
+    }
+}
+
+fn tagged(tags: Vec<parameter_tags::ParameterTag>) -> SenseTags {
+    SenseTags {
+        tags,
+        bridges: Vec::new(),
+    }
+}
+
+#[test]
+fn a_shared_authored_sense_admits_a_candidate_without_shared_constants() {
+    // `MostTrueIsMostBeing (Being Respect : Type) (MoreIn …)` against Aristotle's
+    // `AsToBeingSoToTruth (Entity Respect : Type) (MoreIn …)`: relation binders
+    // mention no constant, so only their tags relate them.
+    let target = statement("T", "M.Target", &[]);
+    let aristotle = statement("A", "N.Aristotle", &[]);
+    let mut vocabulary = BTreeMap::new();
+    vocabulary.insert("M.Target".into(), vocab("M", &["Being", "MoreIn"], &[]));
+    vocabulary.insert("N.Aristotle".into(), vocab("N", &["Entity", "Rel"], &[]));
+    let tags = tagged(vec![
+        tag("M.Target", "Being", &[], "being1"),
+        tag("M.Target", "MoreIn", &[], "more1"),
+        tag("N.Aristotle", "Entity", &[], "being1"),
+        tag("N.Aristotle", "Rel", &[], "more1"),
+    ]);
+    let ranked = rank(
+        &target,
+        &[&aristotle],
+        &vocabulary,
+        &BTreeMap::new(),
+        &tags,
+        10,
+    );
+    assert_eq!(ranked.len(), 1, "the shared senses admit it");
+    // Untagged, the same candidate shares nothing: not admitted.
+    assert!(
+        rank(
+            &target,
+            &[&aristotle],
+            &vocabulary,
+            &BTreeMap::new(),
+            &SenseTags::default(),
+            10
+        )
+        .is_empty()
+    );
+    // A partial-application tag (`Rel _ esse`) identifies nothing: it neither
+    // fits a binder nor admits the candidate.
+    let partial = tagged(vec![
+        tag("M.Target", "MoreIn", &[], "more1"),
+        tag("N.Aristotle", "Rel", &["_", "esse"], "more1"),
+    ]);
+    assert!(
+        rank(
+            &target,
+            &[&aristotle],
+            &vocabulary,
+            &BTreeMap::new(),
+            &partial,
+            10
+        )
+        .is_empty()
+    );
+    // The same on the target side: a partial tag on the target's binder.
+    let target_partial = tagged(vec![
+        tag("M.Target", "MoreIn", &["_", "esse"], "more1"),
+        tag("N.Aristotle", "Rel", &[], "more1"),
+    ]);
+    assert!(
+        rank(
+            &target,
+            &[&aristotle],
+            &vocabulary,
+            &BTreeMap::new(),
+            &target_partial,
+            10
+        )
+        .is_empty()
+    );
+}
+
+#[test]
+fn parameter_names_alone_never_admit_a_candidate() {
+    // The same binder names, no shared constant, definition or sense: a name
+    // is not a meaning (AGENTS.md invariant 7).
+    let target = statement("T", "M.Target", &[]);
+    let homonym = statement("H", "N.Homonym", &[]);
+    let mut vocabulary = BTreeMap::new();
+    vocabulary.insert(
+        "M.Target".into(),
+        vocab("M", &["Being", "MoreIn"], &["M.X"]),
+    );
+    vocabulary.insert(
+        "N.Homonym".into(),
+        vocab("N", &["Being", "MoreIn"], &["N.Y"]),
+    );
+    let tags = tagged(vec![tag("M.Target", "MoreIn", &[], "more1")]);
+    assert!(
+        rank(
+            &target,
+            &[&homonym],
+            &vocabulary,
+            &BTreeMap::new(),
+            &tags,
+            10
+        )
+        .is_empty()
+    );
+    // Different senses on same-named binders admit nothing either.
+    let other = tagged(vec![
+        tag("M.Target", "MoreIn", &[], "more1"),
+        tag("N.Homonym", "MoreIn", &[], "more2"),
+    ]);
+    assert!(
+        rank(
+            &target,
+            &[&homonym],
+            &vocabulary,
+            &BTreeMap::new(),
+            &other,
+            10
+        )
+        .is_empty()
+    );
+}
+
+#[test]
+fn an_untagged_binder_gets_no_tag_bonus() {
+    let target = statement("T", "M.Target", &[]);
+    let tagged_candidate = statement("A", "N.Tagged", &[]);
+    let untagged_candidate = statement("U", "N.Untagged", &[]);
+    let mut vocabulary = BTreeMap::new();
+    vocabulary.insert("M.Target".into(), vocab("M", &["B", "MoreIn"], &["M.X"]));
+    vocabulary.insert("N.Tagged".into(), vocab("N", &["B", "Rel"], &["M.X"]));
+    vocabulary.insert("N.Untagged".into(), vocab("N", &["B", "Rel"], &["M.X"]));
+    let tags = tagged(vec![
+        tag("M.Target", "MoreIn", &[], "more1"),
+        tag("N.Tagged", "Rel", &[], "more1"),
+    ]);
+    let pool = [&tagged_candidate, &untagged_candidate];
+    let ranked = rank(&target, &pool, &vocabulary, &BTreeMap::new(), &tags, 10);
+    assert_eq!(ranked[0].id, "A");
+    let score = |id: &str| ranked.iter().find(|c| c.id == id).unwrap().score;
+    assert!(score("A") > score("U"));
+    // The untagged candidate scores as if no binder anywhere were tagged,
+    // except that the target's tagged sense counts toward its vocabulary.
+    let target_untagged = tagged(vec![]);
+    let plain = rank(
+        &target,
+        &pool,
+        &vocabulary,
+        &BTreeMap::new(),
+        &target_untagged,
+        10,
+    );
+    let plain_u = plain.iter().find(|c| c.id == "U").unwrap().score;
+    assert!(score("U") <= plain_u);
+}
+
+#[test]
+fn a_premise_about_the_projected_field_only_ranks_above_one_using_the_whole_structure() {
+    // OnticTSchemaValid (o : Ontic W B) against OnticFrameKT (m : Profile W B)
+    // := FrameSatisfies .KT m.ontic.frame (`m` only through `ontic`) and
+    // NecessaryConcreteAt (m : Profile W B) := ∃ x, m.concrete x ∧ … m.ontic …
+    // (`m` also through `concrete`). Both project; only the first is a
+    // statement about the projected value.
+    let target = statement("T", "M.TSchema", &[]);
+    let frame = statement("F", "N.FrameKT", &[]);
+    let concrete = statement("C", "N.Concrete", &[]);
+    let mut vocabulary = BTreeMap::new();
+    let mut goal = vocab("M", &["W", "B", "o"], &["M.Ontic", "M.Valid"]);
+    goal.binder_types = vec!["".into(), "".into(), "M.Ontic".into()];
+    vocabulary.insert("M.TSchema".into(), goal);
+    let mut kt = vocab(
+        "N",
+        &["W", "B", "m"],
+        &["M.Ontic", "N.Profile", "N.Frame", "N.Refl"],
+    );
+    kt.binder_types = vec!["".into(), "".into(), "N.Profile".into()];
+    kt.binder_fields = vec![set(&[]), set(&[]), set(&["M.Ontic"])];
+    kt.binder_uses = vec![set(&[]), set(&[]), set(&["M.Ontic"])];
+    vocabulary.insert("N.FrameKT".into(), kt);
+    let mut nc = vocab("N", &["W", "B", "m"], &["M.Ontic", "N.Profile"]);
+    nc.binder_types = vec!["".into(), "".into(), "N.Profile".into()];
+    nc.binder_fields = vec![set(&[]), set(&[]), set(&["M.Ontic"])];
+    nc.binder_uses = vec![set(&[]), set(&[]), set(&[])];
+    vocabulary.insert("N.Concrete".into(), nc);
+    let ranked = rank(
+        &target,
+        &[&concrete, &frame],
+        &vocabulary,
+        &BTreeMap::new(),
+        &SenseTags::default(),
+        10,
+    );
+    assert_eq!(ranked[0].id, "F", "{ranked:?}");
+    // Without the projection-only use, the larger frame vocabulary ranks it last.
+    vocabulary.get_mut("N.FrameKT").unwrap().binder_uses = vec![set(&[]), set(&[]), set(&[])];
+    let ranked = rank(
+        &target,
+        &[&concrete, &frame],
+        &vocabulary,
+        &BTreeMap::new(),
+        &SenseTags::default(),
+        10,
+    );
+    assert_eq!(ranked[0].id, "C");
+}
+
+#[test]
+fn vocabulary_export_reads_projection_only_uses() {
+    let parsed = parse_vocabulary(&json!([
+        {"declaration": "M.P", "module": "M", "binders": ["B", "m"], "constants": [],
+         "binder_types": ["", "M.Profile"], "binder_fields": [[], ["M.Ontic"]],
+         "binder_uses": [[], ["M.Ontic"]]},
+    ]))
+    .unwrap();
+    assert_eq!(parsed["M.P"].binder_uses[1], set(&["M.Ontic"]));
+    assert!(parsed["M.P"].binder_uses[0].is_empty());
+}
+
+#[test]
+fn a_computed_formula_is_evaluated_by_its_equations_in_the_certified_text() {
+    let mut outcome = closed_outcome();
+    outcome["unfold"] = json!(["M.Valid", "M.S5"]);
+    outcome["equations"] = json!(["M.convergenceFormula", "M.iterBox"]);
+    let text = theorem_text("discovered1", &outcome, 100_000);
+    assert!(
+        text.contains("(h0 : P) (h2 : R) : T"),
+        "statement unchanged: {text}"
+    );
+    let delta = text.find("delta M.Valid M.S5 at *").unwrap();
+    let simp = text
+        .find("try simp only [M.convergenceFormula, M.iterBox] at *")
+        .unwrap();
+    let duper = text.find("all_goals duper [*]").unwrap();
+    assert!(delta < simp && simp < duper, "{text}");
+    // Without equations the proof is the plain delta-and-Duper script.
+    let plain = theorem_text("discovered1", &closed_outcome(), 100_000);
+    assert!(plain.ends_with("  duper [*]\n"), "{plain}");
+    assert!(!plain.contains("simp"));
+}
+
+#[test]
+fn a_conclusion_that_is_a_registered_bridge_bridges_its_senses() {
+    // The schema statement `T` is registered (role conclusion) as the bridge
+    // from NECESSARY_11 to NECESSARY_2: an argument concluding it derives the
+    // bridge, as `truth check` accepts (#1845).
+    let disambiguation = crate::Record {
+        path: "corpus/disambiguations/n.json".into(),
+        fields: json!({"term_label": "NECESSARY", "senses": [
+            {"id": "s2", "label": "NECESSARY_2", "definition_id": "d2"},
+            {"id": "s11", "label": "NECESSARY_11", "definition_id": "d11"}]})
+        .as_object()
+        .unwrap()
+        .clone(),
+    };
+    let records: Vec<(&str, serde_json::Map<String, Value>)> = vec![
+        ("T", json!({"definition_ids": ["d2", "d11"]})),
+        ("X", json!({"definition_ids": ["d2"]})),
+        ("P", json!({"definition_ids": ["d11"]})),
+    ]
+    .into_iter()
+    .map(|(id, v)| (id, v.as_object().unwrap().clone()))
+    .collect();
+    let bridge = |role: Option<&str>| {
+        let mut b = json!({"term": "NECESSARY", "from": "s11", "to": "s2", "statement_id": "T"});
+        if let Some(role) = role {
+            b["role"] = json!(role);
+        }
+        b
+    };
+    let check = |bridges: Vec<Value>| SenseCheck {
+        index: senses::sense_index([&disambiguation]).unwrap(),
+        statements: records.iter().map(|(id, r)| (*id, r)).collect(),
+        bridges,
+    };
+    let conclusion = check(vec![bridge(Some("conclusion"))]);
+    let mixed = conclusion.mixing(&["P".to_owned()], "T");
+    assert_eq!(mixed.len(), 1);
+    assert_eq!(mixed[0].2.len(), 1, "bridged by the conclusion: {mixed:?}");
+    assert_eq!(mixed[0].2[0]["role"], "conclusion");
+    // Another conclusion that mixes the same senses is not bridged by it.
+    let other = conclusion.mixing(&["P".to_owned()], "X");
+    assert!(other[0].2.is_empty());
+    // The registered role does not restrict the use, as in `truth check`: a
+    // premise-role registration of `T` bridges an argument that concludes `T`
+    // (listed with role conclusion) ...
+    let premise = check(vec![bridge(None)]);
+    let derived = premise.mixing(&["P".to_owned()], "T");
+    assert_eq!(derived[0].2.len(), 1, "{derived:?}");
+    assert_eq!(derived[0].2[0]["role"], "conclusion");
+    // ... and a conclusion-role registration of `T` bridges an argument that
+    // has `T` as a premise (listed without a role, i.e. as a premise bridge).
+    let used = conclusion.mixing(&["P".to_owned(), "T".to_owned()], "X");
+    assert_eq!(used[0].2.len(), 1, "{used:?}");
+    assert!(used[0].2[0].get("role").is_none());
+    // The spec draft keeps the role, so `argument_batch.py` records it.
+    let mut statements = BTreeMap::new();
+    statements.insert(
+        "T".to_owned(),
+        statement("T", "TruthCore.M.T", &["d2", "d11"]),
+    );
+    statements.insert("P".to_owned(), statement("P", "TruthCore.M.P", &["d11"]));
+    let mut f = classify(
+        &trial(&["P"]),
+        &closed_outcome(),
+        &Graph::default(),
+        &conclusion,
+    );
+    f.premises = vec!["P".to_owned()];
+    let flag = f.filters.iter().find(|(n, _)| n == "sense_bridge").unwrap();
+    assert!(flag.1.contains("is the conclusion"), "{}", flag.1);
+    let spec = render_spec("B", &[&f], &statements, &conclusion, "2026-11-22");
+    assert!(
+        spec.contains("statement_id = \"T\"\nrole = \"conclusion\"\n"),
+        "{spec}"
+    );
 }

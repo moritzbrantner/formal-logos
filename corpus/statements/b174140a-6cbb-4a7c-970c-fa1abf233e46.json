@@ -1,0 +1,15 @@
+{
+  "id": "b174140a-6cbb-4a7c-970c-fa1abf233e46",
+  "label": "Some world accessible from w has only finitely many concrete objects",
+  "paraphrase": "Subtraction premise S1, analyst formulation, attribution deferred: on the route's profile m, some world accessible from w in m.ontic.frame has only finitely many concrete objects, read as: one finite list contains every candidate that is concrete and exists there. It bounds one world, not every accessible world (weaker than the population cover STMT-FINITE-POPULATION-COVER), and it says nothing about which objects they are.",
+  "lean_declaration": "TruthCore.Causality.SubtractionArgument.PossiblyFinitelyManyConcrete",
+  "definition_ids": [
+    "cdbbae1a-5cce-4367-b6b4-d135135a2ecd",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

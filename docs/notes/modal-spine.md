@@ -651,6 +651,32 @@ Objection and warrant audit (Substantive Objection Standard):
   something exists" does not give "something exists necessarily"
   (`NecessaryIndividual.Alternating`, `SharedRootBridge`).
 - If a world with nothing concrete is possible, the conclusion is false under F1 and F2.
+- The subtraction argument for an empty world (2026-11-22, attempt
+  `03e1f49f`, batch `specs/subtraction-argument.toml`, analyst formulation;
+  its premises are labelled S1–S3 to keep them apart from this stage's A2 and
+  A3). The argument is valid on the route's profile (S1 finitely many
+  concreta, S2 each could fail to exist, S3 subtraction with no newcomer,
+  transitivity, excluded middle; S1, S2, S3 and transitivity each needed by
+  omission models), and its conclusion contradicts this node. It reaches the
+  node only through S2 at the candidate necessary being: the node excludes S2
+  at its world (result `6b12525b`), with excluded middle S2 there is exactly
+  the node's denial, and in an S5 theist model every other premise holds
+  together with this node and the box K node, so rejecting the rival requires
+  rejecting only S2. Pairwise recombination with companions gives S2 but not
+  S3; unrestricted recombination is exactly recombination for candidates that
+  could be absent plus the possible absence of every companioned concretum
+  (certified difference). Recombination therefore adds no warrant for S2 at
+  the necessary being beyond its own Humean source, separability in
+  conception, that is the conceivability bridge, which is not yet assessed at
+  this node. The analyst formulation of Lowe's reply (a necessary abstractum
+  co-existing with some concretum) excludes the conclusion and, with S1,
+  transitivity and excluded middle, S2 and S3 together, without choosing
+  which; it does not by itself give a necessary concrete individual (pair
+  model). An explanatory-dependence extension of the kind Lowe's 2013 modal
+  argument uses (roughly: contingent beings cannot explain the existence of
+  necessary abstracta; navigation only, attribution deferred, not checked
+  against the text and not formalized) is an unassessed further support
+  option for this node and a next test.
 
 ## Stage two: that being is God
 
