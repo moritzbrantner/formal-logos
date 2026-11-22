@@ -410,7 +410,8 @@ incompatibility; a by-name carrier or the transcription probe rejects it;
 the engine's projection filters reject `projection_unused` and an ambiguous
 projection, and a unique projection is noted as a specialization;
 composition from verified arguments makes it `closed-known` (`modulo_logic`
-when only with excluded middle, which Duper's classical logic supplies); the
+when only with excluded middle, granted, as by the engine's `known` filter,
+only to a proof whose axioms include `Classical.choice`); the
 `truth semantics` preflight checks its senses, for known closures too. What survives is a raw
 `closed-candidate`: certify it with `truth discover` and record it only through
 the spec path and the semantic challenge. Per premise, a deletion that fails
@@ -432,15 +433,16 @@ plain binding, fails at one instantiation of its binders. It refutes no
 premise, no stronger or differently bound formulation, no sense identification
 and no larger bundle.
 
-Engine changes this layer does not make (follow-ups after #1845): an exact
-`--premise` bundle for `truth discover`, so that its own filters and
-certification run on a repair goal; a reported distinction between a
-heartbeat timeout and a saturated search; countermodels for unresolved goals
-in the engine itself; the known filter treating excluded middle as available
-logic; a binding rule that does not depend on tag order when a binder
-carries both a whole-binder and a partial-application tag; and one shared
+Engine changes this layer does not make: an exact `--premise` bundle for
+`truth discover`, so that its own filters and certification run on a repair
+goal; a reported distinction between a heartbeat timeout and a saturated
+search; countermodels for unresolved goals in the engine itself; a binding
+rule that does not depend on tag order when a binder carries both a
+whole-binder and a partial-application tag; and one shared
 universe-specialization helper (`scripts/DiscoverRepair.lean` copies the block
-of `Discover.trial`).
+of `Discover.trial`). Two earlier follow-ups are in the engine since #1850:
+the `known` filter grants excluded middle to a classical proof, and retrieval
+admits and ranks premises by whole-binder sense tags.
 
 ## Boundaries
 

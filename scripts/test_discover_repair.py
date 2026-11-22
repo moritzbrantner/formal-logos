@@ -391,7 +391,16 @@ class PlannerTests(unittest.TestCase):
 
     def test_known_modulo_logic(self):
         corpus = make_corpus(self.root, [("k", ["ptor", "em"], "t"), ("free", [], "rtoq")])
-        self.assertEqual(corpus.known(["ptor"], "t"), {"arguments": ["k"], "modulo_logic": True})
+        # Excluded middle is granted only to a classical proof (#1850's rule).
+        self.assertIsNone(corpus.known(["ptor"], "t"))
+        self.assertEqual(corpus.known(["ptor"], "t", classical=True),
+                         {"arguments": ["k"], "modulo_logic": True})
+        goal = {"command": "discover", "premises": ["ptor"], "target": "t"}
+        closed = {"closed": {"prover": "duper", "used": [0], "axioms": []}, "minimal": [0],
+                  "witness": "all True"}
+        self.assertEqual(bp.assess(closed, goal, corpus, senses=False)["status"], "closed-candidate")
+        closed["closed"]["axioms"] = ["propext", "Classical.choice", "Quot.sound"]
+        self.assertEqual(bp.assess(closed, goal, corpus, senses=False)["status"], "closed-known")
         self.assertEqual(corpus.known(["ptor", "em"], "t")["modulo_logic"], False)
         self.assertIsNone(corpus.known(["rtoq"], "t"))
 

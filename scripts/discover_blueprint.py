@@ -388,9 +388,11 @@ DIAGNOSES = {
     "f": "unknown",
 }
 
-# Declarations whose statements Duper's classical logic already supplies: a
-# proof that uses Classical.choice in place of the explicit premise is known
-# modulo logic, not new (attempt on PR #1848, retrieval miss iii).
+# Declarations whose statements a classical proof already supplies: a proof
+# whose axioms include Classical.choice has excluded middle (Classical.em)
+# without the premise, so a known route listing it matches (the engine's rule,
+# `CLASSICAL_BACKGROUND` and `classical` in truth/src/discover.rs, #1850). A
+# constructive proof is granted nothing.
 LOGIC_DECLARATIONS = {"TruthCore.Logic.ExcludedMiddle"}
 
 MAX_ATTEMPTS_PER_GOAL = 8
@@ -456,11 +458,13 @@ class Corpus:
                     changed = True
         return have, fired
 
-    def known(self, premises, target: str) -> dict | None:
+    def known(self, premises, target: str, classical: bool = False) -> dict | None:
         """Whether the target composes from verified arguments over the
-        premises; `modulo_logic` when only with the logic statements added.
-        `arguments` is the chain of fired arguments the target rests on."""
-        for logic in (False, True):
+        premises; `modulo_logic` when only with the logic statements added,
+        which are granted only to a classical proof (`classical`, its axioms
+        include `Classical.choice`). `arguments` is the chain of fired
+        arguments the target rests on."""
+        for logic in ((False, True) if classical else (False,)):
             have, fired = self.closure(premises, logic=logic)
             if target in have:
                 return {"arguments": self.chain(fired, target, set(premises)),
@@ -1193,7 +1197,8 @@ def assess(raw: dict, goal: dict, corpus: Corpus, senses: bool = True) -> dict:
         "checked": False}
     if out["senses"].get("checked") and not out["senses"].get("passes"):
         out["notes"].append("senses: " + out["senses"].get("message", "")[:200])
-    known = corpus.known(minimal, goal["target"])
+    known = corpus.known(minimal, goal["target"],
+                         classical="Classical.choice" in (closed.get("axioms") or []))
     if known:
         out["status"] = "closed-known"
         out["known"] = known
