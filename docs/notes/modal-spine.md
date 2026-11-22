@@ -773,17 +773,18 @@ moved by none is PURE_ACT_5, exists at `w` and at every accessible world":
 | A (esse-cause) | B2: whatever is contingent at `w` has a distinct CAUSE_2 of its esse | firstness, pure act (carried), B3 | `firstMoverNecessaryByEsseCause` |
 | A (grounding) | none beyond irreflexive actual grounding and B0' (movers are concrete) | existing closure `c71c068c`, grounding-priority `7a63a3fe`, firstness, pure act | `firstMoverNecessaryFirstRoot` (also actual rootness and firstness) |
 | B (potency) | B4: whatever is contingent at `w` is in POTENCY_1 in at least one (any) respect; no grounding relation and no tie to esse | pure act | `firstMoverNecessaryByPotency` |
+| C (essence–esse) | B6: whatever is contingent at `w` has esse distinct from essence | simplicity `78246da5`, pure act | `firstMoverNecessaryByEsseIdentity` |
 
 B0 is warranted only at the world at which the motion vocabulary is read;
 asserted at every accessible world it would make every mover necessary. Its
 "moves" is the frame's `MovesIn` (DEF-MOTION-AS-REDUCTION, CAUSE_1), which B0
 and B0' deliberately do not link: the same arguments use CAUSE_2 (causing
 esse) as a different relation, and the sense check cannot tell two relations
-from an equivocation (missing link recorded for #216). Irreflexivity and the
+from an equivocation. The missing link is a known definition-coverage gap,
+recorded in the B0 and B0' statements and in this note. Irreflexivity and the
 closure `c71c068c` must be read on one strict sense of `grounds`; under the
 reflexive existence-requirement reading of #1593 the closure holds trivially
 and irreflexivity fails.
-| C (essence–esse) | B6: whatever is contingent at `w` has esse distinct from essence | simplicity `78246da5`, pure act | `firstMoverNecessaryByEsseIdentity` |
 
 B2 is also derived from B6, the selected-world existence-to-act contract
 `0436de86` and the q.3 a.4 reading `33ad148b`
