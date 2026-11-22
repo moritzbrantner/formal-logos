@@ -132,38 +132,38 @@ theorem perfectBeingsOfPureIndiscernibility {B D : Type} (Has : B → D → Prop
 
 These are conditional applications to the SAME subsistent source, actual root,
 or GOD_4 bearer. The genuinely substantive self-capacity, immanent exercise,
-rational-basing and HAS_INTELLECT_1 recognition inputs remain OPEN. In
+cognitive-grounding and HAS_INTELLECT_1 recognition inputs remain OPEN. In
 particular, a productive-power meaning of virtual possession supplies none of
 them, and these proofs do not import the q.14 self-understanding claim as a
 conclusion-shaped premise. -/
 open TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding
 
 /-- Whole power of being supplies wisdom at the very same OwnBeing bearer;
-the separate self-directed capacity, exercise/potency, and rational-basing
-bridges supply an actual, true, reason-based self-directed assent.
+the separate self-directed capacity, exercise/potency, and cognitive-grounding
+bridges supply an actual, true, cognitively grounded self-directed apprehension.
 'PureAct' excludes passive potency in the designated understanding respect,
 not the non-exercise of every productive power. -/
 theorem intrinsicSelfKnowledgeFromWisdom {B D C R : Type}
     (OwnBeing : B → Prop) (Has : B → D → Prop) (Pure OfBeing : D → Prop)
     (wisdom : D) (About Correct : C → B → Prop)
-    (CanAssent Assents ReasonBased : B → C → Prop)
+    (CanApprehend Apprehends CognitivelyGrounded : B → C → Prop)
     (InPotency : B → R → Prop) (understanding : R)
     (hWhole : OwnBeingLacksNoPerfectionOfBeing OwnBeing Has OfBeing)
     (hPertain : PurePerfectionsPertainToBeing Pure OfBeing)
     (hPureWisdom : Pure wisdom)
-    (hSelfCapacity : WisdomSelfCapacity OwnBeing Has wisdom About Correct CanAssent)
-    (hExercise : SelfCapacityExercisedOrPotent OwnBeing About CanAssent Assents
+    (hSelfCapacity : WisdomSelfCapacity OwnBeing Has wisdom About Correct CanApprehend)
+    (hExercise : SelfCapacityExercisedOrPotent OwnBeing About CanApprehend Apprehends
       InPotency understanding)
-    (hBased : TrueSelfAssentReasonBased OwnBeing About Correct Assents ReasonBased)
+    (hGrounding : TrueSelfApprehensionGrounded OwnBeing About Correct Apprehends CognitivelyGrounded)
     (g : B) (hOwn : OwnBeing g)
     (hPureAct : PureAct InPotency g) :
-    IntrinsicSelfKnowledge About Correct Assents ReasonBased g := by
+    IntrinsicSelfKnowledge About Correct Apprehends CognitivelyGrounded g := by
   have hPossesses : Has g wisdom := hWhole g hOwn wisdom (hPertain wisdom hPureWisdom)
   obtain ⟨content, hAbout, hCorrect, hCan⟩ :=
     hSelfCapacity g hOwn hPossesses
-  rcases hExercise g content hOwn hAbout hCan with hAssent | hPotency
-  · exact ⟨content, hAbout, hCorrect, hAssent,
-      hBased g content hOwn hAbout hCorrect hAssent⟩
+  rcases hExercise g content hOwn hAbout hCan with hApprehension | hPotency
+  · exact ⟨content, hAbout, hCorrect, hApprehension,
+      hGrounding g content hOwn hAbout hCorrect hApprehension⟩
   · exact False.elim (hPureAct understanding hPotency)
 
 /-- Actual-root specialization. The unchanged ROOT-WITHOUT-LIMITING-PRINCIPLE
@@ -176,7 +176,7 @@ theorem actualRootSelfKnowledgeFromWisdom {W B P D C R : Type}
     (OwnBeing : B → Prop) (Has : B → D → Prop)
     (Pure OfBeing : D → Prop) (wisdom : D)
     (About Correct : C → B → Prop)
-    (CanAssent Assents ReasonBased : B → C → Prop)
+    (CanApprehend Apprehends CognitivelyGrounded : B → C → Prop)
     (InPotency : B → R → Prop) (understanding : R)
     (hNoLimits : TruthCore.Causality.RootPurity.ActualRootsWithoutLimitingPrinciple
       m w Composite PriorSimply essenceOf esseOf)
@@ -184,45 +184,69 @@ theorem actualRootSelfKnowledgeFromWisdom {W B P D C R : Type}
     (hWhole : OwnBeingLacksNoPerfectionOfBeing OwnBeing Has OfBeing)
     (hPertain : PurePerfectionsPertainToBeing Pure OfBeing)
     (hPureWisdom : Pure wisdom)
-    (hSelfCapacity : WisdomSelfCapacity OwnBeing Has wisdom About Correct CanAssent)
-    (hExercise : SelfCapacityExercisedOrPotent OwnBeing About CanAssent Assents
+    (hSelfCapacity : WisdomSelfCapacity OwnBeing Has wisdom About Correct CanApprehend)
+    (hExercise : SelfCapacityExercisedOrPotent OwnBeing About CanApprehend Apprehends
       InPotency understanding)
-    (hBased : TrueSelfAssentReasonBased OwnBeing About Correct Assents ReasonBased)
+    (hGrounding : TrueSelfApprehensionGrounded OwnBeing About Correct Apprehends CognitivelyGrounded)
     (g : B) (hRoot : TruthCore.Causality.NecessaryRootFork.ActualRoot m w g)
     (hPureAct : PureAct InPotency g) :
-    IntrinsicSelfKnowledge About Correct Assents ReasonBased g := by
+    IntrinsicSelfKnowledge About Correct Apprehends CognitivelyGrounded g := by
   have hOwnG : OwnBeing g := hOwn g (hNoLimits g hRoot)
   exact intrinsicSelfKnowledgeFromWisdom OwnBeing Has Pure OfBeing wisdom
-    About Correct CanAssent Assents ReasonBased InPotency understanding
-    hWhole hPertain hPureWisdom hSelfCapacity hExercise hBased g hOwnG hPureAct
+    About Correct CanApprehend Apprehends CognitivelyGrounded InPotency understanding
+    hWhole hPertain hPureWisdom hSelfCapacity hExercise hGrounding g hOwnG hPureAct
+
+
+/-- Weaker endpoint for HAS_INTELLECT_1 *as capacity*: whole-being perfection
+and its substantive wisdom→self-directed-power bridge suffice if that power
+is recognized as intrinsic intellectual aptitude. No pure-act exercise,
+actual apprehension, or cognitive-grounding premise is required for this
+capacity-level conditional. GOD_4 itself still needs a real witness. -/
+theorem godHasIntellectFromWisdomCapacity {B D C : Type}
+    (IsGod HasIntellect OwnBeing : B → Prop)
+    (Has : B → D → Prop) (Pure OfBeing : D → Prop) (wisdom : D)
+    (About Correct : C → B → Prop) (CanApprehend : B → C → Prop)
+    (hGodOwn : ∀ g, IsGod g → OwnBeing g)
+    (hWhole : OwnBeingLacksNoPerfectionOfBeing OwnBeing Has OfBeing)
+    (hPertain : PurePerfectionsPertainToBeing Pure OfBeing)
+    (hPureWisdom : Pure wisdom)
+    (hSelfCapacity : WisdomSelfCapacity OwnBeing Has wisdom About Correct CanApprehend)
+    (hRecognition : ∀ g, IsGod g →
+      (∃ content, About content g ∧ Correct content g ∧
+        CanApprehend g content) → HasIntellect g) :
+    GodHasIntellect IsGod HasIntellect := by
+  intro g hg
+  have hOwn : OwnBeing g := hGodOwn g hg
+  have hWisdom : Has g wisdom := hWhole g hOwn wisdom (hPertain wisdom hPureWisdom)
+  exact hRecognition g hg (hSelfCapacity g hOwn hWisdom)
 
 /-- Conditional GOD_4 attachment to the unchanged HAS_INTELLECT_1 consumer:
-first obtain *intrinsic* source-borne, true and rationally based self-assent
+first obtain *intrinsic* source-borne, true and cognitively grounded self-apprehension
 before applying the explicitly OPEN recognition bridge. GOD_4 existence,
 source identity, and the philosophical truth of the bridge are not proved. -/
 theorem godHasIntellectFromWholePowerWisdom {B D C R : Type}
     (IsGod HasIntellect OwnBeing : B → Prop)
     (Has : B → D → Prop) (Pure OfBeing : D → Prop) (wisdom : D)
     (About Correct : C → B → Prop)
-    (CanAssent Assents ReasonBased : B → C → Prop)
+    (CanApprehend Apprehends CognitivelyGrounded : B → C → Prop)
     (InPotency : B → R → Prop) (understanding : R)
     (hGodOwn : ∀ g, IsGod g → OwnBeing g)
     (hGodPure : ∀ g, IsGod g → PureAct InPotency g)
     (hWhole : OwnBeingLacksNoPerfectionOfBeing OwnBeing Has OfBeing)
     (hPertain : PurePerfectionsPertainToBeing Pure OfBeing)
     (hPureWisdom : Pure wisdom)
-    (hSelfCapacity : WisdomSelfCapacity OwnBeing Has wisdom About Correct CanAssent)
-    (hExercise : SelfCapacityExercisedOrPotent OwnBeing About CanAssent Assents
+    (hSelfCapacity : WisdomSelfCapacity OwnBeing Has wisdom About Correct CanApprehend)
+    (hExercise : SelfCapacityExercisedOrPotent OwnBeing About CanApprehend Apprehends
       InPotency understanding)
-    (hBased : TrueSelfAssentReasonBased OwnBeing About Correct Assents ReasonBased)
+    (hGrounding : TrueSelfApprehensionGrounded OwnBeing About Correct Apprehends CognitivelyGrounded)
     (hRecognition : ∀ g, IsGod g →
-      IntrinsicSelfKnowledge About Correct Assents ReasonBased g → HasIntellect g) :
+      IntrinsicSelfKnowledge About Correct Apprehends CognitivelyGrounded g → HasIntellect g) :
     GodHasIntellect IsGod HasIntellect := by
   intro g hg
   exact hRecognition g hg
     (intrinsicSelfKnowledgeFromWisdom OwnBeing Has Pure OfBeing wisdom
-      About Correct CanAssent Assents ReasonBased InPotency understanding
-      hWhole hPertain hPureWisdom hSelfCapacity hExercise hBased g
+      About Correct CanApprehend Apprehends CognitivelyGrounded InPotency understanding
+      hWhole hPertain hPureWisdom hSelfCapacity hExercise hGrounding g
       (hGodOwn g hg) (hGodPure g hg))
 
 /-- Same fixed, nonempty source/effect background, with three missing-premise
