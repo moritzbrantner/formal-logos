@@ -3,6 +3,7 @@ module
 public import TruthCore.Causality.MetricBeginningArrival
 public import TruthCore.Results.Causality.MetricGrimReaper.Solution
 public import TruthCore.Results.Causality.ActualEuclidean.Solution
+public import TruthCore.Causality.FrameAdapters
 
 @[expose] public section
 
@@ -272,11 +273,15 @@ theorem necessaryOfUniversalMemberwiseGiving {W B T S : Type}
   exact hNoSelf v hwv c t hSelf
 
 /-- A non-externality-stipulating causal opportunity, no-self-giving, and
-temporal presence of contingent concreta yield the STRONGER registered B2
-that explicitly demands an external source. Outside-ness is a derived fact,
-not the antecedent's hidden necessary-being possibility. The bridge is
-conditional on memberwise concurrent esse-giving, not a holistic or merely
-temporally prior notion of causation. -/
+temporal presence of contingent concreta yield the registered B2 that
+explicitly demands an external source. Exteriority is derived from the
+universal scope of the giving clause over a possibly contingent source, plus
+no-self-giving and temporal presence; it is not stated in the antecedent. The
+commitment to a possibly necessary concretum is not thereby removed: it sits in
+that universal clause, and under the two principles the antecedent and the
+conclusion are equivalent (`nonexternalIffExternalOpportunity` below). The
+bridge is conditional on memberwise concurrent esse-giving, not a holistic or
+merely temporally prior notion of causation. -/
 theorem externalOpportunityOfMemberwiseGiving {W B T S : Type} [Preorder T]
     (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
     (Concrete : B → Prop) (k : TimeClock T) (w : W)
@@ -294,6 +299,53 @@ theorem externalOpportunityOfMemberwiseGiving {W B T S : Type} [Preorder T]
   subst x
   obtain ⟨_, u, hu, hAbsent⟩ := hCont
   exact hAbsent (hn u hu)
+
+/-- Converse, with no further premise: the external B2 gives the nonexternal
+one by forgetting the exteriority conjunct of the same witness. -/
+theorem nonexternalOpportunityOfExternal {W B T S : Type} [Preorder T]
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (k : TimeClock T) (w : W)
+    (hOpportunity : ConcurrentFiniteDurationCausalOpportunity f Concrete k w) :
+    NonexternalConcurrentGivingOpportunity f Concrete k w := by
+  intro hBegins
+  obtain ⟨v, hv, hB, c, hc, he, hGiving, _⟩ := hOpportunity hBegins
+  exact ⟨v, hv, hB, c, hc, he, hGiving⟩
+
+/-- Under no-self-giving and temporal presence of contingent concreta, the
+nonexternal and the external causal opportunity premises are equivalent. So a
+rival who denies that a necessary concretum is possible, while keeping both
+principles, rejects the nonexternal premise exactly as the external one: the
+derivation relocates the modal commitment into the universal giving clause, it
+does not remove it. -/
+theorem nonexternalIffExternalOpportunity {W B T S : Type} [Preorder T]
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (k : TimeClock T) (w : W)
+    (hNoSelf : NoSelfGivingOnAccessible f w)
+    (hTemporal : ContingentConcretaTemporallyPresent f Concrete w) :
+    NonexternalConcurrentGivingOpportunity f Concrete k w ↔
+      ConcurrentFiniteDurationCausalOpportunity f Concrete k w :=
+  ⟨fun h => externalOpportunityOfMemberwiseGiving f Concrete k w h hNoSelf hTemporal,
+    nonexternalOpportunityOfExternal f Concrete k w⟩
+
+/-- The universal clause of memberwise giving is CAUSE_OF_BEING_2
+(`SustainsBeing`, disambiguation 88a8fba7) over the frame's being-giving,
+restricted to the contingent concrete individuals present at some moment. -/
+theorem concurrentTotalityGiving_iff_sustains {W B T S : Type}
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (v : W) (c : B) :
+    ConcurrentTotalityGivingAt f Concrete v c ↔
+      (∃ x t, Concrete x ∧ ContingentAt f.history.ontic v x ∧
+        f.history.IsAt v x t ∧ f.GivesAt v c x t) ∧
+      ∀ x, Concrete x → ContingentAt f.history.ontic v x →
+        (∃ t, f.history.IsAt v x t) →
+          TruthCore.Causality.SustainingCausation.SustainsBeing f.history
+            (TruthCore.Causality.FrameAdapters.giving f) v c x := by
+  constructor
+  · rintro ⟨hSome, hAll⟩
+    exact ⟨hSome, fun x hc hx hPresent =>
+      ⟨hPresent, fun t ht => hAll x t hc hx ht⟩⟩
+  · rintro ⟨hSome, hAll⟩
+    exact ⟨hSome, fun x t hc hx ht => (hAll x hc hx ⟨t, ht⟩).2 t ht⟩
 
 /-- The original positive openBelowSource history can also support the
 stronger concurrent reading when its causal field is genuinely populated. -/

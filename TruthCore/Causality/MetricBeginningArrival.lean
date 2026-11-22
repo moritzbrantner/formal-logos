@@ -137,6 +137,15 @@ so the relation cannot be vacuous. GivesAt is the existing primitive of
 concurrent being-giving, not a synonym for logical implication, temporally
 prior efficient causation, Ontic.Causes, or a bare totality label.
 
+GivesAt is taken on its STRICT esse-giving reading (definition 158301bc), not
+the inclusive reading that also counts causing coming to be. The universal
+clause is CAUSE_OF_BEING_2 (`SustainingCausation.SustainsBeing`, disambiguation
+88a8fba7) over the frame's giving (`FrameAdapters.giving`), restricted to the
+contingent concrete individuals present at some moment of v: the companion
+`concurrentTotalityGiving_iff_sustains` in the results checks this. It is
+written directly in frame fields so that the existing proofs and controls,
+which destructure the clause, stay unchanged.
+
 This reading is sufficient for treating the source as an actual provider of
 the contingent members' being. It is STRONGER than causation of the contingent
 whole taken collectively: a cause of a totality need not directly cause every
@@ -184,9 +193,18 @@ def NecessaryConcreteWithPossibleConcurrentGivingAt {W B T S : Type}
 /-- A **weaker** possible causal opportunity: some accessible populated
 BEGINS_2 history can contain an existing concrete source that actually gives
 being to every contingent concrete member at every moment of its presence.
-Crucially the source is NOT stipulated external, necessary or uncaused.
-Those properties are candidates for derivation using non-self-causation and
-temporal presence of contingent concrete sources. -/
+The source is NOT stipulated external, necessary or uncaused in this
+statement. But the commitment to a possibly necessary concretum is not removed:
+it moves into the universal clause, which ranges over the source itself
+whenever the source is contingent and present at some moment. Given
+`NoSelfGivingOnAccessible` and `ContingentConcretaTemporallyPresent`, this
+premise is EQUIVALENT to `ConcurrentFiniteDurationCausalOpportunity`
+(`nonexternalIffExternalOpportunity` in the results; the converse direction
+needs neither principle). A rival who denies that a necessary concretum is
+possible, and keeps both principles, rejects this premise exactly as they
+reject the external B2. What the reformulation makes explicit is that rival's
+cost: denying that any concrete thing could give being to every contingent
+concretum of a possible BEGINS_2 history. -/
 def NonexternalConcurrentGivingOpportunity {W B T S : Type} [Preorder T]
     (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
     (Concrete : B → Prop) (k : TimeClock T) (w : W) : Prop :=
@@ -211,9 +229,12 @@ def NoSelfGivingOnAccessible {W B T S : Type}
 /-- World-relative temporal presence for contingent concreta in accessible
 histories. This is NOT CoherentAtNow: a contingent individual need only be
 present at SOME moment of the complete history, not necessarily at now.
-It is needed when the purported source is contingent and otherwise could be
-an atemporal, existing candidate outside the domain of the all-present-times
-GivesAt rule. Necessary sources can remain timeless. -/
+It EXCLUDES contingent atemporal concreta: no contingent concrete individual
+existing in an accessible history is never temporally present there. That
+exclusion is the work it does in the derivation, since a contingent source
+present at no moment would fall outside the domain of the all-present-times
+GivesAt rule (control `unmanifestSourceSeparatesTemporal`). Only necessary
+concreta are left unrestricted and may be timeless. -/
 def ContingentConcretaTemporallyPresent {W B T S : Type}
     (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
     (Concrete : B → Prop) (w : W) : Prop :=

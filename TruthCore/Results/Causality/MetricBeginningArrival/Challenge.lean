@@ -1,6 +1,7 @@
 import TruthCore.Causality.MetricBeginningArrival
 import TruthCore.Results.Causality.MetricGrimReaper.Solution
 import TruthCore.Results.Causality.ActualEuclidean.Solution
+import TruthCore.Causality.FrameAdapters
 
 namespace TruthCore.Results.Causality.MetricBeginningArrival
 open TruthCore.Causality.MetricBeginningArrival
@@ -140,6 +141,37 @@ theorem externalOpportunityOfMemberwiseGiving {W B T S : Type} [Preorder T]
     (hNoSelf : NoSelfGivingOnAccessible f w)
     (hTemporal : ContingentConcretaTemporallyPresent f Concrete w) :
     ConcurrentFiniteDurationCausalOpportunity f Concrete k w := by
+  sorry
+
+
+theorem nonexternalOpportunityOfExternal {W B T S : Type} [Preorder T]
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (k : TimeClock T) (w : W)
+    (hOpportunity : ConcurrentFiniteDurationCausalOpportunity f Concrete k w) :
+    NonexternalConcurrentGivingOpportunity f Concrete k w := by
+  sorry
+
+
+theorem nonexternalIffExternalOpportunity {W B T S : Type} [Preorder T]
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (k : TimeClock T) (w : W)
+    (hNoSelf : NoSelfGivingOnAccessible f w)
+    (hTemporal : ContingentConcretaTemporallyPresent f Concrete w) :
+    NonexternalConcurrentGivingOpportunity f Concrete k w ↔
+      ConcurrentFiniteDurationCausalOpportunity f Concrete k w := by
+  sorry
+
+
+theorem concurrentTotalityGiving_iff_sustains {W B T S : Type}
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (v : W) (c : B) :
+    ConcurrentTotalityGivingAt f Concrete v c ↔
+      (∃ x t, Concrete x ∧ ContingentAt f.history.ontic v x ∧
+        f.history.IsAt v x t ∧ f.GivesAt v c x t) ∧
+      ∀ x, Concrete x → ContingentAt f.history.ontic v x →
+        (∃ t, f.history.IsAt v x t) →
+          TruthCore.Causality.SustainingCausation.SustainsBeing f.history
+            (TruthCore.Causality.FrameAdapters.giving f) v c x := by
   sorry
 
 

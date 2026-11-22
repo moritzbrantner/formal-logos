@@ -461,11 +461,11 @@ exists in both histories.
 **Cumulative consequence.** The registered root route remains:
 fixed-d Reaper assumptions → `4365c3c5`, plus possible population →
 BEGINS_2 `951a2235`, plus B2, the frame conditions →
-`b19ffd92` → existing further God/attribute consumers. No new
-argument/inference IDs or frontier closure are claimed here: the
-stronger causal result is a verified-by-target Lean companion under a
-distinct OPEN interpretive premise, not a graph substitution for
-`256b5bab`. This scope does not infer first temporal moments,
+`b19ffd92` → existing further God/attribute consumers. The causal
+reading is registered as additional arguments (`7649d8aa`,
+`f468780f`, `abbbce81`; see the two paragraphs below), alongside the
+existing route through `256b5bab`, which they do not replace. No frontier
+closure is claimed: every new premise is OPEN. This scope does not infer first temporal moments,
 physical infinity's impossibility, a first per-se source, actual
 sustaining causation at w, divine simplicity or uniqueness. The
 positive warrant question now has a precise test: justify a jointly
@@ -509,11 +509,25 @@ effect-domain and the memberwise causal law would entail `GivesAt v c c t`,
 contradicting no-self-giving. The source is then necessary at v under the
 *existing* rigid-candidate modal semantics. Therefore
 `externalOpportunityOfMemberwiseGiving` derives the exteriority clause
-rather than including it in the possibility premise. This is a substantive
+from the universal scope of the giving clause over a possibly contingent
+source, rather than stating it in the possibility premise. The commitment to
+a possibly necessary concretum is relocated, not removed: the converse holds
+by dropping the exteriority conjunct (`nonexternalOpportunityOfExternal`), so
+under no-self-giving and temporal presence the two premises are equivalent
+(`nonexternalIffExternalOpportunity`). A rival who denies that a necessary
+concretum is possible, and keeps both principles, rejects the nonexternal
+premise exactly as the external one. What the reformulation gains is an
+explicit statement of that rival's cost: no concrete thing could give being to
+every contingent concretum of a possible BEGINS_2 history. `GivesAt` is read
+strictly (definition `158301bc`), and the universal clause is CAUSE_OF_BEING_2
+(`SustainsBeing`, disambiguation `88a8fba7`) restricted to temporally present
+contingent concreta (`concurrentTotalityGiving_iff_sustains`). This is a substantive
 conditional **support option for B2**, not proof that such a source can be
 causally realized or that giving to every individual is equivalent to
 causing their totality holistically. A timeless *contingent* supplier is
-excluded by the temporal-presence premise, not by logic alone.
+excluded by the temporal-presence premise, not by logic alone: that premise
+denies contingent atemporal concreta, while necessary concreta may be
+timeless.
 The original memberwise B2 and all downstream God/root consumers stay
 available. Corpus binding, model challenge and CI pending.
 
