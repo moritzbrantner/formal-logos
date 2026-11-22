@@ -50,6 +50,28 @@ definitions = ["a6a2ca46-5f70-4db0-8359-9ae32b0eb583", "c0d65b45-33bb-47a2-b16b-
 disambiguations = ["7507d645-874d-5434-add8-2f49c2801d36"]
 
 
+[[statement]]
+id = "2a4d99d8-cb0c-429a-89e9-2a3b02f0526e"
+label = "Possibly a memberwise concurrent giver of contingent being without assumed externality"
+lean = "NonexternalConcurrentGivingOpportunity"
+paraphrase = "OPEN analyst premise: if a BEGINS_2 populated history is possible, an accessible BEGINS_2 history contains an existing concrete c actually giving the being of each of its contingent concrete members at each moment of presence, with a nonvacuous exercise. The source is NOT stipulated external to the inventory or modally necessary. This memberwise universal-giving interpretation is stronger than a cause of the totality taken holistically."
+definitions = ["d0757d5d-5f68-4e2e-9bd8-4ed8f57dc5ee", "c0d65b45-33bb-47a2-b16b-48a493a762cb", "028c1066-481d-4eb4-a96e-01ad62f85a2c"]
+
+[[statement]]
+id = "0e473dc4-77c5-4d5d-899f-93e29907b198"
+label = "No direct self-causation in strict concurrent giving of being"
+lean = "NoSelfGivingOnAccessible"
+paraphrase = "OPEN primitive strict being-causation principle: in all histories accessible from the selected world, a bearer never directly gives its own being to itself via the shared CausalityFrame.GivesAt relation. No claim that a different relation, physical feedback, or self-maintenance is prohibited."
+definitions = ["9e1d45f4-7cee-44b5-a911-803c95b3fa07", "c0d65b45-33bb-47a2-b16b-48a493a762cb"]
+
+[[statement]]
+id = "d3184c66-0392-4b0a-bbb7-3ad9a805d629"
+label = "Every accessible contingent concrete existent occurs at some time in its history"
+lean = "ContingentConcretaTemporallyPresent"
+paraphrase = "OPEN bridge between world-relative existence and temporal presence: every contingent concrete individual existing in an accessible history has at least one moment at which history.IsAt holds. It does not require presence at now or a first moment; it permits timeless necessary beings and treats contingent yet timeless candidates as outside its scope."
+definitions = ["67a624ba-11f6-4535-8154-8295b2d62765", "6e811e85-b983-5988-b20a-f4f3ee83c50e", "97f37f5c-7f82-5077-9bb9-6cfc8673631d"]
+
+
 [[argument]]
 id = "Possible finite-duration beginning from metrically finite populated pasts"
 theorem = "possiblyBeginsFiniteDurationOfMetricallyFinite"
@@ -147,3 +169,15 @@ object_kind = "statement"
 object_id = "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
 verification_result_id = "e43f423e-919f-4c3b-a6b8-8cd87a99e7e7"
 note = "Same-rigid-witness logical weakening only: the stronger possibility-of-exercise claim entails the original necessary-concrete node for any grounding profile. No strictness or metaphysical warrant is established."
+
+
+[[argument]]
+id = "abbbce81-c3f0-4754-96f5-e0f304c5334d"
+label = "Derive external causal opportunity from a nonexternal giver and no self-causation"
+theorem = "externalOpportunityOfMemberwiseGiving"
+premises = ["2a4d99d8-cb0c-429a-89e9-2a3b02f0526e", "0e473dc4-77c5-4d5d-899f-93e29907b198", "d3184c66-0392-4b0a-bbb7-3ad9a805d629"]
+conclusion = "e4a3b917-7c61-49e3-a8fa-dc02155bbf80"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Apply a temporal occurrence of a hypothetically contingent universal giver to the memberwise GivesAt law; self-giving contradicts strict irreflexivity, so the same existing giver is noncontingent and external"
+meaning = "A stronger non-transcription conditional support option for the previously open causal B2. A possibly existing concrete memberwise source is NOT assumed external. If every contingent concrete existing source occurs at some moment and strict giving of being is irreflexive, the source cannot be contingent (otherwise the all-member causal law forces it to give its own being at its moment). By modal contingency's definition, a concrete existent that cannot be contingent is necessary at that possible history and distinct from all contingent concreta there. Therefore the original memberwise B2 with externality follows. The memberwise and temporally instantiated premises are explicit and remain OPEN; the theorem does not establish the metaphysical possibility of the universal giver, actual-world causal exercise, or a holistic totality cause."
+comparator_theorems = ["necessaryOfUniversalMemberwiseGiving"]
