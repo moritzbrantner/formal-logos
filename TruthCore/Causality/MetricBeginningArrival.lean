@@ -180,6 +180,47 @@ def NecessaryConcreteWithPossibleConcurrentGivingAt {W B T S : Type}
     ∃ v, f.history.ontic.frame.access w v ∧
       ConcurrentTotalityGivingAt f Concrete v c
 
+
+/-- A **weaker** possible causal opportunity: some accessible populated
+BEGINS_2 history can contain an existing concrete source that actually gives
+being to every contingent concrete member at every moment of its presence.
+Crucially the source is NOT stipulated external, necessary or uncaused.
+Those properties are candidates for derivation using non-self-causation and
+temporal presence of contingent concrete sources. -/
+def NonexternalConcurrentGivingOpportunity {W B T S : Type} [Preorder T]
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (k : TimeClock T) (w : W) : Prop :=
+  PossiblyBeginsAt
+      (finiteDurationScenario f.history Concrete k (ConcurrentTotalityGivingAt f Concrete)) w →
+    ∃ v, f.history.ontic.frame.access w v ∧
+      ContingencyBeginsAt
+        (finiteDurationScenario f.history Concrete k
+          (ConcurrentTotalityGivingAt f Concrete)) v ∧
+      ∃ c, Concrete c ∧ f.history.ontic.ExistsAt v c ∧
+        ConcurrentTotalityGivingAt f Concrete v c
+
+/-- A primitive strict esse-causation rule on the accessible histories:
+no existing or nonexistent being directly exercises GivesAt on itself.
+This does not ban reflexive noncausal dependence, causal loops with distinct
+bearers or temporal self-maintenance. It is independently evaluable. -/
+def NoSelfGivingOnAccessible {W B T S : Type}
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S) (w : W) : Prop :=
+  ∀ v, f.history.ontic.frame.access w v →
+    ∀ c t, ¬ f.GivesAt v c c t
+
+/-- World-relative temporal presence for contingent concreta in accessible
+histories. This is NOT CoherentAtNow: a contingent individual need only be
+present at SOME moment of the complete history, not necessarily at now.
+It is needed when the purported source is contingent and otherwise could be
+an atemporal, existing candidate outside the domain of the all-present-times
+GivesAt rule. Necessary sources can remain timeless. -/
+def ContingentConcretaTemporallyPresent {W B T S : Type}
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (w : W) : Prop :=
+  ∀ v, f.history.ontic.frame.access w v →
+    ∀ x, Concrete x → ContingentAt f.history.ontic v x →
+      ∃ t, f.history.IsAt v x t
+
 namespace Control
 
 open TruthCore.Causality.MetricGrimReaper.Control (PosReal posClock intClock openBelow)

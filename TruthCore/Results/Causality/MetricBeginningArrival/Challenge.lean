@@ -121,4 +121,26 @@ theorem mixedPossibleGivingWithoutActualGiving :
   sorry
 
 
+theorem necessaryOfUniversalMemberwiseGiving {W B T S : Type}
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (w v : W) (c : B)
+    (hwv : f.history.ontic.frame.access w v)
+    (hc : Concrete c) (he : f.history.ontic.ExistsAt v c)
+    (hGiving : ConcurrentTotalityGivingAt f Concrete v c)
+    (hNoSelf : NoSelfGivingOnAccessible f w)
+    (hTemporal : ContingentConcretaTemporallyPresent f Concrete w) :
+    NecessaryAt f.history.ontic v c := by
+  sorry
+
+
+theorem externalOpportunityOfMemberwiseGiving {W B T S : Type} [Preorder T]
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (k : TimeClock T) (w : W)
+    (hOpportunity : NonexternalConcurrentGivingOpportunity f Concrete k w)
+    (hNoSelf : NoSelfGivingOnAccessible f w)
+    (hTemporal : ContingentConcretaTemporallyPresent f Concrete w) :
+    ConcurrentFiniteDurationCausalOpportunity f Concrete k w := by
+  sorry
+
+
 end TruthCore.Results.Causality.MetricBeginningArrival

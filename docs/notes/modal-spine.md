@@ -491,6 +491,32 @@ once the existing stage-one node is available; no new metaphysical defeat
 or independent route is claimed by composing it. Proof and graph checks,
 review and current-branch reconciliation remain pending.
 
+
+**Proposed weaker causal-opportunity derivation (2026-11-22, new test).**
+`NonexternalConcurrentGivingOpportunity` drops the decisive "outside every
+contingent concretum" requirement from B2: a concrete *candidate*, which may
+initially be contingent, is only required to actually give being
+(`CausalityFrame.GivesAt`) to every contingent concrete individual at every
+moment of its presence in one possible populated BEGINS_2 history. Two
+distinct, independently evaluable principles suffice for deriving the
+strong external B2: `NoSelfGivingOnAccessible` (strict giving of being does
+not reflexively cause a bearer to exist) and
+`ContingentConcretaTemporallyPresent` (if a concrete candidate exists
+contingently in the history, it occurs at some time there).
+`necessaryOfUniversalMemberwiseGiving` proves that if the source were
+contingent, its temporal presence would make it a member of the supplied
+effect-domain and the memberwise causal law would entail `GivesAt v c c t`,
+contradicting no-self-giving. The source is then necessary at v under the
+*existing* rigid-candidate modal semantics. Therefore
+`externalOpportunityOfMemberwiseGiving` derives the exteriority clause
+rather than including it in the possibility premise. This is a substantive
+conditional **support option for B2**, not proof that such a source can be
+causally realized or that giving to every individual is equivalent to
+causing their totality holistically. A timeless *contingent* supplier is
+excluded by the temporal-presence premise, not by logic alone.
+The original memberwise B2 and all downstream God/root consumers stay
+available. Corpus binding, model challenge and CI pending.
+
 **What "begins" means in B1** (spec
 `specs/modal-spine-metric-beginning-arrival.toml`, attempt
 [`9d141c6c`](../../corpus/attempts/9d141c6c-7979-4d8b-a1b4-7b35ebc9fb21.json)).

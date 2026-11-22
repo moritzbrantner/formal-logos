@@ -248,6 +248,53 @@ theorem inertGivingSeparatesOpportunity :
     obtain ⟨x, t, _, _, _, hg⟩ := hGiving.1
     exact hg
 
+
+/-- A source that actually gives being to EVERY contingent concrete member of
+an accessible history cannot itself be contingent, if contingent concreta
+occur at some time and strict giving-of-being is irreflexive. No exteriority
+or necessary-existence condition is assumed of c in this theorem. -/
+theorem necessaryOfUniversalMemberwiseGiving {W B T S : Type}
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (w v : W) (c : B)
+    (hwv : f.history.ontic.frame.access w v)
+    (hc : Concrete c) (he : f.history.ontic.ExistsAt v c)
+    (hGiving : ConcurrentTotalityGivingAt f Concrete v c)
+    (hNoSelf : NoSelfGivingOnAccessible f w)
+    (hTemporal : ContingentConcretaTemporallyPresent f Concrete w) :
+    NecessaryAt f.history.ontic v c := by
+  classical
+  intro u hvu
+  by_contra hAbsent
+  have hCont : ContingentAt f.history.ontic v c :=
+    ⟨he, ⟨u, hvu, hAbsent⟩⟩
+  obtain ⟨t, hct⟩ := hTemporal v hwv c hc hCont
+  have hSelf : f.GivesAt v c c t := hGiving.2 c t hc hCont hct
+  exact hNoSelf v hwv c t hSelf
+
+/-- A non-externality-stipulating causal opportunity, no-self-giving, and
+temporal presence of contingent concreta yield the STRONGER registered B2
+that explicitly demands an external source. Outside-ness is a derived fact,
+not the antecedent's hidden necessary-being possibility. The bridge is
+conditional on memberwise concurrent esse-giving, not a holistic or merely
+temporally prior notion of causation. -/
+theorem externalOpportunityOfMemberwiseGiving {W B T S : Type} [Preorder T]
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (k : TimeClock T) (w : W)
+    (hOpportunity : NonexternalConcurrentGivingOpportunity f Concrete k w)
+    (hNoSelf : NoSelfGivingOnAccessible f w)
+    (hTemporal : ContingentConcretaTemporallyPresent f Concrete w) :
+    ConcurrentFiniteDurationCausalOpportunity f Concrete k w := by
+  intro hBegins
+  obtain ⟨v, hv, hB, c, hc, he, hGiving⟩ := hOpportunity hBegins
+  have hn : NecessaryAt f.history.ontic v c :=
+    necessaryOfUniversalMemberwiseGiving
+      f Concrete w v c hv hc he hGiving hNoSelf hTemporal
+  refine ⟨v, hv, hB, c, hc, he, hGiving, ?_⟩
+  intro x _ hCont hEq
+  subst x
+  obtain ⟨_, u, hu, hAbsent⟩ := hCont
+  exact hAbsent (hn u hu)
+
 /-- The original positive openBelowSource history can also support the
 stronger concurrent reading when its causal field is genuinely populated. -/
 theorem functioningGivingAtTrue :
