@@ -342,7 +342,10 @@ an earlier run settled, and more than eight solver runs per goal.
 `retry` runs the exact goal through the same binding as `truth discover`: a
 scratch file of `scripts/Discover.lean` and `scripts/DiscoverRepair.lean`, one
 `#discover` or `#discover_countermodel` command per goal, under the heavy-job
-lock, with the corpus's sense tags. Retrieval is bypassed, not changed. Each
+lock, with the corpus's sense tags in the engine's order (`senseOf` takes a
+binder's first tag, so a binder with both a whole-binder and a
+partial-application tag is identified or not by that order; the repair flags
+such binders). Retrieval is bypassed, not changed. Each
 run appends an entry to the attempt trace (`repair-trace.json` beside the
 report, or `--trace`): the solver key (a hash of the command, revision,
 declarations, budget, domain policy and tags), the exact goal and premise ids,
@@ -376,8 +379,9 @@ Engine changes this layer does not make (follow-ups after #1845): an exact
 `--premise` bundle for `truth discover`, so that its own filters and
 certification run on a repair goal; a reported distinction between a
 heartbeat timeout and a saturated search; countermodels for unresolved goals
-in the engine itself; and the known filter treating excluded middle as
-available logic.
+in the engine itself; the known filter treating excluded middle as available
+logic; and a binding rule that does not depend on tag order when a binder
+carries both a whole-binder and a partial-application tag.
 
 ## Boundaries
 

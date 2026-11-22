@@ -779,8 +779,14 @@ def classify(finding: dict, corpus: Corpus, options: dict, rows: list[dict],
         if out.get("status") == "unresolved" and at.get("goal", {}).get("command") == "discover":
             split = fresh_binders(at.get("binders", []))
             if split:
-                mark("c", "supported", f"{tag}: binders left separate (no whole-binder tag or "
-                                       f"same-module name joins them): {', '.join(split[:4])}")
+                mark("c", "supported", f"{tag}: binders left separate (no shared whole-binder "
+                                       "tag or same-module name with a definitionally equal type "
+                                       f"joined them): {', '.join(split[:4])}")
+            elif at["action"] == "known-bundle" and at.get("binders"):
+                mark("a", "supported", f"{tag}: the premises of a verified argument, every binder "
+                                       "identified, did not close: a proof-search gap (the verified "
+                                       "proof may use reasoning Duper does not search, such as "
+                                       "induction or a well-founded recursion)")
         if out.get("status") == "unresolved" and at["action"] == "strict-domains":
             mark("c", "supported", f"{tag}: without the by-name carrier fallback the goal does not close")
         if out.get("status") == "unresolved" and at["action"] == "budget":
