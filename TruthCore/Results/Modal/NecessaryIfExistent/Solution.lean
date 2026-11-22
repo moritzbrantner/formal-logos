@@ -118,7 +118,7 @@ theorem possible_maximal_profile_same_bearer {W B : Type} (F : Frame W)
     (hs : FrameSatisfies .S5 F)
     (hPoss : PossibleMaximalProfile F existsAt excellent w) :
     ∃ x, excellent w x ∧ MaximalProfile F existsAt excellent x w := by
-  obtain ⟨v, hwv, x, _hEx, hAcross⟩ := hPoss
+  obtain ⟨v, hwv, x, _hEx, _hExcellent, hAcross⟩ := hPoss
   have hSym : Symmetric F :=
     reflexive_euclidean_implies_symmetric F hs.1 hs.2
   have hvw : F.access v w := hSym w v hwv
