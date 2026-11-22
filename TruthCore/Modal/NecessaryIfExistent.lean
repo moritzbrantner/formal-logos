@@ -93,7 +93,7 @@ of Plantinga, or evidence that the profile is jointly realizable. The same
 individual x occurs inside every accessible-world conjunct. -/
 def MaximalProfile {B : Type v} (F : Frame W)
     (existsAt excellent : W → B → Prop) (x : B) (w : W) : Prop :=
-  existsAt w x ∧
+  existsAt w x ∧ excellent w x ∧
     ∀ next, F.access w next → existsAt next x ∧ excellent next x
 
 /-- An accessible world instantiates the complete fixed profile for one bearer.
