@@ -1,6 +1,6 @@
 /-
 Binder export for the agent-guided discovery recipe (#1832, docs/discover.md,
-"Agent-guided blueprint pilot").
+"Agent-guided blueprint recipe").
 
   lake env lean --run scripts/DiscoverBinders.lean <ROOT-MODULE> <declarations.txt>
 

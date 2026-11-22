@@ -217,10 +217,17 @@ agent's proposal stays untrusted until Lean checks it.
 3. **Oracle (optional).** To ask whether an identification is the only
    obstacle, run the engine once with a temporary overlay of whole-binder tags
    (`python3 scripts/discover_blueprint.py oracle OVERLAY.json -- <run-discovery
-   arguments>`). The overlay is removed afterwards and saved beside the report.
-   Every finding of such a run is conditional on the overlay: an identification
-   becomes admissible only through a reviewed sense tag or an explicit bridge
-   premise, never through the overlay.
+   arguments>`). The overlay is written only into a disposable detached `git
+   worktree` at HEAD (under `--scratch`, default the repository's parent
+   directory), which carries the uncommitted files, shares the built `.lake`
+   by symlink (unchanged sources, so Lake only replays) and is removed
+   afterwards; the repository's own corpus is never edited. The overlay is
+   saved beside the report. Every finding of such a run is conditional on the
+   overlay: an identification becomes admissible only through a reviewed sense
+   tag or an explicit bridge premise, never through the overlay. To check an
+   identification by hand instead, state the target and the known premises
+   over one signature, as in
+   `scripts/testdata/discover-blueprint/IdentificationOracle.lean`.
 4. **Blueprint.** For a target without an admissible route, write a small
    AND/OR graph of candidate intermediate lemmas over existing statement IDs,
    marking each node as a verified theorem, a candidate lemma or OPEN. Check

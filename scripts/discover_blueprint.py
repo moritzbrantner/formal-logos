@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Agent-guided discovery recipe helpers (#1832; docs/discover.md, "Agent-guided
-blueprint pilot").
+blueprint recipe").
 
 Two subcommands, both advisory. Neither writes a corpus record or proves anything.
 
@@ -33,14 +33,25 @@ diagnose  Read a `truth --json discover` report and the corpus. For each chosen
             found          the search closed the goal (see the report).
 
 oracle    Run `scripts/run-discovery.sh` with a TEMPORARY overlay of whole-binder
-          sense tags (a JSON list of {"sense", "declaration", "parameter"}),
-          restoring the disambiguation records afterwards, even on failure.
+          sense tags (a JSON list of {"sense", "declaration", "parameter"}) in
+          a temporary detached `git worktree` of the repository, never in the
+          repository itself. The worktree is created at HEAD under `--scratch`
+          (default: the repository's parent directory), receives the
+          repository's uncommitted and untracked files, shares the built
+          `.lake` through a symlink (the Lean sources are unchanged, so Lake
+          only replays) and uses the repository's `target/release/truth`. The
+          overlay is written into the worktree's corpus only; the worktree is
+          removed afterwards, on failure and on SIGTERM/SIGHUP too (a SIGKILL
+          can leave it behind: `git worktree prune` and the scratch directory
+          then remove it, and the repository's corpus is untouched either way).
           `sense` is an existing sense id or label, or a new label prefixed
-          `TEMP_` (written into a temporary disambiguation record). Every
-          finding of such a run is conditional on the overlay's
-          identifications: they are the obligations a sense record or a bridge
-          premise must discharge before any finding can be recorded. The run
-          directory keeps `overlay.json` beside the report.
+          `TEMP_` (written into a temporary disambiguation record of the
+          worktree). Reports go to `$TRUTH_DISCOVER_REPORT_DIR`, default the
+          repository's `.cache/discover`; each run directory keeps
+          `overlay.json` beside the report. Every finding of such a run is
+          conditional on the overlay's identifications: they are the
+          obligations a reviewed sense tag or a bridge premise must discharge
+          before any finding can be recorded.
 """
 
 from __future__ import annotations
@@ -56,7 +67,6 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-TEMP_PREFIX = "zz-temporary-discover-oracle-"
 
 
 def load_records(root: Path, kind: str) -> dict[str, dict]:
@@ -214,86 +224,109 @@ def diagnose(args: argparse.Namespace) -> int:
     return 0
 
 
+def git(root: Path, *argv: str, check: bool = True) -> str:
+    return subprocess.run(["git", "-C", str(root), *argv], check=check,
+                          capture_output=True, text=True).stdout
+
+
+def apply_overlay(directory: Path, overlay: list[dict]) -> None:
+    """Write the overlay into the disambiguation records of `directory`."""
+    by_key: dict[str, tuple[Path, dict]] = {}
+    records: dict[Path, dict] = {}
+    for path in sorted(directory.glob("*.json")):
+        record = json.loads(path.read_text())
+        records[path] = record
+        for sense in record.get("senses", []):
+            by_key[sense["id"]] = (path, sense)
+            by_key[sense.get("label", "")] = (path, sense)
+    changed: set[Path] = set()
+    temp_senses: dict[str, dict] = {}
+    for entry in overlay:
+        key = entry["sense"]
+        tag = {"declaration": entry["declaration"], "parameter": entry["parameter"]}
+        if key.startswith("TEMP_"):
+            sense = temp_senses.setdefault(key, {"id": f"temporary-{key.lower()}",
+                                                 "label": key, "lean_parameters": []})
+            sense["lean_parameters"].append(tag)
+            continue
+        if key not in by_key:
+            raise SystemExit(f"unknown sense {key}")
+        path, sense = by_key[key]
+        params = sense.setdefault("lean_parameters", [])
+        if tag not in params:
+            params.append(tag)
+            changed.add(path)
+    for path in changed:
+        path.write_text(json.dumps(records[path], indent=2, ensure_ascii=False) + "\n")
+    # One temporary record per temporary sense: each is its own term, so two
+    # temporary senses never count as two senses of one term.
+    for label, sense in temp_senses.items():
+        record = {"id": f"temporary-discover-oracle-{label.lower()}",
+                  "label": f"Temporary discover oracle {label}",
+                  "term": f"temporary {label.lower()}",
+                  "term_label": f"temporary {label.lower()}",
+                  "resolution": "Temporary oracle overlay of scripts/discover_blueprint.py "
+                                "in a disposable worktree. Not a corpus record.",
+                  "sense_definition_ids": [], "senses": [sense]}
+        (directory / f"zz-temporary-discover-oracle-{label.lower()}.json").write_text(
+            json.dumps(record, indent=2) + "\n")
+
+
 def oracle(args: argparse.Namespace) -> int:
-    root = Path(args.root)
+    root = Path(args.root).resolve()
     overlay = json.loads(Path(args.tags).read_text())
-    directory = root / "corpus" / "disambiguations"
-    leftovers = sorted(directory.glob(TEMP_PREFIX + "*"))
-    if leftovers:
-        sys.exit(f"{leftovers[0]} exists: a previous oracle run was interrupted; remove it first")
-    written: list[Path] = []
-    # A terminated run must still restore the records: turn SIGTERM/SIGHUP
-    # into an exception so that `finally` runs.
+    scratch = Path(args.scratch).resolve() if args.scratch else root.parent
+    work = Path(tempfile.mkdtemp(prefix="discover-oracle-", dir=scratch))
+    tree = work / "tree"
+    child = None
+
     def stop(signum, _frame):
         raise SystemExit(128 + signum)
+
     for sig in (signal.SIGTERM, signal.SIGHUP):
         signal.signal(sig, stop)
-    backup = Path(tempfile.mkdtemp(prefix="discover-oracle-"))
-    originals: dict[Path, bytes] = {}
     try:
-        by_label = {}
-        records = {}
-        for path in sorted(directory.glob("*.json")):
-            record = json.loads(path.read_text())
-            records[path] = record
-            for sense in record.get("senses", []):
-                by_label[sense["id"]] = (path, sense)
-                by_label[sense.get("label", "")] = (path, sense)
-        temp_senses: dict[str, dict] = {}
-        for entry in overlay:
-            sense_key = entry["sense"]
-            tag = {"declaration": entry["declaration"], "parameter": entry["parameter"]}
-            if sense_key.startswith("TEMP_"):
-                sense = temp_senses.setdefault(sense_key, {
-                    "id": f"temporary-{sense_key.lower()}", "label": sense_key,
-                    "lean_parameters": []})
-                sense["lean_parameters"].append(tag)
+        git(root, "worktree", "add", "--detach", "--quiet", str(tree), "HEAD")
+        # Carry the repository's uncommitted state into the worktree.
+        listing = git(root, "ls-files", "-z", "--modified", "--others", "--exclude-standard")
+        deleted = set(git(root, "ls-files", "-z", "--deleted").split("\0"))
+        for name in filter(None, listing.split("\0")):
+            target = tree / name
+            if name in deleted:
+                target.unlink(missing_ok=True)
                 continue
-            if sense_key not in by_label:
-                sys.exit(f"unknown sense {sense_key}")
-            path, sense = by_label[sense_key]
-            if path not in originals:
-                originals[path] = path.read_bytes()
-                shutil.copy(path, backup / path.name)
-            params = sense.setdefault("lean_parameters", [])
-            if tag not in params:
-                params.append(tag)
-        for path in originals:
-            path.write_text(json.dumps(records[path], indent=2, ensure_ascii=False) + "\n")
-        # One temporary record per temporary sense: each is its own term, so
-        # two temporary senses never count as two senses of one term.
-        for label, sense in temp_senses.items():
-            path = directory / f"{TEMP_PREFIX}{label.lower()}.json"
-            record = {"id": f"temporary-discover-oracle-{label.lower()}",
-                      "label": f"Temporary discover oracle {label}",
-                      "term": f"temporary {label.lower()}",
-                      "term_label": f"temporary {label.lower()}",
-                      "resolution": "Temporary oracle overlay of scripts/discover_blueprint.py; "
-                                    "removed after the run. Not a corpus record.",
-                      "sense_definition_ids": [], "senses": [sense]}
-            path.write_text(json.dumps(record, indent=2) + "\n")
-            written.append(path)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(root / name, target)
+        if (root / ".lake").exists() and not (tree / ".lake").exists():
+            (tree / ".lake").symlink_to(root / ".lake", target_is_directory=True)
+        apply_overlay(tree / "corpus" / "disambiguations", overlay)
         env = dict(os.environ)
-        report_dir = Path(env.get("TRUTH_DISCOVER_REPORT_DIR", root / ".cache" / "discover"))
+        env.setdefault("TRUTH_DISCOVER_BIN", str(root / "target" / "release" / "truth"))
+        report_dir = Path(env.setdefault("TRUTH_DISCOVER_REPORT_DIR",
+                                         str(root / ".cache" / "discover")))
         before = set(report_dir.glob("*")) if report_dir.exists() else set()
-        child = subprocess.Popen(["bash", str(root / "scripts" / "run-discovery.sh"), *args.rest],
-                                 cwd=root, env=env, start_new_session=True)
-        try:
-            code = child.wait()
-        finally:
-            if child.poll() is None:
-                os.killpg(child.pid, signal.SIGTERM)
-                child.wait()
+        child = subprocess.Popen(["bash", str(tree / "scripts" / "run-discovery.sh"), *args.rest],
+                                 cwd=tree, env=env, start_new_session=True)
+        code = child.wait()
         after = set(report_dir.glob("*")) if report_dir.exists() else set()
         for run_dir in after - before:
             (run_dir / "overlay.json").write_text(json.dumps(overlay, indent=2) + "\n")
         return code
     finally:
-        for path, data in originals.items():
-            path.write_bytes(data)
-        for path in written:
-            path.unlink(missing_ok=True)
-        shutil.rmtree(backup, ignore_errors=True)
+        if child is not None and child.poll() is None:
+            try:
+                os.killpg(child.pid, signal.SIGTERM)
+            except ProcessLookupError:
+                pass
+            child.wait()
+        # Drop the shared-build symlink first, so that nothing below can
+        # reach the repository's own `.lake`.
+        lake = tree / ".lake"
+        if lake.is_symlink():
+            lake.unlink()
+        git(root, "worktree", "remove", "--force", str(tree), check=False)
+        shutil.rmtree(work, ignore_errors=True)
+        git(root, "worktree", "prune", check=False)
 
 
 def main() -> int:
@@ -307,6 +340,8 @@ def main() -> int:
     d.add_argument("--json", action="store_true")
     o = sub.add_parser("oracle")
     o.add_argument("tags", help="JSON list of {sense, declaration, parameter}")
+    o.add_argument("--scratch", help="parent directory of the temporary worktree "
+                                     "(default: the repository's parent directory)")
     o.add_argument("rest", nargs=argparse.REMAINDER, help="-- then run-discovery.sh arguments")
     args = parser.parse_args()
     if args.command == "oracle":

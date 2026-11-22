@@ -3,9 +3,12 @@
 from __future__ import annotations
 
 import json
+import os
+import signal
 import subprocess
 import sys
 import tempfile
+import time
 import unittest
 from pathlib import Path
 
@@ -109,31 +112,99 @@ class DiagnoseTests(unittest.TestCase):
         self.assertEqual(rows["t"]["verdict"], "found")
 
 
+STUB = """#!/usr/bin/env bash
+# Stub runner: records what the oracle's worktree holds, then acts per MODE.
+cat corpus/disambiguations/*.json > "$SEEN"
+cat notes.txt >> "$SEEN" 2>/dev/null || true
+pwd >> "$SEEN"
+case "$MODE" in
+  fail) exit 3 ;;
+  sleep) touch "$SEEN.started"; sleep 60 ;;
+esac
+mkdir -p "$TRUTH_DISCOVER_REPORT_DIR/run1"
+"""
+
+
 class OracleTests(unittest.TestCase):
-    def test_overlay_is_restored_after_the_run(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp)
-            (root / "scripts").mkdir()
-            # A stub runner that records what it saw.
-            (root / "scripts" / "run-discovery.sh").write_text(
-                "#!/usr/bin/env bash\ncat corpus/disambiguations/*.json > seen.txt\n"
-                "mkdir -p \"$TRUTH_DISCOVER_REPORT_DIR/run1\"\n")
-            original = {"id": "d", "senses": [{"id": "s1", "label": "IN_ACT_4",
-                                                "lean_parameters": [{"declaration": "A", "parameter": "x"}]}]}
-            write(root / "corpus" / "disambiguations" / "d.json", original)
-            before = (root / "corpus" / "disambiguations" / "d.json").read_bytes()
-            overlay = root / "overlay.json"
-            write(overlay, [{"sense": "IN_ACT_4", "declaration": "B", "parameter": "y"},
-                            {"sense": "TEMP_RESPECT", "declaration": "B", "parameter": "R"}])
-            env = {"TRUTH_DISCOVER_REPORT_DIR": str(root / "reports"), "PATH": "/usr/bin:/bin"}
-            subprocess.run([sys.executable, str(TOOL), "--root", str(root), "oracle", str(overlay), "--"],
-                           check=True, env=env)
-            seen = (root / "seen.txt").read_text()
-            self.assertIn('"parameter": "y"', seen)
-            self.assertIn("TEMP_RESPECT", seen)
-            self.assertEqual((root / "corpus" / "disambiguations" / "d.json").read_bytes(), before)
-            self.assertEqual(sorted(p.name for p in (root / "corpus" / "disambiguations").iterdir()), ["d.json"])
-            self.assertTrue((root / "reports" / "run1" / "overlay.json").is_file())
+    """The oracle never touches the repository's corpus and always removes its
+    temporary worktree."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        base = Path(self.tmp.name)
+        self.root = base / "repo"
+        self.scratch = base / "scratch"
+        self.scratch.mkdir()
+        (self.root / "scripts").mkdir(parents=True)
+        (self.root / "scripts" / "run-discovery.sh").write_text(STUB)
+        write(self.root / "corpus" / "disambiguations" / "d.json",
+              {"id": "d", "senses": [{"id": "s1", "label": "IN_ACT_4",
+                                      "lean_parameters": [{"declaration": "A", "parameter": "x"}]}]})
+        for argv in (["init", "-q"], ["add", "-A"],
+                     ["-c", "user.name=t", "-c", "user.email=t@t", "commit", "-qm", "fixture"]):
+            subprocess.run(["git", "-C", str(self.root), *argv], check=True)
+        # An uncommitted change the worktree must carry.
+        (self.root / "notes.txt").write_text("uncommitted-marker\n")
+        self.before = self.snapshot()
+        self.seen = base / "seen.txt"
+        self.overlay = base / "overlay.json"
+        write(self.overlay, [{"sense": "IN_ACT_4", "declaration": "B", "parameter": "y"},
+                             {"sense": "TEMP_RESPECT", "declaration": "B", "parameter": "R"}])
+        self.env = {"PATH": os.environ["PATH"], "SEEN": str(self.seen),
+                    "TRUTH_DISCOVER_REPORT_DIR": str(base / "reports")}
+
+    def snapshot(self) -> dict[str, bytes]:
+        return {str(p.relative_to(self.root)): p.read_bytes()
+                for p in sorted(self.root.rglob("*")) if p.is_file() and ".git" not in p.parts}
+
+    def command(self, overlay: Path | None = None) -> list[str]:
+        return [sys.executable, str(TOOL), "--root", str(self.root), "oracle",
+                str(overlay or self.overlay), "--scratch", str(self.scratch), "--"]
+
+    def assert_clean(self):
+        self.assertEqual(self.snapshot(), self.before)
+        self.assertEqual(list(self.scratch.iterdir()), [])
+        listing = subprocess.run(["git", "-C", str(self.root), "worktree", "list", "--porcelain"],
+                                 check=True, capture_output=True, text=True).stdout
+        self.assertEqual(listing.count("worktree "), 1)
+
+    def test_overlay_is_applied_only_in_the_worktree(self):
+        subprocess.run(self.command(), check=True, env={**self.env, "MODE": "ok"})
+        seen = self.seen.read_text()
+        self.assertIn('"parameter": "y"', seen)
+        self.assertIn("TEMP_RESPECT", seen)
+        self.assertIn("uncommitted-marker", seen)
+        self.assertNotIn(str(self.root) + "\n", seen)  # ran elsewhere
+        self.assertTrue((Path(self.env["TRUTH_DISCOVER_REPORT_DIR"]) / "run1" / "overlay.json").is_file())
+        self.assert_clean()
+
+    def test_failing_runner(self):
+        done = subprocess.run(self.command(), env={**self.env, "MODE": "fail"})
+        self.assertEqual(done.returncode, 3)
+        self.assert_clean()
+
+    def test_unknown_sense(self):
+        bad = self.overlay.with_name("bad.json")
+        write(bad, [{"sense": "NO_SUCH_SENSE", "declaration": "B", "parameter": "y"}])
+        done = subprocess.run(self.command(bad), env={**self.env, "MODE": "ok"},
+                              capture_output=True, text=True)
+        self.assertNotEqual(done.returncode, 0)
+        self.assertIn("unknown sense", done.stderr)
+        self.assertFalse(self.seen.exists())
+        self.assert_clean()
+
+    def test_sigterm_while_runner_sleeps(self):
+        proc = subprocess.Popen(self.command(), env={**self.env, "MODE": "sleep"})
+        started = Path(str(self.seen) + ".started")
+        for _ in range(200):
+            if started.exists():
+                break
+            time.sleep(0.05)
+        self.assertTrue(started.exists())
+        proc.send_signal(signal.SIGTERM)
+        self.assertNotEqual(proc.wait(timeout=30), 0)
+        self.assert_clean()
 
 
 if __name__ == "__main__":
