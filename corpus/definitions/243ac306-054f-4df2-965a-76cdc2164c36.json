@@ -1,0 +1,9 @@
+{
+  "id": "243ac306-054f-4df2-965a-76cdc2164c36",
+  "label": "Encoded EXISTENCE_7: an object encodes the property E!",
+  "term": "existence",
+  "definition": "EncodesExistence F x: x encodes the frame's existence property E!, as the abstract object characterized by 'existing, god, omnibenevolent' does. Encoding E! is characterization by existence, not exemplification of it.",
+  "basis": "stipulative",
+  "note": "Analyst reconstruction in the style of Zalta, attribution deferred. Lean defines it as the frame's Encodes applied to concrete. It is the encoding counterpart of part 1's nuclear EXISTENCE_5; no bridge from it to EXISTENCE_6 is asserted, and the encoding control shows that comprehension supplies none.",
+  "lean_declaration": "TruthCore.Ontology.EncodingAndRealPredicates.EncodesExistence"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "11ac8ec5-f50a-4fe7-9c2f-bc527f1914dd",
+  "label": "GOD_4 exists, from Meditation V (supremely perfect candidate and EXISTENCE_8)",
+  "argument_id": "4f71236b-59cb-4c12-bf08-bc2559e2c352",
+  "challenge_module": "TruthCore.Results.Ontology.EncodingAndRealPredicates.Challenge",
+  "solution_module": "TruthCore.Results.Ontology.EncodingAndRealPredicates.Solution",
+  "theorem": "TruthCore.Results.Ontology.EncodingAndRealPredicates.meditationFive",
+  "comparator_config": "results/11ac8ec5-f50a-4fe7-9c2f-bc527f1914dd/comparator.json",
+  "status": "solution-present",
+  "description": "Analyst formulation of Descartes' Meditation V, attribution deferred: if some candidate is supremely perfect and God, and existence at the selected world is a real predicate of the profile, then some being existing at that world is God. The bound conclusion is GodExists over the candidates existing at the world. Valid and not a transcription: the proof passes through the coextension of the existence feature. The first premise is the explicit bridge between the most-real sense (GOD_IN_THE_COMPARISON_2) and the classical GOD_4 (GOD_IN_THE_COMPARISON_3): it says some most-real candidate is God, it does not identify the two predicates. Sibling of the definitional argument of part 1. Its second premise is EXISTENCE_8, an extensional surrogate of 'existence is a real predicate' whose warrant Kant's thesis targets (the strengthened rival is recorded), which the nuclear (EXISTENCE_5) and encoding (EXISTENCE_7) reconstructions replace by a characterizing existence that does not give membership among the beings, and which, like the definitional P2, must not be made true by choice of profile alone. Establishes neither premise."
+}
