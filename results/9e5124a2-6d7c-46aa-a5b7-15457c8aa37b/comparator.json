@@ -3,7 +3,9 @@
   "solution_module": "TruthCore.Results.Causality.MetricBeginningArrival.Solution",
   "theorem_names": [
     "TruthCore.Results.Causality.MetricBeginningArrival.externalOpportunityOfMemberwiseGiving",
-    "TruthCore.Results.Causality.MetricBeginningArrival.necessaryOfUniversalMemberwiseGiving"
+    "TruthCore.Results.Causality.MetricBeginningArrival.necessaryOfUniversalMemberwiseGiving",
+    "TruthCore.Results.Causality.MetricBeginningArrival.selfGivingSeparatesNoSelf",
+    "TruthCore.Results.Causality.MetricBeginningArrival.unmanifestSourceSeparatesTemporal"
   ],
   "permitted_axioms": [
     "propext",
