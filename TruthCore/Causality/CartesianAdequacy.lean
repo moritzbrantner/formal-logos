@@ -2,6 +2,8 @@ module
 
 public import TruthCore.Causality.GradesFrame
 public import TruthCore.Causality.Round3FourthWay
+public import TruthCore.Causality.TermSenseForks2
+public import TruthCore.Case.Catholicism.StageTwo
 public import TruthCore.Case.Catholicism.CauseOfBeingHasBeing
 
 /-!
@@ -19,10 +21,10 @@ frame's act primitive with the mode of possession left open (IN_ACT_4);
 `F.CausesIn` is CAUSE_2 (cause of a thing's being `r`, as fire of heat);
 `F.MoreIn` is the primitive comparative (MORE_1). The containment statements
 use one `InAct` on both sides: a **uniform IN_ACT_4 reading**. The
-mode-asymmetric Cartesian reading (formal in the effect, formal or eminent in
-the cause) is a distinct sibling, not formalized here; no uniform determination
-(IN_ACT_1, IN_ACT_2 or IN_ACT_3) equals it, so passing to it needs a sense
-bridge.
+mode-asymmetric reading (formal in the effect, formal or eminent in the cause)
+is now a separate sibling using TermSenseForks.ActFrame. Translating the
+uniform IN_ACT_4 to it takes TWO directed sense calibrations; neither is a
+definition of the grades frame's primitive or an implication from causing alone.
 
 Two scope readings of the containment clause are kept as siblings
 (disambiguation "Scope of the Cartesian containment clause"): respect-wise
@@ -159,5 +161,135 @@ def StrictComparativeWithoutNonStrictAdequacy : Prop :=
       TruthCore.Latin.Aquinas.SummaTheologiae.MoreSuchHasThePerfectionReading
         F.InAct F.MoreIn ∧
       ¬ NoEffectExceedsTotalCause F Total
+
+
+/-! ## Formal effect / formal-or-eminent cause (IN_ACT_1 → IN_ACT_3)
+
+The q.4 a.2 formula and the uniform Cartesian containment statements quantify
+over a SINGLE `GradesFrame.InAct` (IN_ACT_4). Here the effect is formally in
+act, and the cause is formally OR virtually in act. The `ActFrame` is the
+existing sense fork, not a parallel ontology. The direction-specific
+calibrations below are substantive OPEN semantic bridges: they are not a
+definition of IN_ACT_4, and no claim is made that eminent intellectual
+perfection already constitutes the intrinsic power HAS_INTELLECT_1.
+-/
+
+open TruthCore.Causality.TermSenseForks (ActFrame)
+open TruthCore.Latin.Aquinas.SummaTheologiae
+  (PerfectionsOfEffectPreexistInCauseReading MaximumInGenusCausesAllInGenusReading)
+open TruthCore.Case.Catholicism (GodIsMaximalInBeing)
+
+/-- A formally possessed effect-perfection preexists formally or eminently in
+its cause of being. Same cause/being relation as q.4 a.2, but two different
+act senses. No total-cause restriction is silently introduced. -/
+def FormalEffectPreexistsInclusively (F : GradesFrame W B T R)
+    (A : ActFrame B R) : Prop :=
+  ∀ c x r, F.CausesIn c x F.esse →
+    A.InActFormally x r → A.InActFormallyOrVirtually c r
+
+/-- Effect-side sense bridge, from IN_ACT_1 to the grades IN_ACT_4. -/
+def FormalActEntersGrades (F : GradesFrame W B T R)
+    (A : ActFrame B R) : Prop :=
+  ∀ x r, A.InActFormally x r → F.InAct x r
+
+/-- Cause-side sense bridge, from grades IN_ACT_4 to IN_ACT_3. This is not
+equivalent to the preceding bridge. -/
+def GradesActIsInclusive (F : GradesFrame W B T R)
+    (A : ActFrame B R) : Prop :=
+  ∀ x r, F.InAct x r → A.InActFormallyOrVirtually x r
+
+/-- One supplied GOD_4 bearer contains the specified intellectual respect in
+formal or eminent act. This is NOT the primitive `GodHasIntellect`, which
+denotes intrinsic cognitive capacity, still less its current exercise. -/
+def GodContainsIntellectualPerfection (A : ActFrame B R)
+    (IsGod : B → Prop) (intellectual : R) : Prop :=
+  ∀ g, IsGod g → A.InActFormallyOrVirtually g intellectual
+
+/-! ## Populated finite semantic controls
+
+There are exactly two beings: false is an intellectual effect; true is the
+universal source for both the being and cognitive respects. The source contains
+the cognitive respect *virtually* but not formally. Neither intrinsic intellect
+nor exercised understanding is assigned to it. A second reading removes the
+virtual perfection at the source without changing its causing of the effect.
+Both retain the two directed calibrations; this tests adequacy rather than an
+arbitrary dictionary mismatch. The models do not certify the real-world truth
+or falsity of the q.4 premise or a complete GOD_4 root bundle.
+-/
+namespace FormalEminentControl
+
+def formal (b r : Bool) : Prop :=
+  r = false ∨ (b = false ∧ r = true)
+
+def virtual (b r : Bool) : Prop :=
+  b = true ∧ r = true
+
+def inclusive (b r : Bool) : Prop :=
+  formal b r ∨ virtual b r
+
+def more (_ : Bool) (c x : Bool) : Prop :=
+  c = true ∧ x = false
+
+def causes (c x : Bool) (_ : Bool) : Prop :=
+  c = true ∧ x = false
+
+def grades : GradesFrame Unit Bool Unit Bool :=
+  gradesOf inclusive more causes false
+
+def formalOnlyGrades : GradesFrame Unit Bool Unit Bool :=
+  gradesOf formal more causes false
+
+def act : ActFrame Bool Bool where
+  InActFormally := formal
+  InActVirtually := virtual
+  InPotency := fun _ _ => False
+  MovedIn := fun _ _ => False
+  MovesIn := fun _ _ _ => False
+
+def formalOnlyAct : ActFrame Bool Bool where
+  InActFormally := formal
+  InActVirtually := fun _ _ => False
+  InPotency := fun _ _ => False
+  MovedIn := fun _ _ => False
+  MovesIn := fun _ _ _ => False
+
+def source (b : Bool) : Prop := b = true
+def intellect (b : Bool) : Prop := b = false
+def allHaveCapacity (_ : Bool) : Prop := True
+def understandsNow (_ : Bool) : Prop := False
+
+/-- The all-input reading witnesses a real formal cognitive effect and its
+eminent cause, maximality and genus at the same source, but NOT source-level
+intrinsic intellect or present understanding. An all-capacity alternative at
+the very same structural dictionary also has no present exercise. The
+omission reading retains cognitive production and both calibrations but denies
+formal-or-eminent containment. -/
+def Controls : Prop :=
+  (∃ x, intellect x ∧ grades.CausesIn true x grades.esse ∧
+    act.InActFormally x true) ∧
+  FormalActEntersGrades grades act ∧
+  GradesActIsInclusive grades act ∧
+  PerfectionsOfEffectPreexistInCauseReading
+    grades.InAct grades.CausesIn grades.esse ∧
+  FormalEffectPreexistsInclusively grades act ∧
+  GodIsMaximalInBeing source grades.InAct grades.MoreIn grades.esse ∧
+  MaximumInGenusCausesAllInGenusReading
+    grades.InAct grades.MoreIn grades.CausesIn ∧
+  GodContainsIntellectualPerfection act source true ∧
+  ¬ (∀ g, source g → intellect g) ∧
+  (∀ g, source g → allHaveCapacity g) ∧
+  ¬ (∀ g, source g → understandsNow g) ∧
+  FormalActEntersGrades formalOnlyGrades formalOnlyAct ∧
+  GradesActIsInclusive formalOnlyGrades formalOnlyAct ∧
+  (∃ x, intellect x ∧ formalOnlyGrades.CausesIn true x formalOnlyGrades.esse ∧
+    formalOnlyAct.InActFormally x true) ∧
+  GodIsMaximalInBeing source formalOnlyGrades.InAct formalOnlyGrades.MoreIn
+    formalOnlyGrades.esse ∧
+  MaximumInGenusCausesAllInGenusReading
+    formalOnlyGrades.InAct formalOnlyGrades.MoreIn formalOnlyGrades.CausesIn ∧
+  ¬ FormalEffectPreexistsInclusively formalOnlyGrades formalOnlyAct
+
+end FormalEminentControl
+
 
 end TruthCore.Causality.CartesianAdequacy
