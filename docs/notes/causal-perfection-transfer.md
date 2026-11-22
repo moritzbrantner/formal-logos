@@ -1744,3 +1744,127 @@ the theorem proof fails at the same dictionary, or if a further route consumer
 actually needs transfer by a nonuniversal cause. Do not count this sibling as
 a second independent source of existential evidence. The formal result
 status must be taken from exact-head verification, not this note.
+
+
+## Formal effect, eminent cause and the cognitive first source (2026-11-22)
+
+**Target and baseline.** This is a bounded follow-up to [#1731](https://github.com/moritzbrantner/formal-logos/issues/1731) on the already connected source `STMT-GOD-HAS-INTELLECT` (`29818edd`) and `STMT-GOD-HAS-WILL` (`66aecdd7`). The actual root and GOD_4 witness are supplied by existing routes, not created here. This work reuses `GradesFrame`'s shared `CAUSE_2` relation and IN_ACT_4, `TermSenseForks.ActFrame`'s formal/virtual/inclusive senses, q.4 a.2's `PerfectionsOfEffectPreexistInCauseReading`, and the already certified local-teleology/immateriality/same-root consumers. No new attribution to Descartes is made: `CartesianAdequacy` is an analyst navigation label, and the quoted Aquinas q.4 source reading retains its own witness and original uniform interface.
+
+**Semantics of the precise inference.** The old q.4 predicate is
+`∀ c x r, CausesIn c x esse → InAct x r → InAct c r`. Both occurrences of
+`InAct` are the SAME primitive IN_ACT_4, although their natural interpretation
+is asymmetric. The new sibling `FormalEffectPreexistsInclusively F A`
+expresses `CausesIn c x esse ∧ A.InActFormally x r → (A.InActFormally c r ∨ A.InActVirtually c r)`.
+The two directional calibrations are explicit:
+
+1. `FormalActEntersGrades`: `A.InActFormally x r → F.InAct x r` at the EFFECT;
+2. `GradesActIsInclusive`: `F.InAct c r → (A.InActFormally c r ∨ A.InActVirtually c r)` at the CAUSE.
+
+`asymmetricFromUniform` composes exactly those two with legacy q.4. Neither
+calibration defines IN_ACT_4, and neither follows from the other or from the
+causal relation. A uniform formula with `InAct := formally` would exclude
+the genuinely eminent cause; one with `InAct := inclusive` on both sides
+admits *merely eminent effects*, so is not itself the asymmetric claim. The
+source permits formally or eminently in the cause; the formal-effect restriction
+is an analyst selection for a human intellectual capacity. Nothing here asserts
+that every effect-perfection is formally possessed.
+
+**New direct conditional connection, retaining its witness.**
+`godContainsFromIntellectualEffects` says that every already supplied GOD_4
+bearer `g` contains a chosen intellectual perfection formally or eminently.
+Its complete additional inputs, beyond the two-place consequence, are: GOD_4
+`g` is an esse maximum; a maximum causes every other actual being's esse;
+actuality implies actuality of esse; every such `g` has at least one DISTINCT
+intellectual effect `x`; `HasIntellect x` is calibrated to *formal* possession
+of the chosen intellectual respect; formal-to-IN_ACT_4 calibration; and
+asymmetric preexistence. The proof uses `CausesIn g x esse` and the very
+same `g` as the conclusion, not a second maximum or an unaligned cause.
+It does **not** need the stronger `UniversalCauseTransfersPerfections`
+that would additionally claim the source causes *each particular cognitive
+perfection*. The existing q.4 first-mover theorem supplies a second
+pointwise connection, `firstMoverContainsIntellect`, from one formally
+intellectual exemplar and both calibrations; the already registered
+first-mover/maximum identity remains needed to identify that mover with a
+separately supplied GOD_4 or actual root. These are code-level conditional
+adapters, **not new registered argument edges**; the corpus's existing
+GodHasIntellect and GodHasWill conclusions are not being redefined.
+
+**What each conclusion means.**
+
+| Claim | What the new work actually supplies |
+| --- | --- |
+| A first source causes a being with intellect | Conditional on the existing same-source/maximum, causal-genus and distinct-exemplar inputs; causing **esse** of an intellectual being is not claiming to produce each cognitive episode or its particular intellectual capacity |
+| That source formally or eminently contains the cognitive perfection | Follows conditionally from the asymmetric q.4 principle, exemplar classification and explicit calibrations; the result uses the original first source, not an arbitrary intellectual producer |
+| That source intrinsically **has intellect** (HAS_INTELLECT_1) | **OPEN.** `intrinsicIntellectOfContainment` explicitly requires separate formal-possession-to-intellect and eminent-possession-to-intellect recognition premises; it proves only the modular logical handoff, not their warrant |
+| That source is **actually understanding now** | **Not derived.** Even intrinsic capacity is not an occurrence; no exercise, intentional object, knowledge content or divine timeless actuality is inferred |
+| That source **has will** (HAS_WILL_1) | Requires HAS_INTELLECT_1 plus existing `WillFollowsIntellectReading`; reuse `LocalTeleologyGodIntellect.godHasWill`, never identify eminent production, willing capacity and actual choice |
+
+**Finite discriminators and rival.** `FormalEminentControl.Controls`
+uses two beings (source `true`, cognitive effect `false`) and two respects
+(esse `false`, intellect `true`). In its positive table the effect
+formally possesses intellect, the source possesses it virtually but **not**
+formally; the source is the maximum, causes the effect's esse, and satisfies
+the genus, both sense calibrations, q.4 uniform preexistence and asymmetric
+preexistence. Nonetheless the primitive `HasIntellect` holds only of the
+effect. Even a separate assignment of intrinsic capacity to the source
+(`allHaveCapacity`) has no current understanding
+(`understandsNow = False`). In the second table the same source actually
+causes the formally intellectual effect but has neither formal nor virtual
+cognitive possession: both calibrations and maximum/genus hold while the
+asymmetric preexistence premise fails. Thus *production* alone is not
+*containment*, and containment need not be *intrinsic cognition*; the
+controls are structural finite semantics, **not** a refutation of the
+metaphysical causal-adequacy premise or a model of all God-existence premises.
+
+The serious surviving positive rival interprets eminence as *productive
+power*: an intellectually nonrepresenting first source sustains/grounds the
+existence of beings whose cognitive capacities arise through determinate
+noncognitive laws, mechanisms and secondary causal organization. It can grant
+the positive q.4 formula under productive-power eminence; under a stronger
+substantive eminent-presence reading it denies that its specified causes have
+the required intellectual likeness. The route's strongest affirmative
+rationale is that an adequate first agent explains more than the bare power
+to yield cognitive effects: it supplies the actuality and intelligibility of
+the form under which the effect can know. That claim must be articulated in
+terms of intrinsic intentional apprehension, rather than equating mere causal
+power to thinking by definition. Here the rival's production mechanism bears
+directly on the missing recognition bridge, not on causal-genus coverage or
+the existence of intellectual creatures.
+
+**Cumulative judgment and change conditions.** The causal-perfection family
+now has a precise *fourth candidate* path to inclusive cognitive containment,
+not a fourth proved route to HAS_INTELLECT_1. The existing q.14 immateriality
+route and local/global intellectual-governor routes already reach intrinsic
+intellect with their distinct, unestablished bridge burdens, while this
+perfection path adds a separate causal/effect argument that they do not
+consume. Their common root/maximum, causal scope and God naming are not
+additional independent evidence just because reused. **Provisional:**
+formal-or-eminent containment at the specified causal first source receives
+more articulated conditional support; intrinsic intellect and will gain a
+new **conditional connection plan**, not a discharged premise or stronger
+unqualified warrant. Both the direct recognition premise and its existing
+support routes remain legitimate; the earlier assessments and the
+particular-perfection causal-transfer rival are unchanged.
+
+**Next discriminating test.** Specify a positive intentional operation
+(representing an intellectual form and grasping intelligible content), then
+compare formal and substantial-eminence readings against mere power-eminence
+on the SAME instantiated source/effect/causal background. Test whether
+substantial eminence supports *intrinsic* intellectual capacity without
+presupposing HAS_INTELLECT_1, and retain a natural-power control with the
+same productions. Only then is a registered connection to `29818edd`
+justified; further actual understanding and capacity-level will need their
+own unchanged application premises. Keep the source's still-open
+philosophical recognition distinct from q.14's immateriality and local
+teleology's first-source recognition; none is silently defeated.
+
+**Delivery boundaries.** Existing statement IDs, source readings, direct
+premise options, registered argument graph, and will modular consumer are
+unchanged. The added Lean declarations are conditional helper theorems and
+finite-model certificates pending independent semantic challenge and
+verification. Claim/type self-sweep: no new or retyped claim, source
+attribution, corpus argument, result or selected-root consumer. Expected
+`truth frontier-diff`: no premise change; the actual computed CI result is
+the authority, not that expectation. Review of this added interpretation
+must distinguish the theorem's exact antecedents, positive-model scope,
+and intrinsic-recognition gap from a new full-root route.
