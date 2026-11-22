@@ -193,6 +193,34 @@
         {
           "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.QuartaViaStrictCausalTop",
           "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.ExceededPerfectionIsCausedReading",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.InMetaphysicam.NoInfiniteRegressOfCausesOfAPerfectionReading",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.PreexistenceWithoutTransfer.DistinctCauseHasWhatItGives",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.PreexistenceWithoutTransfer.CauseOfBeingIsMoreInBeing",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.GodMaximalCausal.GodCausesBeingOfAllOthers",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.SimplyPriorIsCauseOfBeing",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading",
+          "parameter": "CausesIn"
         }
       ]
     },

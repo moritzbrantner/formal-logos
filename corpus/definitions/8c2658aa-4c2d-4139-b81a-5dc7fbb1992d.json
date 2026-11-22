@@ -1,0 +1,9 @@
+{
+  "id": "8c2658aa-4c2d-4139-b81a-5dc7fbb1992d",
+  "label": "RESPECT_2: the respect type of a constructed finite model",
+  "term": "respect type of a constructed model",
+  "definition": "A particular type constructed in Lean to serve as the respects of a finite model in a satisfiability, nonvacuity, omission or independence theorem: an inductive type with a few named elements (for example TruthCore.Causality.NecessarySimplePlurality.Respect with esse, drive and heat), or Bool or Unit standing in for respects in a control. Its elements are labels of the model's interpretation. What holds of them, for instance that there are exactly three respects or that two respects differ, is a fact about the model, not about the respects in which real beings are in act, moved, caused or more and less (RESPECT_1, with the content of DEF-RESPECT).",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.NecessarySimplePlurality.Respect",
+  "note": "Recorded as the contrasting sense to the intended respect carrier, after the pattern of the schema-model sense of the case signature (definition d0c11dff, disambiguation fe91cc1f), so that a finite model's respect type is never read as a claim about respects in the intended interpretation (AGENTS.md, 'existence of a witness versus properties of the particular witness'). No binder is tagged with this sense: a model's respects are constructed constants, not parameters of a proposition. A declaration whose Respect binder is tagged RESPECT_1 reads that binder in its role as the corpus statement; applying the same declaration to a model type is a RESPECT_2 use. The linked Lean declaration is one example of such a type, not the definition of all of them."
+}

@@ -1,6 +1,6 @@
 {
   "id": "101bdd62-7cd0-5923-8f03-d9d443f4ba51",
-  "label": "Whatever is maximally TRUE_1 is maximally a being",
+  "label": "Whatever is maximally TRUE_3 is maximally a being",
   "legacy_id": "STMT-MOST-TRUE-IS-MOST-BEING",
   "paraphrase": "Whatever is maximally true is maximally a being.",
   "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MostTrueIsMostBeingReading",

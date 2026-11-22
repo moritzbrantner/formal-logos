@@ -67,21 +67,19 @@ namespace TruthCore.Case.Catholicism.PreexistenceWithoutTransfer
 
 section Vocabulary
 
-variable {B R : Type}
-
 /-- OPEN as a premise, derived here: whatever, distinct from `x`, causes `x`'s
 being is more in being than `x`. The instance at esse of the formal reading
 `CauseOfQualityInAnotherIsMoreSuchReading` (same `MoreIn`); the synonymous source
 sense is not claimed at esse. `MoreIn esse` is the primitive comparative
 (DEF-MORE-IN); its order model is open (STMT-ATTRIBUTION-ORDER-RESTRICTS-CAUSE-MORE-SUCH). -/
-def CauseOfBeingIsMoreInBeing (CausesIn : B → B → R → Prop)
+def CauseOfBeingIsMoreInBeing {B R : Type} (CausesIn : B → B → R → Prop)
     (MoreIn : R → B → B → Prop) (esse : R) : Prop :=
   ∀ c x, c ≠ x → CausesIn c x esse → MoreIn esse c x
 
 /-- Distinct-cause transfer: whatever causes a perfection `r` in another thing
 has `r` (formally or eminently, the inclusive `InAct`). The unrestricted
 `CausalMapsBatch1.CauseHasWhatItGives` without its self-causation case. -/
-def DistinctCauseHasWhatItGives (CausesIn : B → B → R → Prop) (InAct : B → R → Prop) :
+def DistinctCauseHasWhatItGives {B R : Type} (CausesIn : B → B → R → Prop) (InAct : B → R → Prop) :
     Prop :=
   ∀ c x r, c ≠ x → CausesIn c x r → InAct c r
 
