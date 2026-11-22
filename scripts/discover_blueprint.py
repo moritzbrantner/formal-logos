@@ -396,6 +396,8 @@ DIAGNOSES = {
 LOGIC_DECLARATIONS = {"TruthCore.Logic.ExcludedMiddle"}
 
 MAX_ATTEMPTS_PER_GOAL = 8
+# The axioms a proof may rest on (`ALLOWED_AXIOMS` in truth/src/discover.rs).
+ALLOWED_AXIOMS = ("propext", "Classical.choice", "Quot.sound")
 # An action whose earlier run had one of these outcomes is not repeated with
 # another bundle of the same kind: its diagnosis is already settled.
 SETTLING = {"known-bundle": ("closed-known", "closed-candidate"),
@@ -594,7 +596,7 @@ def solver_key(goal: dict, corpus: Corpus) -> str:
     payload = {"command": goal["command"], "revision": input_revision(goal.get("revision", "")),
                "target": decls[0], "premises": sorted(decls[1:]),
                "heartbeats": goal["heartbeats"], "strict": goal.get("strict_domains", False),
-               "tags": corpus.lean_tags(decls), "probe": prelude_digest()}
+               "tags": corpus.lean_tags(decls), "probe": prelude_digest(lean_root(corpus))}
     return hashlib.sha256(json.dumps(payload, sort_keys=True).encode()).hexdigest()[:16]
 
 
@@ -855,7 +857,7 @@ def plan(finding: dict, corpus: Corpus, options: dict, rows: list[dict], trace: 
         return {"command": command, "target": target, "premises": list(dict.fromkeys(premises)),
                 "heartbeats": heartbeats, "strict_domains": strict, "revision": rev}
 
-    def add(action, code, why, goals=(), added=(), report=None):
+    def add(action, code, why, goals=(), added=(), report=None, source=None):
         refused = []
         for g in goals:
             for p in g["premises"]:
@@ -873,8 +875,11 @@ def plan(finding: dict, corpus: Corpus, options: dict, rows: list[dict], trace: 
         for p in added:
             if corpus.only_through(p, target):
                 refused.append(f"support cycle: every verified derivation of {p[:8]} uses the target")
+        # Per goal and solver-input revision: after the inputs change, the
+        # same goal gets a fresh budget of runs.
         solver_runs = sum(1 for e in done if e.get("action") != "engine"
-                          and (e.get("key") or e.get("failed_key")))
+                          and (e.get("key") or e.get("failed_key"))
+                          and input_revision(e.get("revision", "")) == input_revision(rev))
         if goals and solver_runs + len(goals) > MAX_ATTEMPTS_PER_GOAL:
             refused.append(f"attempt cap: {solver_runs} solver runs + {len(goals)} would exceed "
                            f"{MAX_ATTEMPTS_PER_GOAL} for this goal")
@@ -888,7 +893,7 @@ def plan(finding: dict, corpus: Corpus, options: dict, rows: list[dict], trace: 
         # The id comes from the action's content, so that inserting an action
         # (a budget retry after a countermodel run) never shifts another's id.
         import hashlib
-        content = json.dumps([action, [g["key"] for g in goals], (report or {}).get("key")])
+        content = json.dumps([action, [g["key"] for g in goals], (report or {}).get("key"), source])
         ident = hashlib.sha256(content.encode()).hexdigest()[:6]
         actions.append({"id": f"{target[:8]}-{action}-{ident}", "action": action,
                         "diagnosis": code, "why": why, "goals": list(goals),
@@ -927,7 +932,7 @@ def plan(finding: dict, corpus: Corpus, options: dict, rows: list[dict], trace: 
                 add("known-bundle", "b", f"retrieval missed premises of verified argument "
                                          f"{r['argument'][:8]}; the exact bundle tests whether the "
                                          "failure was retrieval (expected: filtered as known)",
-                    goals=[goal(r["premises"])], added=r["not_retrieved"])
+                    goals=[goal(r["premises"])], added=r["not_retrieved"], source=r["argument"])
         add("countermodel", "a", "an exact one-point countermodel of premises and ¬target would "
                                  "exclude a budget or tactic failure for this bundle",
             goals=[goal(candidates, command="countermodel")])
@@ -939,7 +944,7 @@ def plan(finding: dict, corpus: Corpus, options: dict, rows: list[dict], trace: 
                                   "missing: search it from the goal's bundle, and the target from "
                                   "the bundle with it, as two goals",
                     goals=[dict(goal(candidates), target=m),
-                           goal(candidates + [m])], added=[m])
+                           goal(candidates + [m])], added=[m], source=r["argument"])
         cm = [e for e in done if e.get("action") == "countermodel"]
         if any(e["outcome"].get("status") == "no-countermodel" for e in cm) and \
                 all(e["outcome"].get("status") != "countermodel" for e in cm):
@@ -965,20 +970,20 @@ def plan(finding: dict, corpus: Corpus, options: dict, rows: list[dict], trace: 
 
 # --- Lean runs -------------------------------------------------------------
 
-def prelude() -> str:
+def prelude(root: Path = TOOL_ROOT) -> str:
     """The transcription probe tactics of `truth prove-sweep` (`PRELUDE` in
-    `truth/src/prove_sweep.rs`), which `scripts/Discover.lean` uses."""
+    `truth/src/prove_sweep.rs` of `root`), which `scripts/Discover.lean` uses."""
     import re
-    text = (TOOL_ROOT / "truth" / "src" / "prove_sweep.rs").read_text()
+    text = (root / "truth" / "src" / "prove_sweep.rs").read_text()
     found = re.search(r'pub const PRELUDE: &str = r#"(.*?)"#;', text, re.S)
     if not found:
         raise SystemExit("cannot read PRELUDE from truth/src/prove_sweep.rs")
     return found.group(1)
 
 
-def prelude_digest() -> str:
+def prelude_digest(root: Path = TOOL_ROOT) -> str:
     import hashlib
-    return hashlib.sha256(prelude().encode()).hexdigest()[:12]
+    return hashlib.sha256(prelude(root).encode()).hexdigest()[:12]
 
 
 def lean_root(corpus: Corpus) -> Path:
@@ -1033,7 +1038,7 @@ def scratch_text(modules: list[str], commands: list[str], probe_stub: bool = Fal
         bodies.append("\n".join(lines))
     imports |= set(modules)
     probe = ('macro "prove_sweep_probe" : tactic => `(tactic| fail "stub")\n'
-             if probe_stub else prelude())
+             if probe_stub else prelude(root))
     return ("".join(f"import {m}\n" for m in sorted(imports)) + "\n" + probe + "\n"
             + bodies[0] + "\n" + bodies[1] + "\nset_option maxHeartbeats 0\n\n"
             + "\n".join(commands) + "\n")
@@ -1154,8 +1159,17 @@ def assess(raw: dict, goal: dict, corpus: Corpus, senses: bool = True) -> dict:
         core = [premises[i] for i in raw.get("vacuous_core") or [] if i < len(premises)]
         return {"status": "incompatibility", "core": core,
                 "notes": ["the premises prove False: an incompatibility, never support"]}
+    # The minimized proof's axioms, as the engine reads them (`outcome["proof"]`);
+    # the full proof may use more.
+    axioms = (raw.get("proof") or closed).get("axioms") or []
     out: dict = {"minimal": minimal, "prover": closed.get("prover"),
-                 "axioms": closed.get("axioms", []), "notes": []}
+                 "axioms": axioms, "notes": []}
+    forbidden = [a for a in axioms if a not in ALLOWED_AXIOMS]
+    if forbidden:
+        # The engine's `axioms` filter: never a candidate on another axiom.
+        out["status"] = "rejected-axioms"
+        out["notes"].append(f"uses {', '.join(forbidden)}")
+        return out
     necessity = []
     omissions = {o.get("premise"): o.get("model") for o in raw.get("omissions") or []}
     for d in raw.get("deletions") or []:
@@ -1198,7 +1212,7 @@ def assess(raw: dict, goal: dict, corpus: Corpus, senses: bool = True) -> dict:
     if out["senses"].get("checked") and not out["senses"].get("passes"):
         out["notes"].append("senses: " + out["senses"].get("message", "")[:200])
     known = corpus.known(minimal, goal["target"],
-                         classical="Classical.choice" in (closed.get("axioms") or []))
+                         classical="Classical.choice" in axioms)
     if known:
         out["status"] = "closed-known"
         out["known"] = known

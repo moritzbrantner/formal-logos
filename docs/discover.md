@@ -377,15 +377,20 @@ support cycle (a premise every verified derivation of which uses the target),
 a solver input already in the trace, a second action of a kind whose diagnosis
 an earlier run settled, any action whose goals would take the goal past eight
 solver runs (a split counts two), and an input whose run failed twice for
-infrastructure reasons. An action's id is derived from its content (kind and
-solver keys), so it does not change when another action is inserted. `repair`
+infrastructure reasons. The run cap counts per goal label *and* solver-input
+revision: after the corpus, library, Discover scripts or Lean pins change,
+the same goal gets eight fresh runs (`--trace` with a new file also starts
+afresh). An action's id is derived from its content (kind, solver keys and,
+for a known bundle or split, the verified argument it comes from), so it does
+not change when another action is inserted. `repair`
 only plans and leaves the trace file unchanged.
 
 `retry` runs the exact goal through the same binding as `truth discover`: a
 scratch file of `scripts/Discover.lean` and `scripts/DiscoverRepair.lean`, one
 `#discover` or `#discover_countermodel` command per goal, under the heavy-job
 lock (the time limit bounds Lean only), in the `--root` repository (or this
-tool's own when `--root` is no Lake project with those scripts), with the corpus's sense tags in the engine's order (`senseOf` takes a
+tool's own when `--root` is no Lake project with those scripts), whose
+Discover scripts and prove-sweep probe it reads, with the corpus's sense tags in the engine's order (`senseOf` takes a
 binder's first tag, so a binder with both a whole-binder and a
 partial-application tag is identified or not by that order; the repair flags
 such binders). Retrieval is bypassed, not changed. Each
@@ -404,7 +409,9 @@ outcome (no output, Lean timed out or killed: exit 137 is reported as out of
 memory or the kill after a timeout) is recorded unkeyed as `failed`, not as a
 solver result, so it can be rerun.
 
-A closed goal is assessed offline with what the raw result carries: a literal
+A closed goal is assessed offline with what the raw result carries, reading
+the minimized proof's axioms as the engine does: a proof on an axiom other
+than `propext`, `Classical.choice` and `Quot.sound` is rejected (`axioms`); a literal
 P/¬P core is rejected and never support; an inconsistent core is an
 incompatibility; a by-name carrier or the transcription probe rejects it;
 the engine's projection filters reject `projection_unused` and an ambiguous

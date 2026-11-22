@@ -239,7 +239,8 @@ class PlannerTests(unittest.TestCase):
         trace = bp.Trace(None)
         f = finding("t", ["ptor"])
         for i in range(bp.MAX_ATTEMPTS_PER_GOAL):
-            trace.add({"key": f"k{i}", "goal_label": bp.goal_label(f), "action": "budget"})
+            trace.add({"key": f"k{i}", "goal_label": bp.goal_label(f), "action": "budget",
+                       "revision": "rev"})
         actions = bp.plan(f, self.corpus, OPTIONS, [], trace, "rev")
         cm = next(a for a in actions if a["action"] == "countermodel")
         self.assertTrue(any("attempt cap" in r for r in cm["refused"]))
@@ -249,7 +250,8 @@ class PlannerTests(unittest.TestCase):
         trace = bp.Trace(None)
         f = finding("t", ["ptor"])
         for i in range(bp.MAX_ATTEMPTS_PER_GOAL - 1):
-            trace.add({"key": f"k{i}", "goal_label": bp.goal_label(f), "action": "budget"})
+            trace.add({"key": f"k{i}", "goal_label": bp.goal_label(f), "action": "budget",
+                       "revision": "rev"})
         rows = [{"argument": "x", "premises": ["ptor", "rtoq"], "not_retrieved": ["rtoq"],
                  "unidentified": [], "binding": []}]
         actions = {a["action"]: a for a in bp.plan(f, self.corpus, OPTIONS, rows, trace, "rev")}
@@ -388,6 +390,38 @@ class PlannerTests(unittest.TestCase):
         self.assertEqual(corpus.order_sensitive([STATEMENTS["ptor"]]), [f"{STATEMENTS['ptor']}.R"])
         diag = {d["code"]: d for d in bp.classify(finding("t", ["ptor"]), corpus, OPTIONS, [], [])}
         self.assertIn("depends on tag order", diag["c"]["evidence"][0])
+
+    def test_assess_reads_the_minimized_proof_axioms(self):
+        corpus = make_corpus(self.root, [("k", ["ptor", "em"], "t")])
+        goal = {"command": "discover", "premises": ["ptor", "rtoq"], "target": "t"}
+        # The full proof is classical, the minimized one is not: no grant.
+        raw = {"closed": {"prover": "duper", "used": [0, 1],
+                          "axioms": ["propext", "Classical.choice", "Quot.sound"]},
+               "proof": {"prover": "duper", "used": [0], "axioms": ["propext"]},
+               "minimal": [0], "witness": "all True"}
+        out = bp.assess(raw, goal, corpus, senses=False)
+        self.assertEqual(out["status"], "closed-candidate")
+        self.assertEqual(out["axioms"], ["propext"])
+        raw["proof"]["axioms"] = ["propext", "Classical.choice"]
+        self.assertEqual(bp.assess(raw, goal, corpus, senses=False)["status"], "closed-known")
+        # A forbidden axiom on the minimized proof rejects it (the engine's filter).
+        raw["proof"]["axioms"] = ["propext", "sorryAx"]
+        out = bp.assess(raw, goal, corpus, senses=False)
+        self.assertEqual(out["status"], "rejected-axioms")
+        self.assertIn("sorryAx", out["notes"][-1])
+
+    def test_run_cap_is_per_input_revision(self):
+        trace = bp.Trace(None)
+        f = finding("t", ["ptor"])
+        for i in range(bp.MAX_ATTEMPTS_PER_GOAL):
+            trace.add({"key": f"k{i}", "goal_label": bp.goal_label(f), "action": "budget",
+                       "revision": "inputs old at abc"})
+        old = bp.plan(f, self.corpus, OPTIONS, [], trace, "inputs old at def")
+        new = bp.plan(f, self.corpus, OPTIONS, [], trace, "inputs new at def")
+        cap = lambda acts: any("attempt cap" in r for a in acts if a["action"] == "countermodel"
+                               for r in a["refused"])
+        self.assertTrue(cap(old))
+        self.assertFalse(cap(new))
 
     def test_known_modulo_logic(self):
         corpus = make_corpus(self.root, [("k", ["ptor", "em"], "t"), ("free", [], "rtoq")])
