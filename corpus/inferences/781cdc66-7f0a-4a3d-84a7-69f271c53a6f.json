@@ -1,13 +1,13 @@
 {
   "id": "781cdc66-7f0a-4a3d-84a7-69f271c53a6f",
-  "label": "Unrestricted free absence with companions gives A2 at w (inference)",
+  "label": "Unrestricted free absence with companions gives S2 at w (inference)",
   "input_statement_ids": [
     "ff30c214-d193-4501-a6a8-0a5bdeb80477",
     "e2fd2cf0-2b43-430e-9352-703325198bba"
   ],
   "output_statement_id": "05f18e21-6712-454c-9aa8-121de72607e8",
   "rule": "Witness selection: x without y is possible, so y's absence is",
-  "meaning": "For a concrete object y existing at w, take a distinct concrete candidate x that could exist (companions); unrestricted free absence gives a world accessible from w where x exists and y does not, so y could fail to exist. Recombination supports A2 only in its unrestricted form: the restricted form says nothing about a candidate that exists at every accessible world, and the difference between the two is exactly the possible absence of every companioned concrete candidate (certified difference).",
+  "meaning": "For a concrete object y existing at w, take a distinct concrete candidate x that could exist (companions); unrestricted free absence gives a world accessible from w where x exists and y does not, so y could fail to exist. Recombination supports S2 only in its unrestricted form: the restricted form says nothing about a candidate that exists at every accessible world, and the difference between the two is exactly the possible absence of every companioned concrete candidate (certified difference).",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

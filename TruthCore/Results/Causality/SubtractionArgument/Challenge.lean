@@ -17,8 +17,8 @@ open TruthCore.Causality.NecessarySenseFork
 open TruthCore.Case.Catholicism (Signature)
 
 /-- The subtraction argument: from a possible world with finitely many
-concrete objects, subtract them one at a time. Each step needs A2 (the object
-could fail to exist) and A3 (it could fail with no newcomer) at the current
+concrete objects, subtract them one at a time. Each step needs S2 (the object
+could fail to exist) and S3 (it could fail with no newcomer) at the current
 world, and transitivity keeps every step accessible from `w`. Excluded middle
 decides at each step whether the next listed object is present. -/
 theorem subtraction {W B : Type} (m : Profile W B) (w : W)
@@ -27,17 +27,15 @@ theorem subtraction {W B : Type} (m : Profile W B) (w : W)
     (h3 : SubtractableThroughout m w) : PossiblyNoConcrete m w := by
   sorry
 
-/-- The box K necessary-being node excludes A2 at its world: its root is
-concrete, exists at `w` and exists at every world accessible from `w`, so not
-every concrete object present at `w` could fail to exist. For the weaker
-stage-one node the same holds, and with excluded middle A2 at `w` is exactly
-that node's denial (controls, `Laws` 1 and 8). -/
-theorem boxKExcludesContingencyPremise {W : Type} (σ : Signature) (m : Profile W σ.Being)
-    (w : W) (CN : σ.Being → σ.Being → Prop) (hK : NecessaryRootBoxK σ m w CN) :
-    NotEachConcreteCouldFailAt m w := by
+/-- The stage-one node excludes S2 at its world: the necessary concrete
+object present at `w` exists at every accessible world, so not every concrete
+object present at `w` could fail to exist. The converse, with excluded middle,
+is in the controls (`Laws`, 8): S2 at `w` is exactly the node's denial. -/
+theorem necessaryConcreteExcludesContingencyPremise {W B : Type} (m : Profile W B) (w : W)
+    (hnc : NecessaryConcreteAt m w) : NotEachConcreteCouldFailAt m w := by
   sorry
 
-/-- Unrestricted recombination gives A2 at `w` when every concrete candidate
+/-- Unrestricted recombination gives S2 at `w` when every concrete candidate
 has a distinct possible concrete companion: `x` without `y` is possible, so
 `y`'s absence is. -/
 theorem recombinationGivesContingency {W B : Type} (m : Profile W B) (w : W)

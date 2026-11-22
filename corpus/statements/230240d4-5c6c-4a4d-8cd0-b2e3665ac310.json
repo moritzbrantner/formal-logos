@@ -1,12 +1,15 @@
 {
   "id": "230240d4-5c6c-4a4d-8cd0-b2e3665ac310",
   "label": "At every world accessible from w, a concrete object that could fail could fail with no newcomer",
-  "paraphrase": "Subtraction premise A3, conditional form, analyst formulation, attribution deferred: for every world v accessible from w and every concrete object x existing at v, if x is absent at some world accessible from v, then at some world accessible from v x is absent and every concrete object existing there exists at v (no newcomer). It realizes the absence jointly, at one world, not pairwise. The literal 'the non-existence of x does not necessitate the existence of any other concrete object' is this together with A2 (controls).",
+  "paraphrase": "Subtraction premise S3, conditional form, analyst formulation, attribution deferred: for every world v accessible from w and every concrete object x existing at v, if x is absent at some world accessible from v, then at some world accessible from v x is absent and every concrete object existing there exists at v (no newcomer). It realizes the absence jointly, at one world, not pairwise. The literal 'the non-existence of x does not necessitate the existence of any other concrete object' is this together with S2 (controls).",
   "lean_declaration": "TruthCore.Causality.SubtractionArgument.SubtractableThroughout",
   "definition_ids": [
     "cdbbae1a-5cce-4367-b6b4-d135135a2ecd",
     "1b8baf77-84fa-5513-a138-7fa14840dd87",
     "f8948e28-b13a-5244-95f1-41a05cd4fff2",
     "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
   ]
 }

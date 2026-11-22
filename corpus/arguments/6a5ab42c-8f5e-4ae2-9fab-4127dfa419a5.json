@@ -6,7 +6,7 @@
   "inference_ids": [
     "a838a143-d1b6-4745-b5a6-1d3fdf9f05b6"
   ],
-  "meaning": "Premise-free laws relating the subtraction conclusion to the stage-one and box K nodes, the literal non-necessitation premise, elementary existence, recombination, Lowe's reply and the exact status of A2 at w; then nonvacuity, one omission model for each of A1, A3, transitivity and A2, the pairwise-recombination and Lowe model, and the theist model. Model-witnessed separations and compatibilities; no premise is established and no reality claim is made.",
+  "meaning": "Premise-free laws relating the subtraction conclusion to the stage-one and box K nodes, the literal non-necessitation premise, elementary existence, recombination, the analyst formulation of Lowe's reply, the exact status of S2 at w and the reach of the recombination difference; then nonvacuity, one omission model for each of S1, S3, transitivity and S2, the pairwise-recombination and analyst-Lowe model, and the theist model. Model-witnessed separations and compatibilities; no premise is established and no reality claim is made.",
   "definition_ids": [
     "13c0abe7-25f7-4921-b52e-9f732edd6f2c",
     "547cac5c-7089-4bce-b5e7-bb8b6c8d12b9",
@@ -16,10 +16,14 @@
     "1b8baf77-84fa-5513-a138-7fa14840dd87",
     "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
     "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
     "f830795a-b5d8-5f9f-800d-2f3d1f443a0a",
     "baddf770-36bf-542f-bb3c-2297342d5452",
     "d980bbd2-1a96-564c-bc0d-4065d7786715",
     "cdbbae1a-5cce-4367-b6b4-d135135a2ecd"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
   ],
   "sense_mixing_control": true
 }

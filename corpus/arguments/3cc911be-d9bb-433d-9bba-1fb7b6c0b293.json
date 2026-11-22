@@ -1,6 +1,6 @@
 {
   "id": "3cc911be-d9bb-433d-9bba-1fb7b6c0b293",
-  "label": "Unrestricted free absence with companions gives A2 at w",
+  "label": "Unrestricted free absence with companions gives S2 at w",
   "premise_statement_ids": [
     "ff30c214-d193-4501-a6a8-0a5bdeb80477",
     "e2fd2cf0-2b43-430e-9352-703325198bba"
@@ -9,12 +9,12 @@
   "inference_ids": [
     "781cdc66-7f0a-4a3d-84a7-69f271c53a6f"
   ],
-  "meaning": "For a concrete object y existing at w, take a distinct concrete candidate x that could exist (companions); unrestricted free absence gives a world accessible from w where x exists and y does not, so y could fail to exist. Recombination supports A2 only in its unrestricted form: the restricted form says nothing about a candidate that exists at every accessible world, and the difference between the two is exactly the possible absence of every companioned concrete candidate (certified difference).",
+  "meaning": "For a concrete object y existing at w, take a distinct concrete candidate x that could exist (companions); unrestricted free absence gives a world accessible from w where x exists and y does not, so y could fail to exist. Recombination supports S2 only in its unrestricted form: the restricted form says nothing about a candidate that exists at every accessible world, and the difference between the two is exactly the possible absence of every companioned concrete candidate (certified difference).",
   "definition_ids": [
     "13c0abe7-25f7-4921-b52e-9f732edd6f2c",
     "1b8baf77-84fa-5513-a138-7fa14840dd87",
-    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
     "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
     "cdbbae1a-5cce-4367-b6b4-d135135a2ecd"
   ]
 }

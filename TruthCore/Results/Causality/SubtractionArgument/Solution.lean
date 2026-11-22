@@ -21,8 +21,8 @@ open TruthCore.Causality.NecessarySenseFork
 open TruthCore.Case.Catholicism (Signature)
 
 /-- The subtraction argument: from a possible world with finitely many
-concrete objects, subtract them one at a time. Each step needs A2 (the object
-could fail to exist) and A3 (it could fail with no newcomer) at the current
+concrete objects, subtract them one at a time. Each step needs S2 (the object
+could fail to exist) and S3 (it could fail with no newcomer) at the current
 world, and transitivity keeps every step accessible from `w`. Excluded middle
 decides at each step whether the next listed object is present. -/
 theorem subtraction {W B : Type} (m : Profile W B) (w : W)
@@ -46,7 +46,10 @@ theorem subtraction {W B : Type} (m : Profile W B) (w : W)
       | head => exact absurd hy ha
       | tail _ h => exact h
 
-/-- Helper: the stage-one node excludes A2 at its world (used by the laws). -/
+/-- The stage-one node excludes S2 at its world: the necessary concrete
+object present at `w` exists at every accessible world, so not every concrete
+object present at `w` could fail to exist. The converse, with excluded middle,
+is in the controls (`Laws`, 8): S2 at `w` is exactly the node's denial. -/
 theorem necessaryConcreteExcludesContingencyPremise {W B : Type} (m : Profile W B) (w : W)
     (hnc : NecessaryConcreteAt m w) : NotEachConcreteCouldFailAt m w := by
   intro h
@@ -54,21 +57,7 @@ theorem necessaryConcreteExcludesContingencyPremise {W B : Type} (m : Profile W 
   obtain ⟨u, hu, hnu⟩ := h x ⟨hc, he⟩
   exact hnu (hnec u hu)
 
-/-- The box K necessary-being node excludes A2 at its world: its root is
-concrete, exists at `w` and exists at every world accessible from `w`, so not
-every concrete object present at `w` could fail to exist. For the weaker
-stage-one node the same holds, and with excluded middle A2 at `w` is exactly
-that node's denial (controls, `Laws` 1 and 8). -/
-theorem boxKExcludesContingencyPremise {W : Type} (σ : Signature) (m : Profile W σ.Being)
-    (w : W) (CN : σ.Being → σ.Being → Prop) (hK : NecessaryRootBoxK σ m w CN) :
-    NotEachConcreteCouldFailAt m w := by
-  intro h
-  obtain ⟨n, hbox, hroot⟩ := hK
-  obtain ⟨⟨⟨hc, he⟩, _⟩, _⟩ := hroot
-  obtain ⟨u, hu, hnu⟩ := h n ⟨hc, he⟩
-  exact hnu (hbox u hu)
-
-/-- A2 at `w` is exactly the denial of the stage-one node (excluded middle for
+/-- S2 at `w` is exactly the denial of the stage-one node (excluded middle for
 the backward direction). -/
 theorem contingencyPremiseExact {W B : Type} (m : Profile W B) (w : W)
     (hEM : TruthCore.Logic.ExcludedMiddle) : ContingencyPremiseIsNoNecessaryConcretum m w := by
@@ -86,7 +75,7 @@ theorem contingencyPremiseExact {W B : Type} (m : Profile W B) (w : W)
       · exact h
       · exact absurd ⟨v, hv, h⟩ hd
 
-/-- Unrestricted recombination gives A2 at `w` when every concrete candidate
+/-- Unrestricted recombination gives S2 at `w` when every concrete candidate
 has a distinct possible concrete companion: `x` without `y` is possible, so
 `y`'s absence is. -/
 theorem recombinationGivesContingency {W B : Type} (m : Profile W B) (w : W)
@@ -123,6 +112,9 @@ theorem le_sum_of_mem : ∀ {k : Nat} {xs : List Nat}, k ∈ xs → k ≤ xs.fol
   | _, _ :: _, .head _ => Nat.le_add_right _ _
   | _, x :: _, .tail _ h => Nat.le_trans (le_sum_of_mem h) (Nat.le_add_left _ x)
 
+/-- The analyst formulation of Lowe's reply: a non-concrete candidate existing
+at every accessible world, co-existing there with some concretum, excludes
+"possibly no concrete object". -/
 theorem lowe {W B : Type} (m : Profile W B) (w : W)
     (hA : NecessaryAbstractumAt m w) (hD : AbstractaNeedConcretaThroughout m w) :
     NotPossiblyNoConcrete m w := by
@@ -132,7 +124,7 @@ theorem lowe {W B : Type} (m : Profile W B) (w : W)
   exact hn (hD v hv a hna (hbox v hv))
 
 theorem laws : Model.Laws := by
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, fun W B m w hEM => contingencyPremiseExact m w hEM⟩
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, fun W B m w hEM => contingencyPremiseExact m w hEM, ?_⟩
   · intro W B m w hnc hP
     obtain ⟨x, hc, _, hnec⟩ := hnc
     obtain ⟨v, hv, hn⟩ := hP
@@ -159,8 +151,13 @@ theorem laws : Model.Laws := by
     exact recombinationGivesContingency m v (h v hv).1 (h v hv).2
   · intro W B m w hA hD
     exact lowe m w hA hD
-  · intro W B m w hEM hTrans h1 h2 hA hD h3
-    exact lowe m w hA hD (subtraction m w hEM hTrans h1 h2 h3)
+  · intro W B m w hEM hTrans h1 hA hD h23
+    exact lowe m w hA hD (subtraction m w hEM hTrans h1 h23.1 h23.2)
+  · intro W B m w hC hD hx
+    obtain ⟨x, hc, hbox⟩ := hx
+    obtain ⟨y, hne, hcy, hdy⟩ := hC x hc
+    obtain ⟨u, hu, hn⟩ := hD x hc ⟨y, hne, hcy, hdy⟩
+    exact hn (hbox u hu)
 
 theorem models : Model.Models := by
   refine ⟨?_, ?_, ?_, ?_, ?_⟩
@@ -174,7 +171,7 @@ theorem models : Model.Models := by
     · intro _ _ _ _ _
       trivial
     · exact ⟨false, trivial, fun ⟨_, _, h⟩ => nomatch h⟩
-  · -- A1 omitted
+  · -- S1 omitted
     refine ⟨?_, ?_, ?_, ?_, ?_⟩
     · intro h
       obtain ⟨v, _, xs, hxs⟩ := h
@@ -192,7 +189,7 @@ theorem models : Model.Models := by
     · intro h
       obtain ⟨v, _, hn⟩ := h
       exact hn ⟨v, trivial, Nat.le_refl v⟩
-  · -- A3 omitted: pairwise recombination; Lowe's reply
+  · -- S3 omitted: pairwise recombination; Lowe's reply
     have aT : pairProfile.ontic.ExistsAt true .a := Or.inr (Or.inl ⟨rfl, rfl⟩)
     have bF : pairProfile.ontic.ExistsAt false .b := Or.inr (Or.inr ⟨rfl, rfl⟩)
     have aF : ¬ pairProfile.ontic.ExistsAt false .a := by
@@ -284,7 +281,7 @@ theorem models : Model.Models := by
       intro h
       obtain ⟨_, _, hn⟩ := h true ⟨trivial, gAll true⟩
       exact hn (gAll _)
-    refine ⟨hS5, ⟨true, fun v _ => gAll v, hRoot⟩, ⟨true, ⟨hS5, fun v _ => gAll v⟩, hRoot⟩,
+    refine ⟨hS5, fun _ _ _ _ _ => trivial, ⟨true, fun v _ => gAll v, hRoot⟩, ⟨true, ⟨hS5, fun v _ => gAll v⟩, hRoot⟩,
       ⟨true, trivial, gAll true, fun v _ => gAll v⟩,
       ⟨true, trivial, [true, false], fun x _ => ?_⟩, ?_, ?_, ?_, hA2,
       fun h => hA2 (h true trivial), ?_, ?_⟩

@@ -1,11 +1,11 @@
 {
   "id": "8404e05b-8743-4961-ace4-1197a832fb53",
-  "label": "Unrestricted free absence with companions gives A2 at w",
+  "label": "Unrestricted free absence with companions gives S2 at w",
   "argument_id": "3cc911be-d9bb-433d-9bba-1fb7b6c0b293",
   "challenge_module": "TruthCore.Results.Causality.SubtractionArgument.Challenge",
   "solution_module": "TruthCore.Results.Causality.SubtractionArgument.Solution",
   "theorem": "TruthCore.Results.Causality.SubtractionArgument.recombinationGivesContingency",
   "comparator_config": "results/8404e05b-8743-4961-ace4-1197a832fb53/comparator.json",
   "status": "solution-present",
-  "description": "Support for subtraction premise A2 at w from unrestricted free absence (Hume's dictum, absence half) and companions. Not a transcription: the conclusion's possible absence is extracted from a recombination witness for a chosen companion. Establishes neither premise."
+  "description": "Support for subtraction premise S2 at w from unrestricted free absence (Hume's dictum, absence half) and companions at w. It concludes S2 at w only; the subtraction argument uses S2 throughout the accessible worlds, which the controls derive from the same two premises holding at every accessible world (law 5). Not a transcription: the conclusion's possible absence is extracted from a recombination witness for a chosen companion. Establishes neither premise."
 }

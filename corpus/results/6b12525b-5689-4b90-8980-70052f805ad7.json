@@ -1,24 +1,24 @@
 {
   "id": "6b12525b-5689-4b90-8980-70052f805ad7",
-  "label": "The box K node excludes the subtraction contingency premise at its world",
+  "label": "The stage-one node excludes the subtraction contingency premise at its world",
   "argument_id": "702429fd-c6da-4531-947f-0e18f39ce6da",
   "challenge_module": "TruthCore.Results.Causality.SubtractionArgument.Challenge",
   "solution_module": "TruthCore.Results.Causality.SubtractionArgument.Solution",
-  "theorem": "TruthCore.Results.Causality.SubtractionArgument.boxKExcludesContingencyPremise",
+  "theorem": "TruthCore.Results.Causality.SubtractionArgument.necessaryConcreteExcludesContingencyPremise",
   "comparator_config": "results/6b12525b-5689-4b90-8980-70052f805ad7/comparator.json",
   "status": "solution-present",
-  "description": "Checked incompatibility: STMT-NECESSARY-ROOT-BOX-K excludes subtraction premise A2 at its world. Not a transcription: the conclusion quantifies over every concrete object at w and its possible absence, which the premise does not mention; it fails without the node (nonvacuity and A1 omission models). Establishes no premise; the node stays open as it was.",
+  "description": "Checked incompatibility: STMT-NECESSARY-CONCRETE-AT excludes subtraction premise S2 at its world. Not a transcription: the conclusion quantifies over every concrete object at w and its possible absence, which the premise does not mention. That it fails without the node is shown only on the universal frames of the nonvacuity and S1 omission models. Establishes no premise; the node stays as it was. Recorded at the weakest node that suffices; no registered argument derives this node from the box K node, so the box K node is connected only through the controls (laws 1-2, theist model).",
   "research_comparisons": [
     {
-      "target_statement_id": "cdf897a8-5490-561a-b9d2-507486a3f192",
+      "target_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
       "rival_statement_id": "05f18e21-6712-454c-9aa8-121de72607e8",
       "sense_definition_id": "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
       "outcome": "excluded",
-      "conditions": "boxKExcludesContingencyPremise: the node at (sigma, m, w, CN) alone; no frame condition, no excluded middle. For the weaker stage-one node, with excluded middle, the converse holds too (controls, law 8): A2 at w is exactly its denial.",
-      "scope": "Same route profile m, world w, frame m.ontic.frame and rigid candidates; NECESSARY_2 box-existence at w; concreteness is the profile's predicate.",
-      "coverage": "Not a sense fork: one sense of necessity (NECESSARY_2, NecessaryAt) on both sides.",
+      "conditions": "necessaryConcreteExcludesContingencyPremise: the node at (m, w) alone; no frame condition, no excluded middle. With excluded middle the converse holds too (controls, law 8): S2 at w is exactly the node's denial.",
+      "scope": "Same route profile m, world w, frame m.ontic.frame and rigid candidates; NECESSARY_2 box-existence at w against possible absence over the same frame (NECESSARY_11 carrier, bridged by the node itself); concreteness is the profile's predicate.",
+      "coverage": "Not a sense fork: one necessity relation (NecessaryAt) and its dual possibility on the same frame.",
       "exclusivity": "Not used.",
-      "next_step": "Whether A2 at the candidate necessary being has support independent of the node's denial: the conceivability-to-possibility bridge (#248 laws) at this node."
+      "next_step": "Whether S2 at the candidate necessary being has support independent of the node's denial: the conceivability-to-possibility bridge (#248 laws) at this node."
     }
   ]
 }

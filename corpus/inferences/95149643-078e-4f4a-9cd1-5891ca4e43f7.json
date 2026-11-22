@@ -10,7 +10,7 @@
   ],
   "output_statement_id": "80b3e9bf-b349-4f91-9667-3aa275531ccc",
   "rule": "Induction on the finite list, one subtraction per step, transitivity of access",
-  "meaning": "Start at a world accessible from w whose concrete objects lie in a finite list. For the next listed object, excluded middle decides whether it is present. If it is, A2 gives a world where it is absent and A3 a world accessible from the current one where it is absent with no newcomer; transitivity makes that world accessible from w and its concrete objects lie in the rest of the list. If it is not, the rest of the list already covers the current world. When the list is exhausted the current world has no concrete object. Every non-logical premise is needed: each omission model keeps the others and falsifies the conclusion (controls).",
+  "meaning": "Start at a world accessible from w whose concrete objects lie in a finite list. For the next listed object, excluded middle decides whether it is present. If it is, S2 gives a world where it is absent and S3 a world accessible from the current one where it is absent with no newcomer; transitivity makes that world accessible from w and its concrete objects lie in the rest of the list. If it is not, the rest of the list already covers the current world. When the list is exhausted the current world has no concrete object. Every non-logical premise is needed: each omission model keeps the others and falsifies the conclusion (controls).",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }
