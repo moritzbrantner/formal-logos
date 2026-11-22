@@ -1,0 +1,23 @@
+{
+  "id": "f356048e-c066-4e25-9dcc-4b6911c2e0b7",
+  "label": "me, the meditator: the designated being whose idea of the infinite the argument concerns",
+  "term": "the meditator (first person of the idea-of-the-infinite argument)",
+  "definition": "`IdeaFrame.me` is a designated being of the carrier, the one who says 'I have an idea of the infinite' and 'I am not infinite'. It is fixed by the frame, so first-person premises are statements about this being, not about every thinker or about some thinker. Nothing in its definition says that it exists at a world, is concrete, is finite, bears any episode or is a substance.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.CartesianIdeaOfInfinite.IdeaFrame.me",
+  "note": "Analyst stipulation, attribution deferred (navigation: Descartes, Meditations II-III, the 'I' of the cogito). Distinguished from the anonymous bearer of the cogito premises (ThoughtOccurs with the bearer principle gives Thinks x for some x, not for the meditator) and from the selected thinker of ThinkingRootFork. Open obligations: identity of the meditator with the bearer that the anonymous cogito delivers, its existence at the selected world (EveryBearerExistsAt, c821487b) and its finitude are separate premises, not part of this definition.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "IdeaFrame.me is a designated being, the meditator of the first-person premises. Lean fixes only that it is a being of the carrier.",
+    "examples": [
+      "P1 and P4 are statements about this being; MeditatorThinks says it bears some occurring episode."
+    ],
+    "exclusions": [
+      "The anonymous bearer delivered by ThoughtOccurs with the bearer principle.",
+      "Every thinker: first-person premises do not generalize."
+    ],
+    "open_obligations": [
+      "Existence at the selected world, concreteness, finitude and identity with the anonymous cogito bearer are separate premises."
+    ]
+  }
+}

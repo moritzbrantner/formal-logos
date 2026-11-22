@@ -1,0 +1,11 @@
+{
+  "id": "114e32ea-99bb-4d3b-8f8d-3adda4508987",
+  "label": "Finite frame: formal containment and q.4 a.2 preexistence without objective adequacy",
+  "argument_id": "f3d93dda-4dbf-4368-9ff2-474629e280f2",
+  "challenge_module": "TruthCore.Results.Causality.CartesianIdeaOfInfinite.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CartesianIdeaOfInfinite.Solution",
+  "theorem": "TruthCore.Results.Causality.CartesianIdeaOfInfinite.objectiveAdequacySeparationControl",
+  "comparator_config": "results/114e32ea-99bb-4d3b-8f8d-3adda4508987/comparator.json",
+  "status": "solution-present",
+  "description": "Rejected-reading certificate: objective adequacy is not an instance of the formal containment clause. On one finite frame the meditator is the only being and causes (CAUSE_2) its own being in act in every respect, so respect-wise containment in every cause and q.4 a.2 preexistence hold; the meditator is in act in being and bears an occurring idea of the infinite, is the only possible cause of that idea's objective reality, and is in act in the respect some false, which the statement certifies to be had exactly by bearers of an occurring idea of the infinite; it is not in act in the infinite itself. P1, P2 and P4 hold, objective adequacy fails and nothing is in act in the infinite. This is the formal locus of the objection that an idea of the infinite needs only a cause able to represent the infinite: the formal clause, as encoded, does not exclude it. A finite interpretation only."
+}

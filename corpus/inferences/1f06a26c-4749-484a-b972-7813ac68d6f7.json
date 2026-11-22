@@ -1,0 +1,10 @@
+{
+  "id": "1f06a26c-4749-484a-b972-7813ac68d6f7",
+  "label": "Finite frame: formal containment and q.4 a.2 preexistence without objective adequacy (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "90991d99-5c87-44e1-ac6e-e1a684538337",
+  "rule": "Finite case analysis on Unit and Option Bool",
+  "meaning": "Rejected-reading certificate: objective adequacy is not an instance of the formal containment clause. On one finite frame the meditator is the only being and causes (CAUSE_2) its own being in act in every respect, so respect-wise containment in every cause and q.4 a.2 preexistence hold; the meditator is in act in being and bears an occurring idea of the infinite, is the only possible cause of that idea's objective reality, and is in act in the respect some false, which the statement certifies to be had exactly by bearers of an occurring idea of the infinite; it is not in act in the infinite itself. P1, P2 and P4 hold, objective adequacy fails and nothing is in act in the infinite. This is the formal locus of the objection that an idea of the infinite needs only a cause able to represent the infinite: the formal clause, as encoded, does not exclude it. A finite interpretation only.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

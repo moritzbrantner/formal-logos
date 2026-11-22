@@ -1,0 +1,34 @@
+{
+  "id": "7aafbc69-3e5b-4f27-a734-84eeb88eedc7",
+  "label": "Something maximal in being causes all being, from the cause of the idea of INFINITE_3",
+  "premise_statement_ids": [
+    "4c815f13-6b1a-42d7-b1a4-c3713eb2d3bc",
+    "1a289b83-4729-4250-b35a-d579f1b4831a",
+    "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7"
+  ],
+  "conclusion_statement_id": "0881e859-c4c3-53ff-9bec-b61294e12d51",
+  "inference_ids": [
+    "1575a83a-2326-4901-a6c5-898034286743"
+  ],
+  "meaning": "Bridge from the idea-of-the-infinite argument to the quarta via's conclusion STMT-MAXIME-ENS-CAUSES-BEING-OF-ALL, over one grades frame. The cause c of the meditator's idea of the infinite is in act in the infinite (INFINITE_3). The open bridge 'whatever is in act in the infinite is maximal in being' makes c maximal in being (MAXIME_ENS_1), and the genus principle at being (da09703b) makes c a cause of being (CAUSE_2) of every other being that has being. So something maximal in being causes being in every other being. This replaces the quarta via's grades, approach-to-a-maximum and truth-to-being premises by the idea-of-the-infinite premises and one open maximality bridge (1a289b83). Only the infinite-to-maximality bridge connects the two families; it is not a definitional equality. Two cause relations occur and are not identified: ObjCause in the first premise (a cause of an idea's representing a respect, a relation of a being to an episode and a respect, with Lean type B → Episode → R → Prop) and CAUSE_2 in the genus principle and the conclusion (a cause of a being's being in act in a respect, type B → B → R → Prop). They are distinct relations of distinct types, so no step can pass between them; the proof uses only the existential witness and its being in act in INFINITE_3. Every premise stays open.",
+  "definition_ids": [
+    "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",
+    "89b53040-ee5c-425b-aa77-388ddbb42dba",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "a2a8de58-42e0-5481-b7fb-848ae8602036",
+    "5766de66-8a37-5b04-aa65-9eec53319f50",
+    "ce8ccc1a-4f9a-5904-a10c-548778d79b66",
+    "c0cbef1c-060a-54d4-bb49-8d59da40caf3",
+    "d8e82792-9d80-4a6f-8181-b2fccc3f06af",
+    "ef3ee5ec-1d44-4bd7-93f9-376c1cf6f6b3",
+    "f356048e-c066-4e25-9dcc-4b6911c2e0b7"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "587c53cf-c2a8-51f6-b8c1-013e67756dc6",
+    "4f1d0cf6-88ba-59e3-814d-01450c2bf282",
+    "cdb0de59-5015-4fa6-986c-4cd1527dd2b3"
+  ]
+}
