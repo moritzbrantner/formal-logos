@@ -1,0 +1,18 @@
+{
+  "id": "9e4a49c5-53b1-4fa6-933a-356e871edffc",
+  "label": "Same profile witness underived from the two support bridges and Kant identification (inference)",
+  "input_statement_ids": [
+    "86badf93-78b1-46c1-90a2-97ed6a99d636",
+    "93804e57-d09d-4d9b-908b-29b0d86eeef7",
+    "84ae3700-f0a9-5d49-9c8c-0ccc9cb40e8a",
+    "2107b9df-b7bc-5f62-af64-9c23f6819c08",
+    "47a97912-335f-52f7-a715-63592368f0fe",
+    "96d25c42-71aa-5fa0-841d-9aa62d91e1be",
+    "bd983df2-058a-5503-89a1-bbebe87f958b"
+  ],
+  "output_statement_id": "ecbea06a-6431-4902-935f-c41bd21614e3",
+  "rule": "Rigid profile identity, the two support bridges and well-founded support exclude a self predecessor",
+  "meaning": "Weaker sibling of the same-witness argument: the same five other inputs, with no contingent ground of the necessary and no novel necessary support in place of necessary-predecessor lifting. A putative supporter of the actual exemplar at an admitted world is necessary (no contingent ground), hence most real and the exemplar itself (Kant identification and numerical uniqueness); the exemplar exists actually, so no novel necessary support moves its self-support edge to the actual world, contradicting well-founded actual support. No actual reflexivity, excluded middle or frame axiom is used. bd983df2 carries the edge transport for the _1→_3 passage; the source's actual existence in PresentEsseSupport comes from 86badf93 through the identification (84ae3700, 2107b9df, 96d25c42). Support is the supplied relation, not automatically efficient cause. Establishes no premise.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
