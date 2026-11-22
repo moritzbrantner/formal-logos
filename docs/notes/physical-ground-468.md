@@ -343,41 +343,46 @@ and an impersonal source can reject it or reject intrinsic cognitive uptake.
 
 1. \`WisdomSelfCapacity\`: for every *OwnBeing* bearer possessing the selected
    wisdom determination, there is a correctly self-directed content and an
-   intrinsic ability to assent to that content. The source's identity as
+   intrinsic ability to apprehension to that content. The source's identity as
    subject and aboutness target is retained: \`About content g\` and
-   \`CanAssent g content\`. A power to produce an *other* being with that
+   \`CanApprehend g content\`. A power to produce an *other* being with that
    ability does not satisfy this premise.
 2. \`SelfCapacityExercisedOrPotent\`: for that same content, the subsistent
-   source either actually assents or has potency at the *self-understanding*
+   source either actually apprehensions or has potency at the *self-understanding*
    respect. This is not the broad claim that every active productive capacity
    must continuously produce every possible effect. The separate \`PureAct
    InPotency g\` hypothesis eliminates the second branch. In particular,
    \`InActFormallyOrVirtually g understanding\` is **not** used in place of
-   actual assent: the earlier operation consumer's inclusive-\`InAct\`
+   actual apprehension: the earlier operation consumer's inclusive-\`InAct\`
    boundary remains open.
-3. \`TrueSelfAssentReasonBased\`: a correct self-directed assent by this source
-   is genuinely supported by reasons/content, rather than a correct register
-   reading. This is an OPEN epistemic/intentional-norm application. A supplied
+3. \`TrueSelfApprehensionGrounded\`: a correct self-directed apprehension by this source
+   is intrinsically grounded in the intelligible object, rather than a correct
+   register reading. This does not require discursive reasoning, a distinct
+   mental habit, or passive acquisition. This is an OPEN epistemic/intentional-norm application. A supplied
    truth condition and successful output alone do not establish it.
 
 Under these premises, \`intrinsicSelfKnowledgeFromWisdom\` concludes
-\`∃ content, About content g ∧ Correct content g ∧ Assents g content ∧
-ReasonBased g content\`. The result is stronger than bare capacity and
+\`∃ content, About content g ∧ Correct content g ∧ Apprehends g content ∧
+CognitivelyGrounded g content\`. The result is stronger than bare capacity and
 weaker than omniscience, temporal episode production, or a complete
-metaphysical theory of intentionality. The predicates \`Assents\` and
-\`ReasonBased\` are **substantive primitives**: their actual recognition as
+metaphysical theory of intentionality. The predicates \`Apprehends\` and
+\`CognitivelyGrounded\` are **substantive primitives**: their actual recognition as
 a rational operation is not licensed by the English labels, and an accurate
-noncognitive device must not count as assent by stipulation.
+noncognitive device must not count as apprehension by stipulation.
 
 The result \`actualRootSelfKnowledgeFromWisdom\` also consumes the already
 existing root-without-limitation interface together with
 \`UnlimitedIsOwnBeing\` to supply \`OwnBeing g\` at that **same actual root**,
-retaining that selected ground relation and actual world. The new
-\`godHasIntellectFromWholePowerWisdom\` is a conditional code-level consumer
+retaining that selected ground relation and actual world. The weaker \`godHasIntellectFromWisdomCapacity\` is a conditional code-level
+consumer of the unchanged capacity-level \`GodHasIntellect\`. It needs a
+recognition of real self-directed cognitive aptitude as \`HAS_INTELLECT_1\`,
+but **does not require pure-act exercise or actual self-apprehension**.
+The stronger \`godHasIntellectFromWholePowerWisdom\` is a second,
+non-independent conditional code-level consumer
 of unchanged \`GodHasIntellect IsGod HasIntellect\`. Its extra scope premises
 make each supplied GOD_4 bearer both OwnBeing and pure act; its *recognition*
-premise separately licenses from this positive self-knowledge specification to
-the old \`HAS_INTELLECT_1\` (capacity). Neither theorem creates a GOD_4 witness
+premise separately licenses from this stronger self-knowledge specification
+to the old \`HAS_INTELLECT_1\` (capacity). Neither theorem creates a GOD_4 witness
 or registers a new root-route edge. There is no need to re-prove the existing
 will-follows-intellect consumer.
 
@@ -386,13 +391,13 @@ one-wisdom-determination interpretation, \`true\` is the existing OwnBeing
 source and \`false\` is a being with a cognitive capacity. The source has
 wisdom, no potency, and a nonempty causal relation to the cognitive effect.
 \`About c g\` and \`Correct c g\` hold exactly when \`c = g\`. Vary only the
-source's cognitive capacity, actual assent, or basing relation:
+source's cognitive capacity, actual apprehension, or basing relation:
 
-| Case | Wisdom→self capacity | Capacity exercised or impotent | Rational basing | Actual intrinsic self-knowledge |
+| Case | Wisdom→self capacity | Capacity exercised or in potency | Cognitive grounding | Actual intrinsic self-knowledge |
 | --- | --- | --- | --- | --- |
 | Productive-only source | false | true (vacuous) | true (vacuous) | false |
-| Dormant self capacity | true | **false** (no potency, no assent) | true (vacuous) | false |
-| Accurate but unbased assent | true | true | **false** | false |
+| Dormant self capacity | true | **false** (no potency, no apprehension) | true (vacuous) | false |
+| Accurate but unbased apprehension | true | true | **false** | false |
 | Fully source-borne cognition | true | true | true | true |
 
 These are omission-model boundaries for **the listed formulas**. They do not
@@ -412,7 +417,7 @@ in \`intentionality-943.md\` (producer/consumer guidance, goals and errors),
 \`form-selection-1380.md\` (accuracy vs reference, sensor/replay), and
 \`mind-physicalism-fork-419.md\` supply concrete comparison work. This rival
 explains local capacities while denying that *the first source* has
-self-directed rational assent. Against the proposed **whole-perfection**
+self-directed rational apprehension. Against the proposed **whole-perfection**
 argument it must contest either the positive-wisdom classification of the
 source or the reading of perfect wisdom as requiring intrinsic content-sensitive
 capacity. Its ability to simulate truthful outputs alone does not decide the
@@ -434,7 +439,7 @@ recounted as independent confirmation merely because the same root is used.
 non-circular semantics for \`WisdomSelfCapacity\`: establish why wisdom in
 subsistent actuality must include the *source's* ability to apprehend an
 intelligible content, rather than only its power to give that ability to
-another. Give a nonpassive, source-intrinsic account of rational basing which
+another. Give a nonpassive, source-intrinsic account of intrinsic cognitive grounding which
 distinguishes the exact selected content from correct noncognitive output
 under matching causal conditions. Then revisit q.14 a.2's self-knowledge
 through pure act and q.14 a.4's nonseparate operation, without using
