@@ -37,8 +37,10 @@ composition/uniter to actual-world causal interfaces; it prevents
 future users from silently assuming that an arbitrary `CausesIn`
 witness is the uniter. It does *not* grant that the same `c` exists
 now, efficiently causes in the same respect as `esse`, or corresponds
-to `Ontic.Causes` at the root's world. Those remain distinct OPEN
-interpretation obligations. The formal strengthening introduces
+to `Ontic.Causes` at the root's world. The repaired seventh control
+below shows that these respects can come apart under the other premises:
+its uniter efficiently causes the composite only in a non-esse respect.
+Those remain distinct OPEN interpretation obligations. The formal strengthening introduces
 no new leaf or attributed source claim.
 
 ### What was incomplete in the earlier certificate
@@ -55,14 +57,32 @@ test, not an invalid proof.
 
 The new seventh `ProperPartBridgeControl` uses four distinct individuals:
 `3` is the composite; `0` and `1` are its two proper components;
-`2` is a third, numerically distinct uniter, efficiently causing
-`3` in the single respect. The uniting relation has a witnessed tuple,
-and every component is distinct from the whole. It jointly satisfies
-the other four original union-premises and exhibits a populated composite,
-but `CausesIn _ _ esse` is empty. Thus neither actual **union in the
+`2` is a third, numerically distinct uniter. The fixture has two
+respects (`Bool`): `esse` is `true`, and `2` efficiently causes `3`
+only in the other respect `false`. Under the secunda-via gloss of
+`EfficientlyCausesIn` (an efficient cause of `x`'s being `r`), the
+uniter is therefore an efficient cause of the composite in a non-esse
+respect, not of its esse. The fixture also satisfies, and certifies,
+the genus-species link that efficient causing in a respect is
+`CausesIn` in that same respect, and certifies that nothing causes `3`
+in respect `esse`. The uniting relation has a witnessed tuple, and every
+component is distinct from the whole. It jointly satisfies the other
+four original union-premises and exhibits a populated composite, but
+`CausesIn _ 3 esse` is empty. Thus neither actual **union in the
 supplied relation**, genuinely distinct proper constituents, nor an
-efficient uniter *in some respect* logically supplies a cause of the
-same composite's esse. This does **not** construct a philosophically
+efficient uniter that causes the composite *in a non-esse respect*
+logically supplies a cause of the same composite's esse, even when
+efficient causing is counted as a case of `CausesIn`.
+
+An earlier draft of this control (reviewed head `386ddc266c`) used
+`Unit` as its only respect, so its uniter's efficient causing of `3`
+was literally `EfficientlyCausesIn 2 3 esse`; it separated only two
+unlinked causal primitives at `esse`, and the natural inclusion of
+efficient causing in `CausesIn` would have defeated it. The legacy
+fourth Bool control (omitting uniter-causes-being) has the same
+single-respect feature: it remains a valid formal omission of the
+encoded premise, but it does not by itself separate an efficient
+composer from a giver of esse. The repaired seventh control does. This does **not** construct a philosophically
 adequate world, demonstrate the falsity of the extra premise, or prove
 an actual-source counterexample. In particular the finite frame has no
 `ExistsAt` relation or independent explanation of the reality of its unity.

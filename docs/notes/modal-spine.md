@@ -14,8 +14,9 @@ The [proper-part and union-to-esse audit](composition-causal-scope.md#proper-par
 tightens the existing omission certificate for `fbee7f15`: the earlier
 Bool model could count its whole as one of its components, while the new
 Fin 4 control has **two genuine proper components** and a **third,
-distinct efficient uniter**, yet still no causal relation to the whole's
-esse. This supports the *formal independence* of the uniter-to-esse
+distinct efficient uniter** that causes the whole only in a non-esse
+respect (efficient causing counted as `CausesIn` in the same respect),
+yet still no causal relation to the whole's esse. This supports the *formal independence* of the uniter-to-esse
 bridge even on the intended proper-part test. It does not make the
 immanent rival true, invalidate the conditional argument, or establish
 the bridge: direct and cumulative warrant remain legitimate routes.

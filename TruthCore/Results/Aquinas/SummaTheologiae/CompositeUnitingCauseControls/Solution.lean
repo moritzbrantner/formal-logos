@@ -116,8 +116,9 @@ theorem checks : Control.Certificate := by
       exact Bool.noConfusion (h.1.symm.trans h.2)
 
   · -- A stronger omission: a genuine composite 3, two proper parts 0 and 1,
-    -- and a third, distinct efficient uniter 2. Their union is nonvacuous
-    -- but none of the efficient activity causes the composite's esse.
+    -- and a third, distinct efficient uniter 2 acting only in the non-esse
+    -- respect `false`. Efficient causing is included in `CausesIn`, the union
+    -- is nonvacuous, but nothing causes the composite's esse (respect `true`).
     have hPart0 : Control.properFixtureComponent 0 3 := by
       change (3 : Fin 4) = 3 ∧ ((0 : Fin 4) = 0 ∨ 0 = 1)
       exact ⟨rfl, Or.inl rfl⟩
@@ -129,7 +130,10 @@ theorem checks : Control.Certificate := by
         Control.properFixtureComponent 0 3 ∧
         Control.properFixtureComponent 1 3 ∧ (0 : Fin 4) ≠ 1
       exact ⟨rfl, hPart0, hPart1, by decide⟩
-    refine ⟨⟨3, rfl⟩, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+    have hNoEsse : ∀ c x, ¬ Control.properFixtureCauses c x Control.properFixtureEsse := by
+      intro c x h
+      exact Bool.noConfusion h.2.2
+    refine ⟨⟨3, rfl⟩, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
     · intro a x hPart
       rcases hPart with ⟨hx, hPart⟩
       rcases hPart with ha | ha
@@ -147,15 +151,21 @@ theorem checks : Control.Certificate := by
       exact ⟨2, rfl, ha, hb, hab⟩
     · intro c a b x hu
       obtain ⟨hc, ha, _, _⟩ := hu
-      exact ⟨(), hc, ha.1⟩
+      exact ⟨false, hc, ha.1, rfl⟩
     · intro x _ hx
-      obtain ⟨hc, hw⟩ := hx
+      obtain ⟨hc, hw, _⟩ := hx
       exact (by decide : (2 : Fin 4) ≠ 3) (hc.symm.trans hw)
     · exact ⟨2, 0, 1, 3, hUnion⟩
+    · exact Bool.noConfusion
+    · intro c x r h
+      exact h
+    · exact ⟨2, false, rfl, rfl, rfl⟩
+    · intro ⟨c, hc⟩
+      exact hNoEsse c 3 hc
     · intro h
-      exact h 2 0 1 3 hUnion
+      exact hNoEsse 2 3 (h 2 0 1 3 hUnion)
     · intro h
       obtain ⟨c, _, hc⟩ := h 3 (by rfl)
-      exact hc
+      exact hNoEsse c 3 hc
 
 end TruthCore.Results.Aquinas.SummaTheologiae.CompositeUnitingCauseControls
