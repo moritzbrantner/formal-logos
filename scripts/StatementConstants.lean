@@ -37,10 +37,10 @@ def headOf (env : Environment) (package : Name) (ty : Expr) : String :=
   | .const c _ => if isLocal env package c then c.toString else ""
   | _ => ""
 
-/-- The final codomain of a type (under all its `∀` binders). -/
-def codomain : Expr → Expr
-  | .forallE _ _ body _ => codomain body
-  | e => e
+/-- A type under its first `n` `∀` binders. -/
+def dropForalls : Nat → Expr → Expr
+  | n + 1, .forallE _ _ body _ => dropForalls n body
+  | _, e => e
 
 /-- Each binder's local type head, and the local heads of its structure's
 field types (empty when the binder's type is no local structure). -/
@@ -49,10 +49,15 @@ def binderTypes (env : Environment) (package : Name) : Expr → List (String × 
     let fields := match d.getAppFn with
       | .const s _ =>
         if isLocal env package s && isStructure env s then
+          let params := match env.find? s with
+            | some (.inductInfo v) => v.numParams
+            | _ => 0
           (getStructureFields env s).filterMap fun f => do
             let proj ← getProjFnForField? env s f
             let info ← env.find? proj
-            let h := headOf env package (codomain info.type)
+            -- The field's type: under the structure's parameters and `self`
+            -- only, so a function-valued field has no head.
+            let h := headOf env package (dropForalls (params + 1) info.type)
             if h.isEmpty then none else some h
         else #[]
       | _ => #[]

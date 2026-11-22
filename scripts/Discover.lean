@@ -636,11 +636,15 @@ partial def conjuncts (e : Expr) : Array Expr :=
 → Q g`, or one hypothesis `A g ∧ B g`) invites bridges `∀ g, Simple g → R g`
 that make one conjunct sufficient for what the whole conjunction is asked to
 give. Such a bridge is formally a candidate but philosophically uninformative,
-and every one of them is stronger than the single conjunctive bridge
-`∀ g, Simple g → … → HasWill g → R g`, which unlocks the target whenever one of
-them does. The search therefore skips single-conjunct bridges of a conjunctive
-antecedent and tries the conjunctive version once per consequent relation
-(#1819). -/
+and each is stronger than the conjunctive bridge
+`∀ g, Simple g → … → HasWill g → R g` over the same element. The conjunctive
+builder matches each argument of `R` to the first unused antecedent element of
+its type, so for an antecedent with several elements of one type it may not be
+the weakening of a given single bridge, and it need not unlock every target a
+single bridge does. The search therefore tries the conjunctive version first,
+once per consequent relation (#1819); only when one passes are the
+single-conjunct bridges dropped. Otherwise they are tried after the others and
+reported as `single_conjunct` (demoted in the ranking). -/
 
 /-- The relations heading the conjuncts of the expanded conclusion's antecedent
 (at least two, else none), and the conjunctive bridges
@@ -732,6 +736,10 @@ def checkBridge (xs : Array Expr) (origins : Array Origin) (hyps : Array (Nat ×
     ("used", toJson (proof.used.filter (· != 1000))),
     ("domain_identified_by_name", toJson (domains (proof.used.filter (· != 1000)) assumedDecls))]
 
+/-- At most this many conjunctive bridges are checked per goal, besides the
+48 ordinary bridge candidates. -/
+def maxConjunctive : Nat := 8
+
 def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
     (hyps : Array (Nat × Expr)) (concl : Expr) (u : NameSet) (heartbeats : Nat)
     (domains : Array Nat → Array Name → Array String) :
@@ -771,22 +779,27 @@ def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
       -- Both directions: the conclusion's antecedents may need the premises'
       -- vocabulary as much as the premises' consequents need the conclusion's.
       let pairs := #[((pn, p), (qn, q), near p, near q), ((qn, q), (pn, p), near q, near p)]
-      -- One conjunct of a conjunctive antecedent alone is never tried as sufficient.
-      let pairs := pairs.filter fun ((a, _), (b, _), _, _) => !(ante.contains a && !ante.contains b)
       if !inC p && !inH q then first := first ++ pairs else later := later ++ pairs
+  -- One conjunct of a conjunctive antecedent alone, made sufficient.
+  let single (a b : String) : Bool := ante.contains a && !ante.contains b
   let mut out : Array Json := #[]
-  let mut tried := 0
-  for (qn, bridge) in conjunctive do
-    if tried ≥ 48 then return out
-    tried := tried + 1
-    -- The full budget: one conjunctive bridge stands for many single ones, and
-    -- its long antecedent makes the search heavier.
+  -- Conjunctive bridges have their own cap (`maxConjunctive`) and the full
+  -- budget: one stands for many single ones, and its long antecedent makes the
+  -- search heavier.
+  let mut conjunctiveFound := false
+  for (qn, bridge) in conjunctive.extract 0 maxConjunctive do
     let some fields ← checkBridge xs origins hyps concl u heartbeats domains bridge heartbeats
       | continue
+    conjunctiveFound := true
     out := out.push (Json.mkObj ([("from", Json.str (" ∧ ".intercalate ante.toList)), ("to", Json.str qn),
       ("fixed", toJson (#[] : Array String)), ("conjunctive", Json.bool true),
       ("replaces_single_conjuncts", toJson ante)] ++ fields))
-  for ((pn, p), (qn, q), pe, qe) in first ++ later do
+  -- Single-conjunct bridges are dropped when a conjunctive bridge passed;
+  -- otherwise they are tried last and reported demoted (`single_conjunct`).
+  let ordered := (first ++ later).filter (fun ((a, _), (b, _), _, _) => !single a b) ++
+    (if conjunctiveFound then #[] else (first ++ later).filter fun ((a, _), (b, _), _, _) => single a b)
+  let mut tried := 0
+  for ((pn, p), (qn, q), pe, qe) in ordered do
     for fix in [true, false] do
       if tried ≥ 48 then return out
       let some (bridge, fixed) ← bridgeFor p q pe qe fix | continue
@@ -794,7 +807,7 @@ def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
       let some fields ← checkBridge xs origins hyps concl u heartbeats domains bridge
           (max 2000 (heartbeats / 4)) | continue
       out := out.push (Json.mkObj ([("from", Json.str pn), ("to", Json.str qn),
-        ("fixed", toJson fixed)] ++ fields))
+        ("fixed", toJson fixed), ("single_conjunct", Json.bool (single pn qn))] ++ fields))
       break
   return out
 
@@ -805,13 +818,18 @@ structure binder: `OnticTSchemaValid (o : Ontic W B)` against
 `OnticFrameKT (m : Profile W B)`, whose `m.ontic : Ontic W B`. Binding by name,
 type or tag never identifies `o` with `m.ontic`, so the goal over separate `o`
 and `m` is false although `∀ m, OnticFrameKT m → OnticTSchemaValid m.ontic`
-may hold. When the goal fails, each such projection (a non-instance target
-binder, a premise's structure binder with a field of definitionally equal
-type) is tried in turn as an explicit binding choice: the target binder is
-replaced by the projection everywhere and the goal searched again. A choice
-that closes the goal is reported (`projection`, and `bound_to` on the binder);
-none is ever made silently, and a goal closed only under it is a different
-theorem from the one over separate binders. -/
+may hold. When the goal fails, each such projection (a target binder that is
+a value, never an instance, carrier, predicate or function, even through a
+definitional alias; a non-instance premise structure binder with a field of
+definitionally equal type) is tried in turn as an explicit binding choice: the
+target binder is replaced by the projection everywhere and the goal searched
+again. A choice that closes the goal is reported (`projection`, and `bound_to`
+on the binder); none is ever made silently. A goal closed under it is a
+specialization of the target statement to the projection, not the statement
+over an arbitrary binder. A target binder with several candidate projections
+is `ambiguous` (identification by type alone), and a choice whose structure
+premise minimization drops is `projection_unused`: `truth discover` rejects
+both. -/
 
 /-- At most this many projection choices are searched per goal. -/
 def maxProjections : Nat := 4
@@ -831,10 +849,15 @@ def projectionCandidates (target : Name) (xs : Array Expr) (origins : Array Orig
     -- Values only (an element, a structure such as `o : Ontic W B`): a
     -- predicate or function binder is never bound to a field of matching type,
     -- which would equate unrelated relations (`Simple := D.Lives`).
-    if xt.isSort || (← isProp xt) || (← whnfR xt).isForall then continue
+    -- `forallTelescopeReducing` unfolds at default transparency, so an alias
+    -- such as `def Pred B := B → Prop` (or Mathlib's `Set B`) counts as a
+    -- predicate too.
+    if xt.isSort || (← isProp xt) then continue
+    if ← forallTelescopeReducing xt fun ys _ => pure !ys.isEmpty then continue
     for j in [0:xs.size] do
       let y := xs[j]!
       if origins[j]!.decl == target then continue
+      if (← y.fvarId!.getBinderInfo).isInstImplicit then continue
       let yt ← whnfR (← instantiateMVars (← inferType y))
       let .const s _ := yt.getAppFn | continue
       unless isStructure env s do continue
@@ -877,7 +900,8 @@ and its literal-negation check, the transcription probe, vacuous truth,
 witnesses and the theorem signature. -/
 def finish (target : Name) (premises : Array Name) (heartbeats : Nat)
     (byName : IO.Ref (Array Membership)) (xs : Array Expr) (hyps : Array (Nat × Expr))
-    (concl : Expr) (u : NameSet) (added : Array Json) (full : Proved) (projection : Json) :
+    (concl : Expr) (u : NameSet) (added : Array Json) (full : Proved) (projection : Json)
+    (structureBinder : Option Expr := none) :
     TermElabM Json := do
     -- Duper is the authority for the Solution: re-prove an ATP-found goal on its core.
     let start ← if full.prover == "duper" then pure (some full) else
@@ -888,6 +912,12 @@ def finish (target : Name) (premises : Array Name) (heartbeats : Nat)
           ("reconstruction", "Duper did not reprove the premise core the external prover selected")]
     let (minimal, log, best) ← minimize xs hyps concl u heartbeats start
     let minHyps := hyps.filter fun (i, _) => minimal.contains i
+    -- Under a projection binding, a minimal premise must still speak of the
+    -- structure binder: otherwise the premise that introduced it was dropped
+    -- and the "derivation" is about the structure alone (`projection_unused`).
+    let projectionUnused := match structureBinder with
+      | some y => !minHyps.any fun (_, h) => h.containsFVar y.fvarId!
+      | none => false
     -- An incompatibility is checked over the premises' own binders only (`proveOwn`).
     let vacuous ← proveOwn xs minHyps (Lean.mkConst ``False) u heartbeats
     let (vacuousCore, core, coreNames, coreProof) ← match vacuous with
@@ -940,6 +970,7 @@ def finish (target : Name) (premises : Array Name) (heartbeats : Nat)
       ("omissions", Json.arr omissions),
       ("binders", toJson added),
       ("projection", projection),
+      ("projection_unused", Json.bool projectionUnused),
       ("alone", Json.null),
       ("closed", proved (some full)),
       ("minimal", toJson minimal),
@@ -1006,21 +1037,39 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
         ("unfold", jsonNames ((← unfoldSet #[target]).toArray.qsort Name.lt))]
     if let some full ← prove xs hyps concl u heartbeats zip then
       return ← finish target premises heartbeats byName xs hyps concl u added full Json.null
-    -- Projection binding choices (explicit and reported, never silent).
+    -- Projection binding choices (explicit and reported, never silent). A
+    -- target binder with more than one candidate projection (two fields, or
+    -- two structure binders, of its type) is identified by type alone: the
+    -- choice is reported `ambiguous` and `truth discover` rejects it
+    -- (`projection_ambiguous`).
+    let candidates ← projectionCandidates target xs origins
+    let label (j : Nat) (field : Name) : String :=
+      s!"{origins[j]!.decl}.{origins[j]!.binder}.{field}"
     let mut tried : Array Json := #[]
-    for (i, j, field, value) in (← projectionCandidates target xs origins).extract 0 maxProjections do
+    let mut unused : Option Json := none
+    for (i, j, field, value) in candidates.extract 0 maxProjections do
       let o := origins[i]!
       let p := origins[j]!
+      let alternatives := (candidates.filter (·.1 == i)).map fun (_, j', f', _) => Json.str (label j' f')
       let choice := Json.mkObj [("binder", Json.str s!"{o.decl}.{o.binder}"),
-        ("bound_to", Json.str s!"{p.decl}.{p.binder}.{field}"),
-        ("structure_binder", Json.str s!"{p.decl}.{p.binder}"), ("field", Json.str field.toString)]
+        ("bound_to", Json.str (label j field)),
+        ("structure_binder", Json.str s!"{p.decl}.{p.binder}"), ("field", Json.str field.toString),
+        ("ambiguous", Json.bool (alternatives.size > 1)), ("alternatives", Json.arr alternatives)]
       tried := tried.push choice
       let added' := added.mapIdx fun k b =>
-        if k == i then b.setObjVal! "bound_to" (Json.str s!"{p.decl}.{p.binder}.{field}") else b
+        if k == i then b.setObjVal! "bound_to" (Json.str (label j field)) else b
+      -- The structure binder's position once `xs[i]` is removed.
+      let j' := if j > i then j - 1 else j
       let result ← withProjection xs hyps concl i value fun ys hs c => do
         let some full ← prove ys hs c u heartbeats zip | return none
-        some <$> finish target premises heartbeats byName ys hs c u added' full choice
-      if let some json := result then return json
+        some <$> finish target premises heartbeats byName ys hs c u added' full choice ys[j']?
+      if let some json := result then
+        -- A choice whose structure premise minimization dropped is kept only
+        -- as the report of last resort; another choice may use its premise.
+        if (json.getObjValAs? Bool "projection_unused").toOption == some true then
+          if unused.isNone then unused := some json
+        else return json
+    if let some json := unused then return json
     let identified ← byName.get
     let domains (used : Array Nat) (extra : Array Name) : Array String :=
       keptIdentifications identified ((used.filterMap fun i => premises[i]?).push target ++ extra)

@@ -1089,12 +1089,65 @@ pub fn projection_flag(outcome: &Value) -> Option<String> {
     let field = |k: &str| choice.get(k).and_then(Value::as_str).unwrap_or_default();
     Some(format!(
         "binding choice: the target binder {} is bound to the projection {} (field {} of {}); \
-         the theorem is over the projection, not over separate binders",
+         the theorem is a specialization of the target to the projection, not the target over \
+         an arbitrary binder",
         field("binder"),
         field("bound_to"),
         field("field"),
         field("structure_binder")
     ))
+}
+
+/// The projection filters of one outcome (#1819): `projection_ambiguous` when
+/// the target binder had another candidate projection (identification by type
+/// alone, rejected), `projection_unused` when minimization dropped the premise
+/// that introduced the structure (rejected), else the informational
+/// `projection_binding`.
+pub fn projection_filters(outcome: &Value) -> Vec<(String, String)> {
+    let Some(detail) = projection_flag(outcome) else {
+        return Vec::new();
+    };
+    let mut out = Vec::new();
+    let choice = &outcome["projection"];
+    if choice["ambiguous"].as_bool() == Some(true) {
+        let alternatives: Vec<&str> = choice["alternatives"]
+            .as_array()
+            .into_iter()
+            .flatten()
+            .filter_map(Value::as_str)
+            .collect();
+        out.push((
+            "projection_ambiguous".to_owned(),
+            format!(
+                "the target binder {} has several candidate projections ({}): binding one is identification by type alone",
+                choice["binder"].as_str().unwrap_or_default(),
+                alternatives.join(", ")
+            ),
+        ));
+    }
+    if outcome["projection_unused"].as_bool() == Some(true) {
+        out.push((
+            "projection_unused".to_owned(),
+            format!(
+                "minimization dropped the premise that introduced {}: the derivation does not use the structure it projects",
+                choice["structure_binder"].as_str().unwrap_or_default()
+            ),
+        ));
+    }
+    if out.is_empty() {
+        out.push(("projection_binding".to_owned(), detail));
+    }
+    out
+}
+
+/// The goals counted as proved: closed, or a vocabulary theorem, except those
+/// closed only by a literal P/¬P core, which proves anything (#1819).
+pub fn proved_count(findings: &[Finding]) -> usize {
+    findings
+        .iter()
+        .filter(|f| !f.outcome["closed"].is_null() || !f.outcome["alone"].is_null())
+        .filter(|f| !f.filters.iter().any(|(n, _)| n == "literal_negation"))
+        .count()
 }
 
 /// The `(premise, negating premise)` pair of an inconsistent core in which
@@ -1176,8 +1229,11 @@ pub fn classify(trial: &Trial, outcome: &Value, graph: &Graph, senses: &SenseChe
             ));
             return finding;
         }
-        if let Some(detail) = projection_flag(outcome) {
-            finding.filters.push(("projection_binding".into(), detail));
+        for (filter, detail) in projection_filters(outcome) {
+            if filter != "projection_binding" {
+                finding.kind = Kind::Filtered;
+            }
+            finding.filters.push((filter, detail));
         }
         let rival = finding.premises.iter().find_map(|a| {
             let rivals = graph.rivals.get(a)?;
@@ -1218,9 +1274,7 @@ pub fn classify(trial: &Trial, outcome: &Value, graph: &Graph, senses: &SenseChe
     if let Some(detail) = domain_flag(outcome) {
         finding.filters.push(("domain_by_name".into(), detail));
     }
-    if let Some(detail) = projection_flag(outcome) {
-        finding.filters.push(("projection_binding".into(), detail));
-    }
+    finding.filters.extend(projection_filters(outcome));
     let forbidden = forbidden_axioms(&axioms(&outcome["proof"]));
     if !forbidden.is_empty() {
         finding
@@ -2032,14 +2086,20 @@ pub struct Bridge {
     pub conjunctive: bool,
     /// The conjunct relations whose single-conjunct bridges it replaces.
     pub replaces_single_conjuncts: BTreeSet<String>,
+    /// One conjunct of a conjunctive antecedent made sufficient, reported
+    /// only because no conjunctive bridge passed; ranked after the others.
+    pub single_conjunct: bool,
 }
 
-/// The qualifications of a ranked bridge, for the text report: the elements it
-/// assumes and the domains its goals identified by name only. Empty for an
-/// unqualified bridge. (A conjunctive bridge's note is [`bridge_notes`].)
 /// Notes on a ranked bridge's form, for the text report: a conjunctive
 /// antecedent and the single-conjunct bridges it stands for.
 pub fn bridge_notes(bridge: &Bridge) -> Vec<String> {
+    if bridge.single_conjunct {
+        return vec![
+            "one conjunct of a conjunctive antecedent made sufficient; reported (demoted) because no conjunctive bridge passed"
+                .to_owned(),
+        ];
+    }
     if !bridge.conjunctive {
         return Vec::new();
     }
@@ -2054,6 +2114,9 @@ pub fn bridge_notes(bridge: &Bridge) -> Vec<String> {
     )]
 }
 
+/// The qualifications of a ranked bridge, for the text report: the elements it
+/// assumes and the domains its goals identified by name only. Empty for an
+/// unqualified bridge. (A bridge's form is noted by [`bridge_notes`].)
 pub fn bridge_qualifications(bridge: &Bridge) -> Vec<String> {
     let mut out = Vec::new();
     if !bridge.assumed_binders.is_empty() {
@@ -2078,7 +2141,7 @@ pub fn bridge_qualifications(bridge: &Bridge) -> Vec<String> {
 }
 
 /// The missing bridges of failed goals, ranked by the number of targets they
-/// unlock, then goals, then name.
+/// unlock, then goals, then name; single-conjunct bridges last.
 pub fn rank_bridges(findings: &[Finding]) -> Vec<Bridge> {
     let mut by_key: BTreeMap<(String, String, Vec<String>), Bridge> = BTreeMap::new();
     for finding in findings {
@@ -2112,6 +2175,7 @@ pub fn rank_bridges(findings: &[Finding]) -> Vec<Bridge> {
                         .filter_map(Value::as_str)
                         .map(str::to_owned)
                         .collect(),
+                    single_conjunct: b["single_conjunct"].as_bool() == Some(true),
                 });
             entry.targets.insert(finding.trial.target.clone());
             entry.goals.push(finding.trial.label.clone());
@@ -2141,9 +2205,9 @@ pub fn rank_bridges(findings: &[Finding]) -> Vec<Bridge> {
     }
     let mut rows: Vec<Bridge> = by_key.into_values().collect();
     rows.sort_by(|a, b| {
-        b.targets
-            .len()
-            .cmp(&a.targets.len())
+        a.single_conjunct
+            .cmp(&b.single_conjunct)
+            .then(b.targets.len().cmp(&a.targets.len()))
             .then(b.goals.len().cmp(&a.goals.len()))
             .then_with(|| (&a.from, &a.to).cmp(&(&b.from, &b.to)))
     });
@@ -2161,6 +2225,7 @@ pub fn bridge_json(bridge: &Bridge) -> Value {
         "domain_identifications": bridge.domain_identifications,
         "conjunctive": bridge.conjunctive,
         "replaces_single_conjuncts": bridge.replaces_single_conjuncts,
+        "single_conjunct": bridge.single_conjunct,
         "status": "candidate proposition: a research question, not a premise of any record",
     })
 }

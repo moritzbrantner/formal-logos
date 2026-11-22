@@ -192,14 +192,7 @@ fn run(args: &Args, operands: &[&str]) -> Output {
             }
         }
     }
-    // A goal closed only because its premises include P and ¬P proves
-    // anything: it is not counted as proved (#1819).
-    let proved = outcome
-        .findings
-        .iter()
-        .filter(|f| !f.outcome["closed"].is_null() || !f.outcome["alone"].is_null())
-        .filter(|f| !f.filters.iter().any(|(n, _)| n == "literal_negation"))
-        .count();
+    let proved = discover::proved_count(&outcome.findings);
     let minimized = outcome
         .findings
         .iter()

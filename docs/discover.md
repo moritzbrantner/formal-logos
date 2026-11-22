@@ -74,18 +74,28 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
    field of a premise's structure binder: `OnticTSchemaValid (o : Ontic W B)`
    against `OnticFrameKT (m : Profile W B)`, where the intended theorem is
    `∀ m, OnticFrameKT m → OnticTSchemaValid m.ontic` (#1819; proved by hand in
-   #1827). For each target binder that is a value (an element or a structure,
-   never an instance, carrier, predicate or function: binding `R := b.Q`
-   would equate two relations by their type alone) and each premise
-   structure binder with a field of definitionally equal type (at most four
-   choices),
-   the goal is searched again with the target binder replaced by that
-   projection. This is an explicit binding choice, never a silent one: the
-   choice that closes the goal is reported as `projection` and as `bound_to`
-   on the binder, the finding carries the `projection_binding` flag, a spec
+   #1827). Each target binder that is a value (an element or a structure) is
+   paired with each non-instance premise structure binder that has a field of
+   definitionally equal type, and the goal is searched again with the target
+   binder replaced by that projection (at most four choices; each failed choice
+   costs one more full search, so a goal with four choices may take up to five
+   times as long). Instances, carriers, predicates and functions are never
+   projected, also behind a definitional alias (`def Pred B := B → Prop`,
+   Mathlib's `Set B`): binding `R := b.Q` would equate two relations by type
+   alone. The binding is explicit and never silent. The choice that closes
+   the goal is reported as `projection` and as `bound_to` on the binder, a spec
    draft states it in the argument's `meaning`, and an unresolved goal lists
-   the choices it tried (`projections_tried`). A goal closed only under a
-   projection is a different theorem from the one over separate binders.
+   the choices it tried (`projections_tried`). A goal closed under a projection
+   is a *specialization* of the target statement to that projection, not the
+   statement over an arbitrary binder. Three outcomes are distinguished:
+   a unique choice is flagged `projection_binding` (informational); a target
+   binder with more than one candidate projection (two fields or two
+   structures of its type) is rejected as `projection_ambiguous`, since picking
+   the first that closes the goal is identification by type alone; and a
+   choice whose structure premise minimization drops (the target then follows
+   from other premises about the projected field alone) is rejected as
+   `projection_unused`, reported only when no other choice succeeds. Rejected
+   goals stay out of `--write-spec` drafts.
 5. **Search.** The hypotheses and the conclusion are delta-expanded through
    every project definition whose type ends in `Prop` (not projections or
    instances), and `duper [*]` runs under `--heartbeats` (thousands, default
@@ -127,6 +137,7 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
 | `domain_by_name` | a carrier or structure bundle was identified with one of another module by name only | reject (listed as needing a tag or bridge) |
 | `sense_bridge` | a premise is the registered bridge between the senses it mixes | flag |
 | `projection_binding` | the goal closed only with a target binder bound to a premise structure's field (step 4) | flag |
+| `projection_ambiguous`, `projection_unused` | the projected target binder had another candidate projection (identification by type alone); or minimization dropped the premise that introduced the projected structure (step 4) | reject |
 | `witness` | no one-point joint model was found; Duper found no contradiction, so consistency is unresolved | flag |
 | `vacuous_target` | the premises refute the target's own antecedents (`∀ x, A x → B x` holds because nothing is `A`): valid, but true vacuously | flag |
 | `axioms`, `certification`, `reconstruction` | an axiom outside the three; the theorem text fails; Duper did not reprove an ATP-found goal | reject |
@@ -168,13 +179,19 @@ relation (in one hypothesis, or in the conclusion)
 When the conclusion's antecedent is a conjunction of at least two relations
 (`∀ g, Simple g → Perfect g → … → HasWill g → Q g`, or one hypothesis
 `A g ∧ B g`), bridges that make one conjunct sufficient
-(`∀ g, Eternal g → IsGod σ g`) are not tried. Each is formally a candidate but
-philosophically uninformative, and each is stronger than the conjunctive
-bridge `∀ g, Simple g → … → HasWill g → IsGod σ g`, which unlocks the target
-whenever one of them does. The conjunctive version is tried first, under the
-full heartbeat budget (its long antecedent makes the search heavier), once per
-premise relation outside the antecedent, and reported with `conjunctive: true`
-and the conjuncts it stands for (`replaces_single_conjuncts`) (#1819).
+(`∀ g, Eternal g → IsGod σ g`) are formally candidates but philosophically
+uninformative. The conjunctive bridge `∀ g, Simple g → … → HasWill g →
+IsGod σ g` is tried first instead, once per premise relation outside the
+antecedent (at most eight, with their own cap and the full heartbeat budget,
+since the long antecedent makes the search heavier), and reported with
+`conjunctive: true` and the conjuncts it stands for
+(`replaces_single_conjuncts`) (#1819). When one passes, the single-conjunct
+bridges are dropped: over the same element each is stronger than it. The
+builder matches each argument of the consequent to the first unused
+antecedent element of its type, so with several elements of one type it need
+not unlock every target a single bridge does. When no conjunctive bridge
+passes, the single-conjunct bridges are therefore tried after all others and
+reported as `single_conjunct`, ranked last.
 
 A bridge is reported when
 the premises with it prove the target, do not prove `False`, and the bridge

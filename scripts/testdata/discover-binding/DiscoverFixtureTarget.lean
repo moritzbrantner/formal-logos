@@ -110,3 +110,46 @@ def PredTarget (B : Type) (R : B → Prop) (x : B) : Prop := R x
 def PredPremise (B : Type) (b : PBox B) : Prop := ∀ y, b.Q y
 
 end TruthCore.DiscoverFixtureTarget
+
+namespace TruthCore.DiscoverFixtureTarget
+
+/-- A predicate through a definitional alias (as Mathlib's `Set B`). -/
+def Pred (B : Type) : Type := B → Prop
+
+/-- A structure with an aliased-predicate field and an element field. -/
+structure PABox (B : Type) where
+  Q : Pred B
+  val : B
+
+/-- The target's `R : Pred B` is a predicate behind an alias: never projected. -/
+def AliasTarget (B : Type) (R : Pred B) (x : B) : Prop := R x
+
+/-- Everything is `b.Q`. -/
+def AliasPremise (B : Type) (b : PABox B) : Prop := ∀ y, b.Q y
+
+/-- A structure with two fields of the carrier's type. -/
+structure Two (B : Type) where
+  fst : B
+  snd : B
+
+/-- `P` holds at both fields: either projection of `x` closes the goal. -/
+def TwoPremise (B : Type) (P : B → Prop) (t : Two B) : Prop := P t.fst ∧ P t.snd
+
+/-- A box with a second field, so that no box is built from a value alone. -/
+structure Tagged (B T : Type) where
+  val : B
+  tag : T
+
+/-- `P` holds at every tagged value: proves `P b.val` for any `b`, without the
+premise that introduced `b`. -/
+def EveryBox (B T : Type) (P : B → Prop) : Prop := ∀ c : Tagged B T, P c.val
+
+/-- A content-free premise that only introduces a tagged box `b`. -/
+def OwnsBox (B T : Type) (b : Tagged B T) : Prop := True
+
+/-- A conjunctive antecedent over two elements of one type: the conjunctive
+builder applies `R` to the first element `g`, but `Q` is asked of `h`, so only
+the single-conjunct bridge `∀ a, A2 a → R a` unlocks it. -/
+def ConjSkew (B : Type) (A1 A2 Q : B → Prop) : Prop := ∀ g h, A1 g → A2 h → Q h
+
+end TruthCore.DiscoverFixtureTarget

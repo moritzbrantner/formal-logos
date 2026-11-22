@@ -283,6 +283,52 @@ class DiscoverBindingTest(unittest.TestCase):
         self.assertIsNone(outcome["closed"])
         self.assertEqual([c["bound_to"] for c in outcome["projections_tried"]], [f"{premise}.b.val"])
 
+    def test_aliased_predicate_binders_are_never_bound_to_a_field(self):
+        target = "TruthCore.DiscoverFixtureTarget.AliasTarget"
+        premise = "TruthCore.DiscoverFixtureTarget.AliasPremise"
+        outcome = run([f'#discover "alias" 20000 "" "{{}}" {target} from {premise}'])["alias"]
+        # `R : Pred B` unfolds to `B → Prop`: a predicate, so only `x := b.val`.
+        self.assertIsNone(outcome["closed"])
+        self.assertEqual([c["bound_to"] for c in outcome["projections_tried"]], [f"{premise}.b.val"])
+
+    def test_a_projection_with_alternatives_is_ambiguous(self):
+        target = "TruthCore.DiscoverFixtureTarget.ProjTarget"
+        premise = "TruthCore.DiscoverFixtureTarget.TwoPremise"
+        outcome = run([f'#discover "two" 20000 "" "{{}}" {target} from {premise}'])["two"]
+        # `x := t.fst` and `x := t.snd` both have the type of `x`: the first
+        # closes the goal, and the choice is reported ambiguous.
+        self.assertIsNotNone(outcome["closed"])
+        self.assertTrue(outcome["projection"]["ambiguous"])
+        self.assertEqual(outcome["projection"]["alternatives"], [f"{premise}.t.fst", f"{premise}.t.snd"])
+        # Control: the single-field box is not ambiguous.
+        unique = run([f'#discover "one" 20000 "" "{{}}" {target} from TruthCore.DiscoverFixtureTarget.ProjPremise'])["one"]
+        self.assertFalse(unique["projection"]["ambiguous"])
+
+    def test_a_projection_whose_structure_premise_is_dropped_is_unused(self):
+        target = "TruthCore.DiscoverFixtureTarget.ProjTarget"
+        owner = "TruthCore.DiscoverFixtureTarget.OwnsBox"
+        every = "TruthCore.DiscoverFixtureTarget.EveryBox"
+        outcome = run([f'#discover "unused" 20000 "" "{{}}" {target} from {owner} {every}'])["unused"]
+        # `x := b.val` closes the goal by `EveryBox` alone; minimization drops
+        # `OwnsBox`, the premise that introduced `b`.
+        self.assertIsNotNone(outcome["closed"])
+        self.assertEqual(outcome["projection"]["bound_to"], f"{owner}.b.val")
+        self.assertEqual(outcome["minimal"], [1])
+        self.assertTrue(outcome["projection_unused"])
+
+    def test_single_conjunct_bridges_remain_when_no_conjunctive_one_passes(self):
+        skew = "TruthCore.DiscoverFixtureTarget.ConjSkew"
+        rule = "TruthCore.DiscoverFixturePremise.ConjRule"
+        rows = [[d, b, b] for d in (skew, rule) for b in ("B", "Q")]
+        config = lean_string(json.dumps({"tags": rows, "bridges": True}))
+        bridges = run([f'#discover "skew" 20000 "" {config} {skew} from {rule}'])["skew"]["bridges"]
+        # The conjunctive builder applies `R` to `g`, but `Q h` is asked: no
+        # conjunctive bridge passes, so the single one `A2 → R` is kept, demoted.
+        self.assertFalse(any(b.get("conjunctive") for b in bridges), bridges)
+        kept = [b for b in bridges if b["from"] == f"{skew}.A2" and b["to"] == f"{rule}.R"]
+        self.assertTrue(kept, bridges)
+        self.assertTrue(kept[0]["single_conjunct"])
+
 
 if __name__ == "__main__":
     unittest.main()

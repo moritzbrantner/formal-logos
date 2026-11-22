@@ -877,3 +877,94 @@ fn a_conjunctive_bridge_replaces_single_conjunct_bridges() {
         ]
     );
 }
+
+#[test]
+fn ambiguous_or_unused_projections_are_rejected() {
+    let choice = json!({
+        "binder": "M.T.x", "bound_to": "M.P.t.fst", "structure_binder": "M.P.t",
+        "field": "fst", "ambiguous": true, "alternatives": ["M.P.t.fst", "M.P.t.snd"]
+    });
+    let mut outcome = closed_outcome();
+    outcome["projection"] = choice.clone();
+    let f = classify(
+        &trial(&["P", "Q", "R"]),
+        &outcome,
+        &Graph::default(),
+        &SenseCheck::empty(),
+    );
+    assert_eq!(f.kind, Kind::Filtered);
+    let names: Vec<&str> = f.filters.iter().map(|(n, _)| n.as_str()).collect();
+    assert_eq!(names, ["projection_ambiguous"]);
+    assert!(f.filters[0].1.contains("M.P.t.fst, M.P.t.snd"));
+
+    let mut unused = closed_outcome();
+    unused["projection"] = json!({"binder": "M.T.x", "bound_to": "M.P.b.val",
+        "structure_binder": "M.P.b", "field": "val", "ambiguous": false, "alternatives": ["M.P.b.val"]});
+    unused["projection_unused"] = json!(true);
+    let f = classify(
+        &trial(&["P", "Q", "R"]),
+        &unused,
+        &Graph::default(),
+        &SenseCheck::empty(),
+    );
+    assert_eq!(f.kind, Kind::Filtered);
+    assert_eq!(f.filters[0].0, "projection_unused");
+    assert!(f.filters.iter().all(|(n, _)| n != "projection_binding"));
+}
+
+#[test]
+fn proved_excludes_goals_closed_by_a_literal_negation() {
+    let mut literal = inconsistent(json!([0, 2]));
+    literal["literal_negation"] = json!([0, 2]);
+    let findings = [
+        classify(
+            &trial(&["P", "Q", "R"]),
+            &literal,
+            &Graph::default(),
+            &SenseCheck::empty(),
+        ),
+        classify(
+            &trial(&["P", "Q", "R"]),
+            &closed_outcome(),
+            &Graph::default(),
+            &SenseCheck::empty(),
+        ),
+        classify(
+            &trial(&["P"]),
+            &json!({"closed": null, "alone": null}),
+            &Graph::default(),
+            &SenseCheck::empty(),
+        ),
+    ];
+    assert_eq!(proved_count(&findings), 1);
+}
+
+#[test]
+fn single_conjunct_bridges_rank_last_and_are_noted() {
+    let row = |from: &str, single: bool| {
+        json!({"from": from, "to": "M.P.R", "fixed": [], "text": format!("∀ g, {from} g → R g"),
+               "used": [0], "assumed_binders": [], "domain_identified_by_name": [],
+               "single_conjunct": single})
+    };
+    let finding = |label: &str, target: &str, bridges: Vec<Value>| Finding {
+        trial: Trial {
+            label: label.into(),
+            target: target.into(),
+            ..trial(&["P"])
+        },
+        kind: Kind::Unresolved,
+        premises: Vec::new(),
+        filters: Vec::new(),
+        outcome: json!({"bridges": bridges}),
+        certified: None,
+    };
+    // The single-conjunct bridge unlocks more targets but still ranks last.
+    let rows = rank_bridges(&[
+        finding("t1", "T1", vec![row("M.T.A2", true)]),
+        finding("t2", "T2", vec![row("M.T.A2", true), row("M.T.X", false)]),
+    ]);
+    assert_eq!(rows[0].from, "M.T.X");
+    assert!(rows[1].single_conjunct);
+    assert_eq!(bridge_json(&rows[1])["single_conjunct"], json!(true));
+    assert!(bridge_notes(&rows[1])[0].contains("no conjunctive bridge passed"));
+}
