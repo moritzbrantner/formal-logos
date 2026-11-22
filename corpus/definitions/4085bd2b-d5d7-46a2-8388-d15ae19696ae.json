@@ -1,0 +1,9 @@
+{
+  "id": "4085bd2b-d5d7-46a2-8388-d15ae19696ae",
+  "label": "Countable same-history causal operation recombination for fixed-duration Reaper stations",
+  "term": "countable causal station recombination",
+  "lean_declaration": "TruthCore.Causality.FixedDurationGrimReaper.CountableStationRecombination",
+  "definition": "CountableStationRecombination R h Concrete k d w says that if a qualifying fixed-d descent and bearer assignment in an accessible populated history have a possible world of actual operation for every finite prefix, then a single accessible history realizes all station bearers' existence/presence, causal edges and all PieceAt signal rules for every natural index simultaneously. It preserves the entire chosen map and causal implementation, not merely the local laws. This is an OPEN countable modal recombination principle, not an inference from binary patchwork or finitary compatibility.",
+  "note": "The structural finitePrefixNotCountable control discriminates logical force but is not an independently established metaphysical objection. Countable hosts/protected channels/actual normal conditions must be separately warranted. The contradiction after granting this principle is the pre-existing GrimReaperPatchwork.arrangementImpossible.",
+  "basis": "stipulative"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "7d1b132f-e82c-486e-85c9-1217bfdf642c",
+  "label": "One selected actual finite-prefix station network per infinite populated fixed-duration past",
+  "paraphrase": "OPEN analyst premise: in every accessible history with a contingent concrete individual at a moment whose past is unbounded below on the supplied clock, there is some anchored descent with all slots at least one fixed positive duration d, a fixed Nat-indexed family of concrete bearers, and a distinct accessible world realizing every finite prefix's actual station existence/presence, directed Ontic.Causes relation and full four-rule PieceAt signal protocol. The local witness may depend on the prefix length. Actual local causation is stronger than individual intrinsic-power possibility and cannot be read off from CPNPP without a power-to-exercise bridge. No countable joint realization is claimed.",
+  "lean_declaration": "TruthCore.Causality.FixedDurationGrimReaper.SelectedFiniteStationCompatibility",
+  "definition_ids": [
+    "1cafe011-a462-479a-9cfe-471fe7a9b530",
+    "dc0aa760-8cbe-414f-9bd0-9cc67ead87c9",
+    "b6f8b044-a489-4462-b379-25908923c19e",
+    "5f177d3f-c661-49d2-8082-941a46d8b41b",
+    "419d2bf5-8cea-47a4-bf64-3058a1f2489b"
+  ]
+}

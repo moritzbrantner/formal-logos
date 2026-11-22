@@ -21,6 +21,18 @@ lean = "DurationDescentPossible"
 paraphrase = "OPEN analyst premise, attribution deferred. DurationDescentPossible R h Concrete k d w requires that every metrically infinite populated past at t in v accessible from w admits some descending c starting exactly at t, with every slot at least the supplied positive d, and co-possible adjacent PieceAt predicates. It is existential in c per v and t, not local coverage of every descent. The infinite-past antecedent restricts the application question; this is an explicit sequence and register witness requirement, not an opaque finiteness flag. All four PieceAt interfaces, including admissibility, concern actual outputs in each witness world. A supplied positive d is fixed, not arbitrarily small; no arbitrary-speed devices or countable concrete realization is asserted."
 definitions = ["DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-KANT-MODAL-CONTINGENCY", "008cb21a-256c-5a90-822c-acd4591d699a", "375676b0-a295-4a17-a9e4-3db23319d517", "419d2bf5-8cea-47a4-bf64-3058a1f2489b", "5f177d3f-c661-49d2-8082-941a46d8b41b", "a9f95430-3df4-4073-881e-87cc77ac93a1"]
 
+[[statement]]
+id = "7d1b132f-e82c-486e-85c9-1217bfdf642c"
+lean = "SelectedFiniteStationCompatibility"
+paraphrase = "OPEN analyst premise: in every accessible history with a contingent concrete individual at a moment whose past is unbounded below on the supplied clock, there is some anchored descent with all slots at least one fixed positive duration d, a fixed Nat-indexed family of concrete bearers, and a distinct accessible world realizing every finite prefix's actual station existence/presence, directed Ontic.Causes relation and full four-rule PieceAt signal protocol. The local witness may depend on the prefix length. Actual local causation is stronger than individual intrinsic-power possibility and cannot be read off from CPNPP without a power-to-exercise bridge. No countable joint realization is claimed."
+definitions = ["1cafe011-a462-479a-9cfe-471fe7a9b530", "dc0aa760-8cbe-414f-9bd0-9cc67ead87c9", "b6f8b044-a489-4462-b379-25908923c19e", "5f177d3f-c661-49d2-8082-941a46d8b41b", "419d2bf5-8cea-47a4-bf64-3058a1f2489b"]
+
+[[statement]]
+id = "9cb8c0ee-b3fa-4440-98e2-903f77c4c1e8"
+lean = "CountableStationRecombination"
+paraphrase = "OPEN analyst modal premise, attribution deferred: for any fixed-duration populated descending schedule and bearer assignment in an accessible history, if all finite prefixes can operate causally in possibly different accessible histories with the same station mapping, then one accessible world realizes the countably infinite family of actually existing, temporally present, causally connected stations with all four PieceAt interfaces simultaneously. This countable actual-exercise principle is stronger than preserving intrinsic powers and is not entailed by finite compatibility, as a structural Nat bounded-prefix control shows (logical difference only). It requires same-history protection, normal conditions, calibrated protocols, and physical clock/host applicability; the existing kernel contradiction excludes its realization when the antecedent holds."
+definitions = ["1cafe011-a462-479a-9cfe-471fe7a9b530", "dc0aa760-8cbe-414f-9bd0-9cc67ead87c9", "4085bd2b-d5d7-46a2-8388-d15ae19696ae", "5f177d3f-c661-49d2-8082-941a46d8b41b", "419d2bf5-8cea-47a4-bf64-3058a1f2489b"]
+
 [[argument]]
 id = "Spaced local pieces give supplied-duration local pieces"
 theorem = "durationPiecesOfSpaced"
