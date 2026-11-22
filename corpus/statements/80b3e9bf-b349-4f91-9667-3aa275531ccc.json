@@ -1,0 +1,16 @@
+{
+  "id": "80b3e9bf-b349-4f91-9667-3aa275531ccc",
+  "label": "Possibly no concrete object exists: some world accessible from w has no concrete object",
+  "paraphrase": "Conclusion of the subtraction argument (metaphysical nihilism about concreta), analyst formulation: some world accessible from w in the route's frame has no candidate that is concrete and exists there. It is the existing stage-one JointAbsence for the concrete-presence predicate. It does not say that nothing at all exists there: non-concrete candidates may exist.",
+  "lean_declaration": "TruthCore.Causality.SubtractionArgument.PossiblyNoConcrete",
+  "definition_ids": [
+    "cdbbae1a-5cce-4367-b6b4-d135135a2ecd",
+    "baddf770-36bf-542f-bb3c-2297342d5452",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

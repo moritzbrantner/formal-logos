@@ -1,0 +1,11 @@
+{
+  "id": "542c595e-08e3-4b71-8799-dc23fb26c5d9",
+  "label": "Unrestricted free absence factors into contingent free absence and companioned absence",
+  "argument_id": "205a0f60-77af-44ef-810d-ef626dc78b30",
+  "challenge_module": "TruthCore.Results.Causality.SubtractionArgument.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SubtractionArgument.Solution",
+  "theorem": "TruthCore.Results.Causality.SubtractionArgument.recombinationFactorsExact",
+  "comparator_config": "results/542c595e-08e3-4b71-8799-dc23fb26c5d9/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free certified difference of unrestricted over contingent free absence: exactly the possible absence of every companioned concrete candidate. That with companions this difference excludes any concrete candidate existing at every accessible world is a separate law (controls, law 9). Establishes no premise."
+}
