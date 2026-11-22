@@ -1,0 +1,11 @@
+{
+  "id": "caed414d-1c4c-4be2-8201-f5cb83b4d28a",
+  "label": "Nonreflexive giving from a self-edge bridge and an existing exclusion",
+  "argument_id": "3b57de88-0944-4f3f-9f81-378b3be5d8af",
+  "challenge_module": "TruthCore.Results.Causality.ConcurrentGivingPriorityBridge.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ConcurrentGivingPriorityBridge.Solution",
+  "theorem": "TruthCore.Results.Causality.ConcurrentGivingPriorityBridge.noSelfGivingFromNoSelfCause",
+  "comparator_config": "results/caed414d-1c4c-4be2-8201-f5cb83b4d28a/comparator.json",
+  "status": "solution-present",
+  "description": "A new conditional support alternative for strict non-self-GivesAt using the existing sourced no-efficient-self-cause node (8b2561cd) and one OPEN cross-sense self-edge bridge. The original Second Way noSelfCauseFromPriority theorem independently supplies that existing exclusion under its already recorded priority premises. The same efficient relation and F.esse appear in the two antecedents; no blanket equivalence with F.CausesIn or time priority is assumed. The new route preserves the direct-assumption option for no-efficient-self-cause as well as its priority derivation. Nothing proves the application truth of the cross-sense bridge, a causal source's possibility, or actual God-existence. The original priority-premise route in this module remains an alternative and now reuses this helper."
+}

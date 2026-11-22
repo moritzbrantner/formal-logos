@@ -1,0 +1,35 @@
+[batch]
+vocab = "TruthCore.Causality.ConcurrentGivingPriorityBridge"
+results = "TruthCore.Results.Causality.ConcurrentGivingPriorityBridge"
+definitions = ["1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"]
+
+[[statement]]
+id = "0e961fde-eb15-4911-8620-d4ca234f8a31"
+label = "Self-giving must instantiate efficient self-causation in respect esse"
+lean = "SelfGivingIsEfficientSelfCause"
+paraphrase = "OPEN analyst cross-sense causal bridge: if in history v the same bearer c exercises strict time-indexed GivesAt v c c t toward its OWN being at t, this qualifies as efficient self-causation of c in the selected esse respect under the separately supplied EfficientlyCausesIn relation. This bridge connects two different causal senses only on the self-edge. It does not identify the frame's CausesIn perfection-causation relation with efficient causes, require a physical temporal interval, or claim any real self-giving is possible."
+definitions = ["647b3d0a-5951-4f0d-b6ed-3bb0daf990e1", "158301bc-9585-4145-be60-34f08c9f922c", "69c0b23e-54c7-57a1-871f-839c6e5514c6", "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"]
+
+[[argument]]
+id = "ae6a8763-fb85-4a3e-a2dc-fc8094e763e8"
+label = "Strict no-self-giving from efficient priority and a causal-sense bridge"
+theorem = "noSelfGivingFromEfficientPriority"
+premises = ["0e961fde-eb15-4911-8620-d4ca234f8a31", "e078f07b-a4b8-595e-a3ee-02dd83474450", "32d77f18-a9c2-5486-b51c-a24f32863af4"]
+conclusion = "0e473dc4-77c5-4d5d-899f-93e29907b198"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Reuse SelfCausationPriority.noSelfCauseFromPriority on exactly the supplied EfficientlyCausesIn and F.PriorSimply; any possible self-GivesAt would cross the explicit bridge to the forbidden efficient self-cause"
+meaning = "Non-transcription cross-family conditional support for the new no-self-giving prerequisite of the BEGINS_2 causal Arrival B route. The same F.PriorSimply used by the supplied efficient-cause-priority and no-self-priority principles excludes any EfficientlyCausesIn c c r via the existing checked SelfCausationPriority.noSelfCauseFromPriority theorem. The open cross-sense bridge says any hypothetical strict GivesAt v c c t would instantiate that forbidden efficient self-edge at F.esse. Therefore strict time-indexed self-giving is absent throughout the accessible histories. No efficient-cause/perfection-cause identification, temporal-priority inference, independent argument for the old priority premises, proof of an actual giver or direct God-existence inference is asserted. A structural control shows why the bridge cannot be silently omitted."
+definitions = ["647b3d0a-5951-4f0d-b6ed-3bb0daf990e1", "158301bc-9585-4145-be60-34f08c9f922c", "69c0b23e-54c7-57a1-871f-839c6e5514c6", "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8", "9e1d45f4-7cee-44b5-a911-803c95b3fa07", "c0d65b45-33bb-47a2-b16b-48a493a762cb"]
+comparator_theorems = ["controls"]
+
+[[argument]]
+id = "3b57de88-0944-4f3f-9f81-378b3be5d8af"
+label = "Nonreflexive giving from a self-edge bridge and an existing exclusion"
+theorem = "noSelfGivingFromNoSelfCause"
+premises = ["0e961fde-eb15-4911-8620-d4ca234f8a31", "8b2561cd-3743-536d-a110-3352fdb0c6b9"]
+conclusion = "0e473dc4-77c5-4d5d-899f-93e29907b198"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Apply the existing no-efficient-self-causation reading to the self-edge produced by SelfGivingIsEfficientSelfCause for an arbitrary accessible history and moment"
+meaning = "A new conditional support alternative for strict non-self-GivesAt using the existing sourced no-efficient-self-cause node (8b2561cd) and one OPEN cross-sense self-edge bridge. The original Second Way noSelfCauseFromPriority theorem independently supplies that existing exclusion under its already recorded priority premises. The same efficient relation and F.esse appear in the two antecedents; no blanket equivalence with F.CausesIn or time priority is assumed. The new route preserves the direct-assumption option for no-efficient-self-cause as well as its priority derivation. Nothing proves the application truth of the cross-sense bridge, a causal source's possibility, or actual God-existence. The original priority-premise route in this module remains an alternative and now reuses this helper."
+definitions = ["647b3d0a-5951-4f0d-b6ed-3bb0daf990e1", "158301bc-9585-4145-be60-34f08c9f922c", "69c0b23e-54c7-57a1-871f-839c6e5514c6", "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8", "9e1d45f4-7cee-44b5-a911-803c95b3fa07", "c0d65b45-33bb-47a2-b16b-48a493a762cb"]
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b"]

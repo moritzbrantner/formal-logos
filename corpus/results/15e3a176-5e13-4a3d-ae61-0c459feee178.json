@@ -1,0 +1,11 @@
+{
+  "id": "15e3a176-5e13-4a3d-ae61-0c459feee178",
+  "label": "Strict no-self-giving from efficient priority and a causal-sense bridge",
+  "argument_id": "ae6a8763-fb85-4a3e-a2dc-fc8094e763e8",
+  "challenge_module": "TruthCore.Results.Causality.ConcurrentGivingPriorityBridge.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ConcurrentGivingPriorityBridge.Solution",
+  "theorem": "TruthCore.Results.Causality.ConcurrentGivingPriorityBridge.noSelfGivingFromEfficientPriority",
+  "comparator_config": "results/15e3a176-5e13-4a3d-ae61-0c459feee178/comparator.json",
+  "status": "solution-present",
+  "description": "Non-transcription cross-family conditional support for the new no-self-giving prerequisite of the BEGINS_2 causal Arrival B route. The same F.PriorSimply used by the supplied efficient-cause-priority and no-self-priority principles excludes any EfficientlyCausesIn c c r via the existing checked SelfCausationPriority.noSelfCauseFromPriority theorem. The open cross-sense bridge says any hypothetical strict GivesAt v c c t would instantiate that forbidden efficient self-edge at F.esse. Therefore strict time-indexed self-giving is absent throughout the accessible histories. No efficient-cause/perfection-cause identification, temporal-priority inference, independent argument for the old priority premises, proof of an actual giver or direct God-existence inference is asserted. A structural control shows why the bridge cannot be silently omitted."
+}

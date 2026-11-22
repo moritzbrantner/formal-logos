@@ -1,0 +1,12 @@
+{
+  "id": "0e961fde-eb15-4911-8620-d4ca234f8a31",
+  "label": "Self-giving must instantiate efficient self-causation in respect esse",
+  "paraphrase": "OPEN analyst cross-sense causal bridge: if in history v the same bearer c exercises strict time-indexed GivesAt v c c t toward its OWN being at t, this qualifies as efficient self-causation of c in the selected esse respect under the separately supplied EfficientlyCausesIn relation. This bridge connects two different causal senses only on the self-edge. It does not identify the frame's CausesIn perfection-causation relation with efficient causes, require a physical temporal interval, or claim any real self-giving is possible.",
+  "lean_declaration": "TruthCore.Causality.ConcurrentGivingPriorityBridge.SelfGivingIsEfficientSelfCause",
+  "definition_ids": [
+    "647b3d0a-5951-4f0d-b6ed-3bb0daf990e1",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"
+  ]
+}

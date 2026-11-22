@@ -532,6 +532,48 @@ particular, may not satisfy an independently justified account of temporal
 concreteness. Neither omission is inserted into the new bridge unannounced.
 Their proof and Comparator certificates remain pending.
 
+**Cross-family causal-priority support for B2 (2026-11-22; stacked draft).
+** The already verified Second Way result
+`SelfCausationPriority.noSelfCauseFromPriority` consumes the OPEN principles
+that efficient causes are SIMPLY_PRIOR_1 to their effects and nothing is
+simply prior to itself. New `ConcurrentGivingPriorityBridge` reuses that
+proof with exactly the same efficient-cause relation and the shared
+`CausalityFrame.PriorSimply`. The one *new* open bridge is
+`SelfGivingIsEfficientSelfCause`: if `GivesAt v c c t` were a genuine
+self-directed giving of c's being, it would count as
+`EfficientlyCausesIn c c esse`. The efficient relation is a separate
+supplied sense, NOT `F.CausesIn` (perfection cause), and no
+temporally-prior assumption is imported.
+
+The certified candidate `noSelfGivingFromEfficientPriority` then supports
+the strong no-self-giving premise `0e473dc4` of the new
+`externalOpportunityOfMemberwiseGiving` route, which supports the causal
+B2 `e4a3b917` and the existing modal necessary-concrete graph.
+This is a real horizontal support option rather than reasserting the
+no-self conclusion. The `selfGivingFrame` omission control keeps both
+priority premises true with no efficient self-edge, while allowing actual
+self-`GivesAt`: without the new cross-sense bridge they do not rule it out.
+No proof of an actual external giver, the priority premises' truth, or
+countable Reaper realization is obtained. No new historical source claim:
+the reuse is of the already attributed and verified Aquinas route.
+The new result and proposed graph effect require child-PR CI and independent
+semantic review, after its parent #1856.
+
+
+**Reused direct no-self-cause node (2026-11-22).** The corpus already
+contains `8b2561cd` (no efficient self-causation), with both a direct
+claim option and a certified derivation from efficient-cause priority plus
+no self-priority. The new `noSelfGivingFromNoSelfCause` route consumes that
+**existing** statement together with the self-edge semantic bridge
+`0e961fde` to support `NoSelfGivingOnAccessible` (`0e473dc4`).
+This avoids requiring the two priority premises in every use while preserving
+their registered derivation as an alternative. The same efficient relation is
+used on both sides of the self-edge, but the tenseless `F.CausesIn` and
+time-indexed `F.GivesAt` are still not generally identified. The
+`noSelfGivingFromEfficientPriority` proof now composes the old result with
+this new adapter. This is a genuine graph-connection alternative, not
+disjoint independent warrant, and its new bridge remains open.
+
 **What "begins" means in B1** (spec
 `specs/modal-spine-metric-beginning-arrival.toml`, attempt
 [`9d141c6c`](../../corpus/attempts/9d141c6c-7979-4d8b-a1b4-7b35ebc9fb21.json)).
