@@ -795,7 +795,9 @@ def plan(finding: dict, corpus: Corpus, options: dict, rows: list[dict], trace: 
                                     f"{lem['lemma'][:8]} from premises already in the goal; Duper "
                                     "does not compose through theorems, so add the checked lemma",
                 goals=[goal(candidates + [lem["lemma"]])], added=[lem["lemma"]])
-        for r in rows:
+        # The most composable known derivation first: no identification gap,
+        # then the fewest premises retrieval missed.
+        for r in sorted(rows, key=lambda r: (bool(r["unidentified"]), len(r["not_retrieved"]))):
             if r["not_retrieved"]:
                 add("known-bundle", "b", f"retrieval missed premises of verified argument "
                                          f"{r['argument'][:8]}; the exact bundle tests whether the "
