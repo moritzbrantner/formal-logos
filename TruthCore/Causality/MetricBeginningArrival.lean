@@ -4,6 +4,7 @@ public import TruthCore.Causality.MetricGrimReaper
 public import TruthCore.Causality.PossibleCauseOfContingency
 public import TruthCore.Causality.ActualEuclidean
 public import TruthCore.Causality.ComingToBeHorns
+public import TruthCore.Causality.Frame
 
 /-!
 # Two senses of "contingent concrete reality begins", and Arrival B in the metric one
@@ -127,6 +128,120 @@ def FiniteDurationCausalOpportunity {W B T : Type} [Preorder T] (h : History W B
     (Concrete : B → Prop) (k : TimeClock T) (causes : W → B → Prop) (w : W) : Prop :=
   CausalOpportunityAt (finiteDurationScenario h Concrete k causes) w
 
+
+/-- An explicitly causal, strong reading of "a source of the totality":
+the same concrete candidate actually exercises the shared CausalityFrame.GivesAt
+relation for the being of every contingent concrete individual at every moment
+of its presence in v. At least one exercise on a populated effect is required,
+so the relation cannot be vacuous. GivesAt is the existing primitive of
+concurrent being-giving, not a synonym for logical implication, temporally
+prior efficient causation, Ontic.Causes, or a bare totality label.
+
+GivesAt is taken on its STRICT esse-giving reading (definition 158301bc), not
+the inclusive reading that also counts causing coming to be. The universal
+clause is CAUSE_OF_BEING_2 (`SustainingCausation.SustainsBeing`, disambiguation
+88a8fba7) over the frame's giving (`FrameAdapters.giving`), restricted to the
+contingent concrete individuals present at some moment of v: the companion
+`concurrentTotalityGiving_iff_sustains` in the results checks this. It is
+written directly in frame fields so that the existing proofs and controls,
+which destructure the clause, stay unchanged.
+
+This reading is sufficient for treating the source as an actual provider of
+the contingent members' being. It is STRONGER than causation of the contingent
+whole taken collectively: a cause of a totality need not directly cause every
+member. Source existence and externality are separate conditions imposed by
+the causal opportunity premise below; this definition does not prove them. -/
+def ConcurrentTotalityGivingAt {W B T S : Type}
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (v : W) (c : B) : Prop :=
+  (∃ x t, Concrete x ∧ ContingentAt f.history.ontic v x ∧
+    f.history.IsAt v x t ∧ f.GivesAt v c x t) ∧
+  (∀ x t, Concrete x → ContingentAt f.history.ontic v x →
+    f.history.IsAt v x t → f.GivesAt v c x t)
+
+/-- B2 in BEGINS_2 under the strong concurrent-being-giving interpretation:
+if a finite-duration populated history is possible, then there is an accessible
+finite-duration populated history with an EXISTING concrete source outside all
+contingent concrete individuals that actually gives being to all its
+contingent concrete members whenever they are present.
+
+This B2 is still an OPEN substantive modal causal-availability premise. It
+contains the possibility of a necessary external bearer via externality;
+the causal content is additional rather than a proof of that availability. -/
+def ConcurrentFiniteDurationCausalOpportunity {W B T S : Type} [Preorder T]
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (k : TimeClock T) (w : W) : Prop :=
+  FiniteDurationCausalOpportunity f.history Concrete k
+    (ConcurrentTotalityGivingAt f Concrete) w
+
+
+
+/-- At the selected world, the SAME rigid concrete individual exists necessarily
+and is the actual concurrent giver of all contingent beings in SOME accessible
+history. It does NOT assert giving of being in the selected actual history.
+This is strictly richer semantic content than the stage-one necessary-concrete
+conclusion; an ordinary necessary bearer may have no giving relation anywhere. -/
+def NecessaryConcreteWithPossibleConcurrentGivingAt {W B T S : Type}
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (w : W) : Prop :=
+  ∃ c, Concrete c ∧ f.history.ontic.ExistsAt w c ∧
+    NecessaryAt f.history.ontic w c ∧
+    ∃ v, f.history.ontic.frame.access w v ∧
+      ConcurrentTotalityGivingAt f Concrete v c
+
+
+/-- A **weaker** possible causal opportunity: some accessible populated
+BEGINS_2 history can contain an existing concrete source that actually gives
+being to every contingent concrete member at every moment of its presence.
+The source is NOT stipulated external, necessary or uncaused in this
+statement. But the commitment to a possibly necessary concretum is not removed:
+it moves into the universal clause, which ranges over the source itself
+whenever the source is contingent and present at some moment. Given
+`NoSelfGivingOnAccessible` and `ContingentConcretaTemporallyPresent`, this
+premise is EQUIVALENT to `ConcurrentFiniteDurationCausalOpportunity`
+(`nonexternalIffExternalOpportunity` in the results; the converse direction
+needs neither principle). A rival who denies that a necessary concretum is
+possible, and keeps both principles, rejects this premise exactly as they
+reject the external B2. What the reformulation makes explicit is that rival's
+cost: denying that any concrete thing could give being to every contingent
+concretum of a possible BEGINS_2 history. -/
+def NonexternalConcurrentGivingOpportunity {W B T S : Type} [Preorder T]
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (k : TimeClock T) (w : W) : Prop :=
+  PossiblyBeginsAt
+      (finiteDurationScenario f.history Concrete k (ConcurrentTotalityGivingAt f Concrete)) w →
+    ∃ v, f.history.ontic.frame.access w v ∧
+      ContingencyBeginsAt
+        (finiteDurationScenario f.history Concrete k
+          (ConcurrentTotalityGivingAt f Concrete)) v ∧
+      ∃ c, Concrete c ∧ f.history.ontic.ExistsAt v c ∧
+        ConcurrentTotalityGivingAt f Concrete v c
+
+/-- A primitive strict esse-causation rule on the accessible histories:
+no existing or nonexistent being directly exercises GivesAt on itself.
+This does not ban reflexive noncausal dependence, causal loops with distinct
+bearers or temporal self-maintenance. It is independently evaluable. -/
+def NoSelfGivingOnAccessible {W B T S : Type}
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S) (w : W) : Prop :=
+  ∀ v, f.history.ontic.frame.access w v →
+    ∀ c t, ¬ f.GivesAt v c c t
+
+/-- World-relative temporal presence for contingent concreta in accessible
+histories. This is NOT CoherentAtNow: a contingent individual need only be
+present at SOME moment of the complete history, not necessarily at now.
+It EXCLUDES contingent atemporal concreta: no contingent concrete individual
+existing in an accessible history is never temporally present there. That
+exclusion is the work it does in the derivation, since a contingent source
+present at no moment would fall outside the domain of the all-present-times
+GivesAt rule (control `unmanifestSourceSeparatesTemporal`). Only necessary
+concreta are left unrestricted and may be timeless. -/
+def ContingentConcretaTemporallyPresent {W B T S : Type}
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (w : W) : Prop :=
+  ∀ v, f.history.ontic.frame.access w v →
+    ∀ x, Concrete x → ContingentAt f.history.ontic v x →
+      ∃ t, f.history.IsAt v x t
+
 namespace Control
 
 open TruthCore.Causality.MetricGrimReaper.Control (PosReal posClock intClock openBelow)
@@ -146,6 +261,88 @@ def openBelowSource : History Bool (Option Int) PosReal where
     | none => False
     | some _ => w = true
   now := ⟨1, one_pos⟩
+
+
+/-- A source outside the contingent inventory can exist without exercising
+any causal giving-of-being relation. This extends the already verified
+openBelowSource model with the family's shared causal primitives. -/
+def inertGivingFrame :
+    TruthCore.Causality.Frame.CausalityFrame Bool (Option Int) PosReal Unit where
+  history := openBelowSource
+  GivesAt := fun _ _ _ _ => False
+  CausesIn := fun _ _ _ => False
+  MovesIn := fun _ _ _ => False
+  DependsForBeing := fun _ _ => False
+  PriorSimply := fun _ _ => False
+  esse := ()
+
+/-- The same ontic/temporal history with actual concurrent being-giving at the
+populated world. Source none exists necessarily but need not occupy a moment;
+every contingent some n is temporally present and receives its being from it.
+This is a STRUCTURAL satisfaction test, not a metaphysical existence witness. -/
+def functioningGivingFrame :
+    TruthCore.Causality.Frame.CausalityFrame Bool (Option Int) PosReal Unit :=
+  { inertGivingFrame with
+    GivesAt := fun v c x _ => v = true ∧ c = none ∧ ∃ n : Int, x = some n }
+
+/-- Both worlds have contingent concrete individuals, but the same rigid none
+candidate gives being only in world false. A real possibility of totality
+giving at false does not make it exercised at the designated world true. -/
+def mixedTemporal : History Bool (Option Bool) PosReal where
+  ontic := TruthCore.Causality.PossibleCauseOfContingency.mixed.ontic
+  IsAt := fun v x _ => match x with
+    | none => False
+    | some b => v = b
+  now := ⟨1, one_pos⟩
+
+def mixedGivingFrame :
+    TruthCore.Causality.Frame.CausalityFrame Bool (Option Bool) PosReal Unit where
+  history := mixedTemporal
+  GivesAt := fun v c x _ => v = false ∧ c = none ∧ x = some false
+  CausesIn := fun _ _ _ => False
+  MovesIn := fun _ _ _ => False
+  DependsForBeing := fun _ _ => False
+  PriorSimply := fun _ _ => False
+  esse := ()
+
+
+/-- A two-world, Bool-entity independent-control history. Both concrete
+candidates exist only in world true; only candidate true has any temporal
+presence. Candidate false is modally contingent but never present at a time.
+This isolates the ontic-existence-to-temporal-manifestation bridge. -/
+def unmanifestSourceHistory : History Bool Bool PosReal where
+  ontic := { frame := TruthCore.Causality.InertEmptiness.Control.universal,
+             ExistsAt := fun v _ => v = true,
+             Causes := fun _ _ _ => False }
+  IsAt := fun v x _ => v = true ∧ x = true
+  now := ⟨1, one_pos⟩
+
+/-- The contingent unmanifested source false actually gives being to the
+temporally present contingent true. It does not give being to itself; this
+is consistent because false is outside the scope of temporal recipients. -/
+def unmanifestSourceFrame :
+    TruthCore.Causality.Frame.CausalityFrame Bool Bool PosReal Unit where
+  history := unmanifestSourceHistory
+  GivesAt := fun v c x _ => v = true ∧ c = false ∧ x = true
+  CausesIn := fun _ _ _ => False
+  MovesIn := fun _ _ _ => False
+  DependsForBeing := fun _ _ => False
+  PriorSimply := fun _ _ => False
+  esse := ()
+
+/-- Every individual has temporal presence and contingency at true; the
+candidate 0 may act as a self-giver. Without a no-self-giving restriction,
+a universal memberwise producer can be contingent and the externality
+conclusion fails even when all contingent beings occur in time. -/
+def selfGivingFrame :
+    TruthCore.Causality.Frame.CausalityFrame Bool Int PosReal Unit where
+  history := openBelow
+  GivesAt := fun v _ _ _ => v = true
+  CausesIn := fun _ _ _ => False
+  MovesIn := fun _ _ _ => False
+  DependsForBeing := fun _ _ => False
+  PriorSimply := fun _ _ => False
+  esse := ()
 
 /-- Every individual counts as concrete:
 (1) in the beginningless integer history `pivot` (identity clock) contingent

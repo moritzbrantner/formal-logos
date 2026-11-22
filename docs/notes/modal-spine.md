@@ -408,6 +408,144 @@ things" is equivalent to "a necessary concrete thing": the causal relation in B2
 does no logical work, so B2 already contains the possibility of the conclusion.
 Arrival A was built to avoid that. It does not discharge B2.
 
+
+**Actual causal reading of Arrival B (2026-11-22; proposed semantic
+continuation).** The existing proof of `b19ffd92` from BEGINS_2 B1
+`951a2235` and B2 `256b5bab` remains valid, but the original B2 has a
+schematic `W → B → Prop` totality-cause relation. Its necessity inference
+uses externality, not that relation. The stronger sibling
+`ConcurrentFiniteDurationCausalOpportunity` now instantiates this
+predicate with `ConcurrentTotalityGivingAt` over the **shared**
+`CausalityFrame.GivesAt` primitive: the same existing external concrete
+source actually gives the being of every contingent concrete individual at
+every moment of that individual's presence, with at least one real
+source/effect exercise in the accessible history. It is a deliberately strong
+memberwise concurrent-esse reading, distinct from a holistic cause of the
+contingent totality, ordinary earlier efficient causation or a formal label
+unconnected to actual beings. The intrinsic causal interpretation of
+`GivesAt` remains a primitive whose applicability is OPEN.
+
+The new conditional `possiblyNecessaryConcurrentGiver` proves a
+**possible necessarily existing source with actual giving of being there**.
+`necessaryActualWithPossibleConcurrentGiving` combines this with
+Euclidean accessibility at the selected world and reflexivity to keep the
+**same rigid source** necessary at the selected world, while preserving
+actual causal giving in its witness history. The corollary
+`necessaryConcreteOfConcurrentGiving` reaches the same existing
+necessary-concrete endpoint. Thus replacing the abstract causal relation
+with a meaningful causal premise does *not* invalidate the conditional
+arrival; the extra causal content now does work in a stronger conclusion.
+However, under the repository's rigid-world classical semantics, the
+externality conjunct still directly implies possible de re necessity:
+actual causal giving **does not establish** that this stronger B2 is itself
+possible. This remains the decisive open modal opportunity principle,
+not a discharged objection or a premise whose primitive status is
+unacceptable.
+
+The models discriminate the relevant changes. In the prior
+`openBelowSource` control, original B2 holds with a named cause but no
+`GivesAt` action; the new `inertGivingSeparatesOpportunity` checks the
+failure of the stronger interpretation. Conversely
+`functioningConcurrentOpportunity` gives a populated positive-time
+structural control with real typed giving of being, and demonstrates
+joint formal satisfiability without metaphysical permission. The
+`mixedPossibleGivingWithoutActualGiving` control has contingent
+population at the designated world, Euclidean/reflexive access, B1 and
+the stronger B2, yet the source's giving is exercised **only** in the
+alternative history. Therefore a further **actual-world causal bridge**
+would be required to infer that a necessary concrete being actually
+explains the currently present contingent beings. Possible causal
+efficacy is not actual efficacy, even when the rigid necessary source
+exists in both histories.
+
+**Cumulative consequence.** The registered root route remains:
+fixed-d Reaper assumptions → `4365c3c5`, plus possible population →
+BEGINS_2 `951a2235`, plus B2, the frame conditions →
+`b19ffd92` → existing further God/attribute consumers. The causal
+reading is registered as additional arguments (`7649d8aa`,
+`f468780f`, `abbbce81`; see the two paragraphs below), alongside the
+existing route through `256b5bab`, which they do not replace. No frontier
+closure is claimed: every new premise is OPEN. This scope does not infer first temporal moments,
+physical infinity's impossibility, a first per-se source, actual
+sustaining causation at w, divine simplicity or uniqueness. The
+positive warrant question now has a precise test: justify a jointly
+possible **actual exercise** of `GivesAt` by an existing exterior
+source of all contingent members in one history without merely
+postulating the conclusion. Source/semantic review and head CI
+verification are still required for this proposed account.
+
+
+**Verification candidate, 2026-11-22.** The causal reading now has a
+separate named conclusion `NecessaryConcreteWithPossibleConcurrentGivingAt`:
+the same rigid source exists necessarily at the designated world and
+actually exercises `GivesAt` in an accessible history. The proposed graph
+uses F2' (Euclidean-at-actual), actual reflexivity, BEGINS_2 B1 and the
+new memberwise causal B2 to prove that stronger conclusion, followed by a
+registered **witness-preserving weakening** to the existing stage-one
+necessary-concrete node. This prevents the extra causal content from
+disappearing in the only advertised result and identifies the missing
+actual-world causal-transmission obligation exactly. The modal subtraction
+argument (`SubtractionArgument.necessaryConcreteExcludesContingencyPremise`)
+already supplies a conditional incompatibility with S2 at the same world
+once the existing stage-one node is available; no new metaphysical defeat
+or independent route is claimed by composing it. Proof and graph checks,
+review and current-branch reconciliation remain pending.
+
+
+**Proposed weaker causal-opportunity derivation (2026-11-22, new test).**
+`NonexternalConcurrentGivingOpportunity` drops the decisive "outside every
+contingent concretum" requirement from B2: a concrete *candidate*, which may
+initially be contingent, is only required to actually give being
+(`CausalityFrame.GivesAt`) to every contingent concrete individual at every
+moment of its presence in one possible populated BEGINS_2 history. Two
+distinct, independently evaluable principles suffice for deriving the
+strong external B2: `NoSelfGivingOnAccessible` (strict giving of being does
+not reflexively cause a bearer to exist) and
+`ContingentConcretaTemporallyPresent` (if a concrete candidate exists
+contingently in the history, it occurs at some time there).
+`necessaryOfUniversalMemberwiseGiving` proves that if the source were
+contingent, its temporal presence would make it a member of the supplied
+effect-domain and the memberwise causal law would entail `GivesAt v c c t`,
+contradicting no-self-giving. The source is then necessary at v under the
+*existing* rigid-candidate modal semantics. Therefore
+`externalOpportunityOfMemberwiseGiving` derives the exteriority clause
+from the universal scope of the giving clause over a possibly contingent
+source, rather than stating it in the possibility premise. The commitment to
+a possibly necessary concretum is relocated, not removed: the converse holds
+by dropping the exteriority conjunct (`nonexternalOpportunityOfExternal`), so
+under no-self-giving and temporal presence the two premises are equivalent
+(`nonexternalIffExternalOpportunity`). A rival who denies that a necessary
+concretum is possible, and keeps both principles, rejects the nonexternal
+premise exactly as the external one. What the reformulation gains is an
+explicit statement of that rival's cost: no concrete thing could give being to
+every contingent concretum of a possible BEGINS_2 history. `GivesAt` is read
+strictly (definition `158301bc`), and the universal clause is CAUSE_OF_BEING_2
+(`SustainsBeing`, disambiguation `88a8fba7`) restricted to temporally present
+contingent concreta (`concurrentTotalityGiving_iff_sustains`). This is a substantive
+conditional **support option for B2**, not proof that such a source can be
+causally realized or that giving to every individual is equivalent to
+causing their totality holistically. A timeless *contingent* supplier is
+excluded by the temporal-presence premise, not by logic alone: that premise
+denies contingent atemporal concreta, while necessary concreta may be
+timeless.
+The original memberwise B2 and all downstream God/root consumers stay
+available. Corpus binding, model challenge and CI pending.
+
+
+**Independent omission controls (new).** On an open-below finite-duration
+two-world model, a self-giving source can be modally contingent and still
+produce every temporally present contingent member: all the temporal
+requirements hold but strict `NoSelfGivingOnAccessible` fails, and there is
+no necessary external bearer. A second Boolean-roster model preserves
+strict no-self-giving and actual memberwise production while a contingent
+source exists in its world without ever being `IsAt` any time; the
+`ContingentConcretaTemporallyPresent` bridge fails and the externality
+conclusion does not hold. The models isolate two genuine LOGICAL premises of
+the new derivation, not metaphysical counterexamples: the second model, in
+particular, may not satisfy an independently justified account of temporal
+concreteness. Neither omission is inserted into the new bridge unannounced.
+Their proof and Comparator certificates remain pending.
+
 **What "begins" means in B1** (spec
 `specs/modal-spine-metric-beginning-arrival.toml`, attempt
 [`9d141c6c`](../../corpus/attempts/9d141c6c-7979-4d8b-a1b4-7b35ebc9fb21.json)).

@@ -1,0 +1,9 @@
+{
+  "id": "028c1066-481d-4eb4-a96e-01ad62f85a2c",
+  "label": "Causal opportunity for concurrent giving of being in a possible finite-duration history",
+  "term": "concurrent causal opportunity in BEGINS_2",
+  "lean_declaration": "TruthCore.Causality.MetricBeginningArrival.ConcurrentFiniteDurationCausalOpportunity",
+  "definition": "ConcurrentFiniteDurationCausalOpportunity f Concrete k w is the existing FiniteDurationCausalOpportunity for f.history and clock k, specialized to the concrete totality-cause interpretation ConcurrentTotalityGivingAt f Concrete. If an accessible finite-duration populated history is possible, then some accessible finite-duration populated history contains an existing concrete source outside all contingent concrete individuals, and that source gives being to every contingent member at each moment of presence (at least one actual exercise). This is a substantive OPEN modal premise. Exteriority plus rigid identity already yields possible de re necessity, even without the causal conjunct; the conjunct yields the additional possible causal exercise conclusion, not a derivation of exteriority.",
+  "note": "A stronger sibling of B2 256b5bab, not a silent reinterpretation. The inertGivingSeperatesOpportunity and functioningConcurrentOpportunity controls distinguish an arbitrary cause label from actual causal exercise; mixedPossibleGivingWithoutActualGiving separates possible causal exercise from causal action at the actual world. Spelling of the Lean theorem is inertGivingSeparatesOpportunity.",
+  "basis": "stipulative"
+}
