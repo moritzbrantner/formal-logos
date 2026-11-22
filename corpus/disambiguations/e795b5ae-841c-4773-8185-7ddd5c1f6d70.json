@@ -1,0 +1,111 @@
+{
+  "id": "e795b5ae-841c-4773-8185-7ddd5c1f6d70",
+  "label": "Respect: the intended carrier of respects or a constructed model's respect type",
+  "term": "respect, as the carrier of respects of a proposition",
+  "term_label": "RESPECT",
+  "sense_definition_ids": [
+    "2b71ac5e-1395-4b4f-bfee-7d8790d18692",
+    "8c2658aa-4c2d-4139-b81a-5dc7fbb1992d"
+  ],
+  "resolution": "Many propositions of the case take the type of respects as a parameter (Respect, R) beside the type of beings, and state their relations over both: InAct x r, MoreIn r x y, CausesIn c x r, with distinguished respects such as esse or verum. RESPECT_1 is that parameter read with the content of DEF-RESPECT (its own carrier-sense record, so that the many records linking DEF-RESPECT keep their labels unchanged): that with respect to which a thing is moved or is in act or in potency, read in the quarta via cluster as a perfection (ST I q.4 a.1), with being (esse), truth (verum), goodness and heat among its elements. Its whole-binder tags name the declarations whose respect carrier is that type, read so by their own module or doc comment: the prima via vocabulary that the quarta via module reuses explicitly, the Metaphysics II.1 readings, In Metaph. II lect. 2 (whose module says its respects are those of the quarta via readings), and the Stage-one, Stage-two, GodMaximalCausal and PreexistenceWithoutTransfer premises built on that vocabulary, together with the shared frames CausalityFrame and GradesFrame. Two binders tagged RESPECT_1 range over the same respects, so truth discover may identify them across modules instead of by the name-only carrier fallback, as the verified arguments that instantiate them with one type already do. The tag fixes only the domain of a binder: it identifies no two relations over it, chooses no distinguished element (each esse or verum binder carries its own tag), and does not decide which respects are perfections, which admit of more and less, or whether esse differs from every other respect; those remain the open premises that state them. RESPECT_2 is a constructed model's respect type (Bool, Unit or a small inductive such as NecessarySimplePlurality.Respect): what a countermodel or control shows about it is a fact about that model only, and a theorem proved over an arbitrary Respect applies to the intended respects only by instantiation. No argument passes from one sense to the other, and no statement links RESPECT_2. Physical respects (DEF-PHYSICAL-RESPECT) and respects of change (OfChange) are guarded subclasses of these respects, not further senses. Untagged respect binders remain unknown: tags were authored only where the declaration's own text fixes its respects as those of this vocabulary (attempt e8bf6def and the attempt recording this tagging).",
+  "senses": [
+    {
+      "id": "284c82fe-9c27-45b9-88bc-70b78696d5af",
+      "label": "RESPECT_1",
+      "definition_id": "2b71ac5e-1395-4b4f-bfee-7d8790d18692",
+      "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel.Respect",
+      "lean_parameters": [
+        {
+          "declaration": "TruthCore.Causality.Frame.CausalityFrame",
+          "parameter": "R"
+        },
+        {
+          "declaration": "TruthCore.Causality.Grades.GradesFrame",
+          "parameter": "R"
+        },
+        {
+          "declaration": "TruthCore.Greek.Aristotle.Metaphysics.AsToBeingSoToTruthReading",
+          "parameter": "Respect"
+        },
+        {
+          "declaration": "TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading",
+          "parameter": "Respect"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.GradesByApproachToAMaximumReading",
+          "parameter": "Respect"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.GradesFoundInThingsReading",
+          "parameter": "Respect"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MostTrueIsMostBeingReading",
+          "parameter": "Respect"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MoreSuchHasThePerfectionReading",
+          "parameter": "Respect"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.ExceededPerfectionIsCausedReading",
+          "parameter": "Respect"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.PerfectionsOfEffectPreexistInCauseReading",
+          "parameter": "Respect"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.InMetaphysicam.NoInfiniteRegressOfCausesOfAPerfectionReading",
+          "parameter": "Respect"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.GodIsMaximalInBeing",
+          "parameter": "Respect"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.MaximumInBeingIsFirstBeing",
+          "parameter": "Respect"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.SimplyPriorIsCauseOfBeing",
+          "parameter": "Respect"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.CauseOfBeingCausesEveryPerfection",
+          "parameter": "Respect"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.MaximumHasNoDistinctEsseCause",
+          "parameter": "Respect"
+        },
+        {
+          "declaration": "TruthCore.Causality.CausalMapsBatch1.CauseOfBeingHasWhatItGives",
+          "parameter": "R"
+        },
+        {
+          "declaration": "TruthCore.Causality.GodMaximalCausal.GodCausesBeingOfAllOthers",
+          "parameter": "R"
+        },
+        {
+          "declaration": "TruthCore.Causality.GodMaximalCausal.MoreInIsAsymmetric",
+          "parameter": "R"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.PreexistenceWithoutTransfer.CauseOfBeingIsMoreInBeing",
+          "parameter": "R"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.PreexistenceWithoutTransfer.DistinctCauseHasWhatItGives",
+          "parameter": "R"
+        }
+      ]
+    },
+    {
+      "id": "0fd8f5b5-d84b-4639-80f6-651fcfc5d297",
+      "label": "RESPECT_2",
+      "definition_id": "8c2658aa-4c2d-4139-b81a-5dc7fbb1992d",
+      "lean_declaration": "TruthCore.Causality.NecessarySimplePlurality.Respect"
+    }
+  ]
+}

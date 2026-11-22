@@ -19,19 +19,17 @@ more-in is asymmetric, and something other than God exists. -/
 
 namespace TruthCore.Causality.GodMaximalCausal
 
-variable {B R : Type}
-
 /-- Causal converse of the naming sentence: whatever is God causes the being of
 every other being. -/
-def GodCausesBeingOfAllOthers (IsGod : B → Prop) (CausesIn : B → B → R → Prop) (esse : R) : Prop :=
+def GodCausesBeingOfAllOthers {B R : Type} (IsGod : B → Prop) (CausesIn : B → B → R → Prop) (esse : R) : Prop :=
   ∀ g y, IsGod g → y ≠ g → CausesIn g y esse
 
 /-- OPEN bridge: being more such is asymmetric. -/
-def MoreInIsAsymmetric (MoreIn : R → B → B → Prop) : Prop :=
+def MoreInIsAsymmetric {B R : Type} (MoreIn : R → B → B → Prop) : Prop :=
   ∀ r x y, MoreIn r x y → ¬ MoreIn r y x
 
 /-- OPEN bridge: for whatever is God, something other than it exists. -/
-def SomethingOtherThanGodExists (IsGod : B → Prop) : Prop :=
+def SomethingOtherThanGodExists {B : Type} (IsGod : B → Prop) : Prop :=
   ∀ g, IsGod g → ∃ y, y ≠ g
 
 namespace Control

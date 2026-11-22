@@ -85,6 +85,10 @@
         {
           "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.NoComponentIsFirstBeingReading",
           "parameter": "PriorSimply"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.SimplyPriorIsCauseOfBeing",
+          "parameter": "PriorSimply"
         }
       ]
     },
