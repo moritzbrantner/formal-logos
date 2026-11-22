@@ -1,0 +1,15 @@
+{
+  "id": "4a9ede84-d1a2-4d5a-8d5b-eded62114cc4",
+  "label": "The meditator is not IN_ACT_4 in INFINITE_3, formally or eminently",
+  "paraphrase": "P4 of the idea-of-the-infinite argument, analyst formulation (navigation: Descartes, Meditation III, the meditator who doubts and desires is not perfect; attribution deferred): the meditator is not in act in the perfection of infinite substance (INFINITE_3), neither formally nor eminently (IN_ACT_4). About the meditator only, not about every thinker. Open.",
+  "lean_declaration": "TruthCore.Causality.CartesianIdeaOfInfinite.MeditatorLacksInfinite",
+  "definition_ids": [
+    "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",
+    "ef3ee5ec-1d44-4bd7-93f9-376c1cf6f6b3",
+    "f356048e-c066-4e25-9dcc-4b6911c2e0b7"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "587c53cf-c2a8-51f6-b8c1-013e67756dc6"
+  ]
+}

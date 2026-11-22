@@ -1,0 +1,15 @@
+{
+  "id": "3845020d-f64b-4a4f-8734-e8069a80e36a",
+  "label": "Objective adequacy: whatever causes an idea's representing r has r, IN_ACT_4",
+  "paraphrase": "P3 of the idea-of-the-infinite argument, analyst formulation of objective adequacy (navigation: Descartes, Meditation III and the Second Replies axiom on objective reality; attribution deferred): whatever is a cause of an idea e's representing a perfection r is itself in act in r, formally or eminently (IN_ACT_4, mode of possession left open). A separate premise, not an instance of the formal containment clause (634a80b8): the separation control 'Formal containment does not give objective adequacy' exhibits a finite frame where formal containment and q.4 a.2 preexistence hold and the only cause of an idea of the infinite is in act in the respect of representing the infinite (certified there: in act in it exactly when bearing an occurring idea of the infinite) but not in the infinite. P3 quantifies over every cause of the objective reality, partial causes included: it is stronger than the 'efficient and total cause' wording, and with P4 it entails that the meditator is not even a partial cause of its own idea's representing INFINITE_3. Unformalized siblings: a total-cause version (whatever is the total cause of an idea's representing r is in act in r; the argument would then need P2 to supply a total cause) and a degree-of-reality reading (the cause has at least as much formal reality as the idea has objective reality, cf. 87f41688). The strong version is used because P2 as stated supplies only some cause, not a total one, and the degree reading needs a calibration between objective and formal degrees that is not on file. Open.",
+  "lean_declaration": "TruthCore.Causality.CartesianIdeaOfInfinite.ObjectiveAdequacy",
+  "definition_ids": [
+    "d8e82792-9d80-4a6f-8181-b2fccc3f06af",
+    "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
+  ]
+}

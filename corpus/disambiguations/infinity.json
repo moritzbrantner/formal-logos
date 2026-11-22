@@ -5,9 +5,10 @@
   "term": "infinite",
   "sense_definition_ids": [
     "1d8890c0-afe2-5cdb-a400-0bbd4b79053d",
-    "b4590519-63a3-5110-aa2d-3e5f1a02ac2b"
+    "b4590519-63a3-5110-aa2d-3e5f1a02ac2b",
+    "ef3ee5ec-1d44-4bd7-93f9-376c1cf6f6b3"
   ],
-  "resolution": "The classical-attributes bundle uses the infinity of unreceived subsistent being, not unlimited quantity or indeterminate matter. Infinite remains an abstract Lean predicate constrained by an explicit sufficient-condition premise; no theorem establishes quantitative infinity.",
+  "resolution": "The classical-attributes bundle uses the infinity of unreceived subsistent being, not unlimited quantity or indeterminate matter. Infinite remains an abstract Lean predicate constrained by an explicit sufficient-condition premise; no theorem establishes quantitative infinity. INFINITE_3 (the idea-frame respect inf of TruthCore.Causality.CartesianIdeaOfInfinite) is the perfection of infinite substance that an idea of the infinite presents and that a being is in act in, formally or eminently; it is a respect of the grades frame, not a predicate of beings. No statement relates it to INFINITE_1 or INFINITE_2: b0132989 runs from GOD_4 to INFINITE_1, and the passage from INFINITE_3 to maximality in being is the explicit open bridge 'Whatever is in act in the infinite is maximal in being'. The arguments of the idea-of-the-infinite batch use INFINITE_3 only.",
   "term_label": "INFINITE",
   "senses": [
     {
@@ -21,6 +22,18 @@
       "label": "INFINITE_2",
       "definition_id": "b4590519-63a3-5110-aa2d-3e5f1a02ac2b",
       "lean_declaration": "TruthCore.Models.QuantitativeInfinity.IsInfinite"
+    },
+    {
+      "id": "1d0d9778-4276-4a52-ac16-91f284f03cb6",
+      "label": "INFINITE_3",
+      "definition_id": "ef3ee5ec-1d44-4bd7-93f9-376c1cf6f6b3",
+      "lean_declaration": "TruthCore.Causality.CartesianIdeaOfInfinite.IdeaFrame.inf",
+      "lean_parameters": [
+        {
+          "declaration": "TruthCore.Causality.CartesianIdeaOfInfinite.IdeaFrame",
+          "parameter": "inf"
+        }
+      ]
     }
   ]
 }
