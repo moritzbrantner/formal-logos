@@ -2,6 +2,14 @@
 
 ## Composition-to-esse audit addendum (2026-11-22; unreviewed)
 
+The five-premise union solution also now exposes
+`compositeHasSameUnitingEsseCause`, retaining **the same** c that
+unites components and causes esse, instead of discarding `Unites`
+in the registered `ca07cae9` conclusion. The original result
+projects the stronger proof. This removes a potential within-proof
+witness ambiguity, while leaving world-local actuality and the
+causal-relation transfer OPEN.
+
 The [proper-part and union-to-esse audit](composition-causal-scope.md#proper-part-and-union-to-esse-audit-2026-11-22-independent-review-pending)
 tightens the existing omission certificate for `fbee7f15`: the earlier
 Bool model could count its whole as one of its components, while the new
