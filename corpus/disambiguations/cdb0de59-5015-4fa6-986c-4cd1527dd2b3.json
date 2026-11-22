@@ -126,6 +126,26 @@
         {
           "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.QuartaViaUnboundedDegrees",
           "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.ExceededPerfectionIsCausedReading",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.GodMaximalCausal.MoreInIsAsymmetric",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.PreexistenceWithoutTransfer.CauseOfBeingIsMoreInBeing",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Greek.Aristotle.Metaphysics.AsToBeingSoToTruthReading",
+          "parameter": "MoreIn"
+        },
+        {
+          "declaration": "TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading",
+          "parameter": "MoreIn"
         }
       ]
     },

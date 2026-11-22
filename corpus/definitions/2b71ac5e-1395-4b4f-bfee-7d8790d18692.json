@@ -1,0 +1,25 @@
+{
+  "id": "2b71ac5e-1395-4b4f-bfee-7d8790d18692",
+  "label": "RESPECT_1: the intended carrier of respects, a parameter tagged across modules",
+  "term": "respect, the intended carrier of respects of a proposition",
+  "definition": "A binder tagged RESPECT_1 is the type of respects of the intended interpretation, with the content of DEF-RESPECT: that with respect to which a thing is moved, or is in act or in potency, such as being hot, being in a place or having being (esse); the quarta via reads a respect as a perfection (ST I q.4 a.1). Two binders tagged RESPECT_1, wherever declared, range over the same respects.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MotionModel.Respect",
+  "note": "Stipulative carrier-sense record, attribution deferred; its content is DEF-RESPECT. It is a separate record, after the pattern of the frame-field records of IN_ACT_4 (5cbd5a0a) and the esse respect (eafd5d52), because DEF-RESPECT is linked by about 160 statements, claims and arguments whose labels say 'respect': making DEF-RESPECT itself a sense would require every one of them to carry a sense tag in its label without changing what any of them says. Merging this record into DEF-RESPECT is a follow-up. Introduced for the parameter-level carrier tags of the #1832 follow-up (attempt b979db99).",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "The type of respects of the intended interpretation: that in which beings are moved, in act or in potency, more or less, and caused, read in the quarta via cluster as perfections. A binder so tagged is a type parameter; the tag fixes which domain it denotes, not any relation over it.",
+    "examples": [
+      "Being hot (fire heating wood).",
+      "The distinguished respects esse (having being) and verum (being true, said of things)."
+    ],
+    "exclusions": [
+      "A being: a respect is that in which something is in act, a being what is in act (DEF-RESPECT); Lean does not enforce the separation of the two carriers.",
+      "A constructed model's respect type such as Bool, Unit or NecessarySimplePlurality.Respect (RESPECT_2): facts about it hold of the model only."
+    ],
+    "open_obligations": [
+      "Which respects there are, which are perfections and which admit of more and less are supplied by the premises that state them, not by the carrier.",
+      "Whether esse differs from every other respect, or verum from esse, is not fixed by the carrier; the convertibility readings are explicit premises."
+    ]
+  }
+}
