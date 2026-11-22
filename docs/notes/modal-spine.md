@@ -474,6 +474,23 @@ source of all contingent members in one history without merely
 postulating the conclusion. Source/semantic review and head CI
 verification are still required for this proposed account.
 
+
+**Verification candidate, 2026-11-22.** The causal reading now has a
+separate named conclusion `NecessaryConcreteWithPossibleConcurrentGivingAt`:
+the same rigid source exists necessarily at the designated world and
+actually exercises `GivesAt` in an accessible history. The proposed graph
+uses F2' (Euclidean-at-actual), actual reflexivity, BEGINS_2 B1 and the
+new memberwise causal B2 to prove that stronger conclusion, followed by a
+registered **witness-preserving weakening** to the existing stage-one
+necessary-concrete node. This prevents the extra causal content from
+disappearing in the only advertised result and identifies the missing
+actual-world causal-transmission obligation exactly. The modal subtraction
+argument (`SubtractionArgument.necessaryConcreteExcludesContingencyPremise`)
+already supplies a conditional incompatibility with S2 at the same world
+once the existing stage-one node is available; no new metaphysical defeat
+or independent route is claimed by composing it. Proof and graph checks,
+review and current-branch reconciliation remain pending.
+
 **What "begins" means in B1** (spec
 `specs/modal-spine-metric-beginning-arrival.toml`, attempt
 [`9d141c6c`](../../corpus/attempts/9d141c6c-7979-4d8b-a1b4-7b35ebc9fb21.json)).

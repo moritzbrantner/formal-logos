@@ -166,6 +166,20 @@ def ConcurrentFiniteDurationCausalOpportunity {W B T S : Type} [Preorder T]
     (ConcurrentTotalityGivingAt f Concrete) w
 
 
+
+/-- At the selected world, the SAME rigid concrete individual exists necessarily
+and is the actual concurrent giver of all contingent beings in SOME accessible
+history. It does NOT assert giving of being in the selected actual history.
+This is strictly richer semantic content than the stage-one necessary-concrete
+conclusion; an ordinary necessary bearer may have no giving relation anywhere. -/
+def NecessaryConcreteWithPossibleConcurrentGivingAt {W B T S : Type}
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (w : W) : Prop :=
+  ∃ c, Concrete c ∧ f.history.ontic.ExistsAt w c ∧
+    NecessaryAt f.history.ontic w c ∧
+    ∃ v, f.history.ontic.frame.access w v ∧
+      ConcurrentTotalityGivingAt f Concrete v c
+
 namespace Control
 
 open TruthCore.Causality.MetricGrimReaper.Control (PosReal posClock intClock openBelow)

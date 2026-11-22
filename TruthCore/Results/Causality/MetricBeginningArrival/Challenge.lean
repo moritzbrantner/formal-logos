@@ -70,4 +70,22 @@ open TruthCore.Results.Causality.GrimReaperPatchwork (pivotOne pivotPopulated)
 theorem controls : Certificate := by
   sorry
 
+theorem necessaryActualWithPossibleConcurrentGiving {W B T S : Type} [Preorder T]
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (k : TimeClock T) (w : W)
+    (hEuclidean : EuclideanAt f.history.ontic.frame w)
+    (hReflexive : ActualReflexive f.history.ontic w)
+    (hBegins : PossiblyBeginsFiniteDuration f.history Concrete k w)
+    (hOpportunity : ConcurrentFiniteDurationCausalOpportunity f Concrete k w) :
+    NecessaryConcreteWithPossibleConcurrentGivingAt f Concrete w := by
+  sorry
+
+theorem necessaryConcreteOfPossibleConcurrentGiver {W B T S : Type}
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (G : W → B → B → Prop) (w : W)
+    (hGiver : NecessaryConcreteWithPossibleConcurrentGivingAt f Concrete w) :
+    TruthCore.Causality.BruteFoundationBoundary.NecessaryConcreteAt
+      ⟨f.history.ontic, Concrete, G⟩ w := by
+  sorry
+
 end TruthCore.Results.Causality.MetricBeginningArrival

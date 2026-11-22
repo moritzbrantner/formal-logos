@@ -190,16 +190,27 @@ theorem necessaryActualWithPossibleConcurrentGiving {W B T S : Type} [Preorder T
     (hReflexive : ActualReflexive f.history.ontic w)
     (hBegins : PossiblyBeginsFiniteDuration f.history Concrete k w)
     (hOpportunity : ConcurrentFiniteDurationCausalOpportunity f Concrete k w) :
-    ∃ c, Concrete c ∧ f.history.ontic.ExistsAt w c ∧
-      NecessaryAt f.history.ontic w c ∧
-      ∃ v, f.history.ontic.frame.access w v ∧
-        ConcurrentTotalityGivingAt f Concrete v c := by
+    NecessaryConcreteWithPossibleConcurrentGivingAt f Concrete w := by
   obtain ⟨v, c, hv, hc, _, hNec, hGiving⟩ :=
     possiblyNecessaryConcurrentGiver f Concrete k w hBegins hOpportunity
   obtain ⟨heW, hNecW⟩ :=
     TruthCore.Causality.ActualEuclidean.necessaryAtOrigin
       f.history.ontic w v c hEuclidean hReflexive hv hNec
   exact ⟨c, hc, heW, hNecW, v, hv, hGiving⟩
+
+
+/-- Project the SAME necessarily existing concrete causal candidate to the
+original stage-one necessary-concrete node. This intentionally forgets the
+possible-world causal exercise but not the witness's rigid identity; it is a
+weaker logical conclusion, not a new independent reason for the premise. -/
+theorem necessaryConcreteOfPossibleConcurrentGiver {W B T S : Type}
+    (f : TruthCore.Causality.Frame.CausalityFrame W B T S)
+    (Concrete : B → Prop) (G : W → B → B → Prop) (w : W)
+    (hGiver : NecessaryConcreteWithPossibleConcurrentGivingAt f Concrete w) :
+    TruthCore.Causality.BruteFoundationBoundary.NecessaryConcreteAt
+      ⟨f.history.ontic, Concrete, G⟩ w := by
+  obtain ⟨c, hc, he, hNecessary, _⟩ := hGiver
+  exact ⟨c, hc, he, hNecessary⟩
 
 /-- The existing metric Arrival B endpoint remains valid with the genuinely
 causal B2, for any separate grounding relation G. This is a corollary of
