@@ -1,0 +1,11 @@
+{
+  "id": "0cfadbaf-e798-4a72-a4d7-31d31bbbac56",
+  "label": "Maximum-first from prior causes: finite controls, checked",
+  "argument_id": "35f91608-7bbd-45f9-a05d-48094e70f6a8",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.MaximumFirstByPriorCause.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.MaximumFirstByPriorCause.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.MaximumFirstByPriorCause.controls",
+  "comparator_config": "results/0cfadbaf-e798-4a72-a4d7-31d31bbbac56/comparator.json",
+  "status": "solution-present",
+  "description": "Nonvacuity and omission controls: on two beings and one respect, (1) both premises hold with true maximal in being and simply prior to false, and the conclusion holds; (2) with no comparisons and true prior to and causing the being of false, the priority premise holds and the conclusion fails at the maximum false; (3) with no causing and true prior to false, the no-distinct-cause premise holds and the conclusion fails. Finite interpretations only."
+}

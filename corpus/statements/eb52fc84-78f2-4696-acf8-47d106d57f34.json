@@ -1,0 +1,18 @@
+{
+  "id": "eb52fc84-78f2-4696-acf8-47d106d57f34",
+  "label": "Maximum-first from prior causes: finite controls",
+  "paraphrase": "Closed mathematical controls on two beings and one respect read as esse: (1) the premises 'what is SIMPLY_PRIOR_1 to a thing causes its being' and 'no maximum in being has a distinct cause of its being' hold together with a maximum in being, a real priority edge into a non-maximal being, and the conclusion 'whatever is maximal in being is the first being'; (2) the first premise holds and the conclusion fails (everything is maximal and one being is simply prior to another), so the second premise does work; (3) the second premise holds (nothing causes anything) and the conclusion fails, so the first premise does work. Statements about these finite interpretations only; no premise is claimed true or false of reality.",
+  "lean_declaration": "TruthCore.Case.Catholicism.MaximumFirstByPriorCause.Controls",
+  "definition_ids": [
+    "a2a8de58-42e0-5481-b7fb-848ae8602036",
+    "25e19d5a-5cdf-5916-a888-f6a0ce970f11",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "1795a62e-f78b-5f5b-94e7-9e7490824811",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "4f1d0cf6-88ba-59e3-814d-01450c2bf282"
+  ]
+}

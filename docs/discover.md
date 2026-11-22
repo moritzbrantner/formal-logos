@@ -191,6 +191,56 @@ commands at the top of the spec, and route the batch through the semantic
 challenge of consequential bridges and a normal PR. The command never writes
 corpus records.
 
+## Agent-guided blueprint recipe
+
+A work-loop recipe for targets that a plain run leaves unresolved (#1832). It
+reuses the engine and its filters; nothing below writes a corpus record, and an
+agent's proposal stays untrusted until Lean checks it.
+
+1. **Baseline.** Run `scripts/run-discovery.sh` on the targets with the budget
+   you will reuse (`--premise-pool`, `--candidates`, `--heartbeats`), and keep
+   the report and its revision.
+2. **Diagnose.** Export the binders of the statement declarations and read the
+   report against the corpus:
+
+   ```bash
+   lake env lean --run scripts/DiscoverBinders.lean TruthCore DECLS.txt > binders.jsonl
+   python3 scripts/discover_blueprint.py diagnose REPORT.json --binders binders.jsonl --target ID
+   ```
+
+   For each target it lists the verified arguments that already conclude it,
+   the premises the run did not retrieve, and the binders the run could not
+   identify (a premise binder whose name an earlier binder of another module
+   has, or a second carrier). The verdict separates a *retrieval* gap, an
+   *identification* gap (the exact sense or bridge obligations), a *search* gap
+   (retrieved, identifiable, not composed) and *no-known* derivation.
+3. **Oracle (optional).** To ask whether an identification is the only
+   obstacle, run the engine once with a temporary overlay of whole-binder tags
+   (`python3 scripts/discover_blueprint.py oracle OVERLAY.json -- <run-discovery
+   arguments>`). The overlay is written only into a disposable detached `git
+   worktree` at HEAD (under `--scratch`, default the repository's parent
+   directory), which carries the uncommitted files, shares the built `.lake`
+   by symlink (unchanged sources, so Lake only replays) and is removed
+   afterwards; the repository's own corpus is never edited. The overlay is
+   saved beside the report. Every finding of such a run is conditional on the
+   overlay: an identification becomes admissible only through a reviewed sense
+   tag or an explicit bridge premise, never through the overlay. To check an
+   identification by hand instead, state the target and the known premises
+   over one signature, as in
+   `scripts/testdata/discover-blueprint/IdentificationOracle.lean`.
+4. **Blueprint.** For a target without an admissible route, write a small
+   AND/OR graph of candidate intermediate lemmas over existing statement IDs,
+   marking each node as a verified theorem, a candidate lemma or OPEN. Check
+   candidates in Lean with their original binders, quantifiers and senses;
+   run `truth semantics --premise … --conclusion …` on each composition; reject
+   a step whose only premise restates its conclusion, a lemma whose proof uses
+   its own consequence (a support cycle), and a premise core that is
+   inconsistent. An AI-proposed proposition that no existing statement proves
+   stays OPEN: register it, if at all, as an explicit open premise.
+5. **Record.** Register a surviving composition through `argument_batch.py`
+   with controls, and persist every candidate, rejected or not, with its reason
+   in one attempt record.
+
 ## Boundaries
 
 - Proof validity is not premise warrant. A discovery from open premises is a

@@ -1,0 +1,38 @@
+# Agent-guided discovery pilot (#1832, #1784): a two-premise route to
+# MaximumInBeingIsFirstBeing (eaa4c679). The baseline `truth discover` run
+# (next-test targets at 495c8f19f, Duper only, pool all, 8 candidates) left the
+# target unresolved: its candidate list held MaximumHasNoDistinctEsseCause
+# (18561596) but not SimplyPriorIsCauseOfBeing (70e98bb5). The composition was
+# proposed as an intermediate-lemma blueprint and checked in Lean; it is not a
+# transcription (two premises chained, then a case split). Analyst
+# formulation, attribution deferred. No premise is established; attempt
+# "Agent-guided discovery pilot on the six unresolved Fourth Way targets".
+
+[batch]
+vocab = "TruthCore.Case.Catholicism.MaximumFirstByPriorCause"
+results = "TruthCore.Results.Case.Catholicism.MaximumFirstByPriorCause"
+
+[[statement]]
+id = "Maximum-first from prior causes: finite controls"
+lean = "Controls"
+paraphrase = "Closed mathematical controls on two beings and one respect read as esse: (1) the premises 'what is SIMPLY_PRIOR_1 to a thing causes its being' and 'no maximum in being has a distinct cause of its being' hold together with a maximum in being, a real priority edge into a non-maximal being, and the conclusion 'whatever is maximal in being is the first being'; (2) the first premise holds and the conclusion fails (everything is maximal and one being is simply prior to another), so the second premise does work; (3) the second premise holds (nothing causes anything) and the conclusion fails, so the first premise does work. Statements about these finite interpretations only; no premise is claimed true or false of reality."
+definitions = ["a2a8de58-42e0-5481-b7fb-848ae8602036", "25e19d5a-5cdf-5916-a888-f6a0ce970f11", "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["1795a62e-f78b-5f5b-94e7-9e7490824811", "00e0d443-eb39-56a3-9179-9c8852ca4a2b", "4f1d0cf6-88ba-59e3-814d-01450c2bf282"]
+
+[[argument]]
+id = "Maximal in being is first being, from prior causes of being and no distinct cause"
+theorem = "maximumInBeingIsFirstBeingOfPriorCause"
+premises = ["70e98bb5-a96d-5d69-870d-e6bd0df2b813", "18561596-1269-53ff-8505-c56e4348e335", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
+conclusion = "eaa4c679-98a3-5e82-95ff-18bd1177ce74"
+axioms = []
+rule = "Instantiate the priority premise at the maximum, then exclude a distinct cause of its being; case split on identity by excluded middle"
+meaning = "Analyst composition, attribution deferred: if whatever is SIMPLY_PRIOR_1 to a thing causes its being (CausesIn at esse, CAUSE_2), and no being maximal in being has a cause of its being distinct from itself in the same CausesIn, then whatever is maximal in being is the first being: anything simply prior to it is identical with it. Same InAct, MoreIn, CausesIn, esse and PriorSimply throughout. Excluded middle is used only to split on whether the prior being is the maximum. Establishes no premise; the controls show that each non-logical premise is needed and that they are jointly satisfiable with a maximum and a priority edge."
+
+[[argument]]
+id = "Maximum-first from prior causes: finite controls, checked"
+theorem = "controls"
+premises = []
+conclusion = "Maximum-first from prior causes: finite controls"
+axioms = []
+rule = "Explicit finite interpretations on Bool and Unit"
+meaning = "Nonvacuity and omission controls: on two beings and one respect, (1) both premises hold with true maximal in being and simply prior to false, and the conclusion holds; (2) with no comparisons and true prior to and causing the being of false, the priority premise holds and the conclusion fails at the maximum false; (3) with no causing and true prior to false, the no-distinct-cause premise holds and the conclusion fails. Finite interpretations only."
