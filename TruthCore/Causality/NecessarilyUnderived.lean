@@ -2,6 +2,7 @@ module
 
 public import TruthCore.German.Kant.CosmologicalInference
 public import TruthCore.Logic.ExcludedMiddle
+public import TruthCore.Logic.StrengthComparison
 
 /-!
 # Necessary existence and cross-world existential dependence
@@ -214,5 +215,103 @@ theorem underived_of_union_wellFounded_and_excludedMiddle
   cases hEM (NecessarilyUnderived m supportsEsse w₀) with
   | inl h => exact h
   | inr h => exact False.elim (hNN h)
+
+/-! ## Strength orders of the lifting premise (#1017, #1598)
+
+`NecessaryPredecessorLifting` entails `NoNovelNecessarySupport` (its third
+conjunct; the extra necessity hypothesis of the weak version is unused) and
+`NoContingentGroundOfNecessary` (its first conjunct). The deltas below state
+what lifting adds to each, with no background; the converse
+`lifting_of_two_bridges` instead needs `ActualReflexive`. -/
+
+section LiftingStrength
+
+open TruthCore.Logic.StrengthComparison
+
+/-- Delta over `NoNovelNecessarySupport`: every existent direct supporter, at
+any admitted world, of a necessary individual is itself necessary and exists
+at the actual world `w₀`. It says nothing about the support edge at `w₀`. -/
+def SupportersOfNecessaryNecessaryAndActual (m : Ontic World Being)
+    (supportsEsse : World → Being → Being → Prop) (w₀ : World) : Prop :=
+  ∀ w source target, NecessaryAt m w₀ target →
+    m.ExistsAt w source → supportsEsse w source target →
+      NecessaryAt m w₀ source ∧ m.ExistsAt w₀ source
+
+/-- Delta over `NoContingentGroundOfNecessary`: every support edge, at any
+admitted world, from an existent source into a necessary individual recurs at
+the actual world `w₀` as a present support edge (the source exists at `w₀` and
+supports the same target there). It says nothing about the source's necessity. -/
+def SupportOfNecessaryRecursActually (m : Ontic World Being)
+    (supportsEsse : World → Being → Being → Prop) (w₀ : World) : Prop :=
+  ∀ w source target, NecessaryAt m w₀ target →
+    m.ExistsAt w source → supportsEsse w source target →
+      PresentEsseSupport m supportsEsse w₀ source target
+
+/-- Lifting over no novel necessary support; difference: supporters of
+necessary individuals are necessary and actual. -/
+def liftingOverNoNovel (m : Ontic World Being)
+    (supportsEsse : World → Being → Being → Prop) (w₀ : World) : ComparisonSpec where
+  stronger := NecessaryPredecessorLifting m supportsEsse w₀
+  weaker := NoNovelNecessarySupport m supportsEsse w₀
+  delta := SupportersOfNecessaryNecessaryAndActual m supportsEsse w₀
+
+/-- Lifting over no contingent ground of the necessary; difference: support
+edges into necessary individuals recur actually. -/
+def liftingOverNoContingent (m : Ontic World Being)
+    (supportsEsse : World → Being → Being → Prop) (w₀ : World) : ComparisonSpec where
+  stronger := NecessaryPredecessorLifting m supportsEsse w₀
+  weaker := NoContingentGroundOfNecessary m supportsEsse w₀
+  delta := SupportOfNecessaryRecursActually m supportsEsse w₀
+
+/-- Exact factorization: lifting holds iff no novel necessary support holds and
+supporters of necessary individuals are necessary and actual. -/
+def LiftingOverNoNovelExact : Prop :=
+  ∀ {World Being : Type} (m : Ontic World Being)
+    (supportsEsse : World → Being → Being → Prop) (w₀ : World),
+    NecessaryPredecessorLifting m supportsEsse w₀ ↔
+      NoNovelNecessarySupport m supportsEsse w₀ ∧
+        SupportersOfNecessaryNecessaryAndActual m supportsEsse w₀
+
+/-- Exact factorization: lifting holds iff no contingent ground of the
+necessary holds and support edges into necessary individuals recur actually. -/
+def LiftingOverNoContingentExact : Prop :=
+  ∀ {World Being : Type} (m : Ontic World Being)
+    (supportsEsse : World → Being → Being → Prop) (w₀ : World),
+    NecessaryPredecessorLifting m supportsEsse w₀ ↔
+      NoContingentGroundOfNecessary m supportsEsse w₀ ∧
+        SupportOfNecessaryRecursActually m supportsEsse w₀
+
+/-- Control model (a): worlds and individuals `Bool`, universal frame; `true`
+exists at every world, `false` only at world `true`. A formal interpretation. -/
+def contingentSourceOntic : Ontic Bool Bool :=
+  ⟨⟨fun _ _ => True⟩, fun w x => x = true ∨ w = true, fun _ _ _ => False⟩
+
+/-- Control model (b): both individuals exist at every world, universal frame. -/
+def twoNecessaryOntic : Ontic Bool Bool :=
+  ⟨⟨fun _ _ => True⟩, fun _ _ => True, fun _ _ _ => False⟩
+
+/-- Control support relation: `false` supports `true` at world `true` only. -/
+def nonActualEdge (w source target : Bool) : Prop :=
+  w = true ∧ source = false ∧ target = true
+
+/-- Separating setting for lifting over no novel support: a contingent source
+supports a necessary target at a non-actual world (actual world `false`). -/
+def contingentSourceSetting : ComparisonSpec :=
+  liftingOverNoNovel contingentSourceOntic nonActualEdge false
+
+/-- Separating setting for lifting over no contingent ground: two necessary
+individuals with a support edge only at a non-actual world. -/
+def nonActualEdgeSetting : ComparisonSpec :=
+  liftingOverNoContingent twoNecessaryOntic nonActualEdge false
+
+/-- In model (a) no novel necessary support holds (vacuously: the only source
+with an edge is contingent) and lifting fails. -/
+def ContingentSourceSeparates : Prop := Separation contingentSourceSetting
+
+/-- In model (b) no contingent ground holds (both individuals are necessary)
+and lifting fails (the edge is absent at the actual world). -/
+def NonActualEdgeSeparates : Prop := Separation nonActualEdgeSetting
+
+end LiftingStrength
 
 end TruthCore.Causality.NecessarilyUnderived

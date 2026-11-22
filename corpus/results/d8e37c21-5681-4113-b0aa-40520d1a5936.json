@@ -1,0 +1,12 @@
+{
+  "id": "d8e37c21-5681-4113-b0aa-40520d1a5936",
+  "label": "Necessary-predecessor lifting entails no contingent ground of the necessary",
+  "argument_id": "8b104085-78ff-48d6-938f-66d52ad593fa",
+  "challenge_module": "TruthCore.Results.Causality.LiftingStrength.Challenge",
+  "solution_module": "TruthCore.Results.Causality.LiftingStrength.Solution",
+  "theorem": "TruthCore.Results.Causality.LiftingStrength.noContingentOfLifting",
+  "comparator_config": "results/d8e37c21-5681-4113-b0aa-40520d1a5936/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration: if every possible supporter of a necessary individual lifts to a necessary, actually present supporter of it, then every possible supporter of a necessary individual is necessary. Same model, support relation and actual world. Establishes neither statement. Strictness: the non-actual-edge model.",
+  "transcription": "assembly"
+}

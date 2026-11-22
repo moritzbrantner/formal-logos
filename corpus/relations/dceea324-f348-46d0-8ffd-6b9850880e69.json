@@ -1,0 +1,12 @@
+{
+  "id": "dceea324-f348-46d0-8ffd-6b9850880e69",
+  "label": "Necessary-predecessor lifting strengthens no contingent ground of the necessary",
+  "subject_kind": "statement",
+  "subject_id": "2a9378b4-3dad-591b-a88e-1907a79f1fa5",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "96d25c42-71aa-5fa0-841d-9aa62d91e1be",
+  "verification_result_id": "d8e37c21-5681-4113-b0aa-40520d1a5936",
+  "strictness_result_id": "585b4324-9fe9-40b3-95e4-fd373de917c6",
+  "note": "Same model, support relation and actual world. Lifting adds that every possible support edge into a necessary individual recurs at the actual world (certified difference). Strict: the non-actual-edge model."
+}

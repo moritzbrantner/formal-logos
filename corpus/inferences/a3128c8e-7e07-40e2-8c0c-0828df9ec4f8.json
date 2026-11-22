@@ -1,0 +1,12 @@
+{
+  "id": "a3128c8e-7e07-40e2-8c0c-0828df9ec4f8",
+  "label": "Necessary-predecessor lifting entails no novel necessary support (inference)",
+  "input_statement_ids": [
+    "2a9378b4-3dad-591b-a88e-1907a79f1fa5"
+  ],
+  "output_statement_id": "bd983df2-058a-5503-89a1-bbebe87f958b",
+  "rule": "Conjunct projection: the actual support edge is the last conjunct of lifting; the weak version's extra hypothesis that the source is necessary is unused",
+  "meaning": "Strength order registration: if every possible supporter of a necessary individual lifts to a necessary, actually present supporter of it, then every possible support edge between necessary individuals already holds at the actual world. Same model, support relation and actual world. Establishes neither statement. Strictness: the contingent-source model.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
