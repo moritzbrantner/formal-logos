@@ -60,3 +60,93 @@ SHA256 `660a0c8ebd32fec39115624b54b7ad33ab84bc3a9f5a747f309f92e4ee27556c`.
 This is interactive proof feedback, not canonical Comparator/NanoDa evidence;
 final CI verifies canonical modules. Retain the service for repeated proof
 edits; no CLI performance comparison was run in this lane.
+
+
+## Plantinga-style compatibility application (#1864, 2026-11-22)
+
+**Current conditional analysis (not a new root conclusion).** The existing
+[necessary-if-existent](../../TruthCore/Modal/NecessaryIfExistent.lean)
+profile and its [proved matrix](../../TruthCore/Results/Modal/NecessaryIfExistent/Solution.lean)
+already establish under K5: if `□(G → □G)` and `◇G`, then `□G`.
+Reflexivity additionally yields `G` at the designated actual world. The
+separate reverse `◇¬G` still needs its own substantive reason. This is a
+truth-functional modal comparison, not an independent proof of either premise.
+
+**Possibility as absence of impossibility.** Within a *fixed classical*
+modal interpretation, the precise claim is
+`◇G ↔ ¬□¬G`. The added helper
+`absence_of_impossibility_iff_possible` makes excluded middle explicit
+rather than presupposing a nonconstructive operator conversion. Consequently
+`s5_not_impossible_actual` composes the existing positive modal theorem
+with reflexivity and gives actual `G` from `¬□¬G`. None of this turns
+`not yet proven impossible` into `¬□¬G`: the former reports evidence or
+our incomplete proof search, whereas the latter denies that **all**
+admissible alternatives lack G. A mere absence of an identified contradiction
+may provide **defeasible** support for a positive recombination policy, but
+it is not the theorem's antecedent.
+
+**Incompatibility is not repaired by a word.** For the *same bearer* at the
+*same world and respect*, if `P(v,x) → ¬Q(v,x)`, no accessible world can
+instantiate `P(v,x) ∧ Q(v,x) ∧ tag(v,x)`, for any extra predicate `tag`.
+The helper `incompatible_bundle_not_possible` proves this on arbitrary
+frames, not only S5. Set `Q := ¬P` for a strict contradiction. A genuine
+square/circle application would have to establish from the FIXED geometric
+definitions that both features are incompatible in the same respect; a square
+inscribed in a circle is not a counterexample to that fixed claim. An adjective
+“possible” does not alter the inconsistent conjunction or yield a witness.
+Conversely, simply identifying a syntactically coherent description does not
+establish its metaphysical realizability.
+
+**The bearer and the attributes matter.** The analyst's
+`MaximalProfile F ExistsAt Excellent x v` has one fixed candidate `x`,
+existing at `v` and existing plus excellent at every world accessible from
+`v`. `PossibleMaximalProfile` is an accessible **joint instantiation**
+of that complete profile. Under S5, the helper
+`possible_maximal_profile_same_bearer` obtains the **same x** existing and
+excellent at the actual root and all its accessible successors. It uses
+symmetry to return from the possible profile world to the root and
+Euclideanness to transport the profile across siblings. Its result is not
+the false quantifier shift from `□∃x` to `∃x□`.
+
+These are **analyst interfaces**, not Plantinga source attributions. Actual
+`Excellent` still needs appropriately interpreted omnipotence, omniscience
+and moral perfection; `ExistsAt` needs the same rigid bearer, GOD_4 naming
+and the real-world `Ontic` vocabulary. Neither this theorem nor the
+word “maximal” supplies the GOD_4 attributes. A world predicate `G`
+already used by #437 cannot be silently identified with
+`GodExists sigma.IsGod`. Moreover, the S5 accessibility component is
+a stipulated model, not automatically *all metaphysical possibilities*.
+
+**The exact open bridge.** Logical joint satisfiability is one type of
+evidence for possible instantiation, but a proof of satisfiability in
+candidate descriptions does not guarantee an M-accessible witness. The
+existing #438 `epistemic` (universal) versus `metaphysical` (identity)
+Bool control refutes that unrestricted transfer, while both frames satisfy
+S5. A sufficient route can target the **particular complete divine
+profile** and show why its realizing world is admissible from the actual
+standpoint, instead of assuming `IncludedAt E M w` for *all* descriptions.
+That witness-specific principle remains OPEN and requires philosophical
+warrant. The stronger conditional system is still useful: it identifies
+precisely what must be defended.
+
+**Positive warrant and rival.** The prima-facie policy argued in
+[the Kant inference investigation](../kant-cosmological-inference.md)
+provisionally recombines features when no identified essential condition
+excludes their union, noting its limits when inferring unreceived concrete
+subsistence. A supported incompatibility of divine features, or a principled
+restriction on what counts as an admissible essence, would revise that
+provisional assessment. Mere withholding of assent and unspecified
+“hidden contradictions” do not themselves supply an incompatibility proof.
+The reverse modal possibility claim likewise requires a real modal
+witness/argument; these are distinct *evidential burdens*, despite
+the formal symmetry of the conditional deductions.
+
+**Status and graph connection.** The unchanged #437/#438 results are
+verified. The #1864 helper declarations constitute a scoped mathematical
+checkpoint **pending exact-head verification**; they are not new bound
+corpus results or a claimed source reading. Their completion by itself
+does not change root premises or establish divine possibility. The
+substantive acceptance work in [#1864](https://github.com/moritzbrantner/formal-logos/issues/1864)
+is fixed divine attributes, real-world modal admissibility, an actual
+same-witness GOD_4 consumer, source fidelity and reviewed premise warrant.
+Issue #437 still owns the separate Collin 2022 symmetry-breaker reading.
