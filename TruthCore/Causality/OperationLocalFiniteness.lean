@@ -103,7 +103,7 @@ theorem zeno_locallyFinite_below_endpoint (schedule : ConvergentZenoSchedule)
   obtain ⟨t, hsingle, hlt⟩ := hn
   have heq : t = zenoStageTime n := by simpa using hsingle
   have hstrict : zenoStageTime n < zenoStageTime N := by
-    simpa only [heq] using hlt
+    simpa only [Set.mem_Iio, heq] using hlt
   by_contra hnot
   have hge : N ≤ n := Nat.le_of_not_lt hnot
   exact (not_lt_of_ge (schedule.1.monotone hge)) hstrict
