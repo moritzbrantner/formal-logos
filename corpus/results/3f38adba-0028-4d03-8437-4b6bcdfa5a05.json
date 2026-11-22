@@ -1,0 +1,11 @@
+{
+  "id": "3f38adba-0028-4d03-8437-4b6bcdfa5a05",
+  "label": "Tautology factors as K validity plus truth-functionality",
+  "argument_id": "b59eddad-a812-420e-b786-f7273cf8bcac",
+  "challenge_module": "TruthCore.Results.Causality.TractarianLogicalSpace.Challenge",
+  "solution_module": "TruthCore.Results.Causality.TractarianLogicalSpace.Solution",
+  "theorem": "TruthCore.Results.Causality.TractarianLogicalSpace.tautologyOverKValidityExact",
+  "comparator_config": "results/3f38adba-0028-4d03-8437-4b6bcdfa5a05/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free certified difference of NECESSARY_16 over NECESSARY_14: exactly the truth-functional fragment. Establishes no premise."
+}

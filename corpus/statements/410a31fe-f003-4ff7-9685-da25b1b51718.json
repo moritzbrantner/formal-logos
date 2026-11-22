@@ -1,0 +1,11 @@
+{
+  "id": "410a31fe-f003-4ff7-9685-da25b1b51718",
+  "label": "Only logical necessity at the selected world",
+  "paraphrase": "Rival thesis 'there is only logical necessity', formal reading, attribution deferred: for the selected frame F, valuation V and world w, every truth-functional (box-free) formula whose NECESSARY_8 Kripke box holds at w is a NECESSARY_16 tautology. It says nothing about formulas containing box, and nothing about which beings exist at which worlds unless a valuation expresses existence.",
+  "lean_declaration": "TruthCore.Causality.TractarianLogicalSpace.OnlyLogicalNecessityAt",
+  "definition_ids": [
+    "547cac5c-7089-4bce-b5e7-bb8b6c8d12b9",
+    "6e8bf9ff-8e89-4247-9ffa-63ecf2d7d70d",
+    "153fcebf-66f6-53de-bad7-82a30a359c9c"
+  ]
+}

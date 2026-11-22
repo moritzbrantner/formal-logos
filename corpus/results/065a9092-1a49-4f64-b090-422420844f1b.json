@@ -1,0 +1,11 @@
+{
+  "id": "065a9092-1a49-4f64-b090-422420844f1b",
+  "label": "The box K node excludes elementary existence at its world",
+  "argument_id": "ccb8befb-1113-4a0b-b1c8-8cd62f59f944",
+  "challenge_module": "TruthCore.Results.Causality.TractarianLogicalSpace.Challenge",
+  "solution_module": "TruthCore.Results.Causality.TractarianLogicalSpace.Solution",
+  "theorem": "TruthCore.Results.Causality.TractarianLogicalSpace.boxKRootExcludesElementaryExistence",
+  "comparator_config": "results/065a9092-1a49-4f64-b090-422420844f1b/comparator.json",
+  "status": "solution-present",
+  "description": "Checked incompatibility: STMT-NECESSARY-ROOT-BOX-K excludes elementary existence of the candidates at the same world. Not a transcription: the conclusion concerns realization of existence combinations, which no premise mentions; it fails without the node (controls, contrast ontology). Establishes no premise; the node stays open."
+}

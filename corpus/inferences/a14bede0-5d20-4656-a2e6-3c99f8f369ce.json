@@ -1,0 +1,10 @@
+{
+  "id": "a14bede0-5d20-4656-a2e6-3c99f8f369ce",
+  "label": "Tractarian logical space controls checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "991425a4-4334-4434-b14a-b37cc4647fe5",
+  "rule": "General laws by induction, explicit finite models",
+  "meaning": "Premise-free laws relating NECESSARY_16 to NECESSARY_5, NECESSARY_13 and NECESSARY_14, the logical-space law in both directions and the existence-dictionary law, then the Tractarian model (states of affairs contingent, objects NECESSARY_2 box-existent, existence of objects expressible only by a tautology) and the joint route model (route S5 node and only logical necessity on one frame). Model-witnessed separations and compatibilities; no premise is established and no reality claim is made.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

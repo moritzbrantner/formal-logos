@@ -1,0 +1,11 @@
+{
+  "id": "d3e73dbe-d4dd-4876-8303-62a0d6c70219",
+  "label": "Tautology strengthens K validity",
+  "argument_id": "38dbdc52-a058-4562-94b0-0c83c74c7b62",
+  "challenge_module": "TruthCore.Results.Causality.TractarianLogicalSpace.Challenge",
+  "solution_module": "TruthCore.Results.Causality.TractarianLogicalSpace.Solution",
+  "theorem": "TruthCore.Results.Causality.TractarianLogicalSpace.tautologyToAllFrameK",
+  "comparator_config": "results/d3e73dbe-d4dd-4876-8303-62a0d6c70219/comparator.json",
+  "status": "solution-present",
+  "description": "NECESSARY_16 tautology strictly strengthens NECESSARY_14 K validity of the same formula. Not a transcription (invariant 16): the conclusion's frame quantification appears in no premise and is obtained by the induction holds_iff_tfHolds. Establishes neither node."
+}

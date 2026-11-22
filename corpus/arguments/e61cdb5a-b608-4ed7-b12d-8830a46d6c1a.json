@@ -1,0 +1,29 @@
+{
+  "id": "e61cdb5a-b608-4ed7-b12d-8830a46d6c1a",
+  "label": "Tractarian logical space controls checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "991425a4-4334-4434-b14a-b37cc4647fe5",
+  "inference_ids": [
+    "a14bede0-5d20-4656-a2e6-3c99f8f369ce"
+  ],
+  "meaning": "Premise-free laws relating NECESSARY_16 to NECESSARY_5, NECESSARY_13 and NECESSARY_14, the logical-space law in both directions and the existence-dictionary law, then the Tractarian model (states of affairs contingent, objects NECESSARY_2 box-existent, existence of objects expressible only by a tautology) and the joint route model (route S5 node and only logical necessity on one frame). Model-witnessed separations and compatibilities; no premise is established and no reality claim is made.",
+  "definition_ids": [
+    "547cac5c-7089-4bce-b5e7-bb8b6c8d12b9",
+    "560fae51-532f-46d8-81e8-6f4386e10a34",
+    "699dde60-3c47-4bae-957b-4d696f0e90c3",
+    "6e8bf9ff-8e89-4247-9ffa-63ecf2d7d70d",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "c8f9c2fb-8c17-5fc8-b558-4a6fad659296",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "f7b80cb6-a233-5525-bb2b-ed5996a6099d",
+    "f830795a-b5d8-5f9f-800d-2f3d1f443a0a",
+    "d980bbd2-1a96-564c-bc0d-4065d7786715",
+    "153fcebf-66f6-53de-bad7-82a30a359c9c",
+    "ea0a177a-b3a7-4559-946d-d9401ba1c6e3"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ],
+  "sense_mixing_control": true
+}

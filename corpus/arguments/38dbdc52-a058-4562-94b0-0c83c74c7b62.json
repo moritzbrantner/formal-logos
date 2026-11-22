@@ -1,0 +1,31 @@
+{
+  "id": "38dbdc52-a058-4562-94b0-0c83c74c7b62",
+  "label": "Tautology strengthens K validity",
+  "premise_statement_ids": [
+    "72861c3a-fff5-4149-bb9d-43985330b4c6"
+  ],
+  "conclusion_statement_id": "d912723b-b4c7-4c05-9cda-2105e7b80659",
+  "inference_ids": [
+    "3fb8fc46-d465-4840-81fd-c25f0d31cd31"
+  ],
+  "meaning": "A NECESSARY_16 tautology holds at every world of every frame under every valuation: by induction on the box-free formula, Kripke truth at a world is truth-functional truth under that world's atomic profile, which is one of the assignments the tautology quantifies. Exact strong-only-premise strength result; strictness by the K axiom (controls). On the truth-functional fragment the converse holds (controls), so the two senses coincide there.",
+  "term_senses": {
+    "NECESSARY": "92fa3d80-12cd-47bc-b30f-e16ec6e43915"
+  },
+  "definition_ids": [
+    "560fae51-532f-46d8-81e8-6f4386e10a34",
+    "6e8bf9ff-8e89-4247-9ffa-63ecf2d7d70d"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ],
+  "sense_bridges": [
+    {
+      "term": "NECESSARY",
+      "from": "92fa3d80-12cd-47bc-b30f-e16ec6e43915",
+      "to": "98d1cfa6-e643-496e-b5df-697aa111b95a",
+      "statement_id": "d912723b-b4c7-4c05-9cda-2105e7b80659",
+      "role": "conclusion"
+    }
+  ]
+}

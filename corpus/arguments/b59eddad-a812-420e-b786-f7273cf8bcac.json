@@ -1,0 +1,18 @@
+{
+  "id": "b59eddad-a812-420e-b786-f7273cf8bcac",
+  "label": "Tautology factors as K validity plus truth-functionality",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "d3fb0cb8-249c-4e11-9927-d2040b30c2d7",
+  "inference_ids": [
+    "c4405ccb-24db-4064-8858-9cee813d51ee"
+  ],
+  "meaning": "Certified difference (#1598): forward, a tautology is K-valid (tautologyToAllFrameK) and box-free by definition; backward, a K-valid box-free formula is true under every assignment, by evaluating it on the one-world frame with the constant valuation of that assignment. Premise-free and constructive.",
+  "definition_ids": [
+    "560fae51-532f-46d8-81e8-6f4386e10a34",
+    "6e8bf9ff-8e89-4247-9ffa-63ecf2d7d70d"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ],
+  "sense_mixing_control": true
+}
