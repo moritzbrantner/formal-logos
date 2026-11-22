@@ -197,14 +197,27 @@ partial def bindAll (tags : Array (Name × Name × String)) (strict : Bool)
     bind tags strict byName n (← moduleOf n) xs origins e fun xs' os p =>
       bindAll tags strict byName xs' os rest (acc.push p) k
 
-/-- Project definitions to delta-expand: `TruthCore.` definitions with a value
-whose type ends in `Prop`, not projections, instances or recursive helpers,
-reached transitively from `roots`. -/
-partial def unfoldSet (roots : Array Name) : MetaM NameSet := do
+/-- The definitions a goal is normalized through: `delta`, the Prop-valued
+ones, delta-expanded; `eqns`, the definitions of values (not propositions or
+types), rewritten by their defining equations (`simp only`) after the delta
+pass, so that a closed computed term such as `convergenceFormula 1 0 1 1`,
+built by recursion, reaches the prover in constructor form (#1845). -/
+structure Unfolding where
+  delta : NameSet := {}
+  eqns : NameSet := {}
+
+/-- Project definitions reached transitively from `roots`, through the values
+of the definitions collected: `TruthCore.` definitions, not projections,
+instances, matchers or auxiliary recursors. One whose type ends in `Prop` is
+delta-expanded; one whose type ends in a value type (`Formula Unit`, not a
+`Sort`: `def Pred B := B → Prop` stays) is rewritten by its equations, which
+evaluate it on constructor arguments only (`iterBox (n + 1) φ`) and unfold a
+non-recursive one everywhere, both definitionally sound. -/
+partial def unfoldSet (roots : Array Name) : MetaM Unfolding := do
   let env ← getEnv
   let mut seen : NameSet := {}
   let mut todo := roots.toList
-  let mut out : NameSet := {}
+  let mut out : Unfolding := {}
   while !todo.isEmpty do
     let n := todo.head!
     todo := todo.tail!
@@ -216,15 +229,39 @@ partial def unfoldSet (roots : Array Name) : MetaM NameSet := do
     if (env.getProjectionFnInfo? n).isSome then continue
     if (← isInstance n) then continue
     if n.isInternal then continue
+    if isMatcherCore env n || isAuxRecursor env n || isNoConfusion env n then continue
     let isPred ← forallTelescopeReducing d.type fun _ body => return body.isProp
-    unless isPred do continue
-    out := out.insert n
+    let isValue ← forallTelescopeReducing d.type fun _ body => return !body.isSort
+    if isPred then
+      out := { out with delta := out.delta.insert n }
+    else if isValue then
+      out := { out with eqns := out.eqns.insert n }
+    else continue
     for c in d.value.getUsedConstants do
       unless seen.contains c do todo := c :: todo
   return out
 
-def expand (u : NameSet) (e : Expr) : MetaM Expr := do
-  deltaExpand (← instantiateMVars e) u.contains
+def expand (u : Unfolding) (e : Expr) : MetaM Expr := do
+  deltaExpand (← instantiateMVars e) u.delta.contains
+
+def identsOf (ns : NameSet) : Array Ident :=
+  (ns.toArray.qsort Name.lt).map mkIdent
+
+/-- `simp` arguments naming each definition of `ns` (its equations). -/
+def simpArgs (ns : NameSet) : MetaM (Array (TSyntax ``Lean.Parser.Tactic.simpLemma)) :=
+  (identsOf ns).mapM fun i => `(Lean.Parser.Tactic.simpLemma| $i:ident)
+
+/-- The fallback prover tactic over the delta-expanded goal, tried after the
+plain prover fails when the goal reaches definitions of values
+(`Unfolding.eqns`): `simp only` with their equations, then the prover.
+Delta-expansion leaves `convergenceFormula 1 0 1 1` a closed but unevaluated
+term that no prover reads; its equations evaluate it. The certification text
+runs the same steps when this variant closed the goal (`proof_text` in
+`truth/src/discover.rs`). -/
+def proverTactic (u : Unfolding) (prover : TSyntax `tactic) : TermElabM (TSyntax `tactic) := do
+  if u.eqns.isEmpty then return prover
+  let eqs ← simpArgs u.eqns
+  `(tactic| ((try simp only [$eqs,*] at *); all_goals ($prover:tactic)))
 
 structure Proved where
   prover : String
@@ -247,19 +284,29 @@ def kernelCheck (prover : String) (used : Array Nat) (stmt value : Expr) :
 /-- Tries to prove `concl` from `hyps` (indices into the premise list) in the
 context of `xs`, with the expanded types; returns the prover, the hypotheses the
 kernel-checked proof uses, and its axioms. -/
-def prove (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : NameSet)
+def prove (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : Unfolding)
     (heartbeats : Nat) (zip : String) (duperOnly : Bool := false) : TermElabM (Option Proved) := do
   let concl' ← expand u concl
   let hypTys ← hyps.mapM fun (i, h) => return (i, ← expand u h)
-  let mut provers : Array (String × Syntax) := #[("duper", ← `(tactic| duper [*]))]
+  -- Each prover runs plain first; the variant that evaluates value
+  -- definitions by their equations (`proverTactic`) is only a fallback, so a
+  -- proof that treats such a definition as an opaque symbol is kept, and the
+  -- name records which variant closed the goal (`+equations`).
+  let duper ← `(tactic| duper [*])
+  let mut provers : Array (String × Syntax) := #[("duper", duper)]
+  if !u.eqns.isEmpty then
+    provers := provers.push ("duper+equations", ← proverTactic u duper)
   if !duperOnly && !zip.isEmpty then
-    provers := provers.push ("auto+zipperposition", ← `(tactic| auto))
+    let auto ← `(tactic| auto)
+    provers := provers.push ("auto+zipperposition", auto)
+    if !u.eqns.isEmpty then
+      provers := provers.push ("auto+zipperposition+equations", ← proverTactic u auto)
   for (name, tac) in provers do
     let saved ← saveState
     let result ← tryCatchRuntimeEx (do
         let opts := (← getOptions)
           |>.set `maxHeartbeats heartbeats
-          |>.set `auto.tptp (name != "duper")
+          |>.set `auto.tptp (!name.startsWith "duper")
           |>.set `auto.tptp.premiseSelection true
           |>.set `auto.tptp.trust false
           |>.set `auto.native true
@@ -315,7 +362,7 @@ only. A contradiction (`False`) must not borrow an element or instance that
 only another statement (the target, a dropped premise) introduces: `∀ y : B,
 R y ∧ ¬ R y` is refuted only given some `x : B`, and is satisfiable over an
 empty `B`. -/
-def proveOwn (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : NameSet)
+def proveOwn (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : Unfolding)
     (heartbeats : Nat) : TermElabM (Option Proved) := do
   let (xs', lctx, insts) ← ownContext xs ((hyps.map (·.2)).push concl)
   withLCtx lctx insts <| prove xs' hyps concl u heartbeats "" (duperOnly := true)
@@ -342,7 +389,7 @@ def literalNegation (hyps : Array (Nat × Expr)) (core : Array Nat) (heartbeats 
 
 /-- Deletion minimization: drop each remaining premise in turn and keep it
 dropped when Duper still proves the goal. -/
-def minimize (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : NameSet)
+def minimize (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : Unfolding)
     (heartbeats : Nat) (start : Proved) (own : Bool := false) :
     TermElabM (Array Nat × Array Json × Proved) := do
   let mut current := start.used
@@ -463,7 +510,7 @@ def allowedAxioms : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
 
 /-- A one-point model of `goals` (conjoined) over the binders `xs`: the slot
 pattern that closes it, if any. -/
-def witness (xs : Array Expr) (goals : Array Expr) (u : NameSet) (heartbeats : Nat) :
+def witness (xs : Array Expr) (goals : Array Expr) (u : Unfolding) (heartbeats : Nat) :
     TermElabM (Option String) := do
   let (_, n) ← try instantiateBinders xs (fun _ => false) catch _ => return none
   let mut patterns : Array (String × (Nat → Bool)) := #[("all False", fun _ => false), ("all True", fun _ => true)]
@@ -479,7 +526,9 @@ def witness (xs : Array Expr) (goals : Array Expr) (u : NameSet) (heartbeats : N
             let body := goals.foldr (fun g acc => mkAnd g acc) (Lean.mkConst ``True) |>.replaceFVars xs vals
             let body ← instantiateMVars (← expand u body)
             let mvar ← mkFreshExprMVar body
-            let tac ← `(tactic| first | (simp; done) | decide | trivial | (simp_all; done))
+            -- Computed definitions evaluate by their equations (`Unfolding.eqns`).
+            let eqs ← simpArgs u.eqns
+            let tac ← `(tactic| first | (simp; done) | (simp [$eqs,*]; done) | decide | trivial | (simp_all; done) | (simp_all [$eqs,*]; done))
             let rest ← Tactic.run mvar.mvarId! (Tactic.evalTactic tac)
             let proof ← instantiateMVars mvar
             if !rest.isEmpty || proof.hasMVar || proof.hasSorry || proof.hasFVar then return false
@@ -699,7 +748,7 @@ def conjunctiveBridges (c : Expr) (rel : Array (String × Expr)) (inH : Expr →
 /-- The checks a candidate bridge must pass before it is reported (see
 `missingBridges`); the report fields, or `none`. -/
 def checkBridge (xs : Array Expr) (origins : Array Origin) (hyps : Array (Nat × Expr))
-    (concl : Expr) (u : NameSet) (heartbeats : Nat)
+    (concl : Expr) (u : Unfolding) (heartbeats : Nat)
     (domains : Array Nat → Array Name → Array String) (bridge : Expr) (budget : Nat) :
     TermElabM (Option (List (String × Json))) := do
   let withBridge := hyps.push (1000, bridge)
@@ -741,7 +790,7 @@ def checkBridge (xs : Array Expr) (origins : Array Origin) (hyps : Array (Nat ×
 def maxConjunctive : Nat := 8
 
 def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
-    (hyps : Array (Nat × Expr)) (concl : Expr) (u : NameSet) (heartbeats : Nat)
+    (hyps : Array (Nat × Expr)) (concl : Expr) (u : Unfolding) (heartbeats : Nat)
     (domains : Array Nat → Array Name → Array String) :
     TermElabM (Array Json) := do
   -- The vocabulary the premises use and the vocabulary the conclusion uses,
@@ -827,9 +876,10 @@ again. A choice that closes the goal is reported (`projection`, and `bound_to`
 on the binder); none is ever made silently. A goal closed under it is a
 specialization of the target statement to the projection, not the statement
 over an arbitrary binder. A target binder with several candidate projections
-is `ambiguous` (identification by type alone), and a choice whose structure
-premise minimization drops is `projection_unused`: `truth discover` rejects
-both. -/
+among the premises minimization keeps is `ambiguous` (identification by type
+alone; an alternative only a dropped premise introduced is listed as
+`dropped_alternatives`, #1845), and a choice whose structure premise
+minimization drops is `projection_unused`: `truth discover` rejects both. -/
 
 /-- At most this many projection choices are searched per goal. -/
 def maxProjections : Nat := 4
@@ -900,11 +950,11 @@ and its literal-negation check, the transcription probe, vacuous truth,
 witnesses and the theorem signature. -/
 def finish (target : Name) (premises : Array Name) (heartbeats : Nat)
     (byName : IO.Ref (Array Membership)) (xs : Array Expr) (hyps : Array (Nat × Expr))
-    (concl : Expr) (u : NameSet) (added : Array Json) (full : Proved) (projection : Json)
-    (structureBinder : Option Expr := none) :
+    (concl : Expr) (u : Unfolding) (added : Array Json) (full : Proved) (projection : Json)
+    (structureBinder : Option Expr := none) (alternatives : Array (Nat × String) := #[]) :
     TermElabM Json := do
     -- Duper is the authority for the Solution: re-prove an ATP-found goal on its core.
-    let start ← if full.prover == "duper" then pure (some full) else
+    let start ← if full.prover.startsWith "duper" then pure (some full) else
       prove xs (hyps.filter fun (i, _) => full.used.contains i) concl u heartbeats "" (duperOnly := true)
     let some start := start
       | return Json.mkObj [("binders", toJson added), ("alone", Json.null), ("closed", proved (some full)),
@@ -912,6 +962,19 @@ def finish (target : Name) (premises : Array Name) (heartbeats : Nat)
           ("reconstruction", "Duper did not reprove the premise core the external prover selected")]
     let (minimal, log, best) ← minimize xs hyps concl u heartbeats start
     let minHyps := hyps.filter fun (i, _) => minimal.contains i
+    -- A projection choice is ambiguous when another structure binder (or
+    -- another field of the same one) with a field of the target binder's type
+    -- survives minimization: an alternative that only a dropped premise
+    -- introduced is no part of the theorem (#1845).
+    let projection := if alternatives.isEmpty then projection else
+      let retained := alternatives.filter fun (k, _) => match xs[k]? with
+        | some y => minHyps.any fun (_, h) => h.containsFVar y.fvarId!
+        | none => false
+      let dropped := alternatives.filter fun a => !retained.any (·.2 == a.2)
+      projection
+        |>.setObjVal! "ambiguous" (Json.bool (retained.size > 1))
+        |>.setObjVal! "alternatives" (toJson (retained.map (·.2)))
+        |>.setObjVal! "dropped_alternatives" (toJson (dropped.map (·.2)))
     -- Under a projection binding, a minimal premise must still speak of the
     -- structure binder: otherwise the premise that introduced it was dropped
     -- and the "derivation" is about the structure alone (`projection_unused`).
@@ -940,6 +1003,30 @@ def finish (target : Name) (premises : Array Name) (heartbeats : Nat)
         (fun _ => pure false)
     let minNames := minimal.map fun i => premises[i]!
     let identified ← byName.get
+    -- Name the projected structure after a kept declaration: the outer binder
+    -- may come from a dropped premise that a kept one joined (same module, a
+    -- tag, or the name fallback).
+    let (projection, added) := Id.run do
+      let some sb := (projection.getObjValAs? String "structure_binder").toOption
+        | return (projection, added)
+      if minNames.any fun n => sb.startsWith s!"{n}." then return (projection, added)
+      let some m := identified.find? fun m =>
+          s!"{m.originDecl}.{m.originBinder}" == sb && minNames.contains m.decl
+        | return (projection, added)
+      let field := (projection.getObjValAs? String "field").toOption.getD ""
+      let old := (projection.getObjValAs? String "bound_to").toOption.getD ""
+      let bound := s!"{m.decl}.{m.binder}.{field}"
+      let added := added.map fun b =>
+        if (b.getObjValAs? String "bound_to").toOption == some old then
+          b.setObjVal! "bound_to" (Json.str bound) else b
+      let rename (key : String) : Json :=
+        toJson (((projection.getObjValAs? (Array String) key).toOption.getD #[]).map
+          fun a => if a == old then bound else a)
+      let projection := projection |>.setObjVal! "structure_binder" (Json.str s!"{m.decl}.{m.binder}")
+        |>.setObjVal! "bound_to" (Json.str bound)
+      let projection := if (projection.getObjVal? "dropped_alternatives").isOk then
+          projection.setObjVal! "dropped_alternatives" (rename "dropped_alternatives") else projection
+      return (projection.setObjVal! "alternatives" (rename "alternatives"), added)
     let u' ← unfoldSet (minNames.push target)
     -- Vacuous truth: do the premises refute the target's own antecedents?
     -- (`∀ x, A x → B x` holds because nothing is `A`.) A valid derivation that a
@@ -987,7 +1074,10 @@ def finish (target : Name) (premises : Array Name) (heartbeats : Nat)
         | none => Json.null),
       ("probe", Json.bool probe),
       ("signature", Json.str (← signature xs minHyps concl)),
-      ("unfold", jsonNames (u'.toArray.qsort Name.lt))]
+      ("unfold", jsonNames (u'.delta.toArray.qsort Name.lt)),
+      -- Only when the closing proof needed them (the `+equations` fallback).
+      ("equations", jsonNames (if best.prover.endsWith "+equations" then
+        u'.eqns.toArray.qsort Name.lt else #[]))]
 
 def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : String)
     (tags : Array (Name × Name × String)) (bridges : Bool) (strict : Bool)
@@ -1032,9 +1122,12 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
     let aloneInsts := (← getLocalInstances).filter fun i => !extra.contains i.fvar.fvarId!
     let alone ← withLCtx aloneLCtx aloneInsts <| prove targetXs #[] concl u heartbeats zip
     if alone.isSome then
+      let uAlone ← unfoldSet #[target]
       return Json.mkObj [("binders", toJson added), ("alone", proved alone),
         ("signature", Json.str (← withLCtx aloneLCtx aloneInsts <| signature targetXs #[] concl)),
-        ("unfold", jsonNames ((← unfoldSet #[target]).toArray.qsort Name.lt))]
+        ("unfold", jsonNames (uAlone.delta.toArray.qsort Name.lt)),
+        ("equations", jsonNames (if (alone.map (·.prover.endsWith "+equations")).getD false then
+          uAlone.eqns.toArray.qsort Name.lt else #[]))]
     if let some full ← prove xs hyps concl u heartbeats zip then
       return ← finish target premises heartbeats byName xs hyps concl u added full Json.null
     -- Projection binding choices (explicit and reported, never silent). A
@@ -1060,9 +1153,12 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
         if k == i then b.setObjVal! "bound_to" (Json.str (label j field)) else b
       -- The structure binder's position once `xs[i]` is removed.
       let j' := if j > i then j - 1 else j
+      -- Every alternative, by its structure binder's position in the reopened goal.
+      let alts := (candidates.filter (·.1 == i)).map fun (_, j2, f2, _) =>
+        ((if j2 > i then j2 - 1 else j2), label j2 f2)
       let result ← withProjection xs hyps concl i value fun ys hs c => do
         let some full ← prove ys hs c u heartbeats zip | return none
-        some <$> finish target premises heartbeats byName ys hs c u added' full choice ys[j']?
+        some <$> finish target premises heartbeats byName ys hs c u added' full choice ys[j']? alts
       if let some json := result then
         -- A choice whose structure premise minimization dropped is kept only
         -- as the report of last resort; another choice may use its premise.

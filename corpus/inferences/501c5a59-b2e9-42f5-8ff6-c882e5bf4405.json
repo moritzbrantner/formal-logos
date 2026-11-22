@@ -1,0 +1,10 @@
+{
+  "id": "501c5a59-b2e9-42f5-8ff6-c882e5bf4405",
+  "label": "Unrestricted free absence factors into contingent free absence and companioned absence (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "7c9aeb05-c4d6-4bbf-8a45-a364ea9d8810",
+  "rule": "Both directions by witness selection",
+  "meaning": "Certified difference (#1598): forward, the restricted principle by weakening, and a companion's recombination witness makes each companioned candidate possibly absent; backward, the possible absence of the companioned candidate y supplies the restricted principle's extra antecedent. Premise-free and constructive.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
