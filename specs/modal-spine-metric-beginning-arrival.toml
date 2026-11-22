@@ -158,6 +158,7 @@ transcription = "instantiation"
 rule = "Project the necessary concrete source c from the enriched causal conclusion to the existing necessary-concrete endpoint without changing witness identity"
 meaning = "The SAME rigid source c from the enriched modal causal conclusion is a necessary concrete being at w; the exercise-of-GivesAt conjunct is retained in the premise but not inferred as actual-world efficacy. A verified logical weakening, not independent metaphysical evidence. The existing stage-one necessary-concrete node retains its separate direct premise and other routes."
 definitions = ["008cb21a-256c-5a90-822c-acd4591d699a", "375676b0-a295-4a17-a9e4-3db23319d517", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-KANT-MODAL-CONTINGENCY", "a6a2ca46-5f70-4db0-8359-9ae32b0eb583", "c0d65b45-33bb-47a2-b16b-48a493a762cb", "028c1066-481d-4eb4-a96e-01ad62f85a2c", "1b8baf77-84fa-5513-a138-7fa14840dd87", "e1ff44df-ed97-5990-8424-1abd720f23ea", "baddf770-36bf-542f-bb3c-2297342d5452", "f8948e28-b13a-5244-95f1-41a05cd4fff2", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+disambiguations = ["7507d645-874d-5434-add8-2f49c2801d36", "dc40914a-48c9-48a2-941e-40b96d847a71", "83264cf5-01fe-52fc-9a00-eeb024f6496e"]
 
 [[relation]]
 id = "55be342a-5246-4f71-ad87-3cc4386f7cb1"
