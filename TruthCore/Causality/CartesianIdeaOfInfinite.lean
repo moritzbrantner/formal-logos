@@ -51,7 +51,7 @@ containment clause (`ContainmentInEveryCause`): see
 namespace TruthCore.Causality.CartesianIdeaOfInfinite
 
 open TruthCore.Causality.Grades (GradesFrame)
-open TruthCore.Causality.CartesianAdequacy (ContainmentInEveryCause gradesOf)
+open TruthCore.Causality.CartesianAdequacy (ContainmentInEveryCause)
 open TruthCore.Latin.Aquinas.SummaTheologiae
   (IsMaximumIn PerfectionsOfEffectPreexistInCauseReading)
 
@@ -93,8 +93,10 @@ def ObjectiveRealityIsCaused (I : IdeaFrame B R Episode) : Prop :=
   ∀ e r, I.Occurs e → I.Represents e r → ∃ c, I.ObjCause c e r
 
 /-- P3, objective adequacy: whatever causes an idea's representing `r` is in
-act in `r` (IN_ACT_4, mode left open: formally or eminently). A separate
-premise, not an instance of the formal containment clause. -/
+act in `r` (IN_ACT_4, mode left open: formally or eminently). Every cause,
+partial causes included: stronger than "efficient and total cause", so with P4
+the meditator is not even a partial cause of its idea's representing `inf`. A
+separate premise, not an instance of the formal containment clause. -/
 def ObjectiveAdequacy (F : GradesFrame W B T R) (I : IdeaFrame B R Episode) : Prop :=
   ∀ c e r, I.ObjCause c e r → F.InAct c r
 
@@ -138,22 +140,34 @@ def selfCausedIdea : IdeaFrame Unit (Option Bool) Unit where
   me := ()
 
 /-- The separation control for objective adequacy. On one finite grades frame
-with the idea frame `selfCausedIdea`: the meditator is in act in being and in
-the feature of representing the infinite (respect `some false`), not in the infinite,
-and causes its own being in act in each respect. There, formal containment in
-every cause (partial causes included) and q.4 a.2 preexistence hold, the
-meditator has an occurring idea of the infinite whose objective reality has a
-cause (P1, P2) and lacks the infinite (P4), yet objective adequacy fails and
-nothing is in act in the infinite. So, on this interpretation, the formal
-clause does not yield P3 or the conclusion: the cause of the idea need only
-have the representing feature. A statement about this interpretation only. -/
+with the idea frame `selfCausedIdea`, all of the following hold and are part of
+the statement:
+
+* the meditator is the only being, and the frame's respect of being is `none`;
+* the meditator is in act in being;
+* the respect `some false` is the representing feature of the infinite: a being
+  is in act in it exactly when it bears an occurring episode that represents
+  the infinite, and the meditator is in act in it;
+* the meditator causes its own being in act in every respect (CAUSE_2);
+* formal containment in every cause (partial causes included) and q.4 a.2
+  preexistence hold;
+* the meditator has an occurring idea of the infinite whose objective reality
+  has a cause (P1, P2) and lacks the infinite (P4);
+* objective adequacy fails and nothing is in act in the infinite.
+
+So, on this interpretation, the formal clause does not yield P3 or the
+conclusion: the cause of the idea has the representing feature but not the
+infinite. A statement about this interpretation only. -/
 def ObjectiveAdequacySeparationControl : Prop :=
   ∃ (F : GradesFrame Unit Unit Unit (Option Bool)) (I : IdeaFrame Unit (Option Bool) Unit),
-    ContainmentInEveryCause F ∧
+    (∀ x, x = I.me) ∧ F.esse = none ∧ F.InAct I.me F.esse ∧
+      (∀ x, F.InAct x (some false) ↔
+        ∃ e, I.Occurs e ∧ I.Bears x e ∧ I.Represents e I.inf) ∧
+      F.InAct I.me (some false) ∧ (∀ r, F.CausesIn I.me I.me r) ∧
+      ContainmentInEveryCause F ∧
       PerfectionsOfEffectPreexistInCauseReading F.InAct F.CausesIn F.esse ∧
       MeditatorHasIdeaOfInfinite I ∧ ObjectiveRealityIsCaused I ∧
       MeditatorLacksInfinite F I ∧
-      (F.InAct I.me (some false) ∧ F.CausesIn I.me I.me (some false)) ∧
       ¬ ObjectiveAdequacy F I ∧ ¬ ∃ c, F.InAct c I.inf
 
 /-- Nonvacuity of the four premises: on a two-being, two-respect grades frame

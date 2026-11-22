@@ -7,5 +7,5 @@
   "object_kind": "statement",
   "object_id": "e81971f1-601c-57f5-be2d-c4b0624d0cad",
   "verification_result_id": "2e0da6d9-f06e-4c85-b407-01dd35055738",
-  "note": "Same Occurs predicate, read through the idea frame's Occurs field. The strong version names a bearer, the designated meditator; the weak version names no bearer. No strictness result is registered here."
+  "note": "Same Occurs predicate, read through the idea frame's Occurs field. The strong version names a bearer, the designated meditator; the weak version names no bearer. No strictness result is registered here: the subjectless control 6cffb105 suggests strictness but is not certified for this pair (different vocabulary). A strength_comparison with a delta statement is a follow-up."
 }

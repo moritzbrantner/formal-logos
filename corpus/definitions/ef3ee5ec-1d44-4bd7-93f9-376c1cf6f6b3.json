@@ -1,24 +1,25 @@
 {
   "id": "ef3ee5ec-1d44-4bd7-93f9-376c1cf6f6b3",
-  "label": "INFINITE_3: inf, the perfection of INFINITE_3 substance, the respect an idea of INFINITE_3 presents",
+  "label": "INFINITE_3: the perfection of a substance without limit, the respect an idea of it presents",
   "term": "infinite (perfection of infinite substance; idea-frame respect `inf`)",
-  "definition": "`IdeaFrame.inf` is a designated respect of the grades frame's carrier: the perfection of being infinite substance, that is, having perfection without limit. F.InAct c inf says that c is in act in that perfection, formally or eminently (IN_ACT_4, mode of possession left open). It is a respect, not a predicate of beings like INFINITE_1, and not a quantity like INFINITE_2. Nothing relates inf to esse, to MoreIn or to any other respect: in particular 'in act in inf' does not by definition give maximality in being or every perfection; those are explicit open bridges.",
+  "definition": "`IdeaFrame.inf` is a designated respect of the grades frame's carrier: the perfection of infinite substance, positive unlimited perfection taken as the content that an idea of the infinite presents (its objective reality) and that a being can possess formally or eminently. F.InAct c inf says that c is in act in that perfection, formally or eminently (IN_ACT_4, mode of possession left open). Content-level distinguishing conditions: INFINITE_1 (DEF-INFINITE, ST I q.7) is the infinity of unreceived subsistent esse, a predicate of beings fixed by non-reception of being in anything; INFINITE_3 is a positive perfection characterized as the content of an idea and by possession, not by the reception structure of esse. INFINITE_2 is quantitative unboundedness of magnitudes, which INFINITE_3 is not. Nothing relates inf to esse, to MoreIn or to any other respect: 'in act in inf' does not by definition give maximality in being or every perfection; those are explicit open bridges.",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Causality.CartesianIdeaOfInfinite.IdeaFrame.inf",
-  "note": "Analyst stipulation, attribution deferred (navigation: Descartes, Meditation III, the idea of 'a substance that is infinite, independent, supremely intelligent, supremely powerful'). Example: on the intended reading the infinite substance is in act in inf and a finite thinker is not. Relation to INFINITE_1 (DEF-INFINITE, ST I q.7): b0132989 runs from GOD_4 to INFINITE_1; no statement relates InAct c inf to Infinite c in either direction. Open obligations: the bridge from inf to maximality in being (statement 'Whatever is in act in the infinite is maximal in being') is open; the stronger reading 'infinite in every perfection' (in act and unsurpassed in every respect) would entail it by instantiation and is not registered.",
+  "note": "Analyst stipulation, attribution deferred (navigation: Descartes, Meditation III, the idea of 'a substance that is infinite, independent, supremely intelligent, supremely powerful'). Example: on the intended reading the infinite substance is in act in inf and a finite thinker is not. Open obligations: (1) F.InAct x inf → Infinite x (INFINITE_3 to INFINITE_1) and (2) its converse Infinite x → F.InAct x inf are both unstated; whether the two are coextensive is open. b0132989 runs from GOD_4 to INFINITE_1 and does not touch inf. (3) The bridge from inf to maximality in being (statement 1a289b83) is open. (4) The stronger reading 'infinite in every perfection' (in act and unsurpassed in every respect) would entail (3) by instantiation and is not registered.",
   "formal_gap": {
     "kind": "primitive",
-    "meaning": "IdeaFrame.inf is a designated respect of the carrier: the perfection of infinite substance, perfection without limit. Lean fixes only that it is a respect.",
+    "meaning": "IdeaFrame.inf is a designated respect of the carrier: positive unlimited perfection, the content an idea of the infinite presents, possessed formally or eminently. Lean fixes only that it is a respect.",
     "examples": [
       "On the intended reading the infinite substance is in act in inf and a finite thinker is not (P4)."
     ],
     "exclusions": [
-      "INFINITE_1 (a predicate of beings, DEF-INFINITE) and INFINITE_2 (quantitative infinity).",
+      "INFINITE_1 (DEF-INFINITE): unreceived subsistent esse, a predicate of beings fixed by non-reception, not a content of an idea.",
+      "INFINITE_2: quantitative unboundedness of magnitudes.",
       "Being (esse) or maximality in being: in act in inf does not by definition give either."
     ],
     "open_obligations": [
-      "The bridge to maximality in being (1a289b83) is an explicit open premise.",
-      "No statement relates inf to INFINITE_1 or INFINITE_2."
+      "F.InAct x inf → Infinite x and its converse Infinite x → F.InAct x inf are unstated; coextension of INFINITE_3 and INFINITE_1 is open.",
+      "The bridge to maximality in being (1a289b83) is an explicit open premise."
     ]
   }
 }

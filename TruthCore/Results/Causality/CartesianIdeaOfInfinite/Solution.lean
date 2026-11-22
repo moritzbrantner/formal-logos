@@ -68,10 +68,15 @@ theorem meditationThreePremisesSatisfiable : MeditationThreePremisesSatisfiable 
 /-- The separation control: on the one-being frame of `selfCausedIdea`, every
 cause is the meditator causing itself, so formal containment and q.4 a.2
 preexistence hold, while the meditator, the only cause of its idea's objective
-reality, lacks the infinite. -/
+reality, has the representing feature `some false` but lacks the infinite. -/
 theorem objectiveAdequacySeparationControl : ObjectiveAdequacySeparationControl := by
   refine ⟨gradesOf (fun _ r => r ≠ some true) (fun _ _ _ => False) (fun _ _ _ => True) none,
-    selfCausedIdea, ?_, ?_, ⟨(), trivial, trivial, rfl⟩, ?_, ?_, ⟨fun h => Bool.false_ne_true (Option.some.inj h), trivial⟩, ?_, ?_⟩
+    selfCausedIdea, fun _ => rfl, rfl, (fun h => by cases h), ?_,
+    fun h => Bool.false_ne_true (Option.some.inj h), fun _ => trivial,
+    ?_, ?_, ⟨(), trivial, trivial, rfl⟩, ?_, ?_, ?_, ?_⟩
+  · intro x
+    exact ⟨fun _ => ⟨(), trivial, trivial, rfl⟩,
+      fun _ h => Bool.false_ne_true (Option.some.inj h)⟩
   · intro c x r _ hx
     exact hx
   · intro c x r _ hx

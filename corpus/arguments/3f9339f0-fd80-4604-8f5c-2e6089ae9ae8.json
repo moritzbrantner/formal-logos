@@ -8,7 +8,7 @@
   "inference_ids": [
     "62b870d0-f022-4a6b-b4a2-bf1777f6b5f6"
   ],
-  "meaning": "Strength order registration: if the meditator bears some occurring thought episode, then some thought episode occurs (STMT ThoughtOccurs, e81971f1), with the same occurrence predicate. The first-person cogito also yields a thinking subject directly, without the bearer principle (30e6e01c), for this case. It establishes neither statement; strictness is not registered (the existing control with an occurring thought and no bearer, 6cffb105, witnesses that ThoughtOccurs does not give a bearer).",
+  "meaning": "Strength order registration: if the meditator bears some occurring thought episode, then some thought episode occurs (STMT ThoughtOccurs, e81971f1), with the same occurrence predicate. The first-person cogito also yields a thinking subject directly, without the bearer principle (30e6e01c), for this case. It establishes neither statement; strictness is not registered. The existing control with an occurring thought and no bearer (6cffb105) suggests strictness but does not certify it for this pair (different vocabulary: it has no designated meditator); a strength_comparison of the pair is a follow-up.",
   "definition_ids": [
     "8181eef7-4f03-42c3-bc1b-f440acc4556d",
     "ce8ccc1a-4f9a-5904-a10c-548778d79b66",

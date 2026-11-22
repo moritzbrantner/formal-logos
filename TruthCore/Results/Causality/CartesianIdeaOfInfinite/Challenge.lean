@@ -48,7 +48,7 @@ theorem meditationThreePremisesSatisfiable : MeditationThreePremisesSatisfiable 
 /-- The separation control: on the one-being frame of `selfCausedIdea`, every
 cause is the meditator causing itself, so formal containment and q.4 a.2
 preexistence hold, while the meditator, the only cause of its idea's objective
-reality, lacks the infinite. -/
+reality, has the representing feature `some false` but lacks the infinite. -/
 theorem objectiveAdequacySeparationControl : ObjectiveAdequacySeparationControl := by
   sorry
 
