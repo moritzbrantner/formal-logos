@@ -9,5 +9,5 @@
     "c558e6bc-a92e-5870-87df-740e16a9a977"
   ],
   "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.GradesFoundInThingsReading",
-  "note": "Typed parameter location: GradesFoundInThingsReading takes MoreIn : Respect → Being → Being → Prop. Its linked declaration asserts the existence of selected comparisons; it is a usage/constraining premise, not a definition of MoreIn. There is no standalone root-vocabulary declaration defining this primitive comparison. Its intended per-perfection interpretation remains OPEN."
+  "note": "Typed parameter location: GradesFoundInThingsReading takes MoreIn : Respect → Being → Being → Prop. Its linked declaration asserts the existence of selected comparisons; it is a usage/constraining premise, not a definition of MoreIn. There is no standalone root-vocabulary declaration defining this primitive comparison. Its intended per-perfection interpretation remains OPEN. Sense locator (2026-11-20): as MORE_1 of the MORE disambiguation the primitive comparative has its own declaration, the field GradesFrame.MoreIn; this record keeps GradesFoundInThingsReading as its usage locator, unchanged, because the existing audits and claims are pinned to it."
 }

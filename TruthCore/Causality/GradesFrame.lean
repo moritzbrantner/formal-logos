@@ -17,7 +17,7 @@ premises of different modules as statements about unrelated relations (attempt
 vocabulary one shared frame. It **defines none of the primitives**:
 
 * `InAct x r` (IN_ACT_4): `x` is in act in the perfection `r`, actually has
-  it, with the mode of possession (formal, virtual or eminent) left open, as
+  it, with the mode of possession, formal or virtual (eminent), left open, as
   DISAMB-IN-ACT requires of the case's single act parameter (DEF-ACT).
 * `MoreIn r x y` (MORE_1): `x` is more `r` than `y`, the primitive comparative
   *magis* (DEF-MORE-IN). No order law is imposed.
@@ -65,8 +65,13 @@ structure GradesFrame (W B T R : Type) extends CausalityFrame W B T R where
 the represented degree of `x` in `r` strictly exceeds that of `y`, for a degree
 assignment `deg : R → B → D` in a Mathlib `Preorder` (DEF-PER-RESPECT-DEGREE-FAMILY).
 It is the strict preimage order `(deg r) ⁻¹'o (· > ·)`; written out so that the
-direction is visible. A sibling of the primitive comparative, not its
-definition: identifying the two would conceal the open calibration bridges. -/
+direction is visible. Both order readings are instances at a fixed respect:
+`HomogeneousScaleReading` (`MoreIn r x y ↔ y < x`) with the degree the order
+on beings itself, and `ApproachToPrimaryReading` (`MoreIn r x y ↔ near y <
+near x`) with the degree `near`; so it is neutral between the univocal and the
+analogical reading. A sibling of the primitive comparative, not its
+definition: identifying the two would impose irreflexivity and transitivity and
+conceal the open calibration premises. -/
 def DegreeComparative {B R D : Type} [Preorder D] (deg : R → B → D)
     (r : R) (x y : B) : Prop :=
   deg r y < deg r x

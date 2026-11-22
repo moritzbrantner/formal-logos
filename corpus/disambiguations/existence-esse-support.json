@@ -146,18 +146,6 @@
         {
           "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.PerfectionsOfEffectPreexistInCauseReading",
           "parameter": "esse"
-        },
-        {
-          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.QuartaViaDegreeFork",
-          "parameter": "esse"
-        },
-        {
-          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.QuartaViaStrictCausalTop",
-          "parameter": "esse"
-        },
-        {
-          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.QuartaViaUnboundedDegrees",
-          "parameter": "esse"
         }
       ]
     }

@@ -629,12 +629,12 @@
       "path": "corpus/statements/grades-have-a-maximum.json",
       "status": "unresolved",
       "classification": "reused_unchanged_audit",
-      "finding": "Reuse unchanged prior audit disposition: Retained explicit open commitment: Wherever things are more and less in some perfection, there is something maximal in it: something that has the perfection and than which nothing is more such. Exact applications are bound by the scoped Challenges. Existing source/attempt evidence is reused, not a renewed source-fidelity certification. Re-reviewed 2026-11-20 (grades frame tags): only the label changed, to carry the sense tag MORE_1 now that DEF-MORE-IN is a sense of the new MORE disambiguation; proposition text, declaration and links are unchanged, so the disposition above stands.",
+      "finding": "Reuse unchanged prior audit disposition: Retained explicit open commitment: Wherever things are more and less in some perfection, there is something maximal in it: something that has the perfection and than which nothing is more such. Exact applications are bound by the scoped Challenges. Existing source/attempt evidence is reused, not a renewed source-fidelity certification. Re-reviewed 2026-11-20 (grades frame tags): only the label changed, to carry the sense tag MORE_1 now that DEF-MORE-IN is a sense of the new MORE disambiguation; proposition text, declaration and links are unchanged, so the disposition above stands. Second re-review 2026-11-22: the label was rewritten in full (no truncation) with MORE_1; proposition text, declaration and links unchanged.",
       "before": {
         "sha256": "a31d47da20db1ec02593f3e379676e82c65c12f2f5005583d788e1a86a39eb52",
         "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.GradesByApproachToAMaximumReading"
       },
-      "reviewed_sha256": "4b13184a20ce5722562a6c797e5e11dcd81cf67b10ac421ac125e8553902b7c9"
+      "reviewed_sha256": "685b5211dc3f0234e7962a2592b03a03e86fb1ef5e551543f1772eac3c3e37fa"
     },
     {
       "kind": "statements",
@@ -1552,12 +1552,12 @@
       "path": "corpus/definitions/more-in.json",
       "status": "repaired",
       "classification": "reviewed_locator_clarification",
-      "finding": "Reuse unchanged prior audit disposition: Existing interpretation retained: `MoreIn r x y`: x is more r than y (more good, more true, more noble, more hot). Only the comparative is primitive: nothing makes it a total order, a measure, or comparable across all things. No new structural law, source attribution or independently established premise is introduced. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. The retained locator is explicitly classified as a usage/constraining premise or vocabulary-container anchor; exact primitive parameter/field locations are recorded in the definition note. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes. Re-reviewed 2026-11-20 (grades frame tags): only the label changed, to carry its sense tag MORE_1 now that DEF-MORE-IN is the first sense of the new MORE disambiguation; definition text, locator and note are unchanged, so the disposition above stands.",
+      "finding": "Reuse unchanged prior audit disposition: Existing interpretation retained: `MoreIn r x y`: x is more r than y (more good, more true, more noble, more hot). Only the comparative is primitive: nothing makes it a total order, a measure, or comparable across all things. No new structural law, source attribution or independently established premise is introduced. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. The retained locator is explicitly classified as a usage/constraining premise or vocabulary-container anchor; exact primitive parameter/field locations are recorded in the definition note. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes. Re-reviewed 2026-11-20 (grades frame tags): only the label changed, to carry its sense tag MORE_1 now that DEF-MORE-IN is the first sense of the new MORE disambiguation; definition text, locator and note are unchanged, so the disposition above stands. Second re-review 2026-11-22: a note sentence was added explaining that the sense declaration GradesFrame.MoreIn differs from this record's unchanged usage locator; definition text unchanged.",
       "before": {
         "sha256": "ff39de51f1edda6ed56962b715fab2cccce0ecf415a576ccb80c42cc869d4f6a",
         "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.GradesFoundInThingsReading"
       },
-      "reviewed_sha256": "b2cb588189b669b33ae32cf747df7cb90d27afa5f572810a07349e91ac576c9f"
+      "reviewed_sha256": "4ee722635bc6e84505ee4a6d66c12e4faae590b5939e19243a730568bd074a15"
     },
     {
       "kind": "definitions",
