@@ -1,0 +1,15 @@
+{
+  "id": "8bfeb070-436d-4503-8282-4b7df72a4d93",
+  "label": "Distinct actual concrete spatial occupants depend on the spacetime whole for their being",
+  "paraphrase": "In the selected world and exact existential-grounding relation, every actual concrete occupant distinct from the spacetime whole is grounded for its being by that very whole. An explicitly open ontological bridge, not a consequence of geometric occupation or physical causation.",
+  "lean_declaration": "TruthCore.Ontology.SpacetimeGroundingBridge.OccupantsDependOnWholeAt",
+  "definition_ids": [
+    "ca052c37-98bc-4ef5-94fb-dcc4ab73f4d5",
+    "e9e031af-665e-5888-9328-f7637b5a2677",
+    "ddde7152-b698-5a85-8060-b8c6c9905758",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "1ea8b036-7a66-540a-be38-301a8db9077c"
+  ]
+}
