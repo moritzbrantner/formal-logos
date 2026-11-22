@@ -1,0 +1,11 @@
+{
+  "id": "91a92523-0678-47f4-b574-5b23e03f3b1e",
+  "label": "Unrestricted free absence strengthens free absence for candidates that could be absent",
+  "argument_id": "684f95cd-0d8e-4c11-bd17-73a691506f1a",
+  "challenge_module": "TruthCore.Results.Causality.SubtractionArgument.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SubtractionArgument.Solution",
+  "theorem": "TruthCore.Results.Causality.SubtractionArgument.unrestrictedToContingentRecombination",
+  "comparator_config": "results/91a92523-0678-47f4-b574-5b23e03f3b1e/comparator.json",
+  "status": "solution-present",
+  "description": "Exact strong-only-premise strength result: unrestricted free absence strictly strengthens free absence for candidates that could be absent. The proof is a weakening by an added antecedent, which the frontier lists as a single-application transcription; it carries the strength order only and closes nothing. Establishes neither."
+}

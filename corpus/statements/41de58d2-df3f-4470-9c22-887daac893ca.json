@@ -1,0 +1,24 @@
+{
+  "id": "41de58d2-df3f-4470-9c22-887daac893ca",
+  "label": "Subtraction argument: laws, omission models and the theist model",
+  "paraphrase": "Premise-free comparison. Laws, for all types: the stage-one node STMT-NECESSARY-CONCRETE-AT and the box K node each exclude 'possibly no concrete object' at their world with no frame condition; the literal non-necessitation premise is S2 plus conditional subtraction; elementary existence of all candidates gives 'possibly no concrete object'; unrestricted free absence with companions at every accessible world gives S2 throughout; the analyst formulation of Lowe's reply (a non-concrete candidate existing at every accessible world, co-existing there with some concrete object; co-existence only, not grounding) excludes 'possibly no concrete object', and with S1, transitivity and excluded middle it excludes S2 and S3 holding together throughout, without choosing which fails; with excluded middle, S2 at w is equivalent to the denial of the stage-one node at w; with companions, the difference of unrestricted over contingent free absence excludes any concrete candidate existing at every accessible world. Models: all subtraction premises and the conclusion together (nonvacuity); four omission models, one per premise S1, S3, transitivity, S2, each keeping the others and falsifying the conclusion (excluded middle is not omitted: Lean is consistent with it, so no model omits it and none is needed); in the S3 model unrestricted free absence, companions and the two premises of the analyst Lowe formulation also hold and no concrete candidate is necessary; the S2 model is a theist model on an S5, hence transitive, frame in which the box K and S5 necessary-being nodes, the stage-one node, S1, S3, free absence for candidates that could be absent and companions hold, while S2 at w and throughout, unrestricted free absence and the conclusion fail. The two-being signature's divine fields are stipulated, not evidence.",
+  "lean_declaration": "TruthCore.Causality.SubtractionArgument.Model.Controls",
+  "definition_ids": [
+    "cdbbae1a-5cce-4367-b6b4-d135135a2ecd",
+    "13c0abe7-25f7-4921-b52e-9f732edd6f2c",
+    "baddf770-36bf-542f-bb3c-2297342d5452",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "f830795a-b5d8-5f9f-800d-2f3d1f443a0a",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "d980bbd2-1a96-564c-bc0d-4065d7786715",
+    "c8f9c2fb-8c17-5fc8-b558-4a6fad659296",
+    "547cac5c-7089-4bce-b5e7-bb8b6c8d12b9"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}
