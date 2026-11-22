@@ -153,3 +153,66 @@ the single-conjunct bridge `∀ a, A2 a → R a` unlocks it. -/
 def ConjSkew (B : Type) (A1 A2 Q : B → Prop) : Prop := ∀ g h, A1 g → A2 h → Q h
 
 end TruthCore.DiscoverFixtureTarget
+
+namespace TruthCore.DiscoverFixtureTarget
+
+/-! Computed formulas (#1845): a small modal language whose schema is built by
+recursion, as `TruthCore.Modal.convergenceFormula` is. Delta-expansion leaves
+`conv 1 0 1 1` and the recursive `Sat` unevaluated; their equations evaluate
+them to constructor form before Duper runs. -/
+
+inductive Fm where
+  | atom : Fm
+  | imp : Fm → Fm → Fm
+  | box : Fm → Fm
+  | dia : Fm → Fm
+
+/-- A relational frame (standing in for a Kripke frame). -/
+structure Fr (W : Type) where
+  acc : W → W → Prop
+
+/-- Truth at a world, by structural recursion on the formula. -/
+def Sat {W : Type} (F : Fr W) (V : W → Prop) (w : W) : Fm → Prop
+  | .atom => V w
+  | .imp p q => Sat F V w p → Sat F V w q
+  | .box p => ∀ v, F.acc w v → Sat F V v p
+  | .dia p => ∃ v, F.acc w v ∧ Sat F V v p
+
+/-- Validity on a frame. -/
+def Val {W : Type} (F : Fr W) (p : Fm) : Prop := ∀ V w, Sat F V w p
+
+def iterB : Nat → Fm → Fm
+  | 0, p => p
+  | n + 1, p => .box (iterB n p)
+
+def iterD : Nat → Fm → Fm
+  | 0, p => p
+  | n + 1, p => .dia (iterD n p)
+
+/-- The Lemmon-Scott schema `◇ʰ□ⁱp → □ʲ◇ᵏp`, built by recursion. -/
+def conv (h i j k : Nat) : Fm := .imp (iterD h (iterB i .atom)) (iterB j (iterD k .atom))
+
+/-- The 5 schema `◇p → □◇p` is valid on `F` (a computed formula). -/
+def FiveValid (W : Type) (F : Fr W) : Prop := Val F (conv 1 0 1 1)
+
+/-- `F` is Euclidean: the frame condition that validates the 5 schema. -/
+def EuclFrame (W : Type) (F : Fr W) : Prop := ∀ w a b, F.acc w a → F.acc w b → F.acc a b
+
+/-- `F` is reflexive: it does not validate the 5 schema (negative control). -/
+def ReflFrame (W : Type) (F : Fr W) : Prop := ∀ w, F.acc w w
+
+/-- A profile bundling a frame with another field (projection-only uses). -/
+structure Prof (W : Type) where
+  frame : Fr W
+  other : W → Prop
+
+/-- Uses `m` only through `m.frame : Fr W`. -/
+def FrameOnly (W : Type) (m : Prof W) : Prop := EuclFrame W m.frame
+
+/-- Uses `m` through `m.frame` and `m.other`. -/
+def FrameAndOther (W : Type) (m : Prof W) : Prop := EuclFrame W m.frame ∧ ∀ w, m.other w
+
+/-- Uses `m` whole. -/
+def Whole (W : Type) (m : Prof W) : Prop := m = m
+
+end TruthCore.DiscoverFixtureTarget

@@ -37,12 +37,22 @@ pub const CONSTANTS_LEAN: &str = "scripts/StatementConstants.lean";
 pub const ALLOWED_AXIOMS: [&str; 3] = ["propext", "Classical.choice", "Quot.sound"];
 const MARKER: &str = "DISCOVER-JSON ";
 /// Filters that flag a discovery without rejecting it.
-pub const INFORMATIONAL: [&str; 4] = [
+pub const INFORMATIONAL: [&str; 5] = [
     "witness",
     "sense_bridge",
     "vacuous_target",
     "projection_binding",
+    "implicit_excluded_middle",
 ];
+/// The recorded logical-background statements a classical proof supplies
+/// without listing them: excluded middle (`TruthCore.Logic.ExcludedMiddle`,
+/// `∀ p, p ∨ ¬p`, legacy `STMT-EXCLUDED-MIDDLE`), which `Classical.choice`
+/// proves (`Classical.em`). Duper proves classically, so a verified argument
+/// that lists excluded middle as an explicit premise matches a found proof
+/// without it (the `known` filter). No other statement is recorded as logical
+/// background: the corpus's only such list is this one floor statement
+/// (`LEGACY_FLOOR_STATEMENTS` of `truth check`).
+pub const CLASSICAL_BACKGROUND: [&str; 1] = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410"];
 
 /// Which statements may serve as premises.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -123,6 +133,11 @@ pub struct Vocabulary {
     /// For each binder whose type is a TruthCore structure, the head constants
     /// of its fields' types, aligned with `binders` (projection fit, #1819).
     pub binder_fields: Vec<BTreeSet<String>>,
+    /// For each binder that occurs only as the structure argument of field
+    /// projections (`m` in `FrameSatisfies .KT m.ontic.frame`), the head
+    /// constants of those fields' types; empty otherwise. Aligned with
+    /// `binders` (#1845).
+    pub binder_uses: Vec<BTreeSet<String>>,
 }
 
 /// Parses the `StatementConstants.lean` export.
@@ -147,6 +162,22 @@ pub fn parse_vocabulary(value: &Value) -> Result<BTreeMap<String, Vocabulary>, S
                 .map(str::to_owned)
                 .collect()
         };
+        let nested = |key: &str| -> Vec<BTreeSet<String>> {
+            row[key]
+                .as_array()
+                .into_iter()
+                .flatten()
+                .map(|heads| {
+                    heads
+                        .as_array()
+                        .into_iter()
+                        .flatten()
+                        .filter_map(Value::as_str)
+                        .map(str::to_owned)
+                        .collect()
+                })
+                .collect()
+        };
         out.insert(
             declaration.to_owned(),
             Vocabulary {
@@ -157,20 +188,8 @@ pub fn parse_vocabulary(value: &Value) -> Result<BTreeMap<String, Vocabulary>, S
                     .filter(|c| c != declaration)
                     .collect(),
                 binder_types: strings("binder_types"),
-                binder_fields: row["binder_fields"]
-                    .as_array()
-                    .into_iter()
-                    .flatten()
-                    .map(|fields| {
-                        fields
-                            .as_array()
-                            .into_iter()
-                            .flatten()
-                            .filter_map(Value::as_str)
-                            .map(str::to_owned)
-                            .collect()
-                    })
-                    .collect(),
+                binder_fields: nested("binder_fields"),
+                binder_uses: nested("binder_uses"),
             },
         );
     }
@@ -252,10 +271,27 @@ impl Graph {
     /// The verified arguments that, composed by forward chaining from
     /// `premises`, reach `target`; `None` when the closure misses it.
     pub fn derivation(&self, premises: &BTreeSet<String>, target: &str) -> Option<Vec<String>> {
+        self.derivation_with(premises, &BTreeSet::new(), target)
+            .map(|(path, _)| path)
+    }
+
+    /// [`Self::derivation`] with `background` statements granted besides
+    /// `premises` (the logic a classical proof supplies implicitly, see
+    /// [`CLASSICAL_BACKGROUND`]); also returns the background statements the
+    /// composing arguments list as premises, which the found proof did not.
+    pub fn derivation_with(
+        &self,
+        premises: &BTreeSet<String>,
+        background: &BTreeSet<String>,
+        target: &str,
+    ) -> Option<(Vec<String>, BTreeSet<String>)> {
         if premises.contains(target) {
-            return Some(Vec::new());
+            return Some((Vec::new(), BTreeSet::new()));
         }
-        let mut have = premises.clone();
+        if background.contains(target) {
+            return Some((Vec::new(), BTreeSet::from([target.to_owned()])));
+        }
+        let mut have: BTreeSet<String> = premises.union(background).cloned().collect();
         let mut via: HashMap<String, usize> = HashMap::new();
         loop {
             let mut grew = false;
@@ -275,6 +311,7 @@ impl Graph {
         }
         // The arguments the target's derivation uses, premises first.
         let mut used = Vec::new();
+        let mut granted = BTreeSet::new();
         let mut seen = BTreeSet::new();
         let mut stack = vec![target.to_owned()];
         while let Some(node) = stack.pop() {
@@ -282,11 +319,16 @@ impl Graph {
                 && seen.insert(index)
             {
                 used.push(self.arguments[index].argument_id.clone());
+                for premise in &self.arguments[index].premises {
+                    if background.contains(premise) && !premises.contains(premise) {
+                        granted.insert(premise.clone());
+                    }
+                }
                 stack.extend(self.arguments[index].premises.iter().cloned());
             }
         }
         used.reverse();
-        Some(used)
+        Some((used, granted))
     }
 }
 
@@ -445,12 +487,16 @@ pub struct SenseTags {
 /// identifies two binders by tag only when their keys agree *and* name whole
 /// binders: a partial-application key (containing `|`) describes only that
 /// application, so identifying the full relations would go beyond the tag.
+/// Whether a tag names its whole binder (no fixed argument).
+fn whole_binder(tag: &parameter_tags::ParameterTag) -> bool {
+    tag.parameter.arguments.iter().all(|a| a == "_")
+}
+
 fn tag_key(tag: &parameter_tags::ParameterTag) -> String {
-    let fixed = tag.parameter.arguments.iter().any(|a| a != "_");
-    if fixed {
-        format!("{}|{}", tag.sense_id, tag.parameter.arguments.join(" "))
-    } else {
+    if whole_binder(tag) {
         tag.sense_id.clone()
+    } else {
+        format!("{}|{}", tag.sense_id, tag.parameter.arguments.join(" "))
     }
 }
 
@@ -491,6 +537,23 @@ impl SenseTags {
                 ]
             })
             .collect()
+    }
+
+    /// The senses each binder of `declaration` is tagged with as a whole
+    /// binder (no fixed arguments), by binder name. These are the tags that
+    /// `scripts/Discover.lean` identifies binders by; a partial-application tag
+    /// (`CausesIn _ _ esse`) describes only that application and is left out.
+    /// An untagged binder is absent: its sense is unknown.
+    pub fn whole_binder_senses(&self, declaration: &str) -> BTreeMap<String, BTreeSet<String>> {
+        let mut out: BTreeMap<String, BTreeSet<String>> = BTreeMap::new();
+        for t in &self.tags {
+            if t.parameter.declaration == declaration && whole_binder(t) {
+                out.entry(t.parameter.parameter.clone())
+                    .or_default()
+                    .insert(t.sense_id.clone());
+            }
+        }
+        out
     }
 
     /// `(term, sense)` pairs a declaration's parameters carry.
@@ -553,11 +616,19 @@ pub fn rank(
     pool: &[&Statement],
     vocabulary: &BTreeMap<String, Vocabulary>,
     weaker: &BTreeMap<String, BTreeSet<String>>,
+    tags: &SenseTags,
     limit: usize,
 ) -> Vec<Candidate> {
     let Some(goal) = vocabulary.get(&target.declaration) else {
         return Vec::new();
     };
+    // The senses the target's whole binders are tagged with (authored tags
+    // only; an untagged binder contributes nothing).
+    let goal_senses: BTreeSet<String> = tags
+        .whole_binder_senses(&target.declaration)
+        .into_values()
+        .flatten()
+        .collect();
     let goal_binders: BTreeSet<&String> = goal.binders.iter().collect();
     let goal_types: BTreeSet<&str> = goal
         .binder_types
@@ -595,14 +666,62 @@ pub fn rank(
                             .is_some_and(|f| f.iter().any(|h| goal_types.contains(h.as_str())))
                 })
                 .count();
-            let binders = named + projecting;
-            if (shared == 0 && definitions == 0) || binders == 0 {
+            // A projecting binder the candidate uses only through fields of a
+            // target binder's type (`OnticFrameKT (m : Profile W B) :=
+            // FrameSatisfies .KT m.ontic.frame`): the candidate is a statement
+            // about that field's value, which projection binding supplies whole.
+            let projection_only = v
+                .binders
+                .iter()
+                .enumerate()
+                .filter(|(i, b)| {
+                    !goal_binders.contains(b)
+                        && v.binder_uses.get(*i).is_some_and(|u| {
+                            !u.is_empty() && u.iter().all(|h| goal_types.contains(h.as_str()))
+                        })
+                })
+                .count();
+            // A binder not shared by name or projection but tagged, as a whole
+            // binder, with a sense one of the target's binders is tagged with:
+            // `scripts/Discover.lean` identifies the two by that tag.
+            let senses = tags.whole_binder_senses(&s.declaration);
+            let shared_senses: BTreeSet<&String> = senses
+                .values()
+                .flatten()
+                .filter(|sense| goal_senses.contains(*sense))
+                .collect();
+            let tagged = v
+                .binders
+                .iter()
+                .enumerate()
+                .filter(|(i, b)| {
+                    !goal_binders.contains(b)
+                        && !v
+                            .binder_fields
+                            .get(*i)
+                            .is_some_and(|f| f.iter().any(|h| goal_types.contains(h.as_str())))
+                        && senses
+                            .get(*b)
+                            .is_some_and(|ss| ss.iter().any(|sense| goal_senses.contains(sense)))
+                })
+                .count();
+            let binders = named + projecting + tagged;
+            // Shared vocabulary, a shared definition or a shared authored sense
+            // admits a candidate; a parameter name alone never does.
+            if (shared == 0 && definitions == 0 && shared_senses.is_empty()) || binders == 0 {
                 return None;
             }
             // Precision matters most: a candidate whose vocabulary and parameters
             // lie inside the target's composes with it, however small it is.
-            let precision = shared as f64 / (v.constants.len() + 1) as f64;
-            let recall = shared as f64 / goal.constants.len().max(1) as f64;
+            // The vocabulary is the project constants and the authored senses
+            // of the whole binders: a relation binder (`MoreIn : B → B → R →
+            // Prop`) mentions no constant, and its sense tag says which concept
+            // it expresses, as a constant would.
+            let candidate_senses: BTreeSet<&String> = senses.values().flatten().collect();
+            let overlap = shared + shared_senses.len();
+            let precision =
+                overlap as f64 / (v.constants.len() + candidate_senses.len() + 1) as f64;
+            let recall = overlap as f64 / (goal.constants.len() + goal_senses.len()).max(1) as f64;
             let fit = binders as f64 / v.binders.len().max(1) as f64;
             let mut score = 0.4 * precision.min(1.0) + 0.2 * recall + 0.5 * fit;
             score += 0.1 * definitions as f64;
@@ -618,6 +737,13 @@ pub fn rank(
             if projecting > 0 {
                 score += 0.3;
             }
+            // Used only through that projection, the structure's other fields
+            // are no part of the candidate's statement: their vocabulary, which
+            // still dilutes the constant overlap, says nothing against it.
+            if projection_only > 0 {
+                score += 0.3;
+            }
+
             Some(Candidate {
                 id: s.id.clone(),
                 score,
@@ -980,7 +1106,10 @@ impl<'a> SenseCheck<'a> {
 
     /// Terms whose senses the argument mixes, as `(term, labels, bridges)`:
     /// the bridges are the `sense_bridges` entries whose statement is one of
-    /// the premises; a term without enough of them is unbridged.
+    /// the premises, and those registered with `role: "conclusion"` whose
+    /// statement is the conclusion (an argument that derives the bridge, as
+    /// `truth check` accepts, #1845); a term without enough of them is
+    /// unbridged.
     pub fn mixing(
         &self,
         premises: &[String],
@@ -1004,14 +1133,19 @@ impl<'a> SenseCheck<'a> {
                 .bridges
                 .iter()
                 .filter(|b| {
+                    let statement = b["statement_id"].as_str();
                     b["term"].as_str() == Some(term.as_str())
-                        && b["statement_id"]
-                            .as_str()
-                            .is_some_and(|s| premises.iter().any(|p| p == s))
+                        && if b["role"].as_str() == Some("conclusion") {
+                            statement == Some(conclusion)
+                        } else {
+                            statement.is_some_and(|s| premises.iter().any(|p| p == s))
+                        }
                 })
                 .map(|b| {
                     let mut b = b.clone();
-                    if let Some(map) = b.as_object_mut() {
+                    if let Some(map) = b.as_object_mut()
+                        && map.get("role").and_then(Value::as_str) != Some("conclusion")
+                    {
                         map.remove("role");
                     }
                     b
@@ -1051,6 +1185,12 @@ fn axioms(value: &Value) -> Vec<String> {
         .filter_map(Value::as_str)
         .map(str::to_owned)
         .collect()
+}
+
+/// Whether a proof outcome rests on `Classical.choice`, hence has excluded
+/// middle (`Classical.em`) without a premise stating it.
+pub fn classical(proof: &Value) -> bool {
+    axioms(proof).iter().any(|a| a == "Classical.choice")
 }
 
 /// The axioms outside the allowance. No name is exempt: the search's auxiliary
@@ -1282,15 +1422,46 @@ pub fn classify(trial: &Trial, outcome: &Value, graph: &Graph, senses: &SenseChe
             .push(("axioms".into(), format!("uses {}", forbidden.join(", "))));
     }
     let set: BTreeSet<String> = finding.premises.iter().cloned().collect();
-    if let Some(path) = graph.derivation(&set, &trial.target) {
+    // A classical proof (`Classical.choice`) has excluded middle without the
+    // premise: a known argument that lists it explicitly still matches.
+    let background: BTreeSet<String> = if classical(&outcome["proof"]) {
+        CLASSICAL_BACKGROUND
+            .iter()
+            .map(|s| (*s).to_owned())
+            .collect()
+    } else {
+        BTreeSet::new()
+    };
+    if let Some((path, granted)) = graph.derivation_with(&set, &background, &trial.target) {
+        let granted: Vec<&str> = granted.iter().map(String::as_str).collect();
+        let modulo = if granted.is_empty() {
+            String::new()
+        } else {
+            format!(
+                ", given {} (excluded middle), which those arguments list as a premise and the classical proof supplies implicitly",
+                granted.join(", ")
+            )
+        };
         finding.filters.push((
             "known".into(),
-            if path.is_empty() {
+            if path.is_empty() && granted.is_empty() {
                 "the target is among the premises".into()
             } else {
-                format!("composes from verified arguments {}", path.join(", "))
+                format!(
+                    "composes from verified arguments {}{modulo}",
+                    path.join(", ")
+                )
             },
         ));
+        if !granted.is_empty() {
+            finding.filters.push((
+                "implicit_excluded_middle".into(),
+                format!(
+                    "the proof is classical (Classical.choice): it uses excluded middle ({}) implicitly, where the known route lists it as an explicit premise",
+                    granted.join(", ")
+                ),
+            ));
+        }
     }
     if outcome["probe"].as_bool() == Some(true) {
         finding.filters.push((
@@ -1321,11 +1492,19 @@ pub fn classify(trial: &Trial, outcome: &Value, graph: &Graph, senses: &SenseChe
                 ),
             ));
         } else {
+            let by_conclusion = bridges
+                .iter()
+                .any(|b| b["role"].as_str() == Some("conclusion"));
             finding.filters.push((
                 "sense_bridge".into(),
                 format!(
-                    "{term}: {} joined by a registered bridge premise",
-                    labels.join(", ")
+                    "{term}: {} joined by a registered bridge {}",
+                    labels.join(", "),
+                    if by_conclusion {
+                        "that is the conclusion (the derivation derives the bridge, role conclusion)"
+                    } else {
+                        "premise"
+                    }
                 ),
             ));
         }
@@ -1348,19 +1527,33 @@ pub fn theorem_name(index: usize) -> String {
     format!("discovered{}", index + 1)
 }
 
-/// The Lean proof of a discovery: delta-expansion, then Duper.
+/// The Lean proof of a discovery: delta-expansion, then Duper. When the goal
+/// reaches definitions of values (`equations` of the Lean outcome, such as
+/// `convergenceFormula`, built by recursion), their defining equations
+/// evaluate the closed terms to constructor form first (`simp only`), as in
+/// the search (`proverTactic` of `scripts/Discover.lean`, #1845). The theorem
+/// statement itself is unchanged.
 pub fn proof_text(outcome: &Value) -> String {
-    let unfold: Vec<&str> = outcome["unfold"]
-        .as_array()
-        .into_iter()
-        .flatten()
-        .filter_map(Value::as_str)
-        .collect();
+    let names = |key: &str| -> Vec<&str> {
+        outcome[key]
+            .as_array()
+            .into_iter()
+            .flatten()
+            .filter_map(Value::as_str)
+            .collect()
+    };
+    let unfold = names("unfold");
+    let equations = names("equations");
     let mut text = String::from("by\n");
     if !unfold.is_empty() {
         let _ = writeln!(text, "  delta {} at *", unfold.join(" "));
     }
-    text.push_str("  duper [*]");
+    if equations.is_empty() {
+        text.push_str("  duper [*]");
+    } else {
+        let _ = writeln!(text, "  try simp only [{}] at *", equations.join(", "));
+        text.push_str("  all_goals duper [*]");
+    }
     text
 }
 
@@ -1680,6 +1873,9 @@ pub fn render_spec(
                 toml_string(&field("to")),
                 toml_string(&field("statement_id")),
             );
+            if field("role") == "conclusion" {
+                text.push_str("role = \"conclusion\"\n");
+            }
         }
     }
     text
@@ -1885,7 +2081,14 @@ pub fn discover(
             ));
             continue;
         }
-        let ranked = rank(target, &pool, &vocabulary, &weaker, options.candidates);
+        let ranked = rank(
+            target,
+            &pool,
+            &vocabulary,
+            &weaker,
+            &tags,
+            options.candidates,
+        );
         if ranked.is_empty() {
             skipped.push((
                 target.id.clone(),

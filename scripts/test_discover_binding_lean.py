@@ -8,6 +8,12 @@ only that partial application and must never identify the full relations
 assembled as `truth discover` assembles it (`scratch_text` in
 `truth/src/discover.rs`), with the transcription probe stubbed because no
 target here reaches it as a finding.
+
+#1845 adds: a schema built by recursion (`conv`, standing in for
+`convergenceFormula`) evaluated by its equations before Duper, with a negative
+control and a re-elaboration of the certification text; a projection
+alternative that only a dropped premise introduced is not ambiguous; and the
+vocabulary export marks a structure binder used only through one field.
 """
 
 from __future__ import annotations
@@ -88,6 +94,52 @@ def run(commands: list[str]) -> dict:
             value = json.loads(line.split("DISCOVER-JSON ", 1)[1])
             outcomes[value["label"]] = value
     return outcomes
+
+
+def compiled(tmp: str) -> str:
+    """Compiles the fixture modules into `tmp`; the shell steps."""
+    module_dir = Path(tmp) / "TruthCore"
+    module_dir.mkdir(exist_ok=True)
+    steps = []
+    for module in MODULES:
+        shutil.copy(FIXTURES / f"{module}.lean", module_dir / f"{module}.lean")
+        steps.append(f'lean --root="$1" -o "$1/TruthCore/{module}.olean" "$1/TruthCore/{module}.lean"')
+    return " && ".join(steps)
+
+
+def check(text: str) -> None:
+    """Elaborates `text` (a theorem over the fixture modules) with Duper."""
+    imports = ["Duper"] + [f"TruthCore.{m}" for m in MODULES]
+    with tempfile.TemporaryDirectory() as tmp:
+        path = Path(tmp) / "Check.lean"
+        path.write_text("".join(f"import {m}\n" for m in imports) + "\n" + text)
+        script = compiled(tmp) + ' && LEAN_PATH="$1:$LEAN_PATH" lean "$2"'
+        completed = subprocess.run(
+            ["lake", "env", "sh", "-c", script, "sh", tmp, str(path)],
+            cwd=ROOT, capture_output=True, text=True, check=False,
+        )
+    if completed.returncode != 0 or ": error" in completed.stdout:
+        raise AssertionError(completed.stdout + completed.stderr)
+
+
+def export(declarations: list[str]) -> list[dict]:
+    """`scripts/StatementConstants.lean` over the fixture modules."""
+    with tempfile.TemporaryDirectory() as tmp:
+        listing = Path(tmp) / "declarations.txt"
+        listing.write_text("\n".join(declarations) + "\n")
+        script = (
+            compiled(tmp)
+            + f' && LEAN_PATH="$1:$LEAN_PATH" lean --run {ROOT / "scripts" / "StatementConstants.lean"}'
+            + ' TruthCore.DiscoverFixtureTarget "$2"'
+        )
+        completed = subprocess.run(
+            ["lake", "env", "sh", "-c", script, "sh", tmp, str(listing)],
+            cwd=ROOT, capture_output=True, text=True, check=False,
+        )
+    if completed.returncode != 0:
+        raise AssertionError(completed.stderr or completed.stdout)
+    # The export is the last line; compiling the fixtures may print warnings.
+    return json.loads(completed.stdout.strip().splitlines()[-1])
 
 
 @unittest.skipIf(skip_reason() is not None, skip_reason() or "")
@@ -328,6 +380,64 @@ class DiscoverBindingTest(unittest.TestCase):
         kept = [b for b in bridges if b["from"] == f"{skew}.A2" and b["to"] == f"{rule}.R"]
         self.assertTrue(kept, bridges)
         self.assertTrue(kept[0]["single_conjunct"])
+
+    def test_computed_formulas_are_evaluated_before_duper(self):
+        ns = "TruthCore.DiscoverFixtureTarget"
+        outcomes = run([
+            f'#discover "five" 100000 "" "{{}}" {ns}.FiveValid from {ns}.EuclFrame',
+            f'#discover "refl" 20000 "" "{{}}" {ns}.FiveValid from {ns}.ReflFrame',
+        ])
+        # `conv 1 0 1 1` is evaluated by its equations (#1845): the
+        # Euclidean frame validates the 5 schema.
+        five = outcomes["five"]
+        self.assertIsNotNone(five["closed"], five)
+        for name in ("conv", "iterB", "iterD"):
+            self.assertIn(f"{ns}.{name}", five["equations"])
+        # Propositions are delta-expanded as before (`Sat` included).
+        self.assertIn(f"{ns}.Sat", five["unfold"])
+        self.assertIn(f"{ns}.Val", five["unfold"])
+        self.assertNotIn(f"{ns}.Sat", five["equations"])
+        # The statement keeps the computed term; only the proof evaluates it.
+        self.assertIn(f"{ns}.FiveValid", five["signature"])
+        # Negative control: reflexivity does not give the 5 schema.
+        self.assertIsNone(outcomes["refl"]["closed"])
+        # The certification text (`proof_text` in truth/src/discover.rs)
+        # re-elaborates from the original statement.
+        proof = (
+            f"by\n  delta {' '.join(five['unfold'])} at *\n"
+            f"  try simp only [{', '.join(five['equations'])}] at *\n  all_goals duper [*]"
+        )
+        text = f"theorem discovered1 {five['signature']} :=\n  {proof.replace(chr(10), chr(10) + '  ')}\n"
+        check(text)
+        # Control: the former script (delta-expansion only) leaves the
+        # computed formula unevaluated, and Duper does not close it.
+        plain = f"by\n    delta {' '.join(five['unfold'])} at *\n    duper [*]"
+        with self.assertRaises(AssertionError):
+            check(f"set_option maxHeartbeats 100000 in\ntheorem plain {five['signature']} :=\n  {plain}\n")
+
+    def test_projection_alternatives_only_a_dropped_premise_introduced_are_not_ambiguous(self):
+        target = "TruthCore.DiscoverFixtureTarget.ProjTarget"
+        premise = "TruthCore.DiscoverFixtureTarget.ProjPremise"
+        owner = "TruthCore.DiscoverFixtureTarget.OwnsBox"
+        outcome = run([f'#discover "dropped" 20000 "" "{{}}" {target} from {premise} {owner}'])["dropped"]
+        # `x := b.val` closes the goal from `ProjPremise`; `OwnsBox`'s tagged box
+        # also has a field of `x`'s type, but minimization drops it: the
+        # theorem has one structure, so the choice is not ambiguous (#1845).
+        self.assertIsNotNone(outcome["closed"])
+        self.assertEqual(outcome["minimal"], [0])
+        self.assertFalse(outcome["projection"]["ambiguous"])
+        self.assertEqual(outcome["projection"]["alternatives"], [f"{premise}.b.val"])
+        self.assertEqual(outcome["projection"]["dropped_alternatives"], [f"{owner}.b.val"])
+
+    def test_vocabulary_export_marks_projection_only_binders(self):
+        ns = "TruthCore.DiscoverFixtureTarget"
+        rows = export([f"{ns}.FrameOnly", f"{ns}.FrameAndOther", f"{ns}.Whole"])
+        uses = {r["declaration"]: r["binder_uses"] for r in rows}
+        # `m` occurs only as `m.frame : Fr W`: a statement about the frame.
+        self.assertEqual(uses[f"{ns}.FrameOnly"], [[], [f"{ns}.Fr"]])
+        # Through another field too, or whole: not projection-only.
+        self.assertEqual(uses[f"{ns}.FrameAndOther"], [[], []])
+        self.assertEqual(uses[f"{ns}.Whole"], [[], []])
 
 
 if __name__ == "__main__":
