@@ -1,6 +1,6 @@
 {
   "id": "1cafe011-a462-479a-9cfe-471fe7a9b530",
-  "label": "Actual concrete causal operation of a fixed-duration Reaper station",
+  "label": "Actual station operation with positive-duration causal linkage",
   "term": "actual causal station operation",
   "lean_declaration": "TruthCore.Causality.FixedDurationGrimReaper.StationOperationAt",
   "definition": "StationOperationAt R h stations u c n asserts that station bearers n and n+1 exist and are present at the assigned c n and c(n+1) moments of one history u, that the earlier station n+1 actually causes (in the supplied Ontic.Causes sense) the later station n, and that the existing four-rule PieceAt R u c n protocol is realized. The efficient causal influence is an additional world-relative fact, not a proof that the receiver exists because of the transmitter, not a memberwise totality cause and not merely an intrinsic capability. The ontology of signal events and the cause-of-operation interpretation still require a bridge.",

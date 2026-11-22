@@ -1,6 +1,6 @@
 {
   "id": "7fe26ec1-a352-4741-848d-fb06ab9de32f",
-  "label": "Metric finite pasts from concrete finite Reaper prefixes and countable recombination",
+  "label": "Finite pasts from causal station prefixes and countable recombination",
   "argument_id": "713dd892-a72c-4ffc-84c2-0d9d539a5c39",
   "challenge_module": "TruthCore.Results.Causality.FixedDurationGrimReaper.Challenge",
   "solution_module": "TruthCore.Results.Causality.FixedDurationGrimReaper.Solution",

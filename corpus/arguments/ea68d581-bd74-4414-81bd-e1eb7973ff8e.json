@@ -1,6 +1,6 @@
 {
   "id": "ea68d581-bd74-4414-81bd-e1eb7973ff8e",
-  "label": "Concrete finite station prefixes imply a locally feasible Reaper descent",
+  "label": "Causal station prefixes entail a locally feasible Reaper descent",
   "premise_statement_ids": [
     "7d1b132f-e82c-486e-85c9-1217bfdf642c"
   ],
