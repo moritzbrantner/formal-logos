@@ -88,4 +88,12 @@ theorem metricallyFiniteOfCountableStationRecombination {W B T : Type}
     PopulatedPastsMetricallyFinite h Concrete k w := by
   sorry
 
+theorem finiteStationPrefixesGiveAdjacent {W B T : Type}
+    (R : ReaperFrame W T) (h : History W B T) (Concrete : B → Prop)
+    (stations : Nat → B) (v : W) (c : Nat → T)
+    (hFinite : FiniteStationPrefixCompatibility R h Concrete stations v c) :
+    AdjacentPiecesCoPossible R h v c := by
+  sorry
+
+
 end TruthCore.Results.Causality.FixedDurationGrimReaper
