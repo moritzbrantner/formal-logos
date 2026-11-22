@@ -546,7 +546,8 @@ pub struct Candidate {
 /// Score: the share of the candidate's parameters that the target also has
 /// or projects to (type fit), the share of its TruthCore constants the target uses
 /// (precision) and of the target's constants it uses (recall), plus shared
-/// definitions, the same module and a strength order with the target. A ranking only: Lean decides whether the types compose.
+/// definitions, the same module, a strength order with the target and a
+/// projection fit. A ranking only: Lean decides whether the types compose.
 pub fn rank(
     target: &Statement,
     pool: &[&Statement],
@@ -609,6 +610,12 @@ pub fn rank(
                 score += 0.1;
             }
             if strength(&s.id, &target.id) {
+                score += 0.3;
+            }
+            // A projection fit is a type-level signal the constant overlap
+            // understates: the structure brings its other fields' vocabulary
+            // (`Profile` beyond `ontic`), which lowers precision and recall.
+            if projecting > 0 {
                 score += 0.3;
             }
             Some(Candidate {

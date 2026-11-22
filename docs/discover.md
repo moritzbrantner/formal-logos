@@ -39,7 +39,8 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
    target. A candidate parameter that shares no name with the target's but is
    a structure with a field of a target parameter's type (`m : Profile W B`,
    whose `m.ontic : Ontic W B`, against `o : Ontic W B`) counts toward the type
-   fit and admits the candidate, since the goal builder may bind through that
+   fit, adds the same bonus as a strength order (the structure's other fields
+   otherwise dilute its constant overlap) and admits the candidate, since the goal builder may bind through that
    projection (step 4); the export lists each parameter's type head and, for a
    structure, its fields' type heads. The best `--candidates N` (default 8) form the goal. When the target
    and a candidate carry different senses of one term (parameter-level sense
