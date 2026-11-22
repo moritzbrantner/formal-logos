@@ -41,6 +41,15 @@ lean = "ConcurrentFiniteDurationCausalOpportunity"
 paraphrase = "OPEN analyst premise, attribution deferred, in the memberwise concurrent-esse sense of causation: if a BEGINS_2 populated history is accessible from the selected world, then an accessible BEGINS_2 populated history has an actually existing concrete individual c outside the contingent concrete inventory such that the shared CausalityFrame.GivesAt relation holds from c to every contingent concrete member at every moment of its presence, with at least one actual exercise. Unlike the existing B2's unconstrained totality-cause marker 256b5bab, this source exercises an explicit causal primitive within its possible world. This is stronger than holistic totality causation and still includes the possibility of a necessary external bearer. It does not establish giving of being in the actual world, require a first moment, or infer physical realizability from modal syntax."
 definitions = ["c0d65b45-33bb-47a2-b16b-48a493a762cb", "028c1066-481d-4eb4-a96e-01ad62f85a2c", "77254d4d-c318-40a3-b2a1-5c922632f011", "97f37f5c-7f82-5077-9bb9-6cfc8673631d"]
 
+[[statement]]
+id = "34b957cd-73e6-4a10-8fa1-958a4679e346"
+label = "A necessary concrete source at w gives being in an accessible history"
+lean = "NecessaryConcreteWithPossibleConcurrentGivingAt"
+paraphrase = "A stronger analyst interpretation of the necessary-concrete conclusion: in the selected world w there is one actual concrete individual c existing there and in every accessible world, and in some history v accessible from w the SAME c actually gives being, by the shared CausalityFrame.GivesAt primitive, to every contingent concrete member at each moment of its presence with at least one exercise. Necessary existence at w does not imply actual giving at w; nor does giving imply uniquely being God or the ultimate ground. Reuses the BEGINS_2 causal opportunity premises without replacing the weaker root node."
+definitions = ["a6a2ca46-5f70-4db0-8359-9ae32b0eb583", "c0d65b45-33bb-47a2-b16b-48a493a762cb", "028c1066-481d-4eb4-a96e-01ad62f85a2c", "1b8baf77-84fa-5513-a138-7fa14840dd87", "e1ff44df-ed97-5990-8424-1abd720f23ea"]
+disambiguations = ["7507d645-874d-5434-add8-2f49c2801d36"]
+
+
 [[argument]]
 id = "Possible finite-duration beginning from metrically finite populated pasts"
 theorem = "possiblyBeginsFiniteDurationOfMetricallyFinite"
@@ -100,3 +109,39 @@ object_kind = "statement"
 object_id = "Possibly, time before each populated moment is finite (BEGINS_2, supplied clock; CLOCK_1 intended)"
 verification_result_id = "A possible first-moment beginning is a possible finite-duration beginning"
 note = "Linear time, any real clock. Strict: MetricBeginningArrival control 2 (positive reals) has a possible finite-duration beginning and no possible first-moment beginning."
+
+
+[[argument]]
+id = "7649d8aa-31c2-4bdf-9b52-5b874366c21a"
+label = "Actual necessary source with possible causal exercise from BEGINS_2 opportunity"
+theorem = "necessaryActualWithPossibleConcurrentGiving"
+premises = ["1b1462e6-c285-448c-87e2-3053bc05a341", "2b20b5af-d653-56ba-8001-35903fb3d1ea", "951a2235-14e5-432e-8365-0efce1b8659d", "e4a3b917-7c61-49e3-a8fa-dc02155bbf80"]
+conclusion = "34b957cd-73e6-4a10-8fa1-958a4679e346"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "34b957cd-73e6-4a10-8fa1-958a4679e346", role = "conclusion"}]
+rule = "Reconstruct the external causal opportunity witness; retain actual GivesAt on the same c in v; transport rigid necessity to w using Euclidean-at-w and actual reflexivity"
+meaning = "The stronger causal B2 is applied to a possible BEGINS_2 populated history, yielding one source c with actual memberwise GivesAt exercise in a witness history v. Externality of that same c among contingent concreta implies its de re necessity in v, and Euclidean-at-w plus actual reflexivity transport its necessary existence to w without changing c or projecting the causal exercise to w. This is a non-transcription conditional theorem retaining real causal content in a possible world, not a proof of B2's warrant."
+comparator_theorems = ["possiblyNecessaryConcurrentGiver", "inertGivingSeparatesOpportunity", "functioningConcurrentOpportunity", "mixedPossibleGivingWithoutActualGiving"]
+
+[[argument]]
+id = "f468780f-59a0-4c49-a480-e496642028f3"
+label = "A possibly operative necessary source implies a necessary concrete being"
+theorem = "necessaryConcreteOfPossibleConcurrentGiver"
+premises = ["34b957cd-73e6-4a10-8fa1-958a4679e346"]
+conclusion = "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "b19ffd92-01bd-5c0b-9643-e7407137ea5e", role = "conclusion"}]
+transcription = "instantiation"
+rule = "Project the necessary concrete source c from the enriched causal conclusion to the existing necessary-concrete endpoint without changing witness identity"
+meaning = "The SAME rigid source c from the enriched modal causal conclusion is a necessary concrete being at w; the exercise-of-GivesAt conjunct is retained in the premise but not inferred as actual-world efficacy. A verified logical weakening, not independent metaphysical evidence. The existing stage-one necessary-concrete node retains its separate direct premise and other routes."
+
+[[relation]]
+id = "55be342a-5246-4f71-ad87-3cc4386f7cb1"
+label = "Necessary concrete with possible causal operation strengthens necessary concrete"
+subject_kind = "statement"
+subject_id = "34b957cd-73e6-4a10-8fa1-958a4679e346"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
+verification_result_id = "e43f423e-919f-4c3b-a6b8-8cd87a99e7e7"
+note = "Same-rigid-witness logical weakening only: the stronger possibility-of-exercise claim entails the original necessary-concrete node for any grounding profile. No strictness or metaphysical warrant is established."
