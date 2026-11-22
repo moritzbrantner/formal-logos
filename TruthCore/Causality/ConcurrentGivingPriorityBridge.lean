@@ -62,7 +62,10 @@ def SelfGivingIsEfficientSelfCauseAt {W B T R : Type}
 
 /-- In no history accessible from `w`, at no moment, is anything its own
 efficient cause, in any respect. The all-histories, all-moments version of
-the selected-time `NothingIsEfficientCauseOfItselfReading`; stronger than it.
+the selected-time `NothingIsEfficientCauseOfItselfReading`. It is stronger than
+that statement only given that `w` is accessible from itself (accessibility is
+not reflexive by construction) and that the unindexed relation is read as
+`EfficientlyCausesAt w t` at a selected moment `t`.
 Analyst statement, attribution deferred (the *nec est possibile* of ST I q.2
 a.3 is an unchecked candidate basis). -/
 def NoEfficientSelfCauseOnAccessible {W B T R : Type}

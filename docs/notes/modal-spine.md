@@ -592,9 +592,12 @@ cause) it gives `0e473dc4` (result `a59169d5`). `872ff8b6` itself follows from
 the OPEN indexed cause-priority premise `b402ca7b` and nothing-prior-to-itself
 `32d77f18`, by the verified `SelfCausationPriority.noSelfCauseFromPriority`
 applied in each history at each moment with the single unindexed `PriorSimply`
-(result `9ed661bd`). `872ff8b6` and `b402ca7b` are analyst statements, stronger
-than the selected-time Aquinas statements `8b2561cd` and `e078f07b`, whose
-claims do not extend to them; the *nec est possibile* of q.2 a.3 is an unchecked
+(result `9ed661bd`). `872ff8b6` and `b402ca7b` are analyst statements. They are
+stronger than the selected-time Aquinas statements `8b2561cd` and `e078f07b`
+only given that the selected world is accessible from itself (accessibility is
+not reflexive by construction) and that the old unindexed relation is read as
+the indexed one at the selected world and a selected moment. The Aquinas claims
+do not extend to them; the *nec est possibile* of q.2 a.3 is an unchecked
 candidate basis for `872ff8b6`. The indexed omission control keeps both Second
 Way premises while the bridge and no-self-giving fail.
 

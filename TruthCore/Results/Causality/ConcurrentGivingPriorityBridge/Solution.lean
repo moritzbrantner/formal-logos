@@ -74,6 +74,8 @@ open TruthCore.Causality.ConcurrentGivingPriorityBridge.Control
 open TruthCore.Causality.MetricBeginningArrival.Control (selfGivingFrame)
 open TruthCore.Causality.MetricGrimReaper.Control (PosReal)
 
+/-- SUPERSEDED, not registered in the corpus: control for the index-free
+bridge `SelfGivingIsEfficientSelfCause`. Replaced by `indexedControls`. -/
 theorem controls : Certificate := by
   refine ⟨?_, ?_, ?_, ?_⟩
   · intro _ _ _ h
