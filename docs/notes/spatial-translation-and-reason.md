@@ -110,3 +110,88 @@ lambda were proof-development failures, corrected without changing the frozen
 Challenge or advertised certificate. These diagnostics are not the final build,
 binding, Comparator or NanoDa certificates; final CI owns those delivered-input
 gates. Changed source manifests and corpus records are checked locally.
+
+## Cross-family result: contingent spacetime and underived nonlocation (2026-11-22)
+
+The new `TruthCore/Ontology/SpacetimeGroundingBridge.lean` and
+`TruthCore.Results.Ontology.SpacetimeGroundingBridge.derive` connect
+`STMT-NECESSARY-CONCRETE-UNDERIVED-AT` to a same-witness conclusion:
+**a necessary, underived concrete root is not dimensively located in spacetime**
+provided that the *same* selected world has a contingent actual concrete
+spacetime whole and the *same* selected existential-grounding relation makes
+that whole ground every distinct actual concrete spatial occupant. The premise
+`OccupantsDependOnWholeAt m w F` is the new **OPEN** interpretive bridge.
+Both `ActualConcreteWholeAt` and `ContingentWholeAt` are independently open.
+No modal possibility of a physical translation, global simultaneity, or real
+cosmological beginning is assumed. The conclusion is only
+`SPATIOTEMPORAL_2` non-occupation, not absence of spatiotemporal relation,
+parthood, presence by power, or divine eternity.
+
+### Ontological comparison
+
+| Interpretation | How the spacetime whole is interpreted | Exact unresolved issue |
+| --- | --- | --- |
+| Independent spacetime substance | Candidate `F.whole` may be numerically distinct and concrete | Why it is contingent and why location makes the **occupant's esse** depend on the whole, rather than merely allowing motion or physical occupation |
+| Relational structure | Locations and metric/event relations belong to a system of relations, with no extra existing spacetime individual required | An existing whole cannot be inferred from relational data or an orbit quotient. A different supported truthmaker or ontic-constitution bridge would be needed |
+| Physically fundamental spacetime | Basic to the admitted physical model or laws | Physical fundamentality is not modal necessity, metaphysical priority or underivedness: neither contingency nor the direction of existential dependence follows |
+| Derivative/grounded structure | Spacetime may depend on underlying fields, objects or relations | A whole-to-occupant grounding edge may point in the **opposite direction**; an explicit same-domain relation and source must replace the positive premise |
+
+### Exact mathematical and ontological distinctions
+
+The existing Leibniz–Clarke profile proves translations preserve signed relative
+displacements and pair distances; its no-selector theorem depends on a
+deterministic, covariant absolute-position selector. The identity criteria prove
+equivalence of relational, orbit and represented identity only with additional
+data-preservation, orbit-completeness and triviality assumptions. Neither result
+supplies `ExistsAt`, `ContingentAt`, numerical identity or grounding of esse.
+
+The Lorentz boost certifies invariant interval and `GeometricBefore` order
+while changing remote simultaneity for a spacelike pair. A coordinate event,
+a `TemporalHistory.IsAt` predicate and a whole-history possible world are
+different carriers. A light-cone comparison is a **geometric ordering
+constraint**, not `Ontic.Causes` physical/efficient causation, and neither of
+those is `Profile.grounds` existential support. The `PriorSimply`
+metaphysical-priority relation is separate again; existing
+`DependenceGroundingPriority` supplies explicit bridge hypotheses between
+dependence, actual grounding and simple priority. `EverlastingAt` expresses
+presence through the selected times, not cross-world necessity or proper
+Boethian timelessness. The new result never uses any of these as implicit
+ontological bridges.
+
+### Nonvacuity, omission and root integration
+
+The same `NecessaryConcreteUnderived.witnessProfile` supplies a populated
+finite control. At world `false`, the actual concrete spacetime whole `true`
+is contingent, while the existing root `false` is necessary and underived.
+The root actually grounds the whole, `grounds false false true`, and every
+candidate occupies the one region. There is **no** ground from the whole
+to the root, so `OccupantsDependOnWholeAt` is false and no nonlocated
+necessary-underived witness exists. This rules out inferring the bridge from
+the other premises. The model is structural, not a claimed actual or physically
+possible spacetime interpretation.
+
+The result reuses the original root-route support node without replacing it.
+Its output is an additional **conditional attribute option**, not a new
+proof of `STMT-GOD-EXISTS` or discharge of any root premise. The existing
+`NecessaryClassicalGodRootFromUnderived.derive` carries one root witness
+through stage-two attributes, but the public existential result does not
+identify the newly unlocated witness with the classical `GOD_4` bearer.
+A future consumer must thread the *same* `x`, `m`, `w`, and `F`
+through that result; conjoining two different existential conclusions is
+invalid. The extra openness and same-witness scope are deliberate.
+
+**Exact remaining philosophical question:** Does the actual spacetime whole
+exist as a contingent *concrete* individual, and does dimensive occupation by
+a distinct concrete being imply that the selected whole existentially grounds
+that being's own esse, rather than merely furnishing geometric or physical
+conditions? Give the grounding direction and a same-relation applicability
+argument, or reject this conditional route and retain the relational or
+derivative alternative. Neither translation symmetry nor relativity can
+resolve it. Proper divine eternity remains on the independently open
+Boethian-recognition route.
+
+The new Challenge was frozen before writing Solution. The registered result
+requires final Lean, binding, Comparator and NanoDa verification; its
+philosophical interpretation additionally requires an independent semantic
+challenge. Formal validity, metaphysical applicability and identification with
+the root's GOD_4 witness must be assessed separately.
