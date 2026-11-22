@@ -1,0 +1,15 @@
+{
+  "id": "ff30c214-d193-4501-a6a8-0a5bdeb80477",
+  "label": "Unrestricted free absence among distinct concrete candidates at w",
+  "paraphrase": "Recombination, absence half of Hume's dictum, unrestricted, analyst formulation, attribution deferred: for any two distinct concrete candidates x and y, if x exists at some world accessible from w, then x exists without y at some world accessible from w. Pairwise only: it realizes no combination of more than two candidates at once. Applies to every concrete candidate, whatever its modal status.",
+  "lean_declaration": "TruthCore.Causality.SubtractionArgument.UnrestrictedRecombinationAt",
+  "definition_ids": [
+    "13c0abe7-25f7-4921-b52e-9f732edd6f2c",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}
