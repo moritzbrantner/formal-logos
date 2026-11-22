@@ -224,6 +224,19 @@ theorem intrinsicIntellectOfContainment {B R : Type}
 containment, intrinsic source intellect and actual exercise; with a second
 model witnessing cognitive production without containment. -/
 theorem formalEminentControls : FormalEminentControl.Controls := by
+  dsimp [FormalEminentControl.Controls, FormalEffectPreexistsInclusively,
+    FormalActEntersGrades, GradesActIsInclusive, GodContainsIntellectualPerfection,
+    GodIsMaximalInBeing, MaximumInGenusCausesAllInGenusReading,
+    PerfectionsOfEffectPreexistInCauseReading,
+    TruthCore.Latin.Aquinas.SummaTheologiae.IsMaximumIn,
+    FormalEminentControl.grades, FormalEminentControl.formalOnlyGrades,
+    FormalEminentControl.act, FormalEminentControl.formalOnlyAct,
+    gradesOf, FormalEminentControl.formal, FormalEminentControl.virtual,
+    FormalEminentControl.inclusive, FormalEminentControl.more,
+    FormalEminentControl.causes, FormalEminentControl.source,
+    FormalEminentControl.intellect, FormalEminentControl.allHaveCapacity,
+    FormalEminentControl.understandsNow,
+    TruthCore.Causality.TermSenseForks.ActFrame.InActFormallyOrVirtually]
   decide
 
 end TruthCore.Results.Causality.CartesianAdequacy
