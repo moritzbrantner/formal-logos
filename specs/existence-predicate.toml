@@ -1,0 +1,124 @@
+# Existence as a predicate (#1784, #397), part 1: the owner-specified definitional
+# argument, its retorsion, and a nuclear-characterization (Parsons-style)
+# reconstruction of Meinong's Gegenstandstheorie. Analyst formulations;
+# attribution deferred (author names are navigation, not verified source claims).
+# The definitional argument concludes the root node STMT-GOD-EXISTS over the
+# frame's beings; it is valid but a transcription by instantiation, and its
+# unrestricted P2 is refuted premise-free (zero axioms). The nuclear control
+# separates EXISTENCE_4 (extranuclear) from EXISTENCE_5 (nuclear "existent") and
+# tests the naming premise under a nuclear reading of being in act at esse.
+# Zalta's encoding/exemplification reconstruction and Kant's "not a real
+# predicate" sense fork are recorded as next steps in the attempt record.
+
+[batch]
+vocab = "TruthCore.Ontology.ExistencePredicate"
+results = "TruthCore.Results.Ontology.ExistencePredicate"
+
+[[statement]]
+id = "P1 of the definitional argument: the description 'existing, GOD_4, omnibenevolent' has been defined"
+lean = "DefinesExistingOmnibenevolentGod"
+paraphrase = "Analyst formulation of the owner-specified premise 'I define the existing omnibenevolent God' (attribution deferred): in a definitional frame, the description 'an existing object that is God and is omnibenevolent' has been introduced by a definitional act. 'Existing' is the frame's existence predicate, which marks the objects that are among the beings the root's God-exists claim quantifies over; 'defined' means introduced by stipulation, nothing more. The statement says only that the definition was made, not that anything satisfies it."
+definitions = ["75d7aa56-615c-46a0-8c05-67f1624f6b36", "88f9f6e8-997b-5f7d-afa1-c501954c3807"]
+disambiguations = ["205a39c3-915d-5fe4-8076-a9ff91329e08"]
+
+[[statement]]
+id = "P2 of the definitional argument (weak): whatever has been defined is true"
+lean = "DefinitionsAreTrue"
+paraphrase = "Analyst formulation of the owner-specified premise 'whatever is defined is true' in its weak version (attribution deferred): every description that has been introduced by a definitional act in the frame is satisfied by some object. It is restricted to descriptions actually defined; it does not say which descriptions may be defined. Its unrestricted version is the unrestricted characterization principle."
+definitions = ["75d7aa56-615c-46a0-8c05-67f1624f6b36"]
+
+[[statement]]
+id = "Unrestricted characterization: every description of objects is satisfied by some object"
+lean = "UnrestrictedCharacterization"
+paraphrase = "The unrestricted version of the definitional premise (analyst formulation, attribution deferred; not Meinong's view): every description of the frame's objects whatever, including descriptions that contain existence, is satisfied by some object. Any description can be stipulated, so 'whatever is defined is true' without restriction on what may be defined comes to this."
+definitions = ["75d7aa56-615c-46a0-8c05-67f1624f6b36"]
+
+[[statement]]
+id = "Retorsion: unrestricted characterization fails and contrary sole-God definitions clash"
+lean = "DefinitionalTruthRetorsion"
+paraphrase = "Three checked facts about definitional frames, analyst formulation. (a) In every frame the unrestricted characterization principle is false. (b) In every frame, for any predicates 'God' and 'omnibenevolent', if 'the existing being that is the only God and is omnibenevolent' and 'the existing being that is the only God and is not omnibenevolent' have both been defined, then 'whatever is defined is true' is false: the two satisfiers would both be the only God, hence identical, and both omnibenevolent and not. (c) Each of the two descriptions is satisfied in some frame (not in the same one), so the clash does not come from a single self-contradictory description. The predicates are arbitrary; the result is not about the God of the root."
+definitions = ["75d7aa56-615c-46a0-8c05-67f1624f6b36"]
+
+[[statement]]
+id = "Nuclear characterization gives EXISTENCE_5, not EXISTENCE_4, and blocks the definitional argument"
+lean = "NuclearCharacterizationControl"
+paraphrase = "Checked facts about a nuclear-property object theory in the style of Parsons 1980 (analyst reconstruction of Meinong's Gegenstandstheorie, attribution deferred). (a) In every frame where each set of nuclear properties is the nuclear set of exactly one object, for any nuclear properties g and o some object has g, o and the nuclear property 'existent' (EXISTENCE_5). (b) Some frame satisfies that principle and has extranuclear-existent objects (EXISTENCE_4), and for some g ('god') and o ('omnibenevolent'): an object with g, o and nuclear existence exists as an object; no object with g exists extranuclearly; read as a definitional frame whose existence is EXISTENCE_4 and whose admissible definitions are the nuclear descriptions, 'whatever is defined is true' holds, the description 'existing, god, omnibenevolent' is not defined, and no being is a god. (c) In the same frame, with 'in act at esse' read as EXISTENCE_5, a relation 'more in being' and a causal relation can be chosen so that the naming premise's form (if a being is the unique maximum in being and causes all in that genus, it is God, with the frame's god property as God) holds, some object is the unique maximum in being and causes all in the genus, and some object is a god, while no extranuclear-existent object is a god. The model witnesses only this formal interpretation."
+definitions = ["84831dae-67ff-4ac3-83c7-525fbdb505ab", "ebe88fbd-b496-4462-a44a-f0591c831800", "20b76107-4d53-4bad-9fc1-6b6ec89dcd51", "75d7aa56-615c-46a0-8c05-67f1624f6b36"]
+disambiguations = ["DISAMB-RUSSELL-EXISTENCE"]
+
+[[argument]]
+id = "GOD_4 exists, from the owner's definitional argument (P1 and P2, analyst formulation)"
+theorem = "definitionalArgument"
+premises = ["P1 of the definitional argument: the description 'existing, GOD_4, omnibenevolent' has been defined", "P2 of the definitional argument (weak): whatever has been defined is true"]
+conclusion = "STMT-GOD-EXISTS"
+axioms = []
+transcription = "instantiation"
+rule = "Universal instantiation of P2 at P1's description, modus ponens, then dropping the omnibenevolence conjunct"
+meaning = "The owner-specified definitional argument, analyst formulation with attribution deferred: if the description 'existing, God, omnibenevolent' has been defined (P1) and whatever has been defined is satisfied (P2, weak version), then some being, an object satisfying the frame's existence predicate, is God. The full instance of P2 also gives that this God is omnibenevolent; the bound conclusion is the root node's GodExists read over the frame's beings. Valid. A transcription by instantiation: its whole content is P2 applied to P1's description. Its warrant is nil, because P2 in its unrestricted version is refuted and its weak version fails as soon as the contrary sole-God description is defined (the retorsion result); an inconsistent background supports no conclusion."
+description = "Valid transcription (instantiation) of the owner-specified definitional argument: P1 (the existing omnibenevolent God has been defined) and the weak P2 (whatever is defined is satisfied) give GodExists over the frame's beings, the objects satisfying its existence predicate. The proof applies P2 to P1's description and drops the omnibenevolence conjunct. It establishes neither premise and gives no warrant: the unrestricted P2 is refuted premise-free and the weak P2 fails under the contrary sole-God definition (retorsion result in this batch)."
+
+[[argument]]
+id = "Retorsion on definitional truth, checked"
+theorem = "definitionalTruthRetorsion"
+premises = []
+conclusion = "Retorsion: unrestricted characterization fails and contrary sole-God definitions clash"
+axioms = []
+rule = "Instance at the empty description; uniqueness of the sole God identifies the two satisfiers; one-object frames for satisfiability"
+meaning = "Premise-free and zero-axiom. (a) The unrestricted characterization principle applied to the empty description yields an object satisfying it, which is absurd. (b) If both contrary sole-God descriptions are defined and every defined description is satisfied, the satisfier of the second is God, so by the first satisfier's uniqueness clause it is the first satisfier, which is omnibenevolent and not omnibenevolent. (c) A one-object frame satisfies each description separately. A strict self-refutation of the unrestricted principle: its own instances contradict each other. The weak principle is refuted only together with the contrary definition, which is made by the same kind of act as P1."
+
+[[argument]]
+id = "Unrestricted characterization strengthens whatever-is-defined-is-true"
+theorem = "unrestrictedGivesDefinitionsTrue"
+premises = ["Unrestricted characterization: every description of objects is satisfied by some object"]
+conclusion = "P2 of the definitional argument (weak): whatever has been defined is true"
+weakening = true
+axioms = []
+rule = "Restriction of a universal to the defined descriptions"
+meaning = "Strength order registration: if every description of the frame's objects is satisfied, every defined description is satisfied, in the same frame. Establishes neither premise. The converse fails in any frame where nothing is defined and some description is unsatisfiable; no strictness result is registered."
+
+[[argument]]
+id = "Nuclear characterization control, checked"
+theorem = "nuclearCharacterizationControl"
+premises = []
+conclusion = "Nuclear characterization gives EXISTENCE_5, not EXISTENCE_4, and blocks the definitional argument"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+rule = "General witness from the characterization principle; one explicit model whose objects are the sets of three nuclear properties, checked by unfolding"
+meaning = "Premise-free control. The general part takes the unique object characterized by {g, o, existent}. The model's objects are the sets of the nuclear properties god, benevolent and existent, one object per set; the extranuclear-existent objects are the nuclear-existent non-gods. The object {god, benevolent, existent} is a nuclear-existent god that does not exist extranuclearly. Its nuclear definitional frame satisfies 'whatever is defined is true' (every nuclear description is satisfied), but the existing-god description is not nuclear, and no being is a god. With 'in act at esse' read nuclearly, 'more in being' ranking that object above every other and a trivial causal relation, the naming premise's form holds and that object is the unique maximum. The model shows that the restricted principle is consistent, that characterization confers EXISTENCE_5 only, and that the naming premise carries no existential import of its own: on a nuclear reading of being in act at esse, it and the maximum deliver a god object that does not exist. It is a model of one formal interpretation, not evidence that Meinongian object theory is true or that being in act at esse is nuclear."
+
+[[relation]]
+id = "The definitional retorsion refutes unrestricted characterization"
+subject_kind = "argument"
+subject_id = "Retorsion on definitional truth, checked"
+predicate = "refutes"
+object_kind = "statement"
+object_id = "Unrestricted characterization: every description of objects is satisfied by some object"
+note = "Premise-free, zero-axiom refutation in every definitional frame: the principle's own instance at an unsatisfiable description, or at the two contrary sole-God descriptions, is contradictory. Strict self-refutation of the unrestricted principle, not of the weak 'whatever has been defined is true'."
+
+[[relation]]
+id = "The definitional retorsion attacks whatever-is-defined-is-true"
+subject_kind = "argument"
+subject_id = "Retorsion on definitional truth, checked"
+predicate = "attacks"
+object_kind = "statement"
+object_id = "P2 of the definitional argument (weak): whatever has been defined is true"
+note = "Target: the weak P2 of the definitional argument. Mechanism: the contrary description 'the existing being that is the only God and is not omnibenevolent' can be defined by the same act of stipulation as P1, and with both defined the weak P2 is contradictory (checked, zero axioms). Independent justification: stipulation is free, and P1 itself relies on that freedom; nothing in P2 restricts which descriptions may be defined. Relevance: the definitional argument needs P2 at P1's description; a principle that also yields its contrary supports no conclusion. The weak P2 is consistent when the definable descriptions are restricted (for example to nuclear descriptions, see the nuclear control), but then P1's existing-God description is not admissible."
+
+[[relation]]
+id = "Unrestricted characterization strengthens whatever-is-defined-is-true (relation)"
+subject_kind = "statement"
+subject_id = "Unrestricted characterization: every description of objects is satisfied by some object"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "P2 of the definitional argument (weak): whatever has been defined is true"
+verification_result_id = "Unrestricted characterization strengthens whatever-is-defined-is-true"
+note = "Same definitional frame. The refutation of the strong version does not refute the weak one; the weak one is attacked separately by the contrary-definition clash."
+
+[[relation]]
+id = "The nuclear characterization control attacks the definitional P1"
+subject_kind = "argument"
+subject_id = "Nuclear characterization control, checked"
+predicate = "attacks"
+object_kind = "statement"
+object_id = "P1 of the definitional argument: the description 'existing, GOD_4, omnibenevolent' has been defined"
+note = "Target: P1 taken together with a consistent P2. Mechanism: once the definable descriptions are restricted so that 'whatever is defined is true' is consistent, the restriction in the strongest available reconstruction (nuclear characterization, Parsons-style, of Meinong's independence of Sosein from Sein) admits only nuclear descriptions, and P1's description contains extranuclear existence, so it is not admissible; its nuclear stand-in delivers only the watered-down EXISTENCE_5. Independent justification: the restriction is motivated by the retorsion on unrestricted definitional truth and by Russell's existent-golden-mountain objection, not by the theistic conclusion; the control checks that the restricted principle is consistent and blocks P1. Relevance: the definitional argument needs P1 and P2 together. Scope: one reconstruction and one model; it is not a checked dilemma over every possible restriction, and it does not show that no other consistent restriction admits P1's description."

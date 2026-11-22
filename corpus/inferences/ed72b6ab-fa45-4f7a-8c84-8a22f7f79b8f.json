@@ -1,0 +1,13 @@
+{
+  "id": "ed72b6ab-fa45-4f7a-8c84-8a22f7f79b8f",
+  "label": "GOD_4 exists, from the owner's definitional argument (P1 and P2, analyst formulation) (inference)",
+  "input_statement_ids": [
+    "4da7f445-4484-48de-8139-f330de0c8e23",
+    "b0d59ee5-9360-4021-a6fc-96b1a5307a94"
+  ],
+  "output_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+  "rule": "Universal instantiation of P2 at P1's description, modus ponens, then dropping the omnibenevolence conjunct",
+  "meaning": "The owner-specified definitional argument, analyst formulation with attribution deferred: if the description 'existing, God, omnibenevolent' has been defined (P1) and whatever has been defined is satisfied (P2, weak version), then some being, an object satisfying the frame's existence predicate, is God. The full instance of P2 also gives that this God is omnibenevolent; the bound conclusion is the root node's GodExists read over the frame's beings. Valid. A transcription by instantiation: its whole content is P2 applied to P1's description. Its warrant is nil, because P2 in its unrestricted version is refuted and its weak version fails as soon as the contrary sole-God description is defined (the retorsion result); an inconsistent background supports no conclusion.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

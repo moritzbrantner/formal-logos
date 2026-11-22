@@ -1,0 +1,10 @@
+{
+  "id": "b9c43873-b86c-439d-b0b1-be6237266f64",
+  "label": "Retorsion on definitional truth, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "11ce5dcc-2d6a-4d94-b54f-661fb6109a9a",
+  "rule": "Instance at the empty description; uniqueness of the sole God identifies the two satisfiers; one-object frames for satisfiability",
+  "meaning": "Premise-free and zero-axiom. (a) The unrestricted characterization principle applied to the empty description yields an object satisfying it, which is absurd. (b) If both contrary sole-God descriptions are defined and every defined description is satisfied, the satisfier of the second is God, so by the first satisfier's uniqueness clause it is the first satisfier, which is omnibenevolent and not omnibenevolent. (c) A one-object frame satisfies each description separately. A strict self-refutation of the unrestricted principle: its own instances contradict each other. The weak principle is refuted only together with the contrary definition, which is made by the same kind of act as P1.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

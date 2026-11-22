@@ -1,0 +1,20 @@
+{
+  "id": "7b6ebee0-7039-43dc-92c6-52f52a2332d2",
+  "label": "Nuclear characterization control, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "5f46dfce-a981-4e20-9afd-934a4f7b7b24",
+  "inference_ids": [
+    "a4f0b30c-9a7b-4a03-9690-f97491697089"
+  ],
+  "meaning": "Premise-free control. The general part takes the unique object characterized by {g, o, existent}. The model's objects are the sets of the nuclear properties god, benevolent and existent, one object per set; the extranuclear-existent objects are the nuclear-existent non-gods. The object {god, benevolent, existent} is a nuclear-existent god that does not exist extranuclearly. Its nuclear definitional frame satisfies 'whatever is defined is true' (every nuclear description is satisfied), but the existing-god description is not nuclear, and no being is a god. With 'in act at esse' read nuclearly, 'more in being' ranking that object above every other and a trivial causal relation, the naming premise's form holds and that object is the unique maximum. The model shows that the restricted principle is consistent, that characterization confers EXISTENCE_5 only, and that the naming premise carries no existential import of its own: on a nuclear reading of being in act at esse, it and the maximum deliver a god object that does not exist. It is a model of one formal interpretation, not evidence that Meinongian object theory is true or that being in act at esse is nuclear.",
+  "definition_ids": [
+    "20b76107-4d53-4bad-9fc1-6b6ec89dcd51",
+    "75d7aa56-615c-46a0-8c05-67f1624f6b36",
+    "84831dae-67ff-4ac3-83c7-525fbdb505ab",
+    "ebe88fbd-b496-4462-a44a-f0591c831800"
+  ],
+  "disambiguation_ids": [
+    "031a741a-57b4-5a20-b9f3-170876e69a02"
+  ],
+  "sense_mixing_control": true
+}

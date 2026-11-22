@@ -1,0 +1,10 @@
+{
+  "id": "898036ee-8397-48be-8c77-483a724f293f",
+  "label": "The definitional retorsion attacks whatever-is-defined-is-true",
+  "subject_kind": "argument",
+  "subject_id": "432d9046-902c-4bc8-b7af-7ae327fe2f3d",
+  "predicate": "attacks",
+  "object_kind": "statement",
+  "object_id": "b0d59ee5-9360-4021-a6fc-96b1a5307a94",
+  "note": "Target: the weak P2 of the definitional argument. Mechanism: the contrary description 'the existing being that is the only God and is not omnibenevolent' can be defined by the same act of stipulation as P1, and with both defined the weak P2 is contradictory (checked, zero axioms). Independent justification: stipulation is free, and P1 itself relies on that freedom; nothing in P2 restricts which descriptions may be defined. Relevance: the definitional argument needs P2 at P1's description; a principle that also yields its contrary supports no conclusion. The weak P2 is consistent when the definable descriptions are restricted (for example to nuclear descriptions, see the nuclear control), but then P1's existing-God description is not admissible."
+}

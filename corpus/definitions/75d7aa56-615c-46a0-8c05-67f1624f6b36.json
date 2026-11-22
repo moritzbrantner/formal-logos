@@ -1,0 +1,9 @@
+{
+  "id": "75d7aa56-615c-46a0-8c05-67f1624f6b36",
+  "label": "Definitional frame: objects, an existence predicate marking the beings, and definitional acts",
+  "term": "definitional frame (defined description)",
+  "definition": "DefinitionalFrame bundles three things. Object: everything a description can be about. Existent x: x is among the beings, the domain over which the root's existence claims (GodExists) quantify; Beings F is the subtype of existent objects. Defined D: the description D (a predicate of objects) has been introduced by a definitional act, i.e. stipulated. A description is defined when someone has introduced it; nothing in the frame relates being defined to being satisfied or to existence. That relation is exactly what the definitional premise 'whatever is defined is true' asserts.",
+  "basis": "stipulative",
+  "note": "Analyst formulation for the owner-specified definitional argument (attribution deferred). The structure is defined in Lean (TruthCore.Ontology.ExistencePredicate.DefinitionalFrame); its fields Existent and Defined are primitive: Existent means membership among the beings (the same domain as the root's GodExists when the frame's beings are used as that domain), and Defined means introduction by stipulation, with examples such as 'let a unicorn be a horse with one horn' and exclusions such as a description's being satisfied, being consistent or being true. No closure of Defined under any operation is assumed; whether every description can be defined (definitional freedom) is not built in.",
+  "lean_declaration": "TruthCore.Ontology.ExistencePredicate.DefinitionalFrame"
+}

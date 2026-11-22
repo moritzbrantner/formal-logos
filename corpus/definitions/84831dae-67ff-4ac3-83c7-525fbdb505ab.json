@@ -1,0 +1,9 @@
+{
+  "id": "84831dae-67ff-4ac3-83c7-525fbdb505ab",
+  "label": "Nuclear-property frame (Parsons-style): objects, nuclear properties, extranuclear existence",
+  "term": "nuclear property (Parsons-style object theory)",
+  "definition": "ParsonsFrame bundles objects, nuclear properties and the relation HasNuclear x p (object x has nuclear property p). Nuclear properties are the constitutive, characterizing properties of an object (being golden, being a mountain, being a god, being benevolent, and the watered-down 'existent'). Extranuclear properties, such as existence, being possible, being thought of or being complete, are not nuclear and cannot enter a characterizing set; the frame carries extranuclear existence as the separate field ExistsExtranuclear. nuclearSet F x is the set of x's nuclear properties; NuclearCharacterization F says that every set of nuclear properties is the nuclear set of exactly one object.",
+  "basis": "stipulative",
+  "note": "Analyst reconstruction in the style of Terence Parsons, Nonexistent Objects (1980), of Meinong's Gegenstandstheorie (1904) and his reply to Russell (1907); attribution deferred, author names are navigation only (source MEINONG-GEGENSTANDSTHEORIE has no pinned witness). The structure is defined in Lean (TruthCore.Ontology.ExistencePredicate.ParsonsFrame); its HasNuclear field is primitive. Which properties are nuclear is supplied by the frame, not derived; the list above is the reconstruction's intended reading, and the boundary of the nuclear class is the reconstruction's main open obligation. Parsons' identity condition is encoded as the uniqueness half of NuclearCharacterization.",
+  "lean_declaration": "TruthCore.Ontology.ExistencePredicate.ParsonsFrame"
+}

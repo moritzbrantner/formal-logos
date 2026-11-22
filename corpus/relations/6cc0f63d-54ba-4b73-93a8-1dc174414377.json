@@ -1,0 +1,10 @@
+{
+  "id": "6cc0f63d-54ba-4b73-93a8-1dc174414377",
+  "label": "The nuclear characterization control attacks the definitional P1",
+  "subject_kind": "argument",
+  "subject_id": "7b6ebee0-7039-43dc-92c6-52f52a2332d2",
+  "predicate": "attacks",
+  "object_kind": "statement",
+  "object_id": "4da7f445-4484-48de-8139-f330de0c8e23",
+  "note": "Target: P1 taken together with a consistent P2. Mechanism: once the definable descriptions are restricted so that 'whatever is defined is true' is consistent, the restriction in the strongest available reconstruction (nuclear characterization, Parsons-style, of Meinong's independence of Sosein from Sein) admits only nuclear descriptions, and P1's description contains extranuclear existence, so it is not admissible; its nuclear stand-in delivers only the watered-down EXISTENCE_5. Independent justification: the restriction is motivated by the retorsion on unrestricted definitional truth and by Russell's existent-golden-mountain objection, not by the theistic conclusion; the control checks that the restricted principle is consistent and blocks P1. Relevance: the definitional argument needs P1 and P2 together. Scope: one reconstruction and one model; it is not a checked dilemma over every possible restriction, and it does not show that no other consistent restriction admits P1's description."
+}

@@ -6,9 +6,11 @@
   "sense_definition_ids": [
     "5873c837-35ba-5ca2-91a8-07808c67e461",
     "9df718d1-8bfb-519b-b9f5-f58f6d2c256f",
-    "9347232c-7f95-5f24-85de-94d3d49f5027"
+    "9347232c-7f95-5f24-85de-94d3d49f5027",
+    "ebe88fbd-b496-4462-a44a-f0591c831800",
+    "20b76107-4d53-4bad-9fc1-6b6ec89dcd51"
   ],
-  "resolution": "V’s nonempty function, VI’s unique description and the modern ActualAt predicate have different types and truth conditions. The alternative individual predicate does not refute Russell inside his strict semantic restriction; quantifier truth is never silently read as a ground.",
+  "resolution": "V’s nonempty function, VI’s unique description and the modern ActualAt predicate have different types and truth conditions. The alternative individual predicate does not refute Russell inside his strict semantic restriction; quantifier truth is never silently read as a ground. EXISTENCE_4 (extranuclear existence of an object, Parsons-style reconstruction of Meinong) and EXISTENCE_5 (the watered-down nuclear property 'existent') are separate Lean declarations of a nuclear-property frame; the nuclear-characterization control shows that characterization confers EXISTENCE_5 and not EXISTENCE_4, so no argument passes from the one to the other without an explicit bridge. Neither is identified with EXISTENCE_1, EXISTENCE_2 or EXISTENCE_3.",
   "term_label": "EXISTENCE",
   "senses": [
     {
@@ -28,6 +30,18 @@
       "label": "EXISTENCE_3",
       "definition_id": "9347232c-7f95-5f24-85de-94d3d49f5027",
       "lean_declaration": "TruthCore.Modern.Russell.Existence.ActualAt"
+    },
+    {
+      "id": "fc68821d-4a7f-4182-8d7d-09abf0ad48b5",
+      "label": "EXISTENCE_4",
+      "definition_id": "ebe88fbd-b496-4462-a44a-f0591c831800",
+      "lean_declaration": "TruthCore.Ontology.ExistencePredicate.ParsonsFrame.ExistsExtranuclear"
+    },
+    {
+      "id": "569195f4-4ba0-46af-85ac-06ec8722ee26",
+      "label": "EXISTENCE_5",
+      "definition_id": "20b76107-4d53-4bad-9fc1-6b6ec89dcd51",
+      "lean_declaration": "TruthCore.Ontology.ExistencePredicate.NuclearExistent"
     }
   ]
 }

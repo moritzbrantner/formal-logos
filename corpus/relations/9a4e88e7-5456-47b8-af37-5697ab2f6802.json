@@ -1,0 +1,11 @@
+{
+  "id": "9a4e88e7-5456-47b8-af37-5697ab2f6802",
+  "label": "Unrestricted characterization strengthens whatever-is-defined-is-true (relation)",
+  "subject_kind": "statement",
+  "subject_id": "f0391cf0-3b56-4c31-8b0c-1460054c5151",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "b0d59ee5-9360-4021-a6fc-96b1a5307a94",
+  "verification_result_id": "45566c76-0f4e-446e-9da3-806cbeb59fc9",
+  "note": "Same definitional frame. The refutation of the strong version does not refute the weak one; the weak one is attacked separately by the contrary-definition clash."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "11ce5dcc-2d6a-4d94-b54f-661fb6109a9a",
+  "label": "Retorsion: unrestricted characterization fails and contrary sole-God definitions clash",
+  "paraphrase": "Three checked facts about definitional frames, analyst formulation. (a) In every frame the unrestricted characterization principle is false. (b) In every frame, for any predicates 'God' and 'omnibenevolent', if 'the existing being that is the only God and is omnibenevolent' and 'the existing being that is the only God and is not omnibenevolent' have both been defined, then 'whatever is defined is true' is false: the two satisfiers would both be the only God, hence identical, and both omnibenevolent and not. (c) Each of the two descriptions is satisfied in some frame (not in the same one), so the clash does not come from a single self-contradictory description. The predicates are arbitrary; the result is not about the God of the root.",
+  "lean_declaration": "TruthCore.Ontology.ExistencePredicate.DefinitionalTruthRetorsion",
+  "definition_ids": [
+    "75d7aa56-615c-46a0-8c05-67f1624f6b36"
+  ]
+}

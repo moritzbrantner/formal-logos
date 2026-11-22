@@ -1,0 +1,15 @@
+{
+  "id": "5f46dfce-a981-4e20-9afd-934a4f7b7b24",
+  "label": "Nuclear characterization gives EXISTENCE_5, not EXISTENCE_4, and blocks the definitional argument",
+  "paraphrase": "Checked facts about a nuclear-property object theory in the style of Parsons 1980 (analyst reconstruction of Meinong's Gegenstandstheorie, attribution deferred). (a) In every frame where each set of nuclear properties is the nuclear set of exactly one object, for any nuclear properties g and o some object has g, o and the nuclear property 'existent' (EXISTENCE_5). (b) Some frame satisfies that principle and has extranuclear-existent objects (EXISTENCE_4), and for some g ('god') and o ('omnibenevolent'): an object with g, o and nuclear existence exists as an object; no object with g exists extranuclearly; read as a definitional frame whose existence is EXISTENCE_4 and whose admissible definitions are the nuclear descriptions, 'whatever is defined is true' holds, the description 'existing, god, omnibenevolent' is not defined, and no being is a god. (c) In the same frame, with 'in act at esse' read as EXISTENCE_5, a relation 'more in being' and a causal relation can be chosen so that the naming premise's form (if a being is the unique maximum in being and causes all in that genus, it is God, with the frame's god property as God) holds, some object is the unique maximum in being and causes all in the genus, and some object is a god, while no extranuclear-existent object is a god. The model witnesses only this formal interpretation.",
+  "lean_declaration": "TruthCore.Ontology.ExistencePredicate.NuclearCharacterizationControl",
+  "definition_ids": [
+    "84831dae-67ff-4ac3-83c7-525fbdb505ab",
+    "ebe88fbd-b496-4462-a44a-f0591c831800",
+    "20b76107-4d53-4bad-9fc1-6b6ec89dcd51",
+    "75d7aa56-615c-46a0-8c05-67f1624f6b36"
+  ],
+  "disambiguation_ids": [
+    "031a741a-57b4-5a20-b9f3-170876e69a02"
+  ]
+}
