@@ -1,0 +1,10 @@
+{
+  "id": "6cc0f63d-54ba-4b73-93a8-1dc174414377",
+  "label": "The nuclear characterization control attacks the definitional P1",
+  "subject_kind": "argument",
+  "subject_id": "7b6ebee0-7039-43dc-92c6-52f52a2332d2",
+  "predicate": "attacks",
+  "object_kind": "statement",
+  "object_id": "8983cc06-0d5b-4f78-94f7-e761488cbf6a",
+  "note": "Target: the bridge from stipulation to admissibility, which a defender of the definitional argument needs in order to use the consistent, nuclear-restricted P2 with P1's stipulated description. Mechanism: in the model of the nuclear control, P1's description is not a nuclear (admissible) description, so any stipulation practice satisfying the bridge leaves P1's description unstipulated (checked); since P1 is a free stipulation, the bridge fails for it. Side condition: in that model EXISTENCE_4 is not closed under adding nuclear properties; where it is, P1's description could coincide with a nuclear description. Independent justification: the nuclear restriction is motivated by the retorsion on unrestricted definitional truth and by Russell's existent-golden-mountain objection, not by the theistic conclusion. Scope: one reconstruction and one model; not a checked dilemma over every possible restriction."
+}

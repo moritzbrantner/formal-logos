@@ -1,0 +1,16 @@
+{
+  "id": "5c361bb9-c557-4ac0-9738-7e1b31f9fbbb",
+  "label": "Unrestricted characterization strengthens whatever-is-defined-is-true",
+  "premise_statement_ids": [
+    "f0391cf0-3b56-4c31-8b0c-1460054c5151"
+  ],
+  "conclusion_statement_id": "b0d59ee5-9360-4021-a6fc-96b1a5307a94",
+  "inference_ids": [
+    "4e6d0abd-5ee9-4f5d-bbdf-ae73dedb16d0"
+  ],
+  "meaning": "Strength order registration: if every description of the frame's objects is satisfied, every defined description is satisfied, in the same frame. Establishes neither premise. The converse fails in any frame where nothing is defined and some description is unsatisfiable; no strictness result is registered.",
+  "definition_ids": [
+    "75d7aa56-615c-46a0-8c05-67f1624f6b36"
+  ],
+  "weakening": true
+}

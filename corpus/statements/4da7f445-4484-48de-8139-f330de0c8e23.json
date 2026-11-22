@@ -1,0 +1,13 @@
+{
+  "id": "4da7f445-4484-48de-8139-f330de0c8e23",
+  "label": "P1 of the definitional argument: the description 'existing, GOD_4, omnibenevolent' has been defined",
+  "paraphrase": "Analyst formulation of the owner-specified premise 'I define the existing omnibenevolent God' (attribution deferred): in a definitional frame, the description 'an existing object that is God and is omnibenevolent' has been introduced by a definitional act. 'Existing' is the frame's existence predicate, which marks the objects that are among the beings the root's God-exists claim quantifies over; 'defined' means introduced by stipulation, nothing more. The statement says only that the definition was made, not that anything satisfies it.",
+  "lean_declaration": "TruthCore.Ontology.ExistencePredicate.DefinesExistingOmnibenevolentGod",
+  "definition_ids": [
+    "75d7aa56-615c-46a0-8c05-67f1624f6b36",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807"
+  ],
+  "disambiguation_ids": [
+    "205a39c3-915d-5fe4-8076-a9ff91329e08"
+  ]
+}

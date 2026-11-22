@@ -1,0 +1,9 @@
+{
+  "id": "20b76107-4d53-4bad-9fc1-6b6ec89dcd51",
+  "label": "Watered-down nuclear EXISTENCE_5: the nuclear property 'existent' in an object theory",
+  "term": "existence",
+  "definition": "NuclearExistent F x: x has the frame's nuclear property existentNuclear, the 'watered-down' existence that can be part of a characterization. The characterized 'existing golden mountain' has it, as Meinong's 1907 reply to Russell's 1905 objection holds (attribution deferred), without existing in the extranuclear sense.",
+  "basis": "stipulative",
+  "note": "Analyst reconstruction, attribution deferred (Parsons 1980 calls it watered-down existence; navigation only). Distinct from EXISTENCE_4: the recorded model has a god object with this property and no extranuclear-existent god. Lean defines it as the frame's existentNuclear applied through HasNuclear; which nuclear property plays the role of 'existent' is supplied by the frame, and no bridge from it to EXISTENCE_4 is asserted (the control shows that none follows from nuclear characterization).",
+  "lean_declaration": "TruthCore.Ontology.ExistencePredicate.NuclearExistent"
+}

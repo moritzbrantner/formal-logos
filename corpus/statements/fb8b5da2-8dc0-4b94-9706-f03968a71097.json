@@ -1,0 +1,9 @@
+{
+  "id": "fb8b5da2-8dc0-4b94-9706-f03968a71097",
+  "label": "Under the analytic reading of P2 the definitional argument is invalid",
+  "paraphrase": "Checked omission countermodel, analyst formulation: some definitional frame (one object, which does not exist, every description defined) satisfies P1 and the analytic reading of P2 while no being satisfies the God predicate (an arbitrary predicate here, not the root's GOD_4). So the definitional argument is invalid when P2 is read analytically; its validity needs the existential reading.",
+  "lean_declaration": "TruthCore.Ontology.ExistencePredicate.AnalyticReadingCountermodel",
+  "definition_ids": [
+    "75d7aa56-615c-46a0-8c05-67f1624f6b36"
+  ]
+}

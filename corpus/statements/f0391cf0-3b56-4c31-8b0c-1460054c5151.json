@@ -1,0 +1,9 @@
+{
+  "id": "f0391cf0-3b56-4c31-8b0c-1460054c5151",
+  "label": "Unrestricted characterization: every description of objects is satisfied by some object",
+  "paraphrase": "The unrestricted version of the definitional premise (analyst formulation, attribution deferred; not Meinong's view): every description of the frame's objects whatever, including descriptions that contain existence, is satisfied by some object. Any description can be stipulated, so 'whatever is defined is true' without restriction on what may be defined comes to this.",
+  "lean_declaration": "TruthCore.Ontology.ExistencePredicate.UnrestrictedCharacterization",
+  "definition_ids": [
+    "75d7aa56-615c-46a0-8c05-67f1624f6b36"
+  ]
+}
