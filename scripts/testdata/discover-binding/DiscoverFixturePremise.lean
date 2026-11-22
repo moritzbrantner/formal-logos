@@ -49,3 +49,21 @@ carriers match the target's by name only (bridge domain provenance). -/
 def BMark (B D : Type) (P : B → D → Prop) (x : B) : Prop := ∀ d, P x d ∨ ¬ P x d
 
 end TruthCore.DiscoverFixturePremise
+
+namespace TruthCore.DiscoverFixturePremise
+
+/-- Every element has `S` (one half of a literal P/¬P pair, #1819). -/
+def LitP (C : Type) (S : C → Prop) : Prop := ∀ y, S y
+
+/-- The literal negation of `LitP`: it unfolds to `¬ LitP C S`, as
+`ActNotPriorInTime F := ¬ ActPriorInTime F` does. -/
+def LitNotP (C : Type) (S : C → Prop) : Prop := ¬ LitP C S
+
+/-- Some element lacks `S`: incompatible with `LitP`, but not its definitional
+negation (the negative control: a genuine incompatibility). -/
+def GenSome (C : Type) (S : C → Prop) : Prop := ∃ y, ¬ S y
+
+/-- Whatever is `R` is `Q` (the premise of the conjunctive-bridge fixture). -/
+def ConjRule (B : Type) (R Q : B → Prop) : Prop := ∀ g, R g → Q g
+
+end TruthCore.DiscoverFixturePremise

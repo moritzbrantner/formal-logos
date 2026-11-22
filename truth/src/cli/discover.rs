@@ -192,11 +192,7 @@ fn run(args: &Args, operands: &[&str]) -> Output {
             }
         }
     }
-    let proved = outcome
-        .findings
-        .iter()
-        .filter(|f| !f.outcome["closed"].is_null() || !f.outcome["alone"].is_null())
-        .count();
+    let proved = discover::proved_count(&outcome.findings);
     let minimized = outcome
         .findings
         .iter()
@@ -268,6 +264,9 @@ fn text(
                 b.targets.len(),
                 names(&targets, statements)
             ));
+            for note in discover::bridge_notes(b) {
+                lines.push(format!("     note: {note}"));
+            }
             for qualification in discover::bridge_qualifications(b) {
                 lines.push(format!("     only if: {qualification}"));
             }
