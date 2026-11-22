@@ -1,0 +1,31 @@
+{
+  "id": "a4ffb17b-eef0-4873-80f5-3a5992683669",
+  "label": "Tautology over K validity: certified difference",
+  "subject_kind": "statement",
+  "subject_id": "72861c3a-fff5-4149-bb9d-43985330b4c6",
+  "predicate": "strength_comparison",
+  "object_kind": "statement",
+  "object_id": "d912723b-b4c7-4c05-9cda-2105e7b80659",
+  "comparison_spec": "TruthCore.Causality.TractarianLogicalSpace.tautologyOverKValidity",
+  "delta_statement_id": "0cca2282-07c5-40b8-a36b-8b017a2a29a9",
+  "background_statement_ids": [],
+  "evidence_result_ids": {
+    "equivalence": "3f38adba-0028-4d03-8437-4b6bcdfa5a05",
+    "implication": "d3e73dbe-d4dd-4876-8303-62a0d6c70219"
+  },
+  "statement_parameter_indices": {
+    "stronger": [
+      0,
+      1
+    ],
+    "weaker": [
+      0,
+      1
+    ],
+    "delta": [
+      0,
+      1
+    ]
+  },
+  "note": "Difference of tautology and K validity of the same formula: the strong version adds exactly that the formula is truth-functional (no box or diamond). Strictness is witnessed in the controls by the K axiom, which is K-valid and not truth-functional."
+}

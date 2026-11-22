@@ -1,0 +1,10 @@
+{
+  "id": "d3fb0cb8-249c-4e11-9927-d2040b30c2d7",
+  "label": "A formula is a NECESSARY_16 tautology iff it is NECESSARY_14 K-valid and box-free",
+  "paraphrase": "For every atom type and formula: the formula is a NECESSARY_16 tautology if and only if it is NECESSARY_14 K-valid (true at every world of every small frame under every valuation) and belongs to the truth-functional fragment. A premise-free comparison; it asserts none of the three.",
+  "lean_declaration": "TruthCore.Causality.TractarianLogicalSpace.TautologyOverKValidityExact",
+  "definition_ids": [
+    "6e8bf9ff-8e89-4247-9ffa-63ecf2d7d70d",
+    "560fae51-532f-46d8-81e8-6f4386e10a34"
+  ]
+}

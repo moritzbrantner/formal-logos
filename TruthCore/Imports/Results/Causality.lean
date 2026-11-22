@@ -374,6 +374,7 @@ public import TruthCore.Results.Causality.ThinkingRootForkStrength.Solution
 public import TruthCore.Results.Causality.TimeSymmetricGiving.Solution
 public import TruthCore.Results.Causality.ToleranceOriginRival.Solution
 public import TruthCore.Results.Causality.TotalHolding.Solution
+public import TruthCore.Results.Causality.TractarianLogicalSpace.Solution
 public import TruthCore.Results.Causality.UnderivedCommonSource.Solution
 public import TruthCore.Results.Causality.UnderivedEssenceEsse.Solution
 public import TruthCore.Results.Causality.UnderivedNonComposite.Solution

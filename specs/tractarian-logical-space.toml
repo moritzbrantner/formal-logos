@@ -1,0 +1,126 @@
+# Tautology as a sense of NECESSARY (NECESSARY_16), combinatorial logical space
+# and the "only logical necessity" thesis, compared with the necessary-being
+# node of the root route (STMT-NECESSARY-ROOT-BOX-K, NECESSARY_2). Analyst
+# formulations; Tractatus locators are navigation only, attribution deferred,
+# no source claim. Refs #1784.
+
+[batch]
+vocab = "TruthCore.Causality.TractarianLogicalSpace"
+results = "TruthCore.Results.Causality.TractarianLogicalSpace"
+disambiguations = ["DISAMB-NECESSARY"]
+
+[[statement]]
+id = "The selected formula is a NECESSARY_16 tautology"
+lean = "Tautology"
+paraphrase = "NECESSARY_16: the selected formula belongs to the truth-functional fragment of Modal.Formula (no box or diamond) and is true under every assignment of truth values to its atoms (all of A -> Prop). Said of a formula, not of a being."
+definitions = ["6e8bf9ff-8e89-4247-9ffa-63ecf2d7d70d"]
+
+[[statement]]
+id = "Combinatorial logical space at the selected world"
+lean = "LogicalSpaceAt"
+paraphrase = "Analyst thesis, attribution deferred: for the selected frame F, valuation V and world w, every assignment of truth values to the atoms is the atomic profile of some world accessible from w. The atoms vary jointly and freely over the accessible worlds. Which atoms are elementary in reality is not asserted."
+definitions = ["547cac5c-7089-4bce-b5e7-bb8b6c8d12b9"]
+
+[[statement]]
+id = "Only logical necessity at the selected world"
+lean = "OnlyLogicalNecessityAt"
+paraphrase = "Rival thesis 'there is only logical necessity', formal reading, attribution deferred: for the selected frame F, valuation V and world w, every truth-functional (box-free) formula whose NECESSARY_8 Kripke box holds at w is a NECESSARY_16 tautology. It says nothing about formulas containing box, and nothing about which beings exist at which worlds unless a valuation expresses existence."
+definitions = ["547cac5c-7089-4bce-b5e7-bb8b6c8d12b9", "6e8bf9ff-8e89-4247-9ffa-63ecf2d7d70d", "DEF-QML-KB-NECESSITY"]
+
+[[statement]]
+id = "Not every combination of the candidates' existence is realized at an accessible world"
+lean = "NotElementaryExistenceAt"
+paraphrase = "On the route's profile m and world w: it is not the case that every combination of existence and non-existence of the candidates is realized at some world accessible from w in m.ontic.frame. The candidates' existence facts are not jointly free coordinates of logical space at w. It does not say which combination is missing or that any candidate is necessary."
+definitions = ["547cac5c-7089-4bce-b5e7-bb8b6c8d12b9"]
+
+[[statement]]
+id = "Tractarian logical space: laws, model and joint route model"
+lean = "Model.Controls"
+paraphrase = "Premise-free comparison. Laws, for all types: on the truth-functional fragment Kripke truth at a world is truth-functional truth under its atomic profile; tautologies are boxed at every world of every frame; on the fragment NECESSARY_14 K validity, and NECESSARY_13 validity on an inhabited frame, give NECESSARY_16 tautology; tautology gives frame-relative and truth-functional contradictory denial (NECESSARY_5 form), the converses with excluded middle as an explicit antecedent; in combinatorial logical space a box-free formula is boxed exactly when it is a tautology, and any box-free exact existence dictionary for a NECESSARY_2 box-existent bearer is a tautology. Model, worlds = all assignments to two states of affairs, universal access: logical space, S5, only logical necessity; every state of affairs possible, possibly not and not boxed; two distinct objects that exist at every world are both NECESSARY_2 box-existent and their existence is not elementary; the identity tautology is an exact existence dictionary for each object and the atom is not; no boxed formula is a tautology; the K axiom is K-valid but not a tautology; in a contrast ontology whose existence is elementary no candidate is box-existent. Joint route model, on one universal frame over all assignments to one state of affairs: the route's S5 frame premise and the S5 necessary-being node hold for the one-point signature's root, the state-of-affairs valuation forms logical space and satisfies only logical necessity, and the root's existence is not elementary. The one-point signature's divine fields are stipulated, not evidence."
+definitions = ["6e8bf9ff-8e89-4247-9ffa-63ecf2d7d70d", "547cac5c-7089-4bce-b5e7-bb8b6c8d12b9", "560fae51-532f-46d8-81e8-6f4386e10a34", "ea0a177a-b3a7-4559-946d-d9401ba1c6e3", "f7b80cb6-a233-5525-bb2b-ed5996a6099d", "699dde60-3c47-4bae-957b-4d696f0e90c3", "DEF-KANT-MODAL-NECESSITY", "DEF-NECESSARY-IN-SENSE", "DEF-QML-KB-NECESSITY", "DEF-ACTUAL-ROOT", "DEF-GOD-OF-CLASSICAL-THEISM", "DEF-ONE-GOD", "DEF-CLASSICAL-ATTRIBUTES-BUNDLE"]
+
+[[statement]]
+id = "The selected formula is truth-functional (box-free)"
+lean = "BoxFree"
+paraphrase = "Difference statement: the selected formula belongs to the truth-functional fragment of Modal.Formula, built from atoms, falsum and implication, with no box or diamond. Says nothing about its truth."
+definitions = ["6e8bf9ff-8e89-4247-9ffa-63ecf2d7d70d"]
+
+[[statement]]
+id = "A formula is a NECESSARY_16 tautology iff it is NECESSARY_14 K-valid and box-free"
+lean = "TautologyOverKValidityExact"
+paraphrase = "For every atom type and formula: the formula is a NECESSARY_16 tautology if and only if it is NECESSARY_14 K-valid (true at every world of every small frame under every valuation) and belongs to the truth-functional fragment. A premise-free comparison; it asserts none of the three."
+definitions = ["6e8bf9ff-8e89-4247-9ffa-63ecf2d7d70d", "560fae51-532f-46d8-81e8-6f4386e10a34"]
+
+[[argument]]
+id = "Tautology factors as K validity plus truth-functionality"
+theorem = "tautologyOverKValidityExact"
+premises = []
+conclusion = "A formula is a NECESSARY_16 tautology iff it is NECESSARY_14 K-valid and box-free"
+sense_mixing_control = true
+rule = "Structural induction on the truth-functional fragment, both directions"
+meaning = "Certified difference (#1598): forward, a tautology is K-valid (tautologyToAllFrameK) and box-free by definition; backward, a K-valid box-free formula is true under every assignment, by evaluating it on the one-world frame with the constant valuation of that assignment. Premise-free and constructive."
+description = "Premise-free certified difference of NECESSARY_16 over NECESSARY_14: exactly the truth-functional fragment. Establishes no premise."
+
+[[argument]]
+id = "Tautology strengthens K validity"
+theorem = "tautologyToAllFrameK"
+senses = {NECESSARY = "NECESSARY_16"}
+premises = ["The selected formula is a NECESSARY_16 tautology"]
+conclusion = "K validity of the selected formula"
+rule = "Structural induction on the truth-functional fragment"
+meaning = "A NECESSARY_16 tautology holds at every world of every frame under every valuation: by induction on the box-free formula, Kripke truth at a world is truth-functional truth under that world's atomic profile, which is one of the assignments the tautology quantifies. Exact strong-only-premise strength result; strictness by the K axiom (controls). On the truth-functional fragment the converse holds (controls), so the two senses coincide there."
+description = "NECESSARY_16 tautology strictly strengthens NECESSARY_14 K validity of the same formula. Not a transcription (invariant 16): the conclusion's frame quantification appears in no premise and is obtained by the induction holds_iff_tfHolds. Establishes neither node."
+sense_bridges = [{term = "NECESSARY", from = "NECESSARY_16", to = "NECESSARY_14", statement_id = "K validity of the selected formula", role = "conclusion"}]
+
+[[argument]]
+id = "Logical space gives only logical necessity"
+theorem = "logicalSpaceOnlyLogicalNecessity"
+premises = ["Combinatorial logical space at the selected world"]
+conclusion = "Only logical necessity at the selected world"
+rule = "Witness selection from saturation and structural induction"
+meaning = "If every truth-value assignment to the atoms is realized at a world accessible from w, then a box-free formula boxed at w holds at the world realizing any given assignment, hence truth-functionally under that assignment: it is a tautology. The converse (tautologies are boxed) holds on every frame (controls). Derives the formal 'only logical necessity' thesis from combinatorial logical space, for the box of the selected frame and valuation; it says nothing about formulas with box or about existence unless a valuation expresses it."
+description = "Only logical necessity at w from combinatorial logical space at w. Not a transcription: the conclusion's tautology claim is derived by choosing the accessible world that realizes each assignment and applying holds_iff_tfHolds. Establishes neither node."
+sense_bridges = [{term = "NECESSARY", from = "NECESSARY_8", to = "NECESSARY_16", statement_id = "Only logical necessity at the selected world", role = "conclusion"}]
+
+[[argument]]
+id = "The box K node excludes elementary existence at its world"
+theorem = "boxKRootExcludesElementaryExistence"
+premises = ["STMT-NECESSARY-ROOT-BOX-K"]
+strong_version_needed = { "STMT-NECESSARY-ROOT-BOX-K" = "Logically the weaker de dicto K node (necessarily something exists) and tertia via node (no accessible world lacks the root) also exclude elementary existence, since elementary existence realizes the combination in which nothing exists. Both weak nodes link the NECESSARY_11 frame-carrier definition beside their own sense (legacy carrier classification recorded in DISAMB-NECESSARY), so an argument from them would mix senses without a registered bridge; the box K node uses NECESSARY_2 alone. The incompatibility is recorded at the node the route's cheapest path concludes." }
+conclusion = "Not every combination of the candidates' existence is realized at an accessible world"
+rule = "Box elimination at the world realizing universal non-existence"
+meaning = "If the box K necessary-being node holds at w (some actual root n with the root facts exists at every world accessible from w), then not every combination of the candidates' existence is realized at an accessible world: the combination in which nothing exists would be realized at an accessible world, where n would have to exist. A checked incompatibility between the node and the thesis that existence facts are elementary in logical space. It records a further commitment of the route, not a defeat of either side; the controls show the conclusion fails in an ontology whose existence is elementary."
+description = "Checked incompatibility: STMT-NECESSARY-ROOT-BOX-K excludes elementary existence of the candidates at the same world. Not a transcription: the conclusion concerns realization of existence combinations, which no premise mentions; it fails without the node (controls, contrast ontology). Establishes no premise; the node stays open."
+
+[[argument]]
+id = "Tractarian logical space controls checked"
+theorem = "controls"
+sense_mixing_control = true
+premises = []
+conclusion = "Tractarian logical space: laws, model and joint route model"
+rule = "General laws by induction, explicit finite models"
+meaning = "Premise-free laws relating NECESSARY_16 to NECESSARY_5, NECESSARY_13 and NECESSARY_14, the logical-space law in both directions and the existence-dictionary law, then the Tractarian model (states of affairs contingent, objects NECESSARY_2 box-existent, existence of objects expressible only by a tautology) and the joint route model (route S5 node and only logical necessity on one frame). Model-witnessed separations and compatibilities; no premise is established and no reality claim is made."
+description = "Premise-free laws and finite models for the Tractarian logical-space batch. Sense-mixing control; establishes no premise and no root obligation."
+
+[[relation]]
+id = "Tautology strengthens K validity of the same formula"
+subject_kind = "statement"
+subject_id = "The selected formula is a NECESSARY_16 tautology"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "K validity of the selected formula"
+verification_result_id = "Tautology strengthens K validity"
+note = "Same formula parameter. Strict: the K axiom is NECESSARY_14 K-valid but not in the truth-functional fragment (controls). On the fragment the two coincide (controls, laws)."
+
+[[relation]]
+id = "Tautology over K validity: certified difference"
+subject_kind = "statement"
+subject_id = "The selected formula is a NECESSARY_16 tautology"
+predicate = "strength_comparison"
+object_kind = "statement"
+object_id = "K validity of the selected formula"
+comparison_spec = "tautologyOverKValidity"
+delta_statement_id = "The selected formula is truth-functional (box-free)"
+evidence_result_ids = { implication = "Tautology strengthens K validity", equivalence = "Tautology factors as K validity plus truth-functionality" }
+statement_parameter_indices = { stronger = [0, 1], weaker = [0, 1], delta = [0, 1] }
+note = "Difference of tautology and K validity of the same formula: the strong version adds exactly that the formula is truth-functional (no box or diamond). Strictness is witnessed in the controls by the K axiom, which is K-valid and not truth-functional."

@@ -1,0 +1,11 @@
+{
+  "id": "8ea75a38-2cd0-43d5-924a-91e94d49a60e",
+  "label": "Logical space gives only logical necessity",
+  "argument_id": "c2f199e7-4a6a-4af5-904d-89516574ffa5",
+  "challenge_module": "TruthCore.Results.Causality.TractarianLogicalSpace.Challenge",
+  "solution_module": "TruthCore.Results.Causality.TractarianLogicalSpace.Solution",
+  "theorem": "TruthCore.Results.Causality.TractarianLogicalSpace.logicalSpaceOnlyLogicalNecessity",
+  "comparator_config": "results/8ea75a38-2cd0-43d5-924a-91e94d49a60e/comparator.json",
+  "status": "solution-present",
+  "description": "Only logical necessity at w from combinatorial logical space at w. Not a transcription: the conclusion's tautology claim is derived by choosing the accessible world that realizes each assignment and applying holds_iff_tfHolds. Establishes neither node."
+}

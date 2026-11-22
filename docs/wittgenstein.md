@@ -31,6 +31,7 @@ formulations with attribution DEFERRED, not additional verified readings.
 | Forms of life, modest analyst formulation | `STMT-PRACTICAL-BACKGROUND-OF-LINGUISTIC-COMPETENCE`; attribution DEFERRED | neutral to occurrence; conditional epistemic-basis challenge | candidate F5 occurrence unchanged; only verbal-interpretation-alone competence proposal challenged | OPEN; no truth-by-agreement or global insulation conclusion |
 | Tractatus, traditional reading | 4.003, 4.11, 6.42, 6.432, 6.522, 7 (German, `WITTGENSTEIN-TRACTATUS`); `SEP-WITTGENSTEIN` §2.4 | rival to the arguability of natural theology | `STMT-NATURAL-THEOLOGY-ARGUABLE` (presupposed by every route, stated by none; not a route leaf) | recorded as an unattributed reconstruction (`STMT-TLP-GOD-SENTENCES-NONSENSICAL`); not refuted |
 | Tractatus, resolute reading | `SEP-WITTGENSTEIN` §2.4 | neutral: the book points at no ineffable truths (a claim about the book) | none | recorded; the self-application (6.53-6.54) belongs to #1008 |
+| Tractatus: only logical necessity, logical space | 4.46ff., 6.1ff., 6.37, 2.027, 4.1272 as navigation; analyst formulations, attribution deferred | neutral to the necessary-being node: compatible with it in a joint S5 model; the conflicting variant (elementary existence) has no Tractarian support | NECESSARY_2 conjunct of `STMT-NECESSARY-ROOT-BOX-K`, only under elementary existence | NECESSARY_16 tautology sense, logical-space law and checked incompatibility verified (`specs/tractarian-logical-space.toml`); no objection recorded |
 | Lecture on Ethics | absolute value is no fact; wonder at existence is nonsense; religious terms are similes (`WITTGENSTEIN-LECTURE-ON-ETHICS`) | rival in spirit to realist God-talk as simile; an objection to the statementhood of "the world exists" is only an unattributed reconstruction (needs an imaginability-to-sense bridge) | candidate F2 (reconstruction only); off-route | recorded |
 | Lectures on religious belief (1938, student notes) | religious beliefs not hypotheses, `SEP-RELIGIOUS-LANGUAGE` §4.2 | rival in spirit to recognizability by signs; not attached to a leaf | none (the notes are not Wittgenstein's text; no claim attributes WF-N to him) | recorded as a reported reading |
 
@@ -821,14 +822,57 @@ the book, not a denial that such truths exist. On this reading the
 reconstruction is not the book's thesis, so the book supplies no rival. That is the book's
 self-application, which #1008 owns (`DISAMB-TLP-NONSENSE`).
 
-Lean: not built. The Tractatus's tautology remarks (4.46-4.462) concern
-sentences true under every truth-assignment. Applying them to necessary-being
-claims is an unattributed reconstruction. It needs an open bridge: that the
-necessity predicated of a being is the logical necessity of the proposition
-asserting it (`DISAMB-NECESSARY` distinguishes the two), and that the
-assertion is true under every assignment. The bridge is not recorded. Given
-it, the remaining step would be a two-line unfolding with no new logical
-content.
+The Tractatus's tautology remarks (4.46-4.462) concern sentences true under
+every truth-assignment. Applying them to necessary-being claims is an
+unattributed reconstruction, and a bare identification of the necessity of a
+being with the logical necessity of a proposition would be a two-line
+unfolding with no new content. The logic-first batch below does not assume
+that identification; it builds logical space as a model and compares.
+
+### Tautology, logical space and the necessary-being node (2026-11-22)
+
+Batch `specs/tractarian-logical-space.toml`, Lean
+`TruthCore.Causality.TractarianLogicalSpace`; analyst formulations, Tractatus
+locators navigation only (4.46ff., 6.1ff., 6.37, 2.027, 4.1272, 4.211).
+
+- **NECESSARY_16, tautology** (`Tautology`): a box-free formula true under every
+  truth-value assignment. Verified: it strictly strengthens NECESSARY_14 K
+  validity (strength order; K axiom as strictness witness); on the
+  truth-functional fragment it coincides with NECESSARY_14 and, on an inhabited
+  frame, with NECESSARY_13; it is the classical truth-functional instance of
+  NECESSARY_5 (contradictory denial; the converse with excluded middle as an
+  explicit antecedent). It is said of formulas, not of beings.
+- **Logical space** (`LogicalSpaceAt`, reusing `Saturates`): every assignment to
+  the atoms is realized at an accessible world. Verified: there a box-free
+  formula is boxed exactly when it is a tautology, so the formal "only logical
+  necessity" thesis is a theorem of logical space, not an extra premise. The
+  universal frame on all assignments is S5.
+- **Objects and states of affairs.** In the finite Tractarian model every state
+  of affairs is contingent, while objects that exist at every world are
+  NECESSARY_2 (S5) box-existent, two distinct ones at once, and their existence
+  is not elementary. Any box-free exact existence dictionary for a box-existent
+  bearer is a tautology: "this object exists", if expressible in the
+  truth-functional language at all, is expressible only by a tautology.
+- **"A necessary being exists"** is, on this reading, neither a contradiction
+  nor a contingent truth-functional proposition. With box it is not a formula of
+  the truth-functional language (no boxed formula is a tautology); its
+  existence part, if expressed by an exact dictionary, is a tautology; and if
+  existence is an elementary atom, its necessitation is false.
+- **Bearing on the route.** The joint route model has, on one S5 frame over all
+  assignments, the route's S5 frame premise and the S5 necessary-being node for
+  the one-point root together with logical space and only logical necessity for
+  the states of affairs. So "only logical necessity", read as a thesis about what
+  can be said truth-functionally, falsifies no route premise. The conflict needs
+  the further thesis that the candidates' existence facts are themselves free
+  coordinates of logical space (`ElementaryExistenceAt`). The box K node
+  excludes that thesis at its world (checked incompatibility). No Tractarian
+  justification for that thesis is recorded: the text treats objects as
+  persisting and "there are objects" as a pseudo-proposition (2.027, 4.1272,
+  navigation), the opposite of elementary existence. Under the
+  substantive-objection standard no objection to a route premise is recorded.
+  Tractarian necessity of objects supports necessary existence of many simples
+  in the NECESSARY_2 sense, compatible with the node, and supports neither
+  uniqueness nor any root fact.
 
 ## Lecture on Ethics (1929)
 
