@@ -68,3 +68,29 @@ def BTarget (B D : Type) (Q : B → D → Prop) : Prop := ∃ y, ∀ d, Q y d
 def BAll (B D : Type) (P : B → D → Prop) : Prop := ∀ y d, P y d
 
 end TruthCore.DiscoverFixtureTarget
+
+namespace TruthCore.DiscoverFixtureTarget
+
+/-- An unrelated target: only an inconsistent premise set proves it. -/
+def Unrelated (Q : Prop) : Prop := Q
+
+/-- A conjunctive antecedent: whatever is `A1` and `A2` is `Q` (#1819). -/
+def ConjGoal (B : Type) (A1 A2 Q : B → Prop) : Prop := ∀ g, A1 g → A2 g → Q g
+
+/-- A single antecedent: the control for the conjunctive-bridge fixture. -/
+def SingleGoal (B : Type) (A1 Q : B → Prop) : Prop := ∀ g, A1 g → Q g
+
+/-- A structure with a field of the carrier's type (projection binding). -/
+structure Box (B : Type) where
+  val : B
+
+/-- The target binds an element `x : B`. -/
+def ProjTarget (B : Type) (P : B → Prop) (x : B) : Prop := P x
+
+/-- The premise speaks of `b.val` for a structure binder `b : Box B`. -/
+def ProjPremise (B : Type) (P : B → Prop) (b : Box B) : Prop := P b.val
+
+/-- A premise whose projection choice does not help. -/
+def ProjWrong (B : Type) (P : B → Prop) (b : Box B) : Prop := ¬ P b.val
+
+end TruthCore.DiscoverFixtureTarget

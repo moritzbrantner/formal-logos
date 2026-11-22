@@ -15,6 +15,7 @@ fn vocab(module: &str, binders: &[&str], constants: &[&str]) -> Vocabulary {
         module: module.into(),
         binders: binders.iter().map(|b| (*b).to_owned()).collect(),
         constants: constants.iter().map(|c| (*c).to_owned()).collect(),
+        ..Vocabulary::default()
     }
 }
 
@@ -690,4 +691,189 @@ fn an_original_is_suppressed_only_by_a_certified_weakening() {
         "2026-11-20",
     );
     assert_eq!(spec.matches("\n[[argument]]\n").count(), 2);
+}
+
+// --- noise filters (#1819) ---------------------------------------------------------
+
+#[test]
+fn vocabulary_export_reads_binder_types_and_structure_fields() {
+    let parsed = parse_vocabulary(&json!([
+        {"declaration": "M.P", "module": "M", "binders": ["W", "m"], "constants": [],
+         "binder_types": ["", "M.Profile"], "binder_fields": [[], ["M.Ontic"]]},
+        {"declaration": "M.Old", "module": "M", "binders": ["B"], "constants": []}
+    ]))
+    .unwrap();
+    assert_eq!(parsed["M.P"].binder_types, ["", "M.Profile"]);
+    assert_eq!(parsed["M.P"].binder_fields[1], set(&["M.Ontic"]));
+    // An export without the fields (older exporter) still parses.
+    assert!(parsed["M.Old"].binder_fields.is_empty());
+}
+
+#[test]
+fn a_structure_parameter_projecting_to_a_target_parameter_fits() {
+    // OnticTSchemaValid (o : Ontic W B) and OnticFrameKT (m : Profile W B),
+    // whose `m.ontic : Ontic W B`: the frame premise fits through `m.ontic`.
+    let target = statement("T", "M.TSchema", &[]);
+    let frame = statement("F", "N.FrameKT", &[]);
+    let unrelated = statement("U", "N.Other", &[]);
+    let mut vocabulary = BTreeMap::new();
+    let mut goal = vocab("M", &["W", "B", "o"], &["M.Ontic", "M.Valid"]);
+    goal.binder_types = vec!["".into(), "".into(), "M.Ontic".into()];
+    goal.binder_fields = vec![set(&[]), set(&[]), set(&[])];
+    vocabulary.insert("M.TSchema".into(), goal);
+    let mut kt = vocab("N", &["W", "B", "m"], &["M.Ontic", "N.Profile"]);
+    kt.binder_types = vec!["".into(), "".into(), "N.Profile".into()];
+    kt.binder_fields = vec![set(&[]), set(&[]), set(&["M.Ontic"])];
+    vocabulary.insert("N.FrameKT".into(), kt);
+    let mut other = vocab("N", &["W", "B", "m"], &["M.Ontic", "N.Profile"]);
+    other.binder_types = vec!["".into(), "".into(), "N.Other".into()];
+    other.binder_fields = vec![set(&[]), set(&[]), set(&["N.Unrelated"])];
+    vocabulary.insert("N.Other".into(), other);
+    let ranked = rank(
+        &target,
+        &[&unrelated, &frame],
+        &vocabulary,
+        &BTreeMap::new(),
+        10,
+    );
+    assert_eq!(ranked[0].id, "F");
+    assert!(ranked[0].score > ranked[1].score);
+    // A projection alone (no shared parameter name) still admits a candidate.
+    let mut lone = vocab("N", &["m"], &["M.Ontic"]);
+    lone.binder_types = vec!["N.Profile".into()];
+    lone.binder_fields = vec![set(&["M.Ontic"])];
+    vocabulary.insert("N.Lone".into(), lone);
+    let lonely = statement("L", "N.Lone", &[]);
+    assert_eq!(
+        rank(&target, &[&lonely], &vocabulary, &BTreeMap::new(), 10).len(),
+        1
+    );
+}
+
+fn inconsistent(core: Value) -> Value {
+    let mut outcome = closed_outcome();
+    outcome["vacuous"] = json!({"prover": "duper", "used": [0, 2], "axioms": []});
+    outcome["vacuous_core"] = core;
+    outcome
+}
+
+#[test]
+fn a_literal_negation_core_is_filtered_never_an_incompatibility() {
+    // ActNotPriorInTime F := ¬ ActPriorInTime F: the core {P, ¬P}.
+    let mut outcome = inconsistent(json!([0, 2]));
+    outcome["literal_negation"] = json!([0, 2]);
+    let f = classify(
+        &trial(&["P", "Q", "R"]),
+        &outcome,
+        &Graph::default(),
+        &SenseCheck::empty(),
+    );
+    assert_eq!(f.kind, Kind::Filtered);
+    assert_eq!(f.filters.len(), 1);
+    assert_eq!(f.filters[0].0, "literal_negation");
+    assert!(f.filters[0].1.starts_with("R unfolds to the negation of P"));
+    assert_eq!(f.premises, ["P", "R"]);
+}
+
+#[test]
+fn literal_negation_takes_precedence_over_recorded_rivals() {
+    // 5fc7a6f9 and 4640876a: recorded rivals, and one is the other's negation.
+    let mut outcome = inconsistent(json!([0, 2]));
+    outcome["literal_negation"] = json!([0, 2]);
+    let mut g = Graph::default();
+    g.rivals.insert("R".into(), set(&["P"]));
+    g.rivals.insert("P".into(), set(&["R"]));
+    let f = classify(&trial(&["P", "Q", "R"]), &outcome, &g, &SenseCheck::empty());
+    let names: Vec<&str> = f.filters.iter().map(|(n, _)| n.as_str()).collect();
+    assert_eq!((f.kind, names), (Kind::Filtered, vec!["literal_negation"]));
+}
+
+#[test]
+fn a_genuine_incompatibility_is_still_reported() {
+    // Negative control: an inconsistent core with no literal negation (the
+    // Lean side found none) stays an incompatibility.
+    let mut outcome = inconsistent(json!([0, 2]));
+    outcome["literal_negation"] = Value::Null;
+    let f = classify(
+        &trial(&["P", "Q", "R"]),
+        &outcome,
+        &Graph::default(),
+        &SenseCheck::empty(),
+    );
+    assert_eq!(f.kind, Kind::Incompatibility);
+    assert!(f.filters.is_empty());
+}
+
+#[test]
+fn a_projection_binding_is_flagged_and_named_in_the_spec() {
+    let mut outcome = closed_outcome();
+    outcome["projection"] = json!({
+        "binder": "M.TSchema.o", "bound_to": "N.FrameKT.m.ontic",
+        "structure_binder": "N.FrameKT.m", "field": "ontic"
+    });
+    let f = classify(
+        &trial(&["P", "Q", "R"]),
+        &outcome,
+        &Graph::default(),
+        &SenseCheck::empty(),
+    );
+    assert_eq!(
+        f.kind,
+        Kind::Discovery,
+        "the flag informs, it does not reject"
+    );
+    assert_eq!(f.filters[0].0, "projection_binding");
+    assert!(
+        f.filters[0]
+            .1
+            .contains("M.TSchema.o is bound to the projection N.FrameKT.m.ontic")
+    );
+    let mut statements = BTreeMap::new();
+    for id in ["T", "P", "R"] {
+        statements.insert(id.to_owned(), statement(id, &format!("M.{id}"), &[]));
+    }
+    let spec = render_spec(
+        "TruthCore.Results.Discover.Run",
+        &[&f],
+        &statements,
+        &SenseCheck::empty(),
+        "2026-11-22",
+    );
+    assert!(spec.contains("Explicit binding choice: the target binder M.TSchema.o"));
+    // Without a projection there is no flag.
+    let plain = classify(
+        &trial(&["P", "Q", "R"]),
+        &closed_outcome(),
+        &Graph::default(),
+        &SenseCheck::empty(),
+    );
+    assert!(plain.filters.iter().all(|(n, _)| n != "projection_binding"));
+}
+
+#[test]
+fn a_conjunctive_bridge_replaces_single_conjunct_bridges() {
+    let conjunctive = json!({
+        "from": "M.T.Simple ∧ M.T.Eternal", "to": "M.T.σ.IsGod", "fixed": [],
+        "conjunctive": true, "replaces_single_conjuncts": ["M.T.Simple", "M.T.Eternal"],
+        "text": "∀ g, Simple g → Eternal g → IsGod σ g", "used": [0],
+        "assumed_binders": [], "domain_identified_by_name": []
+    });
+    let finding = Finding {
+        trial: trial(&["P"]),
+        kind: Kind::Unresolved,
+        premises: Vec::new(),
+        filters: Vec::new(),
+        outcome: json!({"bridges": [conjunctive]}),
+        certified: None,
+    };
+    let rows = rank_bridges(&[finding]);
+    assert_eq!(rows.len(), 1);
+    assert!(rows[0].conjunctive);
+    assert_eq!(bridge_json(&rows[0])["conjunctive"], json!(true));
+    assert_eq!(
+        bridge_notes(&rows[0]),
+        [
+            "conjunctive antecedent; single-conjunct bridges from M.T.Eternal, M.T.Simple were not tried (each is stronger and uninformative)"
+        ]
+    );
 }

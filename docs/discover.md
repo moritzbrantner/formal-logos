@@ -36,7 +36,12 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
    its parameters the target also has (type fit), the share of its constants
    the target uses and of the target's constants it uses, shared
    `definition_ids`, the same module and a `strengthens` relation with the
-   target. The best `--candidates N` (default 8) form the goal. When the target
+   target. A candidate parameter that shares no name with the target's but is
+   a structure with a field of a target parameter's type (`m : Profile W B`,
+   whose `m.ontic : Ontic W B`, against `o : Ontic W B`) counts toward the type
+   fit and admits the candidate, since the goal builder may bind through that
+   projection (step 4); the export lists each parameter's type head and, for a
+   structure, its fields' type heads. The best `--candidates N` (default 8) form the goal. When the target
    and a candidate carry different senses of one term (parameter-level sense
    tags, below), the registered bridge statements for those senses join the
    goal as optional premises, reported as such.
@@ -63,6 +68,20 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
    quantified, as a result theorem's binders are. A universe-polymorphic
    statement is taken at the lowest universe that keeps each carrier a type
    (a specialization, so the theorem stays valid).
+
+   **Projection binding.** When the goal fails, a target binder may be the
+   field of a premise's structure binder: `OnticTSchemaValid (o : Ontic W B)`
+   against `OnticFrameKT (m : Profile W B)`, where the intended theorem is
+   `∀ m, OnticFrameKT m → OnticTSchemaValid m.ontic` (#1819; proved by hand in
+   #1827). For each non-instance target binder and each premise structure
+   binder with a field of definitionally equal type (at most four choices),
+   the goal is searched again with the target binder replaced by that
+   projection. This is an explicit binding choice, never a silent one: the
+   choice that closes the goal is reported as `projection` and as `bound_to`
+   on the binder, the finding carries the `projection_binding` flag, a spec
+   draft states it in the argument's `meaning`, and an unresolved goal lists
+   the choices it tried (`projections_tried`). A goal closed only under a
+   projection is a different theorem from the one over separate binders.
 5. **Search.** The hypotheses and the conclusion are delta-expanded through
    every project definition whose type ends in `Prop` (not projections or
    instances), and `duper [*]` runs under `--heartbeats` (thousands, default
@@ -98,10 +117,12 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
 | `known` | the target follows by composing verified arguments from the minimal premises (forward-chaining closure; covers supersets of an existing argument's premises) | reject |
 | `transcription` | one premise application closes the folded goal (the `truth prove-sweep` probe, invariant 16) | reject |
 | vacuity | `False` follows from the minimal premises over their own binders only (no element or instance borrowed from the target or a dropped premise): reported as an **incompatibility** (the inconsistent core, minimized), never as support; filtered (`axioms`) when a contradiction proof uses an axiom outside the three allowed | separate kind |
+| `literal_negation` | the inconsistent core is a premise and its literal negation: one member's declaration unfolds definitionally (delta, default transparency) to `¬` the other's, as `ActNotPriorInTime F := ¬ ActPriorInTime F` does, recorded rivals included. Such a core is inconsistent by construction, neither an incompatibility nor support, and its goal is not counted as proved. A contradictory pair that takes logic to recognize (`∀ y, S y` against `∃ y, ¬ S y`) is not literal and stays an incompatibility | reject |
 | `known` (incompatibility), `duplicate` | the inconsistent core contains recorded rivals (`alternative_to`, `attacks`); or an earlier goal already found the same core | reject |
 | `senses` | the argument uses two senses of one term (`argument_term_senses`, the check `truth check` applies) and no premise is a registered bridge between them | reject |
 | `domain_by_name` | a carrier or structure bundle was identified with one of another module by name only | reject (listed as needing a tag or bridge) |
 | `sense_bridge` | a premise is the registered bridge between the senses it mixes | flag |
+| `projection_binding` | the goal closed only with a target binder bound to a premise structure's field (step 4) | flag |
 | `witness` | no one-point joint model was found; Duper found no contradiction, so consistency is unresolved | flag |
 | `vacuous_target` | the premises refute the target's own antecedents (`∀ x, A x → B x` holds because nothing is `A`): valid, but true vacuously | flag |
 | `axioms`, `certification`, `reconstruction` | an axiom outside the three; the theorem text fails; Duper did not reprove an ATP-found goal | reject |
@@ -138,7 +159,19 @@ matching each argument of `q` to an unused argument of `p` of the same type.
 The `fixed` variant, tried first because it is weaker, fixes an argument
 whose type has exactly one element parameter occurring together with that
 relation (in one hypothesis, or in the conclusion)
-(`∀ c x, CausesIn c x esse → CausesIn_2 c x esse_2`). A bridge is reported when
+(`∀ c x, CausesIn c x esse → CausesIn_2 c x esse_2`).
+
+When the conclusion's antecedent is a conjunction of at least two relations
+(`∀ g, Simple g → Perfect g → … → HasWill g → Q g`, or one hypothesis
+`A g ∧ B g`), bridges that make one conjunct sufficient
+(`∀ g, Eternal g → IsGod σ g`) are not tried. Each is formally a candidate but
+philosophically uninformative, and each is stronger than the conjunctive
+bridge `∀ g, Simple g → … → HasWill g → IsGod σ g`, which unlocks the target
+whenever one of them does. The conjunctive version is tried first, once per
+premise relation outside the antecedent, and reported with `conjunctive: true`
+and the conjuncts it stands for (`replaces_single_conjuncts`) (#1819).
+
+A bridge is reported when
 the premises with it prove the target, do not prove `False`, and the bridge
 alone does not prove the target (it would merely restate it). The proof is
 rechecked over the binders the used premises, the bridge and the target
@@ -177,7 +210,9 @@ discoveries, incompatibilities, vocabulary theorems, filtered by filter,
 unresolved, errors, missing bridges, seconds), the ranked missing bridges and
 one finding per goal with its candidates, minimal premises, filters,
 certification verdict and the raw Lean outcome (binders and their origins,
-deletions, witness, omission models, signature, unfolded definitions). A
+a projection binding choice, deletions, witness, omission models,
+`literal_negation`, signature, unfolded definitions). `proved` counts the
+goals closed, except those closed only by a literal P/¬P core. A
 *vocabulary theorem* is a target that follows from no premise: its
 definitions alone prove it.
 

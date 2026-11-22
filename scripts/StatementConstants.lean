@@ -6,7 +6,10 @@ Run after a normal lake build, without rebuilding:
 
 `<declarations.txt>` holds one fully qualified declaration name per line
 (normally every statement `lean_declaration`). For each name the tool prints
-one JSON object with the defining module, the binder names of its type, and
+one JSON object with the defining module, the binder names of its type, the
+head constant of each binder's type and, for a binder whose type is a local
+structure, the head constants of its fields' types (`truth discover` ranks a
+premise whose structure binder projects to a target binder's type, #1819), and
 the sorted TruthCore-local constants that occur syntactically in its type and,
 for a definition, its stored body (the declaration itself included). Nothing
 is unfolded. Shared constants are a ranking signal only: they are not
@@ -28,6 +31,34 @@ def binderNames : Expr → List String
   | .forallE n _ body _ => n.toString :: binderNames body
   | _ => []
 
+/-- The local head constant of a type (`""` when none or not local). -/
+def headOf (env : Environment) (package : Name) (ty : Expr) : String :=
+  match ty.getAppFn with
+  | .const c _ => if isLocal env package c then c.toString else ""
+  | _ => ""
+
+/-- The final codomain of a type (under all its `∀` binders). -/
+def codomain : Expr → Expr
+  | .forallE _ _ body _ => codomain body
+  | e => e
+
+/-- Each binder's local type head, and the local heads of its structure's
+field types (empty when the binder's type is no local structure). -/
+def binderTypes (env : Environment) (package : Name) : Expr → List (String × Array String)
+  | .forallE _ d body _ =>
+    let fields := match d.getAppFn with
+      | .const s _ =>
+        if isLocal env package s && isStructure env s then
+          (getStructureFields env s).filterMap fun f => do
+            let proj ← getProjFnForField? env s f
+            let info ← env.find? proj
+            let h := headOf env package (codomain info.type)
+            if h.isEmpty then none else some h
+        else #[]
+      | _ => #[]
+    (headOf env package d, fields) :: binderTypes env package body
+  | _ => []
+
 def describe (env : Environment) (package : Name) (decl : Name) : Json :=
   match env.find? decl with
   | none => Json.mkObj [("declaration", Json.str decl.toString), ("error", Json.str "unknown declaration")]
@@ -47,6 +78,9 @@ def describe (env : Environment) (package : Name) (decl : Name) : Json :=
       ("declaration", Json.str decl.toString),
       ("module", Json.str module),
       ("binders", Json.arr ((binderNames info.type).map Json.str).toArray),
+      ("binder_types", Json.arr ((binderTypes env package info.type).map (Json.str ·.1)).toArray),
+      ("binder_fields", Json.arr ((binderTypes env package info.type).map fun (_, fs) =>
+        Json.arr (fs.map Json.str)).toArray),
       ("constants", Json.arr (unique.map Json.str))]
 
 def main (args : List String) : IO UInt32 := do

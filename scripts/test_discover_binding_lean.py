@@ -203,6 +203,77 @@ class DiscoverBindingTest(unittest.TestCase):
         self.assertEqual(fixed[0]["assumed_binders"], ["x"])
         self.assertIn(f"{mark}.B = {target}.B", fixed[0]["domain_identified_by_name"])
 
+    def test_literal_negation_cores_are_marked_and_genuine_ones_are_not(self):
+        target = "TruthCore.DiscoverFixtureTarget.Unrelated"
+        lit_p = "TruthCore.DiscoverFixturePremise.LitP"
+        lit_not_p = "TruthCore.DiscoverFixturePremise.LitNotP"
+        gen_some = "TruthCore.DiscoverFixturePremise.GenSome"
+        outcomes = run([
+            f'#discover "literal" 20000 "" "{{}}" {target} from {lit_p} {lit_not_p}',
+            f'#discover "genuine" 20000 "" "{{}}" {target} from {lit_p} {gen_some}',
+        ])
+        # `LitNotP C S := ¬ LitP C S`: the core is P and its literal negation
+        # (#1819); `truth discover` filters it as `literal_negation`.
+        literal = outcomes["literal"]
+        self.assertIsNotNone(literal["vacuous"])
+        self.assertEqual(sorted(literal["vacuous_core"]), [0, 1])
+        self.assertEqual(literal["literal_negation"], [0, 1])
+        # Negative control: `∃ y, ¬ S y` contradicts `∀ y, S y` but is not its
+        # definitional negation, so the incompatibility stays reported.
+        genuine = outcomes["genuine"]
+        self.assertIsNotNone(genuine["vacuous"])
+        self.assertEqual(sorted(genuine["vacuous_core"]), [0, 1])
+        self.assertIsNone(genuine["literal_negation"])
+
+    def test_conjunctive_antecedents_get_one_conjunctive_bridge(self):
+        conj = "TruthCore.DiscoverFixtureTarget.ConjGoal"
+        single = "TruthCore.DiscoverFixtureTarget.SingleGoal"
+        rule = "TruthCore.DiscoverFixturePremise.ConjRule"
+        rows = [[d, b, b] for d in (conj, single, rule) for b in ("B", "Q")]
+        config = lean_string(json.dumps({"tags": rows, "bridges": True}))
+        outcomes = run([
+            f'#discover "conj" 20000 "" {config} {conj} from {rule}',
+            f'#discover "single" 20000 "" {config} {single} from {rule}',
+        ])
+        bridges = outcomes["conj"]["bridges"]
+        # No bridge makes one conjunct (`A1` or `A2`) sufficient for `R`.
+        singles = [b for b in bridges if b["from"] in (f"{conj}.A1", f"{conj}.A2") and b["to"] == f"{rule}.R"]
+        self.assertEqual(singles, [], bridges)
+        # The conjunctive version is reported once instead.
+        conjunctive = [b for b in bridges if b.get("conjunctive")]
+        self.assertEqual(len(conjunctive), 1, bridges)
+        self.assertEqual(conjunctive[0]["from"], f"{conj}.A1 ∧ {conj}.A2")
+        self.assertEqual(conjunctive[0]["to"], f"{rule}.R")
+        self.assertEqual(conjunctive[0]["replaces_single_conjuncts"], [f"{conj}.A1", f"{conj}.A2"])
+        # Control: a single antecedent keeps its ordinary bridge `A1 → R`.
+        plain = outcomes["single"]["bridges"]
+        self.assertTrue(any(b["from"] == f"{single}.A1" and b["to"] == f"{rule}.R" for b in plain), plain)
+        self.assertFalse(any(b.get("conjunctive") for b in plain), plain)
+
+    def test_projection_binding_is_an_explicit_reported_choice(self):
+        target = "TruthCore.DiscoverFixtureTarget.ProjTarget"
+        premise = "TruthCore.DiscoverFixtureTarget.ProjPremise"
+        wrong = "TruthCore.DiscoverFixtureTarget.ProjWrong"
+        outcomes = run([
+            f'#discover "projection" 20000 "" "{{}}" {target} from {premise}',
+            f'#discover "useless" 20000 "" "{{}}" {target} from {wrong}',
+        ])
+        # Over separate `x : B` and `b : Box B` the goal is false; binding `x`
+        # to `b.val` closes it, and the choice is reported, not silent.
+        found = outcomes["projection"]
+        self.assertIsNotNone(found["closed"])
+        self.assertEqual(found["projection"]["binder"], f"{target}.x")
+        self.assertEqual(found["projection"]["bound_to"], f"{premise}.b.val")
+        bound = [b for b in found["binders"] if b.get("bound_to")]
+        self.assertEqual([(b["from"], b["bound_to"]) for b in bound], [(f"{target}.x", f"{premise}.b.val")])
+        self.assertIn("val", found["signature"])
+        self.assertNotIn("(x :", found["signature"])
+        # A choice that does not close the goal is listed as tried; the goal
+        # stays unresolved.
+        useless = outcomes["useless"]
+        self.assertIsNone(useless["closed"])
+        self.assertEqual([c["bound_to"] for c in useless["projections_tried"]], [f"{wrong}.b.val"])
+
 
 if __name__ == "__main__":
     unittest.main()
