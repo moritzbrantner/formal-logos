@@ -274,6 +274,15 @@ class DiscoverBindingTest(unittest.TestCase):
         self.assertIsNone(useless["closed"])
         self.assertEqual([c["bound_to"] for c in useless["projections_tried"]], [f"{wrong}.b.val"])
 
+    def test_predicate_binders_are_never_bound_to_a_field(self):
+        target = "TruthCore.DiscoverFixtureTarget.PredTarget"
+        premise = "TruthCore.DiscoverFixtureTarget.PredPremise"
+        outcome = run([f'#discover "pred" 20000 "" "{{}}" {target} from {premise}'])["pred"]
+        # Only the element `x` may be bound (to `b.val`); `R := b.Q` would
+        # close the goal by equating two relations through their type alone.
+        self.assertIsNone(outcome["closed"])
+        self.assertEqual([c["bound_to"] for c in outcome["projections_tried"]], [f"{premise}.b.val"])
+
 
 if __name__ == "__main__":
     unittest.main()

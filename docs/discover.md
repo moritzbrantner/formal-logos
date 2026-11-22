@@ -74,8 +74,11 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
    field of a premise's structure binder: `OnticTSchemaValid (o : Ontic W B)`
    against `OnticFrameKT (m : Profile W B)`, where the intended theorem is
    `∀ m, OnticFrameKT m → OnticTSchemaValid m.ontic` (#1819; proved by hand in
-   #1827). For each non-instance target binder and each premise structure
-   binder with a field of definitionally equal type (at most four choices),
+   #1827). For each target binder that is a value (an element or a structure,
+   never an instance, carrier, predicate or function: binding `R := b.Q`
+   would equate two relations by their type alone) and each premise
+   structure binder with a field of definitionally equal type (at most four
+   choices),
    the goal is searched again with the target binder replaced by that
    projection. This is an explicit binding choice, never a silent one: the
    choice that closes the goal is reported as `projection` and as `bound_to`
@@ -168,7 +171,8 @@ When the conclusion's antecedent is a conjunction of at least two relations
 (`∀ g, Eternal g → IsGod σ g`) are not tried. Each is formally a candidate but
 philosophically uninformative, and each is stronger than the conjunctive
 bridge `∀ g, Simple g → … → HasWill g → IsGod σ g`, which unlocks the target
-whenever one of them does. The conjunctive version is tried first, once per
+whenever one of them does. The conjunctive version is tried first, under the
+full heartbeat budget (its long antecedent makes the search heavier), once per
 premise relation outside the antecedent, and reported with `conjunctive: true`
 and the conjuncts it stands for (`replaces_single_conjuncts`) (#1819).
 

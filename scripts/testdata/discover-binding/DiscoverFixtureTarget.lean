@@ -94,3 +94,19 @@ def ProjPremise (B : Type) (P : B → Prop) (b : Box B) : Prop := P b.val
 def ProjWrong (B : Type) (P : B → Prop) (b : Box B) : Prop := ¬ P b.val
 
 end TruthCore.DiscoverFixtureTarget
+
+namespace TruthCore.DiscoverFixtureTarget
+
+/-- A structure with a predicate field and an element field. -/
+structure PBox (B : Type) where
+  Q : B → Prop
+  val : B
+
+/-- The target's predicate `R` has the type of `PBox.Q`: binding `R := b.Q`
+would equate unrelated relations by type alone, so it is never tried. -/
+def PredTarget (B : Type) (R : B → Prop) (x : B) : Prop := R x
+
+/-- Everything is `b.Q`. -/
+def PredPremise (B : Type) (b : PBox B) : Prop := ∀ y, b.Q y
+
+end TruthCore.DiscoverFixtureTarget

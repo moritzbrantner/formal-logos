@@ -696,9 +696,8 @@ def conjunctiveBridges (c : Expr) (rel : Array (String × Expr)) (inH : Expr →
 `missingBridges`); the report fields, or `none`. -/
 def checkBridge (xs : Array Expr) (origins : Array Origin) (hyps : Array (Nat × Expr))
     (concl : Expr) (u : NameSet) (heartbeats : Nat)
-    (domains : Array Nat → Array Name → Array String) (bridge : Expr) :
+    (domains : Array Nat → Array Name → Array String) (bridge : Expr) (budget : Nat) :
     TermElabM (Option (List (String × Json))) := do
-  let budget := max 2000 (heartbeats / 4)
   let withBridge := hyps.push (1000, bridge)
   let some found ← prove xs withBridge concl u budget "" (duperOnly := true) | return none
   unless found.used.contains 1000 do return none
@@ -780,7 +779,10 @@ def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
   for (qn, bridge) in conjunctive do
     if tried ≥ 48 then return out
     tried := tried + 1
-    let some fields ← checkBridge xs origins hyps concl u heartbeats domains bridge | continue
+    -- The full budget: one conjunctive bridge stands for many single ones, and
+    -- its long antecedent makes the search heavier.
+    let some fields ← checkBridge xs origins hyps concl u heartbeats domains bridge heartbeats
+      | continue
     out := out.push (Json.mkObj ([("from", Json.str (" ∧ ".intercalate ante.toList)), ("to", Json.str qn),
       ("fixed", toJson (#[] : Array String)), ("conjunctive", Json.bool true),
       ("replaces_single_conjuncts", toJson ante)] ++ fields))
@@ -789,7 +791,8 @@ def missingBridges (xs : Array Expr) (origins : Array Origin) (_target : Name)
       if tried ≥ 48 then return out
       let some (bridge, fixed) ← bridgeFor p q pe qe fix | continue
       tried := tried + 1
-      let some fields ← checkBridge xs origins hyps concl u heartbeats domains bridge | continue
+      let some fields ← checkBridge xs origins hyps concl u heartbeats domains bridge
+          (max 2000 (heartbeats / 4)) | continue
       out := out.push (Json.mkObj ([("from", Json.str pn), ("to", Json.str qn),
         ("fixed", toJson fixed)] ++ fields))
       break
@@ -825,7 +828,10 @@ def projectionCandidates (target : Name) (xs : Array Expr) (origins : Array Orig
     unless origins[i]!.decl == target do continue
     if (← x.fvarId!.getBinderInfo).isInstImplicit then continue
     let xt ← instantiateMVars (← inferType x)
-    if xt.isSort || (← isProp xt) then continue
+    -- Values only (an element, a structure such as `o : Ontic W B`): a
+    -- predicate or function binder is never bound to a field of matching type,
+    -- which would equate unrelated relations (`Simple := D.Lives`).
+    if xt.isSort || (← isProp xt) || (← whnfR xt).isForall then continue
     for j in [0:xs.size] do
       let y := xs[j]!
       if origins[j]!.decl == target then continue
