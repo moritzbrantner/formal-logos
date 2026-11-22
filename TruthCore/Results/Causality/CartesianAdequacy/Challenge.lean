@@ -141,14 +141,14 @@ respect cannot produce one. The q.4 theorem carries its own causal/identity
 premises; this does not supply those premises independently. -/
 theorem firstMoverContainsIntellect {W B T R : Type}
     (F : GradesFrame W B T R) (A : ActFrame B R)
-    (MovedIn : B → R → Prop) (MovesIn : B → B → R → Prop)
+    (MovedIn : B → R → Prop)
     (HasIntellect : B → Prop) (intellectual : R)
-    (hQ4 : FirstUnmovedMoverHasEveryPerfectionOfThings MovedIn MovesIn F.InAct)
+    (hQ4 : FirstUnmovedMoverHasEveryPerfectionOfThings MovedIn F.MovesIn F.InAct)
     (hSome : ∃ x, HasIntellect x)
     (hForm : ∀ x, HasIntellect x → A.InActFormally x intellectual)
     (hFormalCalibration : FormalActEntersGrades F A)
     (hInclusive : GradesActIsInclusive F A) :
-    ∀ f, IsFirstUnmovedMover MovedIn MovesIn f →
+    ∀ f, IsFirstUnmovedMover MovedIn F.MovesIn f →
       A.InActFormallyOrVirtually f intellectual := by
   sorry
 
