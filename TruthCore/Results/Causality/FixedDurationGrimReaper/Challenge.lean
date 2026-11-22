@@ -96,6 +96,10 @@ theorem finiteStationPrefixesGiveAdjacent {W B T : Type}
   sorry
 
 
+open TruthCore.Causality.FixedDurationGrimReaper.Control
+open TruthCore.Causality.GrimReaperPatchwork.Control (pivotFrame)
+open TruthCore.Causality.InertEmptiness.Control (all)
+
 theorem pivotFinitePrefixPiece (N n : Nat) (hn : n ≤ N) :
     PieceAt pivotFrame (stationMoments (N + 1)) stationMoments n := by
   sorry
