@@ -1,0 +1,12 @@
+{
+  "id": "e4a3b917-7c61-49e3-a8fa-dc02155bbf80",
+  "label": "If BEGINS_2 is possible, possibly with an actual external concurrent giver of contingent being",
+  "paraphrase": "OPEN analyst premise, attribution deferred, in the memberwise concurrent-esse sense of causation: if a BEGINS_2 populated history is accessible from the selected world, then an accessible BEGINS_2 populated history has an actually existing concrete individual c outside the contingent concrete inventory such that the shared CausalityFrame.GivesAt relation holds from c to every contingent concrete member at every moment of its presence, with at least one actual exercise. Unlike the existing B2's unconstrained totality-cause marker 256b5bab, this source exercises an explicit causal primitive within its possible world. This is stronger than holistic totality causation and still includes the possibility of a necessary external bearer. It does not establish giving of being in the actual world, require a first moment, or infer physical realizability from modal syntax.",
+  "lean_declaration": "TruthCore.Causality.MetricBeginningArrival.ConcurrentFiniteDurationCausalOpportunity",
+  "definition_ids": [
+    "c0d65b45-33bb-47a2-b16b-48a493a762cb",
+    "028c1066-481d-4eb4-a96e-01ad62f85a2c",
+    "77254d4d-c318-40a3-b2a1-5c922632f011",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d"
+  ]
+}

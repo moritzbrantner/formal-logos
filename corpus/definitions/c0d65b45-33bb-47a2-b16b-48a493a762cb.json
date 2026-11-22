@@ -1,0 +1,9 @@
+{
+  "id": "c0d65b45-33bb-47a2-b16b-48a493a762cb",
+  "label": "Memberwise actual concurrent giving of being to the contingent concrete inventory",
+  "term": "concurrent cause of contingent beings",
+  "lean_declaration": "TruthCore.Causality.MetricBeginningArrival.ConcurrentTotalityGivingAt",
+  "definition": "ConcurrentTotalityGivingAt f Concrete v c requires at least one actual giving of being by the same concrete source c to a contingent concrete member x at a moment t of x's presence in history v, and requires f.GivesAt v c x t for every contingent concrete individual and every moment at which it is present. The relation f.GivesAt is the existing primitive of concurrent giving-of-being, not a merely supplied arbitrary totality-cause label. Concrete existence and exteriority of c are not entailed by this definition: they are supplied by the separate opportunity premise. The memberwise reading is stronger than an explanation of the contingent totality as one collective whole.",
+  "note": "Analyst semantic extension of Arrival B. Intentionally does not equate concurrent esse-giving with ordinary earlier efficient cause, Ontic.Causes, mere intrinsic dispositions, or existential grounding of every member by a holistic cause. A stronger causal conclusion uses this field in the result; the existence and metaphysical possibility of the source remain OPEN.",
+  "basis": "stipulative"
+}
