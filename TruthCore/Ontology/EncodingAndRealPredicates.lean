@@ -24,29 +24,34 @@ nothing. `EncodingControl` shows that comprehension gives the characterized god
 EXISTENCE_7 but never EXISTENCE_6, that a model satisfies comprehension with
 existents but no exemplifying-existent god, and tests the naming premise
 `GodNamesTheUniqueMaximeEns` under encoded and exemplified readings of "God" and
-of "in act at esse": the encoded reading of God is unusable with the exemplified
-reading of being (the unique maximum would have to encode god while encoding
+of "in act at esse": the exemplified reading of being excludes the encoded
+reading of God (the unique maximum would have to encode god while encoding
 nothing), and the encoded reading of both delivers a god that does not exemplify
-existence. As in part 1, the route's existential import sits in the
+existence. This blocks the definitional argument; it does not show that object
+theory blocks ontological arguments (an Anselmian argument with a greatness
+premise is valid inside object theory, Oppenheimer and Zalta 1991, navigation). As in part 1, the route's existential import sits in the
 maximum-existence premise `InAct m esse` together with the carrier.
 
 **2. Kant: existence is not a real predicate.** Reusing the reality profiles of
 `TruthCore.German.Kant.CosmologicalInference`, `ExistenceFeature m p w f` says
-that the feature `f` is existence at `w` taken as a real predicate (EXISTENCE_8:
-a positive reality coextensive with existence at `w`). `ExistenceIsRealPredicate`
-says some feature is; Kant's thesis `ExistenceNotRealPredicate` denies it.
-`RealPredicateControl` shows what the thesis targets: with existence a real
-predicate every most-real candidate exists (the ontological step and, with
-`NecessaryIsMostReal`, the step Kant says the cosmological completion borrows);
-without it, a model satisfies `NecessaryIsMostReal`, `MostRealUnique` and has a
-most-real candidate while nothing most real exists and no necessary being exists.
+that the profile feature `f` is coextensive with existence at `w` (EXISTENCE_8).
+This is an extensional surrogate of "existence is a real predicate": it is
+satisfiable by accidental coextension and does not say that any concept contains
+existence. `ExistenceIsRealPredicate` says some feature is; its exact negation
+`ExistenceNotRealPredicate` is an analyst strengthening of Kant's thesis, since it
+also denies accidental coextension. `RealPredicateControl`: EXISTENCE_8 suffices
+for every most-real candidate to exist (a); some model of the strengthened thesis
+with `NecessaryIsMostReal` and `MostRealUnique` has a most-real candidate and no
+existing most-real candidate, and no necessary being (b), so those premises do
+not yield existence. EXISTENCE_8 is sufficient, not shown necessary.
 
 **3. Meditation V** (analyst formulation of Descartes' ontological argument,
 attribution deferred): some candidate is supremely perfect (most real for the
 profile) and is God; existence is a perfection (a real predicate); so some
 existing being is God. Sibling of the definitional argument of part 1: its
-second premise is exactly the real-predicate sense that Kant denies and that the
-nuclear (part 1) and encoding readings do not supply.
+second premise is the extensional real-predicate surrogate EXISTENCE_8, whose
+warrant Kant's thesis targets and which the nuclear (part 1) and encoding readings
+do not supply.
 -/
 
 @[expose] public section
@@ -136,31 +141,34 @@ def EncodingControl : Prop :=
 
 variable {W E : Type}
 
-/-- EXISTENCE_8: the feature `f` of the reality profile is existence at `w` taken
-as a real predicate, a positive reality had by exactly the candidates existing at
-`w`. -/
+/-- EXISTENCE_8: the feature `f` of the reality profile is had by exactly the
+candidates existing at `w`. An extensional surrogate of "existence is a real
+predicate", satisfiable by accidental coextension. -/
 def ExistenceFeature (m : Ontic W E) (p : RealityProfile E) (w : W) (f : p.Feature) : Prop :=
   ∀ x, p.Has x f ↔ m.ExistsAt w x
 
-/-- Existence at `w` is a real predicate: some feature of the profile is
-EXISTENCE_8. -/
+/-- Some feature of the profile is EXISTENCE_8 at `w` (the extensional
+real-predicate surrogate). -/
 def ExistenceIsRealPredicate (m : Ontic W E) (p : RealityProfile E) (w : W) : Prop :=
   ∃ f, ExistenceFeature m p w f
 
-/-- Kant's thesis, analyst formulation: existence at `w` is not a real predicate
-of the profile; no positive reality is coextensive with existence. -/
+/-- Strengthened Kantian thesis, analyst formulation: no feature of the profile
+is coextensive with existence at `w`. The exact negation of
+`ExistenceIsRealPredicate`; it also denies accidental coextension, which Kant's
+intensional thesis does not. -/
 def ExistenceNotRealPredicate (m : Ontic W E) (p : RealityProfile E) (w : W) : Prop :=
   ¬ ExistenceIsRealPredicate m p w
 
-/-- What the thesis targets.
+/-- The real-predicate control.
 
-(a) For every ontic model, profile and world: if existence is a real predicate,
-every most-real candidate exists at that world (the ontological step).
+(a) EXISTENCE_8 suffices: for every ontic model, profile and world, if some
+feature is coextensive with existence there, every most-real candidate exists
+there.
 
-(b) Some model, profile and world satisfy Kant's thesis, the identification
-premise `NecessaryIsMostReal` and `MostRealUnique`, and have a most-real
-candidate, while no most-real candidate exists there and no necessary being
-exists. -/
+(b) Some model, profile and world satisfy the strengthened Kantian thesis, the
+identification premise `NecessaryIsMostReal` and `MostRealUnique`, and have a
+most-real candidate, while no most-real candidate exists there and no necessary
+being exists: those premises do not yield existence. -/
 def RealPredicateControl : Prop :=
   (∀ (W E : Type) (m : Ontic W E) (p : RealityProfile E) (w : W),
     ExistenceIsRealPredicate m p w → ∀ x, MostReal p x → m.ExistsAt w x) ∧

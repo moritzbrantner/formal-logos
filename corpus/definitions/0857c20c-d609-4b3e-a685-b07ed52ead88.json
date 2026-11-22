@@ -1,9 +1,9 @@
 {
   "id": "0857c20c-d609-4b3e-a685-b07ed52ead88",
-  "label": "EXISTENCE_8 as a real predicate: a positive reality coextensive with EXISTENCE_8 at a world",
+  "label": "EXISTENCE_8: a reality-profile feature coextensive with EXISTENCE_8 at a world (extensional)",
   "term": "existence",
-  "definition": "ExistenceFeature m p w f: the feature f of the reality profile p is existence at w taken as a real predicate, i.e. a positive reality (a perfection, a determination that can belong to a concept) had by exactly the candidates existing at w. ExistenceIsRealPredicate says some feature is; Kant's thesis (existence is not a real predicate) denies it.",
+  "definition": "ExistenceFeature m p w f: the feature f of the reality profile p is had by exactly the candidates existing at w. It is an extensional surrogate of 'existence is a real predicate' (existence as a positive reality, a determination that can belong to a concept): it is satisfiable by accidental coextension, since a feature that merely happens to be had by exactly the existing candidates qualifies, and it does not say that any concept contains existence. ExistenceIsRealPredicate says some feature is coextensive in this way; its negation, recorded as a strengthened Kantian thesis, denies even accidental coextension.",
   "basis": "stipulative",
-  "note": "Analyst formulation, attribution deferred (Kant A598/B626 and Descartes' Meditation V are navigation). It reuses the reality profiles and world-relative existence of TruthCore.German.Kant.CosmologicalInference. Kant's positive account of existence as positing corresponds to EXISTENCE_1 (instantiation of a concept), not to this sense. The real-predicate control shows that this sense is what makes 'most real implies exists' valid.",
+  "note": "Analyst formulation, attribution deferred (Kant A598/B626 and Descartes' Meditation V are navigation). It reuses the reality profiles and world-relative existence of TruthCore.German.Kant.CosmologicalInference. Kant's positive account of existence as positing corresponds to EXISTENCE_1 (instantiation of a concept), not to this sense. The real-predicate control shows that this sense suffices for 'most real implies exists'; it is not shown necessary (with two candidates of which only the existing one has the single feature, a most-real candidate exists without it).",
   "lean_declaration": "TruthCore.Ontology.EncodingAndRealPredicates.ExistenceFeature"
 }

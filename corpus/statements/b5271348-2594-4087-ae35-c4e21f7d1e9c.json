@@ -1,7 +1,7 @@
 {
   "id": "b5271348-2594-4087-ae35-c4e21f7d1e9c",
-  "label": "The most-real-to-actual step needs EXISTENCE_8; a Kantian identification model",
-  "paraphrase": "Checked facts, analyst formulation. (a) For every ontic model, reality profile and world: if existence at that world is a real predicate (EXISTENCE_8), every most-real candidate exists there. (b) Some model, profile and world satisfy Kant's thesis that existence is not a real predicate, the reported identification premise 'every necessary being is most real' and the strong uniqueness of most-real candidates, and have a most-real candidate, while no most-real candidate exists there and no necessary being exists. So the step from the concept of the most real to existence needs the real-predicate sense, and the identification and uniqueness premises do not supply an existing witness.",
+  "label": "EXISTENCE_8 suffices for most-real-to-actual; a Kantian identification model",
+  "paraphrase": "Checked facts, analyst formulation. (a) EXISTENCE_8 suffices: for every ontic model, reality profile and world, if some profile feature is coextensive with existence at that world, every most-real candidate exists there. (b) Some model of the strengthened Kantian thesis (no feature is coextensive with existence at the world), together with the reported identification premise 'every necessary being is most real' and the strong uniqueness of most-real candidates, has a most-real candidate and no existing most-real candidate, and no necessary being; so those premises do not yield existence. EXISTENCE_8 is not shown necessary for the step: with two candidates of which only the existing one has the single feature, a most-real candidate exists without EXISTENCE_8.",
   "lean_declaration": "TruthCore.Ontology.EncodingAndRealPredicates.RealPredicateControl",
   "definition_ids": [
     "0857c20c-d609-4b3e-a685-b07ed52ead88",
