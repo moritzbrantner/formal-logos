@@ -1,0 +1,11 @@
+{
+  "id": "9062612f-acc9-44a8-bbf7-b62919f6b7e5",
+  "label": "Same profile witness underived from the two support bridges and Kant identification",
+  "argument_id": "500c6e18-a6c7-4144-ab6b-b4851a664792",
+  "challenge_module": "TruthCore.Results.Causality.SameWitnessWeak.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SameWitnessWeak.Solution",
+  "theorem": "TruthCore.Results.Causality.SameWitnessWeak.sameWitnessUnderivedFromBridges",
+  "comparator_config": "results/9062612f-acc9-44a8-bbf7-b62919f6b7e5/comparator.json",
+  "status": "solution-present",
+  "description": "Weaker sibling of the same-witness argument: the same five other inputs, with no contingent ground of the necessary and no novel necessary support in place of necessary-predecessor lifting. A putative supporter of the actual exemplar at an admitted world is necessary (no contingent ground), hence most real and the exemplar itself (Kant identification and numerical uniqueness); the exemplar exists actually, so no novel necessary support moves its self-support edge to the actual world, contradicting well-founded actual support. No actual reflexivity, excluded middle or frame axiom is used. bd983df2 carries the edge transport for the _1→_3 passage; the source's actual existence in PresentEsseSupport comes from 86badf93 through the identification (84ae3700, 2107b9df, 96d25c42). Support is the supplied relation, not automatically efficient cause. Establishes no premise."
+}
