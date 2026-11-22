@@ -11,9 +11,12 @@ attribution deferred. Vocabulary: `TruthCore.Ontology.ExistencePredicate`.
   beings. Valid, and a transcription by instantiation: its whole content is P2
   applied to P1's description, then dropping two conjuncts.
 * `unrestrictedGivesDefinitionsTrue`: the unrestricted P2 implies the weak P2.
-* `definitionalTruthRetorsion`: the unrestricted P2 is false in every frame; the
-  weak P2 fails once the contrary sole-God description is also defined; each
-  description is satisfiable on its own. Zero axioms.
+* `definitionalTruthRetorsion`: the unrestricted P2 is logically false in every
+  frame; the weak P2 fails once the contrary sole-God description is also
+  defined; each description is satisfiable on its own; P1 and the weak P2 are
+  jointly consistent. Zero axioms.
+* `analyticReadingCountermodel`: under the analytic reading of P2 the argument
+  is invalid. Zero axioms.
 * `nuclearCharacterizationControl`: nuclear characterization delivers a
   nuclear-existent (EXISTENCE_5) god object, and a model of it has no
   extranuclear-existent (EXISTENCE_4) god while satisfying the weak P2 on
@@ -46,7 +49,7 @@ theorem unrestrictedGivesDefinitionsTrue (F : DefinitionalFrame)
 /-- Retorsion: unrestricted characterization refutes itself, and definitional
 truth fails under two contrary sole-God definitions. -/
 theorem definitionalTruthRetorsion : DefinitionalTruthRetorsion := by
-  refine ⟨?_, ?_, ?_, ?_⟩
+  refine ⟨?_, ?_, ?_, ?_, ?_⟩
   · intro F h
     obtain ⟨_, hx⟩ := h (fun _ => False)
     exact hx
@@ -60,6 +63,20 @@ theorem definitionalTruthRetorsion : DefinitionalTruthRetorsion := by
       fun _ => True, fun _ => True, (), trivial, trivial, fun _ _ => rfl, trivial⟩
   · exact ⟨{ Object := Unit, Existent := fun _ => True, Defined := fun _ => True },
       fun _ => True, fun _ => False, (), trivial, trivial, fun _ _ => rfl, fun h => h⟩
+  · let F : DefinitionalFrame :=
+      { Object := Unit, Existent := fun _ => True
+        Defined := fun D => D = fun _ => True ∧ True ∧ True }
+    refine ⟨F, fun _ => True, fun _ => True, rfl, ?_⟩
+    intro D hD
+    subst hD
+    exact ⟨(), trivial, trivial, trivial⟩
+
+/-- Under the analytic reading of P2 the definitional argument is invalid: a
+frame with no beings in which P1's description is defined. -/
+theorem analyticReadingCountermodel : AnalyticReadingCountermodel :=
+  ⟨{ Object := Unit, Existent := fun _ => False, Defined := fun _ => True },
+    fun _ => True, fun _ => True, trivial, fun _ _ _ h => h,
+    fun ⟨⟨_, h⟩, _⟩ => h⟩
 
 namespace Model
 
@@ -124,10 +141,15 @@ theorem nuclearCharacterizationControl : NuclearCharacterizationControl := by
   refine ⟨nuclearExistentWitness, frame, characterization,
     ⟨({Nuc.existent} : Set Nuc), rfl, fun h => Nuc.noConfusion h⟩, Nuc.god, Nuc.benevolent,
     ⟨godObj, godObj_god, godObj_benevolent, godObj_existent⟩, no_existing_god,
-    ?_, ?_, ?_, ?_⟩
+    ?_, ?_, ?_, ?_, ?_⟩
   · rintro D ⟨S, rfl⟩
     exact ⟨S, fun _ hp => hp⟩
   · rintro ⟨S, hS⟩
+    have hu : nuclearDescription frame S Set.univ := fun _ _ => trivial
+    rw [← hS] at hu
+    exact hu.1.2 hu.2.1
+  · intro Stip hAdm hStip
+    obtain ⟨S, hS⟩ := hAdm _ hStip
     have hu : nuclearDescription frame S Set.univ := fun _ _ => trivial
     rw [← hS] at hu
     exact hu.1.2 hu.2.1

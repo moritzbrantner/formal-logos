@@ -6,5 +6,5 @@
   "predicate": "refutes",
   "object_kind": "statement",
   "object_id": "f0391cf0-3b56-4c31-8b0c-1460054c5151",
-  "note": "Premise-free, zero-axiom refutation in every definitional frame: the principle's own instance at an unsatisfiable description, or at the two contrary sole-God descriptions, is contradictory. Strict self-refutation of the unrestricted principle, not of the weak 'whatever has been defined is true'."
+  "note": "Premise-free, zero-axiom refutation in every definitional frame: the principle is logically false, since its single instance at an unsatisfiable description fails. This refutes the unrestricted principle, not the weak 'whatever has been defined is true', which is jointly consistent with P1 (retorsion part (d))."
 }

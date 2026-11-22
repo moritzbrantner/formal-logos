@@ -15,16 +15,23 @@ P1 "I define the existing omnibenevolent God"; P2 "whatever is defined is true";
 C "the omnibenevolent God exists". A `DefinitionalFrame` has describable objects,
 an existence predicate `Existent` that marks which of them are beings (the beings
 over which the root's `GodExists` quantifies), and a primitive `Defined` saying
-which descriptions have been introduced by a definitional act. P2 has a weak
-version (`DefinitionsAreTrue`: every *defined* description is satisfied) and an
-unrestricted version (`UnrestrictedCharacterization`: every description is
-satisfied). `DefinitionalTruthRetorsion` is the guard: the unrestricted version
-fails, and the weak version fails as soon as the contrary description "the
-existing being that is the only God and is *not* omnibenevolent" is defined by
-the same kind of act, although each of the two descriptions is satisfiable on
-its own. An inconsistent background supports no conclusion, so the argument
-gives no warrant: existence cannot be put into a description and taken out
-again as a fact.
+which descriptions have been introduced by a definitional act (stipulated). P2
+has a weak version (`DefinitionsAreTrue`: every *defined* description is
+satisfied), an unrestricted version (`UnrestrictedCharacterization`: every
+description is satisfied) and an analytic reading (`DefinitionsTrueAnalytic`:
+whatever satisfies a defined description satisfies it, true by stipulation and
+without existential import). `DefinitionalTruthRetorsion` is the guard: the
+unrestricted version is logically false in every frame (a single instance
+fails). P1 and the weak P2 are jointly consistent (a one-object frame defining
+only P1's description satisfies both), but the freedom of stipulation P1 uses
+also licenses the contrary description "the existing being that is the only God
+and is *not* omnibenevolent", and with both defined the weak P2 is
+contradictory, although each description is satisfiable on its own. So the weak
+P2 gets no warrant from definitional freedom: a P2 restricted enough to stay
+consistent must exclude descriptions for reasons other than their having been
+defined. Under the analytic reading the argument is invalid
+(`AnalyticReadingCountermodel`). Existence cannot be put into a description and
+taken out again as a fact.
 
 **2. Nuclear characterization** (a reconstruction in the style of Parsons 1980
 of Meinong's *Gegenstandstheorie*; not the naive P2 and not attributed to
@@ -35,13 +42,20 @@ nuclear property, so it cannot be put into a characterizing set; only the
 watered-down nuclear "existent" (`NuclearExistent`, EXISTENCE_5) can.
 `NuclearCharacterizationControl` shows that the restricted principle delivers
 an object with the nuclear properties god, omnibenevolent and existent, while a
-model of the principle has no extranuclear-existent god. Read as a definitional
-frame whose admissible definitions are the nuclear descriptions, the model
-satisfies the weak P2 but not P1, and the root-style existence claim fails. Read
-with "in act at esse" taken nuclearly, the model also satisfies the naming
-premise `GodNamesTheUniqueMaximeEns` and has a maximum in being, still with no
-extranuclear-existent god: the naming premise carries no existential import of
-its own.
+model of the principle has no extranuclear-existent god. In
+`nuclearDefinitionalFrame`, `Defined` is read as admissibility (being a nuclear
+description), not as stipulation. In the model, where EXISTENCE_4 is not closed
+under adding nuclear properties, P1's description is not a nuclear (admissible)
+description, the weak P2 holds of the admissible descriptions, and the
+root-style existence claim fails; so any stipulation practice that satisfies the
+bridge `StipulationsAdmissible` (every stipulated description is admissible)
+does not stipulate P1's description. Read with "in act at esse" taken as
+EXISTENCE_5, the model also satisfies the form of the naming premise
+`GodNamesTheUniqueMaximeEns` and has a maximum in being, still with no
+extranuclear-existent god: the existential import of the route comes from the
+maximum-existence premise (`InAct m esse` inside `IsMaximumIn`) together with
+the carrier, so with an object-theory carrier `InAct _ esse` must carry
+EXISTENCE_4.
 -/
 
 @[expose] public section
@@ -90,18 +104,31 @@ mention `Defined`: any description could be stipulated. -/
 def UnrestrictedCharacterization (F : DefinitionalFrame) : Prop :=
   ∀ D : F.Object → Prop, ∃ x, D x
 
+/-- P2, analytic reading: whatever satisfies a defined description satisfies
+it. True by stipulation in every frame and without existential import. -/
+def DefinitionsTrueAnalytic (F : DefinitionalFrame) : Prop :=
+  ∀ D, F.Defined D → ∀ x, D x → D x
+
+/-- Omission countermodel for the analytic reading: P1 and the analytic P2 hold
+in some frame while no being is God. -/
+def AnalyticReadingCountermodel : Prop :=
+  ∃ (F : DefinitionalFrame) (IsGod OB : F.Object → Prop),
+    DefinesExistingOmnibenevolentGod F IsGod OB ∧ DefinitionsTrueAnalytic F ∧
+    ¬ GodExists (fun b : Beings F => IsGod b.1)
+
 /-- The description "the existing being that is the only God and has `Q`". -/
 def existingSoleGodWith (F : DefinitionalFrame) (IsGod Q : F.Object → Prop) :
     F.Object → Prop :=
   fun x => F.Existent x ∧ IsGod x ∧ (∀ y, IsGod y → y = x) ∧ Q x
 
-/-- The retorsion guard on P2. (a) The unrestricted principle is false in every
-definitional frame. (b) In every frame, if "the existing being that is the only
-God and is omnibenevolent" and "the existing being that is the only God and is
-not omnibenevolent" have both been defined, whatever-is-defined-is-true fails.
-(c) Each of the two descriptions is satisfied in some frame (not in the same
-frame, by (b)), so the clash is not the self-contradiction of a single
-description. -/
+/-- The retorsion guard on P2. (a) The unrestricted principle is logically false
+in every definitional frame: a single instance fails. (b) In every frame, if "the
+existing being that is the only God and is omnibenevolent" and "the existing
+being that is the only God and is not omnibenevolent" have both been defined,
+whatever-is-defined-is-true fails: its contrary instances clash. (c) Each of the
+two descriptions is satisfied in some frame, so the clash is not the
+self-contradiction of a single description. (d) P1 and the weak P2 hold together
+in some frame: they are jointly consistent. -/
 def DefinitionalTruthRetorsion : Prop :=
   (∀ F : DefinitionalFrame, ¬ UnrestrictedCharacterization F) ∧
   (∀ (F : DefinitionalFrame) (IsGod OB : F.Object → Prop),
@@ -111,7 +138,9 @@ def DefinitionalTruthRetorsion : Prop :=
   (∃ (F : DefinitionalFrame) (IsGod OB : F.Object → Prop) (x : F.Object),
     existingSoleGodWith F IsGod OB x) ∧
   (∃ (F : DefinitionalFrame) (IsGod OB : F.Object → Prop) (x : F.Object),
-    existingSoleGodWith F IsGod (fun y => ¬ OB y) x)
+    existingSoleGodWith F IsGod (fun y => ¬ OB y) x) ∧
+  (∃ (F : DefinitionalFrame) (IsGod OB : F.Object → Prop),
+    DefinesExistingOmnibenevolentGod F IsGod OB ∧ DefinitionsAreTrue F)
 
 /-! ## 2. Nuclear characterization (Parsons-style reconstruction) -/
 
@@ -149,13 +178,24 @@ are the descriptions the restricted principle admits as characterizations. -/
 def nuclearDescription (F : ParsonsFrame) (S : Set F.Nuclear) : F.Object → Prop :=
   fun x => S ⊆ nuclearSet F x
 
-/-- The definitional frame of a nuclear-property theory: its existence predicate
-is extranuclear existence, and its admissible definitions are exactly the
-nuclear descriptions. -/
+/-- Admissibility in a nuclear-property theory: the description is a nuclear
+description. -/
+def NuclearAdmissible (F : ParsonsFrame) (D : F.Object → Prop) : Prop :=
+  ∃ S, D = nuclearDescription F S
+
+/-- The definitional frame of a nuclear-property theory, read with admissibility:
+its existence predicate is extranuclear existence, and its `Defined` is
+`NuclearAdmissible` (being a nuclear description), not stipulation. -/
 def nuclearDefinitionalFrame (F : ParsonsFrame) : DefinitionalFrame where
   Object := F.Object
   Existent := F.ExistsExtranuclear
-  Defined := fun D => ∃ S, D = nuclearDescription F S
+  Defined := NuclearAdmissible F
+
+/-- Bridge from stipulation to admissibility: every description stipulated in
+the practice `Stipulated` is a nuclear (admissible) description. -/
+def StipulationsAdmissible (F : ParsonsFrame) (Stipulated : (F.Object → Prop) → Prop) :
+    Prop :=
+  ∀ D, Stipulated D → NuclearAdmissible F D
 
 /-- What nuclear characterization delivers for the definitional argument, and
 what it blocks.
@@ -167,12 +207,14 @@ what it blocks.
 (b) Some frame satisfies the principle, has extranuclear-existent objects, and
 for some `g`, `o`: a nuclear-existent object with `g` and `o` exists as an object,
 no object with `g` exists extranuclearly (EXISTENCE_4), the weak P2 holds of its
-nuclear definitional frame, P1 fails there (the existing-God description is not
-a nuclear description), and the root-style claim that some being is a god
-fails.
+admissibility frame, P1's description is not a nuclear (admissible) description
+there, every stipulation practice satisfying `StipulationsAdmissible` leaves P1's
+description unstipulated, and the root-style claim that some being is a god
+fails. In this model EXISTENCE_4 is not closed under adding nuclear properties;
+that side condition is what makes P1's description non-nuclear.
 
-(c) In the same frame, reading "in act at esse" as nuclear existence, the
-naming premise `GodNamesTheUniqueMaximeEns` holds for the god predicate, some
+(c) In the same frame, reading "in act at esse" as nuclear existence, the form
+of the naming premise `GodNamesTheUniqueMaximeEns` holds for the god predicate, some
 object is the unique maximum in being and causes all in that genus, and some
 object is a god, while no extranuclear-existent object is a god. -/
 def NuclearCharacterizationControl : Prop :=
@@ -183,8 +225,11 @@ def NuclearCharacterizationControl : Prop :=
       (∃ x, F.HasNuclear x g ∧ F.HasNuclear x o ∧ NuclearExistent F x) ∧
       (¬ ∃ x, F.ExistsExtranuclear x ∧ F.HasNuclear x g) ∧
       DefinitionsAreTrue (nuclearDefinitionalFrame F) ∧
-      ¬ DefinesExistingOmnibenevolentGod (nuclearDefinitionalFrame F)
-          (fun x => F.HasNuclear x g) (fun x => F.HasNuclear x o) ∧
+      ¬ NuclearAdmissible F (existingOmnibenevolentGod (nuclearDefinitionalFrame F)
+          (fun x => F.HasNuclear x g) (fun x => F.HasNuclear x o)) ∧
+      (∀ Stipulated : (F.Object → Prop) → Prop, StipulationsAdmissible F Stipulated →
+        ¬ Stipulated (existingOmnibenevolentGod (nuclearDefinitionalFrame F)
+          (fun x => F.HasNuclear x g) (fun x => F.HasNuclear x o))) ∧
       ¬ GodExists (fun b : Beings (nuclearDefinitionalFrame F) => F.HasNuclear b.1 g) ∧
       (∃ (MoreIn : Unit → F.Object → F.Object → Prop)
           (CausesIn : F.Object → F.Object → Unit → Prop),
