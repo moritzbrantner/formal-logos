@@ -1,7 +1,7 @@
 {
   "id": "2047d14b-7f50-4e46-9284-8972d135ef9e",
   "label": "No actual concretum grounds itself under the selected grounding at w",
-  "paraphrase": "OPEN analyst premise: under the selected grounding relation of the profile at w, no candidate that is concrete and exists at w grounds itself. Irreflexivity only: it says nothing about cycles of length two or more or about well-foundedness, both of which imply it.",
+  "paraphrase": "OPEN analyst premise: under the selected grounding relation of the profile at w, no candidate that is concrete and exists at w grounds itself. Irreflexivity only: it says nothing about cycles of length two or more. Acyclicity including self-loops, and well-foundedness of grounding on actual concreta, each imply it. It must be read on the same strict sense of grounds as the closure premise STMT-EVERY-CONTINGENT-GROUNDED-AT, which permits self-grounding: under the reflexive existence-requirement reading of #1593 (ReflexiveDependenceScope) the closure holds trivially and irreflexivity fails.",
   "lean_declaration": "TruthCore.Causality.ReflexiveDependenceScope.ActualGroundingIrreflexive",
   "definition_ids": [
     "c57e2682-08e6-527e-950f-0fa0a7ff11ef",

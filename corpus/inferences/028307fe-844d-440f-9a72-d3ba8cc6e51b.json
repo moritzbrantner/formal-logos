@@ -4,7 +4,7 @@
   "input_statement_ids": [],
   "output_statement_id": "0c1baf67-72ca-4470-a429-d106e6810b05",
   "rule": "General laws and explicit finite models",
-  "meaning": "Premise-free laws relating B6 to its necessity form, B4 to its converse-direction halves, route B's pure-act lemma and the strength of the disjunctive bridge; then twelve finite models: an omission model for each non-logical premise of the routes, a nonvacuity model for all routes and both endpoints, and a two-root model. Model-witnessed separations only; no premise is established and no reality claim is made.",
+  "meaning": "Premise-free laws relating B6 to its necessity form, B4 to its converse-direction halves, B4's equivalence with the lead's target at w (route B relocates the question) and the strength of the disjunctive bridge; then twelve finite models: an omission model for each non-logical premise of the routes, a nonvacuity model for all routes and both endpoints, and a two-root model. Model-witnessed separations only; no premise is established and no reality claim is made.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

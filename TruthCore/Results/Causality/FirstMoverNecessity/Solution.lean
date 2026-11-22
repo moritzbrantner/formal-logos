@@ -225,11 +225,17 @@ theorem laws : Laws := by
       exact he (h x hx (fun hne => hne hid) v hv)
   · intro W B T R F w InPotency CanFailToBe ha hb x hx
     exact ⟨F.esse, hb x (ha x hx)⟩
-  · intro W B T R F w InPotency hEM hPot x hpure hx v hv
-    rcases hEM (F.history.ontic.ExistsAt v x) with he | he
-    · exact he
-    · obtain ⟨s, hs⟩ := hPot x ⟨hx, v, hv, he⟩
-      exact (hpure s hs).elim
+  · intro W B T R F w InPotency hEM
+    constructor
+    · intro hPot x hpure hx v hv
+      rcases hEM (F.history.ontic.ExistsAt v x) with he | he
+      · exact he
+      · obtain ⟨s, hs⟩ := hPot x ⟨hx, v, hv, he⟩
+        exact (hpure s hs).elim
+    · rintro h x ⟨hx, v, hv, he⟩
+      rcases hEM (∃ r, InPotency x r) with hp | hp
+      · exact hp
+      · exact (he (h x (fun r hr => hp ⟨r, hr⟩) hx v hv)).elim
   · intro W B T R F w InPotency h x hx
     exact Or.inr (h x hx)
   · intro W B T R F w InPotency h x hx
@@ -252,7 +258,9 @@ theorem models : Models := by
     IsFirstUnmovedMover, PureAct, IsFirstBeing, ActualRoot, ActualConcrete,
     TruthCore.Causality.CogitoNecessaryConcrete.ActualConcreteGround, NecessaryAt, ContingentAt,
     groundProfile, bruteFirst, conserved, unprioritized, absentMover, necessaryMover, still,
-    witness, selfGround, mk, movedIn, noPotency, fPotency, xPotency, fContingent, allNecessary,
+    witness, selfGround, mk, movedIn, movedPotency, fPotency, canFail, fContingent, allNecessary,
+    ContingentCanFailToBe, CanFailToBeIsPotencyAtEsse, twoRoots, trioMovedIn, trioPotency,
+    trioConcrete, trioNoGround, Trio.forall_iff, Trio.exists_iff,
     fAbsent,
     xCausesF, xPriorF, noCause, noPrior, xContingent, fCausesX, fPriorX, allConcrete,
     noneConcrete, noGround, fGroundsF, xGroundsF, fSelfPrior, fGroundsX, unitOf, esseTrue,

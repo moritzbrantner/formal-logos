@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Causality.FirstMoverNecessity.firstMoverNecessaryByPotency",
   "comparator_config": "results/52df4a80-a052-4b66-b40c-78d2ecc6810a/comparator.json",
   "status": "solution-present",
-  "description": "Same-witness conditional result, potency route: pure act and B4 give necessity of the first mover. Not a transcription: the modal conclusion is reached by reductio against pure act. Establishes no premise; B4 is sense-sensitive (DISAMB-POTENCY-IN-SUBJECT-VS-IN-ANOTHER)."
+  "description": "Same-witness conditional result, potency route: pure act and B4 give necessity of the first mover. Not a transcription (B4's consequent is potency, not necessity), but B4 is classically equivalent to the target restricted to w, so the route relocates the open question. Establishes no premise. A counterexample to B4 as typed would be a contingent being in POTENCY_1 in no respect; whether such a being is possible is the open B5/receptive-potency question (DISAMB-RECEPTIVE-POTENCY, DISAMB-POTENCY-IN-SUBJECT-VS-IN-ANOTHER)."
 }

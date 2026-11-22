@@ -1,7 +1,7 @@
 {
   "id": "6e6c5d8d-84d9-4b79-a524-21e34c4c8146",
   "label": "Whatever moves something is CONCRETE_6",
-  "paraphrase": "OPEN interface (B0'), analyst formulation, attribution deferred: whatever moves something in some respect (MovesIn, CAUSE_1) satisfies the concreteness predicate of the selected-grounding profile. Used only by the grounding route; the causal, potency and essence-esse routes do not need it.",
+  "paraphrase": "OPEN interface (B0'), analyst formulation, attribution deferred: whatever moves something in some respect (MovesIn, CAUSE_1) satisfies the concreteness predicate of the selected-grounding profile. Used only by the grounding route and the projection of the pure-act endpoint to the stage-one node; the causal, potency and essence-esse routes do not need it. 'Moves' is the frame's MovesIn (DEF-MOTION-AS-REDUCTION, CAUSE_1), not linked for the reason given at B0 (recorded for #216).",
   "lean_declaration": "TruthCore.Causality.FirstMoverNecessity.MoversConcrete",
   "definition_ids": [
     "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d",

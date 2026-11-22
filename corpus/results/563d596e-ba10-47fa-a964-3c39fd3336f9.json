@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Causality.FirstMoverNecessity.firstMoverNecessaryByPotencyOrCause",
   "comparator_config": "results/563d596e-ba10-47fa-a964-3c39fd3336f9/comparator.json",
   "status": "solution-present",
-  "description": "Same-witness conditional result: the First Way's own first mover is pure act and exists at every world accessible from w, from the prima via conclusion, B0, firstness, pure act, the disjunctive bridge B2 or B4 and B3, with excluded middle. Not a transcription: no premise mentions necessity; the modal conclusion is reached by a reductio over the two disjuncts. Establishes no premise. It is the weakest bridge set of the four routes recorded here (B2 and B4 each imply the disjunctive bridge)."
+  "description": "Same-witness conditional result: the First Way's own first mover is pure act and exists at every world accessible from w, from the prima via conclusion, B0, firstness, pure act, the disjunctive bridge B2 or B4 and B3, with excluded middle. Not a transcription: no premise mentions necessity; the modal conclusion is reached by a reductio over the two disjuncts. Establishes no premise. Its bridge is the weakest of B2, B4 and B2 or B4 as typed (B2 and B4 each imply it), and its bundle is entailed by the causal route's bundle; logical weakness is not by itself greater warrant."
 }
