@@ -1,0 +1,11 @@
+{
+  "id": "ee7281ec-bb0c-4ee0-9161-f127f6a9ad31",
+  "label": "Frame-to-schema strictness controls, checked",
+  "argument_id": "e752bd56-18b1-4021-b63f-360196f98451",
+  "challenge_module": "TruthCore.Results.Causality.NecessarySenseBridges.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NecessarySenseBridges.Solution",
+  "theorem": "TruthCore.Results.Causality.NecessarySenseBridges.schemaStrictness",
+  "comparator_config": "results/ee7281ec-bb0c-4ee0-9161-f127f6a9ad31/comparator.json",
+  "status": "solution-present",
+  "description": "Strictness of the two frame-to-schema strength orders: on the one-world frame with no accessibility edge the B and 5 schemas are valid on the route frame and the route frame is neither KTB nor S5. So the B schema does not entail the KTB frame premise and the 5 schema does not entail the S5 frame premise. Model-witnessed only."
+}

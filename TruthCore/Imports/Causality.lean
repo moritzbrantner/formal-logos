@@ -112,6 +112,7 @@ public import TruthCore.Causality.FullnessCandidates
 public import TruthCore.Causality.GodMaximalCausal
 public import TruthCore.Causality.GodNamingSenses
 public import TruthCore.Causality.GradedSupportFoundation
+public import TruthCore.Causality.GradesFrame
 public import TruthCore.Causality.GreatestDegreeRootRoute
 public import TruthCore.Causality.GrimReaper
 public import TruthCore.Causality.GrimReaperFiniteTests

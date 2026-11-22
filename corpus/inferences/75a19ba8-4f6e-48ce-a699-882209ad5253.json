@@ -1,0 +1,10 @@
+{
+  "id": "75a19ba8-4f6e-48ce-a699-882209ad5253",
+  "label": "Frame-to-schema strictness controls, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "ecc64d71-ff94-4352-80f0-3e40c6e14d65",
+  "rule": "One explicit frame checked by unfolding",
+  "meaning": "Strictness of the two frame-to-schema strength orders: on the one-world frame with no accessibility edge the B and 5 schemas are valid on the route frame and the route frame is neither KTB nor S5. So the B schema does not entail the KTB frame premise and the 5 schema does not entail the S5 frame premise. Model-witnessed only.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

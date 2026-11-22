@@ -121,6 +121,78 @@
         {
           "declaration": "TruthCore.Causality.Frame.CausalityFrame",
           "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Alternatives.NameApplicationTransfer.ReducedDescriptorExists",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Alternatives.NameApplicationTransfer.ReducedNominalNamingFails",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.CauseOfBeingCausesEveryPerfection",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.CauseOfBeingHasBeing.CauseOfABeingHasBeing",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.ClassicalAttributesLocalLogic.MaximumCausesAll",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.GodNamesTheUniqueMaximeEns",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.MaximalCauseWithNoDistinctEsseCause",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.MaximumHasNoDistinctEsseCause",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.ResidualPerfectionTransfer",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Case.Catholicism.UniversalCauseTransfersPerfections",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.PerfectionTransferGrounding.NonuniversalPerfectionTransfer",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Causality.SpineRivalsAttributes.EmergentPerfectionReading",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MaximeEnsCausesBeingOfAllReading",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MaximumInBeingCausesAllBeingsReading",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MaximumInGenusCausesAllInGenusReading",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.PerfectionsOfEffectPreexistInCauseReading",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.QuartaViaDegreeFork",
+          "parameter": "CausesIn"
+        },
+        {
+          "declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.QuartaViaStrictCausalTop",
+          "parameter": "CausesIn"
         }
       ]
     },

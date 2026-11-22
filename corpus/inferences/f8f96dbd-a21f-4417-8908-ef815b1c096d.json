@@ -1,0 +1,12 @@
+{
+  "id": "f8f96dbd-a21f-4417-8908-ef815b1c096d",
+  "label": "The T schema of the route's NECESSARY_2 box entails a KT route frame (inference)",
+  "input_statement_ids": [
+    "cb456382-efd6-554b-8ee4-c8fc193f876a"
+  ],
+  "output_statement_id": "806c3f89-171a-5ccf-9ddf-5924c39695ed",
+  "rule": "T correspondence of the modal library (verified StandardCorrespondenceCertificate: T-schema validity iff reflexivity), applied to the route frame",
+  "meaning": "If the T schema of the route's box is valid on the route's modal frame, the frame is reflexive (KT). Applies the verified premise-free StandardCorrespondenceCertificate (MODAL-STANDARD-CORRESPONDENCE-CERTIFICATE) to the route frame. Establishes neither premise; with the forward result it shows that the T schema premise and the KT frame premise are equivalent.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

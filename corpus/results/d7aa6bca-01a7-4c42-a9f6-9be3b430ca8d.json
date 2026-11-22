@@ -1,0 +1,11 @@
+{
+  "id": "d7aa6bca-01a7-4c42-a9f6-9be3b430ca8d",
+  "label": "Same profile witness weak-bridge sibling omission certificates",
+  "argument_id": "48a9f806-6daf-43e3-976e-f94411fd39ea",
+  "challenge_module": "TruthCore.Results.Causality.SameWitnessWeak.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SameWitnessWeak.Solution",
+  "theorem": "TruthCore.Results.Causality.SameWitnessWeak.weakSiblingOmissions",
+  "comparator_config": "results/d7aa6bca-01a7-4c42-a9f6-9be3b430ca8d/comparator.json",
+  "status": "solution-present",
+  "description": "Omission controls for the weak-bridge sibling: in each assignment every other input holds, one bridge fails and the exemplar is not underived, so neither bridge can be dropped from this argument. Assignments only; they are not evidence against either bridge."
+}

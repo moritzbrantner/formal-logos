@@ -247,6 +247,7 @@ public import TruthCore.Results.Causality.NecessaryRootGodExistence.Reduced.Solu
 public import TruthCore.Results.Causality.NecessaryRootGodExistence.Solution
 public import TruthCore.Results.Causality.NecessaryRootGodUniqueness.Solution
 public import TruthCore.Results.Causality.NecessaryRootUniqueness.Solution
+public import TruthCore.Results.Causality.NecessarySenseBridges.Solution
 public import TruthCore.Results.Causality.NecessarySenseFork.Solution
 public import TruthCore.Results.Causality.NecessarySimplePlurality.Solution
 public import TruthCore.Results.Causality.NecessarySupportActualScope.Solution
@@ -324,6 +325,7 @@ public import TruthCore.Results.Causality.Round4Revisited.Solution
 public import TruthCore.Results.Causality.Round5Worklist.Solution
 public import TruthCore.Results.Causality.SameRespectActualization.Solution
 public import TruthCore.Results.Causality.SameSourceWitness.Solution
+public import TruthCore.Results.Causality.SameWitnessWeak.Solution
 public import TruthCore.Results.Causality.ScenarioNecessaryWitness.Solution
 public import TruthCore.Results.Causality.ScopedActualCausality.Solution
 public import TruthCore.Results.Causality.SelectedAncestry.Solution

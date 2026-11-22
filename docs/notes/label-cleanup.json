@@ -8995,16 +8995,6 @@
  },
  {
   "kind": "argument",
-  "id": "1dff22d0-34f1-5244-bc7d-2b0c978db109",
-  "legacy_id": "QUARTA-VIA-GRADES-MAXIMUM-FROM-CAUSAL-ASCENT",
-  "label": "Wherever things are more and less in some perfection, there…, via grades maximum from causal ascent",
-  "flags": [
-   "from-legacy-id",
-   "truncated"
-  ]
- },
- {
-  "kind": "argument",
   "id": "09164174-022e-57fc-a241-9da629576ccb",
   "legacy_id": "POTENCY-SENSE-FORK-NO-SELF-MOTION",
   "label": "Whichever single sense potency takes, nothing moves itself in the same respect",
@@ -28868,15 +28858,6 @@
  },
  {
   "kind": "claim",
-  "id": "78cd74e9-d854-55f4-bc5e-57bd2d22218b",
-  "legacy_id": "AQUINAS-ST-I-Q2-A3-GRADES-HAVE-MAXIMUM-A",
-  "label": "Thomas Aquinas, Summa theologiae I q.2 a.3…: Wherever things are more and less in some perfection…",
-  "flags": [
-   "truncated"
-  ]
- },
- {
-  "kind": "claim",
   "id": "a5d11a9e-5f41-58c0-9c2d-ab707d0e669c",
   "legacy_id": "AQUINAS-ST-I-Q25-A1-ACTIVE-PRINCIPLE-IN-ACT",
   "label": "Thomas Aquinas, Summa theologiae I q.25 a.1…: At the selected world, whatever has causal power, an…",
@@ -36927,15 +36908,6 @@
   "id": "aad0156a-e1eb-5b6a-bb97-526698065277",
   "legacy_id": "DEF-ONTOLOGICAL-TRUTH-COMPARISON",
   "label": "More and less ontologically true: For this reading, x is more true than y in the relevant respect…",
-  "flags": [
-   "truncated"
-  ]
- },
- {
-  "kind": "definition",
-  "id": "5766de66-8a37-5b04-aa65-9eec53319f50",
-  "legacy_id": "DEF-MORE-IN",
-  "label": "More and less, the grades of a…: MoreIn r x y: x is more r than y",
   "flags": [
    "truncated"
   ]
@@ -55287,15 +55259,6 @@
  },
  {
   "kind": "inference",
-  "id": "33849628-0edd-538d-a12b-61fbacca4d3f",
-  "legacy_id": "INF-QUARTA-VIA-GRADES-MAXIMUM-FROM-CAUSAL-ASCENT",
-  "label": "Wherever things are more and less in some perfection, there is…, by Well-founded-induction",
-  "flags": [
-   "truncated"
-  ]
- },
- {
-  "kind": "inference",
   "id": "5d13eed4-bc20-5839-8d35-7f5334e6ee6d",
   "legacy_id": "INF-ARIST-PHYS-WHITENING-HEALING-DIFFERENT-ALTERATIONS",
   "label": "Whitening and healing are different species of alteration under…, by Conjunction elimination and…",
@@ -61039,15 +61002,6 @@
   "id": "2eeeaa28-daba-5559-8907-e0d4fd538412",
   "legacy_id": "REL-Q3-A4-ESSE-ACTUALITY-SUPPORTS-LACKING-ESSE-IS-MERELY-POSSIBLE",
   "label": "Thomas Aquinas, Summa theologiae I q.3… supports Whatever is not in act of esse is merely…",
-  "flags": [
-   "truncated"
-  ]
- },
- {
-  "kind": "relation",
-  "id": "7755ccf5-3920-5d47-8b4a-23dd070301fa",
-  "legacy_id": "REL-AQUINAS-ST-I-Q3-A5-AD2-SUPPORTS-GRADES-HAVE-A-MAXIMUM",
-  "label": "Thomas Aquinas, Summa theologiae I q.3… supports Wherever things are more and less in some…",
   "flags": [
    "truncated"
   ]
@@ -84362,15 +84316,6 @@
   "id": "53bcdeda-a326-54ac-8a14-8a788a8e00ac",
   "legacy_id": "STMT-SEXTUS-UNRESOLVED-DISPUTE-SUSPENSION",
   "label": "Where the described dispute cannot be adjudicated, the skeptical procedure neither accepts nor…",
-  "flags": [
-   "truncated"
-  ]
- },
- {
-  "kind": "statement",
-  "id": "6c27657f-a2bf-5c1d-963c-c154b66bfa85",
-  "legacy_id": "STMT-GRADES-HAVE-A-MAXIMUM",
-  "label": "Wherever things are more and less in some perfection, there is something maximal in it: something…",
   "flags": [
    "truncated"
   ]

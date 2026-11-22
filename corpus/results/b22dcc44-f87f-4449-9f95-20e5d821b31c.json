@@ -1,0 +1,11 @@
+{
+  "id": "b22dcc44-f87f-4449-9f95-20e5d821b31c",
+  "label": "KTB route frame entails the B schema of the route's NECESSARY_2 box",
+  "argument_id": "3158e48d-d4d2-45f1-8429-893a14901d0e",
+  "challenge_module": "TruthCore.Results.Causality.NecessarySenseBridges.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NecessarySenseBridges.Solution",
+  "theorem": "TruthCore.Results.Causality.NecessarySenseBridges.frameKTBToBSchema",
+  "comparator_config": "results/b22dcc44-f87f-4449-9f95-20e5d821b31c/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration: if the route's modal frame is reflexive and symmetric (KTB), the B schema of the route's box is valid on it. Applies the existing modal-library theorem TruthCore.Modal.axiomB_valid to the frame's symmetry. Establishes neither premise. No transcription is declared: the proof applies a proved library theorem with real content."
+}

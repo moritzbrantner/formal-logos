@@ -1,0 +1,106 @@
+# Frame-to-schema correspondences for the route's NECESSARY_2 box (#1784, #461):
+# the missing links t18-t20 of the discover run 20261120T134013Z over the modal
+# sense-fork nodes. The sense fork's frame premises (OnticFrameKT/KTB/S5) and the
+# modal-principle premises (T, B and 5 schemas) are about the same route frame;
+# the proofs apply the modal library's soundness theorems (TruthCore.Modal.Kripke)
+# and its verified T correspondence. Audit of every NECESSARY sense: resolution of
+# DISAMB-NECESSARY and the attempt "Audit of the senses of NECESSARY". Analyst
+# formulations, attribution deferred. No frame condition or schema is asserted.
+
+[batch]
+vocab = "TruthCore.Causality.ModalSenseSupport"
+results = "TruthCore.Results.Causality.NecessarySenseBridges"
+disambiguations = ["DISAMB-NECESSARY"]
+
+[[statement]]
+id = "Frame-to-schema strictness controls for the route's NECESSARY_2 box"
+lean = "Control.SchemaStrictness"
+paraphrase = "Formal controls on one explicit route frame (one world with no accessibility edge, one candidate individual present there): the B schema and the 5 schema of the frame's box are valid on it (vacuously: no world is accessible), while the route frame is neither KTB nor S5, because it is not reflexive. So neither schema premise entails its registered stronger frame premise. A statement about this interpretation only; no frame is claimed to be the frame of the route."
+definitions = ["DEF-MODAL-FIXTURE-FRAME", "DEF-MODAL-HIJK-CONVERGENCE"]
+disambiguations = ["DISAMB-NECESSARY"]
+
+[[argument]]
+id = "KT route frame entails the T schema of the route's NECESSARY_2 box"
+theorem = "frameKTToTSchema"
+premises = ["STMT-ONTIC-FRAME-KT"]
+conclusion = "STMT-ONTIC-T-SCHEMA"
+axioms = []
+rule = "Soundness of axiom T on reflexive frames (axiomT_valid of the modal library)"
+meaning = "If the route's modal frame is reflexive (KT), the T schema 'necessarily p implies p' of the route's box is valid on it, for every valuation of its atom and every world. Applies the existing modal-library theorem TruthCore.Modal.axiomT_valid to the route frame. Establishes neither premise; with the converse result it shows that the KT frame premise and the T schema premise are equivalent."
+description = "If the route's modal frame is reflexive (KT), the T schema of the route's box is valid on it. Applies the existing modal-library theorem TruthCore.Modal.axiomT_valid to the route frame. Establishes neither premise. No transcription is declared: the proof applies a proved library theorem with real content, not an open bridge, as in frameS5ToS4."
+sense_bridges = [{ term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "STMT-ONTIC-T-SCHEMA", role = "conclusion" }]
+
+[[argument]]
+id = "The T schema of the route's NECESSARY_2 box entails a KT route frame"
+theorem = "tSchemaToFrameKT"
+premises = ["STMT-ONTIC-T-SCHEMA"]
+conclusion = "STMT-ONTIC-FRAME-KT"
+axioms = []
+rule = "T correspondence of the modal library (verified StandardCorrespondenceCertificate: T-schema validity iff reflexivity), applied to the route frame"
+meaning = "If the T schema of the route's box is valid on the route's modal frame, the frame is reflexive (KT). Applies the verified premise-free StandardCorrespondenceCertificate (MODAL-STANDARD-CORRESPONDENCE-CERTIFICATE) to the route frame. Establishes neither premise; with the forward result it shows that the T schema premise and the KT frame premise are equivalent."
+description = "If the T schema of the route's box is valid on the route's modal frame, the frame is reflexive (KT). Applies the verified premise-free theorem TruthCore.Results.Modal.StandardCorrespondenceCertificate.certificate (the T correspondence) to the route frame. Establishes neither premise. No transcription is declared: the proof applies a proved correspondence theorem, not an open bridge."
+sense_bridges = [{ term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "STMT-ONTIC-T-SCHEMA" }]
+
+[[argument]]
+id = "KTB route frame entails the B schema of the route's NECESSARY_2 box"
+theorem = "frameKTBToBSchema"
+premises = ["STMT-ONTIC-FRAME-KTB"]
+conclusion = "STMT-ONTIC-B-SCHEMA"
+weakening = true
+axioms = []
+rule = "Soundness of axiom B on symmetric frames (axiomB_valid of the modal library), from the symmetry conjunct of KTB"
+meaning = "Strength order registration: if the route's modal frame is reflexive and symmetric (KTB), the B schema (convergence formula 0 0 1 1: an atom that holds at a world is possible at every world accessible from it) of the route's box is valid on it. Applies the existing modal-library theorem TruthCore.Modal.axiomB_valid to the frame's symmetry. Establishes neither premise."
+description = "Strength order registration: if the route's modal frame is reflexive and symmetric (KTB), the B schema of the route's box is valid on it. Applies the existing modal-library theorem TruthCore.Modal.axiomB_valid to the frame's symmetry. Establishes neither premise. No transcription is declared: the proof applies a proved library theorem with real content."
+sense_bridges = [{ term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "STMT-ONTIC-B-SCHEMA", role = "conclusion" }]
+
+[[argument]]
+id = "S5 route frame entails the 5 schema of the route's NECESSARY_2 box"
+theorem = "frameS5To5Schema"
+premises = ["STMT-ONTIC-FRAME-S5"]
+conclusion = "STMT-ONTIC-5-SCHEMA"
+weakening = true
+axioms = []
+rule = "Soundness of axiom 5 on Euclidean frames (axiom5_valid of the modal library), from the Euclidean conjunct of S5"
+meaning = "Strength order registration: if the route's modal frame is reflexive and Euclidean (S5), the 5 schema 'whatever is possible is necessarily possible' (convergence formula 1 0 1 1) of the route's box is valid on it. Applies the existing modal-library theorem TruthCore.Modal.axiom5_valid to the frame's Euclidean condition. Establishes neither premise."
+description = "Strength order registration: if the route's modal frame is reflexive and Euclidean (S5), the 5 schema of the route's box is valid on it. Applies the existing modal-library theorem TruthCore.Modal.axiom5_valid to the frame's Euclidean condition. Establishes neither premise. No transcription is declared: the proof applies a proved library theorem with real content."
+sense_bridges = [{ term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "STMT-ONTIC-5-SCHEMA", role = "conclusion" }]
+
+[[argument]]
+id = "Frame-to-schema strictness controls, checked"
+theorem = "schemaStrictness"
+premises = []
+conclusion = "Frame-to-schema strictness controls for the route's NECESSARY_2 box"
+axioms = []
+rule = "One explicit frame checked by unfolding"
+meaning = "Strictness of the two frame-to-schema strength orders: on the one-world frame with no accessibility edge the B and 5 schemas are valid on the route frame and the route frame is neither KTB nor S5. So the B schema does not entail the KTB frame premise and the 5 schema does not entail the S5 frame premise. Model-witnessed only."
+
+[[relation]]
+id = "The KT route frame premise is logically equivalent to the T schema premise"
+subject_kind = "statement"
+subject_id = "STMT-ONTIC-FRAME-KT"
+predicate = "logically_equivalent_to"
+object_kind = "statement"
+object_id = "STMT-ONTIC-T-SCHEMA"
+note = "Both directions are verified on the same route Profile and frame: result 'KT route frame entails the T schema of the route's NECESSARY_2 box' (axiomT_valid) and result 'The T schema of the route's NECESSARY_2 box entails a KT route frame' (the verified T correspondence), verified with o instantiated as m.ontic. Two presentations of one assumption, not independent evidence: a defence of either is a defence of both."
+
+[[relation]]
+id = "KTB route frame strengthens the B schema of the route's NECESSARY_2 box"
+subject_kind = "statement"
+subject_id = "STMT-ONTIC-FRAME-KTB"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "STMT-ONTIC-B-SCHEMA"
+verification_result_id = "KTB route frame entails the B schema of the route's NECESSARY_2 box"
+strictness_result_id = "Frame-to-schema strictness controls, checked"
+note = "Same route Profile and frame. The B schema is equivalent to symmetry (B correspondence of the ConvergenceCertificate); KTB adds reflexivity (the KT frame premise, equivalently the T schema). The one-world frame with no edge validates B and is not KTB. Verified with o instantiated as m.ontic."
+
+[[relation]]
+id = "S5 route frame strengthens the 5 schema of the route's NECESSARY_2 box"
+subject_kind = "statement"
+subject_id = "STMT-ONTIC-FRAME-S5"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "STMT-ONTIC-5-SCHEMA"
+verification_result_id = "S5 route frame entails the 5 schema of the route's NECESSARY_2 box"
+strictness_result_id = "Frame-to-schema strictness controls, checked"
+note = "Same route Profile and frame. The 5 schema is equivalent to the Euclidean condition (5 correspondence of the ConvergenceCertificate); S5 adds reflexivity (the KT frame premise, equivalently the T schema). The one-world frame with no edge validates 5 and is not S5. Verified with o instantiated as m.ontic."
