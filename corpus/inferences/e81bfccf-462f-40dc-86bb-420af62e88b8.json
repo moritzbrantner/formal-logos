@@ -1,0 +1,15 @@
+{
+  "id": "e81bfccf-462f-40dc-86bb-420af62e88b8",
+  "label": "Contingent spacetime and same-relation occupant grounding imply an unlocated necessary underived root (inference)",
+  "input_statement_ids": [
+    "0bdcf366-29c7-5d45-b603-5c929dcad976",
+    "1dd2b809-a1d3-43ca-8dfc-b7c1c4fbfd58",
+    "144a61c5-0abd-4759-bdcd-8ad59ed8be72",
+    "8bfeb070-436d-4503-8282-4b7df72a4d93"
+  ],
+  "output_statement_id": "bc2ee163-0ca6-48b2-84b2-0da27326cfcb",
+  "rule": "same-witness necessary-root elimination plus explicit whole-grounding bridge",
+  "meaning": "Conditional cross-family consequence from the existing necessary-concrete-underived root-route node to a selected non-spatiotemporal attribute: the SAME underived concrete candidate is unlocated (dimensive SPATIOTEMPORAL_2) if the SAME world contains a contingent, actual concrete spacetime whole, and that very whole grounds every distinct located actual concretum in the SAME Profile.grounds relation. The whole's existence, contingency, and occupant-to-whole existential dependence are explicitly open premises; the latter is not derived from Leibniz/Clarke translation symmetry, Lorentz geometry, temporal ordering or efficient causation. The omission control has actual distinct concreta and a real grounding edge but no occupant-to-whole bridge or nonlocated root. The result does not identify this witness with the GOD_4 attribute root, imply physical spacetime's contingency, or yield Boethian eternity; same-witness GOD_4 attribution is the next open consumer.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

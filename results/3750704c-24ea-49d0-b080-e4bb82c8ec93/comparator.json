@@ -1,0 +1,15 @@
+{
+  "challenge_module": "TruthCore.Results.Ontology.SpacetimeGroundingBridge.Challenge",
+  "solution_module": "TruthCore.Results.Ontology.SpacetimeGroundingBridge.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Ontology.SpacetimeGroundingBridge.derive",
+    "TruthCore.Results.Ontology.SpacetimeGroundingBridge.selectedUnlocated",
+    "TruthCore.Results.Ontology.SpacetimeGroundingBridge.omission"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}
