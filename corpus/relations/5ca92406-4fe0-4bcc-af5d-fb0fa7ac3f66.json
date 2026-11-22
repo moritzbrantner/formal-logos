@@ -1,0 +1,10 @@
+{
+  "id": "5ca92406-4fe0-4bcc-af5d-fb0fa7ac3f66",
+  "label": "Kant's thesis is the rival of the EXISTENCE_8 real-predicate premise",
+  "subject_kind": "statement",
+  "subject_id": "905d7522-652f-44c9-9a0d-34e30e404270",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "cdc7a58f-0c17-41d9-8d9d-18b6ad5c6cc6",
+  "note": "Target: the real-predicate premise of Meditation V. Mechanism: if existence is not a determination of a concept, the concept of the supremely perfect contains no existence feature and the step from the concept to existence fails; the real-predicate control (b) is a model of that situation. Independent justification offered for the thesis (navigation, attribution deferred): the concept of a hundred possible thalers and of a hundred actual thalers have the same content, so existence adds no determination; on the reconstruction, existence is positing (EXISTENCE_1). The thesis is a rival, not a checked refutation: neither statement is derived here. No substantive objection from this thesis is identified against the a posteriori root routes, whose existence premises are about what exists and do not take existence as part of a concept; Kant's separate scope objection to their causal premises is recorded in docs/kant-cosmological-inference.md."
+}

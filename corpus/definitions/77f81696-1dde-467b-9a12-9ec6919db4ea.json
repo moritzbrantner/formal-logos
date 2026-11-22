@@ -1,0 +1,9 @@
+{
+  "id": "77f81696-1dde-467b-9a12-9ec6919db4ea",
+  "label": "Encoding/exemplification frame (Zalta-style, non-modal): objects, properties, two modes, E!",
+  "term": "encoding and exemplifying (abstract object theory)",
+  "definition": "ZaltaFrame bundles objects, properties and two primitive modes of having a property. Exemplifies x p: x has p in the ordinary way (Mont Blanc exemplifies being a mountain). Encodes x p: x is characterized by p, the mode in which abstract objects have their defining properties (the abstract object 'the golden mountain' encodes being golden and being a mountain without exemplifying them). concrete is the existence property E!. IsAbstract x: x does not exemplify E!. ObjectComprehension: for every set of properties exactly one abstract object encodes exactly those properties. OrdinaryEncodeNothing: objects exemplifying E! encode no property.",
+  "basis": "stipulative",
+  "note": "Analyst reconstruction in the style of Edward Zalta's abstract object theory (Abstract Objects, 1983; the Isabelle PLM formalization is a design reference only, not a dependency); attribution deferred, author names are navigation. Non-modal simplification: Zalta's abstract objects are those that could not exemplify E! (A!x is not-possibly-E!x); here abstractness is not exemplifying E!. The structure is defined in Lean (TruthCore.Ontology.EncodingAndRealPredicates.ZaltaFrame); its Exemplifies and Encodes fields are primitive and no relation between them is assumed beyond the stated principles.",
+  "lean_declaration": "TruthCore.Ontology.EncodingAndRealPredicates.ZaltaFrame"
+}

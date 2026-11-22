@@ -1,0 +1,82 @@
+# Existence as a predicate (#1784, #397), part 2: an encoding/exemplification
+# reconstruction in the style of Zalta, Kant's thesis that existence is not a real
+# predicate, and Descartes' Meditation V argument. Analyst formulations;
+# attribution deferred (author names are navigation, not verified source claims).
+# Part 1 is specs/existence-predicate.toml.
+
+[batch]
+vocab = "TruthCore.Ontology.EncodingAndRealPredicates"
+results = "TruthCore.Results.Ontology.EncodingAndRealPredicates"
+
+[[statement]]
+id = "Comprehension gives encoded EXISTENCE_7, not exemplified EXISTENCE_6, and fixes how naming reads God"
+lean = "EncodingControl"
+paraphrase = "Checked facts about a non-modal encoding/exemplification object theory in the style of Zalta (analyst reconstruction, attribution deferred). (a) In every frame with object comprehension (for every set of properties exactly one abstract object, one not exemplifying E!, encodes exactly those properties), for any properties g and o some object encodes g, o and E! (EXISTENCE_7) and does not exemplify E! (EXISTENCE_6). (b) In every frame where ordinary objects encode nothing, if the form of the naming premise holds with 'in act at esse' read as exemplifying E! and 'God' read as encoding g, then no object is the unique maximum in being that causes all in the genus: the encoded reading of God is unusable with the exemplified reading of being. (c) Some frame has comprehension, ordinary objects encoding nothing and an object exemplifying E!, and properties g ('god') and o ('omnibenevolent') such that some object encodes g, o and E!, no object exemplifies both E! and g, no being (object exemplifying E!) exemplifies g, and, with 'in act at esse' read as encoding E! and 'God' as encoding g, the form of the naming premise holds, some object is the unique maximum in being causing all in the genus, and some object encodes g. The model witnesses only this formal interpretation."
+definitions = ["77f81696-1dde-467b-9a12-9ec6919db4ea", "fd3ec6b3-2e89-44da-9937-6eb9287fcc12", "243ac306-054f-4df2-965a-76cdc2164c36"]
+disambiguations = ["DISAMB-RUSSELL-EXISTENCE"]
+
+[[statement]]
+id = "Some reality feature is EXISTENCE_8 at the selected world: a real predicate"
+lean = "ExistenceIsRealPredicate"
+paraphrase = "Open premise, analyst formulation (Descartes' 'existence is a perfection' in Meditation V is navigation, attribution deferred): some positive reality of the profile, a perfection that can belong to a concept, is had by exactly the candidates that exist at the selected world. This is the real-predicate sense of existence, EXISTENCE_8."
+definitions = ["0857c20c-d609-4b3e-a685-b07ed52ead88", "b3c45d92-dee0-5a1a-9849-9924d3a1699d", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+disambiguations = ["DISAMB-RUSSELL-EXISTENCE"]
+
+[[statement]]
+id = "Kant's thesis: no reality feature is EXISTENCE_8 at the selected world"
+lean = "ExistenceNotRealPredicate"
+paraphrase = "Rival, analyst formulation of Kant's thesis that being is not a real predicate (A598/B626, navigation; attribution deferred): no positive reality of the profile is had by exactly the candidates that exist at the selected world. On Kant's positive account existence is the positing of a thing with its determinations, the instantiation sense EXISTENCE_1, not a further determination."
+definitions = ["0857c20c-d609-4b3e-a685-b07ed52ead88", "b3c45d92-dee0-5a1a-9849-9924d3a1699d", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+disambiguations = ["DISAMB-RUSSELL-EXISTENCE"]
+
+[[statement]]
+id = "The most-real-to-actual step needs EXISTENCE_8; a Kantian identification model"
+lean = "RealPredicateControl"
+paraphrase = "Checked facts, analyst formulation. (a) For every ontic model, reality profile and world: if existence at that world is a real predicate (EXISTENCE_8), every most-real candidate exists there. (b) Some model, profile and world satisfy Kant's thesis that existence is not a real predicate, the reported identification premise 'every necessary being is most real' and the strong uniqueness of most-real candidates, and have a most-real candidate, while no most-real candidate exists there and no necessary being exists. So the step from the concept of the most real to existence needs the real-predicate sense, and the identification and uniqueness premises do not supply an existing witness."
+definitions = ["0857c20c-d609-4b3e-a685-b07ed52ead88", "b3c45d92-dee0-5a1a-9849-9924d3a1699d", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+disambiguations = ["DISAMB-RUSSELL-EXISTENCE"]
+
+[[statement]]
+id = "Meditation V first premise: some candidate is supremely perfect and is GOD_4"
+lean = "SupremelyPerfectGodCandidate"
+paraphrase = "Open premise, analyst formulation of Descartes' Meditation V (attribution deferred): some candidate in the constant domain of candidates has every positive reality of the profile (is supremely perfect) and is God. Candidates need not exist; the premise says what the idea of God represents, not that it is instantiated by a being."
+definitions = ["b3c45d92-dee0-5a1a-9849-9924d3a1699d", "88f9f6e8-997b-5f7d-afa1-c501954c3807"]
+disambiguations = ["205a39c3-915d-5fe4-8076-a9ff91329e08"]
+
+[[argument]]
+id = "Encoding control, checked"
+theorem = "encodingControl"
+premises = []
+conclusion = "Comprehension gives encoded EXISTENCE_7, not exemplified EXISTENCE_6, and fixes how naming reads God"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+rule = "General witness from comprehension; ordinary objects encode nothing against the naming premise; one explicit model, checked by unfolding"
+meaning = "Premise-free control. (a) Takes the abstract object comprehended from {g, o, E!}. (b) The naming premise with being read as exemplifying E! and God as encoding g gives that the unique maximum encodes g, while it exemplifies E! and so, being ordinary, encodes nothing. (c) The model has one ordinary object exemplifying only E! and one abstract object per set of the properties E!, god and benevolent, exemplifying nothing; the object encoding {god, benevolent, E!} is the unique maximum when being is read as encoding E! and 'more in being' ranks it first. Finding: the route's existential import sits in the maximum-existence premise (in act at esse) with the carrier; read as exemplifying E!, it forces the exemplified reading of God; read as encoding E!, it delivers a god that does not exemplify existence. A model of one formal interpretation, not evidence that abstract object theory is true."
+
+[[argument]]
+id = "Real-predicate control, checked"
+theorem = "realPredicateControl"
+premises = []
+conclusion = "The most-real-to-actual step needs EXISTENCE_8; a Kantian identification model"
+axioms = []
+rule = "Instantiation of the existence feature; one explicit one-candidate model, checked by unfolding"
+meaning = "Premise-free and zero-axiom. (a) A most-real candidate has every feature, including one coextensive with existence at the world, so it exists there. (b) One candidate, one feature had by it, universal access, nothing existing: no feature is coextensive with existence, the identification premise holds vacuously (nothing is necessary), uniqueness holds, the candidate is most real, and nothing most real exists. Targets of Kant's thesis, under the substantive-objection standard: steps that treat existence as a content of a concept, namely the real-predicate premise of the ontological argument and, through the conversion of the identification premise (KANT-CONVERSION-NEEDS-EXISTENCE takes an actual necessary witness as a separate premise), any attempt to obtain that witness from the most-real concept. It does not target a posteriori routes that obtain existence from premises about what exists."
+
+[[argument]]
+id = "GOD_4 exists, from Meditation V (supremely perfect candidate and EXISTENCE_8)"
+theorem = "meditationFive"
+premises = ["Meditation V first premise: some candidate is supremely perfect and is GOD_4", "Some reality feature is EXISTENCE_8 at the selected world: a real predicate"]
+conclusion = "STMT-GOD-EXISTS"
+axioms = []
+rule = "The supremely perfect candidate has the existence feature, which is coextensive with existence at the world"
+sense_bridges = [{ term = "GOD_IN_THE_COMPARISON", from = "GOD_IN_THE_COMPARISON_2", to = "GOD_IN_THE_COMPARISON_3", statement_id = "Meditation V first premise: some candidate is supremely perfect and is GOD_4" }]
+meaning = "Analyst formulation of Descartes' Meditation V, attribution deferred: if some candidate is supremely perfect and God, and existence at the selected world is a real predicate of the profile, then some being existing at that world is God. The bound conclusion is GodExists over the candidates existing at the world. Valid and not a transcription: the proof passes through the coextension of the existence feature. The first premise is the explicit bridge between the most-real sense (GOD_IN_THE_COMPARISON_2) and the classical GOD_4 (GOD_IN_THE_COMPARISON_3): it says some most-real candidate is God, it does not identify the two predicates. Sibling of the definitional argument of part 1. Its second premise is EXISTENCE_8, which Kant's thesis denies (recorded rival), which the nuclear (EXISTENCE_5) and encoding (EXISTENCE_7) reconstructions replace by a characterizing existence that does not give membership among the beings, and which, like the definitional P2, must not be made true by choice of profile alone. Establishes neither premise."
+
+[[relation]]
+id = "Kant's thesis is the rival of the EXISTENCE_8 real-predicate premise"
+subject_kind = "statement"
+subject_id = "Kant's thesis: no reality feature is EXISTENCE_8 at the selected world"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "Some reality feature is EXISTENCE_8 at the selected world: a real predicate"
+note = "Target: the real-predicate premise of Meditation V. Mechanism: if existence is not a determination of a concept, the concept of the supremely perfect contains no existence feature and the step from the concept to existence fails; the real-predicate control (b) is a model of that situation. Independent justification offered for the thesis (navigation, attribution deferred): the concept of a hundred possible thalers and of a hundred actual thalers have the same content, so existence adds no determination; on the reconstruction, existence is positing (EXISTENCE_1). The thesis is a rival, not a checked refutation: neither statement is derived here. No substantive objection from this thesis is identified against the a posteriori root routes, whose existence premises are about what exists and do not take existence as part of a concept; Kant's separate scope objection to their causal premises is recorded in docs/kant-cosmological-inference.md."

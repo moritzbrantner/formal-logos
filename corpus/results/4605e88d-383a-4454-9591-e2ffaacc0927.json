@@ -1,0 +1,11 @@
+{
+  "id": "4605e88d-383a-4454-9591-e2ffaacc0927",
+  "label": "Encoding control, checked",
+  "argument_id": "5030ea97-8b07-4275-a0cd-0bc53ba8a04c",
+  "challenge_module": "TruthCore.Results.Ontology.EncodingAndRealPredicates.Challenge",
+  "solution_module": "TruthCore.Results.Ontology.EncodingAndRealPredicates.Solution",
+  "theorem": "TruthCore.Results.Ontology.EncodingAndRealPredicates.encodingControl",
+  "comparator_config": "results/4605e88d-383a-4454-9591-e2ffaacc0927/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free control. (a) Takes the abstract object comprehended from {g, o, E!}. (b) The naming premise with being read as exemplifying E! and God as encoding g gives that the unique maximum encodes g, while it exemplifies E! and so, being ordinary, encodes nothing. (c) The model has one ordinary object exemplifying only E! and one abstract object per set of the properties E!, god and benevolent, exemplifying nothing; the object encoding {god, benevolent, E!} is the unique maximum when being is read as encoding E! and 'more in being' ranks it first. Finding: the route's existential import sits in the maximum-existence premise (in act at esse) with the carrier; read as exemplifying E!, it forces the exemplified reading of God; read as encoding E!, it delivers a god that does not exemplify existence. A model of one formal interpretation, not evidence that abstract object theory is true."
+}

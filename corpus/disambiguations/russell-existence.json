@@ -8,9 +8,12 @@
     "9df718d1-8bfb-519b-b9f5-f58f6d2c256f",
     "9347232c-7f95-5f24-85de-94d3d49f5027",
     "ebe88fbd-b496-4462-a44a-f0591c831800",
-    "20b76107-4d53-4bad-9fc1-6b6ec89dcd51"
+    "20b76107-4d53-4bad-9fc1-6b6ec89dcd51",
+    "fd3ec6b3-2e89-44da-9937-6eb9287fcc12",
+    "243ac306-054f-4df2-965a-76cdc2164c36",
+    "0857c20c-d609-4b3e-a685-b07ed52ead88"
   ],
-  "resolution": "V’s nonempty function, VI’s unique description and the modern ActualAt predicate have different types and truth conditions. The alternative individual predicate does not refute Russell inside his strict semantic restriction; quantifier truth is never silently read as a ground. EXISTENCE_4 (extranuclear existence of an object, Parsons-style reconstruction of Meinong) and EXISTENCE_5 (the watered-down nuclear property 'existent') are separate Lean declarations of a nuclear-property frame; the nuclear-characterization control shows that characterization confers EXISTENCE_5 and not EXISTENCE_4, so no argument passes from the one to the other without an explicit bridge. Neither is identified with EXISTENCE_1, EXISTENCE_2 or EXISTENCE_3.",
+  "resolution": "V’s nonempty function, VI’s unique description and the modern ActualAt predicate have different types and truth conditions. The alternative individual predicate does not refute Russell inside his strict semantic restriction; quantifier truth is never silently read as a ground. EXISTENCE_4 (extranuclear existence of an object, Parsons-style reconstruction of Meinong) and EXISTENCE_5 (the watered-down nuclear property 'existent') are separate Lean declarations of a nuclear-property frame; the nuclear-characterization control shows that characterization confers EXISTENCE_5 and not EXISTENCE_4, so no argument passes from the one to the other without an explicit bridge. Neither is identified with EXISTENCE_1, EXISTENCE_2 or EXISTENCE_3. EXISTENCE_6 (exemplifying E!) and EXISTENCE_7 (encoding E!) are the two modes of an encoding/exemplification object theory in the style of Zalta; the encoding control shows that comprehension confers EXISTENCE_7 and not EXISTENCE_6. EXISTENCE_8 is existence taken as a real predicate (a positive reality coextensive with existence at a world); Kant's thesis denies that existence is a real predicate and treats it as positing, the instantiation sense EXISTENCE_1. The real-predicate control shows that 'most real implies exists' is valid in EXISTENCE_8 and fails where existence is no real predicate, so no argument passes from EXISTENCE_1 or EXISTENCE_6 to EXISTENCE_8 without an explicit premise.",
   "term_label": "EXISTENCE",
   "senses": [
     {
@@ -42,6 +45,24 @@
       "label": "EXISTENCE_5",
       "definition_id": "20b76107-4d53-4bad-9fc1-6b6ec89dcd51",
       "lean_declaration": "TruthCore.Ontology.ExistencePredicate.NuclearExistent"
+    },
+    {
+      "id": "cbed6126-b426-4e1b-84e9-493bfd3fd453",
+      "label": "EXISTENCE_6",
+      "definition_id": "fd3ec6b3-2e89-44da-9937-6eb9287fcc12",
+      "lean_declaration": "TruthCore.Ontology.EncodingAndRealPredicates.ExemplifiesExistence"
+    },
+    {
+      "id": "df86c233-70dc-4910-9ae2-b17b6a1a9cf2",
+      "label": "EXISTENCE_7",
+      "definition_id": "243ac306-054f-4df2-965a-76cdc2164c36",
+      "lean_declaration": "TruthCore.Ontology.EncodingAndRealPredicates.EncodesExistence"
+    },
+    {
+      "id": "3edf2571-bb90-44a9-99e3-f853ae4232af",
+      "label": "EXISTENCE_8",
+      "definition_id": "0857c20c-d609-4b3e-a685-b07ed52ead88",
+      "lean_declaration": "TruthCore.Ontology.EncodingAndRealPredicates.ExistenceFeature"
     }
   ]
 }

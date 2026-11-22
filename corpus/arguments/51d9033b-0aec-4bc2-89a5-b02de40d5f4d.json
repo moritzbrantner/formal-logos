@@ -1,0 +1,18 @@
+{
+  "id": "51d9033b-0aec-4bc2-89a5-b02de40d5f4d",
+  "label": "Real-predicate control, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "b5271348-2594-4087-ae35-c4e21f7d1e9c",
+  "inference_ids": [
+    "b050e85d-dad3-4091-8220-80e7f2683ee3"
+  ],
+  "meaning": "Premise-free and zero-axiom. (a) A most-real candidate has every feature, including one coextensive with existence at the world, so it exists there. (b) One candidate, one feature had by it, universal access, nothing existing: no feature is coextensive with existence, the identification premise holds vacuously (nothing is necessary), uniqueness holds, the candidate is most real, and nothing most real exists. Targets of Kant's thesis, under the substantive-objection standard: steps that treat existence as a content of a concept, namely the real-predicate premise of the ontological argument and, through the conversion of the identification premise (KANT-CONVERSION-NEEDS-EXISTENCE takes an actual necessary witness as a separate premise), any attempt to obtain that witness from the most-real concept. It does not target a posteriori routes that obtain existence from premises about what exists.",
+  "definition_ids": [
+    "0857c20c-d609-4b3e-a685-b07ed52ead88",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "b3c45d92-dee0-5a1a-9849-9924d3a1699d"
+  ],
+  "disambiguation_ids": [
+    "031a741a-57b4-5a20-b9f3-170876e69a02"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "95745f91-755a-403a-b121-9eafea7e0a1d",
+  "label": "Comprehension gives encoded EXISTENCE_7, not exemplified EXISTENCE_6, and fixes how naming reads God",
+  "paraphrase": "Checked facts about a non-modal encoding/exemplification object theory in the style of Zalta (analyst reconstruction, attribution deferred). (a) In every frame with object comprehension (for every set of properties exactly one abstract object, one not exemplifying E!, encodes exactly those properties), for any properties g and o some object encodes g, o and E! (EXISTENCE_7) and does not exemplify E! (EXISTENCE_6). (b) In every frame where ordinary objects encode nothing, if the form of the naming premise holds with 'in act at esse' read as exemplifying E! and 'God' read as encoding g, then no object is the unique maximum in being that causes all in the genus: the encoded reading of God is unusable with the exemplified reading of being. (c) Some frame has comprehension, ordinary objects encoding nothing and an object exemplifying E!, and properties g ('god') and o ('omnibenevolent') such that some object encodes g, o and E!, no object exemplifies both E! and g, no being (object exemplifying E!) exemplifies g, and, with 'in act at esse' read as encoding E! and 'God' as encoding g, the form of the naming premise holds, some object is the unique maximum in being causing all in the genus, and some object encodes g. The model witnesses only this formal interpretation.",
+  "lean_declaration": "TruthCore.Ontology.EncodingAndRealPredicates.EncodingControl",
+  "definition_ids": [
+    "77f81696-1dde-467b-9a12-9ec6919db4ea",
+    "fd3ec6b3-2e89-44da-9937-6eb9287fcc12",
+    "243ac306-054f-4df2-965a-76cdc2164c36"
+  ],
+  "disambiguation_ids": [
+    "031a741a-57b4-5a20-b9f3-170876e69a02"
+  ]
+}

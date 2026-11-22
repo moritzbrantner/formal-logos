@@ -1,0 +1,13 @@
+{
+  "id": "89cbb0af-8d21-4c9a-aa83-c1c7f45b51f3",
+  "label": "Meditation V first premise: some candidate is supremely perfect and is GOD_4",
+  "paraphrase": "Open premise, analyst formulation of Descartes' Meditation V (attribution deferred): some candidate in the constant domain of candidates has every positive reality of the profile (is supremely perfect) and is God. Candidates need not exist; the premise says what the idea of God represents, not that it is instantiated by a being.",
+  "lean_declaration": "TruthCore.Ontology.EncodingAndRealPredicates.SupremelyPerfectGodCandidate",
+  "definition_ids": [
+    "b3c45d92-dee0-5a1a-9849-9924d3a1699d",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807"
+  ],
+  "disambiguation_ids": [
+    "205a39c3-915d-5fe4-8076-a9ff91329e08"
+  ]
+}

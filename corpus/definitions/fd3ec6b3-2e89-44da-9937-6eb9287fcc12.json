@@ -1,0 +1,9 @@
+{
+  "id": "fd3ec6b3-2e89-44da-9937-6eb9287fcc12",
+  "label": "Exemplified EXISTENCE_6: an object exemplifies the property E!",
+  "term": "existence",
+  "definition": "ExemplifiesExistence F x: x exemplifies the frame's existence property E! (concrete), in the ordinary mode of having a property. On the reconstruction, the objects that exist in the sense of being among the beings are those that exemplify E!.",
+  "basis": "stipulative",
+  "note": "Analyst reconstruction in the style of Zalta, attribution deferred. Lean defines it as the frame's Exemplifies applied to concrete. Distinct from EXISTENCE_7 (encoding E!), which comprehension confers on characterized abstract objects; the encoding control shows that the characterized god has EXISTENCE_7 and never EXISTENCE_6.",
+  "lean_declaration": "TruthCore.Ontology.EncodingAndRealPredicates.ExemplifiesExistence"
+}
