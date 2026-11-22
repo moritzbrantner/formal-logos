@@ -127,6 +127,111 @@ theorem perfectBeingsOfPureIndiscernibility {B D : Type} (Has : B → D → Prop
   intro x y hx hxPure hy hyPure
   exact hBridge x y hxPure (fun d => ⟨fun h => hy d (hxPure d h), fun h => hx d (hyPure d h)⟩)
 
+
+/-! ## Intrinsic self-knowledge from whole-being perfection
+
+These are conditional applications to the SAME subsistent source, actual root,
+or GOD_4 bearer. The genuinely substantive self-capacity, immanent exercise,
+rational-basing and HAS_INTELLECT_1 recognition inputs remain OPEN. In
+particular, a productive-power meaning of virtual possession supplies none of
+them, and these proofs do not import the q.14 self-understanding claim as a
+conclusion-shaped premise. -/
+open TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding
+
+/-- Whole power of being supplies wisdom at the very same OwnBeing bearer;
+the separate self-directed capacity, exercise/potency, and rational-basing
+bridges supply an actual, true, reason-based self-directed assent.
+'PureAct' excludes passive potency in the designated understanding respect,
+not the non-exercise of every productive power. -/
+theorem intrinsicSelfKnowledgeFromWisdom {B D C R : Type}
+    (OwnBeing : B → Prop) (Has : B → D → Prop) (Pure OfBeing : D → Prop)
+    (wisdom : D) (About Correct : C → B → Prop)
+    (CanAssent Assents ReasonBased : B → C → Prop)
+    (InPotency : B → R → Prop) (understanding : R)
+    (hWhole : OwnBeingLacksNoPerfectionOfBeing OwnBeing Has OfBeing)
+    (hPertain : PurePerfectionsPertainToBeing Pure OfBeing)
+    (hPureWisdom : Pure wisdom)
+    (hSelfCapacity : WisdomSelfCapacity OwnBeing Has wisdom About Correct CanAssent)
+    (hExercise : SelfCapacityExercisedOrPotent OwnBeing About CanAssent Assents
+      InPotency understanding)
+    (hBased : TrueSelfAssentReasonBased OwnBeing About Correct Assents ReasonBased)
+    (g : B) (hOwn : OwnBeing g)
+    (hPureAct : PureAct InPotency g) :
+    IntrinsicSelfKnowledge About Correct Assents ReasonBased g := by
+  have hPossesses : Has g wisdom := hWhole g hOwn wisdom (hPertain wisdom hPureWisdom)
+  obtain ⟨content, hAbout, hCorrect, hCan⟩ :=
+    hSelfCapacity g hOwn hPossesses
+  rcases hExercise g content hOwn hAbout hCan with hAssent | hPotency
+  · exact ⟨content, hAbout, hCorrect, hAssent,
+      hBased g content hOwn hAbout hCorrect hAssent⟩
+  · exact False.elim (hPureAct understanding hPotency)
+
+/-- Actual-root specialization. The unchanged ROOT-WITHOUT-LIMITING-PRINCIPLE
+and UnlimitedIsOwnBeing premises supply subsistent esse for this *same* root.
+The separate PureAct input must refer to the same InPotency dictionary. -/
+theorem actualRootSelfKnowledgeFromWisdom {W B P D C R : Type}
+    (m : Profile W B) (w : W)
+    (Composite : B → Prop) (PriorSimply : B → B → Prop)
+    (essenceOf esseOf : B → P)
+    (OwnBeing : B → Prop) (Has : B → D → Prop)
+    (Pure OfBeing : D → Prop) (wisdom : D)
+    (About Correct : C → B → Prop)
+    (CanAssent Assents ReasonBased : B → C → Prop)
+    (InPotency : B → R → Prop) (understanding : R)
+    (hNoLimits : TruthCore.Causality.RootPurity.ActualRootsWithoutLimitingPrinciple
+      m w Composite PriorSimply essenceOf esseOf)
+    (hOwn : UnlimitedIsOwnBeing Composite PriorSimply essenceOf esseOf OwnBeing)
+    (hWhole : OwnBeingLacksNoPerfectionOfBeing OwnBeing Has OfBeing)
+    (hPertain : PurePerfectionsPertainToBeing Pure OfBeing)
+    (hPureWisdom : Pure wisdom)
+    (hSelfCapacity : WisdomSelfCapacity OwnBeing Has wisdom About Correct CanAssent)
+    (hExercise : SelfCapacityExercisedOrPotent OwnBeing About CanAssent Assents
+      InPotency understanding)
+    (hBased : TrueSelfAssentReasonBased OwnBeing About Correct Assents ReasonBased)
+    (g : B) (hRoot : TruthCore.Causality.NecessaryRootFork.ActualRoot m w g)
+    (hPureAct : PureAct InPotency g) :
+    IntrinsicSelfKnowledge About Correct Assents ReasonBased g := by
+  have hOwnG : OwnBeing g := hOwn g (hNoLimits g hRoot)
+  exact intrinsicSelfKnowledgeFromWisdom OwnBeing Has Pure OfBeing wisdom
+    About Correct CanAssent Assents ReasonBased InPotency understanding
+    hWhole hPertain hPureWisdom hSelfCapacity hExercise hBased g hOwnG hPureAct
+
+/-- Conditional GOD_4 attachment to the unchanged HAS_INTELLECT_1 consumer:
+first obtain *intrinsic* source-borne, true and rationally based self-assent
+before applying the explicitly OPEN recognition bridge. GOD_4 existence,
+source identity, and the philosophical truth of the bridge are not proved. -/
+theorem godHasIntellectFromWholePowerWisdom {B D C R : Type}
+    (IsGod HasIntellect OwnBeing : B → Prop)
+    (Has : B → D → Prop) (Pure OfBeing : D → Prop) (wisdom : D)
+    (About Correct : C → B → Prop)
+    (CanAssent Assents ReasonBased : B → C → Prop)
+    (InPotency : B → R → Prop) (understanding : R)
+    (hGodOwn : ∀ g, IsGod g → OwnBeing g)
+    (hGodPure : ∀ g, IsGod g → PureAct InPotency g)
+    (hWhole : OwnBeingLacksNoPerfectionOfBeing OwnBeing Has OfBeing)
+    (hPertain : PurePerfectionsPertainToBeing Pure OfBeing)
+    (hPureWisdom : Pure wisdom)
+    (hSelfCapacity : WisdomSelfCapacity OwnBeing Has wisdom About Correct CanAssent)
+    (hExercise : SelfCapacityExercisedOrPotent OwnBeing About CanAssent Assents
+      InPotency understanding)
+    (hBased : TrueSelfAssentReasonBased OwnBeing About Correct Assents ReasonBased)
+    (hRecognition : ∀ g, IsGod g →
+      IntrinsicSelfKnowledge About Correct Assents ReasonBased g → HasIntellect g) :
+    GodHasIntellect IsGod HasIntellect := by
+  intro g hg
+  exact hRecognition g hg
+    (intrinsicSelfKnowledgeFromWisdom OwnBeing Has Pure OfBeing wisdom
+      About Correct CanAssent Assents ReasonBased InPotency understanding
+      hWhole hPertain hPureWisdom hSelfCapacity hExercise hBased g
+      (hGodOwn g hg) (hGodPure g hg))
+
+/-- Same fixed, nonempty source/effect background, with three missing-premise
+controls and one successful joint assignment. This is a kernel-checkable
+structural interpretation, not a metaphysical rival's proven possibility. -/
+theorem wisdomSelfUnderstandingControls :
+    WisdomSelfUnderstanding.Control.Controls := by
+  decide
+
 section Controls
 open TruthCore.Causality.WholePowerPerfection.Control
 open TruthCore.Causality.RootPurity.Control (fmMoved fmMoves)
