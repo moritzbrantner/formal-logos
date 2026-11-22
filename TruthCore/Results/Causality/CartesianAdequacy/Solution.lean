@@ -37,6 +37,7 @@ open TruthCore.Latin.Aquinas.SummaTheologiae
 open TruthCore.Greek.Aristotle.Metaphysics (CauseOfQualityInAnotherIsMoreSuchReading)
 open TruthCore.Case.Catholicism
 open TruthCore.Logic (ExcludedMiddle)
+open TruthCore.Logic (ExcludedMiddle)
 
 /-- Containment in every cause and the cause-of-being transfer give PEPC: a
 cause of `x`'s being causes `x`'s being `r` for each `r` `x` is in act in, and
@@ -153,31 +154,34 @@ theorem asymmetricFromUniform {W B T R : Type} (F : GradesFrame W B T R)
   intro c x r hCause hEff
   exact hInclusive c r (hPre c x r hCause (hFormal x r hEff))
 
-/-- At EVERY supplied GOD_4 maximal being g, one DISTINCT cognitive effect
-is enough: g causes that effect's esse and hence contains its formally
-instantiated cognitive respect, formally or virtually. This proof relies on
-the actual same g throughout. The effect's existence distinct from g is
-an explicit premise, not manufactured by maximality. No intrinsic intellect
-or actual exercise is concluded. -/
-theorem godContainsFromIntellectualEffects {W B T R : Type}
+/-- At EVERY supplied GOD_4 maximal being g, one formally intellectual EXEMPLAR is enough, even without proving it is
+distinct from g: if g = x, it already has that perfection formally; otherwise
+g causes the exemplar's esse and hence contains its cognitive respect formally
+or eminently. This uses explicit excluded middle and holds at the SAME g.
+No intrinsic intellect or actual exercise is concluded. -/
+theorem godContainsFromIntellectualExemplar {W B T R : Type}
     (F : GradesFrame W B T R) (A : ActFrame B R)
     (IsGod HasIntellect : B → Prop) (intellectual : R)
     (hMaximal : GodIsMaximalInBeing IsGod F.InAct F.MoreIn F.esse)
     (hGenus : MaximumInGenusCausesAllInGenusReading
       F.InAct F.MoreIn F.CausesIn)
     (hBeing : ActualityOnlyInsofarAsBeingReading F.InAct F.esse)
-    (hEffect : ∀ g, IsGod g → ∃ x, x ≠ g ∧ HasIntellect x)
+    (hSome : ∃ x, HasIntellect x)
+    (hEM : ExcludedMiddle)
     (hFormal : ∀ x, HasIntellect x → A.InActFormally x intellectual)
     (hFormalCalibration : FormalActEntersGrades F A)
     (hAsymmetric : FormalEffectPreexistsInclusively F A) :
     GodContainsIntellectualPerfection A IsGod intellectual := by
-  intro g hg
-  obtain ⟨x, hOther, hx⟩ := hEffect g hg
+  obtain ⟨x, hx⟩ := hSome
   have hFormalX := hFormal x hx
-  have hActualX := hFormalCalibration x intellectual hFormalX
-  have hEsseX := hBeing x intellectual hActualX
-  have hCause := hGenus F.esse g (hMaximal g hg) x hOther hEsseX
-  exact hAsymmetric g x intellectual hCause hFormalX
+  intro g hg
+  rcases hEM (x = g) with hSame | hOther
+  · subst x
+    exact Or.inl hFormalX
+  · have hActualX := hFormalCalibration x intellectual hFormalX
+    have hEsseX := hBeing x intellectual hActualX
+    have hCause := hGenus F.esse g (hMaximal g hg) x hOther hEsseX
+    exact hAsymmetric g x intellectual hCause hFormalX
 
 /-- Direct q.4 first-mover consumer: reuses its verified "every perfection
 found in things" result at the SAME first mover, and merely specializes the
