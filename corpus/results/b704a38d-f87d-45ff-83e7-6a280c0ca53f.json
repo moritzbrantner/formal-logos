@@ -1,0 +1,11 @@
+{
+  "id": "b704a38d-f87d-45ff-83e7-6a280c0ca53f",
+  "label": "Finite grades frames separate total-cause containment from q.4 a.2 preexistence",
+  "argument_id": "dcc7fc9c-c64d-4092-ac64-d4e2f3b282e6",
+  "challenge_module": "TruthCore.Results.Causality.CartesianAdequacy.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CartesianAdequacy.Solution",
+  "theorem": "TruthCore.Results.Causality.CartesianAdequacy.containmentAndPreexistenceIndependent",
+  "comparator_config": "results/b704a38d-f87d-45ff-83e7-6a280c0ca53f/comparator.json",
+  "status": "solution-present",
+  "description": "Distinct-statement verdict under the respect-wise reading: neither respect-wise total-cause containment nor STMT-PERFECTIONS-OF-EFFECT-PREEXIST-IN-CAUSE entails the other. Preexistence is about every perfection of an effect whose being a cause causes, partial causes included; total-cause containment is about the perfection a total cause causes. The gap from containment to preexistence is closed by the cause-of-being transfer (f8ba2429) together with containment for partial causes (result preexistenceOfContainment). The whole-effect reading, by contrast, is entailed by preexistence. Finite interpretations only."
+}

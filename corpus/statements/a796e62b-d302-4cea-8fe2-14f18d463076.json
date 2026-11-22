@@ -1,0 +1,9 @@
+{
+  "id": "a796e62b-d302-4cea-8fe2-14f18d463076",
+  "label": "P2 of the definitional argument (analytic): whatever satisfies a defined description satisfies it",
+  "paraphrase": "The analytic reading of 'whatever is defined is true' (analyst formulation, attribution deferred): for every defined description, any object satisfying it satisfies it. True by stipulation in every frame, with no existential import; it is a sibling reading of the weak P2, not a version of it.",
+  "lean_declaration": "TruthCore.Ontology.ExistencePredicate.DefinitionsTrueAnalytic",
+  "definition_ids": [
+    "75d7aa56-615c-46a0-8c05-67f1624f6b36"
+  ]
+}

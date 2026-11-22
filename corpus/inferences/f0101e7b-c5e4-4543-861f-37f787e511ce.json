@@ -1,0 +1,12 @@
+{
+  "id": "f0101e7b-c5e4-4543-861f-37f787e511ce",
+  "label": "Q.4 a.2 preexistence entails whole-effect containment in total causes (inference)",
+  "input_statement_ids": [
+    "64498e7e-7f10-54a0-9ec0-c65e6076de1f"
+  ],
+  "output_statement_id": "4643a655-a5eb-4574-92db-477aa32dfa92",
+  "rule": "Drop an antecedent conjunct of a universal conditional",
+  "meaning": "Strength order registration: if every perfection of a thing whose being a cause causes is in that cause (q.4 a.2 preexistence), then so is every perfection of a thing whose being a total cause causes, for every totality relation. Same InAct, CausesIn and esse. It establishes neither statement.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "fdb5bb0a-bc75-4b4a-80bb-42b59078eabc",
+  "label": "Containment in every cause strengthens 'nothing gives being it does not have'",
+  "subject_kind": "statement",
+  "subject_id": "634a80b8-470e-4d2f-9dd0-fc868e4a62a0",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "4a5a43a5-bb4d-4a87-828a-d913a1f0422e",
+  "verification_result_id": "73532b47-6f39-4b2c-a01f-47085da81c3f",
+  "note": "The weak version is the esse instance of the strong one, over the same InAct, CausesIn and esse. 4a5a43a5 is also the esse instance of q.4 a.2 preexistence. No strictness result is registered."
+}

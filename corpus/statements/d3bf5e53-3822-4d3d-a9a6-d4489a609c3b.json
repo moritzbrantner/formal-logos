@@ -1,0 +1,16 @@
+{
+  "id": "d3bf5e53-3822-4d3d-a9a6-d4489a609c3b",
+  "label": "On bare MORE_1 the strict comparative does not give 'no effect exceeds its total cause'",
+  "paraphrase": "Closed mathematical control over a two-being, one-respect grades frame in which each being totally causes the other, both are in act, and the primitive comparative MORE_1 holds of every pair in both directions: the strict comparative (a distinct cause of a quality is more such) and 'more such has the perfection' hold, while the MORE_1 reading of 'at least as much reality in the total cause' (no effect is more r than its total cause) fails. A statement about this interpretation only: MORE_1's strict comparative does not yield the non-strict one without a further premise such as the calibration or asymmetry (with irreflexivity) of MoreIn.",
+  "lean_declaration": "TruthCore.Causality.CartesianAdequacy.StrictComparativeWithoutNonStrictAdequacy",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",
+    "5766de66-8a37-5b04-aa65-9eec53319f50",
+    "33ebf451-eb02-48f5-b420-24a34da9b865"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "cdb0de59-5015-4fa6-986c-4cd1527dd2b3"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "c39dc0d1-f6cb-4f8e-8133-5517332fb29e",
+  "label": "GOD_4 exists, from the owner's definitional argument (P1 and P2, analyst formulation)",
+  "argument_id": "0489c24b-86b9-4da6-9b3d-7a751152fe20",
+  "challenge_module": "TruthCore.Results.Ontology.ExistencePredicate.Challenge",
+  "solution_module": "TruthCore.Results.Ontology.ExistencePredicate.Solution",
+  "theorem": "TruthCore.Results.Ontology.ExistencePredicate.definitionalArgument",
+  "comparator_config": "results/c39dc0d1-f6cb-4f8e-8133-5517332fb29e/comparator.json",
+  "status": "solution-present",
+  "description": "Valid transcription (instantiation) of the owner-specified definitional argument: P1 (the existing omnibenevolent God has been defined) and the weak P2 (whatever is defined is satisfied) give GodExists over the frame's beings, the objects satisfying its existence predicate. The proof applies P2 to P1's description and drops the omnibenevolence conjunct. It establishes neither premise. P1 and the weak P2 are jointly consistent, but the stipulative freedom P1 uses also licenses the contrary sole-God definition, under which the weak P2 is contradictory; so P2 gets no warrant from definitional freedom (retorsion result in this batch).",
+  "transcription": "instantiation"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "b1a51ed4-efd3-47df-8463-e4c47fa2d02c",
+  "label": "Nuclear characterization control, checked",
+  "argument_id": "7b6ebee0-7039-43dc-92c6-52f52a2332d2",
+  "challenge_module": "TruthCore.Results.Ontology.ExistencePredicate.Challenge",
+  "solution_module": "TruthCore.Results.Ontology.ExistencePredicate.Solution",
+  "theorem": "TruthCore.Results.Ontology.ExistencePredicate.nuclearCharacterizationControl",
+  "comparator_config": "results/b1a51ed4-efd3-47df-8463-e4c47fa2d02c/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free control. The general part takes the unique object characterized by {g, o, existent}. The model's objects are the sets of the nuclear properties god, benevolent and existent, one object per set; the extranuclear-existent objects are the nuclear-existent non-gods, so EXISTENCE_4 is not closed under adding nuclear properties. The object {god, benevolent, existent} is a nuclear-existent god that does not exist extranuclearly. Its admissibility frame (defined = nuclear description, not stipulated) satisfies 'whatever is defined is true', P1's description is not a nuclear (admissible) description there, and no being is a god; any stipulation practice whose stipulations are all admissible therefore does not stipulate P1's description. With 'in act at esse' read as EXISTENCE_5, 'more in being' ranking that object above every other and a trivial causal relation, the form of the naming premise e39a4fce holds and that object is the unique maximum. The model shows that the restricted principle is consistent and confers EXISTENCE_5 only, and that the route's existential import comes from the maximum-existence premise (InAct m esse inside IsMaximumIn) together with the carrier: with an object-theory carrier, InAct _ esse must carry EXISTENCE_4. It is a model of one formal interpretation, not evidence that Meinongian object theory is true or that being in act at esse is nuclear."
+}

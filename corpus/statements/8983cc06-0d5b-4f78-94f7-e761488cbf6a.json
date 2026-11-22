@@ -1,0 +1,10 @@
+{
+  "id": "8983cc06-0d5b-4f78-94f7-e761488cbf6a",
+  "label": "Bridge: every stipulated description is a nuclear (admissible) description",
+  "paraphrase": "Open bridge, analyst formulation: in a nuclear-property object theory, every description stipulated in a given practice of stipulation is a nuclear description, that is admissible as a characterization. It connects 'defined' as stipulated (P1) with 'defined' as admissible (the nuclear restriction of P2). Not asserted.",
+  "lean_declaration": "TruthCore.Ontology.ExistencePredicate.StipulationsAdmissible",
+  "definition_ids": [
+    "75d7aa56-615c-46a0-8c05-67f1624f6b36",
+    "84831dae-67ff-4ac3-83c7-525fbdb505ab"
+  ]
+}
