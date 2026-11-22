@@ -1,0 +1,18 @@
+{
+  "id": "684f95cd-0d8e-4c11-bd17-73a691506f1a",
+  "label": "Unrestricted free absence strengthens free absence for candidates that could be absent",
+  "premise_statement_ids": [
+    "ff30c214-d193-4501-a6a8-0a5bdeb80477"
+  ],
+  "conclusion_statement_id": "4d51a1a1-90ea-4169-8599-6fb9160fe92e",
+  "inference_ids": [
+    "bef42d6a-d47d-4c38-89c7-74ed6cad778a"
+  ],
+  "meaning": "Unrestricted free absence gives free absence for candidates that could be absent: the restricted principle adds an antecedent. Strict: in the theist model the restricted principle holds and the unrestricted one fails (controls).",
+  "definition_ids": [
+    "13c0abe7-25f7-4921-b52e-9f732edd6f2c",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "e2fd2cf0-2b43-430e-9352-703325198bba",
+  "label": "Every concrete candidate has a distinct concrete candidate that could exist at w",
+  "paraphrase": "Plurality premise, analyst formulation: for every concrete candidate y there is a distinct concrete candidate x that exists at some world accessible from w. No concrete candidate is the only possible concrete thing. It does not say that either exists actually.",
+  "lean_declaration": "TruthCore.Causality.SubtractionArgument.ConcreteCompanionsAt",
+  "definition_ids": [
+    "13c0abe7-25f7-4921-b52e-9f732edd6f2c",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}
