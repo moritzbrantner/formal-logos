@@ -81,7 +81,7 @@ subject_id = "STMT-ONTIC-FRAME-KT"
 predicate = "logically_equivalent_to"
 object_kind = "statement"
 object_id = "STMT-ONTIC-T-SCHEMA"
-note = "Both directions are verified on the same route Profile and frame: result 'KT route frame entails the T schema of the route's NECESSARY_2 box' (axiomT_valid) and result 'The T schema of the route's NECESSARY_2 box entails a KT route frame' (the verified T correspondence). Two presentations of one assumption, not independent evidence: a defence of either is a defence of both."
+note = "Both directions are verified on the same route Profile and frame: result 'KT route frame entails the T schema of the route's NECESSARY_2 box' (axiomT_valid) and result 'The T schema of the route's NECESSARY_2 box entails a KT route frame' (the verified T correspondence), verified with o instantiated as m.ontic. Two presentations of one assumption, not independent evidence: a defence of either is a defence of both."
 
 [[relation]]
 id = "KTB route frame strengthens the B schema of the route's NECESSARY_2 box"
@@ -92,7 +92,7 @@ object_kind = "statement"
 object_id = "STMT-ONTIC-B-SCHEMA"
 verification_result_id = "KTB route frame entails the B schema of the route's NECESSARY_2 box"
 strictness_result_id = "Frame-to-schema strictness controls, checked"
-note = "Same route Profile and frame. The B schema is equivalent to symmetry (B correspondence of the ConvergenceCertificate); KTB adds reflexivity (the KT frame premise, equivalently the T schema). The one-world frame with no edge validates B and is not KTB."
+note = "Same route Profile and frame. The B schema is equivalent to symmetry (B correspondence of the ConvergenceCertificate); KTB adds reflexivity (the KT frame premise, equivalently the T schema). The one-world frame with no edge validates B and is not KTB. Verified with o instantiated as m.ontic."
 
 [[relation]]
 id = "S5 route frame strengthens the 5 schema of the route's NECESSARY_2 box"
@@ -103,4 +103,4 @@ object_kind = "statement"
 object_id = "STMT-ONTIC-5-SCHEMA"
 verification_result_id = "S5 route frame entails the 5 schema of the route's NECESSARY_2 box"
 strictness_result_id = "Frame-to-schema strictness controls, checked"
-note = "Same route Profile and frame. The 5 schema is equivalent to the Euclidean condition (5 correspondence of the ConvergenceCertificate); S5 adds reflexivity (the KT frame premise, equivalently the T schema). The one-world frame with no edge validates 5 and is not S5."
+note = "Same route Profile and frame. The 5 schema is equivalent to the Euclidean condition (5 correspondence of the ConvergenceCertificate); S5 adds reflexivity (the KT frame premise, equivalently the T schema). The one-world frame with no edge validates 5 and is not S5. Verified with o instantiated as m.ontic."

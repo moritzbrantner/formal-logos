@@ -6,5 +6,5 @@
   "predicate": "logically_equivalent_to",
   "object_kind": "statement",
   "object_id": "cb456382-efd6-554b-8ee4-c8fc193f876a",
-  "note": "Both directions are verified on the same route Profile and frame: result 'KT route frame entails the T schema of the route's NECESSARY_2 box' (axiomT_valid) and result 'The T schema of the route's NECESSARY_2 box entails a KT route frame' (the verified T correspondence). Two presentations of one assumption, not independent evidence: a defence of either is a defence of both."
+  "note": "Both directions are verified on the same route Profile and frame: result 'KT route frame entails the T schema of the route's NECESSARY_2 box' (axiomT_valid) and result 'The T schema of the route's NECESSARY_2 box entails a KT route frame' (the verified T correspondence), verified with o instantiated as m.ontic. Two presentations of one assumption, not independent evidence: a defence of either is a defence of both."
 }

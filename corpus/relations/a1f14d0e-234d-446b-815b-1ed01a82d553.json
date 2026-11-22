@@ -8,5 +8,5 @@
   "object_id": "98bede5a-c5ff-5c26-9af0-10d526d422e2",
   "verification_result_id": "b22dcc44-f87f-4449-9f95-20e5d821b31c",
   "strictness_result_id": "ee7281ec-bb0c-4ee0-9161-f127f6a9ad31",
-  "note": "Same route Profile and frame. The B schema is equivalent to symmetry (B correspondence of the ConvergenceCertificate); KTB adds reflexivity (the KT frame premise, equivalently the T schema). The one-world frame with no edge validates B and is not KTB."
+  "note": "Same route Profile and frame. The B schema is equivalent to symmetry (B correspondence of the ConvergenceCertificate); KTB adds reflexivity (the KT frame premise, equivalently the T schema). The one-world frame with no edge validates B and is not KTB. Verified with o instantiated as m.ontic."
 }

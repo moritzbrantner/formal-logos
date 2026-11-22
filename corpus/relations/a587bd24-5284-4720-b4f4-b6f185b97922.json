@@ -8,5 +8,5 @@
   "object_id": "6f474aba-fda0-57fa-8330-6246de589f63",
   "verification_result_id": "db2ebb76-a423-40ef-a80a-63d21ec16e75",
   "strictness_result_id": "ee7281ec-bb0c-4ee0-9161-f127f6a9ad31",
-  "note": "Same route Profile and frame. The 5 schema is equivalent to the Euclidean condition (5 correspondence of the ConvergenceCertificate); S5 adds reflexivity (the KT frame premise, equivalently the T schema). The one-world frame with no edge validates 5 and is not S5."
+  "note": "Same route Profile and frame. The 5 schema is equivalent to the Euclidean condition (5 correspondence of the ConvergenceCertificate); S5 adds reflexivity (the KT frame premise, equivalently the T schema). The one-world frame with no edge validates 5 and is not S5. Verified with o instantiated as m.ontic."
 }
