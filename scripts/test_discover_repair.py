@@ -35,6 +35,7 @@ STATEMENTS = {
     "qher": f"{A}.QHereditary", "qev": f"{A}.QEverywhere", "qpairs": f"{A}.QAtPairs",
     "allp": f"{A}.AllP", "notallp": f"{A}.NotAllP", "chain": f"{A}.Chain",
     "chainends": f"{A}.ChainEnds", "noel": f"{B}.NoElement", "em": "TruthCore.Logic.ExcludedMiddle",
+    "onticgood": f"{A}.OnticAllGood", "profilegood": f"{A}.ProfileAllGood",
 }
 MODULES = {decl: decl.rsplit(".", 1)[0] for decl in STATEMENTS.values()}
 
@@ -243,6 +244,126 @@ class PlannerTests(unittest.TestCase):
         cm = next(a for a in actions if a["action"] == "countermodel")
         self.assertTrue(any("attempt cap" in r for r in cm["refused"]))
 
+    def test_attempt_cap_counts_every_goal_of_an_action(self):
+        # Seven runs: a one-goal action fits, a two-goal split would make nine.
+        trace = bp.Trace(None)
+        f = finding("t", ["ptor"])
+        for i in range(bp.MAX_ATTEMPTS_PER_GOAL - 1):
+            trace.add({"key": f"k{i}", "goal_label": bp.goal_label(f), "action": "budget"})
+        rows = [{"argument": "x", "premises": ["ptor", "rtoq"], "not_retrieved": ["rtoq"],
+                 "unidentified": [], "binding": []}]
+        actions = {a["action"]: a for a in bp.plan(f, self.corpus, OPTIONS, rows, trace, "rev")}
+        self.assertEqual(len(actions["split"]["goals"]), 2)
+        self.assertTrue(any("attempt cap" in r for r in actions["split"]["refused"]))
+        self.assertFalse(any("attempt cap" in r for r in actions["countermodel"]["refused"]))
+
+    def test_settled_diagnosis_is_not_retried_with_another_bundle(self):
+        f = finding("t", ["ptor"])
+        rows = [{"argument": a, "premises": ["ptor", p], "not_retrieved": [p], "unidentified": [],
+                 "binding": []} for a, p in (("x", "rtoq"), ("y", "allp"))]
+        trace = bp.Trace(None)
+        first = [a for a in bp.plan(f, self.corpus, OPTIONS, rows, trace, "rev")
+                 if a["action"] == "known-bundle"]
+        self.assertEqual([a["refused"] for a in first], [[], []])
+        trace.add({"key": first[0]["goals"][0]["key"], "goal_label": bp.goal_label(f),
+                   "action": "known-bundle", "outcome": {"status": "closed-known"}})
+        second = [a for a in bp.plan(f, self.corpus, OPTIONS, rows, trace, "rev")
+                  if a["action"] == "known-bundle"]
+        self.assertTrue(all(any("already settled" in r for r in a["refused"]) for a in second))
+
+    def test_action_ids_do_not_shift(self):
+        f = finding("t", ["ptor"])
+        rows = [{"argument": "x", "premises": ["ptor", "rtoq"], "not_retrieved": ["rtoq"],
+                 "unidentified": [], "binding": []}]
+        trace = bp.Trace(None)
+        before = {a["action"]: a["id"] for a in bp.plan(f, self.corpus, OPTIONS, rows, trace, "rev")}
+        cm = next(a for a in bp.plan(f, self.corpus, OPTIONS, rows, trace, "rev")
+                  if a["action"] == "countermodel")
+        trace.add({"key": cm["goals"][0]["key"], "goal_label": bp.goal_label(f),
+                   "action": "countermodel", "outcome": {"status": "no-countermodel"}})
+        after = bp.plan(f, self.corpus, OPTIONS, rows, trace, "rev")
+        names = [a["action"] for a in after]
+        self.assertLess(names.index("split"), names.index("budget"))
+        self.assertEqual({a["action"]: a["id"] for a in after if a["action"] != "budget"}, before)
+
+    def test_countermodel_claims_stay_within_the_plain_binding(self):
+        f = finding("t", ["ptor"])
+        base = {"goal_label": bp.goal_label(f), "action": "countermodel",
+                "goal": {"command": "countermodel"}}
+        plain = dict(base, key="k1", outcome={"status": "countermodel", "projections_untested": [],
+                                              "premises_model": "all True"})
+        diag = {d["code"]: d for d in bp.classify(f, self.corpus, OPTIONS, [], [plain])}
+        self.assertEqual(diag["a"]["status"], "excluded")
+        self.assertIn("plain binding", diag["a"]["evidence"][-1])
+        # (e) is never supported by a countermodel alone.
+        self.assertEqual(diag["e"]["status"], "possible")
+        # A premise model rules out an inconsistent core, not a vacuous target.
+        self.assertNotEqual(diag["d"]["status"], "excluded")
+        self.assertIn("vacuity of the target is not tested", diag["d"]["evidence"][-1])
+        projected = dict(plain, outcome=dict(plain["outcome"], projections_untested=["T.o := P.m.ontic"]))
+        diag = {d["code"]: d for d in bp.classify(f, self.corpus, OPTIONS, [], [projected])}
+        self.assertEqual(diag["a"]["status"], "possible")
+        self.assertIn("projection binding(s) not tested", diag["a"]["evidence"][-1])
+
+    def test_budget_needs_a_completed_countermodel_search(self):
+        f = finding("t", ["ptor"])
+        trace = bp.Trace(None)
+        trace.add({"key": None, "failed_key": "k", "goal_label": bp.goal_label(f),
+                   "action": "countermodel", "outcome": {"status": "failed", "infrastructure": True}})
+        self.assertNotIn("budget", [a["action"] for a in bp.plan(f, self.corpus, OPTIONS, [], trace, "rev")])
+
+    def test_infrastructure_failures_are_rerun_at_most_twice(self):
+        h = Harness(self.corpus, finding("t", ["ptor"]), self.trace_path,
+                    stub(lambda g: {"error": "no output", "infrastructure": True}))
+        h.auto()
+        failed = [e for e in h.trace.entries if e.get("failed_key")]
+        self.assertEqual(len(failed), bp.MAX_FAILURES_PER_INPUT)
+        self.assertTrue(all(e["key"] is None and e["outcome"]["status"] == "failed" for e in failed))
+        cm = next(a for a in h.item()["actions"] if a["action"] == "countermodel")
+        self.assertTrue(any("infrastructure" in r for r in cm["refused"]))
+
+    def test_many_goals_do_not_overflow_the_trace(self):
+        trace = bp.Trace(None)
+        for i in range(100):
+            f = dict(finding("t", ["ptor"]), label=f"t{i}")
+            bp.seed_trace(trace, f, dict(OPTIONS, heartbeats=1000 + i), "rev", self.corpus, "r")
+        self.assertEqual(len(trace.entries), 100)
+
+    def test_unchecked_binders_do_not_support_a_search_gap(self):
+        rows = [{"argument": "x", "premises": ["ptor"], "not_retrieved": [], "unidentified": [],
+                 "binding": []}]
+        f = finding("t", ["ptor"])
+        checked = {d["code"]: d["status"] for d in bp.classify(f, self.corpus, OPTIONS, rows, [])}
+        unchecked = {d["code"]: d["status"] for d in
+                     bp.classify(f, self.corpus, OPTIONS, rows, [], binders_checked=False)}
+        self.assertEqual(checked["a"], "supported")
+        self.assertEqual(unchecked["a"], "possible")
+
+    def test_projection_filters_and_known_senses(self):
+        goal = {"command": "discover", "premises": ["ptor"], "target": "t"}
+        closed = {"closed": {"prover": "duper", "used": [0]}, "minimal": [0], "witness": "all True"}
+        self.assertEqual(bp.assess(dict(closed, projection_unused=True), goal, self.corpus,
+                                   senses=False)["status"], "rejected-projection-unused")
+        self.assertEqual(bp.assess(dict(closed, projection={"ambiguous": True}), goal, self.corpus,
+                                   senses=False)["status"], "rejected-projection-ambiguous")
+        unique = bp.assess(dict(closed, projection={"ambiguous": False, "binder": "T.o",
+                                                    "bound_to": "P.m.ontic"}), goal, self.corpus,
+                           senses=False)
+        self.assertEqual(unique["status"], "closed-candidate")
+        self.assertIn("specialization", unique["notes"][-2])
+        corpus = make_corpus(self.root, [("k", ["ptor"], "t")])
+        known = bp.assess(closed, goal, corpus)
+        self.assertEqual(known["status"], "closed-known")
+        self.assertIn("senses", known)
+
+    def test_plan_only_repair_writes_no_trace(self):
+        report = self.root / "report.json"
+        write(report, {"options": OPTIONS, "findings": [finding("t", ["ptor"])]})
+        subprocess.run([sys.executable, str(ROOT / "scripts" / "discover_blueprint.py"), "--root",
+                        str(self.root), "repair", str(report), "--revision", "rev"],
+                       check=True, capture_output=True, text=True)
+        self.assertFalse((self.root / "repair-trace.json").exists())
+
     def test_separate_binders_support_misidentification(self):
         trace = bp.Trace(None)
         f = finding("t", ["ptor"])
@@ -320,6 +441,7 @@ class LeanRepairTests(unittest.TestCase):
             "literal": ("t", ["allp", "notallp"], "discover", 100000, False),
             "chain-low": ("chainends", ["chain"], "discover", 1, False),
             "chain-cm": ("chainends", ["chain"], "countermodel", 20000, False),
+            "projected": ("onticgood", ["profilegood"], "discover", 100000, False),
         }
         labelled = [(k, {"command": c, "target": t, "premises": p, "heartbeats": hb,
                          "strict_domains": s}) for k, (t, p, c, hb, s) in goals.items()]
@@ -340,8 +462,12 @@ class LeanRepairTests(unittest.TestCase):
         h = self.harness(finding("qpairs", ["qher"]))
         [entry] = h.run("reuse-lemma")
         self.assertEqual(entry["modified"]["added"], ["qev"])
-        self.assertEqual(entry["outcome"]["status"], "closed-candidate", entry["outcome"])
-        self.assertIn("qev", entry["outcome"]["minimal"])
+        out = entry["outcome"]
+        self.assertEqual(out["status"], "closed-candidate", out)
+        self.assertEqual(out["minimal"], ["qev"])
+        self.assertNotIn("known", out)
+        self.assertEqual([n["status"] for n in out["necessity"]],
+                         ["needed (one-point omission model)"])
 
     def test_by_name_carrier_identification_is_not_a_repair(self):
         raw = self.raw["by-name"]
@@ -367,9 +493,31 @@ class LeanRepairTests(unittest.TestCase):
         names = {b["name"]: b["from"] for b in out["model"]["binders"]}
         self.assertEqual(names, {"B": f"{A}.Target.B", "P": f"{A}.Target.P", "Q": f"{A}.Target.Q",
                                  "R": f"{A}.PtoR.R"})
+        # Q is false and P, R true: P → R holds, P → Q fails.
+        self.assertEqual(out["model"]["interpretation"], "slot 1 False, rest True")
+        self.assertEqual(out["model"]["slots"], [{"binder": "P", "slots": [0]},
+                                                 {"binder": "Q", "slots": [1]},
+                                                 {"binder": "R", "slots": [2]}])
+        self.assertEqual(out["model"]["projections_untested"], [])
+        # The bounds prose is the repair tool's, not Lean's.
         self.assertIn("does not refute any premise", out["model"]["bounds"])
         self.assertTrue(out["premises_model"])
         self.assertEqual({d["code"]: d["status"] for d in h.item()["diagnoses"]}["a"], "excluded")
+
+    def test_countermodel_does_not_cover_projection_bindings(self):
+        h = self.harness(finding("onticgood", ["profilegood"]))
+        [entry] = h.run("countermodel")
+        out = entry["outcome"]
+        self.assertEqual(out["status"], "countermodel", out)
+        self.assertEqual(out["projections_untested"],
+                         [f"{A}.OnticAllGood.o := {A}.ProfileAllGood.m.ontic"])
+        self.assertEqual({d["code"]: d["status"] for d in h.item()["diagnoses"]}["a"], "possible")
+        # #discover itself closes the goal under that projection binding (by one
+        # premise application, so the transcription probe rejects it).
+        raw = self.raw["projected"]
+        closed = bp.assess(raw, self.goals["projected"], self.corpus)
+        self.assertEqual(closed["status"], "rejected-transcription", closed)
+        self.assertEqual(closed["projection"]["bound_to"], f"{A}.ProfileAllGood.m.ontic")
 
     def test_expired_budget_is_unresolved_not_refuted(self):
         self.assertEqual(bp.assess(self.raw["chain-low"], self.goals["chain-low"],

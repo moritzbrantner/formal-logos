@@ -19,19 +19,47 @@ searches a one-point model of
   it is not an inconsistent core), and
 * the premises together with the negated target (`countermodel`: the formal
   implication `∀ binders, P₁ → … → Pₙ → Target` fails at that instantiation of
-  the outer binders, so no proof-search budget can prove it).
+  the outer binders under this *plain* binding, so no proof-search budget
+  proves the plainly bound goal).
 
-Every carrier is read as `Unit` and every predicate as a constant (the slot
-pattern names which), as in `Discover.witness`. Such a model is a fact about
-this binding of these declarations only: it neither refutes a premise nor
-excludes a stronger formulation, another binding, a sense identification or
-an added premise. The binders are reported with their origin, sense tag and
-type so that the model's quantifier scope is explicit. The output is one
-`DISCOVER-REPAIR-JSON` info line (also appended to `TRUTH_DISCOVER_LOG`).
+Every carrier is read as `Unit` and every predicate as a constant, as in
+`Discover.witness`; `slots` maps each binder to the predicate slots it
+received, so the slot pattern names which binder is `True` and which `False`.
+Such a model is a fact about this plain binding of these declarations only.
+`#discover` also tries *projection bindings* (a target binder bound to a field
+of a premise's structure binder, `Discover.projectionCandidates`): those are
+not tested here and are listed as `projections_untested`; a countermodel to
+`∀ o m, H m → T o` does not refute `∀ m, H m → T m.ontic`. The model refutes no
+premise and excludes no stronger formulation, other binding, sense
+identification or added premise. The binders are reported with their origin,
+sense tag and type so that the model's quantifier scope is explicit. The
+output is one `DISCOVER-REPAIR-JSON` info line (also appended to
+`TRUTH_DISCOVER_LOG`); the bounds prose of the repair report is added by
+`scripts/discover_blueprint.py`, not here.
 -/
 open Lean Elab Command Term Meta
 
 namespace DiscoverRepair
+
+/-- The predicate slots each binder receives under `Discover.instantiateBinders`
+(the same traversal, all slots `False`): `[{binder, slots}]`, binders without a
+slot omitted. -/
+def slotMap (xs : Array Expr) : MetaM (Array Json) := do
+  let mut vals : Array Expr := #[]
+  let mut slots := 0
+  let mut out : Array Json := #[]
+  for x in xs do
+    let ty := (← inferType x).replaceFVars (xs.extract 0 vals.size) vals
+    if (← x.fvarId!.getBinderInfo).isInstImplicit then
+      vals := vals.push (← synthInstance ty)
+    else
+      let (v, s) ← (Discover.interp (fun _ => false) ty).run slots
+      if s > slots then
+        out := out.push (Json.mkObj [("binder", Json.str (← x.fvarId!.getUserName).toString),
+          ("slots", toJson (List.range' slots (s - slots)))])
+      slots := s
+      vals := vals.push v
+  return out
 
 def countermodel (target : Name) (premises : Array Name) (heartbeats : Nat)
     (tags : Array (Name × Name × String)) (strict : Bool)
@@ -66,12 +94,18 @@ def countermodel (target : Name) (premises : Array Name) (heartbeats : Nat)
         ("type", Json.str (toString (← ppExpr (← inferType x))))]
     let premisesModel ← Discover.witness xs hyps u heartbeats
     let counter ← Discover.witness xs (hyps.push (mkNot concl)) u heartbeats
+    let slots ← try slotMap xs catch _ => pure #[]
+    let projections ← Discover.projectionCandidates target xs origins
+    let untested := projections.map fun (i, j, field, _) =>
+      Json.str s!"{origins[i]!.decl}.{origins[i]!.binder} := {origins[j]!.decl}.{origins[j]!.binder}.{field}"
     let identified ← byName.get
     let names := identified.filterMap fun m =>
       if m.byName then some (m.text m.originDecl m.originBinder) else none
     return Json.mkObj [("binders", Json.arr binders),
       ("premises_model", (premisesModel.map Json.str).getD Json.null),
       ("countermodel", (counter.map Json.str).getD Json.null),
+      ("slots", Json.arr slots),
+      ("projections_untested", Json.arr untested),
       ("domain_identified_by_name", toJson names)]
 
 syntax (name := countermodelTry) "#discover_countermodel " str num str ident " from " ident* : command

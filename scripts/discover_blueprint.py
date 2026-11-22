@@ -399,15 +399,18 @@ MAX_ATTEMPTS_PER_GOAL = 8
 SETTLING = {"known-bundle": ("closed-known", "closed-candidate"),
             "reuse-lemma": ("closed-known", "closed-candidate"),
             "countermodel": ("countermodel",)}
-MAX_TRACE_ENTRIES = 64
+# An input whose run failed for infrastructure reasons (no output, Lean killed or
+# timed out) is not keyed, so it can be rerun, but at most this often.
+MAX_FAILURES_PER_INPUT = 2
 BUDGET_FACTOR = 4
 COUNTERMODEL_BOUNDS = (
     "One-point interpretation: every carrier is Unit and every predicate a "
-    "constant (the slot pattern names which). It shows only that this formal "
-    "implication, over exactly these declarations bound as listed, fails at one "
-    "instantiation of its outer binders. It does not refute any premise, a "
-    "stronger or differently bound formulation, a sense identification or a "
-    "bundle with further premises.")
+    "constant (`slots` maps the slot pattern to binders). It shows only that this "
+    "formal implication, over exactly these declarations under this plain binding, "
+    "fails at one instantiation of its outer binders. Projection bindings (a target "
+    "binder bound to a premise structure's field) are not tested. It does not refute "
+    "any premise, a stronger or differently bound formulation, a sense "
+    "identification or a bundle with further premises.")
 
 
 class Corpus:
@@ -543,19 +546,34 @@ class Corpus:
         return rows
 
 
-SOLVER_INPUTS = ("corpus", "TruthCore", "scripts/Discover.lean", "scripts/DiscoverRepair.lean")
+SOLVER_INPUTS = ("corpus", "TruthCore", "scripts/Discover.lean", "scripts/DiscoverRepair.lean",
+                 "lake-manifest.json", "lean-toolchain")
 
 
 def revision(root: Path) -> str:
     """The source revision of the solver inputs: the Git objects of the corpus,
-    the library and the two Lean scripts (not of this tool), so that a change
-    of the repair tool alone does not make an old solver input look new; and
-    the commit it was read at."""
+    the library, the two Lean scripts and the Lean dependency pins (not of this
+    tool), so that a change of the repair tool alone does not make an old solver
+    input look new; uncommitted changes to them (the diff and untracked files,
+    by content) enter the hash; and the commit it was read at. The prove-sweep
+    probe enters each solver key separately (`solver_key`)."""
     import hashlib
     head = git(root, "rev-parse", "HEAD", check=False).strip() or "unknown"
-    objects = git(root, "rev-parse", *[f"HEAD:{p}" for p in SOLVER_INPUTS], check=False)
+    digest = hashlib.sha256()
+    digest.update(git(root, "rev-parse", *[f"HEAD:{p}" for p in SOLVER_INPUTS],
+                      check=False).encode())
     dirty = git(root, "status", "--porcelain", "--", *SOLVER_INPUTS, check=False).strip()
-    inputs = hashlib.sha256(objects.encode()).hexdigest()[:12]
+    if dirty:
+        digest.update(git(root, "diff", "HEAD", "--binary", "--", *SOLVER_INPUTS,
+                          check=False).encode())
+        others = git(root, "ls-files", "-z", "--others", "--exclude-standard", "--",
+                     *SOLVER_INPUTS, check=False)
+        for name in sorted(filter(None, others.split("\0"))):
+            digest.update(name.encode())
+            path = root / name
+            if path.is_file():
+                digest.update(path.read_bytes())
+    inputs = digest.hexdigest()[:12]
     return f"inputs {inputs}{'+dirty' if dirty else ''} at {head[:12]}"
 
 
@@ -572,7 +590,7 @@ def solver_key(goal: dict, corpus: Corpus) -> str:
     payload = {"command": goal["command"], "revision": input_revision(goal.get("revision", "")),
                "target": decls[0], "premises": sorted(decls[1:]),
                "heartbeats": goal["heartbeats"], "strict": goal.get("strict_domains", False),
-               "tags": corpus.lean_tags(decls)}
+               "tags": corpus.lean_tags(decls), "probe": prelude_digest()}
     return hashlib.sha256(json.dumps(payload, sort_keys=True).encode()).hexdigest()[:16]
 
 
@@ -592,11 +610,14 @@ class Trace:
         return [e for e in self.entries if e.get("goal_label") == label]
 
     def add(self, entry: dict) -> None:
+        """Bounded per goal by the plan-time guards (`plan`); a duplicate key
+        here is a planner bug."""
         if entry.get("key") and entry["key"] in self.keys():
             raise ValueError(f"duplicate solver input {entry['key']}")
-        if len(self.entries) >= MAX_TRACE_ENTRIES:
-            raise ValueError("trace is full")
         self.entries.append(entry)
+
+    def failures(self, key: str) -> int:
+        return sum(1 for e in self.entries if e.get("failed_key") == key)
 
     def save(self) -> None:
         if self.path:
@@ -680,7 +701,10 @@ def reusable_lemmas(corpus: Corpus, bundle: list[str], target: str,
 def fresh_binders(binders: list[dict]) -> list[str]:
     """Outer binders renamed (`X_2`, `X_3` …): a premise binder of the same
     name as an earlier one that nothing identified with it (`freshUserName`
-    in `scripts/Discover.lean`), with the tag it carries, if any."""
+    in `scripts/Discover.lean`), with the tag it carries, if any. Only
+    same-named binders are detected: a premise binder of another name that
+    should denote the target's (`B` for `Being`) also stays separate, unseen
+    here; the binder export (`--binders`) reports those."""
     out = []
     for b in binders:
         if b.get("name") and b["name"] != b.get("from", "").rsplit(".", 1)[-1]:
@@ -692,8 +716,10 @@ def fresh_binders(binders: list[dict]) -> list[str]:
 
 
 def classify(finding: dict, corpus: Corpus, options: dict, rows: list[dict],
-             attempts: list[dict]) -> list[dict]:
-    """The six alternative diagnoses with their status and evidence."""
+             attempts: list[dict], binders_checked: bool = True) -> list[dict]:
+    """The six alternative diagnoses with their status and evidence.
+    `binders_checked` is false when no binder export was supplied: the known
+    derivations' identification gaps are then unknown, not absent."""
     s = signals(finding, options)
     ev = {k: [] for k in DIAGNOSES}
     status = {k: "not indicated" for k in DIAGNOSES}
@@ -744,9 +770,12 @@ def classify(finding: dict, corpus: Corpus, options: dict, rows: list[dict],
             if r["not_retrieved"]:
                 mark("b", "supported", f"known argument {r['argument'][:8]}: premises not in the goal "
                                        f"{', '.join(p[:8] for p in r['not_retrieved'])}")
-            elif not r["unidentified"]:
+            elif not r["unidentified"] and binders_checked:
                 mark("a", "supported", f"known argument {r['argument'][:8]} was retrieved and is "
                                        "identifiable but was not composed (search gap)")
+            elif not r["unidentified"]:
+                mark("a", "possible", f"known argument {r['argument'][:8]} was retrieved but not "
+                                      "composed; identification not checked (no binder export)")
         lemmas = reusable_lemmas(corpus, finding.get("candidates", []),
                                  finding["target"]["statement_id"], rows)
         if lemmas:
@@ -761,17 +790,23 @@ def classify(finding: dict, corpus: Corpus, options: dict, rows: list[dict],
         out = at.get("outcome", {})
         tag = f"trace {(at.get('key') or at.get('report_key') or '')[:8]} ({at['action']})"
         if out.get("status") == "countermodel":
-            status["a"] = "excluded"
-            ev["a"].append(f"{tag}: exact one-point countermodel; no budget proves this bundle")
-            if status["c"] == "supported" or rows:
-                mark("e", "possible", f"{tag}: the bundle lacks a premise, lemma or identification")
+            untested = out.get("projections_untested") or []
+            if untested:
+                mark("a", "possible", f"{tag}: one-point countermodel under the plain binding only; "
+                                      f"{len(untested)} projection binding(s) not tested, so a "
+                                      "budget failure on those stays possible")
             else:
-                mark("e", "supported", f"{tag}: the bundle lacks a premise or bridge (formal, under "
-                                       "the stated binding); substantive or not is a warrant question")
+                status["a"] = "excluded"
+                ev["a"].append(f"{tag}: one-point countermodel under this plain binding (no "
+                               "projection binding applies): no budget proves this bundle so bound")
+            # A countermodel shows that the bundle lacks *something* (a premise,
+            # lemma, identification or bridge); it never shows that the gap is
+            # a substantive premise, so (e) stays possible at most.
+            mark("e", "possible", f"{tag}: the bundle as bound lacks a premise, lemma, "
+                                  "identification or bridge; which one is not decided")
         if out.get("premises_model"):
-            if status["d"] != "supported":
-                status["d"] = "excluded"
-            ev["d"].append(f"{tag}: one-point model of the premises ({out['premises_model']})")
+            ev["d"].append(f"{tag}: one-point model of the premises ({out['premises_model']}): "
+                           "not an inconsistent core; vacuity of the target is not tested")
         if out.get("status") == "closed-candidate" and at["action"] in ("reuse-lemma", "split"):
             mark("b", "supported", f"{tag}: closes once the lemma is in the goal")
         if out.get("status") == "closed-known" and at["action"] == "known-bundle":
@@ -779,14 +814,15 @@ def classify(finding: dict, corpus: Corpus, options: dict, rows: list[dict],
         if out.get("status") == "unresolved" and at.get("goal", {}).get("command") == "discover":
             split = fresh_binders(at.get("binders", []))
             if split:
-                mark("c", "supported", f"{tag}: binders left separate (no shared whole-binder "
-                                       "tag or same-module name with a definitionally equal type "
-                                       f"joined them): {', '.join(split[:4])}")
+                mark("c", "supported", f"{tag}: same-named binders left separate (no shared "
+                                       "whole-binder tag or same-module name with a definitionally "
+                                       f"equal type joined them): {', '.join(split[:4])}")
             elif at["action"] == "known-bundle" and at.get("binders"):
-                mark("a", "supported", f"{tag}: the premises of a verified argument, every binder "
-                                       "identified, did not close: a proof-search gap (the verified "
-                                       "proof may use reasoning Duper does not search, such as "
-                                       "induction or a well-founded recursion)")
+                mark("a", "supported", f"{tag}: the premises of a verified argument, with no "
+                                       "same-named binder left separate, did not close: a "
+                                       "proof-search gap unless an identification by tag or type "
+                                       "is missing (the verified proof may use reasoning Duper does "
+                                       "not search, such as induction or a well-founded recursion)")
         if out.get("status") == "unresolved" and at["action"] == "strict-domains":
             mark("c", "supported", f"{tag}: without the by-name carrier fallback the goal does not close")
         if out.get("status") == "unresolved" and at["action"] == "budget":
@@ -827,12 +863,17 @@ def plan(finding: dict, corpus: Corpus, options: dict, rows: list[dict], trace: 
             g["key"] = k
             if k in keys:
                 refused.append(f"duplicate solver input (trace {k[:8]})")
+            if trace.failures(k) >= MAX_FAILURES_PER_INPUT:
+                refused.append(f"input {k[:8]} failed {trace.failures(k)} times for infrastructure "
+                               "reasons; investigate before rerunning")
         for p in added:
             if corpus.only_through(p, target):
                 refused.append(f"support cycle: every verified derivation of {p[:8]} uses the target")
-        solver_runs = sum(1 for e in done if e.get("action") != "engine" and e.get("key"))
-        if goals and solver_runs >= MAX_ATTEMPTS_PER_GOAL:
-            refused.append(f"attempt cap {MAX_ATTEMPTS_PER_GOAL} reached for this goal")
+        solver_runs = sum(1 for e in done if e.get("action") != "engine"
+                          and (e.get("key") or e.get("failed_key")))
+        if goals and solver_runs + len(goals) > MAX_ATTEMPTS_PER_GOAL:
+            refused.append(f"attempt cap: {solver_runs} solver runs + {len(goals)} would exceed "
+                           f"{MAX_ATTEMPTS_PER_GOAL} for this goal")
         if report and any(e.get("report_key") == report.get("key") for e in done):
             refused.append("already reported")
         settled = [e for e in done if e.get("action") == action
@@ -840,7 +881,12 @@ def plan(finding: dict, corpus: Corpus, options: dict, rows: list[dict], trace: 
         if goals and settled:
             refused.append(f"diagnosis already settled by trace {settled[0]['key'][:8]} "
                            f"({settled[0]['outcome']['status']})")
-        actions.append({"id": f"{target[:8]}-{len(actions) + 1}", "action": action,
+        # The id comes from the action's content, so that inserting an action
+        # (a budget retry after a countermodel run) never shifts another's id.
+        import hashlib
+        content = json.dumps([action, [g["key"] for g in goals], (report or {}).get("key")])
+        ident = hashlib.sha256(content.encode()).hexdigest()[:6]
+        actions.append({"id": f"{target[:8]}-{action}-{ident}", "action": action,
                         "diagnosis": code, "why": why, "goals": list(goals),
                         "added": list(added), "report": report, "refused": refused})
 
@@ -891,7 +937,8 @@ def plan(finding: dict, corpus: Corpus, options: dict, rows: list[dict], trace: 
                     goals=[dict(goal(candidates), target=m),
                            goal(candidates + [m])], added=[m])
         cm = [e for e in done if e.get("action") == "countermodel"]
-        if cm and all(e["outcome"].get("status") != "countermodel" for e in cm):
+        if any(e["outcome"].get("status") == "no-countermodel" for e in cm) and \
+                all(e["outcome"].get("status") != "countermodel" for e in cm):
             add("budget", "a", f"no countermodel was found, so a budget failure stays possible; "
                                f"retry once at {BUDGET_FACTOR}x heartbeats",
                 goals=[goal(candidates, heartbeats=hb * BUDGET_FACTOR)])
@@ -925,6 +972,22 @@ def prelude() -> str:
     return found.group(1)
 
 
+def prelude_digest() -> str:
+    import hashlib
+    return hashlib.sha256(prelude().encode()).hexdigest()[:12]
+
+
+def lean_root(corpus: Corpus) -> Path:
+    """Where Lean runs and the Discover scripts are read: the `--root`
+    repository when it is a Lake project with those scripts (so the solver
+    inputs match the revision and tags read from it), else this tool's own
+    repository (synthetic test corpora)."""
+    root = corpus.root.resolve()
+    if (root / "lakefile.toml").is_file() and (root / "scripts" / "Discover.lean").is_file():
+        return root
+    return TOOL_ROOT
+
+
 def module_of(root: Path, declaration: str, modules: dict | None = None) -> str:
     if modules and declaration in modules:
         return modules[declaration]
@@ -951,9 +1014,10 @@ def command_line(label: str, goal: dict, corpus: Corpus) -> str:
             f"{target} from {' '.join(premises)}")
 
 
-def scratch_text(modules: list[str], commands: list[str], probe_stub: bool = False) -> str:
-    discover = (TOOL_ROOT / "scripts" / "Discover.lean").read_text()
-    repair = (TOOL_ROOT / "scripts" / "DiscoverRepair.lean").read_text()
+def scratch_text(modules: list[str], commands: list[str], probe_stub: bool = False,
+                 root: Path = TOOL_ROOT) -> str:
+    discover = (root / "scripts" / "Discover.lean").read_text()
+    repair = (root / "scripts" / "DiscoverRepair.lean").read_text()
     imports, bodies = set(), []
     for text in (discover, repair):
         lines = []
@@ -975,19 +1039,23 @@ def run_lean(corpus: Corpus, labelled: list[tuple[str, dict]], *, lock: str | No
              launcher: list[str] | None = None, modules: dict | None = None,
              extra_lean_path: str | None = None, probe_stub: bool = False,
              timeout: int | None = None) -> dict[str, dict]:
-    """Runs the goals in one Lean process; the raw outcomes by label."""
+    """Runs the goals in one Lean process, in `lean_root(corpus)`; the raw
+    outcomes by label. An outcome the process did not produce (no output, Lean
+    timed out or was killed) is marked `infrastructure`: it is not a solver
+    result, and its input is not keyed in the trace."""
+    where = lean_root(corpus)
     decls = {corpus.declaration(g["target"]) for _, g in labelled}
     decls |= {corpus.declaration(p) for _, g in labelled for p in g["premises"]}
     mods = sorted({module_of(corpus.root, d, modules) for d in decls})
     commands = [command_line(label, g, corpus) for label, g in labelled]
     if launcher is None:
-        launcher = [sys.executable, str(TOOL_ROOT / "scripts" / "worker_env.py"), "--", "lake"]
+        launcher = [sys.executable, str(where / "scripts" / "worker_env.py"), "--", "lake"]
     if timeout is None:
         timeout = 300 + sum(60 + g["heartbeats"] // 1000 * 3 for _, g in labelled)
     with tempfile.TemporaryDirectory(prefix="discover-repair-") as tmp:
         path = Path(tmp) / "Repair.lean"
         log = Path(tmp) / "repair.log"
-        path.write_text(scratch_text(mods, commands, probe_stub))
+        path.write_text(scratch_text(mods, commands, probe_stub, root=where))
         if extra_lean_path:
             argv = [*launcher, "env", "sh", "-c", 'LEAN_PATH="$1:$LEAN_PATH" lean "$2"', "sh",
                     extra_lean_path, str(path)]
@@ -999,9 +1067,11 @@ def run_lean(corpus: Corpus, labelled: list[tuple[str, dict]], *, lock: str | No
             Path(lock).parent.mkdir(parents=True, exist_ok=True)
             argv = ["flock", lock, *argv]
         env = {**os.environ, "TRUTH_DISCOVER_LOG": str(log)}
-        done = subprocess.run(argv, cwd=TOOL_ROOT, env=env, capture_output=True, text=True)
+        done = subprocess.run(argv, cwd=where, env=env, capture_output=True, text=True)
         output = done.stdout + done.stderr
-        failure = f"Lean timed out after {timeout}s" if done.returncode in (124, 137) else None
+        failure = {124: f"Lean timed out after {timeout}s",
+                   137: "Lean was killed (exit 137: out of memory, or the kill after a timeout)",
+                   }.get(done.returncode)
         logged = log.read_text() if log.exists() else ""
     outcomes: dict[str, dict] = {}
     for line in (logged + "\n" + output).splitlines():
@@ -1016,7 +1086,7 @@ def run_lean(corpus: Corpus, labelled: list[tuple[str, dict]], *, lock: str | No
                 break
     errors = [l for l in output.splitlines() if ": error" in l][:3]
     for label, _ in labelled:
-        outcomes.setdefault(label, {"label": label,
+        outcomes.setdefault(label, {"label": label, "infrastructure": True,
                                     "error": failure or "\n".join(errors) or "no output"})
     return outcomes
 
@@ -1041,17 +1111,25 @@ def assess(raw: dict, goal: dict, corpus: Corpus, senses: bool = True) -> dict:
     """The outcome of one solver run, with the engine's filters applied
     offline where the raw outcome allows."""
     if raw.get("error"):
-        kind = "unresolved" if "timed out" in raw["error"] else "error"
-        return {"status": kind, "notes": [raw["error"][:300]]}
+        if raw.get("infrastructure"):
+            # Not a solver result: the process produced no outcome.
+            return {"status": "failed", "infrastructure": True, "notes": [
+                raw["error"][:300], "not a solver result; unresolved, not refuted"]}
+        if "timed out" in raw["error"]:
+            return {"status": "unresolved", "notes": [raw["error"][:300], "not refuted"]}
+        return {"status": "error", "notes": [raw["error"][:300]]}
     if goal["command"] == "countermodel":
         binders = raw.get("binders", [])
         out = {"premises_model": raw.get("premises_model"),
-               "by_name": raw.get("domain_identified_by_name", [])}
+               "by_name": raw.get("domain_identified_by_name", []),
+               "projections_untested": raw.get("projections_untested", [])}
         if raw.get("countermodel"):
             out.update(status="countermodel", model={
-                "statement": "∀ binders, premises → target fails at",
+                "statement": "∀ binders, premises → target fails at (plain binding)",
                 "binders": binders, "interpretation": raw["countermodel"],
+                "slots": raw.get("slots", []),
                 "bounds": COUNTERMODEL_BOUNDS,
+                "projections_untested": raw.get("projections_untested", []),
                 "conditional_on_identifications": raw.get("domain_identified_by_name", [])})
         else:
             out.update(status="no-countermodel",
@@ -1091,6 +1169,19 @@ def assess(raw: dict, goal: dict, corpus: Corpus, senses: bool = True) -> dict:
         out["status"] = "rejected-domain-by-name"
         out["by_name"] = raw["domain_identified_by_name"]
         return out
+    # The engine's projection filters (docs/discover.md, step 4).
+    projection = raw.get("projection") or None
+    if raw.get("projection_unused"):
+        out["status"] = "rejected-projection-unused"
+        out["projection"] = projection
+        return out
+    if isinstance(projection, dict):
+        out["projection"] = projection
+        if projection.get("ambiguous"):
+            out["status"] = "rejected-projection-ambiguous"
+            return out
+        out["notes"].append(f"closed only with {projection.get('binder')} bound to "
+                            f"{projection.get('bound_to')}: a specialization of the target")
     if raw.get("probe"):
         out["status"] = "rejected-transcription"
         return out
@@ -1098,14 +1189,16 @@ def assess(raw: dict, goal: dict, corpus: Corpus, senses: bool = True) -> dict:
         out["notes"].append("vacuous target: the premises refute the target's antecedents")
     if raw.get("witness") is None:
         out["notes"].append("no one-point joint model; consistency unresolved")
+    out["senses"] = semantics_preflight(corpus, minimal, goal["target"]) if senses else {
+        "checked": False}
+    if out["senses"].get("checked") and not out["senses"].get("passes"):
+        out["notes"].append("senses: " + out["senses"].get("message", "")[:200])
     known = corpus.known(minimal, goal["target"])
     if known:
         out["status"] = "closed-known"
         out["known"] = known
         return out
     out["status"] = "closed-candidate"
-    out["senses"] = semantics_preflight(corpus, minimal, goal["target"]) if senses else {
-        "checked": False}
     out["notes"].append("raw candidate: certify with `truth discover` and record only through "
                         "the spec path and semantic review")
     return out
@@ -1148,7 +1241,8 @@ def plan_all(corpus, report, binders, findings, trace, rev, report_path):
                     "declaration": finding["target"].get("lean_declaration", ""),
                     "kind": finding["kind"],
                     "filters": [f.get("filter") for f in finding.get("filters", [])],
-                    "diagnoses": classify(finding, corpus, options, rows, attempts),
+                    "diagnoses": classify(finding, corpus, options, rows, attempts,
+                                          binders_checked=bool(binders)),
                     "actions": plan(finding, corpus, options, rows, trace, rev),
                     "finding": finding})
     return out
@@ -1171,8 +1265,9 @@ def print_plan(items: list[dict]) -> None:
 
 def repair(args: argparse.Namespace) -> int:
     corpus, report, binders, findings, trace, rev = load_context(args)
+    # Planning only: the engine goals are seeded in memory, the trace file is
+    # left as it was.
     items = plan_all(corpus, report, binders, findings, trace, rev, args.report)
-    trace.save()
     if args.json:
         for item in items:
             item.pop("finding")
@@ -1204,7 +1299,8 @@ def execute(action: dict, item: dict, corpus: Corpus, trace: Trace, rev: str,
     for (lab, g), _ in zip(labelled, action["goals"]):
         raw = raws.get(lab, {"error": "no output"})
         outcome = assess(raw, g, corpus, senses=senses)
-        entry = {"key": g["key"], "goal_label": label, "revision": rev,
+        failed = outcome.get("infrastructure")
+        entry = {"key": None if failed else g["key"], "goal_label": label, "revision": rev,
                  "action": action["action"], "diagnosis": action["diagnosis"],
                  "diagnoses": diagnoses, "why": action["why"],
                  "goal": {k: v for k, v in g.items() if k != "key"},
@@ -1213,6 +1309,8 @@ def execute(action: dict, item: dict, corpus: Corpus, trace: Trace, rev: str,
                  "modified": change_against(g, original or g, corpus),
                  "outcome": outcome, "ms": raw.get("ms"),
                  "binders": raw.get("binders", [])}
+        if failed:
+            entry["failed_key"] = g["key"]
         trace.add(entry)
         entries.append(entry)
     return entries

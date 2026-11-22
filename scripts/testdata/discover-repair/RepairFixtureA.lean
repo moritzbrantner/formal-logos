@@ -43,4 +43,20 @@ def Chain (B : Type) (P0 P1 P2 P3 P4 P5 P6 P7 P8 P9 P10 P11 P12 : B → Prop) : 
 /-- The chain's end-to-end consequence. -/
 def ChainEnds (B : Type) (P0 P12 : B → Prop) : Prop := ∀ x, P0 x → P12 x
 
+/-- A structure-valued binder for the projection fixture. -/
+structure Ontic (B : Type) where
+  Good : B → Prop
+
+/-- A bundle whose field `ontic` has the type of `OnticAllGood`'s binder. -/
+structure Profile (B : Type) where
+  ontic : Ontic B
+  Extra : B → Prop
+
+/-- Target with a structure binder `o`. -/
+def OnticAllGood (B : Type) (o : Ontic B) : Prop := ∀ x, o.Good x
+
+/-- The premise about a profile's field: implies the target only with
+`o := m.ontic` (a projection binding), not under the plain binding. -/
+def ProfileAllGood (B : Type) (m : Profile B) : Prop := ∀ x, m.ontic.Good x
+
 end TruthCore.RepairFixtureA
