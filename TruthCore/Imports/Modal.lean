@@ -22,6 +22,7 @@ public import TruthCore.Modal.DResearch.Witnesses
 public import TruthCore.Modal.DeonticFutureBoundary
 public import TruthCore.Modal.DesignatedValidity
 public import TruthCore.Modal.DesignatedValidityCertificate
+public import TruthCore.Modal.DivineProfile
 public import TruthCore.Modal.Examples
 public import TruthCore.Modal.ExistenceDegreeAttainment
 public import TruthCore.Modal.ExistenceDegrees
