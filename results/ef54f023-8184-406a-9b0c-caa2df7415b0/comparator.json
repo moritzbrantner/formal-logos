@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Modal.ModalGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalGrounding.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Modal.ModalGrounding.controls"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

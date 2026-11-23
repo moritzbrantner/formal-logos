@@ -1,0 +1,37 @@
+{
+  "id": "32b5f7bb-9952-44e1-97d7-e4d821d6afe8",
+  "label": "Modal grounding frameworks at the foundational case: laws, framework models and omission models",
+  "paraphrase": "Premise-free laws and finite models (structural surrogates, not metaphysical possibility). Laws: (1) correlation with an uncaused esse and simple incorruptibility excludes any power over a being's esse; (2) PGP with unrestricted recombination and companions excludes any concrete foundational being; (3) existence-conditional essences exclude unconditional essentialism's reading of esse = essence for a being with esse = essence whose absence is representable; (4) under existence-conditional essences no essential truth of x entails x's existence once x's absence is representable; (5) Pruss's grounding P1 and possibility P4 with Euclidean access and a transfer bridge (a power for the global possibility is a power over the esse of each concretum it excludes) put every concrete contingent being under some power over its esse; (6) with excluded middle this makes every concrete foundational being necessary; (7) Aristotelian grounding of 'nothing concrete', initiator presence and concrete holders exclude the subtraction conclusion wherever something concrete exists; (8) the subtraction conclusion gives the global possibility premise P4 (a stronger analyst variant, not Pruss's own premise); (9) on a Euclidean frame the unrestricted conceivability bridge of #248 cannot take both a conceived necessary existence and a conceived absence of one being; (10) unreceivedness, firstness, correlation, passive-to-receptive, no self-esse-cause and B3 make the first unmoved mover incorruptible simply and under no power over its esse, and with PGP and excluded middle necessary if it exists at w; (11) with excluded middle PGP is exactly its half for existentially receptive beings and its half for subjectless beings. Models: theist (nonvacuity of every argument), prussWithoutPGP (Pruss premises and conclusion with PGP, C2 and the transfer bridge failing), bruteFoundational (a contingent foundational being: PGP, B6 and the necessity verdict fail; omission models of the two essentialist premises), conditionalEssence and its four omission models, primitivistSilence (the same foundational profile with the being necessary in one frame and contingent in another), hybridFirstWay (the First Way's act and potency premises, ST I q.2 a.3, unrestricted recombination, a corruptible composite under PGP's subject half and a contingent foundational first mover), six Pruss omission models (the fourth a replacement case: the one actual concretum possibly absent while a non-actual being is contingent elsewhere; the sixth, Euclidean, an artefact of the global P4), and two one-sided conceivability models.",
+  "lean_declaration": "TruthCore.Modal.ModalGrounding.Model.Controls",
+  "definition_ids": [
+    "7fcf846e-d0ef-400e-89c0-7c82b94edde7",
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db",
+    "54bdb2f0-aa66-489f-ae06-174dd668d424",
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "6ecf24d5-5001-4571-937c-2632ac8c2c66",
+    "f9f58df7-d3be-4d66-b1f1-204d7049c450",
+    "13c0abe7-25f7-4921-b52e-9f732edd6f2c",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "c8113f31-6208-5992-9ca4-712887a4594b",
+    "3fd6bddb-f10c-4df4-8694-3eb5e7c28617",
+    "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "a49e4cf1-ca4f-5519-9724-892af257cedb",
+    "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d"
+  ],
+  "disambiguation_ids": [
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "ed4f1f3f-d0c2-57b7-8ce7-52245db29d79",
+    "508617ab-cf24-5f3b-a387-64b3991359ec",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5",
+    "d25cee67-1d5c-4a4c-bda5-8571b731ddf3"
+  ]
+}

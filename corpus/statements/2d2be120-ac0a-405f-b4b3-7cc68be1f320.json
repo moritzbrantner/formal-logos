@@ -1,0 +1,16 @@
+{
+  "id": "2d2be120-ac0a-405f-b4b3-7cc68be1f320",
+  "label": "Whatever has at w a power for there being no contingent concretum is concrete",
+  "paraphrase": "OPEN (P3; analyst reconstruction): every holder at w of a power for there being no contingent concrete being is concrete (in the selected world-independent concreteness predicate). Powers belong to concrete beings.",
+  "lean_declaration": "TruthCore.Modal.ModalGrounding.GlobalAbsencePowerHoldersConcrete",
+  "definition_ids": [
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "6ecf24d5-5001-4571-937c-2632ac8c2c66",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

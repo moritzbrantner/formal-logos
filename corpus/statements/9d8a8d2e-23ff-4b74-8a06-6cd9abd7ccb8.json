@@ -1,0 +1,11 @@
+{
+  "id": "9d8a8d2e-23ff-4b74-8a06-6cd9abd7ccb8",
+  "label": "A being at w whose existence no essential truth entails is absent at some accessible world",
+  "paraphrase": "OPEN (essentialist account of possibility of absence, the non-power ground of de re possibility, ACT-06; analyst formulation): every being x existing at w such that no essential truth of any being entails x's existence (holds only at points where x exists) is absent at some world accessible from w. Possibility of absence is the absence of an essential exclusion.",
+  "lean_declaration": "TruthCore.Modal.ModalGrounding.EssentialExclusionAccount",
+  "definition_ids": [
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db",
+    "54bdb2f0-aa66-489f-ae06-174dd668d424",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ]
+}

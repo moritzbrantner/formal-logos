@@ -1,0 +1,37 @@
+{
+  "id": "ada5a68d-512e-4b36-9de1-a984d1807aeb",
+  "label": "The stage-one node, from a necessary concrete holder of an actual-absence power",
+  "premise_statement_ids": [
+    "b90ee2de-8ae5-438b-bea4-e3158889c3e7"
+  ],
+  "conclusion_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+  "inference_ids": [
+    "2cc036ac-137a-43bf-93a0-fbe5870713bf"
+  ],
+  "meaning": "The sibling's witness is concrete, exists at w and at every accessible world: it witnesses the stage-one node on the frame's own profile.",
+  "definition_ids": [
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea",
+    "baddf770-36bf-542f-bb3c-2297342d5452",
+    "bf7eddca-8291-4744-8470-379babcd7781"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ],
+  "sense_bridges": [
+    {
+      "term": "NECESSARY",
+      "from": "8c881fa6-2b9f-44be-a32a-c8ef29c13643",
+      "to": "7af298fb-a2c4-4239-919b-7685f2e1f67a",
+      "statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+      "role": "conclusion"
+    }
+  ]
+}

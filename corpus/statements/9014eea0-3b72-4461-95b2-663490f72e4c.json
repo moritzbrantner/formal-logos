@@ -1,0 +1,14 @@
+{
+  "id": "9014eea0-3b72-4461-95b2-663490f72e4c",
+  "label": "No determination contained in a being's concept entails that being's existence",
+  "paraphrase": "OPEN (Kant's thesis, conceptual form; analyst formulation, attribution deferred): for the supplied concept relation (a value of its own type, ConceptRelation), every being x and every determination phi contained in the concept of x, phi does not entail x's existence over the represented points: some represented point satisfies phi and lacks x. Stronger than 'existence is not a real predicate': it also excludes any content that entails existence, such as an unconditional 'x is omnipotent' true only where x exists. It excludes conceptual containment of existence (EXISTENCE_IN_ESSENCE_1) for every being (controls, law 1). It concerns concepts, not natures: it says nothing about essential truths unless the concept is adequate to the nature, and it yields only a representable absence; a represented-to-accessible bridge is needed for an accessible one, and identifying the represented space with real possibility suffices (controls, laws 2-5). Navigation: Kant, Critique of Pure Reason, Transcendental Dialectic, Book II, ch. III, sect. IV ('Whatever be the content of our conception of an object, it is necessary to go beyond it, if we wish to predicate existence of the object', read in the Meiklejohn translation).",
+  "lean_declaration": "TruthCore.Ontology.ExistenceInEssence.ExistenceNotConceptual",
+  "definition_ids": [
+    "16c40fbe-8a86-464a-a868-384103e11304",
+    "90353211-7e2e-47cb-bbab-3e0bef36d077",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "f704b7ca-b455-4da7-a757-b0564fe76b3b"
+  ]
+}

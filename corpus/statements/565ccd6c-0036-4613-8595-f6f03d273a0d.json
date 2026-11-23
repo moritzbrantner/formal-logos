@@ -1,0 +1,15 @@
+{
+  "id": "565ccd6c-0036-4613-8595-f6f03d273a0d",
+  "label": "Whatever has represented esse equal to its essence has its own existence in its nature",
+  "paraphrase": "OPEN (unconditional essentialism's reading of esse = essence), analyst formulation: for every being x whose represented esse equals its represented essence (the q.3 a.4 essenceOf/esseOf maps), it lies in the nature of x (Essential) that x exists, unconditionally: the proposition true exactly at the points where x exists. The bridge from the essence-esse identity to an essential truth; existence-conditional essentialism rejects it for any such being whose absence is representable (controls, law 3).",
+  "lean_declaration": "TruthCore.Modal.ModalGrounding.EsseEssenceIsEssentialExistence",
+  "definition_ids": [
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1"
+  ]
+}

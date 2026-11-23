@@ -1,0 +1,17 @@
+{
+  "id": "1af99585-27ed-4477-94c8-1a2cc1e47145",
+  "label": "Some necessary concrete being has, at a world lacking the actual contingents, power for w obtaining",
+  "paraphrase": "Conclusion of Pruss's own direction (analyst formulation): some concrete being exists at w, exists at every world accessible from w (NECESSARY_2 de re), and exists at some accessible world lacking every concrete being contingent at w, where it has a power for w's obtaining. No uniqueness, simplicity, firstness, intellect or God; nothing about the power's exercise.",
+  "lean_declaration": "TruthCore.Modal.PrussPowerPremises.NecessaryConcreteHolderOfActualityPower",
+  "definition_ids": [
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

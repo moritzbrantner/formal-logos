@@ -1,0 +1,11 @@
+{
+  "id": "f9b26559-1738-4396-9915-d07e972facee",
+  "label": "Every contingent being has esse distinct from essence, from unconditional essentialism",
+  "argument_id": "06327949-ec8e-469a-92ba-76345f8a18c0",
+  "challenge_module": "TruthCore.Results.Modal.ModalGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalGrounding.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalGrounding.essentialExistenceGivesDistinctEsse",
+  "comparator_config": "results/f9b26559-1738-4396-9915-d07e972facee/comparator.json",
+  "status": "solution-present",
+  "description": "A new support bundle for #1870's B6: unconditional essentialism decomposes B6 into essence-grounds-necessity and the essential-existence reading of esse = essence. Not a transcription: neither premise mentions contingency. Establishes no premise; existence-conditional essentialism rejects the second premise for any being whose absence is representable (controls, law 3), which is exactly the standing rival's position."
+}

@@ -1,0 +1,12 @@
+{
+  "id": "838589df-2ca5-45bb-9400-a3563e438056",
+  "label": "The stage-one node, from a necessary concrete power-holder (inference)",
+  "input_statement_ids": [
+    "84d02356-5dac-4ce5-9f9e-4cebf12f96f2"
+  ],
+  "output_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+  "rule": "Forget the power",
+  "meaning": "The Pruss conclusion's witness is concrete, exists at w and at every accessible world: it witnesses the stage-one node on the frame's own profile.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

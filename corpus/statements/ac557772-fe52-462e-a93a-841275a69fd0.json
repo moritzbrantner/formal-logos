@@ -1,0 +1,28 @@
+{
+  "id": "ac557772-fe52-462e-a93a-841275a69fd0",
+  "label": "Existence in essence at an esse-essence identity: laws and models",
+  "paraphrase": "Premise-free laws and finite models (structural surrogates, not metaphysical possibility). Laws: (1) Kant's conceptual thesis excludes conceptual containment of existence; (2) with concept adequacy it excludes, for every being, any essential truth entailing its existence; (3) with adequacy and the unconditional bridge 565ccd6c it excludes every esse-essence identity; (4) with the identity-to-concept bridge it excludes every esse-essence identity; (5) it yields only representable absence; identifying the represented space with real possibility (access from w to every point) is one sufficient bridge, under which a being existing at w with a nonempty concept is contingent (kantAquinas shows some bridge is needed; weaker ones also suffice); (6) existence-conditional essences, the act-fact link and exercise in the nature are jointly inconsistent with an identity being whose absence is representable (which member to reject is not settled); (7) under the act-fact link, for every identity being x, the world-proposition 'if x exists, x's essence principle is exercised' is true at every point (the essence relation does not occur: nothing is said about what lies in a nature); (8) constitutive essential existence implies the consequential form; (9) essence grounds necessity: a nature entailing existence gives necessity; (10) a contingent being's nature entails no existence; (11) within the essentialist framework (excluded middle, essence grounds necessity, the essentialist account of possibility, no other nature requiring x) an actual x's nature entails its existence if and only if x is necessary; (12) serious-actualist essences (every essential truth an unconditional predication) with essence grounds necessity and a nonempty nature give necessity; (13) conditional conceptual necessity (the analyst form of Kant's triangle paragraph: a concept yields only 'if x is posited, ...') with concept adequacy gives existence-conditional essences; (14) conditional conceptual necessity gives Kant's thesis at every being whose absence is representable; (15) under the act-fact link the unconditional bridge 565ccd6c gives exercise in the nature (the converse of the factorization); (16) existence-conditional essences give, for the concept adequate to the nature, conditional conceptual necessity and concept adequacy (the converse of law 13): such a concept exists exactly when the nature is existence-conditional. Models, with distinct esse principles for distinct beings: kantAquinas (a necessary foundational identity being and a second being caused by it in its esse, with distinct esse and essence, and contingent; the act-fact link, exercise in the nature, the unconditional bridge and constitutive essential existence hold; for a concept formed from the first being's effects (only the coexistence conditional 'if the second exists, the first exists', not the frame's causation) Kant's thesis and conditional conceptual necessity hold and neither adequacy nor the identity-to-concept bridge holds; its absence is representable but not really possible; for the concept adequate to its nature adequacy and the identity-to-concept bridge hold and Kant's thesis and conditional conceptual necessity fail), conditionalIdentity (a contingent foundational identity being with the act-fact link, only conditional exercise in its nature, existence-conditional essences, the essentialist account, Kant's thesis, conditional conceptual necessity and adequacy for the concept adequate to its nature), four omission models of the Kant-adequacy argument and two of the factorization of 565ccd6c.",
+  "lean_declaration": "TruthCore.Ontology.ExistenceInEssence.Model.Controls",
+  "definition_ids": [
+    "16c40fbe-8a86-464a-a868-384103e11304",
+    "25d4df96-f18b-4477-a7ce-11fa8c17cd83",
+    "90353211-7e2e-47cb-bbab-3e0bef36d077",
+    "1fda7b2c-4411-4ffd-8fa2-78e30b6aedef",
+    "b2e22524-357f-47b5-814f-0a0e59f0d612",
+    "316780ef-70da-498f-8893-317cb35ca80b",
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db",
+    "54bdb2f0-aa66-489f-ae06-174dd668d424",
+    "7fcf846e-d0ef-400e-89c0-7c82b94edde7",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d"
+  ],
+  "disambiguation_ids": [
+    "f704b7ca-b455-4da7-a757-b0564fe76b3b",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

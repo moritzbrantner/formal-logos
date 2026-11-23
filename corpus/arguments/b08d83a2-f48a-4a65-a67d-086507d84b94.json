@@ -1,0 +1,35 @@
+{
+  "id": "b08d83a2-f48a-4a65-a67d-086507d84b94",
+  "label": "Foundational beings are contingent at w, from Kant's thesis and concept adequacy",
+  "premise_statement_ids": [
+    "9014eea0-3b72-4461-95b2-663490f72e4c",
+    "effbb158-308b-4d5c-a1b2-ee0b6048f321",
+    "9d8a8d2e-23ff-4b74-8a06-6cd9abd7ccb8",
+    "38200db5-a320-41c1-8eb6-ea4a6409ceb9"
+  ],
+  "conclusion_statement_id": "fe8c3a1d-8bbd-4e3e-be46-170e75bb73db",
+  "inference_ids": [
+    "9e5def5f-243f-4ee7-9cec-10768483cfec"
+  ],
+  "meaning": "For a foundational f, no essential truth entails its existence: one of f's own would be contained in the concept by adequacy, and Kant's thesis says no determination in a concept entails its object's existence; no other being's does (unrequired by others). The essentialist account then makes f absent at some accessible world. Esse = essence plays no role. Constructive.",
+  "definition_ids": [
+    "16c40fbe-8a86-464a-a868-384103e11304",
+    "54bdb2f0-aa66-489f-ae06-174dd668d424",
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db",
+    "7fcf846e-d0ef-400e-89c0-7c82b94edde7",
+    "90353211-7e2e-47cb-bbab-3e0bef36d077",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "f704b7ca-b455-4da7-a757-b0564fe76b3b"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "037bfce4-c040-4b73-9db0-dd284c848f3c",
+  "label": "Existence in essence at an esse-essence identity: controls checked",
+  "argument_id": "c9d8491f-15a7-436d-8177-6d550ce7d8a6",
+  "challenge_module": "TruthCore.Results.Ontology.ExistenceInEssence.Challenge",
+  "solution_module": "TruthCore.Results.Ontology.ExistenceInEssence.Solution",
+  "theorem": "TruthCore.Results.Ontology.ExistenceInEssence.controls",
+  "comparator_config": "results/037bfce4-c040-4b73-9db0-dd284c848f3c/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free laws and models for the #1887 existence-in-essence slice. Sense-mixing control: the laws relate EXISTENCE_IN_ESSENCE_1, _2, _3 and _5, ESSENCE_3 and ESSENCE_5, and WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_1 and _6 without a bridge premise. Law 5 uses classical reasoning. Establishes no premise."
+}

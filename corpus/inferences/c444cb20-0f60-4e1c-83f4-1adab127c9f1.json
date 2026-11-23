@@ -1,0 +1,13 @@
+{
+  "id": "c444cb20-0f60-4e1c-83f4-1adab127c9f1",
+  "label": "The stage-one node, from a necessary concrete foundational being (inference)",
+  "input_statement_ids": [
+    "666f06a4-bf39-40dd-97cf-613796e7b042",
+    "c5da5e62-a9cd-4142-8d3a-a96f86548e88"
+  ],
+  "output_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+  "rule": "Instantiate the verdict at the concrete foundational witness",
+  "meaning": "The concrete foundational being exists at w and, by the necessity verdict, at every accessible world: it witnesses the stage-one node on the frame's own profile.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

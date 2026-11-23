@@ -1,0 +1,17 @@
+{
+  "id": "d5db2a36-f631-47c7-be4b-791cf5dc6757",
+  "label": "A necessary concrete power-holder, by Aristotelian modality and Pruss's possibility (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "95bf8780-0e3c-49ba-b636-2274e2997a30",
+    "906f5c39-2a63-4dc2-955d-a00cfd8a976b",
+    "a6906cab-59c4-4938-b6d1-991369e8ffb0",
+    "18e5bd4e-8178-468e-b867-fbaf9c5988ad",
+    "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174"
+  ],
+  "output_statement_id": "b90ee2de-8ae5-438b-bea4-e3158889c3e7",
+  "rule": "Ground the non-actual possibility, locate the holder in its world, reductio on the holder's contingency",
+  "meaning": "Analyst reconstruction of Pruss's Aristotelian-modality argument with his own possibility premise. A concrete being is contingent at w, so not every actual contingent concretum is absent at w, while some accessible world lacks them all (P4-prime). Aristotelian grounding (P1-prime) gives a being y existing at w with a power for that absence; initiator presence (P2-prime) gives an accessible world v where it obtains and y exists; y is concrete (P3-prime). Were y absent at some world accessible from w, y would be a concrete being contingent at w, hence absent at v, where it exists. So, with excluded middle, y exists at every world accessible from w. No Euclidean premise: the holder's non-contingency is shown at w directly.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

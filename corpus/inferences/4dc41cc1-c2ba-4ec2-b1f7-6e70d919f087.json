@@ -1,0 +1,13 @@
+{
+  "id": "4dc41cc1-c2ba-4ec2-b1f7-6e70d919f087",
+  "label": "Foundational beings are necessary at w, from power grounding (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "20d5fecd-950e-42f8-8dc9-3014491ff6ae"
+  ],
+  "output_statement_id": "666f06a4-bf39-40dd-97cf-613796e7b042",
+  "rule": "Reductio on possible absence, by PGP's two channels",
+  "meaning": "PGP's verdict at the foundational case. Take a being f foundational at w and a world v accessible from w; excluded middle decides whether f exists at v. Were f absent there, it would be contingent at w, and PGP would make it corruptible simply or put it under some being's power over its esse; the foundational profile excludes both, each by its own clause (incorruptibility for POSSIBLE_NOT_TO_BE_1, the no-power clause for POSSIBLE_NOT_TO_BE_2). So f exists at every accessible world. No step passes from one sense of 'possible not to be' to the other: the sense bridge names PGP as the premise in which both occur, as alternative channels. Only the profile's actuality, incorruptibility and no-power clauses are used: simplicity, unreceivedness, firstness and uncausedness are idle here (under correlation, the no-power clause itself follows from uncausedness and incorruptibility, controls law 1).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
