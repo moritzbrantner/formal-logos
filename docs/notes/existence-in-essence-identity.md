@@ -402,8 +402,10 @@ matching-scope comparison (#1888 §6).
    - AN's identified support is shared with the power/potency route (so it is
      correlated with PGP/C2, not independent corroboration) or only removes a
      defeater.
-   - `f9b26559` (and `39df9612`) therefore add no warrant beyond AN with
-     E-link and EGN.
+   - `565ccd6c` keeps its direct-assumption option. But no direct ground for
+     it at the identity case was identified that is not a ground for AN given
+     E-link. So the support `f9b26559` (and `39df9612`) gives the necessity
+     verdict rests, at this case, on AN's warrant.
 3. **Parity at the foundational being stands, sharpened.**
    - Within essentialism the dispute *is* the modal verdict (law 11).
    - The B6 crux is located in AN, given E-link, which both sides accept.
@@ -524,10 +526,19 @@ essence).
 
 ## 12. Computed frontier change and cross-lane edits
 
-**Frontier.** The computed delta is `truth frontier-diff --base a2011fb21`
-(pasted in the PR). New bare premises are E-link `3a2af70f` and AN
-`823d4312`, under `565ccd6c`, on the necessity route. The direct-assumption
-option for `565ccd6c` is retained.
+**Frontier.** Computed by `truth frontier-diff --base a2011fb21` at
+`3895b122`:
+- open premises reaching the root: 569 → 570 (bare 419 → 420);
+- one verified support alternative added: `565ccd6c` ← {E-link `3a2af70f`,
+  AN `823d4312`};
+- `565ccd6c` moves from bare to closed in frontier-diff's vocabulary. That
+  means derived from open premises, not established.
+- The two new premises are bare.
+- The lowest expanded-route cost is unchanged (16).
+
+The direct-assumption option for `565ccd6c` is retained. The Kant-adequacy
+route to `fe8c3a1d` does not reach the root and so does not appear in the
+delta.
 
 **Cross-lane edits.**
 - `corpus/disambiguations/existence-esse-support.json`: sense `_6`

@@ -1,0 +1,43 @@
+{
+  "id": "a88768a8-8cc3-4f7d-aa0c-55e0ab323f22",
+  "label": "Does existence never belonging to an essence apply at an esse-essence identity? (B6 crux)",
+  "statement_ids": [
+    "565ccd6c-0036-4613-8595-f6f03d273a0d",
+    "96971e31-4782-4478-95b8-b6863a6a9412",
+    "857654fe-e33b-4726-a7d8-8cb4b74791e2",
+    "fe8c3a1d-8bbd-4e3e-be46-170e75bb73db",
+    "3a2af70f-aa63-4966-85b7-97d5d12b865a",
+    "823d4312-2405-43db-90ea-3d9b303ac07a",
+    "9014eea0-3b72-4461-95b2-663490f72e4c",
+    "effbb158-308b-4d5c-a1b2-ee0b6048f321",
+    "ac557772-fe52-462e-a93a-841275a69fd0",
+    "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
+  ],
+  "date": "2026-11-23",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "#1887 next slice 1, God-existence stage; note docs/notes/existence-in-essence-identity.md. Analyst formulations, attribution deferred; read: ST I q.2 a.1 and q.3 a.4 with ad 2 (New Advent), De ente c.4 (Miller), Kant CPR Transcendental Dialectic II.III.IV with note 67 (Meiklejohn, Gutenberg 4280), Hume Dialogues IX (Gutenberg 4583), SEP Existence, Essential vs. Accidental Properties s.1.1 and s.3, Possibilism-Actualism s.4.1.1 and s.4.2.1. Senses of 'existence belongs to an essence' registered as EXISTENCE_IN_ESSENCE (disambiguation f704b7ca): _1 conceptual containment, _2 essential truth (ESSENCE_5, unconditional), _3 act identity (ESSENCE_3 maps), _4 the existing OwnEssentialExistence, _5 consequential essential truth. New primitives: conceptual content (DEF 16c40fbe) and esse exercised at a point (DEF 25d4df96, WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_6). Results: ca973127 factors the unconditional bridge 565ccd6c into the act-fact link 3a2af70f and exercise in the nature 823d4312 (propext/funext; each needed); 63ac77e7 gives the 'possibly absent' verdict fe8c3a1d from Kant's conceptual thesis 9014eea0, concept adequacy effbb158, the essentialist account and unrequired-by-others (each needed; nonvacuous); controls 037bfce4 with 12 laws and models kantAquinas (Kant's thesis for a concept from effects, identity, exercise in the nature, essential existence and necessity jointly satisfiable; the thesis blocks the identity only through concept adequacy or the identity-to-concept bridge), conditionalIdentity (identity with the act-fact link, EC, a Kantian adequate concept and contingency jointly satisfiable), four Kant-adequacy and two factorization omission models. Law 11: within essentialism an actual being's nature entails its existence iff it is necessary. Law 12: serious-actualist essences with essence grounds necessity and a nonempty nature give necessity. Equivocation check: 565ccd6c passes from esse as act to existence as fact; the passage is the act-fact link, which both essentialisms accept; the modal dispute is carried by exercise in the nature (law 6).",
+  "blocker": "No premise is established. The B6 crux is now located in exercise in the nature (AN, 823d4312): no motivation for it was identified that does not run through the power/potency account (shared dependency with PGP/C2) or merely remove the De ente defeater; symmetrically, no motivation for existence-conditional essences at the identity case was identified that does not presuppose the being's contingency (serious actualism, law 11), rest on an unwarranted concept-adequacy bridge (Kant), repeat the unresolved conceivability argument (Hume), deny the identity's intelligibility instead (Frege/Russell), or point the other way (Fine's 'every'). The factorization treats essential truth as intensional over world-propositions; under Fine's hyperintensional reading it needs a further substitution premise. Next tests: whether the conditional form of an act-essence is coherent by EC's own standards; a hyperintensional essence theory giving EC a principled reason at act-essences; a substitution premise for the act-fact link inside the nature with a model where it fails; the act-of-being dispute (Kenny versus Gilson/Klima, navigation only), which bears on the identity clause of FoundationalAt itself.",
+  "evidence": [
+    "ca973127-f1a6-42d4-9a0e-a28ffedde569",
+    "63ac77e7-0d35-43c8-b0a8-54b8fd4d64b2",
+    "037bfce4-c040-4b73-9db0-dd284c848f3c"
+  ],
+  "current_assessment": {
+    "date": "2026-11-23",
+    "statement_ids": [
+      "565ccd6c-0036-4613-8595-f6f03d273a0d",
+      "857654fe-e33b-4726-a7d8-8cb4b74791e2",
+      "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
+    ],
+    "scope": "The B6 crux at a being with esse = essence (the foundational case of #1889): whether 'existence never belongs to an essence' makes the identity modally idle (ModalGrounding laws 3-4, EC 857654fe), or the identity puts existence in the nature (565ccd6c, f9b26559). Matching scope as in #1888 s.6; the general-theory comparison beyond this case is not in scope.",
+    "assessment": "The Kant-type thesis does not apply to the identity on any assessed motivation without a bridge or a presupposition: in the conceptual sense it is consistent with identity, essential existence and necessity, and reaches the identity only through concept adequacy for a Kantian concept, which Kant's arguments (positing, thalers, annihilation) do not establish at an act-essence; in the essential-truth sense (EC) its motivations presuppose contingency at the case or are the unresolved conceivability argument. This meets #1888's toward-PGP condition (d) as stated, closing an unassessed entry. Conversely the identity does not give essential existence by itself: the step needs exercise in the nature, whose identified support is shared with the power/potency route or removes a defeater, so f9b26559 adds no warrant beyond it. Within essentialism the dispute is the modal verdict (law 11). Parity at the foundational being stands, now located in exercise in the nature given the act-fact link both sides accept. Nothing is established; no formal status changes beyond the computed delta.",
+    "next_test": "Test whether the conditional form 'if x exists, its act of being is exercised' states the nature of an act-essence by EC's own standards, and whether a hyperintensional essence theory supplies EC a principled reason at act-essences; add a substitution premise for the act-fact link inside the nature with a model where it fails.",
+    "note": "docs/notes/existence-in-essence-identity.md#7-provisional-judgment-2026-11-23-evidence-revision-this-branch",
+    "reviewed_revision": "3895b122ceb7584c77c891f9989ac2ddca3cc750",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Proposed delivery on branch research/1887-existence-in-essence-identity; independent semantic challenge pending with the coordinator. Local gates: lake build, root imports, module check, truth check, bundle_audit, bind-check (3 bound), verify-result for the three results, attribution-check, docs_index.",
+    "supersedes": "none"
+  }
+}
