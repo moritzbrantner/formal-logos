@@ -1186,3 +1186,125 @@ argument; source-positive origin-to-conservation reason at matching scope;
 and F2 efficient/exemplar/final typed discrimination. No new registered
 root-path premise or `frontier-diff` effect is intended by this structural
 checkpoint.
+
+
+## 9. ¬C3 with a necessary originating source and the full #1614 source bundle (2026-11-23)
+
+### Positive rival sharpened: existential inertia need not be foundationlessness
+
+A more informative inertialist world than one with two contingent, unexplained
+sources is **one necessary concrete originator**, and a contingent concrete
+recipient that obtains its first act of existence from that source but then
+continues under an existential persistence rule without further `GivesAt`.
+For a begun effect, this proposal neither has to declare its initial actuality
+brute nor reject ultimate source arguments. It offers two explanatory roles:
+productive origination accounts for the recipient's first actual existence,
+and prior existence plus the absence of cessation (or a governing persistence
+constraint) accounts for its later persistence.
+
+The actual originator's necessary existence does not determine **which effect
+it originates, why then, or why this actual world is selected**. The former
+role may require selection by agency or an additional causal circumstance;
+this model does not type divine freedom or a complete account of creation.
+Nor does a stationary law alone explain the originator's necessity. Those
+explananda must be distinguished from the later-stage, **same-bearer**
+question. The positive no-change argument, defended by Schmid in his
+[Feser response](https://josephschmid.com/feser-on-schmid-on-existential-inertia-a-comprehensive-response/),
+does not demand that a continuing physical object *intrinsically causes itself
+at every time*: a no-cessation causal principle is a different explanatory
+proposal from a self-sustaining power. This is a reading of that cited public
+argument, not a new pinned corpus attribution.
+
+### Fixed dictionaries and verified targets
+
+The proposed formal comparison lives in
+`EsseCausePriority.InertialNecessaryOrigin`, consuming the same
+`C3ActualWorld.originGiving` and its strict-origin `CausesIn` through
+the shared `CausalityFrame`. The selected world is `true`; source
+`true` exists at every natural-number time in **both** accessible worlds,
+whereas rigid effect `false` begins at t=1 and continues at t=2 and later
+only in the actual world. `CoherentAtNow` holds at `now=2`.
+`EsseReceivedIn false ()` is interpreted by the existing receiver predicate,
+not by contingency itself. The model adds a second respect, heat, to let a
+composite effect actually have potency **without** being in act and in
+potency in the same respect.
+
+Three exact certificates are proposed:
+
+| Test | Positive joint commitments | Discriminating result |
+| --- | --- | --- |
+| `necessaryOriginWithoutConservation` | Existing `NecessaryActualRootAt` on the ancestry profile, `EveryContingentGroundedAt` at the actual world, contingent actual recipient, `OriginatesBeing`, giver contact, no cessation in the tested history | `40a97664` fails for the same received-esse recipient at t=2 and the distinct-origin `CausingAnothersBeingIsSustaining` bridge fails. The *source* is still present at t=2 and is de re necessary. |
+| `fullSourceOmission` | The other **ten source premises** from PR #1614's esse-priority cluster, reusing their unchanged Lean definitions at the same bearer, cause and respect; an actual source/recipient and positive persistence | With *no actual grounding edge* and `PriorSimply` empty, `cb1cdea9`, the two intermediate priority conclusions, first-being act-priority, first-being no-potency and no-component-first all fail at nonvacuous instances. This is a test of the complete ten-premise **source-level** remainder, not every ambient premise of an unrestricted God proof. |
+| `ancestorRouteWithoutConservation` | The same ten source premises, actual ancestry grounding from source to effect and corresponding `PRIOR_1` edge, plus the `cb1cdea9` cause→ground premise | Both derived esse-priority conclusions, the first-being no-potency result and no-component-first result can coexist with **¬`40a97664`**. The source remains necessary and ungrounded. |
+
+These controls distinguish two *assignments of the same* `ActualConcreteGround`
+and `PriorSimply` primitives. An **ancestry** reading permits a past
+originator to count as an actual cause, historical ground, and simply prior
+to its effect in the selected world even when no fresh being is given at
+the present moment. A **strict present-existential** reading denies that
+grounding edge and does not accept the cause→ground bridge. The types do not
+say whether the former matches the intended metaphysical sense of
+`ActualConcreteGround`; accepting it cannot bypass this interpretation
+choice by calling ancestry "ground" alone.
+
+The omission branch keeps the ten antecedent source claims; it does not
+require their *derived* conclusions as additional assumptions (that would
+make failure of those very conclusions impossible). Conversely, the positive
+ancestry branch composes the existing `actualEsseCausePriority`,
+`distinctEsseCausePriority`, `firstBeingNoPotencyOfEssePriority`,
+`weakOfEssePriority`, and `noComponentFirstOfEssePriority` theorems,
+rather than registering duplicated support alternatives.
+
+### Provisional warrant and cumulative effect
+
+**For ¬C3:** the originator can genuinely explain initial positive actuality
+and a persistence rule can furnish a valid conditional explanation of
+later existence. This avoids the special complaint that a merely unchanged
+history contains *no* positive originating cause. However a primitive
+diachronic-sufficiency law is still a substantive commitment, not derived
+from source necessity or from the sameness of the bearer. The strongest
+version can take such a law as governing, or as grounded in independently
+specified powers or natures. The Humean summary version has the different
+same-fact explanatory issue already analyzed in §7; do not transfer that
+objection to a primitive governing law without argument.
+
+**For C3:** Aquinas's *Summa theologiae* I q.104 a.1 argues that causing a
+thing's becoming is different from directly causing its being, and that an
+effect dependent on its cause *in the latter respect* requires conservation.
+The [article](https://www.ccel.org/ccel/aquinas/summa/summa.FP_Q104_A1.html)
+explicitly illustrates the builder's completed activity versus the
+underlying form/material powers. That supplies positive motivation for direct
+esse-conservation where dependence is already granted. The disputed further
+step is **why the contemporary actuality of this particular receiver must be
+of the directly dependent sort** rather than being the recipient of an
+originating cause and now persisting by law. Reasserting the conservation
+reading of `CausesIn`, or simply defining every `grounds` as productive
+`GivesAt`, would relocate C3 into the premise.
+
+**Cumulative status:** even a robust *actual necessary root* and the
+whole registered #1614 priority spine do **not**, under the supplied
+definitions, entail `40a97664`. Rejection of C3 is thus not automatically
+rejection of a necessary underived source, and adding C3 does not by
+itself prove the source necessary or divine. Equally, a successful Lean
+countermodel is a logical separation, **not** proof that the inertialist
+interpretation of received esse or ancestry is metaphysically admissible.
+Source-level confidence must come from the explanatory work, not a Boolean
+assignment.
+
+The exact live choice is whether origin plus a defensible persistence
+law is **ultimately sufficient for later actuality**, or whether a genuinely
+received act has to be supplied contemporaneously in a productive sense.
+Neither side has yet supplied a decisive independent comparative test at
+matching scope. The next useful investigation is an originator-withdrawal
+counterfactual at *fixed original effect history and fixed intrinsic powers*,
+compared with a productive-conservation proposal under the same world-selection
+standard. For a timeless conserved source, the effect index on `GivesAt`
+must remain distinct from the agent's time.
+
+**Verification/ownership:** these are proposed unregistered Lean certificates
+and a research assessment; the current PR's CI and independent challenge must
+pass before assigning them kernel-verified status. No new source attribution,
+claim, closure, registered result, or root-path premise is made. #1616's
+universal F2 treatment of non-efficient exemplar/final causes and the
+positive sense-3→5 argument remain open; the typed source-premise omission
+test addresses its narrower outstanding #1614 configuration.
