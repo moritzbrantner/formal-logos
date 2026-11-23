@@ -69,6 +69,7 @@ meaning = "Lack of GroundedTotality is not equivalent to law chaos, and law stab
 [[statement]]
 id = "Finite recombination plus prefix closure permits every complete suffix"
 lean = "RecombinationFork"
+disambiguations = ["b6e7ec07-9a8e-51c4-a9f8-c9b8e9922ac5"]
 definitions = [
   "10d0fb41-49a3-404f-898f-caabd0d0324e",
   "1e04df16-fe72-467a-bc25-785f0e94fc70",
