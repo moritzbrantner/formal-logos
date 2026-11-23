@@ -229,15 +229,15 @@ mere law of state succession.
 
 This section extends the earlier suffix-complete downstream results, without
 re-proving their forecast, law-projection or strict-norm consequences. The new
-certificate is \`NoFoundationLawChaos.RecombinationFork\` and its result record
-\`765d8679-3405-4276-be0f-f71b8248b863\`. Its scope is a fixed set
-\`allowed : Trace → Prop\` of **complete** Boolean histories, intersected with
-the same \`Cell (openFuture n) on n\` observed through \`n\`. The selector is
+certificate is `NoFoundationLawChaos.RecombinationFork` and its result record
+`765d8679-3405-4276-be0f-f71b8248b863`. Its scope is a fixed set
+`allowed : Trace → Prop` of **complete** Boolean histories, intersected with
+the same `Cell (openFuture n) on n` observed through `n`. The selector is
 not itself a grounded law, an explanation or metaphysical accessibility.
 
 ### Argument graph and exact assumptions
 
-\`\`\`text
+```text
 U: no sufficient ultimate why-this-total-order explanation
   X→ N: no essential/governing/modal transition constraints       [OPEN]
   X→ R: local temporal recombination (same history selector)     [OPEN]
@@ -254,9 +254,9 @@ Whole-order explanation (#736/#735), ontology of law (#743), epistemic
 norms (#932/#737) and the God-existence stage (#143):
   U-vs-necessary-ground comparisons remain relevant;
   U→R, U→C, ontic actuality, access and same-source production are OPEN.
-\`\`\`
+```
 
-Here **R** is precisely the \`OneStepRich\` *complete-history*
+Here **R** is precisely the `OneStepRich` *complete-history*
 extension property: given an already allowed history and a cutoff after the
 observed record, choose either next bit while keeping the previous finite
 segment; the resulting history must again be allowed by **the same selector**.
@@ -273,11 +273,11 @@ ontic absence-of-foundation premise occurs in either Lean implication.
 
 | Fixed complete-history selector (all share the observed prefix) | R / F | C | S | What this establishes |
 | --- | --- | --- | --- | --- |
-| \`finiteSwitchClass\` = eventually constant (finitely many switches) | yes / yes | no | no | At every finite cutoff the proposed pattern can be realized and then stabilized; the single infinite alternating trace is excluded. A stage-rich nonempty rival does **not** admit all infinite law/outcome schedules. |
-| \`stableOnlyClass\` = just the always-true history | no / no | yes | no | A positive stable history with strict law restriction can be closed. Closure alone does not create choices. The separate \`Omissions\` certificate already permits this alongside \`¬ GroundedTotality brute\`. |
-| \`allHistoryClass\` = every Boolean trace | yes / yes | yes | yes | A coherent fully unrestricted comparator; the downstream chaos certificate applies only once this strong selection is warranted. |
+| `finiteSwitchClass` = eventually constant (finitely many switches) | yes / yes | no | no | At every finite cutoff the proposed pattern can be realized and then stabilized; the single infinite alternating trace is excluded. A stage-rich nonempty rival does **not** admit all infinite law/outcome schedules. |
+| `stableOnlyClass` = just the always-true history | no / no | yes | no | A positive stable history with strict law restriction can be closed. Closure alone does not create choices. The separate `Omissions` certificate already permits this alongside `¬ GroundedTotality brute`. |
+| `allHistoryClass` = every Boolean trace | yes / yes | yes | yes | A coherent fully unrestricted comparator; the downstream chaos certificate applies only once this strong selection is warranted. |
 
-\`emptyHistoryClass\` satisfies R and C vacuously, but fails S, so actual
+`emptyHistoryClass` satisfies R and C vacuously, but fails S, so actual
 **population** is an additional necessary hypothesis for deriving F from R.
 It is not a candidate view of our populated world. These selectors are
 structural mathematical controls, not independently certified metaphysically
@@ -304,15 +304,15 @@ and retained background, rather than stipulate the conclusion.
 **Why might C hold?** If every admissibility exclusion has a *finite local
 witness*, then the complete-history class is closed under agreement on all
 finite prefixes: any excluded candidate has a finite prefix that excludes all
-its completions. For one fixed ordinary \`Profile\` with initial value and
-time-indexed pointwise transition constraints, a failure of \`Follows\` occurs
+its completions. For one fixed ordinary `Profile` with initial value and
+time-indexed pointwise transition constraints, a failure of `Follows` occurs
 either at time zero or at one finite successor pair. Thus its class of
 satisfying complete paths has this *mathematical* closure property. This is a
 positive structural rationale for C when **all** admissibility constraints
 really are of that form. It does not establish that ontic/metaphysical
 admissibility is exhausted by those local law equations.
 
-Conversely \`EventuallyConstant\` is an explicit *global tail requirement*:
+Conversely `EventuallyConstant` is an explicit *global tail requirement*:
 no fixed finite prefix identifies failure, because it can always be completed
 by a constant tail. It is a coherent extension policy with F but without C.
 This matters because metaphysical possibility may be sensitive to global
@@ -324,7 +324,7 @@ trace. A further modal closure or finite-witness account of all exclusions
 is the live philosophical premise. The model does **not** prove that
 eventually-constant global constraints are actually fundamental.
 
-**Law schedules versus state outcomes.** The old \`LawSwitch\` establishes
+**Law schedules versus state outcomes.** The old `LawSwitch` establishes
 that every Boolean history with the specified initial state has an *ex-post*
 deterministic copy/toggle schedule. That mathematical coding does not show
 that distinct schedules are independently physically available or can change
