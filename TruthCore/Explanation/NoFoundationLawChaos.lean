@@ -190,7 +190,8 @@ def FiniteRich (allowed : Trace → Prop) (n : Nat) : Prop :=
 
 /-- A genuine closure commitment on the admitted complete-history set:
 every prefix of a candidate is realized by some allowed complete history,
-so the candidate itself is allowed. This is stronger than finite richness. -/
+so the candidate itself is allowed. Closure and finite richness are independent:
+neither implies the other; their conjunction yields whole-suffix richness. -/
 def PrefixClosed (allowed : Trace → Prop) (n : Nat) : Prop :=
   ∀ f, Cell (openFuture n) on n f →
     (∀ m, ∃ g, Admitted allowed n g ∧
