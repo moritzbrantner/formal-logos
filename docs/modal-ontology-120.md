@@ -328,6 +328,23 @@ stated inconsistent core, but incurs the specific explanatory or interpretation
 obligation already discussed there. No full-profile contradiction follows
 until the corresponding cross-vocabulary assumptions are supported.
 
+**Exact cross-family consumers and obstacles.** The existing
+[RootIntellectWill](../TruthCore/Causality/RootIntellectWill.lean)
+conclusion preserves one actual necessary source with represented
+essence/esse identity, simplicity, intellect and will. Its own documented
+conclusion does **not** include omniscience, moral impeccability or free
+selection, and it does not identify that bearer as `σ.IsGod`. The
+[GodNamingSenses](../TruthCore/Causality/GodNamingSenses.lean)
+`NoOtherPossibleGod` and `GodhoodEssentialToGod` conditionally connect
+a world-varying description to the root's world-invariant God predicate;
+they do **not** show that the presently selected thirteen predicates are a
+sufficient description of the actual source. A future same-witness bridge must
+import the same source and selected senses and justify its naming implication
+rather than substitute an already asserted GOD_4 witness. This is why the
+actual-root support currently reaches only a **partial** candidate for the
+ontological possibility premise, notwithstanding the stronger structural modal
+helper.
+
 **Other explicit compatibility tests.** Under the existing
 `NamingVeracityBatch1.Power` interpretation, `CanDo` a coherent task and
 actually **doing** it are different relations. Impeccability construed as
