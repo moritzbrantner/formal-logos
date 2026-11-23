@@ -198,7 +198,7 @@ export function ArgumentFlow({ corpus, rootArgumentId }: ArgumentFlowProps) {
       <ReactFlow
         edges={edges}
         fitView
-        fitViewOptions={{ padding: 0.18 }}
+        fitViewOptions={{ padding: "7.63%" }}
         maxZoom={1.5}
         minZoom={0.35}
         nodes={nodes}

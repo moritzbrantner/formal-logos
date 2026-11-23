@@ -939,7 +939,7 @@ export function PropositionGraphExplorer({
                   });
                 }
               }}
-              fitViewOptions={{ padding: 0.12, minZoom: compact || state.view === "dispute" ? 0.05 : 0.4 }}
+              fitViewOptions={{ padding: "5.36%", minZoom: compact || state.view === "dispute" ? 0.05 : 0.4 }}
               key={flowKey}
               maxZoom={1.6}
               minZoom={0.05}
