@@ -56,4 +56,101 @@ theorem checks : OptimalChoiceCertificate := by
         exact tiedOptimal v
     · intro h
       cases h
+
+/-! The following are additional #1737 structural controls. They do not modify
+the existing frozen \`OptimalChoiceCertificate\` or any registered premise. -/
+
+/-- Kernel-checkable three-world model. No divine/free-agency interpretation
+follows from the satisfiability of the displayed finite assignments. -/
+theorem threeWorldCreationChecks : ThreeWorldCreationControl := by
+  decide
+
+/-- Both produced creatures are tied optima under the fixed created-candidate
+comparison. The no-creation world has no performance or output, rather than
+a spurious \`none\` output being scored against created candidates. -/
+theorem threeWorldOptimalOutputs :
+    OptimalOutputs threeWorldCreation (some false) () tiedCandidates tiedQuality := by
+  intro v _
+  constructor
+  · intro hp
+    cases v with
+    | none =>
+      exact False.elim (hp rfl)
+    | some b =>
+      exact ⟨some b, ⟨by decide, rfl⟩⟩
+  · intro x hx
+    change v ≠ none ∧ x = v at hx
+    rcases hx with ⟨hn, rfl⟩
+    cases v with
+    | none => exact False.elim (hn rfl)
+    | some b => exact tiedOptimal b
+
+/-- Deleting only cross-world positive output while retaining the same rigid
+act and unique optimal *created* candidate leaves the effect contingent. -/
+theorem omissionStructureChecks : OmissionStructureControl := by
+  decide
+
+theorem soleCreatedOptimal :
+    Optimal soleCreatedCandidate tiedQuality firstEffect := by
+  refine ⟨(by simp [soleCreatedCandidate]), ?_⟩
+  refine ⟨⟨firstEffect, (by simp [soleCreatedCandidate]), rfl⟩, ?_⟩
+  rintro _ ⟨x, _, rfl⟩
+  exact Nat.le_refl 0
+
+theorem soleCreatedUnique :
+    ∀ x y, Optimal soleCreatedCandidate tiedQuality x →
+      Optimal soleCreatedCandidate tiedQuality y → x = y := by
+  intro x y hx hy
+  have hx' : x = firstEffect := by simpa [soleCreatedCandidate] using hx.1
+  have hy' : y = firstEffect := by simpa [soleCreatedCandidate] using hy.1
+  exact hx'.trans hy'.symm
+
+/-- Total optimal output remains true when productive exercise is optional:
+it requires output only where that act is performed. -/
+theorem optionalOmissionOptimal :
+    OptimalOutputs optionallyPerformedOmission true ()
+      soleCreatedCandidate tiedQuality := by
+  intro v _
+  constructor
+  · intro hv
+    exact ⟨firstEffect, ⟨hv, rfl⟩⟩
+  · intro x hx
+    change v = true ∧ x = firstEffect at hx
+    rw [hx.2]
+    exact soleCreatedOptimal
+
+/-- All produced objects are optimal in the universal-performance alternative,
+but at the omission world no output exists. -/
+theorem universalOmissionOutputOptimal :
+    ∀ v x, alwaysPerformedOmission.output v () x →
+      Optimal soleCreatedCandidate tiedQuality x := by
+  intro v x hx
+  change v = true ∧ x = firstEffect at hx
+  rw [hx.2]
+  exact soleCreatedOptimal
+
+/-- Unique feasible optimum + worldwise optimality + SameActEverywhere do not
+imply the positive-output-totality conjunct of \`OptimalOutputs\`.
+This exactly isolates an extra premise of \`uniqueOptimalStable\`. -/
+theorem universalOmissionNotTotal :
+    ¬ OptimalOutputs alwaysPerformedOmission true ()
+      soleCreatedCandidate tiedQuality := by
+  intro h
+  obtain ⟨x, hx⟩ := (h false (Or.inr True.intro)).1 True.intro
+  change false = true ∧ x = firstEffect at hx
+  exact Bool.noConfusion hx.1
+
+/-- Joint controls: same source, unique candidate, optional exercise versus
+same-act but omitted output. The source/effect meanings and ontology are fixed. -/
+theorem omissionChoiceChecks :
+    Optimal soleCreatedCandidate tiedQuality firstEffect ∧
+    (∀ x y, Optimal soleCreatedCandidate tiedQuality x →
+      Optimal soleCreatedCandidate tiedQuality y → x = y) ∧
+    OptimalOutputs optionallyPerformedOmission true () soleCreatedCandidate tiedQuality ∧
+    (∀ v x, alwaysPerformedOmission.output v () x →
+      Optimal soleCreatedCandidate tiedQuality x) ∧
+    ¬ OptimalOutputs alwaysPerformedOmission true () soleCreatedCandidate tiedQuality := by
+  exact ⟨soleCreatedOptimal, soleCreatedUnique, optionalOmissionOptimal,
+    universalOmissionOutputOptimal, universalOmissionNotTotal⟩
+
 end TruthCore.Results.Modal.OptimalCreationChoice
