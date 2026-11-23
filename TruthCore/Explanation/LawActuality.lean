@@ -153,7 +153,7 @@ law's physical/metaphysical applicability or for ultimate source selection. -/
 def LimitCertificate : Prop :=
   CoherentAtNow disappearsAtLimit ∧
   CoherentAtNow existsAtLimit ∧
-  (∀ x n, disappearsAtLimit.IsAt () x (n : WithTop Nat) ↔
+  (∀ x (n : Nat), disappearsAtLimit.IsAt () x (n : WithTop Nat) ↔
     existsAtLimit.IsAt () x (n : WithTop Nat)) ∧
   FiniteStepPersistence disappearsAtLimit ∧
   FiniteStepPersistence existsAtLimit ∧
