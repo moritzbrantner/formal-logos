@@ -665,7 +665,9 @@ formulations without new Plantinga attribution.
 
 Here C1 is the totality esse-cause commitment (#1882), C2 the
 receptivity-or-prior-reception commitment (#1884), C3 weak concurrent
-actualization (attempt `40a97664`, #1885/#1886), and C4 the
+actualization (#1885/#1886; its statement `40a97664`, "whatever
+has received esse is given being by something whenever it is
+present"), and C4 the
 eminence/noesis question (draft #1892).
 
 The existing Interpreted.positiveCore_with_ten_from_same_root takes ONE
@@ -759,21 +761,34 @@ every accessible world and RespectSuffices (the decree suffices for
 the effect at those worlds) gives ¬ContingentAt for the effect.
 Clause 4 states the dilemma in the other direction: for a contingent
 effect, some accessible world lacking it has no decree, or
-ModalCapacity fails. So the concrete ¬C5 next test is the residual
-open bridges of RootExposure applied to the C5 source: ModalCapacity,
-the reading of a creative decree as a respect of the source,
-ExclusiveDecree, a decree at each accessible world, and
-RespectSuffices. Mapping note: fixedProfile's immutable slot uses
-StageTwo IsImmutable over a world-free InPotency, whereas
-RootExposure's ReadingsAt is world-indexed (IsImmutable (InPotency
-w)); the C5 slot maps to RootExposure's by the constant family
-fun _ => InPotency. Under that mapping, with the world-free q.InAct
-of fixedProfile, no respect varies across worlds at all, so a
-world-varying decree cannot be one of those respects: the
-decree-as-respect bridge needs a world-indexed InAct that the C5
-profile does not supply. Neither RootExposure nor this note asserts
-the readings, ModalCapacity, or that divine simplicity entails
-them.
+ModalCapacity fails. In the general, world-indexed RootExposure, the
+open inputs are ModalCapacity, a creative decree read as a respect of
+the source, ExclusiveDecree, a decree at each accessible world and
+RespectSuffices.
+
+Mapping to the C5 encoding: fixedProfile's immutable slot uses StageTwo
+IsImmutable over a world-free InPotency, and its perfect slot a
+world-free q.InAct, whereas RootExposure's ReadingsAt and InAct are
+world-indexed. The C5 encoding maps to RootExposure by the constant
+families fun _ => InPotency and fun _ => q.InAct. Under the constant
+family, decree-as-respect plus RespectSuffices alone collapses
+contingency: if the decree d is a respect of the source, it holds at
+every world, so RespectSuffices puts the effect at every accessible
+world and ¬ContingentAt follows, with no ModalCapacity, IX.6 reading,
+immutability, ExclusiveDecree or decree-at-each-world
+(Interpreted.constant_respect_collapses_contingency, an unregistered
+helper). So the C5 encoding can host a contingent effect only if
+creative decrees are not InAct-respects of the source (RootExposure's
+oneRespect exit, where no decree is a respect) or RespectSuffices
+fails. A world-varying decree-as-respect would need InAct re-indexed
+by world, and whether the source's acts may vary by world is exactly
+the contested point. The world-free q.InAct is itself rigid by
+construction, an encoding artifact like fixedProfile_rigid, and is
+evidence for neither side. For the C5 source the concrete ¬C5 next
+test is therefore the two live inputs decree-as-respect and
+RespectSuffices. Neither RootExposure nor this note asserts the
+readings, ModalCapacity, decree-as-respect, or that divine simplicity
+entails them.
 
 The rival account must explain how one
 timeless rational source nonnecessitatingly produces one of
@@ -826,23 +841,29 @@ complete C5 premise is NOT established. The strongest actual
 negative result, #555, is an exact conditional inconsistency;
 its necessary-act/strict-efficacy reading remains disputed and
 is not derived from the selected full profile. The registered
-SIMPLICITY-ROOT-EXPOSURE bridge comes closest, deriving
-¬ContingentAt from immutability (a C5 slot) and the IX.6 potency
-reading, but only with its open ModalCapacity, decree-as-respect,
+SIMPLICITY-ROOT-EXPOSURE bridge comes closest. In its general,
+world-indexed form it derives ¬ContingentAt from immutability and
+the IX.6 potency reading with open ModalCapacity, decree-as-respect,
 ExclusiveDecree, decree-at-each-world and RespectSuffices inputs.
-Thus ¬C5 is also NOT established. The positive route warrants
-further work on its concrete missing predicates; the negative
-route warrants a targeted test of those RootExposure inputs for
-the C5 source, decree identity and strict efficacy. Neither
+For the C5 source, whose world-free q.InAct is rigid by construction,
+decree-as-respect plus RespectSuffices alone already collapse
+contingency; these two are the live inputs there, and neither is
+established. Thus ¬C5 is also NOT established. The positive route
+warrants further work on its concrete missing predicates; the
+negative route warrants a targeted test of whether a creative decree
+is an InAct-respect of the source and whether it strictly suffices
+for its effect. Neither
 absence of contradiction nor lack of a full model decides the case.
 
 **Next tests and revision conditions:** obtain intrinsic and
 all-content cognitive uptake from #1866/#1873 rather than a
 truth-oracle proxy; justify or refute #555's same-creative-act
 bridge under #1737's contingent rational choice, concretely by
-testing RootExposure's ModalCapacity, decree-as-respect (which
-needs a world-indexed InAct), ExclusiveDecree, decree-at-each-world
-and RespectSuffices inputs for the C5 source; test whether the
+testing the two live inputs for the C5 source, decree-as-respect
+(a creative decree as an InAct-respect of the source) and
+RespectSuffices, keeping ModalCapacity, ExclusiveDecree and
+decree-at-each-world for the general world-indexed RootExposure,
+and whether re-indexing InAct by world is warranted; test whether the
 fixedProfile root premises entail the one slot at M-successors;
 establish
 selected-root uniqueness across M without definitional

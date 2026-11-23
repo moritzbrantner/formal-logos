@@ -841,6 +841,25 @@ theorem candidate_possible_from_same_root {P R C A : Type} (σ : Signature)
       Capable Imposed p rfl hTen hComplete
   exact ⟨⟨w, hRef, n, hGreat⟩, n, hCore, hGreat⟩
 
+/-- Decree-as-respect collapses contingency under the constant family. Read
+`SimplicityCollapse.RespectSuffices m InAct' w g d x` with the constant family
+`InAct' := fun _ => InAct` (the C5 encoding's world-free `q.InAct`); its body is
+then exactly `hSuffices`. If the decree `d` is a respect of `g`, it holds at
+every world, so the effect exists at every accessible world and is not
+contingent at `w`. No ModalCapacity, IX.6 reading, immutability,
+ExclusiveDecree or decree-at-each-world is used. The world-free `InAct` is
+rigid by construction, an encoding artifact like `fixedProfile_rigid`, and is
+evidence for neither C5 nor its negation; under it a contingent effect requires
+that the decree not be an `InAct`-respect of the source or that respect
+sufficiency fail. Unregistered helper. -/
+theorem constant_respect_collapses_contingency {R : Type} (m : Ontic W B)
+    (InAct : B → R → Prop) (w : W) (g x : B) (d : R)
+    (hDecree : InAct g d)
+    (hSuffices : ∀ v, m.frame.access w v → InAct g d → m.ExistsAt v x) :
+    ¬ TruthCore.German.Kant.CosmologicalInference.ContingentAt m w x := by
+  rintro ⟨_, v, hV, hAbsent⟩
+  exact hAbsent (hSuffices v hV hDecree)
+
 /-! ## Restoring the omitted source and intentional-output constraints
 
 Uses exactly the previous NecessaryVariableEffects.alternatingEffects model,
