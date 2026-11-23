@@ -262,6 +262,75 @@ theorem sourceFreeFiniteCircle : SourceFreeFiniteCircleControl := by
     change true ≠ false
     decide
 
+/-- Pure transmission cannot select a populated world uniquely: the
+all-absent state satisfies every rule that only activates from already-active
+actual esse-cause suppliers. This holds on any carrier, with no WF assumption. -/
+theorem emptyFixedOfEntirelyBorrowed (p : Profile B P R)
+    (rule : (B → Prop) → B → Prop)
+    (hBorrow : EntirelyBorrowedRule p rule) :
+    SupplierStateFixed rule (fun _ => False) := by
+  intro x
+  constructor
+  · intro h
+    obtain ⟨c, _, hc⟩ := hBorrow _ x h
+    exact hc
+  · intro h
+    exact False.elim h
+
+/-- If the same entirely borrowed rule admits an inhabited fixed state, it
+also admits a distinct empty fixed state. In particular no mathematical
+uniqueness claim can select that populated state under this precise rule.
+This does NOT deny its possible actuality or any nonproductive feedback. -/
+theorem populatedBorrowedStateNotUnique (p : Profile B P R)
+    (rule : (B → Prop) → B → Prop) (state : B → Prop)
+    (hBorrow : EntirelyBorrowedRule p rule)
+    (hState : SupplierStateFixed rule state) (hPop : ∃ x, state x) :
+    ∃ other : B → Prop,
+      SupplierStateFixed rule state ∧ SupplierStateFixed rule other ∧ other ≠ state := by
+  refine ⟨fun _ => False, hState, emptyFixedOfEntirelyBorrowed p rule hBorrow, ?_⟩
+  intro hEq
+  obtain ⟨x, hx⟩ := hPop
+  have hEqAt := congrArg (fun f : B → Prop => f x) hEq
+  exact hEqAt.mpr hx
+
+/-- A UNIQUE populated fixed state under the seed-or-borrowed necessary
+condition needs some seed. The proof does not identify that seed with an
+actual bearer, or derive the actuality of the unique mathematical solution. -/
+theorem uniquePopulatedStateNeedsSeed (p : Profile B P R)
+    (seed : B → Prop) (rule : (B → Prop) → B → Prop) (state : B → Prop)
+    (hRule : SeedOrBorrowedRule p seed rule)
+    (hState : SupplierStateFixed rule state) (hPop : ∃ x, state x)
+    (hUnique : ∀ other : B → Prop, SupplierStateFixed rule other → other = state) :
+    ∃ x, seed x := by
+  classical
+  by_contra hNone
+  have hBorrow : EntirelyBorrowedRule p rule := by
+    intro proposed x hx
+    rcases hRule proposed x hx with hSeed | hSupplier
+    · exact (hNone ⟨x, hSeed⟩).elim
+    · exact hSupplier
+  obtain ⟨other, _, hOther, hNe⟩ :=
+    populatedBorrowedStateNotUnique p rule state hBorrow hState hPop
+  exact hNe (hUnique other hOther)
+
+/-- One narrower sufficient source principle, without universal WF or CCR.
+The additional OPEN bridges say that independent seed inputs really activate
+in this fixed state and are actual, uncaused bearers in precisely the same
+esse-cause relation. The result obtains ONE r-root in the state, not finite
+root access for every other bearer or the same-source/God conclusion. -/
+theorem uniquePopulatedStateHasActualRoot (p : Profile B P R)
+    (seed : B → Prop) (rule : (B → Prop) → B → Prop) (state : B → Prop)
+    (hRule : SeedOrBorrowedRule p seed rule)
+    (hSeedRoot : SeedIsActualEsseRoot p seed)
+    (hSeedActive : ∀ x, seed x → rule state x)
+    (hState : SupplierStateFixed rule state) (hPop : ∃ x, state x)
+    (hUnique : ∀ other : B → Prop, SupplierStateFixed rule other → other = state) :
+    ∃ n, state n ∧ p.InAct n p.esse ∧ ∀ c, ¬ ActualEsseCause p c n := by
+  obtain ⟨n, hn⟩ :=
+    uniquePopulatedStateNeedsSeed p seed rule state hRule hState hPop hUnique
+  obtain ⟨hActual, hUncaused⟩ := hSeedRoot n hn
+  exact ⟨n, (hState n).mp (hSeedActive n hn), hActual, hUncaused⟩
+
 theorem singletonPopulation : SingletonPopulationControl := by
   let p : Profile Unit Bool Unit := {
     InAct := fun _ _ => True

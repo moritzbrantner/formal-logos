@@ -2116,6 +2116,183 @@ whether the control proves precisely its stated conjuncts. Validate
 the Lean file and normal delivered-head checks. No independent review
 or new proof certification is asserted in this draft.
 
+## Supplier-rule selection test: unique feedback versus underived actual input (#1724, #1616; 2026-11-23)
+
+**Question and fixed semantics.** Can an all-received *actual-esse-cause* network
+supply its own actual obtaining merely because the whole has a unique global
+fixed-point solution? This test refines the prior [complete existential-supply
+comparison](#complete-existential-supply-comparison-supplier-cones-and-actual-constitution-1724-1616-2026-11-23);
+it does **not** repeat its finite circle or infinite chain proofs. The selected
+`p : Question3.Article4.Profile B P R` and
+`ActualEsseCause p c x` retain their world-free, mode-unspecified, same-respect
+guards. A proposed `state : B → Prop` and
+`rule : (B → Prop) → B → Prop` describe a *mathematical assignment and
+constraint*, not automatically the actual bearers, exercises or worlds of `p`.
+The condition `SupplierStateFixed rule state` says precisely
+`∀ x, rule state x ↔ state x`.
+
+**New typed discriminator (Lean helper theorems, not registered argument
+results):**
+
+- `EntirelyBorrowedRule p rule` means that in **every candidate state**, if
+  the rule activates x, some *active* c satisfies **this** `ActualEsseCause p c x`.
+  `ClosedEsseSource.emptyFixedOfEntirelyBorrowed` proves that the all-absent
+  assignment is a solution. `populatedBorrowedStateNotUnique` proves that
+  **any** populated fixed solution has a distinct empty fixed solution.
+  This holds for *any carrier* and imposes **no** well-foundedness, finiteness,
+  acyclicity, transitivity or conservation-law assumption.
+- `SeedOrBorrowedRule p seed rule` allows a **seed-labelled
+  activation exception** to borrowing in the rule's disjunction. The seed
+  predicate is not required to denote an underived or even actual bearer;
+  this is a one-way constraint, not a sufficiency or instantiation claim. `uniquePopulatedStateNeedsSeed` says that a populated
+  fixed solution **unique among all solutions, including empty**, entails
+  `∃ x, seed x`. The proof is by excluding the all-absent solution, not by
+  stipulating induction/least-fixed-point semantics.
+- `uniquePopulatedStateHasActualRoot` adds two explicit, **OPEN application**
+  commitments: any seed is a genuinely actual r-uncaused bearer
+  (`SeedIsActualEsseRoot`), and a seed activates in the selected solution.
+  It then yields an **active actual underived r-root**. The latter two bridges
+  are precisely where an *independently existent producer* differs from an
+  abstract law or bare positive bias. Neither bridge follows from uniqueness,
+  `ActualEsseCause`, population or Lean's empty-state proof.
+
+**Essential adequacy warning.** The profile `p` fixes `InAct` and
+therefore fixes which `ActualEsseCause` arrows pass their actuality guards;
+the candidate state **does not vary the actual profile**. In particular,
+the empty assignment is *not* a counter-world in which no bearer of `p`
+exists. It is a second mathematical assignment to an abstract activation
+constraint built over the fixed r. Applying this no-input result to existential
+production requires a further **OPEN** bridge that the candidate assignments
+are the relevant admissible total-existence alternatives, with a consistent
+variation of `InAct` and productive `CausesIn` if reality varies. A global
+rule that requires some existent, or a domain with a necessarily actual
+substrate, need not admit the empty state. The theorem does not contradict
+the stronger world-indexed holistic account without that application.
+
+**Novelty boundary.** The zero/positive fixed-point split is structurally
+anticipated by `Logic.Regress.Graph.transmission` (lfp versus gfp) and
+`ContractiveBorrowedPower.ZeroExercise` (under contraction and zero
+preservation). The new theorem does **not** discover that fixed points
+generally have this property. Its increment is the expressly quantified
+all-candidate `ActualEsseCause` activation condition, the converse
+unique-populated/seed inference **without contraction or WF**, and the
+explicit, separately named *same-r actual-root* bridge. No additional
+independent evidential warrant is claimed from reusing the same mathematical
+zero-solution reasoning.
+
+**Independent semantic challenge and repaired countermodel (PR #1878,
+2026-11-23).** The theorem establishes the existence of a *seed-labelled
+exception* to the all-borrowed activation rule, **not** source independence.
+This is not merely a terminological objection: use the already verified
+`sourceFreeFiniteCircle` profile, take `seed := fun _ => True`,
+`rule := fun _ _ => True` and the all-true state. The seed-or-borrowed
+condition holds, the state is populated and uniquely fixed (pointwise, under
+the constant-true rule), but every bearer still has an actual incoming
+`ActualEsseCause`, so there is no r-root. The independent reviewer
+identified this counterexample at the previous head; it is a reuse of
+the existing circle's relation assignments and the present definitions,
+**not** a newly registered or checked joint metaphysical model. The root
+conclusion remains conditional on `SeedIsActualEsseRoot` **and** seed
+activation. The diagram now marks the r-to-rule application OPEN and
+relabels the exception before those bridges. This is one targeted P1
+repair of the review's actual final-synthesis claim, not new support
+for a primitive source.
+
+The first result is a discriminating *conditional incompatibility*: jointly
+claiming (i) no activation without some already active supplier, (ii) a
+populated fixed solution and (iii) **uniqueness among all fixed solutions**
+is inconsistent. There is no such contradiction if the uniqueness quantifier
+ranges only over *populated* states, if the law rejects the empty state by an
+independently defended global actuality constraint, if non-supplier inputs are
+permitted, or if `rule` is not an existential production rule. Nor does the
+mere presence of a mathematical nonempty solution establish that it obtains.
+
+~~~mermaid
+flowchart TD
+  R["Same-r ActualEsseCause: existing q3a4 dictionary"] -. "OPEN productive rule application" .-> N["No activation without active r-input"]
+  F["Populated fixed solution"] --> D{"Distinct empty solution?"}
+  N --> E["All-absent state fixed"]
+  E --> D
+  D --> C["Therefore not unique among ALL solutions"]
+  U["Unique populated state among ALL solutions"] --> S["Some seed / activation exception required"]
+  F --> S
+  SEED["Activation requires seed OR active r-input"] --> S
+  S --> V["OPEN: seed activates; is actual underived r-root"]
+  V --> ROOT["One actual r-uncaused bearer in selected state"]
+  ROOT -. "Does not establish supplier access" .-> CCR["CCR / 20babef7: every local supplier cone rooted"]
+  CCR --> COMMON["Existing c6d92415 / c35b1a5c (plus coverage, uniqueness, population, EM)"]
+  COMMON --> GOD["Existing same-witness necessity/GOD_4 only through separate OPEN bridges"]
+~~~
+
+**Reused discrimination rather than re-created models.** In #311,
+`UniqueFeedback.Controls` already gives a unique nonempty Boolean state with
+a negating gate and a conjunction gate. Its first gate is **not** a
+purely borrowed, no-spontaneous-activation rule: at the empty assignment it
+can produce a true output. The present theorem therefore does **not** refute
+that structural model; a proponent must say whether the negating/selection
+rule is a productive actuality input, an independently necessary structure,
+a global constraint on admissibility, or only a mathematical description.
+The unique Int-history result in the existing
+[explanatory-selection note](explanatory-selection-736.md#unique-global-solution-with-no-first-stage)
+likewise has an additional global restriction. Neither model certifies
+metaphysical production. #1871's `SourceFreeFiniteCircleControl`,
+`EssentialPowerUnderdetermined`, `DerivativeJointPower.SourceFreeControl`
+and `EsseSource.InfiniteRegressControl` already witness coherent local
+source-free assignments; their proofs are not repeated. Their positive
+actuality claim needs an *additional* selection/obtaining account if
+all-absent states satisfy their exact proposed activation law.
+
+### Comparative result at matching explanatory scope
+
+| Account | Positive explanatory success | Consequence of the new discriminator and live commitment |
+| --- | --- | --- |
+| Only borrowed positive production, finite circle or infinite actual-esse chain | Explains transmission from already actual suppliers, whether finitely or infinitely many | If **all** activation needs previously active suppliers in each admissible state, an empty solution remains: a *uniquely forced nonempty* whole is unavailable under this law alone. A primitive actual selection remains coherent. |
+| Actual constitutive whole with a unique global configuration | Explains relative arrangement and member co-obtaining *given* the real whole and its rule | Global uniqueness **under a global constraint** can survive, especially with non-positive gates or nonempty-only admissibility. The obtaining of the constraint/whole remains a distinct question, not logically inconsistent. If the whole is itself an underived actual r-supplier, an explicit whole→member productive bridge could connect it to CCR. |
+| Genuine mutual constitutive or explanatory feedback | Can give nonproductive reciprocal determination without temporally preceding or creating oneself | The theorem applies only if this is further read as *positive existential activation solely by active r-suppliers*. That bridge must be defended; a mutual full-ground mechanism may instead take actual organization as primitive. |
+| Existential inertia with past bearer plus law | Explains later continuation conditional on earlier actual presence and absence of a destroyer | Not a same-time r-activation equation. An infinite earlier history may fix a profile only with a global boundary/instantiation condition; `#1616`'s temporal-to-world and origin→sustain bridges remain OPEN. The positive diachronic explanation stands at its proper explanandum. |
+| Underived concrete source with genuine productive ability | Explains derivative recipients from an independently actual producer, while accepting nonproductive secondary causes | If an input really is active and r-uncaused, the source theorem yields *some* root without WF. Unique solution is a separate assumption; common supplier-cone access, source uniqueness, modal necessity, pure actuality and simplicity **do not** follow from this proof. |
+| Necessary or brute whole actuality as primitive | Gives a legitimate stopping proposal for actual instantiation rather than a merely conditional member explanation | A necessary-global-structure account must defend its modal and realization interpretation; a brute obtaining account openly declines further existential explanation. Apply the same adequacy test to the source's primitive act, rather than declaring either primitive inexplicable by fiat. |
+
+**Cumulative provisional assessment (2026-11-23, base
+`f3e13e5f6ab2970c34351e7ef294dccbf276815a`).**
+This test adds *conditional positive leverage*, not a new unconditional
+foundation proof. The strongest inference from unique nonempty rule selection is a
+**labelled activation exception**, not the actual production or independence
+of that exception. The constant-true seeded source-free profile described
+above is an explicit structural counterinterpretation to the stronger
+automatic seed→source reading.  Purely input-borrowing positive laws do not uniquely select
+an actually populated global assignment; the source-backed account can
+supply the missing input **if** it provides independently actual productive
+being. The holist can retain a real, source-free and self-organizing whole
+by defending its own primitive obtaining or a richer rule, so there is no
+general refutation of holistic actuality or source-free infinite causation.
+Against the same entire-order explanandum, the foundation case remains
+**modestly favorable on an exhaustively productive per-se reading**, while
+the global primitive versus unreceived-act contest is **not decided**.
+This finding strengthens precision of the existing warrant, not the truth
+status of `20babef7`. The connection to `c6d92415` remains exactly
+as in #1871; an isolated root theorem cannot be substituted for supplier-cone
+closure or same-source reachability. The downstream necessary-being,
+pure-actuality and simplicity bundles retain all their independent open
+bridges and no new computed premise is discharged.
+
+**Semantic self-sweep, boundaries and next test.** The new theorem's
+all-states quantifier matters: restricting uniqueness to nonempty states
+would invalidate the conclusion. A fixed state is an abstract solution,
+not an instantiated world; `ActualEsseCause` here has no temporal index,
+efficient-causing tag or actual-exercise witness. `SeedIsActualEsseRoot` is
+an explicitly strong application bridge, not a derived source fact, and
+the last theorem shows **one root**, not global CCR. These are
+unregistered helpers awaiting delivered-head Lean CI (not Comparator
+certificates); no corpus statement, source attribution, argument or
+existing semantic sense is changed. **Independent semantic challenge** is
+required on the final note and formal types before using the sharpened
+ranking as reviewed support. A useful next test is a *positive*, actually
+instantiated holistic rule with genuine member/exercise identity and
+productive supply, and an explicit reason the no-input state is not an
+admissible rival, compared against an underived bearer under the **same**
+adequacy criterion. A distinct #1616 test must preserve the *same bearer*
+over time rather than importing the world-free r as a sustaining cause.
 
 ## C1: can an entirely derivative reality account for its own actuality? (#1724, #1616; 2026-11-23)
 
@@ -2128,8 +2305,9 @@ provisional judgment. It reuses, and does not repeat, the
 above, the #1871 finite circle, the infinite and rooted controls of
 `ClosedEsseSource`, `DerivativeJointPower`, `UniqueFeedback`, the
 lfp/gfp regress models of `TruthCore/Logic/RegressDomains.lean`, the #751
-actual-world-gap results and the #1109 whole-to-parts work. Open PR #1878's
-supplier-rule selection theorems are cited only as an unmerged proposal.
+actual-world-gap results and the #1109 whole-to-parts work. The
+supplier-rule selection theorems of #1878 (merged; section above) are cited,
+not re-derived.
 
 ### Fixed meaning: two readings of "something underived"
 
@@ -2213,7 +2391,7 @@ it. Three motivations, each with its recorded objection:
   judgment, not a theorem, and it is the main ground of the judgment below.
 - **Selection.** Within the activation-law model of `Logic.RegressDomains`, a
   purely transmitting law is also satisfied by the all-absent assignment (lfp
-  empty, gfp full; #1878's `emptyFixedOfEntirelyBorrowed`, unmerged). So the
+  empty, gfp full; #1878's `emptyFixedOfEntirelyBorrowed`, merged). So the
   regress's own law fits the actual and the empty pattern alike. *Parity:* a
   foundation with a merely contingent source has the same gap, since its law is
   satisfied with the source inactive. The point discriminates only for a source
