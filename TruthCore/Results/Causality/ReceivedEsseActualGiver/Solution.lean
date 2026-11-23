@@ -86,12 +86,6 @@ theorem absentSourceSeparatesB2FromActualGiver :
       TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceFrame.history.ontic
       TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceFrame.CausesIn
       TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceFrame.esse true := by
-  simp [ContingentHasDistinctEsseCause, ContingentHasActualEsseGiverAt,
-    UnitingCausesPresent, TruthCore.German.Kant.CosmologicalInference.ContingentAt,
-    TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceFrame, TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceExists,
-    TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceCauses,
-    TruthCore.Causality.FirstMoverNecessity.Model.mk,
-    TruthCore.Causality.FirstMoverNecessity.Model.noPrior,
-    Bool.forall_bool]
+  decide
 
 end TruthCore.Results.Causality.ReceivedEsseActualGiver
