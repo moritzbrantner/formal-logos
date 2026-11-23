@@ -1,0 +1,12 @@
+{
+  "id": "61a1edec-52d7-420f-9f73-0474c90409b6",
+  "label": "C2 from R1 and De ente's receiver reading",
+  "argument_id": "38394aad-234f-402c-994f-3d451636c15b",
+  "challenge_module": "TruthCore.Results.Causality.ContingencyGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ContingencyGrounding.Solution",
+  "theorem": "TruthCore.Results.Causality.ContingencyGrounding.c2FromReception",
+  "comparator_config": "results/61a1edec-52d7-420f-9f73-0474c90409b6/comparator.json",
+  "status": "solution-present",
+  "description": "Projection of the existing R1 onto C2 through its receptive disjunct. An instantiation with De ente's reading; establishes no premise. Its point is comparative: C2 is entailed by the existing reception bridge, so C2 is the weaker commitment.",
+  "transcription": "instantiation"
+}

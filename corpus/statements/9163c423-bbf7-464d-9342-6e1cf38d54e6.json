@@ -1,0 +1,19 @@
+{
+  "id": "9163c423-bbf7-464d-9342-6e1cf38d54e6",
+  "label": "If y has POWER_OVER_ESSE_1 over x, x can fail to be in substance or y is a CAUSE_2 of x's esse",
+  "paraphrase": "OPEN (correlation), analyst formulation, attribution deferred (navigation: Met. Theta.1 1046a, active power correlates with passive potency; ST I q.104 a.3, annihilation as ceasing to give being, not an action on a patient): for all y and x, if y has power over x's esse in the broad sense (POWER_OVER_ESSE_1: a power to make or unmake x's being), then x can fail to be in substance (POSSIBLE_NOT_TO_BE_1, the in-subject channel) or y is a CAUSE_2 of x's esse. A co-occurrence disjunction: it does not state that the power works on x's potency or that it is the giving of esse; the Aristotelian rationale is that it does one or the other. CausesIn is tenseless, so a cause that conserves x and a cause that only originated x are not distinguished: a deist originator satisfies this premise; only a tensed (conserving) strengthening would exclude it. Under the narrower giving sense POWER_OVER_ESSE_2 the premise is trivial (controls, law 11), so the batch uses the broad sense. Its omission model is an inert power-holder (controls, inertPowerHolder).",
+  "lean_declaration": "TruthCore.Causality.ContingencyGrounding.PowerOverEsseCorrelation",
+  "definition_ids": [
+    "c8113f31-6208-5992-9ca4-712887a4594b",
+    "3fd6bddb-f10c-4df4-8694-3eb5e7c28617",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "ed4f1f3f-d0c2-57b7-8ce7-52245db29d79",
+    "a13627bc-6b76-542d-9ca2-8c93487f685a",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5",
+    "d25cee67-1d5c-4a4c-bda5-8571b731ddf3"
+  ]
+}

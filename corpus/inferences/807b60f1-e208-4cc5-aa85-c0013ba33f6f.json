@@ -1,0 +1,18 @@
+{
+  "id": "807b60f1-e208-4cc5-aa85-c0013ba33f6f",
+  "label": "First Way mover is necessary, from firstness, unreceivedness and C2 (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "7bce7007-ad29-5f5b-b4b3-e7b02bf98312",
+    "bd0a4f81-29ba-4349-aa7d-b1fdcf6fd8e2",
+    "74eb9113-552b-5ec6-8e09-68374305dd58",
+    "6c18d52b-2456-59ae-995f-13440f8c808d",
+    "2e2ab9cc-28d7-4680-9ff9-ef42fe9d22f9",
+    "6508c239-b36d-4010-b9e4-ff0cdd5757e5"
+  ],
+  "output_statement_id": "f9208664-e57b-4912-b6e7-edfcd23a4f89",
+  "rule": "Reductio on contingency by the three C2 cases, then excluded middle at each accessible world",
+  "meaning": "Take the prima via's first mover f. It moves something, so it exists at w (B0). Suppose it is absent at some accessible world: then it is contingent at w and C2 makes it existentially receptive or gives it a distinct, simply prior CAUSE_2 of its esse. Received esse and matter-form composition are excluded by unreceivedness; a distinct simply prior cause is excluded by firstness (it would be f itself). So f is present at every accessible world (excluded middle). Pure act (POTENCY_1 in no respect) is carried for the endpoint and does no work: necessity comes from unreceived esse and underivedness.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

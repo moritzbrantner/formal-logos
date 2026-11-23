@@ -1,0 +1,397 @@
+# C2: what grounds the contingency of an actual being? (2026-11-23)
+
+Follow-up to PR #1870 (gap 1 and next test 3), God-existence stage of the #143
+root. Batch `specs/c2-contingency-grounding.toml`, vocabulary module
+`TruthCore.Causality.ContingencyGrounding`, results module
+`TruthCore.Results.Causality.ContingencyGrounding`, attempt
+`137ac90d-d110-45db-a2a3-44e5f0406eea`. Analyst formulations, attribution
+deferred (logic first). Locators below are navigation only; no source claim is
+made and none of the cited texts was materialized or read for this slice.
+Repaired after the independent semantic challenge of head `470f90b80`.
+
+**Graph destination.** The same-witness First Way endpoint `f9208664`
+(`FirstMoverNecessaryPureActAt`), which projects through result `402e5643` to
+STMT-NECESSARY-CONCRETE-AT `b19ffd92`, which reaches the root. Second
+destination: #1870's B2 ∨ B4 `3c9d683b`, which feeds the route-A∨B argument
+`81a17728` to the same endpoint. Computed `truth frontier-diff` against the
+merge base: open premises reaching the root 550 → 553 (400 → 403 bare,
+92 supported, 58 stated); route cost unchanged (16); 4 verified support
+alternatives added (unreceivedness `2e2ab9cc`, B2 ∨ B4 `3c9d683b`, C2
+`6508c239`, endpoint `f9208664`); 4 bare premises added (PGP `20d5fecd`,
+correlation `9163c423`, passive→receptive `16c760a3`, corruptible→POTENCY_1
+`8bfc4ab7`); B2 ∨ B4 `3c9d683b` moved bare → closed. "Closed" is
+frontier-diff's vocabulary for *proved from other premises*: its dossier
+reads `established: false`. Its leaf is replaced by four new bare premises; no
+premise is established.
+
+**Question.** C2: *a metaphysically contingent actual being must possess some
+relevant receptive potency or receive its actuality from something
+metaphysically prior.* The owner's target is C2's substantive warrant, not
+another reformulation of contingency → potency.
+
+## 1. Fixed meanings and what separates them
+
+| Notion | Formal reading | Separated from its neighbours by |
+|---|---|---|
+| Modal contingency | `ContingentAt F.history.ontic w x`: exists at `w`, absent at some accessible world (MODAL_CONTINGENCY_1) | — |
+| Avicennian "possible in itself, necessary through another" | not formalized here; an emanated being can be modally necessary yet caused (q.2 a.3's necessary things caused by another) | C2 is about modal contingency only |
+| (a) possible not to be in the subject | `CanFailToBe x F.esse` (DEF-CAN-FAIL-TO-BE at the respect of being, *corruptibile simpliciter*), sense POSSIBLE_NOT_TO_BE_1 of the new disambiguation `d25cee67` | `angelic`: contingent and incorruptible simply; law 10: not POTENCY_1 at esse |
+| (b) possible not to be through another's power | some `y` with `PowerOverEsse y x` (POWER_OVER_ESSE_1, DEF `3fd6bddb`), sense POSSIBLE_NOT_TO_BE_2. This widens q.9 a.2's creator channel to the broad power, so (a) and (b) are not exclusive (a log that fire can destroy has both) | `angelic` (b without a); `corruptor` (a and b, b without causing esse) |
+| (b′) giving power over esse | `GivingPowerOverEsse` (POWER_OVER_ESSE_2, DEF `220ca6f1`): the conjunction of power over esse and being a CAUSE_2 of it, not a primitive giving power | disambiguation `f5dda05f`; correlation is trivial under (b′) by definition of the conjunction (law 11), which says nothing about a primitive creator's-power reading; the batch uses (b) |
+| (c) bare modal absence | `ContingentAt` itself | `bruteSimple`: (c) with neither (a) nor (b) |
+| Unrealized POTENCY_1 | `AdoptedPotency.InPotency`: `CanBe ∧ ¬ InAct` | law 10 and #1870's R2 law: at esse it contradicts actual existence |
+| Receptive potency | RECEPTIVE_POTENCY_1 (DEF-RECEPTIVE-POTENCY), a principle's potency to an act it may already have | `witness`: an actual contingent being receives esse in a principle in receptive potency to it |
+| Passive potency (genus) | not a single predicate; its two species used here are (a) and matter's receptivity to form | passive→receptive is an OPEN bridge between them, not a definition |
+| Existential composition | `esseOf x ≠ essenceOf x` (B6's consequent) | #1870 `bruteFirst`: distinct esse with no recipient |
+| Received esse | `Received x p` (DEF-ESSE-RECEIVED-IN) | `uncausedComposite`: received esse with no cause |
+| Existential receptivity | `ExistentiallyReceptive`, DEF `f9f58df7`: received esse in a principle in receptive potency to it, or matter–form composition | C2's "relevant" receptivity is typed no further: any such recipient or composition satisfies it |
+
+**Reuse decision (differs from the brief).** The brief proposed a new
+primitive `PotencyForNonbeing`. The corpus already has it: DEF-CAN-FAIL-TO-BE
+reads `CanFailToBe x r` as the potency of the contradictory and identifies what
+can fail to be with the corruptible; DEF-INCORRUPTIBLE-SIMPLY takes the
+respect-of-being instance as *incorruptibile simpliciter*. DEF-CAN-FAIL-TO-BE
+does not itself say "in the subject", while q.9 a.2 also calls creatures
+"possible not to be" through another's power; disambiguation `d25cee67` now
+records that this batch reads `CanFailToBe` at esse as the in-subject channel
+only and represents the through-another channel by `PowerOverEsse`. Under that
+reading Aquinas denies #1870's B4a (every contingent being can fail to be in
+substance) for angels.
+
+**Power over esse.** Two existing definitions bind `MutableThroughAnother` with
+different readings: DEF-MUTABLE-THROUGH-ANOTHER (any power to change, the
+potter example) and DEF-MUTABILITY-IN-ANOTHER (the creator's power to
+originate or withdraw esse). Disambiguation `f5dda05f` separates them at esse
+with distinct declarations; PGP and correlation use the broad sense.
+
+## 2. Checked results
+
+All theorems in `TruthCore.Results.Causality.ContingencyGrounding`;
+Comparator and NanoDa pass; bind-check binds all eleven. Statement ids: C2
+`6508c239`, C2⁻ `8478f367`, PGP `20d5fecd`, correlation `9163c423`,
+passive→receptive `16c760a3`, corruptible→POTENCY_1 `8bfc4ab7`,
+unreceivedness `2e2ab9cc`, controls `07a9006e`, C2-over-C2⁻ difference
+`703d8c9c`, its equivalence `f0665fca`, its separator `63f55a6f`.
+
+| Result | Theorem | Premises → conclusion |
+|---|---|---|
+| `32bf794f` | `c2FromPowerGrounding` | PGP, correlation, passive→receptive, no self-esse-cause `b62a64ab`, B3 `ee74c678` → C2 (constructive) |
+| `96eb02fb` | `firstMoverUnreceivedFromSimplicity` | simplicity `78246da5`, R3 `65f3d0c7`, *De ente* `7fcfcee8`, irreflexivity `14325c83` → unreceivedness (constructive) |
+| `e5d49f99` | `firstMoverNecessaryByReceptivityOrPriorCause` | EM, *prima via* `7bce7007`, B0 `bd0a4f81`, firstness `74eb9113`, pure act `6c18d52b` (carried), unreceivedness, C2 → endpoint `f9208664` |
+| `61a1edec` | `c2FromReception` | R1 `ae9d9473`, *De ente* → C2 (instantiation) |
+| `560b0d8d` | `c2FromEsseCause` | B2 `8a8d00e9`, B3 → C2 (instantiation) |
+| `b1f14d6b` | `c2ImpliesWeak` | C2 → C2⁻ (strength order; relation `01163101`) |
+| `8890e569` | `c2FromWeakAndPriority` | C2⁻, B3 → C2 |
+| `bf2f0e8e` | `potencyOrEsseCauseFromPowerGrounding` | PGP, correlation, no self-esse-cause, corruptible→POTENCY_1 → B2 ∨ B4 `3c9d683b` |
+| `7fcf8487` | `c2OverWeakExact` | premise-free: C2 ↔ C2⁻ ∧ difference |
+| `dd9bccd1` | `unprioritizedSeparates` | premise-free: C2⁻ ∧ ¬C2 in the `unprioritized` setting |
+| `cafd9800` | `controls` | premise-free laws 1–11 and ten models |
+
+The strength comparison `07689384` certifies the C2/C2⁻ difference (#1598):
+`truth strength-comparisons` reports "strict strengthening; exact
+factorization proved; converse refuted by separating setting".
+
+Laws (`Model.Laws`): (1) C2 → C2⁻; (2) C2⁻ ∧ B3 → C2; (3) R1 ∧ *De ente* → C2;
+(4) B2 ∧ B3 → C2; (5) correlation → #1870 bridge (ii) restricted to beings
+incorruptible simply; (6) PGP ∧ no power of anything over its own esse ∧
+corruptible→POTENCY_1 → MUTABLE_3 for every contingent being (#1870 bridge (i));
+(7) the PGP route composes to the endpoint; (8) B4b → corruptible→POTENCY_1;
+(9) B4a → PGP; (10) with adopted POTENCY_1 and the existence-to-act interface,
+B4b excludes every actual corruptible at `w`; (11) under POWER_OVER_ESSE_2 the
+correlation is trivial, by definition of that sense as a conjunction containing
+CAUSE_2; this does not show that a primitive creator's-power reading would
+trivialize correlation.
+
+**Findings that differ from the brief's expectations.**
+- No excluded middle is needed for C2 from PGP (distinctness of the power's
+  holder comes constructively from `b62a64ab`) or for unreceivedness. EM
+  enters only where necessity is concluded.
+- The brief's argument 2 is registered as two steps, so unreceivedness is a
+  separate node: pure actuality (POTENCY_1), unreceived esse, underivedness
+  (firstness) and necessary existence are four distinct propositions.
+- #1870's bridge (ii) ("another's power over a thing's esse gives a distinct
+  cause of its esse"): correlation yields it only for beings incorruptible
+  simply (law 5). The unrestricted form is not derived, and its countermodel
+  (`corruptor`) is an uncaused corruptible composite; under the tenseless
+  CAUSE_2 an ordinary corruptible has a distinct esse-cause (its generator), so
+  the model says nothing against the unrestricted form for ordinary
+  corruptibles. Result `bf2f0e8e` registers a decomposition of B2 ∨ B4 that
+  does not need the unrestricted form: the corruptibility channel goes through
+  corruptible→POTENCY_1 (a new OPEN bridge).
+- Law 10 is a new defect finding for #1870's B4b: read with the adopted
+  POTENCY_1 it excludes every actual corruptible, as R2 excluded every actual
+  receiver.
+- C2 and B2 ∨ B4 are logically independent (`inertPowerHolder`: C2 without
+  B2 ∨ B4; `potencyOnly`: B2 ∨ B4 without C2).
+- `truth countermodel` does not support `CausalityFrame` parameters; all
+  models are hand-written as in #1870.
+- Duper (`--premise-pool all`, 8 candidates, 100000 heartbeats; C2, the
+  endpoint and B2 ∨ B4, run on the pre-repair head): 2 proved, 1 unresolved.
+  It re-found the endpoint from the grounding endpoint `11958874` (known), and
+  B2 ∨ B4 from R2 `6e8942c8` with R1, which is vacuous at actual contingents
+  (#1870 reception law) and not registered. C2 stayed unresolved.
+
+## 3. Models (structural satisfiability, not metaphysical possibility)
+
+Frames reuse `FirstMoverNecessity.Model.mk` (worlds, beings and respects
+`Bool`, reading world `true`, `f` moves `x` in heat, `x` in POTENCY_1 in heat
+only, so `f` is POTENCY_1-pure act relative to the frame's two respects).
+Excluded middle is a logical premise and is not a model conjunct. "Admissible
+on" names the metaphysics under which the structure could be read as a real
+case; the model certifies only structural satisfiability.
+
+| Model | What holds | What fails | Shows | Admissible on |
+|---|---|---|---|---|
+| `bruteSimple` (rivals 6.1/6.3) | every other premise of the PGP and C2 routes; CCR (degenerate check, see §12) | PGP, C2, endpoint | ¬C2 here needs ¬PGP (¬PGP alone does not give ¬C2: `uncausedComposite`) | a hybrid view: the First Way's act and potency for change, non-power modality for existence (primitivist, combinatorial, Lewisian counterpart, or essence-based with existence-conditional essences). Pure Humeans reject the model's act, potency and motion premises |
+| `selfAnnihilator` v1 / v2 | PGP; v2 also correlation | v1 correlation; v2 no-self-esse-cause; C2 in both | self-annihilation must deny correlation or admit self-causation of esse | v2 only where self-causation of esse is admitted |
+| `uncausedComposite` (6.2) | C2 (reception), R1, *De ente* | PGP, B2, C2's prior-cause disjunct | C2 does not entail PGP; C2 strictly weaker than B2 ∧ B3 | an ontology allowing an uncaused composite (it contradicts q.3 a.4, not C2) |
+| `angelic` | every premise of the PGP argument; C2 by both disjuncts | B4, pure-act target (structural only) | possible non-existence without a potency to non-being; extrinsically grounded contingency | the Thomist account of a created intelligence for: contingent, incorruptible simply, C2 by both disjuncts, contingency grounded extrinsically. Not for the B4 and target failures: Aquinas's angels have potencies of intellect, will and place (q.9 a.2), which make B4 true and the target vacuous |
+| `inertPowerHolder` | PGP, C2 (reception) | correlation, B2, B2 ∨ B4 | omission model of correlation (an inert power over being, no causal role); C2 ⊬ B2 ∨ B4 | — (it is the counterexample type in the revision conditions) |
+| `bareCorruptible` | PGP, correlation, `b62a64ab`, B3 | passive→receptive, C2 | omission model | — |
+| `unprioritizedSource` | PGP, correlation, passive→receptive, `b62a64ab`, C2⁻ | B3, C2 | omission model; C2 strictly strengthens C2⁻ | — |
+| `witness` | every premise of every new argument, PGP, correlation, passive→receptive and corruptible→POTENCY_1 applied nonvacuously; C2, B2 ∨ B4, endpoint | — | nonvacuity | the Thomist account of a corruptible caused composite |
+| `potencyOnly` (direction 9) | pure-act target at `w`, B4, B2 ∨ B4 | PGP, C2 | with `angelic`, PGP and C2 are independent of the target (unlike B4) | — |
+| `corruptor` | correlation, PGP, C2 (through matter and form), restricted bridge (ii) | R1, unrestricted bridge (ii) | C2 does not require R1; unrestricted bridge (ii) not derivable from correlation | an uncaused corruptible composite (not ordinary corruption) |
+
+**Deist originator.** With the tenseless `CausesIn`, a deist originator is a
+CAUSE_2 of what it originates, so it satisfies the typed correlation, and C2's
+prior-cause disjunct given B3 or an independent priority fact. The deist rival
+bears only on a tensed (conserving)
+strengthening of correlation (next test 2), not on the batch as typed.
+
+## 4. Could a purely actual being be contingent? (direction 2)
+
+Relative to the frame's two respects, yes structurally: `angelic` (and #1870
+`conserved`) has a contingent being in POTENCY_1 in no modelled respect,
+receiving esse from a necessary prior source under whose power it stands. That
+is a structural separation only; the Thomist angel is not POTENCY_1-pure act
+(intellect, will, place). Under "unreceived and underived" pure act, a
+contingent pure-act being is exactly a counterexample to C2 at that being
+(`bruteSimple`).
+
+## 5. Strongest positive explanation (direction 3)
+
+The Aristotelian-Thomistic explanation is that modal contingency is not a
+brute fact about a thing: its possible non-being is *someone's potentiality*.
+Either the thing has a passive potency to non-being (matter: corruptibility,
+Θ.8 1050b), or another has power over its esse (q.9 a.2: "mutable by the power
+of another"; q.104: conservation). By Θ.1 an active power over a thing either
+works on a passive potency in it or, for the creation exception, is the giving
+and withholding of esse (q.104 a.3). Results `32bf794f` and `bf2f0e8e` make
+this case analysis explicit and show which premise carries each step. That is
+clarification of the argument's structure, not additional warrant. As typed,
+PGP and correlation are material disjunctions, weaker than the explanatory
+claims that motivate them.
+
+**General theory (navigation only, unread in this slice).** Powers- and
+potentiality-based theories of modality ground possibility in the
+potentialities of actual things (B. Vetter, *Potentiality*, 2015; J. Jacobs, "A
+powers theory of modality", 2010; A. Pruss, *Actuality, Possibility, and
+Worlds*, 2011; A. Borghini and N. Williams, "A dispositional theory of
+possibility", 2008). It is a general modal metaphysics with motivations
+independent of theism, not a Thomist thesis.
+
+**The "too few potentialities" objection.** Target: the thesis that every
+possibility has an actual grounding potentiality. Mechanism: some
+possibilities (alien properties and individuals; that there might have been
+nothing concrete) seem to have no actual bearer whose potentiality grounds
+them. At the foundational being, PGP meets this mechanism exactly: by
+hypothesis nothing actual has a potentiality for that being's absence. PGP's
+narrowness (it concerns only the possible absence of an *actual* individual)
+does not escape the mechanism; it bears only on the objection's evidential
+force. For alien and global possibilities there are independently credible
+modal data that a theory must accommodate. For the foundational being the only
+datum, "it could be absent", is the disputed claim itself, supplied by
+subtraction or conceivability arguments generalized from ordinary concreta,
+which also satisfy PGP. So at this node the objection has its mechanism but
+no independent datum behind it; equally, PGP has no datum beyond its general
+theory.
+
+## 6. Essence–esse (direction 4)
+
+Received esse explains *how* dependence is possible: it supplies the recipient
+for the second channel, and q.3 a.4 links distinct esse to an external cause.
+But the modal step contingency → distinct esse (B6) or → reception (R1) is not
+warranted by the composition thesis alone (#1870 `bruteFirst`). It rests on the
+same power-grounding consideration or on the limitation principle (open in
+#1881). So the essence–esse route is informative about mechanism but shares
+C2's modal crux. Law 3: R1 with *De ente* implies C2, not conversely
+(`corruptor`).
+
+## 7. Able not to exist versus having an unrealized potency (direction 5)
+
+On Aquinas's own view (q.9 a.2, q.50 a.5) angels are modally contingent with
+no intrinsic potency to non-being. `angelic` formalizes this part: contingent,
+incorruptible simply, under a prior source's power, C2 by both disjuncts. So
+possible non-existence does not imply a potency to non-being. B4 ("in POTENCY_1
+in some respect") holds of the Thomist angel through unrelated respects
+(intellect, will, place), which `angelic` does not model; that is why B4 is
+"any respect" and classically the target. At esse POTENCY_1 is excluded (R2
+law, law 10). Under the in-subject reading of `CanFailToBe`, Aquinas denies
+#1870's B4a for angels.
+
+## 8. Rivals and their prices (direction 6)
+
+Each entry names its target, mechanism, independent justification, relevance
+and price.
+
+- **Brute contingent simple first actuality (6.1/6.3, `bruteSimple`).**
+  Target: PGP (and so C2) at the foundational being. Mechanism: the being's
+  possible absence is no power's potentiality. Independent justification:
+  developed general modal metaphysics that do not ground possibility of
+  existence in powers: modal primitivism; combinatorialism (Armstrong's
+  recombination admits contracted worlds lacking some actual individuals);
+  Lewisian counterpart theory; essence-based modality (Fine, Lowe: de re
+  possibility as the absence of an essential exclusion), a developed non-power
+  account of exactly PGP's subject matter. Relevance: each denies PGP for the
+  foundational case. Price: de re possibility of absence for an individual with
+  no internal or external modal ground in any power. The subtraction premise's
+  ordinary-case warrant does not discriminate; neither does PGP's (§13).
+- **Essence-based modality applied to the first mover.** To conclude that a
+  being whose esse is its essence is necessary, it needs esse = essence
+  together with an essence that includes existence; existence-conditional
+  essentialism ("necessarily, if `x` exists, `x` is F") blocks that step. This
+  is the B6 crux, recorded here as a standing rival to B6 (#1870 route C); the
+  essentialist rival to PGP is the previous bullet.
+- **Hybrid rival.** It accepts the First Way's act and potency for change but
+  uses non-power modality for existence. Relevant difference, with independent
+  justification: existence is not a change (creation and annihilation are not
+  changes, ST I q.45 a.2 ad 2, navigation only), so powers may ground
+  possibilities of change without grounding possibilities of existence. PGP's
+  counter-consideration at the foundational being is theoretical unity only (one
+  account of modality for change and for existence). Aquinas grounds creatures'
+  possible non-being in the creator's power (q.9 a.2), but the foundational
+  being has no prior power-holder, so that does not count there. Both sides
+  recorded; no winner is claimed.
+- **Contingent uncaused substance (6.2, `uncausedComposite`).** Compatible with
+  C2 iff it is receptively composed; it then contradicts q.3 a.4/B2, not C2.
+- **Deist originator.** Satisfies the typed correlation, and C2 given B3 or an
+  independent priority fact (§3); it bears
+  only on a tensed strengthening.
+- **Inert power-holder (`inertPowerHolder`).** A power over a being's esse
+  with no causal role and no potency to non-being in the patient: the
+  counterexample type to correlation. No defended instance is recorded.
+- **Self-annihilation (`selfAnnihilator`).** Must deny correlation (v1) or make
+  the being a cause of its own esse (v2, against `b62a64ab`); C2 fails in both
+  variants.
+- **No substantive objection identified** to passive→receptive beyond the
+  bare-corruptible structure, for which no independent account is recorded.
+
+## 9. ¬C2 evaluation (direction 7)
+
+A contingent, unreceived, pure-act being must be: actual at `w`, absent at
+some accessible `w'`, with no receiving principle and no matter, no prior
+giver, no potency to non-being, and, unless it denies correlation, no being
+with power over its esse. Its contingency must be primitive or
+non-power-grounded.
+
+- *Not internally inconsistent*: `bruteSimple` is a structural model, with
+  admissible interpretations under the hybrid view above.
+- *Not merely contrary to Thomism*: it contradicts power-grounded modality for
+  existence, which has independent general defenders.
+- *A coherent rival* whose price is de re possibility of absence for an
+  individual with no internal or external modal ground.
+
+**Parity.** Under PGP, the necessity of an actual being needs no extra
+truthmaker: it is the absence of any power grounding its absence (PGP and
+neither disjunct at `x` give ¬ContingentAt; EM gives NecessaryAt). Mirror:
+under combinatorial or essentialist modality, contingency is the default and
+likewise needs no extra truthmaker. Under Humean modality no individual is
+necessary, so that rival is global, not specific to C2. Under primitivism both
+are primitive. None of this decides between them; it locates the disagreement
+in the general theory of de re modality for existence.
+
+## 10. Weakening (direction 8)
+
+C2 needs only existential receptivity (received esse or matter), not POTENCY_1
+in any respect. C2 and B4 are independent (`potencyOnly`; `angelic`,
+structurally); C2 and B2 ∨ B4 are independent (`potencyOnly`,
+`inertPowerHolder`); C2 is implied by R1 with *De ente* (law 3) and by B2 with
+B3 (law 4), strictly in the B2 case (`uncausedComposite`); C2 strictly
+strengthens C2⁻ with certified difference `703d8c9c`.
+
+## 11. Direction 9
+
+The PGP route to the first mover's necessity is provably not equivalent to
+`PureActBeingsNecessaryAt` (`potencyOnly`, `angelic`), unlike B4. Necessity is
+derived from unreceived esse plus underivedness; POTENCY_1 pure act is carried
+and does no work.
+
+## 12. C1 comparison (direction 10)
+
+The claim that C1-style dependence does not exclude a contingent first
+actuality holds without a model: CCR only asserts a rooted bearer, not its
+modal status. The `bruteSimple` CCR check adds nothing beyond that: the
+adapter's one-world `Unit` frame reads existence as act of esse and the frame
+has no esse-causes, so every bearer is trivially a root and CCR is modally
+silent by construction.
+
+"Underived" is used in two senses. CCR's root has no *actual* distinct
+esse-cause; the route's underivedness is firstness (nothing else is
+SIMPLY_PRIOR_1). C2's prior-cause disjunct does not require an actual cause,
+and nothing identifies CCR's root with an unreceived being. **Connection plan**
+(not delivered): (1) a bridge from "no actual distinct esse-cause" to
+firstness or to the absence of any SIMPLY_PRIOR_1 esse-cause; (2) a bridge
+from CCR's root to unreceivedness. #1882's vocabulary is not imported. Its "C1
+does not give C2" uses C2 for the source's necessity, not this note's C2.
+Composition-needs-a-cause (q.3 a.7) is a further open bridge.
+
+## 13. Cumulative support and provisional judgment (direction 11)
+
+**Shared dependencies.** The routes converge on one witness through shared
+premises: the *prima via* base `7bce7007`, B0, firstness `74eb9113`, simplicity
+`78246da5` (whose derivation uses firstness); R3, *De ente* and irreflexivity
+are shared with #1870's B6 reception argument; B3 with route A; PGP and
+correlation are shared by `32bf794f` and `bf2f0e8e`.
+
+**Provisional judgment (2026-11-23, after semantic challenge).** C2 is not
+contested by the rivals recorded here on any corruptible or dependent being,
+given passive→receptive and B3 (both stay OPEN for those beings); that covers
+the ordinary cases. Its contested scope is exactly the
+foundational, underived, simple being, which is exactly where the route to the
+first mover applies it. The ordinary cases therefore do not discriminate: the
+rival also accepts PGP for every ordinary case, and the same verdict applies
+to the subtraction generalization on the other side. C2's universal form adds
+no warrant at the foundational case beyond the general theory of de re
+possibility for existence. The C2 route's force at the first mover equals that
+of power-grounded modality for existence: a serious, independently defended
+theory, not shown superior in this slice to its rivals (combinatorial,
+primitivist, existence-conditional essentialist, hybrid). The explicit case
+analysis (results `32bf794f`, `bf2f0e8e`, law 5) is clarification, not
+warrant. C2 is compatible with the uncaused-composite rival; the
+self-annihilator must deny correlation or `b62a64ab` (C2 fails in both
+`selfAnnihilator` variants); C2's relative logical weakness (laws 3–4) is not
+warrant. No substantive objection shows C2 false. The standing rival's price
+is de re possibility of absence for an individual with no internal or
+external modal ground.
+
+**Cumulative note.** #1870's B2 route (the q.3 a.4 causal principle), its B6
+route (esse-identity essentialism) and this PGP route each rest on a different
+modal-theoretic basis, and the brute rival must deny all three. But one Humean
+or primitivist package denies all three at once, so these are correlated
+denials, not three independent costs: convergence with a precisely identified
+shared crux, not independent corroboration.
+
+**Revision conditions (symmetric).** A matching-scope comparison of the
+general modal theories for existence favouring one side; a counterexample to
+correlation (an inert power over being, the `inertPowerHolder` type); an
+independent datum for or against the possible absence of a foundational
+simple being.
+
+**Formal status.** B2 ∨ B4 `3c9d683b` is now derived (frontier status
+proved/closed in frontier-diff's vocabulary, not established: dossier
+"established: false"); its leaf is replaced by four new bare premises; no
+premise is established.
+
+## 14. Gaps and next tests
+
+1. Compare power-grounded, combinatorial, primitivist and essentialist
+   modality for existence at matching scope (the revision conditions).
+2. Separate conserving from originating power in correlation by composing with
+   the existing sustaining-causation vocabulary (attempt `c94eed5b`) instead
+   of the tenseless `CausesIn` (the deist question).
+3. Defend or refute passive→receptive for a corruptible being without matter
+   (`bareCorruptible`).
+4. Assess corruptible→POTENCY_1 (`8bfc4ab7`).
+5. The two C1 connection bridges of §12 and the q.3 a.7 bridge for underived
+   beings.

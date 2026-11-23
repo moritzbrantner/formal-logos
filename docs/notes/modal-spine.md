@@ -1403,6 +1403,29 @@ Independent semantic review and final-head validation of this
 continuation must be completed separately from the already merged
 PRs. No new source passage or philosophical closure is claimed.
 
+### C2: the grounding of contingency (2026-11-23; pointer)
+
+Full record: [contingency-receptivity-c2.md](contingency-receptivity-c2.md),
+batch `specs/c2-contingency-grounding.toml`, attempt `137ac90d`. C2 (every
+being contingent at `w` is existentially receptive, by received esse or matter
+and form, or has a distinct SIMPLY_PRIOR_1 CAUSE_2 of its esse) is derived
+from PGP (contingent beings can fail to be in substance or are under some
+being's power over their esse), a co-occurrence correlation, passive→receptive,
+`b62a64ab` and B3, and gives the same-witness endpoint `f9208664` with
+firstness and the new unreceivedness intermediate (POTENCY_1 pure act carried,
+unused). R1 and B2 each imply C2; C2 is independent of B2 ∨ B4 and of the
+pure-act target. #1870 gap 1 is answered conditionally: B2 ∨ B4 from PGP;
+correlation yields bridge (ii) only for incorruptibles, and the unrestricted
+form is not derived (its countermodel is an uncaused corruptible). B4b with
+adopted POTENCY_1 excludes actual corruptibles (law 10). Provisional judgment
+(after semantic challenge): C2 is not contested by the rivals recorded there
+on corruptible or dependent beings, given passive→receptive and B3 (both
+OPEN); at the foundational simple being, where the route applies it, its
+force equals that of power-grounded modality for existence, not shown superior
+here to combinatorial, primitivist, essentialist or hybrid rivals. B2 ∨ B4
+`3c9d683b` is now derived (proved, not established); no premise is
+established.
+
 ## Stage two: that being is God
 
 Stage one gives no uniqueness, causal role or attribute.

@@ -1,0 +1,11 @@
+{
+  "id": "cafd9800-2fee-4fb6-a52f-bec0f1479d7f",
+  "label": "C2 contingency grounding controls checked",
+  "argument_id": "f46dfcc7-8b05-4a64-b2d7-718efdb949ec",
+  "challenge_module": "TruthCore.Results.Causality.ContingencyGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ContingencyGrounding.Solution",
+  "theorem": "TruthCore.Results.Causality.ContingencyGrounding.controls",
+  "comparator_config": "results/cafd9800-2fee-4fb6-a52f-bec0f1479d7f/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free laws and models for the C2 batch. Sense-mixing control: the laws relate MODAL_CONTINGENCY_1, RECEPTIVE_POTENCY_1, POTENCY_1, corruptibility and power over esse without a bridge premise. Establishes no premise."
+}
