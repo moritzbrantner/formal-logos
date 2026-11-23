@@ -108,7 +108,7 @@ theorem limitPersistenceControls :
       (by simp [LimitPersistence.disappearsAtLimit])
     exact hD
   · intro v x s t _ _ hnot
-    exact hnot (by trivial)
+    exact False.elim (hnot (by trivial))
   · intro v x s t hst _ hnot
     change ¬ (x = true ∨ t ≠ ⊤) at hnot
     have hx : x = false := by
