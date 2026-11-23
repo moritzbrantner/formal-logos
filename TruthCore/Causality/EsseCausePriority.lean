@@ -174,6 +174,33 @@ This is a structural joint-interpretation test, not proof of metaphysical
 applicability. On the ancestry reading, `ActualConcreteGround` does not imply
 productive `GivesAt`. On the strict present-ground reading, an inertialist
 rejects the bridge rather than the other source premises.
+
+**What the strict branch withholds.** The strict branch (`withoutGround`
+with `strictFrame`) withholds BOTH the grounding edge and the priority edge
+(`PriorSimply := Control.noPrior`, empty). Among the ten source premises plus
+`cb1cdea9`, `cb1cdea9` is the only premise that forces any priority edge
+(through `ActualGroundingIsSimplePriority`, whose grounding clause is then
+vacuous). The priority and first-being/component failures in
+`FullSourceOmission` are produced by the separate choice of an empty
+`PriorSimply`, not by denying `cb1cdea9`: `PriorityWithoutGroundEdge` keeps
+the same `withoutGround` profile with `Control.prior`, and there the ten
+premises and all priority conclusions hold. Under an empty priority every
+being is vacuously first, so the first-being failures are witnessed at the
+caused, composite, contingent effect `false`. Denying origin priority is an
+extra interpretive commitment; DEF-SIMPLE-PRIORITY's "not in time" does not
+settle it.
+
+**Inherited component relation.** `component` reuses
+`ComponentFirstness.Control.comp` (`p = false ∧ x = true`): the received
+effect `false` counts as a component of its own necessary originator `true`,
+while `composite` holds only of `false`. With two Boolean beings, only a third
+being would avoid this assignment; it is a structural artifact, not a claim
+that the originator is composed of its effect.
+
+**Equivocation guard.** In `withoutGround`, `EveryContingentGroundedAt` fails:
+`false` is a contingent actual root with no ground. The ancestry profile alone
+satisfies the root premises. Using ancestry `grounds` for the root premises
+and strict `grounds` for `cb1cdea9` would equivocate.
 -/
 
 namespace InertialNecessaryOrigin
@@ -289,10 +316,17 @@ def NecessaryOriginWithoutConservation : Prop :=
     ancestralFrame.CausesIn ancestralFrame.esse
 
 /-- All ten remaining #1614 source premises hold for an actual, temporally
-persistent, modally contingent effect and a necessary originator. Without
-the `cb1cdea9` cause→actual-ground bridge and with strict present grounding,
-the route's two priority conclusions and first-being/component consequences
-fail at nonvacuous instances. Derived premises are not assumed. -/
+persistent, modally contingent effect and a necessary originator; the
+grounding clause `ActualGroundingIsSimplePriority` holds VACUOUSLY because
+there is no grounding edge. The strict branch withholds both the grounding
+edge (so `cb1cdea9` fails at cause `true`, effect `false`) and the priority
+edge (`PriorSimply` empty). The two priority conclusions fail at the pair
+`true`, `false`; the first-being act-priority and no-potency failures are
+witnessed at `false`, and no-component-first at component `false` of `true`,
+only because nothing is prior to anything, so every being, including the
+caused composite contingent `false`, is vacuously first. These failures come
+from the empty `PriorSimply`, not from denying `cb1cdea9`: see
+`PriorityWithoutGroundEdge`. Derived premises are not assumed. -/
 def FullSourceOmission : Prop :=
   SourcePremises withoutGround strictFrame ∧
   ¬ EsseCauseIsActualConcreteGround withoutGround true
@@ -304,6 +338,25 @@ def FullSourceOmission : Prop :=
   ¬ FirstBeingActPriority act potency strictFrame.PriorSimply ∧
   ¬ FirstBeingIsInNoWayInPotencyReading potency strictFrame.PriorSimply ∧
   ¬ NoComponentIsFirstBeingReading component strictFrame.PriorSimply
+
+/-- Attribution control for `FullSourceOmission`: the SAME `withoutGround`
+profile (no grounding edge, `cb1cdea9` false) but with the ancestry priority
+`Control.prior` retained. The ten source premises still hold (the grounding
+clause vacuously; the other nine never mention priority), and both priority
+conclusions and all first-being/component consequences HOLD. Denying
+`cb1cdea9` alone therefore removes none of them; their failure in the strict
+branch is due to the separate choice `PriorSimply := ∅`. -/
+def PriorityWithoutGroundEdge : Prop :=
+  SourcePremises withoutGround ancestralFrame ∧
+  ¬ EsseCauseIsActualConcreteGround withoutGround true
+    ancestralFrame.CausesIn ancestralFrame.esse ∧
+  ActualEsseCausePriority withoutGround true ancestralFrame.CausesIn
+    ancestralFrame.esse ancestralFrame.PriorSimply ∧
+  DistinctEsseCausePriority ancestralFrame.CausesIn
+    ancestralFrame.esse ancestralFrame.PriorSimply ∧
+  FirstBeingActPriority act potency ancestralFrame.PriorSimply ∧
+  FirstBeingIsInNoWayInPotencyReading potency ancestralFrame.PriorSimply ∧
+  NoComponentIsFirstBeingReading component ancestralFrame.PriorSimply
 
 /-- On the *different*, historical-ancestry interpretation of the selected
 ground/priority relations, the entire source bundle including `cb1cdea9`

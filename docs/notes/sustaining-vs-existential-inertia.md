@@ -1190,6 +1190,8 @@ checkpoint.
 
 ## 9. ¬C3 with a necessary originating source and the full #1614 source bundle (2026-11-23)
 
+**Labels.** C3 is `40a97664`, as in §8 (not the C1 note's "the source is one").
+
 ### Positive rival sharpened: existential inertia need not be foundationlessness
 
 A more informative inertialist world than one with two contingent, unexplained
@@ -1200,7 +1202,11 @@ For a begun effect, this proposal neither has to declare its initial actuality
 brute nor reject ultimate source arguments. It offers two explanatory roles:
 productive origination accounts for the recipient's first actual existence,
 and prior existence plus the absence of cessation (or a governing persistence
-constraint) accounts for its later persistence.
+constraint) accounts for its later persistence. This holds only on the
+**ancestry** reading of `grounds`: in the strict `withoutGround` profile
+`EveryContingentGroundedAt` fails and `false` is a contingent actual root
+with no ground, so using ancestry `grounds` for the root premises and strict
+`grounds` for `cb1cdea9` would equivocate.
 
 The actual originator's necessary existence does not determine **which effect
 it originates, why then, or why this actual world is selected**. The former
@@ -1219,8 +1225,9 @@ argument, not a new pinned corpus attribution.
 
 The proposed formal comparison lives in
 `EsseCausePriority.InertialNecessaryOrigin`, consuming the same
-`C3ActualWorld.originGiving` and its strict-origin `CausesIn` through
-the shared `CausalityFrame`. The selected world is `true`; source
+`C3ActualWorld.originGiving` and its `CausesIn` through the shared
+`CausalityFrame`. `CausesIn` is tenseless and mode-unspecified in Lean;
+reading it as an origin-only cause is a selected interpretation. The selected world is `true`; source
 `true` exists at every natural-number time in **both** accessible worlds,
 whereas rigid effect `false` begins at t=1 and continues at t=2 and later
 only in the actual world. `CoherentAtNow` holds at `now=2`.
@@ -1229,12 +1236,13 @@ not by contingency itself. The model adds a second respect, heat, to let a
 composite effect actually have potency **without** being in act and in
 potency in the same respect.
 
-Three exact certificates are proposed:
+Four exact certificates are proposed:
 
 | Test | Positive joint commitments | Discriminating result |
 | --- | --- | --- |
 | `necessaryOriginWithoutConservation` | Existing `NecessaryActualRootAt` on the ancestry profile, `EveryContingentGroundedAt` at the actual world, contingent actual recipient, `OriginatesBeing`, giver contact, no cessation in the tested history | `40a97664` fails for the same received-esse recipient at t=2 and the distinct-origin `CausingAnothersBeingIsSustaining` bridge fails. The *source* is still present at t=2 and is de re necessary. |
-| `fullSourceOmission` | The other **ten source premises** from PR #1614's esse-priority cluster, reusing their unchanged Lean definitions at the same bearer, cause and respect; an actual source/recipient and positive persistence | With *no actual grounding edge* and `PriorSimply` empty, `cb1cdea9`, the two intermediate priority conclusions, first-being act-priority, first-being no-potency and no-component-first all fail at nonvacuous instances. This is a test of the complete ten-premise **source-level** remainder, not every ambient premise of an unrestricted God proof. |
+| `fullSourceOmission` | The other **ten source premises** from PR #1614's esse-priority cluster, reusing their unchanged Lean definitions at the same bearer, cause and respect; an actual source/recipient and positive persistence | The strict branch withholds **both** the grounding edge and the priority edge (`PriorSimply` empty); the grounding clause `ActualGroundingIsSimplePriority` then holds vacuously. `cb1cdea9` fails at cause `true`, effect `false`; the two intermediate priority conclusions fail at the pair `true`/`false`; first-being act-priority and no-potency fail at `false`, and no-component-first at component `false` of `true`, **only because nothing is prior to anything**, so every being, including the caused composite contingent `false`, is vacuously first. This is a test of the complete ten-premise **source-level** remainder, not every ambient premise of an unrestricted God proof. |
+| `priorityWithoutGroundEdge` | The same `withoutGround` profile (no grounding edge, `cb1cdea9` false) with the ancestry `PriorSimply` retained | The ten premises and **all** priority, first-being and component conclusions hold. Denying `cb1cdea9` alone removes none of them; the `fullSourceOmission` failures come from the separate choice of an empty priority. |
 | `ancestorRouteWithoutConservation` | The same ten source premises, actual ancestry grounding from source to effect and corresponding `PRIOR_1` edge, plus the `cb1cdea9` cause→ground premise | Both derived esse-priority conclusions, the first-being no-potency result and no-component-first result can coexist with **¬`40a97664`**. The source remains necessary and ungrounded. |
 
 These controls distinguish two *assignments of the same* `ActualConcreteGround`
@@ -1242,7 +1250,22 @@ and `PriorSimply` primitives. An **ancestry** reading permits a past
 originator to count as an actual cause, historical ground, and simply prior
 to its effect in the selected world even when no fresh being is given at
 the present moment. A **strict present-existential** reading denies that
-grounding edge and does not accept the cause→ground bridge. The types do not
+grounding edge and does not accept the cause→ground bridge. In
+`fullSourceOmission` the strict branch also withholds the priority edge.
+Among these eleven premises `cb1cdea9` is the only one that forces any
+priority, so denying it leaves priority unconstrained rather than absent
+(`priorityWithoutGroundEdge`). Denying origin priority is an **extra
+interpretive commitment**; DEF-SIMPLE-PRIORITY's "not in time" does not
+settle whether a past originator is simply prior to its effect.
+
+**Inherited component assignment.** `component` reuses
+`ComponentFirstness.Control.comp` (`p = false ∧ x = true`), so the received
+effect `false` counts as a component of its own necessary originator `true`,
+while `composite` holds only of `false`. With two Boolean beings only a third
+being would avoid this; it is a structural artifact of the reused control,
+not a claim that the originator is composed of its effect.
+
+The types do not
 say whether the former matches the intended metaphysical sense of
 `ActualConcreteGround`; accepting it cannot bypass this interpretation
 choice by calling ancestry "ground" alone.
@@ -1283,8 +1306,10 @@ reading of `CausesIn`, or simply defining every `grounds` as productive
 
 **Cumulative status:** even a robust *actual necessary root* and the
 whole registered #1614 priority spine do **not**, under the supplied
-definitions, entail `40a97664`. Rejection of C3 is thus not automatically
-rejection of a necessary underived source, and adding C3 does not by
+definitions, entail `40a97664`. On the ancestry reading of `grounds`,
+rejection of C3 is thus not automatically rejection of a necessary underived
+source (on the strict reading the effect is itself an ungrounded contingent
+root, and mixing the two readings would equivocate), and adding C3 does not by
 itself prove the source necessary or divine. Equally, a successful Lean
 countermodel is a logical separation, **not** proof that the inertialist
 interpretation of received esse or ancestry is metaphysically admissible.
@@ -1301,9 +1326,18 @@ compared with a productive-conservation proposal under the same world-selection
 standard. For a timeless conserved source, the effect index on `GivesAt`
 must remain distinct from the agent's time.
 
-**Verification/ownership:** these are proposed unregistered Lean certificates
-and a research assessment; the current PR's CI and independent challenge must
-pass before assigning them kernel-verified status. No new source attribution,
+**Verification/ownership:** these are unregistered Lean helper theorems and a
+research assessment. Unregistered theorems are checked by `lake build` and by
+NanoDa over affected modules, not by Comparator. An independent semantic
+challenge of head `7ab412ed7` returned *mergeable after listed repairs* with
+no Lean error; it accepted the ten-premise selection, the absence of
+`61ad11f3` smuggling, the proofs of every "fails" conjunct, the model and
+scope statements, the unchanged root frontier and consistency with C2
+(#1884). Its P1 (the strict-branch failures were credited to the grounding
+reading rather than the empty priority) and P2s (component assignment,
+ancestry-only foundation claim, vacuity wording, verification wording,
+labels) are repaired in PR #1891, adding `priorityWithoutGroundEdge`;
+re-check and exact final-head CI remain pending. No new source attribution,
 claim, closure, registered result, or root-path premise is made. #1616's
 universal F2 treatment of non-efficient exemplar/final causes and the
 positive sense-3→5 argument remain open; the typed source-premise omission

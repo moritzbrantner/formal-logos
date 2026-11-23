@@ -256,9 +256,13 @@ theorem necessaryOriginWithoutConservation :
     simp [C3ActualWorld.originGiving] at h
 
 /-- Complete #1614 source-input omission for `cb1cdea9`: all remaining
-ten source premises are jointly true; the intermediate priority and
-downstream first-being/component conclusions genuinely fail. This test does
-not independently establish the truth of those philosophical premises. -/
+ten source premises are jointly true (the grounding clause vacuously, there
+being no grounding edge). The strict branch withholds both the grounding and
+the priority edge; the intermediate priority and first-being/component
+conclusions fail because `PriorSimply` is empty, so every being, including
+the caused composite contingent `false`, is vacuously first. They do not fail
+because `cb1cdea9` is denied (see `priorityWithoutGroundEdge`). This test
+does not independently establish the truth of those philosophical premises. -/
 theorem fullSourceOmission : FullSourceOmission := by
   unfold FullSourceOmission
   refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
@@ -298,6 +302,52 @@ theorem fullSourceOmission : FullSourceOmission := by
     have hh := hp false true
       (by simp [component, ComponentFirstness.Control.comp])
     exact hh (by intro y hy; exact hy.elim)
+
+/-- Attribution control: denying `cb1cdea9` (no grounding edge) while
+keeping the ancestry priority leaves the ten source premises and every
+priority, first-being and component conclusion true. The conclusions are
+derived by the same five existing #1614 theorems from a direct proof of
+`DistinctEsseCausePriority`, not from the bridge. -/
+theorem priorityWithoutGroundEdge : PriorityWithoutGroundEdge := by
+  unfold PriorityWithoutGroundEdge
+  have hSources : SourcePremises withoutGround ancestralFrame :=
+    sourcePremisesOfGrounding withoutGround Control.prior
+      (by intro a b _ _ hg; exact hg.elim) rfl (by intro x; trivial)
+  have hNoBridge : ¬ EsseCauseIsActualConcreteGround withoutGround true
+      ancestralFrame.CausesIn ancestralFrame.esse := by
+    intro hb
+    have h := hb true false (by decide)
+      (by simp [ActualConcrete, withoutGround, ancestral,
+        C3ActualWorld.withGround, history])
+      (by simp [ancestralFrame, frame, causes, C3ActualWorld.originFrame,
+        C3ActualWorld.frame, SustainingCausation.Control.trueCausesFalse])
+    exact h.2.2
+  have hDistinct : DistinctEsseCausePriority
+      ancestralFrame.CausesIn ancestralFrame.esse
+      ancestralFrame.PriorSimply := by
+    intro c x _ hc
+    rcases hc with ⟨_, hh⟩
+    rcases hh with ⟨rfl, rfl⟩
+    simp [ancestralFrame, frame, Control.prior]
+  have hActual : ActualEsseCausePriority withoutGround true
+      ancestralFrame.CausesIn ancestralFrame.esse
+      ancestralFrame.PriorSimply :=
+    fun c x hne _ hc => hDistinct c x hne hc
+  obtain ⟨_, _, _, _, hSome, hComposite, hUnit,
+    hKinds, hNotBoth, hParticipated⟩ := hSources
+  have hWeak : FirstBeingActPriority act potency ancestralFrame.PriorSimply :=
+    weakOfEssePriority act potency ancestralFrame.PriorSimply
+      composite ancestralFrame.CausesIn ancestralFrame.esse
+      hSome hComposite hUnit hDistinct
+  exact ⟨sourcePremisesOfGrounding withoutGround Control.prior
+      (by intro a b _ _ hg; exact hg.elim) rfl (by intro x; trivial),
+    hNoBridge, hActual, hDistinct, hWeak,
+    firstBeingNoPotencyOfEssePriority act potency ancestralFrame.PriorSimply
+      composite ancestralFrame.CausesIn ancestralFrame.esse
+      hSome hComposite hUnit hDistinct,
+    noComponentFirstOfEssePriority component ancestralFrame.PriorSimply
+      act potency participated ancestralFrame.CausesIn ancestralFrame.esse
+      hKinds hWeak hNotBoth hParticipated hDistinct⟩
 
 /-- A historical-ancestry reading of the ground/priority relation makes
 the full positive #1614 source bundle and the priority results compatible
