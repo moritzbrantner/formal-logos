@@ -8,5 +8,5 @@
   "comparator_config": "results/d2d55c9b-9308-4b6b-b665-3380c4a99944/comparator.json",
   "status": "solution-present",
   "description": "Single-premise projection from stronger actual-giver endpoint to existing B2; downstream First Way preserves the same mover witness.",
-  "transcription": "projection"
+  "transcription": "assembly"
 }
