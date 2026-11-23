@@ -400,7 +400,7 @@ intellect, will, omnipotent) hold at every world `v` once they hold at one
 world `w`, for every bearer, whether or not it exists at `v`. The proof is
 definitional unfolding; it records an interpretive commitment of the encoding
 and adds no evidence for M-necessary excellence. Only one, omniscient,
-morallyPerfect and free vary by world. -/
+morallyPerfect and free can vary by world. -/
 theorem fixedProfile_rigid {P R C A : Type} (σ : Signature)
     (m : Profile W σ.Being)
     (q : TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile σ.Being P R)
