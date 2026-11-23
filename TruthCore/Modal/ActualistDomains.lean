@@ -43,9 +43,9 @@ def AllBoxToBoxAll (m : Ontic W B) : Prop :=
 
 #1864, complementary to #1865's generic MaximalProfile. The nine classical
 predicates are fed into the existing NineClassicalAttributes definition. The
-additional omnipotence, omniscience, and freedom fields are explicit selected
+additional omnipotence, omniscience, moral impeccability, and freedom fields are explicit selected
 senses, NOT consequences of the nine and not world-invariant by stipulation.
-Simplicity, goodness, freedom and intellect here name chosen *extensions*;
+Simplicity, metaphysical goodness, moral goodness, freedom and intellect here name chosen *extensions*;
 interpreting them by the relevant real essences, powers and acts is OPEN.
 
 In particular this bundle excludes IsGod: importing the world-invariant root
@@ -66,6 +66,7 @@ structure DivinePredicates (World Entity : Type) where
   will : World → Entity → Prop
   omnipotent : World → Entity → Prop
   omniscient : World → Entity → Prop
+  morallyPerfect : World → Entity → Prop
   free : World → Entity → Prop
 
 /-- StageTwo's SAME nine attributes instantiated at one world and one bearer;
@@ -76,10 +77,11 @@ def NineAt (p : DivinePredicates W B) (w : W) (x : B) : Prop :=
     (p.infinite w) (p.immutable w) (p.eternal w)
     (p.intellect w) (p.will w) x
 
-/-- A joint twelve-attribute candidate: all conjuncts concern THE SAME x
+/-- A joint thirteen-predicate candidate: all conjuncts concern THE SAME x
 at THE SAME world. Not a claim that these extensions describe possible essences. -/
 def ExcellenceAt (p : DivinePredicates W B) (w : W) (x : B) : Prop :=
-  NineAt p w x ∧ p.omnipotent w x ∧ p.omniscient w x ∧ p.free w x
+  NineAt p w x ∧ p.omnipotent w x ∧ p.omniscient w x ∧
+    p.morallyPerfect w x ∧ p.free w x
 
 /-- Maximal greatness additionally requires existence and the COMPLETE bundle
 for the same bearer at every successor of the candidate world. Reuses #1865. -/
@@ -147,6 +149,7 @@ def attributes (selected : Bool) : DivinePredicates Bool Bool where
   will := at selected
   omnipotent := at selected
   omniscient := at selected
+  morallyPerfect := at selected
   free := at selected
 
 /-- K5/EUCLIDEAN without actual reflexivity: every world sees true, but
@@ -161,7 +164,7 @@ def k5Ontic : Ontic Bool Bool where
   Causes := fun _ _ _ => False
 
 /-- Individually satisfiable power and knowledge attributed to DIFFERENT
-bearers; the remaining ten attributes are unproblematic in this control. -/
+bearers; the remaining eleven predicates are unproblematic in this control. -/
 def split : DivinePredicates Bool Bool where
   simple := fun _ _ => True
   perfect := fun _ _ => True
@@ -174,6 +177,7 @@ def split : DivinePredicates Bool Bool where
   will := fun _ _ => True
   omnipotent := fun _ x => x = true
   omniscient := fun _ x => x = false
+  morallyPerfect := fun _ _ => True
   free := fun _ _ => True
 
 /-- The E witness is jointly realized (by an existing bearer at true) but is
