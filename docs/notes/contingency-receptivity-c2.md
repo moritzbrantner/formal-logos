@@ -449,6 +449,12 @@ to a rival. The regress comparison gives a reason to reject a defense in which
 every argument for an omission derives its warrant from another assumed
 omission. Independent evidence of an admissible order incompatible with
 n would answer that objection. The [argument from contingent dependence](#does-being-contingent-mean-being-contingent-upon-something) explains where a demand for a determining reason can support necessity and where it needs a further premise about dependence.
+The [argument from received and unreceived existence](#does-depending-on-nothing-identify-one-being-as-god)
+explains how two creatures can receive existence from one giver. It favors
+uniqueness if every root is subsistent existence itself and two acts of
+that kind could be distinguished only through a recipient or a limiting
+determination. Both claims need a defense against a rival that accepts only
+the absence of an external giver.
 
 Analyst assessment of the rigid individual in issue #1887. Let P say that this
 very n is absent at some world accessible from the actual world. Grant the
@@ -1989,3 +1995,152 @@ covering all the alternatives in the preceding assessment. I would revise
 toward P for independent evidence of an admissible, incompatible order,
 even if the permission inferred from it were metaphysically primitive.
 Attempt `2eb9960c` records the comparison.
+
+
+### Does depending on nothing identify one being as God?
+
+Fix the actual concrete beings and ask of each one which *other actual concrete
+beings* it depends on for existence. A dependence for an operation or a reason
+for a possibility answers a different question. Let D(x) list the beings
+in the chosen dependence relation to x. There is exactly one empty set.
+There can be no bearer of that description, one bearer, or several. The
+underived individual n stipulated in the question about C2 supplies a bearer
+in this respect.
+Outside that stipulation, a nonempty population with a well-founded order of
+strict existential dependence suffices for at least one. Pointing to an empty
+list supplies no witness. The scope here also leaves dependence on nonconcrete
+grounds to be assessed separately.
+
+**Why there can be two creatures.** Two oaks need not have different ultimate
+givers of existence to be two trees. On the Thomistic account they are the same kind
+by substantial form, and each is this individual through its own designated
+matter. Each oak's essence determines how it receives existence.
+An oak and a horse also differ in substantial form. Even an immaterial creature
+could have a definite nature whose act of existence is received. Matter thus
+explains one kind of multiplication. The more general distinction is between
+a being that has existence according to a determinate nature and one whose
+whole nature is its subsisting act of existence. A recipient here is a
+constitutive principle of the existing creature. There is no already existent
+oak waiting for existence to arrive. [Aquinas, De ente et essentia, §69875](https://www.corpusthomisticum.org/oee.html#69875) and [ST I, q.7, aa.1–2](https://www.newadvent.org/summa/1007.htm#article1).
+
+This reply succeeds. It also tells us what to give up in the original
+formulation. If the identities of creatures were fixed entirely by the list
+of their ultimate givers, two creatures wholly dependent on one God would
+both have the list {God} and would therefore be identical. Allowing the
+recipient's nature and individuation to matter avoids that result. The
+ordinary claim that a creature could not exist without its essential sources
+never required the converse that the sources suffice to identify the creature.
+
+An independent check exposes the reach of that converse. Suppose it applies
+to *every* being and lists *all* its strict existential ancestors. In a
+well-founded transitive order this forces any two beings to be comparable
+in existential priority. For suppose otherwise. Choose a minimal x among
+beings with an incomparable partner, then a minimal y among x's incomparable
+partners. Every predecessor of x is comparable with y by the first choice.
+It must be below y, since equality with y or priority of y to it would put
+y below x. By the second choice every predecessor of y is likewise below x.
+Thus x and y have exactly the same predecessors. The criterion identifies
+them, contrary to their incomparability. This analyst argument applies to
+the list-only proposal under the stated assumptions. The account of received
+existence allows two oaks neither of which gives the other its existence.
+
+**Why should the giver be unique?** Start with the actual underived n,
+before calling it God. Consider a second alleged root. Ask what fixes its
+mode of being. If its determinate essence really receives its existence,
+the essence explains *what* is actualized. Explaining *that* it is actual
+by an exercise of its own power would already presuppose its actuality.
+On the premise that received existence requires an actual giver, this
+candidate therefore depends on another. That premise has content beyond
+uniqueness. It also rules out a single finitely constituted being whose
+receipt of existence has no giver. Rejecting self-production alone leaves
+that latter option open. Proving that at most one unlimited being exists would
+still allow one unlimited source alongside such a finite independent being.
+
+Now suppose both candidates are subsistent esse itself. A difference of
+kind would ordinarily tell us how one is determined to a mode of being
+the other does not share. On the stronger Thomistic reading the whole
+what-it-is of each is its act of existence, with no further principle
+contracting it to a kind. On that account neither a pair of receiving
+natures nor a division of matter can distinguish the two. If one lacked
+a pure perfection the other possessed, it too would be limited. Here
+“unlimited” concerns the fullness of actuality. Having specifically
+equine form, for example, is a determination to one creaturely mode.
+It need not belong formally to the source for the source to be unlimited.
+
+The positive reason to prefer one such act is that the familiar ways of
+accounting for two actual instances do real explanatory work among
+creatures, and each requires something that the supposed second instance
+would lack. The stronger assertion that these ways exhaust real
+multiplication excludes bare numerical difference. Merely restricting
+“same sources, same being” to empty lists would assume that conclusion.
+[Common nature and the multiplication argument](de-ente-esse-source-1628.md#2-could-there-be-two-numerically-distinct-instances-of-that-same-nature).
+
+**The strongest objection concerns the first fork.** A pluralist can deny
+that having a definite positive character always involves *receiving* an
+act of existence. On this proposal two whole primitive natures differ
+intrinsically and explain different powers. Different whole forms need not
+differ by an extra constituent. Even the Thomistic account recognizes that
+point for immaterial created forms, although their existence is received.
+So this is a reason to reject a general inference from difference to an
+added part. It supplies no instance of an intrinsically limited *unreceived*
+act. The pluralist needs an account of how that restriction works. The
+Thomist needs a reason why all limits to esse require reception. The identity
+of essence and existence *within* each candidate is insufficient by itself.
+[Whole-nature rival and its limits](de-ente-esse-source-1628.md#1-could-the-two-candidates-have-different-whole-natures).
+
+A pluralist has a stronger reply than inventing two names. In the checked
+five-being interpretation, two underived sources support one instrument.
+Exchanging labels preserves the fact that the instrument has two distinct
+underived supporters. Identifying the sources removes that fact. This gives
+content to the pluralist's claim even without a qualitative description of
+each source. Observing the one shared effect does not tell us whether that fact
+is actual. Equally, an impersonal monist can accept one independent source and
+many recipients on the same terms as a theist. Parsimony favors a single
+source over redundant duplicates to the extent that it preserves the facts
+either account must explain. The model tests the inference and leaves the
+metaphysical adequacy of the competing accounts open.
+[Five-being control and cooperation argument](part-free-plurality.md#cooperation-versus-common-origin).
+
+**How to identify the bearer.** There is a route that need not decide the
+individuation dispute first. Suppose there is an actual concrete giver g of the
+existence of *every other* actual concrete being, where giving entails the
+very dependence n lacks. If g differed from n, n would receive its existence
+from g. Hence g is n, and the same argument identifies any further root with
+g. This allows distinct recipients to depend wholly on g. The positive burden
+is to warrant g's unrestricted reach. Even a unique actual root can stand
+beside an endless chain that never reaches it. If every being does trace to
+some root, uniqueness identifies one common ancestor. Direct giving still
+needs its own case. [Isolated root beside a regress](de-ente-esse-source-1628.md#exact-controls-and-rejected-shortcuts).
+
+The existing God-existence route gives this proposal a particular application.
+Given an intellectual maximum in the respect of existence, the claim that
+such a maximum causes every other being in act in that respect, and the
+actuality and concrete-ground bridges, the maximum must be n. The registered
+route retains excluded middle. Its further steps to classical God naming
+use priority, actuality in relation to being, transfer of perfections,
+exclusion of a first being from composition as a component, and the premise
+applying the name to the fully described bearer. The governor premise
+supplies an intellectual maximum. Underivedness supplies the identity test.
+Intelligence cannot be read off an empty list. Local intelligent direction
+can also occur under an impersonal first source through secondary agents.
+[Same-witness result and its full inputs](../../corpus/arguments/5ab29aa8-6adc-4634-82c0-9c470a3be27e.json)
+and [evidence for the governor premise](teleology-first-mover.md#same-phenomenon-support-serious-rival-and-next-discriminator).
+
+**Verdict for C2.** I have high confidence that dependence on zero others,
+even with the actual witness granted, is insufficient to identify God or
+establish numerical unity. I favor uniqueness on the stronger account of
+subsistent esse. It explains
+why the same giver can have many recipients and why those modes of
+multiplication cease to apply to the giver. I have moderate confidence in
+that philosophical preference. Extending it to every alleged root turns
+on whether a real restriction to an intrinsic kind of esse calls for reception.
+A case for this covering all
+eligible sources, or independent evidence of one giver reaching even a
+putative second root, would move me toward uniqueness. A case for genuinely
+indispensable, independently underived contributions to one existence would
+move me toward plurality. As to P, even exactly one root in each possible
+world leaves open which individual occupies the role. A world with no
+concrete beings raises a further question about whether the role must always
+be occupied at all. Neither possibility is certified by describing it.
+Moderate confidence in suspension on the original shared premises remains.
+[Earlier test of occupation and replacement](#testing-occupation-and-replacement).
