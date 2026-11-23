@@ -105,10 +105,14 @@ def sourceFreeFiniteCircle : Profile Bool Bool Unit where
   essentialPrinciplesAloneSufficeForEsse := fun _ => False
   esse := ()
 
-/-- Local actual-esse cause coverage and identity uniqueness hold, but no
-actual bearer is underived. The finite whole is closed under its suppliers,
-so CCR and the common-source endpoint fail. A productive-priority premise
-would be new, not implicit in this control. -/
+/-- Local actual-esse cause coverage holds, and identity uniqueness holds
+vacuously (no bearer has esse equal to essence), but no actual bearer is
+underived. The finite whole is closed under its suppliers, so CCR and the
+common-source endpoint fail. A productive-priority premise is not implicit in
+this control; the existing `noPerSeCausalLoop` (PER-SE-CAUSAL-LOOP-IMPOSSIBLE)
+excludes such finite loops given cause-over-effect priority, transitivity and
+irreflexivity, so what is missing is a bridge from `ActualEsseCause` to that
+efficient/per se priority reading. -/
 def SourceFreeFiniteCircleControl : Prop :=
   (∀ x, DistinctEsseAt sourceFreeFiniteCircle x) ∧
   DistinctEsseHasOtherActualCause sourceFreeFiniteCircle ∧

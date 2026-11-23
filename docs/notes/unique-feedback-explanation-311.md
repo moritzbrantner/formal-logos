@@ -1789,8 +1789,10 @@ This is substantive positive warrant for an *explicit primitive*, not proof
 of the unrestricted tenseless, causally mode-unspecified application.
 The strongest surviving account is an **actually constituted, exhaustive
 rootless order**, potentially with a primitive global organization/actuality
-fact. It gives a uniform local constitution account but has not shown that
-its constitutive actuality is supplied without merely presupposing it.
+fact. It gives a uniform local constitution account, and it owes the same
+burden as the foundation: each side takes a primitive actuality (the rival's
+global obtaining fact, the foundation's underived act) and must show that
+primitive adequate under one standard (see "Primitive stopping points" below).
 That unresolved adequacy question must not be hidden inside the word
 “derivative.” Earlier independent semantic reviews and source assessments
 remain credited only for their dated scope; this section requires fresh review.
@@ -1946,18 +1948,24 @@ is claimed.
 ### Exactly where the originating/sustaining and non-efficient forks matter (#1616)
 
 The relevant root-interface inference is the **open** cause-to-concrete-
-ground bridge `cb1cdea9`: when `CausesIn c x esse` is tenseless and
+ground bridge `cb1cdea9` (STMT-ESSE-CAUSE-IS-ACTUAL-CONCRETE-GROUND, an
+open statement): when `CausesIn c x esse` is tenseless and
 mode-unspecified, its use to infer `ActualConcreteGround m w c x`
-requires that c *exists at w* and supplies x's **present** existence
-under the selected `m.grounds`. Neither condition is in the type
-of `CausesIn`, and even its actual-esse guard is world-free. A dead
-parent or vanished maker can be a real *originator* in a history
-without presently sustaining the product. The
-`SustainingDependence.Control.Certificate` already checks
-origin-at-onset plus later existence without same-time giving;
-this is an existing finite counterinterpretation for the stronger
-automatic origin→sustain reading, not a denial of historical causal
-efficacy.
+requires `concrete c`, `ExistsAt w c` and `m.grounds w c x` at the
+selected **world** w. Here w is a world of a Kripke frame
+(`BruteFoundationBoundary.Profile`) and "present at w" is world-relative
+existence, not temporal concurrence (DEF-PRESENT-ESSE-SUPPORT). None of
+these conditions is in the type of `CausesIn`, and even its actual-esse
+guard is world-free. The origin-versus-sustaining question (#1616) bears
+on `cb1cdea9` only through an explicit, OPEN bridge reading worlds as
+moments: in a history, a dead parent or vanished maker can be a real
+*originator* without presently sustaining the product, and
+`SustainingDependence.Control.Certificate` (in its separate
+`History W B T` frame) checks origin-at-onset plus later existence
+without same-time giving. That is an existing finite counterinterpretation
+for the stronger automatic origin→sustain reading, not a denial of
+historical causal efficacy, and it does not carry over to the world-indexed
+bridge by name.
 
 The F2 restriction is distinct: even **co-present** exemplar or
 final causes may explain a thing's *form*, action, intelligibility
@@ -1967,13 +1975,17 @@ identifying “is an exemplar for its production” with “supplies its
 esse at this same moment” is an additional causation-mode premise.
 Likewise a purpose can explain why an agent makes a thing without
 itself being a concrete productive giver of the product's actuality.
-The bare `CausesIn` field has no mode tag, so the existing
-`cb1cdea9` result's **application** must either narrow it to
+The bare `CausesIn` field has no mode tag, so any **application** of
+the open `cb1cdea9` statement must either narrow it to
 genuine esse-giving causes, or introduce a defended exemplar/final-
 to-productive-esse bridge. It must not be advertised as true of
-every causal role just because it mentions `esse`. This
-separation would require a genuinely typed causal-mode fork for
-formal registration; the current note does not manufacture one.
+every causal role just because it mentions `esse`. This is a scope
+caution, not a demonstrated failure mode: the artisan example shows
+exemplar causation of form or production, and no instance satisfying
+`CausesIn c x esse` under DEF-CAUSE-OF-PERFECTION with a merely exemplar or
+final cause has been identified. The separation would require a genuinely
+typed causal-mode fork for formal registration; the current note does not
+manufacture one.
 
 The strongest positive per-se application says that an actual
 instrument only supplies derivative efficacy **while** its
@@ -1991,9 +2003,10 @@ The historical inertialist's strongest option retains the same
 bearer's earlier actuality plus a principled law of persistence.
 It denies the **present** productive transfer, not necessarily
 an originating cause or an earlier received existence. Its
-continuation is owned by #1800/#1801/#1802. Since both a surviving
-origin-only cause and a co-present non-efficient cause can fail
-the presently sustaining reading, no new proof of `cb1cdea9`
+continuation is owned by #1800/#1801/#1802. Since a surviving
+origin-only cause can fail the presently sustaining reading (in histories,
+reaching `cb1cdea9` only through the OPEN world-as-moment bridge) and a
+co-present non-efficient cause is a scope caution, no new proof of `cb1cdea9`
 or rejection of inertia is claimed; the existing positive case
 is strongest for **specified essentially ordered,
 currently productive powers**, not an unrestricted tenseless
@@ -2005,7 +2018,7 @@ cause-of-esse dictionary.
 | --- | --- | --- |
 | Infinite **temporal** genealogy or accidental causes | A current bearer may persist after a producer disappears (SustainingDependence.Control.Certificate); ST I q.46 a.2 ad 7 allows per accidens infinity | A reason for current actuality if the thesis demands one; do **not** rewrite temporal origination as simultaneous existential giving |
 | Genuinely infinite **existential** ancestry n+1 → n (every n actual) | EsseSource.InfiniteRegressControl and ClosedGroundingRoots.Control.pureRegress have no source; local causal assignments remain coherent | A productive interpretation of each same-respect edge and a full account of their joint obtaining; a brute global order is a positive stopping proposal, not a contradiction |
-| Finite mutually supporting **esse causes**, each with distinct esse | New SourceFreeFiniteCircleControl: both r-edges, coverage, population and at-most-one identity hold; neither CCR nor common-source follows | An actual productive-priority/realization law; an uninterpreted pair of reciprocal causes proves no productive self-creation |
+| Finite mutually supporting **esse causes**, each with distinct esse | New SourceFreeFiniteCircleControl: both r-edges, coverage and population hold, and at-most-one identity holds **vacuously** (no bearer has esse equal to essence); neither CCR nor common-source follows. `RosterOnlyControl` already showed coverage plus at-most-one plus two actual bearers do not give CCR; what is new is a finite domain with no identity bearer at all and reciprocal edges of the same relation | A bridge from `ActualEsseCause` to the efficient/per se priority reading: given priority of cause over effect, transitivity and irreflexivity, the existing `noPerSeCausalLoop` (PER-SE-CAUSAL-LOOP-IMPOSSIBLE) already excludes such loops of any finite length, so this rival is the one in the table that existing verified work excludes conditionally; an uninterpreted pair of reciprocal causes proves no productive self-creation |
 | Actual **joint powers**, including all-borrowed productive groups | DerivativeJointPower.SourceFreeControl shows simultaneous two-contributor local power equations and coherent scenarios while inductive Supply gives no powered result; rooted examples distinguish intrinsically supplied from locally admitted | Either defend a coinductive productive notion of supply, or give an actual intrinsic contribution; fixed-point selection alone is not exercise of a power |
 | **Holistic constitution**: real members, arrangement and whole jointly make each member actual | UniqueFeedback.Controls admits a unique global Boolean solution; the old owner reply distinguishes relational constitution from merely drawn arrows | Say whether the totality is a concrete independently actual whole (potentially an underived source), an abstract rule, or a primitive obtaining fact; show its identity and causal role at the selected r, not simply global solution uniqueness |
 | **Circular grounding** without productive causal loops | RootedCycleControl demonstrates that some cycles coexist with a genuine root; an unrooted circuit violates CCR but not every conceivable grounding policy | A joint full-ground account under a defended nonproductive/constitutive standard; mixed-token self-production refutes only its stronger productive interpretation |
@@ -2015,9 +2028,11 @@ Finite assignments do not refute infinite accounts, and the existence of a
 formal model does not show its interpretation can instantiate actual
 productive, grounding or constitutive relations. Conversely, no evidence
 above proves that holistic constitution or persistence laws are metaphysically
-impossible. The two-bearer r-circle newly checks a *missing-premise boundary*
-in the exact cause-of-being dictionary; it does not replace the richer
-infinite or joint-exercise models.
+impossible. The two-bearer r-circle checks a *missing-premise boundary*
+in the exact cause-of-being dictionary (new relative to `RosterOnlyControl`
+only in having no identity bearer and reciprocal same-relation edges); it is
+a kernel-checked, unregistered helper theorem, not a Comparator-audited
+result, and it does not replace the richer infinite or joint-exercise models.
 
 ### Primitive stopping points, cumulative judgment, and reopening conditions
 
@@ -2036,9 +2051,15 @@ Apply the *same adequacy standard* to both primitive stopping points.
 
 **Provisional conclusion.** The received-actuality/instrumental case gives
 real conditional comparative support to local foundation: a list of conditioned
-powers does not alone explain their available existence, and an inductive
-production account demands some non-borrowed supply. It is stronger than
-“no infinite series” and avoids treating the rival's efficacy as null.
+powers does not alone explain their available existence. The inductive
+`DerivativeJointPower.Supply` standard *formalizes* the foundation primitive
+(its derivations bottom out in the `intrinsic` constructor) rather than
+supporting it, since inductive versus coinductive supply is the contested
+choice; the remaining warrant rests on that primitive and on the
+instrumental argument. It offers better-targeted warrant for a logically
+weaker principle than "no infinite series" (CCR is the weaker side of the
+registered strength order 044974e5) and avoids treating the rival's
+efficacy as null.
 But unrestricted 20babef7 remains open: the selected r still includes
 mode-unspecified causes, the global-to-every-local-cone scope principle
 needs defense, and a complete, actually instantiated constitutive account
@@ -2078,8 +2099,9 @@ A comparison produced without the repository CLI is not represented as
 a computed frontier-diff.
 
 **Self-sweep and review handoff.** The added two-bearer control uses one
-p.esse and r, no world/temporal claims, all-actual guards, one represented essence value and a different represented esse value
-for each bearer and no witness of represented identity. The
+p.esse and r, no world/temporal claims, all-actual guards, and for both
+bearers `esseOf = true` and `essenceOf = false`, so no bearer witnesses
+represented identity and the at-most-one premise holds vacuously. The
 finite control is explicitly an interpretation, not a metaphysical
 nonentailment theorem about actual causal powers. No source-attribution
 record, existing Challenge, argument/status or premise binding is
