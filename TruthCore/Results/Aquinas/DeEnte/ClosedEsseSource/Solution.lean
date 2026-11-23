@@ -214,14 +214,20 @@ theorem sourceFreeFiniteCircle : SourceFreeFiniteCircleControl := by
   let p := TruthCore.Latin.Aquinas.DeEnte.ClosedEsseSource.sourceFreeFiniteCircle
   have hd : ∀ x, DistinctEsseAt p x := by
     intro x
-    exact ⟨trivial, by decide⟩
+    refine ⟨trivial, ?_⟩
+    change true ≠ false
+    decide
   have hs : ∀ x, ∃ c, ActualEsseCause p c x := by
     intro x
     cases x with
     | false =>
-      exact ⟨true, ⟨by decide, trivial, trivial, by decide⟩⟩
+      refine ⟨true, ⟨by decide, trivial, trivial, ?_⟩⟩
+      change true ≠ false
+      decide
     | true =>
-      exact ⟨false, ⟨by decide, trivial, trivial, by decide⟩⟩
+      refine ⟨false, ⟨by decide, trivial, trivial, ?_⟩⟩
+      change false ≠ true
+      decide
   have hOther : DistinctEsseHasOtherActualCause p := by
     intro x _
     obtain ⟨c, hc⟩ := hs x
@@ -249,8 +255,12 @@ theorem sourceFreeFiniteCircle : SourceFreeFiniteCircleControl := by
     obtain ⟨c, hc⟩ := hs n
     exact hUncaused c hc
   refine ⟨hd, hOther, hOne, ⟨false, trivial⟩, hs, ?_, ?_, hNotClosed, hNoCommon⟩
-  · exact ⟨by decide, trivial, trivial, by decide⟩
-  · exact ⟨by decide, trivial, trivial, by decide⟩
+  · refine ⟨by decide, trivial, trivial, ?_⟩
+    change false ≠ true
+    decide
+  · refine ⟨by decide, trivial, trivial, ?_⟩
+    change true ≠ false
+    decide
 
 theorem singletonPopulation : SingletonPopulationControl := by
   let p : Profile Unit Bool Unit := {
