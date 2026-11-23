@@ -157,7 +157,8 @@ and individually instantiable attributes with no joint bearer. -/
 set_option maxRecDepth 8192 in
 theorem divine_controls : DivineControl.Checks := by
   dsimp [DivineControl.Checks, DivineControl.ontic, DivineControl.at,
-    DivineControl.attributes, DivineControl.split,
+    DivineControl.attributes, DivineControl.split, DivineControl.k5Frame,
+    DivineControl.k5Ontic, TruthCore.Modal.Euclidean,
     DescribedPossibleGreatness, PossibleGreatness, AdmitGreatnessWorlds,
     GreatnessAt, ExcellenceAt, NineAt,
     TruthCore.Modal.NecessaryIfExistent.MaximalProfile,
