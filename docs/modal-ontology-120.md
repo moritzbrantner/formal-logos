@@ -570,3 +570,49 @@ agent's reasons that make multiple outcomes rationally permissible with
 outcome is possible, identify the defended optimality/necessitation
 principle that makes it unique. Bind only reviewed, fixed-sense
 premises to the cumulative GOD_4 route, and leave #1864 open otherwise.
+
+
+### Restored-commitment control: source simplicity, knowledge and permissible different effects
+
+`DivineProfile.Interpreted.CreationControl.Compatibility` is a deliberately
+**structural**, non-metaphysical continuation of the existing
+`NecessaryVariableEffects.alternatingEffects` (#462), not another unrelated
+modal frame. Both worlds contain the SAME necessary individual `source = none`
+(of type `Option Bool`), while a different composite, passively potent effect
+exists and is caused in each world. At the designated actual world `false`,
+the nonempty esse/act dictionary agrees **exactly** with its actual inventory.
+The source is simple, devoid of passive potency and eternal, under
+`ActAndPotencyMakeComposite` and `ImmutableIsEternalReading`; the actual first
+effect is BOTH composite and potent, so the relevant composition predicates
+are not globally empty.
+
+The model further carries two opposed truth-contents (true at only one world),
+content-complete and factive **extensional** knowledge at the same source,
+and two different selected, noncoerced, permitted actions; an additional
+forbidden action is never selected. The selection-output correspondence
+holds world by world, and #462's necessary source, contingent first effect,
+and absence of ONE fixed effect remain true. Thus **the finite structural
+formulas alone** do not force an invariant known-content set or a unique
+chosen contingent effect from source necessity, absence of passive potency,
+or thin moral non-selection. The control restores an actual nontrivial
+composite/potent creature rather than making every predicate trivially True.
+
+**Three explicit limitations:** the source's cognitive relation is assigned
+extensionally from truth and is not *intrinsically grounded intentional
+understanding*; the action-output match is only a correlation, not genuinely
+reason-guided agency or a warrant for free willing; the `q.InAct` dictionary
+is verified against the actual world's beings but not against the entire
+world-indexed inventory. In particular, the control does not instantiate the
+full StageTwo `fixedProfile`, provide an actual root in the selected grounding
+relation, demonstrate a good-willed creative act, or show that such a world
+really is metaphysically admissible. It is a counterexample to a proposed
+**unbridged formal entailment**, not evidence for the truth of a rival divine
+essence. #555's three-premise same-token collapse remains intact and would
+need additional open interpretive bridges to apply to this source.
+
+The philosophical research task is therefore sharpened: defend or reject
+the bridge from an immutable source's immanent intellectual/volitional act
+to **invariant object-content or strictly fixed effects**, versus an account
+where one intrinsic perfection can be related to contingent objects without
+itself becoming a passive changing state. The model makes clear which step
+needs metaphysical explanation, not that either account has been won.
