@@ -10,7 +10,7 @@
   "inference_ids": [
     "ed678510-a4df-4dae-a2c1-6563565a5a27"
   ],
-  "meaning": "Non-transcription conditional derivation on one fixed q3a4 profile, constructive. A supplies an actual totality cause, B makes it a cause of each received member, and no self-causation of esse (b62a64ab) excludes its being received, hence it has no actual esse cause and is a distinct actual cause of every received bearer. Mode of causing, immediacy, time, world and necessity stay unspecified; uniqueness of the uncaused bearer and esse-essence identity are not derived. Controls (2)-(5) show each of A, B and no self-causation is needed in an exact interpretation.",
+  "meaning": "Non-transcription conditional derivation on one fixed q3a4 profile, constructive. A supplies an actual totality cause (collective sense TOTALITY_CAUSE_1), B makes it a cause of each received member, and no self-causation of esse (b62a64ab) excludes its being received, hence it has no actual esse cause and is a distinct actual cause of every received bearer. Mode of causing, immediacy, time, world and necessity stay unspecified; uniqueness of the uncaused bearer and esse-essence identity are not derived. In controls (2)-(5) the conclusion fails (by closedOfCommon, since CCR fails), and in each one of A, B and no self-causation fails, so each is needed in an exact interpretation.",
   "definition_ids": [
     "8163859b-95b3-4dd2-8a69-541bd332f32f",
     "211a6432-8b8f-53ed-85e3-75173bb15b24",

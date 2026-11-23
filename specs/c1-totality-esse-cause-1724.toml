@@ -2,30 +2,34 @@
 vocab = "TruthCore.Latin.Aquinas.DeEnte.AggregateEsseCause"
 results = "TruthCore.Results.Aquinas.DeEnte.AggregateEsseCause"
 definitions = []
+disambiguations = ["197f0097-f2ae-4a47-8770-3d43758f737b"]
 
 [[statement]]
 id = "The totality of received actual esse-bearers has an actual cause of its esse"
 lean = "ReceivedTotalityHasAggregateCause"
-paraphrase = "OPEN analyst premise A, attribution deferred: on one fixed q3a4 profile, if some actual bearer has received esse (it is not uncaused in ActualEsseCause), then some actual bearer is a cause of the esse of the totality of all received actual bearers taken together (TotalityCause, an explicit primitive). The totality need not be closed or finite. Not asserted: that this cause is outside the totality, unique, efficient, present or necessary. Principal rival: the Hume-Edwards view that a totality whose every member has a cause needs no cause of its own."
+paraphrase = "OPEN analyst premise A, attribution deferred: on one fixed q3a4 profile, if some actual bearer has received esse (it is not uncaused in ActualEsseCause), then some actual bearer is a cause of the esse of the totality of all received actual bearers taken together (TotalityCause, an explicit primitive, read in the collective sense TOTALITY_CAUSE_1). The totality need not be closed or finite. Not asserted: that this cause is outside the totality, unique, efficient, present or necessary. A is substantive only jointly with B: some predicate satisfies both exactly when one actual bearer causes every received bearer's esse. Under the collective reading the Hume-Edwards view denies A: a totality whose every member has a cause needs no cause of its own beyond its members' causes (TOTALITY_CAUSE_2)."
 definitions = ["a95ed85b-627e-4dbe-9810-63b0b6ee1e02", "e7aa4529-fe7a-4baf-929c-466cf15cb0c6", "8163859b-95b3-4dd2-8a69-541bd332f32f", "DEF-ESSE"]
+disambiguations = ["197f0097-f2ae-4a47-8770-3d43758f737b"]
 
 [[statement]]
 id = "A cause of the received totality causes the esse of each received bearer"
 lean = "TotalityCauseCausesEachReceived"
-paraphrase = "OPEN analyst premise B, attribution deferred: on one fixed q3a4 profile, whatever is a cause of the esse of the totality of received actual bearers (TotalityCause) is a cause, in the same esse respect (CausesIn, mode unspecified, not necessarily immediate), of the esse of each received actual bearer. A whole-to-members principle for this totality only; an analogue of the spacetime whole-to-parts bridge of #1109 in a different vocabulary, not identified with it. Principal rival: an internal loop or holistic whole whose totality cause is one of its own members."
+paraphrase = "OPEN analyst premise B, attribution deferred: on one fixed q3a4 profile, whatever is a cause of the esse of the totality of received actual bearers (TotalityCause, collective sense TOTALITY_CAUSE_1) is a cause, in the same esse respect (CausesIn, mode unspecified, not necessarily immediate), of the esse of each received actual bearer, including members it reaches only through intermediaries. A whole-to-members principle for this totality only; an analogue of the spacetime whole-to-parts bridge of #1109 in a different vocabulary, not identified with it. Under the distributive reading TOTALITY_CAUSE_2, B carries the whole joint claim and fails in the Hume-Edwards regress control. Principal rival: an internal loop or holistic whole whose totality cause is one of its own members."
 definitions = ["a95ed85b-627e-4dbe-9810-63b0b6ee1e02", "e7aa4529-fe7a-4baf-929c-466cf15cb0c6", "211a6432-8b8f-53ed-85e3-75173bb15b24", "DEF-ESSE"]
+disambiguations = ["197f0097-f2ae-4a47-8770-3d43758f737b"]
 
 [[statement]]
 id = "One uncaused actual bearer causes the esse of every received actual bearer"
 lean = "CommonUncausedCauseOfReceived"
-paraphrase = "On one fixed q3a4 profile: if some actual bearer has received esse, then one actual bearer with no actual cause of its esse is a distinct actual cause (ActualEsseCause) of the esse of every received actual bearer. Not asserted: that it is the only uncaused bearer, that its esse is its essence, that its causing is immediate, efficient, present or exclusive, or that it is necessary. Strictly stronger than CCR (20babef7) and than the finite-path common source c35b1a5c on the given relation."
+paraphrase = "On one fixed q3a4 profile: if some actual bearer has received esse, then one actual bearer with no actual cause of its esse is a distinct actual cause (ActualEsseCause) of the esse of every received actual bearer. Not asserted: that it is the only uncaused bearer, that its esse is its essence, that its causing is immediate, efficient, present or exclusive, or that it is necessary. Strictly stronger than CCR (20babef7). It neither implies nor is implied by the finite-path common source c35b1a5c: it is vacuous when nothing is received and says nothing of esse-essence identity, and control 6 satisfies c35b1a5c without it on the given edges."
 definitions = ["e7aa4529-fe7a-4baf-929c-466cf15cb0c6", "8163859b-95b3-4dd2-8a69-541bd332f32f", "DEF-ESSE"]
 
 [[statement]]
 id = "Totality esse-cause route controls"
 lean = "AggregateEsseCauseControls"
-paraphrase = "Exact interpretations only, on q3a4 profiles with all bearers actual. (1) Joint model: premises A and B, no self-causation of esse, distinct-esse coverage, identity uniqueness and a received bearer hold with the common uncaused cause, CCR and an infinite descending chain (no well-foundedness). (2) Hume-Edwards regress: A fails while B, no self-causation, coverage, uniqueness, every bearer received and freedom from causal loops hold; CCR fails. (3) Two-bearer loop with internal totality causes: B fails; CCR fails. (4) An actual uncaused totality cause that supplies no member: B fails; CCR fails. (5) A self-causing totality cause: no self-causation fails; A and B hold; CCR fails. (6) An ascending rooted chain: CCR and the finite-path common source hold without a common uncaused cause on the given edges. (7) Two independent identity roots with a transitively closed relation: CCR and coverage hold, identity uniqueness and the common uncaused cause fail. Logical controls, not metaphysical counterexamples."
+paraphrase = "Exact interpretations only, on q3a4 profiles with all bearers actual. (1) Joint model: premises A and B, no self-causation of esse, distinct-esse coverage, identity uniqueness and a received bearer hold with the common uncaused cause, CCR and an infinite descending chain (no well-foundedness). (2) Hume-Edwards regress on a bare successor relation (no per se, present or power typing): no predicate whatever satisfies both A and B; the distributive reading TOTALITY_CAUSE_2 satisfies A and fails B; no self-causation, coverage, uniqueness, every bearer received and freedom from causal loops hold; CCR fails. (3) Two-bearer loop with internal totality causes: B fails; CCR fails. (4) An actual uncaused totality cause that supplies no member: B fails; CCR fails. (5) A self-causing totality cause: no self-causation fails; A and B hold; CCR fails. (6) An ascending rooted chain: CCR and the finite-path common source hold without a common uncaused cause on the given edges (a reading that counted mediate causes would make the root common). (7) Two independent identity roots with a transitively closed relation: CCR, coverage and no self-causation hold, identity uniqueness and the common uncaused cause fail, so no predicate satisfies both A and B there. Logical controls, not metaphysical counterexamples."
 definitions = ["a95ed85b-627e-4dbe-9810-63b0b6ee1e02", "e7aa4529-fe7a-4baf-929c-466cf15cb0c6", "8163859b-95b3-4dd2-8a69-541bd332f32f", "23ae8d63-1351-4e7c-9ab1-ed85d9695b22", "183b48d2-1753-583d-aef9-4199cff86231", "DEF-ESSE"]
+disambiguations = ["197f0097-f2ae-4a47-8770-3d43758f737b"]
 
 [[argument]]
 id = "Common uncaused esse-cause from totality cause, whole to members, no self-causation"
@@ -34,7 +38,7 @@ premises = ["The totality of received actual esse-bearers has an actual cause of
 conclusion = "One uncaused actual bearer causes the esse of every received actual bearer"
 axioms = []
 rule = "Take an actual cause of the received totality; it causes each received member's esse; if it were received it would cause its own esse; so it is uncaused and distinct from every received bearer"
-meaning = "Non-transcription conditional derivation on one fixed q3a4 profile, constructive. A supplies an actual totality cause, B makes it a cause of each received member, and no self-causation of esse (b62a64ab) excludes its being received, hence it has no actual esse cause and is a distinct actual cause of every received bearer. Mode of causing, immediacy, time, world and necessity stay unspecified; uniqueness of the uncaused bearer and esse-essence identity are not derived. Controls (2)-(5) show each of A, B and no self-causation is needed in an exact interpretation."
+meaning = "Non-transcription conditional derivation on one fixed q3a4 profile, constructive. A supplies an actual totality cause (collective sense TOTALITY_CAUSE_1), B makes it a cause of each received member, and no self-causation of esse (b62a64ab) excludes its being received, hence it has no actual esse cause and is a distinct actual cause of every received bearer. Mode of causing, immediacy, time, world and necessity stay unspecified; uniqueness of the uncaused bearer and esse-essence identity are not derived. In controls (2)-(5) the conclusion fails (by closedOfCommon, since CCR fails), and in each one of A, B and no self-causation fails, so each is needed in an exact interpretation."
 
 [[argument]]
 id = "Common uncaused esse-cause of received bearers implies rooted closed collections"
@@ -43,7 +47,7 @@ premises = ["One uncaused actual bearer causes the esse of every received actual
 conclusion = "20babef7-6ae7-4b48-b72a-f417e8e63136"
 axioms = []
 rule = "A closed collection with a member contains that member's cause, the common uncaused cause, which is a root of the collection"
-meaning = "Sole-premise strength comparison on the exact actual esse-cause dictionary, constructive. Any member of a closed collection with no root is received, so the common cause causes it and closure brings the common cause in; being uncaused it is a root. Controls (6) and (7) witness strictness. With the previous argument this is a second support option for CCR, through the totality-cause premise A; it adds no warrant beyond that of A, B and no self-causation."
+meaning = "Sole-premise strength comparison on the exact actual esse-cause dictionary, constructive. Any member of a closed collection with no root is received, so the common cause causes it and closure brings the common cause in; being uncaused it is a root. Controls (6) and (7) witness strictness. With the previous argument this is a second support option for CCR, through premises A and B jointly; it adds no warrant beyond that of A, B and no self-causation."
 
 [[argument]]
 id = "Maximal esse causality from the common uncaused cause, without CCR or composition"
@@ -52,7 +56,7 @@ premises = ["One uncaused actual bearer causes the esse of every received actual
 conclusion = "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7"
 axioms = []
 rule = "Coverage makes every uncaused actual bearer an identity bearer; uniqueness makes every actual bearer other than the common cause received, hence caused by it; causal ascent identifies any maximum with the common cause"
-meaning = "Non-transcription alternative support for the fixed-esse maximum principle consumed by the GOD_4 existence bundle. Compared with the existing route (common ancestry c35b1a5c, open composition b4987085, ascent cffad050, excluded middle), it uses neither CCR, population nor esse-cause composition: the common uncaused cause already causes each received bearer, and coverage, identity uniqueness and excluded middle make every other actual bearer received. If nothing is received, uniqueness leaves at most one actual bearer and the principle holds vacuously. Causing stays mode-unspecified; no necessity, maximum existence or naming is concluded."
+meaning = "Non-transcription alternative support for the fixed-esse maximum principle consumed by the GOD_4 existence bundle. Compared with the existing route (common ancestry c35b1a5c, open composition b4987085, ascent cffad050, excluded middle), it uses neither CCR, population nor the composition premise: the common uncaused cause already causes each received bearer, and coverage, identity uniqueness and excluded middle make every other actual bearer received. The composition-type content is not removed but moved: premise B already requires the totality cause to cause members it reaches only through intermediaries. If nothing is received, uniqueness leaves at most one actual bearer and the principle holds vacuously. Causing stays mode-unspecified; no necessity, maximum existence or naming is concluded."
 
 [[argument]]
 id = "Totality esse-cause route controls checked"
@@ -61,7 +65,7 @@ premises = []
 conclusion = "Totality esse-cause route controls"
 axioms = []
 rule = "Seven explicit all-actual q3a4 interpretations: one joint model, four premise omissions and two strictness models"
-meaning = "Non-transcription closed control bundle. The omission models deny, respectively, the totality cause (Hume-Edwards regress), whole to members (internal loop; idle actual explainer) and no self-causation (self-causing totality cause); the joint model shows the premise bundle is satisfiable with an infinite descending chain; the strictness models show CCR without a common uncaused cause, once with a single root on the given edges and once with two independent roots and a transitively closed relation. No model is asserted to be metaphysically possible."
+meaning = "Non-transcription closed control bundle. The omission models deny, respectively, the joint claim of A and B for every predicate (Hume-Edwards regress, where the distributive reading satisfies A and fails B), whole to members (internal loop; idle actual explainer) and no self-causation (self-causing totality cause); the joint model shows the premise bundle is satisfiable with an infinite descending chain; the strictness models show CCR without a common uncaused cause, once with a single root on the given edges and once with two independent roots and a transitively closed relation. No model is asserted to be metaphysically possible; the regress relation carries no per se, present or power typing."
 
 [[relation]]
 id = "A common uncaused esse-cause strengthens CCR"

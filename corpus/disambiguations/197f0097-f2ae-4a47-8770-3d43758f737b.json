@@ -1,0 +1,25 @@
+{
+  "id": "197f0097-f2ae-4a47-8770-3d43758f737b",
+  "label": "Cause of the received totality: collective versus distributive",
+  "term": "cause of the received totality",
+  "term_label": "TOTALITY_CAUSE",
+  "sense_definition_ids": [
+    "a95ed85b-627e-4dbe-9810-63b0b6ee1e02",
+    "3770b94d-6d94-4942-b613-c36b7af1cf25"
+  ],
+  "senses": [
+    {
+      "id": "54d30d63-b1fd-4554-a9fd-5348c90b5820",
+      "label": "TOTALITY_CAUSE_1",
+      "definition_id": "a95ed85b-627e-4dbe-9810-63b0b6ee1e02",
+      "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.AggregateEsseCause.ReceivedTotalityHasAggregateCause"
+    },
+    {
+      "id": "d5fd4b2e-266f-4f7c-8a50-a1a333740d77",
+      "label": "TOTALITY_CAUSE_2",
+      "definition_id": "3770b94d-6d94-4942-b613-c36b7af1cf25",
+      "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.AggregateEsseCause.DistributiveTotalityCause"
+    }
+  ],
+  "resolution": "TOTALITY_CAUSE_1 (a95ed85b) is the collective reading: a primitive cause of the esse of all received actual bearers taken together, constrained only by premises A and B; its Lean sense declaration is premise A, the first constraint on the parameter, not a definitional equation. TOTALITY_CAUSE_2 (3770b94d) is the distributive reading: a distinct actual cause of some received bearer, a defined predicate. Premises A (05b15c98) and B (6c0282c0), their derivation and the totality-route controls use TOTALITY_CAUSE_1 only. The Hume-Edwards dispute is about which reading a complete totality of received being calls for: it grants that such a totality is caused in TOTALITY_CAUSE_2 and denies it in TOTALITY_CAUSE_1. No argument passes between the senses: control 2 of 7b9bac8e shows that TOTALITY_CAUSE_2 satisfies A and fails B in the regress interpretation, and that no predicate satisfies both there. Because the parameter is constrained only by A and B, some predicate satisfies both exactly when, if anything is received, one actual bearer causes every received bearer's esse; so under either reading the substantive claim is that joint one, and a reading only shifts which premise carries it (TOTALITY_CAUSE_1: A; TOTALITY_CAUSE_2: B)."
+}

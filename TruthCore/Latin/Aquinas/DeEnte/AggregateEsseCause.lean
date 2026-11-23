@@ -17,25 +17,28 @@ tenseless and mode-unspecified). Nothing here is efficient, presently
 sustaining, world-indexed or modal.
 
 `TotalityCause` is an explicit PRIMITIVE predicate parameter: `TotalityCause e`
-reads "e is a cause of the esse of the totality of received actual bearers,
-taken together". It is constrained only by the two premises below. Its meaning
-and examples are recorded in the linked definition and in
-`docs/notes/unique-feedback-explanation-311.md` (C1 section). It is not the
-plural or distributive fact that each member has some cause: that fact is
-`ReceivedActual` holding of every member, and the Hume–Edwards control shows it
-is compatible with there being no totality cause at all.
+reads, in its intended collective sense (TOTALITY_CAUSE_1), "e is a cause of
+the esse of the totality of received actual bearers, taken together". It is
+constrained only by the two premises below. Its meaning and examples are in the
+linked definition and in `docs/notes/unique-feedback-explanation-311.md`
+(C1 section). The distributive sense (TOTALITY_CAUSE_2,
+`DistributiveTotalityCause`: e causes some received member) is a different
+predicate; under it premise A is trivial and premise B is the whole claim
+(control 2).
 
-Two packaging facts matter for warrant, and are recorded in the note:
+Because the parameter is constrained only by A and B, some predicate satisfies
+both exactly when, if anything is received, one actual bearer is a cause of
+every received bearer's esse (`jointIffCommonCause` in the Solution). The
+substantive content therefore lies in A and B jointly, whichever premise a
+reading of `TotalityCause` makes carry it. With no self-causation of esse this
+yields a single uncaused cause of every received bearer, which is strictly
+stronger than CCR (controls 6 and 7).
 
-* Any principle that quantifies only over *closed* collections with no
-  uncaused member (for example "no such plurality jointly causes its own esse")
-  is equivalent to CCR given the auxiliary premises, because CCR says that no
-  such collection is nonempty. Such a principle re-presents CCR; it adds no
-  independent evidence.
-* The totality premise below is not of that kind. It is about the collection of
-  *all* received actual bearers, which need not be closed, and with the
-  whole-to-members premise it yields a single uncaused cause of every received
-  bearer: strictly stronger than CCR (controls 6 and 7).
+A plural non-circularity principle restricted to *closed* collections ("no
+nonempty closed collection with no uncaused member jointly causes its own
+esse", with "jointly causes" read distributively) says that no such collection
+is nonempty, which is CCR itself; it is a re-presentation and adds no
+independent evidence. This is recorded in the note, not formalized here.
 -/
 
 @[expose] public section
@@ -84,12 +87,22 @@ def TotalityCauseCausesEachReceived (p : Profile B P R)
 cause of its esse is a distinct actual cause of the esse of every received
 actual bearer. Not asserted: that it is the only uncaused bearer, that its esse
 is its essence, that its causing is immediate, efficient or present, or that it
-is necessary. Strictly stronger than CCR and than the finite-path common source
-`CommonEsseIsEssenceSource` (controls 6 and 7). -/
+is necessary. Strictly stronger than CCR (controls 6 and 7). It neither
+implies nor is implied by the finite-path common source
+`CommonEsseIsEssenceSource`: it is vacuous when nothing is received and says
+nothing of esse-essence identity, and control 6 satisfies that source without
+it on the given edges. -/
 def CommonUncausedCauseOfReceived (p : Profile B P R) : Prop :=
   (∃ x, ReceivedActual p x) →
     ∃ e, p.InAct e p.esse ∧ (∀ c, ¬ ActualEsseCause p c e) ∧
       ∀ m, ReceivedActual p m → ActualEsseCause p e m
+
+/-- TOTALITY_CAUSE_2, the distributive sense: e is a distinct actual cause of
+the esse of some received actual bearer. Every member-cause of a totality is a
+cause of it in this sense. It is a defined predicate, not the primitive
+collective `TotalityCause` of premise A. -/
+def DistributiveTotalityCause (p : Profile B P R) (e : B) : Prop :=
+  ∃ m, ReceivedActual p m ∧ ActualEsseCause p e m
 
 /-! ## Exact interpretations (controls), not metaphysical models -/
 
@@ -141,19 +154,23 @@ def pluralRootsProfile : Profile (Bool × Bool) Bool Unit where
 /-- Seven exact interpretations. (1) A positive joint model: A, B, no
 self-causation, distinct-esse coverage, identity uniqueness and a received
 bearer hold together with the common uncaused cause, CCR and an infinite
-descending chain (no well-foundedness). (2) Hume–Edwards regress: A fails;
-B, no self-causation, coverage, uniqueness, all bearers received and loop
-freedom hold; CCR fails. (3) A two-bearer loop with internal totality causes:
-B fails; A, no self-causation and all bearers received hold; CCR fails.
-(4) An actual uncaused totality cause that supplies no member: B fails; CCR
-fails. (5) A self-causing totality cause: no self-causation fails; A and B hold;
-CCR fails. (6) An ascending rooted chain: CCR and the finite-path common source
-hold while the common uncaused cause fails; here the failure uses the given
-edges as the whole `CausesIn` relation, so a reading that also counted mediate
-causes would make the root common. (7) Two independent roots: CCR and
-coverage hold, identity uniqueness and the common uncaused cause fail, with a
-transitively closed relation. Plural foundations keep CCR and reject A given B
-and no self-causation. Logical controls only. -/
+descending chain (no well-foundedness). (2) Hume–Edwards regress: no
+predicate whatever satisfies both A and B; the distributive reading
+(TOTALITY_CAUSE_2) satisfies A and fails B; no self-causation, coverage,
+uniqueness, every bearer received and loop freedom hold; CCR fails. The
+relation is a bare successor relation: no per se, present or power typing.
+(3) A two-bearer loop with internal totality causes: B fails; A, no
+self-causation and all bearers received hold; CCR fails. (4) An actual
+uncaused totality cause that supplies no member: B fails; CCR fails. (5) A
+self-causing totality cause: no self-causation fails; A and B hold; CCR fails.
+(6) An ascending rooted chain: CCR and the finite-path common source hold while
+the common uncaused cause fails; here the failure uses the given edges as the
+whole `CausesIn` relation, so a reading that also counted mediate causes would
+make the root common. (7) Two independent roots: CCR, coverage and no
+self-causation hold, identity uniqueness and the common uncaused cause fail,
+with a transitively closed relation; so, by `commonOfAggregate`, no predicate
+satisfies both A and B there. Plural foundations keep CCR and reject the joint
+claim of A and B. Logical controls only. -/
 def AggregateEsseCauseControls : Prop :=
   (∃ (p : Profile (Option Nat) Bool Unit) (T : Option Nat → Prop),
     ReceivedTotalityHasAggregateCause p T ∧ TotalityCauseCausesEachReceived p T ∧
@@ -161,8 +178,11 @@ def AggregateEsseCauseControls : Prop :=
     AtMostOneEsseIsEssence p ∧ (∃ x, ReceivedActual p x) ∧
     CommonUncausedCauseOfReceived p ∧ ClosedActualEsseCollectionsRooted p ∧
     ¬ NoInfiniteActualEsseCauseRegress p) ∧
-  (∃ (p : Profile Nat Bool Unit) (T : Nat → Prop),
-    ¬ ReceivedTotalityHasAggregateCause p T ∧ TotalityCauseCausesEachReceived p T ∧
+  (∃ p : Profile Nat Bool Unit,
+    (∀ T : Nat → Prop,
+      ¬ (ReceivedTotalityHasAggregateCause p T ∧ TotalityCauseCausesEachReceived p T)) ∧
+    ReceivedTotalityHasAggregateCause p (DistributiveTotalityCause p) ∧
+    ¬ TotalityCauseCausesEachReceived p (DistributiveTotalityCause p) ∧
     NothingCausesItsOwnBeing p.CausesIn p.esse ∧ DistinctEsseHasOtherActualCause p ∧
     AtMostOneEsseIsEssence p ∧ (∀ x, ReceivedActual p x) ∧
     (∀ x, ¬ Relation.TransGen (ActualEsseCause p) x x) ∧
@@ -186,6 +206,7 @@ def AggregateEsseCauseControls : Prop :=
     (∃ x, ReceivedActual p x) ∧ ¬ CommonUncausedCauseOfReceived p) ∧
   (∃ p : Profile (Bool × Bool) Bool Unit,
     ClosedActualEsseCollectionsRooted p ∧ DistinctEsseHasOtherActualCause p ∧
+    NothingCausesItsOwnBeing p.CausesIn p.esse ∧
     ¬ AtMostOneEsseIsEssence p ∧ (∃ x, ReceivedActual p x) ∧
     (∀ a b c, p.CausesIn a b p.esse → p.CausesIn b c p.esse → p.CausesIn a c p.esse) ∧
     ¬ CommonUncausedCauseOfReceived p)

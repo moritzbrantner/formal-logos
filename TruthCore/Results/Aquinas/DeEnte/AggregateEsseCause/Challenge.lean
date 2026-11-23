@@ -4,8 +4,9 @@ import TruthCore.Case.Catholicism.PreexistenceWithoutTransfer
 import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question2.Article3QuartaViaOrder
 import TruthCore.Logic.ExcludedMiddle
 
-/-! The totality-cause route to CCR and its controls (#1724). Constructive:
-no excluded middle, well-foundedness, efficient cause or modal premise. -/
+/-! The totality-cause route to CCR and its controls (#1724). No classical
+axiom, well-foundedness, efficient cause or modal premise; excluded middle
+appears only as an explicit premise of `maximalCausesOfCommon`. -/
 
 namespace TruthCore.Results.Aquinas.DeEnte.AggregateEsseCause
 

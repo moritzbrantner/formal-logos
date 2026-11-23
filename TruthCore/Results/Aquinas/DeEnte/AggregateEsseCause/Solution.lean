@@ -6,8 +6,9 @@ public import TruthCore.Case.Catholicism.PreexistenceWithoutTransfer
 public import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question2.Article3QuartaViaOrder
 public import TruthCore.Logic.ExcludedMiddle
 
-/-! The totality-cause route to CCR and its controls (#1724). Constructive:
-no excluded middle, well-foundedness, efficient cause or modal premise. -/
+/-! The totality-cause route to CCR and its controls (#1724). No classical
+axiom, well-foundedness, efficient cause or modal premise; excluded middle
+appears only as an explicit premise of `maximalCausesOfCommon`. -/
 
 @[expose] public section
 
@@ -38,6 +39,25 @@ theorem totalityCauseNotReceived (p : Profile B P R) (T : B → Prop)
 theorem receivedOf' (p : Profile B P R) {c x : B} (h : ActualEsseCause p c x) :
     ReceivedActual p x :=
   ⟨h.2.2.1, fun hall => hall c h⟩
+
+/-- The primitive is eliminable: some predicate satisfies A and B exactly when,
+if anything is received, one actual bearer is a cause of every received
+bearer's esse. So the content of the totality route lies in A and B jointly.
+Helper, not a registered result. -/
+theorem jointIffCommonCause (p : Profile B P R) :
+    (∃ T : B → Prop, ReceivedTotalityHasAggregateCause p T ∧
+      TotalityCauseCausesEachReceived p T) ↔
+    ((∃ x, ReceivedActual p x) →
+      ∃ e, p.InAct e p.esse ∧ ∀ m, ReceivedActual p m → p.CausesIn e m p.esse) := by
+  constructor
+  · rintro ⟨T, hA, hB⟩ hx
+    obtain ⟨e, he, hT⟩ := hA hx
+    exact ⟨e, he, hB e hT⟩
+  · intro h
+    refine ⟨fun e => p.InAct e p.esse ∧ ∀ m, ReceivedActual p m → p.CausesIn e m p.esse,
+      fun hx => ?_, fun e hT => hT.2⟩
+    obtain ⟨e, he, hall⟩ := h hx
+    exact ⟨e, he, he, hall⟩
 
 /-- A cause of the totality of received actual being (A), which causes each
 received member's esse (B), with no self-causation of esse, is one uncaused
@@ -173,10 +193,15 @@ theorem jointModel : ∃ (p : Profile (Option Nat) Bool Unit) (T : Option Nat �
   refine ⟨some (n + 1), ⟨n + 1, rfl⟩, ?_, trivial, trivial, Or.inr ⟨n, rfl, rfl⟩⟩
   exact fun he => succNe n (Option.some.inj he)
 
-/-- (2) Hume–Edwards regress: no totality cause; every other listed condition
-holds and CCR fails. -/
-theorem humeEdwardsRegress : ∃ (p : Profile Nat Bool Unit) (T : Nat → Prop),
-    ¬ ReceivedTotalityHasAggregateCause p T ∧ TotalityCauseCausesEachReceived p T ∧
+/-- (2) Hume–Edwards regress: no predicate satisfies both A and B (otherwise
+`commonOfAggregate` and `closedOfCommon` would give CCR); the distributive
+reading satisfies A and fails B; the other listed conditions hold and CCR
+fails. -/
+theorem humeEdwardsRegress : ∃ p : Profile Nat Bool Unit,
+    (∀ T : Nat → Prop,
+      ¬ (ReceivedTotalityHasAggregateCause p T ∧ TotalityCauseCausesEachReceived p T)) ∧
+    ReceivedTotalityHasAggregateCause p (DistributiveTotalityCause p) ∧
+    ¬ TotalityCauseCausesEachReceived p (DistributiveTotalityCause p) ∧
     NothingCausesItsOwnBeing p.CausesIn p.esse ∧ DistinctEsseHasOtherActualCause p ∧
     AtMostOneEsseIsEssence p ∧ (∀ x, ReceivedActual p x) ∧
     (∀ x, ¬ Relation.TransGen (ActualEsseCause p) x x) ∧
@@ -196,20 +221,25 @@ theorem humeEdwardsRegress : ∃ (p : Profile Nat Bool Unit) (T : Nat → Prop),
       have h' : _ = _ := h.2.2.2
       rw [h'] at ih
       exact Nat.lt_trans (Nat.lt_succ_self _) ih
-  refine ⟨p, fun _ => False, ?_, fun _ he => he.elim, ?_, ?_, ?_, hRec, ?_, ?_⟩
-  · intro hA
-    obtain ⟨_, _, hT⟩ := hA ⟨0, hRec 0⟩
-    exact hT
-  · intro x hx
-    exact (succNe x) hx.symm
+  have hSelf : NothingCausesItsOwnBeing p.CausesIn p.esse :=
+    fun x hx => (succNe x) hx.symm
+  have hNot : ¬ ClosedActualEsseCollectionsRooted p :=
+    notClosedOfReceivedClosed p (fun _ => True) (fun _ _ => trivial)
+      (fun _ _ _ _ => trivial) (fun x _ => ⟨x + 1, edge x⟩) 0 trivial
+  refine ⟨p, ?_, ?_, ?_, hSelf, ?_, ?_, hRec, ?_, hNot⟩
+  · rintro T ⟨hA, hB⟩
+    exact hNot (closedOfCommon p (commonOfAggregate p T hA hB hSelf))
+  · intro _
+    exact ⟨1, trivial, 0, hRec 0, edge 0⟩
+  · intro hB
+    have h : (1 : Nat) = 5 + 1 := hB 1 ⟨0, hRec 0, edge 0⟩ 5 (hRec 5)
+    exact Nat.noConfusion h (fun h' => Nat.noConfusion h')
   · intro x _
     exact ⟨x + 1, succNe x, trivial, rfl⟩
   · intro x _ _ _ h _
     exact nomatch h
   · intro x hx
     exact Nat.lt_irrefl x (below hx)
-  · exact notClosedOfReceivedClosed p (fun _ => True) (fun _ _ => trivial)
-      (fun _ _ _ _ => trivial) (fun x _ => ⟨x + 1, edge x⟩) 0 trivial
 
 /-- (3) Two-bearer loop whose members are each a totality cause: whole to
 members fails (a member would cause itself); CCR fails. -/
@@ -344,6 +374,7 @@ theorem ccrWithoutCommonCause : ∃ p : Profile (Option Nat) Bool Unit,
 closed relation, CCR and coverage, but no common uncaused cause. -/
 theorem pluralRoots : ∃ p : Profile (Bool × Bool) Bool Unit,
     ClosedActualEsseCollectionsRooted p ∧ DistinctEsseHasOtherActualCause p ∧
+    NothingCausesItsOwnBeing p.CausesIn p.esse ∧
     ¬ AtMostOneEsseIsEssence p ∧ (∃ x, ReceivedActual p x) ∧
     (∀ a b c, p.CausesIn a b p.esse → p.CausesIn b c p.esse → p.CausesIn a c p.esse) ∧
     ¬ CommonUncausedCauseOfReceived p := by
@@ -360,12 +391,17 @@ theorem pluralRoots : ∃ p : Profile (Bool × Bool) Bool Unit,
     show cond c.1 1 0 < cond x.1 1 0
     rw [hc1, hx1]
     exact Nat.zero_lt_one
-  refine ⟨p, TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource.closedOfWF p wf, ?_, ?_,
+  refine ⟨p, TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource.closedOfWF p wf, ?_, ?_, ?_,
     ⟨(true, false), receivedOf' p (edge false)⟩, ?_, ?_⟩
   · rintro ⟨x1, x2⟩ hx
     cases x1 with
     | false => exact (hx.2 rfl).elim
     | true => exact ⟨(false, x2), (edge x2).1, trivial, (edge x2).2.2.2⟩
+  · intro x hx
+    have h1 : x.1 = false := hx.1
+    have h2 : x.1 = true := hx.2.1
+    rw [h1] at h2
+    exact nomatch h2
   · intro h
     have := h (false, false) (false, true) trivial trivial rfl rfl
     exact nomatch congrArg Prod.snd this
