@@ -663,6 +663,11 @@ formulations without new Plantinga attribution.
 
 ### C1–C4 as a positive realizer route
 
+Here C1 is the totality esse-cause commitment (#1882), C2 the
+receptivity-or-prior-reception commitment (#1884), C3 weak concurrent
+actualization (attempt `40a97664`, #1885/#1886), and C4 the
+eminence/noesis question (draft #1892).
+
 The existing Interpreted.positiveCore_with_ten_from_same_root takes ONE
 necessary actual source from RootPositiveIntellectWill's complete
 conditional premise bundle, then uses the already identified q.7
@@ -681,6 +686,12 @@ isolates the remaining conditional work:
 2. n additionally has actual omniscient, morallyPerfect and free slots.
 3. At EVERY M-successor of actuality, this same n has the four
    world-sensitive slots one, omniscient, morallyPerfect and free.
+   Reading choice: free is NoncoercedChoiceAt, a choice actually
+   made, so requiring it at every M-successor takes the
+   "necessarily exercised" branch of the open test "whether free
+   will is necessarily exercised or only essentially available"
+   (**Next discriminating work**, in the #1864 continuation above),
+   not the weaker "essentially available" branch.
 
 NecessaryAt from the ten-slot theorem provides continued existence.
 Nine other predicates transport only because the particular GOD-free
@@ -689,21 +700,34 @@ not because their essentiality was proved. The proof explicitly
 requires that fixed interpretation rather than allowing an arbitrary
 opaque profile. The new candidate_possible_from_same_root combines
 these conditions with the actual ten-slot source and actual
-reflexivity. It derives M-possible full greatness of that very
-bearer without an E-description-to-M transfer or any use of S5 beyond
-reflexivity. It does NOT prove that M is real metaphysical access,
+reflexivity. It derives M-possible full greatness and, as a separate
+conjunct, that the same n with PositiveCoreAt (the selected unique
+root at actuality) is maximally great at actuality, so the bearer is
+pinned rather than existentially quantified away. It uses no
+E-description-to-M transfer and no S5 condition beyond reflexivity.
+In this route C5 is downstream of actual greatness: the possibility
+conclusion is obtained from the actual maximally great bearer, so it
+cannot serve as an independent ◇-premise for #437's inference to
+actual existence (cf. actual_necessary_bundle_greatness, which already
+shows that the possibility detour adds no independent support). It
+does NOT prove that M is real metaphysical access,
 that the nine stipulated rigidities hold of a real essence, or that
 the three weak proxies capture traditional intrinsic omniscience,
 moral perfection and free willing.
 
 The companion Control.actualButNotEssential_holds is a two-world
-S5 structural model: one rigid bearer exists at both worlds, satisfies
-ALL thirteen slots at actuality, and is necessary in existence;
-the selected-root uniqueness slot fails at the other world. Hence
-there is no M-possible complete maximal-greatness profile from the
-origin. This proves an essentiality gap, not a metaphysical
-impossibility of God. The positive theorem deliberately requires
-what this control omits.
+S5 structural model on the generic ProfileSlots, whose slot names
+are mnemonic only: one rigid bearer exists at both worlds, satisfies
+all thirteen opaque slots at actuality, and is necessary in existence;
+the opaque one slot (here v = false; not fixedProfile's ActualRoot
+uniqueness) fails at the other world. Hence there is no M-possible
+complete maximal-greatness profile from the origin. This proves an
+essentiality gap at the schema level, not a metaphysical impossibility
+of God. "Essential" here means de re modal possession of the slots at
+every M-successor, not a Finean essence (cf. NecessaryExcellenceAt,
+which is likewise not essentiality). The positive theorem deliberately
+requires what this schema-level control omits; whether the
+fixedProfile root premises entail one at M-successors is untested.
 
 ### The strongest worked case for ¬C5
 
@@ -717,7 +741,41 @@ freely selected creative decree is necessary in performance AND
 strictly suffices for its particular contingent effect. These are
 contentful, currently OPEN bridges. Mere necessity of the bearer,
 immutability or identity of the source's intrinsic act does not
-already supply them. The rival account must explain how one
+already supply them; "mere" matters, because the C5 profile itself
+contains the immutable slot, and a registered result already
+connects immutability to this pressure.
+
+The registered SIMPLICITY-ROOT-EXPOSURE result
+(`SimplicityCollapse.rootExposure`, argument `df2b23c7`) is the
+nearest conditional bridge from immutability to #555's conclusion.
+Clause 1: IsImmutable plus the Metaphysics IX.6 potency reading
+(PotencyIsUnactualizedCapacityReading) plus the open unattributed
+ModalCapacity bridge (actuality in a respect at an accessible world
+suffices for ability at this world) collapse the respects: no
+respect true of the bearer at an accessible world is false of it
+here. Clause 2: adding a decree that is one of the bearer's
+respects, ExclusiveDecree (at most one decree here), a decree at
+every accessible world and RespectSuffices (the decree suffices for
+the effect at those worlds) gives ¬ContingentAt for the effect.
+Clause 4 states the dilemma in the other direction: for a contingent
+effect, some accessible world lacking it has no decree, or
+ModalCapacity fails. So the concrete ¬C5 next test is the residual
+open bridges of RootExposure applied to the C5 source: ModalCapacity,
+the reading of a creative decree as a respect of the source,
+ExclusiveDecree, a decree at each accessible world, and
+RespectSuffices. Mapping note: fixedProfile's immutable slot uses
+StageTwo IsImmutable over a world-free InPotency, whereas
+RootExposure's ReadingsAt is world-indexed (IsImmutable (InPotency
+w)); the C5 slot maps to RootExposure's by the constant family
+fun _ => InPotency. Under that mapping, with the world-free q.InAct
+of fixedProfile, no respect varies across worlds at all, so a
+world-varying decree cannot be one of those respects: the
+decree-as-respect bridge needs a world-indexed InAct that the C5
+profile does not supply. Neither RootExposure nor this note asserts
+the readings, ModalCapacity, or that divine simplicity entails
+them.
+
+The rival account must explain how one
 timeless rational source nonnecessitatingly produces one of
 several permissible effects, not merely stipulate world-relative
 outputs. The #462 and #1880 variable-output controls establish
@@ -729,10 +787,13 @@ task power plus morally impeccable *nonselection* is not a
 contradiction; adding the stronger thesis of incapacity for a
 coherent forbidden mapped task gives the existing power/morality
 incompatibility. Factive complete knowledge of changing truths
-plus *identical known-content membership* fails, but identity
-of an intellectual act does not imply the latter. Perfect goodness
-versus permitted evil needs a further defended obligation to
-prevent each permitted evil; the predicates alone supply no
+plus *identical known-content membership* fails, but simplicity,
+immutability and a rigid intellect capacity do not imply the latter
+(CreationControl); whether identity of one intellectual act does is
+an open test (**Next discriminating work**, #1864 continuation
+above). Perfect goodness versus permitted evil needs a further
+defended obligation to prevent each permitted evil; the selected
+proxy predicates contain no such obligation and so supply no
 contradiction. Those are discriminating substantive tests rather
 than hypothetical hidden impossibilities.
 
@@ -764,16 +825,26 @@ stronger than unconstrained predicate recombination, but the
 complete C5 premise is NOT established. The strongest actual
 negative result, #555, is an exact conditional inconsistency;
 its necessary-act/strict-efficacy reading remains disputed and
-is not derived from the selected full profile. Thus ¬C5 is
-also NOT established. The positive route warrants further work
-on its concrete missing predicates; the negative route warrants
-a targeted test of decree identity and strict efficacy. Neither
+is not derived from the selected full profile. The registered
+SIMPLICITY-ROOT-EXPOSURE bridge comes closest, deriving
+¬ContingentAt from immutability (a C5 slot) and the IX.6 potency
+reading, but only with its open ModalCapacity, decree-as-respect,
+ExclusiveDecree, decree-at-each-world and RespectSuffices inputs.
+Thus ¬C5 is also NOT established. The positive route warrants
+further work on its concrete missing predicates; the negative
+route warrants a targeted test of those RootExposure inputs for
+the C5 source, decree identity and strict efficacy. Neither
 absence of contradiction nor lack of a full model decides the case.
 
 **Next tests and revision conditions:** obtain intrinsic and
 all-content cognitive uptake from #1866/#1873 rather than a
 truth-oracle proxy; justify or refute #555's same-creative-act
-bridge under #1737's contingent rational choice; establish
+bridge under #1737's contingent rational choice, concretely by
+testing RootExposure's ModalCapacity, decree-as-respect (which
+needs a world-indexed InAct), ExclusiveDecree, decree-at-each-world
+and RespectSuffices inputs for the C5 source; test whether the
+fixedProfile root premises entail the one slot at M-successors;
+establish
 selected-root uniqueness across M without definitional
 essentiality; justify M's metaphysical interpretation,
 actualist/counterpart same-bearer identity, and the GOD_4
