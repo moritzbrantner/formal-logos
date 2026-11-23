@@ -129,28 +129,28 @@ namespace DivineControl
 
 /-- Under M = identity, only the selected world's one bearer exists, and all
 thirteen predicates hold together exactly where that bearer exists. -/
-def at (selected : Bool) (v x : Bool) : Prop :=
+def holdsAt (selected : Bool) (v x : Bool) : Prop :=
   v = selected ∧ x = true
 
 def ontic (selected : Bool) : Ontic Bool Bool where
   frame := TruthCore.Modal.PossibilityTransfer.metaphysical
-  ExistsAt := at selected
+  ExistsAt := holdsAt selected
   Causes := fun _ _ _ => False
 
 def attributes (selected : Bool) : DivinePredicates Bool Bool where
-  simple := at selected
-  perfect := at selected
-  good := at selected
-  one := at selected
-  infinite := at selected
-  immutable := at selected
-  eternal := at selected
-  intellect := at selected
-  will := at selected
-  omnipotent := at selected
-  omniscient := at selected
-  morallyPerfect := at selected
-  free := at selected
+  simple := holdsAt selected
+  perfect := holdsAt selected
+  good := holdsAt selected
+  one := holdsAt selected
+  infinite := holdsAt selected
+  immutable := holdsAt selected
+  eternal := holdsAt selected
+  intellect := holdsAt selected
+  will := holdsAt selected
+  omnipotent := holdsAt selected
+  omniscient := holdsAt selected
+  morallyPerfect := holdsAt selected
+  free := holdsAt selected
 
 /-- K5/EUCLIDEAN without actual reflexivity: every world sees true, but
 false does NOT see itself. The full profile can exist at true without any
