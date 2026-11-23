@@ -412,8 +412,9 @@ private theorem finite_switch_step (n : Nat) :
     simp [g, ht]
   · simp [g]
 
-/-- An infinite alternating trace is compatible with every finite pattern,
-but is never eventually constant. The index t is chosen after *both* the
+/-- Every finite prefix of the infinite alternating trace (after the record)
+is realized by an admitted eventually-constant history, but the alternating
+trace itself is never eventually constant. The index t is chosen after *both* the
 observed window and the rival's purported stabilization cutoff. -/
 private def alternating : Trace := fun t =>
   if t % 2 = 0 then true else false

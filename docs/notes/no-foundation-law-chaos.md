@@ -245,8 +245,11 @@ U: no sufficient ultimate why-this-total-order explanation
 
 Population + R (OneStepRich) ──[Lean conditional]──> F (FiniteRich)
 F + C (PrefixClosed)        ──[Lean conditional]──> S (WholeSuffixRich)
-S                            ──[existing #1809/#1808]──> D:
-  no all-futures exact forecast/global future-excluding law;
+S ──[Lean-only adapters, unregistered; then existing #1809]──> D1:
+  no all-admitted-futures exact forecast, no deterministic or
+  future-excluding Profile holding on every admitted history
+S at every cutoff, one fixed selector
+  ──[Lean-only adapter, unregistered; then existing #1808]──> D2:
   an additional stance's OWN strict guarantee norm + positive
   entitlement leads to its internal contradiction
 
@@ -269,11 +272,36 @@ may be different. With a populated cell, R gives F by ordinary finite
 induction. F+C then gives S by applying C to each spliced target history. No
 ontic absence-of-foundation premise occurs in either Lean implication.
 
+Mathematically, the F+C→S step is the standard Cantor-space fact that a
+closed set dense in a cylinder contains the whole cylinder, and the
+eventually-constant countermodel is the standard dense-but-not-closed set.
+The progress here is the application, the exact separation of R, F, C and
+population as distinct premises of the law-chaos inference, not new
+mathematics.
+
+**Adapters to the downstream certificates.** S is stated over a global
+selector (`WholeSuffixRich allowed n`), whereas #1809's `certificate` takes
+`SuffixComplete p n` and `UniversalProjection p q n` over a Profile cell, and
+#1808's `internalDiscipline` takes `BothSuccessors s` over `Stance.admits`.
+`TruthCore/Results/Explanation/NoFoundationLawChaos/Adapters.lean` bridges
+both formally. `wholeSuffix_profile` shows that a Profile `q` holding on every
+selector-admitted history is suffix-complete and universally projected on its
+own cell, so `wholeSuffix_future_total`, `wholeSuffix_no_deterministic` and
+`wholeSuffix_no_forecast` are #1809's conclusions for the selector.
+`selector_bothSuccessors` shows that one fixed selector with S at **every**
+cutoff gives `BothSuccessors` for the stance admitting exactly the
+selector-admitted histories (using `splice n (fun _ => true) = on` and
+`splice n (delayedFailure (n+1)) = delayedFailure (n+1)`), and
+`selector_internalDiscipline` composes it with #1808. These are Lean-only
+lemmas, not registered corpus results, and they connect only the formal
+hand-off: whether any real law space satisfies S is the OPEN applicability
+question above.
+
 ### Three contrasting populated selectors
 
 | Fixed complete-history selector (all share the observed prefix) | R / F | C | S | What this establishes |
 | --- | --- | --- | --- | --- |
-| `finiteSwitchClass` = eventually constant (finitely many switches) | yes / yes | no | no | At every finite cutoff the proposed pattern can be realized and then stabilized; the single infinite alternating trace is excluded. A stage-rich nonempty rival does **not** admit all infinite law/outcome schedules. |
+| `finiteSwitchClass` = eventually constant (finitely many switches) | yes / yes | no | no | At every finite cutoff the proposed pattern can be realized and then stabilized; the single infinite alternating trace is excluded. A stage-rich nonempty rival does **not** admit all infinite outcome traces (and their ex-post `scheduleOf` codings). |
 | `stableOnlyClass` = just the always-true history | no / no | yes | no | A positive stable history with strict law restriction can be closed. Closure alone does not create choices. The separate `Omissions` certificate already permits this alongside `¬ GroundedTotality brute`. |
 | `allHistoryClass` = every Boolean trace | yes / yes | yes | yes | A coherent fully unrestricted comparator; the downstream chaos certificate applies only once this strong selection is warranted. |
 
@@ -307,7 +335,9 @@ finite prefixes: any excluded candidate has a finite prefix that excludes all
 its completions. For one fixed ordinary `Profile` with initial value and
 time-indexed pointwise transition constraints, a failure of `Follows` occurs
 either at time zero or at one finite successor pair. Thus its class of
-satisfying complete paths has this *mathematical* closure property. This is a
+satisfying complete paths has this *mathematical* closure property
+(`Adapters.follows_prefixClosed : ∀ q n, PrefixClosed (Follows q) n`, a
+Lean-only lemma, not a registered result). This is a
 positive structural rationale for C when **all** admissibility constraints
 really are of that form. It does not establish that ontic/metaphysical
 admissibility is exhausted by those local law equations.
@@ -345,16 +375,24 @@ to output bits. That application bridge remains OPEN.
 | Classical-theistic source | A necessary intelligent source may provide a unified reason for the order and its continued applicability. | Sourcehood does **not** by itself show why this particular world/law is selected or exclude unexplained contingency in the source's choice. | Same source, actual causal activity, sufficient contrastive reason, law persistence and intelligibility to finite inquirers are separate OPEN burdens (#735/#737 and intellect/will routes). |
 
 The **provisional assessment** for the stated #1867 target is that the
-unqualified inference **U → S is not supported** and the already certified
-brute-stable control refutes it at the structural level. R has a substantive
+unqualified inference **U → S is not supported**. The already certified
+brute-stable control (`Omissions`) shows only that the bridge-free inference
+fails in this formalization: U-style ungrounded totality and a stable law
+coexist in the product model. It does not show that a substantive U→R or
+U→C bridge is false. R has a substantive
 recombination rationale **only** for modalities satisfying genuine
 cross-time/local independence; C gains conditional rationale from
-finitely-witnessed exclusions, but does not follow from F or from U.
-Neither denial of final explanation nor Humeanism nor naturalism entails
-rejection of valid logic, objective epistemic norms or the distinction
-between sound and unsound reasoning. Under S, all-continuation **certainty**
+finitely-witnessed exclusions, but does not follow from F. C and U are
+independent by construction in the product model; no theorem relates U to
+selectors, so "C does not follow from U" is a fact about the model's shape,
+not a separate theorem.
+In this formalization U alone yields no inconsistency and no entailment to
+rejecting logic. Whether naturalism or U undermines epistemic entitlement
+(EAAN, e519065f) remains OPEN and is not assessed here. Under S,
+all-continuation **certainty**
 fails; under S plus a rival's *own* strict certainty norm plus positive
-entitlement there is an internal conflict (#1808). Scientific induction,
+entitlement there is an internal conflict (#1808, through the Lean-only
+adapter above). Scientific induction,
 probabilistic calibration, explanation conditional on laws and robust
 practical decisions remain possible without deductive guarantees; what
 warrants their real-world reliability must be evaluated separately (#737,
@@ -366,15 +404,37 @@ unrestricted successor substitution and shows *all* relevant global
 admissibility exclusions are finitely witnessed. Run the identical-history
 test on an actual law-configurations domain, not just on state traces. If
 that package survives, instantiate S and only then compose the existing
-#1809/#1808 epistemic consequences. Alternatively, identify a specific
+#1809/#1808 epistemic consequences through the adapters. Alternatively,
+identify a specific
 necessary or dispositional restriction that independently refutes R at the
 same fixed history and law identity; compare its explanatory actuality
 with the brute stable and necessary-ground options. The #735/#737
 God-existence-stage link is **comparative**; no new root route, premise
 discharge, anti-atheism theorem or stronger interpretation is claimed.
 
+**Connection plan (OPEN, not an existing route).** #735's whole-order
+explanation target is `STMT-LEIBNIZ-SERIES-SUFFICIENT-REASON` (702e4171),
+which does not itself reach the root. The nearest root-route node whose
+rival this work prices is the local existence PSR for contingents,
+"Every being contingent at w has some reason for its existence" (608a262d,
+bare), which reaches `STMT-CATHOLICISM-TRUE` through B2 (a8823bd2), the
+First Way necessity step and the quarta via route (fa24c576). Its rival is
+brute contingent existence. The missing bridges are (1) a sense-checked
+bridge identifying the denial of 608a262d (no #312 reason token for some
+contingent being's existence fact at w) with U here (no `GroundedTotality`
+of the supplied #737 scope for the whole order of transitions): the
+explananda and the relations differ; and (2) the U→R and U→C applicability
+bridges above. Even with both, the result would bear only on the comparative
+cost of the brute-contingency rival, not derive 608a262d, and D2 binds only a
+rival that endorses the strict norm. Blocker: no independently defended
+ontology of law recombination instantiates R and C, and no reason-token to
+grounded-totality bridge has been formalized.
+
 **Verification and review tracking:** The new theorem's Challenge, Solution,
-spec, result/comparator record and this note are proposed on the #1867 PR.
-Mechanical Lean, binding, Comparator, NanoDa, computed frontier-diff and the
-independent final-outcome semantic challenge must be evaluated on the exact
-PR head before the theorem is called formally verified or reviewed.
+spec, result/comparator record and this note are proposed on PR #1874 for
+#1867. An independent semantic challenge of that PR (repair pass 1) found
+one unbuilt connection drawn as existing (now built as Lean-only adapters),
+one unsupported universal non-entailment claim about naturalism (replaced),
+and several wording and scope overstatements (corrected). Mechanical Lean,
+binding, Comparator, NanoDa and the computed frontier-diff are evaluated on
+the exact PR head in CI.

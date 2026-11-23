@@ -43,6 +43,7 @@ public import TruthCore.Results.Explanation.NoBruteCompatibility.Solution
 public import TruthCore.Results.Explanation.NoBruteExistence.Solution
 public import TruthCore.Results.Explanation.NoBruteExplainedSource.Solution
 public import TruthCore.Results.Explanation.NoBruteIncompatible.Solution
+public import TruthCore.Results.Explanation.NoFoundationLawChaos.Adapters
 public import TruthCore.Results.Explanation.NoFoundationLawChaos.Solution
 public import TruthCore.Results.Explanation.OrderingCardinality.FiniteRule.Solution
 public import TruthCore.Results.Explanation.OrderingCardinality.Solution

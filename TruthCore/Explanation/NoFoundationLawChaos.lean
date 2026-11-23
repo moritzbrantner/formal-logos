@@ -166,7 +166,7 @@ def Omissions : Prop :=
 
 An admitted *complete-history selector* is separate from the local Profile:
 being compatible with a transition rule does not settle which infinite paths
-are metaphysically available. The same observed all-true prefix and Trace
+are admitted by the fixed selector. The same observed all-true prefix and Trace
 domain are used in the existing chaos certificate. -/
 
 /-- A fixed global selector further restricts #737's populated record cell.
@@ -204,7 +204,15 @@ def WholeSuffixRich (allowed : Trace → Prop) (n : Nat) : Prop :=
   ∀ tail, Admitted allowed n (splice n tail)
 
 /-- Finite-switching histories: after some finite stage all values agree.
-The bound and final value vary between admitted complete histories. -/
+The bound and final value vary between admitted complete histories.
+
+Why not Mathlib's `Filter.EventuallyConst f Filter.atTop` (invariant 16):
+for `Nat`-indexed traces the two are equivalent by
+`Filter.eventuallyConst_atTop`, and this unfolded form names the
+stabilization cutoff `k` and final value `b` that the countermodel proofs
+construct (`finite_switch_step`) and refute (`alternating_not_constant`)
+directly. Routing through the filter library would add an import and a
+rewrite step without adding philosophical or mathematical content. -/
 def EventuallyConstant (f : Trace) : Prop :=
   ∃ k b, ∀ t, k ≤ t → f t = b
 
