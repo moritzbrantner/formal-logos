@@ -262,7 +262,8 @@ not independently establish the truth of those philosophical premises. -/
 theorem fullSourceOmission : FullSourceOmission := by
   unfold FullSourceOmission
   refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
-  · apply sourcePremisesOfGrounding withoutGround Control.noPrior
+  · apply sourcePremisesOfGrounding withoutGround
+      TruthCore.Causality.EsseCausePriority.Control.noPrior
     · intro a b _ _ hg
       exact hg.elim
     · rfl
@@ -270,13 +271,15 @@ theorem fullSourceOmission : FullSourceOmission := by
       trivial
   · intro hb
     have h := hb true false (by decide)
-      (by simp [ActualConcrete, withoutGround, ancestral, history])
+      (by simp [ActualConcrete, withoutGround, ancestral,
+        C3ActualWorld.withGround, history])
       (by simp [strictFrame, frame, causes, C3ActualWorld.originFrame,
         C3ActualWorld.frame, SustainingCausation.Control.trueCausesFalse])
     exact h.2.2
   · intro hp
     exact hp true false (by decide)
-      (by simp [ActualConcrete, withoutGround, ancestral, history])
+      (by simp [ActualConcrete, withoutGround, ancestral,
+        C3ActualWorld.withGround, history])
       (by simp [strictFrame, frame, causes, C3ActualWorld.originFrame,
         C3ActualWorld.frame, SustainingCausation.Control.trueCausesFalse])
   · intro hp
