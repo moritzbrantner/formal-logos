@@ -2582,3 +2582,24 @@ The synthesis is proposed pending independent semantic challenge.
 Formal root premise effects are intended **none**; the computed
 frontier delta must be taken from the PR's actual CI, not inferred
 from this prose.
+
+
+**Computed PR #1883 frontier-diff:** In [corpus-and-lean CI
+45141521947](https://github.com/moritzbrantner/formal-logos/actions/runs/45141521947)
+on `4baf9ad54f5862b7886090caedeafe51501da3ae`,
+`truth frontier-diff --base HEAD^1` reports root-reaching open premises
+**550 → 550** (400 bare, 92 supported, 58 stated), verified support
+alternatives **578 → 578** (0 added) and lowest expanded-route diagnostic
+cost **16 → 16**. This is a computed *no formal premise change*, not an
+inference of new warrant from counts. Both Comparator shards, corpus-and-lean
+and explorer completed successfully at that revision; full-library
+verification is separately tracked by PR CI. PR #1878 has meanwhile merged
+at `68619469fb7aba91f0818b3f69e52fdb7eb18624`.
+
+**Current scoped assessment:** `corpus/attempts/6eb9024b-2310-42b1-bc4e-e75031ca2a54.json`
+owns the #1724 state-indexed holistic-selection interpretation and its
+explicit remaining test; it does **not** displace the #1729 source-identity
+assessment in attempt `9f771edb`. This is a standard corpus attempt,
+not a duplicate statement, graph path or tracker. Until the final
+semantic challenge is dispositioned, the scoped assessment remains
+`unreviewed / unpublished`.
