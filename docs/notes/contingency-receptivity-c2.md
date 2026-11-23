@@ -725,3 +725,137 @@ including the conditions on its parts and the scope of the separability rule.
 The case for primitive existential modality survives without such a test, but
 its verdict on this individual remains open.
 [Van Cleve, §9, pp. 62–65](https://dornsife.usc.edu/james-van-cleve/wp-content/uploads/sites/272/2025/09/No-Necessary-Connections-Btw-Distinct-Existences-for-website-7.17.25.pdf#page=62)
+
+### Could a genuinely ungrounded absence be recognized?
+
+Fix the actual world w and the same concrete n as above. P is true at w
+just if an accessible world lacks n. Take the strict stipulation to exclude
+even a jointly sufficient noncausal metaphysical ground **for P at w**.
+This is a hypothesis about reality. Our inability to identify a ground would
+be much weaker. Actuality and simplicity alone do not establish the stipulation.
+
+**A case for necessity from the way existential truths are grounded.**
+Suppose P. Take an accessible alternative v in which n is absent. Consider
+the view that particular alternatives ground individual possibilities as
+their instances: whenever such an omission obtains, the facts that v is
+admissible from w and lacks n, together with the constitutive modal rule if
+required, fully explain why P holds at w. Mere explanatory relevance or
+definitional equivalence in Lean would leave this premise open. On the
+proposed view P has a ground, contrary to the strict stipulation.
+On that account n must exist throughout the alternatives. This reasoning
+needs no change, power over esse, or cause of a negative fact. It works even
+if the admissibility of v has no deeper explanation. Primitive *worlds* and
+a primitive *individual permission* occupy different places in the argument.
+
+There is independent motivation for the explanatory premise. A particular
+philosopher's being a philosopher can explain why there is at least one
+philosopher. Which other features of the person one records is immaterial.
+And a theory that independently explains which combinations of individuals
+can occur together can explain their separate possibilities. The converse
+inference from separate possibilities to joint possibility fails in the
+existing Van Cleve control. These considerations support applying the
+existential reasoning **if** the complete alternatives have the requisite
+priority. Fine gives the ordinary existential example in *Guide to Ground*
+§11. The application to a de re possibility is our own.
+[Fine, §11](https://doi.org/10.1017/CBO9781139149136.002)
+and [joint-absence controls](modal-grounding-frameworks.md).
+
+**The strongest objection concerns explanatory direction.** Suppose a
+primitive permission for n to be absent helps determine which complete
+descriptions are admissible, together with independent constraints on what
+else could exist. A description admitted partly on the strength of P
+cannot then supply a prior ground for P. Adding a detail about the colour
+of some companion, for instance, can give a more informative description
+of the proposed alternative without better explaining n's removability.
+The contrast with an independently admissible concrete-empty order is sharp.
+If the latter's admissibility is metaphysically prior, it can ground P given
+n's concreteness. If its admissibility derives in part from prior permissions
+to omit its putative occupants, that explanation runs in reverse. Both
+positions owe a realizable alternative if they assert P. Neither gets the
+direction of ground from the existential truth condition alone. An analogy
+is the relation between a fact and its inclusion in an accurate account
+of reality. Inclusion records the fact if the account was compiled from what
+is true. Kalhat applies this distinction to world-stories and modal
+predication. [Kalhat, “Primitive Modality and Possible Worlds”, p. 510](https://doi.org/10.1017/S0031819108000855).
+
+**Evaluate the proposed absence from inside the alternative.** In an
+n-free v that accesses itself, n's absence there suffices for the truth at v
+that n could be absent. Grant a stronger premise for the sake of argument:
+an actual instance of absence at v, with the background modal rule, gives a
+metaphysical ground there for its possibility. Then a primitivist cannot
+both assert P and insist that this permission lacks a ground *at every such
+point*. That does not follow from its lacking a ground at w. Even agreement
+between worlds about which alternatives are possible would establish at most
+agreement in modal verdict. Transferring the local ground requires a further
+account of why explanation is invariant or why nonactual instances ground
+actual modal facts. And using an occurrence to establish a possibility may
+give evidence without giving its constitutive explanation. Thus this test
+identifies where a claim of **absolute, world-invariant primitiveness** is
+vulnerable, while leaving the actual-world stipulation intact.
+
+There is a second, distinct question at v. If v accesses w in return, w
+already supplies a witness for the possible existence of this very n as
+evaluated at v. Symmetry is sufficient for the return edge and is no built-in
+assumption at the C2 endpoint. Requiring v itself to contain a producer, name
+or individuation principle for n would be an additional thesis about singular
+modal facts. Asking what would select n *instead of* a different candidate
+also assumes only one could be admitted. A rival can allow both. It still
+owes warrant that either could exist, but no asymmetry of permission needs
+explaining in that case. An individual essence conceived as a uniquely
+exemplifiable property provides one way of specifying an absent individual
+without producing it. Its own availability when unexemplified is disputed.
+This sense of individual essence is separate from n's act of being. Even a
+successful account of reference would not establish possible exemplification.
+[Plantinga, “On Existentialism”, §§I–II](https://andrewmbailey.com/ap/On_Existentialism.pdf)
+and [the reverse-direction power result](pruss-power-premises.md).
+
+**A positive argument for possible absence from an effect.** Pick an actual
+effect e distinct from n. Suppose n's existence on its own is sufficient
+for the existence of this very e wherever n exists in the accessible
+orders. Independently warrant an alternative in which e never exists.
+That very alternative lacks n. The argument needs neither an exhaustive
+inventory nor an inference from imaginable separation. If e could be
+absent *because* n could be absent, the independently warranted
+contingent existence of e could be evidence for a primitive P. Epistemic inference
+can run upstream even when metaphysical explanation runs downstream.
+An independently prior world grounding P through e would instead put us
+back in the first argument. The existing source–effect incompatibility
+already captures the consequence.
+[Existing Lean argument](../../TruthCore/Causality/BruteFoundationRoutes.lean)
+and [selected-effect controls](selected-effect-bridge-462.md).
+
+The test turns on **what the evidence for e's contingency holds fixed**.
+If it warrants a case with n present and e absent, it directly defeats the
+sufficiency premise. If it holds fixed only some secondary conditions and
+leaves n open, it can support e's omission without deciding the issue in
+advance. The strongest rationale for sufficiency would be an exercise that
+belongs inseparably to n and has this particular output independently of
+external conditions. In ordinary production the missing effect is often
+intelligible precisely because other conditions can vary. In a proposed
+necessary emanation, the sufficiency premise is more credible to its
+proponent, while the possibility of the same emanated individual's absence
+needs independent warrant. Giving the condition-variation story from the
+first case and the invariant output from the second does not make an argument
+about a single effect. The existing control even retains one source, one
+performed act, local output uniqueness and one response function as
+conditions and outputs vary. This objection leaves essential production of
+a particular effect open. Expanding the consequent to “some derivative being
+exists” trades the token-identity burden for the stronger datum of an order
+entirely free of derivative beings. The inquiry identified no effect with
+both the required invariant link and independent omission evidence.
+
+**Provisional judgment.** Under the strict stipulation, I favor necessity
+with high confidence *conditional on independently prior, instance-grounding
+worlds*. This conditional result has broader reach than the power argument
+and correspondingly little specificity to a simple foundation. Under the
+weaker premise that n lacks a power of nonbeing, that same account can
+license a grounded P. For a primitivist defense, it is the absence of a full ground for P itself
+at w that needs defending. Accepting irreducible modality somewhere in
+one's worldview is insufficient. The strongest new way to favor P would
+be independent evidence of an omissible effect with the stated invariant
+link to n. For necessity, it would be a reason why at least one admissible
+omission must be explanatorily prior to P whenever P obtains, or why the
+grounds found at an absence world must carry over. The evidence here
+supports none of those bridges sufficiently to select P or its negation.
+I retain moderate confidence in suspension for the shared case. These are
+analyst arguments and a warrant assessment; no new formal results.
