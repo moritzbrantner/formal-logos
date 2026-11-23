@@ -1,0 +1,9 @@
+{
+  "id": "d0f8d6b9-8086-4bf7-95e1-46bb74d76398",
+  "label": "Ontic demand of a stance: accepting a fact only if it has a reason why it obtains",
+  "term": "ontic demand of a stance",
+  "definition": "A WhyStance is a #756 stance (accepts, core, epistemic demands) with an added requiresWhy: the stance accepts a fact so marked only if the fact has a reason why it obtains in the stance's picture (the #755 explains, ONTIC). WhyHonors S A w says every accepted fact the stance so marks has a reason at w in the picture A; WhyHonorsNecessitating asks for a reason whose truth at each accessible world brings the fact's. whyView places requiresWhy in the demand slot so that the #756 standings Uniform, Selective and Restricted, which use no property of the demanded relation, apply unchanged. It is not the epistemic demand (a reason to accept), DISAMB-REASON-EPISTEMIC-ONTIC.",
+  "basis": "stipulative",
+  "note": "Analyst formulation for the B2 brute-contingency and parity batch (owner direction 2026-11-23); attribution deferred. A new structure because #756's Stance.demands is epistemic and reusing it for the ontic demand would equivocate. See docs/notes/psr-self-application-756.md, 'Brute contingency and parity'.",
+  "lean_declaration": "TruthCore.Explanation.BruteContingencyParity.WhyStance"
+}

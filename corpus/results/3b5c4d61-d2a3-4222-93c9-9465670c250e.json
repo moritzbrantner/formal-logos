@@ -1,0 +1,11 @@
+{
+  "id": "3b5c4d61-d2a3-4222-93c9-9465670c250e",
+  "label": "Locally finite indexed operations are finite within each compact real-time interval",
+  "argument_id": "eac2d3b9-b08f-4400-909b-a160df54da78",
+  "challenge_module": "TruthCore.Results.Causality.CompactOperationCount.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CompactOperationCount.Solution",
+  "theorem": "TruthCore.Results.Causality.CompactOperationCount.compactOperationCount",
+  "comparator_config": "results/3b5c4d61-d2a3-4222-93c9-9465670c250e/comparator.json",
+  "status": "solution-present",
+  "description": "Conditional, substantive Mathlib theorem, not an opaque-atom transcription. The proof specializes the existing Mathlib theorem about indexed locally finite sets meeting compact subsets and counts indices rather than distinct timestamps. The physical local-finiteness premise stays open. Zeno accumulation, many simultaneous operation indices and locally finite infinite backward causal ancestry are Lean controls in the same analyst module; no causal/metaphysical root-premise discharge is claimed."
+}

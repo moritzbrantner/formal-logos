@@ -1,0 +1,17 @@
+{
+  "id": "ae9d9473-34f1-4b51-8f13-41d340d64ad1",
+  "label": "Every contingent existent at w receives esse in some principle",
+  "paraphrase": "OPEN R1: each existing being absent in an accessible world has its esse received in some principle. This is a substantive explanatory/metaphysical proposal: modal contingency alone does not define reception, causal production, or being grounded. Its positive rationale is that an essence whose instantiation can fail does not supply its own act of being. It still requires philosophical defense against a brute contingent first being; source passages about received esse do not by themselves prove the universal modal bridge.",
+  "lean_declaration": "TruthCore.Causality.FirstMoverNecessity.ContingentReceivesEsse",
+  "definition_ids": [
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "8bb31748-e20f-5266-ac39-c442faab6622"
+  ]
+}

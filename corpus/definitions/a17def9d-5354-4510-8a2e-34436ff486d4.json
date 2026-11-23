@@ -1,0 +1,9 @@
+{
+  "id": "a17def9d-5354-4510-8a2e-34436ff486d4",
+  "label": "Feature-uniform ontic demand: facts agreeing on feature k are alike required to have a reason why",
+  "term": "feature-uniform ontic demand",
+  "definition": "FeatureUniform S k says that for any two facts agreeing on the feature k, if the stance requires a reason why for one it requires one for the other. ShareFeature k t o says t and o agree on k. The norm is relative to a supplied k: it does not say which feature is the right ground of a demand, and a stance can be uniform in one feature and not in another.",
+  "basis": "stipulative",
+  "note": "Analyst formulation for the B2 brute-contingency and parity batch (owner direction 2026-11-23); attribution deferred. See docs/notes/psr-self-application-756.md, 'Brute contingency and parity'.",
+  "lean_declaration": "TruthCore.Explanation.BruteContingencyParity.FeatureUniform"
+}

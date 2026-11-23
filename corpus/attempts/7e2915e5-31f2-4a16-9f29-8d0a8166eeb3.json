@@ -1,0 +1,16 @@
+{
+  "id": "7e2915e5-31f2-4a16-9f29-8d0a8166eeb3",
+  "label": "Same-source intentional exemplar and possessed-good appetite continuation",
+  "statement_ids": [
+    "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+    "66aecdd7-ea4e-55c6-9377-10db08893854"
+  ],
+  "date": "2026-11-23",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Conditional follow-up to merged #1855 and draft #1866. Added a stronger productive-only finite semantic control in which the secondary effect genuinely apprehends and is grounded, with content-guided accurate/error-prone responses, while the same OwnBeing/pure-act producer lacks self-cognition. New source-intrinsic exemplar coverage and intentional uptake steps conditionally extend draft #1866's actual self-knowledge to actual effects caused by the identical source; separate single-referent aboutness shows that another effect needs distinct content. Reused possession-sensitive appetite to obtain an available rest/retain response toward an already possessed self-good, not HasWill or free choice. Existing immateriality, local-teleology, moral-governance and direct intellect-to-will routes unchanged. No new registered root argument; detailed assessment in docs/notes/causal-perfection-transfer.md#intentional-exemplars-and-possessed-good-response-2026-11-23-stacked-on-1866. Initial independent semantic challenge (#1873) found three P1 defects: disconnected Actual/Causes, overstrong exemplar coverage on incorrect self-content, and omitted PureAct in the causal spine. Repaired by reusing CausalityFrame ExistsAt and CAUSE_2/esse, OPEN one-way root/frame adapter with actual necessary-root specialization, restricting coverage to correct self-content, and spelling out PureAct at g. Final-head verification/review remains pending.",
+  "blocker": "Independent semantic challenge and exact-head CI pending. Philosophically open: wisdom as source-intrinsic intentional perfection, actual source-level epistemic grounding, a defensible specification and immanent uptake of cognitive exemplars, known-good representation, nonpassive intellectual appetite and old HasWill recognition. Source/exemplar interpretation does not follow from mere causal production.",
+  "evidence": [
+    "PR-1873"
+  ]
+}

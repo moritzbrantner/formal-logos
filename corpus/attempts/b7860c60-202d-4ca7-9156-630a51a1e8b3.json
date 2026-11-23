@@ -1,0 +1,37 @@
+{
+  "id": "b7860c60-202d-4ca7-9156-630a51a1e8b3",
+  "label": "B2 against brute contingency: two support options, the rival's entailed denials, symmetric parity",
+  "statement_ids": [
+    "8a8d00e9-12b6-4cf0-b662-431cc4addd49",
+    "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+    "6c6191dc-082d-4417-b675-b32d4fab4573",
+    "0e44041e-4591-4aad-857a-f6748032f142",
+    "a1a00ab5-4376-47f7-9e24-341d53800309",
+    "b36104ba-4f53-409e-86d5-8d55492010b4",
+    "64715bf1-5a0a-4f8a-8965-f96aa920b0b3",
+    "460aca64-ec25-4e39-ad77-e33beb7d1e12",
+    "3ab9d002-8d4f-441d-9292-e777170f242f",
+    "fbf3f3e0-fc9c-49a6-847a-6a649ead0696",
+    "9df516be-9941-44fa-963c-1d56463d60a5",
+    "03f548c1-4929-4d6e-824f-a8c8f18f02c3",
+    "13c05b6d-e2ea-4f1c-91b0-1a498199e1c5",
+    "c71c068c-bbae-5ed5-a99d-70b155c8d239",
+    "98efaa9e-1c91-4e52-8c0d-faf03d4f8372",
+    "8dd0c1c7-4b19-5e6e-93ea-e76a448b07ad",
+    "96971e31-4782-4478-95b8-b6863a6a9412"
+  ],
+  "date": "2026-11-23",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Reuse audit (truth related/brief/dossier on B2 8a8d00e9; index search 'brute existence'; local-no-brute-existence attempt, stopping-point and PSR strength maps, #756 and #746 notes, a5958e25) found no existing PSR-family statement that yields B2 alone: reason tokens do not convert to causes without a bridge. Two non-transcription support options for B2 on the shared CausalityFrame were registered and verified (Comparator and NanoDa): (1) 7bf9cb77, the contingent-only local existence PSR 608a262d with BX1 6c6191dc (no reason for a contingent being's existence is about itself) and BX2 0e44041e (the other being such a reason is about causes its esse); (2) 19260537, the existing grounding closure c71c068c with the existing ground-to-esse-cause bridge 98efaa9e and the interface 'contingents are concrete' a1a00ab5. Neither bridge relabels B2: B2 holds without the existence PSR and without BX1 (controls 4c79358e, models 5-6); every premise of both bundles has an omission model and each bundle a nonvacuity model. The brute-contingency rival b36104ba is recorded at B2's scope (same frame, world, CAUSE_2) as alternative_to B2 and to 608a262d, restricted to the brute contingent foundation and witnessed by the First Way's mover in bruteFirst. No recorded independent justification for it reaches B2's scope; its entailed denials (weighing only as much as the denied open premises) are contingent existence coverage at w, the contingent-fact PSR there, a member of each support bundle, and the brute horn of the #746 fork; EvidenceBridge is only a conditional cost. The owner's parity argument (refined 2026-11-23) is formalized over a #756 stance extended by an ontic demand (WhyStance). 6e7f5afd: P3, P1, P2 give that the stance cannot accept a fact as a brute contingent truth; for a necessary fact this holds vacuously. The symmetric form 8fba6dd2 gives 9df516be, that the stance cannot accept a fact with no reason at all, binding a naturalist (target God) and a theist (target a contingent existent) alike; 117f8bc3 registers that 9df516be strengthens fbf3f3e0. The map a1056aab shows: both instances of the symmetric form; factive well-founded reasons always leave a truth unreasoned (#746 core reused), so a picture with nothing unexplained needs reasons that are not well-founded (a self-reason, a circle or an infinite chain; in the scene a self-reason); scene-relative tallies of unexplained existents per picture, which rank nothing by themselves (#746 count control); the self-explained God and base pictures agree in the arena; evidence for an existent is no reason why it exists, so the evidential stance is no exit and the argument does not answer the evidential question; stances bound (reason-status ground) and not bound (evidential, symmetric, idleness); under BX1 an own-nature token excludes contingency, so deriving God's noncontingency from it needs BX1's God instance, which under the essence = esse reading (natureModel, BX1 at w iff B6 at w) is B6's instance at God; noncontingency supplied otherwise also suffices; adequacy of the self-reason is a separate open question.",
+  "blocker": "No premise is established, and neither parity form supports B2 or God's existence. The owner's comparative claim (one self-explained terminus explains existence better than unexplained contingents) rests on an open comparative principle (#750 adequacy norm) and the open adequacy of a self-reason, not on the tallies. Open: warrant for BX1 and BX2 (BX2's rival: non-causing occasions as reasons for contingent existence, model 3); contingent abstracta under the concreteness interface; circles and an endless regress of contingents are not in the scene (whole-series question, #755 collapse core, a5958e25). No strengthens relation from STMT-NO-BRUTE-EXISTENCE-AT to 608a262d: a new argument with that premise fails the sense check because the existing statement links both senses of BRUTE_EXISTENCE_FACT_VERSUS_GROUNDING_BRUTE. Next tests: (1) whether the necessary-root uniqueness and attributes results discriminate a self-explained God from a self-explained necessary physical base at matching scope; (2) derive BX1's God instance from contingent irreflexivity plus B6, or from another noncontingency route; (3) a regress picture with the whole-series standards; (4) a treatment or restriction of B2 for contingent abstracta.",
+  "evidence": [
+    "7bf9cb77-0418-4363-9298-266eac105edd",
+    "19260537-f06d-451c-9549-b248fefb14fd",
+    "6e7f5afd-4d72-466d-bba0-b9eead60d2d2",
+    "117f8bc3-4995-4c0d-b696-2f8a3fbb7585",
+    "8fba6dd2-fefd-49d3-b832-9323f61477dd",
+    "4c79358e-1872-41a5-8a34-7c57eaeec756",
+    "a1056aab-cace-47f4-a12f-f29519964d59"
+  ]
+}

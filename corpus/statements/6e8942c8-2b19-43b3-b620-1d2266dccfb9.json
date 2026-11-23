@@ -1,0 +1,20 @@
+{
+  "id": "6e8942c8-2b19-43b3-b620-1d2266dccfb9",
+  "label": "Contingent receipt entails unactualized POTENCY_1 in the bearer at esse",
+  "paraphrase": "OPEN diagnostic R2 (NOT an accepted reading of De ente): whenever a contingent existent receives esse in some principle, the whole bearer is in POTENCY_1 in that same esse respect. In the adopted POTENCY_1 sense (CanBe and not InAct), this conflicts with existing-in-act at esse for any actually existing contingent. The general law in the reception controls verifies the resulting exclusion, so R2 is not usable as philosophical B4 support. Receptive principle-potency, which can coexist with the possessed act, is different.",
+  "lean_declaration": "TruthCore.Causality.FirstMoverNecessity.ContingentReceptionIsSubjectPotency",
+  "definition_ids": [
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "8bb31748-e20f-5266-ac39-c442faab6622",
+    "508617ab-cf24-5f3b-a387-64b3991359ec",
+    "557d8e44-4350-5031-81e3-ff6be5e30acc"
+  ]
+}

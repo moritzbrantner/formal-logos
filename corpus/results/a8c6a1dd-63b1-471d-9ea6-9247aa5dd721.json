@@ -1,0 +1,11 @@
+{
+  "id": "a8c6a1dd-63b1-471d-9ea6-9247aa5dd721",
+  "label": "Contingent esse differs from essence through identity-scoped reception",
+  "argument_id": "c4bc08b3-5684-428d-abe9-7fd943d20f60",
+  "challenge_module": "TruthCore.Results.Causality.FirstMoverNecessity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FirstMoverNecessity.Solution",
+  "theorem": "TruthCore.Results.Causality.FirstMoverNecessity.contingentDistinctEsseFromReception",
+  "comparator_config": "results/a8c6a1dd-63b1-471d-9ea6-9247aa5dd721/comparator.json",
+  "status": "solution-present",
+  "description": "Distinct conditional support of the existing open B6 using De ente's principle-level recipient/act relation and the weaker identity-scoped law; no external cause or necessity silently assumed, and no premise discharged."
+}

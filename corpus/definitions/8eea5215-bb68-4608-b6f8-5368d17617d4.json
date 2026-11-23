@@ -1,0 +1,9 @@
+{
+  "id": "8eea5215-bb68-4608-b6f8-5368d17617d4",
+  "label": "Own-nature reason, essence-esse sense: x's own token explains its existence iff esse is not distinct",
+  "term": "own-nature existence reason, essence-esse sense",
+  "definition": "natureModel F essenceOf esseOf is the #312 model on the frame whose only reasons are intrinsic tokens: x's own token explains x's existence at a world exactly when x's represented esse is not distinct from its represented essence, and no other token explains anything. It reads 'existence explained by its own nature' (NECESSARY_EXISTENCE_BY_OWN_NATURE_4, an intrinsic reason token) through essence-esse identity. It does not say that this identity is an adequate reason, or that it gives accessible-world necessity (NECESSARY_EXISTENCE_BY_OWN_NATURE_2).",
+  "basis": "stipulative",
+  "note": "Analyst formulation for the B2 brute-contingency and parity batch (owner direction 2026-11-23); attribution deferred. Used to test the theist asymmetry against B6. See docs/notes/psr-self-application-756.md, 'Brute contingency and parity'.",
+  "lean_declaration": "TruthCore.Explanation.BruteContingencyParity.natureModel"
+}
