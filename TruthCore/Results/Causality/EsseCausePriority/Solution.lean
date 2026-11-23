@@ -328,7 +328,25 @@ theorem ancestorRouteWithoutConservation :
     distinctEsseCausePriority ancestral true act ancestralFrame.CausesIn
       ancestralFrame.esse ancestralFrame.PriorSimply hActual
       hSources.2.1 hSources.2.2.1 hSources.2.2.2.1
-  exact ⟨hSources, hBridge, hActual, hDistinct, noConcurrentGiving⟩
+  obtain ⟨hG, hHad, hExist, hConc, hSome, hComposite, hUnit,
+    hKinds, hNotBoth, hParticipated⟩ := hSources
+  have hFirst : FirstBeingIsInNoWayInPotencyReading
+      potency ancestralFrame.PriorSimply :=
+    firstBeingNoPotencyOfEssePriority act potency ancestralFrame.PriorSimply
+      composite ancestralFrame.CausesIn ancestralFrame.esse
+      hSome hComposite hUnit hDistinct
+  have hWeak : FirstBeingActPriority act potency ancestralFrame.PriorSimply :=
+    weakOfEssePriority act potency ancestralFrame.PriorSimply
+      composite ancestralFrame.CausesIn ancestralFrame.esse
+      hSome hComposite hUnit hDistinct
+  have hNoComponent : NoComponentIsFirstBeingReading
+      component ancestralFrame.PriorSimply :=
+    noComponentFirstOfEssePriority component ancestralFrame.PriorSimply
+      act potency participated ancestralFrame.CausesIn ancestralFrame.esse
+      hKinds hWeak hNotBoth hParticipated hDistinct
+  exact ⟨⟨hG, hHad, hExist, hConc, hSome, hComposite, hUnit,
+    hKinds, hNotBoth, hParticipated⟩, hBridge, hActual, hDistinct,
+    hFirst, hNoComponent, noConcurrentGiving⟩
 
 end InertialNecessaryOrigin
 
