@@ -186,6 +186,7 @@ open TruthCore.Causality.NecessaryRootFork (ActualConcrete)
 open TruthCore.Causality.NecessaryConcreteRouteBridge (NecessaryActualRootAt
   EsseCauseIsActualConcreteGround)
 open TruthCore.Causality.BruteFoundationBoundary (Profile EveryContingentGroundedAt)
+open TruthCore.Causality.ConcurrentCessation
 open TruthCore.Causality.ConcurrentCessation.C3ActualWorld
 open TruthCore.Causality.SustainingCausation (OriginatesBeing GiverPresentWhenGiving)
 open TruthCore.Causality.ConcurrentActualization
