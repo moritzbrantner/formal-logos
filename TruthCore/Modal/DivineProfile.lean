@@ -739,12 +739,53 @@ def Compatibility : Prop :=
   ¬ SameNecessaryEffect alternatingEffects false source
 
 theorem compatibility : Compatibility := by
-  unfold Compatibility inAct composite inPotency eternal
-    knows chooses permitted capable imposed
-    KnowsAllContentsAt PermissibleChoicesAt NoncoercedChoiceAt
-    ActAndPotencyMakeComposite ImmutableIsEternalReading
-    IsSimple IsImmutable
-  decide
+  unfold Compatibility
+  and_intros
+  · intro x
+    cases x with
+    | none => decide
+    | some b => cases b <;> decide
+  · decide
+  · decide
+  · decide
+  · decide
+  · decide
+  · intro x r s _ hp
+    exact hp
+  · intro x hPure
+    cases x with
+    | none => rfl
+    | some b =>
+      exact False.elim (hPure () (by decide))
+  · intro r h
+    exact h rfl
+  · rfl
+  · intro w
+    refine ⟨?_, ?_, ?_, ?_⟩
+    · exact Or.inl rfl
+    · intro c
+      simp [knows, truth, source]
+    · intro a hSelect
+      rcases hSelect with ⟨_, ha⟩
+      rw [ha]
+      decide
+    · refine ⟨some w, ?_, ?_, ?_⟩
+      · exact ⟨rfl, rfl⟩
+      · exact ⟨rfl, by decide⟩
+      · intro h
+        exact h
+  · decide
+  · decide
+  · decide
+  · decide
+  · decide
+  · decide
+  · decide
+  · intro w b
+    rfl
+  · exact TruthCore.Modal.NecessaryVariableEffects.sourceNecessaryAt
+  · exact TruthCore.Modal.NecessaryVariableEffects.firstEffectContingent
+  · exact noFixedEffect
 end CreationControl
 
 end Interpreted
