@@ -1943,6 +1943,62 @@ ultimate while exempting the foundational primitive from every
 applicability challenge. No formal impossibility of a primitive F
 is claimed.
 
+### Exactly where the originating/sustaining and non-efficient forks matter (#1616)
+
+The relevant root-interface inference is the **open** cause-to-concrete-
+ground bridge `cb1cdea9`: when `CausesIn c x esse` is tenseless and
+mode-unspecified, its use to infer `ActualConcreteGround m w c x`
+requires that c *exists at w* and supplies x's **present** existence
+under the selected `m.grounds`. Neither condition is in the type
+of `CausesIn`, and even its actual-esse guard is world-free. A dead
+parent or vanished maker can be a real *originator* in a history
+without presently sustaining the product. The
+`SustainingDependence.Control.Certificate` already checks
+origin-at-onset plus later existence without same-time giving;
+this is an existing finite counterinterpretation for the stronger
+automatic origin→sustain reading, not a denial of historical causal
+efficacy.
+
+The F2 restriction is distinct: even **co-present** exemplar or
+final causes may explain a thing's *form*, action, intelligibility
+or end without productively grounding its bare existence. Suppose a
+present design serves as exemplar of an artisan's actual product;
+identifying “is an exemplar for its production” with “supplies its
+esse at this same moment” is an additional causation-mode premise.
+Likewise a purpose can explain why an agent makes a thing without
+itself being a concrete productive giver of the product's actuality.
+The bare `CausesIn` field has no mode tag, so the existing
+`cb1cdea9` result's **application** must either narrow it to
+genuine esse-giving causes, or introduce a defended exemplar/final-
+to-productive-esse bridge. It must not be advertised as true of
+every causal role just because it mentions `esse`. This
+separation would require a genuinely typed causal-mode fork for
+formal registration; the current note does not manufacture one.
+
+The strongest positive per-se application says that an actual
+instrument only supplies derivative efficacy **while** its
+actuality is received from its source; its dependence is not just
+a biographical fact. If source and recipient are co-present
+at the relevant time, and the source's actual existential power
+is genuinely transmitted to the recipient under an asymmetric
+priority of giving, one can defend a specific productive relation
+and test supplier completeness locally. The inference still needs
+a bridge from *this exercised power* to `ActualEsseCause` on
+bearers and to `ActualConcreteGround` at w, rather than
+equating three distinct relations.
+
+The historical inertialist's strongest option retains the same
+bearer's earlier actuality plus a principled law of persistence.
+It denies the **present** productive transfer, not necessarily
+an originating cause or an earlier received existence. Its
+continuation is owned by #1800/#1801/#1802. Since both a surviving
+origin-only cause and a co-present non-efficient cause can fail
+the presently sustaining reading, no new proof of `cb1cdea9`
+or rejection of inertia is claimed; the existing positive case
+is strongest for **specified essentially ordered,
+currently productive powers**, not an unrestricted tenseless
+cause-of-esse dictionary.
+
 ### Matched rivals and checked discrimination
 
 | Rival mechanism, with its positive explanandum | What the available evidence tests | What still must be supplied |
