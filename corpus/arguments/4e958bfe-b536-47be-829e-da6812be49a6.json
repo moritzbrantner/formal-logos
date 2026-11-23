@@ -1,0 +1,22 @@
+{
+  "id": "4e958bfe-b536-47be-829e-da6812be49a6",
+  "label": "Pruss power premises: two-member collective-without-distributive model checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "bff9cbfa-0ad8-4739-8e0c-3401eba88873",
+  "inference_ids": [
+    "3ce71707-4756-4092-8320-020a54a8913f"
+  ],
+  "meaning": "Premise-free: a finite model with two actual contingents in which Pruss's own premises P1-prime to P5 hold with a power for the joint absence, while no being at the actual world has a power for either member's absence alone. Model-witnessed separation only; no premise is established and no reality claim is made.",
+  "definition_ids": [
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "bf7eddca-8291-4744-8470-379babcd7781"
+  ],
+  "disambiguation_ids": [
+    "197f0097-f2ae-4a47-8770-3d43758f737b",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ],
+  "sense_mixing_control": true
+}

@@ -54,6 +54,7 @@ public import TruthCore.Results.Modal.PopulationClosureExactImpliesAmalgamation.
 public import TruthCore.Results.Modal.PopulationClosureSeparation.Solution
 public import TruthCore.Results.Modal.PossibilityTransfer.Solution
 public import TruthCore.Results.Modal.PossibleImpossibility.Solution
+public import TruthCore.Results.Modal.PrussPowerPremises.Solution
 public import TruthCore.Results.Modal.ReasonResponseHistory.Solution
 public import TruthCore.Results.Modal.ResearchFixture.Solution
 public import TruthCore.Results.Modal.RetainedDuty.Solution

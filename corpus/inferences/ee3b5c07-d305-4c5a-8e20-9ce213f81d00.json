@@ -1,0 +1,13 @@
+{
+  "id": "ee3b5c07-d305-4c5a-8e20-9ce213f81d00",
+  "label": "POWER_OVER_ESSE_1 over each actual contingent concretum, from withholding (inference)",
+  "input_statement_ids": [
+    "b8a2a9e1-0dda-48bc-a646-d4cb229ca62c",
+    "d1593e5c-38ff-46a9-9bbb-cede6f825bc9"
+  ],
+  "output_statement_id": "eb41bc9a-c78f-475c-933e-46c332d0357d",
+  "rule": "Apply the withheld-giving bridge to each member",
+  "meaning": "The withholding holder gives each concrete being contingent at w being at w and withholds it at an accessible world where it exists; the withheld-giving bridge gives it POWER_OVER_ESSE_1 over each.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

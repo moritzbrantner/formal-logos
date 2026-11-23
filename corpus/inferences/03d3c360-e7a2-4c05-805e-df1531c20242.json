@@ -1,0 +1,17 @@
+{
+  "id": "03d3c360-e7a2-4c05-805e-df1531c20242",
+  "label": "The actual contingents' joint absence by withholding, under the creator reading (inference)",
+  "input_statement_ids": [
+    "95bf8780-0e3c-49ba-b636-2274e2997a30",
+    "906f5c39-2a63-4dc2-955d-a00cfd8a976b",
+    "18e5bd4e-8178-468e-b867-fbaf9c5988ad",
+    "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174",
+    "9f7b1778-84c9-40cf-a1b6-a91a960b0590",
+    "3ef41442-431a-4bed-83bd-4458ed623f5f"
+  ],
+  "output_statement_id": "b8a2a9e1-0dda-48bc-a646-d4cb229ca62c",
+  "rule": "Ground the joint absence, locate the holder in its world, and use factive giving to show it withholds each member there",
+  "meaning": "P1-prime gives a holder y at w; P2-prime gives an accessible world v where every concrete being contingent at w is absent and y exists. By the creator reading y gives each of them being at w; since each is absent at v, factive giving shows y gives none of them being at v. Constructive.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "eb41bc9a-c78f-475c-933e-46c332d0357d",
+  "label": "Some holder of a power for the actual contingents' joint absence has POWER_OVER_ESSE_1 over each",
+  "paraphrase": "Some being exists at w, has at w a power for the joint absence of the concrete beings contingent at w, and has POWER_OVER_ESSE_1 over each concrete being contingent at w (the distributive powers, held by one being). It says nothing about the holder's necessity, concreteness or what decides the power's exercise.",
+  "lean_declaration": "TruthCore.Modal.PrussPowerPremises.SomeHolderHasPowerOverEachActualContingent",
+  "definition_ids": [
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "3fd6bddb-f10c-4df4-8694-3eb5e7c28617",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5",
+    "197f0097-f2ae-4a47-8770-3d43758f737b",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

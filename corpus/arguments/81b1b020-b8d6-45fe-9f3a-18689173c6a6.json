@@ -1,0 +1,41 @@
+{
+  "id": "81b1b020-b8d6-45fe-9f3a-18689173c6a6",
+  "label": "A necessary concrete holder of a power for w obtaining, by Pruss's own direction",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "938650b0-ff50-5c60-8b70-5b7dc600eaaf",
+    "18e5bd4e-8178-468e-b867-fbaf9c5988ad",
+    "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174",
+    "607e94cf-07df-46c1-9b75-452e50762211",
+    "9c8e99e7-3e7c-42c3-8e9e-d37dfe17ae7f",
+    "887d5efc-caf6-4972-b592-8d4f1dbf5f49"
+  ],
+  "conclusion_statement_id": "1af99585-27ed-4477-94c8-1a2cc1e47145",
+  "inference_ids": [
+    "6524871e-a518-40b7-8f88-529d2d61b1a9"
+  ],
+  "meaning": "P4-prime gives an accessible world v lacking every actual contingent concretum; P5's witness shows v is not w; symmetric access gives v's access to w; grounding at v gives a being y at v with a power for w's obtaining; initiator presence puts y at w; y is concrete. Were y absent at a world accessible from w, it would be an actual contingent concretum, hence absent at v, where it exists. Excluded middle gives y's existence at every world accessible from w.",
+  "definition_ids": [
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "153fcebf-66f6-53de-bad7-82a30a359c9c",
+    "bf7eddca-8291-4744-8470-379babcd7781"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ],
+  "sense_bridges": [
+    {
+      "term": "NECESSARY",
+      "from": "d38b63c6-0435-4bd7-a179-531a7de093bc",
+      "to": "7af298fb-a2c4-4239-919b-7685f2e1f67a",
+      "statement_id": "1af99585-27ed-4477-94c8-1a2cc1e47145",
+      "role": "conclusion"
+    }
+  ]
+}
