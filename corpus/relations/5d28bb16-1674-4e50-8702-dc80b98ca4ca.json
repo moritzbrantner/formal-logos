@@ -1,0 +1,10 @@
+{
+  "id": "5d28bb16-1674-4e50-8702-dc80b98ca4ca",
+  "label": "Brute contingency is an alternative to the local existence PSR for contingents",
+  "subject_kind": "statement",
+  "subject_id": "b36104ba-4f53-409e-86d5-8d55492010b4",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+  "note": "The rival's denial of reason coverage at w is exactly what defeats the existence-PSR half of the PSR support for B2; the reason-to-cause half (BX1, BX2) is untouched by it (controls, model 1). Same target, mechanism, price and revision conditions as recorded on B2."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "d82b02af-f6a1-4bed-9619-ff121a351ec9",
+  "label": "B2 from the selected-grounding closure and the ground-to-esse-cause bridge",
+  "premise_statement_ids": [
+    "a1a00ab5-4376-47f7-9e24-341d53800309",
+    "c71c068c-bbae-5ed5-a99d-70b155c8d239",
+    "98efaa9e-1c91-4e52-8c0d-faf03d4f8372"
+  ],
+  "conclusion_statement_id": "8a8d00e9-12b6-4cf0-b662-431cc4addd49",
+  "inference_ids": [
+    "ff0fe68c-0995-453d-b3e4-530c425ac340"
+  ],
+  "meaning": "A being x contingent at w is concrete (interface), exists at w and is contingent, so the existing closure gives it an actual concrete ground y at w under the selected relation. The existing bridge 'an actual concrete ground of an actual concretum is a distinct CAUSE_2 of its esse' makes y distinct from x and a cause of its esse. So x has a distinct CAUSE_2 of its esse: B2, on the profile built from the same frame.",
+  "definition_ids": [
+    "32606882-e6e0-43b5-8c81-3b2afd3473e0",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "7507d645-874d-5434-add8-2f49c2801d36"
+  ]
+}

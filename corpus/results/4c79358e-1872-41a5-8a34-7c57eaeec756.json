@@ -1,0 +1,11 @@
+{
+  "id": "4c79358e-1872-41a5-8a34-7c57eaeec756",
+  "label": "B2 support options and brute-contingency rival controls checked",
+  "argument_id": "9be3cdf5-2e01-49e2-9d10-66b1d2e4d870",
+  "challenge_module": "TruthCore.Results.Explanation.BruteContingencyParity.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.BruteContingencyParity.Solution",
+  "theorem": "TruthCore.Results.Explanation.BruteContingencyParity.b2SupportControls",
+  "comparator_config": "results/4c79358e-1872-41a5-8a34-7c57eaeec756/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free laws and models for the B2 support options and the brute-contingency rival. Sense-mixing control: the laws relate MODAL_CONTINGENCY_1, CAUSE_2 and NECESSARY_EXISTENCE_BY_OWN_NATURE_4 without a bridge premise. Establishes no premise."
+}

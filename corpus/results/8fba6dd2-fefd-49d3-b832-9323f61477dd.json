@@ -1,0 +1,11 @@
+{
+  "id": "8fba6dd2-fefd-49d3-b832-9323f61477dd",
+  "label": "Parity, symmetric form: a feature-uniform demand excludes accepting an unreasoned fact",
+  "argument_id": "80377758-4999-47f0-994f-a814f41561f5",
+  "challenge_module": "TruthCore.Results.Explanation.BruteContingencyParity.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.BruteContingencyParity.Solution",
+  "theorem": "TruthCore.Results.Explanation.BruteContingencyParity.parityUnreasoned",
+  "comparator_config": "results/8fba6dd2-fefd-49d3-b832-9323f61477dd/comparator.json",
+  "status": "solution-present",
+  "description": "The parity argument, symmetric form: a stance-level consistency result binding both sides. Valid by a short derivation; all its weight is on P1-P3. It strengthens the brute-contingent form (separate argument). It is not support for B2 or for God's existence. Establishes no premise."
+}

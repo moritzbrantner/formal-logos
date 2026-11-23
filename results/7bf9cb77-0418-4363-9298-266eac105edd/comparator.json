@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Explanation.BruteContingencyParity.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.BruteContingencyParity.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Explanation.BruteContingencyParity.esseCauseFromExistenceReasons"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

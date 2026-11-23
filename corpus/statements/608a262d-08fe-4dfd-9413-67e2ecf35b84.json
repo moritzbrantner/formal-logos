@@ -1,0 +1,17 @@
+{
+  "id": "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+  "label": "Every being contingent at w has some reason for its existence",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: the local existence PSR for contingents. At the selected world w, every being that exists at w and is absent at some accessible world (MODAL_CONTINGENCY_1) has some #312 reason token explaining its existence fact at w. It is the contingent-only, single-world weakening of STMT-NO-BRUTE-EXISTENCE-AT (which also covers necessary existents); the restriction is a law of the B2 controls. No strengthens relation is registered: a new argument with STMT-NO-BRUTE-EXISTENCE-AT as premise fails the sense check, because that statement links both senses of BRUTE_EXISTENCE_FACT_VERSUS_GROUNDING_BRUTE (a pre-existing record, left unchanged). It says nothing about the kind of reason: a reason token need not be a cause, concrete, adequate or noncircular.",
+  "lean_declaration": "TruthCore.Explanation.BruteContingencyParity.NoBruteContingentExistenceAt",
+  "definition_ids": [
+    "e7302a28-f9fc-4961-811f-bf58bd86c28d",
+    "d513fb8a-64ee-5d49-ae56-4d695f93ca71",
+    "fcb346d7-ddd2-50bb-a7c2-3d79d41b8eae",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "e63036c5-d9c0-55d3-9704-e23efcbed127"
+  ]
+}

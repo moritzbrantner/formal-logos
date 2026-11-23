@@ -1,0 +1,9 @@
+{
+  "id": "460aca64-ec25-4e39-ad77-e33beb7d1e12",
+  "label": "The target fact and the stance's accepted fact agree on the feature",
+  "paraphrase": "P2 of the parity argument, analyst formulation, attribution deferred: the target fact and the fact the stance accepts (in the naturalist instance, that God exists and that the contingent foundation exists) agree on the supplied feature k: both have it or both lack it. Whether they agree depends on k and on how each is posited: on the reason-status feature they agree when God is posited as unreasoned and differ when God is posited with a reason by its own nature (parity map).",
+  "lean_declaration": "TruthCore.Explanation.BruteContingencyParity.ShareFeature",
+  "definition_ids": [
+    "a17def9d-5354-4510-8a2e-34436ff486d4"
+  ]
+}

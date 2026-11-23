@@ -1,0 +1,29 @@
+{
+  "id": "03f548c1-4929-4d6e-824f-a8c8f18f02c3",
+  "label": "B2 support options, the brute-contingency rival and their boundaries",
+  "paraphrase": "Premise-free laws and finite models (logical boundaries, not metaphysical possibility). Laws: each of the two support bundles (local existence PSR for contingents with BX1 and BX2; contingents concrete with the grounding closure and the ground-to-esse-cause bridge) gives B2; the local existence PSR for all existents gives its contingent-only form; the brute-contingency rival excludes B2, the contingent existence PSR and each support bundle; under BX1 a being with an own-nature reason token (NECESSARY_EXISTENCE_BY_OWN_NATURE_4) at w is not contingent at w; for the own-nature model read through essence-esse identity, BX1 at w is exactly B6 at w; and in the ofModel arena embedding a being's existence fact is a brute contingent truth exactly when the being is contingent and its existence has no reason. Models over the existing first-mover frames at the reading world: (1) the brute first mover with no reasons: BX1 and BX2 hold, the existence PSR and B2 fail, and the rival holds with the First Way's mover as witness; (2) own-nature reasons: the existence PSR and BX2 hold, BX1 and B2 fail, the mover contingent with an own-nature token; (3) the moved thing as a non-causing occasion: the existence PSR and BX1 hold, BX2 and B2 fail; (4) a conserved mover with that occasion causing its esse: all three hold and B2 holds; (5) B2 without the existence PSR; (6) B2 without BX1; (7)-(9) one omission model for each premise of the grounding support; (10) its nonvacuity model.",
+  "lean_declaration": "TruthCore.Explanation.BruteContingencyParity.B2SupportControls",
+  "definition_ids": [
+    "e7302a28-f9fc-4961-811f-bf58bd86c28d",
+    "7cff4318-201a-430d-9680-10f5148a3b01",
+    "8eea5215-bb68-4608-b6f8-5368d17617d4",
+    "335c5c3a-4fd7-5511-8f18-81eea6408a77",
+    "d513fb8a-64ee-5d49-ae56-4d695f93ca71",
+    "fad6a806-713b-5318-8309-488af704d614",
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "13843b8b-4ef3-500e-949d-27e78b9dfaf9",
+    "e63036c5-d9c0-55d3-9704-e23efcbed127",
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}
