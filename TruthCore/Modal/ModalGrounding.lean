@@ -50,13 +50,16 @@ input on that frame:
   its reading of esse = essence is `EsseEssenceIsEssentialExistence`.
 * *Hybrid*: powers ground possibilities of change (`MovedOnlyAsInPotencyReading`
   of ST I q.2 a.3, reused), while possibilities of existence are combinatorial
-  or primitive (`Model.HybridFirstWayModel`).
+  or primitive. It supplies no verdict of its own: it inherits one from its
+  existence component; `Model.HybridFirstWayModel` shows consistency only.
 
 **Pruss's Aristotelian-modality argument** (analyst reconstruction): a
 primitive `PowerFor w y p` (at `w`, `y` has a power whose exercise would
 initiate a causal chain issuing in `p`), the Aristotelian grounding of a
-non-actual possibility in an actual being's power, initiator presence, and the
-tenseless global possibility that no contingent concrete being exists.
+non-actual possibility in an actual being's power, initiator presence, and
+either the tenseless global possibility that no contingent concrete being
+exists (a stronger analyst variant that Pruss declines) or Pruss's own
+possibility that every actual contingent concretum is absent.
 
 Models are finite typed interpretations: structural satisfiability of the
 stated formal reading, never a certificate of metaphysical possibility.
@@ -108,9 +111,10 @@ def FoundationalBeingsContingentAt (F : CausalityFrame W B T R) (w : W)
   ∀ f, FoundationalAt F w essenceOf esseOf Received ComposedOfMatterAndForm CanFailToBe
     PowerOver f → ContingentAt F.history.ontic w f
 
-/-- Some concrete being is foundational at `w`. Common ground between the
-theist and the brute-first rival (`Model.BruteFoundationalModel`); a pure
-Humean who rejects simplicity or act need not accept it. -/
+/-- Some concrete being is foundational at `w`. Admissible on both classical
+theism and the brute-first rival (`Model.TheistModel`,
+`Model.BruteFoundationalModel`: admissibility only); a pure Humean who rejects
+simplicity or act need not accept it. -/
 def SomeConcreteFoundationalAt (F : CausalityFrame W B T R) (w : W)
     (essenceOf esseOf : B → P) (Received : B → P → Prop) (ComposedOfMatterAndForm : B → Prop)
     (CanFailToBe : B → R → Prop) (PowerOver : B → B → R → Prop) (concrete : B → Prop) :
@@ -131,6 +135,15 @@ converse fails), from CAUSE_2 and from power. Structural properties assumed:
 none. The existing `EssenceReasonSeparation.Profile.InEssence` represents only
 existence facts in essences; it cannot state an existence-conditional essence,
 which is why this parameter takes world-propositions. -/
+
+/-- ESSENCE_5, the Finean essential-truth relation as one sense of "essence":
+`EssentialTruth Essential x φ` says that it lies in the nature of `x` that `φ`.
+A parameter wrapper: its meaning is the primitive `Essential` (DEF
+`7cf63236`), distinct from the q.3 a.4 represented essence `essenceOf`
+(ESSENCE_3). The only bridge between them in this module is the explicit OPEN
+premise `EsseEssenceIsEssentialExistence`. -/
+def EssentialTruth (Essential : B → (W → Prop) → Prop) (x : B) (φ : W → Prop) : Prop :=
+  Essential x φ
 
 /-- `φ` entails `x`'s existence over every point of the frame's world type (not
 only the accessible ones): wherever `φ` holds, `x` exists. -/
@@ -250,7 +263,13 @@ def GlobalAbsencePowerHoldersConcrete (F : CausalityFrame W B T R)
   PowerHoldersConcreteFor PowerFor concrete w (NoContingentConcreteIn F concrete)
 
 /-- OPEN (P4, the global possibility premise): some world accessible from `w`
-has no contingent concrete being. -/
+has no contingent concrete being. A stronger analyst variant that Pruss
+declines ("not about the controversial possibility that there should exist no
+contingent beings"); his premise is `PossiblyNoActualContingentConcrete`. With
+Euclidean access it implies his (`Model.ActualAbsenceLaws`), not conversely
+(`swappedFrame`). The global route's Euclidean premise is an artefact of this
+variant: the holder is shown non-contingent at the contingent-free world `v`,
+not at `w`. -/
 def PossiblyNoContingentConcrete (F : CausalityFrame W B T R) (concrete : B → Prop) (w : W) :
     Prop :=
   ∃ v, F.history.ontic.frame.access w v ∧ NoContingentConcreteIn F concrete v
@@ -278,6 +297,54 @@ def GlobalAbsencePowerIsPowerOverEsse (F : CausalityFrame W B T R)
     (∀ v, F.history.ontic.frame.access w v → NoContingentConcreteIn F concrete v →
       ¬ F.history.ontic.ExistsAt v x) →
     PowerOverEsse F PowerOver y x
+
+/-! ## Pruss's own possibility premise: the actual contingents absent
+
+Pruss ("The Actual and the Possible", read by the #1887 semantic challenge;
+navigation only here) does not use the global possibility that no contingent
+being exists. He uses the "much less controversial" possibility that the
+contingent beings that actually exist might not exist, "though perhaps other
+ones might then exist in their stead": a world in which no member of the set
+of actual contingent beings exists. The global `PossiblyNoContingentConcrete`
+above is a stronger analyst variant that Pruss declines. The proposition below
+is his: it is indexed to the actual world `w`. With it no Euclidean premise is
+needed. -/
+
+/-- No concrete being contingent at the actual world `w` exists at `v`: every
+actual contingent concretum is absent at `v`; others may be present. -/
+def NoActualContingentConcreteIn (F : CausalityFrame W B T R) (concrete : B → Prop) (w v : W) :
+    Prop :=
+  ∀ x, concrete x → ContingentAt F.history.ontic w x → ¬ F.history.ontic.ExistsAt v x
+
+/-- OPEN (P1′): Aristotelian grounding of the possibility that every actual
+contingent concretum is absent. -/
+def ActualAbsenceGrounded (F : CausalityFrame W B T R) (PowerFor : W → B → (W → Prop) → Prop)
+    (concrete : B → Prop) (w : W) : Prop :=
+  AristotelianGroundingFor F PowerFor w (NoActualContingentConcreteIn F concrete w)
+
+/-- OPEN (P2′): initiator presence for that possibility. -/
+def ActualAbsenceInitiatorPresent (F : CausalityFrame W B T R)
+    (PowerFor : W → B → (W → Prop) → Prop) (concrete : B → Prop) (w : W) : Prop :=
+  InitiatorPresentFor F PowerFor w (NoActualContingentConcreteIn F concrete w)
+
+/-- OPEN (P3′): holders of a power for that possibility are concrete. -/
+def ActualAbsencePowerHoldersConcrete (F : CausalityFrame W B T R)
+    (PowerFor : W → B → (W → Prop) → Prop) (concrete : B → Prop) (w : W) : Prop :=
+  PowerHoldersConcreteFor PowerFor concrete w (NoActualContingentConcreteIn F concrete w)
+
+/-- OPEN (P4′, Pruss's possibility premise): some world accessible from `w`
+lacks every concrete being that is contingent at `w`. -/
+def PossiblyNoActualContingentConcrete (F : CausalityFrame W B T R) (concrete : B → Prop)
+    (w : W) : Prop :=
+  ∃ v, F.history.ontic.frame.access w v ∧ NoActualContingentConcreteIn F concrete w v
+
+/-- Conclusion of the sibling: some concrete being exists at `w`, at every world
+accessible from `w`, and has at `w` a power for the absence of every actual
+contingent concretum. -/
+def NecessaryConcreteActualAbsencePowerAt (F : CausalityFrame W B T R)
+    (PowerFor : W → B → (W → Prop) → Prop) (concrete : B → Prop) (w : W) : Prop :=
+  ∃ y, concrete y ∧ F.history.ontic.ExistsAt w y ∧ NecessaryAt F.history.ontic w y ∧
+    PowerFor w y (NoActualContingentConcreteIn F concrete w)
 
 /-! ## The hybrid's restriction of PGP
 
@@ -358,7 +425,8 @@ open TruthCore.Case.Catholicism (ThereIsAFirstUnmovedMover FirstUnmovedMoverIsFi
    initiator presence and concrete power-holders, excludes that possibility
    wherever something concrete actually exists: it contradicts the subtraction
    conclusion.
-8. The subtraction conclusion gives Pruss's possibility premise P4.
+8. The subtraction conclusion gives the global possibility premise P4 (the
+   stronger analyst variant, not Pruss's own premise).
 9. Conceivability parity (#1887 F1): on a Euclidean frame, #248's unrestricted
    `StrongBridge` cannot take both the conceived necessary existence of `n` and
    its conceived absence: the first gives an accessible world where `n` is
@@ -784,8 +852,11 @@ pure act, and ST I q.2 a.3's "nothing is moved except as in potency": powers
 and potency ground the possibilities of change) hold together with unrestricted
 recombination and companions (existence-possibilities combinatorial), while the
 first mover is foundational and contingent. The moved thing `false` is a
-corruptible matter–form composite, so PGP's subject half holds nonvacuously;
-its subjectless half, PGP itself, B4 and the necessity verdict fail. This
+corruptible matter–form composite, so PGP's subject half has a nonvacuous
+antecedent, satisfied by corruptibility (no power occurs: `noPower`); its
+subjectless half, PGP itself, B4 and the necessity verdict fail. The model
+shows consistency only: the hybrid's verdict is inherited from its existence
+component. This
 extends the C2 note's `bruteSimple` to a combinatorial hybrid and separates
 the two halves of PGP (`Model.Laws`, 11). Admissible on the hybrid: powers for
 change and for subjects, combinatorial modality for subjectless existence. -/
@@ -853,13 +924,15 @@ the other premises hold (reading world `true`, or `Pt.a`):
 3. concrete holders P3 omitted (frame `theistFrame` with only the creature
    concrete: the necessary holder is not concrete);
 4. possibility P4 omitted (frame `swappedFrame`, every world has a contingent
-   being); here every actual concretum could fail to exist (S2 at `true`) while
-   P4 fails: "each possibly absent" does not give "possibly all absent" (Van
-   Cleve's point, navigation only), so P4 is an independent premise, not a
-   consequence of the contingency of each actual concretum;
+   being); here the one actual concretum could fail to exist (S2 at `true`)
+   while P4 fails because a non-actual concretum is contingent at the other
+   world: replacement ("others in their stead"), not Van Cleve's point. Pruss's
+   own premise holds here (`Model.ReplacementVersusJointAbsence`);
 5. an actual contingent concretum P5 omitted (frame `emptyFrame`);
 6. Euclidean access omitted (frame `nonEuclidean` at `Pt.a`: the holder is
-   necessary at the contingent-free world `b` but absent at `c`).
+   necessary at the contingent-free world `b` but absent at `c`). This need for
+   Euclidean access is an artefact of the global P4: the sibling with Pruss's
+   own premise needs none (`SiblingNonvacuity`).
 Excluded middle is not omitted: every model is built in Lean, which is
 consistent with it. -/
 def PrussOmissions : Prop :=
@@ -915,6 +988,140 @@ def Models : Prop :=
 
 /-- The laws and the models. -/
 def Controls : Prop := Laws ∧ Models
+
+/-! ### Controls for the actual-absence sibling (Pruss's own premise)
+
+Added after the #1887 semantic challenge, as a separate certificate so that the
+frozen `Controls` is unchanged. -/
+
+/-- Laws:
+1. with Euclidean access, the global possibility premise P4 implies Pruss's
+   P4′ (an actual contingent concretum present at a contingent-free accessible
+   world would be necessary there, hence at `w`); `swappedFrame` shows the
+   converse fails. -/
+def ActualAbsenceLaws : Prop :=
+  ∀ (W B T R : Type) (F : CausalityFrame W B T R) (concrete : B → Prop) (w : W),
+    TruthCore.Modal.Euclidean F.history.ontic.frame →
+    PossiblyNoContingentConcrete F concrete w → PossiblyNoActualContingentConcrete F concrete w
+
+/-- Access to every combination except the empty one: the two beings are each
+possibly absent and never jointly absent. -/
+def vanCleveFrame : CausalityFrame (Bool × Bool) Bool Unit Bool :=
+  frameOn (fun _ v => v ≠ (false, false)) comboEx noCause noPrior
+
+/-- `true` exists at every point; `false` only at `Pt.a`. -/
+def ptAllEx (v : Pt) (x : Bool) : Prop := x = true ∨ v = .a
+
+/-- The non-Euclidean frame `a → b`, `a → c`, `b → b` with `true` necessary. -/
+def nonEuclideanSibling : CausalityFrame Pt Bool Unit Bool :=
+  frameOn ptAccess ptAllEx noCause noPrior
+
+/-- Reflexive and transitive, not Euclidean: `false` sees both worlds, `true`
+only itself (Hume's `branching`). -/
+def branchingAccess (w v : Bool) : Prop := w = false ∨ v = true
+
+/-- The S4 frame for the conceivability bundle; `true` exists at world `true`
+only. -/
+def s4Frame : CausalityFrame Bool Bool Unit Bool := frameOn branchingAccess onlyFHere noCause noPrior
+
+/-- Conceiving both the absence and the necessary existence of `n`. -/
+def conceiveBoth {W : Type} (F : CausalityFrame W Bool Unit Bool) (n : Bool) : Conception W :=
+  fun P w => conceiveAbsence F n P w ∨ conceiveNecessity F n P w
+
+/-- **siblingNonvacuity**: on `theistFrame` every premise of the sibling, its
+conclusion and the stage-one node hold; on `nonEuclideanSibling` at `Pt.a` the
+same hold while access is not Euclidean, so the sibling needs no Euclidean
+premise. -/
+def SiblingNonvacuity : Prop :=
+  (ActualAbsenceGrounded theistFrame (powerBy true) allConcrete true ∧
+    ActualAbsenceInitiatorPresent theistFrame (powerBy true) allConcrete true ∧
+    ActualAbsencePowerHoldersConcrete theistFrame (powerBy true) allConcrete true ∧
+    PossiblyNoActualContingentConcrete theistFrame allConcrete true ∧
+    SomeContingentConcreteAt theistFrame allConcrete true ∧
+    NecessaryConcreteActualAbsencePowerAt theistFrame (powerBy true) allConcrete true) ∧
+  (¬ TruthCore.Modal.Euclidean nonEuclideanSibling.history.ontic.frame ∧
+    ActualAbsenceGrounded nonEuclideanSibling (powerBy true) allConcrete .a ∧
+    ActualAbsenceInitiatorPresent nonEuclideanSibling (powerBy true) allConcrete .a ∧
+    ActualAbsencePowerHoldersConcrete nonEuclideanSibling (powerBy true) allConcrete .a ∧
+    PossiblyNoActualContingentConcrete nonEuclideanSibling allConcrete .a ∧
+    SomeContingentConcreteAt nonEuclideanSibling allConcrete .a ∧
+    NecessaryConcreteActualAbsencePowerAt nonEuclideanSibling (powerBy true) allConcrete .a)
+
+/-- Omission models of the sibling, each falsifying its conclusion while the
+other non-logical premises hold:
+1. grounding P1′ omitted (`creatureFrame`, no powers);
+2. initiator presence P2′ omitted (`creatureFrame`, the contingent creature
+   holds the power);
+3. concrete holders P3′ omitted (`theistFrame`, only the creature concrete);
+4. Pruss's possibility P4′ omitted (`vanCleveFrame` at `(true, true)`: two
+   actual contingents, never jointly absent);
+5. an actual contingent concretum P5 omitted (`emptyFrame`). -/
+def SiblingOmissions : Prop :=
+  (¬ ActualAbsenceGrounded creatureFrame noPowerFor allConcrete true ∧
+    ActualAbsenceInitiatorPresent creatureFrame noPowerFor allConcrete true ∧
+    ActualAbsencePowerHoldersConcrete creatureFrame noPowerFor allConcrete true ∧
+    PossiblyNoActualContingentConcrete creatureFrame allConcrete true ∧
+    SomeContingentConcreteAt creatureFrame allConcrete true ∧
+    ¬ NecessaryConcreteActualAbsencePowerAt creatureFrame noPowerFor allConcrete true) ∧
+  (ActualAbsenceGrounded creatureFrame (powerBy false) allConcrete true ∧
+    ¬ ActualAbsenceInitiatorPresent creatureFrame (powerBy false) allConcrete true ∧
+    ActualAbsencePowerHoldersConcrete creatureFrame (powerBy false) allConcrete true ∧
+    PossiblyNoActualContingentConcrete creatureFrame allConcrete true ∧
+    SomeContingentConcreteAt creatureFrame allConcrete true ∧
+    ¬ NecessaryConcreteActualAbsencePowerAt creatureFrame (powerBy false) allConcrete true) ∧
+  (ActualAbsenceGrounded theistFrame (powerBy true) onlyFalseConcrete true ∧
+    ActualAbsenceInitiatorPresent theistFrame (powerBy true) onlyFalseConcrete true ∧
+    ¬ ActualAbsencePowerHoldersConcrete theistFrame (powerBy true) onlyFalseConcrete true ∧
+    PossiblyNoActualContingentConcrete theistFrame onlyFalseConcrete true ∧
+    SomeContingentConcreteAt theistFrame onlyFalseConcrete true ∧
+    ¬ NecessaryConcreteActualAbsencePowerAt theistFrame (powerBy true) onlyFalseConcrete true) ∧
+  (ActualAbsenceGrounded vanCleveFrame noPowerFor allConcrete (true, true) ∧
+    ActualAbsenceInitiatorPresent vanCleveFrame noPowerFor allConcrete (true, true) ∧
+    ActualAbsencePowerHoldersConcrete vanCleveFrame noPowerFor allConcrete (true, true) ∧
+    ¬ PossiblyNoActualContingentConcrete vanCleveFrame allConcrete (true, true) ∧
+    SomeContingentConcreteAt vanCleveFrame allConcrete (true, true) ∧
+    ¬ NecessaryConcreteActualAbsencePowerAt vanCleveFrame noPowerFor allConcrete (true, true)) ∧
+  (ActualAbsenceGrounded emptyFrame noPowerFor allConcrete true ∧
+    ActualAbsenceInitiatorPresent emptyFrame noPowerFor allConcrete true ∧
+    ActualAbsencePowerHoldersConcrete emptyFrame noPowerFor allConcrete true ∧
+    PossiblyNoActualContingentConcrete emptyFrame allConcrete true ∧
+    ¬ SomeContingentConcreteAt emptyFrame allConcrete true ∧
+    ¬ NecessaryConcreteActualAbsencePowerAt emptyFrame noPowerFor allConcrete true)
+
+/-- **replacementVersusJointAbsence**. In `swappedFrame` at `true` the one
+actual concretum could fail to exist and Pruss's P4′ holds (it is absent at the
+other world), while the global P4 fails because a non-actual being is
+contingent there: replacement, "others in their stead". In `vanCleveFrame`
+(Euclidean) two actual contingents are each possibly absent but never jointly
+absent: "each possibly absent" does not give "possibly all absent" (Van Cleve's
+point, navigation only), so P4′ is an independent premise, not a consequence of
+the contingency of each actual concretum; the global P4 fails too. -/
+def ReplacementVersusJointAbsence : Prop :=
+  (EachConcreteCouldFailAt (groundProfile swappedFrame allConcrete noGrounds) true ∧
+    PossiblyNoActualContingentConcrete swappedFrame allConcrete true ∧
+    ¬ PossiblyNoContingentConcrete swappedFrame allConcrete true) ∧
+  (TruthCore.Modal.Euclidean vanCleveFrame.history.ontic.frame ∧
+    EachConcreteCouldFailAt (groundProfile vanCleveFrame allConcrete noGrounds) (true, true) ∧
+    ¬ PossiblyNoActualContingentConcrete vanCleveFrame allConcrete (true, true) ∧
+    ¬ PossiblyNoContingentConcrete vanCleveFrame allConcrete (true, true))
+
+/-- **conceivabilityS4** (#1888 F1 request): on a reflexive, transitive,
+non-Euclidean frame, #248's unrestricted bridge holds for a conceiver of both
+`true`'s necessary existence and its absence. So law 9's inconsistency of the
+bundle depends on Euclidean access (it holds on S5, not on S4). -/
+def ConceivabilityS4Bundle : Prop :=
+  TruthCore.Modal.Reflexive s4Frame.history.ontic.frame ∧
+  TruthCore.Modal.Transitive s4Frame.history.ontic.frame ∧
+  ¬ TruthCore.Modal.Euclidean s4Frame.history.ontic.frame ∧
+  StrongBridge s4Frame.history.ontic.frame (conceiveBoth s4Frame true) false ∧
+  conceiveBoth s4Frame true
+    (Box s4Frame.history.ontic.frame (fun v => s4Frame.history.ontic.ExistsAt v true)) false ∧
+  conceiveBoth s4Frame true (fun v => ¬ s4Frame.history.ontic.ExistsAt v true) false
+
+/-- The sibling certificate. -/
+def ActualAbsenceControls : Prop :=
+  ActualAbsenceLaws ∧ SiblingNonvacuity ∧ SiblingOmissions ∧ ReplacementVersusJointAbsence ∧
+    ConceivabilityS4Bundle
 
 end Model
 

@@ -1,7 +1,7 @@
 {
   "id": "c5da5e62-a9cd-4142-8d3a-a96f86548e88",
   "label": "Some concrete being is foundational at w",
-  "paraphrase": "OPEN, analyst formulation: some concrete candidate is foundational at w: it exists at w, its represented esse equals its represented essence, it has no matter and form, its esse is received in no principle, it is first in SIMPLY_PRIOR_1, nothing is a CAUSE_2 of its esse, it is incorruptible simply and no being has POWER_OVER_ESSE_1 over it. Non-modal: it says nothing about the being at other worlds. Common ground between classical theism and the brute-first rival (controls, bruteFoundational: a contingent such being); a pure Humean who rejects simplicity or act need not accept it.",
+  "paraphrase": "OPEN, analyst formulation: some concrete candidate is foundational at w: it exists at w, its represented esse equals its represented essence, it has no matter and form, its esse is received in no principle, it is first in SIMPLY_PRIOR_1, nothing is a CAUSE_2 of its esse, it is incorruptible simply and no being has POWER_OVER_ESSE_1 over it. Non-modal: it says nothing about the being at other worlds. Admissible on both classical theism and the brute-first rival (controls: theist; bruteFoundational, a contingent such being); the models show admissibility only; a pure Humean who rejects simplicity or act need not accept it.",
   "lean_declaration": "TruthCore.Modal.ModalGrounding.SomeConcreteFoundationalAt",
   "definition_ids": [
     "7fcf846e-d0ef-400e-89c0-7c82b94edde7",

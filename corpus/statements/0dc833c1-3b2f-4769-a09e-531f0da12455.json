@@ -1,7 +1,7 @@
 {
   "id": "0dc833c1-3b2f-4769-a09e-531f0da12455",
-  "label": "Possibly no concrete being is CONTINGENCY_1",
-  "paraphrase": "OPEN (P4, the global possibility premise; analyst reconstruction): some world v accessible from w has no concrete being that is contingent at v (exists at v and is absent at a world accessible from v). With tenseless world-relative existence: possibly no contingent concretum ever exists. The subtraction conclusion (possibly no concrete being) implies it (controls, law 8). It does not follow from the contingency of each actual concretum (controls, Pruss omission 4: Van Cleve's 'each possibly absent' does not give 'possibly all absent').",
+  "label": "Possibly no concrete being is CONTINGENCY_1 (global variant, stronger than Pruss's premise)",
+  "paraphrase": "OPEN (P4, the global possibility premise; a stronger analyst variant that Pruss declines, attribution deferred): some world v accessible from w has no concrete being that is contingent at v (exists at v and is absent at a world accessible from v). With tenseless world-relative existence: possibly no contingent concretum ever exists. Pruss (navigation only) calls this possibility controversial and uses instead the possibility that the actual contingents are absent, others perhaps in their stead (statement in specs/modal-grounding-actual-absence.toml); with Euclidean access this premise implies his, not conversely. The subtraction conclusion (possibly no concrete being) implies it (controls, law 8); the theist accepts it (theist model); a Lowe-style view on which some contingent being necessarily exists, if that being is concrete, denies it. It does not follow from the contingency of each actual concretum (actual-absence controls, Van Cleve model).",
   "lean_declaration": "TruthCore.Modal.ModalGrounding.PossiblyNoContingentConcrete",
   "definition_ids": [
     "6ecf24d5-5001-4571-937c-2632ac8c2c66",

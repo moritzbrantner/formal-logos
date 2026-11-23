@@ -1,7 +1,7 @@
 {
   "id": "94393b5b-8950-4a52-aef1-50cd09232e64",
-  "label": "If no contingent concretum is possible but not actual, some actual being has a power for it",
-  "paraphrase": "OPEN (P1, Aristotelian grounding of the global possibility; analyst reconstruction of Pruss, attribution deferred): if some world accessible from w has no contingent concrete being and w itself has one, then some being existing at w has, at w, a power whose exercise would initiate a causal chain issuing in there being no contingent concrete being (PowerFor). An instance of Aristotelian modality (a non-actual possibility is grounded in an actual being's power) for one global proposition only; it is not PGP and does not mention any individual's absence.",
+  "label": "If the absence of every contingent concretum is possible but not actual, a being has a power for it",
+  "paraphrase": "OPEN (P1, Aristotelian grounding of the global possibility; analyst variant, attribution deferred): if some world accessible from w has no contingent concrete being and w itself has one, then some being existing at w has, at w, a power whose exercise would initiate a causal chain issuing in there being no contingent concrete being (PowerFor). An instance of Aristotelian modality (a non-actual possibility is grounded in an actual being's power) for one global proposition only; it is not PGP and does not mention any individual's absence. Pruss's own argument grounds the weaker possibility that every actual contingent is absent (specs/modal-grounding-actual-absence.toml).",
   "lean_declaration": "TruthCore.Modal.ModalGrounding.GlobalAbsenceGrounded",
   "definition_ids": [
     "bf7eddca-8291-4744-8470-379babcd7781",

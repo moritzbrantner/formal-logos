@@ -22,5 +22,13 @@
     "1aef8986-ed29-564f-9803-d812d2ff63e1",
     "13843b8b-4ef3-500e-949d-27e78b9dfaf9",
     "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ],
+  "sense_bridges": [
+    {
+      "term": "ESSENCE",
+      "from": "6888b59f-fb40-48c9-b35a-4bbc4a5be96d",
+      "to": "148e37bc-4dfd-423e-a871-14722929d708",
+      "statement_id": "565ccd6c-0036-4613-8595-f6f03d273a0d"
+    }
   ]
 }

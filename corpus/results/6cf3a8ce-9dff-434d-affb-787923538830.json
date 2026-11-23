@@ -1,0 +1,11 @@
+{
+  "id": "6cf3a8ce-9dff-434d-affb-787923538830",
+  "label": "Pruss actual-absence route controls checked",
+  "argument_id": "3b89368c-c55c-44b2-8a01-bcecb1420c7f",
+  "challenge_module": "TruthCore.Results.Modal.ModalGroundingActualAbsence.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalGroundingActualAbsence.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalGroundingActualAbsence.actualAbsenceControls",
+  "comparator_config": "results/6cf3a8ce-9dff-434d-affb-787923538830/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free law and models for the Pruss actual-absence sibling. Sense-mixing control: they relate MODAL_CONTINGENCY_1, NECESSARY_2 and the frame (NECESSARY_11 carrier) without a bridge premise. Establishes no premise."
+}

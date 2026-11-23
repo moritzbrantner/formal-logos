@@ -1,0 +1,85 @@
+# #1887 test 5, after the independent semantic challenge of head 44f70bff:
+# Pruss's own possibility premise. Pruss ("The Actual and the Possible",
+# navigation only) uses the "much less controversial" possibility that the
+# actual contingent beings might not exist, "though perhaps other ones might
+# then exist in their stead", not the global possibility that no contingent
+# being exists (statement 0dc833c1 of specs/modal-grounding-frameworks.toml,
+# a stronger analyst variant he declines). With his premise the route needs no
+# Euclidean premise. Analyst reconstruction, attribution deferred.
+
+[batch]
+vocab = "TruthCore.Modal.ModalGrounding"
+results = "TruthCore.Results.Modal.ModalGroundingActualAbsence"
+
+[[statement]]
+id = "If every actual contingent concretum's absence is possible, not actual, a being has a power for it"
+lean = "ActualAbsenceGrounded"
+paraphrase = "OPEN (P1-prime, Aristotelian grounding of Pruss's possibility; analyst reconstruction, attribution deferred): if some world accessible from w lacks every concrete being that is contingent at w, and w itself has such a being, then some being existing at w has, at w, a power whose exercise would initiate a causal chain issuing in every such being's absence (PowerFor). Other contingent beings may exist in that world. An instance of Aristotelian modality for one proposition indexed to the actual world; it is not PGP and does not concern any single individual's absence."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "A power for every actual contingent concretum's absence issues in a world where its holder exists"
+lean = "ActualAbsenceInitiatorPresent"
+paraphrase = "OPEN (P2-prime, initiator presence; analyst reconstruction): whatever has at w a power for the absence of every concrete being contingent at w can exercise it so that, at some world accessible from w, every such being is absent and the holder exists. With the frame's tenseless world-relative existence, the initiator of a chain exists in the world of that chain. Compared with Pruss's principle that x cannot start any chain of causes that can lead to actuality's not including x (navigation only, not attributed): his is universal over chains, this is existential and builds in that the power's outcome is an accessible world; and his direction is mirrored (his holder is in the non-actual world, with a power for the actual world's being actual, and he uses S5 for that world to reach the actual one)."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Whatever has at w a power for every actual contingent concretum's absence is concrete"
+lean = "ActualAbsencePowerHoldersConcrete"
+paraphrase = "OPEN (P3-prime; analyst reconstruction): every holder at w of a power for the absence of every concrete being contingent at w is concrete (in the selected world-independent concreteness predicate)."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Possibly every concrete being CONTINGENCY_1 at w is absent"
+lean = "PossiblyNoActualContingentConcrete"
+paraphrase = "OPEN (P4-prime, Pruss's possibility premise; analyst reconstruction): some world accessible from w lacks every concrete being that is contingent at w (MODAL_CONTINGENCY_1 at the actual world); other concrete beings, contingent or not, may exist there. Weaker than the global premise that possibly no concrete being is contingent (0dc833c1): with Euclidean access the global premise implies it, not conversely (controls). It does not follow from the contingency of each actual concretum taken singly (controls: two actual contingents, each possibly absent, never jointly absent)."
+definitions = ["1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Some necessary concrete being at w has a power for every actual contingent concretum's absence"
+lean = "NecessaryConcreteActualAbsencePowerAt"
+paraphrase = "Conclusion of the sibling route: some concrete candidate exists at w, exists at every world accessible from w (NECESSARY_2 de re) and has at w a power for the absence of every concrete being contingent at w. It asserts no uniqueness, simplicity, firstness, intellect or God, and nothing about the power's exercise."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Pruss actual-absence route: laws, nonvacuity, omission, replacement and S4 conceivability models"
+lean = "Model.ActualAbsenceControls"
+paraphrase = "Premise-free law and finite models (structural surrogates). Law: with Euclidean access the global possibility that no concrete being is contingent implies Pruss's possibility that every actual contingent concretum is absent. Models: nonvacuity of the sibling on the theist frame and on a non-Euclidean frame (the sibling needs no Euclidean premise); one omission model for each of its five non-logical premises; replacement (one actual concretum possibly absent, Pruss's premise holding, the global premise failing because a non-actual being is contingent elsewhere) and Van Cleve's point (two actual contingents, each possibly absent, never jointly absent, on a Euclidean frame: Pruss's and the global premise both fail); and, on a reflexive transitive non-Euclidean frame, #248's unrestricted conceivability bridge holding for a conceiver of both a being's necessary existence and its absence, so law 9 of the framework controls depends on Euclidean access."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "6ecf24d5-5001-4571-937c-2632ac8c2c66", "1b8baf77-84fa-5513-a138-7fa14840dd87", "13c0abe7-25f7-4921-b52e-9f732edd6f2c", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[argument]]
+id = "A necessary concrete power-holder, by Aristotelian modality and Pruss's possibility"
+theorem = "prussActualAbsenceNecessaryPowerHolder"
+premises = ["STMT-EXCLUDED-MIDDLE", "If every actual contingent concretum's absence is possible, not actual, a being has a power for it", "A power for every actual contingent concretum's absence issues in a world where its holder exists", "Whatever has at w a power for every actual contingent concretum's absence is concrete", "Possibly every concrete being CONTINGENCY_1 at w is absent", "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174"]
+conclusion = "Some necessary concrete being at w has a power for every actual contingent concretum's absence"
+rule = "Ground the non-actual possibility, locate the holder in its world, reductio on the holder's contingency"
+meaning = "Analyst reconstruction of Pruss's Aristotelian-modality argument with his own possibility premise. A concrete being is contingent at w, so not every actual contingent concretum is absent at w, while some accessible world lacks them all (P4-prime). Aristotelian grounding (P1-prime) gives a being y existing at w with a power for that absence; initiator presence (P2-prime) gives an accessible world v where it obtains and y exists; y is concrete (P3-prime). Were y absent at some world accessible from w, y would be a concrete being contingent at w, hence absent at v, where it exists. So, with excluded middle, y exists at every world accessible from w. No Euclidean premise: the holder's non-contingency is shown at w directly."
+description = "Test 5's route to a necessary concrete being with Pruss's own premise, replacing the global variant's Euclidean premise. Not a transcription: no premise mentions a necessary being. Establishes no premise. Each non-logical premise is needed and the conclusion holds on a non-Euclidean frame (controls). It uses neither PGP nor C2; its P1-prime is power-grounded modality applied to the joint absence of the actual contingents, so it is not independent of the C2 crux's general theory."
+
+[[argument]]
+id = "The stage-one node, from a necessary concrete holder of an actual-absence power"
+theorem = "prussActualAbsenceNecessaryConcrete"
+premises = ["Some necessary concrete being at w has a power for every actual contingent concretum's absence"]
+conclusion = "STMT-NECESSARY-CONCRETE-AT"
+sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "STMT-NECESSARY-CONCRETE-AT", role = "conclusion"}]
+rule = "Forget the power"
+meaning = "The sibling's witness is concrete, exists at w and at every accessible world: it witnesses the stage-one node on the frame's own profile."
+description = "Projection of the sibling conclusion onto STMT-NECESSARY-CONCRETE-AT. An assembly; establishes no premise."
+transcription = "assembly"
+
+[[argument]]
+id = "Pruss actual-absence route controls checked"
+theorem = "actualAbsenceControls"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+premises = []
+conclusion = "Pruss actual-absence route: laws, nonvacuity, omission, replacement and S4 conceivability models"
+rule = "General law and explicit finite models"
+meaning = "Premise-free: the global possibility premise implies Pruss's on Euclidean frames; nonvacuity of the sibling on theist and non-Euclidean frames; omission models for each of its five non-logical premises; replacement versus joint absence (Van Cleve); the S4 conceivability bundle. Model-witnessed separations only; no premise is established and no reality claim is made."
+description = "Premise-free law and models for the Pruss actual-absence sibling. Sense-mixing control: they relate MODAL_CONTINGENCY_1, NECESSARY_2 and the frame (NECESSARY_11 carrier) without a bridge premise. Establishes no premise."

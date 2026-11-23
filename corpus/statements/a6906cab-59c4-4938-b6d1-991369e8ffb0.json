@@ -1,0 +1,15 @@
+{
+  "id": "a6906cab-59c4-4938-b6d1-991369e8ffb0",
+  "label": "Whatever has at w a power for every actual contingent concretum's absence is concrete",
+  "paraphrase": "OPEN (P3-prime; analyst reconstruction): every holder at w of a power for the absence of every concrete being contingent at w is concrete (in the selected world-independent concreteness predicate).",
+  "lean_declaration": "TruthCore.Modal.ModalGrounding.ActualAbsencePowerHoldersConcrete",
+  "definition_ids": [
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

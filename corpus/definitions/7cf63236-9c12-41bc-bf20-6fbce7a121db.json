@@ -1,8 +1,28 @@
 {
   "id": "7cf63236-9c12-41bc-bf20-6fbce7a121db",
-  "label": "Essential truth: it lies in the nature of x that φ (Fine's box-sub-x), a primitive",
-  "term": "essential truth of a being (the Essential parameter)",
-  "definition": "Essential x φ, for a being x and a world-proposition φ over the frame's points: it lies in the nature of x that φ (Fine's □ₓ φ). A primitive Lean parameter of type B → (W → Prop) → Prop of TruthCore.Modal.ModalGrounding, constrained only by the premises that use it: essence grounds necessity (EssenceGroundsNecessity: an essential truth holds at every accessible world), the essentialist account of possibility (EssentialExclusionAccount), existence-conditional essences (ExistenceConditionalEssences: every essential truth about x holds wherever x is absent) and unconditional essentialism's reading of esse = essence (EsseEssenceIsEssentialExistence). A related helper is defined: EntailsExistence F φ x, φ entails x's existence over every point of the frame's world type.",
+  "label": "ESSENCE_5, essential truth: it lies in the nature of x that φ (Fine's box-sub-x), a primitive",
+  "term": "essential truth of a being (ESSENCE_5; the Essential parameter)",
+  "definition": "EssentialTruth Essential x φ := Essential x φ, for a being x and a world-proposition φ over the frame's points: it lies in the nature of x that φ (Fine's □ₓ φ). A parameter wrapper over the primitive Lean parameter Essential of type B → (W → Prop) → Prop of TruthCore.Modal.ModalGrounding, constrained only by the premises that use it: essence grounds necessity (EssenceGroundsNecessity: an essential truth holds at every accessible world), the essentialist account of possibility (EssentialExclusionAccount), existence-conditional essences (ExistenceConditionalEssences: every essential truth about x holds wherever x is absent) and unconditional essentialism's reading of esse = essence (EsseEssenceIsEssentialExistence). A related helper is defined: EntailsExistence F φ x, φ entails x's existence over every point of the frame's world type. Sense ESSENCE_5 of DISAMB-ESSENCE.",
   "basis": "stipulative",
-  "note": "Stipulated for #1887 (docs/notes/modal-grounding-frameworks.md). Examples: it lies in the nature of a singleton that it has its member; of water that it is H2O. Non-examples: that Socrates is a member of his singleton is necessary but does not lie in Socrates' nature (Fine 1994's point against the modal analysis of essence; navigation only); that a contingent being happens to exist at w. Distinct from necessity (essence implies necessity under EssenceGroundsNecessity, not conversely), from CAUSE_2 and from POWER_OVER_ESSE_1. Structural properties assumed: none. Distinct from the existing EssenceReasonSeparation.Profile.InEssence, which represents only existence facts in essences and so cannot state an existence-conditional essence; the two are not related by any bridge. Senses of 'essence' in DISAMB-ESSENCE (Scott, Godel, q.3 a.4 essenceOf) are different notions: here essenceOf/esseOf remain the q.3 a.4 represented essence and esse, and Essential is the Finean nature-relative truth; the only bridge between them is the explicit OPEN premise EsseEssenceIsEssentialExistence. Open obligations: whether an esse-essence identity is a case of existence belonging to an essence (the Kant-type thesis, the decisive question in docs/notes/foundational-absence-warrant.md). What would source it: Fine, 'Essence and Modality' (1994); Lowe, 'Two Notions of Being' (2008)."
+  "lean_declaration": "TruthCore.Modal.ModalGrounding.EssentialTruth",
+  "note": "Stipulated for #1887 (docs/notes/modal-grounding-frameworks.md). Distinct from the existing EssenceReasonSeparation.Profile.InEssence, which represents only existence facts in essences and so cannot state an existence-conditional essence; the two are not related by any bridge. The other senses of DISAMB-ESSENCE (Scott, Godel, the q.3 a.4 represented essence essenceOf) are different notions: here essenceOf/esseOf remain the q.3 a.4 represented essence and esse (ESSENCE_3), and Essential is the Finean nature-relative truth; the only bridge between them is the explicit OPEN premise EsseEssenceIsEssentialExistence, listed as a sense bridge in the argument that uses both. Whether an esse-essence identity is a case of existence belonging to an essence (the Kant-type thesis) decides between controls laws 3-4 (existence-conditional essentialism makes the identity modally idle) and the unconditional-essentialist support for B6; it is open. What would source it: Fine, 'Essence and Modality' (1994); Lowe, 'Two Notions of Being' (2008).",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "EssentialTruth Essential x φ says that it lies in the nature of x that φ holds, for a proposition φ over the frame's points. A model supplies the relation; Lean fixes only its type.",
+    "examples": [
+      "It lies in the nature of a singleton that it has its member.",
+      "It lies in the nature of water that it is H2O."
+    ],
+    "exclusions": [
+      "Necessity: that Socrates is a member of his singleton is necessary but does not lie in Socrates' nature (Fine 1994, navigation only); essence implies necessity only under the explicit premise EssenceGroundsNecessity.",
+      "The q.3 a.4 represented essence essenceOf (ESSENCE_3): related only by the explicit premise EsseEssenceIsEssentialExistence.",
+      "A contingent being's happening to exist at w.",
+      "CAUSE_2 and POWER_OVER_ESSE_1."
+    ],
+    "open_obligations": [
+      "No structural property (closure under entailment, conjunction, transitivity) is assumed.",
+      "Whether essential truths are world-propositions over the frame's points.",
+      "Whether existence can belong to an essence, in particular for an esse-essence identity."
+    ]
+  }
 }

@@ -1,0 +1,19 @@
+{
+  "id": "0367a005-ca73-4e90-a308-222cec1519f5",
+  "label": "Pruss actual-absence route: laws, nonvacuity, omission, replacement and S4 conceivability models",
+  "paraphrase": "Premise-free law and finite models (structural surrogates). Law: with Euclidean access the global possibility that no concrete being is contingent implies Pruss's possibility that every actual contingent concretum is absent. Models: nonvacuity of the sibling on the theist frame and on a non-Euclidean frame (the sibling needs no Euclidean premise); one omission model for each of its five non-logical premises; replacement (one actual concretum possibly absent, Pruss's premise holding, the global premise failing because a non-actual being is contingent elsewhere) and Van Cleve's point (two actual contingents, each possibly absent, never jointly absent, on a Euclidean frame: Pruss's and the global premise both fail); and, on a reflexive transitive non-Euclidean frame, #248's unrestricted conceivability bridge holding for a conceiver of both a being's necessary existence and its absence, so law 9 of the framework controls depends on Euclidean access.",
+  "lean_declaration": "TruthCore.Modal.ModalGrounding.Model.ActualAbsenceControls",
+  "definition_ids": [
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "6ecf24d5-5001-4571-937c-2632ac8c2c66",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "13c0abe7-25f7-4921-b52e-9f732edd6f2c",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}
