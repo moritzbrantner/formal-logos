@@ -353,12 +353,15 @@ theorem exemplarEminenceProducesKnower {B C Form : Type}
     ProducesActualKnower CausesEsse About Correct Apprehends Grounded g :=
   hEminent.2.2.2.2
 
-/-- Same-witness link to #1879: the own form that objective eminence makes
-primarily about g is exactly the object that #1879's OPEN
-ActApprehendsPrimaryObject rule makes apprehended, PROVIDED g is actually in
-the understanding act and that form is its immediate species. Objective
-eminence supplies neither of those two inputs; the theorem locates the C4 gap
-at the source's own actual act, not at its objective intelligibility. -/
+/-- Same-witness link to #1879, an instantiation (transcription, invariant 16)
+of #1879's OPEN ActApprehendsPrimaryObject rule at the eminence witness: the
+source g apprehends itself, the primary object of its own form
+(`ApprehendsObject g g`), PROVIDED g is actually in the understanding act with
+`ownForm g` as immediate species. The form is the species through which g is
+apprehended, not the object apprehended. Objective eminence supplies neither
+input. Reaching C4's content-indexed `IntrinsicSelfKnowledge` additionally
+needs #1879's content reading (C := B, About/Correct as identity,
+GroundedInOwnForm) and the open rule itself. -/
 theorem eminentFormApprehendedIfActual {B C Form R : Type}
     (OwnBeing : B → Prop) (ownForm : B → Form)
     (HasOwnForm : B → Form → Prop)
