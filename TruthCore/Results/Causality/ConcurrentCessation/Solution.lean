@@ -178,7 +178,7 @@ reidentifying a historical origin as a currently productive cause. This is an
 unregistered structural model check, not a metaphysical-possibility claim. -/
 theorem withdrawalLawControls : WithdrawalLaw.Certificate := by
   unfold WithdrawalLaw.Certificate
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
   -- The effect's rigid world-existence agrees with its temporal presence now.
   · intro v x
     exact Iff.rfl
@@ -275,5 +275,23 @@ theorem withdrawalLawControls : WithdrawalLaw.Certificate := by
   -- Causal coverage never entails that a particular effect gets instantiated.
   · intro t
     simp [WithdrawalLaw.history, WithdrawalLaw.effectAt]
+  -- Classification control: the same vanished bearer and history can be
+  -- coupled to a model that records withdrawal itself as a loss occurrence.
+  · intro x t
+    exact Iff.rfl
+  · simp [Destroys, WithdrawalLaw.withdrawalAsLoss]
+  · intro x n hBefore hGone
+    cases x with
+    | false =>
+      have hn : n = 1 := by
+        simpa [WithdrawalLaw.withdrawalAsLoss, WithdrawalLaw.history,
+          WithdrawalLaw.effectAt] using hBefore
+      subst n
+      exact ⟨(), by simp [Destroys, WithdrawalLaw.withdrawalAsLoss]⟩
+    | true =>
+      exact (hGone (by simp [WithdrawalLaw.withdrawalAsLoss,
+        WithdrawalLaw.history])).elim
+  · intro hNone
+    exact hNone () (by simp [Destroys, WithdrawalLaw.withdrawalAsLoss])
 
 end TruthCore.Results.Causality.ConcurrentCessation
