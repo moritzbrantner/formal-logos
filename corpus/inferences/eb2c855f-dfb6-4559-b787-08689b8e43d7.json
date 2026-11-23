@@ -1,0 +1,12 @@
+{
+  "id": "eb2c855f-dfb6-4559-b787-08689b8e43d7",
+  "label": "An operative modal source entails the stage-one existence node (inference)",
+  "input_statement_ids": [
+    "34b957cd-73e6-4a10-8fa1-958a4679e346"
+  ],
+  "output_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+  "rule": "Project the necessary concrete source c from the enriched causal conclusion to the existing necessary-concrete endpoint without changing witness identity",
+  "meaning": "The SAME rigid source c from the enriched modal causal conclusion is a necessary concrete being at w; the exercise-of-GivesAt conjunct is retained in the premise but not inferred as actual-world efficacy. A verified logical weakening, not independent metaphysical evidence. The existing stage-one necessary-concrete node retains its separate direct premise and other routes.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "0e473dc4-77c5-4d5d-899f-93e29907b198",
+  "label": "No direct self-causation in strict concurrent giving of being",
+  "paraphrase": "OPEN primitive strict being-causation principle: in all histories accessible from the selected world, a bearer never directly gives its own being to itself via the shared CausalityFrame.GivesAt relation. No claim that a different relation, physical feedback, or self-maintenance is prohibited.",
+  "lean_declaration": "TruthCore.Causality.MetricBeginningArrival.NoSelfGivingOnAccessible",
+  "definition_ids": [
+    "9e1d45f4-7cee-44b5-a911-803c95b3fa07",
+    "c0d65b45-33bb-47a2-b16b-48a493a762cb",
+    "158301bc-9585-4145-be60-34f08c9f922c"
+  ]
+}

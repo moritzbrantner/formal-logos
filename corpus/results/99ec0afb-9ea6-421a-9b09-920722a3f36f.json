@@ -1,0 +1,11 @@
+{
+  "id": "99ec0afb-9ea6-421a-9b09-920722a3f36f",
+  "label": "First Way mover is a necessary actual first root, from the grounding closure",
+  "argument_id": "38c6d370-bb30-44d1-84c5-f8d36f958978",
+  "challenge_module": "TruthCore.Results.Causality.FirstMoverNecessity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FirstMoverNecessity.Solution",
+  "theorem": "TruthCore.Results.Causality.FirstMoverNecessity.firstMoverNecessaryFirstRoot",
+  "comparator_config": "results/99ec0afb-9ea6-421a-9b09-920722a3f36f/comparator.json",
+  "status": "solution-present",
+  "description": "Same-witness conditional result: the First Way's own first mover is a necessary actual first pure-act root of the selected grounding, from the existing grounding closure and grounding-priority premises, irreflexivity, firstness, pure act and the two interfaces B0 and B0'. Not a transcription. Establishes no premise; it shares the closure and grounding-priority premises with the existing necessary-root derivations."
+}

@@ -1,0 +1,14 @@
+{
+  "id": "03d33903-c4d7-4f69-b7f8-ea85cfa31a38",
+  "label": "A distinct esse-cause for contingents, from distinct esse and the q.3 a.4 reading (inference)",
+  "input_statement_ids": [
+    "96971e31-4782-4478-95b8-b6863a6a9412",
+    "0436de86-6579-53f2-9ff5-2111ba44ebae",
+    "33ad148b-ceab-5856-a4f8-c999a1dba644"
+  ],
+  "output_statement_id": "8a8d00e9-12b6-4cf0-b662-431cc4addd49",
+  "rule": "Instantiate the q.3 a.4 reading at each contingent being",
+  "meaning": "A being contingent at w exists at w, so it is in act of esse (each individual existing at w is in act as to esse); by B6 its esse is distinct from its essence; the ST I q.3 a.4 reading ('that whose esse is other than its essence has its esse caused by another') then gives another being, in act of esse, that causes its esse. The q.3 a.4 profile is built on the frame's own CausesIn and esse, so the cause is CAUSE_2 at the same esse respect as B2. The passage from the q.3 a.4 reading's external esse-cause (CAUSING_AN_EFFECT_2) to B2's CausesIn at esse (CAUSING_AN_EFFECT_3) is by the definition of the former, which is the latter together with the cause's being in act; the q.3 a.4 statement is therefore listed as the sense bridge, and no contested step passes between the senses.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

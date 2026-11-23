@@ -1,0 +1,30 @@
+{
+  "id": "0c1baf67-72ca-4470-a429-d106e6810b05",
+  "label": "First mover necessity: laws, omission models and a two-root model",
+  "paraphrase": "Premise-free comparison over finite Bool frames (logical boundaries, not metaphysical possibility). Laws: with excluded middle, the contrapositive B6 is equivalent to 'existence at w with esse not distinct from essence gives existence at every accessible world'; B4 follows from its two converse-direction halves (contingent can fail to be in substance; what can fail to be in substance is in POTENCY_1 as to esse); with excluded middle B4 is equivalent to 'every pure-act being existing at w is necessary at w', the lead's target at w; B2 and B4 each imply B2 or B4. Models (two respects, esse and a respect of motion; in every model the moved thing is in POTENCY_1 in the respect in which it is moved): (1) a brute first mover that is first in being, pure act, simple with esse not distinct from essence, satisfies every other premise of the five necessity routes and both existing potency/modality bridges nonvacuously (the moved thing is in potency to heat and can fail to be hot; the mover can fail to be in substance and possibly is not), yet is contingent: B2, B4, the esse-tied half 'what can fail to be in substance is in POTENCY_1 as to esse', B2 or B4, B6 and the grounding closure fail; (2) a conserved pure-act mover caused in esse by a prior being: everything of the causal routes but firstness; (3) the same without priority: everything but B3; (4) an absent mover: everything but B0; (5) no moving: everything of the causal, potency and essence-esse routes but the prima via conclusion; (6) a necessary mover in potency: everything but pure act; (7) a mover with distinct esse and essence: everything of the essence-esse route but simplicity; (8) self-grounding: everything of the grounding route but irreflexivity; (9) an unprioritized ground: everything but grounding-priority; (10) nothing concrete: everything but B0'; (11) a nonvacuity model in which every premise of every route and both endpoints hold, with B2, B3, B4 and B6 applied to the contingent moved thing (caused and preceded by the mover, in potency to heat, esse distinct from essence); (12) three beings: the mover, the moved thing (in potency, so not pure act) and an idle being; the mover and the idle being are two distinct necessary actual first pure-act roots, only one of them a first mover.",
+  "lean_declaration": "TruthCore.Causality.FirstMoverNecessity.Model.Controls",
+  "definition_ids": [
+    "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d",
+    "a49e4cf1-ca4f-5519-9724-892af257cedb",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "25e19d5a-5cdf-5916-a888-f6a0ce970f11",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "c2e13bb8-679a-55ea-8754-ae77d345bcd2"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "b1640e51-d7d4-5a80-9992-29fa1ded8048",
+    "508617ab-cf24-5f3b-a387-64b3991359ec",
+    "557d8e44-4350-5031-81e3-ff6be5e30acc",
+    "13843b8b-4ef3-500e-949d-27e78b9dfaf9"
+  ]
+}

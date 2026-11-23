@@ -1,0 +1,11 @@
+{
+  "id": "930c6d8c-be67-4f63-ba4c-9a8d0375b977",
+  "label": "First Way necessary first root witnesses the necessary first PURE_ACT_5 endpoint",
+  "argument_id": "ff52c795-d51c-4ab0-9669-4951ba9009fd",
+  "challenge_module": "TruthCore.Results.Causality.FirstMoverNecessity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FirstMoverNecessity.Solution",
+  "theorem": "TruthCore.Results.Causality.FirstMoverNecessity.firstMoverRootIsNecessaryFirstPureAct",
+  "comparator_config": "results/930c6d8c-be67-4f63-ba4c-9a8d0375b977/comparator.json",
+  "status": "solution-present",
+  "description": "Projection of the First Way's same-witness grounding endpoint onto the existing necessary actual first pure-act endpoint. A transcription by projection; it carries closure only when its premise is closed. Establishes no premise."
+}

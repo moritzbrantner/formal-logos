@@ -1,0 +1,11 @@
+{
+  "id": "52df4a80-a052-4b66-b40c-78d2ecc6810a",
+  "label": "First Way mover is necessary, from PURE_ACT_5 and POTENCY_1 for possible nonexistence",
+  "argument_id": "274bdafd-9d57-401c-92eb-f84a33071a1f",
+  "challenge_module": "TruthCore.Results.Causality.FirstMoverNecessity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FirstMoverNecessity.Solution",
+  "theorem": "TruthCore.Results.Causality.FirstMoverNecessity.firstMoverNecessaryByPotency",
+  "comparator_config": "results/52df4a80-a052-4b66-b40c-78d2ecc6810a/comparator.json",
+  "status": "solution-present",
+  "description": "Same-witness conditional result, potency route: pure act and B4 give necessity of the first mover. Not a transcription (B4's consequent is potency, not necessity), but B4 is classically equivalent to the target restricted to w, so the route relocates the open question. Establishes no premise. A counterexample to B4 as typed would be a contingent being in POTENCY_1 in no respect; whether such a being is possible is the open B5/receptive-potency question (DISAMB-RECEPTIVE-POTENCY, DISAMB-POTENCY-IN-SUBJECT-VS-IN-ANOTHER)."
+}
