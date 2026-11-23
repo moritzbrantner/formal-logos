@@ -271,3 +271,95 @@ def Controls : Prop :=
 
 end Control
 end TruthCore.Causality.IntentionalExemplarExtension
+/-! ## Objective eminent intelligibility and actual source-level noesis
+
+C4 analyst fork. This is not another definition of HAS_INTELLECT_1 or the
+q.14 source's intentional act. Objective exemplary and normative sufficiency is
+stronger than mere power to produce an intelligent creature: the first source
+itself has an intelligible form and supplies a truth/correctness standard for a
+real, apprehending secondary knower. Nothing in that object-side structure yet
+makes the source an apprehending subject. Whether this counts as the *full pure
+perfection* of intellectual understanding is exactly the substantive question,
+not something decided by these definitions.
+
+A second fork isolates real constitutive plurality from distinct intentional
+descriptions. It is one selected reading of the Plotinian challenge, not a
+faithful definition of every Plotinian theory of noesis or of Thomistic
+simplicity. These are analyst interpretations; source attribution is deferred.
+-/
+namespace TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence
+
+open TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding
+
+/-- A nonvacuous intellectual effect of g: a distinct being actually and
+intrinsically apprehends a correct self-directed content. Mere HAS_INTELLECT_1
+labelling does not suffice. -/
+def ProducesActualKnower {B C : Type}
+    (CausesEsse : B → B → Prop) (About Correct : C → B → Prop)
+    (Apprehends Grounded : B → C → Prop) (g : B) : Prop :=
+  ∃ x, x ≠ g ∧ CausesEsse g x ∧
+    IntrinsicSelfKnowledge About Correct Apprehends Grounded x
+
+/-- A stronger OBJECTIVE reading of eminent intellectual containment.
+The source has its own intelligible form, objectively specified self-content
+and a norm-setting relation to every actual correctly apprehended caused
+content. Norms is an OPEN constitutive/epistemic explanation, not just a causal
+edge or a successful Boolean response. A real cognitive effect is required.
+The reading does not assert that g itself exercises understanding.
+
+Accepting this as *genuine higher-mode possession of intellectual perfection*
+rather than intelligibility without intellection requires philosophical warrant.
+It is NOT substituted for the old IN_ACT_4 or InActVirtually primitives. -/
+def IntrinsicExemplarEminence {B C Form : Type}
+    (OwnBeing : B → Prop) (ownForm : B → Form)
+    (HasOwnForm : B → Form → Prop)
+    (ObjectivelyAbout : Form → B → Prop)
+    (Norms : B → Form → B → C → Prop)
+    (CausesEsse : B → B → Prop) (About Correct : C → B → Prop)
+    (Apprehends Grounded : B → C → Prop) (g : B) : Prop :=
+  OwnBeing g ∧ HasOwnForm g (ownForm g) ∧
+  ObjectivelyAbout (ownForm g) g ∧
+  (∀ x c, CausesEsse g x → Apprehends x c →
+    About c x → Correct c x → Norms g (ownForm g) x c) ∧
+  ProducesActualKnower CausesEsse About Correct Apprehends Grounded g
+
+/-- At most one real intrinsic constituent/aspect of the selected source,
+not a denial of multiple descriptions or intentional relata. The real
+constituent carrier differs from the content and being carriers. -/
+def ConstitutivelySimple {B Aspect : Type}
+    (RealConstituent : B → Aspect → Prop) (g : B) : Prop :=
+  ∀ a b, RealConstituent g a → RealConstituent g b → a = b
+
+/-- OPEN *constitutive duality* reading of noesis: a subsistent subject's
+actual self-understanding needs two genuinely distinct real constituents.
+An intentional distinction that does not divide the source denies this
+principle. Plotinus's more general claim about intelligible articulation may
+not reduce to this constituent reading; that semantic question stays open. -/
+def SourceNoesisRequiresRealPlurality {B C Aspect : Type}
+    (OwnBeing : B → Prop) (About Correct : C → B → Prop)
+    (Apprehends Grounded : B → C → Prop)
+    (RealConstituent : B → Aspect → Prop) : Prop :=
+  ∀ g, OwnBeing g →
+    IntrinsicSelfKnowledge About Correct Apprehends Grounded g →
+      ∃ a b, RealConstituent g a ∧ RealConstituent g b ∧ a ≠ b
+
+namespace Control
+
+def own (g : Bool) : Prop := g = true
+def formOf (g : Bool) : Bool := g
+def hasOwnForm (g f : Bool) : Prop := g = true ∧ f = true
+def objectAbout (f g : Bool) : Prop := f = g
+def norms (g f x c : Bool) : Prop :=
+  g = true ∧ f = true ∧ x = false ∧ c = false
+def realConstituent (g a : Bool) : Prop := g = true ∧ a = true
+def causesEsse (g x : Bool) : Prop :=
+  TruthCore.Causality.IntentionalExemplarExtension.Control.frame.CausesIn g x
+    TruthCore.Causality.IntentionalExemplarExtension.Control.frame.esse
+def about (c x : Bool) : Prop := c = x
+def correct (c x : Bool) : Prop := c = x
+def effectOnly (g c : Bool) : Prop := g = false ∧ c = false
+def bothKnowOwn (g c : Bool) : Prop := g = c
+
+end Control
+end TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence
+
