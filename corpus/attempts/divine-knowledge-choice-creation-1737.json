@@ -1,0 +1,17 @@
+{
+  "id": "8ab7f5a1-e3dc-4e3c-b12d-c2f091be5370",
+  "label": "Issue 1737 same-source contingent creation, omission, and selection adequacy",
+  "statement_ids": [
+    "2757f6a3-2d14-5033-9740-2c36a678ce73",
+    "1822b59d-1040-57e4-8991-f7862db26355"
+  ],
+  "date": "2026-11-23",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Unregistered Lean finite controls in Results.Modal.OptimalCreationChoice.Solution on the existing OptimalCreationChoice/SelectedEffectBridge profiles. Reused, not new: a necessary source with varying or absent activity (NecessaryContingentActivity.necessaryWithContingentActivity #435, NecessaryVariableEffects.necessarySourceVariableEffects #462) and the creation/omission profiles SimplicityCollapse.optionalAct and inefficaciousAct (#555 Core). New: threeWorldCreationChecks (one rigid necessary source, two contingent created effects and an omission world; a selection table read from the world label tracks outputs at all worlds while a fixed actual-matching tag fails), threeWorldOptimalOutputs, and the optimality layer soleCreatedUnique, optionalOmissionOptimal, universalOmissionOutputOptimal, universalOmissionNotTotal, omissionChoiceChecks: a unique created optimum plus optimality of every actual output does not yield StableActOutput without positive-output totality; whether a create-or-refrain rationality principle supplies totality is open. omissionStructureChecks composes failed stability of inefficaciousAct from #555 Core. beingCarriesActApplication: under #555's BeingCarriesAct reading only the always-performed profile survives, where creating versus omitting is carried by the world label alone (the inefficacious, extrinsic branch, structurally the brute-selection rival). The controls model no intellect, will or option recognition (constant labels from the first draft were removed as content-free), and each created effect is its own world label, so selected effect and selected world coincide as a surrogate. Rejected shortcuts: capacity-to-exercise, best-created-to-must-create, matching-table-to-intention, fixed-act-to-fixed-effect. Note: docs/notes/optimal-creation-choice.md#same-source-knowledgechoicecreation-integration-1737-2026-11-23. CI passed on d23a5d3; independent semantic challenge findings (overstated prose, unacknowledged #435/#462/#555 reuse) repaired in PR-1875.",
+  "blocker": "Philosophically OPEN: same-source intrinsic intentional cognitive/will content, complete reason-grounded specification compatible with simple necessary actuality (under BeingCarriesAct only the world-label-carried branch survives), a create-or-refrain rationality principle supplying positive-output totality, intentional causal/esse efficacy, knowledge of actual contingent contents, and comparison with a fully articulated impersonal necessary-source alternative and brute selection under the same complete-world explanandum. No new registered result, frozen Challenge, Comparator config, binding, GOD_4 edge, claim or root-premise discharge.",
+  "evidence": [
+    "a1990e04-1e7d-565f-bd98-f2e64b570aa1",
+    "PR-1875"
+  ]
+}
