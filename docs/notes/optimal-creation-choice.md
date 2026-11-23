@@ -659,3 +659,361 @@ claim that the conceptual authorship sketch models full divine simplicity
 or that an epistemic end entails every historical belief. Canonical
 related/dossier/novelty and full checks unavailable in this session.
 Attempt 7d015c02 records the proposed checkpoint.
+
+
+## Can direct intentional production be extrinsic without becoming brute? (2026-11-23; proposed, unreviewed)
+
+Continuation of the preceding #1737 checkpoint, same witness n and complete
+creaturely order H. Reuse the checked #555 rigid-token and #462 output-profile
+results, #1875 omission controls, #742 reason-selection boundary and #1380
+content discrimination. The [#462 literature investigation](https://github.com/moritzbrantner/formal-logos/issues/462#issuecomment-6827802194)
+already records O'Connor's direct agent-causal proposal and Huneeus's
+extrinsic volition; the existence of these proposals is not a new result.
+The new discriminating question is how to retain independently specified
+intentional content and genuine efficacy when the particular exercise is
+not a new intrinsic state. No separate issue, new modal framework or
+change to #555's completed certificate. Baseline main 8083301a037428574d0e46b1064d8f6d858da377;
+continuing draft #1911, prior head f4392e11aed1d4a2bda2546d546996eb5a13f151.
+
+### 6. One-act rationality: the reason for an order is not a cause of the will
+
+Selected source readings for philosophical orientation (not new pinned
+attribution records):
+
+- [ST I q.19 a.2–5, especially a.5 co. and ad 1–3](https://www.newadvent.org/summa/1019.htm):
+  in a single act an end and its means can be willed in their order,
+  without the act of willing the end being a distinct cause of willing
+  the means. Aquinas denies a cause of the divine will; his account of
+  its rationality rests on the ordering of things willed, not on a
+  causal transition within the will. A.3 co./ad 5 distinguishes the
+  necessary primary good and the nonnecessary relation of the will
+  to finite goods. A.4 ad 4 treats directing knowledge, commanding will
+  and executing power as one in God. A.6 ad 1 distinguishes qualified
+  willing from what God wills simply; a.8 addresses efficacy and the
+  contingent or necessary mode of effects.
+- [ST I q.45 a.3 co./ad 1–3](https://www.newadvent.org/summa/1045.htm)
+  and [q.13 a.7 co.](https://www.newadvent.org/summa/1013.htm):
+  active creation signifies the divine action with a creature-relative
+  description, while the real creation relation is in the creature.
+  The real relation of the creature presupposes its subject in being;
+  the passage does not install a contingent selector in God. Creation
+  in this sense concerns beginning; do not infer a conservation thesis
+  from the duration qualification in q.45 a.3 ad 3.
+- [ST I q.14 a.8–9, a.11](https://www.newadvent.org/summa/1014.htm):
+  intelligible forms alone do not explain determinate production;
+  practical direction requires will. Possible and actual contents are
+  distinguished. A.8 ad 1 explicitly distinguishes consequence from
+  causal dependence in knowledge. A.11 proposes an extension to singulars
+  on the basis of the scope of divine causality.
+- Huneeus, *Divine Simplicity and the Theory of Action*, online-first
+  text (2024), [§§2–4, printed pp. 7–15](https://philarchive.org/archive/HUNDSA-4),
+  DOI 10.14428/thl.v9i1.82053 (subsequently published 2025).
+  Previously inspected and summarized in #462. The accessible extracted
+  text in this pass was read at pp. 7–15; page-image fetch was blocked.
+  §3's key-press example distinguishes an intrinsic end from the more
+  specific action performed. §4 recognizes that nonobservational
+  productive knowledge of the exact details is the harder question.
+  This reading is used for orientation, not a new source-claim binding.
+
+The first distinction gives a positive interpretation not requiring
+reasons to act as efficient causes of new intrinsic divine states.
+For example, if n creates an order with rational creatures and wills
+their genuine epistemic access, it can will reliable means of inquiry
+in their relation to that end. The means/end content is assessable
+independently of the bare fact that the order obtains: systematically
+unreliable means would not fulfill that specified purpose. The
+productive act could embody that rational structure without containing
+a temporal deliberative succession or being a cause of itself.
+
+This proposes an explanation of why specified features are ordered
+together in H: the order is apprehended and intentionally realized
+as an order. It is stronger than finding a good which the actual
+effect happens to instantiate. It is not an inference from teleological
+fit alone to intention. An impersonal mechanism with actual causal
+constraints could generate the same order and would explain its
+structure in a nonintentional way; it is not ruled out here. Nor does
+an explanation of the means/end relation tell us why this particular
+end-relative whole was actualized. Do not convert the source's denial
+of a cause of the one will into a denial of all rational explanation,
+or convert the ordering of willed things into a determining cause of
+the selection of H. Those would be opposite scope mistakes.
+
+The one-act view also clarifies the no-mediator test. Suppose every
+specific voluntary exercise must be caused by an already distinct
+specific voluntary exercise selecting that very outcome. The demand
+reapplies to the proposed selector; without a base case there is
+another regress rather than an explanation. This is conditional on
+the repeated demand for a *separate* voluntary mediator. A rival
+may instead identify the base case with a causally necessitated
+executive state, an indeterministic event-causal choice, or direct
+agent-causal production. The regress does not prove that the direct
+case is metaphysically possible, free or rationally adequate.
+It shows why simply demanding another prior volition cannot be the
+universal test of intentionality. Explanatory priority here is not
+temporal priority, especially for a timeless source.
+
+### 7. The granularity and efficacy tests
+
+Fix two incompatible complete candidate orders H and J, each realizing
+a genuine primary good P; optionally include omission. They are
+descriptions of candidate realizations, not additional actual concrete
+beings or certified metaphysically possible worlds. Let D be a
+specific positive feature separating H from J. The issue is not
+whether the source knows both candidates, but how the very production
+of H is intentional under the description containing D.
+
+Consider three different claims at the actual exercise:
+
+1. n intends P and successfully realizes it in H.
+2. n intentionally produces H under an independently understood
+   description that includes D.
+3. n knows every actual detail of H and intends, rather than merely
+   foresees or permits, each such detail.
+
+The first does not entail the second. An agent who intentionally
+presses a key may make contact at an exact point without acting for
+the sake of that point. An agent who authorizes a lottery can intend
+a valid selection but not direct which number wins. These cases may
+still involve genuine authorship of the coarse action. Claim 2
+does not require a separate volition for each feature, nor does it
+entail that every consequence of realizing that description is
+intended under all its descriptions. Claim 3 is a stronger
+particularity demand; permission of secondary agents must remain
+distinct from directly decreeing every event. Reuse the
+foreseen-collateral rival in #1459/#1458 (recipient-good application);
+do not count this scope distinction alone as a new solution.
+
+A new diagnostic is to separate **success-defined production** from
+**antecedently meaningful content** in the proposed extrinsic account.
+Here 'antecedently' refers to explanatory specification, not a
+pre-creation moment. A predicate 'n successfully produced H for P'
+cannot hold in an H-absent situation by its very success condition.
+Its factive implication to H, or a theorem that all its actual
+instances realize H, is no evidence of nontrivial perfect efficacy.
+In ordinary actions, adoption of a description and success are
+distinguishable: trying to realize D can fail. A perfect source
+could have a genuine impossibility of failure without there being
+an actual failing divine intention. But the content of the
+intention, and the difference between successful and unsuccessful
+realization of it, must be intelligible apart from defining the
+intention by the observed success. This is a semantic requirement
+on the proposed explanatory interpretation, not a claim that a
+divine failure is metaphysically admissible.
+
+Apply this to #555's exact `StrictEfficacy p w a x` (wherever the
+rigid a is performed at an accessible world, x exists). `BeingCarriesAct`
+makes performance necessary given the bearer's necessity. It cannot
+be supplied for a description which merely names the source's actual
+world-relative success. In particular, an invariant act of willing
+a general good need not strictly necessitate a particular H merely
+by being perfectly efficacious with respect to its general object.
+If it is instead the same necessary act with H as its specifically
+determined object and strict efficacy for that object, the old
+`Core` excludes a contingent H-effect, provided the description
+has a faithful rigid x interpretation. No formal extension of
+the effect-being type to complete orders is claimed.
+
+Thus perfect efficacy need not mean that all options licensed by
+a general end become actual. Nor is it a license to call all
+result variation intentional. The positive candidate must distinguish
+selecting this D from merely selecting a policy under which either
+D or its absence may occur. This is a useful check on the proposed
+nondeception argument: general goodness plus actual production
+is weaker than an intended truth-access policy, which is weaker
+than the claim that the source specifically wills every evidence
+record as accurate. The weaker policy can be the appropriate
+normative target; no unrestricted reliability conclusion follows.
+
+### 8. A concrete two-reading extrinsic fork
+
+The direct-production proposal can be given two different explanatory
+readings. Neither is a new registered disambiguation; these are proposed
+interpretations to test with the existing rigid-act, reference and
+causal dictionaries.
+
+**A. Intentional exercise is the productive transaction itself.**
+The source understands candidate realizations, necessarily wills a
+primary good and freely causes H in the light of that good. The
+particular act of creating H is individuated by the very directed
+causal transaction, not by an additional intrinsic executive event.
+Its truth includes H's actually being caused; H is not an antecedent
+independent parameter needed to trigger the cause. This is the strongest
+positive direct-agent reading. In creation ex nihilo there need not be
+an earlier receiver, already existing H, or a chooser independent of
+n. A primitive causal exercise can in principle distinguish production
+from mere coexistence without a further causal event that produces the
+exercise. No circular self-production of H is asserted.
+
+The ontic explanation 'H exists through n's exercise' is not the
+same as the semantic explanation 'the proposition that n created H
+is true because this productive transaction obtains'. Factivity,
+existential dependence of a relation on its relata, and productive
+direction do not coincide. If someone instead explains H by a
+distinct selection fact wholly explanatorily grounded in H, they
+owe a defense against circularity under their accepted grounding
+standard. If the obtaining transaction is primitive, the model
+does not give a complete determining reason for that contingent
+fact. It may satisfy nonnecessitating concrete existential
+coverage if n actually produces H; it does not by that alone
+satisfy complete reason closure over all contingent facts including
+the transaction (e.g. a BCCF). No redefinition of 'fact' or
+automatic exemption for nonconcrete relations. An impersonal
+necessary producer can offer the same transaction-level concrete
+existential account. The distinct personal benefit, if warranted,
+is genuine apprehension and purposive direction of its exercise.
+
+**B. A specific content-adoption relation is explanatorily prior
+to realization.** Consider n knowingly adopting a candidate
+specification D as a content, not relating to an already existent
+creature. A candidate's intelligibility as a possible object need
+not entail its actuality; no ontology of independently existing
+abstract plans is presupposed. If adoption is independently
+characterized and causally/volitionally relevant, the productive
+act can be strictly efficacious for D without equating adoption
+with successful production. This avoids the circular target-copy
+reading. If n's intrinsic actuality is wholly invariant, however,
+the varying adoption is either an externally individuated exercise
+of n or requires a varying condition. No appeal to a pre-existing
+created selector is available for the entire first-created order.
+If the relation is a distinct contingent real determination in n,
+the strong intrinsic simplicity reading has not been retained.
+If the relation is a contingent fact concerning n and an
+intelligible content, but is not an intrinsic determination,
+the account owes its positive metaphysics (including the status
+of such a relation when all proposed intrinsic grounds are fixed).
+If it is merely a description whose entire differentiating
+truthmaker is H's already obtaining, it has not supplied an
+explanatorily prior specification. Aquinas's q.45 a.3 denies a
+real creature-related determination in God; reading B therefore
+cannot simply be ascribed to him by citing that passage. A
+non-intrinsic action relation is not automatically a real accident
+in either relatum, nor is every such relation admissible under
+the strict account of simplicity. This distinction is the live
+interpretation question, not a new proof of an accident-free
+relational ontology.
+
+**Difference-principle test.** The weak claim 'a distinct outcome
+means there is some difference in the total productive situation'
+is compatible with reading A: the particular causal transaction
+differs. The strong claim 'any difference in actual output must
+be grounded by a difference in the cause's intrinsic actuality'
+would exclude both readings with invariant intrinsic actuality,
+unless it were restricted or a varying independent condition
+introduced. Ordinary causal explanation motivates a dependence on
+real causal activity, but does not by definition establish the
+strong intrinsic-supervenience premise. Human examples of a shared
+intent producing differing movements often vary intrinsic states,
+bodily circumstances or external conditions; they cannot establish
+its negation at the ultimate-source scope. The mere fact that a
+cause receives no perfection from an effect also fails to prove
+that its particular exercise is not intrinsically individuated.
+No passive change and no intrinsic modal variation are different
+commitments. The first-cause/privation and active-power senses
+from C2/C3 do not supply the latter on their own.
+
+These readings need not exhaust interpretations. A contingent
+intrinsic executive volition is a further option if strict
+intrinsic simplicity is relaxed; necessitarianism is another if
+contingency is denied. A nonnecessitating impersonal causation
+account survives the same weak difference-principle and fact-level
+closure tests. A legitimate application of A or B must say which
+facts it treats as primitive, which are grounded and why there is
+no extra independent causal contributor. No differential
+probability or deterministic preference is imposed as the
+criterion of actual directed agency.
+
+### 9. Productive knowledge and causal direction
+
+The intended description in reading B, or the description under
+which reading A's action is genuinely performed, can be known
+without being actual. Knowledge of the possible contents does not
+therefore select one. Actual self-knowledge of n's exercise could
+give a different ground of knowledge of H than observation of H.
+This is a serious positive productive-knowledge proposal: a
+composer intentionally playing a specified sequence may know
+the notes through performing them, rather than through hearing
+them after performance. It is not guaranteed to extend to every
+detail of an agent's effects. If n's intentional object only
+specifies P, knowing P through the act does not differentiate
+H from J. A perfectly successful producer of P and a perfect
+predictor of all details are not thereby a knower of every
+detail through deliberate production. Huneeus §4 already
+recognizes this difficulty; #1380 supplies the formal
+discrimination and reference constraints, not a new route to
+cognition.
+
+One cannot infer cognitive scope from efficient-causal scope
+alone without the actual intentional-understanding bridge.
+The positive q.14 a.8/a.11 proposal combines intelligible
+exemplarity and will, not just undirected causal power. If
+reading A's precisely directed transaction is the basis of
+nonpassive productive knowledge, self-knowledge must include the
+extrinsically individuated exercise, rather than only a fixed
+intrinsic projection. If reading B is adopted, actual knowledge
+of which content is adopted must be grounded in the adopting
+exercise, not inferred from an output label. In either case the
+actual reference/apprehension and truth-discrimination interface
+stays open. Do not let naming a transaction as intentional
+prove the #1380 bridge.
+
+### 10. Provisional judgment, constraints and next discriminating work
+
+The substantive advance is a narrower separation of one-act
+rational order, exact-outcome intentionality, content-specific
+efficacy and the source's own exercise fact. The first has a
+positive explanatory reading without a sequence of intrinsic
+causes. Nonnecessitating direct production is a serious
+philosophical account, not a refuted impossibility; it can
+distinguish dependence of a created effect on a source from
+brute concrete actuality. But reading A does not by itself
+supply an independently content-specific decree or a complete
+determining reason for its actual exercise; reading B makes
+that explanatory role explicit and bears a stronger
+simplicity/intentional-ontology burden. The strict intrinsic
+difference principle is not established by the available
+examples, and neither is its negation at the divine case.
+Retain suspension about the complete classical-theistic
+synthesis, with a positive conditional preference for a real
+reason-directed producer over a source that merely labels
+its output. This is not a winner against an equally productive
+impersonal account on concrete-existence adequacy alone.
+
+The next narrow task should test the truth conditions for
+'intentionally produces x for R' when there is no additional
+intrinsic executive act: is independently intelligible
+content plus direct source-level agency enough for a true
+de re specification, or must the particular content fix
+an intrinsic difference? Test the strongest version of the
+direct-production proposal under explicit scope of intended
+descriptions, causal direction, nonfailure and reason relevance.
+If a distinct content-adoption fact is required, assess whether
+its reality can be only effect-side under the q.45 relation
+reading without target-copying, or whether strict simplicity
+must be weakened. Horizontal continuation: apply the result
+to #1459's particular existence-good willing and #1380
+productive knowledge, not the assumption that goodness or
+capacity already entails either. Reassess if the stronger
+difference principle can be defended for intentional acts
+without circularly requiring deterministic causation; or if
+an account shows why a determinate productive relation can
+constitutively direct its effect without an intrinsic
+selection-state or independent contingent condition.
+
+Connection unchanged: #1737 targets 2757f6a3-2d14-5033-9740-2c36a678ce73
+and 1822b59d-1040-57e4-8991-f7862db26355, #1730 target
+a7bbd2fd-242c-5097-a9a3-581d25835890. Actual intentional
+exercise, identity with the same source's causal-esse
+production, and reference/knowledge remain OPEN. Existing
+`GodHasIntellect` and `GodHasWill` capacities do not supply
+these. No change to C2, #1459, #1380 or historical-trace
+files. No new registered theorem, statement, claim, sense
+or root edge. Canonical CLI/Lean and independent semantic
+challenger unavailable here; author-side scope sweep only.
+Expected premise change none (not a computed delta).
+The existing 7d015c02 attempt is supplemented with this
+narrower research finding; the earlier checkpoint remains
+intact. Independent final semantic review must challenge
+the distinction between the obtaining causal transaction
+and an independently meaningful intention, the conditional
+no-mediator regress, the granularity claims and the q.45
+interpretation before publication as reviewed support.
