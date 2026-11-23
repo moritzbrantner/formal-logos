@@ -174,7 +174,9 @@ def circleAtState (state : Bool → Prop) : Profile Bool Bool Unit :=
 /-- Every member of a candidate state has an actually admitted incoming
 same-respect esse-cause *in that state*. Unlike the old fixed-p rule, both
 the supplier's and recipient's actuality guards now vary with the state.
-This is a reciprocal-support equation, not a sufficient productive act. -/
+Its reverse implication follows from the recipient InAct guard inside
+ActualEsseCause, not from an act of productive sufficiency. This is a
+reciprocal-support equation, not a sufficient productive act. -/
 def CircleStateFixed (state : Bool → Prop) : Prop :=
   ∀ x : Bool, state x ↔ ∃ c, ActualEsseCause (circleAtState state) c x
 
