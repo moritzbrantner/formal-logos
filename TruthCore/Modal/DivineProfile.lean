@@ -739,48 +739,53 @@ def Compatibility : Prop :=
   ¬ SameNecessaryEffect alternatingEffects false source
 
 theorem compatibility : Compatibility := by
-  unfold Compatibility
-  and_intros
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
   · intro x
-    cases x with
-    | none => decide
-    | some b => cases b <;> decide
-  · decide
-  · decide
-  · decide
-  · decide
-  · decide
-  · intro x r s _ hp
-    exact hp
+    rfl
+  · exact Or.inl rfl
+  · exact Or.inr rfl
+  · intro h
+    cases h
+  · intro h
+    cases h
+  · intro h
+    exact h rfl
+  · intro x r s _ hPot
+    exact hPot
   · intro x hPure
     cases x with
     | none => rfl
     | some b =>
-      exact False.elim (hPure () (by decide))
+      exact False.elim (hPure () (by intro h; cases h))
   · intro r h
     exact h rfl
   · rfl
   · intro w
-    refine ⟨?_, ?_, ?_, ?_⟩
-    · exact Or.inl rfl
+    refine ⟨Or.inl rfl, ?_, ?_, ?_⟩
     · intro c
-      simp [knows, truth, source]
-    · intro a hSelect
-      rcases hSelect with ⟨_, ha⟩
+      change (source = source ∧ w = c) ↔ w = c
+      exact ⟨And.right, fun h => ⟨rfl, h⟩⟩
+    · intro a hChoose
+      obtain ⟨_, ha⟩ := hChoose
       rw [ha]
-      decide
-    · refine ⟨some w, ?_, ?_, ?_⟩
-      · exact ⟨rfl, rfl⟩
-      · exact ⟨rfl, by decide⟩
+      intro h
+      cases h
+    · refine ⟨some w, ⟨rfl, rfl⟩, ⟨rfl, ?_⟩, ?_⟩
+      · intro h
+        cases h
       · intro h
         exact h
-  · decide
-  · decide
-  · decide
-  · decide
-  · decide
-  · decide
-  · decide
+  · exact ⟨rfl, rfl⟩
+  · exact ⟨rfl, rfl⟩
+  · intro h
+    cases h
+  · intro h
+    cases h
+  · intro h
+    exact h rfl
+  · exact ⟨rfl, rfl⟩
+  · intro h
+    cases h.2
   · intro w b
     rfl
   · exact TruthCore.Modal.NecessaryVariableEffects.sourceNecessaryAt
