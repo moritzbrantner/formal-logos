@@ -848,6 +848,44 @@ records. The following answers grant each view its positive commitments.
 | Governing necessitarianism | An operative strict law excludes violations in its domain. If its efficacy and domain are essential and exhaustive, the exclusion extends to every corresponding possibility. | Necessary laws can still admit different initial populations. Full necessitarianism denies the initial brute contingency itself and supplies no witness to the negation of the conditional. An impersonal necessary bearer still needs the relevant actual power. |
 | Classical theism | If every concrete bearer distinct from the source receives its existence from that source, a distinct *unreceived* entrant contradicts that universal dependence claim. A free, received intervention might produce exactly the same display. | One must establish that every candidate other than the source receives existence, and account for the particular order, its stability and finite knowers' access. Fixing a specific effective decree can settle an outcome that fixing divine nature alone leaves open. |
 
+**A positive restriction short of necessary existence.** The existing
+`atMostOneActualRootFromDeEnte` result (`c056ad5c`) addresses the
+coexistence request directly. Fix a candidate continuation in which the
+original founder remains an actual concrete root. Suppose the new
+individual is also concrete, exists there, and has no actual concrete
+ground in the same relation. Under the theorem's premises, if either
+root's esse differed from its essence, another actual cause of its esse
+would give it an actual concrete ground. Each therefore has esse identical
+with essence. The multiplication argument supplies the separate premise
+that at most one being in act has that identity. The two individuals must
+then be the same, contradicting the request for an *additional* root.
+The theorem uses excluded middle, existing-in-act, the bridge from
+esse-cause to actual concrete ground, the other-cause principle and the
+at-most-one premise. It assumes neither that an actual founder persists in
+every world nor that there must be a root. To exclude every proposed
+continuation, those premises must apply in each, with the founder still
+a root and these same interpretations of cause and ground. Local absence
+of an incoming productive edge or a #312 token cannot establish root
+status in that grounding relation. A received intervention remains
+eligible for separate assessment. [Existing proof, stage (d)](../../TruthCore/Results/Aquinas/DeEnte/EsseSource/Solution.lean)
+
+Why grant the two substantive premises? Received actuality cannot be
+explained by the bearer's exercise of a power which already requires its
+existence. #1914's `1c21c205` gives the formally limited actual concretum
+a distinct grounding giver under its limit-to-reception, reception-to-cause
+and ground bridges. A detector reaction confined to a place and time
+establishes only a bound on the observed effect. A source with greater
+powers could exercise just this one. For two candidates each claimed to be
+subsistent esse, `860eae63` identifies the separate dispute about whether
+they share a nature and whether the inventory of ways of multiplying it is
+exhaustive. A pluralist can argue for intrinsically distinct whole natures,
+or challenge that inventory. In `04212a3f` two sources retain the three-mode inventory but fail the
+shared-nature premise, and uniqueness fails. Exhaustiveness of the inventory
+is a separate premise used by `860eae63`. This gives the
+classical account a principled argument against **coexisting unreceived
+agents** even while the original C2 question about the same founder's
+possible absence remains open. [Finite-esse argument and assessment](contingency-receptivity-c2.md#in-what-sense-is-unlimited-being-the-default) · [Uniqueness, objections and controls](de-ente-esse-source-1628.md#unreceived-esse-and-the-two-questions-about-plurality)
+
 If a governing constraint is contingent, it can exclude an entry in every
 world where it holds even if its actuality is brute. Asking why it holds
 tests **completeness of explanation**. It cannot make a forbidden continuation
