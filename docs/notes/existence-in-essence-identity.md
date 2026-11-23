@@ -37,7 +37,9 @@ bundle.
     existence in the nature, and with necessity.
   - It excludes the identity only through a bridge that makes the concept
     adequate to the nature. Kant's four arguments examined (§3), as read, do
-    not supply that bridge at an act-essence.
+    not supply that bridge at an act-essence. Arguments 1–3 need the content
+    premise. Argument 4's bridge exists iff EC holds of the nature (laws 13,
+    16), so at the identity it presupposes EC there.
   - In the essential-truth sense (EC), its motivations at the identity case
     either presuppose the being's contingency, are the unresolved
     conceivability argument, or deny the identity's intelligibility instead.
@@ -74,8 +76,10 @@ obligations in its DEF:
 - `ConceptContent C x φ` (DEF `16c40fbe`): `φ` is a determination contained
   in the concept `C` of `x`. *Which* concept is meant is fixed by which
   premises hold of `C`:
-  - a concept **formed from effects** ("the cause of the other being"),
-    which does not satisfy concept adequacy;
+  - a concept **formed from effects**, which does not satisfy concept
+    adequacy. In the models (`effectConcept`) its only content is the
+    coexistence conditional "if the other being exists, this one exists". It
+    does not use the frame's causation relation;
   - a concept **adequate to the nature** (the *ratio* in itself), which
     satisfies it by construction.
 - `EsseExercisedAt Exercised v p` (DEF `25d4df96`): the principle `p` is in
@@ -169,6 +173,9 @@ analyst's analogy.
 13. CNC + K1 ⇒ EC.
 14. CNC ⇒ KT at every being whose absence is representable.
 15. E-link + `565ccd6c` ⇒ AN (the converse of `ca973127`).
+16. EC ⇒ CNC and K1 for `adequateConcept` (the converse of law 13). So a
+    CNC concept adequate to the nature exists exactly when EC holds of the
+    nature.
 
 ### Models (structural surrogates; not metaphysical possibility)
 
@@ -195,7 +202,7 @@ What holds:
   its essence, and `true` causes its esse.
 - E-link, AN, `565ccd6c`, EGN and (b).
 - `true`'s absence is representable (point `c`) but not really possible.
-- For the concept from effects: KT and CNC.
+- For the concept from effects (the coexistence conditional only): KT and CNC.
 - For the adequate concept: K1 and K2.
 
 What fails:
@@ -282,16 +289,23 @@ Excluded middle is never omitted: every model is built in Lean.
      - It holds of the concept from effects in `kantAquinas`, together with
        identity, AN and necessity. So by itself it does not block the
        identity.
-   - *Does it reduce?* Yes, to the same premise as arguments 1–2.
-     - It reaches the nature only through K1. K1 then reads every essential
-       truth as a predicate whose necessity is the conditioned necessity of a
-       judgement about a posited subject.
-     - At an act-essence, the necessity in question (AN) is claimed for the
-       thing's own act, not for a predicate in a subject. Applying argument 4
-       there needs the premise that every necessity of a thing is the
-       necessity of a judgement about a content. That premise either is the
-       content-of-predicates premise or denies that an absolute necessity of
-       a thing is intelligible.
+   - *What it needs at the identity.* Argument 4 needs a CNC concept that is
+     adequate to the nature. Such a concept exists **if and only if** EC holds
+     of the nature:
+     - law 13: CNC + K1 ⇒ EC;
+     - law 16: EC ⇒ CNC and K1 for `adequateConcept`.
+
+     So at the identity, argument 4 presupposes EC there rather than
+     supplying it.
+   - *Grounds for that bridge.* Kant's ground is the content premise: every
+     necessity of a thing is the necessity of a judgement about a content of
+     predicates. At an act-essence, the necessity in question (AN) is claimed
+     for the thing's own act, not for a predicate in a subject. So the content
+     premise either denies (c) as an act or denies that an absolute necessity
+     of a thing is intelligible. It is **not the only possible ground**. A
+     Fine/Lowe EC holder needs no content premise. Their grounds fall under
+     toward-EC revision condition (c) (§8), and §5 assesses the grounds
+     identified.
    - *Kant's intelligibility doubt.* He doubts whether "by means of the
      conception of the unconditionally necessary I think of something, or
      really of nothing at all". On note 67's standard (real possibility only
@@ -300,16 +314,27 @@ Excluded middle is never omitted: every model is built in Lean.
      non-being of a being outside possible experience. It is neutral between
      the verdicts, not support for EC.
    - *Assessment:* argument 4 is the strongest Kantian support for EC *for
-     natures that are contents*. At the identity case it does not apply
-     without the content premise.
+     natures that are contents*. At the identity case it needs a CNC concept
+     adequate to the nature, which exists iff EC holds of the nature (laws
+     13, 16). Kant's ground for it is the content premise; other grounds fall
+     under toward-EC revision condition (c).
 
-**Result of the test.** A bridge (K1 for a Kantian concept, or K2) is needed.
-None of the four arguments establishes it at the identity case without
-assuming that every essence is a content of real predicates. That assumption
-does not show the identity modally idle; it denies the identity's
-intelligibility. That makes it a rival to (c) (§5, Frege/Russell), not an
-application of the thesis to (c). The Kant-adequacy route `63ac77e7`
-therefore holds only under that disputed extension.
+**Result of the test.** A bridge (K1 for a Kantian concept, or K2) is
+needed.
+- Arguments 1–3 establish it at the identity case only by assuming that every
+  essence is a content of real predicates.
+- Argument 4's bridge exists exactly when EC holds of the nature (laws 13,
+  16), so at the identity it presupposes EC there. Kant's own ground for it
+  is again the content premise.
+- The content premise does not show the identity modally idle. It denies the
+  identity's intelligibility, which makes it a rival to (c) (§5,
+  Frege/Russell), not an application of the thesis to (c).
+- A non-Kantian ground for EC at the identity would have to meet toward-EC
+  revision condition (c). §5 assesses the grounds identified (serious
+  actualism, conceivability, Fine) and finds none that meets it.
+- The Kant-adequacy route `63ac77e7` therefore holds only under a disputed
+  extension: Kant's thesis governing an adequate concept, which presupposes
+  EC at the identity.
 
 ## 4. Equivocation check: esse as act and existence as fact
 
@@ -356,10 +381,15 @@ relevance at the identity case.
 
 - **Kant** (read). See §3, arguments 1–4.
   - *Target:* (a), and the necessity of things derived from concepts.
-  - *At the identity:* it reaches (b) or (c) only with K1 or K2. Each of the
-    four arguments needs the premise that every essence is a content of
-    predicates.
-  - **No application to the identity without that premise.**
+  - *At the identity:* it reaches (b) or (c) only with K1 or K2.
+    - Arguments 1–3 need the premise that every essence is a content of
+      predicates.
+    - Argument 4 needs a CNC concept adequate to the nature, which exists iff
+      EC holds of the nature (laws 13, 16). Kant's ground for it is the same
+      content premise; other grounds fall under toward-EC revision condition
+      (c).
+  - **No application to the identity without the content premise, or EC at
+    the identity on some other ground.**
 - **Hume** (read, *Dialogues* IX; the speaker is **Cleanthes**, and
   attribution of the view to Hume himself is not assumed). Two claims:
   - *Conceivability:* "Whatever we conceive as existent, we can also
@@ -448,7 +478,9 @@ relevance at the identity case.
 
 **Assessment.** None of these yields EC at the identity case. Each one
 either:
-- needs an unwarranted bridge (Kant);
+- needs a bridge it does not establish at the identity (Kant). Arguments 1–3
+  need the content premise; argument 4 presupposes EC at the identity (laws
+  13, 16);
 - is the unresolved conceivability argument, or an unintelligibility claim
   about necessary existence resting on the same calibration question
   (Cleanthes);
@@ -503,8 +535,10 @@ comparison (#1888 §6).
    - In sense (a), with CNC, it is consistent with identity, essential
      existence and necessity.
    - It reaches the identity only with concept adequacy for a Kantian
-     concept. None of the four arguments establishes that at an
-     act-essence.
+     concept. Arguments 1–3 establish that only with the content premise.
+     Argument 4's bridge exists iff EC holds of the nature (laws 13, 16), so
+     at the identity it presupposes EC; other grounds for EC fall under
+     toward-EC revision condition (c).
    - In sense (b) (EC) its motivations either presuppose contingency, are
      the unresolved conceivability argument (or an unintelligibility claim
      resting on the same question), or deny (c)'s intelligibility instead.
@@ -541,7 +575,7 @@ edited here).**
 
 | #1888 row | Before | After this note |
 |---|---|---|
-| Existence-conditional essentialism (concreta-restricted) | "No independent motivation for the cut at `n` is identified; the general Kant-type thesis is unassessed" | **Unchanged score** ("no / open"). The Kant-type thesis is now assessed: it does not apply at `n` without K1/K2 or a contingency presupposition. Serious actualism presupposes contingency (law 11). Fine is neutral. |
+| Existence-conditional essentialism (concreta-restricted) / "possibly absent" | "No independent motivation for the cut at `n` is identified; the general Kant-type thesis is unassessed" | **Unchanged score** ("no / open"). The Kant-type thesis is now assessed: it does not apply at `n` without K1/K2, i.e. without the content premise or EC at `n` (laws 13, 16). The serious-actualist *motivation for EC at `n`* presupposes `n`'s contingency (law 11); serious actualism itself allows necessary beings. Fine is neutral. New support bundle for the verdict: `63ac77e7` (Kant + adequacy), which needs KT extended to concepts adequate to the nature. |
 | PGP | "no / open, as for EC" | **Unchanged.** Relative standing still requires "toward PGP" (a), unmet. |
 | Unconditional essentialism | "through simplicity and B6, which are open" | Its step from simplicity to necessity needs AN, equivalent to `565ccd6c` given E-link. AN's identified support is shared with PGP/C2 (via the necessity verdict). **Score unchanged.** |
 | Revision conditions | "against PGP at `n`" (b); "toward PGP" (d) | (b): assessed, not met. (d): met as stated, no standing change (reasons in point 1). |
@@ -596,7 +630,7 @@ encoded, and would require a separate substitution premise (§4).
 | `effbb158` K1 | whatever lies in the nature is in the concept | `∀ x φ, Essential x φ → C.contains x φ` | one direction only; `C` has its own type |
 | `565ccd6c` (conclusion of `ca973127`) | esse = essence puts existence in the nature | `esseOf x = essenceOf x → Essential x (fun v => ExistsAt v x)` | unchanged; now derived from E-link and AN |
 | `fe8c3a1d` (conclusion of `63ac77e7`) | every foundational being at `w` is contingent | `∀ f, FoundationalAt … f → ContingentAt … w f` | universal; asserts no foundational being |
-| `ac557772` controls | laws 1–15, models | `Model.Controls` | law 5: identification *suffices*, not "only when"; law 6: joint inconsistency, no member selected; law 7: a world-proposition true at every point, no `Essential`; law 5 is classical; law 11 takes excluded middle as a hypothesis; models are structural surrogates |
+| `ac557772` controls | laws 1–16, models | `Model.Controls` | law 5: identification *suffices*, not "only when"; law 6: joint inconsistency, no member selected; law 7: a world-proposition true at every point, no `Essential`; law 5 is classical; law 11 takes excluded middle as a hypothesis; models are structural surrogates |
 
 Every hypothesis of each theorem is a listed premise. `ConceptContent` wraps
 the field of `ConceptRelation`, and `EsseExercisedAt` is a parameter wrapper.
@@ -692,7 +726,7 @@ delta.
 | Finding | Disposition | Where |
 |---|---|---|
 | P1-1 Fine "points the other way" | **Accepted.** Fine is neutral; §1.1 credited to the SEP authors with no weight; removed from §5, §6 and the attempt | §5 Fine, §6 item 4, attempt |
-| P1-2 Kant: "first-personal"; triangle paragraph missing | **Accepted.** Argument 3 restated as structural, with the "only criterion" clause. Argument 4 added and assessed: it reduces to the content-of-predicates premise plus an intelligibility doubt that is neutral between verdicts. Formalized as CNC, laws 13–14 and in the models. Verdict unchanged | §3, §5, laws 13–14 |
+| P1-2 Kant: "first-personal"; triangle paragraph missing | **Accepted.** Argument 3 restated as structural, with the "only criterion" clause. Argument 4 added and assessed. At the identity it needs a CNC concept adequate to the nature, which exists iff EC holds of the nature (laws 13, 16; law 16 added in the second re-check). Kant's ground for it is the content premise; other grounds fall under toward-EC revision condition (c). Its intelligibility doubt is neutral between the verdicts. Formalized as CNC, laws 13–14 and 16, and in the models. Verdict unchanged | §3, §5, laws 13–14 |
 | P1-3 law 5 "only when" | **Accepted.** "A represented-to-accessible bridge is needed; identification suffices" in Lean doc, `ac557772`, `9014eea0` and the note | Lean `Laws` doc, spec, §2, §3 |
 | P1-4 law 7 prose | **Accepted.** States the world-proposition true at every point, with no `Essential` | Lean `Laws` doc, `ac557772`, §2 |
 | P1-5 E-link acceptance; quantifier view; law 6 "so" | **Accepted.** Models rebuilt with distinct esse principles (`Pr`). "Satisfiable with each bundle; no substantive objection identified among views that accept an act of being". Quantifier-view sentence corrected (false or trivial). Law 6 made a joint inconsistency with no member selected | vocab models, `3a2af70f`, `ca973127` description, §4 |
@@ -705,3 +739,15 @@ delta.
 | P2 senses (a)/(b) not type-distinct; untagged parameters | **Accepted.** `ConceptRelation` structure introduced; `Exercised` binders tagged `_6`; `Essential` tag gap recorded | vocab, `existence-esse-support.json`, §10 item 4 |
 | P2 cross-lane sentence | **Accepted.** Amended | `existence-esse-support.json` |
 | P2 §6 item 2 | **Accepted.** Relabelled as support for the necessity verdict; still "shared dependency" | §6 |
+
+### Re-check of head `42755e2e` (accepted, mergeable as is)
+
+The re-check confirmed all P1s and P2s resolved, with no new P1. Three P2s
+and one nit were folded in:
+
+| Finding | Disposition | Where |
+|---|---|---|
+| Argument 4 does not reduce exactly to the content premise: its bridge exists iff EC holds of the nature | **Accepted.** Law 16 added (EC ⇒ CNC and K1 for `adequateConcept`). The burden is restated: at the identity, argument 4 presupposes EC; Kant's ground for it is the content premise; other grounds fall under toward-EC revision condition (c) | Lean law 16, §2, §3 argument 4 and result, §5 Kant and assessment, §7, §13 P1-2 row, attempt |
+| #1888 table: serious actualism | **Accepted.** The serious-actualist *motivation for EC at `n`* presupposes contingency; serious actualism itself allows necessary beings | §7 table |
+| #1888 table symmetry | **Accepted.** The EC / "possibly absent" row lists the new bundle `63ac77e7`, which needs KT extended to adequate concepts | §7 table |
+| Nit: `effectConcept` | **Accepted.** Described as the coexistence conditional only, not using the frame's causation | Lean doc, spec, §1, §2 |

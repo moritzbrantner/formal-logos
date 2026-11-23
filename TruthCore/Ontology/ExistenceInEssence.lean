@@ -92,6 +92,12 @@ properties assumed: none. -/
 def ConceptContent (C : ConceptRelation W B) (x : B) (φ : W → Prop) : Prop :=
   C.contains x φ
 
+/-- The concept adequate to a nature: its contents are exactly the essential
+truths. A construction from the essence relation, not an identification of
+the types. -/
+def adequateConcept (Essential : B → (W → Prop) → Prop) : ConceptRelation W B :=
+  ⟨Essential⟩
+
 /-- The act of being as exercised at a point, a stated primitive:
 `EsseExercisedAt Exercised v p` says that the principle `p` is in act at `v`;
 for an esse principle, that act of being is exercised there (a parameter
@@ -263,7 +269,11 @@ open TruthCore.Causality.ContingencyGrounding.Model (heatFail noPower)
 14. Conditional conceptual necessity gives Kant's thesis at every being whose
     absence is representable.
 15. Under the act–fact link the unconditional bridge `565ccd6c` gives
-    exercise in the nature (the converse of the factorization argument). -/
+    exercise in the nature (the converse of the factorization argument).
+16. Existence-conditional essences give, for the concept adequate to the
+    nature, conditional conceptual necessity and concept adequacy (the
+    converse of law 13): a conditionally necessary concept adequate to the
+    nature exists exactly when the nature is existence-conditional. -/
 def Laws : Prop :=
   (∀ (W B T R : Type) (F : CausalityFrame W B T R) (C : ConceptRelation W B),
     ExistenceNotConceptual F C → ∀ x, ¬ ConceptContainsExistence F C x) ∧
@@ -325,7 +335,11 @@ def Laws : Prop :=
     (Exercised : W → P → Prop) (essenceOf esseOf : B → P),
     EsseExercisedWhereExists F Exercised esseOf →
     EsseEssenceIsEssentialExistence F essenceOf esseOf Essential →
-    IdentityPutsExerciseInNature Exercised Essential essenceOf esseOf)
+    IdentityPutsExerciseInNature Exercised Essential essenceOf esseOf) ∧
+  (∀ (W B T R : Type) (F : CausalityFrame W B T R) (Essential : B → (W → Prop) → Prop),
+    ExistenceConditionalEssences F Essential →
+    ConceptualNecessityConditional F (adequateConcept Essential) ∧
+      ConceptAdequateToEssence (adequateConcept Essential) Essential)
 
 /-! ### Model ingredients
 
@@ -379,17 +393,13 @@ def kantFrame : CausalityFrame Pt Bool Unit Bool := frameOn kaAccess ptEx gCause
 /-- Universal access; `true` everywhere, `false` only at point `true`. -/
 def requiredFrame : CausalityFrame Bool Bool Unit Bool := frameOn univ xContingent noCause noPrior
 
-/-- A concept of `true` formed from its effects: "if `false` exists, `true`
-exists" (the cause of the other being). -/
+/-- A concept of `true` formed from its effects, as a coexistence
+conditional only: its one determination is "if `false` exists, `true`
+exists". It does not use the frame's causation relation; in `kantFrame`
+`true` also causes `false`'s esse, but the concept does not say so. -/
 def effectConcept {W : Type} (F : CausalityFrame W Bool Unit Bool) : ConceptRelation W Bool :=
   ⟨fun x φ => x = true ∧
     φ = fun v => F.history.ontic.ExistsAt v false → F.history.ontic.ExistsAt v true⟩
-
-/-- The concept adequate to a nature: its contents are exactly the essential
-truths. A construction from the essence relation, not an identification of
-the types. -/
-def adequateConcept {W : Type} (Essential : Bool → (W → Prop) → Prop) : ConceptRelation W Bool :=
-  ⟨Essential⟩
 
 /-- The empty concept. -/
 def emptyConcept {W : Type} : ConceptRelation W Bool := ⟨fun _ _ => False⟩

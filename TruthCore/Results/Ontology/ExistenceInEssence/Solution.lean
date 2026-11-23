@@ -74,7 +74,7 @@ theorem kantAdequacyFoundationalContingent {W B T R P : Type}
 /-! ## Laws -/
 
 theorem laws : Laws := by
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
   · intro W B T R F C hKT x h
     exact hKT x _ h fun _ hv => hv
   · rintro W B T R F C Essential hKT hAd x ⟨φ, hE, hEnt⟩
@@ -121,6 +121,8 @@ theorem laws : Laws := by
     unfold EssentialTruth
     rw [heq]
     exact h
+  · intro W B T R F Essential hEC
+    exact ⟨fun x φ hC v hv => hEC x φ hC v hv, fun _ _ hE => hE⟩
 
 /-! ## Models -/
 
