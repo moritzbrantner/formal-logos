@@ -431,7 +431,10 @@ premise is established.
 
 **Current conclusion.** There is a positive case for the presence of the same
 foundation across histories that share creatures with essential origins. Its
-reach depends on which histories can share *those very creatures*. Three tests
+reach depends on which histories can share *those very creatures*. A power
+in n to produce, as its ultimate source, each particular possible creature in
+the selected class could extend the case to otherwise separate histories
+containing such a creature, given the same dependence on its source. Three tests
 using intellection, suffering and mathematical necessity identify where the
 evidence changes subject. I retain moderate confidence in suspension about
 this individual's possible absence under the shared assumptions.
@@ -916,6 +919,68 @@ source of each actual distinct esse concerns this last, local explanatory
 question. [Actual source result](../../corpus/arguments/f05db25e-dd2a-4417-9059-ec0c4a6dc5f0.json)
 and [origin and historical identity controls](fixed-initial-history-535.md).
 [Plotinus, V.5.9](https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_4/Ennead_5.5)
+
+**How far can one trace a particular origin?** Consider a trilobite fossil.
+Its value as evidence of a particular organism's life depends on its history.
+An exact manufactured replica would lack that history. Hermida uses this
+case to motivate essential biological ancestry for remains and, conditionally
+on organisms inheriting their particular lineages essentially, for their
+more distant ancestors. This gives the origin argument a stronger example
+than general causal dependence. It also identifies an actual limit on the
+reason. An ancestor transmits life along the lineage. A source that gives
+existence to the lineage need never have been one of its living ancestors.
+Counting it as the first member would change the relation midway.
+[Hermida, “Biological Antecedents Essentialism,” §§5–7](https://link.springer.com/article/10.1007/s10670-024-00846-z)
+
+Can direct creation close that gap? Consider Aquinas's rational soul,
+granting his account for this test. Its subsistence and immateriality give
+him reasons why producing it requires creation. Only a first agent can
+produce without presupposing something on which to act. This moves directly
+from the individual effect to the role of its creator. Compare *n's creating
+this soul* with *this soul*. Specifying the former fixes n. Aquinas himself
+distinguishes active creation from the relation of origin in the creature,
+and holds that the creature, as subject, is prior in being to that relation.
+He also distinguishes many souls of one kind by the bodies whose acts they
+first are. Thus even when there is only one creator, the account has a
+reason for which soul is which that refers to embodiment. This gives no
+sufficient condition for identifying a soul across different histories. A
+second physician can take over the treatment of an already existing
+patient. Creation, on the account being tested, has no already existing
+soul whose maker could be varied in that way. A factor common to all souls
+could also be indispensable to each. The comparison does show why
+individuating the creative act by its agent
+cannot simply be transferred to the soul. To infer n's presence everywhere
+the soul exists, one still needs a reason that the soul depends on this
+particular creator or that the creator role cannot change bearers.
+Even a case of some other agent producing the soul would establish n's absence
+only with a further exclusion of n's presence there.
+[ST I.90.2–3](https://www.newadvent.org/summa/1090.htm#article2),
+[I.45.3, especially replies 1 and 3](https://www.newadvent.org/summa/1045.htm#article3)
+and [*De ente et essentia*, ch. 5](https://sourcebooks.fordham.edu/basis/aquinas-esse.asp).
+
+There is also a route from divine power that dispenses with joint histories
+of creatures. Take any accessible history containing a creature c in the
+chosen class. If actual n has the power to produce **that very c as its
+ultimate source**, and this power admits exercise in some history accessible
+from actuality, there is a history in which n is c's ultimate source.
+The premise about essential origins
+then requires n in the original history containing c. Repeat for every c in
+the class and this reaches even populations that cannot mix. Histories with
+no member of the class, including creatureless histories, remain open.
+Aquinas gives a rationale for the breadth of
+power from an act of being unrestricted by a recipient or a particular kind
+of being. The open application is from *c can exist* to *n can produce c as
+its ultimate source*.
+A power to produce every possible kind of creature can leave that step open:
+producing another of exactly the same kind may be within n's power even if
+this individual's origin is indispensable. Defining the feasible tasks as
+whatever n can do would give no independent warrant for including this
+task. Conversely, rejecting it solely because it would rule out a proposed
+rival would beg the question against the power argument. The result turns on
+whether origin permits this particular exercise of n's power. Importing a
+divine power already derived from necessary existence would be circular here.
+[ST I.25.2–3](https://www.newadvent.org/summa/1025.htm#article3) and
+[the corpus scope of the power premise](../modal-ontology-120.md).
 
 **The strongest test of coverage uses recombination in the opposite direction
 to subtraction.** Take one ordinary creature from an actual history and one
