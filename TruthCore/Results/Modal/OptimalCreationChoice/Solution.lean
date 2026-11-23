@@ -111,7 +111,7 @@ theorem threeWorldCreationChecks : ThreeWorldCreationControl := by
     intro h
     have hb := h firstEffect (by simp [threeWorldCreation, firstEffect])
       (some true) True.intro (by simp [threeWorldCreation])
-    exact Bool.noConfusion hb.2
+    cases hb.2
   have hCoincident : threeWorldCreation.output (some false) () firstEffect ∧
       coincidentalTag (some false) false := by
     exact ⟨⟨by simp, rfl⟩, rfl⟩
