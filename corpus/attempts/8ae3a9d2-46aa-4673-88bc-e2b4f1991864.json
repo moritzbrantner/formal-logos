@@ -1,0 +1,32 @@
+{
+  "id": "8ae3a9d2-46aa-4673-88bc-e2b4f1991864",
+  "label": "Full divine bundle: profile-specific admissibility and same-bearer GOD_4 application (#1864)",
+  "date": "2026-11-23",
+  "statement_ids": [
+    "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+    "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+  ],
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Follow-on to draft PR #1865. Twelve is not the completed divine profile: StageTwo's nine attributes, omnipotence, omniscience, moral impeccability and freedom are thirteen selected predicates. World-indexed ExcellenceAt requires them jointly at the same bearer; GreatnessAt adds identical-bearer existence and excellence in all successor worlds, relative to #1865's generic MaximalProfile. Proposed Lean proofs: (a) E-possible joint profile plus a profile-specific world-admissibility condition yields M-possible profile without blanket E ⊆ M; (b) Euclidean M and a local reflexive edge M(w,w), weaker than S5, bring the same bearer and its full profile into the actual world; (c) the existing StageTwo nine-to-field bridge and an explicit, separately OPEN actual-world naming law yield an actual GOD_4 witness and GodExists, not by placing world-invariant IsGod inside a merely possible-world bundle; (d) actual jointly excellent root plus explicit essentiality supports possibility independently of a description-to-world transfer. Proposed finite Bool controls show full E witness without M witness, profile-specific inclusion without blanket inclusion, individually satisfiable omnipotence/omniscience without a joint bearer, and K5 without actuality. Source-reinterpretation or independent philosophical acceptance is not asserted. Best positive warrant is the actual same-root/esse/perfection/intellect-will corpus combined with defeasible recombination; this supports investigation of a partial profile but does not yet give power, full knowledge, moral perfection or freedom in the chosen senses. Best supported incompatibility pressure remains #555's necessary strict-efficacy same-act with a contingent effect; applying it to divine simplicity/freedom is a separate open premise, not a general contradiction. No canonical argument/result registered and no established root premise or computed premise delta; branch PR #1876 awaits CI and independent semantic challenge.",
+  "blocker": "Substantive #1864 possibility claim remains OPEN: (1) justify metaphysical admissibility of a world jointly realizing all thirteen essential attributes; (2) map currently parameterized attribute senses to fixed metaphysical semantics; (3) supply the actual-world source/causal/GOD_4 naming bridge without assuming GodExists in the witness; (4) establish essentiality of power, knowledge, moral perfection and free capacity for the same actual root. Next tests: nontrivial same-root perfection to actual full bundle, and apply #555's necessary-act strict-efficacy test under a definite free-capacity interpretation. Final-head Lean/CI, binding, frontier comparison and independent semantic review pending.",
+  "evidence": [
+    "PR-1876"
+  ],
+  "current_assessment": {
+    "date": "2026-11-23",
+    "statement_ids": [
+      "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+      "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+    ],
+    "scope": "#1864 fixed full divine-profile modal possibility and same-bearer GOD_4 projection (not the whole God-existence case)",
+    "assessment": "Provisional: a route from ONE metaphysically admissible complete greatness profile to the actual bearer is conditional and structurally well motivated; actual-root, perfection and intellect/will research provides positive partial-profile warrant, but not full-profile metaphysical possibility. Joint compatibility and real-world admissibility remain open and #555 exposes conditional simplicity/freedom pressure. No new bound corpus support route or root premise discharge is claimed.",
+    "next_test": "Provide a fixed fully interpreted moral, cognitive, power and freedom bundle for the same actual root; test #555's necessary-act/strict-efficacy/contingent-effect core against that bundle; then justify profile-world M-admissibility and the actual GOD_4 mapping for canonical registration.",
+    "note": "docs/modal-ontology-120.md#1864-fixed-divine-profile-and-targeted-modal-admissibility-2026-11-23",
+    "reviewed_revision": "994342a94b3123fdbef444147a62cea0bd11131e",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "PR-1876 draft; final-head CI and independent semantic challenge pending",
+    "supersedes": "none; this scope extends #1865's generic helpers without superseding its current assessment"
+  }
+}
