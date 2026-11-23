@@ -92,6 +92,38 @@ def RosterOnlyControl : Prop :=
 def SingletonPopulationControl : Prop :=
   ∃ p : Profile Unit Bool Unit, ActualEssePopulation p ∧ ¬ TwoActualBeings p
 
+
+/-- A two-bearer, same-respect actual-esse-cause circle. Both bearers are
+actual and have represented esse distinct from essence; each causes the
+other's esse. These are uninterpreted causal assignments, *not* evidence
+that mutually productive powers can realize their own bearers. -/
+def sourceFreeFiniteCircle : Profile Bool Bool Unit where
+  InAct := fun _ _ => True
+  CausesIn := fun c x _ => c ≠ x
+  essenceOf := fun _ => false
+  esseOf := fun _ => true
+  essentialPrinciplesAloneSufficeForEsse := fun _ => False
+  esse := ()
+
+/-- Local actual-esse cause coverage holds, and identity uniqueness holds
+vacuously (no bearer has esse equal to essence), but no actual bearer is
+underived. The finite whole is closed under its suppliers, so CCR and the
+common-source endpoint fail. A productive-priority premise is not implicit in
+this control; the existing `noPerSeCausalLoop` (PER-SE-CAUSAL-LOOP-IMPOSSIBLE)
+excludes such finite loops given cause-over-effect priority, transitivity and
+irreflexivity, so what is missing is a bridge from `ActualEsseCause` to that
+efficient/per se priority reading. -/
+def SourceFreeFiniteCircleControl : Prop :=
+  (∀ x, DistinctEsseAt sourceFreeFiniteCircle x) ∧
+  DistinctEsseHasOtherActualCause sourceFreeFiniteCircle ∧
+  AtMostOneEsseIsEssence sourceFreeFiniteCircle ∧
+  ActualEssePopulation sourceFreeFiniteCircle ∧
+  (∀ x, ∃ c, ActualEsseCause sourceFreeFiniteCircle c x) ∧
+  ActualEsseCause sourceFreeFiniteCircle false true ∧
+  ActualEsseCause sourceFreeFiniteCircle true false ∧
+  ¬ ClosedActualEsseCollectionsRooted sourceFreeFiniteCircle ∧
+  ¬ CommonEsseIsEssenceSource sourceFreeFiniteCircle
+
 /-- Joint controls for strictness, rooted cycles, roster-only failure and
 population weakening. Interpretations only, not metaphysical counterexamples. -/
 def ClosedEsseControls : Prop :=
