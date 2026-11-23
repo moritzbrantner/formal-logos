@@ -93,6 +93,69 @@ stable Boolean output (`DEF-SUPERTASK-STABLE-LIMIT`); see
 `DISAMB-SUPERTASK-LIMIT-NOTION`. Its Comparator config permits Mathlib's
 three standard axioms ([axiom policy](axiom-policy.md)).
 
+## Typed Zeno motion, bisection and chase controls (#338, partial)
+
+The modern analyst model in
+[`TruthCore.Greek.Aristotle.Physics.Typed.Zeno`](../TruthCore/Greek/Aristotle/Physics/Typed/Zeno.lean)
+reuses `ConvergentZenoSchedule` and Mathlib's real trajectory,
+`HasDerivAt`, mean-value theorem, `Finset` and `Set.Infinite`. It is
+**not** a replacement for Aristotle's historically attributed VI.9 or
+III.7 readings. In particular, the original `ZENO-ARROW-STATIONARY` result
+remains an opaque-atom transcription with its frozen Challenge.
+
+| Precise question | Lean control | Consequence and boundary |
+| --- | --- | --- |
+| Definite location in each now vs rest | `positionAtEveryInstant_not_rest` | The continuous arrow `x(t)=t` occupies exactly one position at every real instant but has derivative 1 everywhere and changes position. The existence of `x(t)` alone cannot supply the suppressed premise that it is at rest. |
+| Zero velocity now vs stationary for all times | `zeroVelocityAtOneInstant_not_stationary` | `x(t)=t²` has derivative 0 at 0 but differs at 0 and 1. One local derivative fact cannot yield global stationarity. |
+| Zero velocity *at every* real time | `everyInstantRest_iff_stationary` | For a real trajectory whose derivative exists and is zero at every time, Mathlib's mean-value theorem proves it is constant. This is a **sound conditional inference** on the selected analytic definition of rest, unlike position-at-an-instant implying rest. It does not by itself vindicate Zeno's antecedent. |
+| Dichotomy and finite traversal | `dichotomy_reachesEndpoint` | The continuous trajectory `x(t)=t` passes the infinitely many increasing checkpoints `tₙ=1-2⁻ⁿ<1`; their times and positions tend to 1, and `x(1)=1`. Checkpoint multiplicity does not imply nonarrival. |
+| Achilles' comparison points | `achilles_catchesAtLimit` | For `fast(t)=2t` and `slow(t)=1+t`, the slower runner is ahead at every checkpoint `tₙ<1`, but their positions agree at time 1. This rejects the shift from every *listed* pre-catch comparison to every time, not the observation that the slower is ahead before the catch. |
+| Potentially unbounded finite division | `firstBisectionCuts_card` | The first `n` distinct cuts `tₙ₊₁` are a `Finset ℝ` of cardinality exactly `n`, for every finite `n`. No infinite roster of performed acts is assumed. |
+| Infinite mathematical cut set | `mathematicalBisectionCuts_infinite` | The range of all interior bisection cuts is `Set.Infinite`, in the **same** model with every finite prefix. Thus potential finite prefixes do not contradict a completed *mathematical set*; Aristotle's denial of actually completed physical or separable division is a different, still unformalized claim. |
+| Performed operations | `finiteOperationRoster_missesCut`, `infiniteCuts_withoutPerformedOperations` | Every stipulated *finite* roster of operation times misses a cut, and an independent empty operation-event set coexists with the infinite mathematical cut set. A genuinely performed omega sequence is **neither proved possible nor impossible**; forbidding it requires a justified event/operation ontology and a nontrivial resource or local-finiteness constraint. |
+
+**Current assessment (conditional mathematical claims):** the analytic arrow
+argument is valid from *zero derivative everywhere* to stationarity but
+invalid from *location at every instant* to that antecedent; a single zero
+derivative is likewise insufficient. The dichotomy and Achilles nonarrival
+inferences fail in ordinary continuous real-time trajectory models.
+Arbitrary finite subdivision, an infinite set of ideal cut points and
+infinitely many physically executed operations are three non-equivalent
+notions. These are **discriminating countermodels**, not historical
+attributions or a proof of physical completion.
+
+**Cumulative graph connection and limits.** The proofs reuse the *same*
+`ConvergentZenoSchedule` proposition registered as
+`CONVERGENT-ZENO-SCHEDULE`; they do not invent another convergence
+definition. The controls constrain the validity of interpretations of
+`ZENO-ARROW-STATIONARY`, `BisectionInfinityPotentialNotActualReading`,
+and VI.9's dichotomy/Achilles implications. No new corpus inference
+application discharges a root-route statement. In particular:
+
+- `SU-REAL` (#318) still asks whether **physically distinct causal acts** can
+  occur at all the mathematical cut times; a `Set.Infinite` of cuts is not
+  an ontological event population.
+- `SU-END` and `SU-OUTPUT` still require independent endpoint-operation
+  and terminal-state criteria; mere trajectory continuity resolves neither.
+- `SU-GROUND`, the causal actuality issue #310 and the explanatory
+  adequacy issue #311 remain open. A temporal sequence of positions or
+  checkpoints is neither a simultaneous *per se* dependence series nor a
+  proof of metaphysical groundlessness. The unbuilt bridge must identify
+  actual distinct causal operations and explain why the relevant
+  explanatory/causal relation transfers to those real-time indices.
+- The beginningless-past/resource result below remains conditional on an
+  integer time grid and a uniform positive stock increment. It does not
+  transfer to the shrinking positive durations of the Zeno model.
+
+**Remaining #338 scope.** Replace the other relevant opaque readings with
+sibling typed statements and corpus-bound results where the interpretations
+are defensible; investigate zero-derivative rest on restricted time domains,
+local finiteness and physical event identity, the general positive lower-bound
+duration series and Thomson-lamp *analytic* nonconvergence, and the exact
+König/well-foundedness regress hypotheses. The present proof batch does not
+settle Aristotle's potentially infinite *physical process* or establish that
+any infinity-related causal or God-existence premise is true.
+
 ## A beginningless past with bounded resource spread
 
 `BOUNDED-PAST-RESOURCE-CONTRADICTION` adds a conditional argument about a

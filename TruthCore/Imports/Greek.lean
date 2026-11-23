@@ -70,6 +70,7 @@ public import TruthCore.Greek.Aristotle.Physics.LocalContactComposition
 public import TruthCore.Greek.Aristotle.Physics.Typed.Capacity
 public import TruthCore.Greek.Aristotle.Physics.Typed.CosmicChange
 public import TruthCore.Greek.Aristotle.Physics.Typed.Motion
+public import TruthCore.Greek.Aristotle.Physics.Typed.Zeno
 public import TruthCore.Greek.Aristotle.SynonymousCause
 public import TruthCore.Greek.Aristotle.SynonymousCauseAtLeast
 public import TruthCore.Greek.Clement.FirstCorinthians
