@@ -10,6 +10,7 @@ public import TruthCore.Causality.DeiFiliusAttributeField
 public import TruthCore.Logic.ReflectiveCoherence
 public import TruthCore.Results.Causality.NamingVeracityBatch1.Solution
 public import TruthCore.Causality.ActPriorityAtFirst
+public import TruthCore.Modal.NecessaryVariableEffects
 
 /-! # A thirteen-slot profile schema, targeted admissibility and actual naming (#1864)
 
@@ -661,6 +662,90 @@ theorem coherent_forbidden_task_rules_out_moral_incapacity {A : Type} (σ : Sign
   intro hJoint
   exact (moral_incapacity_forces_task_inconsistency σ power Permitted
     taskOf w x hJoint.1 hJoint.2 a hForbidden) hConsistent
+
+/-! ## Restoring the omitted source and intentional-output constraints
+
+Uses exactly the previous NecessaryVariableEffects.alternatingEffects model,
+not a new frame or a claimed metaphysical possibility. Unlike a vacuous
+all-True attributes model, a distinct actual effect has real passive potency
+and composition, and the source exists and is actual while lacking both.
+Knowledge tracks nonconstant contents; permissible choices differ across the
+two alternatives, with an actual forbidden option that is never chosen.
+The choice-output correspondence is extensional only: no intrinsic
+intentional self-knowledge or reason-grounded creation is represented. -/
+namespace CreationControl
+open TruthCore.Modal.NecessaryVariableEffects
+  (EffectBeing source firstEffect secondEffect alternatingEffects
+   SameNecessaryEffect noFixedEffect)
+open TruthCore.German.Kant.CosmologicalInference (ContingentAt)
+
+/-- The actual-world esse dictionary, matched to false's existing roster.
+A global q.InAct dictionary applying also at the alternative would need an
+explicit cross-world translation, which this control does not assert. -/
+def inAct (_x : EffectBeing) (_r : Unit) : Prop :=
+  _x = source ∨ _x = firstEffect
+
+/-- The selected source is noncomposite and potency-free, while the actual
+first effect is both composite and passively potent. -/
+def composite (x : EffectBeing) : Prop := x ≠ source
+def inPotency (x : EffectBeing) (_ : Unit) : Prop := x ≠ source
+def eternal (x : EffectBeing) : Prop := x = source
+
+/-- Two nonempty, mutually opposed contingent truth contents. This is an
+extensional surrogate, not a mechanism of true self-understanding. -/
+def truth : Semantics Bool Bool where
+  trueAt w c := w = c
+  neg c := !c
+  neg_true_iff := by intro w c; cases w <;> cases c <;> decide
+
+def knows (w : Bool) (x : EffectBeing) (c : Bool) : Prop :=
+  x = source ∧ w = c
+
+/-- Both different selected effects are equally permitted; none is
+forbidden as an action. All positive choices are within the source's
+uncoerced capacity. These assignments are explicit and world-dependent. -/
+def chooses (w : Bool) (x : EffectBeing) (a : Option Bool) : Prop :=
+  x = source ∧ a = some w
+def permitted (_ : Bool) (a : Option Bool) : Prop := a ≠ none
+def capable (_ : Bool) (x : EffectBeing) (a : Option Bool) : Prop :=
+  x = source ∧ a ≠ none
+def imposed (_ : Bool) (_ : EffectBeing) (_ : Option Bool) : Prop := False
+
+/-- NONMETAPHYSICAL structural non-collapse with one actual/source bearer:
+actual existing composite/potent effects coexist with a simple, purely
+actual, eternal source, complete factive SELECTED-content knowledge, and
+permissible genuinely different choices at both worlds. The source's
+necessity and contingent distinct effect are existing verified #462
+results. A strict same-decree efficiency or real intentional choice bridge
+is NOT supplied, so #555 is not contradicted. -/
+def Compatibility : Prop :=
+  (∀ x, inAct x () ↔ alternatingEffects.ExistsAt false x) ∧
+  inAct source () ∧ inAct firstEffect () ∧ inPotency firstEffect () ∧
+  composite firstEffect ∧ IsSimple composite source ∧
+  ActAndPotencyMakeComposite inAct inPotency composite ∧
+  ImmutableIsEternalReading inPotency eternal ∧
+  IsImmutable inPotency source ∧ eternal source ∧
+  (∀ w, alternatingEffects.ExistsAt w source ∧
+    KnowsAllContentsAt truth knows w source ∧
+    PermissibleChoicesAt chooses permitted w source ∧
+    NoncoercedChoiceAt chooses capable imposed w source) ∧
+  chooses false source (some false) ∧ chooses true source (some true) ∧
+  permitted false (some false) ∧ permitted true (some true) ∧
+  ¬ permitted false none ∧ knows false source false ∧ ¬ knows true source false ∧
+  (∀ w b, chooses w source (some b) ↔
+    alternatingEffects.Causes w source (some b)) ∧
+  NecessaryAt alternatingEffects false source ∧
+  ContingentAt alternatingEffects false firstEffect ∧
+  ¬ SameNecessaryEffect alternatingEffects false source
+
+theorem compatibility : Compatibility := by
+  unfold Compatibility inAct composite inPotency eternal
+    knows chooses permitted capable imposed
+    KnowsAllContentsAt PermissibleChoicesAt NoncoercedChoiceAt
+    ActAndPotencyMakeComposite ImmutableIsEternalReading
+    IsSimple IsImmutable
+  decide
+end CreationControl
 
 end Interpreted
 
