@@ -1,0 +1,31 @@
+[batch]
+vocab = "TruthCore.Explanation.PairedInterventions"
+results = "TruthCore.Results.Explanation.PairedInterventions"
+
+[[statement]]
+id = "Two paired inputs realize precisely the initial parity class on a three-coordinate path"
+lean = "InputRange"
+paraphrase = "From any starting Boolean triple, finite compositions of independently chosen paired flips on the left and right edges reach exactly the triples of the same parity. Every assignment to each pair of distinct coordinates is realized. Flipping only the first endpoint gives an excluded target. Allowing a single optional flip of that endpoint before the same paired inputs makes every target attainable."
+
+[[argument]]
+id = "Derive the three-coordinate parity restriction and its removal from the available inputs"
+theorem = "inputRange"
+premises = []
+conclusion = "Two paired inputs realize precisely the initial parity class on a three-coordinate path"
+rule = "Induction on finite interventions and constructive choice of edge inputs"
+meaning = "Each paired input preserves parity. For a target with the starting parity, matching the two outer coordinates fixes edge choices that also give the required middle value. Each pair projection is full, and an optional unmatched endpoint flip switches parity classes. This uses the triple, coordinate map and parity predicate from the static elementary-report comparison in #1088. The operations are stipulated on one fixed background. Whether a real candidate source can exercise them there remains open."
+axioms = []
+
+[[statement]]
+id = "A two-reading change comparison is accurate exactly when its offsets agree"
+lean = "OffsetAccuracy"
+paraphrase = "For two Boolean target values and two Boolean measurement offsets, report each target XOR its offset. The change between the two reports equals the actual change exactly when the two offsets agree."
+
+[[argument]]
+id = "Cancel the shared component of two Boolean measurement offsets"
+theorem = "offsetAccuracy"
+premises = []
+conclusion = "A two-reading change comparison is accurate exactly when its offsets agree"
+rule = "Evaluate the Boolean change comparison for both target values and offsets"
+meaning = "Evaluating the four input bits identifies the precise condition under which a differential reading tracks change in a fixed XOR channel. Keeping or reading the two values and correctly carrying out the comparison are application conditions. The identity supplies no physical frequencies or normative premise."
+axioms = []

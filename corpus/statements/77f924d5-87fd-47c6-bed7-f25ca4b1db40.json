@@ -1,0 +1,6 @@
+{
+  "id": "77f924d5-87fd-47c6-bed7-f25ca4b1db40",
+  "label": "A two-reading change comparison is accurate exactly when its offsets agree",
+  "paraphrase": "For two Boolean target values and two Boolean measurement offsets, report each target XOR its offset. The change between the two reports equals the actual change exactly when the two offsets agree.",
+  "lean_declaration": "TruthCore.Explanation.PairedInterventions.OffsetAccuracy"
+}

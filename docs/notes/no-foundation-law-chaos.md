@@ -167,6 +167,8 @@ to `40a97664` remain **OPEN**, not silently settled by Bool state tokens.
 
 ## Provisional comparison and exact open bridges
 
+The [population, power and evidence tests](#can-a-brute-founder-be-joined-by-another-cause) give the current assessment of the upstream inference.
+
 As of the baseline `4aab093cc06bc1924bdf8067bd5780e11f438770`, the
 strong radical rival has a genuine **conditional disadvantage** for global
 law stability: it cannot simultaneously grant unrestricted future admissibility
@@ -441,15 +443,15 @@ the exact PR head in CI.
 
 ## Causal propagation of a brute contingency (2026-11-23, #1867)
 
-**Proposed checkpoint; independent semantic challenge and canonical validation
-pending.** Owner hypothesis: an existential exception might not remain
-isolated, because a being that obtains without a reason can exercise causal
-powers whose effects influence the rest of reality and all empirical
-evidence. Investigate an analogue of explosion, but do not identify
-metaphysical possibility with classical entailment from a contradiction.
-This is an upstream continuation of #1867, not a repeat of #1874/#1809's
-suffix theorem, and does not edit #1910's exemption analysis or #1904's
-historical-evidence note. Analyst formulations; no new source attribution.
+**Restart checkpoint.** The population certificate passed binding, Comparator and NanoDa. The paired-intervention and readout proofs compile. Final independent challenge of this section and delivered-head checks are pending.
+
+The question is whether admitting one brute existent licenses an additional
+uncaused agent *in an already populated order*. A restriction can be principled
+if it specifies a property that can independently be identified and that would
+exclude the proposed addition. A separate question is why that restriction
+obtains and how far its necessity extends. The comparison below continues
+#1874's results on admissible histories, #1908's regress comparison and
+#1910's self-application test.
 
 ### Three different propagation theses
 
@@ -603,152 +605,251 @@ each coordinate. These are exact checks of finite controls only;
 the infinite readout identity is the elementary induction above,
 not a Lean-certified result in this checkpoint.
 
-### The intruder question: why should the exception be contained?
+### Can a brute founder be joined by another cause?
 
-The strongest philosophical challenge is not that no causal law can
-coexist with an unexplained initial condition. It is whether the rival
-can justify a **specific modal boundary** on new, unreceived causes
-and their powers. Consider a proposed unexpected cause that would
-bring about a particular admissible local effect. Distinguish:
+Fix a nonempty class of histories retaining a specified past and background
+K, including the original founder where required. Describe a requested
+entrant by its kind, site, onset, power and target independently of whether
+it can obtain *jointly* with K. For example, the later agent in the
+capacity-one model below can exist by itself. **Insertion freedom** says
+that for every such eligible request there is an accessible complete
+continuation retaining K in which an additional unreceived bearer actually
+obtains and exercises that power. The negation at this background is one
+eligible request for which no such continuation exists. The negation of
+“whenever there is a brute founder, there is insertion freedom” requires
+both a brute founder and a failed request. The separate thesis that *no*
+intruders are possible falls to a single admitted intruder. A joint licence
+requires all members of each eligible list in the **same** continuation.
+Its denial can coexist with every singleton request being granted.
 
-* Is that sort of cause eligible to exist underived at all?
-* If it is eligible, can it exist in this very causal background,
-  at this place or moment, with these powers?
-* If it can coexist, can its actual exercise reach the target without
-  a compensating response or violation of a retained law?
-* Can the choices be made jointly for many targets, including the
-  relevant evidence and calibration apparatus?
+“Only foundations can be brute” has two readings. If a foundation is anything
+whose existence has no prior giver, a wholly new unreceived agent qualifies
+even if it arrives tomorrow in a crowded laboratory. If a foundation is the
+antecedently specified total basis of this order, excluding such an agent
+requires showing that the basis is exhaustive. One can establish a
+restriction on a particular class of candidates by showing how membership
+requires a giver. The dispute concerns its coverage, including kinds absent
+from the actual inventory. A claim about what existing powers do when
+instantiated addresses only part of that question.
 
-An argument for broad propagation can begin with actual causal
-mechanisms: localized changes can travel through interactions, and
-a change in a shared upstream condition can change many downstream
-facts. The explicit copying and shift mechanisms exhibit why this
-is not a mere metaphor. A proponent of arbitrary underived local
-causes would need a reason to deny the same kind of causes in
-otherwise comparable regions. If the opponent's only ground for
-admitting b is that contingent actuality need not have a reason,
-that ground alone does not discriminate b from a candidate intruder.
-This is an epistemic argument about the warrant offered for the
-restriction, drawing on #756/B2's feature-relative parity, **not**
-a modal rule that every distinct candidate is admissible. To infer
-actual or possible intruders, defend a positive co-admissibility
-principle (e.g. independently possible causal powers and compatible
-background recombination). The joint powers, conservation/identity
-constraints and endpoint efficacy must be retained, not read off
-from absence of a reason.
+**Test with the actual founder held fixed.** In all three interpretations
+the same individual exists in the designated history, is absent in an
+accessible alternative, has no incoming cause and lacks any #312 reason
+for its existence at the selected world and time. It causes a distinct
+firing for which the model supplies a circumstantial reason. Thus each
+interpretation satisfies the literal negation of the contingent-existence
+PSR `608a262d` there, and its assigned explanations are sound in #312's
+sense. No premise identifies every uncaused thing with a thing lacking a
+reason. The operative law is identical in all three cases. Each new agent
+persists and produces one firing one tick after birth. The detector
+registers a firing without identifying its source. [Population definitions and comparison](../../TruthCore/Explanation/PopulationEntry.lean)
 
-A primitive, globally constrained stable history can answer the
-intruder question: only its specified input configurations are
-admitted and the full law forbids unlicensed additional causes.
-A dispositional rival can appeal to a nature that constrains
-which powers may be exercised in those conditions; a causal-isolation
-rival can give an independently restricted interaction domain.
-These are substantive ways to deny a step of the propagation
-argument. Their explanatory cost is that if the law, its application
-or the particular initial state is itself an unexplained contingent
-fact, there remains an ultimate why-question (assuming the selected
-complete-account standard). It does not follow that a constraint
-whose obtaining is unexplained cannot genuinely constrain, or
-that a necessary constraint must itself have a contingent bearer.
-An independently justified essential prohibition of a new intruder
-would defeat the proposed modal extension even if the actual
-foundation were brute. The comparison therefore advances #1910's
-exemption problem: a relevant restriction must constrain the
-existence or exercise of the cause, not merely label one allowed
-exception as fundamental.
+| Admitted populations | What can happen with this founder retained? | What fixes the answer? |
+|---|---|---|
+| The number of extant agents is conserved at each step. | The initial population and persistence exclude every later birth. | Each birth increases the cardinality of the actual finite set of extant agents. |
+| At most one agent is present at each time. | No late entrant can join this founder. In its absence the same candidate can begin at the proposed date. | A continuing occupant uses the single place. A law imposing this ceiling need never refer to the founder's name. |
+| Birth inputs are unrestricted. | For each later date a complete history adds one uncaused, unexplained agent and changes the same detector reading. | All other birth inputs and every entity's presence through the preceding tick agree. Positive input admission and an effective coupling do the work. |
 
-### Epistemic propagation: correlated evidence rather than random facts
+These are countermodels to an inference from the **shared premises**. Their
+interpretation as metaphysically accessible histories is a further claim.
+The count ranges over the represented persistent agents. If a bearer can
+leave when its successor arrives, constant headcount can mask replacement.
+In #1867's unique-supplier example, a copy-power bearer and a toggle-power
+bearer can succeed one another while the dependent persists and each source
+keeps its characteristic power. Holding the same supplier throughout,
+allowing one switch, or assigning both bearers the same power gives different
+predictions. Even universal succession would require an account of the
+particular rigid bearer's absence and of the dependent's continuing identity.
+This is #1908's point about explanatory transmission applied to actual
+suppliers. A reason for a role always being filled can leave open who fills
+it. [Regress and the same individual](contingency-receptivity-c2.md#what-does-possible-absence-have-in-common-with-an-infinite-regress)
 
-A common cause affecting evidence can matter more than merely
-making an outcome contingent. Reuse the common-mode/local distinction
-in [#1584](preface-connectivity-1584.md), and #737's record-only
-and epistemic-warrant boundaries. As a simple application, let the
-target truth p and an upstream offset b be Boolean. Every displayed
-record r_i reads p XOR b under a fixed mechanism. (p,b)=(1,0)
-and (0,1) produce identical records r_i=1 for any number of displays,
-yet opposite p. A method seeing only these records cannot be
-uniformly factive over both admitted cases. A genuinely independent
-observation of the offset or target would distinguish them. For
-a metaphysical application both populated alternatives, the
-offset's causal efficacy, access to the relevant records and
-the absence of independent disambiguating evidence must be
-established; this is not a new proof of #1904's historical
-underdetermination. The finite XOR comparison was checked for
-all four assignments and eight repeated records.
+### How a restriction can earn its scope
 
-The important potential implication is that **the same arbitrary
-factor might affect the evidence by which an inquirer tries to
-detect it**. Many observations need not be independent safeguards
-against common-mode error. Under a justified restriction excluding
-the offset, actual calibration, or a separately reliable process,
-the rival can retain empirical entitlement. Even admitted
-indistinguishable error scenarios defeat universal zero-error
-guarantees, not by themselves defeasible, probabilistic or
-externalist knowledge. Do not assign equal weights to alternatives
-or infer a low probability of truth without a probability/selection
-account. In particular this comparison does not establish
-`STMT-ULTIMATE-GROUND-EPISTEMIC-NECESSITY` (e519065f): that
-much stronger bridge explicitly retains genuine process reliability
-and relevant evidence. Merely allowing a common-mode failure does
-not show that the actual process is unreliable.
+Consider two disjoint capture wells sharing one carrier. Routing the carrier
+left or right may be a genuine alternative after the same past under a
+branching routing power. The two simultaneous captures cannot both occur if
+each requires possession of that carrier. One way to warrant the restriction
+is to calibrate the transfers independently. Each permitted transfer debits
+the sending location and credits the receiving location by the same amount.
+Adding all transfers cancels internal contributions. Calibrated closed ports
+and independently measured stock then support a definite prediction. A
+spoofed display, sequential visits by the carrier, neutral entrants and a
+balanced pair of new opposite charges are different tests. They need not
+violate conservation of a measured net quantity. The premise that the ports
+exhaust all ways of changing this target is empirically vulnerable. To make
+it cover every metaphysically possible cause requires that the inventory be
+essential and exhaustive at that scope. [Resource-budget derivation and its scope](productive-store-1378.md)
 
-### Proposed assessment, root connection and next discriminator
+A concrete physical comparison isolates the work done by the inventory. In
+Dürr, Goldstein, Tumulka and Zanghì's Bell-type particle theories the free
+process preserves the realized particle number in its sector. Their example
+with an external electromagnetic field admits pair creation and annihilation
+under specified dynamics. Consider the analyst's extra hypothesis that the
+initial configuration is brute. It leaves intact the first theory's exclusion
+of an unmatched extra particle and the second theory's restrictions on
+which changes can occur. To explain a detector change by an agent outside
+either theory one must also give it a coupling to the detector. A model's
+choice of configuration space alone is evidence about what that model can
+represent. The metaphysical claim that its ontology exhausts reality needs
+additional warrant. Neither existential bruteness nor that claim of
+exhaustiveness is attributed to the authors. [Bell-Type Quantum Field Theories, §§2.8–2.9 and 3.3](https://arxiv.org/html/quant-ph/0407116)
 
-High confidence in the distinction between upstream incompleteness,
-common modal contingency, individual variability and joint
-arbitrariness; also in the finite controls and fixed-shift readout
-argument. Provisional philosophical preference for the limited
-ultimate-dependence propagation principle when the complete-account
-requirement and genuinely indispensable existential dependence are
-warranted. This is a stronger comparative cost for a brute *common*
-root than for one isolated brute entity, without an unexplained-fact
-counting argument. No warrant yet for unconditional metaphysical
-explosion. Retain the restricted primitive/dispositional account as
-the strongest rival. A necessary source with an unexplained
-contingent act or law choice must face the same completeness and
-admissibility test; if intentional or other nonnecessitating
-explanation is adequate, do not identify nondetermination with
-bruteness (see #755 and #1910).
+### The strongest case for wider propagation
 
-The root-route premise 608a262d (local existence PSR for contingents)
-and B2 remain the intended comparative beneficiaries. The missing
-links are actual explanatory adequacy of reasons, the applicability
-of the complete-account standard to all relevant dependents, and
-whether the rival's permitted source configurations and causal
-powers have the necessary effective reach and modal richness.
-The fixed-shift argument provides a concrete alternative to the
-earlier law-switch route: defend source-state richness plus effective
-transmission, not U→arbitrary governing laws. Once justified, the
-existing #1874/#1809 downstream results can be reused on the
-observed trace selector with the existing adapters, after checking
-their exact hypotheses. No new support edge, premise discharge
-or God-existence conclusion is claimed.
+Start with independent grounds for the *possibility of an unreceived onset*.
+An uncaused actual foundation that never begins supplies no such example.
+Suppose now that a transformation preserves the entire retained background
+and the modal laws, and takes an allowed onset at one site to a second
+site. This warrants **relocating** the onset. It need not retain the first
+agent. The two wells explain how perfect symmetry can coexist with a strict
+limit on simultaneous occupants. Producing a duplicate also requires its
+unreceived origin and powers to be admissible there. Experimental success
+in moving a supplied trigger between apparatuses establishes something about
+its efficacy in those circumstances. It leaves its existential origin open.
 
-**Next test:** choose one real proposed brute-foundation ontology
-(e.g. primitive necessary powers with a contingent base, or a
-brute governing-law bearer), hold its positive laws/essences fixed,
-and identify what excludes or permits a same-background unreceived
-causal input with a power targeting the evidence channel. Test a
-nonempty family of inputs with actual local joint conditions and
-an admissible complete history, not just the logical consistency
-of a description. If those inputs can be jointly varied, test
-whether the fixed readout realizes the desired output patterns;
-if not, identify the exact invariant that blocks them. Compare
-that restriction and its warrant with the necessary-source rival
-at the same scope. Revise toward global explosion only when a
-substantive co-admissibility and reach principle survives this test;
-revise against it for a positively warranted invariant that
-allows a brute exception but forbids the proposed substitutions.
-A claim about epistemic self-undermining also needs the rival's own
-entitlement norm and relevant evidence conditions, as #1808/#737
-already require.
+A stronger positive argument uses the successful composition of separated
+preparations. When two interventions have matched boundary conditions,
+independent supplies, no shared exclusion and a joint complete solution,
+their local effects can sometimes be combined. For a finite chosen list of
+targets, suppose that after any already permitted choices one can realize
+either setting of the next target, with the earlier settings preserved,
+through real sources and transmitting mechanisms. Induction on the list
+then gives every joint output. Modularity, separately verified supplies and
+observed resistance to cancellation provide defeasible reasons for this
+premise in particular mechanisms. They do not cover the spontaneous
+existence of their supplies. A rigid complete past can include a prior decree,
+resource assignment or hidden input which the observable past omits.
 
-**Claim/type self-sweep:** the prior #1399, #1874, #1809, #737 and
-#1584 results retain their exact scopes. Nothing equates a Boolean
-input, a tape or a record offset with a rigid concrete being.
-No historical attribution, new graph proposition or Lean declaration
-is introduced; the finite enumeration is not Comparator evidence.
-Local CLI and installed conventions cannot be checked in this
-connector-only checkout; independent semantic challenge and
-canonical checks must still be completed before relying on this
-checkpoint as reviewed.
+The exact weakest *outcome* condition is that the realized output map covers
+the specified target set. That condition restates joint coverage. No single
+mechanism is necessary for it. One programmable common input could suffice.
+The finite extension argument identifies sufficient conditions one can test
+without already assuming every joint outcome. For infinitely many choices,
+#1874 shows why extension to all finite lengths still leaves open whether the
+limiting complete history is admitted. There is likewise no inconsistency in
+a deterministic apparatus producing different outputs from different complete
+inputs while its law and observed past agree. Fixing its complete determining
+state as well removes that source of variation.
+
+A connected three-site example makes the distinction experimentally legible.
+An intervention flips both ends of either edge of a path. Every site can
+change and any two target bits can be assigned as desired. Yet every sequence
+preserves the parity of the three bits together. From 000 one can produce
+110, 011 and 101, but never 111. An independently licensed intervention that
+also flips one endpoint on its own changes the answer: the paired flips
+reach every state of a given parity and the extra flip moves between the
+two classes. This reuses #1088's parity coordinates and identifies the actual
+operations that preserve or break the invariant. When auditing a proposed
+intruder, asking **which conserved quantity can this agent change, by what
+coupling, and while retaining which other conditions?** is stronger than
+counting how many targets it can reach. Independent choice of paired
+interventions already holds in this example. The missing operation is a
+physically different intervention.
+
+### What survives interference with evidence?
+
+Suppose that at two times true bits are p₀,p₁ and displayed readings are
+rᵢ = pᵢ XOR bᵢ. A shared unidentified offset can reverse every *absolute*
+reading, including copies stored in memory. Opposite truths can then yield
+identical records. Yet the observed change r₀ XOR r₁ differs from the true
+change p₀ XOR p₁ exactly when the offset drifts (b₀ differs from b₁).
+For stable offset the change is recovered exactly from the two readings
+even without knowing either absolute truth. Independent calibration of the
+offset would recover the absolute reading too. Under unrestricted drift,
+every displayed pair is compatible with opposite true-change answers.
+The offset criterion is the registered Boolean identity `offsetAccuracy`. For any probability measure
+on those assignments and an accurate comparator, the error probability
+for the change equals the probability of drift. Counting possible errors
+supplies no value for that probability.
+
+This applies to an inquirer's observation, memory and reasoning only to the
+extent that the relevant causal channels are reached. A corrupted stored
+reading can affect a sound inference. If the comparator or its remembered
+output can itself be corrupted, reconstructing the result requires preserved
+records and a reliable comparison or an independent check. Truth conditions
+and logical consequence remain intact across these input/readout examples.
+A decision to act whenever the measured quantity *changes* can succeed
+through a common inversion. On the other hand, a particular agent who
+endorses an all-admitted-histories guarantee for a forecast or high-payoff
+bet and endorses that forecast or bet despite admitted indistinguishable
+contrary cases fails its **own** standard. #1808 already supplies this
+same-agent contradiction, the safe-action control and the exact required
+premises. Fallible empirical trust can appeal to tests of calibration and
+drift that have evidential independence from the challenged channel.
+Bruteness alone neither supplies a distribution nor defeats such tests.
+A failure of memory could impede access to a moral or logical reason.
+A conclusion about the existence or validity of that reason needs a
+different bridge (#932, #1734). [Practical and scientific entitlement](no-foundation-practical-collapse.md)
+
+### Matched explanations, self-application and verdict
+
+Hold fixed the question of which agents may obtain alongside the actual
+occupants, which can affect this detector, and what warrants trusting its
+records. The following answers grant each view its positive commitments.
+
+| Account | Restriction with a testable consequence | Where the explanation stops or needs a bridge |
+|---|---|---|
+| Brute contingent base with a population boundary | Conserved persistent stock or saturated capacity excludes the specified extra occupant. Genuine internal routing can remain open. | Actual stock and the boundary may be primitive. Why *these* hold remains a live question for an ultimate account. The positive restriction supplies a discriminating answer about the extra occupant while it holds. |
+| Dispositional essentialism | The very same kinds of carriers and powers require matched transfers, or an effect requires a receiver of a specific kind. | A conditional essence need never be instantiated. Excluding wider entry requires that all relevant bearers and couplings fall under the constraint. A necessary operation law can accompany a contingent distribution of powers. |
+| Humean best system | Fixing a true, exceptionless law excludes continuations in which that law is false. The actual mosaic can warrant a stable summary and allow tested, fallible prediction. | Lawhood supervenes on the full mosaic. Holding only its past fixed leaves the modal admission and comparative weight of other mosaics to a separate account. Holding the whole mosaic fixed settles the question by stipulation. |
+| Governing necessitarianism | An operative strict law excludes violations in its domain. If its efficacy and domain are essential and exhaustive, the exclusion extends to every corresponding possibility. | Necessary laws can still admit different initial populations. Full necessitarianism denies the initial brute contingency itself and supplies no witness to the negation of the conditional. An impersonal necessary bearer still needs the relevant actual power. |
+| Classical theism | Universal giving of creaturely existence by the same source excludes any *unreceived* created entrant. A free, received intervention might produce exactly the same display. | One must establish that every candidate other than the source receives existence, and account for the particular order, its stability and finite knowers' access. Fixing a specific effective decree can settle an outcome that fixing divine nature alone leaves open. |
+
+If a governing constraint is contingent, it can exclude an entry in every
+world where it holds even if its actuality is brute. Asking why it holds
+tests **completeness of explanation**. It cannot make a forbidden continuation
+satisfy the constraint. If the constraint is a necessary conditional, its own
+contingency has not been established. One may still ask why this contingent
+stock or instance obtains. Apply that demand equally to the particular
+divine selection, the impersonal source and the brute base. A view requiring
+adequate reasons for every contingent fact must include its contingent
+selection in that policy. A PSR for contingent *beings* needs a further bridge
+to cover law propositions or acts. A nonnecessitating rationale can count as
+adequate on any side only under the same standard. A policy of demanding a
+reason only when the critic's genuinely relevant feature is present can pass
+self-application. Exempting just its preferred occupant while retaining the
+universal demand for matching cases cannot. [Symmetric exemption test](psr-self-application-756.md)
+
+**Provisional verdict.** High confidence that unrestricted insertion and
+arbitrary empirical control fail as consequences of admitting a brute
+contingent existent under the common premises. The capacity-one survivor
+grants even the *individual eligibility* of the proposed late entrant.
+Moderate confidence that symmetry and successful modular intervention
+support limited local recombination where background resources and
+boundaries are independently understood. The applicability of unreceived
+onset to real agents remains open. The strongest surviving reductio is
+against a view that both professes an exhaustive demand for reasons or a
+strict guarantee for a target and demonstrably violates that very demand.
+The strongest objection to restricted bruteness is the need to justify the
+scope of its restriction against new kinds and to account for its own actual
+instantiation if it promises an ultimate explanation. Neither side earns an
+unconditional possibility or impossibility of an actual unreceived intruder
+from comparative explanatory pressure alone.
+
+For the God-existence stage, the local reason-token PSR `608a262d` and
+B2 retain their existing route through the necessity step. The stable
+countermodel bears directly on the rival to the former. The reason-token route to B2 additionally
+needs BX1 (the reason concerns someone else) and BX2 (that other being
+causes the contingent being’s esse). To infer necessity of the first mover,
+B3 makes the cause prior and B1 rules out a distinct prior being. In C2 a different possible occupant cannot
+witness the actual foundation's absence unless that very individual is
+absent there. Making absence possible also differs from producing a change
+in it. The same-individual route `e5d49f99` retains its prior premises.
+#735/#736's whole-order account and #737's `e519065f` about epistemic
+necessity exceed the conditions for this detector or a #312 reason token.
+The new tests supply comparative evidence without discharging a root
+premise. [C2 necessity route and interpretation](contingency-receptivity-c2.md)
+
+**Conditions for revision.** Toward wider propagation, give independent
+warrant for an unreceived onset and a repeatable joint composition of its
+origins and exercises, including a coupling that breaks the identified
+invariant without altering the retained background. Toward an unconditional
+ban, establish exhaustiveness for all possible entrants, either from the
+constitutive kinds and population relations or from universal receipt of
+existence. To turn either result into a threat to actual inference, show
+that the very evidence or comparator needed is exposed and address the
+rival's own calibration and entitlement standard. The three-site and
+population models settle the shared-premise inference; they cannot
+adjudicate those stronger, incompatible metaphysical commitments by
+stipulating a new space of worlds.
