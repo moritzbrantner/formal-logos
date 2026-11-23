@@ -137,9 +137,11 @@ def EntirelyBorrowedRule (p : Profile B P R)
     (rule : (B → Prop) → B → Prop) : Prop :=
   ∀ state x, rule state x → ∃ c, ActualEsseCause p c x ∧ state c
 
-/-- A rule with an explicit exception for independently supplied inputs.
-The direction is only necessary, not sufficient: being a seed does not
-by itself make a bearer active in an assignment. -/
+/-- A rule with an unconstrained, seed-labelled activation exception to
+supplier borrowing. A seed is not *yet* an independent existent or r-root:
+that interpretation requires the separate SeedIsActualEsseRoot bridge.
+The direction is necessary, not sufficient: labelling an input as a seed
+does not by itself activate a bearer in an assignment. -/
 def SeedOrBorrowedRule (p : Profile B P R)
     (seed : B → Prop) (rule : (B → Prop) → B → Prop) : Prop :=
   ∀ state x, rule state x →
