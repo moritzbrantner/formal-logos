@@ -443,7 +443,9 @@ about P on the shared premises.
 [groups and whole worlds](#what-can-a-group-or-a-whole-world-show-that-one-creature-cannot),
 [the cumulative assessment](#when-do-adverse-consequences-count-against-possible-absence)
 and [the comparison with infinite regress](#what-does-possible-absence-have-in-common-with-an-infinite-regress).
-The regress comparison gives a reason to reject a defense in which
+The [comparison of exemptions](#which-beings-could-be-exceptions-to-the-demand-for-a-cause)
+shows when accepting an uncaused contingent foundation removes an objection
+to a rival. The regress comparison gives a reason to reject a defense in which
 every argument for an omission derives its warrant from another assumed
 omission. Independent evidence of an admissible order incompatible with
 n would answer that objection. The [argument from contingent dependence](#does-being-contingent-mean-being-contingent-upon-something) explains where a demand for a determining reason can support necessity and where it needs a further premise about dependence.
@@ -1875,6 +1877,101 @@ warranted absence would instead imply impossibility. Neither choice of
 possibility is licensed by the rule alone.
 [Possibility-to-necessity proof and reverse direction](../../TruthCore/Results/Modal/NecessaryIfExistent/Solution.lean)
 and [scope controls](../../corpus/results/NECESSARY-IF-EXISTENT-CONTROLS.json).
+
+#### Which beings could be exceptions to the demand for a cause?
+
+Suppose someone grants that a concrete being could exist contingently
+without a cause. They have given up *contingency alone* as a sufficient
+reason to demand a cause in every admissible case. A merely possible
+exception challenges the unrestricted modal rule. Refuting the corpus
+principle about all contingents *here* requires an actual counterinstance.
+One can also keep asking about a cause without assuming that there is one. If they still rule out an
+uncaused personal foundation while admitting an uncaused impersonal one,
+what difference bears on **the existence of the bearer**? A similar question
+arises for someone who allows a personal foundation to be underived and
+rules out an impersonal one. Even without a cause or a nature that guarantees
+existence, a thing could have a noncausal explanation. If an external
+noncausal condition necessarily obtained and sufficed for its existence,
+that thing could even be necessary through another. The comparison below
+grants genuine possible absence as well. Calling the thing wholly
+unexplained would make a still stronger claim.
+
+**A restriction with some warrant.** When a proposed difference does
+the explanatory work, we should be able to say why it makes a cause or
+ground indispensable and apply that reason wherever the relevant
+difference recurs. Try changing which candidate has the feature while
+keeping the question fixed. If the evidence of dependence moved to the
+other candidate, this particular objection would move with it. Other
+reasons could still favor the original verdict. The justification is simple: if all the facts
+cited as reasons would license the opposite classification equally well,
+those reasons have supplied no basis for the choice. There may be
+additional evidence or a genuine primitive difference. We need not first
+assume that every fact has an explanation to identify what an offered
+argument warrants. The existing parity result concerns a stance that
+requires a reason for one fact, applies that requirement uniformly on a
+feature the two facts share, and claims to meet the requirement. It
+cannot then accept the other fact as wholly unexplained. Applying this
+test to a demand for a *cause* uses the stated causal standard in the
+same way. A demand for a reason alone never specifies a concrete giver.
+[Existing feature-relative parity result](../../corpus/results/6e7f5afd-4d72-466d-bba0-b9eead60d2d2.json)
+and [brute contingency and parity](psr-self-application-756.md#the-parity-argument-owner-direction-refined-2026-11-23).
+
+An echo is a case where we can draw a line. Time a pulse and its return,
+move the reflecting surface, and the return is delayed by the added trip.
+Absorbing the pulse removes the return. Those checks give us a reason to
+classify this particular sound as a reflection. The dependence concerns
+the production of this acoustic event. An uncaused sound with
+the same waveform would not be an echo of that pulse. This explains why
+accepting the possibility of a brute foundation does not commit anyone
+to brute echoes. It supplies no reason to classify a fundamental field
+or a simple mind as a reflection or a derivative being.
+
+There is also a defensible place to stop *some* causal questions. A
+physical theory that takes a first state as boundary data and successfully
+derives later states has a principled reason to stop that temporal
+derivation at the boundary. A model's first state can leave open whether
+there was a wider physical prehistory. If it really was the first instant,
+there is no earlier event. A genuinely atemporal source also has no
+temporally earlier producer, since it has no time against which to order
+one. In neither case has temporal reasoning settled why the bearer exists. Evidence that
+the physical theory describes the actual history well can favor belief
+in its physical subject even while this question remains open. If there
+is less evidence for a divine subject, an atheist can withhold belief
+in it consistently. For the same reason, if attributing independent
+agency to a source explained some evidence better, its lack of an earlier
+producer would not cancel that advantage. Neither evidential comparison
+establishes that only one kind of subject could be uncaused.
+
+A stronger physicalist objection would establish that agency as such
+requires realization in a distinct system on which the agent itself
+depends for existence. That would bear directly on an underived personal
+source. Showing that a particular human action requires a functioning
+brain establishes a narrower claim about an operation. In the other
+direction, a theist could give reason to think a particular cosmos must
+receive existence from constituents or a giver. Its having parts alone
+leaves open the monist's proposal that the whole is basic and the parts
+depend on it. If independently warranted constitutive dependence were
+established for either candidate, it would exclude *that* bearer from
+being entirely underived. Saying that the classical God is necessary by
+definition leaves the identification of this actual foundation with that
+God to be established.
+[Mind and realization](mind-physicalism-fork-419.md),
+[material priority and its domain](priority-monism-framework.md)
+and [the comparison with a physical foundation](physical-ground-468.md).
+
+**What this buys for C2.** A view may take an unequal distribution of
+uncaused beings as primitive. It then accepts that its general principle
+leaves that particular asymmetry unexplained. Alternatively it can supply
+a relevant difference, allow the same exemption in both cases, or renew
+the demand for both. Equal treatment under one objection does not fix
+the candidates' relative credibility or establish either one's possibility.
+A genuine uncaused contingent composite could even retain the receptive
+disjunct of C2. To settle C2 for n we need to reach the particular simple,
+unreceived bearer. I have high confidence that the bare refusal of a
+cause cannot consistently serve as a categorical objection on just one
+side when that is the very feature both sides grant. The gain is a
+restriction on arbitrary exclusions. My verdict about this individual's
+necessity remains open.
 
 **Assessment.** The regress comparison strengthens the objection to two
 specific defenses of P: passing existential receipt on without addressing
