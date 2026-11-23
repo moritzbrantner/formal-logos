@@ -2,7 +2,7 @@
   "id": "90353211-7e2e-47cb-bbab-3e0bef36d077",
   "label": "EXISTENCE_IN_ESSENCE_1: that x exists is contained in a concept of x (conceptual containment)",
   "term": "existence belongs to the essence, conceptual containment (EXISTENCE_IN_ESSENCE_1)",
-  "definition": "ConceptContainsExistence F Contains x := ConceptContent Contains x (fun v => ExistsAt v x): the proposition true exactly at the points where x exists is a determination contained in the supplied concept of x (DEF 16c40fbe-8a86-464a-a868-384103e11304). The target of Kant's thesis that existence is not a real predicate, and the step of the ontological argument from a concept to existence.",
+  "definition": "ConceptContainsExistence F C x := ConceptContent C x (fun v => ExistsAt v x): the proposition true exactly at the points where x exists is a determination contained in the concept C of x (C a value of the type ConceptRelation, distinct from the essence relation, so this sense is not definitionally the essential-truth sense EXISTENCE_IN_ESSENCE_2) (DEF 16c40fbe-8a86-464a-a868-384103e11304). The target of Kant's thesis that existence is not a real predicate, and the step of the ontological argument from a concept to existence.",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Ontology.ExistenceInEssence.ConceptContainsExistence",
   "note": "Stipulated for #1887. Sense EXISTENCE_IN_ESSENCE_1 of the disambiguation f704b7ca-b455-4da7-a757-b0564fe76b3b. It concerns a concept, not a nature: it reaches essential truth (EXISTENCE_IN_ESSENCE_2) only through concept adequacy, and act identity (EXISTENCE_IN_ESSENCE_3) only through the identity-to-concept bridge (controls of docs/notes/existence-in-essence-identity.md, laws 2-4)."

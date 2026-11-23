@@ -15,7 +15,7 @@ open TruthCore.Modal.ModalGrounding (EssentialTruth EntailsExistence EssenceGrou
   EsseEssenceIsEssentialExistence ExistenceConditionalEssences EssentialExclusionAccount
   FoundationalExistenceUnrequiredByOthers FoundationalBeingsContingentAt FoundationalAt)
 open TruthCore.Modal.ModalGrounding.Model (frameOn toTrue univ bothHere bothContingent lockedF
-  fEssentialExistence noEssence otherRequiresF FoundationalF onlyFHere)
+  fEssentialExistence noEssence otherRequiresF FoundationalF onlyFHere Pt ptEx gCausesC gPriorC)
 open TruthCore.Causality.FirstMoverNecessity.Model (noCause noPrior receivedNone esseTrue
   essenceByBeing noneHolds xContingent)
 open TruthCore.Causality.ContingencyGrounding.Model (heatFail noPower)
@@ -45,9 +45,10 @@ essence plays no role. -/
 theorem kantAdequacyFoundationalContingent {W B T R P : Type}
     (F : CausalityFrame W B T R) (w : W) (essenceOf esseOf : B → P) (Received : B → P → Prop)
     (ComposedOfMatterAndForm : B → Prop) (CanFailToBe : B → R → Prop)
-    (PowerOver : B → B → R → Prop) (Contains Essential : B → (W → Prop) → Prop)
-    (hKT : ExistenceNotConceptual F Contains)
-    (hAdeq : ConceptAdequateToEssence Contains Essential)
+    (PowerOver : B → B → R → Prop) (C : ConceptRelation W B)
+    (Essential : B → (W → Prop) → Prop)
+    (hKT : ExistenceNotConceptual F C)
+    (hAdeq : ConceptAdequateToEssence C Essential)
     (hEPP : EssentialExclusionAccount F w Essential)
     (hOthers : FoundationalExistenceUnrequiredByOthers F w essenceOf esseOf Received
       ComposedOfMatterAndForm CanFailToBe PowerOver Essential) :
@@ -65,14 +66,16 @@ macro "eie_unfold" : tactic => `(tactic|
     EssentialExclusionAccount, FoundationalExistenceUnrequiredByOthers, EssentialTruth,
     ConceptContent, EsseExercisedAt, ConceptContainsExistence, EssentialExistence,
     EsseIsEssence, NatureEntailsExistence, ExistenceNotConceptual, ConceptAdequateToEssence,
-    IdentityInConcept, EsseExercisedWhereExists, IdentityPutsExerciseInNature, PowerOverEsse,
-    IsFirstBeing, IncorruptibleSimply, NecessaryAt, ContingentAt, kantFrame, requiredFrame,
-    effectConcept, exercisedHere, exercisedEverywhere, conditionalExercise, everywhereExercise,
-    bothContingent, lockedF, frameOn, toTrue, univ, bothHere, onlyFHere, xContingent,
-    fEssentialExistence, noEssence, otherRequiresF, noCause, noPrior, receivedNone, esseTrue,
-    essenceByBeing, noneHolds, heatFail, noPower])
+    ConceptualNecessityConditional, IdentityInConcept, EsseExercisedWhereExists,
+    IdentityPutsExerciseInNature, PowerOverEsse, IsFirstBeing, IncorruptibleSimply, NecessaryAt,
+    ContingentAt, kantFrame, kaAccess, requiredFrame, effectConcept, adequateConcept,
+    emptyConcept, exercisedBy, exercisedEverywhere, conditionalExercise, everywhereExercise,
+    esseOfB, essenceOfB, receivedNoneP, bothContingent, lockedF, frameOn, toTrue, univ,
+    bothHere, onlyFHere, xContingent, ptEx, gCausesC, gPriorC, fEssentialExistence, noEssence,
+    otherRequiresF, noCause, noPrior, receivedNone, esseTrue, essenceByBeing, noneHolds,
+    heatFail, noPower])
 
-/-- Closes the goals `simp` leaves over predicates `φ : Bool → Prop`: universal
+/-- Closes the goals `simp` leaves over predicates `φ` on points: universal
 ones by `simp_all`, function (in)equalities by evaluation at a point,
 existential ones with the witness "true exactly at point `true`". -/
 macro "eie_finish" : tactic => `(tactic| first
@@ -80,10 +83,13 @@ macro "eie_finish" : tactic => `(tactic| first
   | (intros; simp_all; done)
   | (intro h; have h' := congrFun h false; simp at h'; done)
   | (intro h; have h' := congrFun h true; simp at h'; done)
+  | (intro h; have h' := congrFun h Pt.c; simp at h'; done)
+  | (intro h; have h' := congrFun h Pt.a; simp at h'; done)
   | (exact ⟨fun v => v = true, by simp⟩))
 
 macro "eie_bool" : tactic => `(tactic|
-  (eie_unfold <;> simp [Bool.forall_bool, Bool.exists_bool] <;> eie_finish))
+  (eie_unfold <;> simp [Bool.forall_bool, Bool.exists_bool, pt_forall, pt_exists] <;>
+    eie_finish))
 
 theorem controls : Controls := by
   sorry
