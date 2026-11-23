@@ -1,0 +1,14 @@
+{
+  "id": "80f7bf12-c4ed-437d-b1b7-4b2542607372",
+  "label": "B2 from a local existence PSR for contingents and two reason bridges (inference)",
+  "input_statement_ids": [
+    "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+    "6c6191dc-082d-4417-b675-b32d4fab4573",
+    "0e44041e-4591-4aad-857a-f6748032f142"
+  ],
+  "output_statement_id": "8a8d00e9-12b6-4cf0-b662-431cc4addd49",
+  "rule": "Instantiate the existence PSR, then the two reason bridges at its reason",
+  "meaning": "A being x contingent at w has some reason r for its existence at w (local existence PSR for contingents). By BX1 the being r is about is not x; by BX2 that other being causes x's esse. So x has a distinct CAUSE_2 of its esse. The #312 tokens sit on the frame's own existence, and BX2's cause is the frame's CausesIn at esse, so the conclusion is B2 on the same frame. It splits B2 into a reason-coverage half, which the brute-contingency rival denies, and a reason-to-cause half (BX1, BX2), which a rival with non-causal reasons for contingent existence would deny.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

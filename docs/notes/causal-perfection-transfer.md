@@ -1995,3 +1995,171 @@ changes a recorded formal status.
   support candidate for intrinsic wisdom" than bare causal production. This is
   an influential judgment that has not had its own challenge; it is recorded
   here and must not be relied on until reviewed.
+
+
+## Intentional exemplars and possessed-good response (2026-11-23; stacked on #1866)
+
+**Destination and scope.** The user-selected next question remains whether the
+same necessary first source intrinsically understands, rather than merely
+producing intellectual creatures. Merged #1855's formal/eminent containment and
+draft #1866's intrinsic-self-knowledge result are reused unchanged. The new
+Lean-only sibling `IntentionalExemplarExtension` examines what follows *if*
+#1866's actual, content-indexed `IntrinsicSelfKnowledge(g)` obtains. It does not
+establish any #1866 bridge, the GOD_4 witness, or a new registered graph edge.
+The present draft requires #1866 first and its independent semantic challenge.
+
+**A stronger productive-only test.** In the joint two-world/two-being Bool interpretation
+`true` is the **necessary actual root** of the fixed profile at world `true`,
+exists in both worlds, is pure act, and is a CAUSE_2/esse source of the
+actual grounded secondary `false`. The profile shares a single
+`CausalityFrame` with the same causal edge as the upstream #1866 control. The effect
+`false` now genuinely `Apprehends(false,false)` and is
+`CognitivelyGrounded(false,false)`, rather than only being labelled
+`HasIntellect(false)` as in #1866. Its `reading(state,interference)` tracks
+a changing target, responds to that reading, and exhibits both true and
+erroneous reports when interference changes. The very same source possesses
+the stipulated whole-being wisdom determination but apprehends no content.
+This explicitly repairs the narrow missing-commitment warning in #1866's
+productive-only control. **Limits:** the effect's intentional grounding remains
+primitive, functional readings are not a theory of conscious/rational uptake,
+and these are joint finite predicate assignments, *not* a metaphysically
+admissible impersonal first cause. A genuine substantive impersonal account may
+grant real understanding to secondary agents, not only a correct sensor.
+
+**New positive *conditional* connection, retaining one witness.**
+`TruthCore.Results.Causality.IntentionalExemplarExtension.
+understandsCausedEffectsFromSelfAndExemplars` composes:
+
+1. `IntrinsicSelfKnowledge About Correct Apprehends Grounded g`, supplied
+   conditionally by draft #1866's
+   `actualRootSelfKnowledgeFromWisdom` at that *same* `ActualRoot m w g`.
+2. **OPEN** `RootToEsseCauseAt F m w`: translates only actual concrete
+   grounding by this selected root in `m.grounds w` into `F.CausesIn` at
+   `F.esse`, and carries actual existence from `m` into `F.history.ontic`.
+   The two causal/grounding relations are not definitionally identical.
+3. **OPEN** `EffectExemplarCoverage`: for each actual effect `x` of this
+   `g` in this shared frame/world and a **correct** about-`g` self-content,
+   an exemplar specification identifies
+   a *correct content about x*. This is an ontological/intelligible specification,
+   not automatically an act of thought. Causation does not imply it.
+4. **OPEN** `CognitivelyTakesUpExemplar`: this same g's grounded apprehension
+   of the self-content genuinely extends to the specified content. A rule for
+   emitting a true proposition does not provide this bridge.
+
+The Lean conclusion is actual grounded apprehension by **g** of correct
+content about each **existing actual x with `F.CausesIn g x F.esse`**.
+The additional `necessaryRootUnderstandsGroundedEffects` theorem returns
+**the same** `ActualRoot m w g` and `NecessaryAt m.ontic w g`, plus
+knowledge of the actually grounded concrete effects at this world, provided
+the OPEN relation/actuality adapter is accepted. There is no knowledge of all
+possible effects or of actual uncaused beings, and no assumption that a
+productive power is itself intentional. The proof takes one content witness
+for self and explicitly constructs another for each effect; under the
+separate single-referent `About` interpretation,
+`otherBeingNeedsOtherContent` shows the contents must be distinct when
+`g ≠ x`. This avoids equivocating between knowledge of an intrinsic source
+form, a true specification of an effect and knowledge of the effect itself.
+
+**Independent omission assignments.** The same selected actual root,
+its modal necessity, ground-to-CAUSE_2 calibration, coherent temporal
+history and actual cognitive secondary effect remain populated: without
+exemplar coverage there is no effect-knowledge, and with true specifications
+but no cognitive uptake there is still no effect-knowledge. With both bridges
+there is grounded knowledge of the effect at the same source. This is a
+finite non-entailment/control for the stated syntax, not an objection that
+fully specified divine exemplary knowledge is incoherent.
+
+**Toward will, without manufacturing choice.**
+`possessedGoodRestFromSameSource` specializes the existing
+`PossessionSensitiveAppetite` model of q.19: for that same g,
+`OwnGood(g)` plus its actual self-knowledge and the **OPEN**
+`SelfKnownGoodIsRepresented` bridge make the possessed good represented.
+The existing **OPEN** `Calibration` and `Availability` give an available,
+positively ranked `retain` response, not the seeking of a missing good.
+Neither this response nor `IntrinsicSelfKnowledge` entails the old `HasWill`
+without the independently open recognition of intellectual appetite. The
+already certified `LocalTeleologyGodIntellect.godHasWill` consumes
+`WillFollowsIntellectReading` and any supported `GodHasIntellect`, with a
+separate GOD_4 existence witness. Actual willing, selected outcomes, free
+creation and willing others' good require additional content-sensitive
+adoption and selection premises; a pure act does not automatically output
+every possible effect.
+
+**Cumulative graph and competing support.** Current conditional spine:
+`ActualRoot m w g` + `NecessaryAt m.ontic w g` + subsistent esse + pure wisdom +
+**`PureAct InPotency g`** + #1866's three OPEN self-understanding bridges → `IntrinsicSelfKnowledge(g)` →
+[OPEN `RootToEsseCauseAt F m w` + OPEN correct-self-content exemplar coverage +
+OPEN cognitive uptake] →
+`UnderstandsActualEffects(g)`; in parallel
+`IntrinsicSelfKnowledge(g)` + `OwnGood(g)` +
+[OPEN known-good representation, calibration, availability] →
+`RestCapacity(g)`. The unchanged
+`29818edd` GodHasIntellect capacity endpoint also needs its explicit
+recognition; then `090be689` WillFollowsIntellect feeds `66aecdd7`
+GodHasWill, and GOD_4 existence `8626f8a5` is separately required.
+This is a connected *research plan* and code-level conditional, **not**
+a newly registered support route.
+
+The immateriality/q.14 route takes an altogether-immaterial subject to
+intellect via `ImmaterialIsIntellectualReading`; local teleology needs an
+intellectual governor *identical to* the first-mover/GOD_4 maximum; moral
+governance needs the source's *own* practical understanding and end-adoption,
+rather than a norm's intelligibility. All differ from exemplar-intentional
+uptake and retain their shared source-identification and substantive
+intellectual-recognition burdens. The first source's causal production
+of intelligent creatures counts once, not as independent evidence for each
+route. Compare the strongest positive impersonal alternative from
+`intentionality-943.md`, `form-selection-1380.md`,
+`mind-physicalism-fork-419.md`: an underived nonrepresenting source with
+law-governed secondary beings exhibiting content-sensitive learning and
+actual cognition. It supplies a positive local explanation; it does not by
+itself establish or deny intrinsic pure wisdom of the ultimate source.
+
+**Overall provisional assessment (initial independent challenge repaired;
+final-head re-review pending).**
+This strengthens the exact diagnostic comparison because the produced
+effect is genuinely cognitive under the selected predicates and the
+self-to-other move uses two testable, distinct bridges. It does **not**
+raise the philosophical establishment of `IntrinsicSelfKnowledge`,
+`HasIntellect` or `HasWill`: substantive self-directed intentional
+grounding, actual-source exemplar uptake and known-good inclination remain
+open. Upward revision requires a noncircular account of intrinsic
+norm-responsive cognition and why subsistent wisdom supplies it; a
+source-intrinsic exemplar with discriminating content and a warranted
+nonpassive uptake rule would then be cumulative positive support.
+Downward revision follows from an equally substantive account of that
+pure perfection in a wholly impersonal source, or a successful challenge to
+the wisdom-as-pure-perfection / cognitive-basing readings. A model assigning
+the same outputs under both readings cannot decide the issue.
+
+**Verification/registration boundary.** No source claim, definition record,
+existing statement meaning, frozen Challenge, result binding, or root
+argument is changed. These are Lean helper theorems and structural controls;
+the corpus attempt documents a provisional blocked research step. Exact
+premise delta: expected none (CI's computed `truth frontier-diff` is
+authoritative). Claim/type self-sweep: `g` retains the original actual-root
+witness, `x` ranges only over actual-world effects using the same
+`F.history.ontic.ExistsAt w` and `F.CausesIn` at `F.esse`
+shared with other causal/grades routes. Their relation to the distinct
+`m.grounds w` is **OPEN** as `RootToEsseCauseAt`, and the same
+content semantics and cognitive subject `g` are used in specification,
+uptake and conclusion. The separate source is never identified
+with the cognizing effect. Pending final-head Lean/CI, binding and
+Comparator/NanoDa (only if needed), and an **independent** semantic challenge.
+
+**Independent semantic challenge repairs (#1873).** Initial review at
+`497a335` found three P1 issues: (1) free `Actual` and `Causes`
+parameters broke the repository's shared-causal-frame requirement;
+(2) exemplar coverage over all about-source contents was stronger than
+coverage of the source's *correct* self-contents; (3) the printed
+cumulative spine omitted pure actuality at the same source. The revised
+vocabulary now uses `CausalityFrame` with `F.CausesIn g x F.esse` and
+`F.history.ontic.ExistsAt w x`, and the actual-root specialization
+requires explicit one-way `RootToEsseCauseAt F m w`. Coverage now takes
+`Correct self g` and the proof passes the correct-self witness. The
+cumulative spine visibly includes `PureAct InPotency g`. The finite
+control now has an actual necessary root and real selected-ground edge
+at the fixed world, as well as the genuinely apprehending effect.
+The OPEN root/frame identification and philosophical reading of cognition
+are still unresolved; no stronger existential or attribute conclusion
+is published before final-head CI and an independent re-challenge.

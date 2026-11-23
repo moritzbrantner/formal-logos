@@ -10,6 +10,7 @@ public import TruthCore.Explanation.AutonomousGroundConcrete
 public import TruthCore.Explanation.AutonomousGroundNecessity
 public import TruthCore.Explanation.BCCFDerivative
 public import TruthCore.Explanation.BorrowedExercise
+public import TruthCore.Explanation.BruteContingencyParity
 public import TruthCore.Explanation.CompleteResponseParity
 public import TruthCore.Explanation.CondensationSufficiency
 public import TruthCore.Explanation.ConservativeReasonExpansion

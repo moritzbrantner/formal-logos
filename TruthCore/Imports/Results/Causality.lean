@@ -58,6 +58,7 @@ public import TruthCore.Results.Causality.CogitoNecessaryConcrete.Solution
 public import TruthCore.Results.Causality.ComingToBeHorns.Solution
 public import TruthCore.Results.Causality.CommonPriority.ContingentGround.Solution
 public import TruthCore.Results.Causality.CommonPriority.Solution
+public import TruthCore.Results.Causality.CompactOperationCount.Solution
 public import TruthCore.Results.Causality.CompleteCauseContributorCover.Solution
 public import TruthCore.Results.Causality.CompleteCauseSourceUniqueness.Solution
 public import TruthCore.Results.Causality.CompleteCauseUnderivedSource.Solution
@@ -194,6 +195,7 @@ public import TruthCore.Results.Causality.IndexedSignalReaper.Solution
 public import TruthCore.Results.Causality.InertEmptiness.Solution
 public import TruthCore.Results.Causality.InfiniteLocalTransmission.Solution
 public import TruthCore.Results.Causality.IntellectualInclination.Solution
+public import TruthCore.Results.Causality.IntentionalExemplarExtension.Solution
 public import TruthCore.Results.Causality.InterventionTransitivity.Solution
 public import TruthCore.Results.Causality.JointGroups.Solution
 public import TruthCore.Results.Causality.LifeBoundaryPotency.Solution

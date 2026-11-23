@@ -1,0 +1,23 @@
+{
+  "id": "13c05b6d-e2ea-4f1c-91b0-1a498199e1c5",
+  "label": "Brute-existence parity: symmetric demand, comparison of explanations, stances bound",
+  "paraphrase": "Premise-free laws and finite models (logical boundaries; no stance is attributed to anyone). Laws: a stance that requires a reason why for t, meets its demand and accepts a brute contingent truth o is not uniform on t and o, selective (#756) relative to every feature on which they agree and restricted relative to every feature on which they differ; no stance meets a necessitating demand for an accepted contingent fact all of whose reasons are true at every accessible world; and, for both sides alike, factive reasons that are well-founded at a world with some truth leave some truth there without a reason (#746 second core), so a picture with no unexplained existent needs reasons that are not well-founded there: a self-reason, a circle or an infinite chain; in the scene, a self-reason. Circles and an endless regress of contingents, each explained by its predecessor (#746 cofinite), are not scene pictures (named gap, with the whole-series question of the #755 collapse core and attempt a5958e25). Scene-relative tallies at the reading world, listing exactly the unexplained existents (they rank nothing by themselves: a bare preference for fewer unexplained facts favours copying reasons, the #746 count control; a ranking needs an open comparative principle such as the #750 adequacy norm): many diverse brute contingents (the atom and the star), one brute contingent initial state, one unreasoned necessary physical base and one unreasoned God (one each; a necessary fact with no reason is unreasoned, not brute, DISAMB-BRUTE-TERMINAL-UNREASONED), and none for a necessary physical base or God whose existence has a self-reason ('by its own nature'); counting only necessitating reasons, the last two each leave the contingent initial state (the free choice or indeterministic output), and the unreasoned-terminus pictures leave the terminus and the initial state. The four pictures with an unexplained existent have factive, well-founded reasons; the two with none are factive and contingent-irreflexive with a self-reason, so not well-founded, and their lists agree with God and the base exchanged. Evidence is not explanation: an observation supports that the initial state exists while it has no reason why it exists, and the evidential stance meets its epistemic demand and still holds it as a brute contingent truth. Readings: with God posited as unreasoned, God's existence and the initial state's agree on the reason-status feature; with God's existence self-explained, they differ. Symmetric binding, through the stronger sibling conclusion: a naturalist (target God) and a theist (target the initial state) each satisfy P1-P3 in the reason-status feature, and neither can accept an unreasoned existent, the initial state or God respectively; for the necessary God the weaker brute-rival conclusion holds only vacuously. The naturalist requiring reasons why for all it accepts meets its demand with the self-explained base and not with the unreasoned base. A stance requiring a reason why for God only holds the rival, is uniform in idleness and not in the reason-status feature, so it is bound exactly when its ground for rejecting God is the reason status. Deletions: without P1 (evidential and symmetric stances), without P2 (idleness), without P3, without meeting the demand, without bruteness. The theist meets its demand with some reason and fails it with necessitating reasons; its self-reason counts under contingent irreflexivity only while God is not contingent. Same witness: in the arena of the brute first-mover frame, the First Way's mover's existence is a brute contingent truth.",
+  "lean_declaration": "TruthCore.Explanation.BruteContingencyParity.ParityMap",
+  "definition_ids": [
+    "d0f8d6b9-8086-4bf7-95e1-46bb74d76398",
+    "a17def9d-5354-4510-8a2e-34436ff486d4",
+    "80a258e8-3837-5a70-b63e-15f1920ed02b",
+    "18c03398-75c1-5903-90a9-ba0d901b64ab",
+    "fad6a806-713b-5318-8309-488af704d614",
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "179d4557-bda1-59c4-938a-b91e9974a27f",
+    "3055e6f1-5de7-5c32-9b6f-d023d0c82025",
+    "6c7d2b21-8446-5e8c-bb10-ef1a58a8d735",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d"
+  ],
+  "disambiguation_ids": [
+    "a61d3807-50e9-595e-9011-9123fd606a4b",
+    "13843b8b-4ef3-500e-949d-27e78b9dfaf9",
+    "7aba7955-aa37-5b08-a170-8420d6142d78"
+  ]
+}

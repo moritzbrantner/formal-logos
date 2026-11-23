@@ -1,0 +1,13 @@
+{
+  "id": "eac2d3b9-b08f-4400-909b-a160df54da78",
+  "label": "Locally finite indexed operations are finite within each compact real-time interval",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "f7339c08-e291-482b-af00-a0b74a1f3273",
+  "inference_ids": [
+    "b6c7a7b5-f2a3-47e5-8018-b6b10aa75daa"
+  ],
+  "meaning": "Premise-free **conditional mathematical theorem**: if a specified indexed family of operation times is locally finite at every real point, then its occurrences within any real compact interval are finite. The hypothesis remains an explicit antecedent in the theorem, and the mathematical proof neither establishes its physical applicability nor excludes infinite temporal ancestry outside compact intervals. The registered conclusion clarifies the SU-REAL finite-time physical-operation question; transferring it to the open per se causal-regress obligation in #310/#311 requires a separate same-relation and same-identity bridge.",
+  "definition_ids": [
+    "2d94381e-1133-4e5b-9841-0dee609aca01"
+  ]
+}

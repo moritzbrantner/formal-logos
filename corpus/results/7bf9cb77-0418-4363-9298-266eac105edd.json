@@ -1,0 +1,11 @@
+{
+  "id": "7bf9cb77-0418-4363-9298-266eac105edd",
+  "label": "B2 from a local existence PSR for contingents and two reason bridges",
+  "argument_id": "a8823bd2-a474-4aeb-be9d-1a68fab09c0c",
+  "challenge_module": "TruthCore.Results.Explanation.BruteContingencyParity.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.BruteContingencyParity.Solution",
+  "theorem": "TruthCore.Results.Explanation.BruteContingencyParity.esseCauseFromExistenceReasons",
+  "comparator_config": "results/7bf9cb77-0418-4363-9298-266eac105edd/comparator.json",
+  "status": "solution-present",
+  "description": "Support option for B2 from the PSR family on the shared frame. Not a transcription: no premise mentions esse-causes of contingents as such; the conclusion composes coverage by reasons with two bridges about reasons. Each premise is needed (controls, models 1-3) and the bundle is satisfiable nonvacuously (model 4). B2 gives neither the existence PSR nor BX1 (models 5-6). Establishes no premise."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "6e7f5afd-4d72-466d-bba0-b9eead60d2d2",
+  "label": "Parity: a feature-uniform demand for a reason why excludes a brute contingent truth",
+  "argument_id": "e18d19fd-1eb5-4f58-90ab-ede3ebfa7365",
+  "challenge_module": "TruthCore.Results.Explanation.BruteContingencyParity.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.BruteContingencyParity.Solution",
+  "theorem": "TruthCore.Results.Explanation.BruteContingencyParity.parity",
+  "comparator_config": "results/6e7f5afd-4d72-466d-bba0-b9eead60d2d2/comparator.json",
+  "status": "solution-present",
+  "description": "The parity argument, brute-contingent form: a stance-level consistency result. Valid by a short derivation (the demand is transferred by uniformity, then met); all its weight is on P1-P3. It lowers the standing of the brute-contingency rival only for stances holding all three; it is not support for B2. Each member of the bundle is deleted by a named stance in the parity map. Establishes no premise."
+}

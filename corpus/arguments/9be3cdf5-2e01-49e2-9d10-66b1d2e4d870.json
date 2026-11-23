@@ -1,0 +1,34 @@
+{
+  "id": "9be3cdf5-2e01-49e2-9d10-66b1d2e4d870",
+  "label": "B2 support options and brute-contingency rival controls checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "03f548c1-4929-4d6e-824f-a8c8f18f02c3",
+  "inference_ids": [
+    "834b5063-8a7f-4d41-905a-10bb72344bb6"
+  ],
+  "meaning": "Premise-free laws: each new support bundle gives B2, the local existence PSR gives its contingent-only form, the rival excludes B2 and each bundle, BX1 makes an own-nature reason token exclude contingency, BX1 for the essence-esse own-nature model is exactly B6 at w, and the arena form of the rival. Then ten finite models on the existing first-mover frames: omission models for each premise of both bundles, nonvacuity models for both, B2 without the existence PSR and without BX1, and the rival witnessed by the First Way's mover. Model-witnessed separations only; no premise is established and no reality claim is made.",
+  "definition_ids": [
+    "7cff4318-201a-430d-9680-10f5148a3b01",
+    "8eea5215-bb68-4608-b6f8-5368d17617d4",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "335c5c3a-4fd7-5511-8f18-81eea6408a77",
+    "d513fb8a-64ee-5d49-ae56-4d695f93ca71",
+    "fad6a806-713b-5318-8309-488af704d614",
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "e7302a28-f9fc-4961-811f-bf58bd86c28d"
+  ],
+  "disambiguation_ids": [
+    "e63036c5-d9c0-55d3-9704-e23efcbed127",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "13843b8b-4ef3-500e-949d-27e78b9dfaf9",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ],
+  "sense_mixing_control": true
+}
