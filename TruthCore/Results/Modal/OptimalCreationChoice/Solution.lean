@@ -60,7 +60,7 @@ theorem checks : OptimalChoiceCertificate := by
       cases h
 
 /-! The following are additional #1737 structural controls. They do not modify
-the existing frozen \`OptimalChoiceCertificate\` or any registered premise. -/
+the existing frozen `OptimalChoiceCertificate` or any registered premise. -/
 
 /-- Kernel-checkable three-world model. No divine/free-agency interpretation
 follows from the satisfiability of the displayed finite assignments. -/
@@ -129,7 +129,7 @@ theorem threeWorldCreationChecks : ThreeWorldCreationControl := by
 
 /-- Both produced creatures are tied optima under the fixed created-candidate
 comparison. The no-creation world has no performance or output, rather than
-a spurious \`none\` output being scored against created candidates. -/
+a spurious `none` output being scored against created candidates. -/
 theorem threeWorldOptimalOutputs :
     OptimalOutputs threeWorldCreation (some false) () tiedCandidates tiedQuality := by
   intro v _
@@ -235,8 +235,8 @@ theorem universalOmissionOutputOptimal :
   exact soleCreatedOptimal
 
 /-- Unique feasible optimum + worldwise optimality + SameActEverywhere do not
-imply the positive-output-totality conjunct of \`OptimalOutputs\`.
-This exactly isolates an extra premise of \`uniqueOptimalStable\`. -/
+imply the positive-output-totality conjunct of `OptimalOutputs`.
+This exactly isolates an extra premise of `uniqueOptimalStable`. -/
 theorem universalOmissionNotTotal :
     ¬ OptimalOutputs alwaysPerformedOmission true ()
       soleCreatedCandidate tiedQuality := by

@@ -67,9 +67,9 @@ def OptimalChoiceCertificate : Prop :=
 /-! ## Issue #1737: omission, tied choice and contingent creation
 
 These are finite structural interpretations of the existing world-indexed
-\`OutputProfile\`, not a derivation of divine intellect, divine freedom,
-simplicity or explanatory adequacy. An \`Option Bool\` world of \`none\`
-means *no creature created*; an \`EffectBeing\` of \`none\` denotes the
+`OutputProfile`, not a derivation of divine intellect, divine freedom,
+simplicity or explanatory adequacy. An `Option Bool` world of `none`
+means *no creature created*; an `EffectBeing` of `none` denotes the
 same rigid necessary source at every world. They are different roles.
 A world label is not an intrinsic selector or an explanation. -/
 
@@ -80,8 +80,8 @@ def TracksSelectedCreation {W : Type}
     (p : OutputProfile W EffectBeing Unit) (selects : W → Bool → Prop) : Prop :=
   ∀ v b, p.output v () (some b) ↔ selects v b
 
-/-- The same source exists at three mutually accessible worlds. \`none\` is
-omission; \`some false\` and \`some true\` are two distinct created effects.
+/-- The same source exists at three mutually accessible worlds. `none` is
+omission; `some false` and `some true` are two distinct created effects.
 The source still exists, with no outgoing edge, at the omission world. -/
 def threeWorldCreation : OutputProfile (Option Bool) EffectBeing Unit where
   ontic := {
@@ -133,8 +133,8 @@ def ThreeWorldCreationControl : Prop :=
     coincidentalTag (some false) false) ∧
   ¬ TracksSelectedCreation threeWorldCreation coincidentalTag
 
-/-- Two-world fixed-effect contrast: \`true\` produces the sole created
-candidate, \`false\` produces nothing. Both worlds have the same source,
+/-- Two-world fixed-effect contrast: `true` produces the sole created
+candidate, `false` produces nothing. Both worlds have the same source,
 and the *same rigid act token is performed at both worlds*. This does not
 define the intrinsic metaphysical identity of divine willing. -/
 def alwaysPerformedOmission : OutputProfile Bool EffectBeing Unit where
