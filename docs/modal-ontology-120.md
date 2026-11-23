@@ -400,3 +400,69 @@ perfect, free, maximal greatness, M-admissible) with sense tags; a decision
 between the outer-E and inner-E readings recorded as a disambiguation; a
 warranted naming bridge and admissible-world reading; and binding the nine-slot
 input to the canonical statement only through the explicit sense bridges above.
+
+
+## #1864 continuation: fixed interpretations and two attribute-intersection discriminators (2026-11-23)
+
+**Scope and destination.** Continuation of merged #1865 and #1876, without changing their generic modal implications or claiming that an admissible divine essence has been discovered. The existing `TruthCore.Modal.DivineProfile.Interpreted` section provides a *specific, GOD_4-free instance* of the old thirteen-slot schema. The graph destination remains `b19ffd92-01bd-5c0b-9643-e7407137ea5e` (actual de re necessary concrete bearer), followed by `STMT-GOD-EXISTS` only if the independently interpreted actual-world naming and StageTwo sense bridges hold. This is a conditional support family, not a newly registered result, and no root-premise closure is claimed.
+
+### Fixed candidate profile, with precisely limited meaning
+
+The new `fixedProfile` supplies all thirteen positions **for one identical bearer** using previously defined StageTwo and causal senses instead of arbitrary `True` slots:
+
+| Slot(s) | Selected formal sense | Live philosophical content / unproved strengthening |
+| --- | --- | --- |
+| `simple` | `StageTwo.IsSimple Composite`: no composition | Whether essential distinction/intentional acts are constituents counted by `Composite` remains open |
+| `perfect` | `StageTwo.IsPerfect q.InAct`: every actual perfection present formally or eminently | The global `InAct` dictionary and its applicability across modal alternatives remain open |
+| `good` | `StageTwo.IsSupremelyGood`: goodness as being and causal transmission of perfections | This is ontological/causal goodness, **not** a definition of moral impeccability |
+| `one` | `ActualRoot m v x` and uniqueness among selected roots at the *same* world | GOD-free; neither uniqueness of all necessary beings nor `IsTheOneGod σ.IsGod` follows |
+| `infinite`, `eternal` | Existing `Infinite` and `Eternal` predicates of the StageTwo source route | Content is inherited from their fixed supplied definitions; the present constructor does not establish them |
+| `immutable` | `StageTwo.IsImmutable InPotency`, no passive potentiality | Does not show that an extrinsic relationship or contingent effect is an intrinsic respect |
+| `intellect`, `will` | Existing `HasIntellect` and `HasWill` predicates, same individual | These encode capacities, not self-understanding, omniscience, actual exercise or intentional selection |
+| `omnipotent` | Existing `DeiFiliusAttributeField.IsAlmighty σ power`: can perform every `power.Consistent` task | Capability is not obligatory performance; consistency of a task is a separate typed classification |
+| `omniscient` | `KnowsAllContentsAt S Knows v x`: knowledge iff truth, for every individuated content in the selected `C` | Requires real cognitive uptake, appropriate content coverage, reference to contingent truths and factivity; **not** unlimited omniscience merely because `C` is a type |
+| `morallyPerfect` | `PermissibleChoicesAt`: every actually selected act is permitted | Only no-forbidden-choice impeccability. Does not yet provide reasons, charity, best possible action or maximal goodness |
+| `free` | `NoncoercedChoiceAt`: some selected, capable, not externally imposed action | Weak free exercise only. Does not establish ability to do otherwise under fixed complete conditions, timeless free creation or contingent willing |
+
+The extra `Knows`/`Chooses`/`Permitted`/`Capable`/`Imposed` relations are **explicitly primitive**, not definitions of intrinsically intentional understanding or agency. A model assigning these relations successfully is a model of these chosen formal meanings, not an interpretation certificate for real cognition, normativity or divine freedom. Only the last four new senses are candidates, and their stronger traditional counterparts remain open. The world-invariant typed StageTwo fields also require a substantive essentiality warrant before being treated as true across metaphysically admissible alternatives. There is **no instance of `σ.IsGod` in any of the 13 slot definitions**; the `IsTheOneGod` implication is postponed to an explicit actual-world bridge.
+
+### Positive same-bearer support and its limit
+
+`Interpreted.positiveCore_from_same_root` composes the **existing** `RootPositiveIntellectWill.NecessaryPositiveRootIntellectWillAt` witness with the fixed profile. Conditionally on all that prior route's premises, it selects **the same n**, actually existing and necessary relative to the original `m.ontic.frame`, with six interpreted attributes: simplicity, perfection, causal/ontological goodness, unique selected actual-root status, intellectual capacity and will-capacity. This does not prove all thirteen, does not move those six across worlds as essential divine qualities, and does not insert the GOD_4 name. It is a genuine cross-family reuse/connection, not six independent arguments or a new proof that the starting root exists.
+
+`Interpreted.fixed_to_stageTwo_senses` shows that the selected StageTwo instances are pointwise identical for eight of their nine old slots. The exception is deliberate: the GOD-free selected-root uniqueness must be related to `IsTheOneGod σ.IsGod` at the actual world by the explicitly OPEN `hRootNamesOne`. `ClassicalAttributesSuffice` and `ActualDivineNaming` remain independently OPEN, so the original `actual_named_classical_god` consumer does not become unconditional. In particular, `RootPositiveIntellectWill` does not already include an unrestricted omnipotence, complete cognitive knowledge, impeccable actual choice or free intentional exercise proof.
+
+### Attribute intersection: knowledge, immutability and contingent truth
+
+`invariant_knowledge_forces_truth_agreement` establishes a **nontrivial necessary restriction**: if the same x knows **exactly** every true selected content at worlds w and v and **the set of contents known is invariant** (`∀c, Knows w x c ↔ Knows v x c`), then every covered content has the same truth value at both worlds. `varying_truth_excludes_invariant_knowledge` derives the corresponding incompatibility when one covered content is true at w and false at v.
+
+This supplies a decisive discriminator for one strict version of the simplicity/omniscience tension, **not** a contradiction in the full divine profile. The added premise is *invariant known-content membership*, not merely identity of the cognizing being, pure actuality or an unchanging act of understanding. To apply it, a defender of collapse must justify why simplicity/immutability requires that stronger cross-world invariant extension; the reply must explain how one immutable intellectual act can have contingent truths as extrinsically varying objects, without reducing intentional knowledge to a true-output machine. Neither side obtains that substantive bridge just from the theorem.
+
+### Attribute intersection: power, moral selection and freedom
+
+`can_do_without_choosing_forbidden` uses the existing task-power vocabulary. Given a particular explicitly **consistent** task corresponding to a **forbidden** selection, complete power entails `CanDo` while impeccable selection entails `¬Chooses`. These are not contradictory: *ability* and *actual choice* are distinct relations. A substantive conflict would require an extra principle such as “moral goodness entails inability to perform this coherent task”, plus a justified mapping of forbidden acts to coherent tasks. Simply changing `power.Consistent` to mean “morally permitted” removes the formal test by changing the original meaning. Conversely, omnipotence never entails accomplishing a logically contradictory task under the existing `IsAlmighty` sense.
+
+The harder divine-freedom question remains `#555` and `#1737`: if simplicity entails one **necessary** creative act, and that **same** act is strictly sufficient for one selected contingent effect, the existing rigid-act trilemma rules out that conjunction. Existing `SelectedEffectBridge` and `NecessaryVariableEffects` separate a necessary bearer and stable ability from same-act performance and stable selected output; they do **not** warrant a metaphysically free intrinsic will. A timeless free choice proposal must justify at least one of: contingent extrinsic output without strict same-act sufficiency, a nonnecessary selection/decree distinct in relevant respect, or a reason that permits multiple rationally acceptable outcomes without fixing one. Each option carries distinct explanatory obligations; no hypothetical secret contradiction is counted as evidence.
+
+For perfect goodness versus free creation, the sourced comparison in `docs/notes/optimal-creation-choice.md` already distinguishes Leibniz's best-world rationale from Aquinas's rejection of a unique greatest producible creation; neither existing witness establishes a single mandatory creation. Interpreting goodness as requiring a unique optimal choice would be an **additional** premise, and a serious modal-collapse objection would need a defended uniqueness claim, not merely God's rational perfection.
+
+### Five grades of possibility and the exact modal conditional
+
+1. **Satisfiability:** some mathematical assignment instantiates the fixed vocabulary and its selected constraints together. A finite structural control establishes only this, relative to the stipulated semantics.
+2. **Logical consistency:** no contradiction follows relative to a declared logic and theory; a finite witness need not justify that all the metaphysical meanings are faithfully encoded.
+3. **Conceptual coherence:** the chosen definitions and essential-property descriptions can jointly describe one concept without equivocation; open causal/cognitive/moral readings are relevant here.
+4. **Epistemic non-refutation:** no known contradiction is found. This is *weaker* than `¬□¬P` under a fixed modal semantics; it can supply only defeasible comparative support.
+5. **Genuine metaphysical possibility:** there really is an M-accessible alternative from actuality realizing the **entire fixed profile of one bearer**, with the given essence/identity conditions. No theorem or model here establishes this.
+
+The established formal route can be written as:
+
+`DescribedPossibleGreatness E m (fixedProfile …) w`
++ profile-specific **OPEN** `AdmitGreatnessWorlds E m (fixedProfile …) w`
++ `EuclideanAt m.frame w` + `ActualReflexive m w`
+→ `∃x, GreatnessAt m (fixedProfile …) x w`.
+
+The stated E-premise is outer-E/**inner-M**: it already includes M-necessity at the E-witness. Purely E-internal description requires the separate OPEN `InnerSuccessorsCovered` to reach it. The weaker witness-relative return `M(v,w) ∧ ∀u, M(w,u) → M(v,u)` can replace the sufficient Euclidean-plus-reflexive package when independently justified. S5 is stronger than this return step requires. Only **after** that actual-world return can `ProfileNineSuffice` (via the StageTwo bridge) and `ActualDivineNaming` give the existing GOD_4 proposition, and those bridges are not established by definition or a Boolean control.
+
+**Provisional metaphysical assessment.** The strongest current positive route is cumulative: necessary actual concrete source → perfection not limited by receptive composition → same-bearer intellect/will capacity → still OPEN actual understanding and knowledge of all contents → still OPEN rationally free good selection → full interpreted necessary excellence and **particular** M-admissibility. This provides specific, non-vacuous partial reasons to examine an actual source's attributes; it does **not** establish the genuine possibility of the maximal profile. The strongest justified negative pressure is the #555 strictly efficacious necessary-act conflict and the new invariant-known-truth-content restriction *if its stronger cross-world premise is defended*. A stable impersonal source and brute/admissibility-restricted modal ontology remain alternatives where they furnish substantive explanations, but mere assertion of an unidentified incompatibility is not a defeater.
+
+**Next discriminating work.** Test whether purely actual subsistent wisdom entails *intrinsic* factive cognitive uptake (not merely cognitive effects); whether essential intellect/will carries invariant capacities but variable intentional objects; whether perfect goodness permits more than one rationally acceptable contingent creation; whether free will is necessarily exercised or only essentially available; whether the surviving source routes support each of the seven missing slots *at that same n*; and whether a warranted interpretation of the actual metaphysical accessibility relation includes the **particular** full-profile realization. Cross-check all this against `#555` and the received-esse and actualist-identity analyses. Keep #1864 open: metaphysical admissibility, full traditional attribute senses and GOD_4 naming remain unresolved. 
