@@ -64,3 +64,22 @@ conclusion = "Stable laws and ungrounded totality remain compatible"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Explicit positive stable trace, empty evidence cell and independent grounding-scope assignments"
 meaning = "Lack of GroundedTotality is not equivalent to law chaos, and law stability is not logically eliminated by an unexplained totality. The scope grounding predicate is weaker than ultimate adequate explanation; actual cross-world possibility and future law change remain separate burdens."
+
+
+[[statement]]
+id = "Finite recombination plus prefix closure permits every complete suffix"
+lean = "RecombinationFork"
+definitions = [
+  "10d0fb41-49a3-404f-898f-caabd0d0324e",
+  "1e04df16-fe72-467a-bc25-785f0e94fc70",
+]
+paraphrase = "For each fixed all-true observed prefix and supplied selector of complete Boolean histories: nonempty one-step continuation freedom implies the existence of extensions for every prescribed finite pattern. Adding the separate prefix-closure principle implies that every complete infinite suffix is admitted. An eventually constant, populated selector has one-step and finite freedom but neither closure nor unrestricted infinite histories; a stable selector is closed but lacks finite freedom; unrestricted and empty selectors witness the positive and nonemptiness controls. No claim derives either premise from unexplained actuality or assigns modal/physical status to these trace histories."
+
+[[argument]]
+id = "Finite-history recombination and infinite-prefix closure boundary"
+theorem = "recombinationFork"
+premises = []
+conclusion = "Finite recombination plus prefix closure permits every complete suffix"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Inductively extend finite records and apply explicit closure; countermodel by eventually constant versus alternating infinite traces"
+meaning = "The exact mathematical bridge is (admitted initial history + one-step richness) implies finite richness, and (finite richness + prefix closure) implies complete suffix richness. Local finite compatibility is insufficient for infinite recombination without the closure premise. Stable and empty selectors show why closure and one-step freedom need separate nonvacuity and pattern assumptions. The connection to an actual ontically unexplained world remains OPEN."
