@@ -1,0 +1,15 @@
+{
+  "id": "8f2a60ae-8b5a-487f-9880-0672dc986af6",
+  "label": "At every world accessible from w, each concrete object there could fail to exist",
+  "paraphrase": "Subtraction premise S2, analyst formulation, attribution deferred: for every world v accessible from w in the route's frame, every candidate that is concrete and exists at v is absent at some world accessible from v. Universal over every concrete object, including any candidate necessary being; this scope is what the necessary-being nodes deny.",
+  "lean_declaration": "TruthCore.Causality.SubtractionArgument.EachConcreteCouldFailThroughout",
+  "definition_ids": [
+    "cdbbae1a-5cce-4367-b6b4-d135135a2ecd",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

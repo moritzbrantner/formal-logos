@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.FirstMoverNecessity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FirstMoverNecessity.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.FirstMoverNecessity.firstMoverNecessaryByPotency"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

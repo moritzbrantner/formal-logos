@@ -1,0 +1,11 @@
+{
+  "id": "d3184c66-0392-4b0a-bbb7-3ad9a805d629",
+  "label": "Every accessible contingent concrete existent occurs at some time in its history",
+  "paraphrase": "OPEN bridge between world-relative existence and temporal presence: every contingent concrete individual existing in an accessible history has at least one moment at which history.IsAt holds. It does not require presence at now or a first moment. It permits timeless necessary concreta and EXCLUDES contingent atemporal concreta: no contingent concrete individual existing in an accessible history is never temporally present there. That exclusion is the work the premise does in result 9e5124a2 (control unmanifestSourceSeparatesTemporal).",
+  "lean_declaration": "TruthCore.Causality.MetricBeginningArrival.ContingentConcretaTemporallyPresent",
+  "definition_ids": [
+    "67a624ba-11f6-4535-8154-8295b2d62765",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d"
+  ]
+}

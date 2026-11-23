@@ -1,0 +1,10 @@
+{
+  "id": "1dd2b809-a1d3-43ca-8dfc-b7c1c4fbfd58",
+  "label": "The selected spacetime whole is an actual concrete existent",
+  "paraphrase": "At the selected world the same candidate designated as the spacetime whole is concrete and actually exists in the modal grounding profile. Geometry alone does not supply this ontological commitment.",
+  "lean_declaration": "TruthCore.Ontology.SpacetimeGroundingBridge.ActualConcreteWholeAt",
+  "definition_ids": [
+    "e9e031af-665e-5888-9328-f7637b5a2677",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ]
+}

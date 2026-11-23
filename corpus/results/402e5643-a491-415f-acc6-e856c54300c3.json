@@ -1,0 +1,11 @@
+{
+  "id": "402e5643-a491-415f-acc6-e856c54300c3",
+  "label": "First Way necessary PURE_ACT_5 mover with CONCRETE_6 movers witnesses the stage-one node",
+  "argument_id": "5e7d0079-42fc-414c-8430-511d10ac6aa8",
+  "challenge_module": "TruthCore.Results.Causality.FirstMoverNecessity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FirstMoverNecessity.Solution",
+  "theorem": "TruthCore.Results.Causality.FirstMoverNecessity.firstMoverNecessaryIsNecessaryConcrete",
+  "comparator_config": "results/402e5643-a491-415f-acc6-e856c54300c3/comparator.json",
+  "status": "solution-present",
+  "description": "Composition of the First Way's pure-act necessity endpoint with the concreteness interface B0', giving the stage-one node STMT-NECESSARY-CONCRETE-AT. An assembly-type composition; it establishes no premise."
+}

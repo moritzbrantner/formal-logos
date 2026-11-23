@@ -1,0 +1,40 @@
+{
+  "id": "81a17728-b12f-4a09-a861-ef1769030502",
+  "label": "First Way mover is necessary, from PURE_ACT_5, firstness and POTENCY_1-or-cause",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "7bce7007-ad29-5f5b-b4b3-e7b02bf98312",
+    "bd0a4f81-29ba-4349-aa7d-b1fdcf6fd8e2",
+    "74eb9113-552b-5ec6-8e09-68374305dd58",
+    "6c18d52b-2456-59ae-995f-13440f8c808d",
+    "3c9d683b-7ecf-4e35-b2cf-2997fbc1a3b2",
+    "ee74c678-0a06-47d3-9c76-27ff798e9a01"
+  ],
+  "conclusion_statement_id": "f9208664-e57b-4912-b6e7-edfcd23a4f89",
+  "inference_ids": [
+    "b0fbe13d-7878-432d-b30e-b02167a5275a"
+  ],
+  "meaning": "Take the prima via's first mover f. It moves something, so it exists at w (B0). Suppose f is absent at some accessible world: then f is contingent at w, so by the disjunctive bridge it is either in POTENCY_1 in some respect or some other being causes its esse. The first is excluded by pure act (the existing derived statement that every first mover moved by none is pure act). In the second, the cause is SIMPLY_PRIOR_1 to f (a distinct esse-cause is simply prior), and since f is the first being (every first mover moved by none is the first being) it is f, against distinctness. So f is not absent at any accessible world, and excluded middle gives presence there. Pure act and firstness each exclude one disjunct of the bridge as typed; necessity of the same f is derived, not assumed. Each non-logical premise is needed: the controls give an omission model for each (models 1-6).",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "25e19d5a-5cdf-5916-a888-f6a0ce970f11",
+    "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "a49e4cf1-ca4f-5519-9724-892af257cedb",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "508617ab-cf24-5f3b-a387-64b3991359ec",
+    "557d8e44-4350-5031-81e3-ff6be5e30acc",
+    "b1640e51-d7d4-5a80-9992-29fa1ded8048",
+    "215fdc0a-7005-510d-91da-84fcbc77a9dc"
+  ]
+}

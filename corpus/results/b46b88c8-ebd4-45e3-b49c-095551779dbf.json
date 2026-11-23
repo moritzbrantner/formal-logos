@@ -1,0 +1,11 @@
+{
+  "id": "b46b88c8-ebd4-45e3-b49c-095551779dbf",
+  "label": "A distinct esse-cause for contingents, from distinct esse and the q.3 a.4 reading",
+  "argument_id": "0f4cafc2-6309-4ccb-be97-5870005fab74",
+  "challenge_module": "TruthCore.Results.Causality.FirstMoverNecessity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FirstMoverNecessity.Solution",
+  "theorem": "TruthCore.Results.Causality.FirstMoverNecessity.contingentEsseCauseFromDistinctEsse",
+  "comparator_config": "results/b46b88c8-ebd4-45e3-b49c-095551779dbf/comparator.json",
+  "status": "solution-present",
+  "description": "Support for B2 from the modal bridge B6, the existing selected-world existence-to-act contract and the existing q.3 a.4 reading. Not a transcription: the conclusion's causal claim about contingents is reached by composing a modal-to-essence bridge with a causal reading about distinct esse. Establishes no premise. Routes A (with this support) and C then share B6."
+}

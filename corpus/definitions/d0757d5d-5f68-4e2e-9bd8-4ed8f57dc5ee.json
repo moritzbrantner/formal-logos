@@ -1,0 +1,9 @@
+{
+  "id": "d0757d5d-5f68-4e2e-9bd8-4ed8f57dc5ee",
+  "label": "Possible memberwise concurrent giver without an externality requirement",
+  "term": "nonexternal memberwise causal opportunity",
+  "lean_declaration": "TruthCore.Causality.MetricBeginningArrival.NonexternalConcurrentGivingOpportunity",
+  "definition": "Conditional modal opportunity for a possible BEGINS_2 populated history: there is an accessible populated finite-duration history v and a candidate c that is concrete, exists in v and actually gives the being of every contingent concrete individual at each of its times of presence (including at least one exercised giving). Neither c's modal necessity nor its being outside the contingent totality is required. Distinct from an abstract cause-of-totality label and from the stronger B2 requiring outside-ness.",
+  "note": "Analyst conditional hypothesis. The source is concrete and exercised in its witness history; actual causal sufficiency, temporal clock privilege and the memberwise vs holistic totality reading remain open. This does not itself imply necessary being without no-self-giving and a temporal-presence bridge. With both, it is equivalent to the external B2 (nonexternalIffExternalOpportunity): the commitment to a possibly necessary concretum moves into the universal clause, which covers the source whenever it is contingent, and is not removed.",
+  "basis": "stipulative"
+}

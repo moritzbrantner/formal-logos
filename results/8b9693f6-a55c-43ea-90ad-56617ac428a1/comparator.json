@@ -1,0 +1,17 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.MetricBeginningArrival.Challenge",
+  "solution_module": "TruthCore.Results.Causality.MetricBeginningArrival.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.MetricBeginningArrival.necessaryActualWithPossibleConcurrentGiving",
+    "TruthCore.Results.Causality.MetricBeginningArrival.possiblyNecessaryConcurrentGiver",
+    "TruthCore.Results.Causality.MetricBeginningArrival.inertGivingSeparatesOpportunity",
+    "TruthCore.Results.Causality.MetricBeginningArrival.functioningConcurrentOpportunity",
+    "TruthCore.Results.Causality.MetricBeginningArrival.mixedPossibleGivingWithoutActualGiving"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

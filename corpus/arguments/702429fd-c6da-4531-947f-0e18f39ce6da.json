@@ -1,0 +1,32 @@
+{
+  "id": "702429fd-c6da-4531-947f-0e18f39ce6da",
+  "label": "The stage-one node excludes the subtraction contingency premise at its world",
+  "premise_statement_ids": [
+    "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
+  ],
+  "conclusion_statement_id": "adb73cf1-dc4d-4a75-ab8a-cdd771e2b54a",
+  "inference_ids": [
+    "cbd59f24-7b57-44ae-b294-af1364bcc582"
+  ],
+  "meaning": "If some concrete individual exists at w and at every world accessible from w (the stage-one node), then not every concrete object existing at w is absent at some accessible world: that individual would be absent at an accessible world where it exists. A checked incompatibility between the node and subtraction premise S2 at the node's world. With excluded middle the converse holds too (controls, law 8): S2 at w is exactly the stage-one node's denial. The box K and S5 nodes entail no weaker exclusion of their own here; the controls show the box K node excludes the subtraction conclusion (law 2), and the theist model shows the nodes jointly satisfiable with every other subtraction premise, so rejecting the subtraction rival requires rejecting only S2. The node is its own NECESSARY_11 to NECESSARY_2 bridge statement, as in the existing arguments that consume it.",
+  "definition_ids": [
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea",
+    "baddf770-36bf-542f-bb3c-2297342d5452",
+    "cdbbae1a-5cce-4367-b6b4-d135135a2ecd"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ],
+  "sense_bridges": [
+    {
+      "term": "NECESSARY",
+      "from": "8c881fa6-2b9f-44be-a32a-c8ef29c13643",
+      "to": "7af298fb-a2c4-4239-919b-7685f2e1f67a",
+      "statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
+    }
+  ]
+}

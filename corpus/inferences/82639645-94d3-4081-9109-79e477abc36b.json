@@ -1,0 +1,12 @@
+{
+  "id": "82639645-94d3-4081-9109-79e477abc36b",
+  "label": "First Way necessary first root witnesses the necessary first PURE_ACT_5 endpoint (inference)",
+  "input_statement_ids": [
+    "11958874-aa8f-4b09-97ba-4f6028d26cd9"
+  ],
+  "output_statement_id": "593d7307-c8e1-5863-9776-a26cfe09d20c",
+  "rule": "Existential projection: forget the moving",
+  "meaning": "The first mover that is a necessary actual first pure-act root is in particular some necessary actual first pure-act root of the same profile: drop the first-mover conjunct. This connects the First Way, through its own witness, to the existing endpoint consumed by the necessary-first-attributes argument, without any identification of the first mover with an independently derived necessary root (B7).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

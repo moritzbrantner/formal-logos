@@ -1,0 +1,21 @@
+{
+  "id": "9cb8c0ee-b3fa-4440-98e2-903f77c4c1e8",
+  "label": "Countable causal Reaper operation recombination from compatible finite prefixes",
+  "paraphrase": "OPEN analyst modal premise, attribution deferred: for any fixed-duration populated descending schedule and bearer assignment in an accessible history, if all finite prefixes can operate causally in possibly different accessible histories with the same station mapping, then one accessible world realizes the countably infinite family of actually existing, temporally present, causally connected stations with all four PieceAt interfaces simultaneously. This countable actual-exercise principle is stronger than preserving intrinsic powers. Its inner implication fails in the structural surrogate causalFinitePrefixControls (finite-prefix compatibility without a single realizing world); a statement-level non-entailment from 7d1b132f is not certified. DEPENDENCY: since arrangementImpossible excludes the single realizing world, the premise holds exactly when no populated fixed-d descent with a station map has finite-prefix-compatible station operations (countableStationRecombinationIff). The metric-finiteness conclusion 4365c3c5 implies it (countableStationRecombinationOfMetricallyFinite), so given 7d1b132f it is equivalent to the conclusion it supports; fixed-duration patchwork 313105b4 also implies it (countableStationRecombinationOfDurationPatchwork). Its warrant must therefore come from the countable recombination principle it instantiates; the strongest positive rationale for a principle of this shape is Koons's PInfSP and CPNPP, with the differences recorded in definition 4085bd2b. It requires same-history protection, normal conditions, calibrated protocols, and physical clock/host applicability.",
+  "lean_declaration": "TruthCore.Causality.FixedDurationGrimReaper.CountableStationRecombination",
+  "definition_ids": [
+    "1cafe011-a462-479a-9cfe-471fe7a9b530",
+    "dc0aa760-8cbe-414f-9bd0-9cc67ead87c9",
+    "4085bd2b-d5d7-46a2-8388-d15ae19696ae",
+    "5f177d3f-c661-49d2-8082-941a46d8b41b",
+    "419d2bf5-8cea-47a4-bf64-3058a1f2489b",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "375676b0-a295-4a17-a9e4-3db23319d517",
+    "7c05f92b-907d-4c9b-b219-fc4054c9912b"
+  ],
+  "disambiguation_ids": [
+    "06fc8d78-0723-5daa-9186-7a016125bb0b"
+  ]
+}

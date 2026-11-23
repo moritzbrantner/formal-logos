@@ -1,0 +1,11 @@
+{
+  "id": "9e5124a2-6d7c-46aa-a5b7-15457c8aa37b",
+  "label": "Derive external causal opportunity from a nonexternal giver and no self-causation",
+  "argument_id": "abbbce81-c3f0-4754-96f5-e0f304c5334d",
+  "challenge_module": "TruthCore.Results.Causality.MetricBeginningArrival.Challenge",
+  "solution_module": "TruthCore.Results.Causality.MetricBeginningArrival.Solution",
+  "theorem": "TruthCore.Results.Causality.MetricBeginningArrival.externalOpportunityOfMemberwiseGiving",
+  "comparator_config": "results/9e5124a2-6d7c-46aa-a5b7-15457c8aa37b/comparator.json",
+  "status": "solution-present",
+  "description": "A stronger non-transcription conditional support option for the previously open causal B2. A possibly existing concrete memberwise source is NOT assumed external. If every contingent concrete existing source occurs at some moment and strict giving of being is irreflexive, the source cannot be contingent (otherwise the all-member causal law forces it to give its own being at its moment). By modal contingency's definition, a concrete existent that cannot be contingent is necessary at that possible history and distinct from all contingent concreta there. Therefore the original memberwise B2 with externality follows. The commitment to a possibly necessary concretum is relocated, not removed: the converse holds by dropping the exteriority conjunct (nonexternalOpportunityOfExternal), so under 0e473dc4 and d3184c66 the nonexternal premise 2a4d99d8 and the external B2 e4a3b917 are equivalent (nonexternalIffExternalOpportunity). A rival who denies that a necessary concretum is possible, while keeping both principles, rejects 2a4d99d8 exactly as e4a3b917; the route makes that rival's cost explicit (no concrete thing could give being to every contingent concretum of a possible BEGINS_2 history) without discriminating against it. GivesAt is read strictly (definition 158301bc); the universal clause is CAUSE_OF_BEING_2 over the frame restricted to temporally present contingent concreta (concurrentTotalityGiving_iff_sustains, disambiguation 88a8fba7). The memberwise and temporally instantiated premises are explicit and remain OPEN; the theorem does not establish the metaphysical possibility of the universal giver, actual-world causal exercise, or a holistic totality cause."
+}

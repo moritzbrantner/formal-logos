@@ -1,0 +1,9 @@
+{
+  "id": "67a624ba-11f6-4535-8154-8295b2d62765",
+  "label": "Contingent concrete beings have temporal presence somewhere in their histories",
+  "term": "temporal manifestation of contingent concrete being",
+  "lean_declaration": "TruthCore.Causality.MetricBeginningArrival.ContingentConcretaTemporallyPresent",
+  "definition": "For each history v accessible from w, any individual x that is concrete and modal-contingent at v is present at some moment of that history: there exists t with history.IsAt v x t. It is weaker than CoherentAtNow and does not require a first moment. It EXCLUDES contingent atemporal concreta: no contingent concrete individual existing in an accessible history is never temporally present there. Only necessary concreta are left unrestricted and may be timeless. That exclusion is the work it does: without it a contingent but temporally uninstantiated source need not belong to the memberwise causal domain quantified by ConcurrentTotalityGivingAt.",
+  "note": "Explicit missing ontic-existence-to-temporal-presence bridge. A structural model with a contingent source existing but never IsAt separates the inference (unmanifestSourceSeparatesTemporal). Whether contingent atemporal concreta are possible is the philosophical question this premise answers negatively; it remains OPEN.",
+  "basis": "stipulative"
+}

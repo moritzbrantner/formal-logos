@@ -1,0 +1,177 @@
+# Necessary existence of the First Way's own first mover (owner lead
+# 2026-11-22, pure actuality -> necessary existence). Same-witness
+# conditional routes over one shared CausalityFrame (#1784): causal (B2 + B3 +
+# B1), potency (B4), potency-or-cause (B2 v B4, with pure act and firstness),
+# essence-esse (B6) and grounding; B2 from B6 and the q.3 a.4 reading; the
+# grounding endpoint feeds the existing necessary-first-being endpoint.
+# Analyst formulations, attribution deferred; no source claim.
+
+[batch]
+vocab = "TruthCore.Causality.FirstMoverNecessity"
+results = "TruthCore.Results.Causality.FirstMoverNecessity"
+
+[[statement]]
+id = "Whatever moves something exists at the reading world w"
+lean = "MoversExistAt"
+paraphrase = "OPEN interface (B0), analyst formulation, attribution deferred: on the shared causality frame, whatever moves something in some respect (MovesIn, CAUSE_1, read at the reading world w, since the case's motion vocabulary is not world-indexed) exists at w. A mover exercising its moving there exists there. Nothing is said about any other world, about concreteness or about necessity. Scope: B0 is warranted only at the world at which MovesIn is read; at any other world it would itself assert that the movers exist there, and at every accessible world it would make every mover necessary. 'Moves' is the frame's MovesIn, meaning DEF-MOTION-AS-REDUCTION (CAUSE_1); that definition is deliberately not linked here, because the arguments using B0 also use CAUSE_2 (causing esse) as a different relation and the sense check cannot tell two relations from an equivocation. The missing link is a known definition-coverage gap, recorded in this statement and its batch."
+definitions = ["DEF-FIRST-UNMOVED-MOVER", "DEF-KANT-ONTOLOGICAL-MODEL"]
+
+[[statement]]
+id = "Whatever moves something is CONCRETE_6"
+lean = "MoversConcrete"
+paraphrase = "OPEN interface (B0'), analyst formulation, attribution deferred: whatever moves something in some respect (MovesIn, CAUSE_1) satisfies the concreteness predicate of the selected-grounding profile. Used only by the grounding route and the projection of the pure-act endpoint to the stage-one node; the causal, potency and essence-esse routes do not need it. 'Moves' is the frame's MovesIn (DEF-MOTION-AS-REDUCTION, CAUSE_1), not linked for the reason given at B0 (a known definition-coverage gap, recorded in these records)."
+definitions = ["DEF-FIRST-UNMOVED-MOVER", "DEF-CONCRETE-ESSE-IN-RE"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[statement]]
+id = "Every being contingent at w has a distinct CAUSE_2 of its esse"
+lean = "ContingentHasDistinctEsseCause"
+paraphrase = "OPEN bridge (B2), analyst formulation, attribution deferred: every candidate that exists at w and is absent at some world accessible from w (MODAL_CONTINGENCY_1) has some other being that causes its esse (CausesIn at esse, CAUSE_2, mode not fixed). The cause is not required to exist at w, to be concrete or to be an efficient cause; it is the weakest form the causal route uses. It says nothing about beings that exist at every accessible world."
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-CAUSE-OF-PERFECTION", "DEF-ESSE", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CAUSE", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Every being contingent at w has esse distinct from its essence"
+lean = "ContingentHasDistinctEsse"
+paraphrase = "OPEN modal bridge (B6, contrapositive form), analyst formulation, attribution deferred: every candidate contingent at w (existing at w, absent at some accessible world) has a represented esse distinct from its represented essence. With excluded middle it is equivalent to: whatever exists at w with esse not distinct from essence exists at every world accessible from w (controls, law 1). Essence-esse identity alone carries no modal force: in the brute-first model a being with esse not distinct from essence is contingent (controls, model 1)."
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-ESSENCE-THOMISTIC-NATURE", "DEF-ESSE", "DEF-Q3A4-ACTUAL-DISTINCT-ESSE", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-ESSENCE", "DISAMB-ESSENTIAL-VS-ACCESSIBLE-EXISTENCE", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Every being contingent at w is in POTENCY_1 in some respect"
+lean = "PossibleNonexistenceIsPotency"
+paraphrase = "OPEN bridge (B4), analyst formulation, attribution deferred: every candidate contingent at w is in POTENCY_1 (the adopted potency in the subject) in at least one respect, any respect. It states no grounding or explanatory relation and does not tie the respect to esse or to non-being: a contingent thing that can merely become hot satisfies it. The esse-tied version is the conjunction of the converses of the two existing bridges relating potency and possible non-being (contingent beings can fail to be in substance; what can fail to be in substance is in POTENCY_1 as to esse), which implies it (controls, law 2); the existing bridges themselves do not give it (controls, model 1). With excluded middle it is equivalent to 'every pure-act being existing at w exists at every accessible world' (controls, law 3), so the potency route relocates the lead's question into B4."
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-POTENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-POTENCY", "DISAMB-POTENCY-IN-SUBJECT-VS-IN-ANOTHER", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Every being contingent at w is in POTENCY_1 or has a distinct CAUSE_2 of its esse"
+lean = "ContingentHasPotencyOrEsseCause"
+paraphrase = "OPEN bridge (B2 or B4), analyst formulation, attribution deferred: every candidate contingent at w is either in POTENCY_1 in at least one (any) respect or has some other being that causes its esse (CAUSE_2 at esse). Each of B2 and B4 implies it (controls, laws 4-5), so it is the weakest of the three as typed. It is not the q.9 a.2 pair of channels (mutable in the subject, MUTABLE_1; mutable through another's power, MUTABLE_2): reading it as exhausting those channels would need two unrecorded OPEN bridges, contingency at w gives mutability in some way (MUTABLE_3), and another's power over a thing's esse gives a distinct cause of its esse. A brute contingent being, neither in potency nor caused, falsifies it (controls, model 1)."
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-POTENCY", "DEF-CAUSE-OF-PERFECTION", "DEF-ESSE", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-POTENCY", "DISAMB-POTENCY-IN-SUBJECT-VS-IN-ANOTHER", "DISAMB-CAUSE", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "No actual concretum grounds itself under the selected grounding at w"
+lean = "TruthCore.Causality.ReflexiveDependenceScope.ActualGroundingIrreflexive"
+paraphrase = "OPEN analyst premise: under the selected grounding relation of the profile at w, no candidate that is concrete and exists at w grounds itself. Irreflexivity only: it says nothing about cycles of length two or more. Acyclicity including self-loops, and well-foundedness of grounding on actual concreta, each imply it. It must be read on the same strict sense of grounds as the closure premise STMT-EVERY-CONTINGENT-GROUNDED-AT, which permits self-grounding: under the reflexive existence-requirement reading of #1593 (ReflexiveDependenceScope) the closure holds trivially and irreflexivity fails."
+definitions = ["DEF-BRUTE-ROOT-RELATIVE-GROUNDING", "a1b2e330-388f-4120-bc5c-969642317792", "DEF-CONCRETE-ESSE-IN-RE", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[statement]]
+id = "Some first mover moved by none is PURE_ACT_5, exists at w and at every accessible world"
+lean = "FirstMoverNecessaryPureActAt"
+paraphrase = "Same-witness endpoint: one and the same first mover moved by none (moves something, moved in no respect, read at w) is in POTENCY_1 in no respect, exists at w and exists at every world accessible from w (NECESSARY_2 box-existence on the frame). No firstness, uniqueness, root status, own-nature necessity or God is asserted."
+definitions = ["DEF-FIRST-UNMOVED-MOVER", "DEF-PURE-ACT", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-NECESSARY", "DISAMB-PURE-ACT-STRICTNESS", "DISAMB-UNMOVED-AT-A-TIME"]
+
+[[statement]]
+id = "Some first mover moved by none is an actual root at w, necessary, first in being and PURE_ACT_5"
+lean = "FirstMoverNecessaryFirstRootAt"
+paraphrase = "Same-witness endpoint: one and the same first mover moved by none is an actual concrete root of the selected grounding at w (concrete, existing at w, with no actual concrete ground there), exists at every world accessible from w, has no other being SIMPLY_PRIOR_1 to it and is in POTENCY_1 in no respect. It is the body of the existing necessary-first-being endpoint together with being a first mover. No uniqueness of roots, maximum or God is asserted."
+definitions = ["DEF-FIRST-UNMOVED-MOVER", "DEF-PURE-ACT", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-MODAL-FIXTURE-FRAME", "DEF-BRUTE-ROOT-RELATIVE-GROUNDING", "DEF-FIRST-BEING", "DEF-SIMPLE-PRIORITY", "a1b2e330-388f-4120-bc5c-969642317792", "DEF-CONCRETE-ESSE-IN-RE"]
+disambiguations = ["DISAMB-NECESSARY", "DISAMB-PURE-ACT-STRICTNESS", "DISAMB-UNMOVED-AT-A-TIME", "DISAMB-PRIORITY-SIMPLE-OR-IN-TIME", "DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[statement]]
+id = "First mover necessity: laws, omission models and a two-root model"
+lean = "Model.Controls"
+paraphrase = "Premise-free comparison over finite Bool frames (logical boundaries, not metaphysical possibility). Laws: with excluded middle, the contrapositive B6 is equivalent to 'existence at w with esse not distinct from essence gives existence at every accessible world'; B4 follows from its two converse-direction halves (contingent can fail to be in substance; what can fail to be in substance is in POTENCY_1 as to esse); with excluded middle B4 is equivalent to 'every pure-act being existing at w is necessary at w', the lead's target at w; B2 and B4 each imply B2 or B4. Models (two respects, esse and a respect of motion; in every model the moved thing is in POTENCY_1 in the respect in which it is moved): (1) a brute first mover that is first in being, pure act, simple with esse not distinct from essence, satisfies every other premise of the five necessity routes and both existing potency/modality bridges nonvacuously (the moved thing is in potency to heat and can fail to be hot; the mover can fail to be in substance and possibly is not), yet is contingent: B2, B4, the esse-tied half 'what can fail to be in substance is in POTENCY_1 as to esse', B2 or B4, B6 and the grounding closure fail; (2) a conserved pure-act mover caused in esse by a prior being: everything of the causal routes but firstness; (3) the same without priority: everything but B3; (4) an absent mover: everything but B0; (5) no moving: everything of the causal, potency and essence-esse routes but the prima via conclusion; (6) a necessary mover in potency: everything but pure act; (7) a mover with distinct esse and essence: everything of the essence-esse route but simplicity; (8) self-grounding: everything of the grounding route but irreflexivity; (9) an unprioritized ground: everything but grounding-priority; (10) nothing concrete: everything but B0'; (11) a nonvacuity model in which every premise of every route and both endpoints hold, with B2, B3, B4 and B6 applied to the contingent moved thing (caused and preceded by the mover, in potency to heat, esse distinct from essence); (12) three beings: the mover, the moved thing (in potency, so not pure act) and an idle being; the mover and the idle being are two distinct necessary actual first pure-act roots, only one of them a first mover."
+definitions = ["DEF-FIRST-UNMOVED-MOVER", "DEF-PURE-ACT", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-BRUTE-ROOT-RELATIVE-GROUNDING", "DEF-FIRST-BEING", "DEF-SIMPLE-PRIORITY", "a1b2e330-388f-4120-bc5c-969642317792", "DEF-CONCRETE-ESSE-IN-RE", "DEF-POTENCY", "DEF-CAUSE-OF-PERFECTION", "DEF-ESSE", "DEF-ESSENCE-THOMISTIC-NATURE", "DEF-NECESSARY-FIRST-BEING-PURE-ACT"]
+disambiguations = ["DISAMB-NECESSARY", "DISAMB-PURE-ACT-STRICTNESS", "DISAMB-POTENCY", "DISAMB-POTENCY-IN-SUBJECT-VS-IN-ANOTHER", "DISAMB-ESSENTIAL-VS-ACCESSIBLE-EXISTENCE"]
+
+[[argument]]
+id = "First Way mover is necessary, from PURE_ACT_5, firstness and POTENCY_1-or-cause"
+theorem = "firstMoverNecessaryByPotencyOrCause"
+premises = ["STMT-EXCLUDED-MIDDLE", "STMT-THERE-IS-A-FIRST-UNMOVED-MOVER", "Whatever moves something exists at the reading world w", "STMT-FIRST-UNMOVED-MOVER-IS-FIRST-BEING", "STMT-FIRST-UNMOVED-MOVER-IS-PURE-ACT", "Every being contingent at w is in POTENCY_1 or has a distinct CAUSE_2 of its esse", "ee74c678-0a06-47d3-9c76-27ff798e9a01"]
+conclusion = "Some first mover moved by none is PURE_ACT_5, exists at w and at every accessible world"
+rule = "Reductio on contingency by cases, then excluded middle at each accessible world"
+meaning = "Take the prima via's first mover f. It moves something, so it exists at w (B0). Suppose f is absent at some accessible world: then f is contingent at w, so by the disjunctive bridge it is either in POTENCY_1 in some respect or some other being causes its esse. The first is excluded by pure act (the existing derived statement that every first mover moved by none is pure act). In the second, the cause is SIMPLY_PRIOR_1 to f (a distinct esse-cause is simply prior), and since f is the first being (every first mover moved by none is the first being) it is f, against distinctness. So f is not absent at any accessible world, and excluded middle gives presence there. Pure act and firstness each exclude one disjunct of the bridge as typed; necessity of the same f is derived, not assumed. Each non-logical premise is needed: the controls give an omission model for each (models 1-6)."
+description = "Same-witness conditional result: the First Way's own first mover is pure act and exists at every world accessible from w, from the prima via conclusion, B0, firstness, pure act, the disjunctive bridge B2 or B4 and B3, with excluded middle. Not a transcription: no premise mentions necessity; the modal conclusion is reached by a reductio over the two disjuncts. Establishes no premise. Its bridge is the weakest of B2, B4 and B2 or B4 as typed (B2 and B4 each imply it), and its bundle is entailed by the causal route's bundle; logical weakness is not by itself greater warrant."
+
+[[argument]]
+id = "First Way mover is necessary, from firstness and a distinct esse-cause"
+theorem = "firstMoverNecessaryByEsseCause"
+premises = ["STMT-EXCLUDED-MIDDLE", "STMT-THERE-IS-A-FIRST-UNMOVED-MOVER", "Whatever moves something exists at the reading world w", "STMT-FIRST-UNMOVED-MOVER-IS-FIRST-BEING", "STMT-FIRST-UNMOVED-MOVER-IS-PURE-ACT", "Every being contingent at w has a distinct CAUSE_2 of its esse", "ee74c678-0a06-47d3-9c76-27ff798e9a01"]
+conclusion = "Some first mover moved by none is PURE_ACT_5, exists at w and at every accessible world"
+rule = "Reductio on contingency, then excluded middle at each accessible world"
+meaning = "Route A of the lead. The first mover f exists at w (B0). Were it contingent, B2 would give another being causing its esse, simply prior to it by B3, hence identical with it by firstness, against distinctness. So f is present at every accessible world (excluded middle). Pure act is carried for the same witness and does no work toward necessity here: the necessity comes from firstness and existential causation (cross-family convergence on one witness, not 'pure act alone entails necessity'). Omission models in the controls (models 1-6)."
+description = "Same-witness conditional result, causal route: the First Way's first mover is necessary at w from firstness, B2 and B3, with pure act carried. Not a transcription. Establishes no premise. B2 is supported either directly or through B6 and the q.3 a.4 reading (separate argument), in which case it shares B6 with the essence-esse route."
+
+[[argument]]
+id = "A distinct esse-cause for contingents, from distinct esse and the q.3 a.4 reading"
+theorem = "contingentEsseCauseFromDistinctEsse"
+premises = ["Every being contingent at w has esse distinct from its essence", "STMT-EXISTING-IN-ACT-AT", "STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE"]
+sense_bridges = [{term = "CAUSING_AN_EFFECT", from = "CAUSING_AN_EFFECT_2", to = "CAUSING_AN_EFFECT_3", statement_id = "STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE"}]
+conclusion = "Every being contingent at w has a distinct CAUSE_2 of its esse"
+rule = "Instantiate the q.3 a.4 reading at each contingent being"
+meaning = "A being contingent at w exists at w, so it is in act of esse (each individual existing at w is in act as to esse); by B6 its esse is distinct from its essence; the ST I q.3 a.4 reading ('that whose esse is other than its essence has its esse caused by another') then gives another being, in act of esse, that causes its esse. The q.3 a.4 profile is built on the frame's own CausesIn and esse, so the cause is CAUSE_2 at the same esse respect as B2. The passage from the q.3 a.4 reading's external esse-cause (CAUSING_AN_EFFECT_2) to B2's CausesIn at esse (CAUSING_AN_EFFECT_3) is by the definition of the former, which is the latter together with the cause's being in act; the q.3 a.4 statement is therefore listed as the sense bridge, and no contested step passes between the senses."
+description = "Support for B2 from the modal bridge B6, the existing selected-world existence-to-act contract and the existing q.3 a.4 reading. Not a transcription: the conclusion's causal claim about contingents is reached by composing a modal-to-essence bridge with a causal reading about distinct esse. Establishes no premise. Routes A (with this support) and C then share B6."
+
+[[argument]]
+id = "First Way mover is necessary, from simplicity and distinct esse for contingents"
+theorem = "firstMoverNecessaryByEsseIdentity"
+premises = ["STMT-EXCLUDED-MIDDLE", "STMT-THERE-IS-A-FIRST-UNMOVED-MOVER", "Whatever moves something exists at the reading world w", "STMT-FIRST-UNMOVED-MOVER-IS-SIMPLE", "STMT-FIRST-UNMOVED-MOVER-IS-PURE-ACT", "Every being contingent at w has esse distinct from its essence"]
+conclusion = "Some first mover moved by none is PURE_ACT_5, exists at w and at every accessible world"
+rule = "Contraposition of B6 at the first mover, then excluded middle"
+meaning = "Route C of the lead. The first mover f exists at w (B0) and, by the existing simplicity statement, has no esse distinct from its essence. Were it absent at some accessible world, it would be contingent and B6 would make its esse distinct from its essence. So it is present at every accessible world (excluded middle). Neither firstness nor any esse-cause is used here, though the existing derivation of the simplicity statement uses firstness. Essence-esse identity alone has no modal force (controls, model 1): B6 carries it."
+description = "Same-witness conditional result, essence-esse route: the First Way's first mover is necessary at w from its simplicity and B6. Not a transcription: the conclusion is reached by contraposing B6 against the simplicity reading's esse-essence clause. Establishes no premise. B6 is the explicit open modal bridge from 'esse not received/distinct' to 'cannot fail to be at accessible worlds'."
+
+[[argument]]
+id = "First Way mover is necessary, from PURE_ACT_5 and POTENCY_1 for possible nonexistence"
+theorem = "firstMoverNecessaryByPotency"
+premises = ["STMT-EXCLUDED-MIDDLE", "STMT-THERE-IS-A-FIRST-UNMOVED-MOVER", "Whatever moves something exists at the reading world w", "STMT-FIRST-UNMOVED-MOVER-IS-PURE-ACT", "Every being contingent at w is in POTENCY_1 in some respect"]
+conclusion = "Some first mover moved by none is PURE_ACT_5, exists at w and at every accessible world"
+rule = "Reductio on contingency against pure act, then excluded middle"
+meaning = "Route B of the lead. The first mover f exists at w (B0) and is pure act. Were it absent at some accessible world, B4 would put it in POTENCY_1 in some respect, against pure act. So it is present at every accessible world. This is the only route on which pure act alone, with one bridge, yields necessity, and B4 carries the whole modal weight: with excluded middle B4 is equivalent to 'every pure-act being existing at w is necessary at w' (controls, law 3), the lead's target at w. The route therefore relocates the question into B4 rather than answering it; it composes the existing pure-act statement with that relocated target."
+description = "Same-witness conditional result, potency route: pure act and B4 give necessity of the first mover. Not a transcription (B4's consequent is potency, not necessity), but B4 is classically equivalent to the target restricted to w, so the route relocates the open question. Establishes no premise. A counterexample to B4 as typed would be a contingent being in POTENCY_1 in no respect; whether such a being is possible is the open B5/receptive-potency question (DISAMB-RECEPTIVE-POTENCY, DISAMB-POTENCY-IN-SUBJECT-VS-IN-ANOTHER)."
+
+[[argument]]
+id = "First Way mover is a necessary actual first root, from the grounding closure"
+theorem = "firstMoverNecessaryFirstRoot"
+premises = ["STMT-EXCLUDED-MIDDLE", "STMT-THERE-IS-A-FIRST-UNMOVED-MOVER", "Whatever moves something exists at the reading world w", "Whatever moves something is CONCRETE_6", "STMT-FIRST-UNMOVED-MOVER-IS-FIRST-BEING", "STMT-FIRST-UNMOVED-MOVER-IS-PURE-ACT", "STMT-EVERY-CONTINGENT-GROUNDED-AT", "STMT-ACTUAL-GROUNDING-IS-SIMPLE-PRIORITY", "No actual concretum grounds itself under the selected grounding at w"]
+sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "STMT-EVERY-CONTINGENT-GROUNDED-AT"}]
+conclusion = "Some first mover moved by none is an actual root at w, necessary, first in being and PURE_ACT_5"
+rule = "Root by firstness and irreflexivity; necessity by reductio on the grounding closure"
+meaning = "Route A in the selected-grounding vocabulary of the root route. The first mover f is concrete and exists at w (B0, B0'). Any actual concrete ground of f is SIMPLY_PRIOR_1 to it (grounding-priority), so by firstness it is f, which would ground itself against irreflexivity: f is an actual root. Were f absent at some accessible world, it would be an actual contingent concretum, so the existing closure premise (every actual contingent concretum has an actual concrete ground) would give it such a ground. So f is present at every accessible world. No well-foundedness, inhabitedness or whole-roster premise is used: firstness of the First Way's mover replaces the minimal-element step of the existing necessary-root derivation."
+description = "Same-witness conditional result: the First Way's own first mover is a necessary actual first pure-act root of the selected grounding, from the existing grounding closure and grounding-priority premises, irreflexivity, firstness, pure act and the two interfaces B0 and B0'. Not a transcription. Establishes no premise; it shares the closure and grounding-priority premises with the existing necessary-root derivations."
+
+[[argument]]
+id = "First Way necessary first root witnesses the necessary first PURE_ACT_5 endpoint"
+theorem = "firstMoverRootIsNecessaryFirstPureAct"
+premises = ["Some first mover moved by none is an actual root at w, necessary, first in being and PURE_ACT_5"]
+sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "Some first mover moved by none is an actual root at w, necessary, first in being and PURE_ACT_5"}, {term = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT", from = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1", to = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_2", statement_id = "593d7307-c8e1-5863-9776-a26cfe09d20c", role = "conclusion"}]
+conclusion = "593d7307-c8e1-5863-9776-a26cfe09d20c"
+rule = "Existential projection: forget the moving"
+meaning = "The first mover that is a necessary actual first pure-act root is in particular some necessary actual first pure-act root of the same profile: drop the first-mover conjunct. This connects the First Way, through its own witness, to the existing endpoint consumed by the necessary-first-attributes argument, without any identification of the first mover with an independently derived necessary root (B7)."
+description = "Projection of the First Way's same-witness grounding endpoint onto the existing necessary actual first pure-act endpoint. A transcription by projection; it carries closure only when its premise is closed. Establishes no premise."
+
+[[argument]]
+id = "First Way necessary first root witnesses the stage-one NECESSARY_2 CONCRETE_6 node"
+theorem = "firstMoverRootIsNecessaryConcrete"
+premises = ["Some first mover moved by none is an actual root at w, necessary, first in being and PURE_ACT_5"]
+sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "Some first mover moved by none is an actual root at w, necessary, first in being and PURE_ACT_5"}]
+conclusion = "STMT-NECESSARY-CONCRETE-AT"
+rule = "Existential projection: keep concreteness, existence at w and necessity"
+meaning = "The First Way's first mover that is a necessary actual first pure-act root is in particular a concrete individual existing at w and at every world accessible from w, on the same profile: the stage-one node of the modal spine. This gives that root-route node a support option through the First Way's own witness and the existing grounding closure, with no well-foundedness, inhabitedness or whole-roster premise."
+description = "Projection of the First Way's same-witness grounding endpoint onto the stage-one node STMT-NECESSARY-CONCRETE-AT. A transcription by projection; it carries closure only when its premise is closed. Establishes no premise."
+
+[[argument]]
+id = "First Way necessary PURE_ACT_5 mover with CONCRETE_6 movers witnesses the stage-one node"
+theorem = "firstMoverNecessaryIsNecessaryConcrete"
+premises = ["Some first mover moved by none is PURE_ACT_5, exists at w and at every accessible world", "Whatever moves something is CONCRETE_6"]
+sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "STMT-NECESSARY-CONCRETE-AT", role = "conclusion"}]
+conclusion = "STMT-NECESSARY-CONCRETE-AT"
+rule = "Existential projection with the concreteness interface"
+meaning = "The First Way's first mover that is pure act and exists at w and at every accessible world moves something, so by B0' it is concrete; it is therefore a concrete individual existing at w and at every accessible world: the stage-one node, on any grounding profile over the frame's existence and the concreteness predicate. This lets the causal (B2 or B2 or B4), potency (B4) and essence-esse (B6) routes reach the stage-one node through the First Way's witness."
+description = "Composition of the First Way's pure-act necessity endpoint with the concreteness interface B0', giving the stage-one node STMT-NECESSARY-CONCRETE-AT. An assembly-type composition; it establishes no premise."
+
+[[argument]]
+id = "First mover necessity controls checked"
+theorem = "controls"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+premises = []
+conclusion = "First mover necessity: laws, omission models and a two-root model"
+rule = "General laws and explicit finite models"
+meaning = "Premise-free laws relating B6 to its necessity form, B4 to its converse-direction halves, B4's equivalence with the lead's target at w (route B relocates the question) and the strength of the disjunctive bridge; then twelve finite models: an omission model for each non-logical premise of the routes, a nonvacuity model for all routes and both endpoints, and a two-root model. Model-witnessed separations only; no premise is established and no reality claim is made."
+description = "Premise-free laws and models for the first-mover necessity batch. Sense-mixing control: the laws relate MODAL_CONTINGENCY_1 and NECESSARY_2 to POTENCY_1 and essence-esse identity without a bridge premise. Establishes no premise."

@@ -1,0 +1,10 @@
+{
+  "id": "872ff8b6-cc9d-4656-8691-b1ae7aa6304e",
+  "label": "In no accessible history at any moment is anything its own efficient cause",
+  "paraphrase": "OPEN analyst premise, attribution deferred: in every history accessible from the selected world and at every moment, nothing is then and there its own efficient cause, in any respect. It is the all-histories, all-moments version of the selected-time no-self-efficient-cause premise 8b2561cd. It is stronger than 8b2561cd only given that the selected world is accessible from itself (accessibility is not reflexive by construction) and that the unindexed relation of 8b2561cd is read as EfficientlyCausesAt at the selected world and a selected moment. No comparison with the all-admitted-times d15ded6f is claimed: that would also need a correspondence between its time-indexed relation and EfficientlyCausesAt at the selected world for every admitted time. The Aquinas claim on 8b2561cd does not extend to it; the 'nec est possibile' of ST I q.2 a.3 is an unchecked candidate basis.",
+  "lean_declaration": "TruthCore.Causality.ConcurrentGivingPriorityBridge.NoEfficientSelfCauseOnAccessible",
+  "definition_ids": [
+    "1d8c68c3-a256-4ba1-8d84-224a4583b803",
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6"
+  ]
+}

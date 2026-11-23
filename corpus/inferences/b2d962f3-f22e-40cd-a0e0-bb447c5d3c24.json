@@ -1,0 +1,17 @@
+{
+  "id": "b2d962f3-f22e-40cd-a0e0-bb447c5d3c24",
+  "label": "First Way mover is necessary, from simplicity and distinct esse for contingents (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "7bce7007-ad29-5f5b-b4b3-e7b02bf98312",
+    "bd0a4f81-29ba-4349-aa7d-b1fdcf6fd8e2",
+    "78246da5-0b37-5b37-b821-1e8bdb41606c",
+    "6c18d52b-2456-59ae-995f-13440f8c808d",
+    "96971e31-4782-4478-95b8-b6863a6a9412"
+  ],
+  "output_statement_id": "f9208664-e57b-4912-b6e7-edfcd23a4f89",
+  "rule": "Contraposition of B6 at the first mover, then excluded middle",
+  "meaning": "Route C of the lead. The first mover f exists at w (B0) and, by the existing simplicity statement, has no esse distinct from its essence. Were it absent at some accessible world, it would be contingent and B6 would make its esse distinct from its essence. So it is present at every accessible world (excluded middle). Neither firstness nor any esse-cause is used here, though the existing derivation of the simplicity statement uses firstness. Essence-esse identity alone has no modal force (controls, model 1): B6 carries it.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

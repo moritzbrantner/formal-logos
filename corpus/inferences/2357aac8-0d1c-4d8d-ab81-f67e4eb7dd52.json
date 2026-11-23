@@ -1,0 +1,20 @@
+{
+  "id": "2357aac8-0d1c-4d8d-ab81-f67e4eb7dd52",
+  "label": "First Way mover is a necessary actual first root, from the grounding closure (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "7bce7007-ad29-5f5b-b4b3-e7b02bf98312",
+    "bd0a4f81-29ba-4349-aa7d-b1fdcf6fd8e2",
+    "6e6c5d8d-84d9-4b79-a524-21e34c4c8146",
+    "74eb9113-552b-5ec6-8e09-68374305dd58",
+    "6c18d52b-2456-59ae-995f-13440f8c808d",
+    "c71c068c-bbae-5ed5-a99d-70b155c8d239",
+    "7a63a3fe-a29f-5282-8106-79fedcb10d08",
+    "2047d14b-7f50-4e46-9284-8972d135ef9e"
+  ],
+  "output_statement_id": "11958874-aa8f-4b09-97ba-4f6028d26cd9",
+  "rule": "Root by firstness and irreflexivity; necessity by reductio on the grounding closure",
+  "meaning": "Route A in the selected-grounding vocabulary of the root route. The first mover f is concrete and exists at w (B0, B0'). Any actual concrete ground of f is SIMPLY_PRIOR_1 to it (grounding-priority), so by firstness it is f, which would ground itself against irreflexivity: f is an actual root. Were f absent at some accessible world, it would be an actual contingent concretum, so the existing closure premise (every actual contingent concretum has an actual concrete ground) would give it such a ground. So f is present at every accessible world. No well-foundedness, inhabitedness or whole-roster premise is used: firstness of the First Way's mover replaces the minimal-element step of the existing necessary-root derivation.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
