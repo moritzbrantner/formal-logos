@@ -41,7 +41,25 @@
       "id": "148e37bc-4dfd-423e-a871-14722929d708",
       "label": "ESSENCE_5",
       "definition_id": "7cf63236-9c12-41bc-bf20-6fbce7a121db",
-      "lean_declaration": "TruthCore.Modal.ModalGrounding.EssentialTruth"
+      "lean_declaration": "TruthCore.Modal.ModalGrounding.EssentialTruth",
+      "lean_parameters": [
+        {
+          "declaration": "TruthCore.Modal.ModalGrounding.EssenceGroundsNecessity",
+          "parameter": "Essential"
+        },
+        {
+          "declaration": "TruthCore.Modal.ModalGrounding.EsseEssenceIsEssentialExistence",
+          "parameter": "Essential"
+        },
+        {
+          "declaration": "TruthCore.Modal.ModalGrounding.ExistenceConditionalEssences",
+          "parameter": "Essential"
+        },
+        {
+          "declaration": "TruthCore.Modal.ModalGrounding.EssentialExclusionAccount",
+          "parameter": "Essential"
+        }
+      ]
     }
   ]
 }

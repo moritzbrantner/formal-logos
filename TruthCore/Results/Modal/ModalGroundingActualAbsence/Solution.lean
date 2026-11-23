@@ -121,8 +121,30 @@ theorem conceivabilityS4Bundle : ConceivabilityS4Bundle := by
   · exact Or.inr fun _ => Iff.rfl
   · exact Or.inl fun _ => Iff.rfl
 
+theorem conceivabilityS4Actual : ConceivabilityS4Actual := by
+  unfold ConceivabilityS4Actual
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  · intro v; simp [s4ActualFrame, frameOn, s4ActualAccess]
+  · intro u m v; simp only [s4ActualFrame, frameOn, s4ActualAccess]
+    intro h1 h2; cases u <;> cases m <;> cases v <;> simp_all
+  · intro h
+    have := h .a .b .c (by simp [s4ActualFrame, frameOn, s4ActualAccess])
+      (by simp [s4ActualFrame, frameOn, s4ActualAccess])
+    simp [s4ActualFrame, frameOn, s4ActualAccess] at this
+  · simp [s4ActualFrame, frameOn, s4ActualEx]
+  · rintro P (hP | hP)
+    · exact ⟨.c, Or.inl rfl, (hP .c).2 (by simp [s4ActualFrame, frameOn, s4ActualEx])⟩
+    · exact ⟨.b, Or.inl rfl, (hP .b).2 (by
+        intro u hu
+        simp only [s4ActualFrame, frameOn, s4ActualAccess] at hu
+        rcases hu with h | h
+        · cases h
+        · subst h; simp [s4ActualFrame, frameOn, s4ActualEx])⟩
+  · exact Or.inr fun _ => Iff.rfl
+  · exact Or.inl fun _ => Iff.rfl
+
 theorem actualAbsenceControls : ActualAbsenceControls :=
   ⟨actualAbsenceLaws, siblingNonvacuity, siblingOmissions, replacementVersusJointAbsence,
-    conceivabilityS4Bundle⟩
+    conceivabilityS4Bundle, conceivabilityS4Actual⟩
 
 end TruthCore.Results.Modal.ModalGroundingActualAbsence

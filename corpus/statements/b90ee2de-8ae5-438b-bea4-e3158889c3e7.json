@@ -1,7 +1,7 @@
 {
   "id": "b90ee2de-8ae5-438b-bea4-e3158889c3e7",
-  "label": "Some necessary concrete being at w has a power for every actual contingent concretum's absence",
-  "paraphrase": "Conclusion of the sibling route: some concrete candidate exists at w, exists at every world accessible from w (NECESSARY_2 de re) and has at w a power for the absence of every concrete being contingent at w. It asserts no uniqueness, simplicity, firstness, intellect or God, and nothing about the power's exercise.",
+  "label": "Some necessary concrete being at w has a power for the actual contingent concreta's joint absence",
+  "paraphrase": "Conclusion of the sibling route: some concrete candidate exists at w, exists at every world accessible from w (NECESSARY_2 de re) and has at w a power for the joint absence of the concrete beings contingent at w (one world lacking them all). It asserts no uniqueness, simplicity, firstness, intellect or God, and nothing about the power's exercise.",
   "lean_declaration": "TruthCore.Modal.ModalGrounding.NecessaryConcreteActualAbsencePowerAt",
   "definition_ids": [
     "bf7eddca-8291-4744-8470-379babcd7781",

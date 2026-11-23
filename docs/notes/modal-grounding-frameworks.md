@@ -30,7 +30,7 @@ routes reach it, none of them through C2 or the First Way endpoint
 - the foundational verdict `666f06a4` with a concrete foundational being
   `c5da5e62` (result `b27c88b0`);
 - the global Pruss variant `84d02356` (result `2a3a3f09`);
-- Pruss's own route `b90ee2de` (result `ad42c376`, see §5).
+- the route with Pruss's own premise `b90ee2de` (result `ad42c376`, see §5).
 
 The batch also adds a support bundle for #1870's B6 `96971e31`.
 
@@ -159,10 +159,11 @@ no assumed structure.
 | `HybridFirstWayModel` | first unmoved mover, B0, firstness, pure act, q.2 a.3, unrestricted recombination, companions, a foundational and contingent first mover; PGP's subject half has a nonvacuous antecedent (a corruptible composite) satisfied by corruptibility, with no power occurring | PGP's subjectless half, PGP, B4, necessity verdict | F2: the hybrid is consistent with these First Way premises and a contingent first mover; strictness of law 11's split | the hybrid |
 | `PrussOmissions` 1–6 (global variant) | all premises but one | that premise; the conclusion | each premise is needed. Omission 2 is a contingent all-annihilating holder that fails initiator presence. Omission 4 is replacement: the one actual concretum is possibly absent, while a non-actual being is contingent at the other world. Omission 6 (Euclidean) is an artefact of the global P4 | — |
 | `ConceivabilityOneSided` | the bridge with only C(¬E n) (`n` contingent); the bridge with only C(□E n) (`n` necessary) | the other conceiving | F1: law 9 needs both conceivings | — |
-| `SiblingNonvacuity` | every premise of Pruss's own route and its conclusion, on the theist frame and on a non-Euclidean frame | Euclidean access (second frame) | nonvacuity; Pruss's own route needs no Euclidean premise | classical theism (first frame) |
+| `SiblingNonvacuity` | every premise of the route with Pruss's premise and its conclusion, on the theist frame and on a non-Euclidean frame | Euclidean access (second frame) | nonvacuity; Pruss's own route needs no Euclidean premise | classical theism (first frame) |
 | `SiblingOmissions` 1–5 | all premises but one | that premise; the conclusion | each non-logical premise of `42da6b2d` is needed | — |
 | `ReplacementVersusJointAbsence` | `swappedFrame`: S2 at `w` and P4′; `vanCleveFrame` (Euclidean): S2 at `w` | `swappedFrame`: the global P4; `vanCleveFrame`: P4′ and the global P4 | replacement separates P4′ from P4. Van Cleve's point: each actual contingent is possibly absent, yet never all jointly, so P4′ is an independent premise | — |
 | `ConceivabilityS4Bundle` | on a reflexive, transitive, non-Euclidean frame, the unrestricted bridge with both C(□E n) and C(¬E n) | Euclidean access | the #1888 F1 request: law 9's inconsistency depends on Euclidean access | — |
+| `ConceivabilityS4Actual` | the same bundle on a reflexive, transitive, non-Euclidean frame with `n` actual at the reading world | Euclidean access | as above, for an actual `n` (re-check N3) | — |
 
 Excluded middle is never omitted: every model is built in Lean, which is
 consistent with it.
@@ -185,20 +186,30 @@ declines**. Its Euclidean premise and omission 6 are artefacts of that
 variant: the holder is shown non-contingent at the contingent-free world, not
 at `w`.
 
-### Pruss's own route (results `42da6b2d` and `ad42c376`)
+### The route with Pruss's own premise (results `42da6b2d` and `ad42c376`)
+
+The direction stays mirrored relative to Pruss's (see the P2 comparison below
+and gap 6), so this is the route *with Pruss's own premise*, not Pruss's
+route.
 
 **Premises:**
 
 - EM;
-- **P1′** `95bf8780`: if the absence of every actual contingent concretum is possible but
-  not actual, some being at `w` has a power for it;
-- **P2′** `906f5c39`: initiator presence for that absence (tenseless);
+- **P1′** `95bf8780`: if the joint absence of the actual contingent concreta
+  (one accessible world lacking them all) is possible but not actual, some
+  being at `w` has a power for it;
+- **P2′** `906f5c39`: initiator presence for that joint absence (tenseless);
 - **P3′** `a6906cab`: holders are concrete;
 - **P4′** `18e5bd4e`: some accessible world lacks every concrete being contingent at `w`;
 - **P5** `c76b6e2c`: some concrete being is contingent at `w`.
 
 **Conclusion** `b90ee2de`: some concrete being exists at `w`, is necessary at `w`, and
-has a power for that absence.
+has a power for that joint absence.
+
+**Restriction to concreta.** P4′ restricts Pruss's S (all actual contingent
+beings) to the concrete ones. This is a harmless weakening: absence of every
+actual contingent being implies absence of the concrete ones, and P3′ makes the
+restricted proposition sufficient, since the holder is concrete.
 
 **Why no Euclidean premise is needed.** P1′ puts the holder `y` at `w`, and
 P2′ puts `y` at a P4′-world. Were `y` absent at some world accessible from
@@ -210,9 +221,9 @@ P4′-world. Hence `y` is not contingent at `w`. Each premise is needed
 **Disclosure.** Neither NECESSARY_2 nor `b19ffd92` assumes Euclidean access
 (#1888 §2.1b point 2). Only the global variant needed it. On Euclidean frames
 the unrestricted conceivability bundle of law 9 is inconsistent, but on an S4
-frame it is satisfiable (`ConceivabilityS4Bundle`). The global route therefore
-carried a cross-route dependency on Euclidean access that Pruss's route
-removes.
+frame it is satisfiable, including with `n` actual (`ConceivabilityS4Bundle`,
+`ConceivabilityS4Actual`). The global route therefore carried a cross-route
+dependency on Euclidean access that the route with Pruss's premise removes.
 
 ### P2 compared with Pruss's principle
 
@@ -234,8 +245,8 @@ contingent at the end"), a self-annihilating holder falsifies P2
 ### Is the route independent of the C2 crux?
 
 **Formally, yes.** Neither route needs PGP at the foundational being, PGP for
-contingent subjects, or C2 (`PrussWithoutPGPModel`; Pruss's own route has no
-PGP or C2 premise either). They share only excluded middle with the C2 route.
+contingent subjects, or C2 (`PrussWithoutPGPModel`; the route with Pruss's
+premise has no PGP or C2 premise either). They share only excluded middle with the C2 route.
 
 **Dialectically, no.** P1 and P1′ are power-grounded modality applied to a
 joint absence. For the global variant there is an exact formal link: P1 with
@@ -265,8 +276,11 @@ stead:
 
 - A Lowe-style view that some contingent being must exist is compatible with
   P4′ (replacement; `swappedFrame` has P4′ without the global P4).
-- The theist and the subtraction rival accept it (law A1 with Euclidean
-  access).
+- The theist accepts it (it holds in `TheistModel`; and on Euclidean frames
+  the global P4 implies it, by the unnumbered law under `6cf3a8ce`). For the
+  subtraction rival it follows from PossiblyNoConcrete directly, without
+  Euclidean access: a world with no concretum lacks every actual contingent
+  concretum.
 - It is not given by the contingency of each actual concretum taken singly
   (`vanCleveFrame`).
 
@@ -280,7 +294,7 @@ shared than the foundational being's possible absence (C2 note §5). The power
 theory's grounding demand then applies to a possibility the rivals have no
 recorded reason to reject. They answer by denying P1′: possibilities of
 existence need no power. This is the "too few potentialities" objection, now
-at a datum they accept. The disagreement remains in the general theory of
+at a datum no recorded rival is shown to reject. The disagreement remains in the general theory of
 modality for existence. The route changes where the burden sits, not who
 wins.
 
@@ -304,18 +318,25 @@ excluded.
 
 - **F1:** built.
   - Law 9 and the one-sided models.
-  - The S4 satisfying model of the bundle requested by #1888
-    (`ConceivabilityS4Bundle`).
+  - The S4 satisfying model of the bundle requested by #1888, twice:
+    `ConceivabilityS4Bundle` (where `n` is not actual at the reading world)
+    and `ConceivabilityS4Actual` (where `n` is actual at the reading world, as
+    #1888's point requires).
   - The bridge is applied to `Box` over the route's own existence valuation;
     the Euclidean step is direct rather than reused through
     `necessary-if-existent-symmetry-437`.
 - **F2:** built as a factorization with excluded middle (law 11), with
   strictness from `HybridFirstWayModel`.
-  - #1888's requested equivalence (PGP ↔ PGP for beings with matter or
-    received esse ∧ PGP for subjectless beings) is realized as the
-    receptive/subjectless split. "Receptive" is the C2 batch's
-    `ExistentiallyReceptive`: received esse in a receptive principle, or
-    matter and form.
+  - #1888 §8 requested, with excluded middle (or decidable `CanFailToBe`) as
+    an explicit premise: "PGP ↔ (∀x, ContingentAt x ∧ ¬CanFailToBe x esse →
+    ∃y, PowerOverEsse y x)", i.e. PGP's substantive content as its
+    completeness over incorruptibles. That equivalence was **not built**. It
+    was replaced by the receptive/subjectless split (law 11), whose halves
+    are "receptive" in the C2 batch's sense (`ExistentiallyReceptive`:
+    received esse in a receptive principle, or matter and form) and its
+    negation. The requested form is listed as next test 9. It is a
+    propositional triviality given excluded middle: a corruptible being
+    satisfies PGP's first disjunct.
   - Not built: a registered `strength_comparison` relation (it would need
     excluded middle as background) and a "power" disambiguation (the hybrid's
     change component is the existing `MovedOnlyAsInPotencyReading`).
@@ -350,7 +371,7 @@ excluded.
 | `fffa0693` | P2 | `PowerFor w y p → ∃ v, access w v ∧ p v ∧ ExistsAt v y` | existential; tenseless |
 | `84d02356` | necessary concrete holder (global variant) | `∃ y, concrete ∧ exists ∧ NecessaryAt ∧ PowerFor …` | no uniqueness, firstness or God |
 | `18e5bd4e` (P4′) | some accessible world lacks every concrete being contingent at `w` | `∃ v, access w v ∧ ∀ x, concrete x → ContingentAt w x → ¬ ExistsAt v x` | indexed to `w`; others may exist |
-| `b90ee2de` | necessary concrete holder of a power for the actual contingents' absence | same shape as `84d02356` with `NoActualContingentConcreteIn … w` | no Euclidean premise used |
+| `b90ee2de` | necessary concrete holder of a power for the actual contingent concreta's joint absence | same shape as `84d02356` with `NoActualContingentConcreteIn … w` | no Euclidean premise used |
 
 Sibling statement IDs: P1′ `95bf8780`, P2′ `906f5c39`, P3′ `a6906cab`, P4′
 `18e5bd4e`, conclusion `b90ee2de`, controls `0367a005`. Every hypothesis of each theorem is a listed premise
@@ -399,10 +420,15 @@ show only that these premises are needed.
    sense (DEF `bf7eddca`; q.104 a.3 ad 1).
 8. `truth countermodel` does not handle `CausalityFrame` parameters; all
    models are hand-written.
+9. #1888's F2 equivalence, PGP ↔ (∀x, ContingentAt x ∧ ¬CanFailToBe x esse →
+   ∃y, PowerOverEsse y x) with excluded middle: not built (replaced by the
+   receptive/subjectless split). It is a propositional triviality given
+   excluded middle, worth registering only as a certified difference
+   (completeness over incorruptibles).
 
 ## 10. Cross-lane edits (for the coordinator)
 
-- `corpus/disambiguations/essence.json`: sense ESSENCE_5 appended, plus one
+- `corpus/disambiguations/essence.json`: sense ESSENCE_5 appended, with parameter tags on the `Essential` binder of four premise definitions, plus one
   resolution sentence.
 - The three bundle audits that pin it by hash
   (`docs/notes/classical-attributes-migration.json`,

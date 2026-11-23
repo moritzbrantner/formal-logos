@@ -1,6 +1,6 @@
 {
   "id": "18e5bd4e-8178-468e-b867-fbaf9c5988ad",
-  "label": "Possibly every concrete being CONTINGENCY_1 at w is absent",
+  "label": "Some accessible world lacks every concrete being CONTINGENCY_1 at w",
   "paraphrase": "OPEN (P4-prime, Pruss's possibility premise; analyst reconstruction): some world accessible from w lacks every concrete being that is contingent at w (MODAL_CONTINGENCY_1 at the actual world); other concrete beings, contingent or not, may exist there. Weaker than the global premise that possibly no concrete being is contingent (0dc833c1): with Euclidean access the global premise implies it, not conversely (controls). It does not follow from the contingency of each actual concretum taken singly (controls: two actual contingents, each possibly absent, never jointly absent).",
   "lean_declaration": "TruthCore.Modal.ModalGrounding.PossiblyNoActualContingentConcrete",
   "definition_ids": [

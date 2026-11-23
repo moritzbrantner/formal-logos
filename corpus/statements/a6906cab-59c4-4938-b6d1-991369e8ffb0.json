@@ -1,7 +1,7 @@
 {
   "id": "a6906cab-59c4-4938-b6d1-991369e8ffb0",
-  "label": "Whatever has at w a power for every actual contingent concretum's absence is concrete",
-  "paraphrase": "OPEN (P3-prime; analyst reconstruction): every holder at w of a power for the absence of every concrete being contingent at w is concrete (in the selected world-independent concreteness predicate).",
+  "label": "Whatever has at w a power for the joint absence of the actual contingent concreta is concrete",
+  "paraphrase": "OPEN (P3-prime; analyst reconstruction): every holder at w of a power for the joint absence of the concrete beings contingent at w (one world lacking them all) is concrete (in the selected world-independent concreteness predicate).",
   "lean_declaration": "TruthCore.Modal.ModalGrounding.ActualAbsencePowerHoldersConcrete",
   "definition_ids": [
     "bf7eddca-8291-4744-8470-379babcd7781",

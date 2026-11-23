@@ -1108,7 +1108,9 @@ def ReplacementVersusJointAbsence : Prop :=
 /-- **conceivabilityS4** (#1888 F1 request): on a reflexive, transitive,
 non-Euclidean frame, #248's unrestricted bridge holds for a conceiver of both
 `true`'s necessary existence and its absence. So law 9's inconsistency of the
-bundle depends on Euclidean access (it holds on S5, not on S4). -/
+bundle depends on Euclidean access (it holds on S5, not on S4). Here `true` is
+not actual at the reading world `false`; `ConceivabilityS4Actual` gives the
+model with it actual. -/
 def ConceivabilityS4Bundle : Prop :=
   TruthCore.Modal.Reflexive s4Frame.history.ontic.frame ∧
   TruthCore.Modal.Transitive s4Frame.history.ontic.frame ∧
@@ -1118,10 +1120,37 @@ def ConceivabilityS4Bundle : Prop :=
     (Box s4Frame.history.ontic.frame (fun v => s4Frame.history.ontic.ExistsAt v true)) false ∧
   conceiveBoth s4Frame true (fun v => ¬ s4Frame.history.ontic.ExistsAt v true) false
 
+/-- `Pt.a` sees every point; `b` and `c` see only themselves. Reflexive and
+transitive, not Euclidean. -/
+def s4ActualAccess (u v : Pt) : Prop := u = .a ∨ u = v
+
+/-- `true` exists at `a` and `b`, not at `c`; `false` nowhere. -/
+def s4ActualEx (v : Pt) (x : Bool) : Prop := x = true ∧ v ≠ .c
+
+/-- The S4 frame with `true` actual at the reading world `Pt.a`. -/
+def s4ActualFrame : CausalityFrame Pt Bool Unit Bool :=
+  frameOn s4ActualAccess s4ActualEx noCause noPrior
+
+/-- **conceivabilityS4Actual** (#1887 re-check N3): as `ConceivabilityS4Bundle`,
+but with `n = true` actual at the reading world `Pt.a`. On this reflexive,
+transitive, non-Euclidean frame the unrestricted bridge holds for a conceiver of
+both `n`'s necessary existence (realized at `b`) and its absence (realized at
+`c`). In `ConceivabilityS4Bundle` `n` is not actual at its reading world. -/
+def ConceivabilityS4Actual : Prop :=
+  TruthCore.Modal.Reflexive s4ActualFrame.history.ontic.frame ∧
+  TruthCore.Modal.Transitive s4ActualFrame.history.ontic.frame ∧
+  ¬ TruthCore.Modal.Euclidean s4ActualFrame.history.ontic.frame ∧
+  s4ActualFrame.history.ontic.ExistsAt .a true ∧
+  StrongBridge s4ActualFrame.history.ontic.frame (conceiveBoth s4ActualFrame true) .a ∧
+  conceiveBoth s4ActualFrame true
+    (Box s4ActualFrame.history.ontic.frame (fun v => s4ActualFrame.history.ontic.ExistsAt v true))
+    .a ∧
+  conceiveBoth s4ActualFrame true (fun v => ¬ s4ActualFrame.history.ontic.ExistsAt v true) .a
+
 /-- The sibling certificate. -/
 def ActualAbsenceControls : Prop :=
   ActualAbsenceLaws ∧ SiblingNonvacuity ∧ SiblingOmissions ∧ ReplacementVersusJointAbsence ∧
-    ConceivabilityS4Bundle
+    ConceivabilityS4Bundle ∧ ConceivabilityS4Actual
 
 end Model
 
