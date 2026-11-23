@@ -437,3 +437,318 @@ one unsupported universal non-entailment claim about naturalism (replaced),
 and several wording and scope overstatements (corrected). Mechanical Lean,
 binding, Comparator, NanoDa and the computed frontier-diff are evaluated on
 the exact PR head in CI.
+
+
+## Causal propagation of a brute contingency (2026-11-23, #1867)
+
+**Proposed checkpoint; independent semantic challenge and canonical validation
+pending.** Owner hypothesis: an existential exception might not remain
+isolated, because a being that obtains without a reason can exercise causal
+powers whose effects influence the rest of reality and all empirical
+evidence. Investigate an analogue of explosion, but do not identify
+metaphysical possibility with classical entailment from a contradiction.
+This is an upstream continuation of #1867, not a repeat of #1874/#1809's
+suffix theorem, and does not edit #1910's exemption analysis or #1904's
+historical-evidence note. Analyst formulations; no new source attribution.
+
+### Three different propagation theses
+
+Fix actual world w, the same rigid concrete candidate b, an accessible
+absence alternative v, and a specified family of actual positive empirical
+facts Q. Grant for this investigation that b exists contingently and has
+no adequate actual existential reason. That is stronger than the mere
+absence of a selected causal predecessor. The formal token-level
+`b36104ba` rival is related but not an adequacy certificate.
+
+1. **Ultimate explanatory dependence.** If an adequate *complete*
+   explanatory account of a fact q must account for the actuality of b
+   (not merely cite b or give a conditional mechanism), and b lacks an
+   adequate actual reason, no such complete account of q succeeds.
+   Proof: a purported successful account would, by the explicitly stated
+   completion condition, supply an adequate reason for b, contrary to
+   the premise. This is relative to the complete-account standard; no
+   new theorem says every explanation must meet it. A real causal
+   dependence can justify including b in a complete account, but graph
+   ancestry or mere material implication does not certify explanatory
+   inclusion. The local mechanism can explain q and thus q is not
+   necessarily brute. The missing reason is upstream.
+2. **Modal transmission.** Suppose for each q in Q, q actually obtains
+   and q's obtaining in any accessible history requires the existence
+   of b in that history (not necessarily at the same time if q is an
+   effect of an originating act). With the admitted b-free alternative v,
+   each q fails in v. Hence each q is contingent at w on the chosen
+   scope, with one common absence witness. For existential facts this
+   is the strong selected dependency reading of
+   `STMT-DEPENDENCE-EXCLUDES-BEING-WITHOUT` (000e1f65), not mere
+   causal ancestry. Event/state facts require their own interpretation
+   bridge. For a sustaining source, retention of the bearer and the
+   relevant concurrent receipt must be established; for an originator,
+   its existence somewhere in the relevant complete history is the
+   issue. This does not establish unrestricted independent variation
+   of the q's or the failure of empirical knowledge; v might have no
+   observers at all.
+3. **Arbitrary selection of empirical values.** Fix the background
+   laws and retained conditions, a nonempty set of admitted possible
+   source configurations U, and an observation map F into the
+   outcomes for the specified empirical facts. Here U is a mathematical
+   parameter, not the earlier section's abbreviation U for no ultimate
+   explanation. To make terminology unambiguous below write S for
+   the source-configuration set. Individual variability means that
+   each selected Boolean output coordinate takes both values on F(S).
+   Joint arbitrariness means that F(S) contains every proposed joint
+   assignment in the selected output domain. Neither follows from
+   explanatory incompleteness; individual variability is strictly
+   weaker than joint arbitrariness. A complete deterministic map can
+   still satisfy the latter if the source has enough admitted
+   configurations and the map realizes their distinctions.
+
+The first conclusion is a sense in which a brute root's explanatory
+deficit can propagate to an entire order **even if every physical law
+and every local mechanism is stable**. It is not the claim that all
+facts become ontologically uncaused. The second gives shared contingency,
+not arbitrary laws. The third is closest to the requested explosion,
+but requires an explicit modal and causal amplification premise.
+
+### Why connectedness is insufficient, and what is sufficient
+
+Reuse #1399 / merged #1406
+([causal transitivity](causal-transitivity-1399.md), result
+1ab3858a-b0cb-4475-b22d-b397858a76a2). In the actual Boolean
+intervention model X=Y=Z=1, Y=X and Z=(X==Y), intervention X=0
+changes Y, intervention Y=0 changes Z with X held actual, yet
+intervention X=0 leaves Z true after recomputation. The registered
+result also proves the pure binary chain conditional and the
+compensating-direct-effect boundary. Do not read transitive closure
+as actual difference-making or existence-giving. Even complete
+causal connectivity in a selected graph is not a certificate of
+universal influence. Conversely, a positive account of productive
+contribution may retain causal ancestry despite endpoint cancellation;
+that is not enough to show the endpoint could be different.
+
+A second discriminator isolates the quantifiers. One free Boolean
+input b with a deterministic copying mechanism gives n outputs
+(b,b,...,b). Each coordinate can differ from its actual value, but
+there are exactly two joint vectors, not 2^n when n>1. The input
+could stand for the presence of a stipulated trigger in an admitted
+alternative; that requires an interpretation of real existence not
+given by the bit. Neither the copying law nor the many outputs
+creates new independently selectable information. In general a
+deterministic map from m allowed configurations has at most m
+distinct joint output vectors. A single presence/absence choice
+with everything else fixed cannot generate unrestricted assignments
+of even two binary facts. It can, however, affect every output
+at once in an appropriate model. This makes the owner's common-mode
+intuition precise without claiming classical explosion.
+
+### Stronger mechanism: stable laws, unrestricted empirical histories
+
+The #1874 investigation derived suffix richness from one-step
+recombination and prefix closure on **output traces**. Here consider
+an alternative *causal implementation* of suffix richness with
+the same fixed transition at every time, rather than a changing
+law schedule or an unconstrained transition. It is a mathematical
+surrogate for causal powers, not a model of concrete existential
+actualization.
+
+Let the initial state be a Boolean tape a : Nat → Bool. At each
+step the one fixed deterministic transition shifts the tape one
+place, L(a)(i)=a(i+1), and the observer reads O(a)=a(0).
+After t shifts, O(L^t(a))=a(t), by induction on t (the stronger
+identity L^t(a)(i)=a(i+t) is preserved by one shift).
+Let the admitted initial tapes be a fixed class I. Then the set of
+complete observed traces is exactly I: the forward inclusion is
+the readout identity, and every a in I realizes itself as the
+observed trace. Hence:
+
+* If I admits every tape with the actual recorded prefix, every
+  future observed suffix is admitted, despite the single fixed,
+  deterministic microstate transition L.
+* The same holds if I has the #1874 one-step richness, nonempty
+  prefix cell and prefix closure, applied to initial tape values.
+  The previously certified consequence supplies complete suffix
+  richness of the tape class; the readout identity transfers it to
+  the observed trace selector. This is a proposed mathematical
+  application of the existing result, not a built Lean adapter.
+* If I contains only the two constant tapes, the observed cell
+  after the first read has a unique trace. If it contains the
+  eventually constant tapes, all finite extensions are admitted
+  but not arbitrary infinite traces. The *same* mechanism and
+  observation map are retained. The decisive difference is what
+  source states are admitted and how they propagate, not the name
+  "deterministic".
+
+The law L is deterministic on full tapes, not on the observed
+single bit. #1809's all-suffix result can therefore defeat
+restrictive universal **observed-bit transition** profiles without
+contradicting determinism of the full state law. To use the existing
+Profile-cell adapters the observed profile must admit the selected
+traces; the full tape law is not itself a Boolean Profile. For
+physical interpretation, a source containing arbitrarily selectable
+information and a mechanism releasing it would suffice to make
+arbitrary late outcomes compatible with stable local equations.
+The unrestricted initial-state assumption is substantial. A
+single brute concrete being need not have an infinite tape's
+information capacity or even two independently variable powers.
+Nor does absence of an explanation of its existence make every
+initial tape admissible. The construction shows a pathway from
+unrestricted source configurations to observed chaos that does
+not need fundamental law switching; it does not establish the
+required modal or physical application.
+
+A finite check (Python enumeration, 8-bit tape with zero-fill
+shift, first eight reads) found 256 distinct traces and 32
+continuations after prefix 111. Copying one shared bit into eight
+positions gives exactly two vectors with both possible values in
+each coordinate. These are exact checks of finite controls only;
+the infinite readout identity is the elementary induction above,
+not a Lean-certified result in this checkpoint.
+
+### The intruder question: why should the exception be contained?
+
+The strongest philosophical challenge is not that no causal law can
+coexist with an unexplained initial condition. It is whether the rival
+can justify a **specific modal boundary** on new, unreceived causes
+and their powers. Consider a proposed unexpected cause that would
+bring about a particular admissible local effect. Distinguish:
+
+* Is that sort of cause eligible to exist underived at all?
+* If it is eligible, can it exist in this very causal background,
+  at this place or moment, with these powers?
+* If it can coexist, can its actual exercise reach the target without
+  a compensating response or violation of a retained law?
+* Can the choices be made jointly for many targets, including the
+  relevant evidence and calibration apparatus?
+
+An argument for broad propagation can begin with actual causal
+mechanisms: localized changes can travel through interactions, and
+a change in a shared upstream condition can change many downstream
+facts. The explicit copying and shift mechanisms exhibit why this
+is not a mere metaphor. A proponent of arbitrary underived local
+causes would need a reason to deny the same kind of causes in
+otherwise comparable regions. If the opponent's only ground for
+admitting b is that contingent actuality need not have a reason,
+that ground alone does not discriminate b from a candidate intruder.
+This is an epistemic argument about the warrant offered for the
+restriction, drawing on #756/B2's feature-relative parity, **not**
+a modal rule that every distinct candidate is admissible. To infer
+actual or possible intruders, defend a positive co-admissibility
+principle (e.g. independently possible causal powers and compatible
+background recombination). The joint powers, conservation/identity
+constraints and endpoint efficacy must be retained, not read off
+from absence of a reason.
+
+A primitive, globally constrained stable history can answer the
+intruder question: only its specified input configurations are
+admitted and the full law forbids unlicensed additional causes.
+A dispositional rival can appeal to a nature that constrains
+which powers may be exercised in those conditions; a causal-isolation
+rival can give an independently restricted interaction domain.
+These are substantive ways to deny a step of the propagation
+argument. Their explanatory cost is that if the law, its application
+or the particular initial state is itself an unexplained contingent
+fact, there remains an ultimate why-question (assuming the selected
+complete-account standard). It does not follow that a constraint
+whose obtaining is unexplained cannot genuinely constrain, or
+that a necessary constraint must itself have a contingent bearer.
+An independently justified essential prohibition of a new intruder
+would defeat the proposed modal extension even if the actual
+foundation were brute. The comparison therefore advances #1910's
+exemption problem: a relevant restriction must constrain the
+existence or exercise of the cause, not merely label one allowed
+exception as fundamental.
+
+### Epistemic propagation: correlated evidence rather than random facts
+
+A common cause affecting evidence can matter more than merely
+making an outcome contingent. Reuse the common-mode/local distinction
+in [#1584](preface-connectivity-1584.md), and #737's record-only
+and epistemic-warrant boundaries. As a simple application, let the
+target truth p and an upstream offset b be Boolean. Every displayed
+record r_i reads p XOR b under a fixed mechanism. (p,b)=(1,0)
+and (0,1) produce identical records r_i=1 for any number of displays,
+yet opposite p. A method seeing only these records cannot be
+uniformly factive over both admitted cases. A genuinely independent
+observation of the offset or target would distinguish them. For
+a metaphysical application both populated alternatives, the
+offset's causal efficacy, access to the relevant records and
+the absence of independent disambiguating evidence must be
+established; this is not a new proof of #1904's historical
+underdetermination. The finite XOR comparison was checked for
+all four assignments and eight repeated records.
+
+The important potential implication is that **the same arbitrary
+factor might affect the evidence by which an inquirer tries to
+detect it**. Many observations need not be independent safeguards
+against common-mode error. Under a justified restriction excluding
+the offset, actual calibration, or a separately reliable process,
+the rival can retain empirical entitlement. Even admitted
+indistinguishable error scenarios defeat universal zero-error
+guarantees, not by themselves defeasible, probabilistic or
+externalist knowledge. Do not assign equal weights to alternatives
+or infer a low probability of truth without a probability/selection
+account. In particular this comparison does not establish
+`STMT-ULTIMATE-GROUND-EPISTEMIC-NECESSITY` (e519065f): that
+much stronger bridge explicitly retains genuine process reliability
+and relevant evidence. Merely allowing a common-mode failure does
+not show that the actual process is unreliable.
+
+### Proposed assessment, root connection and next discriminator
+
+High confidence in the distinction between upstream incompleteness,
+common modal contingency, individual variability and joint
+arbitrariness; also in the finite controls and fixed-shift readout
+argument. Provisional philosophical preference for the limited
+ultimate-dependence propagation principle when the complete-account
+requirement and genuinely indispensable existential dependence are
+warranted. This is a stronger comparative cost for a brute *common*
+root than for one isolated brute entity, without an unexplained-fact
+counting argument. No warrant yet for unconditional metaphysical
+explosion. Retain the restricted primitive/dispositional account as
+the strongest rival. A necessary source with an unexplained
+contingent act or law choice must face the same completeness and
+admissibility test; if intentional or other nonnecessitating
+explanation is adequate, do not identify nondetermination with
+bruteness (see #755 and #1910).
+
+The root-route premise 608a262d (local existence PSR for contingents)
+and B2 remain the intended comparative beneficiaries. The missing
+links are actual explanatory adequacy of reasons, the applicability
+of the complete-account standard to all relevant dependents, and
+whether the rival's permitted source configurations and causal
+powers have the necessary effective reach and modal richness.
+The fixed-shift argument provides a concrete alternative to the
+earlier law-switch route: defend source-state richness plus effective
+transmission, not U→arbitrary governing laws. Once justified, the
+existing #1874/#1809 downstream results can be reused on the
+observed trace selector with the existing adapters, after checking
+their exact hypotheses. No new support edge, premise discharge
+or God-existence conclusion is claimed.
+
+**Next test:** choose one real proposed brute-foundation ontology
+(e.g. primitive necessary powers with a contingent base, or a
+brute governing-law bearer), hold its positive laws/essences fixed,
+and identify what excludes or permits a same-background unreceived
+causal input with a power targeting the evidence channel. Test a
+nonempty family of inputs with actual local joint conditions and
+an admissible complete history, not just the logical consistency
+of a description. If those inputs can be jointly varied, test
+whether the fixed readout realizes the desired output patterns;
+if not, identify the exact invariant that blocks them. Compare
+that restriction and its warrant with the necessary-source rival
+at the same scope. Revise toward global explosion only when a
+substantive co-admissibility and reach principle survives this test;
+revise against it for a positively warranted invariant that
+allows a brute exception but forbids the proposed substitutions.
+A claim about epistemic self-undermining also needs the rival's own
+entitlement norm and relevant evidence conditions, as #1808/#737
+already require.
+
+**Claim/type self-sweep:** the prior #1399, #1874, #1809, #737 and
+#1584 results retain their exact scopes. Nothing equates a Boolean
+input, a tape or a record offset with a rigid concrete being.
+No historical attribution, new graph proposition or Lean declaration
+is introduced; the finite enumeration is not Comparator evidence.
+Local CLI and installed conventions cannot be checked in this
+connector-only checkout; independent semantic challenge and
+canonical checks must still be completed before relying on this
+checkpoint as reviewed.
