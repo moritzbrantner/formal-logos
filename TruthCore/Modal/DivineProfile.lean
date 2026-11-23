@@ -10,6 +10,7 @@ public import TruthCore.Causality.DeiFiliusAttributeField
 public import TruthCore.Logic.ReflectiveCoherence
 public import TruthCore.Results.Causality.NamingVeracityBatch1.Solution
 public import TruthCore.Causality.ActPriorityAtFirst
+public import TruthCore.Causality.ActPriorityThetaEight
 public import TruthCore.Modal.NecessaryVariableEffects
 
 /-! # A thirteen-slot profile schema, targeted admissibility and actual naming (#1864)
@@ -316,8 +317,16 @@ unchanged. The typed source, StageTwo and task-power vocabularies are reused.
 Content-knowledge and action-selection are world-indexed new primitives with
 explicit intended meanings below. The moral and free-exercise senses are
 deliberately WEAKER than unrestricted perfect goodness and libertarian freedom.
-The StageTwo properties are world-invariant here; treating them as essential
-in metaphysical alternatives is still an OPEN interpretive commitment.
+Nine slots of `fixedProfile` (simple, perfect, good, infinite, immutable,
+eternal, intellect, will, omnipotent) ignore the world argument, and their
+dictionaries are world-free, so they are rigid BY CONSTRUCTION of this
+interpretation (`fixedProfile_rigid`): they hold at every world once they hold
+at one, even at worlds where the bearer does not exist. This is an encoded
+interpretive commitment, not a derived essentiality, and it adds no evidence
+for M-necessary excellence; any later use of `fixedProfile` in `GreatnessAt` or
+`NecessaryExcellenceAt` inherits the stipulated rigidity. The genuinely open
+cross-world gap for this profile is the four world-varying slots one,
+omniscient, morallyPerfect and free.
 -/
 namespace Interpreted
 open TruthCore.Causality.BruteFoundationBoundary (Profile)
@@ -325,14 +334,18 @@ open TruthCore.Causality.NecessaryRootFork (ActualRoot)
 open TruthCore.Causality.RootPositiveIntellectWill (NecessaryPositiveRootIntellectWillAt)
 open TruthCore.Causality.DeiFiliusAttributeField (IsAlmighty)
 open TruthCore.Causality.ActPriorityAtFirst (ActAndPotencyMakeComposite)
+open TruthCore.Causality.ActPriorityThetaEight (ActInBeingAndPotencyMakeComposite)
 open TruthCore.Latin.Aquinas.SummaTheologiae (ImmutableIsEternalReading)
 open TruthCore.Causality.NamingVeracityBatch1 (Power)
 open TruthCore.German.Kant.CosmologicalInference (NecessaryAt)
 open TruthCore.Logic.ReflectiveCoherence (Semantics)
 
-/-- Knowledge of each true individuated content, and of no false content.
-Knows is actual cognitive uptake, not the already modeled mere assent.
-Coverage beyond the selected content type and the reality of uptake are OPEN. -/
+/-- `Knows` holds of exactly the contents true at `v`: of each true individuated
+content in the selected `C`, and of no false one. `Knows` is a primitive
+world-indexed relation, INTENDED as cognitive uptake rather than mere assent,
+but the type does not enforce that: nothing separates it from a truth oracle
+(`CreationControl.knows` satisfies this definition with one). Its DEF record,
+the reality of uptake and coverage beyond `C` are OPEN. -/
 def KnowsAllContentsAt {C : Type} (S : Semantics W C)
     (Knows : W → B → C → Prop) (v : W) (x : B) : Prop :=
   ∀ c, Knows v x c ↔ S.trueAt v c
@@ -380,6 +393,32 @@ def fixedProfile {P R C A : Type} (σ : Signature)
   omniscient := KnowsAllContentsAt S Knows
   morallyPerfect := PermissibleChoicesAt Chooses Permitted
   free := NoncoercedChoiceAt Chooses Capable Imposed
+
+/-- Rigidity BY CONSTRUCTION, not derived essentiality: the nine world-free
+slots of `fixedProfile` (simple, perfect, good, infinite, immutable, eternal,
+intellect, will, omnipotent) hold at every world `v` once they hold at one
+world `w`, for every bearer, whether or not it exists at `v`. The proof is
+definitional unfolding; it records an interpretive commitment of the encoding
+and adds no evidence for M-necessary excellence. Only one, omniscient,
+morallyPerfect and free vary by world. -/
+theorem fixedProfile_rigid {P R C A : Type} (σ : Signature)
+    (m : Profile W σ.Being)
+    (q : TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile σ.Being P R)
+    (Composite Infinite Eternal HasIntellect HasWill : σ.Being → Prop)
+    (GoodIn InPotency : σ.Being → R → Prop)
+    (power : Power σ) (S : Semantics W C)
+    (Knows : W → σ.Being → C → Prop)
+    (Chooses : W → σ.Being → A → Prop) (Permitted : W → A → Prop)
+    (Capable Imposed : W → σ.Being → A → Prop) (w v : W) (x : σ.Being) :
+    let p := fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+      GoodIn InPotency power S Knows Chooses Permitted Capable Imposed
+    (p.simple w x → p.simple v x) ∧ (p.perfect w x → p.perfect v x) ∧
+      (p.good w x → p.good v x) ∧ (p.infinite w x → p.infinite v x) ∧
+      (p.immutable w x → p.immutable v x) ∧ (p.eternal w x → p.eternal v x) ∧
+      (p.intellect w x → p.intellect v x) ∧ (p.will w x → p.will v x) ∧
+      (p.omnipotent w x → p.omnipotent v x) :=
+  ⟨fun h => h, fun h => h, fun h => h, fun h => h, fun h => h, fun h => h,
+    fun h => h, fun h => h, fun h => h⟩
 
 /-- A connective for six selected attributes of ONE necessary actual bearer.
 The other seven are not inferred. -/
@@ -467,31 +506,39 @@ theorem positiveCore_with_infinite_power_from_same_root {P R C A : Type} (σ : S
   exact ⟨hActualRoot.1.2, hNec, hSimple, hPerfect, hGood,
     ⟨hActualRoot, hOnly⟩, hInt, hWill⟩
 
-/-- An actually existing simple source has no passive potency WHEN any
-act/potency mixture counts as a composition. This is the existing
-ActPriorityAtFirst.ActAndPotencyMakeComposite interpretation; it is not proved
-by the word simple. The eternity step reuses q.10's explicit reading.
-Neither premise mentions GOD_4 or contingent decisions: possible-world
-differences in effects need not be intrinsic potencies of the source. -/
+/-- A simple source in act in the esse respect has no passive potency WHEN
+being in act in being and in potency in some respect counts as a composition.
+This is the registered weaker premise
+ActPriorityThetaEight.ActInBeingAndPotencyMakeComposite (statement d8024a38,
+the esse instance of ActPriorityAtFirst.ActAndPotencyMakeComposite, strength
+relation 4b6d0b59); it is not proved by the word simple. The eternity step
+reuses q.10's explicit reading. Neither premise mentions GOD_4 or contingent
+decisions: possible-world differences in effects need not be intrinsic
+potencies of the source. -/
 theorem immutable_eternal_of_simple_act {R : Type}
     (InAct InPotency : B → R → Prop) (Composite : B → Prop)
     (Eternal : B → Prop) (x : B) (esse : R)
     (hEsse : InAct x esse)
     (hSimple : IsSimple Composite x)
-    (hMixedComposite : ActAndPotencyMakeComposite InAct InPotency Composite)
+    (hMixedComposite : ActInBeingAndPotencyMakeComposite InAct InPotency esse Composite)
     (hEternity : ImmutableIsEternalReading InPotency Eternal) :
     IsImmutable InPotency x ∧ Eternal x := by
   have hNoPot : IsImmutable InPotency x := by
     intro r hPot
-    exact hSimple (hMixedComposite x r esse hEsse hPot)
+    exact hSimple (hMixedComposite x r hEsse hPot)
   exact ⟨hNoPot, hEternity x hNoPot⟩
 
 /-- Same-bearer positive extension: the earlier eight slots plus immutability
 and eternity, from actual esse and simplicity of THAT root. Two added open
-philosophical premises are named individually: act/potency mixture is
-composition, and unchangeable pure act is eternal. The older eight-slot
-route does not need them and remains available on its own. This proves NO
-omniscent cognition, moral perfection, free creative exercise or metaphysical
+philosophical premises are named individually: being in act in esse and in
+potency in some respect is composition (the registered weaker d8024a38, not
+the unrestricted 3d99779b), and unchangeable pure act is eternal. Prior art:
+registered argument 379399d1 (NecessaryClassicalGodRootByComposition) already
+derives the root's pure actuality and eternity on this positive-root route from
+simplicity, d8024a38 and the q.10 reading; this theorem adds the GOD-free
+packaging and omnipotence. The older eight-slot route does not need these
+premises and remains available on its own. This proves NO
+omniscient cognition, moral perfection, free creative exercise or metaphysical
 possibility of the thirteen-slot essence. -/
 theorem positiveCore_with_ten_from_same_root {P R C A : Type} (σ : Signature)
     (m : Profile W σ.Being) (w : W)
@@ -513,7 +560,7 @@ theorem positiveCore_with_ten_from_same_root {P R C A : Type} (σ : Signature)
     (hActive : TruthCore.Causality.NamingVeracityBatch1.ActivePowerFollowsAct σ power)
     (hPossible : TruthCore.Causality.NamingVeracityBatch1.ConsistentTaskRequiresOnlyPossiblePerfections
       σ power)
-    (hMixedComposite : ActAndPotencyMakeComposite q.InAct InPotency Composite)
+    (hMixedComposite : ActInBeingAndPotencyMakeComposite q.InAct InPotency q.esse Composite)
     (hEternity : ImmutableIsEternalReading InPotency Eternal) :
     ∃ n, PositiveCoreAt m.ontic
       (fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
@@ -583,8 +630,10 @@ theorem fixed_to_stageTwo_senses {P R C A : Type} (σ : Signature)
     (fun h => h), (fun h => h), (fun h => h),
     (fun h => h), (fun h => h)⟩
 
-/-- Nontrivial modal discriminator: complete and factive knowledge plus
-invariant known-content sets imply invariant truth of every covered content.
+/-- A chain of three biconditionals that makes explicit that strict invariance
+of known contents is incompatible with complete factive knowledge of a content
+whose truth varies: complete and factive knowledge at both worlds plus an
+invariant known-content set give invariant truth of every covered content.
 Simplicity alone does NOT imply this strong content-invariance premise. -/
 theorem invariant_knowledge_forces_truth_agreement {C : Type}
     (S : Semantics W C) (Knows : W → B → C → Prop)
@@ -639,7 +688,10 @@ def IncapableOfForbiddenTasks {A : Type} (σ : Signature)
 morally forbidden actions forces every such mapped task to count as
 logically inconsistent. This is the exact price of that stronger goodness
 reading, not a proof that evil really is metaphysically contradictory.
-The same conclusion does NOT follow from forbidding actual choice. -/
+The same conclusion does NOT follow from forbidding actual choice.
+`Permitted` varies by world but `taskOf`, `Consistent` and `CanDo` do not, so
+this theorem turns a world-relative prohibition into a world-free
+inconsistency; the "exact price" is relative to that indexing. -/
 theorem moral_incapacity_forces_task_inconsistency {A : Type} (σ : Signature)
     (power : Power σ) (Permitted : W → A → Prop)
     (taskOf : A → power.Task) (w : W) (x : σ.Being)
@@ -651,7 +703,9 @@ theorem moral_incapacity_forces_task_inconsistency {A : Type} (σ : Signature)
 
 /-- Exact incompatible bundle: coherent forbidden task, omnipotent ability and
 goodness-as-inability. The selected, weaker goodness-of-choice interpretation
-remains compatible because it does not imply incapacity. -/
+remains compatible because it does not imply incapacity. The theorem needs the
+forbidden action to correspond to some task via `taskOf`; the classical reply
+that sin is a defect, not an exercise of power, rejects that mapping. -/
 theorem coherent_forbidden_task_rules_out_moral_incapacity {A : Type} (σ : Signature)
     (power : Power σ) (Permitted : W → A → Prop)
     (taskOf : A → power.Task) (w : W) (x : σ.Being) (a : A)
@@ -670,7 +724,10 @@ not a new frame or a claimed metaphysical possibility. Unlike a vacuous
 all-True attributes model, a distinct actual effect has real passive potency
 and composition, and the source exists and is actual while lacking both.
 Knowledge tracks nonconstant contents; permissible choices differ across the
-two alternatives, with an actual forbidden option that is never chosen.
+two alternatives. The single forbidden option `none` is never chosen, but it
+is also outside `Capable` and has no causal output, so the control instantiates
+nonselection by incapacity, not "able but never chooses"; a permissible
+abstention is not modelled.
 The choice-output correspondence is extensional only: no intrinsic
 intentional self-knowledge or reason-grounded creation is represented. -/
 namespace CreationControl
@@ -701,9 +758,12 @@ def truth : Semantics Bool Bool where
 def knows (w : Bool) (x : EffectBeing) (c : Bool) : Prop :=
   x = source ∧ w = c
 
-/-- Both different selected effects are equally permitted; none is
-forbidden as an action. All positive choices are within the source's
-uncoerced capacity. These assignments are explicit and world-dependent. -/
+/-- Both different selected effects (`some false`, `some true`) are equally
+permitted; the single forbidden action is `none`, which lies outside `capable`
+(the forbidden option is never within capacity, so its nonselection is by
+incapacity) and has no causal output. All positive choices are within the
+source's uncoerced capacity. A permissible abstention is not modelled.
+`chooses` is world-dependent; `permitted`, `capable` and `imposed` are not. -/
 def chooses (w : Bool) (x : EffectBeing) (a : Option Bool) : Prop :=
   x = source ∧ a = some w
 def permitted (_ : Bool) (a : Option Bool) : Prop := a ≠ none
@@ -731,7 +791,8 @@ def Compatibility : Prop :=
     NoncoercedChoiceAt chooses capable imposed w source) ∧
   chooses false source (some false) ∧ chooses true source (some true) ∧
   permitted false (some false) ∧ permitted true (some true) ∧
-  ¬ permitted false none ∧ knows false source false ∧ ¬ knows true source false ∧
+  ¬ permitted false none ∧ ¬ capable false source none ∧
+  knows false source false ∧ ¬ knows true source false ∧
   (∀ w b, chooses w source (some b) ↔
     alternatingEffects.Causes w source (some b)) ∧
   NecessaryAt alternatingEffects false source ∧
@@ -739,7 +800,8 @@ def Compatibility : Prop :=
   ¬ SameNecessaryEffect alternatingEffects false source
 
 theorem compatibility : Compatibility := by
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_,
+    ?_, ?_⟩
   · intro x
     rfl
   · exact Or.inl rfl
@@ -783,6 +845,8 @@ theorem compatibility : Compatibility := by
     cases h
   · intro h
     exact h rfl
+  · intro h
+    exact h.2 rfl
   · exact ⟨rfl, rfl⟩
   · intro h
     cases h.2
