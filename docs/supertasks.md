@@ -156,6 +156,70 @@ König/well-foundedness regress hypotheses. The present proof batch does not
 settle Aristotle's potentially infinite *physical process* or establish that
 any infinity-related causal or God-existence premise is true.
 
+## Indexed physical operations and compact local finiteness (#1859)
+
+The analyst module
+[`OperationLocalFiniteness`](../TruthCore/Causality/OperationLocalFiniteness.lean)
+refines SU-REAL using Mathlib's **indexed-family**
+`LocallyFinite` and `LocallyFinite.finite_nonempty_inter_compact`.
+An `Operation` is an occurrence ID and `time : Operation → ℝ` is its
+assigned clock reading. Operations with identical timestamps remain distinct.
+
+**Conditional theorem:** For any two real times `a,b`, if the singleton
+families `({time op} : Set ℝ)` are locally finite at *every real instant*,
+then `{op | time op ∈ Set.Icc a b}` is finite. A closed bounded real
+interval is compact, and Mathlib counts the **indices** whose sets meet
+it. A uniform positive minimum operation duration is **not** assumed.
+The new registered corpus conclusion `CompactOperationCountCertificate`
+(formal result: `CompactOperationCount.compactOperationCount`) states this
+conditional mathematical consequence; it does **not** assert that any physical
+system satisfies local finiteness.
+
+The companion Lean controls test the exact scope.
+
+| Control | Mathematical finding | Philosophical limit |
+| --- | --- | --- |
+| `zeno_not_locallyFinite_at_endpoint` | Every neighborhood of clock time 1 intersects infinitely many distinct geometric stage indices, because the stage times converge to 1. | The terminal instant need not itself be an operation. Omitting it from the event *population* is insufficient when local finiteness applies to all times in the **ambient** clock interval. |
+| `zeno_locallyFinite_below_endpoint` | Around every real time strictly below 1, some neighborhood meets only finitely many geometric stage indices. | Local finiteness **away** from 1 does not imply local finiteness at 1; choosing a time domain that excludes 1 changes the claim. Endpoint *admission* is not the same as an endpoint event (compare #486). |
+| `finite_timestamps_infinite_operation_multiplicity` | Countably many operation indices can all have timestamp 0: the *range of timestamps* is finite, but the indexed singleton family is not locally finite. | A set-of-instants reading loses simultaneous occurrences. Event identity and multiplicity cannot be silently reduced to positions on a clock. |
+| `smooth_motion_with_nonlocal_checkpoint_indices` | The identity trajectory `x(t)=t` crosses each mathematical bisecting checkpoint with velocity 1; declaring each crossing a new counted operation produces a non-locally-finite family. | Ordinary continuous motion does not by itself provide the ontology of distinct *constitutive causal acts*. To make local finiteness plausible, specify which changes count as separate physical operations. |
+| `locallyFiniteTimes_with_infiniteCausalAncestry` | Assign natural-number predecessor-chain nodes the times `-n`. The *same* `FiniteBranching.successorPredecessor` relation is non-well-founded, each upstream node lies earlier, and operation-time singletons are locally finite throughout ℝ. | Local finiteness excludes an infinite event population in a **compact** interval, not an infinite predecessor chain across an unbounded past. It cannot by itself eliminate per se regress. |
+
+**Current scoped assessment.** Local finiteness is a sufficient mathematical
+condition for a finite number of identified operation occurrences during a
+compact clock interval. Applying the theorem to physical completion would
+require an explicit **applicability premise**: why must *genuinely distinct
+causally performed acts* have this indexed event-time property, at the endpoint
+as well as in the interior? Finite distinguishability cost, finite energy,
+bounded transition rate and independently identifiable constitutive acts are
+potential warrants to investigate, not properties derived from real-time
+continuity. The strongest surviving rival describes unboundedly many ideal
+crossings as one continuous process, or proposes genuinely separate shrinking
+acts and rejects endpoint-local finiteness. The theorem alone does not exclude
+the latter's metaphysical possibility.
+
+**Connection to cumulative arguments.** The positive theorem uses the
+exact Mathlib `LocallyFinite` sense, and the Zeno controls reuse
+`ConvergentZenoSchedule` and #1853's `bisectionCut`.
+The surviving unbounded-past model explicitly reuses the non-well-founded
+`FiniteBranching.successorPredecessor`; no distinct causal relation is
+introduced to make the result vacuous. The new registered argument is an
+additional **mathematical conditional**, not a discharge of the root's
+`STMT-NO-INFINITE-PER-SE-EFFICIENT-CAUSE-SERIES` premise.
+For Grim Reapers, this argument could restrict the possibility of completing
+a compact-time assembled station schedule **if** its stations count as
+distinct operations obeying the same local-finiteness condition. It is not
+a proof that the original causal-recombination premise is false or that
+a necessary concrete being follows. SU-END, SU-OUTPUT, SU-GROUND and the
+same-relation applicability bridges in #310/#311 remain **OPEN**.
+
+**Next discriminating test.** Find a defensible physical criterion of
+operation identity and an associated local temporal regularity or resource
+principle strong enough to imply indexed local finiteness, and test it
+against both a continuous trajectory and a realizable discrete operation
+system. A bounded clock coordinate is not automatically a physically
+privileged proper-time duration (`MetricGrimReaper.TimeClock`, CLOCK_1/2).
+
 ## A beginningless past with bounded resource spread
 
 `BOUNDED-PAST-RESOURCE-CONTRADICTION` adds a conditional argument about a
