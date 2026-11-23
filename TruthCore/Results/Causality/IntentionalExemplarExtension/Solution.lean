@@ -173,7 +173,34 @@ two actual beings and a genuine secondary cognitive subject in the
 impersonal configuration. No metaphysical-possibility claim is made. -/
 theorem immanentSelfPresenceControls :
     ImmanentSelfPresence.Control.Controls := by
-  decide
+  simp [ImmanentSelfPresence.Control.Controls,
+    ImmanentSelfPresence.Control.impersonal,
+    ImmanentSelfPresence.Control.alienPrimaryObject,
+    ImmanentSelfPresence.Control.positive,
+    ImmanentActHasSpecies, SubsistentActHasOnlyOwnSpecies, OwnFormPresentsSelf,
+    ActApprehendsPrimaryObject, GroundedInOwnForm, IntrinsicSelfKnowledge,
+    IntellectIsCapacityToUnderstand, UnderstandingCapacityExercisedOrInPotency,
+    TruthCore.Causality.TermSenseForks.CapacityPotency,
+    ImmaterialIsIntellectualReading, PureAct,
+    ImmanentSelfPresence.Control.own, ImmanentSelfPresence.Control.none,
+    ImmanentSelfPresence.Control.noComponent,
+    ImmanentSelfPresence.Control.noPotency,
+    ImmanentSelfPresence.Control.ownForm,
+    ImmanentSelfPresence.Control.inActEffect,
+    ImmanentSelfPresence.Control.canEffect,
+    ImmanentSelfPresence.Control.intellectEffect,
+    ImmanentSelfPresence.Control.immediateEffect,
+    ImmanentSelfPresence.Control.selfSpecies,
+    ImmanentSelfPresence.Control.primarySelf,
+    ImmanentSelfPresence.Control.primaryAlien,
+    ImmanentSelfPresence.Control.effectApp,
+    ImmanentSelfPresence.Control.alienApp,
+    ImmanentSelfPresence.Control.selfApp,
+    ImmanentSelfPresence.Control.allIntellect,
+    ImmanentSelfPresence.Control.allAct,
+    TruthCore.Causality.IntentionalExemplarExtension.Control.frame,
+    TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding.Control.causesIn,
+    Bool.forall_bool, Bool.exists_bool]
 
 
 /-- #1866's self-directed understanding remains at the very same g, and
