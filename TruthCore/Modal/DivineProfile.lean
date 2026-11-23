@@ -624,6 +624,44 @@ theorem can_do_without_choosing_forbidden {A : Type} (σ : Signature)
   refine ⟨hOmni (taskOf a) hCons, ?_⟩
   intro hSelected
   exact hForbidden (hMoral a hSelected)
+/-- A stronger, disputed reading of moral impeccability: the source is
+INCAPABLE of any morally forbidden action, even when the corresponding task
+is not logically contradictory. This is distinct from PermissibleChoicesAt,
+which forbids actual selection only. The taskOf map is a substantive bridge
+between moral actions and Power.Task; it is not assumed surjective. -/
+def IncapableOfForbiddenTasks {A : Type} (σ : Signature)
+    (power : Power σ) (Permitted : W → A → Prop)
+    (taskOf : A → power.Task) (w : W) (x : σ.Being) : Prop :=
+  ∀ a, ¬ Permitted w a → ¬ power.CanDo x (taskOf a)
+
+/-- With all coherent tasks in the scope of omnipotence, *incapacity* for
+morally forbidden actions forces every such mapped task to count as
+logically inconsistent. This is the exact price of that stronger goodness
+reading, not a proof that evil really is metaphysically contradictory.
+The same conclusion does NOT follow from forbidding actual choice. -/
+theorem moral_incapacity_forces_task_inconsistency {A : Type} (σ : Signature)
+    (power : Power σ) (Permitted : W → A → Prop)
+    (taskOf : A → power.Task) (w : W) (x : σ.Being)
+    (hOmni : IsAlmighty σ power x)
+    (hIncapable : IncapableOfForbiddenTasks σ power Permitted taskOf w x) :
+    ∀ a, ¬ Permitted w a → ¬ power.Consistent (taskOf a) := by
+  intro a hForbidden hConsistent
+  exact hIncapable a hForbidden (hOmni (taskOf a) hConsistent)
+
+/-- Exact incompatible bundle: coherent forbidden task, omnipotent ability and
+goodness-as-inability. The selected, weaker goodness-of-choice interpretation
+remains compatible because it does not imply incapacity. -/
+theorem coherent_forbidden_task_rules_out_moral_incapacity {A : Type} (σ : Signature)
+    (power : Power σ) (Permitted : W → A → Prop)
+    (taskOf : A → power.Task) (w : W) (x : σ.Being) (a : A)
+    (hConsistent : power.Consistent (taskOf a))
+    (hForbidden : ¬ Permitted w a) :
+    ¬ (IsAlmighty σ power x ∧
+      IncapableOfForbiddenTasks σ power Permitted taskOf w x) := by
+  intro hJoint
+  exact (moral_incapacity_forces_task_inconsistency σ power Permitted
+    taskOf w x hJoint.1 hJoint.2 a hForbidden) hConsistent
+
 end Interpreted
 
 /-! ## Finite structural controls
