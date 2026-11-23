@@ -1,0 +1,16 @@
+{
+  "id": "6d1c811e-ef70-4cc6-8e98-9e9dabc5547e",
+  "label": "Finite recombination and prefix closure separate full-law arbitrariness",
+  "statement_ids": [
+    "c3d1c793-dc3a-450a-8c3c-fce341f67f5c",
+    "e519065f-2b96-5214-a506-54e42eb7c494"
+  ],
+  "date": "2026-11-23",
+  "kind": "countermodel",
+  "outcome": "succeeded",
+  "summary": "Issue #1867 upstream test: proposed RecombinationFork derives finite-pattern richness from a nonempty admitted class with same-selector one-step extension, and whole-suffix richness from finite richness plus independent prefix closure. The nonempty eventually-constant histories satisfy one-step/finite richness yet exclude a specifically alternating infinite history; the stable class is closed but not rich, the unrestricted class supplies the positive control, and the empty class isolates nonemptiness. Reuses existing Profile/Cell, splice, stable-groundless and #1808/#1809 downstream certificates instead of claiming that U entails S. Note docs/notes/no-foundation-law-chaos.md contains the actual law versus state, Humean best-system, primitive/dispositional law, necessary impersonal/theistic source, and epistemic norm interpretations. The draft result's mechanical validation and independent semantic challenge remain pending; successful mathematical construction is not itself philosophical verification.",
+  "blocker": "The substantive U→N/R/C metaphysical applicability, preservation of governing law/bearer identity and ontic-to-epistemic entitlement remain OPEN. The exact new theorem and records require CI/Comparator/NanoDa and an independent final-head semantic review before being described as formally verified.",
+  "evidence": [
+    "765d8679-3405-4276-be0f-f71b8248b863"
+  ]
+}
