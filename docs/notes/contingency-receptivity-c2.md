@@ -440,8 +440,13 @@ necessity if the inquiry stood a real chance of detecting one under some
 still credible account of P. I retain moderate confidence in suspension
 about P on the shared premises.
 [Individual origins](#can-ordinary-individuals-identify-the-same-foundation-across-histories),
-[groups and whole worlds](#what-can-a-group-or-a-whole-world-show-that-one-creature-cannot)
-and [the cumulative assessment](#when-do-adverse-consequences-count-against-possible-absence).
+[groups and whole worlds](#what-can-a-group-or-a-whole-world-show-that-one-creature-cannot),
+[the cumulative assessment](#when-do-adverse-consequences-count-against-possible-absence)
+and [the comparison with infinite regress](#what-does-possible-absence-have-in-common-with-an-infinite-regress).
+The regress comparison gives a reason to reject a defense in which
+every argument for an omission derives its warrant from another assumed
+omission. Independent evidence of an admissible order incompatible with
+n would answer that objection.
 
 Analyst assessment of the rigid individual in issue #1887. Let P say that this
 very n is absent at some world accessible from the actual world. Grant the
@@ -1561,3 +1566,174 @@ admitted partly because P is already permitted can give evidence for P
 without being its prior ground. The strict question also requires that P
 itself lack any other full ground at actuality. These are philosophical
 assessments using the existing results. Attempt `27447619` records their scope.
+
+
+### What does possible absence have in common with an infinite regress?
+
+Suppose n exists, is simple and underived, and its possible absence P has
+no full metaphysical ground at actuality. P says that somewhere among
+the admissible alternatives this very individual never exists. Nothing
+in P posits an infinite series. A series can enter a proposed account
+of what exists in an alternative, an argument for admitting that
+alternative, or an explanation of why n actually exists. These questions
+come apart even if each answer uses the phrase “there is always another.”
+
+**What can a chain of copies explain?** Leibniz imagines a geometry book
+that has always been copied from an earlier book. Cleanthes in Hume's
+*Dialogues* challenges a demand for a further cause of twenty particles
+once the individual causes are known. Here is a contrast one can examine
+without deciding whether a collection is a further entity. Suppose every
+edition misspells the same word, and all the scribes reproduce the word
+exactly as they receive it. Inspection of the preceding copy can explain
+this scribe's spelling. The copying rule would preserve the correct
+spelling just as faithfully. Even if we had inspected every copy, we
+would know *which* spelling persisted without learning from that rule
+*why the lineage had that spelling throughout rather than the other*. A rule that actually
+corrected the word at every copying would answer the spelling question,
+given an operating lineage and the correct dictionary entry. It would
+still presuppose scribes and books. This concedes the value of the local
+causes and identifies a particular contrast they leave open. Requiring
+an ultimate answer to every such contrast is a further premise.
+[Leibniz, *The Ultimate Origin of Things*, opening two pages](https://www.earlymoderntexts.com/assets/pdfs/leibniz1697b.pdf)
+and [Hume, *Dialogues*, IX.3 and IX.9](https://davidhume.org/texts/d/9).
+
+**When additional links make a proposal worse.** Imagine a line of relays
+in a steady operating condition. Every output is independently bounded by
+four units. Inspection can tell us which relays are purely passive and
+pass on half the power received from the next. A station beyond the
+inspected block could add power. A meter at the near end reads one unit. Finding one passive relay is
+compatible with that reading. Finding two still allows an input of four.
+Finding three consecutive purely passive relays bounds the terminal output
+by four divided by eight, at most half a unit. No number of additional
+upstream relays can make this complete proposal work. The third inspection
+matters because it crosses a bound on *all* the unexamined contributors.
+
+If the relays instead transmit without loss, flows of one and of zero
+satisfy exactly the same transmission rule and bound. A measurement
+settles which flow obtains. The rule explains why readings agree along
+the line and leaves the amount transmitted undetermined.
+
+Now allow operating cells along the original half-loss line. At relay i,
+numbering from zero at the meter, suppose the cell adds (3/4)·2⁻ⁱ units after the
+incoming power is halved. Then an output of 2⁻ⁱ units at every relay obeys
+the balance: at the meter the local cell supplies 3/4 and the more distant
+cells together supply 1/4. The total added by all cells is finite. The
+balance and boundedness determine the terminal output, since after k relays
+the remaining upstream contribution is at most 4/2ᵏ. The infinite chain
+now explains how one unit reaches the meter over the stated interval. How
+the cells obtained their charge is a different question one can still ask.
+[Existing results on borrowed power and vanishing upstream contributions](contractive-borrowed-power-1378.md).
+
+For C2, the closest analogue would be an n-free inhabited order that
+promises both to retain some creature's received existence and to explain
+that receipt entirely through creatures passing it on. Tracing a supply
+link is genuine progress. To exclude **every** route using those
+contributors one needs a reason why the organized contributors together
+cannot supply what each presupposes in acting. Each giver's action presupposes its own actuality. It cannot supply
+itself with the very actuality it already needs to act. Another giver's
+action could still supply that bearer. To move from the local point to
+the whole, the critic must defend the further premise that routing wholly
+received actuality within the collection cannot explain its availability
+throughout the collection. An infinitist can maintain that each giver
+genuinely supplies its successor and that explaining all the members
+suffices, or can accept the obtaining of the whole order as a basic fact.
+A different reply posits a basic concrete whole that constitutes the
+bearers and their powers. It offers a positive account of how the members
+exist, conditional on that whole's reality. A different underived giver would also answer the
+receipt question if the alternative were admissible. The charge analogy
+does not measure existence, and being a source of power does not make a
+cell a source of its own being. No bound on all ways of giving existence
+without n has been established. The example tells us what would give a
+new case evidential force and which rival that case could actually defeat.
+[Actual existential supply and the constitutive rival](unique-feedback-explanation-311.md#what-counts-as-completed-explanation).
+
+**When infinitely many witnesses give no better reason to believe P.**
+Imagine dossiers describing different worlds without n. Each candidate
+giver could supply the specified creatures *if* that giver could exist
+without n. Each dossier's only authority for that possibility is a
+referral to the next dossier. Suppose each referral warrants acceptance
+of its dossier exactly when the next one is warranted. Accepting all and
+withholding acceptance from all equally respect every referral. The
+problem persists even if we inspect the entire pattern. It would arise
+just as readily from two dossiers referring back to each other. Nor does
+a proof that n survives every rearrangement we have constructed establish
+that our rearrangements exhaust possibility. Once a particular world
+has independent warrant and is incompatible with n's presence, one
+dossier could do what infinitely many referrals failed to do.
+
+A serious infinitist can accept this test. Peijnenburg and Atkinson give
+an infinite chain with independently specified conditional probabilities
+for a claim given its successor and given its successor's falsity.
+The effect of the unknown distant probability tends to zero and their
+example fixes the initial probability at one half. No first independently
+known marginal probability is needed. The conditionals carry information
+that a bare referral lacks. We have no corresponding calibration for P.
+An independently supported principle of recombination could likewise give
+a primitivist a reason to believe P if its application to this unreceived
+act survived tests other than rearrangements which all retain n. If the
+principle instead supplies a full metaphysical ground for P, that answers
+a different question from the strict one here. Rival worlds need never
+produce or authorize one another in reality.
+[Peijnenburg and Atkinson, §2, equations (9)–(16)](https://doi.org/10.1007/s11225-008-9132-7)
+and [the distinction between consistency, warrant and existence](../../corpus/results/REGRESS-SCHEMA-PACKAGE.json).
+
+**Can a defender of P give a determining reason for n's actual existence?** Ask why
+this very n actually exists, granting the rival its claim that n could
+have been absent. Suppose someone promises a determining explanation of
+that fact using only facts that would hold even in the proposed absence.
+The promise fails on its own terms. Those reasons could all obtain with
+the opposite answer. Adding “n exercises its own act of being” distinguishes
+the two histories, but if this just restates that n exists, it supplies
+no independent reason. An independently motivated account of n's nature
+that both obtains unconditionally and determines the existence of this
+individual would make the necessity case succeed. Identifying essence
+and esse in the actual individual establishes no such unconditional
+obtaining. Simplicity and underivedness do remove two familiar candidates
+for a variable explanation: a recipient in a condition to receive existence,
+and a giver deciding whether to supply it. That makes a determining reason
+for a contingent, unreceived act harder to exhibit. Nor could a decision n makes already presupposing its existence
+explain why n exists in the first place.
+
+A defender of P who retains the demand for a determining explanation
+could instead identify a contingent fact that differs between the two
+histories. The task is to characterize it independently, explain why it
+has priority over the fact of n's existence, and show how it can determine
+that fact compatibly with underivedness. Merely tracking whether n exists
+would settle none of those questions. The strict stipulation concerns
+grounds for P at actuality. It leaves reasons for n's actual existence
+open. This pressure arises from asking for a determining reason, even if
+the proposed explanation has only one step.
+
+Another reply gives up the promise of a determining contrast at that
+point. There is independent reason to distinguish a productive
+explanation of an outcome from an explanation excluding every other
+outcome. One controlled lottery can explain the production of its winner
+without the rules and entrants determining which ticket won. This explains
+an outcome *given* an operating lottery. Treating a lottery as producing
+the underived n would abandon the target. A consistent primitivist can
+instead take the actual unreceived act and the permission for its absence
+as basic, and explain dependent beings from their actual source. The
+particular concession is significant for a worldview promising a complete
+determining reason for every contrast. A worldview promising memberwise
+explanation can stand by its narrower claim. Equally, asserting primitive
+necessity rules out the contrast without supplying an intrinsic explanation
+of why n exists. Apply the same demand to a proposed personal giver and
+to a proposed basic physical whole.
+[Comparison of intrinsic reasons, free exercise and impersonal alternatives](intrinsic-existence-reason-1595.md#same-explanandum-rival-comparison-and-discriminatory-consequences).
+
+**Assessment.** The regress comparison strengthens the objection to two
+specific defenses of P: passing existential receipt on without addressing
+its collective availability, and passing permission on without ever
+discriminating an admissible alternative from an inadmissible one. The
+first has force against an account of complete existential supply, the
+second against an argument for modal warrant. Failure on either test is
+compatible with a different, successful n-free history. Concrete emptiness
+would contain no derivative chain to which the first objection applied.
+My confidence is high about the failure of pure referral and the bounded
+relay case, and moderate that suspension about bare P is still warranted.
+I would revise toward necessity for an independently warranted reason why
+the actuality of this very n is unconditionally determined, or evidence
+covering all the alternatives in the preceding assessment. I would revise
+toward P for independent evidence of an admissible, incompatible order,
+even if the permission inferred from it were metaphysically primitive.
+Attempt `2eb9960c` records the comparison.
