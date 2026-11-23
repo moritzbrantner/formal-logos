@@ -147,6 +147,7 @@ theorem controls : TruthCore.Causality.EsseCausePriority.Control.Certificate := 
 namespace InertialNecessaryOrigin
 
 open TruthCore.Causality.EsseCausePriority.InertialNecessaryOrigin
+open TruthCore.Causality.ConcurrentCessation
 open TruthCore.Causality.ConcurrentCessation.C3ActualWorld
 open TruthCore.Causality.SustainingCausation
 open TruthCore.Causality.ConcurrentActualization
