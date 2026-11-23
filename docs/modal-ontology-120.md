@@ -231,7 +231,7 @@ a metaphysically established essence. A closed-world finite countermodel is
 evidence only about its selected interpretation; the predicates themselves can
 hide arbitrarily strong quantified commitments.
 
-The proven `DivineControl.Checks` tests distinguish:
+The Lean-encoded `DivineControl.Checks` tests, pending final-head verification, distinguish:
 
 - The complete thirteen-predicate bundle has an E-accessible, existing same-x
   instance at world `true`, but M = identity excludes that world from origin
