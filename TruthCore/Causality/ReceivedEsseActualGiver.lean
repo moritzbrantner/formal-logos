@@ -34,4 +34,21 @@ def ContingentHasActualEsseGiverAt {W B T R : Type}
   ∀ x, ContingentAt F.history.ontic w x →
     ∃ c, c ≠ x ∧ F.history.ontic.ExistsAt w c ∧ F.CausesIn c x F.esse
 
+
+/-! ## Source presence is strictly stronger than a tenseless CAUSE_2 edge -/
+
+namespace Control
+
+/-- The unmoved mover `true` is contingent and exists at the reading world
+`true`; its stipulated CAUSE_2 `false` exists at no world. This is a
+structural interpretation, *not* a metaphysical possibility certificate. -/
+def absentSourceExists (v x : Bool) : Prop := v = true ∧ x = true
+def absentSourceCauses (c x r : Bool) : Prop := c = false ∧ x = true ∧ r = true
+
+def absentSourceFrame : CausalityFrame Bool Bool Unit Bool :=
+  FirstMoverNecessity.Model.mk absentSourceExists absentSourceCauses
+    FirstMoverNecessity.Model.noPrior
+
+end Control
+
 end TruthCore.Causality.ReceivedEsseActualGiver

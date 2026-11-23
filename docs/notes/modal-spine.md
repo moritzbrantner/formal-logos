@@ -1234,6 +1234,42 @@ uniqueness of f or every source's necessity. Further grounding/causal
 chain principles would be needed to infer an ultimate same-giver for
 each contingent effect.
 
+**Independent q.7 participation checkpoint.** The existing, source-pinned
+`EsseLimitedOnlyThroughReceptionReading` (ST I q.7 a.1, statement
+`1304b462`) already argues that a *limited act of esse* is received in
+some principle. This yields a more independently motivated route to
+reception than mere verbal contrast between essence and existence:
+if a specific contingent x at w has **really limited esse** (limited
+in its degree of perfection, not in duration or cardinality), then q.7's
+bridge gives receipt of that very x's act. The remaining modal-to-real
+step is to argue that every contingent x's esse is limited, without
+equating absence in another accessible world with diminution of
+perfection. Infinite formal perfection, contingent logical status
+and represented essence equality are distinct notions. The older
+`ContingentConcretumParticipatesEsse` (statement `ff8ff869`) is
+another OPEN source-indexed participation bridge, restricted to actual
+concreta; it is not an already established or universally quantified R1.
+These dependencies should be investigated before a new equivalent
+premise is registered.
+
+**Strictness control:** `Control.absentSourceFrame` makes the
+first mover `true` contingent at the selected world and stipulates that
+only the absent `false` bears an atemporal CAUSE_2 edge into its
+esse. The new `absentSourceSeparatesB2FromActualGiver` certificate
+checks nonvacuous B2 but not the stronger actual-giver conclusion nor
+`UnitingCausesPresent`. It demonstrates why the same-world actuality
+bridge is indispensable. It is a structural two-world model and does
+not establish that a nonexistent agent can metaphysically produce
+existence.
+
+**Additional sense-boundary control:** The formal argument index
+also compares an existential support `R` source to a world-local
+`actualGraph` source. `UnitingCausesPresent` only transfers
+tenseless `CausesIn` into actual existence of its cause, **not** into
+either `R` or `actualGraph` edges. The recorded
+EXISTENTIAL_SUPPORT_SOURCE_VERSUS_ACTUAL_CAUSAL sense link is a
+disambiguating contrast only, never an identity or inference.
+
 The source-presence interface has its own philosophical plausibility
 when CAUSE_2 means an actively exercising cause of *current* existence:
 a non-existent c cannot now supply x's act. But the current CausesIn is

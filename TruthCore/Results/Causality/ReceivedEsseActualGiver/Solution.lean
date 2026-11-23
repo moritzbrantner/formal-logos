@@ -70,4 +70,28 @@ theorem actualGiverImpliesB2 {W B T R : Type}
   obtain ⟨c, hcNe, _, hcEsse⟩ := hGiver x hx
   exact ⟨c, hcNe, hcEsse⟩
 
+/-- Finite nonvacuous separation: B2 supplies a distinct but nonexistent
+tenseless CAUSE_2 of the first mover. That does not yield an actual distinct
+giver, and exactly the world-presence interface fails. No possibility or
+substantive participation claim follows from this syntactic model. -/
+theorem absentSourceSeparatesB2FromActualGiver :
+    TruthCore.German.Kant.CosmologicalInference.ContingentAt
+      TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceFrame.history.ontic
+      true true ∧
+    ContingentHasDistinctEsseCause
+      TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceFrame true ∧
+    ¬ ContingentHasActualEsseGiverAt
+      TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceFrame true ∧
+    ¬ UnitingCausesPresent
+      TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceFrame.history.ontic
+      TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceFrame.CausesIn
+      TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceFrame.esse true := by
+  simp [ContingentHasDistinctEsseCause, ContingentHasActualEsseGiverAt,
+    UnitingCausesPresent, TruthCore.German.Kant.CosmologicalInference.ContingentAt,
+    TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceFrame, TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceExists,
+    TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceCauses,
+    TruthCore.Causality.FirstMoverNecessity.Model.mk,
+    TruthCore.Causality.FirstMoverNecessity.Model.noPrior,
+    Bool.forall_bool]
+
 end TruthCore.Results.Causality.ReceivedEsseActualGiver
