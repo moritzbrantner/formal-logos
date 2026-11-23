@@ -370,3 +370,292 @@ and the computed `frontier-diff` premise delta is **none**. CI's NanoDa
 no-`sorry` check does cover the affected Solution module. CI passed on
 d23a5d3; the independent semantic challenge of that head and its repair are
 recorded in PR #1875. The assessment above remains a provisional judgment.
+
+
+## Rational authorship versus brute selection (2026-11-23; proposed, unreviewed)
+
+Scope: #1737, #735/#750, #1875, #1887. Evidence baseline
+`8083301a037428574d0e46b1064d8f6d858da377`; related open work #1901,
+#1909, #1910 and #1904 is not assumed as merged. Fix the same actual source
+n, the same actual complete creaturely order H (including its history and
+laws), and candidate alternatives H' and refraining. No assumption that all
+described alternatives are metaphysically possible. Here an explanation of
+the order is not a demand for a separate aggregate entity, and n's own
+existence is not the explanandum H. These are analyst arguments; no new
+source-attributed claim, formal declaration, or certified model.
+
+### 1. A symmetric three-level demand
+
+Ask of every source (personal or impersonal): (i) what explains the
+existence and actual productive exercise of the source, (ii) what explains
+its producing an order of this kind, and (iii) what explains its producing
+this complete order rather than each rival? These are not interchangeable.
+The third admits a partial contrast answer (some alternatives excluded), a
+productive answer for an individual outcome, or an exhaustive determining
+answer. Only the last demands that the total grounds exclude every admitted
+incompatible alternative. Distinguish a reason for the source's existence
+from a reason for the occurrence of a volition, from the volition's
+intentional object, from a causal reason for the effect.
+
+Use #545, #742's base-fixed net selection core and #555, not another modal
+collapse theorem. Necessity of n does not make all of its relations or
+effects necessary. Conversely, a necessary complete determining ground
+would make its strictly necessitated effect necessary. If selection is
+itself a contingent fact and the demand for a complete determining reason
+extends to it, a strict reason for H obtained by citing that selection has
+merely moved the explanatory debt. The fact-level closure demand is stronger
+than a PSR restricted to actual concrete existence; neither automatically
+settles how to account for volitions or extrinsic relations. No special
+exemption for personal choice, no deduction of unlimited recombination
+from rejecting this demand. An impersonal probabilistic or dispositional
+producer must receive the same credit for actual production as a personal
+one when the same causal and nonnecessitating standard is met.
+
+### 2. A positive authorship proposal, not a personal-stop predicate
+
+Consider an engineer who intends a bridge to allow safe passage, deliberates
+between two sound designs, settles on one and realizes it. Assume the
+designer understands the designs, the goal actually figures in the choice,
+the designer controls which design is implemented, and the implementation
+is causally governed by the intention. Contrast a random draw from the
+same two designs followed by implementation; contrast also a passive
+observer who correctly predicts the drawn design. The goal explains
+excluding unsafe designs in both the rational and the intentionally
+restricted lottery cases. The actual rational intention can additionally
+explain the particular implementation in a different respect: the chosen
+design is the object for the sake of which the implementation occurs, not
+merely the output of a draw or a description attached afterwards. Neither
+the reason for choosing a sound design nor the mere fact that the engineer
+chose A explains why A rather than B was endorsed if every differentiating
+consideration is absent. If the engineer deliberately selects by lottery,
+the intention explains use of the lottery, not direct authorship of its
+particular draw.
+
+This motivates **practical authorship** as a candidate explanatory reading
+(not a proposed corpus predicate): an existing source recognizes an end and
+feasible means, adopts a particular object for a genuine reason, and its
+own directed exercise produces that object. Reasons must have content
+assessable without simply consulting which object occurred; they must
+figure in the actual practical operation, not just license it afterward.
+An intentional account answers why the effect exists as a realization of
+an intelligible purpose and why the agent, rather than an autonomous
+chance selector, is responsible for implementing it. It does not promise
+a necessitating reason for the agent's very endorsement.
+
+A discriminating test concerns *direction* rather than modal coextension.
+A reason-copying table that maps H to "intends H" fails to identify a
+directed exercise producing H. A producer whose mechanism is actually
+guided by an intention and a spectator who perfectly represents its output
+can share all truth-valued intention/output pairs; the latter has no
+productive authority over it. A randomizer controlled as a policy but not
+in its individual result supplies a further omission. The intended
+difference is the causal/exemplar dependence of implementation on an
+apprehended and adopted end, not the frequency of success or a flag
+saying "personal". For ordinary agency the difference is investigated
+through purposive correction of a failed implementation, the role of
+reasons in actual decision, and the means/end organization of production.
+A merely successful fixed table could imitate each observed correction;
+an actual reason-using mechanism or constitutive intentional account,
+rather than behavioral matching alone, is still required. A deterministic
+agent can satisfy this reading, so it does not establish libertarian
+freedom. An impersonal system with genuine purpose-relative productive
+organization may satisfy part of the proposed standard, and a functionalist
+who establishes genuine cognition and agency would satisfy the authorship
+reading rather than being excluded by stipulation.
+
+The proposal goes beyond #742's tested marks only at the philosophical
+level: cognition of an end, adoption *for* a reason, and actual
+intention-directed production. It is not a new inference from pro tanto
+favoring, world-tracking or merely interposing an act. Its positive warrant
+is the difference between using a reason to realize a design and
+post-hoc rationalization, plus the ordinary practice of explaining actions
+as actions for ends. The generalization from mediated human action to a
+simple nonpassive ultimate source is OPEN. The strongest rival accepts
+productive explanation and fixed rational/causal constraints but treats
+the residual selection as primitive, whether in an agent or an impersonal
+producer. The account may then have greater purposive explanatory content
+without resolving the residual exact-world contrast. Do not call the rival
+contradictory or the personal stop fully adequate merely because one is
+intentional. A defender of universal determining explanation will still
+charge that residual debt to both.
+
+### 3. A constructive simple-source reading and its unresolved cost
+
+A candidate classical account: the necessary source's intrinsic actuality
+includes intellectual apprehension of its own goodness and the range of
+creatable finite goods, and active productive power. Finite realizations
+need not exhaust or complete that goodness. Essential reasons could
+determine which ends and means are fitting without uniquely specifying
+every finite good, law, parameter or history. Creative freedom is then
+choice among admissible realizations (possibly no creation, if no duty
+requires it), not freedom to violate necessary truth or goodness. A
+necessary impersonal nature could also impose constraints, so the
+existence of a boundary is not the personal discriminator. Neither the
+necessary constraints nor a permissive policy are inferred from a
+necessary bearer alone. "Good" cannot mean merely "what this source
+chooses": that would leave the restriction vacuous. Reasons must be
+normatively substantive and not constituted merely by the chosen output.
+
+The strongest nonpassive reading takes creative direction to be timeless:
+the source is not informed by its effects; the effects are dependent on
+its active specifying causality. The creative act need not be a new
+intrinsic accident, an unrealized passive potency, or a temporal choice
+episode. The proposed relation to H is genuinely productive, not a
+Cambridge description of H's independently obtaining. But applying this
+reading is precisely the hard part. #555 `BeingCarriesAct` plus necessary
+bearer yields `SameActEverywhere`; with strict efficacy of the same rigid
+act for H the contingent-effect package is inconsistent. A world-relative
+description that changes denotation does not provide this rigid act. In
+#1875 the surviving always-performed model is structurally output-varying;
+it does not give intrinsic intention. A varying intrinsic decree requires
+a simplicity/identity interpretation that permits it. An extrinsic
+intentional determination needs an account of why the effect depends on
+the determination rather than the determination being fixed by the effect,
+without reintroducing a contingent intrinsic modifier. Neither is yet
+provided by the constructive sketch. Divine foreknowledge needs its own
+content/reference and discrimination bridge (#1380): knowledge rows can
+differ under a fixed rule, but an intrinsic-state supervenience reading
+does not permit different rows for the same intrinsic state. Accurate
+world-indexed relations by themselves are not apprehension.
+
+This is compatible with the aim of the latest C2 work, not a solution to
+it. The possibility that a distinct dependent effect is absent is not the
+possible absence of the underived n. Active power to produce or refrain
+need not be a power over n's own esse; the application to real powers and
+non-being must use the existing C2 senses. If C2 is won, it could supply a
+necessary bearer, not the intrinsic-explanation, intellect, will or choice
+bridges. Conversely, an agency model cannot rescue C2 by assuming the
+necessary bearer that C2 is meant to establish. #1909's determining
+demand, #1910's E/D distinction and #1901's G0/G1/G2 split are live
+comparators, not verified new supports from those open branches.
+
+### 4. Epistemic agency as a positive end, not an assertion shortcut
+
+A different consequence of the authorship reading concerns the epistemic
+quality of the world. Suppose this same source accurately understands both
+H and the evidential role of a created faculty or trace mechanism; freely
+intends creatures to exercise genuine epistemic agency in a specified
+domain D; and is good in the substantive sense of not gratuitously
+frustrating that very end. Specify the normal use/environment of a
+mechanism independently of whether its verdict is true (e.g., ordinary
+undisturbed acquisition, storage and retrieval of traces of events, with
+specified error conditions). Then deliberately arranging all normally
+available evidence in D to support a false history, with no ordinary way
+to correct it, frustrates the proposed epistemic end in D. This is a
+reason against global counterfeit creation, not a deduction from bare
+intellect, power, goodness or absence of false divine assertions.
+
+The candidate normative premise: where an agent intentionally confers a
+truth-directed capacity for a domain, deliberately rendering its ordinary
+exercise systematically misleading, without an overriding justification,
+is contrary to faithfully realizing that good. Its warrant is the
+means/end mismatch: a capacity for access to truths cannot fulfill that
+specific end merely by reliably producing the appearance of access.
+Epistemic agency also matters as a good for the creatures, not only as a
+means to useful behavior. One could consistently intend limited cognitive
+access, allow local mistakes for other goods, or give a faculty a practical
+rather than historical purpose. Distinguish actual authoring of systematic
+misleading evidence from permitting secondary causes, honest ignorance,
+fiction, miracles, error, or deceptive creatures. The premise does not
+exclude all such possibilities. A genuine overriding reason, a different
+intended domain or a corrective route weakens the argument; universal
+hidden-reasons defenses that license any apparently misleading evidence
+also weaken the proposed positive entitlement. Not every false trace is a
+divine assertion, so `GodAssertsOnlyTruth` (5a035a1e) cannot be silently
+extended to evidence by #1410's assembled branches. Nor does know-how to
+produce a faculty entail accurate actual cognition of H.
+
+An application to a normally functioning radiometric record would require
+a trace-producing process linked to the actual event, preserved causal
+provenance, a reliable faculty/instrument and warranted applicability of
+the intended-domain interpretation. Historical calibration can supply
+defeasible warrant, not a noncircular deductive guarantee against a
+perfect coordinated counterfeit of the calibration itself. A five-minute
+apparent-age order is not ruled out merely by a necessary cause; on the
+proposed epistemic-end and no-gratuitous-frustration account such an
+unqualified global counterfeit is opposed by a specific reason. To exclude
+it categorically requires a sufficiently strong actual normative
+constraint, a scoped intended end and absence of overriding justification.
+Even an ontic guarantee requires a further account of human access or an
+appropriate externalist warrant condition. No equal priors, skepticism
+from bare contingency, or induction theorem follows. Reuse #737 and
+#1734; #1904 owns the history-evidence comparison. The distinctive addition
+is the possible *positive intentional ground* for normally truth-connected
+evidence, not a duplicate present-evidence-only non-entailment.
+
+### 5. Matching-scope rival assessment and next tests
+
+- Brute contingent foundation: may have stable natures, reliable causal
+  trace mechanisms and warranted ordinary scientific practices; leaves
+  foundation actuality primitive and may also leave the complete selection
+  primitive. No unrestricted replacement follows without further modal
+  premises.
+- Necessary impersonal producer: may have genuine intrinsic existential
+  explanation, lawlike or probabilistic production, substantive essential
+  limits and truth-tracking secondary mechanisms. Under productive
+  nonnecessitating sufficiency it earns the corresponding explanation
+  credit; no inherent guarantee of purposive authorship or epistemic
+  goodness. A positive impersonal teleological account would reduce the
+  comparative advantage, not be excluded by label.
+- Necessitarian source: a warranted unique complete order could satisfy
+  the determination demand even without creative choice, although
+  mathematical uniqueness and actuality of the structure differ; no
+  metaphysical contingency at the tested scope. Must explain apparent
+  contingency and how finite agents have access to the necessary order.
+- Necessary free personal source: can potentially explain source existence,
+  intelligible ends, actual purposive production, scope restrictions and
+  epistemic goods together. Same unresolved exact selection if full
+  determining contrast is demanded. Adds burdens of genuine cognition,
+  agency/efficacy, goodness, nondeceptive intent and a simplicity-compatible
+  account of their contingent terminations.
+
+**Proposed assessment, not a reviewed standing change.** A nonnecessitating
+productive explanation can be genuinely explanatory; the purposive
+authorship distinction offers a positive comparative reason to investigate
+personal sourcehood beyond bare modal or causal tables. Relative to a
+purely brute account of H, an actually instantiated, reason-guided,
+productive and faithful source would supply explanatory content the
+brute account lacks. Relative to the strongest constrained impersonal
+producer, its added advantage is conditional and concerns intelligible
+ends and intentional epistemic care, not the bare fact of contingency or
+the closure of every contrast. On universal determining sufficiency the
+same objection remains against both nonnecessitating sources; on weaker
+productive sufficiency both may succeed. Maintain the existing
+underdetermined judgment about the complete classical synthesis. There
+is substantive warrant for the ordinary authorship distinction, not yet
+for its full simple-source application or for an exceptionless epistemic
+constraint. The cases are not exhaustive and no rival is defeated.
+
+Graph destination: the existing #1737 targets
+2757f6a3-2d14-5033-9740-2c36a678ce73 and
+1822b59d-1040-57e4-8991-f7862db26355; #1730 intrinsic reason
+a7bbd2fd-242c-5097-a9a3-581d25835890; C2 necessary-concrete endpoint
+b19ffd92; God-existence destination 8626f8a5-9531-5da7-9ebd-f901e74b1129.
+All connections from same-source necessary actuality through intrinsic
+intentional understanding, will, purposeful actual exercise and normative
+epistemic-end interpretation remain OPEN; do not exchange witnesses or
+identify `m.grounds` with `m.ontic.Causes` (#555 applicability).
+5a035a1e is assertion-only, not a new historical-reliability consumer.
+No new graph edge or premise discharge. Expected premise delta none;
+computed frontier-diff and offline corpus validation remain pending.
+
+Next discriminators: (a) a constitutive/exemplar account giving productive
+intentional direction rather than output-conditioned relation while retaining
+the exact #555 simplicity commitments; compare it with actual reason-using
+impersonal mechanisms, rather than further output tables; (b) identify
+which moral reasons are side constraints on the creative end as opposed
+to permissive rankings, test unique/tied/incomparable goods and refraining
+without assuming an optimum; (c) defend or reject the no-gratuitous-
+frustration premise for one independently specified evidence channel,
+apply it to the same source, and test a justified misleading-evidence
+exception and an equally reliable impersonal rival. Strengthen the
+assessment if these bridges are supplied and survive restored-commitment
+tests; weaken it if genuine authorship reduces to the same uncontrolled
+selector or the epistemic norm has no discriminatory application.
+Independent final semantic challenge required. Connector-only
+author-side self-sweep: no new Lean/proof/type, source claim, sense,
+statement or result; exact modal and knowledge controls retained, no
+claim that the conceptual authorship sketch models full divine simplicity
+or that an epistemic end entails every historical belief. Canonical
+related/dossier/novelty and full checks unavailable in this session.
+Attempt 7d015c02 records the proposed checkpoint.
