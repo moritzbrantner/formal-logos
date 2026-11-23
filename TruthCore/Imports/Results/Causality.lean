@@ -169,6 +169,7 @@ public import TruthCore.Results.Causality.FiniteNecessaryUnion.LocalWitness.Solu
 public import TruthCore.Results.Causality.FiniteNecessaryUnion.SourceBridge.Solution
 public import TruthCore.Results.Causality.FiniteReapersConsistent.Solution
 public import TruthCore.Results.Causality.FiniteRestriction.Solution
+public import TruthCore.Results.Causality.FirstMoverNecessity.Solution
 public import TruthCore.Results.Causality.FixedDurationGrimReaper.Solution
 public import TruthCore.Results.Causality.FullFirstCause.Solution
 public import TruthCore.Results.Causality.FullnessCandidates.Solution

@@ -1,0 +1,51 @@
+{
+  "id": "38c6d370-bb30-44d1-84c5-f8d36f958978",
+  "label": "First Way mover is a necessary actual first root, from the grounding closure",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "7bce7007-ad29-5f5b-b4b3-e7b02bf98312",
+    "bd0a4f81-29ba-4349-aa7d-b1fdcf6fd8e2",
+    "6e6c5d8d-84d9-4b79-a524-21e34c4c8146",
+    "74eb9113-552b-5ec6-8e09-68374305dd58",
+    "6c18d52b-2456-59ae-995f-13440f8c808d",
+    "c71c068c-bbae-5ed5-a99d-70b155c8d239",
+    "7a63a3fe-a29f-5282-8106-79fedcb10d08",
+    "2047d14b-7f50-4e46-9284-8972d135ef9e"
+  ],
+  "conclusion_statement_id": "11958874-aa8f-4b09-97ba-4f6028d26cd9",
+  "inference_ids": [
+    "2357aac8-0d1c-4d8d-ab81-f67e4eb7dd52"
+  ],
+  "meaning": "Route A in the selected-grounding vocabulary of the root route. The first mover f is concrete and exists at w (B0, B0'). Any actual concrete ground of f is SIMPLY_PRIOR_1 to it (grounding-priority), so by firstness it is f, which would ground itself against irreflexivity: f is an actual root. Were f absent at some accessible world, it would be an actual contingent concretum, so the existing closure premise (every actual contingent concretum has an actual concrete ground) would give it such a ground. So f is present at every accessible world. No well-foundedness, inhabitedness or whole-roster premise is used: firstness of the First Way's mover replaces the minimal-element step of the existing necessary-root derivation.",
+  "definition_ids": [
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "25e19d5a-5cdf-5916-a888-f6a0ce970f11",
+    "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea",
+    "a49e4cf1-ca4f-5519-9724-892af257cedb",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "b1640e51-d7d4-5a80-9992-29fa1ded8048",
+    "215fdc0a-7005-510d-91da-84fcbc77a9dc"
+  ],
+  "sense_bridges": [
+    {
+      "term": "NECESSARY",
+      "from": "8c881fa6-2b9f-44be-a32a-c8ef29c13643",
+      "to": "7af298fb-a2c4-4239-919b-7685f2e1f67a",
+      "statement_id": "c71c068c-bbae-5ed5-a99d-70b155c8d239"
+    }
+  ]
+}

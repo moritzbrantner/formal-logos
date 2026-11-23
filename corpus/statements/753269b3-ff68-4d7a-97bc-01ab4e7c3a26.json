@@ -1,0 +1,16 @@
+{
+  "id": "753269b3-ff68-4d7a-97bc-01ab4e7c3a26",
+  "label": "Every being contingent at w is in POTENCY_1 in some respect",
+  "paraphrase": "OPEN bridge (B4), analyst formulation, attribution deferred: every candidate contingent at w is in POTENCY_1 (the adopted potency in the subject) in at least one respect, any respect. It states no grounding or explanatory relation and does not tie the respect to esse or to non-being: a contingent thing that can merely become hot satisfies it. The esse-tied version is the conjunction of the converses of the two existing bridges relating potency and possible non-being (contingent beings can fail to be in substance; what can fail to be in substance is in POTENCY_1 as to esse), which implies it (controls, law 2); the existing bridges themselves do not give it (controls, model 1). With excluded middle it is equivalent to 'every pure-act being existing at w exists at every accessible world' (controls, law 3), so the potency route relocates the lead's question into B4.",
+  "lean_declaration": "TruthCore.Causality.FirstMoverNecessity.PossibleNonexistenceIsPotency",
+  "definition_ids": [
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "508617ab-cf24-5f3b-a387-64b3991359ec",
+    "557d8e44-4350-5031-81e3-ff6be5e30acc",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

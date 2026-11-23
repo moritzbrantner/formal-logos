@@ -1,0 +1,13 @@
+{
+  "id": "150535e8-1144-4e50-8517-e379715d6290",
+  "label": "First Way necessary PURE_ACT_5 mover with CONCRETE_6 movers witnesses the stage-one node (inference)",
+  "input_statement_ids": [
+    "f9208664-e57b-4912-b6e7-edfcd23a4f89",
+    "6e6c5d8d-84d9-4b79-a524-21e34c4c8146"
+  ],
+  "output_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+  "rule": "Existential projection with the concreteness interface",
+  "meaning": "The First Way's first mover that is pure act and exists at w and at every accessible world moves something, so by B0' it is concrete; it is therefore a concrete individual existing at w and at every accessible world: the stage-one node, on any grounding profile over the frame's existence and the concreteness predicate. This lets the causal (B2 or B2 or B4), potency (B4) and essence-esse (B6) routes reach the stage-one node through the First Way's witness.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

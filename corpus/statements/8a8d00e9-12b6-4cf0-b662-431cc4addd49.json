@@ -1,0 +1,16 @@
+{
+  "id": "8a8d00e9-12b6-4cf0-b662-431cc4addd49",
+  "label": "Every being contingent at w has a distinct CAUSE_2 of its esse",
+  "paraphrase": "OPEN bridge (B2), analyst formulation, attribution deferred: every candidate that exists at w and is absent at some world accessible from w (MODAL_CONTINGENCY_1) has some other being that causes its esse (CausesIn at esse, CAUSE_2, mode not fixed). The cause is not required to exist at w, to be concrete or to be an efficient cause; it is the weakest form the causal route uses. It says nothing about beings that exist at every accessible world.",
+  "lean_declaration": "TruthCore.Causality.FirstMoverNecessity.ContingentHasDistinctEsseCause",
+  "definition_ids": [
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}
