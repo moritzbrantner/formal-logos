@@ -160,7 +160,7 @@ def k5Frame : TruthCore.Modal.Frame Bool := ⟨fun _ v => v = true⟩
 
 def k5Ontic : Ontic Bool Bool where
   frame := k5Frame
-  ExistsAt := at true
+  ExistsAt := holdsAt true
   Causes := fun _ _ _ => False
 
 /-- Individually satisfiable power and knowledge attributed to DIFFERENT
