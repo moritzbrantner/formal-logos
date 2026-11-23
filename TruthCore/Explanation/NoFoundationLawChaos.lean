@@ -161,4 +161,86 @@ def Omissions : Prop :=
   (∀ n, ¬ GroundedTotality brute ∧ GroundedTotality grounded ∧
     ¬ SuffixComplete stable n ∧ SuffixComplete (openFuture n) n)
 
+
+/-! ## Finite recombination versus completed infinite futures
+
+An admitted *complete-history selector* is separate from the local Profile:
+being compatible with a transition rule does not settle which infinite paths
+are metaphysically available. The same observed all-true prefix and Trace
+domain are used in the existing chaos certificate. -/
+
+/-- A fixed global selector further restricts #737's populated record cell.
+It is not a grounding predicate or a metaphysical possibility operator. -/
+def Admitted (allowed : Trace → Prop) (n : Nat) (f : Trace) : Prop :=
+  Cell (openFuture n) on n f ∧ allowed f
+
+/-- Any admitted complete history can be copied through m and extended by
+either chosen next bit, while keeping the same globally admitted class.
+The case m<n is already fixed by the observed record and is excluded. -/
+def OneStepRich (allowed : Trace → Prop) (n : Nat) : Prop :=
+  ∀ m f b, n ≤ m → Admitted allowed n f →
+    ∃ g, Admitted allowed n g ∧
+      (∀ t, t ≤ m → g t = f t) ∧ g (m+1) = b
+
+/-- Every prescribed *finite* initial segment of any suffix has an admitted
+complete extension. The extension may depend on the finite cutoff. -/
+def FiniteRich (allowed : Trace → Prop) (n : Nat) : Prop :=
+  ∀ tail m, ∃ g, Admitted allowed n g ∧
+    ∀ t, t ≤ m → g t = splice n tail t
+
+/-- A genuine closure commitment on the admitted complete-history set:
+every prefix of a candidate is realized by some allowed complete history,
+so the candidate itself is allowed. This is stronger than finite richness. -/
+def PrefixClosed (allowed : Trace → Prop) (n : Nat) : Prop :=
+  ∀ f, Cell (openFuture n) on n f →
+    (∀ m, ∃ g, Admitted allowed n g ∧
+      ∀ t, t ≤ m → g t = f t) →
+    allowed f
+
+/-- Every prescribed complete infinite suffix is admitted, now relative to
+the fixed selector, not inferred from absence of ultimate explanation. -/
+def WholeSuffixRich (allowed : Trace → Prop) (n : Nat) : Prop :=
+  ∀ tail, Admitted allowed n (splice n tail)
+
+/-- Finite-switching histories: after some finite stage all values agree.
+The bound and final value vary between admitted complete histories. -/
+def EventuallyConstant (f : Trace) : Prop :=
+  ∃ k b, ∀ t, k ≤ t → f t = b
+
+def finiteSwitchClass : Trace → Prop := EventuallyConstant
+def stableOnlyClass : Trace → Prop := fun f => f = on
+def allHistoryClass : Trace → Prop := fun _ => True
+def emptyHistoryClass : Trace → Prop := fun _ => False
+
+/-- Exact upstream entailment and omission controls.
+Populated one-step recombination gives all finite patterns; prefix closure
+additionally gives all *infinite* suffixes. The eventually-constant class has
+the former without the latter. The stable class is closed but not rich.
+The unrestricted class has both. The empty class exposes the independent
+nonemptiness condition. Nothing here states that foundationlessness entails
+any one selector, epistemic norm, or actual physical law freedom. -/
+def RecombinationFork : Prop :=
+  (∀ (allowed : Trace → Prop) n, (∃ f, Admitted allowed n f) →
+    OneStepRich allowed n → FiniteRich allowed n) ∧
+  (∀ (allowed : Trace → Prop) n, FiniteRich allowed n →
+    PrefixClosed allowed n → WholeSuffixRich allowed n) ∧
+  (∀ n, (∃ f, Admitted finiteSwitchClass n f) ∧
+    OneStepRich finiteSwitchClass n ∧
+    FiniteRich finiteSwitchClass n ∧
+    ¬ PrefixClosed finiteSwitchClass n ∧
+    ¬ WholeSuffixRich finiteSwitchClass n) ∧
+  (∀ n, (∃ f, Admitted stableOnlyClass n f) ∧
+    PrefixClosed stableOnlyClass n ∧
+    ¬ FiniteRich stableOnlyClass n ∧
+    ¬ WholeSuffixRich stableOnlyClass n) ∧
+  (∀ n, (∃ f, Admitted allHistoryClass n f) ∧
+    OneStepRich allHistoryClass n ∧
+    FiniteRich allHistoryClass n ∧
+    PrefixClosed allHistoryClass n ∧
+    WholeSuffixRich allHistoryClass n) ∧
+  (∀ n, (¬ ∃ f, Admitted emptyHistoryClass n f) ∧
+    OneStepRich emptyHistoryClass n ∧
+    PrefixClosed emptyHistoryClass n ∧
+    ¬ WholeSuffixRich emptyHistoryClass n)
+
 end TruthCore.Explanation.NoFoundationLawChaos
