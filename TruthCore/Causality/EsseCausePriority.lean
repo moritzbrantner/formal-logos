@@ -5,6 +5,7 @@ public import TruthCore.Causality.CreatureSenses
 public import TruthCore.Case.Catholicism.CauseOfBeingHasBeing
 public import TruthCore.Causality.ActPriorityAtFirst
 public import TruthCore.Causality.ComponentFirstness
+public import TruthCore.Causality.ConcurrentCessation
 
 /-! Esse-cause priority through actual grounding, without modal separability (#1604)
 
@@ -153,5 +154,171 @@ def Certificate : Prop :=
   OmitCausedEsseIsHad ∧ NotEfficientPriority
 
 end Control
+
+
+/-!
+## C3 omission against the complete #1614 source-premise bundle
+
+This continues #1616 and #1801 *without introducing a separate causality
+ontology*. The temporally originating `GivesAt` and primitive `CausesIn`
+reuse the C3ActualWorld control. The new feature is that the originator is
+**de re necessary** while the rigid effect is contingent and persists without
+concurrent giving. The selected actual ground/priority edges are alternatively
+interpreted as historical ancestry or withheld as present-existential ground.
+
+`SourcePremises` is only a convenience grouping of the ten existing OPEN
+source-level premises used in PR #1614's five-argument esse-priority cluster.
+The two intermediate premises `ActualEsseCausePriority` and
+`FirstBeingActPriority` are *conclusions*, not silently supplied inputs.
+This is a structural joint-interpretation test, not proof of metaphysical
+applicability. On the ancestry reading, `ActualConcreteGround` does not imply
+productive `GivesAt`. On the strict present-ground reading, an inertialist
+rejects the bridge rather than the other source premises.
+-/
+
+namespace InertialNecessaryOrigin
+
+open TruthCore.Modal.TemporalHistory
+open TruthCore.German.Kant.CosmologicalInference (NecessaryAt ContingentAt)
+open TruthCore.Causality.Frame (CausalityFrame)
+open TruthCore.Causality.CogitoNecessaryConcrete (ActualConcreteGround)
+open TruthCore.Causality.NecessaryRootFork (ActualConcrete)
+open TruthCore.Causality.NecessaryConcreteRouteBridge (NecessaryActualRootAt
+  EsseCauseIsActualConcreteGround)
+open TruthCore.Causality.BruteFoundationBoundary (Profile EveryContingentGroundedAt)
+open TruthCore.Causality.ConcurrentCessation.C3ActualWorld
+open TruthCore.Causality.SustainingCausation (OriginatesBeing GiverPresentWhenGiving)
+open TruthCore.Causality.ConcurrentActualization
+  (ConcurrentlyActualized CausingAnothersBeingIsSustaining)
+open TruthCore.Causality.ActPriorityAtFirst
+  (FirstBeingIsInSomeAct ActAndPotencyMakeComposite FirstBeingActPriority)
+open TruthCore.Causality.ComponentFirstness (ComponentIsPotentialOrParticipated)
+open TruthCore.Causality.Round2Grounding
+  (ActualGroundingIsSimplePriority ParticipatedEsseHasDistinctCause)
+open TruthCore.Causality.CreatureSenses (CausedEsseIsHad)
+open TruthCore.Causality.Round2ExistenceAct (ActOfEsseSufficesForExistenceAt)
+open TruthCore.Case.Catholicism.CauseOfBeingHasBeing (EsseInReIsConcrete)
+open TruthCore.Latin.Aquinas.SummaTheologiae
+  (CompositeHasAUnitingCauseReading NotActAndPotencyInSameRespectReading
+   FirstBeingIsInNoWayInPotencyReading NoComponentIsFirstBeingReading)
+
+/-- The originating bearer is present in both accessible worlds. Its effect
+is present only at the selected world and only from t=1 onward. World
+existence agrees with temporal presence at now=2 in *both* worlds. -/
+def history : History Bool Bool Nat :=
+  { C3ActualWorld.history with
+    ontic := { C3ActualWorld.history.ontic with
+      ExistsAt := fun v x => x = true ∨ v = true }
+    IsAt := fun v x t => x = true ∨ (v = true ∧ x = false ∧ 1 ≤ t) }
+
+/-- Reuse the old actual `grounds` edge as historical causal ancestry:
+the necessary originator is an actual ground of the contingent recipient,
+even though it does not give at t=2. This is not a productive-ground reading. -/
+def ancestral : Profile Bool Bool :=
+  { C3ActualWorld.withGround with ontic := history.ontic }
+
+/-- Same ontology and actual causal history, with the selected *present*
+existential-ground edge absent. An origin can still explain the history. -/
+def withoutGround : Profile Bool Bool :=
+  { ancestral with grounds := fun _ _ _ => False }
+
+/-- Reuse the same `CausesIn c x esse` relation; only add a second (heat)
+respect to make compositional potency nonvacuously distinct from actuality
+as to esse. `CausesIn` itself remains tenseless and mode-unspecified. -/
+def causes (c x r : Bool) : Prop :=
+  r = true ∧ C3ActualWorld.originFrame.CausesIn c x
+    C3ActualWorld.originFrame.esse
+
+/-- The same shared causal frame. `PriorSimply` is a chosen metaphysical
+order; it is not automatically the time order or an originator relation. -/
+def frame (priority : Bool → Bool → Prop) : CausalityFrame Bool Bool Nat Bool where
+  history := history
+  GivesAt := C3ActualWorld.originGiving.GivesAt
+  CausesIn := causes
+  MovesIn := fun _ _ _ => False
+  DependsForBeing := fun _ _ => False
+  PriorSimply := priority
+  esse := true
+
+def ancestralFrame : CausalityFrame Bool Bool Nat Bool :=
+  frame Control.prior
+def strictFrame : CausalityFrame Bool Bool Nat Bool :=
+  frame Control.noPrior
+
+-- Reuse the existing two-respect act/potency and component witnesses.
+abbrev act : Bool → Bool → Prop := ActPriorityAtFirst.Control.esseAct
+abbrev potency : Bool → Bool → Prop := ActPriorityAtFirst.Control.stonePotency
+abbrev composite : Bool → Prop := ActPriorityAtFirst.Control.stoneComposite
+abbrev component : Bool → Bool → Prop := ComponentFirstness.Control.comp
+abbrev participated : Bool → Prop := ComponentFirstness.Control.isFalse
+
+/-- Exactly the ten other source premises of PR #1614's esse-priority
+cluster, each with its existing type and same respect/being dictionaries.
+The statements are OPEN: their joint satisfiability does not establish them.
+`FirstBeingActPriority`, `ActualEsseCausePriority` and
+`DistinctEsseCausePriority` are derived nodes, not included in this list. -/
+def SourcePremises (m : Profile Bool Bool)
+    (F : CausalityFrame Bool Bool Nat Bool) : Prop :=
+  ActualGroundingIsSimplePriority m true F.PriorSimply ∧
+  CausedEsseIsHad F.CausesIn act F.esse ∧
+  ActOfEsseSufficesForExistenceAt m.ontic act F.esse true ∧
+  EsseInReIsConcrete m act F.esse ∧
+  FirstBeingIsInSomeAct act F.PriorSimply ∧
+  ActAndPotencyMakeComposite act potency composite ∧
+  CompositeHasAUnitingCauseReading composite F.CausesIn F.esse ∧
+  ComponentIsPotentialOrParticipated component potency participated ∧
+  NotActAndPotencyInSameRespectReading act potency ∧
+  ParticipatedEsseHasDistinctCause participated F.CausesIn F.esse
+
+/-- A necessary, actually ungrounded source, a contingent effect grounded in
+the source on the ancestry reading, and explicit origin-only persistence.
+This combines the #1885 same-bearer model with the existing necessary-root
+consumer; it is not a modal source-selection or metaphysical truth theorem. -/
+def NecessaryOriginWithoutConservation : Prop :=
+  CoherentAtNow history ∧
+  C3ActualWorld.StepPersistence history ∧
+  NecessaryActualRootAt ancestral true ∧
+  EveryContingentGroundedAt ancestral true ∧
+  ContingentAt history.ontic true false ∧
+  OriginatesBeing history C3ActualWorld.originGiving true true false ∧
+  GiverPresentWhenGiving history C3ActualWorld.originGiving ∧
+  ¬ ConcurrentlyActualized history C3ActualWorld.originGiving
+    ConcurrentActualization.Control.falseReceived ∧
+  ¬ CausingAnothersBeingIsSustaining history C3ActualWorld.originGiving
+    ancestralFrame.CausesIn ancestralFrame.esse
+
+/-- All ten remaining #1614 source premises hold for an actual, temporally
+persistent, modally contingent effect and a necessary originator. Without
+the `cb1cdea9` cause→actual-ground bridge and with strict present grounding,
+the route's two priority conclusions and first-being/component consequences
+fail at nonvacuous instances. Derived premises are not assumed. -/
+def FullSourceOmission : Prop :=
+  SourcePremises withoutGround strictFrame ∧
+  ¬ EsseCauseIsActualConcreteGround withoutGround true
+    strictFrame.CausesIn strictFrame.esse ∧
+  ¬ ActualEsseCausePriority withoutGround true strictFrame.CausesIn
+    strictFrame.esse strictFrame.PriorSimply ∧
+  ¬ DistinctEsseCausePriority strictFrame.CausesIn
+    strictFrame.esse strictFrame.PriorSimply ∧
+  ¬ FirstBeingActPriority act potency strictFrame.PriorSimply ∧
+  ¬ FirstBeingIsInNoWayInPotencyReading potency strictFrame.PriorSimply ∧
+  ¬ NoComponentIsFirstBeingReading component strictFrame.PriorSimply
+
+/-- On the *different*, historical-ancestry interpretation of the selected
+ground/priority relations, the entire source bundle including `cb1cdea9`
+and both priority conclusions can hold, but C3 still fails. This is not
+a productive simultaneous grounding interpretation. -/
+def AncestorRouteWithoutConservation : Prop :=
+  SourcePremises ancestral ancestralFrame ∧
+  EsseCauseIsActualConcreteGround ancestral true
+    ancestralFrame.CausesIn ancestralFrame.esse ∧
+  ActualEsseCausePriority ancestral true ancestralFrame.CausesIn
+    ancestralFrame.esse ancestralFrame.PriorSimply ∧
+  DistinctEsseCausePriority ancestralFrame.CausesIn
+    ancestralFrame.esse ancestralFrame.PriorSimply ∧
+  ¬ ConcurrentlyActualized history C3ActualWorld.originGiving
+    ConcurrentActualization.Control.falseReceived
+
+end InertialNecessaryOrigin
 
 end TruthCore.Causality.EsseCausePriority
