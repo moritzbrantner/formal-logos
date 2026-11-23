@@ -9,6 +9,7 @@ public import TruthCore.Causality.RootPositiveIntellectWill
 public import TruthCore.Causality.DeiFiliusAttributeField
 public import TruthCore.Logic.ReflectiveCoherence
 public import TruthCore.Results.Causality.NamingVeracityBatch1.Solution
+public import TruthCore.Causality.ActPriorityAtFirst
 
 /-! # A thirteen-slot profile schema, targeted admissibility and actual naming (#1864)
 
@@ -322,6 +323,8 @@ open TruthCore.Causality.BruteFoundationBoundary (Profile)
 open TruthCore.Causality.NecessaryRootFork (ActualRoot)
 open TruthCore.Causality.RootPositiveIntellectWill (NecessaryPositiveRootIntellectWillAt)
 open TruthCore.Causality.DeiFiliusAttributeField (IsAlmighty)
+open TruthCore.Causality.ActPriorityAtFirst (ActAndPotencyMakeComposite)
+open TruthCore.Latin.Aquinas.SummaTheologiae (ImmutableIsEternalReading)
 open TruthCore.Causality.NamingVeracityBatch1 (Power)
 open TruthCore.German.Kant.CosmologicalInference (NecessaryAt)
 open TruthCore.Logic.ReflectiveCoherence (Semantics)
@@ -462,6 +465,85 @@ theorem positiveCore_with_infinite_power_from_same_root {P R C A : Type} (σ : S
     HasIntellect n ∧ HasWill n
   exact ⟨hActualRoot.1.2, hNec, hSimple, hPerfect, hGood,
     ⟨hActualRoot, hOnly⟩, hInt, hWill⟩
+
+/-- An actually existing simple source has no passive potency WHEN any
+act/potency mixture counts as a composition. This is the existing
+ActPriorityAtFirst.ActAndPotencyMakeComposite interpretation; it is not proved
+by the word simple. The eternity step reuses q.10's explicit reading.
+Neither premise mentions GOD_4 or contingent decisions: possible-world
+differences in effects need not be intrinsic potencies of the source. -/
+theorem immutable_eternal_of_simple_act {R : Type}
+    (InAct InPotency : B → R → Prop) (Composite : B → Prop)
+    (Eternal : B → Prop) (x : B) (esse : R)
+    (hEsse : InAct x esse)
+    (hSimple : IsSimple Composite x)
+    (hMixedComposite : ActAndPotencyMakeComposite InAct InPotency Composite)
+    (hEternity : ImmutableIsEternalReading InPotency Eternal) :
+    IsImmutable InPotency x ∧ Eternal x := by
+  have hNoPot : IsImmutable InPotency x := by
+    intro r hPot
+    exact hSimple (hMixedComposite x r esse hEsse hPot)
+  exact ⟨hNoPot, hEternity x hNoPot⟩
+
+/-- Same-bearer positive extension: the earlier eight slots plus immutability
+and eternity, from actual esse and simplicity of THAT root. Two added open
+philosophical premises are named individually: act/potency mixture is
+composition, and unchangeable pure act is eternal. The older eight-slot
+route does not need them and remains available on its own. This proves NO
+omniscent cognition, moral perfection, free creative exercise or metaphysical
+possibility of the thirteen-slot essence. -/
+theorem positiveCore_with_ten_from_same_root {P R C A : Type} (σ : Signature)
+    (m : Profile W σ.Being) (w : W)
+    (q : TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile σ.Being P R)
+    (Composite MatterForm Infinite Eternal HasIntellect HasWill : σ.Being → Prop)
+    (GoodIn InPotency : σ.Being → R → Prop)
+    (MoreIn : R → σ.Being → σ.Being → Prop)
+    (PriorSimply ComponentOf : σ.Being → σ.Being → Prop)
+    (power : Power σ) (S : Semantics W C)
+    (Knows : W → σ.Being → C → Prop)
+    (Chooses : W → σ.Being → A → Prop) (Permitted : W → A → Prop)
+    (Capable Imposed : W → σ.Being → A → Prop)
+    (hRoot : NecessaryPositiveRootIntellectWillAt m w q GoodIn MoreIn
+      PriorSimply ComponentOf Composite MatterForm HasIntellect HasWill)
+    (hInfinity : TruthCore.Latin.Aquinas.SummaTheologiae.SubsistentBeingIsInfiniteReading
+      q.essenceOf q.esseOf Infinite)
+    (hUnlimited : TruthCore.Causality.NamingVeracityBatch1.InfiniteIsUnlimitedAct
+      σ Infinite power)
+    (hActive : TruthCore.Causality.NamingVeracityBatch1.ActivePowerFollowsAct σ power)
+    (hPossible : TruthCore.Causality.NamingVeracityBatch1.ConsistentTaskRequiresOnlyPossiblePerfections
+      σ power)
+    (hMixedComposite : ActAndPotencyMakeComposite q.InAct InPotency Composite)
+    (hEternity : ImmutableIsEternalReading InPotency Eternal) :
+    ∃ n, PositiveCoreAt m.ontic
+      (fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+        GoodIn InPotency power S Knows Chooses Permitted Capable Imposed) w n ∧
+      (fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+        GoodIn InPotency power S Knows Chooses Permitted Capable Imposed).infinite w n ∧
+      (fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+        GoodIn InPotency power S Knows Chooses Permitted Capable Imposed).omnipotent w n ∧
+      (fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+        GoodIn InPotency power S Knows Chooses Permitted Capable Imposed).immutable w n ∧
+      (fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+        GoodIn InPotency power S Knows Chooses Permitted Capable Imposed).eternal w n := by
+  obtain ⟨g, hCore, hInfinite, hOmnipotent⟩ :=
+    positiveCore_with_infinite_power_from_same_root σ m w q
+      Composite MatterForm Infinite Eternal HasIntellect HasWill
+      GoodIn InPotency MoreIn PriorSimply ComponentOf
+      power S Knows Chooses Permitted Capable Imposed
+      hRoot hInfinity hUnlimited hActive hPossible
+  obtain ⟨n, hPerfectRoot, _, _, hSimple, _, _, _, _, _⟩ := hRoot
+  have hOne :
+      (fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+        GoodIn InPotency power S Knows Chooses Permitted Capable Imposed).one w g :=
+    hCore.2.2.2.2.2.1
+  change ActualRoot m w g ∧ (∀ y, ActualRoot m w y → y = g) at hOne
+  have hEq : g = n := hPerfectRoot.2.2.1 g hOne.1
+  have hEsse : q.InAct n q.esse := hPerfectRoot.2.2.2.1.1
+  have hImmutableEternal := immutable_eternal_of_simple_act
+    q.InAct InPotency Composite Eternal n q.esse hEsse hSimple
+    hMixedComposite hEternity
+  rw [hEq] at hCore hInfinite hOmnipotent
+  exact ⟨n, hCore, hInfinite, hOmnipotent, hImmutableEternal.1, hImmutableEternal.2⟩
 
 /-- Eight StageTwo sense bridges are definitional on this fixed profile.
 The ninth, from uniqueness of the selected root to uniqueness of GOD_4,
