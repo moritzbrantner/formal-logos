@@ -85,6 +85,20 @@ theorem absentSourceSeparatesB2FromActualGiver :
     TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceExists,
     TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceCauses,
     TruthCore.Causality.FirstMoverNecessity.Model.mk]
-  decide
+  have hx :
+      ((true = true ∧ true = true) ∧
+        ∃ v : Bool, True ∧ ¬ (v = true ∧ true = true)) :=
+    ⟨⟨rfl, rfl⟩, ⟨false, ⟨trivial, by decide⟩⟩⟩
+  refine ⟨hx, ?_, ?_, ?_⟩
+  · intro x hcont
+    have hxt : x = true := hcont.1.2
+    subst x
+    exact ⟨false, by decide, rfl, rfl, rfl⟩
+  · intro h
+    obtain ⟨c, hne, hAt, _⟩ := h true hx
+    exact hne hAt.2
+  · intro h
+    have hFalse := h false true ⟨rfl, rfl⟩ (by decide) ⟨rfl, rfl, rfl⟩
+    exact (by decide : ¬ (false = true)) hFalse.2
 
 end TruthCore.Results.Causality.ReceivedEsseActualGiver
