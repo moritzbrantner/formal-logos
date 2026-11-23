@@ -326,11 +326,14 @@ origin, and a stationary no-giver comparator. This is an unregistered structural
 certificate; no timeless-agent or existential-adequacy premise is derived. -/
 theorem beginninglessSustainingControls : Control.BeginninglessCertificate := by
   unfold Control.BeginninglessCertificate
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
   -- Temporal presence at now equals world-relative existence in both worlds.
   · intro v x
     exact Iff.rfl
-  -- Actual everlasting being remains contingent in accessible worlds.
+  -- Actual everlasting being remains contingent in accessible worlds:
+  -- the effect, and the giver.
+  · refine ⟨by simp [Control.beginningless],
+      ⟨false, by trivial, by simp [Control.beginningless]⟩⟩
   · refine ⟨by simp [Control.beginningless],
       ⟨false, by trivial, by simp [Control.beginningless]⟩⟩
   · intro t
@@ -352,9 +355,17 @@ theorem beginninglessSustainingControls : Control.BeginninglessCertificate := by
   -- The same unbounded history supports a no-giver interpretation.
   · rintro ⟨g, h⟩
     exact h
+  -- Hence nothing sustains or originates the effect in the no-giver profile.
+  · rintro g ⟨⟨t, ht⟩, hs⟩
+    exact hs t ht
+  · rintro g ⟨b, _, hg⟩
+    exact hg
+  -- The giver itself is given being by nothing in the giving profile.
+  · intro g t h
+    simp [Control.beginninglessGiving] at h
   -- A beginningless temporal profile does not yield modal necessity.
   · intro hn
     have h := hn false (by trivial)
-    simpa [Control.beginningless] using h
+    simp [Control.beginningless] at h
 
 end TruthCore.Results.Causality.SustainingCausation
