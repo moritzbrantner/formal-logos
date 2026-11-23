@@ -927,6 +927,145 @@ into a countermodel of that sense only. (4) Uniqueness: whether the existing
 root-uniqueness premises identify the First Way's root with every necessary
 root (model 12 is the boundary).
 
+### First Way necessity: received-esse foundations (2026-11-23; PR #1870 follow-up)
+
+**Target and semantics.** The exact `IsFirstUnmovedMover` witness and the
+same `CausalityFrame`/reading world of #1870 are retained. `ContingentAt`
+is indexed to accessible worlds of the chosen `Ontic` frame, not a
+characterization of bare logical consistency or a proof that those worlds
+are all metaphysically possible. Temporal beginning/change and merely
+having a capacity for nonbeing are separate; no inference from modal
+absence to a chronological change is used. `Received x p` means the
+act of being of `x` is received in a `Principle` `p`, which may
+already have the act. It does not itself assert `CausesIn c x esse`,
+a world-indexed grounding relation, or that the *whole* being is in
+unactualized `InPotency x esse`. The first mover's `PureAct` in the
+existing record excludes `POTENCY_1` in the bearer, not every possible
+receptive principle.
+
+**New conditional graph connection (not a duplicate mover theorem):**
+
+```
+R1: Every contingent existent at w receives esse in some principle [OPEN]
+R3: IF esse is identical with essence, receipt is in that essence [OPEN]
+De ente c.3: the receiving principle is in receptive potency to esse
+No principle is receptive to itself [OPEN]
+  └── new contingentDistinctEsseFromReception (Lean proof)
+        └── B6: contingent at w → esse ≠ essence [still OPEN]
+              ├── #1870 firstMoverNecessaryByEsseIdentity
+              │   └── SAME f is first unmoved mover, exists necessarily
+              │       └── #1870 necessary-concrete projection → stage one
+              └── existing q.3 a.4 + actual-esse interface → B2
+                  └── #1870 cause+firstness route for SAME f
+```
+
+The R3 law is deliberately weaker than
+`EsseReceivedOnlyInOwnEssence`: only the hypothetical identity
+case used in the reductio needs a restricted recipient. This preserves
+the live question of additional reception in a nonidentity
+subsistent-form/united-soul case, already formalized in
+`EsseReceptionDefinitionFork.IdentityScopedOwnEssence`. In the
+proof, R1 gives a recipient `p`, R3 under `esseOf x = essenceOf x`
+gives `p = essenceOf x`; *De ente* makes `p` receptive to `esseOf x`,
+so the hypothetical identity makes `p` receptive to itself,
+contradicting the irreflexive-principle commitment. No modal necessity,
+external source or no-brute thesis is hidden in R3's definition. The
+modal/metaphysical burden is concentrated in R1.
+
+**Positive philosophical warrant and surviving commitments.** The
+classical rationale for R1 is that an essence may determine the *kind*
+of existent without sufficing to give actuality of esse: if its being
+can fail, there is a real act not identical with what specifies its
+nature, received in some limiting principle. *De ente et essentia*
+c.3 [69874] supplies the act/receiver language; ST I q.3 a.4
+supplies a further, independently open causal dichotomy for a
+distinct esse. This is cumulative philosophical warrant, not a
+source attribution that those passages prove R1 for all
+`ContingentAt` across a modal frame. R3 is supported by the
+incoherence of an essence-identical act received into something
+other than itself if it is truly self-subsistent; the
+`IdentityScopedOwnEssence` predecessor makes that assumption
+precise rather than extending an unrestricted law. Irreflexivity of
+receptive potency rests on the act/receiver distinction; it is not
+built into its predicate. The explanatory principle that an essence
+cannot *supply* esse merely by being conceptually specifiable,
+and the move from a metaphysically contingent bearer to an actual
+receiver, remain primitive commitments open to evaluation.
+No per-premise independence quota is imposed.
+
+The strongest standing alternative is a brute, unreceived
+contingent first being that is pure act under `POTENCY_1`.
+Its modal-absence assignment is mathematically consistent with
+the old First Way premises (model M1). That does **not** establish
+metaphysical coherence: to defend it, a rival needs a substantive
+account of why unreceived esse would be absent from an admissible
+world while no explanatory or constitutive condition varies.
+Conversely, explanatory dissatisfaction with bruteness does not
+logically refute it; R1 cannot be discharged without that work.
+Distinct external-cause and grounding closures stay viable
+alternatives; the q.3 a.4 B6→B2 route and new R1 support share
+premises and must not be counted as independent corroboration.
+
+**A concrete failed B4 strategy, not a generic hypothetical
+objection.** `AdoptedPotency.InPotency InAct CanBe x esse`
+unfolds to `CanBe x esse ∧ ¬ InAct x esse`. The existing
+`ExistingInActAt` interface says `ExistsAt w x → InAct x esse`.
+Thus R1 plus the proposed R2 (`Received x p → InPotency x esse`
+on a contingent existent) entails that **no contingent being
+exists at w**. This is a general Lean-certified law in
+`Model.ReceptionControls`. It demonstrates a *specific* semantic
+error: De ente's principle-level receptive potency to an
+**already received act** cannot be substituted for legacy
+unactualized subject-potency in the *same esse respect*. The
+finite `witness` has an actually existing contingent receiver,
+so the stronger reading does not inherit the witness. In other
+respects a contingent thing may independently retain unrealized
+capacities; that does not justify B4 for every contingent being.
+An extended pure-act concept excluding *constitution by receptive
+potency* could connect R1 to necessity, but the First Way's
+current `FirstUnmovedMoverIsPureAct` is not that concept;
+a separately defended same-witness bridge is necessary.
+
+**Discriminating models and scope.** In `Model.witness`, `x`
+is contingent and receives esse in its own essence while the
+receiving principle is in receptive potency to the act it
+actually has. Identity-scoped R3 holds (the identity candidate
+does not receive) and the adopted unactualized esse transfer
+fails. `Model.conserved` adds a meaningful world-indexed
+mechanism: necessary `x` is the actual esse supporter of
+contingent mover `f` exactly at the worlds where `f`
+exists, as well as its `CausesIn … esse` source at the reading
+world. `f` remains `POTENCY_1`-pure act but is **not** first
+in being (x is `PriorSimply` to it). This distinguishes a
+received-esse contingent pure-act candidate with an explicit
+source from a mere uninterpreted relation assignment; it is
+still a structural surrogate, not an established metaphysical
+possibility. Under a variant that identifies `f`'s essence
+with esse, receipt in a different principle violates R3,
+showing which premise excludes it. `Model.bruteFirst`, even
+with distinct represented essence/esse, has no recipient and
+therefore refutes the inference B6→R1 as a formal consequence.
+No control identifies the First Way's mover with a separately
+derived necessary root.
+
+**Provisional ranking and next investigation.** For the
+actual *adopted* sense of POTENCY_1, the received-esse→B6
+argument is a more promising explanatory extension than the
+R2→B4 attempt: the latter has a demonstrated same-respect
+incompatibility with actual contingent things. This is not
+an unconditional verdict that R1 is true, nor that B6 is
+philosophically better supported than the causal/grounding
+closures without further work. The new proof increases the
+available *conditional support options* at B6 while leaving
+its primitive modal step open. Next investigate R1's scope:
+why contingent essence demands a received act rather than
+uncaused but variably existing own actuality, and whether
+other explanatory channels can fulfill that role without
+a distinct recipient; compare q.3 a.4's `CAUSE_2`
+and strict grounding at exactly the same world and witness.
+An independent semantic review of this continuation is
+**pending**, and validation status must be taken from the PR.
+
 ## Stage two: that being is God
 
 Stage one gives no uniqueness, causal role or attribute.

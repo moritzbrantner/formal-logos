@@ -1,0 +1,11 @@
+{
+  "id": "76e6478e-cb4c-405b-bbfa-c849c272bac4",
+  "label": "Full own-essence reception strengthens identity-scoped reception",
+  "subject_kind": "statement",
+  "subject_id": "6dfe01ab-e3f2-5a4c-b102-701c161f2cf7",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "65f3d0c7-cc3d-4ce3-a4a9-6fa38bf722cb",
+  "verification_result_id": "e7c251a4-7a12-4643-a2cb-9c050f17394c",
+  "note": "The existing unrestricted own-essence reception statement implies R3 by a single-premise Lean proof. This records strength only; R3 is used in the B6 argument because the full universal law is disputed for nonidentity recipients. Neither premise is established by the relation. Strictness has not been separately certified."
+}

@@ -4,6 +4,9 @@ public import TruthCore.Causality.Frame
 public import TruthCore.Causality.EsseCausePriority
 public import TruthCore.Causality.NecessaryFirstBeing
 public import TruthCore.Causality.ReflexiveDependenceScope
+public import TruthCore.Causality.EsseReception
+public import TruthCore.Latin.Aquinas.DeEnte.EsseReception
+public import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.AdoptedPotency
 public import TruthCore.Causality.ExistenceActuality
 public import TruthCore.Causality.NecessaryBeingInAct
 public import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.FirstMoverAttributes
@@ -185,6 +188,33 @@ def CanFailToBeIsPotencyAtEsse (F : CausalityFrame W B T R)
     (InPotency CanFailToBe : B → R → Prop) : Prop :=
   ∀ x, CanFailToBe x F.esse → InPotency x F.esse
 
+
+/-! ## Reception of esse and the selected POTENCY_1 -/
+
+/-- R1, OPEN: every actual being that can be absent at an accessible world
+receives its act of being in some principle. Modal contingency by itself does
+not definitionally establish reception, an external giver, or grounding. -/
+def ContingentReceivesEsse {P : Type} (F : CausalityFrame W B T R)
+    (w : W) (Received : B → P → Prop) : Prop :=
+  ∀ x, ContingentAt F.history.ontic w x → ∃ p, Received x p
+
+/-- R3, OPEN: where esse *is* essence, receipt of esse can only be in that
+essence. A scoped instance of the already studied own-essence reception law,
+weaker than applying it to all beings, including nonidentity recipients. -/
+def IdentityScopedEsseReception {P : Type}
+    (essenceOf esseOf : B → P) (Received : B → P → Prop) : Prop :=
+  ∀ x p, esseOf x = essenceOf x → Received x p → p = essenceOf x
+
+/-- R2, diagnostic OPEN transfer: a contingent bearer receiving esse in a
+principle is in unactualized subject POTENCY_1 at esse. De ente states only
+the receiving PRINCIPLE'S receptive potency. With adopted POTENCY_1 and
+actual existing-in-esse, R2 excludes all contingent actual beings; it does
+not provide a viable positive argument for B4 (see ReceptionControls). -/
+def ContingentReceptionIsSubjectPotency {P : Type}
+    (F : CausalityFrame W B T R) (InPotency : B → R → Prop)
+    (w : W) (Received : B → P → Prop) : Prop :=
+  ∀ x p, ContingentAt F.history.ontic w x → Received x p → InPotency x F.esse
+
 /-! ## Same-witness endpoints -/
 
 /-- ONE first mover moved by none is pure act, exists at `w` and exists at
@@ -295,6 +325,25 @@ def essenceFalse (_ : Bool) : Bool := false
 
 /-- Body, matter–form and composition: none. -/
 def noneHolds (_ : Bool) : Prop := False
+
+
+/-- Receipt is in the thing's essence in the nonvacuous witness. -/
+def receivedByMoved (x p : Bool) : Prop := x = false ∧ p = false
+def receivedByMover (x p : Bool) : Prop := x = true ∧ p = false
+def receivedNone (_ _ : Bool) : Prop := False
+def receptivePotency (p act : Bool) : Prop := p = false ∧ act = true
+def essenceByBeing (x : Bool) : Bool := x
+
+/-- This free subject-potency interpretation is NOT the adopted potency in
+a respect where the bearer is actually in act. -/
+def subjectPotencyAtEsse (x _ : Bool) : Prop := x = false
+def actAtEsse (_ r : Bool) : Prop := r = true
+def canBeAny (_ _ : Bool) : Prop := True
+
+/-- x supports f's esse exactly at the reading world: the world-relative
+support relation supplements the frame's world-free CausesIn, read at w. -/
+def supportsEsseAt (v c x : Bool) : Prop :=
+  v = true ∧ c = false ∧ x = true
 
 /-- **bruteFirst** (lead models M1, M2, M4): `f` moves `x`, is moved by none, is
 the first being, is pure act, has esse not distinct from essence, exists at
@@ -571,6 +620,73 @@ def Models : Prop :=
 
 /-- The laws and the models. -/
 def Controls : Prop := Laws ∧ Models
+
+
+/-- Universal same-respect incompatibility and three finite interpretation
+tests. These are structural surrogates, NOT genuine metaphysical possibility
+certificates. (1) R1+R2+actuality of esse excludes all contingent existents
+when POTENCY_1 is the adopted unactualized-capacity sense. (2) A contingent
+moved being receives its esse in a principle that already has its act, and
+the subject-level adopted transfer fails. (3) A contingent POTENCY_1-pure-act
+mover has an actual external esse supporter at exactly its existence worlds;
+it is NOT first in being. Identity-scoped own-essence reception can fail when
+a purported identical act is received in a different principle. (4) A brute
+first pure-act contingent mover has distinct represented essence/esse and no
+receipt, showing that R1 contributes new metaphysical content. -/
+def ReceptionControls : Prop :=
+  (∀ (W B T R P : Type) (F : CausalityFrame W B T R) (w : W)
+      (InAct CanBe : B → R → Prop) (Received : B → P → Prop),
+      TruthCore.Causality.ExistenceActuality.ExistingInActAt
+        F.history.ontic InAct F.esse w →
+      ContingentReceivesEsse F w Received →
+      ContingentReceptionIsSubjectPotency F
+        (TruthCore.Latin.Aquinas.SummaTheologiae.AdoptedPotency.InPotency InAct CanBe)
+        w Received →
+      ∀ x, ¬ ContingentAt F.history.ontic w x) ∧
+  (ContingentAt witness.history.ontic true false ∧
+    ContingentReceivesEsse witness true receivedByMoved ∧
+    IdentityScopedEsseReception essenceByBeing esseTrue receivedByMoved ∧
+    TruthCore.Causality.EsseReception.EsseReceivedOnlyInOwnEssence
+      essenceFalse receivedByMoved ∧
+    TruthCore.Latin.Aquinas.DeEnte.ReceiverInPotencyToReceivedEsseReading
+      esseTrue receivedByMoved receptivePotency ∧
+    TruthCore.Causality.EsseReception.NothingInReceptivePotencyToItself
+      receptivePotency ∧
+    ContingentHasDistinctEsse witness true essenceByBeing esseTrue ∧
+    ContingentReceptionIsSubjectPotency witness subjectPotencyAtEsse
+      true receivedByMoved ∧
+    TruthCore.Causality.ExistenceActuality.ExistingInActAt
+      witness.history.ontic actAtEsse witness.esse true ∧
+    ¬ ContingentReceptionIsSubjectPotency witness
+      (TruthCore.Latin.Aquinas.SummaTheologiae.AdoptedPotency.InPotency
+        actAtEsse canBeAny) true receivedByMoved) ∧
+  (ContingentAt conserved.history.ontic true true ∧
+    ContingentReceivesEsse conserved true receivedByMover ∧
+    IdentityScopedEsseReception essenceFalse esseTrue receivedByMover ∧
+    TruthCore.Causality.EsseReception.EsseReceivedOnlyInOwnEssence
+      essenceFalse receivedByMover ∧
+    TruthCore.Latin.Aquinas.DeEnte.ReceiverInPotencyToReceivedEsseReading
+      esseTrue receivedByMover receptivePotency ∧
+    TruthCore.Causality.EsseReception.NothingInReceptivePotencyToItself
+      receptivePotency ∧
+    conserved.CausesIn false true conserved.esse ∧
+    conserved.PriorSimply false true ∧
+    (∀ v, conserved.history.ontic.ExistsAt v true ↔
+      ∃ c, conserved.history.ontic.ExistsAt v c ∧ supportsEsseAt v c true ∧
+        conserved.CausesIn c true conserved.esse) ∧
+    PureAct movedPotency true ∧
+    ¬ IsFirstBeing conserved.PriorSimply true ∧
+    ¬ ContingentReceptionIsSubjectPotency conserved movedPotency
+      true receivedByMover ∧
+    ¬ PossibleNonexistenceIsPotency conserved movedPotency true ∧
+    ¬ IdentityScopedEsseReception essenceByBeing esseTrue receivedByMover ∧
+    ¬ ContingentHasDistinctEsse conserved true essenceByBeing esseTrue) ∧
+  (ContingentAt bruteFirst.history.ontic true true ∧
+    IsFirstUnmovedMover movedIn bruteFirst.MovesIn true ∧
+    IsFirstBeing bruteFirst.PriorSimply true ∧
+    PureAct movedPotency true ∧
+    ContingentHasDistinctEsse bruteFirst true essenceFalse esseTrue ∧
+    ¬ ContingentReceivesEsse bruteFirst true receivedNone)
 
 end Model
 

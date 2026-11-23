@@ -1,0 +1,11 @@
+{
+  "id": "e7c251a4-7a12-4643-a2cb-9c050f17394c",
+  "label": "Unrestricted own-essence receipt strengthens identity-scoped receipt",
+  "argument_id": "b7943ca9-af73-4549-b66e-00c5320a85b2",
+  "challenge_module": "TruthCore.Results.Causality.FirstMoverNecessity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FirstMoverNecessity.Solution",
+  "theorem": "TruthCore.Results.Causality.FirstMoverNecessity.unrestrictedReceptionImpliesIdentityScoped",
+  "comparator_config": "results/e7c251a4-7a12-4643-a2cb-9c050f17394c/comparator.json",
+  "status": "solution-present",
+  "description": "One-premise weakening from the existing full own-essence reception law to the identity-scoped R3. Source and philosophical status of the strong law remain open, and no premise is discharged."
+}
