@@ -426,3 +426,150 @@ premise is established.
 4. Assess corruptible→POTENCY_1 (`8bfc4ab7`).
 5. The two C1 connection bridges of §12 and the q.3 a.7 bridge for underived
    beings.
+
+## Can the whole unreceived act be absent?
+
+Analyst assessment of the rigid individual in issue #1887. Let P say that this
+very n is absent at some world accessible from the actual world. Grant the
+actuality, firstness, essence–esse identity, absence of reception, of a
+matter–form composite, of corruptibility and of power over n's esse in
+`FoundationalAt`. The further stipulation that **nothing grounds P** is stronger
+than absence of a causal power. It excludes an essence or a recombination law
+as a positive ground for P if those accounts purport to supply one. Under
+that strict stipulation the live affirmative answer is a primitive modal fact.
+
+**The direct case for necessity.** A dependent being's act can be distinguished
+from what receives it. If an indispensable contribution could have been wholly
+withheld, with no substitute for it, that gives a positive reason why this
+very being might never have existed. For n there is
+neither a recipient separable from its act nor a giver whose contribution
+can be withheld. The identity of what n is with its act of being excludes retaining
+the bearer while separating it from that act. Underivedness excludes
+explaining its actual existence by an upstream giver. The best generalization
+is that a real alternative to actuality should answer to a real difference in
+what admits or accounts for it. We have independent reason to *look* for such a
+difference. Varying something in a description is easy even when the variation
+separates constitutively identical things. In ordinary cases, tracing which
+contributions can vary helps correct that error. Applied as an explanatory
+preference this is a case for necessity. Applied as an exceptionless rule
+licensing an inference from the absence of a ground to the falsity of P, it
+requires further warrant precisely at variations of a whole unreceived act.
+
+**The strongest objection.** Consider the difference between keeping n while
+subtracting its very act and omitting n and its very act together. Identity
+decisively rules out the first operation. The second respects identity,
+even if we grant that an act of being is intrinsically exercised whenever
+there is such an act. There is no dormant act, bare essence awaiting
+actualization, or second constituent that switches n on. A conditional in
+our account of n introduces no such constituent into n. This answers the
+internal-composition objection even on an interpretation excluding all real
+intrinsic parts. Whether an order omitting the whole is admissible remains
+open. The PrimitivistSilence twins and ConditionalIdentityModel check the
+separation for their specified profiles; they do not certify an absent
+world for a fully simple subsistent act. An alternative world is no later
+stage in a single history. The objection defeats the inference from the
+absence of passive potency alone. It leaves open timeless dependence on a
+giver wherever there is one, or a noncausal restriction on admissibility.
+
+**An independent argument by exhaustion.** Suppose n were absent. Either the
+order in question contains no bearer existing by an unreceived act or a
+different bearer exists by such an act. Two reasons for excluding these alternatives can be stated
+without first assigning n a modal status.
+
+1. Consider an order populated entirely by recipients of actuality. If the
+   existence of each is derivative *in the very respect under explanation*,
+   adding recipients supplies further instances of receipt. It gives no
+   account of why there is anything to receive. This favors an unreceived
+   source insofar as received actuality calls for an ultimate source. Its
+   rivals include a beginningless order of dependence sufficient member by
+   member and an order with no concrete recipients at all. Even a successful
+   objection to an unfounded dependence order leaves the empty case. The
+   abstractum/coexistence route in the modal spine gives a reason to resist
+   emptiness if a necessary abstractum requires concrete instantiation or
+   accompaniment. Both the dependence of abstracta on concreta and its
+   compatibility with the alleged necessary abstractum matter. Necessary
+   population alone yields no unreceived act.
+2. Ask what would make a second unreceived act *this other act*. A common
+   actuality received in different subjects has a familiar basis of
+   multiplication. Removing receivers removes that basis. If unrestricted
+   acts share one real nature, and numerical distinction requires a
+   differentiating basis that unreceived acts lack, the purported substitute
+   has no claim to be another individual. Simplicity within each individual
+   alone leaves distinct simple natures and primitive numerical diversity
+   open. The existing nature-uniqueness argument (`841e7c81`) needs common
+   nature and individuation premises in its own class. Uniqueness among
+   coexisting beings would still leave a different sole occupant elsewhere.
+   Applying the reason to every possible substitute also requires showing
+   that *every* unreceived act is unrestricted in the relevant sense. Lack
+   of a receiver by itself leaves intrinsic limitation open.
+
+This gives a positive, non-causal case for the *same* n. The first reason
+addresses whether the role is occupied throughout, the second whether it
+can change occupants. Neither premise says that n is necessary. Each has
+consequences one can dispute independently, including for an impersonal
+foundation. Each remains defeasible. See [the necessary-population
+comparison](modal-spine.md), [disjunction grounding](disjunction-ground-485.md)
+and [the individuation comparison](necessary-simple-plurality.md). Result
+`514112f2` separates necessary population from a necessary individual.
+No combination of separate control models exhibits a complete rival ontology.
+
+**The best affirmative case.** The primitivist can accept objective modal
+facts as basic alongside actual categorical facts. P then need involve no
+causal power, dependence or internal difference. This answers the coherence
+challenge, but primitivism permits primitive necessity equally. Recombination
+offers a reason for a direction: keeping the character of numerically distinct
+things fixed ordinarily leaves room to vary their company. To reach P it
+uses unrestricted recombination and a distinct possibly existing concrete
+companion on the existing route. The unrestricted rule licenses removal at n. A thing can be present wherever its companion exists without being
+produced by the companion. Independence in production alone gives no right of
+omission. Existence-conditional essentialism offers the most economical
+interpretation of the act itself: wherever n exists, it is precisely this
+exercised act. For P it also needs a represented absence, no essential
+requirement from others, and a rule admitting what survives the essential
+exclusions. A conceiving of total omission favors P if it tracks real
+possibility even with incomplete access to the individual's nature. This is a
+defeasible consideration, stronger than mere freedom to put a zero into a
+model. If recombination or the exclusion rule actually grounds P, it answers
+the weaker question of absence without a *power*. On the strict stipulation
+it can serve as evidence for a primitive P only insofar as the rule is
+independently credible as a guide to primitive facts.
+
+**Verdict.** The joint omission answers a specific charge of incoherence
+against P. Neither the truth of P nor its negation follows from that success.
+I have high confidence that the change objection and act identity alone cannot
+decide C2, and moderate confidence that suspension between P and its negation
+is warranted at this individual. This is an assessment of the reasons, with
+no numerical probability assigned to either world picture. The fundamental
+disagreement is whether real alternatives for an individual must be licensed
+by a positive feature of actuality, or whether primitive admissibility can
+allow a whole actuality to be missing while respecting every constitutive
+identity. On either side a general rule earns comparative weight by explaining
+other modal distinctions and giving a reason its application survives at n.
+A brute necessity and a brute permission have the same entitlement to be
+proposed. A classical theist can accept the grounding demand, and an
+impersonal necessitarian can do so too. A contingent-foundation rival can
+retain powers for change at the cost of treating existential admissibility
+as independently basic or governed by its own unrestricted rule. Coherence
+of any of these worldviews supplies no automatic verdict about n.
+
+I would move toward necessity if the population and individuation reasons
+both held across accessible orders, or if an independent account of real
+definition showed why the exercise of *this* whole act must obtain even
+without conditioning on its existence. Under the strict no-ground stipulation I would move toward P if a reliable
+way of recognizing that particular primitive de re possibility survived
+the incomplete-knowledge objection. An independently motivated restriction
+on real essence and account of admissibility that *grounds* whole omission
+at n would instead support P while revising the no-ground stipulation.
+The current barriers are existential import for necessity and a licence for
+admissibility for possibility. Neither is removed by counting their
+conditional formulations as further evidence.
+
+Evidence reused: #1884 `32bf794f` and `e5d49f99` (C2 and its application
+under their premises), #1888 (warrant), #1889 `1e6174ab`, `39df9612`,
+`872a3832` (the opposed conditional verdicts), #1896 `ca973127` and controls
+(under the exercise/existence link, the exercise-in-nature premise restates
+the identity-to-essential-existence bridge), and #1897 (a collective absence
+power need not distribute; a necessary holder still needs identification
+with n). Draft #1901 at `7623b6d3` distinguishes reality-constrained
+modality, positive makers, and power exhaustiveness. The present tests add
+no theorem, framework, attribution or premise discharge.
