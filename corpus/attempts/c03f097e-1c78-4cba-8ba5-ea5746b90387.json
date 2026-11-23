@@ -1,0 +1,18 @@
+{
+  "id": "c03f097e-1c78-4cba-8ba5-ea5746b90387",
+  "label": "C3 at one actual world: grounded, ungrounded and sustained giving profiles on one history",
+  "date": "2026-11-23",
+  "statement_ids": [
+    "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+    "40a97664-e481-42d7-8458-78374a61aa26",
+    "ce55210c-d3b5-4720-bd83-a3f63c5dc884",
+    "23e04ae5-98ed-4464-8f9b-dc0dfbad0caa"
+  ],
+  "kind": "countermodel",
+  "outcome": "succeeded",
+  "summary": "Note docs/notes/sustaining-vs-existential-inertia.md section 8; unregistered kernel theorem TruthCore.Results.Causality.ConcurrentCessation.c3ActualWorldControls of type ConcurrentCessation.C3ActualWorld.Certificate (PR #1885). One two-world, natural-time CausalityFrame with one rigid Boolean bearer pair: source true present at every moment, effect false present from t=1, both absent at the alternative world, History.ontic shared with the Profile so CoherentAtNow holds in both worlds at now=2. Origin-only giving (GivesAt true true false only at t=1) with the source still present at t=2: OriginatesBeing holds; weak concurrent actualization 40a97664 (ConcurrentlyActualized with only the effect receiving esse) and ce55210c (CausingAnothersBeingIsSustaining, entailed by 23e04ae5) both fail. Two assignments of the same free grounds primitive on the identical history: with the edge, cb1cdea9 (EsseCauseIsActualConcreteGround) holds although 40a97664 fails; without it, cb1cdea9 fails with its antecedent instantiated under origin-only giving. A sustained-giving comparator on the same history satisfies 40a97664 and ce55210c. Neither profile has a necessary concrete bearer. Findings: on the existing semantics, cb1cdea9 does not entail C3 (40a97664), and either assignment of grounds is compatible with origin-only giving, so applying the root route to persistence needs an explicit ground-to-giving bridge. The ungrounded profile is a falsifying model of cb1cdea9 only; no other #1614 bundle premise is checked. The sustained comparator satisfies weak C3 only because the contingent source has no received esse; the source's own status, contested by merged C2 (#1884, 6508c239), is not modelled. DependsForBeing is an empty placeholder and does not model 2068f91c. Structural models only: no metaphysical possibility, no reality-applicability and no root-premise change (CI frontier-diff: no change).",
+  "evidence": [
+    "PR-1885"
+  ],
+  "blocker": "Not blocked; branch reassessment. Next discriminating tests: type and defend a present-ground-to-productive-GivesAt principle for the same received-esse bearer and compare it with an independently governing persistence law under identical ultimate-actuality standards; a model of the full #1614 bundle except cb1cdea9, or an impossibility argument; the F2 efficient/exemplar/final discrimination for CausesIn; the contingent source's own received-esse status under C2."
+}
