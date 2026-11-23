@@ -218,11 +218,11 @@ theorem withdrawalLawControls : WithdrawalLaw.Certificate := by
   · intro x n hBefore hGone
     exfalso
     cases x <;> simp_all [WithdrawalLaw.noDestruction,
-      WithdrawalLaw.history, WithdrawalLaw.effectAt] <;> omega
+      WithdrawalLaw.history, WithdrawalLaw.effectAt]
   · intro x n hBefore hGone
     exfalso
     cases x <;> simp_all [WithdrawalLaw.noDestruction,
-      WithdrawalLaw.history, WithdrawalLaw.effectAt] <;> omega
+      WithdrawalLaw.history, WithdrawalLaw.effectAt]
   · intro x n hBefore hGone
     exfalso
     cases x <;> simp_all [WithdrawalLaw.noDestruction,
