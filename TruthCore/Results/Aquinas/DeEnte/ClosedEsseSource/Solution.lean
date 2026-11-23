@@ -353,9 +353,17 @@ theorem fullCircleStateFixed :
   · intro _
     cases x with
     | false =>
-      refine ⟨true, ?_, trivial, trivial, ?_⟩ <;> decide
+      refine ⟨true, ?_, trivial, trivial, ?_⟩
+      · change true ≠ false
+        decide
+      · change true ≠ false
+        decide
     | true =>
-      refine ⟨false, ?_, trivial, trivial, ?_⟩ <;> decide
+      refine ⟨false, ?_, trivial, trivial, ?_⟩
+      · change false ≠ true
+        decide
+      · change false ≠ true
+        decide
   · intro _
     trivial
 
@@ -393,9 +401,17 @@ theorem stateIndexedHolisticCircle : StateIndexedHolisticCircleControl := by
     intro x
     cases x with
     | false =>
-      refine ⟨true, ?_, trivial, trivial, ?_⟩ <;> decide
+      refine ⟨true, ?_, trivial, trivial, ?_⟩
+      · change true ≠ false
+        decide
+      · change true ≠ false
+        decide
     | true =>
-      refine ⟨false, ?_, trivial, trivial, ?_⟩ <;> decide
+      refine ⟨false, ?_, trivial, trivial, ?_⟩
+      · change false ≠ true
+        decide
+      · change false ≠ true
+        decide
   refine ⟨emptyCircleStateFixed,
     ⟨fullCircleStateFixed, ⟨false, trivial⟩⟩, ?_, hAll, ?_⟩
   · intro state hs
