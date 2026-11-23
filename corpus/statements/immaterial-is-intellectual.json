@@ -1,1 +1,13 @@
-{"id": "180f5ad2-a421-541a-85c9-9bca578b4a43", "label": "What is ALTOGETHER_IMMATERIAL_2, neither composed of matter and form nor a component of anything…", "legacy_id": "STMT-IMMATERIAL-IS-INTELLECTUAL", "paraphrase": "What is altogether immaterial, neither composed of matter and form nor a component (matter, or a form in matter) of anything, has intellect: immateriality is the reason why a thing knows.", "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.ImmaterialIsIntellectualReading", "definition_ids": ["dace8e73-8b5b-5378-8e62-17d534413168", "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4", "53b02c11-a28b-57c2-8d2e-7e013893db7e"]}
+{
+  "id": "180f5ad2-a421-541a-85c9-9bca578b4a43",
+  "label": "What is ALTOGETHER_IMMATERIAL_2, neither composed of matter and form nor a component of anything…",
+  "legacy_id": "STMT-IMMATERIAL-IS-INTELLECTUAL",
+  "paraphrase": "What is altogether immaterial, neither composed of matter and form nor a component (matter, or a form in matter) of anything, has intellect: immateriality is the reason why a thing knows.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.ImmaterialIsIntellectualReading",
+  "definition_ids": [
+    "dace8e73-8b5b-5378-8e62-17d534413168",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "53b02c11-a28b-57c2-8d2e-7e013893db7e"
+  ],
+  "note": "OPEN analyst bridge, not a verbatim universal in ST I q.14 a.1. The Latin supplies the immateriality-to-cognition ordering and God's maximal case; treating noncomposition plus noncomponent status as sufficient for intellect in every being is an additional metaphysical commitment. Claim 5bfe3093 now states only the source's narrower thesis and supports this proposition without closing it; separate grade and intellectual-capacity bridges remain open. See docs/notes/source-fidelity-1849.md."
+}

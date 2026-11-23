@@ -760,4 +760,63 @@ mod tests {
             "A, T (P, 2000; ISBN 9780000000002), pp. 1-2"
         );
     }
+
+    /// Regression for #1849: a valid original-language locator is not itself
+    /// permission to ascribe an analytically stronger claim to that author.
+    #[test]
+    fn historical_claims_are_not_analyst_extensions() {
+        fn read(text: &str) -> Value {
+            serde_json::from_str(text).expect("committed corpus JSON")
+        }
+        let cases = [
+            (
+                read(include_str!(
+                    "../../corpus/claims/aristotle-metaphysics-993b-as-to-being-so-to-truth-a.json"
+                )),
+                read(include_str!("../../corpus/statements/arist-met-ii-1-truth-being-context.json")),
+                read(include_str!("../../corpus/statements/as-to-being-so-to-truth.json")),
+                read(include_str!(
+                    "../../corpus/relations/arist-met-ii-1-supports-truth-being-biconditional.json"
+                )),
+            ),
+            (
+                read(include_str!(
+                    "../../corpus/claims/aquinas-st-i-q14-a1-immateriality-reason-of-knowledge.json"
+                )),
+                read(include_str!(
+                    "../../corpus/statements/aquinas-q14-a1-immateriality-cognition.json"
+                )),
+                read(include_str!("../../corpus/statements/immaterial-is-intellectual.json")),
+                read(include_str!(
+                    "../../corpus/relations/aquinas-q14-a1-supports-immaterial-is-intellectual.json"
+                )),
+            ),
+        ];
+        for (claim, historically_supported, analyst_extension, relation) in cases {
+            assert_eq!(claim["statement_id"], historically_supported["id"]);
+            assert_ne!(claim["statement_id"], analyst_extension["id"]);
+            assert!(claim["attribution"].as_str().unwrap().starts_with("The passage states "));
+            assert_eq!(relation["subject_kind"], "claim");
+            assert_eq!(relation["subject_id"], claim["id"]);
+            assert_eq!(relation["predicate"], "supports");
+            assert_eq!(relation["object_kind"], "statement");
+            assert_eq!(relation["object_id"], analyst_extension["id"]);
+        }
+        let aristotle = read(include_str!(
+            "../../corpus/statements/arist-met-ii-1-truth-being-context.json"
+        ));
+        let analytic = read(include_str!("../../corpus/statements/as-to-being-so-to-truth.json"));
+        assert!(aristotle["definition_ids"]
+            .as_array()
+            .unwrap()
+            .contains(&json!("9d37eba3-360b-4098-a6fc-bd07edb1594f")));
+        assert!(!aristotle["definition_ids"]
+            .as_array()
+            .unwrap()
+            .contains(&json!("b412016a-43c1-5c4a-abb0-4e53d343d508")));
+        assert!(analytic["definition_ids"]
+            .as_array()
+            .unwrap()
+            .contains(&json!("b412016a-43c1-5c4a-abb0-4e53d343d508")));
+    }
 }

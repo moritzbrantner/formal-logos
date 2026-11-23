@@ -1,0 +1,11 @@
+{
+  "id": "7da33f21-9bee-5371-bf4f-0cbc6997fa52",
+  "label": "Aristotle's contextual truth/being correspondence supports a stronger Thomistic biconditional",
+  "legacy_id": "REL-ARIST-MET-II-1-SUPPORTS-TRUTH-BEING-BICONDITIONAL",
+  "subject_kind": "claim",
+  "subject_id": "b7d959b1-10df-5e0a-b7c6-d0773878ea0a",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "5a948c37-a0c3-5438-87e6-b797b529f76e",
+  "note": "Metaphysics II.1, 993b24–31, gives a correspondence between each thing's standing in being and truth after an argument about eternal principles and their caused truths. It does not say that Aquinas's truth-of-things conformity to an originating intellect (TRUE_3) holds, nor spell out the global pairwise 'if and only if' comparisons over arbitrary beings and respects encoded by 5a948c37. Applying those to all beings and identifying TRUE_7 with TRUE_3 are separate unverified analyst commitments. This relation supplies contextual support only; it is not a historical stating claim or a verified bridge."
+}
