@@ -70,3 +70,33 @@ above (two bare and five sourced). No root obligation is discharged. The
 source/accessibility split changes no existing theorem premise and adds its
 source statement outside those root-frontier leaves. Shared conventions
 resolved to source revision `c104800c7aaeaea12d56f9093e71bdef6a2ce6fa`.
+
+## VI.9 Zeno: mathematical reconstruction (#338, partial)
+
+The typed **analyst** module
+[`TruthCore.Greek.Aristotle.Physics.Typed.Zeno`](../TruthCore/Greek/Aristotle/Physics/Typed/Zeno.lean)
+gives `ℝ → ℝ` motion and Mathlib derivatives to the arrow, and real-time
+countermodels to the dichotomy and Achilles. It leaves the historical
+`BookVI.Chapter9` source readings and `ZENO-ARROW-STATIONARY` frozen
+Challenge/opaque-transcription status intact. In the selected interpretation,
+position at every now does not mean zero velocity, zero velocity once does
+not mean globally stationary, and zero velocity **at every time** does imply
+stationarity by the mean-value theorem. This is a theorem about
+differentiable trajectories, not a premise that physical rest must be defined
+that way.
+
+The same certified `ConvergentZenoSchedule` supplies geometric interior
+bisection cuts: every finite prefix has exactly its specified cardinality,
+the range of all cuts is infinite, and the two claims hold together. A
+distinct physical-operation event set may be empty even when the mathematical
+cut set is infinite. The models refute bare nonarrival and
+position-implies-rest inferences, not every interpretation of Aristotle's
+argument, actual infinite physical performance, or an essentially ordered
+causal regress.
+
+[Detailed theorem-by-theorem assessment](supertasks.md#typed-zeno-motion-bisection-and-chase-controls-338-partial).
+No corpus inference edge or new root-premise discharge is asserted by this
+analyst-only batch. For further integration, the missing bridge must specify
+how distinct performed operations are identified with mathematical cuts and
+whether their causal relation is temporal, essentially dependent or purely
+descriptive. `SU-REAL`, #310 and #311 remain open.
