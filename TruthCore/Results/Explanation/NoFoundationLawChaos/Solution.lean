@@ -333,4 +333,225 @@ theorem omissions : TruthCore.Explanation.NoFoundationLawChaos.Omissions := by
       exact (by decide : Target.spacetime ≠ Target.process) hg
     · exact ⟨.process, trivial⟩
 
+
+/-! ## The upstream recombination/closure discriminator -/
+
+private theorem one_step_to_finite (allowed : Trace → Prop) (n : Nat)
+    (hpop : ∃ f, Admitted allowed n f)
+    (hstep : OneStepRich allowed n) : FiniteRich allowed n := by
+  intro tail m
+  induction m with
+  | zero =>
+      obtain ⟨f, hf⟩ := hpop
+      refine ⟨f, hf, ?_⟩
+      intro t ht
+      have ht0 : t = 0 := by omega
+      subst t
+      exact ((cell_iff_prefix n f).1 hf.1 0 (by omega)).trans
+        (splice_before n tail 0 (by omega)).symm
+  | succ m ih =>
+      obtain ⟨f, hf, hmatch⟩ := ih
+      by_cases hm : m < n
+      · refine ⟨f, hf, ?_⟩
+        intro t ht
+        by_cases htm : t ≤ m
+        · exact hmatch t htm
+        · have heq : t = m+1 := by omega
+          subst t
+          exact ((cell_iff_prefix n f).1 hf.1 (m+1) (by omega)).trans
+            (splice_before n tail (m+1) (by omega)).symm
+      · obtain ⟨g, hg, hcopy, hnext⟩ :=
+          hstep m f (splice n tail (m+1)) (by omega) hf
+        refine ⟨g, hg, ?_⟩
+        intro t ht
+        by_cases htm : t ≤ m
+        · exact (hcopy t htm).trans (hmatch t htm)
+        · have heq : t = m+1 := by omega
+          subst t
+          exact hnext
+
+private theorem finite_closed_to_whole (allowed : Trace → Prop) (n : Nat)
+    (hfinite : FiniteRich allowed n) (hclosed : PrefixClosed allowed n) :
+    WholeSuffixRich allowed n := by
+  intro tail
+  have hcell := all_splices n tail
+  have hallowed : allowed (splice n tail) := by
+    apply hclosed _ hcell
+    intro m
+    obtain ⟨f, hf, hmatch⟩ := hfinite tail m
+    exact ⟨f, hf, hmatch⟩
+  exact ⟨hcell, hallowed⟩
+
+private theorem whole_to_finite (allowed : Trace → Prop) (n : Nat)
+    (hwhole : WholeSuffixRich allowed n) : FiniteRich allowed n := by
+  intro tail m
+  exact ⟨splice n tail, hwhole tail, fun _ _ => rfl⟩
+
+private theorem finite_switch_on (n : Nat) :
+    Admitted finiteSwitchClass n on := by
+  refine ⟨on_in_open n, ?_⟩
+  change EventuallyConstant on
+  exact ⟨0, true, fun _ _ => rfl⟩
+
+private theorem finite_switch_step (n : Nat) :
+    OneStepRich finiteSwitchClass n := by
+  intro m f b hnm hf
+  let g : Trace := fun t => if t ≤ m then f t else b
+  have hcell : Cell (openFuture n) on n g := by
+    apply (cell_iff_prefix n g).2
+    intro i hi
+    have him : i ≤ m := by omega
+    simpa [g, him] using (cell_iff_prefix n f).1 hf.1 i hi
+  have hconst : finiteSwitchClass g := by
+    change EventuallyConstant g
+    refine ⟨m+1, b, ?_⟩
+    intro t ht
+    simp [g, show ¬ t ≤ m by omega]
+  refine ⟨g, ⟨hcell, hconst⟩, ?_, ?_⟩
+  · intro t ht
+    simp [g, ht]
+  · simp [g]
+
+/-- An infinite alternating trace is compatible with every finite pattern,
+but is never eventually constant. The index t is chosen after *both* the
+observed window and the rival's purported stabilization cutoff. -/
+private def alternating : Trace := fun t =>
+  if t % 2 = 0 then true else false
+
+private theorem alternating_not_constant (n : Nat) :
+    ¬ EventuallyConstant (splice n alternating) := by
+  rintro ⟨k, b, hconst⟩
+  let t := 2 * (k+n+1)
+  have hn : n+1 ≤ t := by dsimp [t]; omega
+  have hk : k ≤ t := by dsimp [t]; omega
+  have hn1 : n+1 ≤ t+1 := by omega
+  have hk1 : k ≤ t+1 := by omega
+  have heven : alternating t = true := by
+    have he : t % 2 = 0 := by dsimp [t]; omega
+    simp [alternating, he]
+  have hodd : alternating (t+1) = false := by
+    have ho : (t+1) % 2 = 1 := by dsimp [t]; omega
+    simp [alternating, ho]
+  have heven' : splice n alternating t = true :=
+    (splice_after n alternating t hn).trans heven
+  have hodd' : splice n alternating (t+1) = false :=
+    (splice_after n alternating (t+1) hn1).trans hodd
+  have heq : splice n alternating t = splice n alternating (t+1) :=
+    (hconst t hk).trans (hconst (t+1) hk1).symm
+  rw [heven', hodd'] at heq
+  exact Bool.noConfusion heq
+
+private theorem finite_switch_not_whole (n : Nat) :
+    ¬ WholeSuffixRich finiteSwitchClass n := by
+  intro hwhole
+  exact alternating_not_constant n (hwhole alternating).2
+
+private theorem stable_only_on (n : Nat) :
+    Admitted stableOnlyClass n on := by
+  exact ⟨on_in_open n, rfl⟩
+
+private theorem stable_only_closed (n : Nat) :
+    PrefixClosed stableOnlyClass n := by
+  intro f _ hmatches
+  change f = on
+  funext t
+  obtain ⟨g, hg, hpast⟩ := hmatches t
+  calc
+    f t = g t := (hpast t (Nat.le_refl _)).symm
+    _ = on t := congrArg (fun h : Trace => h t) hg.2
+
+private theorem stable_only_not_finite (n : Nat) :
+    ¬ FiniteRich stableOnlyClass n := by
+  intro hfinite
+  obtain ⟨g, hg, hpast⟩ := hfinite (fun _ => false) (n+1)
+  have htrue : g (n+1) = true := by
+    exact congrArg (fun h : Trace => h (n+1)) hg.2
+  have hfalse : splice n (fun _ => false) (n+1) = false :=
+    splice_after n (fun _ => false) (n+1) (Nat.le_refl _)
+  have hcontr := hpast (n+1) (Nat.le_refl _)
+  rw [htrue, hfalse] at hcontr
+  exact Bool.noConfusion hcontr
+
+private theorem all_history_on (n : Nat) :
+    Admitted allHistoryClass n on := ⟨on_in_open n, trivial⟩
+
+private theorem all_history_step (n : Nat) :
+    OneStepRich allHistoryClass n := by
+  intro m f b hnm hf
+  let g : Trace := fun t => if t ≤ m then f t else b
+  have hcell : Cell (openFuture n) on n g := by
+    apply (cell_iff_prefix n g).2
+    intro i hi
+    have him : i ≤ m := by omega
+    simpa [g, him] using (cell_iff_prefix n f).1 hf.1 i hi
+  refine ⟨g, ⟨hcell, trivial⟩, ?_, ?_⟩
+  · intro t ht
+    simp [g, ht]
+  · simp [g]
+
+private theorem all_history_finite (n : Nat) :
+    FiniteRich allHistoryClass n := by
+  intro tail m
+  exact ⟨splice n tail, ⟨all_splices n tail, trivial⟩, fun _ _ => rfl⟩
+
+private theorem all_history_closed (n : Nat) :
+    PrefixClosed allHistoryClass n := by
+  intro f _ _
+  trivial
+
+private theorem all_history_whole (n : Nat) :
+    WholeSuffixRich allHistoryClass n := by
+  intro tail
+  exact ⟨all_splices n tail, trivial⟩
+
+private theorem empty_history_step (n : Nat) :
+    OneStepRich emptyHistoryClass n := by
+  intro m f b hnm hf
+  exact False.elim hf.2
+
+private theorem empty_history_closed (n : Nat) :
+    PrefixClosed emptyHistoryClass n := by
+  intro f _ hmatches
+  obtain ⟨g, hg, _⟩ := hmatches 0
+  exact hg.2
+
+private theorem empty_history_not_whole (n : Nat) :
+    ¬ WholeSuffixRich emptyHistoryClass n := by
+  intro hwhole
+  exact (hwhole (fun _ => true)).2
+
+/-- Populated, finite-pattern rich and prefix-closed complete histories are
+fully suffix-rich; neither nonemptiness nor closure follows from a missing
+ultimate explanation. A single eventually-constant class preserves every
+finite-pattern recombination while rejecting an infinite alternating future.
+The stable and empty controls identify the other omitted hypotheses. -/
+theorem recombinationFork : RecombinationFork := by
+  refine ⟨one_step_to_finite, finite_closed_to_whole, ?_, ?_, ?_, ?_⟩
+  · intro n
+    have hpop : ∃ f, Admitted finiteSwitchClass n f :=
+      ⟨on, finite_switch_on n⟩
+    have hstep := finite_switch_step n
+    have hfinite : FiniteRich finiteSwitchClass n :=
+      one_step_to_finite finiteSwitchClass n hpop hstep
+    have hnotwhole := finite_switch_not_whole n
+    have hnotclosed : ¬ PrefixClosed finiteSwitchClass n := by
+      intro hclosed
+      exact hnotwhole
+        (finite_closed_to_whole finiteSwitchClass n hfinite hclosed)
+    exact ⟨hpop, hstep, hfinite, hnotclosed, hnotwhole⟩
+  · intro n
+    have hnotfinite := stable_only_not_finite n
+    refine ⟨⟨on, stable_only_on n⟩, stable_only_closed n,
+      hnotfinite, ?_⟩
+    intro hwhole
+    exact hnotfinite (whole_to_finite stableOnlyClass n hwhole)
+  · intro n
+    exact ⟨⟨on, all_history_on n⟩, all_history_step n,
+      all_history_finite n, all_history_closed n, all_history_whole n⟩
+  · intro n
+    refine ⟨?_, empty_history_step n, empty_history_closed n,
+      empty_history_not_whole n⟩
+    rintro ⟨f, hf⟩
+    exact hf.2
+
 end TruthCore.Results.Explanation.NoFoundationLawChaos
