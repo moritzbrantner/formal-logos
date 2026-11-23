@@ -446,7 +446,7 @@ and [the comparison with infinite regress](#what-does-possible-absence-have-in-c
 The regress comparison gives a reason to reject a defense in which
 every argument for an omission derives its warrant from another assumed
 omission. Independent evidence of an admissible order incompatible with
-n would answer that objection.
+n would answer that objection. The [argument from contingent dependence](#does-being-contingent-mean-being-contingent-upon-something) explains where a demand for a determining reason can support necessity and where it needs a further premise about dependence.
 
 Analyst assessment of the rigid individual in issue #1887. Let P say that this
 very n is absent at some world accessible from the actual world. Grant the
@@ -1751,24 +1751,98 @@ receptive alternative. Firstness alone does not eliminate both.
 [distinct-cause principle](../../TruthCore/German/Kant/CosmologicalInference.lean)
 and [C2's disjunctive route](#2-checked-results).
 
-Avicenna offers a reason for the connection. In *The Healing* I.6 he
-asks what makes existence obtain for something whose nature considered
-in itself leaves existence open. If its nature suffices, it is necessary
-in itself. If the nature leaves the matter open, he argues that something
-else must determine its existence. A succession of further conditions
-that collectively still leave the matter open would not explain what
-determines the outcome, regardless of its length. This gives an argument
-about the adequacy of a proposed explanation. To infer from it that an
-underived actual being must be necessary, the decisive premise is that
-every such actuality has a determining reason. A primitivist can accept
-the inadequacy of the proposed explanation and maintain that this act
-simply obtains. Avicenna's “possible in itself” concerns what follows from
-a nature considered on its own. Something whose existence is necessitated
-by another could still be possible in itself in that sense. Identifying
-that judgment with absence in an accessible world would need further
-warrant. This passage provides a historical argument and a reason to
-take the determining demand seriously, without settling that demand.
+Avicenna argues for the connection in *The Healing* I.6. Consider a
+thing just in respect of its nature. If that suffices for existence, he
+calls it necessary in itself. If its nature leaves existence open, he
+asks what determines that it exists. Further conditions that collectively
+still leave existence open have yet to supply a determining explanation,
+however many there are. A being necessitated through another can thus
+remain possible in itself for Avicenna. Applying the argument to absence
+in an accessible world requires the following further reasoning.
 [Avicenna, *The Healing*, I.6, Marmura translation, PDF pp. 3–4](https://wmit-pages-prod.s3.amazonaws.com/wp-content/uploads/sites/283/2022/06/12145806/avicenna1.pdf#page=3).
+
+**The argument for this individual.** Call the actual simple being n.
+It neither receives existence in a subject nor has another being giving
+it existence. Suppose for the sake of argument that this very n could
+have been absent altogether.
+
+1. What calls for explanation is now a definite contrast. Why does n
+   actually exist when its complete absence was a genuine alternative?
+   This asks about the actual side of the contrast. The stipulation that
+   nothing grounds the *possibility* of absence leaves this question open.
+   Comparing these histories requires no subject to pass from absence
+   into existence.
+2. Grant that every such contrast in concrete existence has a determining
+   reason. A proposed reason must explain in the right direction and be
+   sufficient for the outcome. The complete reason for n's existence
+   could not obtain unchanged in any admissible history without n. Taken
+   by itself, “if n exists, it is identical with its act of existing”
+   is compatible with omitting the whole act. A stronger theory of essence
+   would have to show why this individual must instantiate that nature.
+3. Grant a second premise about what could do the determining. If the
+   existence of a concrete individual really is optional, every complete
+   basis for its existence, including several facts working jointly,
+   must involve either a receptive principle in the individual or a
+   condition on which it existentially depends in a respect excluded
+   by its being underived. Ordinary cases give the two suggestions some
+   warrant. In a change we can identify the subject that receives a new
+   determination. In production we can identify a giver on whose activity
+   an individual's existence depends. The stipulated profile of n excludes
+   both a recipient of its existence and an external giver. A choice
+   by n to exist would already presuppose a chooser. But the general
+   premise needs more than these examples. An intrinsic, contingent
+   feature that explained n's existence without already presupposing
+   it would defeat this premise if it required neither kind of dependence.
+   The absence of a known example cannot exclude it. A noncausal ground
+   external to n would likewise require attention if underivedness rules
+   out only efficient giving. On the stronger reading that excludes all
+   external existential grounds, that last exclusion follows by hypothesis.
+4. Step 2 now requires a complete determining basis for the supposed
+   contingent actuality of n. Step 3 requires that basis to involve
+   something the stipulated simple, unreceived, underived n lacks.
+   The contradiction follows if both premises apply to n. Since n actually
+   exists, ruling out its possible absence gives necessary existence for
+   n itself. No inference from a necessary office to its actual occupant
+   is needed.
+
+**Why take the premises seriously?** Suppose a workshop claims that its
+records fully explain why a particular bronze casting exists. A design
+and a stocked furnace that were equally available for a cancelled pour
+leave a specific question unanswered. An independently documented pour
+can explain the difference. The finished casting's serial number can
+settle *which* casting was produced, but stamping it presupposed its
+existence. It cannot explain the original production. This gives a reason
+both to demand a distinguishing fact and to check the direction of its
+explanation. We can ask the same question about the foundation. What the
+workshop also gives us, and the foundational case lacks, is independent
+evidence of a production process to which that demand applies. There is
+a positive case for extending the question: if what first called for
+explanation was the fact that one of two genuine alternatives obtained,
+the same fact would be present at n on the supposition of contingency.
+But if what licensed confidence in an answer was the evidence of a pour,
+that confidence does not carry over. This is where a reason to keep
+asking falls short of a guarantee that there is an answer.
+
+The strongest objection accepts both tests of a *proposed* explanation.
+It disputes the move to a guarantee that reality always supplies one.
+On this view n's unreceived act is itself basic, it explains dependent
+beings, and a primitive modal fact permits that entire act to be absent.
+Nothing has to exercise a power in n's absence. The cost is precise:
+why this very act obtains while its absence was open has no determining
+answer. That is a real cost for an account promising such an answer to
+every existential contrast. Conversely, bare necessity excludes the rival
+history without telling us what about n explains that exclusion. The same
+standard applies to an impersonal foundation. I give substantial weight
+to the demand to look for a determining reason and retain moderate
+confidence in suspension about whether this act must have one. A
+defensible account of how n's own nature unconditionally entails the
+existence of this individual, or independent warrant for both steps 2
+and 3 including the exclusion of other ways of determining its existence,
+would move the assessment toward necessity. Independent evidence
+for a genuinely admissible order incompatible with this very n would move
+it toward P. Primitivism by itself permits either modal verdict.
+[Intrinsic existence and explanatory direction](intrinsic-existence-reason-1595.md)
+and [coverage, necessitation and causal giving](psr-strength-755.md).
 
 There is a second question if one starts with *mere possibility of
 existence*. For the actual n, ruling out the conjunction “exists here and
