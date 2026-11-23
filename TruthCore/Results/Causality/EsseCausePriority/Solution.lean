@@ -141,4 +141,195 @@ theorem controls : TruthCore.Causality.EsseCausePriority.Control.Certificate := 
     refine ⟨fun c x hne h => hne (h.1.trans h.2.1.symm), fun h => ?_⟩
     exact h true true true ⟨rfl, rfl, rfl⟩
 
+
+/-! ## C3/¬C3: full priority-bundle interpretation tests (#1616, #1801) -/
+
+namespace InertialNecessaryOrigin
+
+open TruthCore.Causality.EsseCausePriority.InertialNecessaryOrigin
+open TruthCore.Causality.ConcurrentCessation.C3ActualWorld
+open TruthCore.Causality.SustainingCausation
+open TruthCore.Causality.ConcurrentActualization
+open TruthCore.Causality.NecessaryRootFork (ActualConcrete)
+open TruthCore.Causality.CogitoNecessaryConcrete (ActualConcreteGround)
+open TruthCore.Causality.NecessaryConcreteRouteBridge (NecessaryActualRootAt)
+open TruthCore.Causality.BruteFoundationBoundary (EveryContingentGroundedAt)
+open TruthCore.German.Kant.CosmologicalInference (ContingentAt)
+open TruthCore.Modal.TemporalHistory
+
+private theorem noConcurrentGiving :
+    ¬ ConcurrentlyActualized history C3ActualWorld.originGiving
+      ConcurrentActualization.Control.falseReceived := by
+  intro h
+  obtain ⟨g, hg⟩ := h true false 2 () (by rfl) (by simp [history])
+  simp [C3ActualWorld.originGiving] at hg
+
+/-- The nine non-grounding clauses of the ten-source-premise #1614 bundle
+hold for every selected grounding/priority interpretation satisfying the
+explicit two elementary interpretation contracts. No new support option. -/
+private theorem sourcePremisesOfGrounding (m : Profile Bool Bool)
+    (priority : Bool → Bool → Prop)
+    (hg : ActualGroundingIsSimplePriority m true priority)
+    (hOntic : m.ontic = history.ontic)
+    (hConcrete : ∀ x, m.concrete x) :
+    SourcePremises m (frame priority) := by
+  unfold SourcePremises
+  refine ⟨hg, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  · intro c x _
+    rfl
+  · intro x _
+    rw [hOntic]
+    simp [history]
+  · intro x _
+    exact hConcrete x
+  · intro f _
+    exact ⟨true, rfl⟩
+  · intro x r s _ hp
+    exact hp.1
+  · intro x hc
+    have hx : x = false := hc
+    subst x
+    refine ⟨true, by decide, ?_⟩
+    simp [frame, causes, C3ActualWorld.originFrame,
+      C3ActualWorld.frame, SustainingCausation.Control.trueCausesFalse]
+  · intro p x hp
+    exact Or.inr hp.1
+  · intro x r ⟨ha, hp⟩
+    have hTrue : r = true := ha
+    have hFalse : r = false := hp.2
+    cases r <;> simp_all
+  · intro x hp
+    have hx : x = false := hp
+    subst x
+    refine ⟨true, by decide, ?_⟩
+    simp [frame, causes, C3ActualWorld.originFrame,
+      C3ActualWorld.frame, SustainingCausation.Control.trueCausesFalse]
+
+/-- An underived actual necessary origin is compatible with an actually
+contingent received-esse effect that persists without present being-giving.
+The chosen actual-ground edge is read as historical ancestry, not as
+a productive ground. -/
+theorem necessaryOriginWithoutConservation :
+    NecessaryOriginWithoutConservation := by
+  unfold NecessaryOriginWithoutConservation
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, noConcurrentGiving, ?_⟩
+  · intro v x
+    cases v <;> cases x <;> simp [history, C3ActualWorld.history]
+  · intro v x n hp
+    change x = true ∨ (v = true ∧ x = false ∧ 1 ≤ n) at hp
+    change x = true ∨ (v = true ∧ x = false ∧ 1 ≤ n + 1)
+    rcases hp with hSource | ⟨hv, hx, hn⟩
+    · exact Or.inl hSource
+    · exact Or.inr ⟨hv, hx, by omega⟩
+  · refine ⟨true, ⟨⟨by trivial, by simp [ancestral, history]⟩, ?_⟩, ?_⟩
+    · intro y hy
+      simp [ActualConcreteGround, ancestral,
+        C3ActualWorld.withGround] at hy
+    · intro v _
+      simp [ancestral, history]
+  · intro x _ _ hCont
+    cases x with
+    | false =>
+        refine ⟨true, by trivial, by simp [ancestral, history], ?_⟩
+        simp [ancestral, C3ActualWorld.withGround]
+    | true =>
+        rcases hCont with ⟨_, v, _, hAbs⟩
+        simp [ancestral, history] at hAbs
+  · refine ⟨by simp [history], ⟨false, by trivial, by simp [history]⟩⟩
+  · refine ⟨1, ⟨by simp [history], ?_⟩,
+      by simp [C3ActualWorld.originGiving]⟩
+    intro s hs hp
+    simp [history] at hp
+    omega
+  · intro v c x t hg
+    rcases hg with ⟨_, hc, _, _⟩
+    change c = true ∨ (v = true ∧ c = false ∧ 1 ≤ t)
+    exact Or.inl hc
+  · intro hs
+    have hh := hs true true false (by decide)
+      (by simp [ancestralFrame, frame, causes,
+        C3ActualWorld.originFrame, C3ActualWorld.frame,
+        SustainingCausation.Control.trueCausesFalse])
+      ⟨1, by simp [history]⟩
+    have h := hh.2 2 (by simp [history])
+    simp [C3ActualWorld.originGiving] at h
+
+/-- Complete #1614 source-input omission for `cb1cdea9`: all remaining
+ten source premises are jointly true; the intermediate priority and
+downstream first-being/component conclusions genuinely fail. This test does
+not independently establish the truth of those philosophical premises. -/
+theorem fullSourceOmission : FullSourceOmission := by
+  unfold FullSourceOmission
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  · apply sourcePremisesOfGrounding withoutGround Control.noPrior
+    · intro a b _ _ hg
+      exact hg.elim
+    · rfl
+    · intro x
+      trivial
+  · intro hb
+    have h := hb true false (by decide)
+      (by simp [ActualConcrete, withoutGround, ancestral, history])
+      (by simp [strictFrame, frame, causes, C3ActualWorld.originFrame,
+        C3ActualWorld.frame, SustainingCausation.Control.trueCausesFalse])
+    exact h.2.2
+  · intro hp
+    exact hp true false (by decide)
+      (by simp [ActualConcrete, withoutGround, ancestral, history])
+      (by simp [strictFrame, frame, causes, C3ActualWorld.originFrame,
+        C3ActualWorld.frame, SustainingCausation.Control.trueCausesFalse])
+  · intro hp
+    exact hp true false (by decide)
+      (by simp [strictFrame, frame, causes, C3ActualWorld.originFrame,
+        C3ActualWorld.frame, SustainingCausation.Control.trueCausesFalse])
+  · intro hp
+    obtain ⟨y, _, hPrior⟩ :=
+      hp false (by intro y hy; exact hy.elim) false
+        (by simp [potency, ActPriorityAtFirst.Control.stonePotency])
+    exact hPrior.elim
+  · intro hp
+    have hh := hp false (by intro y hy; exact hy.elim) false
+    exact hh (by simp [potency, ActPriorityAtFirst.Control.stonePotency])
+  · intro hp
+    have hh := hp false true
+      (by simp [component, ComponentFirstness.Control.comp])
+    exact hh (by intro y hy; exact hy.elim)
+
+/-- A historical-ancestry reading of the ground/priority relation makes
+the full positive #1614 source bundle and the priority results compatible
+with absent concurrent giving. The explicit interpretation, not the
+unregistered helper, bears the philosophical burden. -/
+theorem ancestorRouteWithoutConservation :
+    AncestorRouteWithoutConservation := by
+  unfold AncestorRouteWithoutConservation
+  have hGround : ActualGroundingIsSimplePriority
+      ancestral true ancestralFrame.PriorSimply := by
+    intro a b _ _ hg
+    simpa [ancestralFrame, frame, Control.prior, ancestral,
+      C3ActualWorld.withGround] using hg
+  have hSources : SourcePremises ancestral ancestralFrame := by
+    exact sourcePremisesOfGrounding ancestral Control.prior
+      hGround rfl (by intro x; trivial)
+  have hBridge : EsseCauseIsActualConcreteGround
+      ancestral true ancestralFrame.CausesIn ancestralFrame.esse := by
+    intro c x _ _ hc
+    rcases hc with ⟨_, hh⟩
+    rcases hh with ⟨rfl, rfl⟩
+    simp [ActualConcreteGround, ancestral, history,
+      C3ActualWorld.withGround]
+  have hActual : ActualEsseCausePriority ancestral true
+      ancestralFrame.CausesIn ancestralFrame.esse
+      ancestralFrame.PriorSimply :=
+    actualEsseCausePriority ancestral true ancestralFrame.CausesIn
+      ancestralFrame.esse ancestralFrame.PriorSimply hBridge hGround
+  have hDistinct : DistinctEsseCausePriority
+      ancestralFrame.CausesIn ancestralFrame.esse
+      ancestralFrame.PriorSimply :=
+    distinctEsseCausePriority ancestral true act ancestralFrame.CausesIn
+      ancestralFrame.esse ancestralFrame.PriorSimply hActual
+      hSources.2.1 hSources.2.2.1 hSources.2.2.2.1
+  exact ⟨hSources, hBridge, hActual, hDistinct, noConcurrentGiving⟩
+
+end InertialNecessaryOrigin
+
 end TruthCore.Results.Causality.EsseCausePriority
