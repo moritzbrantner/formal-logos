@@ -301,8 +301,37 @@ theorem receptionControls : ReceptionControls := by
     obtain ⟨p, hp⟩ := hReceived x hx
     have hPot := hTransfer x p hx hp
     exact hPot.2 (hAct x hx.1)
-  · decide
-  · decide
-  · decide
+  all_goals
+    simp only [ThereIsAFirstUnmovedMover, MoversExistAt, MoversConcrete,
+      FirstUnmovedMoverIsFirstBeing, FirstUnmovedMoverIsPureAct, DistinctEsseCausePriority,
+      FirstUnmovedMoverIsSimpleReading, TruthCore.Latin.Aquinas.InMetaphysicam.PotencyIsOfContradictionReading,
+      TruthCore.Causality.NecessaryBeingInAct.CanFailToBeIsPossiblyNot,
+      TruthCore.Latin.Aquinas.SummaTheologiae.PossibleNotToBe,
+      TruthCore.Causality.NecessaryConcreteRouteBridge.modalPossible,
+      TruthCore.Causality.NecessaryConcreteRouteBridge.modalIsAt,
+      ActualGroundingIsSimplePriority, ActualGroundingIrreflexive, ContingentHasDistinctEsseCause,
+      PossibleNonexistenceIsPotency, ContingentHasPotencyOrEsseCause, ContingentHasDistinctEsse,
+      EveryContingentGroundedAt,
+      FirstMoverNecessaryPureActAt, FirstMoverNecessaryFirstRootAt, NecessaryActualFirstPureActAt,
+      IsFirstUnmovedMover, PureAct, IsFirstBeing, ActualRoot, ActualConcrete,
+      TruthCore.Causality.CogitoNecessaryConcrete.ActualConcreteGround, NecessaryAt, ContingentAt,
+      groundProfile, bruteFirst, conserved, unprioritized, absentMover, necessaryMover, still,
+      witness, selfGround, mk, movedIn, movedPotency, fPotency, canFail, fContingent, allNecessary,
+      ContingentCanFailToBe, CanFailToBeIsPotencyAtEsse, twoRoots, trioMovedIn, trioPotency,
+      trioConcrete, trioNoGround, Trio.forall_iff, Trio.exists_iff,
+      fAbsent,
+      xCausesF, xPriorF, noCause, noPrior, xContingent, fCausesX, fPriorX, allConcrete,
+      noneConcrete, noGround, fGroundsF, xGroundsF, fSelfPrior, fGroundsX, unitOf, esseTrue,
+      essenceFalse, noneHolds,
+      ContingentReceivesEsse, IdentityScopedEsseReception,
+      ContingentReceptionIsSubjectPotency,
+      TruthCore.Causality.EsseReception.EsseReceivedOnlyInOwnEssence,
+      TruthCore.Causality.EsseReception.NothingInReceptivePotencyToItself,
+      TruthCore.Latin.Aquinas.DeEnte.ReceiverInPotencyToReceivedEsseReading,
+      TruthCore.Causality.ExistenceActuality.ExistingInActAt,
+      TruthCore.Latin.Aquinas.SummaTheologiae.AdoptedPotency.InPotency,
+      receivedByMoved, receivedByMover, receivedNone, receptivePotency, essenceByBeing,
+      subjectPotencyAtEsse, actAtEsse, canBeAny, supportsEsseAt] <;>
+    simp [Bool.forall_bool]
 
 end TruthCore.Results.Causality.FirstMoverNecessity

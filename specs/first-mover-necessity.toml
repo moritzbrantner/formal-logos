@@ -219,8 +219,8 @@ conclusion = "96971e31-4782-4478-95b8-b6863a6a9412"
 rule = "A contingent esse=essence recipient would be receptive to its own act, contrary to the principle-potency irreflexivity"
 meaning = "R1 supplies a receiver for a contingent being. On the reductio hypothesis that its esse equals its essence, R3 identifies the receiving principle with that essence, De ente c.3 makes it receptive in potency to its act, and receptive irreflexivity rules out reception of an act into itself. This proves B6 without assuming modal necessity or confusing POTENCY_1 of the bearer with receptive potency of the receiving principle. R3 is weaker than the existing general own-essence rule; its nonidentity cases are unconstrained. The previously verified B6-to-necessity route then applies to the SAME first unmoved mover on the SAME world/frame, and existing q.3 a.4 support can reach B2 without identifying receptive and existential efficient causes. R1, R3 and irreflexivity remain OPEN. The brute unreceived contingent first being contests R1 and is not refuted by this conditional result."
 description = "Distinct conditional support of the existing open B6 using De ente's principle-level recipient/act relation and the weaker identity-scoped law; no external cause or necessity silently assumed, and no premise discharged."
-definitions = ["DEF-ESSE-RECEIVED-IN","DEF-RECEPTIVE-POTENCY","DEF-ESSENCE-THOMISTIC-NATURE","DEF-ESSE","DEF-KANT-MODAL-CONTINGENCY","DEF-KANT-ONTOLOGICAL-MODEL"]
-disambiguations = ["DISAMB-ESSE-RECEPTION","DISAMB-RECEPTIVE-POTENCY","DISAMB-ESSENCE","DISAMB-KANT-CONTINGENCY"]
+definitions = ["DEF-ESSE-RECEIVED-IN","DEF-RECEPTIVE-POTENCY","DEF-ESSENCE-THOMISTIC-NATURE","DEF-ESSE","DEF-KANT-MODAL-CONTINGENCY","DEF-KANT-ONTOLOGICAL-MODEL","0ea9feb8-1f92-5b11-aa74-2f2e567c6106"]
+disambiguations = ["DISAMB-ESSE-RECEPTION","DISAMB-RECEPTIVE-POTENCY","DISAMB-ESSENCE","DISAMB-KANT-CONTINGENCY","13843b8b-4ef3-500e-949d-27e78b9dfaf9"]
 
 [[argument]]
 id = "4e0794fa-8054-4936-8bc4-097f485dfbae"
