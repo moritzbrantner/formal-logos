@@ -110,7 +110,13 @@ CognitivelyTakesUpExemplar obligation above. -/
 namespace ImmanentSelfPresence
 
 /-- OPEN act/object principle: an actual immanent intellectual operation has
-an immediate intelligible form. InAct is ACT of understanding, not merely
+an immediate intelligible form. This strengthens the previously registered
+`Round5Worklist.UnderstandingIsThroughIntelligibleForm`, which takes an
+`Understands` relation and finds *some* intelligible form held by the
+understanding bearer. That result does not select the form *immediately*
+actualizing the very act, nor translate formal `InAct` to `Understands`;
+those interpretations require further bridges rather than a silent reuse.
+InAct is ACT of understanding, not merely
 virtual possession or productive power; identifying those readings is OPEN. -/
 def ImmanentActHasSpecies {B R S : Type}
     (InAct : B → R → Prop) (understanding : R)
