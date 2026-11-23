@@ -143,8 +143,12 @@ def ProfileNineSuffice (σ : Signature) (p : ProfileSlots W σ.Being) (w : W) : 
 
 /-- The sense bridges `ProfileNineSuffice` would need to reach the canonical
 StageTwo instance, at the ACTUAL world w only: each slot implies its typed
-StageTwo sense. The `one` slot is GOD-free; its bridge to `IsTheOneGod σ.IsGod`
-is the only place `σ.IsGod` enters, and only at w. Every conjunct is OPEN. -/
+StageTwo sense. The `one` slot is meant to be GOD-free, so that its bridge to
+`IsTheOneGod σ.IsGod` is the only place `σ.IsGod` enters, and only at w. This
+is an instantiation rule, not something the type enforces: `p` is arbitrary, and
+a slot built from `σ.IsGod` would put GOD_4 into the possibility premise and
+trivialize `ActualDivineNaming`. Any registration must check that no slot
+mentions `σ.IsGod`. Every conjunct is OPEN. -/
 def ProfileToStageTwoSenses (σ : Signature) {Respect : Type}
     (p : ProfileSlots W σ.Being) (w : W)
     (Composite : σ.Being → Prop) (InPotency InAct GoodIn : σ.Being → Respect → Prop)
@@ -242,7 +246,9 @@ theorem profileNineSuffice_of_senseBridges (σ : Signature) {Respect : Type}
 
 /-- Conditional GOD_4 consumer. The naming bridge is applied only after the modal
 return to the actual world; every slot applies to ONE bearer; `σ.IsGod` occurs in
-no possible-world premise. -/
+no possible-world premise of this statement, provided the slots of `p` are
+instantiated without `σ.IsGod` (an instantiation rule the type does not enforce;
+a registration must check it). -/
 theorem actual_named_classical_god (σ : Signature)
     (m : Ontic W σ.Being) (p : ProfileSlots W σ.Being)
     (E : TruthCore.Modal.Frame W) (w : W)

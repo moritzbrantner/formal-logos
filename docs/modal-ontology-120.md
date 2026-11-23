@@ -286,9 +286,12 @@ interpretive premises.
      `bind-check` from matching the canonical statement, whose Lean instance uses
      the typed StageTwo senses. `profileNineSuffice_of_senseBridges` derives it
      from that canonical instance plus `ProfileToStageTwoSenses`, the sense
-     bridges from each slot to its typed sense at `w`. The `one` slot is
-     GOD-free; its bridge to `IsTheOneGod σ.IsGod` is the only place where
-     `σ.IsGod` enters, and only at `w`.
+     bridges from each slot to its typed sense at `w`. The `one` slot is meant
+     to be GOD-free, so that its bridge to `IsTheOneGod σ.IsGod` is the only
+     place where `σ.IsGod` enters, and only at `w`. This is an instantiation
+     rule the type does not enforce: a slot built from `σ.IsGod` would put
+     GOD_4 into the possibility premise and trivialize the naming bridge, so
+     any registration must check that no slot mentions `σ.IsGod`.
   2. `ActualDivineNaming σ m p w`, an existing bearer at `w` with all thirteen
      slots satisfies `σ.IsGod`. It is **not derived** from the other premises:
      `Control.namingOmission` satisfies every other premise of
@@ -355,10 +358,11 @@ a world-varying description to the root's world-invariant God predicate;
 they do **not** show that the thirteen slots, under any chosen senses, are a
 sufficient description of the actual source. A future same-witness bridge must
 import the same source and selected senses and justify its naming implication
-rather than substitute an already asserted GOD_4 witness. This is why the
-actual-root support currently reaches only a **partial** candidate for the
-ontological possibility premise, notwithstanding the stronger structural modal
-helper.
+rather than substitute an already asserted GOD_4 witness. On that route the
+possibility premise is idle (`actual_necessary_bundle_greatness`: an actual
+excellent bearer with necessary excellence already gives the actual profile),
+so the actual-root support bears directly on the actual-bearer input, and only
+partially, since the slot-sufficiency and naming bridges above stay open.
 
 **Other explicit compatibility tests.** Under the existing
 `NamingVeracityBatch1.Power` interpretation, `CanDo` a coherent task and
