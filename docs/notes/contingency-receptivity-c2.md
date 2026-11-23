@@ -1721,6 +1721,87 @@ of why n exists. Apply the same demand to a proposed personal giver and
 to a proposed basic physical whole.
 [Comparison of intrinsic reasons, free exercise and impersonal alternatives](intrinsic-existence-reason-1595.md#same-explanandum-rival-comparison-and-discriminatory-consequences).
 
+#### Does being contingent mean being contingent upon something?
+
+Two readings give different answers. An actual being is *modally contingent*
+if that very being could have failed to exist. To say its existence is
+*contingent upon* a giver is to say it depends for existence on that giver.
+Removing every eligible giver rules out dependence of that kind. One
+sufficient bridge is the claim that every actual concrete being which
+could have been absent has an actual concrete ground in the relevant
+relation. A reason establishing that connection for n specifically would
+also suffice. The repository already proves the inference for the same unique
+actual root. A root in this proof has no concrete predecessor in the
+selected relation. If “nothing else” rules out only other beings, one
+also needs to exclude self-grounding in that relation. A being acting to
+produce its own existence would presuppose precisely the existence the
+act was supposed to supply. In that setting with excluded middle, the general
+grounding premise is equivalent to there being no contingent root. One
+can defend the premise independently. Citing that equivalence as evidence
+for the premise would give the exclusion back in different words.
+The repository also states the explicitly causal version: every existing
+contingent individual has a distinct existing cause. That principle can
+hold throughout an endless causal series. For the present argument the
+actual underived individual is already given. Metaphysical priority here
+need not involve an earlier instant. Under the C2 disjunction, firstness rules out a prior giver. The stipulated absence of both
+received esse and matter–form composition rules out the internal
+receptive alternative. Firstness alone does not eliminate both.
+[Same-root necessity](../../corpus/results/ACTUAL-ROOT-NECESSITY-UPGRADE.json),
+[the equivalence](../../TruthCore/Causality/NecessaryRootFork.lean),
+[distinct-cause principle](../../TruthCore/German/Kant/CosmologicalInference.lean)
+and [C2's disjunctive route](#2-checked-results).
+
+Avicenna offers a reason for the connection. In *The Healing* I.6 he
+asks what makes existence obtain for something whose nature considered
+in itself leaves existence open. If its nature suffices, it is necessary
+in itself. If the nature leaves the matter open, he argues that something
+else must determine its existence. A succession of further conditions
+that collectively still leave the matter open would not explain what
+determines the outcome, regardless of its length. This gives an argument
+about the adequacy of a proposed explanation. To infer from it that an
+underived actual being must be necessary, the decisive premise is that
+every such actuality has a determining reason. A primitivist can accept
+the inadequacy of the proposed explanation and maintain that this act
+simply obtains. Avicenna's “possible in itself” concerns what follows from
+a nature considered on its own. Something whose existence is necessitated
+by another could still be possible in itself in that sense. Identifying
+that judgment with absence in an accessible world would need further
+warrant. This passage provides a historical argument and a reason to
+take the determining demand seriously, without settling that demand.
+[Avicenna, *The Healing*, I.6, Marmura translation, PDF pp. 3–4](https://wmit-pages-prod.s3.amazonaws.com/wp-content/uploads/sites/283/2022/06/12145806/avicenna1.pdf#page=3).
+
+There is a second question if one starts with *mere possibility of
+existence*. For the actual n, ruling out the conjunction “exists here and
+could be absent” excludes possible absence, because its first conjunct
+is given. Classically this already gives necessary existence. On the usual
+reflexive reading, its actuality also witnesses its possibility. Even for
+a merely possible
+candidate, there is a direct argument if we have independently excluded,
+*from our standpoint*, the combination of possible existence and possible
+absence of that very individual. Given possible existence, possible
+absence is then excluded. Classically this yields necessary existence
+without any principle transporting necessity between worlds. Take care
+with the repository's actualist predicate. A never-built bridge can
+vacuously fail to be an *actual contingent being* simply because it does
+not exist here. That observation and its possible construction would give
+no reason for its necessity.
+
+If instead we establish necessity *inside a witness world*, let G mean
+that **this same individual** exists. Once G is necessary at that world,
+transport only requires that it can access every alternative under
+consideration here. The repository gives a sufficient way to secure
+this argument starting from possible G. It assumes that throughout the
+alternatives G entails necessary G, and that any two alternatives from
+our starting point are accessible one from the other (as in S5). The
+witness world then both requires G and sees every alternative in question. Bare possible existence, or merely knowing that n would be
+the sole inhabitant of one world, supplies neither the required
+necessity-if-existent claim nor its metaphysical warrant. The same modal
+principle takes possible absence seriously: under its assumptions a
+warranted absence would instead imply impossibility. Neither choice of
+possibility is licensed by the rule alone.
+[Possibility-to-necessity proof and reverse direction](../../TruthCore/Results/Modal/NecessaryIfExistent/Solution.lean)
+and [scope controls](../../corpus/results/NECESSARY-IF-EXISTENT-CONTROLS.json).
+
 **Assessment.** The regress comparison strengthens the objection to two
 specific defenses of P: passing existential receipt on without addressing
 its collective availability, and passing permission on without ever
