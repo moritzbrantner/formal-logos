@@ -1,0 +1,19 @@
+{
+  "id": "b36104ba-4f53-409e-86d5-8d55492010b4",
+  "label": "Some being contingent at w has no distinct CAUSE_2 of its esse and no reason for its existence",
+  "paraphrase": "The brute-contingency rival to B2, at B2's scope, analyst formulation, attribution deferred: on the same causality frame and at the same world w, some being exists at w, is absent at some accessible world, has no other being causing its esse (CAUSE_2) and has no #312 reason token for its existence at w. Its positive replacement account is a contingent foundation (an initial state or foundational being) whose existence is a brute fact. It entails the denial of B2, of the local existence PSR for contingents, and of each recorded support bundle for B2 (controls); the brute first-mover model witnesses it with the First Way's own mover.",
+  "lean_declaration": "TruthCore.Explanation.BruteContingencyParity.BruteContingentBeingAt",
+  "definition_ids": [
+    "b0a3ca7f-2970-531c-9201-962393ef3a8f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "d513fb8a-64ee-5d49-ae56-4d695f93ca71",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "e63036c5-d9c0-55d3-9704-e23efcbed127"
+  ]
+}

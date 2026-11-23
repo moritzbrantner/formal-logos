@@ -1,0 +1,29 @@
+{
+  "id": "845fd3ea-321a-4ac6-9253-77af2ce4aa8c",
+  "label": "Brute-existence parity map checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "13c05b6d-e2ea-4f1c-91b0-1a498199e1c5",
+  "inference_ids": [
+    "ecf0bb8d-470a-4026-bfaa-e6141f63199b"
+  ],
+  "meaning": "Premise-free laws: the #756 fork for the ontic demand, the failure of necessitating demands for contingent facts with only necessary reasons, and the reused #746 core that well-founded factive reasons always leave a truth unexplained, which binds both sides. Then a scene of seven pictures (many brute contingents, one brute initial state, an unreasoned and a self-explained necessary physical base, an unreasoned and a self-explained God, a contingent self-explained God), an observation inquiry and eight stances: scene-relative tallies of the unexplained existents of each picture under bare and necessitating reasons (which rank nothing without an open comparative principle); that evidence for an existent is no reason why it exists; the symmetric parity conclusion instantiated on both sides; which stances the parity argument binds (on either side, a stance whose ground of rejection is the reason status) and which it does not (evidential, symmetric, idleness); a deletion witness for each member of the parity bundle; the theist under the same tests; and the same-witness rival in the brute first-mover frame. No stance is attributed to anyone, and no picture is claimed metaphysically possible.",
+  "definition_ids": [
+    "18c03398-75c1-5903-90a9-ba0d901b64ab",
+    "80a258e8-3837-5a70-b63e-15f1920ed02b",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "3055e6f1-5de7-5c32-9b6f-d023d0c82025",
+    "fad6a806-713b-5318-8309-488af704d614",
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "179d4557-bda1-59c4-938a-b91e9974a27f",
+    "6c7d2b21-8446-5e8c-bb10-ef1a58a8d735",
+    "a17def9d-5354-4510-8a2e-34436ff486d4",
+    "d0f8d6b9-8086-4bf7-95e1-46bb74d76398"
+  ],
+  "disambiguation_ids": [
+    "7aba7955-aa37-5b08-a170-8420d6142d78",
+    "13843b8b-4ef3-500e-949d-27e78b9dfaf9",
+    "a61d3807-50e9-595e-9011-9123fd606a4b",
+    "f9e260b1-c206-5d41-a054-fac13cf68e67"
+  ],
+  "sense_mixing_control": true
+}

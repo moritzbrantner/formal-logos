@@ -1,0 +1,15 @@
+{
+  "id": "9df516be-9941-44fa-963c-1d56463d60a5",
+  "label": "The stance cannot meet its demand for reasons why and accept the fact with no reason",
+  "paraphrase": "Stronger conclusion of the parity argument: in any picture and at any world, the stance does not at once meet its demand for reasons why, accept the fact o, and have o without a reason there, whether o is contingent or necessary. It binds both sides: a naturalist who requires a reason why God exists cannot accept an unreasoned contingent foundation, and a theist who requires a reason why contingent existents obtain cannot accept an unreasoned God, each under its own P1-P3 (parity map). A necessary fact with no reason is unreasoned, not brute (DISAMB-BRUTE-TERMINAL-UNREASONED). It is a consistency verdict on the stance; it does not say o has a reason, and it does not establish B2.",
+  "lean_declaration": "TruthCore.Explanation.BruteContingencyParity.ExcludesUnreasonedAcceptance",
+  "definition_ids": [
+    "d0f8d6b9-8086-4bf7-95e1-46bb74d76398",
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "179d4557-bda1-59c4-938a-b91e9974a27f"
+  ],
+  "disambiguation_ids": [
+    "a61d3807-50e9-595e-9011-9123fd606a4b",
+    "7aba7955-aa37-5b08-a170-8420d6142d78"
+  ]
+}

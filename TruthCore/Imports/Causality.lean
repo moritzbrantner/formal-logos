@@ -133,6 +133,7 @@ public import TruthCore.Causality.IndexedSignalProvenance
 public import TruthCore.Causality.IndexedSignalReaper
 public import TruthCore.Causality.InertEmptiness
 public import TruthCore.Causality.IntellectualInclination
+public import TruthCore.Causality.IntentionalExemplarExtension
 public import TruthCore.Causality.InterventionTransitivity
 public import TruthCore.Causality.JointGroups
 public import TruthCore.Causality.LifeBoundaryPotency
@@ -171,6 +172,7 @@ public import TruthCore.Causality.NecessarySupportCoverage
 public import TruthCore.Causality.NecessarySupportPathConnection
 public import TruthCore.Causality.NonlimitingConcreteExistence
 public import TruthCore.Causality.OccurrenceUnderivedEssence
+public import TruthCore.Causality.OperationLocalFiniteness
 public import TruthCore.Causality.OriginDeletion
 public import TruthCore.Causality.OriginExerciseBridge
 public import TruthCore.Causality.OriginToleranceIdentity

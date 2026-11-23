@@ -1603,3 +1603,36 @@ revision conditions are in attempts
 [`4da08bd8`](../corpus/attempts/4da08bd8-8375-40b7-b635-83012168ed6f.json).
 Open: siblings for the remaining root-only AGWF consumers, a cross-world
 closed-collection condition for J2, and asymmetry for the direct routes.
+
+
+## Compact-time local finiteness does not settle an infinite per se regress (#1859)
+
+The mathematical certificate in
+[`OperationLocalFiniteness`](../TruthCore/Causality/OperationLocalFiniteness.lean)
+shows that a locally finite **indexed** family of distinct operation times
+contains only finitely many indices in each compact real interval. This
+offers a possible restriction on assembling infinitely many *performed*
+Reaper stations with deadlines accumulating at a finite endpoint: such a
+schedule would violate indexed local finiteness at the endpoint.
+
+There is a same-relation omission model, not merely an analogy: the existing
+`FiniteBranching.successorPredecessor` relation is a non-well-founded
+causal predecessor chain, and the map `n ↦ -(n : ℝ)` places every upstream
+node earlier while the indexed event times remain locally finite on
+the full real line. Thus a locally finite clock population can possess
+infinite temporal causal ancestry **outside a compact time interval**.
+Local finiteness alone does not prove
+`STMT-NO-INFINITE-PER-SE-EFFICIENT-CAUSE-SERIES`, whose relation is
+the selected essentially dependent `CausesAsCaused` rather than an
+unexamined time-indexed successor relation.
+
+The proposed philosophical link is **OPEN**: one must justify both the
+identity of actual distinct constitutive causal acts and their indexed
+local-finiteness in a physically meaningful clock, and establish that the
+Reaper/operation relation is the very causal/explanatory relation used by
+the intended root premise. An indefinite continuum of mathematical
+crossings need not consist of separately performed physical acts; nor
+does a locally finite past entail a well-founded simultaneous
+grounding relation. The strongest rival permits source-free global causal
+structures or chronologically unbounded ancestry without a first event,
+and survives this compact-time theorem.

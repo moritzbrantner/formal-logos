@@ -1,0 +1,13 @@
+{
+  "id": "3ab9d002-8d4f-441d-9292-e777170f242f",
+  "label": "The stance's demand for reasons why is uniform in the feature",
+  "paraphrase": "P3 of the parity argument, the consistency norm, analyst formulation, attribution deferred: any two facts agreeing on the feature k are alike required, or alike not required, to have a reason why they obtain. Relative to k: the same stance can be uniform in one feature and not in another, and nothing here says which feature is the right ground of a demand.",
+  "lean_declaration": "TruthCore.Explanation.BruteContingencyParity.FeatureUniform",
+  "definition_ids": [
+    "a17def9d-5354-4510-8a2e-34436ff486d4",
+    "d0f8d6b9-8086-4bf7-95e1-46bb74d76398"
+  ],
+  "disambiguation_ids": [
+    "a61d3807-50e9-595e-9011-9123fd606a4b"
+  ]
+}

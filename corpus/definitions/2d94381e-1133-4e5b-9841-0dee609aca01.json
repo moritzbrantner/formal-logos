@@ -1,0 +1,9 @@
+{
+  "id": "2d94381e-1133-4e5b-9841-0dee609aca01",
+  "label": "Locally finite indexed operation times",
+  "term": "local finiteness of operation occurrences",
+  "definition": "For a type of operation occurrences and a real-valued timestamp for each occurrence, the family of singleton timestamp sets is locally finite in Mathlib's topology: every real instant has some neighborhood intersecting only finitely many occurrence indices, counting simultaneous occurrences separately. This is a structural condition on a chosen event population, not an assertion that physical events satisfy it.",
+  "basis": "stipulative",
+  "note": "Applies the existing Mathlib.Topology.LocallyFinite predicate to indexed singleton time sets; it does not define a new topology, a universal physical event theory, or a claim of empirical bounded rate. Explicit event identity prevents replacing occurrence count by timestamp-range cardinality. The Zeno sequence violates the condition at its limit endpoint even though it satisfies it before that endpoint.",
+  "lean_declaration": "TruthCore.Causality.OperationLocalFiniteness.LocallyFiniteOperationTimes"
+}
