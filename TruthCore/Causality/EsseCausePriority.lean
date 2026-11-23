@@ -316,6 +316,8 @@ def AncestorRouteWithoutConservation : Prop :=
     ancestralFrame.esse ancestralFrame.PriorSimply ∧
   DistinctEsseCausePriority ancestralFrame.CausesIn
     ancestralFrame.esse ancestralFrame.PriorSimply ∧
+  FirstBeingIsInNoWayInPotencyReading potency ancestralFrame.PriorSimply ∧
+  NoComponentIsFirstBeingReading component ancestralFrame.PriorSimply ∧
   ¬ ConcurrentlyActualized history C3ActualWorld.originGiving
     ConcurrentActualization.Control.falseReceived
 
