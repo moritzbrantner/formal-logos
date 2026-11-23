@@ -573,3 +573,155 @@ power need not distribute; a necessary holder still needs identification
 with n). Draft #1901 at `7623b6d3` distinguishes reality-constrained
 modality, positive makers, and power exhaustiveness. The present tests add
 no theorem, framework, attribution or premise discharge.
+
+### Testing occupation and replacement
+
+Continuation of [the joint-omission assessment](#can-the-whole-unreceived-act-be-absent),
+on the same accessible worlds and rigid individual. The two research questions
+are whether every admissible order has an internally unreceived act of being
+and what could show that the bearers in different orders are one individual.
+
+**An order empty of concreta.** The weak Lowe result `7c5984f9` excludes this
+case given a necessary non-concretum and concrete accompaniment of abstracta
+throughout the accessible worlds. Its accompanying pair example lets the
+concrete witnesses alternate. Lowe gives a substantive reason for
+accompaniment. On his immanent account each positive finite cardinal needs an
+instance. He takes its instances to be sets, rejects pure sets and argues
+against a reciprocal dependence between sets and universals. One concrete seed
+suffices to generate instances of arbitrarily large finite cardinality by
+taking singletons repeatedly and collecting finitely many of the resulting
+objects. His concrete particulars here are spatiotemporal. Transferring the
+conclusion to a particular timeless foundation requires further argument.
+[Lowe, “Why Is There Anything at All?”, §III, pp. 116–118](https://pdf.stafforini.com/lowe-1996-why-there-anything.pdf)
+
+Hold the demand for instances and the set construction fixed. Start instead
+with the empty set. The empty set, its singleton, and the pair comprising
+them have sizes zero, one, and two. Iteration supplies an instance of every
+finite cardinal without a concrete member anywhere in its membership ancestry.
+There is a reason to take the seed seriously: if set difference always has a
+set as its value, every difference of a set with itself picks out the same
+memberless set by extensionality. Extensionality alone secures uniqueness
+within the sort of sets. Existence requires the operation or another premise.
+Lowe can retain the calculations by paraphrasing an empty difference as a
+claim about the absence of any surviving member. The substantive burden then
+concerns which mathematical constructions carry ontological commitment.
+Memberlessness leaves dependence on a mind or another nonmember open.
+Consequently the test weakens the inference from instantiation to concrete
+accompaniment. It supplies no accessible world in which concreteness is absent.
+
+**Can an abstract witness pick out n?** Compare a necessary cardinal with
+the singleton of n. The cardinal has an independent claim to necessity, but
+different instances can supply its cardinality. Given fixed membership for that singleton and Lowe's separate premise that
+a set exists only where its members do, wherever that very singleton exists,
+n must exist. Its formation from
+n, however, warrants its existence conditional on n. Assigning the singleton
+necessity merely to guarantee n would put the disputed claim into the
+premise. This direct route by a single abstract witness therefore needs the *same* abstractum
+both independently necessary and rigidly dependent on n. Observing those
+features separately in different examples does not license their conjunction.
+A contingent bearer cannot supply its presence in a world where it is absent.
+A uniform explanatory rule with varying bearers is a further rival to a
+uniform bearer; a rule whose whole content is universal occupancy would add
+no explanation. The existing `a35b5d79` controls distinguish local grounds,
+one reason throughout, and a reason consisting in a fixed individual's
+existence. [Disjunction grounding](disjunction-ground-485.md)
+
+**A populated order of recipients.** Specifying the sense of receipt changes
+what this argument delivers. A root of the actual esse-cause relation is
+externally underived in that relation. In `uncausedComposite`, an externally
+uncaused individual receives its act in its own essence. Thus external
+underivedness by itself cannot deliver the internally unreceived act sought
+here. Conversely the isolated identity root beside a rootless regress
+(`b49b53e7`) shows that there can be a root somewhere even though many
+beings have no root among their ancestors. Occupation requires less than a
+common explanation of everything. These are structural tests of the stated
+inferences. [C2 control](../../TruthCore/Causality/ContingencyGrounding.lean)
+and [closed-source controls](de-ente-esse-source-1628.md#exact-controls-and-rejected-shortcuts)
+
+A positive argument survives both tests. Grant an actual bearer and root
+access for it. Grant that a bearer whose essence differs from its esse has
+another actual cause of its esse. With excluded middle the selected uncaused
+root has its essence identical with its esse. If its only possible internal
+receiver would be its own essence (R3), receipt entails receptive potency,
+and nothing is in receptive potency to itself, the root's act is internally
+unreceived. This combines the *pointwise reasoning* in the source-of-access
+and first-mover proofs using the same interpretation of bearer, act and
+cause. The application to arbitrary accessible orders remains an analyst
+argument. Its local strength is that it uses neither uniqueness nor a ban
+on every infinite chain. The rationale for root access is strongest for a
+complete order of presently operative givers, each of whose power to give
+is itself entirely derivative. The member-by-member rival grants actual
+givers throughout and takes their local explanations to suffice. Merely
+pointing to nonempty supply, or to an infinite chain, decides neither the
+scope of the supply relation nor this dispute over sufficiency.
+[Source of access](../../TruthCore/Results/Aquinas/DeEnte/ClosedEsseSource/Solution.lean)
+and [reception at identity](../../TruthCore/Results/Causality/ContingencyGrounding/Solution.lean)
+
+**Replacement by a different unreceived being.** A possible way to exploit
+uniqueness within each accessible world would be to show that any two
+concrete putative occupants, each admissible separately, could occupy the
+role together as those very individuals in some world accessible from the
+same starting point. Uniqueness throughout that scope would then exclude a
+second candidate even across worlds. The subtraction rule of #1887 licenses one
+individual's presence with another's *absence*. It supplies no such positive
+coexistence premise. And origin independence gives a poor reason for it at
+this specific role. Grant, for the sake of testing the inference, that each
+candidate, wherever it occupies the role, supplies the esse of every other
+concrete being there and itself has no supplier. Co-occupation would then
+make each both supplied and unsupplied. This explains why the *role* excludes
+a second simultaneous occupant while leaving untouched the hypothesis of
+different occupants in disjoint orders. Universal supply is an additional
+hypothesis here. This argument establishes no possible replacement. A proof
+from a genuinely common individual essence could bypass coexistence, but
+it must cover bearers in different orders and justify their numerical identity.
+[Existing nature-uniqueness comparison](necessary-simple-plurality.md)
+
+**Assessment and limits.** The positive case for an unreceived act has a conditional route
+within populated orders of wholly derivative productive supply. The arithmetic
+case for extending it to *every* order loses force once abstract instances
+receive the same treatment as concrete ones. Neither change gives comparative
+warrant for P or its negation at this individual. I retain moderate confidence
+in suspension. The sharper revision conditions are a justified dependence on
+concreta that survives the abstract-seed test, local root access and internal
+nonreception warranted at the required worlds, and individuation covering
+mutually exclusive occupants. Rigid dependence of an independently necessary
+abstractum on this very n would be a separate sufficient route. A contingent
+foundation remains entitled to the joint-omission defense but needs positive
+warrant for that particular admissibility. The simple mathematical construction
+tests an explanation; it supplies no modal evidence directly for P. Attempt
+`91e562cc` records these tests. No formal premise changes.
+
+**Can a separability argument independently warrant P?** Apply Van Cleve's
+ordered-pair test in both directions. Let c be a companion disjoint from n.
+The ability of n to exist without c is compatible with n's necessity. The
+ability of c to exist without n would settle P immediately, without an empty
+world. This is exactly where the warrant of the unrestricted rule matters.
+Exempting necessary targets leaves open whether n qualifies for exemption.
+The stronger rule would let c exist with only its own parts. Applying it to
+c with n outside its parts in that alternative would remove n. Applying it
+to n would leave n present. Separating c from each outsider in turn does not
+give the joint isolation of c. Van Cleve offers isolation as a stronger axiom.
+In its all-category reading, which permits isolating the universal itself,
+it also bears against the immanent-universal rationale for population:
+the dependence of a universal on *some* disjoint instance can survive the loss of
+any particular instance. A concrete-only rule cannot isolate an abstract
+universal. To challenge such dependence by invoking universal
+isolation uses the controversial extension, not new evidence for it.
+[Van Cleve, longer text, §§2, 4, pp. 22–25 in §4](https://dornsife.usc.edu/james-van-cleve/wp-content/uploads/sites/272/2025/09/No-Necessary-Connections-Btw-Distinct-Existences-for-website-7.17.25.pdf#page=22)
+
+There is another distinction at the contingency-of-origin argument.
+A restriction against a particular oak having a *different* origin can
+leave open an originless history without establishing that history as
+possible. Even evidence that c could lack a giver of its esse would remove
+the giver from the explanatory role; n could still exist there without
+giving c its esse. To infer P from that evidence one needs an independent
+licence to omit n, or a warranted necessity that n supply c whenever they
+coexist. The co-occupation test above assumed universal supply only to
+test its consequences. It supplies no such warrant by itself. These results
+close the specific source-reading question left open in §9, item 6, of the
+[foundational-absence assessment](foundational-absence-warrant.md). A positive
+test for P by this companion route would have to warrant the *same companion's* presence without n,
+including the conditions on its parts and the scope of the separability rule.
+The case for primitive existential modality survives without such a test, but
+its verdict on this individual remains open.
+[Van Cleve, §9, pp. 62–65](https://dornsife.usc.edu/james-van-cleve/wp-content/uploads/sites/272/2025/09/No-Necessary-Connections-Btw-Distinct-Existences-for-website-7.17.25.pdf#page=62)

@@ -747,8 +747,7 @@ accommodate) would move the verdict at `n` with it.
    mistake. This belongs to test 5.
 5. Secondary conceivability of `n`'s absence, and the calibration premise
    against modal rationalism.
-6. HD's strengthened form (Van Cleve §4, unread) against B2 and the route's
-   dependence premises; necessity of origin (§9, unread).
+6. HD's strengthened form and necessity of origin. The later [C2 occupation and replacement test](contingency-receptivity-c2.md#testing-occupation-and-replacement) examines Van Cleve §§4 and 9 against the same-individual inference.
 7. The formal requests F1–F5.
 
 ## 10. Literature
