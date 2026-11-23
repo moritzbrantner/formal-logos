@@ -85,7 +85,7 @@ theorem c3ActualWorldControls : C3ActualWorld.Certificate := by
   refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
   -- One history and the same substantial bearer at each temporal/world index.
   · intro v x
-    cases v <;> cases x <;> decide
+    cases v <;> cases x <;> simp [C3ActualWorld.history]
   -- A positive persistence rule, conditional on earlier actuality.
   · intro v x n hp
     change v = true ∧ (x = true ∨ (x = false ∧ 1 ≤ n)) at hp
@@ -94,19 +94,24 @@ theorem c3ActualWorldControls : C3ActualWorld.Certificate := by
     · exact ⟨hv, Or.inl hx⟩
     · exact ⟨hv, Or.inr ⟨hx, by omega⟩⟩
   -- Both cause and effect are actual concrete at the selected world.
-  · decide
-  · decide
+  · simp [TruthCore.Causality.NecessaryRootFork.ActualConcrete,
+      C3ActualWorld.withGround, C3ActualWorld.history]
+  · simp [TruthCore.Causality.NecessaryRootFork.ActualConcrete,
+      C3ActualWorld.withGround, C3ActualWorld.history]
   -- The effect is contingent; here every actual bearer is contingent.
-  · refine ⟨by decide, ⟨false, by trivial, by decide⟩⟩
+  · refine ⟨by simp [C3ActualWorld.history],
+      ⟨false, by trivial, by simp [C3ActualWorld.history]⟩⟩
   · intro x _
-    exact ⟨by decide, ⟨false, by trivial, by decide⟩⟩
+    exact ⟨by simp [C3ActualWorld.history],
+      ⟨false, by trivial, by simp [C3ActualWorld.history]⟩⟩
   -- Hence no necessary concrete being is smuggled into the rival.
   · rintro ⟨x, _, _, hn⟩
     have h := hn false (by trivial)
     simpa [C3ActualWorld.withGround, C3ActualWorld.history] using h
   -- The same originating esse cause is real at the selected world.
-  · decide
-  · refine ⟨1, ⟨by decide, ?_⟩, by decide⟩
+  · simp [C3ActualWorld.originFrame, C3ActualWorld.frame, trueCausesFalse]
+  · refine ⟨1, ⟨by simp [C3ActualWorld.history], ?_⟩,
+      by simp [C3ActualWorld.originGiving]⟩
     intro s hs hp
     simp [C3ActualWorld.history] at hp
     omega
@@ -119,19 +124,25 @@ theorem c3ActualWorldControls : C3ActualWorld.Certificate := by
   -- The formal cause→actual-ground bridge can hold with no present giving.
   · intro c x _ _ hc
     rcases hc with ⟨rfl, rfl⟩
-    decide
+    simp [TruthCore.Causality.CogitoNecessaryConcrete.ActualConcreteGround,
+      C3ActualWorld.withGround, C3ActualWorld.history]
   -- But weak concurrent actualization and originating→sustaining both fail.
   · intro hC
-    obtain ⟨g, hg⟩ := hC true false 2 () (by decide) (by decide)
+    obtain ⟨g, hg⟩ := hC true false 2 () (by rfl) (by simp [C3ActualWorld.history])
     simp [C3ActualWorld.originGiving] at hg
   · intro hS
-    have hs := hS true true false (by decide) (by decide) ⟨1, by decide⟩
-    have hg := hs.2 2 (by decide)
+    have hs := hS true true false (by decide)
+      (by simp [C3ActualWorld.originFrame, C3ActualWorld.frame, trueCausesFalse])
+      ⟨1, by simp [C3ActualWorld.history]⟩
+    have hg := hs.2 2 (by simp [C3ActualWorld.history])
     simp [C3ActualWorld.originGiving] at hg
   -- An otherwise identical actual ontology without the grounding edge
   -- defeats the cause→ground bridge despite an actual originating cause.
   · intro hb
-    have hbad := hb true false (by decide) (by decide) (by decide)
+    have hbad := hb true false (by decide)
+      (by simp [TruthCore.Causality.NecessaryRootFork.ActualConcrete,
+        C3ActualWorld.withoutGround, C3ActualWorld.withGround, C3ActualWorld.history])
+      (by simp [C3ActualWorld.originFrame, C3ActualWorld.frame, trueCausesFalse])
     exact hbad.2.2
   -- A conserving source on that same history satisfies C3.
   · intro v x t z hr hp
