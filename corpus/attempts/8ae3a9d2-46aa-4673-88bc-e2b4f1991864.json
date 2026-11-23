@@ -1,0 +1,32 @@
+{
+  "id": "8ae3a9d2-46aa-4673-88bc-e2b4f1991864",
+  "label": "Thirteen-slot profile schema: targeted admissibility and same-bearer GOD_4 naming (#1864)",
+  "date": "2026-11-23",
+  "statement_ids": [
+    "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+    "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+  ],
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Follow-on to merged #1865, in the Lean module TruthCore/Modal/DivineProfile.lean (moved out of ActualistDomains in repair pass 1). ProfileSlots is a 13-slot world-indexed predicate schema with NO sense fixed: every theorem quantifies over an arbitrary schema and holds with every slot True (Control.noSenseFixed); the slots are not StageTwo's typed senses nor NamingVeracityBatch1.Power, because those are world-invariant and IsTheOneGod/GodIsOmnipotent use sigma.IsGod, which must stay out of possible-world premises. ExcellenceAt asks all thirteen slots of one bearer at one world; GreatnessAt reuses #1865's MaximalProfile over M = m.frame. Proved (zero axioms): described_greatness_transfer, a near-transcription (one application of the profile-specific AdmitGreatnessWorlds; singleton case of #438 TransferLaws); greatness_at_origin from EuclideanAt and ActualReflexive at w only (same algorithm as ActualEuclidean.necessaryAtOrigin; new content is the excellence conjunct), factored through the witness-relative condition M(v,w) and M(w,u) -> M(v,u), which needs no reflexivity; describedInnerE_to_outerE with the extra InnerSuccessorsCovered bridge, since DescribedPossibleGreatness is outer-E/inner-M and therefore not purely descriptive; profileNineSuffice_of_senseBridges, deriving the distinct analyst bridge ProfileNineSuffice (not STMT-CLASSICAL-ATTRIBUTES-SUFFICE) from the canonical typed StageTwo instance plus explicit actual-world sense bridges ProfileToStageTwoSenses, with a one slot meant to be GOD-free (an instantiation rule the type does not enforce; a registration must check that no slot mentions IsGod) bridged to IsTheOneGod only at w; actual_named_classical_god/actual_god_exists from these plus the OPEN ActualDivineNaming; actual_necessary_bundle_greatness, showing that an actual excellent bearer plus NecessaryExcellenceAt (necessary existence and excellence, not essentiality) already gives the actual maximal profile with no frame condition, so the possibility detour adds no independent support. Finite controls: E-witness without M-witness; targeted admissibility without global inclusion; separately instantiated power/knowledge without joint bearer; K5 Euclidean without actual existence (Euclidean alone insufficient); Euclidean-at-w without reflexivity still returning the profile (reflexivity not necessary); inner-E without outer-E; slot separations (good without morallyPerfect, intellect without omniscient, will without free); naming omission (every other premise of actual_god_exists true, IsGod empty, GodExists false). Positive warrant: the actual same-root/esse/perfection/intellect-will corpus bears on the actual-bearer input once slots receive fixed senses; it does not yet give power, full knowledge, moral perfection or freedom in any fixed sense. Best supported incompatibility pressure remains #555's necessary strict-efficacy same-act with a contingent effect, applicable only under a definite simplicity/freedom reading. No canonical argument/result registered; no root premise change.",
+  "blocker": "OPEN: (1) fix senses for the slots by typed actual-world bridges (the nine ProfileToStageTwoSenses conjuncts, a Power-based omnipotence bridge, and senses for omniscience, moral perfection and freedom); (2) choose between outer-E and inner-E described possibility and justify profile-world M-admissibility, with M read as metaphysical accessibility; (3) supply the actual-world GOD_4 naming bridge; (4) support NecessaryExcellenceAt slot by slot, especially freedom as a capacity; (5) the carrier reading of sigma.Being as possibilist roster and w as actuality. Preconditions for any STMT-GOD-EXISTS binding: DEF records for omnipotent, omniscient, morally perfect, free, maximal greatness and M-admissible, and a disambiguation of the E-readings.",
+  "evidence": [
+    "PR-1876"
+  ],
+  "current_assessment": {
+    "date": "2026-11-23",
+    "statement_ids": [
+      "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+      "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+    ],
+    "scope": "#1864 thirteen-slot profile schema: modal possibility and same-bearer GOD_4 projection (not the whole God-existence case)",
+    "assessment": "Provisional: a conditional modal connection from one M-admissible complete greatness profile to the same actual bearer is verified over an unfixed slot schema; no slot sense is fixed, so nothing about the divine attributes in any particular sense is shown. Actual-root, perfection and intellect/will research provides positive partial-profile warrant, but not full-profile metaphysical possibility. Joint compatibility, M-as-metaphysical and the naming bridge remain open; #555 exposes conditional simplicity/freedom pressure. No bound corpus support route or root premise discharge is claimed.",
+    "next_test": "Instantiate ProfileToStageTwoSenses and a Power-based omnipotence bridge for the same actual root; test #555's necessary-act/strict-efficacy/contingent-effect core under a definite free-capacity reading; then decide the E-reading and justify profile-world M-admissibility and the GOD_4 mapping before any canonical registration.",
+    "note": "docs/modal-ontology-120.md#1864-thirteen-slot-profile-schema-and-targeted-modal-admissibility-2026-11-23",
+    "reviewed_revision": "c2009e303aee579c55470d1754a01ff97419cd35",
+    "review": "changes_requested",
+    "publication": "unpublished",
+    "evidence": "PR-1876 draft: independent semantic challenge of c2009e30 requested changes (P1-1 to P1-4, P2-1 to P2-7); repair pass 1 on the PR head addresses them and awaits re-challenge",
+    "supersedes": "none; this scope extends #1865's generic helpers without superseding its current assessment"
+  }
+}

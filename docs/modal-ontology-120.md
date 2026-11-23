@@ -193,3 +193,210 @@ truth statuses are unchanged.
 | EPI | #248, #342, #437–#438, #414 | #467, #471 |
 
 Per entry, first search `corpus/statements/` and Lean for the **same meaning**. Link an existing statement where applicable, otherwise formulate a new canonical statement only after its semantics are fixed; then prove, exhibit a countermodel, or document a clearly open metaphysical premise. Source-derived claims require pinned and materialized witnesses. This preserves all 120 proposals while avoiding 120 potentially duplicate or unjustifiably 'proved' propositions.
+
+## #1864: thirteen-slot profile schema and targeted modal admissibility (2026-11-23)
+
+Follow-on to #1865 (merged), whose generic `MaximalProfile` it reuses; not a
+reinterpretation of the original IMP/MOD/ONT intake labels. The formal
+implementation is the Lean module
+[DivineProfile](../TruthCore/Modal/DivineProfile.lean) (definitions, conditional
+theorems and finite controls). No corpus argument or result is registered, and
+no source is attributed: everything below is an **analyst reconstruction**.
+
+Status (repair pass 1 after the independent semantic challenge of `c2009e30`):
+the vocabulary moved out of `ActualistDomains` into its own module; the slots
+are described as an unfixed schema; the nine-slot bridge is a distinct analyst
+premise; the outer-E/inner-M reading is explicit; the necessity premise is
+renamed; the frame condition is weakened to Euclidean and reflexive *at w*; and
+omission and separation controls were added. Final-head CI is the verification
+of record.
+
+### What is encoded, and what is not
+
+`ProfileSlots` is a **13-slot predicate schema; no sense is fixed**. Its
+world-indexed slots carry the labels simple, perfect, good, one, infinite,
+immutable, eternal, intellect, will, omnipotent, omniscient, morallyPerfect and
+free, but the labels are mnemonic only. Every theorem quantifies over an
+arbitrary schema, and all of them hold with every slot `True`
+(`Control.noSenseFixed`). The claimed non-inferences between slots are checked
+only as schema separations (`Control.separations`): good without morallyPerfect,
+intellect without omniscient, will without free, and the nine StageTwo-order
+slots without the full thirteen-slot excellence.
+
+The slots are **not** StageTwo's typed senses (`IsSimple Composite`,
+`IsPerfect InAct`, `IsSupremelyGood InAct GoodIn CausesIn esse`,
+`IsTheOneGod σ.IsGod`, `IsImmutable InPotency`, …) and the omnipotence slot is
+not `NamingVeracityBatch1.Power`'s `CanDo`. That typed vocabulary is not reused
+directly for two reasons. It is world-invariant over `σ.Being`, while the modal
+profile needs world-indexed slots. And `IsTheOneGod` and `GodIsOmnipotent` are
+defined through `σ.IsGod`, which must stay out of every possible-world premise.
+`NineAt` reuses only StageTwo's connective `NineClassicalAttributes` (the order
+of the nine conjuncts), not its senses.
+
+`ExcellenceAt p w x` asks all thirteen slots of the same `x` at the same `w`.
+`GreatnessAt m p x v` adds existence of that `x` at `v` and existence plus full
+excellence at every **M**-successor of `v` (M = `m.frame`).
+`PossibleGreatness m p w` is M-possibility of such a bearer. Reading M as
+metaphysical accessibility is OPEN.
+
+**Two readings of described possibility.** `DescribedPossibleGreatness E m p w`
+is **outer-E / inner-M**: some E-successor `v` of `w` at which `x` exists, is
+excellent, and remains so at every *M*-successor of `v`. The E-premise is
+therefore not purely descriptive: it already asserts M-necessity at an E-world,
+and `greatness_at_origin` relies on that inner M. The purely descriptive sibling
+`DescribedPossibleGreatnessInnerE` uses E inside as well. Passing from inner-E
+to outer-E needs the extra bridge `InnerSuccessorsCovered` (every M-successor of
+each E-successor of `w` is an E-successor of it; `describedInnerE_to_outerE`).
+`Control.innerNotOuter` shows that inner-E can hold while outer-E and the bridge
+both fail.
+
+**Carrier interpretation (OPEN).** Where the case signature `σ` appears,
+`σ.Being` is identified with the constant (possibilist) roster of an `Ontic`
+model with world-relative existence, and the selected world `w` is read as
+actuality. Both identifications go beyond the σ-sense disambiguation
+`fe91cc1f` (intended interpretation of the case vocabulary) and are open
+interpretive premises.
+
+### Conditional theorems and their exact OPEN inputs
+
+- `described_greatness_transfer` is a **near-transcription**: one application
+  of `AdmitGreatnessWorlds` (E-successors of `w` that carry the complete
+  greatness profile are M-successors of `w`) to the given witness. It is the
+  singleton-predicate case of #438's `TransferLaws`, restricted to this profile.
+  `Control.targetedNotGlobal` checks that the targeted condition can hold, with
+  an M-witness, while universal `IncludedAt E M w` fails. `Control.eNotM` checks
+  that an E-witness without the condition need not give an M-witness.
+- `greatness_at_origin` uses `EuclideanAt m.frame w` and `ActualReflexive m w`,
+  both only at `w`, not global S5. It uses the same algorithm as
+  `ActualEuclidean.necessaryAtOrigin` (prior art); the new content is that the
+  excellence conjunct travels with the same bearer. It factors through
+  `greatness_at_origin_of_witness`: the witness-relative condition
+  `M(v,w) ∧ ∀u, M(w,u) → M(v,u)` suffices without reflexivity at `w`.
+  `Control.k5NoActual` shows that Euclideanness alone is insufficient (a
+  globally Euclidean frame, not reflexive at `false`, with M-possible greatness
+  and no bearer at `false`). It does **not** show that reflexivity is necessary:
+  `Control.nonreflexiveReturn` is Euclidean at `false`, not reflexive there, and
+  still returns the maximal profile.
+- `actual_named_classical_god` and `actual_god_exists` consume the returned
+  actual bearer through two separate OPEN bridges, both at the actual world
+  only:
+  1. `ProfileNineSuffice σ p w`, the nine opaque slots at `w` suffice for the
+     primitive field `σ.HasClassicalAttributes`. This is a **distinct analyst
+     bridge, not STMT-CLASSICAL-ATTRIBUTES-SUFFICE**: its own head constant keeps
+     `bind-check` from matching the canonical statement, whose Lean instance uses
+     the typed StageTwo senses. `profileNineSuffice_of_senseBridges` derives it
+     from that canonical instance plus `ProfileToStageTwoSenses`, the sense
+     bridges from each slot to its typed sense at `w`. The `one` slot is meant
+     to be GOD-free, so that its bridge to `IsTheOneGod σ.IsGod` is the only
+     place where `σ.IsGod` enters, and only at `w`. This is an instantiation
+     rule the type does not enforce: a slot built from `σ.IsGod` would put
+     GOD_4 into the possibility premise and trivialize the naming bridge, so
+     any registration must check that no slot mentions `σ.IsGod`.
+  2. `ActualDivineNaming σ m p w`, an existing bearer at `w` with all thirteen
+     slots satisfies `σ.IsGod`. It is **not derived** from the other premises:
+     `Control.namingOmission` satisfies every other premise of
+     `actual_god_exists` in a signature with empty `IsGod`, where `GodExists`
+     fails.
+
+  The complete input bundle is: outer-E possibility, profile-relative
+  M-admissibility, Euclidean and reflexive access at `w`, actual naming, and the
+  nine-slot bridge. No member is established by this conjunction.
+- `actual_necessary_bundle_greatness` shows that an actual excellent bearer plus
+  `NecessaryExcellenceAt` (necessary existence and necessary excellence over
+  M-successors of `w`; this is **not** essentiality) already yields the
+  **actual** maximal profile with no frame condition at all.
+  `actual_necessary_bundle_possible` adds the trivial step to M-possibility
+  under reflexivity at `w`. The possibility detour therefore adds no independent
+  support once these two premises are granted, and the possibility obtained is
+  only M-possibility.
+- `Control.noJointBearer`: omnipotence and omniscience slots each have a bearer
+  but no bearer has both, so separate instantiation does not give a joint
+  bearer.
+
+### Philosophical assessment and live discriminators
+
+**Positive warrant, provisional.** The existing actual-root/received-esse,
+perfection-preexistence, nonlimiting-root and same-root-intellect/will research
+gives cumulative grounds to investigate **one actual underived bearer** with
+simplicity and at least intellectual capacity. Such grounds would bear on the
+inputs of `actual_necessary_bundle_greatness` (an actual excellent bearer) once
+the slots are given fixed senses; they do not yet supply power, full knowledge,
+moral perfection or freedom in any fixed sense, nor the necessity premise. The
+existing defeasible recombination policy in
+[Kant's cosmological-inference study](kant-cosmological-inference.md)
+supports testing jointly compatible qualities when no grounded exclusion has
+been found, but non-discovery alone is not semantic consistency, and semantic
+consistency is not metaphysical possibility. Present verdict: **conditional
+modal connection over an unfixed schema verified; no slot sense fixed; full
+metaphysical possibility not established; positive partial-profile warrant worth
+further testing**.
+
+**Best presently evidenced incompatibility pressure.** The
+[simplicity/contingent-creation investigation](notes/simplicity-collapse-555.md)
+has a verified inconsistent core if **the same** act is necessary, is strictly
+sufficient for an effect, and that effect is contingent. The serious
+application question is whether the alleged divine simplicity makes a
+particular *freely selected act* essential and necessarily efficacious. If
+divine freedom involves contingent effects, simply setting both
+`p.simple w x` and `p.free w x` to true does not answer that question.
+The original controls distinguish identity of bearer from identity/necessity
+of the act, and necessity of the act from strict sufficiency. Rejecting
+strict sufficiency or locating free variation in an extrinsic effect avoids the
+stated inconsistent core, but incurs the specific explanatory or interpretation
+obligation already discussed there. No full-profile contradiction follows
+until the corresponding cross-vocabulary assumptions are supported.
+
+**Exact cross-family consumers and obstacles.** The existing
+[RootIntellectWill](../TruthCore/Causality/RootIntellectWill.lean)
+conclusion preserves one actual necessary source with represented
+essence/esse identity, simplicity, intellect and will. Its own documented
+conclusion does **not** include omniscience, moral impeccability or free
+selection, and it does not identify that bearer as `σ.IsGod`. The
+[GodNamingSenses](../TruthCore/Causality/GodNamingSenses.lean)
+`NoOtherPossibleGod` and `GodhoodEssentialToGod` conditionally connect
+a world-varying description to the root's world-invariant God predicate;
+they do **not** show that the thirteen slots, under any chosen senses, are a
+sufficient description of the actual source. A future same-witness bridge must
+import the same source and selected senses and justify its naming implication
+rather than substitute an already asserted GOD_4 witness. On that route the
+possibility premise is idle (`actual_necessary_bundle_greatness`: an actual
+excellent bearer with necessary excellence already gives the actual profile),
+so the actual-root support bears directly on the actual-bearer input, and only
+partially, since the slot-sufficiency and naming bridges above stay open.
+
+**Other explicit compatibility tests.** Under the existing
+`NamingVeracityBatch1.Power` interpretation, `CanDo` a coherent task and
+actually **doing** it are different relations. Impeccability construed as
+never *choosing* evil need not contradict capacity to refrain or to choose;
+impeccability construed as **incapacity** for every independently coherent evil
+task can clash with an unrestricted `CanDo` reading. Either inference needs
+a typed evil-task domain, a fixed sense of `Consistent`, and the precise
+impeccability condition. This is a real conditional test, not a demonstrated
+incompatibility of omnipotence and perfect goodness. Likewise, apparent
+omniscience/future-freedom conflicts depend on which truth objects, temporal
+facts, counterfactuals and freedom senses are jointly claimed; no
+unconstrained universal knowledge predicate settles them.
+
+**Symmetry.** On the same fixed proposition and frame the #437 K5 theorem
+gives conditional consequences from `◇G` and `◇¬G`. The evidence
+obligations are not discharged by a change of label: a reverse possibility
+claim needs an M-accessible **same-profile** alternative or a supported
+exclusion of that profile. An actual, justified incompatibility among
+essential properties would support impossibility; an objection merely noting
+that metaphysical accessibility is not yet proved does not provide a
+counter-witness. A finite E/M filter only establishes non-entailment of
+unrestricted transfer; it is not evidence that the divine profile is excluded
+in reality.
+
+**Next discriminating test.** Fix senses for the slots by typed actual-world
+bridges from the same-root perfection/intellect/will source (preserving
+power-as-capacity versus exercise and the same rigid bearer), starting with the
+nine `ProfileToStageTwoSenses` conjuncts and a `Power`-based omnipotence bridge.
+Then revisit the simplicity/contingent-creative-choice core under that profile,
+and test `NecessaryExcellenceAt` slot by slot (particularly freedom and
+omniscience). Preconditions for any registration against `STMT-GOD-EXISTS`:
+DEF records for the new load-bearing terms (omnipotent, omniscient, morally
+perfect, free, maximal greatness, M-admissible) with sense tags; a decision
+between the outer-E and inner-E readings recorded as a disambiguation; a
+warranted naming bridge and admissible-world reading; and binding the nine-slot
+input to the canonical statement only through the explicit sense bridges above.
