@@ -1,0 +1,11 @@
+{
+  "id": "1e6174ab-0b92-4930-9096-fb560089e6e1",
+  "label": "Foundational beings are necessary at w, from power grounding",
+  "argument_id": "30691e4c-ff76-43c0-999c-01c76bb23be8",
+  "challenge_module": "TruthCore.Results.Modal.ModalGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalGrounding.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalGrounding.pgpFoundationalNecessary",
+  "comparator_config": "results/1e6174ab-0b92-4930-9096-fb560089e6e1/comparator.json",
+  "status": "solution-present",
+  "description": "PGP's verdict 'necessary' on the foundational case, stated directly rather than through C2 and the First Way. Not a transcription: no premise mentions necessity or the foundational profile. Establishes no premise. With the existence premise it reaches STMT-NECESSARY-CONCRETE-AT; the rival denies PGP at exactly this case (controls, bruteFoundational, primitivistSilence, hybridFirstWay)."
+}

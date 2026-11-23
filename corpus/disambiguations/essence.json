@@ -7,9 +7,10 @@
     "30ebc834-1c04-5b83-98c5-523c1dfdf436",
     "2e31f6cf-433e-5e11-bb65-233499985668",
     "183b48d2-1753-583d-aef9-4199cff86231",
-    "85a4aa8b-11cc-5aeb-b5a6-3f163178002d"
+    "85a4aa8b-11cc-5aeb-b5a6-3f163178002d",
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db"
   ],
-  "resolution": "Scott's variant and Gödel's 1970 variant define 'essence' differently, and their statements and results keep the two apart. Scott's ess (DEF-ESSENCE-SCOTT) requires the bearer to have the essence, and its inclusion quantifies over all individuals; Gödel's 1970 Ess. (DEF-ESSENCE-GOEDEL-1970) drops that conjunct and quantifies over existing individuals. They are separate Lean declarations, `TruthCore.Isabelle.AFP.GoedelGod.Essence` and `TruthCore.Isabelle.AFP.NotesOnGoedel.GoedelVariantHOML1.Essence`, and no statement treats one as the other. The difference is what the paired results SCOTT-EMPTY-PROPERTY-NOT-ESSENCE and GOEDEL-1970-EMPTY-PROPERTY-IS-ESSENCE show, and it is what makes the 1970 axioms inconsistent (GOEDEL-1970-INCONSISTENT) while Scott's are satisfiable. Neither is the Thomist essence. Thomistic essence as nature/quiddity in the attribute readings is distinct from either modal essence definition; the claim of identity with esse is separate from this term’s definition. `FilteredEssence` (DEF-FILTERED-ESSENCE) is a stipulated experiment that filters comparison properties in Scott's structure; it neither changes the original Scott definition nor supplies an historical or metaphysical theory of essence.",
+  "resolution": "Scott's variant and Gödel's 1970 variant define 'essence' differently, and their statements and results keep the two apart. Scott's ess (DEF-ESSENCE-SCOTT) requires the bearer to have the essence, and its inclusion quantifies over all individuals; Gödel's 1970 Ess. (DEF-ESSENCE-GOEDEL-1970) drops that conjunct and quantifies over existing individuals. They are separate Lean declarations, `TruthCore.Isabelle.AFP.GoedelGod.Essence` and `TruthCore.Isabelle.AFP.NotesOnGoedel.GoedelVariantHOML1.Essence`, and no statement treats one as the other. The difference is what the paired results SCOTT-EMPTY-PROPERTY-NOT-ESSENCE and GOEDEL-1970-EMPTY-PROPERTY-IS-ESSENCE show, and it is what makes the 1970 axioms inconsistent (GOEDEL-1970-INCONSISTENT) while Scott's are satisfiable. Neither is the Thomist essence. Thomistic essence as nature/quiddity in the attribute readings is distinct from either modal essence definition; the claim of identity with esse is separate from this term’s definition. `FilteredEssence` (DEF-FILTERED-ESSENCE) is a stipulated experiment that filters comparison properties in Scott's structure; it neither changes the original Scott definition nor supplies an historical or metaphysical theory of essence. ESSENCE_5 (`TruthCore.Modal.ModalGrounding.EssentialTruth`, #1887) is the Finean essential-truth relation: it lies in the nature of x that a world-proposition holds. It is distinct from the q.3 a.4 represented essence (ESSENCE_3): the only passage between them is the explicit OPEN premise that whatever has its represented esse equal to its essence has its own existence in its nature, listed as a sense bridge where an argument uses both.",
   "term_label": "ESSENCE",
   "senses": [
     {
@@ -35,6 +36,30 @@
       "label": "ESSENCE_4",
       "definition_id": "85a4aa8b-11cc-5aeb-b5a6-3f163178002d",
       "lean_declaration": "TruthCore.Isabelle.AFP.GoedelGod.FilteredEssence"
+    },
+    {
+      "id": "148e37bc-4dfd-423e-a871-14722929d708",
+      "label": "ESSENCE_5",
+      "definition_id": "7cf63236-9c12-41bc-bf20-6fbce7a121db",
+      "lean_declaration": "TruthCore.Modal.ModalGrounding.EssentialTruth",
+      "lean_parameters": [
+        {
+          "declaration": "TruthCore.Modal.ModalGrounding.EssenceGroundsNecessity",
+          "parameter": "Essential"
+        },
+        {
+          "declaration": "TruthCore.Modal.ModalGrounding.EsseEssenceIsEssentialExistence",
+          "parameter": "Essential"
+        },
+        {
+          "declaration": "TruthCore.Modal.ModalGrounding.ExistenceConditionalEssences",
+          "parameter": "Essential"
+        },
+        {
+          "declaration": "TruthCore.Modal.ModalGrounding.EssentialExclusionAccount",
+          "parameter": "Essential"
+        }
+      ]
     }
   ]
 }

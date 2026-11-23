@@ -1,0 +1,20 @@
+{
+  "id": "666f06a4-bf39-40dd-97cf-613796e7b042",
+  "label": "Every being foundational at w exists at every world accessible from w",
+  "paraphrase": "Verdict 'necessary' at the foundational case, analyst formulation: every being that is foundational at w (exists at w; represented esse equal to represented essence; not composed of matter and form; esse received in no principle; first in SIMPLY_PRIOR_1; no CAUSE_2 of its esse; incorruptible simply, that is, no in-subject potency to non-being; under no being's POWER_OVER_ESSE_1) exists at every world accessible from w (NECESSARY_2 de re, relative to the frame's accessibility). A universal conditional: it does not assert that any being is foundational.",
+  "lean_declaration": "TruthCore.Modal.ModalGrounding.FoundationalBeingsNecessaryAt",
+  "definition_ids": [
+    "7fcf846e-d0ef-400e-89c0-7c82b94edde7",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76"
+  ]
+}

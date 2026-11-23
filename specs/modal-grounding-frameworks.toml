@@ -1,0 +1,207 @@
+# #1887 tests 4 and 5: accounts of de re possibility of absence at the
+# foundational case (a being actual at w, simple, unreceived, first, uncaused,
+# incorruptible simply, under no power over its esse), stated on the shared
+# CausalityFrame, and an analyst reconstruction of Pruss's Aristotelian-modality
+# argument for a necessary concrete power-holder. PGP and B6 each give the
+# "necessary" verdict; unconditional essentialism supports B6; existence-
+# conditional essentialism gives "possibly absent"; combinatorial modality
+# (existing recombination results) gives "possibly absent"; primitivism fixes
+# neither (controls). Analyst formulations, attribution deferred; navigation only:
+# Vetter 2015; Pruss 2011 and "The Actual and the Possible"; Armstrong 1989;
+# Fine 1994; Lowe 2008; ST I q.45 a.2 ad 2.
+
+[batch]
+vocab = "TruthCore.Modal.ModalGrounding"
+results = "TruthCore.Results.Modal.ModalGrounding"
+
+[[statement]]
+id = "Every being foundational at w exists at every world accessible from w"
+lean = "FoundationalBeingsNecessaryAt"
+paraphrase = "Verdict 'necessary' at the foundational case, analyst formulation: every being that is foundational at w (exists at w; represented esse equal to represented essence; not composed of matter and form; esse received in no principle; first in SIMPLY_PRIOR_1; no CAUSE_2 of its esse; incorruptible simply, that is, no in-subject potency to non-being; under no being's POWER_OVER_ESSE_1) exists at every world accessible from w (NECESSARY_2 de re, relative to the frame's accessibility). A universal conditional: it does not assert that any being is foundational."
+definitions = ["7fcf846e-d0ef-400e-89c0-7c82b94edde7", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-ESSE", "DEF-ESSE-RECEIVED-IN", "DEF-SIMPLE-PRIORITY", "DEF-CAUSE-OF-PERFECTION"]
+disambiguations = ["DISAMB-ESSE-RECEPTION", "DISAMB-CAUSE", "DISAMB-PRIORITY-SIMPLE-OR-IN-TIME"]
+
+[[statement]]
+id = "Every being foundational at w is CONTINGENCY_1 at w"
+lean = "FoundationalBeingsContingentAt"
+paraphrase = "Verdict 'possibly absent' at the foundational case, analyst formulation: every being foundational at w (as in the necessity verdict's profile) exists at w and is absent at some world accessible from w (MODAL_CONTINGENCY_1). With some foundational being it contradicts the necessity verdict."
+definitions = ["7fcf846e-d0ef-400e-89c0-7c82b94edde7", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-ESSE", "DEF-ESSE-RECEIVED-IN", "DEF-SIMPLE-PRIORITY", "DEF-CAUSE-OF-PERFECTION"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-ESSE-RECEPTION", "DISAMB-CAUSE", "DISAMB-PRIORITY-SIMPLE-OR-IN-TIME"]
+
+[[statement]]
+id = "Some concrete being is foundational at w"
+lean = "SomeConcreteFoundationalAt"
+paraphrase = "OPEN, analyst formulation: some concrete candidate is foundational at w: it exists at w, its represented esse equals its represented essence, it has no matter and form, its esse is received in no principle, it is first in SIMPLY_PRIOR_1, nothing is a CAUSE_2 of its esse, it is incorruptible simply and no being has POWER_OVER_ESSE_1 over it. Non-modal: it says nothing about the being at other worlds. Admissible on both classical theism and the brute-first rival (controls: theist; bruteFoundational, a contingent such being); the models show admissibility only; a pure Humean who rejects simplicity or act need not accept it."
+definitions = ["7fcf846e-d0ef-400e-89c0-7c82b94edde7", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-ESSE", "DEF-ESSE-RECEIVED-IN", "DEF-SIMPLE-PRIORITY", "DEF-CAUSE-OF-PERFECTION"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-ESSE-RECEPTION", "DISAMB-CAUSE", "DISAMB-PRIORITY-SIMPLE-OR-IN-TIME"]
+
+[[statement]]
+id = "Whatever lies in a being's nature holds at every world accessible from w"
+lean = "EssenceGroundsNecessity"
+paraphrase = "OPEN (essence grounds necessity), analyst formulation: for every being x and world-proposition phi, if it lies in the nature of x that phi (the primitive Essential relation, Fine's box-sub-x), then phi holds at every world accessible from w. Accepted by existence-conditional and unconditional essentialists alike; the converse (necessity gives essence) is not asserted."
+definitions = ["7cf63236-9c12-41bc-bf20-6fbce7a121db", "DEF-KANT-ONTOLOGICAL-MODEL"]
+
+[[statement]]
+id = "Whatever has represented esse equal to its essence has its own existence in its nature"
+lean = "EsseEssenceIsEssentialExistence"
+paraphrase = "OPEN (unconditional essentialism's reading of esse = essence), analyst formulation: for every being x whose represented esse equals its represented essence (the q.3 a.4 essenceOf/esseOf maps), it lies in the nature of x (Essential) that x exists, unconditionally: the proposition true exactly at the points where x exists. The bridge from the essence-esse identity to an essential truth; existence-conditional essentialism rejects it for any such being whose absence is representable (controls, law 3)."
+definitions = ["7cf63236-9c12-41bc-bf20-6fbce7a121db", "DEF-ESSE", "183b48d2-1753-583d-aef9-4199cff86231", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-ESSENCE"]
+
+[[statement]]
+id = "Every essential truth about a being holds at every point where it is absent"
+lean = "ExistenceConditionalEssences"
+paraphrase = "OPEN (existence-conditional essentialism, Fine/Lowe reading; analyst formulation): for every being x and world-proposition phi, if it lies in the nature of x that phi, then phi holds at every point of the frame's world type at which x does not exist: x's essential truths have the form 'if x exists, ...'."
+definitions = ["7cf63236-9c12-41bc-bf20-6fbce7a121db", "54bdb2f0-aa66-489f-ae06-174dd668d424", "DEF-KANT-ONTOLOGICAL-MODEL"]
+
+[[statement]]
+id = "A being at w whose existence no essential truth entails is absent at some accessible world"
+lean = "EssentialExclusionAccount"
+paraphrase = "OPEN (essentialist account of possibility of absence, the non-power ground of de re possibility, ACT-06; analyst formulation): every being x existing at w such that no essential truth of any being entails x's existence (holds only at points where x exists) is absent at some world accessible from w. Possibility of absence is the absence of an essential exclusion."
+definitions = ["7cf63236-9c12-41bc-bf20-6fbce7a121db", "54bdb2f0-aa66-489f-ae06-174dd668d424", "DEF-KANT-ONTOLOGICAL-MODEL"]
+
+[[statement]]
+id = "No other being's essential truth entails the existence of a being foundational at w"
+lean = "FoundationalExistenceUnrequiredByOthers"
+paraphrase = "OPEN, analyst formulation: for every being f foundational at w and every other being y, no essential truth of y entails f's existence. The essentialist counterpart of firstness: SIMPLY_PRIOR_1 firstness alone says nothing about essences, so this is a separate premise."
+definitions = ["7fcf846e-d0ef-400e-89c0-7c82b94edde7", "7cf63236-9c12-41bc-bf20-6fbce7a121db", "54bdb2f0-aa66-489f-ae06-174dd668d424", "DEF-ESSE", "DEF-ESSE-RECEIVED-IN", "DEF-SIMPLE-PRIORITY", "DEF-CAUSE-OF-PERFECTION"]
+disambiguations = ["DISAMB-ESSE-RECEPTION", "DISAMB-CAUSE", "DISAMB-PRIORITY-SIMPLE-OR-IN-TIME"]
+
+[[statement]]
+id = "Some point of the world type lacks each being foundational at w"
+lean = "FoundationalAbsenceRepresentable"
+paraphrase = "OPEN, analyst formulation: for every being foundational at w some point of the frame's world type (accessible or not) lacks it: its absence is representable in the logical space. Says nothing about accessibility, so it does not by itself make the being contingent."
+definitions = ["7fcf846e-d0ef-400e-89c0-7c82b94edde7", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-ESSE", "DEF-ESSE-RECEIVED-IN", "DEF-SIMPLE-PRIORITY", "DEF-CAUSE-OF-PERFECTION"]
+disambiguations = ["DISAMB-ESSE-RECEPTION", "DISAMB-CAUSE", "DISAMB-PRIORITY-SIMPLE-OR-IN-TIME"]
+
+[[statement]]
+id = "94393b5b-8950-4a52-aef1-50cd09232e64"
+label = "If the absence of every contingent concretum is possible but not actual, a being has a power for it"
+lean = "GlobalAbsenceGrounded"
+paraphrase = "OPEN (P1, Aristotelian grounding of the global possibility; analyst variant, attribution deferred): if some world accessible from w has no contingent concrete being and w itself has one, then some being existing at w has, at w, a power whose exercise would initiate a causal chain issuing in there being no contingent concrete being (PowerFor). An instance of Aristotelian modality (a non-actual possibility is grounded in an actual being's power) for one global proposition only; it is not PGP and does not mention any individual's absence. Pruss's own argument grounds the weaker possibility that every actual contingent is absent (specs/modal-grounding-actual-absence.toml)."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "6ecf24d5-5001-4571-937c-2632ac8c2c66", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "A power for there being no contingent concretum issues in a world where its holder exists"
+lean = "GlobalAbsenceInitiatorPresent"
+paraphrase = "OPEN (P2, initiator presence; analyst reconstruction): whatever has at w a power for there being no contingent concrete being can exercise it so that, at some world accessible from w, there is no contingent concrete being and the holder exists there. With the frame's tenseless world-relative existence, the initiator of a chain exists in the world of that chain. Close to the premise of Pruss's sketch that x cannot start any chain of causes that can lead to actuality's not including x (navigation only, not attributed), with two differences: his principle is universal over chains while this is existential and builds in that the power's outcome is an accessible world; and his direction is mirrored (his holder is in the non-actual world, with a power for the actual world's being actual, and he uses S5 for that world to reach the actual one). Under a tensed reading (absence at the end of a history) a self-annihilating holder falsifies it (controls, Pruss omission 2)."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "6ecf24d5-5001-4571-937c-2632ac8c2c66", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Whatever has at w a power for there being no contingent concretum is concrete"
+lean = "GlobalAbsencePowerHoldersConcrete"
+paraphrase = "OPEN (P3; analyst reconstruction): every holder at w of a power for there being no contingent concrete being is concrete (in the selected world-independent concreteness predicate). Powers belong to concrete beings."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "6ecf24d5-5001-4571-937c-2632ac8c2c66", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "0dc833c1-3b2f-4769-a09e-531f0da12455"
+label = "Possibly no concrete being is CONTINGENCY_1 (global variant, stronger than Pruss's premise)"
+lean = "PossiblyNoContingentConcrete"
+paraphrase = "OPEN (P4, the global possibility premise; a stronger analyst variant that Pruss declines, attribution deferred): some world v accessible from w has no concrete being that is contingent at v (exists at v and is absent at a world accessible from v). With tenseless world-relative existence: possibly no contingent concretum ever exists. Pruss (navigation only) calls this possibility controversial and uses instead the possibility that the actual contingents are absent, others perhaps in their stead (statement in specs/modal-grounding-actual-absence.toml); with Euclidean access this premise implies his, not conversely. The subtraction conclusion (possibly no concrete being) implies it (controls, law 8); the theist accepts it (theist model); a Lowe-style view on which some contingent being necessarily exists, if that being is concrete, denies it. It does not follow from the contingency of each actual concretum (actual-absence controls, Van Cleve model)."
+definitions = ["6ecf24d5-5001-4571-937c-2632ac8c2c66", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Some concrete being is CONTINGENCY_1 at w"
+lean = "SomeContingentConcreteAt"
+paraphrase = "OPEN (P5; analyst reconstruction): some concrete candidate exists at w and is absent at some world accessible from w (MODAL_CONTINGENCY_1). Accepted by the theist and by the rivals considered here."
+definitions = ["1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Some necessary concrete being at w has a power for there being no contingent concretum"
+lean = "NecessaryConcreteGlobalAbsencePowerAt"
+paraphrase = "Conclusion of the Pruss reconstruction: some concrete candidate exists at w, exists at every world accessible from w (NECESSARY_2 de re) and has at w a power for there being no contingent concrete being. It asserts no uniqueness, simplicity, firstness, intellect or God, and nothing about the power's exercise."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "6ecf24d5-5001-4571-937c-2632ac8c2c66", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Modal grounding frameworks at the foundational case: laws, framework models and omission models"
+lean = "Model.Controls"
+paraphrase = "Premise-free laws and finite models (structural surrogates, not metaphysical possibility). Laws: (1) correlation with an uncaused esse and simple incorruptibility excludes any power over a being's esse; (2) PGP with unrestricted recombination and companions excludes any concrete foundational being; (3) existence-conditional essences exclude unconditional essentialism's reading of esse = essence for a being with esse = essence whose absence is representable; (4) under existence-conditional essences no essential truth of x entails x's existence once x's absence is representable; (5) Pruss's grounding P1 and possibility P4 with Euclidean access and a transfer bridge (a power for the global possibility is a power over the esse of each concretum it excludes) put every concrete contingent being under some power over its esse; (6) with excluded middle this makes every concrete foundational being necessary; (7) Aristotelian grounding of 'nothing concrete', initiator presence and concrete holders exclude the subtraction conclusion wherever something concrete exists; (8) the subtraction conclusion gives the global possibility premise P4 (a stronger analyst variant, not Pruss's own premise); (9) on a Euclidean frame the unrestricted conceivability bridge of #248 cannot take both a conceived necessary existence and a conceived absence of one being; (10) unreceivedness, firstness, correlation, passive-to-receptive, no self-esse-cause and B3 make the first unmoved mover incorruptible simply and under no power over its esse, and with PGP and excluded middle necessary if it exists at w; (11) with excluded middle PGP is exactly its half for existentially receptive beings and its half for subjectless beings. Models: theist (nonvacuity of every argument), prussWithoutPGP (Pruss premises and conclusion with PGP, C2 and the transfer bridge failing), bruteFoundational (a contingent foundational being: PGP, B6 and the necessity verdict fail; omission models of the two essentialist premises), conditionalEssence and its four omission models, primitivistSilence (the same foundational profile with the being necessary in one frame and contingent in another), hybridFirstWay (the First Way's act and potency premises, ST I q.2 a.3, unrestricted recombination, a corruptible composite under PGP's subject half and a contingent foundational first mover), six Pruss omission models (the fourth a replacement case: the one actual concretum possibly absent while a non-actual being is contingent elsewhere; the sixth, Euclidean, an artefact of the global P4), and two one-sided conceivability models."
+definitions = ["7fcf846e-d0ef-400e-89c0-7c82b94edde7", "7cf63236-9c12-41bc-bf20-6fbce7a121db", "54bdb2f0-aa66-489f-ae06-174dd668d424", "bf7eddca-8291-4744-8470-379babcd7781", "6ecf24d5-5001-4571-937c-2632ac8c2c66", "f9f58df7-d3be-4d66-b1f1-204d7049c450", "13c0abe7-25f7-4921-b52e-9f732edd6f2c", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-ESSE", "DEF-CAN-FAIL-TO-BE", "3fd6bddb-f10c-4df4-8694-3eb5e7c28617", "DEF-POTENCY", "DEF-PURE-ACT", "DEF-FIRST-UNMOVED-MOVER"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-ESSE-RECEPTION", "DISAMB-CAUSE", "DISAMB-PRIORITY-SIMPLE-OR-IN-TIME", "DISAMB-CORRUPTIBLE-SIMPLY-OR-IN-A-RESPECT", "DISAMB-POTENCY", "DISAMB-ESSENCE", "f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5", "d25cee67-1d5c-4a4c-bda5-8571b731ddf3"]
+
+[[argument]]
+id = "Foundational beings are necessary at w, from power grounding"
+theorem = "pgpFoundationalNecessary"
+premises = ["STMT-EXCLUDED-MIDDLE", "20d5fecd-950e-42f8-8dc9-3014491ff6ae"]
+conclusion = "Every being foundational at w exists at every world accessible from w"
+sense_bridges = [{term = "POSSIBLE_NOT_TO_BE", from = "POSSIBLE_NOT_TO_BE_2", to = "POSSIBLE_NOT_TO_BE_1", statement_id = "20d5fecd-950e-42f8-8dc9-3014491ff6ae"}]
+rule = "Reductio on possible absence, by PGP's two channels"
+meaning = "PGP's verdict at the foundational case. Take a being f foundational at w and a world v accessible from w; excluded middle decides whether f exists at v. Were f absent there, it would be contingent at w, and PGP would make it corruptible simply or put it under some being's power over its esse; the foundational profile excludes both, each by its own clause (incorruptibility for POSSIBLE_NOT_TO_BE_1, the no-power clause for POSSIBLE_NOT_TO_BE_2). So f exists at every accessible world. No step passes from one sense of 'possible not to be' to the other: the sense bridge names PGP as the premise in which both occur, as alternative channels. Only the profile's actuality, incorruptibility and no-power clauses are used: simplicity, unreceivedness, firstness and uncausedness are idle here (under correlation, the no-power clause itself follows from uncausedness and incorruptibility, controls law 1)."
+description = "PGP's verdict 'necessary' on the foundational case, stated directly rather than through C2 and the First Way. Not a transcription: no premise mentions necessity or the foundational profile. Establishes no premise. With the existence premise it reaches STMT-NECESSARY-CONCRETE-AT; the rival denies PGP at exactly this case (controls, bruteFoundational, primitivistSilence, hybridFirstWay)."
+
+[[argument]]
+id = "Foundational beings are necessary at w, from esse distinct from essence in contingents"
+theorem = "esseIdentityFoundationalNecessary"
+premises = ["STMT-EXCLUDED-MIDDLE", "96971e31-4782-4478-95b8-b6863a6a9412"]
+conclusion = "Every being foundational at w exists at every world accessible from w"
+rule = "Reductio on possible absence by B6"
+meaning = "B6's verdict at the foundational case. A foundational f exists at w with represented esse equal to its essence; were it absent at an accessible world it would be contingent, and B6 (every contingent being has esse distinct from essence) would contradict that identity. Only actuality and esse = essence are used."
+description = "The esse-identity route (#1870 route C) gives the same verdict as PGP from a different premise. Not a transcription. Establishes no premise. B6 is supported here by unconditional essentialism and contested by existence-conditional essentialism (controls, laws 3-4)."
+
+[[argument]]
+id = "Every contingent being has esse distinct from essence, from unconditional essentialism"
+theorem = "essentialExistenceGivesDistinctEsse"
+premises = ["Whatever lies in a being's nature holds at every world accessible from w", "Whatever has represented esse equal to its essence has its own existence in its nature"]
+conclusion = "96971e31-4782-4478-95b8-b6863a6a9412"
+sense_bridges = [{term = "ESSENCE", from = "ESSENCE_3", to = "ESSENCE_5", statement_id = "Whatever has represented esse equal to its essence has its own existence in its nature"}]
+rule = "Reductio: esse = essence puts existence in the nature, which essence makes necessary"
+meaning = "If a contingent being x had its represented esse equal to its essence, unconditional essentialism's reading would put its existence in its nature, and essence-grounds-necessity would make it exist at every accessible world, against its contingency. So every contingent being has esse distinct from essence. Constructive."
+description = "A new support bundle for #1870's B6: unconditional essentialism decomposes B6 into essence-grounds-necessity and the essential-existence reading of esse = essence. Not a transcription: neither premise mentions contingency. Establishes no premise; existence-conditional essentialism rejects the second premise for any being whose absence is representable (controls, law 3), which is exactly the standing rival's position."
+
+[[argument]]
+id = "The stage-one node, from a necessary concrete foundational being"
+theorem = "foundationalNecessaryConcrete"
+premises = ["Every being foundational at w exists at every world accessible from w", "Some concrete being is foundational at w"]
+conclusion = "STMT-NECESSARY-CONCRETE-AT"
+sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "STMT-NECESSARY-CONCRETE-AT", role = "conclusion"}]
+rule = "Instantiate the verdict at the concrete foundational witness"
+meaning = "The concrete foundational being exists at w and, by the necessity verdict, at every accessible world: it witnesses the stage-one node on the frame's own profile."
+description = "Projection of the foundational verdict onto STMT-NECESSARY-CONCRETE-AT. An instantiation; establishes no premise. With either verdict argument it gives two new routes to the node: {excluded middle, PGP, a concrete foundational being} and {excluded middle, B6, a concrete foundational being}, neither through C2 or the First Way."
+transcription = "instantiation"
+
+[[argument]]
+id = "Foundational beings are contingent at w, from existence-conditional essences"
+theorem = "conditionalEssencesFoundationalContingent"
+premises = ["Every essential truth about a being holds at every point where it is absent", "A being at w whose existence no essential truth entails is absent at some accessible world", "No other being's essential truth entails the existence of a being foundational at w", "Some point of the world type lacks each being foundational at w"]
+conclusion = "Every being foundational at w is CONTINGENCY_1 at w"
+rule = "No essential exclusion, then the essentialist account of possibility"
+meaning = "Existence-conditional essentialism's verdict. For a foundational f, no essential truth entails its existence: one of f's own would hold at the representable point lacking f (conditional essences), and no other being's does (unrequired by others). So the essentialist account makes f absent at some accessible world. Esse = essence plays no role: on this account the identity is modally idle. Constructive."
+description = "The standing rival's verdict 'possibly absent', with its exact commitments. Not a transcription: no premise mentions contingency of a foundational being. Establishes no premise. Each premise is needed (controls, conditionalEssence omissions 1-4); with a concrete foundational being it contradicts the necessity verdict."
+
+[[argument]]
+id = "A necessary concrete power-holder for no contingent concretum, by Aristotelian modality"
+theorem = "prussNecessaryPowerHolder"
+premises = ["STMT-EXCLUDED-MIDDLE", "STMT-EUCLIDEAN-FRAME", "94393b5b-8950-4a52-aef1-50cd09232e64", "A power for there being no contingent concretum issues in a world where its holder exists", "Whatever has at w a power for there being no contingent concretum is concrete", "0dc833c1-3b2f-4769-a09e-531f0da12455", "Some concrete being is CONTINGENCY_1 at w"]
+conclusion = "Some necessary concrete being at w has a power for there being no contingent concretum"
+sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "Some necessary concrete being at w has a power for there being no contingent concretum", role = "conclusion"}]
+rule = "Ground the non-actual global possibility, locate the holder in its world, transfer by Euclidean access"
+meaning = "Analyst reconstruction of Pruss's Aristotelian-modality argument. A concrete being is contingent at w, so the global possibility (no contingent concretum) fails at w, while it holds at some accessible world (P4). Aristotelian grounding (P1) gives a being y existing at w with a power for it; initiator presence (P2) gives an accessible world v where it obtains and y exists; y is concrete (P3), so y is not contingent at v. With excluded middle y exists at every world accessible from v, and Euclidean access makes every world accessible from w accessible from v."
+description = "Test 5's route to a necessary concrete being. Not a transcription: no premise mentions a necessary being. Establishes no premise. It uses neither PGP nor C2 (controls, prussWithoutPGP); each non-logical premise is needed (controls, six Pruss omission models). It uses the global possibility premise, a stronger analyst variant that Pruss declines; its Euclidean premise is an artefact of that variant (the holder is shown non-contingent at the contingent-free world, not at w), and the sibling with Pruss's own premise needs none (specs/modal-grounding-actual-absence.toml). Neither NECESSARY_2 nor STMT-NECESSARY-CONCRETE-AT assumes Euclidean access; on Euclidean frames the unrestricted conceivability bundle of law 9 is inconsistent, a cross-route dependency. It is not independent of the C2 crux's modal theory: P1 is power-grounded modality applied to a global possibility; with P4, Euclidean access and the transfer bridge (whose warrant is open) it yields PGP's power channel for every concrete contingent being (controls, laws 5-6)."
+
+[[argument]]
+id = "The stage-one node, from a necessary concrete power-holder"
+theorem = "prussNecessaryConcrete"
+premises = ["Some necessary concrete being at w has a power for there being no contingent concretum"]
+conclusion = "STMT-NECESSARY-CONCRETE-AT"
+sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "STMT-NECESSARY-CONCRETE-AT", role = "conclusion"}]
+rule = "Forget the power"
+meaning = "The Pruss conclusion's witness is concrete, exists at w and at every accessible world: it witnesses the stage-one node on the frame's own profile."
+description = "Projection of the Pruss conclusion onto STMT-NECESSARY-CONCRETE-AT. An assembly; establishes no premise."
+transcription = "assembly"
+
+[[argument]]
+id = "Modal grounding frameworks controls checked"
+theorem = "controls"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+premises = []
+conclusion = "Modal grounding frameworks at the foundational case: laws, framework models and omission models"
+rule = "General laws and explicit finite models"
+meaning = "Premise-free laws comparing the accounts of de re possibility of absence at the foundational case (power-grounded, combinatorial, essentialist in two forms, hybrid) and the Pruss reconstruction, then finite models: a theist nonvacuity model, the Pruss-without-PGP separation, the brute foundational model, the existence-conditional model with four omission models, the primitivist pair, the hybrid First Way model, six Pruss omission models and two one-sided conceivability models. Model-witnessed separations only; no premise is established and no reality claim is made."
+description = "Premise-free laws and models for the #1887 framework batch. Sense-mixing control: the laws relate MODAL_CONTINGENCY_1, NECESSARY_2, POSSIBLE_NOT_TO_BE_1 and _2, POWER_OVER_ESSE_1 and the new power-for-a-proposition primitive without a bridge premise. Establishes no premise."

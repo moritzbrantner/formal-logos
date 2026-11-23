@@ -402,7 +402,22 @@ premise is established.
    §13's conditional judgment stands, sharpened: the remaining disagreement
    is the unmotivated extra content of each general theory at existence
    without a subject. The formal framework comparison and Pruss's argument
-   (tests 4–5) follow separately.
+   (tests 4–5) are in
+   [modal-grounding-frameworks.md](modal-grounding-frameworks.md)
+   (attempt `5ee2cbef`).
+   - Each account's verdict at the foundational case is proved under exact
+     extra commitments. PGP, B6 and unconditional essentialism give
+     necessity. Existence-conditional essentialism and combinatorialism give
+     possible absence; under the former, esse = essence carries no modal
+     force. Primitivism fixes no verdict. The hybrid inherits the verdict of
+     its existence component.
+   - The route with Pruss's own premise reaches `b19ffd92` without PGP, C2
+     or a Euclidean frame. Its possibility premise is the joint absence of
+     the actual contingent concreta, with others perhaps in their stead; no
+     recorded rival is shown to reject it.
+   - It is formally independent of the C2 crux but dialectically tied to it:
+     its grounding premise is the same power theory applied globally, and
+     under the open transfer bridge it yields PGP's verdict on concreta.
 2. Separate conserving from originating power in correlation by composing with
    the existing sustaining-causation vocabulary (attempt `c94eed5b`) instead
    of the tenseless `CausesIn` (the deist question).

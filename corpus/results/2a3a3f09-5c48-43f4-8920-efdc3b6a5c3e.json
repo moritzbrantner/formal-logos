@@ -1,0 +1,12 @@
+{
+  "id": "2a3a3f09-5c48-43f4-8920-efdc3b6a5c3e",
+  "label": "The stage-one node, from a necessary concrete power-holder",
+  "argument_id": "9d476e29-056c-48bd-8cb4-768a385df81c",
+  "challenge_module": "TruthCore.Results.Modal.ModalGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalGrounding.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalGrounding.prussNecessaryConcrete",
+  "comparator_config": "results/2a3a3f09-5c48-43f4-8920-efdc3b6a5c3e/comparator.json",
+  "status": "solution-present",
+  "description": "Projection of the Pruss conclusion onto STMT-NECESSARY-CONCRETE-AT. An assembly; establishes no premise.",
+  "transcription": "assembly"
+}

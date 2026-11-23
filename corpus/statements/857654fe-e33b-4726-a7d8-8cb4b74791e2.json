@@ -1,0 +1,11 @@
+{
+  "id": "857654fe-e33b-4726-a7d8-8cb4b74791e2",
+  "label": "Every essential truth about a being holds at every point where it is absent",
+  "paraphrase": "OPEN (existence-conditional essentialism, Fine/Lowe reading; analyst formulation): for every being x and world-proposition phi, if it lies in the nature of x that phi, then phi holds at every point of the frame's world type at which x does not exist: x's essential truths have the form 'if x exists, ...'.",
+  "lean_declaration": "TruthCore.Modal.ModalGrounding.ExistenceConditionalEssences",
+  "definition_ids": [
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db",
+    "54bdb2f0-aa66-489f-ae06-174dd668d424",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ]
+}

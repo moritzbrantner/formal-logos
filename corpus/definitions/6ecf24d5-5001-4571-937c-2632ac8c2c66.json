@@ -1,0 +1,9 @@
+{
+  "id": "6ecf24d5-5001-4571-937c-2632ac8c2c66",
+  "label": "No contingent concretum at a world of the shared frame (NoContingentConcreteIn)",
+  "term": "no contingent concrete being at a world (NoContingentConcreteIn)",
+  "definition": "NoContingentConcreteIn F concrete v: for every candidate x satisfying the world-independent concrete predicate, not ContingentAt F.history.ontic v x (x does not both exist at v and lack existence at some world accessible from v). The meaning of DEF-NO-CONTINGENT-CONCRETE-AT (02a5456f-140b-5089-b101-7773dc72365f), restated on the shared CausalityFrame's own Ontic because that definition is typed on a fact Arena this frame does not carry. It permits an empty world and necessary concreta.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Modal.ModalGrounding.NoContingentConcreteIn",
+  "note": "Stipulated for the global proposition of #1887's Pruss reconstruction. With the frame's tenseless world-relative existence it reads 'no contingent concretum ever exists in v', not 'none exists now'; that is the reading under which initiator presence is plausible (a chain's initiator exists in the world of the chain). Examples: an empty world; a world containing only a necessary concretum. Non-examples: a world containing a corruptible body. Open obligations: the tensed variant (no contingent concretum at the end of a history) is not represented; under it initiator presence fails for a self-annihilating holder (controls, PrussOmissions 2)."
+}

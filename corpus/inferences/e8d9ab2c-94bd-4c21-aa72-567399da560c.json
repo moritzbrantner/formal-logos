@@ -1,0 +1,13 @@
+{
+  "id": "e8d9ab2c-94bd-4c21-aa72-567399da560c",
+  "label": "Every contingent being has esse distinct from essence, from unconditional essentialism (inference)",
+  "input_statement_ids": [
+    "54bafc9f-9c69-4343-ba32-8ab19d12b759",
+    "565ccd6c-0036-4613-8595-f6f03d273a0d"
+  ],
+  "output_statement_id": "96971e31-4782-4478-95b8-b6863a6a9412",
+  "rule": "Reductio: esse = essence puts existence in the nature, which essence makes necessary",
+  "meaning": "If a contingent being x had its represented esse equal to its essence, unconditional essentialism's reading would put its existence in its nature, and essence-grounds-necessity would make it exist at every accessible world, against its contingency. So every contingent being has esse distinct from essence. Constructive.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
