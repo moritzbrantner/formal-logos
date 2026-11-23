@@ -307,3 +307,210 @@ theorem controls : TruthCore.Causality.IntentionalExemplarExtension.Control.Cont
     Bool.forall_bool, Bool.exists_bool]
 
 end TruthCore.Results.Causality.IntentionalExemplarExtension
+/-! ## C4: intrinsic objective eminence, actual noesis and simplicity
+
+Lean-only interpretation controls, not registered premise discharges. All
+interpretations share the EXISTING actual necessary root, a pure-act source
+and a genuinely apprehending distinct effect. The strong impersonal model
+also has an intrinsic self-intelligible source form and an objective norm for
+the effect's correct apprehension. It lacks any source-level apprehension.
+This does not establish that objective exemplarity exhausts intellectual
+perfection; that is the OPEN metaphysical dispute.
+
+The positive model shares the very same first source and model of normative
+exemplarity, but includes actual self-apprehension with only one real intrinsic
+constituent. That shows the *constitutive plurality* bridge is additional;
+it does not defeat a more general Plotinian theory of noetic articulation. -/
+namespace TruthCore.Results.Causality.IntentionalExemplarExtension.ObjectiveEminence
+
+open TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence
+open TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding
+open TruthCore.Causality.NecessaryRootFork (ActualRoot ActualConcrete)
+open TruthCore.German.Kant.CosmologicalInference (NecessaryAt)
+open TruthCore.Latin.Aquinas.SummaTheologiae (PureAct)
+
+/-- Objective exemplar eminence has a genuinely cognitive, distinct effect;
+this direction is logical projection, not an argument from production to
+eminent containment. -/
+theorem exemplarEminenceProducesKnower {B C Form : Type}
+    (OwnBeing : B → Prop) (ownForm : B → Form)
+    (HasOwnForm : B → Form → Prop)
+    (ObjectivelyAbout : Form → B → Prop)
+    (Norms : B → Form → B → C → Prop)
+    (CausesEsse : B → B → Prop) (About Correct : C → B → Prop)
+    (Apprehends Grounded : B → C → Prop) (g : B)
+    (hEminent : IntrinsicExemplarEminence OwnBeing ownForm HasOwnForm
+      ObjectivelyAbout Norms CausesEsse About Correct Apprehends Grounded g) :
+    ProducesActualKnower CausesEsse About Correct Apprehends Grounded g :=
+  hEminent.2.2.2.2
+
+/-- If real constitutive plurality is essential to source-level noesis, a
+source with at most one such constituent cannot genuinely understand itself.
+The disputed REAL-PLURALITY premise does all the work of crossing from
+intentional aboutness to ontological division. -/
+theorem strictUnityExcludesNoesisUnderRealDuality {B C Aspect : Type}
+    (OwnBeing : B → Prop) (About Correct : C → B → Prop)
+    (Apprehends Grounded : B → C → Prop)
+    (RealConstituent : B → Aspect → Prop) (g : B)
+    (hSimple : ConstitutivelySimple RealConstituent g)
+    (hRealDuality : SourceNoesisRequiresRealPlurality OwnBeing About Correct
+      Apprehends Grounded RealConstituent)
+    (hOwn : OwnBeing g) :
+    ¬ IntrinsicSelfKnowledge About Correct Apprehends Grounded g := by
+  intro hKnows
+  obtain ⟨a, b, ha, hb, hNe⟩ := hRealDuality g hOwn hKnows
+  exact hNe (hSimple a b ha hb)
+
+namespace Control
+
+/-- One SOURCE, not merely some being with a cognitive effect. The rootProfile
+is the existing selected actual-root grounding dictionary, not a fresh source.
+The source exists necessarily at true; false is a concrete caused effect.
+The constituent carrier admits exactly one intrinsic form at the source. -/
+def FirstSourceFrame : Prop :=
+  ActualRoot TruthCore.Causality.IntentionalExemplarExtension.Control.rootProfile true true ∧
+  NecessaryAt TruthCore.Causality.IntentionalExemplarExtension.Control.rootProfile.ontic
+    true true ∧
+  PureAct
+    TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding.Control.noPotency
+    true ∧
+  TruthCore.Causality.IntentionalExemplarExtension.Control.frame.CausesIn
+    true false () ∧
+  TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.own true ∧
+  ConstitutivelySimple
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.realConstituent
+    true
+
+/-- ¬C4 for the deliberately *strong objective/exemplary* eminence reading:
+the source is actually necessary, pure act, a single-form first, the genuine
+intrinsic intelligible and normative standard for an actual intelligent effect,
+yet does not itself intentionally apprehend any content. Contrast the earlier
+productive-only model, where no source-level excellence is represented. -/
+def ImpersonalEminence : Prop :=
+  FirstSourceFrame ∧
+  IntrinsicExemplarEminence
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.own
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.formOf
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.hasOwnForm
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.objectAbout
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.norms
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.causesEsse
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.about
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.correct
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.effectOnly
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.effectOnly
+    true ∧
+  IntrinsicSelfKnowledge
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.about
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.correct
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.effectOnly
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.effectOnly
+    false ∧
+  ¬ IntrinsicSelfKnowledge
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.about
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.correct
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.effectOnly
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.effectOnly
+    true ∧
+  SourceNoesisRequiresRealPlurality
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.own
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.about
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.correct
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.effectOnly
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.effectOnly
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.realConstituent
+
+/-- The same source and same objective norm, but a single immanent actual
+understanding rather than two real constituents. Pure act and the intellectual
+effect are still populated. The real-duality rule fails under this selected
+non-constitutive account of intentional distinction. -/
+def SimpleIntentionalEminence : Prop :=
+  FirstSourceFrame ∧
+  IntrinsicExemplarEminence
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.own
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.formOf
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.hasOwnForm
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.objectAbout
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.norms
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.causesEsse
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.about
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.correct
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.bothKnowOwn
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.bothKnowOwn
+    true ∧
+  IntrinsicSelfKnowledge
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.about
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.correct
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.bothKnowOwn
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.bothKnowOwn
+    true ∧
+  ¬ SourceNoesisRequiresRealPlurality
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.own
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.about
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.correct
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.bothKnowOwn
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.bothKnowOwn
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.realConstituent
+
+/-- Mere ability to cause real knowledge cannot imply source-level OBJECTIVE
+normative/formal containment, even before the further C4 question about
+subjective apprehension arises. -/
+def ProductiveWithoutExemplarity : Prop :=
+  ProducesActualKnower
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.causesEsse
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.about
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.correct
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.effectOnly
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.effectOnly
+    true ∧
+  ¬ IntrinsicExemplarEminence
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.own
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.formOf
+    (fun _ _ => False)
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.objectAbout
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.norms
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.causesEsse
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.about
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.correct
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.effectOnly
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.effectOnly
+    true
+
+def Controls : Prop :=
+  ImpersonalEminence ∧ SimpleIntentionalEminence ∧ ProductiveWithoutExemplarity
+
+end Control
+
+/-- Nonvacuous two-being, two-world structural interpretations of both C4
+and ¬C4 under one explicit, stronger objective-eminence interpretation, plus
+the additional constitutive-duality fork. The models do NOT certify that
+objective/intelligible exemplarity is the whole subjective perfection of
+understanding, nor that either picture is metaphysically admissible. -/
+theorem controls : Control.Controls := by
+  simp [Control.Controls, Control.ImpersonalEminence,
+    Control.SimpleIntentionalEminence, Control.ProductiveWithoutExemplarity,
+    Control.FirstSourceFrame,
+    IntrinsicExemplarEminence, ProducesActualKnower,
+    ConstitutivelySimple, SourceNoesisRequiresRealPlurality,
+    IntrinsicSelfKnowledge, ActualRoot, ActualConcrete, NecessaryAt,
+    TruthCore.Causality.CogitoNecessaryConcrete.ActualConcreteGround,
+    PureAct,
+    TruthCore.Causality.IntentionalExemplarExtension.Control.frame,
+    TruthCore.Causality.IntentionalExemplarExtension.Control.rootProfile,
+    TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding.Control.noPotency,
+    TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding.Control.causesIn,
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.own,
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.formOf,
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.hasOwnForm,
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.objectAbout,
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.norms,
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.realConstituent,
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.causesEsse,
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.about,
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.correct,
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.effectOnly,
+    TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control.bothKnowOwn,
+    Bool.forall_bool, Bool.exists_bool]
+
+end TruthCore.Results.Causality.IntentionalExemplarExtension.ObjectiveEminence
+
