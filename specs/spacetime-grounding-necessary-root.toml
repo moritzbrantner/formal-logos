@@ -1,0 +1,47 @@
+[batch]
+vocab = "TruthCore.Ontology.SpacetimeGroundingBridge"
+results = "TruthCore.Results.Ontology.SpacetimeGroundingBridge"
+
+[[statement]]
+id = "1dd2b809-a1d3-43ca-8dfc-b7c1c4fbfd58"
+label = "The selected spacetime whole is an actual concrete existent"
+lean = "ActualConcreteWholeAt"
+paraphrase = "At the selected world the same candidate designated as the spacetime whole is concrete and actually exists in the modal grounding profile. Geometry alone does not supply this ontological commitment."
+definitions = ["e9e031af-665e-5888-9328-f7637b5a2677", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+
+[[statement]]
+id = "144a61c5-0abd-4759-bdcd-8ad59ed8be72"
+label = "The actual spacetime whole is contingent in the selected modal frame"
+lean = "ContingentWholeAt"
+paraphrase = "The actual spacetime whole exists at the selected world but fails to exist at an accessible world, with the identical rigid candidate tracked across worlds. No cosmic beginning or physical modality is thereby assumed."
+definitions = ["e9e031af-665e-5888-9328-f7637b5a2677", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+
+[[statement]]
+id = "8bfeb070-436d-4503-8282-4b7df72a4d93"
+label = "Distinct actual concrete spatial occupants are existentially grounded by the spacetime whole"
+lean = "OccupantsDependOnWholeAt"
+paraphrase = "In the selected world and exact existential-grounding relation, every actual concrete occupant distinct from the spacetime whole stands in that selected grounding relation to that very whole. This is the Profile.grounds relation only, not the act of being (DEF-ESSE) or a cause of esse. An explicitly open ontological bridge, not a consequence of geometric occupation or physical causation."
+definitions = ["ca052c37-98bc-4ef5-94fb-dcc4ab73f4d5", "e9e031af-665e-5888-9328-f7637b5a2677", "ddde7152-b698-5a85-8060-b8c6c9905758", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+disambiguations = ["1ea8b036-7a66-540a-be38-301a8db9077c", "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"]
+
+[[statement]]
+id = "bc2ee163-0ca6-48b2-84b2-0da27326cfcb"
+label = "A necessary underived concrete root does not dimensively occupy the supplied spacetime frame"
+lean = "NecessaryUnderivedUnlocatedAt"
+paraphrase = "One and the same actual concrete candidate is necessary relative to the selected accessible worlds, underived in the selected existential-grounding relation across all admitted worlds, and not located in the dimensive occupation sense SPATIOTEMPORAL_2 in the supplied frame F (the spacetime whose whole is named in the premises). Location is not world-indexed, and nothing is said about other frames. No GOD_4 identity or divine eternity is inferred."
+definitions = ["75c193e1-bab0-5ec2-890b-9ff608b05aa7", "e9e031af-665e-5888-9328-f7637b5a2677", "ddde7152-b698-5a85-8060-b8c6c9905758", "ca052c37-98bc-4ef5-94fb-dcc4ab73f4d5", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+disambiguations = ["1ea8b036-7a66-540a-be38-301a8db9077c", "6f1d1395-7c1d-5bd5-a45d-03380857aed6", "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"]
+
+[[argument]]
+id = "b6ec7983-6e7a-405c-9984-5e25ef45f221"
+label = "Contingent spacetime grounding implies an unlocated underived root"
+theorem = "derive"
+premises = ["0bdcf366-29c7-5d45-b603-5c929dcad976", "1dd2b809-a1d3-43ca-8dfc-b7c1c4fbfd58", "144a61c5-0abd-4759-bdcd-8ad59ed8be72", "8bfeb070-436d-4503-8282-4b7df72a4d93"]
+conclusion = "bc2ee163-0ca6-48b2-84b2-0da27326cfcb"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+comparator_theorems = ["selectedUnlocated", "omission", "jointModel", "unrestrictedInconsistent"]
+rule = "same-witness necessary-root elimination plus explicit whole-grounding bridge"
+meaning = "Conditional cross-family consequence from the existing necessary-concrete-underived root-route node to a selected non-spatiotemporal attribute: the SAME underived concrete candidate is unlocated (dimensive SPATIOTEMPORAL_2) if the SAME world contains a contingent, actual concrete spacetime whole, and that very whole grounds every distinct located actual concretum in the SAME Profile.grounds relation. The whole's existence, contingency, and occupant-to-whole existential dependence are explicitly open premises; the latter is not derived from Leibniz/Clarke translation symmetry, Lorentz geometry, temporal ordering or efficient causation. The omission control has actual distinct concreta and a real grounding edge but no occupant-to-whole bridge or nonlocated root; the companion joint model satisfies all four premises with a located occupant distinct from the whole, and the companion control shows that dropping the Located antecedent makes the bridge inconsistent with the other three premises. Nonlocation is relative to the one supplied frame F. The result does not identify this witness with the GOD_4 attribute root, imply physical spacetime's contingency, or yield Boethian eternity; the next open consumer needs only its own GOD_4 bearer UnderivedConcreteAt in the same profile and world, for the same F, since selectedUnlocated is pointwise."
+definitions = ["75c193e1-bab0-5ec2-890b-9ff608b05aa7", "e9e031af-665e-5888-9328-f7637b5a2677", "ddde7152-b698-5a85-8060-b8c6c9905758", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "ca052c37-98bc-4ef5-94fb-dcc4ab73f4d5"]
+disambiguations = ["1ea8b036-7a66-540a-be38-301a8db9077c", "6f1d1395-7c1d-5bd5-a45d-03380857aed6", "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"]
+senses = { SPATIOTEMPORAL = "SPATIOTEMPORAL_2" }

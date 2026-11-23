@@ -1,5 +1,33 @@
 # Modal spine to "God exists"
 
+## Composition-to-esse audit addendum (2026-11-22; unreviewed)
+
+The five-premise union solution also now exposes
+`compositeHasSameUnitingEsseCause`, retaining **the same** c that
+unites components and causes esse, instead of discarding `Unites`
+in the registered `ca07cae9` conclusion. The original result
+projects the stronger proof. This removes a potential within-proof
+witness ambiguity, while leaving world-local actuality and the
+causal-relation transfer OPEN.
+
+The [proper-part and union-to-esse audit](composition-causal-scope.md#proper-part-and-union-to-esse-audit-2026-11-22-independent-review-pending)
+tightens the existing omission certificate for `fbee7f15`: the earlier
+Bool model could count its whole as one of its components, while the new
+Fin 4 control has **two genuine proper components** and a **third,
+distinct efficient uniter** that causes the whole only in a non-esse
+respect (efficient causing counted as `CausesIn` in the same respect),
+yet still no causal relation to the whole's esse. This supports the *formal independence* of the uniter-to-esse
+bridge even on the intended proper-part test. It does not make the
+immanent rival true, invalidate the conditional argument, or establish
+the bridge: direct and cumulative warrant remain legitimate routes.
+All five `ca07cae9` support bundles still require `fbee7f15`, and the
+underived-source consumers additionally require current presence and
+causal correspondence. The 2026-11-18 accepted-qualified assessment
+and the 2026-11-17 reviewed pure-actuality result remain unchanged.
+Next substantive inquiry is a same-bearer, same-esse productive versus
+immanent account, not another rephrased finite omission model.
+
+
 ## Current reviewed assessment (2026-11-17)
 
 The composition reconstruction is the preferable articulated support option at this actual simple source because of semantic fit and explicit explanatory work. Real receptivity/composition and a distinct concurrent esse-giver remain application burdens; immanent constitution remains a substantive rival. No premise is established or actual pure-act counterexample supplied.
@@ -408,6 +436,180 @@ things" is equivalent to "a necessary concrete thing": the causal relation in B2
 does no logical work, so B2 already contains the possibility of the conclusion.
 Arrival A was built to avoid that. It does not discharge B2.
 
+
+**Actual causal reading of Arrival B (2026-11-22; proposed semantic
+continuation).** The existing proof of `b19ffd92` from BEGINS_2 B1
+`951a2235` and B2 `256b5bab` remains valid, but the original B2 has a
+schematic `W → B → Prop` totality-cause relation. Its necessity inference
+uses externality, not that relation. The stronger sibling
+`ConcurrentFiniteDurationCausalOpportunity` now instantiates this
+predicate with `ConcurrentTotalityGivingAt` over the **shared**
+`CausalityFrame.GivesAt` primitive: the same existing external concrete
+source actually gives the being of every contingent concrete individual at
+every moment of that individual's presence, with at least one real
+source/effect exercise in the accessible history. It is a deliberately strong
+memberwise concurrent-esse reading, distinct from a holistic cause of the
+contingent totality, ordinary earlier efficient causation or a formal label
+unconnected to actual beings. The intrinsic causal interpretation of
+`GivesAt` remains a primitive whose applicability is OPEN.
+
+The new conditional `possiblyNecessaryConcurrentGiver` proves a
+**possible necessarily existing source with actual giving of being there**.
+`necessaryActualWithPossibleConcurrentGiving` combines this with
+Euclidean accessibility at the selected world and reflexivity to keep the
+**same rigid source** necessary at the selected world, while preserving
+actual causal giving in its witness history. The corollary
+`necessaryConcreteOfConcurrentGiving` reaches the same existing
+necessary-concrete endpoint. Thus replacing the abstract causal relation
+with a meaningful causal premise does *not* invalidate the conditional
+arrival; the extra causal content now does work in a stronger conclusion.
+However, under the repository's rigid-world classical semantics, the
+externality conjunct still directly implies possible de re necessity:
+actual causal giving **does not establish** that this stronger B2 is itself
+possible. This remains the decisive open modal opportunity principle,
+not a discharged objection or a premise whose primitive status is
+unacceptable.
+
+The models discriminate the relevant changes. In the prior
+`openBelowSource` control, original B2 holds with a named cause but no
+`GivesAt` action; the new `inertGivingSeparatesOpportunity` checks the
+failure of the stronger interpretation. Conversely
+`functioningConcurrentOpportunity` gives a populated positive-time
+structural control with real typed giving of being, and demonstrates
+joint formal satisfiability without metaphysical permission. The
+`mixedPossibleGivingWithoutActualGiving` control has contingent
+population at the designated world, Euclidean/reflexive access, B1 and
+the stronger B2, yet the source's giving is exercised **only** in the
+alternative history. Therefore a further **actual-world causal bridge**
+would be required to infer that a necessary concrete being actually
+explains the currently present contingent beings. Possible causal
+efficacy is not actual efficacy, even when the rigid necessary source
+exists in both histories.
+
+**Cumulative consequence.** The registered root route remains:
+fixed-d Reaper assumptions → `4365c3c5`, plus possible population →
+BEGINS_2 `951a2235`, plus B2, the frame conditions →
+`b19ffd92` → existing further God/attribute consumers. The causal
+reading is registered as additional arguments (`7649d8aa`,
+`f468780f`, `abbbce81`; see the two paragraphs below), alongside the
+existing route through `256b5bab`, which they do not replace. No frontier
+closure is claimed: every new premise is OPEN. This scope does not infer first temporal moments,
+physical infinity's impossibility, a first per-se source, actual
+sustaining causation at w, divine simplicity or uniqueness. The
+positive warrant question now has a precise test: justify a jointly
+possible **actual exercise** of `GivesAt` by an existing exterior
+source of all contingent members in one history without merely
+postulating the conclusion. Source/semantic review and head CI
+verification are still required for this proposed account.
+
+
+**Verification candidate, 2026-11-22.** The causal reading now has a
+separate named conclusion `NecessaryConcreteWithPossibleConcurrentGivingAt`:
+the same rigid source exists necessarily at the designated world and
+actually exercises `GivesAt` in an accessible history. The proposed graph
+uses F2' (Euclidean-at-actual), actual reflexivity, BEGINS_2 B1 and the
+new memberwise causal B2 to prove that stronger conclusion, followed by a
+registered **witness-preserving weakening** to the existing stage-one
+necessary-concrete node. This prevents the extra causal content from
+disappearing in the only advertised result and identifies the missing
+actual-world causal-transmission obligation exactly. The modal subtraction
+argument (`SubtractionArgument.necessaryConcreteExcludesContingencyPremise`)
+already supplies a conditional incompatibility with S2 at the same world
+once the existing stage-one node is available; no new metaphysical defeat
+or independent route is claimed by composing it. Proof and graph checks,
+review and current-branch reconciliation remain pending.
+
+
+**Proposed weaker causal-opportunity derivation (2026-11-22, new test).**
+`NonexternalConcurrentGivingOpportunity` drops the decisive "outside every
+contingent concretum" requirement from B2: a concrete *candidate*, which may
+initially be contingent, is only required to actually give being
+(`CausalityFrame.GivesAt`) to every contingent concrete individual at every
+moment of its presence in one possible populated BEGINS_2 history. Two
+distinct, independently evaluable principles suffice for deriving the
+strong external B2: `NoSelfGivingOnAccessible` (strict giving of being does
+not reflexively cause a bearer to exist) and
+`ContingentConcretaTemporallyPresent` (if a concrete candidate exists
+contingently in the history, it occurs at some time there).
+`necessaryOfUniversalMemberwiseGiving` proves that if the source were
+contingent, its temporal presence would make it a member of the supplied
+effect-domain and the memberwise causal law would entail `GivesAt v c c t`,
+contradicting no-self-giving. The source is then necessary at v under the
+*existing* rigid-candidate modal semantics. Therefore
+`externalOpportunityOfMemberwiseGiving` derives the exteriority clause
+from the universal scope of the giving clause over a possibly contingent
+source, rather than stating it in the possibility premise. The commitment to
+a possibly necessary concretum is relocated, not removed: the converse holds
+by dropping the exteriority conjunct (`nonexternalOpportunityOfExternal`), so
+under no-self-giving and temporal presence the two premises are equivalent
+(`nonexternalIffExternalOpportunity`). A rival who denies that a necessary
+concretum is possible, and keeps both principles, rejects the nonexternal
+premise exactly as the external one. What the reformulation gains is an
+explicit statement of that rival's cost: no concrete thing could give being to
+every contingent concretum of a possible BEGINS_2 history. `GivesAt` is read
+strictly (definition `158301bc`), and the universal clause is CAUSE_OF_BEING_2
+(`SustainsBeing`, disambiguation `88a8fba7`) restricted to temporally present
+contingent concreta (`concurrentTotalityGiving_iff_sustains`). This is a substantive
+conditional **support option for B2**, not proof that such a source can be
+causally realized or that giving to every individual is equivalent to
+causing their totality holistically. A timeless *contingent* supplier is
+excluded by the temporal-presence premise, not by logic alone: that premise
+denies contingent atemporal concreta, while necessary concreta may be
+timeless.
+The original memberwise B2 and all downstream God/root consumers stay
+available. Corpus binding, model challenge and CI pending.
+
+
+**Independent omission controls (new).** On an open-below finite-duration
+two-world model, a self-giving source can be modally contingent and still
+produce every temporally present contingent member: all the temporal
+requirements hold but strict `NoSelfGivingOnAccessible` fails, and there is
+no necessary external bearer. A second Boolean-roster model preserves
+strict no-self-giving and actual memberwise production while a contingent
+source exists in its world without ever being `IsAt` any time; the
+`ContingentConcretaTemporallyPresent` bridge fails and the externality
+conclusion does not hold. The models isolate two genuine LOGICAL premises of
+the new derivation, not metaphysical counterexamples: the second model, in
+particular, may not satisfy an independently justified account of temporal
+concreteness. Neither omission is inserted into the new bridge unannounced.
+Their proof and Comparator certificates remain pending.
+
+**Second Way support for no-self-giving (2026-11-22, #1863; attempt
+[`33fd084a`](../../corpus/attempts/33fd084a-e59c-4855-918e-d69ac33bdc3c.json)).**
+Spec `specs/concurrent-giving-priority-bridge.toml`. Efficient causation is a
+supplied relation `EfficientlyCausesAt v t c x r` indexed by history and moment
+(definition `1d8c68c3`): for each fixed `v` and `t` it is the here-and-now
+efficient causing of EFFICIENT_CAUSING_2 (`69c0b23e`) read in that history at
+that moment. The one cross-sense premise is the OPEN self-edge bridge
+`ca5d4eaa` (`SelfGivingIsEfficientSelfCauseAt`): in every accessible `v` at
+every `t`, `GivesAt v c c t` implies `EfficientlyCausesAt v t c c esse`. Both
+indices are kept, so nothing is moved between histories or moments. It is NOT
+`F.CausesIn` (cause of a perfection), and it is separate from the efficient-esse
+bridge `DistinctActualEsseCauseIsEfficient` (`8934912c`), which covers only
+causes distinct from their effect. With the OPEN indexed no-self premise
+`872ff8b6` (in no accessible history at no moment is anything its own efficient
+cause) it gives `0e473dc4` (result `a59169d5`). `872ff8b6` itself follows from
+the OPEN indexed cause-priority premise `b402ca7b` and nothing-prior-to-itself
+`32d77f18`, by the verified `SelfCausationPriority.noSelfCauseFromPriority`
+applied in each history at each moment with the single unindexed `PriorSimply`
+(result `9ed661bd`). `872ff8b6` and `b402ca7b` are analyst statements. They are
+stronger than the selected-time Aquinas statements `8b2561cd` and `e078f07b`
+only given that the selected world is accessible from itself (accessibility is
+not reflexive by construction) and that the old unindexed relation is read as
+the indexed one at the selected world and a selected moment. The Aquinas claims
+do not extend to them; the *nec est possibile* of q.2 a.3 is an unchecked
+candidate basis for `872ff8b6`. The indexed omission control keeps both Second
+Way premises while the bridge and no-self-giving fail.
+
+A first version used an index-free bridge (`SelfGivingIsEfficientSelfCause`)
+with the existing `8b2561cd` or `e078f07b`. Because its consequent dropped the
+history and moment, it needed those selected-time statements under a modal
+reading the corpus registers as strictly stronger (relation `3a61a9fb`, result
+`8e634495`, disambiguation `57f80020`). Its records were withdrawn before merge;
+the Lean declarations remain in the frozen Challenge, marked superseded.
+Given the equivalence above, supporting `0e473dc4` does not discriminate against
+a rival who denies that a necessary concretum is possible.
+
 **What "begins" means in B1** (spec
 `specs/modal-spine-metric-beginning-arrival.toml`, attempt
 [`9d141c6c`](../../corpus/attempts/9d141c6c-7979-4d8b-a1b4-7b35ebc9fb21.json)).
@@ -513,6 +715,217 @@ Objection and warrant audit (Substantive Objection Standard):
   something exists" does not give "something exists necessarily"
   (`NecessaryIndividual.Alternating`, `SharedRootBridge`).
 - If a world with nothing concrete is possible, the conclusion is false under F1 and F2.
+- The subtraction argument for an empty world (2026-11-22, attempt
+  `03e1f49f`, batch `specs/subtraction-argument.toml`, analyst formulation;
+  its premises are labelled S1–S3 to keep them apart from this stage's A2 and
+  A3). The argument is valid on the route's profile (S1 finitely many
+  concreta, S2 each could fail to exist, S3 subtraction with no newcomer,
+  transitivity, excluded middle; S1, S2, S3 and transitivity each needed by
+  omission models), and its conclusion contradicts this node. It reaches the
+  node only through S2 at the candidate necessary being: the node excludes S2
+  at its world (result `6b12525b`), with excluded middle S2 there is exactly
+  the node's denial, and in an S5 theist model every other premise holds
+  together with this node and the box K node, so rejecting the rival requires
+  rejecting only S2. Pairwise recombination with companions gives S2 but not
+  S3; unrestricted recombination is exactly recombination for candidates that
+  could be absent plus the possible absence of every companioned concretum
+  (certified difference). Recombination therefore adds no warrant for S2 at
+  the necessary being beyond its own Humean source, separability in
+  conception, that is the conceivability bridge, which is not yet assessed at
+  this node. The analyst formulation of Lowe's reply (a necessary abstractum
+  co-existing with some concretum) excludes the conclusion and, with S1,
+  transitivity and excluded middle, S2 and S3 together, without choosing
+  which; it does not by itself give a necessary concrete individual (pair
+  model). An explanatory-dependence extension of the kind Lowe's 2013 modal
+  argument uses (roughly: contingent beings cannot explain the existence of
+  necessary abstracta; navigation only, attribution deferred, not checked
+  against the text and not formalized) is an unassessed further support
+  option for this node and a next test.
+
+### The First Way's own mover as the necessary being (2026-11-22)
+
+Owner lead "pure actuality → necessary existence"; batch
+`specs/first-mover-necessity.toml`, module `TruthCore.Causality.FirstMoverNecessity`,
+attempt `fa30e945`. Analyst formulations, attribution deferred.
+
+**Question and fixed meanings.** Does the SAME individual the *prima via*
+delivers (`IsFirstUnmovedMover`: moves something, moved in no respect, read at
+the reading world `w`) exist at every world accessible from `w`
+(`NecessaryAt`, NECESSARY_2), without first assuming it necessary or
+identifying it with an independently derived necessary root? Everything is
+stated on one `CausalityFrame` (#1784): `F.history.ontic` carries the
+modality, `F.MovesIn` is CAUSE_1 moving, `F.CausesIn … F.esse` is CAUSE_2 at
+esse, `F.PriorSimply` is SIMPLY_PRIOR_1. `InPotency` is the adopted POTENCY_1
+(potency in the subject, MUTABLE_1). Before this batch no registered result
+connected the First Way's mover to `NecessaryAt`: the existing
+`necessaryFirst`/`necessaryFirstPureAct` give *some* necessary first root by
+well-foundedness of actual grounding, and identifying it with the mover was
+the open cross-family bridge B7.
+
+**Checked conditional routes (one witness each).** Every route takes the
+*prima via* conclusion (`7bce7007`), the interface B0 "whatever moves
+something exists at `w`" and excluded middle, and concludes "some first mover
+moved by none is PURE_ACT_5, exists at `w` and at every accessible world":
+
+| Route | Modal bridge (new, OPEN) | Other premises | Result |
+|---|---|---|---|
+| A ∨ B | B2 ∨ B4: whatever is contingent at `w` is in POTENCY_1 in at least one (any) respect or has a distinct CAUSE_2 of its esse | firstness `74eb9113`, pure act `6c18d52b`, B3 `ee74c678` | `firstMoverNecessaryByPotencyOrCause` |
+| A (esse-cause) | B2: whatever is contingent at `w` has a distinct CAUSE_2 of its esse | firstness, pure act (carried), B3 | `firstMoverNecessaryByEsseCause` |
+| A (grounding) | none beyond irreflexive actual grounding and B0' (movers are concrete) | existing closure `c71c068c`, grounding-priority `7a63a3fe`, firstness, pure act | `firstMoverNecessaryFirstRoot` (also actual rootness and firstness) |
+| B (potency) | B4: whatever is contingent at `w` is in POTENCY_1 in at least one (any) respect; no grounding relation and no tie to esse | pure act | `firstMoverNecessaryByPotency` |
+| C (essence–esse) | B6: whatever is contingent at `w` has esse distinct from essence | simplicity `78246da5`, pure act | `firstMoverNecessaryByEsseIdentity` |
+
+B0 is warranted only at the world at which the motion vocabulary is read;
+asserted at every accessible world it would make every mover necessary. Its
+"moves" is the frame's `MovesIn` (DEF-MOTION-AS-REDUCTION, CAUSE_1), which B0
+and B0' deliberately do not link: the same arguments use CAUSE_2 (causing
+esse) as a different relation, and the sense check cannot tell two relations
+from an equivocation. The missing link is a known definition-coverage gap,
+recorded in the B0 and B0' statements and in this note. Irreflexivity and the
+closure `c71c068c` must be read on one strict sense of `grounds`; under the
+reflexive existence-requirement reading of #1593 the closure holds trivially
+and irreflexivity fails.
+
+B2 is also derived from B6, the selected-world existence-to-act contract
+`0436de86` and the q.3 a.4 reading `33ad148b`
+(`contingentEsseCauseFromDistinctEsse`). The grounding endpoint projects onto
+the existing endpoint `593d7307` (`NecessaryActualFirstPureActAt`), consumed by
+the necessary-first-attributes argument `21efa7c9`, so the First Way now
+reaches that endpoint through its own witness, with no identification bridge
+B7. That endpoint does not itself reach the root in the current frontier.
+Two further projections give this stage's node STMT-NECESSARY-CONCRETE-AT
+(`b19ffd92`), which does, a support option through the First Way's witness: from the
+grounding endpoint (result `b6d7c434`) and from the pure-act endpoint with
+B0' (result `402e5643`). `frontier-diff` against the merge base `08d5aa22`:
+10 verified support alternatives added, 6 bare premises added (B0, B0',
+irreflexivity, B4, B2 ∨ B4, B6), route cost unchanged, nothing closed.
+Results: A ∨ B `563d596e`, A `8cc169e3`, B `52df4a80`, C `e874589f`,
+grounding `99ec0afb`, B2 from B6 `b46b88c8`, projection to `593d7307`
+`930c6d8c`, controls `2b71a3ad`. Model 12 shows that this does not identify
+the first mover with every necessary root: with three beings, the mover and an
+idle being are two necessary actual first pure-act roots, only one a mover.
+
+**What is new and what is reused.** New: the same-witness compositions, the
+bridges B0, B0', B2, B2 ∨ B4, B4, B6 and the irreflexivity statement (an
+existing definition), and the models. Reused unchanged: firstness, pure act,
+B3, the grounding closure and grounding-priority (the last two already carry
+the existing necessary-root derivations), simplicity and the q.3 a.4 reading.
+The grounding route uses no well-foundedness, inhabitedness or whole-roster
+premise: the First Way's firstness replaces the minimal-element step.
+
+**Discriminating models** (`Model.Models`; finite frames with two respects,
+esse and a respect of motion, structural surrogates, not metaphysical
+possibility; in every model the moved thing is in POTENCY_1 in the respect in
+which it is moved, as motion-as-reduction requires). M1/M2/M4 coincide in
+`bruteFirst`: a first mover that is first in being, pure act, simple with esse
+not distinct from essence, satisfying both existing potency/modality bridges
+nonvacuously (the moved thing is in potency to heat and can fail to be hot;
+the mover can fail to be in substance and possibly is not), yet contingent and
+uncaused. It falsifies B2, B4, the esse-tied half B4b, B2 ∨ B4, B6 and the
+grounding closure, so pure act alone, essence–esse identity alone and
+firstness alone each leave necessity open. M3 (`conserved`): a pure-act first
+mover caused in esse by a prior being and contingent; firstness fails, so
+POTENCY_1-pure act does not exclude received esse (that would need receptive
+potency, DISAMB-RECEPTIVE-POTENCY, or B5). Models 2–10 omit each other premise
+in turn; model 11 satisfies every premise of every route and both endpoints,
+with B2, B3, B4 and B6 applied nonvacuously to the contingent moved thing;
+model 12 uses a third, idle being for the distinct-roots boundary.
+
+**Shared dependencies (no independence claimed).** All five routes share the
+*prima via* conclusion, B0 and the pure-act conjunct. Firstness `74eb9113`
+enters A, A ∨ B and the grounding route directly, route C through the existing
+derivation of simplicity, and route B through two of the five registered
+derivations of pure act (`c6e42107`, `3e2366b5`). The other three do not
+take it directly: the PRIOR_4 route `9218ce58` (whose bridge `954fe018` is,
+given its sibling, the content of firstness), the Λ.7 route `de01c6e3` and
+the temporal route `e67e0be2`. Route B with the Λ.7 or temporal derivation is
+thus the one combination that avoids the firstness premise. B2 supported through B6 shares B6 with route C. B3 `ee74c678` is itself
+derived through grounding-priority `7a63a3fe`, which the grounding route uses
+directly. The routes are therefore alternative *modal* bridges on one shared
+first-mover base, not independent arguments for necessity.
+
+**Warrant and rivals (substantive objection standard).**
+- B4 (route B): no substantive objection to B4 as typed is identified. That
+  the two channels of DISAMB-POTENCY-IN-SUBJECT-VS-IN-ANOTHER (mutability in
+  the subject, mutability through another's power) are distinct shows only
+  that B4 is not a conceptual truth; the `conserved` model shows only that B4
+  is needed. A counterexample to B4 as typed would have to be a contingent
+  being in POTENCY_1 in no respect, which presupposes the denial of the lead's
+  target, so it is not independent evidence against B4. Whether such a being
+  is possible is the open B5/receptive-potency question (next test 3). B4 is
+  in POTENCY_1 in *any* respect, with no tie to esse or to non-being; the
+  esse-tied version is B4a ∧ B4b (law 2). With excluded middle B4 is
+  equivalent to "every pure-act being existing at `w` is necessary at `w`"
+  (law 3), so route B relocates the lead's question into B4 rather than
+  answering it. Its warrant is the open question, unassessed; nothing here
+  ranks it below the other bridges.
+- B2 ∨ B4 is the weakest of B2, B4 and B2 ∨ B4 *as typed*. It is not the q.9
+  a.2 pair of channels: reading it so would need two unrecorded OPEN bridges,
+  contingency at `w` gives mutability in some way (MUTABLE_3), and another's
+  power over a thing's esse (MUTABLE_2, `MutableThroughAnother`) gives a
+  distinct cause of its esse.
+- B2 and B2 ∨ B4: the standing rival is a brute contingent first being
+  (`bruteFirst`; the existing `SpineRivalsRootEsse.ContingentRootSurvives` at
+  the necessary-root node). Its price is the same as there: a contingent
+  existent that is in POTENCY_1 in no respect and has no distinct cause of its
+  esse, with no explanation of its existence. No new rival is introduced; the
+  First Way route meets the same crux as the necessary-root route.
+- B6: essence–esse identity in the q.3 a.4 profile is equality of represented
+  principles and carries no modal force by itself (`bruteFirst`;
+  DISAMB-ESSENTIAL-VS-ACCESSIBLE-EXISTENCE separates own-nature existence from
+  accessible-world necessity). B6 is the explicit bridge. Its positive warrant
+  is the classical thesis that what is its own act of being cannot lack being;
+  no substantive objection specific to B6 beyond the general brute-contingency
+  rival is identified here.
+- B0, B0', irreflexivity: no substantive objection identified (scope notes
+  above: B0 only at the reading world; irreflexivity on the closure's strict
+  sense of grounding).
+
+**Provisional judgment (2026-11-22; challenged and repaired 2026-11-23).** The
+inference from the First Way's mover to its necessary existence is valid
+under each recorded bundle (Lean-checked; independent semantic challenge on PR
+#1870 accepted every theorem and the same-witness claim). Pure actuality on
+the adopted POTENCY_1 does **not** by itself entail necessity (M1/M3); it does
+work toward necessity only together with firstness, by closing the potency
+disjunct of B2 ∨ B4, and on route B only through B4, which is classically the
+target itself at `w`. Comparisons with stated reasons: A ∨ B dominates A,
+since A's bundle entails A ∨ B's (B2 implies B2 ∨ B4, the rest is shared);
+the grounding route adds no modal crux beyond the closure `c71c068c` already
+on the necessary-root route. Other comparisons (A ∨ B against B or C,
+grounding against A ∨ B) are not decided here: they trade firstness and B3
+against B4, or B0', irreflexivity and grounding-priority against B2 ∨ B4, B3
+and pure act, and none of these premises has an assessed warrant differential;
+logical weakness alone is not greater warrant. The result is genuine cross-family convergence on one
+witness (the First Way's mover meets the necessary-root endpoint), but not
+independent corroboration: it adds no warrant against the brute-contingency
+rival beyond what the existing closure premises carry. Revision conditions: a
+defended brute contingent first being, or a reading of firstness weaker than
+SIMPLY_PRIOR_1 firstness, would remove the routes' force; a defense of B2 ∨ B4
+(every contingent being is in some potency or has a distinct cause of its
+esse) would strengthen both this and the necessary-root route.
+
+**Duper discovery** (`--premise-pool all`, 8 candidates, 100000
+heartbeats). Before registration, on `593d7307` and `b19ffd92`: 0 proved, 2
+unresolved; the First Way statements were not retrieved (they have no world
+or profile carrier). After, on the six new statements, `593d7307` and
+`b19ffd92`: 2 proved (both reported as discoveries, none filtered as known),
+6 unresolved. The two are the grounding endpoint implying the pure-act
+endpoint (an unregistered projection) and B4 implying B2 ∨ B4 (law 5 of the
+controls). B2, B4 and B6 stay unresolved as expected (independent primitives
+by the models); the q.3 a.4 support of B2 and the two projections were not
+found (retrieval and carrier misses: the profiles are built from the frame's
+fields, not projected from a parameter).
+
+**Next tests.** (1) Weigh B2 ∨ B4 against brute contingency
+at matching scope with the necessary-root closure `c71c068c` (same crux, one
+assessment). (2) Route B with the Λ.7 (`de01c6e3`) or temporal (`e67e0be2`)
+pure-act derivation avoids `74eb9113` but rests entirely on B4; assess whether
+those derivations' senses of unmovedness and potency match the POTENCY_1 that
+B4 uses (sense check before composing). (3) B5: whether receiving esse is a
+receptive potency excluded by an extended pure-act sense, which would turn M3
+into a countermodel of that sense only. (4) Uniqueness: whether the existing
+root-uniqueness premises identify the First Way's root with every necessary
+root (model 12 is the boundary).
 
 ## Stage two: that being is God
 
@@ -3066,3 +3479,16 @@ of scope, and `b35ce743` is not among them); the route-cost sentence of
 `f3722322`'s blocker; `9c05bc24`'s "refuted
 bridge"; and the bare "all five survive" of `c2ffef68` where it is read as
 weight against F2 or A1.
+
+## Conditional nonlocation branch from the modal root (2026-11-22)
+
+The new [spacetime-root bridge](spatial-translation-and-reason.md#cross-family-result-contingent-spacetime-and-underived-nonlocation-2026-11-22)
+takes `STMT-NECESSARY-CONCRETE-UNDERIVED-AT` as an existing premise
+and adds an actual contingent concrete spacetime whole and the
+**same-relation** whole-to-occupant existential-grounding premise. It
+concludes that the **original necessary underived witness** is unlocated
+in the dimensive sense (`SPATIOTEMPORAL_2`). It does **not** claim
+that the underived witness has already been carried into the `GOD_4`
+conclusion as the same individual; that consumer and the physical-ontology
+bridge remain open. This does not revise the previously reviewed
+modal-spine assessment.

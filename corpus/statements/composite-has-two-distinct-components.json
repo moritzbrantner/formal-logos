@@ -2,7 +2,7 @@
   "id": "6b80cfe4-82e1-53d3-9c7c-6564e52a25de",
   "label": "Every composite has at least two distinct components",
   "legacy_id": "STMT-COMPOSITE-HAS-TWO-DISTINCT-COMPONENTS",
-  "paraphrase": "Every composite has at least two numerically distinct components. Stronger than STMT-COMPOSITE-HAS-COMPONENT-OTHER-THAN-ITSELF, which gives only one component other than the composite.",
+  "paraphrase": "Every composite x has two components a and b with a ≠ b. This is the weaker numerical-diversity consequence of the q.11 a.1 divided-parts reading: the Lean formula does not require a ≠ x or b ≠ x, hence does not by itself assert genuine proper parts. That the uniter-to-esse bridge stays independent when both components are proper is checked by a COMPOSITE-UNITING-CAUSE-CONTROLS finite interpretation; no proper-part principle is asserted. Stronger than STMT-COMPOSITE-HAS-COMPONENT-OTHER-THAN-ITSELF in the number of mutually distinct components, not by a proper-part predicate.",
   "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article7Uniting.CompositeHasTwoDistinctComponentsReading",
   "definition_ids": [
     "98ac7aa1-54cb-553c-826b-2a69257f6cbe",

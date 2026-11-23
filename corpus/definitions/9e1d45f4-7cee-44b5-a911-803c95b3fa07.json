@@ -1,0 +1,9 @@
+{
+  "id": "9e1d45f4-7cee-44b5-a911-803c95b3fa07",
+  "label": "No reflexive actual giving of a bearer's own being",
+  "term": "strict non-self-causation of being",
+  "lean_declaration": "TruthCore.Causality.MetricBeginningArrival.NoSelfGivingOnAccessible",
+  "definition": "For each world v accessible from selected w, every candidate c and moment t, f.GivesAt v c c t is false. This is irreflexivity of the strict concurrent giving-of-being relation; it is not a general ban on circular explanatory structures, temporal feedback, self-maintenance or members standing in other causal relations.",
+  "note": "Primitive analytic candidate; interpreted as a standard strict efficient-/esse-causation constraint rather than a logical law or an assumption that a necessary being exists. Its metaphysical warrant is assessed separately.",
+  "basis": "stipulative"
+}

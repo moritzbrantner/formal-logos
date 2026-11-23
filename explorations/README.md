@@ -25,3 +25,7 @@ kind = "derivation"   # derivation | source | bridge | rival
 status = "mapped"     # mapped | certified | rejected
 note = "why this step holds or what it needs"
 ```
+
+`explorations/conjectures/*.toml` are not exploration maps: they are candidate
+lists for the target-free conjecture pilot (`scripts/discover_conjecture.py`,
+docs/discover.md, "Target-free conjecture pilot").

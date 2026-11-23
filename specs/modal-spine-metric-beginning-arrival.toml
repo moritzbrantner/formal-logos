@@ -34,6 +34,46 @@ lean = "Control.Certificate"
 paraphrase = "Closed mathematical controls, every individual counted concrete. (1) In the beginningless integer history GrimReaperPatchwork.Control.pivot with the identity clock, contingent concrete things are possibly present and no accessible history is a BEGINS_2 history. (2) In MetricGrimReaper.Control.openBelow (positive real times, identity clock; every individual exists and is present at every moment of world true, nothing exists at world false): Euclidean access and reflexivity at world true hold; B1 holds in sense BEGINS_2 and fails in sense BEGINS_1; B2 in sense BEGINS_2 fails for the empty totality-cause relation; and for every grounding relation no concrete individual is necessary at either world. (3) In openBelowSource (the same with one more individual existing at both worlds and present at no moment, the totality cause at world true): B1 and B2 in sense BEGINS_2, Euclidean access and reflexivity at world true hold, and for every grounding relation a concrete individual is necessary at world true. These are statements about these interpretations only."
 definitions = ["978d416c-650f-4845-a839-47ce82822bac", "816c7ad5-354c-4b80-88f7-1b5ba3e5f446", "1972f626-2de1-4d89-b1d0-46645eabe884", "77254d4d-c318-40a3-b2a1-5c922632f011", "DEF-KANT-MODAL-CONTINGENCY"]
 
+[[statement]]
+id = "e4a3b917-7c61-49e3-a8fa-dc02155bbf80"
+label = "If BEGINS_2 is possible, possibly with an actual external concurrent giver of contingent being"
+lean = "ConcurrentFiniteDurationCausalOpportunity"
+paraphrase = "OPEN analyst premise, attribution deferred, in the memberwise concurrent-esse sense of causation: if a BEGINS_2 populated history is accessible from the selected world, then an accessible BEGINS_2 populated history has an actually existing concrete individual c outside the contingent concrete inventory such that the shared CausalityFrame.GivesAt relation holds from c to every contingent concrete member at every moment of its presence, with at least one actual exercise. Unlike the existing B2's unconstrained totality-cause marker 256b5bab, this source exercises an explicit causal primitive within its possible world. GivesAt is taken on its strict esse-giving reading (definition 158301bc); the universal clause is CAUSE_OF_BEING_2 restricted to temporally present contingent concreta (disambiguation 88a8fba7). This is stronger than holistic totality causation and still includes the possibility of a necessary external bearer. It does not establish giving of being in the actual world, require a first moment, or infer physical realizability from modal syntax."
+definitions = ["c0d65b45-33bb-47a2-b16b-48a493a762cb", "028c1066-481d-4eb4-a96e-01ad62f85a2c", "77254d4d-c318-40a3-b2a1-5c922632f011", "97f37f5c-7f82-5077-9bb9-6cfc8673631d", "158301bc-9585-4145-be60-34f08c9f922c"]
+disambiguations = ["88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d"]
+
+[[statement]]
+id = "34b957cd-73e6-4a10-8fa1-958a4679e346"
+label = "A necessary concrete source at w gives being in an accessible history"
+lean = "NecessaryConcreteWithPossibleConcurrentGivingAt"
+paraphrase = "A stronger analyst interpretation of the necessary-concrete conclusion: in the selected world w there is one actual concrete individual c existing there and in every accessible world, and in some history v accessible from w the SAME c actually gives being, by the shared CausalityFrame.GivesAt primitive, to every contingent concrete member at each moment of its presence with at least one exercise. Necessary existence at w does not imply actual giving at w; nor does giving imply uniquely being God or the ultimate ground. Reuses the BEGINS_2 causal opportunity premises without replacing the weaker root node."
+definitions = ["a6a2ca46-5f70-4db0-8359-9ae32b0eb583", "c0d65b45-33bb-47a2-b16b-48a493a762cb", "028c1066-481d-4eb4-a96e-01ad62f85a2c", "1b8baf77-84fa-5513-a138-7fa14840dd87", "e1ff44df-ed97-5990-8424-1abd720f23ea", "158301bc-9585-4145-be60-34f08c9f922c"]
+disambiguations = ["7507d645-874d-5434-add8-2f49c2801d36", "88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d"]
+
+
+[[statement]]
+id = "2a4d99d8-cb0c-429a-89e9-2a3b02f0526e"
+label = "Possibly a memberwise concurrent giver of contingent being without assumed externality"
+lean = "NonexternalConcurrentGivingOpportunity"
+paraphrase = "OPEN analyst premise: if a BEGINS_2 populated history is possible, an accessible BEGINS_2 history contains an existing concrete c actually giving the being of each of its contingent concrete members at each moment of presence, with a nonvacuous exercise. The source is NOT stipulated external to the inventory or modally necessary. The commitment to a possibly necessary concretum is not thereby removed: the universal giving clause ranges over the source itself whenever it is contingent and present at some moment, so under no-self-giving 0e473dc4 and temporal presence d3184c66 this premise is equivalent to the external B2 e4a3b917 (nonexternalIffExternalOpportunity; the converse needs neither). This memberwise universal-giving interpretation, with GivesAt on its strict esse-giving reading, is stronger than a cause of the totality taken holistically."
+definitions = ["d0757d5d-5f68-4e2e-9bd8-4ed8f57dc5ee", "c0d65b45-33bb-47a2-b16b-48a493a762cb", "028c1066-481d-4eb4-a96e-01ad62f85a2c", "158301bc-9585-4145-be60-34f08c9f922c"]
+disambiguations = ["88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d"]
+
+[[statement]]
+id = "0e473dc4-77c5-4d5d-899f-93e29907b198"
+label = "No direct self-causation in strict concurrent giving of being"
+lean = "NoSelfGivingOnAccessible"
+paraphrase = "OPEN primitive strict being-causation principle: in all histories accessible from the selected world, a bearer never directly gives its own being to itself via the shared CausalityFrame.GivesAt relation. No claim that a different relation, physical feedback, or self-maintenance is prohibited."
+definitions = ["9e1d45f4-7cee-44b5-a911-803c95b3fa07", "c0d65b45-33bb-47a2-b16b-48a493a762cb", "158301bc-9585-4145-be60-34f08c9f922c"]
+
+[[statement]]
+id = "d3184c66-0392-4b0a-bbb7-3ad9a805d629"
+label = "Every accessible contingent concrete existent occurs at some time in its history"
+lean = "ContingentConcretaTemporallyPresent"
+paraphrase = "OPEN bridge between world-relative existence and temporal presence: every contingent concrete individual existing in an accessible history has at least one moment at which history.IsAt holds. It does not require presence at now or a first moment. It permits timeless necessary concreta and EXCLUDES contingent atemporal concreta: no contingent concrete individual existing in an accessible history is never temporally present there. That exclusion is the work the premise does in result 9e5124a2 (control unmanifestSourceSeparatesTemporal)."
+definitions = ["67a624ba-11f6-4535-8154-8295b2d62765", "6e811e85-b983-5988-b20a-f4f3ee83c50e", "97f37f5c-7f82-5077-9bb9-6cfc8673631d"]
+
+
 [[argument]]
 id = "Possible finite-duration beginning from metrically finite populated pasts"
 theorem = "possiblyBeginsFiniteDurationOfMetricallyFinite"
@@ -93,3 +133,57 @@ object_kind = "statement"
 object_id = "Possibly, time before each populated moment is finite (BEGINS_2, supplied clock; CLOCK_1 intended)"
 verification_result_id = "A possible first-moment beginning is a possible finite-duration beginning"
 note = "Linear time, any real clock. Strict: MetricBeginningArrival control 2 (positive reals) has a possible finite-duration beginning and no possible first-moment beginning."
+
+
+[[argument]]
+id = "7649d8aa-31c2-4bdf-9b52-5b874366c21a"
+label = "Actual necessary source with possible causal exercise from BEGINS_2 opportunity"
+theorem = "necessaryActualWithPossibleConcurrentGiving"
+premises = ["1b1462e6-c285-448c-87e2-3053bc05a341", "2b20b5af-d653-56ba-8001-35903fb3d1ea", "951a2235-14e5-432e-8365-0efce1b8659d", "e4a3b917-7c61-49e3-a8fa-dc02155bbf80"]
+conclusion = "34b957cd-73e6-4a10-8fa1-958a4679e346"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "34b957cd-73e6-4a10-8fa1-958a4679e346", role = "conclusion"}]
+rule = "Reconstruct the external causal opportunity witness; retain actual GivesAt on the same c in v; transport rigid necessity to w using Euclidean-at-w and actual reflexivity"
+meaning = "The stronger causal B2 is applied to a possible BEGINS_2 populated history, yielding one source c with actual memberwise GivesAt exercise in a witness history v. Externality of that same c among contingent concreta implies its de re necessity in v, and Euclidean-at-w plus actual reflexivity transport its necessary existence to w without changing c or projecting the causal exercise to w. This is a non-transcription conditional theorem retaining real causal content in a possible world, not a proof of B2's warrant."
+comparator_theorems = ["possiblyNecessaryConcurrentGiver", "inertGivingSeparatesOpportunity", "functioningConcurrentOpportunity", "mixedPossibleGivingWithoutActualGiving"]
+definitions = ["008cb21a-256c-5a90-822c-acd4591d699a", "375676b0-a295-4a17-a9e4-3db23319d517", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-KANT-MODAL-CONTINGENCY", "5f4f8c56-51f8-43e2-8862-6e3152609c3c", "f8948e28-b13a-5244-95f1-41a05cd4fff2", "735d59a6-61de-5e43-bcf6-4ff64bceb90d", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "1972f626-2de1-4d89-b1d0-46645eabe884", "7c05f92b-907d-4c9b-b219-fc4054c9912b", "97f37f5c-7f82-5077-9bb9-6cfc8673631d", "6e811e85-b983-5988-b20a-f4f3ee83c50e", "c0d65b45-33bb-47a2-b16b-48a493a762cb", "028c1066-481d-4eb4-a96e-01ad62f85a2c", "77254d4d-c318-40a3-b2a1-5c922632f011", "a6a2ca46-5f70-4db0-8359-9ae32b0eb583", "1b8baf77-84fa-5513-a138-7fa14840dd87", "e1ff44df-ed97-5990-8424-1abd720f23ea"]
+
+[[argument]]
+id = "f468780f-59a0-4c49-a480-e496642028f3"
+label = "An operative modal source entails the stage-one existence node"
+theorem = "necessaryConcreteOfPossibleConcurrentGiver"
+premises = ["34b957cd-73e6-4a10-8fa1-958a4679e346"]
+conclusion = "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "b19ffd92-01bd-5c0b-9643-e7407137ea5e", role = "conclusion"}]
+transcription = "instantiation"
+rule = "Project the necessary concrete source c from the enriched causal conclusion to the existing necessary-concrete endpoint without changing witness identity"
+meaning = "The SAME rigid source c from the enriched modal causal conclusion is a necessary concrete being at w; the exercise-of-GivesAt conjunct is retained in the premise but not inferred as actual-world efficacy. A verified logical weakening, not independent metaphysical evidence. The existing stage-one necessary-concrete node retains its separate direct premise and other routes."
+definitions = ["008cb21a-256c-5a90-822c-acd4591d699a", "375676b0-a295-4a17-a9e4-3db23319d517", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-KANT-MODAL-CONTINGENCY", "a6a2ca46-5f70-4db0-8359-9ae32b0eb583", "c0d65b45-33bb-47a2-b16b-48a493a762cb", "028c1066-481d-4eb4-a96e-01ad62f85a2c", "1b8baf77-84fa-5513-a138-7fa14840dd87", "e1ff44df-ed97-5990-8424-1abd720f23ea", "baddf770-36bf-542f-bb3c-2297342d5452", "f8948e28-b13a-5244-95f1-41a05cd4fff2", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+disambiguations = ["7507d645-874d-5434-add8-2f49c2801d36", "dc40914a-48c9-48a2-941e-40b96d847a71", "83264cf5-01fe-52fc-9a00-eeb024f6496e"]
+
+[[relation]]
+id = "55be342a-5246-4f71-ad87-3cc4386f7cb1"
+label = "Necessary concrete with possible causal operation strengthens necessary concrete"
+subject_kind = "statement"
+subject_id = "34b957cd-73e6-4a10-8fa1-958a4679e346"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
+verification_result_id = "e43f423e-919f-4c3b-a6b8-8cd87a99e7e7"
+note = "Same-rigid-witness logical weakening only: the stronger possibility-of-exercise claim entails the original necessary-concrete node for any grounding profile. No strictness or metaphysical warrant is established."
+
+
+[[argument]]
+id = "abbbce81-c3f0-4754-96f5-e0f304c5334d"
+label = "Derive external causal opportunity from a nonexternal giver and no self-causation"
+theorem = "externalOpportunityOfMemberwiseGiving"
+premises = ["2a4d99d8-cb0c-429a-89e9-2a3b02f0526e", "0e473dc4-77c5-4d5d-899f-93e29907b198", "d3184c66-0392-4b0a-bbb7-3ad9a805d629"]
+conclusion = "e4a3b917-7c61-49e3-a8fa-dc02155bbf80"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Apply a temporal occurrence of a hypothetically contingent universal giver to the memberwise GivesAt law; self-giving contradicts strict irreflexivity, so the same existing giver is noncontingent and external"
+meaning = "A stronger non-transcription conditional support option for the previously open causal B2. A possibly existing concrete memberwise source is NOT assumed external. If every contingent concrete existing source occurs at some moment and strict giving of being is irreflexive, the source cannot be contingent (otherwise the all-member causal law forces it to give its own being at its moment). By modal contingency's definition, a concrete existent that cannot be contingent is necessary at that possible history and distinct from all contingent concreta there. Therefore the original memberwise B2 with externality follows. The commitment to a possibly necessary concretum is relocated, not removed: the converse holds by dropping the exteriority conjunct (nonexternalOpportunityOfExternal), so under 0e473dc4 and d3184c66 the nonexternal premise 2a4d99d8 and the external B2 e4a3b917 are equivalent (nonexternalIffExternalOpportunity). A rival who denies that a necessary concretum is possible, while keeping both principles, rejects 2a4d99d8 exactly as e4a3b917; the route makes that rival's cost explicit (no concrete thing could give being to every contingent concretum of a possible BEGINS_2 history) without discriminating against it. GivesAt is read strictly (definition 158301bc); the universal clause is CAUSE_OF_BEING_2 over the frame restricted to temporally present contingent concreta (concurrentTotalityGiving_iff_sustains, disambiguation 88a8fba7). The memberwise and temporally instantiated premises are explicit and remain OPEN; the theorem does not establish the metaphysical possibility of the universal giver, actual-world causal exercise, or a holistic totality cause."
+comparator_theorems = ["necessaryOfUniversalMemberwiseGiving", "selfGivingSeparatesNoSelf", "unmanifestSourceSeparatesTemporal", "nonexternalOpportunityOfExternal", "nonexternalIffExternalOpportunity", "concurrentTotalityGiving_iff_sustains"]
+definitions = ["6e811e85-b983-5988-b20a-f4f3ee83c50e", "97f37f5c-7f82-5077-9bb9-6cfc8673631d", "008cb21a-256c-5a90-822c-acd4591d699a", "375676b0-a295-4a17-a9e4-3db23319d517", "d0757d5d-5f68-4e2e-9bd8-4ed8f57dc5ee", "c0d65b45-33bb-47a2-b16b-48a493a762cb", "028c1066-481d-4eb4-a96e-01ad62f85a2c", "9e1d45f4-7cee-44b5-a911-803c95b3fa07", "67a624ba-11f6-4535-8154-8295b2d62765", "77254d4d-c318-40a3-b2a1-5c922632f011", "158301bc-9585-4145-be60-34f08c9f922c"]
+disambiguations = ["88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d"]
+

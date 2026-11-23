@@ -1,0 +1,12 @@
+{
+  "id": "969ba217-e22b-404c-8746-8e87dd4afdf5",
+  "label": "First Way necessary first root witnesses the stage-one NECESSARY_2 CONCRETE_6 node (inference)",
+  "input_statement_ids": [
+    "11958874-aa8f-4b09-97ba-4f6028d26cd9"
+  ],
+  "output_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+  "rule": "Existential projection: keep concreteness, existence at w and necessity",
+  "meaning": "The First Way's first mover that is a necessary actual first pure-act root is in particular a concrete individual existing at w and at every world accessible from w, on the same profile: the stage-one node of the modal spine. This gives that root-route node a support option through the First Way's own witness and the existing grounding closure, with no well-foundedness, inhabitedness or whole-roster premise.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

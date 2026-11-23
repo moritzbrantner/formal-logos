@@ -1,0 +1,11 @@
+{
+  "id": "e874589f-9939-4cbe-ade1-5745c924ca8a",
+  "label": "First Way mover is necessary, from simplicity and distinct esse for contingents",
+  "argument_id": "b9368ce9-32a7-40e6-b7d7-40b04fb43f82",
+  "challenge_module": "TruthCore.Results.Causality.FirstMoverNecessity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FirstMoverNecessity.Solution",
+  "theorem": "TruthCore.Results.Causality.FirstMoverNecessity.firstMoverNecessaryByEsseIdentity",
+  "comparator_config": "results/e874589f-9939-4cbe-ade1-5745c924ca8a/comparator.json",
+  "status": "solution-present",
+  "description": "Same-witness conditional result, essence-esse route: the First Way's first mover is necessary at w from its simplicity and B6. Not a transcription: the conclusion is reached by contraposing B6 against the simplicity reading's esse-essence clause. Establishes no premise. B6 is the explicit open modal bridge from 'esse not received/distinct' to 'cannot fail to be at accessible worlds'."
+}

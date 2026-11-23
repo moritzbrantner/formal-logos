@@ -31,18 +31,34 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
    corpus statements: nothing else enters a goal as a hypothesis.
 3. **Retrieval.** `scripts/StatementConstants.lean` exports every
    declaration's parameter names and the project constants it mentions,
-   closed transitively. A candidate must share a parameter name and project
-   vocabulary or a definition with the target. It is ranked by the share of
-   its parameters the target also has (type fit), the share of its constants
-   the target uses and of the target's constants it uses, shared
-   `definition_ids`, the same module and a `strengthens` relation with the
-   target. A candidate parameter that shares no name with the target's but is
+   closed transitively. A candidate must share project vocabulary, a
+   definition or an authored sense (below) with the target, and have a
+   parameter that can join one of the target's: the same name, a projection
+   (below) or the same whole-binder sense tag. A shared parameter name alone
+   never admits a candidate. It is ranked by the share of its parameters the
+   target also has (type fit), the share of its vocabulary the target uses
+   and of the target's vocabulary it uses, shared `definition_ids`, the same
+   module and a `strengthens` relation with the target. The vocabulary is
+   the project constants together with the senses the whole binders are
+   tagged with (parameter-level sense tags, below): a relation binder such as
+   `MoreIn : B → B → R → Prop` mentions no constant, and its authored sense
+   says which concept it expresses, as a constant would (#1845). Tags are
+   read, never inferred: an untagged binder contributes nothing, and a
+   partial-application tag (`CausesIn _ _ esse`) neither admits nor fits.
+   A candidate parameter that shares no name with the target's but is
    a structure with a field of a target parameter's type (`m : Profile W B`,
    whose `m.ontic : Ontic W B`, against `o : Ontic W B`) counts toward the type
    fit, adds the same bonus as a strength order (the structure's other fields
    otherwise dilute its constant overlap) and admits the candidate, since the goal builder may bind through that
    projection (step 4); the export lists each parameter's type head and, for a
-   structure, its fields' type heads. The best `--candidates N` (default 8) form the goal. When the target
+   structure, its fields' type heads. A projecting parameter that the
+   candidate uses *only* through fields of the target parameter's type
+   (`OnticFrameKT (m : Profile W B) := FrameSatisfies .KT m.ontic.frame`
+   uses `m` only through `ontic`) makes the candidate a statement about that
+   field's value: the structure's other fields are no part of it, so their
+   vocabulary, which still dilutes the overlap, says nothing against it, and
+   it gets the same bonus once more (`binder_uses` in the export, #1845).
+   The best `--candidates N` (default 8) form the goal. When the target
    and a candidate carry different senses of one term (parameter-level sense
    tags, below), the registered bridge statements for those senses join the
    goal as optional premises, reported as such.
@@ -90,8 +106,11 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
    statement over an arbitrary binder. Three outcomes are distinguished:
    a unique choice is flagged `projection_binding` (informational); a target
    binder with more than one candidate projection (two fields or two
-   structures of its type) is rejected as `projection_ambiguous`, since picking
-   the first that closes the goal is identification by type alone; and a
+   structures of its type) among the premises minimization keeps is rejected
+   as `projection_ambiguous`, since picking the first that closes the goal is
+   identification by type alone (an alternative that only a dropped premise
+   introduced is no part of the theorem: it is listed as
+   `dropped_alternatives`, #1845); and a
    choice whose structure premise minimization drops (the target then follows
    from other premises about the projected field alone) is rejected as
    `projection_unused`, reported only when no other choice succeeds. Rejected
@@ -99,7 +118,21 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
 5. **Search.** The hypotheses and the conclusion are delta-expanded through
    every project definition whose type ends in `Prop` (not projections or
    instances), and `duper [*]` runs under `--heartbeats` (thousands, default
-   100000, shared by Duper's portfolio). With `--zipperposition PATH` (or
+   100000, shared by Duper's portfolio). When that fails and the goal
+   reaches a definition of a value (its type ends in a value type such as
+   `Formula Unit`, not in `Prop` or a `Sort`: `convergenceFormula`,
+   `Formula.iterBox`), Duper is tried once more after rewriting those
+   definitions by their defining equations (`simp only [...] at *`, prover
+   `duper+equations`): delta-expansion leaves a closed computed term such as
+   `convergenceFormula 1 0 1 1`, built by recursion, unevaluated, and no
+   prover reads it; its equations evaluate it to constructor form, and fire
+   on a recursive definition only where its argument is a constructor
+   (#1845). The plain attempt comes first, so a proof that treats such a
+   definition as an opaque symbol is kept; the fallback costs at most one
+   more search per attempt, and a definition by well-founded recursion whose
+   equations keep rewriting only exhausts that attempt's heartbeats. The
+   outcome lists the delta-expanded definitions as `unfold` and, when the
+   closing proof needed them, the rewritten ones as `equations`. With `--zipperposition PATH` (or
    `TRUTH_ZIPPERPOSITION`) lean-auto is tried next, with Zipperposition as
    premise selector and Duper as its native prover; Duper then re-proves the
    goal on the selected core, so the Solution never needs the external prover.
@@ -119,7 +152,9 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
    weaker one fails, the original stays a discovery, flagged with the reason
    (`weakening_rejected`).
 8. **Certification.** Each discovery is rendered as plain theorem text
-   (binders with full names, hypotheses, conclusion, `delta …; duper [*]`)
+   (binders with full names, hypotheses, conclusion, `delta …; duper [*]`;
+   when the fallback closed the goal, `delta …`, `try simp only […] at *`,
+   `all_goals duper [*]`; the statement itself unchanged)
    and elaborated in a separate Lean run with `#print axioms`. A discovery
    whose text fails or whose proof uses an axiom other than `propext`,
    `Classical.choice` and `Quot.sound` is filtered (`certification`, `axioms`).
@@ -128,12 +163,13 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
 
 | Filter | Rejects when | Kind |
 | --- | --- | --- |
-| `known` | the target follows by composing verified arguments from the minimal premises (forward-chaining closure; covers supersets of an existing argument's premises) | reject |
+| `known` | the target follows by composing verified arguments from the minimal premises (forward-chaining closure; covers supersets of an existing argument's premises). A proof that uses `Classical.choice` has excluded middle without a premise stating it: an argument that lists excluded middle (`ee4ab504`, the one recorded logical-background statement, `CLASSICAL_BACKGROUND`) as an explicit premise matches when its other premises are among the found ones (#1845) | reject |
+| `implicit_excluded_middle` | the `known` match above needed excluded middle, which the classical proof supplied implicitly; the report says so | flag |
 | `transcription` | one premise application closes the folded goal (the `truth prove-sweep` probe, invariant 16) | reject |
 | vacuity | `False` follows from the minimal premises over their own binders only (no element or instance borrowed from the target or a dropped premise): reported as an **incompatibility** (the inconsistent core, minimized), never as support; filtered (`axioms`) when a contradiction proof uses an axiom outside the three allowed | separate kind |
 | `literal_negation` | the inconsistent core is a premise and its literal negation: one member's declaration unfolds definitionally (delta, default transparency) to `¬` the other's, as `ActNotPriorInTime F := ¬ ActPriorInTime F` does, recorded rivals included. Such a core is inconsistent by construction, neither an incompatibility nor support, and its goal is not counted as proved. A contradictory pair that takes logic to recognize (`∀ y, S y` against `∃ y, ¬ S y`) is not literal and stays an incompatibility | reject |
 | `known` (incompatibility), `duplicate` | the inconsistent core contains recorded rivals (`alternative_to`, `attacks`); or an earlier goal already found the same core | reject |
-| `senses` | the argument uses two senses of one term (`argument_term_senses`, the check `truth check` applies) and no premise is a registered bridge between them | reject |
+| `senses` | the argument uses two senses of one term (`argument_term_senses`, the check `truth check` applies) and neither a premise nor the conclusion is a registered bridge between them. Whatever role a bridge was registered with, it bridges as a premise when it is one, and as the conclusion when the argument concludes it (it then derives the bridge, `role: "conclusion"`), as `truth check` accepts (#1845) | reject |
 | `domain_by_name` | a carrier or structure bundle was identified with one of another module by name only | reject (listed as needing a tag or bridge) |
 | `sense_bridge` | a premise is the registered bridge between the senses it mixes | flag |
 | `projection_binding` | the goal closed only with a target binder bound to a premise structure's field (step 4) | flag |
@@ -223,7 +259,8 @@ describes only that application, not the binder at every argument, so it never
 identifies two binders. Such binders stay separate outer binders (unless the
 same-module name convention identifies them); relating their tagged slices
 needs an explicit bridge premise, never a silent identification of the full
-relations.
+relations. Retrieval (step 3) reads the same whole-binder tags: a shared
+authored sense admits a candidate and counts as shared vocabulary.
 
 ## Output
 
@@ -240,7 +277,8 @@ definitions alone prove it.
 
 `--write-spec PATH` writes an `argument_batch.py` spec draft with one argument
 per discovery (premises, conclusion, the three axioms, `sense_bridges` where a
-premise bridges senses) and a Solution draft `PATH` with the extension
+premise bridges senses, or `role = "conclusion"` where the conclusion does)
+and a Solution draft `PATH` with the extension
 `.Solution.lean`, in the results module named after the spec
 (`specs/discover-causality.toml` → `TruthCore.Results.Discover.DiscoverCausality`).
 Move the Solution into place, generate the Challenge and records with the
@@ -298,6 +336,121 @@ agent's proposal stays untrusted until Lean checks it.
    with controls, and persist every candidate, rejected or not, with its reason
    in one attempt record.
 
+## Adaptive repair
+
+For a goal a run left unresolved or filtered, `discover_blueprint.py repair`
+reads the report and the corpus and lists the alternative diagnoses (#1833),
+each `supported`, `possible`, `excluded` for the exact bundle tested, or `not
+indicated`, with the signals behind it. A failed search proves none of them.
+
+| Diagnosis | Signals |
+| --- | --- |
+| (a) tactic, selection or budget | no proof (the engine does not record whether the heartbeat budget expired or Duper saturated, so this stays possible); the candidate list at its cap; a known derivation retrieved and identifiable but not composed (identifiable only when a binder export is given); a known bundle with no same-named binder left separate that does not close; a Lean process timeout. *Excluded* for a bundle only by a one-point countermodel under the plain binding when no projection binding applies; with an untested projection binding it stays possible |
+| (b) malformed goal or missing lemma | a Lean error stating the goal; known-derivation premises not retrieved; a verified lemma that follows from the bundle but is not in it |
+| (c) carrier or sense misidentification | `domain_identified_by_name`, the `domain_by_name` and `senses` filters, known-derivation binders no tag identifies, a missing bridge between same-named relations of different declarations |
+| (d) inconsistent or vacuous bundle | `vacuous`, `literal_negation`, `antecedent_refuted`, the `witness` flag. A one-point model of the premises shows they are not an inconsistent core; it does not exclude a vacuous target, so it excludes neither half of (d) as a whole |
+| (e) missing substantive premise | at most *possible*: an engine bridge (a candidate proposition, OPEN), or a countermodel, which shows that the bundle as bound lacks *something* (premise, lemma, identification or bridge), never which, nor that it is substantive |
+| (f) unknown | nothing supports another diagnosis |
+
+```bash
+python3 scripts/discover_blueprint.py repair REPORT.json --binders binders.jsonl [--target ID]
+python3 scripts/discover_blueprint.py retry REPORT.json --binders binders.jsonl --target ID --auto 4
+python3 scripts/discover_blueprint.py retry REPORT.json --action 4c79298d-countermodel-1a2b3c
+```
+
+The retry actions, in priority order: **reuse-lemma** (add the conclusion of a
+verified argument whose premises the goal already has and that bears on the
+target: a premise of a known derivation, or a shared definition; Duper does
+not compose through other theorems); **known-bundle** (the premises of a
+verified argument concluding the target that retrieval missed; expected to be
+filtered as known, which confirms a retrieval gap); **countermodel**
+(`scripts/DiscoverRepair.lean`, below); **split** (when exactly one known
+premise is missing: search it from the bundle, and the target from the bundle
+with it); **budget** (once, at four times the heartbeats, only after a
+countermodel search completed without finding one); **strict-domains** (a goal closed through a by-name
+carrier: the same bundle without that fallback); and the reports
+**open-bridge**, **blocker**, **reject** and **record-incompatibility**, which
+run no solver. Every premise is an existing corpus statement: an action never
+weakens or strengthens a statement, writes a sense tag or identifies two
+binders, and an engine bridge is never added to a goal. Guards refuse a
+support cycle (a premise every verified derivation of which uses the target),
+a solver input already in the trace, a second action of a kind whose diagnosis
+an earlier run settled, any action whose goals would take the goal past eight
+solver runs (a split counts two), and an input whose run failed twice for
+infrastructure reasons. The run cap counts per goal label *and* solver-input
+revision: after the corpus, library, Discover scripts or Lean pins change,
+the same goal gets eight fresh runs (`--trace` with a new file also starts
+afresh). An action's id is derived from its content (kind, solver keys and,
+for a known bundle or split, the verified argument it comes from), so it does
+not change when another action is inserted. `repair`
+only plans and leaves the trace file unchanged.
+
+`retry` runs the exact goal through the same binding as `truth discover`: a
+scratch file of `scripts/Discover.lean` and `scripts/DiscoverRepair.lean`, one
+`#discover` or `#discover_countermodel` command per goal, under the heavy-job
+lock (the time limit bounds Lean only), in the `--root` repository (or this
+tool's own when `--root` is no Lake project with those scripts), whose
+Discover scripts and prove-sweep probe it reads, with the corpus's sense tags in the engine's order (`senseOf` takes a
+binder's first tag, so a binder with both a whole-binder and a
+partial-application tag is identified or not by that order; the repair flags
+such binders). Retrieval is bypassed, not changed. Each
+run appends an entry to the attempt trace (`repair-trace.json` beside the
+report, or `--trace`): the solver key (a hash of the command, the solver-input
+revision, the declarations, budget, domain policy, tags and the prove-sweep
+probe), the exact goal and premise ids,
+the declarations, the diagnoses when it was chosen, why it was chosen, the
+change against the engine's goal and the outcome. The engine's own goal is the
+trace's first entry, so an identical retry is refused, and a rerun of `retry
+--auto` on a finished trace runs nothing. The solver-input revision hashes the
+Git objects of `corpus/`, `TruthCore/`, the two Discover scripts,
+`lake-manifest.json` and `lean-toolchain`, and their uncommitted changes by
+content; the repair tool itself is not an input. A run that produced no
+outcome (no output, Lean timed out or killed: exit 137 is reported as out of
+memory or the kill after a timeout) is recorded unkeyed as `failed`, not as a
+solver result, so it can be rerun.
+
+A closed goal is assessed offline with what the raw result carries, reading
+the minimized proof's axioms as the engine does: a proof on an axiom other
+than `propext`, `Classical.choice` and `Quot.sound` is rejected (`axioms`); a literal
+P/¬P core is rejected and never support; an inconsistent core is an
+incompatibility; a by-name carrier or the transcription probe rejects it;
+the engine's projection filters reject `projection_unused` and an ambiguous
+projection, and a unique projection is noted as a specialization;
+composition from verified arguments makes it `closed-known` (`modulo_logic`
+when only with excluded middle, granted, as by the engine's `known` filter,
+only to a proof whose axioms include `Classical.choice`); the
+`truth semantics` preflight checks its senses, for known closures too. What survives is a raw
+`closed-candidate`: certify it with `truth discover` and record it only through
+the spec path and the semantic challenge. Per premise, a deletion that fails
+is "kept within budget; necessity unresolved" unless an omission model shows
+it needed. A goal with no proof is `unresolved`, never refuted.
+
+The countermodel probe binds the target and premises as `#discover` binds the
+plain goal and searches the one-point models of `Discover.witness`, of the
+premises alone and of the premises with the negated target. It does not try
+the projection bindings `#discover` tries next (a target binder bound to a
+premise structure's field); it lists them as `projections_untested`, and while
+one exists a countermodel leaves (a) possible: a countermodel to
+`∀ o m, H m → T o` does not refute `∀ m, H m → T m.ontic`. A countermodel is
+reported with every outer binder (name, originating declaration and binder,
+sense tag, type), the slot pattern and the map from slots to binders, and the
+by-name identifications it is conditional on. The repair tool adds its bounds:
+it shows only that this formal implication, over these declarations under the
+plain binding, fails at one instantiation of its binders. It refutes no
+premise, no stronger or differently bound formulation, no sense identification
+and no larger bundle.
+
+Engine changes this layer does not make: an exact `--premise` bundle for
+`truth discover`, so that its own filters and certification run on a repair
+goal; a reported distinction between a heartbeat timeout and a saturated
+search; countermodels for unresolved goals in the engine itself; a binding
+rule that does not depend on tag order when a binder carries both a
+whole-binder and a partial-application tag; and one shared
+universe-specialization helper (`scripts/DiscoverRepair.lean` copies the block
+of `Discover.trial`). Two earlier follow-ups are in the engine since #1850:
+the `known` filter grants excluded middle to a classical proof, and retrieval
+admits and ranks premises by whole-binder sense tags.
+
 ## Boundaries
 
 - Proof validity is not premise warrant. A discovery from open premises is a
@@ -308,7 +461,61 @@ agent's proposal stays untrusted until Lean checks it.
   identify parameters. The reviewer still checks that the composed statement
   means what the prose says (AGENTS.md, Review guidelines).
 - Duper's proofs are classical (`Classical.choice`): a discovery must not count
-  as evidence where excluded middle is in question (docs/axiom-policy.md).
+  as evidence where excluded middle is in question (docs/axiom-policy.md). For
+  the same reason a known route that lists excluded middle as a premise counts
+  as the same route (`known`, flagged `implicit_excluded_middle`); a
+  constructive proof does not match it and stays a discovery.
 - The run is local and recurring by choice; CI runs only one fixed known
   derivation as a smoke test, and `scripts/DuperAxiomAudit.lean`.
 - `TRUTH_DISCOVER_KEEP=1` keeps the scratch files for debugging.
+
+## Target-free conjecture pilot
+
+`truth discover` starts from a target statement. The pilot of #1834 starts from
+two argument families instead and asks which *new* conclusions or
+relationships between them hold, without a preselected target.
+`scripts/discover_conjecture.py` certifies a fixed list of candidates written
+in a configuration (`explorations/conjectures/*.toml`); the list may come from
+an agent, the checks do not.
+
+```bash
+python3 scripts/discover_conjecture.py run explorations/conjectures/actualization-grades-1834.toml \
+  --out-dir .cache/conjectures/run    # under the heavy-job lock
+python3 scripts/discover_conjecture.py classify CONFIG --binders B.jsonl --lean-output OUT.txt --map FILE.lean.map.json
+```
+
+Each candidate states its outer binders with their types, its premises
+(existing statements, every declaration parameter mapped to an outer binder:
+nothing is identified by unification), its conclusion (an existing statement
+or a new proposition over the outer binders), and optionally models (checked
+by `decide` or `simp`), a witness model with an optional antecedent instance,
+and an explicit OPEN bridge. The rendered Lean file checks, each as its own
+declaration under `#print axioms`, the goal (`duper` after delta-unfolding the
+project definitions, as `truth prove-sweep` does), the premises against
+`False`, every single-premise deletion, the conclusion from no premise, the
+prove-sweep transcription probe, literal negation between premises, the
+models, and the bridge with and without the premises. Every check counts as
+proved only within `propext`, `Classical.choice` and `Quot.sound`.
+
+`classify` gives each candidate one outcome: `verified_conditional_implication`
+(support only with a certified joint witness; otherwise consistency is
+unresolved), `incompatibility` (an inconsistent bundle; never support),
+`certified_non_implication` (only in the stated model), `open_bridge` (valid only
+with an explicit bridge, or only under an identification that no module or tag
+licenses: filter `name_only_identification`, or `senses` for an inconsistent
+bundle joining two senses), `rejected` (with the filter: `known` by a registered
+argument or by forward-chaining closure, `transcription`, `tautology`,
+`literal_negation`, `senses`, `single_family`, `axioms`) or `unresolved`.
+Identification follows the engine's rule: two parameters share a binder only when
+they have the same name in one Lean module or carry one whole-binder sense tag (by
+sense id); a carrier is shared also when such an identification of a relation over
+it forces it; two parameters of one declaration mapped to one binder are an
+obligation. Single deletions are independent checks: when more than one
+succeeds the full bundle is kept and flagged, and a premise counts as needed only
+with a certified omission model. A bridge is reported as one sufficient bridge,
+not as the weakest one. When a candidate's conclusion uses binders that no premise
+mentions (pilot C05b, C11), its non-implication is immediate: the model names the
+missing link, it does not show substantive independence. The tests
+(`scripts/test_discover_conjecture.py`) cover the acceptance fixtures of #1834
+offline. The pilot's candidates, outcomes and comparison with `truth discover`
+and `truth bridge-experiments` are recorded in the attempt it cites.

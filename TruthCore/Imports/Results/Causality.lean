@@ -87,6 +87,7 @@ public import TruthCore.Results.Causality.ConcreteExistentialSupply.Solution
 public import TruthCore.Results.Causality.ConcreteRootAccess.Solution
 public import TruthCore.Results.Causality.ConcurrentActualization.Solution
 public import TruthCore.Results.Causality.ConcurrentCessation.Solution
+public import TruthCore.Results.Causality.ConcurrentGivingPriorityBridge.Solution
 public import TruthCore.Results.Causality.ConstitutiveConfiguration.Solution
 public import TruthCore.Results.Causality.ConstitutiveNatureUniqueness.Solution
 public import TruthCore.Results.Causality.ContingentAncestry.Solution
@@ -168,6 +169,7 @@ public import TruthCore.Results.Causality.FiniteNecessaryUnion.LocalWitness.Solu
 public import TruthCore.Results.Causality.FiniteNecessaryUnion.SourceBridge.Solution
 public import TruthCore.Results.Causality.FiniteReapersConsistent.Solution
 public import TruthCore.Results.Causality.FiniteRestriction.Solution
+public import TruthCore.Results.Causality.FirstMoverNecessity.Solution
 public import TruthCore.Results.Causality.FixedDurationGrimReaper.Solution
 public import TruthCore.Results.Causality.FullFirstCause.Solution
 public import TruthCore.Results.Causality.FullnessCandidates.Solution
@@ -347,6 +349,7 @@ public import TruthCore.Results.Causality.SpineRivalsStageOne.Solution
 public import TruthCore.Results.Causality.StrictPriorityPureAct.Solution
 public import TruthCore.Results.Causality.StrictPriorityPureActControls.Solution
 public import TruthCore.Results.Causality.SubjectFocalRoles.Solution
+public import TruthCore.Results.Causality.SubtractionArgument.Solution
 public import TruthCore.Results.Causality.SuccessionPotency.Solution
 public import TruthCore.Results.Causality.SupertaskFiniteObservation.Solution
 public import TruthCore.Results.Causality.SupertaskFinitePrefixShift.Solution

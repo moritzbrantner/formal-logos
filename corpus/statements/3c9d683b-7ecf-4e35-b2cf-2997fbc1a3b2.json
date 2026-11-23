@@ -1,0 +1,19 @@
+{
+  "id": "3c9d683b-7ecf-4e35-b2cf-2997fbc1a3b2",
+  "label": "Every being contingent at w is in POTENCY_1 or has a distinct CAUSE_2 of its esse",
+  "paraphrase": "OPEN bridge (B2 or B4), analyst formulation, attribution deferred: every candidate contingent at w is either in POTENCY_1 in at least one (any) respect or has some other being that causes its esse (CAUSE_2 at esse). Each of B2 and B4 implies it (controls, laws 4-5), so it is the weakest of the three as typed. It is not the q.9 a.2 pair of channels (mutable in the subject, MUTABLE_1; mutable through another's power, MUTABLE_2): reading it as exhausting those channels would need two unrecorded OPEN bridges, contingency at w gives mutability in some way (MUTABLE_3), and another's power over a thing's esse gives a distinct cause of its esse. A brute contingent being, neither in potency nor caused, falsifies it (controls, model 1).",
+  "lean_declaration": "TruthCore.Causality.FirstMoverNecessity.ContingentHasPotencyOrEsseCause",
+  "definition_ids": [
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "508617ab-cf24-5f3b-a387-64b3991359ec",
+    "557d8e44-4350-5031-81e3-ff6be5e30acc",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

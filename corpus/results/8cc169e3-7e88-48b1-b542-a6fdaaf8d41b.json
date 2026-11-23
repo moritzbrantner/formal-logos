@@ -1,0 +1,11 @@
+{
+  "id": "8cc169e3-7e88-48b1-b542-a6fdaaf8d41b",
+  "label": "First Way mover is necessary, from firstness and a distinct esse-cause",
+  "argument_id": "3f81c1b0-2fc1-48c3-8f90-b029c349d160",
+  "challenge_module": "TruthCore.Results.Causality.FirstMoverNecessity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FirstMoverNecessity.Solution",
+  "theorem": "TruthCore.Results.Causality.FirstMoverNecessity.firstMoverNecessaryByEsseCause",
+  "comparator_config": "results/8cc169e3-7e88-48b1-b542-a6fdaaf8d41b/comparator.json",
+  "status": "solution-present",
+  "description": "Same-witness conditional result, causal route: the First Way's first mover is necessary at w from firstness, B2 and B3, with pure act carried. Not a transcription. Establishes no premise. B2 is supported either directly or through B6 and the q.3 a.4 reading (separate argument), in which case it shares B6 with the essence-esse route."
+}
