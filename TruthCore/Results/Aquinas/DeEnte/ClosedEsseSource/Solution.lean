@@ -231,7 +231,8 @@ theorem sourceFreeFiniteCircle : SourceFreeFiniteCircleControl := by
     cases h
   have hNotClosed : ¬ ClosedActualEsseCollectionsRooted p := by
     intro h
-    have hS : GroundClosedActual (esseCauseGraph p) () (fun _ => True) := by
+    have hS : TruthCore.Causality.ClosedGroundingRoots.GroundClosedActual
+        (esseCauseGraph p) () (fun _ => True) := by
       constructor
       · intro _ _
         exact ⟨trivial, trivial⟩

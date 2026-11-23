@@ -1897,6 +1897,52 @@ defeasible comparative reasons for common foundations; Bevan,
 ground from binary finite-path access. Both source assessments were already
 recorded in #1724; neither is a new premise-discharge claim here.
 
+### A fixed actual-bearer test for the holistic rival
+
+Take two actual distinct-esse bearers u and v at the selected respect, a
+constitutive arrangement A, and the actual fact F that u, v, and A obtain
+together. The strongest proposed **source-free holistic reply** does not
+consist of two bare arrows. It says (1) u and v are real constituents
+with their own exercised capacities; (2) their configuration A is an
+actual organizing condition and not merely a diagram; (3) a *complete*
+constitution rule derives both existence facts from the obtaining of
+the configured whole W; and (4) W's obtaining may be a primitive
+actuality fact F instead of the effect of an external productive act.
+
+On that reconstruction the constitution rule explains **why the
+constituents co-obtain given F**, including their interdependence and
+arrangement. But if F is itself indispensable and primitive, the
+constitutive rule does not yet explain **why F obtains** (as opposed to
+no such whole). That is a real remainder under a total-existence
+explanation norm, not a proof of inconsistency. A foundation account
+also ends with primitive actual being: it must defend why a source with
+unreceived esse is a better stopping point than the whole's primitive
+obtaining. The proposed asymmetry is that an actual independent
+source does not need to borrow what its productive capacity gives,
+whereas all received member powers together retain that dependence.
+This is a reasoned comparison of explanatory roles, not a reduction
+of the rival to a tautology.
+
+If W is independently actual and an efficient/current source of u and
+v, it may satisfy a narrowed foundation principle, but only a proven
+bridge W → u/v in **ActualEsseCause** lets the existing CCR route
+consume it. If W is the mereological fusion identical in content to its
+members and A, its grounding relation is not automatically a productive
+esse cause; translating it by name would change the question. If
+F is an abstract structural truth, specifying its constraint does
+not by itself provide an actual bearer or production act; a defender
+may instead make the truth itself metaphysically fundamental,
+requiring a separate explanatory-adequacy comparison.
+
+The user-facing test must compare the *same* explanandum: either
+the constituents' existence conditional on F (where the holistic
+account has a substantive answer) **or** the actual obtaining of the
+entire configured order (where both camps choose a stopping point).
+It is invalid to demand an external explanation of the rival's
+ultimate while exempting the foundational primitive from every
+applicability challenge. No formal impossibility of a primitive F
+is claimed.
+
 ### Matched rivals and checked discrimination
 
 | Rival mechanism, with its positive explanandum | What the available evidence tests | What still must be supplied |
@@ -1976,8 +2022,8 @@ A comparison produced without the repository CLI is not represented as
 a computed frontier-diff.
 
 **Self-sweep and review handoff.** The added two-bearer control uses one
-p.esse and r, no world/temporal claims, all-actual guards, two nonidentical
-essences/esse values and no witness of represented identity. The
+p.esse and r, no world/temporal claims, all-actual guards, one represented essence value and a different represented esse value
+for each bearer and no witness of represented identity. The
 finite control is explicitly an interpretation, not a metaphysical
 nonentailment theorem about actual causal powers. No source-attribution
 record, existing Challenge, argument/status or premise binding is
