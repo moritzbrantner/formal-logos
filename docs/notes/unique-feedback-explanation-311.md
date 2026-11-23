@@ -1922,6 +1922,9 @@ unreceived esse is a better stopping point than the whole's primitive
 obtaining. The proposed asymmetry is that an actual independent
 source does not need to borrow what its productive capacity gives,
 whereas all received member powers together retain that dependence.
+This asymmetry addresses an aggregate of received member powers; it does
+not discriminate against a rival that takes a primitive obtaining fact F
+instead (see the equal-standard rule below).
 This is a reasoned comparison of explanatory roles, not a reduction
 of the rival to a tautology.
 
@@ -2018,7 +2021,7 @@ cause-of-esse dictionary.
 | --- | --- | --- |
 | Infinite **temporal** genealogy or accidental causes | A current bearer may persist after a producer disappears (SustainingDependence.Control.Certificate); ST I q.46 a.2 ad 7 allows per accidens infinity | A reason for current actuality if the thesis demands one; do **not** rewrite temporal origination as simultaneous existential giving |
 | Genuinely infinite **existential** ancestry n+1 → n (every n actual) | EsseSource.InfiniteRegressControl and ClosedGroundingRoots.Control.pureRegress have no source; local causal assignments remain coherent | A productive interpretation of each same-respect edge and a full account of their joint obtaining; a brute global order is a positive stopping proposal, not a contradiction |
-| Finite mutually supporting **esse causes**, each with distinct esse | New SourceFreeFiniteCircleControl: both r-edges, coverage and population hold, and at-most-one identity holds **vacuously** (no bearer has esse equal to essence); neither CCR nor common-source follows. `RosterOnlyControl` already showed coverage plus at-most-one plus two actual bearers do not give CCR; what is new is a finite domain with no identity bearer at all and reciprocal edges of the same relation | A bridge from `ActualEsseCause` to the efficient/per se priority reading: given priority of cause over effect, transitivity and irreflexivity, the existing `noPerSeCausalLoop` (PER-SE-CAUSAL-LOOP-IMPOSSIBLE) already excludes such loops of any finite length, so this rival is the one in the table that existing verified work excludes conditionally; an uninterpreted pair of reciprocal causes proves no productive self-creation |
+| Finite mutually supporting **esse causes**, each with distinct esse | New SourceFreeFiniteCircleControl: both r-edges, coverage and population hold, and at-most-one identity holds **vacuously** (no bearer has esse equal to essence); neither CCR nor common-source follows. `RosterOnlyControl` already showed coverage plus at-most-one plus two actual bearers do not give CCR; what is new is a finite domain with no identity bearer at all and reciprocal edges of the same relation | A bridge from `ActualEsseCause` to the efficient/per se priority reading: given priority of cause over effect, transitivity and irreflexivity, the existing `noPerSeCausalLoop` (PER-SE-CAUSAL-LOOP-IMPOSSIBLE) already excludes such loops of any finite length, so this is a rival in the table that existing verified work excludes conditionally; an uninterpreted pair of reciprocal causes proves no productive self-creation |
 | Actual **joint powers**, including all-borrowed productive groups | DerivativeJointPower.SourceFreeControl shows simultaneous two-contributor local power equations and coherent scenarios while inductive Supply gives no powered result; rooted examples distinguish intrinsically supplied from locally admitted | Either defend a coinductive productive notion of supply, or give an actual intrinsic contribution; fixed-point selection alone is not exercise of a power |
 | **Holistic constitution**: real members, arrangement and whole jointly make each member actual | UniqueFeedback.Controls admits a unique global Boolean solution; the old owner reply distinguishes relational constitution from merely drawn arrows | Say whether the totality is a concrete independently actual whole (potentially an underived source), an abstract rule, or a primitive obtaining fact; show its identity and causal role at the selected r, not simply global solution uniqueness |
 | **Circular grounding** without productive causal loops | RootedCycleControl demonstrates that some cycles coexist with a genuine root; an unrooted circuit violates CCR but not every conceivable grounding policy | A joint full-ground account under a defended nonproductive/constitutive standard; mixed-token self-production refutes only its stronger productive interpretation |
@@ -2030,7 +2033,7 @@ productive, grounding or constitutive relations. Conversely, no evidence
 above proves that holistic constitution or persistence laws are metaphysically
 impossible. The two-bearer r-circle checks a *missing-premise boundary*
 in the exact cause-of-being dictionary (new relative to `RosterOnlyControl`
-only in having no identity bearer and reciprocal same-relation edges); it is
+in having a finite domain, no identity bearer and reciprocal same-relation edges); it is
 a kernel-checked, unregistered helper theorem, not a Comparator-audited
 result, and it does not replace the richer infinite or joint-exercise models.
 
