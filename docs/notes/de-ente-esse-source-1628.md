@@ -1695,3 +1695,10 @@ root consumer, so it was not registered. The intellect producers
 `b8394dbb` and `26e368d3`, and the will producer `13338e9c`, use
 God-to-maximality `4c79298d`. The modular will producer `571e36f0` does not
 use it directly, but consumes `29818edd`. Attempt: `e5a36b24-e0f4-4d9c-8cd4-cef767078a7e`.
+
+**2026-11-23 continuation (#1724 with #1616):** The supplier-complete
+actual-esse cone warrant, its explicit primitive stopping points, rival
+constitutive/holistic and past-law accounts, the finite same-r two-bearer
+control, and the exact reuse boundaries are consolidated in the
+[canonical existential-supply comparison](unique-feedback-explanation-311.md#complete-existential-supply-comparison-supplier-cones-and-actual-constitution-1724-1616-2026-11-23).
+This adds no new premise discharge, naming bridge or world-ground equivalence.

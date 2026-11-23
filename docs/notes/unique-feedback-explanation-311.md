@@ -1776,3 +1776,216 @@ Existing certificates are reused, and normal delivered-head CI remains required
 before merge. No Lean, statement, definition, source claim, result or graph
 change is included. The computed God-existence frontier comparison reports
 no change; its diagnostic counts are not a judgment of philosophical merit.
+
+## Complete existential-supply comparison: supplier cones and actual constitution (#1724, #1616; 2026-11-23)
+
+**Target and current judgment.** The target is **ClosedActualEsseCollectionsRooted**
+(20babef7) under one fixed q3a4 profile, not a ban on infinite past time.
+**Provisional assessment: conditionally favorable** to a foundation principle
+for exhaustive, currently productive existential supply: an act that borrows
+its being cannot be the complete original source of that very actuality, and
+mere recombination of such acts does not improve their independent supply.
+This is substantive positive warrant for an *explicit primitive*, not proof
+of the unrestricted tenseless, causally mode-unspecified application.
+The strongest surviving account is an **actually constituted, exhaustive
+rootless order**, potentially with a primitive global organization/actuality
+fact. It gives a uniform local constitution account but has not shown that
+its constitutive actuality is supplied without merely presupposing it.
+That unresolved adequacy question must not be hidden inside the word
+“derivative.” Earlier independent semantic reviews and source assessments
+remain credited only for their dated scope; this section requires fresh review.
+
+### Exact distinction and connected graph
+
+Fix actual bearer x and r(c,x) := ActualEsseCause p c x:
+c ≠ x, both c and x in act as to p.esse, and p.CausesIn c x p.esse.
+One respect and one relation are held throughout the source-access portion.
+In particular, it is **not** automatically efficient, presently sustaining,
+a grounding relation at a particular world, or a relation between *acts*.
+
+~~~mermaid
+flowchart TD
+  A["One actual esse-bearer: 78cffb8e"] --> R
+  CCR["Closed supplier-cone foundation: 20babef7"] --> R
+  EM["Explicit excluded middle: ee4ab504"] --> R
+  R["Every actual bearer has finite r-access from an r-root: 7637c090"] --> S
+  C["Every actual distinct esse has an actual r-cause: 457698e4"] --> S
+  S["Any accessible r-root has represented esse = essence: sourceOfAccess"] --> U
+  U["Connected identity source"] --> COMMON
+  ONE["At most one actual identity bearer: a576300f"] --> COMMON
+  COMMON["c6d92415: c35b1a5c common source of esse"] --> B
+  B["Same-bearer world-ground interface: ca5403a6 plus its OPEN bridges"] --> N
+  N["Actual concrete root; necessity requires c71c068c and compatible scope"] --> G
+  G["Later same-source GOD_4/attribute consumer: separate companion premises"]
+  PS["Instrumental power needs prior bearer actuality: bearer/act interface"] -. "positive warrant, NOT an implication" .-> CCR
+  JR["Local joint supply vs inductive supply: DerivativeJointPower"] -. "conditional interpretation" .-> PS
+  HI["Past actual bearer + persistence law: #1616/#1800"] -. "distinct relation/moment" .-> CCR
+~~~
+
+The crucial quantifier is **every** nonempty supplier-closed set of actual
+bearers. For a fixed x, the set of *all* its finitely reachable predecessors
+is closed even if it has infinitely many members. The condition rules out a
+rootless predecessor *component*, not all infinite descending chains.
+The certified ConcreteRootAccess.accessOfClosed (7637c090) and
+ClosedEsseSource.sourceOfAccess yield a finite path from an uncaused actual
+identity bearer to x (zero length only when x is itself that root).
+ClosedEsseSource.commonSourceOfClosed (c6d92415) identifies all these roots
+with the **same** n using the separate uniqueness premise. The existing
+same-witness downstream results (#1729/#1731) preserve n through the
+grounding-root and God-existence bundles only with their explicit bridges and
+other open inputs. Represented esse/essence identity is not modal necessity;
+an r-root is not automatically a world-ground root, necessary being, pure act,
+sustainer, efficient creator, or God.
+
+**Why global root existence is too weak.** WholeRosterRootEquivalenceAt
+establishes, at a fixed world and selected grounding relation, that the
+whole-roster not-trapped principle gives *some* root (with population and
+excluded middle). ClosedEsseSource.RosterOnlyControl instead contains one
+root plus a disconnected infinite rootless component. The source must belong
+to the appropriate **local supplier cone**; the relation at the destination
+must not be swapped during integration. ConcreteRootAccess.borrowedDecomposition
+makes the general CCR burden exact: no wholly borrowed supplier-closed concrete
+set plus the additional localized bridge for nonconcrete suppliers (under EM).
+The full concrete-supplier bridge yields a stronger blanket equivalence.
+None of these formal equivalences establishes a metaphysical adequacy norm.
+
+### What counts as completed explanation?
+
+The positive reconstruction, not a deduction from a label, has four steps:
+
+1. **Actual exercise has a bearer.** An exercised instrumental capacity
+   obtains only while the bearer is actual in the respect in which it acts.
+   The mixed-token BearerPrior/ProductPrior proof of no existential
+   self-actualization shows the contradiction for *productive self-origin*
+   when one transitive irreflexive ontological priority governs both links.
+   It does not exclude intrinsic necessity, self-maintenance or all
+   constitutive loops.
+2. **Borrowed efficacy really contributes.** Derivative powers can preserve
+   conditions, shape a subject, and cooperate; their acts are not nothing.
+   Yet a causal procedure whose productive operation presupposes already
+   available bearers does not, merely through iteration or coordination,
+   create that presupposed availability. This is a substantive standard of
+   **complete existential supply**, not a theorem about arbitrary arrows.
+3. **Completeness is local and relation-specific.** If the chosen r lists
+   *all relevant existent productive suppliers* and the complete r-cone
+   contains no non-received source, the arrangement offers only conditioned
+   contributions. CCR rejects taking their totality as a full existential
+   producer unless the whole/structure supplies independently actual being.
+   That restriction on a complete cone is the decisive primitive. It
+   need not forbid temporal infinity, nonproductive physical feedback,
+   rooted cycles, or root-backed infinite paths.
+4. **The basis must be an actual bearer in r.** A primitive mathematical
+   configuration, law, abstract totality or group-level explanation does
+   not imply an actual bearer with no incoming r-edge, nor a finite r-path
+   from it to x. A concrete underived whole may satisfy the foundation
+   claim but needs the same *r-connection* to the members. This is the
+   principal gap in transferring the instrumental rationale to the
+   mode-unspecified profile.
+
+Aquinas, *De ente et essentia* c.3 [69874] (Leonine c.4) supplies
+the distinction between received esse and esse per se; ST I q.45 a.5
+distinguishes absolute being-giving from an instrument's disposition of
+a presupposed subject. ST I q.104 a.2 explicitly permits creaturely
+preservation, even per se: **not every causal contribution is creation**.
+ST I q.46 a.2 ad 7 distinguishes accidentally from essentially ordered
+causal regress: **infinite chronological succession is not thereby banned**.
+These already examined passages support a per-se, being-giving reading,
+not automatic closure over every tenseless causal mode. Cameron,
+*Turtles All the Way Down*, §§4–5 (physical pp.4–5, 11–12), provides
+defeasible comparative reasons for common foundations; Bevan,
+*Metaphysical foundationalism*, §§1, 3–3.1, distinguishes a full joint
+ground from binary finite-path access. Both source assessments were already
+recorded in #1724; neither is a new premise-discharge claim here.
+
+### Matched rivals and checked discrimination
+
+| Rival mechanism, with its positive explanandum | What the available evidence tests | What still must be supplied |
+| --- | --- | --- |
+| Infinite **temporal** genealogy or accidental causes | A current bearer may persist after a producer disappears (SustainingDependence.Control.Certificate); ST I q.46 a.2 ad 7 allows per accidens infinity | A reason for current actuality if the thesis demands one; do **not** rewrite temporal origination as simultaneous existential giving |
+| Genuinely infinite **existential** ancestry n+1 → n (every n actual) | EsseSource.InfiniteRegressControl and ClosedGroundingRoots.Control.pureRegress have no source; local causal assignments remain coherent | A productive interpretation of each same-respect edge and a full account of their joint obtaining; a brute global order is a positive stopping proposal, not a contradiction |
+| Finite mutually supporting **esse causes**, each with distinct esse | New SourceFreeFiniteCircleControl: both r-edges, coverage, population and at-most-one identity hold; neither CCR nor common-source follows | An actual productive-priority/realization law; an uninterpreted pair of reciprocal causes proves no productive self-creation |
+| Actual **joint powers**, including all-borrowed productive groups | DerivativeJointPower.SourceFreeControl shows simultaneous two-contributor local power equations and coherent scenarios while inductive Supply gives no powered result; rooted examples distinguish intrinsically supplied from locally admitted | Either defend a coinductive productive notion of supply, or give an actual intrinsic contribution; fixed-point selection alone is not exercise of a power |
+| **Holistic constitution**: real members, arrangement and whole jointly make each member actual | UniqueFeedback.Controls admits a unique global Boolean solution; the old owner reply distinguishes relational constitution from merely drawn arrows | Say whether the totality is a concrete independently actual whole (potentially an underived source), an abstract rule, or a primitive obtaining fact; show its identity and causal role at the selected r, not simply global solution uniqueness |
+| **Circular grounding** without productive causal loops | RootedCycleControl demonstrates that some cycles coexist with a genuine root; an unrooted circuit violates CCR but not every conceivable grounding policy | A joint full-ground account under a defended nonproductive/constitutive standard; mixed-token self-production refutes only its stronger productive interpretation |
+| **Existential inertia**: the very same existing bearer, earlier actual existence, and a persistence law | SustainingDependence.Control.Certificate isolates onset-without-parity and originating-without-sustaining; #1785/#1800 leave actual-past-plus-law alive | A law explaining the *later existence of the same bearer*, not merely change of an already existing subject. The opposite thesis must defend nontransferable received esse or parity independently |
+
+Finite assignments do not refute infinite accounts, and the existence of a
+formal model does not show its interpretation can instantiate actual
+productive, grounding or constitutive relations. Conversely, no evidence
+above proves that holistic constitution or persistence laws are metaphysically
+impossible. The two-bearer r-circle newly checks a *missing-premise boundary*
+in the exact cause-of-being dictionary; it does not replace the richer
+infinite or joint-exercise models.
+
+### Primitive stopping points, cumulative judgment, and reopening conditions
+
+**Defensible primitive candidates, held apart:** (i) actual exercise cannot
+supply the actuality of the very bearer on which that exercise depends,
+**for the same productive-priority relation**; (ii) a complete supplier cone
+of received esse must have nonreceived actual supply (CCR, the principal
+foundation primitive); (iii) complete existential-supply relevance of r,
+including constituents/wholes and the same moments/respects; (iv) the
+inertialist's positive past-actuality-plus-law principle. These have different
+content, explanatory costs and possible truth conditions. A foundation
+can take an underived bearer as intrinsic actual being without asserting
+efficient self-production; the rival can take the whole's obtaining as
+primitive without being accused of an explicit logical contradiction.
+Apply the *same adequacy standard* to both primitive stopping points.
+
+**Provisional conclusion.** The received-actuality/instrumental case gives
+real conditional comparative support to local foundation: a list of conditioned
+powers does not alone explain their available existence, and an inductive
+production account demands some non-borrowed supply. It is stronger than
+“no infinite series” and avoids treating the rival's efficacy as null.
+But unrestricted 20babef7 remains open: the selected r still includes
+mode-unspecified causes, the global-to-every-local-cone scope principle
+needs defense, and a complete, actually instantiated constitutive account
+might bypass *productive* supply without secretly being just an arrow graph.
+This result supports the existing **direct assumption option** for CCR; it
+does not establish a new proof route or disprove naturalism. Independently
+actual concrete nature could occupy the underived slot even if God
+identification later fails.
+
+**Reopen only for discriminating change:** (a) a fully specified actual
+source-free constitutive model with constituent identities, joint sufficiency
+and an independently justified actuality/grounding direction; (b) evidence
+that every relevant r-edge is currently productive per se, or a narrower
+source theorem on a truly typed subset with a proved coverage bridge;
+(c) a constructive supplier-complete local cone that defeats the
+collection-level sufficiency norm under the same explanandum; (d) a
+substantive law-and-earlier-actuality account for received persistence
+(#1800/#1801/#1802) or a defended nontransferability argument against it;
+(e) a new same-bearer/same-relation counterexample to the world-ground
+bridge. Mere rewording of a regress, extra arrows or repetition of
+the same stopping-premise demand calls for reuse, not a new campaign.
+
+**Reuse checks for the research loop.** An all-borrowed source
+invokes DerivativeJointPower only when its events denote exercises of the
+required powers; an all-borrowed actual-esse *bearer* cone invokes CCR
+only with supplier-complete r; a global unique-solution claim invokes
+UniqueFeedback rather than source-access; and an origin/persistence claim
+invokes SustainingDependence with histories. ClosedGroundingRoots and
+ConcreteRootAccess decide the local-vs-whole distinction on their
+own grounding profile. The historically generated (past-law) boundary
+does **not** inherit a sustaining-source rebuttal. The existing
+context/dossier/brief/novelty tools should retrieve this single
+canonical account through its linked De ente attempt/issue;
+do not register equivalent arguments or change existing definitions.
+This changes warrant/reuse, not the computed God-root frontier.
+A comparison produced without the repository CLI is not represented as
+a computed frontier-diff.
+
+**Self-sweep and review handoff.** The added two-bearer control uses one
+p.esse and r, no world/temporal claims, all-actual guards, two nonidentical
+essences/esse values and no witness of represented identity. The
+finite control is explicitly an interpretation, not a metaphysical
+nonentailment theorem about actual causal powers. No source-attribution
+record, existing Challenge, argument/status or premise binding is
+changed. Required before integration: independently challenge the
+exact wording of the new conclusion against q3a4, the group exercise
+model, the source passages already recorded in #1724, #1616's
+history semantics, and the existing root-identity interface; review
+whether the control proves precisely its stated conjuncts. Validate
+the Lean file and normal delivered-head checks. No independent review
+or new proof certification is asserted in this draft.
+

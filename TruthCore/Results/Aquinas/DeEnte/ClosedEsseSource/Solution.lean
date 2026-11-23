@@ -206,6 +206,51 @@ theorem rosterOnly : RosterOnlyControl := by
     obtain ⟨c, hc⟩ := starts hp
     exact hfirst c hc
 
+
+/-- A finite all-received cycle demonstrates that local esse-cause coverage,
+population, and at-most-one identity bearer do not themselves yield CCR or a
+common source. It does not show metaphysical possibility or productive supply. -/
+theorem sourceFreeFiniteCircle : SourceFreeFiniteCircleControl := by
+  let p := sourceFreeFiniteCircle
+  have hd : ∀ x, DistinctEsseAt p x := by
+    intro x
+    exact ⟨trivial, by decide⟩
+  have hs : ∀ x, ∃ c, ActualEsseCause p c x := by
+    intro x
+    cases x with
+    | false =>
+      exact ⟨true, ⟨by decide, trivial, trivial, by decide⟩⟩
+    | true =>
+      exact ⟨false, ⟨by decide, trivial, trivial, by decide⟩⟩
+  have hOther : DistinctEsseHasOtherActualCause p := by
+    intro x _
+    obtain ⟨c, hc⟩ := hs x
+    exact ⟨c, hc.1, hc.2.1, hc.2.2.2⟩
+  have hOne : AtMostOneEsseIsEssence p := by
+    intro x y _ _ h _
+    cases h
+  have hNotClosed : ¬ ClosedActualEsseCollectionsRooted p := by
+    intro h
+    have hS : GroundClosedActual (esseCauseGraph p) () (fun _ => True) := by
+      constructor
+      · intro _ _
+        exact ⟨trivial, trivial⟩
+      · intro _ _ _ _
+        trivial
+    have hn : ∀ x, (fun _ : Bool => True) x →
+        ¬ ActualRoot (esseCauseGraph p) () x := by
+      intro x _ hr
+      obtain ⟨c, hc⟩ := hs x
+      exact hr.2 c ⟨hc.2.1, hc.2.1, hc⟩
+    exact (h (fun _ => True) hS hn false) trivial
+  have hNoCommon : ¬ CommonEsseIsEssenceSource p := by
+    rintro ⟨n, _, _, hUncaused, _⟩
+    obtain ⟨c, hc⟩ := hs n
+    exact hUncaused c hc
+  refine ⟨hd, hOther, hOne, ⟨false, trivial⟩, hs, ?_, ?_, hNotClosed, hNoCommon⟩
+  · exact ⟨by decide, trivial, trivial, by decide⟩
+  · exact ⟨by decide, trivial, trivial, by decide⟩
+
 theorem singletonPopulation : SingletonPopulationControl := by
   let p : Profile Unit Bool Unit := {
     InAct := fun _ _ => True
