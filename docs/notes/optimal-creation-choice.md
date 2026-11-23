@@ -1017,3 +1017,273 @@ the distinction between the obtaining causal transaction
 and an independently meaningful intention, the conditional
 no-mediator regress, the granularity claims and the q.45
 interpretation before publication as reviewed support.
+
+
+## Exemplar as practical measure: can specificity belong to the exercise? (2026-11-23; proposed, unreviewed)
+
+Continuation of §§6–10, prior head eec73ea4bf32706f814d53ff5ef300849598f012.
+Main at dispatch f93b376f390bbd480b9a7705404c001622bdb553 (C2 note and
+attempt advanced; no overlap). Fix the same actual n and two candidate
+complete creaturely specifications D and E, each independently intelligible
+and not merely the descriptions "whichever world obtains" and "another
+world". Their incompatibility as specifications is stipulated for this
+comparison; their metaphysical admissibility is not established. Distinguish
+a specification from its actual concrete realization x. The following is
+a proposed philosophical application of #1380's reference-ground and
+error-norm test and #555/#462's same-token scope, not a new formal model.
+
+### 11. Fixed exemplars, variable practical role
+
+Selected readings, no new pinned attribution or source claim:
+
+- Aquinas, [ST I q.15 a.1–3](https://www.newadvent.org/summa/1015.htm).
+  A.2 co. and ad 1–4 distinguish the intelligible principle by which
+  God understands from the many things understood; the latter need not
+  be multiple actualizing forms in God. The multiplicity of ideas is
+  understood in relation to possible creaturely likenesses of the one
+  divine essence, not supplied by actual creatures. The responses
+  distinguish understood relations from real relations in God. A.3
+  distinguishes ideas as principles of making and knowing. This is
+  evidence for a positive *availability of determinate exemplar content*
+  account under simplicity, not a proof of the modal possibility of
+  every proposed description or of variable selected content.
+- [ST I q.14 a.8–9, a.15 ad 1–2, a.16](https://www.newadvent.org/summa/1014.htm).
+  Knowing an operable form as such does not by itself determine
+  production; the a.8 account adds will. A.16 distinguishes knowledge
+  practical by its end from knowledge of what can be made but is not
+  made; a.9 distinguishes simple intelligence and vision. A.15 ad 1
+  distinguishes knowledge from predicates such as creator that concern
+  creatures as they are in themselves. This last qualification prevents
+  simply treating actual singular cognition as another extrinsic
+  creator-label. The text does not give a possible-world semantics for
+  the variable role of a particular exemplar.
+- [ST I q.19 a.2 ad 1, ad 4; a.3 ad 5–6](https://www.newadvent.org/summa/1019.htm)
+  connects the simple will to many willed objects through the primary
+  divine good; it expressly distinguishes the necessary will in itself
+  from nonnecessary willing of finite things.
+- [SEP, *Action*, §4 Practical Knowledge](https://plato.stanford.edu/entries/action/#PraKno)
+  and [*Intention*, §3–4](https://plato.stanford.edu/entries/intention/)
+  (secondary navigation and interpretation, not a direct Anscombe
+  witness). The practical-knowledge account presents the agent's
+  understanding under an action description as specifying the action,
+  not necessarily an additional efficient cause. The intention supplies
+  a standard for performance; theoretical knowledge instead answers
+  to its object. The literature disputes the relevant efficient-causal
+  interpretation and whether practical self-knowledge extends to actual
+  effects. This motivates the proposed test; no divine conclusion is
+  attributed to Anscombe.
+
+The q.15 distinction is a more specific response to the claim that
+distinct intentional *objects* require distinct intrinsic actualizing
+forms. It is not yet a response to the claim that distinctly *adopting*
+objects requires a distinct intrinsic actuality. Hold both D and E
+understood, in the same act of understanding in both candidate worlds,
+and hold n's primary end and power fixed. There remain two different
+roles for a content: being intelligible as something n could produce,
+and being the measure under which n actually produces. The former
+can be fixed while the latter varies on the proposed account.
+Necessity of the intelligible form repertoire supplies neither
+practical adoption nor the actuality of any of its members.
+
+### 12. The practical-measure test: a stronger candidate than output matching
+
+Compare a finite artist producing a figure under the independently
+understood specification "equilateral triangle" with an artist
+intentionally generating any triangle by a random procedure whose
+result happens to be equilateral. Also compare an artist who intended
+a scalene triangle but whose execution error yields an equilateral
+one. Each can know the two specifications, value geometric beauty
+and genuinely cause the actual equilateral figure. Yet the standard
+by which success as an intentional action is assessed differs: an
+equilateral figure fulfills the first specific intention, fulfills
+the second coarse intention without being specifically required by
+it, and fails the third specific intention. A bystander who knows
+the resulting figure perfectly is a fourth, nonproductive comparison.
+The cases do not have equal intrinsic human states; they are a test
+of intentional specification, not counterexamples to divine
+intrinsic-supervenience. Neither is a model of ex nihilo creation.
+
+This supplies a candidate positive interpretation of the "for R"
+in §§2 and 7: an intelligible specification D must be operative as
+a measure of the particular productive exercise, so that conformity
+to D is a success condition for that exercise **under the description
+D**. D itself can be evaluated without first consulting the output.
+The action's rational structure makes the intended object a standard
+of production rather than merely a true description of the result.
+This goes beyond `TracksSelectedCreation`: a world-label table
+cannot by its match establish which norm governs production.
+
+This is not an extensional definition of intentionality or a
+sufficient condition consisting of any norm plus output. A programmed
+machine can have a success standard set by someone else; a lottery
+policy can be intentionally chosen while a specific draw is not; an
+artificial system could genuinely implement intentional guidance on
+some accounts. The nondeviant *actual operation of the source's own
+apprehended specification* is essential. Impersonal norm-like
+production is not excluded by calling a standard "practical".
+A genuine functionalist account of cognition/agency would be credited
+if it satisfies the same demands. The ordinary comparisons motivate
+the distinction without establishing its realization at a simple
+source.
+
+The divine nonfailure test can now be expressed without imagining
+an admissible world in which God wills D and fails. D and E have
+different fulfillment conditions as specifications; if E excludes D,
+E would not fulfill a D-specific intention. This is an evaluation
+of contents, not a counterfactual asserting a metaphysically possible
+failed divine exercise. If a separate efficacious D-directed act is
+given and performed, the existing `StrictEfficacy` pattern can
+apply to an appropriately interpreted rigid effect x. If the
+exercise is individuated as the actual successful production of x,
+its implication to x is constitutive and does not supply strict
+efficacy of the antecedently specified intention by itself. No
+extension of the effect-being type to a complete description is
+silently made.
+
+### 13. What the nonintrinsic thesis must assert, and what could defeat it
+
+Distinguish the intrinsic identity of the actualizing operation
+from the practical content specifying a productive exercise.
+The strongest direct-source account takes the operation to be
+the source itself, with no received executive form, and the
+specific exercise to be n's actual production in the light of
+one of its understood exemplars. The form under which the
+effect is produced is a constitutive specification of the
+exercise, not a new efficient cause standing between n and x.
+This is the positive hypothesis, not a consequence of the
+q.15 source. The object as understood need not be an
+independent concrete object causing n, nor an already produced
+x. An independently intelligible D is not itself a contingent
+external causal selector.
+
+The rival grants the entire fixed repertoire and the one
+intrinsic act of apprehending it, but holds that whether D or E
+is the measure actually adopted must be determined by how the
+agent's immanent willing is intrinsically actual. This is stronger
+than insisting that the *action* be actually specific. It asserts
+that the adopted practical role of a fixed content cannot vary
+while intrinsic actuality is fixed. Positive warrant: an agent
+who understands both D and E yet actually intends D rather than
+E differs in practical orientation, and the usual examples make
+that orientation attributable to the agent, not just the world.
+An independently specific intention to D could remain true
+when ordinary execution fails, so the intentional role does not
+generally consist in the actual object being produced. These
+considerations motivate the stronger thesis but do not establish
+that attribution to the agent means intrinsic determination
+rather than a real exercise relationally specified.
+
+A precise dispute for the same n, w and admitted alternative v:
+with identical complete intrinsic actualities, fixed intelligible
+D and E, and no varying independent creative enabler, must the
+actual practical role of D be identical at w and v? The intrinsic
+account affirms. The extrinsic account denies in at least one
+such genuine pair while keeping the practical role explanatorily
+substantive. This is a dispute about the actual intentional
+role, not about a mere `W → B` world function, bare reference,
+the existence of the source or the plurality of represented
+objects. One-sided failure to establish the universal thesis is
+not evidence of the real alternative needed for its negation.
+
+If the intrinsic thesis holds, a fixed necessary immanent
+operation plus independently fixed repertoire cannot vary its
+D-specific adoption without a varying enabler. With a genuinely
+D-specific strictly efficacious rigid act everywhere the #555
+core applies. Without intrinsic invariance, a contingent
+executive state remains a serious nonclassically-simple personal
+option; without strict efficacy or contingent H, other existing
+branches survive. If the extrinsic thesis holds, the varying
+exercise can be a candidate nonnecessitating concrete-existence
+explanation without such a state. But why the particular
+exercise obtains remains open under complete determining
+fact-level closure. No special stop for n if the same demand
+is imposed on impersonal production.
+
+The strongest reply to the rival is that distinct practical
+specification might be formally constitutive of a directed
+source-level activity, rather than a new intrinsic antecedent.
+An account of intentional action as an activity, rather than
+an executive mental occurrence plus event it causes, makes
+this a serious proposal. Yet if the only explanation offered
+for the actual adoption of D is the fact that x realizes D,
+the proposal fails its own practical-measure test: the third
+artist and lottery controls pass result-conformity too.
+An ordinary action can be known under a particular description
+through its exercise. For n, however, the hypothesis that its
+own activity is *already* practically D-directed must receive
+substantive warrant; formal-causal language by itself supplies
+none. The q.15 account of multiple understood ideas is not
+an account of the obtaining of the productive relation. This
+is the remaining exact distinction, not another label for it.
+
+### 14. Two downstream consumers and assessment
+
+For #1459's `CausalExistenceWilling`: if the existence of
+a particular recipient x is genuinely part of D as the
+operative intentional measure of n's production of x, the
+particularity objection is weakened. One still must establish
+the recipient-directed good rather than just instrumental
+ordering, identity with the same `CausesIn n x esse`, and
+actual goodness/intention premises. Foreseen collateral
+production remains distinct; a perfect means/end fit or
+knowledge of x does not imply the relevant willing. No
+`CausalExistenceWilling` proof is claimed. For #1380's
+productive-knowledge route: if actual practical knowledge
+includes the adopted measure and n knows its own effective
+exercise, the content of that knowledge can explain a
+particular effect's being known without passive reception,
+conditional on fidelity, reference and factivity. Knowing
+all possible measures, or reading an effect as correctly
+matching a measure, does not provide the actual knowledge
+premise; the fixed-intrinsic epistemic-row supervenience
+objection remains. Nor does an operative coarse measure
+give knowledge of every secondary contingent effect.
+
+Provisional assessment: q.15 gives positive warrant within
+the classical account for distinguishing intentional content
+from intrinsic cognitive multiplicity. The practical-measure
+proposal sharpens an actual difference between purposive
+production and lucky conformity without defining success as
+the mere observed effect. This makes a content-specific direct
+exercise a more intelligible candidate; it does not establish
+its compatibility with strict simplicity. The strongest
+intrinsic-orientation rival can accept the same action norm
+while requiring it to be intrinsically realized. Maintain
+the existing underdetermination judgment at that exact
+realization bridge. Do not claim a metaphysical countermodel,
+a new formal result, a root support alternative or a defeat
+of an impersonal producer.
+
+Next discriminating test: compare rival ontologies of
+*exercise of active power* (an immanent event necessarily
+requiring intrinsic determination versus a transitive
+productive activity individuated by its intentional object).
+Ask whether direct actuality of a particular exercise can
+be primitive without being an additional intrinsic perfection,
+and whether a genuinely operative practical norm can be
+constitutive of that exercise without a separate real
+determination in the agent. Reuse the causal-activity senses,
+the #555 strict-act reading and the #1731 immanent-intellect
+interface; not another table of matching world labels.
+If the action account is viable, apply it to #1459 under a
+fixed recipient and #1380 under a fixed determinate content.
+If it is not, identify the weakest defended intrinsic-state
+or content-supervenience commitment that forces revision of
+the simplicity package. Reassess also if a substantive
+impersonal norm-guided account meets the same explanatory
+standard.
+
+Self-sweep: no new registered statement, formal consequence,
+definition, result, claim, source binding or root edge.
+The distinctions are analyst tests. The source reading
+concerns multiplicity of understood objects, not varying
+world-indexed adoption. Existing #1380/#555 scopes are
+unchanged; #1459 recipient-directed and esse bridges remain
+open. Same attempt 7d015c02, existing note only. No new
+verified result or computed frontier delta. Canonical CLI,
+Lean and independent challenger unavailable in this session;
+author-side scope check only. Independent semantic review
+must challenge §§11–14, especially the proposed practical
+measure's actual explanatory role, the precise scope of
+q.15, and the unresolved strong intrinsic-orientation
+principle.
