@@ -1,0 +1,18 @@
+{
+  "id": "4cf4f658-d802-490d-8062-e6df0e29865e",
+  "label": "First Way mover is necessary, from firstness and a distinct esse-cause (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "7bce7007-ad29-5f5b-b4b3-e7b02bf98312",
+    "bd0a4f81-29ba-4349-aa7d-b1fdcf6fd8e2",
+    "74eb9113-552b-5ec6-8e09-68374305dd58",
+    "6c18d52b-2456-59ae-995f-13440f8c808d",
+    "8a8d00e9-12b6-4cf0-b662-431cc4addd49",
+    "ee74c678-0a06-47d3-9c76-27ff798e9a01"
+  ],
+  "output_statement_id": "f9208664-e57b-4912-b6e7-edfcd23a4f89",
+  "rule": "Reductio on contingency, then excluded middle at each accessible world",
+  "meaning": "Route A of the lead. The first mover f exists at w (B0). Were it contingent, B2 would give another being causing its esse, simply prior to it by B3, hence identical with it by firstness, against distinctness. So f is present at every accessible world (excluded middle). Pure act is carried for the same witness and does no work toward necessity here: the necessity comes from firstness and existential causation (cross-family convergence on one witness, not 'pure act alone entails necessity'). Omission models in the controls (models 1-6).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

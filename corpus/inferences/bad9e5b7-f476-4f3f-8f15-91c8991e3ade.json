@@ -1,0 +1,13 @@
+{
+  "id": "bad9e5b7-f476-4f3f-8f15-91c8991e3ade",
+  "label": "Indexed no efficient self-causation from indexed cause priority (inference)",
+  "input_statement_ids": [
+    "b402ca7b-964c-4eeb-bef7-2751d1bcba2a",
+    "32d77f18-a9c2-5486-b51c-a24f32863af4"
+  ],
+  "output_statement_id": "872ff8b6-cc9d-4656-8691-b1ae7aa6304e",
+  "rule": "Apply SelfCausationPriority.noSelfCauseFromPriority in each accessible history at each moment, with the same unindexed PriorSimply",
+  "meaning": "Second Way support, history by history and moment by moment, for the indexed no-self-efficient-cause premise 872ff8b6. In each accessible history v at each moment t, the OPEN indexed cause-priority premise b402ca7b makes every efficient cause then and there simply prior (PRIOR_1, the single frame field PriorSimply) to its effect, and nothing is simply prior to itself (32d77f18), so by the verified SelfCausationPriority.noSelfCauseFromPriority nothing is then and there its own efficient cause. b402ca7b is an analyst statement with attribution deferred: the Aquinas claim on the selected-time e078f07b does not extend to it. 32d77f18 concerns only the unindexed PriorSimply and is used as registered. No temporal priority is inferred. No premise is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

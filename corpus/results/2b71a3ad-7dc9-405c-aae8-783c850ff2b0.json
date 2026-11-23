@@ -1,0 +1,11 @@
+{
+  "id": "2b71a3ad-7dc9-405c-aae8-783c850ff2b0",
+  "label": "First mover necessity controls checked",
+  "argument_id": "7981cf2e-343c-407d-94cb-0fde948527f0",
+  "challenge_module": "TruthCore.Results.Causality.FirstMoverNecessity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FirstMoverNecessity.Solution",
+  "theorem": "TruthCore.Results.Causality.FirstMoverNecessity.controls",
+  "comparator_config": "results/2b71a3ad-7dc9-405c-aae8-783c850ff2b0/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free laws and models for the first-mover necessity batch. Sense-mixing control: the laws relate MODAL_CONTINGENCY_1 and NECESSARY_2 to POTENCY_1 and essence-esse identity without a bridge premise. Establishes no premise."
+}

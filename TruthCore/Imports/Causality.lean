@@ -53,6 +53,7 @@ public import TruthCore.Causality.ConcreteExistentialSupply
 public import TruthCore.Causality.ConcreteRootAccess
 public import TruthCore.Causality.ConcurrentActualization
 public import TruthCore.Causality.ConcurrentCessation
+public import TruthCore.Causality.ConcurrentGivingPriorityBridge
 public import TruthCore.Causality.ConstitutiveConfiguration
 public import TruthCore.Causality.ConstitutiveNatureUniqueness
 public import TruthCore.Causality.ContingentAncestry
@@ -106,6 +107,7 @@ public import TruthCore.Causality.ExistsSenseMeaning
 public import TruthCore.Causality.FiniteBranching
 public import TruthCore.Causality.FiniteNecessaryUnion
 public import TruthCore.Causality.FiniteRestriction
+public import TruthCore.Causality.FirstMoverNecessity
 public import TruthCore.Causality.FixedDurationGrimReaper
 public import TruthCore.Causality.Frame
 public import TruthCore.Causality.FrameAdapters

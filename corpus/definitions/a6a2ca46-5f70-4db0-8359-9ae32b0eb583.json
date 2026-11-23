@@ -1,0 +1,9 @@
+{
+  "id": "a6a2ca46-5f70-4db0-8359-9ae32b0eb583",
+  "label": "Necessary concrete candidate with possible concurrent giving of being",
+  "term": "necessary concrete source with possible exercise",
+  "definition": "NecessaryConcreteWithPossibleConcurrentGivingAt f Concrete w holds iff some rigid concrete individual c exists at w and every world accessible from w, and some v accessible from w has ConcurrentTotalityGivingAt f Concrete v c: at least one actual exercise of the shared GivesAt primitive and giving to every contingent concrete member at every moment of its presence. This is a distinct stronger conclusion from a bare NecessaryConcreteAt at w, but does not transfer causal activity to w or identify the cause as unique, sufficient, or divine.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.MetricBeginningArrival.NecessaryConcreteWithPossibleConcurrentGivingAt",
+  "note": "SAME c across worlds; the population/effects at v may differ from those at w. The possible-world source's actual exercise is preserved rather than discarded during the inference. Its externality in the witness history is an OPEN B2 commitment, not inferred from causing."
+}

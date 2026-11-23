@@ -1,0 +1,33 @@
+{
+  "id": "274bdafd-9d57-401c-92eb-f84a33071a1f",
+  "label": "First Way mover is necessary, from PURE_ACT_5 and POTENCY_1 for possible nonexistence",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "7bce7007-ad29-5f5b-b4b3-e7b02bf98312",
+    "bd0a4f81-29ba-4349-aa7d-b1fdcf6fd8e2",
+    "6c18d52b-2456-59ae-995f-13440f8c808d",
+    "753269b3-ff68-4d7a-97bc-01ab4e7c3a26"
+  ],
+  "conclusion_statement_id": "f9208664-e57b-4912-b6e7-edfcd23a4f89",
+  "inference_ids": [
+    "836ba786-e3df-4d4b-98a9-04a09e758683"
+  ],
+  "meaning": "Route B of the lead. The first mover f exists at w (B0) and is pure act. Were it absent at some accessible world, B4 would put it in POTENCY_1 in some respect, against pure act. So it is present at every accessible world. This is the only route on which pure act alone, with one bridge, yields necessity, and B4 carries the whole modal weight: with excluded middle B4 is equivalent to 'every pure-act being existing at w is necessary at w' (controls, law 3), the lead's target at w. The route therefore relocates the question into B4 rather than answering it; it composes the existing pure-act statement with that relocated target.",
+  "definition_ids": [
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "a49e4cf1-ca4f-5519-9724-892af257cedb"
+  ],
+  "disambiguation_ids": [
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "508617ab-cf24-5f3b-a387-64b3991359ec",
+    "557d8e44-4350-5031-81e3-ff6be5e30acc",
+    "b1640e51-d7d4-5a80-9992-29fa1ded8048",
+    "215fdc0a-7005-510d-91da-84fcbc77a9dc"
+  ]
+}

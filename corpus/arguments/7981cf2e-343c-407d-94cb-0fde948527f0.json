@@ -1,0 +1,35 @@
+{
+  "id": "7981cf2e-343c-407d-94cb-0fde948527f0",
+  "label": "First mover necessity controls checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "0c1baf67-72ca-4470-a429-d106e6810b05",
+  "inference_ids": [
+    "028307fe-844d-440f-9a72-d3ba8cc6e51b"
+  ],
+  "meaning": "Premise-free laws relating B6 to its necessity form, B4 to its converse-direction halves, B4's equivalence with the lead's target at w (route B relocates the question) and the strength of the disjunctive bridge; then twelve finite models: an omission model for each non-logical premise of the routes, a nonvacuity model for all routes and both endpoints, and a two-root model. Model-witnessed separations only; no premise is established and no reality claim is made.",
+  "definition_ids": [
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "25e19d5a-5cdf-5916-a888-f6a0ce970f11",
+    "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "c2e13bb8-679a-55ea-8754-ae77d345bcd2",
+    "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "a49e4cf1-ca4f-5519-9724-892af257cedb",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ],
+  "disambiguation_ids": [
+    "13843b8b-4ef3-500e-949d-27e78b9dfaf9",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "508617ab-cf24-5f3b-a387-64b3991359ec",
+    "557d8e44-4350-5031-81e3-ff6be5e30acc",
+    "b1640e51-d7d4-5a80-9992-29fa1ded8048"
+  ],
+  "sense_mixing_control": true
+}

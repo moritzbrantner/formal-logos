@@ -1,0 +1,10 @@
+{
+  "id": "144a61c5-0abd-4759-bdcd-8ad59ed8be72",
+  "label": "The actual spacetime whole is contingent in the selected modal frame",
+  "paraphrase": "The actual spacetime whole exists at the selected world but fails to exist at an accessible world, with the identical rigid candidate tracked across worlds. No cosmic beginning or physical modality is thereby assumed.",
+  "lean_declaration": "TruthCore.Ontology.SpacetimeGroundingBridge.ContingentWholeAt",
+  "definition_ids": [
+    "e9e031af-665e-5888-9328-f7637b5a2677",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ]
+}

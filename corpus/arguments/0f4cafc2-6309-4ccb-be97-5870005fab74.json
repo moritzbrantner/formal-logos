@@ -1,0 +1,45 @@
+{
+  "id": "0f4cafc2-6309-4ccb-be97-5870005fab74",
+  "label": "A distinct esse-cause for contingents, from distinct esse and the q.3 a.4 reading",
+  "premise_statement_ids": [
+    "96971e31-4782-4478-95b8-b6863a6a9412",
+    "0436de86-6579-53f2-9ff5-2111ba44ebae",
+    "33ad148b-ceab-5856-a4f8-c999a1dba644"
+  ],
+  "conclusion_statement_id": "8a8d00e9-12b6-4cf0-b662-431cc4addd49",
+  "inference_ids": [
+    "03d33903-c4d7-4f69-b7f8-ea85cfa31a38"
+  ],
+  "meaning": "A being contingent at w exists at w, so it is in act of esse (each individual existing at w is in act as to esse); by B6 its esse is distinct from its essence; the ST I q.3 a.4 reading ('that whose esse is other than its essence has its esse caused by another') then gives another being, in act of esse, that causes its esse. The q.3 a.4 profile is built on the frame's own CausesIn and esse, so the cause is CAUSE_2 at the same esse respect as B2. The passage from the q.3 a.4 reading's external esse-cause (CAUSING_AN_EFFECT_2) to B2's CausesIn at esse (CAUSING_AN_EFFECT_3) is by the definition of the former, which is the latter together with the cause's being in act; the q.3 a.4 statement is therefore listed as the sense bridge, and no contested step passes between the senses.",
+  "definition_ids": [
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "fc6f0e12-470f-5717-8c5b-ece7a450fe59",
+    "196be87e-b944-5924-b791-87406fbe48f6",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "0ea9feb8-1f92-5b11-aa74-2f2e567c6106",
+    "e232f6c0-f1f9-5c99-9e26-946a8abe4f2e"
+  ],
+  "disambiguation_ids": [
+    "3b0d67c5-59e4-5556-a728-26bd567f0fb1",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "13843b8b-4ef3-500e-949d-27e78b9dfaf9",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "86d198f5-e724-558a-8fce-b0a1e3592e08",
+    "c3c01e92-520e-5358-a58f-0cc7e9c9e6fa"
+  ],
+  "sense_bridges": [
+    {
+      "term": "CAUSING_AN_EFFECT",
+      "from": "0d3718b1-217b-4a2b-b544-cdf27127db4b",
+      "to": "39f64183-5038-4348-ad9f-5b64674f65f8",
+      "statement_id": "33ad148b-ceab-5856-a4f8-c999a1dba644"
+    }
+  ]
+}

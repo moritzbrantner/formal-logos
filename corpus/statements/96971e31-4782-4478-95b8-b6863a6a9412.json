@@ -1,0 +1,18 @@
+{
+  "id": "96971e31-4782-4478-95b8-b6863a6a9412",
+  "label": "Every being contingent at w has esse distinct from its essence",
+  "paraphrase": "OPEN modal bridge (B6, contrapositive form), analyst formulation, attribution deferred: every candidate contingent at w (existing at w, absent at some accessible world) has a represented esse distinct from its represented essence. With excluded middle it is equivalent to: whatever exists at w with esse not distinct from essence exists at every world accessible from w (controls, law 1). Essence-esse identity alone carries no modal force: in the brute-first model a being with esse not distinct from essence is contingent (controls, model 1).",
+  "lean_declaration": "TruthCore.Causality.FirstMoverNecessity.ContingentHasDistinctEsse",
+  "definition_ids": [
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "0ea9feb8-1f92-5b11-aa74-2f2e567c6106",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "13843b8b-4ef3-500e-949d-27e78b9dfaf9",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}
