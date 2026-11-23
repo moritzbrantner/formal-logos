@@ -175,3 +175,63 @@ conclusion = "First mover necessity: laws, omission models and a two-root model"
 rule = "General laws and explicit finite models"
 meaning = "Premise-free laws relating B6 to its necessity form, B4 to its converse-direction halves, B4's equivalence with the lead's target at w (route B relocates the question) and the strength of the disjunctive bridge; then twelve finite models: an omission model for each non-logical premise of the routes, a nonvacuity model for all routes and both endpoints, and a two-root model. Model-witnessed separations only; no premise is established and no reality claim is made."
 description = "Premise-free laws and models for the first-mover necessity batch. Sense-mixing control: the laws relate MODAL_CONTINGENCY_1 and NECESSARY_2 to POTENCY_1 and essence-esse identity without a bridge premise. Establishes no premise."
+
+# PR #1870 reception continuation: a B6 support route, with adopted-potency controls.
+
+[[statement]]
+id = "ae9d9473-34f1-4b51-8f13-41d340d64ad1"
+label = "Every contingent existent at w receives esse in some principle"
+lean = "ContingentReceivesEsse"
+paraphrase = "OPEN R1: each existing being absent in an accessible world has its esse received in some principle. This is a substantive explanatory/metaphysical proposal: modal contingency alone does not define reception, causal production, or being grounded. Its positive rationale is that an essence whose instantiation can fail does not supply its own act of being. It still requires philosophical defense against a brute contingent first being; source passages about received esse do not by themselves prove the universal modal bridge."
+definitions = ["DEF-KANT-MODAL-CONTINGENCY","DEF-KANT-ONTOLOGICAL-MODEL","DEF-ESSE-RECEIVED-IN","DEF-ESSE"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY","DISAMB-ESSE-RECEPTION","DISAMB-RECEPTIVE-POTENCY"]
+
+[[statement]]
+id = "65f3d0c7-cc3d-4ce3-a4a9-6fa38bf722cb"
+label = "Identity-scoped receipt: an esse-identical being receives its esse only in its essence"
+lean = "IdentityScopedEsseReception"
+paraphrase = "OPEN R3, identity-scoped instance of the existing unrestricted EsseReceivedOnlyInOwnEssence law: only IF esseOf x equals essenceOf x does receipt of its esse have to be in its very essence. No universal restriction on the recipients of other beings. This respects the preexisting united-soul/body scope issue in EsseReceptionDefinitionFork; it does not assert a recipient exists or make equality itself modal necessity."
+definitions = ["DEF-ESSENCE-THOMISTIC-NATURE","DEF-ESSE","DEF-ESSE-RECEIVED-IN"]
+disambiguations = ["DISAMB-ESSE-RECEPTION","DISAMB-RECEPTIVE-POTENCY","DISAMB-ESSENCE"]
+
+[[statement]]
+id = "6e8942c8-2b19-43b3-b620-1d2266dccfb9"
+label = "Contingent receipt entails unactualized POTENCY_1 in the bearer at esse"
+lean = "ContingentReceptionIsSubjectPotency"
+paraphrase = "OPEN diagnostic R2 (NOT an accepted reading of De ente): whenever a contingent existent receives esse in some principle, the whole bearer is in POTENCY_1 in that same esse respect. In the adopted POTENCY_1 sense (CanBe and not InAct), this conflicts with existing-in-act at esse for any actually existing contingent. The general law in the reception controls verifies the resulting exclusion, so R2 is not usable as philosophical B4 support. Receptive principle-potency, which can coexist with the possessed act, is different."
+definitions = ["DEF-ESSE-RECEIVED-IN","DEF-ESSE","DEF-POTENCY","DEF-KANT-MODAL-CONTINGENCY","DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY","DISAMB-ESSE-RECEPTION","DISAMB-RECEPTIVE-POTENCY","DISAMB-POTENCY","DISAMB-POTENCY-IN-SUBJECT-VS-IN-ANOTHER"]
+
+[[statement]]
+id = "e332dbe0-8cd1-4d0b-8e97-15a4ab87c202"
+label = "First Way received-esse controls and adopted-potency boundary"
+lean = "Model.ReceptionControls"
+paraphrase = "Premise-free general result plus three finite semantic interpretations. Universal law: combining R1, R2 at ADOPTED unactualized POTENCY_1 in the esse respect and the existing-at-w → in-act-of-esse interface excludes all contingent beings at w. Positive nonvacuous witness: a contingent being receives esse in a principle and the principle is in receptive potency to its already possessed act; the unactualized subject transfer fails. Conservation model: contingent first mover is pure act under the adopted subject-level distribution but is externally supported and prior-caused in its esse exactly where it exists; firstness in being fails, and identity-scoped reception can be falsified by receipt in another principle. Brute candidate: a contingent first pure-act mover whose represented essence/esse differ but with no reception. These establish logical independence and a causal support interpretation, not metaphysical possibility."
+definitions = ["DEF-KANT-MODAL-CONTINGENCY","DEF-KANT-ONTOLOGICAL-MODEL","DEF-ESSE-RECEIVED-IN","DEF-RECEPTIVE-POTENCY","DEF-ESSENCE-THOMISTIC-NATURE","DEF-ESSE","DEF-POTENCY"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY","DISAMB-ESSE-RECEPTION","DISAMB-RECEPTIVE-POTENCY","DISAMB-ESSENCE","DISAMB-POTENCY","DISAMB-POTENCY-IN-SUBJECT-VS-IN-ANOTHER"]
+
+[[argument]]
+id = "c4bc08b3-5684-428d-abe9-7fd943d20f60"
+label = "Contingent esse differs from essence through identity-scoped reception"
+theorem = "contingentDistinctEsseFromReception"
+premises = ["ae9d9473-34f1-4b51-8f13-41d340d64ad1","65f3d0c7-cc3d-4ce3-a4a9-6fa38bf722cb","7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2","14325c83-1c3f-5afb-b63f-52b0c2b2a326"]
+conclusion = "96971e31-4782-4478-95b8-b6863a6a9412"
+rule = "A contingent esse=essence recipient would be receptive to its own act, contrary to the principle-potency irreflexivity"
+meaning = "R1 supplies a receiver for a contingent being. On the reductio hypothesis that its esse equals its essence, R3 identifies the receiving principle with that essence, De ente c.3 makes it receptive in potency to its act, and receptive irreflexivity rules out reception of an act into itself. This proves B6 without assuming modal necessity or confusing POTENCY_1 of the bearer with receptive potency of the receiving principle. R3 is weaker than the existing general own-essence rule; its nonidentity cases are unconstrained. The previously verified B6-to-necessity route then applies to the SAME first unmoved mover on the SAME world/frame, and existing q.3 a.4 support can reach B2 without identifying receptive and existential efficient causes. R1, R3 and irreflexivity remain OPEN. The brute unreceived contingent first being contests R1 and is not refuted by this conditional result."
+description = "Distinct conditional support of the existing open B6 using De ente's principle-level recipient/act relation and the weaker identity-scoped law; no external cause or necessity silently assumed, and no premise discharged."
+definitions = ["DEF-ESSE-RECEIVED-IN","DEF-RECEPTIVE-POTENCY","DEF-ESSENCE-THOMISTIC-NATURE","DEF-ESSE","DEF-KANT-MODAL-CONTINGENCY","DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-ESSE-RECEPTION","DISAMB-RECEPTIVE-POTENCY","DISAMB-ESSENCE","DISAMB-KANT-CONTINGENCY"]
+
+[[argument]]
+id = "4e0794fa-8054-4936-8bc4-097f485dfbae"
+label = "First Way reception controls and adopted-potency incompatibility"
+theorem = "receptionControls"
+axioms = ["propext","Classical.choice","Quot.sound"]
+sense_mixing_control = true
+premises = []
+conclusion = "e332dbe0-8cd1-4d0b-8e97-15a4ab87c202"
+rule = "General same-respect impossibility theorem and explicit finite reception/conservation/brute models"
+meaning = "Controls show that, if adopted POTENCY_1 means unactualized capacity, R2 plus R1 and the selected-world esse actuality interface exclude all contingent beings there; they do NOT derive a philosophically warranted B4. A genuinely received esse in a receptive principle can coexist with actual existence; a contingent POTENCY_1-pure-act mover can be under an external conserved-source mechanism (and cannot also be first in being); an unreceived contingent first mover demonstrates R1 is additional explanatory content even when esse differs from essence. These are typed structural tests, not a proof of philosophical possibility."
+description = "General law and finite, world-support-coupled semantic controls. Distinguishes receptive potency from unactualized POTENCY_1, with no premise discharged."
+definitions = ["DEF-KANT-MODAL-CONTINGENCY","DEF-KANT-ONTOLOGICAL-MODEL","DEF-ESSE-RECEIVED-IN","DEF-RECEPTIVE-POTENCY","DEF-ESSENCE-THOMISTIC-NATURE","DEF-ESSE","DEF-POTENCY"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY","DISAMB-ESSE-RECEPTION","DISAMB-RECEPTIVE-POTENCY","DISAMB-ESSENCE","DISAMB-POTENCY","DISAMB-POTENCY-IN-SUBJECT-VS-IN-ANOTHER"]
