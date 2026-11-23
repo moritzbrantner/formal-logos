@@ -5,6 +5,9 @@ public import TruthCore.Modal.NecessaryIfExistent
 public import TruthCore.Modal.PossibilityTransfer
 public import TruthCore.Causality.ActualEuclidean
 public import TruthCore.Causality.GodNamingSenses
+public import TruthCore.Causality.RootPositiveIntellectWill
+public import TruthCore.Causality.DeiFiliusAttributeField
+public import TruthCore.Logic.ReflectiveCoherence
 
 /-! # A thirteen-slot profile schema, targeted admissibility and actual naming (#1864)
 
@@ -301,6 +304,195 @@ theorem actual_necessary_bundle_possible (m : Ontic W B)
     PossibleGreatness m p w := by
   obtain ⟨x, hx⟩ := actual_necessary_bundle_greatness m p w hActual hNecessary
   exact ⟨w, hRef, x, hx⟩
+
+/-! ## Interpreted profile and attribute intersections
+
+Selected analyst reading of the EXISTING thirteen-slot schema, without any
+occurrence of σ.IsGod inside its predicates. The original modal theorems are
+unchanged. The typed source, StageTwo and task-power vocabularies are reused.
+Content-knowledge and action-selection are world-indexed new primitives with
+explicit intended meanings below. The moral and free-exercise senses are
+deliberately WEAKER than unrestricted perfect goodness and libertarian freedom.
+The StageTwo properties are world-invariant here; treating them as essential
+in metaphysical alternatives is still an OPEN interpretive commitment.
+-/
+namespace Interpreted
+open TruthCore.Causality.BruteFoundationBoundary (Profile)
+open TruthCore.Causality.NecessaryRootFork (ActualRoot)
+open TruthCore.Causality.RootPositiveIntellectWill (NecessaryPositiveRootIntellectWillAt)
+open TruthCore.Causality.DeiFiliusAttributeField (IsAlmighty)
+open TruthCore.Causality.NamingVeracityBatch1 (Power)
+open TruthCore.German.Kant.CosmologicalInference (NecessaryAt)
+open TruthCore.Logic.ReflectiveCoherence (Semantics)
+
+/-- Knowledge of each true individuated content, and of no false content.
+Knows is actual cognitive uptake, not the already modeled mere assent.
+Coverage beyond the selected content type and the reality of uptake are OPEN. -/
+def KnowsAllContentsAt {C : Type} (S : Semantics W C)
+    (Knows : W → B → C → Prop) (v : W) (x : B) : Prop :=
+  ∀ c, Knows v x c ↔ S.trueAt v c
+
+/-- Moral impeccability of selection only: forbidden acts are never chosen.
+Permitted is a primitive normative evaluation; no relation to ontological
+goodness or best-possible creation is implied. -/
+def PermissibleChoicesAt {A : Type} (Chooses : W → B → A → Prop)
+    (Permitted : W → A → Prop) (v : W) (x : B) : Prop :=
+  ∀ a, Chooses v x a → Permitted v a
+
+/-- Weak free exercise: some actual selection is within capacity and is not
+externally imposed. Does NOT imply a different available choice with the same
+complete inputs or that contingent effects follow from that selection. -/
+def NoncoercedChoiceAt {A : Type} (Chooses Capable Imposed : W → B → A → Prop)
+    (v : W) (x : B) : Prop :=
+  ∃ a, Chooses v x a ∧ Capable v x a ∧ ¬ Imposed v x a
+
+/-- Fixed, GOD-free instance of all thirteen slots. The one slot means unique
+root of this selected actual-concrete grounding relation at each world; it is
+NOT IsTheOneGod. Omnipotence uses the existing IsAlmighty, coherent-task
+capacity rather than compulsory task performance. New primitives for knowledge
+and action have distinct meanings from the preexisting StageTwo fields.
+A closed logical model of this constructor is not a real metaphysical world. -/
+def fixedProfile {P R C A : Type} (σ : Signature)
+    (m : Profile W σ.Being)
+    (q : TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile σ.Being P R)
+    (Composite Infinite Eternal HasIntellect HasWill : σ.Being → Prop)
+    (GoodIn InPotency : σ.Being → R → Prop)
+    (power : Power σ) (S : Semantics W C)
+    (Knows : W → σ.Being → C → Prop)
+    (Chooses : W → σ.Being → A → Prop) (Permitted : W → A → Prop)
+    (Capable Imposed : W → σ.Being → A → Prop) :
+    ProfileSlots W σ.Being where
+  simple := fun _ x => IsSimple Composite x
+  perfect := fun _ x => IsPerfect q.InAct x
+  good := fun _ x => IsSupremelyGood q.InAct GoodIn q.CausesIn q.esse x
+  one := fun v x => ActualRoot m v x ∧ ∀ y, ActualRoot m v y → y = x
+  infinite := fun _ x => Infinite x
+  immutable := fun _ x => IsImmutable InPotency x
+  eternal := fun _ x => Eternal x
+  intellect := fun _ x => HasIntellect x
+  will := fun _ x => HasWill x
+  omnipotent := fun _ x => IsAlmighty σ power x
+  omniscient := KnowsAllContentsAt S Knows
+  morallyPerfect := PermissibleChoicesAt Chooses Permitted
+  free := NoncoercedChoiceAt Chooses Capable Imposed
+
+/-- A connective for six selected attributes of ONE necessary actual bearer.
+The other seven are not inferred. -/
+def PositiveCoreAt (m : Ontic W B) (p : ProfileSlots W B) (v : W) (x : B) : Prop :=
+  m.ExistsAt v x ∧ NecessaryAt m v x ∧
+    p.simple v x ∧ p.perfect v x ∧ p.good v x ∧ p.one v x ∧
+    p.intellect v x ∧ p.will v x
+
+/-- Same-bearer support from the existing RootPositiveIntellectWill result:
+six fixed attribute slots and necessity of this selected actual root.
+All the source argument's open premises are retained. -/
+theorem positiveCore_from_same_root {P R C A : Type} (σ : Signature)
+    (m : Profile W σ.Being) (w : W)
+    (q : TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile σ.Being P R)
+    (Composite MatterForm Infinite Eternal HasIntellect HasWill : σ.Being → Prop)
+    (GoodIn InPotency : σ.Being → R → Prop)
+    (MoreIn : R → σ.Being → σ.Being → Prop)
+    (PriorSimply ComponentOf : σ.Being → σ.Being → Prop)
+    (power : Power σ) (S : Semantics W C)
+    (Knows : W → σ.Being → C → Prop)
+    (Chooses : W → σ.Being → A → Prop) (Permitted : W → A → Prop)
+    (Capable Imposed : W → σ.Being → A → Prop)
+    (hRoot : NecessaryPositiveRootIntellectWillAt m w q GoodIn MoreIn
+      PriorSimply ComponentOf Composite MatterForm HasIntellect HasWill) :
+    ∃ n, PositiveCoreAt m.ontic
+      (fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+        GoodIn InPotency power S Knows Chooses Permitted Capable Imposed) w n := by
+  obtain ⟨n, hPerfectRoot, hGood, _, hSimple, _, _, _, hInt, hWill⟩ := hRoot
+  obtain ⟨hActualRoot, hNec, hOnly, _, hPerfect⟩ := hPerfectRoot
+  refine ⟨n, ?_⟩
+  change m.ontic.ExistsAt w n ∧ NecessaryAt m.ontic w n ∧
+    IsSimple Composite n ∧ IsPerfect q.InAct n ∧
+    IsSupremelyGood q.InAct GoodIn q.CausesIn q.esse n ∧
+    (ActualRoot m w n ∧ ∀ y, ActualRoot m w y → y = n) ∧
+    HasIntellect n ∧ HasWill n
+  exact ⟨hActualRoot.1.2, hNec, hSimple, hPerfect, hGood,
+    ⟨hActualRoot, hOnly⟩, hInt, hWill⟩
+
+/-- Eight StageTwo sense bridges are definitional on this fixed profile.
+The ninth, from uniqueness of the selected root to uniqueness of GOD_4,
+is a separate OPEN actual-world naming assumption. -/
+theorem fixed_to_stageTwo_senses {P R C A : Type} (σ : Signature)
+    (m : Profile W σ.Being) (w : W)
+    (q : TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile σ.Being P R)
+    (Composite Infinite Eternal HasIntellect HasWill : σ.Being → Prop)
+    (GoodIn InPotency : σ.Being → R → Prop)
+    (power : Power σ) (S : Semantics W C)
+    (Knows : W → σ.Being → C → Prop)
+    (Chooses : W → σ.Being → A → Prop) (Permitted : W → A → Prop)
+    (Capable Imposed : W → σ.Being → A → Prop)
+    (hRootNamesOne : ∀ x, ActualRoot m w x →
+      (∀ y, ActualRoot m w y → y = x) → IsTheOneGod σ.IsGod x) :
+    ProfileToStageTwoSenses σ
+      (fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+        GoodIn InPotency power S Knows Chooses Permitted Capable Imposed)
+      w Composite InPotency q.InAct GoodIn q.CausesIn q.esse
+      Infinite Eternal HasIntellect HasWill := by
+  intro x
+  change
+    (IsSimple Composite x → IsSimple Composite x) ∧
+    (IsPerfect q.InAct x → IsPerfect q.InAct x) ∧
+    (IsSupremelyGood q.InAct GoodIn q.CausesIn q.esse x →
+      IsSupremelyGood q.InAct GoodIn q.CausesIn q.esse x) ∧
+    ((ActualRoot m w x ∧ ∀ y, ActualRoot m w y → y = x) →
+      IsTheOneGod σ.IsGod x) ∧
+    (Infinite x → Infinite x) ∧
+    (IsImmutable InPotency x → IsImmutable InPotency x) ∧
+    (Eternal x → Eternal x) ∧
+    (HasIntellect x → HasIntellect x) ∧
+    (HasWill x → HasWill x)
+  exact ⟨(fun h => h), (fun h => h), (fun h => h),
+    (fun h => hRootNamesOne x h.1 h.2),
+    (fun h => h), (fun h => h), (fun h => h),
+    (fun h => h), (fun h => h)⟩
+
+/-- Nontrivial modal discriminator: complete and factive knowledge plus
+invariant known-content sets imply invariant truth of every covered content.
+Simplicity alone does NOT imply this strong content-invariance premise. -/
+theorem invariant_knowledge_forces_truth_agreement {C : Type}
+    (S : Semantics W C) (Knows : W → B → C → Prop)
+    (w v : W) (x : B)
+    (hw : KnowsAllContentsAt S Knows w x)
+    (hv : KnowsAllContentsAt S Knows v x)
+    (hInvariant : ∀ c, Knows w x c ↔ Knows v x c) :
+    ∀ c, S.trueAt w c ↔ S.trueAt v c := by
+  intro c
+  exact (hw c).symm.trans ((hInvariant c).trans (hv c))
+
+/-- A genuinely changing truth-content rules out that strong content-invariance
+bridge if the same bearer is omniscient about it in both worlds. A simple,
+unchanging intellectual act can instead have extrinsically varying relations
+to contingent truths; this theorem does not exclude that interpretation. -/
+theorem varying_truth_excludes_invariant_knowledge {C : Type}
+    (S : Semantics W C) (Knows : W → B → C → Prop)
+    (w v : W) (x : B) (c : C)
+    (hw : KnowsAllContentsAt S Knows w x)
+    (hv : KnowsAllContentsAt S Knows v x)
+    (hHere : S.trueAt w c) (hThere : ¬ S.trueAt v c) :
+    ¬ (∀ d, Knows w x d ↔ Knows v x d) := by
+  intro hInvariant
+  exact hThere ((invariant_knowledge_forces_truth_agreement S Knows w v x
+    hw hv hInvariant c).mp hHere)
+
+/-- Power to do a coherent task and actual impeccable selection differ.
+Whether a morally forbidden act corresponds to a coherent Power.Task is
+EXPLICITLY stipulated by hCons; perfection may dispute that classification. -/
+theorem can_do_without_choosing_forbidden {A : Type} (σ : Signature)
+    (power : Power σ)
+    (Chooses : W → σ.Being → A → Prop) (Permitted : W → A → Prop)
+    (taskOf : A → power.Task) (w : W) (x : σ.Being) (a : A)
+    (hOmni : IsAlmighty σ power x)
+    (hMoral : PermissibleChoicesAt Chooses Permitted w x)
+    (hCons : power.Consistent (taskOf a)) (hForbidden : ¬ Permitted w a) :
+    power.CanDo x (taskOf a) ∧ ¬ Chooses w x a := by
+  refine ⟨hOmni (taskOf a) hCons, ?_⟩
+  intro hSelected
+  exact hForbidden (hMoral a hSelected)
+end Interpreted
 
 /-! ## Finite structural controls
 
