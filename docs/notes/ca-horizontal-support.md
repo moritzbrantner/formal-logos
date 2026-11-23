@@ -472,12 +472,16 @@ is **not** the genuine logical negation of
 > **C3:** Every *presently existentially derivative* bearer of received esse
 > has an appropriately concurrent actualizer of its being.
 
-One possible witness to S is the **underived necessary source** N, which is
-outside C3's antecedent. C3 and S may both be true. The fact that N itself
-needs no external giver says nothing about whether N's *effects* need
-continuing support. A classical view with an underived N and concurrently
-dependent creatures is therefore not ruled out by this restricted EIT
-formulation, although it may deny some other inertialist worldviews.
+One possible witness to S is an **underived *temporal* necessary
+foundation N**, which is outside C3's antecedent. C3 and S may both be true
+in such a framework: N does not need a giver, while N's *effects* may
+receive continuing support. But the classical Thomistic first source is
+**timeless**, not temporal, so it does **not** witness S. A world in which
+all temporal creatures are concurrently sustained by a timeless source may
+satisfy C3 but **fails to instantiate Schmid's nonempty restricted temporal
+inertia thesis**. The compatibility established here is between C3 and
+*one unsustained temporal, unreceived N*, not between Schmid's subset EIT
+and every classical theistic worldview.
 
 **Checked formal surrogate.** The newly added unregistered theorem
 `Results.Causality.TimeSymmetricGiving.subsetInertiaCompatibleWithC3`
@@ -491,7 +495,10 @@ proves `Control.SubsetInertiaCompatibleWithC3` on ONE already-existing
 - `true` does not have received esse in the tested predicate.
 
 This is a **scope compatibility model**, not a full model of NTF or EIT.
-Its one-world modal necessity is trivial, and it does **not** type
+Its `Int`-indexed, ever-present source can serve as a *temporal candidate*
+under the inclusive presence reading; the model has no independent predicate
+proving that it is fundamentally temporal rather than timeless. Its
+one-world modal necessity is trivial, and it does **not** type
 fundamentality, real intrinsic esse, source nature, absence of every possible
 external grounding relation or the productive semantics of the giver. The
 independently important distinction is the antecedent: a universally
@@ -566,10 +573,12 @@ The scope correction **does not lower or strengthen** C3's warrant merely
 because a weak or differently scoped inertialist thesis is compatible with it.
 It sharpens which rival is genuinely contradictory:
 
-- **C1/C2 and C3 together** may admit an unreceived necessary source and
-  continuously derivative creatures. Restricted subset EIT of that source
-  is compatible; it is *not* a competing worldview on the actual
-  dependence of the creatures.
+- **C1/C2 and C3 together** may admit an unreceived **temporal**
+  necessary source and continuously derivative creatures. Restricted subset
+  EIT about this temporal N is compatible with C3 for those creatures;
+  it is *not* a competing worldview on their actual dependence. The
+  classical **timeless** source does not instantiate the nonempty subset EIT
+  claim, even if it can sustain all temporal creatures.
 - **Genuine ¬C3 of a received bearer** is a live alternative that a
   positive causal/conservation account must confront. #1895's
   no-destruction-law success and its withdrawal-as-loss counter-reading test
