@@ -1,0 +1,29 @@
+{
+  "id": "2f9b4acb-4bd5-4adb-91ac-8935f46f2e69",
+  "label": "Every being contingent at w has a distinct CAUSE_2 of esse whose bearer exists at w",
+  "paraphrase": "Conditional same-world strengthening of B2: for every bearer existing at the selected world and absent at an accessible world, there exists a numerically different bearer that itself exists at this selected world and causes that target's esse in the shared CausalityFrame. No identification of a receiving principle with this causal bearer, no temporal concurrency, no efficient-cause or grounding identification, and no claim that the first unmoved mover is the giver. The cause-presence bridge is independent and OPEN; absent sources can satisfy world-free CausesIn in structural interpretations.",
+  "lean_declaration": "TruthCore.Causality.ReceivedEsseActualGiver.ContingentHasActualEsseGiverAt",
+  "definition_ids": [
+    "1875d575-2a60-5000-b403-0ab090078a7a",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "7439c292-82a4-530d-8144-a61a6c21f502",
+    "85f7f569-ab4d-514b-aa2c-cf75171ad105",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "afc7a0c6-0b7d-5a08-b406-3ecad83e36ca",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "d650ff6e-6b08-5f27-ac93-6f32c96968a8"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "5323527f-56a2-5d11-8a76-5b25461a61b4",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "5d15d8f2-1080-53c9-886f-cee2a4ff23a9",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "896d4cb9-3c62-5230-a499-f23feae9d204",
+    "8bb31748-e20f-5266-ac39-c442faab6622",
+    "c3c01e92-520e-5358-a58f-0cc7e9c9e6fa"
+  ]
+}

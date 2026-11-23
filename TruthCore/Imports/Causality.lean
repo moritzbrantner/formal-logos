@@ -205,6 +205,7 @@ public import TruthCore.Causality.PureIndiscernibility
 public import TruthCore.Causality.Q44EssentialSource
 public import TruthCore.Causality.Q44SourceSupply
 public import TruthCore.Causality.QuantitativeTransferPaths
+public import TruthCore.Causality.ReceivedEsseActualGiver
 public import TruthCore.Causality.ReceptionLimitation
 public import TruthCore.Causality.ReflexiveDependenceScope
 public import TruthCore.Causality.RegressReadings
