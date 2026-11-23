@@ -357,11 +357,19 @@ and an impersonal source can reject it or reject intrinsic cognitive uptake.
    InPotency g` hypothesis eliminates the second branch. `InPotency` is
    POTENCY_2 of `DISAMB-POTENCY` (`DEF-INDEPENDENT-POTENCY`); under it the
    bridge is substantive and the dormant-capacity case below is a model. Under
-   POTENCY_1 (capable and not actually) the bridge is an instance of excluded
-   middle, the dormant-capacity case is not a model, and the weight moves into
-   `PureAct`, which then forbids every unexercised capacity of the source,
-   productive powers included if they count as `CanBe` respects; the same fork
-   is recorded for `UnderstandingCapacityExercisedOrInPotency` in
+   POTENCY_1 (capable and not actually at the single respect `understanding`)
+   it is still not automatically excluded middle: `CanApprehend`/`Apprehends`
+   are content-indexed and the respect is not, and nothing identifies them with
+   `CanBe`/`InAct` at that respect. A source that apprehends one of two
+   self-directed contents is actually understanding, so not in adopted potency,
+   while the bridge fails for the other content. Only with a further OPEN
+   identification of content with content-indexed respects (`CanApprehend g c`
+   gives `CanBe g (respect c)`, `InAct g (respect c)` gives `Apprehends g c`)
+   would the bridge reduce to excluded middle and the weight move into
+   `PureAct`, which under POTENCY_1 forbids every unexercised `CanBe` capacity
+   of the source, productive powers included if they count as `CanBe` respects.
+   The generic-respect fork is recorded for
+   `UnderstandingCapacityExercisedOrInPotency` in
    `DeiFiliusOperationFromIntellect`. In particular,
    `InActFormallyOrVirtually g understanding` is **not** used in place of
    actual apprehension: the inclusive-`InAct` boundary of the earlier

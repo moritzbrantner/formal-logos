@@ -117,9 +117,17 @@ virtual possession.
 the independently supplied potency predicate whose absence in every respect is
 pure act); under it the bridge is substantive and the dormant-capacity control
 (case 2) is a model. Under POTENCY_1 (`AdoptedPotency.InPotency`: capable and
-not actually) the bridge would be an instance of excluded middle, case 2 would
-not be a model, and the act/potency weight would move into `PureAct`, which
-then forbids every unexercised capacity of g. The same fork is worked through
+not actually at the single respect `understanding`) the bridge is still NOT
+automatically excluded middle: `CanApprehend` and `Apprehends` are indexed by
+content, the respect is not, and this signature identifies neither with
+`CanBe`/`InAct` at `understanding`. A source with two self-directed contents
+that apprehends only one is actually understanding, so not in adopted potency
+there, while the bridge fails for the other content. The bridge would reduce to
+excluded middle (with the act/potency weight moving into `PureAct`, which under
+POTENCY_1 forbids every unexercised `CanBe` capacity of g) only given a further
+OPEN identification: `CanApprehend g c` gives `CanBe g (respect c)` and
+`InAct g (respect c)` gives `Apprehends g c`, for content-indexed respects. The
+generic-respect fork is worked through
 for `UnderstandingCapacityExercisedOrInPotency` in
 `TruthCore.Causality.DeiFiliusOperationFromIntellect`. -/
 def SelfCapacityExercisedOrPotent {B C R : Type}
