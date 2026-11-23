@@ -9,11 +9,28 @@
   "kind": "derivation",
   "outcome": "blocked",
   "summary": "C4 continuation of merged #1855/#1866/#1873/#1879. On the same existing two-world actual root, source true is NecessaryAt, OwnBeing, pure act and constitutively simple; it causes a distinct effect false that actually apprehends true self-content. The source itself has its own objectively self-intelligible form and a selected normative exemplar relation to that effect's true apprehension but itself apprehends no content. Nonvacuous ObjectiveEminence.ImpersonalEminence is a structural counterassignment to objective exemplarity implying actual source-level understanding, not a proof that this sense is the full pure intellectual perfection. A positive SimpleIntentionalEminence assignment has the same source/secondary knower and actual self-apprehension with one real constituent. strictUnityExcludesNoesisUnderRealDuality conditionally excludes source noesis under the selected strong real-constituent duality principle; that is not the full Plotinian intelligible-articulation objection. Existing immanent self-form route remains the strongest positive conditional and source-level will and freedom remain separate. Comprehensive cumulative assessment in docs/notes/causal-perfection-transfer.md, C4 section.",
-  "blocker": "Unsettled metaphysical warrant for actual understanding (unlimited truth-grasp) as a pure perfection of being; whether stronger genuine eminent possession requires source-level immanent cognition or an intrinsic objective/exemplary norm suffices; applicability of q14 immateriality-to-intellect and source-level capacity/exercise bridge; distinction between nonconstitutive intentional subject-object directedness and the Plotinian challenge of irreducibly multiple noetic articulation. Semantic challenge and exact final-head CI pending. No recorded source claim or formal route closure.",
+  "blocker": "Unsettled metaphysical warrant for actual understanding (unlimited truth-grasp) as a pure perfection of being; whether stronger genuine eminent possession requires source-level immanent cognition or an intrinsic objective/exemplary norm suffices; applicability of q14 immateriality-to-intellect and source-level capacity/exercise bridge; the #1879 two-fork articulation test (real multiplicity versus non-constitutive intentional distinction in one simple act) remains unformalized, and the real-duality fork is only a constituent sub-reading transposed onto OwnBeing bearers. Independent semantic challenge of b4ca11060 returned mergeable after listed repairs (one P1, nine P2s); repairs applied in PR-1892, re-check and exact final-head CI pending. No recorded source claim or formal route closure.",
   "evidence": [
     "PR-1855",
     "PR-1866",
     "PR-1873",
-    "PR-1879"
-  ]
+    "PR-1879",
+    "PR-1892"
+  ],
+  "current_assessment": {
+    "date": "2026-11-23",
+    "statement_ids": [
+      "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96",
+      "29818edd-9f5a-5414-baa2-9a7d0c8abf18"
+    ],
+    "scope": "C4 objective-eminence versus actual source-level noesis on the same necessary first source, and the selected real-constituent duality fork of the Plotinian objection; Lean-only unregistered helpers and controls in IntentionalExemplarExtension.ObjectiveEminence.",
+    "assessment": "Objective exemplar eminence (own form primarily about the source, primitive Norms to an actual knower's correct self-content) does not entail source-level apprehension within this unconstrained vocabulary; with #1879's OPEN ActApprehendsPrimaryObject it yields apprehension only given the source's own actual act with that form as immediate species. Under the real-duality principle a constitutively simple source cannot know itself; a nonvacuous model shows that principle is not entailed by the other modelled conditions, without refuting it or representing subject/act/object identity. No metaphysical winner; the C4 bridge stays open.",
+    "next_test": "Defend or reject the pure-perfection criterion for actual intentional understanding in a source already granted objective first-exemplar excellence; formalize #1879's two-fork articulation condition rather than only the real-constituent fork.",
+    "note": "docs/notes/causal-perfection-transfer.md#c4-intrinsic-objective-exemplarity-versus-understanding-2026-11-23",
+    "reviewed_revision": "b4ca1106023982fc307c33d440cedc4ea184ad4b",
+    "review": "changes_requested",
+    "publication": "unpublished",
+    "evidence": "Independent semantic challenge of PR-1892 head b4ca11060: mergeable after listed repairs (P1 overstated Thomistic-identity reading; P2 vacuous pure act, unconstrained own-form vocabulary, Norms scope, carrier wording, Solution wording, Plotinian scope, duplicated controls, stale process state, wording). Repairs applied on the PR branch; to be finalized after re-check and final-head CI.",
+    "supersedes": "none"
+  }
 }
