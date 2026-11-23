@@ -1,0 +1,9 @@
+{
+  "id": "1e04df16-fe72-467a-bc25-785f0e94fc70",
+  "label": "Finite-history recombination and infinite-prefix closure",
+  "term": "finite-history recombination and infinite-prefix closure",
+  "definition": "Admitted allowed n f requires both #737's Cell(openFuture n) on n f and the fixed selector allowed f of complete Boolean traces. OneStepRich allows any successor bit after an admitted path prefix at m >= n, preserving the path through m. FiniteRich requires an admitted complete extension of any proposed finite portion of an otherwise arbitrary suffix, with extension dependent on cutoff m. PrefixClosed requires admission of a complete candidate when every finite prefix has an admitted complete witness; WholeSuffixRich admits every entire infinite suffix. EventuallyConstant is a complete-history restriction to traces with a finite stabilization cutoff, not an extra local transition Profile. These quantifiers do not describe laws' actuality, a causal power, logical/metaphysical possibility, or epistemic entitlement.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.NoFoundationLawChaos.FiniteRich",
+  "note": "Positive simple examples: a finite record and a selector allowing all complete traces satisfies all clauses; an eventually constant selector allows any prescribed finite continuation but excludes alternating forever; a stable selector is prefix-closed but forbids some first-step choices. The empty selector has vacuous one-step richness and closure, which is why population is independent. Prefix closure is a substantive full-history admissibility commitment, not derivable from finite local options. The actual-world selection question remains separate from unrestricted modal possibility and from primitive stable-law explanations. See docs/notes/no-foundation-law-chaos.md and issue #1867."
+}
