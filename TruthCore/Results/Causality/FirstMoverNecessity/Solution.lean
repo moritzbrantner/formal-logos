@@ -71,6 +71,19 @@ theorem contingentEsseCauseFromDistinctEsse {W B T R P : Type} (F : CausalityFra
   exact ⟨y, hne, hc⟩
 
 
+
+/-- A strength-fork law: the unrestricted reception-in-own-essence principle
+implies the identity-scoped principle. The only premise is the stronger
+existing statement, so the frontier retains the option to assume the weaker
+R3 directly without promoting the stronger law to an established fact. -/
+theorem unrestrictedReceptionImpliesIdentityScoped {B P : Type}
+    (essenceOf esseOf : B → P) (Received : B → P → Prop)
+    (hFull : TruthCore.Causality.EsseReception.EsseReceivedOnlyInOwnEssence
+      essenceOf Received) :
+    IdentityScopedEsseReception essenceOf esseOf Received := by
+  intro x p _ hRec
+  exact hFull x p hRec
+
 /-- Substantive support for B6 from reception. A contingent identity-being
 would receive esse (R1). Under identity (and only then), R3 locates the
 recipient in its essence. De ente puts that recipient in receptive potency to
