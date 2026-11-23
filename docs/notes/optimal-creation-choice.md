@@ -122,15 +122,33 @@ remain open.
 
 ## Same-source knowledge–choice–creation integration (#1737; 2026-11-23)
 
-**Status: proposed checkpoint, pending delivered-head Lean/CI and independent
-semantic challenge.** The additional theorems in
+**Status: checkpoint in PR #1875.** CI passed on the first delivered head
+(d23a5d3); an independent semantic challenge then found overstated prose and
+unacknowledged reuse, repaired here (repair pass 1). The additional theorems in
 `Results.Modal.OptimalCreationChoice.Solution` use the same
 `SelectedEffectBridge.OutputProfile` and `NecessaryVariableEffects.EffectBeing`
-as the established certificates. No previously registered result, frozen
+as the established certificates. They are unregistered: no argument, result,
+frozen Challenge or Comparator config. No previously registered result, frozen
 Challenge, claim, sense, root-route argument or computed premise status changes.
 This addresses the outstanding unverified omission assignment in #1737's
 2026-11-18 comment; the older `varying` and `fixedEffects` certificates
 are reused rather than reproved.
+
+**Reuse and what is new.** That a necessary source can have varying or absent
+activity is already certified by
+`NecessaryContingentActivity.necessaryWithContingentActivity` (#435) and
+`NecessaryVariableEffects.necessarySourceVariableEffects` (#462). The two-world
+creation/omission profiles are #555's `SimplicityCollapse.optionalAct` and
+`SimplicityCollapse.inefficaciousAct` on `noCreation`, whose `Core` already
+certifies their necessary source, (non-)ubiquitous performance, strict efficacy
+facts and contingent effect; failed stability of `inefficaciousAct` is composed
+here from `Core` clause 2 and its denial of strict efficacy. The new content is
+the **optimality layer** over these profiles (`soleCreatedUnique`,
+`optionalOmissionOptimal`, `universalOmissionOutputOptimal`,
+`universalOmissionNotTotal`): a unique optimum plus optimality of every output
+does not yield `StableActOutput` without positive-output totality. The
+three-world model adds the omission world and the selection-table tests
+(`TracksSelectedCreation`, `coincidentalTag`) to one profile.
 
 ### End-to-end graph: precise status at each arrow
 
@@ -139,7 +157,8 @@ are reused rather than reproved.
     E(n) and N(n)
        |  [OPEN transfer into one modal Ontic/OutputProfile and Causes field]
        v
-[Existing GodHasIntellect and GodHasWill routes: capacities of that n]
+[Existing GodHasIntellect and GodHasWill routes: capacities of that n;
+ NOT formalized in the controls below, which model no intellect or will]
        |  [OPEN intrinsic intentional apprehension; PR #1866 is a draft,
        |   not an available proof of actual understanding or willing]
        v
@@ -168,9 +187,9 @@ are reused rather than reproved.
 ```
 
 This graph is **not** a new implemented inference into GOD_4. The roots already
-import capacity-level `StageTwo.GodHasIntellect` and `GodHasWill`, while the
-logic of `CommonKnowerScopes` forbids distributing multiple content knowers
-to one common bearer. The `ForeknowledgeDiscrimination` selected-content
+import capacity-level `StageTwo.GodHasIntellect` and `GodHasWill`, while
+`CommonKnowerScopes` shows per-content knowers do not entail one common
+knower (`noWitnessExchange`). The `ForeknowledgeDiscrimination` selected-content
 result does not establish divine universal truth-complete knowledge.
 `DivineLoveRoute` and the veracity study retain separate recipient-good,
 moral-policy, factual-assent and permission burdens. No change to them is
@@ -189,27 +208,48 @@ name happens to be "God".
    edge. The source is necessary and the two effects separately contingent;
    each created output is causally sound, locally unique and optimal under the
    existing fixed tied-candidate ordering. Neither contingent effect becomes
-   necessary. The predicates for intellect/will are only fixed unary
-   **capacities**, and recognition covers just the two *possible options*;
-   they are not intrinsic thought, free choice, omniscience or goodness.
+   necessary. The model contains **no** intellect, will or option-recognition
+   predicate: an earlier draft carried constant labels for these
+   (`x = source`, `True`) that were connected to nothing and could not fail,
+   so they added no logical content and were removed. The necessary source
+   with varying or absent activity is the #435/#462 result reapplied, not new.
    `TracksSelectedCreation` checks all-world output/selection correspondence,
    but the selection table still reads the world label: **even global fidelity
-   is not an intentional explanation**.
+   is not an intentional explanation**. Each created effect is its own world
+   label (`x = w`), so "selected effect" and "selected world" coincide; the
+   world is a surrogate for the selected effect.
 
 2. **Same single best created candidate, creation versus omission.**
-   `alwaysPerformedOmission` and `optionallyPerformedOmission` share exactly
-   the ontology, rigid source, causal edges and outputs. Both have a unique
-   admissible created effect at the actual creation world. In the optional case,
+   These are #555's `SimplicityCollapse.optionalAct` and
+   `SimplicityCollapse.inefficaciousAct` on `noCreation` (creation world
+   `false`, omission world `true`), reused, not new models. They share the
+   ontology, rigid source, causal edges and outputs. Both have a unique
+   admissible created effect at the creation world. In the optional case,
    the selected productive act is *not* performed at the omission world:
    `OptimalOutputs` and `StableActOutput` hold, while
    `SameActEverywhere` fails. In the universal-performance case,
    `SameActEverywhere` holds and every **actual** output is optimal, yet the
    omission world has no output at all: **positive-output totality** and
-   `StableActOutput` fail. Both retain the same contingent particular effect.
-   Thus the extra totality premise in `uniqueOptimalStable` is not a harmless
-   restatement of perfect rationality or uniqueness. Here universal
-   performance denotes one rigid act token, *not* a defended identity of
-   intrinsic divine willing across worlds.
+   `StableActOutput` fail (the latter already follows from #555 `Core`
+   clause 2 with the failure of strict efficacy). Both retain the same
+   contingent particular effect. The new content is the optimality layer:
+   the extra totality premise in `uniqueOptimalStable` is not entailed by
+   uniqueness of the created optimum plus optimality of all actual outputs;
+   whether a create-or-refrain rationality principle supplies it is **OPEN**.
+   Here universal performance denotes one rigid act token, *not* a defended
+   identity of intrinsic divine willing across worlds.
+
+**What the controls do not model: the simplicity-restored application.**
+Under #555's `BeingCarriesAct` reading (the token is performed wherever its
+bearer exists) with a necessary source, `Core` yields `SameActEverywhere`.
+`beingCarriesActApplication` checks that `threeWorldCreation` and
+`optionalAct` fail `BeingCarriesAct` and `inefficaciousAct` satisfies it. So
+under that reading the three-world model and the optional profile are
+excluded, and `threeWorldOptimalOutputs` holds only because performance is
+withheld at `none`. Only the always-performed profile survives; there the
+difference between creating and omitting is carried by the world label
+alone. That is #555's inefficacious, extrinsic branch, structurally the same
+as the brute-selection rival below.
 
 The actual-world `coincidentalTag` agrees with production of
 `firstEffect`, but fails `TracksSelectedCreation` at the different
@@ -254,7 +294,9 @@ copy of outputs. These remain **OPEN**.
   `selectedEffectNecessary` already entails one particular necessary
   output **conditional on** fixed candidates/qualities, a unique best
   created candidate, positive output at every performance, ubiquitous
-  performance of the selected act, sound causal endpoints and stable output.
+  performance of the selected act, sound causal endpoints, outputs realized
+  as source causal edges (`RealizedOutputs`) and an actual output; stability
+  is derived, not assumed.
   Different admissible created optima do not logically force a unique
   choice. Even uniqueness *among creations* does not settle whether creating
   anything is required: the omission control isolates that gap. A policy
@@ -277,9 +319,9 @@ copy of outputs. These remain **OPEN**.
 
 ### Explanation versus necessitation and provisional assessment
 
-**Conditional results:** a necessary source with stable candidate-recognition
-and capacities can have different *world-local* effects or omit producing any
-effect; source necessity alone does not transfer to effect necessity.
+**Conditional results:** a necessary source can have different *world-local*
+effects or omit producing any effect (already #435/#462); source necessity
+alone does not transfer to effect necessity.
 `SelectedEffectBridge.selectedEffectNecessary` remains the controlling
 conditional **necessitation** rule. Neither `RealizedOutputs` nor a
 `TracksSelectedCreation` match qualifies as *metaphysically adequate
@@ -317,14 +359,14 @@ improvement in explanatory adequacy.
 `EffectBeing` value across all accessible worlds; created beings are
 distinct `some b` values. World `none` is an index and is not an
 existent effect; omission is an absence of outputs and causal edges. The
-three-world case distinguishes capacity, option recognition, performed act,
-selection and produced effect, without equating any with actual intentional
-understanding, free will, moral goodness, world-choice or all-truth knowledge.
-The two-world case varies just the performance predicate while preserving
+three-world case distinguishes performed act, selection table and produced
+effect; it models no capacity, option recognition, intentional understanding,
+free will, moral goodness, world-choice or all-truth knowledge. The two-world
+(#555) case varies just the performance predicate while preserving
 ontology/output and demonstrates separate failure of totality. The new
-theorems have no registered argument/result or frozen Challenge; Comparator,
-NanoDa and `truth frontier-diff` therefore have **no new route to certify**,
-and the computed premise delta is expected to be **none**. Focused Lean
-elaboration, full CI, corpus/binding/axiom checks and independent semantic
-challenge must be evaluated on the delivered PR head; until then the model
-certificates and assessment here are **proposed, not verified or reviewed**.
+theorems are unregistered: no argument/result, frozen Challenge, Comparator
+config or binding, so Comparator and `bind-check` have nothing new to certify
+and the computed `frontier-diff` premise delta is **none**. CI's NanoDa
+no-`sorry` check does cover the affected Solution module. CI passed on
+d23a5d3; the independent semantic challenge of that head and its repair are
+recorded in PR #1875. The assessment above remains a provisional judgment.

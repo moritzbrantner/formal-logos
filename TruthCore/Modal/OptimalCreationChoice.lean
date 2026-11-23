@@ -2,6 +2,7 @@ module
 
 public import TruthCore.Results.Modal.SelectedEffectBridge.Solution
 public import Mathlib.Order.Bounds.Basic
+public import TruthCore.Modal.SimplicityCollapse
 
 /-! Stipulative optimization constraints, not a sourced theory of perfect agency.
 Candidate options need not exist at the world where a choice is made. Fixed
@@ -14,6 +15,7 @@ open TruthCore.Modal.SelectedEffectBridge
 open TruthCore.Modal.NecessaryVariableEffects
 open TruthCore.Modal.NecessaryContingentActivity
 open TruthCore.German.Kant.CosmologicalInference
+open TruthCore.Modal.SimplicityCollapse (optionalAct inefficaciousAct noCreation)
 
 /-- An admissible candidate achieves a greatest quality in the fixed image.
 Distinct candidates can have the same quality; `IsGreatest` concerns values. -/
@@ -71,11 +73,22 @@ These are finite structural interpretations of the existing world-indexed
 simplicity or explanatory adequacy. An `Option Bool` world of `none`
 means *no creature created*; an `EffectBeing` of `none` denotes the
 same rigid necessary source at every world. They are different roles.
-A world label is not an intrinsic selector or an explanation. -/
+A world label is not an intrinsic selector or an explanation.
 
-/-- An output's correspondence to an independently supplied selection table
-at *all* worlds. Even full correspondence is only an extensional control,
-not proof that selection intentionally causes the output. -/
+That a necessary source can have varying or absent activity is already
+certified by `NecessaryContingentActivity.necessaryWithContingentActivity`
+(#435) and `NecessaryVariableEffects.necessarySourceVariableEffects` (#462).
+The creation/omission profiles are #555's `SimplicityCollapse.optionalAct`
+and `SimplicityCollapse.inefficaciousAct`, reused rather than restated. The
+new content is the optimality layer over them and the selection-table tests.
+
+Each created effect is also its own world label (`x = w` in
+`threeWorldCreation`), so "selected effect" and "selected world" coincide:
+the world serves as a surrogate for the selected effect. -/
+
+/-- An output's correspondence to a separately named selection table at *all*
+worlds. Even full correspondence is only an extensional control, not proof
+that selection intentionally causes the output. -/
 def TracksSelectedCreation {W : Type}
     (p : OutputProfile W EffectBeing Unit) (selects : W → Bool → Prop) : Prop :=
   ∀ v b, p.output v () (some b) ↔ selects v b
@@ -93,14 +106,6 @@ def threeWorldCreation : OutputProfile (Option Bool) EffectBeing Unit where
   performs := fun w _ => w ≠ none
   output := fun w _ x => w ≠ none ∧ x = w
 
-/-- These only model source-borne *capacities*, not exercised intellect/will. -/
-def hasIntellectualCapacity (_ : Option Bool) (x : EffectBeing) : Prop := x = source
-def hasVolitionalCapacity (_ : Option Bool) (x : EffectBeing) : Prop := x = source
-
-/-- Recognition of each possible candidate. Not omniscience, actual knowledge
-of a contingent truth, intentional reference or a metaphysical possibility proof. -/
-def recognizesOption (_ : Option Bool) (_ : Bool) : Prop := True
-
 /-- Candidate selected as a table input; the world label supplies this datum
 rather than explaining why the source makes that selection. -/
 def selectedCandidate (w : Option Bool) (b : Bool) : Prop := w = some b
@@ -108,17 +113,16 @@ def selectedCandidate (w : Option Bool) (b : Bool) : Prop := w = some b
 /-- An actual-world matching tag that fails to follow the second outcome. -/
 def coincidentalTag (_ : Option Bool) (b : Bool) : Prop := b = false
 
-/-- A single rigid source with stable powers, recognized admissible candidates,
-causally sound and locally deterministic outputs, two contingent creations
-and a genuine omission world. Full selection/output correlation can hold
-while source necessity does not entail necessary performance or a fixed effect.
-A matching tag at the first world fails cross-world selection/output fidelity. -/
+/-- A single rigid necessary source, causally sound and locally deterministic
+outputs, two contingent creations and a genuine omission world. Full
+selection/output correlation can hold while source necessity does not entail
+necessary performance or a fixed effect. A matching tag at the first world
+fails cross-world selection/output fidelity. No intellect, will or recognition
+of options is modelled. -/
 def ThreeWorldCreationControl : Prop :=
   (∀ u v, threeWorldCreation.ontic.frame.access u v) ∧
   SoundDistinctCauses threeWorldCreation.ontic ∧
   NecessaryAt threeWorldCreation.ontic (some false) source ∧
-  (∀ v, hasIntellectualCapacity v source ∧ hasVolitionalCapacity v source ∧
-    ∀ b, recognizesOption v b) ∧
   RealizedOutputs threeWorldCreation ∧
   LocallyDeterministic threeWorldCreation ∧
   TracksSelectedCreation threeWorldCreation selectedCandidate ∧
@@ -133,43 +137,24 @@ def ThreeWorldCreationControl : Prop :=
     coincidentalTag (some false) false) ∧
   ¬ TracksSelectedCreation threeWorldCreation coincidentalTag
 
-/-- Two-world fixed-effect contrast: `true` produces the sole created
-candidate, `false` produces nothing. Both worlds have the same source,
-and the *same rigid act token is performed at both worlds*. This does not
-define the intrinsic metaphysical identity of divine willing. -/
-def alwaysPerformedOmission : OutputProfile Bool EffectBeing Unit where
-  ontic := {
-    frame := ⟨fun _ _ => True⟩
-    ExistsAt := fun w x => x = source ∨ (w = true ∧ x = firstEffect)
-    Causes := fun w x y => x = source ∧ w = true ∧ y = firstEffect
-  }
-  source := source
-  performs := fun _ _ => True
-  output := fun w _ x => w = true ∧ x = firstEffect
-
-/-- Identical ontic facts and outputs, but the productive act is not performed
-at the no-creation world. This model changes only performance. -/
-def optionallyPerformedOmission : OutputProfile Bool EffectBeing Unit :=
-  { alwaysPerformedOmission with performs := fun w _ => w = true }
-
 /-- Only the one created candidate is feasible; refraining is not a being or
 another member of the created-effect candidate set. -/
 def soleCreatedCandidate : Set EffectBeing := {firstEffect}
 
-/-- The same effect's actual contingent existence is compatible with either
-optional performance or universal act performance with an absent output.
-The former retains selected-effect stability; the latter lacks it. -/
+/-- Facts about #555's `noCreation` profiles not already in
+`SimplicityCollapse.Core`, consumed by the optimality layer. The creation world
+is `false`; `true` is the omission world. `optionalAct` performs its token only
+at `false` and keeps selected-effect stability; `inefficaciousAct` performs the
+same token at both worlds, has no output at `true` and lacks stability. `Core`
+already certifies the necessary source, (non-)ubiquitous performance and the
+contingent effect for both profiles. -/
 def OmissionStructureControl : Prop :=
-  SoundDistinctCauses alwaysPerformedOmission.ontic ∧
-  NecessaryAt alwaysPerformedOmission.ontic true source ∧
-  RealizedOutputs alwaysPerformedOmission ∧
-  RealizedOutputs optionallyPerformedOmission ∧
-  LocallyDeterministic alwaysPerformedOmission ∧
-  SameActEverywhere alwaysPerformedOmission true () ∧
-  ¬ SameActEverywhere optionallyPerformedOmission true () ∧
-  StableActOutput optionallyPerformedOmission true () ∧
-  ¬ StableActOutput alwaysPerformedOmission true () ∧
-  ContingentAt alwaysPerformedOmission.ontic true firstEffect ∧
-  ¬ ExercisesCausation alwaysPerformedOmission.ontic false source
+  SoundDistinctCauses noCreation ∧
+  RealizedOutputs inefficaciousAct ∧
+  RealizedOutputs optionalAct ∧
+  LocallyDeterministic inefficaciousAct ∧
+  StableActOutput optionalAct false () ∧
+  ¬ StableActOutput inefficaciousAct false () ∧
+  ¬ ExercisesCausation noCreation true source
 
 end TruthCore.Modal.OptimalCreationChoice

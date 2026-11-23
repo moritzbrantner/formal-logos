@@ -1,6 +1,7 @@
 module
 
 public import TruthCore.Modal.OptimalCreationChoice
+public import TruthCore.Results.Modal.SimplicityCollapse.Solution
 
 @[expose] public section
 
@@ -11,6 +12,8 @@ open TruthCore.Modal.NecessaryVariableEffects
 open TruthCore.Modal.NecessaryContingentActivity
 open TruthCore.German.Kant.CosmologicalInference
 open TruthCore.Results.Modal.SelectedEffectBridge
+open TruthCore.Modal.SimplicityCollapse
+  (optionalAct inefficaciousAct noCreation BeingCarriesAct)
 
 theorem uniqueOptimalStable {W B A V : Type} [PartialOrder V]
     (p : OutputProfile W B A) (w : W) (a : A) (feasible : Set B) (quality : B → V)
@@ -75,10 +78,6 @@ theorem threeWorldCreationChecks : ThreeWorldCreationControl := by
   have hNecessary : NecessaryAt threeWorldCreation.ontic (some false) source := by
     intro _ _
     exact Or.inl rfl
-  have hCap : ∀ v, hasIntellectualCapacity v source ∧
-      hasVolitionalCapacity v source ∧ ∀ b, recognizesOption v b := by
-    intro _
-    exact ⟨rfl, rfl, fun _ => True.intro⟩
   have hRealized : RealizedOutputs threeWorldCreation := by
     intro v _ x _ hx
     change v ≠ none ∧ x = v at hx
@@ -122,7 +121,7 @@ theorem threeWorldCreationChecks : ThreeWorldCreationControl := by
     have hb := (h (some true) true).mp
       (show threeWorldCreation.output (some true) () secondEffect from ⟨by simp, rfl⟩)
     exact Bool.noConfusion hb
-  exact ⟨(fun _ _ => True.intro), hSound, hNecessary, hCap, hRealized, hLocal,
+  exact ⟨(fun _ _ => True.intro), hSound, hNecessary, hRealized, hLocal,
     hTracks, (by simp [threeWorldCreation, firstEffect]),
     (by simp [threeWorldCreation, secondEffect]), hFirstContingent,
     hSecondContingent, hNoExercise, hNotSame, hNotStable, hCoincident, hNotTag⟩
@@ -149,51 +148,51 @@ theorem threeWorldOptimalOutputs :
       subst x
       exact tiedOptimal b
 
-/-- Deleting only cross-world positive output while retaining the same rigid
-act and unique optimal *created* candidate leaves the effect contingent. -/
+/-- The #555 profiles' remaining facts. Failed stability of `inefficaciousAct`
+is composed from #555 `Core`: clause 2 would turn stability (with sound causes,
+realized outputs and the actual output) into strict efficacy, which the
+inefficacious clause denies. -/
 theorem omissionStructureChecks : OmissionStructureControl := by
-  have hSound : SoundDistinctCauses alwaysPerformedOmission.ontic := by
+  have hSound : SoundDistinctCauses noCreation := by
     intro w x y h
-    change x = source ∧ w = true ∧ y = firstEffect at h
+    change w = false ∧ x = source ∧ y = firstEffect at h
     rcases h with ⟨rfl, rfl, rfl⟩
     exact ⟨Or.inl rfl, Or.inr ⟨rfl, rfl⟩, by decide⟩
-  have hNecessary : NecessaryAt alwaysPerformedOmission.ontic true source := by
-    intro _ _
-    exact Or.inl rfl
-  have hRealized : RealizedOutputs alwaysPerformedOmission := by
+  have hRealized : RealizedOutputs inefficaciousAct := by
     intro v _ x _ hx
-    exact ⟨rfl, hx.1, hx.2⟩
-  have hOptionalRealized : RealizedOutputs optionallyPerformedOmission := by
+    exact ⟨hx.1, rfl, hx.2⟩
+  have hOptionalRealized : RealizedOutputs optionalAct := by
     intro v _ x _ hx
-    exact ⟨rfl, hx.1, hx.2⟩
-  have hLocal : LocallyDeterministic alwaysPerformedOmission := by
+    exact ⟨hx.1, rfl, hx.2⟩
+  have hLocal : LocallyDeterministic inefficaciousAct := by
     intro _ _ _ _ hx hy
     exact hx.2.trans hy.2.symm
-  have hSame : SameActEverywhere alwaysPerformedOmission true () := by
-    intro _ _
-    trivial
-  have hNotSame : ¬ SameActEverywhere optionallyPerformedOmission true () := by
-    intro h
-    exact Bool.noConfusion (h false True.intro)
-  have hStable : StableActOutput optionallyPerformedOmission true () := by
+  have hStable : StableActOutput optionalAct false () := by
     intro x hx v _ hp
-    change v = true at hp
+    change v = false at hp
     subst v
     exact hx
-  have hNotStable : ¬ StableActOutput alwaysPerformedOmission true () := by
+  have hNotStable : ¬ StableActOutput inefficaciousAct false () := by
     intro h
-    have hb := h firstEffect ⟨rfl, rfl⟩ false True.intro True.intro
-    exact Bool.noConfusion hb.1
-  have hContingent : ContingentAt alwaysPerformedOmission.ontic true firstEffect := by
-    refine ⟨Or.inr ⟨rfl, rfl⟩, false, True.intro, ?_⟩
-    rintro (h | ⟨h, _⟩)
-    · cases h
-    · cases h
-  have hNoExercise : ¬ ExercisesCausation alwaysPerformedOmission.ontic false source := by
+    have core := TruthCore.Results.Modal.SimplicityCollapse.core
+    exact core.2.2.2.2.1.2.2.2.1
+      (core.2.1 _ _ _ inefficaciousAct false () firstEffect hSound hRealized h ⟨rfl, rfl⟩)
+  have hNoExercise : ¬ ExercisesCausation noCreation true source := by
     rintro ⟨y, hy⟩
-    exact Bool.noConfusion hy.2.1
-  exact ⟨hSound, hNecessary, hRealized, hOptionalRealized, hLocal, hSame,
-    hNotSame, hStable, hNotStable, hContingent, hNoExercise⟩
+    exact Bool.noConfusion hy.1
+  exact ⟨hSound, hRealized, hOptionalRealized, hLocal, hStable, hNotStable, hNoExercise⟩
+
+/-- #555's `BeingCarriesAct` (the token is performed wherever the bearer
+exists) fails on `threeWorldCreation` and `optionalAct` and holds on
+`inefficaciousAct`. With a necessary bearer it yields `SameActEverywhere`
+(#555 `Core`), so only the always-performed profile survives that reading. -/
+theorem beingCarriesActApplication :
+    ¬ BeingCarriesAct threeWorldCreation () ∧ ¬ BeingCarriesAct optionalAct () ∧
+    BeingCarriesAct inefficaciousAct () := by
+  refine ⟨?_, TruthCore.Results.Modal.SimplicityCollapse.core.2.2.2.2.2.2.2.1,
+    fun _ _ => True.intro⟩
+  intro h
+  exact h none (Or.inl rfl) rfl
 
 theorem soleCreatedOptimal :
     Optimal soleCreatedCandidate tiedQuality firstEffect := by
@@ -213,24 +212,24 @@ theorem soleCreatedUnique :
 /-- Total optimal output remains true when productive exercise is optional:
 it requires output only where that act is performed. -/
 theorem optionalOmissionOptimal :
-    OptimalOutputs optionallyPerformedOmission true ()
+    OptimalOutputs optionalAct false ()
       soleCreatedCandidate tiedQuality := by
   intro v _
   constructor
   · intro hv
     exact ⟨firstEffect, ⟨hv, rfl⟩⟩
   · intro x hx
-    change v = true ∧ x = firstEffect at hx
+    change v = false ∧ x = firstEffect at hx
     rw [hx.2]
     exact soleCreatedOptimal
 
 /-- All produced objects are optimal in the universal-performance alternative,
 but at the omission world no output exists. -/
 theorem universalOmissionOutputOptimal :
-    ∀ v x, alwaysPerformedOmission.output v () x →
+    ∀ v x, inefficaciousAct.output v () x →
       Optimal soleCreatedCandidate tiedQuality x := by
   intro v x hx
-  change v = true ∧ x = firstEffect at hx
+  change v = false ∧ x = firstEffect at hx
   rw [hx.2]
   exact soleCreatedOptimal
 
@@ -238,23 +237,23 @@ theorem universalOmissionOutputOptimal :
 imply the positive-output-totality conjunct of `OptimalOutputs`.
 This exactly isolates an extra premise of `uniqueOptimalStable`. -/
 theorem universalOmissionNotTotal :
-    ¬ OptimalOutputs alwaysPerformedOmission true ()
+    ¬ OptimalOutputs inefficaciousAct false ()
       soleCreatedCandidate tiedQuality := by
   intro h
-  obtain ⟨x, hx⟩ := (h false (Or.inr True.intro)).1 True.intro
-  change false = true ∧ x = firstEffect at hx
+  obtain ⟨x, hx⟩ := (h true (Or.inr True.intro)).1 True.intro
+  change true = false ∧ x = firstEffect at hx
   exact Bool.noConfusion hx.1
 
-/-- Joint controls: same source, unique candidate, optional exercise versus
-same-act but omitted output. The source/effect meanings and ontology are fixed. -/
+/-- Joint optimality controls on #555's profiles: unique created candidate,
+optional exercise versus same act with omitted output. -/
 theorem omissionChoiceChecks :
     Optimal soleCreatedCandidate tiedQuality firstEffect ∧
     (∀ x y, Optimal soleCreatedCandidate tiedQuality x →
       Optimal soleCreatedCandidate tiedQuality y → x = y) ∧
-    OptimalOutputs optionallyPerformedOmission true () soleCreatedCandidate tiedQuality ∧
-    (∀ v x, alwaysPerformedOmission.output v () x →
+    OptimalOutputs optionalAct false () soleCreatedCandidate tiedQuality ∧
+    (∀ v x, inefficaciousAct.output v () x →
       Optimal soleCreatedCandidate tiedQuality x) ∧
-    ¬ OptimalOutputs alwaysPerformedOmission true () soleCreatedCandidate tiedQuality := by
+    ¬ OptimalOutputs inefficaciousAct false () soleCreatedCandidate tiedQuality := by
   exact ⟨soleCreatedOptimal, soleCreatedUnique, optionalOmissionOptimal,
     universalOmissionOutputOptimal, universalOmissionNotTotal⟩
 
