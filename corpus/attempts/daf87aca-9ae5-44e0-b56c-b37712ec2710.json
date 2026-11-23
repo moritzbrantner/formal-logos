@@ -1,0 +1,38 @@
+{
+ "id": "daf87aca-9ae5-44e0-b56c-b37712ec2710",
+ "label": "Power premises of the route with Pruss's own premise: transfer, two-way giving, Pruss's direction",
+ "statement_ids": [
+  "95bf8780-0e3c-49ba-b636-2274e2997a30",
+  "906f5c39-2a63-4dc2-955d-a00cfd8a976b",
+  "b90ee2de-8ae5-438b-bea4-e3158889c3e7",
+  "5cf75a6b-c3be-4ed5-acdf-c163383dd7f2",
+  "3ef41442-431a-4bed-83bd-4458ed623f5f",
+  "9f7b1778-84c9-40cf-a1b6-a91a960b0590",
+  "f0ac2f76-62fe-4b9b-8427-e0ca8d7a3cef",
+  "d1593e5c-38ff-46a9-9bbb-cede6f825bc9",
+  "607e94cf-07df-46c1-9b75-452e50762211",
+  "9c8e99e7-3e7c-42c3-8e9e-d37dfe17ae7f",
+  "887d5efc-caf6-4972-b592-8d4f1dbf5f49",
+  "eb41bc9a-c78f-475c-933e-46c332d0357d",
+  "256a5e0a-d287-43d8-b52e-ec55c9eb89ed",
+  "b8a2a9e1-0dda-48bc-a646-d4cb229ca62c",
+  "1af99585-27ed-4477-94c8-1a2cc1e47145",
+  "d8c38bb0-d52f-441e-abdc-bde8cc2c24bf"
+ ],
+ "date": "2026-11-23",
+ "kind": "derivation",
+ "outcome": "succeeded",
+ "summary": "#1887 slice 2 (warrant of the power premises of the route with Pruss's own premise, 42da6b2d); note docs/notes/pruss-power-premises.md. Analyst formulations; read 2026-11-23 for navigation: ST I q.104 a.3 co., ad 1, ad 3 (newadvent.org/summa/1104.htm); Met. Theta 2 1046b and Theta 5 1048a, Ross (classics.mit.edu); Pruss, 'The Actual and the Possible', sections 'An Aristotelian alternative' and 'A combined account'. One-way and two-way giving are typed extensionally on the frame's GivesAt (DEFs 62dfa893, 7bc1d667, bd4c434d, e006ddeb). Q1: P1-prime needs the collective reading (varying-holder distributive grounding holds with no necessary being, MutualAnnihilators; the one-holder reading suffices without P4-prime, law 8: C1's lesson of 197f0097). The transfer to POWER_OVER_ESSE_1 over each member is not valid as typed (CollectiveWithoutDistributive: replacement, backed by 'non-existence has no direct cause'); its conclusion eb41bc9a has a second support from the creator reading 9f7b1778, factive giving 3ef41442 and the withheld-giving bridge d1593e5c (56024b0c, 84cc194c); either support gives PGP's verdict at C2's foundational being c5da5e62 (2cc7e260 to b19ffd92), relocating, not corroborating, the C2 crux. Q2: with P2-delta no fixed (one-way) giver holds P1-prime's power (laws 1-2); the holder is a necessary concrete varying giver (4ce57995 to 256a5e0a, projected to b90ee2de by b1f6a376); under the creator reading the joint absence is withholding and the holder a two-way giver (law 6), the privative side of a two-way power; collapse: a necessary fixed giver's effects are necessary, so a necessary non-rational source of all actual contingents removes P5, not P4-prime (laws 3-4). Q3: inert necessary being fails P1-prime; necessitarian source fails P5; positive-outcome-only powers fail P1-prime but ground Pruss's direction (6eb4d324, needing only symmetric access of S5, projected by 95078e7b), which avoids a power for a negative state but not the abstention fact (law 7). Provisional judgment: moderate support that P1-prime's power, if real, is the privative side of a two-way power of a necessary being; not supported: the bare transfer, choice rather than chance, independent corroboration of PGP.",
+ "blocker": "No premise is established. Open: the Theta 5 bridge from two-way giving to will (HAS_WILL_1, STMT-GOD-HAS-WILL 66aecdd7), blocked by the chance rival (propensity accounts; Pruss's own 'perhaps non-deterministic'); identification of the holder with GOD_4; the creator reading's warrant independent of the route; Pruss's aggregate holder; tensed withholding; intensional (single-potency) two-way powers; compatibility of varying extrinsic giving with #555's one-act simplicity reading; truth countermodel does not handle CausalityFrame parameters.",
+ "evidence": [
+  "a47906a5-7476-4521-bd17-e0af890aee1b",
+  "4ce57995-5b3a-46bd-a726-148225f12cbc",
+  "b1f6a376-3c24-47f6-aed9-f073d523c197",
+  "56024b0c-42d2-4f3f-ac9b-7af640fc1aa0",
+  "84cc194c-9955-439d-8d19-f4d264e91910",
+  "2cc7e260-2758-4d4f-88fe-6047f393ee14",
+  "6eb4d324-43a8-4348-b065-7bd998bc3653",
+  "95078e7b-4bb9-4375-83f7-2ffa1ea4410b",
+  "8ad1804e-06d1-4491-ba96-d3382245f2ad"
+ ]
+}

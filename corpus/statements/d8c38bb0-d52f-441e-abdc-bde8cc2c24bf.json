@@ -1,0 +1,25 @@
+{
+  "id": "d8c38bb0-d52f-441e-abdc-bde8cc2c24bf",
+  "label": "Pruss power premises: laws, nonvacuity, collective/distributive separations, omissions, rivals",
+  "paraphrase": "Premise-free laws and finite models (structural surrogates, not metaphysical possibility). Laws: (1) a one-way (fixed) giver existing at w has no power for the actual contingents' joint absence satisfying P2-delta; (2) P1-prime, P2-delta, P4-prime and P5 exclude that every being at w is a fixed giver; (3) collapse: a fixed giver necessary at w, with factive giving, gives being at w only to beings necessary at w; (4) if every concrete being contingent at w is given being at w by some necessary fixed giver (one or an aggregate), with factive giving, none is contingent; (5) under the holders-give-each reading with factive giving, P2-prime and P5 give P2-delta; (6) the joint absence realized by withholding, with P5, gives a two-way giver that is not a fixed giver; (7) Pruss's direction relocates the abstention: a being at w and at a world lacking the actual contingents that gives one of them being at w is, with factive giving, a two-way giver; (8) a concrete being at w present, for each actual contingent concretum, at an accessible world lacking it is, with excluded middle, necessary (the joint one carries the argument); (9) with excluded middle, a holder with POWER_OVER_ESSE_1 over each actual contingent concretum makes every concrete foundational being at w necessary, without a Euclidean premise. Models: theist nonvacuity of every argument; collective without distributive (replacement: the transfer fails); distributive without collective (Van Cleve with a common holder); mutual annihilators (distributive grounding with varying holders, no necessary being); eight omission models; three rivals (inert necessary being; necessary non-rational source; positive-outcome powers only, under which P1-prime fails and Pruss's direction holds).",
+  "lean_declaration": "TruthCore.Modal.PrussPowerPremises.Model.Controls",
+  "definition_ids": [
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "7bc1d667-fda2-4744-b055-9ba6cbe7f648",
+    "bd4c434d-be19-43ca-936b-f33eb6c15a8c",
+    "e006ddeb-2c88-4835-8558-2f360cc5a3eb",
+    "3fd6bddb-f10c-4df4-8694-3eb5e7c28617",
+    "7fcf846e-d0ef-400e-89c0-7c82b94edde7",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5",
+    "197f0097-f2ae-4a47-8770-3d43758f737b",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "d1593e5c-38ff-46a9-9bbb-cede6f825bc9",
+  "label": "A being that gives x being at w and withholds it at an accessible world has POWER_OVER_ESSE_1 over x",
+  "paraphrase": "OPEN (withholdable giving is power over esse; analyst formulation, attribution deferred): if y gives x being in w (GivesTo) and, existing at some world accessible from w, does not give x being there, then y has POWER_OVER_ESSE_1 over x (it can unmake x's being by withholding). It covers only a giver with an actual withholding world, not a necessitated giver. Motivation, navigation only: ST I q.104 a.3 co., 'just as before things existed, God was free not to give them existence ..., so after they are made, He is free not to continue their existence', stated here without freedom.",
+  "lean_declaration": "TruthCore.Modal.PrussPowerPremises.WithheldGivingIsPowerOverEsse",
+  "definition_ids": [
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "3fd6bddb-f10c-4df4-8694-3eb5e7c28617",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5"
+  ]
+}

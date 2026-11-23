@@ -1,0 +1,212 @@
+# #1887, continued: the power premises of the route with Pruss's own premise
+# (results 42da6b2d and ad42c376 of specs/modal-grounding-actual-absence.toml).
+# Three questions: (1) the transfer from the collective power for the joint
+# absence of the actual contingent concreta to POWER_OVER_ESSE_1 over each of
+# them (collective/distributive split of disambiguation 197f0097, transposed
+# from causes to powers); (2) whether the power is one-way or two-way, typed
+# extensionally on the frame's world-relative giving field GivesAt; (3) Pruss's
+# own direction (a power, held in a world lacking the actual contingents, for
+# the actual world's obtaining). Analyst formulations, attribution deferred.
+# Read for this slice (2026-11-23), navigation only, no claim record: ST I
+# q.104 a.3 co., ad 1, ad 3 (newadvent.org/summa/1104.htm); Aristotle, Met.
+# Theta 2 (1046b) and Theta 5 (1048a), Ross translation (classics.mit.edu);
+# Pruss, "The Actual and the Possible", sections "An Aristotelian alternative"
+# and "A combined account" (alexanderpruss.com, plain HTTP).
+
+[batch]
+vocab = "TruthCore.Modal.PrussPowerPremises"
+results = "TruthCore.Results.Modal.PrussPowerPremises"
+
+[[statement]]
+id = "Whatever is given being in a world exists in that world"
+lean = "GivenExists"
+paraphrase = "OPEN bridge between two fields of the shared CausalityFrame (factivity of giving; analyst formulation): whenever, in a world v, y exercises causation of x's being at some moment (GivesTo, from the primitive GivesAt), x exists at v. The frame relates no fields, so this is stated, not assumed."
+definitions = ["62dfa893-b633-4513-9790-8f9a0a3087e0", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-KANT-ONTOLOGICAL-MODEL"]
+
+[[statement]]
+id = "A power for the actual contingent concreta's joint absence issues where its holder exists and gives otherwise"
+label = "A power for the actual contingents' joint absence issues where its holder exists and gives otherwise"
+lean = "ActualAbsenceExerciseDiffers"
+paraphrase = "OPEN (P2-delta, analyst formulation): whatever has at w a power for the joint absence of the concrete beings contingent at w (one world lacking them all; PowerFor) can exercise it so that, at some world accessible from w, every such being is absent, the holder exists, and the holder gives being (GivesTo) to not exactly the same beings as at w. It strengthens P2-prime (906f5c39) by requiring the exercise of a power for an outcome about existence to show in what the holder gives. It does not say whether the difference is giving something new (replacement) or withholding."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "62dfa893-b633-4513-9790-8f9a0a3087e0", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Whatever has a power for the actual contingent concreta's joint absence gives each of them being at w"
+label = "Whatever has power for the actual contingent concreta's joint absence gives each of them being at w"
+lean = "ActualAbsenceHoldersGiveEach"
+paraphrase = "OPEN (the creator/conserver reading of the holder; analyst formulation, attribution deferred): whatever has at w a power for the joint absence of the concrete beings contingent at w gives being, in w (GivesTo: at some moment of w), to every concrete being contingent at w. Not sole giving, not immediacy, not freedom. Motivation, navigation only: ST I q.104 a.3 co., God preserves things 'by continually pouring out existence into them'."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "62dfa893-b633-4513-9790-8f9a0a3087e0", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "A power for the actual contingent concreta's joint absence is POWER_OVER_ESSE_1 over each of them"
+lean = "ActualAbsencePowerIsPowerOverEsse"
+paraphrase = "OPEN transfer bridge for Pruss's own premise (collective to distributive; analyst formulation): whatever has at w a power for the joint absence of the concrete beings contingent at w (one world lacking them all) has POWER_OVER_ESSE_1 over each concrete being contingent at w. The analogue, for powers, of premise B of C1 (disambiguation 197f0097: what accounts for a totality accounts for each member), and of the global variant's transfer bridge. Not derivable from the collective power as typed (controls: a replacement model has the collective power and none over any member's esse)."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "3fd6bddb-f10c-4df4-8694-3eb5e7c28617", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5", "197f0097-f2ae-4a47-8770-3d43758f737b", "DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "A being that gives x being at w and withholds it at an accessible world has POWER_OVER_ESSE_1 over x"
+lean = "WithheldGivingIsPowerOverEsse"
+paraphrase = "OPEN (withholdable giving is power over esse; analyst formulation, attribution deferred): if y gives x being in w (GivesTo) and, existing at some world accessible from w, does not give x being there, then y has POWER_OVER_ESSE_1 over x (it can unmake x's being by withholding). It covers only a giver with an actual withholding world, not a necessitated giver. Motivation, navigation only: ST I q.104 a.3 co., 'just as before things existed, God was free not to give them existence ..., so after they are made, He is free not to continue their existence', stated here without freedom."
+definitions = ["62dfa893-b633-4513-9790-8f9a0a3087e0", "3fd6bddb-f10c-4df4-8694-3eb5e7c28617", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5"]
+
+[[statement]]
+id = "At each accessible world lacking the actual contingent concreta, some being has a power for w's obtaining"
+label = "At each accessible world lacking the actual contingents, a being there has power for w obtaining"
+lean = "ActualityGroundedAtAbsenceWorlds"
+paraphrase = "OPEN (Aristotelian grounding at a non-actual world, Pruss's own direction; analyst formulation): at every world v accessible from w that lacks every concrete being contingent at w, if w is accessible from v and v is not w, then some being existing at v has, at v, a power (PowerFor) for the proposition that w obtains. Pruss ('A combined account', read 2026-11-23, navigation only): 'there is a substance x in w1 which could have initiated a causal chain that could lead to w0 being actual'."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "A power, at a world lacking the actual contingent concreta, for w's obtaining issues where its holder exists"
+label = "At a world lacking the actual contingents, a power for w obtaining issues where its holder exists"
+lean = "ActualityInitiatorPresentAtAbsenceWorlds"
+paraphrase = "OPEN (initiator presence at the absence worlds; analyst formulation): for every world v accessible from w that lacks every concrete being contingent at w, whatever has at v a power for w's obtaining can exercise it so that, at some world accessible from v, w obtains and the holder exists; that is, the holder exists at w. Pruss (navigation only): 'x cannot start any chain of causes that can lead to actuality's not including x'."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Holders, at a world lacking the actual contingent concreta, of a power for w's obtaining are concrete"
+label = "Holders, at a world lacking the actual contingent concreta, of a power for w obtaining are concrete"
+lean = "ActualityPowerHoldersConcreteAtAbsenceWorlds"
+paraphrase = "OPEN (analyst formulation): for every world v accessible from w that lacks every concrete being contingent at w, every holder at v of a power for w's obtaining is concrete (in the selected world-independent concreteness predicate)."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Some holder of a power for the actual contingent concreta's joint absence has POWER_OVER_ESSE_1 over each"
+label = "Some holder of a power for the actual contingents' joint absence has POWER_OVER_ESSE_1 over each"
+lean = "SomeHolderHasPowerOverEachActualContingent"
+paraphrase = "Some being exists at w, has at w a power for the joint absence of the concrete beings contingent at w, and has POWER_OVER_ESSE_1 over each concrete being contingent at w (the distributive powers, held by one being). It says nothing about the holder's necessity, concreteness or what decides the power's exercise."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "3fd6bddb-f10c-4df4-8694-3eb5e7c28617", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5", "197f0097-f2ae-4a47-8770-3d43758f737b", "DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Some necessary concrete holder of a power for the actual contingent concreta's joint absence varies its giving"
+label = "Some necessary concrete holder of power for the actual contingents' joint absence varies its giving"
+lean = "NecessaryVaryingGiverWithActualAbsencePower"
+paraphrase = "Some concrete being exists at w, exists at every world accessible from w (NECESSARY_2 de re), has at w a power for the joint absence of the concrete beings contingent at w, and at some accessible world where it exists gives being (GivesTo) to not exactly the same beings as at w (GivingVariesAt). It is therefore not a one-way (fixed) giver. It asserts nothing about what decides the variation (choice, chance or an external condition), nor uniqueness, simplicity, firstness, intellect or God."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "bd4c434d-be19-43ca-936b-f33eb6c15a8c", "62dfa893-b633-4513-9790-8f9a0a3087e0", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "The actual contingent concreta's joint absence is realized by a holder's withholding being from each"
+label = "The actual contingents' joint absence is realized by a holder's withholding being from each"
+lean = "ActualAbsenceByWithholding"
+paraphrase = "Some being exists at w, has at w a power for the joint absence of the concrete beings contingent at w, and exists at an accessible world where they are all absent, while it gives being (GivesTo) at w to every concrete being contingent at w and gives none of them being at that world. With some such being, the holder is a two-way giver in the withholding form (TwoWayGiverAt; controls, law 6). Nothing is said about what decides the withholding."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "62dfa893-b633-4513-9790-8f9a0a3087e0", "e006ddeb-2c88-4835-8558-2f360cc5a3eb", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Some necessary concrete being at w has, at a world lacking the actual contingent concreta, power for w obtaining"
+label = "Some necessary concrete being has, at a world lacking the actual contingents, power for w obtaining"
+lean = "NecessaryConcreteHolderOfActualityPower"
+paraphrase = "Conclusion of Pruss's own direction (analyst formulation): some concrete being exists at w, exists at every world accessible from w (NECESSARY_2 de re), and exists at some accessible world lacking every concrete being contingent at w, where it has a power for w's obtaining. No uniqueness, simplicity, firstness, intellect or God; nothing about the power's exercise."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Pruss power premises: laws, nonvacuity, collective and distributive separations, omission and rival models"
+label = "Pruss power premises: laws, nonvacuity, collective/distributive separations, omissions, rivals"
+lean = "Model.Controls"
+paraphrase = "Premise-free laws and finite models (structural surrogates, not metaphysical possibility). Laws: (1) a one-way (fixed) giver existing at w has no power for the actual contingents' joint absence satisfying P2-delta; (2) P1-prime, P2-delta, P4-prime and P5 exclude that every being at w is a fixed giver; (3) collapse: a fixed giver necessary at w, with factive giving, gives being at w only to beings necessary at w; (4) if every concrete being contingent at w is given being at w by some necessary fixed giver (one or an aggregate), with factive giving, none is contingent; (5) under the holders-give-each reading with factive giving, P2-prime and P5 give P2-delta; (6) the joint absence realized by withholding, with P5, gives a two-way giver that is not a fixed giver; (7) Pruss's direction relocates the abstention: a being at w and at a world lacking the actual contingents that gives one of them being at w is, with factive giving, a two-way giver; (8) a concrete being at w present, for each actual contingent concretum, at an accessible world lacking it is, with excluded middle, necessary (the joint one carries the argument); (9) with excluded middle, a holder with POWER_OVER_ESSE_1 over each actual contingent concretum makes every concrete foundational being at w necessary, without a Euclidean premise. Models: theist nonvacuity of every argument; collective without distributive (replacement: the transfer fails); distributive without collective (Van Cleve with a common holder); mutual annihilators (distributive grounding with varying holders, no necessary being); eight omission models; three rivals (inert necessary being; necessary non-rational source; positive-outcome powers only, under which P1-prime fails and Pruss's direction holds)."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "62dfa893-b633-4513-9790-8f9a0a3087e0", "7bc1d667-fda2-4744-b055-9ba6cbe7f648", "bd4c434d-be19-43ca-936b-f33eb6c15a8c", "e006ddeb-2c88-4835-8558-2f360cc5a3eb", "3fd6bddb-f10c-4df4-8694-3eb5e7c28617", "7fcf846e-d0ef-400e-89c0-7c82b94edde7", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5", "197f0097-f2ae-4a47-8770-3d43758f737b", "DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[argument]]
+id = "POWER_OVER_ESSE_1 over each actual contingent concretum, from Pruss's grounding and the transfer bridge"
+label = "POWER_OVER_ESSE_1 over each actual contingent concretum, by the transfer bridge"
+theorem = "transferGivesPowerOverEachActualContingent"
+premises = ["95bf8780-0e3c-49ba-b636-2274e2997a30", "18e5bd4e-8178-468e-b867-fbaf9c5988ad", "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174", "A power for the actual contingent concreta's joint absence is POWER_OVER_ESSE_1 over each of them"]
+conclusion = "Some holder of a power for the actual contingent concreta's joint absence has POWER_OVER_ESSE_1 over each"
+rule = "Ground the joint absence, then pass from the collective power to each member by the transfer bridge"
+meaning = "A concrete being is contingent at w, so the joint absence fails at w, while P4-prime gives an accessible world where it holds; P1-prime gives a being y at w with a power for it; the transfer bridge gives y POWER_OVER_ESSE_1 over each concrete being contingent at w. Constructive."
+description = "The transfer applied to the route with Pruss's own premise (#1887 gap 3), without a Euclidean premise. Not a transcription: the transfer premise is conditional on the collective power, which P1-prime supplies. Establishes no premise. With excluded middle its conclusion gives PGP's verdict at every concrete foundational being (controls, law 9). The transfer bridge is not derivable from the collective power as typed (controls, collective without distributive); its conclusion has a second support option from the creator reading (withholding route)."
+
+[[argument]]
+id = "A necessary concrete varying giver, from Pruss's grounding with initiator presence and a difference in giving"
+label = "A necessary concrete varying giver, from Pruss's grounding and P2-delta"
+theorem = "actualAbsenceHolderIsNecessaryVaryingGiver"
+premises = ["STMT-EXCLUDED-MIDDLE", "95bf8780-0e3c-49ba-b636-2274e2997a30", "A power for the actual contingent concreta's joint absence issues where its holder exists and gives otherwise", "a6906cab-59c4-4938-b6d1-991369e8ffb0", "18e5bd4e-8178-468e-b867-fbaf9c5988ad", "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174"]
+conclusion = "Some necessary concrete holder of a power for the actual contingent concreta's joint absence varies its giving"
+rule = "Weaken P2-delta to P2-prime, apply the route with Pruss's premise, then apply P2-delta to its holder"
+meaning = "P2-delta gives P2-prime (forget the difference in giving), so the route with Pruss's own premise (42da6b2d, theorem prussActualAbsenceNecessaryPowerHolder, reused) gives a concrete holder y existing at w and at every accessible world, with a power for the joint absence; P2-delta applied to y gives an accessible world where y exists and gives being otherwise than at w."
+description = "The holder of the route with Pruss's own premise, under P2-delta, is a necessary being whose giving of being varies across accessible worlds where it exists: not a one-way (fixed) giver. Composes 42da6b2d. Not a transcription. Establishes no premise. It does not say what decides the variation; Met. Theta 5's 'desire or will' is not typed (see the open bridge in docs/notes/pruss-power-premises.md)."
+
+[[argument]]
+id = "The route's conclusion, from a necessary concrete varying giver"
+theorem = "varyingGiverGivesNecessaryPowerHolder"
+premises = ["Some necessary concrete holder of a power for the actual contingent concreta's joint absence varies its giving"]
+conclusion = "b90ee2de-8ae5-438b-bea4-e3158889c3e7"
+rule = "Forget the varying giving"
+meaning = "A necessary concrete holder of a power for the joint absence that varies its giving is in particular a necessary concrete holder of that power."
+description = "Projection onto b90ee2de, which reaches STMT-NECESSARY-CONCRETE-AT through ad42c376. An assembly; establishes no premise."
+transcription = "assembly"
+
+[[argument]]
+id = "The actual contingents' joint absence realized by withholding, from Pruss's premises and the creator reading"
+label = "The actual contingents' joint absence by withholding, under the creator reading"
+theorem = "actualAbsenceRealizedByWithholding"
+premises = ["95bf8780-0e3c-49ba-b636-2274e2997a30", "906f5c39-2a63-4dc2-955d-a00cfd8a976b", "18e5bd4e-8178-468e-b867-fbaf9c5988ad", "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174", "Whatever has a power for the actual contingent concreta's joint absence gives each of them being at w", "Whatever is given being in a world exists in that world"]
+conclusion = "The actual contingent concreta's joint absence is realized by a holder's withholding being from each"
+rule = "Ground the joint absence, locate the holder in its world, and use factive giving to show it withholds each member there"
+meaning = "P1-prime gives a holder y at w; P2-prime gives an accessible world v where every concrete being contingent at w is absent and y exists. By the creator reading y gives each of them being at w; since each is absent at v, factive giving shows y gives none of them being at v. Constructive."
+description = "Under the creator reading, the power for the joint absence is realized by withholding: the abstention structure of ST I q.104 a.3 ad 1 and ad 3 (annihilation would be 'a mere cessation of His action'; navigation only). Not a transcription. Establishes no premise. With P5 the holder is a two-way giver in the withholding form and not a fixed giver (controls, law 6); with the withheld-giving bridge it yields the transfer's conclusion without the transfer premise."
+
+[[argument]]
+id = "POWER_OVER_ESSE_1 over each actual contingent concretum, from withholding and the withheld-giving bridge"
+label = "POWER_OVER_ESSE_1 over each actual contingent concretum, from withholding"
+theorem = "withholdingGivesPowerOverEachActualContingent"
+premises = ["The actual contingent concreta's joint absence is realized by a holder's withholding being from each", "A being that gives x being at w and withholds it at an accessible world has POWER_OVER_ESSE_1 over x"]
+conclusion = "Some holder of a power for the actual contingent concreta's joint absence has POWER_OVER_ESSE_1 over each"
+rule = "Apply the withheld-giving bridge to each member"
+meaning = "The withholding holder gives each concrete being contingent at w being at w and withholds it at an accessible world where it exists; the withheld-giving bridge gives it POWER_OVER_ESSE_1 over each."
+description = "A second support option for the transfer's conclusion: the distributive powers follow from the creator reading, factive giving and the withheld-giving bridge, not from the collective power as such. Not a transcription. Establishes no premise."
+
+[[argument]]
+id = "A necessary concrete being with power for w's obtaining at a world lacking the actual contingents, by Pruss's direction"
+label = "A necessary concrete holder of a power for w obtaining, by Pruss's own direction"
+theorem = "prussDirectionNecessaryHolder"
+premises = ["STMT-EXCLUDED-MIDDLE", "STMT-ACCESSIBILITY-SYMMETRIC", "18e5bd4e-8178-468e-b867-fbaf9c5988ad", "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174", "At each accessible world lacking the actual contingent concreta, some being has a power for w's obtaining", "A power, at a world lacking the actual contingent concreta, for w's obtaining issues where its holder exists", "Holders, at a world lacking the actual contingent concreta, of a power for w's obtaining are concrete"]
+sense_bridges = [{term = "NECESSARY", from = "NECESSARY_8", to = "NECESSARY_2", statement_id = "Some necessary concrete being at w has, at a world lacking the actual contingent concreta, power for w obtaining", role = "conclusion"}]
+conclusion = "Some necessary concrete being at w has, at a world lacking the actual contingent concreta, power for w obtaining"
+rule = "Ground w's obtaining at a world lacking the actual contingents, locate the holder at w, reductio on its contingency"
+meaning = "P4-prime gives an accessible world v lacking every actual contingent concretum; P5's witness shows v is not w; symmetric access gives v's access to w; grounding at v gives a being y at v with a power for w's obtaining; initiator presence puts y at w; y is concrete. Were y absent at a world accessible from w, it would be an actual contingent concretum, hence absent at v, where it exists. Excluded middle gives y's existence at every world accessible from w."
+description = "Pruss's own direction (#1887 gap 6, one-step powers): the holder sits in the non-actual world with a positive power for the actual world's obtaining. Only the symmetry (B) part of S5 is used. Not a transcription: no premise mentions a necessary being. Establishes no premise. It avoids a power for a negative state (under positive-outcome-only powers P1-prime fails while this route holds; controls, rival 3), but not the abstention fact: a holder that gives any actual contingent being at w is, with factive giving, a two-way giver (controls, law 7)."
+
+[[argument]]
+id = "The stage-one node, by Pruss's own direction"
+theorem = "prussDirectionNecessaryConcrete"
+premises = ["Some necessary concrete being at w has, at a world lacking the actual contingent concreta, power for w obtaining"]
+conclusion = "STMT-NECESSARY-CONCRETE-AT"
+sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "STMT-NECESSARY-CONCRETE-AT", role = "conclusion"}]
+rule = "Forget the power and the absence world"
+meaning = "The witness of Pruss's direction is concrete, exists at w and at every accessible world: it witnesses the stage-one node on the frame's own profile."
+description = "Projection of Pruss's direction onto STMT-NECESSARY-CONCRETE-AT. An assembly; establishes no premise."
+transcription = "assembly"
+
+[[argument]]
+id = "The stage-one node, from POWER_OVER_ESSE_1 over each actual contingent and a concrete foundational being"
+label = "The stage-one node, by the distributive powers at a concrete foundational being"
+theorem = "powerOverEachGivesNecessaryConcrete"
+premises = ["STMT-EXCLUDED-MIDDLE", "Some holder of a power for the actual contingent concreta's joint absence has POWER_OVER_ESSE_1 over each", "c5da5e62-a9cd-4142-8d3a-a96f86548e88"]
+conclusion = "STMT-NECESSARY-CONCRETE-AT"
+sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "STMT-NECESSARY-CONCRETE-AT", role = "conclusion"}]
+rule = "The foundational being is under no power over its esse, so it is not an actual contingent concretum; excluded middle"
+meaning = "A concrete foundational being f at w is under no being's POWER_OVER_ESSE_1. Were it absent at a world accessible from w, it would be a concrete being contingent at w, and the holder would have POWER_OVER_ESSE_1 over it. So, with excluded middle, f exists at every world accessible from w; being concrete and actual, it witnesses the stage-one node."
+description = "The transfer's (or the withholding route's) conclusion reproduces PGP's verdict at the foundational case of the C2 batch (c5da5e62), without PGP and without a Euclidean premise: the exact formal link between Pruss's own route and the C2 crux, holding only under the transfer bridge or the creator reading with the withheld-giving bridge. Not a transcription: no premise mentions necessity. Establishes no premise."
+
+[[argument]]
+id = "Pruss power premises controls checked"
+theorem = "prussPowerControls"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+premises = []
+conclusion = "Pruss power premises: laws, nonvacuity, collective and distributive separations, omission and rival models"
+rule = "General laws and explicit finite models"
+meaning = "Premise-free: nine laws (one-way exclusion, collapse, necessary non-rational sources, P2-delta from the creator reading, withholding as two-way giving, the relocated abstention in Pruss's direction, the joint one, PGP's verdict from the distributive powers) and finite models (theist nonvacuity, collective without distributive, distributive without collective, mutual annihilators, eight omissions, three rivals). Model-witnessed separations only; no premise is established and no reality claim is made."
+description = "Premise-free laws and models for the power premises of the route with Pruss's own premise. Sense-mixing control: they relate MODAL_CONTINGENCY_1, NECESSARY_2, POWER_OVER_ESSE_1 and the frame (NECESSARY_11 carrier) without a bridge premise. Establishes no premise."

@@ -1,0 +1,11 @@
+{
+  "id": "3ef41442-431a-4bed-83bd-4458ed623f5f",
+  "label": "Whatever is given being in a world exists in that world",
+  "paraphrase": "OPEN bridge between two fields of the shared CausalityFrame (factivity of giving; analyst formulation): whenever, in a world v, y exercises causation of x's being at some moment (GivesTo, from the primitive GivesAt), x exists at v. The frame relates no fields, so this is stated, not assumed.",
+  "lean_declaration": "TruthCore.Modal.PrussPowerPremises.GivenExists",
+  "definition_ids": [
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ]
+}

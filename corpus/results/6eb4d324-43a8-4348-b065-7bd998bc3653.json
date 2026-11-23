@@ -1,0 +1,11 @@
+{
+  "id": "6eb4d324-43a8-4348-b065-7bd998bc3653",
+  "label": "A necessary concrete holder of a power for w obtaining, by Pruss's own direction",
+  "argument_id": "81b1b020-b8d6-45fe-9f3a-18689173c6a6",
+  "challenge_module": "TruthCore.Results.Modal.PrussPowerPremises.Challenge",
+  "solution_module": "TruthCore.Results.Modal.PrussPowerPremises.Solution",
+  "theorem": "TruthCore.Results.Modal.PrussPowerPremises.prussDirectionNecessaryHolder",
+  "comparator_config": "results/6eb4d324-43a8-4348-b065-7bd998bc3653/comparator.json",
+  "status": "solution-present",
+  "description": "Pruss's own direction (#1887 gap 6, one-step powers): the holder sits in the non-actual world with a positive power for the actual world's obtaining. Only the symmetry (B) part of S5 is used. Not a transcription: no premise mentions a necessary being. Establishes no premise. It avoids a power for a negative state (under positive-outcome-only powers P1-prime fails while this route holds; controls, rival 3), but not the abstention fact: a holder that gives any actual contingent being at w is, with factive giving, a two-way giver (controls, law 7)."
+}

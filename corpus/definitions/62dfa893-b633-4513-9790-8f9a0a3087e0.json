@@ -1,0 +1,9 @@
+{
+ "id": "62dfa893-b633-4513-9790-8f9a0a3087e0",
+ "label": "Gives being in a world: y exercises causation of x's being at some moment of world v (GivesTo)",
+ "term": "gives being in a world (GivesTo)",
+ "definition": "GivesTo F v y x := there is a moment t with F.GivesAt v y x t: in world v, y exercises causation of x's being at some moment. Defined from the shared CausalityFrame's primitive GivesAt (DEF 158301bc-9585-4145-be60-34f08c9f922c). It is world-relative exercise, unlike the tenseless, world-independent CausesIn (CAUSE_2). Helper GivingSameIn F y u v: y gives being to exactly the same beings in worlds u and v.",
+ "basis": "stipulative",
+ "lean_declaration": "TruthCore.Modal.PrussPowerPremises.GivesTo",
+ "note": "Analyst definition for #1887's power-premise slice (docs/notes/pruss-power-premises.md), attribution deferred. Neither sense of CAUSE_OF_BEING (disambiguation 88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d): it is weaker than both, since originating giving (at a first moment) and sustaining giving (at every moment of presence) each imply giving at some moment for a thing with a moment of presence. Examples: the sun giving the air its light at noon (on the inclusive reading of GivesAt); on the Thomist account, God giving a creature being in the actual world. Non-examples: x's being caused only in another world; a tenseless CausesIn fact with no world-relative exercise; removing a destroyer (q.104 a.1 ad 3). Whether giving is factive (what is given being exists in that world) is not built in; it is the explicit open premise GivenExists."
+}

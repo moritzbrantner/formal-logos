@@ -1,0 +1,11 @@
+{
+  "id": "84cc194c-9955-439d-8d19-f4d264e91910",
+  "label": "POWER_OVER_ESSE_1 over each actual contingent concretum, from withholding",
+  "argument_id": "11afcb55-dea9-4d5b-a992-34de8852394e",
+  "challenge_module": "TruthCore.Results.Modal.PrussPowerPremises.Challenge",
+  "solution_module": "TruthCore.Results.Modal.PrussPowerPremises.Solution",
+  "theorem": "TruthCore.Results.Modal.PrussPowerPremises.withholdingGivesPowerOverEachActualContingent",
+  "comparator_config": "results/84cc194c-9955-439d-8d19-f4d264e91910/comparator.json",
+  "status": "solution-present",
+  "description": "A second support option for the transfer's conclusion: the distributive powers follow from the creator reading, factive giving and the withheld-giving bridge, not from the collective power as such. Not a transcription. Establishes no premise."
+}

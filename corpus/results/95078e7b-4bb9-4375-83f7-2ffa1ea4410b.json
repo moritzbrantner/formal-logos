@@ -1,0 +1,12 @@
+{
+  "id": "95078e7b-4bb9-4375-83f7-2ffa1ea4410b",
+  "label": "The stage-one node, by Pruss's own direction",
+  "argument_id": "a35a05d4-8ac6-4fbb-8d38-dc75bbcd8086",
+  "challenge_module": "TruthCore.Results.Modal.PrussPowerPremises.Challenge",
+  "solution_module": "TruthCore.Results.Modal.PrussPowerPremises.Solution",
+  "theorem": "TruthCore.Results.Modal.PrussPowerPremises.prussDirectionNecessaryConcrete",
+  "comparator_config": "results/95078e7b-4bb9-4375-83f7-2ffa1ea4410b/comparator.json",
+  "status": "solution-present",
+  "description": "Projection of Pruss's direction onto STMT-NECESSARY-CONCRETE-AT. An assembly; establishes no premise.",
+  "transcription": "assembly"
+}

@@ -1,0 +1,9 @@
+{
+ "id": "7bc1d667-fda2-4744-b055-9ba6cbe7f648",
+ "label": "One-way giving profile: wherever y exists it gives being to the same beings (FixedGiver)",
+ "term": "one-way (fixed) giver (FixedGiver)",
+ "definition": "FixedGiver F y: for all worlds u and v where y exists, y gives being (GivesTo, DEF 62dfa893-b633-4513-9790-8f9a0a3087e0) to exactly the same beings in u as in v. An extensional exercise profile, not an intensional potency.",
+ "basis": "stipulative",
+ "lean_declaration": "TruthCore.Modal.PrussPowerPremises.FixedGiver",
+ "note": "Analyst definition, attribution deferred. Intended reading: the exercise pattern of a non-rational (one-way) power whose exercise needs no patient. Read for this slice (2026-11-23, Ross translation, http://classics.mit.edu/Aristotle/metaphysics.9.ix.html): Met. Theta 2, 1046b, 'one non-rational power produces one effect; e.g. the hot is capable only of heating'; Theta 5, 1048a, for non-rational potencies 'when the agent and the patient meet in the way appropriate to the potency in question, the one must act and the other be acted on'. Reading step (not attributed): for a holder whose exercise presupposes no patient, the conditions of exercise are present wherever it exists, so a one-way power is exercised identically wherever it exists. Examples: a necessary emanative source producing the same effects in every world where it is; an inert being (gives nothing anywhere). Non-examples: a craftsman who builds in one world and not another; a source whose output varies by chance; a one-way power whose exercise depends on a patient present in some worlds only (that is not a fixed giver, which is why the patientless condition belongs to the reading). Related: the frame analogue of #555's BeingCarriesAct (TruthCore.Modal.SimplicityCollapse), which concerns one act token, not the beings given being."
+}

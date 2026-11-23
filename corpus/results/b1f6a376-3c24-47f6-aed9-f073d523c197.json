@@ -1,0 +1,12 @@
+{
+  "id": "b1f6a376-3c24-47f6-aed9-f073d523c197",
+  "label": "The route's conclusion, from a necessary concrete varying giver",
+  "argument_id": "75297f50-118c-4704-9158-8fa85f449707",
+  "challenge_module": "TruthCore.Results.Modal.PrussPowerPremises.Challenge",
+  "solution_module": "TruthCore.Results.Modal.PrussPowerPremises.Solution",
+  "theorem": "TruthCore.Results.Modal.PrussPowerPremises.varyingGiverGivesNecessaryPowerHolder",
+  "comparator_config": "results/b1f6a376-3c24-47f6-aed9-f073d523c197/comparator.json",
+  "status": "solution-present",
+  "description": "Projection onto b90ee2de, which reaches STMT-NECESSARY-CONCRETE-AT through ad42c376. An assembly; establishes no premise.",
+  "transcription": "assembly"
+}
