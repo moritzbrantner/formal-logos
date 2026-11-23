@@ -326,7 +326,7 @@ origin, and a stationary no-giver comparator. This is an unregistered structural
 certificate; no timeless-agent or existential-adequacy premise is derived. -/
 theorem beginninglessSustainingControls : Control.BeginninglessCertificate := by
   unfold Control.BeginninglessCertificate
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
   -- Temporal presence at now equals world-relative existence in both worlds.
   · intro v x
     exact Iff.rfl
