@@ -107,8 +107,8 @@ omission witnesses for the world-presence interface in both routes, in the
 same absent-source frame. -/
 theorem presenceControls :
     TruthCore.Causality.ReceivedEsseActualGiver.Control.PresenceControls := by
-  unfold TruthCore.Causality.ReceivedEsseActualGiver.Control.PresenceControls
-  simp only [ContingentHasDistinctEsseCause, ContingentHasActualEsseGiverAt,
+  dsimp only [TruthCore.Causality.ReceivedEsseActualGiver.Control.PresenceControls,
+    ContingentHasDistinctEsseCause, ContingentHasActualEsseGiverAt,
     UnitingCausesPresent, TruthCore.German.Kant.CosmologicalInference.ContingentAt,
     ContingentReceivesEsse, ReceivedEsseHasCauseOfBeing, ContingentHasDistinctEsse,
     ExistingInActAt, DistinctEsseRequiresExternalCauseReading, esseProfile,
@@ -122,6 +122,40 @@ theorem presenceControls :
     TruthCore.Causality.ReceivedEsseActualGiver.Control.esseFalse,
     TruthCore.Causality.ReceivedEsseActualGiver.Control.essenceSelf,
     TruthCore.Causality.FirstMoverNecessity.Model.mk]
-  simp [Bool.forall_bool]
+  have hx :
+      ((true = true ∧ true = true) ∧
+        ∃ v : Bool, True ∧ ¬ (v = true ∧ true = true)) :=
+    ⟨⟨rfl, rfl⟩, ⟨false, ⟨trivial, by decide⟩⟩⟩
+  refine ⟨hx, ?_, ?_, ?_, ?_, ?_, ?_, fun _ _ => trivial, ?_⟩
+  · -- B2: the absent `false` causes the contingent mover's esse.
+    intro x hcont
+    have hxt : x = true := hcont.1.2
+    subst x
+    exact ⟨false, by decide, rfl, rfl, rfl⟩
+  · -- No actual giver: the only cause, `false`, exists at no world.
+    intro h
+    obtain ⟨c, hne, hAt, _⟩ := h true hx
+    exact hne hAt.2
+  · -- World presence fails for the edge from `false`.
+    intro h
+    have hFalse := h false true ⟨rfl, rfl⟩ (by decide) ⟨rfl, rfl, rfl⟩
+    exact (by decide : ¬ (false = true)) hFalse.2
+  · -- Route 1: R1.
+    intro x hcont
+    exact ⟨true, hcont.1.2⟩
+  · -- Route 1: reception-to-CAUSE_2 coverage.
+    intro x _ hx'
+    subst hx'
+    exact ⟨false, by decide, rfl, rfl, rfl⟩
+  · -- Route 2: B6.
+    intro x hcont
+    have hxt : x = true := hcont.1.2
+    subst x
+    exact (by decide : (false : Bool) ≠ true)
+  · -- Route 2: the q.3 a.4 reading.
+    intro x hx'
+    cases x with
+    | false => exact absurd rfl hx'.2
+    | true => exact ⟨false, by decide, trivial, rfl, rfl, rfl⟩
 
 end TruthCore.Results.Causality.ReceivedEsseActualGiver

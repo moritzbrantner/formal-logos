@@ -1140,7 +1140,7 @@ not silently treated as identical to this Thomistic participation of esse.
 | **Intrinsic necessitating nature** | This individual's own nature has intrinsically sufficient existential content in the relevant possibilities. | A genuine unqualified, rigid sufficiency would yield necessity in those possibilities, not contingent x. Whether the particular content is adequate and real is a further question; mere essence/esse equality does not prove it. |
 | **Intrinsic nonnecessitating reason** | An internal propensity, probabilistic law or spontaneous capacity can explain why x is an admissible outcome, perhaps even why it occurred under a noncontrastive causal standard. | May explain probability or occurrence without necessitating it. Does not answer the complete contrastive question why x obtains at w rather than v unless that standard is waived or supplemented. It can remain unreceived if the participation doctrine is denied; a reason token is not a receiver. |
 | **Brute contingent actuality** | A primitive actual individual is one of the basic existents, with no further reason for its obtaining at w; it can still have determinate nature and stable laws. | Denies R1 for that individual. It declines a complete existential explanation rather than contradicting a formal logic law. It is disadvantaged under a defended unrestricted existential adequacy demand, but not shown metaphysically impossible by that demand's label. |
-| **Extrinsic or holistic explanation** | A necessary/contingent external cause, or a joint structure, explains x without automatically making the reason a productive efficient cause of esse. | Compatible with reception but not equivalent to it. A noncausal global reason needs its own account of actuality, explanatory direction and full-token adequacy. Matching limit: a non-necessitating external giver leaves the same contrastive fact open (why x at w rather than not at v) as the intrinsic nonnecessitating reason; a necessitating one threatens modal collapse (the GoedelGod ModalCollapse results), so the contrastive standard charges both rows alike. |
+| **Extrinsic or holistic explanation** | A necessary/contingent external cause, or a joint structure, explains x without automatically making the reason a productive efficient cause of esse. | Compatible with reception but not equivalent to it. A noncausal global reason needs its own account of actuality, explanatory direction and full-token adequacy. Matching limit: a non-necessitating external giver leaves the same contrastive fact open (why x at w rather than not at v) as the intrinsic nonnecessitating reason; a necessitating one does not help either: if the giver exists necessarily and necessitates x, then x is necessary at w, contradicting x's contingency, and applied to every contingent thing that is modal collapse. So the contrastive standard charges both rows alike. |
 
 These are **substantive rival packages**, not five unconstrained truth
 assignments. For the intrinsic nonnecessitating rival the crucial issue is
@@ -1305,8 +1305,8 @@ The source-presence interface is world-level: `Ontic.ExistsAt` says
 whether c exists in the world w, not at a time. Its plausibility is that
 a cause of x's esse that does not exist in x's world at all cannot be
 what supplies x's act there. The cases it excludes are therefore causes
-non-actual at w (absent from that world altogether) and abstract or
-merely explanatory conditions that exist in no world as concreta, which
+non-actual at w (absent from that world altogether), that is, conditions
+that do not exist at w, which
 the tenseless, mode-unspecified CausesIn does not itself rule out. A past
 originator that existed in w satisfies the presence premise, so the
 endpoint says nothing about concurrent or sustaining giving; that
