@@ -290,6 +290,35 @@ def Certificate : Prop :=
     ¬ MomentaryPSR eternal noExplanation falseReceived ∧
     ¬ ConcurrentlyActualized eternal noGivingZ falseReceived)
 
+
+/-! ## Scope check: a foundational no-giver bearer need not violate C3
+
+The refined EIT can quantify over a nonempty *subset* of temporal concreta.
+An unsustained foundational bearer may be in that subset while every
+existentially *received* bearer in this same history receives current giving.
+The following is deliberately only EIT's **no-giver projection**: it does not
+represent the stronger exclusion of every form of extrinsic ontological
+grounding, or independently establish that the unreceived bearer is an actual
+metaphysical foundation. The structural compatibility is not proof of either
+the full EIT or C3's reality-applicability.
+-/
+
+/-- In the *same* eternal history, the received bearer `false` has a
+concurrent giver at every moment (weak C3), while the other bearer `true`
+exists at every moment without receiving being from any giver and is **not**
+in the received-esse domain. Thus an existentially quantified no-giver
+projection restricted to fundamental candidates need not negate C3 for
+derivative beings. This is a scope control, not a second warrant for C3. -/
+def SubsetInertiaCompatibleWithC3 : Prop :=
+  ConcurrentlyActualized eternal givesAlways falseReceived ∧
+  (∃ n : Bool, n = true ∧
+    (∀ t : Int, eternal.IsAt () n t) ∧
+    (∀ g t, ¬ givesAlways.GivesAt () g n t) ∧
+    (∀ z, ¬ falseReceived n z)) ∧
+  (∃ x : Bool, x = false ∧ falseReceived x () ∧
+    ∀ t : Int, eternal.IsAt () x t ∧
+      ∃ g, givesAlways.GivesAt () g x t)
+
 end Control
 
 end TruthCore.Causality.TimeSymmetricGiving
