@@ -246,7 +246,7 @@ U: no sufficient ultimate why-this-total-order explanation
 Population + R (OneStepRich) ──[Lean conditional]──> F (FiniteRich)
 F + C (PrefixClosed)        ──[Lean conditional]──> S (WholeSuffixRich)
 S ──[Lean-only adapters, unregistered; then existing #1809]──> D1:
-  no all-admitted-futures exact forecast, no deterministic or
+  no record-only exact forecast at a later index, no deterministic or
   future-excluding Profile holding on every admitted history
 S at every cutoff, one fixed selector
   ──[Lean-only adapter, unregistered; then existing #1808]──> D2:
@@ -386,8 +386,7 @@ finitely-witnessed exclusions, but does not follow from F. C and U are
 independent by construction in the product model; no theorem relates U to
 selectors, so "C does not follow from U" is a fact about the model's shape,
 not a separate theorem.
-In this formalization U alone yields no inconsistency and no entailment to
-rejecting logic. Whether naturalism or U undermines epistemic entitlement
+U alone is consistent in this formalization (`Omissions`). Whether naturalism or U undermines epistemic entitlement
 (EAAN, e519065f) remains OPEN and is not assessed here. Under S,
 all-continuation **certainty**
 fails; under S plus a rival's *own* strict certainty norm plus positive
