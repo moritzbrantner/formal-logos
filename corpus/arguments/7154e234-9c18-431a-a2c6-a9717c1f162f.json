@@ -1,0 +1,17 @@
+{
+  "id": "7154e234-9c18-431a-a2c6-a9717c1f162f",
+  "label": "Finite-history recombination and infinite-prefix closure boundary",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "c3d1c793-dc3a-450a-8c3c-fce341f67f5c",
+  "inference_ids": [
+    "42122c1f-53d5-4c1b-9255-e105a5fa46bd"
+  ],
+  "meaning": "The exact mathematical bridge is (admitted initial history + one-step richness) implies finite richness, and (finite richness + prefix closure) implies complete suffix richness. Local finite compatibility is insufficient for infinite recombination without the closure premise. Stable and empty selectors show why closure and one-step freedom need separate nonvacuity and pattern assumptions. The connection to an actual ontically unexplained world remains OPEN.",
+  "definition_ids": [
+    "10d0fb41-49a3-404f-898f-caabd0d0324e",
+    "1e04df16-fe72-467a-bc25-785f0e94fc70"
+  ],
+  "disambiguation_ids": [
+    "b6e7ec07-9a8e-51c4-a9f8-c9b8e9922ac5"
+  ]
+}
