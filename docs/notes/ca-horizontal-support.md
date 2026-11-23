@@ -534,8 +534,20 @@ source/ground relationship. In particular:
    that all cessation is a positive destructive process.
    Existing pinned claim `da9c82ed` records direct conservation and
    `40aefb2e` becoming/being separation; the English passage
-   `AQUINAS-ST-I-Q104-A1-EN` was read in the earlier campaign. This
-   supplement creates **no new** attribution to an uninspected witness.
+   `AQUINAS-ST-I-Q104-A1-EN` was read in the earlier campaign. **Reuse the
+   C2 source investigation** in
+   [foundational-absence-warrant.md](foundational-absence-warrant.md),
+   §2.2: ST I q.104 a.3 **reply 1** expressly separates the absence of
+   existence (no directly productive non-being) from corruption; **reply 3**
+   says divine annihilation, if it occurred, would be cessation of an action
+   rather than another positive divine action. These are source-specific
+   statements of the conservation theory, **not** independent evidence
+   that a derivative being is unable to retain its esse under an inertial
+   law. In q.104 a.4 Aquinas additionally denies that actual creatures
+   will be annihilated; a model where one vanishes is a test of a
+   counterfactual, not a prediction on his view. The q.104 a.3 reading
+   already exists in the C2 note: this is a **cross-family connection,
+   not a new source reading or attributed corpus claim**.
 3. **Source of positive warrant on each side.** The strongest inertialist
    explains later survival by previous real existence, an applicable
    no-positive-loss rule and the absence of such a loss inducer; it is **not**
