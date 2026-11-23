@@ -1548,7 +1548,7 @@ possible world. The relevant existing relations are
 
 ### Same bearer, two laws and the limit
 
-The new `LawActuality.LimitPersistence` control uses `WithTop Nat`, an
+The new `LimitPersistenceLaw` control uses `WithTop Nat`, an
 abstract time order with natural-number stages and an additional limit
 `⊤` (ω+1). The source is present at every stage in both versions; the
 received-esse recipient is present at *every finite* stage and is given
@@ -1584,7 +1584,7 @@ interpretation at the designated present `now = 0`.
   This compatibility is not an explanatory proof of that law or
   of genuine existential derivativeness.
 
-`TruthCore.Results.Explanation.LawActuality.limitPersistenceControls`
+`TruthCore.Results.Explanation.LimitPersistenceLaw.limitPersistenceControls`
 is the unregistered proof of the above exact 14-conjunct
 `LimitCertificate` (check the delivered CI head before calling it
 Lean-verified). It reuses `WithTop Nat` from Mathlib and leaves
