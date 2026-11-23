@@ -64,8 +64,9 @@ theorem actualGiverImpliesB2 {W B T R : Type}
   exact ⟨c, hcNe, hcEsse⟩
 
 /-- Finite nonvacuous separation: B2 supplies a distinct but nonexistent
-tenseless CAUSE_2 of the first mover. That does not yield an actual distinct
-giver, and exactly the world-presence interface fails. No possibility or
+tenseless CAUSE_2 of the mover `true`. That does not yield an actual distinct
+giver, and the world-presence interface fails (that the other route premises
+hold here is checked in `presenceControls`). No possibility or
 substantive participation claim follows from this syntactic model. -/
 theorem absentSourceSeparatesB2FromActualGiver :
     TruthCore.German.Kant.CosmologicalInference.ContingentAt
@@ -100,5 +101,27 @@ theorem absentSourceSeparatesB2FromActualGiver :
   · intro h
     have hFalse := h false true ⟨rfl, rfl⟩ (by decide) ⟨rfl, rfl, rfl⟩
     exact (by decide : ¬ (false = true)) hFalse.2
+
+/-- Presence controls: strictness of the actual-giver endpoint over B2, and
+omission witnesses for the world-presence interface in both routes, in the
+same absent-source frame. -/
+theorem presenceControls :
+    TruthCore.Causality.ReceivedEsseActualGiver.Control.PresenceControls := by
+  unfold TruthCore.Causality.ReceivedEsseActualGiver.Control.PresenceControls
+  simp only [ContingentHasDistinctEsseCause, ContingentHasActualEsseGiverAt,
+    UnitingCausesPresent, TruthCore.German.Kant.CosmologicalInference.ContingentAt,
+    ContingentReceivesEsse, ReceivedEsseHasCauseOfBeing, ContingentHasDistinctEsse,
+    ExistingInActAt, DistinctEsseRequiresExternalCauseReading, esseProfile,
+    TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.DistinctEsseAt,
+    TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.HasExternalEsseCause,
+    TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceFrame,
+    TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceExists,
+    TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceCauses,
+    TruthCore.Causality.ReceivedEsseActualGiver.Control.receivedByMover,
+    TruthCore.Causality.ReceivedEsseActualGiver.Control.actAll,
+    TruthCore.Causality.ReceivedEsseActualGiver.Control.esseFalse,
+    TruthCore.Causality.ReceivedEsseActualGiver.Control.essenceSelf,
+    TruthCore.Causality.FirstMoverNecessity.Model.mk]
+  simp [Bool.forall_bool]
 
 end TruthCore.Results.Causality.ReceivedEsseActualGiver

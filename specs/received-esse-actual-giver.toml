@@ -1,6 +1,7 @@
 # Stronger actual-giver endpoint from existing R1 and separately OPEN causal
-# and same-world presence interfaces. Two alternative support bundles share R1,
-# and both require the already registered cause-presence principle.
+# and same-world presence interfaces. Route 1 uses R1 directly; route 2 uses B6,
+# which R1 supports upstream (c4bc08b3) when B6 is derived. Both require the
+# already registered cause-presence principle.
 # The projection to B2 feeds the SAME First Way witness. No premise is closed.
 #
 # Analyst formulations, attribution deferred; only previously pinned sources
@@ -12,11 +13,11 @@ results = "TruthCore.Results.Causality.ReceivedEsseActualGiver"
 
 [[statement]]
 id = "2f9b4acb-4bd5-4adb-91ac-8935f46f2e69"
-label = "Every being contingent at w has a distinct CAUSE_2 of esse whose bearer exists at w"
+label = "Every being contingent at w has a distinct CAUSE_2 of its esse that itself exists at w"
 lean = "ContingentHasActualEsseGiverAt"
 paraphrase = "Conditional same-world strengthening of B2: for every bearer existing at the selected world and absent at an accessible world, there exists a numerically different bearer that itself exists at this selected world and causes that target's esse in the shared CausalityFrame. No identification of a receiving principle with this causal bearer, no temporal concurrency, no efficient-cause or grounding identification, and no claim that the first unmoved mover is the giver. The cause-presence bridge is independent and OPEN; absent sources can satisfy world-free CausesIn in structural interpretations."
 definitions = ["97f37f5c-7f82-5077-9bb9-6cfc8673631d","211a6432-8b8f-53ed-85e3-75173bb15b24","5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72","beb654a7-e204-5f4c-a7b4-45e886ba7109"]
-disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b","35fa7162-6cb3-52e1-ac5b-66afc318c74f"]
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b","35fa7162-6cb3-52e1-ac5b-66afc318c74f","6f1d1395-7c1d-5bd5-a45d-03380857aed6"]
 
 [[argument]]
 id = "f3180780-599d-4596-9d7e-6d81a8c28874"
@@ -59,3 +60,33 @@ definitions = ["211a6432-8b8f-53ed-85e3-75173bb15b24","5c308c8c-34a4-525b-a2ca-6
 disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b","35fa7162-6cb3-52e1-ac5b-66afc318c74f"]
 transcription = "assembly"
 
+
+[[statement]]
+id = "Actual-giver presence controls: B2 without an actual giver, and presence omitted in both routes"
+lean = "Control.PresenceControls"
+paraphrase = "Premise-free finite control in one two-world Bool frame (a structural interpretation, not a metaphysical possibility claim): the mover true exists at the reading world and is absent at the other; its only CAUSE_2 edge at esse is from false, which exists at no world. B2 holds and the actual-giver endpoint fails, so B2 does not entail the endpoint. With the mover's esse received in some principle, R1 and the reception-to-CAUSE_2 coverage hold (route 1's other premises); with everything in act, essence the being itself and every esse the principle false, B6, selected-world actuality and the q.3 a.4 reading hold (route 2's other premises). The world-presence interface fails in this frame and so does the endpoint, so neither route yields the endpoint without it."
+definitions = ["97f37f5c-7f82-5077-9bb9-6cfc8673631d","211a6432-8b8f-53ed-85e3-75173bb15b24","5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72","beb654a7-e204-5f4c-a7b4-45e886ba7109","4433942e-aaf6-55a9-b777-66e55638103d","afc7a0c6-0b7d-5a08-b406-3ecad83e36ca"]
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b","35fa7162-6cb3-52e1-ac5b-66afc318c74f","6f1d1395-7c1d-5bd5-a45d-03380857aed6"]
+
+[[argument]]
+id = "Actual-giver presence controls checked"
+theorem = "presenceControls"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+premises = []
+conclusion = "Actual-giver presence controls: B2 without an actual giver, and presence omitted in both routes"
+rule = "Finite check in one frame"
+meaning = "Strictness of the actual-giver endpoint over B2, and omission witnesses for the world-presence interface in both actual-giver routes, all in the same absent-source frame. Model-witnessed separations only; no premise is established and no reality claim is made."
+description = "Premise-free control: B2 holds without an actual giver (strictness of the strength order), and each route's premises other than world presence hold while the endpoint fails. Sense-mixing control. Establishes no premise."
+
+[[relation]]
+id = "Actual distinct esse-giver strengthens B2"
+label = "Actual distinct esse-giver strengthens B2"
+subject_kind = "statement"
+subject_id = "2f9b4acb-4bd5-4adb-91ac-8935f46f2e69"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "8a8d00e9-12b6-4cf0-b662-431cc4addd49"
+verification_result_id = "d2d55c9b-9308-4b6b-b665-3380c4a99944"
+strictness_result_id = "Actual-giver presence controls checked"
+note = "The actual-giver endpoint implies B2 by the single-premise projection a78a8169 (drop the presence of the cause at w). Strict: in the absent-source frame B2 holds and the endpoint fails (presence controls). The exact difference (#1598 strength comparison) is not certified here. Neither statement is established by the relation."

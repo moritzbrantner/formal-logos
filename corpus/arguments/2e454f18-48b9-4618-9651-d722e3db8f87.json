@@ -1,0 +1,25 @@
+{
+  "id": "2e454f18-48b9-4618-9651-d722e3db8f87",
+  "label": "Actual-giver presence controls checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "0fc830f0-7d70-4ce8-a4a9-86f49227eb98",
+  "inference_ids": [
+    "ce1a7b96-dccd-4af2-b338-68d3eeae7180"
+  ],
+  "meaning": "Strictness of the actual-giver endpoint over B2, and omission witnesses for the world-presence interface in both actual-giver routes, all in the same absent-source frame. Model-witnessed separations only; no premise is established and no reality claim is made.",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "afc7a0c6-0b7d-5a08-b406-3ecad83e36ca"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "896d4cb9-3c62-5230-a499-f23feae9d204"
+  ],
+  "sense_mixing_control": true
+}

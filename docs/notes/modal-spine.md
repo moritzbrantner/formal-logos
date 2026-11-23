@@ -1109,19 +1109,24 @@ inference from the bare modal definition of contingency.
    by contrast, must say why its explanatory contribution holds in w without
    requiring x at every accessible world.
 5. In this ontological setting a genuinely contingent x cannot be sheer
-   self-subsistent, unreceived actuality **if** every limited act of esse
-   needs a distinct receptive principle. That conditional gives a positive
-   reason for R1: contingency discloses an actuality not supplied as
-   self-subsistent by the finite nature. The last italicized constraint is
-   the substantive participation commitment. It is not obtained merely by
-   calling x contingent or by observing that its concept does not mention
-   existence.
+   self-subsistent, unreceived actuality **if** (i) every contingent x's esse
+   is limited (the premise "contingent → limited esse", OPEN; see the q.7
+   checkpoint below, which states this modal-to-real step and why absence at
+   another world is not yet diminution of perfection) and (ii) every limited
+   act of esse needs a distinct receptive principle. That two-premise
+   conditional gives a positive reason for R1: contingency discloses an
+   actuality not supplied as self-subsistent by the finite nature. Premise
+   (ii) is the substantive participation commitment and premise (i) the
+   modal-to-real bridge. Neither is obtained merely by calling x contingent
+   or by observing that its concept does not mention existence.
 
 The case is therefore stronger than a simple appeal to lack of a reason:
 it identifies the proposed *ontological work* performed by reception, namely
 the constitutive relation of a determinate nature to an act it does not
-possess as subsistent identity. But the move from finite/contingent to
-participated/received existence remains **OPEN R1**. An adequate defense must
+possess as subsistent identity. But the move from contingent to
+participated/received existence remains **OPEN R1**: it goes through the
+separate steps contingent → limited (finite) esse and limited esse →
+received esse, and "finite" and "contingent" are not the same notion. An adequate defense must
 show why an unreceived, finite and modally contingent actual individual is
 metaphysically defective, rather than merely unpreferred as an explanation.
 The Platonic Form-exemplification family in participation-grounding.md is
@@ -1135,7 +1140,7 @@ not silently treated as identical to this Thomistic participation of esse.
 | **Intrinsic necessitating nature** | This individual's own nature has intrinsically sufficient existential content in the relevant possibilities. | A genuine unqualified, rigid sufficiency would yield necessity in those possibilities, not contingent x. Whether the particular content is adequate and real is a further question; mere essence/esse equality does not prove it. |
 | **Intrinsic nonnecessitating reason** | An internal propensity, probabilistic law or spontaneous capacity can explain why x is an admissible outcome, perhaps even why it occurred under a noncontrastive causal standard. | May explain probability or occurrence without necessitating it. Does not answer the complete contrastive question why x obtains at w rather than v unless that standard is waived or supplemented. It can remain unreceived if the participation doctrine is denied; a reason token is not a receiver. |
 | **Brute contingent actuality** | A primitive actual individual is one of the basic existents, with no further reason for its obtaining at w; it can still have determinate nature and stable laws. | Denies R1 for that individual. It declines a complete existential explanation rather than contradicting a formal logic law. It is disadvantaged under a defended unrestricted existential adequacy demand, but not shown metaphysically impossible by that demand's label. |
-| **Extrinsic or holistic explanation** | A necessary/contingent external cause, or a joint structure, explains x without automatically making the reason a productive efficient cause of esse. | Compatible with reception but not equivalent to it. A noncausal global reason needs its own account of actuality, explanatory direction and full-token adequacy. |
+| **Extrinsic or holistic explanation** | A necessary/contingent external cause, or a joint structure, explains x without automatically making the reason a productive efficient cause of esse. | Compatible with reception but not equivalent to it. A noncausal global reason needs its own account of actuality, explanatory direction and full-token adequacy. Matching limit: a non-necessitating external giver leaves the same contrastive fact open (why x at w rather than not at v) as the intrinsic nonnecessitating reason; a necessitating one threatens modal collapse (the GoedelGod ModalCollapse results), so the contrastive standard charges both rows alike. |
 
 These are **substantive rival packages**, not five unconstrained truth
 assignments. For the intrinsic nonnecessitating rival the crucial issue is
@@ -1152,8 +1157,8 @@ existence. No duplicate theory of those predicates is introduced here.
 ### R3 and receptive irreflexivity: what the argument actually excludes
 
 The verified #1877 theorem obtains B6 from **R1** (a recipient exists),
-**R3** (only if x's represented esse equals its essence, the recipient is
-that essence), De ente's receiver-in-receptive-potency principle, and
+**R3** (if x's esse equals its essence, any recipient of it is that
+essence), De ente's receiver-in-receptive-potency principle, and
 **principle-level irreflexivity** (no principle is receptive to *itself as the
 same act in the same respect*). The reductio is: suppose that esse(x) and
 essence(x) are the same principle; R1 supplies p; R3 makes p that identical
@@ -1225,10 +1230,22 @@ external cause appear in **separate** upstream/downstream argument
 nodes, joined by the already-registered B6 intermediate.
 
 These are *alternative conditional supports*, not independent empirical
-corroboration: **Cause presence occurs in both direct support nodes; R1 is direct in the coverage route and upstream through B6 in the q.3 route**. The second node does not borrow the coverage premise; the first does not borrow q.3 a.4. The R1/R3/receptive-irreflexivity dependency is separately and explicitly attached to B6, so the cumulative graph composes it into the second path without pretending the q.3 premise itself translates reception into causing. Neither
+corroboration: **Cause presence occurs in both direct support nodes; R1 is direct in the coverage route and enters the q.3 route only upstream, through B6's derived support c4bc08b3, when B6 is derived**. The second node does not borrow the coverage premise; the first does not borrow q.3 a.4. The R1/R3/receptive-irreflexivity dependency is separately and explicitly attached to B6, so the cumulative graph composes it into the second path without pretending the q.3 premise itself translates reception into causing. Neither
 proves R1. The q.3 a.4 cause being InAct(c,esse) is not converted to
 ExistsAt(w,c): the existing ExistingInActAt interface goes in the
-*opposite direction*, so UnitingCausesPresent cannot be omitted.
+*opposite direction*. The presence controls (result for
+`Control.PresenceControls`) certify in one frame that each route's other
+premises hold while UnitingCausesPresent and the endpoint fail, so
+neither route yields the endpoint without the presence premise.
+
+**Dominance of the new path to B2.** Through the projection d2d55c9b,
+route 2 reproduces the existing B2 support b46b88c8 (B6, 0436de86 and
+q.3 a.4 give B2 directly) with an idle presence premise added, and
+route 1 supplies B2 from {R1, coverage, presence} when {R1, coverage}
+already suffices (coverage gives the distinct cause). So as supports of
+B2 both new paths are dominated by bundles without the presence premise;
+their non-dominated content is the stronger actual-giver endpoint itself,
+which no downstream statement yet consumes (next test (e)).
 
 Projection result **d2d55c9b** proves the new actual-giver node implies
 old B2 **8a8d00e9**, dropping cause presence. The existing verified
@@ -1245,14 +1262,17 @@ each contingent effect.
 **Independent q.7 participation checkpoint.** The existing, source-pinned
 `EsseLimitedOnlyThroughReceptionReading` (ST I q.7 a.1, statement
 `1304b462`) already argues that a *limited act of esse* is received in
-some principle. This yields a more independently motivated route to
-reception than mere verbal contrast between essence and existence:
-if a specific contingent x at w has **really limited esse** (limited
-in its degree of perfection, not in duration or cardinality), then q.7's
-bridge gives receipt of that very x's act. The remaining modal-to-real
-step is to argue that every contingent x's esse is limited, without
-equating absence in another accessible world with diminution of
-perfection. Infinite formal perfection, contingent logical status
+some principle: if a specific contingent x at w has **really limited
+esse** (limited in its degree of perfection, not in duration or
+cardinality), then q.7's bridge gives receipt of that very x's act. This
+is not yet a more independently motivated route than the essence/existence
+contrast: definition `6ced5205` (LIMITED_ESSE_1) says the content of
+`EsseLimited` "is fixed only by" this reception statement and the
+unlimited-is-infinite statement, so limitation currently has no content
+independent of reception against which the q.7 bridge could be tested.
+The remaining modal-to-real step (premise (i) of step 5 above) is to argue
+that every contingent x's esse is limited, without equating absence in
+another accessible world with diminution of perfection. Infinite formal perfection, contingent logical status
 and represented essence equality are distinct notions. The older
 `ContingentConcretumParticipatesEsse` (statement `ff8ff869`) is
 another OPEN source-indexed participation bridge, restricted to actual
@@ -1261,14 +1281,16 @@ These dependencies should be investigated before a new equivalent
 premise is registered.
 
 **Strictness control:** `Control.absentSourceFrame` makes the
-first mover `true` contingent at the selected world and stipulates that
-only the absent `false` bears an atemporal CAUSE_2 edge into its
-esse. The new `absentSourceSeparatesB2FromActualGiver` certificate
-checks nonvacuous B2 but not the stronger actual-giver conclusion nor
-`UnitingCausesPresent`. It demonstrates why the same-world actuality
-bridge is indispensable. It is a structural two-world model and does
-not establish that a nonexistent agent can metaphysically produce
-existence.
+mover `true` contingent at the selected world (no `IsFirstUnmovedMover`
+fact is asserted of it) and stipulates that only the absent `false`
+bears an atemporal CAUSE_2 edge into its esse. The
+`absentSourceSeparatesB2FromActualGiver` certificate checks nonvacuous
+B2 but not the stronger actual-giver conclusion nor
+`UnitingCausesPresent`; the premise-free `presenceControls` result adds,
+in the same frame, that each route's other premises hold there, and it
+backs the strictness of the registered strength order (actual giver
+strengthens B2). It is a structural two-world model and does not
+establish that a nonexistent cause can metaphysically produce existence.
 
 **Semantic-metadata repair:** The claim `UnitingCausesPresent`
 does not refer to an ordinary actual causal edge or existential
@@ -1279,15 +1301,18 @@ Consequently no unsupported metadata bridge to `R` or to
 as a separate registered intermediate, so it also needs no
 fake reception/external-cause bridge.
 
-The source-presence interface has its own philosophical plausibility
-when CAUSE_2 means an actively exercising cause of *current* existence:
-a non-existent c cannot now supply x's act. But the current CausesIn is
-tenseless and mode-unspecified, so a historical originator no longer
-present, an abstract explanatory condition, or a merely indexed cause
-is not automatically covered. Its explicit selection is why the new
-endpoint is meaningful rather than a relabeled B2. Strictly concurrent
-giving remains a further question, as the present/relational receipt
-and time-symmetry investigations already show.
+The source-presence interface is world-level: `Ontic.ExistsAt` says
+whether c exists in the world w, not at a time. Its plausibility is that
+a cause of x's esse that does not exist in x's world at all cannot be
+what supplies x's act there. The cases it excludes are therefore causes
+non-actual at w (absent from that world altogether) and abstract or
+merely explanatory conditions that exist in no world as concreta, which
+the tenseless, mode-unspecified CausesIn does not itself rule out. A past
+originator that existed in w satisfies the presence premise, so the
+endpoint says nothing about concurrent or sustaining giving; that
+remains a further question, as the present/relational receipt and
+time-symmetry investigations already show. Its explicit selection is why
+the new endpoint is meaningful rather than a relabeled B2.
 
 ### Matched explanatory parity and the most serious rival
 
@@ -1349,10 +1374,11 @@ The externally conserved pure-act model cannot also satisfy firstness
 and the required causal priority, but it remains a live distinction
 between first in motion and first in being.
 
-**Next tests without another equivalent-premise loop:** (a) assess
-whether specific real limitations of esse (rather than merely the
-absence of x in another world) positively entail a receptive
-constituent; (b) seek a genuinely explanatory intrinsic contingent
+**Next tests without another equivalent-premise loop:** (a) supply
+limitation content independent of reception (LIMITED_ESSE_1 `6ced5205`
+is currently fixed only by the reception and infinity statements), then
+assess whether real limitations of esse (rather than merely the absence
+of x in another world) positively entail a receptive constituent; (b) seek a genuinely explanatory intrinsic contingent
 candidate at the same individual-existence explanandum, and show
 whether token/contrastive adequacy rules it in or out; (c) investigate
 the source-indexed scope of R3 for composite versus self-subsistent
@@ -1360,7 +1386,12 @@ esse; (d) connect actually present CAUSE_2 to sustaining or
 nonproductive grounds only with existing independent semantic bridges;
 (e) test whether per-se explanatory priority and a defended
 regress/whole-system principle make the actual cause chain terminate
-at the **same** necessary first source. The registered graph preserves
+at the **same** necessary first source. Test (e) is also the connection
+plan for the presence strength of the actual-giver endpoint `2f9b4acb`:
+no downstream statement consumes it yet (the First Way route uses only
+its B2 projection), so the missing bridge is a premise that uses the
+actual presence of the giver, for example a per-se chain or termination
+principle over actually existing causes. The registered graph preserves
 all shared premises and leaves the stage-two God/uniqueness claims open.
 
 **Implementation boundary:** New Results/ReceivedEsseActualGiver theorem

@@ -50,8 +50,9 @@ theorem actualGiverImpliesB2 {W B T R : Type}
   sorry
 
 /-- Finite nonvacuous separation: B2 supplies a distinct but nonexistent
-tenseless CAUSE_2 of the first mover. That does not yield an actual distinct
-giver, and exactly the world-presence interface fails. No possibility or
+tenseless CAUSE_2 of the mover `true`. That does not yield an actual distinct
+giver, and the world-presence interface fails (that the other route premises
+hold here is checked in `presenceControls`). No possibility or
 substantive participation claim follows from this syntactic model. -/
 theorem absentSourceSeparatesB2FromActualGiver :
     TruthCore.German.Kant.CosmologicalInference.ContingentAt
@@ -65,6 +66,13 @@ theorem absentSourceSeparatesB2FromActualGiver :
       TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceFrame.history.ontic
       TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceFrame.CausesIn
       TruthCore.Causality.ReceivedEsseActualGiver.Control.absentSourceFrame.esse true := by
+  sorry
+
+/-- Presence controls: strictness of the actual-giver endpoint over B2, and
+omission witnesses for the world-presence interface in both routes, in the
+same absent-source frame. -/
+theorem presenceControls :
+    TruthCore.Causality.ReceivedEsseActualGiver.Control.PresenceControls := by
   sorry
 
 end TruthCore.Results.Causality.ReceivedEsseActualGiver
