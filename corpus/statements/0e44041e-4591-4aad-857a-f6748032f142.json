@@ -1,0 +1,18 @@
+{
+  "id": "0e44041e-4591-4aad-857a-f6748032f142",
+  "label": "The other being a reason for a contingent being's existence is about is a CAUSE_2 of its esse",
+  "paraphrase": "OPEN bridge (BX2), analyst formulation, attribution deferred: if a #312 reason token explaining at w the existence of a being contingent at w is about another being, that other being causes its esse (the frame's CausesIn at esse, CAUSE_2, mode not fixed). The causal reading of existential reasons by another. It does not say every cause is a reason, that the cause exists at w, or that it is efficient.",
+  "lean_declaration": "TruthCore.Explanation.BruteContingencyParity.ExistenceReasonSourceCausesEsse",
+  "definition_ids": [
+    "7cff4318-201a-430d-9680-10f5148a3b01",
+    "d513fb8a-64ee-5d49-ae56-4d695f93ca71",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

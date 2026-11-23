@@ -11,6 +11,7 @@ public import TruthCore.Results.Explanation.AutonomousGroundConcrete.Solution
 public import TruthCore.Results.Explanation.AutonomousGroundNecessity.Solution
 public import TruthCore.Results.Explanation.BCCFDerivative.Solution
 public import TruthCore.Results.Explanation.BorrowedExercise.Solution
+public import TruthCore.Results.Explanation.BruteContingencyParity.Solution
 public import TruthCore.Results.Explanation.CompleteResponseParity.Solution
 public import TruthCore.Results.Explanation.CondensationSufficiency.Solution
 public import TruthCore.Results.Explanation.ConservativeReasonExpansion.Solution

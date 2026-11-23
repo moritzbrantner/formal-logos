@@ -1,0 +1,11 @@
+{
+  "id": "a1056aab-cace-47f4-a12f-f29519964d59",
+  "label": "Brute-existence parity map checked",
+  "argument_id": "845fd3ea-321a-4ac6-9253-77af2ce4aa8c",
+  "challenge_module": "TruthCore.Results.Explanation.BruteContingencyParity.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.BruteContingencyParity.Solution",
+  "theorem": "TruthCore.Results.Explanation.BruteContingencyParity.parityMap",
+  "comparator_config": "results/a1056aab-cace-47f4-a12f-f29519964d59/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free laws and models for the parity argument. Sense-mixing control: the laws relate the ontic demand, contingency and the necessitating sense of reason without a bridge premise. Establishes no premise."
+}
