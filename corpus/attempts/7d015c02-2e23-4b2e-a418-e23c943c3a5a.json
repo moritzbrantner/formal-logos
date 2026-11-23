@@ -1,0 +1,18 @@
+{
+  "id": "7d015c02-2e23-4b2e-a418-e23c943c3a5a",
+  "label": "Rational authorship and epistemic ends in contingent creation",
+  "statement_ids": [
+    "2757f6a3-2d14-5033-9740-2c36a678ce73",
+    "1822b59d-1040-57e4-8991-f7862db26355",
+    "a7bbd2fd-242c-5097-a9a3-581d25835890"
+  ],
+  "date": "2026-11-23",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Proposed unreviewed philosophical checkpoint at main 8083301a037428574d0e46b1064d8f6d858da377. Reuses #742 base-fixed net selection, #545/#555 necessitation and reason-closure boundaries, #1875 necessary bearer/contingent output and omission controls, #1380 knowledge discrimination, #737 and #1410 veracity boundaries. Distinguishes productive actual explanation, partial contrastive reasons and exhaustive determining reasons at the same whole-order explanandum. Practical authorship candidate: apprehended end, adoption for an actual reason, and intention-directed production distinguish purposive realization from post-hoc labeling and controlled lottery policy without necessarily explaining the exact endorsement contrast. Counterexample to treating the personal label as sufficient: an uncontrolled random selector within a reason-constrained policy. The same productive standard credits an impersonal producer; its modal/causal stability is compatible with reliable evidence. Normative candidate: deliberate systematic frustration of a conferred truth-directed epistemic capacity, without overriding justification, is contrary to faithfully realizing that specific end. Requires domain, normal use, genuine cognition and goodness; assertion truthfulness is not a trace-reliability theorem. No modal collapse or skepticism inferred from mere source contingency, and no actual divine application established. C2 concerns absence of n, not absence of distinct created effects. Note: docs/notes/optimal-creation-choice.md#rational-authorship-versus-brute-selection-2026-11-23-proposed-unreviewed. No new theorem, statement, definition, sourced claim, or support edge. Existing full-synthesis underdetermination retained; author-side semantic sweep only.",
+  "blocker": "OPEN: constitutive intentional reference and actual productive direction at the same simple necessary source without a world-label selector or contingent intrinsic modifier; scope of determining closure at contingent endorsement; nonvacuous normative limits on creative choices and absence of overriding reasons for systematic misleading evidence; actual evidence provenance and agent access. Need independent final semantic challenge, canonical related/dossier/novelty and offline validation, computed frontier-diff. No premise discharge claimed.",
+  "evidence": [
+    "a1990e04-1e7d-565f-bd98-f2e64b570aa1",
+    "PR-1875"
+  ]
+}
