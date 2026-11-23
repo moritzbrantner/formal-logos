@@ -251,14 +251,27 @@ same *origin and presence through t=1* in the three originating worlds;
 The `conserved` and `inertial` scenarios agree on presence and strict giving
 at **every** t≤1, not merely a fabricated common label. The `inertial` and
 `vanished` scenarios share the same pre-t=2 data. All are populated by the
-same source, and in all scenarios no positive destructive `ProtectiveProcess`
-occurs. The law, instantiated from the existing `CessationHasCause` rather
-than a new symbol, says that **every sampled loss** of an existent bearer has
+same source, and in the **baseline** scenarios no positive destructive
+`ProtectiveProcess` occurs. The law, instantiated from the existing
+`CessationHasCause` rather than a new symbol, says that **every sampled loss** of an existent bearer has
 an actual destructive process directed to that very bearer. Under the supplied
 no-process vocabulary it rules out `vanished`, but not `inertial`.
 The selected world in `inertial` has an originally caused, contingent effect
 which exists at t=2 without any strict current giver. The source has not
 ceased to exist.
+
+**Loss-classification counter-reading.** `withdrawalAsLoss` changes only
+the *occurrence and terminal-process representation*, not the identity or
+temporal existence of the `vanished` recipient or the still-present source.
+It declares the withdrawal at 1→2 to be a bearer-directed loss event.
+Then `CessationHasCause` **holds** for that very same vanished history,
+and `NoCessationCause` is false. This is a checked alternative interpretation
+of a free `ProtectiveProcess.Model` field, **not evidence** that mere absence
+of a conserving act is a *positive* destructive process. Consequently the
+formal law can classify withdrawal either as an allowed loss inducer or as
+a loss with no inducer. The substantive question is whether the lack of
+productive input is a genuine explanation of cessation, or instead
+persistence is the default absent an actual inducing intervention.
 
 **What this adds:** the genuinely discriminating counterfactual is not the
 definitional equivalence of `ContinuedGiving` with
