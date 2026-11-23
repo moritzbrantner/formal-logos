@@ -1,0 +1,18 @@
+{
+  "id": "af93a18e-3175-4f45-b09f-ba2a19976322",
+  "label": "A necessary concrete power-holder for no contingent concretum, by Aristotelian modality (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "62b4a40a-919e-5da4-998c-131c386b7361",
+    "94393b5b-8950-4a52-aef1-50cd09232e64",
+    "fffa0693-d04d-4387-b43d-514e092f72d1",
+    "2d2be120-ac0a-405f-b4b3-7cc68be1f320",
+    "0dc833c1-3b2f-4769-a09e-531f0da12455",
+    "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174"
+  ],
+  "output_statement_id": "84d02356-5dac-4ce5-9f9e-4cebf12f96f2",
+  "rule": "Ground the non-actual global possibility, locate the holder in its world, transfer by Euclidean access",
+  "meaning": "Analyst reconstruction of Pruss's Aristotelian-modality argument. A concrete being is contingent at w, so the global possibility (no contingent concretum) fails at w, while it holds at some accessible world (P4). Aristotelian grounding (P1) gives a being y existing at w with a power for it; initiator presence (P2) gives an accessible world v where it obtains and y exists; y is concrete (P3), so y is not contingent at v. With excluded middle y exists at every world accessible from v, and Euclidean access makes every world accessible from w accessible from v.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

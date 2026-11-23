@@ -1,0 +1,16 @@
+{
+  "id": "95bf8780-0e3c-49ba-b636-2274e2997a30",
+  "label": "If the actual contingent concreta's joint absence is possible, not actual, a being has power for it",
+  "paraphrase": "OPEN (P1-prime, Aristotelian grounding of Pruss's possibility; analyst reconstruction, attribution deferred): if some world accessible from w lacks every concrete being that is contingent at w, and w itself has such a being, then some being existing at w has, at w, a power whose exercise would initiate a causal chain issuing in the joint absence of all such beings, one world lacking them all (PowerFor). Other contingent beings may exist in that world. An instance of Aristotelian modality for one proposition indexed to the actual world; it is not PGP and does not concern any single individual's absence.",
+  "lean_declaration": "TruthCore.Modal.ModalGrounding.ActualAbsenceGrounded",
+  "definition_ids": [
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "3b89368c-c55c-44b2-8a01-bcecb1420c7f",
+  "label": "Pruss actual-absence route controls checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "0367a005-ca73-4e90-a308-222cec1519f5",
+  "inference_ids": [
+    "4732e4cc-2aba-44cd-bd81-e4bf639d8a4d"
+  ],
+  "meaning": "Premise-free: the global possibility premise implies Pruss's on Euclidean frames; nonvacuity of the sibling on theist and non-Euclidean frames; omission models for each of its five non-logical premises; replacement versus joint absence (Van Cleve); the S4 conceivability bundle, with the being not actual and with it actual at the reading world. Model-witnessed separations only; no premise is established and no reality claim is made.",
+  "definition_ids": [
+    "13c0abe7-25f7-4921-b52e-9f732edd6f2c",
+    "6ecf24d5-5001-4571-937c-2632ac8c2c66",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "bf7eddca-8291-4744-8470-379babcd7781"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ],
+  "sense_mixing_control": true
+}

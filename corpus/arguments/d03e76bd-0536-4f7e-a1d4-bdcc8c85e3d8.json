@@ -1,0 +1,42 @@
+{
+  "id": "d03e76bd-0536-4f7e-a1d4-bdcc8c85e3d8",
+  "label": "Modal grounding frameworks controls checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "32b5f7bb-9952-44e1-97d7-e4d821d6afe8",
+  "inference_ids": [
+    "233cbfce-c1b1-4f2d-b406-9926bfcc5a69"
+  ],
+  "meaning": "Premise-free laws comparing the accounts of de re possibility of absence at the foundational case (power-grounded, combinatorial, essentialist in two forms, hybrid) and the Pruss reconstruction, then finite models: a theist nonvacuity model, the Pruss-without-PGP separation, the brute foundational model, the existence-conditional model with four omission models, the primitivist pair, the hybrid First Way model, six Pruss omission models and two one-sided conceivability models. Model-witnessed separations only; no premise is established and no reality claim is made.",
+  "definition_ids": [
+    "13c0abe7-25f7-4921-b52e-9f732edd6f2c",
+    "3fd6bddb-f10c-4df4-8694-3eb5e7c28617",
+    "54bdb2f0-aa66-489f-ae06-174dd668d424",
+    "6ecf24d5-5001-4571-937c-2632ac8c2c66",
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db",
+    "7fcf846e-d0ef-400e-89c0-7c82b94edde7",
+    "c8113f31-6208-5992-9ca4-712887a4594b",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "a49e4cf1-ca4f-5519-9724-892af257cedb",
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "f9f58df7-d3be-4d66-b1f1-204d7049c450"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "ed4f1f3f-d0c2-57b7-8ce7-52245db29d79",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "508617ab-cf24-5f3b-a387-64b3991359ec",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "d25cee67-1d5c-4a4c-bda5-8571b731ddf3",
+    "f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5"
+  ],
+  "sense_mixing_control": true
+}

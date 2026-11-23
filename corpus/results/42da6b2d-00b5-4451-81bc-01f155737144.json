@@ -1,0 +1,11 @@
+{
+  "id": "42da6b2d-00b5-4451-81bc-01f155737144",
+  "label": "A necessary concrete power-holder, by Aristotelian modality and Pruss's possibility",
+  "argument_id": "259571ae-36c0-44ff-804b-d3f138c0a363",
+  "challenge_module": "TruthCore.Results.Modal.ModalGroundingActualAbsence.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalGroundingActualAbsence.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalGroundingActualAbsence.prussActualAbsenceNecessaryPowerHolder",
+  "comparator_config": "results/42da6b2d-00b5-4451-81bc-01f155737144/comparator.json",
+  "status": "solution-present",
+  "description": "Test 5's route to a necessary concrete being with Pruss's own premise, replacing the global variant's Euclidean premise. Not a transcription: no premise mentions a necessary being. Establishes no premise. Each non-logical premise is needed and the conclusion holds on a non-Euclidean frame (controls). It uses neither PGP nor C2; its P1-prime is power-grounded modality applied to the joint absence of the actual contingents, so it is not independent of the C2 crux's general theory."
+}

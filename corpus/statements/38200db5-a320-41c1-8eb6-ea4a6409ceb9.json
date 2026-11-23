@@ -1,0 +1,20 @@
+{
+  "id": "38200db5-a320-41c1-8eb6-ea4a6409ceb9",
+  "label": "No other being's essential truth entails the existence of a being foundational at w",
+  "paraphrase": "OPEN, analyst formulation: for every being f foundational at w and every other being y, no essential truth of y entails f's existence. The essentialist counterpart of firstness: SIMPLY_PRIOR_1 firstness alone says nothing about essences, so this is a separate premise.",
+  "lean_declaration": "TruthCore.Modal.ModalGrounding.FoundationalExistenceUnrequiredByOthers",
+  "definition_ids": [
+    "7fcf846e-d0ef-400e-89c0-7c82b94edde7",
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db",
+    "54bdb2f0-aa66-489f-ae06-174dd668d424",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76"
+  ]
+}

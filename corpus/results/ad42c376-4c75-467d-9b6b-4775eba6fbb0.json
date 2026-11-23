@@ -1,0 +1,12 @@
+{
+  "id": "ad42c376-4c75-467d-9b6b-4775eba6fbb0",
+  "label": "The stage-one node, from a necessary concrete holder of an actual-absence power",
+  "argument_id": "ada5a68d-512e-4b36-9de1-a984d1807aeb",
+  "challenge_module": "TruthCore.Results.Modal.ModalGroundingActualAbsence.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalGroundingActualAbsence.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalGroundingActualAbsence.prussActualAbsenceNecessaryConcrete",
+  "comparator_config": "results/ad42c376-4c75-467d-9b6b-4775eba6fbb0/comparator.json",
+  "status": "solution-present",
+  "description": "Projection of the sibling conclusion onto STMT-NECESSARY-CONCRETE-AT. An assembly; establishes no premise.",
+  "transcription": "assembly"
+}

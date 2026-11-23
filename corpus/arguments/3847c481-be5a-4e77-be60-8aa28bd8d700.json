@@ -1,0 +1,46 @@
+{
+  "id": "3847c481-be5a-4e77-be60-8aa28bd8d700",
+  "label": "The stage-one node, from a necessary concrete foundational being",
+  "premise_statement_ids": [
+    "666f06a4-bf39-40dd-97cf-613796e7b042",
+    "c5da5e62-a9cd-4142-8d3a-a96f86548e88"
+  ],
+  "conclusion_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+  "inference_ids": [
+    "c444cb20-0f60-4e1c-83f4-1adab127c9f1"
+  ],
+  "meaning": "The concrete foundational being exists at w and, by the necessity verdict, at every accessible world: it witnesses the stage-one node on the frame's own profile.",
+  "definition_ids": [
+    "7fcf846e-d0ef-400e-89c0-7c82b94edde7",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea",
+    "baddf770-36bf-542f-bb3c-2297342d5452",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "ed4f1f3f-d0c2-57b7-8ce7-52245db29d79",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "d25cee67-1d5c-4a4c-bda5-8571b731ddf3",
+    "f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ],
+  "sense_bridges": [
+    {
+      "term": "NECESSARY",
+      "from": "8c881fa6-2b9f-44be-a32a-c8ef29c13643",
+      "to": "7af298fb-a2c4-4239-919b-7685f2e1f67a",
+      "statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+      "role": "conclusion"
+    }
+  ]
+}

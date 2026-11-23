@@ -1,0 +1,11 @@
+{
+  "id": "872a3832-e72f-45ac-97b2-5b7590673268",
+  "label": "Foundational beings are contingent at w, from existence-conditional essences",
+  "argument_id": "f9d43a47-02c2-434b-9184-a732a55d7e28",
+  "challenge_module": "TruthCore.Results.Modal.ModalGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalGrounding.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalGrounding.conditionalEssencesFoundationalContingent",
+  "comparator_config": "results/872a3832-e72f-45ac-97b2-5b7590673268/comparator.json",
+  "status": "solution-present",
+  "description": "The standing rival's verdict 'possibly absent', with its exact commitments. Not a transcription: no premise mentions contingency of a foundational being. Establishes no premise. Each premise is needed (controls, conditionalEssence omissions 1-4); with a concrete foundational being it contradicts the necessity verdict."
+}

@@ -1,0 +1,19 @@
+{
+  "id": "d1af2b06-1ffe-41ff-ab3f-daa3305f8d44",
+  "label": "Some point of the world type lacks each being foundational at w",
+  "paraphrase": "OPEN, analyst formulation: for every being foundational at w some point of the frame's world type (accessible or not) lacks it: its absence is representable in the logical space. Says nothing about accessibility, so it does not by itself make the being contingent.",
+  "lean_declaration": "TruthCore.Modal.ModalGrounding.FoundationalAbsenceRepresentable",
+  "definition_ids": [
+    "7fcf846e-d0ef-400e-89c0-7c82b94edde7",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76"
+  ]
+}

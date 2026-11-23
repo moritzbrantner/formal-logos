@@ -1,0 +1,11 @@
+{
+  "id": "ef54f023-8184-406a-9b0c-caa2df7415b0",
+  "label": "Modal grounding frameworks controls checked",
+  "argument_id": "d03e76bd-0536-4f7e-a1d4-bdcc8c85e3d8",
+  "challenge_module": "TruthCore.Results.Modal.ModalGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalGrounding.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalGrounding.controls",
+  "comparator_config": "results/ef54f023-8184-406a-9b0c-caa2df7415b0/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free laws and models for the #1887 framework batch. Sense-mixing control: the laws relate MODAL_CONTINGENCY_1, NECESSARY_2, POSSIBLE_NOT_TO_BE_1 and _2, POWER_OVER_ESSE_1 and the new power-for-a-proposition primitive without a bridge premise. Establishes no premise."
+}

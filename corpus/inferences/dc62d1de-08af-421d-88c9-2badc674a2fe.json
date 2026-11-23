@@ -1,0 +1,15 @@
+{
+  "id": "dc62d1de-08af-421d-88c9-2badc674a2fe",
+  "label": "Foundational beings are contingent at w, from existence-conditional essences (inference)",
+  "input_statement_ids": [
+    "857654fe-e33b-4726-a7d8-8cb4b74791e2",
+    "9d8a8d2e-23ff-4b74-8a06-6cd9abd7ccb8",
+    "38200db5-a320-41c1-8eb6-ea4a6409ceb9",
+    "d1af2b06-1ffe-41ff-ab3f-daa3305f8d44"
+  ],
+  "output_statement_id": "fe8c3a1d-8bbd-4e3e-be46-170e75bb73db",
+  "rule": "No essential exclusion, then the essentialist account of possibility",
+  "meaning": "Existence-conditional essentialism's verdict. For a foundational f, no essential truth entails its existence: one of f's own would hold at the representable point lacking f (conditional essences), and no other being's does (unrequired by others). So the essentialist account makes f absent at some accessible world. Esse = essence plays no role: on this account the identity is modally idle. Constructive.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

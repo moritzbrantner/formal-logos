@@ -1,0 +1,12 @@
+{
+  "id": "2cc036ac-137a-43bf-93a0-fbe5870713bf",
+  "label": "The stage-one node, from a necessary concrete holder of an actual-absence power (inference)",
+  "input_statement_ids": [
+    "b90ee2de-8ae5-438b-bea4-e3158889c3e7"
+  ],
+  "output_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+  "rule": "Forget the power",
+  "meaning": "The sibling's witness is concrete, exists at w and at every accessible world: it witnesses the stage-one node on the frame's own profile.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
