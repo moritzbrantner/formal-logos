@@ -1,0 +1,32 @@
+{
+  "id": "dd09ba2e-0a5f-4397-a84d-217ba359442b",
+  "label": "Maximal esse causality from the common uncaused cause, without CCR or composition",
+  "premise_statement_ids": [
+    "9ff2814e-3ed6-4135-a574-12d11dcbbd19",
+    "457698e4-eb21-4561-ab32-eccbfb0a992e",
+    "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+    "cffad050-e86d-48b8-b04b-be47fcc1352d",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "conclusion_statement_id": "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7",
+  "inference_ids": [
+    "530c170e-96c3-4936-9a95-566a3f835a90"
+  ],
+  "meaning": "Non-transcription alternative support for the fixed-esse maximum principle consumed by the GOD_4 existence bundle. Compared with the existing route (common ancestry c35b1a5c, open composition b4987085, ascent cffad050, excluded middle), it uses neither CCR, population nor esse-cause composition: the common uncaused cause already causes each received bearer, and coverage, identity uniqueness and excluded middle make every other actual bearer received. If nothing is received, uniqueness leaves at most one actual bearer and the principle holds vacuously. Causing stays mode-unspecified; no necessity, maximum existence or naming is concluded.",
+  "definition_ids": [
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "a2a8de58-42e0-5481-b7fb-848ae8602036",
+    "5766de66-8a37-5b04-aa65-9eec53319f50",
+    "0ea9feb8-1f92-5b11-aa74-2f2e567c6106",
+    "e7aa4529-fe7a-4baf-929c-466cf15cb0c6"
+  ],
+  "disambiguation_ids": [
+    "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "1795a62e-f78b-5f5b-94e7-9e7490824811"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "7b9bac8e-1637-4c41-b443-3ec89cd8477a",
+  "label": "Totality esse-cause route controls",
+  "paraphrase": "Exact interpretations only, on q3a4 profiles with all bearers actual. (1) Joint model: premises A and B, no self-causation of esse, distinct-esse coverage, identity uniqueness and a received bearer hold with the common uncaused cause, CCR and an infinite descending chain (no well-foundedness). (2) Hume-Edwards regress: A fails while B, no self-causation, coverage, uniqueness, every bearer received and freedom from causal loops hold; CCR fails. (3) Two-bearer loop with internal totality causes: B fails; CCR fails. (4) An actual uncaused totality cause that supplies no member: B fails; CCR fails. (5) A self-causing totality cause: no self-causation fails; A and B hold; CCR fails. (6) An ascending rooted chain: CCR and the finite-path common source hold without a common uncaused cause on the given edges. (7) Two independent identity roots with a transitively closed relation: CCR and coverage hold, identity uniqueness and the common uncaused cause fail. Logical controls, not metaphysical counterexamples.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.AggregateEsseCause.AggregateEsseCauseControls",
+  "definition_ids": [
+    "a95ed85b-627e-4dbe-9810-63b0b6ee1e02",
+    "e7aa4529-fe7a-4baf-929c-466cf15cb0c6",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "23ae8d63-1351-4e7c-9ab1-ed85d9695b22",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

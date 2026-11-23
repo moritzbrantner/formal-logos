@@ -1,0 +1,11 @@
+{
+  "id": "69ed38fb-f634-46f6-9d68-9a78ab7dfcd5",
+  "label": "Totality esse-cause route controls checked",
+  "argument_id": "33ae60af-b49d-4685-9f57-4f6282493be5",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.AggregateEsseCause.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.AggregateEsseCause.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.AggregateEsseCause.controls",
+  "comparator_config": "results/69ed38fb-f634-46f6-9d68-9a78ab7dfcd5/comparator.json",
+  "status": "solution-present",
+  "description": "Non-transcription closed control bundle. The omission models deny, respectively, the totality cause (Hume-Edwards regress), whole to members (internal loop; idle actual explainer) and no self-causation (self-causing totality cause); the joint model shows the premise bundle is satisfiable with an infinite descending chain; the strictness models show CCR without a common uncaused cause, once with a single root on the given edges and once with two independent roots and a transitively closed relation. No model is asserted to be metaphysically possible."
+}

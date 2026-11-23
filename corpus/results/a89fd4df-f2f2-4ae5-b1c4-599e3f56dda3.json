@@ -1,0 +1,11 @@
+{
+  "id": "a89fd4df-f2f2-4ae5-b1c4-599e3f56dda3",
+  "label": "Common uncaused esse-cause from totality cause, whole to members, no self-causation",
+  "argument_id": "0121b663-3ea0-41e8-92c8-82caa7c62c76",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.AggregateEsseCause.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.AggregateEsseCause.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.AggregateEsseCause.commonOfAggregate",
+  "comparator_config": "results/a89fd4df-f2f2-4ae5-b1c4-599e3f56dda3/comparator.json",
+  "status": "solution-present",
+  "description": "Non-transcription conditional derivation on one fixed q3a4 profile, constructive. A supplies an actual totality cause, B makes it a cause of each received member, and no self-causation of esse (b62a64ab) excludes its being received, hence it has no actual esse cause and is a distinct actual cause of every received bearer. Mode of causing, immediacy, time, world and necessity stay unspecified; uniqueness of the uncaused bearer and esse-essence identity are not derived. Controls (2)-(5) show each of A, B and no self-causation is needed in an exact interpretation."
+}

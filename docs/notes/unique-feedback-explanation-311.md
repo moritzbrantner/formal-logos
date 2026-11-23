@@ -2116,3 +2116,319 @@ whether the control proves precisely its stated conjuncts. Validate
 the Lean file and normal delivered-head checks. No independent review
 or new proof certification is asserted in this draft.
 
+
+## C1: can an entirely derivative reality account for its own actuality? (#1724, #1616; 2026-11-23)
+
+**Commitment C1 (owner statement).** Every complete, nonempty system of actually
+existing, existentially derivative beings must ultimately depend on something
+underived. This section fixes its meaning, tests C1 and ¬C1 at matching scope,
+adds a verified alternative support bundle, and records the current
+provisional judgment. It reuses, and does not repeat, the
+[complete existential-supply comparison](#complete-existential-supply-comparison-supplier-cones-and-actual-constitution-1724-1616-2026-11-23)
+above, the #1871 finite circle, the infinite and rooted controls of
+`ClosedEsseSource`, `DerivativeJointPower`, `UniqueFeedback`, the
+lfp/gfp regress models of `TruthCore/Logic/RegressDomains.lean`, the #751
+actual-world-gap results and the #1109 whole-to-parts work. Open PR #1878's
+supplier-rule selection theorems are cited only as an unmerged proposal.
+
+### Fixed meaning: two readings of "something underived"
+
+Hold one q3a4 profile and r(c,x) := `ActualEsseCause p c x` (distinct, both in
+act as to esse, `CausesIn c x esse`, tenseless, mode unspecified).
+"Complete" means closed under every actual r-supplier of every member;
+"existentially derivative" means received in r (`ReceivedActual`, definition
+e7aa4529). Then:
+
+- **C1-bearer** says the underived item is an actual bearer of the same
+  profile, reached through r. Because a complete system contains its suppliers,
+  this is exactly CCR (20babef7): no nonempty complete system is wholly
+  received. It forbids no infinite series as such: root-backed infinite
+  descents and rooted cycles satisfy it (`RootedInfiniteControl`,
+  `RootedCycleControl`, and control 1 below).
+- **C1-anything** lets the underived item be a fact, law, configuration or
+  whole outside the bearer domain. It is not formalized, and no root route
+  consumes it: an underived *fact* gives no actual source, no r-path and no
+  same-bearer identity for the later bridges.
+
+The distinction resolves most of the listed alternatives before any
+argument. An autonomous necessary impersonal totality, a universe whose
+actuality is primitive **and which is itself a bearer**, and priority monism
+with an unreceived cosmos all **accept** C1-bearer if their underived whole
+r-causes the members' esse (control 1 is the shape: `none` is the whole), and
+accept C1-anything in any case. Their disagreement with the theistic case lies
+later, at necessity, unity, simplicity, intellect and naming. Only two
+positions **deny** C1-bearer: a complete system with no underived bearer at
+all, either an infinite regress or a loop, with its total actuality either
+not a further fact (Hume–Edwards) or a primitive *fact* with no bearer.
+
+### Distinguished structures and where C1 bites
+
+| Structure | Relation to C1-bearer |
+| --- | --- |
+| Temporal ancestry (parents, past states) | Not r unless each ancestor presently gives esse; an infinite past is compatible with C1 (ST I q.46 a.2 ad 7; `SustainingDependence.Control.Certificate`). #1616's persistence-law rival lives here |
+| Per se ordered present supply | The intended application of r; loop exclusion already follows from priority, transitivity and irreflexivity (`noPerSeCausalLoop`), infinite descent does **not** (control 2) |
+| Complete existential dependence | Exactly the closure clause of CCR; a root anywhere in the inventory does not help an unrelated cone (`RosterOnlyControl`, control 4) |
+| Circular grounding | Unrooted circuits violate CCR (#1871 circle, control 3); rooted circuits satisfy it |
+| Infinite regress | Rootless infinite components violate CCR (control 2); root-backed infinite descents satisfy it (control 1) |
+| Holistic constitution | Accepts C1 when the whole is an unreceived bearer supplying the parts; denies it only if the whole's actuality is itself received from the parts (then it is a member of a rootless loop, control 3) or is a bearerless fact |
+
+### The strongest positive argument, reconstructed
+
+1. *Reception.* x's actuality is received when a distinct actual bearer is a
+   cause of its esse (definition e7aa4529; q3a4 first proof: essential
+   principles alone do not suffice for a distinct esse).
+2. *Instrumental transmission.* A received bearer contributes to another's
+   esse only by exercising the actuality it has received; its operation
+   presupposes that actuality (ST I q.45 a.5: instruments dispose a presupposed
+   subject; q.104 a.2 grants real, even per se, creaturely preservation).
+   Derivative contributions are real, but each passes on actuality it has.
+3. *Completeness.* In a complete wholly received system every contribution to
+   any member's esse is such a transmission, since every supplier is inside.
+4. *Groundedness of received actuality.* Transmission alone does not account
+   for actuality: an attribution "has actuality by reception" is satisfied only
+   if the givings reach a giver whose actuality is not received.
+5. Hence a complete system with actuality contains an unreceived member (CCR).
+
+Steps 1–3 are well supported and conceded by the strongest rival, which keeps
+real derivative efficacy. Step 4 carries the whole weight, and it is C1 in
+other words. The argument's work is therefore to **motivate** step 4, not to
+derive it. Three motivations survive scrutiny:
+
+- **Mode of having.** A received act is had *from another*; if every having in a
+  complete system is from another, no having in it is a having *of itself*, so
+  the system contains transmitted actuality with no origin. This is the
+  borrowed-money point: an endless chain of borrowers explains every loan and
+  no money. It is a direct conceptual judgment, not a theorem.
+- **Selection.** Under a purely transmitting activation law the all-absent
+  assignment is also a fixed point (lfp empty, gfp full:
+  `Logic.RegressDomains`; #1878's `emptyFixedOfEntirelyBorrowed`, unmerged).
+  So the regress's own law fits the actual and the empty pattern alike. The
+  foundation discriminates them only if its source is active in every
+  admissible state, which is a C2 commitment (below).
+- **Explanatory unity** (Cameron §4, recorded in #1724): one basis explains
+  all members, against an endless supply of separate explanations. Defeasible.
+
+### Does C1 follow from more basic commitments? (direction 8)
+
+Two derivations were tried; the outcome is precise.
+
+**(a) Plural non-circularity is C1 re-presented.** "No wholly received
+plurality is the complete joint cause of its own esse." Read over *every*
+plurality whose members are each caused by a member, it excludes rooted cycles
+and root-backed infinite descents, so it has the strength of well-foundedness
+(`closedOfWF`, 044974e5), which CCR rightly does not require. Read over
+*complete* (closed) pluralities only, it says that no such plurality is
+nonempty, which is CCR itself. Local anti-self-causation does not supply it:
+the Hume–Edwards control satisfies no self-causation **and** loop freedom
+while being a complete wholly received system. So the plural principle adds
+no evidence beyond CCR; it states what CCR says.
+
+**(b) The totality-cause route is a stronger, verified alternative.** New
+vocabulary `TruthCore.Latin.Aquinas.DeEnte.AggregateEsseCause`, results in
+`TruthCore/Results/Aquinas/DeEnte/AggregateEsseCause/`, all zero-axiom,
+Comparator- and NanoDa-checked:
+
+- **A** (05b15c98): if anything is received, the *totality* of received actual
+  bearers has an actual cause of its esse (`TotalityCause`, an explicit
+  primitive, definition a95ed85b).
+- **B** (6c0282c0): a cause of that totality causes the esse of each received
+  member (whole to members; the #1109 spacetime analogue is
+  `CausingWholeCausesParts`, a different vocabulary, not identified with it).
+- **No self-causation of esse** (b62a64ab, sourced: De ente c.3, claim
+  85857e47).
+- `commonOfAggregate` (result a89fd4df): A, B and no self-causation give
+  **one uncaused actual bearer that is a distinct actual cause of every
+  received bearer** (9ff2814e). Proof: the totality cause would cause itself if
+  it were received.
+- `closedOfCommon` (result 50dda707): 9ff2814e gives CCR. Relation 37885377
+  registers the strength order.
+- `maximalCausesOfCommon` (result 0773fa6c): 9ff2814e with coverage 457698e4,
+  identity uniqueness a576300f, causal ascent cffad050 and excluded middle gives
+  the fixed-esse maximum principle **da09703b** consumed by the GOD_4 existence
+  bundle, **without** CCR, population or the open composition premise
+  b4987085 that the existing route f4df2153 needs.
+- `controls` (result 69ed38fb, statement 7b9bac8e): seven exact
+  interpretations. (1) A, B, no self-causation, coverage, uniqueness and the
+  common cause hold with an infinite descending chain: the bundle is
+  satisfiable without well-foundedness. (2) Hume–Edwards regress: only A
+  fails; CCR fails. (3) Internal totality causes in a loop: only B fails.
+  (4) An actual uncaused totality cause that supplies no member: B fails, CCR
+  fails. (5) A self-causing totality cause: no self-causation fails. (6) and
+  (7) CCR without a common cause; (7) has two independent identity roots and a
+  transitively closed relation, so its failure does not depend on reading
+  `CausesIn` as immediate.
+
+~~~mermaid
+flowchart TD
+  A["A: received totality has an actual cause, 05b15c98"] --> C
+  B["B: totality cause causes each received member, 6c0282c0"] --> C
+  S["No self-causation of esse, b62a64ab (De ente c.3)"] --> C
+  C["One uncaused cause of every received bearer, 9ff2814e"] --> CCR["CCR / C1-bearer, 20babef7"]
+  C --> M["Maximal esse causality, da09703b"]
+  COV["Coverage 457698e4"] --> M
+  ONE["Identity uniqueness a576300f"] --> M
+  ASC["Causal ascent cffad050, EM ee4ab504"] --> M
+  CCR --> CS["Existing common source c35b1a5c via c6d92415"]
+  CS --> M2["Existing f4df2153 also needs composition b4987085"]
+  M2 --> M
+  M --> G["GOD_4 existence bundle: eleven further inputs, unchanged"]
+~~~
+
+**What (b) shows.** A carries the crux: the Hume–Edwards denial of A is
+¬C1's core claim, that a totality whose members are all caused needs no
+cause of its own. B and no self-causation are comparatively secure. The
+rival accepts no self-causation, and B fits its own ontology: if the
+totality's existence is nothing over its members' existence, causing the
+totality is causing them. A is also **stronger** than C1: control 7 is a
+plural foundationalism (several independent underived sources) that keeps C1
+and rejects A. So A is C1 plus unity of the cause of received being, and the
+route is a support option with its own premises, not independent evidence
+for CCR beyond A's warrant.
+
+**Verdict on direction 8.** C1 does not follow from more basic accepted
+commitments about explanation, potency or sustaining without a premise at
+least as strong. The plural principle restates it; the totality principle
+strengthens it. Sustaining adds nothing here: control 2 reads naturally as a
+simultaneous per se sustaining chain with no loops. C1 should therefore be
+kept as a **defended primitive** with its direct-assumption option, with the
+totality route as a stronger alternative bundle.
+
+### The strongest account of ¬C1
+
+**Positive account.** Actual bearers b₀, b₁, …; each bₙ's esse is presently
+and per se given by bₙ₊₁. Giving is irreflexive and loop-free; every member
+is actual, has distinct esse and contributes real efficacy. The totality's
+actuality is the conjunction of the members' actuality, and its explanation is
+the conjunction of their explanations (the Hume–Edwards / `MemberLift` reading
+of #751). Control 2 checks that these commitments are jointly consistent with
+the failure of CCR, on a typed profile with coverage, identity uniqueness and
+loop freedom, not by an arbitrary predicate assignment.
+
+**What it explains.** Each member's actuality, given another member's; all
+relations of supply; the pattern. **What it does not.** That the pattern is
+filled rather than empty: its law is also satisfied with nothing active. It
+must either deny that this is a further explanandum (Hume–Edwards) or posit
+a primitive obtaining fact. With the fact it accepts C1-anything and differs
+from the foundation only on whether the primitive is a bearer's unreceived act
+or a bearerless fact about the totality.
+
+**Strongest warrant for ¬C1.** Structural consistency of infinite per se
+orders (control 2; the existing infinite controls); parsimony (no further
+being); avoidance of a composition step from members to totality; the
+accepted coherence of infinite accidental series; and the general
+legitimacy of primitive stopping points.
+
+**Costs.** Received actuality becomes ungrounded in the lfp sense: no
+attribution of it ever bottoms out. The system's own law does not select
+the actual pattern over the empty one. The Hume–Edwards reply has to treat
+"received" as a predicate that transfers to every member but never to the
+totality, although the totality's actuality consists of nothing but received
+actuality. None of these is a contradiction; each is an explanatory cost.
+
+**Circular variant.** Under the per se priority reading, loops are excluded
+by the existing `noPerSeCausalLoop`; on the bare relation they are coherent
+(#1871 circle, control 3). A loop explains mutual dependence of members whose
+actuality is presupposed, not the actuality of the loop.
+
+### C1 with C2 and C3 (direction 9)
+
+C2 and C3 are not defined in the repository or in the request. They are
+read here as the next two commitments the request names: **C2**, the
+underived source exists necessarily; **C3**, the source is one.
+
+- **C1 does not give C2.** CCR, the common cause and every control above are
+  modality-free; an actual root is not an all-world underived being. The
+  existing necessity steps (c66eead8, 8e3b89c9, 45988f36 and the root-to-world
+  bridge cb1cdea9 of #1616) remain separate.
+- **C2 strengthens the comparative case for C1, but only one of its
+  warrants.** The selection argument above discriminates foundation from
+  regress only if the source is active in every admissible state; a merely
+  contingent root admits the empty assignment with the root inactive, which
+  restores parity with the regress's primitive fact (#751 table: `ground`
+  answers the total-history question without necessitating it). So the
+  contrastive warrant supports C1 and C2 **as a package**. The mode-of-having
+  warrant supports C1 alone. Neither counts twice.
+- **C3 has two distinct routes.** CCR plus identity uniqueness a576300f gives
+  the finite-path common source c35b1a5c (existing). The totality route gives
+  a direct common cause of all received being without a576300f
+  (9ff2814e), but places unity inside premise A. Neither restates the other:
+  control 6 has a576300f and the finite-path source without the direct common
+  cause; control 7 lacks both. Uniqueness of underived bearers is still not
+  derived by the totality route: a further idle uncaused bearer is not
+  excluded by A, B or no self-causation.
+- **Redundancy check.** Modal routes reach a necessary being without C1, but
+  they do not connect it to the actual derivative beings. C1 (or the totality
+  route) supplies that connection: it is what lets the necessity, unity and
+  naming bridges concern the source of *these* beings.
+
+### Underived source to necessary existence, unity and GOD_4: exposed dependencies
+
+From C1-bearer: CCR 20babef7 + coverage 457698e4 + excluded middle ee4ab504
+give an identity source (109e22e1); + uniqueness a576300f + population
+78cffb8e give the common source c35b1a5c (c6d92415); + composition b4987085 +
+ascent cffad050 give da09703b (f4df2153), or, via the totality route, A + B +
+b62a64ab + 457698e4 + a576300f + cffad050 + ee4ab504 give da09703b (0773fa6c).
+The GOD_4 consumer then needs eleven further inputs (de-ente note, "Carrying n
+into the God consumer"), including the open cause-to-concrete-ground bridge
+cb1cdea9 that #1616 tests. Necessity needs the same-witness modal steps
+(45988f36; c66eead8 and 8e3b89c9 via attempt a1b799fe). None of these
+bridges is assumed or discharged here.
+
+### Provisional assessment
+
+- **C1-bearer, scope: complete systems under one fixed actual-esse-cause
+  relation, read as exhaustive per se productive supply.** *Accept
+  provisionally as a defended primitive; modestly favored.* Positive warrant:
+  the mode-of-having judgment, the selection asymmetry (full strength only
+  with C2), explanatory unity, and the conceded instrumental premises. It is
+  logically weaker than well-foundedness and than the totality principle, and
+  it permits infinite series and rooted cycles.
+- **C1-bearer, unrestricted tenseless mode-unspecified reading.**
+  *Underdetermined*: temporal-origin and non-efficient readings of r are not
+  shown to be supply (#1616 inertia, F2), and the cause-to-ground bridge
+  remains open.
+- **¬C1.** Coherent and not refuted. It survives only by denying that a
+  totality of received actuality is a further explanandum, or by taking a
+  bearerless obtaining fact as primitive (which concedes C1-anything).
+- **Totality principle A.** A distinct, stronger option that adds unity of the
+  cause of received being; its warrant is no greater than C1's and it is
+  rejected by plural foundationalism. Useful because it supports da09703b
+  without the composition premise.
+- **Formal establishment: none.** No premise is discharged; the computed
+  frontier delta adds three verified support alternatives and lists A and B as
+  bare premises.
+
+**The remaining disagreement, stated exactly.** Is "has actuality by
+reception" a grounded property, that is, one whose attributions must reach an
+unreceived giver (least fixed point), or can it be satisfied coinductively by
+an endless or circular system of givers (greatest fixed point)? Every
+structural test is settled: the controls show both answers consistent with
+coverage, no self-causation, loop freedom, whole to members and actual
+efficacy. What remains is explanatory: whether transmission without origin
+accounts for actuality, and whether a bearerless primitive fact is as good a
+stopping point as an unreceived act.
+
+**Reopen only for:** (i) an argument that "received" does not transfer from
+members to a complete totality, beyond the Hume–Edwards denial already
+recorded; (ii) a positive account of how a bearerless fact makes bearers
+actual rather than describing their pattern; (iii) a same-relation
+counterexample to B or to no self-causation; (iv) a defended
+per se productive reading of every r-edge (would narrow the underdetermined
+scope); (v) a typed mode-specific variant that changes control 2's
+interpretation. Another presentation of a regress, a loop or a
+non-circularity principle restricted to complete pluralities is a reuse case,
+not a reopening.
+
+**Self-sweep (claim against type).** `ReceivedActual` is double negated, so
+"has a cause" in prose means "is not uncaused" without excluded middle.
+`TotalityCause` is a parameter constrained only by A and B: no externality,
+uniqueness or irreflexivity is assumed, and controls 3–5 use that freedom.
+`CommonUncausedCauseOfReceived` is conditional on some received bearer and
+asserts no uniqueness of uncaused bearers or esse-essence identity.
+`maximalCausesOfCommon` lists every hypothesis as a premise, including
+excluded middle. Control 6's failure is relative to the given edges, as its
+docstring states; control 7's is not. "Per se" and "present" in prose
+describe the intended reading only; no Lean type carries time, mode or world.
+No source claim is added; Aquinas, Cameron and Bevan are cited through
+existing #1724 records. Independent semantic challenge is required before the
+judgments above count as reviewed.
