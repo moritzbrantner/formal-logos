@@ -377,6 +377,81 @@ def Certificate : Prop :=
     TimesTrichotomous Nat ∧
     BeginningsHaveLastingGround sustained allB trueGroundsFalse)
 
+
+/-! ## Beginningless dependence versus origin
+
+A separate two-world control over integer-indexed effect moments. The bearer
+and its giver exist at every moment in the selected world, but not in an
+accessible world. A persistent history can admit concurrent giving or *no*
+giving, and the former has no originating moment. By the module's stipulated
+reading the giving time indexes the effect's being, not the agent's temporal
+location; that is a reading, not a result of this control. The contact conjunct
+makes the giver `IsAt` every integer moment, which on the inclusive `IsAt`
+reading (location at, or co-presence to, a moment; attempt `c94eed5b`) is
+neutral: the model equally witnesses an everlasting temporal giver. This is not
+a formal theory of timeless agency or an applicability claim.
+
+The model is a structural surrogate: the accessible alternative world is empty,
+`Causes` is empty, and `GivesAt` is stipulated with no link to `CausesIn` or to
+received esse. Neither giving profile selects the populated world: the giver is
+itself contingent (absent in world `false`) and unsustained (nothing gives it
+being). Prior controls already separate each feature: `TimeSymmetricGiving`
+Control parts (1) eternal inertia and (5) eternal sustaining (one world), and
+`TemporalHistoryControls.JointControls` (an everlasting contingent target). The
+delta here is both features in one two-world model, with an explicit
+`¬ OriginatesBeing`. -/
+
+/-- Both bearers have no first moment of existence in the selected world;
+both are absent in the other accessible world (certified for both by
+`BeginninglessCertificate`), so everlasting is not necessary. Rigid identity of
+the two Boolean bearers across worlds and times holds by construction. -/
+def beginningless : History Bool Bool Int where
+  ontic :=
+    { frame := ⟨fun _ _ => True⟩
+      ExistsAt := fun v _ => v = true
+      Causes := fun _ _ _ => False }
+  IsAt := fun v _ _ => v = true
+  now := 0
+
+/-- Being given to the same bearer at every effect moment, without an onset. -/
+def beginninglessGiving : BeingGiving Bool Bool Int :=
+  ⟨fun v c x _ => v = true ∧ c = true ∧ x = false⟩
+
+/-- No-giver profile on the *same* actual, beginningless history: a structural
+surrogate for the inertialist profile. It encodes only the absence of giving;
+Schmid's explanatory content (explanation from earlier presence plus the
+cessation law) is typed in `TimeSymmetricGiving` Control part (1). -/
+def beginninglessNoGiving : BeingGiving Bool Bool Int :=
+  ⟨fun _ _ _ _ => False⟩
+
+/-- A stationarity rule holds in BOTH the instantiated actual world and the
+empty alternative. It does not entail the effect's presence: it also holds in
+the alternative where the effect is absent. -/
+def StationaryExistence : Prop :=
+  ∀ v t, beginningless.IsAt v false t ↔ beginningless.IsAt v false (t+1)
+
+/-- Sustaining is satisfiable with no originating moment (origination is
+impossible on a beginningless history), and it does not make the effect de re
+necessary. A stationary history is compatible with either a giver or no giver.
+The no-giver profile is incompatible with weak concurrent actualization
+`40a97664` for a received-esse bearer (typed in `TimeSymmetricGiving` Control
+part (1)); no received-esse predicate is encoded here. -/
+def BeginninglessCertificate : Prop :=
+  CoherentAtNow beginningless ∧
+  TruthCore.German.Kant.CosmologicalInference.ContingentAt beginningless.ontic true false ∧
+  TruthCore.German.Kant.CosmologicalInference.ContingentAt beginningless.ontic true true ∧
+  EverlastingAt beginningless true false ∧
+  StationaryExistence ∧
+  SustainsBeing beginningless beginninglessGiving true true false ∧
+  ¬ OriginatesBeing beginningless beginninglessGiving true true false ∧
+  GiverPresentWhenGiving beginningless beginninglessGiving ∧
+  (∀ t : Int, beginninglessGiving.GivesAt true true false t) ∧
+  (¬ ∃ g, beginninglessNoGiving.GivesAt true g false 0) ∧
+  (∀ g, ¬ SustainsBeing beginningless beginninglessNoGiving true g false) ∧
+  (∀ g, ¬ OriginatesBeing beginningless beginninglessNoGiving true g false) ∧
+  (∀ g t, ¬ beginninglessGiving.GivesAt true g true t) ∧
+  ¬ TruthCore.German.Kant.CosmologicalInference.NecessaryAt beginningless.ontic true false
+
 end Control
 
 end TruthCore.Causality.SustainingCausation

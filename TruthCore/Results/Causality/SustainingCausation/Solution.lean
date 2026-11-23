@@ -320,4 +320,52 @@ theorem controls : Control.Certificate := by
     · exact absurd (Or.inl rfl) hxs
     · exact ⟨true, trivial, ⟨rfl, rfl⟩, Or.inr ⟨t, hst, Or.inl rfl⟩⟩
 
+
+/-- Beginningless sustaining with an actual contingent effect, no temporal
+origin, and a stationary no-giver comparator. This is an unregistered structural
+certificate; no timeless-agent or existential-adequacy premise is derived. -/
+theorem beginninglessSustainingControls : Control.BeginninglessCertificate := by
+  unfold Control.BeginninglessCertificate
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  -- Temporal presence at now equals world-relative existence in both worlds.
+  · intro v x
+    exact Iff.rfl
+  -- Actual everlasting being remains contingent in accessible worlds:
+  -- the effect, and the giver.
+  · refine ⟨by simp [Control.beginningless],
+      ⟨false, by trivial, by simp [Control.beginningless]⟩⟩
+  · refine ⟨by simp [Control.beginningless],
+      ⟨false, by trivial, by simp [Control.beginningless]⟩⟩
+  · intro t
+    simp [Control.beginningless]
+  -- The fixed temporal law also holds in the uninstantiated possible history.
+  · intro v t
+    exact Iff.rfl
+  -- Direct esse-giving without any first temporal moment.
+  · refine ⟨⟨0, by simp [Control.beginningless]⟩, ?_⟩
+    intro t _
+    simp [Control.beginninglessGiving]
+  · intro h
+    obtain ⟨b, hb, _⟩ := h
+    exact hb.2 (b - 1) (by omega) (by simp [Control.beginningless])
+  · intro v c x t h
+    exact h.1
+  · intro t
+    simp [Control.beginninglessGiving]
+  -- The same unbounded history supports a no-giver interpretation.
+  · rintro ⟨g, h⟩
+    exact h
+  -- Hence nothing sustains or originates the effect in the no-giver profile.
+  · rintro g ⟨⟨t, ht⟩, hs⟩
+    exact hs t ht
+  · rintro g ⟨b, _, hg⟩
+    exact hg
+  -- The giver itself is given being by nothing in the giving profile.
+  · intro g t h
+    simp [Control.beginninglessGiving] at h
+  -- A beginningless temporal profile does not yield modal necessity.
+  · intro hn
+    have h := hn false (by trivial)
+    simp [Control.beginningless] at h
+
 end TruthCore.Results.Causality.SustainingCausation
