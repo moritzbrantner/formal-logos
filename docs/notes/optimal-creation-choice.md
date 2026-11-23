@@ -1287,3 +1287,281 @@ must challenge §§11–14, especially the proposed practical
 measure's actual explanatory role, the precise scope of
 q.15, and the unresolved strong intrinsic-orientation
 principle.
+
+
+## Active power, immanent operation and the essential object of an act (2026-11-23; proposed, unreviewed)
+
+Continuation of §§11–14, prior head e5e728d280a0d01a666b37f51d7c2046790b7a73;
+main f93b376f390bbd480b9a7705404c001622bdb553 at dispatch. #1912 owns the
+separate many-receivers C2 problem; no changes to its paths. Fix n, the actual
+distinct effect x, the candidate specification D, and a genuine alternative
+in which x is absent, **if warranted**. Do not infer such an alternative
+from merely describing it. Question: can a particular exercise of n's
+active power be intentional without being another intrinsic actuality?
+
+### 15. Actualizing another is not the same as being actualized
+
+Selected source readings (orientation, not newly pinned claim bindings):
+
+- Aristotle, *Physics* III.3, 202a13–202b22, [Hardie/Gaye translation](https://classics.mit.edu/Aristotle/physics.3.iii.html).
+  The actualization in the movable is shared in the relevant sense with the
+  mover's acting, without identity of the accounts of doing and undergoing.
+  Reuse the existing `MotionLocatedInMovableReading`,
+  `MoverMovedShareOneActualityReading`, and
+  `TeachingLearningSameMotionDifferentAccountReading` in
+  `TruthCore/Greek/Aristotle/Physics.lean`. The shared motion does not
+  establish that the mover has no other intrinsic changes or dispositions;
+  III.2 explicitly discusses reciprocity by contact.
+- Aquinas, [*De potentia* q.1 a.1 co., ad 1, 5–6, 15–18;
+  q.3 a.15 co., fourth argument and ad 14–20; q.7 a.10 co., ad 1–2](https://isidore.co/misc/Res%20pro%20Deo/Aquinas/Bilingual/english/QDdePotentia.htm).
+  Q.1 distinguishes operation, first act and active power, and distinguishes
+  power as a principle of an effect from a principle of an operation that
+  is identical to the divine essence. Crucially q.3 a.15 does **not** simply
+  extend the transitive-action analysis to divine action: it locates the
+  divine action on the immanent intellect/will side of the distinction.
+  Q.7 a.10 denies an intermediary action and a creature-related real
+  determination in God, contrasting the natural agent's situation.
+- [ST I q.25 a.1 co./ad 1–4, a.5 co./ad 1](https://www.newadvent.org/summa/1025.htm)
+  distinguishes active from passive power and identifies the divine
+  operation and power with the essence; the one wisdom/will/power is
+  conceived under different explanatory aspects. A.5 argues that finite
+  orders do not exhaust the divine end, hence wisdom and justice do not
+  restrict divine power to the actual order. [Q.45 a.2 ad 2, a.3 co./ad 1–3](https://www.newadvent.org/summa/1045.htm)
+  distinguishes creation from a change of a pre-existing subject and
+  distinguishes active creation from the creature-side real relation.
+- W. Matthews Grant and Mark K. Spencer, *Activity, Identity, and God:
+  A Tension in Aquinas and his Interpreters*, Studia Neoaristotelica 12(2)
+  (2015), [author text](https://philarchive.org/archive/GRAAIA-4), pp. 12–15
+  (object essentialism and five positions), 40–42 (contrastive explanation),
+  53–56 (primary object and dependence-based restrictions).
+  Extracted text of the specified sections inspected; page-image fetch
+  returned HTTP 403, so no image verification or new pinned attribution.
+  The authors distinguish identity claims about divine actions from
+  essentiality of their objects; they do not agree on a single winner.
+
+A motion being actual in the patient can be the mover's acting under a
+different account; it does not follow that the motion must be a second
+alteration in the mover. This undercuts the inference from an actual
+causal transaction to an additional passive actualization in the source
+*merely by virtue of being the cause*. It does not prove the negation of
+intrinsic state variation for ordinary agents with differing outputs.
+Nor can the motion reading be substituted for `CausesIn n x esse`:
+creation has no pre-existing patient undergoing motion. The q.45
+creature-side dependence is the relevant extension, with applicability
+to the selected source still open.
+
+The stronger classical proposal is not an activity issuing from n,
+an intermediary which subsequently creates x, or an accident n must
+receive. The source's immanent operation is itself the active causal
+principle; x's being-from-n is real without contributing an additional
+perfection to n. It is possible to grant this account of **where
+actualization is realized** while denying its account of **which
+intention the operation realizes**. Pure actuality need not be
+restricted to inert actuality, but absence of passive reception does
+not entail modal invariance of all specific intentional facts.
+The distinction has genuine positive source support; the specific
+intentional bridge remains substantive.
+
+### 16. The essential-object test, not another collapse theorem
+
+Fix an intrinsic operation a, the same rigid bearer n, and the actual
+specific willing of x (not a name for whichever output happens to occur).
+Three independent claims in ordinary language:
+
+- **Identity:** a is n's own necessary intrinsic actuality; the
+  performance of this rigid operation follows wherever n exists.
+- **Secondary-object essentiality:** wherever this very operation is
+  performed in the admitted alternatives, it is specifically directed
+  to x under the relevant intentional description.
+- **Efficacy:** wherever n specifically wills x in that sense, x exists
+  (unconditional creative decree, not bare approbation or permission).
+
+With necessary n, the first supplies `SameActEverywhere` through
+`BeingCarriesAct`, and the latter two jointly supply `StrictEfficacy`
+on the same rigid x, if their intended interpretation fits the existing
+profile. The #555 core then excludes an accessible absence of x.
+No new proof or type is needed. Merely locating the productive effect
+in the creature does not escape this application if the immanent
+creative willing is itself necessary and x-essential. Conversely,
+necessary a need not be a necessary specifically-x-directed exercise
+unless the object-essentiality bridge is warranted. The negation
+relevant here is a genuine accessible case with a performed and not
+specifically-x-directed, not the observation that a could be described
+generically. Such a case would have to preserve n, a, primary good
+and the actual intentional interpretation; the existing output-label
+controls do not establish it metaphysically.
+
+The strongest objection to object nonessentiality is that intentional
+actions are not indifferent to their objects: someone choosing a
+particular means, rather than another, seems to perform a different
+choice. Species of action, individual operation, complete description
+of a transaction and intrinsic actuality of its agent are nevertheless
+not interchangeable. An act's practical kind can be specified by an
+object without proving that every secondary object is essential to the
+numerical identity of its underlying operation. The converse is also
+not automatic: one primary end can organize many different genuinely
+specific choices. Grant and Spencer's primary-object proposal therefore
+requires an additional individuation principle; their own pp. 53–54
+acknowledge the limitation.
+
+Compare four relevant packages without claiming exhaustiveness:
+
+1. All specific immanent creative objects essential to the identical
+   necessary act: conditional collapse above, even if the actualizing
+   relation is on the creature side. A necessitarian accepts that cost;
+   special identity logic or weaker essentiality is a further defense,
+   not assumed here.
+2. Only the primary good essential to the immanent act; its contingent
+   secondary term belongs to a substantive directed exercise. This
+   preserves classical identity, avoids the essential-object premise
+   of the core and can preserve genuine intentionality if its practical
+   measure is operative. It owes the latter interpretation.
+3. All particular creature-directed acts essentially have their objects,
+   but those fully individuated acts are not identical to the substance
+   (an extrinsically individuated whole/transaction); the intrinsic
+   principle is n. This avoids the identity premise for the whole
+   creative act but must address the source texts' immanent-act identity
+   and ensure genuine apprehension/will rather than mere productive
+   power. It cannot label all creature-directed cognition extrinsic
+   and infer the existing intrinsic-noesis bridge from that label.
+4. A contingent distinct intrinsic executive state: the familiar
+   personal-source alternative; preserves content-specific efficacy
+   without requiring object nonessentiality, but revises the strong
+   simplicity/intrinsic-invariance package. It does not settle why its
+   contingent state obtains.
+
+These distinctions are adapted to the existing #555 token semantics;
+the four packages are not a reproduction of Grant and Spencer's
+five-position taxonomy. In particular their separation of immanent
+and transitive act identities is not the same as the fourth package
+above.
+
+### 17. A substantive comparison: purpose, selection and the real relation
+
+The positive reason for restricting object essentiality is not merely
+the inconvenience of collapse. For receptive cognition or desire,
+an object can contribute to specifying the agent's operation; a
+nonreceptive productive source has the opposite causal direction.
+Its own known primary goodness can supply the constitutive intrinsic
+principle, while secondary goods are dependent finite expressions of it.
+Q.25 a.5 gives a substantive reason that no finite expression exhausts
+that goodness. But nonexhaustion of an end does not logically exclude
+a uniquely mandated finite option: an ordering rule could select one
+option without that option exhausting the end. Nor does every admissible
+description automatically become a live alternative for a particular
+act. The positive case for nonessentiality is therefore cumulative
+with active-power, real-possibility and normative-policy commitments,
+not an inference from infinity alone. The impersonal rival can also
+distinguish a fixed active nature from variable outputs; the specific
+purposive role remains the difference at issue.
+
+Now test the creature-side relation interpretation with two proposed
+readings of the SAME actual n producing x. Both retain actual
+productive dependence, full availability of D as an understood
+exemplar, and conformity of x to D:
+
+- the intrinsic operation is actually exercised for D as practical
+  measure of x's production;
+- n exercises a coarse policy or a blind productive power, with x
+  conforming to D only as a result (the #1459 foreseen-collateral case
+  is another version, not identical to blind production).
+
+The thin actual `CausesIn n x esse`, the modal causal edge, and
+conformity cannot distinguish these descriptions. This is an
+interpretation comparison, not a claim of two admissible worlds
+with every real relation identical. If the creature-side relation
+is merely existence-from-n with no intentional structure, and the
+only additional information is x's conformity to D, it cannot
+supply the proposed practical-measure criterion. If the productive
+dependence itself is an intrinsically directed **kind of exercise
+by the agent** (not an independently operating created thing),
+the exercise has content beyond its thin causal encoding. This
+stronger interpretation must be defended, but does not require
+an additional efficient cause or a separate real accident in n by
+definition. To call its actual obtaining a primitive fact is a
+possible metaphysical commitment; it is not a reason for an
+arbitrary exception to a determining PSR.
+
+The relevant positive claim is thus about what the relation is,
+not simply where it is. A real effect-side relation can be
+constitutive of x's being-from-n without causing n to be or to
+acquire an operation. Its converse denomination need not denote
+a second entity. This avoids a circular demand that x cause its
+own existence: the explanatory fact is x's being *produced by n*,
+not x's bare existing, and n's operation is causally prior, not
+temporally prior. The direction of causation does not itself
+ground the particular fact that this operation is practically
+D-directed. If that fact is reduced to success-conformity alone,
+the lottery and error comparisons (§12) still apply. If it is
+accepted as genuinely directed and nonnecessitating, it supplies
+a positive explanation of actual x without a separate intrinsic
+executive state; it does not supply exhaustive determining
+contrast at the level of the exercise itself. Apply the same
+test to an impersonal producer's primitive exercise.
+
+### 18. Assessment and reuse
+
+Prefer, **conditionally within strict classical simplicity**,
+the distinction of one necessary immanent operation with a
+primary essential object and nonnecessary creature-directed
+terminations over a proposal requiring a separate transitive
+divine operation as an intermediary. The preference is supported
+by q.3 a.15, q.7 a.10 and q.25 a.5, not a general philosophical
+refutation of other source ontologies. Positive advance:
+there is no valid move from active power as such or the effect's
+actualization to another intrinsic passive actuality of n; and
+even the stronger immanent-operation identity needs specific
+object essentiality and efficacy to generate the collapse
+objection. The proposed nonessentiality restriction has a
+positive rationale in nonreceptive production, nonexhaustion
+of the divine good, and the distinction of causal principle
+from concrete transaction. None supplies the actual particular
+practical-role bridge unconditionally. Remain underdetermined
+about the jointly instantiated classical synthesis and a
+genuine alternative to x; do not weaken the already reviewed
+C2 judgments or infer possible absence of n from active power.
+
+For #1731/C4 reuse `IntentionalExemplarExtension.EffectExemplarCoverage`,
+`CognitivelyTakesUpExemplar`, and the `ImmanentSelfPresence` scope:
+the existing conditional content and actual-uptake predicates are
+not the same as choosing a specification. The module's
+`RootToEsseCauseAt` remains open; no new bridge from virtual
+production to intrinsic understanding. For #1459, distinguish
+intending x's existence-good under a specific practical object
+from causing x under a coarse policy; recipient-directed good
+remains additional. For #1380, actual singular knowledge
+requires apprehension of the varying term, not another source
+intrinsic species by assumption. A primary-object argument
+does not prove the claim that all actual-contingent contents
+are truly known. The n-to-a-to-x interpretation and fact-level
+closure seams remain shared with #1730 and #735/#750.
+
+The next material discriminator is no longer another account of
+the location of action. Test **restricted object essentiality**
+directly: whether the necessary primary intentional actuality
+can be intrinsically complete without its specific contingent
+practical term being part of its identity. Compare the
+same-agent, same-primary-end, different-means cases with the
+nonreceptive analogue, and distinguish an independently
+specified intention as a real exercise from the merely
+world-relative denomination. A substantive constitutive
+account would have to meet the practical-measure and
+nonaccident tests simultaneously; otherwise determine which
+explicit simplicity, efficacy or contingency premise must
+be revised. Horizontal support from real powers/essence and
+actual intentional cognition is needed rather than repeatedly
+relabelling the selection relation. This is a precise
+remaining warrant problem, not exhaustion of the research.
+
+Self-sweep: all new arguments are analyst applications, not
+Lean-certified results or new corpus statements. Existing
+Physics readings are motion-scoped, and #555's rigid x is
+not an entire description. No identity of `m.grounds`,
+`CausesIn` and `Ontic.Causes` asserted. Sources consulted
+in the stated scope, no new attribution claim. Same attempt
+7d015c02, no new graph edge, expected premise delta none;
+canonical CLI and independent semantic challenger unavailable.
+Review must challenge the immanent/transitive distinction,
+the modal object-essentiality scope and the alleged thick
+effect-side intentional relation. CI and actual computed
+premise comparison outstanding.
