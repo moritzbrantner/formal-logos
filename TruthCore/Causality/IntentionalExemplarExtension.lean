@@ -92,6 +92,74 @@ def SelfKnownGoodIsRepresented (OwnGood : B → Prop)
   ∀ g, IntrinsicSelfKnowledge About Correct Apprehends Grounded g →
     OwnGood g → (profiles g).representedGood true
 
+
+/-! ## The primary intelligible object of a subsistent intellectual act
+
+Analyst reconstruction of the *distinct* q.14 a.1/a.2/a.4 route, not an
+interpretation of productive InActVirtually. An actual intellectual operation
+has a primary intelligible form; a subsistent intellect admits no distinct
+primary species inhering in it; its own form presents the source as the
+immediate object. The operation apprehends that primary object. These are
+separate OPEN philosophical commitments, not consequences of correct output.
+
+A form here is the immediate formal specification of an immanent intellectual
+act, NOT a copied image, passive reception event or separate mental token.
+It need not have the same type as a being; no injectivity or unique referring
+relation is assumed. Secondary knowledge of effects has the different
+CognitivelyTakesUpExemplar obligation above. -/
+namespace ImmanentSelfPresence
+
+/-- OPEN act/object principle: an actual immanent intellectual operation has
+an immediate intelligible form. InAct is ACT of understanding, not merely
+virtual possession or productive power; identifying those readings is OPEN. -/
+def ImmanentActHasSpecies {B R S : Type}
+    (InAct : B → R → Prop) (understanding : R)
+    (ImmediateSpecies : B → S → Prop) : Prop :=
+  ∀ g, InAct g understanding → ∃ s, ImmediateSpecies g s
+
+/-- OPEN simplicity/identity principle: for a source that is its own esse,
+an immediately informing intellectual species is not an additional intrinsic
+form distinct from that source's own intelligible essence. This is stronger
+than being an efficient producer of mental representations elsewhere. -/
+def SubsistentActHasOnlyOwnSpecies {B S : Type}
+    (OwnBeing : B → Prop) (ownForm : B → S)
+    (ImmediateSpecies : B → S → Prop) : Prop :=
+  ∀ g s, OwnBeing g → ImmediateSpecies g s → s = ownForm g
+
+/-- OPEN self-intelligibility of essence: the source's own intelligible form
+has the source as its *primary* object. This is objective aboutness, not yet
+a subject's act of knowing. Aboutness of created effects is a separate relation. -/
+def OwnFormPresentsSelf {B S : Type}
+    (OwnBeing : B → Prop) (ownForm : B → S)
+    (PrimaryAbout : S → B → Prop) : Prop :=
+  ∀ g, OwnBeing g → PrimaryAbout (ownForm g) g
+
+/-- OPEN intrinsic-intentional exercise rule. A formally actual intellectual
+act apprehends the primary object of its immediate form. This is not a rule
+that accurate production or an effect's cognition gives cognition to its cause;
+the source must already actually be understanding in the selected ACT sense. -/
+def ActApprehendsPrimaryObject {B R S : Type}
+    (InAct : B → R → Prop) (understanding : R)
+    (ImmediateSpecies : B → S → Prop) (PrimaryAbout : S → B → Prop)
+    (Apprehends : B → B → Prop) : Prop :=
+  ∀ g s x, InAct g understanding → ImmediateSpecies g s →
+    PrimaryAbout s x → Apprehends g x
+
+/-- Selected stronger interpretation of intrinsic cognitive grounding.
+An actually apprehended object is grounded in the very source's immediate
+intelligible form, not in a distinct secondary producer's true signal.
+This profile can be used as the Grounded parameter of IntrinsicSelfKnowledge,
+but does NOT establish an arbitrary prior Grounded primitive by definition. -/
+def GroundedInOwnForm {B S : Type}
+    (OwnBeing : B → Prop) (ownForm : B → S)
+    (ImmediateSpecies : B → S → Prop) (PrimaryAbout : S → B → Prop)
+    (Apprehends : B → B → Prop) (g x : B) : Prop :=
+  OwnBeing g ∧ Apprehends g x ∧
+    ∃ s, ImmediateSpecies g s ∧ s = ownForm g ∧ PrimaryAbout s x
+
+end ImmanentSelfPresence
+
+
 namespace Control
 
 /-- One world-relative frame: the true source exists at both worlds,

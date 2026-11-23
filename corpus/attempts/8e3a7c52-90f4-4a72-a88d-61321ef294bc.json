@@ -1,0 +1,18 @@
+{
+  "id": "8e3a7c52-90f4-4a72-a88d-61321ef294bc",
+  "label": "Immanent primary-object route to subsistent self-understanding",
+  "statement_ids": [
+    "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96",
+    "29818edd-9f5a-5414-baa2-9a7d0c8abf18"
+  ],
+  "date": "2026-11-23",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Continuation of merged #1855/#1866/#1873. Reuses the existing q.14 a.1 immaterial-to-intellect reading and POTENCY_3 capacity / POTENCY_2 exercise-or-potency route with pure act to derive an actually exercised source intellect. A new immanent-primary-form interpretation distinguishes the form immediately actualizing that intellect, identity with the own subsistent essence, self-directed primary aboutness, and actual intentional apprehension. Conditional Lean theorem obtains source-level IntrinsicSelfKnowledge under an explicit interpretation of grounding by its own form; does not assume WisdomSelfCapacity or TrueSelfApprehensionGrounded. Three finite controls distinguish an impersonal source with genuinely cognitive effects, an actually thinking source whose own form is not self-directed in the model, and a joint positive interpretation. Details, cumulative same-source graph, provisional assessment and revision conditions in docs/notes/causal-perfection-transfer.md#immanent-primary-object-and-subsistent-self-presence-2026-11-23-continuation-of-185518661873.",
+  "blocker": "Philosophically open q.14 immateriality-to-intellect, POTENCY_3→POTENCY_2 with formal actual intellectual exercise, source's primary intelligible form necessarily being its own essence and about itself, immanent act's cognition of that form, grounding-sense recognition, and content-sensitive exemplary knowledge of contingent effects. Formal models are structural only. Independent final semantic review and final-head CI required.",
+  "evidence": [
+    "PR-1855",
+    "PR-1866",
+    "PR-1873"
+  ]
+}
