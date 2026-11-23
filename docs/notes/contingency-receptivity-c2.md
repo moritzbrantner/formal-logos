@@ -429,16 +429,19 @@ premise is established.
 
 ## Can the whole unreceived act be absent?
 
-**Current conclusion.** There is a positive case for the presence of the same
-foundation across histories that share creatures with essential origins. Its
-reach depends on which histories can share *those very creatures*. A power
-in n to produce, as its ultimate source, each particular possible creature in
-the selected class could extend the case to otherwise separate histories
-containing such a creature, given the same dependence on its source. Three tests
-using intellection, suffering and mathematical necessity identify where the
-evidence changes subject. I retain moderate confidence in suspension about
-this individual's possible absence under the shared assumptions.
-[Argument, strongest objection and revision conditions](#can-ordinary-individuals-identify-the-same-foundation-across-histories)
+**Current conclusion.** Creatures can identify a source together even when
+none requires it individually. What would pick out this very n is a feature
+of their joint history that cannot obtain without its contribution.
+Showing that n offers the best explanation is a weaker, evidential result.
+Conversely, several admissible histories can give evidence for n's possible
+absence if their outcomes cannot all fit an independently warranted
+commitment of n. A cycle of choices illustrates both the argument and
+the difference between guaranteeing a result and permitting a procedure.
+The strongest current obstacle is distinguishing n from another proposed
+supplier of the same whole order. I retain moderate confidence in
+suspension on the shared premises.
+[Individual origins](#can-ordinary-individuals-identify-the-same-foundation-across-histories)
+and [groups and whole worlds](#what-can-a-group-or-a-whole-world-show-that-one-creature-cannot).
 
 Analyst assessment of the rigid individual in issue #1887. Let P say that this
 very n is absent at some world accessible from the actual world. Grant the
@@ -1113,3 +1116,223 @@ strict question that evidence must be consistent with P itself lacking a
 full metaphysical ground at actuality. These comparisons are analyst
 arguments, with existing formal results reused at their stated scope.
 Attempt `10c88ffa` records the findings.
+
+### What can a group or a whole world show that one creature cannot?
+
+Keep the same actual, simple, underived n and the same accessible histories.
+P says that one such history lacks n altogether. An individual, a group
+acting together and a complete order can each give evidence for or against
+P. Enlarging the subject helps when the new facts eliminate an alternative
+that the earlier facts left open.
+
+**A group can identify a source that no member identifies alone.** Suppose
+three pumps run simultaneously. Within a
+fixed installation an interlock admits one supply at a time. Each backup can
+power a different pair, and the main generator can power all three. Knowing
+only one pump, or any two, to be running leaves a backup explanation open.
+Knowing all three to be running singles out the main generator. The wiring,
+interlock and supply inventory can each be checked independently. The same
+inference can survive shared supply: if all backup feeds together pass
+through a known bottleneck of capacity two pumps at the specified load,
+even cooperating backups cannot power all three. Adding a plug-compatible
+generator defeats the identification of the particular machine. These are
+tests of simultaneous operation, not of the mere presence of three pumps.
+
+For C2, ask of a proposed order of creatures what each eligible supplier,
+or coalition of suppliers, could jointly sustain. If the order occurs,
+requires supply, and no way of supplying it without n is possible, n is
+present. This need not assume
+a sole ultimate source, a common organism across worlds, or any individual
+creature that can exist only with n. The independent work is to establish
+the joint requirement, the limits of the rival suppliers, and the class of
+histories in which these findings apply. Eliminating all proposed explanations
+leaves open unconsidered suppliers and, unless independently excluded, a
+brute occurrence. Several local sources can also happen to agree without
+their agreement having a separate producer. Simply listing “all and only the
+n-dependent groups” supplies no such work. The wiring example establishes
+the form of the inference. There is no correspondingly established upper
+bound on the joint powers of all metaphysical rivals.
+
+Aquinas offers a reason to look for an explanation at this scale: diverse
+things serve one another in one order, and he takes their unity of operation
+to call for unity in its first cause. Hume's Philo points to the many people
+who build one ship; coordination and the accumulation of skill yield a
+single organized outcome. This is positive evidence that coordinated supply
+can occur. Whether the cooperators themselves require one ultimate giver
+of being is a further question. Even identifying one causal organization
+falls short of identifying its numerically irreplaceable bearer. The corpus
+already shows that two different ways of storing the contributing states
+can agree under all interventions allowed at the public interface.
+[Aquinas, ST I.11.3](https://www.newadvent.org/summa/1011.htm#article3),
+[Hume, *Dialogues*, V](https://davidhume.org/texts/d/5) and
+[existing intervention comparison](../../corpus/results/MECHANISM-INTERVENTION-PARITY.json).
+
+A group can improve an explanation even when it cannot settle identity.
+Suppose eight readouts all agree. If they faithfully copy one fair binary
+signal, the probability of agreement on either value is 1. If they are
+independent fair draws, it is 2/256. Each readout alone had the same odds
+on both accounts. This favors common transmission over the specified
+independent process. Another transmitter copying one signal predicts the
+whole pattern just as well. Neither theism nor naturalism by itself sets
+those odds, and this comparison gives no numerical probability for P.
+
+**When would the whole add more than every finite group?** Suppose there are
+finitely many candidate n-free ways of supplying an order, and each fails a
+requirement already witnessed by a finite group. Taking one such group per
+candidate gives a finite witness against them all. A single policy allowing
+every finite population but only finite populations fails a global condition
+with no such finite witness. A related case arises with infinitely many
+candidate suppliers. Suppose each n-free supply arrangement has a fixed
+finite capacity, yet every finite group of loads in the proposed order can
+jointly be met by some arrangement. A *single genuinely possible order*
+requiring unbounded supply
+from its ultimate suppliers taken together would exclude all of them.
+Arbitrarily large demands in **different** histories do not make that order.
+Nor does an individual capacity bound establish a bound on the resources of
+an infinite coalition. There is some philosophical motivation here. If a
+recipient limits a power, an unreceived act can escape that particular limit.
+Aquinas argues from unrestricted divine being to infinite active power.
+That gives no upper bound on a different proposed unreceived source, and
+the quantitative loads in the example supply no measure of the giving of
+existence. On the explicit capacity and supply premises the order would attest to n's
+presence there; to establish necessity by this route still takes coverage
+of every admissible order. The repository's infinite-tail controls already
+demonstrate how all finite tests can pass with different witnesses.
+[Aquinas, ST I.25.2](https://www.newadvent.org/summa/1025.htm#article2),
+[finite selections](../../corpus/results/GRIM-REAPER-FINITE-TESTS.json)
+and [finite population covers](finite-population-cover-533.md).
+
+**A group can also give evidence for absence.** Imagine two people in one
+disaster. Given a timely available rescue for either, suppose that wherever
+n is present in these circumstances it knows of the danger and ensures at
+least one survives, without any offsetting moral cost. This guarantees no
+particular survivor. An independently admissible history in which both die
+would exclude n. A common danger supplies a positive reason to consider
+joint loss; the separate possibility of each death would not suffice. The
+cost and feasibility comparison must concern n's options there. An account
+of what human rescuers could do cannot settle it. If the case for joint
+loss keeps n present, it challenges the protection premise instead. The
+same inference applies to an impersonal source with the same guarantee.
+[Existing protection test](#testing-things-the-foundation-might-guarantee)
+and [existing joint-absence controls](modal-grounding-frameworks.md).
+
+There is a second route that need not identify a specific missing effect.
+Suppose two incompatible outcomes of a decision, acceptance and refusal,
+are each independently admissible from actuality under the same relevant
+conditions. If n's presence together with those conditions would settle the
+choice the same way each time, **at least one history lacks n**.
+We need not know which. This gives the primitivist a route to evidence for
+P without first asking anyone to imagine n's absence. Its strongest
+objection is that the very warrant for the two outcomes may be a freedom
+the agent exercises *with* n present. That would count against the fixed
+outcome. Simplicity of the source and the actual occurrence of one outcome
+do not establish that its presence settles every choice. On the present
+evidence, variation puts more pressure on this claim of determination than
+on necessary existence. [Selected-effect analysis](selected-effect-bridge-462.md).
+
+**A test across three possible worlds can allow the circumstances to vary.**
+Suppose three people rank three projects, in order of preference, ABC, BCA
+and CAB. If offered A and B they vote for A by two to one; offered B and C
+they choose B; offered C and A they choose C. Any two decisions fit some
+strict transitive ranking of the projects. All three together fit none:
+the first two require A above C, and the third requires C above A. This
+ordinary mechanism gives a positive reason to take the three alternative
+histories seriously. No individual voter need change their priorities.
+[Arrow, “A Difficulty in the Concept of Social Welfare,” pp. 328–329](https://www.stat.uchicago.edu/~lekheng/meetings/mathofranking/ref/arrow.pdf)
+
+Apply the test to a proposed selector of whole orders. If wherever n is
+present it secures the uniquely preferred feasible outcome under **one
+unchanging strict ranking of these same options**, n cannot be present in
+all three histories with those feasible pairs and results. This needs
+neither a single invariant outcome nor a verdict on which world lacks n.
+But an agent can consistently institute majority rule and permit all three
+outcomes. Ranking complete histories may also give weight to which options
+were available or whether people decided freely. “A chosen over B” and
+“A chosen over C” can then be differently valued histories even if both
+deliver project A. Ties also let different outcomes count as best. To use
+the cycle against n, one must establish that the relevant feasible pairs
+really occur, that the same source ranks the options independently of the
+menu, and that its governance secures the strict winner. The local vote
+does not establish any of those claims about choosing universes. It does
+explain why a cycle can be evidence against attributing one fixed ranking
+of outcomes to a ruler, while supplying little evidence against that ruler's
+presence. [Existing best-world and tied-choice comparisons](optimal-creation-choice.md).
+
+**Can n actualize every possible world?** Distinguish an exact world, which
+settles every fact including whether n exists, from a history described
+entirely in terms that do not explicitly state who supplies the creatures
+or which foundation is present. Keep any independently specifiable fact
+about the creatures even if, given the source's powers, it rules a source
+in or out. Such a history can fix the creatures' numerical identities,
+internal relations, laws, actions and absences within the creature domain.
+Including “this creature stands in this very relation of creation to n”
+restores a source fact even though the subject of the sentence is a creature.
+Keeping the source question open in the description leaves open what it
+takes for the described order to obtain.
+
+If n can bring about **each very world** by an exercise of its power within
+that world, its absence was excluded by the premise. An agent can contribute
+to a history containing itself without bringing itself into existence. The
+converse also fails: an agent can be present when someone freely makes a
+choice it cannot unilaterally secure as that person's libertarian choice.
+If n can instead realize **each creature history**, each history has *a*
+realization with n. Necessity requires n in *every* realization. Even a
+completely empty creature history illustrates the difference. A solitary n
+that freely creates nothing, a solitary different source, and a world with
+no concrete beings would agree on every fact in that description, insofar
+as each proposal is admissible. Evidence that n can refrain warrants only
+an n-present history in which it refrains. Ruling out independent production
+there is also needed to infer no creatures, and ruling out coexisting
+uncreated beings is needed to infer solitude. A similar distinction applies
+if n grounds representations of possible worlds. Even a representation
+whose existence depends on its author can describe a scene in which its
+author never appears. To infer necessity one must show that the obtaining
+of every represented world requires n within that world. The availability
+of a representation alone does not establish its metaphysical admissibility.
+[Earlier distinction between the created order and its complete explanation](intrinsic-existence-reason-1595.md#fixed-bearer-facts-and-complete-explanandum)
+and [Plantinga, *The Nature of Necessity*, ch. IX](https://doi.org/10.1093/0198244142.003.0009).
+
+This gives the rivals a concrete disagreement. Grant that n can supply every
+possible creature history. Then anyone also affirming P owes at least one
+pair of possible worlds alike in their complete source-neutral creature
+histories and different in n's presence. Conversely, anyone inferring
+necessity from that universal power owes a reason why such a difference
+is impossible. An intrinsically specified joint requirement like the
+three-pump load could settle the matter for particular histories. Invoking
+the completeness of the creature description cannot do so by itself.
+
+**A whole cosmos as a rival.** Suppose an accessible order contains a
+cosmos with proper parts that is underived in its very act of being. Suppose
+also that n lacks proper parts wherever it exists and, wherever both exist as distinct
+beings, n must give being to that cosmos. Then n cannot be identical to
+the cosmos, and cannot coexist with it. This is a nonempty candidate for P
+that requires neither a census of every immaterial being nor identifying a
+particular missing creature. Schaffer's priority monism supplies a worked
+account on which a material whole is basic and its parts derivative. He
+expressly limits the domain to material objects. Being prior to all material
+parts leaves open whether the whole receives existence from another being.
+The stipulated case for testing C2 grants n's actual profile. It leaves its
+universal giver role and the required transworld reading of simplicity open.
+The argument for P needs all three premises at once: an independently
+admissible cosmos underived in the relevant respect, n's essential simplicity,
+and the essential giving role that would exclude coexistence. A theist who
+defends that role has reason to take such a rival cosmos seriously as a
+test. A naturalist who accepts only material priority has yet to supply it.
+[Schaffer, “Monism: The Priority of the Whole,” §1.1, p. 33](https://achrafkassioui.com/library/Jonathan-Schaffer-Monism-The-Priority-of-the-Whole.pdf)
+and [the corpus comparison](priority-monism-framework.md).
+
+**Assessment.** I have high confidence that joint evidence can discriminate
+where each creature alone leaves the source open. This improves both sides'
+positive arguments. It weakens the move from one integrated order to one
+irreplaceable individual and the move from many individually omissible
+creatures to a world without n. Moderate confidence in suspension about
+bare C2 remains appropriate. I would move toward necessity given independently
+supported joint constraints that require this same n across all admissible
+orders, including the case with no creatures. I would move toward P given
+a credible joint outcome incompatible with an independently warranted
+essential commitment of n. Such an outcome can provide evidence for P even
+if a primitive permission for n's absence helps make the outcome possible.
+If the admissible world instead *fully grounds* P at actuality, it conflicts
+with the question's strict no-ground stipulation. Nothing in the group
+argument treats absence in another world as an event that happens to n.
+Attempt `bb466836` records this assessment and its open premises.
