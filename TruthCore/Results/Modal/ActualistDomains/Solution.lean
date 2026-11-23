@@ -156,7 +156,7 @@ with no M-accessible bearer; nonvacuous weaker profile-specific inclusion;
 and individually instantiable attributes with no joint bearer. -/
 set_option maxRecDepth 8192 in
 theorem divine_controls : DivineControl.Checks := by
-  dsimp [DivineControl.Checks, DivineControl.ontic, DivineControl.at,
+  dsimp [DivineControl.Checks, DivineControl.ontic, DivineControl.holdsAt,
     DivineControl.attributes, DivineControl.split, DivineControl.k5Frame,
     DivineControl.k5Ontic, TruthCore.Modal.Euclidean,
     DescribedPossibleGreatness, PossibleGreatness, AdmitGreatnessWorlds,
