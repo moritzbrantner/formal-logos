@@ -1,0 +1,14 @@
+{
+  "id": "d346dd5d-a36d-4aa9-a93b-bb36420925b4",
+  "label": "Received esse has a distinct actual giver under source-coverage and presence (inference)",
+  "input_statement_ids": [
+    "ae9d9473-34f1-4b51-8f13-41d340d64ad1",
+    "4bc853db-ec33-40ff-857e-6a67f17532fb",
+    "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"
+  ],
+  "output_statement_id": "2f9b4acb-4bd5-4adb-91ac-8935f46f2e69",
+  "rule": "Existential composition: a recipient implies a cause, then actual presence of that same cause",
+  "meaning": "R1 gives a principle receiving the contingent x's esse. The already open received-esse/CAUSE_2 coverage bridge gives a distinct c causing that same x's esse. The independently open selected-world cause-presence interface then makes c exist at w. The recipient principle is not identified with c. The result is a genuine actual-giver-at-w endpoint, stronger than B2, not a proof of R1 or of either causal bridge.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

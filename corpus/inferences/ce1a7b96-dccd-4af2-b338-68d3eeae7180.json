@@ -1,0 +1,10 @@
+{
+  "id": "ce1a7b96-dccd-4af2-b338-68d3eeae7180",
+  "label": "Actual-giver presence controls checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "0fc830f0-7d70-4ce8-a4a9-86f49227eb98",
+  "rule": "Finite check in one frame",
+  "meaning": "Strictness of the actual-giver endpoint over B2, and omission witnesses for the world-presence interface in both actual-giver routes, all in the same absent-source frame. Model-witnessed separations only; no premise is established and no reality claim is made.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

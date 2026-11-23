@@ -1,0 +1,15 @@
+{
+  "id": "7f9ce5af-289d-41a7-9dcb-05c3062fde0d",
+  "label": "Distinct esse and q.3 a.4 yield an actually present giver (inference)",
+  "input_statement_ids": [
+    "96971e31-4782-4478-95b8-b6863a6a9412",
+    "0436de86-6579-53f2-9ff5-2111ba44ebae",
+    "33ad148b-ceab-5856-a4f8-c999a1dba644",
+    "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"
+  ],
+  "output_statement_id": "2f9b4acb-4bd5-4adb-91ac-8935f46f2e69",
+  "rule": "Same-witness composition: B6 and selected-world actuality allow q.3 a.4 to supply CAUSE_2; explicit cause presence makes its bearer actual at w",
+  "meaning": "For the SAME contingent x at world w, the existing B6 distinction plus actual-esse interface and q.3 a.4 reading yield a distinct c that CausesIn c x esse. The independent selected-world cause-presence interface makes that SAME c exist at w. The previously verified R1/R3/De ente/irreflexivity support for B6 remains upstream in the graph, preserving all shared commitments without an illegitimate reception-to-external-cause equivocation. This branch does not use the separate reception-to-CAUSE_2 coverage premise or infer actualGraph or support R edges.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
