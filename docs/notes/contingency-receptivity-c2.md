@@ -36,8 +36,8 @@ another reformulation of contingency → potency.
 | Modal contingency | `ContingentAt F.history.ontic w x`: exists at `w`, absent at some accessible world (MODAL_CONTINGENCY_1) | — |
 | Avicennian "possible in itself, necessary through another" | not formalized here; an emanated being can be modally necessary yet caused (q.2 a.3's necessary things caused by another) | C2 is about modal contingency only |
 | (a) possible not to be in the subject | `CanFailToBe x F.esse` (DEF-CAN-FAIL-TO-BE at the respect of being, *corruptibile simpliciter*), sense POSSIBLE_NOT_TO_BE_1 of the new disambiguation `d25cee67` | `angelic`: contingent and incorruptible simply; law 10: not POTENCY_1 at esse |
-| (b) possible not to be through another's power | `PowerOverEsse` (POWER_OVER_ESSE_1, DEF `3fd6bddb`), sense POSSIBLE_NOT_TO_BE_2 | `angelic` (b without a); `corruptor` (a and b, b without causing esse) |
-| (b′) giving power over esse | `GivingPowerOverEsse` (POWER_OVER_ESSE_2, DEF `220ca6f1`): power over esse together with CAUSE_2 of it | disambiguation `f5dda05f`; correlation is trivial under (b′) (law 11), so the batch uses (b) |
+| (b) possible not to be through another's power | some `y` with `PowerOverEsse y x` (POWER_OVER_ESSE_1, DEF `3fd6bddb`), sense POSSIBLE_NOT_TO_BE_2. This widens q.9 a.2's creator channel to the broad power, so (a) and (b) are not exclusive (a log that fire can destroy has both) | `angelic` (b without a); `corruptor` (a and b, b without causing esse) |
+| (b′) giving power over esse | `GivingPowerOverEsse` (POWER_OVER_ESSE_2, DEF `220ca6f1`): the conjunction of power over esse and being a CAUSE_2 of it, not a primitive giving power | disambiguation `f5dda05f`; correlation is trivial under (b′) by definition of the conjunction (law 11), which says nothing about a primitive creator's-power reading; the batch uses (b) |
 | (c) bare modal absence | `ContingentAt` itself | `bruteSimple`: (c) with neither (a) nor (b) |
 | Unrealized POTENCY_1 | `AdoptedPotency.InPotency`: `CanBe ∧ ¬ InAct` | law 10 and #1870's R2 law: at esse it contradicts actual existence |
 | Receptive potency | RECEPTIVE_POTENCY_1 (DEF-RECEPTIVE-POTENCY), a principle's potency to an act it may already have | `witness`: an actual contingent being receives esse in a principle in receptive potency to it |
@@ -98,7 +98,9 @@ corruptible→POTENCY_1 → MUTABLE_3 for every contingent being (#1870 bridge (
 (7) the PGP route composes to the endpoint; (8) B4b → corruptible→POTENCY_1;
 (9) B4a → PGP; (10) with adopted POTENCY_1 and the existence-to-act interface,
 B4b excludes every actual corruptible at `w`; (11) under POWER_OVER_ESSE_2 the
-correlation is trivial.
+correlation is trivial, by definition of that sense as a conjunction containing
+CAUSE_2; this does not show that a primitive creator's-power reading would
+trivialize correlation.
 
 **Findings that differ from the brief's expectations.**
 - No excluded middle is needed for C2 from PGP (distinctness of the power's
@@ -152,8 +154,9 @@ case; the model certifies only structural satisfiability.
 | `corruptor` | correlation, PGP, C2 (through matter and form), restricted bridge (ii) | R1, unrestricted bridge (ii) | C2 does not require R1; unrestricted bridge (ii) not derivable from correlation | an uncaused corruptible composite (not ordinary corruption) |
 
 **Deist originator.** With the tenseless `CausesIn`, a deist originator is a
-CAUSE_2 of what it originates, so it satisfies the typed correlation and C2's
-prior-cause disjunct. The deist rival bears only on a tensed (conserving)
+CAUSE_2 of what it originates, so it satisfies the typed correlation, and C2's
+prior-cause disjunct given B3 or an independent priority fact. The deist rival
+bears only on a tensed (conserving)
 strengthening of correlation (next test 2), not on the batch as typed.
 
 ## 4. Could a purely actual being be contingent? (direction 2)
@@ -248,19 +251,22 @@ and price.
   being whose esse is its essence is necessary, it needs esse = essence
   together with an essence that includes existence; existence-conditional
   essentialism ("necessarily, if `x` exists, `x` is F") blocks that step. This
-  is the B6 crux, recorded here as a standing rival to PGP at this node.
+  is the B6 crux, recorded here as a standing rival to B6 (#1870 route C); the
+  essentialist rival to PGP is the previous bullet.
 - **Hybrid rival.** It accepts the First Way's act and potency for change but
   uses non-power modality for existence. Relevant difference, with independent
   justification: existence is not a change (creation and annihilation are not
   changes, ST I q.45 a.2 ad 2, navigation only), so powers may ground
   possibilities of change without grounding possibilities of existence. PGP's
-  counter-consideration is theoretical unity (one account of modality for
-  change and for existence), and Aquinas himself grounds creatures' possible
-  non-being in the creator's power (q.9 a.2). Both recorded; no winner is
-  claimed.
+  counter-consideration at the foundational being is theoretical unity only (one
+  account of modality for change and for existence). Aquinas grounds creatures'
+  possible non-being in the creator's power (q.9 a.2), but the foundational
+  being has no prior power-holder, so that does not count there. Both sides
+  recorded; no winner is claimed.
 - **Contingent uncaused substance (6.2, `uncausedComposite`).** Compatible with
   C2 iff it is receptively composed; it then contradicts q.3 a.4/B2, not C2.
-- **Deist originator.** Satisfies the typed correlation and C2 (§3); it bears
+- **Deist originator.** Satisfies the typed correlation, and C2 given B3 or an
+  independent priority fact (§3); it bears
   only on a tensed strengthening.
 - **Inert power-holder (`inertPowerHolder`).** A power over a being's esse
   with no causal role and no potency to non-being in the patient: the
@@ -338,9 +344,10 @@ premises: the *prima via* base `7bce7007`, B0, firstness `74eb9113`, simplicity
 are shared with #1870's B6 reception argument; B3 with route A; PGP and
 correlation are shared by `32bf794f` and `bf2f0e8e`.
 
-**Provisional judgment (2026-11-23, after semantic challenge).** C2 is
-undisputed wherever its rivals agree: every corruptible or dependent being,
-which covers the ordinary cases. Its contested scope is exactly the
+**Provisional judgment (2026-11-23, after semantic challenge).** C2 is not
+contested by the rivals recorded here on any corruptible or dependent being,
+given passive→receptive and B3 (both stay OPEN for those beings); that covers
+the ordinary cases. Its contested scope is exactly the
 foundational, underived, simple being, which is exactly where the route to the
 first mover applies it. The ordinary cases therefore do not discriminate: the
 rival also accepts PGP for every ordinary case, and the same verdict applies

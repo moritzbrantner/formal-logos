@@ -1,7 +1,7 @@
 {
   "id": "703d8c9c-838d-4050-bed4-082fedc2b9ef",
   "label": "C2 difference: a CONTINGENCY_1 being with a distinct esse CAUSE_2 is receptive or has a PRIOR_1 one",
-  "paraphrase": "Difference statement of C2 over C2-minus (#1598), OPEN, not asserted: every candidate contingent at w that has some other being causing its esse (CAUSE_2 at esse, tenseless) is existentially receptive or has some other being that causes its esse and is SIMPLY_PRIOR_1 to it. B3 implies it; it is weaker than B3.",
+  "paraphrase": "Difference statement of C2 over C2-minus (#1598), OPEN, not asserted: every candidate contingent at w that has some other being causing its esse (CAUSE_2 at esse, tenseless) is existentially receptive or has some other being that causes its esse and is SIMPLY_PRIOR_1 to it. B3 implies it (immediate: B3 adds priority to any distinct esse-cause); no strictness relative to B3 is certified.",
   "lean_declaration": "TruthCore.Causality.ContingencyGrounding.ContingentEsseCauseIsPriorOrReceptive",
   "definition_ids": [
     "97f37f5c-7f82-5077-9bb9-6cfc8673631d",

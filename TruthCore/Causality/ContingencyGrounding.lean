@@ -156,10 +156,10 @@ def PowerOverEsse (F : CausalityFrame W B T R) (PowerOver : B → B → R → Pr
     Prop :=
   PowerOver y x F.esse
 
-/-- POWER_OVER_ESSE_2 (giving): `y` has power over `x`'s esse as its giver, a
-power over `x`'s being together with being a CAUSE_2 of `x`'s esse. The
-creator's power to originate or withdraw esse (DEF-MUTABILITY-IN-ANOTHER's
-reading of q.9 a.2). -/
+/-- POWER_OVER_ESSE_2 (giving): the conjunction of a power over `x`'s esse
+(`PowerOverEsse`) and being a CAUSE_2 of `x`'s esse. Nothing more is typed: it
+is not a primitive "power as giver". It represents, as a conjunction, the
+creator reading of q.9 a.2 in DEF-MUTABILITY-IN-ANOTHER. -/
 def GivingPowerOverEsse (F : CausalityFrame W B T R) (PowerOver : B → B → R → Prop)
     (y x : B) : Prop :=
   PowerOver y x F.esse ∧ F.CausesIn y x F.esse
@@ -266,7 +266,9 @@ open TruthCore.Case.Catholicism (ThereIsAFirstUnmovedMover FirstUnmovedMoverIsFi
     corruptible simply at `w`: like R2, it reads a capacity for non-being as
     unactualized potency at esse, which actual existence contradicts. So the
     corruptibility disjunct of PGP is not POTENCY_1 at esse.
-11. Under the giving sense POWER_OVER_ESSE_2 the correlation is trivial: a
+11. Under the giving sense POWER_OVER_ESSE_2 the correlation is trivial, by
+    definition of that sense as a conjunction containing CAUSE_2; this does not
+    show that a primitive creator's-power reading would trivialize it. Here a
     giving power over `x`'s esse is a CAUSE_2 of it. -/
 def Laws : Prop :=
   (∀ (W B T R P : Type) (F : CausalityFrame W B T R) (w : W) (esseOf : B → P)
@@ -502,7 +504,8 @@ correlation fails, C2 holds by its receptive disjunct, its prior-cause disjunct
 and B2 fail. This is the inert power over being named in the revision
 conditions, not a deist creator: with the tenseless `CausesIn`, a deist
 originator is a CAUSE_2 of `f`'s esse and satisfies the typed correlation and
-C2's prior-cause disjunct; the deist rival bears only on a tensed (conserving)
+C2's prior-cause disjunct given B3 or an independent priority fact; the deist
+rival bears only on a tensed (conserving)
 strengthening. Since `f` is POTENCY_1-pure act, B2 ∨ B4 fails too: C2 does not
 entail B2 ∨ B4. Structural only. -/
 def InertPowerHolderModel : Prop :=

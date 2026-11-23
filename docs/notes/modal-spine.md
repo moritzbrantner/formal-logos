@@ -1081,8 +1081,9 @@ pure-act target. #1870 gap 1 is answered conditionally: B2 ∨ B4 from PGP;
 correlation yields bridge (ii) only for incorruptibles, and the unrestricted
 form is not derived (its countermodel is an uncaused corruptible). B4b with
 adopted POTENCY_1 excludes actual corruptibles (law 10). Provisional judgment
-(after semantic challenge): C2 is undisputed on corruptible or dependent
-beings; at the foundational simple being, where the route applies it, its
+(after semantic challenge): C2 is not contested by the rivals recorded there
+on corruptible or dependent beings, given passive→receptive and B3 (both
+OPEN); at the foundational simple being, where the route applies it, its
 force equals that of power-grounded modality for existence, not shown superior
 here to combinatorial, primitivist, essentialist or hybrid rivals. B2 ∨ B4
 `3c9d683b` is now derived (proved, not established); no premise is

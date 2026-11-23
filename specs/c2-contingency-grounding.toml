@@ -177,7 +177,7 @@ note = "C2 implies C2-minus by a single-premise Lean proof (drop the priority co
 id = "703d8c9c-838d-4050-bed4-082fedc2b9ef"
 label = "C2 difference: a CONTINGENCY_1 being with a distinct esse CAUSE_2 is receptive or has a PRIOR_1 one"
 lean = "ContingentEsseCauseIsPriorOrReceptive"
-paraphrase = "Difference statement of C2 over C2-minus (#1598), OPEN, not asserted: every candidate contingent at w that has some other being causing its esse (CAUSE_2 at esse, tenseless) is existentially receptive or has some other being that causes its esse and is SIMPLY_PRIOR_1 to it. B3 implies it; it is weaker than B3."
+paraphrase = "Difference statement of C2 over C2-minus (#1598), OPEN, not asserted: every candidate contingent at w that has some other being causing its esse (CAUSE_2 at esse, tenseless) is existentially receptive or has some other being that causes its esse and is SIMPLY_PRIOR_1 to it. B3 implies it (immediate: B3 adds priority to any distinct esse-cause); no strictness relative to B3 is certified."
 definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "f9f58df7-d3be-4d66-b1f1-204d7049c450", "DEF-RECEPTIVE-POTENCY", "DEF-ESSE-RECEIVED-IN", "DEF-ESSE", "DEF-CAUSE-OF-PERFECTION", "DEF-SIMPLE-PRIORITY"]
 disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-RECEPTIVE-POTENCY", "DISAMB-ESSE-RECEPTION", "DISAMB-CAUSE", "DISAMB-PRIORITY-SIMPLE-OR-IN-TIME"]
 
@@ -227,4 +227,4 @@ delta_statement_id = "703d8c9c-838d-4050-bed4-082fedc2b9ef"
 evidence_result_ids = { implication = "C2 strengthens its weak form without priority", equivalence = "C2 is its weak form plus the difference" }
 separator = { setting = "Model.unprioritizedSetting", result_id = "The unprioritized setting separates C2 from its weak form" }
 statement_parameter_indices = { stronger = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], weaker = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], delta = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] }
-note = "Difference of C2 over C2-minus: C2 adds exactly that every contingent being with a distinct esse-cause is existentially receptive or has a simply prior one. No background. B3 implies the difference. The separator is a finite interpretation."
+note = "Difference of C2 over C2-minus: C2 adds exactly that every contingent being with a distinct esse-cause is existentially receptive or has a simply prior one. No background. B3 implies the difference (immediate); no strictness relative to B3 is certified. The separator is a finite interpretation."

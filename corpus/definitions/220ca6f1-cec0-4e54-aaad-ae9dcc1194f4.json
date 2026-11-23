@@ -1,9 +1,9 @@
 {
   "id": "220ca6f1-cec0-4e54-aaad-ae9dcc1194f4",
-  "label": "POWER_OVER_ESSE_2: y has power over x's being as the CAUSE_2 of its esse, its giver",
+  "label": "POWER_OVER_ESSE_2: the conjunction of y's power over x's esse and y being a CAUSE_2 of x's esse",
   "term": "power over esse, giving (GivingPowerOverEsse F PowerOver y x)",
-  "definition": "GivingPowerOverEsse F PowerOver y x := PowerOver y x esse and CausesIn y x esse: y has power over x's being as the cause of x's esse (CAUSE_2 at esse, DEF-CAUSE-OF-PERFECTION), the power to give or withhold it. The reading of DEF-MUTABILITY-IN-ANOTHER: the creator's power to originate or withdraw a creature's esse (q.9 a.2, navigation only).",
+  "definition": "GivingPowerOverEsse F PowerOver y x := PowerOver y x esse and CausesIn y x esse: the conjunction of the broad power over x's esse (POWER_OVER_ESSE_1) and being a cause of x's esse (CAUSE_2 at esse, DEF-CAUSE-OF-PERFECTION). Nothing beyond the conjunction is typed: it is not a primitive power of a giver. It represents, as a conjunction, the reading of DEF-MUTABILITY-IN-ANOTHER: the creator's power to originate or withdraw a creature's esse (q.9 a.2, navigation only).",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Causality.ContingencyGrounding.GivingPowerOverEsse",
-  "note": "Recorded for contrast with POWER_OVER_ESSE_1 (f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5). Example: on the Thomist account, God's power over a creature's esse. Non-example: fire's power to destroy a log, which works by corruption and does not cause the log's esse. Under this sense the C2 correlation premise is trivial (C2 controls, law 11), so no premise of the C2 batch uses it. Structural properties: none beyond the conjunction. What would source it: a passage defining the creator's power over esse as a giving power."
+  "note": "Recorded for contrast with POWER_OVER_ESSE_1 (f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5). Example: on the Thomist account, God's power over a creature's esse. Non-example: fire's power to destroy a log, which works by corruption and does not cause the log's esse. Under this sense the C2 correlation premise is trivial (C2 controls, law 11), by definition of the sense as a conjunction containing CAUSE_2; that does not show that a primitive creator's-power reading, not defined through CAUSE_2, would trivialize correlation. No premise of the C2 batch uses this sense. What would source it: a passage defining the creator's power over esse as a giving power."
 }
