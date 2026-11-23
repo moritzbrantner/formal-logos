@@ -399,3 +399,15 @@ show only that these premises are needed.
    sense (DEF `bf7eddca`; q.104 a.3 ad 1).
 8. `truth countermodel` does not handle `CausalityFrame` parameters; all
    models are hand-written.
+
+## 10. Cross-lane edits (for the coordinator)
+
+- `corpus/disambiguations/essence.json`: sense ESSENCE_5 appended, plus one
+  resolution sentence.
+- The three bundle audits that pin it by hash
+  (`docs/notes/classical-attributes-migration.json`,
+  `docs/notes/classical-attributes-all-migration.json`,
+  `docs/notes/naming-first-mover-migration.json`): the pin was updated, with a
+  re-review finding. No audited statement or argument links DEF `7cf63236`.
+- `corpus/definition-status.json`: only this module's four entries were
+  added; other modules' stale entries were not refreshed.

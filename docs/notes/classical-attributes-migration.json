@@ -769,12 +769,12 @@
       "path": "corpus/disambiguations/essence.json",
       "status": "inspected",
       "classification": "intentional_abstraction",
-      "finding": "Existing sense separation retained. The selected result uses a single fixed vocabulary context and does not change sense across premises. The record constrains interpretation, not premise truth.",
+      "finding": "Existing sense separation retained. The selected result uses a single fixed vocabulary context and does not change sense across premises. The record constrains interpretation, not premise truth. Re-reviewed 2026-11-23 (#1887): the record gained sense ESSENCE_5 (DEF 7cf63236, the Finean essential-truth relation EssentialTruth) and one resolution sentence; no statement or argument of this bundle links that definition, so its sense use is unchanged.",
       "before": {
         "sha256": "a1e8d9bf8760827372213c8f9450c9acac57e23ecd2080273ce407ee817220c5",
         "lean_declaration": null
       },
-      "reviewed_sha256": "efde4cfc2a9569e96731f08dd856ba9b1a9a54f6349fedef2bc57925fdf16b1e"
+      "reviewed_sha256": "081047d65dbe19ca23a1d5a8f564c9897dc4ace066f0df4adb6a9d8f0877b9c7"
     },
     {
       "kind": "disambiguations",
