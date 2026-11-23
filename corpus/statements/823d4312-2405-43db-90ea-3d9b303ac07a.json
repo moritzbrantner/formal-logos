@@ -1,0 +1,18 @@
+{
+  "id": "823d4312-2405-43db-90ea-3d9b303ac07a",
+  "label": "Whatever has represented esse equal to its essence has the exercise of its esse in its nature",
+  "paraphrase": "OPEN (exercise in the nature), analyst formulation: for every being x whose represented esse equals its represented essence (EXISTENCE_IN_ESSENCE_3, act identity, ESSENCE_3 maps), it lies in the nature of x (ESSENCE_5) that x's act of being is exercised, unconditionally: the proposition true exactly at the points where that act is exercised. The substantive half of the unconditional bridge 565ccd6c: act identity alone does not give it (controls, conditionalIdentity: identity with only the conditional exercise in the nature, and the being contingent). Existence-conditional essentialism rejects it, given the act-fact link, for any identity being whose absence is representable (controls, law 6).",
+  "lean_declaration": "TruthCore.Ontology.ExistenceInEssence.IdentityPutsExerciseInNature",
+  "definition_ids": [
+    "25d4df96-f18b-4477-a7ce-11fa8c17cd83",
+    "b2e22524-357f-47b5-814f-0a0e59f0d612",
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "f704b7ca-b455-4da7-a757-b0564fe76b3b",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6"
+  ]
+}

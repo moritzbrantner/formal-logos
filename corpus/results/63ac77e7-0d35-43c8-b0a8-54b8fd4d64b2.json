@@ -1,0 +1,11 @@
+{
+  "id": "63ac77e7-0d35-43c8-b0a8-54b8fd4d64b2",
+  "label": "Foundational beings are contingent at w, from Kant's thesis and concept adequacy",
+  "argument_id": "b08d83a2-f48a-4a65-a67d-086507d84b94",
+  "challenge_module": "TruthCore.Results.Ontology.ExistenceInEssence.Challenge",
+  "solution_module": "TruthCore.Results.Ontology.ExistenceInEssence.Solution",
+  "theorem": "TruthCore.Results.Ontology.ExistenceInEssence.kantAdequacyFoundationalContingent",
+  "comparator_config": "results/63ac77e7-0d35-43c8-b0a8-54b8fd4d64b2/comparator.json",
+  "status": "solution-present",
+  "description": "A second support bundle for the 'possibly absent' verdict, beside the existence-conditional one (872a3832): Kant's conceptual thesis extended, by concept adequacy, to a concept adequate to the nature replaces existence-conditional essences and the representability premise. Not a transcription: no premise mentions contingency. Establishes no premise. Each premise is needed (controls, Kant-adequacy omissions 1-4); nonvacuous (controls, conditionalIdentity). The two concept premises must hold of one concept relation: adequacy fails for a concept formed only from a being's effects (controls, kantAquinas), so the argument needs Kant's thesis to govern a concept adequate to the nature, which is the disputed extension at an esse-essence identity (docs/notes/existence-in-essence-identity.md)."
+}

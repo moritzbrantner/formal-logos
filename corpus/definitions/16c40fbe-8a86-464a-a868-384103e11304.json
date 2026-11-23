@@ -1,0 +1,27 @@
+{
+  "id": "16c40fbe-8a86-464a-a868-384103e11304",
+  "label": "Conceptual content: a world-proposition is a determination contained in a concept of x, a primitive",
+  "term": "conceptual content (the Contains parameter)",
+  "definition": "ConceptContent Contains x φ := Contains x φ, for a being x and a world-proposition φ over the frame's points: φ is a determination contained in the supplied concept of x. A parameter wrapper over the primitive Lean parameter Contains of type B → (W → Prop) → Prop of TruthCore.Ontology.ExistenceInEssence, constrained only by the premises that use it: Kant's thesis in conceptual form (ExistenceNotConceptual), concept adequacy (ConceptAdequateToEssence, whatever lies in the nature is contained in the concept) and the identity-to-concept bridge (IdentityInConcept). Which concept is meant (one formed from the being's relations to its effects, or one adequate to its nature) is fixed by which of these premises hold of the supplied relation, not by this definition.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ontology.ExistenceInEssence.ConceptContent",
+  "note": "Stipulated for #1887 (docs/notes/existence-in-essence-identity.md). Distinct from essential truth (ESSENCE_5, DEF 7cf63236-9c12-41bc-bf20-6fbce7a121db): a concept may omit what lies in the nature (a concept formed from effects) or, for a concept adequate to the nature, include it; the only bridge is the explicit OPEN premise ConceptAdequateToEssence. What would source it: Kant, Critique of Pure Reason, Transcendental Dialectic, Book II, ch. III, sect. IV (read in the Meiklejohn translation; analyst formulation, attribution deferred).",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "ConceptContent Contains x φ says that φ is a determination (a mark or predicate) contained in the supplied concept of x, for a proposition φ over the frame's points. A model supplies the relation; Lean fixes only its type.",
+    "examples": [
+      "'Is a coin' is contained in the concept of a hundred thalers.",
+      "'Is the first cause of whatever else exists' is contained in a concept of the first mover formed from its effects."
+    ],
+    "exclusions": [
+      "Essential truth (ESSENCE_5): what lies in a thing's nature need not be contained in a given concept of it; related only by ConceptAdequateToEssence.",
+      "What is true of the thing by accident, or known of it only by experience.",
+      "Existence as positing or as the copula of a judgement, which Kant contrasts with a determination."
+    ],
+    "open_obligations": [
+      "No structural property (closure under entailment, conjunction) is assumed.",
+      "Whether conceptual determinations are world-propositions over the frame's points.",
+      "Whether an adequate concept of a being whose essence is its esse is available to any intellect, and whether Kant's thesis governs it."
+    ]
+  }
+}

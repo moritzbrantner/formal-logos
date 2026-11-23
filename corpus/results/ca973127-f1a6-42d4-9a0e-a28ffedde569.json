@@ -1,0 +1,11 @@
+{
+  "id": "ca973127-f1a6-42d4-9a0e-a28ffedde569",
+  "label": "Esse = essence puts existence in the nature, from exercise in it and the act-fact link",
+  "argument_id": "cb110da0-36ff-4358-8f14-ce1bf58a9d01",
+  "challenge_module": "TruthCore.Results.Ontology.ExistenceInEssence.Challenge",
+  "solution_module": "TruthCore.Results.Ontology.ExistenceInEssence.Solution",
+  "theorem": "TruthCore.Results.Ontology.ExistenceInEssence.exerciseInNatureGivesEssentialExistence",
+  "comparator_config": "results/ca973127-f1a6-42d4-9a0e-a28ffedde569/comparator.json",
+  "status": "solution-present",
+  "description": "Factorization of the unconditional bridge 565ccd6c (the ESSENCE_3 to ESSENCE_5 bridge of the essentialist B6 route) into the act-fact link, which both essentialisms accept, and exercise in the nature, which carries the whole dispute with existence-conditional essentialism (controls, law 6, models kantAquinas and conditionalIdentity). Not a transcription: neither premise mentions existence in a nature. Uses propositional and function extensionality. Each premise is needed (controls, factorization omissions 1-2). Establishes no premise."
+}

@@ -1,0 +1,14 @@
+{
+  "id": "3a2af70f-aa63-4966-85b7-97d5d12b865a",
+  "label": "A being's act of being is exercised at exactly the points where it exists",
+  "paraphrase": "OPEN (the act-fact link), analyst formulation: for every point v and being x, x's represented esse is in act at v (its act of being is exercised there, WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_6) if and only if x exists at v (the world-relative existence fact, _1). The explicit passage from esse as act to existence as fact; ST I q.3 a.4 ad 2 (read) distinguishes 'to be' as the act of essence from 'to be' as the composition of a proposition. Accepted by the unconditional and the existence-conditional essentialist alike (controls, models kantAquinas and conditionalIdentity); a view that rejects the act of being as a principle (the quantifier view of existence) rejects its left side as empty, not the equivalence.",
+  "lean_declaration": "TruthCore.Ontology.ExistenceInEssence.EsseExercisedWhereExists",
+  "definition_ids": [
+    "25d4df96-f18b-4477-a7ce-11fa8c17cd83",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6"
+  ]
+}
