@@ -305,9 +305,11 @@ theorem fullSourceOmission : FullSourceOmission := by
 
 /-- Attribution control: denying `cb1cdea9` (no grounding edge) while
 keeping the ancestry priority leaves the ten source premises and every
-priority, first-being and component conclusion true. The conclusions are
-derived by the same five existing #1614 theorems from a direct proof of
-`DistinctEsseCausePriority`, not from the bridge. -/
+priority, first-being and component conclusion true. The two priority
+conclusions are checked directly in the model, not derived from the bridge.
+The first-being and component conclusions are derived by the three existing
+#1614 theorems `weakOfEssePriority`, `firstBeingNoPotencyOfEssePriority` and
+`noComponentFirstOfEssePriority`. -/
 theorem priorityWithoutGroundEdge : PriorityWithoutGroundEdge := by
   unfold PriorityWithoutGroundEdge
   have hSources : SourcePremises withoutGround ancestralFrame :=
