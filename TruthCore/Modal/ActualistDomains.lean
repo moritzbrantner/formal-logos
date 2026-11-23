@@ -149,6 +149,17 @@ def attributes (selected : Bool) : DivinePredicates Bool Bool where
   omniscient := at selected
   free := at selected
 
+/-- K5/EUCLIDEAN without actual reflexivity: every world sees true, but
+false does NOT see itself. The full profile can exist at true without any
+actually existing bearer at false. This fixes the difference between K5
+necessity over successors and an actual-world inference. -/
+def k5Frame : TruthCore.Modal.Frame Bool := ⟨fun _ v => v = true⟩
+
+def k5Ontic : Ontic Bool Bool where
+  frame := k5Frame
+  ExistsAt := at true
+  Causes := fun _ _ _ => False
+
 /-- Individually satisfiable power and knowledge attributed to DIFFERENT
 bearers; the remaining ten attributes are unproblematic in this control. -/
 def split : DivinePredicates Bool Bool where
@@ -183,7 +194,10 @@ def Checks : Prop :=
    PossibleGreatness (ontic false) (attributes false) false) ∧
   (∃ x, split.omnipotent false x) ∧
   (∃ x, split.omniscient false x) ∧
-  (¬ ∃ x, ExcellenceAt split false x)
+  (¬ ∃ x, ExcellenceAt split false x) ∧
+  (TruthCore.Modal.Euclidean k5Frame ∧
+   PossibleGreatness k5Ontic (attributes true) false ∧
+   ¬ ∃ x, k5Ontic.ExistsAt false x)
 
 end DivineControl
 
