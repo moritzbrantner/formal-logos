@@ -97,8 +97,10 @@ theorem possessedGoodRestFromSameSource {B C : Type}
 
 /-- Kernel evaluation of finite, nonempty omission and joint assignments. -/
 theorem controls : TruthCore.Causality.IntentionalExemplarExtension.Control.Controls := by
-  simp [Control.Controls, AboutHasSingleReferent, RootToEsseCauseAt,
+  simp [TruthCore.Causality.IntentionalExemplarExtension.Control.Controls,
+    AboutHasSingleReferent, RootToEsseCauseAt,
     ActualConcrete, ActualRoot, NecessaryAt,
+    TruthCore.Causality.CogitoNecessaryConcrete.ActualConcreteGround,
     TruthCore.Modal.TemporalHistory.CoherentAtNow,
     EffectExemplarCoverage,
     CognitivelyTakesUpExemplar, UnderstandsActualEffects, SelfKnownGoodIsRepresented,
@@ -109,10 +111,10 @@ theorem controls : TruthCore.Causality.IntentionalExemplarExtension.Control.Cont
     WisdomSelfUnderstanding.Control.pure, WisdomSelfUnderstanding.Control.ofBeing,
     WisdomSelfUnderstanding.Control.noPotency, WisdomSelfUnderstanding.Control.causesIn,
     WisdomSelfUnderstanding.Control.hasIntellect,
-    Control.frame, Control.rootProfile, Control.about, Control.correct,
-    Control.none, Control.specifies, Control.effectOnly, Control.selfOnly,
-    Control.sourceTakesUp, Control.goodOwn, Control.noWill, Control.reading,
-    Control.guidedResponse,
+    TruthCore.Causality.IntentionalExemplarExtension.Control.frame, TruthCore.Causality.IntentionalExemplarExtension.Control.rootProfile, TruthCore.Causality.IntentionalExemplarExtension.Control.about, TruthCore.Causality.IntentionalExemplarExtension.Control.correct,
+    TruthCore.Causality.IntentionalExemplarExtension.Control.none, TruthCore.Causality.IntentionalExemplarExtension.Control.specifies, TruthCore.Causality.IntentionalExemplarExtension.Control.effectOnly, TruthCore.Causality.IntentionalExemplarExtension.Control.selfOnly,
+    TruthCore.Causality.IntentionalExemplarExtension.Control.sourceTakesUp, TruthCore.Causality.IntentionalExemplarExtension.Control.goodOwn, TruthCore.Causality.IntentionalExemplarExtension.Control.noWill, TruthCore.Causality.IntentionalExemplarExtension.Control.reading,
+    TruthCore.Causality.IntentionalExemplarExtension.Control.guidedResponse,
     Calibration, Availability, responsive, response,
     Bool.forall_bool, Bool.exists_bool]
 
