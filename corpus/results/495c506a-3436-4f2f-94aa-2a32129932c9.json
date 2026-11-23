@@ -1,0 +1,11 @@
+{
+  "id": "495c506a-3436-4f2f-94aa-2a32129932c9",
+  "label": "Derive the three-coordinate parity restriction and its removal from the available inputs",
+  "argument_id": "3c2c5f55-97bc-4ae8-8d18-6c6e3f4d5a1d",
+  "challenge_module": "TruthCore.Results.Explanation.PairedInterventions.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.PairedInterventions.Solution",
+  "theorem": "TruthCore.Results.Explanation.PairedInterventions.inputRange",
+  "comparator_config": "results/495c506a-3436-4f2f-94aa-2a32129932c9/comparator.json",
+  "status": "solution-present",
+  "description": "Each paired input preserves parity. For a target with the starting parity, matching the two outer coordinates fixes edge choices that also give the required middle value. Each pair projection is full, and an optional unmatched endpoint flip switches parity classes. This uses the triple, coordinate map and parity predicate from the static elementary-report comparison in #1088. The operations are stipulated on one fixed background. Whether a real candidate source can exercise them there remains open."
+}
