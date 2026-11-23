@@ -304,7 +304,7 @@ def frame : CausalityFrame Scenario Bool Nat Unit where
 does not posit the absence of all metaphysically relevant loss conditions;
 in particular withdrawal of a conserver is not itself a declared process. -/
 def noDestruction (v : Scenario) : Model Bool Unit Nat where
-  threat := fun _ => ⟨false, true⟩
+  threat := fun _ => ⟨true, false⟩
   occurs := fun _ _ _ => False
   terminal := fun _ _ => False
   existsAt := fun t x => history.IsAt v x t
@@ -315,7 +315,7 @@ itself remains present. The `occurs` field is an analyst classification, NOT
 an independently established positive destructive process; this is exactly
 what the inertialist disputes. World and bearer presence are unchanged. -/
 def withdrawalAsLoss : Model Bool Unit Nat where
-  threat := fun _ => ⟨false, true⟩
+  threat := fun _ => ⟨true, false⟩
   occurs := fun _ s t => s = 1 ∧ t = 2
   terminal := fun _ t => t = 2
   existsAt := fun t x => history.IsAt .vanished x t
