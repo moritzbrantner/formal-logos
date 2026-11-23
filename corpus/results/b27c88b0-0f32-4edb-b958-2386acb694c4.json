@@ -1,0 +1,12 @@
+{
+  "id": "b27c88b0-0f32-4edb-b958-2386acb694c4",
+  "label": "The stage-one node, from a necessary concrete foundational being",
+  "argument_id": "3847c481-be5a-4e77-be60-8aa28bd8d700",
+  "challenge_module": "TruthCore.Results.Modal.ModalGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalGrounding.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalGrounding.foundationalNecessaryConcrete",
+  "comparator_config": "results/b27c88b0-0f32-4edb-b958-2386acb694c4/comparator.json",
+  "status": "solution-present",
+  "description": "Projection of the foundational verdict onto STMT-NECESSARY-CONCRETE-AT. An instantiation; establishes no premise. With either verdict argument it gives two new routes to the node: {excluded middle, PGP, a concrete foundational being} and {excluded middle, B6, a concrete foundational being}, neither through C2 or the First Way.",
+  "transcription": "instantiation"
+}

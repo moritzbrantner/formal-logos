@@ -1,0 +1,15 @@
+{
+  "id": "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174",
+  "label": "Some concrete being is CONTINGENCY_1 at w",
+  "paraphrase": "OPEN (P5; analyst reconstruction): some concrete candidate exists at w and is absent at some world accessible from w (MODAL_CONTINGENCY_1). Accepted by the theist and by the rivals considered here.",
+  "lean_declaration": "TruthCore.Modal.ModalGrounding.SomeContingentConcreteAt",
+  "definition_ids": [
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

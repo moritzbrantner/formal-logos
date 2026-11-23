@@ -1,0 +1,16 @@
+{
+  "id": "0dc833c1-3b2f-4769-a09e-531f0da12455",
+  "label": "Possibly no concrete being is CONTINGENCY_1",
+  "paraphrase": "OPEN (P4, the global possibility premise; analyst reconstruction): some world v accessible from w has no concrete being that is contingent at v (exists at v and is absent at a world accessible from v). With tenseless world-relative existence: possibly no contingent concretum ever exists. The subtraction conclusion (possibly no concrete being) implies it (controls, law 8). It does not follow from the contingency of each actual concretum (controls, Pruss omission 4: Van Cleve's 'each possibly absent' does not give 'possibly all absent').",
+  "lean_declaration": "TruthCore.Modal.ModalGrounding.PossiblyNoContingentConcrete",
+  "definition_ids": [
+    "6ecf24d5-5001-4571-937c-2632ac8c2c66",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

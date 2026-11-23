@@ -1,0 +1,11 @@
+{
+  "id": "f90934ad-df58-4fbc-958e-c46afd2d3a93",
+  "label": "A necessary concrete power-holder for no contingent concretum, by Aristotelian modality",
+  "argument_id": "be4b04bf-9050-4278-80ce-574d1505d9eb",
+  "challenge_module": "TruthCore.Results.Modal.ModalGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalGrounding.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalGrounding.prussNecessaryPowerHolder",
+  "comparator_config": "results/f90934ad-df58-4fbc-958e-c46afd2d3a93/comparator.json",
+  "status": "solution-present",
+  "description": "Test 5's route to a necessary concrete being. Not a transcription: no premise mentions a necessary being. Establishes no premise. It uses neither PGP nor C2 (controls, prussWithoutPGP); each non-logical premise is needed (controls, six Pruss omission models). It is not independent of the C2 crux's modal theory: P1 is power-grounded modality applied to a global possibility, and with a transfer bridge it yields PGP's power channel for every concrete contingent being (controls, laws 5-6)."
+}

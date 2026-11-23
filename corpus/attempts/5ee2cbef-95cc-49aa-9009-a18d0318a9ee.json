@@ -1,0 +1,40 @@
+{
+  "id": "5ee2cbef-95cc-49aa-9009-a18d0318a9ee",
+  "label": "Modal grounding frameworks at the foundational case and Pruss's Aristotelian-modality route",
+  "statement_ids": [
+    "666f06a4-bf39-40dd-97cf-613796e7b042",
+    "fe8c3a1d-8bbd-4e3e-be46-170e75bb73db",
+    "c5da5e62-a9cd-4142-8d3a-a96f86548e88",
+    "54bafc9f-9c69-4343-ba32-8ab19d12b759",
+    "565ccd6c-0036-4613-8595-f6f03d273a0d",
+    "857654fe-e33b-4726-a7d8-8cb4b74791e2",
+    "9d8a8d2e-23ff-4b74-8a06-6cd9abd7ccb8",
+    "38200db5-a320-41c1-8eb6-ea4a6409ceb9",
+    "d1af2b06-1ffe-41ff-ab3f-daa3305f8d44",
+    "94393b5b-8950-4a52-aef1-50cd09232e64",
+    "fffa0693-d04d-4387-b43d-514e092f72d1",
+    "2d2be120-ac0a-405f-b4b3-7cc68be1f320",
+    "0dc833c1-3b2f-4769-a09e-531f0da12455",
+    "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174",
+    "84d02356-5dac-4ce5-9f9e-4cebf12f96f2",
+    "32b5f7bb-9952-44e1-97d7-e4d821d6afe8",
+    "20d5fecd-950e-42f8-8dc9-3014491ff6ae",
+    "96971e31-4782-4478-95b8-b6863a6a9412",
+    "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
+  ],
+  "date": "2026-11-23",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "#1887 tests 4 and 5 (slice A), God-existence stage; note docs/notes/modal-grounding-frameworks.md; analyst formulations, attribution deferred, navigation only. All accounts of de re possibility of absence are framework inputs on the shared CausalityFrame at one matching scope, the foundational case FoundationalAt (DEF 7fcf846e: actual, esse = essence, no matter-form, unreceived, first, uncaused, incorruptible simply, under no POWER_OVER_ESSE_1). Verdicts: PGP with excluded middle gives 'necessary' (1e6174ab; only actuality, incorruptibility and no-power are used); B6 with excluded middle gives 'necessary' (39df9612); unconditional essentialism (essence grounds necessity plus esse = essence read as existence in the nature) supports B6 constructively (f9b26559), a new bundle for #1870 route C; existence-conditional essentialism with the essentialist account of possibility, unrequired-by-others and representable absence gives 'possibly absent' (872a3832), esse = essence idle; combinatorial: existing recombinationGivesContingency (subtraction batch) and law 2 here (PGP, recombination and companions exclude any concrete foundational being, constructive); primitivist: the profile fixes neither verdict (two frames); hybrid: the First Way's act and potency premises, q.2 a.3, unrestricted recombination and PGP's subject half hold with the first mover contingent. The necessity verdict and a concrete foundational being give STMT-NECESSARY-CONCRETE-AT (b27c88b0). Test 5: Pruss reconstruction (f90934ad): excluded middle, Euclidean access, Aristotelian grounding of the global possibility that no contingent concretum exists (P1), initiator presence (P2, tenseless), concrete holders (P3), that possibility (P4) and an actual contingent concretum (P5) give a necessary concrete being with a power for it; projection to the node (2a3a3f09). Controls ef54f023: eleven laws and nine model groups. Coordinator requests: F1 conceivability parity (law 9, one-sided models) built; F2 hybrid restriction (law 11 factorization with EM, hybrid model separating the halves) built without a registered strength_comparison relation or power disambiguation; F3 (law 10) built; F4 covered by f9b26559, 872a3832, laws 3-4 and conditionalEssence; F5 already exists (subtraction batch: ContingentRecombinationAt with the theist S5 model; law 9 there), parthood clause not modelled.",
+  "blocker": "No premise is established. Independence (test 5): the Pruss route needs neither PGP nor C2 (prussWithoutPGP model) and its possibility premise P4 is accepted by the subtraction rival (law 8), but it is not independent of the C2 crux's theory: P1 is power-grounded modality applied to a global possibility, and with a transfer bridge (a power for the global possibility is a power over the esse of each concretum it excludes) it yields PGP's power channel for every concrete contingent being and the necessity verdict at every concrete foundational being (laws 5-6). Combinatorial, primitivist, hybrid and existence-conditional rivals deny P1 on the same general grounds on which they deny PGP at the foundational being; the dispute moves from a contested datum (the foundational being's possible absence) to a shared one (P4), where the power theory faces the 'too few potentialities' objection and answers it with the necessary holder. P4 is not entailed by the contingency of each actual concretum (Pruss omission 4, Van Cleve's point). Initiator presence holds on the frame's tenseless existence and fails on a tensed reading for a self-annihilating holder (omission 2); it is close to Pruss's 'x cannot start any chain of causes that can lead to actuality's not including x', not to b62a64ab plus correlation, which concern power over a thing's own esse. Next tests: (1) whether existence never belonging to an essence applies to an esse-essence identity (decides between laws 3-4 and f9b26559); (2) a tensed initiator-presence variant over the frame's IsAt; (3) the transfer bridge's warrant and a registered strength comparison for PGP's two halves; (4) connecting the Pruss holder to c71c068c or to firstness (no bridge built); (5) Pruss's iterated powers (APW) beyond one-step PowerFor.",
+  "evidence": [
+    "1e6174ab-0b92-4930-9096-fb560089e6e1",
+    "39df9612-e51f-42f9-be2f-9fad11f65469",
+    "f9b26559-1738-4396-9915-d07e972facee",
+    "b27c88b0-0f32-4edb-b958-2386acb694c4",
+    "872a3832-e72f-45ac-97b2-5b7590673268",
+    "f90934ad-df58-4fbc-958e-c46afd2d3a93",
+    "2a3a3f09-5c48-43f4-8920-efdc3b6a5c3e",
+    "ef54f023-8184-406a-9b0c-caa2df7415b0"
+  ]
+}
