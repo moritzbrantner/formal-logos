@@ -76,7 +76,9 @@ truth-functional modal comparison, not an independent proof of either premise.
 modal interpretation, the precise claim is
 `◇G ↔ ¬□¬G`. The added helper
 `absence_of_impossibility_iff_possible` makes excluded middle explicit
-rather than presupposing a nonconstructive operator conversion. Consequently
+rather than presupposing a nonconstructive operator conversion (formula-local
+double-negation elimination would suffice, as the existing
+`TruthCore.Modal.PossibleImpossibility.LocalClassical` records). Consequently
 `s5_not_impossible_actual` composes the existing positive modal theorem
 with reflexivity and gives actual `G` from `¬□¬G`. None of this turns
 `not yet proven impossible` into `¬□¬G`: the former reports evidence or
@@ -86,10 +88,13 @@ may provide **defeasible** support for a positive recombination policy, but
 it is not the theorem's antecedent.
 
 **Incompatibility is not repaired by a word.** For the *same bearer* at the
-*same world and respect*, if `P(v,x) → ¬Q(v,x)`, no accessible world can
+*same world*, if `P(v,x) → ¬Q(v,x)` at every world, no accessible world can
 instantiate `P(v,x) ∧ Q(v,x) ∧ tag(v,x)`, for any extra predicate `tag`.
 The helper `incompatible_bundle_not_possible` proves this on arbitrary
-frames, not only S5. Set `Q := ¬P` for a strict contradiction. A genuine
+frames, not only S5. `P` and `Q` are arbitrary predicates with no essence
+marker or respect parameter: an application to essential attributes in one
+respect must build essentiality and the respect into them. Set `Q := ¬P` for
+a strict contradiction. A genuine
 square/circle application would have to establish from the FIXED geometric
 definitions that both features are incompatible in the same respect; a square
 inscribed in a circle is not a counterexample to that fixed claim. An adjective
@@ -106,7 +111,17 @@ of that complete profile. Under S5, the helper
 excellent at the actual root and all its accessible successors. It uses
 symmetry to return from the possible profile world to the root and
 Euclideanness to transport the profile across siblings. Its result is not
-the false quantifier shift from `□∃x` to `∃x□`.
+the false quantifier shift from `□∃x` to `∃x□`. "The same x" is relative to
+the signature's semantics: one bearer type across worlds (constant domain,
+possibilist inner `∃`) with world-relative existence, so identity across
+worlds is identity in that type. Actualist or counterpart semantics would need
+a transworld-identity premise, which stays OPEN; the counterpart-essentialism
+rival in [the Kant inference investigation](../kant-cosmological-inference.md)
+is untouched. The transport is not new: the existing
+`NonlimitingConcreteExistence.necessaryAtOrigin` (and
+`ActualEuclidean.necessaryAtOrigin`) gives it for one `Ontic` individual from
+Euclidean accessibility plus reflexivity at w, so S5 is more than this step
+needs. The new content is carrying the excellence conjunct with existence.
 
 These are **analyst interfaces**, not Plantinga source attributions. Actual
 `Excellent` still needs appropriately interpreted omnipotence, omniscience
@@ -121,8 +136,10 @@ a stipulated model, not automatically *all metaphysical possibilities*.
 evidence for possible instantiation, but a proof of satisfiability in
 candidate descriptions does not guarantee an M-accessible witness. The
 existing #438 `epistemic` (universal) versus `metaphysical` (identity)
-Bool control refutes that unrestricted transfer, while both frames satisfy
-S5. A sufficient route can target the **particular complete divine
+Bool control shows that S5 frame conditions alone do not entail that
+unrestricted transfer: both frames satisfy S5. It is a structural surrogate
+(a model-relative filter), so it shows non-entailment, not that the transfer
+principle is false. A sufficient route can target the **particular complete divine
 profile** and show why its realizing world is admissible from the actual
 standpoint, instead of assuming `IncludedAt E M w` for *all* descriptions.
 That witness-specific principle remains OPEN and requires philosophical
@@ -142,10 +159,13 @@ witness/argument; these are distinct *evidential burdens*, despite
 the formal symmetry of the conditional deductions.
 
 **Status and graph connection.** The unchanged #437/#438 results are
-verified. The #1864 helper declarations constitute a scoped mathematical
-checkpoint **pending exact-head verification**; they are not new bound
-corpus results or a claimed source reading. Their completion by itself
-does not change root premises or establish divine possibility. The
+verified. The #1864 helper declarations are a scoped mathematical
+checkpoint, Lean-checked in CI (#1865); they are not new bound corpus results
+or a claimed source reading, and they change no root premise or establish
+divine possibility. Graph destination: the actual de re necessary concrete
+bearer `b19ffd92` and, through GOD_4, `STMT-GOD-EXISTS`. Exact blockers: the
+GOD_4 attribute mapping of `Excellent`, and the metaphysical admissibility of
+the particular profile's realizing world. The
 substantive acceptance work in [#1864](https://github.com/moritzbrantner/formal-logos/issues/1864)
 is fixed divine attributes, real-world modal admissibility, an actual
 same-witness GOD_4 consumer, source fidelity and reviewed premise warrant.
