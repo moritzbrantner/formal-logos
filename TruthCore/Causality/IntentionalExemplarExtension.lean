@@ -1,0 +1,199 @@
+module
+
+public import TruthCore.Causality.Frame
+public import TruthCore.Causality.NecessaryRootFork
+public import TruthCore.Causality.WholePowerPerfection
+public import TruthCore.Causality.PossessionSensitiveAppetite
+
+/-!
+# Intentional cognition: source, exemplary content, and possessed good
+
+Analyst conditional continuation of #1731 / stacked on draft #1866.
+The source's understanding of itself is the *content-indexed* result from
+WholePowerPerfection, not a new definition of intellectual capacity.
+Knowledge of another being must use another appropriately specified content;
+bare causation, output accuracy, and even genuine cognition in a produced
+secondary being do not assert cognition in the source.
+
+The causal/actuality parameters use one CausalityFrame: world-relative existence, and CausesIn at the distinguished esse respect. Passage from the selected ActualRoot grounding relation requires the distinct OPEN RootToEsseCauseAt adapter.
+
+The two following premises are OPEN:
+* A correctly described actual effect of the source has a determinate, true intelligible
+  specification accessible from that source's self-content. The specification
+  can fail even if the source really causes the effect.
+* The source's actual, intrinsically grounded apprehension takes up that
+  specification as its own further act of understanding. A physical mapping
+  of signs to effects alone does not establish such uptake.
+
+They are not definitions of knowledge or of causation. The conditional result
+is restricted to effects actually caused by this same bearer, not to every
+possible creature, all truths, or its free selection among creations. -/
+
+@[expose] public section
+namespace TruthCore.Causality.IntentionalExemplarExtension
+
+open TruthCore.Causality.Frame (CausalityFrame)
+open TruthCore.Causality.NecessaryRootFork (ActualConcrete)
+open TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding
+
+variable {B C : Type}
+
+/-- OPEN exemplar *content* bridge. A source's correct self-content plus
+actual causation specifies a separate true content about each actual effect.
+'Specifies' is not 'Apprehends', and it presupposes neither cognition of the
+effect nor an efficacious choice of this effect from alternatives. -/
+def EffectExemplarCoverage {W T R : Type} (F : CausalityFrame W B T R) (w : W)
+    (About Correct : C → B → Prop)
+    (Specifies : B → C → B → C → Prop) : Prop :=
+  ∀ g self x, F.history.ontic.ExistsAt w x → F.CausesIn g x F.esse →
+    About self g → Correct self g →
+    ∃ other, Specifies g self x other ∧ About other x ∧ Correct other x
+
+/-- OPEN immanent, content-sensitive *uptake* of a specified exemplar. This is
+additional to knowing one's own content: an uninterpreted computation that
+produces a true specification cannot by itself count as cognitive uptake.
+Grounded here retains the #1866 source-intrinsic intentional-norm reading. -/
+def CognitivelyTakesUpExemplar (Apprehends Grounded : B → C → Prop)
+    (Specifies : B → C → B → C → Prop) : Prop :=
+  ∀ g self x other, Apprehends g self → Grounded g self →
+    Specifies g self x other → Apprehends g other ∧ Grounded g other
+
+/-- Actual cognitively grounded knowledge of caused effects, not omniscience.
+The knower is the same g throughout; the known content concerns x. -/
+def UnderstandsActualEffects {W T R : Type} (F : CausalityFrame W B T R) (w : W)
+    (About Correct : C → B → Prop) (Apprehends Grounded : B → C → Prop)
+    (g : B) : Prop :=
+  ∀ x, F.history.ontic.ExistsAt w x → F.CausesIn g x F.esse →
+    ∃ content, About content x ∧ Correct content x ∧
+      Apprehends g content ∧ Grounded g content
+
+/-- OPEN world-scoped bridge from the selected actual root profile's
+grounding relation to the CAUSE_2 cause of esse in the common CausalityFrame.
+Every selected actual concretum exists in the frame's world, and actual
+grounding is sufficient for CAUSE_2 at esse. Neither converse is assumed. -/
+def RootToEsseCauseAt {W T R : Type} (F : CausalityFrame W B T R)
+    (m : TruthCore.Causality.BruteFoundationBoundary.Profile W B) (w : W) : Prop :=
+  (∀ x, ActualConcrete m w x → F.history.ontic.ExistsAt w x) ∧
+  (∀ g x, ActualConcrete m w g → ActualConcrete m w x →
+    m.grounds w g x → F.CausesIn g x F.esse)
+
+/-- A selected single-referent interpretation of About; multipurpose
+contents are possible under other readings but cannot be presumed. -/
+def AboutHasSingleReferent (About : C → B → Prop) : Prop :=
+  ∀ c x y, About c x → About c y → x = y
+
+/-- OPEN recognition of the source's possessed goodness as good. It does not
+follow from bare true self-knowledge, whose content need not be evaluative.
+The response profile is a separate intellectual-appetite model: no current
+desire, movement, decision or creation is inferred from its availability. -/
+def SelfKnownGoodIsRepresented (OwnGood : B → Prop)
+    (About Correct : C → B → Prop) (Apprehends Grounded : B → C → Prop)
+    (profiles : B → TruthCore.Causality.PossessionSensitiveAppetite.Profile) : Prop :=
+  ∀ g, IntrinsicSelfKnowledge About Correct Apprehends Grounded g →
+    OwnGood g → (profiles g).representedGood true
+
+namespace Control
+
+/-- One world-relative frame: the true source exists at both worlds,
+the false effect at world true; the sole temporal presence agrees with
+existence. The CAUSE_2 relation is literally the one in the upstream
+wisdom source/effect control, not a new causes predicate. -/
+def frame : CausalityFrame Bool Bool Unit Unit where
+  history := {
+    ontic := {
+      frame := ⟨fun _ _ => True⟩
+      ExistsAt := fun w x => x = true ∨ w = true
+      Causes := fun _ _ _ => False
+    }
+    IsAt := fun w x _ => x = true ∨ w = true
+    now := ()
+  }
+  GivesAt := fun _ _ _ _ => False
+  CausesIn := TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding.Control.causesIn
+  MovesIn := fun _ _ _ => False
+  DependsForBeing := fun _ _ => False
+  PriorSimply := fun _ _ => False
+  esse := ()
+
+/-- The source true is a necessary, actual, ungrounded concretum; its
+actual effect false is grounded by it at world true. Selected grounding
+and CAUSE_2 remain different fields, related only by the OPEN adapter. -/
+def rootProfile : TruthCore.Causality.BruteFoundationBoundary.Profile Bool Bool where
+  ontic := frame.history.ontic
+  concrete := fun _ => True
+  grounds := fun w g x => w = true ∧ g = true ∧ x = false
+def about (content x : Bool) : Prop := content = x
+def correct (content x : Bool) : Prop := content = x
+def none (_ _ _ _ : Bool) : Prop := False
+def specifies (g self x other : Bool) : Prop :=
+  g = true ∧ self = true ∧ x = false ∧ other = false
+
+/-- A produced cognitive subject really apprehends its own true content,
+while the productive source itself apprehends none. -/
+def effectOnly (g content : Bool) : Prop := g = false ∧ content = false
+
+/-- Both beings understand their own respective content, but the source does
+not yet apprehend the *distinct* effect-directed content. -/
+def selfOnly (g content : Bool) : Prop := g = content
+
+/-- The source apprehends both contents; the effect still apprehends its own. -/
+def sourceTakesUp (g content : Bool) : Prop :=
+  g = true ∨ (g = false ∧ content = false)
+
+def goodOwn (g : Bool) : Prop := g = true
+def noWill (_ : Bool) : Prop := False
+
+/-- A content-guided secondary response is correct without interference and
+can be wrong with interference. This is a functional surrogate of a
+producer/consumer system, not a reduction of cognitive norms to Boolean I/O. -/
+def reading (state interference : Bool) : Bool :=
+  if interference then !state else state
+
+def guidedResponse (state interference : Bool) : Bool := reading state interference
+
+/-- Three independently varying gaps on one fixed source/effect dictionary.
+The first repairs #1866's effect-only *label* control with an effect that
+actually apprehends and is cognitively grounded. Cases 2-4 test additional
+exemplar specification and uptake while holding the source's true
+self-understanding fixed. The fourth keeps actual-source knowledge separate
+from the old, still-unrecognized unary HasWill interface. All are structural
+surrogates; they do not certify metaphysical possibility of a rival. -/
+def Controls : Prop :=
+  AboutHasSingleReferent about ∧
+  RootToEsseCauseAt frame rootProfile true ∧
+  TruthCore.Causality.NecessaryRootFork.ActualRoot rootProfile true true ∧
+  TruthCore.German.Kant.CosmologicalInference.NecessaryAt rootProfile.ontic true true ∧
+  ActualConcrete rootProfile true false ∧
+  TruthCore.Modal.TemporalHistory.CoherentAtNow frame.history ∧
+  frame.CausesIn true false frame.esse ∧
+  (TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding.Control.Background ∧
+    IntrinsicSelfKnowledge about correct effectOnly effectOnly false ∧
+    ¬ IntrinsicSelfKnowledge about correct effectOnly effectOnly true ∧
+    ¬ WisdomSelfCapacity
+      TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding.Control.own
+      TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding.Control.has
+      () about correct effectOnly ∧
+    reading true false = true ∧ reading true true = false ∧
+    reading false false = false ∧ reading false true = true ∧
+    (∀ state interference, guidedResponse state interference = reading state interference)) ∧
+  (IntrinsicSelfKnowledge about correct selfOnly selfOnly true ∧
+    ¬ EffectExemplarCoverage frame true about correct none ∧
+    CognitivelyTakesUpExemplar selfOnly selfOnly none ∧
+    ¬ UnderstandsActualEffects frame true about correct selfOnly selfOnly true) ∧
+  (EffectExemplarCoverage frame true about correct specifies ∧
+    ¬ CognitivelyTakesUpExemplar selfOnly selfOnly specifies ∧
+    ¬ UnderstandsActualEffects frame true about correct selfOnly selfOnly true) ∧
+  (EffectExemplarCoverage frame true about correct specifies ∧
+    CognitivelyTakesUpExemplar sourceTakesUp sourceTakesUp specifies ∧
+    UnderstandsActualEffects frame true about correct
+      sourceTakesUp sourceTakesUp true) ∧
+  (SelfKnownGoodIsRepresented goodOwn about correct selfOnly selfOnly
+      (fun _ => TruthCore.Causality.PossessionSensitiveAppetite.responsive) ∧
+    TruthCore.Causality.PossessionSensitiveAppetite.Calibration
+      TruthCore.Causality.PossessionSensitiveAppetite.responsive ∧
+    TruthCore.Causality.PossessionSensitiveAppetite.Availability
+      TruthCore.Causality.PossessionSensitiveAppetite.responsive ∧
+    ¬ (∀ g, goodOwn g → noWill g))
+
+end Control
+end TruthCore.Causality.IntentionalExemplarExtension
