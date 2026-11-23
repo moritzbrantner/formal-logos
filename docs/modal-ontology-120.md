@@ -650,3 +650,135 @@ to **invariant object-content or strictly fixed effects**, versus an account
 where one intrinsic perfection can be related to contingent objects without
 itself becoming a passive changing state. The model makes clear which step
 needs metaphysical explanation, not that either account has been won.
+
+
+## C5 continuation: actual-source realization and its negation (2026-11-23)
+
+This checkpoint follows merged #1865, #1876 and #1880. It tests C5 (a
+genuinely metaphysically possible complete necessary divine essence) and
+¬C5 (there is no such admissible bearer), not merely the evidential
+fact that nobody has proved C5. The formal additions are in
+[DivineProfile](../TruthCore/Modal/DivineProfile.lean). All are analyst
+formulations without new Plantinga attribution.
+
+### C1–C4 as a positive realizer route
+
+The existing Interpreted.positiveCore_with_ten_from_same_root takes ONE
+necessary actual source from RootPositiveIntellectWill's complete
+conditional premise bundle, then uses the already identified q.7
+infinity, q.25 coherent-task power, act/potency-composition and q.10
+eternity premises. Its same-witness support concerns ten actual
+candidate predicates, not ten independent arguments or a complete
+metaphysically possible essence. It is a substantive point of contact
+with the C1–C4 inquiries into an underived source, sustaining
+actuality, causal perfection and intrinsic intellect; those
+metaphysical commitments are not thereby unconditionally established.
+
+The new candidate_greatness_from_ten_and_four theorem precisely
+isolates the remaining conditional work:
+
+1. The existing ten slots hold of the SAME actual necessary root n.
+2. n additionally has actual omniscient, morallyPerfect and free slots.
+3. At EVERY M-successor of actuality, this same n has the four
+   world-sensitive slots one, omniscient, morallyPerfect and free.
+
+NecessaryAt from the ten-slot theorem provides continued existence.
+Nine other predicates transport only because the particular GOD-free
+fixedProfile constructor makes them world-invariant by DEFINITION,
+not because their essentiality was proved. The proof explicitly
+requires that fixed interpretation rather than allowing an arbitrary
+opaque profile. The new candidate_possible_from_same_root combines
+these conditions with the actual ten-slot source and actual
+reflexivity. It derives M-possible full greatness of that very
+bearer without an E-description-to-M transfer or any use of S5 beyond
+reflexivity. It does NOT prove that M is real metaphysical access,
+that the nine stipulated rigidities hold of a real essence, or that
+the three weak proxies capture traditional intrinsic omniscience,
+moral perfection and free willing.
+
+The companion Control.actualButNotEssential_holds is a two-world
+S5 structural model: one rigid bearer exists at both worlds, satisfies
+ALL thirteen slots at actuality, and is necessary in existence;
+the selected-root uniqueness slot fails at the other world. Hence
+there is no M-possible complete maximal-greatness profile from the
+origin. This proves an essentiality gap, not a metaphysical
+impossibility of God. The positive theorem deliberately requires
+what this control omits.
+
+### The strongest worked case for ¬C5
+
+The existing #555 SimplicityCollapse.rigid_core proves a genuine
+contradiction from one rigid act token necessarily performed, its
+strict sufficiency for one particular effect, and the contingency
+of that effect, on the same ontology and frame. For the complete
+divine profile to be genuinely impossible by this route, the
+simplicity/free-will interpretation must *entail* that a specific
+freely selected creative decree is necessary in performance AND
+strictly suffices for its particular contingent effect. These are
+contentful, currently OPEN bridges. Mere necessity of the bearer,
+immutability or identity of the source's intrinsic act does not
+already supply them. The rival account must explain how one
+timeless rational source nonnecessitatingly produces one of
+several permissible effects, not merely stipulate world-relative
+outputs. The #462 and #1880 variable-output controls establish
+non-entailment of fixed creation from thin structural premises,
+not an adequate divine agency theory.
+
+Other live restrictions are conditional on precise senses. Coherent
+task power plus morally impeccable *nonselection* is not a
+contradiction; adding the stronger thesis of incapacity for a
+coherent forbidden mapped task gives the existing power/morality
+incompatibility. Factive complete knowledge of changing truths
+plus *identical known-content membership* fails, but identity
+of an intellectual act does not imply the latter. Perfect goodness
+versus permitted evil needs a further defended obligation to
+prevent each permitted evil; the predicates alone supply no
+contradiction. Those are discriminating substantive tests rather
+than hypothetical hidden impossibilities.
+
+### Modal and epistemic scope; comparative assessment
+
+Logical noncontradiction, a fixed joint formal model, conceptual
+coherence, reasonable epistemic judgment, and M-accessible
+same-bearer metaphysical realization are distinct grades. #438
+shows that S5 for candidate E and metaphysical M relations does
+not itself transfer descriptive satisfaction into M access.
+Even targeted witness admission must be defended. Classical
+absence-of-impossibility means ¬□¬P within ONE fixed modality;
+it does not mean 'we have not yet derived a contradiction'.
+
+The familiar #437 K5 positive and negative inferences remain
+conditional on their own boxed premises; S5/reflexivity enables
+actual-world return. The symmetrical necessary-nonexistence
+argument owes an independently justified reverse possibility
+premise concerning the SAME fixed G, world accessibility, rigid
+identity and attributes. Mere failure to believe C5 is not
+metaphysical proof of ¬C5. Conversely, a supported strict
+incompatibility or admissibility restriction could justify
+¬C5 without first finding a satisfying negative description.
+
+**Provisional overall judgment:** the cumulative necessary
+same-source work supplies informative, conditional positive
+warrant for a substantial partial attribute profile. That is
+stronger than unconstrained predicate recombination, but the
+complete C5 premise is NOT established. The strongest actual
+negative result, #555, is an exact conditional inconsistency;
+its necessary-act/strict-efficacy reading remains disputed and
+is not derived from the selected full profile. Thus ¬C5 is
+also NOT established. The positive route warrants further work
+on its concrete missing predicates; the negative route warrants
+a targeted test of decree identity and strict efficacy. Neither
+absence of contradiction nor lack of a full model decides the case.
+
+**Next tests and revision conditions:** obtain intrinsic and
+all-content cognitive uptake from #1866/#1873 rather than a
+truth-oracle proxy; justify or refute #555's same-creative-act
+bridge under #1737's contingent rational choice; establish
+selected-root uniqueness across M without definitional
+essentiality; justify M's metaphysical interpretation,
+actualist/counterpart same-bearer identity, and the GOD_4
+actual-world naming bridge. Add DEF/sense records for the
+knowledge/choice primitives before binding a canonical argument.
+A confirmed incompatibility or justified complete realizer would
+revise this assessment. No registered result or computed
+premise-frontier change is claimed for this helper-only delta.
