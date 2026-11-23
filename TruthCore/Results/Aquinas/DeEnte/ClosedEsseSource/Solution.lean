@@ -331,6 +331,140 @@ theorem uniquePopulatedStateHasActualRoot (p : Profile B P R)
   obtain ⟨hActual, hUncaused⟩ := hSeedRoot n hn
   exact ⟨n, (hState n).mp (hSeedActive n hn), hActual, hUncaused⟩
 
+
+/-- With InAct varying along with the state, the empty configuration has
+no actual suppliers and satisfies the reciprocal support equation. It is
+an instance of #1878's `emptyFixedOfEntirelyBorrowed`
+(`emptyCircleStateFixedOfBorrowing` below): varying InAct preserves the
+empty fixed point. Nothing about metaphysical applicability follows. -/
+theorem emptyCircleStateFixed :
+    CircleStateFixed (fun _ : Bool => False) := by
+  intro x
+  constructor
+  · intro hx
+    exact hx.elim
+  · rintro ⟨c, hc⟩
+    exact hc.2.2.1
+
+/-- Both candidate bearers present: each has the other as a same-r input. -/
+theorem fullCircleStateFixed :
+    CircleStateFixed (fun _ : Bool => True) := by
+  intro x
+  constructor
+  · intro _
+    cases x with
+    | false =>
+      refine ⟨true, ?_, trivial, trivial, ?_⟩
+      · change true ≠ false
+        decide
+      · change true ≠ false
+        decide
+    | true =>
+      refine ⟨false, ?_, trivial, trivial, ?_⟩
+      · change false ≠ true
+        decide
+      · change false ≠ true
+        decide
+  · intro _
+    trivial
+
+/-- Of the profiles satisfying the reciprocal equation and the additional
+global population requirement, only the both-present configuration survives,
+pointwise. This is an extensional claim; no propext or funext is used. -/
+theorem populatedCircleAllBearers (state : Bool → Prop)
+    (h : HolisticCircleAdmissible state) : ∀ x, state x := by
+  obtain ⟨hFixed, ⟨w, hw⟩⟩ := h
+  have hFalse : state false := by
+    cases w with
+    | false => exact hw
+    | true =>
+      obtain ⟨c, hc⟩ := (hFixed true).mp hw
+      cases c with
+      | false => exact hc.2.1
+      | true => exact (hc.1 rfl).elim
+  have hTrue : state true := by
+    obtain ⟨c, hc⟩ := (hFixed false).mp hFalse
+    cases c with
+    | false => exact (hc.1 rfl).elim
+    | true => exact hc.2.1
+  intro x
+  cases x with
+  | false => exact hFalse
+  | true => exact hTrue
+
+/-- For the mode-unspecified r only: a unique admitted populated state of
+the two-bearer circle has no r-root. The circle is excluded at the per se
+productive scope by `noPerSeCausalLoop` once the priority bridge is
+supplied. Actuality guards vary coherently, but productive exercise,
+metaphysical admission of the nonempty whole, and collective full grounding
+are not encoded. The nonemptiness requirement does the selection work. -/
+theorem stateIndexedHolisticCircle : StateIndexedHolisticCircleControl := by
+  have hAll : ∀ x,
+      ∃ c, ActualEsseCause (circleAtState (fun _ => True)) c x := by
+    intro x
+    cases x with
+    | false =>
+      refine ⟨true, ?_, trivial, trivial, ?_⟩
+      · change true ≠ false
+        decide
+      · change true ≠ false
+        decide
+    | true =>
+      refine ⟨false, ?_, trivial, trivial, ?_⟩
+      · change false ≠ true
+        decide
+      · change false ≠ true
+        decide
+  refine ⟨emptyCircleStateFixed,
+    ⟨fullCircleStateFixed, ⟨false, trivial⟩⟩, ?_, hAll, ?_⟩
+  · intro state hs
+    exact populatedCircleAllBearers state hs
+  · rintro ⟨n, hn⟩
+    obtain ⟨c, hc⟩ := hAll n
+    exact hn c hc
+
+/-- The circle's supply rule is an #1878 entirely-borrowed rule for the
+fixed all-actual circle profile. -/
+theorem circleRuleEntirelyBorrowed :
+    EntirelyBorrowedRule
+      TruthCore.Latin.Aquinas.DeEnte.ClosedEsseSource.sourceFreeFiniteCircle
+      circleRule := by
+  rintro state x ⟨c, hne, hc, _, hcause⟩
+  exact ⟨c, ⟨hne, trivial, trivial, hcause⟩, hc⟩
+
+/-- `CircleStateFixed` is `SupplierStateFixed circleRule`, biconditional
+flipped. -/
+theorem circleStateFixedIff (state : Bool → Prop) :
+    CircleStateFixed state ↔ SupplierStateFixed circleRule state :=
+  ⟨fun h x => (h x).symm, fun h x => (h x).symm⟩
+
+/-- The empty fixed point, obtained from #1878's general theorem. -/
+theorem emptyCircleStateFixedOfBorrowing :
+    CircleStateFixed (fun _ : Bool => False) :=
+  (circleStateFixedIff _).mpr
+    (emptyFixedOfEntirelyBorrowed _ circleRule circleRuleEntirelyBorrowed)
+
+/-- Every tail is a fixed point of the acyclic analogue: `x + 1` supplies
+`x`, and the reverse direction is the recipient guard. -/
+theorem tailFromFixed (k : Nat) : TailStateFixed (tailFrom k) := by
+  intro x
+  constructor
+  · intro hx
+    exact ⟨x + 1, Nat.succ_ne_self x, Nat.le_succ_of_le hx, hx, rfl⟩
+  · rintro ⟨_, hc⟩
+    exact hc.2.2.1
+
+/-- Nonempty admission does not select uniquely on the acyclic analogue. -/
+theorem stateIndexedTail : StateIndexedTailControl := by
+  have hCover : ∀ k x, tailFrom k x →
+      ∃ c, ActualEsseCause (tailAtState (tailFrom k)) c x :=
+    fun k x hx => ((tailFromFixed k) x).mp hx
+  refine ⟨fun k => ⟨tailFromFixed k, k, Nat.le_refl k⟩, hCover, ?_,
+    Nat.le_refl 0, Nat.not_succ_le_zero 0⟩
+  rintro k ⟨n, hn, hRoot⟩
+  obtain ⟨c, hc⟩ := hCover k n hn
+  exact hRoot c hc
+
 theorem singletonPopulation : SingletonPopulationControl := by
   let p : Profile Unit Bool Unit := {
     InAct := fun _ _ => True
