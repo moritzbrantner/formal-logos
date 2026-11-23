@@ -719,9 +719,9 @@ through `whyView`. P1 is an analyst formulation; it is attributed to no author.
 
 That conclusion uses `BruteAt` (contingent and unreasoned), so for a necessary `o`
 (God's existence, a necessary base) it holds vacuously and binds no theist. The
-symmetric form is the sibling `117f8bc3` `parityUnreasoned`: under the same P1-P3 it
+symmetric form is the sibling `8fba6dd2` `parityUnreasoned`: under the same P1-P3 it
 gives `9df516be`, that the stance cannot meet its demand and accept the fact with no
-reason at all, contingent or not. `8fba6dd2` and a `strengthens` relation register
+reason at all, contingent or not. `117f8bc3` and a `strengthens` relation register
 that `9df516be` strengthens `fbf3f3e0`.
 
 The map `a1056aab` (`13c05b6d`) records, for both sides:
