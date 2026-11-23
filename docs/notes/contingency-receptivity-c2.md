@@ -110,7 +110,10 @@ B4b excludes every actual corruptible at `w`.
 
 Frames reuse `FirstMoverNecessity.Model.mk` (worlds, beings and respects
 `Bool`, reading world `true`, `f` moves `x` in heat, `x` in POTENCY_1 in heat
-only, so `f` is POTENCY_1-pure act throughout).
+only, so `f` is POTENCY_1-pure act throughout). Excluded middle is a logical
+premise and is not a model conjunct, as in #1870. "Admissible on" names the
+modal metaphysics or ontology under which the structure could be read as a
+real case; the model itself certifies only structural satisfiability.
 
 | Model | What holds | What fails | Shows | Admissible on |
 |---|---|---|---|---|
@@ -314,9 +317,9 @@ route A; PGP and correlation are shared by `32bf794f` and `bf2f0e8e`.
 **Provisional judgment (2026-11-23; independent semantic challenge pending).**
 C2 is *modestly favoured*. Grounds: (i) PGP's general warrant from
 powers-based modal metaphysics, independent of theism, and PGP's narrowness,
-which avoids that theory's hardest objection; (ii) the ordinary cases: every
-contingent being to which we have independent access is corruptible or
-dependent; (iii) Aquinas's channel analysis (q.9 a.2), now exact (results
+which avoids that theory's hardest objection; (ii) the ordinary cases: the
+contingent beings of ordinary experience (organisms, artifacts, stars) are
+corruptible or dependent, so none is a counterexample to PGP; (iii) Aquinas's channel analysis (q.9 a.2), now exact (results
 `32bf794f`, `bf2f0e8e`, law 5) and corrected for the corruption channel;
 (iv) C2 is weaker than both existing bridges R1 and B2 and survives the
 uncaused-composite, deist and self-annihilation rivals at C2 itself.
