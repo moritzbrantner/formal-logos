@@ -429,6 +429,14 @@ premise is established.
 
 ## Can the whole unreceived act be absent?
 
+**Current conclusion.** There is a positive case for the presence of the same
+foundation across histories that share creatures with essential origins. Its
+reach depends on which histories can share *those very creatures*. Three tests
+using intellection, suffering and mathematical necessity identify where the
+evidence changes subject. I retain moderate confidence in suspension about
+this individual's possible absence under the shared assumptions.
+[Argument, strongest objection and revision conditions](#can-ordinary-individuals-identify-the-same-foundation-across-histories)
+
 Analyst assessment of the rigid individual in issue #1887. Let P say that this
 very n is absent at some world accessible from the actual world. Grant the
 actuality, firstness, essence–esse identity, absence of reception, of a
@@ -859,3 +867,184 @@ grounds found at an absence world must carry over. The evidence here
 supports none of those bridges sufficiently to select P or its negation.
 I retain moderate confidence in suspension for the shared case. These are
 analyst arguments and a warrant assessment; no new formal results.
+
+### Can ordinary individuals identify the same foundation across histories?
+
+Consider two claims about the actual foundation n. First, wherever n exists,
+it is an ultimate source of every originated concrete individual in a specified
+class there. Second, if such an individual has n as an ultimate source in one
+history, that very individual requires n to have existed somewhere in every
+history containing it. Fix the class independently of descent from n, for
+example organisms, and keep n itself outside it. In each comparison use the
+actual history and alternatives individually accessible from it. Presence
+anywhere in a complete history suffices. Neither a causal transition between
+worlds nor transitivity of modal accessibility enters the argument.
+
+Suppose Ada originates in the actual history. A second contains Ada and is
+where Ben originates. A third contains Ben and none of the actual organisms.
+Ada requires n in the second. There n is a source of Ben by the first claim.
+Ben therefore requires n in the third by the second claim. Repeating this
+reasoning across any finite
+sequence carries the very same n to the far end if, at each step, a member
+of the chosen class originates in the history we are leaving and also exists
+in the one we reach. Each creature can be contingent. Even the joint
+omission of *all actual creatures* in the final history need not get outside
+the argument. An accessible history lacking n would have to escape every
+such sequence. Global necessity follows if the sequences cover all
+alternatives. Coverage is a substantive third premise.
+
+**What earns the two source premises?** For particular organisms there is a
+reason to take their origin seriously. A second conception involving wholly
+different gametes can occur alongside the first and yield a second child.
+Resemblance to the first child would be poor grounds for identifying the two.
+This supports investigating essential origins even for someone open to P.
+If each link in an actual finite ancestry requires that very predecessor
+whenever the descendant exists, the requirements compose. Calling a remote
+cause a cause supplies none of the individual links. A parent might have
+survived a different rescue, and an organism's biological origin does not
+settle which ultimate source could have sustained its parents. Plotinus offers
+a stronger rationale in a constitutive hierarchy. A derivative continually
+needs the prior that sustains it, through any intermediates up to the
+source. Applied to C2 this gives reason to look for dependencies that persist
+as long as the creature does. Identifying the same ultimate source in a
+different history still requires the transworld premise. Likewise a
+uniform explanation of why dependent beings have existence might support
+universal sourcehood, but an actual explanation of each one's existence by
+*some* unreceived source supplies neither this universal source nor its
+invariance wherever it exists. The established argument for an identity
+source of each actual distinct esse concerns this last, local explanatory
+question. [Actual source result](../../corpus/arguments/f05db25e-dd2a-4417-9059-ec0c4a6dc5f0.json)
+and [origin and historical identity controls](fixed-initial-history-535.md).
+[Plotinus, V.5.9](https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_4/Ennead_5.5)
+
+**The strongest test of coverage uses recombination in the opposite direction
+to subtraction.** Take one ordinary creature from an actual history and one
+from a proposed replacement history. Could those two creatures themselves
+have coexisted, with the first originating in actuality and the second
+originating in their joint history? If so, that history connects the endpoints
+without first stipulating that the two foundations coexist. Local coexistence has
+some warrant when the creatures need no incompatible material, place or
+conditions of conception. It is substantially harder to warrant here. A
+duplicate of each creature can stand beside the other without either original
+being present. Lewis explicitly frames recombination in terms of duplicates.
+And if the two creatures require distinct and necessarily exclusive ultimate
+sources, their origins supply a concrete obstacle to joint existence even
+where the bodies would fit. Assuming outright that originals with different
+possible origins can always mix would decide this test in advance.
+[Lewis, *On the Plurality of Worlds*, §1.8, pp. 88–89](https://15926.blog/topics/possible-worlds/Lewis-David-%281986%29-On-the-Plurality-of-Worlds.pdf)
+
+Consider a solitary rival source r with no creatures. Even this case admits
+a further test. Suppose the same r could produce a creature in a history
+accessible from actuality, and that history can be connected to the actual
+one in the way just described. Then n is present in the productive history.
+If n and r each must occupy its sole ultimate-source role there, they are
+identical. Rigid identity would carry n back to the solitary history. A
+primitivist can allow an active rival while denying that *its* creatures
+could mix with ours as the same individuals. They can also contest the
+exclusive role. A simple foundation's lack of parts settles neither issue.
+A concrete-empty alternative would escape even the productive-extension
+argument. Conversely, a world containing n alone could also escape every
+creature-sharing sequence. Failure to connect a history is evidence of a
+limit on our test, never sufficient evidence of absence. The existing
+empty-extension and restricted-history results illustrate how changing the
+domain changes the necessity verdict.
+[Existing controls](../../TruthCore/Case/Catholicism/StageOne/NecessaryIndividual/EmptyWorldFork.lean)
+
+#### Testing things the foundation might guarantee
+
+The direction of dependence matters. A creature that **requires** n can
+bear witness to its presence. A condition that **n guarantees** could bear
+witness to n's absence if it independently failed in an admissible order.
+Three plausible examples let us test the evidence at matching scope.
+
+- **An intellect.** Plotinus argues from the outward activity of perfected
+  things to the First's production of Intellect. His distinction between
+  the First's own activity and its expression supplies a reason for
+  expecting *some* derivative intellection, without requiring this particular
+  human thinker. Aquinas also takes perfect goodness to be communicative but
+  holds that complete goodness requires no created recipient. The difference
+  concerns whether a distinct effect must occur. The concrete omission with
+  good ordinary warrant is that Socrates' parents might never have conceived
+  him. Plotinus distinguishes the embodied person from the corresponding
+  intelligible principle. The absence of the birth, or even of all embodied
+  thinkers, leaves incorporeal intellection open. Supposing the First itself
+  present without secondaries either illustrates its self-sufficiency or, if
+  taken as a genuine possibility, undermines necessary production. The
+  identification of this n with the Plotinian First also needs argument.
+  [Plotinus, V.4.1–2](plotinian-composition-unity.md),
+  [V.5.12](https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_4/Ennead_5.5),
+  [V.7.1–2](https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_4/Ennead_5.7)
+  and [Aquinas, ST I.19.2–3](https://www.newadvent.org/summa/1019.htm#article3).
+- **Protection from a particular harm.** Compare two feasible interventions
+  on a patient. One would spare severe additional pain while preserving the
+  goods and claims of everyone affected and introducing no offsetting harm.
+  Perfect care can require avoiding the added suffering even if there is no
+  best creation overall. An independently credible alternative with the
+  suffering could count for P if this very n, whenever present, knows of it,
+  can relieve it on those terms and would protect the patient. A local
+  analgesic comparison gives evidence of a means of relief. The further
+  comparison of *all relevant costs to that provider* is a separate burden.
+  In the existing Rowe reading the universal clause about omniscient and
+  omnipotent preventers holds vacuously in an order with none. Using that
+  absence to establish the crucial comparison would borrow the verdict.
+  Holding fixed a patient whose very existence requires n would instead test
+  the protection claim, as actual suffering does given actual n. And the
+  positive-core route already assumes a necessary bearer and yields
+  ontological goodness. Importing it cannot supply an independent argument
+  for essential moral protection in C2. An impersonal source that invariably
+  optimized in the relevant respect would face the same test.
+  [Rowe's exact comparison](../../TruthCore/English/Rowe/EvidentialEvil.lean),
+  [creation choice](optimal-creation-choice.md) and [C5's positive core](../modal-ontology-120.md).
+- **A necessary mathematical content.** Here we test a route to necessary
+  presence. An invariant content that requires n in each alternative would
+  carry n to all of them. A real basis for each possible
+  content would give a reason to resist the total cancellation of such a
+  basis. Replacing its whole supplier while preserving the contents is a
+  different claim. Compare a Euclidean triangle relation, whose proof needs
+  no particular concrete bearer, with the singleton whose only member is n.
+  Suppose impure singletons are admitted, their membership fixes their
+  identity across worlds and they existentially depend on their members
+  within each world. A different sole member then gives a different set, and
+  pairing gives that very singleton wherever n exists. It supplies no premise
+  that the singleton exists even in a history under consideration for n's
+  absence. Requiring
+  every such singleton unconditionally, while requiring its member there,
+  would give necessary Socrates by the same argument. A necessitist can
+  accept that consequence; a foundation-specific explanation owes a reason
+  for the restriction. Appealing to the singular thought *that n might have
+  been absent* fares similarly. Our capacity to refer to actual n does not
+  require a token of that thought or its referent inside the described
+  alternative. The invariant relation and the irreplaceable member earn
+  different premises about different objects.
+  [Material-basis investigation, #1790](https://github.com/moritzbrantner/formal-logos/issues/1790)
+  and [Fine, “Essence and Modality,” pp. 4–5](https://doi.org/10.2307/2214160).
+
+**Verdict.** The origin argument earns confidence about a specific range
+of alternatives *to the extent that* the particular dependencies can be
+traced. It also explains a selection effect in familiar modal reasoning.
+Varying one circumstance while preserving a person can retain that person's
+ultimate source without the thinker ever mentioning it. The reliability
+of such comparisons within a family of histories offers little evidence
+that they exhaust metaphysical possibility. Symmetrically, omitting every
+named actual creature does little to establish that its source is absent.
+Either a theist or a naturalist can posit essential ancestry or primitive
+permissions. Both owe the same account of numerical identity, admissibility
+and explanatory direction. Mere absence elsewhere involves no change in n.
+
+The fundamental disagreement remains whether genuine alternative existence
+requires a prior feature of reality licensing it, or whether an individual
+permission can itself help determine what is admissible. The origin argument
+adds a way to decide particular cases even across that divide. I have high
+confidence in the restricted inference and moderate confidence that the
+shared evidence still warrants suspension about P. Evidence that the same
+ordinary individuals from seemingly separate histories really could coexist
+on those origin terms, together with rigid ultimate dependence, would extend
+the case for necessity. A universal verdict also needs reasons covering
+histories with no such creatures and excluding a concrete-empty history.
+One genuinely admissible concrete-empty history would settle P. An
+independently admissible failure of a condition this very n guarantees would
+move me toward P. Under the
+strict question that evidence must be consistent with P itself lacking a
+full metaphysical ground at actuality. These comparisons are analyst
+arguments, with existing formal results reused at their stated scope.
+Attempt `10c88ffa` records the findings.
