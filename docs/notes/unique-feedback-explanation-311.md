@@ -2170,7 +2170,7 @@ accepting a primitive.
 | Structure | Relation to C1-bearer |
 | --- | --- |
 | Temporal ancestry (parents, past states) | Not r unless each ancestor presently gives esse; an infinite past is compatible with C1 (ST I q.46 a.2 ad 7; `SustainingDependence.Control.Certificate`). #1616's persistence-law rival lives here |
-| Per se ordered present supply | The intended application of r. `noPerSeCausalLoop` excludes loops in its own vocabulary (`EfficientlyCausesIn`, priority, transitivity, irreflexivity) and needs a bridge to r; nothing in the per se vocabulary excludes infinite descent without the instrumental premise (step 4 below) |
+| Per se ordered present supply | The intended application of r. `noPerSeCausalLoop` excludes loops in its own vocabulary (`EfficientlyCausesIn`, priority, transitivity, irreflexivity) and needs a bridge to r; nothing in the per se vocabulary excludes infinite descent without the groundedness premise (step 4 below) |
 | Complete existential dependence | Exactly the closure clause of CCR; a root anywhere in the inventory does not help an unrelated cone (`RosterOnlyControl`, control 4) |
 | Circular grounding | Unrooted circuits violate CCR (#1871 circle, control 3); rooted circuits satisfy it |
 | Infinite regress | Rootless infinite components violate CCR (control 2, a bare successor relation); root-backed infinite descents satisfy it (control 1) |
@@ -2308,10 +2308,12 @@ flowchart TD
 the primitive is eliminable: the substantive content is the **joint** claim
 that one actual bearer causes every received bearer's esse. Which premise
 carries it depends on the reading (disambiguation 197f0097). On the
-collective reading TOTALITY_CAUSE_1, B is close to analytic and A carries the
+collective reading TOTALITY_CAUSE_1, B follows if the totality's being consists of
+its members' being (causing it is causing them, perhaps through intermediaries),
+and A carries the
 claim; the Hume–Edwards view denies A, holding that a totality whose members
 are all caused needs no cause beyond its members' causes. On the distributive
-reading TOTALITY_CAUSE_2, A is trivial and B carries the claim; control 2
+reading TOTALITY_CAUSE_2, A is classically trivial and B carries the claim; control 2
 shows A true and B false there. Either way the joint claim, together with no
 self-causation, is **strictly stronger than C1**: control 7 is a plural
 foundationalism (several independent underived sources) that keeps C1,
@@ -2436,7 +2438,8 @@ bridges is assumed or discharged here.
   together with C2; explanatory unity is defeasible and shared with plural
   foundations; the instrumental premises are accepted by both sides and add
   nothing comparative. C1-bearer is logically weaker than well-foundedness and
-  than the A-and-B claim, and permits infinite series and rooted cycles.
+  than the A-and-B claim with no self-causation, and permits infinite series
+  and rooted cycles.
 - **C1-bearer, unrestricted tenseless mode-unspecified reading.**
   *Underdetermined*: temporal-origin and non-efficient readings of r are not
   shown to be supply (#1616 inertia, F2), and the cause-to-ground bridge
@@ -2444,7 +2447,8 @@ bridges is assumed or discharged here.
 - **¬C1.** Coherent and not refuted. It survives by denying that a complete
   totality of received actuality is caused in the collective sense, or by
   taking a bearerless obtaining fact as primitive.
-- **A-and-B (totality route).** A distinct, stronger option that adds unity of
+- **A-and-B with no self-causation (totality route).** A distinct, stronger
+  option that adds unity of
   the cause of received being; its warrant is no greater than C1's and plural
   foundationalism rejects it. Useful because it supports da09703b without CCR
   or the composition premise (whose content moves into B).
@@ -2491,16 +2495,6 @@ control 7's is not. "Per se" and "present" in prose describe the intended
 reading only; no Lean type carries time, mode or world. No source claim is
 added; Aquinas, Cameron and Bevan are cited through existing #1724 records.
 
-**Review.** An independent semantic challenge of the first draft (this
-session, 2026-11-23) confirmed the formal core: every type, proof, control
-conjunct and cited ID checked, no transcription, no sense mixing. Its six P1
-findings were repaired here: the strength and unity claims now belong to A
-and B jointly with the primitive's eliminability stated; the false strength
-claim against c35b1a5c and the "no excluded middle" docstring were corrected;
-the question-begging and sense-equivocating ¬C1 costs became the disputed
-point with a collective/distributive disambiguation (197f0097, definition
-3770b94d); the sustaining verdict now rests on step 4 rather than on the
-untyped regress control; and the reopening conditions are symmetric.
-Control 2 was strengthened to cover every predicate. Its P2 findings on
-scope, parity, double counting, "defended" terminology and the
-borrowed-money disanalogy were applied in the same pass.
+**Review.** Independent semantic challenge and re-check (2026-11-23): formal
+core confirmed (types, proofs, control conjuncts, cited IDs, no transcription,
+no sense mixing); all prose and disambiguation findings repaired in this PR.

@@ -23,7 +23,7 @@ constrained only by the two premises below. Its meaning and examples are in the
 linked definition and in `docs/notes/unique-feedback-explanation-311.md`
 (C1 section). The distributive sense (TOTALITY_CAUSE_2,
 `DistributiveTotalityCause`: e causes some received member) is a different
-predicate; under it premise A is trivial and premise B is the whole claim
+predicate; under it premise A is classically trivial and premise B is the whole claim
 (control 2).
 
 Because the parameter is constrained only by A and B, some predicate satisfies
