@@ -1,0 +1,13 @@
+{
+  "id": "c3d1c793-dc3a-450a-8c3c-fce341f67f5c",
+  "label": "Finite recombination plus prefix closure permits every complete suffix",
+  "paraphrase": "For each fixed all-true observed prefix and supplied selector of complete Boolean histories: nonempty one-step continuation freedom implies the existence of extensions for every prescribed finite pattern. Adding the separate prefix-closure principle implies that every complete infinite suffix is admitted. An eventually constant, populated selector has one-step and finite freedom but neither closure nor unrestricted infinite histories; a stable selector is closed but lacks finite freedom; unrestricted and empty selectors witness the positive and nonemptiness controls. No claim derives either premise from unexplained actuality or assigns modal/physical status to these trace histories.",
+  "lean_declaration": "TruthCore.Explanation.NoFoundationLawChaos.RecombinationFork",
+  "definition_ids": [
+    "10d0fb41-49a3-404f-898f-caabd0d0324e",
+    "1e04df16-fe72-467a-bc25-785f0e94fc70"
+  ],
+  "disambiguation_ids": [
+    "b6e7ec07-9a8e-51c4-a9f8-c9b8e9922ac5"
+  ]
+}
