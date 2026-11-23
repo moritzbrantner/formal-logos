@@ -2294,3 +2294,291 @@ admissible rival, compared against an underived bearer under the **same**
 adequacy criterion. A distinct #1616 test must preserve the *same bearer*
 over time rather than importing the world-free r as a sustaining cause.
 
+
+## State-indexed actual holism: what global selection buys (#1724, #1616; 2026-11-23)
+
+**Scope and novelty.** This is the next discriminating test after merged #1871
+and the fixed-profile selection results of PR #1878. It retains the q.3 a.4
+`ActualEsseCause` direction and guards, but unlike `SupplierStateFixed`
+it makes **`InAct` covary with the candidate configuration**. It does not
+re-prove the Hume–Edwards/aggregate A-and-B results being integrated separately
+in PR #1882. The question is whether a *necessary or globally admitted actual
+whole*, with constituent actuality and an explicit whole-level constraint, can
+be source-free in the relevant r while still having a unique admitted actual
+configuration. The answer is **structurally yes**, with a decisive and
+independently named **nonempty-admission** commitment. Whether this
+configuration is genuinely metaphysically possible and productively
+self-sufficient remains **OPEN**.
+
+### The six things that must not be identified
+
+For a fixed pair of bearer identities, say `u = false` and `v = true`,
+the new `circleAtState state` retains the existing
+`sourceFreeFiniteCircle` cause matrix and essence/esse assignments but
+sets `InAct x esse := state x`. The same `ActualEsseCause` guards now
+recognize **only** suppliers and recipients actually present *in that
+candidate state*. No profile-to-world interpretation is assumed.
+
+| Level | Meaning in this test | What supplies it, if anything |
+| --- | --- | --- |
+| Formal consistency | A Boolean state and its guarded r-edges satisfy an equation | Exact Lean control; no ontic conclusion |
+| Global uniqueness | Every **admitted populated** state has both bearers | Reciprocal r-constraint **plus** population admission |
+| Metaphysical admissibility | The whole and its law are genuinely possible or necessary, rather than stipulatively admitted | **OPEN** modal/constitution interpretation and sufficient warrant |
+| Actual instantiation | A real configured whole `W` and its members `u,v` obtain | In a strong holism, `W` obtains necessarily or primitively; this is **not** proved by Lean |
+| Productive existential giving | An exercised real power brings about or preserves a recipient's esse | Requires bearer, exercise, causal priority and exact-r interpretation, none encoded by the Boolean edges |
+| Complete existential explanation | Why `W` (not merely its members conditional on `W`) actually obtains | Necessity/constitutive sufficiency or a primitive obtaining fact must be defended against a source-based stopping point |
+
+The new, **unregistered Lean helper** `StateIndexedHolisticCircleControl`
+has four consequential parts. (1) The all-absent configuration is a fixed
+point with no actual suppliers or recipients. (2) The all-present
+configuration is fixed and satisfies `HolisticCircleAdmissible`, which is
+*defined for the structural test* as fixedness **and nonemptiness**.
+(3) Every admitted state has both bearers: uniqueness is pointwise, **only
+within that restricted class**. (4) In the all-present profile each bearer
+has an actual incoming r-cause and there exists **no r-uncaused bearer**.
+The result is constructive on a two-element carrier and makes no appeal to
+well-foundedness, global intuition or a hidden positive seed. The prior
+control already showed that a fixed profile may contain a rootless two-cycle;
+the new content is an **explicit cross-profile actuality guard and
+restriction of admissible total configurations**, addressing the actual
+`p.InAct` limitation of #1878.
+
+**What the theorem does NOT say.** The formal `state` is still not a
+metaphysically accessible world. `HolisticCircleAdmissible` introduces
+nonemptiness as a stipulated global admission condition; its constructor
+does not produce or explain an actual bearer. The `CausesIn` edge remains
+tenseless and mode-unspecified, with no real power exercise or constitutive
+identity fact. The empty state is a fixed mathematical alternative, but
+**not an admitted alternative** to the holist's strong modal law. Therefore
+this is a **structural counterinterpretation** to the inference
+“unique globally admitted populated configuration entails an r-root,”
+**not** a realization of genuinely mutual existential production.
+Restoring exercised powers, a concrete organizing whole, full-ground
+sufficiency and cross-world identity is the live semantic challenge.
+
+### The strongest source-free holistic proposal
+
+Specify real constituents `u,v`, real capacities `P_u,P_v`, actual
+exercises `E_u,E_v`, a concrete organization `A`, and the obtaining of
+their whole `W). A respectable holist need not claim that `E_u` makes
+`u` exist *before* `u` exists. Instead the proposed order is:
+
+1. `W` obtains as a metaphysically **necessary concrete whole**, or as
+   an ontically primitive contingent fact; its internal articulation
+   determines `u,v,A`, their powers and their exercised roles.
+2. The organization is **constitutive** of the member configuration;
+   `u,v` are derivative with respect to `W` or to the whole-fact, not
+   necessarily mutually **efficiently producing** one another.
+3. The global law selects exactly this joint configuration. A derived
+   member's dependence need not trace a temporally first event. Local
+   feedback can be causal, functional or nonproductive; explanatory
+   priority is from `W` to members on a priority-monist account.
+4. If `W` is unreceived and its relevant whole-to-member relation is
+   genuine productive `ActualEsseCause`, this is no longer an
+   **entirely r-derivative** world: it offers an underived concrete
+   candidate, although its connection to every supplier cone, necessity
+   and God attributes remain separate. If `W` is **not** an actual
+   member or supplier in the r-domain, the holist contests exactly the
+   bearer/r-relevance bridge, not a proved r-theorem.
+
+This is a **reconstructed rival**, not a claim that the finite Lean model
+implements `W,A,P_u,P_v,E_u,E_v`. It is stronger than a cycle of two arrows:
+there is an ontic whole, organizing constraints, constituent powers and a
+positive explanation of co-obtaining. [Schaffer's priority monism](https://doi.org/10.1215/00318108-2009-025)
+is an important *different* comparison: it regards the cosmos as basic and
+the parts as derivative, so it **accepts a basic concrete whole** in its
+grounding order; it is not evidence for a world with no underived
+ground at all. The [Stanford Encyclopedia's grounding survey](https://plato.stanford.edu/entries/grounding/#WellFoun)
+documents the actual disagreement over grounding well-foundedness.
+Neither a literature label nor structural consistency is a metaphysical
+warrant for actual non-well-founded **existential production**.
+
+**Law types and their explanatory yield.** A *descriptive* law classifies
+a configuration already obtained; a *constitutive* law specifies
+what it is for this whole to have its members; a *governing* law
+purports to restrict genuinely possible reality; a *productive* law
+must be instantiated in actual powers and their exercises. A unique
+mathematical solution under a descriptive law need not obtain. A law
+understood as **metaphysically necessary and existentially
+instantiating** is a much stronger claim: it may indeed explain why
+the whole must obtain, but its modal force and existential import
+are precisely the substantive posit, not consequences of numerical
+uniqueness. A nonnecessitating global explanation can instead select
+this actual state by a primitive, law-permitted obtaining fact. That is
+a legitimate positive *stopping proposal*, albeit not a complete
+further explanation of the selecting fact under a total-existence norm.
+
+### Productive priority and the weaker-than-WF target
+
+The strongest positive source argument begins with the **operation
+presupposition**: an exercised productive power requires its already
+actual bearer. A thing's operation cannot be the earlier ontological
+producer of the existence required for that very operation **under
+the same asymmetric, transitive productive-priority relation**.
+Existing `ExistentialSelfActualization` and
+`noPerSeCausalLoop` results capture the contradiction of circular
+*productive* priority on those explicit premises. They do not show
+that all constitutive feedback is impossible. Conversely, strict
+asymmetry and irreflexivity can exclude finite reciprocal production
+while leaving an infinite `n+1 → n` order: neither gives a root
+without a further actual-supply sufficiency condition.
+
+The more promising, **narrow** principle to assess is not unrestricted
+well-foundedness of every cause. It is:
+
+> A complete cone of *genuinely exercised existential givers* cannot
+> furnish as its entire productive input only the already actual
+> bearers whose actuality the cone is supposed to produce.
+
+This has positive support from the instrument-versus-absolute-being
+distinction in *ST* I q.45 a.5, with the important restriction in
+*ST* I q.104 a.2 that created causes can really preserve. The De ente
+received/unreceived esse distinction supplies the candidate
+mode-of-having explanation for the source. But applying this
+principle to **every** supplier-closed `ActualEsseCause` cone is
+still OPEN: it must include every relevant productive supplier,
+exclude merely exemplary/final causal roles, and justify the
+collective inference, not merely each member's presupposition.
+PR #1882's A/B totality-cause route makes a stronger *collective
+cause to member* premise explicit; it is not borrowed into the present
+model. The untyped q3a4 r by itself does not carry exercises,
+metaphysical priority, temporal concurrence or completeness.
+
+### Positive underived-source account, held to the same standard
+
+The source-based alternative posits an **actual** bearer `n` whose
+esse is unreceived *in the relevant respect*, whose productive
+activity does not require an upstream grant of its own actuality,
+and whose genuine giving supplies derivative bearers. This is not
+self-creation. Its positive explanatory work, if the metaphysical
+picture is correct, is that the source **possesses the actuality
+used by its power without borrowing that actuality from its effects**.
+Received powers can remain genuine contributing causes. The
+claim that `n` has no further esse-source is supported by an
+act/participation/essence–esse account, not by labeling `n`
+“uncaused.” If bare r-rootedness alone is the description, a brute
+r-root is no more self-explanatory than a brute actual whole.
+
+In the existing certified graph the further route is:
+`20babef7` (each local supplier cone reaches an r-root) with
+`457698e4`, `a576300f`, `78cffb8e`, `ee4ab504` →
+`c6d92415` → `c35b1a5c` (same actual source).
+Necessity, pure actuality, actual concrete grounding, subsistent
+esse, simplicity and GOD_4 require **separate bridges and identical
+witness/sense checks**. A priority-monist concrete cosmos may accept
+the local-bearer foundation and reject those later identifications;
+a brute law without an actual concrete bearer does not satisfy
+the bearer interface merely by being necessary.
+
+The comparison is symmetric: **Why is this primitive admissible,
+and what explains the target?** A necessary, intrinsically sufficient
+source offers a mode-of-having explanation; a necessarily
+instantiated, constitutively fundamental whole may offer the **same
+kind** of modal stopping explanation, while disputing a separate
+productive giver. A brute source and a brute whole both stop without
+further necessitating explanation. Calling the whole abstract,
+or the source “necessary,” without defending those descriptions is
+not a discriminating victory.
+
+### Inertia, same-bearer identity and explanatory scope
+
+The serious historical alternative has one persisting bearer `x`,
+actual earlier existence `E(x,t_0)`, a persistence law and absence
+of relevant destroyers. It can explain `E(x,t_1)` without a
+simultaneously giving distinct bearer at `t_1`. The positive
+law-based and transtemporal inertia options are recognized in
+[Schmid and Linford (2022), *The Metaphysics of Existential Inertia*](https://philpapers.org/rec/SCHTMO-124).
+No theorem here converts `t_0,t_1` to the Kripke-world parameter of
+`cb1cdea9`; `ActualEsseCause` remains world-free. In a
+beginningless history, the past-law explanation may have no first
+dated anchor while the obtaining of the **entire** actual history is
+taken as primitive, necessary or explained by some distinct
+global basis. That is a coherent rival explanatory shape, not a
+checked instance of the full #1614 bundle. The remaining #1616
+acceptance obligations (full-bundle inertia countermodel, sense
+3→5, non-efficient F2 interpretation) remain open.
+
+### Connected comparative argument graph
+
+~~~mermaid
+flowchart TD
+  O["Actual whole W with u, v, A and exercised powers"] --> T{"What explains W obtaining?"}
+  T --> HN["Necessary constitutive/governing whole"]
+  T --> HB["Primitive global obtaining fact"]
+  T --> S["Unreceived actual productive source n"]
+  HN --> HL["OPEN: necessary modal admissibility + existential import"]
+  HB --> HE["Local constitution; ultimate W fact remains primitive"]
+  S --> SP["OPEN: intrinsic sufficiency + real productive source-to-member bridge"]
+  FIX["State-indexed actual r: empty and full fixed"] --> POP["Add nonempty admission"]
+  POP --> UNIQUE["Only one admitted state, all members r-caused"]
+  UNIQUE --> LIMIT["Structural counterinterpretation; NOT metaphysical production"]
+  PER["Exercise presupposes actual bearer + productive priority"] --> NOLOOP["No finite productive self-cycle (existing)"]
+  NOLOOP --> OPEN["Infinite source-free ancestry still open"]
+  SP --> CCR["OPEN: every complete local r supplier cone has a root / 20babef7"]
+  CCR --> COMMON["Existing c6d92415 / c35b1a5c plus coverage, uniqueness, population, EM"]
+  COMMON --> ATTR["Separate SAME-witness necessary/pure-act/simplicity/GOD_4 bridges"]
+  HI["Actual same-bearer past + law"] --> HP["Later persistence; whole-history existence remains separate"]
+~~~
+
+| Proposed account | Actuality primitive | Explains members? | Explains the whole? | Status against the same challenge |
+| --- | --- | --- | --- | --- |
+| Purely borrowed r-activation, no global admission | None beyond conditioned supplier activations | Conditionally, by inputs | Cannot uniquely force a populated solution among all states | **Conditional incompatibility** of unique population with empty-state admission (#1878); no metaphysical impossibility |
+| State-indexed, rootless globally selected circle | The populated-order admission itself | Formal reciprocal support only; productive exercise **not** checked | Only if admission has defended modal/ontic force | **Structurally consistent** control; productive holism unresolved |
+| Necessary whole / priority monism | Necessarily or fundamentally obtaining concrete W | Constitutive whole-to-part explanation | Potentially by necessary W, if existential import defensible | **Live**; if W is underived in the selected relation it may satisfy narrowed foundation |
+| Brute actual whole and collective constitution | Primitive whole-fact F | Yes, conditional on F and true full-ground sufficiency | F explicitly left primitive | **Coherent under proposal**, explanatorily incomplete under a demand to explain F; not thereby false |
+| Genuine mutual productive esse-causation | None, or global actuality fact | Conditional on forbidden/contested productive circle | Needs a theory of exercised reciprocal production | **Inconsistent under shared strict productive priority**, not under arbitrary r assignment |
+| Source-backed complete productive order | Intrinsically unreceived actuality of n | Yes, if true productive giving connects n to actual recipients | Offered via n's intrinsic sufficiency | **Conditionally favored** on the narrow per se/productive reading; CCR applicability still open |
+| Existential inertia / beginningless law history | Earlier same-bearer actuality and law; possibly whole-history F | Yes for later persistence | Beginningless whole-history obtaining remains a distinct question | **Live** in its own temporal explanandum, not refuted by r-activation |
+
+**Cumulative provisional assessment and revision conditions.** The actual
+increment over #1878 is that the mathematical empty candidate *now
+really removes the actuality guards of the modelled bearers*, while
+a holistic law can nevertheless restrict the admitted models to
+a populated unique state with no r-root. This rebuts any claim that
+variation of `InAct` alone bridges from the fixed-point theorem to
+an underived source. The price of the new counterinterpretation is
+**explicit nonempty global admission**; a defender must explain
+whether that admission is merely a brute actual fact, a necessary
+concrete whole or a law with genuine existential import. There is
+no evidence here that it is independently productive.
+
+The comparative case for an underived source therefore remains
+**modestly favorable under exhaustive, genuinely productive per se
+existential supply**, because a bearer-independent originating
+input explains conditioned exercises without requiring them to
+actualize their own prerequisites. But the new test makes its limit
+sharper: **a necessary/constitutively fundamental whole is not
+excluded merely by its lack of r-uncaused *members*.** Underived
+concrete whole actuality and underived source actuality must be
+assessed as competing metaphysical modes of stopping, with
+the same ultimate-explanation requirement. The unqualified,
+mode-unspecified `20babef7` remains **underdetermined** and
+the holistic alternative is **not refuted**.
+
+Reopen specifically on: (i) a semantics and evidence for `W,A,P,E`
+that realizes full existential constitution while proving no
+underived r-bearer is present; (ii) an independent positive warrant
+that a global necessary constraint has existential import, rather
+than merely selecting an abstract solution; (iii) a real priority/
+exercise-to-r bridge that excludes purely derivative production
+in **each** supplier-complete cone, including an infinity case
+without simply asserting CCR; (iv) a fair comparison of the
+necessary whole's and subsistent esse's sufficiency; (v) the
+same-bearer #1616 full-bundle inertia test. Reuse #1882's totality
+cause, #1878's all-state selection, #1871's exact-r circle, and
+the earlier derivative-power, infinite and temporal controls;
+repeat no identical proof under a new label.
+
+**Self-sweep and verification boundary.** The new two-bearer
+control carries explicit state-varying `InAct`, the same
+`CausesIn` and essence/esse fields, nonempty admission,
+pointwise uniqueness only among admitted states, all-member
+r-coverage and no r-root. No source claim, statement, inference,
+registered result, definition, modal frame, evidence locator
+or ordinary result binding changes. It asserts no actual world,
+exercise, necessary structure or GOD_4 witness. Its Lean proof is
+an **unregistered helper** and must pass delivered-head CI.
+The synthesis is proposed pending independent semantic challenge.
+Formal root premise effects are intended **none**; the computed
+frontier delta must be taken from the PR's actual CI, not inferred
+from this prose.
