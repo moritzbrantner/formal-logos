@@ -6,5 +6,8 @@
   "inference_ids": [
     "79119823-3c1a-4923-9834-f6ae33c79c67"
   ],
-  "meaning": "Each paired input preserves parity. For a target with the starting parity, matching the two outer coordinates fixes edge choices that also give the required middle value. Each pair projection is full, and an optional unmatched endpoint flip switches parity classes. This uses the triple, coordinate map and parity predicate from the static elementary-report comparison in #1088. The operations are stipulated on one fixed background. Whether a real candidate source can exercise them there remains open."
+  "meaning": "Each paired input preserves parity. For a target with the starting parity, matching the two outer coordinates fixes edge choices that also give the required middle value. Each pair projection is full, and an optional unmatched endpoint flip switches parity classes. This uses the triple, coordinate map and parity predicate from the static elementary-report comparison in #1088. The operations are stipulated on one fixed background. Whether a real candidate source can exercise them there remains open.",
+  "definition_ids": [
+    "a3876b86-7245-47ea-9016-b051d1f72e56"
+  ]
 }

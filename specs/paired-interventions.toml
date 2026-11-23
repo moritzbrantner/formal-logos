@@ -5,6 +5,7 @@ results = "TruthCore.Results.Explanation.PairedInterventions"
 [[statement]]
 id = "Two paired inputs realize precisely the initial parity class on a three-coordinate path"
 lean = "InputRange"
+definitions = ["a3876b86-7245-47ea-9016-b051d1f72e56"]
 paraphrase = "From any starting Boolean triple, finite compositions of independently chosen paired flips on the left and right edges reach exactly the triples of the same parity. Every assignment to each pair of distinct coordinates is realized. Flipping only the first endpoint gives an excluded target. Allowing a single optional flip of that endpoint before the same paired inputs makes every target attainable."
 
 [[argument]]
@@ -19,6 +20,7 @@ axioms = []
 [[statement]]
 id = "A two-reading change comparison is accurate exactly when its offsets agree"
 lean = "OffsetAccuracy"
+definitions = ["eee96f99-49c7-47d6-a7b0-c6bbbabc98f0"]
 paraphrase = "For two Boolean target values and two Boolean measurement offsets, report each target XOR its offset. The change between the two reports equals the actual change exactly when the two offsets agree."
 
 [[argument]]

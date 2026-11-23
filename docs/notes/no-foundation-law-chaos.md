@@ -443,7 +443,10 @@ the exact PR head in CI.
 
 ## Causal propagation of a brute contingency (2026-11-23, #1867)
 
-**Restart checkpoint.** The population certificate passed binding, Comparator and NanoDa. The paired-intervention and readout proofs compile. Final independent challenge of this section and delivered-head checks are pending.
+Three registered controls fix what changes between the compared alternatives:
+the admitted population, the available interventions and the measurement
+offset. Each passed Lean, binding, Comparator and NanoDa. Their application
+to real modal possibility is assessed below.
 
 The question is whether admitting one brute existent licenses an additional
 uncaused agent *in an already populated order*. A restriction can be principled
@@ -572,7 +575,7 @@ observed trace. Hence:
   the observed trace selector. This is a proposed mathematical
   application of the existing result, not a built Lean adapter.
 * If I contains only the two constant tapes, the observed cell
-  after the first read has a unique trace. If it contains the
+  after the first read has a unique trace. If it consists exactly of the
   eventually constant tapes, all finite extensions are admitted
   but not arbitrary infinite traces. The *same* mechanism and
   observation map are retained. The decisive difference is what
@@ -610,8 +613,10 @@ not a Lean-certified result in this checkpoint.
 Fix a nonempty class of histories retaining a specified past and background
 K, including the original founder where required. Describe a requested
 entrant by its kind, site, onset, power and target independently of whether
-it can obtain *jointly* with K. For example, the later agent in the
-capacity-one model below can exist by itself. **Insertion freedom** says
+it can obtain *jointly* with K. Count a request as individually eligible
+when its onset and exercise are possible under the same laws with the
+retained occupant requirement relaxed. The solitary late agent in the
+capacity-one model supplies precisely that witness. **Insertion freedom** says
 that for every such eligible request there is an accessible complete
 continuation retaining K in which an additional unreceived bearer actually
 obtains and exercises that power. The negation at this background is one
@@ -640,7 +645,7 @@ firing for which the model supplies a circumstantial reason. Thus each
 interpretation satisfies the literal negation of the contingent-existence
 PSR `608a262d` there, and its assigned explanations are sound in #312's
 sense. No premise identifies every uncaused thing with a thing lacking a
-reason. The operative law is identical in all three cases. Each new agent
+reason. The detector mechanism is identical in all three cases. Each new agent
 persists and produces one firing one tick after birth. The detector
 registers a firing without identifying its source. [Population definitions and comparison](../../TruthCore/Explanation/PopulationEntry.lean)
 
@@ -650,8 +655,17 @@ registers a firing without identifying its source. [Population definitions and c
 | At most one agent is present at each time. | No late entrant can join this founder. In its absence the same candidate can begin at the proposed date. | A continuing occupant uses the single place. A law imposing this ceiling need never refer to the founder's name. |
 | Birth inputs are unrestricted. | For each later date a complete history adds one uncaused, unexplained agent and changes the same detector reading. | All other birth inputs and every entity's presence through the preceding tick agree. Positive input admission and an effective coupling do the work. |
 
-These are countermodels to an inference from the **shared premises**. Their
-interpretation as metaphysically accessible histories is a further claim.
+Capacity one defeats the inference from a brute founder to universal
+admission of individually eligible requests. Conservation excludes even a
+solitary late onset, so the set of such eligible requests is empty in that
+model. It defeats the separate claim that some later unreceived onset must
+be possible at all. Unrestricted birth inputs witness an effective insertion
+and defeat a universal ban. Interpreting these histories as metaphysically
+accessible is a further claim.
+The cause relation ranges over the selected order. The founder
+has no incoming edge there, and an independently assigned valuation gives
+it no existence-reason token. Neither condition establishes simplicity,
+unlimited esse, or foundational status with respect to everything real.
 The count ranges over the represented persistent agents. If a bearer can
 leave when its successor arrives, constant headcount can mask replacement.
 In #1867's unique-supplier example, a copy-power bearer and a toggle-power
@@ -660,8 +674,18 @@ keeps its characteristic power. Holding the same supplier throughout,
 allowing one switch, or assigning both bearers the same power gives different
 predictions. Even universal succession would require an account of the
 particular rigid bearer's absence and of the dependent's continuing identity.
-This is #1908's point about explanatory transmission applied to actual
-suppliers. A reason for a role always being filled can leave open who fills
+In the finite control from the #1867 handoff, retain the
+initial copy bearer for the first transition. For the remaining three
+transitions a stable bearer gives one power-code suffix (000). Allowing at
+most one replacement by the toggle bearer gives four (000, 001, 011, 111).
+Allowing all itineraries gives eight. Equal powers restore the single suffix
+even when both bearers are available. These counts concern effective
+copy/toggle codes in a structural example. They give no warrant for repeated
+instantiation of a rigid bearer. The repository’s `GivesAt` places the
+moment on the effect side and leaves the tenseless esse-cause relation
+separate. One cannot infer the root’s beginning, temporal presence or
+absence from that field alone. This applies #1908’s distinction between
+transmitting and explaining a pattern to successive suppliers. A reason for a role always being filled can leave open who fills
 it. [Regress and the same individual](contingency-receptivity-c2.md#what-does-possible-absence-have-in-common-with-an-infinite-regress)
 
 ### How a restriction can earn its scope
@@ -745,7 +769,33 @@ intruder, asking **which conserved quantity can this agent change, by what
 coupling, and while retaining which other conditions?** is stronger than
 counting how many targets it can reach. Independent choice of paired
 interventions already holds in this example. The missing operation is a
-physically different intervention.
+physically different intervention. [Reachable states and their proof](../../TruthCore/Results/Explanation/PairedInterventions/Solution.lean)
+
+**A restriction on the recipient can suffice.** Give a proponent of brute
+entry as many extra agents as desired. If every action on this still-intact
+three-site target must go through its two paired inputs, any finite episode
+of their actions still preserves its parity. The agents may differ in
+number, origin, intentions and upstream powers. An exhaustive account of the ways **this target can receive an influence**
+suffices for this exclusion. An independent proof that every interaction
+preserves parity could establish it even with additional ports or an open
+inventory of sources.
+The proponent of propagation can challenge this at a precise point by giving
+one agent an unmatched coupling that acts on the same target. Destroying the
+device, replacing it, or falsifying its display can each affect an observer.
+Each concerns a different outcome from changing its internal parity while
+it persists. Port calibration and the design of a real instrument warrant
+limited physical conclusions here. To extend the argument to *every possible*
+way of acting on the same bearer, the restricted repertoire must belong to
+its nature or follow from a genuinely exhaustive governing principle. Giving
+a model only two inputs cannot settle that philosophical premise.
+
+This also yields a test of the inference in reverse. Even decisive evidence
+of a parity change would challenge the adequacy of the two-input account
+for an intact, correctly read target. A new unreceived agent and a previously
+unrecognized power of an existing agent could exercise the very same
+unmatched coupling. Holding its effective operation and the readout fixed
+gives the same observed result in either account. Evidence of the added
+coupling by itself supplies no test of its operator’s existential origin.
 
 ### What survives interference with evidence?
 
@@ -770,10 +820,12 @@ output can itself be corrupted, reconstructing the result requires preserved
 records and a reliable comparison or an independent check. Truth conditions
 and logical consequence remain intact across these input/readout examples.
 A decision to act whenever the measured quantity *changes* can succeed
-through a common inversion. On the other hand, a particular agent who
-endorses an all-admitted-histories guarantee for a forecast or high-payoff
-bet and endorses that forecast or bet despite admitted indistinguishable
-contrary cases fails its **own** standard. #1808 already supplies this
+through a common inversion. Consider a particular inquirer who requires
+success in every admitted history before calling a forecast or promised
+high payoff strictly warranted. If that same inquirer **claims strict
+entitlement** to a specific forecast or payoff despite an admitted
+indistinguishable continuation in which it fails, the stance violates its
+own criterion. Merely placing the bet supplies no such entitlement claim. #1808 already supplies this
 same-agent contradiction, the safe-action control and the exact required
 premises. Fallible empirical trust can appeal to tests of calibration and
 drift that have evidential independence from the challenged channel.
@@ -794,7 +846,7 @@ records. The following answers grant each view its positive commitments.
 | Dispositional essentialism | The very same kinds of carriers and powers require matched transfers, or an effect requires a receiver of a specific kind. | A conditional essence need never be instantiated. Excluding wider entry requires that all relevant bearers and couplings fall under the constraint. A necessary operation law can accompany a contingent distribution of powers. |
 | Humean best system | Fixing a true, exceptionless law excludes continuations in which that law is false. The actual mosaic can warrant a stable summary and allow tested, fallible prediction. | Lawhood supervenes on the full mosaic. Holding only its past fixed leaves the modal admission and comparative weight of other mosaics to a separate account. Holding the whole mosaic fixed settles the question by stipulation. |
 | Governing necessitarianism | An operative strict law excludes violations in its domain. If its efficacy and domain are essential and exhaustive, the exclusion extends to every corresponding possibility. | Necessary laws can still admit different initial populations. Full necessitarianism denies the initial brute contingency itself and supplies no witness to the negation of the conditional. An impersonal necessary bearer still needs the relevant actual power. |
-| Classical theism | Universal giving of creaturely existence by the same source excludes any *unreceived* created entrant. A free, received intervention might produce exactly the same display. | One must establish that every candidate other than the source receives existence, and account for the particular order, its stability and finite knowers' access. Fixing a specific effective decree can settle an outcome that fixing divine nature alone leaves open. |
+| Classical theism | If every concrete bearer distinct from the source receives its existence from that source, a distinct *unreceived* entrant contradicts that universal dependence claim. A free, received intervention might produce exactly the same display. | One must establish that every candidate other than the source receives existence, and account for the particular order, its stability and finite knowers' access. Fixing a specific effective decree can settle an outcome that fixing divine nature alone leaves open. |
 
 If a governing constraint is contingent, it can exclude an entry in every
 world where it holds even if its actuality is brute. Asking why it holds
@@ -841,10 +893,13 @@ necessity exceed the conditions for this detector or a #312 reason token.
 The new tests supply comparative evidence without discharging a root
 premise. [C2 necessity route and interpretation](contingency-receptivity-c2.md)
 
-**Conditions for revision.** Toward wider propagation, give independent
-warrant for an unreceived onset and a repeatable joint composition of its
-origins and exercises, including a coupling that breaks the identified
-invariant without altering the retained background. Toward an unconditional
+**Conditions for revision.** One genuinely possible additional effective
+onset suffices to defeat a general prohibition. To support repeated
+new-agent insertion, give independent warrant for composing those onsets
+and exercises with the retained background. To reach an output of opposite
+parity, at least one permitted total change must break the invariant.
+Arbitrary empirical outputs can also be realized by a single sufficiently
+rich initial input and a fixed readout, without any late entrant. Toward an unconditional
 ban, establish exhaustiveness for all possible entrants, either from the
 constitutive kinds and population relations or from universal receipt of
 existence. To turn either result into a threat to actual inference, show
