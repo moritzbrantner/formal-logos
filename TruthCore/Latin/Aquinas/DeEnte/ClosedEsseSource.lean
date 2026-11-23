@@ -124,6 +124,33 @@ def SourceFreeFiniteCircleControl : Prop :=
   ¬ ClosedActualEsseCollectionsRooted sourceFreeFiniteCircle ∧
   ¬ CommonEsseIsEssenceSource sourceFreeFiniteCircle
 
+/-- An assignment of bearers that satisfies an abstract global activation
+rule. The assignment is not thereby an actual world or an existential cause. -/
+def SupplierStateFixed (rule : (B → Prop) → B → Prop) (state : B → Prop) : Prop :=
+  ∀ x, rule state x ↔ state x
+
+/-- Every activation under ANY candidate assignment presupposes an active
+bearer connected by the exact same-respect actual-esse-cause relation.
+This is a non-spontaneity condition on the rule, not a consequence of
+`ActualEsseCause` or proof that the assigned acts really occur. -/
+def EntirelyBorrowedRule (p : Profile B P R)
+    (rule : (B → Prop) → B → Prop) : Prop :=
+  ∀ state x, rule state x → ∃ c, ActualEsseCause p c x ∧ state c
+
+/-- A rule with an explicit exception for independently supplied inputs.
+The direction is only necessary, not sufficient: being a seed does not
+by itself make a bearer active in an assignment. -/
+def SeedOrBorrowedRule (p : Profile B P R)
+    (seed : B → Prop) (rule : (B → Prop) → B → Prop) : Prop :=
+  ∀ state x, rule state x →
+    seed x ∨ ∃ c, ActualEsseCause p c x ∧ state c
+
+/-- OPEN applicability bridge: any claimed independent input is an actual,
+underived bearer in the same r, not merely an abstract law, totality or
+uninstantiated capacity. Neither uniqueness nor the rule proves this. -/
+def SeedIsActualEsseRoot (p : Profile B P R) (seed : B → Prop) : Prop :=
+  ∀ x, seed x → p.InAct x p.esse ∧ ∀ c, ¬ ActualEsseCause p c x
+
 /-- Joint controls for strictness, rooted cycles, roster-only failure and
 population weakening. Interpretations only, not metaphysical counterexamples. -/
 def ClosedEsseControls : Prop :=
