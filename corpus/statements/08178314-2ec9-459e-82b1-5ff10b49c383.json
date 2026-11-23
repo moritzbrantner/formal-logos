@@ -1,0 +1,17 @@
+{
+  "id": "08178314-2ec9-459e-82b1-5ff10b49c383",
+  "label": "Each limited actual concretum has a distinct giver of esse that actually grounds it",
+  "paraphrase": "At one selected world w, each actual concrete bearer x whose act of being is limited has a distinct giver g. The same g causes x's esse in the fixed respect, is concrete and exists at w, and grounds x there. Limitation is a primitive of formal perfection of esse. It refers to neither quantitative size nor an observed restriction of some power. No independence, uniqueness or underivedness of g is asserted.",
+  "lean_declaration": "TruthCore.Causality.FiniteEsseDependence.LimitedEsseHasGroundingGiverAt",
+  "definition_ids": [
+    "6ced5205-e6a4-585e-950e-3b22e7c9ef01",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ],
+  "disambiguation_ids": [
+    "19190b6e-359f-590c-b434-4e6f5803da4f"
+  ]
+}

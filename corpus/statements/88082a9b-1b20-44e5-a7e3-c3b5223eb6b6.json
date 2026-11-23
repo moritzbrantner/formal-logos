@@ -1,0 +1,9 @@
+{
+  "id": "88082a9b-1b20-44e5-a7e3-c3b5223eb6b6",
+  "label": "Every two distinct bearers are comparable by nonempty paths in the selected graph",
+  "paraphrase": "For each pair x and y in the selected graph there is a nonempty directed path from x to y, x equals y, or there is a nonempty directed path from y to x. This concerns ancestors in the selected relation, with no requirement of a direct edge.",
+  "lean_declaration": "TruthCore.Causality.AncestorIndividuation.ComparableByAncestry",
+  "definition_ids": [
+    "1dff2d68-1348-5e7e-8ee7-248af63c8c53"
+  ]
+}

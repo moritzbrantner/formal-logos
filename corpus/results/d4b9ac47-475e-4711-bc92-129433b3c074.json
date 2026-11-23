@@ -1,0 +1,11 @@
+{
+  "id": "d4b9ac47-475e-4711-bc92-129433b3c074",
+  "label": "Identity by nonempty-path ancestors gives at most one source",
+  "argument_id": "d805079c-dcda-4f6e-a4d1-8c083db40ce7",
+  "challenge_module": "TruthCore.Results.Causality.AncestorIndividuation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.AncestorIndividuation.Solution",
+  "theorem": "TruthCore.Results.Causality.AncestorIndividuation.atMostOneSource",
+  "comparator_config": "results/d4b9ac47-475e-4711-bc92-129433b3c074/comparator.json",
+  "status": "solution-present",
+  "description": "A nonempty path ending at a source would give it an incoming final edge. Any two sources therefore agree on every strict ancestor, and the universal criterion identifies them. This argument requires neither population, well-foundedness nor excluded middle. The same criterion also applies to dependent beings, where the sibling control shows how it exceeds source uniqueness."
+}

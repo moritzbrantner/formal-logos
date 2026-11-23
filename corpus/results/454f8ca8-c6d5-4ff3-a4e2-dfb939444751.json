@@ -1,0 +1,11 @@
+{
+  "id": "454f8ca8-c6d5-4ff3-a4e2-dfb939444751",
+  "label": "Full ancestor identity and well-foundedness force comparability by ancestry",
+  "argument_id": "132d5816-bb8d-41f5-8b70-8748c3455e51",
+  "challenge_module": "TruthCore.Results.Causality.AncestorIndividuation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.AncestorIndividuation.Solution",
+  "theorem": "TruthCore.Results.Causality.AncestorIndividuation.comparability",
+  "comparator_config": "results/454f8ca8-c6d5-4ff3-a4e2-dfb939444751/comparator.json",
+  "status": "solution-present",
+  "description": "Well-foundedness passes to nonempty paths. Apply induction to each bearer of the pair. Excluded middle tests the two directional paths. If neither exists, the induction hypotheses and path composition show that either bearer's ancestors are ancestors of the other. The identity criterion then identifies the pair. No assumption makes each immediate contribution transitive or implies that actual existence satisfies this criterion."
+}

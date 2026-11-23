@@ -454,7 +454,9 @@ explains how two creatures can receive existence from one giver. It favors
 uniqueness if every root is subsistent existence itself and two acts of
 that kind could be distinguished only through a recipient or a limiting
 determination. Both claims need a defense against a rival that accepts only
-the absence of an external giver.
+the absence of an external giver. The [argument about the source of a limit](#in-what-sense-is-unlimited-being-the-default)
+now carries formal limitation through a recipient to a distinct actual giver
+under the explicit reception and causal premises.
 
 Analyst assessment of the rigid individual in issue #1887. Let P say that this
 very n is absent at some world accessible from the actual world. Grant the
@@ -2031,7 +2033,8 @@ recipient's nature and individuation to matter avoids that result. The
 ordinary claim that a creature could not exist without its essential sources
 never required the converse that the sources suffice to identify the creature.
 
-An independent check exposes the reach of that converse. Suppose it applies
+The [formal ancestry test](../../TruthCore/Results/Causality/AncestorIndividuation/Solution.lean)
+exposes the reach of that converse. Suppose it applies
 to *every* being and lists *all* its strict existential ancestors. In a
 well-founded transitive order this forces any two beings to be comparable
 in existential priority. For suppose otherwise. Choose a minimal x among
@@ -2040,9 +2043,15 @@ partners. Every predecessor of x is comparable with y by the first choice.
 It must be below y, since equality with y or priority of y to it would put
 y below x. By the second choice every predecessor of y is likewise below x.
 Thus x and y have exactly the same predecessors. The criterion identifies
-them, contrary to their incomparability. This analyst argument applies to
-the list-only proposal under the stated assumptions. The account of received
-existence allows two oaks neither of which gives the other its existence.
+them, contrary to their incomparability. In Lean, a strict ancestor is
+connected by a nonempty finite path along the selected edges. Such a path
+can return to its starting point in a cycle. Well-foundedness rules this out
+in the comparability argument. The comparison
+uses well-foundedness and excluded middle. The global identity criterion
+alone gives *at most one* root, even without either assumption. In the checked three-object
+production graph one source has two distinct effects with the same ancestors.
+This tests the structural inference. The real dependence of the two oaks
+requires its own interpretation.
 
 **Why should the giver be unique?** Start with the actual underived n,
 before calling it God. Consider a second alleged root. Ask what fixes its
@@ -2144,3 +2153,84 @@ concrete beings raises a further question about whether the role must always
 be occupied at all. Neither possibility is certified by describing it.
 Moderate confidence in suspension on the original shared premises remains.
 [Earlier test of occupation and replacement](#testing-occupation-and-replacement).
+
+#### In what sense is unlimited being the default?
+
+Take “limited” to mean that the act of existence of a concrete individual
+is restricted to a determinate mode of being. A finite size, a finite
+lifetime and an inability to do a particular task are different claims.
+Here “default” can express a metaphysical thesis with an actual consequence.
+For any being whose existence is genuinely unreceived, there is no principle
+contracting that existence to a finite mode. The strong premise is that
+**every** actual restriction of esse has a basis of this kind. It applies
+to a finite physical foundation and to a finite independent spirit alike.
+It gives no initial probability to an unlimited being and supplies no
+existing bearer on its own.
+
+There are two questions about an alleged finite foundation. *What fixes
+this limit?* A determinate nature is a candidate answer. *Why does there
+actually exist something with that nature?* The first answer can be
+informative even while the second remains open. In an oak, the nature that
+makes growth an activity of this kind also makes sense of why the tree grows
+as an oak. Its capacity to grow cannot give the oak its own existence.
+An exercise of that capacity already requires an actual tree. This gives a
+reason to exclude one purported source of actuality. The further demand
+that what receives existence have some actualizer gives the argument its
+force against brute finite actuality. [Aquinas, ST I, q.3, a.4](https://www.newadvent.org/summa/1003.htm#article4).
+
+The strongest positive reason for the restriction premise is that esse
+accounts for the actuality of a tree just as it accounts for the actuality
+of a horse, while their natures explain the different ways in which each
+is actual. Giving the common explanatory work to esse and the specific
+determination to essence explains both the agreement and the difference.
+The rival assigns both jobs to one primitively determinate actuality.
+The distinction between being actual and being an oak in our explanations
+does not by itself establish two really distinct principles in each
+concrete case. Conversely, merely calling a physical or a personal nature
+“primitive” offers no account of why its particular powers belong together.
+A successful account of the powers in terms of that one nature would
+answer the question about its character. Whether it would also answer
+why the bearer exists is precisely what divides the rivals.
+
+ST I, q.7, a.1 gives a reason to treat reception as a source of limitation.
+The force of the converse depends on how limitation was ascertained.
+If a measure already consists in a recipient's capacity, locating the limit
+in reception adds little. If the evidence identifies only a determinate
+positive nature, the move to a real recipient is substantive. The
+formalization leaves limitation and reception separately interpretable so
+this inference can fail. Merely omitting a limit from a description of
+being leaves both possibilities open. The stronger Thomistic reading says
+of this concrete act that there is positively no further principle that
+determines it to a kind. [Earlier warrant assessment](esse-root-leaves.md#current-cluster-assessment-under-the-substantive-objection-standard-2026-11-19) and [Aquinas, ST I, q.7, aa.1–2](https://www.newadvent.org/summa/1007.htm#article1).
+
+**Premises and consequences.** The arguments keep three roles distinct. In
+the notation below, x and g are beings, r is a recipient principle, and w
+is the selected world. A cause of existence and a ground at w are separate
+relations. The bearer x stays fixed throughout.
+
+| Claim | Formal content and status |
+| --- | --- |
+| A limit has a receiving principle | `1304b462` says that formally limited esse implies receipt in *some* r. Its converse, receipt implies limitation, cannot supply this direction. Reading r as a real intrinsic constituent of x requires a further interpretation. The formal premise supplies a recipient witness without a parthood or external-cause conclusion. |
+| Actual receipt and distinction of principles | The open premise `871a5f81` takes actual receipt to entail actuality in the selected respect. If essence and esse coincide, any receiver would be that very essence (`65f3d0c7`). A receiver stands in receptive potency to this esse (`7fcfcee8`). Nothing stands in that relation to itself (`14325c83`). Together actual receipt implies an actual bearer with esse distinct from essence. |
+| From receipt to an external giver | The q.3 a.4 premise `33ad148b` assigns a distinct actual cause of esse to that last case. Its upstream argument needs both an exhaustive internal-or-external causal alternative and the exclusion of sufficient essential self-production. The derived coverage `4bc853db` retains the same bearer, with a cause g distinct from x. The cause and recipient principle occupy distinct argument positions. [Coverage proof](../../corpus/results/2cf16a68-2692-446e-b135-3a4e390b7323.json) |
+| From a cause to dependence at w | For an actual concrete x, `cb1cdea9` takes that very giver as an actual concrete ground at w. Whether an originating cause still grounds the effect's present existence is a substantive application of this premise. [Grounding proof](../../corpus/results/1c21c205-1914-45d2-b543-fc524b72ed5e.json) |
+| From underivedness to fullness | If such a ground exists for every limited actual concretum, an actual root cannot be limited. Classifying unlimited esse as infinite in perfection (`be1289df`) and granting that the infinite possesses each pure perfection (`122b112e`) gives the existing root-perfection conclusion `fe67d766`. None of these universals supplies a root. [Root-perfection proof](../../corpus/results/586275e6-d7b0-47a1-9180-5e245d6d4de1.json) |
+| From fullness to uniqueness, divine identity and necessity | The preceding multiplication argument still needs shared nature and a basis of numerical difference (`860eae63`). The governor route supplies intellect and full naming under its own inputs (`6eb3fb5c`). The same-root necessity upgrade uses contingent grounding (`b63a1f75`). A claim about the extent of an existing act quantifies over different things from a claim about which possible worlds contain this very being. |
+
+The existing `uncausedComposite` interpretation isolates the cost of
+stopping at an actual recipient with no giver. The cause-of-esse route
+excludes that interpretation through its causal premises. The countermodel
+under the weaker assumptions supplies no evidence that such a recipient is
+metaphysically possible. Conversely, an impersonal account could accept an
+unlimited source and dispute that it has intellect. The argument fixes what
+a complete rival must address without settling that further dispute.
+
+I give the argument moderate positive weight for an unlimited *actual*
+foundation given a real, underived source. It explains why a finite
+recipient cannot supply the actuality it presupposes. My confidence in the
+conditional exclusion of a finite root is higher than my confidence that
+all real finitude falls under the reception principle. Independent evidence
+that every intrinsic restriction of esse involves receiving potency would
+strengthen the latter judgment. A concrete account of intrinsically finite
+actuality that explains its determinate powers without reception would
+weaken it. The modal verdict for this very individual remains open.
