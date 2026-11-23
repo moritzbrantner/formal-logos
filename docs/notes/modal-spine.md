@@ -1063,8 +1063,368 @@ uncaused but variably existing own actuality, and whether
 other explanatory channels can fulfill that role without
 a distinct recipient; compare q.3 a.4's `CAUSE_2`
 and strict grounding at exactly the same world and witness.
-An independent semantic review of this continuation is
-**pending**, and validation status must be taken from the PR.
+The merged #1877 continuation underwent its own PR review and validation;
+this later actual-giver integration requires a fresh semantic review.
+
+
+## Contingency, participation and an actual giver of esse (2026-11-23)
+
+**Scope and reconciliation.** This is the next checkpoint after merged #1870,
+#1872 and #1877. The fixed explanandum is the existence, at the selected world
+w, of the particular contingent bearer x, not a generic essence or a merely
+possible instance. The retained First Way endpoint is the very same first
+unmoved mover f, not a later-identified member of a second root argument.
+This section updates the philosophical assessment and adds a limited formal
+endpoint, rather than relabeling R1 or B2 as established. It reuses the
+source-backed readings already documented in this note,
+essence-esse-dependence-audit.md, underived-essence-identity.md,
+intrinsic-existence-reason-1595.md, and ca-horizontal-support.md; no fresh
+source attribution is made.
+
+### Positive reconstruction of R1
+
+The strongest available case is an **act-and-participation** account, not an
+inference from the bare modal definition of contingency.
+
+1. A contingent x really exists at w, although it is absent at some
+   accessible v. The definition of MODAL_CONTINGENCY_1 records that contrast,
+   without assigning a ground or a receiving principle.
+2. A specific finite nature determines **what** x is. Describing that nature,
+   even completely at the level of its characteristic powers and conditions,
+   is not yet accounting for the **act that x is**. A description can
+   coherently be considered without thereby producing an existent. This is a
+   challenge to the sufficiency of essence-as-description, not by itself
+   proof of a real essence/esse composition.
+3. On the stronger Thomistic ontology, actuality is not another property in
+   a catalogue of properties. Esse actualizes the determinate nature, and the
+   nature sets the mode and limitation under which that actuality is possessed.
+   If this is a *real* dependence of a determinate capacity on its act, rather
+   than a merely conceptual distinction, the act is participated/received in
+   a constituent principle. Reception is the relevant constitutive relation,
+   not yet a historical event and not yet a giving action by a different being.
+4. An essence which itself fully and unconditionally supplies its own
+   existence has a different explanatory profile: on a suitably rigid,
+   cross-world account of that essence and the relevant possibilities, its
+   actuality is inseparable from what it is. A contingent intrinsic reason,
+   by contrast, must say why its explanatory contribution holds in w without
+   requiring x at every accessible world.
+5. In this ontological setting a genuinely contingent x cannot be sheer
+   self-subsistent, unreceived actuality **if** (i) every contingent x's esse
+   is limited (the premise "contingent → limited esse", OPEN; see the q.7
+   checkpoint below, which states this modal-to-real step and why absence at
+   another world is not yet diminution of perfection) and (ii) every limited
+   act of esse needs a distinct receptive principle. That two-premise
+   conditional gives a positive reason for R1: contingency discloses an
+   actuality not supplied as self-subsistent by the finite nature. Premise
+   (ii) is the substantive participation commitment and premise (i) the
+   modal-to-real bridge. Neither is obtained merely by calling x contingent
+   or by observing that its concept does not mention existence.
+
+The case is therefore stronger than a simple appeal to lack of a reason:
+it identifies the proposed *ontological work* performed by reception, namely
+the constitutive relation of a determinate nature to an act it does not
+possess as subsistent identity. But the move from contingent to
+participated/received existence remains **OPEN R1**: it goes through the
+separate steps contingent → limited (finite) esse and limited esse →
+received esse, and "finite" and "contingent" are not the same notion. An adequate defense must
+show why an unreceived, finite and modally contingent actual individual is
+metaphysically defective, rather than merely unpreferred as an explanation.
+The Platonic Form-exemplification family in participation-grounding.md is
+not silently treated as identical to this Thomistic participation of esse.
+
+### Intrinsic alternatives and explanatory scope
+
+| Proposal | Positive account of this x at w | Explanatory limit and precise relation to R1 |
+| --- | --- | --- |
+| **Received finite actuality** | A determinable nature has its act of existing as a real, limited reception; the same act makes x actual. | Accepts R1. Does not by itself identify or even assert an external giver. Must defend real constitution, not just a word distinction. |
+| **Intrinsic necessitating nature** | This individual's own nature has intrinsically sufficient existential content in the relevant possibilities. | A genuine unqualified, rigid sufficiency would yield necessity in those possibilities, not contingent x. Whether the particular content is adequate and real is a further question; mere essence/esse equality does not prove it. |
+| **Intrinsic nonnecessitating reason** | An internal propensity, probabilistic law or spontaneous capacity can explain why x is an admissible outcome, perhaps even why it occurred under a noncontrastive causal standard. | May explain probability or occurrence without necessitating it. Does not answer the complete contrastive question why x obtains at w rather than v unless that standard is waived or supplemented. It can remain unreceived if the participation doctrine is denied; a reason token is not a receiver. |
+| **Brute contingent actuality** | A primitive actual individual is one of the basic existents, with no further reason for its obtaining at w; it can still have determinate nature and stable laws. | Denies R1 for that individual. It declines a complete existential explanation rather than contradicting a formal logic law. It is disadvantaged under a defended unrestricted existential adequacy demand, but not shown metaphysically impossible by that demand's label. |
+| **Extrinsic or holistic explanation** | A necessary/contingent external cause, or a joint structure, explains x without automatically making the reason a productive efficient cause of esse. | Compatible with reception but not equivalent to it. A noncausal global reason needs its own account of actuality, explanatory direction and full-token adequacy. Matching limit: a non-necessitating external giver leaves the same contrastive fact open (why x at w rather than not at v) as the intrinsic nonnecessitating reason; a necessitating one does not help either: if the giver exists necessarily and necessitates x, then x is necessary at w, contradicting x's contingency, and applied to every contingent thing that is modal collapse. So the contrastive standard charges both rows alike. |
+
+These are **substantive rival packages**, not five unconstrained truth
+assignments. For the intrinsic nonnecessitating rival the crucial issue is
+whether the internal mechanism has content independently specifiable before
+the token-existence fact; making the explanatory token simply "x exists" is
+circular copying. For the received-act side the symmetrical issue is
+whether the receiver/act distinction does genuine explanatory work beyond
+renaming a brute instantiation. The earlier registered
+EssenceReasonSeparation and IntrinsicReasonBoundary results already distinguish
+nature-membership, modal co-existence and candidate intrinsic reasons; their
+candidate records alone do not certify explanation of an individual's
+existence. No duplicate theory of those predicates is introduced here.
+
+### R3 and receptive irreflexivity: what the argument actually excludes
+
+The verified #1877 theorem obtains B6 from **R1** (a recipient exists),
+**R3** (if x's esse equals its essence, any recipient of it is that
+essence), De ente's receiver-in-receptive-potency principle, and
+**principle-level irreflexivity** (no principle is receptive to *itself as the
+same act in the same respect*). The reductio is: suppose that esse(x) and
+essence(x) are the same principle; R1 supplies p; R3 makes p that identical
+principle; De ente puts p in receptive potency to that very principle; strict
+receptive irreflexivity excludes this. It is *not* a theorem that logical
+contingency alone yields a real essence/esse distinction.
+
+Why might irreflexivity be independently plausible? An act insofar as
+*received* is the actuality of a determinable recipient. The same respect
+cannot simultaneously be the unactualized receptive pole and the very act
+which constitutes its actuality, without losing the act/recipient
+explanatory distinction. This applies to receptive potency **of a principle**,
+not ADOPTED POTENCY_1 of an already actual *whole bearer*. It does not rule
+out self-identity, self-knowledge, reflexive predicates, circular
+descriptions, or every possible form of intrinsic self-explanation.
+#1877's R2 control correctly shows that mapping principle receptivity to
+unactualized POTENCY_1 at esse would eliminate every actual contingent
+recipient, and is not a positive B4 argument.
+
+R3 also needs a real metaphysical warrant: if a bearer is supposed to be
+subsistent esse itself, what other principle could receive that same
+subsistent act **as that bearer's own esse**? That supports the identity-scoped
+law, but only after specifying the bearer/principle/act individuation and
+excluding rival cases such as a constituted whole, a united soul and body,
+or an extrinsic subject that bears a relation without receiving the same
+act as its own. The stronger general own-essence reception law is not
+inferred for every nonidentity case. The simple reflexive x=x case does
+not establish R3; the real meaning of the represented equality is OPEN.
+
+The brute model in #1877 has distinct *represented* essence and esse but
+no recipient, so **B6 alone does not imply R1**. If the model's two values
+are interpreted as real principles and limitation of actuality requires
+reception, it violates that additional ontology. If its distinction is
+conceptual and actuality is primitive, it is a candidate brute rival.
+The finite model alone certifies neither interpretation's metaphysical
+possibility. The conserved pure-act mover has actual external esse-support
+exactly at its existence worlds, demonstrating that POTENCY_1-pure-act
+need not mean unreceived; its source is simply prior, so it **fails B1**
+(firstness in being). The larger Thomistic sense of pure actuality could
+exclude receptive composition, but this is not an implication of the
+current adopted POTENCY_1 predicate.
+
+### Two explicit bridges to a *real actual giver* at the same world
+
+The additional endpoint is the new registered statement
+**2f9b4acb-4bd5-4adb-91ac-8935f46f2e69**:
+ContingentHasActualEsseGiverAt(F,w). For each x contingent at w it asserts
+one c with **c different from x**, ExistsAt(w,c) and
+CausesIn(c,x,F.esse). It is stronger than B2 **8a8d00e9** by actual
+presence of c. The bearer x, cause c, world w, and CAUSE_2-at-esse relation
+remain fixed. The recipient *principle* p need not be c. No inference to
+grounding, sustaining action or efficient production is built in.
+
+| Support path to actual giver | Complete required existing inputs | What supplies the material step |
+| --- | --- | --- |
+| **Coverage from reception** (result **8d8920ac**) | R1 **ae9d9473** + ReceivedEsseHasCauseOfBeing **4bc853db** + UnitingCausesPresent **7ce040a2** | The independently OPEN tenseless reception-to-CAUSE_2 coverage supplies a distinct c, then the independently OPEN selected-world cause-presence interface makes it an actual c. Neither is contained in "receipt in p." |
+| **q.3 a.4 from B6** (result **a3f7a9eb**) | B6 **96971e31** + selected-world actuality **0436de86** + q.3 a.4 external-cause reading **33ad148b** + cause presence **7ce040a2** | Existing R1/R3/De ente/receptive-irreflexivity proof feeds B6 **upstream**, as a separate graph argument. At this node q.3 supplies a distinct c causing the same x's esse, and world-presence makes c actual. No inference equates receipt in p with c. |
+
+**Sense-index boundary:** The old `UnitingCausesPresent` statement
+had inherited unrelated definition links for support `R`, world-local
+`actualGraph`, divine simplicity and necessary underived sources. Its
+metadata now indexes just actual world presence, tenseless `CausesIn`
+and the corresponding explicit interface. Only the valid
+ATEMPORAL_CAUSE_IN_ESSE_1-to-_3 bridge, anchored by the presence
+premise itself, is retained. The q.3 branch separately retains its
+HasExternalEsseCause-to-CausesIn meaning bridge anchored by q.3 a.4.
+No contrast-only link is passed off as an inference. Reception and
+external cause appear in **separate** upstream/downstream argument
+nodes, joined by the already-registered B6 intermediate.
+
+These are *alternative conditional supports*, not independent empirical
+corroboration: **Cause presence occurs in both direct support nodes; R1 is direct in the coverage route and enters the q.3 route only upstream, through B6's derived support c4bc08b3, when B6 is derived**. The second node does not borrow the coverage premise; the first does not borrow q.3 a.4. The R1/R3/receptive-irreflexivity dependency is separately and explicitly attached to B6, so the cumulative graph composes it into the second path without pretending the q.3 premise itself translates reception into causing. Neither
+proves R1. The q.3 a.4 cause being InAct(c,esse) is not converted to
+ExistsAt(w,c): the existing ExistingInActAt interface goes in the
+*opposite direction*. The presence controls (result for
+`Control.PresenceControls`) certify in one frame that each route's other
+premises hold while UnitingCausesPresent and the endpoint fail, so
+neither route yields the endpoint without the presence premise.
+
+**Dominance of the new path to B2.** Through the projection d2d55c9b,
+route 2 reproduces the existing B2 support b46b88c8 (B6, 0436de86 and
+q.3 a.4 give B2 directly) with an idle presence premise added, and
+route 1 supplies B2 from {R1, coverage, presence} when {R1, coverage}
+already suffices (coverage gives the distinct cause). So as supports of
+B2 both new paths are dominated by bundles without the presence premise;
+their non-dominated content is the stronger actual-giver endpoint itself,
+which no downstream statement yet consumes (next test (e)).
+
+Projection result **d2d55c9b** proves the new actual-giver node implies
+old B2 **8a8d00e9**, dropping cause presence. The existing verified
+FirstMoverNecessity.firstMoverNecessaryByEsseCause then consumes B2,
+firstness-in-being B1, distinct-esse-cause priority B3, B0, excluded
+middle, the First Way mover witness and its pure-act premise. If that
+**very f** were contingent, the projected cause c would be simply prior
+to f, contrary to B1. The conclusion is necessity of **that f**, not
+that every contingent x receives esse *directly* from f, and not
+uniqueness of f or every source's necessity. Further grounding/causal
+chain principles would be needed to infer an ultimate same-giver for
+each contingent effect.
+
+**Independent q.7 participation checkpoint.** The existing, source-pinned
+`EsseLimitedOnlyThroughReceptionReading` (ST I q.7 a.1, statement
+`1304b462`) already argues that a *limited act of esse* is received in
+some principle: if a specific contingent x at w has **really limited
+esse** (limited in its degree of perfection, not in duration or
+cardinality), then q.7's bridge gives receipt of that very x's act. This
+is not yet a more independently motivated route than the essence/existence
+contrast: definition `6ced5205` (LIMITED_ESSE_1) says the content of
+`EsseLimited` "is fixed only by" this reception statement and the
+unlimited-is-infinite statement, so limitation currently has no content
+independent of reception against which the q.7 bridge could be tested.
+The remaining modal-to-real step (premise (i) of step 5 above) is to argue
+that every contingent x's esse is limited, without equating absence in
+another accessible world with diminution of perfection. Infinite formal perfection, contingent logical status
+and represented essence equality are distinct notions. The older
+`ContingentConcretumParticipatesEsse` (statement `ff8ff869`) is
+another OPEN source-indexed participation bridge, restricted to actual
+concreta; it is not an already established or universally quantified R1.
+These dependencies should be investigated before a new equivalent
+premise is registered.
+
+**Strictness control:** `Control.absentSourceFrame` makes the
+mover `true` contingent at the selected world (no `IsFirstUnmovedMover`
+fact is asserted of it) and stipulates that only the absent `false`
+bears an atemporal CAUSE_2 edge into its esse. The
+`absentSourceSeparatesB2FromActualGiver` certificate checks nonvacuous
+B2 but not the stronger actual-giver conclusion nor
+`UnitingCausesPresent`; the premise-free `presenceControls` result adds,
+in the same frame, that each route's other premises hold there, and it
+backs the strictness of the registered strength order (actual giver
+strengthens B2). It is a structural two-world model and does not
+establish that a nonexistent cause can metaphysically produce existence.
+
+**Semantic-metadata repair:** The claim `UnitingCausesPresent`
+does not refer to an ordinary actual causal edge or existential
+support `R`. Its inherited generic source-definition links have
+been narrowed to its actual type and selected-world presence.
+Consequently no unsupported metadata bridge to `R` or to
+`actualGraph` is needed. The q.3 route starts from B6
+as a separate registered intermediate, so it also needs no
+fake reception/external-cause bridge.
+
+The source-presence interface is world-level: `Ontic.ExistsAt` says
+whether c exists in the world w, not at a time. Its plausibility is that
+a cause of x's esse that does not exist in x's world at all cannot be
+what supplies x's act there. The cases it excludes are therefore causes
+non-actual at w (absent from that world altogether), that is, conditions
+that do not exist at w, which
+the tenseless, mode-unspecified CausesIn does not itself rule out. A past
+originator that existed in w satisfies the presence premise, so the
+endpoint says nothing about concurrent or sustaining giving; that
+remains a further question, as the present/relational receipt and
+time-symmetry investigations already show. Its explicit selection is why
+the new endpoint is meaningful rather than a relabeled B2.
+
+### Matched explanatory parity and the most serious rival
+
+The strongest surviving rival for **R1** is a *primitive contingent
+actuality with a determinate intrinsic constitution*: x exists at w
+without received esse or a constitutive actualizing giver; its internal
+dispositions or world-law account for its stability and transformations,
+while its initial obtaining is a basic contingent fact. This is more
+specific than assigning arbitrary predicate values. It incurs a
+foundational brute existence, not necessarily lawlessness, chaos,
+epistemic irrationality, or an inability to explain derivative facts.
+The rival is **not established to be metaphysically possible**:
+whether an act of existing can be real, contingent and unreceived is
+exactly the participation disagreement.
+
+Apply the **same** existential adequacy standards to an alleged
+necessary being. It will not do to declare the necessary source's
+existence fully explained merely by writing NecessaryAt(f) or
+esseOf(f)=essenceOf(f); the source's nature must supply independently
+characterized positive content which explains its actual existence.
+Similarly, the brute rival may not smuggle "x exists" into an alleged
+intrinsic reason and call it complete. #1872's symmetric parity result
+tests the *reason-status* feature, not evidence for or against God:
+a rule excluding unreasoned acceptance applies to an unreasoned
+necessary God or physical base too. If the necessary source really
+has an adequate self-explanatory nature, while the contingent rival
+offers only a brute instantiation, they are not on explanatory parity.
+That comparison remains conditional on the contested sufficiency of
+the intrinsic necessary reason and on the comparative adequacy norm.
+
+A nonnecessitating intrinsic reason for contingent x must be evaluated
+separately from bruteness. It could be an explanans of a token occurrence
+under a weaker causal standard even if it leaves a contrastive fact
+open; treating every such reason as BX1-forbidden self-causation
+would pre-judge the issue. BX2 likewise converts a reason about
+another being into CAUSE_2 only as an OPEN bridge. Neither an
+explanation token nor a ground edge is an esse-giver by its name.
+
+### Provisional assessment and next discriminating checkpoints
+
+**Positive case:** R1 has a substantive, nonverbal rationale within
+a real participation/act-of-esse ontology: an act whose determinate
+nature neither is nor unconditionally supplies that act is received
+rather than self-subsistent. R3 and receptive irreflexivity give a
+stronger restricted argument for B6, conditional on their real
+principle/act interpretation. Two formally separate bridges now
+lead from that route to an **actual** giver at the same world, and
+the existing First Way proof preserves the identical f.
+
+**Remaining difference:** none of these results **establishes** the
+unrestricted transition from modal contingency to R1; proving an
+efficient giver requires more than an intrinsic recipient, and
+proving an *actual* giver requires the selected-world presence
+interface. The brute-contingent-first model is structurally coherent
+under the currently adopted vocabulary; the full participatory
+ontology would disallow it only through a defended constitutive
+principle, not through Lean satisfiability or the word "contingent."
+The externally conserved pure-act model cannot also satisfy firstness
+and the required causal priority, but it remains a live distinction
+between first in motion and first in being.
+
+**Next tests without another equivalent-premise loop:** (a) supply
+limitation content independent of reception (LIMITED_ESSE_1 `6ced5205`
+is currently fixed only by the reception and infinity statements), then
+assess whether real limitations of esse (rather than merely the absence
+of x in another world) positively entail a receptive constituent; (b) seek a genuinely explanatory intrinsic contingent
+candidate at the same individual-existence explanandum, and show
+whether token/contrastive adequacy rules it in or out; (c) investigate
+the source-indexed scope of R3 for composite versus self-subsistent
+esse; (d) connect actually present CAUSE_2 to sustaining or
+nonproductive grounds only with existing independent semantic bridges;
+(e) test whether per-se explanatory priority and a defended
+regress/whole-system principle make the actual cause chain terminate
+at the **same** necessary first source. Test (e) is also the connection
+plan for the presence strength of the actual-giver endpoint `2f9b4acb`:
+no downstream statement consumes it yet (the First Way route uses only
+its B2 projection), so the missing bridge is a premise that uses the
+actual presence of the giver, for example a per-se chain or termination
+principle over actually existing causes. The registered graph preserves
+all shared premises and leaves the stage-two God/uniqueness claims open.
+
+**Implementation boundary:** New Results/ReceivedEsseActualGiver theorem
+signatures, a frozen Challenge, Solutions and canonical corpus support
+records cover two actual-giver routes and the projection to B2.
+Pre-existing #1877 and #1872 finite controls remain the relevant
+distinctions; no theorem about metaphysical possibility is asserted.
+Independent semantic review and final-head validation of this
+continuation must be completed separately from the already merged
+PRs. No new source passage or philosophical closure is claimed.
+
+### C2: the grounding of contingency (2026-11-23; pointer)
+
+Full record: [contingency-receptivity-c2.md](contingency-receptivity-c2.md),
+batch `specs/c2-contingency-grounding.toml`, attempt `137ac90d`. C2 (every
+being contingent at `w` is existentially receptive, by received esse or matter
+and form, or has a distinct SIMPLY_PRIOR_1 CAUSE_2 of its esse) is derived
+from PGP (contingent beings can fail to be in substance or are under some
+being's power over their esse), a co-occurrence correlation, passive→receptive,
+`b62a64ab` and B3, and gives the same-witness endpoint `f9208664` with
+firstness and the new unreceivedness intermediate (POTENCY_1 pure act carried,
+unused). R1 and B2 each imply C2; C2 is independent of B2 ∨ B4 and of the
+pure-act target. #1870 gap 1 is answered conditionally: B2 ∨ B4 from PGP;
+correlation yields bridge (ii) only for incorruptibles, and the unrestricted
+form is not derived (its countermodel is an uncaused corruptible). B4b with
+adopted POTENCY_1 excludes actual corruptibles (law 10). Provisional judgment
+(after semantic challenge): C2 is not contested by the rivals recorded there
+on corruptible or dependent beings, given passive→receptive and B3 (both
+OPEN); at the foundational simple being, where the route applies it, its
+force equals that of power-grounded modality for existence, not shown superior
+here to combinatorial, primitivist, essentialist or hybrid rivals. B2 ∨ B4
+`3c9d683b` is now derived (proved, not established); no premise is
+established.
 
 ## Stage two: that being is God
 

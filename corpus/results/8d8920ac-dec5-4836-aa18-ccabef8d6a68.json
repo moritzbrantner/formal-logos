@@ -1,0 +1,11 @@
+{
+  "id": "8d8920ac-dec5-4836-aa18-ccabef8d6a68",
+  "label": "Received esse has a distinct actual giver under source-coverage and presence",
+  "argument_id": "f3180780-599d-4596-9d7e-6d81a8c28874",
+  "challenge_module": "TruthCore.Results.Causality.ReceivedEsseActualGiver.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ReceivedEsseActualGiver.Solution",
+  "theorem": "TruthCore.Results.Causality.ReceivedEsseActualGiver.actualGiverFromReceivedCause",
+  "comparator_config": "results/8d8920ac-dec5-4836-aa18-ccabef8d6a68/comparator.json",
+  "status": "solution-present",
+  "description": "Conditional reception-to-actually-present-giver route. New stronger endpoint; coverage and presence remain OPEN and shared with other esse-cause arguments."
+}

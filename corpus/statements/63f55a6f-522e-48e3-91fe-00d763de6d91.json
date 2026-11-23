@@ -1,0 +1,19 @@
+{
+  "id": "63f55a6f-522e-48e3-91fe-00d763de6d91",
+  "label": "The unprioritized frame satisfies C2's weak form and not C2",
+  "paraphrase": "In the finite unprioritized frame (a necessary being causes the esse of a contingent, unreceived, simple first mover without being simply prior to it; nothing received, no matter-form composition), C2-minus holds and C2 fails. A structural surrogate, not a metaphysical possibility claim.",
+  "lean_declaration": "TruthCore.Causality.ContingencyGrounding.Model.UnprioritizedSeparates",
+  "definition_ids": [
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f9f58df7-d3be-4d66-b1f1-204d7049c450",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"
+  ],
+  "disambiguation_ids": [
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76"
+  ]
+}

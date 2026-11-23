@@ -1,0 +1,47 @@
+{
+  "id": "f644aee8-8d2d-4221-8846-ad901ce7c258",
+  "label": "First Way mover is necessary, from firstness, unreceivedness and C2",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "7bce7007-ad29-5f5b-b4b3-e7b02bf98312",
+    "bd0a4f81-29ba-4349-aa7d-b1fdcf6fd8e2",
+    "74eb9113-552b-5ec6-8e09-68374305dd58",
+    "6c18d52b-2456-59ae-995f-13440f8c808d",
+    "2e2ab9cc-28d7-4680-9ff9-ef42fe9d22f9",
+    "6508c239-b36d-4010-b9e4-ff0cdd5757e5"
+  ],
+  "conclusion_statement_id": "f9208664-e57b-4912-b6e7-edfcd23a4f89",
+  "inference_ids": [
+    "807b60f1-e208-4cc5-aa85-c0013ba33f6f"
+  ],
+  "meaning": "Take the prima via's first mover f. It moves something, so it exists at w (B0). Suppose it is absent at some accessible world: then it is contingent at w and C2 makes it existentially receptive or gives it a distinct, simply prior CAUSE_2 of its esse. Received esse and matter-form composition are excluded by unreceivedness; a distinct simply prior cause is excluded by firstness (it would be f itself). So f is present at every accessible world (excluded middle). Pure act (POTENCY_1 in no respect) is carried for the endpoint and does no work: necessity comes from unreceived esse and underivedness.",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "25e19d5a-5cdf-5916-a888-f6a0ce970f11",
+    "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "a49e4cf1-ca4f-5519-9724-892af257cedb",
+    "a67e6214-624d-54d1-81ff-442c09c5ea9d",
+    "85f7f569-ab4d-514b-aa2c-cf75171ad105",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "f9f58df7-d3be-4d66-b1f1-204d7049c450"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "b1640e51-d7d4-5a80-9992-29fa1ded8048",
+    "8bb31748-e20f-5266-ac39-c442faab6622",
+    "215fdc0a-7005-510d-91da-84fcbc77a9dc"
+  ],
+  "strong_version_needed": {
+    "6508c239-b36d-4010-b9e4-ff0cdd5757e5": "Firstness excludes only a SIMPLY_PRIOR_1 cause of the first mover; the weak form without the priority clause would need the existing B3 as a further premise to reach firstness. The same bundle with C2-minus and B3 is available through the registered C2-from-weak-form-and-B3 argument."
+  }
+}

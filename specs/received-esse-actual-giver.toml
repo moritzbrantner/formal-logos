@@ -1,0 +1,92 @@
+# Stronger actual-giver endpoint from existing R1 and separately OPEN causal
+# and same-world presence interfaces. Route 1 uses R1 directly; route 2 uses B6,
+# which R1 supports upstream (c4bc08b3) when B6 is derived. Both require the
+# already registered cause-presence principle.
+# The projection to B2 feeds the SAME First Way witness. No premise is closed.
+#
+# Analyst formulations, attribution deferred; only previously pinned sources
+# and existing semantics are reused.
+
+[batch]
+vocab = "TruthCore.Causality.ReceivedEsseActualGiver"
+results = "TruthCore.Results.Causality.ReceivedEsseActualGiver"
+
+[[statement]]
+id = "2f9b4acb-4bd5-4adb-91ac-8935f46f2e69"
+label = "Every being contingent at w has a distinct CAUSE_2 of its esse that itself exists at w"
+lean = "ContingentHasActualEsseGiverAt"
+paraphrase = "Conditional same-world strengthening of B2: for every bearer existing at the selected world and absent at an accessible world, there exists a numerically different bearer that itself exists at this selected world and causes that target's esse in the shared CausalityFrame. No identification of a receiving principle with this causal bearer, no temporal concurrency, no efficient-cause or grounding identification, and no claim that the first unmoved mover is the giver. The cause-presence bridge is independent and OPEN; absent sources can satisfy world-free CausesIn in structural interpretations."
+definitions = ["97f37f5c-7f82-5077-9bb9-6cfc8673631d","211a6432-8b8f-53ed-85e3-75173bb15b24","5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72","beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b","35fa7162-6cb3-52e1-ac5b-66afc318c74f","6f1d1395-7c1d-5bd5-a45d-03380857aed6"]
+
+[[argument]]
+id = "f3180780-599d-4596-9d7e-6d81a8c28874"
+label = "Received esse has a distinct actual giver under source-coverage and presence"
+theorem = "actualGiverFromReceivedCause"
+premises = ["ae9d9473-34f1-4b51-8f13-41d340d64ad1","4bc853db-ec33-40ff-857e-6a67f17532fb","7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"]
+sense_bridges = [{term = "ATEMPORAL_CAUSE_IN_ESSE", from = "ATEMPORAL_CAUSE_IN_ESSE_1", to = "ATEMPORAL_CAUSE_IN_ESSE_3", statement_id = "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"}]
+conclusion = "2f9b4acb-4bd5-4adb-91ac-8935f46f2e69"
+rule = "Existential composition: a recipient implies a cause, then actual presence of that same cause"
+meaning = "R1 gives a principle receiving the contingent x's esse. The already open received-esse/CAUSE_2 coverage bridge gives a distinct c causing that same x's esse. The independently open selected-world cause-presence interface then makes c exist at w. The recipient principle is not identified with c. The result is a genuine actual-giver-at-w endpoint, stronger than B2, not a proof of R1 or of either causal bridge."
+description = "Conditional reception-to-actually-present-giver route. New stronger endpoint; coverage and presence remain OPEN and shared with other esse-cause arguments."
+definitions = ["211a6432-8b8f-53ed-85e3-75173bb15b24","4433942e-aaf6-55a9-b777-66e55638103d","5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72","97f37f5c-7f82-5077-9bb9-6cfc8673631d","afc7a0c6-0b7d-5a08-b406-3ecad83e36ca","beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b","35fa7162-6cb3-52e1-ac5b-66afc318c74f","5921354b-51e6-5da3-8d8c-e9041840fd9f","896d4cb9-3c62-5230-a499-f23feae9d204","8bb31748-e20f-5266-ac39-c442faab6622","c3c01e92-520e-5358-a58f-0cc7e9c9e6fa"]
+
+[[argument]]
+id = "401e7e89-6167-49be-8fe8-7ecd922b2ff4"
+label = "Distinct esse and q.3 a.4 yield an actually present giver"
+theorem = "actualGiverFromDistinctEsseAndQ3"
+premises = ["96971e31-4782-4478-95b8-b6863a6a9412","0436de86-6579-53f2-9ff5-2111ba44ebae","33ad148b-ceab-5856-a4f8-c999a1dba644","7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"]
+sense_bridges = [{term = "ATEMPORAL_CAUSE_IN_ESSE", from = "ATEMPORAL_CAUSE_IN_ESSE_1", to = "ATEMPORAL_CAUSE_IN_ESSE_3", statement_id = "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"}, {term = "CAUSING_AN_EFFECT", from = "CAUSING_AN_EFFECT_2", to = "CAUSING_AN_EFFECT_3", statement_id = "33ad148b-ceab-5856-a4f8-c999a1dba644"}]
+conclusion = "2f9b4acb-4bd5-4adb-91ac-8935f46f2e69"
+rule = "Same-witness composition: B6 and selected-world actuality allow q.3 a.4 to supply CAUSE_2; explicit cause presence makes its bearer actual at w"
+meaning = "For the SAME contingent x at world w, the existing B6 distinction plus actual-esse interface and q.3 a.4 reading yield a distinct c that CausesIn c x esse. The independent selected-world cause-presence interface makes that SAME c exist at w. The previously verified R1/R3/De ente/irreflexivity support for B6 remains upstream in the graph, preserving all shared commitments without an illegitimate reception-to-external-cause equivocation. This branch does not use the separate reception-to-CAUSE_2 coverage premise or infer actualGraph or support R edges."
+description = "Conditional q.3 a.4 route from existing B6 to the actual giver; #1877 already provides the upstream R1/R3/De ente/irreflexivity support for B6. Cause presence and q.3 remain separately OPEN."
+definitions = ["0ea9feb8-1f92-5b11-aa74-2f2e567c6106","183b48d2-1753-583d-aef9-4199cff86231","196be87e-b944-5924-b791-87406fbe48f6","211a6432-8b8f-53ed-85e3-75173bb15b24","5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72","97f37f5c-7f82-5077-9bb9-6cfc8673631d","afc7a0c6-0b7d-5a08-b406-3ecad83e36ca","beb654a7-e204-5f4c-a7b4-45e886ba7109","e232f6c0-f1f9-5c99-9e26-946a8abe4f2e","fc6f0e12-470f-5717-8c5b-ece7a450fe59","ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"]
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b","13843b8b-4ef3-500e-949d-27e78b9dfaf9","1aef8986-ed29-564f-9803-d812d2ff63e1","35fa7162-6cb3-52e1-ac5b-66afc318c74f","3b0d67c5-59e4-5556-a728-26bd567f0fb1","6f1d1395-7c1d-5bd5-a45d-03380857aed6","86d198f5-e724-558a-8fce-b0a1e3592e08","896d4cb9-3c62-5230-a499-f23feae9d204","c3c01e92-520e-5358-a58f-0cc7e9c9e6fa","dba7b1de-f3a0-57af-9af9-b2a4da3136fa"]
+
+[[argument]]
+id = "a78a8169-1363-4a67-9c0a-b9345637fd02"
+label = "An actual distinct esse-giver entails B2"
+theorem = "actualGiverImpliesB2"
+premises = ["2f9b4acb-4bd5-4adb-91ac-8935f46f2e69"]
+
+comparator_theorems = ["absentSourceSeparatesB2FromActualGiver"]
+conclusion = "8a8d00e9-12b6-4cf0-b662-431cc4addd49"
+rule = "Projection: drop selected-world actuality of the distinct cause"
+meaning = "A being c that is different from a contingent x, exists at w, and causes x's esse is also the distinct cause that B2 requires. The existing First Way necessity proof consumes B2 on the same f and same frame; this projection does not establish R1 or an actual giver, and must not be counted as another independent argument for necessity."
+description = "Single-premise projection from stronger actual-giver endpoint to existing B2; downstream First Way preserves the same mover witness."
+definitions = ["211a6432-8b8f-53ed-85e3-75173bb15b24","5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72","97f37f5c-7f82-5077-9bb9-6cfc8673631d","beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b","35fa7162-6cb3-52e1-ac5b-66afc318c74f"]
+transcription = "assembly"
+
+
+[[statement]]
+id = "Actual-giver presence controls: B2 without an actual giver, and presence omitted in both routes"
+lean = "Control.PresenceControls"
+paraphrase = "Premise-free finite control in one two-world Bool frame (a structural interpretation, not a metaphysical possibility claim): the mover true exists at the reading world and is absent at the other; its only CAUSE_2 edge at esse is from false, which exists at no world. B2 holds and the actual-giver endpoint fails, so B2 does not entail the endpoint. With the mover's esse received in some principle, R1 and the reception-to-CAUSE_2 coverage hold (route 1's other premises); with everything in act, essence the being itself and every esse the principle false, B6, selected-world actuality and the q.3 a.4 reading hold (route 2's other premises). The world-presence interface fails in this frame and so does the endpoint, so neither route yields the endpoint without it."
+definitions = ["97f37f5c-7f82-5077-9bb9-6cfc8673631d","211a6432-8b8f-53ed-85e3-75173bb15b24","5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72","beb654a7-e204-5f4c-a7b4-45e886ba7109","4433942e-aaf6-55a9-b777-66e55638103d","afc7a0c6-0b7d-5a08-b406-3ecad83e36ca"]
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b","35fa7162-6cb3-52e1-ac5b-66afc318c74f","6f1d1395-7c1d-5bd5-a45d-03380857aed6"]
+
+[[argument]]
+id = "Actual-giver presence controls checked"
+theorem = "presenceControls"
+axioms = []
+sense_mixing_control = true
+premises = []
+conclusion = "Actual-giver presence controls: B2 without an actual giver, and presence omitted in both routes"
+rule = "Finite check in one frame"
+meaning = "Strictness of the actual-giver endpoint over B2, and omission witnesses for the world-presence interface in both actual-giver routes, all in the same absent-source frame. Model-witnessed separations only; no premise is established and no reality claim is made."
+description = "Premise-free control: B2 holds without an actual giver (strictness of the strength order), and each route's premises other than world presence hold while the endpoint fails. Sense-mixing control. Establishes no premise."
+
+[[relation]]
+id = "Actual distinct esse-giver strengthens B2"
+label = "Actual distinct esse-giver strengthens B2"
+subject_kind = "statement"
+subject_id = "2f9b4acb-4bd5-4adb-91ac-8935f46f2e69"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "8a8d00e9-12b6-4cf0-b662-431cc4addd49"
+verification_result_id = "d2d55c9b-9308-4b6b-b665-3380c4a99944"
+strictness_result_id = "Actual-giver presence controls checked"
+note = "The actual-giver endpoint implies B2 by the single-premise projection a78a8169 (drop the presence of the cause at w). Strict: in the absent-source frame B2 holds and the endpoint fails (presence controls). The exact difference (#1598 strength comparison) is not certified here. Neither statement is established by the relation."

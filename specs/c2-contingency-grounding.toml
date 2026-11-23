@@ -1,0 +1,230 @@
+# C2: the grounding of a contingent actual being's possible non-existence
+# (follow-up to PR #1870, gap 1 and next test 3). C2 says every being
+# contingent at w is existentially receptive (received esse in a receptive
+# principle, or matter and form) or has a distinct, simply prior CAUSE_2 of its
+# esse. Supported from power grounding (PGP), correlation, passive->receptive,
+# no self-esse-cause and B3; consumed by a same-witness route to the First
+# Way's necessity endpoint through an unreceivedness intermediate; existing R1
+# and B2 project onto it; B2 or B4 from power grounding answers #1870 gap 1.
+# Analyst formulations, attribution deferred; no source claim. Navigation
+# locators only: Met. Theta.1 1046a, Theta.8 1050b; ST I q.9 a.2, q.50 a.5,
+# q.104 a.1/a.3, q.44 a.1, q.2 a.3; De ente c.3/c.4.
+
+[batch]
+vocab = "TruthCore.Causality.ContingencyGrounding"
+results = "TruthCore.Results.Causality.ContingencyGrounding"
+
+[[statement]]
+id = "Every CONTINGENCY_1 being at w is existentially receptive or has a PRIOR_1 distinct esse CAUSE_2"
+lean = "ContingentReceptiveOrReceivedFromPrior"
+paraphrase = "OPEN (C2), analyst formulation, attribution deferred: every candidate that exists at w and is absent at some world accessible from w (MODAL_CONTINGENCY_1 on the frame's world-relative existence) either is existentially receptive (its esse is received in some principle that stands in receptive potency, RECEPTIVE_POTENCY_1 of De ente c.3, to that esse; or it is composed of matter and form) or has some other being that causes its esse (CAUSE_2 at esse, tenseless) and is SIMPLY_PRIOR_1 to it. The 'relevant' receptivity is typed no further than this: any receiving principle in receptive potency to the being's esse, or any matter-form composition, satisfies it. 'Receptive' is not POTENCY_1 at esse: the receiving principle may actually have its act, while unactualized POTENCY_1 at esse is incompatible with actual existence (R2 law of the First Way reception controls). The matter-form disjunct keeps C2 faithful for accounts without a real essence-esse distinction. C2 is weaker than R1 with De ente and than B2 with B3 (both imply it), is independent of the pure-act target at w (controls, potencyOnly and angelic models), and says nothing about beings present at every accessible world."
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "f9f58df7-d3be-4d66-b1f1-204d7049c450", "DEF-RECEPTIVE-POTENCY", "DEF-ESSE-RECEIVED-IN", "DEF-ESSE", "DEF-CAUSE-OF-PERFECTION", "DEF-SIMPLE-PRIORITY"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-RECEPTIVE-POTENCY", "DISAMB-ESSE-RECEPTION", "DISAMB-CAUSE", "DISAMB-PRIORITY-SIMPLE-OR-IN-TIME"]
+
+[[statement]]
+id = "Every CONTINGENCY_1 being at w is existentially receptive or has a distinct CAUSE_2 of its esse"
+lean = "ContingentReceptiveOrReceived"
+paraphrase = "OPEN weak form of C2 (C2-minus), analyst formulation, attribution deferred: every candidate contingent at w is existentially receptive (received esse in a principle in receptive potency to it, or matter and form) or has some other being that causes its esse (CAUSE_2 at esse, tenseless), with no priority clause. C2 implies it; with the existing B3 (a distinct esse-cause is simply prior) it implies C2."
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "f9f58df7-d3be-4d66-b1f1-204d7049c450", "DEF-RECEPTIVE-POTENCY", "DEF-ESSE-RECEIVED-IN", "DEF-ESSE", "DEF-CAUSE-OF-PERFECTION"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-RECEPTIVE-POTENCY", "DISAMB-ESSE-RECEPTION", "DISAMB-CAUSE"]
+
+[[statement]]
+id = "Every CONTINGENCY_1 being at w is corruptible simply or under some power over its esse"
+lean = "ContingencyPowerGrounded"
+paraphrase = "OPEN (PGP), analyst formulation, attribution deferred: every candidate contingent at w either can fail to be in substance (CanFailToBe x esse, the existing DEF-CAN-FAIL-TO-BE primitive at the respect of being, read as the in-subject channel POSSIBLE_NOT_TO_BE_1: corruptible simply, a two-way potency in the thing to be and not be, not the bare possibility of not being) or has some being, possibly itself, with power over its esse in the broad sense (POWER_OVER_ESSE_1, possibility of non-being through another's power, POSSIBLE_NOT_TO_BE_2). PGP is a material disjunction: it says that one of the two holds, not that it explains or grounds the possible absence, so it is weaker than the explanatory grounding thesis of the powers theory of modality whose warrant it borrows; 'grounding' in its name refers to that motivation only. It concerns only the possible absence of an actual individual, not alien or global possibilities. Self-power is allowed, so a self-annihilating being satisfies it."
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-CAN-FAIL-TO-BE", "3fd6bddb-f10c-4df4-8694-3eb5e7c28617", "DEF-ESSE"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-CORRUPTIBLE-SIMPLY-OR-IN-A-RESPECT", "DISAMB-CAN-FAIL-TO-BE-OR-BE-OTHERWISE", "f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5", "d25cee67-1d5c-4a4c-bda5-8571b731ddf3"]
+
+[[statement]]
+id = "9163c423-bbf7-464d-9342-6e1cf38d54e6"
+label = "If y has POWER_OVER_ESSE_1 over x, x can fail to be in substance or y is a CAUSE_2 of x's esse"
+lean = "PowerOverEsseCorrelation"
+paraphrase = "OPEN (correlation), analyst formulation, attribution deferred (navigation: Met. Theta.1 1046a, active power correlates with passive potency; ST I q.104 a.3, annihilation as ceasing to give being, not an action on a patient): for all y and x, if y has power over x's esse in the broad sense (POWER_OVER_ESSE_1: a power to make or unmake x's being), then x can fail to be in substance (POSSIBLE_NOT_TO_BE_1, the in-subject channel) or y is a CAUSE_2 of x's esse. A co-occurrence disjunction: it does not state that the power works on x's potency or that it is the giving of esse; the Aristotelian rationale is that it does one or the other. CausesIn is tenseless, so a cause that conserves x and a cause that only originated x are not distinguished: a deist originator satisfies this premise; only a tensed (conserving) strengthening would exclude it. Under the narrower giving sense POWER_OVER_ESSE_2 the premise is trivial (controls, law 11), so the batch uses the broad sense. Its omission model is an inert power-holder (controls, inertPowerHolder)."
+definitions = ["DEF-CAN-FAIL-TO-BE", "3fd6bddb-f10c-4df4-8694-3eb5e7c28617", "DEF-CAUSE-OF-PERFECTION", "DEF-ESSE"]
+disambiguations = ["DISAMB-CORRUPTIBLE-SIMPLY-OR-IN-A-RESPECT", "DISAMB-CAN-FAIL-TO-BE-OR-BE-OTHERWISE", "DISAMB-CAUSE", "f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5", "d25cee67-1d5c-4a4c-bda5-8571b731ddf3"]
+
+[[statement]]
+id = "Whatever is corruptible simply is existentially receptive"
+lean = "CorruptibleIsExistentiallyReceptive"
+paraphrase = "OPEN (passive to receptive), analyst formulation, attribution deferred (navigation: Met. Theta.8 1050b, what can not-be is perishable through matter): whatever can fail to be in substance (corruptible simply) is existentially receptive: it is composed of matter and form (matter is a principle open to being and non-being), or its esse is received in a principle in receptive potency (RECEPTIVE_POTENCY_1) to that esse (such a principle need not be open to non-being: on the angelic reading it is not)."
+definitions = ["DEF-CAN-FAIL-TO-BE", "f9f58df7-d3be-4d66-b1f1-204d7049c450", "DEF-RECEPTIVE-POTENCY", "DEF-ESSE-RECEIVED-IN", "DEF-ESSE"]
+disambiguations = ["DISAMB-CORRUPTIBLE-SIMPLY-OR-IN-A-RESPECT", "DISAMB-CAN-FAIL-TO-BE-OR-BE-OTHERWISE", "DISAMB-RECEPTIVE-POTENCY", "DISAMB-ESSE-RECEPTION"]
+
+[[statement]]
+id = "Whatever is corruptible simply is in POTENCY_1 in some respect"
+lean = "CorruptibleIsInSomePotency"
+paraphrase = "OPEN bridge, analyst formulation, attribution deferred: whatever can fail to be in substance (corruptible simply) is in POTENCY_1 (the adopted potency in the subject: able to be r and not in act of r) in at least one respect, any respect. Not at esse in particular: POTENCY_1 at esse is incompatible with actual existence (R2 law). The existing B4b (what can fail to be in substance is in POTENCY_1 as to esse) implies it (controls, law 8). It passes from simple corruptibility to a potency in some respect, the direction DISAMB-CORRUPTIBLE-SIMPLY-OR-IN-A-RESPECT does not forbid."
+definitions = ["DEF-CAN-FAIL-TO-BE", "DEF-POTENCY", "DEF-ESSE"]
+disambiguations = ["DISAMB-CORRUPTIBLE-SIMPLY-OR-IN-A-RESPECT", "DISAMB-CAN-FAIL-TO-BE-OR-BE-OTHERWISE", "DISAMB-POTENCY"]
+
+[[statement]]
+id = "Every first mover moved by none receives its esse in no principle and has no matter and form"
+lean = "FirstUnmovedMoverUnreceived"
+paraphrase = "Unreceivedness: every first mover moved by none (moves something, moved in no respect) has its esse received in no principle and is not composed of matter and form. A distinct proposition from pure actuality (POTENCY_1 in no respect), from underivedness (firstness: nothing else is SIMPLY_PRIOR_1 to it) and from necessary existence; it asserts no modality and no cause. Derived from the simplicity reading, identity-scoped reception (R3), De ente's receiver-in-receptive-potency reading and receptive irreflexivity."
+definitions = ["DEF-FIRST-UNMOVED-MOVER", "DEF-ESSE-RECEIVED-IN", "DEF-SIMPLE"]
+disambiguations = ["DISAMB-ESSE-RECEPTION"]
+
+[[statement]]
+id = "C2 contingency grounding: laws, rival models and omission models"
+lean = "Model.Controls"
+paraphrase = "Premise-free laws and finite Bool models (structural surrogates, not metaphysical possibility). Laws: C2 implies its weak form; the weak form with B3 implies C2; R1 with De ente's receiver reading implies C2; B2 with B3 implies C2; correlation implies #1870's bridge (ii) restricted to beings incorruptible simply; PGP with no power of anything over its own esse and corruptible-has-POTENCY_1 gives q.9 a.2's MUTABLE_3 for every contingent being (bridge (i)); the PGP route reaches the First Way endpoint; B4b implies corruptible-has-POTENCY_1; B4a implies PGP; with the adopted POTENCY_1 and the existence-to-act interface, B4b excludes every actual being corruptible simply at w, so corruptibility is not POTENCY_1 at esse; under the giving sense POWER_OVER_ESSE_2 the correlation is trivial. Models: bruteSimple (a contingent, simple, unreceived, uncaused, incorruptible first mover under no power: every premise of the PGP and C2 routes holds except PGP and C2; CCR holds on the same frame's q.3 a.4 profile with that being uncaused, a degenerate check since that profile has no esse-causes); selfAnnihilator (PGP holds; correlation fails, or no-self-esse-cause fails in the self-causing variant; C2 fails in both); uncausedComposite (C2 holds by reception while PGP, B2 and C2's prior-cause disjunct fail); angelic (a contingent incorruptible being under a necessary prior source: every premise of the PGP argument and C2 hold; B4 and the pure-act target fail only structurally, since the being is POTENCY_1-pure act relative to the frame's two respects only); inertPowerHolder (an omission model of correlation: a necessary being has power over a contingent being's esse with no causal role; PGP and C2 hold, correlation and B2 or B4 fail, so C2 does not entail B2 or B4); bareCorruptible, selfAnnihilator, inertPowerHolder and unprioritizedSource as omission models of passive-to-receptive, correlation, no-self-esse-cause and B3, the last with C2-minus holding while C2 fails; witness (every premise of every new argument, applied nonvacuously); potencyOnly (the pure-act target, B4 and B2 or B4 hold, PGP and C2 fail, so C2 and B2 or B4 are independent); corruptor (an uncaused corruptible composite: correlation and C2 hold through matter and form while R1 and the unrestricted bridge (ii) fail)."
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-ONTOLOGICAL-MODEL", "f9f58df7-d3be-4d66-b1f1-204d7049c450", "3fd6bddb-f10c-4df4-8694-3eb5e7c28617", "DEF-RECEPTIVE-POTENCY", "DEF-ESSE-RECEIVED-IN", "DEF-ESSE", "DEF-CAUSE-OF-PERFECTION", "DEF-SIMPLE-PRIORITY", "DEF-CAN-FAIL-TO-BE", "DEF-INCORRUPTIBLE-SIMPLY", "DEF-POTENCY", "DEF-PURE-ACT", "DEF-FIRST-UNMOVED-MOVER", "DEF-MUTABLE-IN-SOME-WAY"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-RECEPTIVE-POTENCY", "DISAMB-ESSE-RECEPTION", "DISAMB-CAUSE", "DISAMB-PRIORITY-SIMPLE-OR-IN-TIME", "DISAMB-CORRUPTIBLE-SIMPLY-OR-IN-A-RESPECT", "DISAMB-CAN-FAIL-TO-BE-OR-BE-OTHERWISE", "DISAMB-POTENCY", "DISAMB-POTENCY-IN-SUBJECT-VS-IN-ANOTHER"]
+
+[[argument]]
+id = "C2 from power grounding, correlation, passive-to-receptive, no self-esse-cause and B3"
+theorem = "c2FromPowerGrounding"
+sense_bridges = [{term = "POSSIBLE_NOT_TO_BE", from = "POSSIBLE_NOT_TO_BE_2", to = "POSSIBLE_NOT_TO_BE_1", statement_id = "9163c423-bbf7-464d-9342-6e1cf38d54e6"}]
+premises = ["Every CONTINGENCY_1 being at w is corruptible simply or under some power over its esse", "9163c423-bbf7-464d-9342-6e1cf38d54e6", "Whatever is corruptible simply is existentially receptive", "STMT-NOTHING-CAUSES-ITS-OWN-BEING", "ee74c678-0a06-47d3-9c76-27ff798e9a01"]
+conclusion = "Every CONTINGENCY_1 being at w is existentially receptive or has a PRIOR_1 distinct esse CAUSE_2"
+rule = "Case analysis on the power-grounding disjunction; distinctness by no self-esse-cause"
+meaning = "Take a being x contingent at w. By PGP it is corruptible simply or some y has power over its esse. If corruptible, passive-to-receptive makes it existentially receptive. If y has power over its esse, correlation makes x corruptible (receptive again) or makes y a CAUSE_2 of x's esse; were y = x, x would cause its own being, against the existing no-self-esse-cause statement, so y is distinct and, by B3, simply prior. Constructive: no excluded middle."
+description = "C2 from the power-grounding bundle. Not a transcription: no premise mentions receptivity of a contingent being or priority; the conclusion is reached by a case analysis that combines a modal-grounding premise, a power-patient correlation, a passive-to-receptive bridge, the existing irreflexivity of esse-causation and the existing priority of distinct esse-causes. Establishes no premise. Each premise is needed (controls: bruteSimple, selfAnnihilator, bareCorruptible, unprioritizedSource)."
+
+[[argument]]
+id = "The First Way's mover receives its esse in no principle and has no matter and form"
+theorem = "firstMoverUnreceivedFromSimplicity"
+premises = ["STMT-FIRST-UNMOVED-MOVER-IS-SIMPLE", "65f3d0c7-cc3d-4ce3-a4a9-6fa38bf722cb", "STMT-RECEIVER-IN-POTENCY-TO-RECEIVED-ESSE", "STMT-NOTHING-IN-RECEPTIVE-POTENCY-TO-ITSELF"]
+conclusion = "Every first mover moved by none receives its esse in no principle and has no matter and form"
+rule = "Reductio on reception under the simplicity reading's essence-esse clause"
+meaning = "Let f be a first mover moved by none. The simplicity reading gives that f is not composed of matter and form and that its esse is not distinct from its essence. Suppose f's esse were received in a principle p. If its esse equalled its essence, identity-scoped reception (R3) would make p its essence and De ente's reading would put p in receptive potency to f's esse, that is to itself, against receptive irreflexivity; so its esse would be distinct from its essence, against simplicity. Constructive: no excluded middle."
+description = "Unreceivedness of the First Way's mover, a registered intermediate distinct from pure act, firstness and necessity. Not a transcription: the conclusion's 'received in no principle' is derived by a reductio through R3, De ente and irreflexivity, none of which mentions the first mover. Establishes no premise; it reuses the premises of the existing B6 reception argument (R3, De ente, irreflexivity) at the first mover instead of R1."
+
+[[argument]]
+id = "First Way mover is necessary, from firstness, unreceivedness and C2"
+theorem = "firstMoverNecessaryByReceptivityOrPriorCause"
+premises = ["STMT-EXCLUDED-MIDDLE", "STMT-THERE-IS-A-FIRST-UNMOVED-MOVER", "Whatever moves something exists at the reading world w", "STMT-FIRST-UNMOVED-MOVER-IS-FIRST-BEING", "STMT-FIRST-UNMOVED-MOVER-IS-PURE-ACT", "Every first mover moved by none receives its esse in no principle and has no matter and form", "Every CONTINGENCY_1 being at w is existentially receptive or has a PRIOR_1 distinct esse CAUSE_2"]
+conclusion = "Some first mover moved by none is PURE_ACT_5, exists at w and at every accessible world"
+rule = "Reductio on contingency by the three C2 cases, then excluded middle at each accessible world"
+meaning = "Take the prima via's first mover f. It moves something, so it exists at w (B0). Suppose it is absent at some accessible world: then it is contingent at w and C2 makes it existentially receptive or gives it a distinct, simply prior CAUSE_2 of its esse. Received esse and matter-form composition are excluded by unreceivedness; a distinct simply prior cause is excluded by firstness (it would be f itself). So f is present at every accessible world (excluded middle). Pure act (POTENCY_1 in no respect) is carried for the endpoint and does no work: necessity comes from unreceived esse and underivedness."
+description = "Same-witness conditional result: the First Way's own first mover is pure act and exists at every world accessible from w, from the prima via conclusion, B0, firstness, unreceivedness and C2, with excluded middle. Not a transcription: no premise mentions necessity. Establishes no premise. Pure actuality, unreceived esse, underivedness and necessary existence stay four distinct propositions; POTENCY_1 pure act is carried, not used. C2 is weaker than both R1 with De ente and B2 with B3 (controls, laws 3-4), and independent of the pure-act target (controls)."
+strong_version_needed = {"Every CONTINGENCY_1 being at w is existentially receptive or has a PRIOR_1 distinct esse CAUSE_2" = "Firstness excludes only a SIMPLY_PRIOR_1 cause of the first mover; the weak form without the priority clause would need the existing B3 as a further premise to reach firstness. The same bundle with C2-minus and B3 is available through the registered C2-from-weak-form-and-B3 argument."}
+
+[[argument]]
+id = "C2 from R1 and De ente's receiver reading"
+theorem = "c2FromReception"
+premises = ["ae9d9473-34f1-4b51-8f13-41d340d64ad1", "STMT-RECEIVER-IN-POTENCY-TO-RECEIVED-ESSE"]
+conclusion = "Every CONTINGENCY_1 being at w is existentially receptive or has a PRIOR_1 distinct esse CAUSE_2"
+rule = "Instantiate R1 and De ente at each contingent being; first disjunct"
+meaning = "A contingent being receives its esse in some principle (R1); by De ente's reading that principle is in receptive potency to its esse; so the being is existentially receptive, the first disjunct of C2. Shows that C2 is weaker than R1 (given De ente)."
+description = "Projection of the existing R1 onto C2 through its receptive disjunct. An instantiation with De ente's reading; establishes no premise. Its point is comparative: C2 is entailed by the existing reception bridge, so C2 is the weaker commitment."
+transcription = "instantiation"
+
+[[argument]]
+id = "C2 from B2 and B3"
+theorem = "c2FromEsseCause"
+premises = ["Every being contingent at w has a distinct CAUSE_2 of its esse", "ee74c678-0a06-47d3-9c76-27ff798e9a01"]
+conclusion = "Every CONTINGENCY_1 being at w is existentially receptive or has a PRIOR_1 distinct esse CAUSE_2"
+rule = "Instantiate B2 and B3 at each contingent being; second disjunct"
+meaning = "A contingent being has a distinct CAUSE_2 of its esse (B2), simply prior to it (B3): the second disjunct of C2. Shows that C2 is weaker than B2 (given B3); uncausedComposite shows it is strictly weaker."
+description = "Projection of the existing B2 onto C2 through its prior-cause disjunct. An instantiation; establishes no premise. Comparative: C2 is entailed by B2 with B3 and not conversely (controls, uncausedComposite)."
+transcription = "instantiation"
+
+[[argument]]
+id = "C2 strengthens its weak form without priority"
+theorem = "c2ImpliesWeak"
+premises = ["Every CONTINGENCY_1 being at w is existentially receptive or has a PRIOR_1 distinct esse CAUSE_2"]
+conclusion = "Every CONTINGENCY_1 being at w is existentially receptive or has a distinct CAUSE_2 of its esse"
+rule = "Drop the priority conjunct"
+meaning = "C2's prior-cause disjunct implies the weak form's cause disjunct; the receptive disjunct is shared. A strength-order registration, not additional confirmation."
+description = "One-premise weakening from C2 to C2-minus (strength order). Establishes no premise."
+transcription = "assembly"
+
+[[argument]]
+id = "C2 from its weak form and B3"
+theorem = "c2FromWeakAndPriority"
+premises = ["Every CONTINGENCY_1 being at w is existentially receptive or has a distinct CAUSE_2 of its esse", "ee74c678-0a06-47d3-9c76-27ff798e9a01"]
+conclusion = "Every CONTINGENCY_1 being at w is existentially receptive or has a PRIOR_1 distinct esse CAUSE_2"
+rule = "Add priority by B3 in the cause disjunct"
+meaning = "In the weak form's cause disjunct, the existing B3 makes the distinct esse-cause simply prior, giving C2. So with B3, C2 and its weak form are equivalent; the weak form is what the power-grounding case analysis delivers before B3."
+description = "C2 from C2-minus and B3. An instantiation of B3 inside the disjunction; establishes no premise."
+transcription = "instantiation"
+
+[[argument]]
+id = "POTENCY_1 or a distinct CAUSE_2 for contingents, from power grounding"
+theorem = "potencyOrEsseCauseFromPowerGrounding"
+sense_bridges = [{term = "POSSIBLE_NOT_TO_BE", from = "POSSIBLE_NOT_TO_BE_2", to = "POSSIBLE_NOT_TO_BE_1", statement_id = "9163c423-bbf7-464d-9342-6e1cf38d54e6"}]
+premises = ["Every CONTINGENCY_1 being at w is corruptible simply or under some power over its esse", "9163c423-bbf7-464d-9342-6e1cf38d54e6", "STMT-NOTHING-CAUSES-ITS-OWN-BEING", "Whatever is corruptible simply is in POTENCY_1 in some respect"]
+conclusion = "Every being contingent at w is in POTENCY_1 or has a distinct CAUSE_2 of its esse"
+rule = "Case analysis on the power-grounding disjunction; distinctness by no self-esse-cause"
+meaning = "Answers #1870's remaining gap 1 conditionally. A contingent being is corruptible simply, hence in POTENCY_1 in some respect, or under some power over its esse; correlation makes it corruptible or makes the power's holder a CAUSE_2 of its esse, distinct by no-self-esse-cause. This corresponds to the q.9 a.2 two-channel reading of B2 or B4 as follows: with no power of anything over its own esse and corruptible-has-POTENCY_1, PGP gives #1870 bridge (i), contingency gives MUTABLE_3 (controls, law 6); correlation yields #1870 bridge (ii) only for beings incorruptible simply (controls, law 5); the unrestricted form is not derived, and its countermodel is an uncaused corruptible composite (controls, corruptor)."
+description = "Support for the existing B2 or B4 from PGP, correlation, the existing no-self-esse-cause statement and a corruptible-has-POTENCY_1 bridge. Not a transcription. Establishes no premise. It shares PGP and correlation with the C2 argument; it is an alternative bundle for the same modal crux, not independent corroboration."
+
+[[argument]]
+id = "C2 contingency grounding controls checked"
+theorem = "controls"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+premises = []
+conclusion = "C2 contingency grounding: laws, rival models and omission models"
+rule = "General laws and explicit finite models"
+meaning = "Premise-free laws relating C2 to its weak form, to R1 with De ente and to B2 with B3; correlation to #1870's restricted bridge (ii); PGP to q.9 a.2's MUTABLE_3 (bridge (i)); the composed PGP route to the First Way endpoint; B4b and B4a to the new bridges, the exclusion of actual corruptibles by B4b under adopted POTENCY_1, and the triviality of correlation under the giving sense of power over esse. Then ten finite models: rival models (bruteSimple, selfAnnihilator, uncausedComposite, angelic), omission models for each premise of the PGP argument (including inertPowerHolder for correlation), a nonvacuity witness, the potencyOnly non-equivalence model and the corruptor model. Model-witnessed separations only; no premise is established and no reality claim is made."
+description = "Premise-free laws and models for the C2 batch. Sense-mixing control: the laws relate MODAL_CONTINGENCY_1, RECEPTIVE_POTENCY_1, POTENCY_1, corruptibility and power over esse without a bridge premise. Establishes no premise."
+
+[[relation]]
+id = "C2 strengthens its weak form without priority"
+label = "C2 strengthens its weak form without priority"
+subject_kind = "statement"
+subject_id = "Every CONTINGENCY_1 being at w is existentially receptive or has a PRIOR_1 distinct esse CAUSE_2"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Every CONTINGENCY_1 being at w is existentially receptive or has a distinct CAUSE_2 of its esse"
+verification_result_id = "C2 strengthens its weak form without priority"
+strictness_result_id = "The unprioritized setting separates C2 from its weak form"
+note = "C2 implies C2-minus by a single-premise Lean proof (drop the priority conjunct). With the existing B3 the converse holds (c2FromWeakAndPriority), so B3 suffices to close the difference. The exact difference is certified by the strength comparison C2 over C2-minus: every contingent being with a distinct esse-cause is existentially receptive or has a simply prior one. Strict: the unprioritized setting (C2-minus holds, C2 fails). Neither statement is established by the relation."
+
+[[statement]]
+id = "703d8c9c-838d-4050-bed4-082fedc2b9ef"
+label = "C2 difference: a CONTINGENCY_1 being with a distinct esse CAUSE_2 is receptive or has a PRIOR_1 one"
+lean = "ContingentEsseCauseIsPriorOrReceptive"
+paraphrase = "Difference statement of C2 over C2-minus (#1598), OPEN, not asserted: every candidate contingent at w that has some other being causing its esse (CAUSE_2 at esse, tenseless) is existentially receptive or has some other being that causes its esse and is SIMPLY_PRIOR_1 to it. B3 implies it (immediate: B3 adds priority to any distinct esse-cause); no strictness relative to B3 is certified."
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "f9f58df7-d3be-4d66-b1f1-204d7049c450", "DEF-RECEPTIVE-POTENCY", "DEF-ESSE-RECEIVED-IN", "DEF-ESSE", "DEF-CAUSE-OF-PERFECTION", "DEF-SIMPLE-PRIORITY"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-RECEPTIVE-POTENCY", "DISAMB-ESSE-RECEPTION", "DISAMB-CAUSE", "DISAMB-PRIORITY-SIMPLE-OR-IN-TIME"]
+
+[[statement]]
+id = "C2 holds exactly when its weak form and its difference hold"
+lean = "C2OverWeakExact"
+paraphrase = "For every frame, reading world, esse map, reception relation, receptive-potency relation and matter-form predicate: C2 holds if and only if C2-minus holds and every contingent being with a distinct esse CAUSE_2 is existentially receptive or has a SIMPLY_PRIOR_1 one. A premise-free comparison; it asserts none of the three statements."
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "f9f58df7-d3be-4d66-b1f1-204d7049c450", "DEF-RECEPTIVE-POTENCY", "DEF-ESSE-RECEIVED-IN", "DEF-ESSE", "DEF-CAUSE-OF-PERFECTION", "DEF-SIMPLE-PRIORITY"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-RECEPTIVE-POTENCY", "DISAMB-ESSE-RECEPTION", "DISAMB-CAUSE", "DISAMB-PRIORITY-SIMPLE-OR-IN-TIME"]
+
+[[statement]]
+id = "The unprioritized frame satisfies C2's weak form and not C2"
+lean = "Model.UnprioritizedSeparates"
+paraphrase = "In the finite unprioritized frame (a necessary being causes the esse of a contingent, unreceived, simple first mover without being simply prior to it; nothing received, no matter-form composition), C2-minus holds and C2 fails. A structural surrogate, not a metaphysical possibility claim."
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "f9f58df7-d3be-4d66-b1f1-204d7049c450", "DEF-ESSE", "DEF-CAUSE-OF-PERFECTION", "DEF-SIMPLE-PRIORITY"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-CAUSE", "DISAMB-PRIORITY-SIMPLE-OR-IN-TIME"]
+
+[[argument]]
+id = "C2 is its weak form plus the difference"
+theorem = "c2OverWeakExact"
+axioms = []
+premises = []
+conclusion = "C2 holds exactly when its weak form and its difference hold"
+rule = "Forward by projection; backward, the difference closes the cause disjunct of the weak form"
+meaning = "Certified difference (#1598) of the registration C2 strengthens C2-minus, with no background: C2 holds iff C2-minus holds and every contingent being with a distinct esse-cause is existentially receptive or has a simply prior one. Premise-free and constructive; it asserts none of the statements compared."
+description = "Premise-free equivalence certificate for the strength comparison of C2 over C2-minus. Establishes no premise."
+
+[[argument]]
+id = "The unprioritized setting separates C2 from its weak form"
+theorem = "unprioritizedSeparates"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = []
+conclusion = "The unprioritized frame satisfies C2's weak form and not C2"
+rule = "Finite check"
+meaning = "In the unprioritized frame C2-minus holds and C2 fails: the strengthening is strict. A structural interpretation only."
+description = "Strictness control for C2 over C2-minus. Establishes no premise."
+
+[[relation]]
+id = "C2 over its weak form: certified difference"
+subject_kind = "statement"
+subject_id = "Every CONTINGENCY_1 being at w is existentially receptive or has a PRIOR_1 distinct esse CAUSE_2"
+predicate = "strength_comparison"
+object_kind = "statement"
+object_id = "Every CONTINGENCY_1 being at w is existentially receptive or has a distinct CAUSE_2 of its esse"
+comparison_spec = "c2OverWeak"
+delta_statement_id = "703d8c9c-838d-4050-bed4-082fedc2b9ef"
+evidence_result_ids = { implication = "C2 strengthens its weak form without priority", equivalence = "C2 is its weak form plus the difference" }
+separator = { setting = "Model.unprioritizedSetting", result_id = "The unprioritized setting separates C2 from its weak form" }
+statement_parameter_indices = { stronger = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], weaker = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], delta = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] }
+note = "Difference of C2 over C2-minus: C2 adds exactly that every contingent being with a distinct esse-cause is existentially receptive or has a simply prior one. No background. B3 implies the difference (immediate); no strictness relative to B3 is certified. The separator is a finite interpretation."

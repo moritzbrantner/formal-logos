@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.ContingencyGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ContingencyGrounding.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.ContingencyGrounding.c2FromWeakAndPriority"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

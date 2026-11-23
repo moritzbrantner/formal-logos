@@ -1,0 +1,38 @@
+{
+  "id": "f3180780-599d-4596-9d7e-6d81a8c28874",
+  "label": "Received esse has a distinct actual giver under source-coverage and presence",
+  "premise_statement_ids": [
+    "ae9d9473-34f1-4b51-8f13-41d340d64ad1",
+    "4bc853db-ec33-40ff-857e-6a67f17532fb",
+    "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"
+  ],
+  "conclusion_statement_id": "2f9b4acb-4bd5-4adb-91ac-8935f46f2e69",
+  "inference_ids": [
+    "d346dd5d-a36d-4aa9-a93b-bb36420925b4"
+  ],
+  "meaning": "R1 gives a principle receiving the contingent x's esse. The already open received-esse/CAUSE_2 coverage bridge gives a distinct c causing that same x's esse. The independently open selected-world cause-presence interface then makes c exist at w. The recipient principle is not identified with c. The result is a genuine actual-giver-at-w endpoint, stronger than B2, not a proof of R1 or of either causal bridge.",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "afc7a0c6-0b7d-5a08-b406-3ecad83e36ca",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "896d4cb9-3c62-5230-a499-f23feae9d204",
+    "8bb31748-e20f-5266-ac39-c442faab6622",
+    "c3c01e92-520e-5358-a58f-0cc7e9c9e6fa"
+  ],
+  "sense_bridges": [
+    {
+      "term": "ATEMPORAL_CAUSE_IN_ESSE",
+      "from": "8ea914b9-567f-4714-802f-f3ad639b890f",
+      "to": "02217238-2075-4f8f-bff9-eaf03d2ec2eb",
+      "statement_id": "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"
+    }
+  ]
+}

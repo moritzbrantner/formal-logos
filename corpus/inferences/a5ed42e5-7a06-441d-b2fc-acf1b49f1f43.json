@@ -1,0 +1,16 @@
+{
+  "id": "a5ed42e5-7a06-441d-b2fc-acf1b49f1f43",
+  "label": "C2 from power grounding, correlation, passive-to-receptive, no self-esse-cause and B3 (inference)",
+  "input_statement_ids": [
+    "20d5fecd-950e-42f8-8dc9-3014491ff6ae",
+    "9163c423-bbf7-464d-9342-6e1cf38d54e6",
+    "16c760a3-0328-4e16-9908-da6e5e4cdb2d",
+    "b62a64ab-ac11-569a-b8e8-de51a74b058f",
+    "ee74c678-0a06-47d3-9c76-27ff798e9a01"
+  ],
+  "output_statement_id": "6508c239-b36d-4010-b9e4-ff0cdd5757e5",
+  "rule": "Case analysis on the power-grounding disjunction; distinctness by no self-esse-cause",
+  "meaning": "Take a being x contingent at w. By PGP it is corruptible simply or some y has power over its esse. If corruptible, passive-to-receptive makes it existentially receptive. If y has power over its esse, correlation makes x corruptible (receptive again) or makes y a CAUSE_2 of x's esse; were y = x, x would cause its own being, against the existing no-self-esse-cause statement, so y is distinct and, by B3, simply prior. Constructive: no excluded middle.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

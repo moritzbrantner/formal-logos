@@ -1,0 +1,27 @@
+{
+  "id": "ea72bbc4-9321-43fd-8fa4-58922c59cd9b",
+  "label": "C2 is its weak form plus the difference",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "f0665fca-0cd6-4408-bf56-9ea0c75eaba6",
+  "inference_ids": [
+    "cd86fe57-99b7-40b1-b07a-6d62431ab4a6"
+  ],
+  "meaning": "Certified difference (#1598) of the registration C2 strengthens C2-minus, with no background: C2 holds iff C2-minus holds and every contingent being with a distinct esse-cause is existentially receptive or has a simply prior one. Premise-free and constructive; it asserts none of the statements compared.",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "a67e6214-624d-54d1-81ff-442c09c5ea9d",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "f9f58df7-d3be-4d66-b1f1-204d7049c450"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "8bb31748-e20f-5266-ac39-c442faab6622"
+  ]
+}

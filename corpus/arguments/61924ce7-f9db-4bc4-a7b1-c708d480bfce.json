@@ -1,0 +1,30 @@
+{
+  "id": "61924ce7-f9db-4bc4-a7b1-c708d480bfce",
+  "label": "C2 from B2 and B3",
+  "premise_statement_ids": [
+    "8a8d00e9-12b6-4cf0-b662-431cc4addd49",
+    "ee74c678-0a06-47d3-9c76-27ff798e9a01"
+  ],
+  "conclusion_statement_id": "6508c239-b36d-4010-b9e4-ff0cdd5757e5",
+  "inference_ids": [
+    "ef2e1458-4010-4bb3-9a88-2218036cd132"
+  ],
+  "meaning": "A contingent being has a distinct CAUSE_2 of its esse (B2), simply prior to it (B3): the second disjunct of C2. Shows that C2 is weaker than B2 (given B3); uncausedComposite shows it is strictly weaker.",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "a67e6214-624d-54d1-81ff-442c09c5ea9d",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "f9f58df7-d3be-4d66-b1f1-204d7049c450"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "8bb31748-e20f-5266-ac39-c442faab6622"
+  ]
+}

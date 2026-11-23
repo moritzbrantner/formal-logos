@@ -1,0 +1,11 @@
+{
+  "id": "96eb02fb-5a0c-4aba-9061-850d61f9fa94",
+  "label": "The First Way's mover receives its esse in no principle and has no matter and form",
+  "argument_id": "f68a5d87-45ea-4686-82a6-8b71f722b90a",
+  "challenge_module": "TruthCore.Results.Causality.ContingencyGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ContingencyGrounding.Solution",
+  "theorem": "TruthCore.Results.Causality.ContingencyGrounding.firstMoverUnreceivedFromSimplicity",
+  "comparator_config": "results/96eb02fb-5a0c-4aba-9061-850d61f9fa94/comparator.json",
+  "status": "solution-present",
+  "description": "Unreceivedness of the First Way's mover, a registered intermediate distinct from pure act, firstness and necessity. Not a transcription: the conclusion's 'received in no principle' is derived by a reductio through R3, De ente and irreflexivity, none of which mentions the first mover. Establishes no premise; it reuses the premises of the existing B6 reception argument (R3, De ente, irreflexivity) at the first mover instead of R1."
+}
