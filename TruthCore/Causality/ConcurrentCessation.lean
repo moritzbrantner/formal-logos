@@ -132,7 +132,7 @@ open TruthCore.Causality.Frame (CausalityFrame)
 open TruthCore.Causality.BruteFoundationBoundary (Profile NecessaryConcreteAt)
 open TruthCore.Causality.NecessaryRootFork (ActualConcrete)
 open TruthCore.Causality.NecessaryConcreteRouteBridge (EsseCauseIsActualConcreteGround)
-open TruthCore.Causality.German.Kant.CosmologicalInference (ContingentAt)
+open TruthCore.German.Kant.CosmologicalInference (ContingentAt)
 open TruthCore.Causality.SustainingCausation.Control (trueCausesFalse)
 open TruthCore.Causality.ConcurrentActualization.Control (falseReceived)
 
