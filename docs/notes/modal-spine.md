@@ -1210,14 +1210,22 @@ grounding, sustaining action or efficient production is built in.
 | Support path to actual giver | Complete required existing inputs | What supplies the material step |
 | --- | --- | --- |
 | **Coverage from reception** (result **8d8920ac**) | R1 **ae9d9473** + ReceivedEsseHasCauseOfBeing **4bc853db** + UnitingCausesPresent **7ce040a2** | The independently OPEN tenseless reception-to-CAUSE_2 coverage supplies a distinct c, then the independently OPEN selected-world cause-presence interface makes it an actual c. Neither is contained in "receipt in p." |
-| **De ente and q.3 a.4** (result **a3f7a9eb**) | R1 **ae9d9473**, R3 **65f3d0c7**, De ente **7fcfcee8**, receptive irreflexivity **14325c83**, selected-world actuality **0436de86**, q.3 a.4 external-cause reading **33ad148b**, cause presence **7ce040a2** | The verified R1-to-B6 proof and q.3 a.4/actuality-to-B2 proof are composed for the **same x**; selected-world cause presence then supplies the actually existing c. |
+| **q.3 a.4 from B6** (result **a3f7a9eb**) | B6 **96971e31** + selected-world actuality **0436de86** + q.3 a.4 external-cause reading **33ad148b** + cause presence **7ce040a2** | Existing R1/R3/De ente/receptive-irreflexivity proof feeds B6 **upstream**, as a separate graph argument. At this node q.3 supplies a distinct c causing the same x's esse, and world-presence makes c actual. No inference equates receipt in p with c. |
 
-**Sense-index scope:** The atemporal q.3 `CausesIn` meaning (ATEMPORAL_CAUSE_IN_ESSE_1) is linked to the selected-world *presence* interface (ATEMPORAL_CAUSE_IN_ESSE_3) by the explicitly supplied `UnitingCausesPresent` premise. The index also mentions the world-local `actualGraph` meaning (ATEMPORAL_CAUSE_IN_ESSE_2) as a **contrast**, not an entailed edge: the second metadata sense link accounts for that disambiguation without asserting `Ontic.Causes(w,c,x)`. The independently open `UnitingCausesAreActual` interface would be needed for such an edge; it is neither used nor inferred in these theorems. In the q.3 route, the existing `HasExternalEsseCause`-to-`CausesIn` interpretation uses q.3 a.4 itself as the CAUSING_AN_EFFECT_2-to-_3 sense bridge. These links are selected-meaning and boundary records, not an equivalence of typed causal relations. The separate RECEPTION_OF_ESSE_VERSUS_EXTERNAL_CAUSE link in the q.3 argument is anchored to the **conditional q.3 external-cause reading together with the established B6 intermediate**, not to the claim that every reception by itself already has an external giver. It compares reception-in-a-principle to externally caused esse while retaining their two distinct relations.
+**Sense-index boundary:** The old `UnitingCausesPresent` statement
+had inherited unrelated definition links for support `R`, world-local
+`actualGraph`, divine simplicity and necessary underived sources. Its
+metadata now indexes just actual world presence, tenseless `CausesIn`
+and the corresponding explicit interface. Only the valid
+ATEMPORAL_CAUSE_IN_ESSE_1-to-_3 bridge, anchored by the presence
+premise itself, is retained. The q.3 branch separately retains its
+HasExternalEsseCause-to-CausesIn meaning bridge anchored by q.3 a.4.
+No contrast-only link is passed off as an inference. Reception and
+external cause appear in **separate** upstream/downstream argument
+nodes, joined by the already-registered B6 intermediate.
 
 These are *alternative conditional supports*, not independent empirical
-corroboration: **R1 and cause presence occur in both paths**. The second
-path does not borrow the first path's coverage premise, and the first
-path does not borrow R3, q.3 a.4 or receptive irreflexivity. Neither
+corroboration: **Cause presence occurs in both direct support nodes; R1 is direct in the coverage route and upstream through B6 in the q.3 route**. The second node does not borrow the coverage premise; the first does not borrow q.3 a.4. The R1/R3/receptive-irreflexivity dependency is separately and explicitly attached to B6, so the cumulative graph composes it into the second path without pretending the q.3 premise itself translates reception into causing. Neither
 proves R1. The q.3 a.4 cause being InAct(c,esse) is not converted to
 ExistsAt(w,c): the existing ExistingInActAt interface goes in the
 *opposite direction*, so UnitingCausesPresent cannot be omitted.
@@ -1262,13 +1270,14 @@ bridge is indispensable. It is a structural two-world model and does
 not establish that a nonexistent agent can metaphysically produce
 existence.
 
-**Additional sense-boundary control:** The formal argument index
-also compares an existential support `R` source to a world-local
-`actualGraph` source. `UnitingCausesPresent` only transfers
-tenseless `CausesIn` into actual existence of its cause, **not** into
-either `R` or `actualGraph` edges. The recorded
-EXISTENTIAL_SUPPORT_SOURCE_VERSUS_ACTUAL_CAUSAL sense link is a
-disambiguating contrast only, never an identity or inference.
+**Semantic-metadata repair:** The claim `UnitingCausesPresent`
+does not refer to an ordinary actual causal edge or existential
+support `R`. Its inherited generic source-definition links have
+been narrowed to its actual type and selected-world presence.
+Consequently no unsupported metadata bridge to `R` or to
+`actualGraph` is needed. The q.3 route starts from B6
+as a separate registered intermediate, so it also needs no
+fake reception/external-cause bridge.
 
 The source-presence interface has its own philosophical plausibility
 when CAUSE_2 means an actively exercising cause of *current* existence:

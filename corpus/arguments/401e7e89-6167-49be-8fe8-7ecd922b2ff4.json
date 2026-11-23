@@ -1,11 +1,8 @@
 {
   "id": "401e7e89-6167-49be-8fe8-7ecd922b2ff4",
-  "label": "Received esse yields an actual giver through essence distinction and q.3 a.4",
+  "label": "Distinct esse and q.3 a.4 yield an actually present giver",
   "premise_statement_ids": [
-    "ae9d9473-34f1-4b51-8f13-41d340d64ad1",
-    "65f3d0c7-cc3d-4ce3-a4a9-6fa38bf722cb",
-    "7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2",
-    "14325c83-1c3f-5afb-b63f-52b0c2b2a326",
+    "96971e31-4782-4478-95b8-b6863a6a9412",
     "0436de86-6579-53f2-9ff5-2111ba44ebae",
     "33ad148b-ceab-5856-a4f8-c999a1dba644",
     "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"
@@ -14,39 +11,29 @@
   "inference_ids": [
     "7f9ce5af-289d-41a7-9dcb-05c3062fde0d"
   ],
-  "meaning": "For the same contingent x and world w, reuse the verified R1/R3/De ente/irreflexivity consequence B6, the existing actual-esse and ST I q.3 a.4 interpretation to obtain a distinct cause c of x's esse, and the existing selected-world presence interface to establish that c exists at w. This alternate to the received-esse-causal-coverage route shares R1 and the presence bridge. It does not deduce efficient giving directly from receipt or identify a receiver with an external source.",
+  "meaning": "For the SAME contingent x at world w, the existing B6 distinction plus actual-esse interface and q.3 a.4 reading yield a distinct c that CausesIn c x esse. The independent selected-world cause-presence interface makes that SAME c exist at w. The previously verified R1/R3/De ente/irreflexivity support for B6 remains upstream in the graph, preserving all shared commitments without an illegitimate reception-to-external-cause equivocation. This branch does not use the separate reception-to-CAUSE_2 coverage premise or infer actualGraph or support R edges.",
   "definition_ids": [
     "0ea9feb8-1f92-5b11-aa74-2f2e567c6106",
     "183b48d2-1753-583d-aef9-4199cff86231",
-    "1875d575-2a60-5000-b403-0ab090078a7a",
     "196be87e-b944-5924-b791-87406fbe48f6",
     "211a6432-8b8f-53ed-85e3-75173bb15b24",
-    "4433942e-aaf6-55a9-b777-66e55638103d",
     "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
-    "7439c292-82a4-530d-8144-a61a6c21f502",
-    "85f7f569-ab4d-514b-aa2c-cf75171ad105",
     "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
-    "a67e6214-624d-54d1-81ff-442c09c5ea9d",
     "afc7a0c6-0b7d-5a08-b406-3ecad83e36ca",
     "beb654a7-e204-5f4c-a7b4-45e886ba7109",
-    "d650ff6e-6b08-5f27-ac93-6f32c96968a8",
     "e232f6c0-f1f9-5c99-9e26-946a8abe4f2e",
     "fc6f0e12-470f-5717-8c5b-ece7a450fe59",
     "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"
   ],
   "disambiguation_ids": [
     "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "13843b8b-4ef3-500e-949d-27e78b9dfaf9",
     "1aef8986-ed29-564f-9803-d812d2ff63e1",
     "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
     "3b0d67c5-59e4-5556-a728-26bd567f0fb1",
-    "5323527f-56a2-5d11-8a76-5b25461a61b4",
-    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
-    "5d15d8f2-1080-53c9-886f-cee2a4ff23a9",
     "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
     "86d198f5-e724-558a-8fce-b0a1e3592e08",
     "896d4cb9-3c62-5230-a499-f23feae9d204",
-    "8bb31748-e20f-5266-ac39-c442faab6622",
-    "c3c01e92-520e-5358-a58f-0cc7e9c9e6fa",
     "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
   ],
   "sense_bridges": [
@@ -57,27 +44,9 @@
       "statement_id": "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"
     },
     {
-      "term": "ATEMPORAL_CAUSE_IN_ESSE",
-      "from": "00e564e2-7170-44b7-a88d-076378ad675b",
-      "to": "02217238-2075-4f8f-bff9-eaf03d2ec2eb",
-      "statement_id": "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"
-    },
-    {
       "term": "CAUSING_AN_EFFECT",
       "from": "0d3718b1-217b-4a2b-b544-cdf27127db4b",
       "to": "39f64183-5038-4348-ad9f-5b64674f65f8",
-      "statement_id": "33ad148b-ceab-5856-a4f8-c999a1dba644"
-    },
-    {
-      "term": "EXISTENTIAL_SUPPORT_SOURCE_VERSUS_ACTUAL_CAUSAL",
-      "from": "8afd07c5-d7be-4138-83c4-62c59317dc1a",
-      "to": "b5a882ce-e70c-46e1-8e90-9843bcdacf6f",
-      "statement_id": "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"
-    },
-    {
-      "term": "RECEPTION_OF_ESSE_VERSUS_EXTERNAL_CAUSE",
-      "from": "d2775c6d-664f-42b5-b583-a3580bc8daf7",
-      "to": "5cc38752-88e4-4b26-a09b-c065e6ee745c",
       "statement_id": "33ad148b-ceab-5856-a4f8-c999a1dba644"
     }
   ]

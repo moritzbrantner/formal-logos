@@ -12,24 +12,17 @@
   ],
   "meaning": "R1 gives a principle receiving the contingent x's esse. The already open received-esse/CAUSE_2 coverage bridge gives a distinct c causing that same x's esse. The independently open selected-world cause-presence interface then makes c exist at w. The recipient principle is not identified with c. The result is a genuine actual-giver-at-w endpoint, stronger than B2, not a proof of R1 or of either causal bridge.",
   "definition_ids": [
-    "1875d575-2a60-5000-b403-0ab090078a7a",
     "211a6432-8b8f-53ed-85e3-75173bb15b24",
     "4433942e-aaf6-55a9-b777-66e55638103d",
     "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
-    "7439c292-82a4-530d-8144-a61a6c21f502",
-    "85f7f569-ab4d-514b-aa2c-cf75171ad105",
     "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
     "afc7a0c6-0b7d-5a08-b406-3ecad83e36ca",
-    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
-    "d650ff6e-6b08-5f27-ac93-6f32c96968a8"
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
   ],
   "disambiguation_ids": [
     "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
     "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
-    "5323527f-56a2-5d11-8a76-5b25461a61b4",
     "5921354b-51e6-5da3-8d8c-e9041840fd9f",
-    "5d15d8f2-1080-53c9-886f-cee2a4ff23a9",
-    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
     "896d4cb9-3c62-5230-a499-f23feae9d204",
     "8bb31748-e20f-5266-ac39-c442faab6622",
     "c3c01e92-520e-5358-a58f-0cc7e9c9e6fa"
@@ -39,18 +32,6 @@
       "term": "ATEMPORAL_CAUSE_IN_ESSE",
       "from": "8ea914b9-567f-4714-802f-f3ad639b890f",
       "to": "02217238-2075-4f8f-bff9-eaf03d2ec2eb",
-      "statement_id": "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"
-    },
-    {
-      "term": "ATEMPORAL_CAUSE_IN_ESSE",
-      "from": "00e564e2-7170-44b7-a88d-076378ad675b",
-      "to": "02217238-2075-4f8f-bff9-eaf03d2ec2eb",
-      "statement_id": "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"
-    },
-    {
-      "term": "EXISTENTIAL_SUPPORT_SOURCE_VERSUS_ACTUAL_CAUSAL",
-      "from": "8afd07c5-d7be-4138-83c4-62c59317dc1a",
-      "to": "b5a882ce-e70c-46e1-8e90-9843bcdacf6f",
       "statement_id": "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"
     }
   ]

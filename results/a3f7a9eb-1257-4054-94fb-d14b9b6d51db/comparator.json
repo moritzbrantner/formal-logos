@@ -2,7 +2,7 @@
   "challenge_module": "TruthCore.Results.Causality.ReceivedEsseActualGiver.Challenge",
   "solution_module": "TruthCore.Results.Causality.ReceivedEsseActualGiver.Solution",
   "theorem_names": [
-    "TruthCore.Results.Causality.ReceivedEsseActualGiver.actualGiverFromReceptionAndQ3"
+    "TruthCore.Results.Causality.ReceivedEsseActualGiver.actualGiverFromDistinctEsseAndQ3"
   ],
   "permitted_axioms": [],
   "enable_nanoda": true

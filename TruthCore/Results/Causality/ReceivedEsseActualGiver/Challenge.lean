@@ -12,7 +12,7 @@ namespace TruthCore.Results.Causality.ReceivedEsseActualGiver
 open TruthCore.Causality.Frame (CausalityFrame)
 open TruthCore.Causality.ReceivedEsseActualGiver (ContingentHasActualEsseGiverAt)
 open TruthCore.Causality.FirstMoverNecessity
-  (ContingentReceivesEsse IdentityScopedEsseReception ContingentHasDistinctEsseCause esseProfile)
+  (ContingentReceivesEsse ContingentHasDistinctEsse ContingentHasDistinctEsseCause esseProfile)
 open TruthCore.Causality.TimeSymmetricGiving (ReceivedEsseHasCauseOfBeing)
 open TruthCore.Causality.UnderivedNonComposite (UnitingCausesPresent)
 open TruthCore.Causality.ExistenceActuality (ExistingInActAt)
@@ -28,17 +28,13 @@ theorem actualGiverFromReceivedCause {W B T R P : Type}
     ContingentHasActualEsseGiverAt F w := by
   sorry
 
-/-- A second route shares R1 and actual-cause presence, but uses R3, De ente, irreflexivity and the separately open q.3 a.4 causal reading instead of coverage. -/
-theorem actualGiverFromReceptionAndQ3 {W B T R P : Type}
+/-- B6 + the q.3 a.4 cause reading yield a distinct CAUSE_2. The
+separate cause-presence interface makes that same giver actual at w. Existing
+#1877 R1/R3/De ente/irreflexivity support for B6 composes upstream. -/
+theorem actualGiverFromDistinctEsseAndQ3 {W B T R P : Type}
     (F : CausalityFrame W B T R) (w : W) (InAct : B → R → Prop)
     (essenceOf esseOf : B → P) (suffice : B → Prop)
-    (Received : B → P → Prop) (ReceptivePotencyTo : P → P → Prop)
-    (hR1 : ContingentReceivesEsse F w Received)
-    (hR3 : IdentityScopedEsseReception essenceOf esseOf Received)
-    (hDeEnte : TruthCore.Latin.Aquinas.DeEnte.ReceiverInPotencyToReceivedEsseReading
-      esseOf Received ReceptivePotencyTo)
-    (hIrrefl : TruthCore.Causality.EsseReception.NothingInReceptivePotencyToItself
-      ReceptivePotencyTo)
+    (hDistinct : ContingentHasDistinctEsse F w essenceOf esseOf)
     (hActual : ExistingInActAt F.history.ontic InAct F.esse w)
     (hQ3 : DistinctEsseRequiresExternalCauseReading
       (esseProfile F InAct essenceOf esseOf suffice))
