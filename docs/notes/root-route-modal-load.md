@@ -1,48 +1,62 @@
 # Is modal necessity load-bearing for the root? (2026-11-23)
 
-This is the first of four follow-up questions after #1887. All of the #1870 → #1884 → #1887 work (C2, power-grounded possibility, Pruss's argument, existence in essence) bears on one modal crux: whether a foundational, simple being's possible absence needs a ground. This note asks which routes to the root actually depend on that crux. It is a structural question about the graph and makes no claim of warrant.
+This is the first of four follow-up questions after #1887. All of the #1870 → #1884 → #1887 work (C2, power-grounded possibility, Pruss's argument, existence in essence) bears on one modal crux: whether a foundational, simple being's possible absence needs a ground. This note asks which routes to the root depend on modal necessity at all, and which depend on that crux in particular. It is a structural question about the graph and makes no claim about warrant.
 
 ## Method
 
-The data is the frontier and corpus at `main` `fd78b77e6`. The method is a least fixpoint over verified arguments:
+The data is the frontier and corpus at `main` `fd78b77e6`. The method is a least fixpoint over verified arguments.
 
-1. **Excluded statements.** A statement is excluded when its label, paraphrase or Lean declaration name mentions modal necessity or contingency. This covers NECESSARY_2 and NECESSARY_6–12 (Kripke-world, actualist-K, essence-exemplification and frame senses), `NecessaryAt`, `ContingentAt`, CONTINGENCY_1, accessible worlds, Kripke frames and frame classes. This gives 244 statements. A second variant also excludes Aquinas's "cannot not-be" senses (NECESSARY_1/3/4, `IsNecessary`, necessary per se), which gives 264.
-2. **Allowed leaves.** A statement is a leaf if the frontier reports it as an open premise (`statement_depths`: bare, stated or supported) or no verified argument concludes it. A statement the frontier reports as proved-but-unestablished is not a leaf. It counts only if one of its verified arguments has all premises derivable.
-3. **The test.** Derivability is computed while excluded statements are never allowed. Each verified root argument then counts as modal-free when all its premises are derivable.
+1. **Excluded statements**, in three variants:
+   - (a) statements whose label, paraphrase or Lean declaration name mentions modal necessity or contingency (244 statements). This covers NECESSARY_2 and NECESSARY_6–12, `NecessaryAt`, `ContingentAt`, CONTINGENCY_1, accessible worlds, and Kripke frames and frame classes;
+   - (b) (a) plus Aquinas's "cannot not-be" senses (264 statements): NECESSARY_1/3/4, `IsNecessary` and necessary per se;
+   - (c) the Lean-level classification. Each statement's `lean_declaration` was resolved by namespace, and its `def`/`abbrev` body was unfolded up to two levels and searched for `NecessaryAt`, `ContingentAt`, `.access`, `Box`, `Diamond`, `□`, `◇`, `NecessaryBeing`, `IsNecessary` and `NecessaryExistence`. This finds 656 statements, 439 of which variants (a) and (b) miss.
+2. **Leaves** follow the leaf rule of `truth frontier --routes`. A statement is a leaf if it is established, open (stated or supported), has no verified non-transcription argument, or sits in an ungrounded cycle. Other proved statements must be derived through a verified argument whose premises are all derivable. A stricter rule that also expands proved stated and supported statements gives the same counts. (`statement_depths` covers every statement, so it cannot serve as the leaf test.)
+3. **The test.** Derivability is computed with excluded statements never allowed. A verified root argument is modal-free when all of its premises are derivable. This is a question about which verified derivations exist down to the frontier's own leaves. It is not a question about which statements may be assumed.
 
-Taking any statement as an open premise would make the test trivial. This version asks instead whether a route's *verified derivation*, down to the frontier's own open leaves, can avoid modal necessity.
-
-**Lean-level spot check.** The analysis classifies statements by label. So for three representative modal-free routes I collected every statement in the derivation tree and searched the `def` of each one's Lean declaration for `NecessaryAt`, `ContingentAt`, `Box`, `NecessaryExistence` and `IsNecessary`. The routes were the prima via (`1c5edad9`, 19 declarations), the quarta via (`fa24c576`, 16) and the designated efficient-regress route (`3b0f4fa5`, 38). None of the 73 definitions matched.
+The first draft of this note used `statement_depths` as the leaf test. That made every statement a leaf, so the test checked only direct premises. The independent challenge caught this, rebuilt the analysis, and confirmed the corrected results below under all three variants and both leaf rules. Its scripts are in the coordinator's scratchpad and are not part of this repository.
 
 ## Result
 
-**26 of the 28 verified root arguments have modal-free derivations, under both exclusion variants.** These are every prima-via, quarta-via, efficient-regress, identity-witness and q.11 route, the cheapest route (`8df2faad`) and the designated route (`3b0f4fa5`).
+**25 of the 28 verified root arguments have modal-free derivations, under every variant.** They cover all the prima-via, quarta-via, efficient-regress, identity-witness and q.11 routes, plus the designated route `3b0f4fa5`. With Lean-level exclusion, their witness trees contain no modal statement at all: 67 statements under the route leaf rule and 301 under the strict rule. No route is modal-free only because of a transcription.
 
-The only two routes that need modal necessity are the necessary-root routes `1deb1d29` and `3357fa30`, which cost 52 and 53, the highest of the 28. Both are blocked at a single node: `c71c068c` (STMT-EVERY-CONTINGENT-GROUNDED-AT, "every actual contingent concretum has an actual ground"). Every other excluded statement on those routes lies downstream of it.
+**Three routes need modal necessity:**
 
-**Consequence.** The modal crux is load-bearing only for the necessary-root (modal-spine) routes. This includes STMT-NECESSARY-CONCRETE-AT `b19ffd92` and everything that reaches it: C2, PGP, Pruss, and existence in essence. These routes add support options at that node. They are not on the critical path of the 26 cheaper routes, so settling the modal crux in either direction would not change whether those routes go through.
+| Route | Cost | Blocked at | Through |
+|---|---|---|---|
+| `1deb1d29` | 52 | `c71c068c` STMT-EVERY-CONTINGENT-GROUNDED-AT ("every actual contingent concretum has an actual ground"; Lean: `ContingentAt`, accessible worlds) | the necessary-root closure, which is the modal crux |
+| `3357fa30` | 53 | `c71c068c` | the same |
+| `8df2faad` (cheapest) | 16 | `bed94ec2` STMT-NECESSARY-ROOT-ON-INTENDED-READING (Lean: `Box`, `IsNecessary`) | the KT/KTB/S4/S5 frame-correspondence arguments for NECESSARY_2 |
 
-**Limits.**
-- The classification is by label, paraphrase and declaration name. The Lean-level check covers three routes, not all 26.
-- The result concerns *verified* derivations to the frontier's leaves. An open leaf may still be *motivated* by modal considerations in its notes; the test does not detect that.
-- Necessity enters some non-modal routes through other senses, such as the Third Way's "cannot not-be". The second exclusion variant shows these senses are not load-bearing either.
+- **The first two routes** have `c71c068c` as their only blocking premise. Every other premise has a modal-free derivation. Some other modal statements appear in their support graph, but only on alternative derivations of other premises.
+- **The cheapest route** depends on modal necessity, but not on `c71c068c`. If only `c71c068c` is excluded, it still goes through via the KT reading (`03a8322c`). Its frontier leaves include the T schema `cb456382` and the KT reading `0aa36cd6`.
 
-## Crux inventory of the 26 modal-free routes (stages 1–2)
+**What this means for the modal crux.** It is load-bearing for exactly two routes: the two necessary-root routes, through `c71c068c`. Modal necessity more broadly, which includes the frame-correspondence readings, is load-bearing for three. For the other 25 routes, no verified derivation needs modal necessity.
 
-These are the open leaves in the modal-free derivations whose stages include 1 or 2. The count is the number of the 26 routes that use the leaf.
+This is a claim about which derivations exist. It does not say that the modal crux has no effect on those 25 routes. One of `c71c068c`'s three verified arguments (`2162ca9d`, via participation) uses `cb1cdea9`, and `cb1cdea9`'s derivation rests on leaves shared with the 25 routes: `7067553d`, `d5a94eb1`, `f8ba2429`, `64498e7e`, `c6d6379b` and `f296a694`. A defeat of `c71c068c` would therefore put disjunctive pressure, by modus tollens, on that derivation's premises, which include those shared leaves. It removes no premise from the 25 routes. The dependence is shared, not critical.
 
-| Family | Leaves (number of routes) |
+## Crux inventory of the 25 modal-free routes (stages 1–2)
+
+This table is taken from the frontier's own per-route leaves (`routes[].open_premise_statement_ids`), restricted to leaves whose stages include 1 or 2. The count is the number of the 25 routes that have the statement as an open leaf.
+
+| Routes | Leaves |
 |---|---|
-| Fourth Way | being in act implies having being `7067553d` (22); the cause of a quality is "more such" `d5a94eb1` (22); grades are found in things `a9622441` (21); the maximum in a genus causes the perfection in all others `d9fad785` (21); grades have a maximum `6c27657f` (21); the cause of being causes the perfections `f8ba2429` (20); maximal in being is first `eaa4c679` (20); maximally TRUE_3 is maximally a being `101bdd62` (19) |
-| First Way | the motion principle `4a952b96` (16); the mover is in act `f296a694` (16); nothing is moved except as in POTENCY_1 `4be9a4ac` (16); a moved mover moves only as moved `1e47e6db` (16); no infinite per se mover series `226c38f6` (12); no infinite per se efficient series `97f5850f` (4); act–potency non-contradiction `c6d6379b` (12); the dilemma "first mover or none" `ca075552` (14, bare); observation `fbc516c1` (16) |
-| Composition and priority | every composite has a cause `ca07cae9` (16); composite iff matter–form or esse ≠ essence `d7741cdc` (16); no component is first `09c6d5f0` (20); act is SIMPLY_PRIOR_1 to POTENCY_1 `a4d3261a` (16) |
-| Attribute bridges | immaterial → intellectual `180f5ad2` (16); intellect → will `090be689` (16); immutable → eternal `0659227c` (16); subsistent being → infinite `75a37a91` (16); a cause's perfections are in it formally or eminently `64498e7e` (16); good = actually having a perfection `00e962ae` (16) |
-| Naming | the classical attribute bundle → GOD_4 `818a73cc` (16, supported); GOD_4 is maximal in being `4c79298d` (13); first pure-act unique mover → GOD_4 `a594d8c4` (4); the skeleton's attribute field `d5ac1620` (9, bare) |
+| **all 25** | `d5a94eb1` whatever causes a quality is more such; `d9fad785` the maximum in a genus causes the perfection in all others; `f8ba2429` the cause of being causes every perfection; `64498e7e` a cause's perfections are in it formally or eminently; `7067553d` nothing is in act except insofar as it is; `00e962ae` good = actually having a perfection; `ca07cae9` every composite has a uniting cause; `818a73cc` the classical attribute bundle names GOD_4 (supported) |
+| 19–22 | `4c79298d` GOD_4 is maximal in being (22); `6c27657f` grades have a maximum (21); `a9622441` grades are found in things (21); `09c6d5f0` no component is the first being (20); `1ec205ed` fuller nominal profile (20); `eaa4c679` maximal in being is first (20); `a4d3261a` act is SIMPLY_PRIOR_1 to POTENCY_1 (20); `101bdd62` maximally TRUE_3 is maximally a being (19) |
+| 12–16 | immaterial → intellectual `180f5ad2`; intellect → will `090be689`; immutable → eternal `0659227c`; subsistent being → infinite `75a37a91`; composite iff matter–form or esse ≠ essence `d7741cdc`; First Way core `4a952b96`, `f296a694`, `4be9a4ac`, `1e47e6db` (16 each); created agents act as applied `777646a5` (14); act–potency non-contradiction `c6d6379b` (12); no infinite per se mover series `226c38f6` (12) |
+| ≤ 9 | the five GOD_4 attribute leaves `29818edd` (intellect), `66aecdd7` (will), `5bec93b3` (eternal), `b0132989` (infinite), `fb3802a8` (immutable) (9 each); firstness `74eb9113`, the unique pure-act mover is GOD_4 `a594d8c4`, no infinite per se efficient series `97f5850f`, per se mover link `c2880fe0` (4 each); the q.11 uniqueness premises (3 each) |
 
-The root routes also share stage-3 historical premises, which are out of scope under the current owner focus.
+Some statements are not open leaves. The observation `fbc516c1` is established as self-evident, and the dilemma "first mover or none" `ca075552` is closed by transcription from closed premises. Both routes also share stage-3 historical premises, which the current owner focus leaves out.
 
 ## Implication for the next research
 
-If the goal is to test whether a crux of the case yields unacceptable consequences, the leaves above are where a defeat would remove routes. The Fourth Way principles, especially the causal-superiority premise `d5a94eb1` and maximum-causes-all `d9fad785`, carry 21–22 routes. The First Way's no-infinite-series premises and the attribute bridges carry about 16 each. The modal crux carries 2.
+Eight premises are open leaves of **every** modal-free route. Together they form the common core of the God-existence and attribute stages on those routes:
+- three causal-perfection principles: causal superiority `d5a94eb1`, the maximum causes all `d9fad785`, and the cause of being causes every perfection `f8ba2429`;
+- perfections pre-exist in the cause `64498e7e`;
+- actuality only through being `7067553d`;
+- goodness = actuality `00e962ae`;
+- composition needs a cause `ca07cae9`;
+- the naming premise `818a73cc`.
 
-Reproduction: `truth frontier --json` and the corpus arguments and results, with the fixpoint above. No CLI command performs this "route free of a statement class" query yet, and adding one is part of the tooling follow-up.
+To test whether a crux has unacceptable consequences, these are the premises whose defeat would remove every modal-free route at once. The Fourth Way grade premises carry 19–22 routes, the First Way core and the attribute bridges about 12–16, and the modal crux (`c71c068c`) carries 2.
+
+Reproduction uses `truth frontier --json` and `truth frontier --routes --json`, the corpus arguments and results, and the fixpoint above. No CLI command answers the query "which routes are free of a class of statements" yet. Adding one belongs to the tooling follow-up.
