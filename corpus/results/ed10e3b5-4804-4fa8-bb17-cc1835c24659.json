@@ -1,6 +1,6 @@
 {
   "id": "ed10e3b5-4804-4fa8-bb17-cc1835c24659",
-  "label": "First Way reception controls and adopted-potency incompatibility",
+  "label": "First Way reception controls and POTENCY_1 incompatibility",
   "argument_id": "4e0794fa-8054-4936-8bc4-097f485dfbae",
   "challenge_module": "TruthCore.Results.Causality.FirstMoverNecessity.Challenge",
   "solution_module": "TruthCore.Results.Causality.FirstMoverNecessity.Solution",

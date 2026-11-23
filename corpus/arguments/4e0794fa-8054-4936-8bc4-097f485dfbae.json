@@ -1,6 +1,6 @@
 {
   "id": "4e0794fa-8054-4936-8bc4-097f485dfbae",
-  "label": "First Way reception controls and adopted-potency incompatibility",
+  "label": "First Way reception controls and POTENCY_1 incompatibility",
   "premise_statement_ids": [],
   "conclusion_statement_id": "e332dbe0-8cd1-4d0b-8e97-15a4ab87c202",
   "inference_ids": [
