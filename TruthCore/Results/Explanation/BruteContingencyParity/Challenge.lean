@@ -59,6 +59,26 @@ theorem parity {W B F : Type} (S : WhyStance F) (k : F → Prop) (A : Arena W B 
     ExcludesBruteRival S A w o := by
   sorry
 
+/-- The stronger parity argument: under the same three premises, the stance
+cannot meet its demand while accepting `o` with no reason at all, contingent or
+not. This is the form that binds both sides: it applies to an unreasoned
+necessary target (God's existence, a necessary base) as well as to a brute
+contingent one. -/
+theorem parityUnreasoned {W B F : Type} (S : WhyStance F) (k : F → Prop) (A : Arena W B F)
+    (w : W) (t o : F)
+    (hUniform : FeatureUniform S k) (hReq : RequiresWhyFor S t)
+    (hShare : ShareFeature k t o) :
+    ExcludesUnreasonedAcceptance S A w o := by
+  sorry
+
+/-- Strength order: excluding the acceptance of `o` with no reason excludes
+holding `o` as a brute contingent truth, since a brute contingent truth has no
+reason. -/
+theorem excludesBruteOfExcludesUnreasoned {W B F : Type} (S : WhyStance F)
+    (A : Arena W B F) (w : W) (o : F)
+    (h : ExcludesUnreasonedAcceptance S A w o) : ExcludesBruteRival S A w o := by
+  sorry
+
 /-! ## Laws and models -/
 
 theorem b2SupportControls : B2SupportControls := by
@@ -73,6 +93,7 @@ local macro "scene" : tactic => `(tactic| (
     pnone, basic, everywhere, ptbl, Explained, HoldsBruteRival, WhyHonors,
     WhyHonorsNecessitating, RequiresWhyFor, FeatureUniform, Selective, Restricted, whyView,
     idle, existence, godOnly, evidential, symmetric, uniformRejector, baseNaturalist,
+    reasonStatusTheist, ExcludesUnreasonedAcceptance, ExcludesBruteRival,
     theistStance, contingentOnlyTheist, wstance, natAccepts, natCore, BruteAt, Contingent,
     Access, IrreflexiveContingent, ofModel, reasonModel, bruteFirst, mk, fContingent,
     noReasons, UnexplainedAre, UnnecessitatedAre, observation,

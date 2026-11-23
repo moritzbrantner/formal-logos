@@ -31,15 +31,24 @@ Three parts, all over existing vocabulary.
   obtains, as against `Stance.demands`, a reason to accept it;
   DISAMB-REASON-EPISTEMIC-ONTIC). If the stance requires a reason why `t`
   obtains, requires reasons uniformly in a feature `k`, and `t` and `o` agree on
-  `k`, it cannot meet its demand while accepting `o` as brute. The argument is
-  symmetric: it binds a naturalist who rejects a brute God and a theist who
-  rejects brute contingents alike. With brute existence rejected on both sides,
-  the question becomes comparative: the scene's pictures list exactly which
-  existents each explanation leaves unexplained (many diverse contingents, one
-  contingent state, one necessary base, God), and a general law shows that with
-  factive, well-founded reasons some truth is always unexplained, so the only
-  pictures with none use a self-reason at their terminus ("existence by its own
-  nature"), for God or for a necessary physical base alike.
+  `k`, it cannot meet its demand while accepting `o` as a brute contingent truth
+  (`ExcludesBruteRival`). The stronger sibling (`ExcludesUnreasonedAcceptance`)
+  drops contingency: under the same premises the stance cannot accept `o` with
+  no reason at all. Only the sibling is symmetric: it binds a naturalist who
+  rejects an unreasoned God (God's existence as a mere brute fact, in the
+  owner's wording; DISAMB-BRUTE-TERMINAL-UNREASONED calls a necessary fact with
+  no reason unreasoned, not brute) and a theist who rejects unreasoned
+  contingents alike. With unreasoned existence rejected on both sides, the
+  question becomes comparative. The scene lists, as scene-relative tallies,
+  which existents each picture leaves unexplained (many diverse contingents, one
+  contingent state, one necessary base, God); the tallies rank nothing by
+  themselves (the #746 count control: a bare count favours copying reasons). A
+  general law shows that factive, well-founded reasons always leave some truth
+  unexplained, so a picture with none needs reasons that are not well-founded:
+  a self-reason, a circle or an infinite chain. In the scene it is a
+  self-reason at the terminus ("existence by its own nature"), for God or for a
+  necessary physical base alike; circles and endless regresses of contingents
+  are not in the scene (named gap).
 * **Evidence is not explanation.** An inquiry can support the existence of the
   contingent foundation (an epistemic reason to accept it) while the foundation
   has no reason why it exists (`Inquiry.supports` versus `Arena.explains`). An
@@ -194,6 +203,15 @@ def HoldsBruteRival (S : WhyStance F) (A : Arena W B F) (w : W) (o : F) : Prop :
 def ExcludesBruteRival (S : WhyStance F) (A : Arena W B F) (w : W) (o : F) : Prop :=
   ¬ HoldsBruteRival S A w o
 
+/-- The stronger parity conclusion: the stance does not at once meet its ontic
+demand in `A` at `w`, accept `o`, and have `o` without a reason there, whether
+`o` is contingent or not. For a necessary `o` (God's existence, a necessary
+base) `ExcludesBruteRival` holds vacuously, because `BruteAt` requires
+contingency; this form does not. -/
+def ExcludesUnreasonedAcceptance (S : WhyStance F) (A : Arena W B F) (w : W) (o : F) :
+    Prop :=
+  ¬ (WhyHonors S A w ∧ S.accepts o ∧ ¬ Explained A w o)
+
 end Stances
 
 /-! ## The parity scene -/
@@ -314,7 +332,8 @@ def theistReading : PFact → Arena Bool Empty PFact :=
 /-- The idleness feature, a description: God is posited as an explainer whose
 posit lowers no count of unexplained existents below the naturalist picture's
 one. A stipulated table, not computed; the scene's map lists the unexplained
-existents of each picture. -/
+existents of each picture. It is the stance's own measure, and the #746 count
+control applies to it. -/
 def idle : PFact → Prop := ptbl True False False False False
 
 /-- Being an existence fact of a posited or observed being: every scene fact. -/
@@ -361,6 +380,13 @@ reason why for each. -/
 def theistStance : WhyStance PFact :=
   wstance (ptbl True False True True True) (ptbl True False False False False) pnone
     (ptbl True False True True True)
+
+/-- The reason-status theist: accepts God, the state and the two existents, and
+requires a reason why for God and for the initial state, uniformly in the
+reason-status feature (the facts posited with no reason). -/
+def reasonStatusTheist : WhyStance PFact :=
+  wstance (ptbl True False True True True) (ptbl True False False False False) pnone
+    (ptbl True False True False False)
 
 /-- The modally restricted theist: as `theistStance`, but requires a reason why
 only for the contingent facts. -/
@@ -536,10 +562,17 @@ stances the argument binds.**
 * Both sides alike (#746 second core, reused): with factive reasons that are
   well-founded at `w` and some truth at `w`, not every truth at `w` has a reason.
   So a picture with no unexplained existent needs reasons that are not
-  well-founded there; in the scene, a self-reason at the terminus ("existence by
-  its own nature").
-* The comparison, at the reading world `false`, listing exactly the unexplained
-  existents: `manyBrute` the atom and the star (two diverse contingents);
+  well-founded there: a self-reason, a circle or an infinite chain. In the scene
+  it is a self-reason at the terminus ("existence by its own nature"); a circle
+  (#755 `mutualReasons`) and an endless regress of contingents each explained by
+  its predecessor (#746 `cofinite`, no terminal fact) are not scene pictures,
+  and the regress faces the whole-series question (#755 collapse core, attempt
+  a5958e25).
+* Scene-relative tallies, at the reading world `false`, listing exactly the
+  unexplained existents. They rank nothing by themselves: a bare preference for
+  fewer unexplained facts favours copying reasons (#746 count control); ranking
+  needs an open comparative principle such as the adequacy norm (#750).
+  `manyBrute` the atom and the star (two diverse contingents);
   `naturalist` the initial state (one contingent); `bruteBase` the base (one
   necessary); `bruteGod` God (one necessary); `natureBase` and `theist` none.
   Counting only necessitating reasons: `bruteBase` and `bruteGod` leave their
@@ -557,9 +590,14 @@ stances the argument binds.**
   initial state's agree on the reason-status feature (both posited with no
   reason); under the theist reading they differ (God's existence has a
   self-reason, and is true at every world).
-* Symmetric binding: `baseNaturalist` (reasons why for everything it accepts)
-  meets its demand in `natureBase` and not in `bruteBase`; `theistStance` meets
-  it in `theist` and not in `bruteGod`.
+* Symmetric binding, through the stronger sibling `ExcludesUnreasonedAcceptance`:
+  the naturalist `uniformRejector` and the theist `reasonStatusTheist` both
+  satisfy P1-P3 in the reason-status feature (the naturalist with target God,
+  the theist with target the initial state), and neither can accept an
+  unreasoned existent: the initial state in `naturalist`, God in `bruteGod`.
+  For the necessary God of `bruteGod` the weaker `ExcludesBruteRival` holds only
+  vacuously (God is not `BruteAt`). `baseNaturalist` meets its demand with the
+  self-explained base and not with the unreasoned one.
 * `godOnly` meets its demand in `naturalist` and holds the foundation as a
   brute rival. It is uniform in `idle` and not uniform in the reason-status
   feature, selective relative to the latter and restricted relative to `idle`.
@@ -624,9 +662,19 @@ def ParityMap : Prop :=
   (ShareFeature (PositedWithoutReason atheistReading) .god .found ∧
     PositedWithoutReason atheistReading .god ∧
     ¬ ShareFeature (PositedWithoutReason theistReading) .god .found) ∧
-  -- symmetric binding
-  (WhyHonors baseNaturalist natureBase false ∧ ¬ WhyHonors baseNaturalist bruteBase false ∧
-    WhyHonors theistStance theist false ∧ ¬ WhyHonors theistStance bruteGod false) ∧
+  -- symmetric binding, through the stronger sibling
+  (FeatureUniform uniformRejector (PositedWithoutReason atheistReading) ∧
+    RequiresWhyFor uniformRejector .god ∧
+    ShareFeature (PositedWithoutReason atheistReading) .god .found ∧
+    ExcludesUnreasonedAcceptance uniformRejector naturalist false .found ∧
+    FeatureUniform reasonStatusTheist (PositedWithoutReason atheistReading) ∧
+    RequiresWhyFor reasonStatusTheist .found ∧
+    ShareFeature (PositedWithoutReason atheistReading) .found .god ∧
+    ExcludesUnreasonedAcceptance reasonStatusTheist bruteGod false .god ∧
+    reasonStatusTheist.accepts .god ∧ ¬ Explained bruteGod false .god ∧
+    ¬ WhyHonors reasonStatusTheist bruteGod false ∧ WhyHonors reasonStatusTheist theist false ∧
+    ExcludesBruteRival reasonStatusTheist bruteGod false .god ∧ ¬ BruteAt bruteGod false .god ∧
+    WhyHonors baseNaturalist natureBase false ∧ ¬ WhyHonors baseNaturalist bruteBase false) ∧
   -- godOnly: bound in the reason-status feature, not in idleness
   (HoldsBruteRival godOnly naturalist false .found ∧ RequiresWhyFor godOnly .god ∧
     FeatureUniform godOnly idle ∧ ¬ ShareFeature idle .god .found ∧

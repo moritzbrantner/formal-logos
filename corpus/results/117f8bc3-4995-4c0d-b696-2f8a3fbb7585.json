@@ -1,0 +1,11 @@
+{
+  "id": "117f8bc3-4995-4c0d-b696-2f8a3fbb7585",
+  "label": "Excluding unreasoned acceptance excludes the brute contingent rival",
+  "argument_id": "133eb927-f309-4b66-b749-18eee994570e",
+  "challenge_module": "TruthCore.Results.Explanation.BruteContingencyParity.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.BruteContingencyParity.Solution",
+  "theorem": "TruthCore.Results.Explanation.BruteContingencyParity.excludesBruteOfExcludesUnreasoned",
+  "comparator_config": "results/117f8bc3-4995-4c0d-b696-2f8a3fbb7585/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order: the symmetric parity conclusion strengthens the brute-contingent one. A one-step weakening; it establishes no premise."
+}

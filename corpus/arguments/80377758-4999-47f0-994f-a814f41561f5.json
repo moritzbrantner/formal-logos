@@ -1,0 +1,24 @@
+{
+  "id": "80377758-4999-47f0-994f-a814f41561f5",
+  "label": "Parity, symmetric form: a feature-uniform demand excludes accepting an unreasoned fact",
+  "premise_statement_ids": [
+    "3ab9d002-8d4f-441d-9292-e777170f242f",
+    "64715bf1-5a0a-4f8a-8965-f96aa920b0b3",
+    "460aca64-ec25-4e39-ad77-e33beb7d1e12"
+  ],
+  "conclusion_statement_id": "9df516be-9941-44fa-963c-1d56463d60a5",
+  "inference_ids": [
+    "ca0dacdb-7434-49fe-a146-da654ad5f943"
+  ],
+  "meaning": "The owner's parity argument in its symmetric form, analyst formulation, attribution deferred. Under the same P1-P3, the stance requires a reason why o obtains, so meeting its demand it cannot accept o with no reason, whether o is contingent or necessary. It binds a naturalist who rejects an unreasoned God (target God, o the contingent foundation) and a theist who rejects unreasoned contingents (target a contingent existent, o God's existence) alike (parity map, both instances). With unreasoned existence rejected on both sides, what remains is a comparison of explanations of existence, which this argument does not settle: it needs an open comparative principle (#750) and the open adequacy of a self-reason. It establishes neither B2 nor that anything has a reason, and it does not answer whether there is evidence for God.",
+  "definition_ids": [
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "179d4557-bda1-59c4-938a-b91e9974a27f",
+    "a17def9d-5354-4510-8a2e-34436ff486d4",
+    "d0f8d6b9-8086-4bf7-95e1-46bb74d76398"
+  ],
+  "disambiguation_ids": [
+    "7aba7955-aa37-5b08-a170-8420d6142d78",
+    "a61d3807-50e9-595e-9011-9123fd606a4b"
+  ]
+}
