@@ -8,6 +8,7 @@ public import TruthCore.Causality.GodNamingSenses
 public import TruthCore.Causality.RootPositiveIntellectWill
 public import TruthCore.Causality.DeiFiliusAttributeField
 public import TruthCore.Logic.ReflectiveCoherence
+public import TruthCore.Results.Causality.NamingVeracityBatch1.Solution
 
 /-! # A thirteen-slot profile schema, targeted admissibility and actual naming (#1864)
 
@@ -405,6 +406,55 @@ theorem positiveCore_from_same_root {P R C A : Type} (σ : Signature)
   obtain ⟨n, hPerfectRoot, hGood, _, hSimple, _, _, _, hInt, hWill⟩ := hRoot
   obtain ⟨hActualRoot, hNec, hOnly, _, hPerfect⟩ := hPerfectRoot
   refine ⟨n, ?_⟩
+  change m.ontic.ExistsAt w n ∧ NecessaryAt m.ontic w n ∧
+    IsSimple Composite n ∧ IsPerfect q.InAct n ∧
+    IsSupremelyGood q.InAct GoodIn q.CausesIn q.esse n ∧
+    (ActualRoot m w n ∧ ∀ y, ActualRoot m w y → y = n) ∧
+    HasIntellect n ∧ HasWill n
+  exact ⟨hActualRoot.1.2, hNec, hSimple, hPerfect, hGood,
+    ⟨hActualRoot, hOnly⟩, hInt, hWill⟩
+
+/-- Positive same-bearer extension through two ALREADY EXISTING arguments:
+q.7 esse=essence -> infinite and q.25 unlimited act + power follows act ->
+capacity for all contradiction-free tasks. The three power bridges and the
+subsistent-being infinity reading are explicit inputs. Neither new piece
+mentions GOD_4 or asserts actual exercise, self-knowledge, or full moral
+freedom. This extends six to EIGHT interpreted attribute slots, on one n. -/
+theorem positiveCore_with_infinite_power_from_same_root {P R C A : Type} (σ : Signature)
+    (m : Profile W σ.Being) (w : W)
+    (q : TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile σ.Being P R)
+    (Composite MatterForm Infinite Eternal HasIntellect HasWill : σ.Being → Prop)
+    (GoodIn InPotency : σ.Being → R → Prop)
+    (MoreIn : R → σ.Being → σ.Being → Prop)
+    (PriorSimply ComponentOf : σ.Being → σ.Being → Prop)
+    (power : Power σ) (S : Semantics W C)
+    (Knows : W → σ.Being → C → Prop)
+    (Chooses : W → σ.Being → A → Prop) (Permitted : W → A → Prop)
+    (Capable Imposed : W → σ.Being → A → Prop)
+    (hRoot : NecessaryPositiveRootIntellectWillAt m w q GoodIn MoreIn
+      PriorSimply ComponentOf Composite MatterForm HasIntellect HasWill)
+    (hInfinity : TruthCore.Latin.Aquinas.SummaTheologiae.SubsistentBeingIsInfiniteReading
+      q.essenceOf q.esseOf Infinite)
+    (hUnlimited : TruthCore.Causality.NamingVeracityBatch1.InfiniteIsUnlimitedAct
+      σ Infinite power)
+    (hActive : TruthCore.Causality.NamingVeracityBatch1.ActivePowerFollowsAct σ power)
+    (hPossible : TruthCore.Causality.NamingVeracityBatch1.ConsistentTaskRequiresOnlyPossiblePerfections
+      σ power) :
+    ∃ n, PositiveCoreAt m.ontic
+      (fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+        GoodIn InPotency power S Knows Chooses Permitted Capable Imposed) w n ∧
+      (fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+        GoodIn InPotency power S Knows Chooses Permitted Capable Imposed).infinite w n ∧
+      (fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+        GoodIn InPotency power S Knows Chooses Permitted Capable Imposed).omnipotent w n := by
+  obtain ⟨n, hPerfectRoot, hGood, hEsse, hSimple, _, _, _, hInt, hWill⟩ := hRoot
+  obtain ⟨hActualRoot, hNec, hOnly, _, hPerfect⟩ := hPerfectRoot
+  have hInfinite : Infinite n := hInfinity n hEsse
+  have hInfinitePower :=
+    TruthCore.Results.Causality.NamingVeracityBatch1.infinitePowerFromAct
+      σ Infinite power hUnlimited hActive hPossible
+  have hOmnipotent : IsAlmighty σ power n := hInfinitePower n hInfinite
+  refine ⟨n, ?_, hInfinite, hOmnipotent⟩
   change m.ontic.ExistsAt w n ∧ NecessaryAt m.ontic w n ∧
     IsSimple Composite n ∧ IsPerfect q.InAct n ∧
     IsSupremelyGood q.InAct GoodIn q.CausesIn q.esse n ∧
