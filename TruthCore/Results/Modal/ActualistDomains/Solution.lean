@@ -151,16 +151,19 @@ theorem actual_essential_bundle_possible (m : Ontic W B)
   obtain ⟨x, hExists, hExcellent⟩ := hActual
   exact ⟨w, hRef, x, hExists, hExcellent, hEssential x hExists hExcellent⟩
 
-/-- Structural separating controls: E-possible full thirteen-predicate bearer
+/- Structural separating controls: E-possible full thirteen-predicate bearer
 with no M-accessible bearer; nonvacuous weaker profile-specific inclusion;
 and individually instantiable attributes with no joint bearer. -/
-set_option maxRecDepth 8192 in
+set_option maxRecDepth 10000 in
+set_option maxHeartbeats 1000000 in
+set_option synthInstance.maxSize 100000 in
 theorem divine_controls : DivineControl.Checks := by
   dsimp [DivineControl.Checks, DivineControl.ontic, DivineControl.holdsAt,
     DivineControl.attributes, DivineControl.split, DivineControl.k5Frame,
     DivineControl.k5Ontic, TruthCore.Modal.Euclidean,
     DescribedPossibleGreatness, PossibleGreatness, AdmitGreatnessWorlds,
     GreatnessAt, ExcellenceAt, NineAt,
+    TruthCore.Case.Catholicism.NineClassicalAttributes,
     TruthCore.Modal.NecessaryIfExistent.MaximalProfile,
     TruthCore.Modal.PossibilityTransfer.epistemic,
     TruthCore.Modal.PossibilityTransfer.metaphysical,
