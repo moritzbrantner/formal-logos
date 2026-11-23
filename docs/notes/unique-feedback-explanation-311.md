@@ -2141,9 +2141,10 @@ results):**
   **any** populated fixed solution has a distinct empty fixed solution.
   This holds for *any carrier* and imposes **no** well-foundedness, finiteness,
   acyclicity, transitivity or conservation-law assumption.
-- `SeedOrBorrowedRule p seed rule` allows a nonborrowed input in the rule's
-  activation disjunction; it is a one-way constraint, not a sufficiency or
-  instantiation claim. `uniquePopulatedStateNeedsSeed` says that a populated
+- `SeedOrBorrowedRule p seed rule` allows a **seed-labelled
+  activation exception** to borrowing in the rule's disjunction. The seed
+  predicate is not required to denote an underived or even actual bearer;
+  this is a one-way constraint, not a sufficiency or instantiation claim. `uniquePopulatedStateNeedsSeed` says that a populated
   fixed solution **unique among all solutions, including empty**, entails
   `∃ x, seed x`. The proof is by excluding the all-absent solution, not by
   stipulating induction/least-fixed-point semantics.
@@ -2179,6 +2180,24 @@ explicit, separately named *same-r actual-root* bridge. No additional
 independent evidential warrant is claimed from reusing the same mathematical
 zero-solution reasoning.
 
+**Independent semantic challenge and repaired countermodel (PR #1878,
+2026-11-23).** The theorem establishes the existence of a *seed-labelled
+exception* to the all-borrowed activation rule, **not** source independence.
+This is not merely a terminological objection: use the already verified
+`sourceFreeFiniteCircle` profile, take `seed := fun _ => True`,
+`rule := fun _ _ => True` and the all-true state. The seed-or-borrowed
+condition holds, the state is populated and uniquely fixed (pointwise, under
+the constant-true rule), but every bearer still has an actual incoming
+`ActualEsseCause`, so there is no r-root. The independent reviewer
+identified this counterexample at the previous head; it is a reuse of
+the existing circle's relation assignments and the present definitions,
+**not** a newly registered or checked joint metaphysical model. The root
+conclusion remains conditional on `SeedIsActualEsseRoot` **and** seed
+activation. The diagram now marks the r-to-rule application OPEN and
+relabels the exception before those bridges. This is one targeted P1
+repair of the review's actual final-synthesis claim, not new support
+for a primitive source.
+
 The first result is a discriminating *conditional incompatibility*: jointly
 claiming (i) no activation without some already active supplier, (ii) a
 populated fixed solution and (iii) **uniqueness among all fixed solutions**
@@ -2190,15 +2209,15 @@ mere presence of a mathematical nonempty solution establish that it obtains.
 
 ~~~mermaid
 flowchart TD
-  R["Same-r ActualEsseCause: existing q3a4 dictionary"] --> N["No activation without active r-input"]
+  R["Same-r ActualEsseCause: existing q3a4 dictionary"] -. "OPEN productive rule application" .-> N["No activation without active r-input"]
   F["Populated fixed solution"] --> D{"Distinct empty solution?"}
   N --> E["All-absent state fixed"]
   E --> D
   D --> C["Therefore not unique among ALL solutions"]
-  U["Unique populated state among ALL solutions"] --> S["Some independent seed required"]
+  U["Unique populated state among ALL solutions"] --> S["Some seed / activation exception required"]
   F --> S
   SEED["Activation requires seed OR active r-input"] --> S
-  S --> V["OPEN: seed activates; is actual r-root"]
+  S --> V["OPEN: seed activates; is actual underived r-root"]
   V --> ROOT["One actual r-uncaused bearer in selected state"]
   ROOT -. "Does not establish supplier access" .-> CCR["CCR / 20babef7: every local supplier cone rooted"]
   CCR --> COMMON["Existing c6d92415 / c35b1a5c (plus coverage, uniqueness, population, EM)"]
@@ -2237,7 +2256,11 @@ all-absent states satisfy their exact proposed activation law.
 **Cumulative provisional assessment (2026-11-23, base
 `f3e13e5f6ab2970c34351e7ef294dccbf276815a`).**
 This test adds *conditional positive leverage*, not a new unconditional
-foundation proof. Purely input-borrowing positive laws do not uniquely select
+foundation proof. The strongest inference from unique nonempty rule selection is a
+**labelled activation exception**, not the actual production or independence
+of that exception. The constant-true seeded source-free profile described
+above is an explicit structural counterinterpretation to the stronger
+automatic seed→source reading.  Purely input-borrowing positive laws do not uniquely select
 an actually populated global assignment; the source-backed account can
 supply the missing input **if** it provides independently actual productive
 being. The holist can retain a real, source-free and self-organizing whole
