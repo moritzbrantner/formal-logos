@@ -1164,7 +1164,7 @@ def uniquenessOnlyHere : ProfileSlots Bool Bool :=
 def actualButNotEssential : Prop :=
   TruthCore.Modal.FrameSatisfies .S5 persistingOntic.frame ∧
     persistingOntic.ExistsAt false true ∧
-    NecessaryAt persistingOntic false true ∧
+    TruthCore.German.Kant.CosmologicalInference.NecessaryAt persistingOntic false true ∧
     ExcellenceAt uniquenessOnlyHere false true ∧
     ¬ GreatnessAt persistingOntic uniquenessOnlyHere true false ∧
     ¬ PossibleGreatness persistingOntic uniquenessOnlyHere false
@@ -1173,7 +1173,7 @@ set_option maxRecDepth 10000 in
 set_option synthInstance.maxSize 100000 in
 theorem actualButNotEssential_holds : actualButNotEssential := by
   dsimp [actualButNotEssential, persistingOntic, uniquenessOnlyHere, allTrue,
-    NecessaryAt, ExcellenceAt, NineAt, NineClassicalAttributes, GreatnessAt,
+    TruthCore.German.Kant.CosmologicalInference.NecessaryAt, ExcellenceAt, NineAt, NineClassicalAttributes, GreatnessAt,
     PossibleGreatness, TruthCore.Modal.NecessaryIfExistent.MaximalProfile,
     TruthCore.Modal.PossibilityTransfer.epistemic,
     TruthCore.Modal.FrameSatisfies, TruthCore.Modal.Reflexive,
