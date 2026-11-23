@@ -75,4 +75,86 @@ theorem controls : Control.Controls := by
 theorem certificate : TruthCore.Causality.ConcurrentCessation.Certificate :=
   ⟨consequences, consumerRestriction, controls⟩
 
+
+/-- A same-world and same-bearer C3/¬C3 control, using the existing actual
+grounding and cause-of-esse relations. This is an unregistered structural
+certificate: it does not establish that either model is metaphysically possible
+or close a corpus premise. -/
+theorem c3ActualWorldControls : C3ActualWorld.Certificate := by
+  unfold C3ActualWorld.Certificate
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  -- One history and the same substantial bearer at each temporal/world index.
+  · intro v x
+    cases v <;> cases x <;> decide
+  -- A positive persistence rule, conditional on earlier actuality.
+  · intro v x n hp
+    change v = true ∧ (x = true ∨ (x = false ∧ 1 ≤ n)) at hp
+    change v = true ∧ (x = true ∨ (x = false ∧ 1 ≤ n + 1))
+    rcases hp with ⟨hv, hx | ⟨hx, hn⟩⟩
+    · exact ⟨hv, Or.inl hx⟩
+    · exact ⟨hv, Or.inr ⟨hx, by omega⟩⟩
+  -- Both cause and effect are actual concrete at the selected world.
+  · decide
+  · decide
+  -- The effect is contingent; here every actual bearer is contingent.
+  · refine ⟨by decide, ⟨false, by trivial, by decide⟩⟩
+  · intro x _
+    exact ⟨by decide, ⟨false, by trivial, by decide⟩⟩
+  -- Hence no necessary concrete being is smuggled into the rival.
+  · rintro ⟨x, _, _, hn⟩
+    have h := hn false (by trivial)
+    simpa [C3ActualWorld.withGround, C3ActualWorld.history] using h
+  -- The same originating esse cause is real at the selected world.
+  · decide
+  · refine ⟨1, ⟨by decide, ?_⟩, by decide⟩
+    intro s hs hp
+    simp [C3ActualWorld.history] at hp
+    omega
+  -- Giving at onset requires a present giver, but does not force continuation.
+  · intro v c x t hg
+    change v = true ∧ (c = true ∨ (c = false ∧ 1 ≤ t))
+    exact ⟨hg.1, Or.inl hg.2.1⟩
+  · intro v x t hg
+    cases x <;> simp [C3ActualWorld.originGiving] at hg
+  -- The formal cause→actual-ground bridge can hold with no present giving.
+  · intro c x _ _ hc
+    rcases hc with ⟨rfl, rfl⟩
+    decide
+  -- But weak concurrent actualization and originating→sustaining both fail.
+  · intro hC
+    obtain ⟨g, hg⟩ := hC true false 2 () (by decide) (by decide)
+    simp [C3ActualWorld.originGiving] at hg
+  · intro hS
+    have hs := hS true true false (by decide) (by decide) ⟨1, by decide⟩
+    have hg := hs.2 2 (by decide)
+    simp [C3ActualWorld.originGiving] at hg
+  -- An otherwise identical actual ontology without the grounding edge
+  -- defeats the cause→ground bridge despite an actual originating cause.
+  · intro hb
+    have hbad := hb true false (by decide) (by decide) (by decide)
+    exact hbad.2.2
+  -- A conserving source on that same history satisfies C3.
+  · intro v x t z hr hp
+    have hx : x = false := hr
+    subst x
+    have hvt : v = true ∧ 1 ≤ t := by
+      change v = true ∧ (false = true ∨ (false = false ∧ 1 ≤ t)) at hp
+      simpa using hp
+    refine ⟨true, ?_⟩
+    change v = true ∧ true = true ∧ false = false ∧ 1 ≤ t
+    exact ⟨hvt.1, rfl, rfl, hvt.2⟩
+  · intro v c x _ hc hp
+    rcases hc with ⟨rfl, rfl⟩
+    obtain ⟨t, ht⟩ := hp
+    refine ⟨⟨t, ht⟩, ?_⟩
+    intro s hs
+    have hvs : v = true ∧ 1 ≤ s := by
+      change v = true ∧ (false = true ∨ (false = false ∧ 1 ≤ s)) at hs
+      simpa using hs
+    change v = true ∧ true = true ∧ false = false ∧ 1 ≤ s
+    exact ⟨hvs.1, rfl, rfl, hvs.2⟩
+  · intro v c x t hg
+    change v = true ∧ (c = true ∨ (c = false ∧ 1 ≤ t))
+    exact ⟨hg.1, Or.inl hg.2.1⟩
+
 end TruthCore.Results.Causality.ConcurrentCessation
