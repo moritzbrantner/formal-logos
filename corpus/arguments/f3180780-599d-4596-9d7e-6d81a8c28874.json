@@ -33,5 +33,19 @@
     "896d4cb9-3c62-5230-a499-f23feae9d204",
     "8bb31748-e20f-5266-ac39-c442faab6622",
     "c3c01e92-520e-5358-a58f-0cc7e9c9e6fa"
+  ],
+  "sense_bridges": [
+    {
+      "term": "ATEMPORAL_CAUSE_IN_ESSE",
+      "from": "8ea914b9-567f-4714-802f-f3ad639b890f",
+      "to": "02217238-2075-4f8f-bff9-eaf03d2ec2eb",
+      "statement_id": "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"
+    },
+    {
+      "term": "ATEMPORAL_CAUSE_IN_ESSE",
+      "from": "00e564e2-7170-44b7-a88d-076378ad675b",
+      "to": "02217238-2075-4f8f-bff9-eaf03d2ec2eb",
+      "statement_id": "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"
+    }
   ]
 }

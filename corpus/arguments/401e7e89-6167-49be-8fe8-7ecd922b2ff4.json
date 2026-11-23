@@ -48,5 +48,25 @@
     "8bb31748-e20f-5266-ac39-c442faab6622",
     "c3c01e92-520e-5358-a58f-0cc7e9c9e6fa",
     "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
+  ],
+  "sense_bridges": [
+    {
+      "term": "ATEMPORAL_CAUSE_IN_ESSE",
+      "from": "8ea914b9-567f-4714-802f-f3ad639b890f",
+      "to": "02217238-2075-4f8f-bff9-eaf03d2ec2eb",
+      "statement_id": "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"
+    },
+    {
+      "term": "ATEMPORAL_CAUSE_IN_ESSE",
+      "from": "00e564e2-7170-44b7-a88d-076378ad675b",
+      "to": "02217238-2075-4f8f-bff9-eaf03d2ec2eb",
+      "statement_id": "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"
+    },
+    {
+      "term": "CAUSING_AN_EFFECT",
+      "from": "0d3718b1-217b-4a2b-b544-cdf27127db4b",
+      "to": "39f64183-5038-4348-ad9f-5b64674f65f8",
+      "statement_id": "33ad148b-ceab-5856-a4f8-c999a1dba644"
+    }
   ]
 }

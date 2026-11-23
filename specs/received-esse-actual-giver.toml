@@ -23,6 +23,7 @@ id = "f3180780-599d-4596-9d7e-6d81a8c28874"
 label = "Received esse has a distinct actual giver under source-coverage and presence"
 theorem = "actualGiverFromReceivedCause"
 premises = ["ae9d9473-34f1-4b51-8f13-41d340d64ad1","4bc853db-ec33-40ff-857e-6a67f17532fb","7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"]
+sense_bridges = [{term = "ATEMPORAL_CAUSE_IN_ESSE", from = "ATEMPORAL_CAUSE_IN_ESSE_1", to = "ATEMPORAL_CAUSE_IN_ESSE_3", statement_id = "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"}, {term = "ATEMPORAL_CAUSE_IN_ESSE", from = "ATEMPORAL_CAUSE_IN_ESSE_2", to = "ATEMPORAL_CAUSE_IN_ESSE_3", statement_id = "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"}]
 conclusion = "2f9b4acb-4bd5-4adb-91ac-8935f46f2e69"
 rule = "Existential composition: a recipient implies a cause, then actual presence of that same cause"
 meaning = "R1 gives a principle receiving the contingent x's esse. The already open received-esse/CAUSE_2 coverage bridge gives a distinct c causing that same x's esse. The independently open selected-world cause-presence interface then makes c exist at w. The recipient principle is not identified with c. The result is a genuine actual-giver-at-w endpoint, stronger than B2, not a proof of R1 or of either causal bridge."
@@ -35,6 +36,7 @@ id = "401e7e89-6167-49be-8fe8-7ecd922b2ff4"
 label = "Received esse yields an actual giver through essence distinction and q.3 a.4"
 theorem = "actualGiverFromReceptionAndQ3"
 premises = ["ae9d9473-34f1-4b51-8f13-41d340d64ad1","65f3d0c7-cc3d-4ce3-a4a9-6fa38bf722cb","7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2","14325c83-1c3f-5afb-b63f-52b0c2b2a326","0436de86-6579-53f2-9ff5-2111ba44ebae","33ad148b-ceab-5856-a4f8-c999a1dba644","7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"]
+sense_bridges = [{term = "ATEMPORAL_CAUSE_IN_ESSE", from = "ATEMPORAL_CAUSE_IN_ESSE_1", to = "ATEMPORAL_CAUSE_IN_ESSE_3", statement_id = "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"}, {term = "ATEMPORAL_CAUSE_IN_ESSE", from = "ATEMPORAL_CAUSE_IN_ESSE_2", to = "ATEMPORAL_CAUSE_IN_ESSE_3", statement_id = "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"}, {term = "CAUSING_AN_EFFECT", from = "CAUSING_AN_EFFECT_2", to = "CAUSING_AN_EFFECT_3", statement_id = "33ad148b-ceab-5856-a4f8-c999a1dba644"}]
 conclusion = "2f9b4acb-4bd5-4adb-91ac-8935f46f2e69"
 rule = "Shared-witness composition: R1/R3 and receptive irreflexivity give B6, q.3 a.4 gives B2, cause presence upgrades its bearer"
 meaning = "For the same contingent x and world w, reuse the verified R1/R3/De ente/irreflexivity consequence B6, the existing actual-esse and ST I q.3 a.4 interpretation to obtain a distinct cause c of x's esse, and the existing selected-world presence interface to establish that c exists at w. This alternate to the received-esse-causal-coverage route shares R1 and the presence bridge. It does not deduce efficient giving directly from receipt or identify a receiver with an external source."
@@ -47,6 +49,7 @@ id = "a78a8169-1363-4a67-9c0a-b9345637fd02"
 label = "An actual distinct esse-giver entails B2"
 theorem = "actualGiverImpliesB2"
 premises = ["2f9b4acb-4bd5-4adb-91ac-8935f46f2e69"]
+sense_bridges = [{term = "ATEMPORAL_CAUSE_IN_ESSE", from = "ATEMPORAL_CAUSE_IN_ESSE_1", to = "ATEMPORAL_CAUSE_IN_ESSE_3", statement_id = "2f9b4acb-4bd5-4adb-91ac-8935f46f2e69"}, {term = "ATEMPORAL_CAUSE_IN_ESSE", from = "ATEMPORAL_CAUSE_IN_ESSE_2", to = "ATEMPORAL_CAUSE_IN_ESSE_3", statement_id = "2f9b4acb-4bd5-4adb-91ac-8935f46f2e69"}]
 conclusion = "8a8d00e9-12b6-4cf0-b662-431cc4addd49"
 rule = "Projection: drop selected-world actuality of the distinct cause"
 meaning = "A being c that is different from a contingent x, exists at w, and causes x's esse is also the distinct cause that B2 requires. The existing First Way necessity proof consumes B2 on the same f and same frame; this projection does not establish R1 or an actual giver, and must not be counted as another independent argument for necessity."
