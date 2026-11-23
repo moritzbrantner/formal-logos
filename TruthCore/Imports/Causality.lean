@@ -56,6 +56,7 @@ public import TruthCore.Causality.ConcurrentCessation
 public import TruthCore.Causality.ConcurrentGivingPriorityBridge
 public import TruthCore.Causality.ConstitutiveConfiguration
 public import TruthCore.Causality.ConstitutiveNatureUniqueness
+public import TruthCore.Causality.ContingencyGrounding
 public import TruthCore.Causality.ContingentAncestry
 public import TruthCore.Causality.ContingentAtomicity
 public import TruthCore.Causality.ContingentBeingNode
