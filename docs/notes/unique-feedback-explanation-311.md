@@ -2762,7 +2762,8 @@ supplied. The acyclic analogue does not keep the nonempty-admission price.
 The unregistered, zero-axiom helper `StateIndexedTailControl` checks this: on
 `Nat` with `CausesIn c x := c = x + 1` and `InAct` set by the state, every
 tail `{n | k ≤ n}` satisfies the same reciprocal-support equation, is
-nonempty and has no r-root, and distinct tails differ. Nonemptiness
+nonempty and has no r-root, and the tails from `0` and from `1` differ
+(two distinct admitted states suffice). Nonemptiness
 therefore does not select a unique admitted state there. A holist who wants
 uniqueness needs a stronger admission, such as maximality (the greatest fixed
 point, all of `Nat`) or a named member. At the per se productive scope the
@@ -3009,9 +3010,11 @@ an underived r-bearer, so it satisfies CCR (`20babef7`; #1882's C1-bearer,
 which priority monism with an unreceived cosmos accepts). Its disagreement
 with the source theorist lies later in the graph: at source identification
 (`c6d92415` → `c35b1a5c`, with coverage, uniqueness and same-witness checks)
-and at necessity, pure actuality and the GOD_4 bridges. Only a `W` outside
-the r-bearer domain, #1882's bearerless variant (at most a C1-anything
-commitment), denies CCR. There the competition is at `20babef7` itself,
+and at necessity, pure actuality and the GOD_4 bridges. Two holist variants
+deny CCR, matching #1882's C1 table: a `W` outside the r-bearer domain,
+#1882's bearerless variant (at most a C1-anything commitment), and a `W`
+whose own actuality is received from the parts, which joins a rootless loop
+(#1882 control 3). There the competition is at `20babef7` itself,
 between a bearerless primitive obtaining fact and an unreceived act. So **a
 necessary or constitutively fundamental whole is not excluded merely by its
 lack of r-uncaused *members***, but if it is itself an unreceived r-bearer it
@@ -3044,7 +3047,10 @@ instance lemmas `circleRuleEntirelyBorrowed`, `circleStateFixedIff` and
 statement, inference, registered result, definition, modal frame,
 evidence locator or ordinary result binding changes. It asserts no
 actual world, exercise, necessary structure or GOD_4 witness. Its Lean
-proofs are **unregistered helpers** (zero-axiom by `#print axioms`),
+proofs are **unregistered helpers** (no axioms reported by `#print axioms`
+on `stateIndexedTail`, `emptyCircleStateFixedOfBorrowing` and
+`stateIndexedHolisticCircle`, run locally after a full `lake build` of
+`ff6cacc8`),
 checked by the kernel build and NanoDa, not audited by Comparator.
 Formal root premise effects are intended **none**; the computed
 frontier delta must be taken from the PR's actual CI, not inferred
