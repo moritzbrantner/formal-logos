@@ -217,3 +217,121 @@ is reused. Scoped live-source verification reports zero changed witnesses; seven
 consulted witnesses were freshly materialized, without modifying their records.
 Delivered-head CI and current-head review remain required. Cross-lane files: none
 (all new substantive files and generated Explanation imports belong to lane C).
+
+
+## ¬C3: law-preserving withdrawal test for the same existent (#1801, 2026-11-23)
+
+**Target and ownership.** This is an explanatory-status continuation of the
+existing `CessationHasCause` / `NoCessationCause` result, not a new law
+ontology or a second origin-versus-sustaining framework. The causal model and
+unregistered Lean proof are
+`ConcurrentCessation.WithdrawalLaw.Certificate` and
+`Results.Causality.ConcurrentCessation.withdrawalLawControls`.
+The context of the same recipient, `CausesIn` dictionary and existing
+`GivesAt` is the C3 note
+[`sustaining-vs-existential-inertia.md`](sustaining-vs-existential-inertia.md),
+§§7–9. PR #1891 separately owns the complete #1614 source-bundle control;
+this study makes no competing claim about that proof.
+
+### Four scenario comparison and exact law obligation
+
+The same **rigid** recipient `false` and originator `true` occur in four
+worlds (all worlds are mutually accessible). The source is actual at every
+moment and necessary in the stipulated modal frame. The recipient has the
+same *origin and presence through t=1* in the three originating worlds;
+`CoherentAtNow` holds at t=2 in every world.
+
+| Scenario | Recipient at t=1 / t=2 | Strict `GivesAt` at t=2 | `CessationHasCause` when no destructive processes occur |
+| --- | --- | --- | --- |
+| `conserved` | yes / yes | yes | true |
+| `inertial` | yes / yes | no | true |
+| `absent` | no / no | no | true |
+| `vanished` | yes / no | no | **false** |
+
+The `conserved` and `inertial` scenarios agree on presence and strict giving
+at **every** t≤1, not merely a fabricated common label. The `inertial` and
+`vanished` scenarios share the same pre-t=2 data. All are populated by the
+same source, and in all scenarios no positive destructive `ProtectiveProcess`
+occurs. The law, instantiated from the existing `CessationHasCause` rather
+than a new symbol, says that **every sampled loss** of an existent bearer has
+an actual destructive process directed to that very bearer. Under the supplied
+no-process vocabulary it rules out `vanished`, but not `inertial`.
+The selected world in `inertial` has an originally caused, contingent effect
+which exists at t=2 without any strict current giver. The source has not
+ceased to exist.
+
+**What this adds:** the genuinely discriminating counterfactual is not the
+definitional equivalence of `ContinuedGiving` with
+`UngivenContinuationFails`. It is the clash between:
+
+1. Inertia's **positive causal coverage rule:** no cessation without a
+   positive loss-inducing factor, even when an earlier producer stops acting.
+2. Conservation's **production-withdrawal counterfactual:** if all ongoing
+   productive input is withdrawn, the same recipient's esse ceases even
+   without a positive destructive occurrence.
+
+These cannot both describe the `vanished` transition *with that same
+destruction vocabulary*; one must qualify what counts as loss-inducing,
+how the law applies, or whether that transition is admitted. The rival can
+posit a governing constraint excluding `vanished` while admitting the
+`inertial` outcome. Conversely the conserver can reject universal no-change
+coverage for received esse or treat withholding a necessary condition of
+existence as relevant cessation rather than a positive destructive process.
+**Neither reinterpretation is established** by the Boolean assignments.
+
+### Explanatory scope, circularity and remaining discriminators
+
+- **Local success:** the matched past, an actual origin, a no-positive-loss
+  law and an absence of destructive activity can conditionally account for
+  the same bearer's continuation without a present being-giving act.
+  This does not require a power of x *at t=2* to explain x *at t=2*;
+  prior actuality (t=1) can be the explanans. It does not eliminate a more
+  deeply grounded present cause, because sufficiency for the local question
+  is not exclusivity of all possible grounds.
+- **Global limit:** the `absent` world also satisfies this law. Thus the law
+  does not select the first positive actuality of x. The stronger ¬C3 account
+  may pair it with an **underived or necessary originator** (as the separate
+  #1891 model tests), a nonnecessitating creative choice, or a primitive
+  ontology. It remains obliged to explain or defend that package on whatever
+  ultimate-adequacy criterion is adopted; requiring a separate explanation
+  for every primitive is *not* silently assumed.
+- **Against a quick circularity charge:** a past-condition + law inference
+  does not use later existence as an explanatory premise, so it is not
+  directly `E(t) because E(t)`. Whether a token law/power is itself grounded
+  in the *same* future obtaining fact is a distinct grounding question. A
+  Humean whole-history summary and an independent governing law must not be
+  conflated, and the absence of a vicious cycle must not be inferred just
+  from an untyped law label.
+- **Against an easy conservation defeat:** the no-change coverage principle
+  presupposes that failing to exist after existing is an appropriately
+  caused *loss*. The conserving view challenges precisely that premise:
+  nonproduction may leave no act of esse to retain. Physics of ordinary
+  material conservation does not by itself settle that metaphysical scope.
+  Conversely, the conservation model must warrant why **this actual received
+  esse** has no intrinsic or diachronic persistence condition rather than
+  merely restating `40a97664`.
+
+**Provisional judgment and next test.** The no-positive-loss rival survives
+a stricter same-past, same-bearer and still-present-originator control. It
+explains a genuine *conditional* continuation, rather than accepting
+moment-to-moment chaos. The present models **do not** establish its governing
+law's ontic truth or the real possibility of the stipulated intervention, and
+therefore do not refute the conservation doctrine. To discriminate further,
+defend either (a) the no-change law's **scope over received esse** in contrast
+to state preservation, or (b) a non-circular **presently productive act-of-esse
+principle** that specifically excludes the same-law withdrawal scenario.
+Test both at the same whole-history explanatory scope, allowing an actual
+necessary originator and nonnecessitating choice. If neither principled
+scope bridge is supplied, the precise disagreement remains a primitive
+commitment; the equivalent presentations identified in #1782/#1785 cannot
+be counted as independent evidence.
+
+**Evidence boundary:** the new `Certificate` is an unregistered Lean
+structural control. `CoverageLaw` is the existing `CessationHasCause`
+instantiated at four different histories; its truth in a model is not a
+metaphysical law-grounding theorem or source claim. `frame.DependsForBeing`
+and `frame.PriorSimply` are unused placeholders, not substantive
+assignments. No issue acceptance is closed, no source attribution added, and
+the intended repository-computed frontier change is zero. Final proof/build
+and independent semantic review evidence belong to the linked PR.
+
