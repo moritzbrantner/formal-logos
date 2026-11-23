@@ -1,0 +1,13 @@
+{
+  "id": "37c546a6-4620-4b4a-88dd-9da0f9b872be",
+  "label": "C2 from its weak form and B3 (inference)",
+  "input_statement_ids": [
+    "8478f367-4aa4-4c75-a9db-de6871868f53",
+    "ee74c678-0a06-47d3-9c76-27ff798e9a01"
+  ],
+  "output_statement_id": "6508c239-b36d-4010-b9e4-ff0cdd5757e5",
+  "rule": "Add priority by B3 in the cause disjunct",
+  "meaning": "In the weak form's cause disjunct, the existing B3 makes the distinct esse-cause simply prior, giving C2. So with B3, C2 and its weak form are equivalent; the weak form is what the power-grounding case analysis delivers before B3.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

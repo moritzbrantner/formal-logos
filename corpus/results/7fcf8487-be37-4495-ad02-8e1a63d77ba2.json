@@ -1,0 +1,11 @@
+{
+  "id": "7fcf8487-be37-4495-ad02-8e1a63d77ba2",
+  "label": "C2 is its weak form plus the difference",
+  "argument_id": "ea72bbc4-9321-43fd-8fa4-58922c59cd9b",
+  "challenge_module": "TruthCore.Results.Causality.ContingencyGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ContingencyGrounding.Solution",
+  "theorem": "TruthCore.Results.Causality.ContingencyGrounding.c2OverWeakExact",
+  "comparator_config": "results/7fcf8487-be37-4495-ad02-8e1a63d77ba2/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free equivalence certificate for the strength comparison of C2 over C2-minus. Establishes no premise."
+}

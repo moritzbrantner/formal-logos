@@ -1,0 +1,12 @@
+{
+  "id": "42c9d70f-e1ee-47c3-b072-2489eafa11af",
+  "label": "C2 strengthens its weak form without priority (inference)",
+  "input_statement_ids": [
+    "6508c239-b36d-4010-b9e4-ff0cdd5757e5"
+  ],
+  "output_statement_id": "8478f367-4aa4-4c75-a9db-de6871868f53",
+  "rule": "Drop the priority conjunct",
+  "meaning": "C2's prior-cause disjunct implies the weak form's cause disjunct; the receptive disjunct is shared. A strength-order registration, not additional confirmation.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

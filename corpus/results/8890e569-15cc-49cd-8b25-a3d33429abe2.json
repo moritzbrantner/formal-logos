@@ -1,0 +1,12 @@
+{
+  "id": "8890e569-15cc-49cd-8b25-a3d33429abe2",
+  "label": "C2 from its weak form and B3",
+  "argument_id": "0a06cc95-90eb-47d8-a42c-57e52c0aa458",
+  "challenge_module": "TruthCore.Results.Causality.ContingencyGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ContingencyGrounding.Solution",
+  "theorem": "TruthCore.Results.Causality.ContingencyGrounding.c2FromWeakAndPriority",
+  "comparator_config": "results/8890e569-15cc-49cd-8b25-a3d33429abe2/comparator.json",
+  "status": "solution-present",
+  "description": "C2 from C2-minus and B3. An instantiation of B3 inside the disjunction; establishes no premise.",
+  "transcription": "instantiation"
+}

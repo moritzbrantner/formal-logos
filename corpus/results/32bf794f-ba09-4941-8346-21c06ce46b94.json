@@ -1,0 +1,11 @@
+{
+  "id": "32bf794f-ba09-4941-8346-21c06ce46b94",
+  "label": "C2 from power grounding, correlation, passive-to-receptive, no self-esse-cause and B3",
+  "argument_id": "82ad1978-da75-416d-a3e1-fbc9d2d4cf2b",
+  "challenge_module": "TruthCore.Results.Causality.ContingencyGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ContingencyGrounding.Solution",
+  "theorem": "TruthCore.Results.Causality.ContingencyGrounding.c2FromPowerGrounding",
+  "comparator_config": "results/32bf794f-ba09-4941-8346-21c06ce46b94/comparator.json",
+  "status": "solution-present",
+  "description": "C2 from the power-grounding bundle. Not a transcription: no premise mentions receptivity of a contingent being or priority; the conclusion is reached by a case analysis that combines a modal-grounding premise, a power-patient correlation, a passive-to-receptive bridge, the existing irreflexivity of esse-causation and the existing priority of distinct esse-causes. Establishes no premise. Each premise is needed (controls: bruteSimple, selfAnnihilator, bareCorruptible, unprioritizedSource)."
+}

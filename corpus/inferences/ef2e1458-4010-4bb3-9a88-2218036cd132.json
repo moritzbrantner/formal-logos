@@ -1,0 +1,13 @@
+{
+  "id": "ef2e1458-4010-4bb3-9a88-2218036cd132",
+  "label": "C2 from B2 and B3 (inference)",
+  "input_statement_ids": [
+    "8a8d00e9-12b6-4cf0-b662-431cc4addd49",
+    "ee74c678-0a06-47d3-9c76-27ff798e9a01"
+  ],
+  "output_statement_id": "6508c239-b36d-4010-b9e4-ff0cdd5757e5",
+  "rule": "Instantiate B2 and B3 at each contingent being; second disjunct",
+  "meaning": "A contingent being has a distinct CAUSE_2 of its esse (B2), simply prior to it (B3): the second disjunct of C2. Shows that C2 is weaker than B2 (given B3); uncausedComposite shows it is strictly weaker.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

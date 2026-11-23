@@ -1,0 +1,15 @@
+{
+  "id": "81adf17d-eddb-49cd-a8cf-7feac2f5c1c4",
+  "label": "POTENCY_1 or a distinct CAUSE_2 for contingents, from power grounding (inference)",
+  "input_statement_ids": [
+    "20d5fecd-950e-42f8-8dc9-3014491ff6ae",
+    "9163c423-bbf7-464d-9342-6e1cf38d54e6",
+    "b62a64ab-ac11-569a-b8e8-de51a74b058f",
+    "8bfc4ab7-cf80-467e-a594-71ee09c8cbaa"
+  ],
+  "output_statement_id": "3c9d683b-7ecf-4e35-b2cf-2997fbc1a3b2",
+  "rule": "Case analysis on the power-grounding disjunction; distinctness by no self-esse-cause",
+  "meaning": "Answers #1870's remaining gap 1 conditionally. A contingent being is corruptible simply, hence in POTENCY_1 in some respect, or under some power over its esse; correlation makes it corruptible or makes the power's holder a CAUSE_2 of its esse, distinct by no-self-esse-cause. This corresponds to the q.9 a.2 two-channel reading of B2 or B4 as follows: with no power of anything over its own esse and corruptible-has-POTENCY_1, PGP gives #1870 bridge (i), contingency gives MUTABLE_3 (controls, law 6); correlation yields #1870 bridge (ii) only for beings incorruptible simply (controls, law 5); the unrestricted form is not derived, and its countermodel is an uncaused corruptible composite (controls, corruptor).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

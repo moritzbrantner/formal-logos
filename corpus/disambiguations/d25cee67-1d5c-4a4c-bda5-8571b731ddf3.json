@@ -1,0 +1,25 @@
+{
+  "id": "d25cee67-1d5c-4a4c-bda5-8571b731ddf3",
+  "label": "Possible not to be: in the subject or through another's power",
+  "term": "possible not to be (potency to non-being in the subject versus another's power over its esse)",
+  "sense_definition_ids": [
+    "c8113f31-6208-5992-9ca4-712887a4594b",
+    "3fd6bddb-f10c-4df4-8694-3eb5e7c28617"
+  ],
+  "term_label": "POSSIBLE_NOT_TO_BE",
+  "senses": [
+    {
+      "id": "77448ffb-28ee-4276-b95c-1e584ad4d198",
+      "label": "POSSIBLE_NOT_TO_BE_1",
+      "definition_id": "c8113f31-6208-5992-9ca4-712887a4594b",
+      "lean_declaration": "TruthCore.Latin.Aquinas.InMetaphysicam.PotencyIsOfContradictionReading"
+    },
+    {
+      "id": "3e559843-f12d-4621-acc5-801083f484f9",
+      "label": "POSSIBLE_NOT_TO_BE_2",
+      "definition_id": "3fd6bddb-f10c-4df4-8694-3eb5e7c28617",
+      "lean_declaration": "TruthCore.Causality.ContingencyGrounding.PowerOverEsse"
+    }
+  ],
+  "resolution": "Q.9 a.2 calls creatures 'possible not to be' in two ways: through a potency in the thing itself, and through a power in another (the creator's power over their esse). DEF-CAN-FAIL-TO-BE does not itself say 'in the subject'. The C2 batch reads CanFailToBe x esse as the in-subject channel only (POSSIBLE_NOT_TO_BE_1: corruptible simply, a two-way potency in the thing to be and not be), and represents possibility of non-being through another's power by PowerOverEsse (POSSIBLE_NOT_TO_BE_2), not by CanFailToBe. Sense 2 is used monadically, as: some y has PowerOverEsse over x. The batch widens q.9 a.2's creator channel to the broad power over esse (POWER_OVER_ESSE_1 of f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5, which includes corruptive power); the creator reading itself corresponds to the conjunctive POWER_OVER_ESSE_2. So the two senses here are not exclusive: a log that fire can destroy both can fail to be in substance and is under another's power over its esse. The power-grounding premise (PGP) is the disjunction of the two senses; the correlation premise relates sense 2 to sense 1 or to CAUSE_2 at esse as an explicit OPEN premise. Consequence: under this reading Aquinas denies #1870's B4a (every being contingent at w can fail to be in substance) for angels, which on q.50 a.5 have no potency to non-being although they are possible not to be through the creator's power. No argument passes silently between the two senses."
+}

@@ -1,0 +1,13 @@
+{
+  "id": "7e407dad-354d-442d-a077-5508b1d04df2",
+  "label": "C2 from R1 and De ente's receiver reading (inference)",
+  "input_statement_ids": [
+    "ae9d9473-34f1-4b51-8f13-41d340d64ad1",
+    "7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2"
+  ],
+  "output_statement_id": "6508c239-b36d-4010-b9e4-ff0cdd5757e5",
+  "rule": "Instantiate R1 and De ente at each contingent being; first disjunct",
+  "meaning": "A contingent being receives its esse in some principle (R1); by De ente's reading that principle is in receptive potency to its esse; so the being is existentially receptive, the first disjunct of C2. Shows that C2 is weaker than R1 (given De ente).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

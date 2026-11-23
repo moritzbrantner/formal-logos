@@ -1,0 +1,15 @@
+{
+  "id": "6c498f37-dbd3-4623-8330-fc6abed285be",
+  "label": "The First Way's mover receives its esse in no principle and has no matter and form (inference)",
+  "input_statement_ids": [
+    "78246da5-0b37-5b37-b821-1e8bdb41606c",
+    "65f3d0c7-cc3d-4ce3-a4a9-6fa38bf722cb",
+    "7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2",
+    "14325c83-1c3f-5afb-b63f-52b0c2b2a326"
+  ],
+  "output_statement_id": "2e2ab9cc-28d7-4680-9ff9-ef42fe9d22f9",
+  "rule": "Reductio on reception under the simplicity reading's essence-esse clause",
+  "meaning": "Let f be a first mover moved by none. The simplicity reading gives that f is not composed of matter and form and that its esse is not distinct from its essence. Suppose f's esse were received in a principle p. If its esse equalled its essence, identity-scoped reception (R3) would make p its essence and De ente's reading would put p in receptive potency to f's esse, that is to itself, against receptive irreflexivity; so its esse would be distinct from its essence, against simplicity. Constructive: no excluded middle.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

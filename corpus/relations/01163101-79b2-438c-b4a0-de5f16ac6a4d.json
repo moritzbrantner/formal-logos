@@ -1,0 +1,12 @@
+{
+  "id": "01163101-79b2-438c-b4a0-de5f16ac6a4d",
+  "label": "C2 strengthens its weak form without priority",
+  "subject_kind": "statement",
+  "subject_id": "6508c239-b36d-4010-b9e4-ff0cdd5757e5",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "8478f367-4aa4-4c75-a9db-de6871868f53",
+  "verification_result_id": "b1f14d6b-bbe6-43e3-88b9-86a8017af7a0",
+  "strictness_result_id": "dd9bccd1-4296-4604-82cc-1fb536683be6",
+  "note": "C2 implies C2-minus by a single-premise Lean proof (drop the priority conjunct). With the existing B3 the converse holds (c2FromWeakAndPriority), so B3 suffices to close the difference. The exact difference is certified by the strength comparison C2 over C2-minus: every contingent being with a distinct esse-cause is existentially receptive or has a simply prior one. Strict: the unprioritized setting (C2-minus holds, C2 fails). Neither statement is established by the relation."
+}
