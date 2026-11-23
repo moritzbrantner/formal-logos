@@ -1,0 +1,18 @@
+{
+  "id": "4b051644-666b-451e-8e09-b5b9356932f9",
+  "label": "Necessary origin with existential inertia against the esse-priority source bundle",
+  "date": "2026-11-23",
+  "statement_ids": [
+    "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+    "40a97664-e481-42d7-8458-78374a61aa26",
+    "ce55210c-d3b5-4720-bd83-a3f63c5dc884",
+    "23e04ae5-98ed-4464-8f9b-dc0dfbad0caa"
+  ],
+  "kind": "countermodel",
+  "outcome": "succeeded",
+  "summary": "PR #1891 (docs/notes/sustaining-vs-existential-inertia.md §9) adds three *unregistered* Lean theorems in Results.Causality.EsseCausePriority.InertialNecessaryOrigin, structurally verified in CI Comparator shards at head 050929a0fae9ee2a02feb13d692b2a03235a0828. Reuse the C3ActualWorld same-bearer cause-and-giving dictionary, with necessary source true existent in both accessible worlds and at every moment, contingent received-esse effect false at actual world true for times >= 1, origin-only GivesAt at t=1, StepPersistence throughout, CoherentAtNow at now=2, and no being-giving at t=2. NecessaryOriginWithoutConservation combines necessary actual source root, every contingent actual concrete grounded in that source on historical-ancestry reading, receipt of effect, and failures of both C3/ConcurrentlyActualized 40a97664 and causing-another's-being-is-sustaining ce55210c. FullSourceOmission satisfies the TEN other *source-level* premises from #1614's ese-priority subgraph at the same cause/target/respect while denying cb1cdea9 on a strictly present-productive ground reading, and also falsifies the two priority intermediate conclusions and first-being/component consequences at nonvacuous instances; no derived target is supplied as a premise. AncestorRouteWithoutConservation instead keeps cb1cdea9 as historical actual-ground and a simply-prior edge, and composes the existing five #1614 result theorems to priority/pure-act/component conclusions while C3 remains false. Neither case establishes that the ancestry assignment is a valid strict metaphysical ground, that the law supplies ultimate whole-history actuality, or that any finite interpretation is metaphysically possible. Originating causation and necessary-source actuality do not entail concurrent giving on the selected existing formal semantics. The two versions are *interpretations of the same ground/priority primitives*, not newly named concepts, and do not discharge any root-route premise or provide independent philosophical warrant.",
+  "evidence": [
+    "PR-1891"
+  ],
+  "blocker": "Not blocked; next discriminator: test source withdrawal counterfactual preserving the same bearer, initial origin, intrinsic powers and conditional persistence rule. Compare a primitive governing-law/ontology explanation for the complete actual history with productive conservation under the same ultimate-explanatory adequacy standard; defend or reject the sense-3→5 origin-to-sustain passage and typed F2 exemplar/final-cause exclusions. Do not silently identify contingency, received esse, historical ancestry, present grounding, or productive giving."
+}
