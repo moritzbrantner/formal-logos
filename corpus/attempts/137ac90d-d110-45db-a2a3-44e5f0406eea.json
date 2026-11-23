@@ -1,0 +1,35 @@
+{
+  "id": "137ac90d-d110-45db-a2a3-44e5f0406eea",
+  "label": "C2 contingency grounding: power-grounded non-existence, receptivity and the First Way endpoint",
+  "statement_ids": [
+    "6508c239-b36d-4010-b9e4-ff0cdd5757e5",
+    "8478f367-4aa4-4c75-a9db-de6871868f53",
+    "20d5fecd-950e-42f8-8dc9-3014491ff6ae",
+    "9163c423-bbf7-464d-9342-6e1cf38d54e6",
+    "16c760a3-0328-4e16-9908-da6e5e4cdb2d",
+    "8bfc4ab7-cf80-467e-a594-71ee09c8cbaa",
+    "2e2ab9cc-28d7-4680-9ff9-ef42fe9d22f9",
+    "07a9006e-91ba-4776-89b7-963f1a517f55",
+    "f9208664-e57b-4912-b6e7-edfcd23a4f89",
+    "3c9d683b-7ecf-4e35-b2cf-2997fbc1a3b2",
+    "ae9d9473-34f1-4b51-8f13-41d340d64ad1",
+    "8a8d00e9-12b6-4cf0-b662-431cc4addd49",
+    "753269b3-ff68-4d7a-97bc-01ab4e7c3a26"
+  ],
+  "date": "2026-11-23",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Follow-up to PR #1870 (gap 1, next test 3), God-existence stage of the root; note docs/notes/contingency-receptivity-c2.md. Target C2: every being contingent at w is existentially receptive (esse received in a principle in RECEPTIVE_POTENCY_1 to it, or matter and form) or has a distinct SIMPLY_PRIOR_1 CAUSE_2 of its esse. Checked: C2 from power grounding (PGP: contingent beings are corruptible simply or under some power over their esse), correlation (such a power works on a potency to non-being or is a CAUSE_2 of esse), passive-to-receptive, the existing no-self-esse-cause b62a64ab and B3 ee74c678, constructively; unreceivedness of the First Way's mover from simplicity, R3, De ente and receptive irreflexivity, constructively; the First Way's mover necessary (endpoint f9208664) from firstness, unreceivedness and C2 with excluded middle, POTENCY_1 pure act carried and unused; C2 from R1 with De ente and from B2 with B3 (C2 is weaker than both); C2 and its weak form; B2 or B4 (3c9d683b) from PGP, correlation, b62a64ab and corruptible-has-POTENCY_1, which answers #1870 gap 1 conditionally. Reuse decision: the brief's new PotencyForNonbeing primitive is the existing DEF-CAN-FAIL-TO-BE at the respect of being (corruptible simply, In Metaph. IX lect. 9), so PGP connects to B4a and B4b. Findings: #1870's bridge (ii) is false unrestricted (corruptor: power to destroy without causing esse) and holds for incorruptibles from correlation; with adopted POTENCY_1 and the existence-to-act interface B4b excludes every actual corruptible (law 10), so corruptibility is not POTENCY_1 at esse; C2 and B2 or B4 are independent (deistSource, potencyOnly); PGP and C2 are independent of the pure-act target (potencyOnly, angelic), unlike B4; CCR (20babef7) holds in bruteSimple with the contingent simple first being as its uncaused bearer. Models: bruteSimple, selfAnnihilator (two variants), uncausedComposite, angelic, deistSource, bareCorruptible, unprioritizedSource, witness, potencyOnly, corruptor; structural only. truth countermodel does not support CausalityFrame parameters. Duper on C2, the endpoint and B2 or B4: 2 proved (endpoint from the known grounding endpoint; B2 or B4 from R2 with R1, vacuous at actual contingents by the #1870 reception law), C2 unresolved. Provisional judgment: C2 modestly favoured on PGP's general warrant from powers-based modality, its narrowness (actual individuals only), the ordinary cases and Aquinas's corrected channel analysis; standing rival the brute contingent simple first actuality, priced at non-power-grounded de re modality for a foundational individual.",
+  "blocker": "No premise is established. New OPEN premises: PGP 20d5fecd, correlation 9163c423, passive-to-receptive 16c760a3, corruptible-has-POTENCY_1 8bfc4ab7. Standing rival: a contingent, simple, unreceived, uncaused first actuality under no power (bruteSimple), admissible under modal primitivism or Humean/combinatorial modality. Next tests: (1) PGP against combinatorial contraction of a foundational simple at matching scope; (2) separate conserving from originating power in correlation using the sustaining-causation vocabulary (c94eed5b); (3) passive-to-receptive for a corruptible being without matter; (4) certify the C2/C2-minus strength difference (#1598); (5) assess corruptible-has-POTENCY_1; (6) the q.3 a.7 composition-needs-a-cause bridge for underived beings. Independent semantic challenge pending.",
+  "evidence": [
+    "32bf794f-ba09-4941-8346-21c06ce46b94",
+    "96eb02fb-5a0c-4aba-9061-850d61f9fa94",
+    "e5d49f99-685f-4c4e-8c8b-35cb21e1ec24",
+    "61a1edec-52d7-420f-9f73-0474c90409b6",
+    "560b0d8d-9f94-49c3-aaf7-d2c10df87a09",
+    "b1f14d6b-bbe6-43e3-88b9-86a8017af7a0",
+    "8890e569-15cc-49cd-8b25-a3d33429abe2",
+    "bf2f0e8e-667a-42ea-b2db-507eb0fa64bb",
+    "cafd9800-2fee-4fb6-a52f-bec0f1479d7f"
+  ]
+}

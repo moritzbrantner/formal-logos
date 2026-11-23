@@ -1066,6 +1066,23 @@ and strict grounding at exactly the same world and witness.
 An independent semantic review of this continuation is
 **pending**, and validation status must be taken from the PR.
 
+### C2: the grounding of contingency (2026-11-23; pointer)
+
+Full record: [contingency-receptivity-c2.md](contingency-receptivity-c2.md),
+batch `specs/c2-contingency-grounding.toml`, attempt `137ac90d`. C2 (every
+being contingent at `w` is existentially receptive, by received esse or matter
+and form, or has a distinct SIMPLY_PRIOR_1 CAUSE_2 of its esse) is derived
+from power grounding of possible non-existence, a power–patient correlation,
+passive→receptive, `b62a64ab` and B3, and gives the same-witness endpoint
+`f9208664` with firstness and the new unreceivedness intermediate (POTENCY_1
+pure act carried, unused). R1 and B2 each imply C2; C2 is independent of B2 ∨
+B4 and of the pure-act target. #1870 gap 1 is answered conditionally: B2 ∨ B4
+from power grounding, with bridge (ii) restricted to incorruptibles (it fails
+for corruption by another). B4b with adopted POTENCY_1 excludes actual
+corruptibles (law 10). Provisional judgment: C2 modestly favoured; standing
+rival a brute contingent simple first actuality priced at non-power-grounded
+de re modality. Nothing is closed; semantic challenge pending.
+
 ## Stage two: that being is God
 
 Stage one gives no uniqueness, causal role or attribute.
