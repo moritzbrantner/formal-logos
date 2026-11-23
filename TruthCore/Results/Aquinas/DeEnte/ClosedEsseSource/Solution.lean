@@ -331,6 +331,79 @@ theorem uniquePopulatedStateHasActualRoot (p : Profile B P R)
   obtain ⟨hActual, hUncaused⟩ := hSeedRoot n hn
   exact ⟨n, (hState n).mp (hSeedActive n hn), hActual, hUncaused⟩
 
+
+/-- With InAct varying along with the state, the empty configuration has
+no actual suppliers and satisfies the reciprocal support equation. This
+strengthens the interpretation boundary of the earlier fixed-p test, not
+its metaphysical applicability. -/
+theorem emptyCircleStateFixed :
+    CircleStateFixed (fun _ : Bool => False) := by
+  intro x
+  constructor
+  · intro hx
+    exact hx.elim
+  · rintro ⟨c, hc⟩
+    exact hc.2.2.1
+
+/-- Both candidate bearers present: each has the other as a same-r input. -/
+theorem fullCircleStateFixed :
+    CircleStateFixed (fun _ : Bool => True) := by
+  intro x
+  constructor
+  · intro _
+    cases x with
+    | false =>
+      refine ⟨true, ?_, trivial, trivial, ?_⟩ <;> decide
+    | true =>
+      refine ⟨false, ?_, trivial, trivial, ?_⟩ <;> decide
+  · intro _
+    trivial
+
+/-- Of the profiles satisfying the reciprocal equation and the additional
+global population requirement, only the both-present configuration survives,
+pointwise. This is an extensional claim; no propext or funext is used. -/
+theorem populatedCircleAllBearers (state : Bool → Prop)
+    (h : HolisticCircleAdmissible state) : ∀ x, state x := by
+  obtain ⟨hFixed, ⟨w, hw⟩⟩ := h
+  have hFalse : state false := by
+    cases w with
+    | false => exact hw
+    | true =>
+      obtain ⟨c, hc⟩ := (hFixed true).mp hw
+      cases c with
+      | false => exact hc.2.1
+      | true => exact (hc.1 rfl).elim
+  have hTrue : state true := by
+    obtain ⟨c, hc⟩ := (hFixed false).mp hFalse
+    cases c with
+    | false => exact (hc.1 rfl).elim
+    | true => exact hc.2.1
+  intro x
+  cases x with
+  | false => exact hFalse
+  | true => exact hTrue
+
+/-- A populated holist with a globally admitted unique populated profile
+has no r-root. Actuality guards vary coherently, but productive exercise,
+metaphysical admission of the nonempty whole, and collective full grounding
+are not encoded. The nonemptiness requirement does the selection work. -/
+theorem stateIndexedHolisticCircle : StateIndexedHolisticCircleControl := by
+  have hAll : ∀ x,
+      ∃ c, ActualEsseCause (circleAtState (fun _ => True)) c x := by
+    intro x
+    cases x with
+    | false =>
+      refine ⟨true, ?_, trivial, trivial, ?_⟩ <;> decide
+    | true =>
+      refine ⟨false, ?_, trivial, trivial, ?_⟩ <;> decide
+  refine ⟨emptyCircleStateFixed,
+    ⟨fullCircleStateFixed, ⟨false, trivial⟩⟩, ?_, hAll, ?_⟩
+  · intro state hs
+    exact populatedCircleAllBearers state hs
+  · rintro ⟨n, hn⟩
+    obtain ⟨c, hc⟩ := hAll n
+    exact hn c hc
+
 theorem singletonPopulation : SingletonPopulationControl := by
   let p : Profile Unit Bool Unit := {
     InAct := fun _ _ => True
