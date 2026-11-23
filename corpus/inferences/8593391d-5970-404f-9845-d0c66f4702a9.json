@@ -1,0 +1,13 @@
+{
+  "id": "8593391d-5970-404f-9845-d0c66f4702a9",
+  "label": "Esse = essence puts existence in the nature, from exercise in it and the act-fact link (inference)",
+  "input_statement_ids": [
+    "3a2af70f-aa63-4966-85b7-97d5d12b865a",
+    "823d4312-2405-43db-90ea-3d9b303ac07a"
+  ],
+  "output_statement_id": "565ccd6c-0036-4613-8595-f6f03d273a0d",
+  "rule": "Rewrite the essential exercise proposition by the act-fact link",
+  "meaning": "For a being x with represented esse equal to its essence, exercise in the nature puts into x's nature the proposition that x's act of being is exercised; the act-fact link makes that proposition true at exactly the points where x exists, so (by extensionality of world-propositions) it is the proposition that x exists. So x's existence lies in its nature: the unconditional bridge. The passage from esse as act (_6) to existence as fact (_1) is the explicit act-fact premise; the passage from the q.3 a.4 essence (ESSENCE_3) to the Finean essential truth (ESSENCE_5) is the explicit exercise-in-the-nature premise.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

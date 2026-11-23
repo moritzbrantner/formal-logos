@@ -1,0 +1,9 @@
+{
+  "id": "1fda7b2c-4411-4ffd-8fa2-78e30b6aedef",
+  "label": "EXISTENCE_IN_ESSENCE_2: it lies in the nature of x that x exists, unconditionally (essential truth)",
+  "term": "existence belongs to the essence, essential truth (EXISTENCE_IN_ESSENCE_2)",
+  "definition": "EssentialExistence F Essential x := EssentialTruth Essential x (fun v => ExistsAt v x): it lies in the nature of x (ESSENCE_5, Fine's box-sub-x) that x exists, where the proposition is true exactly at the points where x exists. Unconditional: not 'if x exists, x exists'.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ontology.ExistenceInEssence.EssentialExistence",
+  "note": "Stipulated for #1887. Sense EXISTENCE_IN_ESSENCE_2 of the disambiguation f704b7ca-b455-4da7-a757-b0564fe76b3b. It is the consequent of the unconditional bridge 565ccd6c-0036-4613-8595-f6f03d273a0d. It implies the consequential form NatureEntailsExistence (EXISTENCE_IN_ESSENCE_5); the converse needs closure of essence under entailment, which is not assumed. Distinct from NECESSARY_EXISTENCE_BY_OWN_NATURE_3 (OwnEssentialExistence), which is stated on a different profile type with existence facts; no bridge between them is encoded."
+}
