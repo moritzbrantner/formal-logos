@@ -8,6 +8,8 @@ namespace TruthCore.Results.Modal.OptimalCreationChoice
 open TruthCore.Modal.SelectedEffectBridge
 open TruthCore.Modal.OptimalCreationChoice
 open TruthCore.Modal.NecessaryVariableEffects
+open TruthCore.Modal.NecessaryContingentActivity
+open TruthCore.German.Kant.CosmologicalInference
 open TruthCore.Results.Modal.SelectedEffectBridge
 
 theorem uniqueOptimalStable {W B A V : Type} [PartialOrder V]
