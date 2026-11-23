@@ -443,10 +443,12 @@ about P on the shared premises.
 [groups and whole worlds](#what-can-a-group-or-a-whole-world-show-that-one-creature-cannot),
 [the cumulative assessment](#when-do-adverse-consequences-count-against-possible-absence)
 and [the comparison with infinite regress](#what-does-possible-absence-have-in-common-with-an-infinite-regress).
-The regress comparison gives a reason to reject a defense in which
+The [comparison of exemptions](#which-beings-could-be-exceptions-to-the-demand-for-a-cause)
+shows when accepting an uncaused contingent foundation removes an objection
+to a rival. The regress comparison gives a reason to reject a defense in which
 every argument for an omission derives its warrant from another assumed
 omission. Independent evidence of an admissible order incompatible with
-n would answer that objection.
+n would answer that objection. The [argument from contingent dependence](#does-being-contingent-mean-being-contingent-upon-something) explains where a demand for a determining reason can support necessity and where it needs a further premise about dependence.
 
 Analyst assessment of the rigid individual in issue #1887. Let P say that this
 very n is absent at some world accessible from the actual world. Grant the
@@ -1751,24 +1753,98 @@ receptive alternative. Firstness alone does not eliminate both.
 [distinct-cause principle](../../TruthCore/German/Kant/CosmologicalInference.lean)
 and [C2's disjunctive route](#2-checked-results).
 
-Avicenna offers a reason for the connection. In *The Healing* I.6 he
-asks what makes existence obtain for something whose nature considered
-in itself leaves existence open. If its nature suffices, it is necessary
-in itself. If the nature leaves the matter open, he argues that something
-else must determine its existence. A succession of further conditions
-that collectively still leave the matter open would not explain what
-determines the outcome, regardless of its length. This gives an argument
-about the adequacy of a proposed explanation. To infer from it that an
-underived actual being must be necessary, the decisive premise is that
-every such actuality has a determining reason. A primitivist can accept
-the inadequacy of the proposed explanation and maintain that this act
-simply obtains. Avicenna's “possible in itself” concerns what follows from
-a nature considered on its own. Something whose existence is necessitated
-by another could still be possible in itself in that sense. Identifying
-that judgment with absence in an accessible world would need further
-warrant. This passage provides a historical argument and a reason to
-take the determining demand seriously, without settling that demand.
+Avicenna argues for the connection in *The Healing* I.6. Consider a
+thing just in respect of its nature. If that suffices for existence, he
+calls it necessary in itself. If its nature leaves existence open, he
+asks what determines that it exists. Further conditions that collectively
+still leave existence open have yet to supply a determining explanation,
+however many there are. A being necessitated through another can thus
+remain possible in itself for Avicenna. Applying the argument to absence
+in an accessible world requires the following further reasoning.
 [Avicenna, *The Healing*, I.6, Marmura translation, PDF pp. 3–4](https://wmit-pages-prod.s3.amazonaws.com/wp-content/uploads/sites/283/2022/06/12145806/avicenna1.pdf#page=3).
+
+**The argument for this individual.** Call the actual simple being n.
+It neither receives existence in a subject nor has another being giving
+it existence. Suppose for the sake of argument that this very n could
+have been absent altogether.
+
+1. What calls for explanation is now a definite contrast. Why does n
+   actually exist when its complete absence was a genuine alternative?
+   This asks about the actual side of the contrast. The stipulation that
+   nothing grounds the *possibility* of absence leaves this question open.
+   Comparing these histories requires no subject to pass from absence
+   into existence.
+2. Grant that every such contrast in concrete existence has a determining
+   reason. A proposed reason must explain in the right direction and be
+   sufficient for the outcome. The complete reason for n's existence
+   could not obtain unchanged in any admissible history without n. Taken
+   by itself, “if n exists, it is identical with its act of existing”
+   is compatible with omitting the whole act. A stronger theory of essence
+   would have to show why this individual must instantiate that nature.
+3. Grant a second premise about what could do the determining. If the
+   existence of a concrete individual really is optional, every complete
+   basis for its existence, including several facts working jointly,
+   must involve either a receptive principle in the individual or a
+   condition on which it existentially depends in a respect excluded
+   by its being underived. Ordinary cases give the two suggestions some
+   warrant. In a change we can identify the subject that receives a new
+   determination. In production we can identify a giver on whose activity
+   an individual's existence depends. The stipulated profile of n excludes
+   both a recipient of its existence and an external giver. A choice
+   by n to exist would already presuppose a chooser. But the general
+   premise needs more than these examples. An intrinsic, contingent
+   feature that explained n's existence without already presupposing
+   it would defeat this premise if it required neither kind of dependence.
+   The absence of a known example cannot exclude it. A noncausal ground
+   external to n would likewise require attention if underivedness rules
+   out only efficient giving. On the stronger reading that excludes all
+   external existential grounds, that last exclusion follows by hypothesis.
+4. Step 2 now requires a complete determining basis for the supposed
+   contingent actuality of n. Step 3 requires that basis to involve
+   something the stipulated simple, unreceived, underived n lacks.
+   The contradiction follows if both premises apply to n. Since n actually
+   exists, ruling out its possible absence gives necessary existence for
+   n itself. No inference from a necessary office to its actual occupant
+   is needed.
+
+**Why take the premises seriously?** Suppose a workshop claims that its
+records fully explain why a particular bronze casting exists. A design
+and a stocked furnace that were equally available for a cancelled pour
+leave a specific question unanswered. An independently documented pour
+can explain the difference. The finished casting's serial number can
+settle *which* casting was produced, but stamping it presupposed its
+existence. It cannot explain the original production. This gives a reason
+both to demand a distinguishing fact and to check the direction of its
+explanation. We can ask the same question about the foundation. What the
+workshop also gives us, and the foundational case lacks, is independent
+evidence of a production process to which that demand applies. There is
+a positive case for extending the question: if what first called for
+explanation was the fact that one of two genuine alternatives obtained,
+the same fact would be present at n on the supposition of contingency.
+But if what licensed confidence in an answer was the evidence of a pour,
+that confidence does not carry over. This is where a reason to keep
+asking falls short of a guarantee that there is an answer.
+
+The strongest objection accepts both tests of a *proposed* explanation.
+It disputes the move to a guarantee that reality always supplies one.
+On this view n's unreceived act is itself basic, it explains dependent
+beings, and a primitive modal fact permits that entire act to be absent.
+Nothing has to exercise a power in n's absence. The cost is precise:
+why this very act obtains while its absence was open has no determining
+answer. That is a real cost for an account promising such an answer to
+every existential contrast. Conversely, bare necessity excludes the rival
+history without telling us what about n explains that exclusion. The same
+standard applies to an impersonal foundation. I give substantial weight
+to the demand to look for a determining reason and retain moderate
+confidence in suspension about whether this act must have one. A
+defensible account of how n's own nature unconditionally entails the
+existence of this individual, or independent warrant for both steps 2
+and 3 including the exclusion of other ways of determining its existence,
+would move the assessment toward necessity. Independent evidence
+for a genuinely admissible order incompatible with this very n would move
+it toward P. Primitivism by itself permits either modal verdict.
+[Intrinsic existence and explanatory direction](intrinsic-existence-reason-1595.md)
+and [coverage, necessitation and causal giving](psr-strength-755.md).
 
 There is a second question if one starts with *mere possibility of
 existence*. For the actual n, ruling out the conjunction “exists here and
@@ -1801,6 +1877,101 @@ warranted absence would instead imply impossibility. Neither choice of
 possibility is licensed by the rule alone.
 [Possibility-to-necessity proof and reverse direction](../../TruthCore/Results/Modal/NecessaryIfExistent/Solution.lean)
 and [scope controls](../../corpus/results/NECESSARY-IF-EXISTENT-CONTROLS.json).
+
+#### Which beings could be exceptions to the demand for a cause?
+
+Suppose someone grants that a concrete being could exist contingently
+without a cause. They have given up *contingency alone* as a sufficient
+reason to demand a cause in every admissible case. A merely possible
+exception challenges the unrestricted modal rule. Refuting the corpus
+principle about all contingents *here* requires an actual counterinstance.
+One can also keep asking about a cause without assuming that there is one. If they still rule out an
+uncaused personal foundation while admitting an uncaused impersonal one,
+what difference bears on **the existence of the bearer**? A similar question
+arises for someone who allows a personal foundation to be underived and
+rules out an impersonal one. Even without a cause or a nature that guarantees
+existence, a thing could have a noncausal explanation. If an external
+noncausal condition necessarily obtained and sufficed for its existence,
+that thing could even be necessary through another. The comparison below
+grants genuine possible absence as well. Calling the thing wholly
+unexplained would make a still stronger claim.
+
+**A restriction with some warrant.** When a proposed difference does
+the explanatory work, we should be able to say why it makes a cause or
+ground indispensable and apply that reason wherever the relevant
+difference recurs. Try changing which candidate has the feature while
+keeping the question fixed. If the evidence of dependence moved to the
+other candidate, this particular objection would move with it. Other
+reasons could still favor the original verdict. The justification is simple: if all the facts
+cited as reasons would license the opposite classification equally well,
+those reasons have supplied no basis for the choice. There may be
+additional evidence or a genuine primitive difference. We need not first
+assume that every fact has an explanation to identify what an offered
+argument warrants. The existing parity result concerns a stance that
+requires a reason for one fact, applies that requirement uniformly on a
+feature the two facts share, and claims to meet the requirement. It
+cannot then accept the other fact as wholly unexplained. Applying this
+test to a demand for a *cause* uses the stated causal standard in the
+same way. A demand for a reason alone never specifies a concrete giver.
+[Existing feature-relative parity result](../../corpus/results/6e7f5afd-4d72-466d-bba0-b9eead60d2d2.json)
+and [brute contingency and parity](psr-self-application-756.md#the-parity-argument-owner-direction-refined-2026-11-23).
+
+An echo is a case where we can draw a line. Time a pulse and its return,
+move the reflecting surface, and the return is delayed by the added trip.
+Absorbing the pulse removes the return. Those checks give us a reason to
+classify this particular sound as a reflection. The dependence concerns
+the production of this acoustic event. An uncaused sound with
+the same waveform would not be an echo of that pulse. This explains why
+accepting the possibility of a brute foundation does not commit anyone
+to brute echoes. It supplies no reason to classify a fundamental field
+or a simple mind as a reflection or a derivative being.
+
+There is also a defensible place to stop *some* causal questions. A
+physical theory that takes a first state as boundary data and successfully
+derives later states has a principled reason to stop that temporal
+derivation at the boundary. A model's first state can leave open whether
+there was a wider physical prehistory. If it really was the first instant,
+there is no earlier event. A genuinely atemporal source also has no
+temporally earlier producer, since it has no time against which to order
+one. In neither case has temporal reasoning settled why the bearer exists. Evidence that
+the physical theory describes the actual history well can favor belief
+in its physical subject even while this question remains open. If there
+is less evidence for a divine subject, an atheist can withhold belief
+in it consistently. For the same reason, if attributing independent
+agency to a source explained some evidence better, its lack of an earlier
+producer would not cancel that advantage. Neither evidential comparison
+establishes that only one kind of subject could be uncaused.
+
+A stronger physicalist objection would establish that agency as such
+requires realization in a distinct system on which the agent itself
+depends for existence. That would bear directly on an underived personal
+source. Showing that a particular human action requires a functioning
+brain establishes a narrower claim about an operation. In the other
+direction, a theist could give reason to think a particular cosmos must
+receive existence from constituents or a giver. Its having parts alone
+leaves open the monist's proposal that the whole is basic and the parts
+depend on it. If independently warranted constitutive dependence were
+established for either candidate, it would exclude *that* bearer from
+being entirely underived. Saying that the classical God is necessary by
+definition leaves the identification of this actual foundation with that
+God to be established.
+[Mind and realization](mind-physicalism-fork-419.md),
+[material priority and its domain](priority-monism-framework.md)
+and [the comparison with a physical foundation](physical-ground-468.md).
+
+**What this buys for C2.** A view may take an unequal distribution of
+uncaused beings as primitive. It then accepts that its general principle
+leaves that particular asymmetry unexplained. Alternatively it can supply
+a relevant difference, allow the same exemption in both cases, or renew
+the demand for both. Equal treatment under one objection does not fix
+the candidates' relative credibility or establish either one's possibility.
+A genuine uncaused contingent composite could even retain the receptive
+disjunct of C2. To settle C2 for n we need to reach the particular simple,
+unreceived bearer. I have high confidence that the bare refusal of a
+cause cannot consistently serve as a categorical objection on just one
+side when that is the very feature both sides grant. The gain is a
+restriction on arbitrary exclusions. My verdict about this individual's
+necessity remains open.
 
 **Assessment.** The regress comparison strengthens the objection to two
 specific defenses of P: passing existential receipt on without addressing
