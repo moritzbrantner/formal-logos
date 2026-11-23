@@ -555,6 +555,31 @@ source/ground relationship. In particular:
    counterfactual, not a prediction on his view. The q.104 a.3 reading
    already exists in the C2 note: this is a **cross-family connection,
    not a new source reading or attributed corpus claim**.
+   **Change-law versus existential-loss law.** This also isolates a
+   nontrivial transfer required by the positive ¬C3 argument. A principle
+   that *any actual change of a persisting subject* needs an inducing cause
+   does **not**, without an additional premise, cover the case where the
+   bearer itself ceases to exist and no bearer survives the transition.
+   Creation and annihilation are not motions of an enduring subject in
+   Aquinas's q.45 a.2 sense, as the already reviewed C2 note observes.
+   `TimeSymmetricGiving.CessationNeedsInducer` and
+   `ConcurrentCessation.CessationHasCause` therefore state **stronger
+   existential-loss coverage hypotheses** when read over the bearer
+   itself: the former explicitly quantifies present-then-absent cases;
+   the latter requires a represented terminal destructive occurrence.
+   Their verification as conditional implications does *not* follow
+   from a source's account of ordinary physical changes. A sophisticated
+   inertialist may take *change* in the broader sense of any difference
+   between positive existence facts across times and directly defend
+   existential-loss coverage on that ground; this is a **live primitive
+   extension**, not an inconsistency or automatic refutation. Conversely,
+   the conserver needs positive warrant that withdrawal suffices for
+   loss without a further destructive act, because q.104 a.3's
+   annihilation classification assumes direct dependence for esse.
+   The existing #1895 four-history and withdrawal-as-loss controls
+   discriminate the *two open hypotheses*, not their real-world truth.
+   This is a conceptual/source-scope audit, **not** a new Lean theorem,
+   claimed new attribution, or an independent warrant count.
 3. **Source of positive warrant on each side.** The strongest inertialist
    explains later survival by previous real existence, an applicable
    no-positive-loss rule and the absence of such a loss inducer; it is **not**
