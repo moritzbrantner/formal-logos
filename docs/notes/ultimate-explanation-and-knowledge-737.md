@@ -335,13 +335,27 @@ changed, plus the required delivered-head review.
 
 ## Historical traces and scientific induction under a fabricated-past rival (2026-11-23)
 
-**Scope and root-facing question.** A backward-looking epistemic test for #737/#1867, following the C2 conversation about essential origins, creature collections and the same first source (#1887 and #1903). Evaluate whether the evidence used to support historical events and scientific laws could be present without those events having occurred. This is not a campaign about historical Christian claims (deferred under AGENTS.md). Reuse the [future-facing epistemic comparison](no-foundation-practical-collapse.md), the [upstream law-recombination dispute](no-foundation-law-chaos.md), the [Hume induction notes](../hume-induction.md) and the [essential-origin case](contingency-receptivity-c2.md). No rival is required to accept this scenario simply because it denies an ultimate ground.
+**Scope and root-facing question.** A backward-looking epistemic test for #737/#1867,
+following the C2 conversation about essential origins, creature collections and the same
+first source (#1887 and #1903). Evaluate whether the evidence used to support historical
+events and scientific laws could be present without those events having occurred. This
+is not a campaign about historical Christian claims (deferred under AGENTS.md). Reuse
+the [future-facing epistemic comparison](no-foundation-practical-collapse.md), the
+[upstream law-recombination dispute](no-foundation-law-chaos.md), the [Hume induction
+notes](../hume-induction.md) and the [essential-origin
+case](contingency-receptivity-c2.md). No rival is required to accept this scenario
+simply because it denies an ultimate ground.
 
 ### A precise past-directed comparison
 
-Fix observation time t. Let H be a complete history, and O(t,H) its *currently accessible* evidence: present memories, fossils, apparent documents, instruments, isotopic patterns, and apparent records of earlier successful experiments. O is a projection of a history, not a complete description of the identity or causal origin of every presently appearing object.
+Fix observation time t. Let H be a complete history, and O(t,H) its *currently
+accessible* evidence: present memories, fossils, apparent documents, instruments,
+isotopic patterns, and apparent records of earlier successful experiments. O is a
+projection of a history, not a complete description of the identity or causal origin of
+every presently appearing object.
 
-The selected rival grants two admissible histories, an old history and a young history, satisfying:
+The selected rival grants two admissible histories, an old history and a young history,
+satisfying:
 
 \[
 O(t,H_{\mathrm{old}})=O(t,H_{\mathrm{young}}), \qquad
@@ -349,20 +363,63 @@ O(t,H_{\mathrm{old}})=O(t,H_{\mathrm{young}}), \qquad
 \neg\operatorname{Occurred}(H_{\mathrm{young}},e).
 \]
 
-The young world is stipulated to have been created recently with matching *apparent* records. The scenario is a **premise of this positive rival**, not a consequence of C2's possible absence of the same foundational individual, and not established by a logical countermodel. Russell's five-minute example is explicitly a logical rather than serious historical hypothesis: *The Analysis of Mind* (1921), Lecture IX, memory discussion ([consulted text](https://www.literaturepage.com/read.php?abspage=114&changefont=1&titleid=russell-analysis-of-mind)). His claim does not entail metaphysical admissibility. [SEP, Epistemological Problems of Memory, §3.6](https://plato.stanford.edu/entries/memory-episprob/) and [SEP, Underdetermination of Scientific Theory, §§1 and 3](https://plato.stanford.edu/entries/scientific-underdetermination/) give orientation on entitlement and evidential equivalence. These links are consulted research navigation, not new pinned corpus source claims.
+The young world is stipulated to have begun recently with matching *apparent* records.
+The scenario is a **premise of this positive rival**, not a consequence of C2's possible
+absence of the same foundational individual, and not established by a logical
+countermodel. Russell's five-minute example is explicitly a logical rather than serious
+historical hypothesis: *The Analysis of Mind* (1921), Lecture IX, memory discussion
+([consulted
+text](https://www.literaturepage.com/read.php?abspage=114&changefont=1&titleid=russell-analysis-of-mind)).
+His claim does not entail metaphysical admissibility. [SEP, Epistemological Problems of
+Memory, §3.6](https://plato.stanford.edu/entries/memory-episprob/) and [SEP,
+Underdetermination of Scientific Theory, §§1 and
+3](https://plato.stanford.edu/entries/scientific-underdetermination/) give orientation
+on entitlement and evidential equivalence. These links are consulted research
+navigation, not new pinned corpus source claims.
 
-**Original conditional argument — evidence-only discrimination.** Any deterministic method whose *only* input is O(t,H) must return the same verdict in both histories. Therefore it cannot make a **universally factive** positive assertion that e occurred across a domain admitting both histories. This is an input-indiscernibility argument, not an empirical probability estimate. It proves neither that ordinary history is false nor that a presently well-functioning method lacks defeasible warrant. It is the backward-facing analogue of #737's lossy observation and #1808's quantified future countercontinuations, but there is **no existing Lean theorem binding this backward-looking version**.
+**Original conditional argument — evidence-only discrimination.** Any deterministic
+method whose *only* input is O(t,H) must return the same verdict in both histories.
+Therefore it cannot make a **universally factive** positive assertion that e occurred
+across a domain admitting both histories. This is an input-indiscernibility argument,
+not an empirical probability estimate. It proves neither that ordinary history is false
+nor that a presently well-functioning method lacks defeasible warrant. It is the
+backward-facing analogue of #737's lossy observation and #1808's quantified future
+countercontinuations, but there is **no existing Lean theorem binding this
+backward-looking version**.
 
 ### Historical calibration: a second-order question
 
-1. A scientist who relies on apparent records of older successful experiments to warrant a law must have some warrant that the reported tests actually took place.
-2. An attempted *independent proof* of that record's reliability by appealing only to further apparently successful historical checks draws on the same presently observed O. If the rival permits a **global** fabrication of all those checks, the procedure cannot deductively rule the rival out.
-3. Multiple mutually consistent records are not automatically statistically independent under a stipulated single fabricator. For an ordinary causal reconstruction, independent mechanisms of preservation, dating and intervention can nevertheless be strong evidence, and the rival needs a positive account of the coordinated counterfeit rather than a free pass from mere possibility.
-4. This is a **limit on evidence-only, certainty-producing calibration**, not a verdict that calibration is epistemically circular in every legitimate sense. A fallibilist can have prima facie memorial entitlement, coherentist support, externalist reliability, or defensible prior probabilities and inductive methods without first proving their universal infallibility.
+1.  A scientist who relies on apparent records of older successful experiments to
+  warrant a law must have some warrant that the reported tests actually took place.
+2.  An attempted *independent proof* of that record's reliability by appealing only to
+  further apparently successful historical checks draws on the same presently observed
+  O. If the rival permits a **global** fabrication of all those checks, the procedure
+  cannot deductively rule the rival out.
+3.  Multiple mutually consistent records are not automatically statistically independent
+  under a stipulated single fabricator. For an ordinary causal reconstruction,
+  independent mechanisms of preservation, dating and intervention can nevertheless be
+  strong evidence, and the rival needs a positive account of the coordinated counterfeit
+  rather than a free pass from mere possibility.
+4.  This is a **limit on evidence-only, certainty-producing calibration**, not a verdict
+  that calibration is epistemically circular in every legitimate sense. A fallibilist
+  can have prima facie memorial entitlement, coherentist support, externalist
+  reliability, or defensible prior probabilities and inductive methods without first
+  proving their universal infallibility.
 
-The strongest conditional pressure is therefore on the conjunction: **(a)** global fabricated pasts admitted at the selected evidence; **(b)** all warranted historical assertions must be factive in every such admitted history; **(c)** some positive historical assertion is warranted solely by that evidence. The conjunction is inconsistent. Clause (b) is a strong norm and (a) goes beyond mere foundationlessness. A Humean or naturalist may reject either, without withdrawing all scientific knowledge.
+The strongest conditional pressure is therefore on the conjunction: **(a)** global
+fabricated pasts admitted at the selected evidence; **(b)** all warranted historical
+assertions must be factive in every such admitted history; **(c)** some positive
+historical assertion is warranted solely by that evidence. The conjunction is
+inconsistent. Clause (b) is a strong norm and (a) goes beyond mere foundationlessness. A
+Humean or naturalist may reject either, without withdrawing all scientific knowledge.
 
-**A probability correction.** Observational compatibility alone does not imply equal posterior credibility. A Bayesian comparison satisfies posterior odds = prior odds only *if* the likelihoods of that E under the two histories are equal and positive. If likelihoods differ, E can discriminate probabilistically despite being realizable under both. An after-the-fact young-world story adjusted to fit every recorded detail is not automatically simple or probable. A count of possible worlds, or uniqueness of the empty set, supplies no probability measure.
+**A probability correction.** Observational compatibility alone does not imply equal
+posterior credibility. A Bayesian comparison satisfies posterior odds = prior odds only
+*if* the likelihoods of that E under the two histories are equal and positive. If
+likelihoods differ, E can discriminate probabilistically despite being realizable under
+both. An after-the-fact young-world story adjusted to fit every recorded detail is not
+automatically simple or probable. A count of possible worlds, or uniqueness of the empty
+set, supplies no probability measure.
 
 ### Four distinct epistemic targets
 
@@ -373,24 +430,83 @@ The strongest conditional pressure is therefore on the conjunction: **(a)** glob
 | A scientific law holds and will continue | Historical calibration, when its evidential basis is the disputed record; extrapolation requires another continuity or induction principle | Logical validity, presently tested conditional models, brute-stable laws, or defeasible forecasts under a defensible probabilistic/natural-powers model |
 | Logic and mathematics | Nothing merely from the historical contrast | Deductive relations under stated premises; these are not reports of vanished experiments |
 
-The user-facing question "How sure can I be about laws if I cannot trust that their supporting events happened?" thus has a **conditional** answer. If there is *no independent, defeasible or externally reliable warrant* for the genuine occurrence of any recorded tests, then the records cannot by themselves justify the usual **historical frequency claim**. Whether this defeats rational confidence in a law still depends on currently reproducible observations, intrinsic theoretical constraints, priors, instrumental reliability and a justified inductive norm. Mere possibility of an apparent past is not the premise that no such warrant exists.
+The user-facing question "How sure can I be about laws if I cannot trust that their
+supporting events happened?" thus has a **conditional** answer. If there is *no
+independent, defeasible or externally reliable warrant* for the genuine occurrence of
+any recorded tests, then the records cannot by themselves justify the usual **historical
+frequency claim**. Whether this defeats rational confidence in a law still depends on
+currently reproducible observations, intrinsic theoretical constraints, priors,
+instrumental reliability and a justified inductive norm. Mere possibility of an apparent
+past is not the premise that no such warrant exists.
 
 ### Cross-world identity is not observational identity
 
-On a strong essential-origin interpretation, a real fossil from a particular organism and a perfectly fabricated young-world replica need not be numerically the same object. The rival does not have to posit one and the same creature with contradictory essential histories; qualitative observational equivalence suffices. Conversely, essential history alone gives the observer no independent way of telling original from replica. Historical identity is an **ontic constraint**; reliable identification of the observed object by its supposed history is an **epistemic bridge**.
+On a strong essential-origin interpretation, a real fossil from a particular organism
+and a perfectly fabricated young-world replica need not be numerically the same object.
+The rival does not have to posit one and the same creature with contradictory essential
+histories; qualitative observational equivalence suffices. Conversely, essential history
+alone gives the observer no independent way of telling original from replica. Historical
+identity is an **ontic constraint**; reliable identification of the observed object by
+its supposed history is an **epistemic bridge**.
 
-Likewise the C2 question whether the actually existing foundation n could be absent in another world does not entail that records of origins are replaceable there, that some alternative foundation could create *those very* creatures, or that all past histories are epistemically on a par. Each requires an additional independent bridge. A single creatureless history may be unique as a *creature-set description* without settling whether it is metaphysically admissible or observationally indistinguishable from an inhabited old history.
+Likewise the C2 question whether the actually existing foundation n could be absent in
+another world does not entail that records of origins are replaceable there, that some
+alternative foundation could create *those very* creatures, or that all past histories
+are epistemically on a par. Each requires an additional independent bridge. A single
+creatureless history may be unique as a *creature-set description* without settling
+whether it is metaphysically admissible or observationally indistinguishable from an
+inhabited old history.
 
 ### Compare the positive metaphysical accounts at matched scope
 
-- **Brute but stable impersonal world:** An unexplained actual totality may nevertheless have stable causal histories, true traces and effective inquiry. A primitive law may exclude all counterfeit origins; even an ontology admitting them need not assign them high credibility. Its remaining obligation is how present inquirers obtain truth-tracking access to those patterns.
-- **Humean best-system and fallibilist naturalist:** Simplicity, projectibility, correcting predictions, present intervention, memory entitlement and Bayesian priors are genuine candidate sources of rational confidence. They need not guarantee truth in *all* conceivable histories. Evaluate whether these standards actually discriminate the global counterfeit rather than dismissing them for lacking an ultimate explanation.
-- **Essence or power-based constraint:** Essential origination and causally efficacious powers might rule out some counterfeit histories. A scope bridge from real nature to histories, plus epistemically accessible traces, must be argued; a snapshot that satisfies laws does not prove a genuine long past.
-- **Necessary impersonal source:** May also fix truth-conducive regularities; necessity of an idle being by itself does not guarantee accurate records.
-- **Classical theist:** A necessary, intelligent, nondeceptive source could provide strong positive grounds for stable, knowable histories. Necessary divine existence alone does not guarantee that the source never creates apparent age, nor that actual observational practices are reliably tied to real events. Nondeception, deliberate law selection, continued applicability and accessible evidence remain substantive bridges. Apply the **same** challenge to this worldview.
+-  **Brute but stable impersonal world:** An unexplained actual totality may
+  nevertheless have stable causal histories, true traces and effective inquiry. A
+  primitive law may exclude all counterfeit origins; even an ontology admitting them
+  need not assign them high credibility. Its remaining obligation is how present
+  inquirers obtain truth-tracking access to those patterns.
+-  **Humean best-system and fallibilist naturalist:** Simplicity, projectibility,
+  correcting predictions, present intervention, memory entitlement and Bayesian priors
+  are genuine candidate sources of rational confidence. They need not guarantee truth in
+  *all* conceivable histories. Evaluate whether these standards actually discriminate
+  the global counterfeit rather than dismissing them for lacking an ultimate
+  explanation.
+-  **Essence or power-based constraint:** Essential origination and causally efficacious
+  powers might rule out some counterfeit histories. A scope bridge from real nature to
+  histories, plus epistemically accessible traces, must be argued; a snapshot that
+  satisfies laws does not prove a genuine long past.
+-  **Necessary impersonal source:** May also fix truth-conducive regularities; necessity
+  of an idle being by itself does not guarantee accurate records.
+-  **Classical theist:** A necessary, intelligent, nondeceptive source could provide
+  strong positive grounds for stable, knowable histories. Necessary divine existence
+  alone does not guarantee that the source never creates apparent age, nor that actual
+  observational practices are reliably tied to real events. Nondeception, deliberate law
+  selection, continued applicability and accessible evidence remain substantive bridges.
+  Apply the **same** challenge to this worldview.
 
-**Provisional judgment (analyst, 2026-11-23).** I favor continued fallible scientific and historical inquiry; there is no evidence here for according a fabricated five-minute history equal probability to genuine history. The new **precise** comparative test is whether a selected rival admits *evidence-identical false histories* and also claims more historical/scientific certainty than its own evidence and epistemic norms allow. Such an explicit package has serious costs. Bare denial of an ultimate source, a contingent foundation, C2's possible absence of n, or abstract modal primitivism does not *by itself* imply those costs. No God-existence premise is closed and the positive case for theism is not automatically strengthened.
+**Provisional judgment (analyst, 2026-11-23).** I favor continued fallible scientific
+and historical inquiry; there is no evidence here for according a fabricated five-minute
+history equal probability to genuine history. The new **precise** comparative test is
+whether a selected rival admits *evidence-identical false histories* and also claims
+more historical/scientific certainty than its own evidence and epistemic norms allow.
+Such an explicit package has serious costs. Bare denial of an ultimate source, a
+contingent foundation, C2's possible absence of n, or abstract modal primitivism does
+not *by itself* imply those costs. No God-existence premise is closed and the positive
+case for theism is not automatically strengthened.
 
-**Root connection and next discriminating tests.** #1867's unproven "no ultimate foundation -> unrestricted future recombination" has a separate, likewise OPEN past-directed sibling: "no foundation -> global historical trace replacement admitted." Their outputs connect to rival evaluation of the local contingent-existence PSR (statement 608a262d), *not* to a new verified God-existence route. Next test: select a concrete scientific dating or repeatability example; spell out observed inputs, causal history, reliability/priors and inferential steps. Challenge both the brute-stable and classical-theistic account of trace reliability **without** making strict certainty a hidden premise. Separately investigate whether historically essential identity plus a genuine causal trace law rules out an observationally identical counterfeit in any independently admissible history.
+**Root connection and next discriminating tests.** #1867's unproven "no ultimate
+foundation -> unrestricted future recombination" has a separate, likewise OPEN
+past-directed sibling: "no foundation -> global historical trace replacement admitted."
+Their outputs connect to rival evaluation of the local contingent-existence PSR
+(statement 608a262d), *not* to a new verified God-existence route. Next test: select a
+concrete scientific dating or repeatability example; spell out observed inputs, causal
+history, reliability/priors and inferential steps. Challenge both the brute-stable and
+classical-theistic account of trace reliability **without** making strict certainty a
+hidden premise. Separately investigate whether historically essential identity plus a
+genuine causal trace law rules out an observationally identical counterfeit in any
+independently admissible history.
 
-**Publication and claim/type boundary.** This is research prose with no changed Lean declaration, source-attributed corpus claim, proposition, result, graph edge or premise. The two original conditional arguments need independent semantic challenge and must not be represented as reviewed or Lean-verified. No root frontier effect is intended; the computed comparison belongs to PR CI.
+**Publication and claim/type boundary.** This is research prose with no changed Lean
+declaration, source-attributed corpus claim, proposition, result, graph edge or premise.
+The two original conditional arguments need independent semantic challenge and must not
+be represented as reviewed or Lean-verified. No root frontier effect is intended; the
+computed comparison belongs to PR CI.
