@@ -1,0 +1,11 @@
+{
+  "id": "9ff2814e-3ed6-4135-a574-12d11dcbbd19",
+  "label": "One uncaused actual bearer causes the esse of every received actual bearer",
+  "paraphrase": "On one fixed q3a4 profile: if some actual bearer has received esse, then one actual bearer with no actual cause of its esse is a distinct actual cause (ActualEsseCause) of the esse of every received actual bearer. Not asserted: that it is the only uncaused bearer, that its esse is its essence, that its causing is immediate, efficient, present or exclusive, or that it is necessary. Strictly stronger than CCR (20babef7). It neither implies nor is implied by the finite-path common source c35b1a5c: it is vacuous when nothing is received and says nothing of esse-essence identity, and control 6 satisfies c35b1a5c without it on the given edges.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.AggregateEsseCause.CommonUncausedCauseOfReceived",
+  "definition_ids": [
+    "e7aa4529-fe7a-4baf-929c-466cf15cb0c6",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

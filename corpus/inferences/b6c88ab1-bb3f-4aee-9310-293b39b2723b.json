@@ -1,0 +1,10 @@
+{
+  "id": "b6c88ab1-bb3f-4aee-9310-293b39b2723b",
+  "label": "Totality esse-cause route controls checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "7b9bac8e-1637-4c41-b443-3ec89cd8477a",
+  "rule": "Seven explicit all-actual q3a4 interpretations: one joint model, four premise omissions and two strictness models",
+  "meaning": "Non-transcription closed control bundle. The omission models deny, respectively, the joint claim of A and B for every predicate (Hume-Edwards regress, where the distributive reading satisfies A and fails B), whole to members (internal loop; idle actual explainer) and no self-causation (self-causing totality cause); the joint model shows the premise bundle is satisfiable with an infinite descending chain; the strictness models show CCR without a common uncaused cause, once with a single root on the given edges and once with two independent roots and a transitively closed relation. No model is asserted to be metaphysically possible; the regress relation carries no per se, present or power typing.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

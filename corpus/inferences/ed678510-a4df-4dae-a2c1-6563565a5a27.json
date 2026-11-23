@@ -1,0 +1,14 @@
+{
+  "id": "ed678510-a4df-4dae-a2c1-6563565a5a27",
+  "label": "Common uncaused esse-cause from totality cause, whole to members, no self-causation (inference)",
+  "input_statement_ids": [
+    "05b15c98-4205-4406-a591-7935c1f9bc50",
+    "6c0282c0-6a0d-4403-83c5-a3aabcddd4e0",
+    "b62a64ab-ac11-569a-b8e8-de51a74b058f"
+  ],
+  "output_statement_id": "9ff2814e-3ed6-4135-a574-12d11dcbbd19",
+  "rule": "Take an actual cause of the received totality; it causes each received member's esse; if it were received it would cause its own esse; so it is uncaused and distinct from every received bearer",
+  "meaning": "Non-transcription conditional derivation on one fixed q3a4 profile, constructive. A supplies an actual totality cause (collective sense TOTALITY_CAUSE_1), B makes it a cause of each received member, and no self-causation of esse (b62a64ab) excludes its being received, hence it has no actual esse cause and is a distinct actual cause of every received bearer. Mode of causing, immediacy, time, world and necessity stay unspecified; uniqueness of the uncaused bearer and esse-essence identity are not derived. In controls (2)-(5) the conclusion fails (by closedOfCommon, since CCR fails), and in each one of A, B and no self-causation fails, so each is needed in an exact interpretation.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
