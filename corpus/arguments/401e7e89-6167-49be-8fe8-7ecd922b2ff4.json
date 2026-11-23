@@ -73,6 +73,12 @@
       "from": "8afd07c5-d7be-4138-83c4-62c59317dc1a",
       "to": "b5a882ce-e70c-46e1-8e90-9843bcdacf6f",
       "statement_id": "7ce040a2-7e9c-58e0-8ec1-ce99a60b587b"
+    },
+    {
+      "term": "RECEPTION_OF_ESSE_VERSUS_EXTERNAL_CAUSE",
+      "from": "d2775c6d-664f-42b5-b583-a3580bc8daf7",
+      "to": "5cc38752-88e4-4b26-a09b-c065e6ee745c",
+      "statement_id": "33ad148b-ceab-5856-a4f8-c999a1dba644"
     }
   ]
 }
