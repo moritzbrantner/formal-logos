@@ -1,0 +1,9 @@
+{
+  "id": "3770b94d-6d94-4942-b613-c36b7af1cf25",
+  "label": "Distributive cause of the received totality: a distinct actual cause of some received bearer",
+  "term": "distributive cause of the received totality",
+  "definition": "DistributiveTotalityCause p e holds when some received actual bearer m (ReceivedActual p m) has e as a distinct actual cause of its esse (ActualEsseCause p e m). Every member-cause of a totality of received bearers is a cause of it in this sense; nothing collective is required.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.AggregateEsseCause.DistributiveTotalityCause",
+  "note": "Analyst sense for #1724 (C1), attribution deferred; it is the reading under which the Hume-Edwards view grants that a totality of received being is caused (by its members' causes). Dependencies: e7aa4529-fe7a-4baf-929c-466cf15cb0c6, 8163859b-95b3-4dd2-8a69-541bd332f32f. Under this reading premise A holds, classically, whenever anything is received, and premise B (one such cause causes every received member) carries the whole claim; in the Hume-Edwards regress control A holds and B fails. Contrast a95ed85b-627e-4dbe-9810-63b0b6ee1e02, the primitive collective reading. See docs/notes/unique-feedback-explanation-311.md, C1 section."
+}

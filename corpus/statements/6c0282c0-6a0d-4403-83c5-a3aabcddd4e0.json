@@ -1,0 +1,15 @@
+{
+  "id": "6c0282c0-6a0d-4403-83c5-a3aabcddd4e0",
+  "label": "A cause of the received totality causes the esse of each received bearer",
+  "paraphrase": "OPEN analyst premise B, attribution deferred: on one fixed q3a4 profile, whatever is a cause of the esse of the totality of received actual bearers (TotalityCause, collective sense TOTALITY_CAUSE_1) is a cause, in the same esse respect (CausesIn, mode unspecified, not necessarily immediate), of the esse of each received actual bearer, including members it reaches only through intermediaries. A whole-to-members principle for this totality only; an analogue of the spacetime whole-to-parts bridge of #1109 in a different vocabulary, not identified with it. Under the distributive reading TOTALITY_CAUSE_2, B carries the whole joint claim and fails in the Hume-Edwards regress control. Principal rival: an internal loop or holistic whole whose totality cause is one of its own members.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.AggregateEsseCause.TotalityCauseCausesEachReceived",
+  "definition_ids": [
+    "a95ed85b-627e-4dbe-9810-63b0b6ee1e02",
+    "e7aa4529-fe7a-4baf-929c-466cf15cb0c6",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "197f0097-f2ae-4a47-8770-3d43758f737b"
+  ]
+}
