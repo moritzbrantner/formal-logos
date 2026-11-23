@@ -82,7 +82,7 @@ certificate: it does not establish that either model is metaphysically possible
 or close a corpus premise. -/
 theorem c3ActualWorldControls : C3ActualWorld.Certificate := by
   unfold C3ActualWorld.Certificate
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
   -- One history and the same substantial bearer at each temporal/world index.
   · intro v x
     cases v <;> cases x <;> simp [C3ActualWorld.history]
@@ -108,6 +108,10 @@ theorem c3ActualWorldControls : C3ActualWorld.Certificate := by
   · rintro ⟨x, _, _, hn⟩
     have h := hn false (by trivial)
     simpa [C3ActualWorld.withGround, C3ActualWorld.history] using h
+  · rintro ⟨x, _, _, hn⟩
+    have h := hn false (by trivial)
+    simpa [C3ActualWorld.withoutGround, C3ActualWorld.withGround,
+      C3ActualWorld.history] using h
   -- The same originating esse cause is real at the selected world.
   · simp [C3ActualWorld.originFrame, C3ActualWorld.frame, trueCausesFalse]
   · refine ⟨1, ⟨by simp [C3ActualWorld.history], ?_⟩,

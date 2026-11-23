@@ -155,7 +155,11 @@ def originGiving : BeingGiving Bool Bool Nat :=
 def sustainedGiving : BeingGiving Bool Bool Nat :=
   ⟨fun v c x t => v = true ∧ c = true ∧ x = false ∧ 1 ≤ t⟩
 
-/-- The same shared causal vocabulary for both giving profiles. -/
+/-- The same shared causal vocabulary for both giving profiles. The frame
+fields this control does not use (`MovesIn`, `DependsForBeing`, `PriorSimply`)
+are left empty. In particular `DependsForBeing := fun _ _ => False` does not
+model q.44 dependence for being (`2068f91c`); it is an unused placeholder, and
+no conjunct of `Certificate` reads it. -/
 def frame (G : BeingGiving Bool Bool Nat) : CausalityFrame Bool Bool Nat Unit where
   history := history
   GivesAt := G.GivesAt
@@ -169,14 +173,18 @@ def originFrame : CausalityFrame Bool Bool Nat Unit := frame originGiving
 def sustainedFrame : CausalityFrame Bool Bool Nat Unit := frame sustainedGiving
 
 /-- The source counts as an actual concrete ground in the reading world.
-That assignment by itself says nothing about *present productive exercise*. -/
+That assignment by itself says nothing about *present productive exercise*.
+On the complete-history (ancestry) reading of `grounds w` that the `cb1cdea9`
+record's note allows, an inertialist can accept this edge. On a
+present-existential-grounding reading, this profile instead witnesses ground
+without giving, which is not the inertialist's own position. -/
 def withGround : Profile Bool Bool where
   ontic := history.ontic
   concrete := fun _ => True
   grounds := fun v c x => v = true ∧ c = true ∧ x = false
 
-/-- A rival history with the identical causes and actual bearers but no selected
-actual-concrete grounding edge. -/
+/-- A rival profile on the identical history, with the identical causes and
+actual bearers but no selected actual-concrete grounding edge. -/
 def withoutGround : Profile Bool Bool :=
   { withGround with grounds := fun _ _ _ => False }
 
@@ -189,8 +197,10 @@ def StepPersistence (h : History Bool Bool Nat) : Prop :=
 /-- Joint finite-world and unbounded-time controls. The grounded inertial
 interpretation satisfies the `cb1cdea9` *formal* cause-to-ground bridge while
 failing C3; the ungrounded inertial interpretation defeats that bridge even
-though the originating source is actual. Both meanings of "ground" therefore
-require an explicit argument before the root route is applied to persistence.
+though the originating source is actual. Either assignment of the free
+`grounds` primitive is compatible with origin-only giving, so applying the
+root route to persistence needs an explicit ground-to-giving bridge.
+Neither profile has a necessary actual bearer (both share `ontic`).
 No C1/C2 premise or God-existence conclusion is established here. -/
 def Certificate : Prop :=
   CoherentAtNow history ∧
@@ -200,6 +210,7 @@ def Certificate : Prop :=
   ContingentAt history.ontic true false ∧
   (∀ x, ActualConcrete withGround true x → ContingentAt history.ontic true x) ∧
   ¬ NecessaryConcreteAt withGround true ∧
+  ¬ NecessaryConcreteAt withoutGround true ∧
   originFrame.CausesIn true false originFrame.esse ∧
   OriginatesBeing history originGiving true true false ∧
   GiverPresentWhenGiving history originGiving ∧
