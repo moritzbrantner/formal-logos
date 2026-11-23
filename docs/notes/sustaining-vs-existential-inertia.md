@@ -964,3 +964,186 @@ source claims and passage records added: **none**; the Rota/Pruss leads are
 not newly attributed. Existing proof records and root premises remain
 unchanged. The added attempt is the record of this analyst test, not a new
 supporting inference or a claim to historical fidelity.
+
+
+## 8. C3 at an actual world: grounded, ungrounded and sustained controls (2026-11-23)
+
+**Scope.** C3 concerns a bearer with *presently derivative* actuality, not merely
+a contingent bearer; the proposed conclusion is an appropriately present
+productive actualizer. The present test reuses the original
+`CausesIn`/`GivesAt`/received-esse relations, the selected
+`ActualConcreteGround` from the God-route profile, and the shared
+`CausalityFrame`. It is a new **structural model comparison**, not a
+new derived source of metaphysical warrant. It neither modifies the
+`40a97664` bridge nor discharges `cb1cdea9`.
+
+### Model and formal separation
+
+`ConcurrentCessation.C3ActualWorld` represents the following *single
+selected world* (`w=true`) and accessible alternative (`w=false`):
+
+| Feature | Origin-only inertia, at w=true | Concurrent conservation, at w=true |
+| --- | --- | --- |
+| Rigid source `true`, effect `false` | Source at every sampled moment, effect from t=1 | Identical presence history |
+| Modal status | Both present here, absent in alternative world; both contingent | Identical |
+| `CausesIn true false esse` | Yes; selected strict-origin interpretation | Identical relation |
+| `GivesAt true true false 1` | Yes, at onset | Yes, at onset |
+| `GivesAt true true false 2` | **No**, despite source still being present | **Yes** |
+| Persistence rule | Already-present bearer survives each next step | Identical |
+| `EsseReceivedIn false ()` | Yes (a selected receiver sense, not identified with modal contingency) | Identical |
+| `40a97664` / weak concurrent actualization | False | True |
+| `23e04ae5` restricted to distinct `CausesIn` causes | False | True |
+| Selected actual `grounds true true false` | Either yes (grounded profile) or no (ungrounded profile) | May be yes |
+
+The profile's `ontic` is *exactly the temporal history's* `ontic`;
+`CoherentAtNow` holds in **both** worlds at `now=2`. Thus this control
+does not exploit a mismatch between temporal and world-relative existence, a
+different effect at later moments, a missing actual originator, an unpopulated
+actual world, or the trivial absence of a `CausesIn` edge. The target itself
+is an actual contingent concretum. Both giving assignments satisfy contact,
+and the origin-only assignment has no giver identical to its effect.
+
+Two grounding interpretations are deliberately distinguished:
+
+- **Grounded inertia:** the direct `cb1cdea9` formula, *a distinct cause of
+  an actual concrete effect's esse is its actual concrete ground at w*, holds
+  even though `40a97664` fails. This is possible at the *typed level*
+  because actual grounding is not defined as strict present productive
+  `GivesAt`. It is **not** a model of a further interpretation requiring
+  all actual grounds to exercise concurrent esse-giving.
+- **Ungrounded inertia:** keep the *same* history, actual originating
+  `CausesIn`, recipients and giving assignment but delete the selected
+  `grounds` edge. Then `cb1cdea9` fails, with both its actual/concrete
+  relatum conditions still met. This provides an issue-#1616 **partial
+  omission model**, not a model of every other member of the full #1614
+  bundle.
+
+The active alternative world has no concrete existent; the selected actual
+world has two. Consequently **no bearer in this model is de re necessary**;
+the model is not an application of a real-world PSR or of C1/C2, and it is
+not a counterexample to a theorem whose additional premises force a necessary
+source. It shows precisely why one must not read modal contingency as
+continuous existential dependence, or actual co-existence and a grounding
+label as present productive exercise.
+
+**Formal boundary:** the added `C3ActualWorld.Certificate` is discharged
+by `Results.Causality.ConcurrentCessation.c3ActualWorldControls` when that
+module is built. It is an unregistered Lean helper/model (no new Comparator
+result), and carries no reality-applicability claim. This research note does
+not claim CI verification until the proposed head is checked.
+
+### What the rival positively explains
+
+The origin-only account supplies: (i) an actual originating esse-cause,
+(ii) numerical identity of the effect before and after time 2, (iii) a
+consistent forward persistence constraint, (iv) an actually existing source
+whose productive activity ends, and (v) an optional world-level ground
+assignment. It can therefore give a *valid diachronic explanation* of later
+survival from prior existence and a rule, without needing a present
+`GivesAt`. **It does not by that rule alone produce** `∃t, IsAt w x t`:
+the rule is conditional on a positive earlier actuality and does not choose
+between a never-existing and an existing bearer. That is the already
+established #1801 §7 distinction; no fresh independent evidence or
+equivalence is counted here. An inertialist can take prior actuality and a
+primitive law/nature as its ultimate package, or offer a non-well-founded
+whole-history explanation. Neither is defeated by a conditional law's
+failure to *entail* the whole history.
+
+A law describing the actual mosaic, a primitive governing modal restriction
+and a bearer-intrinsic disposition play different roles. The same-fact
+grounding-cycle objection applies only if the **identical lawhood/actuality
+fact** both grounds and is grounded by the alleged law. An independently
+governing law plus basic ontology is the strongest surviving alternative to
+a complete productive-source explanation. A persistence power cannot explain
+its *own* instantiation merely by being a power of an already instantiated
+bearer; an independently grounded essential existential sufficiency would
+have more content and must be evaluated on its merits.
+
+### C3's weakest proposed bridge and the remaining philosophical choice
+
+A sufficient typed package for **weak** C3 is simply present-tense
+reception + correlativity of receiving/giving (`7c62adb5`), but PR #1785
+proves that each of the two supplied receipt interpretations hides
+`40a97664` in one conjunct. The original same-bearer
+no-giver/no-continuation and continued-giving formulations are equivalent
+(#1856 and `ConcurrentCessation.Consequences`). Repeating those is **not**
+new warrant.
+
+The explanatory argument would instead need a non-circular, substantively
+warranted claim:
+
+> A currently instantiated act of esse whose bearer has no intrinsic
+> existential sufficiency is not merely the post-origin outcome of a
+> persistence rule; its actuality at that stage is itself existentially
+> productive or presently grounded by a source, and the selected grounding
+> sense is capable of supplying the act rather than only tracing the bearer.
+
+This is an **OPEN analyst proposal**, not a proved weaker premise or an
+attribution. The step from *has received* to *still presently receives*
+requires a warrant beyond a choice of grammatical tense. Even if an
+appropriate **present ground** is granted, an additional typed
+**ground-to-productive-giving** bridge is needed to infer the strict
+`GivesAt` relation. Aquinas ST I q.104 a.1 gives the positive direct
+conservation picture by separating direct causation of *being* from causation
+of *coming-to-be*. The inertialist accepts the separation but denies that
+all received existents are of the former ongoing-cause kind; source
+interpretation cannot simply stipulate that exception away.
+
+**F2/non-efficient causes.** `CausesIn` is still mode-unspecified. An
+exemplar or final cause can explain an effect under one philosophical sense
+without exercising strict productive being-giving at the effect's time. The
+new controls use an originating efficient *reading* of the same free
+`CausesIn` relation; they do **not** certify a universal exclusion of
+exemplar/final cases. The full #1616 F2 and all-other-#1614-premises
+acceptance items remain open.
+
+**Time semantics.** The parameter `GivesAt v c x t` indexes the time of
+the *effect's* reception; it does not place the causal agent in temporal
+succession. The two-world control has natural-number effects and therefore
+does not test a beginningless world or an atemporal source. Neither a
+timeless ground nor an impersonal governing constraint implies one indexed
+`GivesAt` event without its own scope bridge (#1800).
+
+### Cumulative impact on C1, C2, necessity and God routes
+
+- **Accept C3:** when a received-esse bearer really has nonintrinsic
+  actuality, it has at least *some* concurrent `GivesAt` giver. The weak
+  theorem permits self-giving, multiple/alternating sources, infinite chains
+  and cycles. An *underived necessary source* does **not** follow without
+  separate anti-self-actualization, supplier-completeness/groundedness,
+  well-founded or explanatory-adequacy conditions, and a same-witness
+  actual-world/modal-necessity bridge.
+- **Reject C3:** a fully explicit model still supplies local persistence,
+  an originating concrete source and contingent current existence. The
+  independent conditional C1/C2 arguments are not *invalidated*: their
+  theorems survive when their own ground/supplier, termination and modal
+  premises are accepted. Routes specifically needing `40a97664`,
+  `23e04ae5` or `cb1cdea9` cannot silently carry those bridges over
+  from the originating sense. Whether the rival accepts a *brute* global
+  actuality, governing selection law or non-well-founded actualizing
+  structure remains a substantive separate choice.
+- **Convergence:** under a separately defended interface from concurrent
+  giving to one and the same actual concrete/source/priority relation, C3
+  can strengthen the *warrant* and selected-witness contact on routes
+  through `2068f91c` and `cb1cdea9`. It is not another derivation
+  of necessary being until that mapping and its other premises are typed
+  and checked. The current model shows that `cb1cdea9` alone does not
+  prove C3 on the existing formal semantics.
+
+**Provisional assessment.** At the narrow comparison of an originated,
+contingent, received-esse bearer already known to exist, the inertialist's
+earlier-actuality-plus-persistence account and the direct-conservation
+account each give a positive but different explanation. No new evidence here
+establishes C3 or ¬C3 of reality. The next discriminating task is to
+type and defend a real present-ground-to-productive-`GivesAt` principle
+for the *same received-esse bearer*, and check its explanatory force against
+an independently governing persistence law **under identical ultimate
+actuality standards**. Do not count the resulting formal implication as
+independent confirmation if it simply redescribes C3.
+
+**Open implementation/issue obligations:** independently reviewed final
+model and CI; a full #1614-bundle-except-`cb1cdea9` model or impossibility
+argument; source-positive origin-to-conservation reason at matching scope;
+and F2 efficient/exemplar/final typed discrimination. No new registered
+root-path premise or `frontier-diff` effect is intended by this structural
+checkpoint.
