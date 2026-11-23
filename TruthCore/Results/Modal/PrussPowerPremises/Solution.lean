@@ -227,7 +227,7 @@ macro "pp_unfold" : tactic => `(tactic|
     theistG, nonFactiveG, replacementG, inertG, necessitarianG, forwardG, absentHolderG, mutualG,
     vanCleveG, gFrame, allC, onlyCD, uni, forwardOnly, gcEx, gcAlways, replEx, gOnlyThereEx,
     givesCHere, givesCAlways, givesDThere, noGiving, gPower, gPowerThere, noPower,
-    positivePower, gOverC, gOverCD, noOver, pairEx, annihilatorPower, vcEx, vcGives])
+    positivePower, gOverC, gOverCD, gOverD, noOver, pairEx, annihilatorPower, vcEx, vcGives])
 
 theorem theistNonvacuity : TheistNonvacuity := by
   unfold TheistNonvacuity
@@ -236,7 +236,7 @@ theorem theistNonvacuity : TheistNonvacuity := by
 
 theorem collectiveWithoutDistributive : CollectiveWithoutDistributive := by
   unfold CollectiveWithoutDistributive
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;>
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;>
   pp_unfold <;> simp [Bool.exists_bool, Bg.forall_iff]
 
 theorem distributiveWithoutCollective : DistributiveWithoutCollective := by

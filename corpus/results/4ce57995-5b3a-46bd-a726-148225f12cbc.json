@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Modal.PrussPowerPremises.actualAbsenceHolderIsNecessaryVaryingGiver",
   "comparator_config": "results/4ce57995-5b3a-46bd-a726-148225f12cbc/comparator.json",
   "status": "solution-present",
-  "description": "The holder of the route with Pruss's own premise, under P2-delta, is a necessary being whose giving of being varies across accessible worlds where it exists: not a one-way (fixed) giver. Composes 42da6b2d. Not a transcription. Establishes no premise. It does not say what decides the variation; Met. Theta 5's 'desire or will' is not typed (see the open bridge in docs/notes/pruss-power-premises.md)."
+  "description": "The holder of the route with Pruss's own premise, under P2-delta, is a necessary being whose giving of being varies across accessible worlds where it exists: not a one-way (fixed) giver. Composes 42da6b2d. Only the necessity is derived: the varying-giving conjunct is P2-delta's own clause applied to 42da6b2d's witness, so the result is as strong as P2-delta's warrant (the creator reading or the principle that exercise over existence shows in giving). Not a transcription. Establishes no premise. It does not say what decides the variation; Met. Theta 5's 'desire or will' is not typed (see the open bridge in docs/notes/pruss-power-premises.md)."
 }

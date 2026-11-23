@@ -79,7 +79,9 @@ being (it gives nothing anywhere). Non-examples: a craftsman who builds in one
 world and not in another; a source whose output varies by chance. Being a fixed
 giver is a property of the exercise pattern, not of an intensional potency: a
 one-way power whose exercise depends on a varying external patient is *not* a
-fixed giver, which is why the patientless condition is part of the reading. -/
+fixed giver, which is why the patientless condition is part of the reading.
+`FixedGiver` captures deterministic, patientless powers only: a chancy
+non-rational power is not a fixed giver, and nothing here covers it. -/
 def FixedGiver (F : CausalityFrame W B T R) (y : B) : Prop :=
   ∀ u v, F.history.ontic.ExistsAt u y → F.history.ontic.ExistsAt v y → GivingSameIn F y u v
 
@@ -93,8 +95,12 @@ def GivingVariesAt (F : CausalityFrame W B T R) (w : W) (y : B) : Prop :=
 
 /-- TWO-WAY giving profile, withholding form (extensional): `y` exists at `w`,
 gives being to some `x` at `w`, and at a world accessible from `w` where `y`
-also exists, does not give being to `x`. Θ.2's "capable of contrary effects"
-(giving `x` being and not giving it), read on world-relative exercise. Example:
+also exists, does not give being to `x`. An act-or-refrain exercise profile
+across worlds (Θ.5: with a rational potency it is "not necessary" to act); Θ.2's
+"capable of contrary effects" is an analogy only, since there both contraries
+are produced by exercise, while withholding is non-exercise (q.104 a.3 ad 3).
+Whether a power for an absence and this giving are one Θ.2-type potency is not
+typed: no type here represents one potency with two sides. Example:
 on the Thomist account, God giving a creature being and being "free not to
 continue their existence" (q.104 a.3 co., navigation). Non-examples: a fixed
 giver; a being that gives `x` being only in worlds where it alone exists (no
@@ -120,7 +126,12 @@ being contingent at `w` is absent. -/
 where the holder exists *and gives being otherwise than at `w`*. It strengthens
 P2′ (`906f5c39`): the exercise of a power for an outcome about existence shows
 in what the holder gives. It does not say whether the difference is a giving of
-something new (replacement) or a withholding. -/
+something new (replacement) or a withholding. Its added clause is the denial of
+`FixedGiver` restricted to one world: it carries exactly the anti-fixed-exercise
+content (law 1 is its direct instantiation). Its warrant is either the creator
+reading (`ActualAbsenceHoldersGiveEach`, law 5) or the principle that exercise
+over existence shows in giving, which excludes mediated or preventive
+exercise. -/
 def ActualAbsenceExerciseDiffers (F : CausalityFrame W B T R)
     (PowerFor : W → B → (W → Prop) → Prop) (concrete : B → Prop) (w : W) : Prop :=
   ∀ y, PowerFor w y (NoActualContingentConcreteIn F concrete w) →
@@ -339,6 +350,9 @@ def gOverC (y x : Bg) (_ : Bool) : Prop := y = .g ∧ x = .c
 /-- `g` has power over the esse of `c` and of `d`. -/
 def gOverCD (y x : Bg) (_ : Bool) : Prop := y = .g ∧ x ≠ .g
 
+/-- `g` has power over the esse of `d` only (the replacement it gives being). -/
+def gOverD (y x : Bg) (_ : Bool) : Prop := y = .g ∧ x = .d
+
 /-- No power over anything. -/
 def noOver (_ _ : Bg) (_ : Bool) : Prop := False
 
@@ -407,9 +421,10 @@ def vanCleveG : CausalityFrame V3 Bg Unit Bool := gFrame (fun _ _ => True) vcEx 
 2. With P1′, P2δ, P4′ and P5, not every being at `w` is a fixed giver.
 3. Collapse: a fixed giver existing at `w` and necessary at `w`, with factive
    giving, gives being at `w` only to beings necessary at `w`.
-4. Necessary non-rational sources: if every concrete being contingent at `w` is
-   given being at `w` by some fixed giver necessary at `w` (one or an
-   aggregate), with factive giving, no concrete being is contingent at `w`.
+4. Necessary fixed-output (deterministic) sources: if every concrete being
+   contingent at `w` is given being at `w` by some fixed giver necessary at `w`
+   (one or an aggregate), with factive giving, no concrete being is contingent
+   at `w`. A chancy necessary source is not a fixed giver and is not covered.
 5. Under the creator reading, P2′ gives P2δ: holders that give each actual
    contingent concretum being, factive giving, P2′ and P5 give P2δ.
 6. Withholding is two-way giving: `ActualAbsenceByWithholding` with P5 gives a
@@ -502,10 +517,16 @@ def TheistNonvacuity : Prop :=
 
 /-- Q1, collective without distributive (`replacementG`, actual world
 `false`): P1′, P2′, P2δ, P3′, P4′, P5 and factive giving hold; `g` is
-necessary with varying giving (it gives a replacement `d` at `true`); the
-holders-give-each premise, the transfer and its conclusion fail, and `g` is
-not a two-way giver in the withholding form. Also the omission model of the
-holders-give-each premise (argument 4) and of the transfer (argument 1). -/
+necessary with varying giving (it gives a replacement `d` at `true`) and has
+POWER_OVER_ESSE_1 over `d` (giving it being); the holders-give-each premise,
+the transfer and its conclusion fail, and `g` is not a two-way giver in the
+withholding form. Also the omission model of the holders-give-each premise
+(argument 4) and of the transfer (argument 1). The model adopts the thin
+reading of `PowerFor` (a chain whose outcome world satisfies `q`): on
+Aquinas's principles (q.104 a.3 ad 1, ad 3) `g`, which never acts on `c`,
+causes `c`'s absence neither directly nor indirectly. Formally the transfer
+fails because `PowerOver` is unconstrained; the replacement structure only
+makes that choice admissible. -/
 def CollectiveWithoutDistributive : Prop :=
   ActualAbsenceGrounded replacementG gPower allC false ∧
   ActualAbsenceInitiatorPresent replacementG gPower allC false ∧
@@ -516,8 +537,9 @@ def CollectiveWithoutDistributive : Prop :=
   GivenExists replacementG ∧
   NecessaryVaryingGiverWithActualAbsencePower replacementG gPower allC false ∧
   ¬ ActualAbsenceHoldersGiveEach replacementG gPower allC false ∧
-  ¬ ActualAbsencePowerIsPowerOverEsse replacementG gPower noOver allC false ∧
-  ¬ SomeHolderHasPowerOverEachActualContingent replacementG gPower noOver allC false ∧
+  PowerOverEsse replacementG gOverD .g .d ∧
+  ¬ ActualAbsencePowerIsPowerOverEsse replacementG gPower gOverD allC false ∧
+  ¬ SomeHolderHasPowerOverEachActualContingent replacementG gPower gOverD allC false ∧
   ¬ ActualAbsenceByWithholding replacementG gPower allC false ∧
   ¬ TwoWayGiverAt replacementG false .g
 
@@ -627,10 +649,13 @@ def Omissions : Prop :=
 
 /-- Rivals at matching scope (actual world `false`).
 1. Inert necessary being (`inertG`, no powers): `g` exists at every world and
-   is a fixed giver; P4′ and P5 hold; P1′ fails.
-2. Necessary non-rational source (`necessitarianG`): `g` necessary, a fixed
-   giver, factive giving, giving `c` being at every world; P5 fails (`c` is
-   necessary too) while P4′ holds vacuously.
+   is a fixed giver; P4′ and P5 hold; P1′ fails here because the model gives
+   no powers (`noPower`); in general an inert holder is excluded only given
+   P2δ (law 1): Omission 1 has an inert `g` holding P1′'s power.
+2. Necessary fixed-output (deterministic) source (`necessitarianG`): `g`
+   necessary, a fixed giver, factive giving, giving `c` being at every world;
+   P5 fails (`c` is necessary too) while P4′ holds vacuously (the frame has
+   an accessible world). A chancy necessary source is not covered.
 3. Positive-outcome powers only (`theistG` with `positivePower`): `g` is a
    necessary two-way giver; P4′, P5 and symmetric access hold; P1′ fails (no
    power for the joint absence, which no giving produces); every premise of

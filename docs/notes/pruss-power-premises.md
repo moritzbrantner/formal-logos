@@ -63,7 +63,7 @@ relation is defined from frame fields and the existing primitives `PowerFor`
 | gives being in a world | `GivesTo F v y x` | `62dfa893` | `∃ t, F.GivesAt v y x t`: in world `v`, `y` exercises causation of `x`'s being at some moment (frame primitive, DEF `158301bc`). Weaker than both CAUSE_OF_BEING senses (`88a8fba7`). World-relative exercise, unlike the tenseless `CausesIn`. |
 | one-way (fixed) giver | `FixedGiver F y` | `7bc1d667` | Wherever `y` exists, it gives being to the same beings. Θ.5's non-rational rule for a holder whose exercise needs no patient. |
 | varying giving | `GivingVariesAt F w y` | `bd4c434d` | `y` exists at `w` and gives being otherwise at an accessible world where it exists. |
-| two-way giver (withholding form) | `TwoWayGiverAt F w y` | `e006ddeb` | `y` gives `x` being at `w` and, existing at an accessible world, does not give it there. Θ.2's "capable of contrary effects", read on world-relative giving. |
+| two-way giver (withholding form) | `TwoWayGiverAt F w y` | `e006ddeb` | `y` gives `x` being at `w` and, existing at an accessible world, does not give it there. An act-or-refrain profile (Θ.5: with a rational potency it is "not necessary" to act); Θ.2's "contrary effects" is an analogy only. |
 
 **Reading step (stated, not attributed).** Θ.2 and Θ.5 speak of one potency
 for contraries, decided by desire or will. The types here are
@@ -77,11 +77,15 @@ totality's absence:
 
 - the *collective* reading is P1′ itself: one power for the joint
   proposition `q`;
-- the *distributive* reading is one of two:
+- the *distributive* reading is one of three, which must be kept apart:
   - *varying holders*: each member's possible absence is grounded in some
     being's power for that member's absence (`EachActualAbsenceGrounded`);
-  - *one holder*: POWER_OVER_ESSE_1 over each member
-    (`SomeHolderHasPowerOverEachActualContingent`).
+  - *one present holder* (law 8): one concrete being at `w` that, for each
+    member, exists at an accessible world lacking that member;
+  - *one holder with power over each esse*: POWER_OVER_ESSE_1 over each member
+    (`SomeHolderHasPowerOverEachActualContingent`, `eb41bc9a`). This is the
+    transfer's target. It gives necessity only at a concrete foundational
+    being, through `c5da5e62` (law 9, `2cc7e260`), not through law 8.
 - the transfer bridge is the analogue of C1's premise B (whole to members).
 
 No new disambiguation record was created; `197f0097` is linked from the
@@ -105,8 +109,8 @@ premises:
 | Result | Theorem | Premises ⊢ conclusion |
 |---|---|---|
 | `a47906a5` | `transferGivesPowerOverEachActualContingent` | P1′, P4′, P5, transfer `f0ac2f76` ⊢ `eb41bc9a` (one holder of the power for `q` with POWER_OVER_ESSE_1 over each actual contingent concretum). Constructive. |
-| `4ce57995` | `actualAbsenceHolderIsNecessaryVaryingGiver` | EM, P1′, P2δ, P3′, P4′, P5 ⊢ `256a5e0a` (a necessary concrete holder of the power for `q` whose giving varies). Composes `42da6b2d`. |
-| `b1f6a376` | `varyingGiverGivesNecessaryPowerHolder` | `256a5e0a` ⊢ `b90ee2de` (assembly). |
+| `4ce57995` | `actualAbsenceHolderIsNecessaryVaryingGiver` | EM, P1′, P2δ, P3′, P4′, P5 ⊢ `256a5e0a` (a necessary concrete holder of the power for `q` whose giving varies). Composes `42da6b2d`. Only the necessity is derived; the varying conjunct is P2δ's own clause applied to `42da6b2d`'s witness. |
+| `b1f6a376` | `varyingGiverGivesNecessaryPowerHolder` | `256a5e0a` ⊢ `b90ee2de` (assembly). Its bundle is `42da6b2d`'s with P2′ strengthened to P2δ, so it adds no warrant for `b90ee2de`. |
 | `56024b0c` | `actualAbsenceRealizedByWithholding` | P1′, P2′, P4′, P5, holders give each `9f7b1778`, factive giving `3ef41442` ⊢ `b8a2a9e1` (the joint absence realized by the holder's withholding being from each). Constructive. |
 | `84cc194c` | `withholdingGivesPowerOverEachActualContingent` | `b8a2a9e1`, withheld-giving bridge `d1593e5c` ⊢ `eb41bc9a`. |
 | `2cc7e260` | `powerOverEachGivesNecessaryConcrete` | EM, `eb41bc9a`, concrete foundational being `c5da5e62` ⊢ `b19ffd92`. |
@@ -116,8 +120,29 @@ premises:
 
 **Sense bridge.** `6eb4d324` declares NECESSARY_8 → NECESSARY_2 with role
 conclusion, the pattern of the #1889 projections. The symmetric-access
-statement links the Kripke-box definition `153fcebf` (NECESSARY_8). The
-conclusion's `NecessaryAt` is the box of existence over that same frame.
+statement links the Kripke-box definition `153fcebf` (NECESSARY_8). What holds
+is a definitional coincidence: `NecessaryAt m w x` is `Box m.frame (ExistsAt · x)
+w` on the same `Frame`. Symmetry is a frame property, and no box occurs in the
+proof. As in `specs/logical-necessity-profiles.toml`, none of `153fcebf`'s
+sourced KB-embedding commitments (the possibilist constant domain) is imported.
+`b19ffd92` does not presuppose symmetry, so this support for it holds only on
+symmetric frames.
+
+**P2δ carries the anti-fixed-exercise content.** Its added clause
+`ExistsAt v y ∧ ¬ GivingSameIn F y w v` is the denial of `FixedGiver`
+restricted to one world. Law 1 unfolds it in one step, and `4ce57995`'s
+varying conjunct is its direct instantiation. The one-way exclusion is
+therefore assumed through P2δ, not tested: without P2δ an inert fixed
+necessary `g` holds P1′'s power and satisfies P2′ (Omission 1). P2δ's warrant
+is one of two:
+
+- the creator reading `9f7b1778`, from which law 5 derives it with factive
+  giving. That reading is much stronger and is a dependency shared with the
+  second support of `eb41bc9a` and the PGP link;
+- the prima facie principle that exercise over existence shows in giving.
+  This excludes exercise mediated through other frame fields (prevention, or
+  motion through `MovesIn`/`CausesIn`), and preventive powers for an absence
+  are ordinary.
 
 ### Laws (`Model.Laws`)
 
@@ -126,10 +151,11 @@ conclusion's `NecessaryAt` is the box of existence over that same frame.
 2. P1′, P2δ, P4′ and P5 exclude that every being at `w` is a fixed giver.
 3. **Collapse.** A fixed giver necessary at `w`, with factive giving, gives
    being at `w` only to beings necessary at `w`.
-4. **Necessary non-rational sources.** Suppose every concrete being contingent
-   at `w` is given being at `w` by some necessary fixed giver, whether one
-   source or an aggregate. With factive giving, no concrete being is then
-   contingent at `w`: P5 fails.
+4. **Necessary fixed-output (deterministic) sources.** Suppose every concrete
+   being contingent at `w` is given being at `w` by some necessary fixed giver,
+   whether one source or an aggregate. With factive giving, no concrete being
+   is then contingent at `w`: P5 fails. A chancy necessary source is not a
+   fixed giver and is not covered.
 5. Under the creator reading `9f7b1778`, with factive giving, P2′ and P5 give
    P2δ. Under that reading P2δ is not an extra assumption.
 6. Withholding (`b8a2a9e1`) with P5 gives a two-way giver that is not a fixed
@@ -149,12 +175,12 @@ conclusion's `NecessaryAt` is the box of existence over that same frame.
 | Model | Holds | Fails | Shows | Admissible on |
 |---|---|---|---|---|
 | `TheistNonvacuity` (`theistG`) | every premise of every argument; every conclusion; `g` a two-way giver, not fixed | — | nonvacuity of all nine arguments | classical theism (creation and conservation) |
-| `CollectiveWithoutDistributive` (`replacementG`) | P1′, P2′, P2δ, P3′, P4′, P5, factive giving; `g` necessary with varying giving (it gives a replacement `d`) | holders-give-each; transfer; `eb41bc9a`; withholding; two-way (withholding form) | the transfer is not derivable from the collective power; omission models of the transfer (`a47906a5`) and of holders-give-each (`56024b0c`) | a replacement reading: the actual `c` is uncaused, and the holder's chain issues in a world with `d` instead (structural; see §3) |
-| `DistributiveWithoutCollective` (`vanCleveG`) | a necessary `g` with POWER_OVER_ESSE_1 over each of two actual contingents, each contingent | P4′; P2′ even for a holder of every power | power over each member's esse gives neither the joint possibility nor a power for it | — |
+| `CollectiveWithoutDistributive` (`replacementG`) | P1′, P2′, P2δ, P3′, P4′, P5, factive giving; `g` necessary with varying giving (it gives a replacement `d`) and POWER_OVER_ESSE_1 over `d` | holders-give-each; transfer; `eb41bc9a`; withholding; two-way (withholding form) | the transfer is not derivable from the collective power; omission models of the transfer (`a47906a5`) and of holders-give-each (`56024b0c`). Formally the transfer fails because `PowerOver` is unconstrained; the replacement structure only makes that choice admissible | the thin reading of `PowerFor` only: the actual `c` is uncaused, and the holder's chain issues in a world with `d` instead. Not the Thomist reading (§3) |
+| `DistributiveWithoutCollective` (`vanCleveG`) | a necessary `g` with POWER_OVER_ESSE_1 over each of two actual contingents, each contingent; with `gPower`, `g` also holds a power for `q` | P4′; P2′ for that power | power over each member's esse does not give the joint possibility: P4′ and initiator presence fail, though a power for `q` is held | — |
 | `MutualAnnihilators` (`mutualG`) | distributive grounding with varying holders (`c` for `d`'s absence and conversely), initiator presence, P4′, P5 | any necessary being; the collective P1′ | the varying-holder distributive reading does not support the route | a world of mutually destructible contingents |
 | `Omissions` 1–8 | all premises but one | that premise; the conclusion | P2δ (`4ce57995`), factive giving (`56024b0c`), the withheld-giving bridge (`84cc194c`), and symmetric access, grounding at the absence worlds, initiator presence there, concreteness there and P4′ (`6eb4d324`) are each needed | — |
-| `Rivals` 1 (`inertG`) | a necessary fixed (inert) `g`; P4′, P5 | P1′ | the inert necessary being | non-power modality with an idle necessary being |
-| `Rivals` 2 (`necessitarianG`) | a necessary fixed `g` giving `c` being everywhere; factive giving; P4′ (vacuously) | P5 | the necessary non-rational source | Spinoza-type necessitarianism |
+| `Rivals` 1 (`inertG`) | a necessary fixed (inert) `g`; P4′, P5 | P1′, by the model's choice of no powers (`noPower`) | the inert necessary being. In general it is excluded only given P2δ (law 1): Omission 1 has an inert `g` holding P1′'s power | non-power modality with an idle necessary being |
+| `Rivals` 2 (`necessitarianG`) | a necessary fixed `g` giving `c` being everywhere; factive giving; P4′ (vacuously, since the frame has an accessible world) | P5 | the necessary fixed-output (deterministic) source; a chancy necessary source is not covered | Spinoza-type necessitarianism |
 | `Rivals` 3 (`theistG` with positive-outcome powers) | a necessary two-way `g`; P4′, P5, symmetric access; every premise and the conclusion of Pruss's direction | P1′ | positive-outcome-only powers reject P1′ but ground Pruss's direction | a powers theorist who denies powers for negative states |
 
 ## 3. Question 1: the transfer bridge
@@ -162,11 +188,14 @@ conclusion's `NecessaryAt` is the box of existence over that same frame.
 **Which reading P1′ needs: the collective one.** Distributive grounding with
 varying holders, each member's absence grounded in another actual being's
 power, holds in `MutualAnnihilators`, where no being is necessary. The
-one-holder distributive reading suffices without any joint-absence premise
+one-present-holder reading (one being present, for each member, at an
+accessible world lacking it) suffices without any joint-absence premise
 (law 8). This is C1's lesson again: the substantive content is that *one*
 being is present wherever each actual contingent is absent. The readings only
-shift which premise carries that content (P1′ with P4′, or the one-holder
-clause). Pruss's own "(perhaps a non-unitary cause which is an aggregate of
+shift which premise carries that content (P1′ with P4′, or the
+one-present-holder clause). The one-holder POWER_OVER_ESSE_1 reading
+(`eb41bc9a`) is different: it gives necessity only at a concrete foundational
+being (law 9). Pruss's own "(perhaps a non-unitary cause which is an aggregate of
 causes)" is not modelled: the holder `y` is one candidate (gap 4).
 
 **Which reading the transfer needs: the distributive one**, one holder with
@@ -176,11 +205,28 @@ POWER_OVER_ESSE_1 over each member.
 
 - `CollectiveWithoutDistributive` satisfies every premise of the route and P2δ,
   yet the holder has no power over the actual contingent's esse.
-- Mechanism: `PowerFor w y q` asks only for a chain whose outcome world
-  satisfies `q`. A chain that produces a replacement array satisfies it while
-  the actual contingent's absence there is not the holder's effect. This
-  failure has independent support in the theist's own principle: "non-existence
-  has no direct cause" (q.104 a.3 ad 1).
+- Formally the transfer fails because `PowerOver` is unconstrained. The
+  replacement structure only makes that choice admissible: the holder has
+  POWER_OVER_ESSE_1 over the replacement `d` it gives being, and none over the
+  actual `c`.
+- **Which reading of `PowerFor` the model adopts.** `replacementG` (and
+  Omission 1) adopt the *thin* reading: a chain initiated by the holder whose
+  outcome world satisfies `q`. A chain that produces a replacement array
+  satisfies it.
+- **What ad 1 shows, and what it does not.** Ad 1 shows that the absence is
+  never the holder's *direct* effect ("non-existence has no direct cause").
+  But ad 1 continues: "indirectly God can be the cause of things being reduced
+  to non-existence, by withdrawing His action therefrom", and ad 3 makes
+  annihilation "a mere cessation of His action". So for Aquinas the only way
+  to cause an absence is to withdraw a giving: the creator/withholding
+  reading. In `replacementG`, `g` never acts on `c`, so by ad 1 it causes
+  `c`'s absence neither directly nor indirectly. Under Aquinas's principles
+  the replacement holder has a power for `q` only on the thin reading. Ad 1
+  therefore shows that the transfer needs a stated bridge; it does not support
+  replacement as the Thomist reading.
+- The note of the governing `PowerFor` DEF `bf7eddca` was amended to match:
+  replacement is a positive-production example on the thin reading, and the
+  claim that only withholding is available holds on the causal reading only.
 - The converse also fails (`DistributiveWithoutCollective`): power over each
   member's esse does not give the joint possibility.
 
@@ -212,26 +258,36 @@ does not supply independent corroboration of PGP.
 **The hypothesis, tested.** A one-way power cannot ground P1′; the power must
 be two-way, or the abstention outcome must be grounded otherwise.
 
-- **Confirmed under explicit premises.**
+- **Confirmed, conditionally on P2δ's warrant.**
   - With P2δ, no fixed (one-way) giver holds P1′'s power (law 1). P1′, P2δ, P4′
-    and P5 exclude a world of fixed givers only (law 2).
+    and P5 exclude a world of fixed givers only (law 2). These are direct
+    instantiations of P2δ's anti-fixed clause (§2), not independent tests:
+    without P2δ, an inert fixed giver holds P1′'s power (Omission 1).
   - The holder is a necessary concrete being whose giving varies across
-    accessible worlds where it exists (`4ce57995` → `256a5e0a`).
-  - Under the creator reading P2δ is derivable from P2′ (law 5). The joint
+    accessible worlds where it exists (`4ce57995` → `256a5e0a`). Only the
+    necessity is derived; the variation is P2δ's clause.
+  - P2δ's warrant is either the creator reading or the principle that exercise
+    over existence shows in giving (§2). Under the creator reading P2δ is
+    derivable from P2′ (law 5). The joint
     absence is then realized by withholding (`56024b0c`). The holder actually
     gives each actual contingent being at `w` and withholds it at the absence
     world: a two-way giver in the withholding form (law 6).
   - This matches the sources' structure, read as navigation:
-    - Θ.2 places the privative contrary inside the *rational* power ("by
-      denial and removal");
+    - Θ.5: with a rational potency it is "not necessary" to act, which is the
+      act-or-refrain structure;
     - q.104 a.3 ad 3 makes annihilation "a mere cessation" of action, not an
       action;
     - the respondeo says a giver from natural necessity "could not annihilate
       anything".
-  - So P1′'s power, if real, is best read as the **privative side of a two-way
-    power whose positive side is exercised at `w`**. It is not a separate power
-    whose exercise produces non-being, which would be a one-way power for a
-    negative outcome.
+    - Θ.2's "contrary effects" is an analogy only: there both contraries are
+      produced by exercise ("the scientific man produces both the contrary
+      effects"), whereas withholding is non-exercise.
+  - So, under these premises, **the holder's giving has a two-way
+    (withholding) exercise profile**. Whether the power for `q` and the giving
+    are one Θ.2-type potency is untyped (gap 5). The batch does not represent
+    a separate power whose exercise produces non-being; it shows that, under
+    the creator reading, the joint absence is realized by non-exercise of a
+    giving that is exercised at `w`.
 - **Not confirmed.**
   - *Rational* (choice-decided). Varying or two-way giving is satisfied equally
     by chance and by a varying external condition. Θ.5's "desire or will" is
@@ -240,19 +296,24 @@ be two-way, or the abstention outcome must be grounded otherwise.
     necessary givers. Law 4 rules out every fixed necessary source, or
     aggregate of them, that gives all actual contingents being.
 - **One part of the hypothesis is false as stated.** "Not a positive
-  outcome" is not what excludes one-way powers. The replacement model has a
-  holder whose power for `q` is realized by a positive giving at the absence
-  world. What excludes a one-way holder is that its exercise is fixed by its
-  existence (Θ.5 with no patient), not the polarity of the outcome.
+  outcome" is not what excludes one-way powers. On the thin reading of
+  `PowerFor`, the replacement model has a holder whose power for `q` is
+  realized by a positive giving at the absence world (on the causal, Thomist
+  reading it is not a power for `q` at all, §3). What excludes a one-way
+  holder, given P2δ, is that its exercise is fixed by its existence (Θ.5 with
+  no patient), not the polarity of the outcome.
 
 **Modal collapse, stated exactly.** If a holder exists necessarily and its
 exercise is fixed (one-way), then everything it gives being at `w` exists at
 every accessible world (law 3, with factive giving). If it, or an aggregate of
 such holders, gives being to every actual contingent concretum, P5 fails
 (law 4; `Rivals` 2). The joint-absence possibility P4′ is then not lost: it
-holds vacuously, because nothing concrete is contingent. What is lost is
-contingency itself. The brief's "P4′ fails" is corrected here: P5 fails, and
-P4′ becomes idle.
+holds vacuously, because nothing concrete is contingent, provided some world
+is accessible from `w` (seriality at `w`; true in `necessitarianG`, not in
+general). What is lost is contingency itself. The brief's "P4′ fails" is
+corrected here: P5 fails, and P4′ becomes idle. Laws 3–4 cover necessary
+fixed-output (deterministic) sources only; a chancy necessary source is not a
+fixed giver.
 
 This is the frame/`GivesAt` counterpart of #555's `BeingCarriesAct` collapse
 and #462's `fixedEffects`. The varying-giving conclusion is extensional: it
@@ -264,15 +325,18 @@ does not decide whether an intrinsically invariant act can have varying
 All rivals concern the same proposition `q` at the same frame and world.
 
 1. **Inert necessary being** (`Rivals` 1).
-   - P1′ fails: an inert being is a fixed giver, and by law 1 no fixed giver
-     holds a P2δ-power for `q`.
+   - P1′ fails *given P2δ*: an inert being is a fixed giver, and by law 1 no
+     fixed giver holds a P2δ-power for `q`. Without P2δ an inert `g` can hold
+     P1′'s power (Omission 1). The model `inertG` gets the failure from its
+     choice of no powers (`noPower`).
    - Price: `q` (P4′) must be grounded by a non-power modal theory. This is
      the #1889 "too few potentialities" crux. No new discriminating evidence
      arises here.
-2. **Necessary non-rational source with necessary output** (`Rivals` 2,
-   laws 3–4).
+2. **Necessary fixed-output (deterministic) source** (`Rivals` 2, laws 3–4).
    - P5 fails if the source gives every actual contingent being. P4′ holds
-     vacuously.
+     vacuously given an accessible world.
+   - A chancy necessary non-rational source (Pruss's "non-deterministically
+     produces") is not a fixed giver and is not covered by laws 3–4.
    - The conflict is with P5 (`c76b6e2c`), the contingency of some actual
      concretum. A necessitarian who denies P5 is consistent at this scope.
    - Its standing is lowered relative to any account that keeps P5. It is not
@@ -316,25 +380,34 @@ to P3′ or to P4′. The omission models show only that each premise is needed.
 
 ## 6. Provisional judgment
 
-**What is supported.** Granting P1′ in its collective form, any of the
-following makes the holder a necessary being whose giving varies across the
-worlds where it exists:
+**What is supported, and on what condition.** Grant EM, P1′ in its collective
+form, P3′, P4′ and P5. Then either of the following makes the holder a
+necessary being whose giving varies across the worlds where it exists:
 
-- the minimal exercise condition P2δ;
-- or the creator reading with factive giving.
+- P2δ, warranted by the prima facie principle that exercise over existence
+  shows in giving (which excludes mediated or preventive exercise);
+- or P2′ with the creator reading `9f7b1778` and factive giving (law 5), a
+  dependency shared with the PGP link.
 
-The holder is not a one-way source. Its power for the joint absence is the
-privative side of a two-way power exercised at `w`.
+Under the creator branch, the holder's giving has a two-way (withholding)
+exercise profile (law 6). Whether the power for `q` and the giving are one
+Θ.2-type potency is untyped (gap 5).
 
-This is moderately supported. The inferences are verified. P2δ is weak and,
-under the creator reading, derivable. The reading agrees with Θ.2, Θ.5 and
-q.104 a.3 as read. It is a horizontal link to stage two: necessary being with
+The judgment is **conditional on one of these two warrants for P2δ**. P2δ is
+not weak: it carries exactly the anti-fixed-exercise content, so the
+conclusion that the holder is not a one-way source is only as strong as its
+warrant. On that condition, the inferences are verified and the profile
+agrees with Θ.5 (act or refrain) and q.104 a.3 as read; Θ.2 is an analogy.
+It is a **candidate input** to stage two (plan, §7): a necessary being with
 contingent giving.
 
 **What is not supported.**
 
-- The transfer as a bare collective-to-distributive passage: countermodel,
-  plus the theist's own "no direct cause of non-existence".
+- The transfer as a bare collective-to-distributive passage: the countermodel
+  on the thin reading of `PowerFor`; ad 1 shows the absence is never the
+  holder's direct effect, so a stated bridge is needed (it does not make
+  replacement the Thomist reading).
+- The P2δ-free claim that no one-way source can hold P1′'s power (Omission 1).
 - Choice rather than chance.
 - Independent corroboration of PGP. The link to C2 holds only via the creator
   reading.
@@ -380,7 +453,7 @@ contingent giving.
 
 | Record | Prose | Lean type | Check |
 |---|---|---|---|
-| `5cf75a6b` P2δ | a power for `q` issues where its holder exists and gives otherwise | `∀ y, PowerFor w y q → ∃ v, access w v ∧ q v ∧ ExistsAt v y ∧ ¬ GivingSameIn F y w v` | existential in `v`; universal over holders; difference unspecified |
+| `5cf75a6b` P2δ | a power for `q` issues where its holder exists and gives otherwise | `∀ y, PowerFor w y q → ∃ v, access w v ∧ q v ∧ ExistsAt v y ∧ ¬ GivingSameIn F y w v` | existential in `v`; universal over holders; difference unspecified. The clause `ExistsAt v y ∧ ¬ GivingSameIn` is `¬ FixedGiver` restricted to one world: it carries the anti-fixed-exercise content |
 | `3ef41442` | what is given being in a world exists there | `∀ v y x, GivesTo F v y x → ExistsAt v x` | all worlds, not only accessible ones |
 | `9f7b1778` | holders give each actual contingent concretum being at `w` | `∀ y, PowerFor w y q → ∀ x, concrete x → ContingentAt w x → GivesTo F w y x` | at `w` only; not sole giving |
 | `f0ac2f76` | transfer | `∀ y x, PowerFor w y q → concrete x → ContingentAt w x → PowerOverEsse F PowerOver y x` | POWER_OVER_ESSE_1 (broad) |
@@ -416,8 +489,12 @@ is attributed. No statement says "God", "will", "choice" or "freedom".
 
 ## 10. Cross-lane edits
 
-None to records owned by other lanes:
-
+- **`corpus/definitions/bf7eddca-8291-4744-8470-379babcd7781.json`** (the
+  `PowerFor` DEF of #1889): its note gained an amendment distinguishing the
+  thin reading (replacement is a positive-production example) from the causal
+  reading (only withholding counts, by q.104 a.3 ad 1 and ad 3). Definition
+  text and Lean declaration are unchanged. Made after the semantic challenge
+  (P1-2).
 - disambiguations `197f0097`, `f5dda05f` and `88a8fba7` are linked, not
   edited;
 - `corpus/definition-status.json` gained only this module's four entries;
