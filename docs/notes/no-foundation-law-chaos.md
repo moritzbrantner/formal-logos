@@ -223,3 +223,158 @@ mere law of state succession.
   the coordinator's CLI/CI. The live connection is an explicitly proposed
   bridge to the ultimate-ground and persistence explanatory comparison, not
   an already established root entailment.
+
+
+## Upstream recombination/closure checkpoint — 2026-11-23 (#1867)
+
+This section extends the earlier suffix-complete downstream results, without
+re-proving their forecast, law-projection or strict-norm consequences. The new
+certificate is \`NoFoundationLawChaos.RecombinationFork\` and its result record
+\`765d8679-3405-4276-be0f-f71b8248b863\`. Its scope is a fixed set
+\`allowed : Trace → Prop\` of **complete** Boolean histories, intersected with
+the same \`Cell (openFuture n) on n\` observed through \`n\`. The selector is
+not itself a grounded law, an explanation or metaphysical accessibility.
+
+### Argument graph and exact assumptions
+
+\`\`\`text
+U: no sufficient ultimate why-this-total-order explanation
+  X→ N: no essential/governing/modal transition constraints       [OPEN]
+  X→ R: local temporal recombination (same history selector)     [OPEN]
+  X→ C: prefix closure of the admitted infinite-history class   [OPEN]
+
+Population + R (OneStepRich) ──[Lean conditional]──> F (FiniteRich)
+F + C (PrefixClosed)        ──[Lean conditional]──> S (WholeSuffixRich)
+S                            ──[existing #1809/#1808]──> D:
+  no all-futures exact forecast/global future-excluding law;
+  an additional stance's OWN strict guarantee norm + positive
+  entitlement leads to its internal contradiction
+
+Whole-order explanation (#736/#735), ontology of law (#743), epistemic
+norms (#932/#737) and the God-existence stage (#143):
+  U-vs-necessary-ground comparisons remain relevant;
+  U→R, U→C, ontic actuality, access and same-source production are OPEN.
+\`\`\`
+
+Here **R** is precisely the \`OneStepRich\` *complete-history*
+extension property: given an already allowed history and a cutoff after the
+observed record, choose either next bit while keeping the previous finite
+segment; the resulting history must again be allowed by **the same selector**.
+This is not merely permission to describe a local patch independently of
+global boundary conditions. **F** allows a *different complete extension for
+each finite cutoff*. **C** asserts that one particular infinite candidate
+whose every finite prefix is individually extendable is itself allowed.
+C is not implied by recursively repeating R; the witnesses for each cutoff
+may be different. With a populated cell, R gives F by ordinary finite
+induction. F+C then gives S by applying C to each spliced target history. No
+ontic absence-of-foundation premise occurs in either Lean implication.
+
+### Three contrasting populated selectors
+
+| Fixed complete-history selector (all share the observed prefix) | R / F | C | S | What this establishes |
+| --- | --- | --- | --- | --- |
+| \`finiteSwitchClass\` = eventually constant (finitely many switches) | yes / yes | no | no | At every finite cutoff the proposed pattern can be realized and then stabilized; the single infinite alternating trace is excluded. A stage-rich nonempty rival does **not** admit all infinite law/outcome schedules. |
+| \`stableOnlyClass\` = just the always-true history | no / no | yes | no | A positive stable history with strict law restriction can be closed. Closure alone does not create choices. The separate \`Omissions\` certificate already permits this alongside \`¬ GroundedTotality brute\`. |
+| \`allHistoryClass\` = every Boolean trace | yes / yes | yes | yes | A coherent fully unrestricted comparator; the downstream chaos certificate applies only once this strong selection is warranted. |
+
+\`emptyHistoryClass\` satisfies R and C vacuously, but fails S, so actual
+**population** is an additional necessary hypothesis for deriving F from R.
+It is not a candidate view of our populated world. These selectors are
+structural mathematical controls, not independently certified metaphysically
+possible universes. The alternating trace is a complete, countably infinite
+path; it differs from every eventually constant path at arbitrarily late
+times. A single finite switch, a finite but unbounded number of switches, and
+an infinite sequence of switches must not be conflated.
+
+### Positive grounds and limits of the disputed transitions
+
+**Why might R hold?** A Humean recombination advocate can argue that local
+successor configurations have independent modal standing and that there are
+no cross-time constraints beyond the preserved past. This can make the
+one-step substitution plausible, especially for explicitly stipulated
+independent Boolean states. However, independence of intrinsic local qualities
+is *not yet* independence of entire governing law schedules. A single
+time-independent law, conservation invariant, global boundary value,
+dispositional essence or dependence relation can forbid the replacement
+even if the altered finite state-description is logically consistent.
+To apply R, the advocate must show that every chosen next outcome has an
+admissible **complete** continuation under the actual intended modality
+and retained background, rather than stipulate the conclusion.
+
+**Why might C hold?** If every admissibility exclusion has a *finite local
+witness*, then the complete-history class is closed under agreement on all
+finite prefixes: any excluded candidate has a finite prefix that excludes all
+its completions. For one fixed ordinary \`Profile\` with initial value and
+time-indexed pointwise transition constraints, a failure of \`Follows\` occurs
+either at time zero or at one finite successor pair. Thus its class of
+satisfying complete paths has this *mathematical* closure property. This is a
+positive structural rationale for C when **all** admissibility constraints
+really are of that form. It does not establish that ontic/metaphysical
+admissibility is exhausted by those local law equations.
+
+Conversely \`EventuallyConstant\` is an explicit *global tail requirement*:
+no fixed finite prefix identifies failure, because it can always be completed
+by a constant tail. It is a coherent extension policy with F but without C.
+This matters because metaphysical possibility may be sensitive to global
+histories, persistence, infinite actualization requirements or other
+non-finitely-witnessed restrictions, rather than only local safety constraints.
+First-order logical compactness or arbitrary mathematical limit-taking does
+not by itself prove the ontological admissibility of the **specific** limiting
+trace. A further modal closure or finite-witness account of all exclusions
+is the live philosophical premise. The model does **not** prove that
+eventually-constant global constraints are actually fundamental.
+
+**Law schedules versus state outcomes.** The old \`LawSwitch\` establishes
+that every Boolean history with the specified initial state has an *ex-post*
+deterministic copy/toggle schedule. That mathematical coding does not show
+that distinct schedules are independently physically available or can change
+the *fundamental* governing structure. To derive actual law arbitrariness,
+R/F/C must apply to a justified domain of law configurations with fixed
+bearers, dispositions, consistency conditions and time horizon—not merely
+to output bits. That application bridge remains OPEN.
+
+### Explanatory and epistemic alternatives at matching scope
+
+| Proposed stopping/explanation | Continued actual stability | Alternative histories / modal restrictions | Remaining why-question and epistemic test |
+| --- | --- | --- | --- |
+| Brute cosmic order | Its actual long-lived regularity can be taken primitive; no inconsistency follows. | The selector may be stable, finite-switching or otherwise restricted; no particular modal space follows from primitiveness alone. | Why this exact mosaic and its stability, rather than another? Successful induction may be defeasible and empirically warranted even if the whole-order why-question is left brute. |
+| Humean best system | Summarizes, predicts and unifies the actual mosaic by a comparatively simple informative system. | Best-system lawhood is not automatically a governing restriction on *metaphysically possible* alternative mosaics; the chosen recombination principle must be supplied. | Explains pattern-under-description and practical theory choice; whether it adequately explains *why this mosaic obtains* is the exact #735 contrast. |
+| Primitive governing law | Actual law may be a real modal constraint ruling out contrary transitions even without an explanation of its own actuality. | A fixed transition principle provides a genuine admissibility restriction. | Its instantiation, persistence, exceptions and epistemic detection require separate assessment; the primitive itself is an allowed stopping point. |
+| Dispositional/essential powers | Stable effects follow from the powers that concrete subjects possess. | Intrinsic identities and powers constrain which successors are coherent, potentially rebutting R at a definite local step. | The actuality and distribution of those powers and the composition of the whole order may remain open; test concrete causal conditions rather than an opaque label. |
+| Necessary impersonal ground | A necessary structure might constrain law space. | Necessity of the bearer alone does not select the actual contingent law unless the same relation is shown to do so. | Needs actual productive/grounding efficacy, explanatory adequacy and empirical access; a necessarily existing idle structure is no sufficient account. |
+| Classical-theistic source | A necessary intelligent source may provide a unified reason for the order and its continued applicability. | Sourcehood does **not** by itself show why this particular world/law is selected or exclude unexplained contingency in the source's choice. | Same source, actual causal activity, sufficient contrastive reason, law persistence and intelligibility to finite inquirers are separate OPEN burdens (#735/#737 and intellect/will routes). |
+
+The **provisional assessment** for the stated #1867 target is that the
+unqualified inference **U → S is not supported** and the already certified
+brute-stable control refutes it at the structural level. R has a substantive
+recombination rationale **only** for modalities satisfying genuine
+cross-time/local independence; C gains conditional rationale from
+finitely-witnessed exclusions, but does not follow from F or from U.
+Neither denial of final explanation nor Humeanism nor naturalism entails
+rejection of valid logic, objective epistemic norms or the distinction
+between sound and unsound reasoning. Under S, all-continuation **certainty**
+fails; under S plus a rival's *own* strict certainty norm plus positive
+entitlement there is an internal conflict (#1808). Scientific induction,
+probabilistic calibration, explanation conditional on laws and robust
+practical decisions remain possible without deductive guarantees; what
+warrants their real-world reliability must be evaluated separately (#737,
+#932, #1734). A bare U claim is not formally self-contradictory.
+
+**Next test (reopening condition):** obtain a concrete, independently
+defended ontology of laws and metaphysical recombination that both permits
+unrestricted successor substitution and shows *all* relevant global
+admissibility exclusions are finitely witnessed. Run the identical-history
+test on an actual law-configurations domain, not just on state traces. If
+that package survives, instantiate S and only then compose the existing
+#1809/#1808 epistemic consequences. Alternatively, identify a specific
+necessary or dispositional restriction that independently refutes R at the
+same fixed history and law identity; compare its explanatory actuality
+with the brute stable and necessary-ground options. The #735/#737
+God-existence-stage link is **comparative**; no new root route, premise
+discharge, anti-atheism theorem or stronger interpretation is claimed.
+
+**Verification and review tracking:** The new theorem's Challenge, Solution,
+spec, result/comparator record and this note are proposed on the #1867 PR.
+Mechanical Lean, binding, Comparator, NanoDa, computed frontier-diff and the
+independent final-outcome semantic challenge must be evaluated on the exact
+PR head before the theorem is called formally verified or reviewed.
