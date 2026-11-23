@@ -1,0 +1,12 @@
+{
+  "id": "d2d55c9b-9308-4b6b-b665-3380c4a99944",
+  "label": "An actual distinct esse-giver entails B2",
+  "argument_id": "a78a8169-1363-4a67-9c0a-b9345637fd02",
+  "challenge_module": "TruthCore.Results.Causality.ReceivedEsseActualGiver.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ReceivedEsseActualGiver.Solution",
+  "theorem": "TruthCore.Results.Causality.ReceivedEsseActualGiver.actualGiverImpliesB2",
+  "comparator_config": "results/d2d55c9b-9308-4b6b-b665-3380c4a99944/comparator.json",
+  "status": "solution-present",
+  "description": "Single-premise projection from stronger actual-giver endpoint to existing B2; downstream First Way preserves the same mover witness.",
+  "transcription": "assembly"
+}

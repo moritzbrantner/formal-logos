@@ -1,0 +1,16 @@
+{
+  "id": "530c170e-96c3-4936-9a95-566a3f835a90",
+  "label": "Maximal esse causality from the common uncaused cause, without CCR or composition (inference)",
+  "input_statement_ids": [
+    "9ff2814e-3ed6-4135-a574-12d11dcbbd19",
+    "457698e4-eb21-4561-ab32-eccbfb0a992e",
+    "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+    "cffad050-e86d-48b8-b04b-be47fcc1352d",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7",
+  "rule": "Coverage makes every uncaused actual bearer an identity bearer; uniqueness makes every actual bearer other than the common cause received, hence caused by it; causal ascent identifies any maximum with the common cause",
+  "meaning": "Non-transcription alternative support for the fixed-esse maximum principle consumed by the GOD_4 existence bundle. Compared with the existing route (common ancestry c35b1a5c, open composition b4987085, ascent cffad050, excluded middle), it uses neither CCR, population nor the composition premise: the common uncaused cause already causes each received bearer, and coverage, identity uniqueness and excluded middle make every other actual bearer received. The composition-type content is not removed but moved: premise B already requires the totality cause to cause members it reaches only through intermediaries. If nothing is received, uniqueness leaves at most one actual bearer and the principle holds vacuously. Causing stays mode-unspecified; no necessity, maximum existence or naming is concluded.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

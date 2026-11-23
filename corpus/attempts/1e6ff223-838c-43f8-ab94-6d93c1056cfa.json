@@ -1,0 +1,28 @@
+{
+  "id": "1e6ff223-838c-43f8-ab94-6d93c1056cfa",
+  "label": "C1: complete derivative systems, totality esse-cause route and the Hume-Edwards rival (#1724)",
+  "statement_ids": [
+    "20babef7-6ae7-4b48-b72a-f417e8e63136",
+    "05b15c98-4205-4406-a591-7935c1f9bc50",
+    "6c0282c0-6a0d-4403-83c5-a3aabcddd4e0",
+    "9ff2814e-3ed6-4135-a574-12d11dcbbd19",
+    "7b9bac8e-1637-4c41-b443-3ec89cd8477a",
+    "b62a64ab-ac11-569a-b8e8-de51a74b058f",
+    "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7",
+    "c35b1a5c-6405-449b-993b-8196b2457e08",
+    "b4987085-f7b0-4031-a795-364873d3c216"
+  ],
+  "date": "2026-11-23",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Issue #1724 (with #1616 scope): C1 = every complete nonempty system of actual derivative beings depends on something underived. Read as C1-bearer it is exactly CCR 20babef7 on the fixed q3a4 ActualEsseCause; C1-anything (an underived fact or law outside the bearer domain) is unformalized, leaves its dependence relation undefined and feeds no root route. A necessary impersonal totality, a universe that is itself an unreceived bearer and priority monism with an unreceived cosmos accept C1-bearer when their whole causes the members' esse, and contest later bridges; a regress or loop with no underived bearer denies it. Derivation attempts: (a) plural non-circularity restricted to complete pluralities restates CCR; without completeness it has the classical minimal-element form of well-foundedness (not formalized; WF implies CCR, 044974e5); no self-causation does not yield it. (b) New verified route, zero-axiom, Comparator/NanoDa: totality cause A 05b15c98 + whole to members B 6c0282c0 + no self-causation b62a64ab give one uncaused cause of every received bearer 9ff2814e (a89fd4df), which gives CCR (50dda707, strength relation 37885377) and, with 457698e4, a576300f, cffad050 and excluded middle, the GOD_4-bundle input da09703b without CCR, population or composition b4987085, whose content moves into B (0773fa6c). The primitive TotalityCause is eliminable (helper jointIffCommonCause): the content is the joint A-and-B claim that one actual bearer causes every received bearer; disambiguation 197f0097 separates the collective sense (A carries it; Hume-Edwards denies A) from the distributive sense 3770b94d (A trivial, B carries it). Seven controls (69ed38fb): joint model with infinite descent; Hume-Edwards regress where no predicate satisfies A and B and the distributive reading satisfies A and fails B; internal loop and idle explainer (B fails); self-causing totality cause; CCR without a common cause on given edges and with two independent roots and no self-causation. The joint claim with no self-causation is strictly stronger than C1 (plural foundations keep C1 and reject it), so the route adds a support option, not independent warrant for CCR. An independent semantic challenge and re-check confirmed the formal core; all prose and disambiguation findings were repaired. Canonical assessment: docs/notes/unique-feedback-explanation-311.md, C1 section.",
+  "evidence": [
+    "a89fd4df-f2f2-4ae5-b1c4-599e3f56dda3",
+    "50dda707-b3f0-4f5a-be10-5149236acf81",
+    "0773fa6c-5f6c-4fee-a6f0-11ae50578678",
+    "69ed38fb-f634-46f6-9d68-9a78ab7dfcd5",
+    "044974e5-fdaf-48c4-a8d6-74203ea1ccb8",
+    "c6d92415-0a65-4f5d-8d1d-147f1fe55592"
+  ],
+  "blocker": "No formal blocker; the remaining disagreement is explanatory. Whether actuality by reception is a grounded property (attributions must reach an unreceived giver, least fixed point) or can be satisfied coinductively by an endless or circular system of givers (greatest fixed point); equivalently, whether a complete totality of received actuality is caused in the collective sense or only distributively. The structural tests performed leave both answers consistent. Provisional judgment: C1-bearer at exhaustive per se productive supply scope accepted provisionally as a candidate primitive with recorded warrant, modestly favored, resting mainly on the mode-of-having judgment; the selection asymmetry counts only together with C2 (a source active in every admissible state); unrestricted tenseless mode-unspecified reading underdetermined (#1616 inertia and non-efficient modes, open bridge cb1cdea9); Hume-Edwards and bearerless-primitive-fact denials coherent and not refuted. Reopen for either side on: a positive argument that the collective sense does or does not apply to a complete totality beyond the bare Hume-Edwards denial; a positive account of how a bearerless fact makes bearers actual, or proof that an unreceived act faces the same objection; a same-relation counterexample to B or to no self-causation; a defended per se productive reading of every r-edge or a typed per se model without a source that does not simply deny the groundedness step; a typed mode-specific variant changing the regress control's interpretation."
+}

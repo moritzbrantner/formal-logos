@@ -1,0 +1,16 @@
+{
+  "id": "8bfc4ab7-cf80-467e-a594-71ee09c8cbaa",
+  "label": "Whatever is corruptible simply is in POTENCY_1 in some respect",
+  "paraphrase": "OPEN bridge, analyst formulation, attribution deferred: whatever can fail to be in substance (corruptible simply) is in POTENCY_1 (the adopted potency in the subject: able to be r and not in act of r) in at least one respect, any respect. Not at esse in particular: POTENCY_1 at esse is incompatible with actual existence (R2 law). The existing B4b (what can fail to be in substance is in POTENCY_1 as to esse) implies it (controls, law 8). It passes from simple corruptibility to a potency in some respect, the direction DISAMB-CORRUPTIBLE-SIMPLY-OR-IN-A-RESPECT does not forbid.",
+  "lean_declaration": "TruthCore.Causality.ContingencyGrounding.CorruptibleIsInSomePotency",
+  "definition_ids": [
+    "c8113f31-6208-5992-9ca4-712887a4594b",
+    "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "ed4f1f3f-d0c2-57b7-8ce7-52245db29d79",
+    "a13627bc-6b76-542d-9ca2-8c93487f685a",
+    "508617ab-cf24-5f3b-a387-64b3991359ec"
+  ]
+}

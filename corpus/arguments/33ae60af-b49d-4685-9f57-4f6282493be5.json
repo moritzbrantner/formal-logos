@@ -1,0 +1,18 @@
+{
+  "id": "33ae60af-b49d-4685-9f57-4f6282493be5",
+  "label": "Totality esse-cause route controls checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "7b9bac8e-1637-4c41-b443-3ec89cd8477a",
+  "inference_ids": [
+    "b6c88ab1-bb3f-4aee-9310-293b39b2723b"
+  ],
+  "meaning": "Non-transcription closed control bundle. The omission models deny, respectively, the joint claim of A and B for every predicate (Hume-Edwards regress, where the distributive reading satisfies A and fails B), whole to members (internal loop; idle actual explainer) and no self-causation (self-causing totality cause); the joint model shows the premise bundle is satisfiable with an infinite descending chain; the strictness models show CCR without a common uncaused cause, once with a single root on the given edges and once with two independent roots and a transitively closed relation. No model is asserted to be metaphysically possible; the regress relation carries no per se, present or power typing.",
+  "definition_ids": [
+    "23ae8d63-1351-4e7c-9ab1-ed85d9695b22",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "a95ed85b-627e-4dbe-9810-63b0b6ee1e02",
+    "e7aa4529-fe7a-4baf-929c-466cf15cb0c6"
+  ]
+}

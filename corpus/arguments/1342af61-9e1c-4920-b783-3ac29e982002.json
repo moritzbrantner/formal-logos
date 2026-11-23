@@ -1,0 +1,18 @@
+{
+  "id": "1342af61-9e1c-4920-b783-3ac29e982002",
+  "label": "Common uncaused esse-cause of received bearers implies rooted closed collections",
+  "premise_statement_ids": [
+    "9ff2814e-3ed6-4135-a574-12d11dcbbd19"
+  ],
+  "conclusion_statement_id": "20babef7-6ae7-4b48-b72a-f417e8e63136",
+  "inference_ids": [
+    "63bfd134-fb8e-4010-8a78-345723d83271"
+  ],
+  "meaning": "Sole-premise strength comparison on the exact actual esse-cause dictionary, constructive. Any member of a closed collection with no root is received, so the common cause causes it and closure brings the common cause in; being uncaused it is a root. Controls (6) and (7) witness strictness. With the previous argument this is a second support option for CCR, through premises A and B jointly; it adds no warrant beyond that of A, B and no self-causation.",
+  "definition_ids": [
+    "23ae8d63-1351-4e7c-9ab1-ed85d9695b22",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "e7aa4529-fe7a-4baf-929c-466cf15cb0c6"
+  ]
+}

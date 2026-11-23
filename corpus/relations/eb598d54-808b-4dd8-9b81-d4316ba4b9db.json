@@ -1,0 +1,12 @@
+{
+  "id": "eb598d54-808b-4dd8-9b81-d4316ba4b9db",
+  "label": "Actual distinct esse-giver strengthens B2",
+  "subject_kind": "statement",
+  "subject_id": "2f9b4acb-4bd5-4adb-91ac-8935f46f2e69",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "8a8d00e9-12b6-4cf0-b662-431cc4addd49",
+  "verification_result_id": "d2d55c9b-9308-4b6b-b665-3380c4a99944",
+  "strictness_result_id": "b8454bf9-e9c9-45e0-8860-d14f03c8e604",
+  "note": "The actual-giver endpoint implies B2 by the single-premise projection a78a8169 (drop the presence of the cause at w). Strict: in the absent-source frame B2 holds and the endpoint fails (presence controls). The exact difference (#1598 strength comparison) is not certified here. Neither statement is established by the relation."
+}

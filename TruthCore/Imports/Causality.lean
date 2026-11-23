@@ -56,6 +56,7 @@ public import TruthCore.Causality.ConcurrentCessation
 public import TruthCore.Causality.ConcurrentGivingPriorityBridge
 public import TruthCore.Causality.ConstitutiveConfiguration
 public import TruthCore.Causality.ConstitutiveNatureUniqueness
+public import TruthCore.Causality.ContingencyGrounding
 public import TruthCore.Causality.ContingentAncestry
 public import TruthCore.Causality.ContingentAtomicity
 public import TruthCore.Causality.ContingentBeingNode
@@ -205,6 +206,7 @@ public import TruthCore.Causality.PureIndiscernibility
 public import TruthCore.Causality.Q44EssentialSource
 public import TruthCore.Causality.Q44SourceSupply
 public import TruthCore.Causality.QuantitativeTransferPaths
+public import TruthCore.Causality.ReceivedEsseActualGiver
 public import TruthCore.Causality.ReceptionLimitation
 public import TruthCore.Causality.ReflexiveDependenceScope
 public import TruthCore.Causality.RegressReadings

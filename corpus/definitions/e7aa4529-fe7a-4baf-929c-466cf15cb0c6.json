@@ -1,0 +1,9 @@
+{
+  "id": "e7aa4529-fe7a-4baf-929c-466cf15cb0c6",
+  "label": "Received actual esse-bearer: in act as to esse, not uncaused in the fixed esse-cause order",
+  "term": "received actual esse-bearer",
+  "definition": "ReceivedActual p x holds when x is in act as to p.esse and it is not the case that no bearer c satisfies ActualEsseCause p c x. Under excluded middle this is: x is actual and some distinct actual bearer is a cause of its esse (received esse). The double-negative form is a constructive device only; it adds no modal, temporal or efficient content.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.AggregateEsseCause.ReceivedActual",
+  "note": "Analyst compound for #1724 (C1), attribution deferred. Dependencies: 8163859b-95b3-4dd2-8a69-541bd332f32f (actual cause of being, mode unspecified, tenseless), DEF-ESSE. It is relative to the selected relation: a bearer that is uncaused in this order may still have a non-esse cause, a temporal origin or a constitutive ground of another kind. Examples (formal only): every bearer of the Hume-Edwards regress control and both bearers of the two-bearer loop are received; the root none of the joint model is not. See docs/notes/unique-feedback-explanation-311.md, C1 section."
+}

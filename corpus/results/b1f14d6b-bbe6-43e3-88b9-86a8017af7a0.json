@@ -1,0 +1,12 @@
+{
+  "id": "b1f14d6b-bbe6-43e3-88b9-86a8017af7a0",
+  "label": "C2 strengthens its weak form without priority",
+  "argument_id": "2f5d2551-e3b0-418f-9a1a-ffc79a707d86",
+  "challenge_module": "TruthCore.Results.Causality.ContingencyGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ContingencyGrounding.Solution",
+  "theorem": "TruthCore.Results.Causality.ContingencyGrounding.c2ImpliesWeak",
+  "comparator_config": "results/b1f14d6b-bbe6-43e3-88b9-86a8017af7a0/comparator.json",
+  "status": "solution-present",
+  "description": "One-premise weakening from C2 to C2-minus (strength order). Establishes no premise.",
+  "transcription": "assembly"
+}
