@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.FiniteEsseDependence.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FiniteEsseDependence.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.FiniteEsseDependence.receivedEsseHasCause"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

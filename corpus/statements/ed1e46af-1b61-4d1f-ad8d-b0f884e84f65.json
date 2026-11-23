@@ -1,0 +1,9 @@
+{
+  "id": "ed1e46af-1b61-4d1f-ad8d-b0f884e84f65",
+  "label": "Two distinct effects of one source have exactly the same nonempty-path ancestors in the fixture",
+  "paraphrase": "The existing three-object production graph is well-founded with one source that directly gives rise to both distinct effects. The two effects have the same strict ancestors, while identity by all ancestors and pairwise comparability by strict ancestry both fail. This is a structural assignment. The model supplies no evidence that two actual concrete beings receive existence from precisely these sources.",
+  "lean_declaration": "TruthCore.Causality.AncestorIndividuation.SiblingControl",
+  "definition_ids": [
+    "1dff2d68-1348-5e7e-8ee7-248af63c8c53"
+  ]
+}
