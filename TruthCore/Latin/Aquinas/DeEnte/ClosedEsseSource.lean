@@ -161,9 +161,16 @@ def ClosedEsseControls : Prop :=
 
 
 /-! State-indexed interpretation test for actual holistic selection (#1724/#1616).
-Unlike SupplierStateFixed, these assignments change the profile's InAct guard.
-The state changes the extension of actual bearers without changing bearer
-identities, the causal dictionary or the represented essence/esse values. -/
+This is one structural instance of the #1878 borrowing framework, not a new
+kind of selection result: with `p := sourceFreeFiniteCircle` and the rule
+`circleRule`, that rule is an `EntirelyBorrowedRule` and `CircleStateFixed s`
+is `SupplierStateFixed circleRule s` with the biconditional flipped
+(`circleRuleEntirelyBorrowed`, `circleStateFixedIff`). What changes is only
+that each candidate assignment also sets the profile's `InAct` guard; this
+variation preserves the empty fixed point. Bearer identities, the causal
+dictionary and the represented essence/esse values stay fixed. A state is not
+a world and `CausesIn` is not varied, so #1878's open bridge (states as
+admissible total-existence alternatives) stays open. -/
 
 /-- The actual-bearer guard changes with a candidate configuration. Its
 cause assignments are still structural and mode-unspecified: this does not
@@ -172,23 +179,28 @@ def circleAtState (state : Bool → Prop) : Profile Bool Bool Unit :=
   { sourceFreeFiniteCircle with InAct := fun x _ => state x }
 
 /-- Every member of a candidate state has an actually admitted incoming
-same-respect esse-cause *in that state*. Unlike the old fixed-p rule, both
-the supplier's and recipient's actuality guards now vary with the state.
-Its reverse implication follows from the recipient InAct guard inside
+same-respect esse-cause *in that state*. Both the supplier's and the
+recipient's actuality guards vary with the state. Its reverse implication follows from the recipient InAct guard inside
 ActualEsseCause, not from an act of productive sufficiency. This is a
 reciprocal-support equation, not a sufficient productive act. -/
 def CircleStateFixed (state : Bool → Prop) : Prop :=
   ∀ x : Bool, state x ↔ ∃ c, ActualEsseCause (circleAtState state) c x
 
-/-- The holist's substantive global admission of a populated order.
-The nonemptiness conjunct is NOT inferred from the two causal arrows,
-their fixed-point equation or productive sufficiency; the holist must
-defend it as an ontic law, necessarily obtaining whole or primitive fact. -/
+/-- Encodes only fixedness and nonemptiness of a Boolean assignment: no
+whole, organization, law or modality is represented. It is the structural
+stand-in for a holist's global admission of a populated order. The
+nonemptiness conjunct is NOT inferred from the two causal arrows, their
+fixed-point equation or productive sufficiency; a holist would have to defend
+it as an ontic law, necessarily obtaining whole or primitive fact. -/
 def HolisticCircleAdmissible (state : Bool → Prop) : Prop :=
   CircleStateFixed state ∧ ∃ x, state x
 
-/-- A counterinterpretation to any unconditional inference from unique
-populated, globally admissible mutual supply to an r-uncaused bearer. The
+/-- A counterinterpretation, for the mode-unspecified r only, to an
+unconditional inference from a unique populated admitted state to an
+r-uncaused bearer. It is a two-element cycle, so it does not transfer to a
+per se productive reading of r: there `noPerSeCausalLoop` excludes it once
+the bridge from `ActualEsseCause` to strict productive priority is supplied
+(`StateIndexedTailControl` treats the acyclic case). The
 empty candidate is itself fixed but excluded by the OPEN global
 nonemptiness admission; every admitted state has both bearers active,
 and both have an incoming r-cause. It is a structural test with
@@ -199,5 +211,42 @@ def StateIndexedHolisticCircleControl : Prop :=
   (∀ state, HolisticCircleAdmissible state → ∀ x, state x) ∧
   (∀ x, ∃ c, ActualEsseCause (circleAtState (fun _ => True)) c x) ∧
   ¬ (∃ n : Bool, ∀ c, ¬ ActualEsseCause (circleAtState (fun _ => True)) c n)
+
+/-- The supply rule read off the state-indexed circle: the borrowing rule of
+the #1878 framework, instantiated on `sourceFreeFiniteCircle`. -/
+def circleRule (state : Bool → Prop) (x : Bool) : Prop :=
+  ∃ c, ActualEsseCause (circleAtState state) c x
+
+/-- Acyclic analogue on `Nat`: `n + 1` is the only same-r cause of `n`, and
+the state sets `InAct`. The edge relation is irreflexive and has no cycle, so
+`noPerSeCausalLoop` does not exclude it; it is still mode-unspecified and
+does not model productive exercise. -/
+def tailAtState (state : Nat → Prop) : Profile Nat Bool Unit where
+  InAct := fun x _ => state x
+  CausesIn := fun c x _ => c = x + 1
+  essenceOf := fun _ => false
+  esseOf := fun _ => true
+  essentialPrinciplesAloneSufficeForEsse := fun _ => False
+  esse := ()
+
+/-- The same reciprocal-support equation as `CircleStateFixed`, on `Nat`. -/
+def TailStateFixed (state : Nat → Prop) : Prop :=
+  ∀ x : Nat, state x ↔ ∃ c, ActualEsseCause (tailAtState state) c x
+
+/-- The tail `{n | k ≤ n}`. -/
+def tailFrom (k : Nat) : Nat → Prop := fun n => k ≤ n
+
+/-- On the acyclic analogue, fixedness plus nonemptiness does not select a
+unique admitted state: every tail is fixed, nonempty and has no r-root, and
+two tails differ. A holist who wants a unique admitted rootless state here
+needs an admission stronger than nonemptiness (for example maximality, i.e.
+the greatest fixed point, or a named member). Structural only; no productive
+power, world or modality is encoded. -/
+def StateIndexedTailControl : Prop :=
+  (∀ k, TailStateFixed (tailFrom k) ∧ ∃ x, tailFrom k x) ∧
+  (∀ k x, tailFrom k x → ∃ c, ActualEsseCause (tailAtState (tailFrom k)) c x) ∧
+  (∀ k, ¬ ∃ n, tailFrom k n ∧
+    ∀ c, ¬ ActualEsseCause (tailAtState (tailFrom k)) c n) ∧
+  tailFrom 0 0 ∧ ¬ tailFrom 1 0
 
 end TruthCore.Latin.Aquinas.DeEnte.ClosedEsseSource

@@ -2297,18 +2297,23 @@ over time rather than importing the world-free r as a sustaining cause.
 
 ## State-indexed actual holism: what global selection buys (#1724, #1616; 2026-11-23)
 
-**Scope and novelty.** This is the next discriminating test after merged #1871
-and the fixed-profile selection results of PR #1878. It retains the q.3 a.4
-`ActualEsseCause` direction and guards, but unlike `SupplierStateFixed`
-it makes **`InAct` covary with the candidate configuration**. It does not
-re-prove the Hume–Edwards/aggregate A-and-B results being integrated separately
-in PR #1882. The question is whether a *necessary or globally admitted actual
-whole*, with constituent actuality and an explicit whole-level constraint, can
-be source-free in the relevant r while still having a unique admitted actual
-configuration. The answer is **structurally yes**, with a decisive and
-independently named **nonempty-admission** commitment. Whether this
-configuration is genuinely metaphysically possible and productively
-self-sufficient remains **OPEN**.
+**Scope and novelty.** This test follows merged #1871 and the fixed-profile
+selection results of merged #1878. It retains the q.3 a.4 `ActualEsseCause`
+direction and guards and lets **`InAct` covary with a candidate Boolean
+assignment**. It is one structural instance of #1878's borrowing framework
+(see below), not a new kind of selection result. It does not re-prove the
+Hume–Edwards/aggregate A-and-B results of PR #1882. The question actually
+encoded is narrow: for a fixed Boolean assignment of two bearers, the
+state-indexed reciprocal-support equation and an added **nonemptiness**
+condition, does uniqueness among the admitted assignments force an r-root?
+No whole, organization, law or modality is encoded. For the mode-unspecified
+r the answer is **no**, and the nonemptiness condition does the selection
+work. The motivating question, whether a necessary or globally admitted
+actual whole can be source-free in r and still be uniquely selected, is not
+answered by this model and remains **OPEN**. At the per se productive scope
+the two-cycle is excluded once the priority bridge is supplied, and the
+holist's admission there must be stronger than nonemptiness (see "Scope of
+the control" below).
 
 ### The six things that must not be identified
 
@@ -2338,10 +2343,21 @@ within that restricted class**. (4) In the all-present profile each bearer
 has an actual incoming r-cause and there exists **no r-uncaused bearer**.
 The result is constructive on a two-element carrier and makes no appeal to
 well-foundedness, global intuition or a hidden positive seed. The prior
-control already showed that a fixed profile may contain a rootless two-cycle;
-the new content is an **explicit cross-profile actuality guard and
-restriction of admissible total configurations**, addressing the actual
-`p.InAct` limitation of #1878.
+control already showed that a fixed profile may contain a rootless two-cycle.
+
+**Relation to #1878.** The control is one structural instance of #1878's
+borrowing framework. With `p := sourceFreeFiniteCircle` and
+`circleRule s x := ∃ c, ActualEsseCause (circleAtState s) c x`,
+`circleRule` is an `EntirelyBorrowedRule p`, and `CircleStateFixed s` is
+`SupplierStateFixed circleRule s` with the biconditional flipped
+(`circleRuleEntirelyBorrowed`, `circleStateFixedIff`). Part (1) is therefore
+an instance of `emptyFixedOfEntirelyBorrowed`
+(`emptyCircleStateFixedOfBorrowing`): varying `InAct` with the state
+**preserves** the empty fixed point. Only the populated-uniqueness
+restriction defeats a root, and #1878's self-sweep already named that
+restriction. Here a state is not a world and `CausesIn` is not varied, so
+#1878's open bridge (reading states as admissible total-existence
+alternatives, with `CausesIn` varied as well) remains **open**.
 
 **What the theorem does NOT say.** The formal `state` is still not a
 metaphysically accessible world. `HolisticCircleAdmissible` introduces
@@ -2356,11 +2372,27 @@ this is a **structural counterinterpretation** to the inference
 Restoring exercised powers, a concrete organizing whole, full-ground
 sufficiency and cross-world identity is the live semantic challenge.
 
+**Scope of the control: mode-unspecified r only.** The witness is a
+two-element cycle. The row "Genuine mutual productive esse-causation" in the
+table below, and `noPerSeCausalLoop`, exclude it at the per se productive
+scope once the bridge from `ActualEsseCause` to strict productive priority is
+supplied. The acyclic analogue does not keep the nonempty-admission price.
+The unregistered, zero-axiom helper `StateIndexedTailControl` checks this: on
+`Nat` with `CausesIn c x := c = x + 1` and `InAct` set by the state, every
+tail `{n | k ≤ n}` satisfies the same reciprocal-support equation, is
+nonempty and has no r-root, and distinct tails differ. Nonemptiness
+therefore does not select a unique admitted state there. A holist who wants
+uniqueness needs a stronger admission, such as maximality (the greatest fixed
+point, all of `Nat`) or a named member. At the per se productive scope the
+holist's admission price is **OPEN and stronger than nonemptiness**. The tail
+control is still mode-unspecified: it shows the selection logic, not that a
+per se productive infinite order is possible.
+
 ### The strongest source-free holistic proposal
 
 Specify real constituents `u,v`, real capacities `P_u,P_v`, actual
 exercises `E_u,E_v`, a concrete organization `A`, and the obtaining of
-their whole `W). A respectable holist need not claim that `E_u` makes
+their whole `W`. A respectable holist need not claim that `E_u` makes
 `u` exist *before* `u` exists. Instead the proposed order is:
 
 1. `W` obtains as a metaphysically **necessary concrete whole**, or as
@@ -2418,7 +2450,11 @@ the same asymmetric, transitive productive-priority relation**.
 Existing `ExistentialSelfActualization` and
 `noPerSeCausalLoop` results capture the contradiction of circular
 *productive* priority on those explicit premises. They do not show
-that all constitutive feedback is impossible. Conversely, strict
+that all constitutive feedback is impossible. The operation presupposition
+is shared with the strongest rival, which keeps real derivative efficacy
+(#1882's C1 step 2). Given the bridge to strict productive priority it
+excludes only finite productive loops, so it does not by itself favor the
+source. Conversely, strict
 asymmetry and irreflexivity can exclude finite reciprocal production
 while leaving an infinite `n+1 → n` order: neither gives a root
 without a further actual-supply sufficiency condition.
@@ -2430,13 +2466,19 @@ well-foundedness of every cause. It is:
 > furnish as its entire productive input only the already actual
 > bearers whose actuality the cone is supposed to produce.
 
-This has positive support from the instrument-versus-absolute-being
-distinction in *ST* I q.45 a.5, with the important restriction in
-*ST* I q.104 a.2 that created causes can really preserve. The De ente
-received/unreceived esse distinction supplies the candidate
-mode-of-having explanation for the source. But applying this
-principle to **every** supplier-closed `ActualEsseCause` cone is
-still OPEN: it must include every relevant productive supplier,
+Its positive support is the groundedness, or mode-of-having, judgment on
+received actuality (#1882's C1 step 4): an attribution "has actuality by
+reception" is satisfied only if the givings reach a giver whose actuality
+is not received. This is the complete-cone principle itself, held as a
+direct conceptual judgment rather than derived from a further premise. The
+instrument-versus-absolute-being distinction in *ST* I q.45 a.5 supports
+only the operation presupposition (C1 step 2: an instrument's operation
+presupposes its own received actuality), with the restriction in *ST* I
+q.104 a.2 that created causes can really preserve. The rival accepts both,
+so they do not discriminate. The De ente received/unreceived esse
+distinction supplies the candidate mode-of-having explanation for the
+source. Applying the principle collectively to **every** supplier-closed
+`ActualEsseCause` cone is still OPEN: it must include every relevant productive supplier,
 exclude merely exemplary/final causal roles, and justify the
 collective inference, not merely each member's presupposition.
 PR #1882's A/B totality-cause route makes a stronger *collective
@@ -2486,8 +2528,11 @@ The serious historical alternative has one persisting bearer `x`,
 actual earlier existence `E(x,t_0)`, a persistence law and absence
 of relevant destroyers. It can explain `E(x,t_1)` without a
 simultaneously giving distinct bearer at `t_1`. The positive
-law-based and transtemporal inertia options are recognized in
-[Schmid and Linford (2022), *The Metaphysics of Existential Inertia*](https://philpapers.org/rec/SCHTMO-124).
+law-based and transtemporal inertia options are analyst formulations here.
+The existential-inertia rival is articulated in Schmid's pinned reply
+(passage `SCHMID-INERTIA-REPLY-3-ARTICLE`) and analysed in
+[sustaining-vs-existential-inertia.md](sustaining-vs-existential-inertia.md);
+this section does not attribute those specific variants to that passage.
 No theorem here converts `t_0,t_1` to the Kripke-world parameter of
 `cb1cdea9`; `ActualEsseCause` remains world-free. In a
 beginningless history, the past-law explanation may have no first
@@ -2509,11 +2554,14 @@ flowchart TD
   HN --> HL["OPEN: necessary modal admissibility + existential import"]
   HB --> HE["Local constitution; ultimate W fact remains primitive"]
   S --> SP["OPEN: intrinsic sufficiency + real productive source-to-member bridge"]
-  FIX["State-indexed actual r: empty and full fixed"] --> POP["Add nonempty admission"]
+  FIX["State-indexed r circle (instance of #1878 borrowing): empty and full fixed"] --> POP["Add nonempty admission"]
   POP --> UNIQUE["Only one admitted state, all members r-caused"]
-  UNIQUE --> LIMIT["Structural counterinterpretation; NOT metaphysical production"]
-  PER["Exercise presupposes actual bearer + productive priority"] --> NOLOOP["No finite productive self-cycle (existing)"]
+  UNIQUE --> LIMIT["Mode-unspecified r only; NOT metaphysical production"]
+  TAIL["Acyclic Nat tail analogue"] --> NOSEL["Nonemptiness does not select; stronger admission OPEN"]
+  PER["Exercise presupposes actual bearer (shared with rival) + priority bridge"] --> NOLOOP["No finite productive self-cycle (existing)"]
   NOLOOP --> OPEN["Infinite source-free ancestry still open"]
+  NOLOOP --> LIMIT
+  GRD["Groundedness / mode-of-having judgment (C1 step 4)"] --> CCR
   SP --> CCR["OPEN: every complete local r supplier cone has a root / 20babef7"]
   CCR --> COMMON["Existing c6d92415 / c35b1a5c plus coverage, uniqueness, population, EM"]
   COMMON --> ATTR["Separate SAME-witness necessary/pure-act/simplicity/GOD_4 bridges"]
@@ -2523,37 +2571,69 @@ flowchart TD
 | Proposed account | Actuality primitive | Explains members? | Explains the whole? | Status against the same challenge |
 | --- | --- | --- | --- | --- |
 | Purely borrowed r-activation, no global admission | None beyond conditioned supplier activations | Conditionally, by inputs | Cannot uniquely force a populated solution among all states | **Conditional incompatibility** of unique population with empty-state admission (#1878); no metaphysical impossibility |
-| State-indexed, rootless globally selected circle | The populated-order admission itself | Formal reciprocal support only; productive exercise **not** checked | Only if admission has defended modal/ontic force | **Structurally consistent** control; productive holism unresolved |
+| State-indexed, rootless globally selected circle | The populated-order admission itself | Formal reciprocal support only; productive exercise **not** checked | Only if admission has defended modal/ontic force | **Structurally consistent** control for the mode-unspecified r; excluded at the per se productive scope given the priority bridge |
+| State-indexed, rootless acyclic tail (`StateIndexedTailControl`) | An admission stronger than nonemptiness (maximality or a named member) | Formal reciprocal support only | Only if that stronger admission has defended force | Nonemptiness **does not select**; the per se holist's admission price is **OPEN** |
 | Necessary whole / priority monism | Necessarily or fundamentally obtaining concrete W | Constitutive whole-to-part explanation | Potentially by necessary W, if existential import defensible | **Live**; if W is underived in the selected relation it may satisfy narrowed foundation |
 | Brute actual whole and collective constitution | Primitive whole-fact F | Yes, conditional on F and true full-ground sufficiency | F explicitly left primitive | **Coherent under proposal**, explanatorily incomplete under a demand to explain F; not thereby false |
 | Genuine mutual productive esse-causation | None, or global actuality fact | Conditional on forbidden/contested productive circle | Needs a theory of exercised reciprocal production | **Inconsistent under shared strict productive priority**, not under arbitrary r assignment |
-| Source-backed complete productive order | Intrinsically unreceived actuality of n | Yes, if true productive giving connects n to actual recipients | Offered via n's intrinsic sufficiency | **Conditionally favored** on the narrow per se/productive reading; CCR applicability still open |
+| Source-backed complete productive order | Intrinsically unreceived actuality of n | Yes, if true productive giving connects n to actual recipients | Offered via n's intrinsic sufficiency | **Modestly favored** on the narrow per se/productive reading, mainly on the groundedness (mode-of-having) judgment; its collective CCR application still open |
 | Existential inertia / beginningless law history | Earlier same-bearer actuality and law; possibly whole-history F | Yes for later persistence | Beginningless whole-history obtaining remains a distinct question | **Live** in its own temporal explanandum, not refuted by r-activation |
 
-**Cumulative provisional assessment and revision conditions.** The actual
-increment over #1878 is that the mathematical empty candidate *now
-really removes the actuality guards of the modelled bearers*, while
-a holistic law can nevertheless restrict the admitted models to
-a populated unique state with no r-root. This rebuts any claim that
-variation of `InAct` alone bridges from the fixed-point theorem to
-an underived source. The price of the new counterinterpretation is
-**explicit nonempty global admission**; a defender must explain
-whether that admission is merely a brute actual fact, a necessary
-concrete whole or a law with genuine existential import. There is
-no evidence here that it is independently productive.
+**Cumulative provisional assessment and revision conditions.** The
+increment over #1878 is modest. The control is one structural instance
+of #1878's borrowing framework in which the empty candidate also removes
+the modelled bearers' actuality guards. That variation preserves the
+empty fixed point, and only the populated-uniqueness restriction, already
+named in #1878's self-sweep, defeats a root. For the mode-unspecified r,
+the price of the rootless two-cycle is an **explicit nonempty global
+admission**. At the per se productive scope the cycle is excluded once the
+priority bridge is restored, and on the acyclic analogue nonemptiness does
+not select uniquely (`StateIndexedTailControl`). There the holist's
+admission price is **OPEN and stronger than nonemptiness** (maximality or a
+named member). A defender must still explain whether that admission is a
+brute actual fact, a necessary concrete whole or a law with existential
+import; nothing here shows that it is productive.
 
-The comparative case for an underived source therefore remains
-**modestly favorable under exhaustive, genuinely productive per se
-existential supply**, because a bearer-independent originating
-input explains conditioned exercises without requiring them to
-actualize their own prerequisites. But the new test makes its limit
-sharper: **a necessary/constitutively fundamental whole is not
-excluded merely by its lack of r-uncaused *members*.** Underived
-concrete whole actuality and underived source actuality must be
-assessed as competing metaphysical modes of stopping, with
-the same ultimate-explanation requirement. The unqualified,
-mode-unspecified `20babef7` remains **underdetermined** and
-the holistic alternative is **not refuted**.
+**Matched source-side commitment.** Selection is not free for the source
+theorist either. Under #1878, a seed-or-borrowed rule has a populated state
+unique among *all* states only if it activates some seed in the empty
+candidate state; otherwise nothing is active there and the empty state is
+fixed (a pencil reading of `SeedOrBorrowedRule`, whose borrowed disjunct
+needs an active supplier, and of `uniquePopulatedStateNeedsSeed`). So the
+source theorist needs a source active even where no supplier is active,
+together with the OPEN `hSeedActive` and `SeedIsActualEsseRoot` bridges.
+This is the "Selection" parity recorded in #1882's C1 section: the
+selection point discriminates foundation from regress only for a source
+active in every admissible state, a C2 commitment, and a merely contingent
+root restores parity. The holist pays a global admission; the source
+theorist pays an every-state-active source.
+
+The comparative case for an underived source remains **modestly favorable
+under exhaustive, genuinely productive per se existential supply**. The
+rationale is the groundedness, or mode-of-having, judgment on received
+actuality: a having that is wholly from another is satisfied only if the
+givings reach an unreceived giver (#1882's C1 step 4, the complete-cone
+principle). That judgment is a direct conceptual commitment, and its
+collective application to every supplier-complete cone is OPEN. The
+operation presupposition (an exercised power presupposes its actual
+bearer) is shared with the rival. Given the priority bridge it excludes
+only finite productive loops, so it does not by itself favor the source.
+
+**Where the whole and the source compete.** That depends on the holist
+variant. An unreceived whole `W` that r-supplies the members' esse is itself
+an underived r-bearer, so it satisfies CCR (`20babef7`; #1882's C1-bearer,
+which priority monism with an unreceived cosmos accepts). Its disagreement
+with the source theorist lies later in the graph: at source identification
+(`c6d92415` → `c35b1a5c`, with coverage, uniqueness and same-witness checks)
+and at necessity, pure actuality and the GOD_4 bridges. Only a `W` outside
+the r-bearer domain, #1882's bearerless variant (at most a C1-anything
+commitment), denies CCR. There the competition is at `20babef7` itself,
+between a bearerless primitive obtaining fact and an unreceived act. So **a
+necessary or constitutively fundamental whole is not excluded merely by its
+lack of r-uncaused *members***, but if it is itself an unreceived r-bearer it
+already concedes CCR. The unqualified, mode-unspecified `20babef7` remains
+**underdetermined**, and the bearerless holistic alternative is **not
+refuted**.
 
 Reopen specifically on: (i) a semantics and evidence for `W,A,P,E`
 that realizes full existential constitution while proving no
@@ -2573,12 +2653,15 @@ repeat no identical proof under a new label.
 control carries explicit state-varying `InAct`, the same
 `CausesIn` and essence/esse fields, nonempty admission,
 pointwise uniqueness only among admitted states, all-member
-r-coverage and no r-root. No source claim, statement, inference,
-registered result, definition, modal frame, evidence locator
-or ordinary result binding changes. It asserts no actual world,
-exercise, necessary structure or GOD_4 witness. Its Lean proof is
-an **unregistered helper** and must pass delivered-head CI.
-The synthesis is proposed pending independent semantic challenge.
+r-coverage and no r-root; its scope is the mode-unspecified r. The
+instance lemmas `circleRuleEntirelyBorrowed`, `circleStateFixedIff` and
+`emptyCircleStateFixedOfBorrowing` tie it to #1878's framework, and
+`StateIndexedTailControl` states the acyclic tail case. No source claim,
+statement, inference, registered result, definition, modal frame,
+evidence locator or ordinary result binding changes. It asserts no
+actual world, exercise, necessary structure or GOD_4 witness. Its Lean
+proofs are **unregistered helpers** (zero-axiom by `#print axioms`),
+checked by the kernel build and NanoDa, not audited by Comparator.
 Formal root premise effects are intended **none**; the computed
 frontier delta must be taken from the PR's actual CI, not inferred
 from this prose.
@@ -2592,7 +2675,8 @@ on `4baf9ad54f5862b7886090caedeafe51501da3ae`,
 alternatives **578 → 578** (0 added) and lowest expanded-route diagnostic
 cost **16 → 16**. This is a computed *no formal premise change*, not an
 inference of new warrant from counts. Both Comparator shards, corpus-and-lean
-and explorer completed successfully at that revision; full-library
+and explorer completed successfully at that revision; Comparator audits only
+registered results, not these unregistered helpers. Full-library
 verification is separately tracked by PR CI. PR #1878 has meanwhile merged
 at `68619469fb7aba91f0818b3f69e52fdb7eb18624`.
 
@@ -2600,6 +2684,18 @@ at `68619469fb7aba91f0818b3f69e52fdb7eb18624`.
 owns the #1724 state-indexed holistic-selection interpretation and its
 explicit remaining test; it does **not** displace the #1729 source-identity
 assessment in attempt `9f771edb`. This is a standard corpus attempt,
-not a duplicate statement, graph path or tracker. Until the final
-semantic challenge is dispositioned, the scoped assessment remains
-`unreviewed / unpublished`.
+not a duplicate statement, graph path or tracker.
+
+**Independent semantic challenge (2026-11-23, head `e967a177f`).** Two P1
+and eight P2 findings, all repaired in this section and the two attempts:
+F1, the finite surrogate is scoped to the mode-unspecified r and the per se
+admission price is marked OPEN with the acyclic tail control; F2, the
+"modestly favored" rationale is the groundedness (mode-of-having) judgment,
+with the operation presupposition and *ST* I q.45 a.5 reassigned to the
+shared step; F3, the control is described as one instance of #1878's
+borrowing framework; F4, the matched source-side selection commitment;
+F5, where whole and source compete; F6, the encoded question; F7, the
+inertia citation; F8, a code span; F9, the frontier-diff record; F10, the
+countermodel's target. The scoped assessment records the review as
+`changes_requested` on that head, with repairs pending the coordinator's
+re-check; it remains `unpublished`.
