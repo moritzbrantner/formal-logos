@@ -1,0 +1,25 @@
+{
+  "id": "9d7b8ae0-474d-4ae4-9d08-019cffbdea7b",
+  "label": "Test contingent-foundation exemptions under parity and determining explanation",
+  "date": "2026-11-23",
+  "statement_ids": [
+    "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+    "8a8d00e9-12b6-4cf0-b662-431cc4addd49",
+    "6508c239-b36d-4010-b9e4-ff0cdd5757e5",
+    "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
+  ],
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "See docs/notes/psr-self-application-756.md#does-a-contingent-foundation-merit-exemption-from-determining-explanation-2026-11-23. Continuation of #1908; avoids #1909's C2 note and attempt. Distinguishes adequacy-qualified actual local existential reason coverage E (concrete individuals), determining coverage D (possibly joint basis sufficient across the relevant accessible alternatives), and a stance's corresponding demand. The exact classical negations are actual counterinstances to the selected coverage, not universal bruteness; b36104ba additionally denies a distinct esse-cause. The #756 feature parity results constrain same-quality demands, not the truth of E/D. Independently warranted dependence, temporal ordering, constitution, kind-specific laws and necessity can restrict a particular explanatory demand, but a warranted exemption does not by itself determine the exempt contingent individual's actuality. Role/occupant and relocation tests separate reasons for the rule from reasons for the bearer; no admissible alternative is inferred from a formal comparison. Binary recurrence control shows that stipulated primitive initial input need not license arbitrary later values under fixed constraints. Self-application distinguishes evidence for a rule, its obtaining as a contingent fact, and a concrete law-bearer's existence; scope matters at every step. Actual nonnecessitating production can explain its product while leaving a determining contrast about the act open; a distinct actual selector need not copy its output, but merely relocating an unexplained contrast does not complete broader coverage. #755 collapse core is not a consequence of D alone. Provisional moderate preference for E over a brute exception; suspension about universal D, high confidence in conditional adequacy and scope tests. Existing B2 reason-to-esse bridges and same-root results are reused, no new certified proof or premise discharge. Independent semantic challenge and canonical CLI checks pending; no new attribution.",
+  "blocker": "The universal adequacy reading of E is not established by the existing token-level local PSR, and receipt examples do not establish coverage of an underived simple individual. D requires further warrant that nonnecessitating existential production cannot be complete; a principled derivative-only restricted policy is a standing rival. Next compare the same-bearer actual exercise and its own contingent explanandum in the existing productive/agency framework, checking the joint determining basis and whether a reason for its obtaining is required at the selected scope. Local CLI, installed convention inspection and independent review are unavailable in this connector-only session; keep as unreviewed research checkpoint.",
+  "evidence": [
+    "PR-1908",
+    "7bf9cb77-0418-4363-9298-266eac105edd",
+    "19260537-f06d-451c-9549-b248fefb14fd",
+    "6e7f5afd-4d72-466d-bba0-b9eead60d2d2",
+    "8fba6dd2-fefd-49d3-b832-9323f61477dd",
+    "a1056aab-cace-47f4-a12f-f29519964d59",
+    "b63a1f75-e355-541f-a462-43f079a8b73c",
+    "e5d49f99-685f-4c4e-8c8b-35cb21e1ec24"
+  ]
+}
