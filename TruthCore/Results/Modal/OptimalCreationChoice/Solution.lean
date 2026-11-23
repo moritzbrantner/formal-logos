@@ -63,7 +63,67 @@ the existing frozen \`OptimalChoiceCertificate\` or any registered premise. -/
 /-- Kernel-checkable three-world model. No divine/free-agency interpretation
 follows from the satisfiability of the displayed finite assignments. -/
 theorem threeWorldCreationChecks : ThreeWorldCreationControl := by
-  decide
+  have hSound : SoundDistinctCauses threeWorldCreation.ontic := by
+    intro w x y h
+    change x = source ∧ w ≠ none ∧ y = w at h
+    rcases h with ⟨rfl, hn, rfl⟩
+    refine ⟨Or.inl rfl, Or.inr ⟨hn, rfl⟩, ?_⟩
+    intro heq
+    exact hn heq.symm
+  have hNecessary : NecessaryAt threeWorldCreation.ontic (some false) source := by
+    intro _ _
+    exact Or.inl rfl
+  have hCap : ∀ v, hasIntellectualCapacity v source ∧
+      hasVolitionalCapacity v source ∧ ∀ b, recognizesOption v b := by
+    intro _
+    exact ⟨rfl, rfl, fun _ => True.intro⟩
+  have hRealized : RealizedOutputs threeWorldCreation := by
+    intro v _ x _ hx
+    change v ≠ none ∧ x = v at hx
+    exact ⟨rfl, hx.1, hx.2⟩
+  have hLocal : LocallyDeterministic threeWorldCreation := by
+    intro _ _ _ _ hx hy
+    exact hx.2.trans hy.2.symm
+  have hTracks : TracksSelectedCreation threeWorldCreation selectedCandidate := by
+    intro v b
+    constructor
+    · intro hx
+      exact hx.2.symm
+    · intro hv
+      subst v
+      exact ⟨by simp, rfl⟩
+  have hFirstContingent :
+      ContingentAt threeWorldCreation.ontic (some false) firstEffect := by
+    refine ⟨(by simp [threeWorldCreation, firstEffect, source]), none, True.intro, ?_⟩
+    simp [threeWorldCreation, firstEffect, source]
+  have hSecondContingent :
+      ContingentAt threeWorldCreation.ontic (some true) secondEffect := by
+    refine ⟨(by simp [threeWorldCreation, secondEffect, source]), none, True.intro, ?_⟩
+    simp [threeWorldCreation, secondEffect, source]
+  have hNoExercise :
+      ¬ ExercisesCausation threeWorldCreation.ontic none source := by
+    rintro ⟨y, hy⟩
+    exact hy.2.1 rfl
+  have hNotSame : ¬ SameActEverywhere threeWorldCreation (some false) () := by
+    intro h
+    exact (h none True.intro) rfl
+  have hNotStable : ¬ StableActOutput threeWorldCreation (some false) () := by
+    intro h
+    have hb := h firstEffect (by simp [threeWorldCreation, firstEffect])
+      (some true) True.intro (by simp [threeWorldCreation])
+    exact Bool.noConfusion hb.2
+  have hCoincident : threeWorldCreation.output (some false) () firstEffect ∧
+      coincidentalTag (some false) false := by
+    exact ⟨⟨by simp, rfl⟩, rfl⟩
+  have hNotTag : ¬ TracksSelectedCreation threeWorldCreation coincidentalTag := by
+    intro h
+    have hb := (h (some true) true).mp
+      (show threeWorldCreation.output (some true) () secondEffect from ⟨by simp, rfl⟩)
+    exact Bool.noConfusion hb
+  exact ⟨(fun _ _ => True.intro), hSound, hNecessary, hCap, hRealized, hLocal,
+    hTracks, (by simp [threeWorldCreation, firstEffect]),
+    (by simp [threeWorldCreation, secondEffect]), hFirstContingent,
+    hSecondContingent, hNoExercise, hNotSame, hNotStable, hCoincident, hNotTag⟩
 
 /-- Both produced creatures are tied optima under the fixed created-candidate
 comparison. The no-creation world has no performance or output, rather than
@@ -77,18 +137,61 @@ theorem threeWorldOptimalOutputs :
     | none =>
       exact False.elim (hp rfl)
     | some b =>
-      exact ⟨some b, ⟨by decide, rfl⟩⟩
+      exact ⟨some b, ⟨by simp, rfl⟩⟩
   · intro x hx
     change v ≠ none ∧ x = v at hx
-    rcases hx with ⟨hn, rfl⟩
+    rcases hx with ⟨hn, heq⟩
     cases v with
     | none => exact False.elim (hn rfl)
-    | some b => exact tiedOptimal b
+    | some b =>
+      subst x
+      exact tiedOptimal b
 
 /-- Deleting only cross-world positive output while retaining the same rigid
 act and unique optimal *created* candidate leaves the effect contingent. -/
 theorem omissionStructureChecks : OmissionStructureControl := by
-  decide
+  have hSound : SoundDistinctCauses alwaysPerformedOmission.ontic := by
+    intro w x y h
+    change x = source ∧ w = true ∧ y = firstEffect at h
+    rcases h with ⟨rfl, rfl, rfl⟩
+    exact ⟨Or.inl rfl, Or.inr ⟨rfl, rfl⟩, by decide⟩
+  have hNecessary : NecessaryAt alwaysPerformedOmission.ontic true source := by
+    intro _ _
+    exact Or.inl rfl
+  have hRealized : RealizedOutputs alwaysPerformedOmission := by
+    intro v _ x _ hx
+    exact ⟨rfl, hx.1, hx.2⟩
+  have hOptionalRealized : RealizedOutputs optionallyPerformedOmission := by
+    intro v _ x _ hx
+    exact ⟨rfl, hx.1, hx.2⟩
+  have hLocal : LocallyDeterministic alwaysPerformedOmission := by
+    intro _ _ _ _ hx hy
+    exact hx.2.trans hy.2.symm
+  have hSame : SameActEverywhere alwaysPerformedOmission true () := by
+    intro _ _
+    trivial
+  have hNotSame : ¬ SameActEverywhere optionallyPerformedOmission true () := by
+    intro h
+    exact Bool.noConfusion (h false True.intro)
+  have hStable : StableActOutput optionallyPerformedOmission true () := by
+    intro x hx v _ hp
+    change v = true at hp
+    subst v
+    exact hx
+  have hNotStable : ¬ StableActOutput alwaysPerformedOmission true () := by
+    intro h
+    have hb := h firstEffect ⟨rfl, rfl⟩ false True.intro True.intro
+    exact Bool.noConfusion hb.1
+  have hContingent : ContingentAt alwaysPerformedOmission.ontic true firstEffect := by
+    refine ⟨Or.inr ⟨rfl, rfl⟩, false, True.intro, ?_⟩
+    rintro (h | ⟨h, _⟩)
+    · cases h
+    · cases h
+  have hNoExercise : ¬ ExercisesCausation alwaysPerformedOmission.ontic false source := by
+    rintro ⟨y, hy⟩
+    exact Bool.noConfusion hy.2.1
+  exact ⟨hSound, hNecessary, hRealized, hOptionalRealized, hLocal, hSame,
+    hNotSame, hStable, hNotStable, hContingent, hNoExercise⟩
 
 theorem soleCreatedOptimal :
     Optimal soleCreatedCandidate tiedQuality firstEffect := by
