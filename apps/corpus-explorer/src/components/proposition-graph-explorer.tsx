@@ -6,10 +6,11 @@ import {
   MarkerType,
   Position,
   ReactFlow,
-  useStore,
+  useNodesStore,
+  useViewportStore,
   useReactFlow,
   type Edge,
-  type NodeChange,
+  type NodeChangeset,
   type Node,
   type NodeProps,
 } from "@xyflow/react";
@@ -433,8 +434,8 @@ export function PropositionGraphExplorer({
     });
     return { nodes: flowNodes, edges: flowEdges };
   }, [view, state.sel, state.emphasis, state.relations, state.view, hoveredId, activeObligation, graph.arguments, graph.statements, graph.inferences, graph.relations, compact, network, index, overlay, measured, resultCheckedIds]);
-  const onNodesChange = (changes: NodeChange<FlowNode>[]) => {
-    const sizes = changes.flatMap((change) => (change.type === "dimensions" && change.dimensions ? [{ id: change.id, size: change.dimensions }] : []));
+  const onNodesChange = (changes: NodeChangeset<FlowNode>) => {
+    const sizes = changes.toArray().flatMap((change) => (change.type === "dimensions" && change.dimensions ? [{ id: change.id, size: change.dimensions }] : []));
     if (!sizes.length) return;
     const types = new Map(nodes.map((node) => [node.id, node.type]));
     setMeasurements((current) => {
@@ -1004,8 +1005,8 @@ function FacetChips({
 
 /** Locate by the retained layout position before measurement, so a culled node can mount. */
 function SelectionLocator({ state, compact }: { state: GraphState; compact: boolean }) {
-  const position = useStore((store) => store.nodeLookup.get(state.sel)?.position);
-  const ready = useStore((store) => store.width > 0 && store.height > 0);
+  const position = useNodesStore((store) => store.nodeLookup.get(state.sel)?.position);
+  const ready = useViewportStore((store) => store.width > 0 && store.height > 0);
   const { setCenter } = useReactFlow();
   useEffect(() => {
     if (ready && position && state.view !== "local" && !state.viewport && state.sel && state.obligation) {
