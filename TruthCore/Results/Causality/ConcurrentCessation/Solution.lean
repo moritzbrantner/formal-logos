@@ -172,4 +172,108 @@ theorem c3ActualWorldControls : C3ActualWorld.Certificate := by
     change v = true ∧ (c = true ∨ (c = false ∧ 1 ≤ t))
     exact ⟨hg.1, Or.inl hg.2.1⟩
 
+
+/-- Matched-onset withdrawal versus non-destructive persistence, without
+reidentifying a historical origin as a currently productive cause. This is an
+unregistered structural model check, not a metaphysical-possibility claim. -/
+theorem withdrawalLawControls : WithdrawalLaw.Certificate := by
+  unfold WithdrawalLaw.Certificate
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  -- The effect's rigid world-existence agrees with its temporal presence now.
+  · intro v x
+    exact Iff.rfl
+  -- The source is necessary in this stipulated modal frame.
+  · intro v _
+    simp [WithdrawalLaw.history]
+  -- The effect is contingent despite its origin by that source.
+  · refine ⟨by simp [WithdrawalLaw.history, WithdrawalLaw.effectAt],
+      ⟨WithdrawalLaw.Scenario.absent, trivial,
+        by simp [WithdrawalLaw.history, WithdrawalLaw.effectAt]⟩⟩
+  -- Conservation and inertia agree on every bearer and giving fact to t=1.
+  · constructor
+    · intro x t ht
+      have ht' : t = 0 ∨ t = 1 := by omega
+      rcases ht' with rfl | rfl
+      · cases x <;> simp [WithdrawalLaw.history, WithdrawalLaw.effectAt]
+      · cases x <;> simp [WithdrawalLaw.history, WithdrawalLaw.effectAt]
+    · intro c x t ht
+      have ht' : t = 0 ∨ t = 1 := by omega
+      rcases ht' with rfl | rfl
+      · cases c <;> cases x <;> simp [WithdrawalLaw.giving]
+      · cases c <;> cases x <;> simp [WithdrawalLaw.giving]
+  -- Inertia and loss agree on exactly the same past and originating exercise.
+  · constructor
+    · intro x t ht
+      have ht' : t = 0 ∨ t = 1 := by omega
+      rcases ht' with rfl | rfl
+      · cases x <;> simp [WithdrawalLaw.history, WithdrawalLaw.effectAt]
+      · cases x <;> simp [WithdrawalLaw.history, WithdrawalLaw.effectAt]
+    · intro c x t ht
+      have ht' : t = 0 ∨ t = 1 := by omega
+      rcases ht' with rfl | rfl
+      · cases c <;> cases x <;> simp [WithdrawalLaw.giving]
+      · cases c <;> cases x <;> simp [WithdrawalLaw.giving]
+  -- The no-positive-loss coverage law is true with either continued giving,
+  -- or none at t=2. It also permits an uninstantiated effect.
+  · intro x n hBefore hGone
+    exfalso
+    cases x <;> simp_all [WithdrawalLaw.noDestruction,
+      WithdrawalLaw.history, WithdrawalLaw.effectAt] <;> omega
+  · intro x n hBefore hGone
+    exfalso
+    cases x <;> simp_all [WithdrawalLaw.noDestruction,
+      WithdrawalLaw.history, WithdrawalLaw.effectAt] <;> omega
+  · intro x n hBefore hGone
+    exfalso
+    cases x <;> simp_all [WithdrawalLaw.noDestruction,
+      WithdrawalLaw.history, WithdrawalLaw.effectAt]
+  -- Loss in the no-destruction scenario is an omission of that law, not an
+  -- automatic refutation of the no-giver case or of the law's real warrant.
+  · intro hLaw
+    obtain ⟨p, hp⟩ := hLaw false 1
+      (by simp [WithdrawalLaw.noDestruction, WithdrawalLaw.history,
+        WithdrawalLaw.effectAt])
+      (by simp [WithdrawalLaw.noDestruction, WithdrawalLaw.history,
+        WithdrawalLaw.effectAt])
+    exact hp.1
+  -- The same numerically distinct giver genuinely originates the effect.
+  · refine ⟨1, ⟨by simp [WithdrawalLaw.history, WithdrawalLaw.effectAt], ?_⟩,
+      by simp [WithdrawalLaw.giving]⟩
+    intro s hs hp
+    simp [WithdrawalLaw.history, WithdrawalLaw.effectAt] at hp
+    omega
+  -- The actual source stays present whenever its giving operates.
+  · intro v c x t hg
+    have hc : c = true := hg.1
+    subst c
+    simp [WithdrawalLaw.history]
+  -- At the conservation scenario the received effect is given at each t.
+  · intro x t z hreceived hAt
+    have hx : x = false := hreceived
+    subst x
+    have ht : 1 ≤ t := by
+      simpa [WithdrawalLaw.history, WithdrawalLaw.effectAt] using hAt
+    refine ⟨true, ?_⟩
+    simp [WithdrawalLaw.frame, WithdrawalLaw.giving, ht]
+  -- Inertia falsifies the very same selected-world C3 content at t=2.
+  · intro hC
+    obtain ⟨c, hc⟩ := hC false 2 () (by rfl)
+      (by simp [WithdrawalLaw.history, WithdrawalLaw.effectAt])
+    cases c <;> simp [WithdrawalLaw.frame, WithdrawalLaw.giving] at hc
+  · simp [WithdrawalLaw.history, WithdrawalLaw.effectAt]
+  · simp [WithdrawalLaw.history, WithdrawalLaw.effectAt]
+  · simp [WithdrawalLaw.history, WithdrawalLaw.effectAt]
+  · simp [WithdrawalLaw.history, WithdrawalLaw.effectAt]
+  -- The source's current exercise changes independently of the entire past.
+  · intro g
+    cases g <;> simp [WithdrawalLaw.frame, WithdrawalLaw.giving]
+  · simp [WithdrawalLaw.frame, WithdrawalLaw.giving]
+  -- No *positive* destructive process is encoded in either continuation or
+  -- cessation. Calling withdrawal itself destruction would change the input.
+  · simp [NoCessationCause, Destroys, WithdrawalLaw.noDestruction]
+  · simp [NoCessationCause, Destroys, WithdrawalLaw.noDestruction]
+  -- Causal coverage never entails that a particular effect gets instantiated.
+  · intro t
+    simp [WithdrawalLaw.history, WithdrawalLaw.effectAt]
+
 end TruthCore.Results.Causality.ConcurrentCessation
