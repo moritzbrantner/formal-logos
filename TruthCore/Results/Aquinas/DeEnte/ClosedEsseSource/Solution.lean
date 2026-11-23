@@ -211,7 +211,7 @@ theorem rosterOnly : RosterOnlyControl := by
 population, and at-most-one identity bearer do not themselves yield CCR or a
 common source. It does not show metaphysical possibility or productive supply. -/
 theorem sourceFreeFiniteCircle : SourceFreeFiniteCircleControl := by
-  let p := sourceFreeFiniteCircle
+  let p := TruthCore.Latin.Aquinas.DeEnte.ClosedEsseSource.sourceFreeFiniteCircle
   have hd : ∀ x, DistinctEsseAt p x := by
     intro x
     exact ⟨trivial, by decide⟩
