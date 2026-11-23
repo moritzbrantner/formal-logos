@@ -141,8 +141,16 @@ open TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding
 /-- Whole power of being supplies wisdom at the very same OwnBeing bearer;
 the separate self-directed capacity, exercise/potency, and cognitive-grounding
 bridges supply an actual, true, cognitively grounded self-directed apprehension.
-'PureAct' excludes passive potency in the designated understanding respect,
-not the non-exercise of every productive power. -/
+'PureAct' is read with `InPotency` as POTENCY_2 (`DEF-INDEPENDENT-POTENCY`):
+it excludes that primitive potency in every respect, and the proof uses only
+its instance at the designated understanding respect. Under POTENCY_1 (capable
+and not actually), pure act would forbid every unexercised capacity, including
+productive powers if those count as `CanBe` respects (the fork recorded in
+`DeiFiliusOperationFromIntellect`). Compare the existing generic-respect result
+`intellectualPureActOperatesFromCapacity` (c55e2ce2), which takes the same
+exercise-or-potency step at the respect of understanding; this variant is
+content-indexed so that the subject, the aboutness target and the grounding
+relation stay the same `g`, which the generic respect does not express. -/
 theorem intrinsicSelfKnowledgeFromWisdom {B D C R : Type}
     (OwnBeing : B → Prop) (Has : B → D → Prop) (Pure OfBeing : D → Prop)
     (wisdom : D) (About Correct : C → B → Prop)
@@ -205,7 +213,12 @@ theorem actualRootSelfKnowledgeFromWisdom {W B P D C R : Type}
 and its substantive wisdom→self-directed-power bridge suffice if that power
 is recognized as intrinsic intellectual aptitude. No pure-act exercise,
 actual apprehension, or cognitive-grounding premise is required for this
-capacity-level conditional. GOD_4 itself still needs a real witness. -/
+capacity-level conditional. GOD_4 itself still needs a real witness.
+Reading HAS_INTELLECT_1 as a capacity is a reading choice: its definition
+says "intellectual cognition" without deciding capacity versus exercise. The
+existing open premise `IntellectIsCapacityToUnderstand`
+(`DeiFiliusOperationFromIntellect`) takes the same capacity reading. If
+HAS_INTELLECT_1 meant actual cognition, this would not be the weaker endpoint. -/
 theorem godHasIntellectFromWisdomCapacity {B D C : Type}
     (IsGod HasIntellect OwnBeing : B → Prop)
     (Has : B → D → Prop) (Pure OfBeing : D → Prop) (wisdom : D)

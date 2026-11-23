@@ -93,7 +93,15 @@ def IntrinsicSelfKnowledge {B C : Type}
 /-- OPEN recognition/interpretation premise: at a subsistent source, possessing
 wisdom as a pure perfection supplies a *capacity* for true self-directed
 content. The truth/capacity conjunction is not an exercise, and generic
-productive virtual possession does not imply it. -/
+productive virtual possession does not imply it.
+
+`CanApprehend g content` is a declared PRIMITIVE (unconstrained parameter).
+Intended meaning: g itself is able to apprehend the content, so that an
+exercise would be g's own act of apprehension. Distinguishing condition: it is
+NOT "g can cause some being to apprehend the content". Nothing in the type
+excludes that productive reading; the distinction between the source's own
+capacity and a merely productive one rests on this intended reading of the
+primitive, which is an open semantic obligation. -/
 def WisdomSelfCapacity {B D C : Type}
     (OwnBeing : B → Prop) (Has : B → D → Prop) (wisdom : D)
     (About Correct : C → B → Prop) (CanApprehend : B → C → Prop) : Prop :=
@@ -102,8 +110,18 @@ def WisdomSelfCapacity {B D C : Type}
 
 /-- OPEN bridge scoped to the actual source and its *self-directed* capacity:
 either it apprehends that content or the specified understanding respect
-remains in potency. This is stronger than an idle productive power, and
-cannot be obtained merely by defining InAct to include virtual possession. -/
+remains in potency. It cannot be obtained merely by defining InAct to include
+virtual possession.
+
+`InPotency` here is POTENCY_2 of `DISAMB-POTENCY` (`DEF-INDEPENDENT-POTENCY`,
+the independently supplied potency predicate whose absence in every respect is
+pure act); under it the bridge is substantive and the dormant-capacity control
+(case 2) is a model. Under POTENCY_1 (`AdoptedPotency.InPotency`: capable and
+not actually) the bridge would be an instance of excluded middle, case 2 would
+not be a model, and the act/potency weight would move into `PureAct`, which
+then forbids every unexercised capacity of g. The same fork is worked through
+for `UnderstandingCapacityExercisedOrInPotency` in
+`TruthCore.Causality.DeiFiliusOperationFromIntellect`. -/
 def SelfCapacityExercisedOrPotent {B C R : Type}
     (OwnBeing : B → Prop) (About : C → B → Prop)
     (CanApprehend Apprehends : B → C → Prop)
@@ -142,8 +160,17 @@ def causesIn (c x : Bool) (_ : Unit) : Prop := c = true ∧ x = false
 def hasIntellect (g : Bool) : Prop := g = false
 
 /-- The same existing whole-power premises have an actual first source,
-a real cognitive effect and a nonempty source-to-effect causal edge. Assigning
-HasIntellect only to the effect does NOT determine the source's wisdom sense. -/
+an effect labelled with the old `HasIntellect` predicate and a nonempty
+source-to-effect causal edge. Assigning HasIntellect only to the effect does
+NOT determine the source's wisdom sense.
+
+STRUCTURAL SURROGATE: `causesIn` is used by no bridge and not by `IsGod`, and
+the effect `false` neither can apprehend nor apprehends any content here; it
+is "cognitive" only through the `hasIntellect` label. The productive-only rival's
+defining commitment (an effect that really apprehends) is therefore not
+represented; restoring it (an effect-only apprehension of content about
+itself) is expected to keep case 1, since every bridge is scoped to `own`, but
+that variant is not checked here. -/
 def Background : Prop :=
   OwnBeingLacksNoPerfectionOfBeing own has ofBeing ∧
   PurePerfectionsPertainToBeing pure ofBeing ∧ pure () ∧ own true ∧

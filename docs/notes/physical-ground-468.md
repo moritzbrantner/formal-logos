@@ -320,7 +320,7 @@ perfection establish the first source's own intentional understanding, or
 only the power to produce understanding in secondary beings? This is a follow-up
 to the asymmetric causal-containment investigation in draft PR #1855 and its
 recorded next test. Existing target: `STMT-GOD-HAS-INTELLECT` (29818edd,
-HAS_INTELLECT_1), followed conditionally by the established intellect→will
+HAS_INTELLECT_1), followed conditionally by the existing verified intellect→will
 consumer (090be689 → 66aecdd7). This investigation leaves those existing
 statements and the GOD_4 existence witness unchanged.
 
@@ -345,16 +345,30 @@ and an impersonal source can reject it or reject intrinsic cognitive uptake.
    wisdom determination, there is a correctly self-directed content and an
    intrinsic capacity to apprehend that content. The source's identity as
    subject and aboutness target is retained: `About content g` and
-   `CanApprehend g content`. A power to produce an *other* being with that
-   ability does not satisfy this premise.
+   `CanApprehend g content`. `CanApprehend` is a declared primitive: it means
+   that g itself can apprehend the content (an exercise would be g's own act),
+   not that g can cause some being to apprehend it. Nothing in its type excludes
+   the productive reading, so on the *intended reading of the primitive*, a
+   power to produce an *other* being with that ability does not count.
 2. `SelfCapacityExercisedOrPotent`: for that same content, the subsistent
    source either actually apprehends it or has potency at the *self-understanding*
    respect. This is not the broad claim that every active productive capacity
    must continuously produce every possible effect. The separate `PureAct
-   InPotency g` hypothesis eliminates the second branch. In particular,
+   InPotency g` hypothesis eliminates the second branch. `InPotency` is
+   POTENCY_2 of `DISAMB-POTENCY` (`DEF-INDEPENDENT-POTENCY`); under it the
+   bridge is substantive and the dormant-capacity case below is a model. Under
+   POTENCY_1 (capable and not actually) the bridge is an instance of excluded
+   middle, the dormant-capacity case is not a model, and the weight moves into
+   `PureAct`, which then forbids every unexercised capacity of the source,
+   productive powers included if they count as `CanBe` respects; the same fork
+   is recorded for `UnderstandingCapacityExercisedOrInPotency` in
+   `DeiFiliusOperationFromIntellect`. In particular,
    `InActFormallyOrVirtually g understanding` is **not** used in place of
-   actual apprehension: the earlier operation consumer's inclusive-`InAct`
-   boundary remains open.
+   actual apprehension: the inclusive-`InAct` boundary of the earlier
+   operation consumer (`intellectualPureActOperatesFromCapacity`, c55e2ce2,
+   which takes the same exercise-or-potency step at a generic respect of
+   understanding) remains open. The new variant is content-indexed so that the
+   subject, the aboutness target and the grounding relation are the same `g`.
 3. `TrueSelfApprehensionGrounded`: a correct self-directed apprehension by this source
    is intrinsically grounded in the intelligible object, rather than a correct
    register reading. This does not require discursive reasoning, a distinct
@@ -365,8 +379,8 @@ Under these premises, `intrinsicSelfKnowledgeFromWisdom` concludes
 `∃ content, About content g ∧ Correct content g ∧ Apprehends g content ∧
 CognitivelyGrounded g content`. The result is stronger than bare capacity and
 weaker than omniscience, temporal episode production, or a complete
-metaphysical theory of intentionality. The predicates `Apprehends` and
-`CognitivelyGrounded` are **substantive primitives**: their actual recognition as
+metaphysical theory of intentionality. The predicates `CanApprehend`,
+`Apprehends` and `CognitivelyGrounded` are **substantive primitives**: their actual recognition as
 a rational operation is not licensed by the English labels, and an accurate
 noncognitive device must not count as apprehension by stipulation.
 
@@ -376,7 +390,11 @@ existing root-without-limitation interface together with
 retaining that selected ground relation and actual world. The weaker `godHasIntellectFromWisdomCapacity` is a conditional code-level
 consumer of the unchanged capacity-level `GodHasIntellect`. It needs a
 recognition of real self-directed cognitive aptitude as `HAS_INTELLECT_1`,
-but **does not require pure-act exercise or actual self-apprehension**.
+but **does not require pure-act exercise or actual self-apprehension**. Reading
+`HAS_INTELLECT_1` as a capacity is a reading choice (its definition says
+"intellectual cognition" without deciding capacity versus exercise), shared
+with the existing open premise `IntellectIsCapacityToUnderstand`; under an
+exercise reading this would not be the weaker endpoint.
 The stronger `godHasIntellectFromWholePowerWisdom` is a second, non-independent conditional code-level consumer
 of the unchanged `GodHasIntellect IsGod HasIntellect`. Its extra scope premises
 make each supplied GOD_4 bearer both OwnBeing and pure act; its *recognition*
@@ -387,7 +405,8 @@ will-follows-intellect consumer.
 
 **Joint finite check and what it means.** On one fixed two-being/two-content,
 one-wisdom-determination interpretation, `true` is the existing OwnBeing
-source and `false` is a being with a cognitive capacity. The source has
+source and `false` is an effect labelled by the old `HasIntellect` predicate
+(it neither can apprehend nor apprehends any content in the model). The source has
 wisdom, no potency, and a nonempty causal relation to the cognitive effect.
 `About c g` and `Correct c g` hold exactly when `c = g`. Vary only the
 source's cognitive capacity, actual apprehension, or basing relation:
@@ -399,15 +418,20 @@ source's cognitive capacity, actual apprehension, or basing relation:
 | Accurate but unbased apprehension | true | true | **false** | false |
 | Fully source-borne cognition | true | true | true | true |
 
-These are omission-model boundaries for **the listed formulas**. They do not
+The dormant-capacity case is a model only under POTENCY_2 (see bridge 2). The
+productive-only case is a **structural surrogate**: `causesIn` is used by no
+bridge and not by `IsGod`, and the effect has no apprehension, so the rival's
+defining commitment (an effect that really apprehends) is not represented.
+Restoring it (effect-only apprehension of content about itself) is expected to
+keep the case, since every bridge is scoped to `own`, but that variant is not
+checked. These are omission-model boundaries for **the listed formulas**. They do not
 show that the mere logical alternative is metaphysically possible, establish
 the natural rival's complete basis for cognition, or contradict q.4/q.14.
 The fourth assignment still leaves the independently supplied old
 `HasIntellect` predicate false of the source; the unchanged-recognition
 premise is genuinely required for that separate interface. The finite
 configuration was enumerated independently before the Lean statement was
-added; the source theorem/model compilation and zero-axiom verification are
-subject to this PR's exact-head CI and semantic challenge.
+added, and `wisdomSelfUnderstandingControls` checks it in Lean (#1866 CI).
 
 **Strongest surviving impersonal account.** One underived, simple source
 sustains a lawful order in which secondary systems instantiate cognitive
@@ -421,12 +445,20 @@ argument it must contest either the positive-wisdom classification of the
 source or the reading of perfect wisdom as requiring intrinsic content-sensitive
 capacity. Its ability to simulate truthful outputs alone does not decide the
 question. Conversely, this positive route cannot dismiss the rival merely
-because its source is described without mental vocabulary.
+because its source is described without mental vocabulary. Standing under the
+Substantive Objection Standard: the cited mechanisms explain secondary,
+creaturely cognition at matched scope; none gives an independent reason to deny
+the source-level classification of wisdom or the `WisdomSelfCapacity` bridge.
+No independent justification for that denial is identified, so the rival is a
+standing alternative explanation, not an objection with evidential weight
+against the route.
 
 **Overall provisional judgment.** The whole-perfection family provides a
 distinct and substantive *positive support candidate* for intrinsic cognitive
 capacity, rather than inferring it directly from produced effects. It is a
-better bridge target than another global cause-to-effect transfer. But
+better bridge target than another global cause-to-effect transfer because it
+does not depend on transferring a perfection from effect to cause: it starts
+from the source's own being. But
 neither the wisdom-as-pure-perfection classification nor the self-directed
 capacity and basing bridges has yet been philosophically established at the
 first source. The conditional theorem cannot settle them, and the original
