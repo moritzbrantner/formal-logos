@@ -128,7 +128,7 @@ divine essence is metaphysically possible. Both frames of #438 satisfy S5. -/
 namespace DivineControl
 
 /-- Under M = identity, only the selected world's one bearer exists, and all
-twelve properties hold together exactly where that bearer exists. -/
+thirteen predicates hold together exactly where that bearer exists. -/
 def at (selected : Bool) (v x : Bool) : Prop :=
   v = selected ∧ x = true
 
