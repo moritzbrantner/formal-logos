@@ -387,6 +387,22 @@ premise is established.
 
 1. Compare power-grounded, combinatorial, primitivist and essentialist
    modality for existence at matching scope (the revision conditions).
+   **Under way in #1887.** The reviewed matching-scope assessment (tests
+   1–3) is in [foundational-absence-warrant.md](foundational-absence-warrant.md)
+   (attempt `d067722e`). It finds parity at the foundational being:
+   - neither "`n` could be absent" nor PGP's necessity verdict has
+     discriminating warrant there;
+   - PGP's substantive content (completeness over incorruptibles) has the
+     same status as unrestricted recombination and as the concrete/abstract
+     cut of concreta-restricted existence-conditional essentialism, which is
+     now the strongest rival;
+   - conceivability is unresolved, and its reply rests on a calibration
+     premise shared with other routes.
+
+   §13's conditional judgment stands, sharpened: the remaining disagreement
+   is the unmotivated extra content of each general theory at existence
+   without a subject. The formal framework comparison and Pruss's argument
+   (tests 4–5) follow separately.
 2. Separate conserving from originating power in correlation by composing with
    the existing sustaining-causation vocabulary (attempt `c94eed5b`) instead
    of the tenseless `CausesIn` (the deist question).
