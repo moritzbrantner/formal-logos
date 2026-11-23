@@ -1,3 +1,5 @@
+module
+
 public import TruthCore.Causality.ReceivedEsseActualGiver
 public import TruthCore.Results.Causality.FirstMoverNecessity.Solution
 
