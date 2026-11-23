@@ -309,6 +309,17 @@ def noDestruction (v : Scenario) : Model Bool Unit Nat where
   terminal := fun _ _ => False
   existsAt := fun t x => history.IsAt v x t
 
+/-- Counter-reading: treat the very cessation of active conservation between
+t=1 and t=2 as a loss-inducing occurrence for the same recipient. The originator
+itself remains present. The `occurs` field is an analyst classification, NOT
+an independently established positive destructive process; this is exactly
+what the inertialist disputes. World and bearer presence are unchanged. -/
+def withdrawalAsLoss : Model Bool Unit Nat where
+  threat := fun _ => ⟨false, true⟩
+  occurs := fun _ s t => s = 1 ∧ t = 2
+  terminal := fun _ t => t = 2
+  existsAt := fun t x => history.IsAt .vanished x t
+
 /-- Candidate no-change governing principle for the same bearer and positive
 destructive-process vocabulary. It is the existing `CessationHasCause`,
 instantiated, not a newly defined explanation ontology. -/
@@ -355,7 +366,12 @@ def Certificate : Prop :=
   frame.GivesAt .conserved true false 2 ∧
   NoCessationCause (noDestruction .inertial) false 1 ∧
   NoCessationCause (noDestruction .vanished) false 1 ∧
-  (∀ t, ¬ history.IsAt .absent false t)
+  (∀ t, ¬ history.IsAt .absent false t) ∧
+  (∀ x t, (withdrawalAsLoss).existsAt t x ↔
+    (noDestruction .vanished).existsAt t x) ∧
+  Destroys withdrawalAsLoss () 1 2 false ∧
+  CessationHasCause withdrawalAsLoss ∧
+  ¬ NoCessationCause withdrawalAsLoss false 1
 
 end WithdrawalLaw
 
