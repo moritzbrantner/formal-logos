@@ -2155,6 +2155,30 @@ results):**
   abstract law or bare positive bias. Neither bridge follows from uniqueness,
   `ActualEsseCause`, population or Lean's empty-state proof.
 
+**Essential adequacy warning.** The profile `p` fixes `InAct` and
+therefore fixes which `ActualEsseCause` arrows pass their actuality guards;
+the candidate state **does not vary the actual profile**. In particular,
+the empty assignment is *not* a counter-world in which no bearer of `p`
+exists. It is a second mathematical assignment to an abstract activation
+constraint built over the fixed r. Applying this no-input result to existential
+production requires a further **OPEN** bridge that the candidate assignments
+are the relevant admissible total-existence alternatives, with a consistent
+variation of `InAct` and productive `CausesIn` if reality varies. A global
+rule that requires some existent, or a domain with a necessarily actual
+substrate, need not admit the empty state. The theorem does not contradict
+the stronger world-indexed holistic account without that application.
+
+**Novelty boundary.** The zero/positive fixed-point split is structurally
+anticipated by `Logic.Regress.Graph.transmission` (lfp versus gfp) and
+`ContractiveBorrowedPower.ZeroExercise` (under contraction and zero
+preservation). The new theorem does **not** discover that fixed points
+generally have this property. Its increment is the expressly quantified
+all-candidate `ActualEsseCause` activation condition, the converse
+unique-populated/seed inference **without contraction or WF**, and the
+explicit, separately named *same-r actual-root* bridge. No additional
+independent evidential warrant is claimed from reusing the same mathematical
+zero-solution reasoning.
+
 The first result is a discriminating *conditional incompatibility*: jointly
 claiming (i) no activation without some already active supplier, (ii) a
 populated fixed solution and (iii) **uniqueness among all fixed solutions**
