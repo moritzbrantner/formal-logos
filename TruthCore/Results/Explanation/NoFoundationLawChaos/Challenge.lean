@@ -23,4 +23,12 @@ independence of totality grounding from future admissibility. -/
 theorem omissions : TruthCore.Explanation.NoFoundationLawChaos.Omissions := by
   sorry
 
+
+/-- One-step finite recombination, a separate infinite-prefix closure principle,
+and explicit nonempty finite-switch, stable, unrestricted and empty controls.
+This does not derive metaphysical possibility from lack of explanation. -/
+theorem recombinationFork :
+    TruthCore.Explanation.NoFoundationLawChaos.RecombinationFork := by
+  sorry
+
 end TruthCore.Results.Explanation.NoFoundationLawChaos
