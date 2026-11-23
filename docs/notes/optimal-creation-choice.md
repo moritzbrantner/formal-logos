@@ -1565,3 +1565,247 @@ Review must challenge the immanent/transitive distinction,
 the modal object-essentiality scope and the alleged thick
 effect-side intentional relation. CI and actual computed
 premise comparison outstanding.
+
+
+## Restricted object essentiality: the two relations and particularity of the recipient (2026-11-23; proposed, unreviewed)
+
+Continuation of §§15–18 on prior head f13c6c03b68d7f50cec90de7e80ada8d9eb93d48.
+Current main at dispatch f9c1f2ef6bcc56f341c95a70f3815834827595dc.
+#1912 is now merged; reuse its same-giver/individual-identity distinction
+without reopening C2. #1913 owns the independent brute-contingency propagation
+question. Fix the same source n, intrinsic operation a, actual distinct effect
+x, and an intelligible description D of its production. No genuine alternative
+is established by stipulating a model or description.
+
+### 19. Direct source warrant for the distinction at issue
+
+New selected reading: Aquinas, *De veritate* q.23 a.4 co., ad 2–3, 6–8,
+11–16, and a.5 co./ad 1–3, [Latin](https://www.corpusthomisticum.org/qdv23.html)
+and [English](https://isidore.co/aquinas/english/QDdeVer23.htm). Particularly
+[56440–56441] (a.4 ad 15–16). This is a source reading for research
+orientation, not a new pinned attribution or mechanically verified premise.
+The Latin was checked against the English, particularly the scope of
+the reply about the two relations.
+
+A.4 ad 15 explicitly distinguishes the will's relation to its object
+as willed from its relation to that object as to be made actual. The
+latter presupposes the former in the order in which we understand
+voluntary production. Aquinas denies absolute necessity of the first
+relation, while affirming the efficacy conditional for the embracing
+will (*voluntas beneplaciti*). Ad 16 rejects the need to interpose a
+contingent middle cause between the two orders to avoid absolute
+necessity. Ad 13 locates the nonnecessity in the reference to producing
+the thing in its own nature, not in an additional actuality inhering
+in God. Ad 6–8, 12–14 distinguish this from a temporal change of will.
+The a.4 body includes the possibility of another creature representing
+the divine goodness equally nobly, and denies the need for the whole
+creation for God's own goodness. A.5 co./ad 1 makes the intended mode
+of the effect relevant: efficacy of a will is fulfillment of the
+specification, not transfer of the causal source's own mode of being
+to the effect. Do not infer that the actual effect could fail while
+the identical specific efficacious decree holds at an alternative.
+The separate scope of the effect's contingent causal mode and the
+modal status of the decree must remain visible.
+
+This reading supplies unusually direct textual warrant for the
+two-relations architecture proposed in §8B, subject to a crucial
+qualification: the text explicitly speaks of an order of understanding.
+It does not supply an independently existing contingent executive
+event or a modern hyperintensional grounding theory. It is not an
+argument that the first relation is a temporal antecedent, or an
+extra real intrinsic determination in n. Nor does it automatically
+settle what makes the first relation obtain. It is stronger evidence
+for Aquinas's intended account than merely reusing q.19 a.3's
+nonexhaustion analogy. It counts against a reading that treats
+specific willing as nothing but a retrospective description of the
+actual product and then claims to have explained the product by
+that description.
+
+Reuse #555's Core and #462's SelectedEffectBridge, not a new
+certificate: distinguish necessary intrinsic a, actual adoption of
+D, and effective realization of D. At an appropriately interpreted
+rigid effect x, if the necessary a essentially has the specific
+object and specific creative willing entails x's existence in every
+accessible world, the old strict-efficacy contradiction follows
+with x's actual contingency. Aquinas's proposed denial concerns
+the first relation's absolute necessity, not the second conditional's
+validity. The substantive question is whether the first relation can
+be actual and genuinely directive without constituting a further
+intrinsic actuality. A.4 ad 15 gives evidence that this is the
+intended explanation, not a deduction of its metaphysical success.
+
+### 20. An expressive end differs from an acquired end
+
+The ordinary analogy of selecting means to happiness is incomplete.
+Aquinas's positive reason in a.4 co. is that divine goodness is
+already perfect, rather than a perfection realized by producing
+creatures. Compare two uses of the same recognized good:
+
+- An agent who needs to reach a destination may be bound to take
+  the only available route. The means supplies an actuality the
+  agent lacks; if the means changes, the agent's satisfaction can
+  depend on that change.
+- An agent who already possesses a good can intend to share it.
+  A particular gift can realize the recipient's good without
+  constituting or completing the giver's intrinsic perfection.
+  The particular recipient and gift can nevertheless matter to
+  what the agent intentionally does.
+
+The positive reason for restricting secondary-object essentiality is
+that a dependent, expressive termination need not supply the
+formal actuality by which the giver acts. This does not apply just
+because an agent is called divine or foundational. The giver must
+already possess the good, the effect must be genuinely produced
+rather than be an independent recipient supplying the needed
+perfection, and the productive direction must be shown. The ordinary
+gift example is not a witness of same-intrinsic-state varying
+choices. It explains why the necessity of a primary end need not
+be transmitted via *dependence on the means*, not why this particular
+exercise is metaphysically possible.
+
+Two further premises are not interchangeable: (i) D is not
+constitutively necessary to the source's own goodness; (ii) the
+source's essential rational policy does not require D. A giver
+who lacks nothing might nonetheless be bound by a unique moral
+requirement to make a particular gift. Even a genuine equally
+noble individual alternative does not establish substitutability
+within a complete order: changing a creature could affect other
+goods, recipient obligations and the compatibility of the history
+as a whole. The a.4 equal-nobility claim is positive source
+support for the alternative, not an all-orders admissibility
+proof. Reuse #1875's unique/tied optimum and omission controls.
+A policy can require some realization while not requiring any one
+particular realization; whether omission is admissible remains
+a separate question. The same constraints apply to an impersonal
+necessary producer with an essential normative/teleological
+policy if such a policy is defended.
+
+### 21. A narrower, constructive particularity argument
+
+Do not make the entire problem depend on the controversial claim
+that every created individual must be picked out by a separately
+individuating intrinsic intention. Distinguish intending that
+an entity of a determinate kind be produced, intending an actual
+entity's production under an adopted description, specifying its
+numerical identity antecedently, and intentionally specifying
+every fact about it. Those have different burdens.
+
+Consider a potter intentionally making two cups for two people.
+The cups may be qualitatively indistinguishable as cups. The
+potter's practical plan deliberately specifies two instances and
+their respective recipient roles, rather than an intrinsically
+individual name or primitive thisness for each cup. Once the plan
+is nondeviantly executed, each cup is deliberately made, not
+merely a fortuitous byproduct. The maker need not have identified
+an already existent cup before making it. A bystander may describe
+each cup equally accurately; a kiln accident producing a third
+cup does not make the third a deliberately made gift. A generic
+aim to make at least one cup does not intentionally adopt all
+further cups merely because they satisfy that aim. The adopted
+distributive scope and the actual production as its fulfillment
+matter. These are ordinary finite agency examples with intrinsic
+processes and pre-existing materials, not same-state or ex nihilo
+models.
+
+This suggests a specific sufficient-account candidate for intentional
+production of x without a separate pre-production singular
+identification of x: a genuine adopted content independently
+specifies a productive role or a distributive range, the source's
+exercise nondeviantly produces x *as an instance covered by that
+role*, and x's actual concrete identity is supplied by the
+productive realization and its individuating principles. The plan's
+coverage must not be defined as whatever the source happens to
+produce. A creator can in principle intend individuals through
+their originating productive role, rather than an intrinsic
+representation already containing their existence. No inference
+is made from a description to actual referential success or from
+origin to all essential properties. In particular, the same ultimate
+giver alone cannot fix the identity of x: the two-oak result and
+comparison in #1912 explicitly exclude this shortcut. The candidate
+needs the actual individualized effect, not the common source as
+an identity key.
+
+For #1459 the candidate reduces a *possible* application burden:
+willing this recipient's good need not require a separate
+individuating executive decision per recipient if a genuinely
+adopted distributive content includes that recipient's existence
+as a good for it, and the same source actualizes it as such.
+Neither mere knowledge of the whole nor production of every member
+entails the distributive intention. The foreseen-collateral rival
+still stands, and actual recipient-directedness, coextension,
+causal-esse and intent-to-effect bridges are still required.
+Use the existing a94c5dfc / c691e3d0 route and its restricted
+47c6da1b consumer, not a new route asserted to bypass the premise.
+A comparable account of de re practical knowledge for #1380 needs
+actual apprehension of the individualized product through the
+exercise; quantificational intention and its fulfillment do not
+entail complete singular knowledge.
+
+The result is narrower than the original complete-order question.
+A source might purposefully create each creature under relevant
+descriptions without selecting every individuating detail of the
+whole history, particularly if it intends secondary agents to
+exercise real powers. Even genuinely intentional particular
+production in this sense does not explain choosing an entire
+specific world rather than every rival. Keep the complete-order
+contrast and the actual obtaining of the volitional relation open.
+
+### 22. Assessment and revision
+
+The new source evidence favors the two-relations interpretation
+as Aquinas's positive proposal; compare Grant–Spencer (2015),
+*Activity, Identity, and God*, pp.54–56, including n.103 (a primary
+end does not individuate finite acts) and n.104 (their qualified
+sense of divine doing otherwise). [Text](https://philarchive.org/archive/GRAAIA-4)
+read in extraction; page images again inaccessible (HTTP 403).
+ST I–II q.18 a.6 co./ad 3 distinguishes the species of internal
+and external human acts, not numerical identity across worlds.
+Neither textual account proves restricted object essentiality.
+There is now positive warrant for a creator's independently
+specified practical content and a reason to distinguish de re
+coverage from antecedent singular individuation. This is a
+candidate weakening of the *application burden*, not a proof
+that the weaker package is instantiated.
+
+Moderate confidence in the explanatory relevance of expressive
+rather than acquisitive ends and the ordinary distributive
+intention distinction; retain suspension on actual contingent
+termination compatible with strict intrinsic invariance. The
+strongest rival agrees that a complete intrinsic principle need
+not be perfected by its effect and that distributive intention
+is possible, but holds that **actual adoption**, as opposed to
+available content, must be intrinsically determinate in a
+genuine intentional subject. It is not answered by appealing to
+the independence of the intrinsic principle from its objects.
+If it is right and the actual adoption differs across worlds,
+one must revise strict intrinsic invariance or the contingent
+effect/efficacy package. If actual adoption can be a substantive
+nonintrinsic exercise, the weaker concrete-existence PSR may be
+met, but the complete determining fact-level demand remains
+unsatisfied unless further reasons are supplied. Same test for
+an impersonal nonnecessitating exercise.
+
+Next meaningful test, not another object-essentiality paraphrase:
+apply the two-relations account to a fixed actual recipient and
+an explicitly adopted distributive specification. Ask what makes
+the source's adoption operative independent of the successful
+output, and which grounding/intentionality theory can meet that
+test with the strong simplicity commitment restored. Compare
+the stronger objection that the first relation cannot be
+explanatorily prior if it is wholly grounded in the effect, with
+the limited reply that an actual productive exercise is not
+grounded in *bare* existence of its product. The distinction
+between semantic dependence and metaphysical explanatory priority
+must be defended, not attributed to a.4 ad 15 as an already
+proved theory. As a horizontal next test, use #1731 actual
+self-understanding and #1380's reference/actual-knowledge
+requirements. Avoid reopening #1459's separately scoped research
+without coordination.
+
+No new registered statement, claim, sense, theorem, result or
+root edge. Existing note and attempt 7d015c02 only. Checked
+source locators, same-source witness, modal versus temporal and
+thin versus recipient-directed scope at author level. No new
+pinned source claim. Independent semantic challenge and
+canonical CLI/CI remain required; no verified premise delta
+claimed.
