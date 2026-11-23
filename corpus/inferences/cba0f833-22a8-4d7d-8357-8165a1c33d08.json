@@ -1,0 +1,13 @@
+{
+  "id": "cba0f833-22a8-4d7d-8357-8165a1c33d08",
+  "label": "Foundational beings are necessary at w, from esse distinct from essence in contingents (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "96971e31-4782-4478-95b8-b6863a6a9412"
+  ],
+  "output_statement_id": "666f06a4-bf39-40dd-97cf-613796e7b042",
+  "rule": "Reductio on possible absence by B6",
+  "meaning": "B6's verdict at the foundational case. A foundational f exists at w with represented esse equal to its essence; were it absent at an accessible world it would be contingent, and B6 (every contingent being has esse distinct from essence) would contradict that identity. Only actuality and esse = essence are used.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

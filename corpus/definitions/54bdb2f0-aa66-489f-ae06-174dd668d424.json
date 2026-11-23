@@ -1,0 +1,9 @@
+{
+  "id": "54bdb2f0-aa66-489f-ae06-174dd668d424",
+  "label": "Existence-conditional essence: every essential truth about x holds wherever x is absent",
+  "term": "existence-conditional essence (ExistenceConditionalEssences), with entailment of existence (EntailsExistence)",
+  "definition": "ExistenceConditionalEssences F Essential: for every being x and world-proposition φ, if it lies in the nature of x that φ, then φ holds at every point of the frame's world type at which x is absent; that is, x's essential truths have the form 'if x exists, ...' (Fine's and Lowe's reading of essence as existence-conditional; navigation only). EntailsExistence F φ x: φ holds only at points where x exists. Under existence-conditional essences, once some point lacks x, no essential truth of x entails x's existence (controls, law 4): x's own nature cannot make it necessary.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Modal.ModalGrounding.ExistenceConditionalEssences",
+  "note": "Stipulated for #1887. The Lean declaration is a defined predicate over the primitive Essential parameter (DEF 7cf63236-9c12-41bc-bf20-6fbce7a121db), used as an OPEN framework premise. Examples: 'necessarily, if Socrates exists, Socrates is human'. Non-examples: an unconditional essential truth that x exists (unconditional essentialism, Lowe's necessary existents), which it excludes for any x whose absence is representable (controls, law 3). Contrast: unconditional essentialism lets existence itself belong to an essence (EsseEssenceIsEssentialExistence). The representability side condition (some point of the world type lacks x) is an explicit premise wherever it is used, not part of this definition: if no point lacks x, the condition is vacuous for x. Open obligations: whether essential truths are world-propositions over the frame's points; whether the logical space includes a point lacking a foundational being (FoundationalAbsenceRepresentable)."
+}

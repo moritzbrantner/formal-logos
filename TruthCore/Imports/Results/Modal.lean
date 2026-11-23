@@ -42,6 +42,8 @@ public import TruthCore.Results.Modal.K.ScopeBoundary.Solution
 public import TruthCore.Results.Modal.LimitationPossibility.Control.Solution
 public import TruthCore.Results.Modal.LimitationPossibility.Solution
 public import TruthCore.Results.Modal.LimitationSeparation.Solution
+public import TruthCore.Results.Modal.ModalGrounding.Solution
+public import TruthCore.Results.Modal.ModalGroundingActualAbsence.Solution
 public import TruthCore.Results.Modal.NecessaryBeingMeasure.Solution
 public import TruthCore.Results.Modal.NecessaryIfConnectivity.Solution
 public import TruthCore.Results.Modal.NecessaryIfExistent.Solution
@@ -52,6 +54,7 @@ public import TruthCore.Results.Modal.PopulationClosureExactImpliesAmalgamation.
 public import TruthCore.Results.Modal.PopulationClosureSeparation.Solution
 public import TruthCore.Results.Modal.PossibilityTransfer.Solution
 public import TruthCore.Results.Modal.PossibleImpossibility.Solution
+public import TruthCore.Results.Modal.PrussPowerPremises.Solution
 public import TruthCore.Results.Modal.ReasonResponseHistory.Solution
 public import TruthCore.Results.Modal.ResearchFixture.Solution
 public import TruthCore.Results.Modal.RetainedDuty.Solution

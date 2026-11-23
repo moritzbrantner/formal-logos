@@ -1,0 +1,16 @@
+{
+  "id": "906f5c39-2a63-4dc2-955d-a00cfd8a976b",
+  "label": "A power for the actual contingent concreta's joint absence issues in a world where its holder exists",
+  "paraphrase": "OPEN (P2-prime, initiator presence; analyst reconstruction): whatever has at w a power for the joint absence of the concrete beings contingent at w (one world lacking them all) can exercise it so that, at some world accessible from w, every such being is absent and the holder exists. With the frame's tenseless world-relative existence, the initiator of a chain exists in the world of that chain. Compared with Pruss's principle that x cannot start any chain of causes that can lead to actuality's not including x (navigation only, not attributed): his is universal over chains, this is existential and builds in that the power's outcome is an accessible world; and his direction is mirrored (his holder is in the non-actual world, with a power for the actual world's being actual, and he uses S5 for that world to reach the actual one).",
+  "lean_declaration": "TruthCore.Modal.ModalGrounding.ActualAbsenceInitiatorPresent",
+  "definition_ids": [
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

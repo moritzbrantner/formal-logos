@@ -1,0 +1,9 @@
+{
+  "id": "b2e22524-357f-47b5-814f-0a0e59f0d612",
+  "label": "EXISTENCE_IN_ESSENCE_3: x's represented esse is its represented essence (act identity)",
+  "term": "existence belongs to the essence, act identity (EXISTENCE_IN_ESSENCE_3)",
+  "definition": "EsseIsEssence essenceOf esseOf x := esseOf x = essenceOf x, for the q.3 a.4 represented esse and essence maps (ESSENCE_3): x's essence just is its act of being. An identity of principles with no world index. It is not a predicate or a determination contained in a quiddity, and by itself it says nothing about x at other points.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ontology.ExistenceInEssence.EsseIsEssence",
+  "note": "Stipulated for #1887. Sense EXISTENCE_IN_ESSENCE_3 of the disambiguation f704b7ca-b455-4da7-a757-b0564fe76b3b. The thesis of ST I q.3 a.4 (read, New Advent) and the exception named in De ente c.4 ('unless perhaps there is something whose quiddity is its very own existence', read, Miller translation); analyst formulation, attribution deferred. It reaches essential truth (EXISTENCE_IN_ESSENCE_2) only through the bridge 565ccd6c-0036-4613-8595-f6f03d273a0d, which factors into the act–fact link and exercise in the nature (docs/notes/existence-in-essence-identity.md)."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "a47906a5-7476-4521-bd17-e0af890aee1b",
+  "label": "POWER_OVER_ESSE_1 over each actual contingent concretum, by the transfer bridge",
+  "argument_id": "18ad47bf-e45d-4f0b-866e-e1e2697d2229",
+  "challenge_module": "TruthCore.Results.Modal.PrussPowerPremises.Challenge",
+  "solution_module": "TruthCore.Results.Modal.PrussPowerPremises.Solution",
+  "theorem": "TruthCore.Results.Modal.PrussPowerPremises.transferGivesPowerOverEachActualContingent",
+  "comparator_config": "results/a47906a5-7476-4521-bd17-e0af890aee1b/comparator.json",
+  "status": "solution-present",
+  "description": "The transfer applied to the route with Pruss's own premise (#1887 gap 3), without a Euclidean premise. Not a transcription: the transfer premise is conditional on the collective power, which P1-prime supplies. Establishes no premise. With excluded middle its conclusion gives PGP's verdict at every concrete foundational being (controls, law 9). The transfer bridge is not derivable from the collective power as typed (controls, collective without distributive); its conclusion has a second support option from the creator reading (withholding route)."
+}

@@ -1,0 +1,9 @@
+{
+ "id": "bd4c434d-be19-43ca-936b-f33eb6c15a8c",
+ "label": "Varying giving: y gives being otherwise at an accessible world where it exists (GivingVariesAt)",
+ "term": "varying giving (GivingVariesAt)",
+ "definition": "GivingVariesAt F w y: y exists at w and, at some world v accessible from w where y also exists, y does not give being (GivesTo, DEF 62dfa893-b633-4513-9790-8f9a0a3087e0) to exactly the same beings as at w. A fixed giver (DEF 7bc1d667-fda2-4744-b055-9ba6cbe7f648) never has it.",
+ "basis": "stipulative",
+ "lean_declaration": "TruthCore.Modal.PrussPowerPremises.GivingVariesAt",
+ "note": "Analyst definition, attribution deferred. The extensional signature of an exercise that the holder's existence does not fix. It covers giving something new (replacement) and withholding; it does not say what decides the difference (choice, chance, an external condition). Examples: a necessary being that gives a creature being in the actual world and not in another (theist surrogate); a necessary source that produces a different array in another world (replacement surrogate). Non-examples: an inert being; a necessitated emanative source. #435 (NecessaryContingentActivity) and #462 (NecessaryVariableEffects) show the analogous varying activity on the world-level Ontic.Causes, a different relation."
+}

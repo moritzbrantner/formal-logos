@@ -1,0 +1,11 @@
+{
+  "id": "8ad1804e-06d1-4491-ba96-d3382245f2ad",
+  "label": "Pruss power premises controls checked",
+  "argument_id": "dab8d966-9b7d-4f09-b911-f9d92444f5ab",
+  "challenge_module": "TruthCore.Results.Modal.PrussPowerPremises.Challenge",
+  "solution_module": "TruthCore.Results.Modal.PrussPowerPremises.Solution",
+  "theorem": "TruthCore.Results.Modal.PrussPowerPremises.prussPowerControls",
+  "comparator_config": "results/8ad1804e-06d1-4491-ba96-d3382245f2ad/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free laws and models for the power premises of the route with Pruss's own premise. Sense-mixing control: they relate MODAL_CONTINGENCY_1, NECESSARY_2, POWER_OVER_ESSE_1 and the frame (NECESSARY_11 carrier) without a bridge premise. Establishes no premise."
+}

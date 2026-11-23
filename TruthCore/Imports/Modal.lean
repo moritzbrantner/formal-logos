@@ -37,6 +37,7 @@ public import TruthCore.Modal.KResearch
 public import TruthCore.Modal.Kripke
 public import TruthCore.Modal.LimitationPossibility
 public import TruthCore.Modal.LimitationSeparation
+public import TruthCore.Modal.ModalGrounding
 public import TruthCore.Modal.NecessaryBeingMeasure
 public import TruthCore.Modal.NecessaryContingentActivity
 public import TruthCore.Modal.NecessaryIfConnectivity
@@ -47,6 +48,7 @@ public import TruthCore.Modal.OptimalCreationChoice
 public import TruthCore.Modal.PastSerialityCertificate
 public import TruthCore.Modal.PossibilityTransfer
 public import TruthCore.Modal.PossibleImpossibility
+public import TruthCore.Modal.PrussPowerPremises
 public import TruthCore.Modal.ReasonResponseHistory
 public import TruthCore.Modal.ResearchFinite
 public import TruthCore.Modal.ResearchFixture

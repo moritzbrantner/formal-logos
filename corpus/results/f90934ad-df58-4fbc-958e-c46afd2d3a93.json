@@ -1,0 +1,11 @@
+{
+  "id": "f90934ad-df58-4fbc-958e-c46afd2d3a93",
+  "label": "A necessary concrete power-holder for no contingent concretum, by Aristotelian modality",
+  "argument_id": "be4b04bf-9050-4278-80ce-574d1505d9eb",
+  "challenge_module": "TruthCore.Results.Modal.ModalGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalGrounding.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalGrounding.prussNecessaryPowerHolder",
+  "comparator_config": "results/f90934ad-df58-4fbc-958e-c46afd2d3a93/comparator.json",
+  "status": "solution-present",
+  "description": "Test 5's route to a necessary concrete being. Not a transcription: no premise mentions a necessary being. Establishes no premise. It uses neither PGP nor C2 (controls, prussWithoutPGP); each non-logical premise is needed (controls, six Pruss omission models). It uses the global possibility premise, a stronger analyst variant that Pruss declines; its Euclidean premise is an artefact of that variant (the holder is shown non-contingent at the contingent-free world, not at w), and the sibling with Pruss's own premise needs none (specs/modal-grounding-actual-absence.toml). Neither NECESSARY_2 nor STMT-NECESSARY-CONCRETE-AT assumes Euclidean access; on Euclidean frames the unrestricted conceivability bundle of law 9 is inconsistent, a cross-route dependency. It is not independent of the C2 crux's modal theory: P1 is power-grounded modality applied to a global possibility; with P4, Euclidean access and the transfer bridge (whose warrant is open) it yields PGP's power channel for every concrete contingent being (controls, laws 5-6)."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "30691e4c-ff76-43c0-999c-01c76bb23be8",
+  "label": "Foundational beings are necessary at w, from power grounding",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "20d5fecd-950e-42f8-8dc9-3014491ff6ae"
+  ],
+  "conclusion_statement_id": "666f06a4-bf39-40dd-97cf-613796e7b042",
+  "inference_ids": [
+    "4dc41cc1-c2ba-4ec2-b1f7-6e70d919f087"
+  ],
+  "meaning": "PGP's verdict at the foundational case. Take a being f foundational at w and a world v accessible from w; excluded middle decides whether f exists at v. Were f absent there, it would be contingent at w, and PGP would make it corruptible simply or put it under some being's power over its esse; the foundational profile excludes both, each by its own clause (incorruptibility for POSSIBLE_NOT_TO_BE_1, the no-power clause for POSSIBLE_NOT_TO_BE_2). So f exists at every accessible world. No step passes from one sense of 'possible not to be' to the other: the sense bridge names PGP as the premise in which both occur, as alternative channels. Only the profile's actuality, incorruptibility and no-power clauses are used: simplicity, unreceivedness, firstness and uncausedness are idle here (under correlation, the no-power clause itself follows from uncausedness and incorruptibility, controls law 1).",
+  "definition_ids": [
+    "3fd6bddb-f10c-4df4-8694-3eb5e7c28617",
+    "7fcf846e-d0ef-400e-89c0-7c82b94edde7",
+    "c8113f31-6208-5992-9ca4-712887a4594b",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"
+  ],
+  "disambiguation_ids": [
+    "a13627bc-6b76-542d-9ca2-8c93487f685a",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "ed4f1f3f-d0c2-57b7-8ce7-52245db29d79",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "d25cee67-1d5c-4a4c-bda5-8571b731ddf3",
+    "f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5"
+  ],
+  "sense_bridges": [
+    {
+      "term": "POSSIBLE_NOT_TO_BE",
+      "from": "3e559843-f12d-4621-acc5-801083f484f9",
+      "to": "77448ffb-28ee-4276-b95c-1e584ad4d198",
+      "statement_id": "20d5fecd-950e-42f8-8dc9-3014491ff6ae"
+    }
+  ]
+}

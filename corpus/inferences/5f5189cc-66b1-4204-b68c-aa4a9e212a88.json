@@ -1,0 +1,14 @@
+{
+  "id": "5f5189cc-66b1-4204-b68c-aa4a9e212a88",
+  "label": "The stage-one node, by the distributive powers at a concrete foundational being (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "eb41bc9a-c78f-475c-933e-46c332d0357d",
+    "c5da5e62-a9cd-4142-8d3a-a96f86548e88"
+  ],
+  "output_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+  "rule": "The foundational being is under no power over its esse, so it is not an actual contingent concretum; excluded middle",
+  "meaning": "A concrete foundational being f at w is under no being's POWER_OVER_ESSE_1. Were it absent at a world accessible from w, it would be a concrete being contingent at w, and the holder would have POWER_OVER_ESSE_1 over it. So, with excluded middle, f exists at every world accessible from w; being concrete and actual, it witnesses the stage-one node.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

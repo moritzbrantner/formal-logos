@@ -1,0 +1,11 @@
+{
+  "id": "39df9612-e51f-42f9-be2f-9fad11f65469",
+  "label": "Foundational beings are necessary at w, from esse distinct from essence in contingents",
+  "argument_id": "ad6560ff-6fb7-475e-a774-86002f6e69d6",
+  "challenge_module": "TruthCore.Results.Modal.ModalGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalGrounding.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalGrounding.esseIdentityFoundationalNecessary",
+  "comparator_config": "results/39df9612-e51f-42f9-be2f-9fad11f65469/comparator.json",
+  "status": "solution-present",
+  "description": "The esse-identity route (#1870 route C) gives the same verdict as PGP from a different premise. Not a transcription. Establishes no premise. B6 is supported here by unconditional essentialism and contested by existence-conditional essentialism (controls, laws 3-4)."
+}

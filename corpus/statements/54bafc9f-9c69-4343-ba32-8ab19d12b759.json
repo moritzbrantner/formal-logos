@@ -1,0 +1,10 @@
+{
+  "id": "54bafc9f-9c69-4343-ba32-8ab19d12b759",
+  "label": "Whatever lies in a being's nature holds at every world accessible from w",
+  "paraphrase": "OPEN (essence grounds necessity), analyst formulation: for every being x and world-proposition phi, if it lies in the nature of x that phi (the primitive Essential relation, Fine's box-sub-x), then phi holds at every world accessible from w. Accepted by existence-conditional and unconditional essentialists alike; the converse (necessity gives essence) is not asserted.",
+  "lean_declaration": "TruthCore.Modal.ModalGrounding.EssenceGroundsNecessity",
+  "definition_ids": [
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ]
+}

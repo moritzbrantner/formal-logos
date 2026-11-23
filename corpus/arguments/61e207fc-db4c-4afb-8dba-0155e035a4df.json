@@ -1,0 +1,31 @@
+{
+  "id": "61e207fc-db4c-4afb-8dba-0155e035a4df",
+  "label": "A necessary concrete varying giver, from Pruss's grounding and P2-delta",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "95bf8780-0e3c-49ba-b636-2274e2997a30",
+    "5cf75a6b-c3be-4ed5-acdf-c163383dd7f2",
+    "a6906cab-59c4-4938-b6d1-991369e8ffb0",
+    "18e5bd4e-8178-468e-b867-fbaf9c5988ad",
+    "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174"
+  ],
+  "conclusion_statement_id": "256a5e0a-d287-43d8-b52e-ec55c9eb89ed",
+  "inference_ids": [
+    "e28f8e1d-b2d7-47cb-808d-e9ae9302de80"
+  ],
+  "meaning": "P2-delta gives P2-prime (forget the difference in giving), so the route with Pruss's own premise (42da6b2d, theorem prussActualAbsenceNecessaryPowerHolder, reused) gives a concrete holder y existing at w and at every accessible world, with a power for the joint absence; P2-delta applied to y gives an accessible world where y exists and gives being otherwise than at w.",
+  "definition_ids": [
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "bd4c434d-be19-43ca-936b-f33eb6c15a8c",
+    "bf7eddca-8291-4744-8470-379babcd7781"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

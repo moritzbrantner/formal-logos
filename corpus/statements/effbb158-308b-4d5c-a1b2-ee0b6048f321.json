@@ -1,0 +1,13 @@
+{
+  "id": "effbb158-308b-4d5c-a1b2-ee0b6048f321",
+  "label": "Whatever lies in a being's nature is contained in the supplied concept of it",
+  "paraphrase": "OPEN (concept adequacy), analyst formulation: for every being x and world-proposition phi, if it lies in the nature of x that phi (ESSENCE_5), then phi is a determination contained in the supplied concept of x. True by construction of a concept adequate to the nature; false of a concept formed only from a being's effects whenever its nature has content those effects do not give (controls, kantAquinas). The bridge by which Kant's conceptual thesis reaches essential truth (controls, laws 2-3).",
+  "lean_declaration": "TruthCore.Ontology.ExistenceInEssence.ConceptAdequateToEssence",
+  "definition_ids": [
+    "16c40fbe-8a86-464a-a868-384103e11304",
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db"
+  ],
+  "disambiguation_ids": [
+    "f704b7ca-b455-4da7-a757-b0564fe76b3b"
+  ]
+}
