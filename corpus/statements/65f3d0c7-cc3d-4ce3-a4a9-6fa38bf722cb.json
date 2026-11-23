@@ -1,0 +1,16 @@
+{
+  "id": "65f3d0c7-cc3d-4ce3-a4a9-6fa38bf722cb",
+  "label": "Identity-scoped receipt: an esse-identical being receives its esse only in its essence",
+  "paraphrase": "OPEN R3, identity-scoped instance of the existing unrestricted EsseReceivedOnlyInOwnEssence law: only IF esseOf x equals essenceOf x does receipt of its esse have to be in its very essence. No universal restriction on the recipients of other beings. This respects the preexisting united-soul/body scope issue in EsseReceptionDefinitionFork; it does not assert a recipient exists or make equality itself modal necessity.",
+  "lean_declaration": "TruthCore.Causality.FirstMoverNecessity.IdentityScopedEsseReception",
+  "definition_ids": [
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "8bb31748-e20f-5266-ac39-c442faab6622",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1"
+  ]
+}

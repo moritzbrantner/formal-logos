@@ -182,7 +182,7 @@ export function ModalExplorer() {
             <ReactFlow
               edges={cubeEdges}
               fitView
-              fitViewOptions={{ padding: 0.12 }}
+              fitViewOptions={{ padding: "5.36%" }}
               maxZoom={1.4}
               minZoom={0.35}
               nodes={cubeNodes}
@@ -274,7 +274,7 @@ export function ModalExplorer() {
             <ReactFlow
               edges={worldFlowEdges}
               fitView
-              fitViewOptions={{ padding: 0.28 }}
+              fitViewOptions={{ padding: "10.94%" }}
               maxZoom={1.6}
               minZoom={0.5}
               nodes={worldNodes}

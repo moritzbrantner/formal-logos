@@ -1,0 +1,24 @@
+{
+  "id": "e18d19fd-1eb5-4f58-90ab-ede3ebfa7365",
+  "label": "Parity: a feature-uniform demand for a reason why excludes a brute contingent truth",
+  "premise_statement_ids": [
+    "3ab9d002-8d4f-441d-9292-e777170f242f",
+    "64715bf1-5a0a-4f8a-8965-f96aa920b0b3",
+    "460aca64-ec25-4e39-ad77-e33beb7d1e12"
+  ],
+  "conclusion_statement_id": "fbf3f3e0-fc9c-49a6-847a-6a649ead0696",
+  "inference_ids": [
+    "392b263e-aabc-4877-92dd-ad2fcb9e937a"
+  ],
+  "meaning": "The owner's parity argument, analyst formulation, attribution deferred. The stance requires a reason why the target exists (P1), its demand is uniform in a feature k (P3) on which the target and the accepted fact o agree (P2). So it requires a reason why o obtains. If it met its demand and accepted o, o would have a reason, so it is not a brute contingent truth. For the naturalist who rejects an unreasoned God, God's existence as a mere brute fact in the owner's wording (target God, o the contingent foundation), it excludes the brute-contingency rival. This form concerns contingent o only: for a necessary o it holds vacuously, so the symmetric form is the stronger sibling (no reason at all, contingent or not). It establishes neither B2 nor that anything has a reason, it does not answer whether there is evidence for God, and it binds only stances that hold P1, P2 and P3 for one feature.",
+  "definition_ids": [
+    "fad6a806-713b-5318-8309-488af704d614",
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "179d4557-bda1-59c4-938a-b91e9974a27f",
+    "a17def9d-5354-4510-8a2e-34436ff486d4",
+    "d0f8d6b9-8086-4bf7-95e1-46bb74d76398"
+  ],
+  "disambiguation_ids": [
+    "a61d3807-50e9-595e-9011-9123fd606a4b"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "fbf3f3e0-fc9c-49a6-847a-6a649ead0696",
+  "label": "The stance cannot meet its demand for reasons why and accept the fact as a brute contingent truth",
+  "paraphrase": "Conclusion of the parity argument: in any picture and at any world, the stance does not at once meet its demand for reasons why, accept the fact o, and have o a contingent truth with no reason there. For o the existence of the contingent foundation, the stance cannot hold the brute-contingency rival. It is a consistency verdict on the stance; it does not say o has a reason, and it does not establish B2. For a necessary o (God's existence, a necessary base) it holds vacuously, since BruteAt requires contingency; the stronger sibling without contingency is what binds acceptance of an unreasoned necessary existent.",
+  "lean_declaration": "TruthCore.Explanation.BruteContingencyParity.ExcludesBruteRival",
+  "definition_ids": [
+    "d0f8d6b9-8086-4bf7-95e1-46bb74d76398",
+    "fad6a806-713b-5318-8309-488af704d614",
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "179d4557-bda1-59c4-938a-b91e9974a27f"
+  ],
+  "disambiguation_ids": [
+    "a61d3807-50e9-595e-9011-9123fd606a4b"
+  ]
+}

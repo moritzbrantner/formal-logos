@@ -1,0 +1,10 @@
+{
+  "id": "b6c7a7b5-f2a3-47e5-8018-b6b10aa75daa",
+  "label": "Indexed compact-time operations are finite, by Mathlib compact local finiteness",
+  "input_statement_ids": [],
+  "output_statement_id": "f7339c08-e291-482b-af00-a0b74a1f3273",
+  "rule": "mathlib-locally-finite-compact-intersection",
+  "meaning": "Use Mathlib's locallyFinite.finite_nonempty_inter_compact with the singleton time set attached to each operation index and isCompact_Icc on the real interval. All indices whose timestamp lies in [a,b] also have singleton time sets meeting [a,b]. This derives finite indices with no injectivity of the time assignment. Its explicit conditional local-finiteness hypothesis is inside the universally quantified proposition.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -633,3 +633,187 @@ GOD_4 application remain explicit gaps, with no invented inferential edge or
 transfer to ontic requirement or efficient causation. Existing attempt
 `74008d2a-4029-53ec-a795-c07fee054f39` preserves this proposed outcome. No premise
 or formal-meaning completion is claimed by this consumer note.
+
+## Brute contingency and parity (B2, 2026-11-23)
+
+Target: the open bridge B2 `8a8d00e9` ("every being contingent at w has a distinct
+CAUSE_2 of its esse", `FirstMoverNecessity.ContingentHasDistinctEsseCause`), which
+carries the First Way's own first mover to necessity in `firstMoverNecessaryByEsseCause`.
+Spec `specs/b2-brute-contingency-parity.toml`; vocabulary
+`TruthCore.Explanation.BruteContingencyParity`; results in
+`TruthCore.Results.Explanation.BruteContingencyParity.Solution`. Analyst formulations,
+attribution deferred; no source claim. Models are finite logical boundaries.
+
+**Current conclusion.** B2 gains two further conditional support options on the
+shared frame, both verified and non-transcription. Its strongest rival, brute
+contingency, is recorded at B2's scope with the denials it entails. The owner's parity
+argument is valid and stance-level. In its brute-contingent form it removes the
+rival's standing for any stance that rejects an unreasoned God on the reason-status
+feature and is uniform in it; in its stronger symmetric form (no reason at all,
+contingent or not) it also binds a theist who rejects unreasoned contingents, under
+the same premises. It is not support for B2. With unreasoned existence rejected on
+both sides, what remains is a comparison of explanations of existence. That
+comparison is not settled here: the scene gives scene-relative tallies of unexplained
+existents, which rank nothing by themselves (#746 count control), and any ranking
+rests on an open comparative principle (the #750 adequacy norm) together with the
+open adequacy of a self-reason ("existence by its own nature"). The arena cannot
+separate a self-explained God from a self-explained necessary physical base.
+
+### Support options for B2
+
+| Result | Premises | What it shows |
+| --- | --- | --- |
+| `7bf9cb77` `esseCauseFromExistenceReasons` | local existence PSR for contingents `608a262d`; BX1 `6c6191dc` (no reason for a contingent being's existence is about itself); BX2 `0e44041e` (the other being such a reason is about causes its esse) | B2. Splits B2 into reason coverage (which brute contingency denies) and reason-to-cause (which a rival with non-causal reasons for contingent existence would deny). |
+| `19260537` `esseCauseFromGroundingClosure` | contingents concrete `a1a00ab5`; STMT-EVERY-CONTINGENT-GROUNDED-AT; existing `98efaa9e` (actual concrete ground is a distinct CAUSE_2 of esse) | B2. Shares the closure with the existing grounding route, so a connection, not independent warrant. The interface leaves contingent abstracta (e.g. impure sets) untreated. |
+
+Neither bridge is a relabelling of B2: B2 holds without the existence PSR (model 5) and
+without BX1 (model 6), and each premise of both bundles has an omission model
+(`4c79358e`, models 1-3 and 7-9) with nonvacuity models 4 and 10. The contingent-only
+existence PSR is the restriction of STMT-NO-BRUTE-EXISTENCE-AT (a law of the controls);
+no `strengthens` relation is registered because any new argument with that statement as
+premise fails the sense check (it links both senses of
+BRUTE_EXISTENCE_FACT_VERSUS_GROUNDING_BRUTE), and that pre-existing record was left
+unchanged.
+
+### The rival at full strength
+
+`b36104ba`: some being contingent at w has no distinct CAUSE_2 of its esse and no
+reason for its existence; `alternative_to` B2 and the contingent existence PSR. Same
+frame, same world, same CAUSE_2; witnessed by the First Way's mover in the existing
+`bruteFirst` model, which satisfies every other premise of the five necessity routes.
+That model is a fact about one formal interpretation, not evidence against B2.
+
+- *Positive replacement account:* a contingent foundation (initial state or
+  foundational being) whose existence is a brute fact.
+- *Strongest positive support:* the #755 collapse core (necessitating, distributing
+  reasons with an aggregate of all contingent truths leave no contingency) binds the
+  necessitating PSR, not the bare-reason coverage used here; Kleinschmidt's EP
+  (#312, read and pinned) removes one epistemic defense of coverage and does not show
+  that any existent has no reason (pp.78–79). No recorded independent justification
+  for the rival reaches B2's scope.
+- *Entailed denials (controls, laws):* it denies the contingent existence PSR at w and
+  with it the contingent-fact PSR at w; it rejects at least one member of each support
+  bundle for B2 (existence PSR/BX1/BX2; concreteness/closure/ground bridge;
+  B6/existence-to-act/q.3 a.4); it takes the brute horn of the #746 stopping-point
+  fork. Their weight is only the warrant of the denied premises, all open.
+- *Conditional cost:* EvidenceBridge follows from the contingent-fact PSR the rival
+  denies and is not one of its commitments; if it held, the foundation's existence
+  could not be used as evidence.
+- *Scope:* the `alternative_to` relation concerns the brute contingent foundation
+  only. An unreasoned or self-explained necessary physical base is compatible with B2
+  and does not instantiate `b36104ba`; it is a rival to the later identification of the
+  necessary root with God (comparison below).
+- *Revision conditions:* an independent argument that some contingent existent has no
+  reason, or a defeat of contingent existence coverage that does not equally defeat its
+  use in inquiry.
+
+### The parity argument (owner direction, refined 2026-11-23)
+
+`6e7f5afd` `parity`: P3 `3ab9d002` (the stance's demand for reasons why is uniform in a
+feature k), P1 `64715bf1` (it requires a reason why the target obtains), P2 `460aca64`
+(target and accepted fact agree on k) give `fbf3f3e0`: the stance cannot meet its
+demand and accept the fact as a brute contingent truth. The demand is ONTIC
+(`WhyStance.requiresWhy`, a reason why), not #756's epistemic `demands`; a new
+structure was needed for that reason, and the #756 standings are reused unchanged
+through `whyView`. P1 is an analyst formulation; it is attributed to no author.
+
+That conclusion uses `BruteAt` (contingent and unreasoned), so for a necessary `o`
+(God's existence, a necessary base) it holds vacuously and binds no theist. The
+symmetric form is the sibling `8fba6dd2` `parityUnreasoned`: under the same P1-P3 it
+gives `9df516be`, that the stance cannot meet its demand and accept the fact with no
+reason at all, contingent or not. `117f8bc3` and a `strengthens` relation register
+that `9df516be` strengthens `fbf3f3e0`.
+
+The map `a1056aab` (`13c05b6d`) records, for both sides:
+
+- *Symmetric binding, through `9df516be`.* A naturalist (`uniformRejector`, target
+  God) and a theist (`reasonStatusTheist`, target the initial state) each satisfy P1-P3
+  in the reason-status feature, and neither can accept an unreasoned existent: the
+  initial state in `naturalist`, God in `bruteGod`. For the necessary God of
+  `bruteGod` the brute-contingent conclusion holds only vacuously. The naturalist
+  requiring reasons why for all it accepts meets its demand with a self-explained base
+  and not with an unreasoned one.
+- *Both sides alike* (#746 second core, reused): factive, well-founded reasons with a
+  truth leave some truth unreasoned. A picture with nothing unexplained needs reasons
+  that are not well-founded: a self-reason, a circle or an infinite chain. In the scene
+  it is a self-reason at the terminus. A circle (#755 `mutualReasons`) and an endless
+  regress of contingents, each explained by its predecessor (#746 `cofinite`, no
+  terminal fact), are not scene pictures; the regress faces the whole-series question
+  (an aggregate of all contingent truths is a member of the #755 collapse core; the
+  whole-series standards of attempt a5958e25). Named gap.
+- *Scene-relative tallies, at the reading world, of the unexplained existents.* They
+  rank nothing by themselves: a bare preference for fewer unexplained facts favours
+  `copy bruteTerminus`, which gains a reason and loses independence (#746 count
+  control, which "defeats only the bare count"). A ranking needs an explicitly stated,
+  open comparative principle such as the #750 adequacy norm. Tallies: many diverse brute
+  contingents: atom and star (2); one brute contingent initial state (1); one
+  unreasoned necessary physical base (1); one unreasoned God (1); a self-explained base
+  or God: none. Counting only necessitating reasons, the self-explained base and God
+  both leave the contingent initial state (the free choice, or an indeterministic
+  output), and the unreasoned-terminus pictures leave the terminus and the state. The
+  self-explained base and God pictures agree with God and base exchanged.
+  "Unexplained" is DISAMB-BRUTE-TERMINAL-UNREASONED's unreasoned: a necessary fact
+  with no reason is unreasoned, not brute.
+- *Which stances are bound.* `godOnly` (reason why for God only) is bound exactly
+  when its ground is the reason status: it is uniform in idleness and selective in the
+  reason-status feature. Not bound: `evidential` and `symmetric` (no P1), idleness (P2
+  fails: idleness is baseline-relative, so the difference is real, and its verdict
+  against the theist reduces to whether a self-reason counts). The `symmetric` stance
+  requires no reason why for God or the world; a Hume/Russell-type stance has more
+  options than stopping at the world: it may also explain each contingent member by its
+  predecessor and deny that the whole needs a further reason (the regress gap above,
+  #755 history models and attempt a5958e25). Only its brute-stopping variant carries
+  the rival's entailed denials.
+- *The theist under the same tests.* It meets its demand with some reason and fails
+  it with necessitating reasons, as every stance must whose contingent fact has only a
+  reason true at every world. Its self-reason counts under contingent irreflexivity
+  only while God is noncontingent (`contingentGod` fails it).
+- *Asymmetry check (DISAMB 13843b8b, B6).* Under BX1, an own-nature reason token
+  (NECESSARY_EXISTENCE_BY_OWN_NATURE_4) at w excludes contingency at w; without BX1 a
+  contingent being can carry one (model 2), so _4 alone has no modal force. Deriving
+  God's noncontingency from an own-nature token needs only the God instance of BX1;
+  under the essence = esse reading of own nature (`natureModel`, where BX1 at w is
+  exactly B6 at w), that is B6's instance at God. That reading is itself a choice the
+  disambiguation keeps open. God's noncontingency supplied by another route also
+  satisfies contingent irreflexivity. Separately, whether the self-reason is a reason
+  at all (adequacy) stays open.
+
+**Evidence is not explanation.** In the naturalist picture an observation (the atom)
+supports that the initial state exists, and the initial state has no reason why it
+exists; the evidential stance meets its epistemic demand there and still holds the
+state as a brute contingent truth. So rejecting God for lack of evidence is no exit
+from the brute-or-explained choice for contingent existents. Conversely, this argument
+does not answer whether there is evidence for God; that is a separate question.
+
+**Naturalist pictures with one terminus, compared at matching scope.** No ranking is
+asserted; the owner's comparative claim (that the theist's single self-explained
+terminus explains existence better than unexplained contingents) is recorded as resting
+on an open comparative principle (#750) together with the open adequacy of a
+self-reason, not on the tallies.
+
+- *A brute contingent initial state.* It denies the contingent existence PSR and is
+  the B2 rival above. It cannot take a self-reason: contingent irreflexivity excludes
+  a self-reason for a contingent fact.
+- *A necessary physical base.* It is compatible with B2 and the contingent existence
+  PSR. Unreasoned, its tally equals an unreasoned God's (1 each). Given a self-reason,
+  its picture and the theist's agree with God and base exchanged, and the arena (no
+  predicate for personal agency) cannot discriminate further. The comparison then
+  moves to which necessary ground explains better: uniqueness of the necessary root,
+  its attributes, and non-necessitating work (the existing necessary-root uniqueness and
+  attributes work), not to bruteness. It is a rival to the later identification of the
+  root with God, not to B2.
+
+A naturalist who accepts brute contingents while rejecting existence-by-nature for God,
+and accepts it nowhere, carries the rival's entailed denials above; one who accepts it
+for a necessary physical base has moved to the necessary-ground comparison.
+
+**Gaps and next tests.** BX1 and BX2 need warrant (BX2's rival: reasons for contingent
+existence by a non-causing occasion, model 3). The interface "contingents are concrete"
+needs a treatment of contingent abstracta or a restriction of B2. The admissibility of a
+self-reason for a necessary terminus (adequacy, not just noncontingency) is open for God
+and a physical base alike. The comparative principle that would rank explanations of
+existence (#750) is open. Circles and the endless regress of contingents are not in the
+scene. Next: test whether the necessary-root uniqueness and
+attributes results discriminate a self-explained God from a self-explained physical base
+at matching scope; seek a derivation of BX1 from contingent irreflexivity and B6.
+Attempt `b7860c60-202d-4ca7-9156-630a51a1e8b3`.

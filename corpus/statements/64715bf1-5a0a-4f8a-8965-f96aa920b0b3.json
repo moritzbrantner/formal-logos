@@ -1,0 +1,13 @@
+{
+  "id": "64715bf1-5a0a-4f8a-8965-f96aa920b0b3",
+  "label": "The stance requires a reason why the target fact obtains",
+  "paraphrase": "P1 of the parity argument, analyst formulation, attribution deferred: the stance requires, as a condition of accepting the target fact (in the naturalist instance, that God exists; in the theist instance, that a contingent being exists), a reason why it obtains (ONTIC, the #755 explains), so that, meeting its demand, it rejects the target posited with no reason. It is not the epistemic demand for a reason to accept the target. No person or author is said to hold it.",
+  "lean_declaration": "TruthCore.Explanation.BruteContingencyParity.RequiresWhyFor",
+  "definition_ids": [
+    "d0f8d6b9-8086-4bf7-95e1-46bb74d76398",
+    "179d4557-bda1-59c4-938a-b91e9974a27f"
+  ],
+  "disambiguation_ids": [
+    "a61d3807-50e9-595e-9011-9123fd606a4b"
+  ]
+}

@@ -1,0 +1,190 @@
+# B2 (every being contingent at w has a distinct CAUSE_2 of its esse), its
+# strongest standing rival (brute contingency) and the owner's parity argument
+# (owner direction 2026-11-23). Two further support options for B2 on the shared
+# CausalityFrame (#1784): reasons for existence (#312 tokens) with two reason
+# bridges, and the selected-grounding closure with the existing ground-to-cause
+# bridge. The rival is stated at the scope of B2. The parity argument is a
+# stance-level consistency argument over the #755 arena and #756 stances.
+# Analyst formulations, attribution deferred; no source claim.
+
+[batch]
+vocab = "TruthCore.Explanation.BruteContingencyParity"
+results = "TruthCore.Results.Explanation.BruteContingencyParity"
+
+[[statement]]
+id = "Every being contingent at w has some reason for its existence"
+lean = "NoBruteContingentExistenceAt"
+paraphrase = "OPEN, analyst formulation, attribution deferred: the local existence PSR for contingents. At the selected world w, every being that exists at w and is absent at some accessible world (MODAL_CONTINGENCY_1) has some #312 reason token explaining its existence fact at w. It is the contingent-only, single-world weakening of STMT-NO-BRUTE-EXISTENCE-AT (which also covers necessary existents); the restriction is a law of the B2 controls. No strengthens relation is registered: a new argument with STMT-NO-BRUTE-EXISTENCE-AT as premise fails the sense check, because that statement links both senses of BRUTE_EXISTENCE_FACT_VERSUS_GROUNDING_BRUTE (a pre-existing record, left unchanged). It says nothing about the kind of reason: a reason token need not be a cause, concrete, adequate or noncircular."
+definitions = ["e7302a28-f9fc-4961-811f-bf58bd86c28d", "DEF-PSR-REASON", "DEF-PSR-EXISTENCE-FACT", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-BRUTE-EXISTENCE-AND-GROUNDING"]
+
+[[statement]]
+id = "No reason for the existence of a being contingent at w is about that being itself"
+lean = "ContingentExistenceNotSelfExplained"
+paraphrase = "OPEN bridge (BX1), analyst formulation, attribution deferred: for every being contingent at w, every #312 reason token explaining its existence at w is about some other being: neither its own nature (an intrinsic token, NECESSARY_EXISTENCE_BY_OWN_NATURE_4) nor itself as a circumstance. The being-level form of contingent irreflexivity. Under it, a being with an own-nature token at w is not contingent at w (controls). For the own-nature model read through essence-esse identity it is exactly B6 (contrapositive form) at w (controls)."
+definitions = ["7cff4318-201a-430d-9680-10f5148a3b01", "DEF-PSR-REASON", "DEF-PSR-EXISTENCE-FACT", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-ESSENTIAL-VS-ACCESSIBLE-EXISTENCE"]
+
+[[statement]]
+id = "The other being a reason for a contingent being's existence is about is a CAUSE_2 of its esse"
+lean = "ExistenceReasonSourceCausesEsse"
+paraphrase = "OPEN bridge (BX2), analyst formulation, attribution deferred: if a #312 reason token explaining at w the existence of a being contingent at w is about another being, that other being causes its esse (the frame's CausesIn at esse, CAUSE_2, mode not fixed). The causal reading of existential reasons by another. It does not say every cause is a reason, that the cause exists at w, or that it is efficient."
+definitions = ["7cff4318-201a-430d-9680-10f5148a3b01", "DEF-PSR-REASON", "DEF-CAUSE-OF-PERFECTION", "DEF-ESSE", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CAUSE", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Every being contingent at w is CONCRETE_AND_ABSTRACT_6"
+lean = "ContingentsConcrete"
+paraphrase = "OPEN interface, analyst formulation, attribution deferred: every being contingent at w satisfies the concreteness predicate of the selected-grounding profile. It excludes contingent abstracta, for example a set of contingent individuals on criteria that count it abstract; the grounding support for B2 therefore covers contingent abstracta only through this interface, and leaves them otherwise untreated."
+definitions = ["DEF-CONCRETE-ESSE-IN-RE", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Some being contingent at w has no distinct CAUSE_2 of its esse and no reason for its existence"
+lean = "BruteContingentBeingAt"
+paraphrase = "The brute-contingency rival to B2, at B2's scope, analyst formulation, attribution deferred: on the same causality frame and at the same world w, some being exists at w, is absent at some accessible world, has no other being causing its esse (CAUSE_2) and has no #312 reason token for its existence at w. Its positive replacement account is a contingent foundation (an initial state or foundational being) whose existence is a brute fact. It entails the denial of B2, of the local existence PSR for contingents, and of each recorded support bundle for B2 (controls); the brute first-mover model witnesses it with the First Way's own mover."
+definitions = ["DEF-BRUTE-EXISTENCE-AT", "DEF-CAUSE-OF-PERFECTION", "DEF-ESSE", "DEF-PSR-REASON", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CAUSE", "DISAMB-KANT-CONTINGENCY", "DISAMB-BRUTE-EXISTENCE-AND-GROUNDING"]
+
+[[statement]]
+id = "B2 support options, the brute-contingency rival and their boundaries"
+lean = "B2SupportControls"
+paraphrase = "Premise-free laws and finite models (logical boundaries, not metaphysical possibility). Laws: each of the two support bundles (local existence PSR for contingents with BX1 and BX2; contingents concrete with the grounding closure and the ground-to-esse-cause bridge) gives B2; the local existence PSR for all existents gives its contingent-only form; the brute-contingency rival excludes B2, the contingent existence PSR and each support bundle; under BX1 a being with an own-nature reason token (NECESSARY_EXISTENCE_BY_OWN_NATURE_4) at w is not contingent at w; for the own-nature model read through essence-esse identity, BX1 at w is exactly B6 at w; and in the ofModel arena embedding a being's existence fact is a brute contingent truth exactly when the being is contingent and its existence has no reason. Models over the existing first-mover frames at the reading world: (1) the brute first mover with no reasons: BX1 and BX2 hold, the existence PSR and B2 fail, and the rival holds with the First Way's mover as witness; (2) own-nature reasons: the existence PSR and BX2 hold, BX1 and B2 fail, the mover contingent with an own-nature token; (3) the moved thing as a non-causing occasion: the existence PSR and BX1 hold, BX2 and B2 fail; (4) a conserved mover with that occasion causing its esse: all three hold and B2 holds; (5) B2 without the existence PSR; (6) B2 without BX1; (7)-(9) one omission model for each premise of the grounding support; (10) its nonvacuity model."
+definitions = ["e7302a28-f9fc-4961-811f-bf58bd86c28d", "7cff4318-201a-430d-9680-10f5148a3b01", "8eea5215-bb68-4608-b6f8-5368d17617d4", "DEF-NO-BRUTE-EXISTENCE-AT", "DEF-PSR-REASON", "DEF-PSR-RESTRICTED-SCOPE", "DEF-PSR-STRENGTH-ARENA", "DEF-CAUSE-OF-PERFECTION", "DEF-ESSE", "DEF-ESSENCE-THOMISTIC-NATURE", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-CONCRETE-ESSE-IN-RE", "DEF-BRUTE-ROOT-RELATIVE-GROUNDING"]
+disambiguations = ["DISAMB-CAUSE", "DISAMB-KANT-CONTINGENCY", "DISAMB-ESSENTIAL-VS-ACCESSIBLE-EXISTENCE", "DISAMB-BRUTE-EXISTENCE-AND-GROUNDING", "DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[statement]]
+id = "The stance requires a reason why the target fact obtains"
+lean = "RequiresWhyFor"
+paraphrase = "P1 of the parity argument, analyst formulation, attribution deferred: the stance requires, as a condition of accepting the target fact (in the naturalist instance, that God exists; in the theist instance, that a contingent being exists), a reason why it obtains (ONTIC, the #755 explains), so that, meeting its demand, it rejects the target posited with no reason. It is not the epistemic demand for a reason to accept the target. No person or author is said to hold it."
+definitions = ["d0f8d6b9-8086-4bf7-95e1-46bb74d76398", "DEF-PSR-STRENGTH-REASON"]
+disambiguations = ["DISAMB-REASON-EPISTEMIC-ONTIC"]
+
+[[statement]]
+id = "The target fact and the stance's accepted fact agree on the feature"
+lean = "ShareFeature"
+paraphrase = "P2 of the parity argument, analyst formulation, attribution deferred: the target fact and the fact the stance accepts (in the naturalist instance, that God exists and that the contingent foundation exists) agree on the supplied feature k: both have it or both lack it. Whether they agree depends on k and on how each is posited: on the reason-status feature they agree when God is posited as unreasoned and differ when God is posited with a reason by its own nature (parity map)."
+definitions = ["a17def9d-5354-4510-8a2e-34436ff486d4"]
+
+[[statement]]
+id = "The stance's demand for reasons why is uniform in the feature"
+lean = "FeatureUniform"
+paraphrase = "P3 of the parity argument, the consistency norm, analyst formulation, attribution deferred: any two facts agreeing on the feature k are alike required, or alike not required, to have a reason why they obtain. Relative to k: the same stance can be uniform in one feature and not in another, and nothing here says which feature is the right ground of a demand."
+definitions = ["a17def9d-5354-4510-8a2e-34436ff486d4", "d0f8d6b9-8086-4bf7-95e1-46bb74d76398"]
+disambiguations = ["DISAMB-REASON-EPISTEMIC-ONTIC"]
+
+[[statement]]
+id = "The stance cannot meet its demand for reasons why and accept the fact as a brute contingent truth"
+lean = "ExcludesBruteRival"
+paraphrase = "Conclusion of the parity argument: in any picture and at any world, the stance does not at once meet its demand for reasons why, accept the fact o, and have o a contingent truth with no reason there. For o the existence of the contingent foundation, the stance cannot hold the brute-contingency rival. It is a consistency verdict on the stance; it does not say o has a reason, and it does not establish B2. For a necessary o (God's existence, a necessary base) it holds vacuously, since BruteAt requires contingency; the stronger sibling without contingency is what binds acceptance of an unreasoned necessary existent."
+definitions = ["d0f8d6b9-8086-4bf7-95e1-46bb74d76398", "DEF-PSR-RESTRICTED-SCOPE", "DEF-PSR-STRENGTH-ARENA", "DEF-PSR-STRENGTH-REASON"]
+disambiguations = ["DISAMB-REASON-EPISTEMIC-ONTIC"]
+
+[[statement]]
+id = "The stance cannot meet its demand for reasons why and accept the fact with no reason"
+lean = "ExcludesUnreasonedAcceptance"
+paraphrase = "Stronger conclusion of the parity argument: in any picture and at any world, the stance does not at once meet its demand for reasons why, accept the fact o, and have o without a reason there, whether o is contingent or necessary. It binds both sides: a naturalist who requires a reason why God exists cannot accept an unreasoned contingent foundation, and a theist who requires a reason why contingent existents obtain cannot accept an unreasoned God, each under its own P1-P3 (parity map). A necessary fact with no reason is unreasoned, not brute (DISAMB-BRUTE-TERMINAL-UNREASONED). It is a consistency verdict on the stance; it does not say o has a reason, and it does not establish B2."
+definitions = ["d0f8d6b9-8086-4bf7-95e1-46bb74d76398", "DEF-PSR-STRENGTH-ARENA", "DEF-PSR-STRENGTH-REASON"]
+disambiguations = ["DISAMB-REASON-EPISTEMIC-ONTIC", "DISAMB-BRUTE-TERMINAL-UNREASONED"]
+
+[[statement]]
+id = "Brute-existence parity: symmetric demand, comparison of explanations, stances bound"
+lean = "ParityMap"
+paraphrase = "Premise-free laws and finite models (logical boundaries; no stance is attributed to anyone). Laws: a stance that requires a reason why for t, meets its demand and accepts a brute contingent truth o is not uniform on t and o, selective (#756) relative to every feature on which they agree and restricted relative to every feature on which they differ; no stance meets a necessitating demand for an accepted contingent fact all of whose reasons are true at every accessible world; and, for both sides alike, factive reasons that are well-founded at a world with some truth leave some truth there without a reason (#746 second core), so a picture with no unexplained existent needs reasons that are not well-founded there: a self-reason, a circle or an infinite chain; in the scene, a self-reason. Circles and an endless regress of contingents, each explained by its predecessor (#746 cofinite), are not scene pictures (named gap, with the whole-series question of the #755 collapse core and attempt a5958e25). Scene-relative tallies at the reading world, listing exactly the unexplained existents (they rank nothing by themselves: a bare preference for fewer unexplained facts favours copying reasons, the #746 count control; a ranking needs an open comparative principle such as the #750 adequacy norm): many diverse brute contingents (the atom and the star), one brute contingent initial state, one unreasoned necessary physical base and one unreasoned God (one each; a necessary fact with no reason is unreasoned, not brute, DISAMB-BRUTE-TERMINAL-UNREASONED), and none for a necessary physical base or God whose existence has a self-reason ('by its own nature'); counting only necessitating reasons, the last two each leave the contingent initial state (the free choice or indeterministic output), and the unreasoned-terminus pictures leave the terminus and the initial state. The four pictures with an unexplained existent have factive, well-founded reasons; the two with none are factive and contingent-irreflexive with a self-reason, so not well-founded, and their lists agree with God and the base exchanged. Evidence is not explanation: an observation supports that the initial state exists while it has no reason why it exists, and the evidential stance meets its epistemic demand and still holds it as a brute contingent truth. Readings: with God posited as unreasoned, God's existence and the initial state's agree on the reason-status feature; with God's existence self-explained, they differ. Symmetric binding, through the stronger sibling conclusion: a naturalist (target God) and a theist (target the initial state) each satisfy P1-P3 in the reason-status feature, and neither can accept an unreasoned existent, the initial state or God respectively; for the necessary God the weaker brute-rival conclusion holds only vacuously. The naturalist requiring reasons why for all it accepts meets its demand with the self-explained base and not with the unreasoned base. A stance requiring a reason why for God only holds the rival, is uniform in idleness and not in the reason-status feature, so it is bound exactly when its ground for rejecting God is the reason status. Deletions: without P1 (evidential and symmetric stances), without P2 (idleness), without P3, without meeting the demand, without bruteness. The theist meets its demand with some reason and fails it with necessitating reasons; its self-reason counts under contingent irreflexivity only while God is not contingent. Same witness: in the arena of the brute first-mover frame, the First Way's mover's existence is a brute contingent truth."
+definitions = ["d0f8d6b9-8086-4bf7-95e1-46bb74d76398", "a17def9d-5354-4510-8a2e-34436ff486d4", "DEF-EXEMPTION-STANDING", "DEF-DEMAND-STANCE", "DEF-PSR-RESTRICTED-SCOPE", "DEF-PSR-STRENGTH-ARENA", "DEF-PSR-STRENGTH-REASON", "DEF-PSR-REASON-NECESSITATING", "DEF-STOP-TERMINAL", "DEF-KANT-MODAL-CONTINGENCY"]
+disambiguations = ["DISAMB-REASON-EPISTEMIC-ONTIC", "DISAMB-ESSENTIAL-VS-ACCESSIBLE-EXISTENCE", "DISAMB-BRUTE-TERMINAL-UNREASONED"]
+
+[[argument]]
+id = "B2 from a local existence PSR for contingents and two reason bridges"
+theorem = "esseCauseFromExistenceReasons"
+premises = ["Every being contingent at w has some reason for its existence", "No reason for the existence of a being contingent at w is about that being itself", "The other being a reason for a contingent being's existence is about is a CAUSE_2 of its esse"]
+conclusion = "Every being contingent at w has a distinct CAUSE_2 of its esse"
+rule = "Instantiate the existence PSR, then the two reason bridges at its reason"
+meaning = "A being x contingent at w has some reason r for its existence at w (local existence PSR for contingents). By BX1 the being r is about is not x; by BX2 that other being causes x's esse. So x has a distinct CAUSE_2 of its esse. The #312 tokens sit on the frame's own existence, and BX2's cause is the frame's CausesIn at esse, so the conclusion is B2 on the same frame. It splits B2 into a reason-coverage half, which the brute-contingency rival denies, and a reason-to-cause half (BX1, BX2), which a rival with non-causal reasons for contingent existence would deny."
+description = "Support option for B2 from the PSR family on the shared frame. Not a transcription: no premise mentions esse-causes of contingents as such; the conclusion composes coverage by reasons with two bridges about reasons. Each premise is needed (controls, models 1-3) and the bundle is satisfiable nonvacuously (model 4). B2 gives neither the existence PSR nor BX1 (models 5-6). Establishes no premise."
+
+[[argument]]
+id = "B2 from the selected-grounding closure and the ground-to-esse-cause bridge"
+theorem = "esseCauseFromGroundingClosure"
+premises = ["Every being contingent at w is CONCRETE_AND_ABSTRACT_6", "STMT-EVERY-CONTINGENT-GROUNDED-AT", "98efaa9e-1c91-4e52-8c0d-faf03d4f8372"]
+conclusion = "Every being contingent at w has a distinct CAUSE_2 of its esse"
+rule = "Closure at a concrete contingent being, then the ground-to-cause bridge"
+meaning = "A being x contingent at w is concrete (interface), exists at w and is contingent, so the existing closure gives it an actual concrete ground y at w under the selected relation. The existing bridge 'an actual concrete ground of an actual concretum is a distinct CAUSE_2 of its esse' makes y distinct from x and a cause of its esse. So x has a distinct CAUSE_2 of its esse: B2, on the profile built from the same frame."
+description = "Support option for B2 from the grounding family on the shared frame. Not a transcription: the closure gives a ground, the bridge converts it into a distinct esse-cause, and the interface supplies concreteness. Each premise is needed (controls, models 7-9) and the bundle is satisfiable nonvacuously (model 10). It shares the closure with the existing grounding route to the First Way's mover, so it adds a connection, not independent warrant. Establishes no premise."
+
+[[argument]]
+id = "Parity: a feature-uniform demand for a reason why excludes a brute contingent truth"
+theorem = "parity"
+premises = ["The stance's demand for reasons why is uniform in the feature", "The stance requires a reason why the target fact obtains", "The target fact and the stance's accepted fact agree on the feature"]
+conclusion = "The stance cannot meet its demand for reasons why and accept the fact as a brute contingent truth"
+rule = "Uniformity transfers the demand along the shared feature; the demand met excludes bruteness"
+meaning = "The owner's parity argument, analyst formulation, attribution deferred. The stance requires a reason why the target exists (P1), its demand is uniform in a feature k (P3) on which the target and the accepted fact o agree (P2). So it requires a reason why o obtains. If it met its demand and accepted o, o would have a reason, so it is not a brute contingent truth. For the naturalist who rejects an unreasoned God, God's existence as a mere brute fact in the owner's wording (target God, o the contingent foundation), it excludes the brute-contingency rival. This form concerns contingent o only: for a necessary o it holds vacuously, so the symmetric form is the stronger sibling (no reason at all, contingent or not). It establishes neither B2 nor that anything has a reason, it does not answer whether there is evidence for God, and it binds only stances that hold P1, P2 and P3 for one feature."
+description = "The parity argument, brute-contingent form: a stance-level consistency result. Valid by a short derivation (the demand is transferred by uniformity, then met); all its weight is on P1-P3. It lowers the standing of the brute-contingency rival only for stances holding all three; it is not support for B2. Each member of the bundle is deleted by a named stance in the parity map. Establishes no premise."
+
+[[argument]]
+id = "Parity, symmetric form: a feature-uniform demand excludes accepting an unreasoned fact"
+theorem = "parityUnreasoned"
+premises = ["The stance's demand for reasons why is uniform in the feature", "The stance requires a reason why the target fact obtains", "The target fact and the stance's accepted fact agree on the feature"]
+conclusion = "The stance cannot meet its demand for reasons why and accept the fact with no reason"
+rule = "Uniformity transfers the demand along the shared feature; the demand met excludes having no reason"
+meaning = "The owner's parity argument in its symmetric form, analyst formulation, attribution deferred. Under the same P1-P3, the stance requires a reason why o obtains, so meeting its demand it cannot accept o with no reason, whether o is contingent or necessary. It binds a naturalist who rejects an unreasoned God (target God, o the contingent foundation) and a theist who rejects unreasoned contingents (target a contingent existent, o God's existence) alike (parity map, both instances). With unreasoned existence rejected on both sides, what remains is a comparison of explanations of existence, which this argument does not settle: it needs an open comparative principle (#750) and the open adequacy of a self-reason. It establishes neither B2 nor that anything has a reason, and it does not answer whether there is evidence for God."
+description = "The parity argument, symmetric form: a stance-level consistency result binding both sides. Valid by a short derivation; all its weight is on P1-P3. It strengthens the brute-contingent form (separate argument). It is not support for B2 or for God's existence. Establishes no premise."
+
+[[argument]]
+id = "Excluding unreasoned acceptance excludes the brute contingent rival"
+theorem = "excludesBruteOfExcludesUnreasoned"
+premises = ["The stance cannot meet its demand for reasons why and accept the fact with no reason"]
+conclusion = "The stance cannot meet its demand for reasons why and accept the fact as a brute contingent truth"
+rule = "A brute contingent truth has no reason"
+meaning = "If the stance cannot meet its demand while accepting o with no reason, it cannot meet it while accepting o as a brute contingent truth, since such a truth has no reason. Strength order between the two parity conclusions."
+description = "Strength order: the symmetric parity conclusion strengthens the brute-contingent one. A one-step weakening; it establishes no premise."
+
+[[argument]]
+id = "B2 support options and brute-contingency rival controls checked"
+theorem = "b2SupportControls"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+premises = []
+conclusion = "B2 support options, the brute-contingency rival and their boundaries"
+rule = "General laws and explicit finite models"
+meaning = "Premise-free laws: each new support bundle gives B2, the local existence PSR gives its contingent-only form, the rival excludes B2 and each bundle, BX1 makes an own-nature reason token exclude contingency, BX1 for the essence-esse own-nature model is exactly B6 at w, and the arena form of the rival. Then ten finite models on the existing first-mover frames: omission models for each premise of both bundles, nonvacuity models for both, B2 without the existence PSR and without BX1, and the rival witnessed by the First Way's mover. Model-witnessed separations only; no premise is established and no reality claim is made."
+description = "Premise-free laws and models for the B2 support options and the brute-contingency rival. Sense-mixing control: the laws relate MODAL_CONTINGENCY_1, CAUSE_2 and NECESSARY_EXISTENCE_BY_OWN_NATURE_4 without a bridge premise. Establishes no premise."
+
+[[argument]]
+id = "Brute-existence parity map checked"
+theorem = "parityMap"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+premises = []
+conclusion = "Brute-existence parity: symmetric demand, comparison of explanations, stances bound"
+rule = "General laws and explicit finite stances and pictures"
+meaning = "Premise-free laws: the #756 fork for the ontic demand, the failure of necessitating demands for contingent facts with only necessary reasons, and the reused #746 core that well-founded factive reasons always leave a truth unexplained, which binds both sides. Then a scene of seven pictures (many brute contingents, one brute initial state, an unreasoned and a self-explained necessary physical base, an unreasoned and a self-explained God, a contingent self-explained God), an observation inquiry and eight stances: scene-relative tallies of the unexplained existents of each picture under bare and necessitating reasons (which rank nothing without an open comparative principle); that evidence for an existent is no reason why it exists; the symmetric parity conclusion instantiated on both sides; which stances the parity argument binds (on either side, a stance whose ground of rejection is the reason status) and which it does not (evidential, symmetric, idleness); a deletion witness for each member of the parity bundle; the theist under the same tests; and the same-witness rival in the brute first-mover frame. No stance is attributed to anyone, and no picture is claimed metaphysically possible."
+description = "Premise-free laws and models for the parity argument. Sense-mixing control: the laws relate the ontic demand, contingency and the necessitating sense of reason without a bridge premise. Establishes no premise."
+
+[[relation]]
+id = "Brute contingency is an alternative to B2"
+subject_kind = "statement"
+subject_id = "Some being contingent at w has no distinct CAUSE_2 of its esse and no reason for its existence"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "Every being contingent at w has a distinct CAUSE_2 of its esse"
+note = "Target: B2, at its own scope (same frame, same world, CAUSE_2 at esse). Mechanism: a contingent being whose existence has no cause of its esse and no reason, so B2 has a counterinstance. Positive replacement account: a contingent foundation (initial state or foundational being) whose existence is a brute fact. Strongest positive support for the mechanism: (a) the #755 collapse core, under which a contingent-fact PSR with necessitating, factive, distributing reasons and an aggregate of all contingent truths leaves no contingency; it binds the necessitating PSR, not the bare-reason coverage used for B2 here, which needs no aggregate and no necessitation; (b) the sourced Kleinschmidt rival (#312), that justified preference for explanations need not presuppose coverage, which removes one epistemic defense of coverage and does not show that any existent has no reason. No recorded independent justification for the rival reaches B2's scope. The brute first-mover model shows only that the rival is consistent with every other premise of the five necessity routes, a fact about one formal interpretation, not evidence against B2. Entailed denials (their weight is only the warrant of the denied premises, all open): it denies the local existence PSR for contingents at w (and with it the contingent-fact PSR at w), rejects at least one member of each support bundle for B2 (existence PSR with BX1 and BX2; concreteness, grounding closure and the ground-to-cause bridge; B6, existence-to-act and the q.3 a.4 reading), and takes the brute horn of the stopping-point fork. Conditional cost: if EvidenceBridge held (it follows from the contingent-fact PSR the rival denies, and is not one of the rival's commitments), the foundation's existence could not be used as evidence. A stance that requires a reason why God exists on the reason-status feature and is uniform in it cannot hold this rival (parity argument). The relation concerns the brute contingent foundation only; the comparison with an unreasoned or self-explained necessary physical base, which is compatible with B2 and does not instantiate this rival, belongs to the later identification of the root with God (note, comparison section). Revision conditions: an independent argument that some contingent existent has no reason, or a defeat of the existence PSR for contingents that does not equally defeat its use in inquiry. See docs/notes/psr-self-application-756.md, 'Brute contingency and parity'."
+
+[[relation]]
+id = "Brute contingency is an alternative to the local existence PSR for contingents"
+subject_kind = "statement"
+subject_id = "Some being contingent at w has no distinct CAUSE_2 of its esse and no reason for its existence"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "Every being contingent at w has some reason for its existence"
+note = "The rival's denial of reason coverage at w is exactly what defeats the existence-PSR half of the PSR support for B2; the reason-to-cause half (BX1, BX2) is untouched by it (controls, model 1). Same target, mechanism, price and revision conditions as recorded on B2."
+
+[[relation]]
+id = "The symmetric parity conclusion strengthens the brute-contingent one"
+subject_kind = "statement"
+subject_id = "The stance cannot meet its demand for reasons why and accept the fact with no reason"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "The stance cannot meet its demand for reasons why and accept the fact as a brute contingent truth"
+verification_result_id = "Excluding unreasoned acceptance excludes the brute contingent rival"
+note = "Backed by the verified one-step weakening: a brute contingent truth has no reason."

@@ -1,0 +1,22 @@
+{
+  "id": "133eb927-f309-4b66-b749-18eee994570e",
+  "label": "Excluding unreasoned acceptance excludes the brute contingent rival",
+  "premise_statement_ids": [
+    "9df516be-9941-44fa-963c-1d56463d60a5"
+  ],
+  "conclusion_statement_id": "fbf3f3e0-fc9c-49a6-847a-6a649ead0696",
+  "inference_ids": [
+    "a6c50241-66a1-4e30-821b-9e5cacf9de72"
+  ],
+  "meaning": "If the stance cannot meet its demand while accepting o with no reason, it cannot meet it while accepting o as a brute contingent truth, since such a truth has no reason. Strength order between the two parity conclusions.",
+  "definition_ids": [
+    "fad6a806-713b-5318-8309-488af704d614",
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "179d4557-bda1-59c4-938a-b91e9974a27f",
+    "d0f8d6b9-8086-4bf7-95e1-46bb74d76398"
+  ],
+  "disambiguation_ids": [
+    "7aba7955-aa37-5b08-a170-8420d6142d78",
+    "a61d3807-50e9-595e-9011-9123fd606a4b"
+  ]
+}

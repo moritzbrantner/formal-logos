@@ -70,6 +70,42 @@ theorem contingentEsseCauseFromDistinctEsse {W B T R P : Type} (F : CausalityFra
   obtain ⟨y, hne, -, hc⟩ := hQ3 x ⟨hInAct x hx.1, hDistinct x hx⟩
   exact ⟨y, hne, hc⟩
 
+
+
+/-- A strength-fork law: the unrestricted reception-in-own-essence principle
+implies the identity-scoped principle. The only premise is the stronger
+existing statement, so the frontier retains the option to assume the weaker
+R3 directly without promoting the stronger law to an established fact. -/
+theorem unrestrictedReceptionImpliesIdentityScoped {B P : Type}
+    (essenceOf esseOf : B → P) (Received : B → P → Prop)
+    (hFull : TruthCore.Causality.EsseReception.EsseReceivedOnlyInOwnEssence
+      essenceOf Received) :
+    IdentityScopedEsseReception essenceOf esseOf Received := by
+  intro x p _ hRec
+  exact hFull x p hRec
+
+/-- Substantive support for B6 from reception. A contingent identity-being
+would receive esse (R1). Under identity (and only then), R3 locates the
+recipient in its essence. De ente puts that recipient in receptive potency to
+the act which, under identity, would be itself, violating irreflexivity. The
+hypothesis does NOT assert B6 or necessary existence. -/
+theorem contingentDistinctEsseFromReception {W B T R P : Type}
+    (F : CausalityFrame W B T R) (essenceOf esseOf : B → P)
+    (Received : B → P → Prop) (ReceptivePotencyTo : P → P → Prop) (w : W)
+    (hReceived : ContingentReceivesEsse F w Received)
+    (hOwn : IdentityScopedEsseReception essenceOf esseOf Received)
+    (hPotency : TruthCore.Latin.Aquinas.DeEnte.ReceiverInPotencyToReceivedEsseReading
+      esseOf Received ReceptivePotencyTo)
+    (hIrrefl : TruthCore.Causality.EsseReception.NothingInReceptivePotencyToItself
+      ReceptivePotencyTo) :
+    ContingentHasDistinctEsse F w essenceOf esseOf := by
+  intro x hx hEq
+  obtain ⟨p, hp⟩ := hReceived x hx
+  have hOwnP : p = essenceOf x := hOwn x p hEq hp
+  have hRec : ReceptivePotencyTo p (esseOf x) := hPotency x p hp
+  rw [hOwnP, ← hEq] at hRec
+  exact hIrrefl (esseOf x) hRec
+
 /-- Route C, essence–esse: the First Way's first mover exists at `w` (B0) and,
 by the existing simplicity reading, has esse not distinct from essence. Were it
 absent at some accessible world, B6 would make its esse distinct from its
@@ -268,5 +304,47 @@ theorem models : Models := by
   simp [Bool.forall_bool]
 
 theorem controls : Controls := ⟨laws, models⟩
+
+
+/-- Reception controls: proof of the general mismatch uses the definition
+of adopted potency in the SAME esse respect; the rest are finite checks. -/
+theorem receptionControls : ReceptionControls := by
+  refine ⟨?_, ?_, ?_, ?_⟩
+  · intro W B T R P F w InAct CanBe Received hAct hReceived hTransfer x hx
+    obtain ⟨p, hp⟩ := hReceived x hx
+    have hPot := hTransfer x p hx hp
+    exact hPot.2 (hAct x hx.1)
+  all_goals
+    simp only [ThereIsAFirstUnmovedMover, MoversExistAt, MoversConcrete,
+      FirstUnmovedMoverIsFirstBeing, FirstUnmovedMoverIsPureAct, DistinctEsseCausePriority,
+      FirstUnmovedMoverIsSimpleReading, TruthCore.Latin.Aquinas.InMetaphysicam.PotencyIsOfContradictionReading,
+      TruthCore.Causality.NecessaryBeingInAct.CanFailToBeIsPossiblyNot,
+      TruthCore.Latin.Aquinas.SummaTheologiae.PossibleNotToBe,
+      TruthCore.Causality.NecessaryConcreteRouteBridge.modalPossible,
+      TruthCore.Causality.NecessaryConcreteRouteBridge.modalIsAt,
+      ActualGroundingIsSimplePriority, ActualGroundingIrreflexive, ContingentHasDistinctEsseCause,
+      PossibleNonexistenceIsPotency, ContingentHasPotencyOrEsseCause, ContingentHasDistinctEsse,
+      EveryContingentGroundedAt,
+      FirstMoverNecessaryPureActAt, FirstMoverNecessaryFirstRootAt, NecessaryActualFirstPureActAt,
+      IsFirstUnmovedMover, PureAct, IsFirstBeing, ActualRoot, ActualConcrete,
+      TruthCore.Causality.CogitoNecessaryConcrete.ActualConcreteGround, NecessaryAt, ContingentAt,
+      groundProfile, bruteFirst, conserved, unprioritized, absentMover, necessaryMover, still,
+      witness, selfGround, mk, movedIn, movedPotency, fPotency, canFail, fContingent, allNecessary,
+      ContingentCanFailToBe, CanFailToBeIsPotencyAtEsse, twoRoots, trioMovedIn, trioPotency,
+      trioConcrete, trioNoGround, Trio.forall_iff, Trio.exists_iff,
+      fAbsent,
+      xCausesF, xPriorF, noCause, noPrior, xContingent, fCausesX, fPriorX, allConcrete,
+      noneConcrete, noGround, fGroundsF, xGroundsF, fSelfPrior, fGroundsX, unitOf, esseTrue,
+      essenceFalse, noneHolds,
+      ContingentReceivesEsse, IdentityScopedEsseReception,
+      ContingentReceptionIsSubjectPotency,
+      TruthCore.Causality.EsseReception.EsseReceivedOnlyInOwnEssence,
+      TruthCore.Causality.EsseReception.NothingInReceptivePotencyToItself,
+      TruthCore.Latin.Aquinas.DeEnte.ReceiverInPotencyToReceivedEsseReading,
+      TruthCore.Causality.ExistenceActuality.ExistingInActAt,
+      TruthCore.Latin.Aquinas.SummaTheologiae.AdoptedPotency.InPotency,
+      receivedByMoved, receivedByMover, receivedNone, receptivePotency, essenceByBeing,
+      subjectPotencyAtEsse, actAtEsse, canBeAny, supportsEsseAt] <;>
+    simp [Bool.forall_bool]
 
 end TruthCore.Results.Causality.FirstMoverNecessity

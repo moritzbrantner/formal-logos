@@ -1,0 +1,11 @@
+{
+  "id": "19260537-f06d-451c-9549-b248fefb14fd",
+  "label": "B2 from the selected-grounding closure and the ground-to-esse-cause bridge",
+  "argument_id": "d82b02af-f6a1-4bed-9619-ff121a351ec9",
+  "challenge_module": "TruthCore.Results.Explanation.BruteContingencyParity.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.BruteContingencyParity.Solution",
+  "theorem": "TruthCore.Results.Explanation.BruteContingencyParity.esseCauseFromGroundingClosure",
+  "comparator_config": "results/19260537-f06d-451c-9549-b248fefb14fd/comparator.json",
+  "status": "solution-present",
+  "description": "Support option for B2 from the grounding family on the shared frame. Not a transcription: the closure gives a ground, the bridge converts it into a distinct esse-cause, and the interface supplies concreteness. Each premise is needed (controls, models 7-9) and the bundle is satisfiable nonvacuously (model 10). It shares the closure with the existing grounding route to the First Way's mover, so it adds a connection, not independent warrant. Establishes no premise."
+}

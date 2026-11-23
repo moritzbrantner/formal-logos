@@ -1,0 +1,12 @@
+{
+  "id": "218bba09-c963-4c42-8517-2d2fc5d94e59",
+  "label": "Unrestricted own-essence receipt strengthens identity-scoped receipt (inference)",
+  "input_statement_ids": [
+    "6dfe01ab-e3f2-5a4c-b102-701c161f2cf7"
+  ],
+  "output_statement_id": "65f3d0c7-cc3d-4ce3-a4a9-6fa38bf722cb",
+  "rule": "Universal instantiation under identity: unrestricted own-essence receipt entails identity-scoped receipt",
+  "meaning": "The unrestricted law says any recipient of a being's esse is its essence. Under the restricted hypothesis that the being's esse equals its essence, that already supplies the identity-scoped law R3. No contingency, reception-existence premise, necessity, cause or priority is required. This is a formal strength relation, not additional philosophical confirmation of either OPEN premise. The narrower R3 is what the new B6 support actually uses.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

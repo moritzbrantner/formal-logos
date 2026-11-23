@@ -1,0 +1,15 @@
+{
+  "id": "b37cda04-f4c8-4781-a688-b4b70ff4a156",
+  "label": "Contingent esse differs from essence through identity-scoped reception (inference)",
+  "input_statement_ids": [
+    "ae9d9473-34f1-4b51-8f13-41d340d64ad1",
+    "65f3d0c7-cc3d-4ce3-a4a9-6fa38bf722cb",
+    "7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2",
+    "14325c83-1c3f-5afb-b63f-52b0c2b2a326"
+  ],
+  "output_statement_id": "96971e31-4782-4478-95b8-b6863a6a9412",
+  "rule": "A contingent esse=essence recipient would be receptive to its own act, contrary to the principle-potency irreflexivity",
+  "meaning": "R1 supplies a receiver for a contingent being. On the reductio hypothesis that its esse equals its essence, R3 identifies the receiving principle with that essence, De ente c.3 makes it receptive in potency to its act, and receptive irreflexivity rules out reception of an act into itself. This proves B6 without assuming modal necessity or confusing POTENCY_1 of the bearer with receptive potency of the receiving principle. R3 is weaker than the existing general own-essence rule; its nonidentity cases are unconstrained. The previously verified B6-to-necessity route then applies to the SAME first unmoved mover on the SAME world/frame, and existing q.3 a.4 support can reach B2 without identifying receptive and existential efficient causes. R1, R3 and irreflexivity remain OPEN. The brute unreceived contingent first being contests R1 and is not refuted by this conditional result.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
