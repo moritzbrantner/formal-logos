@@ -498,7 +498,9 @@ motivates that addition at `n`.
     every corruptible.
   - Its whole substantive content is the **completeness over incorruptibles**:
     every contingent being that cannot fail to be in substance is under some
-    power over its esse (premise-free equivalence, analyst; requested as F2).
+    power over its esse (equivalence with excluded middle, or decidable
+    `CanFailToBe`; the left-to-right direction is constructive; analyst;
+    requested as F2).
   - That is exactly the part the hybrid declines, and exactly the part that
     yields necessity at `n`.
 - *Is that extra content independently motivated at `n`?* By this note's own
@@ -509,9 +511,13 @@ motivates that addition at `n`.
   - the experiential motivation concerns change-powers, which do not reach
     subjectless existence (§3);
   - unity is weak and matched (§3).
-  - The one sourced instance of power-grounded possibility of subjectless
-    existence (q.9 a.2: created incorruptibles, possible "by the divine power
-    alone") presupposes a creator, so it is not independent of theism.
+  - The sourced instances of power-grounded possibility of subjectless
+    existence read here (q.9 a.2: all creatures, incorruptibles included,
+    possible "by the divine power alone"; q.104 a.3: annihilation as
+    cessation of the creator's action) presuppose a creator. Pruss's
+    "combined account" derives a necessary first cause, but from the very
+    completeness in question. So none supplies a theism-independent
+    motivation for that completeness.
   - PGP's completeness over incorruptibles therefore has the **same status**
     as `542c595e` for combinatorialism and as the concrete/abstract cut for
     concreta-restricted EC: general-theory content with no motivation
@@ -644,7 +650,8 @@ Toward "`n` could be absent", or against PGP at `n`:
   rest on describing `n` only through its relations.
 - (b) An assessed defense that existence never belongs to an essence, applied
   to an identity of esse and essence. Alternatively, an independent motivation
-  for concreta-restricted EC's concrete/abstract cut.
+  for concreta-restricted EC's concrete/abstract cut that does not presuppose
+  that no concretum exists necessarily.
 - (c) A recombination or HD principle covering necessary concreta on grounds
   other than conceivability (`03e1f49f` (b)).
 - (d) An independently supported case of an actual foundational being with a
@@ -689,7 +696,8 @@ accommodate) would move the verdict at `n` with it.
   - a satisfying model of the same bundle on an S4 (non-Euclidean) frame, to
     certify that the frame condition is needed;
   - two one-sided models.
-- **F2. PGP's extra content as a certified difference.** Premise-free:
+- **F2. PGP's extra content as a certified difference.** With excluded
+  middle (or decidable `CanFailToBe`) as an explicit premise:
   PGP ↔ (∀x, ContingentAt x ∧ ¬CanFailToBe x esse → ∃y, PowerOverEsse y x).
   That is, PGP's substantive content is its completeness over incorruptibles,
   the analogue of `542c595e`. Add a hybrid model (the First Way base,
@@ -813,7 +821,7 @@ given. The following are marked as analyst steps:
 - the descriptive-identification bridge;
 - the trivial co-necessitation reading of HD's intuition;
 - the carry-over of SEP's criticisms to essence-first EC;
-- PGP's premise-free extra-content equivalence;
+- PGP's extra-content equivalence (with excluded middle);
 - every "verdict at `n`".
 
 Objections are stated with target, mechanism, independent justification and
