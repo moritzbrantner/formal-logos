@@ -526,7 +526,10 @@ reading of `PowerFor` (a chain whose outcome world satisfies `q`): on
 Aquinas's principles (q.104 a.3 ad 1, ad 3) `g`, which never acts on `c`,
 causes `c`'s absence neither directly nor indirectly. Formally the transfer
 fails because `PowerOver` is unconstrained; the replacement structure only
-makes that choice admissible. -/
+makes that choice admissible. There is one actual contingent, so collective
+and distributive coincide here; the separation shown is PowerFor →
+POWER_OVER_ESSE_1, already for one member (`TwoMemberCollective` separates
+collective from distributive). -/
 def CollectiveWithoutDistributive : Prop :=
   ActualAbsenceGrounded replacementG gPower allC false ∧
   ActualAbsenceInitiatorPresent replacementG gPower allC false ∧
@@ -684,6 +687,36 @@ models and the rival models. -/
 def Controls : Prop :=
   Laws ∧ TheistNonvacuity ∧ CollectiveWithoutDistributive ∧ DistributiveWithoutCollective ∧
     MutualAnnihilators ∧ Omissions ∧ Rivals
+
+/-- `g` everywhere; `c` and `d` as in `pairEx`. -/
+def twoMemberEx (v : Bool × Bool) (x : Bg) : Prop := x = .g ∨ pairEx v x
+
+/-- Two actual contingents `c`, `d` at `(true, true)`, each possibly absent
+alone and jointly, with a necessary `g`; nothing gives anything. -/
+def twoMemberG : CausalityFrame (Bool × Bool) Bg Unit Bool :=
+  gFrame (fun _ _ => True) twoMemberEx noGiving
+
+/-- `g` holds a power for exactly the joint absence of `c` and `d` (the
+proposition true at the worlds lacking both), and for nothing else. -/
+def jointPower (_ : Bool × Bool) (y : Bg) (p : Bool × Bool → Prop) : Prop :=
+  y = .g ∧ ∀ v, p v ↔ (¬ pairEx v .c ∧ ¬ pairEx v .d)
+
+/-- Collective without distributive at the level of `PowerFor`, with two
+members (`twoMemberG` at `(true, true)`): P1′, P2′, P3′, P4′ and P5 hold with a
+power held by `g` for the joint absence of the two actual contingents; yet the
+varying-holder distributive grounding fails: no being at the actual world has
+a power for `c`'s absence alone (nor for `d`'s). The whole-to-member step for
+powers (the analogue of C1's premise B, applied to `PowerFor` itself) is not
+valid as typed. Unlike `CollectiveWithoutDistributive`, where the one actual
+contingent makes collective and distributive coincide, this model separates
+them. -/
+def TwoMemberCollective : Prop :=
+  ActualAbsenceGrounded twoMemberG jointPower allC (true, true) ∧
+  ActualAbsenceInitiatorPresent twoMemberG jointPower allC (true, true) ∧
+  ActualAbsencePowerHoldersConcrete twoMemberG jointPower allC (true, true) ∧
+  PossiblyNoActualContingentConcrete twoMemberG allC (true, true) ∧
+  SomeContingentConcreteAt twoMemberG allC (true, true) ∧
+  ¬ EachActualAbsenceGrounded twoMemberG jointPower allC (true, true)
 
 end Model
 

@@ -1,0 +1,17 @@
+{
+  "id": "bff9cbfa-0ad8-4739-8e0c-3401eba88873",
+  "label": "Pruss power premises: a joint-absence power for two contingents without a power for either alone",
+  "paraphrase": "Premise-free finite model (structural surrogate, not metaphysical possibility): with two actual contingent concreta c and d (each possibly absent alone and jointly) and a necessary g, P1-prime, P2-prime, P3-prime, P4-prime and P5 hold at the actual world with g holding, at w, a power (PowerFor) for exactly the joint absence of c and d; yet the varying-holder distributive grounding fails: no being at the actual world has a power for c's absence alone. So the whole-to-member step for powers (the analogue of C1's premise B, applied to PowerFor) is not valid as typed. Unlike the replacement model of the controls, where one actual contingent makes collective and distributive coincide, this model separates them.",
+  "lean_declaration": "TruthCore.Modal.PrussPowerPremises.Model.TwoMemberCollective",
+  "definition_ids": [
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "197f0097-f2ae-4a47-8770-3d43758f737b",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

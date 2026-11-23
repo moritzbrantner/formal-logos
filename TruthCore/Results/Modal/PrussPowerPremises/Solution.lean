@@ -269,4 +269,16 @@ theorem prussPowerControls : Controls :=
   ⟨laws, theistNonvacuity, collectiveWithoutDistributive, distributiveWithoutCollective,
     mutualAnnihilators, omissions, rivals⟩
 
+/-- Argument 10, collective without distributive with two members.
+Premise-free. -/
+theorem twoMemberCollective : TwoMemberCollective := by
+  unfold TwoMemberCollective
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_⟩ <;>
+  simp only [ActualAbsenceGrounded, ActualAbsenceInitiatorPresent,
+    ActualAbsencePowerHoldersConcrete, PossiblyNoActualContingentConcrete,
+    SomeContingentConcreteAt, NoActualContingentConcreteIn, AristotelianGroundingFor,
+    InitiatorPresentFor, PowerHoldersConcreteFor, EachActualAbsenceGrounded,
+    ContingentAt, twoMemberG, twoMemberEx, gFrame, allC, jointPower, pairEx] <;>
+  simp [Bool.forall_bool, Bool.exists_bool, Prod.forall, Prod.exists]
+
 end TruthCore.Results.Modal.PrussPowerPremises

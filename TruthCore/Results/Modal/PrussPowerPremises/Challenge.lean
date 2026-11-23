@@ -146,10 +146,15 @@ macro "pp_unfold" : tactic => `(tactic|
     theistG, nonFactiveG, replacementG, inertG, necessitarianG, forwardG, absentHolderG, mutualG,
     vanCleveG, gFrame, allC, onlyCD, uni, forwardOnly, gcEx, gcAlways, replEx, gOnlyThereEx,
     givesCHere, givesCAlways, givesDThere, noGiving, gPower, gPowerThere, noPower,
-    positivePower, gOverC, gOverCD, noOver, pairEx, annihilatorPower, vcEx, vcGives])
+    positivePower, gOverC, gOverCD, gOverD, noOver, pairEx, annihilatorPower, vcEx, vcGives])
 
 /-- Argument 8, the certificate of laws and models. Premise-free. -/
 theorem prussPowerControls : Controls := by
+  sorry
+
+/-- Argument 10, collective without distributive with two members.
+Premise-free. -/
+theorem twoMemberCollective : TwoMemberCollective := by
   sorry
 
 end TruthCore.Results.Modal.PrussPowerPremises

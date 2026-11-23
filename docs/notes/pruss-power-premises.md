@@ -93,7 +93,7 @@ transfer statements and the controls.
 
 ## 2. Results
 
-All verified (`verify-result.sh`; bind-check 9 bound, 0 mismatch). New open
+All verified (`verify-result.sh`; bind-check 10 bound, 0 mismatch). New open
 premises:
 
 - P2δ `5cf75a6b`: initiator presence with a difference in giving;
@@ -116,7 +116,8 @@ premises:
 | `2cc7e260` | `powerOverEachGivesNecessaryConcrete` | EM, `eb41bc9a`, concrete foundational being `c5da5e62` ⊢ `b19ffd92`. |
 | `6eb4d324` | `prussDirectionNecessaryHolder` | EM, symmetric access (STMT-ACCESSIBILITY-SYMMETRIC), P4′, P5, `607e94cf`, `9c8e99e7`, `887d5efc` ⊢ `1af99585` (a necessary concrete being that, at a world lacking the actual contingents, has a power for `w`'s obtaining). |
 | `95078e7b` | `prussDirectionNecessaryConcrete` | `1af99585` ⊢ `b19ffd92` (assembly). |
-| `8ad1804e` | `prussPowerControls` | premise-free ⊢ `d8c38bb0` (laws and models below). |
+| `8ad1804e` | `prussPowerControls` | premise-free ⊢ `d8c38bb0` (laws and models below). After the challenge the certificate's type `Model.Controls` unfolds differently: `CollectiveWithoutDistributive` was rebuilt with the holder's power over the replacement's esse. The change is a strengthening and was re-verified; no frozen Challenge statement was weakened (invariant 12). |
+| `9bba1325` | `twoMemberCollective` | premise-free ⊢ `bff9cbfa` (`Model.TwoMemberCollective`: collective without distributive at the level of `PowerFor`, with two actual contingents). |
 
 **Sense bridge.** `6eb4d324` declares NECESSARY_8 → NECESSARY_2 with role
 conclusion, the pattern of the #1889 projections. The symmetric-access
@@ -175,8 +176,9 @@ is one of two:
 | Model | Holds | Fails | Shows | Admissible on |
 |---|---|---|---|---|
 | `TheistNonvacuity` (`theistG`) | every premise of every argument; every conclusion; `g` a two-way giver, not fixed | — | nonvacuity of all nine arguments | classical theism (creation and conservation) |
-| `CollectiveWithoutDistributive` (`replacementG`) | P1′, P2′, P2δ, P3′, P4′, P5, factive giving; `g` necessary with varying giving (it gives a replacement `d`) and POWER_OVER_ESSE_1 over `d` | holders-give-each; transfer; `eb41bc9a`; withholding; two-way (withholding form) | the transfer is not derivable from the collective power; omission models of the transfer (`a47906a5`) and of holders-give-each (`56024b0c`). Formally the transfer fails because `PowerOver` is unconstrained; the replacement structure only makes that choice admissible | the thin reading of `PowerFor` only: the actual `c` is uncaused, and the holder's chain issues in a world with `d` instead. Not the Thomist reading (§3) |
+| `CollectiveWithoutDistributive` (`replacementG`) | P1′, P2′, P2δ, P3′, P4′, P5, factive giving; `g` necessary with varying giving (it gives a replacement `d`) and POWER_OVER_ESSE_1 over `d` | holders-give-each; transfer; `eb41bc9a`; withholding; two-way (withholding form) | the transfer is not derivable from the collective power; omission models of the transfer (`a47906a5`) and of holders-give-each (`56024b0c`). Formally the transfer fails because `PowerOver` is unconstrained; the replacement structure only makes that choice admissible. One actual contingent, so collective and distributive coincide here; the separation shown is PowerFor → POWER_OVER_ESSE_1, already for one member | the thin reading of `PowerFor` only: the actual `c` is uncaused, and the holder's chain issues in a world with `d` instead. Not the Thomist reading (§3) |
 | `DistributiveWithoutCollective` (`vanCleveG`) | a necessary `g` with POWER_OVER_ESSE_1 over each of two actual contingents, each contingent; with `gPower`, `g` also holds a power for `q` | P4′; P2′ for that power | power over each member's esse does not give the joint possibility: P4′ and initiator presence fail, though a power for `q` is held | — |
+| `TwoMemberCollective` (`twoMemberG`, result `9bba1325`) | two actual contingents `c`, `d` (each possibly absent alone and jointly), a necessary `g` holding a power for exactly their joint absence; P1′, P2′, P3′, P4′, P5 | the varying-holder distributive grounding: no being at `w` has a power for `c`'s absence alone | the whole-to-member step for powers (C1's premise B applied to `PowerFor`) is not valid as typed; this model, unlike `replacementG`, separates collective from distributive | thin or causal reading alike (no giving occurs; structural) |
 | `MutualAnnihilators` (`mutualG`) | distributive grounding with varying holders (`c` for `d`'s absence and conversely), initiator presence, P4′, P5 | any necessary being; the collective P1′ | the varying-holder distributive reading does not support the route | a world of mutually destructible contingents |
 | `Omissions` 1–8 | all premises but one | that premise; the conclusion | P2δ (`4ce57995`), factive giving (`56024b0c`), the withheld-giving bridge (`84cc194c`), and symmetric access, grounding at the absence worlds, initiator presence there, concreteness there and P4′ (`6eb4d324`) are each needed | — |
 | `Rivals` 1 (`inertG`) | a necessary fixed (inert) `g`; P4′, P5 | P1′, by the model's choice of no powers (`noPower`) | the inert necessary being. In general it is excluded only given P2δ (law 1): Omission 1 has an inert `g` holding P1′'s power | non-power modality with an idle necessary being |
@@ -224,9 +226,21 @@ POWER_OVER_ESSE_1 over each member.
   the replacement holder has a power for `q` only on the thin reading. Ad 1
   therefore shows that the transfer needs a stated bridge; it does not support
   replacement as the Thomist reading.
-- The note of the governing `PowerFor` DEF `bf7eddca` was amended to match:
-  replacement is a positive-production example on the thin reading, and the
-  claim that only withholding is available holds on the causal reading only.
+- **Which step fails.** `replacementG` has one actual contingent, so
+  collective and distributive coincide there: the separation it shows is
+  `PowerFor` → POWER_OVER_ESSE_1, already for one member (on the thin
+  reading). The whole-to-member step itself is separated by
+  `TwoMemberCollective` (`9bba1325`): a power for the joint absence of two
+  actual contingents is held while no being at `w` has a power for either's
+  absence alone. The transfer thus spans two gaps, whole to member and
+  `PowerFor` to POWER_OVER_ESSE_1, and both are open as typed.
+- The note of the governing `PowerFor` DEF `bf7eddca` was amended to match,
+  for the actual-indexed target only: replacement is a positive-production
+  example on the thin reading, and the claim that only withholding is
+  available holds on the causal reading only. For the global target (no
+  contingent concretum ever exists) the abstention claim holds on both
+  readings: a world satisfying it contains no concretum contingent there, so
+  no replacement array of contingent beings satisfies it.
 - The converse also fails (`DistributiveWithoutCollective`): power over each
   member's esse does not give the joint possibility.
 
@@ -492,9 +506,15 @@ is attributed. No statement says "God", "will", "choice" or "freedom".
 - **`corpus/definitions/bf7eddca-8291-4744-8470-379babcd7781.json`** (the
   `PowerFor` DEF of #1889): its note gained an amendment distinguishing the
   thin reading (replacement is a positive-production example) from the causal
-  reading (only withholding counts, by q.104 a.3 ad 1 and ad 3). Definition
-  text and Lean declaration are unchanged. Made after the semantic challenge
-  (P1-2).
+  reading (only withholding counts, by q.104 a.3 ad 1 and ad 3), scoped to the
+  actual-indexed target; for the global target the abstention claim holds on
+  both readings. Definition text and Lean declaration are unchanged. Made
+  after the semantic challenge (P1-2) and scoped after its re-check (N2).
+- **`docs/notes/modal-grounding-frameworks.md`** (#1889, coordinator-owned;
+  authorized for this one pointer): a short *later scoping* pointer after
+  "The only available example is an abstention" (§1), referring to the
+  `bf7eddca` amendment with the same scope. Affected downstream use of the
+  amendment.
 - disambiguations `197f0097`, `f5dda05f` and `88a8fba7` are linked, not
   edited;
 - `corpus/definition-status.json` gained only this module's four entries;

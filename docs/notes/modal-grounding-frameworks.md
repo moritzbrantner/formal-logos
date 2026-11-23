@@ -64,6 +64,10 @@ no assumed structure.
   negative state. The only available example is an abstention, a free agent's
   power not to produce anything. This is principled: "non-existence has no
   direct cause" (ST I q.104 a.3 ad 1, navigation only).
+  *Later scoping* (`docs/notes/pruss-power-premises.md` §3; amendment in
+  DEF `bf7eddca`'s note): for the global target this holds on both readings
+  of `PowerFor`; for the actual-indexed target it holds on the causal reading
+  only, since on the thin reading a replacement producer is also an example.
 
   There is a trade-off. Pruss's own direction avoids the abstention problem:
   his holder sits in the non-actual world with a positive power for the actual
