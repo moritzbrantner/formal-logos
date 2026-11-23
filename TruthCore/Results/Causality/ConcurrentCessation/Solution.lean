@@ -107,11 +107,11 @@ theorem c3ActualWorldControls : C3ActualWorld.Certificate := by
   -- Hence no necessary concrete being is smuggled into the rival.
   · rintro ⟨x, _, _, hn⟩
     have h := hn false (by trivial)
-    simpa [C3ActualWorld.withGround, C3ActualWorld.history] using h
+    simp [C3ActualWorld.withGround, C3ActualWorld.history] at h
   · rintro ⟨x, _, _, hn⟩
     have h := hn false (by trivial)
-    simpa [C3ActualWorld.withoutGround, C3ActualWorld.withGround,
-      C3ActualWorld.history] using h
+    simp [C3ActualWorld.withoutGround, C3ActualWorld.withGround,
+      C3ActualWorld.history] at h
   -- The same originating esse cause is real at the selected world.
   · simp [C3ActualWorld.originFrame, C3ActualWorld.frame, trueCausesFalse]
   · refine ⟨1, ⟨by simp [C3ActualWorld.history], ?_⟩,
