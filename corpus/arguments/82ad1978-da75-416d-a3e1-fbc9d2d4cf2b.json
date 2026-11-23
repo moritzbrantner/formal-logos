@@ -33,6 +33,15 @@
     "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
     "be54be36-3ce8-53f9-8168-50d1114e6c76",
     "8bb31748-e20f-5266-ac39-c442faab6622",
-    "57f80020-fa6f-5b69-be58-b4cf95b7226f"
+    "57f80020-fa6f-5b69-be58-b4cf95b7226f",
+    "d25cee67-1d5c-4a4c-bda5-8571b731ddf3"
+  ],
+  "sense_bridges": [
+    {
+      "term": "POSSIBLE_NOT_TO_BE",
+      "from": "3e559843-f12d-4621-acc5-801083f484f9",
+      "to": "77448ffb-28ee-4276-b95c-1e584ad4d198",
+      "statement_id": "9163c423-bbf7-464d-9342-6e1cf38d54e6"
+    }
   ]
 }

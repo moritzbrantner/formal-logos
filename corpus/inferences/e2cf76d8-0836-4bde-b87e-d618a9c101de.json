@@ -1,0 +1,10 @@
+{
+  "id": "e2cf76d8-0836-4bde-b87e-d618a9c101de",
+  "label": "The unprioritized setting separates C2 from its weak form (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "63f55a6f-522e-48e3-91fe-00d763de6d91",
+  "rule": "Finite check",
+  "meaning": "In the unprioritized frame C2-minus holds and C2 fails: the strengthening is strict. A structural interpretation only.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

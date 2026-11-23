@@ -1,0 +1,10 @@
+{
+  "id": "cd86fe57-99b7-40b1-b07a-6d62431ab4a6",
+  "label": "C2 is its weak form plus the difference (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "f0665fca-0cd6-4408-bf56-9ea0c75eaba6",
+  "rule": "Forward by projection; backward, the difference closes the cause disjunct of the weak form",
+  "meaning": "Certified difference (#1598) of the registration C2 strengthens C2-minus, with no background: C2 holds iff C2-minus holds and every contingent being with a distinct esse-cause is existentially receptive or has a simply prior one. Premise-free and constructive; it asserts none of the statements compared.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

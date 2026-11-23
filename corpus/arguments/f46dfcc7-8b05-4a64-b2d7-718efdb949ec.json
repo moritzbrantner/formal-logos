@@ -6,7 +6,7 @@
   "inference_ids": [
     "f19ee8ff-8e90-4423-9946-23a493c7094d"
   ],
-  "meaning": "Premise-free laws relating C2 to its weak form, to R1 with De ente and to B2 with B3; correlation to #1870's restricted bridge (ii); PGP to q.9 a.2's MUTABLE_3 (bridge (i)); the composed PGP route to the First Way endpoint; B4b and B4a to the new bridges, and the exclusion of actual corruptibles by B4b under adopted POTENCY_1. Then ten finite models: rival models (bruteSimple, selfAnnihilator, uncausedComposite, angelic, deistSource), omission models for each premise of the PGP argument, a nonvacuity witness, the potencyOnly non-equivalence model and the corruptor model. Model-witnessed separations only; no premise is established and no reality claim is made.",
+  "meaning": "Premise-free laws relating C2 to its weak form, to R1 with De ente and to B2 with B3; correlation to #1870's restricted bridge (ii); PGP to q.9 a.2's MUTABLE_3 (bridge (i)); the composed PGP route to the First Way endpoint; B4b and B4a to the new bridges, the exclusion of actual corruptibles by B4b under adopted POTENCY_1, and the triviality of correlation under the giving sense of power over esse. Then ten finite models: rival models (bruteSimple, selfAnnihilator, uncausedComposite, angelic), omission models for each premise of the PGP argument (including inertPowerHolder for correlation), a nonvacuity witness, the potencyOnly non-equivalence model and the corruptor model. Model-witnessed separations only; no premise is established and no reality claim is made.",
   "definition_ids": [
     "3fd6bddb-f10c-4df4-8694-3eb5e7c28617",
     "c8113f31-6208-5992-9ca4-712887a4594b",
@@ -34,7 +34,8 @@
     "508617ab-cf24-5f3b-a387-64b3991359ec",
     "557d8e44-4350-5031-81e3-ff6be5e30acc",
     "be54be36-3ce8-53f9-8168-50d1114e6c76",
-    "8bb31748-e20f-5266-ac39-c442faab6622"
+    "8bb31748-e20f-5266-ac39-c442faab6622",
+    "d25cee67-1d5c-4a4c-bda5-8571b731ddf3"
   ],
   "sense_mixing_control": true
 }

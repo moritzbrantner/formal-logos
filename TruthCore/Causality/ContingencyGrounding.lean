@@ -4,6 +4,7 @@ public import TruthCore.Causality.FirstMoverNecessity
 public import TruthCore.Causality.TermSenseForks2
 public import TruthCore.Causality.TermSenseForks4
 public import TruthCore.Latin.Aquinas.DeEnte.ClosedEsseSource
+public import TruthCore.Logic.StrengthComparison
 
 /-!
 # C2: what grounds the contingency of an actual being? (follow-up to #1870)
@@ -19,46 +20,49 @@ act).
 
 **C2** (`ContingentReceptiveOrReceivedFromPrior`): every being contingent at the
 reading world `w` (`ContingentAt` on `F.history.ontic`, existing at `w` and
-absent at some accessible world) either has a principle open to its being
-(`ExistentiallyReceptive`: its esse is received in a principle in receptive
+absent at some accessible world) either is existentially receptive
+(`ExistentiallyReceptive`: its esse is received in some principle in receptive
 potency to it, RECEPTIVE_POTENCY_1 of *De ente* c.3, or it is composed of
 matter and form) or has a distinct CAUSE_2 of its esse that is SIMPLY_PRIOR_1
-to it. "Receptive" is **not** POTENCY_1 at esse: by the R2 law of
-`FirstMoverNecessity.Model.ReceptionControls`, unactualized POTENCY_1 at esse
-is incompatible with actual existence, whereas a receiving principle may
-already have its act. The matter–form disjunct keeps C2 faithful for views
-without a real essence–esse distinction (Suárez), on which corruptibles have
-intrinsic openness to non-being through matter without a received esse.
+to it. "Relevant" receptivity is typed no further: any such recipient, or any
+matter–form composition, satisfies it. "Receptive" is **not** POTENCY_1 at
+esse: by the R2 law of `FirstMoverNecessity.Model.ReceptionControls`,
+unactualized POTENCY_1 at esse is incompatible with actual existence, whereas a
+receiving principle may already have its act. The matter–form disjunct keeps
+C2 faithful for views without a real essence–esse distinction (Suárez).
 
-**Power grounding (PGP)** (`ContingencyPowerGrounded`): every being contingent
-at `w` is corruptible simply (`CanFailToBe x F.esse`, the existing
-DEF-CAN-FAIL-TO-BE primitive at the respect of being, read as In Metaph. IX
-lect. 9's *corruptibile simpliciter*: an intrinsic two-way potency to be and
-not be, not the bare possibility of not being) or some being has power over its
-esse (`PowerOver y x F.esse`, the relation under MUTABLE_2's
-`MutableThroughAnother`, at esse). `y = x` is allowed, so a self-annihilating
-being sits inside PGP and is excluded only by the correlation premise or by
-the existing no-self-esse-cause statement. PGP deliberately concerns only the
-possible absence of an *actual individual*, not alien or global possibilities.
+**PGP** (`ContingencyPowerGrounded`): every being contingent at `w` can fail to
+be in substance (`CanFailToBe x F.esse`, the existing DEF-CAN-FAIL-TO-BE
+primitive at the respect of being, read as the in-subject channel,
+*corruptibile simpliciter*; POSSIBLE_NOT_TO_BE_1) or some being has power over
+its esse (`PowerOverEsse`, POWER_OVER_ESSE_1, the broad power to unmake `x`'s
+being; possibility of non-being through another, POSSIBLE_NOT_TO_BE_2). `y = x`
+is allowed. PGP is a material disjunction: it is weaker than the explanatory
+"grounding" of the powers theory of modality whose warrant it borrows. It
+concerns only the possible absence of an *actual individual*.
 
-**Correlation** (`PowerOverEsseCorrelation`): a power over `x`'s esse either
-works on an intrinsic potency of `x` to non-being (corruption) or is the giving
-and withholding of esse that its holder causes (`CausesIn y x F.esse`,
-tenseless: the frame's CAUSE_2 has no time index, so "conserving now" and
-"having originated" are not distinguished here).
+**Correlation** (`PowerOverEsseCorrelation`): whenever `y` has power over `x`'s
+esse (sense POWER_OVER_ESSE_1), `x` can fail to be in substance or `y` is a
+CAUSE_2 of `x`'s esse (`CausesIn y x F.esse`, tenseless: "conserving now" and
+"having originated" are not distinguished). A co-occurrence disjunction; it
+does not state that the power works through either. Under the narrower giving
+sense POWER_OVER_ESSE_2 (`GivingPowerOverEsse`) it is trivial (`Model.Laws`,
+11), so the batch uses the broad sense.
 
-**Passive → receptive** (`CorruptibleIsExistentiallyReceptive`): what is
-corruptible simply has a principle open to being and non-being: matter, or a
-receiving principle of esse.
+**Passive → receptive** (`CorruptibleIsExistentiallyReceptive`): what can fail
+to be in substance is composed of matter and form (a principle open to being
+and non-being) or has its esse received in a principle in receptive potency to
+it.
 
 Results (in `TruthCore.Results.Causality.ContingencyGrounding`): C2 from PGP,
 correlation, passive→receptive, no self-esse-cause and B3 (`ee74c678`); the
 First Way's mover is necessary from C2, firstness, and the new intermediate
 `FirstUnmovedMoverUnreceived` (itself from simplicity, R3, *De ente* and
 receptive irreflexivity, with no excluded middle); C2 from R1 with *De ente*,
-and from B2 with B3 (both existing bridges are stronger than C2); C2 ⇒ C2⁻ and
-C2⁻ with B3 ⇒ C2; and #1870's B2 ∨ B4 (`3c9d683b`) from PGP, correlation, no
-self-esse-cause and a corruptible-has-POTENCY_1 bridge.
+and from B2 with B3 (both existing bridges are stronger than C2); C2 ⇒ C2⁻,
+C2⁻ with B3 ⇒ C2, and the certified difference of C2 over C2⁻; and #1870's
+B2 ∨ B4 (`3c9d683b`) from PGP, correlation, no self-esse-cause and a
+corruptible-has-POTENCY_1 bridge.
 
 Models are finite typed interpretations: structural satisfiability of a stated
 formal reading, never a certificate of metaphysical possibility.
@@ -72,19 +76,19 @@ open TruthCore.Causality.Frame (CausalityFrame)
 open TruthCore.German.Kant.CosmologicalInference (Ontic NecessaryAt ContingentAt)
 open TruthCore.Latin.Aquinas.SummaTheologiae (PureAct IsFirstBeing)
 open TruthCore.Case.Catholicism (IsFirstUnmovedMover)
+open TruthCore.Logic.StrengthComparison (ComparisonSpec)
 
 variable {W B T R P : Type}
 
 /-! ## Existential receptivity and C2 -/
 
-/-- EXISTENTIAL RECEPTIVITY (defined predicate): `x` has a principle open to its
-being. Either its esse is received in some principle that is in receptive
-potency to that esse (`Received`, `ReceptivePotencyTo`: RECEPTIVE_POTENCY_1 of
-*De ente* c.3, compatible with actually having the act), or `x` is composed of
-matter and form (the same `ComposedOfMatterAndForm` parameter as the existing
-simplicity reading; matter is receptive of substantial form). It is not
-POTENCY_1 (`InPotency`, able to be and not in act) at esse, and it says nothing
-about a cause. -/
+/-- EXISTENTIAL RECEPTIVITY (defined predicate): either the esse of `x` is
+received in some principle that is in receptive potency to that esse
+(`Received`, `ReceptivePotencyTo`: RECEPTIVE_POTENCY_1 of *De ente* c.3,
+compatible with actually having the act), or `x` is composed of matter and form
+(the same `ComposedOfMatterAndForm` parameter as the existing simplicity
+reading). Any such recipient satisfies it. It is not POTENCY_1 (`InPotency`,
+able to be and not in act) at esse, and it says nothing about a cause. -/
 def ExistentiallyReceptive (esseOf : B → P) (Received : B → P → Prop)
     (ReceptivePotencyTo : P → P → Prop) (ComposedOfMatterAndForm : B → Prop) (x : B) :
     Prop :=
@@ -109,29 +113,82 @@ def ContingentReceptiveOrReceived (F : CausalityFrame W B T R) (w : W)
     ExistentiallyReceptive esseOf Received ReceptivePotencyTo ComposedOfMatterAndForm x ∨
       ∃ c, c ≠ x ∧ F.CausesIn c x F.esse
 
+/-- Difference of C2 over C2⁻ (#1598), OPEN: every being contingent at `w` that
+has a distinct CAUSE_2 of its esse is existentially receptive or has a distinct
+CAUSE_2 of its esse that is SIMPLY_PRIOR_1 to it. -/
+def ContingentEsseCauseIsPriorOrReceptive (F : CausalityFrame W B T R) (w : W)
+    (esseOf : B → P) (Received : B → P → Prop) (ReceptivePotencyTo : P → P → Prop)
+    (ComposedOfMatterAndForm : B → Prop) : Prop :=
+  ∀ x, ContingentAt F.history.ontic w x → (∃ c, c ≠ x ∧ F.CausesIn c x F.esse) →
+    ExistentiallyReceptive esseOf Received ReceptivePotencyTo ComposedOfMatterAndForm x ∨
+      ∃ c, c ≠ x ∧ F.CausesIn c x F.esse ∧ F.PriorSimply c x
+
+/-- The strength comparison of C2 over C2⁻ with its difference. -/
+def c2OverWeak (F : CausalityFrame W B T R) (w : W)
+    (esseOf : B → P) (Received : B → P → Prop) (ReceptivePotencyTo : P → P → Prop)
+    (ComposedOfMatterAndForm : B → Prop) : ComparisonSpec where
+  stronger := ContingentReceptiveOrReceivedFromPrior F w esseOf Received ReceptivePotencyTo
+    ComposedOfMatterAndForm
+  weaker := ContingentReceptiveOrReceived F w esseOf Received ReceptivePotencyTo
+    ComposedOfMatterAndForm
+  delta := ContingentEsseCauseIsPriorOrReceptive F w esseOf Received ReceptivePotencyTo
+    ComposedOfMatterAndForm
+
+/-- Premise-free equivalence: C2 holds exactly when C2⁻ and the difference hold. -/
+def C2OverWeakExact : Prop :=
+  ∀ {W B T R P : Type} (F : CausalityFrame W B T R) (w : W)
+    (esseOf : B → P) (Received : B → P → Prop) (ReceptivePotencyTo : P → P → Prop)
+    (ComposedOfMatterAndForm : B → Prop),
+    ContingentReceptiveOrReceivedFromPrior F w esseOf Received ReceptivePotencyTo
+        ComposedOfMatterAndForm ↔
+      ContingentReceptiveOrReceived F w esseOf Received ReceptivePotencyTo
+          ComposedOfMatterAndForm ∧
+        ContingentEsseCauseIsPriorOrReceptive F w esseOf Received ReceptivePotencyTo
+          ComposedOfMatterAndForm
+
+/-! ## Power over esse: two senses -/
+
+/-- POWER_OVER_ESSE_1 (broad): `y` has a power whose exercise would make or
+unmake `x`'s being, by giving or withholding its esse or by corrupting it. The
+relation `PowerOver` of MUTABLE_2's `MutableThroughAnother`, applied at the
+frame's respect of being; `y = x` is not excluded. -/
+def PowerOverEsse (F : CausalityFrame W B T R) (PowerOver : B → B → R → Prop) (y x : B) :
+    Prop :=
+  PowerOver y x F.esse
+
+/-- POWER_OVER_ESSE_2 (giving): `y` has power over `x`'s esse as its giver, a
+power over `x`'s being together with being a CAUSE_2 of `x`'s esse. The
+creator's power to originate or withdraw esse (DEF-MUTABILITY-IN-ANOTHER's
+reading of q.9 a.2). -/
+def GivingPowerOverEsse (F : CausalityFrame W B T R) (PowerOver : B → B → R → Prop)
+    (y x : B) : Prop :=
+  PowerOver y x F.esse ∧ F.CausesIn y x F.esse
+
 /-! ## Power grounding of possible non-existence -/
 
-/-- **PGP**, OPEN (power grounding of possible non-existence): every being
-contingent at `w` is corruptible simply (`CanFailToBe x F.esse`: it has in
-itself a potency not to be, DEF-CAN-FAIL-TO-BE at the respect of being) or some
-being, possibly `x` itself, has power over its esse (`PowerOver y x F.esse`:
-`y` can give or withhold, make or unmake `x`'s being). Concerns the possible
-absence of an actual individual only. -/
+/-- **PGP**, OPEN: every being contingent at `w` can fail to be in substance
+(`CanFailToBe x F.esse`, the in-subject channel POSSIBLE_NOT_TO_BE_1) or some
+being, possibly `x` itself, has power over its esse in the broad sense
+(POWER_OVER_ESSE_1). A material disjunction, weaker than explanatory grounding.
+Concerns the possible absence of an actual individual only. -/
 def ContingencyPowerGrounded (F : CausalityFrame W B T R) (w : W)
     (CanFailToBe : B → R → Prop) (PowerOver : B → B → R → Prop) : Prop :=
-  ∀ x, ContingentAt F.history.ontic w x → CanFailToBe x F.esse ∨ ∃ y, PowerOver y x F.esse
+  ∀ x, ContingentAt F.history.ontic w x →
+    CanFailToBe x F.esse ∨ ∃ y, PowerOverEsse F PowerOver y x
 
-/-- **Correlation**, OPEN (Met. Θ.1's correlation of active power with passive
-potency, with the creation exception): a power of `y` over `x`'s esse either
-works on `x`'s intrinsic potency not to be (`x` is corruptible simply), or it
-is the giving and withholding of esse that `y` causes (`CausesIn y x esse`,
-tenseless). -/
+/-- **Correlation**, OPEN (navigation: Met. Θ.1's correlation of active power
+with passive potency, with the creation exception): whenever `y` has power over
+`x`'s esse (POWER_OVER_ESSE_1), `x` can fail to be in substance or `y` is a
+CAUSE_2 of `x`'s esse (`CausesIn y x esse`, tenseless). A co-occurrence
+disjunction; it says nothing about how the power operates. -/
 def PowerOverEsseCorrelation (F : CausalityFrame W B T R) (CanFailToBe : B → R → Prop)
     (PowerOver : B → B → R → Prop) : Prop :=
-  ∀ y x, PowerOver y x F.esse → CanFailToBe x F.esse ∨ F.CausesIn y x F.esse
+  ∀ y x, PowerOverEsse F PowerOver y x → CanFailToBe x F.esse ∨ F.CausesIn y x F.esse
 
-/-- **Passive → receptive**, OPEN: whatever is corruptible simply is
-existentially receptive (it has matter, or a receiving principle of esse). -/
+/-- **Passive → receptive**, OPEN: whatever can fail to be in substance is
+existentially receptive: it is composed of matter and form (a principle open to
+being and non-being), or its esse is received in a principle in receptive
+potency to it. -/
 def CorruptibleIsExistentiallyReceptive (F : CausalityFrame W B T R)
     (CanFailToBe : B → R → Prop) (esseOf : B → P) (Received : B → P → Prop)
     (ReceptivePotencyTo : P → P → Prop) (ComposedOfMatterAndForm : B → Prop) : Prop :=
@@ -159,18 +216,20 @@ def FirstUnmovedMoverUnreceived {Respect : Type} (MovedIn : B → Respect → Pr
 /-! ## #1870's gap-1 bridge (ii), used only in `Model.Laws` -/
 
 /-- #1870's unrecorded bridge (ii) at esse, unrestricted: another's power over a
-thing's esse gives a distinct CAUSE_2 of its esse. It fails for corruption by
-another (`Model.corruptorModel`). -/
+thing's esse (POWER_OVER_ESSE_1) gives a distinct CAUSE_2 of its esse. It is not
+derived here; its countermodel `Model.CorruptorModel` is an uncaused
+corruptible composite. -/
 def AnothersPowerOverEsseGivesEsseCause (F : CausalityFrame W B T R)
     (PowerOver : B → B → R → Prop) : Prop :=
-  ∀ y x, y ≠ x → PowerOver y x F.esse → ∃ c, c ≠ x ∧ F.CausesIn c x F.esse
+  ∀ y x, y ≠ x → PowerOverEsse F PowerOver y x → ∃ c, c ≠ x ∧ F.CausesIn c x F.esse
 
 /-- Bridge (ii) restricted to beings incorruptible simply. The correlation
 premise implies it (`Model.Laws`, 5). -/
 def IncorruptibleUnderAnothersPowerHasEsseCause (F : CausalityFrame W B T R)
     (CanFailToBe : B → R → Prop) (PowerOver : B → B → R → Prop) : Prop :=
   ∀ y x, TruthCore.Latin.Aquinas.InMetaphysicam.IncorruptibleSimply CanFailToBe F.esse x →
-    y ≠ x → PowerOver y x F.esse → ∃ c, c ≠ x ∧ F.CausesIn c x F.esse
+    y ≠ x → PowerOverEsse F PowerOver y x → ∃ c, c ≠ x ∧ F.CausesIn c x F.esse
+
 
 /-! ## Laws and finite models -/
 
@@ -206,7 +265,9 @@ open TruthCore.Case.Catholicism (ThereIsAFirstUnmovedMover FirstUnmovedMoverIsFi
     selected-world existence-to-act interface, B4b excludes every actual being
     corruptible simply at `w`: like R2, it reads a capacity for non-being as
     unactualized potency at esse, which actual existence contradicts. So the
-    corruptibility disjunct of PGP is not POTENCY_1 at esse. -/
+    corruptibility disjunct of PGP is not POTENCY_1 at esse.
+11. Under the giving sense POWER_OVER_ESSE_2 the correlation is trivial: a
+    giving power over `x`'s esse is a CAUSE_2 of it. -/
 def Laws : Prop :=
   (∀ (W B T R P : Type) (F : CausalityFrame W B T R) (w : W) (esseOf : B → P)
     (Received : B → P → Prop) (RP : P → P → Prop) (MF : B → Prop),
@@ -268,7 +329,10 @@ def Laws : Prop :=
     CanFailToBeIsPotencyAtEsse F
       (TruthCore.Latin.Aquinas.SummaTheologiae.AdoptedPotency.InPotency InAct CanBe)
       CanFailToBe →
-      ∀ x, F.history.ontic.ExistsAt w x → ¬ CanFailToBe x F.esse)
+      ∀ x, F.history.ontic.ExistsAt w x → ¬ CanFailToBe x F.esse) ∧
+  (∀ (W B T R : Type) (F : CausalityFrame W B T R) (CanFailToBe : B → R → Prop)
+    (PowerOver : B → B → R → Prop),
+    ∀ y x, GivingPowerOverEsse F PowerOver y x → CanFailToBe x F.esse ∨ F.CausesIn y x F.esse)
 
 /-! ### Model ingredients
 
@@ -310,12 +374,18 @@ essence, unreceived, not composed of matter and form, uncaused, incorruptible
 simply, and no being has power over its esse; it exists at the reading world
 and is absent at the other. Every premise of the PGP argument and of the
 unreceivedness and C2 routes to the endpoint holds except PGP and C2, which
-fail at `f`. The closed-collection premise CCR (`20babef7`, C1) holds on the
-q.3 a.4 profile of the same frame, with `f` an actual esse bearer that has no
-distinct actual esse-cause. Structural satisfiability only; an admissible
-metaphysical interpretation needs a modal metaphysics on which an individual's
-possible absence is no power's potentiality (modal primitivism, Humean or
-combinatorial recombination, Lewisian counterpart absence). -/
+fail at `f`: ¬C2 here needs ¬PGP (it does not follow from ¬PGP alone:
+`UncausedCompositeModel`). The closed-collection premise CCR (`20babef7`, C1)
+holds on the q.3 a.4 profile of the same frame, with `f` an actual esse bearer
+that has no distinct actual esse-cause; that check is degenerate (the adapter's
+one-world `Unit` frame reads existence as act of esse and this frame has no
+esse-causes, so every bearer is trivially a root and CCR is modally silent by
+construction). Structural satisfiability only. The relevant admissible reading
+is a hybrid: it accepts the First Way's act and potency for change while using
+a non-power modality for existence (modal primitivism, combinatorial
+recombination, Lewisian counterpart absence, or essence-based modality with
+existence-conditional essences, Fine/Lowe). Pure Humeans reject the model's act,
+potency and motion premises. -/
 def BruteSimpleModel : Prop :=
   ContingentAt bruteFirst.history.ontic true true ∧
   ThereIsAFirstUnmovedMover movedIn bruteFirst.MovesIn ∧
@@ -395,14 +465,18 @@ def UncausedCompositeModel : Prop :=
   ¬ (∃ c, c ≠ false ∧ uncausedX.CausesIn c false uncausedX.esse ∧
     uncausedX.PriorSimply c false)
 
-/-- **angelic** (Aquinas's own case; frame `conserved`): the contingent `f` is
-POTENCY_1-pure act and incorruptible simply (no intrinsic potency to
-non-being), receives its esse in its essence, and the necessary `x` has power
-over `f`'s esse, causes it and is simply prior to it. Every premise of the PGP
-argument holds, C2 holds (both disjuncts), B4 and the pure-act target at `w`
-fail. Being able not to exist is not possessing a potency to non-being; the
-contingency is grounded extrinsically. Structural only; admissible on the
-Thomist account of a created intelligence. -/
+/-- **angelic** (frame `conserved`): the contingent `f` is incorruptible simply
+(no intrinsic potency to non-being), receives its esse in a principle in
+receptive potency to it, and the necessary `x` has power over `f`'s esse,
+causes it and is simply prior to it. Every premise of the PGP argument holds
+and C2 holds by both disjuncts. Admissible on the Thomist account of a created
+intelligence for exactly this part: contingent, incorruptible simply, C2 by
+both disjuncts, contingency grounded extrinsically (being able not to exist is
+not having a potency to non-being). STRUCTURAL ONLY: `f` is POTENCY_1-pure act
+only relative to the frame's two respects, so the failures of B4 and of the
+pure-act target at `w` are not Thomist-admissible (Aquinas's angels have
+potencies of intellect, will and place, q.9 a.2, which make B4 true and the
+target vacuous for them). -/
 def AngelicModel : Prop :=
   ContingentAt conserved.history.ontic true true ∧
   PureAct movedPotency true ∧
@@ -420,15 +494,18 @@ def AngelicModel : Prop :=
   ¬ PossibleNonexistenceIsPotency conserved movedPotency true ∧
   ¬ PureActBeingsNecessaryAt conserved movedPotency true
 
-/-- **deistSource** (rival 6.4; frame `bruteFirst`): the necessary `x` has power
-over the contingent `f`'s esse (it could have withheld `f`) but is not a
-CAUSE_2 of `f`'s esse under the frame's reading; `f` receives its esse in a
-principle in receptive potency to it. PGP holds, correlation fails, C2 holds by
-its receptive disjunct, its prior-cause disjunct and B2 fail. The deist rival
-targets the conserving reading of correlation and C2's second disjunct, not
-C2. Since `f` is POTENCY_1-pure act, B2 ∨ B4 fails too: C2 does not entail
-B2 ∨ B4. Structural only. -/
-def DeistSourceModel : Prop :=
+/-- **inertPowerHolder** (omission model of correlation; frame `bruteFirst`):
+the necessary `x` has power over the contingent `f`'s esse but plays no causal
+role (it is no CAUSE_2 of `f`'s esse), and `f` is not corruptible simply; `f`
+receives its esse in a principle in receptive potency to it. PGP holds,
+correlation fails, C2 holds by its receptive disjunct, its prior-cause disjunct
+and B2 fail. This is the inert power over being named in the revision
+conditions, not a deist creator: with the tenseless `CausesIn`, a deist
+originator is a CAUSE_2 of `f`'s esse and satisfies the typed correlation and
+C2's prior-cause disjunct; the deist rival bears only on a tensed (conserving)
+strengthening. Since `f` is POTENCY_1-pure act, B2 ∨ B4 fails too: C2 does not
+entail B2 ∨ B4. Structural only. -/
+def InertPowerHolderModel : Prop :=
   ContingentAt bruteFirst.history.ontic true true ∧
   ContingencyPowerGrounded bruteFirst true heatFail xPowerF ∧
   ¬ PowerOverEsseCorrelation bruteFirst heatFail xPowerF ∧
@@ -460,8 +537,11 @@ def BareCorruptibleModel : Prop :=
 /-- **unprioritizedSource** (omission of B3; frame `unprioritized`): the
 necessary `x` has power over and causes the contingent `f`'s esse but is not
 simply prior to it; `f` is unreceived and simple. PGP, correlation,
-passive→receptive and no-self-esse-cause hold; B3 and C2 fail. -/
+passive→receptive and no-self-esse-cause hold; B3 and C2 fail while C2⁻ holds,
+so C2 strictly strengthens C2⁻. -/
 def UnprioritizedSourceModel : Prop :=
+  ContingentReceptiveOrReceived unprioritized true esseTrue receivedNone receptivePotency
+    noneHolds ∧
   ContingencyPowerGrounded unprioritized true heatFail xPowerF ∧
   PowerOverEsseCorrelation unprioritized heatFail xPowerF ∧
   CorruptibleIsExistentiallyReceptive unprioritized heatFail esseTrue receivedNone
@@ -471,6 +551,15 @@ def UnprioritizedSourceModel : Prop :=
     unprioritized.PriorSimply ∧
   ¬ ContingentReceptiveOrReceivedFromPrior unprioritized true esseTrue receivedNone
     receptivePotency noneHolds
+
+/-- The separating setting of C2 over C2⁻ (#1598): the `unprioritized` frame,
+with nothing received and no matter–form composition. -/
+def unprioritizedSetting : ComparisonSpec :=
+  c2OverWeak unprioritized true esseTrue receivedNone receptivePotency noneHolds
+
+/-- In `unprioritizedSetting` C2⁻ holds and C2 fails. -/
+def UnprioritizedSeparates : Prop :=
+  TruthCore.Logic.StrengthComparison.Separation unprioritizedSetting
 
 /-- **witness** (nonvacuity; frame `witness`): the first mover `f` is necessary,
 first, pure act, simple and unreceived; the contingent moved thing `x` is
@@ -514,7 +603,7 @@ PGP and C2 fail. With `AngelicModel` (PGP and C2 hold, the target fails), PGP
 and C2 are each logically independent of the target, unlike B4, which with
 excluded middle is equivalent to it (`FirstMoverNecessity.Model.Laws`, 3). B2 ∨ B4
 holds here while C2 fails, so B2 ∨ B4 does not entail C2 either (with
-`DeistSourceModel`, the two bridges are independent). -/
+`InertPowerHolderModel`, the two bridges are independent). -/
 def PotencyOnlyModel : Prop :=
   PureActBeingsNecessaryAt uncausedX movedPotency true ∧
   PossibleNonexistenceIsPotency uncausedX movedPotency true ∧
@@ -523,12 +612,14 @@ def PotencyOnlyModel : Prop :=
   ¬ ContingentReceptiveOrReceivedFromPrior uncausedX true esseTrue receivedNone
     receptivePotency noneHolds
 
-/-- **corruptor** (#1870 bridge (ii); frame `uncausedX`): `f` can destroy the
-corruptible composite `x` (power over its esse) without causing its esse, as
-fire can destroy wood. Correlation, PGP, passive→receptive and C2 hold; the
-unrestricted bridge (ii) fails and its restriction to incorruptibles holds. No
-being receives esse, so R1 fails while C2 holds through matter and form: C2
-does not require R1. -/
+/-- **corruptor** (#1870 bridge (ii); frame `uncausedX`): `f` has power over the
+esse of the uncaused corruptible composite `x` without causing its esse.
+Correlation, PGP, passive→receptive and C2 hold; the unrestricted bridge (ii)
+fails and its restriction to incorruptibles holds. The countermodel depends on
+`x` being uncaused: under the tenseless CAUSE_2 an ordinary corruptible has a
+distinct esse-cause (its generator), so this model does not show the
+unrestricted bridge false of ordinary corruption. No being receives esse, so R1
+fails while C2 holds through matter and form: C2 does not require R1. -/
 def CorruptorModel : Prop :=
   ContingencyPowerGrounded uncausedX true xCorruptible fPowerX ∧
   PowerOverEsseCorrelation uncausedX xCorruptible fPowerX ∧
@@ -543,7 +634,7 @@ def CorruptorModel : Prop :=
 /-- The models, each at the reading world `true`. -/
 def Models : Prop :=
   BruteSimpleModel ∧ SelfAnnihilatorModel ∧ UncausedCompositeModel ∧ AngelicModel ∧
-  DeistSourceModel ∧ BareCorruptibleModel ∧ UnprioritizedSourceModel ∧ WitnessModel ∧
+  InertPowerHolderModel ∧ BareCorruptibleModel ∧ UnprioritizedSourceModel ∧ WitnessModel ∧
   PotencyOnlyModel ∧ CorruptorModel
 
 /-- The laws and the models. -/

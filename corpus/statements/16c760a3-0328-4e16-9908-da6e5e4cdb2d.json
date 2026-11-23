@@ -1,7 +1,7 @@
 {
   "id": "16c760a3-0328-4e16-9908-da6e5e4cdb2d",
   "label": "Whatever is corruptible simply is existentially receptive",
-  "paraphrase": "OPEN (passive to receptive), analyst formulation, attribution deferred (navigation: Met. Theta.8 1050b, what can not-be is perishable through matter): whatever can fail to be in substance (corruptible simply) has a principle open to being and non-being: it is composed of matter and form, or its esse is received in a principle in receptive potency (RECEPTIVE_POTENCY_1) to that esse.",
+  "paraphrase": "OPEN (passive to receptive), analyst formulation, attribution deferred (navigation: Met. Theta.8 1050b, what can not-be is perishable through matter): whatever can fail to be in substance (corruptible simply) is existentially receptive: it is composed of matter and form (matter is a principle open to being and non-being), or its esse is received in a principle in receptive potency (RECEPTIVE_POTENCY_1) to that esse (such a principle need not be open to non-being: on the angelic reading it is not).",
   "lean_declaration": "TruthCore.Causality.ContingencyGrounding.CorruptibleIsExistentiallyReceptive",
   "definition_ids": [
     "c8113f31-6208-5992-9ca4-712887a4594b",

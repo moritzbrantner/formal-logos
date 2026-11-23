@@ -151,7 +151,7 @@ macro "c2_unfold" : tactic => `(tactic|
     ExistentiallyReceptive, ContingencyPowerGrounded, PowerOverEsseCorrelation,
     CorruptibleIsExistentiallyReceptive, CorruptibleIsInSomePotency,
     FirstUnmovedMoverUnreceived, AnothersPowerOverEsseGivesEsseCause,
-    IncorruptibleUnderAnothersPowerHasEsseCause,
+    IncorruptibleUnderAnothersPowerHasEsseCause, PowerOverEsse, GivingPowerOverEsse,
     TruthCore.Latin.Aquinas.InMetaphysicam.IncorruptibleSimply,
     ThereIsAFirstUnmovedMover, MoversExistAt, FirstUnmovedMoverIsFirstBeing,
     FirstUnmovedMoverIsPureAct, DistinctEsseCausePriority, FirstUnmovedMoverIsSimpleReading,
@@ -176,6 +176,15 @@ macro "c2_unfold" : tactic => `(tactic|
     xCausesF, xPriorF, fCausesX, fPriorX])
 
 theorem controls : Controls := by
+  sorry
+
+/-- Certified difference of C2 over C2⁻ (#1598): C2 holds exactly when C2⁻ and
+the difference hold. Premise-free and constructive. -/
+theorem c2OverWeakExact : C2OverWeakExact := by
+  sorry
+
+/-- Strictness of C2 over C2⁻: the `unprioritized` setting separates them. -/
+theorem unprioritizedSeparates : UnprioritizedSeparates := by
   sorry
 
 end TruthCore.Results.Causality.ContingencyGrounding

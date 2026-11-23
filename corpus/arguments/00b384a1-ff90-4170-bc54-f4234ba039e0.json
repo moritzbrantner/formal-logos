@@ -11,7 +11,7 @@
   "inference_ids": [
     "81adf17d-eddb-49cd-a8cf-7feac2f5c1c4"
   ],
-  "meaning": "Answers #1870's remaining gap 1 conditionally. A contingent being is corruptible simply, hence in POTENCY_1 in some respect, or under some power over its esse; correlation makes it corruptible or makes the power's holder a CAUSE_2 of its esse, distinct by no-self-esse-cause. This corresponds to the q.9 a.2 two-channel reading of B2 or B4 as follows: with no power of anything over its own esse and corruptible-has-POTENCY_1, PGP gives #1870 bridge (i), contingency gives MUTABLE_3 (controls, law 6); correlation gives #1870 bridge (ii) only for beings incorruptible simply (controls, law 5), and the unrestricted bridge (ii) fails for corruption by another (controls, corruptor).",
+  "meaning": "Answers #1870's remaining gap 1 conditionally. A contingent being is corruptible simply, hence in POTENCY_1 in some respect, or under some power over its esse; correlation makes it corruptible or makes the power's holder a CAUSE_2 of its esse, distinct by no-self-esse-cause. This corresponds to the q.9 a.2 two-channel reading of B2 or B4 as follows: with no power of anything over its own esse and corruptible-has-POTENCY_1, PGP gives #1870 bridge (i), contingency gives MUTABLE_3 (controls, law 6); correlation yields #1870 bridge (ii) only for beings incorruptible simply (controls, law 5); the unrestricted form is not derived, and its countermodel is an uncaused corruptible composite (controls, corruptor).",
   "definition_ids": [
     "3fd6bddb-f10c-4df4-8694-3eb5e7c28617",
     "c8113f31-6208-5992-9ca4-712887a4594b",
@@ -28,6 +28,15 @@
     "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
     "508617ab-cf24-5f3b-a387-64b3991359ec",
     "557d8e44-4350-5031-81e3-ff6be5e30acc",
-    "57f80020-fa6f-5b69-be58-b4cf95b7226f"
+    "57f80020-fa6f-5b69-be58-b4cf95b7226f",
+    "d25cee67-1d5c-4a4c-bda5-8571b731ddf3"
+  ],
+  "sense_bridges": [
+    {
+      "term": "POSSIBLE_NOT_TO_BE",
+      "from": "3e559843-f12d-4621-acc5-801083f484f9",
+      "to": "77448ffb-28ee-4276-b95c-1e584ad4d198",
+      "statement_id": "9163c423-bbf7-464d-9342-6e1cf38d54e6"
+    }
   ]
 }

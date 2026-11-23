@@ -187,7 +187,7 @@ theorem potencyOrEsseCauseFromPowerGrounding {W B T R : Type} (F : CausalityFram
 /-! ## Laws and models -/
 
 theorem laws : Laws := by
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
   · intro W B T R P F w esseOf Received RP MF h
     exact c2ImpliesWeak F w esseOf Received RP MF h
   · intro W B T R P F w esseOf Received RP MF h hP
@@ -219,6 +219,8 @@ theorem laws : Laws := by
     exact Or.inl (h x hx)
   · intro W B T R F w InAct CanBe CanFailToBe hAct hB4b x hx hc
     exact (hB4b x hc).2 (hAct x hx)
+  · intro W B T R F CanFailToBe PowerOver y x h
+    exact Or.inr h.2
 
 /-- The unfolding set for the finite checks. -/
 macro "c2_unfold" : tactic => `(tactic|
@@ -226,7 +228,7 @@ macro "c2_unfold" : tactic => `(tactic|
     ExistentiallyReceptive, ContingencyPowerGrounded, PowerOverEsseCorrelation,
     CorruptibleIsExistentiallyReceptive, CorruptibleIsInSomePotency,
     FirstUnmovedMoverUnreceived, AnothersPowerOverEsseGivesEsseCause,
-    IncorruptibleUnderAnothersPowerHasEsseCause,
+    IncorruptibleUnderAnothersPowerHasEsseCause, PowerOverEsse, GivingPowerOverEsse,
     TruthCore.Latin.Aquinas.InMetaphysicam.IncorruptibleSimply,
     ThereIsAFirstUnmovedMover, MoversExistAt, FirstUnmovedMoverIsFirstBeing,
     FirstUnmovedMoverIsPureAct, DistinctEsseCausePriority, FirstUnmovedMoverIsSimpleReading,
@@ -272,8 +274,8 @@ theorem angelicModel : AngelicModel := by
   refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;>
   c2_unfold <;> simp [Bool.forall_bool]
 
-theorem deistSourceModel : DeistSourceModel := by
-  unfold DeistSourceModel
+theorem inertPowerHolderModel : InertPowerHolderModel := by
+  unfold InertPowerHolderModel
   refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;>
   c2_unfold <;> simp [Bool.forall_bool]
 
@@ -284,7 +286,7 @@ theorem bareCorruptibleModel : BareCorruptibleModel := by
 
 theorem unprioritizedSourceModel : UnprioritizedSourceModel := by
   unfold UnprioritizedSourceModel
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_⟩ <;>
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;>
   c2_unfold <;> simp [Bool.forall_bool]
 
 theorem witnessModel : WitnessModel := by
@@ -305,9 +307,25 @@ theorem corruptorModel : CorruptorModel := by
 
 theorem models : Models :=
   ⟨bruteSimpleModel, selfAnnihilatorModel, uncausedCompositeModel, angelicModel,
-    deistSourceModel, bareCorruptibleModel, unprioritizedSourceModel, witnessModel,
+    inertPowerHolderModel, bareCorruptibleModel, unprioritizedSourceModel, witnessModel,
     potencyOnlyModel, corruptorModel⟩
 
 theorem controls : Controls := ⟨laws, models⟩
+
+/-- Certified difference of C2 over C2⁻ (#1598): C2 holds exactly when C2⁻ and
+the difference hold. Premise-free and constructive. -/
+theorem c2OverWeakExact : C2OverWeakExact := by
+  intro W B T R P F w esseOf Received RP MF
+  constructor
+  · intro h
+    exact ⟨c2ImpliesWeak F w esseOf Received RP MF h, fun x hx _ => h x hx⟩
+  · rintro ⟨hWeak, hDelta⟩ x hx
+    rcases hWeak x hx with hr | hc
+    · exact Or.inl hr
+    · exact hDelta x hx hc
+
+/-- Strictness of C2 over C2⁻: the `unprioritized` setting separates them. -/
+theorem unprioritizedSeparates : UnprioritizedSeparates :=
+  ⟨trivial, (unprioritizedSourceModel).1, (unprioritizedSourceModel).2.2.2.2.2.2⟩
 
 end TruthCore.Results.Causality.ContingencyGrounding

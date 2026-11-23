@@ -1,0 +1,25 @@
+{
+  "id": "f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5",
+  "label": "Power over a thing's esse",
+  "term": "power over a thing's esse (broad power to unmake versus giving power)",
+  "sense_definition_ids": [
+    "3fd6bddb-f10c-4df4-8694-3eb5e7c28617",
+    "220ca6f1-cec0-4e54-aaad-ae9dcc1194f4"
+  ],
+  "term_label": "POWER_OVER_ESSE",
+  "senses": [
+    {
+      "id": "877ee743-d2d4-4c60-bd28-865d96e70637",
+      "label": "POWER_OVER_ESSE_1",
+      "definition_id": "3fd6bddb-f10c-4df4-8694-3eb5e7c28617",
+      "lean_declaration": "TruthCore.Causality.ContingencyGrounding.PowerOverEsse"
+    },
+    {
+      "id": "4c5013fd-847d-40c6-bf82-c0586f25b6c9",
+      "label": "POWER_OVER_ESSE_2",
+      "definition_id": "220ca6f1-cec0-4e54-aaad-ae9dcc1194f4",
+      "lean_declaration": "TruthCore.Causality.ContingencyGrounding.GivingPowerOverEsse"
+    }
+  ],
+  "resolution": "Two existing definitions bind MutableThroughAnother's power relation with different readings: DEF-MUTABLE-THROUGH-ANOTHER (any other being's power to change x, the potter example) and DEF-MUTABILITY-IN-ANOTHER (the creator's power to originate or withdraw x's esse). At the respect of being they become two senses with distinct declarations. POWER_OVER_ESSE_1 (PowerOverEsse) is the broad power to make or unmake x's being, including by corruption; POWER_OVER_ESSE_2 (GivingPowerOverEsse) adds that the power's holder is a CAUSE_2 of x's esse. The C2 batch uses POWER_OVER_ESSE_1 throughout: the power-grounding premise (PGP) and the correlation premise quantify over it, and the bridge (ii) controls use it. Under POWER_OVER_ESSE_2 the correlation premise would be trivial (C2 controls, law 11), so its content would move into the claim that every relevant power is a giving power. No argument passes from sense 1 to sense 2: the passage is exactly the correlation premise, an explicit OPEN premise, together with the can-fail-to-be disjunct."
+}

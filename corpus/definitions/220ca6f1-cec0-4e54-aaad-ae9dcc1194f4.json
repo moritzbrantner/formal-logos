@@ -1,0 +1,9 @@
+{
+  "id": "220ca6f1-cec0-4e54-aaad-ae9dcc1194f4",
+  "label": "POWER_OVER_ESSE_2: y has power over x's being as the CAUSE_2 of its esse, its giver",
+  "term": "power over esse, giving (GivingPowerOverEsse F PowerOver y x)",
+  "definition": "GivingPowerOverEsse F PowerOver y x := PowerOver y x esse and CausesIn y x esse: y has power over x's being as the cause of x's esse (CAUSE_2 at esse, DEF-CAUSE-OF-PERFECTION), the power to give or withhold it. The reading of DEF-MUTABILITY-IN-ANOTHER: the creator's power to originate or withdraw a creature's esse (q.9 a.2, navigation only).",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.ContingencyGrounding.GivingPowerOverEsse",
+  "note": "Recorded for contrast with POWER_OVER_ESSE_1 (f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5). Example: on the Thomist account, God's power over a creature's esse. Non-example: fire's power to destroy a log, which works by corruption and does not cause the log's esse. Under this sense the C2 correlation premise is trivial (C2 controls, law 11), so no premise of the C2 batch uses it. Structural properties: none beyond the conjunction. What would source it: a passage defining the creator's power over esse as a giving power."
+}
