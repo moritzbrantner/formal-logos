@@ -151,7 +151,7 @@ theorem actual_essential_bundle_possible (m : Ontic W B)
   obtain ⟨x, hExists, hExcellent⟩ := hActual
   exact ⟨w, hRef, x, hExists, hExcellent, hEssential x hExists hExcellent⟩
 
-/-- Structural separating controls: E-possible full twelve-attribute bearer
+/-- Structural separating controls: E-possible full thirteen-predicate bearer
 with no M-accessible bearer; nonvacuous weaker profile-specific inclusion;
 and individually instantiable attributes with no joint bearer. -/
 set_option maxRecDepth 8192 in
