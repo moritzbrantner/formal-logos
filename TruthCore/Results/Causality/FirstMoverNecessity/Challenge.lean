@@ -57,6 +57,24 @@ theorem contingentEsseCauseFromDistinctEsse {W B T R P : Type} (F : CausalityFra
     ContingentHasDistinctEsseCause F w := by
   sorry
 
+
+/-- Substantive support for B6 from reception. A contingent identity-being
+would receive esse (R1). Under identity (and only then), R3 locates the
+recipient in its essence. De ente puts that recipient in receptive potency to
+the act which, under identity, would be itself, violating irreflexivity. The
+hypothesis does NOT assert B6 or necessary existence. -/
+theorem contingentDistinctEsseFromReception {W B T R P : Type}
+    (F : CausalityFrame W B T R) (essenceOf esseOf : B → P)
+    (Received : B → P → Prop) (ReceptivePotencyTo : P → P → Prop) (w : W)
+    (hReceived : ContingentReceivesEsse F w Received)
+    (hOwn : IdentityScopedEsseReception essenceOf esseOf Received)
+    (hPotency : TruthCore.Latin.Aquinas.DeEnte.ReceiverInPotencyToReceivedEsseReading
+      esseOf Received ReceptivePotencyTo)
+    (hIrrefl : TruthCore.Causality.EsseReception.NothingInReceptivePotencyToItself
+      ReceptivePotencyTo) :
+    ContingentHasDistinctEsse F w essenceOf esseOf  := by
+  sorry
+
 /-- Route C, essence–esse: the First Way's first mover exists at `w` (B0) and,
 by the existing simplicity reading, has esse not distinct from essence. Were it
 absent at some accessible world, B6 would make its esse distinct from its
@@ -162,6 +180,12 @@ theorem firstMoverNecessaryIsNecessaryConcrete {W B T R : Type} (F : CausalityFr
 /-! ## Laws and models -/
 
 theorem controls : Controls := by
+  sorry
+
+
+/-- Reception controls: proof of the general mismatch uses the definition
+of adopted potency in the SAME esse respect; the rest are finite checks. -/
+theorem receptionControls : ReceptionControls  := by
   sorry
 
 end TruthCore.Results.Causality.FirstMoverNecessity
