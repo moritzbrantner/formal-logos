@@ -159,4 +159,43 @@ def ClosedEsseControls : Prop :=
   RootedInfiniteControl ∧ RootedCycleControl ∧ RosterOnlyControl ∧
     SingletonPopulationControl
 
+
+/-! State-indexed interpretation test for actual holistic selection (#1724/#1616).
+Unlike SupplierStateFixed, these assignments change the profile's InAct guard.
+The state changes the extension of actual bearers without changing bearer
+identities, the causal dictionary or the represented essence/esse values. -/
+
+/-- The actual-bearer guard changes with a candidate configuration. Its
+cause assignments are still structural and mode-unspecified: this does not
+model an actual productive exercise, an actual world, or an organizing whole. -/
+def circleAtState (state : Bool → Prop) : Profile Bool Bool Unit :=
+  { sourceFreeFiniteCircle with InAct := fun x _ => state x }
+
+/-- Every member of a candidate state has an actually admitted incoming
+same-respect esse-cause *in that state*. Unlike the old fixed-p rule, both
+the supplier's and recipient's actuality guards now vary with the state.
+This is a reciprocal-support equation, not a sufficient productive act. -/
+def CircleStateFixed (state : Bool → Prop) : Prop :=
+  ∀ x : Bool, state x ↔ ∃ c, ActualEsseCause (circleAtState state) c x
+
+/-- The holist's substantive global admission of a populated order.
+The nonemptiness conjunct is NOT inferred from the two causal arrows,
+their fixed-point equation or productive sufficiency; the holist must
+defend it as an ontic law, necessarily obtaining whole or primitive fact. -/
+def HolisticCircleAdmissible (state : Bool → Prop) : Prop :=
+  CircleStateFixed state ∧ ∃ x, state x
+
+/-- A counterinterpretation to any unconditional inference from unique
+populated, globally admissible mutual supply to an r-uncaused bearer. The
+empty candidate is itself fixed but excluded by the OPEN global
+nonemptiness admission; every admitted state has both bearers active,
+and both have an incoming r-cause. It is a structural test with
+state-indexed InAct, not a model of real constitutive/productive powers. -/
+def StateIndexedHolisticCircleControl : Prop :=
+  CircleStateFixed (fun _ : Bool => False) ∧
+  HolisticCircleAdmissible (fun _ : Bool => True) ∧
+  (∀ state, HolisticCircleAdmissible state → ∀ x, state x) ∧
+  (∀ x, ∃ c, ActualEsseCause (circleAtState (fun _ => True)) c x) ∧
+  ¬ (∃ n : Bool, ∀ c, ¬ ActualEsseCause (circleAtState (fun _ => True)) c n)
+
 end TruthCore.Latin.Aquinas.DeEnte.ClosedEsseSource
