@@ -1,0 +1,18 @@
+{
+  "id": "20d5fecd-950e-42f8-8dc9-3014491ff6ae",
+  "label": "Every CONTINGENCY_1 being at w is corruptible simply or under some power over its esse",
+  "paraphrase": "OPEN (PGP, power grounding of possible non-existence), analyst formulation, attribution deferred: every candidate contingent at w either can fail to be in substance (CanFailToBe x esse, the existing DEF-CAN-FAIL-TO-BE primitive at the respect of being, read as corruptible simply: an intrinsic two-way potency to be and not be, not the bare possibility of not being) or has some being, possibly itself, with power over its esse (PowerOver y x esse: y can give or withhold, make or unmake x's being). Its content: an actual individual's possible non-existence is some power's potentiality, a passive potency in the thing or an active power over its being. It concerns only the possible absence of an actual individual, not alien or global possibilities. Self-power is allowed, so a self-annihilating being satisfies it.",
+  "lean_declaration": "TruthCore.Causality.ContingencyGrounding.ContingencyPowerGrounded",
+  "definition_ids": [
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "c8113f31-6208-5992-9ca4-712887a4594b",
+    "3fd6bddb-f10c-4df4-8694-3eb5e7c28617",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "ed4f1f3f-d0c2-57b7-8ce7-52245db29d79",
+    "a13627bc-6b76-542d-9ca2-8c93487f685a"
+  ]
+}

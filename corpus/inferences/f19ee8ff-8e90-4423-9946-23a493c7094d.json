@@ -1,0 +1,10 @@
+{
+  "id": "f19ee8ff-8e90-4423-9946-23a493c7094d",
+  "label": "C2 contingency grounding controls checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "07a9006e-91ba-4776-89b7-963f1a517f55",
+  "rule": "General laws and explicit finite models",
+  "meaning": "Premise-free laws relating C2 to its weak form, to R1 with De ente and to B2 with B3; correlation to #1870's restricted bridge (ii); PGP to q.9 a.2's MUTABLE_3 (bridge (i)); the composed PGP route to the First Way endpoint; B4b and B4a to the new bridges, and the exclusion of actual corruptibles by B4b under adopted POTENCY_1. Then ten finite models: rival models (bruteSimple, selfAnnihilator, uncausedComposite, angelic, deistSource), omission models for each premise of the PGP argument, a nonvacuity witness, the potencyOnly non-equivalence model and the corruptor model. Model-witnessed separations only; no premise is established and no reality claim is made.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

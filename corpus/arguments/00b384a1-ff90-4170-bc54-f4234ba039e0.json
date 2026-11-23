@@ -1,0 +1,33 @@
+{
+  "id": "00b384a1-ff90-4170-bc54-f4234ba039e0",
+  "label": "POTENCY_1 or a distinct CAUSE_2 for contingents, from power grounding",
+  "premise_statement_ids": [
+    "20d5fecd-950e-42f8-8dc9-3014491ff6ae",
+    "9163c423-bbf7-464d-9342-6e1cf38d54e6",
+    "b62a64ab-ac11-569a-b8e8-de51a74b058f",
+    "8bfc4ab7-cf80-467e-a594-71ee09c8cbaa"
+  ],
+  "conclusion_statement_id": "3c9d683b-7ecf-4e35-b2cf-2997fbc1a3b2",
+  "inference_ids": [
+    "81adf17d-eddb-49cd-a8cf-7feac2f5c1c4"
+  ],
+  "meaning": "Answers #1870's remaining gap 1 conditionally. A contingent being is corruptible simply, hence in POTENCY_1 in some respect, or under some power over its esse; correlation makes it corruptible or makes the power's holder a CAUSE_2 of its esse, distinct by no-self-esse-cause. This is the q.9 a.2 two-channel reading of B2 or B4: PGP plays bridge (i) (contingency gives mutability in the subject or through a power) at the respect of being, and correlation plays bridge (ii) restricted to beings incorruptible simply; the unrestricted bridge (ii) fails for corruption by another (controls, corruptor).",
+  "definition_ids": [
+    "3fd6bddb-f10c-4df4-8694-3eb5e7c28617",
+    "c8113f31-6208-5992-9ca4-712887a4594b",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "9f874532-f37e-590b-bec9-a9affb2762ac"
+  ],
+  "disambiguation_ids": [
+    "a13627bc-6b76-542d-9ca2-8c93487f685a",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "ed4f1f3f-d0c2-57b7-8ce7-52245db29d79",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "508617ab-cf24-5f3b-a387-64b3991359ec",
+    "557d8e44-4350-5031-81e3-ff6be5e30acc",
+    "57f80020-fa6f-5b69-be58-b4cf95b7226f"
+  ]
+}

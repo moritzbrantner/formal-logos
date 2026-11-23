@@ -1,0 +1,23 @@
+{
+  "id": "6508c239-b36d-4010-b9e4-ff0cdd5757e5",
+  "label": "Every CONTINGENCY_1 being at w is existentially receptive or has a PRIOR_1 distinct esse CAUSE_2",
+  "paraphrase": "OPEN (C2), analyst formulation, attribution deferred: every candidate that exists at w and is absent at some world accessible from w (MODAL_CONTINGENCY_1 on the frame's world-relative existence) either is existentially receptive (its esse is received in some principle that stands in receptive potency, RECEPTIVE_POTENCY_1 of De ente c.3, to that esse; or it is composed of matter and form) or has some other being that causes its esse (CAUSE_2 at esse, tenseless) and is SIMPLY_PRIOR_1 to it. 'Receptive' is not POTENCY_1 at esse: the receiving principle may actually have its act, while unactualized POTENCY_1 at esse is incompatible with actual existence (R2 law of the First Way reception controls). The matter-form disjunct keeps C2 faithful for accounts without a real essence-esse distinction. C2 is weaker than R1 with De ente and than B2 with B3 (both imply it), is independent of the pure-act target at w (controls, potencyOnly and angelic models), and says nothing about beings present at every accessible world.",
+  "lean_declaration": "TruthCore.Causality.ContingencyGrounding.ContingentReceptiveOrReceivedFromPrior",
+  "definition_ids": [
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f9f58df7-d3be-4d66-b1f1-204d7049c450",
+    "a67e6214-624d-54d1-81ff-442c09c5ea9d",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"
+  ],
+  "disambiguation_ids": [
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "8bb31748-e20f-5266-ac39-c442faab6622",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76"
+  ]
+}

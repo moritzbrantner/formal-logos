@@ -1,0 +1,17 @@
+{
+  "id": "9163c423-bbf7-464d-9342-6e1cf38d54e6",
+  "label": "A power over a thing's esse works on its potency not to be or is a CAUSE_2 of its esse",
+  "paraphrase": "OPEN (correlation), analyst formulation, attribution deferred (navigation: Met. Theta.1 1046a, active power correlates with passive potency; ST I q.104 a.3, annihilation as ceasing to give being, not an action on a patient): for all y and x, if y has power over x's esse, then x can fail to be in substance (corruptible simply: the power works on x's intrinsic potency to non-being) or y causes x's esse (CAUSE_2 at esse: the power is the giving and withholding of being). CausesIn is tenseless here, so a conserving cause and a cause that only originated x are not distinguished; the deist rival targets exactly that reading (controls, deistSource).",
+  "lean_declaration": "TruthCore.Causality.ContingencyGrounding.PowerOverEsseCorrelation",
+  "definition_ids": [
+    "c8113f31-6208-5992-9ca4-712887a4594b",
+    "3fd6bddb-f10c-4df4-8694-3eb5e7c28617",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "ed4f1f3f-d0c2-57b7-8ce7-52245db29d79",
+    "a13627bc-6b76-542d-9ca2-8c93487f685a",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}

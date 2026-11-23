@@ -1,0 +1,9 @@
+{
+  "id": "3fd6bddb-f10c-4df4-8694-3eb5e7c28617",
+  "label": "Power over a thing's esse: y can give or withhold, make or unmake x's being",
+  "term": "power over esse (PowerOver y x esse)",
+  "definition": "PowerOver y x esse: y has a power whose exercise would make or unmake x's being, by giving or withholding its esse or by corrupting it. It is the typed power relation PowerOver of q.9 a.2's mutability through another (DEF-MUTABLE-THROUGH-ANOTHER, MutableThroughAnother PowerOver x := exists y r, y /= x and PowerOver y x r), applied at the frame's respect of being. Unlike MutableThroughAnother it does not require y to be distinct from x. A Lean parameter, constrained only by the premises that use it.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.ContingencyGrounding.ContingencyPowerGrounded",
+  "note": "Stipulated for the power-grounding premise of C2 (docs/notes/contingency-receptivity-c2.md). Examples: fire's power to destroy a log (by corruption: it works on the log's matter); on the Thomist account, God's power to cease giving a creature esse (q.104 a.3, navigation only); a parent's power to beget a child (giving, in the order of becoming). Non-examples: the power to make x hot (a respect other than being); a mere logical possibility that x not exist with no being able to bring it about. Distinct from CAUSE_2 at esse (CausesIn y x esse, DEF-CAUSE-OF-PERFECTION): fire has power over the log's esse without causing it, which is why the correlation premise has a corruption disjunct; and from DependsForBeing. Self-power (y = x) is allowed so that a self-annihilating rival is representable. Structural properties assumed: none (not irreflexive, transitive or tensed). Open obligations: whether the frame's tenseless relation can separate a conserving power from a power exercised only at origin; what would source it: a passage defining power over another's being rather than applying it (q.9 a.2, q.104 a.3)."
+}

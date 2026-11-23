@@ -1,0 +1,12 @@
+{
+  "id": "560b0d8d-9f94-49c3-aaf7-d2c10df87a09",
+  "label": "C2 from B2 and B3",
+  "argument_id": "61924ce7-f9db-4bc4-a7b1-c708d480bfce",
+  "challenge_module": "TruthCore.Results.Causality.ContingencyGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ContingencyGrounding.Solution",
+  "theorem": "TruthCore.Results.Causality.ContingencyGrounding.c2FromEsseCause",
+  "comparator_config": "results/560b0d8d-9f94-49c3-aaf7-d2c10df87a09/comparator.json",
+  "status": "solution-present",
+  "description": "Projection of the existing B2 onto C2 through its prior-cause disjunct. An instantiation; establishes no premise. Comparative: C2 is entailed by B2 with B3 and not conversely (controls, uncausedComposite).",
+  "transcription": "instantiation"
+}
