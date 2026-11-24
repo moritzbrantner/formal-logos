@@ -868,7 +868,7 @@ adequate. NECESSARY_2 is accessibility-relative. This is an analyst
 *interpretation and warrant* checkpoint, not an attributed corpus claim,
 new modal framework, or an additional formal derivation.
 
-### 11.1 Three grounding demands, only one of which decides the case
+### 11.1 Three demands on a powers account
 
 1. **G0 — reality constraint.** An assertion of *genuine metaphysical*
    possibility must answer to how actual reality is, not to linguistic
@@ -889,14 +889,14 @@ new modal framework, or an additional formal derivation.
    Whether the latter counts as a positive maker is the live disagreement,
    not a settled implication of G0. A negative essential constraint can
    be reality-grounded without being a power to make something absent.
-3. **G2 — existential exhaustiveness.** For an *actual* being's
-   metaphysically possible absence, a suitable in-subject capacity to
-   non-being or an actual being's POWER_OVER_ESSE_1 is required. This is
-   precisely the operative content of PGP 20d5fecd, not a consequence
-   established by G0 or G1. At the selected \(n\), both disjuncts are
-   excluded by its nonmodal profile. With excluded middle, the existing
-   result 1e6174ab derives not-P. Calling this G2 “a real ground must
-   exist” would hide the central premise in a plausible phrase.
+3. **G2 — the two-channel PGP disjunction.** If an actual being's
+   absence is metaphysically possible, it is corruptible simply or some
+   holder has POWER_OVER_ESSE_1 over it. PGP 20d5fecd asserts this
+   material disjunction. It adds no requirement that the holder exist at
+   the actual world or that the power explain the possibility. At the
+   selected \(n\), the profile excludes both disjuncts, so P is excluded
+   constructively. The existing result 1e6174ab uses excluded middle
+   to derive universal presence, the NECESSARY_2 formulation.
 
 **New discriminating observation (source-led, not a new proof):** Pruss
 himself distinguishes *necessitarian* actualist theories (restrictions
@@ -904,9 +904,7 @@ from actual essences, possibilities wherever their negations are not
 necessary) from *possibilitarian* theories (positive possible-makers,
 especially actual powers, with necessity defined by the absence of a
 possible negation). He explicitly describes both as Aristotelian
-approaches, and his own powers approach as the second. This defeats a
-simple *exhaustiveness of interpretations* claim: “all possibilities
-answer to real nature” does **not** determine whether actuality
+approaches, and his own powers approach as the second. The objective reality constraint alone leaves open whether actuality
 generates possibilities or essence excludes impossibilities.
 Pruss, “Two kinds of views of modality,” 6 May 2008, opening paragraphs:
 https://alexanderpruss.blogspot.com/2008/05/three-kinds-of-views-of-modality.html
@@ -951,24 +949,25 @@ The classical **positive explanatory route** is therefore:
 - A foundational \(n\) has no prior existential recipient/giver
   relation and no intrinsic corruption; hence the ordinary grounds
   of non-being are inapplicable.
-- **OPEN generalization:** all genuine non-occurrence alternatives,
-  including an *uncaused* being's never having existed, require such a
-  positive real ground (or a positively exclusionary essential nature
-  whose application independently settles the case).
-- Only with that additional generalization is P excluded. The first
-  three steps do not entail not-P; *bruteSimple* and the separate
-  existence-conditional models test the boundary structurally.
+- **Two OPEN routes from that profile.** G2 supplies the disjunction
+  whose branches the profile excludes. A positive-maker theory by itself
+  leaves open other kinds of makers. A distinct essentialist route starts
+  from represented act-essence identity and adds the unconditional
+  bridge 565ccd6c and the essence-to-necessity premise 54bafc9f.
+  The AN formulation uses act–fact link 3a2af70f to reach 565ccd6c.
 
-The genuine philosophical support for the generalization is an
-actualist explanatory principle: a *real* possibility should not be
-arbitrarily attached to a nature without any metaphysical difference
-that allows it; powers and essences supply such differences in ordinary
-cases. One may accept this as a serious, prima facie primitive of modal
-inquiry. Nevertheless, extending it from **what a real bearer or
-giver could do** to **the absence, in another world, of an uncaused
-bearer** is additional positive content. Experience of changes supplies
-no such case. The first-mover/pure-act result excludes becoming or
-ceasing, not every non-temporal absence by itself.
+Actual powers and essences explain why apparent alternatives are genuinely
+available in ordinary cases. A modal primitivist can agree the modal facts
+are objective and take their obtaining as basic. The first-mover argument
+excludes change requiring passive potency. Aquinas's own distinction
+between creation and such change explains why that result is narrower than
+possible absence.
+
+Merged #1914 gives conditional support for the move from received esse to
+a distinct actual cause and from limited esse to actual grounding. The
+giver's freedom and the same bearer's modal presence remain open. The
+positive-conceivability test below and attempt 91e562cc ask a different
+question: what warrants an exhaustive rigid roster that would exclude \(n\)?
 
 ### 11.3 Aristotle and Pruss: powers do not automatically cover absence
 
@@ -990,7 +989,9 @@ unreceived and uncaused. Claiming \(n\)'s absence is *therefore* not
 possible either invokes G2 or makes an essence-to-necessity bridge.
 The independent Pruss sibling result 42da6b2d concludes that **some**
 holder \(y\) is necessary under P1′ and its full bundle; it does not
-identify \(y\) with \(n\). #1897 establishes that actual-absence
+determine whether \(y\) is identical to \(n\). #1897's qualified
+same-foundation route requires bridge eb41bc9a, excluded middle and
+concrete foundational existence. #1897 also establishes that actual-absence
 PowerFor to POWER_OVER_ESSE_1 needs both a collective/distributive
 and a power-sense transfer, so its premise is not independent
 confirmation of G2. A creator reading supplies a positive maker
@@ -1010,15 +1011,12 @@ at the specific esse-identical \(n\), the conditional status of
 existence still needs a non-question-begging reason; ordinary
 generation and corruption do not supply it.
 
-**Response from act-essence identity.** If \(n\)'s essence genuinely
-is its *act of being*, a conditional whose antecedent supplies that
-act seems an incomplete answer to what that nature *is*.
-Aquinas's *De ente* exception and ST I q.2 a.1/q.3 a.4 motivate taking
-that identity seriously as more than a complex quiddity to which
-existence might be added. This is a **candidate positive reason**
-to prefer an intrinsically existential essence to a merely conditional
-characterization. It neither proves identity is metaphysically realized
-nor proves that the identity fixes the accessible-world extension.
+**Response from act-essence identity.** Aquinas's *De ente* exception
+and ST I q.2 a.1/q.3 a.4 give reason to treat esse as an actualizing
+act and predicate existence of God in itself. The EC model preserves
+the entire identified act–essence while leaving it uninstantiated at a
+comparison point. The disputed question is whether the nature of an
+identical act–essence includes its exercise unconditionally.
 The decisive open claim is AN 823d4312: an identical esse is
 *exercised in the nature* unconditionally. Given the separately
 declared act–fact link 3a2af70f, #1896 showed AN equivalent to bridge
@@ -1045,10 +1043,10 @@ the #1896 unresolved test.
 | --- | --- | --- |
 | G2 at \(n\) | A cross-world absence need not be an event in the actual world's history, so strict Aristotelian change-powers cannot exhaust de re possibility. ST I q.45 a.2 distinguishes creation from change; the existence-conditional model gives an independently articulated interpretation. | **Substantive objection to the extrapolation**, not a counterexample to G2's metaphysical truth. |
 | Necessity from unreceived actuality | A positive ground for \(E(w,n)\) is not automatically a truthmaker for all \(\mathrm{Access}(w,v)\Rightarrow E(v,n)\). The model *bruteSimple* witnesses the logical separation of actual unreceivedness and modality. | **Valid inference criticism**; the model is structural, not a verified real possibility. |
-| Conditional essence for \(n\) | The act-essence is allegedly its own existence, so an EC nature whose actuality is conditional seems to separate what is supposed to be identical. The *De ente* exception gives a reason for the challenge. | **Serious positive pressure against EC**, but it wins only after AN / an equivalent non-circular bridge. |
-| PGP applied to all possibles | Alien individuals/properties and globally negative states can lack an actual exercisable power. The powers theory owes an account of such cases; to declare them impossible solely because no power is found begs the grounding question. | **Explanatory challenge**, not a found counterexample; the alien possibility and global negative world's admissibility are themselves disputed. |
+| Conditional essence for \(n\) | The *De ente* exception and q.2 a.1 motivate asking whether actual exercise belongs to the nature itself. EC leaves the entire act–essence uninstantiated at the alternative point. | **Open bridge.** AN needs an independent reason to rule out this conditional reading. |
+| Unrestricted powers account | Alien individuals/properties and globally negative states can lack an actual exercisable power. The powers theory owes an account of such cases; to declare them impossible solely because no power is found begs the grounding question. | **Explanatory challenge**, not a found counterexample; the alien possibility and global negative world's admissibility are themselves disputed. |
 | P at \(n\) by subtraction | It moves from known corruptible concreta to an uncorruptible, unreceived \(n\). No actual instance of \(n\)'s cessation or independent reason for its modal removability is supplied. | **Fails to warrant this case** beyond conceivability, as already in #1888. |
-| The actualist reality constraint G0 | A modal primitivist may give the *facts* themselves primitive standing, while a modal essentialist may use an actual essence to constrain possibility. Neither denies that real possibilities are objective. | **Refutes any inference from G0 alone to G2**; it does not itself prove P. |
+| The actualist reality constraint G0 | A modal primitivist may give the *facts* themselves primitive standing, while a modal essentialist may use an actual essence to constrain possibility. Neither denies that real possibilities are objective. | **G0 leaves G2 open.** Objectivity alone also leaves P open. |
 
 No view is refuted merely by another view's ability to form a model.
 No actual false primitive possibility fact, metaphysical alien world or
@@ -1060,12 +1058,13 @@ fully simple contingent pure act has been independently exhibited.
 necessity verdict conditional on G2 and the nonmodal foundational
 profile; 39df9612 is B6's corresponding verdict; f9b26559
 factors unconditional essentialism through open 565ccd6c. Result
-872a3832 is EC's *possible-absence* verdict with its exclusion,
-unrequired-by-others and representability premises. The
+872a3832 is EC's *possible-absence* verdict with conditional essence
+857654fe, exclusion-to-accessibility 9d8a8d2e, unrequired-by-others 38200db5
+and representability d1af2b06. The
 *PrimitivistSilence*, *BruteFoundationalModel*, *conditionalIdentity*
 and *twoMemberCollective* / replacement models each witness only
 their stated formal surrogate. The Pruss route 42da6b2d has a
-different \(y\)-witness and no same-\(n\) theorem. The PGP disjunction
+necessary \(y\)-witness whose identity relative to \(n\) is unspecified. The PGP disjunction
 20d5fecd and the C2 derivation 32bf794f use POWER_OVER_ESSE_1,
 not the collective PowerFor sense. AN/565ccd6c under E-link is
 already equivalence, not fresh corroboration.
@@ -1073,7 +1072,8 @@ already equivalence, not fresh corroboration.
 **Hidden-conclusion audit.** At \(n\), G2 plus “no passive
 capacity or power” is **exactly where** not-P enters the proof.
 B6 plus identity also excludes P by its instance, and the
-unconditional-essence bridge needs AN's warrant. Neither “powers
+unconditional-essence bridge needs independent warrant. AN with the
+act–fact link is one formulation of that bridge. Neither “powers
 are real” nor “the actual is intelligible” supplies those conditions.
 Conversely, the EC verdict needs a substantive representability
 and essential-exclusion account; its formal success is not
@@ -1100,9 +1100,8 @@ necessity, from any real truthmaker to positive powers,
 from necessary \(y\) to this \(n\), and from the absence
 of a rival's proof to its defeat. Source readings are
 kept at the quoted passage granularity, with all novel
-modal steps labelled analyst interpretations. Independent
-challenge of this **new synthesis**, and external gates,
-remain pending; prior reviews do not automatically certify it.
+modal steps labelled analyst interpretations. The independent challenge
+and repairs are recorded in PR #1901.
 
 ### 11.7 Overall provisional judgment and next discriminating tests
 
@@ -1111,12 +1110,11 @@ is retained.** Reality-constrained modal inquiry (G0) has a
 reasoned, prima facie positive motivation: conceptual coherence
 is not identical with genuine possibility, and ordinary
 counterfactuals are accountable to real powers/natures.
-The more specific claim G2 has a serious, coherent Aristotelian
-and Thomist warrant for *dependent* beings. But the source-led
-explanation of created possibility and the intuitive
-anti-arbitrariness consideration do not yet prove that
-*all* possibilities of a subjectless first being's absence
-require a present power or reception. The strongest actualist
+Aquinas supplies a positive mechanism for dependent creatures under
+his freely acting giver account. Generalizing it to the absence of an
+uncaused foundational bearer, or showing that its act necessarily
+remains exercised, still requires independent warrant.
+The strongest actualist
 essentialist rival survives on an open conditional act-essence
 and positive admissibility premise. We therefore do **not**
 upgrade P or not-P, establish PGP, count G0 as a new root-route
@@ -1136,7 +1134,7 @@ generate synonymous implications:
    permissibility and brute modal facts for *never-existed*
    concreta, while preserving principled alien possibility
    where warranted. Its criterion must not literally say
-   “every possible absence has a power”; that is G2.
+   “every possible absence has one of the two G2 channels”; that would restate G2.
    Opposing test: exhibit a genuinely motivated actuality-
    constrained EC account for the same \(n\).
 3. **Sustaining versus non-occurrence.** Check whether
