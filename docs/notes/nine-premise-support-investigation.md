@@ -155,6 +155,21 @@ state violated the beings' actual identity or required background. Open
 application bridges are not presented as defeated merely because they remain
 open. Conversely, agreement between reviewers is not proof of premise truth.
 
+## From finite origins to one ancestral source
+
+If every actual concrete being has a finite path from some actual root,
+and the actual root is unique, the same source lies upstream of every
+recipient. In the existing mediated model the root gives being to a
+necessary intermediary and the intermediary gives being to the only
+actual contingent recipient. The first reaches all recipients. The second
+is necessary and gives being to every actual contingent being, yet itself
+has a ground. Explaining all contingent recipients can therefore leave the
+being of the proposed explainer outstanding. To identify an independently
+supplied God with an independently supplied root it suffices that the former
+reaches every actual concretum by finite existential grounding paths. A path
+ending at a root can only be empty. [Derivations, same-model comparison and
+reopening tests](nar-derivation.md#which-giver-reaches-all-the-way-to-the-recipients)
+
 ## Unity of a proposed giver of being
 
 Sharing recipients leaves open whether each proposed giver is itself a

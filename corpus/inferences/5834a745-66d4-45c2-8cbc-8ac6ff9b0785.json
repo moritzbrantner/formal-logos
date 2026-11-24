@@ -1,0 +1,12 @@
+{
+  "id": "5834a745-66d4-45c2-8cbc-8ac6ff9b0785",
+  "label": "Identify the unique actual root from finite common ancestry on its grounding graph (inference)",
+  "input_statement_ids": [
+    "96082032-91f1-586b-9db8-e42edbb5e52e"
+  ],
+  "output_statement_id": "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1",
+  "rule": "Transfer the existence and agreement of subtype sources to actual roots",
+  "meaning": "The supplied graph is precisely the profile's selected grounding relation restricted to existing concrete endpoints. Its sources correspond in both directions to actual roots at this world. This projection uses the existence and agreement parts of RootedAtUniqueSource.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

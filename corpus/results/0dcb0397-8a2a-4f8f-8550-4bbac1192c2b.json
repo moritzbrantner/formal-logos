@@ -1,0 +1,11 @@
+{
+  "id": "0dcb0397-8a2a-4f8f-8550-4bbac1192c2b",
+  "label": "Track every actual recipient to the same root using uniqueness and finite access",
+  "argument_id": "98138853-8873-4d7a-81a7-b8d88d266520",
+  "challenge_module": "TruthCore.Results.Causality.ActualAncestralSource.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ActualAncestralSource.Solution",
+  "theorem": "TruthCore.Results.Causality.ActualAncestralSource.commonAncestryOfUniqueAndAccess",
+  "comparator_config": "results/0dcb0397-8a2a-4f8f-8550-4bbac1192c2b/comparator.json",
+  "status": "solution-present",
+  "description": "On ConcreteExistentialSupply.graph m w, all nodes are the actual concreta of this world and all edges are its selected grounding edges. Each recipient's access derivation starts at a root. Uniqueness identifies every such initial node with the supplied root. This constructs a finite path for each recipient on the actual subtype. No common path length, direct coverage or universal termination is assumed."
+}

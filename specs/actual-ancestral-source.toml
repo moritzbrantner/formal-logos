@@ -1,0 +1,70 @@
+[batch]
+vocab = "TruthCore.Causality.ActualAncestralSource"
+results = "TruthCore.Results.Causality.ActualAncestralSource"
+
+[[statement]]
+id = "Each GOD_4 is a finite grounding ancestor of every actual concretum at this world"
+lean = "GodReachesActualConcreta"
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807","a1b2e330-388f-4120-bc5c-969642317792","822c9912-2313-584b-b2b7-77031da20107"]
+paraphrase = "Open application of the causal interpretation of GOD_4. For every g satisfying the supplied God predicate and every actual concretum x at one world, a finite path of actual concrete grounds goes from g to x. The empty path is allowed for g itself. Each nonfinal node actually exists and is concrete because it supplies the next edge. The application neither posits a God nor requires one direct edge to each distinct recipient."
+
+[[statement]]
+id = "The mediated optimum has one root with a finite grounding path to every actual concretum"
+lean = "MediatedControl"
+definitions = ["f64856c0-6d2c-5c5d-97ef-9895039d8c27","822c9912-2313-584b-b2b7-77031da20107"]
+paraphrase = "At world false in the unchanged chainG profile, the earlier MediatedOptimum certificate holds, including the singleton optimum, failure of direct common-root coverage and the contingent concretum. On the same actual grounding graph d is the unique source and each actual concretum is reachable from it by a finite grounding path."
+
+[[argument]]
+id = "Track every actual recipient to the same root using uniqueness and finite access"
+theorem = "commonAncestryOfUniqueAndAccess"
+premises = ["7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1","a9a13d38-2b4e-4a0b-9549-875e5af10e20"]
+conclusion = "96082032-91f1-586b-9db8-e42edbb5e52e"
+axioms = []
+rule = "Induct on each finite access derivation and identify its initial root on the same profile"
+meaning = "On ConcreteExistentialSupply.graph m w, all nodes are the actual concreta of this world and all edges are its selected grounding edges. Each recipient's access derivation starts at a root. Uniqueness identifies every such initial node with the supplied root. This constructs a finite path for each recipient on the actual subtype. No common path length, direct coverage or universal termination is assumed."
+
+[[argument]]
+id = "Recover pointwise actual root access from one finite ancestral source"
+theorem = "rootAccessOfCommonAncestry"
+premises = ["96082032-91f1-586b-9db8-e42edbb5e52e"]
+conclusion = "a9a13d38-2b4e-4a0b-9549-875e5af10e20"
+axioms = []
+rule = "Translate the actual-subtype finite path into a concrete root-access derivation"
+meaning = "Use the common root and paths on the actual grounding graph of exactly m and w. Induction lifts each path to the existing RootAccess predicate. The outputs cover all actual recipients and admit the root itself."
+
+[[argument]]
+id = "Identify the unique actual root from finite common ancestry on its grounding graph"
+theorem = "uniqueOfCommonAncestry"
+premises = ["96082032-91f1-586b-9db8-e42edbb5e52e"]
+conclusion = "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1"
+axioms = []
+rule = "Transfer the existence and agreement of subtype sources to actual roots"
+meaning = "The supplied graph is precisely the profile's selected grounding relation restricted to existing concrete endpoints. Its sources correspond in both directions to actual roots at this world. This projection uses the existence and agreement parts of RootedAtUniqueSource."
+
+[[argument]]
+id = "Trace divine causal reach on actual concreta through the esse-to-ground correspondence"
+theorem = "ancestralNamingOfDirectCausing"
+premises = ["86d02b69-87eb-5594-9958-ccaa5fe6b685","cb1cdea9-eb6c-578c-8008-84e0d4107fd3","ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
+conclusion = "Each GOD_4 is a finite grounding ancestor of every actual concretum at this world"
+axioms = []
+rule = "Split identity of the recipient explicitly and turn the distinct esse cause into a one-step path"
+meaning = "The carrier-wide causal naming premise and the bridge from a distinct esse cause of an actual concretum to actual grounding yield the ancestor reading. Excluded middle is used for identity. Other readings may warrant mediated reach without warranting the direct causal-and-grounding bundle."
+
+[[argument]]
+id = "Identify one ancestral source from GOD_4 existence, finite reach and an actual root"
+theorem = "commonAncestryOfNamedSource"
+premises = ["8626f8a5-9531-5da7-9ebd-f901e74b1129","dc397705-d727-419e-92f9-65d44e1ff15d","Each GOD_4 is a finite grounding ancestor of every actual concretum at this world"]
+conclusion = "96082032-91f1-586b-9db8-e42edbb5e52e"
+comparator_theorems = ["namedRootOfReach"]
+axioms = []
+rule = "Inspect the last step of a path ending at a root and preserve its identified source"
+meaning = "Choose a God g and an actual root n separately. A positive path from g into n would have a last incoming actual ground. Hence their path is empty and g equals n. This same argument applies to every actual root. Finite reach from this very g supplies all recipients' paths. The companion identifies any such named witness with any supplied root. GodExists is an input of this conditional application."
+
+[[argument]]
+id = "Test common finite ancestry on the existing mediated-optimum creator profile"
+theorem = "mediatedChain"
+premises = []
+conclusion = "The mediated optimum has one root with a finite grounding path to every actual concretum"
+axioms = ["propext","Classical.choice","Quot.sound"]
+rule = "Keep the mediated optimum and exhibit all grounding paths on its actual three-being graph"
+meaning = "On chainG at false, d is a root, g receives an edge from d, and c receives one from g. No other actual root is possible. The imported MediatedOptimum retains the original giving model and the absence of any directly covering actual root. The graph does not interpret a new God predicate."

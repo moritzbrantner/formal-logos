@@ -6,6 +6,7 @@ public import TruthCore.Causality.AccidentalFeatureOrigin
 public import TruthCore.Causality.AcquiredHistoryTransfer
 public import TruthCore.Causality.ActPriorityAtFirst
 public import TruthCore.Causality.ActPriorityThetaEight
+public import TruthCore.Causality.ActualAncestralSource
 public import TruthCore.Causality.ActualCommonRoot
 public import TruthCore.Causality.ActualCoverNecessaryBeing
 public import TruthCore.Causality.ActualCoverStrictness
@@ -64,6 +65,7 @@ public import TruthCore.Causality.ContingentAncestry
 public import TruthCore.Causality.ContingentAtomicity
 public import TruthCore.Causality.ContingentBeingNode
 public import TruthCore.Causality.ContingentComingToBe
+public import TruthCore.Causality.ContingentRecipients
 public import TruthCore.Causality.ContingentTotalityCause
 public import TruthCore.Causality.ContractiveBorrowedPower
 public import TruthCore.Causality.ConvergentSchedule

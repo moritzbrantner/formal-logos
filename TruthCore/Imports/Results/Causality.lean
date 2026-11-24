@@ -5,6 +5,7 @@ public import TruthCore.Results.Causality.AccidentalFeatureOrigin.Solution
 public import TruthCore.Results.Causality.AcquiredHistoryTransfer.Solution
 public import TruthCore.Results.Causality.ActPriorityAtFirst.Solution
 public import TruthCore.Results.Causality.ActPriorityThetaEight.Solution
+public import TruthCore.Results.Causality.ActualAncestralSource.Solution
 public import TruthCore.Results.Causality.ActualCommonRoot.Solution
 public import TruthCore.Results.Causality.ActualCoverNecessaryBeing.Solution
 public import TruthCore.Results.Causality.ActualCoverStrictness.Solution
@@ -100,6 +101,7 @@ public import TruthCore.Results.Causality.ContingentAtomicity.Solution
 public import TruthCore.Results.Causality.ContingentBeingNode.Solution
 public import TruthCore.Results.Causality.ContingentBeingNodeReconciled.Solution
 public import TruthCore.Results.Causality.ContingentComingToBe.Solution
+public import TruthCore.Results.Causality.ContingentRecipients.Solution
 public import TruthCore.Results.Causality.ContingentTotalityCause.Solution
 public import TruthCore.Results.Causality.ContractiveBorrowedPower.Solution
 public import TruthCore.Results.Causality.ConvergentZenoSchedule.Solution

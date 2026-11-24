@@ -1,0 +1,24 @@
+{
+  "id": "0c393c60-5969-4f00-86bf-fc8452b3f51c",
+  "label": "Recover pointwise actual root access from one finite ancestral source",
+  "premise_statement_ids": [
+    "96082032-91f1-586b-9db8-e42edbb5e52e"
+  ],
+  "conclusion_statement_id": "a9a13d38-2b4e-4a0b-9549-875e5af10e20",
+  "inference_ids": [
+    "d2b2ed58-341f-48b2-ad2c-0b1644b5dfc8"
+  ],
+  "meaning": "Use the common root and paths on the actual grounding graph of exactly m and w. Induction lifts each path to the existing RootAccess predicate. The outputs cover all actual recipients and admit the root itself.",
+  "definition_ids": [
+    "38b9012a-472b-4544-a271-16d22b25c9ac",
+    "822c9912-2313-584b-b2b7-77031da20107",
+    "1dff2d68-1348-5e7e-8ee7-248af63c8c53",
+    "f64856c0-6d2c-5c5d-97ef-9895039d8c27",
+    "7439c292-82a4-530d-8144-a61a6c21f502",
+    "ea94e8dd-6f08-4099-9032-d302dd799a4e"
+  ],
+  "disambiguation_ids": [
+    "4b02d34a-9226-5009-9ac2-3b52f4222b21",
+    "34ddfede-ff4d-59ad-9882-4bcb490df9bb"
+  ]
+}

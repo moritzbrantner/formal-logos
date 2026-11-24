@@ -1,0 +1,10 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.ActualAncestralSource.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ActualAncestralSource.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.ActualAncestralSource.commonAncestryOfNamedSource",
+    "TruthCore.Results.Causality.ActualAncestralSource.namedRootOfReach"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}
