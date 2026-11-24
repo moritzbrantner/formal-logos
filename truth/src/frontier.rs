@@ -2450,14 +2450,10 @@ pub fn format_frontier(report: &Value) -> String {
     } else {
         format!("{root} (unknown statement)")
     };
-    lines.push(format!(
-        "frontier: {} open premises: {}; root {root_note}",
-        report["open_premise_count"],
-        format_depth_counts(&report["depth_counts"])
-    ));
+    lines.push(format!("frontier: root {root_note}"));
     if let Some(options) = report.get("support_options") {
-        lines.push(format!("conditional premise support (root-reaching): {} of {} unestablished premises have verified alternatives; {} distinct bundles (not established by verification alone)",
-            options["with_verified_alternative_count"], options["unestablished_premise_count"], options["verified_alternative_bundle_count"]));
+        lines.push(format!("conditional premise support (root-reaching): {} premises have verified alternatives; {} distinct bundles (not established by verification alone)",
+            options["with_verified_alternative_count"], options["verified_alternative_bundle_count"]));
     }
     let recorded = report["alternatives_recorded"] == true;
     if !recorded {
@@ -3042,7 +3038,6 @@ pub fn frontier_delta(base: &Value, head: &Value) -> Value {
 
 /// Python `format_frontier_delta`.
 pub fn format_frontier_delta(delta: &Value) -> String {
-    let counts = |c: &Value| format!("{} ({})", c["open"], format_depth_counts(c));
     let route = |r: &Value| {
         if truthy(Some(&r["argument_id"])) {
             format!(
@@ -3060,11 +3055,6 @@ pub fn format_frontier_delta(delta: &Value) -> String {
             s(&delta["root"]),
             s(&delta["base"]),
             s(&delta["head"])
-        ),
-        format!(
-            "open premises reaching the root: {} -> {}",
-            counts(&delta["base_counts"]),
-            counts(&delta["head_counts"])
         ),
         format!(
             "expanded-route diagnostic (lowest cost): {} -> {}",
@@ -3119,20 +3109,10 @@ pub fn format_frontier_delta(delta: &Value) -> String {
         );
         return lines.join("\n");
     }
-    let bare_added = strs(&delta["bare_added"]);
-    if bare_added.is_empty() {
-        lines.push("bare premises added: none".into());
-    } else {
-        lines.push(format!(
-            "bare premises added: {} (listed for visibility; not a regression, owner decision 2026-11-07)",
-            bare_added.len()
-        ));
-        lines.extend(bare_added.iter().map(|statement| format!("  {statement}")));
-    }
     for label in ["added", "removed", "moved"] {
         for (status, statements) in delta[label].as_object().into_iter().flatten() {
             let statements = strs(statements);
-            lines.push(format!("{label} ({status}): {}", statements.len()));
+            lines.push(format!("{label} ({status}):"));
             lines.extend(statements.iter().map(|statement| format!("  {statement}")));
         }
     }
@@ -4126,6 +4106,11 @@ mod tests {
         delta["base"] = json!("BASE");
         delta["head"] = json!("working tree");
         let text = format_frontier_delta(&delta);
-        assert!(text.contains("added (stated): 1\n  S"));
+        assert!(text.contains("added (stated):\n  S"));
+        assert!(!text.contains("open premises reaching the root:"));
+        assert!(!text.contains("bare premises added:"));
+        let rendered = format_frontier(&head);
+        assert!(rendered.starts_with("frontier: root ROOT"));
+        assert!(!rendered.contains(" open premises:"));
     }
 }
