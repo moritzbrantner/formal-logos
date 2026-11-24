@@ -1,0 +1,109 @@
+{
+  "id": "0e335f77-4240-4a38-9d7a-7819c7a40778",
+  "label": "Not every root gives by a unique optimum, from law-2 premises and two certificates",
+  "premise_statement_ids": [
+    "2dd1f217-77bd-42cd-9410-174b939b0e45",
+    "3ef41442-431a-4bed-83bd-4458ed623f5f",
+    "0c27f65a-6a6b-438a-b96c-b2bab9f21ac3",
+    "d164f730-95b4-4297-8978-9e5586f0b2ef",
+    "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174",
+    "1822b59d-1040-57e4-8991-f7862db26355",
+    "b8ee1a50-b1e2-435e-a082-4652a894438b"
+  ],
+  "conclusion_statement_id": "08e6b43a-17a9-4199-a087-5a62402dd88d",
+  "inference_ids": [
+    "ae0b6a5a-d199-4aee-8eb6-b194081ed671"
+  ],
+  "meaning": "Suppose every actual root gives by total optimal output with at most one optimal candidate. The common GOD_4 root n of 0c27f65a (only its root and reach clauses are used) is an actual root. By #1947's law 2 (a conjunct of its premise-free certificate b8ee1a50), from (b1), factive giving, the common root, necessary roots and some concrete contingent being, n is two-way toward some concrete contingent c: it gives c being at w and not at some accessible world v where it exists. By the first conjunct of #1737's certificate (1822b59d), total optimal output with a unique optimum gives cross-world stable output on n's giving-output profile, which is being fixed toward every being given at w (law 1); so n gives c being at v: contradiction. Constructive.",
+  "definition_ids": [
+    "02aa24f8-e6cc-4d47-8b34-d3b7149e7ee8",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "1c4078eb-5afd-4684-b67c-b3b4d44c064a",
+    "1ef0f844-1a0d-4ce8-8f54-87c29e96ef76",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "8c945061-acb2-47e1-9865-d10f8f925757",
+    "90719cb5-43c2-4677-8ad7-20e077e28ac9",
+    "1620ba7e-edb9-56c4-bd02-3ece55903b1c",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "4f503422-a3dc-51f3-8e1d-a1065ef6038e",
+    "2d069414-67f7-5bba-b750-830f06caf84d",
+    "d934e836-fdad-5a88-a318-d6e422e22d3d",
+    "e36a3cf1-be2c-51a0-bb55-f388c115e11d",
+    "d3b970fa-abdd-553e-baa9-0a337fa24c26",
+    "11b3c2a2-b568-5df5-ae85-99f14f206e75",
+    "c033d373-f381-504b-9674-c13fc9a96034",
+    "5f2bd1b2-a9b5-58a8-b387-ac18353dd4c0",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "b4bb7bb4-4e2d-437d-825e-79a029340e77",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "de24ce2e-84e4-48d8-9cac-5f66ad532015",
+    "e006ddeb-2c88-4835-8558-2f360cc5a3eb",
+    "fdeb7757-10db-4fa7-91a4-6c15ee5100d2"
+  ],
+  "disambiguation_ids": [
+    "5836e1f6-ccce-4ce8-b9d6-c89afc7120bb",
+    "8b3d47bc-7fee-4936-99ad-6561aedc657a",
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "205a39c3-915d-5fe4-8076-a9ff91329e08",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "2f096ab2-0d7d-5252-a361-4e601c64aeae",
+    "303c2298-fd1b-55f3-9754-398816a78514",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265",
+    "e5417243-d6f3-4776-9694-40d85bb34ff4"
+  ],
+  "sense_bridges": [
+    {
+      "term": "BEST_OPTION_BEST_QUALITY_AND_PERFECT",
+      "from": "0c62addf-ec81-4260-94c8-8e24ddc113a0",
+      "to": "aeebe800-c7f2-47a4-b08e-d0a8fd7d0e6f",
+      "statement_id": "1822b59d-1040-57e4-8991-f7862db26355",
+      "role": "premise"
+    },
+    {
+      "term": "BEST_OPTION_BEST_QUALITY_AND_PERFECT",
+      "from": "e683893b-90c5-4706-bd2f-3815c1f17bda",
+      "to": "aeebe800-c7f2-47a4-b08e-d0a8fd7d0e6f",
+      "statement_id": "1822b59d-1040-57e4-8991-f7862db26355",
+      "role": "premise"
+    },
+    {
+      "term": "SAME_ACT_DETERMINISTIC_RESPONSE_AND_NECESSARY",
+      "from": "38164f24-cbfb-49ce-a7a0-ebd6042ab2a0",
+      "to": "e4bdefd6-1886-464a-beef-cb63cd6d8cf8",
+      "statement_id": "1822b59d-1040-57e4-8991-f7862db26355",
+      "role": "premise"
+    },
+    {
+      "term": "SAME_ACT_DETERMINISTIC_RESPONSE_AND_NECESSARY",
+      "from": "c24717be-74ef-4136-8db2-a3c98336b9c6",
+      "to": "e4bdefd6-1886-464a-beef-cb63cd6d8cf8",
+      "statement_id": "1822b59d-1040-57e4-8991-f7862db26355",
+      "role": "premise"
+    },
+    {
+      "term": "SAME_ACT_DETERMINISTIC_RESPONSE_AND_NECESSARY",
+      "from": "49b50782-3926-4d99-92ff-24d820b34862",
+      "to": "e4bdefd6-1886-464a-beef-cb63cd6d8cf8",
+      "statement_id": "1822b59d-1040-57e4-8991-f7862db26355",
+      "role": "premise"
+    },
+    {
+      "term": "SAME_ACT_DETERMINISTIC_RESPONSE_AND_NECESSARY",
+      "from": "b43392d6-04f5-4ab5-9780-74c4e4a7b08b",
+      "to": "e4bdefd6-1886-464a-beef-cb63cd6d8cf8",
+      "statement_id": "1822b59d-1040-57e4-8991-f7862db26355",
+      "role": "premise"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.NarGrafts.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NarGrafts.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.NarGrafts.narGraftControls"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

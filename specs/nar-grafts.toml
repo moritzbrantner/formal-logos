@@ -1,0 +1,111 @@
+# #1926 orphan grafts onto the NAR/WN route of #1947. (G1) #1737's optimal-
+# creation certificate (an orphan of the Modal family) is composed with
+# #1947's law 2 through an explicit adapter (givingProfile): the optimizing-
+# creator rival to WN (a root that gives by total optimal output with a unique
+# optimum, Rowe's "must create the unique best", being-level surrogate) is
+# refuted by the premises of law 2, without WN or SS. (G2) Necessary roots
+# (d164f730, NAR note gap 6) from the unique necessary actual root (91b085c4).
+# (G3) Laws (stability is fixity; a unique optimum fixes every effect; the
+# rival is a rival to WN given SS) and a tied-optimum model. Analyst
+# formulations, attribution deferred. Note: docs/notes/orphan-graft-map.md.
+
+[batch]
+vocab = "TruthCore.Causality.NarGrafts"
+results = "TruthCore.Results.Causality.NarGrafts"
+
+# ---------------------------------------------------------------- statements
+
+[[statement]]
+id = "Every actual root gives by total optimal output with a unique optimum"
+label = "Every actual root gives by total optimal output over fixed candidates with a unique optimum"
+lean = "ActualRootsGiveUniqueOptimum"
+paraphrase = "OPEN rival, analyst formulation, unattributed (the optimizing creator, being-level surrogate): for a fixed candidate set and a fixed partially ordered quality scale, every actual root n of the selected grounding relation G at w gives by total optimal output (OptimalOutputs on n's giving-output profile: at w and at every world accessible from w where n exists, n gives being to something, and every being it gives being is an optimal candidate), and at most one candidate is optimal. Rowe's argument that a perfectly good creator of the unique best must create it and so is not free (navigation, not attributed), with candidates read as beings given being, not complete worlds or orders of effects. It does not say why the root optimizes. With SS and a rational exercise toward a given being other than the root, it makes WN (0266eac2) fail (G3 law 3)."
+definitions = ["1ef0f844-1a0d-4ce8-8f54-87c29e96ef76", "2d069414-67f7-5bba-b750-830f06caf84d", "4f503422-a3dc-51f3-8e1d-a1065ef6038e", "62dfa893-b633-4513-9790-8f9a0a3087e0", "c57e2682-08e6-527e-950f-0fa0a7ff11ef", "a1b2e330-388f-4120-bc5c-969642317792", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["2f096ab2-0d7d-5252-a361-4e601c64aeae", "DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[statement]]
+id = "No actual root gives by total optimal output with a unique optimum"
+label = "Not every actual root gives by total optimal output over fixed candidates with a unique optimum"
+lean = "NotEveryActualRootGivesUniqueOptimum"
+paraphrase = "Analyst formulation, unattributed: the exact negation of the optimizing-creator rival for the given candidate set and quality scale: it is not the case that every actual root of the selected grounding relation G at w gives by total optimal output (at w and at every accessible world where it exists it gives being to something, and only to optimal candidates) with at most one optimal candidate. It does not say that the root does not prefer, choose or optimize in any other sense, nor that no best exists; ties and the absence of a best are not excluded."
+definitions = ["1ef0f844-1a0d-4ce8-8f54-87c29e96ef76", "2d069414-67f7-5bba-b750-830f06caf84d", "4f503422-a3dc-51f3-8e1d-a1065ef6038e", "62dfa893-b633-4513-9790-8f9a0a3087e0", "c57e2682-08e6-527e-950f-0fa0a7ff11ef", "a1b2e330-388f-4120-bc5c-969642317792", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["2f096ab2-0d7d-5252-a361-4e601c64aeae", "DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[statement]]
+id = "NAR grafts controls"
+label = "Optimizing-giving laws and a tied-optimum model on the root's giving"
+lean = "Model.Controls"
+paraphrase = "Premise-free laws and one finite model (a structural surrogate, not metaphysical possibility). Laws: (1) under the giving-output adapter, cross-world stable output is exactly being fixed (NECESSITATE_5) toward every being given at w; (2) a root that gives by total optimal output with a unique optimum is fixed toward every being it gives at w and two-way toward none, so being-level optimization cannot yield a mixed-mode root; (3) with SS, such a root giving some other being at w by exercising a rational power makes WN fail. Model: on a frame where the GOD_4 root with intellect exists at both worlds and gives a different contingent at each, the premises of the refutation other than uniqueness hold, the root gives by total optimal output over two tied candidates, both are optimal, the root is two-way toward the first, and the unique-optimum rival fails."
+definitions = ["1ef0f844-1a0d-4ce8-8f54-87c29e96ef76", "2d069414-67f7-5bba-b750-830f06caf84d", "4f503422-a3dc-51f3-8e1d-a1065ef6038e", "c033d373-f381-504b-9674-c13fc9a96034", "02aa24f8-e6cc-4d47-8b34-d3b7149e7ee8", "8c945061-acb2-47e1-9865-d10f8f925757", "90719cb5-43c2-4677-8ad7-20e077e28ac9", "b8061228-9131-40f2-83bd-cb7d719bd0a0", "582f44c3-7778-4806-b385-e1eff852ac5e", "62dfa893-b633-4513-9790-8f9a0a3087e0", "c57e2682-08e6-527e-950f-0fa0a7ff11ef", "a1b2e330-388f-4120-bc5c-969642317792", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "DEF-KANT-MODAL-CONTINGENCY", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["2f096ab2-0d7d-5252-a361-4e601c64aeae", "303c2298-fd1b-55f3-9754-398816a78514", "5836e1f6-ccce-4ce8-b9d6-c89afc7120bb", "83264cf5-01fe-52fc-9a00-eeb024f6496e", "DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+# ---------------------------------------------------------------- arguments
+
+[[argument]]
+id = "The optimizing-creator rival fails, from law 2's premises and the optimal-choice certificate"
+label = "Not every root gives by a unique optimum, from law-2 premises and two certificates"
+theorem = "optimalRivalRefuted"
+axioms = []
+premises = ["2dd1f217-77bd-42cd-9410-174b939b0e45", "3ef41442-431a-4bed-83bd-4458ed623f5f", "0c27f65a-6a6b-438a-b96c-b2bab9f21ac3", "d164f730-95b4-4297-8978-9e5586f0b2ef", "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174", "1822b59d-1040-57e4-8991-f7862db26355", "b8ee1a50-b1e2-435e-a082-4652a894438b"]
+conclusion = "No actual root gives by total optimal output with a unique optimum"
+sense_bridges = [{term = "BEST_OPTION_BEST_QUALITY_AND_PERFECT", from = "BEST_OPTION_BEST_QUALITY_AND_PERFECT_2", to = "BEST_OPTION_BEST_QUALITY_AND_PERFECT_1", statement_id = "1822b59d-1040-57e4-8991-f7862db26355", role = "premise"}, {term = "BEST_OPTION_BEST_QUALITY_AND_PERFECT", from = "BEST_OPTION_BEST_QUALITY_AND_PERFECT_3", to = "BEST_OPTION_BEST_QUALITY_AND_PERFECT_1", statement_id = "1822b59d-1040-57e4-8991-f7862db26355", role = "premise"}, {term = "SAME_ACT_DETERMINISTIC_RESPONSE_AND_NECESSARY", from = "SAME_ACT_DETERMINISTIC_RESPONSE_AND_NECESSARY_2", to = "SAME_ACT_DETERMINISTIC_RESPONSE_AND_NECESSARY_1", statement_id = "1822b59d-1040-57e4-8991-f7862db26355", role = "premise"}, {term = "SAME_ACT_DETERMINISTIC_RESPONSE_AND_NECESSARY", from = "SAME_ACT_DETERMINISTIC_RESPONSE_AND_NECESSARY_3", to = "SAME_ACT_DETERMINISTIC_RESPONSE_AND_NECESSARY_1", statement_id = "1822b59d-1040-57e4-8991-f7862db26355", role = "premise"}, {term = "SAME_ACT_DETERMINISTIC_RESPONSE_AND_NECESSARY", from = "SAME_ACT_DETERMINISTIC_RESPONSE_AND_NECESSARY_4", to = "SAME_ACT_DETERMINISTIC_RESPONSE_AND_NECESSARY_1", statement_id = "1822b59d-1040-57e4-8991-f7862db26355", role = "premise"}, {term = "SAME_ACT_DETERMINISTIC_RESPONSE_AND_NECESSARY", from = "SAME_ACT_DETERMINISTIC_RESPONSE_AND_NECESSARY_5", to = "SAME_ACT_DETERMINISTIC_RESPONSE_AND_NECESSARY_1", statement_id = "1822b59d-1040-57e4-8991-f7862db26355", role = "premise"}]
+rule = "A unique optimum fixes the root toward each effect, but the root is two-way toward a contingent one"
+meaning = "Suppose every actual root gives by total optimal output with at most one optimal candidate. The common GOD_4 root n of 0c27f65a (only its root and reach clauses are used) is an actual root. By #1947's law 2 (a conjunct of its premise-free certificate b8ee1a50), from (b1), factive giving, the common root, necessary roots and some concrete contingent being, n is two-way toward some concrete contingent c: it gives c being at w and not at some accessible world v where it exists. By the first conjunct of #1737's certificate (1822b59d), total optimal output with a unique optimum gives cross-world stable output on n's giving-output profile, which is being fixed toward every being given at w (law 1); so n gives c being at v: contradiction. Constructive."
+description = "Argument G1, a conditional refutation of the optimizing-creator rival to WN (recorded alternative_to 0266eac2): it composes two orphaned premise-free certificates, #1737's optimal-choice certificate (1822b59d) and #1947's NAR laws and models (b8ee1a50, of which only law 2 is used), through the giving-output adapter. Not a transcription: no premise's consequent is the conclusion; the stability step is the certificate's, the two-way step is law 2's. It uses neither WN nor SS, so it is not question-begging against the rival's denial of WN. It does not count as a refutation for closure: its premises (b1), factive giving, the common root, necessary roots and some contingent concretum are open (#999). Scope: candidates are beings given being, not complete worlds, so it leaves a world-level optimizer (one best complete order that may include contingents and a necessary intermediary) untouched, and it says nothing against ties (G3's tied model keeps the root two-way toward a contingent while giving only optimal candidates) or against a no-best regime (where, by the certificate, no candidate is optimal, so the rival's total optimal output cannot hold at all). Its price for the rival: deny one of law 2's premises, typically that the root is necessary and some concretum contingent (modal collapse of what the root gives), or the uniqueness of the optimum. Shared dependencies: the same law-2 bundle as N2 (c26874a7). Sense bridges: the certificate is the premise relating the optimality and output-profile senses it certifies together."
+
+[[argument]]
+id = "Necessary roots, from the unique necessary actual root"
+label = "Every actual root is NECESSARY_2, from the unique necessary actual root"
+theorem = "necessaryRootsFromUniqueNecessaryRoot"
+axioms = []
+weakening = true
+premises = ["91b085c4-f1c7-5ada-9848-8e7dc753313a"]
+conclusion = "d164f730-95b4-4297-8978-9e5586f0b2ef"
+rule = "Every actual root is the unique necessary one"
+meaning = "Instantiate the selected profile at groundProfile F concrete G. There is an actual root n necessary at w with every actual root equal to n; so any actual root m is n and is NECESSARY_2 at w. Constructive."
+description = "Argument G2, the connection asked by gap 6 of docs/notes/nar-derivation.md: the bare premise d164f730 of N2 and G1 now follows from the existing root-path statement 91b085c4, proved from the necessary-root routes. A one-premise weakening (registered strengthens 91b085c4 to d164f730): it drops the existence and uniqueness clauses. Not a transcription: the conclusion is a universal over actual roots obtained by rewriting through uniqueness. Establishes no premise. Orphan candidates for the same step (73f6b3c8, 593d7307, f2a65d16) would need the separate at-most-one premise 49fdec01 and are blocked here by their legacy definition links (NECESSARY_11 through WORLDS_9, and WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1 through ACTUAL_CONCRETE_GROUND_1), which make any new argument using them an unbridged sense mixing; see the graft map."
+
+[[argument]]
+id = "NAR grafts controls argument"
+label = "Optimizing-giving laws and a tied-optimum model, checked"
+theorem = "narGraftControls"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+premises = []
+conclusion = "NAR grafts controls"
+rule = "General laws and an explicit finite model"
+meaning = "Premise-free: three laws (stability under the giving-output adapter is fixity; a unique optimum makes a root fixed toward every effect and two-way toward none; with SS a unique-optimum root exercising a rational power toward another given being makes WN fail) and the tied-optimum model on the root's giving. Model-witnessed separations only; no premise is established and no reality claim is made."
+description = "Premise-free laws and model for the NAR graft batch (G3). Sense-mixing control: it relates the optimality, output-profile, NECESSITATE_5 and NECESSARY_2 senses without a bridge premise. Laws 2 and 3 use #1737's certificate through its Lean theorem. The tied model shows that G1 needs the uniqueness clause: with two optimal candidates the root can be two-way toward a contingent while giving only optimal candidates at every world where it exists. Establishes no premise."
+
+# ---------------------------------------------------------------- relations
+
+[[relation]]
+id = "The optimizing creator is an alternative to WN"
+label = "The unique-optimum optimizing root is an alternative to WN"
+subject_kind = "statement"
+subject_id = "Every actual root gives by total optimal output with a unique optimum"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "0266eac2-3fad-43eb-a1f1-e784c5356105"
+note = "Rowe's rival named in WN's record (navigation, not attributed), stated on the root's giving at being level. With SS (85f3fea2) and a rational exercise toward a given being other than the root, it makes WN fail (G3 law 3): a perfect will fixed toward an effect its end does not require. Refuted conditionally by G1, which does not count (#999: its premises are open)."
+
+[[relation]]
+id = "G1 refutes the optimizing creator"
+label = "The law-2 refutation refutes the unique-optimum optimizing root"
+subject_kind = "argument"
+subject_id = "The optimizing-creator rival fails, from law 2's premises and the optimal-choice certificate"
+predicate = "refutes"
+object_kind = "statement"
+object_id = "Every actual root gives by total optimal output with a unique optimum"
+note = "Conditional consequence-defeat: it rests on the open premises (b1), factive giving, the common root, necessary roots and some contingent concretum, so it does not count (#999). The rival's escapes: tied optima (G3's model keeps two-way giving), giving up the claim that the root's giving is optimal when no best exists, or denial of a law-2 premise."
+
+[[relation]]
+id = "The unique necessary root strengthens necessary roots"
+label = "A unique necessary actual root strengthens: every actual root is NECESSARY_2"
+subject_kind = "statement"
+subject_id = "91b085c4-f1c7-5ada-9848-8e7dc753313a"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "d164f730-95b4-4297-8978-9e5586f0b2ef"
+verification_result_id = "Necessary roots, from the unique necessary actual root"
+note = "The weak version drops the existence and uniqueness clauses. Strictness: a profile with no actual root satisfies the weak version vacuously and fails the strong one (not registered as a model here)."

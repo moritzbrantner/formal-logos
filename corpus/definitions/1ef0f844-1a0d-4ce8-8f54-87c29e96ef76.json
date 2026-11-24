@@ -1,0 +1,9 @@
+{
+ "id": "1ef0f844-1a0d-4ce8-8f54-87c29e96ef76",
+ "label": "Giving-output profile: a giver's giving read as one act token whose outputs are the beings it gives",
+ "term": "giving-output profile (givingProfile)",
+ "definition": "givingProfile F y: the OutputProfile (DEF e36a3cf1-be2c-51a0-bb55-f388c115e11d) whose ontology is the Ontic of the CausalityFrame F, whose source is y, whose single act token is performed exactly at the worlds where y exists, and whose outputs at a world v are the beings y gives being at v (GivesTo, DEF 62dfa893-b633-4513-9790-8f9a0a3087e0). An adapter between two existing vocabularies; it adds no primitive and identifies no relations.",
+ "basis": "stipulative",
+ "lean_declaration": "TruthCore.Causality.NarGrafts.givingProfile",
+ "note": "Analyst definition, attribution deferred (docs/notes/orphan-graft-map.md). Under it, cross-world stable output (StableActOutput, DEF c033d373-f381-504b-9674-c13fc9a96034) is exactly being fixed toward every being given at w (FixedTowardAt, DEF 02aa24f8-e6cc-4d47-8b34-d3b7149e7ee8; law stable_iff_fixed). It does not assert causal realization of outputs (RealizedOutputs, DEF d3b970fa-abdd-553e-baa9-0a337fa24c26): the frame's Ontic causal field is not tied to giving, so the selected-effect bridge's necessity theorem is not applied through it. Reading 'performed wherever the giver exists' makes the giver's whole giving one standing act, the simplicity reading of the root's act; a being-level candidate is a being given being, not a complete world or order of effects."
+}

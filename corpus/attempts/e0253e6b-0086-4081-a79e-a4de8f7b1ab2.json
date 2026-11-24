@@ -1,0 +1,24 @@
+{
+ "id": "e0253e6b-0086-4081-a79e-a4de8f7b1ab2",
+ "label": "Can disconnected verified results be grafted onto the NAR/WN root route?",
+ "date": "2026-11-24",
+ "statement_ids": [
+  "0266eac2-3fad-43eb-a1f1-e784c5356105",
+  "d164f730-95b4-4297-8978-9e5586f0b2ef",
+  "1822b59d-1040-57e4-8991-f7862db26355",
+  "b8ee1a50-b1e2-435e-a082-4652a894438b",
+  "91b085c4-f1c7-5ada-9848-8e7dc753313a",
+  "73f6b3c8-b325-5ed8-b632-960a078a773b",
+  "20a2b6a3-83e7-5ea0-be63-9dbc03c302b3",
+  "d5ac1620-1de5-5cd8-862e-cfdfd6d8b8a5"
+ ],
+ "kind": "derivation",
+ "outcome": "succeeded",
+ "summary": "See docs/notes/orphan-graft-map.md. Verified zero-axiom results: 6c2ae534 (G1: the optimizing-creator rival to WN, every actual root gives by total optimal output over fixed candidates with a unique optimum, is refuted from #1947's law-2 premises (b1) 2dd1f217, factive giving 3ef41442, the common root of 0c27f65a, necessary roots d164f730 and some contingent c76b6e2c, composed with the two premise-free certificates 1822b59d (#1737 optimal choice) and b8ee1a50 (#1947 NAR laws); recorded alternative_to WN and refutes, non-counting) and 7670662c (G2: d164f730 from 91b085c4, registered strengthens). Controls f0eb2f96 (G3, Mathlib three axioms): stability under the giving-output adapter is fixity; a unique optimum makes a root fixed toward every effect, so being-level optimization cannot yield a mixed-mode root; with SS the rival makes WN fail; a tied-optimum model keeps the root two-way. Computed: d164f730 moves bare to closed; the two certificates 1822b59d and b8ee1a50 now support a recorded refutation of a WN rival, so their results a1990e04 and 0cf250b9 reach the root; orphans 1676 to 1675. Rejected or blocked grafts: d164f730 from the orphan 73f6b3c8 (or 593d7307, f2a65d16) plus at-most-one 49fdec01 fails the sense rules because of legacy definition links (NECESSARY_11 through DEF f8948e28, WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1 through DEF c86cc1d1); d5ac1620 from 20a2b6a3 (UniqueClassicalGodExists, eight orphan stage 1-2 endpoints) is a two-line uniqueness transfer but 20a2b6a3 carries 40 inherited definition links (GOD_1, GOD_2, GOD_4, CAUSE_1, CAUSE_2, PER_SE_1, PER_SE_3, ...), and pruning them to its Lean type's vocabulary trips the reviewed bundle audits (docs/notes/classical-attributes-all-migration.json, naming-first-mover-migration.json), so it was reverted.",
+ "blocker": "Not blocked for G1 and G2. WN's warrant is unchanged against the selective necessary-diffusion rival: being-level optimization cannot select a necessary intermediary alone (a unique optimum fixes every effect; ties do not force fixity, as the tied model shows in one encoding), so a selecting principle must come from world-level optimization (one best complete order including the intermediary) or from diffusion itself. Next tests: a world-level OptimalOutputs over complete outputs against law 2; the d5ac1620 graft after a reviewed prune of 20a2b6a3's definition links with the bundle audits updated; the same prune for the 73f6b3c8 family.",
+ "evidence": [
+  "6c2ae534-c668-4c62-9e90-4c92ccfffee1",
+  "7670662c-d82e-49c4-aeac-8e438d3f0114",
+  "f0eb2f96-e313-4310-9c13-7064bcf13e1b"
+ ]
+}
