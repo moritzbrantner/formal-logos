@@ -10,6 +10,7 @@ import subprocess
 import tempfile
 import threading
 import unittest
+from unittest.mock import patch
 
 import agent_lean
 
@@ -155,11 +156,21 @@ class AgentLeanTest(unittest.TestCase):
 
     def test_waiting_does_not_issue_request_before_lease(self):
         results = []
-        with self.lock.open("a") as lease:
-            fcntl.flock(lease, fcntl.LOCK_EX)
-            thread = threading.Thread(target=lambda: results.append(self.submit()))
-            thread.start()
-            self.assertFalse(self.entered.wait(0.05))
+        attempting = threading.Event()
+        flock = fcntl.flock
+
+        def observe_flock(file, operation):
+            if operation == fcntl.LOCK_EX:
+                attempting.set()
+            return flock(file, operation)
+
+        with patch.object(fcntl, "flock", observe_flock):
+            with self.lock.open("a") as lease:
+                flock(lease, fcntl.LOCK_EX)
+                thread = threading.Thread(target=lambda: results.append(self.submit()))
+                thread.start()
+                self.assertTrue(attempting.wait(timeout=5))
+                self.assertFalse(self.entered.wait(0.05))
         thread.join(timeout=5)
         self.assertFalse(thread.is_alive())
         self.assertGreaterEqual(results[0]["client"]["lease_wait_s"], 0.04)

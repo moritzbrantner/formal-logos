@@ -1,0 +1,25 @@
+{
+  "id": "7c6310bb-f8fd-4072-ba80-d025e7f90b8c",
+  "label": "No infinite per se efficient-cause series, via PER_SE_5 actual causes of being",
+  "premise_statement_ids": [
+    "ea251340-c89e-4535-a00f-6323cd8403a5",
+    "e8664ab8-c12f-42e2-8b9f-f38fe14cb52a"
+  ],
+  "conclusion_statement_id": "97f5850f-62bc-5e43-a0c1-dd1033d08fc9",
+  "inference_ids": [
+    "a2fe9f51-9f09-48d6-94c7-46721fc49045"
+  ],
+  "meaning": "Non-transcription conditional derivation on one q.3 a.4 profile p, one PER_SE_5 link AsCaused and one secunda via per se link CausesAsCaused. If there is no infinite chain of per se actual causes of being (ea251340, the weakest regress version that suffices) and every per se ordered efficient-cause link is a per se actual cause of being (the new OPEN framework premise e8664ab8), then no per se ordered series of efficient causes goes on to infinity (97f5850f). With esseRegressOfActualGroundingWFWeak and the existing strength relation ed411e36 (fd12ad3d to ea251340) it carries well-founded actual grounding to the secunda via's regress premise through esse causing. It names the exact missing inclusion. The new premise fails on the bound sense CAUSES_AS_CAUSED_3, which c2880fe0 (sourced to ST I q.46 a.2 ad 7) extends to per se mover links: with c2880fe0 it makes every per se mover a per se actual cause of the moved thing's esse, which ad 7's own per se examples (stone, stick and hand; this man's generation from this man, the elementary body and the sun) do not support and the hand-and-stick case falsifies (that the stick continues to be when the hand lets go is an analyst observation). It is defensible only under a not-yet-existing existential sense of CausesAsCaused; the sense split is the next test. This support option therefore currently rests on a premise with a kept counterexample. The closed controls secundaControls give, for each input, a Bool interpretation in which the other holds and the per se series has a two-cycle, and a nonvacuous interpretation.",
+  "definition_ids": [
+    "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4a101a4c-12de-53c8-80c6-de7a523ea9d9"
+  ],
+  "disambiguation_ids": [
+    "81c233d4-01b4-528c-8bbd-7da228443ffe",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "57f80020-fa6f-5b69-be58-b4cf95b7226f"
+  ]
+}
