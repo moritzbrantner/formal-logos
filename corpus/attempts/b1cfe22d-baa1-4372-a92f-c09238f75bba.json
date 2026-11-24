@@ -1,0 +1,49 @@
+{
+  "id": "b1cfe22d-baa1-4372-a92f-c09238f75bba",
+  "label": "Can a secondary agent produce an actuality without giving it being?",
+  "date": "2026-11-24",
+  "statement_ids": [
+    "ca58266a-44d2-4388-a6db-b6a02c4be057",
+    "9e3109ea-c2bc-4db0-a129-845e3660c41f",
+    "9be98ad0-b3bd-4c81-a9b0-eeb8f1d37b5e",
+    "b4987085-f7b0-4031-a795-364873d3c216",
+    "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+    "7067553d-cad9-5d79-b6b2-912e35051530",
+    "791fa216-ce40-5e7d-82c5-0bd5fe245446"
+  ],
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "See docs/notes/actuality-esse-research.md §10. Let P say that some genuine producer gives no being to the particular effect. Direct warrant from operative contact and local determination favors ¬P-onset: the genuine producer contributes at least mediately to this particular’s coming-to-be. P-direct has warrant for a univocal generator whose generative activity accounts for this form in this matter, while the generated individual has its own constituting principles. P-no-mediated-esse, denying even instrumentality in the giving of esse as such at onset, remains open. A nonsubsistent determination supplies no second subsistent recipient of a separate esse. For a distinct individual the terminus can be its beginning; for a nonsubsistent determination it is the subject actually being thus. A selector can cease before execution, while the setting still contributes to the realized result. Read pinned ST I q.45 aa.4,5,8, q.104 a.1 and q.105 a.5. Aquinas distinguishes even this matter receiving this form from causation of being as such; concurrence adds application of efficacy. In b4987085 both causal edges are at esse in one profile. In b26c10a0 the giver must cause the respect in that same bearer; production by a secondary alone supplies no such edge. The four PR-1921 certificates concern indexed supply. No root obligation discharged.",
+  "blocker": "A real contributor to a particular’s coming-to-be need not stand in the q3 profile’s esse relation. Extending responsibility to the universal giver requires evidence that the giver operates through this secondary cause in its actual execution, and coverage of the quantified respects. Reopen the onset judgment on an independently identifiable genuine production wholly confined to specification, with no even mediated contribution to the particular’s realization.",
+  "evidence": [
+    "PR-1921",
+    "40aefb2e-c9b3-5bb1-8802-96bbc4e2ed83",
+    "da9c82ed-e886-5335-81c3-cebad9b27345",
+    "cc1b3ccb-778c-5ae2-9fa4-3402e546f203",
+    "36e89125-feeb-5dc9-af07-e4e3f637a9bc",
+    "4609290d-8b76-43ec-8325-c7480b4f3ed6",
+    "724e9fd0-00d9-42d1-982c-d93059f3acd9",
+    "0b462078-ca02-4731-945c-8b088d1b69ad",
+    "c1bed025-787d-43f7-99b0-0034d6d86be1",
+    "dae70d8a-75ad-5b67-82cd-c1f7be320e93"
+  ],
+  "current_assessment": {
+    "date": "2026-11-24",
+    "statement_ids": [
+      "ca58266a-44d2-4388-a6db-b6a02c4be057",
+      "9e3109ea-c2bc-4db0-a129-845e3660c41f",
+      "9be98ad0-b3bd-4c81-a9b0-eeb8f1d37b5e",
+      "b4987085-f7b0-4031-a795-364873d3c216",
+      "b26c10a0-983d-5a88-aa03-cc601bc1ddc6"
+    ],
+    "scope": "Effect-level application of the particular-actuality findings to actual esse composition and universal transfer, §10.",
+    "assessment": "Genuine production gives the particular a real beginning, including as a way its subject is. A univocal generator need not directly supply the resulting individual’s esse as such. Whether it contributes instrumentally to that esse at onset remains open. The cut results preserve bearer dependence. Composition still needs two esse edges in one profile; transfer still needs attribution of productive responsibility for each actual respect to the same universal giver.",
+    "next_test": "Determine whether the relevant existential source acts through this secondary cause in its exercised efficacy, distinguishing the executed determination from a setting which merely selects the kind of episode.",
+    "note": "docs/notes/actuality-esse-research.md#10-can-a-producer-withhold-being-from-the-very-actuality-it-produces",
+    "reviewed_revision": "2041cb092c9bf9095b41119a0eba28d67822fdf4",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "Independent review of 7e558acee6e7eed59c4f5eabd40c5d35a224cddf and targeted acceptance of 2041cb092c9bf9095b41119a0eba28d67822fdf4, including the q.104 P-direct clarification. Witnesses and exact proof boundaries in §10. Published in PR-1922.",
+    "supersedes": "None. This assessment concerns the producer of the particular. The judgments on the generality of actual esse composition and universal causal transfer retain their existing standing."
+  }
+}
