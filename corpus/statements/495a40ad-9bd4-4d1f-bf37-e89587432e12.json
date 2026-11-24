@@ -1,0 +1,10 @@
+{
+  "id": "495a40ad-9bd4-4d1f-bf37-e89587432e12",
+  "label": "Whenever a being gives another being, the giving exercises a power of the giver",
+  "paraphrase": "OPEN (analyst formulation, unattributed): whenever, in a world v, y gives x being (GivesTo), there is an active power p of y (PowerOf) such that y's giving x being in v is an exercise of p (Exercises). Giving is an operation of the giver from one of its own principles. Omitting it lets a model give being while exercising nothing (an encoding artifact, controls).",
+  "lean_declaration": "TruthCore.Causality.WillVersusChance.GivingExercisesOwnPower",
+  "definition_ids": [
+    "582f44c3-7778-4806-b385-e1eff852ac5e",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0"
+  ]
+}

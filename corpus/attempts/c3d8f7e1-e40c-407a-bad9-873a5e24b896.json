@@ -1,0 +1,24 @@
+{
+  "id": "c3d8f7e1-e40c-407a-bad9-873a5e24b896",
+  "label": "Weaken propagation assumptions to the exact observable obstruction",
+  "date": "2026-11-24",
+  "statement_ids": [
+    "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+    "c3d1c793-dc3a-450a-8c3c-fce341f67f5c",
+    "2e812d79-8aae-4e28-a07c-5a79ec342fd1",
+    "a447ad3e-a72e-4afe-93d3-eb5a4d976aaa"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "The #1874 adapters used whole-suffix richness to obtain the #1809 one-bit Profile and exact-forecast obstructions. The new certificate identifies exact weaker output-range conditions: adjacent-pair richness iff every universal first-order Profile permits all later pairs; both values at a chosen coordinate iff every record-only estimator lacks exact uniform correctness there. Finite richness entails pair richness, and the existing populated one-step-to-finite result is consumed directly. A missing pair produces an extensionally true exclusion Profile, not an independently warranted governing law. Two constant suffixes separate bit from pair richness. Four period-three suffixes a,b,a XOR b separate pair from finite richness while retaining one fixed two-step recurrence and unique complete histories given both seed values. The finite-versus-infinite control is reused from #1874. These results weaken the conditions for specific adverse consequences without treating failure of one-step observable laws as failure of all laws. Rejected duplicate leads: another capacity-one model, another paired-input parity theorem, another cancellation theorem, or another finite-to-infinite recombination proof; #1913, #1406 and #1874 already supply them. Scoped proof-discovery sweep returned two unresolved goals and no likely transcriptions; that search result is not a refutation. No source attribution, metaphysical admissibility, chance distribution, causal-origin detection or root-premise discharge is supplied. The bound #312 PSR remains the graph destination through the previously stated OPEN application bridge. See docs/notes/no-foundation-law-chaos.md#a-strict-hierarchy-of-observable-freedom for the integrated assessment and hierarchy.",
+  "blocker": "For a metaphysical application, establish that the selected brute-foundation account admits the opposite-value or adjacent-pair complete histories under its actual retained background and causal conditions. An extensional exclusion alone does not explain why that restriction obtains. To challenge broader laws, use the relevant complete state and memory rather than only one observed bit. To infer actual epistemic defeat, retain the rival's own warrant standard and evidence about its error process; the uniform equality obstruction supplies no probability. The original closure requirement remains for unrestricted complete infinite histories.",
+  "evidence": [
+    "33c7a1c3-c300-439b-9422-c7345821b56d",
+    "e52c1b06-d23d-4623-bdc9-1761659d6bca",
+    "765d8679-3405-4276-be0f-f71b8248b863",
+    "PR-1809",
+    "PR-1874",
+    "PR-1913",
+    "PR-1406"
+  ]
+}

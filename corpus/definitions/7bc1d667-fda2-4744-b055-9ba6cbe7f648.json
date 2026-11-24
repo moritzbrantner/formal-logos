@@ -1,6 +1,6 @@
 {
  "id": "7bc1d667-fda2-4744-b055-9ba6cbe7f648",
- "label": "One-way giving profile: wherever y exists it gives being to the same beings (FixedGiver)",
+ "label": "NECESSITATE_2, fixed giving: wherever y exists it gives being to the same beings (FixedGiver)",
  "term": "one-way (fixed) giver (FixedGiver)",
  "definition": "FixedGiver F y: for all worlds u and v where y exists, y gives being (GivesTo, DEF 62dfa893-b633-4513-9790-8f9a0a3087e0) to exactly the same beings in u as in v. An extensional exercise profile, not an intensional potency.",
  "basis": "stipulative",

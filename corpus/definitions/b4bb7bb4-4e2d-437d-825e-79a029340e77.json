@@ -1,0 +1,9 @@
+{
+ "id": "b4bb7bb4-4e2d-437d-825e-79a029340e77",
+ "label": "Invariant set-up: the giver's set-up is the same at every accessible world where it exists",
+ "term": "invariant set-up (SetupInvariantAt)",
+ "definition": "SetupInvariantAt F A w y: for every world v accessible from w (frame access of the shared CausalityFrame) at which y exists, SetupSameIn A y w v.",
+ "basis": "stipulative",
+ "lean_declaration": "TruthCore.Causality.WillVersusChance.SetupInvariantAt",
+ "note": "Analyst definition, attribution deferred (docs/notes/will-versus-chance.md). The frame surrogate for a simple (no varying intrinsic state) and patientless (no varying external condition) source. Examples: an immutable being with no patient, on the classical theist reading of God (the decree is not a varying intrinsic state; its terminus is an extrinsic denomination). Non-examples: a die (initial conditions vary); an agent who changes its mind; a theist reading on which divine decrees are contingent intrinsic states (that reading denies invariance). Invariance does not imply one power (the intellectual-chancer model)."
+}

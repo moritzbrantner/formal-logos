@@ -1,0 +1,11 @@
+{
+  "id": "ec6627bf-e955-4532-8ee5-9345fd54fa9f",
+  "label": "Will and CHANCE_3 controls checked",
+  "argument_id": "27770a69-1c0e-4c01-99a0-a5c58ad87f9e",
+  "challenge_module": "TruthCore.Results.Causality.WillVersusChance.Challenge",
+  "solution_module": "TruthCore.Results.Causality.WillVersusChance.Solution",
+  "theorem": "TruthCore.Results.Causality.WillVersusChance.willVersusChanceControls",
+  "comparator_config": "results/ec6627bf-e955-4532-8ee5-9345fd54fa9f/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free laws and models for the will-versus-chance batch. Sense-mixing control: they relate the three CHANCE senses, NECESSITATE_2 and NECESSITATE_3, MODAL_CONTINGENCY_1 and NECESSARY_2 without a bridge premise. Establishes no premise."
+}

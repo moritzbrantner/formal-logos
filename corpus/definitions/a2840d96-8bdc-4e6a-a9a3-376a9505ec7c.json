@@ -1,0 +1,9 @@
+{
+ "id": "a2840d96-8bdc-4e6a-a9a3-376a9505ec7c",
+ "label": "CHANCE_3, propensity: a non-rational power gives x, and not at a world with the same set-up",
+ "term": "chance, indeterministic propensity sense (PropensityChanceAt)",
+ "definition": "PropensityChanceAt F A w y: y exists at w, and there are a power p of y that is not rational, a being x and a world v accessible from w where y exists with the same set-up (SetupSameIn A y w v), such that y gives x being at w by p (GivesBy) and does not give x being at v.",
+ "basis": "stipulative",
+ "lean_declaration": "TruthCore.Causality.WillVersusChance.PropensityChanceAt",
+ "note": "Analyst definition, attribution deferred (docs/notes/will-versus-chance.md). Per se chance. Example, on indeterministic (e.g. collapse) readings of quantum mechanics: a nucleus that decays in one course of events and not in another from the same state. Pruss's 'perhaps non-deterministic' first cause, read impersonally (navigation). No probability measure is typed (Mathlib's Markov kernels were considered and not used: only the same-set-up, different-outcome profile is needed). Not excluded by an invariant set-up; with excluded middle, its absence at w is exactly DNP-prime (Model.Laws 11)."
+}

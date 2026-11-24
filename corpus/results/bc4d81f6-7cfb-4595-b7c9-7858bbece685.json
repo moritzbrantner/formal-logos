@@ -1,0 +1,11 @@
+{
+  "id": "bc4d81f6-7cfb-4595-b7c9-7858bbece685",
+  "label": "GOD_4 HAS_WILL_1, by the restricted Theta 5 principle at the joint-absence power",
+  "argument_id": "8db47127-53d0-4290-8472-56764e1585af",
+  "challenge_module": "TruthCore.Results.Causality.WillVersusChance.Challenge",
+  "solution_module": "TruthCore.Results.Causality.WillVersusChance.Solution",
+  "theorem": "TruthCore.Results.Causality.WillVersusChance.godHasWillByThetaFive",
+  "comparator_config": "results/bc4d81f6-7cfb-4595-b7c9-7858bbece685/comparator.json",
+  "status": "solution-present",
+  "description": "Argument D: a horizontal, intellect-free support option for STMT-GOD-HAS-WILL through #1897's creator premises and the restricted Theta 5 principle. Not a transcription: no premise mentions will except argument C's conclusion, which is conditional on a two-way profile the proof derives. Establishes no premise. Its crux is DNP_inv, consumed through argument C: the chance rival model satisfies every other premise of C and D. Shared dependencies with #1897's withholding route: P2-prime, P5, the creator reading and factive giving."
+}

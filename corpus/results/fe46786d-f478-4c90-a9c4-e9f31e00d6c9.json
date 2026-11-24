@@ -1,0 +1,11 @@
+{
+  "id": "fe46786d-f478-4c90-a9c4-e9f31e00d6c9",
+  "label": "Hidden-history obstruction and history-sensitive audit control",
+  "argument_id": "ceeeec92-7fdd-4f33-8274-3c827ef63649",
+  "challenge_module": "TruthCore.Results.Science.AdaptiveHistoryAccess.Challenge",
+  "solution_module": "TruthCore.Results.Science.AdaptiveHistoryAccess.Solution",
+  "theorem": "TruthCore.Results.Science.AdaptiveHistoryAccess.historyControls",
+  "comparator_config": "results/fe46786d-f478-4c90-a9c4-e9f31e00d6c9/comparator.json",
+  "status": "solution-present",
+  "description": "The blind transition preserves equality of current readouts under either action; the adaptive theorem then supplies equal complete finite transcripts for the selected opposite-marker states. CorrectionCriterion.characterization turns that mismatch in correctness on an equal-data fiber into failure of exact classification. Direct evaluation verifies changing readouts under repeated toggles and shows the supplied history-sensitive audit recovers the marker after one step. The no-coupling assumption is exposed and removed in the positive control. No metaphysical possibility, source attribution, probabilistic estimate, infallibility norm or root-premise discharge is asserted."
+}

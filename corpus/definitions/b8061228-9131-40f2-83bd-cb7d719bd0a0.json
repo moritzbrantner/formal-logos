@@ -1,0 +1,9 @@
+{
+ "id": "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+ "label": "Rational power: an active power that follows intellectual apprehension of the good",
+ "term": "rational power (AgencyFrame.Rational)",
+ "definition": "A.Rational p: the power p belongs to the rational class, an inclination that follows intellectual apprehension of the good. A primitive classification of the powers of the agency overlay; Lean gives it no content beyond the premises that mention it. Neither PowerOf nor Exercises is constrained by it.",
+ "basis": "stipulative",
+ "lean_declaration": "TruthCore.Causality.WillVersusChance.AgencyFrame.Rational",
+ "note": "Analyst definition, attribution deferred (docs/notes/will-versus-chance.md). Meaning: Met. Theta 5's 'desire or will' that decides between contraries (Ross, navigation), and HAS_WILL_1 (DEF 7c64b499) read at the level of powers. Examples: a craftsman's will to build. Non-examples: fire's heating; a radioactive nucleus's propensity to decay. Distinct from HAS_WILL_1 (a predicate of beings): the passage in each direction is an explicit OPEN bridge (WillIsRationalPower, RationalPowerIsWill). The flip law of Model.Laws shows that in this overlay a willed two-way giver and a CHANCE_3 giver differ only in this classification; #742 found that a personal flag used as a standard is circular, and this primitive does not discharge that finding."
+}

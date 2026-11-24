@@ -1,0 +1,35 @@
+[batch]
+vocab = "TruthCore.Explanation.AdjacentPairContainment"
+results = "TruthCore.Results.Explanation.AdjacentPairContainment"
+definitions = ["1e04df16-fe72-467a-bc25-785f0e94fc70", "a54be3d2-c9ea-4fcc-8f11-0bfefec3671a", "879221f0-4cd7-4912-b9e4-c425f22b5925"]
+disambiguations = ["b6e7ec07-9a8e-51c4-a9f8-c9b8e9922ac5"]
+
+[[statement]]
+id = "Exact output-range conditions for local-law and uniform-forecast obstructions"
+lean = "ExposureCertificate"
+definitions = ["a54be3d2-c9ea-4fcc-8f11-0bfefec3671a", "879221f0-4cd7-4912-b9e4-c425f22b5925", "1e04df16-fe72-467a-bc25-785f0e94fc70"]
+paraphrase = "For one fixed selector of complete Boolean traces and one recorded all-true prefix: adjacent-pair richness is equivalent to every first-order, possibly time-dependent Profile true on all admitted traces allowing every fully unobserved pair. At a selected coordinate, admission of both Boolean values is equivalent to failure of exact uniform correctness for every record-only estimator. Finite richness implies pair richness, which implies both values at every future coordinate. The existing populated one-step extension theorem therefore already gives pair richness without infinite-prefix closure. These equivalences identify exact conditions within the specified observation and estimator classes, not weakest metaphysical premises or the absence of all kinds of laws."
+
+[[argument]]
+id = "Weaken infinite-suffix freedom to exact one-bit and adjacent-pair exposure conditions"
+theorem = "exposureCertificate"
+premises = []
+conclusion = "Exact output-range conditions for local-law and uniform-forecast obstructions"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Construct a profile excluding any missing pair, compare opposite-value histories on one record, and reuse finite recombination"
+meaning = "An absent adjacent pair defines a time-specific exclusion Profile holding on every admitted trace. Conversely any realized pair must satisfy every universal Profile. Opposite values at one coordinate defeat common-record exact estimators, while absence of one Boolean value permits a correct constant estimator. Finite richness realizes each pair through a finite prefix, and #1874's recombinationFork supplies it from populated one-step extension. WholeSuffixRich and PrefixClosed are unnecessary for these narrower adverse consequences; no ontic, causal or epistemic application bridge is established."
+
+[[statement]]
+id = "Pair-rich histories can retain a fixed two-step law and exclude longer patterns"
+lean = "MemoryControls"
+definitions = ["a54be3d2-c9ea-4fcc-8f11-0bfefec3671a", "879221f0-4cd7-4912-b9e4-c425f22b5925", "75c530a8-7680-478b-9c28-06924e3b3cdb", "1e04df16-fe72-467a-bc25-785f0e94fc70"]
+paraphrase = "For each fixed cutoff, the two constant suffixes admit either value at every future coordinate but not every adjacent pair. The four period-three suffixes a,b,a XOR b admit every adjacent pair while satisfying the fixed recurrence f(t+2)=f(t) XOR f(t+1) after the record. Their first two suffix values determine the whole admitted history. This selector excludes a three-true suffix prefix, hence lacks both finite-pattern and whole-suffix richness. These are complete mathematical control histories; no actual law, metaphysical admissibility or chance measure is assigned."
+
+[[argument]]
+id = "Separate one-bit, pair and finite-pattern freedom with constant and parity suffixes"
+theorem = "memoryControls"
+premises = []
+conclusion = "Pair-rich histories can retain a fixed two-step law and exclude longer patterns"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Construct all Boolean seeds, check the three phase cases, and contradict the recurrence with a prescribed three-bit prefix"
+meaning = "Constant suffixes separate single-coordinate freedom from joint pair freedom. The three-periodic XOR construction gives each adjacent pair by a suitable seed choice, but one fixed two-step equation forbids three consecutive true values. Matching the two seed coordinates fixes every admitted trace. Thus the exact first-order Profile obstruction does not exclude deterministic higher-order regularity or show unrestricted history recombination. #1874 independently supplies the finite-versus-infinite strictness control; it is reused rather than recreated."

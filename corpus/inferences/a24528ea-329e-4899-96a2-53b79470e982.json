@@ -1,0 +1,10 @@
+{
+  "id": "a24528ea-329e-4899-96a2-53b79470e982",
+  "label": "Weaken infinite-suffix freedom to exact one-bit and adjacent-pair exposure conditions (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "2e812d79-8aae-4e28-a07c-5a79ec342fd1",
+  "rule": "Construct a profile excluding any missing pair, compare opposite-value histories on one record, and reuse finite recombination",
+  "meaning": "An absent adjacent pair defines a time-specific exclusion Profile holding on every admitted trace. Conversely any realized pair must satisfy every universal Profile. Opposite values at one coordinate defeat common-record exact estimators, while absence of one Boolean value permits a correct constant estimator. Finite richness realizes each pair through a finite prefix, and #1874's recombinationFork supplies it from populated one-step extension. WholeSuffixRich and PrefixClosed are unnecessary for these narrower adverse consequences; no ontic, causal or epistemic application bridge is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

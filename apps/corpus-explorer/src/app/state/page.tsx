@@ -7,7 +7,6 @@ import {
   CLOSURE_DESCRIPTIONS,
   CLOSURE_LABELS,
   DEFAULT_ROOT_STATEMENT_ID,
-  FRONTIER_DEPTHS,
   type ClosureReason,
   type FrontierItem,
   formatUtc,
@@ -70,11 +69,6 @@ export default function StatePage() {
   const rootState = statementState(report, DEFAULT_ROOT_STATEMENT_ID);
 
   const reaching = report.items.filter((item) => item.path_to_root);
-  const reachingDepth = {
-    bare: reaching.filter((item) => item.depth === "bare").length,
-    supported: reaching.filter((item) => item.depth === "supported").length,
-    stated: reaching.filter((item) => item.depth === "stated").length,
-  };
   const stagesOf = (statementId: string) => report.statement_stages[statementId] ?? [];
 
   // The root's paths: the route-aware upward walk of `truth frontier` (#527), not every stage member.
@@ -84,7 +78,6 @@ export default function StatePage() {
     const members = Object.entries(report.statement_stages)
       .filter(([, memberOf]) => memberOf.includes(stage))
       .map(([id]) => id);
-    const open = reaching.filter((item) => stagesOf(item.statement_id).includes(stage));
     const closed = members.filter((id) => onRootPath.has(id) && report.closed_statements[id]);
     return {
       stage,
@@ -92,9 +85,6 @@ export default function StatePage() {
       statement: findStatement(corpus, statementId),
       state: statementState(report, statementId),
       onRoute: onRootPath.has(statementId),
-      open,
-      bare: open.filter((item) => item.depth === "bare").length,
-      supported: open.filter((item) => item.depth === "supported").length,
       closed: closed.length,
       offRoute: members.filter((id) => !onRootPath.has(id)).length,
     };
@@ -118,7 +108,7 @@ export default function StatePage() {
 
   const { alternatives, objections } = rivals(corpus, report);
   const paraphrase = (id: string) => findStatement(corpus, id)?.paraphrase ?? id;
-  const sortedReaching = [...reaching].sort((a, b) => FRONTIER_DEPTHS.indexOf(a.depth) - FRONTIER_DEPTHS.indexOf(b.depth));
+  const sortedReaching = [...reaching].sort((a, b) => a.paraphrase.localeCompare(b.paraphrase) || a.statement_id.localeCompare(b.statement_id));
 
   return (
     <>
@@ -129,8 +119,7 @@ export default function StatePage() {
             What is proved, and what is still open.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)]">
-            Every path from the root should end in premises that are self-evident or whose alternatives are all refuted.
-            Lean checks each step; the open premises below are what remains to be argued.
+            Lean checks conditional consequences. Inspect the assumptions below alongside source evidence and arguments; source and closure status do not determine philosophical warrant.
           </p>
           <p className="mt-4 text-sm text-[var(--muted)]">
             As of{" "}
@@ -141,7 +130,6 @@ export default function StatePage() {
           </p>
         </div>
         <dl className="grid grid-cols-2 gap-x-6 gap-y-5 border-l border-[var(--line)] pl-5">
-          <Count label="Open premises" value={reaching.length} note={`${reachingDepth.bare} bare · ${reachingDepth.supported} supported · ${reachingDepth.stated} stated`} />
           <Count
             label="Established"
             value={report.established_statements.length}
@@ -172,7 +160,7 @@ export default function StatePage() {
         <p className="mt-4 max-w-3xl text-sm leading-6 text-[var(--muted)]">
           {rootState.kind === "closed" && rootState.established
             ? "The root is established: every premise beneath it is closed."
-            : `Lean verifies that the root follows from its premises, but ${reaching.length} open premises still reach it, so it is not established. Verified arguments that conclude the root:`}
+            : "The root is not established under the recorded closure rules. Recorded arguments that conclude the root:"}
         </p>
         {rootArguments.length ? (
           <ul className="mt-3 grid gap-2 text-sm text-[var(--muted)]">
@@ -186,9 +174,7 @@ export default function StatePage() {
                     </Link>
                   ) : (
                     <span className="text-xs">{nameOf(argument.id)}</span>
-                  )}{" "}
-                  — {argument.premise_statement_ids.filter((premise) => !report.closed_statements[premise]).length} of{" "}
-                  {argument.premise_statement_ids.length} premises open
+                  )}
                 </li>
               );
             })}
@@ -200,14 +186,10 @@ export default function StatePage() {
         <p className="eyebrow">The six stages</p>
         <h2 className="mt-3 font-serif text-3xl tracking-[-0.03em]">Stage by stage</h2>
         <p className="mt-3 max-w-3xl text-sm leading-6 text-[var(--muted)]">
-          A stage is established only when its conclusion and everything beneath it are closed. The bar counts only what
-          the stage rests on that is also on the root&apos;s paths (the route-aware set of{" "}
-          <code className="font-mono">truth frontier</code>): closed statements against open premises. What the stage
-          rests on off the root&apos;s route is counted separately and not as on the root&apos;s paths.
+          Each stage shows its recorded formal status and whether its conclusion lies on a route to the root.
         </p>
         <div className="mt-6">
           {stages.map((stage) => {
-            const total = stage.closed + stage.open.length;
             return (
               <div
                 className="stage-row"
@@ -215,7 +197,6 @@ export default function StatePage() {
                 data-stage-closed={stage.closed}
                 data-stage-off-route={stage.offRoute}
                 data-stage-on-route={stage.onRoute}
-                data-stage-open={stage.open.length}
                 key={stage.stage}
               >
                 <span className="stage-number">{stage.stage}</span>
@@ -232,17 +213,9 @@ export default function StatePage() {
                 </div>
                 <div className="grid gap-2">
                   <StatementStateMark state={stage.state} />
-                  <div aria-hidden="true" className="meter">
-                    <span style={{ width: `${total ? (100 * stage.closed) / total : 0}%`, background: "var(--status-proved)" }} />
-                    <span style={{ width: `${total ? (100 * (stage.open.length - stage.bare - stage.supported)) / total : 0}%`, background: "var(--status-open)" }} />
-                    <span style={{ width: `${total ? (100 * stage.supported) / total : 0}%`, background: "var(--status-transcription)" }} />
-                    <span style={{ width: `${total ? (100 * stage.bare) / total : 0}%`, background: "var(--status-objection)" }} />
-                  </div>
                 </div>
                 <p className="text-sm leading-6 text-[var(--muted)]">
-                  <span className="text-[var(--ink)]">{stage.closed}</span> closed ·{" "}
-                  <span className="text-[var(--ink)]">{stage.open.length}</span> open
-                  {stage.bare ? ` (${stage.bare} bare)` : ""}
+                  <span className="text-[var(--ink)]">{stage.closed}</span> closed
                   {stage.offRoute ? (
                     <>
                       {" "}
@@ -262,17 +235,11 @@ export default function StatePage() {
               </div>
               <div />
               <p className="text-sm leading-6 text-[var(--muted)]">
-                <span className="text-[var(--ink)]">{rootLevel.length}</span> open
+                Inspect the assumptions below.
               </p>
             </div>
           ) : null}
         </div>
-        <p className="mt-4 flex flex-wrap gap-4 text-xs text-[var(--muted)]">
-          <span><span className="state-mark-dot" style={{ background: "var(--status-proved)" }} /> closed</span>
-          <span><span className="state-mark-dot" style={{ background: "var(--status-open)" }} /> open, stated</span>
-          <span><span className="state-mark-dot" style={{ background: "var(--status-transcription)" }} /> open, supported only</span>
-          <span><span className="state-mark-dot" style={{ background: "var(--status-objection)" }} /> open, bare</span>
-        </p>
       </section>
 
       <section className="record-section">
@@ -281,7 +248,7 @@ export default function StatePage() {
         <p className="mt-3 max-w-3xl text-sm leading-6 text-[var(--muted)]">
           <strong className="text-[var(--ink)]">Bare</strong>: no source states or supports it.{" "}
           <strong className="text-[var(--ink)]">Sourced</strong>: a source states or supports it, but it is not yet defended.
-          Bare premises come first; the project drives them to zero first. Same list as{" "}
+          These are source-status descriptions, not a ranking of philosophical credibility. Same list as{" "}
           <code className="font-mono">truth frontier --reaching-root</code>.
         </p>
         <ul className="premise-list mt-6">
@@ -290,9 +257,9 @@ export default function StatePage() {
           ))}
         </ul>
         <p className="mt-4 text-sm text-[var(--muted)]">
-          {report.open_premise_count - reaching.length} further open premises do not reach the root.{" "}
+          To inspect other propositions, {" "}
           <Link className="link-quiet" href="/graph">
-            Explore them in the graph
+            open the graph
           </Link>
           .
         </p>
