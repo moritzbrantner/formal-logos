@@ -170,7 +170,7 @@ The route beginning with a maximal witness can restrict divine causal
 reach to recipients in act in esse, because that witness is in act. The
 claims that a God exists and that the God-description has the asserted
 causal scope retain separate warrant requirements.
-[Arguments and model comparisons](maximum-definition-fork.md#divine-unity-without-general-genus-causality-1936)
+[Arguments and model comparisons](maximum-definition-fork.md#can-two-distinct-gods-each-give-the-others-esse-1936)
 
 ## Continuity of the recipient in a sustaining-cause argument
 

@@ -20,5 +20,20 @@
     "3c60e372-7e35-4758-a583-64bcc0a42497",
     "177e3836-f990-4bb4-9446-1093c9d2fb0d",
     "4f934468-3157-4d9f-b606-35832ae1c9af"
-  ]
+  ],
+  "current_assessment": {
+    "date": "2026-11-25",
+    "statement_ids": [
+      "33b18ae7-4578-54bc-a2b5-edce99b21fc2"
+    ],
+    "scope": "The causal-naming, maximal-witness and nonmutual-dependence arguments for GodIsOne on one esse dictionary.",
+    "assessment": "A common maximal witness or exclusion at each God's own maximum suffices for unity under the causal naming premise. The dependence argument excludes two universal givers without a grading assumption when each would depend on the other in the same respect. Evidence of a giver for each recipient fits both universal and partitioned supply. The maximal witness is actual in esse, which permits the restriction of the naming premise to actual recipients in that proof.",
+    "next_test": "Track what gives the being of recipients in two proposed domains. For the dependence argument with restricted scope, establish actuality in esse of each God candidate or justify causal reach to both candidates.",
+    "note": "docs/notes/maximum-definition-fork.md#can-two-distinct-gods-each-give-the-others-esse-1936",
+    "reviewed_revision": "4a5c2c73df76d92cb69ea11a0c05872cf931dddd",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Four local result configurations, including assembly and countermodels. Proposed for final semantic challenge.",
+    "supersedes": "None. Adds alternatives to the existing genus-causality, nature and root arguments."
+  }
 }
