@@ -700,3 +700,108 @@ theorem tie : ¬ CauseOfQualityInAnotherIsMoreSuchReading soleFeed
 end ProductiveDegree
 
 ```
+
+### Can a receiving constitution itself make a bearer less in esse?
+
+Fix two actual bearers in one situation. Let `c` give esse to `x`. Grant the strongest source-specific interpretation: `c` is subsisting act, the act of `x` is received in its own essence, and **all positive intrinsic determinations counted by a grade-sensitive inventory are equally realized**. The inventory is fixed before identifying the giver. This grants considerably more than the represented essence/esse identity in `8176a284`. It isolates the hard case left by the constitutive comparison in [the prior investigation, §12](https://github.com/moritzbrantner/truth-core/blob/a0cd646f9f33cc12f0b8c3287397458c6c1269c0/docs/notes/esse-comparative-ascent/PRD-esse-comparative-ascent.md).
+
+**What makes a restriction privative in a given respect?** Consider two ideal stages in the same trial, identical except that one has an engaged internal transverse lock. A command specifies forward and transverse components. At the actual forward-only command both stages achieve exactly the requested displacement. A transverse command independently detects the real restriction. Its presence strictly shrinks the range of attainable displacements and makes the stage retain heading under every modeled transverse disturbance. There are three determinate answers on these same bearers: a tie in actual forward displacement, a loss in accessible displacement, and a gain in holding the selected heading. The latter two concern dispositions. The lock's structure explains all three. Renaming or subdividing its parts changes none of the responses. The model concerns mechanisms with passive capacities; breadth of attainable change would be a particularly poor measure of a subsistent act understood to have no passive potency.
+
+This supplies a test beyond counting restrictions. Specify what counts as success *in the respect at issue*, then identify what the constraint prevents under that specification. Here transverse exclusion deprives one stage of a reachable displacement even if nobody prefers lateral motion. The same exclusion is constitutive of keeping heading against disturbance. A real receiving essence can similarly specify the way a whole is actual. Its reality alone leaves open whether it deprives that whole of a perfection of being. The stages are a control for this inference, not an example of creatures receiving esse or of ties in every intrinsic disposition.
+
+**What the subsistence argument earns.** Ask of each whole what accounts for its present actuality *within its constitution*. On the granted interpretation, there is in `x` a receptive principle whose being actual requires act distinct from it. In `c` no constituent needs to receive a distinct act for this whole to be actual. This identifies the difference on each bearer without asking which one causes the other. It gives a positive reason to prefer a mode-sensitive reading **if the comparison concerns completeness of the act by which the whole itself is actual**: in one whole actuality is constitutive through and through, while in the other a constitutive principle has actuality only by receiving it. This concerns a presently actual recipient, and asserts no temporal phase of bare potency or act by which the source causes itself. For an intermediate giver whose own esse is received in the same manner as its recipient's, this reason for an advantage disappears. Causal direction still makes sense.
+
+One tempting argument would subtract the condition of reception from `x` while retaining everything positive, then call the result an improvement. If receptivity belongs to what `x` essentially is, this subtraction supplies no possible improved state of that very whole. Substituting the actual `c` preserves the two-bearer comparison but restores the original question about its standard. The rival counts the two bearers as tied because its measure is the positive actuality each actually realizes. Identifying the principle *in virtue of which* one realizes it changes none of those grades on the grant. Any strict order depending only on that profile must tie the bearers, whatever the number or labels of its entries. If mode itself makes a difference to the relevant grade, the governing question is **why completeness of actualization measures more being**, even when it changes no already admitted positive determination. Classifying “unreceived” as one further pure perfection settles that issue by stipulation.
+
+**Assessment.** Receiving esse alone gives insufficient warrant for strict superiority of its named giver (`cffad050`). On the subsistent-source reading, the constitutive argument gives qualified positive warrant to `8176a284` as a direct metaphysical premise: it compares the whole under the very act being explained. I would use it conditionally on that reading and suspend an unqualified strict judgment at equal content. Both accounts explain how the recipient can be completely actual in its kind. Only the constitutive account takes the difference in *how* to affect the degree of being of the whole. Reopen `fd2c8710` and the application of `9eaa3b6e` if a named bearer exhibits an independently identified actual perfection excluded by reception, or if another application of the same degree of esse can distinguish those whole-bearer modes with the grade-sensitive inventory held fixed. Consumers asking only whether an actual maximum can have a distinct incoming esse cause can use a separately warranted causal exclusion. Such a result supplies neither degree comparison nor perfection transfer. [Identity-source ascent](../../corpus/arguments/142d2d1d-b562-4b9f-b010-cbdcf4b14ff7.json) · [Source-first route audit](https://github.com/moritzbrantner/truth-core/blob/3d11caf5d29dd968e9cb31437b7e19481e44edd6/docs/notes/root-route-modal-load.md)
+
+The Lean fragment checks the two response ranges and the profile tie. It makes no assignment to the corpus's `MoreIn esse`.
+
+```lean
+namespace ReceptionCalibration
+abbrev Command := Bool × Bool
+def response (locked : Bool) (u : Command) : Command :=
+  (u.1, if locked then false else u.2)
+def reachable (locked : Bool) (v : Command) := ∃ u, response locked u = v
+def keepsHeading (locked : Bool) := ∀ u : Command, (response locked u).2 = false
+
+theorem actualTie : response true (true, false) = response false (true, false) := rfl
+theorem restrictedRange :
+    (∀ v, reachable true v → reachable false v) ∧
+    (reachable false (false, true) ∧ ¬ reachable true (false, true)) := by
+  refine ⟨?_, ⟨⟨(false, true), rfl⟩, ?_⟩⟩
+  · intro v _
+    exact ⟨v, rfl⟩
+  · rintro ⟨u, h⟩
+    exact Bool.noConfusion (congrArg Prod.snd h)
+theorem headingContrast : keepsHeading true ∧ ¬ keepsHeading false := by
+  exact ⟨fun _ => rfl, fun h => Bool.noConfusion (h (false, true))⟩
+
+theorem profileTie {Bearer Profile : Type} (positive : Bearer → Profile)
+    (above : Profile → Profile → Prop) (strict : ∀ p, ¬ above p p)
+    {c x : Bearer} (equalContent : positive c = positive x) :
+    ¬ above (positive c) (positive x) := by
+  rw [equalContent]
+  exact strict _
+end ReceptionCalibration
+```
+
+### One principal giver of participated existence
+
+Fix the respect as *esse*, the act by which the recipient exists. The proposed
+giver is one and the same bearer for every participant. A parent can be a cause
+of a child's coming to be, for example, while parent and child both depend on
+the same principal giver for their existence. Secondary causes can therefore
+be real without being additional independent sources of esse. Calling the giver
+sole in this respect leaves the production of a particular form or skill a
+separate question. The numerical identity asserted here belongs to the giver
+across all its recipients. Each participant's received act can be its own.
+
+| Proposition | What it contributes |
+| --- | --- |
+| For every participant there is a distinct, actual giver of its esse whose being is its own. Every giver meeting those conditions is the same bearer, `p`. | Supply (`de05072a`) and selection (`dcf4bcdd`) fix one source across recipients. With an actual instance of participation this identifies a giver who actually supplies someone. The existing selected-supply statement (`8b8bb6df`) alone leaves other sources eligible. Applying this argument to *every principal giver* requires that all principal givers meet the stated conditions. |
+| The giving by `p` accounts for the recipient's whole act of existing. | This is a claim about the scope of the giver's work. Merely counting givers cannot establish it. Total giving excludes a *needed* independent supplement of esse. On the corpus definition another independently sufficient giver is consistent with totality alone. Selection excludes a second qualifying own-being giver. A finite causal path from `p` (`c35b1a5c`) alone does not specify that scope. |
+| Each recipient's degree of esse is at most the giver's degree of esse. | When the giver is the efficient and total cause in this respect, applying represented-degree adequacy (`87f41688`) gives this upper bound on a common scale. Its direct warrant is strongest if participation consists in sharing an actuality possessed by the source. If possession is eminent, the comparison still needs a reason why the higher mode of possession covers the recipient's degree on that scale. Productive power alone does not supply that comparison. |
+| The giver has a strictly higher degree of esse than a particular recipient. | The upper bound permits equal degrees. If the recipient's capacity places its degree at or below a ceiling that the giver actually exceeds on the same scale, strict superiority follows. The comparison then concerns exactly what that recipient cannot receive. Extending it to every participant requires this limitation in every case. |
+
+The [source selection](../../corpus/arguments/1a4f8730-c6d9-4be8-9b4e-dcd5bd320433.json)
+yields one and the same giver of esse to a populated set of actual participants
+(`eeb89ffe`). The [degree argument](../../corpus/arguments/dcec5717-3794-4b13-b463-f238112bb2a9.json)
+uses the efficient-total giving premise (`50da2b49`) and degree adequacy to
+reach the positive bound (`aba6f4e1`). In the [two-bearer control](../../corpus/arguments/e27ee8c6-889c-4035-ab71-e31482ba2735.json),
+the giver has represented essence/esse identity and its recipient lacks it.
+Equal degrees satisfy adequacy. Assigning the recipient degree two and the
+giver degree one on the very same causal facts violates adequacy. These are
+formal tests of what the premises constrain.
+
+The corpus already offers a route to the one-giver premise. It identifies each
+qualifying cause as a bearer whose essence is its existence, supplies one such
+actual bearer, and uses the distinct thesis that at most one actual bearer
+can meet that description (`a576300f`). Extending the conclusion from
+participants to every being other than the giver also uses participation
+coverage (`11e24b50`). With this coverage and the positive degree bound,
+the same giver [witnesses the existing greatest-degree conclusion](../../corpus/arguments/fa840507-1db4-497d-a47a-260bbcd25dbc.json) (`27fb3450`),
+using the registered argument's classical case split on identity. Uniqueness
+identifies all qualifying givers with this bearer. Once this bearer's supply
+is fixed, the inequality itself uses its totality and adequacy. It would apply
+to any other giver independently meeting those same conditions.
+Sole giver and sole bearer of the greatest degree are different commitments:
+several bearers may share the highest degree while exactly one supplies the rest.
+The earlier tie test in this note (§(d), P2) shows how *additional* commitments
+can exclude that case. If every greatest bearer causes every other bearer
+in the same respect and mutual causation there is impossible, a tied recipient
+would cause its own giver in return. The disputed step in this alternative is
+the universal causal role assigned to each greatest bearer.
+
+I would use the upper bound conditionally for this one giver. It captures the
+reason that whatever a participant has *by participation in this source*
+cannot outrun what the source can communicate. Comparing this communicable
+actuality with the giver's **own degree of being** is the substantive adequacy
+premise. The existing argument for adequacy from unrestricted strict
+superiority (`c974d1f0`) would assume the very claim under examination if used
+to establish strict superiority here. The next test is whether the recipient's
+essence fixes a ceiling in *esse* which the same giver actually exceeds.
+A difference in dependence identifies the two roles and leaves that question open.
+
+[Existing source-supply and selection arguments](q44-inferential-dependency.md) ·
+[Existing degree and capacity arguments](causal-perfection-transfer.md#recipient-relative-limitation-and-source-scoped-ascent-2026-11-17)
