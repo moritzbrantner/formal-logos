@@ -372,6 +372,10 @@ existential grounding takes further warrant. [Alternating-source certificate](..
 **Where it enters the case.** Any argument that supplies an actual root at
 the selected world can now use source agreement on exactly this profile's
 actual grounding graph to identify that root with every other actual root.
+The specialization uses `m.grounds w` on existing concrete beings. The
+older structural records also describe `WorldSourceRegress.actualGraph`,
+which uses an ontic cause relation on all actual beings. The proof makes
+no identification between these relations or carriers.
 The composed theorem also checks the particular route through well-foundedness,
 weak connectivity and local joining. The existing De ente consumer can thereby
 identify its separately supplied first source with a separately supplied
@@ -388,7 +392,8 @@ both have an empty strict ancestry, so applying that identity criterion to
 actual beings already constrains their individuation. Another route identifies
 complete producers through their participation and coverage premises. To
 use that route here, the actual-concrete grounding edges would have to meet
-its complete-production and parthood assumptions. Neither an argument on a
+its complete-production and parthood assumptions, and those very edges
+would have to weakly connect the carrier. Neither an argument on a
 different graph nor the mere listing of a route supplies that application.
 [Ancestor identity premise](../../corpus/statements/53cc2c53-1f9a-4e4a-8402-3ac464fa8352.json)
 and [complete-producer route](../../corpus/arguments/COMPLETE-CAUSE-CONNECTED-SOURCE-UNIQUENESS.json)
@@ -402,5 +407,6 @@ well-foundedness. Evidence that would discriminate is an account of a
 candidate pair of substantial co-suppliers that independently identifies what
 sustains each one's existence, and shows whether their ancestry meets.
 Universal application requires a reason the account covers every admissible
-pair. A graph built by presupposing one ultimate source would satisfy the
-local test without giving another reason for accepting that source.
+pair. If every being is already assumed to reach one and the same source along
+a finite upstream path, that source witnesses every local join. Deriving
+local joining that way adds no reason for its universal reach.
