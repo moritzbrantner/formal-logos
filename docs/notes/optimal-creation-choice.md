@@ -1813,3 +1813,248 @@ thin versus recipient-directed scope at author level. No new
 pinned source claim. Independent semantic challenge and
 canonical CLI/CI remain required; no verified premise delta
 claimed.
+
+## Effect superiority, practical excellence and intrinsic source perfection (#1955; 2026-11-24)
+
+**Preliminary research checkpoint, not independently reviewed.** Continuation of
+[#1953](https://github.com/moritzbrantner/formal-logos/issues/1953) and #1737.
+Baseline: `61acfd5629cab58221fe148b034340c7af9278ff`. No new statement,
+source claim, definition, sense, Lean theorem, argument or result is registered.
+The existing optimal-output and selected-effect results remain unchanged.
+
+### 23. Fix the comparison before asking about superiority
+
+An effect can be a more valuable created product without its production being
+a better exercise of the producer's power. Conversely, flawless execution of
+a specification is compatible with a morally defective choice of specification.
+Distinguish four comparisons:
+
+- **E:** objective value of the resulting created order, holding the relevant
+  value criterion fixed. Comparing isolated products does not establish a
+  comparison of complete orders.
+- **F:** fidelity/excellence of execution relative to an independently
+  intelligible and adopted end, including appropriate means. No inference from
+  output matching alone to adoption or practical direction.
+- **A:** all-things-considered quality of the complete decision, including
+  selection of its end, obligations, opportunity costs and permissible
+  omission. This is not identical to F.
+- **P:** intrinsic perfection of the producer, including relevant power,
+  knowledge and intrinsic goodness. A further possible evaluation **R** of the
+  producer includes relational or historical excellences (which actual
+  decisions the producer makes). Do not identify P and R without argument.
+
+Use the same source, relevant background and feasible decision comparison
+throughout. A comparison between distinct sources, or a claim that another
+possible source would make a better choice, needs an additional bridge into
+the chosen scope. No actual alternative world is established by the comparisons.
+
+The earlier materialization of `AQUINAS-ST-I-Q25-A6-EN`, recorded above,
+already motivates the difference between a better thing and better making;
+reply 3 compares the present order considered as a whole with another order,
+not just an isolated improvement. The complete reply 1 distinguishes the
+wisdom/goodness of the maker from the manner of the thing made. In the
+public [ST I q25 a2 ad 2 and a6 ad 1–3](https://www.newadvent.org/summa/1025.htm)
+reading inspected for this checkpoint, a2 ad 2 also distinguishes power
+whose effect is its end from the divine power's relation to its effect.
+This is source orientation, not a newly bound claim; the prior pinned reading
+remains the authority for the corpus. The stronger contemporary objection
+is the action-to-agent surpassability step discussed in
+[SEP, Divine Freedom, section 2.2](https://plato.stanford.edu/entries/divine-freedom/#FreeGood):
+even permission to choose a less valuable creation need not establish the
+possibility of unsurpassable agency. The encyclopedia discussion was inspected;
+Rowe's full book and Adams's original paper were not materialized or read for
+this checkpoint. Do not attribute the following analyst model to them.
+
+### 24. Exact reflection obstruction
+
+For a nonempty comparison domain S, let E, A and P be ordinal maps into
+strictly ordered codomains (only their strict comparisons are used).
+Write E(i)>E(j) for a strict improvement of the represented outcome from j
+to i, and analogously for A and P. Consider the following four hypotheses:
+
+1. Some E comparison is strict.
+2. For every i,j, E(i)>E(j) implies A(i)>A(j).
+3. For every i,j, A(i)>A(j) implies P(i)>P(j).
+4. P is invariant across S.
+
+These are jointly inconsistent: instantiate 2 and 3 at the witness of 1;
+the resulting strict P comparison contradicts 4. In particular, under 4
+and 3, no strict A comparison is possible, even if there is strict E
+variation. Under 4 and 2, strict E variation forces a failure of 3 at
+some pair. Under 4 and 3, strict E variation forces a failure of 2.
+Neither of the reflection rules is a consequence of the definitions.
+If A is replaced by F, step 2 is an even more restrictive assumption.
+If P is replaced by R, invariance needs fresh warrant.
+
+The following matched controls use three labeled comparison situations.
+The tuple entries are grades, not quantities of being or moral utility.
+Each control negates precisely the indicated hypothesis of the four and
+retains the other three:
+
+| Omitted hypothesis | E | A | P |
+| --- | --- | --- | --- |
+| 1: strict effect variation | (0,0,0) | (0,0,0) | (0,0,0) |
+| 2: effect-to-act reflection | (0,0,1) | (0,0,0) | (0,0,0) |
+| 3: act-to-intrinsic-source reflection | (0,0,1) | (0,0,1) | (0,0,0) |
+| 4: invariant intrinsic perfection | (0,0,1) | (0,0,1) | (0,0,1) |
+
+The last control is not a model of a simple immutable being. The third
+control can rank an external decision outcome without ranking its producer's
+intrinsic state; it does not establish that its varying decisions are
+compatible with divine simplicity. The second stipulates equal A, not
+merely equal execution quality F, and therefore does not settle whether a
+lower-valued complete decision actually has equal merit.
+
+Reproduced exhaustive diagnostic (JavaScript; 27 ordinal maps per axis,
+19,683 triples). This is a nonmodal finite test of the four claims, not a
+count of admissible worlds, a probability, or evidence of metaphysical truth.
+
+```js
+const maps = [];
+for (let a=0;a<3;a++)
+  for (let b=0;b<3;b++)
+    for (let c=0;c<3;c++) maps.push([a,b,c]);
+const pairs = Array.from({length:9},(_,k)=>[Math.floor(k/3),k%3]);
+const gt = (f,i,j)=>f[i]>f[j];
+let total=0, full=0, deletions=[0,0,0,0];
+let invariantAndVariable=0, invariantAndVariableAndEA=0;
+for (const e of maps) for (const a of maps) for (const p of maps) {
+  const flags = [
+    pairs.some(([i,j])=>gt(e,i,j)),
+    pairs.every(([i,j])=>!gt(e,i,j)||gt(a,i,j)),
+    pairs.every(([i,j])=>!gt(a,i,j)||gt(p,i,j)),
+    p.every(v=>v===p[0])
+  ];
+  total++;
+  if (flags.every(Boolean)) full++;
+  for (let k=0;k<4;k++)
+    if (!flags[k]&&flags.every((x,i)=>i===k||x)) deletions[k]++;
+  if (flags[0]&&flags[3]) {
+    invariantAndVariable++;
+    if (flags[1]) invariantAndVariableAndEA++;
+  }
+}
+console.log({total,full,deletions,invariantAndVariable,
+  invariantAndVariableAndEA});
+```
+
+Observed: `total=19683`, `full=0`, `deletions=[27,216,288,312]`,
+`invariantAndVariable=1944`, `invariantAndVariableAndEA=288`.
+The universal proof is the two strict implications above, not induction
+from this enumeration. Under the appropriate strict-implication
+interpretation the same proof works on arbitrary comparison domains.
+This is a simple incompatibility diagnostic; do not register an open
+reflection premise or a transcription as an independently supported result.
+
+### 25. A positive nonexhaustion argument, and its limit
+
+Suppose a productive source has the power to actualize each of two
+specified ends. In each case the adopted end is fully and competently
+realized, but the realized ends differ in value or extent. For example,
+a capable maker can successfully execute either of two independently
+specified gifts. The smaller gift is not a failure to make the larger
+one if it was never part of the operative specification. Having the
+capacity to produce the greater gift is already a condition of its
+feasibility; the smaller effect therefore does not show a lack of that
+capacity. In an ordering solely by available productive capabilities,
+identical capability sets cannot be strictly ordered by inclusion.
+This establishes a limit of the proposed *inference from product
+to productive power*, not the equal moral quality of the decisions.
+
+A defect-of-execution test requires an intended or due end, a capacity
+to realize it and a shortfall relevant to its realization. Merely
+identifying another possible better product establishes none of these
+jointly. An intrinsic actuality need not gain a new perfection from
+communicating an already possessed good. These considerations supply
+positive warrant for rejecting a general E-to-F implication and for
+distinguishing F from P. They also fit the earlier expressive/acquisitive
+distinction in section 20. They do not entail rejection of E-to-A or
+A-to-R; an agent can exercise excellent technique for a wrong end, and
+the choice may itself exhibit deficient generosity, justice or rationality.
+
+The strongest maximization objection should grant this whole account of
+productive execution and attack the choice of specification:
+
+- If another complete feasible decision realizes a strictly greater
+  all-things-considered good with no relevant countervailing reason, and
+  a perfect chooser necessarily selects an undominated decision, then
+  the inferior decision is excluded. These are substantive premises.
+  Product superiority alone, a partial ordering, and a finite example
+  cannot establish them for the entire creative decision.
+- If all choices are strictly improvable in that complete decision
+  ordering, the same policy has no admissible choice. Reuse #689/#1953's
+  no-best and omission distinctions. This is not a proof that there is
+  no best possible world, or that a perfect chooser is impossible
+  independent of the policy premise.
+- If an agent has no unmet obligation to an actual beneficiary and does
+  not acquire an intrinsic good by producing the effect, some familiar
+  grounds for obligatory production are removed. A norm of impersonal
+  promotion or a norm of surpassability of the actual chooser may still
+  impose a stronger requirement. No-rights-violation is not a proof of
+  complete permissibility, equal A, or equal R.
+
+Conversely, if a defensible account of source perfection exhausts the
+relevant excellence in intrinsic actuality, and the creative exercise
+introduces no additional intrinsic completion, then a difference in
+external product cannot *by itself* introduce a difference in that
+excellence. The open metaphysical application is whether all the
+relevant goodness and excellence of choice really is intrinsic in
+that sense, and whether two distinct directed exercises can be actual
+without a difference of intrinsic actuality. Relationally individuated
+acts and the actual operative content must be defended, not stipulated
+away by assigning a constant P map. Ordinary productive agents are not
+witnesses of the strong simplicity claim.
+
+### 26. Symmetric assessment and root-facing consequences
+
+| Account or control | Execution | Complete decision / source burden |
+| --- | --- | --- |
+| Personal producer with optional expressive end | Can successfully realize distinct adopted ends | Warrant of permissible adoption, nondeviant guidance and sameness of intrinsic perfection is still needed |
+| Impersonal producer with nonnecessitating good-sensitive propensity | Can match the same product and policy ranks | Must warrant the same complete-decision constraints if claimed; extensional parity does not establish or defeat intentional explanation |
+| Producer with insufficient ability | Can fail a due or adopted specification | The failure may discriminate capability when alternatives and actual exercise are independently known; a less valuable result alone does not |
+| Producer knowingly executing a wrongful end flawlessly | High F is consistent with inferior A | A theory of perfection must address actual practical goodness, not identify it with technical success |
+
+The comparison is not an independent argument for the root's intellect
+or will. It can remove an overstrong maximization assumption from a
+*proposed* account of rational creation. It cannot alone give positive
+warrant for the actual same-source practical guidance. The existing
+#1941 route `b5b84276` / `963e9689` and target `66aecdd7` require
+their stated same-bearer bridges. The possibility of producing a
+greater external good is also not the converse of causal preexistence
+of perfections (`64498e7e`), existential transfer (`f8ba2429`) or
+actuality-goodness (`00e962ae`). Those principles compare different
+respects and relations; none currently supplies E-to-A or A-to-P.
+Retain all existing existential and simplicity-route obligations.
+
+Provisional assessment: the distinction between a better product and
+better execution has positive ordinary-agency and conceptual warrant.
+The claim that a complete decision's value need not alter intrinsic
+source perfection is credible under an intrinsic/extrinsic distinction
+but remains conditional on its metaphysical application. The stronger
+all-things-considered maximization and moral-person-surpassability
+objections are standing. An impersonal producer can retain parity on
+the extensional criterion. The next discriminating question is whether
+the act's choice of end is itself positively excellent without
+maximizing total produced good, and how a genuine operative intention
+can belong to the same source without adding intrinsic completion.
+A proved dominance or an intrinsic-choice essentiality premise would
+weaken the permissive proposal; a defensible criterion of due versus
+freely communicable good and an independently warranted actual
+practical-content bridge would strengthen it.
+
+### 27. Review and publication boundary
+
+This draft checkpoint adds only the present section to the canonical
+note. The seven recurring semantic-defect checks were addressed at
+author level: finite ranking controls only; matched scope; source
+orientation and prior pin distinguished; exact quantified comparison
+above; fixed-map stipulation disclosed; no existing sense or ID
+overloaded; open status retained. Independent semantic challenge,
+repository CLI reuse/novelty/semantics preflight, canonical validation
+and computed frontier-diff were not available in this chat connector
+workflow. No premise or result record changed; intended premise
+change: none. No formal frontier claim is made. Before ready/merge,
+reconcile against main and active #1953/#1737 work, run the
+canonical gates, obtain independent review, and persist any reviewed
+assessment in the appropriate existing attempt. Do not close #1955
+or the broader research on the strength of the preliminary test.
