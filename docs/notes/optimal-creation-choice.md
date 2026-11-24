@@ -376,7 +376,7 @@ recorded in PR #1875. The assessment above remains a provisional judgment.
 
 Scope: #1737, #735/#750, #1875, #1887. Evidence baseline
 `8083301a037428574d0e46b1064d8f6d858da377`; related open work #1901,
-#1909, #1910 and #1904 is not assumed as merged. Fix the same actual source
+#1909, #1910 and #1904 is background to the original draft. Fix the same actual source
 n, the same actual complete creaturely order H (including its history and
 laws), and candidate alternatives H' and refraining. No assumption that all
 described alternatives are metaphysically possible. Here an explanation of
@@ -390,10 +390,10 @@ Ask of every source (personal or impersonal): (i) what explains the
 existence and actual productive exercise of the source, (ii) what explains
 its producing an order of this kind, and (iii) what explains its producing
 this complete order rather than each rival? These are not interchangeable.
-The third admits a partial contrast answer (some alternatives excluded), a
-productive answer for an individual outcome, or an exhaustive determining
-answer. Only the last demands that the total grounds exclude every admitted
-incompatible alternative. Distinguish a reason for the source's existence
+A productive account can explain the occurrence of a particular outcome. A
+partial contrastive explanation excludes some alternatives. An exhaustive
+determining explanation for the third question requires that the total grounds
+exclude every admitted incompatible alternative. Distinguish a reason for the source's existence
 from a reason for the occurrence of a volition, from the volition's
 intentional object, from a causal reason for the effect.
 
@@ -1723,7 +1723,10 @@ origin to all essential properties. In particular, the same ultimate
 giver alone cannot fix the identity of x: the two-oak result and
 comparison in #1912 explicitly exclude this shortcut. The candidate
 needs the actual individualized effect, not the common source as
-an identity key.
+an identity key. In another admitted alternative, the very same adopted
+content could be fulfilled by a different eligible product y. Intentionally
+producing actual x under that content does not supply prior selection of
+rigid x, or the strict efficacy for x used in #555.
 
 For #1459 the candidate reduces a *possible* application burden:
 willing this recipient's good need not require a separate
@@ -1755,17 +1758,17 @@ contrast and the actual obtaining of the volitional relation open.
 The new source evidence favors the two-relations interpretation
 as Aquinas's positive proposal; compare Grant–Spencer (2015),
 *Activity, Identity, and God*, pp.54–56, including n.103 (a primary
-end does not individuate finite acts) and n.104 (their qualified
-sense of divine doing otherwise). [Text](https://philarchive.org/archive/GRAAIA-4)
+end does not individuate finite acts) and n.104 (different effects under
+their positions 4 and 5 do not make God's literal act different). The latter
+leaves a challenge for a distinct practical exercise. [Text](https://philarchive.org/archive/GRAAIA-4)
 read in extraction; page images again inaccessible (HTTP 403).
 ST I–II q.18 a.6 co./ad 3 distinguishes the species of internal
 and external human acts, not numerical identity across worlds.
 Neither textual account proves restricted object essentiality.
-There is now positive warrant for a creator's independently
-specified practical content and a reason to distinguish de re
-coverage from antecedent singular individuation. This is a
-candidate weakening of the *application burden*, not a proof
-that the weaker package is instantiated.
+The exemplar account makes fulfillment conditions independently
+intelligible. Ordinary distributive agency gives a reason to distinguish
+intentional production under a role from antecedent singular selection.
+Applying this account to actual adoption by a simple creator remains open.
 
 Moderate confidence in the explanatory relevance of expressive
 rather than acquisitive ends and the ordinary distributive
@@ -1779,7 +1782,8 @@ genuine intentional subject. It is not answered by appealing to
 the independence of the intrinsic principle from its objects.
 If it is right and the actual adoption differs across worlds,
 one must revise strict intrinsic invariance or the contingent
-effect/efficacy package. If actual adoption can be a substantive
+effect/efficacy package with differing adoption. Variable individualized
+outputs under the very same efficacious role specification remain open. If actual adoption can be a substantive
 nonintrinsic exercise, the weaker concrete-existence PSR may be
 met, but the complete determining fact-level demand remains
 unsatisfied unless further reasons are supplied. Same test for
