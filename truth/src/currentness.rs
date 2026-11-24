@@ -259,9 +259,8 @@ pub fn format(report: &Value) -> String {
     let mut lines = vec![
         report["boundary"].as_str().unwrap_or_default().to_owned(),
         format!(
-            "Open premises reaching {}: {} — current {}, legacy_only {}, none {}",
+            "Assessment coverage for premises reaching {}: current {}, legacy_only {}, none {}",
             text(report, "root"),
-            summary["open_premises"],
             states["current"],
             states["legacy_only"],
             states["none"]

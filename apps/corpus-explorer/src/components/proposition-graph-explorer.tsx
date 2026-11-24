@@ -903,7 +903,7 @@ export function PropositionGraphExplorer({
         {state.view === "local" ? `Local neighborhood: ${state.hops} ${state.hops === 1 ? "hop" : "hops"} from ${view.anchor}. ` : ""}
         {state.view === "dispute" ? `Dispute around ${view.anchor}: ${view.nodes.some((node) => node.kind === "negation") ? "hypothetical ¬P is not a recorded proposition" : "recorded denial is a distinct corpus proposition, not a verified refutation"}; distance expresses opposition, not truth or evidential strength. ` : ""}
         {view.message ? `${view.message} ` : ""}
-        {view.statementCount} of {manifest.totals.statements} statements ({manifest.totals.statements - view.statementCount} outside view), {view.nodes.filter((node) => node.kind === "inference").length} inference applications, {view.nodes.filter((node) => node.kind === "statement" && !node.matched).length} dimmed/context statements, {view.frontierCount} open premises (frontier) in view
+        {view.statementCount} of {manifest.totals.statements} statements ({manifest.totals.statements - view.statementCount} outside view), {view.nodes.filter((node) => node.kind === "inference").length} inference applications, {view.nodes.filter((node) => node.kind === "statement" && !node.matched).length} dimmed/context statements
         {view.truncated ? `; ${view.truncated} further statements not shown (narrow with hops or filters)` : ""}.
       </p>
 
