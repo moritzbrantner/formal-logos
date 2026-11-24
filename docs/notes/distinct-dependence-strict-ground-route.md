@@ -482,8 +482,8 @@ description. [Four-bearer control](../../corpus/results/b251e442-4373-4ef8-984d-
 
 Assume the selected PLG theory is consistent and every distinct dependence
 step maps to a derivable strict ground under the supplied fact labels.
-Keep this theory and labelling fixed. Two additional things suffice. First, each such link
-must supply the distinct dependence step in the specified respect. Second,
+Keep this theory and labelling fixed. Two additional things suffice. First,
+every per se efficient-cause link must supply the distinct dependence step in the specified respect. Second,
 for each effect, there must be only finitely many labels among it and all
 its upstream bearers. The set can differ from effect to effect. The number
 of bearers sharing a label can be infinite. Strict ground on the finite set
