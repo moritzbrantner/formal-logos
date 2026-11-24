@@ -700,3 +700,48 @@ theorem tie : ¬ CauseOfQualityInAnotherIsMoreSuchReading soleFeed
 end ProductiveDegree
 
 ```
+
+### Can a receiving constitution itself make a bearer less in esse?
+
+Fix two actual bearers in one situation. Let `c` give esse to `x`. Grant the strongest source-specific interpretation: `c` is subsisting act, the act of `x` is received in its own essence, and **all positive intrinsic determinations counted by a grade-sensitive inventory are equally realized**. The inventory is fixed before identifying the giver. This grants considerably more than the represented essence/esse identity in `8176a284`. It isolates the hard case left by the constitutive comparison in [the prior investigation, §12](https://github.com/moritzbrantner/truth-core/blob/a0cd646f9f33cc12f0b8c3287397458c6c1269c0/docs/notes/esse-comparative-ascent/PRD-esse-comparative-ascent.md).
+
+**What makes a restriction privative in a given respect?** Consider two ideal stages in the same trial, identical except that one has an engaged internal transverse lock. A command specifies forward and transverse components. At the actual forward-only command both stages achieve exactly the requested displacement. A transverse command independently detects the real restriction. Its presence strictly shrinks the range of attainable displacements and makes the stage retain heading under every modeled transverse disturbance. There are three determinate answers on these same bearers: a tie in actual forward displacement, a loss in accessible displacement, and a gain in holding the selected heading. The latter two concern dispositions. The lock's structure explains all three. Renaming or subdividing its parts changes none of the responses. The model concerns mechanisms with passive capacities; breadth of attainable change would be a particularly poor measure of a subsistent act understood to have no passive potency.
+
+This supplies a test beyond counting restrictions. Specify what counts as success *in the respect at issue*, then identify what the constraint prevents under that specification. Here transverse exclusion deprives one stage of a reachable displacement even if nobody prefers lateral motion. The same exclusion is constitutive of keeping heading against disturbance. A real receiving essence can similarly specify the way a whole is actual. Its reality alone leaves open whether it deprives that whole of a perfection of being. The stages are a control for this inference, not an example of creatures receiving esse or of ties in every intrinsic disposition.
+
+**What the subsistence argument earns.** Ask of each whole what accounts for its present actuality *within its constitution*. On the granted interpretation, there is in `x` a receptive principle whose being actual requires act distinct from it. In `c` no constituent needs to receive a distinct act for this whole to be actual. This identifies the difference on each bearer without asking which one causes the other. It gives a positive reason to prefer a mode-sensitive reading **if the comparison concerns completeness of the act by which the whole itself is actual**: in one whole actuality is constitutive through and through, while in the other a constitutive principle has actuality only by receiving it. This concerns a presently actual recipient, and asserts no temporal phase of bare potency or act by which the source causes itself. For an intermediate giver whose own esse is received in the same manner as its recipient's, this reason for an advantage disappears. Causal direction still makes sense.
+
+One tempting argument would subtract the condition of reception from `x` while retaining everything positive, then call the result an improvement. If receptivity belongs to what `x` essentially is, this subtraction supplies no possible improved state of that very whole. Substituting the actual `c` preserves the two-bearer comparison but restores the original question about its standard. The rival counts the two bearers as tied because its measure is the positive actuality each actually realizes. Identifying the principle *in virtue of which* one realizes it changes none of those grades on the grant. Any strict order depending only on that profile must tie the bearers, whatever the number or labels of its entries. If mode itself makes a difference to the relevant grade, the governing question is **why completeness of actualization measures more being**, even when it changes no already admitted positive determination. Classifying “unreceived” as one further pure perfection settles that issue by stipulation.
+
+**Assessment.** Receiving esse alone gives insufficient warrant for strict superiority of its named giver (`cffad050`). On the subsistent-source reading, the constitutive argument gives qualified positive warrant to `8176a284` as a direct metaphysical premise: it compares the whole under the very act being explained. I would use it conditionally on that reading and suspend an unqualified strict judgment at equal content. Both accounts explain how the recipient can be completely actual in its kind. Only the constitutive account takes the difference in *how* to affect the degree of being of the whole. Reopen `fd2c8710` and the application of `9eaa3b6e` if a named bearer exhibits an independently identified actual perfection excluded by reception, or if another application of the same degree of esse can distinguish those whole-bearer modes with the grade-sensitive inventory held fixed. Consumers asking only whether an actual maximum can have a distinct incoming esse cause can use a separately warranted causal exclusion. Such a result supplies neither degree comparison nor perfection transfer. [Scoped argument](../../corpus/arguments/142d2d1d-b562-4b9f-b010-cbdcf4b14ff7.json) · [Source-first route audit](https://github.com/moritzbrantner/truth-core/blob/3d11caf5d29dd968e9cb31437b7e19481e44edd6/docs/notes/root-route-modal-load.md)
+
+The Lean fragment checks the two response ranges and the profile tie. It makes no assignment to the corpus's `MoreIn esse`.
+
+```lean
+namespace ReceptionCalibration
+abbrev Command := Bool × Bool
+def response (locked : Bool) (u : Command) : Command :=
+  (u.1, if locked then false else u.2)
+def reachable (locked : Bool) (v : Command) := ∃ u, response locked u = v
+def keepsHeading (locked : Bool) := ∀ u : Command, (response locked u).2 = false
+
+theorem actualTie : response true (true, false) = response false (true, false) := rfl
+theorem restrictedRange :
+    (∀ v, reachable true v → reachable false v) ∧
+    (reachable false (false, true) ∧ ¬ reachable true (false, true)) := by
+  refine ⟨?_, ⟨⟨(false, true), rfl⟩, ?_⟩⟩
+  · intro v _
+    exact ⟨v, rfl⟩
+  · rintro ⟨u, h⟩
+    exact Bool.noConfusion (congrArg Prod.snd h)
+theorem headingContrast : keepsHeading true ∧ ¬ keepsHeading false := by
+  exact ⟨fun _ => rfl, fun h => Bool.noConfusion (h (false, true))⟩
+
+theorem profileTie {Bearer Profile : Type} (positive : Bearer → Profile)
+    (above : Profile → Profile → Prop) (strict : ∀ p, ¬ above p p)
+    {c x : Bearer} (equalContent : positive c = positive x) :
+    ¬ above (positive c) (positive x) := by
+  rw [equalContent]
+  exact strict _
+end ReceptionCalibration
+```
