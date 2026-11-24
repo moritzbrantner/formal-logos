@@ -456,8 +456,8 @@ The existing rank interpretation of PLG then excludes strict self-grounding.
 Conversely any projected cycle would derive strict self-grounding in every
 theory that realized those steps. [Fixed-label theorem](../../corpus/results/5ebdfbff-f984-43d0-a7d7-ddc19286f39f.json)
 
-When each bearer supplies its own label on an inhabited domain, the generated
-theory derives **exactly** the reversed nonempty finite dependence paths as
+When distinct-step dependence is acyclic and each bearer in an inhabited
+domain supplies its own label, the generated theory derives **exactly** the reversed nonempty finite dependence paths as
 strict partial grounds. Thus a successful retrospective fit gives exactly
 the structural information already in distinct-step acyclicity. One can also
 apply acyclicity directly to P2: two opposite dependence steps form a cycle.
@@ -480,8 +480,9 @@ description. [Four-bearer control](../../corpus/results/b251e442-4373-4ef8-984d-
 
 ### When the labels can support the Second Way
 
-Keep the *same* PLG theory and the same fact labels across every per se
-efficient-cause link. Two additional things suffice. First, each such link
+Assume the selected PLG theory is consistent and every distinct dependence
+step maps to a derivable strict ground under the supplied fact labels.
+Keep this theory and labelling fixed. Two additional things suffice. First, each such link
 must supply the distinct dependence step in the specified respect. Second,
 for each effect, there must be only finitely many labels among it and all
 its upstream bearers. The set can differ from effect to effect. The number

@@ -252,8 +252,9 @@ strict-ground map also gives the Second Way's regress premise when each
 effect's ancestry has only finitely many distinct fact labels. A finite list
 of descriptions alone cannot support this argument. Combining two unrelated
 supply chains under shared descriptions can create a cycle even when each
-chain keeps different labels at its two ends. With identity labels a theory
-constructed from the edges reproduces their finite paths exactly. The
+chain keeps different labels at its two ends. For acyclic distinct-step
+dependence on an inhabited domain, identity labels give a theory constructed
+from the edges that reproduces their reversed nonempty finite paths exactly. The
 independent warrant for existential direction must come from what fixes
 those edges or what warrants the theory in advance. [Derivations and
 rival](distinct-dependence-strict-ground-route.md#what-does-a-consistent-representation-add)
