@@ -1,0 +1,13 @@
+{
+  "id": "a2fe9f51-9f09-48d6-94c7-46721fc49045",
+  "label": "No infinite per se efficient-cause series, via PER_SE_5 actual causes of being (inference)",
+  "input_statement_ids": [
+    "ea251340-c89e-4535-a00f-6323cd8403a5",
+    "e8664ab8-c12f-42e2-8b9f-f38fe14cb52a"
+  ],
+  "output_statement_id": "97f5850f-62bc-5e43-a0c1-dd1033d08fc9",
+  "rule": "Accessibility along a subrelation (Subrelation.accessible)",
+  "meaning": "Non-transcription conditional derivation on one q.3 a.4 profile p, one PER_SE_5 link AsCaused and one secunda via per se link CausesAsCaused. If there is no infinite chain of per se actual causes of being (ea251340, the weakest regress version that suffices) and every per se ordered efficient-cause link is a per se actual cause of being (the new OPEN framework premise e8664ab8), then no per se ordered series of efficient causes goes on to infinity (97f5850f). With esseRegressOfActualGroundingWFWeak and the existing strength relation ed411e36 (fd12ad3d to ea251340) it carries well-founded actual grounding to the secunda via's regress premise through esse causing. It names the exact missing inclusion. The new premise fails on the bound sense CAUSES_AS_CAUSED_3, which c2880fe0 (sourced to ST I q.46 a.2 ad 7) extends to per se mover links: with c2880fe0 it makes every per se mover a per se actual cause of the moved thing's esse, which ad 7's own per se examples (stone, stick and hand; this man's generation from this man, the elementary body and the sun) do not support and the hand-and-stick case falsifies (that the stick continues to be when the hand lets go is an analyst observation). It is defensible only under a not-yet-existing existential sense of CausesAsCaused; the sense split is the next test. This support option therefore currently rests on a premise with a kept counterexample. The closed controls secundaControls give, for each input, a Bool interpretation in which the other holds and the per se series has a two-cycle, and a nonvacuous interpretation.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,15 @@
+{
+  "id": "b6874247-efc5-471a-8853-ab2538e95ced",
+  "label": "No infinite actual esse-cause regress, via the weak esse-ground bridge (inference)",
+  "input_statement_ids": [
+    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+    "b17a8954-c86b-4127-b816-102b93ed3bdd",
+    "546975ef-0614-5c0a-8f49-fab2cd2a2533",
+    "2d9807a5-ebff-45fd-972f-e241f18713d4"
+  ],
+  "output_statement_id": "fd12ad3d-6729-4fa0-bb87-0121260df684",
+  "rule": "Transfer well-foundedness along a predecessor inclusion (wellFounded_of_predecessorInclusion)",
+  "meaning": "Non-transcription conditional derivation on one profile m, one reading world w and one q.3 a.4 profile p over the same carrier of beings. If grounding among actual concreta at w is well-founded (82cfaf26), a distinct cause of esse between actual concreta grounds it at w (the new weak bridge b17a8954), whatever is in act of esse exists at w (546975ef) and whatever has esse in re is concrete in the profile (2d9807a5), then there is no infinite regress of actual causes of being (fd12ad3d). Step: for an actual cause c of x both c and x are in act, so by the two calibrations both are actual concreta, and the weak bridge makes c ground x; every actual-cause predecessor is a grounding predecessor among actual concreta, so well-foundedness transfers. The weak bridge follows from cb1cdea9 (strength result from cb1cdea9), which concludes rather than assumes that the cause is an actual concretum and so carries a scope condition (a world-free, tenseless cause of being absent at w, row 14 of causal-dependence-support-investigation.md (e); #1626) that the weak bridge avoids. The read-only survey's claim that one further inclusion bridge suffices is corrected: the derivation also needs the two actuality calibrations, which none of the other inputs supplies. Through the existing strength relation ed411e36 (its argument 80f81d44) it also gives the per se regress ea251340. The closed controls weakEsseRegressControls drop each input in a Bool interpretation and give a nonvacuous one. ascentLimit (attached here) is a Nat interpretation in which actual grounding, the esse regress, well-founded priority, the four inclusions cb1cdea9, 98efaa9e, 86efed1a and d96105fb (ground into more in esse) and the genus principle d9fad785 (vacuously, since the grade has no maximum) hold while the quarta via's no-infinite-ascent premise fails, even among actual concreta; grounding, causing and priority there are the single edge 1 -> 0. Facts about the stated interpretations only. The conclusion inherits whatever warrant 82cfaf26 and the three bridges have; it is a support option alongside fd12ad3d's direct and per se options, not a defence of any input.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "a67e1174-7d78-4233-860b-d50619833816",
+  "label": "Actual esse cause between actual concreta grounds, from the esse-cause bridge (inference)",
+  "input_statement_ids": [
+    "cb1cdea9-eb6c-578c-8008-84e0d4107fd3"
+  ],
+  "output_statement_id": "b17a8954-c86b-4127-b816-102b93ed3bdd",
+  "rule": "Drop the concreteness and existence conclusions about the cause",
+  "meaning": "Strength step: if a distinct cause of the esse of an actual concretum is an actual concrete ground of it at w (cb1cdea9), then a distinct cause of esse between actual concreta grounds it at w (the weak bridge). Same Profile, world, CausesIn and esse. The weak version adds the hypothesis that the cause is an actual concretum and keeps only the grounding conclusion. Strictness is not separately certified.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
