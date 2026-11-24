@@ -349,10 +349,10 @@ simply because it denies an ultimate ground.
 ### A precise past-directed comparison
 
 Fix observation time t. Let H be a complete history, and O(t,H) its *currently
-accessible* evidence: present memories, fossils, apparent documents, instruments,
-isotopic patterns, and apparent records of earlier successful experiments. O is a
-projection of a history, not a complete description of the identity or causal origin of
-every presently appearing object.
+accessible* evidence: apparent recollections, fossil-like traces, apparent documents,
+instrument readings, isotopic patterns, and apparent records of earlier successful
+experiments. O records appearances and readings. Whether an appearance is factive
+remembering, or a fossil-like trace has a particular origin, is a further question.
 
 The selected rival grants two admissible histories, an old history and a young history,
 satisfying:
@@ -408,16 +408,18 @@ backward-looking version**.
 
 The strongest conditional pressure is therefore on the conjunction: **(a)** global
 fabricated pasts admitted at the selected evidence; **(b)** all warranted historical
-assertions must be factive in every such admitted history; **(c)** some positive
-historical assertion is warranted solely by that evidence. The conjunction is
-inconsistent. Clause (b) is a strong norm and (a) goes beyond mere foundationlessness. A
+assertions must be factive in every such admitted history; **(c)** the positive
+assertion that the disputed event e occurred is warranted solely by that identical
+evidence. The conjunction is inconsistent. A positive assertion about an event
+shared by the two histories does not face this particular objection. Clause (b) is a strong norm and (a) goes beyond mere foundationlessness. A
 Humean or naturalist may reject either, without withdrawing all scientific knowledge.
 
 **A probability correction.** Observational compatibility alone does not imply equal
-posterior credibility. A Bayesian comparison satisfies posterior odds = prior odds only
-*if* the likelihoods of that E under the two histories are equal and positive. If
-likelihoods differ, E can discriminate probabilistically despite being realizable under
-both. An after-the-fact young-world story adjusted to fit every recorded detail is not
+posterior credibility. With nonzero priors for both hypotheses, equal positive
+likelihoods leave their prior odds unchanged. In the stipulated deterministic
+comparison of two fixed complete histories, each predicts O with likelihood one.
+Broader history-generating hypotheses or a noisy observation model can assign
+different likelihoods to the same observation even when both allow it. An after-the-fact young-world story adjusted to fit every recorded detail is not
 automatically simple or probable. A count of possible worlds, or uniqueness of the empty
 set, supplies no probability measure.
 
