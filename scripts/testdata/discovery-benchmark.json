@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "title": "Deterministic discovery: explicit bundles and reviewed carrier tags",
+  "baseline_revision": "ad4ffa2e5fbd245434f3d4b468f42f2b3f9ffaf2",
+  "frozen_before_execution": "2026-11-24",
+  "purpose": "Separate premise selection, semantic identification, proof search and unsupported countermodel vocabulary on existing corpus statements. This is a fixed evaluation workload, not a proposition registry or a proof oracle.",
+  "discovery_options": {
+    "premise_pool": "all",
+    "candidates": 8,
+    "heartbeats": 10000,
+    "batch": 1,
+    "jobs": 1,
+    "zipperposition": null
+  },
+  "measurement": {
+    "unit": "one target and one supplied or ranked premise bundle",
+    "deterministic_observations": [
+      "requested and actual candidate statement IDs",
+      "coverage of the selected reference bundle",
+      "outer binders and their authored sense tags",
+      "name-only carrier identifications",
+      "proved, minimal-premise IDs, filters and certification verdict",
+      "known-route versus previously reported unregistered relationship"
+    ],
+    "informational_only": [
+      "wall-clock seconds on the shared runner",
+      "output bytes"
+    ],
+    "comparison": "Use the same source baseline, solver, budget and infrastructure. Separate unchanged-engine before/after curation from ranked-versus-explicit input selection. An explicit bundle bypasses ranking; its success is not an improvement in ranking accuracy. Record source/artifact identities and retain raw reports outside tracked source.",
+    "unavailable": "Missing toolchains or failed extraction are unavailable evidence, not unresolved logical goals or successful runs.",
+    "novelty_exclusions": "None of these cases can count as a genuinely new philosophical relationship: the positive reference routes are registered or previously recorded in an attempt. A kernel-checked candidate remains conditional on its open premises and changes no corpus record or frontier status. Do not pass the cited Solution theorem to discovery as a premise or hint.",
+    "budget_rationale": "10000 heartbeats (in the CLI's thousands unit) was chosen before execution to bound equal-budget comparisons on narrow known consequences, with an explicit hard-solver control. It was not tuned against outcomes. Historical attempts quoted below used their separately stated budgets."
+  },
+  "cases": [
+    {
+      "id": "maximality-carrier-curation",
+      "role": "tuning",
+      "family": "Fourth Way and divine attributes",
+      "command": "discover",
+      "target": "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
+      "premises": [
+        "18561596-1269-53ff-8505-c56e4348e335",
+        "fad8af3e-3e4e-582a-a592-0164bdd62527",
+        "86d02b69-87eb-5594-9958-ccaa5fe6b685"
+      ],
+      "provenance": {
+        "attempt_path": "corpus/attempts/discover-adaptive-repair-fourth-way-20261122.json",
+        "curation_attempt": "b979db99-5db2-424d-a94d-fb490110d02b",
+        "declarations": [
+          "TruthCore.Case.Catholicism.GodIsMaximalInBeing",
+          "TruthCore.Case.Catholicism.MaximumHasNoDistinctEsseCause",
+          "TruthCore.Causality.TermSenseForks.SomeBeingMaximalInBeing",
+          "TruthCore.Causality.GodMaximalCausal.GodCausesBeingOfAllOthers"
+        ],
+        "reading": "The candidate maximal witness has no distinct cause of its being. Any God causes every other being, so must be that witness. The three premises remain open; merely maximal, greatest-degree and strictly greatest are not identified."
+      },
+      "curation": [
+        {
+          "declaration": "TruthCore.Causality.TermSenseForks.SomeBeingMaximalInBeing",
+          "parameter": "Being",
+          "sense": "2b9cebcb-b016-42fe-ba5a-0d02088e812d"
+        },
+        {
+          "declaration": "TruthCore.Causality.TermSenseForks.SomeBeingMaximalInBeing",
+          "parameter": "Respect",
+          "sense": "284c82fe-9c27-45b9-88bc-70b78696d5af"
+        }
+      ],
+      "expected_distinctions": [
+        "The baseline attempt already reported this proof with a domain_by_name rejection. A fresh baseline run must verify its present behavior.",
+        "At the same exact bundle, the two tags should remove its Being/Respect name-only identification obligation without changing premise or conclusion bodies.",
+        "Measure ranked runs separately: adding the tags may affect ranking, and an exact-bundle success alone does not show a ranking gain.",
+        "A surviving certified result is previously discovered and newly admissible, not novel. The baseline registered argument graph does not reach the target from this bundle, even with excluded middle."
+      ],
+      "variants": [
+        "ranked-before-tags",
+        "ranked-after-tags",
+        "exact-before-tags",
+        "exact-after-tags"
+      ]
+    },
+    {
+      "id": "assertion-meaning-known",
+      "role": "held-out",
+      "family": "Assertion and cognitive meaning",
+      "command": "discover",
+      "target": "f7e3ad49-3140-4fdf-9a83-1156243cb701",
+      "premises": [
+        "b45ca9db-0bf2-40d3-819c-44dc4e2cef5c",
+        "42114721-87d8-44b7-8057-255c732fd7df"
+      ],
+      "provenance": {
+        "argument": "8a3dcfc2-f986-4356-bfca-138d664879ce",
+        "result": "bec15d81-9f10-4b58-a280-2da08ef0c7ac",
+        "theorem_reference_only": "TruthCore.Results.Logic.AssertionRetorsion.meaningFromAssertion",
+        "vocabulary_module": "TruthCore.Logic.AssertionRetorsion",
+        "reading": "An actual assertion witness plus the explicit local meaning requirement yields a meaningful content. Assertion alone does not supply the requirement."
+      },
+      "expected_distinctions": [
+        "All declarations share one module convention; no carrier tags or new bridges are required.",
+        "Source inspection predicts a selection gap: AssertionMade shares no project constants, definition or authored sense with SomeMeaningfulContent. Measure actual ranked eligibility and candidate coverage.",
+        "The exact two-premise bundle should prove the target and be filtered as known through argument 8a3dcfc2-f986-4356-bfca-138d664879ce, not emitted as a new discovery.",
+        "Freeze this case before executing or tuning the implementation; report any unexpected behavior without changing its meaning or expected boundary."
+      ],
+      "variants": [
+        "ranked",
+        "exact"
+      ]
+    },
+    {
+      "id": "assertion-without-meaning-bridge",
+      "role": "negative",
+      "family": "Assertion and cognitive meaning",
+      "command": "discover",
+      "target": "f7e3ad49-3140-4fdf-9a83-1156243cb701",
+      "premises": [
+        "b45ca9db-0bf2-40d3-819c-44dc4e2cef5c"
+      ],
+      "provenance": {
+        "omitted_statement": "42114721-87d8-44b7-8057-255c732fd7df",
+        "control_declaration": "TruthCore.Logic.AssertionRetorsion.SpeechMarkerWithoutMeaningControl",
+        "control_theorem_reference_only": "TruthCore.Results.Logic.AssertionRetorsion.controls",
+        "control_interpretation": "Agent and Content are Unit, Asserts is always True, Meaningful is always False. The assertion marker occurs and the conclusion is false. This is an omission model of the formal vocabulary, not evidence that a genuinely cognitive assertion can lack meaning."
+      },
+      "expected_distinctions": [
+        "The supplied bundle contains only the occurrence statement; no automatic premise or bridge may be appended.",
+        "This exact goal must not be accepted as proved. Unresolved proof search alone is not the non-entailment evidence; the existing checked omission control supplies that boundary.",
+        "Any proposed missing bridge remains an open candidate and does not enter a proof or corpus record."
+      ],
+      "variants": [
+        "exact"
+      ]
+    },
+    {
+      "id": "well-founded-causal-ascent",
+      "role": "open-solver",
+      "family": "Fourth Way causal ascent",
+      "command": "discover",
+      "target": "6c27657f-a2bf-5c1d-963c-c154b66bfa85",
+      "premises": [
+        "c11369aa-7c3d-5dea-8421-535d5b4b3104",
+        "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d",
+        "f29a6b53-475f-5a28-9224-8ca5d7484366",
+        "5cda1946-b22e-52dc-9524-a3611c63585c",
+        "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+      ],
+      "provenance": {
+        "argument": "1dff22d0-34f1-5244-bc7d-2b0c978db109",
+        "attempt_path": "corpus/attempts/discover-adaptive-repair-fourth-way-20261122.json",
+        "reading": "The existing proof uses well-founded causal ascent. The attempt reports that a retrieved and identified exact bundle did not close within 100000 heartbeats because Duper did not search the needed well-founded reasoning."
+      },
+      "expected_distinctions": [
+        "This is a recorded manual route under open premises, not an unproved logical implication.",
+        "An exact bundle removes candidate-selection uncertainty. Failure still means unresolved search, not a missing substantive premise, refutation or global non-entailment.",
+        "If it closes, classify it as known. No new induction lemma, theorem hint, sense bridge or stronger premise is supplied by this case."
+      ],
+      "variants": [
+        "ranked",
+        "exact"
+      ]
+    },
+    {
+      "id": "countermodel-function-boundary",
+      "role": "unsupported-vocabulary",
+      "family": "Assertion and represented existence",
+      "command": "countermodel",
+      "theorem": "TruthCore.Results.Logic.AssertionRetorsion.existenceFromOccurrence",
+      "module": "TruthCore.Results.Logic.AssertionRetorsion.Solution",
+      "omit": "hRepresents",
+      "size": 2,
+      "provenance": {
+        "result": "46c875b1-286f-4bfb-a1c9-cd66acbfc7f6",
+        "unsupported_binder": "represent : Episode -> Being",
+        "documentation": "docs/countermodels.md"
+      },
+      "expected_distinctions": [
+        "The finite countermodel extractor currently does not support function-valued vocabulary parameters. Report its actual unsupported/unavailable diagnostic separately from proof-search outcomes.",
+        "Unsupported extraction is neither an exhaustive model search nor evidence that the omitted representation premise is unnecessary."
+      ],
+      "variants": [
+        "boundary"
+      ]
+    },
+    {
+      "id": "countermodel-shared-frame-boundary",
+      "role": "unsupported-vocabulary",
+      "family": "Received esse and actual giving",
+      "command": "countermodel",
+      "theorem": "TruthCore.Results.Causality.ReceivedEsseActualGiver.actualGiverImpliesB2",
+      "module": "TruthCore.Results.Causality.ReceivedEsseActualGiver.Solution",
+      "omit": "hGiver",
+      "size": 2,
+      "provenance": {
+        "result": "d2d55c9b-9308-4b6b-b665-3380c4a99944",
+        "unsupported_binder": "F : CausalityFrame W B T R",
+        "documentation": "docs/countermodels.md"
+      },
+      "expected_distinctions": [
+        "The finite countermodel extractor currently does not support structure-bundled vocabulary, including this shared CausalityFrame. Preserve the unsupported/unavailable diagnostic.",
+        "Discovery's separate one-point witness probe is not a substitute for an exhaustive finite countermodel result and tests only its stated interpretation and binding."
+      ],
+      "variants": [
+        "boundary"
+      ]
+    }
+  ]
+}

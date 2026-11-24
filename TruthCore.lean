@@ -39,6 +39,7 @@ public import TruthCore.Imports.Results.Causality
 public import TruthCore.Imports.Results.Comparison
 public import TruthCore.Imports.Results.Comparison.Resurrection
 public import TruthCore.Imports.Results.Decision
+public import TruthCore.Imports.Results.Discover
 public import TruthCore.Imports.Results.Epistemology
 public import TruthCore.Imports.Results.Ethics
 public import TruthCore.Imports.Results.Explanation
