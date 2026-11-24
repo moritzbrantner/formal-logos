@@ -1031,9 +1031,10 @@ secondary's exercised power, even when the identity of the sender is known.
 ### From one giver to a necessary being and to personal origins
 
 The claim that just one principal gives this recipient its existence answers
-a question about the actual causal order. To infer that this same giver
-could never have failed to exist, we need grounds for excluding a primitive
-contingent first bearer. The necessary-being audit follows the inference from
+a question about the actual causal order. That giver may itself have a
+ground. Applying the same-root necessity argument to it requires identifying
+this individual with an actual ungrounded bearer in the selected relation,
+as well as giving grounds for excluding primitive contingent existence. The necessary-being audit follows the inference from
 one actual thinker and identifies exactly where the rival can agree about
 the giving yet disagree about the giver.
 [Stage-one assessment](modal-spine.md#how-far-the-case-for-a-necessary-being-reaches-2026-11-24)
@@ -1042,7 +1043,8 @@ the giving yet disagree about the giver.
 If the principal source is also understood to will its own possessed good,
 the minimal sense of self-love applies to that very source. Whether this
 is an inward act of affirmation or delight, and whether Love proceeds as
-someone personally distinct, are successively stronger claims. The psychological
+someone personally distinct, are further questions. Reading delight as
+affirmation needs an additional interpretation. The psychological
 analogy gives the latter question a definite object. A reason why a perfect
 inner expression or love must subsist in personal opposition to its origin
 would take the argument further.
