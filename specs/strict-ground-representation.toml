@@ -61,7 +61,7 @@ theorem = "labelCycle"
 premises = []
 conclusion = "Two disjoint dependence steps can project to an inconsistent pair of grounds"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
-sense_bridges = [{term = "DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND", from = "DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND_1", to = "DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND_2", statement_id = "Two disjoint dependence steps can project to an inconsistent pair of grounds", role = "conclusion"}]
+sense_mixing_control = true
 rule = "Compute both projected steps and apply the supplied-label cycle criterion"
 meaning = "The four bearers have only two disjoint dependence edges. Their fixed labels preserve different endpoints on each dependence path while combining the edges into a two-cycle at the label level."
 
