@@ -3,6 +3,27 @@
 Date: 2026-11-13. Research baseline:
 `03d97b48a86d4b7d7bbedcb4441398ce3a9dadef`.
 
+## What two observations tell us about a source
+
+In a closed, unitarily evolving memory with pure states, a blinded, equal-prior
+single-copy comparison between adjacent states turns a reliable readout into
+a lower bound on the change in the memory. At 75% success the required
+integral of energy standard deviation is at least πℏ/6 per transition. A
+clock displaying the answer can give a perfect score with the memory fixed.
+Even a bound established for one device's successive records would need to
+cover the fact labels across every upstream branch to support the finite-label
+argument. [Physical test and controls](../supertasks.md#what-the-reader-gets)
+
+DDC described continued control of his body after hemispheric disconnection.
+His performance differed between immediate visual comparisons and a delayed
+task in which a cue could guide reporting across visual fields. Those findings
+support a distinction between types of access. The delayed answer can be
+scored identically whether one owner retained the item or information passed
+between owners. A personal-source argument still needs to explain why this
+experiencer's existence depends on a distinct thinking subject. The organized
+living individual is a rival candidate for the bearer across both tasks.
+[Case, competing explanations and existential ancestry](mind-physicalism-fork-419.md#does-divided-access-identify-the-source-of-the-experiencer-2026-11-25)
+
 ## Current comparisons of causal, Cartesian and cosmological explanations
 
 The proposed conclusions on branch `research/comparing-explanatory-representations`
