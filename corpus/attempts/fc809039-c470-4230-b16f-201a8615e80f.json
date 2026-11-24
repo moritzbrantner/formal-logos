@@ -37,9 +37,9 @@
     "next_test": "Identify on independent grounds whether the maintained determination in this patient, including at onset, is a proper terminus of the named giver's efficient influence. For strict application also identify the direction of dependence in the exercise of the secondary power.",
     "note": "docs/notes/actuality-esse-research.md#11-does-the-giver-act-through-the-secondary-agent-in-this-effect",
     "supersedes": "The test in §10 which asked whether the giver acts through the secondary has been carried out. Effect-side concurrence supplies a second route for local credit. No change to §10's producer-onset verdict, the general assessment of transfer, or the assessment of composition at esse.",
-    "reviewed_revision": "90cc298771f177e863102ab92b83d6a5ebb51343",
-    "review": "changes_requested",
-    "publication": "unpublished",
-    "evidence": "Independent semantic challenge of the §11 synthesis at this revision requested a more precise distinction between common production at the patient and dependence of the fire as agent."
+    "reviewed_revision": "dd8a190aa9e1482040a5225a68e794e1d244528e",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "Independent semantic challenge of 90cc298771f177e863102ab92b83d6a5ebb51343 and targeted acceptance of dd8a190aa9e1482040a5225a68e794e1d244528e. The corrected §11 distinguishes joint production in the patient from dependence of the fire as agent. The challenge covered both ontologies, source locators, warrant, two exact theorem types and their scope for the existing targets."
   }
 }
