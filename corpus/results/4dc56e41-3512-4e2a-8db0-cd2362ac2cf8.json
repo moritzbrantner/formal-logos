@@ -1,0 +1,11 @@
+{
+  "id": "4dc56e41-3512-4e2a-8db0-cd2362ac2cf8",
+  "label": "Exhaust the divine personal candidates by classifications of origin",
+  "argument_id": "ed207290-786b-4331-96b5-7cbae5987d5e",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.ImmanentOrigins.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.ImmanentOrigins.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.ImmanentOrigins.exhaustPersons",
+  "comparator_config": "results/4dc56e41-3512-4e2a-8db0-cd2362ac2cf8/comparator.json",
+  "status": "solution-present",
+  "description": "The root, generated Word and spirated Love supply representatives of all three classes. The explicit uniqueness principles exclude another recipient, including an iterated personal procession of an existing kind."
+}
