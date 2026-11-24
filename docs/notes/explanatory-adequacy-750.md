@@ -933,3 +933,271 @@ The next test is the strongest role/occupant restriction, including
 necessary occupancy, self-application and the effect of granting perfect
 epistemic reliability. This is a proposed continuation, not an independent
 semantic review of its own claims.
+
+
+### Checkpoint 2: necessary occupancy, exemption and epistemic selection
+
+A restricted-foundation rival can make the **role** necessary without
+making this occupant necessary. Reuse `RestrictionBoundary` in
+`specs/contained-selection.toml`: invariant necessary truth-vector
+conditions cannot determine a represented genuinely contingent fact.
+Here the additional issue is which kind of knowledge of the occupant
+is compatible with essential dependence. The following finite
+structural surrogate makes the commitments explicit.
+
+| World (both accessible from actuality) | Actual contingent bearers in that world | Local existence-reason and cause assignment | Inquirer |
+| --- | --- | --- | --- |
+| w0 (actual) | B0, D0 | B0 gives D0; B0 has no reason or cause | D0 |
+| w1 | B1, D1 | B1 gives D1; B1 has no reason or cause | D1 |
+
+The signatures of the four bearers are fixed, including their
+distinct identities. The invariant constraints at both worlds are:
+exactly one B occupies the foundational role; exactly one D exists;
+each D_i exists iff its own B_i exists; the existing B_i supplies
+the local reason and distinct cause of D_i. No other contingent
+being exists in either world. Treat these as stipulated necessary
+constraints in the two-world interpretation, not as an actual
+metaphysical ontology. The assignments stipulate candidate reasons,
+not independent evidence of their causal adequacy. The abstraction
+does not encode temporal events, complete physical laws or actual
+psychological reliability.
+
+The generic role is occupied in both worlds; a complete necessary
+restriction may guarantee that much. B0's actual existence remains
+undetermined by that restriction, even though the selected B0 is
+indispensable for D0. Strengthening the restriction to require B0 in
+every accessible world removes B0's contingency. Strengthening it
+only to require B0 whenever the role is filled either has that same
+effect (if occupancy is necessary), or permits a vacancy witness.
+A rule identifying a unique permitted occupant conditional on a
+contingent condition merely moves attention to that condition; if it
+is itself actually adequately explained, this can be a real
+explanatory advance. Necessary role restrictions can provide partial,
+structural or conditional explanations; the existing necessary-basis
+result rules out determination, not every kind of nonnecessitating
+explanation by a necessary ground.
+
+#### Self-application without equivocation
+
+Evaluate an exemption rule R: foundational contingent bearers are
+exempt from an otherwise general demand for existential reasons.
+
+- If R is necessary, a contingent-being PSR does not demand an
+  existential reason for the rule's truth. R can receive direct or
+  conceptual warrant. No regress follows just because R is primitive.
+- If R is contingent, its truth is a further contingent **fact**.
+  A fact-level PSR would address that fact; the exact target
+  `608a262d` does not quantify over facts as such. If R is embodied
+  in a contingent bearer, the being-level rule applies to that bearer
+  only under the rule's stated domain conditions. Do not infer that a
+  law, proposition or relation is a new brute being.
+- A boundary specified as "whatever has no reason" is circular
+  *as a defense of the exemption*: it classifies actual exemptions
+  by the very lack of reason that needs defense. It is not a
+  contradictory definition. A positive foundational discriminator
+  (for example priority in a specified dependence order) avoids
+  that definitional circularity. Priority alone says where a
+  dependence chain stops, not whether its terminal being is
+  intelligible by nature, has a noncausal reason, or has no reason.
+- Evidence for R may arise from observations made by derivative
+  inquirers. Their ontic dependence on B does not by itself make
+  the inference to R epistemically circular. A problematic
+  self-application needs a specified failure of calibration,
+  discriminatory evidence or inferential warrant; invoking an
+  actual truth as data is not automatically borrowing it as an
+  ontic explanation of itself.
+
+This is the strongest coherent reply to the parity argument of #1872:
+reject uniformity across a relevant foundational/derivative
+distinction and give a positive criterion for that distinction.
+The next substantive demand is not independent proof of every
+primitive. It is whether the actual feature that differentiates the
+two classes supplies reason for *waiving* the existence question,
+rather than simply identifying the case left unanswered. If the
+rival already demands an ontic reason for another target sharing
+its own claimed relevant feature, the existing parity result
+`6e7f5afd` applies under its precise uniformity and shared-feature
+premises. A newly invented feature is not automatically relevant,
+but a genuine discriminator is not excluded by logic.
+
+#### Epistemic result and its exact boundary
+
+Keep cognitive rules invariant. Give D_i a reliable identity
+observation returning its own index i and a decoder that reports
+B_i as its foundation. The decoder is correct at both worlds.
+D_i's existence can have an adequate local reason on the rival's
+own interpretation. This structural surrogate simultaneously
+preserves necessary role occupancy, one brute contingent input per
+world, local reason coverage of every derivative, and uniformly
+correct identification of the role occupant by the resident
+observer. At w0 the answer to "which base exists?" can be known
+without an ontic reason why B0 exists. Thus no universal loss of
+cognitive reliability follows merely from the stipulated lack of a
+foundation reason. It is a control on an inference, not a proof
+that the entire rival metaphysics is possible.
+
+Now remove only the index from the *specified observation*,
+leaving the common signal "a foundation is present." No
+role-only decoder of that observation has the correct occupant
+identity at both worlds. This is the existing observation-fiber
+principle (see #1933's `InitialHistoryAuthenticity`), applied to
+role identity rather than a new history theorem. Its consequence
+is limited: no uniformly exact decoder of this one observation.
+It neither falsifies actual-world reliability nor removes other
+warrant, and it compares observations of different resident
+inquirers. A stronger claim about the same inquirer would require
+a common observer witness compatible with the essential-dependence
+premises.
+
+There is also an important positive screening control. Conditioning
+on *the actual inquirer D0 exists* removes w1, because the actual
+inquirer's own essential dependence requires B0. Correctly knowing
+that one is D0 and knowing that dependency can therefore identify
+the foundational occupant. Generic observer existence, present in
+both worlds, does not do the same work. This is not unrestricted
+anthropic reasoning: identity and the essential dependence are
+explicit, and the conditioning does not provide an ontic reason
+for either D0 or B0. Essential dependence can reduce epistemic
+underdetermination even while the actual existential question
+remains unanswered.
+
+For a probability-based inquiry, give the two accessible worlds
+positive prior weights p and 1-p. The role-only observation has
+likelihood 1 in each world; its posterior for w0 is p. A stipulated
+actual-identity observation D0, with likelihood 1 at w0 and 0 at
+w1, makes the posterior 1 when p is positive. The role-only signal
+therefore supplies no update to the occupant odds; any claimed
+calibrated probability needs some other warranted distribution
+or information. No principle here asserts that metaphysical
+alternatives have an objective probability, a natural uniform
+prior, or an actual frequency of foundational draws. There is no
+universal defeater for inquiry. An additional epistemic cost is
+conditional on an actual inquiry needing to distinguish admitted
+possibilities whose relevant evidence does not distinguish them,
+and on the absence of other relevant warrant.
+
+The exact finite assignments and rational arithmetic were checked
+with the following standalone Python diagnostic (not a Lean
+certificate or a repository corpus check):
+
+```python
+from fractions import Fraction
+worlds = {0: {"B0", "D0"}, 1: {"B1", "D1"}}
+reasons = {0: {("B0", "D0")}, 1: {("B1", "D1")}}
+bases, derivatives = {"B0", "B1"}, {"D0", "D1"}
+for w, entities in worlds.items():
+    assert len(entities & bases) == len(entities & derivatives) == 1
+    for i in range(2):
+        b, d = f"B{i}", f"D{i}"
+        assert (b in entities) == (d in entities)
+        if d in entities:
+            assert (b, d) in reasons[w]
+        if b in entities:
+            assert all(t != b for _, t in reasons[w])
+    assert all(s in entities and t in entities for s, t in reasons[w])
+    assert all(any(x not in other for other in worlds.values())
+               for x in entities)
+    assert next(iter(entities & derivatives)).replace("D", "B") == next(
+        iter(entities & bases)
+    )
+assert all(not all(guess in e for e in worlds.values()) for guess in bases)
+assert [w for w, e in worlds.items() if "D0" in e] == [0]
+for p in [Fraction(1, 10), Fraction(1, 2), Fraction(9, 10)]:
+    prior = {0: p, 1: 1-p}
+    assert prior[0] / sum(prior.values()) == p
+    assert prior[0] / sum(prior[w] for w, e in worlds.items() if "D0" in e) == 1
+```
+
+The diagnostic checks the stated assignment and decoder at the
+two worlds and three sample positive priors; the general
+probability identity above follows by the displayed algebra. The
+reason pairs are also the stipulated cause pairs in this
+surrogate; they are not a new mechanistic causality certificate.
+No semantic challenge or formal certification is implied.
+
+### Checkpoint 3: matched comparison with nonnecessitating explanation
+
+The following is a proposed discriminating comparison, not an
+assertion that a rational or impersonal necessary source has
+already been shown to exist.
+
+| Account | Actual recipient existence | Why this source exists | Why this particular exercise/outcome obtains | Remaining issue |
+| --- | --- | --- | --- | --- |
+| Restricted brute contingent B | Granted adequate local production | No adequate reason for B by stipulation | Laws plus B may determine all derivatives | Inclusive actual existence remains unanswered |
+| Necessary impersonal direct producer | If actual adequate production is supplied | Requires warranted intrinsic intelligibility, not a necessity label | Actual nonnecessitating production may be a legitimate stopping point; full contrastive determination not granted | Actual productive relevance and adequacy |
+| Necessary rational direct producer | Same actual production standard | Same source-intelligibility standard | If actually operative, intelligible reasons for this production can explain it without determining a unique permitted outcome | Same-source practical-content bridge and adequacy |
+
+The difference between the first and the other two is not
+that one account has a contingent fact and the others have none.
+It is whether the actual contingent **being** has a genuinely
+explanatory source. The prior `ExerciseComparison` control already
+shows that deleting the reason for an act-fact can preserve
+being-level existence-token coverage. Do not read that as showing
+that a token is adequate. A contingent act may not itself be a
+being; if it is a being in the selected ontology, it must be
+included in the being-level comparison. A direct exercise need not
+be the effect of an earlier choosing event, but labelling it
+"direct", "free" or "rational" does not provide its positive
+explanatory warrant. A reason explaining actual selection need not
+uniquely determine it, whereas a reason that is just compatible
+with any output, or reconstructed after the output, need not
+explain the selection at all.
+
+**Proposed test of nonnecessitating explanatory relevance.**
+Use an independently specified practical content that supplies
+a positive reason for the actual outcome (e.g. a definite end and
+a feasible means that realizes it). Verify that the very
+exercising source apprehends that content, that the content is
+actually operative in this productive episode, and that the
+outcome nonaccidentally realizes it. Compare to the same source
+with the same available content and output, but independent
+production and merely retrospective recognition of the end.
+The availability, matching or retrospective recognition of
+content is not enough. This is a test of an actual explanatory
+relation, not a demand that the content necessitate the outcome.
+A blind impersonal producer can meet productive adequacy without
+meeting the purposive criterion; an impersonal teleological
+proposal may challenge the criterion's allegedly personal
+interpretation. Compare its positive mechanism at the same
+scope; do not rule it out by definition. This narrows application
+of the existing #1933 productiveCut/outputBypass and #1941
+rational-power exercise result; the strong-simplicity realization
+of an operative content remains OPEN.
+
+**Provisional synthesis (unreviewed; prior accepted judgment
+unchanged).** The strongest rival coherently contains local
+unexplained existences and may contain epistemic
+underdetermination. It cannot answer the inclusive actuality
+question while insisting that its included B has no adequate
+existential reason. The comparative advantage of a successful
+necessary-source account at this scope is substantive, not a
+count of reasons; its realization is still conditional.
+The prior moderate preference for E and suspension about D
+remain appropriate. No unconditional contradiction,
+epistemic self-undermining, unique personal source, PSR or B2
+has been demonstrated.
+
+**Next discriminating bridge:** assess a positively specified
+fundamentality criterion in the existing B2 rival
+`b36104ba`: is the criterion itself a genuine warrant for
+treating contingent existence as an eligible explanatory
+primitive, or does it only identify where production terminates?
+A concrete criterion of actual self-intelligibility might
+defeat the comparative objection or strengthen the move to E;
+its interpretation must then be connected to the #312 reason
+tokens without assuming BX1 or BX2. In parallel, the outstanding
+operative-practical-content question remains as stated in #1933.
+Reopen the epistemic objection only for an identified inquiry
+whose admitted alternatives, evidence equivalence and lack of
+other warrant are supplied.
+
+**Self-sweep:** no unrestricted recombination or arbitrary
+behavior assumed; no claim about same-observer alternative
+histories from a role-level control; fixed identities and
+populated worlds; role occupancy distinct from occupant;
+necessity distinct from adequacy; observed truth distinct from
+ontic reason; rules/facts distinct from concrete bearers;
+asymmetric explanatory demands rejected; no new source
+attribution, result, definition, or registered edge; no
+supersession of a reviewed judgment. Independent challenge
+and hosted validation remain pending.
