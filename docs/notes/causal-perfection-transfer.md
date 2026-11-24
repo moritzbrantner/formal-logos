@@ -3052,7 +3052,7 @@ flowchart TD
   N["91b085c4: unique actual necessary root"]
   G --> N
   X --> N
-  B["5bedb69b: broad operation or moved implies immanent-or-moved disjunction"]
+  B["5bedb69b: operation implies immanent operation or moved"]
   A["Act identity, agency and ground transport at g"]
   A -.-> E["Nonborrowed operative actuality"]
   E -.-> J["OPEN: positive immanent activity at g"]
@@ -3063,10 +3063,11 @@ flowchart TD
   S -.-> V["Particular pure determination at g"]
   G -.->|same actual g and independently supplied purity| V
   Y["64498e7e: universal preexistence in inclusive InAct"]
-  G -.->|only a restricted candidate with sense and scope adapters| Y
+  G -.-> Z["Candidate: pure preexistence at the selected root"]
+  Z -.->|unbuilt generalization and sense bridges| Y
 ```
 
-The arrow from infinite g to the universal `fe67d766` is schematic for arbitrary supplied g and universal hypotheses, not a proof from one instance. The top route is #1914 argument `bc17c420` (all three universal inputs `08178314`, `be1289df`, `122b112e`); `95c04a6d` derives the last from its five recorded premises. The alternative `7d8bbdcb` requires eleven recorded inputs. The direct limitation-to-incoming-ground argument needs `1304b462`, `4bc853db`, `cb1cdea9` and the retained receipt derivation where used. The life route uses `45030701`, `38aa1327` and `4be9a4ac` in `aa1c3134`; `ad49ea00` is required for LIVING_1 and the nine-scoped consumers have their own guards. This graph does not derive `5bedb69b` from the source case, nor a universal conclusion from a single life witness. `G`'s dotted arrow to `64498e7e` marks an unbuilt restricted replacement plan; its full all-causes/all-respects reading needs additional arguments. No new proof edge.
+The arrow from infinite g to the universal `fe67d766` is schematic for arbitrary supplied g and universal hypotheses, not a proof from one instance. The top route is #1914 argument `bc17c420` (all three universal inputs `08178314`, `be1289df`, `122b112e`); `95c04a6d` derives the last from its five recorded premises. The alternative `7d8bbdcb` requires eleven recorded inputs. The direct limitation-to-incoming-ground argument needs `1304b462`, `4bc853db`, `cb1cdea9` and the retained receipt derivation where used. The life route uses `45030701`, `38aa1327` and `4be9a4ac` in `aa1c3134`; `ad49ea00` is required for LIVING_1 and the nine-scoped consumers have their own guards. This graph does not derive `5bedb69b` from the source case, nor a universal conclusion from a single life witness. The dotted two-step path from `G` toward `64498e7e` marks an unbuilt restricted replacement plan; its full all-causes/all-respects reading needs additional arguments. No new proof edge.
 
 | Priority in this investigation | Premise or bridge | Reason |
 | --- | --- | --- |
