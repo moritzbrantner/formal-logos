@@ -126,7 +126,7 @@ theorem acc_exists_minimal {P : α → Prop}
 
 /-- Purely structural: accessibility pulls back along an edge-preserving map.
 Core Lean's `InvImage.accessible` and `Subrelation.accessible`, composed; the
-Mathlib-importing `Regress.Map.accessible` is the same fact for `Regress.Graph`s. -/
+Mathlib-importing `Regress.Graph.Map.accessible` is the same fact for `Regress.Graph`s. -/
 theorem acc_of_map {β : Sort v} {s : β → β → Prop} (f : α → β)
     (hf : ∀ y x, r y x → s (f y) (f x)) {x : α} (h : Acc s (f x)) : Acc r x :=
   Subrelation.accessible (fun {y x} h => hf y x h) (InvImage.accessible f h)
