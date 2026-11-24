@@ -3991,3 +3991,96 @@ that the underived witness has already been carried into the `GOD_4`
 conclusion as the same individual; that consumer and the physical-ontology
 bridge remain open. This does not revise the previously reviewed
 modal-spine assessment.
+
+## Can measured cognition compare the giver and recipient of esse?
+
+The earlier COMPREHEND_2 account already observes that comprehension compares
+two beings' acts. Only two of its open premises are needed. What is in act is
+knowable at least that far (`7921f9c8`), and an actual knowing cannot exceed
+the whole act of its knower in that state (`7db53cde`). If *s* comprehends
+*x* at degree *d*, then
+
+> act(*x*) ≤ knowability(*x*) ≤ *d* ≤ act(*s*).
+
+The middle comparison is witnessed by an actual knowing of *x*. Reciprocal
+comprehension gives both weak inequalities between whole acts. Absence of
+reciprocity does not give strict inequality. In the checked asymmetric
+interpretation the source comprehends the recipient, the recipient comprehends
+itself and never knows the source, and the two acts still tie.
+[Measure definitions](../../TruthCore/Causality/ComprehensionByMeasure.lean) ·
+[Derivation and controls](../../TruthCore/Results/Causality/ReflectiveComprehension/Solution.lean)
+
+**A route to the participant bound.** Fix the actual sole giver from
+`eeb89ffe`. If it actually comprehends each actual participant (`06410834`),
+the chain applies to the very same giver for each recipient. To infer
+`aba6f4e1`, the represented degree at *f.esse* must agree with measured whole
+act in this state, up to equivalence in the preorder (`2412c010`). This yields
+the bound used by `fa840507`. The recipient can be noncognitive. Causation
+selects the subject of the comparison. Comprehension supplies the inequality.
+No such coverage is needed to take the bound directly or to use its earlier
+pure-level or efficient-total-cause supports. The result leaves the
+all-respects adequacy claim `87f41688` open.
+
+There is a positive reason to examine the applicability premise. On the
+exemplar account, the same source understands its own form and can grasp a
+correct specification of its actual effect through that form. An intelligible
+plan can explain why an effect has a particular determination. The typed
+`UnderstandsActualEffects` conclusion, however, witnesses **one true content**
+for each actual effect. Knowing what makes an effect an instance of its
+kind can leave its individual history undetermined. Even an informative
+specification of that history would still require a reason that this knowing's
+*grade* reaches the individual's knowability. The two-bearer control makes
+every apprehended true content correspond to an actual measured knowing.
+Keeping that content and uptake fixed, the source may know the effect below
+comprehension even while its own act is **below** the effect's. This is a
+test of the inference, with no claim of actual ignorance in the giver.
+[Effect-directed cognition](causal-perfection-transfer.md#intentional-exemplars-and-possessed-good-response-2026-11-23-stacked-on-1866)
+
+**Strictness for one reflective pair.** Suppose a recipient actually knows
+itself at *a* and its own knowability is at most *a*. The preceding chain now
+begins and ends at act(*x*), so the recipient's act, its knowability and that
+witnessed grade agree up to preorder equivalence. An actual source that knows
+anything at *b* strictly above *a* therefore exceeds this recipient in whole
+act and, given the calibration, in represented esse. The higher knowing can
+be the source's own self-knowing. It need not exceed the knowability of its
+object, and the source need not survey all its perfections. The populated
+positive interpretation realizes all of these conditions with each successful
+knowing exactly at its object's knowability. More generally, any independently
+warranted ceiling on the recipient's **knowability** below the source's
+witnessed grade suffices for strictness, even when the recipient never knows
+anything. A ceiling on what the recipient has actually come to know by itself
+would leave its unrealized knowability open.
+
+Two controls distinguish the applicability claims. In the first, both bearers
+know themselves, the source's self-knowing has a strictly higher grade, and
+it even knows the effect at a lower grade. Their whole acts tie: the
+recipient's particular self-knowing falls short of its own knowability.
+In the positive interpretation self-comprehension closes precisely this gap.
+The claim compares two actual bearers. Passing from their represented esse
+to the primitive order by approach still needs its own bridge. It supplies
+no universal comparison of all limited with all unlimited bearers
+(`fd2c8710`). Reversing the finite-intellect result `231820b4` would
+import the very distinction in act under inquiry through its upstream
+nonmaximal-act premise `ea1c35a5`.
+
+**Provisional assessment.** The two degree principles give a reason to take
+intellectual attainment as evidence about whole act. A perfect act of
+understanding is something its subject actually realizes, and knowing a
+bearer as far as it is knowable gives a lower bound that mere successful
+identification lacks. The single scale and its identification with esse remain
+substantive commitments. Ordinary reflective access to one's present exercise
+supports actual self-knowing. It does not itself reveal that the exercise
+reaches the bearer's entire knowability. A recipient may understand why its
+present esse depends on the giver, just as the giver may understand its own
+underivedness. Both can answer that explanatory question correctly. Ranking
+one knowing above the other needs evidence about their mode and degree of
+attainment. No independent grade comparison for this actual pair has yet been
+identified. Complete exemplarity and recipient self-comprehension therefore
+remain explicit candidate premises. The formal comparisons strengthen the
+available conditional routes, while the actual weak and strict applications
+still depend on the distinct warrants just identified. Reopen the weak
+application with an argument that the same source understands a participant
+to its full knowability in the relevant state. Reopen the strict application
+with a recipient-side ceiling and a higher source performance justified without
+using their proposed esse ranks.
+[Reflective access to the ground of one's own esse](contingency-receptivity-c2.md#what-does-a-reflective-recipient-grasp-about-its-own-present-actuality)
