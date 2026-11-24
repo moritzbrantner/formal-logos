@@ -35,8 +35,8 @@
     "note": "docs/notes/causal-perfection-transfer.md#current-assessment-and-next-test",
     "reviewed_revision": "1d63f12806ed9984ea2ea8973295b1e6b1210d59",
     "review": "accepted_qualified",
-    "publication": "published",
-    "evidence": "PR-1916 initial independent challenge of 35c03763084282b3b33bacf6b4ab274957180cbc against main ba8a75398b009932a33f649ec7abcb2069a3e030, followed by acceptance at 1d63f12806ed9984ea2ea8973295b1e6b1210d59 after targeted repairs. Acceptance covers the documentation and research checkpoint, including the statement of the exact registered bundles and restricted structural evidence. The substantive whole-power applicability and generalization tests remain open.",
+    "publication": "merged",
+    "evidence": "PR-1916 merged at dcfa16aeae77c583ac78f87d3008421c0f1d84f5. Its initial independent challenge of 35c03763084282b3b33bacf6b4ab274957180cbc against main ba8a75398b009932a33f649ec7abcb2069a3e030, followed by acceptance at 1d63f12806ed9984ea2ea8973295b1e6b1210d59 after targeted repairs. Acceptance covers the documentation and research checkpoint, including the statement of the exact registered bundles and restricted structural evidence. The substantive whole-power applicability and generalization tests remain open.",
     "supersedes": "None of the earlier reviewed judgments. The historical R1–R3 findings and their life-first sequence remain evidence. The next_test field provides the current research priority for this scope."
   }
 }

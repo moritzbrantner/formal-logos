@@ -2715,6 +2715,18 @@ integration is **none**. Exact revision and review evidence are in #1894.
 
 ### Propositions for further investigation with Astra
 
+The 2026-11-24 research checkpoints are on `main` through `2be391d68`.
+Their reviewed documentation and finite comparisons leave the premise
+frontier unchanged. Start with the linked next test for the selected target.
+
+| Proposition | Next discriminating question | Merged checkpoint |
+| --- | --- | --- |
+| `d164b1ff`, with `c4fb87a6` | If an independently warranted pure mode of being is absent from the same OwnBeing source, is the absence a nature-based exclusion and does it contract that source's act of esse? | [Current perfection assessment](causal-perfection-transfer.md#current-assessment-and-next-test). [#1916](https://github.com/moritzbrantner/formal-logos/pull/1916), `dcfa16aea`. |
+| `00e962ae` | Does constitutive fulfillment through esse supply an intrinsic positive standard, or does the source-specific goodness argument require a further evaluative premise? | [Goodness next test](root-esse-goodness-prd.md#11-next-discriminating-research-question). [#1917](https://github.com/moritzbrantner/formal-logos/pull/1917), `233857c34`. [#1116](https://github.com/moritzbrantner/formal-logos/issues/1116) remains open for the substantive inquiry. |
+| `7067553d` | Can a real immanent operation or actual disposition be realized by a bearer that lacks esse at the same world on the same interpretation? | [Actuality next test](actuality-esse-research.md#8-integration-plan-and-next-discriminating-research). [#1918](https://github.com/moritzbrantner/formal-logos/pull/1918), `2be391d68`. [#497](https://github.com/moritzbrantner/formal-logos/issues/497) remains open. |
+
+For the cross-family existence case, use the foundational targets below.
+
 Start with **b19ffd92**, the existence of one concrete individual that is
 actual and exists at every accessible world. Fix the proposed bearer before
 asking whether it is the actual giving source or has any classical attribute.
