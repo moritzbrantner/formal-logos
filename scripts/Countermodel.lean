@@ -159,12 +159,15 @@ def predicateArgs (ctx : Ctx) (ty : Expr) : MetaM (Option (Array Json)) :=
       | none => return none
     return some args
 
-/-- Only a nondependent unary function between already declared carriers.
-Function-valued arguments/results, multiple arguments and dependent families
-remain outside the extracted fragment. -/
+/-- Only a nondependent unary function with an explicit input between already
+declared carriers. Function-valued arguments/results, multiple arguments and
+dependent families remain outside the extracted fragment. -/
 def unaryFunctionSorts (ctx : Ctx) (ty : Expr) : MetaM (Option (String × String)) :=
   forallTelescope ty fun xs body => do
     if xs.size != 1 then return none
+    -- Certificates render an explicit arrow; accepting implicit inputs would
+    -- lose the binder metadata needed by the original pretty-printed premises.
+    if (← xs[0]!.fvarId!.getBinderInfo) != .default then return none
     let some domain := carrierOf ctx (← inferType xs[0]!) | return none
     let some codomain := carrierOf ctx body | return none
     return some (domain, codomain)
