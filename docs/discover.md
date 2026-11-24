@@ -511,8 +511,14 @@ they have the same name in one Lean module or carry one whole-binder sense tag (
 sense id); a carrier is shared also when such an identification of a relation over
 it forces it; two parameters of one declaration mapped to one binder are an
 obligation. Single deletions are independent checks: when more than one
-succeeds the full bundle is kept and flagged, and a premise counts as needed only
-with a certified omission model. A bridge is reported as one sufficient bridge,
+succeeds the full bundle is kept and flagged. In particular, `vacdrop_i` checks
+each delete one premise from the original bundle. One certified deletion may
+reduce `inconsistent_core`; with several successes the classifier retains the
+full certified bundle and flags it as not minimized, because joint deletion
+was not tested. Literal-negation controls run on that retained or reduced
+bundle. Failed or uncertified deletion searches retain premises and do not
+prove necessity or minimality; a premise counts as needed only with a certified
+omission model. A bridge is reported as one sufficient bridge,
 not as the weakest one. When a candidate's conclusion uses binders that no premise
 mentions (pilot C05b, C11), its non-implication is immediate: the model names the
 missing link, it does not show substantive independence. The tests

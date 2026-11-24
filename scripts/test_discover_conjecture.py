@@ -29,6 +29,7 @@ def corpus(tags=None, arguments=(), relations=()):
     stmts = [
         statement("S-A", "M1.A"), statement("S-B", "M1.B"), statement("S-C", "M2.C"),
         statement("S-D", "M2.D"), statement("S-E", "M3.E"), statement("S-NOT-A", "M1.NotA"),
+        statement("S-NOT-B", "M1.NotB"),
     ]
     disamb = [{"senses": [{"label": label, "lean_parameters": [{"declaration": d, "parameter": p}]}]}
               for (d, p), label in (tags or {}).items()]
@@ -42,12 +43,13 @@ BINDERS = {
     "M1.A": {"module": "Mod1", "binders": [["B", True, False], ["P", False, False], ["Q", False, False]]},
     "M1.B": {"module": "Mod1", "binders": [["B", True, False], ["Q", False, False], ["S", False, False]]},
     "M1.NotA": {"module": "Mod1", "binders": [["B", True, False], ["P", False, False], ["Q", False, False]]},
+    "M1.NotB": {"module": "Mod1", "binders": [["B", True, False], ["Q", False, False], ["S", False, False]]},
     "M2.C": {"module": "Mod2", "binders": [["B", True, False], ["P", False, False], ["S", False, False]]},
     "M2.D": {"module": "Mod2", "binders": [["B", True, False], ["S", False, False], ["T", False, False]]},
     "M3.E": {"module": "Mod3", "binders": [["B", True, False], ["S", False, False], ["T", False, False]]},
 }
 
-FAMILIES = {"left": {"statements": ["S-A", "S-NOT-A"]}, "right": {"statements": ["S-B", "S-C", "S-D", "S-E"]}}
+FAMILIES = {"left": {"statements": ["S-A", "S-NOT-A"]}, "right": {"statements": ["S-B", "S-NOT-B", "S-C", "S-D", "S-E"]}}
 
 
 def config(*candidates):
@@ -86,6 +88,18 @@ CHAIN = {
     "conclusion": {"lean": "∀ x, P x → S x"},
     "witness": {"assign": {"B": "Unit", "P": "fun _ => True", "Q": "fun _ => True", "S": "fun _ => True"},
                 "instance": "∃ x, P x"},
+}
+
+
+CONTRADICTORY_PAIRS = {
+    "id": "K9", "binders": BINDS[:4],
+    "premise": [
+        CHAIN["premise"][0],
+        {"statement": "S-NOT-A", "args": {"B": "B", "P": "P", "Q": "Q"}},
+        CHAIN["premise"][1],
+        {"statement": "S-NOT-B", "args": {"B": "B", "Q": "Q", "S": "S"}},
+    ],
+    "conclusion": {"lean": "False"},
 }
 
 
@@ -205,6 +219,60 @@ class Acceptance(unittest.TestCase):
         self.assertEqual(r["outcome"], "incompatibility")
         self.assertEqual(r["inconsistent_core"], ["S-A", "S-NOT-A"])
         self.assertFalse(r["support"])
+
+    def test_two_contradictory_pairs_keep_the_certified_bundle_and_literal_filter(self):
+        # Every single deletion leaves the other contradictory pair. Their
+        # joint deletion has no proof, whether it leaves A/B or no premises.
+        for deletions in ((1, 3), (0, 1, 2, 3)):
+            with self.subTest(deletions=deletions):
+                proved = {"main", "vac", "litneg1_0", "litneg3_2"}
+                proved.update(f"{check}{i}" for check in ("drop", "vacdrop") for i in deletions)
+                r = run(config(CONTRADICTORY_PAIRS), corpus(), proved=proved)
+                self.assertEqual(r["inconsistent_core"], ["S-A", "S-NOT-A", "S-B", "S-NOT-B"])
+                self.assertEqual(r["outcome"], "rejected")
+                self.assertIn("literal_negation", r["filters"])
+                self.assertFalse(r["support"])
+                self.assertTrue(any("inconsistent core" in f and "not minimized" in f for f in r["flags"]))
+
+    def test_multiple_contradiction_deletions_without_literal_proof_stay_incompatibility(self):
+        proved = {"main", "vac", "vacdrop1", "vacdrop3"}
+        r = run(config(CONTRADICTORY_PAIRS), corpus(), proved=proved)
+        self.assertEqual(r["inconsistent_core"], ["S-A", "S-NOT-A", "S-B", "S-NOT-B"])
+        self.assertEqual(r["outcome"], "incompatibility")
+        self.assertNotIn("literal_negation", r["filters"])
+        self.assertFalse(r["support"])
+        self.assertTrue(any("inconsistent core" in f and "not minimized" in f for f in r["flags"]))
+
+    def test_single_certified_contradiction_deletion_still_reduces_core(self):
+        cand = dict(CONTRADICTORY_PAIRS, premise=CONTRADICTORY_PAIRS["premise"][:3])
+        r = run(config(cand), corpus(), proved={"main", "vac", "drop2", "vacdrop2", "litneg1_0"})
+        self.assertEqual(r["inconsistent_core"], ["S-A", "S-NOT-A"])
+        self.assertEqual(r["outcome"], "rejected")
+        self.assertIn("literal_negation", r["filters"])
+        self.assertFalse(r["support"])
+
+    def test_uncertified_contradiction_deletion_keeps_premise(self):
+        cand = dict(CONTRADICTORY_PAIRS, premise=CONTRADICTORY_PAIRS["premise"][:3])
+        cfg, crp = config(cand), corpus()
+        _, spans = dc.render(cfg, crp, BINDERS)
+        name = f"{NS}.K9_vacdrop2"
+        proved = {"main", "vac", "litneg1_0"}
+        outputs = {
+            "unresolved": lean_output(spans, proved),
+            "forbidden_axiom": lean_output(spans, proved).replace(
+                f"'{name}' depends on axioms: [sorryAx]",
+                f"'{name}' depends on axioms: [Lean.ofReduceBool]"),
+            "error": lean_output(spans, proved | {"vacdrop2"})
+                     + f"\nConjectures.lean:{spans[name]['lines'][0] + 1}:2: error: (deterministic) timeout",
+        }
+        for label, output in outputs.items():
+            with self.subTest(check=label):
+                status = dc.parse_lean(output, spans)
+                r = dc.classify(cfg, crp, BINDERS, status, spans)[0]
+                self.assertEqual(r["inconsistent_core"], ["S-A", "S-NOT-A", "S-B"])
+                self.assertEqual(r["outcome"], "rejected")
+                self.assertIn("literal_negation", r["filters"])
+                self.assertFalse(r["support"])
 
     def test_same_module_needs_the_same_parameter_name(self):
         # A.P (Mod1) and B.S (Mod1) on one binder: same module, different names
