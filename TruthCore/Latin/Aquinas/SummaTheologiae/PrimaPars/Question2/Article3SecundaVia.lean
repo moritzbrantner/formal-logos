@@ -147,6 +147,13 @@ def NoInfinitePerSeEfficientCauseSeriesReading {Being : Sort u}
     (CausesAsCaused : Being → Being → Prop) : Prop :=
   ∀ x, Acc CausesAsCaused x
 
+/-- The reading in the generic form of `TruthCore.Logic.RootDescent`: it is
+exactly well-foundedness of `CausesAsCaused`. A restatement, not a new premise. -/
+theorem noInfinitePerSeEfficientCauseSeriesReading_iff_wellFounded {Being : Sort u}
+    (CausesAsCaused : Being → Being → Prop) :
+    NoInfinitePerSeEfficientCauseSeriesReading CausesAsCaused ↔ WellFounded CausesAsCaused :=
+  TruthCore.Logic.RootDescent.wellFounded_iff_forall_acc.symm
+
 /-- It is necessary to posit some first efficient cause (*Ergo est necesse ponere
 aliquam causam efficientem primam*).
 

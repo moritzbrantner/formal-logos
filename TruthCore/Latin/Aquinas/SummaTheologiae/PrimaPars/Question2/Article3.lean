@@ -1,5 +1,7 @@
 module
 
+public import TruthCore.Logic.RootDescent
+
 /-!
 Source-derived readings from Thomas Aquinas, *Summa theologiae* I q.2 a.3 co.,
 the *prima via* (argument from motion).
@@ -211,6 +213,13 @@ Source: Thomas Aquinas, *Summa theologiae* I q.2 a.3 co.
 def NoInfinitePerSeMoverSeriesReading {Being : Sort u}
     (MovesAsMoved : Being → Being → Prop) : Prop :=
   ∀ x, Acc MovesAsMoved x
+
+/-- The reading in the generic form of `TruthCore.Logic.RootDescent`: it is
+exactly well-foundedness of `MovesAsMoved`. A restatement, not a new premise. -/
+theorem noInfinitePerSeMoverSeriesReading_iff_wellFounded {Being : Sort u}
+    (MovesAsMoved : Being → Being → Prop) :
+    NoInfinitePerSeMoverSeriesReading MovesAsMoved ↔ WellFounded MovesAsMoved :=
+  TruthCore.Logic.RootDescent.wellFounded_iff_forall_acc.symm
 
 /-- It is necessary to arrive at a first mover moved by none (*ergo necesse est
 devenire ad aliquod primum movens, quod a nullo movetur*).

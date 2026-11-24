@@ -51,6 +51,7 @@ open TruthCore.Causality.NecessaryRootFork
 open TruthCore.German.Kant.CosmologicalInference (Ontic NecessaryAt ContingentAt)
 open TruthCore.Logic (ExcludedMiddle)
 open TruthCore.Logic.CogitoConcrete (InhabitedConcreteAt)
+open TruthCore.Logic.RootDescent (acc_descend)
 
 variable {W B : Type}
 
@@ -89,20 +90,20 @@ theorem descendsFromNecessaryRoot (m : Profile W B) (w : W) (hWF : ActualGroundi
     (hDep : EveryContingentGroundedAt m w) (hEM : ExcludedMiddle) (x : B)
     (hx : ActualConcrete m w x) :
     ∃ r, ActualRoot m w r ∧ NecessaryAt m.ontic w r ∧ GroundAncestor m w r x := by
-  have walk : ∀ a : {x // ActualConcrete m w x},
-      ∃ r, ActualRoot m w r ∧ NecessaryAt m.ontic w r ∧ GroundAncestor m w r a.1 := by
-    intro a
-    induction a using hWF.induction with
-    | _ a ih =>
-      rcases hEM (∃ y, ActualConcreteGround m w y a.1) with ⟨y, hy⟩ | hnone
-      · obtain ⟨r, hr, hn, hanc⟩ := ih ⟨y, hy.1, hy.2.1⟩ hy.2.2
-        exact ⟨r, hr, hn, Relation.ReflTransGen.tail hanc hy⟩
-      · have hr : ActualRoot m w a.1 := ⟨a.2, fun y hy => hnone ⟨y, hy⟩⟩
-        rcases hEM (NecessaryAt m.ontic w a.1) with hn | hn
-        · exact ⟨a.1, hr, hn, Relation.ReflTransGen.refl⟩
-        · exact ((everyContingentGrounded_iff_noContingentRoot m w hEM).mp hDep
-            (contingentRootOfNonnecessary m w hEM ⟨a.1, hr, hn⟩)).elim
-  exact walk ⟨x, hx⟩
+  have step : ∀ y, ActualConcrete m w y ∧ GroundAncestor m w y x →
+      (ActualRoot m w y ∧ NecessaryAt m.ontic w y) ∨ ∃ z, ActualConcreteGround m w z y ∧
+        (ActualConcrete m w z ∧ GroundAncestor m w z x) := by
+    rintro y ⟨hy, hanc⟩
+    rcases hEM (∃ z, ActualConcreteGround m w z y) with ⟨z, hz⟩ | hnone
+    · exact Or.inr ⟨z, hz, ⟨hz.1, hz.2.1⟩, Relation.ReflTransGen.head hz hanc⟩
+    · have hr : ActualRoot m w y := ⟨hy, fun z hz => hnone ⟨z, hz⟩⟩
+      rcases hEM (NecessaryAt m.ontic w y) with hn | hn
+      · exact Or.inl ⟨hr, hn⟩
+      · exact ((everyContingentGrounded_iff_noContingentRoot m w hEM).mp hDep
+          (contingentRootOfNonnecessary m w hEM ⟨y, hr, hn⟩)).elim
+  obtain ⟨r, ⟨-, hanc⟩, hr, hn⟩ := acc_descend step
+    ((actualGroundingWF_iff_acc m w).mp hWF x hx) ⟨hx, Relation.ReflTransGen.refl⟩
+  exact ⟨r, hr, hn, hanc⟩
 
 /-- Step 3, with no excluded middle. -/
 theorem underivedOfNecessaryRoot (m : Profile W B) (w : W)
