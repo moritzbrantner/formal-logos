@@ -1,6 +1,7 @@
 module
 
 public import TruthCore.Causality.DependenceStrictGroundMapStrength
+public import Mathlib.Data.Set.Finite.Basic
 
 /-! A representation test for the distinct-dependence-to-strict-ground bridge.
 Fix the labels first. A PLG theory may then be selected to fit the data.
@@ -35,6 +36,17 @@ def IdentityRepresentation : Prop :=
   ∀ {B : Type} [Nonempty B] (D : B → B → Prop),
     DistinctDependenceAcyclic D ↔ Consistent (edgeTheory D id) ∧
       ∀ a b, StrictlyGrounds (edgeTheory D id) a b ↔ Relation.TransGen (DistinctEdge D) b a
+
+/-- Each per se efficient-cause link supplies the dependent's being in the
+selected respect, and its endpoints are distinct. -/
+def PerSeDependenceLinks {B : Type} (cause D : B → B → Prop) : Prop :=
+  ∀ y x, cause y x → DistinctEdge D x y
+
+/-- For each effect separately, only finitely many labels occur among that
+effect and all its per se ancestors. Bearers sharing a label can be infinite
+in number, and the finite sets may vary with the effect. -/
+def FiniteAncestralLabels {B Atom : Type} (cause : B → B → Prop) (label : B → Atom) : Prop :=
+  ∀ x, (label '' {y | Relation.ReflTransGen cause y x}).Finite
 
 namespace Control
 

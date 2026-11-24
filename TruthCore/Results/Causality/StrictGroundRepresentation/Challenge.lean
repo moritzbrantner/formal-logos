@@ -18,4 +18,15 @@ theorem nonmutualOfAcyclic {B : Type} (D : B → B → Prop)
     (acyclic : DistinctDependenceAcyclic D) : DistinctBeingsNotMutuallyDependent D := by
   sorry
 
+open TruthCore.Modern.Fine.PureLogicOfGround
+open TruthCore.Causality.DependenceStrictGroundMap
+open TruthCore.Latin.Aquinas.SummaTheologiae
+
+theorem foundedFromAncestralLabels {B Atom : Type} (cause D : B → B → Prop)
+    (label : B → Atom) (S : Set (Sequent Atom))
+    (consistent : Consistent S) (mapped : DependenceMapsToStrictExistenceGround D label S)
+    (links : PerSeDependenceLinks cause D) (finiteLabels : FiniteAncestralLabels cause label) :
+    NoInfinitePerSeEfficientCauseSeriesReading cause := by
+  sorry
+
 end TruthCore.Results.Causality.StrictGroundRepresentation
