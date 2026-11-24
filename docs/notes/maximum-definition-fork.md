@@ -696,7 +696,7 @@ def sameConcentration (_ : Bool) : Nat := 1
 theorem tie : ¬ CauseOfQualityInAnotherIsMoreSuchReading soleFeed
     (fun _ a b => sameConcentration b < sameConcentration a) := by
   intro h
-  exact (Nat.lt_irrefl 1) (h false true () (by decide) (by decide))
+  exact (Nat.lt_irrefl 1) (h false true () (by decide) ⟨rfl, rfl, by decide +revert⟩)
 end ProductiveDegree
 
 ```
