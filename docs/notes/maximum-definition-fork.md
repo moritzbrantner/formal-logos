@@ -745,3 +745,63 @@ theorem profileTie {Bearer Profile : Type} (positive : Bearer → Profile)
   exact strict _
 end ReceptionCalibration
 ```
+
+### One principal giver of participated existence
+
+Fix the respect as *esse*, the act by which the recipient exists. The proposed
+giver is one and the same bearer for every participant. A parent can be a cause
+of a child's coming to be, for example, while parent and child both depend on
+the same principal giver for their existence. Secondary causes can therefore
+be real without being additional independent sources of esse. Calling the giver
+sole in this respect leaves the production of a particular form or skill a
+separate question. The numerical identity asserted here belongs to the giver
+across all its recipients. Each participant's received act can be its own.
+
+| Proposition | What it contributes |
+| --- | --- |
+| For every participant there is a distinct, actual giver of its esse whose being is its own. Every giver meeting those conditions is the same bearer, `p`. | Supply (`de05072a`) and selection (`dcf4bcdd`) fix one source across recipients. With an actual instance of participation this identifies a giver who actually supplies someone. The existing selected-supply statement (`8b8bb6df`) alone leaves other sources eligible. Applying this argument to *every principal giver* requires that all principal givers meet the stated conditions. |
+| The giving by `p` accounts for the recipient's whole act of existing. | This is a claim about the scope of the giver's work. Merely counting givers cannot establish it. With whole-act supply granted, appealing to an independent supplement of esse would contradict the grant. A finite causal path from `p` (`c35b1a5c`) alone does not specify that scope. |
+| Each recipient's degree of esse is at most the giver's degree of esse. | When the giver is the efficient and total cause in this respect, applying represented-degree adequacy (`87f41688`) gives this upper bound on a common scale. Its direct warrant is strongest if participation consists in sharing an actuality possessed by the source. If possession is eminent, the comparison still needs a reason why the higher mode of possession covers the recipient's degree on that scale. Productive power alone does not supply that comparison. |
+| The giver has a strictly higher degree of esse than a particular recipient. | The upper bound permits equal degrees. If the recipient's capacity places its degree at or below a ceiling that the giver actually exceeds on the same scale, strict superiority follows. The comparison then concerns exactly what that recipient cannot receive. Extending it to every participant requires this limitation in every case. |
+
+The [source selection](../../corpus/arguments/1a4f8730-c6d9-4be8-9b4e-dcd5bd320433.json)
+yields one and the same giver of esse to a populated set of actual participants
+(`eeb89ffe`). The [degree argument](../../corpus/arguments/dcec5717-3794-4b13-b463-f238112bb2a9.json)
+uses the efficient-total giving premise (`50da2b49`) and degree adequacy to
+reach the positive bound (`aba6f4e1`). In the [two-bearer control](../../corpus/arguments/e27ee8c6-889c-4035-ab71-e31482ba2735.json),
+the giver has represented essence/esse identity and its recipient lacks it.
+Equal degrees satisfy adequacy. Assigning the recipient degree two and the
+giver degree one on the very same causal facts violates adequacy. These are
+formal tests of what the premises constrain.
+
+The corpus already offers a route to the one-giver premise. It identifies each
+qualifying cause as a bearer whose essence is its existence, supplies one such
+actual bearer, and uses the distinct thesis that at most one actual bearer
+can meet that description (`a576300f`). Extending the conclusion from
+participants to every being other than the giver also uses participation
+coverage (`11e24b50`). With this coverage and the positive degree bound,
+the same giver [witnesses the existing greatest-degree conclusion](../../corpus/arguments/fa840507-1db4-497d-a47a-260bbcd25dbc.json) (`27fb3450`),
+using the registered argument's classical case split on identity. Uniqueness
+identifies all qualifying givers with this bearer. Once this bearer's supply
+is fixed, the inequality itself uses its totality and adequacy. It would apply
+to any other giver independently meeting those same conditions.
+Sole giver and sole bearer of the greatest degree are different commitments:
+several bearers may share the highest degree while exactly one supplies the rest.
+The earlier tie test in this note (§(d), P2) shows how *additional* commitments
+can exclude that case. If every greatest bearer causes every other bearer
+in the same respect and mutual causation there is impossible, a tied recipient
+would cause its own giver in return. The disputed step in this alternative is
+the universal causal role assigned to each greatest bearer.
+
+I would use the upper bound conditionally for this one giver. It captures the
+reason that whatever a participant has *by participation in this source*
+cannot outrun what the source can communicate. Comparing this communicable
+actuality with the giver's **own degree of being** is the substantive adequacy
+premise. The existing argument for adequacy from unrestricted strict
+superiority (`c974d1f0`) would assume the very claim under examination if used
+to establish strict superiority here. The next test is whether the recipient's
+essence fixes a ceiling in *esse* which the same giver actually exceeds.
+A difference in dependence identifies the two roles and leaves that question open.
+
+[Existing source-supply and selection arguments](q44-inferential-dependency.md) ·
+[Existing degree and capacity arguments](causal-perfection-transfer.md#recipient-relative-limitation-and-source-scoped-ascent-2026-11-17)
