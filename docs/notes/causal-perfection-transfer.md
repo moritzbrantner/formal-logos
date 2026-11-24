@@ -2624,13 +2624,13 @@ NanoDa, truth CLI (including `related`, `brief`, `novelty`, `semantics`), bundle
 or offline attribution checks were run because a checkout/toolchain was
 unavailable. The original investigation expected no proof or frontier change.
 See the PRD's verification section for the independent challenge of the
-published draft and the pending repair re-check.
+published draft and the accepted repair.
 
 ## Research PRD: Intrinsic perfection of the ultimate existential source
 
 - **Project** `moritzbrantner/formal-logos`
 - **Date** 2026-11-24
-- **Status** Owner-authorized draft. Initial challenge requested changes. Targeted repair re-check pending.
+- **Status** Independently reviewed documentation and research checkpoint. The intrinsic whole-power question remains open.
 - **Primary targets** `64498e7e`, `fe67d766`, `d164b1ff`, `122b112e`
 - **Operation dependency** `5bedb69b` (operation from self or as moved)
 
@@ -2759,7 +2759,7 @@ Primary texts read in accessible web witnesses (not new pinned corpus evidence):
 
 The original investigation used read-only repository inspection, accessible primary texts, eight Python assignments and four selected restoration/omission controls, and a semantic self-sweep. The later continuations added the structural controls reproduced below.
 
-The initial independent semantic challenge examined PR #1916 at `35c03763084282b3b33bacf6b4ab274957180cbc` against `main` `ba8a75398b009932a33f649ec7abcb2069a3e030`. It reproduced the embedded controls and requested corrections to the conjunctive graph, operation exclusion, life purity and continuation scope. The repaired wording is pending targeted re-check. The coordinator ran `truth check` and computed no frontier change on the original checkpoint in a local no-commit merge with that main revision. This checkpoint edits only the note and attempts. Integrated-head CI evidence is pending.
+The initial independent semantic challenge examined PR #1916 at `35c03763084282b3b33bacf6b4ab274957180cbc` against `main` `ba8a75398b009932a33f649ec7abcb2069a3e030`. It reproduced the embedded operation and due-scope controls and requested corrections to the conjunctive graph, operation exclusion, life purity and continuation scope. The targeted re-review accepted the documentation and research checkpoint at `1d63f12806ed9984ea2ea8973295b1e6b1210d59` with the same conditional and structural boundaries. The coordinator ran `truth check` and computed no frontier change on the original checkpoint in a local no-commit merge with that main revision. This checkpoint edits only the note and attempts. Integrated-head CI evidence is pending.
 
 ### Reproduction of the operation structural diagnostic
 
@@ -2911,7 +2911,7 @@ Argument `8de2d2ee` combines `5bedb69b`, `6884dcfd`, `3317e074` and `4be9a4ac` t
 
 **Historical R3 follow-up.** The next test at this stage was whether a noncognitive act can be intrinsically perfective without being an acquired or maintained state. It compared independently specified positive operation and end with self-maintaining activity discussed in [life-restricted composition](life-restricted-composition-327.md). The continuation below records what that comparison delivered. The [current assessment](#current-assessment-and-next-test) gives the selected next test.
 
-**Self-challenge and boundaries.** The investigation rejected equivocation between broad exercise and immanent act, an operation-specific reading of the bearer-level disjunction, inferring act-grounding from co-truth or an effect-dependent description, inferring strict immanence from an identical act-reference, and treating a finite transitive cause as an actual root. The assignments test the selected signature on the same source and comparison background. The PRD's verification section records the later initial challenge and pending repair re-check.
+**Self-challenge and boundaries.** The investigation rejected equivocation between broad exercise and immanent act, an operation-specific reading of the bearer-level disjunction, inferring act-grounding from co-truth or an effect-dependent description, inferring strict immanence from an identical act-reference, and treating a finite transitive cause as an actual root. The assignments test the selected signature on the same source and comparison background. The PRD's verification section records the later initial challenge and accepted repair.
 
 ## Intrinsic completion versus kind-completeness (2026-11-24; draft continuation)
 
@@ -3034,4 +3034,4 @@ Priority is based on substantive leverage, not a leaf-count ranking of truth. Fo
 
 **Next discriminating test.** Start with `d164b1ff`. Independently characterize one positive mode and justify its classification as pure and, via `c4fb87a6`, OfBeing. Hold fixed the same actual source and OwnBeing assumptions across the comparison. If that source lacks the mode, test E (nature-based exclusion versus neutral absence) and L (real contraction versus kind-completeness), then test whether any real contraction needs a receiving principle under the same #1914 act/recipient account. A warranted non-contracting essential exclusion weakens fullness for that source. A supported chain from exclusion to real contraction and then to a receiver strengthens the same-source conditional case. Generalization to all OfBeing determinations remains open. Strict noncognitive life is secondary. If one candidate necessarily involves reception or composition, revise the purity classification of that candidate.
 
-Attempt `72a86cf4-baca-4a47-b157-7b0dd50ba12b` records this scoped draft assessment. The initial semantic challenge requested changes to `35c03763084282b3b33bacf6b4ab274957180cbc` in PR #1916. The targeted re-check of this repair is pending.
+Attempt `72a86cf4-baca-4a47-b157-7b0dd50ba12b` records this scoped provisional assessment. The initial semantic challenge requested changes to `35c03763084282b3b33bacf6b4ab274957180cbc` in PR #1916. The targeted re-review accepted the repaired checkpoint at `1d63f12806ed9984ea2ea8973295b1e6b1210d59`.
