@@ -29,7 +29,9 @@ open TruthCore.Causality.WillVersusChance (AgencyFrame)
 open TruthCore.Modal.ModalGrounding (SomeContingentConcreteAt)
 open TruthCore.Modal.PrussPowerPremises (GivesTo GivenExists)
 open TruthCore.Modal.PrussPowerPremises.Model (Bg Bg.forall_iff Bg.exists_iff gFrame allC uni)
-open TruthCore.Causality.HolderRootIdentification.Model (gGroundsOthers dThereEx)
+open TruthCore.Causality.HolderRootIdentification.Model (gGroundsOthers dThereEx gdEx)
+open TruthCore.Causality.NarDerivation.Model (chainG chainGrounds chainGives)
+open TruthCore.Causality.ActualCommonRoot (ActualCommonRootAt)
 open TruthCore.Causality.WillVersusChance.Model (onlyG)
 open TruthCore.Modal.SelectedEffectBridge (OutputProfile StableActOutput)
 open TruthCore.Modal.OptimalCreationChoice (Optimal OptimalOutputs OptimalChoiceCertificate)
@@ -95,8 +97,19 @@ theorem necessaryRootsFromUniqueNecessaryRoot {W B T R : Type} (F : CausalityFra
   rw [huniq m hm]
   exact hnec
 
+/-- Law 4: a unique-optimum root gives being to at most one being at `w`. -/
+theorem single_effect_of_uniqueOptimum {W B T R : Type} (F : CausalityFrame W B T R)
+    (concrete : B → Prop) (G : W → B → B → Prop) (w : W) (V : Type) [PartialOrder V]
+    (feasible : Set B) (quality : B → V)
+    (h : ActualRootsGiveUniqueOptimum F concrete G w V feasible quality)
+    (n : B) (hn : ActualRoot (groundProfile F concrete G) w n) :
+    ∀ x y, GivesTo F w n x → GivesTo F w n y → x = y := by
+  intro x y hx hy
+  obtain ⟨hOut, hU⟩ := h n hn
+  exact hU x y ((hOut w (Or.inl rfl)).2 x hx) ((hOut w (Or.inl rfl)).2 y hy)
+
 theorem laws : Laws := by
-  refine ⟨?_, ?_, ?_⟩
+  refine ⟨?_, ?_, ?_, ?_, ?_⟩
   · intro W B T R F w y
     exact stable_iff_fixed F w y
   · intro W B T R F concrete G w V _ feasible quality hOpt n hn
@@ -110,6 +123,15 @@ theorem laws : Laws := by
     have hFix := fixed_of_uniqueOptimum F concrete G w V feasible quality
       TruthCore.Results.Modal.OptimalCreationChoice.checks hOpt n hn
     exact hSS n x hn hxn (hWN n p x hp hr hex (hFix x hgx))
+  · intro W B T R F concrete G w V _ feasible quality h n hn
+    exact single_effect_of_uniqueOptimum F concrete G w V feasible quality h n hn
+  · intro W B T R F concrete G w V _ feasible quality h hB n hn hReach x y hx hxn hy hyn
+    rcases hReach x hx with h1 | gx
+    · exact absurd h1 hxn
+    rcases hReach y hy with h2 | gy
+    · exact absurd h2 hyn
+    exact single_effect_of_uniqueOptimum F concrete G w V feasible quality h n hn x y
+      (hB n x hn gx hx.2) (hB n y hn gy hy.2)
 
 theorem tiedOptimal_c : Optimal tiedFeasible tiedQuality .c := by
   refine ⟨Or.inl rfl, ⟨⟨.c, Or.inl rfl, rfl⟩, ?_⟩⟩
@@ -151,8 +173,31 @@ theorem tiedOptimum : TiedOptimum := by
         dThereEx, gGroundsOthers, allC]
     exact absurd ((h .g hRoot).2 .c .d tiedOptimal_c tiedOptimal_d) (by decide)
 
-/-- Argument G3, the certificate of laws and the tied-optimum model.
-Premise-free. -/
-theorem narGraftControls : Controls := ⟨laws, tiedOptimum⟩
+theorem mediatedOptimum : MediatedOptimum := by
+  unfold MediatedOptimum
+  have hOpt : Optimal mediatedFeasible mediatedQuality .g :=
+    ⟨rfl, ⟨⟨.g, rfl, rfl⟩, by rintro _ ⟨y, _, rfl⟩; exact Nat.le_refl 0⟩⟩
+  refine ⟨?_, ?_, ?_⟩
+  · intro n hn
+    have hnd : n = .d := by
+      obtain ⟨⟨_, hex⟩, hno⟩ := hn
+      cases n <;> simp_all [ActualConcreteGround, groundProfile, chainG, gFrame, chainGrounds,
+        gdEx, allC]
+    subst hnd
+    refine ⟨fun v _ => ⟨fun _ => ⟨.g, by simp [givingProfile, GivesTo, chainG, gFrame,
+      chainGives]⟩, fun x hx => ?_⟩, ?_⟩
+    · simp [givingProfile, GivesTo, chainG, gFrame, chainGives] at hx
+      subst hx; exact hOpt
+    · rintro x y ⟨hx, _⟩ ⟨hy, _⟩
+      simp [mediatedFeasible] at hx hy
+      rw [hx, hy]
+  · simp [ActualCommonRootAt, ActualRoot, ActualConcrete, ActualConcreteGround, groundProfile,
+      chainG, gFrame, chainGrounds, gdEx, allC, Bg.forall_iff, Bg.exists_iff]
+  · simp [SomeContingentConcreteAt, ContingentAt, chainG, gFrame, gdEx, allC, uni,
+      Bool.exists_bool, Bg.exists_iff]
+
+/-- Argument G3, the certificate of laws, the tied-optimum model and the
+mediated optimum. Premise-free. -/
+theorem narGraftControls : Controls := ⟨laws, tiedOptimum, mediatedOptimum⟩
 
 end TruthCore.Results.Causality.NarGrafts

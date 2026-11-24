@@ -28,6 +28,9 @@ are in Logic, Explanation and Alternatives beyond the named families.
 - **Nominal (rejected):** a bridge premise "orphan conclusion → root node"
   that the proof only applies (invariant 16), or a relation recorded without a
   rival that actually conflicts with the root node.
+- **Conditional rivals:** a rival that conflicts with a root-path node only
+  under further premises is recorded with that condition stated in the
+  relation note, as `ea6a4838` (the world-level optimizer) and `9d1f08e0` do.
 - **Legitimately off-route:** controls, finite models, omission
   countermodels, inconsistency cores ("Logical falsity", 24 results) whose
   rival is not recorded, rival-worldview consistency models, and transcription
@@ -90,7 +93,7 @@ vocabulary (#216), with the bundle audits that pin those records re-reviewed.
   legacy links (gap 5 of [nar-derivation.md](nar-derivation.md)).
   - *Scope.* It excludes the rival only through law 2, and so only through the
     common root's direct reach. It does not touch the mediated creator: #1947's
-    `chainG` satisfies the rival with candidates `{g}`. Nor does it touch the
+    `chainG` satisfies the rival with candidates `{g}` (G3's `MediatedOptimum`). Nor does it touch the
     world-level optimizer, Rowe's argument, ties, a no-best regime or selective
     necessary diffusion.
   - *Recorded rivals of WN.* `b72a790a` is not WN's only recorded alternative.
@@ -109,10 +112,14 @@ vocabulary (#216), with the bundle audits that pin those records re-reviewed.
 - **G3** (`f0eb2f96`, controls, Mathlib three axioms). Law 1: under
   `givingProfile`, stable output is fixity toward each given being. Law 2: a
   unique optimum makes a root fixed toward every effect, so two-way toward
-  none: a unique-optimum root cannot be a mixed-mode root (it gives exactly
-  one being per world), though without direct reach it can be a mediated
-  creator. Law 3: with SS, a unique-optimum root that gives another being by a
-  rational exercise makes WN fail. Model `TiedOptimum`: the refutation's other
+  none, so a unique-optimum root cannot be a mixed-mode root. Law 3: with SS,
+  a unique-optimum root that gives another being by a rational exercise makes
+  WN fail. Law 4: such a root gives being to at most one being at `w`. Law 5: with
+  (b1) and the common root's reach, it leaves at most one actual concretum
+  besides itself. Model `MediatedOptimum`: on `chainG` the rival holds with
+  candidates `{g}`, direct reach fails and some concretum is contingent, so
+  without direct reach a unique-optimum root can be a mediated creator. Model
+  `TiedOptimum`: the refutation's other
   premises hold, the root gives by total optimal output over two tied
   candidates, and here the tied root is two-way toward a contingent. Encoding
   disclosures: quality is constant, `G` (`gGroundsOthers`) and existence are
@@ -140,15 +147,15 @@ refutation, not a constraint on the selective rival**:
   common root's direct reach, or the uniqueness of the optimum. The first two
   together are modal collapse of what the root gives.
 - **No constraint on the selective rival.** A unique-optimum root cannot be a
-  mixed-mode root, because it gives exactly one being per world. Without
-  direct reach, however, it can be the mediated creator: `chainG` satisfies
-  the rival, so being-level optimization *can* select a necessary
+  mixed-mode root, because it is fixed toward every effect and gives being to
+  at most one being at `w` (laws 2 and 4). Without direct reach, however, it can be the
+  mediated creator: `chainG` satisfies the rival (`MediatedOptimum`), so being-level optimization *can* select a necessary
   intermediary, and G1 does not touch that case. With direct reach it
-  collapses to one creature. Ties do not force fixity (`TiedOptimum`, in one
+  collapses to one creature (law 5). Ties do not force fixity (`TiedOptimum`, in one
   encoding).
 - **What it does not show.** It leaves untouched:
-  - the mediated creator, which may be the historical Avicennian system
-    (*Ilāhiyyāt* IX.4, unread);
+  - the mediated creator, a rival of G1's reach premise `0c27f65a`, which may
+    be the historical Avicennian system (*Ilāhiyyāt* IX.4, unread);
   - the world-level optimizer `78af5042` (one best complete output, or a tied
     family whose members all contain `d`);
   - Rowe's world-level argument;
@@ -156,12 +163,16 @@ refutation, not a constraint on the selective rival**:
   - a no-best regime (where #1737's certificate shows no candidate is
     optimal, so the rival's total optimal output cannot hold);
   - selective necessary diffusion `ea1425c0`, which needs no optimization
-    premise.
+    premise. Its Lean statement fixes the root toward some `x`; neither
+    necessity nor intermediacy of `x` is stated. The diffusion component is
+    cited to Plotinus, Avicenna and Kretzmann (navigation); no source is
+    recorded as holding the combination with free giving of the contingents.
 - **Warrant for WN:** unchanged overall (moderate, on the means-to-end
   reading). One narrow rival variant has a recorded conditional refutation
-  that does not beg the question against WN. The decisive rivals (selective
-  necessary diffusion, the mediated creator, the world-level optimizer) stand.
-  Two of them are now recorded as `alternative_to` WN.
+  that does not beg the question against WN. Standing rivals of WN: selective
+  diffusion (`ea1425c0`) and the world-level optimizer (`78af5042`), both
+  recorded as `alternative_to` WN and unrefuted. The mediated creator is a
+  standing rival of G1's reach premise, `0c27f65a`.
 
 Revision conditions: a world-level `OptimalOutputs` over complete outputs
 that keeps law 2's premises would test the world-level optimizer; a selection

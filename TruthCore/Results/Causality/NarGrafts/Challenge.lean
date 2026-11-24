@@ -25,7 +25,9 @@ open TruthCore.Causality.WillVersusChance (AgencyFrame)
 open TruthCore.Modal.ModalGrounding (SomeContingentConcreteAt)
 open TruthCore.Modal.PrussPowerPremises (GivesTo GivenExists)
 open TruthCore.Modal.PrussPowerPremises.Model (Bg Bg.forall_iff Bg.exists_iff gFrame allC uni)
-open TruthCore.Causality.HolderRootIdentification.Model (gGroundsOthers dThereEx)
+open TruthCore.Causality.HolderRootIdentification.Model (gGroundsOthers dThereEx gdEx)
+open TruthCore.Causality.NarDerivation.Model (chainG chainGrounds chainGives)
+open TruthCore.Causality.ActualCommonRoot (ActualCommonRootAt)
 open TruthCore.Causality.WillVersusChance.Model (onlyG)
 open TruthCore.Modal.SelectedEffectBridge (OutputProfile StableActOutput)
 open TruthCore.Modal.OptimalCreationChoice (Optimal OptimalOutputs OptimalChoiceCertificate)
@@ -59,8 +61,8 @@ theorem necessaryRootsFromUniqueNecessaryRoot {W B T R : Type} (F : CausalityFra
     ActualRootsNecessary F concrete G w := by
   sorry
 
-/-- Argument G3, the certificate of laws and the tied-optimum model.
-Premise-free. -/
+/-- Argument G3, the certificate of laws, the tied-optimum model and the
+mediated optimum. Premise-free. -/
 theorem narGraftControls : Controls := by
   sorry
 

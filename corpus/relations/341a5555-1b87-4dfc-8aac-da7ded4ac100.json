@@ -6,5 +6,5 @@
   "predicate": "alternative_to",
   "object_kind": "statement",
   "object_id": "0266eac2-3fad-43eb-a1f1-e784c5356105",
-  "note": "The decisive standing rival of docs/notes/nar-derivation.md section 5: it includes the denial of WN at one root, with a two-way effect. Unrefuted; no refutation is claimed."
+  "note": "The decisive standing rival of docs/notes/nar-derivation.md section 5 (WN rivals) and section 9 gap 1 (the selective version): it includes the denial of WN at one root, with a two-way effect. Objection-standard justification: #1947's MixedModeRoot (b8ee1a50) has FixedTowardAt g d, TwoWayTowardAt g c and the failure of WN with EndRequires empty, and keeps N3's other premises; that model witnesses the shape in one encoding. Unrefuted; no refutation is claimed."
 }

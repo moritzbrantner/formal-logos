@@ -98,13 +98,16 @@ def NotEveryActualRootGivesUniqueOptimum (F : CausalityFrame W B T R) (concrete 
 actual root `n` of `G` at `w` exercises a rational power `p` toward a being `x`
 other than itself, is fixed (NECESSITATE_5) toward `x`, and `x` is not
 required by `n`'s own end (`EndRequires`, the means-to-end relation), while `n`
-is two-way toward some being `c`. A perfect will fixed toward an effect its
-good does not require, selectively: the necessary diffusion of the good toward
-a necessary intermediary (Plotinus; Avicenna's First as standardly reported;
-Kretzmann; navigation, not attributed), with free giving of the contingents.
-Stated only; no argument here supports or refutes it. #1947's `MixedModeRoot`
-model is of this shape. It is the denial of WN at one root, together with a
-two-way effect. -/
+is two-way toward some being `c`. Combines the necessary-diffusion thesis
+(Plotinus; Avicenna's First as standardly reported; Kretzmann; cited for the
+diffusion component only, navigation) with free giving of the contingents. No
+source is recorded as holding the combination; it is #1947 §9's selective
+version. The Lean fixes `n` toward `x`; with a necessary root and factive
+giving, `x` then exists wherever `n` does. Neither necessity nor intermediacy
+of `x` is stated. #1947's `MixedModeRoot` (`b8ee1a50`) has `FixedTowardAt … g d`,
+`TwoWayTowardAt … g c` and `¬ RationalFixedGivingIsRequired` with
+`EndRequires := noRequirement`, and keeps N3's other premises: it witnesses the
+shape. Stated only; no argument here supports or refutes it. -/
 def SelectiveNecessaryDiffusionAtRoot (F : CausalityFrame W B T R) (A : AgencyFrame W B S P)
     (concrete : B → Prop) (G : W → B → B → Prop) (EndRequires : B → B → Prop) (w : W) :
     Prop :=
@@ -128,7 +131,7 @@ def ActualRootsGiveOptimalCompleteOutputs (F : CausalityFrame W B T R) (concrete
     ∀ v, (v = w ∨ F.history.ontic.frame.access w v) → F.history.ontic.ExistsAt v n →
       Optimal feasible quality {x | GivesTo F v n x}
 
-/-! ## Laws and a tied-optimum model -/
+/-! ## Laws, a tied-optimum model and a mediated-optimum model -/
 
 namespace Model
 
@@ -139,6 +142,8 @@ open TruthCore.Causality.WillVersusChance.Model (onlyG)
 open TruthCore.Causality.RootPositiveIntellectWill (IntellectualGodCommonRootAt)
 open TruthCore.Causality.NarDerivation (ActualRootsGiveGroundedHere ActualRootsNecessary)
 open TruthCore.Modal.ModalGrounding (SomeContingentConcreteAt)
+open TruthCore.Causality.NarDerivation.Model (chainG chainGrounds)
+open TruthCore.Causality.ActualCommonRoot (ActualCommonRootAt)
 
 /-- `g` gives `c` being at `false` and `d` being at `true`. -/
 def tiedGives (v : Bool) (y x : Bg) : Prop := y = .g ∧ ((x = .c ∧ v = false) ∨ (x = .d ∧ v = true))
@@ -160,12 +165,17 @@ def tiedQuality (_ : Bg) : Nat := 0
 2. **A unique optimum makes the root fixed toward every effect.** If an actual
    root gives by total optimal output and at most one candidate is optimal, it
    is fixed toward every being it gives at `w`, so it is two-way toward none:
-   a unique-optimum root cannot be a mixed-mode root (it gives exactly one
-   being per world). Without direct reach it can still be a mediated creator
-   that gives only a necessary intermediary.
+   a unique-optimum root cannot be a mixed-mode root (law 4: it gives being
+   to at most one being at `w`). Without direct reach it can still be a
+   mediated creator that gives only a necessary intermediary
+   (`MediatedOptimum`).
 3. **The optimizing rival is a rival to WN.** With SS, a root that gives by a
    unique optimum and gives some other being `x` at `w` by exercising a
    rational power makes WN fail.
+4. **One effect.** A root that gives by a unique optimum gives being to at
+   most one being at `w`.
+5. **One creature.** With (b1) and the common root's reach, such a root
+   leaves at most one actual concretum at `w` besides itself.
 
 Laws 2 and 3 use #1737's `OptimalChoiceCertificate` (its first conjunct). -/
 def Laws : Prop :=
@@ -184,15 +194,31 @@ def Laws : Prop :=
     ActualRootsEndRequiresNoOther F concrete G EndRequires w →
     (∃ n p x, ActualRoot (groundProfile F concrete G) w n ∧ x ≠ n ∧ A.PowerOf n p ∧
       A.Rational p ∧ A.Exercises w n x p ∧ GivesTo F w n x) →
-    ¬ RationalFixedGivingIsRequired F A EndRequires w)
+    ¬ RationalFixedGivingIsRequired F A EndRequires w) ∧
+  (∀ (W B T R : Type) (F : CausalityFrame W B T R) (concrete : B → Prop)
+      (G : W → B → B → Prop) (w : W) (V : Type) [PartialOrder V] (feasible : Set B)
+      (quality : B → V),
+    ActualRootsGiveUniqueOptimum F concrete G w V feasible quality →
+    ∀ n, ActualRoot (groundProfile F concrete G) w n →
+      ∀ x y, GivesTo F w n x → GivesTo F w n y → x = y) ∧
+  (∀ (W B T R : Type) (F : CausalityFrame W B T R) (concrete : B → Prop)
+      (G : W → B → B → Prop) (w : W) (V : Type) [PartialOrder V] (feasible : Set B)
+      (quality : B → V),
+    ActualRootsGiveUniqueOptimum F concrete G w V feasible quality →
+    ActualRootsGiveGroundedHere F concrete G w →
+    ∀ n, ActualRoot (groundProfile F concrete G) w n →
+      (∀ x, ActualConcrete (groundProfile F concrete G) w x →
+        x = n ∨ ActualConcreteGround (groundProfile F concrete G) w n x) →
+      ∀ x y, ActualConcrete (groundProfile F concrete G) w x → x ≠ n →
+        ActualConcrete (groundProfile F concrete G) w y → y ≠ n → x = y)
 
 /-- **Tied optimum** (omission of uniqueness from the refutation): on `tiedG`
 at `false`, with `g` grounding every other being and `g` the GOD_4 root with
 intellect (`onlyG`), the premises the refutation uses besides uniqueness hold:
 (b1), factive giving, the common GOD_4 root with intellect, necessary roots and
 some concrete contingent being. `g` gives by total optimal output over `{c, d}`
-under constant quality, yet two candidates are optimal, `g` is two-way toward
-`c`, and the optimizing rival with uniqueness fails. Here the tied root is
+under constant quality, yet two candidates are optimal, and the optimizing
+rival with uniqueness fails. Here the tied root is
 two-way toward `c`: #1737's tied control, now on the root's giving. Encoding
 disclosures: quality is constant; `G` and existence are fixed by construction;
 the frame's `Ontic` causal field and other relations are empty; `d` exists
@@ -208,8 +234,28 @@ def TiedOptimum : Prop :=
   TwoWayTowardAt tiedG false .g .c ∧
   ¬ ActualRootsGiveUniqueOptimum tiedG allC gGroundsOthers false Nat tiedFeasible tiedQuality
 
-/-- The certificate: laws and the tied-optimum model. -/
-def Controls : Prop := Laws ∧ TiedOptimum
+/-- Candidates for the mediated creator: the necessary intermediary `g`. -/
+def mediatedFeasible : Set Bg := {x | x = .g}
+/-- Constant quality. -/
+def mediatedQuality (_ : Bg) : Nat := 0
+
+/-- **Mediated optimum**: on #1947's `chainG` at `false` (`d` grounds and gives
+`g` being at both worlds; `g` grounds `c` and gives it being at `false` only),
+the unique-optimum rival holds with candidates `{g}` and constant quality: the
+root `d` gives being only to the necessary intermediary `g`. The common root's
+direct reach fails (`d` does not ground `c`), and some concrete being is
+contingent. So without direct reach a unique-optimum root can select a
+necessary intermediary, and G1 does not touch this case. Encoding disclosures
+as in #1947's `chainG`: `G` and giving are the same at both worlds except
+`g`'s giving of `c`; the frame's `Ontic` causal field is empty. -/
+def MediatedOptimum : Prop :=
+  ActualRootsGiveUniqueOptimum chainG allC chainGrounds false Nat mediatedFeasible
+    mediatedQuality ∧
+  ¬ ActualCommonRootAt (groundProfile chainG allC chainGrounds) false ∧
+  SomeContingentConcreteAt chainG allC false
+
+/-- The certificate: laws, the tied-optimum model and the mediated optimum. -/
+def Controls : Prop := Laws ∧ TiedOptimum ∧ MediatedOptimum
 
 end Model
 
