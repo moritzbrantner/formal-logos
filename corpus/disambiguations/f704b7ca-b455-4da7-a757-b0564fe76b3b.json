@@ -1,0 +1,46 @@
+{
+  "id": "f704b7ca-b455-4da7-a757-b0564fe76b3b",
+  "label": "Existence belongs to an essence: concept containment, essential truth, act identity, membership",
+  "term": "existence belongs to an essence",
+  "sense_definition_ids": [
+    "90353211-7e2e-47cb-bbab-3e0bef36d077",
+    "1fda7b2c-4411-4ffd-8fa2-78e30b6aedef",
+    "b2e22524-357f-47b5-814f-0a0e59f0d612",
+    "72a1e556-042a-4358-a8a0-a2a87cc036d6",
+    "316780ef-70da-498f-8893-317cb35ca80b"
+  ],
+  "resolution": "'Existence belongs to the essence of x' (and its denial, 'existence never belongs to an essence') has five senses here, kept as distinct declarations with no relation assumed between them. EXISTENCE_IN_ESSENCE_1, conceptual containment: the proposition that x exists is a determination contained in a concept of x; Kant's thesis that existence is not a real predicate targets this sense, as does the ontological argument's step. EXISTENCE_IN_ESSENCE_2, essential truth: it lies in the nature of x (ESSENCE_5) that x exists, unconditionally. EXISTENCE_IN_ESSENCE_3, act identity: x's represented esse is its represented essence (ESSENCE_3, the thesis of ST I q.3 a.4); an identity of principles, not a determination inside a quiddity. EXISTENCE_IN_ESSENCE_4 is NECESSARY_EXISTENCE_BY_OWN_NATURE_3 (essence membership of the existence fact on the EssenceReasonSeparation profile), reused and not bridged to the others. EXISTENCE_IN_ESSENCE_5, consequential essential truth: some essential truth of x entails x's existence. The passages are explicit and open: _1 reaches _2 only through concept adequacy (whatever lies in the nature is contained in the concept) and _3 only through the identity-to-concept bridge; _3 reaches _2 only through the bridge 565ccd6c-0036-4613-8595-f6f03d273a0d, which factors into the act–fact link (the act of being is exercised exactly where the being exists) and exercise in the nature (the exercise of an identity being's esse lies in its nature unconditionally); _2 implies _5, not conversely without closure of essence under entailment. _1 and _2 are distinct as types: a concept is a value of the structure ConceptRelation, not an essence relation, and the concept adequate to a nature is constructed from it explicitly (adequateConcept). Open tagging gap: the Essential binders of the new declarations are not tagged ESSENCE_5 (that record is pinned by bundle audits); they remain unknown, not another sense. An argument that infers a thesis in one sense from a thesis in another must list the corresponding bridge premise. docs/notes/existence-in-essence-identity.md records the laws and models.",
+  "term_label": "EXISTENCE_IN_ESSENCE",
+  "senses": [
+    {
+      "id": "16c53c93-2f13-4f46-bddc-c71acd75e12d",
+      "label": "EXISTENCE_IN_ESSENCE_1",
+      "definition_id": "90353211-7e2e-47cb-bbab-3e0bef36d077",
+      "lean_declaration": "TruthCore.Ontology.ExistenceInEssence.ConceptContainsExistence"
+    },
+    {
+      "id": "70a12a57-8179-4f2e-8b93-e7c601bc385f",
+      "label": "EXISTENCE_IN_ESSENCE_2",
+      "definition_id": "1fda7b2c-4411-4ffd-8fa2-78e30b6aedef",
+      "lean_declaration": "TruthCore.Ontology.ExistenceInEssence.EssentialExistence"
+    },
+    {
+      "id": "63f139fe-0665-4349-bdec-0122eb69f120",
+      "label": "EXISTENCE_IN_ESSENCE_3",
+      "definition_id": "b2e22524-357f-47b5-814f-0a0e59f0d612",
+      "lean_declaration": "TruthCore.Ontology.ExistenceInEssence.EsseIsEssence"
+    },
+    {
+      "id": "78c17ee7-d90b-492c-a7b5-4a672e8d78c5",
+      "label": "EXISTENCE_IN_ESSENCE_4",
+      "definition_id": "72a1e556-042a-4358-a8a0-a2a87cc036d6",
+      "lean_declaration": "TruthCore.Explanation.EssenceReasonSeparation.OwnEssentialExistence"
+    },
+    {
+      "id": "7755fb1b-f6f1-422b-a05e-11d1de0b7af1",
+      "label": "EXISTENCE_IN_ESSENCE_5",
+      "definition_id": "316780ef-70da-498f-8893-317cb35ca80b",
+      "lean_declaration": "TruthCore.Ontology.ExistenceInEssence.NatureEntailsExistence"
+    }
+  ]
+}

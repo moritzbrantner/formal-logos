@@ -1,0 +1,12 @@
+{
+  "id": "a9ad2b41-2221-47b5-803e-c978e5f62a30",
+  "label": "The route's conclusion, from a necessary concrete varying giver (inference)",
+  "input_statement_ids": [
+    "256a5e0a-d287-43d8-b52e-ec55c9eb89ed"
+  ],
+  "output_statement_id": "b90ee2de-8ae5-438b-bea4-e3158889c3e7",
+  "rule": "Forget the varying giving",
+  "meaning": "A necessary concrete holder of a power for the joint absence that varies its giving is in particular a necessary concrete holder of that power.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

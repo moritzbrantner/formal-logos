@@ -1,0 +1,9 @@
+{
+  "id": "316780ef-70da-498f-8893-317cb35ca80b",
+  "label": "EXISTENCE_IN_ESSENCE_5: some essential truth of x entails its existence (consequential form)",
+  "term": "existence follows from the essence (EXISTENCE_IN_ESSENCE_5)",
+  "definition": "NatureEntailsExistence F Essential x := ∃ φ, EssentialTruth Essential x φ ∧ EntailsExistence F φ x: some proposition that lies in the nature of x (ESSENCE_5) holds only at points where x exists. Weaker than EXISTENCE_IN_ESSENCE_2 (EssentialExistence implies it).",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ontology.ExistenceInEssence.NatureEntailsExistence",
+  "note": "Stipulated for #1887. Sense EXISTENCE_IN_ESSENCE_5 of the disambiguation f704b7ca-b455-4da7-a757-b0564fe76b3b. Its denial for x is exactly what existence-conditional essences yield once x's absence is representable (ModalGrounding controls, law 4), and what Kant's thesis with concept adequacy yields for every being (controls of docs/notes/existence-in-essence-identity.md, law 2). Within the essentialist framework it is equivalent to x's necessity for an actual x (same controls, law 11)."
+}

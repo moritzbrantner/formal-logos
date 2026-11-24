@@ -1,0 +1,11 @@
+{
+  "id": "2cc7e260-2758-4d4f-88fe-6047f393ee14",
+  "label": "The stage-one node, by the distributive powers at a concrete foundational being",
+  "argument_id": "3a2fe81c-d53d-4894-8718-1eae80154907",
+  "challenge_module": "TruthCore.Results.Modal.PrussPowerPremises.Challenge",
+  "solution_module": "TruthCore.Results.Modal.PrussPowerPremises.Solution",
+  "theorem": "TruthCore.Results.Modal.PrussPowerPremises.powerOverEachGivesNecessaryConcrete",
+  "comparator_config": "results/2cc7e260-2758-4d4f-88fe-6047f393ee14/comparator.json",
+  "status": "solution-present",
+  "description": "The transfer's (or the withholding route's) conclusion reproduces PGP's verdict at the foundational case of the C2 batch (c5da5e62), without PGP and without a Euclidean premise: the exact formal link between Pruss's own route and the C2 crux, holding only under the transfer bridge or the creator reading with the withheld-giving bridge. Not a transcription: no premise mentions necessity. Establishes no premise."
+}

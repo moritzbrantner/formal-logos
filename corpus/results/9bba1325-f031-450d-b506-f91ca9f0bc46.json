@@ -1,0 +1,11 @@
+{
+  "id": "9bba1325-f031-450d-b506-f91ca9f0bc46",
+  "label": "Pruss power premises: two-member collective-without-distributive model checked",
+  "argument_id": "4e958bfe-b536-47be-829e-da6812be49a6",
+  "challenge_module": "TruthCore.Results.Modal.PrussPowerPremises.Challenge",
+  "solution_module": "TruthCore.Results.Modal.PrussPowerPremises.Solution",
+  "theorem": "TruthCore.Results.Modal.PrussPowerPremises.twoMemberCollective",
+  "comparator_config": "results/9bba1325-f031-450d-b506-f91ca9f0bc46/comparator.json",
+  "status": "solution-present",
+  "description": "Separates the collective reading of P1-prime from the varying-holder distributive reading at the level of PowerFor (the whole-to-member step for powers). Sense-mixing control: it relates MODAL_CONTINGENCY_1 and the frame (NECESSARY_11 carrier) without a bridge premise. Establishes no premise."
+}

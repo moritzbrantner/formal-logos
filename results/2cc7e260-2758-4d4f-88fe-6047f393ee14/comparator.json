@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Modal.PrussPowerPremises.Challenge",
+  "solution_module": "TruthCore.Results.Modal.PrussPowerPremises.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Modal.PrussPowerPremises.powerOverEachGivesNecessaryConcrete"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}
