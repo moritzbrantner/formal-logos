@@ -3,7 +3,9 @@
   "solution_module": "TruthCore.Results.Causality.RootSupplyInterface.Solution",
   "theorem_names": [
     "TruthCore.Results.Causality.RootSupplyInterface.rootExistsOverWholeRosterExact",
-    "TruthCore.Results.Causality.RootSupplyInterface.wholeRosterIsInhabitedRootNotAbsent"
+    "TruthCore.Results.Causality.RootSupplyInterface.wholeRosterIsInhabitedRootNotAbsent",
+    "TruthCore.Results.Causality.RootSupplyInterface.stabilityIsRootImplicationGivenPopulation",
+    "TruthCore.Results.Causality.RootSupplyInterface.borrowingCutFactorsThroughWholeRoster"
   ],
   "permitted_axioms": [],
   "enable_nanoda": true

@@ -50,6 +50,17 @@ population and stability of root existence. Constructive. -/
 theorem rootExistsOverWholeRosterExact : RootExistsOverWholeRosterExact := by
   sorry
 
+/-- Given population, stability of root existence is the implication from
+nontrapping to root existence. Constructive. -/
+theorem stabilityIsRootImplicationGivenPopulation :
+    StabilityIsRootImplicationGivenPopulation := by
+  sorry
+
+/-- The all-subsets borrowing cut factors through its whole-roster instance.
+Constructive. -/
+theorem borrowingCutFactorsThroughWholeRoster : BorrowingCutFactorsThroughWholeRoster := by
+  sorry
+
 /-- The classical GOD_4 root of the quarta via, stated once against the
 root-supply interface: an actual root of the selected relation, contingent
 grounding, excluded middle and the 21 shared attribute and naming inputs.

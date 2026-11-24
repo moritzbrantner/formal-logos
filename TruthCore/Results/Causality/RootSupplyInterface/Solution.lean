@@ -81,6 +81,41 @@ theorem rootExistsOverWholeRosterExact : RootExistsOverWholeRosterExact := by
   · rintro ⟨hWhole, hPop, hStable⟩
     exact hStable ((wholeRosterIsInhabitedRootNotAbsent m w).mp hWhole hPop)
 
+/-- Given population, stability of root existence is the implication from
+nontrapping to root existence. Constructive. -/
+theorem stabilityIsRootImplicationGivenPopulation :
+    StabilityIsRootImplicationGivenPopulation := by
+  intro W B m w
+  have key := wholeRosterIsInhabitedRootNotAbsent m w
+  constructor
+  · rintro ⟨hPop, hStab⟩
+    exact ⟨hPop, fun hW => hStab (key.mp hW hPop)⟩
+  · rintro ⟨hPop, hImp⟩
+    exact ⟨hPop, fun hnn => hImp (key.mpr (fun _ => hnn))⟩
+
+/-- The all-subsets borrowing cut factors through its whole-roster instance.
+Constructive. -/
+theorem borrowingCutFactorsThroughWholeRoster : BorrowingCutFactorsThroughWholeRoster := by
+  intro E G h intr
+  have escNoTrap : ∀ D : Set E, ((∃ e ∈ D, intr e) ∨
+      ∃ g, h.admitted g ∧ h.effect g ∈ D ∧ ∀ e ∈ h.contributors g, e ∉ D) →
+        ¬ TruthCore.Causality.DerivativeJointPower.Trap h intr D := by
+    intro D hE hT
+    rcases hE with ⟨e, he, hi⟩ | ⟨g, hg, hd, hc⟩
+    · exact hT.1 e he hi
+    · obtain ⟨e, hec, heD⟩ := hT.2 g hg hd
+      exact hc e hec heD
+  constructor
+  · intro hCut
+    exact ⟨fun hne hT => escNoTrap _ (hCut _ (fun _ _ => trivial) hne) hT,
+      fun D hD => ⟨fun _ => hCut D (fun _ _ => trivial) hD,
+        fun hT => (escNoTrap D (hCut D (fun _ _ => trivial) hD) hT).elim⟩⟩
+  · rintro ⟨hNT, hΔ⟩ D _ hD
+    refine (hΔ D hD).1 (fun hT => ?_)
+    have hU := (hΔ D hD).2 hT
+    subst hU
+    exact hNT hD hT
+
 /-- The classical GOD_4 root of the quarta via, stated once against the
 root-supply interface: an actual root of the selected relation, contingent
 grounding, excluded middle and the 21 shared attribute and naming inputs.

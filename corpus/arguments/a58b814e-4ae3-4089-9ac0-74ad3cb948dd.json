@@ -6,7 +6,7 @@
   "inference_ids": [
     "6cd38489-0824-4fa2-97e7-1d5fb02f8fcb"
   ],
-  "meaning": "Certified difference (#1598): an actual root exists iff the nonempty actual roster is not a trap, the roster is inhabited and root existence is stable. Proved constructively, with no excluded middle; the Comparator configuration also checks that whole-roster nontrapping is equivalent to 'if the actual roster is inhabited, it is not the case that no actual root exists' (wholeRosterIsInhabitedRootNotAbsent). Premise-free; it asserts none of the statements compared.",
+  "meaning": "Certified difference (#1598): an actual root exists iff the nonempty actual roster is not a trap, the roster is inhabited and root existence is stable. Proved constructively, with no excluded middle; the Comparator configuration also checks that whole-roster nontrapping is equivalent to 'if the actual roster is inhabited, it is not the case that no actual root exists' (wholeRosterIsInhabitedRootNotAbsent), that given population the stability conjunct is the implication from nontrapping to root existence (stabilityIsRootImplicationGivenPopulation), and that the all-subsets borrowing cut factors through its whole-roster instance (borrowingCutFactorsThroughWholeRoster: every nonempty non-trap escapes and every nonempty trap is the whole carrier; constructive, not yet registered as a certified difference). Premise-free; it asserts none of the statements compared.",
   "definition_ids": [
     "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
     "1b8baf77-84fa-5513-a138-7fa14840dd87",

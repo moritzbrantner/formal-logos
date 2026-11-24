@@ -34,6 +34,8 @@ open TruthCore.Causality.WholeRosterFoundation (WholeRosterNotTrapped)
 open TruthCore.Causality.RootPositiveIntellectWill (ActualRootExistsAt)
 open TruthCore.Logic.CogitoConcrete (InhabitedConcreteAt)
 open TruthCore.Logic.StrengthComparison
+open TruthCore.Causality.DerivativeJointPower (Escape Trap)
+open TruthCore.Causality.JointGroups (Groups)
 
 /-- Difference of root existence over whole-roster nontrapping: some actual
 concretum exists at `w`, and root existence is stable (if it is not the case
@@ -65,5 +67,29 @@ def WholeRosterIsInhabitedRootNotAbsent : Prop :=
   ∀ {W B : Type} (m : Profile W B) (w : W),
     WholeRosterNotTrapped m w ↔
       (InhabitedConcreteAt m.ontic m.concrete w → ¬¬ ActualRootExistsAt m w)
+
+/-- Given population, the stability conjunct of the difference is the bare
+implication from whole-roster nontrapping to root existence. So the
+substantive difference is population; stability is the logical price of the
+double negation in nontrapping. -/
+def StabilityIsRootImplicationGivenPopulation : Prop :=
+  ∀ {W B : Type} (m : Profile W B) (w : W),
+    InhabitedWithStableRoot m w ↔
+      (InhabitedConcreteAt m.ontic m.concrete w ∧
+        (WholeRosterNotTrapped m w → ActualRootExistsAt m w))
+
+/-- A constructive factorization of the all-subsets borrowing cut (with every
+contribution active) through its whole-roster instance: the cut holds iff the
+nonempty whole carrier is not a trap, every nonempty non-trap escapes, and
+every nonempty trap is the whole carrier. Not registered as a certified
+difference in this slice. -/
+def BorrowingCutFactorsThroughWholeRoster : Prop :=
+  ∀ {E G : Type} (h : Groups E G) (intrinsic : E → Prop),
+    Escape h intrinsic (fun _ => True) ↔
+      (((Set.univ : Set E).Nonempty → ¬ Trap h intrinsic Set.univ) ∧
+        ∀ D : Set E, D.Nonempty →
+          (¬ Trap h intrinsic D → (∃ e ∈ D, intrinsic e) ∨
+              ∃ g, h.admitted g ∧ h.effect g ∈ D ∧ ∀ e ∈ h.contributors g, e ∉ D) ∧
+          (Trap h intrinsic D → D = Set.univ))
 
 end TruthCore.Causality.RootSupplyInterface
