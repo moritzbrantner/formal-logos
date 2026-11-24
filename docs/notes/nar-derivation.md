@@ -169,6 +169,19 @@ existing user is allowlisted. Pruning those links is a definition-coverage
   - without (b): a frame whose access from `false` is not reflexive (law 5
     shows that this is the only way to omit it).
 
+**Encoding disclosures** (true by construction in every model):
+
+- `G` and `EndRequires` are the same at both worlds.
+- The `Ontic` causal field and the frame's other relations are empty.
+- A holder holds every power.
+- The agency overlays have constant states and no external conditions.
+- In the N2 omission models, uniformity holds only vacuously: the root is
+  two-way toward nothing.
+- In N1's mutual-grounding model, (a) holds only vacuously: its one root `c`
+  grounds nothing.
+- `MixedModeRoot` shows non-entailments in one encoding. It does not show that
+  an emanation scheme is coherent, nor that Avicenna's system is captured.
+
 ## 4. Does a uniform mode of giving follow from one power, an invariant set-up and simplicity?
 
 **No.** Model `MixedModeRoot` (frame `mixedG`, overlay `rationalGD`):
