@@ -50,11 +50,12 @@ through the assembly adds no closure. **Route costs and closure are unchanged.**
 
 The separator (result `4e83dbac`) is a two-point model. Both candidates are
 concrete, exist at the one self-accessing world and are grounded by nothing, so
-both are actual roots. Only one of them is GOD_4. Every supplied attribute
-predicate is chosen so that its attribute holds: goodness, infinity, eternity,
-intellect and will are everywhere true, and potency, the more-than relation,
-simple priority, component-of, composition and matter/form are empty. The Lean
-`Separator` proves five things on this model:
+both are actual roots. Only one of them is GOD_4. In the main model, goodness,
+infinity, eternity, intellect and will are everywhere true, and `CausesIn` is
+total. Six relations are empty: potency, the more-than relation, simple
+priority, component-of, composition and matter/form. So immutability, maximum,
+firstness, remoteness, simplicity and matter/form exclusion hold vacuously at
+both candidates. The Lean `Separator` proves on this model:
 
 1. the box K node holds, with the GOD_4 candidate as witness;
 2. the classical root fails;
@@ -63,17 +64,31 @@ simple priority, component-of, composition and matter/form are empty. The Lean
 4. the GOD_4 candidate satisfies every other conjunct;
 5. the other candidate is an actual root and is not GOD_4.
 
-So the classical root fails only through the selected-root uniqueness conjunct
-of `PerfectRootAt` (`∀ x, ActualRoot m w x → x = n`). The box K node has only
-`IsTheOneGod`, uniqueness among GOD_4 bearers, which does not exclude a second,
-non-GOD_4 actual root. The separation is non-degenerate: no supplied predicate
-is emptied, and the failing conjunct uses `ActualRoot`, which both nodes contain.
-A first draft failed only by emptying `HasIntellect`, a free parameter the box K
-node does not mention; it was replaced.
+It adds a restored-relation control on the same signature and Profile, so the
+box K node of item 1 still holds there. All the relations above except
+component-of are non-empty: the GOD_4 candidate is more in esse than the other
+and simply prior to it, `CausesIn` runs only from it to the other, and only the
+other is in potency, composite and composed of matter and form. The `Separator`
+proves:
+
+6. the classical root still fails, and it is again equivalent to "the rest of
+   the body plus being the only actual root";
+7. the GOD_4 candidate satisfies the rest of the body;
+8. maximum and firstness fail at the other candidate.
+
+So in both models the classical root fails only through the selected-root
+uniqueness conjunct of `PerfectRootAt` (`∀ x, ActualRoot m w x → x = n`). The
+box K node has only `IsTheOneGod`, uniqueness among GOD_4 bearers, which does
+not exclude a second, non-GOD_4 actual root. The separation is non-degenerate
+in this sense: no supplied predicate is emptied so that an attribute fails, and
+the failing conjunct uses `ActualRoot`, which both nodes contain. The restored
+control shows that it does not rest on the vacuous clauses; only remoteness
+stays vacuous there. A first draft failed only by emptying `HasIntellect`, a
+free parameter the box K node does not mention; it was replaced.
 
 The classical root also adds maximum, perfection, firstness, esse/essence
 identity, matter/form exclusion, remoteness and eight case predicates. That is
-a syntactic comparison of the two definitions; this model does not separate the
+a syntactic comparison of the two definitions; neither model separates the
 nodes on any of it. No certified difference (`strength_comparison`, #1598) is
 registered. The sense-fork precedents factor through a witness-independent
 frame condition. Here the added content constrains the witness of an
@@ -111,8 +126,9 @@ So the packed bundle, with a union of 4, wins against:
 - every existing derivation not through `b9816722`, which costs at least 35;
 - any derivation from `da3facd6`, which costs at least cost(`da3facd6`) = 35.
 
-A new derivation would replace it only with a union of at most 3 that avoids
-`b9816722`, and no such candidate is known. This holds whether or not the
+A new derivation would replace it only with a union not above 4 that avoids
+`b9816722` (exactly 4 only if it wins the tie order), and no such candidate is
+known. This holds whether or not the
 projection is an assembly. Attempt `b3467390` records this as blocked at the
 rule level.
 

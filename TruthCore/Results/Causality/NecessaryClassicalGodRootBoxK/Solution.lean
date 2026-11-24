@@ -53,9 +53,28 @@ theorem separator : Separation.Separator := by
       exact ⟨n, ⟨hR, hN, hM, hP, hE, hF, hMF, hRem, hG, hNine, hField⟩, hU⟩
     · rintro ⟨n, ⟨hR, hN, hM, hP, hE, hF, hMF, hRem, hG, hNine, hField⟩, hU⟩
       exact ⟨n, ⟨hR, hN, hU, hM, hP⟩, hE, hF, hMF, hRem, hG, hNine, hField⟩
+  have hRBody : RestoredBodyExceptRootUniqueness true :=
+    ⟨hRoot true, fun _ _ => trivial, ⟨trivial, fun _ h => Bool.false_ne_true h.2.symm⟩,
+      fun _ _ _ => trivial, rfl, fun _ h => (Bool.false_ne_true h.2.symm).elim,
+      fun h => Bool.false_ne_true h.symm, fun _ h => h, rfl,
+      ⟨fun h => Bool.false_ne_true h.symm, fun _ _ _ => trivial,
+        ⟨trivial, fun x _ hx _ => ⟨rfl, match x, hx with | false, _ => rfl | true, h => absurd rfl h⟩⟩, fun _ h => h,
+        trivial, fun _ h => Bool.false_ne_true h.symm, trivial, trivial, trivial⟩, trivial⟩
+  have hRIff : RestoredClassicalRoot ↔ ∃ n, RestoredBodyExceptRootUniqueness n ∧
+      ∀ x, ActualRoot pairProfile () x → x = n := by
+    constructor
+    · rintro ⟨n, ⟨hR, hN, hU, hM, hP⟩, hE, hF, hMF, hRem, hG, hNine, hField⟩
+      exact ⟨n, ⟨hR, hN, hM, hP, hE, hF, hMF, hRem, hG, hNine, hField⟩, hU⟩
+    · rintro ⟨n, ⟨hR, hN, hM, hP, hE, hF, hMF, hRem, hG, hNine, hField⟩, hU⟩
+      exact ⟨n, ⟨hR, hN, hU, hM, hP⟩, hE, hF, hMF, hRem, hG, hNine, hField⟩
+  have hTwo : ∀ n : Bool, ¬ ∀ x, ActualRoot pairProfile () x → x = n := fun _ hU =>
+    Bool.false_ne_true ((hU false (hRoot false)).trans (hU true (hRoot true)).symm)
   refine ⟨⟨true, fun _ _ => trivial, hRoot true, rfl, fun _ h => h, trivial⟩, ?_, hIff, hBody,
-    hRoot false, Bool.false_ne_true⟩
-  rintro ⟨n, ⟨-, -, hU, -, -⟩, -⟩
-  exact Bool.false_ne_true ((hU false (hRoot false)).trans (hU true (hRoot true)).symm)
+    hRoot false, Bool.false_ne_true, ?_, hRIff, hRBody, fun h => h.2 true ⟨rfl, rfl⟩,
+    fun h => Bool.false_ne_true (h true ⟨rfl, rfl⟩).symm⟩
+  · rintro ⟨n, ⟨-, -, hU, -, -⟩, -⟩
+    exact hTwo n hU
+  · rintro ⟨n, ⟨-, -, hU, -, -⟩, -⟩
+    exact hTwo n hU
 
 end TruthCore.Results.Causality.NecessaryClassicalGodRootBoxK
