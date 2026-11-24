@@ -38,7 +38,9 @@ This module asks two questions (#1926 phase 3):
    following intellect and will as a rational power suffices to make the
    giving willed, and the chance rival must deny the source's intellect
    (law 13). The converse is not proved (`Rational` has no content): other
-   warrants for will at the source would discriminate equally (law 6).
+   warrants for will at the source that are independent of DNP_inv (e.g. the
+   Fifth Way and governor routes, given the holder–root identification) would
+   discriminate equally (law 6).
 
 **What is new.** One overlay of agency primitives on the shared
 `CausalityFrame` (`AgencyFrame`): intrinsic states, external conditions of a

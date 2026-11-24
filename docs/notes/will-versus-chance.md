@@ -133,13 +133,13 @@ DNP′; (4) DNP′ ⇒ no CHANCE_3; (5) the flip: reclassifying powers exchanges
 willed two-way giving and CHANCE_3 with the same set-up; (6) one power and will
 exclude CHANCE_3 for a being with will, whatever the warrant for its will (only
 the bridge "whatever has will has a rational power" is used); (7) both are
-two-way giving; (8)–(10) part A above; (14) set-up necessitation and fixed
-giving (part A above); (11) with excluded middle, DNP′ is
+two-way giving; (8)–(10) part A above; (11) with excluded middle, DNP′ is
 exactly the absence of CHANCE_3 at `w`, and DNP_inv exactly its absence at
 invariant beings; (12) with excluded middle and giving as exercise, an invariant
 two-way giver is willed or CHANCE_3, and not both given one power; (13) the
 chance core: one power, CHANCE_3, intellect, will following intellect and will
-as a rational power are jointly inconsistent.
+as a rational power are jointly inconsistent; (14) set-up necessitation and
+fixed giving (part A above).
 
 **Models.** Theist nonvacuity of A–D (`theistG`, `simpleRational`); the chance
 rival (same frame, set-up, giving and one power, power non-rational: DNP′ and
@@ -176,8 +176,11 @@ for arguments A and B and for the dichotomy of law 12: without it a source can
 give without exercising any power and is then neither willed nor CHANCE_3 (the
 `powerless` model). The converse is **not** proved: `Rational` has no content,
 so nothing here shows that a source without intellect is not willed, and other
-warrants for will at the source (Fifth Way and governor routes, argument D)
-would discriminate equally (law 6). So the case for willed giving at the source,
+warrants for will at the source that are independent of DNP_inv (e.g. the Fifth
+Way and governor routes, given the holder–root identification) would
+discriminate equally (law 6). Argument D is not such a warrant: its will comes
+from DNP_inv, which is exactly the denial of CHANCE_3 (law 11), and it concludes
+will of GOD_4, not of the holder. So the case for willed giving at the source,
 by this route, is at most as strong as the conjunction of intellect at the
 source, one power and the holder-root identification (#1897 gap 2). Intellect
 has its own arguments and its own impersonal rival
@@ -245,13 +248,16 @@ ways).
   intellectual chancer, Pruss's "non-unitary cause"). Provisional judgment: as
   strong as the simplicity case for the source, which this slice does not
   reassess; it is the premise the intellectual chancer denies.
-- *GOD_4 holds the power* (`0050b6ed`, D). Positive warrant: on classical theism
-  God could have refrained from creating (q.19 a.3) and could cease to give
-  existence (q.104 a.3, read for #1897), so God has a power for the joint absence
-  of the actual contingents; directional, not uniqueness. No substantive
-  objection identified given the GOD_4 definition and the existence of
-  contingent concreta. Provisional judgment: a near-definitional direct option
-  on classical theism; its open part is that GOD_4 exists at `w`.
+- *GOD_4 holds the power* (`0050b6ed`, D). PowerFor (DEF `bf7eddca`) is a
+  power whose exercise would initiate a chain issuing in the proposition, while
+  God's joint absence of creatures is realized by non-exercise (withholding;
+  q.104 a.3 ad 3). On #1897's two-way reading of PowerFor for an outcome
+  realized by withholding (#1897 §4, confirmed only conditionally on P2δ's
+  warrant), the bridge follows from q.19 a.3 (God could have refrained from
+  creating) and q.104 a.3 (God could cease to give existence). Its open parts
+  are that reading and GOD_4's existence at `w`. Directional, not uniqueness.
+  Provisional judgment: a plausible direct option on classical theism, as
+  strong as the two-way reading of PowerFor.
 
 ## 6. The strongest standing rival and its price
 
@@ -324,7 +330,9 @@ listed as a next test, not scored.
   rival must deny the source's intellect. By this route the case for willed
   giving at the source is at most as strong as the conjunction of intellect,
   one power and the holder identification; other warrants for will at the
-  source would discriminate equally (law 6).
+  source that are independent of DNP_inv (e.g. the Fifth Way and governor
+  routes, given the holder–root identification) would discriminate equally
+  (law 6).
 - **Overall:** the Θ.5 bridge is not a separate warrant against chance; in this
   slice, will at the first source is supported horizontally, through intellect,
   or through other routes to will.
