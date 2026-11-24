@@ -2,7 +2,7 @@
 
 - **Project** Formal Logos (`moritzbrantner/formal-logos`)
 - **Date** 2026-11-24
-- **Status** Draft research specification in PR #1917. The original draft received independent semantic review. This revision addresses that review, with targeted re-review and formal implementation still ahead.
+- **Status** Independently reviewed research specification in PR #1917. Formal implementation remains open.
 - **Target** `00e962ae-f109-55f7-a7fd-f107ce0dea6b` — `GoodnessIsActualityReading`
 - **Primary consumer** `e0dae79f-c042-5a08-a148-725d0468df91` — `GodIsSupremelyGood`
 - **Evidence baseline** Repository evidence at `0ce1e78ed5e42962586356631a778e24a832c546` and historical route analysis at `fd78b77e6`.
@@ -14,7 +14,7 @@ Preserve the unrestricted goodness–actuality thesis as a separate open proposi
 
 The substantive finding is that the existing divine-goodness result does not need a general theory evaluating every positive determination. After independent selection of the source and proof of its causal responsibility for the actual perfections of distinct effects, the exact remaining pointwise obligation is `GoodIn n esse`. Under #1116's existing due-actuality thesis, and given actual esse, that obligation is equivalent to `Due f n f.substantial` when the dictionaries and substantial respect are correctly identified.
 
-The direct philosophical case is that constitutive actuality supplies a non-instrumental ontological good. The selected-source application needs actual esse, subsistence in the intended reception profile, and a positive evaluative bridge at that same source. The bridge from constitutive perfection to desirability is the open step.
+The direct philosophical case is that constitutive actuality supplies a non-instrumental ontological good. The selected-source subsistence argument needs actual esse, subsistence in the intended reception profile, and a positive evaluative bridge at that same source. The bridge from constitutive perfection to desirability is the open step.
 
 ## 2. Scope, requirements, and non-goals
 
@@ -224,7 +224,7 @@ These finite comparisons test conditional consequences in the specified tables. 
 ### 9.1 First checkpoint: reusable results
 
 - Run `truth related 00e962ae`, `truth dossier`/`context --proof-use` and `truth lean-reuse` as appropriate on current main. Search for exact matching candidates and existing sense records; use them if semantically identical. Confirm scope against the canonical `AGENTS.md` and installed conventions.
-- Register the smallest sufficient sibling statement (prefer esse-forward) and exact residual/due boundaries. Use opaque UUIDs, appropriate existing definition/disambiguation records, explicit dependencies and frozen Challenge/Solution pairs with existing module and Comparator conventions. Preserve `00e962ae`, its source claims, and its direct-assumption option.
+- Register the reusable esse-forward sibling and exact residual/due boundaries. Use opaque UUIDs, appropriate existing definition/disambiguation records, explicit dependencies and frozen Challenge/Solution pairs with existing module and Comparator conventions. Preserve `00e962ae`, its source claims, and its direct-assumption option.
 - Give the candidate independent direct warrant and due/identity support options. If adding q.5 a.3 or q.6 a.3 claims, use pinned passage evidence and scope-limited attribution; do not invent a claim that the passage states the Lean theorem literally.
 - Keep no new global axiom, definition of `GoodIn`, modal requirement or source-specific proxy that assumes the desired endpoint.
 
@@ -268,7 +268,7 @@ After integrating formal siblings and migrating selected consumers, run `target/
 | "Aquinas states the new guard." | q.6 a.3 uses three kinds of perfection; q.5 a.3 excludes merely logical entities in reply. | Keep the source's scope, use supports where needed, and mark dictionary/attribution conditions OPEN. |
 | "25 routes are now fixed." | Lower-level theorem migration is not corpus reachability. | No route migration count or frontier closure claimed. |
 
-The independent semantic challenge covered the original documentation at `b03c55570d796d1841d0481b4da71abd203139c1` and prompted the scoped repairs in this draft. The revised assertions are subject to targeted re-review under the bounded review-and-repair procedure. Subsequent formal findings need their own challenge of the final records, proofs, model assignments, any source evidence used for attribution, and the provisional judgment. [Review procedure](../systematic-corpus-loop.md#final-outcome-review-and-repair)
+The independent semantic challenge covered the original documentation at `b03c55570d796d1841d0481b4da71abd203139c1` and prompted the scoped repairs in this draft. A targeted re-review accepted the documentation specification at `a7f53fea1a14026a91929335e2d19d942b07a0e5` with no remaining semantic findings. Subsequent formal findings need their own challenge of the final records, proofs, model assignments, any source evidence used for attribution, and the provisional judgment. [Review procedure](../systematic-corpus-loop.md#final-outcome-review-and-repair)
 
 ### Acceptance checklist for subsequent formal implementation
 
