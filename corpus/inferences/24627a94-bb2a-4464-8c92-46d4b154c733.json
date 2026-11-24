@@ -1,0 +1,13 @@
+{
+  "id": "24627a94-bb2a-4464-8c92-46d4b154c733",
+  "label": "Realization cuts to bearer esse pass through intermediate contributors by supply induction (inference)",
+  "input_statement_ids": [
+    "791fa216-ce40-5e7d-82c5-0bd5fe245446",
+    "9be98ad0-b3bd-4c81-a9b0-eeb8f1d37b5e"
+  ],
+  "output_statement_id": "ca58266a-44d2-4388-a6db-b6a02c4be057",
+  "rule": "Induction on the restricted supply derivation within a witness set of realization inputs",
+  "meaning": "Classify the act as a mode. In the specified region an intrinsic derivation must yield its bearer's esse. A joint derivation either yields that esse or has a contributor still in the region, to which induction applies. A surviving derivation thus supplies the same bearer's esse. Application to real accidents needs a faithful realization interpretation.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

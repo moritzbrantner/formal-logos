@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.ParticularActuality.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ParticularActuality.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.ParticularActuality.controls"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

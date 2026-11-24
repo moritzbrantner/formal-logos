@@ -1,0 +1,23 @@
+{
+  "id": "2d54eb1b-1c1a-4374-a599-b86fb7ff43cd",
+  "label": "Realization cuts to bearer esse pass through intermediate contributors by supply induction",
+  "premise_statement_ids": [
+    "791fa216-ce40-5e7d-82c5-0bd5fe245446",
+    "9be98ad0-b3bd-4c81-a9b0-eeb8f1d37b5e"
+  ],
+  "conclusion_statement_id": "ca58266a-44d2-4388-a6db-b6a02c4be057",
+  "inference_ids": [
+    "24627a94-bb2a-4464-8c92-46d4b154c733"
+  ],
+  "meaning": "Classify the act as a mode. In the specified region an intrinsic derivation must yield its bearer's esse. A joint derivation either yields that esse or has a contributor still in the region, to which induction applies. A surviving derivation thus supplies the same bearer's esse. Application to real accidents needs a faithful realization interpretation.",
+  "definition_ids": [
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "c9d479bb-308a-5a2b-9755-ddc0170d4e35",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8",
+    "42f8b601-09d6-5ad0-af5f-27af30b95166"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
+  ]
+}

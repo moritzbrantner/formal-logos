@@ -1,0 +1,10 @@
+{
+  "id": "54f304ed-726b-4fa3-af61-df5b29875c72",
+  "label": "Joint versus enabling realization survives the secondary-only transfer comparison (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "a12f2094-2b8f-4148-805e-c742324e423e",
+  "rule": "Use the existing secondary-only model and construct supply derivations and cut obstructions on its four indexed roles",
+  "meaning": "The same recipient and skill are tested in each variant. Suppressing the recipient's esse record keeps the producer's esse available and leaves only the enabler variant able to supply the skill. Suppressing the recipient's skill record spares its esse. The original effective-cause table is independently assigned and fails universal transfer even in the joint variant. A positive supply tree in the enabler variant is not an occurrence with an absent subject.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

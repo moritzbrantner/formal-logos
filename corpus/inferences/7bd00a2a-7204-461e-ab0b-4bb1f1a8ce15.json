@@ -1,0 +1,10 @@
+{
+  "id": "7bd00a2a-7204-461e-ab0b-4bb1f1a8ce15",
+  "label": "Exact deletion test for a bypass of nonintrinsic bearer esse (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "3651b6e2-49c9-4359-97dc-c9650dc32a9c",
+  "rule": "Delete every group producing bearer esse and transport any bypassing derivation through that deletion",
+  "meaning": "The special deletion cuts the nonintrinsic bearer index by last-step inversion. Conversely a surviving derivation after an arbitrary cut that removes esse cannot use a last group producing esse at any node. Induction transports it to the special deletion, a contradiction. The equivalence is a theorem of the stipulated restriction semantics.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

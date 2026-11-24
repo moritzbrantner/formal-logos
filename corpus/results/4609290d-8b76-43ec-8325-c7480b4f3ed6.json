@@ -1,0 +1,11 @@
+{
+  "id": "4609290d-8b76-43ec-8325-c7480b4f3ed6",
+  "label": "Realization cuts to bearer esse pass to selected actual respects by last-group inversion",
+  "argument_id": "a0b0e697-5294-48ff-b7cc-5557d7a12bce",
+  "challenge_module": "TruthCore.Results.Causality.ParticularActuality.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ParticularActuality.Solution",
+  "theorem": "TruthCore.Results.Causality.ParticularActuality.inheritance",
+  "comparator_config": "results/4609290d-8b76-43ec-8325-c7480b4f3ed6/comparator.json",
+  "status": "solution-present",
+  "description": "An intrinsic last step contradicts the no-seed clause. An admitted group must have a supplied bearer-esse contributor even after restriction, contradicting loss of esse supply. The interface provides positive original supply. No claim about a cause of every other being follows."
+}
