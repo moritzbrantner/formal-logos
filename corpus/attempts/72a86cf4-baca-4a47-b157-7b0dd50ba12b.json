@@ -12,8 +12,8 @@
   ],
   "kind": "reading",
   "outcome": "blocked",
-  "summary": "See docs/notes/causal-perfection-transfer.md#intrinsic-completion-versus-kind-completeness-2026-11-24-draft-continuation. Separate noncognitive self-maintenance's beneficiary from Aristotle's complete exercise, and living nature from vital episodes. Q.18 a.3 ad 3 removes finite vegetative mechanisms, not the need for a positive immanent operation. SCG I.28's separated-whiteness analogy motivates uncontracted possession in a mode but the across-mode generalization requires the substantive absolute-esse account. Use the existing form/end due-perfection distinction: no due determination missing plus every pure determination due suffices for pure fullness; a four-variant structural test retains a supplied root, stipulated own being, actual distinct living effect, productive coverage, strict purity and nonvacuous passive potency. Absence of due defects alone does not entail fullness in this signature. Explicit graph reuses 95c04a6d, bc17c420, 7d8bbdcb and uniqueness consumers; no scope/sense collapse into 64498e7e. Pivot to d164b1ff and the intrinsic exclusion-to-limitation bridge, preserving the qualified life branch. Independent review and canonical verification not performed.",
-  "blocker": "Identify a genuinely pure positive actuality with independent content (not merely an unreceived active principle or finite maintenance process), and justify the bridge from its nature-based absence to contraction of esse rather than lack of another kind. A positive primitive whole-nature account would have to explain non-contraction under the same standard. Show joint compatibility and Has/InAct sense applications before changing the universal target or any proof. Independent challenge and prepared-checkout CLI tests remain outstanding.",
+  "summary": "See docs/notes/causal-perfection-transfer.md#intrinsic-completion-versus-kind-completeness-2026-11-24-draft-continuation. Historical R3 compares the beneficiary of noncognitive maintenance with Aristotle's complete exercise, and living nature with vital episodes. Q.18 a.3 ad 3 removes finite vegetative mechanisms and leaves the need for a positively specified immanent operation. A demonstrated finite requirement revises the purity classification of that candidate. SCG I.28's separated-whiteness analogy motivates uncontracted possession in a mode. Across-mode possession needs the substantive absolute-esse account. Under the existing form/end due-perfection distinction, absence of due defects plus every pure determination being due suffices for pure fullness. The four-variant local test retains a supplied actual root, stipulated OwnBeing, actual productive witnesses, strict purity and nonvacuous passive potency, and separates absence of due defects from fullness. The note gives the registered conjunctive bundles and exact root-scoped application. The initial independent semantic challenge of PR #1916 at 35c03763084282b3b33bacf6b4ab274957180cbc reproduced the controls and requested changes. The repaired scope and assessment are pending targeted re-check.",
+  "blocker": "The same-source link from absence of an independently warranted pure OfBeing mode to intrinsic restriction of esse remains open. The standing rival needs a reason for non-contraction under the same act/recipient account. Generalization beyond the selected mode remains open. Strict noncognitive life is a secondary candidate with its own positive-content and purity burdens.",
   "evidence": [
     "PR-1518",
     "PR-1855",
@@ -22,5 +22,21 @@
     "PR-1914",
     "PR-1916",
     "586275e6-d7b0-47a1-9180-5e245d6d4de1"
-  ]
+  ],
+  "current_assessment": {
+    "date": "2026-11-24",
+    "statement_ids": [
+      "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96",
+      "c4fb87a6-047d-5f3d-b3e3-8dc0c4bbc946"
+    ],
+    "scope": "Across-mode intrinsic whole-power possession at the same actual source on the OwnBeing reading, and the Pure-to-OfBeing classification for the selected mode. This informs conditional support for fe67d766.",
+    "assessment": "Contracted reception and the non-genus account of esse motivate whole-power possession as a direct and cumulative option. OwnBeing with within-kind completeness or freedom from due defect leaves across-mode warrant open. A determinate primitive nature offers an account of mode-specific powers and exclusions. That rival would weaken fullness if it retained OwnBeing for the same source, genuinely excluded an independently warranted pure OfBeing mode and justified the exclusion as non-contracting under the same act/recipient account. The finite controls isolate the disputed conditions and leave their metaphysical application unresolved. A finite implementation can revise the purity classification of its candidate without settling whole-power possession.",
+    "next_test": "Start with d164b1ff. Independently characterize one positive mode, justify its purity and classify it as OfBeing through c4fb87a6. Keep the same actual source and OwnBeing assumptions. If the mode is absent, test E for nature-based exclusion and L for real contraction, then test whether such contraction requires a receiver on the same #1914 account. Generalization to all OfBeing determinations remains open. Strict noncognitive life is secondary.",
+    "note": "docs/notes/causal-perfection-transfer.md#current-assessment-and-next-test",
+    "reviewed_revision": "35c03763084282b3b33bacf6b4ab274957180cbc",
+    "review": "changes_requested",
+    "publication": "published",
+    "evidence": "PR-1916 initial independent semantic challenge of the published draft at 35c03763084282b3b33bacf6b4ab274957180cbc against main ba8a75398b009932a33f649ec7abcb2069a3e030. The challenger reproduced the embedded controls and requested repairs to argument conjunctions, operation exclusion and life/purity scope. The disposition records the initial challenged draft. The repaired assessment awaits targeted re-check and integrated-head checks.",
+    "supersedes": "None of the earlier reviewed judgments. The historical R1–R3 findings and their life-first sequence remain evidence. The next_test field provides the current research priority for this scope."
+  }
 }
