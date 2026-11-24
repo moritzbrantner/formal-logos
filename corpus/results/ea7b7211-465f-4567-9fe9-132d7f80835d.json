@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Causality.ReceiptMatching.actualRootOfReceiptMatching",
   "comparator_config": "results/ea7b7211-465f-4567-9fe9-132d7f80835d/comparator.json",
   "status": "solution-present",
-  "description": "The unmatched sender is actual and concrete. If it had a selected actual concrete ground, it would admit an injective match, contradicting the obstruction. The root is relative to the profile's grounding relation. A freely chosen transfer class has no independent evidential force."
+  "description": "The unmatched sender is actual and concrete. If it had any actual concrete ground in the profile, it would admit an injective match, contradicting the obstruction. The root is relative to the profile's grounding relation. A freely chosen transfer class has no independent evidential force."
 }

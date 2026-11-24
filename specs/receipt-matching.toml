@@ -43,7 +43,7 @@ theorem = "actualRootOfReceiptMatching"
 premises = ["A one-way selected transfer has an upstream matching deficit on finite export ancestry", "Some selected transfer leaves its finite export ancestry without a return path", "Each actually grounded bearer can match its selected exports to distinct selected receipts"]
 conclusion = "dc397705-d727-419e-92f9-65d44e1ff15d"
 rule = "Apply the finite matching obstruction to the actual roster and eliminate a concrete ground"
-meaning = "The unmatched sender is actual and concrete. If it had a selected actual concrete ground, it would admit an injective match, contradicting the obstruction. The root is relative to the profile's grounding relation. A freely chosen transfer class has no independent evidential force."
+meaning = "The unmatched sender is actual and concrete. If it had any actual concrete ground in the profile, it would admit an injective match, contradicting the obstruction. The root is relative to the profile's grounding relation. A freely chosen transfer class has no independent evidential force."
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 
 [[argument]]
