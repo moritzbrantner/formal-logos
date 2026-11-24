@@ -1,0 +1,14 @@
+{
+  "id": "62a49533-d670-4bb0-a81e-5afdf2bfb4a1",
+  "label": "Durand of Saint-Pourçain, Commentary on the Sentences, redaction C",
+  "kind": "primary_text",
+  "author": "Durandus de Sancto Porciano",
+  "work": "Commentarius in libros Sententiarum",
+  "citation_system": "redaction, book, distinction, question and paragraph; SCTA witness folio and TEI paragraph ID",
+  "work_urn": "http://scta.info/resource/jsnvu6",
+  "edition_urns": [
+    "http://scta.info/resource/jsnvu6-d1e2369/cod-du87us"
+  ],
+  "catalog_url": "https://reader.lombardpress.org/text/jsnvu6",
+  "notes": "The Latin witness for II d.1 q.5 is Jeffrey C. Witt’s draft SCTA diplomatic transcription of Lyon 1563. The University of Cologne Digital Durandus Research Portal presents the corresponding redaction C text from Venice 1571. Its parallel display places C.II.1.5.12 alongside A.II.1.4.12 (https://durandus.uni-koeln.de/chunks/II_1_5_12). Cite the redaction when numbering this question. The witness pinned here is the Lyon transcription."
+}

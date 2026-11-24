@@ -1,0 +1,12 @@
+{
+  "id": "f4dced8e-7e66-4c91-a610-78d8a0b6568c",
+  "label": "Separate a forced aggregate source share from credit for either particular output (inference)",
+  "input_statement_ids": [
+    "4b73eb6b-a0fe-412c-9b81-838f9029d8b2"
+  ],
+  "output_statement_id": "9f5c2560-1611-4dbb-a72c-c38a0338795e",
+  "rule": "Instantiate the sharp source bound and construct the opposing allocations for identical margins",
+  "meaning": "The two positive-input cases distinguish the role of storage from compulsory consumption. In the exhausted two-output case the source must feed the combined work, but either individual outlet can receive the named unit.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

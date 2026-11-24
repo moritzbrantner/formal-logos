@@ -1,0 +1,10 @@
+{
+  "id": "9f5c2560-1611-4dbb-a72c-c38a0338795e",
+  "label": "Balanced work can force source participation yet leave its particular output unresolved",
+  "paraphrase": "With one stored unit, one named receipt, one unit of work and one remaining, two allocations fit all observed totals. Only one sends the named receipt into the work. With the same inlets, two units of work and none remaining, every fitting allocation sends named input into the combined work. In every such allocation, both assignments of its one named unit to either of two one-unit outputs are compatible with the counts. This tests both the possible source role under a zero lower bound and the scope of a positive lower bound.",
+  "lean_declaration": "TruthCore.Causality.ReceiptAllocation.Controls",
+  "definition_ids": [
+    "cc5be5e2-5a9d-4831-86c9-32dd91482f5b",
+    "7b20df90-a3d9-41c7-be8b-1d2beb5b995a"
+  ]
+}

@@ -14,6 +14,8 @@ the sections below it keep their own dates and wording.
 
 The [particular-actuality investigation](actuality-esse-research.md#9-does-a-particular-actuality-share-in-its-bearers-received-being) tests whether a real mode draws on the received being of its subject, and what further premise would attribute causal responsibility for the exercise to that giver.
 
+The [later reading of Durand and Suárez](actuality-esse-research.md#12-what-the-conservationist-grants-about-this-effect) settles the historical question left open below. Durand attributes the very action mediately to the giver of its exercised power. His denial of immediate divine concurrence leaves the earlier finite skill comparison in its role as an analyst’s control.
+
 ## Source findings and fidelity
 
 Related discovery, the target dossier, the dossiers of all touched premise
