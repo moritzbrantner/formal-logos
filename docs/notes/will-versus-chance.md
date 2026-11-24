@@ -1177,3 +1177,314 @@ of this new assessment or certify this changed head. No local
 checkout, Lean/Rust CLI or independent reviewer worker is available
 here; final applicable CI, computed premise comparison and
 independent semantic review remain outstanding.
+
+
+## From universal existential supply to proper formative causation (2026-11-25)
+
+Continuation of the same-source formative-governance question, not a new
+definition or argument registration. The previous delivery at
+`ac10a81dc05aff81d36db051dee3c652fd6be605` remains preserved in this draft
+and its scoped attempt. The distinct test here is whether a first source's
+responsibility for the *particular form of its effect*, rather than mere
+generic power to give existence, provides positive grounds for actual
+intellectual formation. Reuse #1737, #1941, #1944, #1962, #1971's preceding
+sections, [causal-perfection transfer](causal-perfection-transfer.md),
+[the q.44 supply investigation](q44-inferential-dependency.md) and
+[the director-rival boundary](teleonomy-director-rival-boundary.md).
+Do not repeat the modal-collapse or power-reclassification proofs.
+
+### A. Source-side specification is a genuine explanatory demand
+
+**Source reading, navigation only.** Read Thomas Aquinas, [De veritate q.3
+a.1 co., ad 5, 8, 11](https://catholiclibrary.org/library/view?chunk.id=00000069&docId=/Medieval-EN/XCT.024.html)
+and [q.3 a.5 co., ad 3–9](https://catholiclibrary.org/library/view?chunk.id=00000073&docId=/Medieval-EN/XCT.024.html),
+in the English translation. In a.1 co. he distinguishes the agent's
+own formative principle, the form inhering in the effect, and the
+exemplar according to which it is made. He also separates coincidental
+resemblance from actual imitation through an intended end. His explicit
+reason for requiring intellectual determination at the first source is
+that an end-directed agent not determining its end for itself must
+receive that end from a higher agent. Ad 5 restricts the required
+resemblance of a producer of composite things to the proximate
+efficient cause, not every first efficient cause; ad 11 distinguishes
+the knower-side medium from the object-side determination.
+
+The further argument in a.1 sed contra 4 appeals to a universal
+cause's appropriation to particular effects. It is a distinct rationale
+worth investigating, not a proved premise obtained from its placement
+in the article. Article 5 co. distinguishes actual practical knowledge,
+virtual practical knowledge and two speculative cases, even of
+producible things. In its discussion of producibility it requires
+consideration of what must be jointly present for the thing to exist,
+rather than considering abstracted features separately. Ad 3 allows
+an exemplar of something never produced. Ad 6 distinguishes the
+practical and speculative ideas by their relation to operation, not as
+two separate divine entities; ad 7–9 distinguish knowing and being,
+the added relation of will, and knowing goodness as true from considering
+goodness as an end. Thus possession of an intelligible likeness, or even
+an idea in the broader potentially formative sense, cannot be
+identified with its actual operative adoption. These are research
+readings, not new pinned claims. No assertion is made that an
+independent source-fidelity check has occurred.
+
+Read also [SCG II.24, arguments 1–3](https://aquinas101.thomisticinstitute.org/articles/selection-from-st-thomas-aquinas-summa-contra-gentiles-ii-c-24).
+The wisdom argument uses prior voluntary production; the likeness
+argument says that a voluntary agent produces through an intellectual
+likeness in its voluntary capacity. Its stronger exclusion of a
+merely natural principle appeals to one natural mode having one
+effect. The argument from ordered things presupposes that the actual
+ordering requires intellectual knowledge of relations and ends.
+Neither source is independent evidence for the universal denial of
+good-sensitive natural propensities once these disputed premises
+are granted only on one side of the comparison.
+
+For the current comparison distinguish **three questions of supply**:
+
+1. Does n give x esse, rather than merely specify which x would be
+   admissible?
+2. Does n account for x *having this actual form and organization*,
+   rather than being just a general enabling cause of an independent
+   formative contribution?
+3. Does the formative contribution derive its character from the
+   content n actually understands, in its operative capacity as
+   understood and adopted?
+
+The distinction between (1) and (2) is already substantive in
+`f8ba2429`, `b26c10a0` and `5e281daf`: general causal reach,
+causation of actual perfections and total causation of the recipient's
+being have different scopes. Even their stronger scope does not
+settle (3). Generic `CausesIn` does not identify modes of causal
+contribution; #1941's `GivesTo` is not silently substituted for it.
+The analysis below concerns **actual effective formative responsibility**
+and must not be read back into every instance of those statements.
+
+### B. Appropriation of a direct existential cause: the simultaneous-diversity test
+
+Suppose n is the universal existential source; take a **local,
+strong** case in which it directly supplies two actual recipients x
+and y, whose determinate kinds and organization differ. Suppose it
+supplies their actual being in the constitutive respects at issue,
+rather than only supplying general efficacy to another independent
+formative source. Do not infer this directness from roothood alone;
+the q.44 mediated-causation analysis keeps that bridge open. No
+pre-existing patient or externally imposed specification is admitted
+for this local test.
+
+A narrower argument can then put pressure on one natural-source
+reading without repeating a modal-collapse theorem:
+
+* The two recipients have different relevant positive formative
+  determinations in the actual order.
+* Under the granted total, direct formative responsibility, the
+  source must account for both actual determinations. Merely
+  identifying one uniform existential enabler, or listing forms
+  compatible with being supplied, is not yet that account.
+* If every such direct natural operation can only reproduce a
+  single kind univocally, both actual determinations would be
+  instances of that one kind in the relevant comparison. The
+  granted diversity contradicts that narrower natural-operation
+  premise. This inference concerns simultaneous products, not
+  difference of giving across accessible worlds.
+
+The last premise is **not** entailed by one power, one source, strict
+simplicity or invariant set-up. Even one and the same operation can
+have differently specified termini. In particular the premise does
+not follow from the claim that a power has a definite natural
+character; having a single definite *mode of operation* is not the
+same as producing a single kind of effect. Equivocal causation and
+a formative principle of a whole differentiated order are positive
+alternatives. A source producing different effects directly need
+not reproduce each effect's form in itself as a finite natural
+instance. No proof is claimed that the actual universe supplies
+the stipulated direct, total, different-kind witnesses.
+
+**Concrete rival test.** Hold fixed the relevant kinds of x and y
+and their distinct but complementary roles. Consider a thin
+structural interpretation with an intrinsically owned, productive
+principle whose realization gives one source-dependent bearer of
+role A, one of role B, and a complementary relation between them.
+The role definitions are fixed in advance, not read off the observed
+labels, and neither bearer receives its role through an independent
+prior material donor. One admissible realization can contain
+additional good effects and another can omit them. The principle
+supplies the whole chosen arrangement rather than acting as a
+mere condition for an otherwise supplied arrangement. There is no
+apprehension or adoption of the roles in the impersonal version;
+in the personal version their meaning is apprehended and genuinely
+used as the formative measure of that same act of supply. This
+specifies a comparison of explanatory roles, not an implemented
+CausalityFrame, a proof of strict simplicity or a probability model.
+The objective relational constraint does not cause its own
+instantiation; the rival posits a concrete power whose productive
+nature has that structure.
+
+A useful distinction follows. **An impersonal proposal that supplies
+only undifferentiated actuality but appeals to a second autonomous
+formative factor cannot meet the granted local direct-formative
+scope.** Such a proposal can still be a mediated creator under
+weaker premises. A proposal with an intrinsically owned
+noncognitive, form-specific productive nature is a stronger rival:
+it does not owe a separate external form-giver by the above
+reasoning. It owes an account of the reality and efficacy of its
+own structured productive nature. The personal account owes
+precisely the analogous formative application, not merely a
+knower plus an existential giver. It cannot infer a numerical
+plurality of internal constituent causes from the rival's
+structured role description while itself treating distinct
+intelligible contents as noncompositional. The two-way variation
+of actual recipients leaves the existing strict-efficacy and
+same-act controls unchanged.
+
+### C. The positive candidate: constructive intelligibility as actual measure
+
+There is a more specific affirmative interpretation than
+identifying production and intellection as acts of one subject.
+Grant n's intrinsic self-understanding and its knowledge of the
+real principle through which x can exist. A constructive
+intelligible specification concerns the kind of x, the jointly
+required constitutive conditions of x's being, and the dependence
+of their realization on n's power. It need not enumerate every
+feature of the world. When n actually produces under this
+specification **because the understood form is its adopted measure
+of giving**, the act which supplies x gives an answer not only
+to what produces x but why the supplied actuality has that
+intelligible organization in the scope of the specification.
+This is a positive explanatory proposal: the content specifies
+what would count as successful realization independently of which
+particular eligible x is produced. It need not be an earlier
+event, a distinct real form received from elsewhere, or an
+executive selector. This is the actual, rather than merely
+virtual, practical reading of De veritate q.3 a.5.
+
+Test a concrete scope. Understanding the constitution of a
+two-part support relationship requires understanding the roles
+together, not merely the definitions of each part in isolation.
+An artisan who adopts that relational specification and
+nondeviantly realizes it gives the relevant shape and relations
+for a reason; a noncognitive generative power whose positive
+structure produces the same complementary organization gives a
+nonintentional formative explanation. Merely knowing the
+relationship while executing the independent noncognitive power
+does not establish the first account. Conversely the existence
+of another constructive description of the same structure does
+not show that an agent actually using the specification is
+governed by the blind alternative.
+
+This yields a narrower opening for cumulative warrant: if a
+source has **actual nonreceptive understanding of the very
+constructive principle of its production**, actual
+form-responsibility, and a warranted reason for interpreting
+that principle as operative in its mode of intellectual
+apprehension, it supplies the relevant intentional explanation.
+Nonreceptive self-knowledge, complete knowledge of producibility,
+and actual direction by that knowledge are three distinct
+obligations. Knowing the nature of an objective propensity
+without acting from the knowledge would meet the first two
+under suitable content conditions. The extra formative-role
+interpretation is the open step; it must not be derived by
+using the word "exemplar" in a sense that already includes it.
+
+A related underived-end argument also needs sharpening. If the
+source's own end is imposed by a prior distinct agent, it is
+not the ultimate source in the stipulated explanatory respect.
+But the alternatives are not exhausted by an externally
+imposed end and an actually intellectually adopted end. An
+underived noncognitive nature may be intrinsically directed
+toward an objective good without receiving that direction from
+elsewhere. Calling such direction self-determination in the
+weak, nonderivative sense does not establish self-adoption in
+the strong, intellectual sense. De veritate q.3 a.1 explicitly
+supports the stronger director principle as an argumentative
+commitment. The existing `564ce19b` director principle has
+the exact noncognitive-tending rival; the present local
+first-source restriction excludes appeals to an external
+imposer, not the underived teleological replacement itself.
+See [the exact rival](teleonomy-director-rival-boundary.md).
+The next burden is to show why a source-side positive
+teleological structure has or must have intentional content
+rather than merely nonreceptive normative efficacy.
+
+### D. Consequences and next discriminating test
+
+**Provisional assessment.** The simultaneous-diversity test
+sharpens the claim that universal productive power cannot be
+treated as mere undifferentiated supply when direct actual
+form-responsibility is granted. It puts conditional pressure
+on a univocal single-kind natural-operation principle. It
+does not refute structured impersonal powers, and does not
+derive intellectual formation from the diversity of effects.
+Actual constructive intellectual knowledge is a positively
+motivated account of proper formative causation; it earns
+intentional-explanatory credit if the actual giving is
+constituted by that knowledge as practically operative. The
+strongest rival is a necessary, underived, invariant concrete
+source with a genuinely productive and form-specific
+good-directed principle, whose efficacy and intrinsic
+constitution still need warrant. A contemplative version can
+add nonreceptive knowledge of that very principle without
+granting its practical use. No unconditional ranking or premise
+establishment is proposed.
+
+The existing chain remains explicit: the causal-perfection
+route through `f8ba2429` and `64498e7e` concerns causation
+and formal/eminent possession; the objective exemplary
+eminence interpretation in
+`TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence`
+does not assert actual noesis. Its `Norms` relation is a
+primitive with its own interpretation obligation. The same
+n must independently satisfy actual intellect for the
+application to `29818edd`, actual rational-power exercise
+with the existing #1941 premises, and the #1944
+holder-root bundle for `66aecdd7`. The new constructive
+measure proposal would then support the actual practical
+interpretation; it is not a proof of a new implication
+from those capacity endpoints. Neither the total-giving
+reading nor the formative measure alone licenses
+`a94c5dfc` (willing each recipient's own existence-good),
+the full existential PSR `608a262d` or its BX1/BX2
+application to `8a8d00e9`. No new graph edge or new
+philosophical claim record.
+
+**Reopen on one of two distinct branches, not another
+output-profile comparison.**
+First, investigate whether a source's nonreceptive
+understanding of a constructive principle can be constitutive
+of its actual production without merely knowing a separately
+specified productive nature. The discriminating evidence would
+be a defended criterion identifying the act's intelligible
+measure by its actual causal role (not just by independent
+success conditions), together with a same-source application
+under strict simplicity. Second, investigate whether the
+noncognitive source's *intrinsic productive structure* can
+really ground its directedness to objectively good
+differentiated effects without being a collection of distinct
+actual determinations or merely a constraint. Compare
+constitution of the source rather than counting described
+outputs; if the rival grounds the structure in a genuinely
+unitary concrete power, the first route must answer it on
+matched terms. If it requires independently supplied
+differentiation, use the existing direct versus mediated
+supply results and preserve the possibility of mediated
+causation rather than infer universal defeat. These branches
+give separate positive research tasks for the intellectual
+and impersonal accounts; neither failure to construct a
+model nor the inability to verify a new Lean result is a
+philosophical refutation.
+
+**Verification boundary.** Directly inspected the existing
+transfer/total-cause records, the objective-eminence
+declaration and director-rival note. Source reading links
+above identify the inspected passages and limits; no witness
+materialization or attribution mutation is claimed. Author
+self-sweep: matched causal scope; explicit directness and
+actual diversity assumptions; no actual strict-simple model;
+no directness or intentional content inferred from primitive
+flags; no stronger prose than the inspected declarations;
+prior distinction between normative permission and actual
+exercise maintained; no closure change. This is preliminary
+analyst work, with no local truth CLI, Lean, installed
+convention or independent semantic review available. Prior
+CI run 45512081987 and review at
+`ac10a81dc05aff81d36db051dee3c652fd6be605` were pending
+when this continuation began; neither can validate the new
+head. Retain the draft and independent challenge requirement.
