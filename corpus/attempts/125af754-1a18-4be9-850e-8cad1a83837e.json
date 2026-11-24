@@ -1,0 +1,22 @@
+{
+  "id": "125af754-1a18-4be9-850e-8cad1a83837e",
+  "label": "Could a strictly ungrounded absence be recognized from a world or a dependent effect?",
+  "date": "2026-11-23",
+  "statement_ids": [
+    "6508c239-b36d-4010-b9e4-ff0cdd5757e5",
+    "20d5fecd-950e-42f8-8dc9-3014491ff6ae",
+    "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
+  ],
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "See docs/notes/contingency-receptivity-c2.md#could-a-genuinely-ungrounded-absence-be-recognized. On the complete-world account with full instance grounding, an admissible n-free world grounds n's possible absence noncausally; a world description constructed partly from a prior permission cannot explain that permission on pain of circularity. Grounding an absence possibility at a reflexive omission world and transferring that grounding to actuality are different demands. A return edge supplies w as a witness to the possible presence of the very same n from the omission world. The independent omission of one effect for which the existence of n alone suffices would witness possible absence without an exhaustive inventory; the possibility could then be epistemically recognized downstream even if ontologically primitive at the source. Evidence retaining n in the omission case instead defeats that sufficiency claim. Analyst applications of existing arguments, no premise change. Independent semantic challenge of d138ba55 and targeted recheck of final note blob c1206bd1fd26882575fabe7c790a906e913574cb verified the full-ground premise, effect witness, locality and reference boundaries, and corrected two evidence identifiers. The scoped suspension judgment was retained.",
+  "blocker": "No independent priority of complete omission worlds over de re admissibility was established. Neither reflexivity nor return access transfers grounding to w. No identified output combines warranted fixed numerical identity and independent omissibility at the same scope. Reopen on evidence for a specific output or a direction of grounding with independent modal application.",
+  "evidence": [
+    "8ad1804e-06d1-4491-ba96-d3382245f2ad",
+    "6eb4d324-43a8-4348-b065-7bd998bc3653",
+    "205b0b76-4626-50b9-a1d2-60e80f3b8bc1",
+    "a35b5d79-8663-5a83-8099-8117c0709ead",
+    "PR-1889",
+    "PR-1897"
+  ]
+}

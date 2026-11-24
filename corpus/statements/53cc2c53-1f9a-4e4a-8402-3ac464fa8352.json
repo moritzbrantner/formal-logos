@@ -1,0 +1,9 @@
+{
+  "id": "53cc2c53-1f9a-4e4a-8402-3ac464fa8352",
+  "label": "A bearer is numerically identified by all its nonempty-path ancestors",
+  "paraphrase": "Open criterion of numerical identity on one selected graph. For every x and y, agreement on all z that reach them by a nonempty directed path implies x = y. This ranges over all bearers, including dependents. A nonempty path can return to its starting point in a cyclic graph. Interpreting the paths as precisely the full existential ancestry of actual concrete beings remains open.",
+  "lean_declaration": "TruthCore.Causality.AncestorIndividuation.IdentityByAncestors",
+  "definition_ids": [
+    "1dff2d68-1348-5e7e-8ee7-248af63c8c53"
+  ]
+}

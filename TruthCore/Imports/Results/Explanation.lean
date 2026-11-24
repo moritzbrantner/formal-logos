@@ -53,7 +53,9 @@ public import TruthCore.Results.Explanation.PSRLaterAxes.Solution
 public import TruthCore.Results.Explanation.PSRScope.Solution
 public import TruthCore.Results.Explanation.PSRSelfApplication.Solution
 public import TruthCore.Results.Explanation.PSRStrength.Solution
+public import TruthCore.Results.Explanation.PairedInterventions.Solution
 public import TruthCore.Results.Explanation.PathRelocation.Solution
+public import TruthCore.Results.Explanation.PopulationEntry.Solution
 public import TruthCore.Results.Explanation.SelectionCoverageBoundary.Controls.Solution
 public import TruthCore.Results.Explanation.SelectionCoverageBoundary.Coverage.Solution
 public import TruthCore.Results.Explanation.SelectionCoverageBoundary.FalseFactivityFailure.Solution

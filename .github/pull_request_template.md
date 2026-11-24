@@ -39,4 +39,11 @@ publication dispositions and issue completion; do not claim merged beforehand. -
 <!-- Link checks and scoped final review with the checked revision. State passed,
 pending, failed or unavailable; reuse unchanged evidence. Identify cross-lane
 files and any unresolved findings. Recheck current main and overlapping work
-before integration under the existing merge gates. -->
+before integration under the existing merge gates. Research PRs: confirm the
+recurring semantic defects checklist (docs/systematic-corpus-loop.md) and name
+the independent semantic challenge with its revision. An automated review is
+not that challenge. -->
+
+- [ ] Recurring semantic defects checklist done (research PRs)
+- [ ] Independent semantic challenge: <!-- revision and outcome, or why N/A -->
+- [ ] This body describes this PR, and no "pending" text remains for events that have already happened

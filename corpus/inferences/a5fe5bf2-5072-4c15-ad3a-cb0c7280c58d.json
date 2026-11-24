@@ -1,0 +1,14 @@
+{
+  "id": "a5fe5bf2-5072-4c15-ad3a-cb0c7280c58d",
+  "label": "Dependence of the finite supports every pure perfection at an actual root (inference)",
+  "input_statement_ids": [
+    "08178314-2ec9-459e-82b1-5ff10b49c383",
+    "be1289df-3c43-5595-99b5-1fb8d38164be",
+    "122b112e-3f19-5cd4-8cd0-a704ab1f2d87"
+  ],
+  "output_statement_id": "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd",
+  "rule": "Exclude a concrete ground of the supplied root, then apply the infinity and perfection bridges",
+  "meaning": "Suppose a particular actual root has limited esse. Its distinct actual giver would ground it, contrary to the root's lack of an incoming concrete ground. Unlimited esse supplies infinity through one explicit bridge. The infinite bearer's possession of each pure perfection uses another. The same root is retained throughout and no existence, necessity, uniqueness or God naming conclusion is included.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

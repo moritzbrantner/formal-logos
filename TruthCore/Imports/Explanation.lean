@@ -45,7 +45,9 @@ public import TruthCore.Explanation.OrderingCardinality
 public import TruthCore.Explanation.PSRLaterAxes
 public import TruthCore.Explanation.PSRSelfApplication
 public import TruthCore.Explanation.PSRStrength
+public import TruthCore.Explanation.PairedInterventions
 public import TruthCore.Explanation.PathRelocation
+public import TruthCore.Explanation.PopulationEntry
 public import TruthCore.Explanation.SelectionCoverageBoundary
 public import TruthCore.Explanation.StoppingPoints
 public import TruthCore.Explanation.TargetCopyExpansion

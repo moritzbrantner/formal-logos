@@ -15,6 +15,7 @@ public import TruthCore.Results.Causality.ActualOnlyEuclidean.Solution
 public import TruthCore.Results.Causality.ActualRootNecessityUpgrade.Solution
 public import TruthCore.Results.Causality.ActualRootUniqueness.Solution
 public import TruthCore.Results.Causality.ActualUnderivedEssenceEsse.Solution
+public import TruthCore.Results.Causality.AncestorIndividuation.Solution
 public import TruthCore.Results.Causality.AristotelianRivalRefutations.Solution
 public import TruthCore.Results.Causality.AtomisticCausalSource.Solution
 public import TruthCore.Results.Causality.AtomisticNecessaryBeing.Solution
@@ -163,6 +164,7 @@ public import TruthCore.Results.Causality.ExistentialSelfActualization.Solution
 public import TruthCore.Results.Causality.ExistsSenseMeaning.Solution
 public import TruthCore.Results.Causality.ExternalCandidateNecessity.Solution
 public import TruthCore.Results.Causality.FiniteBranching.Solution
+public import TruthCore.Results.Causality.FiniteEsseDependence.Solution
 public import TruthCore.Results.Causality.FiniteGroundingHasSource.Solution
 public import TruthCore.Results.Causality.FiniteGroundingLimitNotClosed.Solution
 public import TruthCore.Results.Causality.FiniteNecessaryUnion.Classification.Solution
