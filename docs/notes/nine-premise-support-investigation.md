@@ -232,7 +232,7 @@ features remains open. [Infinite model](distinct-dependence-strict-ground-route.
 ### Does a purposive source predict which vacuum density observers measure?
 
 Assume a flat prior per unit positive vacuum density and weight observations
-by the entropy produced in a homogeneous causal diamond. Integrating two
+by ordinary-matter entropy production in a homogeneous causal diamond. Integrating two
 published stellar histories then gives about 34% or 43% to the decade
 containing our density. A different treatment of late entropy can change the
 distribution. Communicating goodness gives a reason to create but supplies

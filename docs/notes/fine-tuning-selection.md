@@ -316,7 +316,9 @@ Bousso, Harnik, Kribs and Perez motivate a dense spectrum and population by
 transitions among metastable vacua. Their calculation assumes an effectively
 flat prior per **linear** density over the relevant range. In a homogeneous
 cosmology take a comoving worldline and its causal diamond from reheating to
-the asymptotic future. Integrate the modeled entropy production per comoving
+the asymptotic future. The baseline counts ordinary-matter entropy production
+and excludes horizon entropy from de Sitter space and black-hole formation.
+Integrate the modeled ordinary-matter entropy production per comoving
 volume against the diamond volume at each time. High densities curtail the
 volume available during the era of starlight reprocessed by dust. The
 combination with the linear prior gives a peak per log decade. No conditioning
