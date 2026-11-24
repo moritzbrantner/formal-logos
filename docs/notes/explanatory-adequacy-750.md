@@ -1309,3 +1309,345 @@ The proposed restricted proof has not been elaborated or novelty-
 checked by the Truth CLI; no new Lean/corpus proof is registered.
 Keep the scoped route and both adequacy applications OPEN for
 independent semantic review and canonical verification.
+
+
+## Restricted bruteness: intrinsic reason, actual application and fundamentality (2026-11-25)
+
+**Proposed continuation of #1968, not independently challenged.** Reuses
+#1595 and #1621's typed distinction between essential content, existence and
+intrinsic explanatory adequacy; #1872's exact B2 controls; #1933's fixed
+exercise and prerequisite controls; and #790/#1526's productive self-
+actualization boundary. See also #1638/#1810 for the separate real-distinct-
+esse and constitutive-causation applications. This slice concerns an actually
+contingent candidate foundation, not the independently necessary bearer in
+#1621. No new historical attribution or formal registration is made.
+
+### 1. The exact natureModel has a stronger consequence under soundness
+
+Fix the same bearer x throughout. The existing definition
+`TruthCore.Explanation.BruteContingencyParity.natureModel` assigns
+`(.intrinsic z)` as a reason for `(.fact x)` exactly when
+
+```lean
+z = x ∧ ¬ esseOf x ≠ essenceOf x
+```
+
+The world argument is ignored, and `essenceOf` and `esseOf` are world-free.
+This definition alone is not evidence of adequacy. The separately existing
+`ExistencePSR.Sound` requires an assigned existence reason to imply actual
+existence in its world. Their combination has a precise consequence:
+
+1. Grant `¬ esseOf x ≠ essenceOf x`, at the same x.
+2. The intrinsic token explains x at **every represented world** by the
+   definition of natureModel.
+3. Soundness then gives x's existence at every represented world, hence
+   `NecessaryAt` relative to any selected accessibility standpoint.
+
+Proposed unelaborated Lean check (use the existing namespaces, not a new
+model or corpus record):
+
+```lean
+theorem ownNatureNecessaryOfSound {W B T R P : Type}
+    (F : CausalityFrame W B T R) (essenceOf esseOf : B → P)
+    (hSound : Sound (natureModel F essenceOf esseOf))
+    (x : B) (hIdentity : ¬ esseOf x ≠ essenceOf x) :
+    ∀ v, F.history.ontic.ExistsAt v x :=
+  fun v => hSound v x (.intrinsic x) ⟨rfl, hIdentity⟩
+```
+
+In particular, for an actual contingent x, an equality
+`esseOf x = essenceOf x` would yield the contradictory existence at its
+absence witness. Thus the combination gives
+`FirstMoverNecessity.ContingentHasDistinctEsse` (B6) constructively:
+assume equality and use the witness. This is a consequence of the strong
+global application assigned to this token, **not an independent proof
+of real essence–esse distinction**. Global soundness for this specific
+model effectively assumes that the world-free nature condition has the
+required existential import. The existing #1872 B2SupportControls already
+relates BX1 and B6 for natureModel; this draft does not claim a novel
+registered implication.
+
+Compare its existing model 2: `reasonModel bruteFirst selfNature`
+assigns own-nature tokens independently of world even to the contingent
+first mover. It satisfies the selected-world token coverage and fails
+BX1/B2; it **does not satisfy global Sound**, since true (the mover)
+is absent at world false. The original certified control does not assert
+Sound. Strengthening that exact assignment with Sound is therefore not
+legitimate. A repair is to gate the same token by `ExistsAt w x`.
+This preserves selected-world coverage, failure of B2 and factivity
+of the existence reason, but now the reason is admitted exactly in
+the worlds that contain its bearer. This restores a structural surrogate,
+not a substantive intrinsic explanation. The gate itself uses the very
+existence question as an input.
+
+### 2. A weaker modal restriction than general explanatory necessitation
+
+Let m be any existing #312 reason model, x a selected actual contingent
+bearer and w the selected world. Restrict attention to **one reason token**
+r, which explains x at w. Two conditions suffice to exclude an accessible
+absence of x:
+
+- Soundness at the worlds in question.
+- Transport of this particular explaining relation from w to every
+  accessible v: `m.explains w r (.fact x) → m.explains v r (.fact x)`.
+
+Apply transport at the absence witness and use Sound. No universal
+necessitating-PSR law, S5, external cause or complete fact coverage is
+needed for this local deduction. It is a consequence of soundness
+and an invariant edge, not a proof of the transport premise. A
+reason's *content* being necessary, fixed, or essential is not the same
+as the actual explaining relation persisting. For a purely nature-based
+account, positive warrant for transport would be that the stipulated
+reason's entire relevant basis is identical and no changing application
+condition participates in the explanation. That warrant is stronger
+than knowing that the kind's definition is rigid. The previous
+RestrictionBoundary result covers the corresponding determining
+truth-vector test. The present check isolates the narrower exact
+reason-edge commitment and its interaction with target soundness.
+
+A sound nonnecessitating account must, at an accessible absence
+witness, withhold this edge while retaining the content if the content
+is necessary. It need not change the identity of the nature or source,
+or posit a new contingent being. The interesting question is **what
+makes the reason actually explanatory here**, rather than a possible
+reason in all worlds. The existence of an actual application relation
+does not itself establish that it is an independently obtaining
+explanatory fact or a productive act. There is no automatic demand
+for another choosing event.
+
+### 3. Same truth profiles, different explanatory directions
+
+The following matched finite diagnostic uses a populated two-world
+frame. Actuality contains Q and B; the other world contains Q only.
+Q is necessary and B is contingent. Fixed necessary nature content n
+is true in both worlds. A separate represented fact a is true exactly
+where B exists, as is b (the existence fact of B). The q fact records
+Q's existence. No other being is introduced; n and a are represented
+facts, not additional bearers. Each comparison has the same truth
+profile and varies only its admitted fact-level explanation edges.
+An arrow goes from reason to explained fact. All edges listed below
+occur only at actuality; the alternative world has no edges.
+
+| Variant | Actual edges | b covered? | a covered? | Cycle? | Necessitating? |
+| --- | --- | --- | --- | --- | --- |
+| Brute stop | none | no | no | no | vacuously yes |
+| Borrowed application | b → a, a → b | yes | yes | yes | yes |
+| Primitive application | a → b | yes | no | no | yes |
+| Direct nature reason | n → b | yes | no | no | no |
+| Nature explains application | n → a, a → b | yes | yes | no | no |
+
+All five are factive in the exact `PSRStrength.Factive` sense at
+both worlds. The last column uses its `Necessitating` predicate:
+an edge's reason true at an accessible v must entail truth of its
+target there. Neither direct nonnecessitating variant meets that
+predicate. The graph-theoretic cycles here are fact-level; they are
+not a test of a concrete bearer-level cause or the full `FullSupply`
+certificate. The q and n facts have no admitted reasons in every
+row; no row claims unrestricted fact PSR. The last row covers the two
+contingent facts in this represented inventory at actuality. No
+explanation graph itself proves that its assigned edges are adequate.
+
+This comparison tests the strongest repair, rather than defining
+every coextensive reason to be circular. Modal co-obtaining of a and b
+is compatible with either direction or both. A substantive constitutive
+ground could be prior without being modally separable. To exclude
+the borrowed variant one needs a real same-sense dependence
+`b → a` and a noncircularity standard, not just b iff a. This
+preserves the concern about #790's explicit productive-priority
+hypotheses: an owned productive exercise that requires the whole
+bearer's own actuality cannot then give that actuality under the
+same strict priority relation. A nonproductive nature-fact is not
+automatically such an exercise.
+
+The **primitive application** row allows a reason for the existence
+of B without another being producing B. If the application is an
+unexplained contingent fact, a fact-level or inclusive actual-order
+demand still has an unanswered input. But this alone is no refutation
+of the exact *being-level* PSR: a is not another being in the
+displayed ontology. Conversely, the nature-explains-application
+row shows why even the stronger represented contingent-fact coverage
+does not, by itself, force necessitation. A positive nonnecessitating
+intrinsic ground remains a live proposal. It would require actual
+relevance and direction, not an assertion that a fixed conceptual
+description has somehow selected the actual outcome. The matched
+interpretation does not settle that metaphysical warrant.
+
+The finite assignments and truth/edge tests were independently run
+as a standalone Python diagnostic, not as a registered Lean model:
+
+```python
+from itertools import product
+W = (0, 1)
+E = {0: {"Q", "B"}, 1: {"Q"}}
+valid = []
+for e0, e1 in product((False, True), repeat=2):
+    edge = {0: e0, 1: e1}
+    sound = all(not edge[w] or "B" in E[w] for w in W)
+    if sound and edge[0]:
+        valid.append((e0, e1))
+assert valid == [(True, False)]
+for identity in (False, True):
+    rigid = {w: identity for w in W}
+    assert all(not rigid[w] or "B" in E[w] for w in W) == (not identity)
+    gated = {w: identity and "B" in E[w] for w in W}
+    assert all(not gated[w] or "B" in E[w] for w in W)
+    assert gated[0] == identity
+T = {0: {"n", "a", "b", "q"}, 1: {"n", "q"}}
+cases = [
+    (set(), False, False, False, True),
+    ({("b", "a"), ("a", "b")}, True, True, True, True),
+    ({("a", "b")}, True, False, False, True),
+    ({("n", "b")}, True, False, False, False),
+    ({("n", "a"), ("a", "b")}, True, True, False, False),
+]
+for edges, bc, ac, cycle, necessitating in cases:
+    assert all(s in T[0] and t in T[0] for s, t in edges)
+    assert any(t == "b" for s, t in edges) == bc
+    assert any(t == "a" for s, t in edges) == ac
+    reach = set(edges)
+    while True:
+        nxt = reach | {(x, z) for x, y in reach for u, z in reach if y == u}
+        if nxt == reach:
+            break
+        reach = nxt
+    assert any(x == y for x, y in reach) == cycle
+    assert all(s not in T[v] or t in T[v]
+               for s, t in edges for v in W) == necessitating
+```
+
+The direct nature row is intentionally an assignment of an
+explanatory relation. It is **not** a concrete mechanism for a
+fundamental contingent being to explain its own actuality. To supply
+one, compare independent intrinsic content, actual constituents
+and nonnecessitating application against the same explanatory target.
+No identity of the fact-level nature descriptor with a #312 reason
+source is presupposed.
+
+### 4. What would make the exemption genuinely justified?
+
+The restricted rival's most promising positive policy is not
+"explain everything except my chosen base." It is a primitive
+**distinction of explanatory kinds**: positive actual beings whose
+actuality is received demand a giver; the independent actuality of
+a nonreceiving foundation is a basic principle of the theory.
+This is not identical to the modal-contingency classification. It
+can be defended by conceptual warrant for the distinction and
+independent evidence of the base's real nonreceipt. It does not
+require an independent proof of every primitive.
+
+Three standards must be held apart:
+
+- **Ontic reason:** why does this concrete B actually exist?
+- **License for primitive stopping:** is it reasonable to regard B's
+  existence as basic given the best available actual explanation and
+  theory of the relevant dependence relation?
+- **Epistemic identification:** do we have evidence that this actual B
+  really has the relevant fundamental character?
+
+No inference from lack of a producer to lack of any reason is
+valid across these standards. Fundamentality as a positive
+nonreceipt property might justify a causal stopping point, yet
+leave a noncausal why available. Conversely, epistemic evidence that
+an account cannot presently find a source does not itself establish
+nonreceipt or the impossibility of an adequate answer.
+
+Apply the test symmetrically. An intrinsic necessary nature with a
+genuine existence-conveying reason could answer the question; a
+necessary but brute source would merely remove the contingent
+counterinstance and retain the broader #312 existence question.
+The existing #1621 note tests necessary nature adequacy separately.
+A contingent nonreceiving nature could be licensed as primitive
+under the rival's policy, but that license is not itself a
+reason why it exists. If the rival grants that *all actual
+contingent existence* is received, it loses this particular
+exemption: this is the exact open contingency→receipt bridge
+(R1/C2 family), not a consequence of the word fundamental.
+
+The substantive positive pressure is now a matched scope
+comparison: consider whether an independently warranted
+nature-based explanation or productive/constitutive source
+actually answers the very same existence question, whereas
+the primitive-stop theory only answers why one need not seek
+another cause. If no adequate positive alternative is supplied,
+the latter can remain a reasonable stopping policy. If an adequate
+answer is supplied at matched scope without comparable unresolved
+inputs, it is an explanatory advantage. This is cumulative
+warrant for pursuing E, not proof that the rival is inconsistent,
+or an inference from evidence for the foundation to ontic explanation.
+The previously accepted moderate preference for E and suspension
+about universal D are unchanged.
+
+### 5. A more precise root burden: select one adequate external reason
+
+The existing `esseCauseFromExistenceReasons` proof chooses a
+reason r from the local PSR, applies universal BX1 to r, and then
+BX2. It does not logically need the denial of *every* same-bearer
+reason token. One candidate weakening of BX1, while retaining
+the existing reason PSR and BX2, is:
+
+```lean
+∀ x, ContingentAt m.ontic w x →
+  (∃ r, m.explains w r (.fact x)) →
+  ∃ r, m.explains w r (.fact x) ∧ source r ≠ x
+```
+
+This is an external-reason **availability** condition; it does
+not independently establish explanatory adequacy and, jointly
+with PSR and BX2, trivially supplies the required reason for B2.
+It is a proposed scope refinement, not independent evidence or
+a registered theorem. BX1 implies it constructively by taking the
+existing witness. The existing model 6 from B2SupportControls,
+`conserved` with `selfAndOccasion`, provides an exact control
+to inspect: the sole contingent bearer is f (true), and
+`occasion` supplies its distinct source x (false); an intrinsic
+token also explains f, so universal BX1 fails. In that original
+assignment the occurrence of such tokens at the absent world
+also violates global Sound. Gating all edges by target existence
+retains the actual-world witness and BX1 failure while restoring
+Sound; this observation does not certify the new gated control
+in Lean. No causal inference about the natural source of a token
+is warranted without BX2. If adequate constitutive reasons are
+not faithfully represented by the two #312 constructors, an
+explicit adapter is still needed.
+
+The restriction to the very mover from checkpoint 4 and the
+restriction from universal prohibition to one suitable reason
+can be combined after the related/novelty/semantics preflight.
+This lets the investigation ask whether there is one adequate
+reason of the required sort for the selected contingent first
+mover, rather than attempting to refute every candidate intrinsic
+explanation in the universe. It does not resolve the decisive
+case: a source that has no other-bearing reason whatsoever.
+
+**Next discriminating bridge.** In the actual first-mover
+case, take a candidate primitive nonreceiving actuality and
+test whether its real positive character (as opposed to the
+assertion of modal contingency) supplies an actual reason
+that does not borrow its existence. The live comparison is
+between (i) an independently characterized nature-fact with
+adequate nonnecessitating existential relevance, (ii) a
+constitutive actual ground with a specified explanatory
+direction and full actual inputs, and (iii) a nonreceipt
+stopping license which offers no such reason. Reuse #1621,
+#1810, #1638 and the C2/B6 reception results, rather than
+re-proving fixed-law or token assignment boundaries. A
+successful (i) would challenge a blanket BX1; (ii) might
+support the external-reason/CAUSE_2 bridge only after matching
+the existing senses; (iii) remains the direct rival to
+adequate existential coverage. The remaining root route is
+the existing PSR + BX1 + BX2 → B2 result, with its own
+additional first-mover premises. No closure, source
+identification, or God-existence proof is claimed.
+
+**Claim/type sweep and verification.** Actual source files,
+#1872's controls and #312's Sound/PSR definitions, plus #1621's
+prior case and exact existing downstream proof, were inspected.
+The world-free natureModel assumption, fact-versus-being scope,
+global Sound strengthening, co-truth without direction, explicit
+empty edge assignments and nonnecessitating/necessitating
+columns are disclosed. The finite diagnostic passed in the
+standalone runtime; the proposed Lean consequence and weaker
+BX1 are not elaborated or novelty-checked. No new source
+attribution or theorem registration. Independent semantic
+challenge and canonical verification of this continuation
+remain outstanding.
