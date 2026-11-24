@@ -1,0 +1,28 @@
+{
+  "id": "bf2a8162-23a3-48de-8574-d8706ef629b1",
+  "label": "A unique classical GOD_4 over the attribute premise: certified difference",
+  "subject_kind": "statement",
+  "subject_id": "20a2b6a3-83e7-5ea0-be63-9dbc03c302b3",
+  "predicate": "strength_comparison",
+  "object_kind": "statement",
+  "object_id": "d5ac1620-1de5-5cd8-862e-cfdfd6d8b8a5",
+  "comparison_spec": "TruthCore.Case.Catholicism.UniqueGodGraft.uniqueClassicalGodOverAttributes",
+  "delta_statement_id": "bca0a793-83f6-4e55-987e-7a0923f3a265",
+  "background_statement_ids": [],
+  "evidence_result_ids": {
+    "equivalence": "461415ff-eb10-458c-b2d6-f064ce8fd581",
+    "implication": "2d2839e8-fecf-4875-b5eb-ddaa60735115"
+  },
+  "statement_parameter_indices": {
+    "stronger": [
+      0
+    ],
+    "weaker": [
+      0
+    ],
+    "delta": [
+      0
+    ]
+  },
+  "note": "Difference of the unique classical GOD_4 and the attribute premise: the strong version adds exactly that some GOD_4 is the only GOD_4. Strictness is recorded on the strengthens registration (G5); no separating setting is registered here."
+}

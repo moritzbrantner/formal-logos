@@ -87,3 +87,4 @@ public import TruthCore.Results.Case.Catholicism.StrengthConsumers.RootFull.Solu
 public import TruthCore.Results.Case.Catholicism.StrengthConsumers.RootIdentity.Solution
 public import TruthCore.Results.Case.Catholicism.StrengthConsumers.RootQ11.Solution
 public import TruthCore.Results.Case.Catholicism.StrengthConsumers.StageOneFull.Solution
+public import TruthCore.Results.Case.Catholicism.UniqueGodGraft.Solution

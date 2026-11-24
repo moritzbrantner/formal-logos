@@ -1,0 +1,12 @@
+{
+  "id": "51710e0f-8384-4dde-b543-8f7dcccac0ee",
+  "label": "Every GOD_4 has the classical attributes, from the unique classical GOD_4 (inference)",
+  "input_statement_ids": [
+    "20a2b6a3-83e7-5ea0-be63-9dbc03c302b3"
+  ],
+  "output_statement_id": "d5ac1620-1de5-5cd8-862e-cfdfd6d8b8a5",
+  "rule": "Any GOD_4 is the unique GOD_4, who has the classical attributes",
+  "meaning": "UniqueClassicalGodExists gives one g that is GOD_4, is the only thing satisfying the signature's IsGod (IsTheOneGod), and has the skeleton's classical attributes. Let x be GOD_4; by IsTheOneGod, x is g, so x has the classical attributes. Constructive.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

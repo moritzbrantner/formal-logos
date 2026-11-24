@@ -1,0 +1,15 @@
+{
+  "id": "cd932c63-8538-4c82-9ae0-a33ddcb76627",
+  "label": "One classical GOD_4; two GOD_4 with one classical; two classical GOD_4",
+  "paraphrase": "Premise-free finite models on the case signature, whose other fields are empty and assert nothing historical or religious. Nonvacuity: where exactly one thing is GOD_4 and has the classical attributes, both UniqueClassicalGodExists and GodHasClassicalAttributes hold. Omission of uniqueness: where two things are GOD_4 and only one has the classical attributes, some GOD_4 has them, yet not every GOD_4 does and the unique-GOD_4 premise fails. Strictness: where two things are GOD_4 and both have the classical attributes, every GOD_4 has them, yet the unique-GOD_4 premise fails.",
+  "lean_declaration": "TruthCore.Case.Catholicism.UniqueGodGraft.Model.Controls",
+  "definition_ids": [
+    "b1415b6b-19b0-5a0e-aa0c-0ab32f350141",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "d980bbd2-1a96-564c-bc0d-4065d7786715",
+    "c8f9c2fb-8c17-5fc8-b558-4a6fad659296"
+  ],
+  "disambiguation_ids": [
+    "205a39c3-915d-5fe4-8076-a9ff91329e08"
+  ]
+}

@@ -32,3 +32,4 @@ public import TruthCore.Case.Catholicism.StageOneQuartaVia
 public import TruthCore.Case.Catholicism.StageOneQuintaVia
 public import TruthCore.Case.Catholicism.StageTwo
 public import TruthCore.Case.Catholicism.StagesOneTwo
+public import TruthCore.Case.Catholicism.UniqueGodGraft

@@ -1,0 +1,11 @@
+{
+  "id": "2d2839e8-fecf-4875-b5eb-ddaa60735115",
+  "label": "Every GOD_4 has the classical attributes, from the unique classical GOD_4",
+  "argument_id": "8fdc6431-6f6c-411b-8ab5-553eb6b8989c",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.UniqueGodGraft.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.UniqueGodGraft.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.UniqueGodGraft.godHasClassicalAttributesFromUniqueGod",
+  "comparator_config": "results/2d2839e8-fecf-4875-b5eb-ddaa60735115/comparator.json",
+  "status": "solution-present",
+  "description": "Argument G4, slice 1 of the map in docs/notes/orphan-graft-map.md: the stage 1-2 same-witness arguments that conclude 20a2b6a3 now feed the root arguments' attribute premise d5ac1620. Not a transcription: no premise's consequent is the conclusion; the conclusion is derived from the uniqueness conjunct, which G5's omission model shows to be needed. A one-premise weakening (registered strengthens 20a2b6a3 to d5ac1620, with the certified difference 'some GOD_4 is the only GOD_4'). Support cycle: the existing assembly 398f4323 concludes 20a2b6a3 from 8626f8a5, 33b18ae7 and d5ac1620, so d5ac1620 to 20a2b6a3 to d5ac1620 is a cycle; it is grounded through the routes to 20a2b6a3 that do not use d5ac1620, and the assembly's own connection through this cycle adds no warrant. Those routes share the stage-1 premises of the existing root routes, so this adds support options, not independent support. Establishes no premise. Made possible by reducing 20a2b6a3's definition links to its Lean vocabulary (reviewed in docs/notes/classical-attributes-all-migration.json and naming-first-mover-migration.json)."
+}

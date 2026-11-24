@@ -3,13 +3,15 @@ module
 public import TruthCore.Case.Catholicism.UniqueGodGraft
 
 /-! The stage-2 attribute premise from the unique classical God: a uniqueness
-transfer (#1926 graft), with its nonvacuity and omission controls. Analyst
+transfer (#1926 graft), its certified difference, and its nonvacuity,
+omission and strictness controls. Analyst
 reconstruction; attribution deferred. -/
 
 @[expose] public section
 
 namespace TruthCore.Results.Case.Catholicism.UniqueGodGraft
 open TruthCore.Case.Catholicism
+open TruthCore.Case.Catholicism.UniqueGodGraft
 open TruthCore.Case.Catholicism.UniqueGodGraft.Model
 
 /-- Argument G4: every being satisfying `σ.IsGod` has the classical
@@ -21,6 +23,20 @@ theorem godHasClassicalAttributesFromUniqueGod (σ : Signature)
   intro x hx
   rw [hOne x hx]
   exact hAttr
+
+/-- Certified difference (#1598): the unique classical God factors as the
+attribute premise plus a unique God. Forward by G4 and by dropping the
+attributes; backward, the unique God has the attributes by the attribute
+premise. Premise-free and constructive. -/
+theorem uniqueClassicalGodOverAttributesExact : UniqueClassicalGodOverAttributesExact := by
+  intro σ
+  constructor
+  · intro h
+    have hAll := godHasClassicalAttributesFromUniqueGod σ h
+    obtain ⟨g, hGod, hOne, _⟩ := h
+    exact ⟨hAll, g, hGod, hOne⟩
+  · rintro ⟨hAll, g, hGod, hOne⟩
+    exact ⟨g, hGod, hOne, hAll g hGod⟩
 
 theorem oneClassicalGod : OneClassicalGod := by
   refine ⟨⟨true, rfl, fun x hx => hx, rfl⟩, fun x hx => hx⟩

@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Case.Catholicism.UniqueGodGraft.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.UniqueGodGraft.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Case.Catholicism.UniqueGodGraft.uniqueClassicalGodOverAttributesExact"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

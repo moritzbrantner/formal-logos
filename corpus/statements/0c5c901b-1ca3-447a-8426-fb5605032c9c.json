@@ -1,0 +1,15 @@
+{
+  "id": "0c5c901b-1ca3-447a-8426-fb5605032c9c",
+  "label": "A unique classical GOD_4 exists iff every GOD_4 is classical and a unique GOD_4 exists",
+  "paraphrase": "For every case signature: there is a unique GOD_4 with the classical attributes if and only if every GOD_4 has the classical attributes and some GOD_4 is the only GOD_4. A premise-free comparison of encodings; it asserts none of the three statements.",
+  "lean_declaration": "TruthCore.Case.Catholicism.UniqueGodGraft.UniqueClassicalGodOverAttributesExact",
+  "definition_ids": [
+    "b1415b6b-19b0-5a0e-aa0c-0ab32f350141",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "d980bbd2-1a96-564c-bc0d-4065d7786715",
+    "c8f9c2fb-8c17-5fc8-b558-4a6fad659296"
+  ],
+  "disambiguation_ids": [
+    "205a39c3-915d-5fe4-8076-a9ff91329e08"
+  ]
+}

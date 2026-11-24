@@ -1,0 +1,13 @@
+{
+  "id": "bca0a793-83f6-4e55-987e-7a0923f3a265",
+  "label": "Some being is GOD_4 and is the only GOD_4",
+  "paraphrase": "Difference statement, analyst formulation: something satisfies the skeleton's IsGod predicate (GOD_4) and is the only thing that satisfies it. It says nothing about the classical attributes. Open; not attributed to a source.",
+  "lean_declaration": "TruthCore.Case.Catholicism.UniqueGodGraft.UniqueGodExists",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "d980bbd2-1a96-564c-bc0d-4065d7786715"
+  ],
+  "disambiguation_ids": [
+    "205a39c3-915d-5fe4-8076-a9ff91329e08"
+  ]
+}

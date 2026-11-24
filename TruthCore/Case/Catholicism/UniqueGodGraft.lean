@@ -1,6 +1,7 @@
 module
 
 public import TruthCore.Case.Catholicism.StagesOneTwo
+public import TruthCore.Logic.StrengthComparison
 
 /-!
 # From the unique classical God to the root's attribute premise (#1926 graft)
@@ -13,6 +14,10 @@ classical attributes. The root arguments consume `GodHasClassicalAttributes σ`
 is a uniqueness transfer: any God is `g`. Without uniqueness it fails
 (`Model.TwoGodsOneClassical`).
 
+The strong version adds exactly `UniqueGodExists σ`: some being is God and is
+the only being satisfying `σ.IsGod` (#1598 certified difference,
+`uniqueClassicalGodOverAttributes`).
+
 Every model is a finite structural surrogate: the signature's other fields are
 unused placeholders, not historical or religious assertions. See
 `docs/notes/orphan-graft-map.md`.
@@ -23,6 +28,25 @@ unused placeholders, not historical or religious assertions. See
 namespace TruthCore.Case.Catholicism.UniqueGodGraft
 
 open TruthCore.Case.Catholicism
+open TruthCore.Logic.StrengthComparison
+
+/-- Difference statement: some being is God and is the only being satisfying
+`σ.IsGod`. It says nothing about the classical attributes. -/
+def UniqueGodExists (σ : Signature) : Prop :=
+  ∃ g, σ.IsGod g ∧ IsTheOneGod σ.IsGod g
+
+/-- `UniqueClassicalGodExists` over `GodHasClassicalAttributes`; difference:
+`UniqueGodExists`. No background. -/
+def uniqueClassicalGodOverAttributes (σ : Signature) : ComparisonSpec where
+  stronger := UniqueClassicalGodExists σ
+  weaker := GodHasClassicalAttributes σ
+  delta := UniqueGodExists σ
+
+/-- Exact factorization: on every signature, a unique classical God exists iff
+every God has the classical attributes and a unique God exists. -/
+def UniqueClassicalGodOverAttributesExact : Prop :=
+  ∀ σ : Signature, UniqueClassicalGodExists σ ↔
+    GodHasClassicalAttributes σ ∧ UniqueGodExists σ
 
 namespace Model
 

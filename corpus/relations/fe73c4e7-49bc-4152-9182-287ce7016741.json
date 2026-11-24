@@ -1,0 +1,12 @@
+{
+  "id": "fe73c4e7-49bc-4152-9182-287ce7016741",
+  "label": "A unique classical GOD_4 strengthens: every GOD_4 has the classical attributes",
+  "subject_kind": "statement",
+  "subject_id": "20a2b6a3-83e7-5ea0-be63-9dbc03c302b3",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "d5ac1620-1de5-5cd8-862e-cfdfd6d8b8a5",
+  "verification_result_id": "2d2839e8-fecf-4875-b5eb-ddaa60735115",
+  "strictness_result_id": "0efe4c02-f376-4206-af7c-146b4715abeb",
+  "note": "Same signature and GOD_4. The weak version drops existence and uniqueness. Strictness (G5, TwoClassicalGods): two things both GOD_4 and both classical satisfy the weak version non-vacuously and fail the strong one. The pair lies on a support cycle through the assembly 398f4323, which derives 20a2b6a3 from d5ac1620, 8626f8a5 and 33b18ae7. The difference is certified by the matching strength_comparison."
+}

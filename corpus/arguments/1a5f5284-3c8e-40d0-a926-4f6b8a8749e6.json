@@ -1,0 +1,19 @@
+{
+  "id": "1a5f5284-3c8e-40d0-a926-4f6b8a8749e6",
+  "label": "Unique-GOD_4 transfer nonvacuity, omission and strictness models, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "cd932c63-8538-4c82-9ae0-a33ddcb76627",
+  "inference_ids": [
+    "5d84cfb4-c30d-4bc6-bd01-282406902102"
+  ],
+  "meaning": "Premise-free: a one-GOD_4 signature satisfies both the unique-GOD_4 premise and the attribute conclusion; a two-GOD_4 signature with one classical GOD_4 satisfies 'some GOD_4 has the attributes' while the attribute conclusion and the unique-GOD_4 premise fail; a two-GOD_4 signature where both are classical satisfies the attribute conclusion while the unique-GOD_4 premise fails, which is the strictness model of the registered strength order. Model-witnessed differences only; no premise is established.",
+  "definition_ids": [
+    "c8f9c2fb-8c17-5fc8-b558-4a6fad659296",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "d980bbd2-1a96-564c-bc0d-4065d7786715",
+    "b1415b6b-19b0-5a0e-aa0c-0ab32f350141"
+  ],
+  "disambiguation_ids": [
+    "205a39c3-915d-5fe4-8076-a9ff91329e08"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "461415ff-eb10-458c-b2d6-f064ce8fd581",
+  "label": "A unique classical GOD_4 factors as the attribute premise plus a unique GOD_4",
+  "argument_id": "4d85da0a-6ccd-405e-9d59-143df6347635",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.UniqueGodGraft.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.UniqueGodGraft.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.UniqueGodGraft.uniqueClassicalGodOverAttributesExact",
+  "comparator_config": "results/461415ff-eb10-458c-b2d6-f064ce8fd581/comparator.json",
+  "status": "solution-present",
+  "description": "Certified difference of the strength order 20a2b6a3 to d5ac1620: the strong version adds exactly that some GOD_4 is the only GOD_4. Premise-free; establishes no premise."
+}

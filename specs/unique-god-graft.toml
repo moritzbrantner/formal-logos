@@ -1,20 +1,38 @@
 # #1926 orphan graft slice 1: the stage 1-2 same-witness endpoints conclude
 # UniqueClassicalGodExists (20a2b6a3) but nothing consumed it. G4 derives the
 # root arguments' attribute premise GodHasClassicalAttributes (d5ac1620) from it
-# by a uniqueness transfer; G5 gives nonvacuity and the omission of uniqueness.
-# Before this, 20a2b6a3's inherited definition links (28 removed) made any new
-# argument from it an unbridged sense mixing. Analyst formulations,
-# attribution deferred. Note: docs/notes/orphan-graft-map.md.
+# by a uniqueness transfer; the strength order 20a2b6a3 -> d5ac1620 is
+# registered with a certified difference (a unique GOD_4 exists); G5 gives
+# nonvacuity, the omission of uniqueness and strictness. Before this,
+# 20a2b6a3's inherited definition links (28 removed) made any new argument from
+# it an unbridged sense mixing. Analyst formulations, attribution deferred.
+# Note: docs/notes/orphan-graft-map.md.
 
 [batch]
 vocab = "TruthCore.Case.Catholicism.UniqueGodGraft"
 results = "TruthCore.Results.Case.Catholicism.UniqueGodGraft"
 
 [[statement]]
+id = "Some GOD_4 is the only GOD_4"
+label = "Some being is GOD_4 and is the only GOD_4"
+lean = "UniqueGodExists"
+paraphrase = "Difference statement, analyst formulation: something satisfies the skeleton's IsGod predicate (GOD_4) and is the only thing that satisfies it. It says nothing about the classical attributes. Open; not attributed to a source."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "d980bbd2-1a96-564c-bc0d-4065d7786715"]
+disambiguations = ["205a39c3-915d-5fe4-8076-a9ff91329e08"]
+
+[[statement]]
+id = "Unique classical GOD_4 iff attribute premise and a unique GOD_4"
+label = "A unique classical GOD_4 exists iff every GOD_4 is classical and a unique GOD_4 exists"
+lean = "UniqueClassicalGodOverAttributesExact"
+paraphrase = "For every case signature: there is a unique GOD_4 with the classical attributes if and only if every GOD_4 has the classical attributes and some GOD_4 is the only GOD_4. A premise-free comparison of encodings; it asserts none of the three statements."
+definitions = ["b1415b6b-19b0-5a0e-aa0c-0ab32f350141", "88f9f6e8-997b-5f7d-afa1-c501954c3807", "d980bbd2-1a96-564c-bc0d-4065d7786715", "c8f9c2fb-8c17-5fc8-b558-4a6fad659296"]
+disambiguations = ["205a39c3-915d-5fe4-8076-a9ff91329e08"]
+
+[[statement]]
 id = "Unique God graft controls"
 label = "One classical GOD_4; two GOD_4 with one classical; two classical GOD_4"
 lean = "Model.Controls"
-paraphrase = "Premise-free finite models (structural surrogates on the case signature, whose other fields are empty placeholders, not historical or religious assertions). Nonvacuity: on a signature where exactly one being is God and has the classical attributes, both UniqueClassicalGodExists and GodHasClassicalAttributes hold. Omission of uniqueness: on a signature where both beings satisfy IsGod and only one has the classical attributes, some God has them, yet not every God does and the unique-God premise fails. Strictness: on a signature where both beings satisfy IsGod and both have the classical attributes, every God has them, yet the unique-God premise fails."
+paraphrase = "Premise-free finite models on the case signature, whose other fields are empty and assert nothing historical or religious. Nonvacuity: where exactly one thing is GOD_4 and has the classical attributes, both UniqueClassicalGodExists and GodHasClassicalAttributes hold. Omission of uniqueness: where two things are GOD_4 and only one has the classical attributes, some GOD_4 has them, yet not every GOD_4 does and the unique-GOD_4 premise fails. Strictness: where two things are GOD_4 and both have the classical attributes, every GOD_4 has them, yet the unique-GOD_4 premise fails."
 definitions = ["b1415b6b-19b0-5a0e-aa0c-0ab32f350141", "88f9f6e8-997b-5f7d-afa1-c501954c3807", "d980bbd2-1a96-564c-bc0d-4065d7786715", "c8f9c2fb-8c17-5fc8-b558-4a6fad659296"]
 disambiguations = ["205a39c3-915d-5fe4-8076-a9ff91329e08"]
 
@@ -26,20 +44,31 @@ axioms = []
 weakening = true
 premises = ["20a2b6a3-83e7-5ea0-be63-9dbc03c302b3"]
 conclusion = "d5ac1620-1de5-5cd8-862e-cfdfd6d8b8a5"
-rule = "Any God is the unique God, who has the classical attributes"
-meaning = "UniqueClassicalGodExists sigma gives one g that is God, is the only being satisfying sigma.IsGod (IsTheOneGod), and has the skeleton's classical attributes. Let x satisfy sigma.IsGod; by IsTheOneGod, x is g, so x has the classical attributes. Constructive."
-description = "Argument G4, graft slice 1 of docs/notes/orphan-graft-map.md: the stage 1-2 same-witness endpoints that conclude 20a2b6a3 (StagesOneTwo d1753206, Q11 witness c08dc0d0, identity witness d69362f4, StagesOneTwoQ11 ce2c09ce, StagesOneTwoIdentity f8094d16, quarta via classical witness 5cb4b73f) now feed the root arguments' attribute premise d5ac1620. Not a transcription: no premise's consequent is the conclusion; the universal is obtained by rewriting through the uniqueness conjunct, which G5's omission model shows to be needed. A one-premise weakening (registered strengthens 20a2b6a3 to d5ac1620): it drops existence and uniqueness. Support cycle: the existing assembly 398f4323 (classical-god-assembly) concludes 20a2b6a3 from 8626f8a5, 33b18ae7 and d5ac1620, so d5ac1620 <- 20a2b6a3 <- d5ac1620 is a cycle. It is grounded through the six non-transcription routes to 20a2b6a3 that do not use d5ac1620; the assembly's own connection through this cycle is nominal and adds no warrant. Shared dependencies: those routes share the stage-1 premises (prima via and quarta via bundles) of the existing root routes, so this adds support options, not independent corroboration. Establishes no premise. Made possible by pruning 20a2b6a3's 28 inherited definition links to its Lean vocabulary (reviewed in docs/notes/classical-attributes-all-migration.json and naming-first-mover-migration.json)."
+rule = "Any GOD_4 is the unique GOD_4, who has the classical attributes"
+meaning = "UniqueClassicalGodExists gives one g that is GOD_4, is the only thing satisfying the signature's IsGod (IsTheOneGod), and has the skeleton's classical attributes. Let x be GOD_4; by IsTheOneGod, x is g, so x has the classical attributes. Constructive."
+description = "Argument G4, slice 1 of the map in docs/notes/orphan-graft-map.md: the stage 1-2 same-witness arguments that conclude 20a2b6a3 now feed the root arguments' attribute premise d5ac1620. Not a transcription: no premise's consequent is the conclusion; the conclusion is derived from the uniqueness conjunct, which G5's omission model shows to be needed. A one-premise weakening (registered strengthens 20a2b6a3 to d5ac1620, with the certified difference 'some GOD_4 is the only GOD_4'). Support cycle: the existing assembly 398f4323 concludes 20a2b6a3 from 8626f8a5, 33b18ae7 and d5ac1620, so d5ac1620 to 20a2b6a3 to d5ac1620 is a cycle; it is grounded through the routes to 20a2b6a3 that do not use d5ac1620, and the assembly's own connection through this cycle adds no warrant. Those routes share the stage-1 premises of the existing root routes, so this adds support options, not independent support. Establishes no premise. Made possible by reducing 20a2b6a3's definition links to its Lean vocabulary (reviewed in docs/notes/classical-attributes-all-migration.json and naming-first-mover-migration.json)."
+
+[[argument]]
+id = "Unique classical GOD_4 factors as attribute premise plus a unique GOD_4"
+label = "A unique classical GOD_4 factors as the attribute premise plus a unique GOD_4"
+theorem = "uniqueClassicalGodOverAttributesExact"
+axioms = []
+premises = []
+conclusion = "Unique classical GOD_4 iff attribute premise and a unique GOD_4"
+rule = "Uniqueness transfer and recombination of the witness"
+meaning = "Certified difference (#1598): forward, G4 gives the attribute premise and dropping the attributes gives a unique GOD_4; backward, the unique GOD_4 has the classical attributes by the attribute premise. Premise-free and constructive; it asserts none of the statements compared."
+description = "Certified difference of the strength order 20a2b6a3 to d5ac1620: the strong version adds exactly that some GOD_4 is the only GOD_4. Premise-free; establishes no premise."
 
 [[argument]]
 id = "Unique God graft controls argument"
-label = "Unique-God transfer nonvacuity, omission and strictness models, checked"
+label = "Unique-GOD_4 transfer nonvacuity, omission and strictness models, checked"
 theorem = "uniqueGodGraftControls"
 axioms = []
 premises = []
 conclusion = "Unique God graft controls"
 rule = "Explicit finite models"
-meaning = "Premise-free: a one-God signature satisfies both the unique-God premise and the attribute conclusion; a two-God signature with one classical God satisfies 'some God has the attributes' while the attribute conclusion and the unique-God premise fail; a two-God signature where both are classical satisfies the attribute conclusion while the unique-God premise fails (the strictness separator of the registered strength order, non-vacuous). Model-witnessed separations only; no premise is established."
-description = "Premise-free controls for G4 (G5): nonvacuity and the omission of the uniqueness conjunct. Signature fields other than IsGod and HasClassicalAttributes are empty placeholders. Establishes no premise."
+meaning = "Premise-free: a one-GOD_4 signature satisfies both the unique-GOD_4 premise and the attribute conclusion; a two-GOD_4 signature with one classical GOD_4 satisfies 'some GOD_4 has the attributes' while the attribute conclusion and the unique-GOD_4 premise fail; a two-GOD_4 signature where both are classical satisfies the attribute conclusion while the unique-GOD_4 premise fails, which is the strictness model of the registered strength order. Model-witnessed differences only; no premise is established."
+description = "Premise-free controls for G4 (G5): nonvacuity, the omission of the uniqueness conjunct, and strictness. Signature fields other than IsGod and HasClassicalAttributes are empty. Establishes no premise."
 
 [[relation]]
 id = "The unique classical God strengthens the attribute premise"
@@ -51,4 +80,18 @@ object_kind = "statement"
 object_id = "d5ac1620-1de5-5cd8-862e-cfdfd6d8b8a5"
 verification_result_id = "Classical attributes of every God, from the unique classical God"
 strictness_result_id = "Unique God graft controls argument"
-note = "The weak version drops existence and uniqueness. Strictness (G5, TwoClassicalGods): two beings both God and both classical satisfy the weak version non-vacuously and fail the strong one."
+note = "Same signature and GOD_4. The weak version drops existence and uniqueness. Strictness (G5, TwoClassicalGods): two things both GOD_4 and both classical satisfy the weak version non-vacuously and fail the strong one. The pair lies on a support cycle through the assembly 398f4323, which derives 20a2b6a3 from d5ac1620, 8626f8a5 and 33b18ae7. The difference is certified by the matching strength_comparison."
+
+[[relation]]
+id = "Unique classical GOD_4 over the attribute premise: certified difference"
+label = "A unique classical GOD_4 over the attribute premise: certified difference"
+subject_kind = "statement"
+subject_id = "20a2b6a3-83e7-5ea0-be63-9dbc03c302b3"
+predicate = "strength_comparison"
+object_kind = "statement"
+object_id = "d5ac1620-1de5-5cd8-862e-cfdfd6d8b8a5"
+comparison_spec = "uniqueClassicalGodOverAttributes"
+delta_statement_id = "Some GOD_4 is the only GOD_4"
+evidence_result_ids = { implication = "Classical attributes of every God, from the unique classical God", equivalence = "Unique classical GOD_4 factors as attribute premise plus a unique GOD_4" }
+statement_parameter_indices = { stronger = [0], weaker = [0], delta = [0] }
+note = "Difference of the unique classical GOD_4 and the attribute premise: the strong version adds exactly that some GOD_4 is the only GOD_4. Strictness is recorded on the strengthens registration (G5); no separating setting is registered here."

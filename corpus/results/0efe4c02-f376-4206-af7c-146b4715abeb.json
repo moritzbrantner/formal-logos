@@ -1,0 +1,11 @@
+{
+  "id": "0efe4c02-f376-4206-af7c-146b4715abeb",
+  "label": "Unique-GOD_4 transfer nonvacuity, omission and strictness models, checked",
+  "argument_id": "1a5f5284-3c8e-40d0-a926-4f6b8a8749e6",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.UniqueGodGraft.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.UniqueGodGraft.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.UniqueGodGraft.uniqueGodGraftControls",
+  "comparator_config": "results/0efe4c02-f376-4206-af7c-146b4715abeb/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free controls for G4 (G5): nonvacuity, the omission of the uniqueness conjunct, and strictness. Signature fields other than IsGod and HasClassicalAttributes are empty. Establishes no premise."
+}

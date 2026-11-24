@@ -1,0 +1,19 @@
+{
+  "id": "4d85da0a-6ccd-405e-9d59-143df6347635",
+  "label": "A unique classical GOD_4 factors as the attribute premise plus a unique GOD_4",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "0c5c901b-1ca3-447a-8426-fb5605032c9c",
+  "inference_ids": [
+    "4689000d-32c2-4fff-a58c-4ba509d12c79"
+  ],
+  "meaning": "Certified difference (#1598): forward, G4 gives the attribute premise and dropping the attributes gives a unique GOD_4; backward, the unique GOD_4 has the classical attributes by the attribute premise. Premise-free and constructive; it asserts none of the statements compared.",
+  "definition_ids": [
+    "c8f9c2fb-8c17-5fc8-b558-4a6fad659296",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "d980bbd2-1a96-564c-bc0d-4065d7786715",
+    "b1415b6b-19b0-5a0e-aa0c-0ab32f350141"
+  ],
+  "disambiguation_ids": [
+    "205a39c3-915d-5fe4-8076-a9ff91329e08"
+  ]
+}
