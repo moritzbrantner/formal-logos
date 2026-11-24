@@ -1,0 +1,10 @@
+{
+  "id": "11569588-914f-4ce1-99ab-ae0b6794db1b",
+  "label": "Compare local intensity under pass-through and concentration of the same whole supply (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "bc49e08b-f585-4e94-9430-765022ecceb7",
+  "rule": "Compute the same per-port threshold test before and after routing",
+  "meaning": "For every positive n, both outputs account for all 2n units. Separate routing gives the input and output the same least upper bound n; pooled routing yields least upper bound 2n, and the 2n probe distinguishes the output from the input. This controls the inference from no additional supplied quantity to preservation of local grade. The ports are an analogy for that inference and carry no causal or metaphysical classification.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

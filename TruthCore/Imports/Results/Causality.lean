@@ -283,6 +283,7 @@ public import TruthCore.Results.Causality.OwnerEndpointCalibration.Solution
 public import TruthCore.Results.Causality.ParityUnionRegress.Solution
 public import TruthCore.Results.Causality.PartFreePlurality.Solution
 public import TruthCore.Results.Causality.PartMediatedSelfMotion.Solution
+public import TruthCore.Results.Causality.ParticipatedEsseScale.Solution
 public import TruthCore.Results.Causality.ParticularActuality.Solution
 public import TruthCore.Results.Causality.PastResourceControls.Solution
 public import TruthCore.Results.Causality.PerAccidensResponses.Solution
@@ -314,6 +315,7 @@ public import TruthCore.Results.Causality.QuantitativeTransferPaths.Solution
 public import TruthCore.Results.Causality.ReceiptAllocation.Solution
 public import TruthCore.Results.Causality.ReceivedEsseActualGiver.Solution
 public import TruthCore.Results.Causality.ReceptionLimitation.Solution
+public import TruthCore.Results.Causality.ReflectiveComprehension.Solution
 public import TruthCore.Results.Causality.ReflexiveActualFusionNecessaryBeing.Solution
 public import TruthCore.Results.Causality.ReflexiveDependenceScope.Solution
 public import TruthCore.Results.Causality.RegressAccessibilityExcludesSeries.Solution
@@ -321,6 +323,7 @@ public import TruthCore.Results.Causality.RegressAccessibilityUnboundedDepth.Sol
 public import TruthCore.Results.Causality.RegressReadingsCoincide.Solution
 public import TruthCore.Results.Causality.RegressRivalCoverage.Coverage.Solution
 public import TruthCore.Results.Causality.RelationalReceipt.Solution
+public import TruthCore.Results.Causality.RestatedPremises.Solution
 public import TruthCore.Results.Causality.RivalRefutationsRound2.Solution
 public import TruthCore.Results.Causality.RootEssenceIdentity.Solution
 public import TruthCore.Results.Causality.RootIntellectWill.Solution
@@ -364,6 +367,7 @@ public import TruthCore.Results.Causality.SourceWitness.Solution
 public import TruthCore.Results.Causality.SpineRivalsAttributes.Solution
 public import TruthCore.Results.Causality.SpineRivalsRootEsse.Solution
 public import TruthCore.Results.Causality.SpineRivalsStageOne.Solution
+public import TruthCore.Results.Causality.StrictEsseScale.Solution
 public import TruthCore.Results.Causality.StrictPriorityPureAct.Solution
 public import TruthCore.Results.Causality.StrictPriorityPureActControls.Solution
 public import TruthCore.Results.Causality.SubjectFocalRoles.Solution
