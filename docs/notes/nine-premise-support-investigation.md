@@ -6,13 +6,14 @@ Date: 2026-11-13. Research baseline:
 ## From an underived source to one shared source
 
 In a well-founded grounding order, it suffices that the immediate suppliers
-of each dependent trace back to a common ancestor. They may meet at different
+joined to each dependent by a single grounding edge trace back pairwise to
+a common ancestor. They may meet at different
 beings for different dependents. If the actual grounding graph is weakly
 connected, all its underived sources must then coincide. A pluralist who
 accepts connectivity and well-foundedness is committed to some dependent
-whose immediate suppliers have no shared ancestor. The existing model of
-two underived powers jointly supplying one instrument specifies just such
-a case. Tracing the coordination of the powers would leave open what sustains
+with two such suppliers having no shared ancestor. In the existing model,
+two rank-zero sources directly precede the same rank-one constituent.
+Explaining how two powers coordinate would leave open what sustains
 the existence of their bearers. [Argument, model and test](part-free-plurality.md#when-immediate-co-suppliers-suffice-for-a-common-source)
 
 This result connects arguments for the existence of an actual root with

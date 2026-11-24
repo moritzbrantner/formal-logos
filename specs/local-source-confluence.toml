@@ -9,7 +9,7 @@ id = "Every immediate pair of suppliers of one dependent has a common upstream n
 lean = "LocalForksJoin"
 definitions = ["f64856c0-6d2c-5c5d-97ef-9895039d8c27", "1dff2d68-1348-5e7e-8ee7-248af63c8c53", "822c9912-2313-584b-b2b7-77031da20107"]
 disambiguations = ["34ddfede-ff4d-59ad-9882-4bcb490df9bb", "4b02d34a-9226-5009-9ac2-3b52f4222b21"]
-paraphrase = "For each node and each pair of immediate suppliers, one node is reachable from each supplier by finitely many reversed edges of the selected relation, allowing an empty path. The joining node can vary by pair. Open when applied to the actual concrete grounds of each dependent in a fixed world."
+paraphrase = "For each node and each pair of suppliers with one selected edge into that node, one node is reachable from each supplier by finitely many reversed edges of the selected relation, allowing an empty path. The joining node can vary by pair. An incoming edge may also have an intervening path. Open when applied to the actual concrete grounds of each dependent in a fixed world."
 
 [[statement]]
 id = "Two alternating sources can supply every stage of a connected acyclic locally joining graph"

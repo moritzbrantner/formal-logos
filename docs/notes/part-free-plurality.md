@@ -310,7 +310,9 @@ no source premise is discharged by this control.
 ## When immediate co-suppliers suffice for a common source
 
 Fix a world and restrict its selected existential grounding relation to beings
-that exist there and are concrete. A ground points to its dependent. Suppose
+that exist there and are concrete. A ground points to its dependent. Here
+“immediate” means one edge in the supplied relation. An edge can also have
+an intervening path unless the interpretation excludes such edges. Suppose
 every two immediate grounds of the same dependent can each be traced upstream
 to some one being, through finitely many steps of this relation. Either trace
 can have length zero. The joining being can be different at each fork. Under
@@ -331,11 +333,14 @@ all sources equal. A source has nowhere further upstream to go. It follows,
 classically, that **two distinct sources in a connected well-founded graph
 require some dependent with two immediate suppliers having no common
 upstream node**. The obstruction can occur far from the particular effect
-under study. In the earlier five-being interpretation the instrument is an
-explicit such site. A rival can therefore answer quite concretely that the
-two underived powers cooperate there in virtue of their distinct natures.
-It owes an account of that instance if it claims to explain why the powers
-cooperate. Accepting a primitive cooperation remains a definite position.
+under study. In the earlier five-being interpretation both rank-zero sources
+have an edge to the rank-two instrument, as well as a path through the
+rank-one constituent. At that constituent they also witness the obstruction
+if “immediate” requires no intervening rank. The two incoming edges certify
+a shared dependent. To explain it by irredundant cooperation, a pluralist
+would need a further account of why each power is required. Distinct powers
+acting in virtue of their own natures and primitive cooperation are live
+explanations to examine on that stronger reading.
 [Earlier joint interpretation](#upstream-confluence-on-the-same-interpretation-702)
 
 **Why the ancestry test matters.** Consider the earlier example of two drives
