@@ -2,6 +2,7 @@ module
 
 public import TruthCore.Causality.BearerRegress
 public import TruthCore.Results.Logic.CogitoSubject.Solution
+public import TruthCore.Logic.RootDescent
 
 @[expose] public section
 
@@ -14,6 +15,7 @@ open TruthCore.Greek.Aristotle.Categories (PrimarySubstanceBySubjectRelationsRea
 open TruthCore.Logic.CogitoSubject
 open TruthCore.Logic.CogitoConcrete
 open TruthCore.Logic (ExcludedMiddle)
+open TruthCore.Logic.RootDescent (acc_exists_unmarked acc_not_of_inherited)
 
 section General
 
@@ -34,17 +36,13 @@ theorem terminus_of_acc {m : Ontic W B} {R : W → B → B → Prop} {Dependent 
     (hEM : ExcludedMiddle) :
     ∀ x, Acc (PresentEsseSupport m R w) x → SupportAncestor m R w x b → m.ExistsAt w x →
       ∃ t, SupportTerminus m R Dependent w b t := by
-  intro x hAcc
-  induction hAcc with
-  | intro x _ ih =>
-    intro hAnc hEx
-    cases hEM (∃ c, PresentEsseSupport m R w c x) with
-    | inl h =>
-      obtain ⟨c, hc⟩ := h
-      exact ih c hc (Relation.ReflTransGen.head hc hAnc) hc.1
-    | inr h =>
-      refine ⟨x, hAnc, hEx, fun c hc hR => h ⟨c, hc, hR⟩, fun hDep => ?_⟩
-      exact h (hAncestry b e x hOcc hBears hAnc hEx hDep)
+  intro x hAcc hAnc hEx
+  obtain ⟨t, ⟨hAncT, hExT⟩, h⟩ := acc_exists_unmarked
+    (P := fun x => SupportAncestor m R w x b ∧ m.ExistsAt w x)
+    (Mark := fun x => ∃ c, PresentEsseSupport m R w c x) (fun _ _ => hEM _)
+    (fun _ ⟨hAnc, _⟩ ⟨c, hc⟩ => ⟨c, hc, Relation.ReflTransGen.head hc hAnc, hc.1⟩) hAcc ⟨hAnc, hEx⟩
+  exact ⟨t, hAncT, hExT, fun c hc hR => h ⟨c, hc, hR⟩,
+    fun hDep => h (hAncestry b e t hOcc hBears hAncT hExT hDep)⟩
 
 /-- A non-accessible bearer has an endless ancestor set. -/
 theorem endless_of_not_acc {m : Ontic W B} {R : W → B → B → Prop} {w : W} {b : B}
@@ -67,14 +65,7 @@ theorem endless_of_not_acc {m : Ontic W B} {R : W → B → B → Prop} {w : W} 
 theorem not_endless_of_acc {m : Ontic W B} {R : W → B → B → Prop} {w : W} {b : B}
     (hAcc : Acc (PresentEsseSupport m R w) b) : ¬ EndlessSupportBelow m R w b := by
   rintro ⟨S, hb, hS⟩
-  have key : ∀ x, Acc (PresentEsseSupport m R w) x → ¬ S x := by
-    intro x hx
-    induction hx with
-    | intro x _ ih =>
-      intro hSx
-      obtain ⟨_, y, hSy, hy⟩ := hS x hSx
-      exact ih y hy hSy
-  exact key b hAcc hb
+  exact acc_not_of_inherited (fun x hSx => let ⟨_, y, hSy, hy⟩ := hS x hSx; ⟨y, hy, hSy⟩) hAcc hb
 
 /-- A support cycle below `b` gives an endless ancestor set: the ancestors of `b`
 that lie downstream of the cycle. -/
