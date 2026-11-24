@@ -69,6 +69,65 @@ of "necessary") stay where they are and are pulled in when a spine rival needs t
 Nothing in this note is established. "Open" means not established under the
 closure rules. Every theorem named here is verified; it certifies consequence only.
 
+## How far the case for a necessary being reaches (2026-11-24)
+
+Fix the modest target first. Some **one concrete individual** exists here
+and in every genuinely metaphysically possible world accessible from here.
+A beginningless history is compatible with contingency. Even a unique source
+in each world could be a different individual in another world. In the
+checked pair below, both interpretations have literally the same actual
+existents and grounding edges, including a genuine source–recipient edge.
+Copying the structure to the second world with different individuals
+eliminates every necessary witness. The control identifies the limit of
+structural evidence. It gives no reason on its own to believe such replacement
+is possible for the actual source.
+[Fixed-witness comparison](grounding-identity-profile.md#common-profile-and-two-assignments)
+
+| Step | Reason to accept it | Where investigation can reasonably stop |
+| --- | --- | --- |
+| Something concrete is actual | Reasoning through the question already supplies an actual exercise. Its occurrence gives stronger warrant than inference to a hypothetical first event. A bearer understood as what is exercising the act is enough for the local route. | Accept concrete actuality as a starting point. Inferring an immaterial substance, a necessary thinker or a unique first cause would require more. [Performed-reasoning argument](cogito-esse-1113.md#complete-alternative-actuality-bundles) |
+| There is a source in the relevant ancestry | If each giver's present contribution is wholly received, tracing it one step back accounts for its transmission. The question why any productive contribution obtains still has force when asked of the order together. | This gives a reason to prefer an unborrowed giver on that productive reading. A rival takes the whole realized order as primitive or argues that its global constitution explains the members. A finite survey, however complete at each inspected recipient, cannot tell where an unrestricted series ends. [Supplier comparison](de-ente-esse-source-1628.md#supplier-completeness-under-extension-of-an-audited-order) |
+| The source could not itself have failed to exist | If every actual contingent ancestor has an actual concrete ground in this very relation, any ancestor having none must exist at every accessible world. Finding such an ancestor needs a further condition. The checked thinker route uses well-founded grounding below this thinker. The population route allows a weaker condition on closed collections. | The inference is secure under the premises. Giving a source to things that really receive being has positive warrant. The live extension says that every relevant contingent actuality, **including a proposed first bearer**, must have such a ground. A brute contingent first bearer instead accounts for downstream order while taking its own obtaining as primitive. [Local descent](cogito-esse-1113.md#the-ancestry-descent-and-what-it-adds) · [Closed-collection route](direct-grounding-warrant.md#exact-reuse-and-case-connection) |
+
+The two latter judgments can come apart. Someone can accept a first giver
+and deny its necessity, or require a ground for every contingent member and
+allow an endless order of givers. The population route combines the two
+commitments with concrete population and excluded middle. It requires neither
+a first instant nor an S5 inference from possible necessity. Accessibility
+must still represent the intended metaphysical alternatives. The separately
+checked temporal routes have their own possible-history and frame premises.
+Agreement on the conclusion gives no independent reason to accept a contested
+premise. [Stage-one dependency map](spine-dependency-map.md#current-stage-one-join)
+· [Temporal arrivals](#stage-one-a-necessary-concrete-being-exists)
+
+**Provisional judgment.** The question has bottomed out reasonably as an
+argument one can evaluate. It has substantial conditional support, and a
+clear point at which someone can reasonably disagree. The sharpest further
+test holds the actual giver and its powers fixed in the description. Can its
+positive constitution explain **that it is instantiated at all**, when
+compared with taking that same constitution and its instantiation as a
+primitive contingent fact? A nature described as necessary because its
+bearer exists in every world would assume the point at issue. A successful
+account would give a reason why absence is excluded, with independent
+motivation for applying that account to this bearer. If the only difference
+is which side calls its starting point self-explanatory, this comparison
+adds no weight. Unique giver, self-knowledge and self-love enter later and
+supply none of the ancestry or modal premises here.
+[Five readings of necessity](necessary-being-five-senses.md)
+· [Intrinsic explanation and its rivals](intrinsic-existence-reason-1595.md#strongest-standing-rival-and-discriminatory-burden)
+
+The essence–existence identity has already faced a test in both directions.
+A concept of an ordinary thing can leave its instantiation open. Extending
+that result to a bearer whose very nature is an act needs an argument that
+the same conceptual analysis is adequate there. Conversely, identifying
+the bearer's nature with its act while it exists still leaves open why the
+exercise of that act belongs unconditionally to its nature. The existing
+review found neither extension better warranted at this limiting case.
+This is a reasonable place to stop repeating the modal inference. Reopen it
+on evidence about what belongs to the nature of an act, or on a candidate
+intrinsic explanation that earns its adequacy by the same criterion on both
+sides. [Reviewed assessment and revision conditions](existence-in-essence-identity.md#8-revision-conditions-symmetric)
+
 ## Stage one: a necessary concrete being exists
 
 Conclusion (`STMT-NECESSARY-CONCRETE-AT`): one and the same concrete individual

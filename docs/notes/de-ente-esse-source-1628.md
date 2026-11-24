@@ -709,6 +709,18 @@ presupposes this ordering and the account of what constitutes a person.
 · [q29 a4, body](https://www.newadvent.org/summa/1029.htm#article4)
 · [q30 a2, body and ad 1](https://www.newadvent.org/summa/1030.htm#article2)
 
+Augustine gives a reason to take the analogy seriously and a way to test
+its reach. In *De Trinitate* IX.12.18 the mind's knowledge of itself can
+express what it knows adequately, as an inward word, and the mind can love
+the very good it knows. The terms of comparison come from one life. In
+XV.7.11–12 and XV.22.42 he asks who actually remembers, understands and
+loves in the image. One human person does all three. Distributing the
+faculties among the divine persons would even deprive the Father of his
+own understanding or love. The analogy thus gives content to expression
+and love while leaving a difference in personal origin to be justified.
+[Augustine, *On the Trinity* IX, ch. 12](https://www.newadvent.org/fathers/130109.htm)
+· [XV, chs. 7 and 22](https://www.newadvent.org/fathers/130115.htm)
+
 **What the argument warrants.** Aquinas says natural reason can reach God's
 unity from creatures. Their existence points to creative power, common to
 all three persons, and therefore supplies no distinction of personal
