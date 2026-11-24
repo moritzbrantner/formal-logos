@@ -164,6 +164,7 @@ public import TruthCore.Causality.MotionMoverFork
 public import TruthCore.Causality.NamedPotentialCauser
 public import TruthCore.Causality.NamingVeracityBatch1
 public import TruthCore.Causality.NarDerivation
+public import TruthCore.Causality.NarGrafts
 public import TruthCore.Causality.NecessarilyUnderived
 public import TruthCore.Causality.NecessaryBeingInAct
 public import TruthCore.Causality.NecessaryBeingSurvey
@@ -238,6 +239,7 @@ public import TruthCore.Causality.RootMultiplication
 public import TruthCore.Causality.RootPositiveIntellectWill
 public import TruthCore.Causality.RootPositiveIntellectWillControl
 public import TruthCore.Causality.RootPurity
+public import TruthCore.Causality.RootSupplyInterface
 public import TruthCore.Causality.RootWiring
 public import TruthCore.Causality.RootWithoutLimitingPrinciple
 public import TruthCore.Causality.RotatingBearerSenseComparison

@@ -273,7 +273,10 @@ Backfill order: pairs on a route to the root first (`truth frontier --reaching-r
 
 ### Flagged
 
-None so far. (The necessary-root actualist-K and possibilist-K nodes, whose shared root facts already contain existence at `w`, are correctly recorded as `logically_equivalent_to`, not as a strength order.)
+- `577cd3b6`: well-founded actual grounding strengthens whole-roster nontrapping (#1926 slice 2a). No certified difference. A delta must give back well-foundedness from nontrapping. The known route builds the trap of inaccessible actual concreta, which needs a step from "not all accessible" to "some inaccessible", and that step is excluded middle. A certified difference must be background-free. Classical candidate: under excluded middle, well-foundedness holds iff nontrapping holds and every nonempty trap is the whole roster.
+- `864ba785`: the all-subsets borrowing cut strengthens whole-roster nontrapping (#1926 slice 2a). A constructive delta is available but not yet certified: every nonempty non-trap escapes, and every nonempty trap is the whole roster. The factorization is proved as `borrowingCutFactorsThroughWholeRoster` (zero axioms, Comparator-checked in result `25e69290`). Registering it as a `strength_comparison` needs its own delta statement and equivalence result over the actual-concrete graph.
+
+No earlier entries. (The necessary-root actualist-K and possibilist-K nodes, whose shared root facts already contain existence at `w`, are correctly recorded as `logically_equivalent_to`, not as a strength order.)
 
 ### Next batches
 

@@ -1,0 +1,18 @@
+{
+  "id": "78af5042-9b4e-41a4-bb76-ad4d1973e25a",
+  "label": "Every actual root gives exactly an optimal complete output wherever it exists accessibly",
+  "paraphrase": "OPEN standing rival to WN (0266eac2), analyst formulation, unattributed (the world-level optimizer, ties allowed): for a fixed family of admissible complete outputs (sets of beings) and a fixed partially ordered quality on them, every actual root n of the selected grounding relation G at w, at w and at every accessible world where it exists, gives being to exactly the beings of some optimal complete output. Candidates are complete outputs, not single beings. If every optimal complete output contained a necessary intermediary, the root would be fixed toward it and could be free toward the rest; that consequence is not proved here. Closer to the best-world framing of Rowe's argument (navigation, not attributed) than the being-level variant b72a790a. Stated only: no argument here supports or refutes it.",
+  "lean_declaration": "TruthCore.Causality.NarGrafts.ActualRootsGiveOptimalCompleteOutputs",
+  "definition_ids": [
+    "4f503422-a3dc-51f3-8e1d-a1065ef6038e",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "2f096ab2-0d7d-5252-a361-4e601c64aeae",
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

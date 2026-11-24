@@ -1,0 +1,10 @@
+{
+  "id": "6ec8d68e-a8b8-4846-9106-06108aa35423",
+  "label": "Absolute identification by act of being rules out the candidate triad (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "ee804943-8b45-41bd-9c1d-143717d1615f",
+  "rule": "Use transitivity of token equality, injectivity, and the distinction of source from Word",
+  "meaning": "Three bearers cannot each be numerically the same selected act if that identification is injective across persons. Equality of a common token under a non-injective map models the selected predication and still requires metaphysical interpretation.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "7670662c-d82e-49c4-aeac-8e438d3f0114",
+  "label": "Every actual root is NECESSARY_2, from the unique necessary actual root",
+  "argument_id": "7099c2c7-c543-4bb8-ba0a-a493488167a8",
+  "challenge_module": "TruthCore.Results.Causality.NarGrafts.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NarGrafts.Solution",
+  "theorem": "TruthCore.Results.Causality.NarGrafts.necessaryRootsFromUniqueNecessaryRoot",
+  "comparator_config": "results/7670662c-d82e-49c4-aeac-8e438d3f0114/comparator.json",
+  "status": "solution-present",
+  "description": "Argument G2, the connection asked by gap 6 of docs/notes/nar-derivation.md: the bare premise d164f730 of N2 and G1 now follows from the existing root-path statement 91b085c4, proved from the necessary-root routes. A one-premise weakening (registered strengthens 91b085c4 to d164f730): it drops the existence and uniqueness clauses. Not a transcription: the conclusion is a universal over actual roots obtained by rewriting through uniqueness. Establishes no premise. Orphan candidates for the same step (73f6b3c8, 593d7307, f2a65d16) would need the separate at-most-one premise 49fdec01 and are blocked here by their legacy definition links (NECESSARY_11 through WORLDS_9, and WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1 through ACTUAL_CONCRETE_GROUND_1), which make any new argument using them an unbridged sense mixing; see the graft map."
+}
