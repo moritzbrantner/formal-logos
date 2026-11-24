@@ -492,7 +492,10 @@ is attributed. No statement says "God", "will", "choice" or "freedom".
 ## 9. Remaining gaps and next tests
 
 1. The Θ.5 bridge from two-way giving to will, and the chance rival (§5, §7).
-2. Identification of the holder with GOD_4.
+2. Identification of the holder with GOD_4. Built conditionally in
+   [holder-root-identification.md](holder-root-identification.md): every
+   holder is an actual root given existence at `w` and NAR (necessary actual
+   concreta are underived), then the common GOD_4 root or at most one root.
 3. A tensed variant over `IsAt` (from #1889 gap 2). Withholding in time,
    annihilation of something existing, is not represented; `GivesTo` is "at
    some moment".
