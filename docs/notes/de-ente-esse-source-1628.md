@@ -1702,3 +1702,52 @@ constitutive/holistic and past-law accounts, the finite same-r two-bearer
 control, and the exact reuse boundaries are consolidated in the
 [canonical existential-supply comparison](unique-feedback-explanation-311.md#complete-existential-supply-comparison-supplier-cones-and-actual-constitution-1724-1616-2026-11-23).
 This adds no new premise discharge, naming bridge or world-ground equivalence.
+
+
+### Supplier completeness under extension of an audited order
+
+Fix one world, the actual bearers, one sense of giving esse and the direction from supplier to recipient. Suppose we have identified **every immediate supplier** of each bearer examined so far. How much of the foundation conclusion does that evidence support? Here an audit is an inventory of recipients together with the full incoming list for each. An actual bearer may appear on an incoming list before its own suppliers have been examined.
+
+For any finite audit on a roster indexed by the natural numbers, choose N above all the examined recipient indices. Compare two assignments on that *same* populated roster. In both, every x below N has precisely x+1 as supplier. In the first, N has no supplier and supplies every x above N; following the suppliers of any x below N eventually reaches N. In the second, every x, including N, receives from x+1. Both are acyclic: distance to N strictly decreases when tracing suppliers in the first; indices strictly increase in the second. Both can also have an integer priority label strictly decreasing toward the supplier (distance to N in the first, minus the index in the second). The full lists at the audited recipients coincide, including the identities of suppliers. Supplied status at every inspected recipient and strict priority on the links therefore fail to distinguish the two. N depends on the audit: this does not give one rooted model agreeing everywhere with the endless one. These are assignments to a productive-relation candidate. The second gives no independent reason for its infinite positive order to obtain.
+
+**What would discriminate?** A nonempty, genuinely finite domain independently verified to contain every actual supplier of every member, together with an independently calibrated strictly earlier priority for each such supplier, gives a sufficient test. Choose a member of least priority label in the domain. An incoming supplier would have to lie in the domain at a smaller label. The test yields a bearer with no incoming supplier *in the selected relation*. It needs no seed term, global rank into a well-order, prohibition of infinite chains elsewhere, or definition of giving by finite generation. The integer labels used below can descend forever on an infinite roster. Replacing finiteness by the mere fact that the investigation has so far examined finitely many bearers breaks the argument.
+
+A simple physical interpretation shows how the two conditions could receive independent warrant in a narrower domain. Consider a fixed finite set of bodies with a verified insulating boundary and only passive conductive contacts. For the selected instantaneous transfer of heat, contact and positive heat flux identify a supplier; independent temperature measurements and the passive-conduction law order each such edge from hotter to cooler. A hottest member receives no heat by the specified route from another body. A body there may still have stored heat, an earlier heater and an existential giver. Neither counting bodies in a bounded apparatus nor reading a thermometer supplies an exhaustive inventory or a strict priority calibration of *esse* givers. For the existential order it would advance the case to identify an independently delimited complete cone and an independently warranted priority on its actual supply links. One finite cone yields one relative root; the collection principle `45890c84` quantifies over **every** eligible collection. The [existing localized bridge](../../TruthCore/Causality/ConcreteRootAccess.lean) and its other inputs remain necessary for the stated CCR route when nonconcrete suppliers are allowed.
+
+**Comparison and judgment.** A collection of borrowers, each of whose exercised giving is only received, supplies a conditional explanation of transmission. If the question includes why that activity obtains at all, listing further actual borrowers can repeat the datum to be explained. This supports the existing modest preference for a nonborrowed source on the exhaustive, per se productive reading. The strongest rival can grant every audited transmission and offer a primitive fact that the whole productive pattern obtains, or a necessarily obtaining concrete whole whose constitution explains its members. The former explicitly stops at global actuality. The latter must justify the whole's actuality and the constitutive passage to concrete members; if that whole is itself an unborrowed bearer under the selected relation, the accounts agree on the narrow existence of a root. The source account likewise owes genuine productive availability and a route from it to these borrowers. The finite test excludes a wholly borrowed *closed finite* order with the stated priority; it leaves the general metaphysical commitment open. The [existing quantitative comparison](contractive-borrowed-power-1378.md) provides a separate test under independent bounds and loss. Neither local success licenses importing heat flow, attenuation or finiteness into existence.
+
+The following local Lean checks reproduce the audit comparison and the finite sufficient condition. They add no registered argument or axiom allowance; the classical finite-minimum proof and arithmetic automation use Mathlib's standard logical background.
+
+```lean
+import Mathlib.Data.Set.Finite.Lemmas
+import Mathlib.Tactic
+namespace SupplierAudit
+def endless (y x : Nat) := y = x + 1
+def sourced (n y x : Nat) := (x < n ∧ y = x + 1) ∨ (n < x ∧ y = n)
+theorem sameLists (n x y : Nat) (seen : x < n) :
+    sourced n y x ↔ endless y x := by unfold sourced endless; omega
+theorem endlessBorrower (x : Nat) : ∃ y, endless y x := ⟨x+1, rfl⟩
+theorem oneRoot (n x : Nat) : (∀ y, ¬ sourced n y x) ↔ x = n := by
+  constructor
+  · intro h
+    by_cases lt : x < n
+    · exact False.elim (h (x+1) (Or.inl ⟨lt,rfl⟩))
+    · by_contra ne
+      exact h n (Or.inr ⟨by omega, rfl⟩)
+  · rintro rfl y
+    unfold sourced
+    omega
+-- Integer labels permit infinite descent on the full roster.
+theorem finiteAudit {B : Type} (S : Set B) (r : B → B → Prop) (level : B → Int)
+    (finite : S.Finite) (present : S.Nonempty)
+    (closed : ∀ x ∈ S, ∀ y, r y x → y ∈ S)
+    (drop : ∀ x ∈ S, ∀ y, r y x → level y < level x) :
+    ∃ x ∈ S, ∀ y, ¬ r y x := by
+  obtain ⟨x,hx,least⟩ := S.exists_min_image level finite present
+  exact ⟨x,hx,fun y hy => (not_lt_of_ge (least y (closed x hx y hy))) (drop x hx y hy)⟩
+#print axioms sameLists
+#print axioms endlessBorrower
+#print axioms oneRoot
+#print axioms finiteAudit
+end SupplierAudit
+```
