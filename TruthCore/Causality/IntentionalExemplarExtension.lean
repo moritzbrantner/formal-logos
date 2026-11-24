@@ -271,3 +271,93 @@ def Controls : Prop :=
 
 end Control
 end TruthCore.Causality.IntentionalExemplarExtension
+/-! ## Objective eminent intelligibility and actual source-level noesis
+
+C4 analyst fork. This is not another definition of HAS_INTELLECT_1 or the
+q.14 source's intentional act. Objective exemplary and normative sufficiency is
+stronger than mere power to produce an intelligent creature: the first source
+itself is assigned an intelligible own form and a primitive Norms relation to
+a real, apprehending secondary knower's correct content. Norms is
+*interpreted* as a truth/correctness standard, but nothing here defines
+Correct from Norms or otherwise constrains it. Nothing in that object-side
+structure yet makes the source an apprehending subject. Whether this counts as
+the *full pure perfection* of intellectual understanding is exactly the
+substantive question, not something decided by these definitions.
+
+A second fork isolates real constitutive plurality from distinct intentional
+descriptions. It is one selected constituent sub-reading of the Plotinian
+challenge, deliberately transposed onto OwnBeing bearers; it is not a faithful
+definition of every Plotinian theory of noesis or of Thomistic simplicity.
+These are analyst interpretations; source attribution is deferred.
+-/
+namespace TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence
+
+open TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding
+
+/-- A nonvacuous intellectual effect of g: a distinct being actually and
+intrinsically apprehends a correct self-directed content. Mere HAS_INTELLECT_1
+labelling does not suffice. -/
+def ProducesActualKnower {B C : Type}
+    (CausesEsse : B → B → Prop) (About Correct : C → B → Prop)
+    (Apprehends Grounded : B → C → Prop) (g : B) : Prop :=
+  ∃ x, x ≠ g ∧ CausesEsse g x ∧
+    IntrinsicSelfKnowledge About Correct Apprehends Grounded x
+
+/-- A stronger OBJECTIVE reading of eminent intellectual containment.
+The source has its own intelligible form, that form is primarily about the
+source, and the source bears a norm-setting relation to each correct
+self-directed content that an actual caused being apprehends (the clause
+covers only contents about that caused being itself). Norms is an OPEN
+constitutive/epistemic explanation, not just a causal edge or a successful
+Boolean response; HasOwnForm, PrimaryAbout and Norms are otherwise
+unconstrained primitives here. A real cognitive effect is required.
+The reading does not assert that g itself exercises understanding.
+
+The PrimaryAbout clause is deliberately the g-instance of #1879's
+ImmanentSelfPresence.OwnFormPresentsSelf with the same PrimaryAbout relation,
+not a fresh aboutness primitive, so that the same form witness can be fed to
+ActApprehendsPrimaryObject (see eminentFormApprehendedIfActual).
+
+Accepting this as *genuine higher-mode possession of intellectual perfection*
+rather than intelligibility without intellection requires philosophical warrant.
+It is NOT substituted for the old IN_ACT_4 or InActVirtually primitives. -/
+def IntrinsicExemplarEminence {B C Form : Type}
+    (OwnBeing : B → Prop) (ownForm : B → Form)
+    (HasOwnForm : B → Form → Prop)
+    (PrimaryAbout : Form → B → Prop)
+    (Norms : B → Form → B → C → Prop)
+    (CausesEsse : B → B → Prop) (About Correct : C → B → Prop)
+    (Apprehends Grounded : B → C → Prop) (g : B) : Prop :=
+  OwnBeing g ∧ HasOwnForm g (ownForm g) ∧
+  PrimaryAbout (ownForm g) g ∧
+  (∀ x c, CausesEsse g x → Apprehends x c →
+    About c x → Correct c x → Norms g (ownForm g) x c) ∧
+  ProducesActualKnower CausesEsse About Correct Apprehends Grounded g
+
+/-- At most one real intrinsic constituent/aspect of the selected source,
+not a denial of multiple descriptions or intentional relata. The real
+constituent carrier Aspect is a separate type parameter, not identified with
+the content or being carriers. -/
+def ConstitutivelySimple {B Aspect : Type}
+    (RealConstituent : B → Aspect → Prop) (g : B) : Prop :=
+  ∀ a b, RealConstituent g a → RealConstituent g b → a = b
+
+/-- OPEN *constitutive duality* reading of noesis: a subsistent subject's
+actual self-understanding needs two genuinely distinct real constituents.
+An intentional distinction that does not divide the source denies this
+principle. This is a deliberate transposition of one constituent sub-reading
+of the Plotinian objection onto OwnBeing bearers. Plotinus's more general claim
+about intelligible articulation may not reduce to it (the strongest Plotinian
+objection "survives merely removing two numerically different relata",
+docs/immaterial-intellect-reception.md); that semantic question stays open.
+RealConstituent occurs only here and in ConstitutivelySimple: it is linked to
+no act, subject/object identity or intentional-distinction relation. -/
+def SourceNoesisRequiresRealPlurality {B C Aspect : Type}
+    (OwnBeing : B → Prop) (About Correct : C → B → Prop)
+    (Apprehends Grounded : B → C → Prop)
+    (RealConstituent : B → Aspect → Prop) : Prop :=
+  ∀ g, OwnBeing g →
+    IntrinsicSelfKnowledge About Correct Apprehends Grounded g →
+      ∃ a b, RealConstituent g a ∧ RealConstituent g b ∧ a ≠ b
+
+end TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence

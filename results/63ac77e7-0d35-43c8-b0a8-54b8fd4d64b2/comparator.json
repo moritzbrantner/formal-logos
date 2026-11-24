@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Ontology.ExistenceInEssence.Challenge",
+  "solution_module": "TruthCore.Results.Ontology.ExistenceInEssence.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Ontology.ExistenceInEssence.kantAdequacyFoundationalContingent"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

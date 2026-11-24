@@ -1,0 +1,30 @@
+{
+  "id": "f872a512-c5a9-4188-8e6d-4823c184da1e",
+  "label": "The actual contingents' joint absence by withholding, under the creator reading",
+  "premise_statement_ids": [
+    "95bf8780-0e3c-49ba-b636-2274e2997a30",
+    "906f5c39-2a63-4dc2-955d-a00cfd8a976b",
+    "18e5bd4e-8178-468e-b867-fbaf9c5988ad",
+    "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174",
+    "9f7b1778-84c9-40cf-a1b6-a91a960b0590",
+    "3ef41442-431a-4bed-83bd-4458ed623f5f"
+  ],
+  "conclusion_statement_id": "b8a2a9e1-0dda-48bc-a646-d4cb229ca62c",
+  "inference_ids": [
+    "03d3c360-e7a2-4c05-805e-df1531c20242"
+  ],
+  "meaning": "P1-prime gives a holder y at w; P2-prime gives an accessible world v where every concrete being contingent at w is absent and y exists. By the creator reading y gives each of them being at w; since each is absent at v, factive giving shows y gives none of them being at v. Constructive.",
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "e006ddeb-2c88-4835-8558-2f360cc5a3eb"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

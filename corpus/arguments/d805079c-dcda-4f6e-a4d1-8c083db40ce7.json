@@ -1,0 +1,22 @@
+{
+  "id": "d805079c-dcda-4f6e-a4d1-8c083db40ce7",
+  "label": "Identity by nonempty-path ancestors gives at most one source",
+  "premise_statement_ids": [
+    "53cc2c53-1f9a-4e4a-8402-3ac464fa8352"
+  ],
+  "conclusion_statement_id": "861e20d6-7d65-5856-85cf-0cd0d0c167f3",
+  "inference_ids": [
+    "f818e754-9823-4de7-97df-8c235f5b8702"
+  ],
+  "meaning": "A nonempty path ending at a source would give it an incoming final edge. Any two sources therefore agree on every strict ancestor, and the universal criterion identifies them. This argument requires neither population, well-foundedness nor excluded middle. The same criterion also applies to dependent beings, where the sibling control shows how it exceeds source uniqueness.",
+  "definition_ids": [
+    "822c9912-2313-584b-b2b7-77031da20107",
+    "1dff2d68-1348-5e7e-8ee7-248af63c8c53",
+    "f64856c0-6d2c-5c5d-97ef-9895039d8c27",
+    "7439c292-82a4-530d-8144-a61a6c21f502"
+  ],
+  "disambiguation_ids": [
+    "4b02d34a-9226-5009-9ac2-3b52f4222b21",
+    "34ddfede-ff4d-59ad-9882-4bcb490df9bb"
+  ]
+}

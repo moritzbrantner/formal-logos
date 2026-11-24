@@ -1,0 +1,19 @@
+{
+  "id": "f0ac2f76-62fe-4b9b-8427-e0ca8d7a3cef",
+  "label": "A power for the actual contingent concreta's joint absence is POWER_OVER_ESSE_1 over each of them",
+  "paraphrase": "OPEN transfer bridge for Pruss's own premise (collective to distributive; analyst formulation): whatever has at w a power for the joint absence of the concrete beings contingent at w (one world lacking them all) has POWER_OVER_ESSE_1 over each concrete being contingent at w. The analogue, for powers, of premise B of C1 (disambiguation 197f0097: what accounts for a totality accounts for each member), and of the global variant's transfer bridge. Not derivable from the collective power as typed (controls: a replacement model has the collective power and none over any actual contingent member's esse; formally because PowerOver is unconstrained, the replacement structure on the thin reading of PowerFor only making that choice admissible; that model has one actual contingent, so collective and distributive coincide there, and the separation shown is PowerFor to POWER_OVER_ESSE_1, already for one member; a two-member model separates collective from distributive at the level of PowerFor). ST I q.104 a.3 ad 1 shows the absence is never the holder's direct effect, so the transfer needs a stated bridge; it does not support replacement as the Thomist reading, on which an absence is caused only indirectly, by withdrawing a giving.",
+  "lean_declaration": "TruthCore.Modal.PrussPowerPremises.ActualAbsencePowerIsPowerOverEsse",
+  "definition_ids": [
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "3fd6bddb-f10c-4df4-8694-3eb5e7c28617",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5",
+    "197f0097-f2ae-4a47-8770-3d43758f737b",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

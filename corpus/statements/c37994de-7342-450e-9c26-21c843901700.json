@@ -1,0 +1,13 @@
+{
+  "id": "c37994de-7342-450e-9c26-21c843901700",
+  "label": "Persistent population conservation and capacity separate solitary from additional uncaused entry",
+  "paraphrase": "Three explicit interpretations share one actual persistent founder, de re contingent, uncaused and without a #312 existence reason. It produces one firing with a circumstantial reason. In each interpretation the local existence PSR therefore fails at that world. #312 explanations are sound at every selected time. A conserved cardinality of persistent agents excludes every later birth and makes the initial bit determine the complete history. With the founder present, an upper bound of one agent is equivalent to conservation, although the bound permits a solitary late agent when the founder is absent. The unrestricted input boundary admits a second uncaused, unexplained, contingent agent at any selected later tick, with the other input bits and all earlier presences fixed. It produces a firing at the fixed detector one tick later that the founder-only history lacks. Applicability to concrete agents, causes and actual modal boundaries remains open.",
+  "lean_declaration": "TruthCore.Explanation.PopulationEntry.EntryComparison",
+  "definition_ids": [
+    "2d8e788b-0889-4c55-9ca5-2ed9bd8565a7",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "60b36398-a152-552a-a413-ef649e5b7b1f",
+    "d513fb8a-64ee-5d49-ae56-4d695f93ca71",
+    "e7302a28-f9fc-4961-811f-bf58bd86c28d"
+  ]
+}

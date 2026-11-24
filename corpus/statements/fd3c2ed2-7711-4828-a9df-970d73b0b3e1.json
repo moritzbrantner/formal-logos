@@ -1,0 +1,9 @@
+{
+  "id": "fd3c2ed2-7711-4828-a9df-970d73b0b3e1",
+  "label": "Two paired inputs realize precisely the initial parity class on a three-coordinate path",
+  "paraphrase": "From any starting Boolean triple, finite compositions of independently chosen paired flips on the left and right edges reach exactly the triples of the same parity. Every assignment to each pair of distinct coordinates is realized. Flipping only the first endpoint gives an excluded target. Allowing a single optional flip of that endpoint before the same paired inputs makes every target attainable.",
+  "lean_declaration": "TruthCore.Explanation.PairedInterventions.InputRange",
+  "definition_ids": [
+    "a3876b86-7245-47ea-9016-b051d1f72e56"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "75297f50-118c-4704-9158-8fa85f449707",
+  "label": "The route's conclusion, from a necessary concrete varying giver",
+  "premise_statement_ids": [
+    "256a5e0a-d287-43d8-b52e-ec55c9eb89ed"
+  ],
+  "conclusion_statement_id": "b90ee2de-8ae5-438b-bea4-e3158889c3e7",
+  "inference_ids": [
+    "a9ad2b41-2221-47b5-803e-c978e5f62a30"
+  ],
+  "meaning": "A necessary concrete holder of a power for the joint absence that varies its giving is in particular a necessary concrete holder of that power.",
+  "definition_ids": [
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "bd4c434d-be19-43ca-936b-f33eb6c15a8c",
+    "bf7eddca-8291-4744-8470-379babcd7781"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

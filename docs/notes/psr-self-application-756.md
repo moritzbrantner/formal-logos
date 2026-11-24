@@ -817,3 +817,369 @@ scene. Next: test whether the necessary-root uniqueness and
 attributes results discriminate a self-explained God from a self-explained physical base
 at matching scope; seek a derivation of BX1 from contingent irreflexivity and B6.
 Attempt `b7860c60-202d-4ca7-9156-630a51a1e8b3`.
+
+
+## Does a contingent foundation merit exemption from determining explanation? (2026-11-23)
+
+This checkpoint continues #1908. The C2 note examines the causal exception.
+Here the question is what would justify requiring an existential explanation
+of one contingent bearer while exempting another, and what quality of reason
+the requirement calls for. E and D below are analyst formulations.
+
+### Fix the target and distinguish the demands
+
+At actual world w, fix a concrete individual x, its positive existence fact,
+and the accessible alternatives for that very individual. Contingency is
+actual existence plus accessible absence (MODAL_CONTINGENCY_1), not
+dependence by definition. Foundationality means absence of an eligible
+predecessor in the *selected* actual existential dependency relation; it is
+not automatically absence of every noncausal or intrinsic reason. A
+necessary office (some foundation in each world) does not identify the same
+occupant across worlds. A claim about an initial state's properties is not
+automatically a claim about the existence of its bearer.
+
+Reuse the local coverage proposition `608a262d-08fe-4dfd-9413-67e2ecf35b84`
+(`NoBruteContingentExistenceAt`) and the existing stance and strength maps.
+Keep three thresholds separate:
+
+1. E: Every actual contingent concrete individual has a genuine actual
+   reason why it exists, rather than merely a reason to believe it exists.
+   A purported reason must be relevant to its existence and not merely
+   redescribe or presuppose that existence in the very respect under
+   explanation. This is a proposed adequacy reading of the existing local
+   coverage demand, **not** the exact Lean predicate: `Model.explains`
+   admits tokens, and its being-level scope is not restricted to concrete
+   individuals. The relevance and direction tests are open interpretation
+   requirements, not newly proved facts. This requirement need not entail
+   an efficient cause, unique cause or necessitating reason.
+2. D: For each such x there is an actual adequate determining reason (possibly
+   a jointly sufficient basis) for its existence: that basis rules out the
+   relevant accessible alternatives without x. If expressed by a single
+   reason fact in the #755 arena, this requires `explains w r (exist x)`,
+   factivity and the target instance of `Necessitating`, not merely an
+   entailment or the globally quantified necessitation law. Reading this
+   as a claim about the bearer's existence also requires the fact
+   `exist x` to hold exactly where x exists (`Coherent` in #755). A plurality
+   needs an explicitly represented joint condition or a bridge to a fact
+   expressing it. Joint sufficiency is not automatically individual sufficiency.
+3. R: A stance requires a determining reason for every accepted actual
+   contingent existence fact. This is a demand about the worldview, not
+   the ontic assertion D that every such fact has one. R specifies which
+   accepted facts are subject to the demand. `WhyHonorsNecessitating`
+   specifies what meeting that demand entails for them in a picture.
+   It leaves the scope of `requiresWhy` open and does not require
+   acceptance of the explaining fact or factivity of `explains`.
+
+Classically, the negation of E is that some actual contingent concrete being
+lacks an adequate actual existential reason, not that no being has one.
+The negation of D is that some actual contingent concrete being lacks an
+adequate determining reason; it can still have a nonnecessitating reason.
+Neither negation asserts that the exception is a foundation. At the weaker
+token level, the negation of 608a262d is the existence of an actual
+contingent being with no reason token. For that same being `b36104ba` also
+requires absence of a distinct esse-cause. Its quantifier ranges over beings,
+so applying this rival to E or D also requires a concrete witness and an
+interpretation connecting adequate reasons to represented tokens.
+The local demand does not by itself settle a necessary modal law or a
+possible exception in a nonactual world.
+
+### The two jobs of an exemption
+
+There are two questions a proponent of a restricted PSR must not conflate.
+What makes an exemption from the rule reasonable? And what, if anything,
+accounts for this exempt existent's actuality? A feature can do the first
+job without doing the second. A necessary rule requiring some terminus
+leaves its occupant open when different occupants can meet the rule.
+Conversely, lack of an existential explanation does not prove the
+rule distinguishing explananda was randomly selected.
+
+**Role versus occupant test.** Suppose a candidate law of explanation says
+that each received existence has a source and some basic bearer supplies
+all actual received existence. Grant its warrant, not merely its
+consistency. If n alone supplies that role in the actual history and
+another alone supplies it in an accessible history satisfying the same
+basis, that basis leaves open who supplies the role. The other history
+can still contain n as a dependent. To defeat the proposed basis for
+**n's existence**, exhibit an accessible history where the entire basis
+holds and the same n is absent. Contingency supplies an absence witness;
+it does not guarantee that the proposed basis holds there. Conversely,
+if the basis actually obtains, explains n's existence, and excludes
+every such absence while it obtains, it meets the determining test for
+n. A contingent basis could do this for contingent n. The comparison
+leaves the admissibility of the proposed histories to be defended.
+
+| Proposed exemption | Positive warrant for its restriction | Remaining explanatory cost and test |
+| --- | --- | --- |
+| Existentially derivative versus underived | Receipt is a positive dependence relation: explaining the received act by its supplier fits the very explanandum. A thing lacking such dependence does not need that kind of supplier. | Defends a restriction of *giving*, not a general exemption from ontic reasons. Ask whether an intrinsic or noncausal reason could apply; if none, the contrast between actuality and absence is still left open. A criterion 'has no reason' merely relabels the exception. |
+| Temporal initial state versus later event | Initial-value explanations legitimately stop a derivation at its input; independently warranted temporal firstness excludes an earlier event. | Why these boundary data or this bearer exists is not answered by temporal ordering. An initial condition may be a derivative existent or have a simultaneous source. The distinction is relevant to earlier-event explanation only. |
+| Basic whole versus constituents | A constitutive account can make the whole primary and explain parts by the whole; compositional constraints can genuinely exclude arbitrary independent variations of constituents. | This requires actual whole-to-part dependence, not a label 'whole'. If the whole could be absent, its contingent existence is still the target. Member explanations do not automatically explain the whole, nor does the whole explain its own existence by having parts. |
+| Necessary versus contingent | If a nature genuinely entails the existence of the very individual, the absence contrast is ruled out without a prior producer; see the intrinsic-reason investigation. | Necessary status alone is not a positive nature account. Applies symmetrically to a necessary physical base or a necessary personal source. Does not justify exempting a *contingent* foundation. |
+| Independently identified fundamental kind or law | A substantive structural or essential constraint can exclude certain kinds from being derivative or from existing uncaused (e.g. a relational role that entails dependence). A theory may have explanatory success and constrained admissible histories even when its initial datum is brute. | The constraint must bear on the bearer's existence, not only its operation or our evidence. If it selects an actual contingent law rather than its rival, ask the same existential question about any contingent *bearer* of that law; broader factual coverage is an additional premise. A law whose admissible models include the foundation's absence is not a determining reason for that foundation merely by being true or useful. |
+| Primitive restricted demand | Direct warrant can be legitimate: one may take dependence rather than contingency to trigger a requirement, and give reasons for believing that restriction without requiring further ontic explanation of every fact. This is consistent with the #756 critic. | Merely choosing the actual foundation as exempt supplies no discriminatory warrant. Primitive does not mean false, but the policy must disclose what its direct warrant is and what would count against it. A primitive rule can constrain other facts, but cannot thereby account for an independently contingent exemption or occupant. |
+
+### Can the exemption remain local? The relocation and closure tests
+
+The verified feature-relative parity result `6e7f5afd` and its symmetric
+sibling `8fba6dd2` concern demands for some reason. For the proposed
+determining version, suppose the stance accepts f and requires a
+determining reason for g. If its demand at that **same quality** is
+uniform in feature k, agreement of f and g on k transfers the demand
+to f. By `WhyHonorsNecessitating`, meeting it at w gives a fact r with
+`explains w r f` such that at every accessible world where r holds,
+f holds. The actual nonexistence of any such r contradicts this bundle.
+Factivity is a separate condition for r to be true at w, and E's
+relevance and direction conditions still need warrant. A stance could
+mistakenly believe no such r exists. The encoded `accepts` relation
+supplies no logical closure or guarantee of truth.
+
+Relocation test: take the warrant offered for demanding an explanation of
+one candidate while exempting another. Preserve all the properties that
+the warrant actually uses and move the unreasoned actuality to the other
+candidate in the *comparison*, not necessarily in reality. If the warrant
+then yields the same classification but the verdict is changed, the
+offered warrant did not explain the verdict. This is a test of argumentative
+adequacy, not a license for arbitrary metaphysical recombination. A
+kind-specific relation genuinely bearing on dependence can block the
+comparison. Bare designation as 'the actual foundation' cannot determine
+its own actual existence. There is no requirement to prove the relevance
+of a feature by endlessly earlier reasons: direct grasp of dependence,
+observed causal patterns, constitutive relations and coherence can all
+supply relevant warrant.
+
+**A further contingent agent.** A policy requiring reasons only for
+derivative beings can explain why a generated agent needs a source.
+Taken alone it permits designating an additional agent as basic and
+leaves open whether that agent can appear at a particular place and
+time. A stronger rival gives a complete inventory of the initial
+bearers and a rule by which every later bearer either persists or
+arises from specified antecedents. Holding that inventory and rule
+fixed excludes a later, newly appearing agent with no antecedent.
+Recorded persistence and independently traceable production can
+support such a rule for the kinds examined. Extending it to every
+agent requires warrant that the inventory and production alternatives
+cover every eligible bearer. Equations for the behaviour of the
+inventoried beings alone leave an extra, unrepresented bearer untested.
+An agent already in the initial inventory raises the separate question
+why this inventory obtains. These tests apply equally to an additional
+impersonal bearer. Agency by itself settles neither question.
+
+The inference from **one** brute contingent foundation to the possibility
+of arbitrary brute contingencies elsewhere is invalid without a further
+modal extension principle. A restricted rival can posit a basic state,
+a fixed lawful development and an invariant restriction that no derivative
+existence is brute. In a mathematical description, start with a binary
+initial value and a deterministic recurrence that copies that value at
+each subsequent step. The two solutions differ at every step; there is
+no solution in which a later value arbitrarily changes with the initial
+value and recurrence fixed. The recurrence supplies a constraint on the
+history but does not determine the initial bit. This is a control for the
+*logical* claim that a primitive input entails unconstrained outputs, not
+a model of actual existential giving or evidence that brute concrete
+foundations are possible. On the rival's interpretation the same
+restriction can be motivated by successful prediction and by a
+dependence-only explanatory policy. Neither success nor consistency
+explains why the actual initial input obtains. Permitting the one
+exception forfeits contingency alone as a universally sufficient trigger
+of the determining demand; requiring a reason elsewhere now needs a
+different or additional ground.
+
+**Self-application.** Ask whether the rule 'only
+derivative existence requires an explanation' is itself (a) a belief
+accepted with epistemic warrant, (b) an actually obtaining contingent
+fact, and (c) an actual contingent concrete existent. These are
+different types. A proponent can defend the belief directly while the
+ontic existence principle does not even quantify over the belief's truth.
+If the rule itself is contingently true, its own truth or obtaining
+raises the analogous question *under the broader contingent-fact PSR*,
+not automatically under E or D for concrete individuals. If a contingent
+law-bearer is invoked as an existential reason for other bearers, that
+bearer falls within E/D's scope if concrete and actual. If exempt, the
+view has not contradicted itself merely by declining the broader rule;
+it has located a further stopping point. If it invokes a second
+contingent selector to answer which policy or foundation obtains, apply
+the same test to that selector at its proper type. A necessary selector
+might constrain the admitted options without selecting their actuality.
+A contingent selector can determine the target while leaving its own
+existence or obtaining open. The question recurs exactly where the scope
+includes it, not by a universal metalinguistic regress.
+
+For a proposed global constraint, ask for a restriction specifiable
+before naming the disputed agent. Use the same inventory, generation
+rules and scope to evaluate both a history the rival admits and the
+proposed insertion. A violation locates the exclusion and gives
+the restriction content beyond the designation
+“brute.” The second test is whether the offered basis explains **why
+the restriction governs these bearers at all**. In the existing
+`LawActuality.omissions` control, each of two formal laws retains a
+unique trace even in `emptyRealization`, where no state-bearer is
+present. Solving the rule therefore supplies no instantiation premise
+in that semantics. An actual constitutive structure whose nature
+entails the restriction could supply one if its instantiation and
+explanatory direction have independent warrant. Evidence from the
+bearers' behaviour can support belief in that structure. It supplies a
+determining explanation of its obtaining only if it also explains that
+obtaining and excludes accessible alternatives where the evidence
+holds and the structure fails to obtain. A primitive policy can
+instead stop here if its scope allows, retaining its local exclusions
+while leaving this further fact unexplained. The same test applies to a necessary
+personal source or a physical nature invoked to select the actual
+order. [Law actuality and its omission controls](law-actuality-743.md#omission-and-positive-controls)
+
+### What a nonnecessitating explanation achieves
+
+The #755 `ground true` control separates factive admitted explanation
+from modal necessitation. In #942, `ProductiveAxis` tests #735 Supply
+at target 2 in the `overlay` examples. `AgencyBoundary` uses a
+different frame, `acting`, where the same structural choice marks are
+compatible with either value of a supplied personal flag. These results
+leave open whether productive supply and substantive agency describe
+the same bearer and exercise.
+
+Take a selection process with independently identified mechanism and
+an actual exercise which produces one of two possible outputs. The
+mechanism and its exercise can explain *how* this output was produced,
+even if their specified prior conditions admit both outcomes. Distinguish
+three questions: why there is a product at all, why this very product
+exists, and why these conditions gave this product rather than the
+other. A productive process may answer the first two by actual
+production and individuation; a probability or motive may even favor
+the actual outcome. It need not settle the third as a fully
+determining contrast. Merely citing the actual output as the selector
+fails to supply new explanatory content. Adding an actual act of
+selection need not be circular: a free decision or a stochastic event
+can be genuinely distinct from and explanatory of the product's
+existence. But treating that act as determining the product relocates
+the residual contrast to the act if its obtaining is contingent and
+not itself determined. If its subject is a contingent concrete bearer,
+the existential demand also applies to that subject. A contingent act
+as such is a different explanandum unless broader fact/event coverage
+is adopted. A causal explanation of the product is not automatically a
+complete account of the act's obtaining.
+
+This is positive warrant for E as a less demanding universal candidate:
+we know explanatory mechanisms where producing the actual effect, not
+deducing it from a complete earlier description, is the issue. It is
+also a reason to preserve D as an explicit further commitment rather
+than identify it with explanation. For D the decisive argument is
+different: if an account claims to settle *why actuality rather than
+absence*, and all its proposed determining conditions equally obtain
+in an admitted absence alternative, the account is not determining.
+It follows that such a claimed explanation is incomplete at that
+standard. It does not follow that every actual existential contrast
+has a determining answer. The additional universal demand is a
+substantive metaphysical commitment, not the definition of an
+explanation.
+
+A full necessitating fact PSR plus the other members of the #755
+collapse core is inconsistent with contingency. That result cannot
+be applied to D alone: D quantifies over concrete existents, the core
+needs the aggregate of contingent truths, distribution, factivity,
+contingent irreflexivity and the specified coverage and necessitation.
+A necessary reason cannot necessitate a contingent explanandum in the
+same accessible scope. A determining basis for a contingent individual
+can therefore include a contingent distinguishing condition; its
+ultimate adequacy is a further question. Both theistic free creation
+and impersonal indeterministic production must face the same
+determination test. A nonnecessitating answer for a derivative
+creature is not by itself an explanation of an underived n.
+
+### Overall provisional judgment and downstream consequences
+
+**Prefer E as the strongest currently defensible common starting
+principle**, in the sense of substantive coverage with a less
+question-begging account of adequacy than D, not as a proven stronger
+logical proposition. E is more demanding than mere admission of a
+reason token. It has positive cumulative warrant: direct intelligibility
+of actual production and receipt; the distinction between nature and
+actual instantiation where a nature leaves existence open; the
+explanatory inadequacy of restating an outcome; and feature parity as
+a check on selectively restricting that demand. The direct primitive
+commitment that contingent existential actuality is intelligible is a
+legitimate candidate stopping point. The applicability of production
+examples to simple unreceived being and the universal existence of a
+genuine reason remain disputed. Give moderate provisional preference to
+E over a brute-contingency exception, not a claim of establishment.
+Retain suspension about D as a universal metaphysical thesis. Strong
+confidence in the conditional completeness and self-application tests
+does not transfer to unconditional coverage. The strongest rival is
+the principled derivative-only policy plus a primitive contingent
+foundation and independently constrained lawful histories. It can exclude
+specified additional agents where an independently warranted inventory
+and production rule cover them. Its outstanding burden is to justify
+that scope and, if it offers a determining explanation of actuality, to
+account for the particular bearer or structure that obtains.
+
+* With E, an actual contingent concrete foundation has an adequate
+  existential reason. To use E for the existing B2 route, one must
+  represent adequate reasons by tokens and cover every contingent being
+  in B2's domain (or restrict the argument to a concrete witness).
+  Token coverage with BX1 and BX2 gives a distinct esse-cause under
+  the supposition of contingency (`7bf9cb77`). The further inference
+  in `firstMoverNecessaryByEsseCause` (`8cc169e3`) uses the First Way
+  witness f and actual existence of movers (B0). If f were absent at
+  an accessible world, B2 would give a distinct cause of its esse.
+  B3 makes this cause simply prior to f, and B1 says that anything
+  simply prior to this first being must equal f. The contradiction
+  excludes accessible absence. Excluded middle yields existence at
+  every accessible world, and a separate pure-act premise supplies
+  pure actuality for the same witness. In the `unprioritized` control
+  (`2b71a3ad`, case 3), B2 and B1 hold for a contingent first mover
+  whose distinct esse-cause lacks that priority. This shows where
+  using B2 without B3 would fail.
+* With D plus the claim that the particular underived n has no eligible
+  adequate determining basis (including any noncausal, intrinsic or
+  jointly sufficient basis), actual n cannot be modally contingent.
+  This is a conditional argument at the fixed individual, not the
+  modal necessity of D or a proof of God. Underivedness in a selected
+  causal relation is insufficient by itself to exclude all reasons.
+* With not-E, at least one actual contingent concrete bearer remains
+  unexplained at the selected adequacy standard. This blocks using E
+  universally, but does not invalidate specific local explanations,
+  establish a brute *root*, or entail that any past, law or future
+  can arbitrarily change. The cost is an exception to universal
+  existential intelligibility; a defended restriction may limit its
+  scope. With not-D, adequate productive or other nonnecessitating
+  explanation may remain available throughout. Neither negation
+  entails atheism.
+* The same requirements constrain a theist who exempts a necessary
+  God: E does not demand an explanation of necessary bearers, but
+  an independently invoked unrestricted reason demand does; a bare
+  necessity label is not an intrinsic reason. See
+  [the intrinsic-reason assessment](intrinsic-existence-reason-1595.md).
+  Do not turn parity into a tally of unexplained facts or a ranking
+  by leaf count.
+
+**Revision / next test.** Strengthen E if the actual-instantiation
+contrast can be shown to require genuine existential explanation even
+when no reception or production is present. Strengthen the restricted
+rival if an independently characterized metaphysical feature both
+exempts underived contingents and justifies why structurally similar
+contingents do not qualify. Move toward D if a substantive argument
+shows that an actual productive or agent explanation without a
+determining contrast cannot be existentially adequate, without
+assuming aggregate coverage or denying contingency by definition.
+Move against D if an independently warranted genuinely contingent
+production or agency case provides complete existential explanation
+at the selected (not merely partial) adequacy standard without a
+necessitating basis. Start the next comparison with `acting` at world
+0. The contingent act `.member 0` is admitted as a reason for the
+distinct fact `.target`. They hold in exactly the same worlds, and
+the necessary `.source true` is an admitted reason for the act.
+Keeping act, outcome and their truth conditions fixed, compare the
+actual case with a variant that drops the source-to-act explanation.
+This varies the act's reason while retaining the act-to-outcome
+explanation. Explaining why the act obtains and interpreting it as
+actual production are separate questions. A further comparison would
+need an interpretation relating that same exercise and outcome to #735
+Supply, and independent grounds for ascribing personal agency there.
+The two witnesses in #942 supply neither bridge.
+The #1909 causal-boundary investigation is complementary, not
+duplicated here.
+
+The formal evidence for these comparisons remains in the existing
+`NoBruteContingentExistenceAt`, parity, #755 and law-actuality
+results. The review corrections concern the reason present in a
+picture, the absence witness required for n, the priority premise
+in the First Way application and the distinct witnesses in #942. Attempt
+`9d7b8ae0-474d-4ae4-9d08-019cffbdea7b` records the revised
+provisional assessment and its open bridges.

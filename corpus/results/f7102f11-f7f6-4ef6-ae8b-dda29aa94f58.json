@@ -1,0 +1,11 @@
+{
+  "id": "f7102f11-f7f6-4ef6-ae8b-dda29aa94f58",
+  "label": "Cancel the shared component of two Boolean measurement offsets",
+  "argument_id": "90379361-629e-491c-9dd1-5f538d1fbe57",
+  "challenge_module": "TruthCore.Results.Explanation.PairedInterventions.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.PairedInterventions.Solution",
+  "theorem": "TruthCore.Results.Explanation.PairedInterventions.offsetAccuracy",
+  "comparator_config": "results/f7102f11-f7f6-4ef6-ae8b-dda29aa94f58/comparator.json",
+  "status": "solution-present",
+  "description": "Evaluating the four input bits identifies the precise condition under which a differential reading tracks change in a fixed XOR channel. Keeping or reading the two values and correctly carrying out the comparison are application conditions. The identity supplies no physical frequencies or normative premise."
+}
