@@ -2288,3 +2288,544 @@ The objective impersonal rival is substantive but not automatically warranted: t
 
 **Semantic challenge outcome (2026-11-23).** An independent semantic challenge of head `b4ca11060` returned *mergeable after listed repairs*. It accepted exemplarEminenceProducesKnower as an honest projection; strictUnityExcludesNoesisUnderRealDuality as valid, nonvacuous and with every premise listed; one source throughout; no smuggling or equivocation; and the impersonal-rival prose as fair. Repairs applied in PR #1892: the P1 overstatement that the simple model "captures" Thomistic subject/act/object identity is withdrawn (the model shows only non-entailment of the real-duality principle); pure act is made nonvacuous with a control-specific potency predicate; the countermodels are stated as non-entailments within an unconstrained own-form/Norms vocabulary; the Norms clause is scoped to correct self-directed contents; carrier and at-most-one wording corrected; the Plotinian transposition, the earlier "survives merely removing two numerically different relata" finding and the unformalized #1879 articulation test are recorded; duplicated control vocabulary is replaced by the #1873/#1879 controls and the PrimaryAbout relation. A targeted re-check of the repairs (head `e3d64aafd`) confirmed the P1 and all nine P2s resolved. It raised one P1 and two P2s about the new helper theorem: it apprehends the source (via its form), it is a transcription of #1879's rule, and the remaining gap includes #1879's content reading. All three were corrected in the coordinator's follow-up commit.
 
+## Intrinsic perfection versus unrestricted productive power (2026-11-24; draft, unreviewed)
+
+**Target and evidence.** Continue `64498e7e-7f10-54a0-9ec0-c65e6076de1f`
+and the real-determination reading of `fe67d766-3e9f-57b5-bbff-c3e2c50c56fd`.
+Read baseline `ce50d5b1d17de8d2fb9a7c5a61975e1c46ed2893` through the repository
+connector (the note blob is `41e274c29496e09441aff03209567fbf137715fc`). Reuse
+[#1518](https://github.com/moritzbrantner/formal-logos/pull/1518),
+[#1855](https://github.com/moritzbrantner/formal-logos/pull/1855),
+[#1892](https://github.com/moritzbrantner/formal-logos/pull/1892),
+[#1914](https://github.com/moritzbrantner/formal-logos/pull/1914), the existing
+whole-power and reception sections above, and the [finite-esse assessment](contingency-receptivity-c2.md#in-what-sense-is-unlimited-being-the-default).
+No alteration of an existing proposition, definition, result or source claim is
+proposed. This is an analyst investigation, not a new proof registration or
+superseding current assessment. The canonical CLI and independent worker were
+unavailable; novelty, semantic preflight, integration and independent challenge
+must be completed in a prepared checkout before treating this as reviewed support.
+
+### Fixed meanings and the real question
+
+Use one supplied actual concrete root g at w in the existing `ActualRoot` sense.
+Its causal role is existential, not merely the temporal origination of something
+already actual. When claiming a universal producer, additionally stipulate that g
+has the relevant active productive powers; roothood alone does not imply that
+scope or supply a bearer. Keep the `GradesFrame` fields `CausesIn`, `esse`,
+`InAct` (IN_ACT_4) and `MoreIn` (MORE_1) unchanged. Use the existing
+`TermSenseForks.ActFrame` to distinguish formal and virtual possession, and
+`WholePowerPerfection`'s real-determination `Has` and `Pure` (DEF-PURE-PERFECTION).
+The following glosses describe candidate readings, not new corpus predicates:
+
+- Formal realization: the positive actuality is present in the bearer in the
+  specified form. A finite mode need not be copied to a first source.
+- Productive virtual possession: an actual active power of g suffices to bring
+  about the perfection in another. Its exercise need not perfect g itself or be
+  received by g as a passive potentiality. Neither causal breadth nor an actual
+  product is a proof of immanent possession.
+- Substantive eminent possession: g's own act instantiates the positive
+  perfective content analogically in a higher, non-received mode. This requires
+  an account of the preserved content and of the higher mode; it is not defined
+  by power to produce, numerical rank, or the word eminent.
+
+These readings can overlap. `DEF-IN-ACT-VIRTUALLY` currently joins higher
+possession and power to produce under one primitive; #1855 records the gap.
+Do not revise its hash-pinned definition or identify `Has` with `InAct` here.
+A comparison of productive powers, inclusive act and real determinations must
+use separately supplied relations with explicit semantic bridges. If D (real
+determinations) differs from R (respects), an application also needs a mapping
+that preserves the selected positive content and purity. Neither the mode nor
+this mapping follows from the shared frames.
+
+The central rival grants actual ultimate production of a positive perfection
+elsewhere, denies its intrinsic occurrence in g even analogically, and explains
+g's activity by its own determinate powers. It is stronger than an objection
+that g does not have the finite effect's form. Pure d is an independently
+classified actuality free of potency, limitation and reception in its positive
+content, per the stipulative DEF-PURE-PERFECTION. Stripping away a finite mode
+must not silently replace the perfection by mere actuality or production.
+Nor is purity defined by being possessed by this source. The questions whether
+a candidate has a coherent non-limited realization and whether several such
+realizations can belong to one simple act require substantive warrant.
+
+### The source-based positive rationale and the noncognitive tests
+
+[ST I q.4 a.2, co. and ad 3](https://www.newadvent.org/summa/1004.htm#article2)
+argues separately from causal preexistence and from subsistent existence. The
+latter does not begin with a cause of each determinate perfection. In
+[SCG I.28 nn.2-4](https://la.wikisource.org/wiki/Summa_contra_Gentiles/Liber_I/Caput_XXVIII),
+Aquinas connects excellence with the way a thing is actual and uses the analogy
+of separately subsisting whiteness: the recipient accounts for contraction,
+whereas being one's own act is supposed to exclude that contraction. These
+passages were read in accessible web witnesses; reuse the existing source
+claims, not new attributions or assertions of pinned-witness verification.
+They support the whole-being argument; they do not independently establish the
+analyst's generalization about every intrinsic exclusion below. SCG I.28 n.3
+also invokes defect; absence simpliciter is not necessarily a defect. Ordinary
+nonliving things do not suffer the privation of life merely by being nonliving.
+
+The strongest rationale for a substantive reading is explanatory. In a
+received act the nature of a recipient supplies a principled contrast between
+having actuality and being actual only in this way. The intrinsic perfection
+is actuality of the bearer, not a second kind of existential substance supplied
+by a causal chain. If the source is genuinely subsistent actuality without a
+restricting mode, a positive mode that is excluded *by its own nature* needs an
+account of that restriction. A source which is just this determinate kind of
+act can have unlimited productive range without being uncontracted act. This
+motivates the test below rather than identifying act with a mere generic
+predicate or the abstract set of all existing things. The implication from
+having one's own esse to lacking no perfection remains `d164b1ff`; its strongest
+positive warrant is the act/recipient explanation, not an enumeration of effects.
+
+| Noncognitive test | What the classical route can establish | Standing limitation of the test |
+| --- | --- | --- |
+| Being and ontological goodness | Actuality is the relevant content; `7067553d` and `00e962ae` can contribute under their existing dictionaries. An impersonal actual source can also possess ontological goodness. | Not moral goodness, and not an independent witness to possession of every richer actuality. |
+| Unity | Under simplicity and the appropriate unity reading the source is intrinsically undivided, not only a cause of unity. | Numerical uniqueness of the source and universal perfection do not follow. Composed unity and simplicity are different modes. |
+| Active power | Actual production evidences an active efficacy in the producing source under the productive CAUSE_2 interpretation. If active efficacy as such is independently pure, this is a source-borne perfection. | An actual active power to produce life is not thereby the source's own living act. Universal production is not universal intrinsic realization. |
+| Life | Actual self-originating operation of a living thing is the promising positive content, distinct from nutrition, metabolism, motion, growth and bodily organization. [ST I q.18 aa.1-3](https://www.newadvent.org/summa/1018.htm) distinguishes self-operation and its creaturely modes; its highest-life argument invokes intellect, which is not pursued here. | A generic law-governed productive operation is not enough to distinguish life from inanimate agency. The stricter positive content of an act intrinsic to the living bearer, rather than an effect in another, must be shown coherent without constituent multiplicity or change. If only self-originating efficacy is meant, an impersonal ultimate agent may satisfy that narrower analogy. If biological organization is essential, the finite perfection is not pure as stipulated. |
+
+The life fork is useful precisely because neither side can win by a verbal
+change. A productive source whose powers operate intrinsically may already have
+some positive content of life; the source's own non-transitive operation is a
+different claim from causing a living system. A plant's self-maintaining
+activity supplies evidence of the contrast between an operation in a bearer and
+the production of that bearer. It does not demonstrate non-received life in a
+simple source. Likewise, the mere fact that an operation originates in the
+source does not demonstrate an additional immanent terminus. Do not make the
+weak sense prove the strong sense. No exemplar-to-noesis or intellect-to-will
+step is reused as if this test had settled it.
+
+### The limitation bridge: two separable obligations, not another synonym
+
+Reuse #1914's exact `LimitedEsseHasGroundingGiverAt` (`08178314`): each limited
+actual concretum has a distinct cause of esse which is its actual concrete
+ground at the selected world. `rootUnlimited` in
+`TruthCore.Results.Causality.FiniteEsseDependence` already proves `¬ Limited g`
+for the supplied actual root. The theorem `rootPerfectionFromFiniteDependence`
+then uses `be1289df` (unlimited implies infinite) and `122b112e` (infinite has
+every pure perfection) to produce `fe67d766`. The other registered route,
+`rootPerfectionFromWholePower` (`7d8bbdcb`), uses `d164b1ff` and `c4fb87a6`
+with the remaining root/OwnBeing inputs. The present investigation addresses
+the philosophical transition to **intrinsic** `Has` in those routes, not a
+second implementation of their deductions.
+
+For each independently classified pure d, first restrict the examination to
+those d with an actual intrinsic instance in the selected domain (in the
+productive test, an actual caused instance). Separate two OPEN claims:
+
+- **E — nature/exclusion:** if a supplied actual root lacks intrinsic d, that
+  omission is a restriction/exclusion fixed by its own intrinsic nature,
+  rather than a neutral non-instantiation. Here exclusion means a substantive
+  nature-based restriction, not the definition `¬ Has g d`. Its generalization
+  to all actual beings is stronger and is not required for the root inference.
+- **L — restriction/esse:** if a root's own nature excludes the positive mode of
+  actuality that d identifies (not a finite species or receptive realization),
+  that nature restricts its act of being to less than the uncontracted act.
+  Thus it satisfies the existing `Limited` predicate, independently of whether
+  a recipient has been identified. This is not a definition of `Limited` by
+  missing perfections. It is an OPEN metaphysical bridge to the existing
+  formal-limitation/reception inquiry.
+
+Why E and L merit separate investigation: a positive nature can be held to
+explain what belongs to its bearer, while its non-membership facts are taken
+as neutral rather than additional intrinsic blockers. Such a view denies E.
+Alternatively a single determinate, unreceived actuality can be held to have
+essential exclusions, without those exclusions constituting contraction in the
+Thomistic sense. This denies L (or, if the same exclusion is accepted as real
+limitation, it disputes the further `08178314` bundle). In a received finite
+nature a distinct mode of being accounts for why a particular actuality is not
+proper to the bearer. Extending that account to a simple unreceived source is
+exactly the disputed scope, not an established inference from finite cases.
+
+**Conditional deduction.** For the same actual root g and candidate d, let
+`Has g d` mean intrinsic real determination, and `Excluded g d` be the
+independently interpreted nature-exclusion in E. E and L give
+`¬ Has g d → Excluded g d → Limited g`. `rootUnlimited` yields a contradiction
+from `Limited g`. Constructively this yields `¬¬ Has g d`; under the classical
+excluded-middle background it yields `Has g d`. No `d5a94eb1` or `f8ba2429`,
+modal necessity, degree scale, maximum, or GOD_4 name occurs. No new Lean
+result is claimed. The direct omission-to-limit implication is classically
+contraposed fullness on the unlimited domain; stating that alone is not new
+warrant for fullness. The E/L factorization is valuable only to the extent
+that their separate notions can be justified without defining them by the
+conclusion. The tested quantifier is each pure d with an actual witness. To
+obtain all of `fe67d766`, E and L must extend to every pure d, or coverage of
+that inventory by witnesses must be supplied. A power to produce d does not
+entail an actual instance of d, nor by itself warrant its metaphysical purity.
+
+**Alternative positive reasoning about the restriction.** If the source is
+said to be act as such rather than an act received in a particular nature,
+there are two different readings of a reason for excluding a pure positive
+mode. Exclusion due to the common character of actuality *as such* conflicts
+with that very mode's actual instantiation, provided the common character is
+really preserved. Exclusion due to a distinctive intrinsic mode of the source
+instead fixes what actuality this bearer has, and invites the limitation test.
+This is a useful explanatory fork, not a dichotomy established by logic: the
+rival can deny that the character of a particular subsistent act is exhausted
+by the common character of act, or deny a positive ground for non-membership.
+Identity with one's own esse is not identity with the universal concept of
+being. A successful account of a source-specific, intrinsic positive nature
+which explains its powers and exclusions without receiving or contracting esse
+would strengthen the rival. Conversely a reason that all such restrictions
+need a receiving principle would strengthen the retained #1914 account.
+This question is more precise than asking whether a creator contains an effect
+as a feature or as an ability. It does not demand that a primitive's every
+negative fact has an additional cause, nor apply a different standard to a
+personal first source.
+
+### Finite diagnostic and restoration tests
+
+A local finite structural check, not a registered Lean model, used one world,
+three actual concretums g, a living effect l and a nonliving effect n, and
+three stipulated pure respects e (esse), a (active efficacy), v (candidate
+life), plus a nonpure motion respect. `ActualConcreteGround` has exactly
+(g,l) and (g,n), and the CAUSE_2 assignments have those source/effect pairs
+for every intrinsic pure respect of each effect. g has actual distinct caused
+instances of each of e,a,v (at l), so the test is stronger than merely
+stipulated capacity for each respect. Its productive virtual relation covers
+all three. The formal relation is {e,a} at g and n, {e,a,v} at l. On the
+power-inclusive reading, InAct is formal union productive virtual: hence g
+has v inclusively but not intrinsically. No source passive potency is assigned;
+there is passive potency at the effects in the motion respect. OwnBeing is
+assigned only to g, and both effects are limited. The scope of `MoreIn` is not
+used. This is a structural surrogate for the intended profile, not a full
+`GradesFrame` or `Profile` certificate and not a demonstration that life is
+pure or that a productive-only source is metaphysically possible.
+
+Vary three Boolean slots for g: intrinsic v, nature-based exclusion of v, and
+Limited. n is assigned exclusion of v and limitation in every variant, so the
+unrestricted E/L diagnostic has a nonvacuous finite-effect witness. The
+actual-grounding giver clause is checked on every limited actual concretum.
+The positive control grants intrinsic higher-mode v at g (not formal v), so
+substantive eminence need not copy the finite mode. The other relations and
+actual witnesses do not change. All eight assignments of the three varied
+slots were evaluated in Python; the conjunction E, L and the giver clause
+implies intrinsic possession of the stipulated pure inventory at g. Every
+single omission has a witness with a real missing inventory item:
+
+| g has intrinsic v | g excludes v | g is limited | E | L | giver clause | Outcome in the surrogate |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| no | no | no | no | yes | yes | Neutral omission; E is the omitted bridge. |
+| no | yes | no | yes | no | yes | A primitive non-contracting profile boundary; L is omitted. |
+| no | yes | yes | yes | yes | no | Brute limited root; finite-dependence clause is omitted. |
+| yes | no | no | yes | yes | yes | Intrinsic higher-mode fullness; source still not formally v. |
+
+The model also satisfies inclusive `64498e7e` and even inclusive `f8ba2429`
+under the stated causal assignments, yet in the first three rows the root lacks
+intrinsic v. Neither transfer proposition is a premise of the conditional
+limitation deduction. The contrast shows why reusing the inclusive theorem as
+an intrinsic theorem would be an equivocation. The first two rows also keep
+roothood and the giver clause; merely naming the source unlimited on the
+independently supplied Limited slot proves no intrinsic fullness. If infinity
+is assigned as ¬ Limited, the intrinsic reading of `122b112e` fails there;
+that premise has not been granted. Adding E and L removes the missing-v rows
+with the giver clause. No actual or possible-world claim beyond this one-world
+assignment is licensed. The physical/metaphysical content of Excluded, the
+actualization/recipient dictionaries, necessary existence and simplicity are not
+encoded by those Boolean slots. In particular this control must not be called
+a countermodel to the complete Thomistic account or a certificate for the
+whole-nature rival. The source identity, actual effect, causal respects and
+existence are not varied to manufacture the failure.
+
+### Emergence and comparison under the same standard
+
+A concrete failure mechanism for formal causal copying is organizational
+realization: individual molecules do not have a liquid's macroscopic flow
+properties, while organized components exhibit them. A living organism's
+self-maintenance involves coordinated activity of its parts. The relational,
+material and organizational aspects of these examples are not pure perfections
+under the selected definition. They provide positive warrant that an effect
+can have a proper mode of actuality absent formally in a particular producer;
+they do not demonstrate absence even substantively eminently in an ultimate
+existential source. Conversely, accepting ordinary emergent organization does
+not independently corroborate the intrinsic-containment thesis. The relevant
+literature distinguishes dependence with autonomous higher-level activity
+from stronger emergence involving novel basic powers or laws ([SEP, Emergent
+Properties, sections 2-4](https://plato.stanford.edu/entries/properties-emergent/));
+this is interpretive background, not an assertion of observed strong emergence.
+
+A serious impersonal rival is an actual fundamental bearer with intrinsic,
+lawlike powers whose joint exercise supplies the existence and operations of
+derivative organized systems. The laws describe its powers, not an abstract
+object creating concrete beings. For the common task grant the same actual
+source, total existential supply (including mediated effects), and positive
+causal capacity for the actual pure candidates. Do not let the rival substitute
+mere temporal generation; do not let the classical source assume universal
+intrinsic containment to prove it. Reduction or non-reduction of an effect is
+not the same as its existential independence. A novel higher-level causal power
+could remain existentially supplied; a genuinely independently obtaining
+actuality, on the other hand, would contradict the stipulated total source
+scope and so would not answer this particular question. An empirical case of
+strong emergence of a genuinely pure intrinsic actuality, combined with an
+account excluding that actuality in every relevant higher mode from its
+complete existential ground, would have significant discriminating force. No
+such case was identified by these tests. Mere conceivable absence is not that
+evidence.
+
+| Criterion (same explanandum) | Classical subsistent source | Impersonal productive foundation |
+| --- | --- | --- |
+| Actual existential supply, active efficacy | Granted for this conditional comparison; not established by naming. | Same grant; productive account must be actual, not an abstract law. |
+| Positive source-internal actuality | Explains pure excellence through unreceived act; owes purity and mode application. | Own powers genuinely actualize, but their productiveness alone cannot supply a missing intrinsic mode. |
+| Basis for restricted intrinsic profile | Act/recipient account supplies a reason why restriction would need a limiter, so denying one motivates fullness. Owes E/L or the whole-power rationale. | A determinate primitive nature is a positive explanatory proposal for powers and their exclusions. Owes a reason that the exclusion is neutral or is compatible with uncontracted esse, or must dispute finite dependence. |
+| Ordinary finite/emergent cases | Accommodates organized effects without formal copying. Those cases alone do not establish ultimate eminence. | Accommodates organized effects without formal copying. Those cases alone do not establish ultimate intrinsic absence. |
+| Noncognitive joint compatibility | Multiple pure descriptions need not be real constituent additions; the stronger immanent-life application remains open. | A stable productive profile is not contradicted by the weak signature. Its actual metaphysical adequacy to an unrestricted act is unestablished. |
+
+Do not label absence of a further cause automatically arbitrary, or lack of a
+contradiction proof a metaphysical victory. A natural source could accept the
+same intrinsic fullness and dispute later personal attributes; this would
+agree at the present target rather than be refuted by it. A personal source
+with a restricted pure profile faces the same tests as the impersonal source.
+
+### Conditional graph effects, judgment and reopening
+
+1. The general `64498e7e` ranges over all causes of esse and all perfections
+   in its selected InAct reading. Even full intrinsic possession at g does not
+   derive that unrestricted statement. With a common R/D content map and a
+   bridge from substantive `Has` to the selected InAct, it supplies a **pure,
+   root-scoped** preexistence instance for actual caused effects. Neither
+   arbitrary cause-of-being transfer nor impure perfections are covered. The
+   all-route impact from #1518 is not recomputed, and no leaf is discharged.
+2. `fe67d766` is the existing direct graph destination, not a new proposition.
+   Its real-determination consumers include `688e42fc` and the
+   pure-indiscernibility sibling, which additionally require root existence,
+   strict pure determination and their respective identity/thisness bundles.
+   If those consumers require all pure d, the actual-witness-restricted result
+   above is not sufficient. Once the wider E/L or whole-power warrant is
+   supplied, the existing results are the route to reuse. Fullness does not
+   itself establish necessity, uniqueness, God naming, moral goodness or any
+   cognitive or volitional attribute.
+3. The strongest positive warrant remains the received-versus-unreceived act
+   account of SCG I.28/ST I q.4 and the #1914 same-root finitude exclusion. I
+   provisionally retain intrinsic whole-power fullness as a motivated direct
+   and cumulative commitment; the narrower claim that a genuinely contracted
+   actual source is not a root is more secure *under the retained giver
+   premise*. Relative to a merely productive reading of unrestrictedness, the
+   intrinsic thesis is not a consequence. The natural-source alternative has
+   a substantive mechanism for mode-specific effects, not a demonstrated
+   counterexample involving a pure perfection of an unlimited source. The
+   comparative metaphysical judgment remains underdetermined at E/L; the
+   additional conditional route merits priority, not a changed review status.
+4. **Revision conditions.** Strengthen the intrinsic case with a candidate-
+   independent account of one richer noncognitive pure perfection (especially
+   life as source-borne operation) and a reason that exclusion fixes an
+   intrinsically restricted mode of esse, rather than an inapplicable kind.
+   Weaken it with a worked source-nature account that explains genuinely
+   positive, pure source-level exclusions without receptivity/contraction,
+   or an established pure emergent instance whose complete existential source
+   demonstrably lacks even analogical intrinsic possession. A proof that the
+   proposed positive content necessarily includes composition or receptive
+   potency revises the purity classification rather than refuting the general
+   thesis. Reopen the universal extension if an unrealized pure candidate has
+   a justified, compatible real content. If E or L turns out to be only the
+   contrapositive of the desired conclusion, retain it as a direct primitive
+   option and do not count the rephrasing as corroboration.
+
+**Semantic self-challenge and verification boundary.** The initial tempting
+inferences (every producer has its effect intrinsically; every missing property
+is a limit; pure act exhausts all positive acts; ordinary emergence refutes
+substantive eminence; and pure-root coverage proves `64498e7e`) were rejected.
+The repaired conditional distinguishes E/L/giver, restricts the inventory to
+actual witnesses, explicitly retains the D/R and Has/InAct mappings, and uses
+one actual source throughout. The finite restoration test checks the three
+premise omissions but does not model their philosophical interpretation.
+The same finite examples are non-discriminating for both accounts; neither
+candidate gets a broader standard of explanation. Source statements and
+analyst generalizations are distinguished. No existing recorded judgment is
+superseded. Eight local structural variants were checked; no Lean/Comparator,
+NanoDa, truth CLI (including `related`, `brief`, `novelty`, `semantics`), bundle
+or offline attribution checks were run because a checkout/toolchain was
+unavailable. Expected proof/frontier change: none (not computed). The actual
+independent final semantic challenge required by AGENTS.md is still pending;
+self-challenge and the local check do not replace it. Published only as an owner-authorized draft; no reviewed-support status.
+
+## Research PRD: Intrinsic perfection of the ultimate existential source
+
+**Project:** `moritzbrantner/formal-logos`  
+**Date:** 2026-11-24 · **Status:** Owner-authorized draft research proposal; independent challenge outstanding  
+**Primary targets:** `64498e7e`, `fe67d766`, `d164b1ff`, `122b112e`  
+**New focal dependency:** `5bedb69b` (operation from self or as moved)
+
+### 1. Decision summary
+
+**Continue the intrinsic-fullness investigation through the distinction between the origin and the terminus of an operation.** The most useful noncognitive test is life. A source may genuinely exercise its own active power, without borrowing that exercise from another, yet the perfection resulting from its operation may belong to the effect rather than the source. The existing operation-to-life route needs the stronger, immanent reading.
+
+New research findings:
+
+- Aquinas offers a first-agency argument for life in *Summa contra Gentiles* I.97 n.3, distinct in its stated argument from the appeal to intellect and will in n.2 and to perfection of being in n.4. This supplies a substantive source lead for the noncognitive investigation. It does not establish that the agent has immanent operation merely because it is first.
+- The existing `Round5Worklist.OperationFromSelfOrAsMoved` (`5bedb69b`) is the precise premise to investigate. `OperationOf` expressly includes transitive activity, whereas `SelfOperationLife.Operates` is read as immanent operation. A concrete, causally efficacious, unmoved agent can be used to test the missing implication without appealing to inert abstract objects.
+- The strongest positive intermediate route identifies the source's operative actuality with its own esse, then excludes derivative actualization of that very act. This supports **nonborrowed operative actuality**, conditional on an act-identity and grounding bridge. It still does not identify the operation's terminus as intrinsic to the agent.
+- Eight new finite structural assignments were evaluated; the actual root, actual effect, transitive exercise, nonvacuous potency and represented act identity remain fixed. The decisive omission control has a source with its own operation but no immanent operation or life. It satisfies the other local operation premises while failing `5bedb69b` in the selected strict sense. This is a non-entailment diagnostic, not a metaphysical counterexample.
+
+**Overall provisional judgment.** The classical whole-power account remains a positively motivated direct and cumulative commitment. It explains why a received act is contracted. The new evidence strengthens the source-borne operative-actuality distinction, but neither rules out an intrinsically restricted productive foundation nor warrants universal intrinsic fullness by itself. A genuinely nonborrowed operation is easier to defend than an unrestricted set of pure intrinsic operations. Retain both rivals and the direct premise option. No premise is established or discharged by this document.
+
+**Desired outcome:** a defensible, mode-aligned path to the existing pure-perfection conclusion, or a precise reviewed identification of the remaining metaphysical commitment and the strongest standing rival. Do not require a proof of the preferred conclusion as an acceptance criterion.
+
+### 2. Scope, baseline and authority
+
+Reuse the preceding intrinsic-fullness investigation, whose note was based on retrieved revision `ce50d5b1d17de8d2fb9a7c5a61975e1c46ed2893`. The present continuation inspected current default-branch files via the repository connector, including `Round5Worklist`, `SelfOperationLife`, their Solutions and the associated corpus records. The exact local integration baseline must be reconciled before editing.
+
+| Existing item | Role in the research |
+| --- | --- |
+| `64498e7e` / #1518 | All-perfections preexistence, over `GradesFrame.InAct` (IN_ACT_4). Preserve scope and selected sense. Do not infer the unrestricted principle from a pure/root-scoped result. |
+| #1855, #1892 | Formal/virtual distinction and unresolved substantive eminence. Do not repeat the intentional exemplarity or noesis investigation. |
+| `d164b1ff`, `c4fb87a6` | Whole-power possession and pure perfections belonging to being. `rootPerfectionFromWholePower` is the existing conditional producer of `fe67d766`. |
+| #1914 / `08178314` | Limited actual concretum has a distinct grounding giver. Reuse `rootUnlimited`. `be1289df` and `122b112e` connect unlimited esse, infinity and pure perfection. |
+| `5bedb69b`, `3317e074`, `45030701` | Existing operation dichotomy, operation follows being, and pure act operates. `Round5Worklist.pureActOperatesFromBeing` composes them with act/potency premises. |
+| `38aa1327`, `1773079b`, `ad49ea00` | Self-operating unmoved things live at some time; pure-act-life conclusion; further LIVING_2 → LIVING_1 sense bridge. |
+
+Out of scope: general causal superiority `d5a94eb1`, unrestricted transfer `f8ba2429`, new proof frameworks, the exemplar-to-noesis and intellect-to-will programs, redoing #1914's reception proof, modal necessity, final GOD_4 naming, or changing reviewed corpus support. Do not merge propositions, change frozen Challenges, relax proof gates, or modify pinned source definitions merely to resolve ambiguity.
+
+### 3. Research findings: the life discriminator
+
+#### 3.1. Read the source at its strongest warranted scope
+
+*ST* I q.18 a.2 treats life properly as the being of a nature characterized by self-operation, rather than simply an episode of activity. Article 3 ad 1 explicitly distinguishes action whose perfection belongs to another from action whose perfection belongs to the operator. Its highest-life application uses understanding. *SCG* I.97 n.3 separately moves from first agency to operation from oneself. In *SCG* I.98 nn.2,4–5, the life/esse and simplicity arguments concern a God already shown to live; they cannot be reversed to supply life by identity alone. [S1–S2]
+
+This matters because *ST* I q.25 a.1 ad 2–3 identifies divine action and power with the divine essence, while distinguishing power as principle of an effect from power as principle of a further action. It supports the classical account of fully actual active efficacy without making every transitive action an immanent one. The article uses earlier divine attributes; transferring its rationale to a neutral root is an explicit application burden. [S3]
+
+The *ST* I q.4 a.2 second argument remains the general whole-being rationale. The reply to objection 3 explicitly separates participated existence from unrestricted subsistent being: existence of an ordinary bearer need not include life. [S4] These web witnesses were read for research; no pinned witness verification, new corpus attribution, or independent source review is claimed.
+
+#### 3.2. Separate three actualities, not merely three predicates
+
+| Reading | Independent discriminating condition | Limitation |
+| --- | --- | --- |
+| Productive capacity | The bearer has active efficacy directed to a possible effect. | No actual exercise or internal realization of the effect's perfection follows. |
+| Own operative actuality | An actual operation has its operative principle in the bearer and is not a borrowed exercise. | Can be wholly transitive; the effect, not the operator, may be perfected. |
+| Immanent perfection | The operation itself constitutes or perfects the actuality of its operator in the relevant respect. | Requires positive content beyond producing another thing; cannot be inferred from the operation's ownership alone. |
+
+Use a plant's self-maintaining activity to distinguish the second and third concepts, not to infer a plant-like mechanism in the first source. The plant's finite implementation (nutrition, succession, composition, receptive change) is not pure. A fire can heat another thing without that act being a perfection realized in the fire by the very fact of heating. The relevant contrast survives removal of the question of intellect. A finite fire is not an underived, unmoved existential source, so it is not a counterexample to ultimate intrinsic fullness.
+
+The philosophical burden is to give an intelligible, non-receptive, non-composite mode of **immanent** activity whose positive content does not collapse into existence, unity, or productive power. Life, understood in this richer sense, is a candidate pure perfection, not a newly established member of the pure inventory.
+
+#### 3.3. Expose the exact issue in the existing life route
+
+`DEF-OPERATION-OF` (`d77b6ed3`) permits transitive and immanent operations. The existing open rule `5bedb69b` has the following shape:
+
+> For every operation o of x, either x has an immanent operation (Operates x), or x is moved in some respect.
+
+`pureActOperatesFromBeing` combines this dichotomy with `ActOrPotencyInBeing`, `BeingInActHasOperation` and `MovedOnlyAsInPotencyReading`. Pure act excludes being moved and the dichotomy supplies `Operates`. `SelfOperationLife.pureActLives` then gives life at some time. Both deductions are valid under their stated premises; this investigation challenges the warrant and the operation reading, not the Lean deductions.
+
+**New discriminator:** even when an actual concrete root has an actual operation, so that `BeingInActHasOperation` need not do universal work, the dichotomy can fail if its operation is transitive and its exercise is underived. Thus the abstracta objection to universal operation is not the only obstacle. Merely restricting the premise to an active root does not resolve the immanent-operation inference. Do not register a duplicate of Round5's proof; investigate the premise or an explicitly narrower sibling.
+
+#### 3.4. Conditional route: own operative actuality without universal causal transfer
+
+Fix one actual root g and an actual distinct existential effect x at w. The new route must preserve the following scope:
+
+1. The CAUSE_2 relation at esse is used productively, not merely as an unspecified grounding relation. Actual giving therefore has an actual operation witness o of g (open adapter; `OperationOf` is reused, with its transitive sense allowed).
+2. On a substantive simple-actuality reading, the act by which g operates is identical with the act by which g exists. This is stronger than absence of represented parts and distinct from the equality of essence/esse maps. It is not derived by `rootUnlimited`.
+3. If another actual concretum actualizes this identical act as an operation of g, it actually grounds g's existence at w (explicit adapter, restricted to that identity and the actualizing sense). A mere occasion or condition of the effect does not necessarily actualize g's act.
+4. Actual roothood excludes that incoming ground. Therefore the operation's operative actuality is not received from another actual concretum under this adapter.
+
+This is a same-bearer conditional argument. It does not assert that g causes its own existence, that every operation exists timelessly, that all possible effects are produced, or that the source cannot be externally related. It yields an intrinsic active exercise, not the richer conclusion `Operates g` in its immanent sense. The root need not be capable of changing into a more excellent nature. A source with only a brute fixed operative profile can dispute the act-identity premise or the transfer from source-owned activity to immanence.
+
+**Life fork:** If broad life means self-originating proper activity, then a nonborrowed active source has genuine positive evidence for that analogy. An impersonal active foundation meeting the same conditions gets the same conclusion. If life means immanent self-perfective actuality, origin-of-operation is insufficient: a separate account of its intrinsic terminus is required. Neither reading is to be silently substituted for LIVING_1, LIVING_2, or intrinsic `Has` in `fe67d766`.
+
+### 4. Structural test and comparative verdict
+
+#### 4.1. Local diagnostic executed
+
+One world, two actual concrete bearers g and x. The ground relation and the esse-cause relation contain g → x, with no incoming ground for g. Passive potency and motion occur at x, not g. Both bearers have actual operation witnesses. The operation `give` belongs to g, terminates in x, and its act-reference is the same as g's esse-act reference. This last equality is a represented identity, not a certified interpretation of divine simplicity. The source has no immanent operation in the central negative control. Vary (i) presence of an immanent operation at g, (ii) life at g, and (iii) actualization of g's exercise by x. Eight assignments were enumerated locally.
+
+| Selected control | Immanent at g | Life at g | Externally actualized | Result |
+| --- | --- | --- | --- | --- |
+| Transitive-only | No | No | No | `5bedb69b` fails; other local Round5 inputs and life rule hold. |
+| Life-rule omission | Yes | No | No | Dichotomy holds, `38aa1327` fails. |
+| Restored conjunction | Yes | Yes | No | Both rules hold; g lives. |
+| Act-identity adapter omission | No | No | Yes | Incoming-ground adapter fails; g's roothood alone does not exclude a separately encoded operative dependence. |
+
+All eight assignments preserve actual root and effect, active transitive operation, the act-reference equality, the actual-operation existence rule and motion-requires-potency. The effect's independent motion/potency makes pure act nonvacuous. In the selected encoding, the dichotomy and life rule jointly imply life at g. The incoming-ground adapter excludes external actualization of the identical operative act. Its omission is tested separately.
+
+**Limits:** the model is a Python finite surrogate, not a registered `GradesFrame`/`Profile` model or a Lean certificate. Act references, terminus and external actualization are separately interpreted slots; no real ontology of actions is proved. The restored case stipulates immanent operation, not its metaphysical compatibility with simplicity. The act-identity adapter is substantive, not a theorem of represented equality. No countermodel defeats Aquinas, and no model demonstrates that the strongest rival is metaphysically possible. The local diagnostic is reproduced below.
+
+#### 4.2. Same-standard comparison
+
+| Criterion | Classical subsistent act | Impersonal productive foundation |
+| --- | --- | --- |
+| Actual causal exercise and nonborrowed operation | Explained by simple underived active actuality, given the retained premises. | A source with intrinsic actual operative powers can meet the same demand; mere laws or unused powers do not suffice. |
+| Immanent life | Can be motivated by the whole-being account or independently defended immanent perfection. The latter is not established by firstness alone. | Transitive-only operation explains external effects without stipulating internal life. Its adequacy to a genuinely unrestricted act remains disputed. |
+| Principled intrinsic boundaries | Received-act account explains restrictions through receiving natures; applying it to every positive mode is open. | Positive determinate nature may explain why its powers are as they are. It owes a distinction between essential exclusion and contraction of esse; being primitive is not itself a complete explanation. |
+| Joint purity and simplicity | A single act may sustain several true perfection descriptions without real parts; positive joint realization still requires warrant. | Can accept intrinsic fullness or dispute a candidate's purity or compatibility. The same standards apply. |
+
+Do not penalize the impersonal alternative for lack of biological life, cognition, or a proof of fullness unless those are precisely the established relevant requirements. Do not credit the classical account with richness merely because its definition stipulates it. First agency gives a narrower positive result to both. The general metaphysical comparison remains unresolved.
+
+### 5. Requirements for the next research iteration
+
+**R1 — Fix the operation dictionary (P0).** Inspect `5bedb69b`, `45030701`, `38aa1327`, `d77b6ed3`, `7acc985a`, their dossiers and consumers. Distinguish transitive operation, underived own exercise, and immanent actuality. Preserve the two existing operation relations, including their arities. Test whether SCG I.97 n.3 supports a broad life reading or the strict immanent reading. Use new source records only after pinned-witness and attribution checks. If a valid sibling or prior source reading exists, reuse it.
+
+**R2 — Establish the source-specific operation warrant (P0).** Seek a positive rationale for act identity and the actual-operation adapter; reuse #1914's existing grounding frame and actual-root witness. Assess whether the source's operative act can differ from its esse without composition or reception. Compare a mere relation to an effect with actualization of the source's operation. Attempt the restricted nonborrowed-exercise deduction; no assumption of universal transfer or all perfections is permitted. Do not characterize an operation as immanent by identity alone.
+
+**R3 — Defend the purity and immanence of life (P0).** Identify positive content that remains after finite mechanisms are removed. Test whether all noncognitive immanent activity necessarily involves change, constituent plurality, or receiving a further act. A broad self-operation criterion which also classifies an impersonal root as living is an informative alternative, not a failure. If richer life cannot be specified without cognitive or finite content, record the exact blockage; do not force a pure classification. Distinguish the bearer-nature meaning in q.18 a.2 from operation episodes and retain the LIVING_1/2 bridge.
+
+**R4 — Discriminate the limitation bridge (P1).** Retain the prior E/L split: missing pure actuality → nature-based exclusion → limitation of esse. Essential exclusion, ordinary non-instantiation, and privation of a due perfection are different. A stone's lack of biological life is not a privation of what a stone ought to have; a root's lack of a genuine unrestricted mode raises a distinct question about the restriction of its act. Test whether an independently specified pure positive mode could be added in a model of a simple act without losing other intrinsic actuality. Compare the repertoire under the same purity criterion; never identify strict content inclusion with `MoreIn esse` without calibration. Mere pairwise or conceptual consistency is insufficient for joint metaphysical compatibility; comparability of two possible profiles does not establish that the same actual root is enrichable or has receptive potency. If the source's nature rules out the richer profile, test whether the exclusion is a contraction of esse or an inapplicable kind. The strongest positive case is a real positive actuality not restricted to a kind, together with an independently defended act/recipient account of why every real contraction requires reception. A direct restatement of unrestricted fullness as its contrapositive adds no independent warrant.
+
+**R5 — Connect only what is earned (P1).** If a pure, substantive life determination is warranted at the same root, connect the one instance to `fe67d766`'s `Has/Pure` dictionary, with any D/R mapping explicit. Use existing `rootPerfectionFromWholePower` or `rootPerfectionFromFiniteDependence` for the general route when their premises are defended. Audit the `688e42fc` uniqueness route and its pure-indiscernibility sibling; fullness alone neither supplies existence nor uniqueness. If testing `64498e7e`, target a pure root-scoped instance first. It cannot discharge the universal all-causes/all-perfections statement without scope and sense bridges. Never claim a root-reaching route from an endpoint that has no registered graph connection.
+
+#### Acceptance and semantic challenge
+
+The bounded investigation is complete when the following are delivered, even if the substantive premise remains open:
+
+- Exact current proposition identities, selected senses, source revision and dependencies; required `truth related`, `dossier`, `brief`, `novelty`, `context` and `semantics` retrieval before integration.
+- A positive warrant or a concrete blocker for each of R1–R4; explicit premise bundles, and same-source positive and omission controls preserving actual productive witnesses. Restore omitted commitments and check the strongest interpretation, not only a surrogate. Any novelty claim must be checked against the current corpus.
+- A candidate-independent purity criterion and positive noncognitive application, or a reasoned negative result. A mode-aligned scope assessment for `64498e7e` and `fe67d766` and exact downstream consumer effects. No implicit generalization from observed perfections to all pure determinations.
+- A completed claim/type self-sweep and independent semantic challenge of the final proposed record changes, with repairs and re-check recorded. In a prepared checkout, run relevant Lean build, `truth check`, `bind-check`, Comparator and NanoDa, bundle and offline attribution checks as applicable. Compute `truth frontier-diff` rather than reconstructing its output. No proof or frontier change is claimed by this PRD.
+- Persist the substantive research in the existing causal-perfection note and owning attempt(s), preserving earlier evidence and identities. Keep this PRD as an unreviewed work specification in the canonical note, not a parallel tracker. The owner authorized this draft publication; do not mark ready or merge before canonical checks and independent review.
+
+**Revision triggers:** Strengthen the classical route if an intrinsically immanent non-receptive life realization can be defended independently of productive effects and if the exclusion of this positive mode is shown to restrict esse. Weaken or suspend it if a coherent positive source-nature account explains a genuine pure intrinsic exclusion without contraction, or if the proposed immanent content essentially requires limitation. Strengthen the impersonal alternative if it supplies a worked same-background metaphysics, not merely a Boolean assignment; weaken it if its positive nature is demonstrated to be contracted under the accepted reception/giver principles. If the broad reading suffices for one consumer, retain that result without treating it as substantive eminent fullness. Do not resolve the metaphysical choice through an owner vote.
+
+### 6. Evidence and verification status
+
+Repository evidence: [AGENTS.md](https://github.com/moritzbrantner/formal-logos/blob/main/AGENTS.md); [systematic loop](https://github.com/moritzbrantner/formal-logos/blob/main/docs/systematic-corpus-loop.md); [causal-perfection note](https://github.com/moritzbrantner/formal-logos/blob/main/docs/notes/causal-perfection-transfer.md); [modal-spine life scope](https://github.com/moritzbrantner/formal-logos/blob/main/docs/notes/modal-spine.md); [Round5Worklist](https://github.com/moritzbrantner/formal-logos/blob/main/TruthCore/Causality/Round5Worklist.lean); [Round5 Solution](https://github.com/moritzbrantner/formal-logos/blob/main/TruthCore/Results/Causality/Round5Worklist/Solution.lean); [SelfOperationLife](https://github.com/moritzbrantner/formal-logos/blob/main/TruthCore/Causality/SelfOperationLife.lean); [#1518](https://github.com/moritzbrantner/formal-logos/pull/1518), [#1855](https://github.com/moritzbrantner/formal-logos/pull/1855), [#1892](https://github.com/moritzbrantner/formal-logos/pull/1892), [#1914](https://github.com/moritzbrantner/formal-logos/pull/1914).
+
+Primary texts read in accessible web witnesses (not new pinned corpus evidence):
+
+- S1. Aquinas, *Summa theologiae* I, q.18, aa.1–3, especially a.2 co. and a.3 co., ad 1–3. [English text](https://www.newadvent.org/summa/1018.htm).
+- S2. Aquinas, *Summa contra Gentiles* I, ch.97 nn.2–4 (Corpus Thomisticum [24393–24395]), ch.98 nn.2,4–5 ([24399, 24401–24402]). [Latin text](https://www.corpusthomisticum.org/scg1097.html).
+- S3. Aquinas, *Summa theologiae* I, q.25, a.1 co., ad 2–3. [English text](https://www.newadvent.org/summa/1025.htm).
+- S4. Aquinas, *Summa theologiae* I, q.4, a.2 co., ad 1–3. [English text](https://www.newadvent.org/summa/1004.htm#article2).
+
+Validation in this session: repository read-only inspection, primary-text reading, eight Python assignments and four selected restoration/omission controls, semantic self-sweep. An independent reviewer and prepared repository checkout/Lean toolchain were not available. Canonical CLI gates, proof registration, frontier computation and independent semantic challenge remain outstanding. The PRD records proposed research, not reviewed corpus support. The original local investigation did not publish changes. This version is an owner-authorized draft, not reviewed support.
+
+### Reproduction of the operation structural diagnostic
+
+```python
+from itertools import product
+B=('g','x'); R=('esse','motion'); T=(0,); O=('give','receive','immanent')
+# Effect receives esse from g, both actual. Effects move and are potent; source neither.
+actual=set(B); grounds={('g','x')}; causes={('g','x','esse')};
+potency={('x','motion')}; moved={('x','motion')}; pure=lambda b: not any((b,r) in potency for r in R)
+root=lambda b: b in actual and not any((c,b) in grounds for c in B)
+# Give is an actual operation of g, with source-owned exercise and external terminus.
+# The act reference for give is identical to the source's esse-act reference in every variant.
+being_act={'g':'ag','x':'ax'}; act_ref={'give':'ag','receive':'ax','immanent':'ag'}
+rows=[]
+for has_immanent,life,external_determination in product((False,True),repeat=3):
+    operation_of={('give','g'),('receive','x')}|({('immanent','g')} if has_immanent else set())
+    terminus={'give':'x','receive':'x','immanent':'g'}
+    self_operation={b for b in B if any((o,b) in operation_of and terminus[o]==b and o=='immanent' for o in O)}
+    lives={('x',0)}|({('g',0)} if life else set())
+    externally_actualized={('x','give')} if external_determination else set()
+    broad_self={'g'} if not any(o=='give' for _,o in externally_actualized) else set()
+    # Neither passive potency nor motion is assigned to g even in external-determination omission case.
+    # Check source act grounding adapter as a separate condition rather than baking it into roothood.
+    act_ground_adapter=all(not ((o,'g') in operation_of and act_ref[o]==being_act['g']) or (c,'g') in grounds for c,o in externally_actualized)
+    round5_op=all(any((o,b) in operation_of for o in O) for b in actual)
+    dichotomy=all(b in self_operation or any((b,r) in moved for r in R) for o,b in operation_of)
+    moved_requires_potency=moved<=potency
+    life_rule=all(not(b in self_operation and not any((b,r) in moved for r in R)) or any((b,t) in lives for t in T) for b in B)
+    # Broad life classification applies only to independently exercised own operation; not identical to corpus LivesAt.
+    row=dict(immanent=int(has_immanent),life=int(life),external_determination=int(external_determination),adapter=int(act_ground_adapter),broad=int('g' in broad_self),dichotomy=int(dichotomy),life_rule=int(life_rule))
+    assert root('g') and not root('x') and pure('g') and not pure('x') and round5_op and moved_requires_potency
+    assert ('give','g') in operation_of and ('g','x','esse') in causes and act_ref['give']==being_act['g'] and terminus['give']=='x'
+    if dichotomy and life_rule: assert life
+    if act_ground_adapter: assert not external_determination
+    rows.append(row)
+print('Checked',len(rows),'assignments')
+for row in rows: print(row)
+# Explicit one-bearer omission witnesses and positive control on same background.
+def get(i,l,e): return next(r for r in rows if (r['immanent'],r['life'],r['external_determination'])==(i,l,e))
+assert get(0,0,0)==dict(immanent=0,life=0,external_determination=0,adapter=1,broad=1,dichotomy=0,life_rule=1)
+assert get(1,0,0)['dichotomy'] and not get(1,0,0)['life_rule']
+assert all(get(1,1,0)[k] for k in ['adapter','broad','dichotomy','life_rule'])
+assert not get(0,0,1)['adapter'] and not get(0,0,1)['broad']
+print('Four selected controls pass')
+```
