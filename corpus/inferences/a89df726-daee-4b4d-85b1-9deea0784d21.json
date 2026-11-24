@@ -1,0 +1,14 @@
+{
+  "id": "a89df726-daee-4b4d-85b1-9deea0784d21",
+  "label": "GOD_4 is maximal from a maximal being and distinct-cause exclusion (inference)",
+  "input_statement_ids": [
+    "18561596-1269-53ff-8505-c56e4348e335",
+    "fad8af3e-3e4e-582a-a592-0164bdd62527",
+    "86d02b69-87eb-5594-9958-ccaa5fe6b685"
+  ],
+  "output_statement_id": "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
+  "rule": "Duper superposition over the expanded definitions, with classical identity reasoning",
+  "meaning": "Assume some being m is maximal in being (MAXIME_1), every such maximum excludes a distinct cause of its being in CausesIn at esse (CAUSE_2), and every GOD_4 g causes the being of every being distinct from g. If g were distinct from m, the last premise would make g a cause of m's being, contradicting the exclusion premise. Classical identity reasoning gives g = m, so every g satisfying IsGod is maximal in being. The same Being, Respect, InAct, MoreIn, CausesIn and esse are used throughout. This is conditional support for the existing target, not God existence or premise establishment. The exclusion premise has existing support through argument 8bbe817d-f798-57eb-b9d9-b9b9bcc677f4 from d5a94eb1-72d2-53e0-9a52-9787b5b61a8d; composing that support retains the shared dependency.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
