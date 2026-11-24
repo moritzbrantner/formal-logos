@@ -241,11 +241,15 @@ Start with something actual. Grant that following the givers of its present
 existence reaches an actual concrete individual *n* with no actual concrete
 ground in the selected relation. Suppose this very *n* could have failed to
 exist. If every actual contingent concretum has an actual concrete ground
-(`c71c068c`), *n* has such a ground, contradicting the choice of *n*. Thus
-*n* itself exists in every accessible world. This is the de re conclusion
-`b19ffd92`. The reductio needs no uniqueness. The registered upgrade preserves
-uniqueness when supplied, and the alternative proof from an inhabited world
-uses well-foundedness restricted to actual concreta and excluded middle.
+(`c71c068c`), *n* has such a ground, contradicting the choice of *n*. At any
+accessible world, excluded middle gives two cases for this individual’s
+existence there. Its absence would supply the very contingency just excluded,
+so *n* exists there. This establishes necessity for the supplied root without
+requiring uniqueness. Taking *n* as witness gives `b19ffd92`, which says only
+that some actual concretum exists in every accessible world. The registered
+upgrade also preserves uniqueness when supplied. The alternative proof from
+an inhabited world uses well-foundedness restricted to actual concreta and
+excluded middle.
 [Same-root upgrade](../../corpus/results/ACTUAL-ROOT-NECESSITY-UPGRADE.json) ·
 [Restricted well-foundedness route](../../corpus/results/NECESSARY-CONCRETE-FROM-ACTUAL-GROUNDED.json)
 
