@@ -3167,3 +3167,271 @@ Grant the earlier conclusion on its intended reading. The actual source *g* appr
 Two alternatives locate the remaining work. An intellect can contemplate its own perfection and correctly explain its effects while their production follows from its nature. This grants the cognitive episode and supplies an account of the production without making the perceived perfection an operative reason of the subject. The [existing first-intellect rival](../../corpus/statements/2537adb1-fca8-4a76-93a7-18a688cb4507.json) disputes even source-level will. Alternatively, grant actual practical direction toward a good. A knower can act for goodness under a general description without taking *its own being as such* for its end. Even if the same source exemplifies complete goodness, substitution inside an intentional description needs warrant. The discriminating question is what the source itself treats as its ultimate practical reason. Showing only that all other goods depend on the source leaves both this question and the exercise dilemma open. [Practical and theoretical cognition](moral-governance-intellect-will.md)
 
 **Provisional judgment.** The earlier assessment favoring own-good willing as an open premise has a concrete rationale in the case of an already active rational appetite directed to its known and possessed end. I would retain self-love as a positive conditional interpretation on those grounds. Self-knowledge alone gives stronger reason for the intelligibility of the object than for an actual affective response to it. The most consequential further test is whether this very source's activity is guided by its own goodness *as its apprehended end*. Evidence for that would strengthen the self-love route even before introducing any personal distinction. A further test would still be needed for “Love proceeding.” A real exercise can consist in the lover's standing affirmation of the good. The beloved as intentional object, the exercise's dependence on the good as apprehended, and a subsistent personal term with a relation of origin each make a different claim. The one-subject example realizes the first kind of affirmation. The exercise interface gives no reason for counting a further person. [Prior assessment](../../corpus/attempts/e641ca1d-d06b-461a-8270-c9030fa4fc29.json) · [Creed destination](../../corpus/statements/creed-holy-spirit-lord-giver-of-life.json)
+
+
+## Source-specific manifestation versus intrinsic understanding (2026-11-25; provisional)
+
+### Scope and baseline
+
+Continuation of #1855, #1866, #1892, #1949, #1951, #1952 and #1954 at
+`e7073368fcd87fb5be224b6bb7971a55f5316f40`. Targets `64498e7e`, `f8ba2429`, `d5a94eb1`, `7067553d`,
+`d164b1ff`. This is an analyst investigation, not a new attributed claim,
+registered result or metaphysical defeat. Independent semantic challenge and
+repository verification remain pending. The canonical CLI (including related,
+dossier, novelty and semantics), Lean and warm checkout were unavailable;
+the related attempt records, notes, statement records and Lean vocabulary
+were inspected via the repository connector instead. Preserve the earlier
+reviewed assessments. This section does not alter their status.
+
+### The discriminating question
+
+The earlier governor comparison fixes product performance while varying the
+maker's own correction loop. The present question grants even more to the
+productive rival: its intrinsic disposition may be **individuated by the
+exact kind of manifestation it produces**, not merely a generic supply of
+actuality. Would a completely source-owned explanation of *why understanding
+rather than some other effect occurs* establish understanding in that source?
+
+Keep these readings separate:
+
+- Formal possession: the bearer realizes the relevant positive actuality in
+  the specified form.
+- Productive virtual possession: the source has the active power to produce
+  that actuality in another. The manifestation may be essentially specified
+  in the power's nature.
+- Exemplary possession: the source possesses an intrinsic pattern that
+  specifies or norms the effect's content. Objective intelligibility and
+  the correctness of a pattern do not identify a knowing subject.
+- Substantive eminent possession: the source realizes the same positive
+  perfective content intrinsically in a higher mode. Its content and mode
+  need independent warrant. This does not mean merely that it possesses a
+  more extensive or powerful disposition.
+- Candidate intellectual perfection: actual apprehension of true content,
+  with its cognitive grounding in the apprehending subject. The positive
+  content is distinguished from discursion, acquisition, neural machinery
+  and temporal succession. These distinctions motivate testing purity;
+  they do not establish that an unreceived, simple realization is possible.
+
+For the same actual g and distinct actual dependent knower x, distinguish
+g's capacity to cause x to understand, g's intrinsic objective exemplar
+of the content, g's own capacity to apprehend, and g's actual apprehension.
+Retain the existing `WholePowerPerfection.WisdomSelfUnderstanding`
+content/subject distinction and #1892's objective-exemplar boundary. Do
+not conflate `Has` (real determinations), `InAct` (mode-open IN_ACT_4),
+and the CAUSE_2 edge. `7067553d` supplies existential import at the
+bearer in act, not identity between the bearer and the cause of its esse.
+
+**Subject-index test.** The strongest dispositional account can grant that
+the nature of g's exercised power entails, given the relevant secondary
+conditions, that x actually apprehends a particular true content. The
+manifestation is not just some uninterpreted event. In schematic notation,
+the specification of the power may have the form
+`Power(g, bringAbout(Apprehends(x,c)))`, with x identified by its role in
+the manifestation. Even a complete account of why this manifestation
+obtains does not by logical substitution change its subject to g. More
+strongly, a pattern can determine every correct response to the two tested
+inputs and be source-intrinsic, while the actual cognitive episode belongs
+to x. A relation of causal or constitutive dependence is not a bearer
+identity rule. This is an objection to deriving intrinsic possession merely
+from **specificity** of productive or exemplary possession, not an argument
+against a separate real-content preservation principle.
+
+**Positive explanatory fork.** If one claims g is the complete existential
+and productive explanation for this very irreducible actuality, ask what
+accounts for the distinctive manifestation, not just the existence of x.
+The alternatives below are a classification of explanatory proposals,
+not a claimed exhaustive metaphysical dichotomy.
+
+1. Identity/reduction: an independently warranted constitutive account of
+   x's apprehension in its actual organization. This can explain specificity
+   without g having that organization. It must explain genuine apprehension
+   rather than merely a correct output or replace the target with a weaker
+   behavioral predicate.
+2. Intrinsic manifestation-directed power: g's nature specifies a power
+   whose manifestation in the selected conditions is x's real cognition.
+   This closes the *kind-selection* gap if the power-nature is accepted as a
+   sufficient explanation. It does not close the subject-index gap. Ask
+   whether this determinate intrinsic nature is consistent with uncontracted
+   subsistent esse, as opposed to an own-being nature of just this kind.
+3. Irreducible emergence rule: a distinct fundamental psychophysical or
+   other rule relates noncognitive conditions to cognition. A necessary rule
+   is not a varying contingent parameter; comparing alternative rule
+   descriptions is not a claim of possible worlds with the same necessities.
+   If it is a required positive determinant not accounted for by g or its
+   derived powers, the explanation is not complete *by g alone*. The rival
+   can accept irreducible necessary relations as explanatory primitives; a
+   further reason is needed to classify that as a metaphysical deficiency.
+4. Intrinsic realization: the source itself actually apprehends true
+   content in a non-received mode. This meets the subject condition; it
+   still owes the actual productive and secondary-constitution account.
+   Mere possession of intellect does not show why this finite thinker has
+   this particular episode.
+
+The narrow negative consequence is conditional but discriminating:
+if the explanation of the distinctive manifestation requires a positive
+determinant outside the supposedly complete source account, then that
+account is incomplete at that scope. This is not an inference from any
+local cause of esse to all respects; in particular it does not re-establish
+the nonuniversal transfer leaf `10cd24ed`. The competing intrinsic
+manifestation-directed power avoids the extra-detector objection by putting
+the determinant in the source's actual nature. It remains a serious rival
+to the inference from complete production to intrinsic understanding.
+
+### Small structural comparison (executed Python, not Lean certification)
+
+The following diagnostic varies only the stipulated provenance of the
+response rule and whether the source itself has and exercises the selected
+intellectual determination. Its two inputs are stimulus alternatives within
+one specified response table, **not** worlds with different necessary laws.
+There are two actual distinct bearers, a populated esse edge, a recipient's
+own actual apprehension with true content and stipulated cognitive grounding,
+and source productive coverage. The response table is truth-aligned at both
+inputs in each profile; no apprehension or epistemic grounding is inferred
+from this. The selected inventory stipulates purity, rather than proving it.
+The provenance flag denotes a source-grounded manifestation specification
+versus a separately posited rule; it is not a demonstrated causal model.
+The source's actual intellectual exercise is also stipulated, not defined
+from the rule. These are structural surrogates, not full GradesFrame models.
+
+```python
+from itertools import product
+
+for grounded_rule, source_understands in product((False, True), repeat=2):
+    actual = {'g', 'x'}
+    own = {'g'}
+    participants = {'x'}
+    esse_edges = {('g', 'x')}
+    pure = {'esse', 'understanding'}
+    has = {
+        'g': {'esse'} | ({'understanding'} if source_understands else set()),
+        'x': {'esse', 'understanding'},
+    }
+    response = {0: 0, 1: 1}
+    truth = {0: 0, 1: 1}
+    actual_input = 1
+    apprehends = {('x', response[actual_input])}
+    if source_understands:
+        apprehends.add(('g', response[actual_input]))
+    cognitive_ground = set(apprehends)  # stipulated, not inferred
+    virtual = {('g', 'esse'), ('g', 'understanding')}
+    norms = {(0, 0), (1, 1)}
+    assert esse_edges == {('g', 'x')}
+    assert own == {'g'} and participants == {'x'}
+    assert all(has[b] <= pure and 'esse' in has[b] for b in actual)
+    assert all(response[s] == truth[s] and (s, response[s]) in norms
+               for s in (0, 1))
+    assert ('x', 1) in apprehends and ('x', 1) in cognitive_ground
+    assert all(('g', d) in virtual for d in has['x'])
+    source_specific_rule = grounded_rule
+    inclusion = has['x'] <= has['g']
+    assert inclusion == source_understands
+    assert (('g', 1) in apprehends) == source_understands
+    print(grounded_rule, source_understands, inclusion, source_specific_rule)
+```
+
+| Source-grounded manifestation rule | Source actual understanding | Pure feature inclusion | Source-specific rule |
+| --- | --- | --- | --- |
+| No | No | No | No |
+| No | Yes | Yes | No |
+| Yes | No | No | Yes |
+| Yes | Yes | Yes | Yes |
+
+The executed Boolean comparison returned all four rows. The positive
+control restores source-side exercise; the separately grounded rule can
+also be restored without it. Inclusion follows from the chosen roster,
+and the two variable slots are independent by construction. This is a
+test of the distinction, **not** proof of metaphysical independence of
+source-grounding and noesis. It does not encode a necessitating law,
+actual efficient-total attribution, pure act, an admissible account of
+the cognitive grounding, a source's true essence/esse identity or
+`OwnBeing` beyond the stipulated roster. The next formal version should
+reuse the existing content/subject interfaces, retain the same actual
+root and secondary, and explicitly encode the dependency of the rule
+and exercise rather than substituting a flag for explanatory grounding.
+
+### Same-standard comparison and downstream
+
+| Account | How the effect's specific actuality is explained | What remains owed at the source |
+| --- | --- | --- |
+| Strong emergence with a separately fundamental rule | Irreducible productive dependence plus rule | Source-only completeness if the rule is independent; necessity alone does not establish such completeness. |
+| Reductive realization | Constitution of the actual secondary knower | Warrant for identity with genuine truth-directed apprehension; no upward subject inheritance follows. |
+| Dispositional source | Source-intrinsic manifestation specification and dependent powers | Justification of its specific nature/exclusions as non-contracting, if own-being/unlimited is granted. |
+| Impersonal exemplary source | Intrinsic specification or norm of the correct content | Actual apprehension by that subject, not merely objective intelligibility. |
+| Intrinsically intellectual source | Its own actual apprehension plus actual productive action and secondary constitution | Purity and higher-mode coherence; account of how the particular creaturely manifestation obtains. |
+
+For further background, the SEP entry [Emergent Properties](https://plato.stanford.edu/entries/properties-emergent/)
+sections 2.1.3 and 4 distinguishes causal/nomological dependence and strong
+emergent autonomy, including the powers-collapse objection. This is an
+external conceptual lead, not a new pinned source attribution. The
+subject-index test grants the richer lower-level power invoked by that
+objection, so it does not rest on insisting that every new phenomenon
+requires an independent force.
+
+**Narrower route.** Reuse `191395d0`,
+`ParticipatedEsseScale.GivingPreservesDeterminations`, with the same
+efficient total giver, actual participated recipient and selected inventory.
+It is already a source-side intrinsic feature-inclusion premise without
+a degree scale or the universal strict comparison `d5a94eb1`. Given a
+populated actual participant with genuine intellectual perfection in that
+inventory, it yields the giver's intrinsic possession of that same content.
+The application requires (i) efficient total giving in the specified sense,
+(ii) independent purity and cross-mode content identification, and (iii)
+the very preservation principle under investigation. It is a narrower
+conditional **than** an unrestricted comparison of every productive cause,
+not a proof of strict superiority or of the old `MoreIn` predicate. Set
+inclusion permits ties; strict inclusion would need an independently
+witnessed further source feature. No scalar measure or conversion from
+profile inclusion to represented degree is licensed here. To reach
+`64498e7e` or `f8ba2429` as originally quantified would require extra
+scope and sense bridges; do not claim their discharge. `7067553d` does not
+supply either bridge.
+
+The independent whole-being route via `d164b1ff` and `c4fb87a6`
+(`PurePerfectionsPertainToBeing`) remains important: it does not need
+the transmission of each effect's perfection or any numerical order.
+But the conditional fullness premise is precisely what the rival contests.
+Showing a nonfinite positive mode is coherent and not excluded by an
+uncontracted source is weaker than showing that source actually has it.
+The earlier E/L test requires warrant that lack of the specific pure
+mode amounts to a real contraction of esse, rather than neutral omission
+or noncontracting nature-specific exclusion. The source-directed power
+rival gives this dispute content: it purports to explain why g's own
+nature accounts for cognition in another without being a cognitive act.
+
+**Current provisional assessment (unreviewed).** Complete productive
+specificity is positive warrant for precise active efficacy, but does not
+by itself license a change in subject of an immanent operation. The
+stronger source-only completeness requirement makes independent emergent
+determinants a genuine point of pressure, with the above scope qualification.
+The strongest surviving rival grants a source-intrinsic manifestation
+specification and authentic secondary cognition and denies the real-content
+preservation or omission-to-contraction bridge. It has not been defeated.
+The whole-being account retains its direct support from the act/recipient
+analysis, not from relabelling a causal power as substantive eminence.
+
+A successful real-content bridge would connect to `fe67d766` on the
+same root (coverage of all pure determinations is still required), then to
+`29818edd` by the separately justified intrinsic capacity recognition,
+and actual self-understanding by the #1866 exercise/grounding inputs. The
+existing will consumer `66aecdd7` requires its own intellect-to-will
+premise `090be689`; active willing and moral goodness remain separate.
+`00e962ae` at esse concerns ontological goodness under its selected
+reading, not the truth-directed exercise or moral character of the source.
+
+**Reopening/next test.** Fix a genuine candidate of source-level actual
+understanding (not truth-correlated output). Compare a primitive
+manifestation-directed source nature to subsistent esse with the same
+positive kind of efficacy. Ask which independently motivated principle
+makes its essential noncognitive exclusion a contraction of actuality.
+A coherent explanation of that exclusion without contraction, retaining
+the same own-being/source role and real purity of the candidate, would
+weaken the classical route. A warranted real-content preservation rule
+would instead strengthen the selected inventory route. Do not infer that
+a source is deficient simply for lacking a perfection independently shown
+to be finite-mode-specific.
+
+No new statement, claim, argument, result or Lean declaration in this
+checkpoint. The local Python diagnostic ran successfully, not as a
+repository proof. The computed frontier comparison and independent semantic
+challenge of this complete draft remain pending; no premise change is
+intended.
