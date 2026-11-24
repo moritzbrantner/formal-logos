@@ -1,0 +1,78 @@
+{
+  "id": "b0954e72-294d-48e2-b5d6-26ba44b5e24a",
+  "label": "Grounding well-founded on actual concreta, from the esse regress and ground-cause bridge",
+  "premise_statement_ids": [
+    "fd12ad3d-6729-4fa0-bb87-0121260df684",
+    "98efaa9e-1c91-4e52-8c0d-faf03d4f8372",
+    "0436de86-6579-53f2-9ff5-2111ba44ebae"
+  ],
+  "conclusion_statement_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+  "inference_ids": [
+    "8244b63a-c607-4e08-94a8-b026b570c6c5"
+  ],
+  "meaning": "Converse inclusion, non-transcription conditional derivation on one m, w and p. If there is no infinite regress of actual causes of being (fd12ad3d), an actual concrete ground of an actual concretum at w is distinct from it and a cause of its esse (98efaa9e) and whatever exists at w is in act of esse (0436de86), then grounding among actual concreta at w is well-founded (82cfaf26). Step: a grounding edge between actual concreta is, by 98efaa9e and 0436de86, an ActualEsseCause edge between the same beings. Diagnostic purpose: with esseRegressOfActualGroundingWF, under all five bridges (cb1cdea9, 546975ef, 2d9807a5 forward; 98efaa9e, 0436de86 backward) AGWF and fd12ad3d are interderivable, so on that package they are one assumption presented over two relations, and supporting one does not add independent evidence for the other. Without the backward bridge they come apart: the last conjunct of converseControls is a Bool interpretation in which the forward bridges, the esse regress, irreflexive priority, its bridge and well-founded priority all hold while grounding among actual concreta is a two-cycle. The other conjuncts give, for each of the three inputs, an interpretation in which the other two hold and AGWF fails, and a nonvacuous interpretation. Facts about these interpretations only. This argument closes a support cycle with esseRegressOfActualGroundingWF; the cycle adds no warrant by itself.",
+  "definition_ids": [
+    "32606882-e6e0-43b5-8c81-3b2afd3473e0",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce",
+    "58fee8ed-9b44-5399-95c8-5d239bea898d",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "fc6f0e12-470f-5717-8c5b-ece7a450fe59",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea",
+    "baddf770-36bf-542f-bb3c-2297342d5452",
+    "7ac7fea6-5b3a-5e97-b687-c76569c58429"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "b9adce48-6b86-5f58-b2ea-b25f51c70cbd",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ],
+  "sense_bridges": [
+    {
+      "term": "NECESSARY",
+      "from": "8c881fa6-2b9f-44be-a32a-c8ef29c13643",
+      "to": "7af298fb-a2c4-4239-919b-7685f2e1f67a",
+      "statement_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+      "role": "conclusion"
+    },
+    {
+      "term": "NONNECESSARY_VERSUS_CONTINGENT_ROOT",
+      "from": "cf6a8bb9-2a70-4e90-86bd-06f69106da2f",
+      "to": "9f9108e2-3cc3-45dd-be1d-d8fdaaced708",
+      "statement_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+      "role": "conclusion"
+    },
+    {
+      "term": "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT",
+      "from": "9232f675-db0a-474c-9f00-d8e5aba69ef7",
+      "to": "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
+      "statement_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+      "role": "conclusion"
+    },
+    {
+      "term": "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION",
+      "from": "2f42c0e7-46ae-4e2b-9ac4-95dcb865da61",
+      "to": "f4609d52-a878-4d09-9af3-083b1945770c",
+      "statement_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+      "role": "conclusion"
+    }
+  ],
+  "strong_version_needed": {
+    "fd12ad3d-6729-4fa0-bb87-0121260df684": "The ground-to-cause bridge 98efaa9e maps a grounding edge to an actual cause of being, not to a per se one, so the per se regress ea251340 says nothing about those edges; closed actual esse collections rooted (20babef7) admits an infinite descending chain of causes whose members also descend from an uncaused bearer. Full well-foundedness of grounding needs the unrestricted regress."
+  }
+}

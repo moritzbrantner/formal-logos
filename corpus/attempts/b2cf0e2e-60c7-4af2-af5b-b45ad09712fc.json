@@ -1,0 +1,32 @@
+{
+  "id": "b2cf0e2e-60c7-4af2-af5b-b45ad09712fc",
+  "label": "One dependence order: stage-one well-foundedness premises through actual grounding (#1926)",
+  "statement_ids": [
+    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+    "fd12ad3d-6729-4fa0-bb87-0121260df684",
+    "ea251340-c89e-4535-a00f-6323cd8403a5",
+    "d85de8e1-2f7f-5b2f-ba1e-112a0799994c",
+    "97f5850f-62bc-5e43-a0c1-dd1033d08fc9",
+    "7dfa068a-9974-5fcd-ba23-fac4dee2fc70",
+    "c18faab2-aaff-4132-9e64-db763d723293",
+    "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+    "546975ef-0614-5c0a-8f49-fab2cd2a2533",
+    "2d9807a5-ebff-45fd-972f-e241f18713d4",
+    "98efaa9e-1c91-4e52-8c0d-faf03d4f8372",
+    "0436de86-6579-53f2-9ff5-2111ba44ebae",
+    "86efed1a-f353-5b5d-9431-df7fc643ace1",
+    "32d77f18-a9c2-5486-b51c-a24f32863af4",
+    "e8664ab8-c12f-42e2-8b9f-f38fe14cb52a"
+  ],
+  "date": "2026-11-24",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "#1926 phase 3, bridge 'one dependence order' (docs/notes/one-dependence-order.md, specs/one-dependence-order.toml). Question: can the stage-one well-foundedness premises over different relations be derived from one well-foundedness principle through explicit open inclusion bridges, without identifying the relations? Kernel: wellFounded_of_predecessorInclusion (core Lean, no axiom): well-foundedness of G among the S-elements transfers to R when every R-predecessor is in S and G-related; the successor need not be in S. Verified, zero-axiom results: (1) 3b4bcca5: AGWF 82cfaf26 + cb1cdea9 + 546975ef + 2d9807a5 -> fd12ad3d (and via the existing strength order 80f81d44 ea251340). (2) 0d919852: fd12ad3d + 98efaa9e + 0436de86 -> AGWF (converse inclusion); with (1), under the two-way package AGWF and fd12ad3d are interderivable, one assumption in two presentations; the strictness control shows they come apart without 98efaa9e. (3) 3463650f: AGWF + 86efed1a + 32d77f18 -> d85de8e1 for the frame's F.PriorSimply. (4) 12a7f9d3: ea251340 (the weakest regress version that suffices) + new open bridge e8664ab8 (per se efficient-cause links are PER_SE_5 actual causes of being) -> 97f5850f. Controls (Comparator-checked): each input omitted in a Bool interpretation, nonvacuity, strictness, and ascentLimit: a Nat interpretation with AGWF, the esse regress, well-founded priority, every recorded inclusion (cb1cdea9, 98efaa9e, 86efed1a, d96105fb), the genus principle d9fad785, the actuality calibrations and GradesFoundInBeing, in which NoInfiniteAscentInBeing 7dfa068a and its actual-concreta restriction c18faab2 fail. Survey claims checked: controls_of_wellFounded does apply to AGWF via Source <-> ActualRoot (axiom-free lemma, scratch only) but costs propext, Classical.choice, Quot.sound; the esse-cause bridge alone does not suffice for fd12ad3d (the two actuality calibrations are also needed); the secunda via needs the further bridge e8664ab8. Warrant: inclusions among being relations (esse causing, priority in being, grounding) are positively supported on the selected meanings; causing in a respect is not included (hand-and-stick counterexample, causal-dependence-support-investigation.md (e) row 1, against e8664ab8 read respect-free and against e078f07b); the grade is not included (more is not ground: beings compared in grade need not depend on each other; the genus principle is vacuous without a maximum); the order runs ground ⊆ more, so the quarta via premise sits above AGWF (existing f9c69ee8). Rejected approaches: a direct per se efficient-cause-is-ground bridge (same hand-and-stick mechanism, so not added); formalizing 'more in being between actual concreta is grounding' as a premise (an established counterexample, so recorded only in the note); a separate AGWF -> ea251340 argument (redundant given 80f81d44). Outcome label: a new bridge, with presentational duplicates identified (AGWF/fd12ad3d under the two-way package).",
+  "evidence": [
+    "3b4bcca5-01a8-4fe5-a1e3-848399302532",
+    "0d919852-bc09-45b0-b896-6c963b2a94c9",
+    "3463650f-5caa-4bcc-a7b3-eaa7608db3fb",
+    "12a7f9d3-c2d1-400a-947b-1326683a5767"
+  ],
+  "blocker": "Open: every input bridge and AGWF itself remain open premises; the source-free global-structure rival (causal-dependence assessment rival 4) targets well-foundedness as such and is not answered by concentrating the load on AGWF; e8664ab8 is defensible only on the existential reading of the second way (next test: split CausesAsCaused into in-esse and in-a-respect senses); no defended inclusion of MoreIn esse into grounding exists, so the quarta via ascent premise is not derivable from AGWF; a conditional equivalence AGWF <-> fd12ad3d cannot be registered as a relation with the current schema."
+}

@@ -1,0 +1,14 @@
+{
+  "id": "ef2c151e-ed8a-492f-b5b5-aa55a7bc1272",
+  "label": "Simple priority is well-founded, from grounding well-founded on actual concreta (inference)",
+  "input_statement_ids": [
+    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+    "86efed1a-f353-5b5d-9431-df7fc643ace1",
+    "32d77f18-a9c2-5486-b51c-a24f32863af4"
+  ],
+  "output_statement_id": "d85de8e1-2f7f-5b2f-ba1e-112a0799994c",
+  "rule": "Transfer well-foundedness along a predecessor inclusion (wellFounded_of_predecessorInclusion)",
+  "meaning": "Non-transcription conditional derivation on one m and w, for the shared frame's simple-priority field F.PriorSimply (SIMPLY_PRIOR_1). If grounding among actual concreta at w is well-founded (82cfaf26), whatever is simply prior to something other than itself is an actual concrete ground of it at w (86efed1a) and nothing is prior to itself (32d77f18), then simple priority is well-founded on the whole carrier (d85de8e1). Step: what is prior to x is other than x by irreflexivity, hence an actual concretum grounding x; well-foundedness transfers. The priority well-foundedness premise thus becomes a consequence of the grounding one, but only on the reading of PriorSimply on which 86efed1a is plausible, priority in being (what x depends on for its being). On that reading, the existing chain from d85de8e1 to the secunda via premise 97f5850f (e229bb2c, 438866fa) still needs the all-respects premise e078f07b (every efficient cause in any respect is simply prior), against which lane B keeps the hand/stick counterexample (causal-dependence-support-investigation.md, row 1); so this argument does not by itself carry well-founded grounding to the secunda via. The closed controls priorityControls give, for each input, a Bool interpretation in which the other two hold and priority is not well-founded (the irreflexivity omission is a self-loop, which the distinct-relata bridge does not see), and a nonvacuous interpretation.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

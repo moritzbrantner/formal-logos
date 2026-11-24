@@ -270,6 +270,7 @@ public import TruthCore.Results.Causality.NecessaryWholeReplacement.Solution
 public import TruthCore.Results.Causality.NecessaryWitnessConnection.Solution
 public import TruthCore.Results.Causality.NonlimitingConcreteExistence.Solution
 public import TruthCore.Results.Causality.OccurrenceUnderivedEssence.Solution
+public import TruthCore.Results.Causality.OneDependenceOrder.Solution
 public import TruthCore.Results.Causality.OriginDeletion.Solution
 public import TruthCore.Results.Causality.OriginExerciseBridge.SelfEdge.Solution
 public import TruthCore.Results.Causality.OriginExerciseBridge.Solution

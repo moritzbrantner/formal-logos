@@ -1,0 +1,16 @@
+{
+  "id": "e8664ab8-c12f-42e2-8b9f-f38fe14cb52a",
+  "label": "Every per se ordered efficient-cause link is a PER_SE_5 actual CAUSE_2 of being",
+  "paraphrase": "OPEN analyst bridge, attribution deferred: whenever c causes x as a caused cause (CausesAsCaused, the per se link of the secunda via's series of efficient causes, DEF 4a101a4c), c is a per se actual cause of the being of x in the q.3 a.4 profile (PerSeActualEsseCause, PER_SE_5, DEF 4bca086d): c is other than x, both are in act as to being, c causes the esse of x (CausesIn c x esse, CAUSE_2, mode unspecified, tenseless), and it does so as caused (the primitive per se link AsCaused c x). It reads the secunda via's per se series as a series of per se causes of being, the existential reading of the second way. It is not stated for accidentally ordered causes. Substantive objection on a respect-free reading of CausesAsCaused: Aquinas's own per se example in ST I q.46 a.2 ad 7 (the stone moved by the stick, moved by the hand) is a per se ordered series of causes of motion, and the hand is not a cause of the stick's being, since the stick continues to be when the hand lets go; the bridge then fails at that link. It is defensible only where the per se links are themselves causes of being.",
+  "lean_declaration": "TruthCore.Causality.OneDependenceOrder.PerSeEfficientCausesArePerSeEsseCauses",
+  "definition_ids": [
+    "4a101a4c-12de-53c8-80c6-de7a523ea9d9",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740"
+  ],
+  "disambiguation_ids": [
+    "81c233d4-01b4-528c-8bbd-7da228443ffe",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "57f80020-fa6f-5b69-be58-b4cf95b7226f"
+  ]
+}
