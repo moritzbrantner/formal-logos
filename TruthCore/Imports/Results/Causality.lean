@@ -283,6 +283,7 @@ public import TruthCore.Results.Causality.OwnerEndpointCalibration.Solution
 public import TruthCore.Results.Causality.ParityUnionRegress.Solution
 public import TruthCore.Results.Causality.PartFreePlurality.Solution
 public import TruthCore.Results.Causality.PartMediatedSelfMotion.Solution
+public import TruthCore.Results.Causality.ParticipatedEsseScale.Solution
 public import TruthCore.Results.Causality.ParticularActuality.Solution
 public import TruthCore.Results.Causality.PastResourceControls.Solution
 public import TruthCore.Results.Causality.PerAccidensResponses.Solution
