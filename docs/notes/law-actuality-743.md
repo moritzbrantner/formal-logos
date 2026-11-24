@@ -235,8 +235,8 @@ this study makes no competing claim about that proof.
 
 ### Four scenario comparison and exact law obligation
 
-The same **rigid** recipient `false` and originator `true` occur in four
-worlds (all worlds are mutually accessible). The source is actual at every
+The recipient `false` and originator `true` are rigidly designated across
+four mutually accessible worlds. The source is actual at every
 moment and necessary in the stipulated modal frame. The recipient has the
 same *origin and presence through t=1* in the three originating worlds;
 `CoherentAtNow` holds at t=2 in every world.
@@ -347,4 +347,3 @@ and `frame.PriorSimply` are unused placeholders, not substantive
 assignments. No issue acceptance is closed, no source attribution added, and
 the intended repository-computed frontier change is zero. Final proof/build
 and independent semantic review evidence belong to the linked PR.
-
