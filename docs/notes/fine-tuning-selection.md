@@ -286,3 +286,141 @@ The theorem, models and remaining qualified assessment are unchanged. No new
 formal verification or real-world design support follows from this prose repair.
 The next actual-world test needs a justified physical sampling model and a
 specified designer-goal model with a residual prediction beyond observer viability.
+
+## #1569: Which vacuum-energy decade does an observer find?
+
+The homogeneous causal-entropic model assigns about **34% or 43%** to the decade
+containing the measured vacuum energy, depending on its star-formation history.
+Communication of goodness supplies a reason to create, but gives no ordering of
+this decade against adjacent observer-bearing alternatives. A narrower published
+purpose, maximizing the fraction of baryons becoming life, does give a testable
+ordering criterion. Its astrophysical inputs reach stars; its life yield is still
+undetermined. These are comparisons of the same density after observerhood.
+
+### One residual and its physical prediction
+
+Use Planck units and write `r = Λ/(8π)`. Restrict both accounts to the
+paper's flat, positive-Λ family with the other low-energy parameters held
+fixed. Let O mean that the sampled center is an observation record. Attach the
+ambient vacuum density to each center, and ask whether **E**,
+`10^-123 ≤ r < 10^-122`, holds there. O is background before learning the
+density. The record need not itself contain a precision measurement. This
+idealization compares true local values, with the published central estimate
+`1.25 × 10^-123` identifying our bin. Modeling noisy survey classifications
+near the lower boundary would require a measurement-error distribution. The
+decimal partition is explicit and the observed bin was picked retrospectively.
+The result tests model fit to a known datum. It includes neither a new
+prospective success nor an extra update for being observers.
+
+Bousso, Harnik, Kribs and Perez motivate a dense spectrum and population by
+transitions among metastable vacua. Their calculation assumes an effectively
+flat prior per **linear** density over the relevant range. In a homogeneous
+cosmology take a comoving worldline and its causal diamond from reheating to
+the asymptotic future. Integrate the modeled entropy production per comoving
+volume against the diamond volume at each time. High densities curtail the
+volume available during the era of starlight reprocessed by dust. The
+combination with the linear prior gives a peak per log decade. No conditioning
+on today's age or on measuring during peak starlight enters this integral.
+Interpreting this as sampling records requires their expected number per diamond
+to be proportional to that entropy. Sampling a vacuum once if it has *any*
+observer gives a different weighting. Thermodynamic requirements and the finite
+causal region motivate the proxy, while its proportionality across densities and
+the effective population prior remain assumptions. [Bousso et al., §§1–2.3, 3.4 and 4.2, Eqs. (2.4)–(2.8) and (3.24)](https://arxiv.org/pdf/hep-th/0702115)
+
+| Star-formation history | Published median of r | Mass of E from Fig. 8 |
+| --- | ---: | ---: |
+| Nagamine et al. (N) | 5.6 × 10⁻¹²³ | ≈ 0.34 |
+| Hopkins et al. (H) | 2.1 × 10⁻¹²³ | ≈ 0.43 |
+
+The last column is our integration of the plotted curves. To reproduce, read
+Fig. 8 of v3 (printed p. 27) with horizontal ticks in log₁₀ r and vertical
+ticks in probability density per decade. Clip each published polyline to
+[−123, −122], interpolate where it crosses the endpoints, and sum trapezoid
+areas using the displayed vertical scale. The unrounded plot readings are
+0.343 and 0.428. As a scale check the full plotted interval [−126, −120]
+integrates to 0.992 and 0.996 respectively. No renormalization to the displayed
+window. Both histories use information about our cosmos. They are alternative
+calculations on the same datum, with no supplied mixing weights. [Bousso et al., Eq. (1.1), §3.4 and Fig. 8](https://arxiv.org/pdf/hep-th/0702115v3#page=28)
+
+The physical sensitivity reaches the shape of this prediction. With worldlines
+uniform in late physical volume, most late diamonds miss bound matter. With
+early comoving worldlines tracing matter, some remain in halos. If late
+evaporation contributes entropy scaling as halo mass squared and dominates,
+Phillips and Albrecht obtain weight proportional to 1/r in the small-r limit.
+The resulting log-density approaches a constant. Extending that tail admits
+additional decades of comparable weight. A lower cutoff or actual discrete
+spectrum is then needed to normalize it and assign E a mass. This gives a
+physical mechanism by which the favored scale can disappear. The small-r
+asymptote alone gives no revised number for E, and counting evaporation as
+observations remains a separate hypothesis. [Phillips and Albrecht, §§IV–VI, Fig. 5](https://arxiv.org/pdf/0903.1622)
+
+### A purpose on the same density axis
+
+Take the corpus's independently specified Thomistic end, communication of
+goodness. A source possessing a good can will that another share it; an
+intelligent source could choose an order enabling creatures to exercise their
+capacities. This explains how creation could be intentional without remedying
+a deficiency. The distinction between necessarily willing goodness and
+contingently willing particular means leaves open which observer-bearing
+orders it would choose. The [contingent-choice investigation](optimal-creation-choice.md)
+distinguishes producing an order for an adopted end from explaining the contrast
+with each unchosen order. Neither the existence of observers nor the capacity
+for such choice supplies relative weights inside and outside E. [Existing
+claim and interpretation](../../corpus/claims/q19-communicated-good.json);
+[Aquinas, ST I q.19 aa.2–3, bodies](https://www.newadvent.org/summa/1019.htm)
+
+For a sharper comparison, Page examines a biophilic principle that selects
+a value maximizing the fraction of all baryons becoming life. Its objective
+can be stated without mentioning the observed decade. Taking it as a
+creator's *exclusive* choice rule adds a substantive premise to the broader
+end. Page factors the life fraction into the fraction collapsing into galaxies
+and the life yield of those baryons. Smaller positive Λ favors collapse;
+metal enrichment, gas retention and stellar environments affect the second
+factor. A derivative at the observed value could test exact local optimality.
+Excluding **the whole bin** instead requires every feasible value in E to be
+outperformed by an available alternative. If all attainable global maximizers
+are outside E, a successful exact optimizer assigns E zero, conditional on
+producing an observation record in its chosen world. Maximizers on both sides
+require a choice and sampling rule. [Page, §§2–3, especially pp. 6–9](https://arxiv.org/pdf/1101.2444)
+
+There is a numerical check on substituting stellar production for life.
+Sorini, Peacock and Lombriser's positive-Λ models give asymptotic stellar
+fractions of about 0.27 at 0.1 Λobs and 0.23 at Λobs. In an explicit
+stellar-mediated model write the final life fraction as stellar fraction
+times life yield per unit stellar mass formed. For the observed point even
+to tie that lower-density alternative, its yield must be at least
+0.27/0.23 ≈ **1.17 times** the alternative's yield (assuming positive yields).
+The lower-density comparator falls outside E. The numerical threshold belongs
+to their own fiducial cosmology and stellar prescriptions; transferring it to
+the 2007 CEP parameters would require matching those inputs. It tests two points,
+leaving other in-bin choices and the yields themselves open. The calculation
+concerns total cosmic baryons, as befits Page's objective; it supplies neither
+diamond entropy nor a count of centered records. Stellar physics gives a
+reason to investigate the yield ratio, and offers no independent reason why a
+source would optimize that particular fraction. [Sorini, Peacock and Lombriser,
+§4.2, Fig. 10 and §5.4.2 on model sensitivity](https://arxiv.org/pdf/2411.07301)
+
+**Provisional judgment.** The homogeneous stellar CEP has the stronger
+quantitative account of this residual under its sampling assumptions. Actual
+comparative support for a purposive source remains undirected. For example,
+a warranted purpose probability above both plotted masses would favor that
+purpose on E against either stellar prescription, if its prediction and the
+entropy-to-record calibration applied to the same centers. None of the
+examined goals supplies that bound or its reverse. The stronger physical
+sensitivity concerns the worldline and late-entropy choices, beyond the
+spread of the two stellar curves. A purposive source could also choose a
+landscape; comparison of specified generating accounts does not partition
+theism and naturalism.
+
+**Reopen** when a physical record-selection rule independently fixes or
+bounds E under the alternative worldline measures, or when a purpose account
+orders the attainable densities using warranted yields and an independently
+motivated choice rule. Either would narrow the missing pair. Use the same
+observation timing, and fold in measurement errors on both sides if testing
+reported estimates. The experiment/center distinction (322ddba8, #1401) and
+incremental factorization (6a84cd7a, #1381) already explain the conditioning;
+neither result calibrates these models. Applying the comparison to belief
+still needs #1734's epistemic bridge. #1731's intellect/will capacity and
+#1730's contingent exercise do not identify a goal distribution or identify
+an actual designer with the GOD_4 witness. This research changes no formal
+premise or root route.
