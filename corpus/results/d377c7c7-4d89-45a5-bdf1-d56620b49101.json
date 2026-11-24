@@ -1,0 +1,11 @@
+{
+  "id": "d377c7c7-4d89-45a5-bdf1-d56620b49101",
+  "label": "GOD_4 is maximal from a maximal being and distinct-cause exclusion",
+  "argument_id": "14cbab05-1f5f-4bbd-8fe7-f3c2b7ac19a5",
+  "challenge_module": "TruthCore.Results.Discover.GodMaximalFromCauseExclusion.Challenge",
+  "solution_module": "TruthCore.Results.Discover.GodMaximalFromCauseExclusion.Solution",
+  "theorem": "TruthCore.Results.Discover.GodMaximalFromCauseExclusion.godMaximalFromCauseExclusion",
+  "comparator_config": "results/d377c7c7-4d89-45a5-bdf1-d56620b49101/comparator.json",
+  "status": "solution-present",
+  "description": "Conditional support option for the existing GodIsMaximalInBeing statement under the three listed open premises. Analyst registration of the bundle previously reported in #1850/#1860 and attempt 3bd2aeb2-7a0a-4c04-b1f9-32eaba83991e, using the proof emitted by truth discover after carrier sense-tag review. The conclusion is universal over beings satisfying IsGod; it does not assert that God exists. The result establishes neither the premises nor a globally weaker assumption bundle, and makes no claim of independent corroboration."
+}
