@@ -80,6 +80,12 @@ def unsupported (what : String) (e : Expr) : M α := do
 def lookupPath (xs : Array (String × String)) (p : String) : Option String :=
   (xs.find? (·.1 == p)).map (·.2)
 
+/-- The structure a type unfolds to (reducibly: `GProfile W B` is `Profile W B`). -/
+def structureOf (ty : Expr) : MetaM (Option Name) := do
+  let ty ← whnfR ty
+  let .const c _ := ty.getAppFn | return none
+  return if isStructure (← getEnv) c then some c else none
+
 /-- The path of a structure value built from a structure binder by
 projections (`F.history.ontic` for `History.ontic (CausalityFrame.history F)`,
 or its `Expr.proj` form). -/
@@ -130,6 +136,10 @@ partial def structValue (ctx : Ctx) (e : Expr) : M (Option Expr) := do
       let rest := args.extract (info.numParams + 1) args.size
       return ← project args[info.numParams]! info.i
         (fun b' => mkAppN e.getAppFn (args.extract 0 info.numParams |>.push b')) rest
+    -- Only a definition of a structure value (an adapter) is unfolded here;
+    -- a proposition is left to `formula`.
+    let isStruct ← try (·.isSome) <$> structureOf (← inferType e) catch _ => pure false
+    unless isStruct do return none
     let some e' ← unfoldDefinition? e | return none
     unless (← get).unfolded.contains c do
       modify fun st => { st with unfolded := st.unfolded.push c }
@@ -305,12 +315,6 @@ def unaryFunctionSorts (ctx : Ctx) (ty : Expr) : MetaM (Option (String × String
     let some domain := carrierOf ctx (← inferType xs[0]!) | return none
     let some codomain := carrierOf ctx body | return none
     return some (domain, codomain)
-
-/-- The structure a type unfolds to (reducibly: `GProfile W B` is `Profile W B`). -/
-def structureOf (ty : Expr) : MetaM (Option Name) := do
-  let ty ← whnfR ty
-  let .const c _ := ty.getAppFn | return none
-  return if isStructure (← getEnv) c then some c else none
 
 /-- What a structure binder contributes, field by field, recursively: flat
 predicate, element and function names; opaque fields; and the structure

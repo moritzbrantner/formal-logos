@@ -996,3 +996,43 @@ Clippy, release build, corpus/generator checks and attribution. The independent
 main-based production change leaves its frontier unchanged: 602 support alternatives,
 581 open premises and cost 16. This is separate from the curated measurement corpus.
 Shared-runner timings are informational; no universal speed or precision claim follows.
+
+## Frame goals: portfolio, term binding and the NAR exact bundle (#1926, 2026-11-24)
+
+On `03b9c7e15`, the exact NAR bundle (target `43651417`
+`NecessaryActualConcretaAreRoots`; premises `0c27f65a`
+`IntellectualGodCommonRootAt`, `eeccc832` (b2), `fbd0a6d3` (a)) gave "0 proved,
+1 unresolved" in 201 s, while `truth prove-sweep` closes the matching
+Challenge `narFromRootWithholding` by `unfold+grind`. Three causes were
+separated:
+
+| Cause | Evidence | Change |
+| --- | --- | --- |
+| Proof search | On the Challenge's own statement, `delta`/`prove_sweep_unfold; duper [*]` hits 100000 heartbeats; `unfold+grind` closes it | the prove-sweep portfolio runs before Duper (step 5) |
+| Renamed binder | the two NarDerivation premises got two worlds (`w_3`, `w_4`): the same-module rule compared the renamed outer name | same-module identification compares declared names (step 4) |
+| Adapter term | the Challenge binds the target's `m : Profile W B` to `groundProfile F concrete G`, which the premises build; no projection reaches it | term binding (step 4) |
+| Cross-module identification | the target, `IntellectualGodCommonRootAt` and the NarDerivation premises are three modules; their `w`, and the two `m`, carry no authored sense tag | none: an identification is a reviewed tag or an explicit bridge, never a tooling default |
+
+Same bundle, default budget (Duper 100000, portfolio 20000), `--batch 1`
+implied, under the heavy-job lock; seconds are the engine's `summary.seconds`:
+
+| Run | Outcome | Seconds |
+| --- | --- | ---: |
+| `03b9c7e15`, Duper only | unresolved | 201 |
+| portfolio only, binding unchanged | unresolved (the goal as bound is false: four worlds, `m` unbound) | 197 |
+| this change, plain exact run | unresolved: the NarDerivation premises share one world; the term binding `m := groundProfile F concrete G` is tried; three worlds of three modules stay separate | 313 |
+| this change, `discover_blueprint.py oracle` with temporary whole-binder tags on the four `w` and the two `m` | proved by `portfolio:unfold+grind` under the term binding; minimization keeps all three premises (each deletion fails within budget; a one-point omission model shows `0c27f65a` needed); filtered `known` (registered argument `abc27f55`), `domain_by_name` (carriers `W`, `B`) and the informational `projection_binding` | 163 |
+
+Its rendered theorem text, re-elaborated as the certification file states it,
+was accepted with axioms `propext`, `Classical.choice`, `Quot.sound` and no
+project theorem outside the bundle (`discover-external: []`). The CI smoke
+target (`c7de7537`) is now proved by `portfolio:grind` and filtered `known`,
+as before.
+
+The oracle run is conditional on its disposable tags: it shows that the four
+`w` binders and the two `m` binders are the only identification obstacle
+left, and it licenses neither tag. Authoring them is a semantic decision
+(sense records with `lean_parameters`), outside this tooling change. The
+proof is a rediscovery: `known` names the registered argument it recovers,
+and `domain_by_name` the existing name fallback for the carriers `W` and `B`,
+which the same tags would discharge. No premise, statement or warrant changes.
