@@ -308,6 +308,216 @@ commands at the top of the spec, and route the batch through the semantic
 challenge of consequential bridges and a normal PR. The command never writes
 corpus records.
 
+## Capability audit and measured discovery loop (2026-11-24)
+
+This bounded evaluation follows #1784, #1833, #1834 and #1644. It separates
+**retrieval** of a complete premise bundle, **binding** of its carriers and
+senses, **solver recovery** of the typed implication, and **philosophical
+warrant** for its assumptions. A change at one layer does not settle another.
+
+### Capabilities and remaining boundaries
+
+| Surface | What it supplies; what remains outside its result |
+| --- | --- |
+| `discover`, Duper and lean-auto | Target-relative vocabulary/definition/sense ranking, typed binding, Duper search, equation fallback, optional ATP selection with Duper reconstruction, and separate certification. This evaluation used Duper only; it makes no ATP comparison. Complete multi-hop retrieval and reliable timeout-versus-saturation reporting remain open. |
+| Exact bundles and adaptive repair | `--premise` now reaches the existing engine rather than being silently ignored. Raw `repair/retry` candidates can receive the engine's filters, certification and weakening. A supplied bundle is external premise selection; an oracle identification remains conditional until reviewed. Repeating unchanged inputs supplies no new diagnosis. |
+| Minimization, weakening and incompatibility | Failed deletion is not necessity; a certified weaker sibling may supersede a stronger bundle. A nontrivial certified inconsistent core supplies an incompatibility; literal-negation pairs are filtered and neither supplies affirmative support. Independent deletions cannot be combined without checking the retained conjunction; the separate #1925 repair is discussed below. |
+| `countermodel` and `prove-sweep` | Checked finite models establish a precise formal non-implication; bounded failure does not establish entailment. Function and structure vocabulary limit extraction. Prove-sweep probes frozen Challenges and possible transcriptions; its closure still needs a real Solution and the normal gates. |
+| Target-free pilot | Explicit binder maps and full AND bundles permit checked cross-family conjectures, models and OPEN bridges. Graph-known filtering requires a registered conclusion ID; arbitrary Lean text still needs prior-work comparison. A sufficient bridge is not shown necessary or weakest. An intended root connection remains OPEN until linked; naming a consumer does not connect it. |
+| `brief`, `related`, `novelty`, `semantics` | Retrieve prior arguments, assessments, sources, senses and issue history, then expose identification obligations. Relevance is not equivalence, `no-match-found` is not novelty, and a missing snapshot means unknown history. The later independent #1644 tier, not its superseded lexical verdicts, supplies the controls below. |
+| Frontier and support | `frontier` identifies consequential obligations; `support-graph` preserves alternative rules, full conjunctions, commitments and cycles. Neither replaces Lean composition or premise warrant. A lower-level derivation can add leaves while improving conditional support options; fewer leaves is not itself a better argument. |
+
+### Frozen comparison and provenance
+
+The [fixed fixture](../scripts/testdata/discovery-benchmark.json) was frozen
+before execution, SHA-256
+`ffbdb95ca2166b85440c6dfc382f79aa6ebfb0679ccfe91ca9c95b69c45fda56`.
+It contains three positive reference cases (A, B, D), negative C, and two
+unsupported countermodel boundaries. B is held out from the curation case.
+All positive relationships were registered or previously reported; no cited
+Solution theorem was passed as a premise or hint. Novel relationships are
+therefore **0**, independently of whether a run labels a result `discovery`.
+
+Source snapshots for reproduction are:
+
+- Baseline: `ad4ffa2e5fbd245434f3d4b468f42f2b3f9ffaf2`.
+- Exact engine before tags: `2546e8b46c574144be9266ccbb4efbf09082627c`.
+- Curated corpus before new support registration:
+  `090cb4d2f9cd88788b80a55496f90412e474bc17`.
+
+The last two are content-identical source snapshots of the local captures
+`76f23a354a47ae4eea417662e114faedcec34774` and
+`4b04b035297321a881edfe1e79921ae5b82b1391`, respectively; they are not the
+checkout hashes printed in the original logs. Raw reports, commands, source
+and binary identities are retained in the external `discovery-evidence/`
+run artifacts. Reproduce on the pre-registration snapshots: after registration,
+the new argument can correctly change A's `known` classification.
+
+The frozen budget was CLI `--heartbeats 10000` (the CLI's thousands unit),
+`--batch 1 --jobs 1`, no Zipperposition; ranked runs used `--premise-pool all
+--candidates 8`. Seconds below are engine `summary.seconds`, including
+vocabulary export, search and certification after the library build. Wrapper
+elapsed time also includes lock waits and preparation. An initial export
+interrupted under runtime memory pressure reached no goal and is unavailable
+evidence, not an unresolved proof. The unchanged exporter completed after
+the toolchain was moved out of tmpfs; no exporter optimization was adopted.
+
+| Case and input | Reference coverage | Name-only identifications | Outcome at 10000 | Seconds |
+| --- | --- | ---: | --- | ---: |
+| A: maximality, baseline ranked | 3/3, among 8 candidates | 8 | unresolved | 106 |
+| A: exact before tags | 3/3 | 2 | unresolved | 33 |
+| A: tagged ranked | 3/3, among 8 candidates | 6 | unresolved | 109 |
+| A: tagged exact | 3/3 | 0 | unresolved | 36 |
+| B: assertion meaning, baseline ranked | 1/2; assertion witness absent | 0 | unresolved | 99 |
+| B: exact | 2/2 | 0 | proved, filtered `known` | 22 |
+| C: assertion without meaning bridge, exact | only the occurrence premise | 0 | unresolved; one OPEN bridge | 23 |
+| D: well-founded ascent, baseline ranked | 3/5; well-foundedness and EM absent | 0 | unresolved | 105 |
+| D: exact | 5/5 | 0 | unresolved; manual reference route exists | 28 |
+
+Positive proof recovery is **0/3 ranked → 1/3 supplied exact**, with no new
+discovery at this budget. This measures recovery with externally selected
+premises, not autonomous ranking gain. A already retrieved all three reference
+premises: its failure is not a retrieval omission. Its two reviewed carrier
+tags remove the exact bundle's name-only obligations but do not close it at
+10000. B demonstrates a selection gap and correct known-route suppression.
+D removes selection uncertainty yet remains a solver limitation on an existing
+manual proof, not evidence for another philosophical premise. The reference
+coverage counts do not establish that every listed premise is necessary.
+The curation adds existing whole-binder Being/Respect tags only to
+`SomeBeingMaximalInBeing`; it does not merge maximal, greatest-degree or
+strictly-greatest readings or change proposition bodies and source readings.
+
+### Supplemental proof, registration and omission models
+
+After A's frozen-budget failure, a separately labelled pair used
+`--heartbeats 100000`, reproducing the historical #1850 budget. Before tags it
+proved the implication in 49 seconds and was filtered only by `domain_by_name`;
+after tags it was a certified discovery in 48 seconds, retaining all three
+premises, no filters and no name-only identifications. Its axioms were
+`propext`, `Classical.choice`, `Quot.sound`. These runs do not change the
+frozen recovery denominator or establish a runtime improvement.
+
+The bundle for target `4c79298d` is `18561596` (a maximum excludes a distinct
+cause of its being), `fad8af3e` (some being is maximal) and `86d02b69` (every
+GOD_4 causes every other's being). Given a maximal witness `m`, any GOD_4
+`g ≠ m` would cause `m`, contradicting the exclusion; hence `g = m`.
+Already reported in #1850/#1860 and the
+[adaptive attempt](../corpus/attempts/discover-adaptive-repair-fourth-way-20261122.json),
+this route is now registered as
+[argument 14cbab05](../corpus/arguments/14cbab05-1f5f-4bbd-8fe7-f3c2b7ac19a5.json)
+and [result d377c7c7](../corpus/results/d377c7c7-4d89-45a5-bdf1-d56620b49101.json),
+theorem `TruthCore.Results.Discover.GodMaximalFromCauseExclusion.godMaximalFromCauseExclusion`.
+Build, bind-check and Comparator with NanoDa passed. The conclusion remains
+universal over `IsGod`; it does not assert that God exists. The direct premises
+remain open, and deriving `18561596` from `d5a94eb1` retains that shared
+dependence. Registration is neither global weakening nor independent corroboration.
+
+An actual `countermodel --all --size 2` run on that theorem Lean-checked:
+
+| Check | Being size | Respect size | What it certifies |
+| --- | ---: | ---: | --- |
+| Omit `h0` / `18561596` | 2 | 1 | Other premises true, conclusion false |
+| Omit `h1` / `fad8af3e` | 1 | 1 | Other premises true, conclusion false |
+| Omit `h2` / `86d02b69` | 2 | 1 | Other premises true, conclusion false |
+| Joint witness | 1 | 1 | All premises and conclusion true; `IsGod` is false everywhere |
+
+Together with the proof, these omission models establish inclusion-minimality
+of **this fixed encoded bundle**, not philosophical necessity or a globally
+weakest sufficient bundle. The joint witness establishes formal consistency;
+its empty `IsGod` predicate supplies neither God-existence nor metaphysical
+coherence. Existing Challenges and the target's 56 result-backed consumers
+are preserved, including [simplicity `c473ec4b`](../corpus/arguments/CATHOLICISM-STAGE2-GOD-IS-SIMPLE.json)
+and [immutability `38244f91`](../corpus/arguments/CATHOLICISM-STAGE2-GOD-IS-IMMUTABLE.json);
+their other premises remain obligations.
+
+**Formal frontier delta:** `truth frontier-diff --base origin/main`, against
+`6ecc2d87c3576906cb32ea8dbbca22e7557cce6b`, computes 602 → 603 distinct
+verified support alternatives, with one added for `4c79298d`. Open premises
+reaching the root remain 581 (430 bare, 92 supported, 59 stated); the lowest
+expanded-route cost remains 16, and no bare premise is added. This is one
+additional conditional support option, with no premise establishment.
+Final semantic review of the complete outcome remains pending.
+
+### Negative controls, model boundaries and incompatibility
+
+C supplies only `AssertionMade`, without local bridge `42114721`. The engine
+proposes `∀ a c, Asserts a c → Meaningful c`, which stays OPEN and is broader
+than the existing bridge for the selected claim. It is not shown necessary
+or weakest. An actual `meaningFromAssertion --omit hMeaning` countermodel
+was Lean-checked with one agent and one content, `Asserts = True` and
+`Meaningful = False`. It concerns the formal assertion marker, not an example
+of genuinely cognitive assertion without meaning. Prove-sweep closed the full
+frozen theorem with `unfold+grind` in 2 engine seconds, with no transcription flag.
+
+Thus actual assertion plus its local meaning requirement excludes
+`NoMeaningfulContent`. A rival retaining that denial must contest a premise
+or the marker's cognitive interpretation; this yields no truth, knowledge or
+God inference. The model distinguishes the missing assumption; proof-search
+failure by itself did not do so.
+
+| Countermodel request, bound 2 | Actual boundary |
+| --- | --- |
+| `existenceFromOccurrence --omit hRepresents` | Unsupported `represent : Episode → Being`, exit 2 |
+| `actualGiverImpliesB2 --omit hGiver` | Unsupported `F : CausalityFrame W B T R`, exit 2 |
+
+Neither unsupported extraction is an exhaustive failed model search. In the
+separate #1925 classifier regression, `{P, ¬P, Q, ¬Q}` exposed independent
+single deletions being combined into an empty core and a false reported
+incompatibility. The same unedited Lean output was fed to both classifiers:
+all four deletions proved contradiction; the repair retained all four premises,
+flagged the core as not minimized and rejected literal negation. Single-success
+and no-success deletion controls retained the certified pair and rejected it
+in both versions. Together with 28 passing offline tests, this is Lean-backed
+synthetic protocol evidence, not a new corpus incompatibility. Sequential
+certified core minimization remains a further experiment; failed deletion
+still does not prove necessity.
+
+### Research retrieval check and practical continuation
+
+The existing [independent #1644 correctness tier](notes/retrieval-benchmark-1644.md#independent-offline-correctness-tier-2026-11-17)
+was rerun unchanged. Both binaries gave semantic recall 6/6, precision 6/12,
+novelty correctness 6/6, and historical reference recall 5/5 with 4/4 correct
+historical verdicts. The four historical JSON outputs total about 54.94 MB
+for either binary; their single-sample totals were 28.31 seconds baseline and
+26.94 candidate. No retrieval improvement, general performance advantage,
+agent-effort reduction, token saving or monetary saving was established.
+The direction, negation, quantifier and sense distinctions remain required;
+large navigation output remains a practical limitation.
+
+Reproduce with the fixture's IDs and the existing runner, for example A:
+
+```bash
+bash scripts/run-discovery.sh --target 4c79298d-ee09-5e99-9ced-1be92c19b4cc \
+  --premise-pool all --candidates 8 --heartbeats 10000 --batch 1 --jobs 1
+bash scripts/run-discovery.sh --target 4c79298d-ee09-5e99-9ced-1be92c19b4cc \
+  --premise 18561596-1269-53ff-8505-c56e4348e335 \
+  --premise fad8af3e-3e4e-582a-a592-0164bdd62527 \
+  --premise 86d02b69-87eb-5594-9958-ccaa5fe6b685 \
+  --heartbeats 10000 --batch 1 --jobs 1
+python3 scripts/retrieval_correctness_benchmark.py \
+  --baseline /path/to/baseline/truth --truth target/release/truth \
+  --json /tmp/retrieval-correctness.json
+```
+
+The next priorities are a bounded second retrieval hop measured on complete
+AND bundles; a checked `WellFounded.has_min` specialization for D, derived
+from its supplied well-foundedness rather than a stronger axiom; and finite
+model coverage for the demonstrated function/shared-frame boundaries. Follow
+with sequential certified core minimization, registration of the already
+checked [modal alternative/strength bundles](../corpus/attempts/modal-discover-findings-20261120.json)
+(registration, not novelty), and reliable timeout/saturation diagnostics.
+
+For agents, first use `brief`/`related`/`novelty` and `semantics` to recover the
+question's prior work, meanings, serious rivals and downstream purpose. When
+a complete candidate bundle is available, an exact run can isolate selection
+from binding and search before new manual derivation. Let the evidence choose
+a changed bundle, faithful tag review, proved lemma, bounded model or OPEN
+premise investigation; this is not a mandatory tool sequence. Return raw
+repair candidates to the engine's certification path. Keep stronger direct
+assumptions alongside their lower-level derivations, preserve all AND
+premises, and use the existing attempt, spec, Challenge/Solution and review
+workflow. No new runner, truth authority or evidence registry is needed.
+
 ## Agent-guided blueprint recipe
 
 A work-loop recipe for targets that a plain run leaves unresolved (#1832). It

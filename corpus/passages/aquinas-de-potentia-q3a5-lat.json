@@ -28,6 +28,24 @@
       },
       "text_sha256": "sha256:a4842f8c57d71806fbe4576c9a0891f4e44d47ed1955c378150ee96ecc9bedb2",
       "incipit": "[58674] De potentia, q. 3 a. 5 tit. 1 Quinto quaeritur utrum possit esse aliquid"
+    },
+    {
+      "id": "b1558c63-e600-40be-b2b8-1f6fd56c71b3",
+      "label": "Thomas Aquinas, Quaestiones disputatae de potentia, q.3 a.7",
+      "locator": "q.3 a.7 [58742–58781]",
+      "claim_locator_prefixes": [
+        "q.3 a.7 "
+      ],
+      "html_selector": {
+        "from": {
+          "anchor": "58742"
+        },
+        "to": {
+          "anchor": "58782"
+        }
+      },
+      "text_sha256": "sha256:3994ae5ae24042c18774d24211ac7b21dc8cd2bd04e2571081f39af2aa5d5b7b",
+      "incipit": "[58742] De potentia, q. 3 a. 7 tit. 1 Septimo quaeritur utrum Deus operetur in"
     }
   ]
 }

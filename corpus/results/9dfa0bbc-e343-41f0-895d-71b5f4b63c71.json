@@ -1,0 +1,11 @@
+{
+  "id": "9dfa0bbc-e343-41f0-895d-71b5f4b63c71",
+  "label": "Compose exercised contributor paths through the selected secondary stroke",
+  "argument_id": "2df208f4-4227-4a75-ab45-de15c56ba3bb",
+  "challenge_module": "TruthCore.Results.Causality.ExerciseContribution.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ExerciseContribution.Solution",
+  "theorem": "TruthCore.Results.Causality.ExerciseContribution.jointCredit",
+  "comparator_config": "results/9dfa0bbc-e343-41f0-895d-71b5f4b63c71/comparator.json",
+  "status": "solution-present",
+  "description": "The source path to this stroke extends to this result event. The secondary's own step yields a nonempty path to the same event. Reusing those witnesses gives credit in its respect to both bearers. The credit interpretation has no rule from an existential sustainer to a productive path."
+}

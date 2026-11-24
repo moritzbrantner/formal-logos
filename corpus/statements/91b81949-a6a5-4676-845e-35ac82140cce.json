@@ -1,0 +1,12 @@
+{
+  "id": "91b81949-a6a5-4676-845e-35ac82140cce",
+  "label": "Application through one specified exercise gives both agents credit at the same realized result",
+  "paraphrase": "For any supplied exercise and event-to-respect map, a source applying a secondary agent through the selected stroke towards the selected result on the ThroughAt reading has a productive path from some of its events to that exact result. There is also a nonempty path from the secondary stroke to that result. Each agent has bearer-level credit for the patient in the result's respect on the existential projection. This path result is conditional on the interpreted contributor records; it does not identify causing esse with causing every other actuality.",
+  "lean_declaration": "TruthCore.Causality.ExerciseContribution.ThroughYieldsJointCredit",
+  "definition_ids": [
+    "ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8",
+    "7b20df90-a3d9-41c7-be8b-1d2beb5b995a",
+    "99ce5669-b1db-4613-9d17-2b57251129e4",
+    "6b8ed953-9deb-4272-9e7b-a971be2119c3"
+  ]
+}

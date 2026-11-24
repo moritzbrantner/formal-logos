@@ -1,0 +1,36 @@
+[batch]
+vocab = "TruthCore.Causality.ExerciseContribution"
+results = "TruthCore.Results.Causality.ExerciseContribution"
+
+[[statement]]
+id = "Application through one specified exercise gives both agents credit at the same realized result"
+lean = "ThroughYieldsJointCredit"
+paraphrase = "For any supplied exercise and event-to-respect map, a source applying a secondary agent through the selected stroke towards the selected result on the ThroughAt reading has a productive path from some of its events to that exact result. There is also a nonempty path from the secondary stroke to that result. Each agent has bearer-level credit for the patient in the result's respect on the existential projection. This path result is conditional on the interpreted contributor records; it does not identify causing esse with causing every other actuality."
+definitions = ["ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8","7b20df90-a3d9-41c7-be8b-1d2beb5b995a","99ce5669-b1db-4613-9d17-2b57251129e4","6b8ed953-9deb-4272-9e7b-a971be2119c3"]
+
+[[statement]]
+id = "Press controls separate conservation, joint effect production and secondary application"
+lean = "Press.Certificate"
+paraphrase = "Three exercise profiles have the same actual on/on episode, three actual bearers, a universal esse giver, an actual stroke producing the imprint and source drive producing a separate indicator. In conservation alone the stroke has no recorded actual lender and the source lacks path credit for the imprint. In effect-side cooperation the stroke still has no actual lender; drive and stroke are each scenario-indispensable within the jointly sufficient imprint record. Source and agent earn credit at that imprint, but the source has no path to the stroke and universal transfer fails. With application the drive acts through the secondary stroke with retained capacity and an actual lender. No direct drive-imprint step exists, while joint credit and universal transfer hold in the selected finite profile. These are structural comparisons conditional on the events, exercise records and selected credit interpretation."
+definitions = ["DEF-ACT","DEF-ESSE","ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8","df1369a5-8710-57be-97ca-08ccb49f3314","800637b5-8f4b-54ea-865d-c4fd444d1632","7b20df90-a3d9-41c7-be8b-1d2beb5b995a","99ce5669-b1db-4613-9d17-2b57251129e4","6b8ed953-9deb-4272-9e7b-a971be2119c3","211a6432-8b8f-53ed-85e3-75173bb15b24","c19faf56-0908-5e6e-8c39-ccba40dce5d1"]
+disambiguations = ["DISAMB-IN-ACT","00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
+
+[[argument]]
+id = "Compose exercised contributor paths through the selected secondary stroke"
+theorem = "jointCredit"
+premises = []
+conclusion = "Application through one specified exercise gives both agents credit at the same realized result"
+rule = "Extend the source's nonempty path by the secondary stroke's actual contributor step"
+meaning = "The source path to this stroke extends to this result event. The secondary's own step yields a nonempty path to the same event. Reusing those witnesses gives credit in its respect to both bearers. The credit interpretation has no rule from an existential sustainer to a productive path."
+axioms = []
+
+[[argument]]
+id = "Compare direct cooperation with mediation through the secondary exercise"
+theorem = "controls"
+sense_mixing_control = true
+disambiguations = ["DISAMB-IN-ACT","00e0d443-eb39-56a3-9179-9c8852ca4a2b","a375e21b-420a-5ee5-9e64-c816eacd74d4"]
+premises = []
+conclusion = "Press controls separate conservation, joint effect production and secondary application"
+rule = "Derive productive reachability from actual groups, test contributor deletion and evaluate the original transfer predicate"
+meaning = "Last-step induction computes the whole positive-length contributor-path relation in this press: the sole pair beyond single edges is drive to imprint through stroke in application. Conservation, co-production and application therefore yield different path credit without reassigning a final CausesIn edge. Removing drive or stroke separately tests the cooperative group's two contributors with its other members present. Retained power and present lending are checked separately. The truth of universal transfer in one finite profile concerns that interpretation alone."
+axioms = ["propext","Classical.choice","Quot.sound"]
