@@ -7,6 +7,10 @@ import TruthCore.Causality.OneDependenceOrder
   concretum's distinct esse cause is its actual concrete ground (cb1cdea9),
   what is in act of esse exists at `w` (546975ef) and is concrete (2d9807a5)
   give no infinite regress of actual causes of being (fd12ad3d).
+* `esseRegressOfActualGroundingWFWeak`: the same with the weak bridge
+  `ActualEsseCauseIsActualGround` (an actual cause of being between actual
+  concreta grounds), which `actualEsseCauseIsActualGroundOfEsseCause` derives
+  from cb1cdea9.
 * `actualGroundingWFOfEsseRegress`: the converse inclusion. The esse regress,
   an actual concrete ground of an actual concretum is a distinct cause of its
   esse (98efaa9e) and what exists at `w` is in act of esse (0436de86) give
@@ -64,6 +68,25 @@ theorem esseRegressOfActualGroundingWF {W B P R : Type} (m : Profile W B) (w : W
     NoInfiniteActualEsseCauseRegress p := by
   sorry
 
+/-- The same with the weak bridge: an actual cause of being `c` of `x` is in
+act, as is `x`, so by the two calibrations both are actual concreta; the weak
+bridge then makes `c` ground `x`. -/
+theorem esseRegressOfActualGroundingWFWeak {W B P R : Type} (m : Profile W B) (w : W)
+    (p : TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile B P R)
+    (hWF : ActualGroundingWF m w)
+    (hGround : ActualEsseCauseIsActualGround m w p.CausesIn p.esse)
+    (hExists : ActOfEsseSufficesForExistenceAt m.ontic p.InAct p.esse w)
+    (hConcrete : EsseInReIsConcrete m p.InAct p.esse) :
+    NoInfiniteActualEsseCauseRegress p := by
+  sorry
+
+/-- Strength step: cb1cdea9 implies its weak version. -/
+theorem actualEsseCauseIsActualGroundOfEsseCause {W B R : Type} (m : Profile W B) (w : W)
+    (CausesIn : B → B → R → Prop) (esse : R)
+    (h : EsseCauseIsActualConcreteGround m w CausesIn esse) :
+    ActualEsseCauseIsActualGround m w CausesIn esse := by
+  sorry
+
 /-- Actual grounding into esse causing: a ground between actual concreta is a
 distinct cause of the grounded thing's esse (bridge), and both are in act of
 esse because they exist at `w`. Well-foundedness of actual causes of being
@@ -102,6 +125,9 @@ theorem perSeEfficientSeriesOfPerSeEsseRegress {B P R : Type}
 /-! ## Controls -/
 
 theorem esseRegressControls : EsseRegressControls := by
+  sorry
+
+theorem weakEsseRegressControls : WeakEsseRegressControls := by
   sorry
 
 theorem converseControls : ConverseControls := by

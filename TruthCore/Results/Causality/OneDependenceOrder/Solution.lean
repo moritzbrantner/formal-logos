@@ -9,6 +9,10 @@ public import TruthCore.Causality.OneDependenceOrder
   concretum's distinct esse cause is its actual concrete ground (cb1cdea9),
   what is in act of esse exists at `w` (546975ef) and is concrete (2d9807a5)
   give no infinite regress of actual causes of being (fd12ad3d).
+* `esseRegressOfActualGroundingWFWeak`: the same with the weak bridge
+  `ActualEsseCauseIsActualGround` (an actual cause of being between actual
+  concreta grounds), which `actualEsseCauseIsActualGroundOfEsseCause` derives
+  from cb1cdea9.
 * `actualGroundingWFOfEsseRegress`: the converse inclusion. The esse regress,
   an actual concrete ground of an actual concretum is a distinct cause of its
   esse (98efaa9e) and what exists at `w` is in act of esse (0436de86) give
@@ -72,6 +76,29 @@ theorem esseRegressOfActualGroundingWF {W B P R : Type} (m : Profile W B) (w : W
   have g := hEsse c x hne ⟨hConcrete x hx, hExists x hx⟩ hcause
   exact ⟨⟨g.1, g.2.1⟩, g.2.2⟩
 
+/-- The same with the weak bridge: an actual cause of being `c` of `x` is in
+act, as is `x`, so by the two calibrations both are actual concreta; the weak
+bridge then makes `c` ground `x`. -/
+theorem esseRegressOfActualGroundingWFWeak {W B P R : Type} (m : Profile W B) (w : W)
+    (p : TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile B P R)
+    (hWF : ActualGroundingWF m w)
+    (hGround : ActualEsseCauseIsActualGround m w p.CausesIn p.esse)
+    (hExists : ActOfEsseSufficesForExistenceAt m.ontic p.InAct p.esse w)
+    (hConcrete : EsseInReIsConcrete m p.InAct p.esse) :
+    NoInfiniteActualEsseCauseRegress p := by
+  refine wellFounded_of_predecessorInclusion (ActualConcrete m w) (m.grounds w) _ hWF ?_
+  intro c x h
+  obtain ⟨hne, hc, hx, hcause⟩ := h
+  have hcA : ActualConcrete m w c := ⟨hConcrete c hc, hExists c hc⟩
+  exact ⟨hcA, hGround c x hcA ⟨hConcrete x hx, hExists x hx⟩ hne hcause⟩
+
+/-- Strength step: cb1cdea9 implies its weak version. -/
+theorem actualEsseCauseIsActualGroundOfEsseCause {W B R : Type} (m : Profile W B) (w : W)
+    (CausesIn : B → B → R → Prop) (esse : R)
+    (h : EsseCauseIsActualConcreteGround m w CausesIn esse) :
+    ActualEsseCauseIsActualGround m w CausesIn esse :=
+  fun c x _ hx hne hcause => (h c x hne hx hcause).2.2
+
 /-- Actual grounding into esse causing: a ground between actual concreta is a
 distinct cause of the grounded thing's esse (bridge), and both are in act of
 esse because they exist at `w`. Well-foundedness of actual causes of being
@@ -122,7 +149,7 @@ theorem true_ne_false' : true ≠ false := fun h => Bool.noConfusion h
 theorem cyc_not_wf : ¬ WellFounded cyc :=
   not_wellFounded_of_twoCycle true false true_ne_false' (fun h => true_ne_false' h.symm)
 
-theorem none_wf {B : Type} : WellFounded (none : B → B → Prop) :=
+theorem noRel_wf {B : Type} : WellFounded (noRel : B → B → Prop) :=
   ⟨fun x => ⟨x, fun _ h => h.elim⟩⟩
 
 theorem edgeTF_wf : WellFounded edgeTF :=
@@ -148,10 +175,10 @@ theorem pEdge_regress : NoInfiniteActualEsseCauseRegress pEdge :=
 
 theorem esseRegressControls : EsseRegressControls := by
   refine ⟨⟨mCyc_not_agwf, ?_, fun _ _ => trivial, fun _ _ => trivial, pCyc_not_regress⟩,
-    ⟨actualGroundingWF_of_wellFounded _ _ none_wf, ?_, fun _ _ => trivial, fun _ _ => trivial,
+    ⟨actualGroundingWF_of_wellFounded _ _ noRel_wf, ?_, fun _ _ => trivial, fun _ _ => trivial,
       pCyc_not_regress⟩,
-    ⟨actualGroundingWF_of_wellFounded _ _ none_wf, ?_, ?_, fun _ _ => trivial, pCyc_not_regress⟩,
-    ⟨actualGroundingWF_of_wellFounded _ _ none_wf, ?_, fun _ _ => trivial, ?_, pCyc_not_regress⟩,
+    ⟨actualGroundingWF_of_wellFounded _ _ noRel_wf, ?_, ?_, fun _ _ => trivial, pCyc_not_regress⟩,
+    ⟨actualGroundingWF_of_wellFounded _ _ noRel_wf, ?_, fun _ _ => trivial, ?_, pCyc_not_regress⟩,
     ⟨actualGroundingWF_of_wellFounded _ _ edgeTF_wf, ?_, fun _ _ => trivial, fun _ _ => trivial,
       pEdge_regress, true_ne_false', trivial, trivial, rfl, rfl⟩⟩
   · exact fun _ _ hne _ h => ⟨trivial, trivial, h⟩
@@ -162,13 +189,28 @@ theorem esseRegressControls : EsseRegressControls := by
   · exact fun h => h true trivial
   · exact fun _ _ _ _ h => ⟨trivial, trivial, h⟩
 
+theorem weakEsseRegressControls : WeakEsseRegressControls := by
+  refine ⟨⟨mCyc_not_agwf, fun _ _ _ _ _ h => h, fun _ _ => trivial, fun _ _ => trivial,
+      pCyc_not_regress⟩,
+    ⟨actualGroundingWF_of_wellFounded _ _ noRel_wf, ?_, fun _ _ => trivial, fun _ _ => trivial,
+      pCyc_not_regress⟩,
+    ⟨actualGroundingWF_of_wellFounded _ _ noRel_wf, ?_, ?_, fun _ _ => trivial, pCyc_not_regress⟩,
+    ⟨actualGroundingWF_of_wellFounded _ _ noRel_wf, ?_, fun _ _ => trivial, ?_, pCyc_not_regress⟩,
+    ⟨actualGroundingWF_of_wellFounded _ _ edgeTF_wf, fun _ _ _ _ _ h => h, fun _ _ => trivial,
+      fun _ _ => trivial, pEdge_regress, true_ne_false', trivial, trivial, rfl, rfl⟩⟩
+  · exact fun h => h true false ⟨trivial, trivial⟩ ⟨trivial, trivial⟩ true_ne_false' true_ne_false'
+  · exact fun _ _ _ hx _ _ => hx.2.elim
+  · exact fun h => h true trivial
+  · exact fun _ _ _ hx _ _ => hx.1.elim
+  · exact fun h => h true trivial
+
 theorem converseControls : ConverseControls := by
   refine ⟨⟨pCyc_not_regress, fun _ _ _ _ h => ⟨h, h⟩, fun _ _ => trivial, mCyc_not_agwf⟩,
     ⟨pNone_regress, ?_, fun _ _ => trivial, mCyc_not_agwf⟩,
     ⟨pIdle_regress, fun _ _ _ _ h => ⟨h, h⟩, ?_, mCyc_not_agwf⟩,
     ⟨pEdge_regress, ?_, fun _ _ => trivial, actualGroundingWF_of_wellFounded _ _ edgeTF_wf⟩,
     ⟨fun _ _ _ _ h => h.elim, fun _ _ => trivial, fun _ _ => trivial,
-      fun _ _ _ h => h.elim, fun _ h => h, pNone_regress, none_wf, mCyc_not_agwf⟩⟩
+      fun _ _ _ h => h.elim, fun _ h => h, pNone_regress, noRel_wf, mCyc_not_agwf⟩⟩
   · exact fun h => (h true false ⟨trivial, trivial⟩ ⟨trivial, trivial⟩ true_ne_false').2
   · exact fun h => h true trivial
   · intro a b _ _ h
@@ -180,8 +222,8 @@ theorem converseControls : ConverseControls := by
 
 theorem priorityControls : PriorityControls := by
   refine ⟨⟨mCyc_not_agwf, fun _ _ _ h => ⟨trivial, trivial, h⟩, fun _ h => h rfl, cyc_not_wf⟩,
-    ⟨actualGroundingWF_of_wellFounded _ _ none_wf, ?_, fun _ h => h rfl, cyc_not_wf⟩,
-    ⟨actualGroundingWF_of_wellFounded _ _ none_wf, ?_, ?_, ?_⟩,
+    ⟨actualGroundingWF_of_wellFounded _ _ noRel_wf, ?_, fun _ h => h rfl, cyc_not_wf⟩,
+    ⟨actualGroundingWF_of_wellFounded _ _ noRel_wf, ?_, ?_, ?_⟩,
     ⟨actualGroundingWF_of_wellFounded _ _ edgeTF_wf, fun _ _ _ h => ⟨trivial, trivial, h⟩, ?_,
       edgeTF_wf, rfl, rfl⟩⟩
   · exact fun h => (h true false true_ne_false' true_ne_false').2.2

@@ -39,13 +39,18 @@ or new OPEN premise.
 on the elements satisfying `S`, and every `R`-predecessor `c` of anything
 satisfies `S` and is a `G`-predecessor of it, then `R` is well-founded on the
 whole carrier. Only the predecessor needs to satisfy `S`. Core Lean only, no
-axiom.
+axiom. It is the identity case of the general fact that well-foundedness pulls
+back along any edge-preserving map (`Logic.Regress.Graph.Map.wellFounded`, a
+Mathlib-importing module not used here).
 
-**What the module adds.** One new OPEN bridge,
+**What the module adds.** Two OPEN premises:
 `PerSeEfficientCausesArePerSeEsseCauses` (every per se ordered efficient-cause
-link is a per se actual cause of being, PER_SE_5), and finite or `Nat` interpretations used by
-the controls of `TruthCore.Results.Causality.OneDependenceOrder`. Everything
-else the results use already exists:
+link is a per se actual cause of being, PER_SE_5; it fails on the bound sense
+CAUSES_AS_CAUSED_3, see its doc comment) and `ActualEsseCauseIsActualGround`
+(the weak version of cb1cdea9); the law `actualEsseCause_iff_actualGround`;
+and finite or `Nat` interpretations used by the controls of
+`TruthCore.Results.Causality.OneDependenceOrder`. Everything else the results
+use already exists:
 
 * esse causing into grounding: `EsseCauseIsActualConcreteGround` (cb1cdea9),
   with the actuality calibrations `ActOfEsseSufficesForExistenceAt` (546975ef)
@@ -134,19 +139,38 @@ theorem actualGroundingWF_of_wellFounded {W B : Type} (m : Profile W B) (w : W)
 
 open TruthCore.Latin.Aquinas.DeEnte (PerSeActualEsseCause) in
 open TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4 in
-/-- OPEN analyst bridge, attribution deferred: every per se ordered
+/-- OPEN analyst framework premise, attribution deferred: every per se ordered
 efficient-cause link (`CausesAsCaused c x`, the secunda via's "causes as a
-caused cause") is a per se actual cause of being (`PerSeActualEsseCause p
-AsCaused c x`, PER_SE_5): `c` is other than `x`, both are in act as to being,
-`c` causes the esse of `x` (`CausesIn c x esse`, CAUSE_2), and it does so as
-caused (`AsCaused c x`). It reads the secunda via's per se series as a series
-of per se causes of being, the existential reading of the second way.
-Aquinas's own per se example in ST I q.46 a.2 ad 7 (the stone moved by the
-stick, moved by the hand) is a series of causes of motion, not of being; on a
-respect-free reading of `CausesAsCaused` that example falsifies the bridge. -/
+caused cause", sense CAUSES_AS_CAUSED_3) is a per se actual cause of being
+(`PerSeActualEsseCause p AsCaused c x`, PER_SE_5): `c` is other than `x`, both
+are in act as to being, `c` causes the esse of `x` (`CausesIn c x esse`,
+CAUSE_2), and it does so as caused (`AsCaused c x`).
+
+It fails on the bound sense CAUSES_AS_CAUSED_3, which the proved statement
+c2880fe0 (`PerSeMoverLinkIsPerSeCauseLinkReading`, sourced to ST I q.46 a.2
+ad 7) extends to per se mover links: with c2880fe0 it makes every per se mover
+a per se actual cause of the moved thing's esse. Ad 7 gives as per se series
+the stone moved by the stick, moved by the hand, and the generation of this
+man depending on this man, the elementary body and the sun (causes of motion
+and of coming to be). That the stick continues to be when the hand lets go is
+an analyst observation, not ad 7's. The premise is defensible only under a
+not-yet-existing existential sense of `CausesAsCaused`; the sense split is the
+next test. -/
 def PerSeEfficientCausesArePerSeEsseCauses {B P R : Type} (p : Profile B P R)
     (AsCaused CausesAsCaused : B → B → Prop) : Prop :=
   ∀ c x, CausesAsCaused c x → PerSeActualEsseCause p AsCaused c x
+
+/-- OPEN analyst bridge, attribution deferred, the weak version of
+`EsseCauseIsActualConcreteGround` (cb1cdea9): a cause of the esse of an actual
+concretum that is itself an actual concretum at `w` and other than it grounds
+it at `w`. Unlike cb1cdea9 it does not conclude that the cause is concrete or
+exists at `w`; it assumes both. So a cause of being absent from `w` (an
+originating cause, a cause of coming to be) does not falsify it. -/
+def ActualEsseCauseIsActualGround {W B R : Type}
+    (m : TruthCore.Causality.BruteFoundationBoundary.Profile W B) (w : W)
+    (CausesIn : B → B → R → Prop) (esse : R) : Prop :=
+  ∀ c x, ActualConcrete m w c → ActualConcrete m w x → c ≠ x → CausesIn c x esse →
+    m.grounds w c x
 
 /-! ## Interpretations for the controls
 
@@ -178,7 +202,7 @@ def edgeTF (a b : Bool) : Prop := a = true ∧ b = false
 def allLinks (_ _ : Bool) : Prop := True
 
 /-- No relation. -/
-def none {B : Type} (_ _ : B) : Prop := False
+def noRel {B : Type} (_ _ : B) : Prop := False
 
 /-- A one-world grounding profile (`DeEnte.oneWorld`). -/
 abbrev world {B : Type} (concrete exist : B → Prop) (grounds : B → B → Prop) :
@@ -197,23 +221,23 @@ abbrev mCyc : TruthCore.Causality.BruteFoundationBoundary.Profile Unit Bool :=
   world (fun _ => True) (fun _ => True) cyc
 /-- Everything concrete and existing; nothing grounds anything. -/
 abbrev mNone : TruthCore.Causality.BruteFoundationBoundary.Profile Unit Bool :=
-  world (fun _ => True) (fun _ => True) none
+  world (fun _ => True) (fun _ => True) noRel
 /-- Everything concrete and existing; `true` grounds `false`. -/
 abbrev mEdge : TruthCore.Causality.BruteFoundationBoundary.Profile Unit Bool :=
   world (fun _ => True) (fun _ => True) edgeTF
 /-- Everything concrete; nothing exists at the world; nothing grounds. -/
 abbrev mAbsent : TruthCore.Causality.BruteFoundationBoundary.Profile Unit Bool :=
-  world (fun _ => True) (fun _ => False) none
+  world (fun _ => True) (fun _ => False) noRel
 /-- Everything exists; nothing is concrete; nothing grounds. -/
 abbrev mAbstract : TruthCore.Causality.BruteFoundationBoundary.Profile Unit Bool :=
-  world (fun _ => False) (fun _ => True) none
+  world (fun _ => False) (fun _ => True) noRel
 
 /-- Everything in act; causes of being form the two-cycle. -/
 abbrev pCyc : Profile Bool Unit Unit := q3 (fun _ => True) cyc
 /-- Everything in act; `true` causes the esse of `false`. -/
 abbrev pEdge : Profile Bool Unit Unit := q3 (fun _ => True) edgeTF
 /-- Everything in act; no cause of being. -/
-abbrev pNone : Profile Bool Unit Unit := q3 (fun _ => True) none
+abbrev pNone : Profile Bool Unit Unit := q3 (fun _ => True) noRel
 /-- Nothing in act; the cause relation at esse is the two-cycle. -/
 abbrev pIdle : Profile Bool Unit Unit := q3 (fun _ => False) cyc
 
@@ -275,10 +299,42 @@ def EsseRegressControls : Prop :=
     EsseInReIsConcrete mEdge pEdge.InAct pEdge.esse ∧
     NoInfiniteActualEsseCauseRegress pEdge ∧ ActualEsseCause pEdge true false)
 
+/-- Omissions and nonvacuity for the esse regress from actual grounding with
+the weak bridge `ActualEsseCauseIsActualGround` in place of cb1cdea9. -/
+def WeakEsseRegressControls : Prop :=
+  (¬ ActualGroundingWF mCyc () ∧
+    ActualEsseCauseIsActualGround mCyc () pCyc.CausesIn pCyc.esse ∧
+    ActOfEsseSufficesForExistenceAt mCyc.ontic pCyc.InAct pCyc.esse () ∧
+    EsseInReIsConcrete mCyc pCyc.InAct pCyc.esse ∧
+    ¬ NoInfiniteActualEsseCauseRegress pCyc) ∧
+  (ActualGroundingWF mNone () ∧
+    ¬ ActualEsseCauseIsActualGround mNone () pCyc.CausesIn pCyc.esse ∧
+    ActOfEsseSufficesForExistenceAt mNone.ontic pCyc.InAct pCyc.esse () ∧
+    EsseInReIsConcrete mNone pCyc.InAct pCyc.esse ∧
+    ¬ NoInfiniteActualEsseCauseRegress pCyc) ∧
+  (ActualGroundingWF mAbsent () ∧
+    ActualEsseCauseIsActualGround mAbsent () pCyc.CausesIn pCyc.esse ∧
+    ¬ ActOfEsseSufficesForExistenceAt mAbsent.ontic pCyc.InAct pCyc.esse () ∧
+    EsseInReIsConcrete mAbsent pCyc.InAct pCyc.esse ∧
+    ¬ NoInfiniteActualEsseCauseRegress pCyc) ∧
+  (ActualGroundingWF mAbstract () ∧
+    ActualEsseCauseIsActualGround mAbstract () pCyc.CausesIn pCyc.esse ∧
+    ActOfEsseSufficesForExistenceAt mAbstract.ontic pCyc.InAct pCyc.esse () ∧
+    ¬ EsseInReIsConcrete mAbstract pCyc.InAct pCyc.esse ∧
+    ¬ NoInfiniteActualEsseCauseRegress pCyc) ∧
+  (ActualGroundingWF mEdge () ∧
+    ActualEsseCauseIsActualGround mEdge () pEdge.CausesIn pEdge.esse ∧
+    ActOfEsseSufficesForExistenceAt mEdge.ontic pEdge.InAct pEdge.esse () ∧
+    EsseInReIsConcrete mEdge pEdge.InAct pEdge.esse ∧
+    NoInfiniteActualEsseCauseRegress pEdge ∧ ActualEsseCause pEdge true false)
+
 /-- Omissions and nonvacuity for actual grounding from the esse regress (the
 converse inclusion), and strictness: with the forward bridges but without the
 converse ground-to-cause bridge, the esse regress, well-founded simple priority
-and their bridges hold while actual grounding is not well-founded. -/
+and their bridges hold while actual grounding is not well-founded. In the
+strictness conjunct the causes of being and simple priority are the empty
+relation, so the forward bridges, the regress, the priority bridge,
+irreflexivity and well-founded priority hold vacuously. -/
 def ConverseControls : Prop :=
   (¬ NoInfiniteActualEsseCauseRegress pCyc ∧
     ActualGroundIsDistinctEsseCause mCyc () pCyc.CausesIn pCyc.esse ∧
@@ -296,8 +352,8 @@ def ConverseControls : Prop :=
   (EsseCauseIsActualConcreteGround mCyc () pNone.CausesIn pNone.esse ∧
     ActOfEsseSufficesForExistenceAt mCyc.ontic pNone.InAct pNone.esse () ∧
     EsseInReIsConcrete mCyc pNone.InAct pNone.esse ∧
-    SimplyPriorIsActualConcreteGround mCyc () none ∧ NothingPriorToItselfReading (none : Bool → Bool → Prop) ∧
-    NoInfiniteActualEsseCauseRegress pNone ∧ SimplePriorityWellFounded (none : Bool → Bool → Prop) ∧
+    SimplyPriorIsActualConcreteGround mCyc () noRel ∧ NothingPriorToItselfReading (noRel : Bool → Bool → Prop) ∧
+    NoInfiniteActualEsseCauseRegress pNone ∧ SimplePriorityWellFounded (noRel : Bool → Bool → Prop) ∧
     ¬ ActualGroundingWF mCyc ())
 
 /-- Omissions and nonvacuity for well-founded simple priority from actual
@@ -349,5 +405,30 @@ def AscentLimit : Prop :=
     GradesFoundInBeing succGrade pNat.esse ∧
     ¬ NoInfiniteAscentAmongActualConcreta mNat () succGrade pNat.esse ∧
     ¬ NoInfiniteAscentInBeing succGrade pNat.esse
+
+/-! ## Coextension under the two-way package -/
+
+/-- Under the five bridges cb1cdea9, 546975ef, 2d9807a5 (forward) and
+98efaa9e, 0436de86 (backward), an actual cause of being is exactly a grounding
+step between actual concreta. The package therefore makes the two relations
+extensionally the same through explicit open premises; warrant for the package
+is warrant for that identification. Lake-checked law, not a registered result;
+no axiom. -/
+theorem actualEsseCause_iff_actualGround {W B P R : Type} (m : Profile W B) (w : W)
+    (p : TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile B P R)
+    (hEsse : EsseCauseIsActualConcreteGround m w p.CausesIn p.esse)
+    (hExists : ActOfEsseSufficesForExistenceAt m.ontic p.InAct p.esse w)
+    (hConcrete : EsseInReIsConcrete m p.InAct p.esse)
+    (hGround : ActualGroundIsDistinctEsseCause m w p.CausesIn p.esse)
+    (hInAct : ExistingInActAt m.ontic p.InAct p.esse w) (c x : B) :
+    ActualEsseCause p c x ↔
+      (ActualConcrete m w c ∧ ActualConcrete m w x ∧ m.grounds w c x) := by
+  constructor
+  · rintro ⟨hne, hc, hx, hcause⟩
+    have g := hEsse c x hne ⟨hConcrete x hx, hExists x hx⟩ hcause
+    exact ⟨⟨hConcrete c hc, hExists c hc⟩, ⟨hConcrete x hx, hExists x hx⟩, g.2.2⟩
+  · rintro ⟨hc, hx, hg⟩
+    obtain ⟨hne, hcause⟩ := hGround c x hc hx hg
+    exact ⟨hne, hInAct c hc.2, hInAct x hx.2, hcause⟩
 
 end TruthCore.Causality.OneDependenceOrder
